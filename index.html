@@ -1,237 +1,238 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <title>Maryam Jaberi — Product &amp; Game Design</title>
-  <meta name="description" content="Product manager and indie game designer. Live apps: Dour, a language-learning party game, and Mafia Host OS, plus Par-e Simorgh, a game-theory project." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #090714;
-      --line: #2d2550;
-      --pink: #ff2d9b;
-      --gold: #e8b84a;
-      --cyan: #3ce7ff;
-      --text: #f3efff;
-      --muted: #b7aed0;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background-color: var(--bg); }
-    body {
-      font-family: "IBM Plex Sans", system-ui, sans-serif;
-      min-height: 100vh;
-      background-color: var(--bg);
-      background-image:
-        radial-gradient(900px 420px at 90% -10%, #3a1868 0%, transparent 55%),
-        radial-gradient(700px 380px at 0% 20%, #12244a 0%, transparent 50%);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    .wrap { max-width: 1040px; margin: 0 auto; padding: 28px 20px 80px; }
-    header {
-      display: flex; flex-wrap: wrap; gap: 16px;
-      align-items: center; justify-content: space-between;
-      margin-bottom: 48px;
-    }
-    .brand { display: flex; gap: 14px; align-items: center; }
-    .brand img {
-      width: 64px; height: 64px; border-radius: 50%;
-      object-fit: cover; border: 2px solid var(--cyan);
-    }
-    .brand h1 { font-family: Syne, "IBM Plex Sans", sans-serif; font-size: 22px; line-height: 1.2; }
-    .brand p { color: var(--muted); font-size: 14px; }
-    nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-    nav a {
-      color: var(--text); text-decoration: none; font-size: 14px;
-      padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
-    }
-    .lang {
-      background: #1c1636; border: 1px solid var(--line); color: var(--text);
-      border-radius: 999px; padding: 6px 12px; cursor: pointer; font-family: inherit;
-    }
-    .hero { margin-bottom: 56px; max-width: 740px; }
-    .kicker {
-      display: inline-block; background: var(--gold); color: #1a1020;
-      font-weight: 800; font-size: 12px; padding: 3px 10px; border-radius: 999px;
-      margin-bottom: 12px;
-    }
-    .hero h2 {
-      font-family: Syne, "IBM Plex Sans", sans-serif;
-      font-size: clamp(30px, 5.4vw, 52px);
-      line-height: 1.15; letter-spacing: -0.03em;
-    }
-    .hero .lead { margin-top: 14px; color: #ddd6f4; font-size: 18px; }
-    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-    .btn {
-      display: inline-block; text-decoration: none; font-weight: 800;
-      padding: 11px 18px; border-radius: 14px; color: #fff;
-      background: linear-gradient(90deg, #ff2d9b, #c44dff);
-    }
-    .btn.ghost {
-      background: transparent; border: 1px solid var(--cyan); color: var(--cyan);
-    }
-    section { margin-bottom: 56px; }
-    section > h3 {
-      font-family: Syne, "IBM Plex Sans", sans-serif;
-      font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--cyan); margin-bottom: 16px;
-    }
-    .grid { display: grid; gap: 18px; }
-    @media (min-width: 760px) { .grid.two { grid-template-columns: 1fr 1fr; } }
-    .card {
-      background: linear-gradient(180deg, #1a1436, #100c22);
-      border: 1px solid var(--line); border-radius: 22px; overflow: hidden;
-    }
-    .card .bar { height: 6px; }
-    .bar.dour { background: linear-gradient(90deg, #ff2d9b, #3ce7ff); }
-    .bar.mafia { background: linear-gradient(90deg, #e8b84a, #7a4dff); }
-    .card .body { padding: 22px; }
-    .card h4 { font-size: 24px; margin-bottom: 4px; }
-    .en-label { font-family: Syne, sans-serif; color: var(--gold); font-size: 12px; letter-spacing: .08em; }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
-    .tag {
-      font-size: 12px; border: 1px solid var(--line); background: #1c1638;
-      border-radius: 999px; padding: 3px 10px; color: #e6defa;
-    }
-    .card p { color: #d8d0ee; font-size: 15px; }
-    .meta { margin-top: 8px; color: var(--muted); font-size: 13px; }
-    .job { border-bottom: 1px solid var(--line); padding: 16px 0; }
-    .job:last-child { border-bottom: 0; }
-    .job .when { color: var(--muted); font-size: 13px; }
-    .job h4 { font-size: 18px; }
-    .job ul { margin: 8px 0 0 18px; color: #d8d0ee; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip { background: #1c1638; border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; font-size: 14px; color: var(--text); text-decoration: none; }
-    footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 22px; }
-    .bar.simorgh { background: linear-gradient(90deg, #3ce7ff, #e8b84a, #ff2d9b); }
-    .feature .body { padding: 26px; }
-    @media (min-width: 760px) { .feature .split { display: grid; grid-template-columns: 1.25fr 1fr; gap: 28px; } }
-    .ideas { list-style: none; display: grid; gap: 10px; margin-top: 14px; }
-    .ideas li { background: #150f2c; border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; font-size: 14px; color: #d8d0ee; }
-    .ideas b { color: var(--gold); font-weight: 600; }
-    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0 4px; }
-    .stat { border: 1px solid var(--line); border-radius: 14px; padding: 10px; text-align: center; }
-    .stat strong { display: block; font-family: Syne, sans-serif; font-size: 24px; color: var(--cyan); line-height: 1.2; }
-    .stat span { font-size: 12px; color: var(--muted); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maryam Jaberi — Product &amp; Game Design</title>
+<meta name="description" content="Product manager and indie game designer. Live apps: Dour and Mafia Host OS, plus Par-e Simorgh, a game-theory project." />
+<meta name="color-scheme" content="light" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4efe2;
+    --paper-dim: #ede5d3;
+    --ink: #241f18;
+    --muted: #6f6553;
+    --line: #d9cead;
+    --accent: #a13a2e;
+    --accent-quiet: #7c5a3a;
+    --green: #3c5c40;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  a { color: var(--accent); text-decoration: none; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 80px; }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  header img {
+    width: 52px; height: 52px; border-radius: 50%;
+    object-fit: cover;
+  }
+  header h1 { font-size: 22px; font-weight: 600; }
+  header p { color: var(--muted); font-size: 15px; margin-top: 2px; }
+
+  nav { margin-bottom: 48px; }
+  nav a {
+    color: var(--ink);
+    font-size: 14px;
+    margin-right: 22px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+  }
+  nav a:hover { border-bottom-color: var(--ink); }
+
+  .hero { margin-bottom: 56px; }
+  .hero h2 {
+    font-size: 38px;
+    font-style: italic;
+    line-height: 1.22;
+    max-width: 15ch;
+    margin-bottom: 18px;
+  }
+  .hero p { max-width: 52ch; color: var(--ink); font-size: 17px; }
+  .hero .links { margin-top: 18px; font-size: 15px; }
+  .hero .links a { border-bottom: 1px solid var(--accent); margin-right: 22px; }
+  .hero .links a:hover { opacity: 0.7; }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 44px 0 32px;
+  }
+
+  section > h3 {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--muted);
+    margin-bottom: 22px;
+  }
+
+  .entry { margin-bottom: 34px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry h4 { font-size: 21px; font-weight: 500; margin-bottom: 6px; }
+  .entry p.desc { color: var(--ink); font-size: 16px; margin-bottom: 10px; max-width: 58ch; }
+  .entry .meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+  .entry .links { font-size: 14px; }
+  .entry .links a { border-bottom: 1px solid var(--accent); margin-right: 18px; }
+  .entry .links a:hover { opacity: 0.7; }
+
+  .simorgh-card { border-left: 2px solid var(--green); padding-left: 20px; }
+  .simorgh-card h4 { font-size: 22px; }
+  .simorgh-card .links a { border-bottom-color: var(--green); }
+  .simorgh-card ul {
+    list-style: none;
+    margin-top: 16px;
+    display: grid;
+    gap: 10px;
+  }
+  .simorgh-card li {
+    font-size: 15px;
+    color: var(--ink);
+    padding-left: 14px;
+    position: relative;
+  }
+  .simorgh-card li::before {
+    content: "";
+    position: absolute; left: 0; top: 8px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--green);
+  }
+  .simorgh-card li b { font-weight: 600; }
+
+  .job { display: flex; gap: 20px; margin-bottom: 30px; }
+  .job:last-child { margin-bottom: 0; }
+  .job .when {
+    flex: 0 0 92px;
+    color: var(--muted);
+    font-size: 14px;
+    padding-top: 3px;
+  }
+  .job .body h4 { font-size: 18px; font-weight: 500; margin-bottom: 8px; }
+  .job ul { margin-left: 18px; color: var(--ink); font-size: 15px; }
+  .job li { margin-bottom: 5px; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  .chips a { font-size: 14px; border-bottom: 1px solid var(--line); }
+  .chips a:hover { border-bottom-color: var(--accent); }
+
+  .edu p { margin-bottom: 14px; font-size: 15px; }
+  .edu strong { font-weight: 600; }
+
+  footer {
+    margin-top: 56px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  footer a { color: var(--muted); border-bottom: 1px solid var(--line); }
+
+  @media (max-width: 520px) {
+    .hero h2 { font-size: 30px; }
+    .job { flex-direction: column; gap: 6px; }
+    .job .when { flex: none; }
+  }
+</style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">
-        <img src="https://avatars.githubusercontent.com/u/48519581?v=4" alt="Maryam Jaberi" />
-        <div>
-          <h1>Maryam Jaberi</h1>
-          <p>Product Manager · Game Designer · Rotterdam</p>
-        </div>
+      <img src="https://avatars.githubusercontent.com/u/48519581?v=4" alt="Maryam Jaberi" />
+      <div>
+        <h1>Maryam Jaberi</h1>
+        <p>Product manager and game designer, based in Rotterdam.</p>
       </div>
-      <nav>
-        <a href="#live">Apps</a>
-        <a href="#game-theory">Game Theory</a>
-        <a href="#work">Experience</a>
-        <a href="#code">GitHub</a>
-      </nav>
     </header>
 
+    <nav>
+      <a href="#live">Apps</a>
+      <a href="#game-theory">Game theory</a>
+      <a href="#work">Experience</a>
+      <a href="#code">GitHub</a>
+    </nav>
+
     <div class="hero">
-      <span class="kicker">Live products · Games · Language learning</span>
       <h2>I build social games people actually play together.</h2>
-      <p class="lead">Product manager turned game designer. I build party games, host tools, and game-theory models.</p>
+      <p>Product manager turned game designer. I build party games, host tools, and game-theory models that turn complex ideas into something a group can sit around a table and play.</p>
       <div class="links">
-        <a class="btn" href="#live">See live apps</a>
-        <a class="btn ghost" href="#game-theory">Game theory project</a>
+        <a href="#live">See live apps</a>
+        <a href="#game-theory">Game theory project</a>
       </div>
     </div>
 
+    <hr class="rule" />
+
     <section id="live">
-      <h3>Live products</h3>
-      <div class="grid two">
-        <article class="card">
-          <div class="bar dour"></div>
-          <div class="body">
-            <div class="en-label">DOUR · v3.0</div>
-            <h4>Dour — Language-Learning Party Game</h4>
-            <div class="tags">
-              <span class="tag">Pass-the-phone</span>
-              <span class="tag">Team vs. team</span>
-              <span class="tag">RTL support</span>
-              <span class="tag">Solo + online</span>
-            </div>
-            <p>Word-guessing party game for 4–8 players sharing one phone. Solo and group modes, multilingual cards.</p>
-            <p class="meta">language-app-dour.ai.studio</p>
-            <div class="links">
-              <a class="btn" href="https://language-app-dour.ai.studio/">Play</a>
-              <a class="btn ghost" href="https://github.com/MaryamJaberi/Language-Learning-Party-Game">Repo</a>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="bar mafia"></div>
-          <div class="body">
-            <div class="en-label">MAFIA HOST OS · v2.4.0</div>
-            <h4>Mafia Host OS</h4>
-            <div class="tags">
-              <span class="tag">Host + players</span>
-              <span class="tag">FA / EN / AR / TR</span>
-              <span class="tag">Anti-cheat</span>
-              <span class="tag">Offline-ready</span>
-            </div>
-            <p>Host console and player app for running live Mafia games. Scenario builder, AI role balancing, hidden role cards, voting.</p>
-            <p class="meta">mafia-host-os.ai.studio</p>
-            <div class="links">
-              <a class="btn" href="https://mafia-host-os.ai.studio/">Open</a>
-              <a class="btn ghost" href="https://github.com/MaryamJaberi/Mafia-Host">Repo</a>
-            </div>
-          </div>
-        </article>
+      <h3>Live apps</h3>
+
+      <div class="entry">
+        <h4>Dour</h4>
+        <p class="desc">Word-guessing party game for 4–8 players sharing one phone. Solo and group modes, multilingual cards.</p>
+        <div class="links">
+          <a href="https://maryamjaberi.github.io/Dour/">Play</a>
+          <a href="https://github.com/MaryamJaberi/Dour">Repo</a>
+        </div>
+      </div>
+
+      <div class="entry">
+        <h4>Mafia Host OS</h4>
+        <p class="desc">Host console and player app for running live Mafia games. Scenario builder, AI role balancing, hidden role cards, voting.</p>
+        <div class="links">
+          <a href="https://mafia-host-os.ai.studio/">Open</a>
+          <a href="https://github.com/MaryamJaberi/Mafia-Host">Repo</a>
+        </div>
       </div>
     </section>
 
+    <hr class="rule" />
+
     <section id="game-theory">
       <h3>Game theory</h3>
-      <article class="card feature">
-        <div class="bar simorgh"></div>
-        <div class="body">
-          <div class="split">
-            <div>
-              <div class="en-label">PAR-E SIMORGH · SIMORGH'S FEATHER</div>
-              <h4>A Mafia Table as a Model of a Society</h4>
-              <div class="tags">
-                <span class="tag">Coordination games</span>
-                <span class="tag">Costly signaling</span>
-                <span class="tag">Open dataset</span>
-                <span class="tag">Persian mythology</span>
-              </div>
-              <p>A structural analysis of present-day Iran, told through the rules of a Mafia game — modeled as a coordination game, not a fight to win.</p>
-              <div class="stats">
-                <div class="stat"><strong>37</strong><span>roles, 3 factions</span></div>
-                <div class="stat"><strong>7</strong><span>rounds, 1979–2026</span></div>
-                <div class="stat"><strong>76</strong><span>sourced claims</span></div>
-              </div>
-              <div class="links">
-                <a class="btn" href="https://maryamjaberi.github.io/simorgh/">Explore</a>
-                <a class="btn ghost" href="https://github.com/MaryamJaberi/simorgh">Repo</a>
-              </div>
-            </div>
-            <ul class="ideas">
-              <li><b>Win conditions.</b> One side just needs the game to not end; the other needs one shared commitment and one moment to act.</li>
-              <li><b>Unbuilt roles.</b> Ten missing roles, each mapped to a mechanism keeping the table locked.</li>
-              <li><b>Auditable by design.</b> Every claim sourced and graded, with a self-audit of its own weak points.</li>
-              <li><b>Critique table.</b> Challenged from nine opposing political positions, with a fairness test applied to every passage.</li>
-            </ul>
-          </div>
+      <div class="entry simorgh-card">
+        <h4>Par-e Simorgh — A Mafia Table as a Model of a Society</h4>
+        <p class="desc">A structural analysis of present-day Iran, told through the rules of a Mafia game — modeled as a coordination game, not a fight to win. 37 roles across 3 factions, 7 rounds spanning 1979–2026, and 76 sourced claims.</p>
+        <div class="links">
+          <a href="https://maryamjaberi.github.io/simorgh/">Explore</a>
+          <a href="https://github.com/MaryamJaberi/simorgh">Repo</a>
         </div>
-      </article>
+        <ul>
+          <li><b>Win conditions.</b> One side just needs the game to not end; the other needs one shared commitment and one moment to act.</li>
+          <li><b>Unbuilt roles.</b> Ten missing roles, each mapped to a mechanism keeping the table locked.</li>
+          <li><b>Auditable by design.</b> Every claim sourced and graded, with a self-audit of its own weak points.</li>
+          <li><b>Critique table.</b> Challenged from nine opposing political positions, with a fairness test applied to every passage.</li>
+        </ul>
+      </div>
     </section>
+
+    <hr class="rule" />
 
     <section id="work">
       <h3>Experience</h3>
-      <div class="card"><div class="body">
-        <div class="job">
-          <div class="when">2020 – 2022</div>
+
+      <div class="job">
+        <div class="when">2020–2022</div>
+        <div class="body">
           <h4>MCI Search Engine — Product Manager</h4>
           <ul>
             <li>Built a Persian speech-recognition (ASR) service from scratch: set up a crowdsourcing panel, collected 3,000 hours of Tehran-accent audio, and brought WER/CER down to 0.33%.</li>
@@ -240,8 +241,11 @@
             <li>Designed a pre-launch testing workflow for 12 core services in Jira and Confluence.</li>
           </ul>
         </div>
-        <div class="job">
-          <div class="when">2018 – 2020</div>
+      </div>
+
+      <div class="job">
+        <div class="when">2018–2020</div>
+        <div class="body">
           <h4>Arshan Media — Associate Product Manager</h4>
           <ul>
             <li>GapFilm streaming: Android app, web app, and CMS serving 5M+ customers, growing from 60K to 5M users.</li>
@@ -249,46 +253,47 @@
             <li>Product owner for a language-learning CMS with 10 assessment and content types and 100+ user roles.</li>
           </ul>
         </div>
-        <div class="job">
-          <div class="when">2016 – 2018</div>
+      </div>
+
+      <div class="job">
+        <div class="when">2016–2018</div>
+        <div class="body">
           <h4>Shaya Smart Technologies — Product Owner</h4>
           <ul>
             <li>Introduced Scrum to a small team, cutting bugs by about 10%, and delivered a national-scale education platform for Payame Noor University.</li>
             <li>Led a marketing partnership on MediaAd (about 0.1% CTR); the platform was later sold.</li>
           </ul>
         </div>
-      </div></div>
+      </div>
     </section>
+
+    <hr class="rule" />
 
     <section id="code">
       <h3>Selected GitHub</h3>
       <div class="chips">
-        <a class="chip" href="https://github.com/MaryamJaberi/Language-Learning-Party-Game">Language-Learning-Party-Game</a>
-        <a class="chip" href="https://github.com/MaryamJaberi/Dour">Dour</a>
-        <a class="chip" href="https://github.com/MaryamJaberi/Mafia-Host">Mafia-Host</a>
-        <a class="chip" href="https://github.com/MaryamJaberi/simorgh">simorgh</a>
-        <a class="chip" href="https://github.com/MaryamJaberi/simorgh-studio">simorgh-studio</a>
-        <a class="chip" href="https://github.com/MaryamJaberi/earth-through-time">earth-through-time</a>
-        <a class="chip" href="https://github.com/MaryamJaberi">github.com/MaryamJaberi</a>
+        <a href="https://github.com/MaryamJaberi/Dour">Dour</a>
+        <a href="https://github.com/MaryamJaberi/Mafia-Host">Mafia-Host</a>
+        <a href="https://github.com/MaryamJaberi/simorgh">simorgh</a>
+        <a href="https://github.com/MaryamJaberi/simorgh-studio">simorgh-studio</a>
+        <a href="https://github.com/MaryamJaberi/earth-through-time">earth-through-time</a>
+        <a href="https://github.com/MaryamJaberi">github.com/MaryamJaberi</a>
       </div>
     </section>
 
-    <section>
+    <hr class="rule" />
+
+    <section class="edu">
       <h3>Education and languages</h3>
-      <div class="grid two">
-        <div class="card"><div class="body">
-          <p><strong>M.S. in Industrial Engineering</strong><br />Iran University of Science and Technology, 2023</p>
-          <p style="margin-top:10px"><strong>B.S. in Industrial Engineering</strong><br />Shahid Beheshti University of Medical Sciences, 2017</p>
-        </div></div>
-        <div class="card"><div class="body">
-          <p>Persian (native) · English (B2) · Dutch (A2)</p>
-          <p class="meta" style="margin-top:12px">Rotterdam, Netherlands<br /><a href="mailto:M.jaberi1212@gmail.com" style="color:inherit">M.jaberi1212@gmail.com</a><br />+31 6 26925187</p>
-        </div></div>
-      </div>
+      <p><strong>M.S. in Industrial Engineering</strong><br />Iran University of Science and Technology, 2023</p>
+      <p><strong>B.S. in Industrial Engineering</strong><br />Shahid Beheshti University of Medical Sciences, 2017</p>
+      <p>Persian (native), English (B2), Dutch (A2).</p>
     </section>
 
     <footer>
-      <p>© 2026 Maryam Jaberi · Portfolio</p>
+      <p>Rotterdam, Netherlands</p>
+      <p><a href="mailto:M.jaberi1212@gmail.com">M.jaberi1212@gmail.com</a> · +31 6 26925187</p>
+      <p>© 2026 Maryam Jaberi</p>
     </footer>
   </div>
 </body>
