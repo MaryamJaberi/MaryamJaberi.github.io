@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Maryam Jaberi — Product and Game Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&family=Syne:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#090714;--line:#2d2550;--gold:#e8b84a;--cyan:#3ce7ff;--text:#f3efff;--muted:#b7aed0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Vazirmatn,IBM Plex Sans,system-ui,sans-serif;background:radial-gradient(900px 420px at 90% -10%,#3a1868 0%,transparent 55%),radial-gradient(700px 380px at 0% 20%,#12244a 0%,transparent 50%),var(--bg);color:var(--text);line-height:1.7}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 20px 80px}
+header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:48px}
+.brand{display:flex;gap:14px;align-items:center}
+.brand img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--cyan)}
+.brand h1{font-family:Syne,Vazirmatn,sans-serif;font-size:22px}
+.brand p{color:var(--muted);font-size:14px}
+nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+nav a{color:var(--text);text-decoration:none;font-size:14px;padding:6px 12px;border-radius:999px;border:1px solid var(--line)}
+.lang{background:#1c1636;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:6px 12px;cursor:pointer;font-family:inherit}
+.hero{margin-bottom:56px;max-width:740px}
+.kicker{display:inline-block;background:var(--gold);color:#1a1020;font-weight:800;font-size:12px;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+.hero h2{font-family:Syne,Vazirmatn,sans-serif;font-size:clamp(30px,5.4vw,52px);line-height:1.15}
+.lead{margin-top:14px;color:#ddd6f4;font-size:18px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:11px 18px;border-radius:14px;color:#fff;background:linear-gradient(90deg,#ff2d9b,#c44dff)}
+.btn.ghost{background:transparent;border:1px solid var(--cyan);color:var(--cyan)}
+section{margin-bottom:56px}
+section>h3{font-family:Syne,Vazirmatn,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
+.grid{display:grid;gap:18px}
+@media(min-width:760px){.grid.two{grid-template-columns:1fr 1fr}}
+.card{background:linear-gradient(180deg,#1a1436,#100c22);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.bar{height:6px}
+.dour{background:linear-gradient(90deg,#ff2d9b,#3ce7ff)}
+.mafia{background:linear-gradient(90deg,#e8b84a,#7a4dff)}
+.body{padding:22px}
+.card h4{font-size:24px;margin-bottom:4px}
+.en-label{font-family:Syne,sans-serif;color:var(--gold);font-size:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.tag{font-size:12px;border:1px solid var(--line);background:#1c1638;border-radius:999px;padding:3px 10px}
+.card p{color:#d8d0ee;font-size:15px}
+.meta{margin-top:8px;color:var(--muted);font-size:13px}
+.job{border-bottom:1px solid var(--line);padding:16px 0}
+.job:last-child{border-bottom:0}
+.job .when{color:var(--muted);font-size:13px}
+.job h4{font-size:18px}
+.job ul{margin:8px 18px 0 0;color:#d8d0ee}
+[dir=ltr] .job ul{margin:8px 0 0 18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:#1c1638;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px;color:var(--text);text-decoration:none}
+footer{color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:22px}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="brand">
+<img src="https://avatars.githubusercontent.com/u/48519581?v=4" alt="Maryam Jaberi"/>
+<div>
+<h1>Maryam Jaberi</h1>
+<p data-fa>پروداکت منیجر · طراح بازی · روتردام</p>
+<p data-en class="hidden">Product Manager · Game designer · Rotterdam</p>
+</div>
+</div>
+<nav>
+<a href="#live" data-fa>اپ‌ها</a><a href="#live" data-en class="hidden">Apps</a>
+<a href="#work" data-fa>سابقه</a><a href="#work" data-en class="hidden">Work</a>
+<a href="#code" data-fa>گیت‌هاب</a><a href="#code" data-en class="hidden">GitHub</a>
+<button class="lang" type="button" id="langBtn">EN</button>
+</nav>
+</header>
+<div class="hero">
+<span class="kicker" data-fa>محصول زنده · بازی · یادگیری زبان</span>
+<span class="kicker hidden" data-en>Live products · Games · Language</span>
+<h2 data-fa>بازی می‌سازم که دورهم بازی شود — و در حافظه بماند.</h2>
+<h2 class="hidden" data-en>I ship social games people actually play together.</h2>
+<p class="lead" data-fa>سابقه پروداکت در موتور جستجوی همراه اول و سرویس‌های ویدئو و آموزش. الان روی اپ‌های مهمانی چندزبانه: دور و سیستم‌عامل گرداننده مافیا.</p>
+<p class="lead hidden" data-en>Former product manager at Iran’s largest telco search engine and at video and education platforms. Now shipping Dour and Mafia Host OS.</p>
+<div class="links">
+<a class="btn" href="https://language-app-dour.ai.studio/">Dour</a>
+<a class="btn ghost" href="https://mafia-host-os.ai.studio/">Mafia Host OS</a>
+<a class="btn ghost" href="https://github.com/MaryamJaberi">GitHub</a>
+</div>
+</div>
+<section id="live">
+<h3 data-fa>محصولات زنده</h3><h3 class="hidden" data-en>Live products</h3>
+<div class="grid two">
+<article class="card"><div class="bar dour"></div><div class="body">
+<div class="en-label">DOUR · v3.0</div>
+<h4 data-fa>دور — بازی دورهمی یادگیری زبان</h4>
+<h4 class="hidden" data-en>Dour — language-learning party game</h4>
+<div class="tags"><span class="tag">Pass-the-phone</span><span class="tag">Team vs team</span><span class="tag">RTL</span><span class="tag">Solo + Online</span></div>
+<p data-fa>حدس کلمات، رقابت تیمی روبه‌رو، تقویت مکالمه. برای ۴، ۶ یا ۸ نفر. حالت گروهی و تک‌نفره.</p>
+<p class="hidden" data-en>Word-guessing, opposite-seat teams, conversation practice. Built for 4, 6 or 8 players who pass one phone.</p>
+<p class="meta">language-app-dour.ai.studio</p>
+<div class="links"><a class="btn" href="https://language-app-dour.ai.studio/">Play</a><a class="btn ghost" href="https://github.com/MaryamJaberi/Language-Learning-Party-Game">Repo</a></div>
+</div></article>
+<article class="card"><div class="bar mafia"></div><div class="body">
+<div class="en-label">MAFIA HOST OS · v2.4.0</div>
+<h4 data-fa>سیستم‌عامل مسابقه مافیا</h4>
+<h4 class="hidden" data-en>Mafia Host OS</h4>
+<div class="tags"><span class="tag">Host + players</span><span class="tag">FA / EN / AR / TR</span><span class="tag">Anti-cheat</span></div>
+<p data-fa>میز خدا: انتخاب سناریو، تعادل نقش با هوش مصنوعی، کد اتاق، کارت مخفی، رأی و چالش. سناریوها: شب‌های مافیا، پدرخوانده، زودیاک، ارتش سری، بازپرس.</p>
+<p class="hidden" data-en>Host table plus live player client. Scenario builder, AI balance, room codes, hidden role cards, voting.</p>
+<p class="meta">mafia-host-os.ai.studio</p>
+<div class="links"><a class="btn" href="https://mafia-host-os.ai.studio/">Open</a><a class="btn ghost" href="https://github.com/MaryamJaberi/Mafia-Host">Repo</a></div>
+</div></article>
+</div>
+</section>
+<section id="work">
+<h3 data-fa>سابقه کار</h3><h3 class="hidden" data-en>Work</h3>
+<div class="card"><div class="body">
+<div class="job"><div class="when">2020 — 2022</div>
+<h4 data-fa>همراه اول (MCI) — پروداکت منیجر موتور جستجو</h4>
+<h4 class="hidden" data-en>MCI Search Engine — Product Manager</h4>
+<ul data-fa><li>ساخت ASR فارسی از صفر: ۳۰۰۰ ساعت صوت، WER/CER تا ۰.۳۳٪ خطا.</li><li>جستجوی خرید: ۱۰۰۰ فروشنده، خزش ۱۰۰۰+ فروشگاه، ۱۶۰+ دسته.</li><li>اسمارت‌باکس روی ۲۰+ سرویس؛ حداقل ۱۰٪ کلیک درست بیشتر.</li></ul>
+<ul class="hidden" data-en><li>Built Persian ASR from zero: 3,000 hours of audio, WER/CER to 0.33% error.</li><li>Shopping search: 1,000 vendors, 1,000+ shops, 160+ categories.</li><li>Smart Answer Boxes across 20+ services; at least 10% more correct clicks.</li></ul>
+</div>
+<div class="job"><div class="when">2018 — 2020</div>
+<h4 data-fa>آرشان مدیا — Associate Product Manager</h4>
+<h4 class="hidden" data-en>Arshan Media — Associate Product Manager</h4>
+<ul data-fa><li>گپ‌فیلم: رشد از ۶۰ هزار به ۵ میلیون کاربر.</li><li>پنل آموزش زبان: ۱۰ نوع محتوا، ۱۰۰+ نقش کاربری.</li></ul>
+<ul class="hidden" data-en><li>GapFilm VOD grew from 60k to 5M customers.</li><li>Language-learning CMS: 10 content types, 100+ user roles.</li></ul>
+</div>
+<div class="job"><div class="when">2016 — 2018</div>
+<h4 data-fa>شایا اسمارت تکنولوژی — پروداکت‌اونر</h4>
+<h4 class="hidden" data-en>Shaya Smart Technologies — Product Owner</h4>
+<ul data-fa><li>اسکرام روی تیم کوچک؛ پلتفرم آموزشی پیام‌نور.</li></ul>
+<ul class="hidden" data-en><li>Introduced Scrum; education platform at national scale.</li></ul>
+</div>
+</div></div>
+</section>
+<section id="code">
+<h3 data-fa>منتخب گیت‌هاب</h3><h3 class="hidden" data-en>Selected GitHub</h3>
+<div class="chips">
+<a class="chip" href="https://github.com/MaryamJaberi/Language-Learning-Party-Game">Language-Learning-Party-Game</a>
+<a class="chip" href="https://github.com/MaryamJaberi/Dour">Dour</a>
+<a class="chip" href="https://github.com/MaryamJaberi/Mafia-Host">Mafia-Host</a>
+<a class="chip" href="https://github.com/MaryamJaberi/simorgh">simorgh</a>
+<a class="chip" href="https://github.com/MaryamJaberi/earth-through-time">earth-through-time</a>
+<a class="chip" href="https://github.com/MaryamJaberi">github.com/MaryamJaberi</a>
+</div>
+</section>
+<section>
+<h3 data-fa>تحصیل و زبان</h3><h3 class="hidden" data-en>Education and languages</h3>
+<div class="grid two">
+<div class="card"><div class="body">
+<p data-fa><strong>کارشناسی ارشد مهندسی صنایع</strong><br/>دانشگاه علم و صنعت ایران — ۲۰۲۳</p>
+<p class="hidden" data-en><strong>M.A. Industrial Engineering</strong><br/>Iran University of Science and Technology — 2023</p>
+<p style="margin-top:10px" data-fa><strong>کارشناسی مهندسی صنایع</strong><br/>دانشگاه علوم پزشکی شهید بهشتی — ۲۰۱۷</p>
+<p class="hidden" data-en style="margin-top:10px"><strong>B.Sc. Industrial Engineering</strong><br/>Shahid Beheshti University of Medical Sciences — 2017</p>
+</div></div>
+<div class="card"><div class="body">
+<p>Farsi native · English B2 · Dutch A2</p>
+<p class="meta" style="margin-top:12px">Rotterdam, Netherlands<br/>M.jaberi1212@gmail.com<br/>+31 6 26925187</p>
+</div></div>
+</div>
+</section>
+<footer>
+<p data-fa>پورتفولیو ۲۰۲۶ · همین صفحه را در Website و Featured لینکدین بگذار.</p>
+<p class="hidden" data-en>Portfolio 2026 · Add this page to LinkedIn Website and Featured.</p>
+</footer>
+</div>
+<script>
+const btn=document.getElementById("langBtn");let en=false;
+btn.addEventListener("click",()=>{en=!en;document.documentElement.lang=en?"en":"fa";document.documentElement.dir=en?"ltr":"rtl";document.querySelectorAll("[data-fa]").forEach(el=>el.classList.toggle("hidden",en));document.querySelectorAll("[data-en]").forEach(el=>el.classList.toggle("hidden",!en));btn.textContent=en?"FA":"EN";});
+</script>
+</body>
+</html>
