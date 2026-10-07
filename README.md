@@ -1,2 +1,5 @@
 # MaryamJaberi.github.io
-Personal product and game design portfolio
+
+Personal portfolio — Product & Game Design.
+
+Live: https://maryamjaberi.github.io/
