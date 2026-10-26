@@ -1,375 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maryam Jaberi — Product & Game Design</title>
-<meta name="description" content="Product manager turned game designer. I build social games, host tools, and interactive models that people actually play together.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maryam Jaberi – Product Manager & Game Designer</title>
+<meta name="description" content="Maryam Jaberi: product manager and designer in Rotterdam. Search, streaming and education platforms, plus games and tools built in the open.">
+<meta property="og:title" content="Maryam Jaberi – Product Manager & Game Designer">
+<meta property="og:description" content="Product work across search, streaming and education, plus playable projects.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maryamjaberi.github.io/">
+<meta name="theme-color" content="#14091f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
 <style>
-  :root {
-    --bg: #faf8f5;
-    --surface: #ffffff;
-    --text: #1a1a1a;
-    --text-muted: #5c5c5c;
-    --accent: #c45c26;
-    --accent-soft: #f3e8e0;
-    --border: #e8e4df;
-    --radius: 12px;
-    --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    font-size: 16px;
-  }
-  body.fa { font-family: 'Vazirmatn', 'Inter', system-ui, sans-serif; direction: rtl; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-
-  /* Header */
-  header {
-    padding: 48px 0 32px;
-    border-bottom: 1px solid var(--border);
-  }
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.02em; }
-  .subtitle { color: var(--text-muted); font-size: 1.05rem; margin-top: 4px; }
-  .lang-switch {
-    display: flex;
-    gap: 8px;
-    font-size: 0.85rem;
-  }
-  .lang-switch button {
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 4px 10px;
-    cursor: pointer;
-    color: var(--text-muted);
-    font-family: inherit;
-  }
-  .lang-switch button.active {
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-color: var(--accent);
-    font-weight: 600;
-  }
-
-  /* Hero */
-  .hero { padding: 56px 0 40px; }
-  .hero h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 16px;
-    max-width: 640px;
-  }
-  .hero p { color: var(--text-muted); max-width: 640px; font-size: 1.05rem; }
-  .cta {
-    display: flex;
-    gap: 12px;
-    margin-top: 28px;
-    flex-wrap: wrap;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: all 0.15s;
-  }
-  .btn-primary {
-    background: var(--accent);
-    color: white;
-  }
-  .btn-primary:hover { background: #a84d1e; text-decoration: none; }
-  .btn-secondary {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-  }
-  .btn-secondary:hover { border-color: var(--accent); text-decoration: none; }
-
-  /* Sections */
-  section { padding: 48px 0; }
-  section h3 {
-    font-size: 1.35rem;
-    font-weight: 600;
-    margin-bottom: 24px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* Projects */
-  .projects {
-    display: grid;
-    gap: 20px;
-  }
-  .project {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    box-shadow: var(--shadow);
-    transition: border-color 0.15s, transform 0.15s;
-  }
-  .project:hover { border-color: var(--accent); transform: translateY(-1px); }
-  .project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 8px;
-  }
-  .project h4 { font-size: 1.15rem; font-weight: 600; }
-  .tag {
-    font-size: 0.75rem;
-    font-weight: 500;
-    background: var(--accent-soft);
-    color: var(--accent);
-    padding: 3px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-  .project p { color: var(--text-muted); font-size: 0.95rem; margin: 8px 0 16px; }
-  .project-links { display: flex; gap: 16px; font-size: 0.9rem; font-weight: 500; }
-
-  /* Experience / Skills */
-  .timeline { display: flex; flex-direction: column; gap: 20px; }
-  .job { padding-bottom: 16px; border-bottom: 1px solid var(--border); }
-  .job:last-child { border-bottom: none; }
-  .job-title { font-weight: 600; }
-  .job-meta { color: var(--text-muted); font-size: 0.9rem; margin-top: 2px; }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-  }
-  .skill-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 16px;
-  }
-  .skill-card h5 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
-  .skill-card p { font-size: 0.85rem; color: var(--text-muted); }
-
-  /* Footer */
-  footer {
-    padding: 40px 0 32px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-  }
-  footer a { margin: 0 8px; }
-
-  @media (max-width: 600px) {
-    h1 { font-size: 1.75rem; }
-    .hero h2 { font-size: 1.4rem; }
-    .header-top { flex-direction: column; }
-  }
+:root{--bg:#14091f;--surface:#1f1130;--line:#3a2456;--text:#f3ecfa;--muted:#b9a8cf;--accent:#e24bb4;--accent2:#a56bff;--r:14px}
+:root[data-theme="light"]{--bg:#faf6fd;--surface:#fff;--line:#e3d6f0;--text:#22112f;--muted:#5d4a72;--accent:#b01f86;--accent2:#6b35c9}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#faf6fd;--surface:#fff;--line:#e3d6f0;--text:#22112f;--muted:#5d4a72;--accent:#b01f86;--accent2:#6b35c9}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Vazirmatn",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+header.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-size:15px;padding:6px 2px}
+nav a:hover{color:var(--text)}
+.tools{display:flex;gap:6px}
+.tools button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:6px 12px;min-height:44px;min-width:44px;font:inherit;font-size:14px;cursor:pointer}
+.tools button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.hero{padding:clamp(56px,12vw,120px) 0 56px}
+.hero h1{font-size:clamp(44px,10vw,92px);line-height:1.02;margin:0 0 22px;letter-spacing:-.02em;font-weight:800}
+.hero h1 span{display:block;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:34em;font-size:clamp(18px,2.4vw,22px);color:var(--muted);margin:0 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;text-decoration:none;font-weight:600;border:1px solid var(--line)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{border-color:var(--accent2)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,36px);margin:0 0 28px;line-height:1.2}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:10px}
+.card.live{border-color:var(--accent2)}
+.card h3{margin:0;font-size:20px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.status{font-size:14px;color:var(--accent2);font-weight:600}
+.links{margin-top:auto;display:flex;gap:16px;flex-wrap:wrap;padding-top:6px}
+.links a{font-weight:600;color:var(--accent)}
+.two{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.two p{margin:0 0 14px;max-width:38em}
+dl{margin:0}dt{font-weight:700;margin-top:14px}dd{margin:2px 0 0;color:var(--muted)}
+ul.plain{list-style:none;margin:0;padding:0}ul.plain li{padding:8px 0;border-bottom:1px solid var(--line)}
+footer{padding:36px 0 56px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+[dir=rtl] .hero h1{letter-spacing:0}
+@media(prefers-reduced-motion:no-preference){.hero h1 span{animation:rise .9s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}}
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <div class="header-top">
-      <div>
-        <h1 data-en="Maryam Jaberi" data-fa="مریم جابری">Maryam Jaberi</h1>
-        <p class="subtitle" data-en="Product & Game Design · Rotterdam" data-fa="طراحی محصول و بازی · روتردام">Product & Game Design · Rotterdam</p>
-      </div>
-      <div class="lang-switch">
-        <button class="active" onclick="setLang('en')">EN</button>
-        <button onclick="setLang('fa')">FA</button>
-      </div>
-    </div>
-  </header>
+<header class="bar"><div class="wrap">
+<nav aria-label="Main"><a href="#work" data-i="nav_work"></a><a href="#about" data-i="nav_about"></a><a href="#exp" data-i="nav_exp"></a><a href="#contact" data-i="nav_contact"></a></nav>
+<div class="tools" role="group" aria-label="Language">
+<button data-lang="en" aria-pressed="true">EN</button><button data-lang="fa" aria-pressed="false">فا</button><button data-lang="nl" aria-pressed="false">NL</button>
+<button id="theme" aria-label="Toggle theme">◐</button>
+</div></div></header>
 
-  <section class="hero">
-    <h2 data-en="I build social games people actually play together." data-fa="بازی‌های اجتماعی می‌سازم که آدم‌ها واقعاً دور هم بازی کنند.">I build social games people actually play together.</h2>
-    <p data-en="Product manager turned game designer. I design party games, host tools, and game-theory models that turn complex ideas into something a group can sit around a table and play." data-fa="مدیر محصول سابق که حالا طراح بازی‌ام. بازی‌های دورهمی، ابزارهای گرداننده، و مدل‌های نظریه‌بازی طراحی می‌کنم که ایده‌های پیچیده را به چیزی تبدیل کند که یک جمع بتواند دور میز بنشیند و بازی کند.">Product manager turned game designer. I design party games, host tools, and game-theory models that turn complex ideas into something a group can sit around a table and play.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#projects" data-en="See projects" data-fa="پروژه‌ها">See projects</a>
-      <a class="btn btn-secondary" href="https://github.com/MaryamJaberi" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h3 data-en="Live projects" data-fa="پروژه‌های زنده">Live projects</h3>
-    <div class="projects">
-
-      <article class="project">
-        <div class="project-header">
-          <h4>Dour — Turn</h4>
-          <span class="tag" data-en="Party game" data-fa="بازی دورهمی">Party game</span>
-        </div>
-        <p data-en="A pass-the-phone word-guessing game for 4 to 8 players, split into teams sitting across from each other. Play solo against the clock or with friends, in nine languages: Persian, English, Dutch, German, French, Arabic, Turkish, Polish, and Ukrainian." data-fa="بازی حدس کلمه با پاس‌دادن گوشی برای ۴ تا ۸ نفر، با تیم‌های روبه‌رو. تنهایی در برابر زمان یا با دوستان، به ۹ زبان: فارسی، انگلیسی، هلندی، آلمانی، فرانسوی، عربی، ترکی، لهستانی و اوکراینی.">A pass-the-phone word-guessing game for 4 to 8 players, split into teams sitting across from each other. Play solo against the clock or with friends, in nine languages.</p>
-        <div class="project-links">
-          <a href="https://maryamjaberi.github.io/Dour/" target="_blank" rel="noopener" data-en="Play →" data-fa="بازی کن ←">Play →</a>
-          <a href="https://github.com/MaryamJaberi/Dour" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-header">
-          <h4>Dour: Language</h4>
-          <span class="tag" data-en="Language learning" data-fa="یادگیری زبان">Language learning</span>
-        </div>
-        <p data-en="A language-practice spin-off of Dour. Same pass-the-phone flow, but with real vocabulary and phrases instead of random words. Pick one language you speak and up to four you're learning — nine languages supported — and the cards adjust to your CEFR level." data-fa="نسخه یادگیری زبان از دور. همان جریان پاس‌دادن گوشی، اما با واژگان و عبارت‌های واقعی. یک زبان که بلد هستید و تا چهار زبانی که یاد می‌گیرید انتخاب کنید — ۹ زبان پشتیبانی می‌شود — و کارت‌ها با سطح CEFR شما تنظیم می‌شوند.">A language-practice spin-off of Dour. Same pass-the-phone flow, but with real vocabulary and phrases. Cards adjust to your CEFR level across nine languages.</p>
-        <div class="project-links">
-          <a href="https://maryamjaberi.github.io/Language-Learning-Party-Game/" target="_blank" rel="noopener" data-en="Play →" data-fa="بازی کن ←">Play →</a>
-          <a href="https://github.com/MaryamJaberi/Language-Learning-Party-Game" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-header">
-          <h4>Mafia Host OS</h4>
-          <span class="tag" data-en="Host tool" data-fa="ابزار گرداننده">Host tool</span>
-        </div>
-        <p data-en="Everything a Mafia host needs on one screen: a scenario builder, AI-balanced roles, hidden role cards for players, and live voting. Runs in Persian, English, Arabic, and Turkish." data-fa="هر چیزی که گرداننده مافیا نیاز دارد روی یک صفحه: سازنده سناریو، نقش‌های متعادل‌شده با هوش مصنوعی، کارت‌های مخفی نقش برای بازیکنان، و رأی‌گیری زنده. به فارسی، انگلیسی، عربی و ترکی.">Everything a Mafia host needs on one screen: scenario builder, AI-balanced roles, hidden role cards, and live voting. Persian, English, Arabic, and Turkish.</p>
-        <div class="project-links">
-          <a href="https://mafia-host-os.ai.studio/" target="_blank" rel="noopener" data-en="Open →" data-fa="باز کن ←">Open →</a>
-          <a href="https://github.com/MaryamJaberi/Mafia" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-header">
-          <h4>Chrono Atlas</h4>
-          <span class="tag" data-en="Interactive map" data-fa="نقشه تعاملی">Interactive map</span>
-        </div>
-        <p data-en="An interactive map of Earth across deep time — from the Big Bang to a thousand years from now — showing continents, life, and human societies at any chosen moment, built on a sourced, citation-backed dataset." data-fa="نقشه تعاملی زمین در طول زمان عمیق — از بیگ‌بنگ تا هزار سال آینده — که قاره‌ها، حیات و جوامع انسانی را در هر لحظه انتخابی نشان می‌دهد، بر اساس داده‌های منبع‌دار و قابل استناد.">An interactive map of Earth across deep time — from the Big Bang to a thousand years from now — showing continents, life, and human societies.</p>
-        <div class="project-links">
-          <a href="https://maryamjaberi.github.io/earth-through-time/" target="_blank" rel="noopener" data-en="Explore →" data-fa="کاوش ←">Explore →</a>
-          <a href="https://github.com/MaryamJaberi/earth-through-time" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-header">
-          <h4>Par-e Simorgh</h4>
-          <span class="tag" data-en="Game theory" data-fa="نظریه بازی">Game theory</span>
-        </div>
-        <p data-en="A structural analysis of present-day Iran, told through the rules of a Mafia game — modeled as a coordination game, not a fight to win. 37 roles across 3 factions, 7 rounds spanning 1979–2026, and 76 sourced claims." data-fa="تحلیل ساختاری ایران امروز، روایت‌شده از طریق قواعد بازی مافیا — به‌عنوان یک بازی هماهنگی، نه جنگ برای برد. ۳۷ نقش در ۳ جناح، ۷ دور از ۱۳۵۷ تا ۱۴۰۵، و ۷۶ ادعای منبع‌دار.">A structural analysis of present-day Iran through the rules of a Mafia game — modeled as a coordination game. 37 roles, 7 rounds (1979–2026), 76 sourced claims.</p>
-        <div class="project-links">
-          <a href="https://maryamjaberi.github.io/simorgh/" target="_blank" rel="noopener" data-en="Read →" data-fa="بخوان ←">Read →</a>
-          <a href="https://github.com/MaryamJaberi/simorgh" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section>
-    <h3 data-en="Experience" data-fa="تجربه">Experience</h3>
-    <div class="timeline">
-      <div class="job">
-        <div class="job-title" data-en="Independent Game Designer" data-fa="طراح بازی مستقل">Independent Game Designer</div>
-        <div class="job-meta">2022 – Present · Rotterdam</div>
-        <p style="margin-top:6px;color:var(--text-muted);font-size:0.95rem;" data-en="Designing and shipping social party games, host tools, and interactive educational experiences." data-fa="طراحی و انتشار بازی‌های دورهمی اجتماعی، ابزارهای گرداننده، و تجربه‌های آموزشی تعاملی.">Designing and shipping social party games, host tools, and interactive educational experiences.</p>
-      </div>
-      <div class="job">
-        <div class="job-title" data-en="Product Manager Assistant" data-fa="دستیار مدیر محصول">Product Manager Assistant</div>
-        <div class="job-meta">2020–2022 · Hamrahe Aval (MCI) · Tehran</div>
-        <p style="margin-top:6px;color:var(--text-muted);font-size:0.95rem;" data-en="Search Engine Division, 1,000+ person organization." data-fa="بخش موتور جستجو، سازمان ۱۰۰۰+ نفره.">Search Engine Division, 1,000+ person organization.</p>
-      </div>
-      <div class="job">
-        <div class="job-title" data-en="Product Owner" data-fa="مالک محصول">Product Owner</div>
-        <div class="job-meta">2018–2020 · Arshan Media (GapFilm) · Tehran</div>
-        <p style="margin-top:6px;color:var(--text-muted);font-size:0.95rem;" data-en="Multi-platform VOD startup." data-fa="استارتاپ VOD چندپلتفرمی.">Multi-platform VOD startup.</p>
-      </div>
-      <div class="job">
-        <div class="job-title" data-en="Product Owner" data-fa="مالک محصول">Product Owner</div>
-        <div class="job-meta">2016–2018 · Shaya Smart Technologies · Tehran</div>
-        <p style="margin-top:6px;color:var(--text-muted);font-size:0.95rem;" data-en="20-person ed-tech startup." data-fa="استارتاپ آموزشی ۲۰ نفره.">20-person ed-tech startup.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h3 data-en="Skills & background" data-fa="مهارت‌ها و پیشینه">Skills & background</h3>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h5 data-en="Product ownership" data-fa="مالکیت محصول">Product ownership</h5>
-        <p data-en="Roadmap planning, backlog refinement, data-driven decisions, cross-functional leadership, Agile & Scrum." data-fa="برنامه‌ریزی نقشه راه، پالایش بک‌لاگ، تصمیم‌گیری داده‌محور، رهبری بین‌تیمی، Agile و Scrum.">Roadmap planning, backlog refinement, data-driven decisions, cross-functional leadership, Agile & Scrum.</p>
-      </div>
-      <div class="skill-card">
-        <h5 data-en="UX research" data-fa="پژوهش تجربه کاربری">UX research</h5>
-        <p data-en="User interviews, usability testing, journey mapping, product analytics, A/B testing, competitive research." data-fa="مصاحبه کاربری، تست کاربردپذیری، نقشه‌برداری سفر، تحلیل محصول، تست A/B، پژوهش رقابتی.">User interviews, usability testing, journey mapping, product analytics, A/B testing, competitive research.</p>
-      </div>
-      <div class="skill-card">
-        <h5 data-en="AI-assisted development" data-fa="توسعه با کمک هوش مصنوعی">AI-assisted development</h5>
-        <p data-en="Prompt engineering, vibe-coding prototyping, evaluating AI features as a PM, multi-model comparison." data-fa="مهندسی پرامپت، پروتوتایپ با وایب‌کدینگ، ارزیابی فیچرهای AI به‌عنوان PM، مقایسه چندمدلی.">Prompt engineering, vibe-coding prototyping, evaluating AI features as a PM, multi-model comparison.</p>
-      </div>
-      <div class="skill-card">
-        <h5 data-en="Game design" data-fa="طراحی بازی">Game design</h5>
-        <p data-en="Party game mechanics, social deduction, game theory modeling, mobile-first UI, multi-language support." data-fa="مکانیک بازی دورهمی، استنتاج اجتماعی، مدل‌سازی نظریه بازی، UI موبایل‌اول، پشتیبانی چندزبانه.">Party game mechanics, social deduction, game theory modeling, mobile-first UI, multi-language support.</p>
-      </div>
-    </div>
-    <p style="margin-top:20px;color:var(--text-muted);font-size:0.9rem;">
-      <strong data-en="Tools:" data-fa="ابزارها:">Tools:</strong> Confluence, Jira, Miro, Figma, Claude, ChatGPT, Gemini, Godot, React, TypeScript<br>
-      <strong data-en="Certifications:" data-fa="گواهی‌ها:">Certifications:</strong> Google UX Design Professional Certificate, IBM Product Management, SkillUp Scrum Master Capstone, IBM Agile & Scrum
-    </p>
-  </section>
-
-  <section>
-    <h3 data-en="Education & languages" data-fa="تحصیلات و زبان‌ها">Education & languages</h3>
-    <div class="timeline">
-      <div class="job">
-        <div class="job-title" data-en="MA in Industrial Engineering" data-fa="کارشناسی ارشد مهندسی صنایع">MA in Industrial Engineering</div>
-        <div class="job-meta">Iran University of Science and Technology · 2023</div>
-      </div>
-      <div class="job">
-        <div class="job-title" data-en="BSc in Industrial Engineering" data-fa="کارشناسی مهندسی صنایع">BSc in Industrial Engineering</div>
-        <div class="job-meta">Shahid Beheshti University of Medical Sciences · 2017</div>
-      </div>
-    </div>
-    <p style="margin-top:20px;">
-      <strong data-en="Languages:" data-fa="زبان‌ها:">Languages:</strong>
-      <span data-en="Persian (native), English (B2), Dutch (B1)" data-fa="فارسی (زبان مادری)، انگلیسی (B2)، هلندی (B1)">Persian (native), English (B2), Dutch (B1)</span>
-    </p>
-  </section>
-
-  <footer>
-    <p>
-      <a href="mailto:M.jaberi1212@gmail.com">M.jaberi1212@gmail.com</a>
-      <a href="https://www.linkedin.com/in/maryam-jaberi-05b988140/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/MaryamJaberi" target="_blank" rel="noopener">GitHub</a>
-    </p>
-    <p style="margin-top:12px;" data-en="© 2026 Maryam Jaberi" data-fa="© ۱۴۰۵ مریم جابری">© 2026 Maryam Jaberi</p>
-  </footer>
+<main>
+<div class="wrap">
+<div class="hero">
+<h1><span data-i="name"></span><em style="font-style:normal" data-i="role"></em></h1>
+<p data-i="lead"></p>
+<div class="cta"><a class="btn main" href="#work" data-i="cta_work"></a><a class="btn" href="#contact" data-i="cta_contact"></a></div>
+</div>
 </div>
 
+<section id="work"><div class="wrap">
+<h2 data-i="h_work"></h2>
+<div class="grid" id="projects"></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2 data-i="h_about"></h2>
+<div class="two">
+<div><p data-i="about1"></p><p data-i="about2"></p></div>
+<dl><dt data-i="sk1_t"></dt><dd data-i="sk1"></dd><dt data-i="sk2_t"></dt><dd data-i="sk2"></dd><dt data-i="sk3_t"></dt><dd data-i="sk3"></dd><dt data-i="lang_t"></dt><dd data-i="lang"></dd></dl>
+</div>
+</div></section>
+
+<section id="exp"><div class="wrap">
+<h2 data-i="h_exp"></h2>
+<ul class="plain"><li data-i="e1"></li><li data-i="e2"></li><li data-i="e3"></li><li data-i="e4"></li></ul>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2 data-i="h_contact"></h2>
+<p data-i="contact_p" style="color:var(--muted);max-width:34em;margin:0 0 20px"></p>
+<div class="cta"><a class="btn main" href="https://github.com/MaryamJaberi" target="_blank" rel="noopener">GitHub</a></div>
+</div></section>
+</main>
+<footer><div class="wrap"><span data-i="foot"></span></div></footer>
+
 <script>
-function setLang(lang) {
-  document.body.classList.toggle('fa', lang === 'fa');
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-en]').forEach(el => {
-    el.textContent = el.getAttribute('data-' + lang) || el.getAttribute('data-en');
-  });
-  document.querySelectorAll('.lang-switch button').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.toLowerCase().startsWith(lang));
-  });
+/* Edit content here. Add email/linkedin/resume to CONTACT to show extra buttons. */
+const CONTACT={email:"",linkedin:"",resume:""};
+const PROJECTS=[
+{id:"chrono",live:true,repo:"https://github.com/MaryamJaberi/earth-through-time",demo:"https://maryamjaberi.github.io/earth-through-time/"},
+{id:"turn"},{id:"lang"},{id:"mafia"},{id:"simorgh"},{id:"darang"}
+];
+const T={
+en:{name:"Maryam Jaberi",role:"Product manager and game designer.",lead:"I turn fuzzy ideas into products people can use, and I build the first playable version myself. Based in Rotterdam.",nav_work:"Projects",nav_about:"About",nav_exp:"Experience",nav_contact:"Contact",cta_work:"See the projects",cta_contact:"Get in touch",h_work:"Projects",h_about:"About",h_exp:"Experience",h_contact:"Contact",
+about1:"I work as a product owner and product manager, with a design eye. My background spans search, video streaming and education platforms.",about2:"Outside client work I build games and tools in the open: party games, a world timeline, and a host assistant for Mafia nights. Each one starts as a written spec and ends as something people can open and play.",
+sk1_t:"Product",sk1:"Discovery, backlog and roadmap, stakeholder management, agile delivery",sk2_t:"Design",sk2:"UX research, user stories, interaction design, game and systems design",sk3_t:"Build",sk3:"Single-file web apps, PWAs, data-driven architecture, GitHub Pages",lang_t:"Languages",lang:"Persian, Dutch, English",
+e1:"Product management on search products",e2:"Product management on video streaming platforms",e3:"Product management on education platforms",e4:"Agile coaching of delivery teams and stakeholder alignment",
+contact_p:"Open to product owner, product manager and product design roles in the Netherlands and remote.",foot:"© Maryam Jaberi. Built by hand and hosted on GitHub Pages.",
+live:"Live",repo:"Code",demo:"Open",
+chrono:["Chrono Atlas","A world map with a timeline from the Big Bang to 1,000 years ahead. Pick a moment and see Earth, life and human societies as they were.","Live, v0.2"],
+turn:["Turn (دور)","A Persian word-guessing party game for groups, installable as a web app and playable offline.","In testing"],
+lang:["Turn: Language","A multiplayer party game that teaches a language through play. Includes the design document and user stories.","Design complete"],
+mafia:["Miz Khoda","A host assistant for the Persian Mafia game: role dealing, night actions and scenarios, driven by data instead of hard-coded rules.","In progress"],
+simorgh:["Simorgh’s Feather","An interactive map of Iran’s history with mini-games that sort players into 30 groups, each with one goal.","Concept and prompts"],
+darang:["Darang (درنگ)","A tool that lists the different readings of a short Persian sentence, then suggests clearer rewrites.","Spec v0.9"]},
+fa:{name:"مریم جابری",role:"مدیر محصول و طراح بازی.",lead:"ایده‌های مبهم را به محصولی تبدیل می‌کنم که مردم بتوانند از آن استفاده کنند، و نسخهٔ اول قابل‌بازی را خودم می‌سازم. ساکن روتردام.",nav_work:"پروژه‌ها",nav_about:"دربارهٔ من",nav_exp:"تجربه",nav_contact:"تماس",cta_work:"دیدن پروژه‌ها",cta_contact:"تماس با من",h_work:"پروژه‌ها",h_about:"دربارهٔ من",h_exp:"تجربه",h_contact:"تماس",
+about1:"به‌عنوان Product Owner و Product Manager کار می‌کنم، با نگاه طراحی. پیشینه‌ام در محصولات جست‌وجو، پخش ویدیو و پلتفرم‌های آموزشی است.",about2:"خارج از کار برای مشتری، بازی و ابزار می‌سازم و منتشر می‌کنم: بازی‌های دورهمی، یک نقشهٔ زمان جهان و یک دستیار گرداننده برای شب‌های مافیا. هر کدام با یک سند طراحی شروع می‌شود و به چیزی می‌رسد که مردم بتوانند باز کنند و بازی کنند.",
+sk1_t:"محصول",sk1:"کشف نیاز، بک‌لاگ و نقشهٔ راه، مدیریت ذی‌نفعان، تحویل چابک",sk2_t:"طراحی",sk2:"پژوهش تجربهٔ کاربری، داستان کاربر، طراحی تعامل، طراحی بازی و سیستم",sk3_t:"ساخت",sk3:"وب‌اپ تک‌فایلی، PWA، معماری داده‌محور، GitHub Pages",lang_t:"زبان‌ها",lang:"فارسی، هلندی، انگلیسی",
+e1:"مدیریت محصول در محصولات جست‌وجو",e2:"مدیریت محصول در پلتفرم‌های پخش ویدیو",e3:"مدیریت محصول در پلتفرم‌های آموزشی",e4:"مربیگری چابک تیم‌های تحویل و هم‌راستاسازی ذی‌نفعان",
+contact_p:"آمادهٔ همکاری در نقش‌های Product Owner، Product Manager و طراحی محصول در هلند و به‌صورت دورکار.",foot:"© مریم جابری. ساخته‌شده با دست و میزبانی‌شده در GitHub Pages.",
+live:"زنده",repo:"کد",demo:"باز کردن",
+chrono:["اطلس زمان (Chrono Atlas)","نقشهٔ جهان با نوار زمان از مه‌بانگ تا هزار سال بعد. یک لحظه را انتخاب کن و زمین، زندگی و جوامع انسانی را در همان لحظه ببین.","زنده، نسخهٔ ۰٫۲"],
+turn:["دور (Turn)","بازی دورهمی حدس کلمه به فارسی برای گروه‌ها؛ قابل نصب به‌صورت وب‌اپ و بدون نیاز به اینترنت.","در حال آزمون"],
+lang:["دور: زبان","بازی دورهمی چندنفره برای یادگیری زبان از راه بازی. شامل سند طراحی و داستان‌های کاربر.","طراحی کامل"],
+mafia:["میز خدا","دستیار گرداننده برای بازی مافیا: نقش‌دهی، اکشن‌های شب و سناریوها، با قوانین داده‌محور به‌جای کدنویسی ثابت.","در حال ساخت"],
+simorgh:["پَرِ سیمرغ","نقشهٔ تعاملی تاریخ ایران با مینی‌گیم‌هایی که بازیکنان را در ۳۰ گروه، هر کدام با یک هدف، دسته‌بندی می‌کند.","مفهوم و پرامپت‌ها"],
+darang:["درنگ","ابزاری که خوانش‌های مختلف یک جملهٔ کوتاه فارسی را فهرست می‌کند و بازنویسی‌های روشن‌تر پیشنهاد می‌دهد.","مشخصات نسخهٔ ۰٫۹"]},
+nl:{name:"Maryam Jaberi",role:"Productmanager en gameontwerper.",lead:"Ik maak van vage ideeën producten die mensen kunnen gebruiken en bouw zelf de eerste speelbare versie. Gevestigd in Rotterdam.",nav_work:"Projecten",nav_about:"Over mij",nav_exp:"Ervaring",nav_contact:"Contact",cta_work:"Bekijk de projecten",cta_contact:"Neem contact op",h_work:"Projecten",h_about:"Over mij",h_exp:"Ervaring",h_contact:"Contact",
+about1:"Ik werk als product owner en productmanager, met een ontwerpersoog. Mijn achtergrond ligt bij zoek, videostreaming en onderwijsplatforms.",about2:"Naast opdrachtwerk bouw ik openlijk games en tools: partyspellen, een wereldtijdlijn en een hostassistent voor Mafia-avonden. Elk begint als een geschreven spec en eindigt als iets wat mensen kunnen openen en spelen.",
+sk1_t:"Product",sk1:"Discovery, backlog en roadmap, stakeholdermanagement, agile oplevering",sk2_t:"Ontwerp",sk2:"UX-onderzoek, user stories, interactieontwerp, game- en systeemontwerp",sk3_t:"Bouwen",sk3:"Webapps in één bestand, PWA’s, datagedreven architectuur, GitHub Pages",lang_t:"Talen",lang:"Perzisch, Nederlands, Engels",
+e1:"Productmanagement bij zoekproducten",e2:"Productmanagement bij videostreamingplatforms",e3:"Productmanagement bij onderwijsplatforms",e4:"Agile coaching van teams en afstemming met stakeholders",
+contact_p:"Open voor rollen als product owner, productmanager en productontwerper in Nederland en op afstand.",foot:"© Maryam Jaberi. Met de hand gebouwd en gehost op GitHub Pages.",
+live:"Live",repo:"Code",demo:"Openen",
+chrono:["Chrono Atlas","Een wereldkaart met een tijdlijn van de oerknal tot 1.000 jaar vooruit. Kies een moment en zie de aarde, het leven en menselijke samenlevingen toen.","Live, v0.2"],
+turn:["Turn (دور)","Een Perzisch woordraadspel voor groepen, installeerbaar als webapp en offline speelbaar.","In test"],
+lang:["Turn: Taal","Een multiplayer-partyspel waarmee je al spelend een taal leert. Inclusief ontwerpdocument en user stories.","Ontwerp klaar"],
+mafia:["Miz Khoda","Een hostassistent voor het Perzische Mafia-spel: rollen delen, nachtacties en scenario’s, gestuurd door data in plaats van vaste regels.","In uitvoering"],
+simorgh:["Simorghs veer","Een interactieve kaart van de Iraanse geschiedenis met minigames die spelers in 30 groepen indelen, elk met één doel.","Concept en prompts"],
+darang:["Darang (درنگ)","Een tool die de verschillende lezingen van een korte Perzische zin toont en duidelijkere herschrijvingen voorstelt.","Spec v0.9"]}
+};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function render(l){
+ const t=T[l];
+ document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr";
+ $$("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);
+ $("#projects").innerHTML=PROJECTS.map(p=>{
+  const [n,d,s]=t[p.id];
+  const links=(p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${t.demo}</a>`:"")+(p.repo?`<a href="${p.repo}" target="_blank" rel="noopener">${t.repo}</a>`:"");
+  return `<article class="card${p.live?" live":""}"><span class="status">${s}</span><h3>${n}</h3><p>${d}</p>${links?`<div class="links">${links}</div>`:""}</article>`;
+ }).join("");
+ $$(".tools [data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
+ document.title=l==="fa"?"مریم جابری – مدیر محصول و طراح بازی":l==="nl"?"Maryam Jaberi – Productmanager & gameontwerper":"Maryam Jaberi – Product Manager & Game Designer";
 }
+function extraContact(){
+ const c=$("#contact .cta");
+ if(CONTACT.email)c.insertAdjacentHTML("beforeend",`<a class="btn" href="mailto:${CONTACT.email}">Email</a>`);
+ if(CONTACT.linkedin)c.insertAdjacentHTML("beforeend",`<a class="btn" href="${CONTACT.linkedin}" target="_blank" rel="noopener">LinkedIn</a>`);
+ if(CONTACT.resume)c.insertAdjacentHTML("beforeend",`<a class="btn" href="${CONTACT.resume}">CV (PDF)</a>`);
+}
+let lang="en";
+try{lang=localStorage.getItem("lang")||((navigator.language||"").startsWith("fa")?"fa":(navigator.language||"").startsWith("nl")?"nl":"en")}catch(e){}
+render(lang);extraContact();
+$$(".tools [data-lang]").forEach(b=>b.onclick=()=>{lang=b.dataset.lang;try{localStorage.setItem("lang",lang)}catch(e){}render(lang)});
+$("#theme").onclick=()=>{const r=document.documentElement;const dark=getComputedStyle(r).getPropertyValue("--bg").trim()==="#14091f";r.dataset.theme=dark?"light":"dark"};
 </script>
 </body>
 </html>
