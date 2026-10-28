@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maryam Jaberi – Product Manager & Game Designer</title>
-<meta name="description" content="Maryam Jaberi: product manager and designer in Rotterdam. Search, streaming and education platforms, plus games and tools built in the open.">
+<meta name="description" content="Product manager and game designer in Rotterdam. Search, streaming and education platforms, plus open games and tools.">
 <meta property="og:title" content="Maryam Jaberi – Product Manager & Game Designer">
 <meta property="og:description" content="Product work across search, streaming and education, plus playable projects.">
 <meta property="og:type" content="website">
@@ -100,61 +100,64 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:15px;border-top:1px soli
 <footer><div class="wrap"><span data-i="foot"></span></div></footer>
 
 <script>
-/* Edit content here. Add email/linkedin/resume to CONTACT to show extra buttons. */
 const CONTACT={email:"M.jaberi1212@gmail.com",linkedin:"",resume:""};
 const PROJECTS=[
+{id:"dour",live:true,repo:"https://github.com/MaryamJaberi/Dour",demo:"https://maryamjaberi.github.io/Dour/"},
+{id:"lang",live:true,repo:"https://github.com/MaryamJaberi/Language-Learning-Party-Game",demo:"https://maryamjaberi.github.io/Language-Learning-Party-Game/"},
 {id:"chrono",live:true,repo:"https://github.com/MaryamJaberi/earth-through-time",demo:"https://maryamjaberi.github.io/earth-through-time/"},
-{id:"turn"},{id:"lang"},{id:"mafia"},{id:"simorgh"},{id:"darang"}
+{id:"simorgh",live:true,repo:"https://github.com/MaryamJaberi/simorgh",demo:"https://maryamjaberi.github.io/simorgh/"},
+{id:"ganjoor",live:true,repo:"https://github.com/MaryamJaberi/ganjoor-no",demo:"https://maryamjaberi.github.io/ganjoor-no/"},
+{id:"mafia"}
 ];
 const T={
 en:{name:"Maryam Jaberi",role:"Product manager and game designer.",lead:"I turn fuzzy ideas into products people can use, and I build the first playable version myself. Based in Rotterdam.",nav_work:"Projects",nav_about:"About",nav_exp:"Experience",nav_contact:"Contact",cta_work:"See the projects",cta_contact:"Get in touch",h_work:"Projects",h_about:"About",h_exp:"Experience",h_contact:"Contact",
-about1:"I work as a product owner and product manager, with a design eye. My background spans search, video streaming and education platforms.",about2:"Outside client work I build games and tools in the open: party games, a world timeline, and a host assistant for Mafia nights. Each one starts as a written spec and ends as something people can open and play.",
-sk1_t:"Product",sk1:"Discovery, backlog and roadmap, stakeholder management, agile delivery",sk2_t:"Design",sk2:"UX research, user stories, interaction design, game and systems design",sk3_t:"Build",sk3:"Single-file web apps, PWAs, data-driven architecture, GitHub Pages",lang_t:"Languages",lang:"Persian (native), English (B2), Dutch (A2)",
-e1:"Product Manager, Search Engine — Hamrahe Aval (MCI), 2020–2022. Led shopping search roadmap for a 1,000+ person team. Built ASR from scratch (3,000 hours of Persian audio, 0.33% error). Integrated 1,000 retailers and implemented Smart Answer Boxes (+10% correct clicks).",
-e2:"Associate Product Manager — Arshan Media (GapFilm), 2018–2020. Managed VOD across Android, TV, Web, Kids and CMS for +5M users. Grew user base from 60k to 5M and increased average engagement by 5 minutes.",
-e3:"Product Owner — Shaya Smart Technologies, 2016–2018. Implemented Scrum (10% fewer bugs) and managed content for a 19-million-user education platform. Collaborated on MediaAd, which became Iran’s second-largest native advertising platform.",
-e4:"Independent game designer, Rotterdam — 2022–present. Designing and shipping social games, host tools and interactive experiences in the open.",
-contact_p:"Open to product owner, product manager and product design roles in the Netherlands and remote. Email: M.jaberi1212@gmail.com",
+about1:"Product owner and product manager with a design eye. Background in search engines, video streaming and education platforms at scale.",about2:"I also design and ship games and interactive tools in the open: party games, host assistants, teaching maps and literary interfaces. Each starts as a written spec and ends as something people can open and play.",
+sk1_t:"Product",sk1:"Roadmaps, backlog, stakeholder management, Agile & Scrum, data-driven decisions",sk2_t:"Design",sk2:"UX research, user stories, interaction design, game systems",sk3_t:"Build",sk3:"Web apps, PWAs, data-driven architecture, GitHub Pages, AI-assisted prototyping",lang_t:"Languages",lang:"Persian (native), English (B2), Dutch (A2)",
+e1:"Product Manager, Search Engine — Hamrahe Aval (MCI), 2020–2022. Led shopping-search roadmap for a 1,000+ person team. Built Persian ASR from scratch (3,000 hours of audio, 0.33% error). Onboarded 1,000 retailers, implemented Smart Answer Boxes (+10% correct clicks) and designed pre-launch testing workflows that cut communication errors by 10%.",
+e2:"Associate Product Manager — Arshan Media (GapFilm), 2018–2020. Owned VOD across Android, Android TV, Web, Kids and CMS for +5M users. Grew the user base from 60,000 to 5M, increased average engagement by 5 minutes and multiplied CMS usage fourfold.",
+e3:"Product Owner — Shaya Smart Technologies, 2016–2018. Introduced Scrum (10% fewer bugs) and managed content for Payame Noor University’s platform (19 million users). Co-built MediaAd, which became Iran’s second-largest native advertising platform (0.1% CTR) and was later sold.",
+e4:"Independent product & game designer, Rotterdam — 2022–present. Designing and shipping social games, host tools and interactive experiences in the open.",
+contact_p:"Open to product owner, product manager and product design roles in the Netherlands and remote.",
 foot:"© Maryam Jaberi. Built by hand and hosted on GitHub Pages.",
 live:"Live",repo:"Code",demo:"Open",
-chrono:["Chrono Atlas","A world map with a timeline from the Big Bang to 1,000 years ahead. Pick a moment and see Earth, life and human societies as they were.","Live, v0.2"],
-turn:["Turn (دور)","A Persian word-guessing party game for groups, installable as a web app and playable offline.","In testing"],
-lang:["Turn: Language","A multiplayer party game that teaches a language through play. Includes the design document and user stories.","Design complete"],
-mafia:["Miz Khoda","A host assistant for the Persian Mafia game: role dealing, night actions and scenarios, driven by data instead of hard-coded rules.","In progress"],
-simorgh:["Simorgh’s Feather","An interactive map of Iran’s history with mini-games that sort players into 30 groups, each with one goal.","Concept and prompts"],
-darang:["Darang (درنگ)","A tool that lists the different readings of a short Persian sentence, then suggests clearer rewrites.","Spec v0.9"]},
+dour:["Dour — Turn","Pass-the-phone word-guessing party game for 4–8 players. Teams sit opposite. Solo or multiplayer, nine languages, offline-capable PWA.","Live"],
+lang:["Dour: Language","Language-learning version of Dour. Real vocabulary and phrases, CEFR levels, up to four learning languages. Design document and user stories included.","Live"],
+chrono:["Chrono Atlas","Interactive map of Earth through deep time — Big Bang to +1,000 years. Continents, life, societies and the science of each age. Sourced and citation-backed.","Live"],
+simorgh:["Par-e Simorgh","Interactive model of contemporary Iran as a multi-round Mafia table. 37 roles, 7 nights (1979–2026), 76 sourced claims. Game theory as coordination, not zero-sum.","Live"],
+ganjoor:["Ganjoor No","Prototype redesign of the Persian literary archive. Clean information architecture and reading experience for poetry, with Iranian-inspired visual system.","Live"],
+mafia:["Miz Khoda (Mafia Host)","Host assistant for Persian Mafia: scenario builder, role dealing, night actions and live voting. Data-driven rules instead of hard-coded logic.","In progress"]},
 fa:{name:"مریم جابری",role:"مدیر محصول و طراح بازی.",lead:"ایده‌های مبهم را به محصولی تبدیل می‌کنم که مردم بتوانند از آن استفاده کنند، و نسخهٔ اول قابل‌بازی را خودم می‌سازم. ساکن روتردام.",nav_work:"پروژه‌ها",nav_about:"دربارهٔ من",nav_exp:"تجربه",nav_contact:"تماس",cta_work:"دیدن پروژه‌ها",cta_contact:"تماس با من",h_work:"پروژه‌ها",h_about:"دربارهٔ من",h_exp:"تجربه",h_contact:"تماس",
-about1:"به‌عنوان Product Owner و Product Manager کار می‌کنم، با نگاه طراحی. پیشینه‌ام در محصولات جست‌وجو، پخش ویدیو و پلتفرم‌های آموزشی است.",about2:"خارج از کار برای مشتری، بازی و ابزار می‌سازم و منتشر می‌کنم: بازی‌های دورهمی، یک نقشهٔ زمان جهان و یک دستیار گرداننده برای شب‌های مافیا. هر کدام با یک سند طراحی شروع می‌شود و به چیزی می‌رسد که مردم بتوانند باز کنند و بازی کنند.",
-sk1_t:"محصول",sk1:"کشف نیاز، بک‌لاگ و نقشهٔ راه، مدیریت ذی‌نفعان، تحویل چابک",sk2_t:"طراحی",sk2:"پژوهش تجربهٔ کاربری، داستان کاربر، طراحی تعامل، طراحی بازی و سیستم",sk3_t:"ساخت",sk3:"وب‌اپ تک‌فایلی، PWA، معماری داده‌محور، GitHub Pages",lang_t:"زبان‌ها",lang:"فارسی (زبان مادری)، انگلیسی (B2)، هلندی (A2)",
-e1:"مدیر محصول، موتور جست‌وجو — همراه اول (MCI)، ۱۳۹۹–۱۴۰۱. راهنمای جست‌وجوی خرید را برای تیم ۱۰۰۰+ نفره هدایت کردم. سرویس تشخیص گفتار (بیش از ۳۰۰۰ ساعت صوت فارسی، خطای ۰.۳۳٪) را از صفر ساختم. ۱۰۰۰ فروشگاه را یکپارچه کردم و جعبه‌های پاسخ هوشمند (+10% کلیک درست) پیاده کردم.",
-e2:"مدیر محصول ارتباط — آرشان مدیا (GapFilm)، ۱۳۹۷–۱۳۹۹. سرویس VOD را در اندروید، تلویزیون، وب، کودک و CMS برای بیش از ۵ میلیون کاربر مدیریت کردم. جمعیت کاربران از ۶۰ هزار به ۵ میلیون رسید و میانگین درگیری ۵ دقیقه افزایش یافت.",
-e3:"مالک محصول — شایا اسمارت تکنولوژی، ۱۳۹۵–۱۳۹۷. اسکرام را پیاده کردم (10% کاهش باگ) و محتوای پلتفرم آموزشی ۱۹ میلیونی را مدیریت کردم. در MediaAd همکاری کردم که به دومین پلتفرم تبلیغات بومی ایران تبدیل شد.",
-e4:"طراح بازی مستقل، روتردام — ۱۴۰۱–اکنون. طراحی و انتشار بازی‌های اجتماعی، ابزارهای گرداننده و تجربه‌های تعاملی.",
-contact_p:"آمادهٔ همکاری در نقش‌های Product Owner، Product Manager و طراحی محصول در هلند و به‌صورت دورکار. ایمیل: M.jaberi1212@gmail.com",
+about1:"مدیر محصول و Product Owner با نگاه طراحی. پیشینه در محصولات جست‌وجو، پخش ویدیو و پلتفرم‌های آموزشی در مقیاس بزرگ.",about2:"بازی و ابزارهای تعاملی را هم طراحی می‌کنم و منتشر می‌کنم: بازی‌های دورهمی، دستیار گرداننده، نقشه‌های آموزشی و واجه‌های ادبی. هر کدام از یک سند طراحی شروع می‌شود و به چیزی می‌رسد که مردم بتوانند باز کنند و بازی کنند.",
+sk1_t:"محصول",sk1:"نقشه راه، بک‌لاگ، مدیریت ذی‌نفعان، Agile و Scrum، تصمیم‌گیری داده‌محور",sk2_t:"طراحی",sk2:"پژوهش UX، داستان کاربر، طراحی تعامل، سیستم‌های بازی",sk3_t:"ساخت",sk3:"وب‌اپ، PWA، معماری داده‌محور، GitHub Pages، پروتوتایپ با هوش مصنوعی",lang_t:"زبان‌ها",lang:"فارسی (زبان مادری)، انگلیسی (B2)، هلندی (A2)",
+e1:"مدیر محصول، موتور جست‌وجو — همراه اول (MCI)، ۱۳۹۹–۱۴۰۱. راهنمای جست‌وجوی خرید را برای تیم ۱۰۰۰+ نفره هدایت کردم. سرویس تشخیص گفتار فارسی را از صفر ساختم (بیش از ۳۰۰۰ ساعت صوت، خطای ۰.۳۳٪). ۱۰۰۰ فروشگاه را یکپارچه کردم، جعبه‌های پاسخ هوشمند (+10% کلیک درست) پیاده کردم و فرآیند آزمون پیش از انتشار طراحی کردم که خطاهای ارتباطی را ۱۰% کاهش داد.",
+e2:"مدیر محصول ارتباط — آرشان مدیا (GapFilm)، ۱۳۹۷–۱۳۹۹. سرویس VOD را در اندروید، اندروید تی‌وی، وب، کودک و CMS برای بیش از ۵ میلیون کاربر مدیریت کردم. جمعیت کاربران از ۶۰ هزار به ۵ میلیون رسید، میانگین درگیری ۵ دقیقه افزایش یافت و استفاده از CMS چهار برابر شد.",
+e3:"مالک محصول — شایا اسمارت تکنولوژی، ۱۳۹۵–۱۳۹۷. اسکرام را پیاده کردم (10% کاهش باگ) و محتوای پلتفرم آموزشی دانشگاه پیام نور (۱۹ میلیون کاربر) را مدیریت کردم. در ساخت MediaAd همکاری کردم که به دومین پلتفرم تبلیغات بومی ایران تبدیل شد (نرخ کلیک ۰.۱٪) و بعدها فروخته شد.",
+e4:"طراح محصول و بازی مستقل، روتردام — ۱۴۰۱–اکنون. طراحی و انتشار بازی‌های اجتماعی، ابزارهای گرداننده و تجربه‌های تعاملی.",
+contact_p:"آمادهٔ همکاری در نقش‌های Product Owner، Product Manager و طراحی محصول در هلند و به‌صورت دورکار.",
 foot:"© مریم جابری. ساخته‌شده با دست و میزبانی‌شده در GitHub Pages.",
 live:"زنده",repo:"کد",demo:"باز کردن",
-chrono:["اطلس زمان (Chrono Atlas)","نقشهٔ جهان با نوار زمان از مه‌بانگ تا هزار سال بعد. یک لحظه را انتخاب کن و زمین، زندگی و جوامع انسانی را در همان لحظه ببین.","زنده، نسخهٔ ۰٫۲"],
-turn:["دور (Turn)","بازی دورهمی حدس کلمه به فارسی برای گروه‌ها؛ قابل نصب به‌صورت وب‌اپ و بدون نیاز به اینترنت.","در حال آزمون"],
-lang:["دور: زبان","بازی دورهمی چندنفره برای یادگیری زبان از راه بازی. شامل سند طراحی و داستان‌های کاربر.","طراحی کامل"],
-mafia:["میز خدا","دستیار گرداننده برای بازی مافیا: نقش‌دهی، اکشن‌های شب و سناریوها، با قوانین داده‌محور به‌جای کدنویسی ثابت.","در حال ساخت"],
-simorgh:["پَرِ سیمرغ","نقشهٔ تعاملی تاریخ ایران با مینی‌گیم‌هایی که بازیکنان را در ۳۰ گروه، هر کدام با یک هدف، دسته‌بندی می‌کند.","مفهوم و پرامپت‌ها"],
-darang:["درنگ","ابزاری که خوانش‌های مختلف یک جملهٔ کوتاه فارسی را فهرست می‌کند و بازنویسی‌های روشن‌تر پیشنهاد می‌دهد.","مشخصات نسخهٔ ۰٫۹"]},
+dour:["دور — Turn","بازی دورهمی حدس کلمه با پاس‌دادن گوشی برای ۴ تا ۸ نفر. تیم‌های روبه‌رو. تنها یا چندنفره، نه زبان، قابل استفاده بدون اینترنت.","زنده"],
+lang:["دور: زبان","نسخه یادگیری زبان از دور. واژگان و عبارت‌های واقعی، سطح CEFR، تا چهار زبان یادگیری. شامل سند طراحی و داستان‌های کاربر.","زنده"],
+chrono:["اطلس زمان","نقشه تعاملی زمین در طول زمان عمیق — از مه‌بانگ تا ۱۰۰۰ سال آینده. قاره‌ها، حیات، جوامع و علم هر دوره. منبع‌دار و قابل استناد.","زنده"],
+simorgh:["پَرِ سیمرغ","مدل تعاملی ایران امروز به‌عنوان یک میز مافیای چنددوره‌ای. ۳۷ نقش، ۷ شب (۱۳۵۷–۱۴۰۵)، ۷۶ ادعای منبع‌دار. نظریه بازی به‌عنوان هماهنگی، نه جنگ صفر-مجموع.","زنده"],
+ganjoor:["گنجور نو","پروتوتایپ بازطراحی بایگانی ادب فارسی. معماری اطلاعات و تجربه خواندن شعر با سیستم بصری الهام‌گرفته از فرهنگ ایرانی.","زنده"],
+mafia:["میز خدا (دستیار مافیا)","دستیار گرداننده برای مافیای فارسی: سازنده سناریو، نقش‌دهی، اکشن‌های شب و رأی‌گیری زنده. قوانین داده‌محور به‌جای منطق سخت‌کد.","در حال ساخت"]},
 nl:{name:"Maryam Jaberi",role:"Productmanager en gameontwerper.",lead:"Ik maak van vage ideeën producten die mensen kunnen gebruiken en bouw zelf de eerste speelbare versie. Gevestigd in Rotterdam.",nav_work:"Projecten",nav_about:"Over mij",nav_exp:"Ervaring",nav_contact:"Contact",cta_work:"Bekijk de projecten",cta_contact:"Neem contact op",h_work:"Projecten",h_about:"Over mij",h_exp:"Ervaring",h_contact:"Contact",
-about1:"Ik werk als product owner en productmanager, met een ontwerpersoog. Mijn achtergrond ligt bij zoek, videostreaming en onderwijsplatforms.",about2:"Naast opdrachtwerk bouw ik openlijk games en tools: partyspellen, een wereldtijdlijn en een hostassistent voor Mafia-avonden. Elk begint als een geschreven spec en eindigt als iets wat mensen kunnen openen en spelen.",
-sk1_t:"Product",sk1:"Discovery, backlog en roadmap, stakeholdermanagement, agile oplevering",sk2_t:"Ontwerp",sk2:"UX-onderzoek, user stories, interactieontwerp, game- en systeemontwerp",sk3_t:"Bouwen",sk3:"Webapps in één bestand, PWA’s, datagedreven architectuur, GitHub Pages",lang_t:"Talen",lang:"Perzisch (moedertaal), Engels (B2), Nederlands (A2)",
-e1:"Product Manager, Zoekmachine — Hamrahe Aval (MCI), 2020–2022. Leidde de shopping-search roadmap voor een team van 1.000+ mensen. Bouwde ASR vanaf nul (3.000 uur Perzische audio, 0,33% fout). Integreerde 1.000 retailers en implementeerde Smart Answer Boxes (+10% correcte clicks).",
-e2:"Associate Product Manager — Arshan Media (GapFilm), 2018–2020. Beheerde VOD over Android, TV, Web, Kids en CMS voor +5M gebruikers. Groeide van 60k naar 5M gebruikers en verhoogde gemiddelde engagement met 5 minuten.",
-e3:"Product Owner — Shaya Smart Technologies, 2016–2018. Implementeerde Scrum (10% minder bugs) en beheerde content voor een onderwijsplatform met 19 miljoen gebruikers. Werkte mee aan MediaAd, dat Iran’s op een na grootste native advertising platform werd.",
-e4:"Onafhankelijk gameontwerper, Rotterdam — 2022–heden. Ontwerp en publiceer sociale spellen, hosttools en interactieve ervaringen.",
-contact_p:"Open voor rollen als product owner, productmanager en productontwerper in Nederland en op afstand. E-mail: M.jaberi1212@gmail.com",
+about1:"Product owner en productmanager met een ontwerpersoog. Achtergrond in zoekmachines, videostreaming en onderwijsplatforms op schaal.",about2:"Daarnaast ontwerp en publiceer ik games en interactieve tools in het openbaar: partyspellen, hostassistenten, onderwijskaarten en literaire interfaces. Elk begint als een geschreven spec en eindigt als iets wat mensen kunnen openen en spelen.",
+sk1_t:"Product",sk1:"Roadmaps, backlog, stakeholdermanagement, Agile & Scrum, datagedreven beslissingen",sk2_t:"Ontwerp",sk2:"UX-onderzoek, user stories, interactieontwerp, gamesystemen",sk3_t:"Bouwen",sk3:"Webapps, PWA’s, datagedreven architectuur, GitHub Pages, AI-ondersteund prototypen",lang_t:"Talen",lang:"Perzisch (moedertaal), Engels (B2), Nederlands (A2)",
+e1:"Product Manager, Zoekmachine — Hamrahe Aval (MCI), 2020–2022. Leidde de shopping-search roadmap voor een team van 1.000+ mensen. Bouwde Perzische ASR vanaf nul (3.000 uur audio, 0,33% fout). Onboardde 1.000 retailers, implementeerde Smart Answer Boxes (+10% correcte clicks) en ontwierp pre-launch testworkflows die communicatiefouten met 10% verminderden.",
+e2:"Associate Product Manager — Arshan Media (GapFilm), 2018–2020. Beheerde VOD over Android, Android TV, Web, Kids en CMS voor +5M gebruikers. Groeide van 60.000 naar 5M gebruikers, verhoogde gemiddelde engagement met 5 minuten en verviervoudigde CMS-gebruik.",
+e3:"Product Owner — Shaya Smart Technologies, 2016–2018. Introduceerde Scrum (10% minder bugs) en beheerde content voor het platform van Payame Noor University (19 miljoen gebruikers). Werkte mee aan MediaAd, dat Iran’s op een na grootste native advertising platform werd (0,1% CTR) en later werd verkocht.",
+e4:"Onafhankelijk product- en gameontwerper, Rotterdam — 2022–heden. Ontwerp en publiceer sociale spellen, hosttools en interactieve ervaringen.",
+contact_p:"Open voor rollen als product owner, productmanager en productontwerper in Nederland en op afstand.",
 foot:"© Maryam Jaberi. Met de hand gebouwd en gehost op GitHub Pages.",
 live:"Live",repo:"Code",demo:"Openen",
-chrono:["Chrono Atlas","Een wereldkaart met een tijdlijn van de oerknal tot 1.000 jaar vooruit. Kies een moment en zie de aarde, het leven en menselijke samenlevingen toen.","Live, v0.2"],
-turn:["Turn (دور)","Een Perzisch woordraadspel voor groepen, installeerbaar als webapp en offline speelbaar.","In test"],
-lang:["Turn: Taal","Een multiplayer-partyspel waarmee je al spelend een taal leert. Inclusief ontwerpdocument en user stories.","Ontwerp klaar"],
-mafia:["Miz Khoda","Een hostassistent voor het Perzische Mafia-spel: rollen delen, nachtacties en scenario’s, gestuurd door data in plaats van vaste regels.","In uitvoering"],
-simorgh:["Simorghs veer","Een interactieve kaart van de Iraanse geschiedenis met minigames die spelers in 30 groepen indelen, elk met één doel.","Concept en prompts"],
-darang:["Darang (درنگ)","Een tool die de verschillende lezingen van een korte Perzische zin toont en duidelijkere herschrijvingen voorstelt.","Spec v0.9"]}
+dour:["Dour — Turn","Pass-the-phone woordraadspel voor 4–8 spelers. Teams zitten tegenover elkaar. Solo of multiplayer, negen talen, offline-capabele PWA.","Live"],
+lang:["Dour: Taal","Taalversie van Dour. Echte woordenschat en zinnen, CEFR-niveaus, tot vier leertalen. Inclusief ontwerpdocument en user stories.","Live"],
+chrono:["Chrono Atlas","Interactieve kaart van de aarde door de diepe tijd — oerknal tot +1.000 jaar. Continenten, leven, samenlevingen en de wetenschap van elk tijdperk. Bronvermeld en citeerbaar.","Live"],
+simorgh:["Par-e Simorgh","Interactief model van het huidige Iran als een meerondige Mafia-tafel. 37 rollen, 7 nachten (1979–2026), 76 bronvermeldde claims. Speltheorie als coördinatie, niet zero-sum.","Live"],
+ganjoor:["Ganjoor No","Prototype redesign van het Perzische literaire archief. Schone informatiearchitectuur en leeservaring voor poëzie, met een visueel systeem geïnspireerd door Iraanse cultuur.","Live"],
+mafia:["Miz Khoda (Mafia Host)","Hostassistent voor Perzische Mafia: scenariobouwer, rollen delen, nachtacties en live stemmen. Datagedreven regels in plaats van hardgecodeerde logica.","In uitvoering"]}
 };
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 function render(l){
