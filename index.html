@@ -1,66 +1,116 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maryam Jaberi – Product Manager & Game Designer</title>
-<meta name="description" content="Product manager and game designer in Rotterdam. Search, streaming, education platforms, and open games.">
+<meta name="description" content="Product manager and game designer in Rotterdam. Search, streaming and education platforms, plus open games and tools people actually play.">
+<meta property="og:title" content="Maryam Jaberi – Product & Game Design">
+<meta property="og:description" content="I turn fuzzy ideas into products people can use, and I build the first playable version myself.">
+<meta name="theme-color" content="#0c0614">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
 <style>
-:root{--bg:#0f0a1a;--surface:#1a1228;--text:#f8f4ff;--muted:#c4b4dc;--accent:#e84ba3;--accent2:#9b6bff}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 system-ui,sans-serif}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-header{padding:40px 0;text-align:center}
-h1{font-size:clamp(40px,8vw,72px);margin:0;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent;font-weight:800}
-.role{color:var(--muted);font-size:20px;margin:8px 0 24px}
-section{padding:40px 0;border-top:1px solid #3a2a52}
-h2{font-size:32px;margin:0 0 24px}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.card{background:var(--surface);border:1px solid #3a2a52;border-radius:16px;padding:20px}
-.card h3{margin:0 0 8px}
-.card p{color:var(--muted);margin:0}
-.timeline div{padding:12px 0;border-bottom:1px solid #3a2a52}
-footer{padding:40px 0;color:var(--muted);text-align:center}
-a{color:var(--accent)}
+:root{--bg:#0c0614;--surface:#161022;--surface2:#1f1630;--line:#2e2344;--text:#f7f2ff;--muted:#b8a8d0;--accent:#e84ba3;--accent2:#9b6bff;--gold:#f0b429}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;background-image:radial-gradient(ellipse 70% 40% at 50% -5%,rgba(232,75,163,.15),transparent)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header.hero{padding:clamp(80px,15vw,140px) 0 60px;text-align:center}
+h1{font-size:clamp(52px,10vw,96px);line-height:.95;margin:0 0 12px;font-weight:800;letter-spacing:-.03em;background:linear-gradient(100deg,var(--accent),var(--accent2) 70%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(18px,2.5vw,22px);color:var(--muted);margin:0 0 28px}
+.lead{max-width:36em;margin:0 auto 40px;font-size:clamp(17px,2vw,19px);color:var(--muted)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;border:1px solid var(--line);transition:.2s}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translateY(-1px);border-color:var(--accent2)}
+section{padding:80px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,40px);margin:0 0 40px;text-align:center}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:var(--accent2)}
+.card-img{height:200px;background:linear-gradient(135deg,var(--surface2),#2a1f40);display:flex;align-items:center;justify-content:center;font-size:48px}
+.card-body{padding:22px 24px 26px}
+.card h3{margin:0 0 8px;font-size:22px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:15.5px}
+.links{display:flex;gap:16px}
+.links a{font-weight:600;color:var(--accent)}
+.links a:hover{color:var(--accent2)}
+.about{display:grid;gap:40px;grid-template-columns:1.3fr .7fr;align-items:start}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.skill{background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--muted)}
+.timeline{max-width:720px;margin:0 auto}
+.tl-item{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.tl-year{color:var(--gold);font-weight:700;font-size:15px}
+.tl-content h3{margin:0 0 6px;font-size:18px}
+.tl-content p{margin:0;color:var(--muted);font-size:15px}
+footer{padding:50px 0;text-align:center;color:var(--muted);font-size:15px}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header>
+<header class="hero">
 <h1>Maryam Jaberi</h1>
 <div class="role">Product Manager & Game Designer · Rotterdam</div>
-<p>I turn fuzzy ideas into products people can use, and I build the first playable version myself.</p>
+<p class="lead">I turn fuzzy ideas into products people can use, and I build the first playable version myself.</p>
+<div class="cta"><a class="btn main" href="#work">See the projects</a><a class="btn" href="#contact">Get in touch</a></div>
 </header>
-<section>
+
+<section id="work">
 <h2>Projects</h2>
 <div class="grid">
-<div class="card"><h3>Dour — Turn</h3><p>Pass-the-phone word-guessing party game for 4–8 players. Nine languages, offline PWA.</p><p><a href="https://maryamjaberi.github.io/Dour/">Open</a> · <a href="https://github.com/MaryamJaberi/Dour">Code</a></p></div>
-<div class="card"><h3>Dour: Language</h3><p>Language-learning version with real vocabulary, CEFR levels, design document.</p><p><a href="https://maryamjaberi.github.io/Language-Learning-Party-Game/">Open</a> · <a href="https://github.com/MaryamJaberi/Language-Learning-Party-Game">Code</a></p></div>
-<div class="card"><h3>Chrono Atlas</h3><p>Interactive map of Earth through deep time. Continents, life, societies, science.</p><p><a href="https://maryamjaberi.github.io/earth-through-time/">Open</a> · <a href="https://github.com/MaryamJaberi/earth-through-time">Code</a></p></div>
-<div class="card"><h3>Par-e Simorgh</h3><p>Interactive model of contemporary Iran as a multi-round Mafia table. 37 roles, sourced claims.</p><p><a href="https://maryamjaberi.github.io/simorgh/">Open</a> · <a href="https://github.com/MaryamJaberi/simorgh">Code</a></p></div>
-<div class="card"><h3>Ganjoor No</h3><p>Prototype redesign of the Persian literary archive. Clean IA for poetry.</p><p><a href="https://maryamjaberi.github.io/ganjoor-no/">Open</a> · <a href="https://github.com/MaryamJaberi/ganjoor-no">Code</a></p></div>
-<div class="card"><h3>Miz Khoda (Mafia Host)</h3><p>Host assistant for Persian Mafia: scenario builder, role dealing, night actions.</p><p><a href="https://github.com/MaryamJaberi/Mafia">Code</a></p></div>
+<div class="card"><div class="card-img">🎮</div><div class="card-body"><h3>Dour — Turn</h3><p>Pass-the-phone word-guessing party game for 4–8 players. Teams sit opposite. Solo or multiplayer, nine languages, offline-capable PWA.</p><div class="links"><a href="https://maryamjaberi.github.io/Dour/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/Dour" target="_blank">Code</a></div></div></div>
+<div class="card"><div class="card-img">📚</div><div class="card-body"><h3>Dour: Language</h3><p>Language-learning version of Dour. Real vocabulary and phrases, CEFR levels, up to four learning languages. Design document and user stories included.</p><div class="links"><a href="https://maryamjaberi.github.io/Language-Learning-Party-Game/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/Language-Learning-Party-Game" target="_blank">Code</a></div></div></div>
+<div class="card"><div class="card-img">🌍</div><div class="card-body"><h3>Chrono Atlas</h3><p>Interactive map of Earth through deep time — Big Bang to +1,000 years. Continents, life, societies and the science of each age. Sourced and citation-backed.</p><div class="links"><a href="https://maryamjaberi.github.io/earth-through-time/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/earth-through-time" target="_blank">Code</a></div></div></div>
+<div class="card"><div class="card-img">🪶</div><div class="card-body"><h3>Par-e Simorgh</h3><p>Interactive model of contemporary Iran as a multi-round Mafia table. 37 roles, 7 nights (1979–2026), 76 sourced claims. Game theory as coordination, not zero-sum.</p><div class="links"><a href="https://maryamjaberi.github.io/simorgh/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/simorgh" target="_blank">Code</a></div></div></div>
+<div class="card"><div class="card-img">📖</div><div class="card-body"><h3>Ganjoor No</h3><p>Prototype redesign of the Persian literary archive. Clean information architecture and reading experience for poetry, with Iranian-inspired visual system.</p><div class="links"><a href="https://maryamjaberi.github.io/ganjoor-no/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/ganjoor-no" target="_blank">Code</a></div></div></div>
+<div class="card"><div class="card-img">🃏</div><div class="card-body"><h3>Miz Khoda (Mafia Host)</h3><p>Host assistant for Persian Mafia: scenario builder, role dealing, night actions and live voting. Data-driven rules instead of hard-coded logic.</p><div class="links"><a href="https://github.com/MaryamJaberi/Mafia" target="_blank">Code</a></div></div></div>
 </div>
 </section>
-<section>
+
+<section id="about">
 <h2>About</h2>
-<p>Product Owner and Product Manager with a designer’s eye. Shipped search, streaming and education products used by millions. I also design and publish games and interactive tools in the open.</p>
+<div class="about">
+<div>
+<p>Product Owner and Product Manager with a designer’s eye. Background in search engines, video streaming and education platforms at scale — products used by millions.</p>
+<p>I also design and ship games and interactive tools in the open: party games, host assistants, teaching maps and literary interfaces. Each starts as a written spec and ends as something people can open and play.</p>
 <p>I enjoy the full loop from research and prioritisation to the first prototype, and use AI tools to move faster without losing craft.</p>
+</div>
+<div>
+<h3 style="margin:0 0 12px;font-size:18px">Skills</h3>
+<div class="skills">
+<span class="skill">Roadmaps & Backlog</span>
+<span class="skill">Stakeholder Management</span>
+<span class="skill">Agile & Scrum</span>
+<span class="skill">UX Research</span>
+<span class="skill">User Stories</span>
+<span class="skill">Game Systems</span>
+<span class="skill">Web Apps & PWAs</span>
+<span class="skill">AI Prototyping</span>
+</div>
+<p style="margin-top:20px;color:var(--muted);font-size:15px"><strong>Languages:</strong> Persian (native), English (B2), Dutch (A2)</p>
+</div>
+</div>
 </section>
-<section>
+
+<section id="exp">
 <h2>Experience</h2>
 <div class="timeline">
-<div><strong>2020–2022 · Product Manager, Search — Hamrahe Aval (MCI)</strong><br>Led shopping-search roadmap. Built Persian ASR from scratch (3,000 hours audio, 0.33% error). Onboarded 1,000 retailers, Smart Answer Boxes (+10% correct clicks).</div>
-<div><strong>2018–2020 · Associate Product Manager — Arshan Media (GapFilm)</strong><br>Owned VOD for +5M users. Grew from 60k to 5M, +5 min engagement, 4x CMS usage.</div>
-<div><strong>2016–2018 · Product Owner — Shaya Smart Technologies</strong><br>Introduced Scrum (10% fewer bugs). Co-built MediaAd, Iran’s #2 native ad platform (later sold).</div>
-<div><strong>2022–present · Independent Product & Game Designer, Rotterdam</strong><br>Designing and shipping social games, host tools and interactive experiences.</div>
+<div class="tl-item"><div class="tl-year">2020–2022</div><div class="tl-content"><h3>Product Manager, Search — Hamrahe Aval (MCI)</h3><p>Led shopping-search roadmap for a 1,000+ person team. Built Persian ASR from scratch (3,000 hours of audio, 0.33% error). Onboarded 1,000 retailers, implemented Smart Answer Boxes (+10% correct clicks) and designed pre-launch testing workflows that cut communication errors by 10%.</p></div></div>
+<div class="tl-item"><div class="tl-year">2018–2020</div><div class="tl-content"><h3>Associate Product Manager — Arshan Media (GapFilm)</h3><p>Owned VOD across Android, Android TV, Web, Kids and CMS for +5M users. Grew the user base from 60,000 to 5M, increased average engagement by 5 minutes and multiplied CMS usage fourfold.</p></div></div>
+<div class="tl-item"><div class="tl-year">2016–2018</div><div class="tl-content"><h3>Product Owner — Shaya Smart Technologies</h3><p>Introduced Scrum (10% fewer bugs) and managed content for Payame Noor University’s platform (19 million users). Co-built MediaAd, which became Iran’s second-largest native advertising platform (0.1% CTR) and was later sold.</p></div></div>
+<div class="tl-item"><div class="tl-year">2022–present</div><div class="tl-content"><h3>Independent Product & Game Designer, Rotterdam</h3><p>Designing and shipping social games, host tools and interactive experiences in the open.</p></div></div>
 </div>
 </section>
-<section>
+
+<section id="contact">
 <h2>Contact</h2>
-<p>Open to Product Owner, Product Manager and product design roles in the Netherlands and remote.</p>
-<p><a href="mailto:M.jaberi1212@gmail.com">M.jaberi1212@gmail.com</a> · <a href="https://github.com/MaryamJaberi">GitHub</a></p>
+<p style="text-align:center;max-width:32em;margin:0 auto 20px;color:var(--muted)">Open to Product Owner, Product Manager and product design roles in the Netherlands and remote.</p>
+<p style="text-align:center;font-size:18px;margin:0 0 24px"><a href="mailto:M.jaberi1212@gmail.com" style="color:var(--accent);font-weight:600">M.jaberi1212@gmail.com</a></p>
+<div class="cta"><a class="btn main" href="https://github.com/MaryamJaberi" target="_blank">GitHub</a></div>
 </section>
-<footer>© Maryam Jaberi · Built by hand · GitHub Pages</footer>
 </div>
+<footer>© Maryam Jaberi · Built by hand · GitHub Pages</footer>
 </body>
 </html>
