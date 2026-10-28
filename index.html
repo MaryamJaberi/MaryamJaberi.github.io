@@ -1,23 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maryam Jaberi – Product Manager & Game Designer</title>
+<meta name="description" content="Product manager and game designer in Rotterdam. Search, streaming, education platforms, and open games.">
 <style>
-body{font-family:system-ui;background:#0f0a1a;color:#f8f4ff;margin:0;padding:20px}
-.wrap{max-width:900px;margin:0 auto}
-h1{font-size:3em;background:linear-gradient(90deg,#e84ba3,#9b6bff);-webkit-background-clip:text;color:transparent}
-.card{background:#1a1228;border:1px solid #3a2a52;border-radius:16px;padding:20px;margin:20px 0}
+:root{--bg:#0f0a1a;--surface:#1a1228;--text:#f8f4ff;--muted:#c4b4dc;--accent:#e84ba3;--accent2:#9b6bff}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 system-ui,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header{padding:40px 0;text-align:center}
+h1{font-size:clamp(40px,8vw,72px);margin:0;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent;font-weight:800}
+.role{color:var(--muted);font-size:20px;margin:8px 0 24px}
+section{padding:40px 0;border-top:1px solid #3a2a52}
+h2{font-size:32px;margin:0 0 24px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--surface);border:1px solid #3a2a52;border-radius:16px;padding:20px}
+.card h3{margin:0 0 8px}
+.card p{color:var(--muted);margin:0}
+.timeline div{padding:12px 0;border-bottom:1px solid #3a2a52}
+footer{padding:40px 0;color:var(--muted);text-align:center}
+a{color:var(--accent)}
 </style>
 </head>
 <body>
 <div class="wrap">
+<header>
 <h1>Maryam Jaberi</h1>
-<p>Product Manager & Game Designer · Rotterdam</p>
-<div class="card"><h2>Projects</h2><p>Dour, Language Game, Chrono Atlas, Par-e Simorgh, Ganjoor No, Mafia Host — with professional cards and more details coming.</p></div>
-<div class="card"><h2>About</h2><p>Product Owner with experience at MCI (search, ASR), GapFilm (VOD growth to 5M users), Shaya (Scrum, MediaAd). Now designing social games and interactive tools.</p></div>
-<p>Contact: <a href="mailto:M.jaberi1212@gmail.com" style="color:#e84ba3">M.jaberi1212@gmail.com</a> · <a href="https://github.com/MaryamJaberi" style="color:#e84ba3">GitHub</a></p>
+<div class="role">Product Manager & Game Designer · Rotterdam</div>
+<p>I turn fuzzy ideas into products people can use, and I build the first playable version myself.</p>
+</header>
+<section>
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>Dour — Turn</h3><p>Pass-the-phone word-guessing party game for 4–8 players. Nine languages, offline PWA.</p><p><a href="https://maryamjaberi.github.io/Dour/">Open</a> · <a href="https://github.com/MaryamJaberi/Dour">Code</a></p></div>
+<div class="card"><h3>Dour: Language</h3><p>Language-learning version with real vocabulary, CEFR levels, design document.</p><p><a href="https://maryamjaberi.github.io/Language-Learning-Party-Game/">Open</a> · <a href="https://github.com/MaryamJaberi/Language-Learning-Party-Game">Code</a></p></div>
+<div class="card"><h3>Chrono Atlas</h3><p>Interactive map of Earth through deep time. Continents, life, societies, science.</p><p><a href="https://maryamjaberi.github.io/earth-through-time/">Open</a> · <a href="https://github.com/MaryamJaberi/earth-through-time">Code</a></p></div>
+<div class="card"><h3>Par-e Simorgh</h3><p>Interactive model of contemporary Iran as a multi-round Mafia table. 37 roles, sourced claims.</p><p><a href="https://maryamjaberi.github.io/simorgh/">Open</a> · <a href="https://github.com/MaryamJaberi/simorgh">Code</a></p></div>
+<div class="card"><h3>Ganjoor No</h3><p>Prototype redesign of the Persian literary archive. Clean IA for poetry.</p><p><a href="https://maryamjaberi.github.io/ganjoor-no/">Open</a> · <a href="https://github.com/MaryamJaberi/ganjoor-no">Code</a></p></div>
+<div class="card"><h3>Miz Khoda (Mafia Host)</h3><p>Host assistant for Persian Mafia: scenario builder, role dealing, night actions.</p><p><a href="https://github.com/MaryamJaberi/Mafia">Code</a></p></div>
+</div>
+</section>
+<section>
+<h2>About</h2>
+<p>Product Owner and Product Manager with a designer’s eye. Shipped search, streaming and education products used by millions. I also design and publish games and interactive tools in the open.</p>
+<p>I enjoy the full loop from research and prioritisation to the first prototype, and use AI tools to move faster without losing craft.</p>
+</section>
+<section>
+<h2>Experience</h2>
+<div class="timeline">
+<div><strong>2020–2022 · Product Manager, Search — Hamrahe Aval (MCI)</strong><br>Led shopping-search roadmap. Built Persian ASR from scratch (3,000 hours audio, 0.33% error). Onboarded 1,000 retailers, Smart Answer Boxes (+10% correct clicks).</div>
+<div><strong>2018–2020 · Associate Product Manager — Arshan Media (GapFilm)</strong><br>Owned VOD for +5M users. Grew from 60k to 5M, +5 min engagement, 4x CMS usage.</div>
+<div><strong>2016–2018 · Product Owner — Shaya Smart Technologies</strong><br>Introduced Scrum (10% fewer bugs). Co-built MediaAd, Iran’s #2 native ad platform (later sold).</div>
+<div><strong>2022–present · Independent Product & Game Designer, Rotterdam</strong><br>Designing and shipping social games, host tools and interactive experiences.</div>
+</div>
+</section>
+<section>
+<h2>Contact</h2>
+<p>Open to Product Owner, Product Manager and product design roles in the Netherlands and remote.</p>
+<p><a href="mailto:M.jaberi1212@gmail.com">M.jaberi1212@gmail.com</a> · <a href="https://github.com/MaryamJaberi">GitHub</a></p>
+</section>
+<footer>© Maryam Jaberi · Built by hand · GitHub Pages</footer>
 </div>
 </body>
 </html>
