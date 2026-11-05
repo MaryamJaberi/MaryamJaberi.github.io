@@ -1,0 +1,499 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>خوش‌بینی و امید به آینده</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-self">
+  <div class="brand">ویکی روان‌شناسی <small>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-self" target="_blank" rel="noopener">خود و رشد</a><span class="sep">›</span><a class="tp" href="index.html#t-meaning" target="_blank" rel="noopener">معنا، امید و بهزیستی</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><span class="on" aria-current="page">خوش‌بینی و امید</span><a href="makingsense.html" target="_blank" rel="noopener">معنا بساز</a><a href="riseabove.html" target="_blank" rel="noopener">فراتر برو</a><a href="solitude.html" target="_blank" rel="noopener">خلوت</a><a href="optimism.html" target="_blank" rel="noopener">خوش‌بینی</a><a href="happiness.html" target="_blank" rel="noopener">ریشه‌های شادکامی</a><a href="mattering.html" target="_blank" rel="noopener">اهمیت داشتن</a><a href="shelf14.html" target="_blank" rel="noopener">قفسهٔ زندگی غنی</a><a href="art.html" target="_blank" rel="noopener">هنر</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#review">مرور بازتعبیر و ذهنیت‌ها</a></li>
+<li><a href="#types">خوش‌بینی چند نوع دارد</a></li>
+<li><a href="#death">خوش‌بینی و مرگ پس از سکتهٔ قلبی</a></li>
+<li><a href="#beneficial">خوش‌بینی سودمند در برابر مخرب</a></li>
+<li><a href="#hope">امید: هدف، راه، عاملیت</a></li>
+<li><a href="#skeptical">خوش‌بینی شکاکانه</a></li>
+<li><a href="#fantasy">خیال‌پردازی در برابر انتظار</a></li>
+<li><a href="#goals">اهداف هوشمند و پیشرفت‌های کوچک</a></li>
+<li><a href="#org">شادکامی در کار: از درون به بیرون، از بیرون به درون</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>خوش‌بینی و امید به آینده</h1>
+<p class="lede-sub">آیا خوش‌بینی همیشه خوب است؟ این درس نشان می‌دهد «خوش‌بینی» چند نوع دارد، کدامش مفید و کدامش مضر است، و چرا <a class="w" data-t="hope">امید</a> (داشتن هدف، راه و انرژی) از خوش‌بینی صرف کارسازتر است. خیال‌پردازی مثبت دربارهٔ آینده حتی می‌تواند به ضرر ما تمام شود؛ راه‌حل، ترکیب آرزو با دیدن موانع است (<a class="w" data-t="woop">WOOP</a>).</p>
+<aside class="infobox" aria-label="مشخصات صفحه"><div class="ib-h">خوش‌بینی و امید در یک نگاه</div><dl>
+<dt>دوره</dt><dd>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</dd>
+<dt>مدرس</dt><dd>دکتر آذرخش مکری</dd>
+<dt>محورها</dt><dd>انواع خوش‌بینی · توهم‌های مثبت · خوش‌بینی سرشتی و LOT-R · خوش‌بینی و مرگ پس از سکته · خوش‌بینی سودمند · مداخلات افزایش خوش‌بینی · امید (اسنایدر) · خوش‌بینی شکاکانه · خیال‌پردازی در برابر انتظار · WOOP · اهداف SMART · اصل پیشرفت · اهداف ریز</dd>
+</dl></aside>
+
+<div class="simple"><b class="k">به زبان ساده</b><ul>
+<li>خوش‌بینی مفید یعنی انتظار نتیجهٔ خوب، <b>در حد واقع‌بینانه</b>، دربارهٔ چیزهایی که تا حدی در کنترل ماست.</li>
+<li>«امید» بیش از خوش‌بینی است: هدف مشخص + پیدا کردن راه‌های مختلف + انرژی برای رفتن در آن راه‌ها.</li>
+<li>فقط خیال‌پردازی شیرین دربارهٔ آینده («تصور کن چقدر عالی می‌شود») انگیزه را کم می‌کند. بهتر است آرزو را تصور کنیم، بعد مانع درونی‌مان را ببینیم و برایش برنامهٔ «اگر... آنگاه...» بریزیم.</li>
+<li>در کار، دیدن «پیشرفت‌های کوچک» قوی‌ترین منبع انگیزه است.</li>
+</ul></div>
+
+<h2 id="review">مرور بازتعبیر و ذهنیت‌ها</h2>
+<p><sup class="c"><a href="#r-slides">[۱]</a></sup> برخی مفاهیم <a class="w" data-t="reappraisal">بازتعبیر</a>، <a class="w" data-t="stressmind">ذهنیت استرس</a> (استرس ناتوان‌کننده در برابر استرس توانمندساز)، تنوع هیجانی و طرح‌واره‌های تهدید. (صفحهٔ <a class="w" data-t="s8">بازتعبیر و ذهنیت‌ها</a>)</p>
+
+<h2 id="types">خوش‌بینی چند نوع دارد</h2>
+<div class="cols2">
+<div class="card"><b class="h">توهم‌های مثبت</b><span class="en">Positive illusions</span>شلی تیلور و جاناتان براون: افراد سالم معمولاً خودشان را کمی بهتر از واقع می‌بینند.</div>
+<div class="card"><b class="h">توهم کنترل</b><span class="en">Illusion of control</span>باور به کنترل بر چیزهایی که در واقع تصادفی‌اند (مثل انداختن تاس).</div>
+<div class="card"><b class="h">توهم برتری</b><span class="en">Illusion of superiority</span>بیشتر رانندگان خود را «بهتر از میانگین» می‌دانند.</div>
+<div class="card"><b class="h">سوگیری خوش‌بینی</b><span class="en">Optimism bias</span>«اتفاق بد برای دیگران می‌افتد، نه برای من» (تالی شاروت).</div>
+<div class="card"><b class="h">خوش‌بینی سرشتی</b><span class="en">Dispositional optimism</span>شایر و کارور: انتظار کلی و پایدار به اینکه در آینده اتفاق‌های خوب بیشتر از بد رخ می‌دهد.</div>
+</div>
+<p>آیا خوش‌بینی مفید است؟ <b>دیدگاه سنتی</b> می‌گوید سلامت روان یعنی دیدن دقیق واقعیت. <b>دیدگاه بده‌بستان</b> (لیزا بورتولوتی) می‌گوید برخی «کج‌باوری‌های سازگارانه» (adaptive misbeliefs) هزینهٔ معرفتی دارند اما سود روانی و عملی هم دارند؛ مثلاً انگیزه و پشتکار بیشتر. <sup class="c"><a href="#r-bortolotti">[۲]</a></sup></p>
+<h3>سنجش خوش‌بینی سرشتی</h3>
+<p><b>آزمون بازنگری‌شدهٔ جهت‌گیری زندگی</b> (LOT-R؛ شایر، کارور و بریجز ۱۹۹۴): ده گویه، که سه گویه خوش‌بینی، سه گویه بدبینی و چهار گویه پرکننده (بی‌اثر) هستند. نمونه: «در شرایط نامشخص، انتظار و امید به بهترین حالت را دارم» · «اگر چیزی برایم ممکن است بد پیش برود، حتماً بد پیش می‌رود» (معکوس). <sup class="c"><a href="#r-scheier">[۳]</a></sup></p>
+<p>اثرهای مثبت خوش‌بینی سرشتی: درگیر شدن فعال با مشکل (به جای کناره‌گیری)، هیجان مثبت بیشتر، و سلامت جسمی بهتر.</p>
+
+<h2 id="death">خوش‌بینی و مرگ پس از سکتهٔ قلبی</h2>
+<p>گالاتزر-لوی و بونانو (۲۰۱۴) داده‌های «مطالعهٔ سلامت و بازنشستگی» آمریکا (۱۹۹۴ تا ۲۰۰۸) را بررسی کردند: کسانی که سکتهٔ قلبی کرده بودند و پیش از آن خوش‌بینی‌شان سنجیده شده بود. این نخستین مطالعهٔ آینده‌نگر دربارهٔ تعامل سکتهٔ قلبی و افسردگی بود. <sup class="c"><a href="#r-galatzer">[۴]</a></sup></p>
+<ul>
+<li>بیشتر بیماران «تاب‌آور» بودند و افسردگی پایداری پیدا نکردند (پیوند با <a class="w" data-t="resilience">تاب‌آوری</a>).</li>
+<li>خوش‌بینی پیش از سکته، پیش‌بینی می‌کرد چه کسی در مسیر تاب‌آور می‌ماند.</li>
+<li>افسردگی‌ای که <b>پس از</b> سکته ظاهر شد، با خطر بیشتر مرگ همراه بود. دلایل احتمالی: پیروی کمتر از درمان قلبی در افراد افسرده، و نقش التهاب.</li>
+</ul>
+<p>جملهٔ اسلاید: «شواهدی وجود دارد که صرفِ خوش‌بینی به انطباق کمک می‌کند.»</p>
+
+<h2 id="beneficial">خوش‌بینی سودمند در برابر مخرب</h2>
+<p>بورتولوتی سه ویژگی برای «خوش‌بینی سودمند» برمی‌شمارد: <sup class="c"><a href="#r-bortolotti">[۲]</a></sup></p>
+<ol>
+<li>باور به اینکه صفات یا استعدادهایی داریم که به‌راحتی قابل اندازه‌گیری و تأیید نیستند؛</li>
+<li>باور به اینکه می‌توانیم اموری را کنترل کنیم که <b>در عمل تا حدودی قابل کنترل‌اند</b>؛</li>
+<li>باور به نتیجه‌های مثبتی که <b>خیلی غیرواقعی نیستند</b>.</li>
+</ol>
+<p>خوش‌بینی مخرب برعکس است: باور به کنترل بر چیزهای غیرقابل کنترل، یا انتظار نتایج بسیار دور از واقعیت؛ که به بی‌احتیاطی و نادیده گرفتن خطر می‌انجامد (جفرسون، بورتولوتی و کوزمانوویچ ۲۰۱۷).</p>
+<h3>آیا خوش‌بینی را می‌شود افزایش داد؟</h3>
+<p>فراتحلیل مالوف و شوت (۲۰۱۷) روی ۲۹ مطالعه نشان داد مداخلات روان‌شناختی می‌توانند خوش‌بینی را به اندازهٔ کوچک تا متوسط افزایش دهند؛ مؤثرترین روش، تمرین «بهترین خود ممکن» (Best Possible Self) بود: نوشتن یا تصور آینده‌ای که در آن همه چیز به بهترین شکل پیش رفته است. یکی از مطالعات این فراتحلیل از ایران بود (روان‌نمایشگری؛ توکلی، اسماعیلی و نامداری). <sup class="c"><a href="#r-malouff">[۵]</a></sup></p>
+<div class="key"><b class="k">پیام</b>خوش‌بینی سرشتی تا حدودی قابل افزایش است، البته به شرط آنکه از نوع مفید باشد.</div>
+
+<h2 id="hope">امید: هدف، راه، عاملیت</h2>
+<p>چارلز اسنایدر <a class="w" data-t="hope">امید</a> را این‌طور تعریف کرد: ادراک اینکه می‌توانیم به اهدافمان برسیم؛ از طریق دو فرایند در تعامل با هم: <sup class="c"><a href="#r-snyder">[۶]</a></sup></p>
+<div class="cols2">
+<div class="card"><b class="h">مسیرها</b><span class="en">Pathways</span>توان یافتن راه‌های متعدد برای رسیدن به هدف، و راه جایگزین وقتی راه اول بسته شد.</div>
+<div class="card"><b class="h">عاملیت</b><span class="en">Agency</span>انرژی و باور به اینکه می‌توانم در آن راه‌ها حرکت کنم («من می‌توانم»).</div>
+</div>
+<p>در نظریهٔ اسنایدر، هیجان‌ها «پیامد» افکار معطوف به هدف‌اند: رسیدن یا نرسیدن به هدف، هیجان مثبت یا منفی می‌سازد. تفاوت با خوش‌بینی: خوش‌بینی انتظار کلی نتیجهٔ خوب است، <b>بدون</b> اینکه لزوماً خودِ فرد عامل آن باشد.</p>
+<p><b>مقیاس امید بزرگسالان</b> (AHS؛ ۱۲ گویه، ۱ تا ۸؛ ۴ گویهٔ مسیر، ۴ گویهٔ عاملیت، ۴ پرکننده):</p>
+<div class="cols2">
+<div class="card"><b class="h">گویه‌های مسیر</b><ul class="tight"><li>می‌توانم به راه‌های زیادی برای خروج از بن‌بست فکر کنم.</li><li>برای خروج از هر مشکلی راه‌های زیادی وجود دارد.</li><li>حتی وقتی دیگران ناامید می‌شوند، می‌دانم راهی پیدا خواهم کرد.</li></ul></div>
+<div class="card"><b class="h">گویه‌های عاملیت</b><ul class="tight"><li>من با انرژی اهدافم را دنبال می‌کنم.</li><li>تجربه‌های گذشته مرا برای آینده آماده کرده است.</li><li>به اهدافی که برای خودم تعیین می‌کنم می‌رسم.</li></ul></div>
+</div>
+<p>نسخهٔ «حالتی» (State Hope Scale، ۶ گویه) امید در «اکنون» را می‌سنجد. فلدمن و کوباتا (۲۰۱۵) نشان دادند امید، خودکارآمدی و خوش‌بینی سازه‌هایی جدا اما مرتبط‌اند، و «امید تحصیلی» و «خودکارآمدی تحصیلی» معدل دانشجویان را بهتر از خوش‌بینی کلی پیش‌بینی می‌کنند. <sup class="c"><a href="#r-feldman">[۷]</a></sup></p>
+
+<h2 id="skeptical">خوش‌بینی شکاکانه</h2>
+<p>«خوش‌بینی شکاکانه» یعنی انتظار مثبت کلی به آینده، <b>مشروط بر</b> کنجکاوی، جست‌وجوگری، تحلیل نقادانه و بررسی عمیق پیامدهای منفی ممکن. اجزای مهم آن: <b>کنجکاوی</b>، <b>سرسختی</b> و <b>پرسشگری</b>. نمونهٔ گویه‌ها: «از پیچیدگی زندگی به خاطر کنجکاوی‌ام لذت می‌برم» · «برای هر مشکلی راه‌حلی پیدا می‌کنم چون زیاد درباره‌اش فکر می‌کنم» · «حتی ابتدایی‌ترین فرض‌ها را زیر سؤال می‌برم» · «گاهی یک مسئله را بیش از حد تحلیل می‌کنم تا مطمئن شوم بهترین راه‌حل را یافته‌ام».</p>
+<div class="key"><b class="k">پیام</b>«امید» مفهومی فراگیرتر از خوش‌بینی است و مؤلفه‌های مهمی مانند عاملیت، مسیرها و اهداف دارد. نظریه‌های جدید به این‌ها «نوعی شکاکیت، سرسختی و کنجکاوی» را هم می‌افزایند.</div>
+
+<h2 id="fantasy">خیال‌پردازی در برابر انتظار</h2>
+<p>گابریله اوتینگن (دانشگاه نیویورک و هامبورگ) میان دو نوع فکر کردن به آینده فرق گذاشت: <sup class="c"><a href="#r-oettingen">[۸]</a></sup></p>
+<div class="cols2">
+<div class="card"><b class="h">انتظار مثبت</b><span class="en">Expectation</span>قضاوت دربارهٔ احتمال موفقیت، بر پایهٔ تجربه‌های گذشته.</div>
+<div class="card"><b class="h">خیال‌پردازی مثبت</b><span class="en">Positive fantasy</span>تصویرهای شیرین ذهنی از آینده‌ای ایده‌آل، جدا از تجربه.</div>
+</div>
+<p>در چند مطالعه (دانشجویان در جست‌وجوی کار، عاشقانی که می‌خواستند ابراز عشق کنند، بیمارانی که پس از جراحی لگن بهبود می‌یافتند): <b>انتظار مثبت</b> با تلاش و موفقیت بیشتر همراه بود، اما <b>خیال‌پردازی مثبت</b> با موفقیت کمتر. مثلاً دانشجویانی که بیشتر خیال‌پردازی کرده بودند، دو سال بعد پیشنهاد شغلی کمتر و حقوق پایین‌تری داشتند.</p>
+<p>اوتینگن و همکاران (۲۰۱۶) در مقاله‌ای با عنوان «لذت اکنون، رنج بعد» نشان دادند خیال‌پردازی مثبت دربارهٔ آینده، در کوتاه‌مدت حال را خوب می‌کند اما <b>علائم افسردگی</b> را در ماه‌های بعد پیش‌بینی می‌کند. <sup class="c"><a href="#r-oettingen16">[۹]</a></sup></p>
+<div class="key"><b class="k">جملهٔ کلیدی</b>انتظارات مثبتِ متکی بر تجربه‌های قبلی، بسیار مهم‌تر از خیال‌پردازی و هیجان مثبت‌اند.</div>
+<h3>WOOP: تقابل ذهنی</h3>
+<p>راه‌حل اوتینگن «<a class="w" data-t="woop">تقابل ذهنی</a>» است که در چهار گام خلاصه می‌شود:</p>
+<div class="chain"><span class="box">آرزو<br><span class="small">Wish</span></span><span class="arr">←</span><span class="box">بهترین نتیجه<br><span class="small">Outcome</span></span><span class="arr">←</span><span class="box hl">مانع درونی<br><span class="small">Obstacle</span></span><span class="arr">←</span><span class="box">برنامه «اگر... آنگاه...»<br><span class="small">Plan</span></span></div>
+<div class="simple"><b class="k">مثال</b>آرزو: «این ترم زبان را جدی بخوانم.» بهترین نتیجه: «در سفر بعدی راحت حرف بزنم.» مانع درونی: «شب‌ها خسته‌ام و گوشی دستم می‌گیرم.» برنامه: «اگر ساعت ۹ شب شد، گوشی را در آشپزخانه می‌گذارم و ۲۰ دقیقه فلش‌کارت می‌خوانم.»</div>
+<div class="key"><b class="k">پیام</b>مداخلهٔ هوشمند در اهداف و انباشت تجربه‌های مثبت، الگوی سازندهٔ افزایش امید است.</div>
+
+<h2 id="goals">اهداف هوشمند و پیشرفت‌های کوچک</h2>
+<ul>
+<li><b>SMART</b>: مشخص، قابل اندازه‌گیری، دست‌یافتنی، مرتبط، زمان‌دار. واینتراب و همکاران (۲۰۲۱) نشان دادند تعیین روزانهٔ اهداف SMART در کارکنان، <a class="w" data-t="flow">غرقگی</a> را در طول روز پایدار نگه داشت (در گروه کنترل، غرقگی در اواخر هفته و بعدازظهرها افت کرد)، و استرس کمتر و اشتیاق و عملکرد بیشتری به همراه داشت. <sup class="c"><a href="#r-weintraub">[۱۰]</a></sup></li>
+<li><b>اصل پیشرفت</b> (ترزا امابیل و استیون کریمر): تحلیل حدود ۱۲ هزار یادداشت روزانهٔ کارکنان نشان داد مهم‌ترین عامل یک «روز خوب کاری»، احساس <b>پیشرفت</b> است، حتی گامی کوچک. روزهای خوب با «کاتالیزورها» (پشتیبانی از کار) و «مغذی‌ها» (احترام و تشویق) همراه‌اند؛ روزهای بد با «پسرفت‌ها»، «بازدارنده‌ها» و «سموم» (بی‌احترامی). مدیران معمولاً «قدردانی» را مهم‌ترین انگیزه‌دهنده می‌دانند، اما «حمایت از پیشرفت» مهم‌تر است. <sup class="c"><a href="#r-amabile">[۱۱]</a></sup></li>
+<li><b>اهداف ریز در برابر انعطاف:</b> رای، شریف، چنگ، میلکمن و داکورث (۲۰۲۳) در یک آزمایش میدانی با داوطلبان یک خط امداد بحران، هدف سالانهٔ «۲۰۰ ساعت در سال» را به شکل «۴ ساعت در هفته» یا «۸ ساعت هر دو هفته» بازنویسی کردند. تقسیم هدف به زیرهدف‌ها ساعات داوطلبی را بیشتر کرد، اما میان «ریزدانگی» (وضوح) و «انعطاف» بده‌بستان وجود دارد. <sup class="c"><a href="#r-rai">[۱۲]</a></sup></li>
+</ul>
+
+<h2 id="org">شادکامی در کار: از درون به بیرون، از بیرون به درون</h2>
+<p>ویلیامز، کرن و واترز (۲۰۱۶) مدل «درون-بیرون، بیرون-درون» (IO-OI) را برای شادکامی در کار پیشنهاد کردند: شادکامی کارمند هم از درون (نگرش مثبت، توجه انتخابی به نکات خوب، یادگیری) ساخته می‌شود و هم از بیرون (فضیلت‌های سازمانی). این دو در یک حلقهٔ بازخورد یکدیگر را تقویت می‌کنند. <sup class="c"><a href="#r-williams">[۱۳]</a></sup></p>
+<p>فضیلت‌های سازمانی در این مدل: <b>بخشش سازمانی</b> (اشتباه‌ها زود بخشیده و فرصت یادگیری می‌شوند)، <b>اعتماد سازمانی</b> (ادب، توجه و احترام و اعتماد متقابل میان همکاران و مدیران)، <b>صداقت سازمانی</b>، و مانند آن. این‌ها در چارچوب «پژوهش سازمانی مثبت» (POS) و «رفتار سازمانی مثبت» (POB) مطالعه می‌شوند (پیوند با <a class="w" data-t="poswork">مثبت‌گرایی در کار</a>).</p>
+<div class="key"><b class="k">پیام</b>شاخص‌های مفید فردی (امید، خوش‌بینی سودمند) در بستر شاخص‌های مفید سازمانی اثر می‌کنند.</div>
+
+<div class="nd-self"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: معنا، امید و بهزیستی</h3><ul><li class="nd-self"><a href="riseabove.html" target="_blank" rel="noopener"><i></i>فراتر برو</a><small>فراتر برو: ذهنیت قربانی و رشد</small></li><li class="nd-self"><a href="happiness.html" target="_blank" rel="noopener"><i></i>ریشه‌های شادکامی</a><small>ریشه‌های شادکامی</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-work"><a href="poswork.html" target="_blank" rel="noopener"><i></i>مثبت‌گرایی در کار</a><small>کار و سازمان › سلامت روان در کار · مشترک: بازتعبیر، اصل پیشرفت</small></li><li class="nd-feel"><a href="s8.html" target="_blank" rel="noopener"><i></i>بازتعبیر و ذهنیت‌ها</a><small>هیجان و ذهن › هیجان و تنظیم آن · مشترک: ذهنیت استرس، بازتعبیر</small></li><li class="nd-health"><a href="clinical.html" target="_blank" rel="noopener"><i></i>قفسهٔ بالینی</a><small>سلامت روان و درمان › مرز سلامت و اختلال · مشترک: ذهنیت استرس، بازتعبیر</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#7d4a86"><b>فلسفه</b>فلسفهٔ وجودی: آزادی، تنهایی، مرگ و بی‌معنایی؛ ریشهٔ معنادرمانی و روان‌درمانی وجودی. <a href="graph.html#existentialism" target="_blank" rel="noopener">فلسفهٔ وجودی و پدیدارشناسی ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>دورکیم: وقتی پیوند و قاعدهٔ اجتماعی سست شود (آنومی)، معنا و سلامت روان آسیب می‌بینند. <a href="graph.html#anomie" target="_blank" rel="noopener">آنومی و پیوند اجتماعی (دورکیم) ↗</a></div><div style="--xc:#8a6a2a"><b>انسان‌شناسی و تکامل</b>هنر و آیین از کهن‌ترین راه‌های ساختن معنا و پیوند گروهی‌اند. <a href="graph.html#art-origins" target="_blank" rel="noopener">ریشه‌های تکاملی هنر ↗</a></div></div><div class="worlds"><a href="land.html" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides">اسلایدهای ٔ «مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی»، دکتر آذرخش مکری، ۱۸ بهمن ۱۴۰۴ (۹۴ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-bortolotti"><span class="ltr">Bortolotti, L. (2018). Optimism, agency, and success. <i>Ethical Theory and Moral Practice, 21</i>, 521–535; Jefferson, A., Bortolotti, L., &amp; Kuzmanovic, B. (2017). What is unrealistic optimism? <i>Consciousness and Cognition, 50</i>, 3–11.</span></li>
+<li id="r-scheier"><span class="ltr">Scheier, M. F., Carver, C. S., &amp; Bridges, M. W. (1994). Distinguishing optimism from neuroticism: A reevaluation of the Life Orientation Test. <i>JPSP, 67</i>, 1063–1078; Mens, M. G., Scheier, M. F., &amp; Carver, C. S. Optimism. In <i>The Oxford Handbook of Positive Psychology</i> (3rd ed.).</span></li>
+<li id="r-galatzer"><span class="ltr">Galatzer-Levy, I. R., &amp; Bonanno, G. A. (2014). Optimism and death: Predicting the course and consequences of depression trajectories in response to heart attack. <i>Psychological Science, 25</i>(12), 2177–2188.</span></li>
+<li id="r-malouff"><span class="ltr">Malouff, J. M., &amp; Schutte, N. S. (2017). Can psychological interventions increase optimism? A meta-analysis. <i>Journal of Positive Psychology, 12</i>(6), 594–604.</span></li>
+<li id="r-snyder"><span class="ltr">Snyder, C. R., et al. (1991). The will and the ways: Development and validation of an individual-differences measure of hope. <i>JPSP, 60</i>, 570–585; Colla, R., Williams, P., Oades, L. G., &amp; Camacho-Morles, J. (2022). “A new hope” for positive psychology. <i>Frontiers in Psychology, 13</i>, 809053.</span></li>
+<li id="r-feldman"><span class="ltr">Feldman, D. B., &amp; Kubota, M. (2015). Hope, self-efficacy, optimism, and academic achievement. <i>Learning and Individual Differences, 37</i>, 210–216.</span></li>
+<li id="r-oettingen"><span class="ltr">Oettingen, G., &amp; Mayer, D. (2002). The motivating function of thinking about the future: Expectations versus fantasies. <i>JPSP, 83</i>(5), 1198–1212; Oettingen, G. (2014). <i>Rethinking Positive Thinking</i>. Current.</span></li>
+<li id="r-oettingen16"><span class="ltr">Oettingen, G., Mayer, D., &amp; Portnow, S. (2016). Pleasure now, pain later: Positive fantasies about the future predict symptoms of depression. <i>Psychological Science, 27</i>(3), 345–353.</span></li>
+<li id="r-weintraub"><span class="ltr">Weintraub, J., Cassell, D., &amp; DePatie, T. P. (2021). Nudging flow through ‘SMART’ goal setting to decrease stress, increase engagement, and increase performance at work. <i>Journal of Occupational and Organizational Psychology, 94</i>(2), 230–258.</span></li>
+<li id="r-amabile"><span class="ltr">Amabile, T., &amp; Kramer, S. (2011). <i>The Progress Principle</i>. Harvard Business Review Press.</span></li>
+<li id="r-rai"><span class="ltr">Rai, A., Sharif, M. A., Chang, E. H., Milkman, K. L., &amp; Duckworth, A. L. (2023). A field experiment on subgoal framing to boost volunteering. <i>Journal of Applied Psychology, 108</i>(4), 621–634.</span></li>
+<li id="r-williams"><span class="ltr">Williams, P., Kern, M. L., &amp; Waters, L. (2016). Inside-out-outside-in: A dual approach process model to developing work happiness. <i>International Journal of Wellbeing, 6</i>(2), 30–56.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این جزوه از روی ۹۴ اسلاید و مقاله‌های ذکرشده ساخته شده است. کادرهای «به زبان ساده» و «یادداشت ویراستار» افزوده شده‌اند.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"hope": {"fa": "امید", "en": "Hope (Snyder)", "d": "ادراک توان رسیدن به هدف از طریق مسیرها (یافتن راه‌های متعدد) و عاملیت (انرژی و باور به حرکت در آن راه‌ها).", "rel": ["optimism", "woop"], "s": "hope", "g": "hope"}, "optimism": {"fa": "خوش‌بینی سرشتی", "en": "Dispositional optimism", "d": "انتظار کلی و پایدار به وقوع رویدادهای خوب در آینده (شایر و کارور)؛ با LOT-R سنجیده می‌شود.", "rel": ["hope"], "s": "types", "g": "hope"}, "woop": {"fa": "تقابل ذهنی (WOOP)", "en": "Mental contrasting / WOOP", "d": "آرزو، نتیجه، مانع، برنامه: ترکیب تصور آینده با دیدن مانع درونی و برنامهٔ اگر-آنگاه (اوتینگن).", "rel": ["hope"], "s": "fantasy", "g": "goal-pursuit"}, "reappraisal": {"fa": "بازتعبیر", "en": "Reappraisal", "d": "تغییر تعبیر یک موقعیت برای تغییر هیجان.", "rel": [], "s": "review", "g": "reappraisal"}, "stressmind": {"fa": "ذهنیت استرس", "en": "Stress mindset", "d": "باور به ناتوان‌کننده یا توانمندساز بودن استرس.", "rel": [], "s": "review", "g": "stress-mindset"}, "s8": {"fa": "بازتعبیر و ذهنیت‌ها", "en": "Session 8", "d": "بازتعبیر، تخلیهٔ ایگو و ذهنیت‌ها.", "rel": [], "s": "review", "g": "reappraisal"}, "resilience": {"fa": "تاب‌آوری", "en": "Resilience", "d": "ماندن در مسیر سلامت پس از رویداد سخت (بونانو).", "rel": [], "s": "death", "g": "resilience"}, "flow": {"fa": "غرقگی", "en": "Flow", "d": "فرو رفتن کامل در کار.", "rel": [], "s": "goals", "g": "flow"}, "progress": {"fa": "اصل پیشرفت", "en": "Progress principle", "d": "احساس پیشرفت در کار معنادار، حتی گامی کوچک، قوی‌ترین منبع انگیزه و هیجان مثبت روزانه است (امابیل و کریمر).", "rel": ["flow"], "s": "goals", "g": "progress-principle"}, "poswork": {"fa": "مثبت‌گرایی در کار", "en": "Positive organizational scholarship", "d": "صفحهٔ مرور کتاب مثبت‌گرایی و توانمندی در کار.", "rel": [], "s": "org", "g": "perma"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

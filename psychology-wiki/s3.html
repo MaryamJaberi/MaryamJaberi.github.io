@@ -1,0 +1,525 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>از سرزنش خود تا شفقت به خود</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-self">
+  <div class="brand">ویکی روان‌شناسی <small>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-self" target="_blank" rel="noopener">خود و رشد</a><span class="sep">›</span><a class="tp" href="index.html#t-compassion" target="_blank" rel="noopener">شفقت، منتقد درون و کمال‌گرایی</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><a href="s2.html" target="_blank" rel="noopener">شفقت به خود</a><span class="on" aria-current="page">منتقد درون و رهبری مشفقانه</span><a href="s12.html" target="_blank" rel="noopener">کمال‌گرایی در کار</a><a href="perfection.html" target="_blank" rel="noopener">کمال‌گرایی</a><a href="compassion.html" target="_blank" rel="noopener">شفقت و خودانتقادی</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#critic">منتقد درون</a></li>
+<li><a href="#blatt">دو نوع افسردگی: بلات</a></li>
+<li><a href="#compassion">شفقت و سنجش آن</a></li>
+<li><a href="#collapse">فروپاشی شفقت</a></li>
+<li><a href="#system">شفقت و توجیه نظام</a></li>
+<li><a href="#leaders">شفقت به خود در رهبران</a></li>
+<li><a href="#practice">تکنیک و تمرین</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>از سرزنش خود تا شفقت به خود</h1>
+<p class="lede-sub">صدای درونی‌ای که می‌گوید «به اندازهٔ کافی خوب نیستی» شاید انگیزه به نظر برسد، اما پژوهش‌ها نشان می‌دهند <a class="w" data-t="self-criticism">سرزنش خود</a> افسردگی را عمیق‌تر، رابطه‌ها را سست‌تر و انگیزهٔ درونی را خاموش‌تر می‌کند. این درس از «منتقد درون» تا <a class="w" data-t="self-compassion">شفقت به خود</a>، و از فرد تا رهبر سازمان پیش می‌رود.</p>
+<aside class="infobox" aria-label="مشخصات صفحه"><div class="ib-h">منتقد درون و رهبری مشفقانه در یک نگاه</div><dl>
+<dt>دوره</dt><dd>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</dd>
+<dt>مدرس</dt><dd>دکتر آذرخش مکری</dd>
+<dt>محورها</dt><dd>منتقد درون، دو نوع افسردگی بلات، شفقت و سنجش آن، فروپاشی شفقت، توجیه نظام اقتصادی، شفقت به خود در رهبران، تمرین‌ها</dd>
+<dt>مقیاس‌ها</dt><dd>DEQ (۶ گویه)، SOCS-S (۲۰ گویه)، DERS، ESJ (۱۶ گویه)، شفقت به خود در نقش رهبر</dd>
+</dl></aside>
+
+<h2 id="critic">منتقد درون</h2>
+<p><sup class="c"><a href="#r-slides">[۱]</a></sup> همه صدایی درونی می‌شناسیم که پس از هر خطا قضاوت می‌کند: <a class="w" data-t="inner-critic">منتقد درون</a> (اسلاید ۳). درس با یک پرسش‌نامهٔ کوتاه شروع شد.</p>
+<details open><summary>پرسش‌نامهٔ تجارب افسردگی، بخش سرزنش خود (DEQ، ۶ گویه؛ ۱ خیلی مخالف تا ۷ خیلی موافق)</summary>
+<ol class="tight">
+<li>اغلب احساس می‌کنم که در حد استانداردها و ایده‌آل‌هایم نیستم و به پای آن‌ها نمی‌رسم.</li>
+<li>بین آنچه الان هستم و آنچه می‌خواهم باشم، فاصلهٔ زیادی است.</li>
+<li>از آنچه دارم راضی نیستم.</li>
+<li>پذیرش ضعف‌هایم برای من دشوار است.</li>
+<li>خیلی سرزنش‌کنندهٔ خودم هستم.</li>
+<li>اغلب خودم را با استانداردها و اهداف (انتخاب‌شده‌ام) مقایسه می‌کنم.</li>
+</ol></details>
+<div class="note"><b class="k">تعریف: سرزنش خود بیمارگون (اسلاید ۶)</b>(۱) تقاضای غیرقابل مذاکره و مصالحه برای استاندارد بالا در کارکرد؛ (۲) بیان خشم و تحقیر به سوی خویشتن، وقتی این استانداردها، ناگزیر، برآورده نمی‌شوند.</div>
+<blockquote><p class="q-en">I emphasize the nature of self-criticism as a form of relationship with the self in order to distinguish it from a “spectatorial” approach.</p><p class="q-fa">من بر ماهیت سرزنش خود به‌عنوان نوعی <b>رابطه با خویشتن</b> تأکید دارم تا آن را از رویکرد «مشاهده‌گرانه» متمایز کنم؛ رویکردی که سرزنش خود را مجموعه‌ای از باورها و شناخت‌ها دربارهٔ خویشتن یا ارزیابی نقص‌ها و ارزش‌های خود می‌داند.</p><footer>گولان شاهار، «فرسایش: آسیب‌شناسی روانی سرزنش خود» (۲۰۱۵)</footer></blockquote>
+<p>اسلاید ۸ نوعی دیگر را هم جدا کرد: <b>سرزنش خودِ نمایشی</b> (wannabe self-criticism)، یعنی خودکوچک‌شماری برای «ماهیگیری تعریف و تمجید» از دیگران؛ که با سرزنش خود واقعی فرق دارد<sup class="c"><a href="#r-shahar">[۲]</a></sup>.</p>
+<blockquote><p class="q-en">I am yet to see a happy self-critic.</p><p class="q-fa">هنوز منتظرم یک خودسرزنش‌گر شاد ببینم.</p><footer>دیوید زوراف (اسلاید ۱۱)</footer></blockquote>
+
+<h2 id="blatt">دو نوع افسردگی: بلات</h2>
+<p>سیدنی بلات (۱۹۲۸–۲۰۱۴)، در کتاب «قطب‌های تجربه»، تجربهٔ انسانی را میان دو قطب می‌دید: <b>پیوند</b> با دیگران و <b>تعریف خود</b>. افسردگی هم از هر کدام می‌تواند بشکند (اسلایدهای ۱۲ تا ۱۷)<sup class="c"><a href="#r-blatt">[۳]</a></sup>:</p>
+<div class="cols2">
+<div class="card"><b class="h">افسردگی اتکایی-وابسته</b><span class="en">Anaclitic / dependent</span>وابستگی و اتکا به افراد · ترس از رها شدن و جدایی · نیاز شدید به توجه و محبت. ماشه: <b>فقدان</b>.</div>
+<div class="card"><b class="h"><a class="w" data-t="introjective">افسردگی خودسرزنشی</a></b><span class="en">Introjective / self-critical</span>نیاز به دستاورد و موفقیت · تأکید بر هویت خود · توانمندی. ماشه: <b>شکست</b> («بازنده»).</div>
+</div>
+<p>آرون بک همین دوگانه را «اجتماعی‌گرایی» (sociotropy) و «خودمختاری» (autonomy) نامید و با مقیاس SAS سنجید؛ ابزار دیگر سیاههٔ سبک شخصی (PSI-II) است (اسلایدهای ۱۸ و ۱۹).</p>
+<figure><div class="chain">
+<div class="box">وابستگی</div><span class="arr">+</span><div class="box">فقدان</div><span class="arr">←</span><div class="box hl">افسردگی</div><span class="arr">→</span><div class="box">شکست</div><span class="arr">+</span><div class="box">سرزنش خود</div>
+</div><figcaption>شکل ۱. فرضیهٔ «همخوانی»: هر آسیب‌پذیری با رویداد هم‌جنس خودش به افسردگی می‌رسد (اسلایدهای ۲۰ و ۲۱). به گفتهٔ اسلاید، شواهد برای مسیر سرزنش خود قوی‌تر و برای مسیر وابستگی کمتر است.</figcaption></figure>
+<p><b>چرا سرزنش خود این‌قدر رایج شده؟</b> اسلاید ۲۲: تحول جوامع فردگرا و مدرن و طبقهٔ اجتماعی، وزن را از قطب اتکایی به قطب خودسرزنشی برده است. در مقابل، اسلایدهای ۲۴ و ۲۵ یادآوری کردند <b>وابستگی لزوماً کودکانه و مخرب نیست</b>؛ «پایگاه امن» دلبستگی، پایهٔ کاوش و استقلال است.</p>
+<h3>پیامدهای سرزنش خود</h3>
+<figure><div class="chain">
+<div class="box hl">سرزنش خود</div><span class="arr">←</span><div class="box">مقابلهٔ اجتنابی</div><span class="arr">←</span><div class="box">رویدادهای منفی بیشتر</div><span class="arr">←</span><div class="box">پریشانی</div>
+</div><figcaption>شکل ۲. چرخهٔ سرزنش خود (اسلاید ۲۶): سرزنش خود انگیزهٔ خودمختار را پایین می‌آورد، رویدادهای مثبت را کم و منفی را زیاد می‌کند.</figcaption></figure>
+<blockquote><p class="q-en">If I am a self-critic and I feel like doing something, I won’t do it.</p><p class="q-fa">اگر یک خودسرزنش‌گر هستم و حس کنم <b>دوست دارم</b> کاری را انجام دهم، آن را انجام نمی‌دهم.</p></blockquote>
+<ul>
+<li>در درمان افسردگی، چه با دارو و چه با انواع روان‌درمانی، داشتن صفت سرزنش خود (یا نوعی شخصیت کمال‌گرا) <b>مانع بهبودی</b> است.</li>
+<li>سرزنش خود شکل‌گیری رابطهٔ درمانی و روابط بین‌فردی را مختل می‌کند.</li>
+<li>مهم‌تر: انگیزهٔ درونی را کم می‌کند و از این راه لذت و هیجان مثبت را؛ کارهای متکی به انگیزهٔ درون‌زاد، که لذت‌بخش‌ترند، متوقف می‌شوند (اسلاید ۲۸).</li>
+</ul>
+<div class="note"><b class="k">پرسش باز (اسلاید ۲۹)</b>آیا در برخی فرهنگ‌ها و محیط‌ها سرزنش خود مفید است و شفقت عارضهٔ مخرب ایجاد می‌کند؟ در گروه‌های رقابتی و دستاوردمدار چطور؟</div>
+<div class="note"><b class="k">یادداشت ویراستار</b>نگرانی رایج این است که شفقت به خود انگیزه را کم کند. پژوهش برینز و چن (۲۰۱۲) خلاف آن را نشان داد: دانشجویانی که پس از شکست در یک آزمون با شفقت به خود برخورد کردند، <b>بیشتر</b> برای آزمون بعدی تمرین کردند. شفقت با «سهل‌گیری» یکی نیست؛ نوعی مربی‌گری مهربان است، نه تعطیل کردن معیارها<sup class="c"><a href="#r-breines">[۴]</a></sup>.</div>
+
+<h2 id="compassion">شفقت و سنجش آن</h2>
+<div class="note"><b class="k">تعریف (اسلاید ۶۸)</b><a class="w" data-t="compassion">شفقت و مهرورزی</a> یک پاسخ عاطفی و شناختی به رنج کشیدن در خود و دیگران است که نوعی احساس مهربانی، میل به کمک و مراقبت، حمایت و تیمار را دربرمی‌گیرد. به همدلی و همدردی شبیه است، اما جنبه‌ای از میل <b>فعالانه</b> برای کاهش رنج دارد؛ و برخلاف سبک نشخوار و اشتغال‌های ذهنی مزاحم، به‌ویژه در افسردگی، که جنبهٔ قضاوت، سرزنش و ارزیابی در آن‌ها پررنگ است.</div>
+<p>مقیاس شفقت به خود ساسکس-آکسفورد (SOCS-S؛ استراوس، گو، کایکن و همکاران) شفقت را در <b>پنج مؤلفه</b> می‌سنجد (اسلاید ۳۱)<sup class="c"><a href="#r-socs">[۵]</a></sup>:</p>
+<ol class="tight">
+<li>شناسایی وجود رنج و عذاب</li>
+<li>درک هنجار و جهان‌گیر بودن رنج</li>
+<li>داشتن حس مراقبت به فرد در رنج</li>
+<li>تحمل و پذیرش حس‌های بد</li>
+<li>عمل یا انگیزهٔ عمل برای تخفیف رنج</li>
+</ol>
+<details><summary>گویه‌های SOCS-S (۲۰ گویه؛ ۱ هیچ‌وقت درست نیست تا ۵ همواره درست)</summary>
+<ol class="tight">
+<li>در تشخیص اینکه چه زمانی تنش دارم و در ناراحتی‌ام، مهارت دارم.</li><li>می‌دانم که هر کسی زمانی از زندگی‌اش رنج کشیده است.</li><li>وقتی در شرایط سختی هستم، به خودم احساس مهربانی دارم.</li><li>وقتی ناراحتم، به جای اجتناب از حس‌هایم، سعی می‌کنم آن‌ها را بپذیرم.</li><li>وقتی حالم بد است، حتی اگر نتوانم دربارهٔ علتش کاری کنم، سعی می‌کنم حالم را خوب کنم.</li><li>وقتی در فشار و ناراحتی هستم، متوجه حال خودم می‌شوم.</li><li>می‌فهمم که گاهی بدحال بودن جزئی از طبیعت بشری است.</li><li>وقتی چیزهای بد اتفاق می‌افتند، نوعی حس مراقبت از خودم پیدا می‌کنم.</li><li>با ناراحتی‌ام مواجه می‌شوم بی‌آنکه اجازه دهم بر من غلبه کند.</li><li>در روزهای دشوار سعی می‌کنم از خودم مراقبت کنم.</li><li>سریع متوجه نشانه‌های اولیهٔ بدحالی در خودم می‌شوم.</li><li>می‌دانم دیگران هم مثل من درگیر مشکلات و ناملایمات‌اند.</li><li>وقتی ناراحتم، سعی می‌کنم به حس‌هایم دقیق شوم.</li><li>بدون قضاوت خودم با حس‌هایم مواجه می‌شوم.</li><li>وقتی بدحالم، سعی می‌کنم آنچه برای من بهترین است را انجام دهم.</li><li>توان شناسایی علائم رنج در خودم را دارم.</li><li>می‌دانم وقتی شرایط بر وفق مراد پیش نمی‌رود، همهٔ ما ممکن است بدحال شویم.</li><li>حتی وقتی از خودم سرخورده‌ام، می‌توانم با گرمی و لطافت با خودم رفتار کنم.</li><li>می‌توانم بگذارم هیجان‌های منفی آنجا باشند بی‌آنکه زیرشان له شوم.</li><li>وقتی ناراحتم، بیشترین سعی‌ام را می‌کنم تا از خودم مراقبت کنم.</li>
+</ol></details>
+<h3>دو مداخلهٔ کوتاه</h3>
+<p>کرشنر، کایکن و همکاران (۲۰۱۹) دو تمرین کوتاه صوتی را با گروه‌های کنترل و «نشخوار» مقایسه کردند (اسلایدهای ۳۴ تا ۳۸)<sup class="c"><a href="#r-kirschner">[۶]</a></sup>:</p>
+<div class="cols2">
+<div class="card"><b class="h">مراقبه عشق-مهربانی برای خود</b><span class="en">Loving-Kindness Meditation for the Self (LKM-S)</span>فرستادن آرزوهای مهربانانه به خود.</div>
+<div class="card"><b class="h">اسکن بدن مهربانانه</b><span class="en">Compassionate Body Scan (CBS)</span>توجه مهربانانه به حس‌های بخش‌های مختلف بدن.</div>
+</div>
+<p>هر دو تمرین شفقت به خود و عاطفهٔ مثبت پیوندی را بالا بردند، سرزنش خود را پایین آوردند و الگوی فیزیولوژیک «آرام‌سازی» نشان دادند: کاهش ضربان قلب و افزایش تغییرپذیری ضربان قلب (نشانهٔ فعالیت پاراسمپاتیک). گروه نشخوار برعکس عمل کرد. پیوند با «<a class="w" data-t="three-systems">سه سامانهٔ تنظیم هیجان</a>» گیلبرت: شفقت سامانهٔ «تسکین» را فعال می‌کند.</p>
+
+<h2 id="collapse">فروپاشی شفقت</h2>
+<p>تصاویر سونامی و کودکان دارفور (اسلایدهای ۳۹ تا ۴۱) یک معما را پیش می‌کشند: <b>چرا با بیشتر شدن قربانیان، شفقت ما بیشتر نمی‌شود؟</b></p>
+<div class="key"><b class="k">تلنگرهای عاطفی شفقت فردی و اختصاصی‌اند (اسلاید ۴۰)</b>با افزایش رنج‌کشندگان، شفقت افزایش نمی‌یابد یا حتی کاهش می‌یابد. سامانهٔ پردازش سریع (نوع ۱) به آمار و انتزاع حساس نیست؛ به <b>مورد</b> واکنش نشان می‌دهد.</div>
+<p>کامرون و پین (۲۰۱۱) نشان دادند این <a class="w" data-t="compassion-collapse">فروپاشی شفقت</a> یک انتخاب انگیزشی است: شرکت‌کنندگان وقتی انتظار داشتند از آن‌ها <b>درخواست کمک</b> شود، برای هشت قربانی شفقت کمتری از یک قربانی گزارش کردند؛ وقتی درخواستی در کار نبود، این الگو دیده نشد (اسلاید ۴۲)<sup class="c"><a href="#r-cameron">[۷]</a></sup>. و فقط کسانی که در تنظیم هیجان ماهرند (نمرهٔ پایین در DERS) این فروپاشی را نشان دادند؛ تنظیم‌کنندگان ضعیف برای هشت قربانی همان‌قدر یا بیشتر متأثر شدند (اسلایدهای ۴۳ تا ۴۶).</p>
+<div class="note"><b class="k">جنبهٔ انگیزشی: مهار هیجانی (اسلاید ۴۷)</b><ul class="tight"><li>با افزایش افراد در رنج، حس بد افزایش می‌یابد، اما احساس ناتوانی در کمک شکل می‌گیرد.</li><li>با افزایش هزینهٔ کمک و ناتوانی در تأمین آن، افراد به مهار هیجانی، بی‌توجهی یا بازتعبیر رو می‌آورند.</li><li>تجربه یا حتی <b>انتظار</b> بار بالای افراد در رنج، ما را به مهار پیشگیرانهٔ هیجان می‌کشاند.</li><li>ریزش مهربانی برآیند هم انگیزه و هم مهارت افراد در مهار هیجانی است.</li></ul></div>
+<p><b>مقیاس دشواری در تنظیم هیجان (DERS)</b> شش بُعد دارد: راهبردهای تنظیم هیجان · ادامهٔ رفتار هدفمند در هیجان منفی · کنترل تکانه در هیجان منفی · عدم پذیرش هیجان منفی · آگاهی هیجانی · شفافیت هیجانی (اسلاید ۴۵).</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>پل اسلوویک این پدیده را «بی‌حسی روانی» نامید و جملهٔ منسوب به مادر ترزا را نقل می‌کند: «اگر به توده نگاه کنم، هرگز کاری نمی‌کنم؛ اگر به یک نفر نگاه کنم، می‌کنم». پیوند با «<a class="w" data-t="empathy-fatigue">خستگی همدلی</a>» در فرسودگی و شغل معنادار و تمایز «همدلی» از «شفقت»: همدلی می‌تواند فرسوده کند، شفقت انگیزهٔ عمل می‌سازد<sup class="c"><a href="#r-slovic">[۸]</a></sup>.</div>
+
+<h2 id="system">شفقت و توجیه نظام</h2>
+<p>مارتین، سپالا، زیمباردو و همکاران (۲۰۱۵) پرسیدند نگرش‌های سیاسی‌اجتماعی با شفقت چه رابطه‌ای دارند. دو سازه: <b>گرایش به سلطهٔ اجتماعی</b> (SDO) و <a class="w" data-t="esj">توجیه نظام اقتصادی</a> (ESJ). هر دو با شفقت به دیگران و <b>ترس از شفقت</b> مرتبط بودند (اسلایدهای ۴۸ تا ۵۲)<sup class="c"><a href="#r-martin">[۹]</a></sup>.</p>
+<details><summary>نمونه گویه‌های ESJ (۱۶ گویه؛ چند گویه معکوس)</summary>
+<ul class="tight">
+<li>قوانین طبیعت مسئول نابرابری‌ها در جامعه هستند.</li>
+<li>همواره آدم‌های فقیر وجود خواهند داشت، زیرا به اندازهٔ کافی برای همه شغل وجود ندارد.</li>
+<li>اکثر کسانی که نمی‌توانند پیشرفت کنند نباید نظام را مقصر بدانند؛ مقصر خودشان‌اند.</li>
+<li>موقعیت‌های اقتصادی انسان‌ها نتیجهٔ مشروع تلاش و دستاوردهای آن‌هاست.</li>
+<li>اگر انسان‌ها سخت کار کنند، همواره به هر آنچه بخواهند می‌رسند.</li>
+<li>(معکوس) بین ثروتمند و فقیر تفاوت ذاتی وجود ندارد؛ تفاوت محصول شرایط تولد است.</li>
+</ul></details>
+<div class="note"><b class="k">یادداشت ویراستار</b>این بخش نشان می‌دهد شفقت فقط یک «مهارت فردی» نیست؛ باورهای ما دربارهٔ عدالت و استحقاق هم دامنهٔ آن را محدود یا گسترده می‌کنند. همین منطق دربارهٔ خود هم صادق است: کسی که باور دارد «هر کس شکست بخورد، مقصر خودش است»، با شکست خودش هم بی‌رحم‌تر است.</div>
+
+<h2 id="leaders">شفقت به خود در رهبران</h2>
+<p>لانای، جنینگز، اشفورد و کریشنان (۲۰۲۲) با عنوان «وقتی مراقبت رهبر از خود به مراقبت از دیگران می‌انجامد» نشان دادند شفقت به خود در نقش رهبری، کمک رهبر به کارکنان را افزایش می‌دهد (اسلایدهای ۵۳ تا ۶۵)<sup class="c"><a href="#r-lanaj">[۱۰]</a></sup>.</p>
+<p>پیش‌زمینه: رابرت کویین (۲۰۰۵) از «<b>وضعیت بنیادین رهبری</b>» سخن گفت، لحظه‌هایی که رهبر از ارزش‌هایش عمل می‌کند نه از عادت؛ و دشواری‌های کار اغلب مثل «<b>کیفرخواستی علیه رهبر</b>» تجربه می‌شوند.</p>
+<div class="cols2">
+<div class="card"><b class="h">دو جنبهٔ کمک در محیط کار</b><b>امور کاری:</b> کمک به همکاران در مسئولیت‌های دشوار، بار کاری زیاد و مسائل کاری.<br><b>امور شخصی:</b> گوش دادن وقتی کسی می‌خواهد دلش را خالی کند، کمک در نگرانی‌های شخصی.</div>
+<div class="card"><b class="h">شفقت به خود در نقش رهبر</b>درک‌کننده و صبور با خود · مهربان و با شفقت به خود · دادن مراقبت و لطافت لازم به خود · بخشنده نسبت به نقایص خود · پذیرنده هنگام پریشانی.</div>
+</div>
+<figure><div class="chain">
+<div class="box hl">شفقت به خود</div><span class="arr">←</span><div class="box">هویت رهبر</div><span class="arr">←</span><div class="box">کمک در امور شخصی و کاری</div><span class="arr">←</span><div class="box">توانمندی و مدنیت رهبر</div>
+</div><figcaption>شکل ۳. مدل لانای و همکاران (اسلاید ۶۳). «قدرت ساختاری» این رابطه را تعدیل می‌کند: اثر در رهبرانی که قدرت ساختاری کمتری داشتند بیشتر بود. مداخلهٔ شفقت به خود در نقش رهبر، هویت رهبری را بیشتر از مداخله‌های دیگر (شفقت عام، چالش‌های رهبری) تقویت کرد.</figcaption></figure>
+<p>مدنیت رهبر با سنجهٔ «رفتار محترمانهٔ رئیس» از دید کارکنان ارزیابی شد: «امروز... با احترام با من برخورد کرد، شأن من را رعایت کرد، مؤدبانه بود، رفتارش خوشایند بود، مراقب‌گونه بود، حواسش به مسائل من بود.»</p>
+
+<h2 id="practice">تکنیک و تمرین</h2>
+<h3>تمرین دو صدا (اسلایدهای ۷۲ تا ۷۵)</h3>
+<ol>
+<li><b>خودت:</b> تجربه‌ای را به یاد بیاور که بر وفق مرادت پیش نرفت (مصاحبه‌ای که پذیرفته نشدی، سخنرانی‌ای که خراب شد). با حداکثر وضوح آن را در ذهن زنده کن. با خودت چه می‌گفتی؟ صدای درونی چه لحن و آهنگی داشت؟</li>
+<li><b>عزیزت:</b> حالا تصور کن همان اتفاق برای یکی از عزیزانت افتاده و برای صحبت نزد تو آمده. دقیقاً چه می‌گویی؟ صدایت چه لحنی دارد؟</li>
+<li>دو پاسخ را مقایسه کن. شکاف میان آن‌ها اندازهٔ منتقد درون توست.</li>
+</ol>
+<h3>نکات کاربردی</h3>
+<ul>
+<li><b>جنبهٔ انگیزشی اشتغال‌ها (اسلاید ۶۹):</b> خودسرزنشی اغلب دو هدف دارد: «انگیزهٔ خودم برای عمل را تقویت کنم» و «مراقب باشم به آنچه نمی‌خواهم تبدیل نشوم». شفقت باید این دو کارکرد را جایگزین کند، نه حذف.</li>
+<li><b>توجه (اسلاید ۷۱):</b> شفقت و مهربانی برای همهٔ موارد نیست. باید پس از تحلیل کارکرد اشتغال‌های ذهنی دربارهٔ آن تصمیم گرفت.</li>
+<li>«من با دیگران فرق دارم» و «عدم شفقت به دیگران»: دو مانع رایج (اسلایدهای ۷۷ و ۷۸).</li>
+<li>گاهی شفقت به خود حس غریبی می‌دهد؛ بهتر است پیش‌دستانه آن را یادآوری کرد. تغییر این سبک و عادت دشوار و زمان‌بر است.</li>
+<li>مرور خاطرات شفقت به دیگران یا خود به شکل <b>غیرانتزاعی و توصیفی</b>؛ مراقب لغزیدن به سبک انتزاعی-ارزیابی‌کننده باشید (پیوند با «<a class="w" data-t="rfcbt">نشخوار انتزاعی در برابر عینی</a>»).</li>
+<li>گرفتن <b>منظر میدانی</b> (از درون صحنه) بهتر از منظر مشاهده‌گر است.</li>
+<li>تلنگرها یا شروع‌کننده‌های شفقت به خود را بررسی کنید.</li>
+</ul>
+<div class="cols2">
+<div class="card"><b class="h">گذر به عمل (اسلاید ۸۴)</b>اگر می‌خواستید با خودتان مهربان باشید، چه کارهایی را <b>کمتر</b> انجام می‌دادید؟ چه کارهایی را <b>بیشتر</b>؟</div>
+<div class="card"><b class="h">مقاومت در برابر شفقت به خود (اسلایدهای ۸۶ تا ۸۹)</b>احساس بی‌ارزشی · «شرایط ارزشمندی» که والدین تعیین کرده‌اند (کارل راجرز) · نقش قربانی.</div>
+</div>
+<p>اسلاید ۸۵ «سلسله‌مراتبی برای پیاده‌سازی شفقت» را معرفی کرد (جزئیات در متن گفتاری خواهد آمد).</p>
+<div class="note"><b class="k">پیوند با دنیای روان</b>«<a class="w" data-t="self-compassion">شفقت به خود</a>» کریستین نف (مهربانی با خود، انسانیت مشترک، ذهن‌آگاهی)، «<a class="w" data-t="perfectionism">کمال‌گرایی</a>» و درمان متمرکز بر شفقت پل گیلبرت؛ و در بازتعبیر و ذهنیت‌ها، ذهنیت‌ها و «تعلق».</div>
+
+<div class="nd-self"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: شفقت، منتقد درون و کمال‌گرایی</h3><ul><li class="nd-self"><a href="compassion.html" target="_blank" rel="noopener"><i></i>شفقت و خودانتقادی</a><small>قفسهٔ شفقت و خودانتقادی</small></li><li class="nd-self"><a href="s2.html" target="_blank" rel="noopener"><i></i>شفقت به خود</a><small>شفقت به خود: گیلبرت و نف، شفقت و نگرش به شکست، ترس از شفقت، شفقت در رهبران</small></li><li class="nd-self"><a href="perfection.html" target="_blank" rel="noopener"><i></i>کمال‌گرایی</a><small>کمال‌گرایی</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-health"><a href="shelf3.html" target="_blank" rel="noopener"><i></i>بالینی ۲</a><small>سلامت روان و درمان › مرز سلامت و اختلال · مشترک: شفقت به خود، کمال‌گرایی</small></li><li class="nd-work"><a href="orgsvc.html" target="_blank" rel="noopener"><i></i>سنجش سلامت سازمان</a><small>کار و سازمان › سنجش سازمان · مشترک: شفقت به خود، کمال‌گرایی</small></li><li class="nd-work"><a href="orgpsych.html" target="_blank" rel="noopener"><i></i>روان‌شناسی سازمانی</a><small>کار و سازمان › سلامت روان در کار · مشترک: شفقت به خود، کمال‌گرایی</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#7d4a86"><b>فلسفه</b>اخلاق مراقبت و فضیلت مهربانی؛ آیا مهربانی با خود هم یک فضیلت اخلاقی است؟ <a href="graph.html#phil-ethics" target="_blank" rel="noopener">اخلاق و فلسفهٔ اخلاق ↗</a></div><div style="--xc:#4c5f7a"><b>علوم اعصاب</b>مدل سه‌سیستمی گیلبرت: تهدید، انگیزه و آرامش، هر کدام با مدار عصبی و هورمونی خود. <a href="graph.html#three-systems" target="_blank" rel="noopener">مدل سه‌سیستمی هیجان ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>فرهنگ رقابتی و رسانه‌ای کمال‌گرایی را در نسل‌های تازه بالا برده است. <a href="graph.html#soc-networks" target="_blank" rel="noopener">شبکه‌های اجتماعی و سرایت ↗</a></div></div><div class="worlds"><a href="land.html#self-criticism" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html#self-criticism" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides">اسلایدهای ٔ «مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی»، دکتر آذرخش مکری، ۸ آذر ۱۴۰۴ (۹۰ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-shahar"><span class="ltr">Shahar, G. (2015). <i>Erosion: The Psychopathology of Self-Criticism</i>. Oxford University Press.</span></li>
+<li id="r-blatt"><span class="ltr">Blatt, S. J. (2008). <i>Polarities of Experience: Relatedness and Self-Definition in Personality Development, Psychopathology, and the Therapeutic Process</i>. APA.</span></li>
+<li id="r-breines"><span class="ltr">Breines, J. G., &amp; Chen, S. (2012). Self-compassion increases self-improvement motivation. <i>Personality and Social Psychology Bulletin, 38</i>(9), 1133–1143.</span> افزودهٔ ویراستار.</li>
+<li id="r-socs"><span class="ltr">Gu, J., Baer, R., Cavanagh, K., Kuyken, W., &amp; Strauss, C. (2020). Development and psychometric properties of the Sussex-Oxford Compassion Scales (SOCS). <i>Assessment, 27</i>(1), 3–20.</span></li>
+<li id="r-kirschner"><span class="ltr">Kirschner, H., Kuyken, W., Wright, K., Roberts, H., Brejcha, C., &amp; Karl, A. (2019). Soothing your heart and feeling connected: A new experimental paradigm to study the benefits of self-compassion. <i>Clinical Psychological Science, 7</i>(3), 545–565.</span></li>
+<li id="r-cameron"><span class="ltr">Cameron, C. D., &amp; Payne, B. K. (2011). Escaping affect: How motivated emotion regulation creates insensitivity to mass suffering. <i>JPSP, 100</i>(1), 1–15.</span> شناسایی منبع نمودارهای اسلاید ۴۲ تا ۴۶ از ویراستار است.</li>
+<li id="r-slovic"><span class="ltr">Slovic, P. (2007). “If I look at the mass I will never act”: Psychic numbing and genocide. <i>Judgment and Decision Making, 2</i>(2), 79–95.</span></li>
+<li id="r-martin"><span class="ltr">Martin, D., Seppala, E., Heineberg, Y., Rossomando, T., Doty, J., Zimbardo, P., et al. (2015). Multiple facets of compassion: The impact of social dominance orientation and economic systems justification. <i>Journal of Business Ethics, 129</i>(1), 237–249.</span></li>
+<li id="r-lanaj"><span class="ltr">Lanaj, K., Jennings, R. E., Ashford, S. J., &amp; Krishnan, S. (2022). When leader self-care begets other care: Leader role self-compassion and helping at work. <i>Journal of Applied Psychology, 107</i>(9), 1543–1560.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این جزوه از روی ۹۰ اسلاید و مقاله‌ها و کتاب‌های معرفی‌شده روی اسلایدها ساخته شده است. گویه‌های پرسش‌نامه‌ها همان ترجمه‌های روی اسلایدهاست و برای آشنایی و تأمل شخصی آمده‌اند، نه تشخیص. توضیح‌های ویراستار در کادر جدا آمده‌اند. با رسیدن متن سخنرانی، مثال‌ها و پاسخ‌های مدرس افزوده می‌شود.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"inner-critic": {"fa": "منتقد درون", "en": "Inner critic", "d": "صدای درونی قضاوت‌گر که پس از خطا یا ناکامی سرزنش و تحقیر می‌کند.", "rel": ["self-criticism"], "s": "critic", "g": "self-criticism"}, "self-criticism": {"fa": "سرزنش خود", "en": "Self-criticism", "d": "تقاضای سازش‌ناپذیر برای استاندارد بالا به‌علاوهٔ خشم و تحقیر نسبت به خود هنگام برآورده نشدن آن. شاهار: نوعی رابطه با خود، نه فقط باور. مانع بهبودی در درمان افسردگی.", "rel": ["introjective", "self-compassion", "perfectionism"], "s": "critic", "g": "self-criticism"}, "introjective": {"fa": "افسردگی خودسرزنشی", "en": "Introjective (self-critical) depression", "d": "یکی از دو نوع افسردگی بلات، با نیاز به دستاورد و ماشهٔ شکست؛ در برابر افسردگی اتکایی-وابسته با ماشهٔ فقدان. بک: خودمختاری در برابر اجتماعی‌گرایی.", "rel": ["self-criticism"], "s": "blatt", "g": "self-criticism"}, "compassion": {"fa": "شفقت", "en": "Compassion", "d": "پاسخ عاطفی و شناختی به رنج خود و دیگران، همراه با میل فعالانه به کاهش آن. SOCS-S: شناسایی رنج، جهان‌شمولی رنج، حس مراقبت، تحمل حس بد، عمل برای کاهش رنج.", "rel": ["self-compassion", "compassion-collapse"], "s": "compassion", "g": "t-compassion"}, "self-compassion": {"fa": "شفقت به خود", "en": "Self-compassion", "d": "همان مهربانی و مراقبتی که به دوست رنج‌دیده نشان می‌دهیم، رو به خود. کریستین نف: مهربانی با خود، انسانیت مشترک، ذهن‌آگاهی.", "rel": ["self-criticism", "compassion"], "s": "compassion", "g": "self-compassion"}, "three-systems": {"fa": "سه سامانهٔ تنظیم هیجان", "en": "Three emotion regulation systems", "d": "پل گیلبرت: تهدید، انگیزه/سائق، تسکین. شفقت سامانهٔ تسکین را فعال می‌کند.", "rel": ["compassion"], "s": "compassion", "g": "three-systems"}, "compassion-collapse": {"fa": "فروپاشی شفقت", "en": "Collapse of compassion", "d": "کاهش شفقت با افزایش تعداد قربانیان (کامرون و پین ۲۰۱۱)؛ یک مهار هیجانی انگیزشی برای فرار از هزینهٔ کمک، که بیشتر در تنظیم‌کنندگان ماهر هیجان دیده می‌شود. اسلوویک: «بی‌حسی روانی».", "rel": ["compassion", "empathy-fatigue"], "s": "collapse", "g": "compassion-collapse"}, "empathy-fatigue": {"fa": "خستگی همدلی", "en": "Empathy fatigue", "d": "فرسودگی عاطفی ناشی از قرار گرفتن مداوم در معرض رنج دیگران (فرسودگی و شغل معنادار).", "rel": ["compassion-collapse"], "s": "collapse", "g": "empathy-fatigue"}, "esj": {"fa": "توجیه نظام اقتصادی", "en": "Economic system justification", "d": "باور به اینکه نابرابری‌های اقتصادی طبیعی، مشروع و اجتناب‌ناپذیرند؛ همراه با گرایش به سلطهٔ اجتماعی، با شفقت کمتر و ترس از شفقت مرتبط است (مارتین و همکاران ۲۰۱۵).", "rel": ["compassion"], "s": "system", "g": "compassion-collapse"}, "rfcbt": {"fa": "نشخوار انتزاعی و عینی", "en": "Abstract vs. concrete processing", "d": "ادوارد واتکینز: پردازش انتزاعی-ارزیابی‌کننده («چرا همیشه من؟») نشخوار را تشدید می‌کند؛ پردازش عینی-توصیفی («دقیقاً چه شد؟») کارآمدتر است.", "rel": ["self-criticism"], "s": "practice", "g": "rfcbt"}, "perfectionism": {"fa": "کمال‌گرایی", "en": "Perfectionism", "d": "معیارهای بسیار بالا همراه با خودانتقادی شدید.", "rel": ["self-criticism"], "s": "practice", "g": "perfectionism"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

@@ -1,0 +1,528 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>چرا؟ روان‌شناسی کنجکاوی</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-feel">
+  <div class="brand">ویکی روان‌شناسی <small>مرور کتاب در سخنرانی‌های دکتر آذرخش مکری</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-feel" target="_blank" rel="noopener">هیجان و ذهن</a><span class="sep">›</span><a class="tp" href="index.html#t-learning" target="_blank" rel="noopener">یادگیری و کنجکاوی</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><a href="learnmem.html" target="_blank" rel="noopener">یادگیری و حافظه</a><span class="on" aria-current="page">کنجکاوی</span><a href="range.html" target="_blank" rel="noopener">گستره</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#voices">کنجکاوی در صدای اندیشمندان</a></li>
+<li><a href="#types">انواع کنجکاوی: نقشهٔ برلاین</a></li>
+<li><a href="#gap">نظریهٔ شکاف اطلاعاتی</a></li>
+<li><a href="#arousal">برانگیختگی، لذت و منحنی وونت</a></li>
+<li><a href="#children">کودکان: دانشمندان کوچک</a></li>
+<li><a href="#brain">کنجکاوی در مغز</a></li>
+<li><a href="#minds">ذهن‌های کنجکاو: لئوناردو و فاینمن</a></li>
+<li><a href="#why">چرا ما این‌قدر کنجکاویم؟</a></li>
+<li><a href="#contagious">کنجکاوی مسری است</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>چرا؟ چه چیزی ما را کنجکاو می‌کند</h1>
+<p class="lede-sub">جزوهٔ سخنرانی دکتر مکری دربارهٔ کتاب <span class="en">Why? What Makes Us Curious</span> نوشتهٔ ماریو لیویو، بر پایهٔ ۴۳ اسلاید و متن کتاب. واژه‌های <a class="w" data-t="info-gap">آبی</a> مدخل واژه‌نامه را باز می‌کنند.</p>
+<aside class="infobox" aria-label="مشخصات"><div class="ib-h">چرا؟</div><dl>
+<dt>کتاب</dt><dd><span class="en">Why? What Makes Us Curious</span></dd>
+<dt>نویسنده</dt><dd>ماریو لیویو (متولد ۱۹۴۵)، اخترفیزیک‌دان مؤسسهٔ علوم تلسکوپ فضایی هابل؛ نویسندهٔ «گالیله و منکران علم»</dd>
+<dt>ناشر</dt><dd>سایمن و شوستر، ۲۰۱۷</dd>
+<dt>ارائه</dt><dd>دکتر آذرخش مکری، ۴۳ اسلاید</dd>
+<dt>پرسش محوری</dt><dd>کنجکاوی چیست، چه انواعی دارد، در مغز کجاست و چرا گونهٔ ما این‌قدر کنجکاو است؟</dd>
+</dl></aside>
+
+<p>لیویو اخترفیزیک‌دانی است که به هنر و موسیقی هم شیفته است. او برای نوشتن این کتاب سراغ روان‌شناسان و عصب‌پژوهان رفت و با افرادی که به نظرش استثنایی کنجکاو بودند مصاحبه کرد: از فریمن دایسون و نوام چامسکی تا برایان می، گیتاریست گروه کویین که اخترفیزیک‌دان هم هست. کتاب دو بخش دارد: کنجکاوی در ذهن‌های استثنایی (لئوناردو، فاینمن) و علم کنجکاوی.<sup class="c"><a href="#r-livio">[۱]</a></sup></p>
+
+<h2 id="voices">کنجکاوی در صدای اندیشمندان</h2>
+<div class="cols2">
+  <div class="card"><b class="h">«شهوت ذهن»</b><span class="en">Thomas Hobbes · Lust of the mind</span>هابز کنجکاوی را «شهوت ذهن» نامید که «با لذت پایدار در تولید خستگی‌ناپذیر دانش» از «شدت کوتاه هر لذت جسمانی» فراتر می‌رود، چون ارضایش فقط تشنگی بیشتر می‌آورد. او «میل به دانستن چرایی» را وجه تمایز انسان از دیگر جانداران می‌دانست (اسلاید ۴).</div>
+  <div class="card"><b class="h">«اشتها برای دانستن»</b><span class="en">Immanuel Kant · Appetite for knowledge</span>کانت از «اشتها برای دانستن و آگاهی» سخن گفت (اسلاید ۵).</div>
+  <div class="card"><b class="h">«من فقط پرشور کنجکاوم»</b><span class="en">Albert Einstein</span>«من استعداد خاصی ندارم؛ فقط به طرز پرشوری کنجکاوم» (اسلاید ۶).</div>
+  <div class="card"><b class="h">«کنجکاوی گربه را کشت»</b><span class="en">Curiosity killed the cat</span>روی تاریک کنجکاوی: اولیس خود را به دکل کشتی بست تا آواز پری‌های دریایی را بشنود و به سویشان نرود؛ پری‌ها به او <i>دانش</i> وعده می‌دادند (اسلایدهای ۷ و ۸).</div>
+</div>
+<p>میهای چیکسنت‌میهایی کنجکاوی را در کنار پیچیدگی و خلاقیت می‌گذارد (اسلاید ۹): افراد خلاق کسانی‌اند که کنجکاوی کودکی را تا بزرگسالی نگه می‌دارند.</p>
+
+<h2 id="types">انواع کنجکاوی: نقشهٔ برلاین</h2>
+<p>دنیل برلاین (۱۹۲۴–۱۹۷۶)، روان‌شناس بریتانیایی-کانادایی، کنجکاوی را روی دو محور گذاشت (اسلایدهای ۱۸ و ۱۹):<sup class="c"><a href="#r-berlyne">[۸]</a></sup></p>
+<figure>
+<div class="quad">
+  <span></span><span class="ax">ادراکی · Perceptual</span><span class="ax">شناختی · Epistemic</span>
+  <span class="ax">اختصاصی<br>Specific</span>
+  <div class="cell"><b>ادراکی اختصاصی</b>خیره‌شدن به یک چیز عجیب، تصویر مبهم یا صدای ناآشنا</div>
+  <div class="cell"><b>شناختی اختصاصی</b>جست‌وجوی پاسخ یک پرسش مشخص؛ کلمه‌ای که «نوک زبانم است»</div>
+  <span class="ax">فراگیر<br>Diversive</span>
+  <div class="cell"><b>ادراکی فراگیر</b>گشتن به دنبال هر محرک تازه برای فرار از ملال؛ ورق‌زدن بی‌هدف</div>
+  <div class="cell"><b>شناختی فراگیر</b>عطش کلی برای دانستن؛ «اشتها برای دانش»</div>
+</div>
+<figcaption>شکل ۱. دو محور کنجکاوی در مدل برلاین.</figcaption>
+</figure>
+<ul class="tight">
+<li><a class="w" data-t="perceptual-curiosity">کنجکاوی ادراکی</a>: با محرک‌های تازه، مبهم یا معماگونه برانگیخته می‌شود و با مواجههٔ مکرر کم می‌شود. لیویو آن را حالتی <b>ناخوشایند</b> می‌داند، مثل خارش، که می‌خواهیم برطرفش کنیم (اسلاید ۱۲).</li>
+<li><a class="w" data-t="epistemic-curiosity">کنجکاوی شناختی</a>: میل واقعی به دانش؛ همان «شهوت ذهن» هابز. بیشتر با <b>پیش‌بینی پاداش</b> همراه است تا ناخوشی.</li>
+<li><a class="w" data-t="diversive-curiosity">کنجکاوی فراگیر</a>: نیاز به محرک تازه برای فرار از کسالت؛ مثل چرخاندن صفحهٔ گوشی. در فرسودگی و شغل معنادار این شبیه «کاوش منفعل» بود.</li>
+</ul>
+
+<h2 id="gap">نظریهٔ شکاف اطلاعاتی</h2>
+<p>جورج لوونشتاین، اقتصاددان رفتاری دانشگاه کارنگی ملون (اسلاید ۱۰)، در ۱۹۹۴ <a class="w" data-t="info-gap">نظریهٔ شکاف اطلاعاتی</a> را مطرح کرد<sup class="c"><a href="#r-loewenstein">[۷]</a></sup>: کنجکاوی وقتی پدید می‌آید که میان <b>آنچه می‌دانیم</b> و <b>آنچه می‌خواهیم بدانیم</b> شکافی احساس کنیم. این حس ناخوشایند، مثل گرسنگی، ما را به جست‌وجوی اطلاعات می‌راند (اسلاید ۱۱).</p>
+<ul class="tight">
+<li>به همین دلیل معما، تیتر نیمه‌کاره و پایان فصل سریال‌ها («ادامه دارد») ما را درگیر می‌کنند.</li>
+<li>کنجکاوی نیاز به <b>کمی</b> دانش دارد: اگر هیچ ندانیم، شکافی حس نمی‌کنیم؛ اگر همه را بدانیم، شکافی نیست. نتیجه: <a class="w" data-t="inverted-u">منحنی U وارونه</a> (اسلاید ۲۰).</li>
+<li>لوونشتاین مفهوم «<a class="w" data-t="hot-cold-gap">شکاف همدلی گرم-سرد</a>» را هم ساخته است (اسلاید ۱۰): وقتی در حالت «سرد» (آرام) هستیم، شدت میل‌ها و هیجان‌هایمان در حالت «گرم» را دست‌کم می‌گیریم؛ و برعکس. به همین دلیل در حالت سیری برای فرداشب رژیم می‌گیریم و در حالت گرسنگی آن را می‌شکنیم.</li>
+</ul>
+<figure><svg class="curve" viewBox="0 0 440 210" role="img" aria-label="منحنی U وارونهٔ کنجکاوی و دانش">
+<path class="ax" d="M50 180 H420 M50 180 V20"/>
+<path class="ln" d="M60 175 C140 20, 260 20, 400 175"/>
+<text x="230" y="200" text-anchor="middle">دانش پیشین دربارهٔ موضوع ←</text>
+<text x="18" y="100" text-anchor="middle" transform="rotate(-90 18 100)">کنجکاوی</text>
+<text x="70" y="160">هیچ نمی‌دانم</text><text x="230" y="40" text-anchor="middle">کمی می‌دانم</text><text x="395" y="160" text-anchor="end">همه را می‌دانم</text>
+</svg><figcaption>شکل ۲. منحنی U وارونه: بیشترین کنجکاوی در دانش متوسط است (اسلاید ۲۰).</figcaption></figure>
+
+<h3>نیم‌گفت‌وگو: چرا مکالمهٔ تلفنی دیگران آزارمان می‌دهد؟</h3>
+<p>لورن امبرسون هر روز ۴۵ دقیقه با اتوبوس به دانشگاه کورنل می‌رفت و حس می‌کرد وقتی کسی کنارش با تلفن حرف می‌زند، نمی‌تواند کار دیگری بکند. او و همکارانش (۲۰۱۰) این را آزمودند (اسلایدهای ۱۳ تا ۱۷): شرکت‌کنندگان هنگام دنبال کردن یک نقطهٔ متحرک یا واکنش به حرف‌های خاص، یا یک گفت‌وگوی کامل دونفره می‌شنیدند یا فقط یک طرف آن (<a class="w" data-t="halfalogue">نیم‌گفت‌وگو</a>). با اینکه نیم‌گفت‌وگو کلمات کمتری داشت (حدود ۵۰٪ گفتار در برابر ۹۰٪)، خطای ردیابی را بیشتر کرد. وقتی همان صداها فیلتر شدند تا نامفهوم شوند، اثر از بین رفت. توضیح: چون نیمهٔ دیگر را نمی‌دانیم، نمی‌توانیم جریان گفت‌وگو را پیش‌بینی کنیم؛ مغز درگیر پرکردن شکاف اطلاعاتی می‌شود و نمی‌تواند آن را نادیده بگیرد.<sup class="c"><a href="#r-emberson">[۲]</a></sup></p>
+
+<h2 id="arousal">برانگیختگی، لذت و منحنی وونت</h2>
+<p>ویلهلم وونت، بنیان‌گذار روان‌شناسی آزمایشی، نشان داد رابطهٔ شدت محرک با لذت U وارونه است: محرک خیلی ضعیف بی‌اثر، متوسط لذت‌بخش و خیلی شدید آزارنده است (اسلاید ۲۱). برلاین این منحنی را حاصل جمع دو سیستم دانست (اسلاید ۲۲): <b>سیستم پاداش</b> که با شدت کم فعال می‌شود و زود به سقف می‌رسد، و <b>سیستم بیزاری</b> که با شدت بیشتر فعال می‌شود.</p>
+<figure><svg class="curve" viewBox="0 0 440 230" role="img" aria-label="منحنی وونت: پاداش مثبت و سیستم بیزاری">
+<path class="ax" d="M50 115 H420 M50 210 V15"/>
+<path class="ln" d="M55 112 C120 110, 140 40, 200 38 S 300 40, 410 40"/>
+<path class="ln2" d="M55 116 C180 118, 220 118, 260 150 S 330 190, 410 192"/>
+<path d="M55 114 C120 110, 150 60, 190 58 S 250 110, 290 150 S 370 175, 410 168" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="410" y="32" text-anchor="end">سیستم پاداش</text>
+<text x="410" y="205" text-anchor="end">سیستم بیزاری</text>
+<text x="200" y="52" text-anchor="middle" style="fill:var(--ink)">جمع دو سیستم (منحنی وونت)</text>
+<text x="235" y="128" text-anchor="middle">شدت محرک ←</text>
+<text x="18" y="70" text-anchor="middle" transform="rotate(-90 18 70)">لذت</text>
+<text x="18" y="170" text-anchor="middle" transform="rotate(-90 18 170)">ناخوشی</text>
+</svg><figcaption>شکل ۳. منحنی وونت به‌عنوان جمع دو سیستم پاداش و بیزاری در نظریهٔ برلاین (اسلایدهای ۲۱ و ۲۲؛ شکل شماتیک).</figcaption></figure>
+<p>لیویو هم می‌گوید کنجکاوی ترکیبی دوپهلو از هیجان و دلهره است: «تا حدی، عدم قطعیت کنجکاوی را بیشتر می‌کند. اما از آن نقطه به بعد، عدم قطعیت آن‌قدر زیاد می‌شود که ناراحتی و حتی ترس می‌آورد.» این همان ترازوی <a class="w" data-t="exploration">کاوش و بهره‌برداری</a> در فرسودگی و شغل معنادار است.</p>
+
+<h3>لذت عدم قطعیت</h3>
+<p>تیموتی ویلسون، دنیل گیلبرت و همکاران (۲۰۰۵) چند آزمایش انجام دادند (اسلایدهای ۲۳ و ۲۴). در یکی، در کتابخانهٔ دانشگاه کارتی همراه با یک سکهٔ یک‌دلاری به دانشجویان داده شد. روی یک نسخه توضیح داده شده بود فرستنده کیست و چرا این کار را می‌کند («انجمن لبخند؛ ما مهربانی تصادفی را ترویج می‌کنیم»)؛ روی نسخهٔ دیگر فقط پرسش‌ها آمده بود: «ما که هستیم؟ چرا این کار را می‌کنیم؟» چند دقیقه بعد، دریافت‌کنندگان کارت مبهم حال بهتری داشتند. در مطالعهٔ ۳، شرکت‌کنندگان در یک آزمایش اینترنتی فهمیدند هر سه دانشجوی جنس مقابل آن‌ها را به‌عنوان بهترین دوست بالقوه انتخاب کرده‌اند؛ گروهی می‌دانستند کدام متن را چه کسی نوشته و گروهی نه:</p>
+<figure>
+<div class="hb"><span class="t">گروه کنترل</span><div class="track"><div class="fill " style="width:75.1%;background:var(--link)"></div></div><span class="v">۶.۷۶</span></div>
+<div class="hb"><span class="t">می‌دانستند چه کسی: زمان ۱</span><div class="track"><div class="fill f-good" style="width:86.2%;"></div></div><span class="v">۷.۷۶</span></div>
+<div class="hb"><span class="t">می‌دانستند چه کسی: زمان ۲</span><div class="track"><div class="fill " style="width:71.0%;background:var(--link)"></div></div><span class="v">۶.۳۹</span></div>
+<div class="hb"><span class="t">نمی‌دانستند: زمان ۱</span><div class="track"><div class="fill f-good" style="width:88.7%;"></div></div><span class="v">۷.۹۸</span></div>
+<div class="hb"><span class="t">نمی‌دانستند: زمان ۲</span><div class="track"><div class="fill f-good" style="width:78.4%;"></div></div><span class="v">۷.۰۶</span></div>
+<figcaption>شکل ۴. میانگین خلق گزارش‌شده (مقیاس ۹ درجه‌ای) در مطالعهٔ ۳ ویلسون و همکاران (۲۰۰۵)، اسلاید ۲۴. خلق مثبت در گروه «عدم قطعیت» دیرتر فروکش کرد.<sup class="c"><a href="#r-wilson">[۳]</a></sup></figcaption>
+</figure>
+<p>پیام: <a class="w" data-t="uncertainty-pleasure">عدم قطعیت لذت مثبت را طولانی‌تر می‌کند</a>، چون ذهن به رویداد برمی‌گردد و آن را تکرار می‌کند؛ در حالی که توضیح کامل به ما اجازه می‌دهد رویداد را «بفهمیم و کنار بگذاریم». مردم این را پیش‌بینی نمی‌کنند و معمولاً توضیح را ترجیح می‌دهند.</p>
+
+<h2 id="children">کودکان: دانشمندان کوچک</h2>
+<p>لورا شولتز و الیزابت بوناویتز (MIT) نشان دادند کنجکاوی کودکان هدفمند است، نه پراکنده:</p>
+<div class="cols2">
+<div class="card"><b class="h">شواهد درهم (اسلاید ۲۶)</b>کودکان جعبه‌ای با دو اهرم دیدند. وقتی بزرگسال هر دو اهرم را با هم کشید و دو عروسک بیرون پرید (شواهد درهم: معلوم نیست کدام اهرم کدام عروسک را بیرون می‌آورد)، کودکان بیشتر با همان جعبه بازی کردند تا وقتی که اثر هر اهرم جداگانه نشان داده شده بود. یعنی کاوش آن‌ها دقیقاً جایی است که ابهام علّی وجود دارد (شولتز و بوناویتز، ۲۰۰۷).<sup class="c"><a href="#r-schulz">[۹]</a></sup></div>
+<div class="card"><b class="h">نظریه در برابر شواهد (اسلاید ۲۵)</b>کودکانی که باور داشتند اجسام از «مرکز هندسی» تعادل می‌یابند، وقتی دیدند جسمی از «مرکز جرم» تعادل یافت (شواهد ناقض باورشان)، بیشتر به کاوش آن پرداختند. کودکان دارای نظریهٔ «مرکز جرم» برعکس. کنجکاوی به <b>نقض انتظار</b> حساس است (بوناویتز و همکاران، ۲۰۱۲).</div>
+</div>
+<p>سوزان انگل در «ذهن گرسنه» (اسلاید ۴۰) نشان می‌دهد کودکان در خانه پرسش‌های بسیار زیادی می‌پرسند، اما در کلاس درس پرسش‌هایشان به‌شدت کم می‌شود. کنجکاوی در محیطی که بزرگسالان خودشان کنجکاوی نشان دهند رشد می‌کند.</p>
+
+<h2 id="brain">کنجکاوی در مغز</h2>
+<h3>کنجکاوی شناختی: پرسش‌های عمومی</h3>
+<p><b>کانگ و همکاران (۲۰۰۹، کلتک):</b> نوزده نفر هنگام دیدن چهل پرسش عمومی در دستگاه fMRI بودند (اسلاید ۳۰). کنجکاوی بیشتر با فعالیت بیشتر <b>هستهٔ دمدار</b> چپ و قشر پیش‌پیشانی جانبی همراه بود؛ نواحی‌ای که در پیش‌بینی پاداش نقش دارند. اما برخلاف انتظار، هستهٔ اکومبنس فعال نشد. هنگام نشان‌دادن پاسخ، نواحی یادگیری و حافظه و زبان فعال شدند، به‌ویژه وقتی پاسخ با حدس قبلی فرد نمی‌خواند. افراد حاضر بودند برای دانستن پاسخ پرسش‌هایی که درباره‌شان کنجکاوتر بودند، «هزینه» (توکن یا زمان انتظار) بپردازند.<sup class="c"><a href="#r-kang">[۴]</a></sup></p>
+<p><b>گروبر، گلمن و رانگاناث (۲۰۱۴، Neuron):</b> شرکت‌کنندگان اول پرسش‌ها را از نظر کنجکاوی رتبه‌بندی کردند. سپس در دستگاه، پیش از هر پاسخ، چهره‌ای بی‌ربط به آن‌ها نشان داده شد (اسلایدهای ۲۷ تا ۲۹). یافته‌ها:</p>
+<ul class="tight"><li>با افزایش کنجکاوی، فعالیت هستهٔ اکومبنس و <b>ناحیهٔ تگمنتال شکمی / جسم سیاه</b> (SN/VTA، منبع دوپامین) بیشتر شد.</li>
+<li>افراد نه‌تنها پاسخ پرسش‌های کنجکاوکننده را بهتر به یاد آوردند، بلکه <b>چهره‌های بی‌ربطی</b> را هم که در آن حالت دیده بودند بهتر به خاطر سپردند.</li>
+<li>این بهبود حافظه با فعالیت SN/VTA و هیپوکامپ همبستگی داشت: <a class="w" data-t="curiosity-memory">کنجکاوی مغز را برای یادگیری آماده می‌کند</a>.<sup class="c"><a href="#r-gruber">[۵]</a></sup></li></ul>
+<h3>کنجکاوی ادراکی: تصاویر تار</h3>
+<p><b>یپما و همکاران (۲۰۱۲):</b> به شرکت‌کنندگان تصاویر تار از اشیای آشنا (اتوبوس، ببر، نردبان) نشان داده شد و گاهی پس از آن تصویر واضح همان شیء آمد و گاهی نه (اسلاید ۳۱). هنگام دیدن تصویر مبهم، <b>قشر کمربندی قدامی</b> (ACC) و <b>اینسولای قدامی</b> فعال شدند (اسلاید ۳۲): نواحی‌ای که با تعارض و حالت‌های ناخوشایند (مثل گرسنگی و تشنگی) مرتبط‌اند. با رفع ابهام، <b>استریاتوم و هیپوکامپ</b> فعال شدند (اسلاید ۳۳). این از دید لیویو تأیید می‌کند که کنجکاوی ادراکی حالتی آزارنده است و برطرف‌کردنش پاداش‌دهنده.<sup class="c"><a href="#r-jepma">[۶]</a></sup></p>
+<div class="note"><b class="k">پیوند با دنیای روان</b>همین مدار دوپامینی «<a class="w" data-t="reward">پاداش و پیش‌بینی پاداش</a>» در اصل پیشرفت امابیل و درمان عاطفهٔ مثبت (فرسودگی و شغل معنادار) هم نقش دارد؛ و همین مدار در اعتیاد و «وسوسه» (جزوهٔ خودشناسی و تصمیم) ربوده می‌شود.</div>
+
+<h2 id="minds">ذهن‌های کنجکاو: لئوناردو و فاینمن</h2>
+<div class="cols2">
+<div class="card"><b class="h">لئوناردو داوینچی (۱۴۵۲–۱۵۱۹)</b>لیویو او را شاید کنجکاوترین انسان تاریخ می‌داند: دفترچه‌هایی پر از کالبدشناسی، پرواز پرندگان، جریان آب و جنگ‌افزار. فروید در جستاری مشهور (۱۹۱۰) کوشید شخصیت او را تحلیل کند. اسلایدهای ۳۴ و ۳۵ پرسش‌های فروید را فهرست می‌کنند: نبوغ سرشار و توانایی‌های متعدد؛ ظاهر جذاب و روحیهٔ زنده؛ اما چرا بسیاری از کارهایش ناتمام ماند؟ چرا با افزایش سن حس نارضایتی و افول سرزندگی‌اش برجسته شد؟ چرا به‌تدریج از هنر، به‌ویژه نقاشی، به علم و گاهی علوم غریبه گرایید؟ نوعی بی‌تفاوتی به خیر و شر؛ دوری و حتی انزجار از امور جنسی. فروید پاسخ را در «والایش» میل جنسی به کنجکاوی جست. لیویو تحلیل فروید را بیشتر خیال‌پردازی می‌داند (از جمله تفسیر مشهور «کرکس» در تابلوی «مریم، کودک و قدیسه آنا» که بر ترجمهٔ نادرست یک واژه بنا شده بود، اسلاید ۳۶).</div>
+<div class="card"><b class="h">ریچارد فاینمن (۱۹۱۸–۱۹۸۸)</b>برندهٔ نوبل فیزیک ۱۹۶۵ (اسلاید ۳۷). کنجکاوی او هیچ مرزی نداشت: قفل‌گشایی گاوصندوق‌ها در لس‌آلاموس، نواختن بونگو، نقاشی، رمزگشایی خط مایا. لیویو از مصاحبه با خواهرش جوآن فاینمن نقل می‌کند که پدرشان از کودکی پرسیدن «چرا؟» را در او پرورد. فاینمن تمایز میان «دانستن نام یک چیز» و «دانستن خود آن» را از پدرش آموخت.</div>
+</div>
+
+<h2 id="why">چرا ما این‌قدر کنجکاویم؟</h2>
+<p>پاسخ لیویو از عصب‌شناسی تکاملی می‌آید. سوزانا هرکولانو-هوزل (اسلایدهای ۳۸ و ۳۹، کتاب «برتری انسان») با روش تازه‌ای نورون‌های مغز را شمرد: مغز انسان حدود <b>۸۶ میلیارد</b> نورون دارد (نه صد میلیارد که پیش‌تر گفته می‌شد)؛ تفاوت ۱۴ میلیاردی به اندازهٔ کل مغز یک بابون است. از این تعداد، حدود ۱۶ میلیارد در قشر مخ است، بیشتر از هر جانور دیگر. اورانگوتان حدود ۳۰ میلیارد و موش صحرایی ۱۸۹ میلیون نورون دارد.<sup class="c"><a href="#r-herculano">[۱۰]</a></sup></p>
+<p>این مغز پرنورون بسیار پرهزینه است: حدود ۲۰٪ انرژی بدن را مصرف می‌کند. راه تأمین این انرژی، به گفتهٔ هرکولانو-هوزل و ریچارد رنگهام («آتش‌گرفتن: پخت غذا چگونه ما را انسان کرد»)، <b>پختن غذا</b> بود: پخت غذا هضم را بسیار کارآمدتر کرد و غذاهای تازه‌ای به منو افزود. لیویو نتیجه می‌گیرد که این ظرفیت شناختی، توانایی پرسیدن «چرا؟» را ممکن کرد؛ و پرسیدن «چرا؟» گونهٔ ما را به اینجا رساند.</p>
+<p>کتاب‌های دیگر اسلاید ۴۰ و ۴۱: «ذهن گرسنه» (سوزان انگل، دربارهٔ کنجکاوی کودکی)، «کنجکاوی» (آلبرتو مانگوئل) و «غریزهٔ حقیقت: کنجکاوی و منش اخلاقی علم» (رابرت پناک) که کنجکاوی را فضیلت اخلاقی علم می‌داند.</p>
+
+<h2 id="contagious">کنجکاوی مسری است</h2>
+<p>جملهٔ پایانی سخنرانی (اسلاید ۴۲): <b>«کنجکاوی مسری است.»</b> لیویو در کتاب عکسی از دانشمندان سرن را که لحظهٔ کشف ذرهٔ هیگز را تماشا می‌کنند کنار تابلوی «درس کالبدشناسی دکتر تولپ» رامبراند می‌گذارد: حالت بدن و چهرهٔ کسانی که با شور کنجکاوند، در هر دو یکی است. کنجکاوی را نمی‌توان دستور داد، اما می‌توان آن را با نشان‌دادنش به دیگران منتقل کرد.</p>
+<div class="note"><b class="k">کاربرد: خانه، کلاس، سازمان</b>
+<ul class="tight">
+<li><b>شکاف بسازید، نه خلأ:</b> طبق منحنی U وارونه، پیش از ارائهٔ پاسخ، کمی زمینه بدهید تا شکاف حس شود.</li>
+<li><b>پرسش را پاداش دهید:</b> کلاسی که پرسش را تنبیه کند، کنجکاوی کودکان را خاموش می‌کند (انگل).<sup class="c"><a href="#r-engel">[۱۱]</a></sup></li>
+<li><b>کنجکاوی حافظه را بالا می‌برد:</b> مطالب مهم را در لحظه‌های کنجکاوی ارائه کنید (گروبر).</li>
+<li><b>ابهام را به‌اندازه نگه دارید:</b> ابهام زیاد ترس می‌آورد؛ منحنی وونت.</li>
+<li><b>نیم‌گفت‌وگو را جدی بگیرید:</b> در فضای کار مشترک، مکالمهٔ تلفنی یک‌طرفه تمرکز دیگران را بیشتر از گفت‌وگوی کامل به هم می‌زند.</li>
+</ul></div>
+
+<div class="nd-feel"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: یادگیری و کنجکاوی</h3><ul><li class="nd-feel"><a href="learnmem.html" target="_blank" rel="noopener"><i></i>یادگیری و حافظه</a><small>یادگیری و حافظهٔ انسان</small></li><li class="nd-feel"><a href="range.html" target="_blank" rel="noopener"><i></i>گستره</a><small>گستره</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-health"><a href="decision.html" target="_blank" rel="noopener"><i></i>خودشناسی و تصمیم</a><small>سلامت روان و درمان › اعتیاد · مشترک: مدار پاداش و دوپامین، کاوش و بهره‌برداری</small></li><li class="nd-body"><a href="body.html" target="_blank" rel="noopener"><i></i>نقشهٔ بدن و روان</a><small>بدن، تکامل و جنسیت › مغز، بدن و تکامل · مشترک: پاداش و دوپامین، عصب‌شناسی کنجکاوی</small></li><li class="nd-self"><a href="shelf15.html" target="_blank" rel="noopener"><i></i>قفسهٔ عادت و میل</a><small>خود و رشد › انگیزه، عادت و اراده · مشترک: پاداش و دوپامین</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#4c5f7a"><b>علوم اعصاب</b>یادگیری یعنی تغییر اتصال نورون‌ها؛ بازیابی و فاصله‌گذاری این تغییر را پایدار می‌کنند. <a href="graph.html#n-plasticity" target="_blank" rel="noopener">نوروپلاستیسیتی ↗</a></div><div style="--xc:#8a6a2a"><b>انسان‌شناسی و تکامل</b>انسان بیش از هر جانوری از دیگران یاد می‌گیرد؛ «مغز جمعی» موتور فرهنگ است. <a href="graph.html#collective-brain" target="_blank" rel="noopener">مغز جمعی ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>دسترسی به یادگیری با طبقه گره خورده است؛ کلاس‌های آنلاین رایگان بیشتر به ثروتمندان رسید. <a href="graph.html#stratification" target="_blank" rel="noopener">قشربندی و نابرابری ↗</a></div></div><div class="worlds"><a href="land.html#n-reward" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html#n-reward" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-livio"><span class="ltr">Livio, M. (2017). <i>Why? What Makes Us Curious</i>. Simon &amp; Schuster.</span> منبع اصلی؛ فصل‌های ۴ تا ۷. <span class="badge">ضمیمه</span></li>
+<li id="r-emberson"><span class="ltr">Emberson, L. L., Lupyan, G., Goldstein, M. H., &amp; Spivey, M. J. (2010). Overheard cell-phone conversations: When less speech is more distracting. <i>Psychological Science, 21</i>(10), 1383–1388.</span></li>
+<li id="r-wilson"><span class="ltr">Wilson, T. D., Centerbar, D. B., Kermer, D. A., &amp; Gilbert, D. T. (2005). The pleasures of uncertainty: Prolonging positive moods in ways people do not anticipate. <i>Journal of Personality and Social Psychology, 88</i>(1), 5–21.</span></li>
+<li id="r-kang"><span class="ltr">Kang, M. J., Hsu, M., Krajbich, I. M., Loewenstein, G., McClure, S. M., Wang, J. T., &amp; Camerer, C. F. (2009). The wick in the candle of learning. <i>Psychological Science, 20</i>(8), 963–973.</span></li>
+<li id="r-gruber"><span class="ltr">Gruber, M. J., Gelman, B. D., &amp; Ranganath, C. (2014). States of curiosity modulate hippocampus-dependent learning via the dopaminergic circuit. <i>Neuron, 84</i>(2), 486–496.</span></li>
+<li id="r-jepma"><span class="ltr">Jepma, M., Verdonschot, R. G., van Steenbergen, H., Rombouts, S. A., &amp; Nieuwenhuis, S. (2012). Neural mechanisms underlying the induction and relief of perceptual curiosity. <i>Frontiers in Behavioral Neuroscience, 6</i>, 5.</span></li>
+<li id="r-loewenstein"><span class="ltr">Loewenstein, G. (1994). The psychology of curiosity: A review and reinterpretation. <i>Psychological Bulletin, 116</i>(1), 75–98.</span></li>
+<li id="r-berlyne"><span class="ltr">Berlyne, D. E. (1960). <i>Conflict, Arousal, and Curiosity</i>. McGraw-Hill.</span></li>
+<li id="r-schulz"><span class="ltr">Schulz, L. E., &amp; Bonawitz, E. B. (2007). Serious fun: Preschoolers engage in more exploratory play when evidence is confounded. <i>Developmental Psychology, 43</i>(4), 1045–1050.</span></li>
+<li id="r-herculano"><span class="ltr">Herculano-Houzel, S. (2016). <i>The Human Advantage: A New Understanding of How Our Brain Became Remarkable</i>. MIT Press.</span></li>
+<li id="r-engel"><span class="ltr">Engel, S. (2015). <i>The Hungry Mind: The Origins of Curiosity in Childhood</i>. Harvard University Press.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این جزوه از روی اسلایدهای سخنرانی و متن کتاب تنظیم شده است؛ متن گفتاری سخنرانی در دست نبود. پژوهش‌هایی که در اسلایدها نام نویسنده‌شان آمده بود، از روی کتاب لیویو و مقاله‌های اصلی کامل شده‌اند.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · مرور کتاب در سخنرانی‌های دکتر آذرخش مکری</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"perceptual-curiosity": {"fa": "کنجکاوی ادراکی", "en": "Perceptual curiosity", "d": "کنجکاوی برانگیخته با محرک تازه، مبهم یا عجیب که به بررسی دیداری یا شنیداری می‌انجامد. حالتی ناخوشایند، شبیه خارش، که با تکرار کم می‌شود.", "rel": ["epistemic-curiosity", "diversive-curiosity"], "s": "types", "g": "curiosity-types"}, "epistemic-curiosity": {"fa": "کنجکاوی شناختی", "en": "Epistemic curiosity", "d": "میل به دانش و فهم؛ «شهوت ذهن» هابز. بیشتر با پیش‌بینی پاداش همراه است و مخصوص انسان دانسته می‌شود.", "rel": ["perceptual-curiosity", "info-gap"], "s": "types", "g": "curiosity-types"}, "diversive-curiosity": {"fa": "کنجکاوی فراگیر", "en": "Diversive curiosity", "d": "جست‌وجوی محرک تازه، هر محرکی، برای فرار از کسالت. در برابر کنجکاوی اختصاصی که به یک پرسش معین معطوف است.", "rel": ["perceptual-curiosity", "exploration"], "s": "types", "g": "curiosity-types"}, "info-gap": {"fa": "نظریهٔ شکاف اطلاعاتی", "en": "Information-gap theory", "d": "لوونشتاین (۱۹۹۴): کنجکاوی از احساس شکاف میان آنچه می‌دانیم و آنچه می‌خواهیم بدانیم پدید می‌آید؛ حالتی شبیه گرسنگی که ما را به جست‌وجو می‌راند.", "rel": ["inverted-u", "halfalogue", "hot-cold-gap"], "s": "gap", "g": "info-gap"}, "hot-cold-gap": {"fa": "شکاف همدلی گرم-سرد", "en": "Hot-cold empathy gap", "d": "لوونشتاین: در حالت آرام («سرد»)، شدت میل‌ها و هیجان‌های خود در حالت برانگیخته («گرم») را دست‌کم می‌گیریم. در رژیم، اعتیاد و تصمیم‌گیری مهم است.", "rel": ["info-gap"], "s": "gap", "g": "hot-cold-gap"}, "inverted-u": {"fa": "منحنی U وارونه", "en": "Inverted-U function", "d": "بیشترین کنجکاوی در دانش متوسط است؛ بیشترین لذت در شدت متوسط محرک (منحنی وونت).", "rel": ["info-gap"], "s": "gap", "g": "info-gap"}, "halfalogue": {"fa": "نیم‌گفت‌وگو", "en": "Halfalogue", "d": "شنیدن یک طرف یک مکالمه (مثل تلفن). امبرسون و همکاران (۲۰۱۰) نشان دادند بیشتر از گفت‌وگوی کامل حواس را پرت می‌کند، چون ذهن نمی‌تواند نیمهٔ دیگر را پیش‌بینی کند.", "rel": ["info-gap"], "s": "gap", "g": "info-gap"}, "uncertainty-pleasure": {"fa": "لذت عدم قطعیت", "en": "Pleasure of uncertainty", "d": "ویلسون و همکاران (۲۰۰۵): وقتی رویداد خوشایندی بی‌توضیح می‌ماند، خلق مثبت طولانی‌تر می‌شود، چون ذهن به آن برمی‌گردد. مردم این را پیش‌بینی نمی‌کنند.", "rel": ["inverted-u"], "s": "arousal", "g": "info-gap"}, "curiosity-memory": {"fa": "کنجکاوی و حافظه", "en": "Curiosity-enhanced memory", "d": "گروبر و همکاران (۲۰۱۴): حالت کنجکاوی با فعالیت دوپامینی (SN/VTA) و هیپوکامپ، یادگیری را بهتر می‌کند؛ حتی برای اطلاعات بی‌ربطی که در همان حالت دیده می‌شوند.", "rel": ["reward"], "s": "brain", "g": "curiosity-brain"}, "reward": {"fa": "مدار پاداش و دوپامین", "en": "Reward circuit / dopamine", "d": "ناحیهٔ تگمنتال شکمی، جسم سیاه، استریاتوم (هستهٔ دمدار و اکومبنس) که پیش‌بینی پاداش و «خواستن» را رمز می‌کنند. کنجکاوی، پیشرفت و اعتیاد همه از این مدار استفاده می‌کنند.", "rel": ["curiosity-memory"], "s": "brain", "g": "n-reward"}, "exploration": {"fa": "کاوش و بهره‌برداری", "en": "Exploration vs. exploitation", "d": "از مباحث فرسودگی و شغل معنادار (مدل اینزلیکت): نوسان مغز میان کار و گشت‌زنی. کنجکاوی فراگیر شکل رایج کاوش است.", "rel": ["diversive-curiosity"], "s": "arousal", "g": "exploration"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>
