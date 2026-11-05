@@ -1,0 +1,1258 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>سنجش‌خانهٔ ویکی روان</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* سنجش‌خانه: a catalogue of every questionnaire in the wiki. Cards grouped by area; a side sheet holds the plain-language reading, the student and specialist layers, and (for instruments whose full items are in the course) a self-scoring form. Nothing is stored. */
+:root{
+  --bg:#f4f1ea; --card:#fffdf8; --ink:#221d18; --muted:#6a6157; --rule:#ddd4c6; --wash:#ece5d9; --accent:#2f6f8f; --accent-ink:#fff;
+  --good:#2f7a55; --warn:#a3404f; --mark:#b2622a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15130f; --card:#1e1a15; --ink:#ece4d8; --muted:#a89c8d; --rule:#352e26; --wash:#26201a; --accent:#6fb0cf; --accent-ink:#10181c;
+  --good:#5fb88a; --warn:#d9707f; --mark:#e08f55; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15130f; --card:#1e1a15; --ink:#ece4d8; --muted:#a89c8d; --rule:#352e26; --wash:#26201a; --accent:#6fb0cf; --accent-ink:#10181c;
+  --good:#5fb88a; --warn:#d9707f; --mark:#e08f55; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 70px}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto}
+.en{font-family:var(--f-latin);direction:ltr;unicode-bidi:isolate}
+header.top{padding-block:22px 14px;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 28px;align-items:end}
+@media (max-width:760px){header.top{grid-template-columns:minmax(0,1fr)}}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:2.9rem;line-height:1.05;margin:4px 0 0;text-wrap:balance}
+.lede{margin:8px 0 0;color:var(--muted);max-width:72ch;font-size:.97rem}
+.stats{display:flex;gap:20px;font-size:.8rem;color:var(--muted)} .stats b{display:block;font-family:var(--f-display);font-size:1.8rem;color:var(--ink);line-height:1}
+
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 6px}
+@media (max-width:760px){.who{grid-template-columns:minmax(0,1fr)}}
+.who button{all:unset;cursor:pointer;background:var(--card);border:1.5px solid var(--rule);border-radius:14px;padding:12px 14px;display:grid;gap:2px}
+.who button b{font-size:1.02rem} .who button span{font-size:.84rem;color:var(--muted);line-height:1.6}
+.who button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.who button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.start{margin:14px 0 4px;padding:14px 16px;background:var(--wash);border-radius:14px}
+.start h2{margin:0 0 6px;font-size:1rem}
+.start p{margin:0 0 8px;font-size:.88rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{all:unset;cursor:pointer;font-size:.84rem;padding:4px 12px;border-radius:999px;background:var(--card);border:1px solid var(--rule);line-height:1.7}
+.chip:hover,.chip:focus-visible{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+.tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin:14px 0 6px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--rule)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.tools input[type=search]{font:inherit;font-size:.9rem;padding:6px 12px;border-radius:999px;border:1px solid var(--rule);background:var(--card);color:var(--ink);min-width:0;flex:1 1 200px;max-width:320px}
+.tog{display:inline-flex;gap:6px;align-items:center;font-size:.86rem;color:var(--muted);cursor:pointer}
+.count{font-size:.82rem;color:var(--muted);margin-inline-start:auto}
+
+section.cat{margin-top:26px}
+section.cat>header{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;border-bottom:2px solid var(--c);padding-bottom:4px;margin-bottom:12px}
+section.cat h2{font-family:var(--f-display);font-size:1.75rem;margin:0;color:var(--c)}
+section.cat>header p{margin:0;font-size:.86rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{all:unset;box-sizing:border-box;cursor:pointer;background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--c);border-radius:12px;padding:12px 14px 12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.card:hover{border-color:var(--c)} .card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card h3{margin:0;font-size:1rem;line-height:1.55;text-wrap:balance}
+.card .en{font-size:.78rem;color:var(--muted);line-height:1.4}
+.card p{margin:0;font-size:.85rem;color:var(--muted);line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.bd{font-size:.72rem;padding:1px 8px;border-radius:999px;background:var(--wash);color:var(--muted)}
+.bd.fill{background:color-mix(in srgb,var(--good) 16%,var(--card));color:var(--good);font-weight:500}
+.bd.clin{background:color-mix(in srgb,var(--warn) 14%,var(--card));color:var(--warn)}
+.empty{padding:30px 0;color:var(--muted);text-align:center}
+
+/* side sheet */
+.scrim{position:fixed;inset:0;background:color-mix(in srgb,#000 38%,transparent);z-index:20}
+.sheet{position:fixed;top:0;bottom:0;left:0;width:min(640px,100%);background:var(--card);z-index:21;overflow-y:auto;border-right:1px solid var(--rule);
+  padding:calc(env(safe-area-inset-top,0px) + 14px) max(18px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 40px) max(18px,env(safe-area-inset-left,0px))}
+.sheet .x{position:sticky;top:0;float:left;font:inherit;font-size:.85rem;background:var(--wash);border:1px solid var(--rule);color:var(--ink);border-radius:999px;padding:3px 12px;cursor:pointer;z-index:2}
+.sheet h2{font-family:var(--f-display);font-size:2rem;line-height:1.15;margin:10px 0 2px;text-wrap:balance;clear:both}
+.sheet .sub{color:var(--muted);font-size:.85rem}
+.sheet h3{font-size:.95rem;margin:20px 0 6px;display:flex;align-items:center;gap:8px}
+.sheet h3::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--c,var(--accent))}
+.sheet p{margin:0 0 8px}
+.lay{border:1px solid var(--rule);border-radius:12px;margin-top:12px;background:var(--bg)}
+.lay>summary{cursor:pointer;padding:8px 12px;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:8px}
+.lay>summary::-webkit-details-marker{display:none}
+.lay>summary::after{content:"+";color:var(--muted)} .lay[open]>summary::after{content:"−"}
+.lay>div{padding:0 12px 10px;font-size:.92rem}
+.lay.mine>summary{color:var(--accent)}
+.facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 14px;font-size:.88rem;margin:10px 0}
+.facts dt{color:var(--muted)} .facts dd{margin:0}
+.not{background:color-mix(in srgb,var(--mark) 10%,var(--card));border-inline-start:3px solid var(--mark);padding:8px 12px;border-radius:8px;font-size:.9rem}
+ul.samp{margin:4px 0 0;padding-inline-start:20px} ul.samp li{margin:3px 0}
+table.subs{width:100%;border-collapse:collapse;font-size:.88rem} table.subs td{border-top:1px solid var(--rule);padding:5px 4px;vertical-align:top} table.subs td:first-child{font-weight:500;white-space:nowrap;padding-inline-end:12px}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links a{font-size:.85rem;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;background:var(--bg)}
+.links a:hover{border-color:var(--accent)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:8px 18px;border-radius:999px;font-weight:500}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 4px;padding:12px;border-radius:12px;background:color-mix(in srgb,var(--good) 9%,var(--card))}
+.cta span{font-size:.85rem;color:var(--muted);flex:1 1 220px}
+.clinnote{margin:16px 0 4px;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--warn) 9%,var(--card));font-size:.88rem}
+
+/* form */
+.prog{position:sticky;top:34px;background:var(--card);padding-block:8px;z-index:1}
+.bar{height:6px;border-radius:9px;background:var(--wash);overflow:hidden} .bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+.prog small{color:var(--muted);font-size:.8rem}
+.part{font-family:var(--f-display);font-size:1.3rem;margin:18px 0 4px;color:var(--c)}
+.q{border-top:1px solid var(--rule);padding:10px 0}
+.q p{margin:0 0 6px;font-size:.95rem} .q p b{color:var(--muted);font-weight:500;margin-inline-end:6px}
+.opts{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.opts label{position:relative}
+.opts input{position:absolute;opacity:0;inset:0;margin:0}
+.opts span{display:inline-grid;place-items:center;min-width:38px;height:34px;padding:0 6px;border-radius:9px;border:1px solid var(--rule);background:var(--bg);font-size:.9rem;cursor:pointer}
+.opts input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.opts input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.anch{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);margin-top:3px;max-width:100%}
+.q.miss{background:color-mix(in srgb,var(--warn) 8%,transparent)}
+
+/* result */
+.res{display:grid;gap:12px;margin-top:10px}
+.rs{border:1px solid var(--rule);border-radius:12px;padding:10px 12px;background:var(--bg)}
+.rs h4{margin:0;font-size:.98rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.rs h4 small{color:var(--muted);font-weight:400}
+.scale{position:relative;height:12px;border-radius:9px;margin:8px 0 4px;background:linear-gradient(90deg,var(--wash),var(--wash))}
+.scale::before,.scale::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--rule)}
+.scale::before{right:33.3%} .scale::after{right:66.6%}
+.scale i{position:absolute;top:-4px;width:20px;height:20px;border-radius:50%;background:var(--accent);border:3px solid var(--card);transform:translateX(50%)}
+.ends{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted)}
+.rs p{margin:6px 0 0;font-size:.88rem}
+.help{margin-top:16px;font-size:.86rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:10px}
+footer.foot{margin-top:40px;border-top:1px solid var(--rule);padding-top:14px;font-size:.85rem;color:var(--muted);display:grid;gap:6px}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div>
+    <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › سنجش‌خانه</div>
+    <h1>سنجش‌خانه</h1>
+    <p class="lede">همهٔ پرسشنامه‌ها و ابزارهای سنجشی که در درس‌نامه‌ها، کارگاه‌ها و نقد کتاب‌های این ویکی آمده‌اند، یک‌جا. برای هر ابزار سه لایه هست: به زبان ساده، برای دانشجو، برای متخصص. هر جا گویه‌های کامل در درس آمده بود، می‌توانید همین‌جا پرسشنامه را پر کنید و نتیجه را فوراً ببینید. هیچ پاسخی جایی ذخیره یا فرستاده نمی‌شود.</p>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="who" role="group" aria-label="نگاه من">
+  <button data-who="all"><b>خودشناسی</b><span>می‌خواهم خودم را بهتر بشناسم. توضیح ساده و پرسشنامه‌هایی که می‌شود پر کرد.</span></button>
+  <button data-who="stu"><b>دانشجو</b><span>ساختار ابزار، زیرمقیاس‌ها، نمره‌گذاری و پیوندش با نظریه‌ها و پژوهش‌ها.</span></button>
+  <button data-who="pro"><b>متخصص</b><span>منبع اصلی، نکته‌های روان‌سنجی، مجوز استفاده، و ابزارهای بالینی.</span></button>
+</div>
+
+<div class="start" id="start"></div>
+
+<div class="tools">
+  <input type="search" id="q" placeholder="جست‌وجو: نام، موضوع یا نام لاتین…" aria-label="جست‌وجو">
+  <label class="tog"><input type="checkbox" id="onlyfill"> فقط قابل پر کردن</label>
+  <div class="chips" id="catchips"></div>
+  <span class="count" id="count"></span>
+</div>
+
+<main id="list"></main>
+
+<footer class="foot">
+  <div>این پرسشنامه‌ها برای آموزش و خودشناسی‌اند، نه تشخیص. نمره‌ها نسبت به دامنهٔ خود پرسشنامه نشان داده می‌شوند، نه نسبت به جمعیت؛ برای مقایسه با هنجار به منبع اصلی و نسخهٔ هنجاریابی‌شده نیاز است. ترجمه‌ها همان ترجمه‌های فارسی اسلایدهای دوره‌اند.</div>
+  <div>اگر این روزها حالتان سخت است، صحبت با پزشک خانواده، روان‌شناس یا روان‌پزشک کمک می‌کند. در خطر فوری با شمارهٔ اورژانس محل زندگی‌تان تماس بگیرید.</div>
+  <div><a href="index.html">بازگشت به ویکی روان</a> · <a href="orgsvc.html">سنجش سلامت سازمان</a> (همین پرسشنامه‌ها برای گروه‌ها و سازمان‌ها)</div>
+</footer>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sh-t"></aside>
+
+<script>
+/* پرسشنامه‌های واقعی دورهٔ «مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی» — متن فارسی از اسلایدهای همان جلسه.
+   sub.items: شمارهٔ پرسش‌ها؛ عدد منفی یعنی آن پرسش در این زیرمقیاس معکوس نمره می‌گیرد.
+   dir: 1 = نمرهٔ بالاتر بهتر؛ -1 = نمرهٔ بالاتر یعنی دشواری بیشتر؛ 0 = توصیفی (خوب یا بد ندارد).
+   tag: کلید پیشنهاد کارگاه. */
+window.INST = [
+{id:"scs", fa:"فرم کوتاه مقیاس شفقت به خود", en:"Self-Compassion Scale – Short Form (SCS-SF)", ses:"s2", pkg:"core", tag:"compassion",
+ ref:"Raes, Pommier, Neff & Van Gucht (2011). Clinical Psychology & Psychotherapy, 18, 250–255.",
+ intro:"دربارهٔ اینکه معمولاً در زمان‌های سخت با خودتان چطور رفتار می‌کنید.",
+ min:1, max:5, anchors:["تقریباً هیچ‌وقت","","","","تقریباً همیشه"],
+ items:["وقتی در کاری که برایم مهم است شکست می‌خورم، احساس بی‌کفایتی و بی‌فایده بودن می‌کنم.",
+ "سعی می‌کنم نسبت به جنبه‌هایی از شخصیتم که دوست ندارم، صبور و پذیرا باشم.",
+ "وقتی اتفاق دردناک و نامطلوبی رخ می‌دهد، سعی می‌کنم نسبت به آن نظری متعادل و معتدل داشته باشم.",
+ "وقتی غمگین و ناراحتم، احساس می‌کنم بیشتر مردم دنیا از من خوشبخت‌ترند.",
+ "سعی می‌کنم نقص‌ها و ایرادهای خودم را جزئی از طبیعت و وضعیت کلی بشر ببینم.",
+ "وقتی در شرایط و اوضاع دشواری هستم، سعی می‌کنم از خودم مراقبت لازم را به عمل بیاورم و با خودم برخورد لطیفی داشته باشم.",
+ "وقتی چیزی ناراحتم می‌کند، سعی می‌کنم هیجاناتم را در وضعی متعادل نگه دارم.",
+ "وقتی در کاری که برایم اهمیت دارد شکست می‌خورم، احساس می‌کنم در مشکلاتم تنها هستم.",
+ "وقتی غمگین و پکر هستم، روی هر چیزی که (در زندگی یا در من) اشتباه است گیر می‌کنم و ذهنم درگیر می‌شود.",
+ "وقتی در زمینه‌ای احساس بی‌کفایتی می‌کنم، به خودم یادآوری می‌کنم که این احساس در خیلی‌ها وجود دارد.",
+ "دربارهٔ نقص‌ها و ناتوانی‌هایم قضاوت‌گر و سرزنش‌کننده هستم.",
+ "نسبت به بخش‌ها و جنبه‌هایی از شخصیتم که دوست ندارم، بی‌تحمل و بدون پذیرش هستم."],
+ sub:[{id:"total",fa:"شفقت به خود (کل)",items:[-1,2,3,-4,5,6,7,-8,-9,10,-11,-12],dir:1,main:true},
+  {id:"sk",fa:"مهربانی با خود",items:[2,6],dir:1},{id:"sj",fa:"قضاوت دربارهٔ خود",items:[11,12],dir:-1},
+  {id:"ch",fa:"اشتراک انسانی",items:[5,10],dir:1},{id:"is",fa:"احساس انزوا",items:[4,8],dir:-1},
+  {id:"mi",fa:"ذهن‌آگاهی",items:[3,7],dir:1},{id:"oi",fa:"همانندسازی افراطی",items:[1,9],dir:-1}]},
+
+{id:"aaq", fa:"پرسشنامهٔ پذیرش و عمل (نسخهٔ ۲)", en:"Acceptance and Action Questionnaire-II (AAQ-II)", ses:"s4", pkg:"core", tag:"flex",
+ ref:"Bond, Hayes, Baer et al. (2011). Behavior Therapy, 42, 676–688.",
+ intro:"هر جمله چقدر دربارهٔ شما درست است؟",
+ min:1, max:7, anchors:["هرگز درست نیست","","","","","","همیشه درست است"],
+ items:["تجربه‌ها و خاطرات دردناکم مانع می‌شوند زندگی‌ای را که برایش ارزش قائلم زندگی کنم.",
+ "از احساساتم می‌ترسم.",
+ "از اینکه نتوانم نگرانی‌ها و احساساتم را کنترل کنم، نگرانم.",
+ "خاطرات دردناک زندگی‌ام مانع می‌شوند که بتوانم زندگی پرباری داشته باشم.",
+ "هیجان‌هایم باعث مشکل در زندگی‌ام می‌شوند.",
+ "به نظر می‌آید که مردم بهتر از من با زندگی‌شان کنار می‌آیند.",
+ "نگرانی‌ها مانع موفقیت من می‌شوند."],
+ sub:[{id:"total",fa:"انعطاف‌ناپذیری روانی",items:[1,2,3,4,5,6,7],dir:-1,main:true}]},
+
+{id:"lot", fa:"آزمون تجدیدنظرشدهٔ جهت‌گیری زندگی", en:"Life Orientation Test – Revised (LOT-R)", ses:"s9", pkg:"core", tag:"optim",
+ ref:"Scheier, Carver & Bridges (1994). Journal of Personality and Social Psychology, 67, 1063–1078.",
+ intro:"چقدر با هر جمله موافقید؟ چهار جمله فقط برای پر کردن‌اند و در نمره حساب نمی‌شوند.",
+ min:0, max:4, anchors:["کاملاً مخالفم","مخالفم","نه موافق نه مخالف","موافقم","کاملاً موافقم"],
+ items:["در شرایط نامشخص، انتظار و امید بهترین حالت را دارم.",
+ "استراحت کردن و آرام شدن برای من آسان است.",
+ "اگر چیزی یا کاری امکان خراب شدن داشته باشد، برای من حتماً خراب می‌شود.",
+ "همیشه دربارهٔ آینده‌ام خوش‌بینم.",
+ "از بودن با دوستانم خیلی لذت می‌برم.",
+ "برایم خیلی مهم است که مشغول باشم.",
+ "به‌ندرت انتظار دارم امور آن‌طور که دوست دارم پیش بروند.",
+ "به‌راحتی ناراحت و بی‌قرار نمی‌شوم.",
+ "به‌ندرت روی اینکه اتفاق‌های خوب برایم بیفتند حساب می‌کنم.",
+ "در مجموع انتظار دارم بیشتر اتفاق‌های خوب برایم بیفتد تا اتفاق‌های بد."],
+ sub:[{id:"total",fa:"خوش‌بینی سرشتی",items:[1,-3,4,-7,-9,10],dir:1,main:true}]},
+
+{id:"ahs", fa:"مقیاس امید بزرگسالان", en:"Adult Hope Scale (AHS)", ses:"s9", pkg:"core", tag:"hope",
+ ref:"Snyder, Harris, Anderson et al. (1991). Journal of Personality and Social Psychology, 60, 570–585.",
+ intro:"هر جمله چقدر دربارهٔ شما درست است؟ چهار جمله فقط برای پر کردن‌اند.",
+ min:1, max:8, anchors:["قطعاً نادرست","","","","","","","قطعاً درست"],
+ items:["می‌توانم به راه‌های زیادی برای خروج از بن‌بست فکر کنم.",
+ "با انرژی هدف‌هایم را دنبال می‌کنم.",
+ "بیشتر وقت‌ها احساس خستگی می‌کنم.",
+ "برای خروج از هر مشکلی راه‌های زیادی وجود دارد.",
+ "در یک مشاجره خیلی راحت مغلوب می‌شوم.",
+ "برای رسیدن به چیزهایی که برایم مهم‌اند، راه‌های زیادی به ذهنم می‌رسد.",
+ "دربارهٔ سلامت خودم نگرانم.",
+ "حتی وقتی دیگران ناامید می‌شوند، می‌دانم که راهی برای خروج از مشکل پیدا خواهم کرد.",
+ "تجربه‌های گذشته مرا برای آینده به‌خوبی آماده کرده است.",
+ "در زندگی‌ام نسبتاً موفق بوده‌ام.",
+ "بیشتر وقت‌ها دربارهٔ مشکلی نگرانم.",
+ "به هدف‌هایی که برای خودم تعیین می‌کنم، می‌رسم."],
+ sub:[{id:"total",fa:"امید (کل)",items:[1,2,4,6,8,9,10,12],dir:1,main:true},
+  {id:"path",fa:"راه‌ها",items:[1,4,6,8],dir:1},{id:"agency",fa:"عاملیت",items:[2,9,10,12],dir:1}]},
+
+{id:"gbs", fa:"مقیاس عمومی تعلق", en:"General Belongingness Scale (GBS)", ses:"s10", pkg:"core", tag:"belong",
+ ref:"Malone, Pillow & Osman (2012). Personality and Individual Differences, 52, 311–316.",
+ intro:"چقدر با هر جمله موافقید؟",
+ min:1, max:7, anchors:["کاملاً مخالفم","","","","","","کاملاً موافقم"],
+ items:["وقتی با آدم‌ها هستم، احساس تعلق می‌کنم.",
+ "با خانواده و دوستان پیوندهای مستحکمی دارم.",
+ "احساس یک خارجی و غریبه بودن دارم.",
+ "احساس می‌کنم دیگران به من اهمیت نمی‌دهند.",
+ "احساس می‌کنم دیگران مرا پذیرفته‌اند.",
+ "چون احساس تعلق ندارم، در ایام تعطیلات و عید احساس دوری می‌کنم.",
+ "حس می‌کنم از بقیهٔ جهان دور افتاده‌ام.",
+ "یک احساس تعلق دارم.",
+ "وقتی کنار دیگران هستم، احساس غریبه بودن می‌کنم.",
+ "سر میز غذا، در کنار دیگران جای خودم را دارم.",
+ "با دیگران احساس ارتباط و متصل بودن دارم.",
+ "دوستان و خانواده مرا در برنامه‌ها و کارهای خود شریک نمی‌کنند."],
+ sub:[{id:"total",fa:"تعلق (کل)",items:[1,2,-3,-4,5,-6,-7,8,-9,10,11,-12],dir:1,main:true},
+  {id:"acc",fa:"پذیرش و شمول",items:[1,2,5,8,10,11],dir:1},{id:"rej",fa:"طرد و بیگانگی",items:[3,4,6,7,9,12],dir:-1}]},
+
+{id:"wolf", fa:"سیاههٔ غرقگی در کار", en:"Work-Related Flow Inventory (WOLF)", ses:"s10", pkg:"core", tag:"flow",
+ ref:"Bakker (2008). Journal of Vocational Behavior, 72, 400–414.",
+ intro:"در دو هفتهٔ گذشته، هر کدام از این‌ها چند وقت یک بار برایتان پیش آمده است؟",
+ min:1, max:7, anchors:["هرگز","تقریباً هرگز","گاهی","معمولاً","اغلب","تقریباً همیشه","همیشه"],
+ items:["وقتی کار می‌کنم، به هیچ چیز دیگری فکر نمی‌کنم.",
+ "هنگام کار، تمام فکرم را با خود می‌برد.",
+ "وقتی کار می‌کنم، همه چیز اطرافم را فراموش می‌کنم.",
+ "کاملاً در کار خودم غرق می‌شوم.",
+ "کارم به من احساس خوبی می‌دهد.",
+ "کارم را با کمال لذت و خوشی انجام می‌دهم.",
+ "هنگام کار خوشحال هستم.",
+ "وقتی سر کار هستم، احساس سرخوشی دارم.",
+ "اگر دریافتی (درآمدم) کمتر بود، باز هم این کار را ادامه می‌دادم.",
+ "حس می‌کنم دوست دارم در وقت آزادم هم کار کنم.",
+ "کار می‌کنم چون از آن لذت می‌برم.",
+ "وقتی روی چیزی کار می‌کنم، آن را به‌خاطر دل خودم انجام می‌دهم.",
+ "انگیزه‌ام از خود انجام کار می‌آید، نه از پاداشی که بابت آن دریافت می‌کنم."],
+ sub:[{id:"abs",fa:"جذب در کار",items:[1,2,3,4],dir:1,main:true},{id:"enj",fa:"لذت از کار",items:[5,6,7,8],dir:1,main:true},{id:"int",fa:"انگیزهٔ درونی کار",items:[9,10,11,12,13],dir:1,main:true}]},
+
+{id:"sreis", fa:"مقیاس خودسنجی هوش هیجانی", en:"Self-Rated Emotional Intelligence Scale (SREIS)", ses:"s14", pkg:"core", tag:"ei",
+ ref:"Brackett, Rivers, Shiffman, Lerner & Salovey (2006). Journal of Personality and Social Psychology, 91, 780–795.",
+ intro:"هر جمله چقدر دربارهٔ شما درست است؟",
+ min:1, max:5, anchors:["کاملاً نادرست","خیلی درست نیست","نه درست نه نادرست","تا حدی درست","خیلی درست"],
+ items:["با نگاه به چهرهٔ افراد، متوجه نوع هیجانی که تجربه می‌کنند می‌شوم.",
+ "آدم منطقی‌ای هستم و به‌ندرت برای تصمیم‌گیری به هیجاناتم توجه می‌کنم.",
+ "برای بیان احساسات و هیجاناتم، خزانهٔ لغت وسیعی دارم.",
+ "در مواجهه با احساس خشم در خودم مشکل جدی دارم.",
+ "وقتی یکی از افرادی که می‌شناسم در حال بد روحی است، می‌توانم کمکش کنم که خیلی سریع آرام شود و حال بهتری پیدا کند.",
+ "از نشانه‌ها و پیام‌های غیرکلامی که افراد بروز می‌دهند، آگاهم.",
+ "هنگام تصمیم‌گیری به احساساتم توجه می‌کنم تا ببینم آیا تصمیمم درست است.",
+ "به‌راحتی می‌توانم تعداد زیادی واژهٔ هم‌معنی برای کلماتی مانند خوشحالی و غمگینی فهرست کنم.",
+ "می‌توانم بدون آنکه عصبی شوم، شرایط پراسترس را مدیریت کنم.",
+ "راهکارهای بهتر کردن و خوب کردن حال مردم را بلدم.",
+ "با نگاه به حالات چهرهٔ یک نفر، می‌توانم بگویم که دارد به من دروغ می‌گوید یا نه.",
+ "آدم منطقی‌ای هستم و دوست ندارم برای تصمیم‌گیری به احساساتم توجه و اتکا کنم.",
+ "برای بیان و توضیح هیجانات، از ساده تا پیچیده، واژه و کلمه بلدم.",
+ "قادر به مدیریت بیشتر مشکلات ناراحت‌کننده هستم.",
+ "در کمک به افراد برای بهتر شدن، هنگامی که عصبانی یا غمگین‌اند، خیلی توانا نیستم.",
+ "حس اولیه و سریع من دربارهٔ اینکه دیگران چه احساسی دارند، معمولاً غلط از آب درمی‌آید.",
+ "خزانهٔ لغات من دربارهٔ انواع «احساسات» از خزانهٔ لغات بیشتر مردم بیشتر و بهتر است.",
+ "می‌دانم چگونه در شرایط دشوار یا پراسترس آرامش خودم را حفظ کنم.",
+ "من آن نوع آدمی هستم که افراد هنگام مواجهه با شرایط دشوار به او مراجعه می‌کنند."],
+ sub:[{id:"p",fa:"ادراک هیجان",items:[1,6,11,-16],dir:1},{id:"u",fa:"استفاده از هیجان",items:[-2,7,-12],dir:1},
+  {id:"r",fa:"فهم هیجان",items:[3,8,13,17],dir:1},{id:"m1",fa:"مدیریت هیجان در خود",items:[-4,9,14,18],dir:1,main:true},
+  {id:"m2",fa:"مدیریت هیجان در جمع",items:[5,10,-15,19],dir:1,main:true}]},
+
+{id:"bscs", fa:"مقیاس کوتاه خویشتنداری", en:"Brief Self-Control Scale (BSCS)", ses:"s6", pkg:"ext", tag:"selfctrl",
+ ref:"Tangney, Baumeister & Boone (2004). Journal of Personality, 72, 271–324.",
+ intro:"هر جمله چقدر شما را توصیف می‌کند؟",
+ min:1, max:5, anchors:["اصلاً","","","","خیلی زیاد"],
+ items:["در مقابله با هوس خوب هستم.","برایم شکستن عادت‌های بد دشوار است.","تنبل هستم.","چیزهای ناشایست و بد به زبان می‌آورم.",
+ "کارهای بد و مضر را اگر لذت‌بخش باشند، انجام می‌دهم.","از چیزهایی که برایم مضرند دوری می‌کنم.","آرزو می‌کنم ای کاش انضباط فردی بیشتری داشتم.",
+ "مردم می‌گویند که انضباط شخصی آهنین دارم.","گاهی خوش‌گذرانی و لذت‌جویی مانع انجام کارهایم می‌شود.","در تمرکز اشکال دارم.",
+ "می‌توانم به‌صورت مؤثری در جهت هدف‌های درازمدت خودم گام بردارم.","گاهی نمی‌توانم جلوی خودم را در انجام کاری بگیرم، حتی اگر بدانم آن کار اشتباه است.",
+ "اغلب بدون فکر کردن به جوانب یک قضیه عمل می‌کنم."],
+ sub:[{id:"total",fa:"خویشتنداری",items:[1,-2,-3,-4,-5,6,-7,8,-9,-10,11,-12,-13],dir:1,main:true}]},
+
+{id:"ders", fa:"مقیاس دشواری در تنظیم هیجان", en:"Difficulties in Emotion Regulation Scale (DERS)", ses:"s4", pkg:"ext", tag:"emoreg",
+ ref:"Gratz & Roemer (2004). Journal of Psychopathology and Behavioral Assessment, 26, 41–54.",
+ intro:"هر جمله چند وقت یک بار دربارهٔ شما صدق می‌کند؟",
+ min:1, max:5, anchors:["تقریباً هیچ‌وقت","گاهی","حدود نیمی از اوقات","بیشتر اوقات","تقریباً همیشه"],
+ items:["برای من، احساساتم شفاف و واضح‌اند.","به اینکه چه احساساتی دارم، دقت می‌کنم.","احساساتم را به‌صورت شدید و غیرقابل‌کنترل تجربه می‌کنم.",
+ "نمی‌دانم واقعاً چه احساسی دارم.","در درک و فهمیدن احساساتم دچار مشکل هستم.","به حس‌هایم توجه می‌کنم و دقیق می‌شوم.","دقیقاً می‌دانم چه حس‌هایی دارم.",
+ "برایم مهم است که چه حس‌هایی دارم.","دربارهٔ حس‌هایم احساس گیجی و سرگردانی دارم.","وقتی ناراحتم، احساساتم را انکار نمی‌کنم (قبول دارم که آن احساسات وجود دارند).",
+ "وقتی ناراحتم، به‌خاطر احساس ناراحتی از خودم عصبانی می‌شوم.","وقتی ناراحتم، به‌خاطر این احساس دچار شرمساری و خجالت می‌شوم.","وقتی ناراحتم، انجام کارهایم دشوار می‌شود.",
+ "وقتی ناراحتم، بدون کنترل و خویشتنداری می‌شوم.","وقتی ناراحتم، حس می‌کنم مدت طولانی همان‌طور خواهم ماند.","وقتی ناراحتم، فکر می‌کنم آخرش افسرده خواهم شد.",
+ "وقتی ناراحتم، فکر می‌کنم حس‌هایم معتبر و مهم‌اند.","وقتی ناراحتم، تمرکز روی چیزهای دیگر برایم دشوار می‌شود.","وقتی ناراحتم، احساس خارج از کنترل بودن می‌کنم.",
+ "وقتی ناراحتم، هنوز می‌توانم کارها را انجام دهم.","وقتی ناراحتم، بابت احساس ناراحتی‌ام از خودم خجالت می‌کشم.","وقتی ناراحتم، می‌دانم که بالاخره راهی پیدا می‌کنم که بهتر شوم.",
+ "وقتی ناراحتم، احساس می‌کنم آدم ضعیفی هستم.","وقتی ناراحتم، حس می‌کنم می‌توانم کنترل رفتارهایم را حفظ کنم.","وقتی ناراحتم، بابت آن احساس گناه می‌کنم.",
+ "وقتی ناراحتم، در تمرکز کردن دچار اشکال می‌شوم.","وقتی ناراحتم، در کنترل رفتارم دچار مشکل می‌شوم.","وقتی ناراحتم، حس می‌کنم هیچ کاری نیست که بتوانم انجام دهم تا حالم بهتر شود.",
+ "وقتی ناراحتم، به‌خاطر این احساس از دست خودم عصبی می‌شوم.","وقتی ناراحتم، نسبت به خودم حس بدی پیدا می‌کنم.","وقتی ناراحتم، فکر می‌کنم ولو شدن و هیچ کاری نکردن تنها کاری است که می‌توانم بکنم.",
+ "وقتی ناراحتم، کنترل خودم را روی اعمالم از دست می‌دهم.","وقتی ناراحتم، فکر کردن دربارهٔ هر چیز دیگری برایم دشوار می‌شود.","وقتی ناراحتم، به خودم کمی زمان می‌دهم تا بفهمم واقعاً چه حس‌هایی دارم.",
+ "وقتی ناراحتم، خیلی طول می‌کشد تا بهتر شوم.","وقتی ناراحتم، هیجان‌هایم واقعاً غیرقابل‌تحمل‌اند."],
+ sub:[{id:"total",fa:"دشواری در تنظیم هیجان (کل)",items:[-1,-2,3,4,5,-6,-7,-8,9,-10,11,12,13,14,15,16,-17,18,19,-20,21,-22,23,-24,25,26,27,28,29,30,31,32,33,-34,35,36],dir:-1,main:true},
+  {id:"nonacc",fa:"نپذیرفتن پاسخ هیجانی",items:[11,12,21,23,25,29],dir:-1},{id:"goals",fa:"دشواری در رفتار هدفمند",items:[13,18,-20,26,33],dir:-1},
+  {id:"impulse",fa:"دشواری در کنترل تکانه",items:[3,14,19,-24,27,32],dir:-1},{id:"aware",fa:"نداشتن آگاهی هیجانی",items:[-2,-6,-8,-10,-17,-34],dir:-1},
+  {id:"strat",fa:"دسترسی محدود به راهبردهای تنظیم",items:[15,16,-22,28,30,31,35,36],dir:-1},{id:"clarity",fa:"نبود وضوح هیجانی",items:[-1,4,5,-7,9],dir:-1}]},
+
+{id:"socs", fa:"مقیاس شفقت به خود ساسکس-آکسفورد", en:"Sussex-Oxford Compassion for the Self Scale (SOCS-S)", ses:"s3", pkg:"ext", tag:"compassion",
+ ref:"Gu, Baer, Cavanagh, Kuyken & Strauss (2020). Assessment, 27(1), 3–20.",
+ intro:"هر جمله چقدر دربارهٔ شما درست است؟",
+ min:1, max:5, anchors:["هیچ‌وقت درست نیست","به‌ندرت درست است","گاهی درست است","اغلب درست است","همواره درست است"],
+ items:["در تشخیص اینکه چه زمانی تنش دارم و ناراحتم، مهارت دارم.","می‌دانم که هر کسی در زمانی از زندگی خود رنج کشیده است.",
+ "وقتی در شرایط سختی هستم، به خودم احساس مهربانی دارم.","وقتی ناراحتم، به‌جای اجتناب از حس‌هایم سعی می‌کنم آن‌ها را بپذیرم.",
+ "وقتی حالم بد است، حتی اگر نتوانم دربارهٔ علت آن کاری کنم، سعی می‌کنم حال خودم را خوب کنم.","وقتی در فشار و ناراحتی هستم، متوجه حال خودم می‌شوم.",
+ "می‌فهمم که گاهی بدحال و ناراحت بودن جزئی از ذات و طبیعت بشری است.","وقتی چیزهای بد اتفاق می‌افتند، نوعی حس مراقبت از خودم پیدا می‌کنم.",
+ "با ناراحتی و بدحالی خودم مواجه می‌شوم، بی‌آنکه اجازه دهم بر من غلبه کند و تسلیمش شوم.","وقتی در روزهای دشواری هستم، سعی می‌کنم از خودم مراقبت کنم.",
+ "سریع متوجه نشانه‌های اولیهٔ بدحالی و ناراحتی در خودم می‌شوم.","می‌دانم که دیگران هم مثل من درگیر مشکلات و ناملایمات زندگی هستند.",
+ "وقتی ناراحتم، سعی می‌کنم به حس‌های خودم دقیق شوم.","بی‌آنکه خودم را قضاوت کنم، با حس‌های خودم مواجه می‌شوم.",
+ "وقتی ناراحت و بدحالم، سعی می‌کنم آنچه برای من بهترین است را انجام دهم.","توان شناسایی علائم رنج و ناراحتی در خودم را دارم.",
+ "می‌دانم که وقتی شرایط بر وفق مراد پیش نمی‌رود، همهٔ ما ممکن است دچار احساس ناراحتی و بدحالی شویم.",
+ "حتی وقتی نسبت به خودم سرخورده و مأیوسم، باز هم می‌توانم در زمان ناراحتی با خودم با گرمی و لطافت برخورد کنم.",
+ "وقتی ناراحت و بدحالم، می‌توانم بگذارم هیجان‌ها و احساس‌های منفی آنجا باشند، بی‌آنکه زیر آن‌ها له و تسلیم شوم.",
+ "وقتی ناراحتم، بیشترین تلاشم را می‌کنم تا از خودم مراقبت کنم."],
+ sub:[{id:"total",fa:"شفقت به خود (کل)",items:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],dir:1,main:true},
+  {id:"rec",fa:"شناخت رنج",items:[1,6,11,16],dir:1},{id:"uni",fa:"فهم همگانی بودن رنج",items:[2,7,12,17],dir:1},
+  {id:"feel",fa:"احساس مهربانی نسبت به خود",items:[3,8,13,18],dir:1},{id:"tol",fa:"تحمل احساس‌های ناخوشایند",items:[4,9,14,19],dir:1},
+  {id:"act",fa:"اقدام برای کاستن از رنج",items:[5,10,15,20],dir:1}]},
+
+{id:"fcs", fa:"مقیاس‌های ترس از شفقت", en:"Fears of Compassion Scales (FCS)", ses:"s2", pkg:"ext", tag:"fearcomp",
+ ref:"Gilbert, McEwan, Matos & Rivis (2011). Psychology and Psychotherapy, 84, 239–255.",
+ intro:"سه بخش دارد: ترس از ابراز شفقت به دیگران، ترس از دریافت شفقت از دیگران، و ترس از شفقت به خود.",
+ min:1, max:5, anchors:["هیچ‌وقت","","","","همیشه"],
+ parts:[[1,"ترس از ابراز شفقت به دیگران"],[11,"ترس از شفقت و مهربانی دیگران به خود"],[24,"ترس از شفقت و مهربانی به خود"]],
+ items:["اگر خیلی مهربان به نظر برسم، مردم از من سوءاستفاده خواهند کرد.","مهربانی و شفقت با افرادی که کارهای بدی انجام داده‌اند، آن‌ها را از مجازات خلاص می‌کند.",
+ "در زندگی افرادی وجود دارند که مستحق شفقت و مهربانی نیستند.","نگرانم که اگر خیلی مهربان باشم، به هدف راحتی تبدیل شوم.",
+ "اگر خیلی مهربان و بخشنده باشی، مردم از تو بهره‌کشی خواهند کرد.","نگرانم که اگر خیلی مهربان باشم، افراد آسیب‌پذیر و شکننده جذبم شوند و منابع روانی‌ام را تحلیل ببرند.",
+ "به‌جای اینکه منتظر باشند به آن‌ها کمک شود، هر کسی باید به خودش کمک کند.","بیم آن دارم که اگر خیلی مهربان باشم، بعضی افراد بیش از حد به من وابسته شوند.",
+ "بیش از حد مهربان بودن باعث می‌شود آدم به‌راحتی مورد سوءاستفاده قرار گیرد.","فکر می‌کنم برای برخی افراد، انضباط سخت و نوعی مجازات مناسب بهتر از مهربانی و شفقت است.",
+ "اینکه بخواهی دیگران با تو مهربان باشند، نشانهٔ ضعف است.","نگرانم وقتی نیاز دارم دیگران درکم کنند و مهربان باشند، مهربان نباشند و مرا درک نکنند.",
+ "بیم دارم که وابستهٔ مراقبت و لطف دیگران شوم، چون آن‌ها ممکن است همیشه نباشند تا از من مراقبت کنند.","اغلب در فکرم که آیا ابراز محبت و گرمی دیگران واقعی و از ته دل است.",
+ "مهربانی دیگران نسبت به من، به گونه‌ای ترسناک است.","وقتی مردم با من مهربان‌اند و با شفقت رفتار می‌کنند، دچار اضطراب و دستپاچگی می‌شوم.",
+ "وقتی دیگران با من صمیمی و مهربان‌اند، نگرانم که چیز بدی دربارهٔ من بفهمند و نظرشان عوض شود.","وقتی افراد با من مهربان و صمیمی‌اند، نگرانم که حتماً از من چیزی می‌خواهند.",
+ "وقتی مردم با من مهربان‌اند و با شفقت رفتار می‌کنند، دچار احساس غم و توخالی بودن می‌شوم.","وقتی افراد مهربان‌اند، حس می‌کنم بیش از حد نزدیک شده‌اند.",
+ "با وجود آنکه افراد با من مهربان‌اند، به‌ندرت در روابطم احساس گرمی کرده‌ام.","حتی زمانی که می‌دانم دیگران مهربان‌اند، سعی می‌کنم فاصله‌ام را با آن‌ها حفظ کنم.",
+ "وقتی حس کنم کسی خیلی با من مهربان و مراقب است، سعی می‌کنم میان خودم و او مرز و فاصله بگذارم.",
+ "احساس می‌کنم استحقاق این را ندارم که نسبت به خودم مهربان و بخشنده باشم.","اینکه واقعاً در فکر مهربان و لطیف بودن با خودم باشم، دچار غم می‌شوم.",
+ "برای اینکه در زندگی جلو بروی و دوام بیاوری، باید سرسخت باشی نه مهربان.","ترجیح می‌دهم اصلاً ندانم «مهربان و شفیق بودن با خود» چیست و چه شکلی است.",
+ "وقتی سعی می‌کنم با خودم گرم و مهربان باشم، نوعی احساس پوچی و توخالی بودن پیدا می‌کنم.","نگرانم که اگر نسبت به خودم مهربان و گرم باشم، دچار نوعی احساس سوگ و فقدان شوم.",
+ "نگرانم که اگر با خودم مهربان‌تر باشم و کمتر خودم را سرزنش کنم، استانداردهایم افت کند.","اگر با خودم بیشتر مهربان باشم، نگرانم که آدم ضعیفی بشوم.",
+ "هیچ‌وقت احساس مهربانی به خودم نداشته‌ام، بنابراین نمی‌دانم از کجا و چطور باید شروع کنم.","نگرانم که اگر شروع کنم با خودم مهربان باشم، به آن وابسته شوم و عادت کنم.",
+ "اگر با خودم خیلی مهربان باشم، نگرانم که سرزنش خودم را از دست بدهم و بعد نقص‌هایم شروع به رشد و ظاهر شدن کنند.","بیم دارم که اگر با خودم مهربان باشم، تبدیل به آدمی شوم که دوست ندارم باشم.",
+ "نگرانم که اگر با خودم مهربان باشم، دیگران مرا طرد کنند.","برایم راحت‌تر است که خودم را سرزنش کنم تا با خودم مهربان باشم.","بیم دارم که اگر با خودم مهربان باشم، ممکن است چیزهای بدی اتفاق بیفتد."],
+ sub:[{id:"oth",fa:"ترس از شفقت به دیگران",items:[1,2,3,4,5,6,7,8,9,10],dir:-1},
+  {id:"from",fa:"ترس از دریافت شفقت",items:[11,12,13,14,15,16,17,18,19,20,21,22,23],dir:-1,main:true},
+  {id:"self",fa:"ترس از شفقت به خود",items:[24,25,26,27,28,29,30,31,32,33,34,35,36,37,38],dir:-1,main:true}]},
+
+{id:"fmps", fa:"مقیاس چندبعدی کمال‌گرایی فراست", en:"Frost Multidimensional Perfectionism Scale (FMPS)", ses:"s12", pkg:"ext", tag:"perf",
+ ref:"Frost, Marten, Lahart & Rosenblate (1990). Cognitive Therapy and Research, 14, 449–468.",
+ intro:"چقدر با هر جمله موافقید؟",
+ min:1, max:5, anchors:["کاملاً مخالفم","مخالفم","نه موافق نه مخالف","موافقم","کاملاً موافقم"],
+ items:["پدر و مادرم استانداردهای خیلی بالایی برایم قرار می‌دهند.","سازمان‌یافته بودن (انضباط و ساختار) برایم خیلی مهم است.","در کودکی به‌خاطر انجام دادن کار در حد کمتر از کامل، تنبیه می‌شدم.",
+ "اگر برای خودم استانداردهای خیلی بالایی قرار ندهم، سرانجام آدم درجه‌دومی می‌شوم.","والدینم هیچ‌وقت سعی نکردند اشتباهاتم را بفهمند.","برایم مهم است که در هر کاری که انجام می‌دهم، تماماً باکفایت و توانمند باشم.",
+ "آدم تمیز و منظمی هستم.","سعی می‌کنم آدم منضبط و سازمان‌یافته‌ای باشم.","اگر در کار یا درس شکست بخورم، به نظرم آدم شکست‌خورده‌ای هستم.","اگر اشتباهی مرتکب شده باشم، باید ناراحت شوم.",
+ "والدینم می‌خواستند که من در هر چیزی بهترین باشم.","در مقایسه با بیشتر مردم، هدف‌های بالاتری برای خودم قرار می‌دهم.","اگر کسی کاری را در محل کار یا مدرسه بهتر از من انجام دهد، حس می‌کنم در کل کار شکست خورده‌ام.",
+ "اگر در بخشی از کار شکست بخورم، مثل آن است که در کل کار شکست خورده‌ام.","فقط کارکرد فوق‌العاده در خانوادهٔ من قابل قبول و کافی تلقی می‌شود.","در متمرکز کردن تلاش‌هایم برای رسیدن به هدف، خوب و توانا هستم.",
+ "حتی وقتی کاری را با دقت انجام می‌دهم، باز حس می‌کنم درست انجام نشده است.","از اینکه در چیزی بهترین نباشم، بدم می‌آید.","هدف‌های خیلی بالایی دارم.","والدینم انتظار «عالی» بودن از من دارند.",
+ "اگر مرتکب اشتباه شوم، مردم احتمالاً دربارهٔ من نظر پایین‌تری خواهند داشت.","هیچ‌وقت حس نکردم که می‌توانم از پس انتظارات والدینم برآیم.","اگر به اندازهٔ دیگران خوب عمل نکنم، یعنی انسان پایین‌تری هستم.",
+ "ظاهراً بقیهٔ انسان‌ها، در مقایسه با من، انتظار و استانداردهای پایین‌تری از خود دارند.","اگر همیشه خوب و درست عمل نکنم، مردم به من احترام نخواهند گذاشت.","والدینم در مقایسه با خودم، همیشه انتظارات بیشتری برای آینده‌ام داشته‌اند.",
+ "سعی می‌کنم آدم تمیزی باشم.","دربارهٔ کارهای ساده‌ای که هر روز انجام می‌دهم هم شک می‌کنم.","تمیزی برایم خیلی مهم است.","در کارهای روزانه‌ام در مقایسه با بقیهٔ آدم‌ها، انتظار کارکرد بالاتری از خودم دارم.",
+ "فرد منضبط و باسازمانی هستم.","در کارهایم عقب می‌مانم، چون کارها را مرتب تکرار می‌کنم.","برای من زمان زیادی می‌برد که کاری را «درست» انجام دهم.","هرچه کمتر اشتباه کنم، مردم مرا بیشتر دوست دارند.",
+ "هیچ‌وقت حس نکردم که بتوانم از عهدهٔ سطح انتظارات پدر و مادرم برآیم."],
+ sub:[{id:"cm",fa:"نگرانی از اشتباه",items:[9,10,13,14,18,21,23,25,34],dir:-1,main:true},{id:"da",fa:"شک دربارهٔ عمل",items:[17,28,32,33],dir:-1,main:true},
+  {id:"pe",fa:"انتظارات والدین",items:[1,11,15,20,26],dir:-1},{id:"pc",fa:"انتقاد والدین",items:[3,5,22,35],dir:-1},
+  {id:"ps",fa:"استانداردهای شخصی",items:[4,6,12,16,19,24,30],dir:0},{id:"or",fa:"نظم و سازمان‌دهی",items:[2,7,8,27,29,31],dir:0}]},
+];
+
+/* پیشنهادها بر اساس tag */
+window.REC = {
+ compassion:{fa:"شفقت به خود", why:"خودانتقادی شدید با فرسودگی و اضطراب همراه است و شفقت به خود یادگیری از اشتباه را آسان‌تر می‌کند، بی‌آنکه مسئولیت‌پذیری را کم کند.", ws:[["s2","شفقت به خود"],["s3","منتقد درون و رهبری مشفقانه"],["compassion","قفسهٔ شفقت و خودانتقادی"]], org:["برخورد با خطا بدون تحقیر؛ بازبینی پس از خطا بدون سرزنش","مدیران الگوی برخورد مشفقانه با شکست خودشان باشند"]},
+ fearcomp:{fa:"ترس از شفقت", why:"ترس از مهربانی، چه به خود چه از دیگران، مانع پذیرش حمایت و درخواست کمک می‌شود و با خودانتقادی و افسردگی همراه است.", ws:[["s2","ترس از شفقت"],["s3","فروپاشی شفقت"],["compassion","درمان متمرکز بر شفقت"]], org:["مسیرهای امن و محرمانه برای درخواست کمک","عادی کردن حمایت همکار و مربی‌گری"]},
+ flex:{fa:"انعطاف‌پذیری روانی", why:"وقتی آدم‌ها از هیجان‌ها و افکار ناخوشایندشان می‌ترسند یا با آن‌ها می‌جنگند، رفتارشان از ارزش‌هایشان دور می‌شود.", ws:[["s4","پذیرش هیجان"],["s7","انعطاف و فراشناخت"],["shelf13","قفسهٔ درمان مبتنی بر فرایند"]], org:["کاهش موقعیت‌های فشار هیجانی غیرضروری","معرفی روشن پزشک شرکت یا مشاور محرمانه"]},
+ optim:{fa:"خوش‌بینی", why:"خوش‌بینی واقع‌بینانه با درگیری بیشتر، سلامت بهتر و تاب‌آوری همراه است و تا حدی آموختنی است (مثلاً تمرین «بهترین خود ممکن»).", ws:[["s9","خوش‌بینی و امید"],["optimism","آیا بشر پیروز خواهد شد؟"]], org:["گفت‌وگوی شفاف دربارهٔ آیندهٔ سازمان","دیده شدن پیشرفت‌های کوچک"]},
+ hope:{fa:"امید", why:"امید یعنی هدف روشن، راه‌های مختلف و انرژی برای رفتن؛ قابل آموزش و پیش‌بینی‌کنندهٔ عملکرد است.", ws:[["s9","امید، WOOP و اصل پیشرفت"],["riseabove","فراتر برو: ذهنیت قربانی و رشد"]], org:["هدف‌گذاری مشترک و روشن در هر تیم","مسیر رشد شغلی شفاف"]},
+ belong:{fa:"تعلق", why:"احساس تعلق نیاز پایهٔ روانی است؛ طرد و بیگانگی با فرسودگی، ترک کار و سلامت بدتر همراه است.", ws:[["s10","تعلق، گفت‌وگو و تعریف کردن"],["s8","تعلق گروهی"],["mattering","اهمیت داشتن"]], org:["برنامهٔ ورود و همراهی برای کارکنان تازه","فرصت‌های پیوند میان واحدها و رده‌ها"]},
+ flow:{fa:"غرقگی و انگیزهٔ درونی کار", why:"غرقگی در کار با لذت، معنا و عملکرد بهتر همراه است و به اختیار، چالش متناسب و وقفهٔ کمتر نیاز دارد.", ws:[["s11","غرقگی و جدا شدن از کار"],["s13","انگیزش درونی"],["s15","هیجان مثبت و انگیزه"]], org:["زمان‌های بدون وقفه برای کار عمیق","طراحی شغل از پایین و چالش متناسب با مهارت"]},
+ ei:{fa:"هوش هیجانی", why:"مهارت‌های هیجانی، به‌ویژه مدیریت هیجان در خود و دیگران، در شغل‌های پرارتباط اهمیت دارند و تا حدی آموختنی‌اند.", ws:[["s14","هوش هیجانی"],["s4","تنظیم هیجان"],["s10","نام‌گذاری عاطفی"]], org:["حمایت ویژه از نقش‌هایی با کار عاطفی زیاد","آموزش مدیران در پاسخ به هیجان کارکنان"]},
+ selfctrl:{fa:"خویشتنداری", why:"خویشتنداری بیشتر از عادت و محیط درست می‌آید تا از ارادهٔ آهنین.", ws:[["s6","انتخاب و تغییر محیط"],["habits","کارگاه خویشتنداری و عادت‌ها"],["s7","تغییر خویشتن"]], org:["کاهش حواس‌پرتی‌های محیطی","گزینه‌های پیش‌فرض سالم در محیط کار"]},
+ emoreg:{fa:"تنظیم هیجان", why:"دشواری در تنظیم هیجان فرایندی مشترک در بسیاری از مشکلات روانی است و مهارت‌هایش آموختنی است.", ws:[["s4","معمای تنظیم هیجان"],["s8","بازتعبیر و ذهنیت‌ها"],["s10","نام‌گذاری عاطفی"]], org:["کاهش موقعیت‌های فشار هیجانی غیرضروری","معرفی پزشک شرکت یا مشاور محرمانه"]},
+ perf:{fa:"کمال‌گرایی ناسالم", why:"نگرانی از اشتباه و شک دربارهٔ عمل با فرسودگی، تعلل و اضطراب همراه است؛ استاندارد بالا به‌تنهایی مشکل نیست.", ws:[["s12","کمال‌گرایی"],["perfection","کمال‌گرایی"],["s2","شفقت به خود"]], org:["معیار «به‌اندازهٔ کافی خوب» برای هر نوع کار","ارزیابی بر پایهٔ پیشرفت، نه فقط بی‌نقصی"]},
+};
+
+/* توضیح ساده برای هر پرسشنامه: what = چه می‌سنجد؛ not = چه چیزی را نمی‌سنجد یا نباید از آن برداشت کرد */
+window.IDESC = {
+ scs:{what:"اینکه آدم در زمان شکست و رنج با خودش چطور رفتار می‌کند: مهربان و متعادل، یا سرزنش‌گر و غرق در احساس.", not:"شفقت به خود به معنی تنبلی، خودخواهی یا پایین آوردن استاندارد نیست."},
+ aaq:{what:"اینکه افکار و هیجان‌های ناخوشایند چقدر مانع زندگی و کار مطابق ارزش‌های فرد می‌شوند (انعطاف‌ناپذیری روانی).", not:"نمرهٔ بالا تشخیص اختلال نیست؛ فقط نشان می‌دهد آدم با هیجان‌هایش درگیر است."},
+ lot:{what:"انتظار کلی فرد از آینده: اینکه معمولاً انتظار اتفاق خوب دارد یا بد.", not:"دربارهٔ آیندهٔ سازمان یا رضایت از شغل نیست؛ یک ویژگی شخصی نسبتاً پایدار است."},
+ ahs:{what:"امید به معنای علمی: داشتن هدف، پیدا کردن راه‌های رسیدن به آن (راه‌ها)، و انرژی و باور برای دنبال کردنش (عاملیت).", not:"با خوش‌بینی یکی نیست؛ امید دربارهٔ توانایی خود فرد برای رسیدن است."},
+ gbs:{what:"احساس کلی تعلق و پذیرفته شدن در رابطه‌ها، هم در زندگی و هم در کنار دیگران.", not:"فقط دربارهٔ محل کار نیست؛ تعلق در کل زندگی را می‌سنجد."},
+ wolf:{what:"تجربهٔ غرقگی در کار در دو هفتهٔ اخیر: غرق شدن در کار، لذت بردن از آن، و انجامش به‌خاطر خود کار.", not:"میزان تلاش یا ساعت کار را نمی‌سنجد؛ کیفیت تجربهٔ کار را می‌سنجد."},
+ sreis:{what:"برداشت خود فرد از مهارت‌هایش در فهمیدن و مدیریت هیجان در خود و دیگران.", not:"خودسنجی است، نه آزمون توانایی؛ ممکن است با مهارت واقعی فاصله داشته باشد."},
+ bscs:{what:"توانایی کنترل تکانه، مقاومت در برابر وسوسه و پایبندی به هدف‌های درازمدت.", not:"نمرهٔ پایین به معنی بی‌اراده بودن نیست؛ محیط و عادت‌ها سهم بزرگی دارند."},
+ ders:{what:"دشواری‌ها در شناختن، پذیرفتن و مدیریت هیجان‌های ناخوشایند، در شش جنبه.", not:"در گزارش برعکس نمایش داده می‌شود: عدد بالا یعنی دشواری کم. تشخیص بالینی نیست."},
+ socs:{what:"شفقت به خود در پنج جزء: شناختن رنج، همگانی دیدن آن، احساس مهربانی، تحمل احساس ناخوشایند، و اقدام برای بهتر شدن.", not:"با SCS-SF هم‌پوشانی دارد اما بخش‌بندی‌اش دقیق‌تر است."},
+ fcs:{what:"ترس و مقاومت در برابر مهربانی: مهربانی کردن به دیگران، پذیرفتن مهربانی دیگران، و مهربانی با خود.", not:"در گزارش برعکس نمایش داده می‌شود: عدد بالا یعنی ترس کم."},
+ fmps:{what:"جنبه‌های مختلف کمال‌گرایی: برخی ناسالم (نگرانی از اشتباه، شک، فشار والدین) و برخی خنثی (استاندارد بالا، نظم).", not:"استاندارد بالا و نظم به‌خودی‌خود مشکل نیستند و رنگ خوب یا بد نمی‌گیرند."},
+};
+/* توضیح ساده برای هر زیرمقیاس */
+window.SDESC = {
+ "scs.total":"میانگین کل شفقت به خود. بالا یعنی مهربانی و تعادل بیشتر با خود در زمان سختی.",
+ "scs.sk":"مهربان و صبور بودن با خود به‌جای سخت‌گیری.", "scs.sj":"سرزنش و قضاوت تند دربارهٔ خود. در گزارش برعکس: عدد بالا یعنی قضاوت کمتر.",
+ "scs.ch":"دیدن اینکه نقص و رنج بخشی از تجربهٔ همهٔ آدم‌هاست.", "scs.is":"احساس اینکه فقط من این‌طورم و تنهایم. در گزارش برعکس: عدد بالا یعنی انزوای کمتر.",
+ "scs.mi":"نگاه متعادل به احساس دردناک، بدون بزرگ کردن یا نادیده گرفتنش.", "scs.oi":"غرق شدن و گیر کردن در احساس منفی. در گزارش برعکس: عدد بالا یعنی گیر کردن کمتر.",
+ "aaq.total":"میزان درگیری با افکار و هیجان‌های ناخوشایند. در گزارش برعکس: عدد بالا یعنی انعطاف بیشتر.",
+ "lot.total":"انتظار کلی برای اتفاق‌های خوب در آینده.",
+ "ahs.total":"جمع راه‌ها و عاملیت.", "ahs.path":"توانایی پیدا کردن راه‌های مختلف برای رسیدن به هدف.", "ahs.agency":"انرژی و باور به اینکه می‌توانم راه را بروم.",
+ "gbs.total":"احساس کلی تعلق.", "gbs.acc":"احساس پذیرفته شدن و جا داشتن در جمع.", "gbs.rej":"احساس غریبگی و طرد. در گزارش برعکس: عدد بالا یعنی طرد کمتر.",
+ "wolf.abs":"تمرکز کامل و فراموش کردن زمان هنگام کار.", "wolf.enj":"لذت و حال خوب هنگام کار.", "wolf.int":"انجام دادن کار به‌خاطر خود کار، نه فقط حقوق یا پاداش.",
+ "sreis.p":"تشخیص هیجان دیگران از چهره و نشانه‌های غیرکلامی.", "sreis.u":"استفاده از احساس در تصمیم‌گیری.", "sreis.r":"داشتن واژه و فهم برای انواع هیجان.",
+ "sreis.m1":"آرام ماندن و مدیریت خشم و استرس خود.", "sreis.m2":"کمک به دیگران برای آرام شدن و بهتر شدن حالشان.",
+ "bscs.total":"کنترل تکانه، دوری از وسوسه و پایبندی به هدف.",
+ "ders.total":"جمع همهٔ دشواری‌های تنظیم هیجان. در گزارش برعکس: عدد بالا یعنی دشواری کمتر.",
+ "ders.nonacc":"خجالت، خشم یا گناه از اینکه احساس ناخوشایند داریم.", "ders.goals":"اینکه هنگام ناراحتی کار و تمرکز مختل می‌شود.",
+ "ders.impulse":"از دست دادن کنترل رفتار هنگام ناراحتی.", "ders.aware":"توجه نکردن به احساس‌ها و اهمیت ندادن به آن‌ها.",
+ "ders.strat":"این باور که وقتی ناراحتم کاری از دستم برنمی‌آید.", "ders.clarity":"ندانستن اینکه دقیقاً چه احساسی دارم.",
+ "socs.total":"میانگین کل پنج جزء.", "socs.rec":"زود فهمیدن اینکه حالم خوب نیست.", "socs.uni":"دانستن اینکه رنج برای همه پیش می‌آید.",
+ "socs.feel":"احساس گرمی و مهربانی نسبت به خود در سختی.", "socs.tol":"توانایی ماندن با احساس ناخوشایند بدون فرار یا غرق شدن.", "socs.act":"کاری کردن برای بهتر کردن حال خود.",
+ "fcs.oth":"نگرانی از اینکه مهربانی با دیگران مرا آسیب‌پذیر کند. در گزارش برعکس.", "fcs.from":"ناراحتی یا ترس از پذیرفتن مهربانی دیگران. در گزارش برعکس.",
+ "fcs.self":"ترس از مهربان بودن با خود (مثلاً از ترس ضعیف شدن). در گزارش برعکس.",
+ "fmps.cm":"ترس از اشتباه و دیدن هر خطا به‌عنوان شکست کامل. در گزارش برعکس.", "fmps.da":"شک مداوم به اینکه کار درست انجام شده یا نه. در گزارش برعکس.",
+ "fmps.pe":"احساس انتظارات بسیار بالای والدین. در گزارش برعکس.", "fmps.pc":"احساس انتقاد و تنبیه از سوی والدین. در گزارش برعکس.",
+ "fmps.ps":"داشتن استاندارد و هدف بالا برای خود. توصیفی؛ خوب یا بد نیست.", "fmps.or":"اهمیت نظم و سازمان‌یافتگی. توصیفی؛ خوب یا بد نیست.",
+};
+
+/* نام هم‌جهت برای زیرمقیاس‌های معکوس، تا در گزارش «عدد بالا» با «نام» هم‌معنا باشد */
+window.POS = {
+ "scs.sj":"قضاوت کمتر دربارهٔ خود","scs.is":"احساس انزوای کمتر","scs.oi":"گیر نکردن در احساس منفی",
+ "aaq.total":"انعطاف‌پذیری روانی","gbs.rej":"احساس طرد کمتر",
+ "ders.total":"تنظیم هیجان","ders.nonacc":"پذیرش پاسخ هیجانی","ders.goals":"حفظ رفتار هدفمند هنگام ناراحتی","ders.impulse":"کنترل تکانه هنگام ناراحتی",
+ "ders.aware":"آگاهی هیجانی","ders.strat":"دسترسی به راهبردهای تنظیم","ders.clarity":"وضوح هیجانی",
+ "fcs.oth":"آسودگی در شفقت به دیگران","fcs.from":"آسودگی در دریافت شفقت","fcs.self":"آسودگی در شفقت به خود",
+ "fmps.cm":"آسودگی از نگرانی دربارهٔ اشتباه","fmps.da":"اطمینان به کار خود","fmps.pe":"آسودگی از انتظارات والدین","fmps.pc":"آسودگی از انتقاد والدین",
+};
+/* سنجش‌خانه — فهرست همهٔ پرسشنامه‌ها و ابزارهای سنجشی که در درس‌نامه‌ها، کارگاه‌ها و اسلایدهای ویکی آمده‌اند.
+   inst: شناسهٔ پرسشنامهٔ قابل پر کردن در window.INST (از سنجش سازمان) یا window.XINST (همین فایل).
+   cat: دسته؛ who: برای چه کسی مناسب است (all = خودشناسی، stu = دانشجو، pro = متخصص)؛ clin: ابزار بالینی (فقط معرفی).
+   what: به زبان ساده؛ study: نکته برای دانشجو؛ pro: نکته برای متخصص؛ wiki: صفحه‌هایی از ویکی که دربارهٔ آن حرف زده‌اند. */
+
+window.CATS = [
+ {id:"self",  fa:"خود و شفقت", c:"#b2622a", d:"رابطهٔ آدم با خودش: مهربانی، سرزنش، کمال‌گرایی."},
+ {id:"emo",   fa:"هیجان و تنظیم آن", c:"#2f6f8f", d:"شناختن، پذیرفتن و مدیریت احساس‌ها."},
+ {id:"will",  fa:"انگیزه، اراده و لذت", c:"#6b7a2a", d:"چرا کاری را می‌کنیم، چطور سر هدف می‌مانیم، از چه لذت می‌بریم."},
+ {id:"mind",  fa:"ذهنیت‌ها و نگاه به آینده", c:"#3d5fa8", d:"باورهای ما دربارهٔ استرس، آینده، نگرانی و فکر کردن."},
+ {id:"social",fa:"رابطه، جامعه و عدالت", c:"#7a4a8a", d:"تعلق، اعتماد، عدالت، جایگاه و نگاه به دیگران."},
+ {id:"work",  fa:"کار و سازمان", c:"#2f7a55", d:"غرقگی، بازیابی، فرسودگی و ابزارهای سنجش سازمانی."},
+ {id:"life",  fa:"زندگی خوب و معنا", c:"#a07a1c", d:"غنا، معنا و کیفیت تجربهٔ زندگی."},
+ {id:"clin",  fa:"ابزارهای بالینی", c:"#a3404f", d:"ابزارهایی که در کار تشخیص و درمان به کار می‌روند؛ اینجا فقط معرفی می‌شوند."},
+ {id:"task",  fa:"آزمون‌ها و روش‌های پژوهشی", c:"#5c6670", d:"تکلیف‌ها، آزمایش‌ها و روش‌هایی که پرسشنامه نیستند ولی چیزی را می‌سنجند."}
+];
+
+/* پرسشنامه‌های تازهٔ قابل پر کردن (همان قالب window.INST) */
+window.XINST = [
+{id:"deq", fa:"پرسشنامهٔ تجارب افسردگی، بخش سرزنش خود", en:"Depressive Experiences Questionnaire – Self-Criticism (6 items)",
+ ref:"Blatt, D'Afflitti & Quinlan (1976); فرم شش‌گویه‌ای سرزنش خود، به نقل از اسلایدهای درس منتقد درون.",
+ intro:"چقدر با هر جمله موافقید؟", min:1, max:7, anchors:["خیلی مخالف","","","","","","خیلی موافق"],
+ items:["اغلب احساس می‌کنم که در حد استانداردها و ایده‌آل‌هایم نیستم و به پای آن‌ها نمی‌رسم.",
+ "بین آنچه الان هستم و آنچه می‌خواهم باشم، فاصلهٔ زیادی است.",
+ "از آنچه دارم راضی نیستم.",
+ "پذیرش ضعف‌هایم برای من دشوار است.",
+ "خیلی سرزنش‌کنندهٔ خودم هستم.",
+ "اغلب خودم را با استانداردها و اهداف (انتخاب‌شده‌ام) مقایسه می‌کنم."],
+ sub:[{id:"total",fa:"سرزنش خود",items:[1,2,3,4,5,6],dir:-1,main:true}]},
+
+{id:"esj", fa:"پرسشنامهٔ توجیه نظام اقتصادی", en:"Economic System Justification Scale (ESJ)",
+ ref:"Jost & Thompson (2000). Journal of Experimental Social Psychology, 36, 209–232. ترجمهٔ اسلایدهای درس منتقد درون.",
+ intro:"چقدر با هر جمله موافقید؟ پاسخ درست یا غلط وجود ندارد.", min:1, max:5, anchors:["کاملاً مخالف","","","","کاملاً موافق"],
+ items:["قوانین طبیعت مسئول نابرابری‌ها در جامعه هستند.",
+ "تفاوت‌های طبقاتی جامعه منعکس‌کننده و نتیجهٔ همان تفاوت‌های طبیعی در جهان هستند.",
+ "همواره آدم‌های فقیر وجود خواهند داشت، زیرا به اندازهٔ کافی برای همه شغل وجود ندارد.",
+ "بین انسان‌های ثروتمند و فقیر تفاوت ذاتی وجود ندارد و این تفاوت صرفاً محصول شرایط و موقعیتی است که در آن به دنیا آمده‌اند.",
+ "اگر مردم می‌خواستند نظام اقتصادی را عوض کنند تا امور برابر شوند، می‌توانستند.",
+ "توزیع برابر منابع برای جامعهٔ ما ممکن است.",
+ "اکثر افرادی که نمی‌توانند در جامعه پیشرفت کنند نباید نظام اقتصادی را مقصر بدانند؛ مقصر فقط خودشان هستند.",
+ "تفاوت‌های اقتصادی در جامعه بیانگر توزیع نامشروع منابع است.",
+ "هیچ منطقی ندارد که اصرار کنیم درآمدها برابرتر شوند.",
+ "توزیع برابر منابع یک کار غیرطبیعی است.",
+ "موقعیت‌های اقتصادی انسان‌ها نتیجه و محصول مشروع تلاش و دستاوردهای آن‌هاست.",
+ "از بین بردن فقر عملاً غیرممکن است.",
+ "داشتن نظامی که هم‌زمان به ثروت انبوه و فقر شدید دامن می‌زند، عادلانه نیست.",
+ "وجود فراگیر تفاوت و نابرابری اقتصادی به معنی غیرقابل‌اجتناب بودن آن نیست.",
+ "مردم فقیر از نظر ذاتی تفاوتی با مردم ثروتمند ندارند.",
+ "اگر انسان‌ها سخت کار کنند، همواره به هر آنچه بخواهند می‌رسند."],
+ sub:[{id:"total",fa:"توجیه نظام اقتصادی",items:[1,2,3,-4,-5,-6,7,-8,9,10,11,12,-13,-14,-15,16],dir:0,main:true}]},
+
+{id:"smm", fa:"مقیاس ذهنیت استرس (نسخهٔ عمومی)", en:"Stress Mindset Measure – General (SMM-G)",
+ ref:"Crum, Salovey & Achor (2013). Journal of Personality and Social Psychology, 104, 716–733.",
+ intro:"دربارهٔ استرس به‌طور کلی، چقدر با هر جمله موافقید؟", min:0, max:4, anchors:["کاملاً مخالف","","","","کاملاً موافق"],
+ items:["اثرات استرس منفی هستند و باید از آن اجتناب کرد.",
+ "تجربهٔ استرس باعث بهتر شدن یادگیری و رشد من می‌شود.",
+ "تجربهٔ استرس سلامت و سرزندگی من را تحلیل می‌برد.",
+ "استرس کارکرد و زایایی من را افزایش می‌دهد.",
+ "تجربهٔ استرس مانع رشد و یادگیری در من می‌شود.",
+ "استرس سلامت و انرژی من را بهبود می‌بخشد.",
+ "استرس کارکرد و توانایی تولید مرا خالی می‌کند.",
+ "اثرات استرس مثبت هستند و باید مورد استفاده قرار گیرند."],
+ sub:[{id:"total",fa:"ذهنیت «استرس تقویت‌کننده است»",items:[-1,2,-3,4,-5,6,-7,8],dir:0,main:true}]},
+
+{id:"teps", fa:"مقیاس تجربهٔ زمانی لذت", en:"Temporal Experience of Pleasure Scale (TEPS)",
+ ref:"Gard, Gard, Kring & John (2006). Journal of Research in Personality, 40, 1086–1102. ترجمهٔ اسلایدهای «مسئلهٔ اراده».",
+ intro:"هر جمله چقدر دربارهٔ شما درست است؟", min:1, max:6, anchors:["اصلاً درست نیست","","","","","کاملاً درست است"],
+ items:["وقتی دربارهٔ خوردن غذای مورد علاقه‌ام فکر می‌کنم، تقریباً می‌توانم مزهٔ خوب آن را حس کنم.",
+ "وقتی از فهرست غذای رستوران چیزی سفارش می‌دهم، مزهٔ خوب آن را به‌خوبی تصور می‌کنم.",
+ "منتظر خیلی چیزهای خوب در زندگی‌ام هستم.",
+ "انتظار یک تجربهٔ لذت‌بخش را کشیدن، خودش لذت‌بخش است.",
+ "گوش دادن به صدای سوختن هیزم در شومینه بسیار آرامش‌بخش است.",
+ "وقتی در هوای آزاد قدم می‌زنم، از یک نفس عمیق هوای تازه لذت می‌برم.",
+ "وقتی به یک خوراکی خوشمزه مثل شیرینی شکلاتی فکر می‌کنم، باید یک دانه بخورم.",
+ "برف تازه که روی زمین نشسته برای من بسیار زیباست.",
+ "از یک خمیازهٔ خوب واقعاً لذت می‌برم.",
+ "شب قبل از عید از شدت خوشحالی و هیجان به‌سختی خوابم می‌برد.",
+ "یک فنجان چای یا قهوهٔ داغ در یک صبح سرد برای من جذاب است.",
+ "وقتی در تختخواب گرم خودم هستم، صدای باران بر پنجره را خیلی دوست دارم.",
+ "من خیلی علاقه‌ای به کارهایی مانند غذا خوردن در رستوران ندارم.",
+ "وقتی چیز هیجان‌انگیزی قرار است در زندگی‌ام اتفاق بیفتد، واقعاً انتظارش را می‌کشم.",
+ "وقتی کسی با موهای سرم بازی می‌کند خیلی خوشم می‌آید.",
+ "وقتی در راه شهربازی هستم، به‌سختی می‌توانم صبر کنم تا سوار وسایل بازی شوم.",
+ "وقتی دربارهٔ فیلم جدید هنرپیشهٔ مورد علاقه‌ام می‌شنوم، به‌سختی می‌توانم صبر کنم تا آن را ببینم.",
+ "بوی چمن تازه‌زده برای من لذت‌بخش است."],
+ sub:[{id:"ant",fa:"لذت پیش‌بینانه (انتظار لذت)",items:[1,2,3,4,7,10,-13,14,16,17],dir:1,main:true},
+  {id:"con",fa:"لذت مصرفی (لذت در لحظه)",items:[5,6,8,9,11,12,15,18],dir:1,main:true}]},
+
+{id:"nfc", fa:"مقیاس نیاز به شناخت (هفت گویهٔ اسلاید)", en:"Need for Cognition Scale – 7 items shown in the course",
+ ref:"Cacioppo & Petty (1982); Cacioppo, Petty & Kao (1984). گویه‌ها از اسلایدهای «مسئلهٔ اراده».",
+ intro:"هر جمله چقدر دربارهٔ شما صدق می‌کند؟", min:1, max:5, anchors:["اصلاً صدق نمی‌کند","","","","کاملاً صدق می‌کند"],
+ items:["مسائل پیچیده را به ساده ترجیح می‌دهم.",
+ "خیلی دوست دارم مسئول شرایطی باشم که به فکر کردن زیاد نیاز دارند.",
+ "فکر کردن برای من خیلی لذت‌بخش نیست.",
+ "ترجیح می‌دهم به کاری بپردازم که فکر کم لازم دارد تا خودم را درگیر مسائلی کنم که توانایی ذهنی‌ام را به چالش بکشد.",
+ "سعی می‌کنم از شرایطی که ممکن است لازم شود عمیق به مسئله‌ای فکر کنم، دوری کنم.",
+ "فکر کردن شدید و طولانی برای من رضایت‌بخش است.",
+ "فقط به اندازه‌ای فکر می‌کنم که لازم باشد."],
+ sub:[{id:"total",fa:"لذت از فکر کردن",items:[1,2,-3,-4,-5,6,-7],dir:0,main:true}]},
+
+{id:"rich", fa:"پرسشنامهٔ زندگی غنی از نظر روانی", en:"Psychologically Rich Life Questionnaire (PRLQ)",
+ ref:"Oishi, Choi, Koo et al. (2020); Oishi & Westgate (2022), Psychological Review. ترجمهٔ اسلاید ۳۳ کارگاه.",
+ intro:"چقدر با هر جمله موافقید؟", min:1, max:7, anchors:["کاملاً مخالف","","","","","","کاملاً موافق"],
+ items:["زندگی من از نظر روانی غنی بوده است.","زندگی من پر از تجارب گوناگون بوده است.","از نظر هیجانی زندگی غنی داشته‌ام.",
+ "خیلی تجارب جالب و جذابی داشته‌ام.","خیلی تجارب نو و بدیعی در زندگی داشته‌ام.","زندگی من پر از تجارب خاص و منحصربه‌فرد بوده است.",
+ "زندگی من شامل لحظه‌های غنی و پر از هیجان است.","زندگی من دراماتیک بوده است.",
+ "از راه تجربه‌های دست اول مانند سفر و رفتن به کنسرت، طیف وسیعی از هیجان‌ها را تجربه می‌کنم.",
+ "کلی داستان شخصی دارم که برای دیگران تعریف کنم.","در بستر مرگم احتمالاً خواهم گفت «زندگی جالبی داشتم».",
+ "هنگام مرگ احتمالاً خواهم گفت «کلی چیز دیدم و یاد گرفتم».","زندگی من یک فیلم یا رمان خوب می‌شد.",
+ "زندگی من یکنواخت بوده است.","اغلب در زندگی‌ام حوصله‌ام سر می‌رود.","زندگی من بدون اتفاق خاصی بوده است.",
+ "نمی‌توانم به یاد بیاورم آخرین بار کی کار جدید و خاصی انجام دادم یا تجربه کردم."],
+ sub:[{id:"total",fa:"غنای روانی زندگی",items:[1,2,3,4,5,6,7,8,9,10,11,12,13,-14,-15,-16,-17],dir:0,main:true}]},
+
+{id:"cci", fa:"هفت مقیاس فرایندهای مقابله", en:"Process scales from the Comprehensive Coping Inventory (CCI-55)",
+ ref:"McKay, Fanning & Zurita Ona (2011). Mind and Emotions. گویه‌ها از اسلایدهای ۱۸ تا ۲۴ کارگاه «مرز میان سلامت و اختلال».",
+ intro:"هر جمله چقدر شما را توصیف می‌کند؟ هفت بخش دارد و هر بخش هشت جمله.", min:1, max:5, anchors:["اصلاً این‌گونه نیستم","","","","کاملاً این‌گونه هستم"],
+ parts:[[1,"اجتناب تجربه‌ای"],[9,"نشخوار"],[17,"پنهان‌سازی هیجانی"],[25,"تمرکز بر کوتاه‌مدت"],[33,"استمرار و یکنواختی پاسخ"],[41,"پرخاش و خشونت"],[49,"تعبیر منفی"]],
+ items:["سعی می‌کنم از نظر هیجانی از شرایط ناراحت‌کننده فاصله بگیرم.","احساس‌های بد را از خودم دور می‌کنم.","وقتی حس بدی دارم، سعی می‌کنم به آن توجه نکنم.","سعی می‌کنم حس‌های بدم را خفه و بی‌حس کنم.","از شرایط مشکل‌آفرین خودم را دور می‌کنم.","وقتی مسائل دشوار می‌شوند، خودم را درگیرشان نمی‌کنم.","وقتی چیزی ناراحت‌کننده است، اجتناب می‌کنم.","از مناقشه‌های ناراحت‌کننده خودم را دور می‌کنم.",
+ "به همهٔ چیزهای بدی که ممکن است در یک موقعیت پیش بیاید فکر می‌کنم.","مرتب به یک وضعیت و نتایج بدِ ممکنش فکر می‌کنم.","دربارهٔ اتفاق‌های مشکل‌آفرین خیلی فکر می‌کنم.","سعی می‌کنم شرایط دشوار را تحلیل کنم یا بفهمم.","وقتی مشکلی هست، معمولاً به بدترین حالت ممکن فکر می‌کنم.","وقتی اتفاق بدی می‌افتد، خاطره‌اش را تکرار و تحلیل می‌کنم.","وقتی کاری را کرده‌ام که نباید می‌کردم، مکرر به آن فکر می‌کنم.","دربارهٔ چیزهایی که ممکن است اتفاق بیفتند نگران می‌شوم.",
+ "با بروز ندادن، هیجان‌هایم را کنترل می‌کنم.","سعی می‌کنم نگذارم احساساتم معلوم شود.","وقتی حس منفی دارم، تلاش می‌کنم دیده نشود.","سعی می‌کنم فقط سمت آرام من دیده شود.","هیجان‌هایم را برای خودم نگه می‌دارم.","ناراحتی یا بی‌قراری‌ام را نشان نمی‌دهم.","فقط اجازه می‌دهم مردم حالات خوب مرا ببینند.","وقتی در رنجم، ظاهر مثبتم را حفظ می‌کنم.",
+ "بیشتر کاری را می‌کنم که فوراً حالم را خوب کند.","می‌خواهم حس‌های بدم فوراً برطرف شوند، حتی به قیمت دردسر بعدی.","دنبال راه‌حل‌های سریعم و فکر می‌کنم آینده خودش درست می‌شود.","کاری را می‌کنم که در لحظه حس خوب بدهد.","به آنچه فوراً رخ می‌دهد متمرکزم و به بعد فکر نمی‌کنم.","به چیزی فکر می‌کنم که فوراً کمک کند، نه آنچه در درازمدت خوب است.","دنبال راه‌حل سریعم حتی اگر موقت باشد.","اینکه الان چطور حالم را خوب کنم برایم مهم است.",
+ "وقتی به راه‌حلی عادت کنم، همیشه همان کار را می‌کنم.","راه خودم را برای مشکلات دارم و تمایلی به تغییر ندارم.","هرچه شود، اصرار دارم مسائل را به شیوهٔ خاصی حل کنم.","با مشکلات به روشی که همیشه کرده‌ام برخورد می‌کنم.","روشم را تغییر نمی‌دهم حتی اگر جواب ندهد.","همان راهبرد همیشگی را به کار می‌برم.","وقتی به مشکل می‌خورم، تلاشم را دو برابر می‌کنم و همان روش را ادامه می‌دهم.","گاهی فکر می‌کنم باید روشم را عوض کنم، اما آخر سر همان کار همیشگی را می‌کنم.",
+ "گاهی دیگران را می‌زنم یا تهدید به زدن می‌کنم.","برای آرام شدن داد می‌زنم.","با حملهٔ کلامی احساساتم را آزاد می‌کنم.","عصبانی می‌شوم و حرف‌های تحقیرآمیز می‌زنم.","در شرایط دشوار عصبانی می‌شوم.","وقتی چیزی درست پیش نمی‌رود، خیلی حالم گرفته می‌شود.","وقتی زیر فشار سرخورده‌ام، عصبانی می‌شوم.","دربارهٔ انتقام خیلی خیال‌پردازی می‌کنم.",
+ "خودم را به شکل منفی با دیگران مقایسه می‌کنم.","در خودم ایراد پیدا می‌کنم.","روش‌ها و کارهای دیگران را خیلی قضاوت می‌کنم.","روی اشتباهات و تقصیر دیگران خیلی تمرکز می‌کنم.","جنبهٔ منفی موقعیت‌ها را می‌بینم.","کلاً دیگران را خیلی قضاوت می‌کنم.","اغلب فکر می‌کنم امور بد مدیریت می‌شوند.","انتظار ندارم کارها خوب پیش بروند."],
+ sub:[{id:"avoid",fa:"اجتناب تجربه‌ای",items:[1,2,3,4,5,6,7,8],dir:-1,main:true},
+  {id:"rum",fa:"نشخوار",items:[9,10,11,12,13,14,15,16],dir:-1,main:true},
+  {id:"supp",fa:"پنهان‌سازی هیجانی",items:[17,18,19,20,21,22,23,24],dir:-1,main:true},
+  {id:"short",fa:"تمرکز بر کوتاه‌مدت",items:[25,26,27,28,29,30,31,32],dir:-1,main:true},
+  {id:"rigid",fa:"استمرار و یکنواختی پاسخ",items:[33,34,35,36,37,38,39,40],dir:-1,main:true},
+  {id:"aggr",fa:"پرخاش و خشونت",items:[41,42,43,44,45,46,47,48],dir:-1,main:true},
+  {id:"neg",fa:"تعبیر منفی",items:[49,50,51,52,53,54,55,56],dir:-1,main:true}]}
+];
+
+/* کاتالوگ: همهٔ ابزارها، قابل پر کردن یا فقط معرفی */
+window.CAT = [
+/* ——— خود و شفقت ——— */
+{id:"scs", inst:"scs", cat:"self", who:["all","stu","pro"], n:"۱۲", fmt:"۱ تا ۵", by:"نف؛ ریس و همکاران ۲۰۱۱",
+ study:"شش زیرمقیاس دوتایی: سه قطب «شفقت» (مهربانی، اشتراک انسانی، ذهن‌آگاهی) و سه قطب مقابل (قضاوت، انزوا، همانندسازی افراطی). در فرم کوتاه، نمرهٔ کل معتبرتر از زیرمقیاس‌هاست.",
+ pro:"فرم کوتاه با فرم بلند (۲۶ گویه) همبستگی نزدیک به کامل دارد. بحث روش‌شناختی دربارهٔ اینکه قطب‌های منفی یک سازهٔ جدا («سرزنش خود») هستند یا نه، هنوز ادامه دارد. برای استفادهٔ تجاری با نف تماس بگیرید.",
+ wiki:["s2","compassion","s3"], rel:["socs","fcs","deq"]},
+{id:"socs", inst:"socs", cat:"self", who:["all","stu","pro"], n:"۲۰", fmt:"۱ تا ۵", by:"استراوس، گو، کایکن و همکاران ۲۰۲۰",
+ study:"بر پایهٔ تعریف پنج‌جزئی شفقت ساخته شده: شناختن رنج، همگانی دیدن آن، احساس مهربانی، تحمل احساس ناخوشایند، و اقدام برای کاهش رنج. برخلاف SCS قطب منفی ندارد.",
+ pro:"دو نسخه دارد: شفقت به خود (SOCS-S) و شفقت به دیگران (SOCS-O). ساختار پنج‌عاملی در نمونه‌های انگلیسی تأیید شده است.",
+ wiki:["s3","compassion"], rel:["scs","fcs"]},
+{id:"fcs", inst:"fcs", cat:"self", who:["stu","pro","all"], n:"۳۸", fmt:"۱ تا ۵", by:"گیلبرت و همکاران ۲۰۱۱",
+ study:"سه بخش جدا: ترس از ابراز شفقت به دیگران، ترس از دریافت شفقت، ترس از شفقت به خود. دو بخش آخر با سرزنش خود و افسردگی رابطهٔ قوی‌تری دارند.",
+ pro:"در درمان متمرکز بر شفقت (CFT) برای پیدا کردن «مانع‌ها» پیش از تمرین شفقت به کار می‌رود.",
+ wiki:["s2","compassion"], rel:["scs","socs"]},
+{id:"deq", inst:"deq", cat:"self", who:["all","stu","pro"], n:"۶", fmt:"۱ تا ۷", by:"بلات و همکاران؛ فرم شش‌گویه‌ای",
+ what:"اینکه آدم چقدر با استانداردهای خودش فاصله می‌بیند و چقدر خودش را سرزنش می‌کند؛ همان «منتقد درون».",
+ not:"تشخیص افسردگی نیست. نمرهٔ بالا یعنی صدای منتقد درون بلندتر است، نه اینکه کسی بیمار است.",
+ study:"سیدنی بلات دو نوع آسیب‌پذیری برای افسردگی جدا کرد: «وابستگی» (ماشه: فقدان رابطه) و «سرزنش خود» (ماشه: شکست). این شش گویه بُعد دوم را می‌سنجند.",
+ pro:"DEQ اصلی ۶۶ گویه دارد و با تحلیل عاملی نمره‌گذاری می‌شود؛ این فرم کوتاه برای آموزش و پژوهش سریع است. ابزارهای مرتبط: SAS بک و PSI-II.",
+ wiki:["s3","compassion"], rel:["scs","fmps","sas"]},
+{id:"fmps", inst:"fmps", cat:"self", who:["all","stu","pro"], n:"۳۵", fmt:"۱ تا ۵", by:"فراست و همکاران ۱۹۹۰",
+ study:"شش زیرمقیاس: استانداردهای شخصی، نگرانی دربارهٔ اشتباه، تردید دربارهٔ عمل، انتظارات والدین، انتقاد والدین، سازمان‌یافتگی. «نگرانی از اشتباه» و «تردید» هستهٔ کمال‌گرایی ناسالم‌اند.",
+ pro:"در پژوهش‌ها اغلب دو عامل بالاتر استخراج می‌شود: «تلاش کمال‌گرایانه» و «نگرانی کمال‌گرایانه». سازمان‌یافتگی معمولاً از نمرهٔ کل کنار گذاشته می‌شود.",
+ wiki:["s12","perfection","shelf3"], rel:["hfmps","btps","pspsx"]},
+{id:"hfmps", cat:"self", who:["stu","pro"], n:"۴۵", fmt:"۱ تا ۷", by:"هیوئیت و فلت ۱۹۹۱", fa:"مقیاس چندبعدی کمال‌گرایی هیوئیت-فلت", en:"Hewitt–Flett Multidimensional Perfectionism Scale",
+ what:"کمال‌گرایی را از نظر «جهت» می‌سنجد: از خودم کمال می‌خواهم، از دیگران کمال می‌خواهم، یا حس می‌کنم جامعه از من کمال می‌خواهد.",
+ samples:[], subs:[["معطوف به خود","استانداردهای بسیار بالا برای خود"],["معطوف به دیگران","انتظار کمال از دیگران"],["تحمیل‌شده از جامعه","باور به اینکه دیگران از من کمال می‌خواهند؛ قوی‌ترین رابطه با افسردگی و اندیشهٔ خودکشی"]],
+ study:"«کمال‌گرایی تحمیل‌شده از جامعه» در پژوهش‌ها خطرناک‌ترین بُعد است و در نسل‌های اخیر افزایش نشان داده است (کوران و هیل).",
+ pro:"ابزار دارای حق نشر (MHS). فرم کوتاه و نسخهٔ کودکان هم دارد.",
+ wiki:["s12","perfection"], rel:["fmps","btps"]},
+{id:"btps", cat:"self", who:["stu","pro"], n:"۴۵", fmt:"۱ تا ۵", by:"اسمیت، ساکلوفسکه، استوبر و شری ۲۰۱۶", fa:"مقیاس «سه بزرگ» کمال‌گرایی", en:"Big Three Perfectionism Scale (BTPS)",
+ what:"سه چهرهٔ کمال‌گرایی را کنار هم می‌سنجد: کمال‌گرایی متصلب (سخت‌گیری با خود)، خودانتقادگر (نگرانی و سرزنش)، و خودشیفته (توقع کمال از دیگران و حس برتری).",
+ subs:[["متصلب","اصرار بر بی‌نقص بودن کار خود"],["خودانتقادگر","نگرانی از اشتباه، سرزنش خود، حساسیت به ارزیابی دیگران"],["خودشیفته","توقع کمال از دیگران، احساس استحقاق، خودبزرگ‌بینی"]],
+ study:"این مقیاس کمال‌گرایی را به «روی تاریک» شخصیت هم وصل می‌کند؛ بُعد خودشیفته با خودشیفتگی و رفتار خصمانه همراه است.",
+ wiki:["s12"], rel:["fmps","hfmps","pspsx"]},
+{id:"pspsx", cat:"self", who:["stu","pro"], n:"۲۷", fmt:"۱ تا ۷", by:"هیوئیت و همکاران ۲۰۰۳", fa:"مقیاس خودنمایی کمال‌گرایانه", en:"Perfectionistic Self-Presentation Scale (PSPS)",
+ what:"اینکه آدم چقدر تلاش می‌کند جلوی دیگران بی‌نقص دیده شود و نقص‌هایش را پنهان کند.",
+ subs:[["تبلیغ کمال خود","نشان دادن خود به‌عنوان آدمی بی‌نقص"],["نشان ندادن نقص","پرهیز از دیده شدن در حال اشتباه"],["فاش نکردن نقص","حرف نزدن دربارهٔ اشتباه‌ها و ضعف‌ها"]],
+ study:"این ابزار «خودِ عمومی» کمال‌گرایی را می‌سنجد، نه استانداردهای درونی را؛ با پرهیز از کمک‌خواهی همراه است.",
+ wiki:["s12"], rel:["hfmps","btps"]},
+{id:"sas", cat:"self", who:["stu","pro"], by:"آرون بک", fa:"مقیاس اجتماعی‌گرایی-خودمختاری", en:"Sociotropy–Autonomy Scale (SAS)",
+ what:"دو سبک شخصیتی آسیب‌پذیر در برابر افسردگی را می‌سنجد: وابستگی شدید به تأیید و رابطه (اجتماعی‌گرایی)، و وابستگی شدید به دستاورد و استقلال (خودمختاری).",
+ study:"هم‌خانوادهٔ نظریهٔ بلات: «اجتماعی‌گرایی» بک نزدیک به «وابستگی» بلات و «خودمختاری» بک نزدیک به «سرزنش خود» است. فرضیهٔ همخوانی می‌گوید افسردگی وقتی محتمل‌تر است که رویداد بد با نقطهٔ آسیب‌پذیر فرد جور باشد.",
+ wiki:["s3"], rel:["psi2","deq"]},
+{id:"psi2", cat:"self", who:["stu","pro"], by:"رابینز و همکاران", fa:"سیاههٔ سبک شخصی (نسخهٔ ۲)", en:"Personal Style Inventory II (PSI-II)",
+ what:"نسخهٔ بازبینی‌شدهٔ سنجش «اجتماعی‌گرایی» و «خودمختاری» به‌عنوان دو زمینهٔ آسیب‌پذیری شخصیتی.",
+ study:"در اسلایدهای درس منتقد درون کنار SAS به‌عنوان ابزار دوم معرفی شد.",
+ wiki:["s3"], rel:["sas","deq"]},
+
+/* ——— هیجان ——— */
+{id:"ders", inst:"ders", cat:"emo", who:["all","stu","pro"], n:"۳۶", fmt:"۱ تا ۵", by:"گرتز و رومر ۲۰۰۴",
+ study:"شش زیرمقیاس: عدم پذیرش، دشواری در رفتار هدفمند، دشواری در کنترل تکانه، کمبود آگاهی هیجانی، دسترسی محدود به راهبردها، کمبود وضوح هیجانی. «آگاهی هیجانی» از بقیه مستقل‌تر است.",
+ pro:"پرکاربردترین ابزار پژوهشی تنظیم هیجان. فرم‌های کوتاه DERS-16 و DERS-18 هم هست. میانگین نمرهٔ کل در نمونهٔ دانشجویی اصلی حدود ۷۸ تا ۸۱ بود.",
+ wiki:["s4","s3"], rel:["aaq","ppfi","cci","tas"]},
+{id:"aaq", inst:"aaq", cat:"emo", who:["all","stu","pro"], n:"۷", fmt:"۱ تا ۷", by:"باند، هیز، بائر و همکاران ۲۰۱۱",
+ study:"ابزار اصلی سنجش «انعطاف‌ناپذیری روانی» در درمان پذیرش و تعهد (ACT). نمرهٔ بالا یعنی افکار و هیجان‌های ناخوشایند بیشتر جلوی زندگی ارزشمند را می‌گیرند.",
+ pro:"نقد مهم: AAQ-II با پریشانی و روان‌رنجوری همبستگی بسیار بالایی دارد و شاید بیشتر «حال بد» را بسنجد تا خود فرایند اجتناب. ابزارهای جدیدتر مانند PPFI برای همین ساخته شدند.",
+ wiki:["s4","workshop"], rel:["ppfi","ders","cci"]},
+{id:"ppfi", cat:"emo", who:["stu","pro"], n:"۱۵", by:"کاشدان و همکاران ۲۰۲۰", fa:"شاخص شخصی‌شدهٔ انعطاف‌پذیری روانی", en:"Personalized Psychological Flexibility Index (PPFI)",
+ what:"انعطاف‌پذیری روانی را در رابطه با هدف مهم خود فرد می‌سنجد: پذیرش احساس ناخوشایند، دوری نکردن از آن، و ماندن سر هدف.",
+ subs:[["پذیرش","اجازه دادن به احساس ناخوشایند"],["اجتناب","تلاش برای دور شدن از احساس (معکوس)"],["تعهد","ادامهٔ کار به سوی هدف ارزشمند"]],
+ study:"اول از فرد خواسته می‌شود مهم‌ترین هدفش را بنویسد؛ گویه‌ها دربارهٔ همان هدف پرسیده می‌شوند. برای همین کمتر از AAQ-II با «حال بد کلی» قاطی می‌شود.",
+ wiki:["s4"], rel:["aaq","ders"]},
+{id:"cci", inst:"cci", cat:"emo", who:["all","stu","pro"], n:"۵۶", fmt:"۱ تا ۵", by:"مک‌کی، فنینگ و زوریتا اونا ۲۰۱۱",
+ what:"هفت عادت ذهنی و رفتاری که در بسیاری از مشکلات روانی مشترک‌اند: فرار از احساس، نشخوار، پنهان کردن هیجان، دنبال آرامش فوری بودن، تکرار همان راه‌حل، پرخاش، و منفی دیدن.",
+ not:"اسم مشکل یا تشخیص نیست. هر هفت فرایند در همهٔ آدم‌ها کم‌وبیش هست؛ نمره نشان می‌دهد کدام عادت در شما پررنگ‌تر است و کدام مهارت ممکن است بیشتر به کارتان بیاید.",
+ study:"ایدهٔ «فراتشخیصی»: به‌جای برچسب تشخیص، فرایندهای مشترک را بسنج و مهارت را بر همان پایه انتخاب کن. همسو با HiTOP و RDoC که در همان کارگاه معرفی شدند.",
+ pro:"در کتاب «ذهن و هیجان‌ها» هر فرایند به مجموعه‌ای از مهارت‌های CBT، ACT و DBT وصل شده است. دامنهٔ پاسخ در اینجا ۱ تا ۵ است؛ برای کار بالینی به نسخهٔ اصلی کتاب مراجعه کنید.",
+ wiki:["workshop"], rel:["aaq","ders","ars","ww2"]},
+{id:"tas", cat:"emo", clin:true, who:["stu","pro"], n:"۲۰", fmt:"۱ تا ۵", by:"بگبی، پارکر و تیلور ۱۹۹۴", fa:"مقیاس آلکسی‌تایمی تورنتو", en:"Toronto Alexithymia Scale (TAS-20)",
+ what:"دشواری در شناختن و توصیف احساس‌ها و فکر کردن بیشتر به رویدادهای بیرونی تا دنیای درون.",
+ samples:["پیدا کردن واژه برای احساساتم دشوار است.","نمی‌دانم غمگینم، ترسیده‌ام یا عصبانی‌ام.","ترجیح می‌دهم دربارهٔ فعالیت‌های روز حرف بزنم تا احساساتم."],
+ subs:[["دشواری در شناسایی احساس",""],["دشواری در توصیف احساس",""],["تفکر بیرون‌مدار",""]],
+ study:"نقطه‌های برش رایج: ۶۱ و بالاتر آلکسی‌تایمیک، ۵۲ تا ۶۰ احتمالی، ۵۱ و کمتر عادی. آلکسی‌تایمی قطب مقابل «دانه‌داری هیجان» است.",
+ wiki:["psychopath"], rel:["ders","sreis"]},
+{id:"rpa", cat:"emo", who:["all","stu","pro"], n:"۱۷", fmt:"۱ تا ۴", by:"فلدمن، یورمان و جانسون ۲۰۰۸", fa:"پرسشنامهٔ پاسخ به عاطفهٔ مثبت", en:"Responses to Positive Affect Questionnaire (RPA)",
+ what:"وقتی حالمان خوب است با آن چه می‌کنیم: مزه‌مزه‌اش می‌کنیم و بزرگش می‌کنیم، یا کمرنگش می‌کنیم.",
+ samples:["فکر می‌کنم چقدر خوشحالم.","لحظه را مزه‌مزه می‌کنم.","فکر می‌کنم شانسم به‌زودی تمام می‌شود. (کمرنگ کردن)","یادم می‌آید این حس خوب دوام نمی‌آورد. (کمرنگ کردن)"],
+ subs:[["نشخوار مثبت متمرکز بر هیجان","توجه به حس خوب و تقویتش"],["نشخوار مثبت متمرکز بر خود","وصل کردن حس خوب به توانایی‌های خود"],["کمرنگ کردن","کم کردن یا بی‌اعتبار کردن حس خوب"]],
+ study:"کمرنگ کردن هیجان مثبت با افسردگی بیشتر همراه است، از جمله پس از سوگ (بولن و لنفرینک ۲۰۲۰).",
+ wiki:["s15"], rel:["caq","teps"]},
+{id:"caq", cat:"emo", who:["stu","pro"], by:"لرا و نیومن ۲۰۱۷", fa:"پرسشنامهٔ اجتناب از تضاد هیجانی", en:"Contrast Avoidance Questionnaire (CAQ)",
+ what:"اینکه آدم چقدر عمداً نگران یا ناخوش می‌ماند تا اگر اتفاق بدی افتاد، «سقوط» هیجانی شدیدی را تجربه نکند.",
+ samples:["ترجیح می‌دهم الان حالم بد باشد تا بعداً خوشحالی‌ام را از دست ندهم.","هیچ‌وقت امیدم را بالا نمی‌برم تا ناامید نشوم.","نگران می‌شوم تا احساساتم ناگهان سقوط نکنند."],
+ study:"مدل اجتناب از تضاد میشل نیومن توضیح می‌دهد چرا نگرانی، با وجود رنجی که دارد، ادامه پیدا می‌کند: نگرانی از «تضاد» میان حال خوب و خبر بد محافظت می‌کند.",
+ wiki:["s15","workshop"], rel:["rpa","ww2","pswq"]},
+{id:"sreis", inst:"sreis", cat:"emo", who:["all","stu","pro"], n:"۱۹", fmt:"۱ تا ۵", by:"براکت و همکاران ۲۰۰۶",
+ study:"شاخه‌های مدل توانایی مایر و سالووی را با خودگزارش می‌سنجد: ادراک، به‌کارگیری، فهم و مدیریت هیجان (خود و دیگران). همبستگی آن با آزمون توانایی MSCEIT ضعیف است؛ یعنی «فکر می‌کنم بلدم» با «واقعاً بلدم» یکی نیست.",
+ wiki:["s14"], rel:["msceit","tas"]},
+{id:"msceit", cat:"emo", who:["stu","pro"], n:"۱۴۱", by:"مایر، سالووی و کاروسو ۲۰۰۲", fa:"آزمون هوش هیجانی مایر-سالووی-کاروسو", en:"Mayer–Salovey–Caruso Emotional Intelligence Test (MSCEIT)",
+ what:"آزمون توانایی (نه خودگزارشی) هوش هیجانی: تشخیص هیجان در چهره و تصویر، فهم ترکیب و تغییر هیجان‌ها، و انتخاب بهترین راه مدیریت هیجان در موقعیت‌ها.",
+ study:"پاسخ‌ها با «اجماع» مردم یا «اجماع متخصصان» مقایسه و نمره‌گذاری می‌شوند. نقد: «پاسخ درست» در موقعیت‌های هیجانی به فرهنگ وابسته است.",
+ pro:"ابزار تجاری (MHS). در فراتحلیل‌ها هوش هیجانی توانایی پس از کنترل هوش عمومی و شخصیت، فقط مقدار کمی از عملکرد شغلی را اضافه پیش‌بینی می‌کند.",
+ wiki:["s14"], rel:["sreis"]},
+
+/* ——— انگیزه، اراده و لذت ——— */
+{id:"bscs", inst:"bscs", cat:"will", who:["all","stu","pro"], n:"۱۳", fmt:"۱ تا ۵", by:"تنجنی، باومایستر و بون ۲۰۰۴",
+ study:"نمرهٔ کل بین ۱۳ تا ۶۵. نسخهٔ بلند ۳۶ گویه دارد و همبستگی دو نسخه حدود ۰٫۹۳ است. خویشتنداری بالا بیشتر با «عادت‌های خوب» همراه است تا با مقاومت دائمی در برابر وسوسه.",
+ pro:"گویه‌های این مقیاس هم «کنترل تکانه» و هم «پایبندی به هدف» را می‌سنجند؛ برخی پژوهشگران دو عامل جدا (مهار و آغازگری) پیشنهاد کرده‌اند.",
+ wiki:["s5","s6","habits","shelf14","change"], rel:["miscs","teps","nfc"]},
+{id:"miscs", cat:"will", who:["stu","pro"], by:"بورگلر، کلاینکه و هنکه ۲۰۲۲", fa:"مقیاس فراشناخت در خویشتنداری", en:"Metacognition in Self-Control Scale (MISCS)",
+ what:"اینکه آدم چقدر دربارهٔ راهبردهای خویشتنداری‌اش فکر می‌کند: پیش از وسوسه برنامه می‌ریزد، وسط کار خودش را می‌پاید، و بعد نتیجه را ارزیابی می‌کند.",
+ study:"خویشتنداری را از «زور اراده» به «انتخاب هوشمندانهٔ راهبرد» منتقل می‌کند؛ با ایدهٔ «چندتنظیمی» (استفادهٔ هم‌زمان از چند راهبرد) همراه است.",
+ wiki:["s7"], rel:["bscs"]},
+{id:"teps", inst:"teps", cat:"will", who:["all","stu","pro"], n:"۱۸", fmt:"۱ تا ۶", by:"گارد، گارد، کرینگ و جان ۲۰۰۶",
+ what:"دو نوع لذت را جدا می‌سنجد: لذت از «انتظار» چیزی خوب، و لذت از «خود» تجربه در لحظه.",
+ not:"ابزار تشخیص بی‌لذتی یا افسردگی نیست. نمرهٔ پایین می‌تواند به سبک زندگی، فرهنگ یا خستگی این روزها برگردد.",
+ study:"در اسکیزوفرنی بیشتر لذت «پیش‌بینانه» آسیب می‌بیند تا لذت «مصرفی»؛ این تمایز «خواستن» و «دوست داشتن» (wanting/liking) را به سنجش می‌آورد.",
+ pro:"گویهٔ ۱۳ معکوس است. تقسیم گویه‌ها به دو زیرمقیاس در اینجا بر پایهٔ نسخهٔ اصلی گارد و همکاران است.",
+ wiki:["effort","anhedonia","decision"], rel:["shaps","rpa","pes"]},
+{id:"shaps", cat:"will", who:["all","stu","pro"], n:"۱۴", fmt:"۴ گزینه", by:"اسنیث، همیلتون و همکاران ۱۹۹۵", fa:"مقیاس لذت اسنیث-همیلتون", en:"Snaith–Hamilton Pleasure Scale (SHAPS)",
+ what:"توانایی لذت بردن از چیزهای معمول زندگی: غذا، بو، طبیعت، دوستان، کمک به دیگران.",
+ samples:["از برنامهٔ تلویزیونی یا رادیویی مورد علاقه‌ام لذت می‌برم.","از بودن با خانواده یا دوستان نزدیک لذت می‌برم.","از بوی گل یا نسیم دریا یا نان تازه لذت می‌برم.","از دیدن چهرهٔ خندان دیگران لذت می‌برم."],
+ study:"از فهرست ۳۲۰ گویه‌ای لوینسون بسیار کوتاه‌تر است و برای سنجش بی‌لذتی در پژوهش و درمانگاه رایج است. از فرد خواسته می‌شود حال «چند روز اخیر» را بگوید.",
+ pro:"نمره‌گذاری اصلی دوتایی است (لذت دارد / ندارد)؛ نمره‌گذاری پیوسته (۱ تا ۴) هم رایج است.",
+ wiki:["shelf11","decision","anhedonia"], rel:["teps","pes"]},
+{id:"pes", cat:"will", who:["stu","pro"], n:"۳۲۰", by:"لوینسون ۱۹۷۱", fa:"برنامهٔ وقایع خوشایند", en:"Pleasant Events Schedule (PES)",
+ what:"فهرست بلند فعالیت‌های خوشایند؛ برای هر کدام دو پرسش: چند بار انجامش داده‌ام، و چقدر لذت داشت.",
+ study:"پایهٔ «فعال‌سازی رفتاری» در درمان افسردگی: فعالیت‌هایی که هم خوشایندند و هم کم انجام می‌شوند، نقطهٔ شروع برنامهٔ درمان‌اند.",
+ wiki:["anhedonia","shelf11"], rel:["shaps","teps"]},
+{id:"srq", cat:"will", who:["all","stu","pro"], by:"رایان، دسی و همکاران", fa:"خانوادهٔ پرسشنامه‌های خودتنظیمی", en:"Self-Regulation Questionnaires (SRQ-A, -E, -P, -T, -L, -R, -F)",
+ what:"همه یک سؤال می‌پرسند: «چرا این کار را می‌کنی؟» و پاسخ‌ها را روی طیفی از «چون مجبورم» تا «چون از آن لذت می‌برم» می‌چینند.",
+ samples:["(درس) چون اگر نکنم به دردسر می‌افتم.","(درس) چون اگر نکنم از خودم خجالت می‌کشم.","(درس) چون می‌خواهم مطلب را بفهمم.","(درس) چون لذت‌بخش است."],
+ subs:[["تنظیم بیرونی","برای پاداش یا فرار از تنبیه"],["درون‌فکنی‌شده","برای فرار از گناه و شرم"],["همانندسازی‌شده","چون برایم مهم است"],["درونی","چون لذت می‌برم"]],
+ study:"نسخه‌ها: تحصیل (SRQ-A، ۳۲ گویه)، ورزش، رفتار اجتماعی (SRQ-P)، درمان، یادگیری (SRQ-L)، دین (SRQ-R) و دوستی (SRQ-F). از تفاضل انگیزه‌های خودمختار و کنترل‌شده «شاخص خودمختاری نسبی» (RAI) ساخته می‌شود.",
+ pro:"مقیاس انگیزش در رابطهٔ جنسی (SexMS) و مقیاس انگیزش چندبعدی کار (MWMS) همین چارچوب را در حوزه‌های دیگر به کار برده‌اند.",
+ wiki:["s13","motivation","shelf10","theories"], rel:["mwms","wolf"]},
+{id:"borg", cat:"will", who:["stu","pro"], by:"گونار بورگ", fa:"مقیاس ادراک فشار بورگ", en:"Borg Rating of Perceived Exertion (RPE)",
+ what:"آدم به سختی فعالیت بدنی‌اش عدد می‌دهد (در نسخهٔ کلاسیک از ۶ تا ۲۰).",
+ study:"نمونه‌ای از سنجش «تلاش جسمی»؛ با ضربان قلب و لاکتات هماهنگ است. نسخهٔ تصویری کودکان OMNI نام دارد.",
+ wiki:["effort"], rel:["nfc"]},
+
+/* ——— ذهنیت‌ها ——— */
+{id:"lot", inst:"lot", cat:"mind", who:["all","stu","pro"], n:"۱۰", fmt:"۰ تا ۴", by:"شییر، کارور و بریجز ۱۹۹۴",
+ study:"۶ گویهٔ اصلی (۳ مثبت، ۳ منفی) و ۴ گویهٔ پرکننده که نمره نمی‌گیرند. خوش‌بینی «انتظار کلی» است، بدون اینکه لزوماً خود فرد عامل نتیجه باشد.",
+ pro:"بحث قدیمی: خوش‌بینی و بدبینی یک بُعد دوقطبی‌اند یا دو بُعد جدا؟ داده‌ها کمی به سود دو بُعد است.",
+ wiki:["s9","optimism"], rel:["ahs","smm"]},
+{id:"ahs", inst:"ahs", cat:"mind", who:["all","stu","pro"], n:"۱۲", fmt:"۱ تا ۸", by:"اسنایدر و همکاران ۱۹۹۱",
+ study:"۴ گویهٔ «راه‌ها»، ۴ گویهٔ «عاملیت» و ۴ پرکننده. فرق امید با خوش‌بینی: در امید، خود فرد راه و انرژی رسیدن به هدف را می‌بیند. نسخهٔ «حالتی» (۶ گویه) امید همین حالا را می‌سنجد.",
+ wiki:["s9","optimism"], rel:["lot"]},
+{id:"smm", inst:"smm", cat:"mind", who:["all","stu","pro"], n:"۸", fmt:"۰ تا ۴", by:"کرام، سالووی و آکور ۲۰۱۳",
+ what:"باور شما دربارهٔ استرس: اینکه استرس فقط آسیب می‌زند، یا می‌تواند یادگیری، کارکرد و سلامت را هم تقویت کند.",
+ not:"میزان استرس شما را نمی‌سنجد؛ فقط نگاه شما به آن را. هیچ‌کدام از دو سر طیف «درست» نیست؛ واقعیت هر دو را دارد.",
+ study:"گویه‌های ۱، ۳، ۵ و ۷ معکوس‌اند. نسخهٔ اختصاصی (SMM-S) دربارهٔ یک عامل استرس مشخص است. در آزمایش ویدئوی بحران مالی ۲۰۰۸، تغییر ذهنیت با حال و کارکرد بهتر همراه بود.",
+ pro:"اثر مداخله‌های ذهنیت در بازتکرارهای بزرگ‌تر کوچک‌تر از مطالعه‌های اول بوده است.",
+ wiki:["s8"], rel:["lot","ww2"]},
+{id:"nfc", inst:"nfc", cat:"mind", who:["all","stu","pro"], n:"۷ از ۱۸", fmt:"۱ تا ۵", by:"کاچیوپو و پتی ۱۹۸۲",
+ what:"اینکه آدم چقدر از فکر کردن عمیق و حل مسئلهٔ پیچیده لذت می‌برد.",
+ not:"هوش را نمی‌سنجد؛ میل و لذت از فکر کردن را می‌سنجد.",
+ study:"در درس «مسئلهٔ اراده» سوی دیگر طیف بی‌انگیزگی بود و در درس تعلق هم معرفی شد. نیاز به شناخت بالا با مقاومت بیشتر در برابر استدلال سطحی همراه است.",
+ pro:"این هفت گویه زیرمجموعه‌ای از فرم ۱۸ گویه‌ای است که روی اسلاید آمده؛ نمرهٔ آن با هنجارهای فرم کامل قابل مقایسه نیست.",
+ wiki:["effort","s10"], rel:["crt","bscs"]},
+{id:"ww2", cat:"mind", who:["all","stu","pro"], n:"۲۵", fmt:"۱ تا ۵", by:"هولووی و همکاران (گروه دوگا)", fa:"پرسشنامهٔ «چرا نگرانی؟»", en:"Why Worry-II (WW-II)",
+ what:"باورهای مثبت ما دربارهٔ نگرانی؛ اینکه چرا فکر می‌کنیم نگران بودن به دردمان می‌خورد.",
+ samples:["نگرانی به من کمک می‌کند بدانم چه کنم.","از راه نگرانی است که کارهای لازم را انجام می‌دهم.","همین که نگرانم نشان می‌دهد آدم خوبی‌ام.","صرف نگران بودن می‌تواند مانع وقوع یک حادثه شود.","اگر از پیش نگران باشم، وقتی اتفاق بدی می‌افتد کمتر سرخورده می‌شوم."],
+ subs:[["کمک به حل مسئله",""],["نیروی انگیزه‌دهنده",""],["نشانهٔ شخصیت خوب",""],["جلوگیری از اتفاق بد",""],["محافظت در برابر هیجان منفی",""]],
+ study:"یکی از چهار جزء الگوی نگرانی دوگا، کنار نابردباری در برابر عدم قطعیت، نگرش منفی به مشکل و اجتناب شناختی.",
+ wiki:["workshop","psychopath"], rel:["ius","pswq","npoq","caq"]},
+{id:"ius", cat:"mind", who:["all","stu","pro"], n:"۱۲", fmt:"۱ تا ۵", by:"کارلتون و همکاران ۲۰۰۷", fa:"مقیاس نابردباری در برابر عدم قطعیت", en:"Intolerance of Uncertainty Scale (IUS-12)",
+ what:"اینکه موقعیت‌های مبهم و نامطمئن چقدر آزارمان می‌دهند و چقدر نیاز داریم همه چیز را از پیش بدانیم.",
+ samples:["وقایع غیرمنتظره خیلی مرا آزار می‌دهند.","باید بتوانم همه چیز را از پیش برنامه‌ریزی کنم.","کوچک‌ترین شکی مانع عمل من می‌شود."],
+ subs:[["اضطراب آینده‌نگر","میل به دانستن و پیش‌بینی آینده"],["اضطراب مهاری","فلج شدن و عمل نکردن در ابهام"]],
+ study:"در الگوی دوگا «موتور اصلی» نگرانی است. فرم بلند ۲۷ گویه دارد.",
+ wiki:["workshop","psychopath"], rel:["ww2","pswq"]},
+{id:"pswq", cat:"mind", clin:true, who:["stu","pro"], n:"۱۶", by:"مایر و همکاران ۱۹۹۰", fa:"پرسشنامهٔ نگرانی پن", en:"Penn State Worry Questionnaire (PSWQ)",
+ what:"شدت و کنترل‌ناپذیری نگرانی، فارغ از موضوع آن.",
+ study:"ابزار استاندارد سنجش نگرانی در اختلال اضطراب فراگیر. نگرانی بیمارگونه «مجموعه‌ای نامحدود از جایگشت‌های ممکن» است.",
+ wiki:["psychopath","workshop"], rel:["ww2","ius","npoq","gad7"]},
+{id:"npoq", cat:"mind", clin:true, who:["stu","pro"], n:"۱۲", by:"رابیشو و دوگا ۲۰۰۵", fa:"پرسشنامهٔ نگرش منفی به مشکل", en:"Negative Problem Orientation Questionnaire (NPOQ)",
+ what:"مشکلات را تهدید دیدن، شک به توانایی خود در حل آن‌ها و بدبینی به نتیجه.",
+ study:"فرق آن با «مهارت حل مسئله»: فرد ممکن است مهارت داشته باشد اما به آن اعتماد نکند.",
+ wiki:["psychopath","workshop"], rel:["ww2","ius"]},
+
+/* ——— رابطه، جامعه و عدالت ——— */
+{id:"gbs", inst:"gbs", cat:"social", who:["all","stu","pro"], n:"۱۲", fmt:"۱ تا ۷", by:"مالون، پیلو و آلیسون ۲۰۱۲",
+ study:"دو زیرمقیاس: پذیرش/جا داشتن، و طرد/بیگانگی (معکوس). تعلق نیاز پایهٔ روانی است و طرد با فرسودگی و ترک کار همراه است.",
+ wiki:["s10","s11","mattering"], rel:["ams","wolf"]},
+{id:"jsi", cat:"social", who:["all","stu","pro"], n:"۴۰", fmt:"۰ تا ۵", by:"اشمیت، باومرت، گولویتسر و ماس ۲۰۱۰", fa:"سیاههٔ حساسیت به بی‌عدالتی", en:"Justice Sensitivity Inventory (JSI)",
+ what:"حساسیت به بی‌عدالتی از چهار زاویه: وقتی به خودم ظلم می‌شود، وقتی می‌بینم به دیگری ظلم می‌شود، وقتی من به ناحق سود می‌برم، و وقتی من به کسی ظلم می‌کنم.",
+ samples:["وقتی دیگران چیزی دریافت می‌کنند که باید مال من می‌شد، اذیت می‌شوم. (قربانی)","وقتی کسی به پاداشی که حقش است نمی‌رسد، ناراحت می‌شوم. (ناظر)","وقتی پاداشی که حق دیگری است نصیب من می‌شود، عذاب وجدان پیدا می‌کنم. (ذی‌نفع)","حس اینکه دارم کسی را استثمار می‌کنم برایم غیرقابل‌تحمل است. (مرتکب)"],
+ subs:[["قربانی","با بدبینی، حسادت و رفتار خودخواهانه همراه است"],["ناظر","با همدلی و دفاع از دیگران"],["ذی‌نفع","عذاب وجدان از سود ناحق"],["مرتکب","با رفتار اخلاقی و همکاری بیشتر"]],
+ study:"دو نفر هر دو «عدالت‌طلب» به نظر می‌رسند؛ یکی فقط وقتی حق خودش خورده شود ناراحت می‌شود، دیگری وقتی خودش به ناحق سود ببرد. حساسیت قربانی با سه زاویهٔ دیگر رابطهٔ متفاوتی دارد.",
+ wiki:["fairness"], rel:["esj","dps"]},
+{id:"esj", inst:"esj", cat:"social", who:["all","stu","pro"], n:"۱۶", fmt:"۱ تا ۵", by:"جاست و تامپسون ۲۰۰۰",
+ what:"اینکه آدم نابرابری اقتصادی موجود را چقدر طبیعی، مشروع و اجتناب‌ناپذیر می‌بیند.",
+ not:"نمرهٔ «خوب» یا «بد» ندارد و موضع سیاسی درست یا غلط را نشان نمی‌دهد؛ یک نگرش را توصیف می‌کند.",
+ study:"در درس منتقد درون نشان داده شد که توجیه نظام با شفقت کمتر به دیگران و ترس بیشتر از شفقت همراه است. نظریهٔ «توجیه نظام» جاست می‌گوید آدم‌ها انگیزه دارند وضع موجود را مشروع ببینند، حتی وقتی به ضررشان است.",
+ pro:"نسخهٔ اصلی پاسخ ۹ درجه‌ای دارد؛ اینجا همان ۵ درجهٔ اسلاید به کار رفته است. گویه‌های ۴، ۵، ۶، ۸، ۱۳، ۱۴ و ۱۵ معکوس‌اند.",
+ wiki:["s3","s2"], rel:["jsi","scs"]},
+{id:"dps", cat:"social", who:["all","stu","pro"], n:"۱۷", by:"چنگ و همکاران ۲۰۱۰؛ کرنر و همکاران ۲۰۲۳", fa:"مقیاس سلطه و پرستیژ", en:"Dominance and Prestige Scale",
+ what:"دو راه رسیدن به جایگاه: با ترس و زور (سلطه) یا با احترام و دانش (پرستیژ).",
+ samples:["از داشتن کنترل بر دیگران لذت می‌برم. (سلطه)","وقتی دیگران از من می‌ترسند، خوشم می‌آید. (سلطه)","وقتی دیگران از من مشورت می‌خواهند، لذت می‌برم. (پرستیژ)","وقتی دیگران مرا در حوزه‌ای متخصص بدانند، احساس خوبی دارم. (پرستیژ)"],
+ subs:[["سلطه","جایگاه از راه تهدید و کنترل منابع"],["پرستیژ","جایگاه از راه مهارت، دانش و تحسین"]],
+ study:"نسخهٔ اصلی «همتاسنجی» است (دیگران دربارهٔ فرد پاسخ می‌دهند)؛ نسخهٔ خودپنداره بعدها ساخته شد. چند گویه معکوس‌اند.",
+ wiki:["prestige"], rel:["jsi","pes2"]},
+{id:"pes2", cat:"social", who:["all","stu","pro"], n:"۹", fmt:"۱ تا ۷", by:"کمبل و همکاران ۲۰۰۴", fa:"مقیاس استحقاق روان‌شناختی", en:"Psychological Entitlement Scale (PES)",
+ what:"این احساس پایدار که «من بیش از دیگران حق دارم».",
+ samples:["صادقانه بگویم، فکر می‌کنم بیش از دیگران استحقاق دارم.","اگر در تایتانیک بودم، حق داشتم جزو اولین مسافران قایق نجات باشم.","بهترین را می‌خواهم، چون ارزشش را دارم."],
+ study:"اسکات بری کافمن نسخه‌ای «قربانی‌محور» از همین جمله‌ها ساخت («… چون بیش از دیگران سختی کشیده‌ام»). یادآوری بی‌عدالتی، احساس استحقاق را بالا می‌برد (زیتک و همکاران ۲۰۱۰).",
+ wiki:["riseabove"], rel:["ars","ams","nunique","npi"]},
+{id:"ars", cat:"social", who:["all","stu","pro"], n:"۱۹", fmt:"۱ تا ۴", by:"سوخودولسکی، گلب و پیوسیس ۲۰۰۱", fa:"مقیاس نشخوار خشم", en:"Anger Rumination Scale (ARS)",
+ what:"اینکه آدم چقدر تجربه‌های خشم را در ذهن مرور می‌کند، به انتقام فکر می‌کند و دلخوری‌ها را نگه می‌دارد.",
+ samples:["دربارهٔ تجربه‌های خشم‌آلود گذشته‌ام خیلی نشخوار می‌کنم.","بعد از دعوا، فانتزی‌های طولانی انتقام دارم.","حتی دلخوری‌های کوچک تا مدت‌ها آزارم می‌دهند.","رویدادهایی را که عصبانی‌ام کرده‌اند مرتب تحلیل می‌کنم."],
+ subs:[["پس‌اندیشی خشم",""],["فکر انتقام",""],["خاطرات خشم",""],["فهمیدن علت‌ها",""]],
+ study:"نشخوار خشم خشم را طولانی و پرخاش را محتمل‌تر می‌کند؛ شکل خاصی از نشخوار فکری است.",
+ wiki:["riseabove","workshop"], rel:["cci","pes2"]},
+{id:"ams", cat:"social", who:["all","stu","pro"], n:"۵", by:"فلت و همکاران", fa:"مقیاس ضداهمیت", en:"Anti-Mattering Scale",
+ what:"احساس اینکه برای دیگران مهم نیستیم، دیده نمی‌شویم و نظرمان اهمیتی ندارد.",
+ samples:["چقدر احساس می‌کنید مهم نیستید؟","چقدر احساس شده که نامرئی هستید؟","چند وقت یک‌بار کسی به شما فهمانده که نظرتان برایش مهم نیست؟"],
+ study:"«اهمیت داشتن» دو بخش دارد: احساس ارزشمند بودن برای دیگران، و احساس اینکه تفاوتی می‌سازیم. ضداهمیت با تنهایی، افسردگی و خشم همراه است.",
+ wiki:["riseabove","mattering"], rel:["gbs","pes2"]},
+{id:"nunique", cat:"social", who:["stu","pro"], by:"اسنایدر و فرومکین ۱۹۷۷", fa:"مقیاس نیاز به منحصربه‌فرد بودن", en:"Need for Uniqueness Scale",
+ what:"میل به متفاوت بودن و متمایز دیده شدن از دیگران.",
+ samples:["ترجیح می‌دهم با دیگران فرق داشته باشم.","عمداً کارهایی می‌کنم که مرا از اطرافیانم متمایز کند."],
+ study:"در پژوهش زیتک و وینسنت (۲۰۱۵)، القای احساس استحقاق خلاقیت را کمی بالا برد، به‌ویژه در کسانی که این نیاز را بیشتر داشتند (یافتهٔ آزمایشگاهی کوچک).",
+ wiki:["riseabove"], rel:["pes2"]},
+{id:"rmq", cat:"social", who:["all","stu","pro"], n:"۲۴ + دروغ‌سنج", fmt:"۱ تا ۶", by:"کروگلانسکی، هیگینز و همکاران ۲۰۰۰", fa:"پرسشنامهٔ شیوهٔ تنظیم", en:"Regulatory Mode Questionnaire",
+ what:"دو گرایش در پیگیری هدف: «حرکت» (شروع کردن و جلو رفتن) و «سنجش» (مقایسه و ارزیابی بهترین راه).",
+ samples:["من یک آدم اهل عملم. (حرکت)","وقتی تصمیم به کاری می‌گیرم، نمی‌توانم صبر کنم تا شروع شود. (حرکت)","معمولاً خودم را با دیگران مقایسه می‌کنم. (سنجش)","اغلب کارهای خودم یا دیگران را نقد می‌کنم. (سنجش)"],
+ subs:[["حرکت (Locomotion)",""],["سنجش (Assessment)",""]],
+ study:"چند جملهٔ «دروغ‌سنج» هم دارد («هیچ‌وقت سر قرار دیر نکرده‌ام»). غلبهٔ حرکت بر سنجش آمادگی برای آشتی را بیشتر می‌کند (وب، کلمن و همکاران ۲۰۱۷).",
+ wiki:["conflict"], rel:["bscs"]},
+{id:"trust", cat:"social", who:["all","stu","pro"], by:"روزنبرگ ۱۹۵۶؛ راتر ۱۹۶۷", fa:"پرسشنامه‌های اعتماد اجتماعی", en:"Faith in People · Interpersonal Trust Scale · General Trust",
+ what:"اعتماد کلی به «بیشتر مردم» و به غریبه‌ها، در برابر اعتماد به آشنایان.",
+ samples:["بعضی می‌گویند به اکثر مردم می‌شود اعتماد کرد؛ بعضی می‌گویند هر قدر احتیاط کنی کم است. نظر شما چیست؟"],
+ study:"دو پرسشنامهٔ مشهور: «ایمان به مردم» (روزنبرگ) و «اعتماد بین‌فردی» (راتر). ایرادها: فاصلهٔ باور با رفتار، «حرف مفت» بودن پاسخ، و مبهم بودن «اکثر مردم». مقیاس اعتماد عمومی فراگیر (IGTS) و «شعاع اعتماد» این ابهام را کم می‌کنند. بازی‌های اعتماد رفتار واقعی را می‌سنجند.",
+ wiki:["trust"], rel:["games"]},
+{id:"ascent", cat:"social", who:["stu","pro"], fmt:"۰ تا ۱۰۰", by:"کتیلی و همکاران ۲۰۱۵", fa:"مقیاس صعود انسان", en:"Ascent of Man scale",
+ what:"سنجش انسانیت‌زدایی آشکار: افراد روی تصویر مشهور «فرگشت» نشان می‌دهند هر گروه را چقدر «تکامل‌یافته» می‌بینند.",
+ study:"نشان داد انسانیت‌زدایی آشکار، برخلاف تصور، در جوامع امروز هم رایج است و با حمایت از خشونت علیه گروه هدف همراه است. انسانیت‌زدایی متقابل چرخهٔ دشمنی را تقویت می‌کند.",
+ wiki:["friendly"], rel:["iat"]},
+{id:"soi", cat:"social", who:["stu","pro"], n:"۷", by:"سیمپسون و گانگستاد ۱۹۹۱", fa:"سیاههٔ جهت‌گیری جنسی-اجتماعی", en:"Sociosexual Orientation Inventory (SOI)",
+ what:"آمادگی برای رابطهٔ جنسی بدون تعهد عاطفی درازمدت.",
+ samples:["رابطهٔ جنسی بدون عشق اشکالی ندارد.","باید حتماً از نظر عاطفی به کسی نزدیک باشم. (معکوس)"],
+ study:"در پژوهش‌های روان‌شناسی تکاملی برای مقایسهٔ راهبردهای جفت‌یابی به کار رفته است. نسخهٔ بازبینی‌شده (SOI-R) سه جزء رفتار، نگرش و میل را جدا می‌کند.",
+ wiki:["badmen"], rel:[]},
+{id:"kinsey", cat:"social", who:["stu","pro"], fmt:"۰ تا ۶", by:"آلفرد کینزی ۱۹۴۸", fa:"مقیاس کینزی", en:"Kinsey Scale",
+ what:"گرایش جنسی را روی طیفی از ۰ (کاملاً غیرهمجنس‌گرا) تا ۶ (کاملاً همجنس‌گرا) قرار می‌دهد.",
+ study:"اهمیت تاریخی: گرایش را طیف دید نه دو دستهٔ جدا. نقدها: رندال سل (۱۹۹۷) نشان داد پژوهش‌ها گرایش را به شکل‌های متفاوت (کشش، رفتار، هویت) تعریف می‌کنند و نتیجه‌ها به همین تعریف وابسته‌اند.",
+ wiki:["orientation","shelf2"], rel:[]},
+
+/* ——— کار و سازمان ——— */
+{id:"wolf", inst:"wolf", cat:"work", who:["all","stu","pro"], n:"۱۳", fmt:"۱ تا ۷", by:"آرنولد بکر ۲۰۰۸",
+ study:"سه جزء: جذب (غرق شدن)، لذت از کار، و انگیزهٔ درونی. مفهوم غرقگی چیکسنت‌میهایی را به محیط کار آورد.",
+ wiki:["s11","s10","poswork"], rel:["req","uwes"]},
+{id:"req", cat:"work", who:["all","stu","pro"], n:"۱۶", fmt:"۱ تا ۵", by:"زوننتاگ و فریتز ۲۰۰۷", fa:"پرسشنامهٔ تجربهٔ بازیابی", en:"Recovery Experience Questionnaire (REQ)",
+ what:"اینکه بعد از کار چقدر واقعاً از کار جدا می‌شویم و انرژی‌مان برمی‌گردد.",
+ samples:["کار را فراموش می‌کنم. (جدایی روانی)","کارهای آرامش‌بخش انجام می‌دهم. (آرامش)","چیزهای جدید یاد می‌گیرم. (تسلط)","خودم دربارهٔ وقتم تصمیم می‌گیرم. (کنترل)"],
+ subs:[["جدایی روانی","فکر نکردن به کار پس از کار"],["آرامش",""],["تسلط","چالش و یادگیری بیرون از کار"],["کنترل","اختیار بر وقت آزاد"]],
+ study:"قوی‌ترین رابطه با کاهش خستگی هیجانی. «پارادوکس بازیابی»: کسانی که بیش از همه به جدا شدن نیاز دارند، کمتر از همه می‌توانند جدا شوند. جدایی بیشتر مهارت است تا صفت ذاتی.",
+ wiki:["s11"], rel:["wolf","cbi"]},
+{id:"uwes", cat:"work", who:["stu","pro"], n:"۹ (و ۱۷)", fmt:"۰ تا ۶", by:"شوفلی و بکر", fa:"مقیاس اشتیاق کاری اوترخت", en:"Utrecht Work Engagement Scale (UWES-9)",
+ what:"اشتیاق کاری در سه بُعد: نیرومندی، وقف و جذب.",
+ study:"در مدل «خواسته‌ها و منابع شغلی» (JD-R)، منابع شغلی اشتیاق را می‌سازند و خواسته‌های زیاد فرسودگی را.",
+ pro:"رایگان برای پژوهش و استفادهٔ غیرتجاری.",
+ wiki:["poswork","orgpsych"], rel:["wolf","cbi","wami"]},
+{id:"wami", cat:"work", who:["all","stu","pro"], n:"۱۰", by:"استگر، دیک و دافی ۲۰۱۲", fa:"سیاههٔ کار و معنا", en:"Work and Meaning Inventory (WAMI)",
+ what:"معنادار بودن کار در سه بُعد: معنای مثبت در کار، معناسازی از راه کار برای کل زندگی، و انگیزهٔ خیر بزرگ‌تر.",
+ wiki:["poswork"], rel:["uwes","rich"]},
+{id:"cbi", cat:"work", who:["stu","pro"], by:"کریستنسن و همکاران؛ شوفلی و همکاران؛ ماسلاک", fa:"ابزارهای سنجش فرسودگی", en:"CBI · BAT · MBI",
+ what:"سه ابزار رایج برای فرسودگی: سیاههٔ فرسودگی کپنهاگ (CBI)، ابزار سنجش فرسودگی (BAT) و سیاههٔ فرسودگی ماسلاک (MBI).",
+ study:"MBI کلاسیک است و سه بُعد دارد (خستگی هیجانی، مسخ شخصیت/بدبینی، کاهش کارایی). BAT تازه‌تر است و فرسودگی را به‌عنوان یک «سندرم» با چهار نشانهٔ اصلی می‌سنجد.",
+ pro:"CBI رایگان؛ BAT رایگان برای استفادهٔ غیرتجاری؛ MBI پولی و با مجوز ناشر. پیش از استفادهٔ تجاری وضعیت مجوز را دوباره بررسی کنید.",
+ wiki:["orgpsych","poswork"], rel:["uwes","req","orgtools"]},
+{id:"orgtools", cat:"work", who:["pro","stu"], by:"چند پدیدآورنده", fa:"ابزارهای سنجش سازمانی", en:"COPSOQ III · Psychological Safety · Organizational Justice · MWMS",
+ what:"ابزارهای معتبری که برای سنجش واقعی در سازمان پیشنهاد شده‌اند: خطرهای روانی-اجتماعی (COPSOQ III)، امنیت روانی تیم (مقیاس هفت‌پرسشی ادموندسون)، عدالت سازمانی (کولکیت، چهار بُعد) و انگیزش چندبعدی کار (MWMS).",
+ study:"اصل مهم: برای سرویس واقعی از پرسشنامه‌های معتبر و هنجاریابی‌شده استفاده کنید، نه پرسش‌های ساختهٔ خودمان. سنجش سازمانی تصویر گروهی است، نه برچسب فردی.",
+ pro:"COPSOQ III رایگان و با نسخه‌های رسمی چندزبانه. ادموندسون و کولکیت در مقاله منتشر شده‌اند؛ برای استفادهٔ تجاری مجوز بگیرید. در هلند، Arbowet و مادهٔ ۲۷ WOR را در نظر بگیرید.",
+ wiki:["orgpsych","orgsvc"], rel:["cbi","uwes"]},
+{id:"mwms", cat:"work", who:["stu","pro"], n:"۱۹", by:"گانیه و همکاران ۲۰۱۵", fa:"مقیاس انگیزش چندبعدی کار", en:"Multidimensional Work Motivation Scale (MWMS)",
+ what:"چرایی کار کردن، بر پایهٔ نظریهٔ خودتعیین‌گری: از بی‌انگیزگی تا انگیزهٔ درونی.",
+ study:"همان منطق خانوادهٔ SRQ در محیط کار.",
+ wiki:["orgpsych","s13"], rel:["srq","wolf"]},
+
+/* ——— زندگی خوب و معنا ——— */
+{id:"rich", inst:"rich", cat:"life", who:["all","stu","pro"], n:"۱۷", fmt:"۱ تا ۷", by:"شیگهیرو اویشی و همکاران",
+ what:"اینکه زندگی‌تان چقدر پر از تجربه‌های متنوع، تازه و دیدگاه‌گستر بوده است؛ بُعد سوم زندگی خوب در کنار شادکامی و معنا.",
+ not:"شادکامی یا موفقیت را نمی‌سنجد. زندگی غنی می‌تواند سخت و ناخوشایند هم باشد؛ نمرهٔ پایین هم یعنی زندگی آرام‌تر و قابل‌پیش‌بینی‌تر، نه بدتر.",
+ study:"اویشی سه نوع زندگی خوب را جدا می‌کند: شاد، معنادار، و غنی از نظر روانی. در کشورهای مختلف حدود ۷ تا ۱۷ درصد مردم اگر مجبور به انتخاب باشند زندگی غنی را ترجیح می‌دهند. غنای روانی با گشودگی به تجربه و کنجکاوی همراه است.",
+ pro:"گویه‌های ۱۴ تا ۱۷ معکوس‌اند. پاسخ ۷ درجه‌ای در اینجا برای سادگی به کار رفته است.",
+ wiki:["workshop","lookagain","makingsense","shelf14"], rel:["wami","teps"]},
+{id:"mss", cat:"life", who:["all","stu","pro"], by:"توماس و آزمیتیا ۲۰۱۹", fa:"مقیاس کوتاه انگیزه برای خلوت", en:"Motivation for Solitude Scale – Short Form (MSS-SF)",
+ what:"دلیل تنها بودن ما: خلوتی که خودمان می‌خواهیم، یا خلوتی که از سر اضطراب و احساس تعلق نداشتن به آن پناه می‌بریم.",
+ samples:["(خلوت ناخواسته) وقتی با دیگرانم مضطربم.","(خلوت ناخواسته) در کنار دیگران نمی‌توانم خودم باشم.","(خلوت ناخواسته) احساس می‌کنم به جمع تعلق ندارم."],
+ subs:[["خلوت خودانگیخته","با رشد شخصی، هویت و پذیرش خود همراه است"],["خلوت ناخواسته","با تنهایی، اضطراب و افسردگی همراه است"]],
+ study:"آنچه خلوت را خوب یا بد می‌کند، خود تنها بودن نیست، دلیل آن است.",
+ wiki:["solitude","workshop"], rel:["gbs","ams"]},
+{id:"doi", cat:"life", who:["stu","pro"], by:"بروین دو بروین، پارکر و فیشهاف ۲۰۰۷", fa:"پرسشنامهٔ پیامدهای تصمیم و توانش تصمیم‌گیری", en:"Decision Outcomes Inventory (DOI) · Adult Decision-Making Competence (A-DMC)",
+ what:"DOI می‌پرسد در زندگی چند بار تصمیم‌های بد با پیامد منفی گرفته‌اید؛ A-DMC مهارت‌های تصمیم‌گیری را با تکلیف می‌سنجد.",
+ subs:[["مقاومت در برابر قاب‌بندی",""],["به‌کارگیری قواعد تصمیم",""],["اطمینان کم یا بیش از حد",""],["ثبات در ادراک خطر",""],["مقاومت در برابر هزینهٔ ازدست‌رفته",""],["شناخت هنجارهای اجتماعی",""]],
+ study:"کنار مقیاس «بیشینه‌سازی در برابر بسنده‌کاری» شوارتز معرفی شد: بیشینه‌سازان گزینهٔ بهتری می‌گیرند اما کمتر راضی‌اند.",
+ wiki:["mistakes","decision"], rel:["crt"]},
+
+/* ——— ابزارهای بالینی (فقط معرفی) ——— */
+{id:"gad7", cat:"clin", clin:true, who:["stu","pro"], n:"۷", fmt:"۰ تا ۳", by:"اسپیتزر و همکاران ۲۰۰۶", fa:"پرسشنامهٔ اضطراب فراگیر ۷ گویه‌ای", en:"Generalized Anxiety Disorder-7 (GAD-7)",
+ what:"غربالگری کوتاه اضطراب در دو هفتهٔ اخیر.",
+ study:"نمره‌های ۵، ۱۰ و ۱۵ معمولاً حدود اضطراب خفیف، متوسط و شدید شمرده می‌شوند و ۱۰ یا بیشتر نشانهٔ نیاز به ارزیابی تخصصی است. ابزار غربالگری است، نه تشخیص.",
+ wiki:["psychopath"], rel:["pswq","dts"]},
+{id:"dts", cat:"clin", clin:true, who:["stu","pro"], n:"۱۵", by:"سیمونز و گاهر ۲۰۰۵", fa:"مقیاس تحمل پریشانی", en:"Distress Tolerance Scale (DTS)",
+ what:"باورها و واکنش‌ها به احساس ناخوشایند: چقدر تحمل‌ناپذیر به نظر می‌رسد و چقدر فوراً باید متوقفش کرد.",
+ samples:["هیچ چیزی بدتر از احساس ناراحتی نیست.","وقتی ناراحتم فوراً باید کاری برای توقفش بکنم."],
+ wiki:["psychopath"], rel:["aaq","ders"]},
+{id:"panas", cat:"clin", who:["all","stu","pro"], n:"۲۰", fmt:"۱ تا ۵", by:"واتسون، کلارک و تلگن ۱۹۸۸", fa:"مقیاس عاطفهٔ مثبت و منفی", en:"Positive and Negative Affect Schedule (PANAS)",
+ what:"دو بُعد مستقل خلق: عاطفهٔ مثبت (علاقه‌مند، الهام‌گرفته، مصمم...) و عاطفهٔ منفی (تحریک‌پذیر، شرمنده، ترسیده...).",
+ study:"نکتهٔ مهم آن نظری است: خلق مثبت و منفی دو سر یک طیف نیستند، دو بُعد جدا (متعامد)اند؛ می‌توان هم‌زمان هر دو را بالا یا پایین داشت. بازهٔ زمانی (همین حالا، این هفته، به‌طور کلی) قابل تغییر است.",
+ wiki:["psychopath"], rel:["rpa","sam"]},
+{id:"depr", cat:"clin", clin:true, who:["stu","pro"], by:"همیلتون؛ مونت‌گومری و آسبرگ؛ بک", fa:"مقیاس‌های سنجش افسردگی", en:"HAMD-17 · MADRS · BDI-II · SRRS",
+ what:"سه ابزار اصلی سنجش شدت افسردگی و یک ابزار ویژهٔ کندی روانی-حرکتی.",
+ study:"همیلتون (HAMD-17) بیشتر بر علائم جسمی و خواب تکیه دارد و با مصاحبه پر می‌شود؛ MADRS به تغییر در درمان حساس‌تر است؛ BDI خودگزارشی است و وزن بیشتری به علائم شناختی می‌دهد. ویدلوشر کندی روانی-حرکتی را هستهٔ افسردگی می‌دانست و مقیاس SRRS را برایش ساخت.",
+ wiki:["psychopath","shelf3"], rel:["shaps","deq"]},
+{id:"mdq", cat:"clin", clin:true, who:["stu","pro"], n:"۱۳ + ۲", by:"هیرشفلد و همکاران ۲۰۰۰", fa:"پرسشنامهٔ اختلال خلقی", en:"Mood Disorder Questionnaire (MDQ)",
+ what:"غربالگری دوره‌های شیدایی یا نیمه‌شیدایی: دوره‌ای که «مثل خود همیشگی نبودید»؛ پرانرژی، کم‌خواب، پرحرف، پرش افکار، ولخرجی.",
+ study:"پس از ۱۳ پرسش بله/خیر، دو پرسش دیگر: آیا این‌ها هم‌زمان بودند؟ و چقدر مشکل‌ساز شدند؟ کنار MSI-BPD (غربالگری اختلال شخصیت مرزی) برای تمایز دوقطبی و مرزی بحث شد.",
+ wiki:["psychopath"], rel:["msibpd"]},
+{id:"msibpd", cat:"clin", clin:true, who:["stu","pro"], n:"۱۰", by:"زنارینی و همکاران ۲۰۰۳", fa:"ابزار غربالگری مک‌لین برای اختلال شخصیت مرزی", en:"McLean Screening Instrument for BPD (MSI-BPD)",
+ what:"ده پرسش بله/خیر دربارهٔ نشانه‌های الگوی مرزی: بی‌ثباتی رابطه، تکانشگری، احساس تهی بودن، ترس از طرد.",
+ study:"یک مطالعهٔ ۲۰۲۱ نشان داد گویه‌های «آسیب به خود» و «بی‌اعتمادی» بیشتر مرزی را، و «خلق بالا، کاهش خواب، پرحرفی و انرژی» بیشتر دوقطبی را از هم جدا می‌کنند.",
+ wiki:["psychopath"], rel:["mdq"]},
+{id:"sips", cat:"clin", clin:true, who:["pro","stu"], fmt:"۰ تا ۶", by:"مک‌گلاشن، والش و وودز", fa:"مصاحبهٔ ساختاریافته برای سندرم‌های خطر پسیکوز", en:"Structured Interview for Psychosis-risk Syndromes (SIPS)",
+ what:"مصاحبه (نه پرسشنامه) برای شناسایی مرحلهٔ «پیش‌درآمد» پسیکوز؛ علائم مثبت، منفی، آشفتگی و عمومی از ۰ تا ۶ درجه‌بندی می‌شوند.",
+ study:"منطق کلیدی: آنچه سطح ۵ را از ۶ جدا می‌کند، توانایی فرد در شک کردن به تجربه‌اش است. در سطح ۶ باور بی‌تردید است.",
+ wiki:["psychopath"], rel:["panss"]},
+{id:"panss", cat:"clin", clin:true, who:["pro","stu"], by:"کی، فیزبین و اپلر؛ آندریاسن", fa:"مقیاس‌های علائم اسکیزوفرنی", en:"PANSS · SANS · SAPS",
+ what:"مقیاس‌های بالینی برای سنجش علائم مثبت (توهم، هذیان)، منفی (کندی عاطفی، فقر کلام، بی‌ارادگی، بی‌لذتی) و آشفتگی.",
+ wiki:["psychopath"], rel:["sips","teps"]},
+{id:"bipq", cat:"clin", clin:true, who:["stu","pro"], n:"۹", by:"برادبنت و همکاران ۲۰۰۶", fa:"پرسشنامهٔ کوتاه ادراک بیماری و پرسشنامهٔ واکنش رفتاری به بیماری", en:"Brief Illness Perception Questionnaire (BIPQ) · BRIQ",
+ what:"BIPQ می‌سنجد آدم بیماری یا علامتش را چطور می‌فهمد (پیامد، مدت، کنترل، نگرانی…)؛ BRIQ واکنش‌های رفتاری به علامت را (مثل الگوی «همه یا هیچ» یا پرهیز).",
+ study:"در بحث اختلال‌های علامت بدنی و اضطراب سلامت: باورهای فرهنگی و فردی دربارهٔ بیماری در شکل‌گیری مشکل نقش دارند.",
+ wiki:["psychopath","families"], rel:["chalder"]},
+{id:"chalder", cat:"clin", clin:true, who:["stu","pro"], n:"۱۴", by:"چالدر و همکاران ۱۹۹۳؛ فرکن‌بوم", fa:"پرسشنامهٔ خستگی چالدر و چک‌لیست قدرت فردی", en:"Chalder Fatigue Scale · Checklist Individual Strength (CIS-20)",
+ what:"شدت خستگی جسمی و ذهنی: از نیاز به استراحت تا تمرکز، پیدا کردن کلمه و حافظه.",
+ study:"ارزیابی و ثبت منظم خستگی با پرسشنامه و نمودار، خودش بخشی از درمان است. CIS بیست گویه دارد و در هلند رایج است.",
+ wiki:["families"], rel:["bipq"]},
+{id:"wai", cat:"clin", who:["all","stu","pro"], n:"۱۲", fmt:"۱ تا ۷", by:"هوروات و گرینبرگ؛ فرم کوتاه", fa:"پرسشنامهٔ اتحاد درمانی", en:"Working Alliance Inventory – Short (WAI-S)",
+ what:"کیفیت رابطهٔ مراجع و درمانگر در سه جزء: توافق دربارهٔ هدف، توافق دربارهٔ کارها، و پیوند عاطفی.",
+ samples:["من و درمانگرم دربارهٔ کارهایی که باید انجام دهم اتفاق نظر داریم.","به توانایی درمانگرم اعتماد دارم.","حس می‌کنم درمانگرم مرا تأیید می‌کند.","من و درمانگرم هدف‌هایی را دنبال می‌کنیم که هر دو به آن‌ها باور داریم."],
+ study:"اتحاد درمانی یکی از قوی‌ترین پیش‌بینی‌کننده‌های نتیجهٔ درمان در همهٔ رویکردهاست. اگر در درمان هستید، این پرسش‌ها می‌توانند موضوع گفت‌وگو با درمانگرتان باشند.",
+ wiki:["families","clinicaddiction"], rel:[]},
+{id:"audit", cat:"clin", clin:true, who:["stu","pro"], n:"۱۰", by:"سازمان جهانی بهداشت", fa:"ابزارهای غربالگری مصرف الکل", en:"AUDIT · CAGE · MAST",
+ what:"پرسشنامه‌های کوتاه برای شناسایی مصرف پرخطر یا وابستگی به الکل.",
+ study:"AUDIT (سازمان جهانی بهداشت) ده گویه دارد؛ CAGE چهار پرسش کوتاه است. آزمایش‌های خون (GGT، CDT، MCV، AST و ALT) شاخص مصرف سنگین‌اند و مکمل پرسشنامه.",
+ wiki:["families","clinicaddiction"], rel:["cows"]},
+{id:"cows", cat:"clin", clin:true, who:["pro"], n:"۱۱", by:"وسون و لینگ ۲۰۰۳", fa:"مقیاس بالینی محرومیت اپیوئید", en:"Clinical Opiate Withdrawal Scale (COWS)",
+ what:"سنجش بالینی شدت علائم ترک مواد افیونی (ضربان، تعریق، بی‌قراری، لرزش، مردمک، گوارش، اضطراب، درد، خمیازه، آبریزش، سیخ شدن مو).",
+ study:"کنار چک‌لیست ۲۶ گویه‌ای علائم محرومیت در درس اعتیاد برای درمانگران آمد. فقط در دست تیم درمان معنا دارد.",
+ wiki:["clinicaddiction"], rel:["audit"]},
+{id:"cds", cat:"clin", clin:true, who:["stu","pro"], n:"۲۹", by:"سی‌یرا و بریوس ۲۰۰۰", fa:"مقیاس مسخ شخصیت کمبریج", en:"Cambridge Depersonalization Scale (CDS)",
+ what:"تجربهٔ غیرواقعی شدن خود یا جهان: انگار از بیرون خودم را می‌بینم، احساس‌هایم مال من نیستند.",
+ study:"امروز معتبرترین ابزار سنجش مسخ شخصیت. تلنگرهای شایع: حملهٔ پانیک، استرس شدید و مصرف حشیش.",
+ wiki:["shelf2"], rel:["asc"]},
+{id:"asc", cat:"clin", who:["stu","pro"], by:"دیتریش؛ استودرمن و همکاران", fa:"مقیاس پنج‌بعدی حالات تغییریافتهٔ هشیاری", en:"5-Dimensional Altered States of Consciousness Rating Scale (5D-ASC / OAV)",
+ what:"تجربه‌های غیرعادی هشیاری (مثلاً با سایکدلیک‌ها، مراقبه یا تلقین) را در چند بُعد می‌سنجد.",
+ subs:[["بی‌کرانگی اقیانوسی","تجربهٔ وحدت"],["انحلال اضطراب‌آلود من","«سفر بد»"],["بازسازی بینایی",""],["کاهش هشیاری",""],["تغییر شنیداری",""]],
+ study:"نسخهٔ قدیمی‌تر OAV سه بُعد اصلی داشت. در نقد کتاب «مغز تلقین‌پذیر» برای مقایسهٔ تجربهٔ دارو و دارونما به کار رفت.",
+ wiki:["suggestible","psychopath"], rel:["cds"]},
+{id:"delirium", cat:"clin", clin:true, who:["pro"], by:"ترزپاچ و همکاران؛ برگرون و همکاران", fa:"مقیاس‌های دلیریوم", en:"DRS-R-98 · ICDSC · CAM-ICU · MDAS",
+ what:"ابزارهای بالینی برای شناسایی و درجه‌بندی دلیریوم (اختلال حاد و نوسانی توجه و آگاهی)، به‌ویژه در بخش ویژه.",
+ study:"DRS-R-98 شانزده گویه دارد و در دوره به‌تفصیل آموزش داده شد. مرور کاروالیو و همکاران (۲۰۱۳): ICDSC پرمطالعه‌ترین و مناسب‌ترین برای بخش ویژه است.",
+ wiki:["shelf3","psychopath"], rel:[]},
+{id:"cbcl", cat:"clin", clin:true, who:["stu","pro"], by:"آخنباخ", fa:"سیاههٔ رفتاری کودک", en:"Child Behavior Checklist (CBCL)",
+ what:"والدین رفتار و مشکلات کودک یا نوجوان را گزارش می‌کنند؛ از سرسختی و پرخاش تا اضطراب و شکایت جسمی.",
+ study:"در پژوهش بزرگ ریسکورلا و آخنباخ در ۲۴ کشور به کار رفت؛ گویه‌ای دربارهٔ «نیاز به کامل بودن» هم دارد و در بحث کمال‌گرایی کودکان آمد.",
+ wiki:["s12"], rel:["twin"]},
+{id:"twin", cat:"clin", who:["stu","pro"], by:"چند پدیدآورنده", fa:"ابزارهای پژوهش دوقلوها و وراثت‌پذیری", en:"Wechsler · MPQ · SDQ · MFQ · CAST · APSD · Conners",
+ what:"آزمون‌ها و پرسشنامه‌هایی که در مطالعه‌های دوقلو برای هوش، شخصیت و مشکلات کودکان به کار رفته‌اند.",
+ study:"هوش وکسلر، پرسشنامهٔ چندبعدی شخصیت (MPQ)، پرسشنامهٔ توانایی‌ها و دشواری‌ها (SDQ)، پرسشنامهٔ خلق و احساس (MFQ)، آزمون آسپرگر کودکی (CAST)، ابزار غربالگری فرایند ضداجتماعی (APSD) و مقیاس کانرز برای ADHD. درس «شبح سرگردان آرتور جنسن» نشان داد کیفیت ابزار (مثلاً پرسشنامهٔ در منزل یا فراخوان تلویزیونی) چطور برآورد وراثت‌پذیری را تحت تأثیر قرار می‌دهد.",
+ wiki:["jensen"], rel:["stab"]},
+{id:"stab", cat:"clin", who:["stu","pro"], n:"۳۲", by:"برت و دانلان ۲۰۰۹", fa:"پرسشنامهٔ انواع رفتار ضداجتماعی", en:"Subtypes of Antisocial Behavior Questionnaire (STAB-32)",
+ what:"رفتار ضداجتماعی را در سه زیرنوع جدا می‌سنجد؛ پاسخ از «هیچ‌وقت» تا «تقریباً همیشه».",
+ subs:[["پرخاشگری فیزیکی","بار ژنتیکی بالاتر، شروع زودتر"],["پرخاشگری اجتماعی","مثل لو دادن راز یا شوراندن دیگران"],["قانون‌شکنی","بیشتر تحت تأثیر محیط"]],
+ wiki:["workshop"], rel:["cci","twin"]},
+{id:"npi", cat:"clin", who:["stu","pro"], n:"۴۰", by:"راسکین و هال ۱۹۷۹", fa:"سیاههٔ شخصیت خودشیفته", en:"Narcissistic Personality Inventory (NPI)",
+ what:"خودشیفتگی «بزرگ‌منشانه» در جمعیت عادی (نه اختلال): حس برتری، میل به رهبری و توجه، احساس استحقاق.",
+ study:"تونگی با تحلیل نمره‌های NPI افزایش خودشیفتگی در دانشجویان آمریکایی از دههٔ ۱۹۸۰ تا ۲۰۰۶ را گزارش کرد؛ تحلیل‌های دیگر (ترژنیفسکی و دانلن؛ وتزل و همکاران ۲۰۱۷) این افزایش را تأیید نکردند. یافتهٔ مورد مناقشه.",
+ wiki:["bored","riseabove"], rel:["pes2","btps"]},
+
+/* ——— آزمون‌ها و روش‌ها ——— */
+{id:"crt", cat:"task", who:["all","stu","pro"], n:"۳", by:"شین فردریک ۲۰۰۵", fa:"آزمون بازتاب شناختی", en:"Cognitive Reflection Test (CRT)",
+ what:"سه معمای کوتاه که پاسخ شهودی و غلطی به ذهن می‌آورند؛ می‌سنجد چقدر جلوی پاسخ اول را می‌گیریم و دوباره فکر می‌کنیم.",
+ samples:["یک چوب و توپ با هم ۱٫۱۰ دلار می‌شوند. چوب یک دلار از توپ گران‌تر است. توپ چند است؟ (پاسخ شهودی ۱۰ سنت است؛ پاسخ درست ۵ سنت)"],
+ study:"در درس نظریه‌های توطئه و داوری انتقادی معرفی شد؛ نمرهٔ پایین‌تر در پژوهش‌ها با پذیرش بیشتر باورهای توطئه‌ای همراه بوده است. چون معماها مشهور شده‌اند، نسخه‌های تازه ساخته شده‌اند.",
+ wiki:["conspiracy"], rel:["nfc"]},
+{id:"iat", cat:"task", who:["stu","pro"], by:"گرینوالد و همکاران ۱۹۹۸", fa:"آزمون تداعی ضمنی", en:"Implicit Association Test (IAT)",
+ what:"با سرعت واکنش در دسته‌بندی واژه‌ها و تصویرها، تداعی‌های خودکار (مثلاً میان یک گروه و صفت مثبت یا منفی) را می‌سنجد.",
+ study:"بسیار مشهور اما بحث‌برانگیز: پایایی آزمون-بازآزمون متوسط است و پیش‌بینی رفتار واقعی با آن ضعیف است. در صفحهٔ «بارگ» در کنار بحث بازتکرار پژوهش‌های آماده‌سازی آمد.",
+ wiki:["bargh","trust"], rel:["ascent"]},
+{id:"rmet", cat:"task", who:["stu","pro"], n:"۳۶", by:"بارون-کوهن و همکاران ۲۰۰۱", fa:"آزمون خواندن ذهن از چشم‌ها", en:"Reading the Mind in the Eyes Test (RMET)",
+ what:"عکس ناحیهٔ چشم‌ها؛ فرد از چهار واژه حالت ذهنی را انتخاب می‌کند. ابزاری برای «نظریهٔ ذهن».",
+ study:"در بحث اثر داستان‌خوانی بر همدلی به کار رفت (مار و همکاران ۲۰۰۶؛ کید و کاستانو ۲۰۱۳). ادعای اثر یک داستان کوتاه در بازتکرارها ضعیف شد.",
+ wiki:["art"], rel:["vast"]},
+{id:"vast", cat:"task", who:["stu","pro"], by:"گوتز", fa:"آزمون حساسیت زیبایی‌شناختی بصری", en:"Visual Aesthetic Sensitivity Test (VAST)",
+ what:"جفت‌های طرح انتزاعی؛ فرد طرح «هماهنگ‌تر» را انتخاب می‌کند و پاسخش با داوری متخصصان مقایسه می‌شود.",
+ wiki:["art"], rel:["rmet"]},
+{id:"creat", cat:"task", who:["stu","pro"], by:"گیلفورد؛ مدنیک؛ گرانت و برگ", fa:"تکلیف‌های خلاقیت و انعطاف شناختی", en:"Alternative Uses (AUT) · Remote Associates (RAT) · Wisconsin Card Sorting (WCST)",
+ what:"AUT: هرچه بیشتر کاربرد برای یک شیء معمولی (تفکر واگرا). RAT: پیدا کردن واژه‌ای که سه واژهٔ دور را به هم وصل کند. WCST: پیدا کردن و تغییر قاعدهٔ دسته‌بندی کارت‌ها (انعطاف شناختی).",
+ study:"در نقد کتاب «مغز ایدئولوژیک» (زمیگرود) برای سنجش انعطاف ذهنی و رابطه‌اش با دگماتیسم ایدئولوژیک به کار رفت.",
+ wiki:["ideo"], rel:["crt"]},
+{id:"sam", cat:"task", who:["stu","pro"], fmt:"۱ تا ۹", by:"بردلی و لنگ ۱۹۹۴", fa:"مقیاس تصویری ارزیابی خود", en:"Self-Assessment Manikin (SAM)",
+ what:"آدمک‌های تصویری که با آن‌ها خوشایندی و برانگیختگی یک تصویر یا تجربه را بدون واژه درجه‌بندی می‌کنیم.",
+ study:"در مطالعهٔ لابمن (۲۰۰۹) پاسخ کمتر وابستگان به مواد افیونی به تصاویر خوشایند طبیعی، مصرف بیشتر در ۶ ماه بعد را پیش‌بینی کرد.",
+ wiki:["anhedonia"], rel:["shaps","panas"]},
+{id:"ema", cat:"task", who:["stu","pro"], by:"شیفمن و همکاران", fa:"ارزیابی لحظه‌ای بوم‌شناختی", en:"Ecological Momentary Assessment (EMA)",
+ what:"روشی که در آن چند بار در روز، در زندگی واقعی، از فرد پرسیده می‌شود الان چه احساسی دارد و کجاست.",
+ study:"پرسشنامه‌ای که هفتهٔ بعد پر شود خاطره را ثبت می‌کند نه تجربهٔ لحظه‌ای را. EMA تغییرات سریع خلق و وسوسه را نشان می‌دهد. نمونه: مطالعهٔ روزانهٔ کخ و زوننتاگ دربارهٔ ورزش پس از روز پرفشار.",
+ wiki:["decision","s11"], rel:["panas"]},
+{id:"games", cat:"task", who:["all","stu","pro"], by:"اقتصاد رفتاری", fa:"بازی‌های اعتماد و انصاف", en:"Trust game · Dictator game · Ultimatum game",
+ what:"بازی‌های پولی کوتاه که به‌جای پرسیدن، رفتار واقعی اعتماد و انصاف را می‌سنجند.",
+ study:"در بازی اعتماد نفر اول پولی می‌فرستد که سه برابر می‌شود و نفر دوم تصمیم می‌گیرد چقدر برگرداند. بازی اولتیماتوم در جوامع مختلف (هنریک و همکاران) نشان داد هنجار انصاف به بازار و نهادها وابسته است.",
+ wiki:["trust","fairness"], rel:["trust","jsi"]}
+];
+
+const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html"}, LABEL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی", "scales": "سنجش‌خانه"};
+const INSTS = Object.fromEntries([...window.INST, ...window.XINST].map(x => [x.id, x]));
+const CATS = window.CATS, CAT = window.CAT, CATBY = Object.fromEntries(CATS.map(c => [c.id, c]));
+const BY = Object.fromEntries(CAT.map(c => [c.id, c]));
+const IDESC = window.IDESC || {}, SDESC = window.SDESC || {}, POS = window.POS || {};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const f1 = n => fa((Math.round(n * 10) / 10).toFixed(1)).replace(".", "٫");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* full record for an entry, merging the fillable instrument */
+function rec(c){
+  const i = c.inst ? INSTS[c.inst] : null, d = IDESC[c.inst] || {};
+  return Object.assign({}, c, {
+    fa: c.fa || (i && i.fa), en: c.en || (i && i.en), ref: c.ref || (i && i.ref),
+    what: c.what || d.what || "", not: c.not || d.not || "", I: i,
+    n: c.n || (i && fa(i.items.length)), fmt: c.fmt || (i && `${fa(i.min)} تا ${fa(i.max)}`)
+  });
+}
+const R = CAT.map(rec);
+
+let WHO = "all";
+try { WHO = localStorage.getItem("sk-who") || "all"; } catch(e) {}
+let CATF = "", ONLYFILL = false, Q = "";
+
+function stats(){
+  document.getElementById("stats").innerHTML =
+    `<div><b>${fa(R.length)}</b>ابزار</div><div><b>${fa(R.filter(r=>r.I).length)}</b>قابل پر کردن</div><div><b>${fa(CATS.length)}</b>حوزه</div>`;
+}
+function setWho(w){
+  WHO = w; try { localStorage.setItem("sk-who", w); } catch(e) {}
+  document.querySelectorAll(".who button").forEach(b => b.setAttribute("aria-pressed", b.dataset.who === w));
+  renderStart(); render();
+}
+const START = {
+  all: {h:"از کجا شروع کنم؟", p:"چند پرسشنامهٔ کوتاه و بی‌خطر برای شروع خودشناسی. هر کدام چند دقیقه طول می‌کشد.", ids:["scs","lot","ahs","gbs","rich","bscs","smm","teps"]},
+  stu: {h:"مسیر پیشنهادی برای دانشجو", p:"جفت‌هایی که کنار هم خواندنشان یک مفهوم را روشن می‌کند: دو تعریف از شفقت، دو نوع لذت، خوش‌بینی در برابر امید، خودسنجی در برابر آزمون توانایی.", ids:["scs","socs","teps","shaps","lot","ahs","sreis","msceit","aaq","ppfi"]},
+  pro: {h:"برای کار حرفه‌ای", p:"ابزارهای سازمانی با وضعیت مجوز، و ابزارهای بالینی که در دوره معرفی شدند. ابزارهای بالینی اینجا فقط معرفی می‌شوند.", ids:["orgtools","cbi","uwes","gad7","depr","pswq","tas","mdq","wai","delirium"]}
+};
+function renderStart(){
+  const s = START[WHO];
+  document.getElementById("start").innerHTML = `<h2>${s.h}</h2><p>${s.p}</p><div class="chips">${s.ids.filter(i=>BY[i]).map(i => `<button class="chip" data-open="${i}">${esc(rec(BY[i]).fa)}</button>`).join("")}</div>`;
+}
+function catChips(){
+  document.getElementById("catchips").innerHTML = `<button class="chip" data-cat="" aria-pressed="${!CATF}">همه</button>` +
+    CATS.map(c => `<button class="chip" data-cat="${c.id}" aria-pressed="${CATF===c.id}">${c.fa}</button>`).join("");
+}
+function match(r){
+  if (CATF && r.cat !== CATF) return false;
+  if (ONLYFILL && !r.I) return false;
+  if (Q){
+    const hay = [r.fa, r.en, r.what, r.by, r.study, (r.subs||[]).map(s=>s[0]).join(" "), r.I ? r.I.sub.map(s=>s.fa).join(" ") : ""].join(" ").toLowerCase();
+    if (!Q.split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+}
+function order(list){
+  // self-knowledge view: fillable first, clinical last; specialist: clinical not demoted
+  return list.slice().sort((a,b) => {
+    const k = r => WHO === "all" ? (r.I ? 0 : r.clin ? 2 : 1) : WHO === "stu" ? (r.clin ? 1 : 0) : 0;
+    return k(a) - k(b);
+  });
+}
+function card(r){
+  const c = CATBY[r.cat];
+  const blurb = WHO === "all" ? (r.what || r.study) : (r.study || r.what);
+  const b = [];
+  if (r.I) b.push(`<span class="bd fill">قابل پر کردن</span>`);
+  if (r.clin) b.push(`<span class="bd clin">بالینی · فقط معرفی</span>`);
+  if (r.n) b.push(`<span class="bd">${esc(r.n)} گویه</span>`);
+  if (r.fmt) b.push(`<span class="bd">${esc(r.fmt)}</span>`);
+  return `<button class="card" style="--c:${c.c}" data-open="${r.id}"><h3>${esc(r.fa)}</h3><div class="en">${esc(r.en||"")}</div><p>${esc(blurb)}</p><div class="badges">${b.join("")}</div></button>`;
+}
+function render(){
+  const vis = R.filter(match);
+  document.getElementById("count").textContent = `${fa(vis.length)} ابزار`;
+  const html = CATS.map(c => {
+    const items = order(vis.filter(r => r.cat === c.id));
+    if (!items.length) return "";
+    return `<section class="cat" style="--c:${c.c}"><header><h2>${c.fa}</h2><p>${c.d}</p></header><div class="grid">${items.map(card).join("")}</div></section>`;
+  }).join("");
+  document.getElementById("list").innerHTML = html || `<div class="empty">چیزی پیدا نشد. واژهٔ دیگری را امتحان کنید.</div>`;
+}
+
+/* ——— sheet ——— */
+const sheet = document.getElementById("sheet"), scrim = document.getElementById("scrim");
+let lastFocus = null;
+function openSheet(html, c){
+  lastFocus = lastFocus || document.activeElement;
+  sheet.style.setProperty("--c", c);
+  sheet.innerHTML = `<button class="x" data-close>بستن ✕</button>` + html;
+  sheet.hidden = false; scrim.hidden = false; document.body.style.overflow = "hidden";
+  sheet.scrollTop = 0; sheet.querySelector(".x").focus({preventScroll:true});
+}
+function closeSheet(){
+  sheet.hidden = true; scrim.hidden = true; document.body.style.overflow = "";
+  if (location.hash) { try { history.replaceState(null, "", location.pathname + location.search); } catch(e) { try { location.hash = ""; } catch(_) {} } }
+  if (lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true}); lastFocus = null;
+}
+function wikiLinks(keys){
+  return (keys||[]).filter(k => URLS[k]).map(k => `<a href="${URLS[k]}" target="_blank" rel="noopener">${esc(LABEL[k] || k)}</a>`).join("");
+}
+function detail(id){
+  const r = rec(BY[id]); if (!r) return;
+  const c = CATBY[r.cat].c, I = r.I;
+  const subs = r.subs && r.subs.length ? r.subs : (I ? I.sub.filter(s => s.id !== "total" || I.sub.length === 1).map(s => [s.fa, SDESC[`${I.id}.${s.id}`] || ""]) : []);
+  const samples = r.samples && r.samples.length ? r.samples : (I ? I.items.slice(0, 3) : []);
+  const lay = (key, title, body) => body ? `<details class="lay${WHO===key?" mine":""}"${WHO===key?" open":""}><summary>${title}</summary><div>${body}</div></details>` : "";
+  let stuBody = "";
+  if (subs.length) stuBody += `<table class="subs">${subs.map(s => `<tr><td>${esc(s[0])}</td><td>${esc(s[1]||"")}</td></tr>`).join("")}</table>`;
+  if (r.study) stuBody += `<p style="margin-top:8px">${esc(r.study)}</p>`;
+  let proBody = "";
+  if (r.pro) proBody += `<p>${esc(r.pro)}</p>`;
+  if (r.ref) proBody += `<p class="en" style="font-size:.85rem;color:var(--muted)">${esc(r.ref)}</p>`;
+  const rel = (r.rel||[]).filter(x => BY[x]).map(x => `<button class="chip" data-open="${x}">${esc(rec(BY[x]).fa)}</button>`).join("");
+  const html = `
+    <div class="sub">${esc(CATBY[r.cat].fa)}</div>
+    <h2 id="sh-t">${esc(r.fa)}</h2>
+    <div class="en sub">${esc(r.en||"")}</div>
+    <dl class="facts">
+      ${r.by ? `<dt>سازنده</dt><dd>${esc(r.by)}</dd>` : ""}
+      ${r.n ? `<dt>تعداد گویه</dt><dd>${esc(r.n)}</dd>` : ""}
+      ${r.fmt ? `<dt>پاسخ</dt><dd>${esc(r.fmt)}</dd>` : ""}
+    </dl>
+    <h3>به زبان ساده</h3>
+    <p>${esc(r.what)}</p>
+    ${r.not ? `<div class="not"><b>چه چیزی نیست:</b> ${esc(r.not)}</div>` : ""}
+    ${I ? `<div class="cta"><button class="btn" data-fill="${r.id}">پر کردن پرسشنامه</button><span>${fa(I.items.length)} جمله، حدود ${fa(Math.max(2, Math.round(I.items.length / 5)))} دقیقه. نتیجه فوراً و فقط برای خودتان نمایش داده می‌شود.</span></div>`
+         : r.clin ? `<div class="clinnote">این ابزار بالینی است و فقط در دست متخصص و همراه با مصاحبه معنا دارد؛ برای همین اینجا قابل پر کردن نیست.</div>` : ""}
+    ${samples.length ? `<h3>نمونهٔ جمله‌ها</h3><ul class="samp">${samples.map(s => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
+    ${lay("stu", "برای دانشجو: ساختار و پژوهش", stuBody)}
+    ${lay("pro", "برای متخصص: منبع و نکته‌های کاربردی", proBody)}
+    ${(r.wiki||[]).some(k=>URLS[k]) ? `<h3>کجای ویکی دربارهٔ آن حرف زده‌ایم</h3><div class="links">${wikiLinks(r.wiki)}</div>` : ""}
+    ${rel ? `<h3>ابزارهای مرتبط</h3><div class="chips">${rel}</div>` : ""}`;
+  openSheet(html, c);
+}
+
+/* ——— fill ——— */
+let ANS = {};
+function fill(id){
+  const r = rec(BY[id]), I = r.I, c = CATBY[r.cat].c; ANS = {};
+  const parts = Object.fromEntries((I.parts||[]).map(p => [p[0], p[1]]));
+  const n = I.max - I.min + 1;
+  const qs = I.items.map((t, k) => {
+    const i = k + 1;
+    const opts = Array.from({length:n}, (_, j) => { const v = I.min + j;
+      return `<label><input type="radio" name="q${i}" value="${v}" aria-label="${fa(v)}${I.anchors[j] ? " — " + esc(I.anchors[j]) : ""}"><span>${fa(v)}</span></label>`; }).join("");
+    return `${parts[i] ? `<div class="part">${esc(parts[i])}</div>` : ""}<div class="q" id="qq${i}"><p><b>${fa(i)}</b>${esc(t)}</p><div class="opts" role="radiogroup">${opts}</div><div class="anch"><span>${esc(I.anchors[0])}</span><span>${esc(I.anchors[n-1])}</span></div></div>`;
+  }).join("");
+  openSheet(`
+    <div class="sub">پر کردن پرسشنامه</div>
+    <h2 id="sh-t">${esc(r.fa)}</h2>
+    <p style="color:var(--muted)">${esc(I.intro)} به اولین پاسخی که به ذهنتان می‌رسد اعتماد کنید.</p>
+    <div class="prog"><div class="bar"><i id="pbar"></i></div><small id="ptxt">۰ از ${fa(I.items.length)}</small></div>
+    <form id="form">${qs}
+      <div class="cta"><button class="btn" type="submit">دیدن نتیجه</button><button class="btn ghost" type="button" data-back="${r.id}">بازگشت به توضیح</button><span id="fmsg"></span></div>
+    </form>`, c);
+  const form = document.getElementById("form");
+  form.addEventListener("change", e => {
+    const m = e.target.name && e.target.name.match(/^q(\d+)$/); if (!m) return;
+    ANS[m[1]] = +e.target.value; document.getElementById("qq" + m[1]).classList.remove("miss");
+    const k = Object.keys(ANS).length;
+    document.getElementById("pbar").style.width = (100 * k / I.items.length) + "%";
+    document.getElementById("ptxt").textContent = `${fa(k)} از ${fa(I.items.length)}`;
+  });
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const miss = I.items.map((_, k) => k + 1).filter(i => ANS[i] == null);
+    if (miss.length){
+      miss.forEach(i => document.getElementById("qq" + i).classList.add("miss"));
+      document.getElementById("fmsg").textContent = `${fa(miss.length)} جمله بی‌پاسخ مانده؛ با رنگ مشخص شده‌اند.`;
+      document.getElementById("qq" + miss[0]).scrollIntoView({block:"center", behavior:"smooth"});
+      return;
+    }
+    result(id);
+  });
+}
+function score(I, s){
+  const v = s.items.map(x => { const a = ANS[Math.abs(x)]; return x < 0 ? I.min + I.max - a : a; });
+  const sum = v.reduce((a, b) => a + b, 0);
+  return {mean: sum / v.length, sum, lo: I.min * v.length, hi: I.max * v.length};
+}
+function band(p){ return p < 1/3 ? "یک‌سوم پایین" : p < 2/3 ? "میانهٔ" : "یک‌سوم بالای"; }
+function result(id){
+  const r = rec(BY[id]), I = r.I, c = CATBY[r.cat].c;
+  const lines = [];
+  const blocks = I.sub.map(s => {
+    const x = score(I, s), p = (x.mean - I.min) / (I.max - I.min);
+    const dirTxt = s.dir === 1 ? "عدد بالاتر یعنی بیشتر از این ویژگی؛ معمولاً نشانهٔ منبعی مفید." :
+                   s.dir === -1 ? "عدد بالاتر یعنی این دشواری یا عادت پررنگ‌تر است." : "این ویژگی خوب یا بد ندارد؛ فقط توصیف می‌کند.";
+    lines.push(`${s.fa}: میانگین ${f1(x.mean)} از ${fa(I.max)} (جمع ${fa(x.sum)})`);
+    return `<div class="rs"><h4><span>${esc(s.fa)}</span><small>میانگین ${f1(x.mean)} · جمع ${fa(x.sum)} از ${fa(x.hi)}</small></h4>
+      <div class="scale" role="img" aria-label="${esc(s.fa)}: ${f1(x.mean)}"><i style="right:${(p*100).toFixed(1)}%"></i></div>
+      <div class="ends"><span>${fa(I.min)}</span><span>${fa(I.max)}</span></div>
+      <p>نمرهٔ شما در ${band(p)} دامنهٔ این پرسشنامه است. ${dirTxt}</p>
+      ${SDESC[`${I.id}.${s.id}`] ? `<p style="color:var(--muted)">${esc(SDESC[`${I.id}.${s.id}`])}</p>` : ""}</div>`;
+  }).join("");
+  const txt = `${r.fa}\n${lines.join("\n")}\n(سنجش‌خانهٔ ویکی روان — برای خودشناسی، نه تشخیص)`;
+  openSheet(`
+    <div class="sub">نتیجهٔ شما</div>
+    <h2 id="sh-t">${esc(r.fa)}</h2>
+    <p style="color:var(--muted)">نقطه روی هر نوار جای میانگین پاسخ‌های شما در دامنهٔ پرسشنامه است، نه مقایسه با دیگران.</p>
+    <div class="res">${blocks}</div>
+    ${r.not ? `<div class="not" style="margin-top:12px"><b>یادتان باشد:</b> ${esc(r.not)}</div>` : ""}
+    <div class="cta"><button class="btn" id="copy">کپی نتیجه</button><button class="btn ghost" data-fill="${r.id}">پر کردن دوباره</button><button class="btn ghost" data-back="${r.id}">توضیح پرسشنامه</button><span id="cmsg"></span></div>
+    <pre id="ctxt" hidden style="white-space:pre-wrap;font:inherit;font-size:.85rem;background:var(--bg);padding:8px;border-radius:8px"></pre>
+    ${(r.wiki||[]).some(k=>URLS[k]) ? `<h3>برای فهم بیشتر بخوانید</h3><div class="links">${wikiLinks(r.wiki)}</div>` : ""}
+    <div class="help">این نتیجه فقط در همین صفحه است و با بستن آن پاک می‌شود. اگر نتیجه یا پر کردن پرسشنامه حال ناخوشایندی برایتان ساخت، دربارهٔ آن با کسی که به او اعتماد دارید یا با یک متخصص حرف بزنید.</div>`, c);
+  document.getElementById("copy").addEventListener("click", () => {
+    const m = document.getElementById("cmsg");
+    const fallback = () => { const p = document.getElementById("ctxt"); p.textContent = txt; p.hidden = false;
+      const rg = document.createRange(); rg.selectNodeContents(p); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(rg); m.textContent = "متن انتخاب شد؛ کپی کنید."; };
+    try { navigator.clipboard.writeText(txt).then(() => { m.textContent = "کپی شد."; }, fallback); } catch(e) { fallback(); }
+  });
+}
+
+/* ——— events ——— */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-open],[data-fill],[data-back],[data-close],[data-cat],[data-who]");
+  if (!t) return;
+  if (t.dataset.who) return setWho(t.dataset.who);
+  if (t.dataset.cat != null && t.matches(".chip[data-cat]")) { CATF = t.dataset.cat; catChips(); render(); return; }
+  if (t.dataset.close != null) return closeSheet();
+  if (t.dataset.fill) return fill(t.dataset.fill);
+  if (t.dataset.back) return detail(t.dataset.back);
+  if (t.dataset.open){ if (sheet.hidden) lastFocus = t; try { history.replaceState(null, "", "#q-" + t.dataset.open); } catch(_) {} detail(t.dataset.open); }
+});
+scrim.addEventListener("click", closeSheet);
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !sheet.hidden) closeSheet(); });
+document.getElementById("q").addEventListener("input", e => { Q = e.target.value.trim().toLowerCase(); render(); });
+document.getElementById("onlyfill").addEventListener("change", e => { ONLYFILL = e.target.checked; render(); });
+function fromHash(){ const m = location.hash.match(/^#q-([a-z0-9]+)$/); if (m && BY[m[1]]) detail(m[1]); }
+window.addEventListener("hashchange", fromHash);
+
+stats(); catChips(); setWho(WHO); fromHash();
+</script>
+
+</body></html>
