@@ -1,0 +1,145 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>همسایگی موضوع‌ها</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#f5f6f3; --card:#ffffff; --ink:#1d2321; --muted:#5d6764; --rule:#d9dedb; --wash:#eceeeb; --link:#1f5d68; --accent:#1f5d68; --accent-ink:#fff;
+  --d-feel:#2f6f8f; --d-self:#b2622a; --d-social:#7a4a8a; --d-work:#2f7a55; --d-health:#a3404f; --d-body:#6b7a2a;
+  --good:#2f7a55; --mid:#b07a1c; --bad:#a3404f; --deb:#7a4a8a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;overflow-x:clip;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--link)}
+.wrap{max-width:1180px;margin:0 auto}
+.en{font-family:var(--f-latin);direction:ltr;unicode-bidi:isolate}
+header.top{padding-block:22px 14px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:clamp(2.3rem,5vw,3.2rem);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:1.8rem;line-height:1.15;margin:0;text-wrap:balance}
+.lede{margin:8px 0 0;color:var(--muted);max-width:76ch;font-size:.97rem}
+.eyebrow{font-size:.78rem;color:var(--link);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font-size:.84rem;padding:3px 12px;border-radius:999px;background:var(--card);border:1px solid var(--rule);line-height:1.7}
+.chip:hover,.chip:focus-visible{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:8px 18px;border-radius:999px;font-weight:500;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px}
+.muted{color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links a{font-size:.82rem;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:1px 10px;background:var(--bg)}
+.links a:hover{border-color:var(--accent)}
+input[type=search],input[type=text],input[type=number],select{font:inherit;font-size:.92rem;padding:7px 12px;border-radius:10px;border:1px solid var(--rule);background:var(--card);color:var(--ink);min-width:0}
+.tag{display:inline-block;font-size:.72rem;padding:0 8px;border-radius:999px;background:var(--wash);color:var(--muted)}
+footer.foot{margin-top:40px;border-top:1px solid var(--rule);padding-top:12px;font-size:.82rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.lay{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:980px){.lay{grid-template-columns:minmax(0,1fr)}}
+.mx{overflow-x:auto;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:10px}
+#mx{display:block;min-width:620px;width:100%}
+#mx text{font-family:var(--f-body);font-size:12px;fill:var(--ink)}
+#mx .cell{cursor:pointer;stroke:var(--card);stroke-width:2}
+#mx .cell:hover,#mx .cell.on{stroke:var(--ink);stroke-width:2}
+#mx .diag{fill:var(--wash)}
+#mx .rl.on{font-weight:700}
+.side{position:sticky;top:12px;display:grid;gap:14px}
+.det h3{margin:0 0 4px;font-size:1.1rem}
+.det .score{font-size:.82rem;color:var(--muted);margin-bottom:8px}
+.terms{display:flex;flex-wrap:wrap;gap:6px}
+.terms a,.terms span{font-size:.84rem;padding:1px 10px;border-radius:999px;background:var(--wash);text-decoration:none;color:var(--ink)}
+.terms a:hover{outline:1px solid var(--accent)}
+.top ol{margin:0;padding-inline-start:22px;display:grid;gap:6px}
+.top li{font-size:.9rem;cursor:pointer}
+.top li:hover{color:var(--accent)}
+.top li small{color:var(--muted)}
+.legend{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:120px;height:10px;border-radius:5px;background:linear-gradient(90deg,var(--wash),var(--accent))}
+.dl{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.78rem;color:var(--muted);margin-top:6px}
+.dl span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;background:var(--c);margin-inline-end:5px}
+</style>
+<div class="wrap">
+<header class="top">
+  <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › ابزارها › همسایگی موضوع‌ها</div>
+  <h1>همسایگی موضوع‌ها</h1>
+  <p class="lede">هر خانه نشان می‌دهد دو موضوع ویکی چقدر واژه و مفهوم مشترک دارند. خانه‌های پررنگ میان دو حوزهٔ دور، پیوندهای غیرمنتظره‌اند؛ روی هر خانه بزنید تا واژه‌های مشترک را ببینید.</p>
+</header>
+<div class="lay">
+  <div>
+    <div class="mx"><svg id="mx" role="img" aria-label="ماتریس واژه‌های مشترک میان موضوع‌ها"></svg></div>
+    <div class="legend">کم <i></i> زیاد · رنگ‌ها: میزان هم‌پوشانی نسبت به اندازهٔ دو موضوع</div>
+    <div class="dl" id="dl"></div>
+  </div>
+  <div class="side">
+    <div class="card det" id="det" aria-live="polite"></div>
+    <div class="card top"><div class="eyebrow">بینش</div><h2 style="font-size:1.35rem;margin-bottom:8px">غافلگیرکننده‌ترین همسایه‌ها</h2><p class="muted" style="margin:0 0 8px;font-size:.85rem">جفت‌موضوع‌هایی از دو حوزهٔ متفاوت که بیشترین مفهوم مشترک را دارند.</p><ol id="top"></ol></div>
+  </div>
+</div>
+<footer class="foot">داده: نمایهٔ ۵۷۶ واژهٔ ویکی؛ برای هر موضوع، واژه‌هایی که در صفحه‌های آن آمده‌اند. امتیاز = تعداد واژهٔ مشترک تقسیم بر میانگین هندسی اندازهٔ دو موضوع.</footer>
+</div>
+<script>
+window.HEAT={"D": [["feel", "هیجان و ذهن"], ["self", "خود و رشد"], ["social", "رابطه و جامعه"], ["work", "کار و سازمان"], ["health", "سلامت روان و درمان"], ["body", "بدن، تکامل و جنسیت"]], "T": [["emotion", "feel", "هیجان و تنظیم آن", "هیجان چیست، چطور نامش را بگذاریم و چطور مدیریتش کنیم.", ["s4", "s5", "s8", "s10", "s14", "s15", "envy", "shelf7"]], ["cognition", "feel", "شناخت و خطای فکر", "سوگیری‌ها، حافظهٔ کاذب، تلقین و تفکر نقادانه.", ["illusions", "mistakes", "planning", "conspiracy", "lookagain", "shelf12", "memory", "bargh", "suggestible", "bullshit"]], ["learning", "feel", "یادگیری و کنجکاوی", "چطور یاد می‌گیریم و چرا کنجکاویم.", ["learnmem", "curiosity", "range"]], ["compassion", "self", "شفقت، منتقد درون و کمال‌گرایی", "مهربانی با خود در برابر سرزنش و بی‌نقص‌خواهی.", ["s2", "s3", "s12", "perfection", "compassion"]], ["motivation", "self", "انگیزه، عادت و اراده", "چرا کاری را می‌کنیم و چطور تغییر را نگه داریم.", ["s6", "s7", "s13", "habits", "change", "motivation", "theories", "effort", "shelf2", "shelf9", "shelf10", "shelf15"]], ["meaning", "self", "معنا، امید و بهزیستی", "خوش‌بینی، امید، معنا، خلوت و زندگی غنی.", ["s9", "makingsense", "riseabove", "solitude", "optimism", "happiness", "mattering", "shelf14", "art"]], ["ethics", "social", "اعتماد، انصاف و اخلاق", "اعتماد، برابری، جایگاه و اختلاف‌ها.", ["trust", "fairness", "prestige", "morality", "conflict"]], ["culture", "social", "گروه، فرهنگ و فناوری", "فرهنگ‌های سفت و شل، ایدئولوژی، جنگ و همکاری، رسانه.", ["ultrasociety", "superbloom", "jensen", "friendly", "gelfand", "ideo", "bored", "shelf4"]], ["work", "work", "سلامت روان در کار", "فرسودگی، کار معنادار، کار عاطفی و جدا شدن از کار.", ["s1", "s11", "orgpsych", "poswork", "emolabor"]], ["orgtools", "work", "سنجش سازمان", "نمونهٔ سرویس سنجش ناشناس و برنامهٔ رشد.", ["orgsvc"]], ["diagnosis", "health", "مرز سلامت و اختلال", "تشخیص، آسیب‌شناسی توصیفی و رویکرد ابعادی.", ["workshop", "psychopath", "falls", "clinical", "shelf3", "shelf5", "shelf11"]], ["therapy", "health", "درمان، تروما و بحران", "بی‌لذتی، درمان فرایندمحور، تاب‌آوری و بحران.", ["anhedonia", "crisis", "trauma", "shelf13"]], ["addiction", "health", "اعتیاد", "برای خانواده‌ها، درمانگران و تصمیم‌گیری.", ["families", "clinicaddiction", "decision"]], ["bodymind", "body", "مغز، بدن و تکامل", "هورمون‌ها، پیام‌رسان‌ها و ریشه‌های تکاملی رفتار.", ["body", "badmen"]], ["devsex", "body", "نوجوانی، جنس و گرایش", "رشد، نوجوانی و شکل‌گیری گرایش جنسی.", ["orientation", "shelf6", "shelf8"]]], "M": {"emotion|cognition": ["تنوع هیجانی", "حس عاملیت"], "emotion|learning": ["آسیب‌شناسی روانی توصیفی", "نیاز به شناخت"], "emotion|compassion": ["شفقت"], "emotion|motivation": ["بازتعبیر", "تخلیهٔ ایگو", "خویشتنداری", "نظریهٔ خودتعیین‌گری", "نیاز به شناخت", "ونتینگ"], "emotion|meaning": ["بازتعبیر", "خویشتنداری", "ذهنیت استرس", "فعال‌سازی رفتاری", "نظریهٔ خودتعیین‌گری", "ونتینگ"], "emotion|ethics": ["حسادت"], "emotion|culture": ["تخلیهٔ ایگو"], "emotion|work": ["بازتعبیر", "تخلیهٔ ایگو", "تنوع هیجانی", "دانه‌داری هیجان", "شفقت", "نظریهٔ خودتعیین‌گری", "نیاز به شناخت", "هوش هیجانی", "کار عاطفی"], "emotion|diagnosis": ["آسیب‌شناسی روانی توصیفی", "بازتعبیر", "دانه‌داری هیجان", "ذهنیت استرس", "زندگی غنی روانی", "فعال‌سازی رفتاری", "پروتکل یکپارچه"], "emotion|therapy": ["تنظیم هیجان", "فعال‌سازی رفتاری", "هنر چگونه اثر می‌کند"], "emotion|addiction": ["تنظیم هیجان"], "cognition|learning": ["حافظهٔ کاذب", "دید بیرونی"], "cognition|motivation": ["باور به توطئه", "تهدید کلیشه", "خطای برنامه‌ریزی", "درماندگی آموخته", "دید بیرونی"], "cognition|meaning": ["اثر حقیقت توهمی", "زندگی غنی از نظر روانی", "سوگیری‌های شناختی"], "cognition|ethics": ["بحران تکرارپذیری"], "cognition|culture": ["اثر حقیقت توهمی", "باور به توطئه", "حرف مفت"], "cognition|work": ["تنوع هیجانی", "درماندگی آموخته"], "cognition|diagnosis": ["تلقین‌پذیری", "حافظهٔ کاذب", "درماندگی آموخته", "ریشه‌های شادکامی"], "cognition|therapy": ["باور به توطئه"], "cognition|addiction": ["تلقین‌پذیری", "خطای برنامه‌ریزی", "دید بیرونی"], "cognition|devsex": ["غفلت از نرخ پایه"], "learning|compassion": ["امنیت روانی"], "learning|motivation": ["بی‌لذتی", "دید بیرونی", "عادت", "نیاز به شناخت"], "learning|meaning": ["امنیت روانی"], "learning|work": ["امنیت روانی", "طراحی شغل", "نیاز به شناخت"], "learning|diagnosis": ["آسیب‌شناسی روانی توصیفی", "بی‌لذتی", "حافظهٔ کاذب", "سرسختی شناختی"], "learning|addiction": ["بی‌لذتی", "دید بیرونی", "شیار شناختی", "مدار پاداش و دوپامین", "وسوسه", "کاوش و بهره‌برداری"], "compassion|meaning": ["امنیت روانی", "شفقت به خود"], "compassion|work": ["امنیت روانی", "خستگی همدلی", "شفقت", "شفقت به خود", "شفقت در کار", "کمال‌گرایی"], "compassion|diagnosis": ["شفقت به خود", "کمال‌گرایی"], "compassion|addiction": ["چرخهٔ کم-زیاد"], "motivation|meaning": ["اصل پیشرفت", "بازتعبیر", "خویشتنداری", "غرقگی", "مثبت‌گرایی در کار", "نشخوار فکری", "نظریهٔ خودتعیین‌گری", "ونتینگ", "پیش‌بینی عاطفی", "کنجکاوی"], "motivation|ethics": ["ذهنیت‌ها", "شیوهٔ تنظیم", "همکاری و رقابت", "کار کردن با تعارض"], "motivation|culture": ["باور به توطئه", "تخلیهٔ ایگو", "همکاری و رقابت"], "motivation|work": ["اصل پیشرفت", "بازتعبیر", "تخلیهٔ ایگو", "درماندگی آموخته", "سندرم‌های خستگی", "نشخوار فکری", "نظریهٔ خودتعیین‌گری", "نیاز به شناخت"], "motivation|diagnosis": ["بازتعبیر", "بی‌لذتی", "درماندگی آموخته", "نشخوار فکری"], "motivation|therapy": ["باور به توطئه", "نیت اجرایی"], "motivation|addiction": ["بی‌لذتی", "خطای برنامه‌ریزی", "دید بیرونی", "ذهنیت‌ها", "عادت‌ها و تغییر"], "meaning|ethics": ["اعتماد اجتماعی"], "meaning|culture": ["اثر حقیقت توهمی", "خلوت", "خودشیفتگی آسیب‌پذیر"], "meaning|work": ["اصل پیشرفت", "امنیت روانی", "بازتعبیر", "تاب‌آوری", "خودشیفتگی آسیب‌پذیر", "رویکرد مبتنی بر نقاط قوت", "شفقت به خود", "فرسودگی شغلی", "مدل PERMA", "نشخوار فکری", "نظریهٔ خودتعیین‌گری", "کار معنادار"], "meaning|diagnosis": ["بازتعبیر", "ذهنیت استرس", "رویکرد بُعدی", "سلامت روان پایدار", "شفقت به خود", "فعال‌سازی رفتاری", "نشخوار خشم", "نشخوار فکری", "چابکی هیجانی"], "meaning|therapy": ["تاب‌آوری", "فعال‌سازی رفتاری", "چابکی هیجانی"], "meaning|devsex": ["اهمیت داشتن"], "ethics|culture": ["برابری و انصاف", "خوداهلی‌سازی", "همکاری و رقابت"], "ethics|work": ["بازی اولتیماتوم", "رهبری مخرب", "پرستیژ و سلطه"], "ethics|addiction": ["ذهنیت‌ها", "مصاحبهٔ انگیزشی"], "ethics|devsex": ["پرستیژ و سلطه"], "culture|work": ["انسانیت‌زدایی", "تخلیهٔ ایگو", "خودشیفتگی آسیب‌پذیر"], "culture|diagnosis": ["بیش‌تشخیصی"], "culture|therapy": ["باور به توطئه"], "culture|devsex": ["بحران توجه", "هراس‌های فناوری"], "work|diagnosis": ["بازتعبیر", "دانه‌داری هیجان", "درماندگی آموخته", "شفقت به خود", "نشخوار فکری", "کمال‌گرایی"], "work|therapy": ["تاب‌آوری"], "work|addiction": ["اثر ناسیبو", "درمان عاطفهٔ مثبت"], "work|devsex": ["پرستیژ و سلطه"], "diagnosis|therapy": ["فعال‌سازی رفتاری", "مرز میان سلامت و اختلال", "هیتاپ", "چابکی هیجانی"], "diagnosis|addiction": ["بی‌لذتی", "تلقین‌پذیری"], "diagnosis|devsex": ["حساسیت به طرد"], "therapy|addiction": ["تنظیم هیجان"], "bodymind|devsex": ["جنس و جنسیت"]}, "SZ": {"emotion": 75, "cognition": 53, "learning": 35, "compassion": 33, "motivation": 85, "meaning": 76, "ethics": 34, "culture": 59, "work": 92, "orgtools": 0, "diagnosis": 81, "therapy": 23, "addiction": 51, "bodymind": 4, "devsex": 15}};
+const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html", "scales": "scales.html"}, GRAPH = "graph.html";
+const HT = window.HEAT, T = HT.T.filter(t => HT.SZ[t[0]] > 0), DC = {feel:"var(--d-feel)",self:"var(--d-self)",social:"var(--d-social)",work:"var(--d-work)",health:"var(--d-health)",body:"var(--d-body)"};
+const DN = Object.fromEntries(HT.D);
+const fa = s => String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const key = (a,b) => HT.M[a+"|"+b] ? a+"|"+b : b+"|"+a;
+const sh = (a,b) => HT.M[key(a,b)] || [];
+const score = (a,b) => sh(a,b).length / Math.sqrt(HT.SZ[a] * HT.SZ[b]);
+let mx = 0; T.forEach(a => T.forEach(b => { if (a !== b) mx = Math.max(mx, score(a[0], b[0])); }));
+const n = T.length, cs = 34, L = 210, TOP = 34, W = L + n*cs + 8, Hh = TOP + n*cs + 8;
+const svg = document.getElementById("mx"); svg.setAttribute("viewBox", `0 0 ${W} ${Hh}`);
+let s = "";
+// RTL: rows labelled on the right, columns read right-to-left
+const X = j => W - L - (j+1)*cs, Y = i => TOP + i*cs;
+T.forEach((t,i) => { s += `<rect x="${W-L+6}" y="${Y(i)+8}" width="6" height="${cs-16}" rx="2" fill="${DC[t[1]]}"/><text class="rl" data-i="${i}" x="${W-L+18}" y="${Y(i)+cs/2+4}">${fa(i+1)}. ${esc(t[2])}</text>`; });
+T.forEach((t,j) => { const x = X(j) + cs/2; s += `<rect x="${X(j)+8}" y="${TOP-8}" width="${cs-16}" height="4" rx="2" fill="${DC[t[1]]}"/><text x="${x}" y="${TOP-14}" text-anchor="middle" style="font-size:11.5px;fill:var(--muted)">${fa(j+1)}</text><title>${esc(t[2])}</title>`; });
+T.forEach((a,i) => T.forEach((b,j) => {
+  if (i === j) { s += `<rect class="diag" x="${X(j)+1}" y="${Y(i)+1}" width="${cs-2}" height="${cs-2}" rx="5"/>`; return; }
+  const v = score(a[0], b[0]) / mx, k = sh(a[0], b[0]).length;
+  s += `<rect class="cell" data-a="${a[0]}" data-b="${b[0]}" x="${X(j)+1}" y="${Y(i)+1}" width="${cs-2}" height="${cs-2}" rx="5" fill="color-mix(in srgb, var(--accent) ${Math.round(Math.pow(v,.8)*100)}%, var(--wash))"><title>${esc(a[2])} × ${esc(b[2])}: ${fa(k)} واژهٔ مشترک</title></rect>`;
+  if (k) s += `<text x="${X(j)+cs/2}" y="${Y(i)+cs/2+4}" text-anchor="middle" style="font-size:10.5px;pointer-events:none;fill:${v > .55 ? "var(--card)" : "var(--muted)"}">${fa(k)}</text>`;
+}));
+svg.innerHTML = s;
+// row labels: put them right-aligned at the right edge
+svg.querySelectorAll(".rl").forEach(t => { t.removeAttribute("transform"); t.setAttribute("x", W - 4); t.setAttribute("text-anchor","end"); t.style.textAnchor = "start"; t.setAttribute("direction","rtl"); });
+document.getElementById("dl").innerHTML = HT.D.filter(d => T.some(t => t[1] === d[0])).map(d => `<span style="--c:${DC[d[0]]}">${esc(d[1])}</span>`).join("");
+const TB = Object.fromEntries(T.map(t => [t[0], t]));
+function show(a, b){
+  svg.querySelectorAll(".cell").forEach(c => c.classList.toggle("on", (c.dataset.a===a&&c.dataset.b===b)||(c.dataset.a===b&&c.dataset.b===a)));
+  const ws = sh(a,b), A = TB[a], B = TB[b];
+  const near = T.filter(t => t[0] !== a).map(t => [t, score(a, t[0])]).sort((x,y) => y[1]-x[1]).slice(0,3);
+  document.getElementById("det").innerHTML = `<div class="eyebrow">${esc(DN[A[1]])} × ${esc(DN[B[1]])}</div><h3>${esc(A[2])} و ${esc(B[2])}</h3>
+    <div class="score">${fa(ws.length)} واژهٔ مشترک${A[1] !== B[1] ? " · پیوند میان دو حوزه" : " · هم‌حوزه"}</div>
+    <div class="terms">${ws.length ? ws.map(w => `<span>${esc(w)}</span>`).join("") : `<span>واژهٔ مشترکی ثبت نشده</span>`}</div>
+    <p class="muted" style="font-size:.84rem;margin:10px 0 4px">نزدیک‌ترین همسایه‌های «${esc(A[2])}»:</p>
+    <div class="links">${near.map(([t]) => `<a href="#" data-a="${a}" data-b="${t[0]}">${esc(t[2])}</a>`).join("")}</div>
+    <p class="muted" style="font-size:.84rem;margin:10px 0 4px">صفحه‌های دو موضوع:</p>
+    <div class="links">${[...A[4], ...B[4]].filter(k => URLS[k]).slice(0,8).map(k => `<a href="${URLS[k]}" target="_blank" rel="noopener">${esc((window.LBL||{})[k]||k)}</a>`).join("")}</div>`;
+}
+svg.addEventListener("click", e => { const c = e.target.closest(".cell"); if (c) show(c.dataset.a, c.dataset.b); });
+document.getElementById("det").addEventListener("click", e => { const a = e.target.closest("a[data-a]"); if (a) { e.preventDefault(); show(a.dataset.a, a.dataset.b); } });
+const pairs = []; T.forEach((a,i) => T.slice(i+1).forEach(b => { if (a[1] !== b[1] && sh(a[0],b[0]).length >= 3) pairs.push([a,b,score(a[0],b[0])]); }));
+pairs.sort((x,y) => y[2]-x[2]);
+document.getElementById("top").innerHTML = pairs.slice(0,7).map(([a,b]) => `<li data-a="${a[0]}" data-b="${b[0]}">${esc(a[2])} ↔ ${esc(b[2])} <small>(${fa(sh(a[0],b[0]).length)} واژه: ${sh(a[0],b[0]).slice(0,3).map(esc).join("، ")}…)</small></li>`).join("");
+document.getElementById("top").addEventListener("click", e => { const li = e.target.closest("li"); if (li) show(li.dataset.a, li.dataset.b); });
+window.LBL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی", "scales": "سنجش‌خانه", "path": "پل‌یاب", "prism": "منشور رشته‌ها", "lineage": "شجره‌نامهٔ ایده‌ها", "heat": "همسایگی موضوع‌ها", "river": "رود ایده‌ها", "evidence": "سنجهٔ اعتبار", "debate": "میدان مناظره", "guess": "اول حدس بزن", "lab": "آزمایشگاه", "effect": "اندازهٔ اثر", "emotions": "اطلس هیجان‌ها"};
+if (pairs[0]) show(pairs[0][0][0], pairs[0][1][0]);
+</script>
+
+</body></html>

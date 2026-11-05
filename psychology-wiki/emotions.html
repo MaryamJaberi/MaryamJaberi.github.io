@@ -1,0 +1,200 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>اطلس هیجان‌ها</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#f5f6f3; --card:#ffffff; --ink:#1d2321; --muted:#5d6764; --rule:#d9dedb; --wash:#eceeeb; --link:#1f5d68; --accent:#1f5d68; --accent-ink:#fff;
+  --d-feel:#2f6f8f; --d-self:#b2622a; --d-social:#7a4a8a; --d-work:#2f7a55; --d-health:#a3404f; --d-body:#6b7a2a;
+  --good:#2f7a55; --mid:#b07a1c; --bad:#a3404f; --deb:#7a4a8a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;overflow-x:clip;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--link)}
+.wrap{max-width:1180px;margin:0 auto}
+.en{font-family:var(--f-latin);direction:ltr;unicode-bidi:isolate}
+header.top{padding-block:22px 14px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:clamp(2.3rem,5vw,3.2rem);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:1.8rem;line-height:1.15;margin:0;text-wrap:balance}
+.lede{margin:8px 0 0;color:var(--muted);max-width:76ch;font-size:.97rem}
+.eyebrow{font-size:.78rem;color:var(--link);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font-size:.84rem;padding:3px 12px;border-radius:999px;background:var(--card);border:1px solid var(--rule);line-height:1.7}
+.chip:hover,.chip:focus-visible{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:8px 18px;border-radius:999px;font-weight:500;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px}
+.muted{color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links a{font-size:.82rem;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:1px 10px;background:var(--bg)}
+.links a:hover{border-color:var(--accent)}
+input[type=search],input[type=text],input[type=number],select{font:inherit;font-size:.92rem;padding:7px 12px;border-radius:10px;border:1px solid var(--rule);background:var(--card);color:var(--ink);min-width:0}
+.tag{display:inline-block;font-size:.72rem;padding:0 8px;border-radius:999px;background:var(--wash);color:var(--muted)}
+footer.foot{margin-top:40px;border-top:1px solid var(--rule);padding-top:12px;font-size:.82rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.lay{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:860px){.lay{grid-template-columns:minmax(0,1fr)}}
+.list{display:grid;gap:6px;position:sticky;top:12px}
+@media (max-width:860px){.list{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}}
+.list button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;background:var(--card);border:1px solid var(--rule)}
+.list button i{width:14px;height:14px;border-radius:50%;background:var(--c);flex:none}
+.list button small{display:block;color:var(--muted);font-size:.72rem}
+.list button[aria-pressed="true"]{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c);background:color-mix(in srgb,var(--c) 8%,var(--card))}
+.hero{border-radius:18px;padding:18px 20px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 20%,var(--card)),var(--card));border:1px solid color-mix(in srgb,var(--c) 35%,var(--rule))}
+.hero h2{font-size:clamp(2rem,4vw,2.8rem);color:var(--c)}
+.hero .fam{color:var(--muted);font-size:.85rem}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:16px}
+@media (max-width:700px){.flow{grid-template-columns:minmax(0,1fr)}}
+.st{position:relative;padding:12px 14px 14px;background:var(--card);border:1px solid var(--rule);margin-inline-start:-1px}
+.st:first-child{border-radius:0 14px 14px 0} .st:last-child{border-radius:14px 0 0 14px}
+@media (max-width:700px){.st,.st:first-child,.st:last-child{border-radius:12px;margin:0 0 8px}}
+.st .n{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--c);color:#fff;font-size:.8rem;margin-inline-end:6px}
+.st h3{margin:0 0 6px;font-size:.98rem;display:flex;align-items:center}
+.st ul{margin:0;padding-inline-start:18px;font-size:.9rem}
+.st p{margin:0;font-size:.9rem;line-height:1.8}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+@media (max-width:700px){.two{grid-template-columns:minmax(0,1fr)}}
+.two .card h3{margin:0 0 4px;font-size:.95rem}
+.ok{border-inline-start:4px solid var(--good)} .ko{border-inline-start:4px solid var(--bad)}
+.more{margin-top:12px;display:grid;gap:8px}
+.wheel{margin:0 auto 14px;display:block;max-width:240px}
+</style>
+<div class="wrap">
+<header class="top">
+  <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › ابزارها › اطلس هیجان‌ها</div>
+  <h1>اطلس هیجان‌ها</h1>
+  <p class="lede">ده هیجان آشنا، هر کدام در چهار مرحله: چه چیزی آن را روشن می‌کند، در بدن و ذهن چه حسی دارد، ما را به چه کاری می‌کشاند، و چطور می‌شود تنظیمش کرد. با پیوند به درس‌ها و پرسشنامه‌های مرتبط. هیجان دشمن نیست؛ پیام‌رسان است.</p>
+</header>
+<div class="lay">
+  <nav class="list" id="list" aria-label="هیجان‌ها"></nav>
+  <main id="main" aria-live="polite"></main>
+</div>
+<footer class="foot">برگرفته از درس‌های تنظیم هیجان، شفقت، هیجان مثبت، حسادت، تنهایی و کارگاه فرایندهای مشترک ویکی؛ با الهام از «اطلس هیجان‌ها» اکمن. چهار مرحله ساده‌سازی‌اند: در واقعیت با هم و پشت سر هم پیش می‌آیند.</footer>
+</div>
+<script>
+/* اطلس هیجان‌ها: هر هیجان در چهار مرحله (ماشه، تجربه، میل به عمل، تنظیم)، به‌اضافهٔ وقتی که مشکل می‌شود. sk = پرسشنامهٔ مرتبط در سنجش‌خانه */
+window.EMO = [
+{id:"anger", fa:"خشم", c:"#c0392b", fam:"ناخوشایند و پرانرژی",
+ tr:["بی‌عدالتی یا حق‌خوری","مانع شدن سر راه هدف","تحقیر یا بی‌احترامی"],
+ ex:"گرما در صورت، تنش در فک و شانه، ذهن روی مقصر قفل می‌شود.",
+ ur:"مقابله، دفاع از مرز، تلافی.",
+ good:"نشان می‌دهد مرزی شکسته شده؛ انرژی برای تغییر بی‌عدالتی می‌دهد.",
+ bad:"نشخوار خشم، فانتزی انتقام، پرخاش؛ و خشم مزمن با بدبینی و سلامت بدتر همراه است.",
+ reg:["مکث پیش از پاسخ","بازتعبیر نیت طرف مقابل","بیان قاطعانه به‌جای پرخاش","فاصله گرفتن از موقعیت"],
+ sk:["ars","cci","jsi"], w:["riseabove","workshop","fairness","conflict"]},
+{id:"fear", fa:"ترس و اضطراب", c:"#6b4a8a", fam:"ناخوشایند و پرانرژی",
+ tr:["خطر واقعی یا محتمل","عدم قطعیت","ارزیابی شدن از سوی دیگران"],
+ ex:"تپش قلب، تنفس تند، هوشیاری بالا؛ ذهن سناریوهای بد را مرور می‌کند.",
+ ur:"فرار، اجتناب، آماده‌باش.",
+ good:"ما را از خطر دور نگه می‌دارد؛ در مقدار متوسط تمرکز و آمادگی را بالا می‌برد.",
+ bad:"نگرانی پایان‌ناپذیر، اجتناب از موقعیت‌ها، نابردباری در برابر عدم قطعیت.",
+ reg:["نام دادن «هیجان‌زده‌ام» به‌جای «آرام باش»","روبه‌رو شدن تدریجی به‌جای اجتناب","تمرین تحمل عدم قطعیت","وقت نگرانی محدود"],
+ sk:["ius","ww2","smm","gad7"], w:["workshop","s8","psychopath"]},
+{id:"sad", fa:"غم", c:"#2f6f8f", fam:"ناخوشایند و کم‌انرژی",
+ tr:["از دست دادن","جدایی","ناکامی در چیزی مهم"],
+ ex:"سنگینی، کندی، اشک؛ توجه به درون و به آنچه از دست رفته.",
+ ur:"کناره‌گیری، استراحت، طلب حمایت.",
+ good:"زمان سوگواری و بازنگری می‌سازد و دیگران را به حمایت فرامی‌خواند.",
+ bad:"وقتی با بی‌لذتی، ناامیدی و سرزنش خود همراه و طولانی شود، به افسردگی نزدیک می‌شود.",
+ reg:["در میان گذاشتن با کسی نزدیک","فعال‌سازی رفتاری: فعالیت کوچک خوشایند","مهربانی با خود","پذیرش به‌جای جنگیدن"],
+ sk:["shaps","teps","panas"], w:["anhedonia","s15","s11"]},
+{id:"shame", fa:"شرم", c:"#8a5a36", fam:"ناخوشایند و خودآگاه",
+ tr:["شکست جلوی دیگران","فاش شدن نقص","فاصله با تصویر آرمانی از خود"],
+ ex:"داغی صورت، میل به کوچک شدن و دیده نشدن؛ «من بدم» به‌جای «کار بدی کردم».",
+ ur:"پنهان شدن، عقب کشیدن، گاهی حمله.",
+ good:"ما را به هنجارهای گروه حساس می‌کند و جایگاه اجتماعی را حفظ می‌کند.",
+ bad:"منتقد درون بی‌رحم، کمال‌گرایی، پرهیز از کمک‌خواهی؛ با افسردگی همراه است.",
+ reg:["شفقت به خود","دیدن اشتراک انسانی: دیگران هم","تفکیک «من» از «کارم»","گفتن به یک نفر امن"],
+ sk:["deq","scs","socs","fcs"], w:["s3","s2","compassion","riseabove"]},
+{id:"guilt", fa:"گناه", c:"#5c6670", fam:"ناخوشایند و خودآگاه",
+ tr:["آسیب زدن به کسی","زیر پا گذاشتن ارزش خود","سود بردن ناحق"],
+ ex:"فکر کردن مدام به کاری که شد؛ «کار بدی کردم».",
+ ur:"جبران، عذرخواهی، ترمیم.",
+ good:"برخلاف شرم، معمولاً به جبران و رفتار اخلاقی می‌انجامد.",
+ bad:"گناه بی‌پایان یا بی‌مورد، به‌ویژه وقتی با سرزنش خود درآمیزد.",
+ reg:["جبران عملی","عذرخواهی مشخص","پذیرش اینکه جبران کافی بود"],
+ sk:["jsi"], w:["fairness","morality","s3"]},
+{id:"envy", fa:"حسادت و رشک", c:"#4f8a3a", fam:"ناخوشایند و اجتماعی",
+ tr:["مقایسه با کسی شبیه خودمان","موفقیت همکار در حوزهٔ مهم برای ما","احساس بی‌عدالتی در سهم"],
+ ex:"تلخی، حس کمبود؛ گاهی لذت پنهان از شکست دیگری.",
+ ur:"پایین کشیدن دیگری یا بالا بردن خود.",
+ good:"رشک «خوش‌خیم» انگیزهٔ پیشرفت می‌دهد.",
+ bad:"رشک «بدخیم» به بدگویی، تخریب و رقابت فرسایشی می‌رسد.",
+ reg:["تبدیل مقایسه به الگوگیری","دیدن کل زندگی دیگری، نه ویترینش","تمرکز بر پیشرفت خود"],
+ sk:["jsi","dps"], w:["envy","fairness","prestige"]},
+{id:"bored", fa:"بی‌حوصلگی", c:"#b07a1c", fam:"ناخوشایند و کم‌انرژی",
+ tr:["کار بی‌معنا یا تکراری","چالش کمتر از توان","نبود اختیار"],
+ ex:"کش آمدن زمان، بی‌قراری، ذهن سرگردان.",
+ ur:"دنبال چیز تازه گشتن، تغییر فعالیت.",
+ good:"علامتی است که می‌گوید وقت کاوش و تغییر است.",
+ bad:"پناه بردن به محرک‌های فوری (گوشی، خوراکی، مصرف) به‌جای تغییر واقعی.",
+ reg:["افزودن چالش یا معنا به کار","خلوت خودخواسته","کنجکاوی دربارهٔ جزئیات"],
+ sk:["wolf","nfc","rich"], w:["bored","curiosity","solitude","s11"]},
+{id:"curious", fa:"کنجکاوی", c:"#1f6f7a", fam:"خوشایند و پرانرژی",
+ tr:["شکاف اطلاعات","چیز تازه و نامعمول","معمایی که تقریباً حل‌شدنی است"],
+ ex:"کشش به سوی دانستن؛ گاهی کمی ناراحتی از ندانستن.",
+ ur:"کاوش، پرسیدن، جست‌وجو.",
+ good:"موتور یادگیری؛ با زندگی غنی و رضایت بیشتر همراه است.",
+ bad:"کنجکاوی بی‌هدف (مثلاً به اطلاعات بی‌ارزش یا به خطر) هزینه هم دارد.",
+ reg:["نوشتن پرسش‌ها","فرصت کاوش در کار و درس","پیگیری یک موضوع تا عمق"],
+ sk:["nfc","rich","teps"], w:["curiosity","lookagain","learnmem"]},
+{id:"joy", fa:"شادی و غرور سالم", c:"#d0902a", fam:"خوشایند",
+ tr:["رسیدن به هدف","پیوند با دیگران","پیشرفت کوچک روزانه"],
+ ex:"سبکی، انرژی، گشوده شدن توجه.",
+ ur:"شریک شدن، ادامه دادن، بازی.",
+ good:"منابع می‌سازد (نظریهٔ گسترش و ساخت) و رابطه را محکم می‌کند؛ حدود ۸۰٪ رویدادهای خوب را با دیگران در میان می‌گذاریم.",
+ bad:"گاهی آن را کمرنگ می‌کنیم («لیاقتش را نداشتم») یا از ترس سقوط از آن فرار می‌کنیم.",
+ reg:["مزه‌مزه کردن لحظه","در میان گذاشتن خبر خوب","ثبت پیشرفت‌های کوچک"],
+ sk:["panas","teps","rich"], w:["s15","happiness","s9"]},
+{id:"lonely", fa:"تنهایی", c:"#7a4a8a", fam:"ناخوشایند و اجتماعی",
+ tr:["طرد یا نادیده گرفته شدن","جابه‌جایی و غربت","فاصلهٔ رابطهٔ واقعی با رابطهٔ دلخواه"],
+ ex:"احساس جدا افتادن و نامرئی بودن؛ حساسیت بیشتر به نشانه‌های طرد.",
+ ur:"جست‌وجوی پیوند، یا برعکس، کناره‌گیری از ترس طرد.",
+ good:"مثل گرسنگی، نیاز به پیوند را یادآوری می‌کند.",
+ bad:"تنهایی مزمن با افسردگی، خشم و سلامت جسمی بدتر همراه است.",
+ reg:["یک تماس کوچک امروز","گفت‌وگو با غریبه (خوشایندتر از پیش‌بینی)","فرق گذاشتن میان خلوت و تنهایی"],
+ sk:["gbs","ams","mss"], w:["s10","mattering","solitude","s11"]}
+];
+
+const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html", "scales": "scales.html"}, LABEL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی", "scales": "سنجش‌خانه", "path": "پل‌یاب", "prism": "منشور رشته‌ها", "lineage": "شجره‌نامهٔ ایده‌ها", "heat": "همسایگی موضوع‌ها", "river": "رود ایده‌ها", "evidence": "سنجهٔ اعتبار", "debate": "میدان مناظره", "guess": "اول حدس بزن", "lab": "آزمایشگاه", "effect": "اندازهٔ اثر", "emotions": "اطلس هیجان‌ها"};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fa = s => String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const E = window.EMO, BY = Object.fromEntries(E.map(e => [e.id, e]));
+const SKN = {ars:"مقیاس نشخوار خشم",cci:"هفت فرایند مقابله",jsi:"حساسیت به بی‌عدالتی",ius:"نابردباری در برابر عدم قطعیت",ww2:"چرا نگرانی؟",smm:"ذهنیت استرس",gad7:"GAD-7",shaps:"مقیاس لذت",teps:"تجربهٔ زمانی لذت",panas:"PANAS",deq:"سرزنش خود",scs:"شفقت به خود",socs:"شفقت ساسکس-آکسفورد",fcs:"ترس از شفقت",dps:"سلطه و پرستیژ",wolf:"غرقگی در کار",nfc:"نیاز به شناخت",rich:"زندگی غنی",gbs:"تعلق",ams:"ضداهمیت",mss:"انگیزه برای خلوت"};
+document.getElementById("list").innerHTML = E.map(e => `<button data-id="${e.id}" style="--c:${e.c}"><i></i><span>${esc(e.fa)}<small>${esc(e.fam)}</small></span></button>`).join("");
+document.getElementById("list").addEventListener("click", ev => { const b = ev.target.closest("[data-id]"); if (b) show(b.dataset.id); });
+function show(id){
+  const e = BY[id]; document.querySelectorAll("#list button").forEach(b => b.setAttribute("aria-pressed", b.dataset.id === id));
+  const m = document.getElementById("main"); m.style.setProperty("--c", e.c);
+  m.innerHTML = `<section class="hero"><div class="fam">${esc(e.fam)}</div><h2>${esc(e.fa)}</h2></section>
+   <div class="flow">
+    <div class="st"><h3><span class="n">${fa(1)}</span>ماشه</h3><ul>${e.tr.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+    <div class="st"><h3><span class="n">${fa(2)}</span>تجربه در بدن و ذهن</h3><p>${esc(e.ex)}</p></div>
+    <div class="st"><h3><span class="n">${fa(3)}</span>میل به عمل</h3><p>${esc(e.ur)}</p></div>
+    <div class="st"><h3><span class="n">${fa(4)}</span>راه‌های تنظیم</h3><ul>${e.reg.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+   </div>
+   <div class="two"><div class="card ok"><h3>وقتی به کار می‌آید</h3><p style="margin:0">${esc(e.good)}</p></div><div class="card ko"><h3>وقتی مشکل می‌شود</h3><p style="margin:0">${esc(e.bad)}</p></div></div>
+   <div class="more"><div class="card"><div class="eyebrow">خودتان را بسنجید</div><div class="links" style="margin-top:6px">${e.sk.map(k => URLS.scales ? `<a href="${URLS.scales}#q-${k}" target="_blank" rel="noopener">${esc(SKN[k]||k)} ↗</a>` : "").join("")}</div></div>
+   <div class="card"><div class="eyebrow">در ویکی بخوانید</div><div class="links" style="margin-top:6px">${e.w.filter(k => URLS[k]).map(k => `<a href="${URLS[k]}" target="_blank" rel="noopener">${esc(LABEL[k]||k)}</a>`).join("")}</div></div></div>`;
+  try { history.replaceState(null, "", "#" + id); } catch(_) {}
+}
+const h = location.hash.slice(1); show(BY[h] ? h : E[0].id);
+</script>
+
+</body></html>
