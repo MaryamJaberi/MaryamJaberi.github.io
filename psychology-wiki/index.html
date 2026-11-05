@@ -25,7 +25,22 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body)
 a{color:var(--link)}
 .w{max-width:1200px;margin:0 auto}
 h2{font-family:var(--f-display);font-size:2rem;line-height:1.15;margin:0;text-wrap:balance}
-.sec{padding-top:40px}
+.sec{padding-top:48px;scroll-margin-top:64px}
+/* top nav */
+.topnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:12;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.topnav .w{display:flex;align-items:center;gap:6px 18px;min-height:50px}
+.topnav .brand{font-family:var(--f-display);font-size:1.35rem;font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap}
+.topnav nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0;flex:1}
+.topnav nav::-webkit-scrollbar{display:none}
+.topnav nav a{font-size:.84rem;text-decoration:none;color:var(--muted);padding:5px 10px;border-radius:999px;white-space:nowrap}
+.topnav nav a:hover,.topnav nav a.on{color:var(--ink);background:var(--wash)}
+.topnav .tq{font-size:.84rem;text-decoration:none;white-space:nowrap;border:1px solid var(--rule);border-radius:999px;padding:3px 12px;color:var(--ink);background:var(--card)}
+@media (max-width:640px){.topnav .brand{display:none} .topnav .tq{display:none}}
+/* hero actions */
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.acts a{text-decoration:none;font-size:.9rem;padding:7px 16px;border-radius:999px;border:1px solid var(--rule);color:var(--ink);background:var(--card)}
+.acts a.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.acts a:hover{border-color:var(--link)}
 .sec>header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 20px;margin-bottom:14px}
 .sec>header p{margin:0;color:var(--muted);font-size:.92rem;max-width:62ch}
 .eyebrow{font-size:.76rem;color:var(--muted);letter-spacing:.02em}
@@ -51,7 +66,7 @@ svg.ic{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-wid
 .hits li a i{width:9px;height:9px;border-radius:50%;background:var(--c);flex:none}
 .hits li a small{color:var(--muted);margin-inline-start:auto;font-size:.76rem;white-space:nowrap}
 .hits .hh{font-size:.72rem;color:var(--muted);padding:6px 10px 2px}
-.map{width:100%;max-width:560px;margin-inline:auto;display:block}
+.map{width:100%;max-width:min(560px,92vw);margin-inline:auto;display:block}
 .map .edge{fill:none;stroke:var(--muted);opacity:.22;transition:opacity .2s}
 .map .edge.on{opacity:.75}
 .map .node{cursor:pointer}
@@ -67,7 +82,7 @@ svg.ic{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-wid
 /* lenses */
 .lenses{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 @media (max-width:980px){.lenses{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:480px){.lenses{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.lenses{grid-template-columns:minmax(0,1fr)} .lens{grid-template-columns:104px minmax(0,1fr);grid-template-rows:auto 1fr} .lens svg{grid-row:1/3;height:100%;min-height:84px} .lens b{font-size:1.2rem;padding-top:10px}}
 .lens{display:grid;grid-template-rows:auto auto 1fr;background:var(--card);border:1px solid var(--rule);text-decoration:none;color:var(--ink);overflow:hidden}
 .lens:hover,.lens:focus-visible{border-color:var(--link);outline:none}
 .lens svg{width:100%;height:92px;display:block;background:var(--wash)}
@@ -79,13 +94,30 @@ svg.ic{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-wid
 /* audience */
 .aud{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 @media (max-width:820px){.aud{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.aud a{background:var(--card);border:1px solid var(--rule);padding:12px 14px;text-decoration:none;color:var(--ink);line-height:1.7}
-.aud a:hover{border-color:var(--link)}
-.aud a b{display:block;font-family:var(--f-display);font-size:1.3rem}
-.aud a span{font-size:.82rem;color:var(--muted)}
+.aud>div{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--ac);padding:14px 16px;line-height:1.7;display:flex;flex-direction:column;gap:6px}
+.aud b{font-family:var(--f-display);font-size:1.45rem;line-height:1.1}
+.aud p{margin:0;font-size:.84rem;color:var(--muted)}
+.aud ul{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:4px}
+.aud li a{display:flex;justify-content:space-between;gap:8px;text-decoration:none;color:var(--ink);font-size:.88rem;padding:5px 10px;border-radius:8px;background:var(--wash)}
+.aud li a::after{content:"←";color:var(--muted)}
+.aud li a:hover{background:color-mix(in srgb,var(--ac) 14%,var(--card))}
+@media (max-width:520px){.aud{grid-template-columns:minmax(0,1fr)}}
+/* related project band */
+.proj{margin-top:12px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 16px;align-items:center;background:var(--card);border:1px dashed var(--rule);padding:12px 16px;text-decoration:none;color:var(--ink)}
+.proj:hover{border-color:var(--link)}
+.proj small{color:var(--muted);font-size:.76rem;display:block}
+.proj b{font-family:var(--f-display);font-size:1.3rem}
+.proj span.d{font-size:.84rem;color:var(--muted)}
+.proj .go{font-size:.85rem;white-space:nowrap}
+@media (max-width:640px){.proj{grid-template-columns:minmax(0,1fr)}}
+details.wdet{margin-top:14px}
+details.wdet>summary{cursor:pointer;font-size:.9rem;color:var(--link);padding:6px 0;list-style:none}
+details.wdet>summary::-webkit-details-marker{display:none}
+details.wdet>summary::before{content:"＋ ";} details.wdet[open]>summary::before{content:"－ ";}
+details.wdet p{margin:0 0 10px;color:var(--muted);font-size:.9rem}
 
 /* filter bar */
-.fbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--paper);border-bottom:1px solid var(--rule);padding-block:10px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.fbar{position:sticky;top:calc(env(safe-area-inset-top,0px) + 50px);z-index:6;background:var(--paper);border-bottom:1px solid var(--rule);padding-block:10px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
 .fbar .grp{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
 .fbar .lab{font-size:.74rem;color:var(--muted);margin-inline-end:2px}
@@ -176,7 +208,8 @@ table.xt button:hover,table.xt button[aria-pressed="true"]{opacity:1;box-shadow:
  <symbol id="k-tool" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
 </svg>
 
-<main class="w">
+<div class="topnav"><div class="w"><a class="brand" href="#top">ویکی روان</a><nav aria-label="بخش‌های صفحه"><a href="#start">از کجا شروع کنم</a><a href="#lenses">راه‌های دیدن</a><a href="#all">همهٔ مطالب</a><a href="#xwalk">پل به رشته‌ها</a><a href="#index">نمایهٔ واژه‌ها</a></nav><a class="tq" href="#top" id="tq">جست‌وجو ⌕</a></div></div>
+<main class="w" id="top">
 <section class="hero">
   <div>
     <h1>ویکی روان‌شناسی</h1>
@@ -188,6 +221,7 @@ table.xt button:hover,table.xt button[aria-pressed="true"]{opacity:1;box-shadow:
       <input id="q" type="search" placeholder="جست‌وجو: صفحه یا واژه، مثلاً «فرسودگی» یا «امید»" autocomplete="off" aria-controls="hits">
       <ul class="hits" id="hits" hidden></ul>
     </div>
+    <div class="acts"><a class="pri" href="#start">از کجا شروع کنم؟</a><a href="scales.html" target="_blank" rel="noopener">سنجش‌خانه: پرسشنامه‌ها</a><a href="#all">همهٔ مطالب</a></div>
   </div>
   <div>
     <svg class="map" id="map" viewBox="0 0 560 560" role="group" aria-label="نقشهٔ شش حوزهٔ ویکی و پیوندهای میانشان"></svg>
@@ -195,30 +229,24 @@ table.xt button:hover,table.xt button[aria-pressed="true"]{opacity:1;box-shadow:
   </div>
 </section>
 
+<section class="sec" id="start">
+  <header><h2>از کجا شروع کنم؟</h2><p>بسته به اینکه چرا اینجا هستید، یکی از این چهار راه را بردارید. هر راه با یک مسیر خواندن و یک ابزار عملی شروع می‌شود.</p></header>
+  <div class="aud">
+    <div style="--ac:var(--d-self)"><b>خودشناسی</b><p>هیجان، شفقت به خود، عادت و معنا؛ با زبان ساده.</p><ul><li><a href="learn.html#paths" target="_blank" rel="noopener">مسیر خواندن خودشناسی</a></li><li><a href="scales.html" target="_blank" rel="noopener">یک پرسشنامه پر کنید</a></li><li><a href="compassion.html" target="_blank" rel="noopener">شفقت به خود</a></li></ul></div>
+    <div style="--ac:var(--d-feel)"><b>دانشجو</b><p>از روش علمی تا آسیب‌شناسی و نگاه میان‌رشته‌ای.</p><ul><li><a href="learn.html#paths" target="_blank" rel="noopener">مسیر خواندن دانشجو</a></li><li><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a></li><li><a href="#xwalk">پل به فلسفه و جامعه‌شناسی</a></li></ul></div>
+    <div style="--ac:var(--d-health)"><b>درمانگر و متخصص</b><p>تشخیص، فرایندهای مشترک، اعتیاد، تروما و شواهد.</p><ul><li><a href="learn.html#paths" target="_blank" rel="noopener">مسیر خواندن متخصص</a></li><li><a href="psychopath.html" target="_blank" rel="noopener">آسیب‌شناسی روانی توصیفی</a></li><li><a href="scales.html#q-cci" target="_blank" rel="noopener">ابزارهای سنجش و مجوزها</a></li></ul></div>
+    <div style="--ac:var(--d-work)"><b>مدیر و سازمان</b><p>سلامت روان در کار، فرسودگی، انگیزه و سنجش سازمانی.</p><ul><li><a href="orgpsych.html" target="_blank" rel="noopener">روان‌شناسی سازمانی</a></li><li><a href="poswork.html" target="_blank" rel="noopener">مثبت‌گرایی در کار</a></li><li><a href="orgsvc.html" target="_blank" rel="noopener">سنجش سلامت سازمان</a></li></ul></div>
+  </div>
+</section>
+
 <section class="sec" id="lenses">
   <header><h2>راه‌های دیدن</h2><p>همین مطالب از هشت زاویهٔ دیگر؛ هر کدام صفحهٔ تعاملی جداگانه‌ای است و همه به هم پیوند دارند.</p></header>
   <div class="lenses" id="lensbox"></div>
-</section>
-
-<section class="sec" id="worlds">
-  <header><h2>جهان‌های ویکی چطور به هم وصل‌اند</h2><p>هر صفحه، هر مفهوم و هر دانشمند در چند جهان دیده می‌شود. روی هر دایره بزنید تا وارد آن جهان شوید؛ برچسب هر خط می‌گوید چه چیزی آن دو را به هم وصل می‌کند.</p></header>
-  <div class="wbox"><svg id="wmap" viewBox="0 0 900 450" role="group" aria-label="نقشهٔ پیوند جهان‌های ویکی"></svg></div>
-</section>
-
-<section class="sec" id="xwalk">
-  <header><h2>پل به فلسفه، جامعه‌شناسی و رشته‌های دیگر</h2><p>هر موضوع از چند رشته دیده می‌شود. هر نقطه یک پل است؛ روی آن بزنید تا ببینید آن رشته دربارهٔ این موضوع چه می‌گوید و به کدام مفهوم در دنیای روان می‌رسد.</p></header>
-  <div class="xwrap"><table class="xt" id="xt"></table></div>
-  <div class="xdet" id="xdet" aria-live="polite"></div>
-</section>
-
-<section class="sec" id="start">
-  <header><h2>از کجا شروع کنم؟</h2><p>چهار مسیر خواندن در مرکز یادگیری، هر کدام با ترتیب پیشنهادی و پرسش برای فکر کردن.</p></header>
-  <div class="aud">
-    <a href="learn.html#paths" target="_blank" rel="noopener"><b>خودشناسی</b><span>هیجان، شفقت به خود، عادت، معنا؛ با زبان ساده</span></a>
-    <a href="learn.html#paths" target="_blank" rel="noopener"><b>دانشجو</b><span>از روش علمی تا آسیب‌شناسی و نگاه میان‌رشته‌ای</span></a>
-    <a href="learn.html#paths" target="_blank" rel="noopener"><b>درمانگر و متخصص</b><span>تشخیص، فرایندهای مشترک، اعتیاد، تروما و شواهد</span></a>
-    <a href="orgsvc.html" target="_blank" rel="noopener"><b>مدیر و سازمان</b><span>سنجش سلامت روانی سازمان، گزارش رده‌ای و کارگاه‌ها</span></a>
-  </div>
+  <details class="wdet" id="worlds"><summary>این هشت جهان چطور به هم وصل‌اند؟ (نقشه)</summary>
+    <p>هر صفحه، هر مفهوم و هر دانشمند در چند جهان دیده می‌شود. روی هر دایره بزنید تا وارد آن جهان شوید؛ برچسب هر خط می‌گوید چه چیزی آن دو را به هم وصل می‌کند.</p>
+    <div class="wbox"><svg id="wmap" viewBox="0 0 900 450" role="group" aria-label="نقشهٔ پیوند جهان‌های ویکی"></svg></div>
+  </details>
+  <a class="proj" href="orgsvc.html" target="_blank" rel="noopener"><span><small>پروژهٔ مرتبط</small><b>سنجش سلامت سازمان</b></span><span class="d">همین پرسشنامه‌ها برای سازمان‌ها: سنجش ناشناس، گزارش به تفکیک رده و پیشنهاد کارگاه. سه‌زبانه.</span><span class="go">باز کردن ←</span></a>
 </section>
 
 <section class="sec" id="all">
@@ -230,6 +258,12 @@ table.xt button:hover,table.xt button[aria-pressed="true"]{opacity:1;box-shadow:
     <span class="cnt" id="fcnt"></span>
   </div>
   <div id="doms"></div>
+</section>
+
+<section class="sec" id="xwalk">
+  <header><h2>پل به فلسفه، جامعه‌شناسی و رشته‌های دیگر</h2><p>هر موضوع از چند رشته دیده می‌شود. هر نقطه یک پل است؛ روی آن بزنید تا ببینید آن رشته دربارهٔ این موضوع چه می‌گوید و به کدام مفهوم در دنیای روان می‌رسد.</p></header>
+  <div class="xwrap"><table class="xt" id="xt"></table></div>
+  <div class="xdet" id="xdet" aria-live="polite"></div>
 </section>
 
 <section class="sec" id="index">
@@ -289,16 +323,16 @@ const LDRAW = {
   learn:`<path class="s" d="M30 70 C70 70 70 30 110 30 S150 70 190 60 S220 30 230 26"/>${[[30,70],[110,30],[190,60],[230,26]].map(([x,y])=>`<circle class="f" cx="${x}" cy="${y}" r="5"/>`).join("")}`,
   orgsvc:`${Array.from({length:20},(_,i)=>{const c=i%5,r=Math.floor(i/5),o=[.25,.45,.7,.35,.55][(i*7)%5];return `<rect x="${70+c*24}" y="${12+r*18}" width="20" height="14" class="f" style="opacity:${o}"/>`}).join("")}`
 };
-document.getElementById("lensbox").innerHTML = LENS.map(([k,t,d,u]) => A(u, `<svg viewBox="0 0 250 92" aria-hidden="true">${LDRAW[k]}</svg><b>${t}</b><span>${d}</span>`, "lens")).join("");
+document.getElementById("lensbox").innerHTML = LENS.filter(l => l[0] !== "orgsvc").map(([k,t,d,u]) => A(u, `<svg viewBox="0 0 250 92" aria-hidden="true">${LDRAW[k]}</svg><b>${t}</b><span>${d}</span>`, "lens")).join("");
 
 
 /* worlds map */
 (function(){
-  const N = [["pages","صفحه‌های ویکی", W.urls.hub+"#all", 450, 225, "۸۵ صفحه"],["graph","دنیای روان", W.graph, 450, 62, "گراف مفهوم‌ها"],["land","سرزمین روان", W.urls.land, 705, 100, "نقشهٔ قاره‌ای"],
+  const N = [["pages","صفحه‌های ویکی", "#all", 450, 225, "۸۵ صفحه"],["graph","دنیای روان", W.graph, 450, 62, "گراف مفهوم‌ها"],["land","سرزمین روان", W.urls.land, 705, 100, "نقشهٔ قاره‌ای"],
    ["library","کتابخانه", W.urls.library, 805, 255, "کتاب و دانشمند"],["atlas2","اطلس رشته‌ها", W.urls.atlas2, 670, 385, "رشته و شغل"],["timeline","خط زمانی ایده‌ها", W.urls.timeline, 230, 385, "از بقراط تا امروز"],
-   ["body","بدن و روان", W.urls.body, 95, 255, "هورمون و مغز"],["learn","مرکز یادگیری", W.urls.learn, 195, 100, "مسیر و آزمونک"],["orgsvc","سنجش سازمان", W.urls.orgsvc, 450, 400, "پرسشنامه و کارگاه"]];
+   ["body","بدن و روان", W.urls.body, 95, 255, "هورمون و مغز"],["learn","مرکز یادگیری", W.urls.learn, 195, 100, "مسیر و آزمونک"],["scales","سنجش‌خانه", W.urls.scales, 450, 400, "پرسشنامه‌ها"]];
   const E = [["pages","graph","واژه‌ها و مفهوم‌ها"],["graph","land","همان مفهوم‌ها، شهرهای نقشه"],["land","library","دانشمندان"],["pages","library","مرور کتاب‌ها"],["library","atlas2","رشتهٔ هر کتاب"],
-   ["graph","atlas2","رشته‌ها"],["pages","timeline","ایده‌ها در زمان"],["timeline","graph","مفهوم‌ها"],["pages","body","هورمون و مغز"],["pages","learn","مسیر خواندن"],["pages","orgsvc","پرسشنامه و کارگاه"]];
+   ["graph","atlas2","رشته‌ها"],["pages","timeline","ایده‌ها در زمان"],["timeline","graph","مفهوم‌ها"],["pages","body","هورمون و مغز"],["pages","learn","مسیر خواندن"],["pages","scales","پرسشنامه‌های هر درس"]];
   const P = Object.fromEntries(N.map(n => [n[0], n]));
   let s = "";
   E.forEach(([a,b,l]) => { const A = P[a], B = P[b]; s += `<line class="we" x1="${A[3]}" y1="${A[4]}" x2="${B[3]}" y2="${B[4]}"/>`; });
@@ -359,17 +393,23 @@ q.addEventListener("input", () => { const s = q.value.trim().toLowerCase(); if (
 document.addEventListener("click", e => { if (!e.target.closest(".srch")) hits.hidden = true; });
 q.addEventListener("keydown", e => { if (e.key === "Escape") hits.hidden = true; });
 
+/* nav highlight + search shortcut */
+(function(){ const links = [...document.querySelectorAll(".topnav nav a")], secs = links.map(a => document.querySelector(a.getAttribute("href")));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach((a,i) => a.classList.toggle("on", secs[i] === e.target)); }), {rootMargin:"-45% 0px -50% 0px"});
+  secs.forEach(s => s && io.observe(s));
+  document.getElementById("tq").addEventListener("click", e => { e.preventDefault(); window.scrollTo({top:0,behavior:"smooth"}); setTimeout(() => q.focus({preventScroll:true}), 350); });
+})();
 /* term index */
 const ix = document.getElementById("ix"), iq = document.getElementById("iq");
 let showAll = false;
 function rix(){ const s = iq.value.trim().toLowerCase();
   const L = W.idx.filter(e => !s || (e.fa+" "+e.en+" "+e.d).toLowerCase().includes(s));
-  const view = (s || showAll) ? L : L.slice(0, 60);
+  const view = (s || showAll) ? L : L.slice(0, 24);
   ix.innerHTML = view.map(e => { const seen = new Set();
     const lk = e.in.filter(([k]) => !seen.has(k) && seen.add(k)).map(([k,id]) => `<a href="${W.urls[k]}#t-${id}" target="_blank" rel="noopener">${esc(W.label[k]||k)}</a>`).join("") + (e.g ? `<a class="g" href="${W.graph}#${e.g}" target="_blank" rel="noopener">دنیای روان ↗</a>` : "");
     return `<div class="e"><h4>${esc(e.fa)}<span class="en">${esc(e.en)}</span></h4><p>${esc(e.d)}</p><div class="lk">${lk}</div></div>`; }).join("");
   document.getElementById("icnt").textContent = fa(L.length) + " واژه";
-  document.getElementById("more").hidden = !!s || showAll || L.length <= 60; }
+  document.getElementById("more").hidden = !!s || showAll || L.length <= 24; }
 iq.addEventListener("input", rix);
 document.getElementById("more").addEventListener("click", () => { showAll = true; rix(); });
 rix();
