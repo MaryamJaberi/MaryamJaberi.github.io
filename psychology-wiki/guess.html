@@ -1,0 +1,154 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>اول حدس بزن</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#f5f6f3; --card:#ffffff; --ink:#1d2321; --muted:#5d6764; --rule:#d9dedb; --wash:#eceeeb; --link:#1f5d68; --accent:#1f5d68; --accent-ink:#fff;
+  --d-feel:#2f6f8f; --d-self:#b2622a; --d-social:#7a4a8a; --d-work:#2f7a55; --d-health:#a3404f; --d-body:#6b7a2a;
+  --good:#2f7a55; --mid:#b07a1c; --bad:#a3404f; --deb:#7a4a8a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;overflow-x:clip;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--link)}
+.wrap{max-width:1180px;margin:0 auto}
+.en{font-family:var(--f-latin);direction:ltr;unicode-bidi:isolate}
+header.top{padding-block:22px 14px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:clamp(2.3rem,5vw,3.2rem);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:1.8rem;line-height:1.15;margin:0;text-wrap:balance}
+.lede{margin:8px 0 0;color:var(--muted);max-width:76ch;font-size:.97rem}
+.eyebrow{font-size:.78rem;color:var(--link);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font-size:.84rem;padding:3px 12px;border-radius:999px;background:var(--card);border:1px solid var(--rule);line-height:1.7}
+.chip:hover,.chip:focus-visible{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:8px 18px;border-radius:999px;font-weight:500;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px}
+.muted{color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links a{font-size:.82rem;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:1px 10px;background:var(--bg)}
+.links a:hover{border-color:var(--accent)}
+input[type=search],input[type=text],input[type=number],select{font:inherit;font-size:.92rem;padding:7px 12px;border-radius:10px;border:1px solid var(--rule);background:var(--card);color:var(--ink);min-width:0}
+.tag{display:inline-block;font-size:.72rem;padding:0 8px;border-radius:999px;background:var(--wash);color:var(--muted)}
+footer.foot{margin-top:40px;border-top:1px solid var(--rule);padding-top:12px;font-size:.82rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.box{max-width:760px;margin:0 auto}
+.prog{display:flex;gap:4px;margin-bottom:14px}
+.prog i{flex:1;height:6px;border-radius:3px;background:var(--wash)}
+.prog i.d{background:var(--accent)} .prog i.c{background:var(--ink)}
+.q{font-family:var(--f-display);font-size:clamp(1.45rem,3vw,1.9rem);line-height:1.45;margin:4px 0 18px;text-wrap:pretty}
+.sl{position:relative;margin:30px 4px 6px}
+.sl input{width:100%;accent-color:var(--accent);direction:ltr}
+.sl .val{text-align:center;font-family:var(--f-display);font-size:2.6rem;line-height:1;margin-bottom:4px}
+.track{position:relative;height:30px;direction:ltr;margin-top:6px}
+.track .m{position:absolute;top:0;transform:translateX(-50%);font-size:.78rem;white-space:nowrap;text-align:center}
+.track .m::before{content:"";display:block;width:3px;height:14px;margin:0 auto 2px;border-radius:2px;background:currentColor}
+.track .you{color:var(--muted)} .track .real{color:var(--good);font-weight:700}
+.chs{display:grid;gap:8px}
+.chs button{all:unset;cursor:pointer;background:var(--card);border:1.5px solid var(--rule);border-radius:12px;padding:12px 14px}
+.chs button:hover{border-color:var(--accent)}
+.chs button.ok{border-color:var(--good);background:color-mix(in srgb,var(--good) 12%,var(--card))}
+.chs button.no{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,var(--card))}
+.rev{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--rule);border-inline-start:5px solid var(--good)}
+.rev .h{font-weight:700;margin-bottom:4px}
+.nav{display:flex;gap:10px;justify-content:space-between;margin-top:18px;flex-wrap:wrap}
+.sum{text-align:center}
+.sum .big{font-family:var(--f-display);font-size:3.4rem;line-height:1;color:var(--accent)}
+.list{text-align:start;margin-top:16px;display:grid;gap:8px}
+.list div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;font-size:.88rem;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:8px 12px}
+.list b{white-space:nowrap}
+</style>
+<div class="wrap">
+<header class="top">
+  <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › ابزارها › اول حدس بزن</div>
+  <h1>اول حدس بزن، بعد ببین</h1>
+  <p class="lede">شانزده یافتهٔ غافلگیرکننده از درس‌ها و کتاب‌های ویکی. پیش از دیدن پاسخ حدس بزنید؛ فاصلهٔ حدس ما با واقعیت، خودش درسی دربارهٔ ذهن است. پاسخ‌ها جایی ذخیره نمی‌شوند.</p>
+</header>
+<div class="box">
+  <div class="prog" id="prog"></div>
+  <div id="stage" aria-live="polite"></div>
+</div>
+<footer class="foot">عددها از درس‌نامه‌ها و منابع ذکرشده در صفحه‌های ویکی‌اند؛ پیوند هر کارت به صفحهٔ مربوط می‌رود.</footer>
+</div>
+<script>
+/* اول حدس بزن: کارت‌های یافته‌های شگفت‌انگیز ویکی. a = پاسخ، mn/mx/st = دامنهٔ لغزنده، u = واحد، x = توضیح، w = صفحه */
+window.CARDS = [
+{q:"در یک آزمایش، پس از سه گفت‌وگو و اصرار بر جزئیات، چند درصد آدم‌ها یک خاطرهٔ کودکی ساختگی را «به یاد آوردند»؟", a:25, mn:0, mx:100, st:1, u:"٪", x:"حدود یک‌چهارم. وقتی تصویرسازی ذهنی هم اضافه شد، این رقم بالاتر رفت. حافظه بازسازی است، نه ضبط.", w:"memory"},
+{q:"آدم‌ها در تشخیص دروغ از راست چقدر دقیق‌اند؟ (فراتحلیل نزدیک به ۲۵ هزار نفر؛ ۵۰٪ یعنی شانس)", a:54, mn:40, mx:100, st:1, u:"٪", x:"حدود ۵۴٪، کمی بهتر از شیر یا خط؛ حتی متخصصان هم چندان بهتر نیستند (بوند و دپائولو ۲۰۰۶).", w:"conspiracy"},
+{q:"شیوع سرطان سینه در غربالگری ۱٪ است؛ ماموگرافی ۸۰٪ سرطان‌ها را نشان می‌دهد و در ۹٫۶٪ سالم‌ها هم مثبت می‌شود. اگر جواب یک خانم مثبت باشد، احتمال واقعی سرطان چقدر است؟", a:8, mn:0, mx:100, st:1, u:"٪", x:"حدود ۸٪. بیشتر آدم‌ها، حتی پزشکان، عددی نزدیک ۷۰ تا ۸۰٪ می‌گویند؛ چون نرخ پایه را نادیده می‌گیرند. با «فراوانی طبیعی» (از ۱۰۰۰ زن، ۱۰ نفر…) درک بسیار ساده‌تر می‌شود.", w:"illusions"},
+{q:"دو برابر شدن درآمد، رضایت از زندگی را (روی مقیاس ۰ تا ۱۰) چقدر بالا می‌برد؟", a:0.2, mn:0, mx:3, st:0.1, u:" واحد", x:"فقط حدود ۰٫۲ واحد. مقایسه با دیگران و عادت کردن، بیشتر اثر پول را می‌خورند؛ سلامت روان قوی‌ترین پیش‌بین رضایت بود.", w:"happiness"},
+{q:"چند درصد از تجربه‌های هیجانی‌مان را در همان روزها با کسی در میان می‌گذاریم؟", a:85, mn:0, mx:100, st:1, u:"٪", x:"حدود ۸۰ تا ۹۰٪ (برنار ریمه). «درد دل» تقریباً همگانی است، هرچند همیشه حال را بهتر نمی‌کند.", w:"s11"},
+{q:"پیش از یک امتحان یا سخنرانی، چند درصد آدم‌ها سعی می‌کنند «آرام» باشند؟", a:91, mn:0, mx:100, st:1, u:"٪", x:"۹۱٪. اما پژوهش آلیسون وود بروکس نشان داد گفتن «هیجان‌زده‌ام» از تلاش برای آرام شدن کارآمدتر است؛ برانگیختگی را خاموش نکن، نامش را عوض کن.", w:"s8"},
+{q:"دانشجویان پیش‌بینی کردند پروژه‌شان کی تمام می‌شود. چند درصد واقعاً تا همان تاریخ تمام کردند؟", a:30, mn:0, mx:100, st:1, u:"٪", x:"فقط حدود ۳۰٪؛ و حتی کمتر از نیمی تا تاریخ «بدترین حالت». این همان خطای برنامه‌ریزی است.", w:"planning"},
+{q:"از کسانی که دو هفته پیش نشان کوچک «رانندگی ایمن» نصب کرده بودند، چند درصد پذیرفتند تابلوی بزرگ و زشتی جلوی خانه‌شان نصب شود؟ (بدون درخواست قبلی: ۱۷٪)", a:76, mn:0, mx:100, st:1, u:"٪", x:"۷۶٪. «پا لای در» گذاشتن: یک تعهد کوچک، خودپندارهٔ ما را عوض می‌کند و تعهد بزرگ بعدی را آسان‌تر.", w:"habits"},
+{q:"به آدم‌ها دو تجربهٔ درد دادند؛ دومی طولانی‌تر بود اما پایانش کمی ملایم‌تر. چند درصد برای تکرار، نسخهٔ طولانی‌تر را انتخاب کردند؟", a:69, mn:0, mx:100, st:1, u:"٪", x:"حدود ۶۹٪. حافظه «اوج و پایان» را نگه می‌دارد، نه مجموع رنج را (کانمن).", w:"mistakes"},
+{q:"آدم‌ها از دو عکس، چهرهٔ جذاب‌تر را انتخاب کردند؛ بعد پنهانی عکس دیگر را به دستشان دادند. چند درصد متوجه شدند؟", a:13, mn:0, mx:100, st:1, u:"٪", x:"حدود ۱۳٪. بقیه حتی برای چهره‌ای که انتخاب نکرده بودند دلیل آوردند («گوشواره‌اش را دوست داشتم»). کوری انتخاب.", w:"mistakes"},
+{q:"«مسئلهٔ پرتو دانکر» (نابود کردن تومور بدون آسیب به بافت سالم): بدون هیچ راهنمایی چند درصد آدم‌ها آن را حل می‌کنند؟", a:10, mn:0, mx:100, st:1, u:"٪", x:"حدود ۱۰٪. با خواندن داستانی قیاسی دربارهٔ سرداری که سپاهش را از چند جاده می‌فرستد، به ۳۰٪ و بیشتر می‌رسد. تفکر قیاسی دور، ابزار حل مسئله است.", w:"range"},
+{q:"کودکان با دیدن فقط چهرهٔ دو نامزد، «کاپیتان کشتی» را انتخاب کردند. در چند درصد موارد برندهٔ واقعی انتخابات را درست حدس زدند؟", a:71, mn:0, mx:100, st:1, u:"٪", x:"حدود ۷۱٪؛ تقریباً به اندازهٔ بزرگسالان (۷۲٪). داوری سریع از روی چهره، رأی را هم شکل می‌دهد.", w:"prestige"},
+{q:"در یک کارآزمایی واکسن، چه سهمی از عوارض سیستمیک پس از دوز اول (سردرد، خستگی…) در گروه دارونما هم دیده شد و به نوسبو نسبت داده شد؟", a:76, mn:0, mx:100, st:1, u:"٪", x:"حدود ۷۶٪. انتظار عارضه خودش عارضه می‌سازد.", w:"suggestible"},
+{q:"در بازی‌های کالای عمومی، چند درصد مردم «همکار مشروط»اند؛ یعنی به اندازهٔ دیگران مایه می‌گذارند؟", a:58, mn:0, mx:100, st:1, u:"٪", x:"حدود ۵۸٪؛ و حدود ۲۵٪ «سواری‌مجانی‌بگیر». همکاری بیشتر به این بستگی دارد که فکر کنیم دیگران همکاری می‌کنند.", w:"trust"},
+{q:"در هتلی دو پیام برای استفادهٔ دوباره از حوله گذاشتند: «به حفظ محیط زیست کمک کنید» یا «بیشتر مهمانان این هتل حوله را دوباره استفاده کردند». کدام مؤثرتر بود؟", ch:["پیام حفظ محیط زیست","پیام «بیشتر مهمانان…»","هیچ تفاوتی نداشتند"], a:1, x:"پیام هنجار توصیفی («دیگران این کار را می‌کنند») مؤثرتر بود؛ آدم‌ها از هم تقلید می‌کنند بیش از آنکه از دلیل اخلاقی پیروی کنند.", w:"habits"},
+{q:"حرف زدن با یک غریبه در قطار، در مقایسه با سکوت، چه حالی ساخت؟", ch:["ناخوشایندتر از سکوت","همان‌قدر","خوشایندتر از سکوت"], a:2, x:"خوشایندتر؛ هرچند آدم‌ها پیش‌بینی می‌کردند ناخوشایند باشد. همین پیش‌بینی غلط ما را از گفت‌وگو بازمی‌دارد (اپلی و شرودر ۲۰۱۴).", w:"s11"}
+];
+
+const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html", "scales": "scales.html"}, LABEL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی", "scales": "سنجش‌خانه", "path": "پل‌یاب", "prism": "منشور رشته‌ها", "lineage": "شجره‌نامهٔ ایده‌ها", "heat": "همسایگی موضوع‌ها", "river": "رود ایده‌ها", "evidence": "سنجهٔ اعتبار", "debate": "میدان مناظره", "guess": "اول حدس بزن", "lab": "آزمایشگاه", "effect": "اندازهٔ اثر", "emotions": "اطلس هیجان‌ها"};
+const C = window.CARDS;
+const fa = s => String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]).replace(".", "٫");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let i = 0; const ans = [];
+function prog(){ document.getElementById("prog").innerHTML = C.map((_, k) => `<i class="${k < i ? "d" : k === i ? "c" : ""}"></i>`).join(""); }
+const pos = (c, v) => 100 * (v - c.mn) / (c.mx - c.mn);
+function show(){
+  prog();
+  const st = document.getElementById("stage");
+  if (i >= C.length) return summary();
+  const c = C[i], mid = c.ch ? null : +(c.mn + (c.mx - c.mn) / 2).toFixed(1);
+  st.innerHTML = `<div class="eyebrow">کارت ${fa(i+1)} از ${fa(C.length)}</div><p class="q">${esc(c.q)}</p>` +
+    (c.ch ? `<div class="chs">${c.ch.map((t, k) => `<button data-k="${k}">${esc(t)}</button>`).join("")}</div>`
+          : `<div class="sl"><div class="val" id="val">${fa(mid)}${c.u}</div><input type="range" id="rg" min="${c.mn}" max="${c.mx}" step="${c.st}" value="${mid}" aria-label="حدس شما"></div>
+             <div class="nav"><span class="muted" style="font-size:.85rem">لغزنده را روی حدس خود بگذارید.</span><button class="btn" id="go">نشان بده</button></div>`) +
+    `<div id="rv"></div>`;
+  if (c.ch) st.querySelector(".chs").addEventListener("click", e => { const b = e.target.closest("button[data-k]"); if (!b || st.dataset.done) return; reveal(+b.dataset.k); });
+  else { const rg = document.getElementById("rg"); rg.addEventListener("input", () => document.getElementById("val").textContent = fa(+rg.value) + c.u); document.getElementById("go").addEventListener("click", () => reveal(+rg.value)); }
+  st.dataset.done = "";
+}
+function reveal(g){
+  const c = C[i], st = document.getElementById("stage"); st.dataset.done = "1";
+  let head;
+  if (c.ch){ st.querySelectorAll(".chs button").forEach((b, k) => { if (k === c.a) b.classList.add("ok"); else if (k === g) b.classList.add("no"); }); head = g === c.a ? "درست حدس زدید." : "غافلگیر شدید؟"; ans.push({c, g, err: g === c.a ? 0 : 1}); }
+  else { const err = Math.abs(g - c.a) / (c.mx - c.mn); ans.push({c, g, err});
+    const nav = st.querySelector(".nav"); if (nav) nav.remove(); document.getElementById("rg").disabled = true;
+    st.querySelector(".sl").insertAdjacentHTML("beforeend", `<div class="track"><span class="m you" style="left:${pos(c,g)}%">حدس شما</span><span class="m real" style="left:${pos(c,c.a)}%">واقعیت: ${fa(c.a)}${c.u}</span></div>`);
+    head = err < 0.06 ? "عالی؛ خیلی نزدیک بودید." : err < 0.2 ? "نزدیک بودید." : "فاصله زیاد بود؛ بیشتر آدم‌ها هم همین‌طورند."; }
+  document.getElementById("rv").innerHTML = `<div class="rev"><div class="h">${head}</div><div>${esc(c.x)}</div>${URLS[c.w] ? `<div class="links" style="margin-top:8px"><a href="${URLS[c.w]}" target="_blank" rel="noopener">بیشتر در «${esc(LABEL[c.w]||c.w)}»</a></div>` : ""}</div>
+    <div class="nav"><span></span><button class="btn" id="nx">${i < C.length - 1 ? "کارت بعدی ←" : "دیدن نتیجه"}</button></div>`;
+  document.getElementById("nx").addEventListener("click", () => { i++; show(); window.scrollTo({top:0}); });
+}
+function summary(){
+  const sl = ans.filter(a => !a.c.ch), avg = sl.reduce((s, a) => s + a.err, 0) / Math.max(1, sl.length);
+  const worst = [...sl].sort((a,b) => b.err - a.err).slice(0, 3);
+  document.getElementById("stage").innerHTML = `<div class="sum"><div class="eyebrow">نتیجه</div><div class="big">${fa(Math.round(100 - avg*100))}</div><p>امتیاز نزدیکی شما از ۱۰۰ (میانگین فاصلهٔ حدس با واقعیت: ${fa(Math.round(avg*100))} درصدِ دامنه).</p>
+    <p class="muted">بزرگ‌ترین غافلگیری‌های شما:</p><div class="list">${worst.map(a => `<div><span>${esc(a.c.q.slice(0, 90))}…</span><b>${fa(a.g)} ← ${fa(a.c.a)}${a.c.u}</b></div>`).join("")}</div>
+    <div class="nav" style="justify-content:center"><button class="btn" id="again">دوباره از اول</button></div></div>`;
+  document.getElementById("again").addEventListener("click", () => { i = 0; ans.length = 0; show(); });
+}
+show();
+</script>
+
+</body></html>

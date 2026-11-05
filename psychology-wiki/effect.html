@@ -1,0 +1,146 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>اندازهٔ اثر را ببین</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#f5f6f3; --card:#ffffff; --ink:#1d2321; --muted:#5d6764; --rule:#d9dedb; --wash:#eceeeb; --link:#1f5d68; --accent:#1f5d68; --accent-ink:#fff;
+  --d-feel:#2f6f8f; --d-self:#b2622a; --d-social:#7a4a8a; --d-work:#2f7a55; --d-health:#a3404f; --d-body:#6b7a2a;
+  --good:#2f7a55; --mid:#b07a1c; --bad:#a3404f; --deb:#7a4a8a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;overflow-x:clip;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--link)}
+.wrap{max-width:1180px;margin:0 auto}
+.en{font-family:var(--f-latin);direction:ltr;unicode-bidi:isolate}
+header.top{padding-block:22px 14px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:clamp(2.3rem,5vw,3.2rem);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:1.8rem;line-height:1.15;margin:0;text-wrap:balance}
+.lede{margin:8px 0 0;color:var(--muted);max-width:76ch;font-size:.97rem}
+.eyebrow{font-size:.78rem;color:var(--link);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font-size:.84rem;padding:3px 12px;border-radius:999px;background:var(--card);border:1px solid var(--rule);line-height:1.7}
+.chip:hover,.chip:focus-visible{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:8px 18px;border-radius:999px;font-weight:500;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px}
+.muted{color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links a{font-size:.82rem;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:1px 10px;background:var(--bg)}
+.links a:hover{border-color:var(--accent)}
+input[type=search],input[type=text],input[type=number],select{font:inherit;font-size:.92rem;padding:7px 12px;border-radius:10px;border:1px solid var(--rule);background:var(--card);color:var(--ink);min-width:0}
+.tag{display:inline-block;font-size:.72rem;padding:0 8px;border-radius:999px;background:var(--wash);color:var(--muted)}
+footer.foot{margin-top:40px;border-top:1px solid var(--rule);padding-top:12px;font-size:.82rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.lay{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:900px){.lay{grid-template-columns:minmax(0,1fr)}}
+.plot{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:14px}
+#cv{width:100%;height:auto;display:block;direction:ltr}
+.ctl{display:grid;gap:10px;margin-top:10px}
+.ctl label{display:grid;grid-template-columns:110px minmax(0,1fr) 70px;gap:10px;align-items:center;font-size:.88rem}
+.ctl input[type=range]{width:100%;accent-color:var(--accent)}
+.ctl output{font-family:var(--f-latin);text-align:center;font-size:1.05rem}
+.big{font-family:var(--f-display);font-size:1.45rem;line-height:1.4;margin:0 0 6px}
+.big b{color:var(--accent)}
+.mets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+.met{background:var(--wash);border-radius:12px;padding:8px 10px}
+.met b{display:block;font-family:var(--f-display);font-size:1.6rem;line-height:1.1}
+.met span{font-size:.78rem;color:var(--muted);line-height:1.6;display:block}
+.dots{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;margin-top:10px;direction:ltr}
+.dots i{aspect-ratio:1;border-radius:50%;background:var(--wash)}
+.dots i.on{background:var(--accent)}
+.pre{margin-top:18px}
+.pre button{text-align:start}
+.pre small{color:var(--muted)}
+.note{font-size:.85rem;color:var(--muted);margin-top:10px}
+</style>
+<div class="wrap">
+<header class="top">
+  <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › ابزارها › اندازهٔ اثر</div>
+  <h1>اندازهٔ اثر را ببین</h1>
+  <p class="lede">وقتی خبری می‌گوید «تفاوت معنادار بود» یا «همبستگی ۰٫۳»، این عدد در دنیای واقعی یعنی چه؟ دو منحنی، دو گروه آدم‌اند (مثلاً با و بدون یک مداخله). عدد را تغییر دهید و ببینید دو گروه چقدر روی هم می‌افتند.</p>
+</header>
+<div class="lay">
+  <div class="plot">
+    <svg id="cv" viewBox="0 0 640 260" role="img" aria-label="دو توزیع نرمال و هم‌پوشانی آن‌ها"></svg>
+    <div class="ctl">
+      <label>تفاوت (d کوهن)<input type="range" id="d" min="0" max="2.5" step="0.01" value="0.5"><output id="dv"></output></label>
+      <label>یا همبستگی (r)<input type="range" id="r" min="0" max="0.9" step="0.01" value="0.24"><output id="rv"></output></label>
+    </div>
+    <p class="note">d و r دو زبان برای یک چیزند: d تفاوت دو گروه را بر حسب انحراف معیار می‌گوید و r شدت رابطهٔ دو متغیر را. تبدیل: d = 2r / √(1 − r²).</p>
+  </div>
+  <div>
+    <p class="big" id="sent"></p>
+    <div class="mets" id="mets"></div>
+    <div class="card" style="margin-top:12px"><div style="font-size:.88rem">از ۱۰۰ نفر گروه «با مداخله»، چند نفر از میانگین گروه دیگر بالاترند؟</div><div class="dots" id="dots"></div></div>
+  </div>
+</div>
+<div class="pre"><div class="eyebrow">عددهایی از ویکی و پژوهش‌های مشهور</div><h2 style="font-size:1.4rem;margin-bottom:8px">یک نمونه را بار کنید</h2><div class="chips" id="pre"></div></div>
+<footer class="foot">فرمول‌ها با فرض دو توزیع نرمال با واریانس برابر: هم‌پوشانی = 2Φ(−|d|/2)، U3 کوهن = Φ(d)، احتمال برتری = Φ(d/√2)، تعداد لازم برای یک نتیجهٔ بهتر (NNT) = 1 / (2Φ(d/√2) − 1). الهام‌گرفته از تجسم‌های کریستوفر مگنوسون.</footer>
+</div>
+<script>
+const fa = s => String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]).replace(".", "٫");
+const erf = x => { const s = Math.sign(x); x = Math.abs(x); const t = 1/(1+0.3275911*x); const y = 1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x); return s*y; };
+const Phi = x => 0.5*(1+erf(x/Math.SQRT2));
+const PRE = [
+ ["کوچک به قرار کوهن", 0.2, ""], ["متوسط به قرار کوهن", 0.5, ""], ["بزرگ به قرار کوهن", 0.8, ""],
+ ["مصاحبهٔ ساختاریافته و عملکرد شغلی", null, 0.42, "ساکت و همکاران ۲۰۲۲ (صفحهٔ روان‌شناسی سازمانی)"],
+ ["توانایی ذهنی عمومی و عملکرد شغلی", null, 0.31, "همان بازتحلیل"],
+ ["مداخلهٔ ذهنیت رشد و نمرهٔ درسی", 0.08, "", "فراتحلیل سیسک و همکاران ۲۰۱۸؛ سنجهٔ اعتبار: «با قید»"],
+ ["تفاوت قد زن و مرد", 2.0, "", "برای مقایسه: یک تفاوت واقعاً بزرگ"]
+];
+const svg = document.getElementById("cv"), dI = document.getElementById("d"), rI = document.getElementById("r");
+function draw(d){
+  const W = 640, H = 230, sx = x => 320 + x*70 - d*35, base = H;
+  const pdf = x => Math.exp(-x*x/2)/Math.sqrt(2*Math.PI);
+  const pts = (m) => { let s = ""; for (let x = -4.2; x <= 4.2 + 0.001; x += 0.05) s += `${sx(m + x).toFixed(1)},${(base - pdf(x)*480).toFixed(1)} `; return s; };
+  // overlap polygon
+  let ov = ""; for (let x = -4.2; x <= d + 4.2; x += 0.05) { const y = Math.min(pdf(x), pdf(x - d)); ov += `${sx(x).toFixed(1)},${(base - y*480).toFixed(1)} `; }
+  svg.innerHTML = `<line x1="0" y1="${base}" x2="${W}" y2="${base}" stroke="var(--rule)"/>
+   <polygon points="${sx(-4.2)},${base} ${ov} ${sx(d+4.2)},${base}" fill="var(--muted)" opacity=".22"/>
+   <polyline points="${pts(0)}" fill="none" stroke="var(--d-self)" stroke-width="3"/>
+   <polyline points="${pts(d)}" fill="none" stroke="var(--accent)" stroke-width="3"/>
+   <line x1="${sx(0)}" y1="${base}" x2="${sx(0)}" y2="${base-195}" stroke="var(--d-self)" stroke-dasharray="4 4"/>
+   <line x1="${sx(d)}" y1="${base}" x2="${sx(d)}" y2="${base-195}" stroke="var(--accent)" stroke-dasharray="4 4"/>
+   <text x="${sx(0)-6}" y="${base-200}" text-anchor="end" font-size="13" fill="var(--d-self)" font-family="Vazirmatn">گروه مقایسه</text>
+   <text x="${sx(d)+6}" y="${base-200}" text-anchor="start" font-size="13" fill="var(--accent)" font-family="Vazirmatn">با مداخله</text>`;
+}
+function update(d, from){
+  if (from !== "r") { const r = d / Math.sqrt(d*d + 4); rI.value = r.toFixed(2); }
+  if (from !== "d") dI.value = d.toFixed(2);
+  const r = d / Math.sqrt(d*d + 4);
+  document.getElementById("dv").textContent = d.toFixed(2); document.getElementById("rv").textContent = r.toFixed(2);
+  const ovl = 2*Phi(-Math.abs(d)/2), u3 = Phi(d), cl = Phi(d/Math.SQRT2), nnt = cl > 0.5 ? 1/(2*cl - 1) : Infinity;
+  draw(d);
+  const p = n => fa(Math.round(n*100));
+  document.getElementById("sent").innerHTML = `اگر یک نفر را تصادفی از گروه «با مداخله» و یک نفر را از گروه مقایسه بردارید، در <b>${p(cl)}٪</b> موارد نفر اول وضع بهتری دارد. ${cl < 0.56 ? "یعنی کمی بهتر از شیر یا خط." : cl > 0.85 ? "تفاوتی که با چشم دیده می‌شود." : ""}`;
+  document.getElementById("mets").innerHTML = [
+    [p(ovl) + "٪", "هم‌پوشانی دو گروه"], [p(u3) + "٪", "از گروه مداخله بالاتر از میانگین گروه مقایسه (U3)"],
+    [isFinite(nnt) ? fa(Math.ceil(nnt)) : "∞", "چند نفر باید مداخله بگیرند تا یک نفر بیشتر نتیجهٔ بهتر بگیرد (NNT)"], [fa((r*r*100).toFixed(1)) + "٪", "سهم تغییرات توضیح‌داده‌شده (r²)"]
+  ].map(([b, s]) => `<div class="met"><b>${b}</b><span>${s}</span></div>`).join("");
+  const k = Math.round(u3*100); document.getElementById("dots").innerHTML = Array.from({length:100}, (_, i) => `<i class="${i < k ? "on" : ""}"></i>`).join("");
+}
+dI.addEventListener("input", () => update(+dI.value, "d"));
+rI.addEventListener("input", () => { const r = +rI.value; update(2*r/Math.sqrt(1 - r*r), "r"); });
+document.getElementById("pre").innerHTML = PRE.map((x, i) => `<button class="chip" data-i="${i}">${x[0]}: ${x[1] != null ? "d=" + fa(x[1]) : "r=" + fa(x[2])}${x[3] ? ` <small>(${x[3]})</small>` : ""}</button>`).join("");
+document.getElementById("pre").addEventListener("click", e => { const b = e.target.closest("[data-i]"); if (!b) return; const x = PRE[+b.dataset.i]; if (x[1] != null) update(x[1]); else update(2*x[2]/Math.sqrt(1 - x[2]*x[2])); });
+update(0.5);
+</script>
+
+</body></html>

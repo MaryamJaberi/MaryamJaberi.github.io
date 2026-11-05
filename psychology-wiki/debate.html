@@ -1,0 +1,191 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>میدان مناظره</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#f5f6f3; --card:#ffffff; --ink:#1d2321; --muted:#5d6764; --rule:#d9dedb; --wash:#eceeeb; --link:#1f5d68; --accent:#1f5d68; --accent-ink:#fff;
+  --d-feel:#2f6f8f; --d-self:#b2622a; --d-social:#7a4a8a; --d-work:#2f7a55; --d-health:#a3404f; --d-body:#6b7a2a;
+  --good:#2f7a55; --mid:#b07a1c; --bad:#a3404f; --deb:#7a4a8a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;overflow-x:clip;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--link)}
+.wrap{max-width:1180px;margin:0 auto}
+.en{font-family:var(--f-latin);direction:ltr;unicode-bidi:isolate}
+header.top{padding-block:22px 14px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:clamp(2.3rem,5vw,3.2rem);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:1.8rem;line-height:1.15;margin:0;text-wrap:balance}
+.lede{margin:8px 0 0;color:var(--muted);max-width:76ch;font-size:.97rem}
+.eyebrow{font-size:.78rem;color:var(--link);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font-size:.84rem;padding:3px 12px;border-radius:999px;background:var(--card);border:1px solid var(--rule);line-height:1.7}
+.chip:hover,.chip:focus-visible{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:8px 18px;border-radius:999px;font-weight:500;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px}
+.muted{color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links a{font-size:.82rem;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:1px 10px;background:var(--bg)}
+.links a:hover{border-color:var(--accent)}
+input[type=search],input[type=text],input[type=number],select{font:inherit;font-size:.92rem;padding:7px 12px;border-radius:10px;border:1px solid var(--rule);background:var(--card);color:var(--ink);min-width:0}
+.tag{display:inline-block;font-size:.72rem;padding:0 8px;border-radius:999px;background:var(--wash);color:var(--muted)}
+footer.foot{margin-top:40px;border-top:1px solid var(--rule);padding-top:12px;font-size:.82rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.qs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:22px}
+@media (max-width:900px){.qs{grid-template-columns:minmax(0,1fr)}}
+.qs button{all:unset;cursor:pointer;background:var(--card);border:1.5px solid var(--rule);border-radius:14px;padding:12px 14px;font-weight:500;line-height:1.6}
+.qs button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.head h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.head p{color:var(--muted);margin:4px 0 12px}
+.poll{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:12px 14px;margin-bottom:16px}
+.scale{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:8px}
+.scale button{all:unset;cursor:pointer;text-align:center;padding:8px 4px;border-radius:10px;border:1px solid var(--rule);font-size:.8rem;line-height:1.4;background:var(--bg)}
+.scale button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.arena{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);gap:0;align-items:stretch}
+@media (max-width:760px){.arena{grid-template-columns:minmax(0,1fr)} .vs{display:none}}
+.side{border-radius:16px;padding:14px;background:color-mix(in srgb,var(--c) 8%,var(--card));border:1px solid color-mix(in srgb,var(--c) 30%,var(--rule))}
+.side h3{margin:0 0 8px;color:var(--c);font-size:1.15rem}
+.pt{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;background:var(--card);border-radius:12px;padding:9px 11px;margin-bottom:8px;font-size:.92rem;line-height:1.75}
+.w{display:inline-flex;gap:2px;margin-top:6px}
+.w i{width:6px;height:16px;border-radius:2px;background:var(--rule)}
+.w.strong i,.w.mid i:nth-child(-n+2),.w.weak i:first-child{background:var(--c)}
+.vs{display:grid;place-items:center;font-family:var(--f-display);font-size:1.4rem;color:var(--muted)}
+.bal{margin:18px 0 6px}
+.bal .bar{display:flex;height:12px;border-radius:6px;overflow:hidden}
+.bal small{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem;margin-top:4px}
+.ver{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--rule);border-inline-start:5px solid var(--accent)}
+.shift{margin-top:10px;font-size:.92rem}
+</style>
+<div class="wrap">
+<header class="top">
+  <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › ابزارها › میدان مناظره</div>
+  <h1>میدان مناظره</h1>
+  <p class="lede">شش پرسش بحث‌برانگیز دوره، با بهترین دلیل‌های هر دو طرف و وزن شواهد هر دلیل. پیش از خواندن نظرتان را بگویید و بعد از خواندن دوباره؛ ببینید شواهد چقدر نظرتان را جابه‌جا کرد. هیچ پاسخی ذخیره نمی‌شود.</p>
+</header>
+<div class="qs" id="qs"></div>
+<div id="stage"></div>
+<footer class="foot">وزن شاهد (سه خط): محکم = فراتحلیل یا بازتکرار بزرگ؛ متوسط = چند مطالعهٔ هم‌سو یا استدلال مفهومی قوی؛ ضعیف = مطالعه‌های کوچک یا تجربهٔ روزمره. جمع‌بندی‌ها داوری ویراستار است.</footer>
+</div>
+<script>
+/* میدان مناظره: پرسش‌های مناقشه‌برانگیز دوره. s = وزن شاهد (strong محکم، mid متوسط، weak ضعیف) */
+window.DEB = [
+{id:"will", q:"آیا اراده مثل ماهیچه خسته می‌شود و تمام می‌شود؟", d:"نظریهٔ «تخلیهٔ ایگو» دو دهه از مشهورترین ایده‌های روان‌شناسی بود.",
+ yes:{t:"بله، اراده منبع محدودی است", p:[
+  {c:"صدها آزمایش کوچک نشان دادند پس از یک تکلیف خویشتنداری (مثلاً نخوردن شیرینی)، آدم‌ها در تکلیف بعدی زودتر دست می‌کشند.", s:"weak"},
+  {c:"تجربهٔ روزمره: آخر یک روز پرفشار، مقاومت در برابر وسوسه سخت‌تر است.", s:"mid"},
+  {c:"باومایستر و همکاران آن را با قند خون پیوند دادند و مدلی ساده و جذاب ساختند.", s:"weak"}]},
+ no:{t:"نه، اراده سوخت تمام‌شدنی نیست", p:[
+  {c:"بازتکرار چندآزمایشگاهی ۲۰۱۶ (هگر و همکاران، بیش از ۲۰ آزمایشگاه) اثری نزدیک صفر یافت؛ بازتکرار بزرگ ۲۰۲۱ هم اثری بسیار کوچک.", s:"strong"},
+  {c:"فرضیهٔ قند خون در بررسی‌های بعدی جدی زیر سؤال رفت.", s:"mid"},
+  {c:"مدل «کاوش و بهره‌برداری» اینزلیکت و مکری: آنچه عوض می‌شود اولویت انگیزه است، نه مقدار سوخت.", s:"mid"},
+  {c:"کسانی که باور دارند اراده تمام‌شدنی است، بیشتر «خستگی اراده» نشان می‌دهند؛ باور خودش اثر دارد.", s:"mid"}]},
+ v:"امروز بیشتر پژوهشگران «تمام شدن اراده» را دست‌کم در شکل ساده‌اش رد شده می‌دانند؛ اما خستگی و تغییر انگیزه در طول روز واقعی است. خویشتنداری بیشتر با طراحی موقعیت و عادت پیروز می‌شود.", w:["s8","s5","habits","effort"]},
+{id:"iq", q:"آیا هوش عمدتاً ارثی است و آموزش آن را تغییر نمی‌دهد؟", d:"ادعای آرتور جنسن در ۱۹۶۹ و بحثی که هنوز داغ است.",
+ yes:{t:"بله، سهم ژن بزرگ است", p:[
+  {c:"مطالعه‌های دوقلو و فرزندخواندگی وراثت‌پذیری هوش در بزرگسالی را حدود ۵۰ تا ۸۰ درصد برآورد می‌کنند.", s:"strong"},
+  {c:"وراثت‌پذیری هوش با بالا رفتن سن بیشتر می‌شود.", s:"strong"},
+  {c:"همهٔ صفت‌های روانی تا حدی ارثی‌اند (قانون اول ژنتیک رفتاری).", s:"strong"}]},
+ no:{t:"نه، «ارثی» به معنی «تغییرناپذیر» نیست", p:[
+  {c:"وراثت‌پذیری آماری است دربارهٔ جمعیت، نه سرنوشت فرد؛ قد هم بسیار ارثی است و با تغذیه در یک قرن بلندتر شده‌ایم.", s:"strong"},
+  {c:"اثر فلین: نمره‌های هوش در بسیاری از کشورها در قرن بیستم دهه به دهه بالا رفت؛ سریع‌تر از هر تغییر ژنتیکی.", s:"strong"},
+  {c:"روش‌های مولکولی (GCTA) برای همان صفت‌ها وراثت‌پذیری کمتری از دوقلوها نشان می‌دهند: مسئلهٔ «وراثت‌پذیری گمشده».", s:"mid"},
+  {c:"داده‌های مشهور سیریل برت مشکوک به جعل بودند و ابزارهای برخی مطالعه‌های قدیمی دقیق نبودند.", s:"mid"}]},
+ v:"ژن‌ها سهم واقعی و بزرگی در تفاوت‌های هوش دارند؛ اما وراثت‌پذیری بالا نه به معنی بی‌اثری آموزش است و نه چیزی دربارهٔ تفاوت میان گروه‌ها ثابت می‌کند.", w:["jensen","shelf4"]},
+{id:"stress", q:"استرس دشمن است یا سوخت؟", d:"دو ذهنیت دربارهٔ استرس، هر دو با شواهد.",
+ yes:{t:"استرس آسیب می‌زند", p:[
+  {c:"استرس مزمن با بیماری قلبی، مشکلات خواب، افسردگی و فرسودگی همراه است.", s:"strong"},
+  {c:"فرسودگی با فشار کاری زیاد و منابع کم رابطهٔ محکمی دارد.", s:"strong"},
+  {c:"کم‌خوابی و فشار، واکنش هیجانی را شدیدتر می‌کند.", s:"strong"}]},
+ no:{t:"استرس می‌تواند تقویت کند", p:[
+  {c:"استرس کوتاه‌مدت تمرکز و کارکرد را بالا می‌برد؛ برانگیختگی متوسط بهترین عملکرد را می‌سازد.", s:"mid"},
+  {c:"کرام، سالووی و آکور: تغییر ذهنیت به «استرس تقویت‌کننده است» با حال و کارکرد بهتر همراه بود.", s:"mid"},
+  {c:"گفتن «هیجان‌زده‌ام» به‌جای «آرام باش» پیش از اجرا، عملکرد را بهتر کرد (وود بروکس).", s:"mid"},
+  {c:"رشد پس از آسیب: بسیاری پس از سختی، اولویت‌ها و قدرت تازه‌ای گزارش می‌کنند.", s:"weak"}]},
+ v:"هر دو درست‌اند، در مقیاس متفاوت: استرس کوتاه و قابل‌کنترل می‌تواند سوخت باشد؛ استرس مزمن و بی‌منبع آسیب می‌زند. ذهنیت کمک می‌کند، اما جای کم کردن فشار ساختاری را نمی‌گیرد.", w:["s8","s1","orgpsych","trauma"]},
+{id:"social", q:"آیا رسانهٔ اجتماعی علت اصلی افزایش افسردگی نوجوانان است؟", d:"یکی از داغ‌ترین بحث‌های علمی و سیاستی امروز.",
+ yes:{t:"بله، علت اصلی است", p:[
+  {c:"افزایش افسردگی و اضطراب نوجوانان، به‌ویژه دختران، از حدود ۲۰۱۲ با فراگیر شدن تلفن هوشمند هم‌زمان است (هایت، تونگی).", s:"mid"},
+  {c:"برخی آزمایش‌های کوتاه کاهش استفاده، بهبود اندکی در حال نشان داده‌اند.", s:"weak"},
+  {c:"مقایسهٔ اجتماعی و کمال‌گرایی تحمیل‌شده از جامعه در نسل جوان افزایش یافته است.", s:"mid"}]},
+ no:{t:"نه، شواهد علیت ضعیف است", p:[
+  {c:"در داده‌های بزرگ، رابطهٔ استفاده با بهزیستی بسیار کوچک است؛ هم‌اندازهٔ رابطهٔ خوردن سیب‌زمینی با بهزیستی (اوربن و پرزیبیلسکی).", s:"mid"},
+  {c:"هم‌زمانی دو روند، علت را ثابت نمی‌کند؛ عوامل دیگر (فشار تحصیلی، کاهش بازی آزاد، تغییر در تشخیص) هم هم‌زمان‌اند.", s:"mid"},
+  {c:"اثر برای گروه‌های مختلف و نوع استفاده بسیار متفاوت است.", s:"mid"}]},
+ v:"هنوز محل بحث است. احتمالاً رسانهٔ اجتماعی برای برخی نوجوانان و برخی شکل‌های استفاده زیان‌بار است، اما «علت اصلی» بودنش برای همه ثابت نشده.", w:["superbloom","bored","s12"]},
+{id:"reward", q:"آیا پاداش، انگیزهٔ درونی را می‌کشد؟", d:"اگر برای کاری که دوست داری پول بگیری، کمتر دوستش خواهی داشت؟",
+ yes:{t:"بله، پاداش انگیزهٔ درونی را کم می‌کند", p:[
+  {c:"لپر، گرین و نیسبت (۱۹۷۳): کودکانی که برای نقاشی «جایزهٔ مورد انتظار» گرفتند، بعداً در زمان آزاد کمتر نقاشی کشیدند.", s:"mid"},
+  {c:"فراتحلیل دسی، کوستنر و رایان (۱۹۹۹): پاداش ملموس و مورد انتظار برای کار جالب، انگیزهٔ درونی را کم می‌کند.", s:"strong"},
+  {c:"نظریهٔ ارزیابی شناختی: پاداشی که «کنترل‌کننده» تجربه شود، احساس خودمختاری را می‌گیرد.", s:"mid"}]},
+ no:{t:"نه، بستگی دارد", p:[
+  {c:"کامرون و پیرس: پاداش کلامی (تحسین) و پاداش غیرمنتظره اثر منفی ندارند و گاهی مثبت‌اند.", s:"mid"},
+  {c:"برای کارهای تکراری و غیرجالب، پاداش انگیزه را کم نمی‌کند؛ چیزی برای کم کردن وجود ندارد.", s:"mid"},
+  {c:"پاداشی که اطلاعات دربارهٔ شایستگی می‌دهد («خوب انجامش دادی») می‌تواند انگیزهٔ درونی را تقویت کند.", s:"mid"}]},
+ v:"هر دو طرف بخشی از حقیقت را دارند: شکل پاداش مهم است. پاداش کنترل‌کننده برای کار جالب زیان دارد؛ بازخورد شایستگی و قدردانی غیرمنتظره نه.", w:["s13","theories","motivation","habits"]},
+{id:"dsm", q:"اختلال روانی «دسته» است یا «طیف»؟", d:"DSM آدم‌ها را در دسته‌ها می‌گذارد؛ رویکردهای تازه طیف می‌بینند.",
+ yes:{t:"دسته‌ها لازم‌اند", p:[
+  {c:"درمانگاه به تصمیم‌های بله و نه نیاز دارد: درمان بکنیم یا نکنیم؟ بیمه بپردازد یا نه؟", s:"mid"},
+  {c:"زبان مشترک پژوهش و درمان در دهه‌های گذشته بر پایهٔ DSM و ICD ساخته شده است.", s:"mid"},
+  {c:"برخی اختلال‌ها (مثلاً دلیریوم) واقعاً حالتی متمایز با علت مشخص‌اند.", s:"mid"}]},
+ no:{t:"طیف به واقعیت نزدیک‌تر است", p:[
+  {c:"هم‌ابتلایی گسترده: بیشتر افراد معیار چند اختلال را با هم دارند؛ نشانهٔ اینکه مرزها مصنوعی‌اند.", s:"strong"},
+  {c:"رویکرد ابعادی مثل HiTOP پایایی و پیش‌بینی بهتری از دسته‌های DSM نشان داده است.", s:"mid"},
+  {c:"فرایندهای فراتشخیصی (اجتناب، نشخوار، عدم تحمل عدم قطعیت) در اختلال‌های مختلف مشترک‌اند و درمان را هدایت می‌کنند.", s:"mid"},
+  {c:"تورم تشخیصی: مرز اختلال به تجربه‌های عادی گسترش یافته است (فرانسس).", s:"mid"}]},
+ v:"گرایش پژوهش به سوی طیف است و کارگاه دوره هم همین را نشان داد؛ اما در عمل، دسته‌ها به‌عنوان ابزار تصمیم هنوز لازم‌اند. بهتر است دسته‌ها را نقشه بدانیم، نه سرزمین.", w:["workshop","psychopath","shelf11","clinical"]}
+];
+
+const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html", "scales": "scales.html"}, LABEL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی", "scales": "سنجش‌خانه", "path": "پل‌یاب", "prism": "منشور رشته‌ها", "lineage": "شجره‌نامهٔ ایده‌ها", "heat": "همسایگی موضوع‌ها", "river": "رود ایده‌ها", "evidence": "سنجهٔ اعتبار", "debate": "میدان مناظره", "guess": "اول حدس بزن", "lab": "آزمایشگاه", "effect": "اندازهٔ اثر", "emotions": "اطلس هیجان‌ها"};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fa = s => String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const D = window.DEB, BY = Object.fromEntries(D.map(d => [d.id, d])), W = {strong:3, mid:2, weak:1}, WL = {strong:"محکم", mid:"متوسط", weak:"ضعیف"};
+const LAB = ["کاملاً نه","بیشتر نه","نمی‌دانم","بیشتر بله","کاملاً بله"];
+const POLL = {};
+document.getElementById("qs").innerHTML = D.map(d => `<button data-id="${d.id}">${esc(d.q)}</button>`).join("");
+document.getElementById("qs").addEventListener("click", e => { const b = e.target.closest("[data-id]"); if (b) show(b.dataset.id); });
+function pts(side, c){ return side.p.map(p => `<div class="pt"><span class="w ${p.s}" title="وزن شاهد: ${WL[p.s]}"><i></i><i></i><i></i></span><span>${esc(p.c)}</span></div>`).join(""); }
+function show(id){
+  const d = BY[id]; POLL[id] = POLL[id] || {};
+  document.querySelectorAll("#qs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.id === id));
+  const st = document.getElementById("stage");
+  const scale = k => `<div class="scale" data-k="${k}">${LAB.map((l,i) => `<button data-v="${i}" aria-pressed="${POLL[id][k] === i}">${l}</button>`).join("")}</div>`;
+  st.innerHTML = `<div class="head"><div class="eyebrow">مناظره</div><h2>${esc(d.q)}</h2><p>${esc(d.d)}</p></div>
+    <div class="poll"><b>پیش از خواندن، نظر شما؟</b>${scale("before")}</div>
+    <div class="arena"><section class="side" style="--c:var(--d-feel)"><h3>${esc(d.yes.t)}</h3>${pts(d.yes)}</section><div class="vs">یا</div><section class="side" style="--c:var(--d-self)"><h3>${esc(d.no.t)}</h3>${pts(d.no)}</section></div>
+    <div class="bal" id="bal"></div>
+    <div class="poll" style="margin-top:14px"><b>حالا، پس از خواندن؟</b>${scale("after")}<div class="shift" id="shift"></div></div>
+    <div class="ver"><div class="eyebrow">جمع‌بندی ویراستار</div><p style="margin:4px 0 8px">${esc(d.v)}</p><div class="links">${d.w.filter(k => URLS[k]).map(k => `<a href="${URLS[k]}" target="_blank" rel="noopener">${esc(LABEL[k]||k)}</a>`).join("")}</div></div>`;
+  const a = d.yes.p.reduce((s,p) => s + W[p.s], 0), b = d.no.p.reduce((s,p) => s + W[p.s], 0);
+  document.getElementById("bal").innerHTML = `<div class="muted" style="font-size:.85rem;margin-bottom:4px">ترازوی وزن شواهد</div><div class="bar"><i style="flex:${a};background:var(--d-feel)"></i><i style="flex:${b};background:var(--d-self)"></i></div><small><span>${esc(d.yes.t)}: ${fa(a)}</span><span>${esc(d.no.t)}: ${fa(b)}</span></small>`;
+  st.querySelectorAll(".scale").forEach(sc => sc.addEventListener("click", e => { const btn = e.target.closest("[data-v]"); if (!btn) return;
+    POLL[id][sc.dataset.k] = +btn.dataset.v; sc.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === btn)); shift(id); }));
+  shift(id);
+  try { history.replaceState(null, "", "#" + id); } catch(_) {}
+}
+function shift(id){
+  const p = POLL[id], el = document.getElementById("shift"); if (!el) return;
+  if (p.before == null || p.after == null) { el.textContent = ""; return; }
+  const d = p.after - p.before;
+  el.textContent = d === 0 ? "نظرتان تغییری نکرد." : `نظرتان ${fa(Math.abs(d))} پله به سوی «${d > 0 ? "بله" : "نه"}» جابه‌جا شد.`;
+}
+const h = location.hash.slice(1); show(BY[h] ? h : D[0].id);
+</script>
+
+</body></html>

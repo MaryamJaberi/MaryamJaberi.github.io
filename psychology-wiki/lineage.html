@@ -1,0 +1,235 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>شجره‌نامهٔ ایده‌ها</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#f5f6f3; --card:#ffffff; --ink:#1d2321; --muted:#5d6764; --rule:#d9dedb; --wash:#eceeeb; --link:#1f5d68; --accent:#1f5d68; --accent-ink:#fff;
+  --d-feel:#2f6f8f; --d-self:#b2622a; --d-social:#7a4a8a; --d-work:#2f7a55; --d-health:#a3404f; --d-body:#6b7a2a;
+  --good:#2f7a55; --mid:#b07a1c; --bad:#a3404f; --deb:#7a4a8a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141716; --card:#1c201e; --ink:#e7ece9; --muted:#9aa6a1; --rule:#303734; --wash:#232826; --link:#7cc0c9; --accent:#7cc0c9; --accent-ink:#0e1615;
+  --d-feel:#6fb0cf; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a;
+  --good:#5fb88a; --mid:#d9a845; --bad:#d9707f; --deb:#b588c4; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;overflow-x:clip;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--link)}
+.wrap{max-width:1180px;margin:0 auto}
+.en{font-family:var(--f-latin);direction:ltr;unicode-bidi:isolate}
+header.top{padding-block:22px 14px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:clamp(2.3rem,5vw,3.2rem);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:1.8rem;line-height:1.15;margin:0;text-wrap:balance}
+.lede{margin:8px 0 0;color:var(--muted);max-width:76ch;font-size:.97rem}
+.eyebrow{font-size:.78rem;color:var(--link);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font-size:.84rem;padding:3px 12px;border-radius:999px;background:var(--card);border:1px solid var(--rule);line-height:1.7}
+.chip:hover,.chip:focus-visible{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:8px 18px;border-radius:999px;font-weight:500;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px}
+.muted{color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links a{font-size:.82rem;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:1px 10px;background:var(--bg)}
+.links a:hover{border-color:var(--accent)}
+input[type=search],input[type=text],input[type=number],select{font:inherit;font-size:.92rem;padding:7px 12px;border-radius:10px;border:1px solid var(--rule);background:var(--card);color:var(--ink);min-width:0}
+.tag{display:inline-block;font-size:.72rem;padding:0 8px;border-radius:999px;background:var(--wash);color:var(--muted)}
+footer.foot{margin-top:40px;border-top:1px solid var(--rule);padding-top:12px;font-size:.82rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.lay{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;align-items:start}
+@media (max-width:1000px){.lay{grid-template-columns:minmax(0,1fr)}}
+.tw{display:grid;grid-template-columns:auto minmax(0,1fr);background:var(--card);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+.lanes{padding-top:40px;border-inline-start:1px solid var(--rule);background:var(--wash)}
+.lanes div{height:70px;display:flex;align-items:center;padding:0 12px;font-size:.8rem;color:var(--muted);line-height:1.4;width:118px;border-top:1px dashed var(--rule)}
+.box{overflow-x:auto;direction:ltr}
+#tree{display:block;direction:ltr}
+#tree .lane rect{fill:var(--wash)} #tree .lane text{font-family:var(--f-body);font-size:12px;fill:var(--muted)}
+#tree .yr{font-family:var(--f-body);font-size:11px;fill:var(--muted)}
+#tree .e{fill:none;stroke-width:1.8;opacity:.55}
+#tree .e.st{stroke:var(--accent)} #tree .e.in{stroke:var(--muted);stroke-dasharray:5 4} #tree .e.cr{stroke:var(--bad)}
+#tree .e.on{opacity:1;stroke-width:3}
+#tree .p{cursor:pointer}
+#tree .p rect{fill:var(--card);stroke:var(--rule);stroke-width:1.2}
+#tree .p text{font-family:var(--f-body);font-size:12.5px;fill:var(--ink)}
+#tree .p.on rect{stroke:var(--accent);stroke-width:2.5}
+#tree .p.dim{opacity:.35} #tree .e.dim{opacity:.12}
+.side{position:sticky;top:12px}
+.side h2{font-size:1.6rem}
+.side .y{color:var(--muted);font-size:.85rem}
+.rel{display:grid;gap:6px;margin:10px 0}
+.rel button{all:unset;cursor:pointer;font-size:.88rem;padding:6px 10px;border-radius:10px;background:var(--wash)}
+.rel button b{font-weight:500}
+.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.82rem;color:var(--muted);margin:10px 0}
+.leg span{display:inline-flex;align-items:center;gap:6px}
+.leg i{display:inline-block;width:26px;height:0;border-top:2.5px solid var(--c)}
+.leg i.d{border-top-style:dashed}
+.lessons{margin-top:18px}
+.lessons li{margin:5px 0;font-size:.92rem}
+</style>
+<div class="wrap">
+<header class="top">
+  <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › ابزارها › شجره‌نامهٔ ایده‌ها</div>
+  <h1>شجره‌نامهٔ ایده‌ها</h1>
+  <p class="lede">چه کسی شاگرد چه کسی بود، چه کسی از چه کسی الهام گرفت، و چه کسی یافتهٔ چه کسی را نقد کرد یا نتوانست تکرارش کند. محور افقی زمان است؛ روی هر نام بزنید تا خانواده‌اش روشن شود.</p>
+</header>
+<div class="leg"><span><i style="--c:var(--accent)"></i>شاگرد یا همکار</span><span><i class="d" style="--c:var(--muted)"></i>الهام یا ادامه</span><span><i style="--c:var(--bad)"></i>نقد یا بازتکرار ناموفق</span></div>
+<div class="lay">
+  <div class="tw"><div class="lanes" id="lanes"></div><div class="box"><svg id="tree" role="group" aria-label="شبکهٔ دانشمندان و ایده‌ها"></svg></div></div>
+  <aside class="card side" id="side" aria-live="polite"></aside>
+</div>
+<div class="card lessons"><div class="eyebrow">بینش</div><h2 style="font-size:1.35rem">آنچه این شجره نشان می‌دهد</h2><ul>
+  <li>بسیاری از ایده‌های «تازه» ریشه‌ای کهن دارند: درمان شناختی تا رواقیون، و روان‌شناسی مثبت تا ارسطو برمی‌گردد.</li>
+  <li>خط‌های قرمز بیشتر از ۱۹۹۰ به بعدند؛ دورهٔ بازتکرار، بسیاری از یافته‌های مشهور دهه‌های پیش را دوباره سنجید.</li>
+  <li>نقد هم بخشی از خانواده است: بک از دل روان‌کاوی بیرون آمد و فلین با جنسن مناظره کرد.</li>
+</ul></div>
+<footer class="foot">این شجره گزیده‌ای از ۶۰ نام است که در درس‌ها و کتاب‌های ویکی آمده‌اند؛ پیوندها ساده‌شده‌اند و همهٔ رابطه‌های علمی را نشان نمی‌دهند.</footer>
+</div>
+<script>
+/* شجره‌نامهٔ ایده‌ها: y سال کار شاخص؛ ln مسیر؛ n یادداشت؛ w صفحه‌های مرتبط ویکی.
+   E: [از، به، نوع] — st شاگرد یا همکار، in الهام یا ادامه، cr نقد یا بازتکرار ناموفق */
+window.LN = [
+ {id:"roots", fa:"ریشه‌ها: فلسفه و طبیعت‌گرایی"},
+ {id:"dyn", fa:"روان‌کاوی و درمان"},
+ {id:"beh", fa:"یادگیری و رفتار"},
+ {id:"emo", fa:"هیجان و شفقت"},
+ {id:"mot", fa:"انگیزه، اراده و خود"},
+ {id:"dec", fa:"تصمیم و اقتصاد رفتاری"},
+ {id:"well", fa:"بهزیستی و کار"},
+ {id:"soc", fa:"جامعه و تکامل"},
+ {id:"iq", fa:"هوش و تفاوت‌های فردی"}
+];
+window.PP = [
+ {id:"epictetus", fa:"اپیکتتوس", y:100, ln:"roots", n:"فیلسوف رواقی: «آنچه آزارمان می‌دهد رویدادها نیستند، داوری ما دربارهٔ آن‌هاست.» ریشهٔ کهن درمان شناختی.", w:["s4","s8"]},
+ {id:"aristotle", fa:"ارسطو", y:-340, ln:"roots", n:"«آکراسیا» (ضعف اراده) و «یودایمونیا» (شکوفایی): دو پرسشی که هنوز روان‌شناسی را مشغول کرده‌اند.", w:["s5","makingsense"]},
+ {id:"darwin", fa:"چارلز داروین", y:1872, ln:"roots", n:"«بیان هیجان‌ها در انسان و جانوران»؛ هیجان را به‌عنوان سازگاری تکاملی دید.", w:["s4","ultrasociety"]},
+ {id:"james", fa:"ویلیام جیمز", y:1890, ln:"roots", n:"«اصول روان‌شناسی»؛ عادت را «چرخ‌طیار عظیم جامعه» نامید و نظریهٔ بدنی هیجان را مطرح کرد.", w:["habits","s4"]},
+ {id:"simon", fa:"هربرت سایمون", y:1956, ln:"dec", n:"«عقلانیت محدود» و «بسنده‌کاری»: ذهن به‌جای بهترین گزینه، گزینهٔ به‌اندازهٔ کافی خوب را انتخاب می‌کند.", w:["mistakes","decision"]},
+ {id:"freud", fa:"زیگموند فروید", y:1900, ln:"dyn", n:"بنیان‌گذار روان‌کاوی؛ ناخودآگاه، دفاع‌ها و درمان با گفت‌وگو.", w:["psychopath","theories"]},
+ {id:"jung", fa:"کارل یونگ", y:1912, ln:"dyn", n:"همکار نزدیک فروید که جدا شد و روان‌شناسی تحلیلی را ساخت.", w:["theories"]},
+ {id:"blatt", fa:"سیدنی بلات", y:1974, ln:"dyn", n:"دو مسیر افسردگی: وابستگی و سرزنش خود؛ پرسشنامهٔ تجارب افسردگی (DEQ).", w:["s3"]},
+ {id:"beck", fa:"آرون بک", y:1967, ln:"dyn", n:"روان‌کاوی که به درمان شناختی رسید؛ افکار خودکار منفی و مقیاس اجتماعی‌گرایی-خودمختاری.", w:["s3","shelf13"]},
+ {id:"ellis", fa:"آلبرت الیس", y:1955, ln:"dyn", n:"درمان عقلانی-هیجانی؛ از نخستین درمان‌های شناختی، با الهام مستقیم از رواقیون.", w:["shelf13"]},
+ {id:"linehan", fa:"مارشا لینهان", y:1993, ln:"dyn", n:"رفتاردرمانی دیالکتیکی (DBT)؛ تنظیم هیجان را در مرکز درمان گذاشت.", w:["s4"]},
+ {id:"hayes", fa:"استیون هیز", y:1999, ln:"dyn", n:"درمان پذیرش و تعهد (ACT) و مفهوم انعطاف‌پذیری روانی؛ پرسشنامهٔ AAQ.", w:["s4","workshop"]},
+ {id:"gratz", fa:"کیم گرتز", y:2004, ln:"emo", n:"مقیاس دشواری در تنظیم هیجان (DERS)، پرکاربردترین ابزار پژوهشی این حوزه.", w:["s4"]},
+ {id:"kashdan", fa:"تاد کاشدان", y:2020, ln:"emo", n:"با نقد AAQ-II، شاخص شخصی‌شدهٔ انعطاف‌پذیری روانی (PPFI) را ساخت.", w:["s4"]},
+ {id:"pavlov", fa:"ایوان پاولوف", y:1903, ln:"beh", n:"شرطی‌سازی کلاسیک؛ یادگیری تداعی میان نشانه و پاسخ.", w:["learnmem","habits"]},
+ {id:"watson", fa:"جان واتسون", y:1913, ln:"beh", n:"بیانیهٔ رفتارگرایی: روان‌شناسی باید رفتار قابل مشاهده را مطالعه کند.", w:["theories"]},
+ {id:"skinner", fa:"بی. اف. اسکینر", y:1938, ln:"beh", n:"شرطی‌سازی کنشگر؛ پاداش و تنبیه به‌عنوان شکل‌دهندهٔ رفتار.", w:["theories","habits"]},
+ {id:"seligman", fa:"مارتین سلیگمن", y:1967, ln:"beh", n:"درماندگی آموخته‌شده و بعدها روان‌شناسی مثبت و مدل PERMA.", w:["motivation","optimism","happiness"]},
+ {id:"duckworth", fa:"آنجلا داکورث", y:2016, ln:"mot", n:"«سرسختی» (grit)؛ شاگرد سلیگمن. اثر سرسختی جدا از وجدانی بودن هنوز بحث دارد.", w:["effort"]},
+ {id:"ekman", fa:"پل اکمن", y:1972, ln:"emo", n:"هیجان‌های پایه و حالت‌های جهانی چهره؛ اطلس هیجان‌ها.", w:["s4","emolabor"]},
+ {id:"barrett", fa:"لیزا فلدمن بارت", y:2017, ln:"emo", n:"نظریهٔ هیجان ساخته‌شده: هیجان از نشانه‌های بدن و مفهوم‌های فرهنگی ساخته می‌شود، نه از مدارهای جداگانه.", w:["s8","psychopath"]},
+ {id:"gross", fa:"جیمز گراس", y:1998, ln:"emo", n:"مدل فرایندی تنظیم هیجان: از انتخاب موقعیت تا بازتعبیر و تعدیل پاسخ.", w:["s4","s8"]},
+ {id:"gilbert", fa:"پل گیلبرت", y:2005, ln:"emo", n:"درمان متمرکز بر شفقت؛ سه سیستم تهدید، پیشران و آرامش؛ مقیاس ترس از شفقت.", w:["s2","compassion"]},
+ {id:"neff", fa:"کریستین نف", y:2003, ln:"emo", n:"تعریف عملیاتی شفقت به خود و مقیاس SCS؛ بیش از ۴۰۰۰ مقاله تا ۲۰۲۲.", w:["s2","compassion"]},
+ {id:"deci", fa:"ادوارد دسی", y:1971, ln:"mot", n:"آزمایش‌های پاداش و انگیزهٔ درونی؛ هم‌بنیان‌گذار نظریهٔ خودتعیین‌گری.", w:["s13","theories"]},
+ {id:"ryan", fa:"ریچارد رایان", y:2000, ln:"mot", n:"نظریهٔ خودتعیین‌گری: سه نیاز خودمختاری، شایستگی و پیوند؛ پرسشنامه‌های خودتنظیمی.", w:["s13","shelf10"]},
+ {id:"mischel", fa:"والتر میشل", y:1972, ln:"mot", n:"آزمون مارشمالو و تأخیر در پاداش.", w:["s5","effort"]},
+ {id:"watts", fa:"تایلر واتس", y:2018, ln:"mot", n:"بازتکرار بزرگ آزمون مارشمالو: پس از کنترل پیشینهٔ خانواده، رابطه با موفقیت آینده بسیار کوچک‌تر شد.", w:["effort","s5"]},
+ {id:"baumeister", fa:"روی باومایستر", y:1998, ln:"mot", n:"نظریهٔ «تخلیهٔ ایگو»: اراده مثل ماهیچه خسته می‌شود.", w:["s8","s6"]},
+ {id:"tangney", fa:"جون تنجنی", y:2004, ln:"mot", n:"مقیاس خویشتنداری (همکار باومایستر)؛ خویشتنداری بالا با سازگاری بهتر.", w:["s5","shelf14"]},
+ {id:"hagger", fa:"مارتین هگر", y:2016, ln:"mot", n:"بازتکرار چندآزمایشگاهی تخلیهٔ ایگو با بیش از ۲۰ آزمایشگاه: اثری نزدیک صفر.", w:["s8"]},
+ {id:"inzlicht", fa:"مایکل اینزلیکت", y:2014, ln:"mot", n:"مدل کاوش و بهره‌برداری، به‌جای سوخت تمام‌شدنی؛ از منتقدان تخلیهٔ ایگو.", w:["s8"]},
+ {id:"dweck", fa:"کارول دوک", y:2006, ln:"mot", n:"ذهنیت رشد در برابر ذهنیت ثابت.", w:["s8","motivation"]},
+ {id:"crum", fa:"آلیا کرام", y:2013, ln:"mot", n:"ذهنیت استرس: باور ما دربارهٔ استرس، اثر آن را تغییر می‌دهد.", w:["s8"]},
+ {id:"kahneman", fa:"دنیل کانمن", y:1979, ln:"dec", n:"نظریهٔ چشم‌انداز، سوگیری‌ها و دو سیستم فکر؛ نوبل اقتصاد.", w:["illusions","mistakes"]},
+ {id:"tversky", fa:"آموس تورسکی", y:1974, ln:"dec", n:"همکار کانمن در کشف میان‌برهای ذهنی و خطاهای داوری احتمال.", w:["illusions"]},
+ {id:"thaler", fa:"ریچارد تالر", y:2008, ln:"dec", n:"تلنگر و معماری انتخاب؛ اقتصاد رفتاری را به سیاست‌گذاری برد.", w:["s6","habits"]},
+ {id:"schwartz", fa:"بری شوارتز", y:2002, ln:"dec", n:"بیشینه‌سازی در برابر بسنده‌کاری و «پارادوکس انتخاب».", w:["mistakes"]},
+ {id:"diener", fa:"اد دینر", y:1984, ln:"well", n:"بنیان‌گذار پژوهش بهزیستی ذهنی و مقیاس رضایت از زندگی.", w:["happiness"]},
+ {id:"oishi", fa:"شیگهیرو اویشی", y:2019, ln:"well", n:"زندگی غنی از نظر روانی: بُعد سوم زندگی خوب؛ شاگرد دینر.", w:["lookagain","workshop","makingsense"]},
+ {id:"csikszent", fa:"میهای چیکسنت‌میهایی", y:1990, ln:"well", n:"غرقگی (flow): فرو رفتن کامل در کاری با چالش متناسب.", w:["s11","poswork"]},
+ {id:"maslach", fa:"کریستینا ماسلاک", y:1981, ln:"well", n:"سیاههٔ فرسودگی ماسلاک و سه جزء کلاسیک فرسودگی.", w:["s1","orgpsych"]},
+ {id:"schaufeli", fa:"ویلمار شوفلی", y:2002, ln:"well", n:"اشتیاق کاری (UWES) و ابزار سنجش فرسودگی (BAT)؛ پژوهشگر هلندی.", w:["poswork","orgpsych"]},
+ {id:"bakker", fa:"آرنولد بکر", y:2008, ln:"well", n:"مدل خواسته‌ها و منابع شغلی (با شوفلی و دیگران) و پرسشنامهٔ غرقگی در کار (WOLF).", w:["s11","poswork"]},
+ {id:"sonnentag", fa:"زابینه زوننتاگ", y:2007, ln:"well", n:"بازیابی و جدایی روانی از کار؛ پرسشنامهٔ تجربهٔ بازیابی.", w:["s11"]},
+ {id:"snyder", fa:"ریک اسنایدر", y:1991, ln:"well", n:"نظریهٔ امید: هدف، راه‌ها و عاملیت.", w:["s9"]},
+ {id:"henrich", fa:"جوزف هنریک", y:2010, ln:"soc", n:"WEIRD: بیشتر روان‌شناسی روی جوامع غربی ساخته شده؛ بازی اولتیماتوم در فرهنگ‌های گوناگون.", w:["fairness","ultrasociety"]},
+ {id:"turchin", fa:"پیتر تورچین", y:2016, ln:"soc", n:"فراجامعه‌پذیری: چطور انسان‌ها در گروه‌های میلیونی همکاری کردند.", w:["ultrasociety"]},
+ {id:"wrangham", fa:"ریچارد رنگهام", y:2019, ln:"soc", n:"خوداهلی‌سازی: انتخاب علیه پرخاشگری واکنشی در تکامل انسان.", w:["friendly","ultrasociety"]},
+ {id:"hare", fa:"برایان هیر", y:2020, ln:"soc", n:"«بقای دوستانه‌ترین»؛ شاگرد رنگهام.", w:["friendly"]},
+ {id:"putnam", fa:"رابرت پاتنام", y:2000, ln:"soc", n:"«بولینگ به تنهایی»: سرمایهٔ اجتماعی و کاهش اعتماد.", w:["trust"]},
+ {id:"zimbardo", fa:"فیلیپ زیمباردو", y:1971, ln:"soc", n:"آزمایش زندان استنفورد.", w:["atlas2"]},
+ {id:"letexier", fa:"تیبو لو تکسیه", y:2018, ln:"soc", n:"با اسناد آرشیوی نشان داد نگهبانان زندان استنفورد هدایت شده بودند؛ نتیجهٔ مشهور زیر سؤال رفت.", w:["atlas2"]},
+ {id:"rosenhan", fa:"دیوید روزنهان", y:1973, ln:"dyn", n:"«سالم بودن در جای ناسالم»: بیماران قلابی در بیمارستان روانی.", w:["workshop"]},
+ {id:"cahalan", fa:"سوزانا کاهالان", y:2019, ln:"dyn", n:"بررسی نشان داد بخش‌هایی از گزارش روزنهان با اسناد نمی‌خواند.", w:["workshop"]},
+ {id:"bargh", fa:"جان بارگ", y:1996, ln:"emo", n:"آماده‌سازی رفتاری: خواندن واژه‌های «پیری» و راه رفتن آهسته‌تر.", w:["bargh"]},
+ {id:"doyen", fa:"استفان دوین", y:2012, ln:"emo", n:"بازتکرار آزمایش «پیری» با زمان‌سنجی خودکار: اثری پیدا نشد.", w:["bargh"]},
+ {id:"galton", fa:"فرانسیس گالتون", y:1884, ln:"iq", n:"اندازه‌گیری تفاوت‌های فردی و مطالعهٔ دوقلوها؛ و نیز بنیان‌گذار اصلاح نژاد.", w:["jensen"]},
+ {id:"burt", fa:"سیریل برت", y:1955, ln:"iq", n:"داده‌های دوقلوهای جدا بزرگ‌شده که بعدها مشکوک به جعل شناخته شد.", w:["jensen"]},
+ {id:"jensen", fa:"آرتور جنسن", y:1969, ln:"iq", n:"ادعا کرد هوش عمدتاً ارثی است و آموزش جبرانی اثر چندانی ندارد.", w:["jensen"]},
+ {id:"flynn", fa:"جیمز فلین", y:1984, ln:"iq", n:"اثر فلین: افزایش نسل‌به‌نسل نمره‌های هوش؛ از جدی‌ترین منتقدان جنسن.", w:["jensen"]}
+];
+window.E = [
+ ["epictetus","ellis","in"],["epictetus","beck","in"],["aristotle","seligman","in"],["aristotle","baumeister","in"],["darwin","ekman","in"],["james","gross","in"],
+ ["freud","jung","st"],["freud","blatt","in"],["freud","beck","cr"],["beck","blatt","in"],["linehan","gratz","in"],["hayes","kashdan","cr"],
+ ["pavlov","watson","in"],["watson","skinner","in"],["skinner","seligman","in"],["seligman","duckworth","st"],
+ ["ekman","barrett","cr"],["gilbert","neff","in"],["gross","gratz","in"],
+ ["deci","ryan","st"],["mischel","watts","cr"],["baumeister","tangney","st"],["baumeister","hagger","cr"],["baumeister","inzlicht","cr"],["dweck","crum","in"],
+ ["kahneman","tversky","st"],["kahneman","thaler","in"],["simon","schwartz","in"],["simon","kahneman","in"],
+ ["diener","oishi","st"],["csikszent","bakker","in"],["maslach","schaufeli","st"],["schaufeli","bakker","st"],["seligman","diener","st"],
+ ["wrangham","hare","st"],["henrich","turchin","in"],["zimbardo","letexier","cr"],["rosenhan","cahalan","cr"],["bargh","doyen","cr"],
+ ["galton","jensen","in"],["burt","jensen","in"],["jensen","flynn","cr"],["darwin","galton","in"],["darwin","wrangham","in"]
+];
+
+const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html", "scales": "scales.html"}, LABEL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی", "scales": "سنجش‌خانه", "path": "پل‌یاب", "prism": "منشور رشته‌ها", "lineage": "شجره‌نامهٔ ایده‌ها", "heat": "همسایگی موضوع‌ها", "river": "رود ایده‌ها", "evidence": "سنجهٔ اعتبار", "debate": "میدان مناظره", "guess": "اول حدس بزن", "lab": "آزمایشگاه", "effect": "اندازهٔ اثر", "emotions": "اطلس هیجان‌ها"};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fa = s => String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const yr = y => y < 0 ? fa(-y) + " پ.م." : fa(y);
+const P = window.PP, BY = Object.fromEntries(P.map(p => [p.id, p])), LN = window.LN, E = window.E;
+const ET = {st:"شاگرد یا همکار", in:"الهام یا ادامه", cr:"نقد یا بازتکرار ناموفق"};
+const LH = 70, LW = 0, W = 1500, X0 = LW + 30, X1 = W - 90;
+// time axis: antiquity squeezed, modern period wide; the axis runs right-to-left so later years sit on the left (RTL reading)
+const tx = y => { const t = y < 1850 ? 0.12 * (y + 400) / 2250 : 0.12 + 0.88 * (y - 1850) / (2025 - 1850); return X1 - t * (X1 - X0); };
+const wOf = p => p.fa.length * 7.2 + 18;
+// lay out each lane; push overlapping pills onto a second row
+const pos = {};
+LN.forEach((l, li) => { const ps = P.filter(p => p.ln === l.id).sort((a,b) => tx(b.y) - tx(a.y)); const lastEnd = [Infinity, Infinity];
+  ps.forEach(p => { const w = wOf(p), want = tx(p.y);
+    const cand = [0,1].map(r => Math.min(want, lastEnd[r] - w/2 - 8)); const r = cand[0] >= cand[1] ? 0 : 1; const x = cand[r];
+    lastEnd[r] = x - w/2; pos[p.id] = [x, 40 + li*LH + (r ? 49 : 22), w]; }); });
+let SH = 0; { const mn = Math.min(...Object.values(pos).map(([x,,w]) => x - w/2)); if (mn < 12) SH = 12 - mn; Object.values(pos).forEach(v => v[0] += SH); }
+const WW = W + SH;
+const H = 40 + LN.length * LH + 10;
+const svg = document.getElementById("tree"); svg.setAttribute("viewBox", `0 0 ${WW} ${H}`); svg.setAttribute("width", WW); svg.setAttribute("height", H); svg.style.maxWidth = "none";
+let s = "";
+document.getElementById("lanes").innerHTML = LN.map(l => `<div>${esc(l.fa)}</div>`).join("");
+LN.forEach((l, i) => {
+  if (i) s += `<line x1="0" x2="${WW}" y1="${40 + i*LH}" y2="${40 + i*LH}" stroke="var(--rule)" stroke-dasharray="2 4"/>`; });
+[-300, 100, 1600, 1850, 1900, 1950, 1975, 2000, 2025].forEach(y => { s += `<text class="yr" x="${tx(y)+SH}" y="24" text-anchor="middle">${yr(y)}</text><line x1="${tx(y)+SH}" x2="${tx(y)+SH}" y1="30" y2="${H}" stroke="var(--rule)" stroke-width=".6"/>`; });
+E.forEach(([a,b,t], i) => { const A = pos[a], B = pos[b]; if (!A || !B) return; const mx = (A[0] + B[0]) / 2, my = Math.min(A[1], B[1]) - 26;
+  s += `<path class="e ${t}" data-a="${a}" data-b="${b}" d="M${A[0]},${A[1]} Q${mx},${A[1] === B[1] ? my : (A[1]+B[1])/2} ${B[0]},${B[1]}"/>`; });
+P.forEach(p => { const [x, y, w] = pos[p.id]; s += `<g class="p" data-id="${p.id}" tabindex="0" role="button" aria-label="${esc(p.fa)}"><rect x="${x - w/2}" y="${y - 12}" width="${w}" height="24" rx="12"/><text x="${x}" y="${y + 4.5}" text-anchor="middle" direction="rtl">${esc(p.fa)}</text></g>`; });
+svg.innerHTML = s;
+function show(id){
+  const p = BY[id]; const rel = E.filter(e => e[0] === id || e[1] === id), fam = new Set([id, ...rel.flat()]);
+  svg.querySelectorAll(".p").forEach(g => { g.classList.toggle("on", g.dataset.id === id); g.classList.toggle("dim", !fam.has(g.dataset.id)); });
+  svg.querySelectorAll(".e").forEach(e => { const on = e.dataset.a === id || e.dataset.b === id; e.classList.toggle("on", on); e.classList.toggle("dim", !on); });
+  const lane = LN.find(l => l.id === p.ln);
+  document.getElementById("side").innerHTML = `<div class="eyebrow">${esc(lane.fa)}</div><h2>${esc(p.fa)}</h2><div class="y">کار شاخص: ${yr(p.y)}</div><p>${esc(p.n)}</p>
+    ${rel.length ? `<div class="rel">${rel.map(([a,b,t]) => { const o = a === id ? b : a, dir = a === id ? "←" : "→"; return `<button data-id="${o}"><b>${esc(BY[o].fa)}</b> <span class="muted">· ${ET[t]} ${dir}</span></button>`; }).join("")}</div>` : ""}
+    <div class="links">${p.w.filter(k => URLS[k]).map(k => `<a href="${URLS[k]}" target="_blank" rel="noopener">${esc(LABEL[k]||k)}</a>`).join("")}</div>`;
+  const g = svg.querySelector(`.p[data-id="${id}"]`); const box = document.querySelector(".box");
+  const gx = pos[id][0]; if (gx < box.scrollLeft + 40 || gx > box.scrollLeft + box.clientWidth - 40) box.scrollLeft = gx - box.clientWidth / 2;
+  try { history.replaceState(null, "", "#" + id); } catch(_) {}
+}
+svg.addEventListener("click", e => { const g = e.target.closest(".p"); if (g) show(g.dataset.id); });
+svg.addEventListener("keydown", e => { const g = e.target.closest(".p"); if (g && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); show(g.dataset.id); } });
+document.getElementById("side").addEventListener("click", e => { const b = e.target.closest("button[data-id]"); if (b) show(b.dataset.id); });
+const h = location.hash.slice(1); show(BY[h] ? h : "baumeister");
+</script>
+
+</body></html>
