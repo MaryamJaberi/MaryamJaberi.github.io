@@ -1,0 +1,380 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>کتابخانهٔ ویکی روان</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: one bookcase per domain of the wiki; each shelf is a topic (or, in the second view, a discipline). Spines stand on wooden boards; a reading card opens beside the case and as a bottom sheet on phones. */
+:root{
+  --bg:#f3efe8; --card:#fffdf9; --ink:#231d17; --muted:#6b6157; --rule:#dcd3c6; --wash:#ebe4d8;
+  --wood:#8a5a36; --wood2:#6f4528; --back:#e7dccb; --paper:#fffaf0;
+  --d-feel:#2f6f8f; --d-self:#b2622a; --d-social:#7a4a8a; --d-work:#2f7a55; --d-health:#a3404f; --d-body:#6b7a2a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#16130f; --card:#1f1b16; --ink:#ece4d8; --muted:#a89c8d; --rule:#352e26; --wash:#251f19;
+  --wood:#6b4529; --wood2:#4f321d; --back:#211b15; --paper:#2a241d;
+  --d-feel:#5fa6c7; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#16130f; --card:#1f1b16; --ink:#ece4d8; --muted:#a89c8d; --rule:#352e26; --wash:#251f19;
+  --wood:#6b4529; --wood2:#4f321d; --back:#211b15; --paper:#2a241d;
+  --d-feel:#5fa6c7; --d-self:#e08f55; --d-social:#b588c4; --d-work:#5fb88a; --d-health:#d9707f; --d-body:#a9b85a; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 70px}
+a{color:var(--d-feel)}
+.wrap{max-width:1240px;margin:0 auto}
+header.top{padding-block:20px 12px;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;align-items:end}
+@media (max-width:760px){header.top{grid-template-columns:minmax(0,1fr)}}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:2.7rem;line-height:1.05;margin:4px 0 0;text-wrap:balance}
+.lede{margin:6px 0 0;color:var(--muted);max-width:74ch;font-size:.95rem}
+.stats{display:flex;gap:18px;font-size:.8rem;color:var(--muted)} .stats b{display:block;font-family:var(--f-display);font-size:1.7rem;color:var(--ink);line-height:1}
+
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:14px 0 4px;font-size:.82rem;color:var(--muted);align-items:center}
+.lg{display:inline-flex;gap:7px;align-items:center}
+.mini{width:11px;height:26px;border-radius:2px;display:inline-block;background:var(--d-feel)}
+.mini.cite{background:repeating-linear-gradient(0deg,var(--d-feel) 0 4px,color-mix(in srgb,var(--d-feel) 55%,var(--paper)) 4px 8px)}
+.mini.rec{background:var(--paper);border:1.5px dashed var(--d-feel)}
+
+.tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin:10px 0 18px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;border-bottom:1px solid var(--rule)}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden;background:var(--card)}
+.seg button{font:inherit;font-size:.82rem;border:0;background:none;color:var(--muted);padding:5px 13px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.tools input{font:inherit;font-size:.88rem;padding:6px 13px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:999px;width:230px;max-width:100%}
+.count{font-size:.8rem;color:var(--muted)}
+
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+@media (max-width:980px){.layout{grid-template-columns:minmax(0,1fr)}}
+
+/* bookcase */
+.case{margin-bottom:30px;border-radius:6px 6px 3px 3px;background:var(--wood2);padding:10px 10px 0;box-shadow:0 1px 0 var(--rule)}
+.case-h{display:flex;gap:10px;align-items:baseline;justify-content:space-between;padding:2px 6px 10px;color:#f6ead9}
+.case-h h2{font-family:var(--f-display);font-size:1.7rem;margin:0;line-height:1;display:flex;gap:10px;align-items:center}
+.case-h h2 i{width:13px;height:13px;border-radius:50%;background:var(--dc);display:inline-block;box-shadow:0 0 0 2px #f6ead9}
+.case-h span{font-size:.78rem;opacity:.8}
+.shelf{background:var(--back);border-radius:3px 3px 0 0;margin-bottom:10px}
+.shelf-h{display:flex;justify-content:space-between;gap:10px;padding:6px 12px 0;font-size:.78rem;color:var(--muted)}
+.shelf-h b{color:var(--ink);font-weight:700}
+.shelf-h a{color:var(--muted)}
+.row{display:flex;align-items:flex-end;gap:3px;padding:10px 12px 0;min-height:210px;overflow-x:auto;scrollbar-width:thin;flex:1;min-width:0}
+.sbody{display:flex;align-items:stretch}
+.sci{width:210px;flex:none;border-inline-start:1px dashed var(--rule);padding:8px 10px;display:flex;flex-direction:column;gap:4px}
+.sci .h{font-size:.72rem;color:var(--muted);font-weight:700}
+.sci a{display:flex;gap:7px;align-items:center;text-decoration:none;color:var(--ink);font-size:.78rem;line-height:1.3;border-radius:6px;padding:2px 4px}
+.sci a:hover{background:var(--wash)}
+.sci a i{width:24px;height:24px;border-radius:50%;flex:none;display:grid;place-items:center;font-style:normal;font-size:.72rem;font-weight:700;color:#fff;background:var(--dc)}
+@media (max-width:720px){.sbody{flex-direction:column}.sci{width:auto;border-inline-start:0;border-top:1px dashed var(--rule);flex-direction:row;flex-wrap:wrap}.sci .h{width:100%}}
+.board{height:12px;background:linear-gradient(var(--wood),var(--wood2));border-radius:0 0 2px 2px;box-shadow:0 3px 4px rgba(0,0,0,.18)}
+.spine{flex:0 0 auto;width:var(--w,38px);height:var(--h,180px);border:0;padding:8px 0;cursor:pointer;border-radius:3px 3px 1px 1px;
+  background:var(--dc);color:#fff;font:inherit;font-size:.8rem;font-weight:500;writing-mode:vertical-rl;text-orientation:mixed;
+  display:flex;align-items:center;justify-content:space-between;line-height:1.25;overflow:hidden;position:relative;
+  box-shadow:inset -3px 0 0 rgba(0,0,0,.14),inset 2px 0 0 rgba(255,255,255,.12);transition:transform .15s}
+.spine .ti{max-height:calc(var(--h,180px) - 46px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.spine .yr{font-size:.66rem;opacity:.85;font-family:var(--f-latin)}
+.spine::before{content:"";position:absolute;inset:14px 0 auto;height:2px;background:rgba(255,255,255,.35)}
+.spine.cite{background:repeating-linear-gradient(0deg,var(--dc) 0 6px,color-mix(in srgb,var(--dc) 72%,#000) 6px 7px)}
+.spine.rec{background:var(--paper);color:var(--dc);border:1.5px dashed var(--dc);box-shadow:none}
+.spine.rec::before{background:var(--dc);opacity:.4}
+.spine:hover,.spine:focus-visible{transform:translateY(-8px);outline:none}
+.spine[aria-pressed="true"]{transform:translateY(-14px);box-shadow:0 0 0 3px var(--ink)}
+.spine.dim{opacity:.18}
+.lean{transform:rotate(-6deg);transform-origin:bottom left;margin-inline-end:10px}
+.lean:hover{transform:rotate(-6deg) translateY(-6px)}
+
+/* reading card */
+.card{position:sticky;top:calc(env(safe-area-inset-top,0px) + 70px);background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 18px 16px;max-height:calc(100vh - 90px);overflow:auto}
+.card .empty{color:var(--muted);font-size:.9rem}
+.card .kind{display:inline-block;font-size:.72rem;padding:1px 9px;border-radius:999px;background:var(--wash);color:var(--muted)}
+.card h3{font-family:var(--f-display);font-size:1.75rem;line-height:1.15;margin:8px 0 2px;text-wrap:balance}
+.card .en{font-family:var(--f-latin);font-style:italic;color:var(--muted);direction:ltr;text-align:left;font-size:.92rem}
+.card .au{font-size:.9rem;margin:6px 0 10px}
+.card .d{font-size:.95rem;margin:0 0 12px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.84rem;margin:0 0 14px}
+.card dt{color:var(--muted)} .card dd{margin:0}
+.card .go{display:inline-flex;gap:6px;align-items:center;font-weight:700;font-size:.9rem;background:var(--ink);color:var(--bg);text-decoration:none;padding:6px 14px;border-radius:999px}
+.card .x{display:none}
+.note{font-size:.78rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:10px;margin-top:14px}
+@media (max-width:980px){
+  .card{position:fixed;inset:auto 0 0 0;top:auto;max-height:62vh;border-radius:14px 14px 0 0;z-index:20;box-shadow:0 -8px 30px rgba(0,0,0,.25);
+    padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+  .card.closed{display:none}
+  .card .x{display:block;position:absolute;left:max(12px,env(safe-area-inset-left,0px));top:10px;font:inherit;border:1px solid var(--rule);background:var(--wash);color:var(--ink);border-radius:999px;padding:0 12px;cursor:pointer}
+}
+.guide{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px 18px;margin:0 0 22px;font-size:.88rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 22px}
+.guide b{font-family:var(--f-display);font-size:1.2rem;display:block}
+footer{margin-top:20px;font-size:.8rem;color:var(--muted)}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div>
+    <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › کتابخانه</div>
+    <h1>کتابخانهٔ ویکی روان</h1>
+    <p class="lede">هر قفسه یک حوزه است و هر طبقه یک موضوع. روی عطف هر کتاب بزنید تا ببینید دربارهٔ چیست، در کدام رشته می‌نشیند و کجای ویکی مرورش کرده‌ایم. با دکمهٔ «چیدمان» می‌توانید همین کتاب‌ها را بر اساس رشتهٔ علمی هم بچینید.</p>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="legend" aria-label="راهنمای عطف‌ها">
+  <span class="lg"><i class="mini"></i>مرور شده در ویکی (صفحهٔ کامل دارد)</span>
+  <span class="lg"><i class="mini cite"></i>در صفحه‌ها به آن ارجاع شده</span>
+  <span class="lg"><i class="mini rec"></i>پیشنهاد ویراستار (هنوز مرور نشده)</span>
+  <span class="lg">بلندی عطف: کوتاه = عمومی، بلند = دانشگاهی، بلندترین = تخصصی و بالینی</span>
+</div>
+
+<div class="tools">
+  <span class="seg" role="group" aria-label="چیدمان">
+    <button data-v="dom" aria-pressed="true">چیدمان: حوزه و موضوع</button><button data-v="field" aria-pressed="false">رشتهٔ علمی</button>
+  </span>
+  <span class="seg" role="group" aria-label="نوع">
+    <button data-k="all" aria-pressed="true">همه</button><button data-k="rev" aria-pressed="false">مرورشده</button><button data-k="rec" aria-pressed="false">پیشنهادی</button>
+  </span>
+  <span class="seg" role="group" aria-label="سطح">
+    <button data-l="all" aria-pressed="true">هر سطح</button><button data-l="pop" aria-pressed="false">عمومی</button><button data-l="acad" aria-pressed="false">دانشگاهی</button><button data-l="clin" aria-pressed="false">تخصصی</button>
+  </span>
+  <input id="q" type="search" placeholder="جست‌وجوی عنوان یا نویسنده…" aria-label="جست‌وجو">
+  <span class="count" id="count"></span>
+</div>
+
+<div class="layout">
+  <main id="cases"></main>
+  <aside class="card closed" id="card" aria-live="polite">
+    <button class="x" id="x" aria-label="بستن">✕</button>
+    <div id="cardin"><p class="empty">کتابی انتخاب نشده. روی یکی از عطف‌ها بزنید.</p>
+    <div class="guide" style="margin:12px 0 0;grid-template-columns:1fr">
+      <div><b>برای کنجکاوها</b>عطف‌های کوتاه (عمومی) را بردارید؛ بیشترشان در ویکی خلاصهٔ فارسی دارند.</div>
+      <div><b>برای دانشجوها</b>عطف‌های میانه، درسنامه‌ها و دست‌نامه‌ها هستند.</div>
+      <div><b>برای متخصص‌ها</b>بلندترین عطف‌ها راهنمای بالینی و مرجع‌اند.</div>
+    </div></div>
+    <p class="note">نشان «پیشنهاد ویراستار» یعنی این کتاب در دوره نبوده و ویراستار ویکی برای پر کردن جای خالی آن رشته پیشنهادش کرده است. هر جا یافتهٔ مهمی از کتاب بعدها تکرار نشده، در توضیحش آمده.</p>
+  </aside>
+</div>
+<footer>کتاب‌های «مرور شده» همان‌هایی‌اند که در جلسه‌ها، سخنرانی‌ها و قفسه‌های کتاب دورهٔ دکتر آذرخش مکری آمده‌اند. ترجمهٔ فارسی عنوان‌ها برای راهنمایی است و ممکن است با نام نسخهٔ چاپی فارسی یکی نباشد.</footer>
+</div>
+
+<script>
+/* کتابخانهٔ ویکی. kind: rev = در ویکی مرور شده یا منبع اصلی یک صفحه؛ cite = در صفحه‌ها به آن ارجاع شده؛ rec = پیشنهاد ویراستار برای آن رشته.
+   p: کلید صفحهٔ ویکی؛ t: موضوع (طبقه‌بندی صفحهٔ اول)؛ f: رشته در اطلس رشته‌ها؛ lv: pop عمومی، acad دانشگاهی، clin تخصصی و بالینی */
+window.BOOKS = [
+/* ── هیجان و ذهن ── */
+{k:"barrett",fa:"هیجان‌ها چگونه ساخته می‌شوند",en:"How Emotions Are Made",au:"لیزا فلدمن بارت",y:2017,p:"shelf7",t:"emotion",f:"affneuro",lv:"pop",kind:"rev",d:"هیجان‌ها از پیش در مغز آماده نیستند؛ مغز آن‌ها را از حس‌های بدن و مفهوم‌های آموخته می‌سازد."},
+{k:"bloom1",fa:"لذت چگونه کار می‌کند",en:"How Pleasure Works",au:"پل بلوم",y:2010,p:"shelf7",t:"emotion",f:"psychology",lv:"pop",kind:"rev",d:"لذت به باور ما دربارهٔ «ذات» و تاریخچهٔ چیزها بستگی دارد، نه فقط به خود آن‌ها."},
+{k:"bloom2",fa:"علیه همدلی",en:"Against Empathy",au:"پل بلوم",y:2016,p:"shelf7",t:"emotion",f:"moralpsy",lv:"pop",kind:"rev",d:"همدلی جانب‌دار و کوتاه‌برد است؛ شفقت عقلانی راهنمای بهتری برای اخلاق است."},
+{k:"mckay",fa:"ذهن و هیجان‌ها",en:"Mind and Emotions",au:"مک‌کی، فنینگ و زوریتا اونا",y:2011,p:"shelf7",t:"emotion",f:"clinpsy",lv:"clin",kind:"rev",d:"درمان فراتشخیصی و مهارت‌محور برای اختلال‌های هیجانی."},
+{k:"pohl",fa:"خطاهای شناختی",en:"Cognitive Illusions",au:"رودیگر پول (ویراستار)",y:2017,p:"shelf12",t:"cognition",f:"cogsci",lv:"acad",kind:"rev",d:"۲۵ خطای فکر، داوری و حافظه با پیشینهٔ پژوهشی هر کدام."},
+{k:"shaw",fa:"فریب حافظه",en:"The Memory Illusion",au:"جولیا شاو",y:2016,p:"memory",t:"cognition",f:"psychology",lv:"pop",kind:"rev",d:"حافظه بازسازی است، نه ضبط؛ و می‌شود خاطرهٔ کاذب ساخت."},
+{k:"bargh",fa:"پیش از آنکه بدانی",en:"Before You Know It",au:"جان بارگ",y:2017,p:"bargh",t:"cognition",f:"socpsy",lv:"pop",kind:"rev",d:"ذهن ناآگاه و پیش‌زمینه‌سازی؛ با بررسی اینکه کدام یافته‌ها تکرار نشدند."},
+{k:"raz",fa:"مغز تلقین‌پذیر",en:"The Suggestible Brain",au:"امیر راز",y:2023,p:"suggestible",t:"cognition",f:"philmind",lv:"pop",kind:"rev",d:"تلقین، دارونما و حس عاملیت؛ ذهن چقدر از انتظار شکل می‌گیرد."},
+{k:"bullshit",fa:"حرف مفت می‌زنه!",en:"Calling Bullshit",au:"کارل برگستروم و جوین وست",y:2020,p:"bullshit",t:"cognition",f:"stats",lv:"pop",kind:"rev",d:"شک‌ورزی در جهان داده‌ها: همبستگی کاذب، نمودار گمراه‌کننده، سوگیری انتشار."},
+{k:"frankfurt",fa:"دربارهٔ حرف مفت",en:"On Bullshit",au:"هری فرانکفورت",y:2005,p:"bullshit",t:"cognition",f:"philosophy",lv:"pop",kind:"cite",d:"رسالهٔ کوتاه فلسفی دربارهٔ بی‌اعتنایی به حقیقت."},
+{k:"mercier",fa:"دیروز به دنیا نیامده‌ایم",en:"Not Born Yesterday",au:"هوگو مرسیه",y:2020,p:"shelf4",t:"cognition",f:"cogsci",lv:"pop",kind:"rev",d:"آدم‌ها ذاتاً زودباور نیستند؛ «گشودگی مراقب» و دلایل خطای آن."},
+{k:"klein13",fa:"دیدن آنچه دیگران نمی‌بینند",en:"Seeing What Others Don't",au:"گری کلاین",y:2013,p:"shelf4",t:"cognition",f:"cogsci",lv:"pop",kind:"rev",d:"بینش از کجا می‌آید؛ تناقض، تصادف و ارتباط."},
+{k:"klein09",fa:"چراغ‌های خیابان و سایه‌ها",en:"Streetlights and Shadows",au:"گری کلاین",y:2009,p:"shelf4",t:"cognition",f:"hci",lv:"acad",kind:"rev",d:"تصمیم‌گیری در ابهام، وقتی قاعده‌ها کار نمی‌کنند."},
+{k:"forgas",fa:"روان‌شناسی اجتماعی زودباوری",en:"The Social Psychology of Gullibility",au:"فورگاس و بامیستر (ویراستاران)",y:2019,p:"shelf14",t:"cognition",f:"socpsy",lv:"acad",kind:"rev",d:"نظریهٔ توطئه، خبر جعلی و باورهای غیرعقلانی."},
+{k:"lieberman",fa:"یادگیری و حافظهٔ انسان",en:"Human Learning and Memory",au:"دیوید لیبرمن",y:2012,p:"learnmem",t:"learning",f:"learnsci",lv:"acad",kind:"rev",d:"درسنامهٔ شرطی‌سازی، تقویت و حافظه در یک جا."},
+{k:"livio",fa:"چرا؟ کنجکاوی",en:"Why? What Makes Us Curious",au:"ماریو لیویو",y:2017,p:"curiosity",t:"learning",f:"psychology",lv:"pop",kind:"rev",d:"انواع کنجکاوی، نظریهٔ شکاف اطلاعاتی و مغز کنجکاو."},
+{k:"range",fa:"گستره",en:"Range",au:"دیوید اپستین",y:2019,p:"range",t:"learning",f:"learnsci",lv:"pop",kind:"rev",d:"چرا عمومی‌کارها در جهان تخصصی موفق می‌شوند؛ محیط مهربان و بدخیم."},
+{k:"tetlock",fa:"داوری سیاسی کارشناسان",en:"Expert Political Judgment",au:"فیلیپ تتلاک",y:2005,p:"range",t:"learning",f:"polpsy",lv:"acad",kind:"cite",d:"روباه‌ها و جوجه‌تیغی‌ها: کدام کارشناس بهتر پیش‌بینی می‌کند."},
+/* ── خود و رشد ── */
+{k:"neff11",fa:"شفقت به خود",en:"Self-Compassion",au:"کریستین نف",y:2011,p:"compassion",t:"compassion",f:"psychology",lv:"pop",kind:"rev",d:"سه جزء شفقت به خود و تفاوتش با عزت نفس."},
+{k:"fierce",fa:"شفقت به خود قاطع",en:"Fierce Self-Compassion",au:"کریستین نف",y:2021,p:"compassion",t:"compassion",f:"psychology",lv:"pop",kind:"rev",d:"شفقت نرم (پذیرش) و شفقت قاطع (محافظت و اقدام)."},
+{k:"cft",fa:"درمان متمرکز بر شفقت",en:"Compassion Focused Therapy",au:"گیلبرت و سیموس (ویراستاران)",y:2022,p:"compassion",t:"compassion",f:"clinpsy",lv:"clin",kind:"rev",d:"مرجع بالینی درمان متمرکز بر شفقت و کاربردهایش."},
+{k:"shahar",fa:"فرسایش: آسیب‌شناسی خودانتقادی",en:"Erosion",au:"گل شاهار",y:2015,p:"compassion",t:"compassion",f:"clinpsy",lv:"clin",kind:"rev",d:"خودانتقادی به‌عنوان عامل خطر فراتشخیصی."},
+{k:"msc",fa:"شفقت به خود ذهن‌آگاهانه برای فرسودگی",en:"Mindful Self-Compassion for Burnout",au:"نف و گرمر",y:2024,p:"compassion",t:"compassion",f:"iop",lv:"pop",kind:"rev",d:"تمرین‌های شفقت برای فرسودگی و خستگی مراقبان."},
+{k:"stoeber",fa:"روان‌شناسی کمال‌گرایی",en:"The Psychology of Perfectionism",au:"یواخیم استوبر (ویراستار)",y:2018,p:"shelf3",t:"compassion",f:"psychology",lv:"acad",kind:"rev",d:"نظریه، پژوهش و کاربرد؛ کمال‌گرایی سالم و ناسالم."},
+{k:"sirois",fa:"کمال‌گرایی، سلامت و بهزیستی",en:"Perfectionism, Health, and Well-Being",au:"سیرویس و مولنار (ویراستاران)",y:2016,p:"shelf3",t:"compassion",f:"healthpsy",lv:"acad",kind:"rev",d:"پیوند کمال‌گرایی با بیماری جسمی و سلامت."},
+{k:"fish",fa:"انجامش بده",en:"Get It Done",au:"آیلت فیشباخ",y:2022,p:"shelf2",t:"motivation",f:"psychology",lv:"pop",kind:"rev",d:"علم انگیزه: هدف‌گذاری، مسئلهٔ میانهٔ راه و حمایت اجتماعی."},
+{k:"wood",fa:"عادت‌های خوب، عادت‌های بد",en:"Good Habits, Bad Habits",au:"وندی وود",y:2019,p:"shelf15",t:"motivation",f:"psychology",lv:"pop",kind:"rev",d:"حدود ۴۳٪ رفتار روزانه عادت است؛ بافت، تکرار و پاداش."},
+{k:"freed",fa:"انگیزه و میل",en:"Motivation and Desire",au:"ویلیام فرید",y:2022,p:"shelf15",t:"motivation",f:"neuro",lv:"acad",kind:"rev",d:"سه نوع انگیزه و پایهٔ عصبی دوپامین."},
+{k:"ryandeci",fa:"نظریهٔ خودتعیین‌گری",en:"Self-Determination Theory",au:"رایان و دسی",y:2017,p:"shelf10",t:"motivation",f:"psychology",lv:"acad",kind:"rev",d:"شش نظریهٔ کوچک دربارهٔ نیازهای پایهٔ روانی."},
+{k:"oxmot",fa:"دانشنامهٔ آکسفورد انگیزش انسان",en:"The Oxford Handbook of Human Motivation",au:"ریچارد رایان (ویراستار)",y:2019,p:"shelf10",t:"motivation",f:"psychology",lv:"acad",kind:"rev",d:"مرجع جامع پژوهش‌های انگیزش."},
+{k:"hockey",fa:"روان‌شناسی خستگی",en:"The Psychology of Fatigue",au:"رابرت هاکی",y:2013,p:"shelf10",t:"motivation",f:"healthpsy",lv:"acad",kind:"rev",d:"خستگی به‌عنوان هیجان و سیگنال کنترل، نه فقط تمام شدن انرژی."},
+{k:"bong",fa:"علم انگیزش: بحث‌ها و بینش‌ها",en:"Motivation Science",au:"بونگ، ریو و کیم (ویراستاران)",y:2023,p:"shelf9",t:"motivation",f:"psychology",lv:"acad",kind:"rev",d:"پرسش‌های بحث‌برانگیز علم انگیزش و پاسخ پژوهشگران."},
+{k:"penny",fa:"بازگشت تأمل",en:"The New Reflectionism in Cognitive Psychology",au:"گوردون پنی‌کوک (ویراستار)",y:2018,p:"shelf2",t:"motivation",f:"cogsci",lv:"acad",kind:"rev",d:"چرا استدلال و تفکر تأملی هنوز مهم است."},
+{k:"clark",fa:"ریشه‌های شادکامی",en:"The Origins of Happiness",au:"کلارک، لیارد و همکاران",y:2018,p:"happiness",t:"meaning",f:"behecon",lv:"acad",kind:"rev",d:"سلامت روان و رابطه در برابر پول؛ داده‌های بزرگ دربارهٔ بهزیستی."},
+{k:"prill",fa:"چگونه انسان‌ها اهمیت پیدا می‌کنند",en:"How People Matter",au:"آیزاک و اورا پریلتنسکی",y:2021,p:"mattering",t:"meaning",f:"psychology",lv:"pop",kind:"rev",d:"احساس ارزشمند بودن و افزودن ارزش؛ در فرد، کار و جامعه."},
+{k:"winner",fa:"هنر چگونه اثر می‌کند",en:"How Art Works",au:"الن وینر",y:2018,p:"art",t:"meaning",f:"aesthetics",lv:"pop",kind:"rev",d:"روان‌شناسی تجربی هنر: تعریف، هیجان، جعل و هنر انتزاعی."},
+{k:"oishi",fa:"زندگی در سه بُعد",en:"Life in Three Dimensions",au:"شیگهیرو اویشی",y:2025,p:"shelf14",t:"meaning",f:"psychology",lv:"pop",kind:"rev",d:"شادی، معنا و غنای روانی؛ سه راه زندگی خوب."},
+{k:"heine",fa:"معنا بساز",en:"Start Making Sense",au:"استیون هاین",y:2025,p:"makingsense",t:"meaning",f:"existpsy",lv:"pop",kind:"rev",d:"روان‌شناسی وجودی تجربی: معنا، تنهایی و مدیریت وحشت."},
+{k:"worm",fa:"کرم درون سیب",en:"The Worm at the Core",au:"سالمون، گرینبرگ و پیشچینسکی",y:2015,p:"makingsense",t:"meaning",f:"existpsy",lv:"pop",kind:"cite",d:"نظریهٔ مدیریت وحشت: نقش آگاهی از مرگ در زندگی."},
+{k:"kaufman",fa:"فراتر برو",en:"Rise Above",au:"اسکات بری کافمن",y:2024,p:"riseabove",t:"meaning",f:"psychology",lv:"pop",kind:"rev",d:"ذهنیت قربانی، خودشیفتگی آسیب‌پذیر و راه‌های رشد."},
+{k:"david",fa:"چابکی هیجانی",en:"Emotional Agility",au:"سوزان دیوید",y:2016,p:"shelf13",t:"meaning",f:"clinpsy",lv:"pop",kind:"rev",d:"گیر نکردن در فکر و احساس و حرکت به سوی ارزش‌ها."},
+{k:"flett",fa:"روان‌شناسی اهمیت داشتن",en:"The Psychology of Mattering",au:"گوردون فلت",y:2018,p:"riseabove",t:"meaning",f:"psychology",lv:"acad",kind:"cite",d:"اهمیت داشتن برای دیگران به‌عنوان نیاز روانی."},
+/* ── رابطه و جامعه ── */
+{k:"turchin",fa:"فراجامعه",en:"Ultrasociety",au:"پیتر تورچین",y:2016,p:"ultrasociety",t:"culture",f:"anthro",lv:"pop",kind:"rev",d:"چطور جنگ و رقابت گروه‌ها همکاری میلیون‌ها غریبه را ساخت."},
+{k:"carr",fa:"سوپربلوم",en:"Superbloom",au:"نیکلاس کار",y:2025,p:"superbloom",t:"culture",f:"digsoc",lv:"pop",kind:"rev",d:"فناوری‌های ارتباط چطور ما را از هم دور می‌کنند."},
+{k:"hare",fa:"بقای دوستانه‌ترین",en:"Survival of the Friendliest",au:"برایان هیر و ونسا وودز",y:2020,p:"friendly",t:"culture",f:"evopsy",lv:"pop",kind:"rev",d:"فرضیهٔ خوداهلی‌سازی: دوستانه‌ترین‌ها پیروز شدند."},
+{k:"wrangham",fa:"پارادوکس خوبی",en:"The Goodness Paradox",au:"ریچارد رنگم",y:2019,p:"friendly",t:"culture",f:"evobio",lv:"pop",kind:"cite",d:"دو نوع پرخاشگری و تکامل فضیلت و خشونت."},
+{k:"henrich",fa:"راز موفقیت ما",en:"The Secret of Our Success",au:"جوزف هنریک",y:2016,p:"friendly",t:"culture",f:"anthro",lv:"pop",kind:"cite",d:"فرهنگ چگونه تکامل انسان را پیش برد."},
+{k:"gelfand",fa:"قانون‌سازان و قانون‌شکنان",en:"Rule Makers, Rule Breakers",au:"میشل گلفند",y:2018,p:"gelfand",t:"culture",f:"culpsy",lv:"pop",kind:"rev",d:"فرهنگ‌های سفت و شل در ۳۳ کشور."},
+{k:"zmigrod",fa:"مغز ایدئولوژیک",en:"The Ideological Brain",au:"لئور زمیگرود",y:2025,p:"ideo",t:"culture",f:"polpsy",lv:"pop",kind:"rev",d:"انعطاف‌ناپذیری شناختی و تفکر ایدئولوژیک."},
+{k:"bored",fa:"بی‌حوصله، تنها، خشمگین و احمق",en:"Bored, Lonely, Angry, Stupid",au:"فرناندز و مت",y:2019,p:"bored",t:"culture",f:"history",lv:"pop",kind:"rev",d:"تاریخ احساس‌های ما دربارهٔ فناوری، از تلگراف تا توییتر."},
+{k:"prinz",fa:"فراتر از سرشت انسان",en:"Beyond Human Nature",au:"جسی پرینز",y:2012,p:"shelf4",t:"culture",f:"philosophy",lv:"pop",kind:"rev",d:"فرهنگ و تجربه چقدر ذهن را شکل می‌دهند."},
+{k:"dewaal",fa:"آخرین آغوش ماما",en:"Mama's Last Hug",au:"فرانس دو وال",y:2019,p:"shelf4",t:"culture",f:"evobio",lv:"pop",kind:"rev",d:"هیجان‌های جانوران و آنچه دربارهٔ ما می‌گویند."},
+{k:"joseph",fa:"مشکل مطالعات دوقلوها",en:"The Trouble with Twin Studies",au:"جی جوزف",y:2015,p:"shelf4",t:"culture",f:"behgen",lv:"acad",kind:"rev",d:"نقد روش‌شناختی پژوهش‌های دوقلو؛ کنار دیدگاه رایج ژنتیک رفتاری."},
+{k:"miele",fa:"هوش، نژاد و ژنتیک",en:"Intelligence, Race, and Genetics",au:"فرانک میله",y:2002,p:"shelf4",t:"culture",f:"behgen",lv:"acad",kind:"rev",d:"گفت‌وگو با آرتور جنسن؛ در ویکی همراه با اجماع علمی کنونی آمده."},
+{k:"sassen",fa:"روان‌شناسی اجتماعی در عمل",en:"Social Psychology in Action",au:"ساسنبرگ و فلیک (ویراستاران)",y:2019,p:"shelf4",t:"culture",f:"socpsy",lv:"acad",kind:"rev",d:"مداخله‌های مبتنی بر شواهد از نظریه تا عمل."},
+{k:"coleman14",fa:"کارآمد کردن تعارض",en:"Making Conflict Work",au:"کلمن و فرگوسن",y:2014,p:"shelf2",t:"ethics",f:"mgmt",lv:"pop",kind:"rev",d:"تعارض و قدرت در کار و راه‌های سازنده کردنش."},
+{k:"wayout",fa:"راه برون‌رفت",en:"The Way Out",au:"پیتر کلمن",y:2021,p:"shelf9",t:"ethics",f:"polpsy",lv:"pop",kind:"rev",d:"چگونه از قطبی‌شدن سمی بیرون بیاییم."},
+{k:"crhand",fa:"دست‌نامهٔ حل تعارض",en:"The Handbook of Conflict Resolution",au:"کلمن، دویچ و مارکوس (ویراستاران)",y:2014,p:"shelf9",t:"ethics",f:"socpsy",lv:"acad",kind:"rev",d:"نظریهٔ همکاری و رقابت دویچ و کاربردهای آن."},
+{k:"spirit",fa:"سطح روح",en:"The Spirit Level",au:"ویلکینسون و پیکت",y:2009,p:"mattering",t:"ethics",f:"epi",lv:"pop",kind:"cite",d:"نابرابری و پیامدهای سلامت و اجتماعی."},
+/* ── کار و سازمان ── */
+{k:"poswork",fa:"دست‌نامهٔ مثبت‌گرایی و توانمندی در کار",en:"Wiley Blackwell Handbook of Positivity and Strengths at Work",au:"اودز، استیگر و همکاران (ویراستاران)",y:2017,p:"poswork",t:"work",f:"iop",lv:"acad",kind:"rev",d:"منبع پشتیبان دوره: امید، توانمندی، غرقگی و درگیری کاری."},
+{k:"hackman",fa:"کار عاطفی",en:"Emotional Labor",au:"رُز هکمن",y:2023,p:"emolabor",t:"work",f:"iop",lv:"pop",kind:"rev",d:"کار عاطفی نامرئی در خانه و کار."},
+{k:"hochschild",fa:"قلب مدیریت‌شده",en:"The Managed Heart",au:"آرلی هاکسچایلد",y:1983,p:"emolabor",t:"work",f:"sociology",lv:"acad",kind:"cite",d:"کتابی که مفهوم «کار عاطفی» را ساخت."},
+{k:"awake",fa:"بیدار کردن شفقت در کار",en:"Awakening Compassion at Work",au:"ورلاین و داتون",y:2017,p:"compassion",t:"work",f:"mgmt",lv:"pop",kind:"rev",d:"قدرت آرام شفقت در سازمان‌ها."},
+/* ── سلامت روان و درمان ── */
+{k:"lahey",fa:"ابعاد مشکلات روانی",en:"Dimensions of Psychological Problems",au:"بنجامین لِهی",y:2021,p:"shelf3",t:"diagnosis",f:"philpsych",lv:"acad",kind:"rev",d:"جایگزینی دسته‌های تشخیصی با ابعاد."},
+{k:"shorter",fa:"چگونه همه افسرده شدند",en:"How Everyone Became Depressed",au:"ادوارد شورتر",y:2013,p:"shelf3",t:"diagnosis",f:"history",lv:"acad",kind:"rev",d:"ظهور و افول «فروپاشی عصبی» و تاریخ تشخیص افسردگی."},
+{k:"frances",fa:"نجات بهنجاری",en:"Saving Normal",au:"آلن فرانسس",y:2013,p:"shelf11",t:"diagnosis",f:"psychiatry",lv:"pop",kind:"rev",d:"نقد تورم تشخیصی و DSM-5 از درون."},
+{k:"taylor",fa:"آسیب‌شناسی روانی توصیفی",en:"Descriptive Psychopathology",au:"تیلور و ویدیا",y:2009,p:"shelf5",t:"diagnosis",f:"psychiatry",lv:"clin",kind:"rev",d:"نشانه‌ها و علائم اختلال‌های رفتاری، فراتر از DSM."},
+{k:"berrios",fa:"تاریخ علائم روانی",en:"The History of Mental Symptoms",au:"جرمن بریوس",y:1996,p:"shelf5",t:"diagnosis",f:"history",lv:"clin",kind:"rev",d:"آسیب‌شناسی توصیفی از قرن نوزدهم."},
+{k:"sims",fa:"علائم در ذهن (سیمز)",en:"Sims' Symptoms in the Mind",au:"فمی اویبوده",y:2022,p:"shelf5",t:"diagnosis",f:"psychiatry",lv:"clin",kind:"rev",d:"درسنامهٔ کلاسیک پدیدارشناسی علائم."},
+{k:"oyebode",fa:"سندرم‌های نادر و غیرمعمول",en:"Psychopathology of Rare and Unusual Syndromes",au:"فمی اویبوده (ویراستار)",y:2015,p:"shelf5",t:"diagnosis",f:"psychiatry",lv:"clin",kind:"rev",d:"از کاپگرا تا کوتار."},
+{k:"barlowneuro",fa:"روان‌رنجوری",en:"Neuroticism",au:"سائر-زاوالا و بارلو",y:2021,p:"clinical",t:"diagnosis",f:"clinpsy",lv:"clin",kind:"rev",d:"چارچوبی تازه برای اختلال‌های هیجانی و پروتکل یکپارچه."},
+{k:"barlowhand",fa:"دست‌نامهٔ بالینی اختلال‌های روانی",en:"Clinical Handbook of Psychological Disorders",au:"دیوید بارلو (ویراستار)",y:2021,p:"clinical",t:"diagnosis",f:"clinpsy",lv:"clin",kind:"rev",d:"راهنمای گام‌به‌گام درمان‌های مبتنی بر شواهد."},
+{k:"starcevic",fa:"خودبیمارانگاری و اضطراب سلامت",en:"Hypochondriasis and Health Anxiety",au:"استارچویچ و نویز (ویراستاران)",y:2014,p:"clinical",t:"diagnosis",f:"clinpsy",lv:"clin",kind:"rev",d:"راهنمای درمانگران برای اضطراب سلامت."},
+{k:"veale",fa:"بدریخت‌انگاری بدن",en:"Body Dysmorphic Disorder",au:"ویل و نزیروگلو",y:2010,p:"clinical",t:"diagnosis",f:"clinpsy",lv:"clin",kind:"rev",d:"دستورالعمل درمان."},
+{k:"beauchamp",fa:"گوش‌به‌زنگی جانوران",en:"Animal Vigilance",au:"گای بوشان",y:2015,p:"clinical",t:"diagnosis",f:"evobio",lv:"acad",kind:"rev",d:"ریشهٔ تکاملی پایش خطر."},
+{k:"pizz",fa:"بی‌لذتی",en:"Anhedonia",au:"دیگو پیتزاگالی (ویراستار)",y:2022,p:"shelf3",t:"therapy",f:"affneuro",lv:"clin",kind:"rev",d:"از پژوهش پیش‌بالینی تا درمان بی‌لذتی."},
+{k:"bonanno",fa:"پایان تروما",en:"The End of Trauma",au:"جورج بونانو",y:2021,p:"trauma",t:"therapy",f:"clinpsy",lv:"pop",kind:"rev",d:"تاب‌آوری قاعده است، نه استثنا."},
+{k:"beyonddsm",fa:"فراتر از DSM",en:"Beyond the DSM",au:"هیز و هافمن (ویراستاران)",y:2020,p:"shelf13",t:"therapy",f:"clinpsy",lv:"clin",kind:"rev",d:"جایگزین فرایندمحور برای تشخیص و درمان."},
+{k:"pbt",fa:"آموزش درمان مبتنی بر فرایند",en:"Learning Process-Based Therapy",au:"هافمن، هیز و لورشاید",y:2021,p:"shelf13",t:"therapy",f:"clinpsy",lv:"clin",kind:"rev",d:"دستورالعمل مهارت‌محور برای هدف گرفتن فرایندهای تغییر."},
+{k:"roadmap",fa:"نقشهٔ راه فراتشخیصی",en:"The Transdiagnostic Road Map",au:"فرانک و دیویدسون",y:2014,p:"shelf13",t:"therapy",f:"clinpsy",lv:"clin",kind:"rev",d:"صورت‌بندی مورد و برنامهٔ درمان فراتشخیصی."},
+/* ── بدن، تکامل و جنسیت ── */
+{k:"buss",fa:"مردان بد",en:"When Men Behave Badly",au:"دیوید باس",y:2021,p:"badmen",t:"bodymind",f:"evopsy",lv:"pop",kind:"rev",d:"روان‌شناسی تکاملی فریب و آزار؛ همراه با نقدها."},
+{k:"levay",fa:"همجنس‌گرا، دگرجنس‌گرا و دلیلش",en:"Gay, Straight, and the Reason Why",au:"سایمون لوی",y:2017,p:"shelf6",t:"devsex",f:"neuro",lv:"acad",kind:"rev",d:"زیست‌شناسی گرایش جنسی: هورمون، ژن و مغز."},
+{k:"diamond",fa:"سیالیت جنسی",en:"Sexual Fluidity",au:"لیزا دایموند",y:2008,p:"shelf6",t:"devsex",f:"psychology",lv:"acad",kind:"rev",d:"عشق و میل در زنان در طول زمان."},
+{k:"mostly",fa:"عمدتاً دگرجنس‌گرا",en:"Mostly Straight",au:"ریچ سوین-ویلیامز",y:2017,p:"shelf6",t:"devsex",f:"psychology",lv:"acad",kind:"rev",d:"سیالیت جنسی در مردان."},
+{k:"bi21",fa:"دوجنس‌گرا، همه‌جنس‌گرا، سیال و نان‌باینری",en:"Bi: Bisexual, Pansexual, Fluid, and Nonbinary Youth",au:"ریچ سوین-ویلیامز",y:2021,p:"shelf6",t:"devsex",f:"psychology",lv:"acad",kind:"rev",d:"تنوع هویت و گرایش در نوجوانان و جوانان."},
+{k:"shawbi",fa:"دوجنس‌گرایی",en:"Bi",au:"جولیا شاو",y:2022,p:"shelf2",t:"devsex",f:"psychology",lv:"pop",kind:"rev",d:"فرهنگ، تاریخ و علم دوجنس‌گرایی."},
+{k:"foulkes",fa:"رسیدن به بلوغ",en:"Coming of Age",au:"لوسی فولکس",y:2024,p:"shelf8",t:"devsex",f:"psychology",lv:"pop",kind:"rev",d:"نوجوانی چطور ما را شکل می‌دهد."},
+{k:"prinstein",fa:"محبوب",en:"Popular",au:"میچ پرینستاین",y:2017,p:"shelf8",t:"devsex",f:"psychology",lv:"pop",kind:"rev",d:"دو نوع محبوبیت: دوست‌داشتنی بودن و جایگاه."},
+{k:"jackson",fa:"حواس‌پرت",en:"Distracted",au:"مگی جکسون",y:2018,p:"shelf8",t:"devsex",f:"digsoc",lv:"pop",kind:"rev",d:"بحران توجه در عصر حواس‌پرتی."},
+/* ── پیشنهاد ویراستار برای رشته‌هایی که هنوز در ویکی کتابی ندارند ── */
+{k:"r-kahneman",fa:"تفکر، سریع و کند",en:"Thinking, Fast and Slow",au:"دنیل کانمن",y:2011,p:"illusions",t:"cognition",f:"behecon",lv:"pop",kind:"rec",d:"دو سامانهٔ فکر و سوگیری‌های داوری؛ چند فصلش (پیش‌زمینه‌سازی) بعدها زیر سؤال رفت."},
+{k:"r-nudge",fa:"تلنگر",en:"Nudge",au:"ریچارد تیلر و کاس سانستین",y:2008,p:"s6",t:"motivation",f:"behecon",lv:"pop",kind:"rec",d:"معماری انتخاب؛ اثر بسیاری تلنگرها کوچک‌تر از ادعای نخستین است."},
+{k:"r-sapolsky",fa:"رفتار کن",en:"Behave",au:"رابرت ساپولسکی",y:2017,p:"body",t:"bodymind",f:"neuro",lv:"pop",kind:"rec",d:"زیست‌شناسی رفتار انسان، از یک ثانیه پیش تا میلیون‌ها سال پیش."},
+{k:"r-zebras",fa:"چرا گورخرها زخم معده نمی‌گیرند",en:"Why Zebras Don't Get Ulcers",au:"رابرت ساپولسکی",y:2004,p:"body",t:"bodymind",f:"pnei",lv:"pop",kind:"rec",d:"استرس، هورمون‌ها و بیماری."},
+{k:"r-ledoux",fa:"مضطرب",en:"Anxious",au:"ژوزف لدو",y:2015,p:"shelf11",t:"emotion",f:"affneuro",lv:"acad",kind:"rec",d:"مغز و تجربهٔ ذهنی ترس و اضطراب."},
+{k:"r-frankl",fa:"انسان در جست‌وجوی معنا",en:"Man's Search for Meaning",au:"ویکتور فرانکل",y:1946,p:"makingsense",t:"meaning",f:"existpsy",lv:"pop",kind:"rec",d:"معنا در سخت‌ترین شرایط؛ پایهٔ معنادرمانی."},
+{k:"r-yalom",fa:"روان‌درمانی اگزیستانسیال",en:"Existential Psychotherapy",au:"اروین یالوم",y:1980,p:"makingsense",t:"meaning",f:"existpsy",lv:"clin",kind:"rec",d:"مرگ، آزادی، تنهایی و بی‌معنایی در درمان."},
+{k:"r-dennett",fa:"آگاهی توضیح داده‌شده",en:"Consciousness Explained",au:"دنیل دنت",y:1991,p:"suggestible",t:"cognition",f:"philmind",lv:"acad",kind:"rec",d:"نظریهٔ «پیش‌نویس‌های چندگانه» آگاهی."},
+{k:"r-chalmers",fa:"ذهن آگاه",en:"The Conscious Mind",au:"دیوید چالمرز",y:1996,p:"suggestible",t:"cognition",f:"philmind",lv:"acad",kind:"rec",d:"«مسئلهٔ دشوار آگاهی»."},
+{k:"r-haidt",fa:"ذهن درستکار",en:"The Righteous Mind",au:"جاناتان هایت",y:2012,p:"morality",t:"ethics",f:"moralpsy",lv:"pop",kind:"rec",d:"شهود اخلاقی و چرا آدم‌های خوب بر سر سیاست و دین اختلاف دارند."},
+{k:"r-durkheim",fa:"خودکشی",en:"Le Suicide",au:"امیل دورکیم",y:1897,p:"crisis",t:"therapy",f:"sociology",lv:"acad",kind:"rec",d:"نخستین تحلیل جامعه‌شناختی خودکشی: پیوند و تنظیم اجتماعی."},
+{k:"r-asylums",fa:"آسایشگاه‌ها",en:"Asylums",au:"اروینگ گافمن",y:1961,p:"workshop",t:"diagnosis",f:"socmh",lv:"acad",kind:"rec",d:"نهاد بسته و ساختن «بیمار روانی»."},
+{k:"r-stigma",fa:"داغ ننگ",en:"Stigma",au:"اروینگ گافمن",y:1963,p:"workshop",t:"diagnosis",f:"socmh",lv:"acad",kind:"rec",d:"هویت لکه‌دار و مدیریت آن."},
+{k:"r-putnam",fa:"بولینگ تنها",en:"Bowling Alone",au:"رابرت پاتنام",y:2000,p:"trust",t:"ethics",f:"sociology",lv:"pop",kind:"rec",d:"افول سرمایهٔ اجتماعی در آمریکا."},
+{k:"r-weird",fa:"عجیب‌ترین مردم جهان",en:"The WEIRDest People in the World",au:"جوزف هنریک",y:2020,p:"gelfand",t:"culture",f:"culpsy",lv:"pop",kind:"rec",d:"چرا روان‌شناسی غربی استثناست، نه قاعده."},
+{k:"r-shorterhist",fa:"تاریخ روان‌پزشکی",en:"A History of Psychiatry",au:"ادوارد شورتر",y:1997,p:"workshop",t:"diagnosis",f:"history",lv:"acad",kind:"rec",d:"از آسایشگاه تا عصر پروزاک."},
+{k:"r-wampold",fa:"بحث بزرگ روان‌درمانی",en:"The Great Psychotherapy Debate",au:"وامپولد و ایمل",y:2015,p:"shelf13",t:"therapy",f:"clinpsy",lv:"clin",kind:"rec",d:"عوامل مشترک در برابر روش‌های خاص؛ شواهد اثر درمان."},
+{k:"r-edmondson",fa:"سازمان بی‌هراس",en:"The Fearless Organization",au:"امی ادموندسون",y:2019,p:"orgpsych",t:"work",f:"iop",lv:"pop",kind:"rec",d:"امنیت روانی برای یادگیری، نوآوری و رشد."},
+{k:"r-progress",fa:"اصل پیشرفت",en:"The Progress Principle",au:"آمابایل و کرامر",y:2011,p:"s9",t:"work",f:"iop",lv:"pop",kind:"rec",d:"پیشرفت‌های کوچک در کار معنادار، قوی‌ترین انگیزهٔ روزانه."},
+{k:"r-ritchie",fa:"داستان‌های علمی",en:"Science Fictions",au:"استوارت ریچی",y:2020,p:"bargh",t:"cognition",f:"metasci",lv:"pop",kind:"rec",d:"تقلب، سوگیری و بی‌دقتی در علم؛ و بحران تکرارپذیری."},
+{k:"r-stick",fa:"بچسبان",en:"Make It Stick",au:"براون، رودیگر و مک‌دنیل",y:2014,p:"learnmem",t:"learning",f:"learnsci",lv:"pop",kind:"rec",d:"علم یادگیری ماندگار: بازیابی، فاصله‌گذاری و دشواری مطلوب."},
+{k:"r-miller",fa:"مصاحبهٔ انگیزشی",en:"Motivational Interviewing",au:"میلر و رولنیک",y:2023,p:"clinicaddiction",t:"addiction",f:"counsel",lv:"clin",kind:"rec",d:"کمک به تغییر با گفت‌وگوی همدلانه؛ ویراست چهارم."},
+{k:"r-lewis",fa:"زیست‌شناسی میل",en:"The Biology of Desire",au:"مارک لوئیس",y:2015,p:"families",t:"addiction",f:"neuro",lv:"pop",kind:"rec",d:"دیدگاهی بحث‌برانگیز: اعتیاد به‌عنوان یادگیری، نه بیماری؛ در کنار مدل بیماری بخوانید."},
+{k:"r-plomin",fa:"نقشه",en:"Blueprint",au:"رابرت پلومین",y:2018,p:"jensen",t:"culture",f:"behgen",lv:"pop",kind:"rec",d:"ژنتیک رفتاری از نگاه یکی از چهره‌های اصلی‌اش؛ در کنار نقدهای «مشکل مطالعات دوقلوها» بخوانید."},
+{k:"r-fine",fa:"تستوسترون رکس",en:"Testosterone Rex",au:"کوردلیا فاین",y:2017,p:"badmen",t:"bodymind",f:"neuro",lv:"pop",kind:"rec",d:"نقد افسانهٔ «جنس زیستی سرنوشت است»."},
+];
+
+window.SCI = {"emotion": [["جیمز گراس", "جیمز گراس — استنفورد", "reappraisal"], ["پیتر سالووی", "پیتر سالووی — ییل", "stress-mindset"], ["آلیسون وود بروکس", "آلیسون وود بروکس — هاروارد", "reappraisal"], ["کوین اکسنر", "کوین اکسنر", "reappraisal"], ["لیزا فلدمن بارت", "لیزا فلدمن بارت — دانه‌داری هیجان", "emodiversity"], ["جان مایر", "جان مایر (متولد ۱۹۵۳)", "emotional-intelligence"], ["الیور جان", "الیور جان — برکلی", "gross-model"], ["آلیا کرام", "آلیا کرام", "stress-mindset"], ["آنجلا داکورث", "آنجلا داکورث", "effort"], ["مارتین هاگر", "مارتین هاگر", "replication-crisis"]], "cognition": [["دنیل کانمن", "دنیل کانمن", "cognitive-biases"], ["دیوید دانینگ و جاستین کروگر", "دیوید دانینگ و جاستین کروگر", "cognitive-biases"], ["برترام فورر", "برترام فورر", "cognitive-biases"], ["کارن داگلاس", "کارن داگلاس", "conspiracy"], ["دیوید رابرت گرایمز", "دیوید رابرت گرایمز", "conspiracy"], ["کارل برگستروم", "کارل برگستروم", "bullshit"], ["جوین وست", "جوین وست", "bullshit"], ["هری فرانکفورت", "هری فرانکفورت", "bullshit"], ["آموس تورسکی", "آموس تورسکی", "planning-fallacy"], ["بنت فلیوبیورگ", "بنت فلیوبیورگ — How Big Things Get Done", "planning-fallacy"]], "learning": [["جورج لوونشتاین", "جورج لوونشتاین", "curiosity"], ["دنیل کانمن", "دنیل کانمن", "planning-fallacy"], ["وندی وود", "وندی وود — USC", "habit"], ["میشل کراسک", "میشل کراسک", "anhedonia"], ["کنت بریج", "کنت بریج", "anhedonia"], ["دنیل برلاین", "دنیل برلاین", "curiosity-types"], ["رابرت مایرز", "رابرت مایرز — CRAFT", "addiction-families"], ["ویلیام میلر", "ویلیام میلر", "addiction-families"], ["ایوان پاولوف", "ایوان پاولوف", "learning-memory"], ["رابرت رسکورلا", "رابرت رسکورلا", "learning-memory"]], "compassion": [["کریستین نف", "کریستین نف — دانشگاه تگزاس، آستین", "self-compassion"], ["کریستوفر گرمر", "کریستوفر گرمر — دانشکدهٔ پزشکی هاروارد", "self-compassion"], ["پل گیلبرت", "پل گیلبرت (متولد ۱۹۵۱)", "t-compassion"], ["پل هیویت", "پل هیویت", "perfectionism"], ["گوردون فلت", "گوردون فلت", "perfectionism"], ["توماس کوران", "توماس کوران", "perfectionism"], ["تانیا سینگر", "تانیا سینگر", "t-compassion"], ["گلن شاهار", "گلن شاهار", "self-criticism"], ["سیدنی بلت", "سیدنی بلت — ییل", "self-criticism"], ["تال بن‌شهر", "تال بن‌شهر", "self-criticism"]], "motivation": [["وندی وود", "وندی وود — USC", "habit"], ["مارتین هاگر", "مارتین هاگر", "ego-depletion"], ["باس ورپلانکن", "باس ورپلانکن — بث", "habit"], ["فیلیپا لالی", "فیلیپا لالی — UCL", "habit"], ["چارلز داهیگ", "چارلز داهیگ", "habit"], ["آنجلا داکورث", "آنجلا داکورث", "goal-pursuit"], ["روی بامایستر", "روی بامایستر (متولد ۱۹۵۳)", "ego-depletion"], ["کاتلین ووس", "کاتلین ووس — مینه‌سوتا", "ego-depletion"], ["ورونیکا جاب و کارول دوک", "ورونیکا جاب و کارول دوک", "ego-depletion"], ["مایکل اینزلیکت", "مایکل اینزلیکت — تورنتو", "ego-depletion"]], "meaning": [["اِلِن وینر", "اِلِن وینر — کالج بوستون، آزمایشگاه هنر و ذهن", "p-aesthetics"], ["جورج بونانو", "جورج بونانو", "resilience"], ["سوزان کوباسا", "سوزان کوباسا", "resilience"], ["والتر میشل", "والتر میشل", "resilience"], ["مارتین سلیگمن", "مارتین سلیگمن — پنسیلوانیا", "perma"], ["هانری تاجفل", "هانری تاجفل (۱۹۱۹–۱۹۸۲)", "belonging"], ["جفری کوهن", "جفری کوهن — استنفورد", "belonging"], ["گرگوری والتن", "گرگوری والتن — استنفورد", "belonging"], ["رابرت ساپولسکی", "رابرت ساپولسکی", "belonging"], ["شیگهیرو اویشی", "شیگهیرو اویشی", "psychological-richness"]], "ethics": [["جوزف هنریک", "جوزف هنریک — هاروارد", "self-domestication"], ["کریستوفر بوهم", "کریستوفر بوهم", "fairness"], ["ریچارد رنگم", "ریچارد رنگم", "fairness"], ["مانفرد اشمیت", "مانفرد اشمیت", "fairness"], ["پیتر کلمن", "پیتر کلمن", "cooperation-competition"], ["دیوید دانینگ", "دیوید دانینگ", "social-trust"], ["توشیو یاماگیشی", "توشیو یاماگیشی", "social-trust"], ["رابرت پاتنام", "رابرت پاتنام", "social-trust"], ["هری تریاندیس", "هری تریاندیس", "social-trust"], ["پاول ون لانگه", "پاول ون لانگه — VU آمستردام", "social-trust"]], "culture": [["جوزف هنریک", "جوزف هنریک — هاروارد", "self-domestication"], ["برایان هیر", "برایان هیر — دانشگاه دوک", "self-domestication"], ["ریچارد رنگهام", "ریچارد رنگهام — هاروارد", "self-domestication"], ["مایکل توماسلو", "مایکل توماسلو", "theory-of-mind"], ["کارن داگلاس", "کارن داگلاس", "conspiracy"], ["ونسا وودز", "ونسا وودز", "self-domestication"], ["سوزان مت", "سوزان مت", "tech-panic"], ["نیکلاس کار", "نیکلاس کار", "tech-panic"], ["جاناتان هایت", "جاناتان هایت", "tech-panic"], ["دیوید رابرت گرایمز", "دیوید رابرت گرایمز — فیزیک‌دان و روزنامه‌نگار علمی", "critical-thinking"]], "work": [["آرلی راسل هاکشیلد", "آرلی راسل هاکشیلد (متولد ۱۹۴۰)", "emotional-labor"], ["جین داتن", "جین داتن", "compassion-at-work"], ["سابینه زوننتاگ", "سابینه زوننتاگ", "psych-detachment"], ["الیشیا گرندی", "الیشیا گرندی", "emotional-labor"], ["مارتین سلیگمن", "مارتین سلیگمن — پنسیلوانیا", "learned-helplessness"], ["کریستین بهفر", "کریستین بهفر — UC Irvine", "venting"], ["میهای چیکسنت‌میهایی", "میهای چیکسنت‌میهایی (۱۹۳۴–۲۰۲۱)", "flow"], ["ویلمار شاوفلی", "ویلمار شاوفلی — اوترخت", "work-engagement"], ["آرنولد بکر", "آرنولد بکر — اراسموس", "work-engagement"], ["سباستیان روتمان", "سباستیان روتمان", "work-engagement"]], "orgtools": [], "diagnosis": [["میشل کراسک", "میشل کراسک", "anhedonia"], ["رابرت کروگر", "رابرت کروگر — مینه‌سوتا", "dimensional-dx"], ["استیون هیز", "استیون هیز", "transdiagnostic"], ["کارل یاسپرس", "کارل یاسپرس (۱۸۸۳–۱۹۶۹)", "descriptive-psychopathology"], ["پیتر لوینسون", "پیتر لوینسون", "anhedonia"], ["هرمان بریوس", "هرمان بریوس — کمبریج", "psychiatry-history"], ["استفان هافمن", "استفان هافمن", "transdiagnostic"], ["رومن کوتوف", "رومن کوتوف — استونی‌بروک", "hitop"], ["دیوید واتسون", "دیوید واتسون", "hitop"], ["آوشالوم کسپی و تری موفیت", "آوشالوم کسپی و تری موفیت — عامل p", "hitop"]], "therapy": [["جیمز گراس", "جیمز گراس", "emotion-regulation"], ["میشل کراسک", "میشل کراسک", "anhedonia"], ["کارن داگلاس", "کارن داگلاس", "conspiracy"], ["رابرت کروگر", "رابرت کروگر", "hitop"], ["استیون هیز", "استیون هیز", "process-based-therapy"], ["استفان هافمن", "استفان هافمن", "process-based-therapy"], ["الوین مورتون جلینک", "الوین مورتون جلینک", "craving"], ["الن مارلت", "الن مارلت", "craving"], ["استیفن تیفانی", "استیفن تیفانی — نظریهٔ شناختی وسوسه", "craving"], ["پل بلوم", "پل بلوم — How Pleasure Works", "forgery"]], "addiction": [["میشل کراسک", "میشل کراسک", "anhedonia"], ["الوین مورتون جلینک", "الوین مورتون جلینک", "craving"], ["ویلیام میلر", "ویلیام میلر", "addiction-families"], ["کنت بریج", "کنت بریج", "anhedonia"], ["نورا ولکاو", "نورا ولکاو", "addiction-core"], ["الن مارلت", "الن مارلت", "craving"], ["استیون رولنیک", "استیون رولنیک", "mi"], ["حمیدرضا طاهری نخست", "حمیدرضا طاهری نخست", "mi"], ["فیلیپ اسنیث", "فیلیپ اسنیث", "anhedonia"], ["بروس الکساندر", "بروس الکساندر — پارک موش‌ها", "anhedonia"]], "bodymind": [["کوردلیا فاین", "کوردلیا فاین — دانشگاه ملبورن", "sex-gender"], ["الکساندرا برت", "الکساندرا برت — میشیگان استیت", "antisocial-subtypes"], ["دافنا جوئل", "دافنا جوئل — دانشگاه تل‌آویو", "sex-gender"], ["آنجلا ساینی", "آنجلا ساینی — Inferior", "sex-gender"], ["سایمون بارون-کوهن", "سایمون بارون-کوهن — دیدگاه مقابل: مغز «سیستم‌ساز» و «همدل»", "sex-gender"], ["دیوید باس", "دیوید باس", "evo-sex"], ["دیوید اشمیت", "دیوید اشمیت", "evo-sex"]], "devsex": [["آلفرد کینزی", "آلفرد کینزی", "sexual-orientation"], ["لیزا دایموند", "لیزا دایموند", "sexual-orientation"], ["ری بلانچارد", "ری بلانچارد", "sexual-orientation"], ["سایمون لوی", "سایمون لوی", "sexual-orientation"], ["میلتون دایموند", "میلتون دایموند", "sexual-orientation"], ["ریچ سوین-ویلیامز", "ریچ سوین-ویلیامز", "sexual-orientation"], ["وندی وود", "وندی وود — USC", "habit"], ["کوردلیا فاین", "کوردلیا فاین — دانشگاه ملبورن", "sex-gender"], ["دافنا جوئل", "دافنا جوئل — دانشگاه تل‌آویو", "sex-gender"], ["آنجلا ساینی", "آنجلا ساینی — Inferior", "sex-gender"]]};
+
+const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html"}, LABEL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی"}, TAX = {"domains": [{"id": "feel", "fa": "هیجان و ذهن"}, {"id": "self", "fa": "خود و رشد"}, {"id": "social", "fa": "رابطه و جامعه"}, {"id": "work", "fa": "کار و سازمان"}, {"id": "health", "fa": "سلامت روان و درمان"}, {"id": "body", "fa": "بدن، تکامل و جنسیت"}], "topics": {"emotion": {"d": "feel", "fa": "هیجان و تنظیم آن"}, "cognition": {"d": "feel", "fa": "شناخت و خطای فکر"}, "learning": {"d": "feel", "fa": "یادگیری و کنجکاوی"}, "compassion": {"d": "self", "fa": "شفقت، منتقد درون و کمال‌گرایی"}, "motivation": {"d": "self", "fa": "انگیزه، عادت و اراده"}, "meaning": {"d": "self", "fa": "معنا، امید و بهزیستی"}, "ethics": {"d": "social", "fa": "اعتماد، انصاف و اخلاق"}, "culture": {"d": "social", "fa": "گروه، فرهنگ و فناوری"}, "work": {"d": "work", "fa": "سلامت روان در کار"}, "orgtools": {"d": "work", "fa": "سنجش سازمان"}, "diagnosis": {"d": "health", "fa": "مرز سلامت و اختلال"}, "therapy": {"d": "health", "fa": "درمان، تروما و بحران"}, "addiction": {"d": "health", "fa": "اعتیاد"}, "bodymind": {"d": "body", "fa": "مغز، بدن و تکامل"}, "devsex": {"d": "body", "fa": "نوجوانی، جنس و گرایش"}}, "fams": [{"id": "bio", "fa": "زیست و پزشکی"}, {"id": "psy", "fa": "روان"}, {"id": "soc", "fa": "جامعه"}, {"id": "hum", "fa": "فلسفه و علوم انسانی"}, {"id": "formal", "fa": "داده و رایانش"}]}, FIELDS = {"genetics": {"fa": "ژنتیک و ژنتیک رفتاری", "b": false, "fam": "bio", "par": null}, "neuro": {"fa": "علوم اعصاب", "b": false, "fam": "bio", "par": null}, "endo": {"fa": "غدد درون‌ریز", "b": false, "fam": "bio", "par": null}, "evobio": {"fa": "زیست‌شناسی تکاملی و رفتارشناسی جانوری", "b": false, "fam": "bio", "par": null}, "pharm": {"fa": "داروشناسی", "b": false, "fam": "bio", "par": null}, "psychiatry": {"fa": "روان‌پزشکی", "b": false, "fam": "bio", "par": null}, "psychology": {"fa": "روان‌شناسی", "b": false, "fam": "psy", "par": null}, "clinpsy": {"fa": "روان‌شناسی بالینی و روان‌درمانی", "b": false, "fam": "psy", "par": null}, "counsel": {"fa": "مشاوره", "b": false, "fam": "psy", "par": null}, "psychometrics": {"fa": "روان‌سنجی", "b": false, "fam": "psy", "par": null}, "edu": {"fa": "علوم تربیتی", "b": false, "fam": "psy", "par": null}, "sociology": {"fa": "جامعه‌شناسی", "b": false, "fam": "soc", "par": null}, "anthro": {"fa": "انسان‌شناسی", "b": false, "fam": "soc", "par": null}, "econ": {"fa": "اقتصاد", "b": false, "fam": "soc", "par": null}, "polsci": {"fa": "علوم سیاسی", "b": false, "fam": "soc", "par": null}, "mgmt": {"fa": "مدیریت", "b": false, "fam": "soc", "par": null}, "socialwork": {"fa": "مددکاری اجتماعی", "b": false, "fam": "soc", "par": null}, "philosophy": {"fa": "فلسفه", "b": false, "fam": "hum", "par": null}, "linguistics": {"fa": "زبان‌شناسی", "b": false, "fam": "hum", "par": null}, "history": {"fa": "تاریخ و تاریخ علم", "b": false, "fam": "hum", "par": null}, "arts": {"fa": "ادبیات و هنر", "b": false, "fam": "hum", "par": null}, "religion": {"fa": "دین‌پژوهی", "b": false, "fam": "hum", "par": null}, "stats": {"fa": "آمار و روش پژوهش", "b": false, "fam": "formal", "par": null}, "cs": {"fa": "علوم رایانه و هوش مصنوعی", "b": false, "fam": "formal", "par": null}, "cogsci": {"fa": "علوم شناختی", "b": true, "fam": "psy", "par": "psychology"}, "cogneuro": {"fa": "علوم اعصاب شناختی", "b": true, "fam": "bio", "par": "neuro"}, "affneuro": {"fa": "علوم اعصاب عاطفی", "b": true, "fam": "bio", "par": "neuro"}, "socneuro": {"fa": "علوم اعصاب اجتماعی", "b": true, "fam": "bio", "par": "neuro"}, "pnei": {"fa": "روان‌ایمنی‌عصب‌غددشناسی", "b": true, "fam": "bio", "par": "endo"}, "behgen": {"fa": "ژنتیک رفتاری", "b": true, "fam": "bio", "par": "genetics"}, "evopsy": {"fa": "روان‌شناسی تکاملی", "b": true, "fam": "bio", "par": "evobio"}, "behecon": {"fa": "اقتصاد رفتاری", "b": true, "fam": "soc", "par": "econ"}, "culpsy": {"fa": "روان‌شناسی فرهنگی", "b": true, "fam": "soc", "par": "anthro"}, "polpsy": {"fa": "روان‌شناسی سیاسی", "b": true, "fam": "soc", "par": "polsci"}, "socpsy": {"fa": "روان‌شناسی اجتماعی", "b": true, "fam": "psy", "par": "psychology"}, "iop": {"fa": "روان‌شناسی کار و سازمان", "b": true, "fam": "psy", "par": "psychology"}, "healthpsy": {"fa": "روان‌شناسی سلامت و پزشکی رفتاری", "b": true, "fam": "psy", "par": "psychology"}, "epi": {"fa": "همه‌گیرشناسی روانی و سلامت عمومی", "b": true, "fam": "bio", "par": "psychiatry"}, "socmh": {"fa": "جامعه‌شناسی سلامت روان", "b": true, "fam": "soc", "par": "sociology"}, "medanth": {"fa": "روان‌پزشکی فرهنگی و انسان‌شناسی پزشکی", "b": true, "fam": "soc", "par": "anthro"}, "philmind": {"fa": "فلسفهٔ ذهن و نوروفلسفه", "b": true, "fam": "hum", "par": "philosophy"}, "philpsych": {"fa": "فلسفهٔ روان‌پزشکی", "b": true, "fam": "hum", "par": "philosophy"}, "moralpsy": {"fa": "روان‌شناسی اخلاق", "b": true, "fam": "hum", "par": "philosophy"}, "existpsy": {"fa": "روان‌شناسی و درمان وجودی", "b": true, "fam": "hum", "par": "philosophy"}, "psyling": {"fa": "زبان‌شناسی روانی", "b": true, "fam": "hum", "par": "linguistics"}, "learnsci": {"fa": "علوم یادگیری", "b": true, "fam": "psy", "par": "edu"}, "comppsy": {"fa": "روان‌پزشکی محاسباتی", "b": true, "fam": "formal", "par": "cs"}, "metasci": {"fa": "فراعلم و تکرارپذیری", "b": true, "fam": "formal", "par": "stats"}, "aesthetics": {"fa": "روان‌شناسی هنر و زیبایی‌شناسی تجربی", "b": true, "fam": "hum", "par": "arts"}, "relpsy": {"fa": "روان‌شناسی دین", "b": true, "fam": "hum", "par": "religion"}, "hci": {"fa": "عوامل انسانی و تعامل انسان و رایانه", "b": true, "fam": "formal", "par": "cs"}, "digsoc": {"fa": "جامعه‌شناسی دیجیتال و مطالعات رسانه", "b": true, "fam": "soc", "par": "sociology"}};
+const DOMS = TAX.domains, TOP = TAX.topics;
+const KINDFA = {rev:"مرور شده در ویکی", cite:"ارجاع‌شده در ویکی", rec:"پیشنهاد ویراستار"};
+const LVFA = {pop:"عمومی", acad:"دانشگاهی", clin:"تخصصی و بالینی"};
+const H = {pop:158, acad:186, clin:206};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const domOf = b => TOP[b.t].d;
+const st = {v:"dom", k:"all", l:"all", q:"", sel:null};
+try{ const s = JSON.parse(localStorage.getItem("lib-st")||"{}"); if(s.v) st.v = s.v; }catch(e){}
+
+function famOfField(f){ return FIELDS[f] ? FIELDS[f].fam : "psy"; }
+function spine(b){
+  const w = 30 + Math.min(16, Math.round(b.fa.length/2.2));
+  const lean = (b.k.length % 7 === 0) ? " lean" : "";
+  return `<button class="spine ${b.kind}${lean}" data-b="${b.k}" aria-pressed="${st.sel===b.k}" style="--dc:var(--d-${domOf(b)});--h:${H[b.lv]+((b.y*7)%14)}px;--w:${w}px" title="${b.fa} — ${b.au}"><span class="ti">${b.fa}</span><span class="yr">${fa(b.y)}</span></button>`;
+}
+function vis(b){
+  if(st.k!=="all" && (st.k==="rev" ? b.kind==="rec" : b.kind!=="rec")) return false;
+  if(st.l!=="all" && b.lv!==st.l) return false;
+  if(st.q){ const q = st.q.toLowerCase(); if(!(b.fa+b.en+b.au).toLowerCase().includes(q)) return false; }
+  return true;
+}
+function sortB(a,b){ const o={rev:0,cite:1,rec:2}; return o[a.kind]-o[b.kind] || a.y-b.y; }
+function render(){
+  const list = BOOKS.filter(vis);
+  let html = "";
+  if(st.v==="dom"){
+    for(const d of DOMS){
+      const tops = Object.entries(TOP).filter(([id,t]) => t.d===d.id);
+      const inD = list.filter(b => domOf(b)===d.id); if(!inD.length) continue;
+      html += `<section class="case" style="--dc:var(--d-${d.id})" id="c-${d.id}"><div class="case-h"><h2><i></i>${d.fa}</h2><span>${fa(inD.length)} کتاب</span></div>`;
+      for(const [id,t] of tops){
+        const bs = inD.filter(b => b.t===id).sort(sortB); if(!bs.length) continue;
+        const sc = (window.SCI[id] || []).slice(0, 6);
+        html += `<div class="shelf"><div class="shelf-h"><b>${t.fa}</b><a href="${URLS.hub}#t-${id}">صفحه‌های این موضوع ←</a></div><div class="sbody"><div class="row">${bs.map(spine).join("")}</div>${sc.length ? `<div class="sci"><span class="h">دانشمندان این موضوع</span>${sc.map(([nm, note, g]) => `<a href="${URLS.land}#${g}" title="${note.replace(/"/g, "")}"><i>${nm.trim()[0]}</i><span>${nm}</span></a>`).join("")}</div>` : ""}</div><div class="board"></div></div>`;
+      }
+      html += `</section>`;
+    }
+  } else {
+    const fams = TAX.fams;
+    for(const fm of fams){
+      const inF = list.filter(b => famOfField(b.f)===fm.id); if(!inF.length) continue;
+      const byF = {}; inF.forEach(b => (byF[b.f] = byF[b.f]||[]).push(b));
+      html += `<section class="case" id="c-${fm.id}"><div class="case-h"><h2>${fm.fa}</h2><span>${fa(inF.length)} کتاب · رنگ عطف همچنان حوزهٔ ویکی را نشان می‌دهد</span></div>`;
+      for(const f of Object.keys(byF).sort((a,b)=>byF[b].length-byF[a].length)){
+        const F = FIELDS[f]; const nm = F ? F.fa : f;
+        html += `<div class="shelf"><div class="shelf-h"><b>${nm}${F&&F.b?" <small style='font-weight:400'>(میان‌رشته‌ای)</small>":""}</b><a href="${URLS.atlas2}#${f}">این رشته در اطلس ←</a></div><div class="row">${byF[f].sort(sortB).map(spine).join("")}</div><div class="board"></div></div>`;
+      }
+      html += `</section>`;
+    }
+  }
+  document.getElementById("cases").innerHTML = html || `<p class="count">کتابی با این فیلترها پیدا نشد.</p>`;
+  document.getElementById("count").textContent = `${fa(list.length)} از ${fa(BOOKS.length)} کتاب`;
+}
+function show(k){
+  const b = BOOKS.find(x => x.k===k); if(!b) return;
+  st.sel = k;
+  document.querySelectorAll(".spine").forEach(s => s.setAttribute("aria-pressed", s.dataset.b===k));
+  const F = FIELDS[b.f], T = TOP[b.t], D = DOMS.find(d => d.id===T.d);
+  const page = URLS[b.p];
+  const linkTxt = b.kind==="rev" ? "خواندن مرور در ویکی" : b.kind==="cite" ? "صفحه‌ای که به آن ارجاع داده" : "صفحهٔ مرتبط در ویکی";
+  document.getElementById("cardin").innerHTML = `
+    <span class="kind" style="color:var(--d-${D.id})">${KINDFA[b.kind]}</span>
+    <h3>${b.fa}</h3><div class="en">${b.en}</div>
+    <div class="au">${b.au}، ${fa(b.y)}</div>
+    <p class="d">${b.d}</p>
+    <dl><dt>حوزه</dt><dd><a href="${URLS.hub}#d-${D.id}" style="color:var(--d-${D.id})">${D.fa}</a></dd>
+        <dt>موضوع</dt><dd><a href="${URLS.hub}#t-${b.t}">${T.fa}</a></dd>
+        <dt>رشته</dt><dd><a href="${URLS.atlas2}#${b.f}">${F?F.fa:b.f}</a></dd>
+        <dt>سطح</dt><dd>${LVFA[b.lv]}</dd>
+        <dt>در ویکی</dt><dd>${LABEL[b.p]||b.p}</dd></dl>
+    ${page?`<a class="go" href="${page}">${linkTxt} ←</a>`:""}`;
+  document.getElementById("card").classList.remove("closed");
+}
+document.addEventListener("click", e => {
+  const s = e.target.closest(".spine"); if(s){ show(s.dataset.b); return; }
+  const v = e.target.closest("[data-v]"), k = e.target.closest("[data-k]"), l = e.target.closest("[data-l]");
+  const set = (btn, key, attr) => { st[key] = btn.dataset[attr]; btn.parentNode.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x===btn)); render(); };
+  if(v){ set(v,"v","v"); try{localStorage.setItem("lib-st", JSON.stringify({v:st.v}))}catch(e){} }
+  if(k) set(k,"k","k");
+  if(l) set(l,"l","l");
+});
+document.getElementById("x").onclick = () => document.getElementById("card").classList.add("closed");
+document.getElementById("q").addEventListener("input", e => { st.q = e.target.value.trim(); render(); });
+(function(){
+  const n = t => BOOKS.filter(b => b.kind===t).length;
+  document.getElementById("stats").innerHTML = `<span><b>${fa(n("rev"))}</b>مرور شده</span><span><b>${fa(n("cite"))}</b>ارجاع‌شده</span><span><b>${fa(n("rec"))}</b>پیشنهادی</span>`;
+  document.querySelectorAll('[data-v]').forEach(x => x.setAttribute("aria-pressed", x.dataset.v===st.v));
+  render();
+  if(window.matchMedia("(min-width:981px)").matches) document.getElementById("card").classList.remove("closed");
+  const h = location.hash.slice(1); if(h && BOOKS.some(b=>b.k===h)) show(h);
+})();
+</script>
+
+</body></html>

@@ -1,0 +1,307 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>خط زمانی ایده‌ها</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: a swimlane chart — rows are disciplines, columns are eras, each cell holds the ideas of that discipline in that era as small cards. Selecting a card draws its lineage (where the idea came from and where it went) and opens a reading card beside the chart (bottom sheet on phones). */
+:root{
+  --bg:#f4f1ea; --card:#fffdf8; --ink:#221d17; --muted:#6a6155; --rule:#ddd4c5; --wash:#ece5d7; --hl:#e0b13a;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15130f;--card:#1e1b16;--ink:#ece4d6;--muted:#a99d8b;--rule:#352f26;--wash:#26211a;--hl:#e8c25a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15130f;--card:#1e1b16;--ink:#ece4d6;--muted:#a99d8b;--rule:#352f26;--wash:#26211a;--hl:#e8c25a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.85;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 70px}
+a{color:#1f6f7a}
+.wrap{max-width:1400px;margin:0 auto}
+header.top{padding-block:20px 12px;border-bottom:1px solid var(--rule)}
+.crumb{font-size:.8rem;color:var(--muted)} .crumb a{color:inherit}
+h1{font-family:var(--f-display);font-size:2.8rem;line-height:1.05;margin:4px 0 0}
+.lede{margin:6px 0 0;color:var(--muted);max-width:80ch;font-size:.95rem}
+.how{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:10px;font-size:.84rem;color:var(--muted)}
+.how b{color:var(--ink)}
+.tools{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:14px 0}
+.chip{font:inherit;font-size:.8rem;border:1.5px solid var(--c,var(--rule));background:var(--card);color:var(--ink);border-radius:999px;padding:2px 11px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.chip[aria-pressed="false"]{opacity:.4;border-style:dashed}
+.chip.flag[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tools input{font:inherit;font-size:.86rem;padding:5px 13px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:999px;width:220px;max-width:100%}
+.count{font-size:.8rem;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px;align-items:start}
+@media (max-width:1100px){.layout{grid-template-columns:minmax(0,1fr)}}
+.scroller{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--card);position:relative}
+.grid{position:relative;display:grid;grid-template-columns:120px repeat(6,minmax(170px,1fr));min-width:1180px}
+.eh{position:sticky;top:0;z-index:3;background:var(--wash);border-bottom:1px solid var(--rule);padding:8px 10px;font-size:.8rem;line-height:1.5}
+.eh b{display:block;font-family:var(--f-display);font-size:1.15rem;color:var(--ink)}
+.eh span{color:var(--muted)}
+.lh{position:sticky;right:0;z-index:2;background:var(--card);border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);padding:10px;font-weight:700;font-size:.88rem;display:flex;gap:8px;align-items:flex-start}
+.lh i{width:10px;height:10px;border-radius:50%;background:var(--c);margin-top:7px;flex:none}
+.cell{border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);padding:6px;display:flex;flex-direction:column;gap:5px;min-height:46px}
+.cell:nth-child(7n){border-left:0}
+.ev{font:inherit;text-align:right;font-size:.8rem;line-height:1.45;border:1px solid var(--rule);border-inline-start:4px solid var(--c);background:var(--bg);color:var(--ink);border-radius:6px;padding:4px 8px;cursor:pointer;position:relative;z-index:1}
+.ev small{display:block;color:var(--muted);font-size:.72rem}
+.ev .fl{font-style:normal;font-size:.68rem;padding:0 6px;border-radius:999px;margin-inline-start:4px;white-space:nowrap}
+.fl.rep{background:#f3d9d3;color:#8a2f22} .fl.deb{background:#f4e8c9;color:#7a5c12}
+.ev:hover{border-color:var(--c)}
+.ev.sel{outline:3px solid var(--hl);outline-offset:1px}
+.ev.lin{box-shadow:0 0 0 2px var(--hl)}
+.ev.dim{opacity:.22}
+.ev[hidden]{display:none}
+svg.lines{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:visible}
+svg.lines path{fill:none;stroke:var(--hl);stroke-width:2.2;stroke-dasharray:5 4}
+.card{position:sticky;top:12px;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px;max-height:calc(100vh - 24px);overflow:auto}
+.card .x{display:none}
+.card .meta{font-size:.78rem;color:var(--muted)}
+.card h2{font-family:var(--f-display);font-size:1.8rem;line-height:1.15;margin:6px 0}
+.card p{font-size:.93rem;margin:8px 0}
+.card h4{font-size:.8rem;color:var(--muted);margin:14px 0 6px}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links a,.links button{font:inherit;font-size:.8rem;border:1px solid var(--rule);background:var(--wash);color:var(--ink);border-radius:999px;padding:2px 10px;text-decoration:none;cursor:pointer}
+.warn{font-size:.85rem;border-inline-start:3px solid #b4483c;background:#f8e9e5;color:#5c2219;padding:8px 10px;border-radius:6px}
+.warn.deb{border-color:#b08a2a;background:#f8f0dc;color:#5a4410}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .warn{background:#3a2420;color:#f0c8bd}:root:not([data-theme="light"]) .warn.deb{background:#3a3220;color:#efdcae}:root:not([data-theme="light"]) .fl.rep{background:#4a2a24;color:#f0c8bd}:root:not([data-theme="light"]) .fl.deb{background:#453a20;color:#efdcae}}
+:root[data-theme="dark"] .warn{background:#3a2420;color:#f0c8bd}:root[data-theme="dark"] .warn.deb{background:#3a3220;color:#efdcae}:root[data-theme="dark"] .fl.rep{background:#4a2a24;color:#f0c8bd}:root[data-theme="dark"] .fl.deb{background:#453a20;color:#efdcae}
+@media (max-width:1100px){
+  .card{position:fixed;inset:auto 0 0 0;top:auto;max-height:60vh;border-radius:14px 14px 0 0;z-index:30;box-shadow:0 -8px 30px rgba(0,0,0,.25);
+    padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+  .card.closed{display:none}
+  .card .x{display:block;position:absolute;left:max(12px,env(safe-area-inset-left,0px));top:10px;font:inherit;border:1px solid var(--rule);background:var(--wash);color:var(--ink);border-radius:999px;padding:0 12px;cursor:pointer}
+}
+.threads{margin-top:26px}
+.threads h3{font-family:var(--f-display);font-size:1.8rem;margin:0}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;margin-top:12px}
+.tc{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:12px 14px}
+.tc b{font-family:var(--f-display);font-size:1.25rem;display:block}
+.tc ol{margin:6px 0 0;padding-inline-start:20px;font-size:.86rem}
+.tc button{font:inherit;background:none;border:0;padding:0;color:#1f6f7a;cursor:pointer;text-align:right;text-decoration:underline;text-decoration-color:var(--rule)}
+footer{margin-top:24px;font-size:.8rem;color:var(--muted)}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › خط زمانی ایده‌ها</div>
+  <h1>خط زمانی ایده‌ها</h1>
+  <p class="lede">از بقراط تا بحران تکرارپذیری: ایده‌هایی که فهم ما از ذهن، رنج و رفتار را ساختند، در نُه رشته و شش دوره. هر ردیف یک رشته است و هر ستون یک دوره. روی هر ایده بزنید تا ببینید از کجا آمد، به کجا رسید و در ویکی کجا آمده است.</p>
+  <div class="how"><span><b>رشتهٔ ایده:</b> خط‌چین زرد، ایده‌های پیشین و پسین را نشان می‌دهد.</span><span><span class="fl rep" style="font-size:.75rem;padding:0 6px;border-radius:99px">تکرار نشد</span> یافته‌ای که در تکرارها تأیید نشد یا داده‌اش زیر سؤال رفت.</span><span><span class="fl deb" style="font-size:.75rem;padding:0 6px;border-radius:99px">محل بحث</span> ایده‌ای مهم اما با نقدهای جدی.</span></div>
+</header>
+<div class="tools" id="tools"></div>
+<div class="layout">
+  <div class="scroller" id="sc"><div class="grid" id="grid"></div></div>
+  <aside class="card closed" id="card" aria-live="polite"><button class="x" id="x" aria-label="بستن">✕</button><div id="cin"></div></aside>
+</div>
+<section class="threads"><h3>چند رشتهٔ ایده</h3><p class="lede" style="margin:0">مسیرهایی که از یک ایدهٔ کهن تا امروز کشیده شده‌اند. روی هر مرحله بزنید.</p><div class="tgrid" id="tgrid"></div></section>
+<footer>تاریخ‌ها سال انتشار یا آغاز کارند؛ برای ایده‌های باستانی تقریبی‌اند. این صفحه بخشی از ویکی روان‌شناسی است که بر پایهٔ کلاس‌های دکتر آذرخش مکری ساخته شده.</footer>
+</div>
+
+<script>
+/* خط زمانی ایده‌ها. y سال (منفی = پیش از میلاد)، ln مسیر (رشته)، t عنوان، d توضیح، f هشدار (rep = تکرار نشد یا زیر سؤال رفت؛ deb = محل بحث)،
+   w صفحه‌های ویکی، g گره‌های دنیای روان، fr شناسهٔ رویدادهایی که این ایده از آن‌ها آمد (برای کشیدن رشتهٔ ایده). id یکتا. */
+window.LANES = [
+ {id:"phil", fa:"فلسفه", c:"#7d4a86"},
+ {id:"psy", fa:"روان‌شناسی", c:"#1f6f7a"},
+ {id:"psychiatry", fa:"روان‌پزشکی", c:"#a3404f"},
+ {id:"therapy", fa:"روان‌درمانی", c:"#b2622a"},
+ {id:"neuro", fa:"مغز و بدن", c:"#4c5f7a"},
+ {id:"soc", fa:"جامعه‌شناسی", c:"#b06a1c"},
+ {id:"anthro", fa:"تکامل و انسان‌شناسی", c:"#6b7a2a"},
+ {id:"econ", fa:"اقتصاد رفتاری", c:"#2f7a55"},
+ {id:"org", fa:"کار و سازمان", c:"#3d6f9a"}
+];
+window.ERAS = [
+ {a:-500, b:1600, fa:"باستان و سده‌های میانه", d:"روان «نفس» است و پرسش‌هایش فلسفی و پزشکی‌اند."},
+ {a:1600, b:1850, fa:"روشنگری و آسایشگاه", d:"ذهن و بدن از هم جدا دیده می‌شوند؛ درمان انسانی‌تر بیماران روانی آغاز می‌شود."},
+ {a:1850, b:1914, fa:"تولد علم روان", d:"آزمایشگاه، طبقه‌بندی بیماری‌ها و نظریهٔ تکامل."},
+ {a:1914, b:1955, fa:"جنگ‌ها و مکتب‌ها", d:"روانکاوی، رفتارگرایی و زخم‌های جنگ."},
+ {a:1955, b:1990, fa:"انقلاب شناختی و دارو", d:"ذهن دوباره موضوع علم می‌شود؛ داروهای روان‌پزشکی و DSM-III."},
+ {a:1990, b:2027, fa:"قرن شواهد", d:"علوم اعصاب، روان‌شناسی مثبت‌نگر، بحران تکرارپذیری و تشخیص بُعدی."}
+];
+window.EV = [
+/* باستان و میانه */
+{id:"hippo", y:-400, ln:"psychiatry", t:"بقراط و نظریهٔ اخلاط", d:"سلامت روان و جسم را تعادل چهار خلط می‌دانست؛ «مالیخولیا» یعنی سودای سیاه. نخستین نگاه طبیعی (نه ماورایی) به بیماری روانی.", w:["workshop"], g:["psychiatry-history"]},
+{id:"plato", y:-375, ln:"phil", t:"افلاطون: نفس سه‌پاره", d:"عقل، همت و میل؛ تصویر ارابه‌ران و دو اسب، کهن‌ترین مدل تعارض درونی و خویشتنداری.", g:["phil-mind"]},
+{id:"aristotle", y:-350, ln:"phil", t:"ارسطو: «دربارهٔ نفس» و «اخلاق نیکوماخوس»", d:"نخستین رسالهٔ نظام‌مند دربارهٔ ادراک، حافظه و هیجان؛ و بحث «ضعف اراده» (آکراسیا): دانستن کار بهتر و انجام بدتر.", w:["s5"], g:["akrasia","phil-ethics"]},
+{id:"stoa", y:-300, ln:"phil", t:"رواقیون: داوری ما رنج می‌سازد", d:"زنون، سپس اپیکتتوس و سنکا: «آدم‌ها را رویدادها آشفته نمی‌کنند، داوری‌شان دربارهٔ رویدادها آشفته می‌کند». ریشهٔ مستقیم درمان شناختی.", g:["stoicism"]},
+{id:"razi", y:925, ln:"psychiatry", t:"رازی و بیمارستان بغداد", d:"محمد زکریای رازی بخش ویژهٔ بیماران روانی در بیمارستان داشت و در «طب روحانی» از درمان اخلاق و عادت نوشت.", g:["psychiatry-history"]},
+{id:"avicenna", y:1025, ln:"psychiatry", t:"ابن‌سینا، «قانون در طب»", d:"توصیف بالینی مالیخولیا و «عشق» به‌عنوان بیماری و توجه به پیوند بدن و روان؛ قرن‌ها متن درسی پزشکی اروپا بود.", g:["psychiatry-history","phil-mind"]},
+{id:"ghazali", y:1100, ln:"phil", t:"غزالی: شک روشمند و تهذیب نفس", d:"در «المنقذ من الضلال» از شک به یقین می‌رسد و در «احیاء» از عادت دادن نفس به رفتار نیک می‌گوید؛ نزدیک به ایدهٔ امروزی عادت‌سازی.", g:["epistemology"]},
+/* روشنگری */
+{id:"descartes", y:1649, ln:"phil", t:"دکارت، «انفعالات نفس»", d:"جدایی ذهن و بدن (دوگانه‌انگاری) و شش هیجان پایه. مسئلهٔ «ذهن-بدن» از اینجا تا امروز ادامه دارد.", g:["phil-mind"]},
+{id:"locke", y:1690, ln:"phil", t:"لاک: ذهن لوح سفید", d:"دانش از تجربه می‌آید و ایده‌ها با «تداعی» به هم می‌پیوندند؛ ریشهٔ فلسفی یادگیری و رفتارگرایی.", w:["learnmem"], g:["epistemology"]},
+{id:"hume", y:1739, ln:"phil", t:"هیوم: عقل بردهٔ هیجان‌هاست", d:"عقل به‌تنهایی انگیزه نمی‌سازد؛ هیجان است که ما را به عمل وامی‌دارد. پیش‌درآمد نظریه‌های امروزی هیجان و اخلاق شهودی.", w:["morality"], g:["phil-ethics"]},
+{id:"smith", y:1759, ln:"econ", t:"آدام اسمیت، «نظریهٔ احساسات اخلاقی»", d:"پیش از «ثروت ملل»، از همدلی، «ناظر بی‌طرف» درون و نقش احساس در اقتصاد نوشت.", g:["fairness"]},
+{id:"pinel", y:1795, ln:"therapy", t:"پینل و پوسن: برداشتن زنجیرها", d:"در بیمارستان‌های پاریس زنجیر از بیماران برداشته شد و «درمان اخلاقی» آغاز شد: رفتار انسانی، کار و نظم روزانه.", w:["workshop"], g:["psychiatry-history"]},
+{id:"tuke", y:1796, ln:"therapy", t:"توک و «ریتریت» یورک", d:"آسایشگاهی با محیط آرام و احترام، بی‌زنجیر؛ نمونهٔ انگلیسی درمان اخلاقی.", g:["psychiatry-history"]},
+{id:"kierkegaard", y:1844, ln:"phil", t:"کیرکگور، «مفهوم اضطراب»", d:"اضطراب «سرگیجهٔ آزادی» است؛ آغاز فلسفهٔ وجودی و نگاه به اضطراب به‌عنوان بخشی از انسان بودن.", w:["makingsense"], g:["existentialism"]},
+/* تولد علم روان */
+{id:"morel", y:1857, ln:"psychiatry", t:"موره و نظریهٔ انحطاط", d:"بیماری روانی نشانهٔ «انحطاط» ارثی دانسته شد؛ نظریه‌ای که بعدها به اصلاح نژاد و انگ دامن زد.", f:"rep", w:["morality"], g:["degeneration"]},
+{id:"darwin", y:1872, ln:"anthro", t:"داروین، «بیان هیجان‌ها در انسان و حیوان»", d:"هیجان‌ها پیشینهٔ تکاملی دارند و بیانشان میان گونه‌ها مشترک است؛ پایهٔ روان‌شناسی تکاملی و پژوهش چهره.", w:["friendly","shelf4"], g:["self-domestication","cultural-evolution"]},
+{id:"wundt", y:1879, ln:"psy", t:"وونت و نخستین آزمایشگاه روان‌شناسی", d:"لایپزیگ؛ تولد روان‌شناسی به‌عنوان علم تجربی جدا از فلسفه.", g:["psychology"]},
+{id:"galton", y:1884, ln:"psy", t:"گالتون و اندازه‌گیری تفاوت‌های فردی", d:"آغاز روان‌سنجی و همبستگی؛ اما همچنین بنیان‌گذار «اصلاح نژاد»، با میراثی تلخ.", f:"deb", w:["jensen"], g:["p-psychometrics"]},
+{id:"ebbinghaus", y:1885, ln:"psy", t:"ابینگهاوس و منحنی فراموشی", d:"نخستین آزمایش‌های دقیق حافظه: فراموشی سریع و اثر مرور با فاصله.", w:["learnmem","memory"], g:["p-cog"]},
+{id:"james", y:1890, ln:"psy", t:"ویلیام جیمز، «اصول روان‌شناسی»", d:"فصل مشهور «عادت»، جریان آگاهی و نظریهٔ جیمز-لانگه: «می‌ترسیم چون می‌لرزیم».", w:["change","habits"], g:["habit"]},
+{id:"durkheim", y:1897, ln:"soc", t:"دورکیم، «خودکشی»", d:"نرخ خودکشی با پیوند و قاعدهٔ اجتماعی تغییر می‌کند (آنومی)؛ نخستین تحلیل جامعه‌شناختی یک رفتار «فردی».", w:["crisis","s5"], g:["anomie"]},
+{id:"kraepelin", y:1899, ln:"psychiatry", t:"کرپلین: جنون زودرس و شیدایی-افسردگی", d:"طبقه‌بندی بر پایهٔ سیر بیماری؛ پایهٔ تشخیص امروزی اسکیزوفرنی و اختلال دوقطبی.", w:["psychopath","workshop"], g:["dx"]},
+{id:"freud", y:1900, ln:"therapy", t:"فروید، «تعبیر رؤیا»", d:"ناهشیار، دفاع‌ها و درمان گفتاری. بسیاری از ادعاهایش آزمون‌ناپذیر ماند، اما ایدهٔ «گفت‌وگو به‌عنوان درمان» ماندگار شد.", f:"deb", g:["t-psychodynamic"]},
+{id:"pavlov", y:1903, ln:"psy", t:"پاولوف و شرطی‌سازی کلاسیک", d:"سگ‌ها به صدای زنگ بزاق ترشح کردند؛ یادگیری تداعی وارد آزمایشگاه شد.", w:["learnmem"], g:["t-behavioral"]},
+{id:"binet", y:1905, ln:"psy", t:"آزمون هوش بینه و سیمون", d:"برای یافتن کودکانی که به کمک آموزشی نیاز داشتند ساخته شد؛ بعدها بد به کار رفت.", w:["jensen"], g:["p-psychometrics"]},
+{id:"weber", y:1905, ln:"soc", t:"وبر، «اخلاق پروتستانی و روح سرمایه‌داری»", d:"باورها و ارزش‌ها رفتار اقتصادی را شکل می‌دهند؛ پیوند فرهنگ، کار و معنا.", w:["s1"], g:["soc-work"]},
+{id:"jaspers", y:1913, ln:"psychiatry", t:"یاسپرس، «آسیب‌شناسی روانی عمومی»", d:"پدیدارشناسی: فهم تجربهٔ بیمار از درون؛ تمایز «فهمیدنی» و «توضیح‌دادنی».", w:["psychopath","shelf5"], g:["descriptive-psychopathology"]},
+{id:"watson", y:1913, ln:"psy", t:"واتسون: بیانیهٔ رفتارگرایی", d:"روان‌شناسی باید فقط رفتار قابل مشاهده را مطالعه کند؛ آغاز نیم قرن سلطهٔ رفتارگرایی.", g:["t-behavioral"]},
+/* جنگ‌ها و مکتب‌ها */
+{id:"shellshock", y:1915, ln:"psychiatry", t:"موج‌گرفتگی در جنگ جهانی اول", d:"سربازان بی‌زخم جسمی، لال، لرزان یا فلج شدند؛ آغاز شناخت تروما.", w:["trauma"], g:["shell-shock"]},
+{id:"yerkes", y:1917, ln:"psy", t:"آزمون‌های گروهی هوش ارتش آمریکا", d:"میلیون‌ها سرباز آزمون دادند؛ نتایج برای سیاست‌های مهاجرتی تبعیض‌آمیز سوءاستفاده شد.", f:"deb", w:["jensen"], g:["p-psychometrics"]},
+{id:"hawthorne", y:1924, ln:"org", t:"مطالعات هاثورن", d:"در کارخانهٔ وسترن الکتریک، «توجه» به کارگران بهره‌وری را بالا برد؛ تولد روابط انسانی در مدیریت. تحلیل‌های بعدی بیشتر اثرها را زیر سؤال برد.", f:"deb", w:["orgpsych"], g:["p-io"]},
+{id:"piaget", y:1936, ln:"psy", t:"پیاژه و مراحل رشد شناختی", d:"کودک کوچک‌شدهٔ بزرگسال نیست؛ ذهن مرحله به مرحله ساخته می‌شود.", g:["p-dev"]},
+{id:"skinner", y:1938, ln:"psy", t:"اسکینر، «رفتار ارگانیسم‌ها»", d:"شرطی‌سازی عامل: رفتار تابع پیامدهایش است؛ پایهٔ تقویت، عادت و بعدها تلنگر.", w:["learnmem","motivation"], g:["t-behavioral"]},
+{id:"maslow", y:1943, ln:"psy", t:"مازلو و سلسله‌مراتب نیازها", d:"هرم مشهور نیازها؛ پرطرفدار در مدیریت، اما شواهد ترتیب سفت‌وسخت آن را تأیید نکرد.", f:"deb", w:["theories"], g:["p-motivation"]},
+{id:"frankl", y:1946, ln:"therapy", t:"فرانکل، «انسان در جست‌وجوی معنا»", d:"از اردوگاه آشویتس: کسی که «چرا»یی برای زیستن دارد، تقریباً هر «چگونه»ای را تاب می‌آورد. معنادرمانی.", w:["makingsense"], g:["existentialism","meaning-making"]},
+{id:"asch", y:1951, ln:"psy", t:"آزمایش هم‌رنگی اش", d:"آدم‌ها گاهی پاسخ آشکارا غلط گروه را تکرار کردند؛ قدرت فشار اجتماعی.", g:["p-social"]},
+{id:"rogers", y:1951, ln:"therapy", t:"راجرز و درمان مراجع‌محور", d:"همدلی، پذیرش بی‌قیدوشرط و اصالت؛ ریشهٔ «عوامل مشترک» درمان.", g:["t-humanistic","t-common"]},
+{id:"dsm1", y:1952, ln:"psychiatry", t:"DSM-I و کلرپرومازین", d:"نخستین راهنمای تشخیصی آمریکا و نخستین داروی ضدروان‌پریشی؛ آغاز روان‌داروشناسی و خالی شدن آسایشگاه‌ها.", w:["workshop"], g:["dx","psychopharm"]},
+/* انقلاب شناختی و دارو */
+{id:"cogrev", y:1956, ln:"psy", t:"انقلاب شناختی", d:"میلر (عدد جادویی ۷)، چامسکی و هوش مصنوعی؛ ذهن دوباره موضوع علم شد.", g:["p-cog"]},
+{id:"belyaev", y:1959, ln:"anthro", t:"آغاز آزمایش روباه‌های بلیایف", d:"گزینش روباه‌ها فقط بر پایهٔ رامی، در چند نسل گوش آویخته و دم پیچ‌دار ساخت؛ پایهٔ نظریهٔ خوداهلی‌سازی.", w:["friendly"], g:["belyaev-foxes"]},
+{id:"goffman", y:1961, ln:"soc", t:"گافمن، «آسایشگاه‌ها» و «داغ ننگ»", d:"نهاد بسته «بیمار روانی» می‌سازد و انگ هویت را لکه‌دار می‌کند؛ از ریشه‌های جنبش اصلاح روان‌پزشکی.", w:["workshop"], g:["stigma"]},
+{id:"ellis", y:1962, ln:"therapy", t:"الیس و درمان عقلانی-هیجانی", d:"باورهای غیرمنطقی («باید») هیجان ناسالم می‌سازند؛ با اپیکتتوس آغاز می‌کرد.", g:["t-cbt"], fr:["stoa"]},
+{id:"milgram", y:1963, ln:"psy", t:"آزمایش اطاعت میلگرام", d:"دو سوم شرکت‌کنندگان به دستور آزمونگر به «شوک» مرگبار ادامه دادند. بازخوانی آرشیوها نشان داد جزئیات اجرا متغیر بوده است.", f:"deb", g:["p-social"]},
+{id:"bowlby", y:1969, ln:"psy", t:"بالبی، «دلبستگی»", d:"پیوند امن با مراقب، نیاز تکاملی است؛ پایهٔ نظریهٔ دلبستگی.", g:["attachment"]},
+{id:"seligman", y:1967, ln:"psy", t:"درماندگی آموخته", d:"حیوانی که کنترل نداشت، بعدها حتی وقتی می‌توانست، تلاش نکرد. سال‌ها بعد خود سلیگمن تفسیر را برگرداند: «کنترل» آموخته می‌شود، نه درماندگی.", w:["motivation"], g:["p-motivation"]},
+{id:"marshmallow", y:1972, ln:"psy", t:"آزمایش مارشمالو", d:"صبر کودکان برای پاداش بزرگ‌تر؛ رابطه با موفقیت بعدی در تکرار بزرگ ۲۰۱۸ بسیار کوچک‌تر شد.", f:"rep", w:["s5","effort"], g:["delay-gratification"]},
+{id:"zimbardo", y:1971, ln:"psy", t:"زندان استنفورد", d:"نگهبان‌ها بی‌رحم شدند؛ اما بعدها معلوم شد به نگهبان‌ها گفته شده بود سخت‌گیر باشند. امروز نمونهٔ کلاسیک روش ضعیف است.", f:"rep", g:["p-social"]},
+{id:"rosenhan", y:1973, ln:"psychiatry", t:"روزنهان، «سالم در جای بیمار»", d:"افراد سالم در بیمارستان بستری و «اسکیزوفرنیک» تشخیص داده شدند. پژوهش‌های بعدی (کاهالان ۲۰۱۹) صحت داده‌ها را زیر سؤال برد.", f:"rep", w:["workshop","shelf11"], g:["dx"]},
+{id:"kt", y:1974, ln:"econ", t:"کانمن و تورسکی: ابتکارها و سوگیری‌ها", d:"دسترس‌پذیری، نمایندگی و لنگر؛ ذهن با میان‌بر داوری می‌کند. پایهٔ اقتصاد رفتاری.", w:["illusions","mistakes"], g:["decision-errors"]},
+{id:"burnout", y:1974.5, ln:"org", t:"فرویدنبرگر و «فرسودگی»", d:"خستگی هیجانی کارکنان مراکز درمانی داوطلب؛ بعدها مسلش آن را سنجید.", w:["s1","orgpsych"], g:["burnout"]},
+{id:"engel", y:1977, ln:"neuro", t:"انگل و مدل زیستی-روانی-اجتماعی", d:"بیماری محصول هم‌زمان زیست، روان و جامعه است؛ چارچوب پایهٔ پزشکی امروز.", w:["body"], g:["n-stress"]},
+{id:"hochschild", y:1983, ln:"soc", t:"هاکسچایلد، «قلب مدیریت‌شده»", d:"مهمانداران هواپیما «کار عاطفی» می‌کنند: احساس، بخشی از کالا شد.", w:["emolabor"], g:["emotional-labor","soc-work"]},
+{id:"beck", y:1979, ln:"therapy", t:"بک، «درمان شناختی افسردگی»", d:"افکار خودکار منفی و تحریف‌های شناختی؛ مؤثرترین و پرپژوهش‌ترین روان‌درمانی.", w:["shelf13"], g:["t-cbt"], fr:["stoa","ellis"]},
+{id:"dsm3", y:1980, ln:"psychiatry", t:"DSM-III و ورود PTSD", d:"تشخیص بر پایهٔ معیارهای فهرستی، نه نظریه؛ PTSD رسمی شد. پایایی بالا رفت، اما «تورم تشخیص» آغاز شد.", w:["trauma","workshop"], g:["dx"], fr:["kraepelin","shellshock"]},
+{id:"kobasa", y:1979.5, ln:"psy", t:"کوباسا و سرسختی روانی", d:"تعهد، کنترل و چالش؛ چرا برخی مدیران زیر استرس بیمار نمی‌شوند.", w:["s5"], g:["hardiness"]},
+{id:"mi", y:1983.5, ln:"therapy", t:"مصاحبهٔ انگیزشی", d:"میلر و رولنیک: به‌جای مقابله با مقاومت، دوسوگرایی را با همدلی کاوش کن.", w:["clinicaddiction","change"], g:["mi"], fr:["rogers"]},
+{id:"sdt", y:1985, ln:"psy", t:"دسی و رایان: خودتعیین‌گری", d:"سه نیاز پایه: خودمختاری، شایستگی و پیوند؛ انگیزهٔ درونی در برابر بیرونی.", w:["s13","shelf10"], g:["p-motivation"]},
+{id:"putnam", y:1995, ln:"soc", t:"پاتنام، «بولینگ تنها»", d:"افول سرمایهٔ اجتماعی و اعتماد در آمریکا؛ مقاله ۱۹۹۵، کتاب ۲۰۰۰.", w:["trust"], g:["social-capital"]},
+{id:"csik", y:1990.5, ln:"psy", t:"چیکسنت‌میهای، «غرقگی»", d:"وقتی چالش و مهارت هم‌اندازه‌اند، زمان گم می‌شود؛ پایهٔ پژوهش غرقگی در کار.", w:["s11"], g:["flow"]},
+/* قرن شواهد */
+{id:"ei", y:1990, ln:"psy", t:"سالووی و مایر: هوش هیجانی", d:"توانایی درک و مدیریت هیجان؛ کتاب گلمن (۱۹۹۵) آن را پرطرفدار و بیش از شواهد بزرگ کرد.", f:"deb", w:["s14"], g:["emotional-intelligence"]},
+{id:"dbt", y:1993, ln:"therapy", t:"رفتاردرمانی دیالکتیکی", d:"لینهان: پذیرش و تغییر هم‌زمان؛ برای خودآسیبی و اختلال شخصیت مرزی.", w:["shelf13"], g:["t-thirdwave"]},
+{id:"damasio", y:1994, ln:"neuro", t:"داماسیو، «خطای دکارت»", d:"بیمارانی با آسیب قشر پیش‌پیشانی شکمی، با عقل سالم، تصمیم‌های فاجعه‌بار می‌گرفتند؛ هیجان بخشی از عقلانیت است.", g:["n-affective"], fr:["descartes","hume"]},
+{id:"gross", y:1998.5, ln:"psy", t:"گراس: مدل فرایندی تنظیم هیجان", d:"پنج نقطهٔ تنظیم: انتخاب موقعیت تا تغییر پاسخ؛ بازتعبیر معمولاً بهتر از سرکوب.", w:["s4","s5","s8"], g:["gross-model"], fr:["stoa"]},
+{id:"ego", y:1998, ln:"psy", t:"تخلیهٔ ایگو", d:"باومایستر: اراده مثل ماهیچه خسته می‌شود. تکرار بزرگ ۲۳ آزمایشگاه (۲۰۱۶) اثر را تقریباً صفر یافت.", f:"rep", w:["s8"], g:["ego-depletion"]},
+{id:"pospsy", y:1998.2, ln:"psy", t:"روان‌شناسی مثبت‌نگر", d:"سلیگمن: علم توانمندی‌ها و بهزیستی، نه فقط بیماری.", w:["s9","poswork"], g:["p-positive"]},
+{id:"psysafe", y:1999, ln:"org", t:"ادموندسون: امنیت روانی", d:"تیم‌های بیمارستانی بهتر خطاهای بیشتری «گزارش» می‌کردند، نه اینکه بیشتر خطا کنند؛ ریشهٔ امنیت روانی.", w:["orgpsych"], g:["psych-safety"]},
+{id:"act", y:1999.5, ln:"therapy", t:"درمان پذیرش و تعهد (ACT)", d:"هیز: انعطاف‌پذیری روانی؛ با افکار نجنگ، به سمت ارزش‌ها حرکت کن.", w:["s4","shelf13"], g:["t-thirdwave"]},
+{id:"compassion", y:2003, ln:"therapy", t:"شفقت به خود: نف و گیلبرت", d:"مقیاس شفقت به خود (نف) و درمان متمرکز بر شفقت (گیلبرت)؛ مهربانی با خود در برابر خودانتقادی.", w:["s2","s3","compassion"], g:["self-compassion","t-compassion"]},
+{id:"tangney", y:2004, ln:"psy", t:"پرسشنامهٔ خویشتنداری تنجنی", d:"خویشتنداری بالا با نمره، سازگاری و رابطهٔ بهتر همراه است؛ پراستفاده‌ترین سنجهٔ خویشتنداری.", w:["s5"], g:["effort"]},
+{id:"henrich", y:2004.5, ln:"anthro", t:"هنریک و آزمایش‌های اولتیماتوم در ۱۵ جامعه", d:"«انصاف» در جامعه‌های مختلف شکل متفاوتی دارد؛ پایهٔ نقد WEIRD (۲۰۱۰).", w:["fairness","gelfand"], g:["cultural-evolution","fairness"]},
+{id:"nudge", y:2008, ln:"econ", t:"تیلر و سانستین، «تلنگر»", d:"معماری انتخاب؛ پیش‌فرض‌ها رفتار را بی‌اجبار تغییر می‌دهند. فراتحلیل‌های بعدی اثر میانگین را پس از اصلاح سوگیری انتشار کوچک یافتند.", f:"deb", w:["s6"], g:["habit"], fr:["kt"]},
+{id:"weird", y:2010, ln:"anthro", t:"WEIRD: عجیب‌ترین مردم جهان", d:"بیشتر یافته‌های روان‌شناسی از غربی، تحصیل‌کرده، صنعتی، ثروتمند و دموکرات آمده‌اند؛ تعمیمشان پرسش‌برانگیز است.", w:["gelfand","makingsense"], g:["cultural-evolution"]},
+{id:"rdoc", y:2010.5, ln:"psychiatry", t:"چارچوب RDoC", d:"مؤسسهٔ ملی سلامت روان آمریکا: پژوهش بر پایهٔ سامانه‌های مغزی، نه برچسب‌های DSM.", w:["workshop"], g:["dimensional-dx"]},
+{id:"repcrisis", y:2011, ln:"psy", t:"آغاز بحران تکرارپذیری", d:"مقالهٔ «ادراک فراحسی» بم و رسوایی استپل؛ «درجه‌های آزادی پژوهشگر» افشا شد.", w:["bargh","bullshit"], g:["phil-science"]},
+{id:"tk-book", y:2011.5, ln:"econ", t:"کانمن، «تفکر، سریع و کند»", d:"سامانهٔ ۱ و ۲؛ فصل پیش‌زمینه‌سازی بعدها زیر سؤال رفت و خود کانمن به آن اعتراف کرد.", f:"deb", w:["illusions"], g:["decision-errors"], fr:["kt"]},
+{id:"dsm5", y:2013, ln:"psychiatry", t:"DSM-5", d:"حذف استثنای سوگ برای افسردگی و نقد «بهنجاری آسیب‌دیده» (آلن فرانسس).", f:"deb", w:["shelf11"], g:["overdiagnosis"]},
+{id:"bundling", y:2014, ln:"econ", t:"مزدوج‌سازی هوس", d:"میلکمن: کتاب صوتی فقط در باشگاه؛ رفتن به باشگاه در کوتاه‌مدت بیشتر شد.", w:["s5"], g:["temptation-bundling"]},
+{id:"gamif", y:2014.5, ln:"org", t:"بازی اجباری در کار", d:"مولیک و روتبارد: بازی‌گونه‌سازی فقط با «رضایت» کارکنان حالشان را بهتر کرد.", w:["s5"], g:["gamification"]},
+{id:"repro", y:2015, ln:"psy", t:"پروژهٔ تکرارپذیری", d:"از ۱۰۰ مطالعهٔ روان‌شناسی، حدود ۳۶٪ نتیجهٔ معنادار مشابه دادند.", w:["learn"], g:["phil-science"], fr:["repcrisis"]},
+{id:"hitop", y:2017, ln:"psychiatry", t:"HiTOP", d:"طبقه‌بندی بُعدی و سلسله‌مراتبی آسیب‌شناسی روانی؛ جایگزین دسته‌های جدا.", w:["workshop","shelf13"], g:["hitop"], fr:["rdoc"]},
+{id:"marshrep", y:2018, ln:"psy", t:"تکرار مفهومی آزمون مارشمالو", d:"واتس و همکاران: پیش‌بینی موفقیت بعدی کوچک‌تر بود و با پیشینهٔ خانوادگی تقریباً از بین رفت.", f:"rep", w:["s5"], g:["delay-gratification"], fr:["marshmallow"]},
+{id:"icd11", y:2019, ln:"org", t:"ICD-11 و فرسودگی", d:"فرسودگی «پدیدهٔ شغلی» شد، نه بیماری؛ سازمان را هم مسئول می‌کند.", w:["orgpsych","s1"], g:["burnout"], fr:["burnout"]},
+{id:"beyondwill", y:2018.5, ln:"econ", t:"«فراتر از اراده»", d:"داکورث، میلکمن و لیبسون: راهبردهای خویشتنداری روی دو محور خود/دیگران و موقعیتی/شناختی.", w:["s5"], g:["effort"], fr:["nudge","gross"]},
+{id:"mega", y:2021, ln:"econ", t:"مگااستادی ورزش", d:"۵۴ مداخلهٔ کوتاه روی ۶۱ هزار نفر؛ بیشتر اثرها کوچک بودند و پس از برنامه ادامه نیافتند.", f:"deb", w:["s5"], g:["temptation-bundling"], fr:["bundling"]},
+{id:"sero", y:2022, ln:"neuro", t:"بازبینی فرضیهٔ سروتونین", d:"مرور چتری مانکریف: شاهد قانع‌کننده‌ای برای «کمبود سروتونین» در افسردگی نیست؛ این دربارهٔ اثر داروها حکم نمی‌دهد.", f:"deb", w:["body"], g:["psychopharm"]}
+];
+
+const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html"}, LABEL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی"}, GFA = {"psyche": "دنیای روان", "psychology": "روان‌شناسی", "psychiatry": "روان‌پزشکی", "psychotherapy": "روان‌درمانی", "neuroscience": "علوم اعصاب", "p-history": "مکاتب و تاریخ روان‌شناسی", "p-dev": "روان‌شناسی رشد", "attachment": "دلبستگی", "p-cog": "روان‌شناسی شناختی", "exploration": "کاوش ـ بهره‌برداری", "p-social": "روان‌شناسی اجتماعی", "dehumanization": "انسانیت‌زدایی", "polarization": "قطبی‌شدن نیروی کار", "p-personality": "روان‌شناسی شخصیت", "need-for-cognition": "نیاز به دانایی", "p-emotion": "روان‌شناسی هیجان", "emotion-regulation": "تنظیم هیجان", "beach-ball": "سرکوب و اثر توپ ساحلی", "venting": "ونتینگ (تخلیهٔ هیجانی)", "challenger-listener": "شنوندهٔ چالشگر", "emotional-intelligence": "هوش هیجانی", "p-motivation": "روان‌شناسی انگیزش", "sdt": "خودتعیین‌گری و انگیزش درونی", "autonomy": "خودمختاری", "mcclelland": "سه‌گانهٔ مک‌کللند", "ego-depletion": "تخلیهٔ ایگو", "meaningful-work": "کار معنادار", "p-positive": "روان‌شناسی مثبت‌نگر", "strengths": "رویکرد مبتنی بر نقاط قوت", "progress-principle": "اصل پیشرفت", "savoring": "مزه‌مزه‌کردن", "p-health": "روان‌شناسی سلامت", "fatigue-syndromes": "سندرم‌های خستگی", "p-io": "روان‌شناسی صنعتی و سازمانی", "feeling-economy": "اقتصاد احساسی", "burnout": "فرسودگی شغلی", "psych-detachment": "جداشدن روانی از کار", "recovery-paradox": "پارادوکس بازیابی", "work-life-balance": "تعادل کار و زندگی", "great-resignation": "استعفای بزرگ", "quiet-quitting": "ترک آرام", "destructive-leadership": "رهبری مخرب", "emotional-labor": "کار هیجانی", "compassion-at-work": "شفقت در محیط کار", "psych-safety": "امنیت روانی", "scapegoating": "سرزنش و نقش قربانی", "self-selectors": "خودبرگزیدگان", "p-edu": "روان‌شناسی تربیتی", "perseverance": "پشتکار تحصیلی و نگرش به شکست", "p-clinical": "روان‌شناسی بالینی", "rumination": "نشخوار فکری", "running-commentary": "گزارشگر زنده", "p-psychometrics": "روان‌سنجی", "dx": "طبقه‌بندی و تشخیص", "mood": "اختلالات خلقی", "anxiety": "اختلالات اضطرابی", "personality-disorders": "اختلالات شخصیت", "vulnerable-narcissism": "خودشیفتگی آسیب‌پذیر", "addiction": "اعتیاد", "psychopharm": "روان‌داروشناسی", "t-psychodynamic": "روانکاوی و روان‌پویشی", "catharsis": "کاتارسیس و نظریهٔ هیدرولیکی هیجان", "t-behavioral": "رفتاردرمانی", "t-cbt": "درمان شناختی-رفتاری", "rfcbt": "درمان شناختی-رفتاری متمرکز بر نشخوار", "cbt-perfectionism": "درمان شناختی-رفتاری کمال‌طلبی", "perfectionism": "کمال‌طلبی", "t-thirdwave": "موج سوم رفتاردرمانی", "mct": "درمان فراشناختی", "t-compassion": "درمان‌های مبتنی بر شفقت", "self-compassion": "شفقت به خود", "three-systems": "مدل سه‌سیستمی هیجان", "drive-system": "سیستم سائق", "empathy-fatigue": "خستگی همدلی و انفصال همدلانه", "t-humanistic": "انسان‌گرا و وجودی", "pat": "درمان عاطفهٔ مثبت (PAT)", "t-systemic": "خانواده‌درمانی و سیستمی", "t-common": "عوامل مشترک درمان", "n-affective": "علوم اعصاب عاطفی", "n-cognitive": "علوم اعصاب شناختی", "dmn": "شبکهٔ حالت پیش‌فرض", "n-plasticity": "نوروپلاستیسیتی", "n-reward": "پاداش و دوپامین", "n-stress": "استرس و محور HPA", "anthropology": "انسان‌شناسی تکاملی", "self-domestication": "خوداهلی‌سازی", "belyaev-foxes": "روباه‌های بلیایف و نشانگان اهلی‌شدن", "dog-cognition": "شناخت اجتماعی سگ‌ها", "reactive-proactive": "دو نوع پرخاشگری", "execution-hypothesis": "فرضیهٔ اعدام و سلسله‌مراتب معکوس", "cultural-evolution": "تکامل فرهنگی", "collective-brain": "مغز جمعی", "norm-psychology": "روان‌شناسی هنجار", "creative-spark": "جرقهٔ خلاقیت", "art-origins": "ریشه‌های تکاملی هنر", "p-aesthetics": "روان‌شناسی هنر و زیبایی‌شناسی", "art-definition": "تعریف هنر", "aesthetic-judgment": "داوری زیبایی‌شناختی و مواجههٔ صرف", "music-emotion": "موسیقی و هیجان", "form-symbolism": "نمادگرایی صوری و آوایی", "aesthetic-emotion": "هیجان در موزه و لرزش زیبایی‌شناختی", "negative-art": "لذت از هنر غمناک و ترسناک", "effort-bias": "سوگیری تلاش", "forgery": "اصالت و جعل", "abstract-art": "«بچهٔ من هم بلد است»: هنر انتزاعی", "arts-transfer": "آیا هنر باهوش‌تر می‌کند؟", "fiction-empathy": "داستان و همدلی", "art-wellbeing": "ساختن هنر و حال خوب", "talent-practice": "استعداد و تمرین", "theory-of-mind": "نظریهٔ ذهن", "cooperative-eye": "چشم همکار و سفیدی چشم", "intergroup-contact": "تماس بین‌گروهی و کلاس پازلی", "curiosity": "کنجکاوی", "curiosity-types": "انواع کنجکاوی (برلاین)", "info-gap": "نظریهٔ شکاف اطلاعاتی", "hot-cold-gap": "شکاف همدلی گرم-سرد", "curiosity-brain": "عصب‌شناسی کنجکاوی", "n-human-brain": "مغز انسان و شمار نورون‌ها", "planning-fallacy": "خطای برنامه‌ریزی", "cognitive-rut": "افکار خودکار و شیار شناختی", "tunnel-vision": "دید تونلی و هایپرفوکس", "critical-thinking": "تفکر نقادانه و استدلال", "cognitive-biases": "سوگیری‌های شناختی", "conspiracy": "باور توطئه‌ای", "false-memory": "حافظهٔ کاذب", "placebo-expectation": "انتظار، دارونما و ادراک خطا", "statistical-thinking": "تفکر آماری", "sex-gender": "روان‌شناسی جنس و جنسیت", "brain-mosaic": "مغز موزاییکی", "anhedonia": "آنهدونیا و ظرفیت لذت", "addiction-core": "هستهٔ اعتیاد", "craving": "وسوسه", "nicotine": "وابستگی به نیکوتین", "self-medication": "فرضیهٔ خوددرمانی", "addiction-therapy": "اصول روان‌درمانی و مشاورهٔ اعتیاد", "substances": "الکل، افیونی‌ها و محرک‌ها", "mi": "مصاحبهٔ انگیزشی", "gross-model": "مدل فرایندی گراس", "reappraisal": "بازتعبیر", "mindsets": "ذهنیت‌ها", "stress-mindset": "ذهنیت استرس", "emodiversity": "تنوع هیجانی", "stereotype-threat": "تهدید کلیشه‌ای", "belonging": "تعلق و هویت گروهی", "replication-crisis": "بحران تکرارپذیری", "dimensional-dx": "رویکرد بُعدی به مشکلات روانی", "hitop": "HiTOP", "heterotypic": "پیوستگی ناهمسان", "overdiagnosis": "بیش‌تشخیص‌گذاری", "psychiatry-history": "تاریخ رده‌بندی روانپزشکی", "psych-genetics": "ژنتیک روانپزشکی", "transdiagnostic": "فرایندهای فراتشخیصی", "experiential-avoidance": "اجتناب تجربه‌ای", "rejection-sensitivity": "حساسیت به طرد", "worry-model": "الگوی نگرانی", "cognitive-rigidity": "سرسختی شناختی", "enduring-mh": "سلامت روان پایدار", "antisocial-subtypes": "زیرگونه‌های رفتار ضداجتماعی", "pbt": "درمان فرایندمدار", "emotional-agility": "چابکی هیجانی", "psych-rich": "زندگی غنی روانی", "solitude": "انگیزه برای خلوت", "range-generalists": "گستره و عمومی‌کاری", "learning-environments": "محیط یادگیری مهربان و بدخیم", "desirable-difficulties": "دشواری‌های مطلوب", "analogical-thinking": "تفکر قیاسی", "match-quality": "کیفیت تطبیق", "foxes-hedgehogs": "روباه‌ها و جوجه‌تیغی‌ها", "perma": "مدل PERMA", "hope": "نظریهٔ امید", "flow": "غرقگی (فلو)", "work-engagement": "درگیری کاری", "job-crafting": "طراحی شغل", "surface-deep": "بازی سطحی و عمیق", "goal-pursuit": "پویایی هدف و پیشرفت", "behavioral-addiction": "اعتیاد رفتاری", "descriptive-psychopathology": "آسیب‌شناسی روانی توصیفی", "delusion": "هذیان", "psychosis-risk": "حالات پرخطر پسیکوز (SIPS)", "bipolar": "اختلال دوقطبی", "alexithymia": "آلکسی‌تایمی", "neuroticism": "روان‌رنجوری", "unified-protocol": "پروتکل یکپارچه (UP)", "health-anxiety": "اضطراب سلامت", "bdd": "بدریخت‌انگاری بدن", "vigilance": "گوش‌به‌زنگی", "happiness-origins": "ریشه‌های شادکامی", "self-criticism": "سرزنش خود و منتقد درون", "compassion-collapse": "فروپاشی شفقت", "addiction-families": "اعتیاد و خانواده: بهبودی، درمان اجباری، آزمایش ادرار", "methadone": "درمان نگهدارنده با متادون", "stimulants": "شیشه و محرک‌ها", "suggestibility": "تلقین‌پذیری", "nocebo": "نوسبو", "habit": "عادت و تغییر عادت", "implementation-intentions": "قصد اجرایی", "relapse-prevention": "لغزش و پیشگیری از عود", "affective-forecasting": "پیش‌بینی عاطفی", "learned-helplessness": "درماندگی و خوش‌بینی آموخته", "self-narrative": "روایت خود و حس کارآمدی", "shell-shock": "موج‌گرفتگی (شل‌شاک)", "effort": "تلاش، سخت‌کوشی و اراده", "moral-hypocrisy": "ریاکاری اخلاقی", "morality-mh": "اخلاق و سلامت روان", "degeneration": "نظریهٔ انحطاط", "social-trust": "اعتماد اجتماعی", "human-progress": "خوش‌بینی به آیندهٔ بشر", "falls": "سقوط در بیماران بستری", "overjustification": "اثر توجیه بیش از حد", "work-motivation": "نظریه‌های انگیزش کاری", "envy": "رشک و حسادت", "decision-errors": "خطا در تصمیم‌گیری: پیش‌بینی و انتخاب نادرست", "opioids": "مواد افیونی و سم‌زدایی", "mattering": "اهمیت داشتن", "cannabis": "حشیش و کانابینوئیدها", "crisis-mh": "سلامت روان در بحران و جنگ", "resilience": "تاب‌آوری و انعطاف‌پذیری", "ptsd": "تروما و PTSD", "automaticity": "خودکاری و ذهن ناآگاه", "tight-loose": "فرهنگ سفت و شل", "narcissism-culture": "فرهنگ خودشیفتگی", "tech-panic": "فناوری، توجه و وحشت اخلاقی", "bullshit": "حرف مفت و شک‌ورزی داده‌ای", "msc": "شفقت به خودِ ذهن‌آگاهانه (MSC)", "acrim": "اصالت، خودشناسی و محور انتقاد", "complex-contagion": "سرایت پیچیده و چیدمان تغییر", "evo-sex": "تعارض جنسی و روان‌شناسی تکاملی", "conflict-power": "تعارض و قدرت در کار", "depersonalization": "مسخ شخصیت و مسخ واقعیت", "ideological-brain": "مغز ایدئولوژیک", "delirium": "دلیریوم", "open-vigilance": "گشودگی مراقب", "interpersonal-er": "تنظیم هیجان بین‌فردی", "fairness": "برابری و انصاف", "prestige-dominance": "پرستیژ و سلطه", "habituation": "خوگیری", "ego-disorders": "اختلالات خویشتن", "alcohol": "الکل", "intractable-conflict": "اختلاف‌های حل‌نشدنی", "sexual-orientation": "شکل‌گیری گرایش جنسی", "learning-memory": "یادگیری و حافظه", "consciousness": "هشیاری و توجه", "constructed-emotion": "هیجان ساخته‌شده", "adolescence": "نوجوانی و محبوبیت", "cooperation-competition": "همکاری و رقابت", "regulatory-mode": "شیوهٔ تنظیم: حرکت و سنجش", "victim-mindset": "ذهنیت قربانی و استحقاق", "behavioral-activation": "فعال‌سازی رفتاری", "fatigue-control": "خستگی به‌عنوان هیجان", "subjective-fear": "تجربهٔ ذهنی ترس", "meaning-making": "معنا و روان‌شناسی وجودی", "psychological-richness": "زندگی غنی از نظر روانی", "social-media": "رسانهٔ اجتماعی و ذهن", "gullibility": "زودباوری", "process-based-therapy": "درمان مبتنی بر فرایند", "ultrasociality": "فراجامعه‌پذیری", "positive-emotion-regulation": "تنظیم هیجان مثبت", "philosophy": "فلسفه", "phil-mind": "فلسفهٔ ذهن: آگاهی و اراده", "phil-ethics": "اخلاق و فلسفهٔ اخلاق", "existentialism": "فلسفهٔ وجودی و پدیدارشناسی", "stoicism": "رواقی‌گری و ریشه‌های درمان شناختی", "epistemology": "معرفت‌شناسی و شک‌ورزی", "phil-science": "فلسفهٔ علم", "phil-psychiatry": "فلسفهٔ روان‌پزشکی: اختلال چیست؟", "justice-theory": "فلسفهٔ سیاسی: عدالت و برابری", "sociology": "جامعه‌شناسی", "anomie": "آنومی و پیوند اجتماعی (دورکیم)", "social-capital": "سرمایهٔ اجتماعی", "stigma": "انگ و برچسب‌زنی (گافمن)", "medicalization": "پزشکی‌سازی", "stratification": "قشربندی و نابرابری", "soc-work": "جامعه‌شناسی کار", "soc-family": "جامعه‌شناسی خانواده", "soc-networks": "شبکه‌های اجتماعی و سرایت", "delay-gratification": "تأخیر پاداش و آزمون مارشمالو", "temptation-bundling": "مزدوج‌سازی هوس", "gamification": "بازی‌گونه‌سازی در کار", "hardiness": "سرسختی در برابر استرس", "akrasia": "ضعف اراده (آکراسیا)"}, GRAPH = "graph.html", LAND = "land.html";
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const yr = y => y < 0 ? `حدود ${fa(-Math.round(y))} پ.م.` : fa(Math.floor(y));
+const LN = Object.fromEntries(LANES.map(l => [l.id, l])), E = Object.fromEntries(EV.map(e => [e.id, e]));
+const eraOf = y => ERAS.findIndex(e => y >= e.a && y < e.b);
+const kids = {}; EV.forEach(e => (e.fr || []).forEach(f => (kids[f] = kids[f] || []).push(e.id)));
+const st = {ln:new Set(LANES.map(l => l.id)), flag:false, q:"", sel:null};
+const FL = {rep:"تکرار نشد", deb:"محل بحث"};
+
+const tools = document.getElementById("tools");
+tools.innerHTML = LANES.map(l => `<button class="chip" style="--c:${l.c}" data-ln="${l.id}" aria-pressed="true"><i></i>${l.fa}</button>`).join("")
+  + `<button class="chip flag" id="flag" aria-pressed="false">فقط یافته‌های زیر سؤال</button><input id="q" type="search" placeholder="جست‌وجو: نام یا ایده…" aria-label="جست‌وجو"><span class="count" id="cnt"></span>`;
+
+const grid = document.getElementById("grid");
+let h = `<div class="eh" style="right:0;position:sticky;z-index:4"></div>` + ERAS.map(e => `<div class="eh"><b>${e.fa}</b><span>${yr(Math.max(e.a, -500))} تا ${e.b > 2026 ? "امروز" : yr(e.b)}</span></div>`).join("");
+LANES.forEach(l => {
+  h += `<div class="lh" style="--c:${l.c}" data-row="${l.id}"><i></i>${l.fa}</div>`;
+  ERAS.forEach((er, i) => {
+    const evs = EV.filter(e => e.ln === l.id && eraOf(e.y) === i).sort((a, b) => a.y - b.y);
+    h += `<div class="cell" data-row="${l.id}">${evs.map(e => `<button class="ev" style="--c:${l.c}" data-id="${e.id}"><small>${yr(e.y)}</small>${e.t}${e.f ? `<span class="fl ${e.f}">${FL[e.f]}</span>` : ""}</button>`).join("")}</div>`;
+  });
+});
+grid.innerHTML = h + `<svg class="lines" id="lines" aria-hidden="true"></svg>`;
+
+function filt(){
+  let n = 0;
+  document.querySelectorAll(".ev").forEach(b => { const e = E[b.dataset.id];
+    const ok = st.ln.has(e.ln) && (!st.flag || e.f) && (!st.q || (e.t + e.d).includes(st.q));
+    b.hidden = !ok; if(ok) n++; });
+  document.querySelectorAll("[data-row]").forEach(c => c.style.display = st.ln.has(c.dataset.row) ? "" : "none");
+  document.getElementById("cnt").textContent = `${fa(n)} ایده`;
+  draw();
+}
+tools.addEventListener("click", e => { const b = e.target.closest("[data-ln]"); if(b){ const id = b.dataset.ln; st.ln.has(id) ? st.ln.delete(id) : st.ln.add(id); b.setAttribute("aria-pressed", st.ln.has(id)); filt(); }
+  if(e.target.id === "flag"){ st.flag = !st.flag; e.target.setAttribute("aria-pressed", st.flag); filt(); } });
+document.getElementById("q").addEventListener("input", e => { st.q = e.target.value.trim(); filt(); });
+
+/* lineage */
+function lineage(id){ const up = new Set(), down = new Set();
+  const u = x => (E[x].fr || []).forEach(f => { if(!up.has(f)){ up.add(f); u(f); } });
+  const d = x => (kids[x] || []).forEach(k => { if(!down.has(k)){ down.add(k); d(k); } });
+  u(id); d(id); return {up, down}; }
+function draw(){
+  const svg = document.getElementById("lines"), sc = document.getElementById("sc");
+  svg.innerHTML = ""; if(!st.sel) return;
+  const g = grid.getBoundingClientRect(); svg.setAttribute("viewBox", `0 0 ${g.width} ${g.height}`);
+  const pt = id => { const b = grid.querySelector(`.ev[data-id="${id}"]`); if(!b || b.hidden || b.offsetParent === null) return null; const r = b.getBoundingClientRect(); return [r.left - g.left + r.width / 2, r.top - g.top + r.height / 2]; };
+  const edges = []; const walk = new Set([st.sel]); const {up, down} = lineage(st.sel); [...up, ...down, st.sel].forEach(x => (E[x].fr || []).forEach(f => { if(up.has(f) || down.has(f) || f === st.sel || x === st.sel) edges.push([f, x]); }));
+  let p = ""; edges.forEach(([a, b]) => { const A = pt(a), B = pt(b); if(!A || !B) return; const mx = (A[0] + B[0]) / 2, my = Math.min(A[1], B[1]) - 30; p += `<path d="M${A[0]} ${A[1]} Q${mx} ${my} ${B[0]} ${B[1]}"/>`; });
+  svg.innerHTML = p;
+}
+const card = document.getElementById("card"), cin = document.getElementById("cin");
+document.getElementById("x").onclick = () => card.classList.add("closed");
+function show(id){
+  const e = E[id]; if(!e) return; st.sel = id;
+  const {up, down} = lineage(id);
+  document.querySelectorAll(".ev").forEach(b => { b.classList.toggle("sel", b.dataset.id === id); b.classList.toggle("lin", up.has(b.dataset.id) || down.has(b.dataset.id)); });
+  const w = (e.w || []).filter(k => URLS[k]), g = (e.g || []).filter(k => GFA[k]);
+  const L = LN[e.ln], er = ERAS[eraOf(e.y)];
+  const evb = x => `<button data-go="${x}">${yr(E[x].y)}: ${E[x].t}</button>`;
+  cin.innerHTML = `<div class="meta"><span style="color:${L.c};font-weight:700">${L.fa}</span> · ${er.fa} · ${yr(e.y)}</div><h2>${e.t}</h2>
+    ${e.f ? `<div class="warn ${e.f === "deb" ? "deb" : ""}">${e.f === "rep" ? "این یافته در تکرارهای بعدی تأیید نشد یا داده‌هایش زیر سؤال رفت." : "ایده‌ای اثرگذار، اما با نقدها و بحث‌های جدی."}</div>` : ""}
+    <p>${e.d}</p>
+    ${(e.fr || []).length ? `<h4>از کجا آمد</h4><div class="links">${e.fr.map(evb).join("")}</div>` : ""}
+    ${(kids[id] || []).length ? `<h4>به کجا رسید</h4><div class="links">${kids[id].map(evb).join("")}</div>` : ""}
+    ${w.length ? `<h4>در ویکی</h4><div class="links">${w.map(k => `<a href="${URLS[k]}">${LABEL[k] || k}</a>`).join("")}</div>` : ""}
+    ${g.length ? `<h4>در دنیای روان</h4><div class="links">${g.map(k => `<a href="${GRAPH}#${k}">${GFA[k]}</a>`).join("")}${LAND !== "#" ? g.slice(0, 1).map(k => `<a href="${LAND}#${k}">روی نقشهٔ سرزمین روان</a>`).join("") : ""}</div>` : ""}
+    <p class="meta" style="margin-top:14px">${er.d}</p>`;
+  card.classList.remove("closed");
+  const b = grid.querySelector(`.ev[data-id="${id}"]`); if(b && !b.hidden) b.scrollIntoView({block:"nearest", inline:"center", behavior:"smooth"});
+  setTimeout(draw, 60); setTimeout(draw, 700);
+  try{ history.replaceState(null, "", "#" + id); }catch(_){}
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-id],[data-go]"); if(b) show(b.dataset.id || b.dataset.go); });
+addEventListener("resize", draw); document.getElementById("sc").addEventListener("scroll", () => {});
+
+/* threads */
+const THREADS = [
+ ["از رواقیون تا درمان شناختی", ["stoa","ellis","beck","gross"]],
+ ["از ارسطو تا «فراتر از اراده»", ["aristotle","marshmallow","marshrep","beyondwill"]],
+ ["زخم جنگ تا تشخیص بُعدی", ["kraepelin","shellshock","dsm3","rdoc","hitop"]],
+ ["از سوگیری تا تلنگر", ["kt","nudge","bundling","mega"]],
+ ["فرسودگی: از درمانگاه تا سازمان", ["burnout","psysafe","icd11"]],
+ ["بحران تکرارپذیری", ["repcrisis","ego","repro","marshrep"]]
+];
+document.getElementById("tgrid").innerHTML = THREADS.map(([t, ids]) => `<div class="tc"><b>${t}</b><ol>${ids.filter(i => E[i]).map(i => `<li><button data-go="${i}">${yr(E[i].y)}: ${E[i].t}</button></li>`).join("")}</ol></div>`).join("");
+filt();
+cin.innerHTML = `<h2 style="font-size:1.5rem">راهنما</h2><p>هر کارت یک ایده است. رنگ نوار کنار کارت، رشته را نشان می‌دهد. با دکمه‌های بالا رشته‌ها را روشن و خاموش کنید.</p><p>پیشنهاد شروع: <button class="chip" data-go="stoa" style="--c:#7d4a86">رواقیون</button> و دنبال کردن رشتهٔ ایده‌اش تا درمان شناختی.</p>`;
+if(matchMedia("(min-width:1101px)").matches) card.classList.remove("closed");
+const h0 = location.hash.slice(1); if(E[h0]) show(h0);
+</script>
+
+</body></html>

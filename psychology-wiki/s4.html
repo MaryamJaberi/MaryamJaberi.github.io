@@ -1,0 +1,469 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>معمای تنظیم هیجان</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-feel">
+  <div class="brand">ویکی روان‌شناسی <small>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-feel" target="_blank" rel="noopener">هیجان و ذهن</a><span class="sep">›</span><a class="tp" href="index.html#t-emotion" target="_blank" rel="noopener">هیجان و تنظیم آن</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><span class="on" aria-current="page">معمای تنظیم هیجان</span><a href="s5.html" target="_blank" rel="noopener">خویشتنداری و انتخاب موقعیت</a><a href="s8.html" target="_blank" rel="noopener">بازتعبیر و ذهنیت‌ها</a><a href="s10.html" target="_blank" rel="noopener">خرده‌فرهنگ‌های سازمانی</a><a href="s14.html" target="_blank" rel="noopener">هوش هیجانی</a><a href="s15.html" target="_blank" rel="noopener">هیجان مثبت و انگیزه</a><a href="envy.html" target="_blank" rel="noopener">حسادت</a><a href="shelf7.html" target="_blank" rel="noopener">قفسهٔ هیجان</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#why">چرا تنظیم هیجان مهم است؟</a></li>
+<li><a href="#info">هیجان: اطلاعات و انگیزه</a></li>
+<li><a href="#ders">مقیاس دشواری در تنظیم هیجان (DERS)</a></li>
+<li><a href="#acceptance">پیام ۲: پذیرش هیجان</a></li>
+<li><a href="#gross">مدل فرایندی گراس و تنظیم هیجان مثبت</a></li>
+<li><a href="#proactive">پیام ۳ و ۴: پیش‌دستانه</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>معمای تنظیم هیجان</h1>
+<p class="lede-sub"><a class="w" data-t="er">تنظیم هیجان</a> یعنی مهار یا حذف هیجان نیست. این درس با مارشا لینهان و ریشه‌های این مفهوم در اختلال شخصیت مرزی شروع می‌کند، مقیاس <a class="w" data-t="ders">DERS</a> را معرفی می‌کند، و چهار پیام می‌دهد: هیجان اطلاعات و انگیزه است؛ پذیرش هیجان جایگاه برجسته‌ای یافته؛ تنظیم فقط در لحظهٔ بروز هیجان نیست؛ و مهم‌ترین بخش آن <a class="w" data-t="proactive">پیش‌دستانه</a> است.</p>
+<aside class="infobox" aria-label="مشخصات صفحه"><div class="ib-h">معمای تنظیم هیجان در یک نگاه</div><dl>
+<dt>دوره</dt><dd>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</dd>
+<dt>مدرس</dt><dd>دکتر آذرخش مکری</dd>
+<dt>محورها</dt><dd>اهمیت تنظیم هیجان، قوانین نمایش هیجان، DERS، AAQ-II و انعطاف‌پذیری روان‌شناختی، مدل فرایندی گراس، تنظیم هیجان مثبت (پیش، حین و پس از تجربه)، چهار S پیش‌دستانه</dd>
+<dt>مقیاس‌ها</dt><dd>DERS (۳۶ گویه)، AAQ-II (۷ گویه)، PPFI</dd>
+</dl></aside>
+
+<h2 id="why">چرا تنظیم هیجان مهم است؟</h2>
+<p><sup class="c"><a href="#r-slides">[۱]</a></sup> مارشا لینهان (متولد ۱۹۴۳)، پایه‌گذار رفتاردرمانی دیالکتیکی، «بدتنظیمی هیجانی» را هستهٔ <a class="w" data-t="bpd">اختلال شخصیت مرزی</a> دانست؛ از آنجا مفهوم تنظیم هیجان به سراسر روان‌شناسی راه یافت.</p>
+<div class="cols2">
+<div class="card"><b class="h">در سوی آسیب</b>اختلال اضطرابی و افسردگی · اختلال آسیب بعد از سانحه · اعتیاد به مواد مخدر · پرخوری‌های بیمارگونه · خودکشی و خودزنی · فرسودگی شغلی · اختلالات همهٔ روانپزشکی</div>
+<div class="card"><b class="h">در سوی سلامت</b>خلاقیت · خودشناسی و رشد فردی · مدیریت کارآمد · موفقیت تحصیلی · رفتار بهینهٔ سازمانی · شادکامی · تعادل کار و زندگی</div>
+</div>
+<p><b>اعتیاد به غذا و مواد</b> (هاردی و همکاران، ۲۰۱۷؛ بیمارستان گریدی آتلانتا، ۲۲۹ زن): ۱۸٪ اختلال مصرف مواد و ۳۱٪ «اعتیاد به غذا». هر دو گروه در افسردگی، PTSD و خوردن هیجانی، و در نمرهٔ کل DERS، به‌طور معناداری از گروه کنترل بالاتر بودند و با هم تفاوتی نداشتند<sup class="c"><a href="#r-hardy">[۲]</a></sup>.</p>
+
+<h2 id="info">هیجان: اطلاعات و انگیزه</h2>
+<div class="key"><b class="k">پیام ۱: منظور از تنظیم هیجان، مهار یا حذف هیجانات نیست.</b>«هدف، مهار و عدم بروز هیجان نیست.» هیجان‌ها منبع باارزش اطلاعات‌اند (<span class="ltr">emotions as information</span>) و انگیزه‌دهنده‌های مهمی‌اند.</div>
+<div class="cols2">
+<div class="card"><b class="h">قوانین نمایش هیجان</b><span class="en">Emotion display rules</span>«روش درست» نشان دادن هیجان به عوامل بسیاری بستگی دارد: قدرت، گروه نژادی، جنس، فرهنگ و محیط.</div>
+<div class="card"><b class="h">دو نوع تنظیم هیجانی</b>• <b>لذتی</b> (hedonic): برای حال بهتر<br>• <b>ابزاری</b> (instrumental): برای رسیدن به هدف؛ گاهی یعنی برانگیختن هیجان ناخوشایند (مثل خشم پیش از مذاکره).</div>
+</div>
+
+<h2 id="ders">مقیاس دشواری در تنظیم هیجان (DERS)</h2>
+<p>گرتز و رومر (۲۰۰۴)؛ ۳۶ گویه، ۱ (تقریباً هیچ‌وقت) تا ۵ (تقریباً همیشه)؛ برخی گویه‌ها معکوس نمره‌گذاری می‌شوند<sup class="c"><a href="#r-gratz">[۳]</a></sup>. شش زیرمقیاس:</p>
+<table class="t"><thead><tr><th>زیرمقیاس</th><th>معنا</th><th>نمونهٔ گویه</th></tr></thead><tbody>
+<tr><td>عدم پذیرش هیجان منفی</td><td>ناراحت شدن از اینکه ناراحتیم</td><td>«وقتی ناراحتم، بابت آن احساس گناه می‌کنم.»</td></tr>
+<tr><td>دشواری در رفتار هدفمند</td><td>ادامهٔ کارها هنگام هیجان منفی</td><td>«وقتی ناراحتم، تمرکز روی چیزهای دیگر دشوار می‌شود.»</td></tr>
+<tr><td>دشواری کنترل تکانه</td><td>از کنترل خارج شدن رفتار</td><td>«وقتی ناراحتم، کنترل خودم را روی اعمالم از دست می‌دهم.»</td></tr>
+<tr><td>نداشتن آگاهی هیجانی</td><td>توجه نکردن به هیجان (معکوس)</td><td>«به حس‌هایم توجه می‌کنم و دقیق می‌شوم.»</td></tr>
+<tr><td>دسترسی محدود به راهبردها</td><td>باور به اینکه کاری نمی‌شود کرد</td><td>«حس می‌کنم مدت طولانی این‌طور خواهم ماند.»</td></tr>
+<tr><td>نبود شفافیت هیجانی</td><td>ندانستن اینکه چه حسی داریم</td><td>«واقعاً نمی‌دانم چه احساسی دارم.»</td></tr>
+</tbody></table>
+<p>میانگین نمرهٔ کل در نمونهٔ دانشجویی اصلی: زنان ۷۷٫۹۹ (انحراف معیار ۲۰٫۷۲) و مردان ۸۰٫۶۶ (۱۸٫۷۹)؛ زیرمقیاس‌ها با هم همبستگی متوسطی دارند و «آگاهی هیجانی» از بقیه مستقل‌تر است.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>DERS پرکاربردترین ابزار پژوهشی تنظیم هیجان است و فرم‌های کوتاه (DERS-16، DERS-SF) هم دارد. نمرهٔ آن ابزار غربالگری یا تشخیص بالینی نیست؛ برای دیدن الگوی دشواری‌های خود مفید است.</div>
+
+<h2 id="acceptance">پیام ۲: پذیرش هیجان</h2>
+<div class="key"><b class="k">پذیرش هیجان در نظام‌های روان‌شناختی جدید، جایگاه برجسته‌ای یافته است.</b>درمان پذیرش و تعهد (ACT) و «انعطاف‌پذیری روان‌شناختی» نمونه‌اند.</div>
+<p><b>پرسش‌نامهٔ پذیرش و عمل (AAQ-II)، ۷ گویه، ۱ تا ۷:</b> «تجارب و خاطرات دردناک من مانع زیستن زندگی‌ای می‌شوند که باارزش بدانم.» «از احساساتم می‌ترسم.» «نگرانم نتوانم نگرانی‌ها و احساساتم را کنترل کنم.» «خاطرات دردناکم مانع زندگی پربارم می‌شوند.» «هیجانات باعث مشکل در زندگی‌ام می‌شوند.» «به نظر می‌آید مردم بهتر از من با زندگی‌شان برخورد می‌کنند.» «نگرانی‌ها مانع موفقیتم می‌شوند.»<sup class="c"><a href="#r-aaq">[۴]</a></sup></p>
+<p><b>ایرادهای وارد بر AAQ-II:</b> بیشتر با آسیب‌شناسی عمومی و حتی افسردگی همبستگی دارد (حدود ۰٫۷)؛ جنبهٔ کنترل هیجان به منظور نیل به هدف در آن خیلی پررنگ نیست؛ و در ویراست اول تأکید بسیاری بر اجتناب هیجانی داشت.</p>
+<p><b>شاخص شخصی‌شدهٔ انعطاف‌پذیری روان‌شناختی (PPFI)</b> سه جزء را جدا می‌سنجد: <b>اجتناب</b>، <b>پذیرش</b> و <b>بهره‌برداری</b> (به کار گرفتن هیجان در خدمت هدف)<sup class="c"><a href="#r-ppfi">[۵]</a></sup>.</p>
+
+<h2 id="gross">مدل فرایندی گراس و تنظیم هیجان مثبت</h2>
+<div class="chain"><div class="box">انتخاب موقعیت</div><span class="arr">←</span><div class="box">تغییر موقعیت</div><span class="arr">←</span><div class="box">توجه و تمرکز</div><span class="arr">←</span><div class="box">تغییر شناختی</div><span class="arr">←</span><div class="box hl">تغییر پاسخ</div></div>
+<p>مثال کلاسیک: تصمیم به رفتن به قرار (انتخاب موقعیت)، خواستن میز کنار شومینه (تغییر موقعیت)، چشیدن هر لقمه (توجه)، فکر کردن به اینکه چقدر خوش‌شانسیم (تغییر شناختی)، ابراز لذت (تغییر پاسخ)<sup class="c"><a href="#r-gross">[۶]</a></sup>. <a class="w" data-t="gross">مدل فرایندی</a> همان‌قدر برای <b>افزایش هیجان مثبت</b> کاربرد دارد که برای کاهش منفی (کوئیدباخ، میکولایچاک و گراس، ۲۰۱۵)<sup class="c"><a href="#r-quoidbach">[۷]</a></sup>:</p>
+<div style="overflow-x:auto;max-width:100%"><table class="t"><thead><tr><th></th><th>انتخاب موقعیت</th><th>تغییر موقعیت</th><th>توجه</th><th>تغییر شناختی</th><th>تغییر پاسخ</th></tr></thead><tbody>
+<tr><td><b>قبل از سفر به رم</b></td><td>پس‌انداز برای سفر به‌جای خرید تلویزیون</td><td>یادگیری فرهنگ ایتالیا، تماس با دوستان مقیم</td><td>تصویرسازی وقایع خوشایند</td><td>«این سفر خیلی خوش خواهد گذشت و می‌ارزد»</td><td>زمزمهٔ آهنگ‌های ایتالیایی</td></tr>
+<tr><td><b>در زمان سفر</b></td><td>مرخصی در تابستان و روزهای خوب</td><td>انتخاب بهترین جاها برای دیدار</td><td>غرق شدن در لحظه‌ها (صحنه‌ها، عطرها، غذاها)</td><td>قدر لحظه را دانستن و تبریک گفتن به خود</td><td>خندیدن، شوخی، لبخند</td></tr>
+<tr><td><b>بعد از سفر</b></td><td>نگاه به عکس‌ها پس از بازگشت</td><td>دور انداختن عکس‌های ناشاد</td><td>مرور خاطرات (savoring)</td><td>یادآوری اینکه چه خوب شد رفتید</td><td>تعریف کردن تجربه برای دوستان</td></tr>
+</tbody></table></div>
+<ul>
+<li><b>عکس گرفتن برای اشتراک</b> (باراش، زوبرمن و دیل، ۲۰۱۸): وقتی هدف از عکاسی نشان دادن به دیگران است، نگرانی خودنمایانه بیشتر و درگیری و لذت از تجربه کمتر می‌شود<sup class="c"><a href="#r-barasch">[۸]</a></sup>.</li>
+<li><b>مالکیت:</b> مهارتی که به یادگیری پاداش می‌پردازد، یعنی دیدن نقش رفتار خود در رسیدن به پاداش.</li>
+<li><b>کاستن از لذت</b> (dampening): «زیاد خوش نباش، تمام می‌شود»؛ راهبردی که هیجان مثبت را کم می‌کند.</li>
+<li><b>سوغات و یادگاری</b>، و <b>سهیم کردن</b> (capitalization): در میان گذاشتن رویدادهای مثبت با دیگران، هم اثر فردی و هم بین‌فردی مثبت دارد (رایس و همکاران، ۲۰۱۰)<sup class="c"><a href="#r-reis">[۹]</a></sup>.</li>
+</ul>
+<p>جمع‌بندی شواهد: توجه و تغییر شناختی پیش، حین و پس از تجربه شواهد «قوی» دارند؛ تغییر پاسخ در حین و پس از تجربه هم؛ اما برای بسیاری از ترکیب‌ها شواهد «ناشناخته» است.</p>
+
+<h2 id="proactive">پیام ۳ و ۴: پیش‌دستانه</h2>
+<div class="key"><b class="k">تنظیم هیجان فقط اقدام در لحظهٔ بروز هیجان و حوالی آن نیست. بخش مهمی از آن پیش‌دستانه است، بسیار قبل‌تر از بروز رخ می‌دهد، و اقدامات پیش‌دستانه بسیار کارآمدند.</b></div>
+<p>کتاب «باردار هیجان» (اسمیت و گرندی) سه مرحله دارد: <b>پیش‌بینی</b> (چهار S پیش‌دستانه)، <b>مدیریت</b> (رهبر شجاع: تنفس، شناختن، پذیرفتن، اعتبار دادن، درگیر شدن) و <b>بازیابی</b> (سه R: بازتعبیر، بازسازی، تأمل)<sup class="c"><a href="#r-charged">[۱۰]</a></sup>.</p>
+<div class="cols2">
+<div class="card"><b class="h">۱. جست‌وجوی درون</b><span class="en">Search inside</span>تلنگرهای خود و نشانه‌هایشان در بدن را بشناسید: <b>آگاهی به نشانه‌های درونی</b> (تشنگی، ضربان قلب، سرعت تنفس، گرما و سرما، تنش عضلات). شناسایی تلنگرها: «چه چیزی مرا از کوره در می‌برد؟»</div>
+<div class="card"><b class="h">۲. تعبیهٔ تمرکز</b><span class="en">Set focus</span>ذهنیت درست را پیش از ورود به رویداد هیجانی بسازید: تجسم موفقیت، تأمل دربارهٔ پاسخ‌ها، تمرکز بر توانایی‌ها و نقاط قوت؛ «آمادگی برای اجرا». در پژوهش لاناج، فولک و ارز (۲۰۱۹)، <b>تأمل صبحگاهی رهبران</b> بر توانایی‌های خود انرژی و اثرگذاری آنان را در همان روز بالا برد<sup class="c"><a href="#r-lanaj19">[۱۱]</a></sup>.</div>
+<div class="card"><b class="h">۳. انتخاب میدان</b><span class="en">Select your battle</span>با شناخت خود تصمیم بگیرید وارد کدام موقعیت شوید یا نشوید. حتی <b>انتخاب توهمی</b> اثر دارد: در آزمایش‌های تویار و دن-گلاوزر (۲۰۲۰ و ۲۰۲۱)، وقتی شرکت‌کنندگان «انتخاب» می‌کردند کدام تصویر ناخوشایند (عنکبوت یا مار) را ببینند، حتی اگر انتخابشان رعایت نمی‌شد یا معنادار نبود، پاسخ فیزیولوژیک (کاهش ضربان قلب) تا حدی تنظیم می‌شد؛ هرچند لذت از تصاویر مثبت هم کمی کم شد<sup class="c"><a href="#r-thuillard">[۱۲]</a></sup>.</div>
+<div class="card"><b class="h">۴. تغییر دادن موقعیت</b><span class="en">Shift situation</span>موقعیت را طوری تغییر دهید که تلنگرها کمتر شوند. بونو و همکاران (۲۰۱۳): رویدادهای مثبت و تأمل مثبت در کار، استرس و فشار خون را کم کرد<sup class="c"><a href="#r-bono">[۱۳]</a></sup>.</div>
+</div>
+<div class="note"><b class="k">یادداشت ویراستار: پیوندها</b>این درس پل میان <a class="w" data-t="reappraisal">بازتعبیر</a> و ذهنیت‌ها (بازتعبیر و ذهنیت‌ها)، تنظیم هیجان در تغییر خویشتن و سرایت پیچیده (انعطاف و چندتنظیمی) و <a class="w" data-t="savor">مزه کردن</a> در روان‌شناسی مثبت است. شواهد برای راهبردهای «انتخاب موقعیت» محکم‌اند اما این راهبرد اگر به اجتناب همیشگی تبدیل شود، اضطراب را در درازمدت تقویت می‌کند؛ مرز «انتخاب هوشمند» و «اجتناب» را باید با ارزش‌ها و هدف‌ها سنجید.</div>
+
+<div class="nd-feel"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: هیجان و تنظیم آن</h3><ul><li class="nd-feel"><a href="s8.html" target="_blank" rel="noopener"><i></i>بازتعبیر و ذهنیت‌ها</a><small>بازتعبیر، تخلیهٔ ایگو و ذهنیت‌ها در خویشتنداری و تنظیم هیجان‌ها</small></li><li class="nd-feel"><a href="s5.html" target="_blank" rel="noopener"><i></i>خویشتنداری و انتخاب موقعیت</a><small>معمای تنظیم هیجان ۲: سوگیری زمان حال، آزمون مارشمالو، انتخاب موقعیت، مزدوج‌سازی هوس و بازی‌گونه‌سازی</small></li><li class="nd-feel"><a href="s10.html" target="_blank" rel="noopener"><i></i>خرده‌فرهنگ‌های سازمانی</a><small>خرده‌فرهنگ‌های سازمانی: نام‌گذاری عاطفی، قطع کلام، گفت‌وگو با غریبه‌ها و تعریف کردن</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-work"><a href="emolabor.html" target="_blank" rel="noopener"><i></i>کار عاطفی</a><small>کار و سازمان › سلامت روان در کار · مشترک: بازتعبیر</small></li><li class="nd-health"><a href="families.html" target="_blank" rel="noopener"><i></i>اعتیاد و خانواده</a><small>سلامت روان و درمان › اعتیاد · مشترک: تنظیم هیجان</small></li><li class="nd-health"><a href="crisis.html" target="_blank" rel="noopener"><i></i>بحران</a><small>سلامت روان و درمان › درمان، تروما و بحران · مشترک: تنظیم هیجان</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#7d4a86"><b>فلسفه</b>رواقیون می‌گفتند ما را رویدادها آزار نمی‌دهند، داوری ما دربارهٔ آن‌ها آزار می‌دهد؛ این همان ریشهٔ «بازتعبیر» است. <a href="graph.html#stoicism" target="_blank" rel="noopener">رواقی‌گری و ریشه‌های درمان شناختی ↗</a></div><div style="--xc:#4c5f7a"><b>علوم اعصاب</b>هیجان از پیش‌بینی مغز دربارهٔ حس‌های بدن ساخته می‌شود؛ محور استرس و مدار پاداش در آن نقش دارند. <a href="graph.html#n-affective" target="_blank" rel="noopener">علوم اعصاب عاطفی ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>قواعد نمایش هیجان را جامعه می‌نویسد؛ «کار عاطفی» هزینهٔ اجرای این قواعد در شغل است. <a href="graph.html#soc-work" target="_blank" rel="noopener">جامعه‌شناسی کار ↗</a></div><div style="--xc:#a3404f"><b>روان‌پزشکی</b>دشواری در تنظیم هیجان فرایندی مشترک در اضطراب، افسردگی و اعتیاد است. <a href="graph.html#mood" target="_blank" rel="noopener">اختلالات خلقی ↗</a></div></div><div class="worlds"><a href="land.html" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides">اسلایدهای ٔ «مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی»، دکتر آذرخش مکری، ۱۵ آذر ۱۴۰۴ (۷۲ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-hardy"><span class="ltr">Hardy, R., Fani, N., Jovanovic, T., &amp; Michopoulos, V. (2018). Food addiction and substance addiction in women: Common clinical characteristics. <i>Appetite, 120</i>, 367–373.</span></li>
+<li id="r-gratz"><span class="ltr">Gratz, K. L., &amp; Roemer, L. (2004). Multidimensional assessment of emotion regulation and dysregulation. <i>Journal of Psychopathology and Behavioral Assessment, 26</i>(1), 41–54.</span></li>
+<li id="r-aaq"><span class="ltr">Bond, F. W., Hayes, S. C., Baer, R. A., et al. (2011). Preliminary psychometric properties of the Acceptance and Action Questionnaire–II. <i>Behavior Therapy, 42</i>, 676–688.</span></li>
+<li id="r-ppfi"><span class="ltr">Kashdan, T. B., Disabato, D. J., Goodman, F. R., Doorley, J. D., &amp; McKnight, P. E. (2020). Understanding psychological flexibility: A multimethod exploration of pursuing valued goals despite the presence of distress. <i>Psychological Assessment, 32</i>(9), 829–850.</span></li>
+<li id="r-gross"><span class="ltr">Gross, J. J. (2015). Emotion regulation: Current status and future prospects. <i>Psychological Inquiry, 26</i>(1), 1–26.</span></li>
+<li id="r-quoidbach"><span class="ltr">Quoidbach, J., Mikolajczak, M., &amp; Gross, J. J. (2015). Positive interventions: An emotion regulation perspective. <i>Psychological Bulletin, 141</i>(3), 655–693.</span></li>
+<li id="r-barasch"><span class="ltr">Barasch, A., Zauberman, G., &amp; Diehl, K. (2018). How the intention to share can undermine enjoyment. <i>Journal of Consumer Research, 44</i>(6), 1220–1237.</span></li>
+<li id="r-reis"><span class="ltr">Reis, H. T., Smith, S. M., Carmichael, C. L., et al. (2010). Are you happy for me? <i>JPSP, 99</i>(2), 311–329.</span></li>
+<li id="r-charged"><span class="ltr">Smith, D. D., &amp; Grandey, A. A. <i>Emotionally Charged: How to Lead in the New World of Work</i>.</span></li>
+<li id="r-lanaj19"><span class="ltr">Lanaj, K., Foulk, T. A., &amp; Erez, A. (2019). Energizing leaders via self-reflection: A within-person field experiment. <i>Journal of Applied Psychology, 104</i>(1), 1–18.</span></li>
+<li id="r-thuillard"><span class="ltr">Thuillard, S., &amp; Dan-Glauser, E. S. (2021). Efficiency of illusory choice used as a variant of situation selection. <i>Applied Psychophysiology and Biofeedback, 46</i>, 115–132; Thuillard &amp; Dan-Glauser (2021). <i>International Journal of Psychophysiology, 162</i>, 130–144.</span></li>
+<li id="r-bono"><span class="ltr">Bono, J. E., Glomb, T. M., Shen, W., Kim, E., &amp; Koch, A. J. (2013). Building positive resources: Effects of positive events and positive reflection on work stress and health. <i>Academy of Management Journal, 56</i>(6), 1601–1627.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این جزوه از روی ۷۲ اسلاید ساخته شده است. گویه‌های پرسش‌نامه‌ها ترجمهٔ روی اسلایدهاست و برای آشنایی و تأمل‌اند، نه تشخیص. کادرهای «یادداشت ویراستار» افزوده شده‌اند.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"er": {"fa": "تنظیم هیجان", "en": "Emotion regulation", "d": "فرایندهایی که با آن‌ها بر اینکه چه هیجانی، کی و چگونه تجربه و ابراز شود اثر می‌گذاریم؛ نه حذف هیجان.", "rel": ["ders", "gross"], "s": "info", "g": "emotion-regulation"}, "ders": {"fa": "مقیاس دشواری در تنظیم هیجان", "en": "DERS", "d": "۳۶ گویه، شش زیرمقیاس (گرتز و رومر ۲۰۰۴).", "rel": ["er"], "s": "ders", "g": "emotion-regulation"}, "bpd": {"fa": "اختلال شخصیت مرزی", "en": "Borderline personality disorder", "d": "الگوی ناپایداری هیجان، رابطه و تصویر خود؛ هستهٔ آن در نگاه لینهان بدتنظیمی هیجان است.", "rel": ["er"], "s": "why", "g": "personality-disorders"}, "gross": {"fa": "مدل فرایندی تنظیم هیجان", "en": "Process model (Gross)", "d": "انتخاب موقعیت، تغییر موقعیت، توجه، تغییر شناختی و تغییر پاسخ.", "rel": ["er", "proactive"], "s": "gross", "g": "gross-model"}, "proactive": {"fa": "تنظیم هیجان پیش‌دستانه", "en": "Proactive emotion regulation", "d": "چهار S: جست‌وجوی درون، تعبیهٔ تمرکز، انتخاب میدان، تغییر موقعیت.", "rel": ["gross"], "s": "proactive", "g": "gross-model"}, "reappraisal": {"fa": "بازتعبیر", "en": "Reappraisal", "d": "تغییر معنای موقعیت برای تغییر هیجان.", "rel": [], "s": "proactive", "g": "reappraisal"}, "savor": {"fa": "مزه کردن", "en": "Savoring", "d": "توجه و ماندن با تجربهٔ مثبت برای گسترش لذت آن.", "rel": [], "s": "gross", "g": "savoring"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

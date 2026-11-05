@@ -1,0 +1,459 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>قفسهٔ درمان مبتنی بر فرایند</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-health">
+  <div class="brand">ویکی روان‌شناسی <small>مرور کتاب‌های ضمیمه</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-health" target="_blank" rel="noopener">سلامت روان و درمان</a><span class="sep">›</span><a class="tp" href="index.html#t-therapy" target="_blank" rel="noopener">درمان، تروما و بحران</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><a href="anhedonia.html" target="_blank" rel="noopener">بی‌لذتی</a><a href="crisis.html" target="_blank" rel="noopener">بحران</a><a href="trauma.html" target="_blank" rel="noopener">پایان تروما</a><span class="on" aria-current="page">قفسهٔ درمان فرایندی</span></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#beyond">فراتر از DSM</a></li>
+<li><a href="#pbt">یادگیری درمان مبتنی بر فرایند</a></li>
+<li><a href="#roadmap">نقشهٔ راه فراتشخیصی (فرانک و دیویدسون)</a></li>
+<li><a href="#agility">چابکی هیجانی (سوزان دیوید)</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>قفسهٔ درمان مبتنی بر فرایند و چابکی هیجانی</h1>
+<p class="lede-sub">اگر برچسب‌های تشخیصی برای درمان کافی نیستند، به جایشان چه بگذاریم؟ پاسخ این چهار کتاب: به جای پرسیدن «این فرد چه اختلالی دارد؟» بپرسیم «<b>چه فرایندهایی</b> رنج او را نگه می‌دارند و چطور می‌شود تغییرشان داد؟». این قفسه <a class="w" data-t="pbt">درمان مبتنی بر فرایند</a> هیز و هافمن، <a class="w" data-t="roadmap">نقشهٔ راه فراتشخیصی</a> فرانک و دیویدسون، و کتاب پرخوانندهٔ <a class="w" data-t="agility">چابکی هیجانی</a> سوزان دیوید را کنار هم می‌گذارد.</p>
+<aside class="infobox" aria-label="مشخصات"><div class="ib-h">کتاب‌های این قفسه</div><dl>
+<dt>۱</dt><dd>هیز و هافمن (ویراستاران): فراتر از DSM (۲۰۲۰)</dd>
+<dt>۲</dt><dd>هافمن، هیز و لورشاید: یادگیری درمان مبتنی بر فرایند (۲۰۲۱)</dd>
+<dt>۳</dt><dd>فرانک و دیویدسون: نقشهٔ راه فراتشخیصی (۲۰۱۴)</dd>
+<dt>۴</dt><dd>سوزان دیوید: چابکی هیجانی (۲۰۱۶)</dd>
+<dt>صفحه‌های مرتبط</dt><dd><a href="#" class="w" data-t="workshop">مرز میان سلامت و اختلال</a> · <a href="#" class="w" data-t="dim">قفسهٔ بهنجاری و تشخیص</a></dd>
+</dl></aside>
+
+<div class="simple"><b class="k">به زبان ساده</b><ul>
+<li>دو نفر با یک تشخیص (مثلاً افسردگی) ممکن است به دلیل‌های کاملاً متفاوتی رنج ببرند: یکی به خاطر نشخوار فکری، دیگری به خاطر اجتناب از هر چیز ترسناک.</li>
+<li>درمان مبتنی بر فرایند می‌گوید: به جای دنبال کردن یک دستورالعمل آماده برای «افسردگی»، ببینیم در زندگی <b>همین آدم</b> چه چیزهایی به هم وصل‌اند و کدام حلقه را باید شکست.</li>
+<li>چابکی هیجانی یعنی هیجان‌ها و فکرهای سخت را بپذیریم، از آن‌ها فاصله بگیریم، و باز هم به سمت چیزی که برایمان ارزش دارد حرکت کنیم.</li>
+</ul></div>
+
+<h2 id="beyond">فراتر از DSM</h2>
+<p><sup class="c"><a href="#r-beyond">[۱]</a></sup> استیون هیز (بنیان‌گذار درمان پذیرش و تعهد) و استفان هافمن (از چهره‌های اصلی درمان شناختی-رفتاری) در فصل نخست می‌نویسند: راهبرد «تشخیص سندرمی» میدانی پویا ساخت، اما اکنون به <b>بن‌بست</b> رسیده است. کمتر کسی باور دارد که با آزمودن پروتکل‌های بیشتر برای سندرم‌های DSM، علم درمان پیشرفت چشمگیری کند.</p>
+<div style="overflow-x:auto;max-width:100%">
+<table class="t">
+<tr><th>فصل</th><th>محتوا</th></tr>
+<tr><td>ساختن جایگزینی برای تشخیص سندرمی</td><td>ویژگی‌هایی که «فرایندهای تغییر» باید داشته باشند: قابل سنجش، قابل دستکاری، و مرتبط با پیامد.</td></tr>
+<tr><td>پروژهٔ RDoC</td><td>چارچوب پژوهشی مؤسسهٔ ملی سلامت روان آمریکا: حوزه‌های کارکردی (مانند سیستم پاداش یا تهدید) در سطوح ژن تا رفتار.</td></tr>
+<tr><td>تغییر پارادایم</td><td>از مدل «بیماری نهفته» به مدل‌های شبکه‌ای و سیستمی.</td></tr>
+<tr><td>آسیب‌پذیری‌ها و راهبردهای مقابله</td><td>اجتناب، نشخوار، سرکوب و دیگر پاسخ‌های فراتشخیصی.</td></tr>
+<tr><td>انتظار، یادگیری و زبان</td><td>نقش انتظارها و نظریهٔ چارچوب ارتباطی در ساختن رنج.</td></tr>
+<tr><td>فرهنگ و تفاوت فردی در هیجان</td><td>تنظیم هیجان در بافت فرهنگی.</td></tr>
+<tr><td>دیدگاه سیستم‌های پیچیده</td><td>رنج روانی به‌عنوان حالت پایدار یک شبکه.</td></tr>
+<tr><td>انعطاف‌پذیری روانی در درد مزمن</td><td>نمونهٔ کاربردی.</td></tr>
+<tr><td>ساختن یک نظام تشخیصی مبتنی بر فرایند</td><td>جمع‌بندی و پیشنهاد.</td></tr>
+</table></div>
+
+<h2 id="pbt">یادگیری درمان مبتنی بر فرایند</h2>
+<p><sup class="c"><a href="#r-learn">[۲]</a></sup> نویسندگان می‌گویند: «چیزی درست نیست. اندازهٔ اثر درمان‌ها بالا نمی‌رود و شیوع مشکلات روانی کم نمی‌شود.» <b>درمان مبتنی بر فرایند (PBT)</b> روش درمانی تازه‌ای نیست، بلکه <b>شیوهٔ تازه‌ای برای فکر کردن دربارهٔ روش‌های درمانی</b> است.</p>
+<h3>مدل فرا-تکاملی گسترده (EEMM)</h3>
+<p>مدلی برای سازمان دادن فرایندهای تغییر، با الهام از نظریهٔ تکامل:</p>
+<div class="cols2">
+<div class="card"><b class="h">شش بُعد روانی</b>شناخت، هیجان، توجه، خود، انگیزه، و رفتار آشکار.</div>
+<div class="card"><b class="h">دو سطح دیگر</b>زیستی-فیزیولوژیک و اجتماعی-فرهنگی.</div>
+<div class="card"><b class="h">چهار فرایند تکاملی</b><b>تنوع</b> (امتحان رفتارهای تازه)، <b>گزینش</b> (چه چیزی پاداش می‌گیرد)، <b>نگهداری</b> (چه چیزی عادت می‌شود)، و <b>حساسیت به بافت</b>.</div>
+<div class="card"><b class="h">سازگار در برابر ناسازگار</b>در هر بُعد، یک قطب انعطاف‌پذیر و یک قطب خشک وجود دارد؛ مثلاً در بُعد توجه: توجه منعطف به اکنون در برابر نشخوار و نگرانی.</div>
+</div>
+<ul>
+<li><b>رویکرد شبکه‌ای:</b> درمانگر با مراجع، نقشه‌ای از عوامل مرتبط می‌کشد (مثلاً بی‌خوابی ← خستگی ← کناره‌گیری ← تنهایی ← نشخوار ← بی‌خوابی) و حلقه‌هایی را پیدا می‌کند که بیشترین اثر را دارند.</li>
+<li><b>هسته‌های درمانی:</b> به جای پروتکل کامل، «کوچک‌ترین واحدهای مؤثر» درمان (مانند مواجهه، بازسازی شناختی، ذهن‌آگاهی، روشن کردن ارزش‌ها) را برای فرایند هدف انتخاب کنیم.</li>
+<li><b>از مشکل به شکوفایی:</b> هدف فقط کم کردن نشانه نیست، بلکه گسترش زندگی است.</li>
+</ul>
+<div class="note"><b class="k">یادداشت ویراستار</b>PBT جهت‌گیری امیدوارکننده‌ای است و با رویکردهای بُعدی (مانند <a class="w" data-t="hitop">هیتاپ</a>) هم‌سوست. اما هنوز شواهد کارآزمایی‌های بزرگ که نشان دهد درمان شخصی‌سازی‌شده بر پایهٔ فرایند از پروتکل‌های استاندارد بهتر است، محدود است؛ و ساختن شبکه‌های فردی معتبر از داده‌های روزانه، از نظر آماری دشوار است.</div>
+
+<h2 id="roadmap">نقشهٔ راه فراتشخیصی (فرانک و دیویدسون)</h2>
+<p><sup class="c"><a href="#r-roadmap">[۳]</a></sup> پیش‌گفتار کتاب از جکی پرسونز است که اعتراف می‌کند هنگام «برداشتن تکه‌هایی از چند پروتکل» برای بیمارانی با چند مشکل، نگران بوده کارش «غیرعلمی» باشد. این کتاب «جی‌پی‌اس» درمانگر برای همین موقعیت است. ایدهٔ اصلی: دو دسته <a class="w" data-t="trans">سازوکار فراتشخیصی</a>.</p>
+<div class="cols2">
+<div class="card"><b class="h">سازوکارهای آسیب‌پذیری</b>زمینه‌هایی که فرد را مستعد می‌کنند: آمادگی‌های عصبی-فیزیولوژیک (تنظیم برانگیختگی، کارکرد اجرایی، تنظیم هیجان، خواب)، پاسخ‌های آموخته‌شده (شرطی‌سازی، الگوبرداری)، باورهای فراگیر (طرحواره‌های منفی، باورهای فراشناختی)، و سازه‌های خاص (حساسیت اضطرابی، تحمل‌ناپذیری عدم قطعیت، کمال‌گرایی، ترس از ارزیابی، تحمل پریشانی).</div>
+<div class="card"><b class="h">سازوکارهای پاسخ</b>کارهایی که برای کنار آمدن انجام می‌دهیم و مشکل را نگه می‌دارند: اجتناب تجربه‌ای (فرار، رفتار ایمنی‌جو، اطمینان‌جویی، وسواس عملی، سرکوب فکر، اجتناب هیجانی)، ارزیابی‌های نادرست، تمرکز توجه، سوگیری اسنادی، و <a class="w" data-t="rum">فکر تکراری منفی</a> (نشخوار و نگرانی).</div>
+</div>
+<p>مراحل کار: سنجش و گردآوری داده ← ساختن «فرضیهٔ سازوکار» همراه با بیمار ← تعیین هدف‌ها ← انتخاب مداخله‌ها ← اجرا ← ارزیابی پیشرفت و تغییر مسیر. اصول پایه: <b>تجربه‌گرایی مشارکتی</b> و <b>رابطهٔ درمانی به‌عنوان بستر تغییر</b>. کاربرگ‌های کتاب در پیوست آمده‌اند.</p>
+
+<h2 id="agility">چابکی هیجانی (سوزان دیوید)</h2>
+<p><sup class="c"><a href="#r-david">[۴]</a></sup> سوزان دیوید، روان‌شناس دانشکدهٔ پزشکی هاروارد، کتابش را با داستانی آشنا آغاز می‌کند: ناخدایی که به «کشتی» روبه‌رو دستور می‌دهد مسیرش را عوض کند، و پاسخ می‌شنود: «من فانوس دریایی هستم.» خشکی ذهنی یعنی اصرار بر مسیری که دیگر با واقعیت جور نیست.</p>
+<div class="chain"><span class="box">گیر افتادن</span><span class="arr">←</span><span class="box">حاضر شدن</span><span class="arr">←</span><span class="box">فاصله گرفتن</span><span class="arr">←</span><span class="box">زندگی بر پایهٔ «چرا»ی خود</span><span class="arr">←</span><span class="box">پیش رفتن</span></div>
+<ul>
+<li><b>گیر افتادن:</b> فکرها را واقعیت بدانیم، از هیجان‌ها فرار کنیم یا در آن‌ها غرق شویم. دو روش نادرست رایج: «بطری کردن» (سرکوب) و «جوشیدن» (نشخوار).</li>
+<li><b>حاضر شدن:</b> با کنجکاوی و مهربانی به هیجان‌ها نگاه کنیم؛ نام‌گذاری دقیق هیجان‌ها (به جای «استرس دارم») کمک می‌کند.</li>
+<li><b>فاصله گرفتن:</b> «من دارم فکر می‌کنم که شکست‌خورده‌ام» به جای «من شکست‌خورده‌ام».</li>
+<li><b>زندگی بر پایهٔ «چرا»:</b> روشن کردن ارزش‌ها؛ ارزش‌ها مانند قطب‌نما هستند، نه مقصد.</li>
+<li><b>پیش رفتن:</b> اصل «تغییرهای کوچک» (تغییر ذهنیت، انگیزه و عادت با گام‌های کوچک) و اصل «الاکلنگ» (تعادل میان چالش و توانایی؛ نه آن‌قدر آسان که کسل‌کننده، نه آن‌قدر سخت که فلج‌کننده).</li>
+<li>فصل‌های پایانی: چابکی هیجانی در محیط کار و در تربیت کودکان.</li>
+</ul>
+<p>سه پیام کلیدی که در سخنرانی <a class="w" data-t="rise">فراتر برو</a> هم آمد: هیجان‌ها گذرا هستند؛ هیجان‌ها تعریف‌کنندهٔ شما نیستند؛ هیجان‌ها <b>داده</b>اند، نه <b>دستور</b>.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>«چابکی هیجانی» کتابی عمومی است که بیشتر بر پایهٔ درمان پذیرش و تعهد و پژوهش‌های تنظیم هیجان نوشته شده؛ خود مفهوم «چابکی هیجانی» به‌عنوان یک سازهٔ سنجش‌پذیر، پژوهش مستقل کمتری دارد.</div>
+
+<div class="nd-health"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: درمان، تروما و بحران</h3><ul><li class="nd-health"><a href="anhedonia.html" target="_blank" rel="noopener"><i></i>بی‌لذتی</a><small>بی‌لذتی</small></li><li class="nd-health"><a href="crisis.html" target="_blank" rel="noopener"><i></i>بحران</a><small>سلامت روان در بحران و حمله</small></li><li class="nd-health"><a href="trauma.html" target="_blank" rel="noopener"><i></i>پایان تروما</a><small>پایان تروما</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-self"><a href="riseabove.html" target="_blank" rel="noopener"><i></i>فراتر برو</a><small>خود و رشد › معنا، امید و بهزیستی · مشترک: چابکی هیجانی</small></li><li class="nd-feel"><a href="shelf7.html" target="_blank" rel="noopener"><i></i>قفسهٔ هیجان</a><small>هیجان و ذهن › هیجان و تنظیم آن · مشترک: فرایندهای فراتشخیصی</small></li><li class="nd-self"><a href="happiness.html" target="_blank" rel="noopener"><i></i>ریشه‌های شادکامی</a><small>خود و رشد › معنا، امید و بهزیستی · مشترک: رویکرد بُعدی به مشکلات روانی</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#7d4a86"><b>فلسفه</b>رواقی‌گری ریشهٔ درمان شناختی است؛ فلسفهٔ وجودی ریشهٔ درمان‌های انسان‌گرا. <a href="graph.html#stoicism" target="_blank" rel="noopener">رواقی‌گری و ریشه‌های درمان شناختی ↗</a></div><div style="--xc:#4c5f7a"><b>علوم اعصاب</b>درمان مؤثر هم مغز را تغییر می‌دهد؛ انعطاف‌پذیری عصبی پایهٔ تغییر است. <a href="graph.html#n-plasticity" target="_blank" rel="noopener">نوروپلاستیسیتی ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>خانواده و شبکهٔ حمایت، بخشی از درمان‌اند، نه فقط پس‌زمینهٔ آن. <a href="graph.html#soc-family" target="_blank" rel="noopener">جامعه‌شناسی خانواده ↗</a></div></div><div class="worlds"><a href="land.html#process-based-therapy" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html#process-based-therapy" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-beyond"><span class="ltr">Hayes, S. C., &amp; Hofmann, S. G. (Eds.). (2020). <i>Beyond the DSM: Toward a Process-Based Alternative for Diagnosis and Mental Health Treatment</i>. Context Press / New Harbinger.</span> <span class="badge">ضمیمه</span></li>
+<li id="r-learn"><span class="ltr">Hofmann, S. G., Hayes, S. C., &amp; Lorscheid, D. N. (2021). <i>Learning Process-Based Therapy: A Skills Training Manual for Targeting the Core Processes of Psychological Change in Clinical Practice</i>. Context Press / New Harbinger.</span> <span class="badge">ضمیمه</span></li>
+<li id="r-roadmap"><span class="ltr">Frank, R. I., &amp; Davidson, J. (2014). <i>The Transdiagnostic Road Map to Case Formulation and Treatment Planning</i>. New Harbinger.</span> <span class="badge">ضمیمه</span></li>
+<li id="r-david"><span class="ltr">David, S. (2016). <i>Emotional Agility: Get Unstuck, Embrace Change, and Thrive in Work and Life</i>. Avery / Penguin.</span> <span class="badge">ضمیمه</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این مرور از روی فهرست مطالب، مقدمه‌ها و بخش‌های کلیدی کتاب‌ها ساخته شده است. این کتاب‌ها در کارگاه «مرز میان سلامت و اختلال» به‌طور کوتاه معرفی شده بودند؛ اینجا با جزئیات بیشتر آمده‌اند.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · مرور کتاب‌های ضمیمه</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"pbt": {"fa": "درمان مبتنی بر فرایند", "en": "Process-based therapy", "d": "هدف گرفتن فرایندهای تغییر در هر فرد، به جای پروتکل برای هر تشخیص (هیز و هافمن).", "rel": ["roadmap", "trans", "dim"], "s": "pbt", "g": "process-based-therapy"}, "roadmap": {"fa": "نقشهٔ راه فراتشخیصی", "en": "Transdiagnostic road map", "d": "صورت‌بندی بر پایهٔ سازوکارهای آسیب‌پذیری و پاسخ (فرانک و دیویدسون).", "rel": ["pbt", "trans"], "s": "roadmap", "g": "process-based-therapy"}, "trans": {"fa": "سازوکار فراتشخیصی", "en": "Transdiagnostic mechanism", "d": "فرایندی که در چند اختلال مشترک است، مانند اجتناب یا نشخوار.", "rel": ["pbt"], "s": "roadmap", "g": "transdiagnostic"}, "agility": {"fa": "چابکی هیجانی", "en": "Emotional agility", "d": "هیجان‌ها داده‌اند، نه دستور (سوزان دیوید).", "rel": ["pbt"], "s": "agility", "g": "emotional-agility"}, "rum": {"fa": "فکر تکراری منفی", "en": "Repetitive negative thinking", "d": "نشخوار و نگرانی.", "rel": ["trans"], "s": "roadmap", "g": "rumination"}, "hitop": {"fa": "هیتاپ", "en": "HiTOP", "d": "طبقه‌بندی بُعدی آسیب‌شناسی روانی.", "rel": ["pbt"], "s": "pbt", "g": "hitop"}, "dim": {"fa": "قفسهٔ بهنجاری و تشخیص", "en": "Dimensional approach", "d": "ابعاد به جای مقوله‌ها.", "rel": ["pbt"], "s": "beyond", "g": "dimensional-dx"}, "workshop": {"fa": "مرز میان سلامت و اختلال", "en": "Health and disorder", "d": "کارگاه دوروزه.", "rel": ["pbt"], "s": "beyond", "g": "hitop"}, "rise": {"fa": "فراتر برو", "en": "Rise above", "d": "سخنرانی دربارهٔ ذهنیت قربانی و رشد.", "rel": ["agility"], "s": "agility", "g": "victim-mindset"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

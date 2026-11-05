@@ -1,0 +1,665 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>بازتعبیر و تخلیهٔ ایگو</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-feel">
+  <div class="brand">ویکی روان‌شناسی <small>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-feel" target="_blank" rel="noopener">هیجان و ذهن</a><span class="sep">›</span><a class="tp" href="index.html#t-emotion" target="_blank" rel="noopener">هیجان و تنظیم آن</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><a href="s4.html" target="_blank" rel="noopener">معمای تنظیم هیجان</a><a href="s5.html" target="_blank" rel="noopener">خویشتنداری و انتخاب موقعیت</a><span class="on" aria-current="page">بازتعبیر و ذهنیت‌ها</span><a href="s10.html" target="_blank" rel="noopener">خرده‌فرهنگ‌های سازمانی</a><a href="s14.html" target="_blank" rel="noopener">هوش هیجانی</a><a href="s15.html" target="_blank" rel="noopener">هیجان مثبت و انگیزه</a><a href="envy.html" target="_blank" rel="noopener">حسادت</a><a href="shelf7.html" target="_blank" rel="noopener">قفسهٔ هیجان</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#recap">مرور </a></li>
+<li><a href="#process">مدل فرایندی گراس</a></li>
+<li><a href="#reappraisal">بازتعبیر: «من هیجان‌زده‌ام»</a></li>
+<li><a href="#mindsets">ذهنیت‌ها: وقتی باور فیزیولوژی را تغییر می‌دهد</a></li>
+<li><a href="#stress">ذهنیت استرس</a></li>
+<li><a href="#emodiversity">تنوع هیجانی: زیست‌بوم هیجان‌ها</a></li>
+<li><a href="#stereotype">تهدید کلیشه‌ای</a></li>
+<li><a href="#ego">تخلیهٔ ایگو: آیا اراده تمام می‌شود؟</a></li>
+<li><a href="#belonging">تعلق گروهی</a></li>
+<li><a href="#keys">جمع‌بندی: شش نکتهٔ کلیدی</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>بازتعبیر، تخلیهٔ ایگو و ذهنیت‌ها در خویشتنداری و تنظیم هیجان‌ها</h1>
+<p class="lede-sub">چطور یک برچسب، یک جمله یا یک باور می‌تواند ضربان قلب، قند خون، نمرهٔ ریاضی و حتی وزن ما را تغییر دهد؛ و چرا ایدهٔ مشهور «ارادهٔ محدود» امروز زیر سؤال است. این جزوه از روی اسلایدهای درس و مقاله‌ها و کتاب‌های معرفی‌شده تنظیم شده و با رسیدن متن گفتاری کامل‌تر می‌شود.</p>
+<aside class="infobox" aria-label="مشخصات صفحه"><div class="ib-h">بازتعبیر و ذهنیت‌ها در یک نگاه</div><dl>
+<dt>دوره</dt><dd>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی (۱۵ درس)</dd>
+<dt>مدرس</dt><dd>دکتر آذرخش مکری</dd>
+<dt>محورها</dt><dd>مدل فرایندی گراس، بازتعبیر، ذهنیت‌ها، ذهنیت استرس، تنوع هیجانی، تهدید کلیشه‌ای، تخلیهٔ ایگو، تعلق گروهی</dd>
+<dt>نکات کلیدی</dt><dd>شش «نکتهٔ آبی» درس در <a href="#keys">بخش جمع‌بندی</a></dd>
+</dl></aside>
+
+<p><sup class="c"><a href="#r-slides">[۱]</a></sup> ادامهٔ بحث <a class="w" data-t="emotion-regulation">تنظیم هیجان</a> و <a class="w" data-t="self-control">خویشتنداری</a> است. پرسش محوری: آیا راهی هست که بدون سرکوب هیجان، اثر آن را عوض کنیم؟ پاسخ درس سه ابزار است: <b>بازتعبیر</b> (معنای موقعیت را عوض کن)، <b>ذهنیت</b> (باورت دربارهٔ آن پدیده را عوض کن) و <b>تنوع هیجانی</b> (خزانهٔ هیجان‌هایت را گسترده کن). در نیمهٔ دوم، دو پدیدهٔ سازمانیِ مهم بررسی می‌شود: تهدید کلیشه‌ای و تخلیهٔ ایگو.</p>
+
+<h2 id="recap">مرور </h2>
+<p>درس با فهرستی از مفاهیم جلسهٔ پیش آغاز شد (اسلاید ۳). تغییر خویشتن و سرایت پیچیده هنوز به ویکی اضافه نشده؛ این تعریف‌های کوتاه از ویراستار است تا پیوند دو درس روشن بماند.</p>
+<table class="t">
+<tr><th>مفهوم</th><th>معادل</th><th>در یک جمله</th></tr>
+<tr><td>سرایت ساده</td><td class="ltr">Simple contagion</td><td>رفتار یا اطلاعاتی که با یک بار تماس منتقل می‌شود (مثل یک خبر).</td></tr>
+<tr><td><a class="w" data-t="complex-contagion">سرایت مرکب</a></td><td class="ltr">Complex contagion</td><td>رفتاری که برای پذیرفته شدن به تأیید چند منبع نزدیک نیاز دارد (دیمون سنتولا).</td></tr>
+<tr><td>تعمق جزیره‌گونه</td><td class="ltr">Enclave deliberation</td><td>بحث درون گروه هم‌فکر که دیدگاه‌ها را افراطی‌تر می‌کند (کاس سانستین).</td></tr>
+<tr><td>مناسک ورود</td><td class="ltr">Initiation ceremonies</td><td>آیین‌های سخت ورود که تعهد و تعلق به گروه را بالا می‌برند.</td></tr>
+<tr><td>داربست اجتماعی</td><td class="ltr">Social scaffolding</td><td>تکیه بر دیگران برای تنظیم هیجان و رفتار.</td></tr>
+<tr><td>راهکارهای درگیرسازی و جداسازی</td><td class="ltr">Engagement / disengagement</td><td>روبه‌رو شدن با هیجان (تأمل، تغییر موقعیت، بازتعبیر) یا فاصله گرفتن از آن (حواس‌پرتی، سرکوب، انتخاب موقعیت).</td></tr>
+<tr><td>تنوع، تنظیم چندگانه، خزانه</td><td class="ltr">Variability / polyregulation / repertoire</td><td>استفادهٔ هم‌زمان یا متناوب از چند راهکار به جای یک راهکار ثابت.</td></tr>
+<tr><td>حساسیت به محیط، انعطاف</td><td class="ltr">Context sensitivity / flexibility</td><td>انتخاب راهکار متناسب با موقعیت؛ هیچ راهکاری همیشه خوب نیست.</td></tr>
+<tr><td>فراشناخت</td><td class="ltr">Metacognition</td><td>آگاهی از اینکه دارم چه می‌کنم و آیا مؤثر است.</td></tr>
+</table>
+<div class="cols2" style="margin-top:12px">
+<div class="card"><b class="h">راهکارهای جداسازی</b><span class="en">Disengagement strategies</span>حواس‌پرتی · سرکوب · انتخاب موقعیت</div>
+<div class="card"><b class="h">راهکارهای درگیرسازی</b><span class="en">Engagement strategies</span>تأمل · تغییر موقعیت · بازتعبیر</div>
+</div>
+
+<h2 id="process">مدل فرایندی گراس</h2>
+<p>جیمز گراس (استنفورد) تنظیم هیجان را روی یک خط زمانی می‌چیند: هیجان از موقعیت شروع می‌شود، توجه ما را می‌گیرد، تعبیر می‌شود و به پاسخ می‌رسد. در هر نقطه می‌توان مداخله کرد (اسلاید ۵)<sup class="c"><a href="#r-gross">[۲]</a></sup>.</p>
+<figure><div class="chain">
+<div class="box">انتخاب موقعیت<br><small>تصمیم به رفتن به یک قرار</small></div><span class="arr">←</span>
+<div class="box">تغییر موقعیت<br><small>میزی کنار شومینه</small></div><span class="arr">←</span>
+<div class="box">توجه و تمرکز<br><small>چشیدن تک‌تک لقمه‌ها</small></div><span class="arr">←</span>
+<div class="box hl">تغییر شناختی<br><small>«چه خوش‌شانسم»</small></div><span class="arr">←</span>
+<div class="box">تغییر پاسخ<br><small>ابراز لذت</small></div>
+</div><figcaption>شکل ۱. مدل فرایندی تنظیم هیجان با مثال یک قرار عاشقانه (اسلاید ۵؛ گراس). «بازتعبیر» در جایگاه تغییر شناختی است: پیش از آنکه پاسخ هیجانی کامل شکل بگیرد.</figcaption></figure>
+<div class="note"><b class="k">یادداشت ویراستار</b>نکتهٔ مهم مدل گراس این است که راهکارهای «پیشایند» (چهار مرحلهٔ اول) معمولاً کم‌هزینه‌ترند تا راهکارهای «پاسخ‌محور». سرکوب ابراز هیجان (مرحلهٔ آخر) در پژوهش‌های گراس و جان (۲۰۰۳) با حافظهٔ ضعیف‌تر، روابط کم‌کیفیت‌تر و بهزیستی پایین‌تر همراه بود؛ بازتعبیر برعکس.<sup class="c"><a href="#r-grossjohn">[۳]</a></sup></div>
+
+<h2 id="reappraisal">بازتعبیر: «من هیجان‌زده‌ام»</h2>
+<div class="note"><b class="k">تعریف</b><a class="w" data-t="reappraisal">بازتعبیر</a> «نوعی تغییر شناختی است که در آن شرایطِ ایجادکنندهٔ هیجان به‌گونه‌ای ساخته یا بازسازی می‌شوند که اثر هیجانی آن متفاوت گردد» (اسلاید ۸).</div>
+<h3>آرام باش یا هیجان‌زده باش؟</h3>
+<p>توصیهٔ رایج در برابر اضطراب «آرام باش» است (پوستر معروف <i>Keep calm and carry on</i>، اسلاید ۷). آلیسون وود بروکس (مدرسهٔ کسب‌وکار هاروارد) پرسید: اگر کسی دربارهٔ اضطراب امتحان از شما راهنمایی بخواهد چه می‌گویید؟ (اسلاید ۹)<sup class="c"><a href="#r-brooks">[۴]</a></sup></p>
+<div class="cols2">
+<div class="card"><b class="h">توصیه به دیگری</b>۸۵٪ می‌گویند «سعی کن آرام باشی».</div>
+<div class="card"><b class="h">کار خودمان</b>۹۱٪ سعی می‌کنند آرام باشند؛ ۱٫۳٪ از امتحان انصراف می‌دهند؛ فقط ۷٫۷٪ سعی می‌کنند هیجان‌زده باشند.</div>
+</div>
+<p>اما آرام شدن از اضطراب سخت است، چون هر دو حالت برانگیختگی بالا دارند و آرامش برانگیختگی پایین. در عوض، <a class="w" data-t="anxiety-excitement">بازتعبیر اضطراب به هیجان</a> فقط «ارزش» حالت را عوض می‌کند و برانگیختگی را دست‌نخورده می‌گذارد. بروکس این را در سه آزمایش سنجید:</p>
+<h3>مطالعهٔ ۱: کارائوکه</h3>
+<p>شرکت‌کنندگان پیش از خواندن آواز با کنسول Wii جلوی آزمایشگر باید بلند می‌گفتند «مضطربم» یا «هیجان‌زده‌ام» یا چیزی نمی‌گفتند. نرم‌افزار دقت آواز را می‌سنجید (اسلایدهای ۱۰ و ۱۱).</p>
+<figure><div class="hb"><span class="t">«مضطربم»</span><div class="track"><div class="fill f-bad" style="width:53.0%;"></div></div><span class="v">۵۳.۰٪</span></div>
+<div class="hb"><span class="t">بدون جمله</span><div class="track"><div class="fill " style="width:69.3%;background:var(--link)"></div></div><span class="v">۶۹.۳٪</span></div>
+<div class="hb"><span class="t">«هیجان‌زده‌ام»</span><div class="track"><div class="fill f-good" style="width:80.5%;"></div></div><span class="v">۸۰.۵٪</span></div>
+<figcaption>شکل ۲. دقت آواز در سه شرط (بروکس ۲۰۱۴، مطالعهٔ ۱؛ اسلاید ۱۰).</figcaption></figure>
+<h3>مطالعهٔ ۲: سخنرانی دو دقیقه‌ای</h3>
+<p>«در دو دقیقه بگویید چرا همکار خوبی هستید» (اسلاید ۱۲). کسانی که پیش از سخنرانی گفتند «هیجان‌زده‌ام» در مقایسه با «آرامم»، از نظر داوران متقاعدکننده‌تر، شایسته‌تر، مطمئن‌تر و پیگیرتر بودند و سخنرانی‌شان طولانی‌تر شد (۲٫۷۴ در برابر ۲٫۱۲ دقیقه؛ اسلاید ۱۳).</p>
+<h3>مطالعهٔ ۳: ریاضی زیر فشار</h3>
+<p>در آزمون ریاضی، بازتعبیر به هیجان عملکرد را بهتر کرد، اما <b>ضربان قلب در سه گروه تفاوتی نداشت</b> (اسلاید ۱۴). یعنی بدن همچنان برانگیخته بود؛ آنچه تغییر کرد تعبیر ذهن از این برانگیختگی بود.</p>
+<div class="note"><b class="k">پیوند با دنیای روان</b>همین منطق در «<a class="w" data-t="stress-mindset">ذهنیت استرس</a>» و «<a class="w" data-t="stereotype-threat">چالش در برابر تهدید</a>» تکرار می‌شود. برانگیختگی بدنی دشمن نیست؛ برچسبی که رویش می‌زنیم تعیین می‌کند به سود ما کار کند یا علیه ما.</div>
+
+<h2 id="mindsets">ذهنیت‌ها: وقتی باور فیزیولوژی را تغییر می‌دهد</h2>
+<p><a class="w" data-t="mindset">ذهنیت</a> در کار آلیا کرام (استنفورد) یعنی چارچوب یا عینکی که با آن به یک پدیده نگاه می‌کنیم و انتظار و پاسخ ما را شکل می‌دهد. اسلایدها چهار پژوهش از آزمایشگاه او و همکارانش را مرور کردند (اسلایدهای ۱۵ تا ۲۹).</p>
+<h3>۱. میلک‌شیک و گرلین (۲۰۱۱)</h3>
+<p>شرکت‌کنندگان در دو نوبت یک میلک‌شیک یکسان ۳۸۰ کالری خوردند؛ یک بار با برچسب «زیاده‌روی: لذتی که حقت است» (۶۲۰ کالری) و یک بار با برچسب «سِنسی‌شیک: رضایت بی‌عذاب وجدان» (۱۴۰ کالری). <a class="w" data-t="ghrelin">گرلین</a>، هورمون گرسنگی، پس از برچسب «پرکالری» افت بسیار شدیدتری داشت؛ گویی بدن «باور کرده بود» سیر شده است (اسلایدهای ۱۶ تا ۱۹)<sup class="c"><a href="#r-crum2011">[۵]</a></sup>.</p>
+<h3>۲. قند خون و قند ادراک‌شده (۲۰۲۰)</h3>
+<p>پارک، پانینی و لنگر به بیماران دیابت نوع ۲ نوشیدنی یکسانی دادند (۶۲ کالری، ۱۵ گرم قند) که برچسبش یا «کم‌قند» (۰ کالری) بود یا «پرقند» (۱۲۴ کالری). قند خون گروه «پرقند» در ۲۰، ۴۰ و ۶۰ دقیقه بالاتر رفت؛ یعنی متابولیسم گلوکز بیشتر به قندِ <b>ادراک‌شده</b> پاسخ داد تا قند واقعی (اسلایدهای ۲۰ تا ۲۲)<sup class="c"><a href="#r-park2020">[۶]</a></sup>.</p>
+<h3>۳. نام‌گذاری متمرکز بر طعم (۲۰۱۹)</h3>
+<p>ترنوالد و کرام در رستوران‌های دانشگاهی نشان دادند برچسب‌های «سالم» (مثلاً «سبزیجات پرفیبر با سس میسوی مغذی») کمتر از برچسب‌های «خوشمزه» («چوب‌شورهای ترد سبزیجات با دیپ میسوی وسوسه‌انگیز») انتخاب می‌شوند. برچسب طعم‌محور هم انتخاب سبزیجات را بالا برد و هم این اثر در طول ۴۰ روز پایدار ماند، درحالی‌که اثر برچسب سلامت‌محور به‌تدریج افت کرد (اسلایدهای ۲۳ تا ۲۶)<sup class="c"><a href="#r-turnwald">[۷]</a></sup>.</p>
+<figure><div class="hb"><span class="t">سالاد «سبک و سالم»</span><div class="track"><div class="fill " style="width:70.0%;background:var(--link)"></div></div><span class="v">~۷۰٪</span></div>
+<div class="hb"><span class="t">سالاد «لذیذ و مجلل»</span><div class="track"><div class="fill f-good" style="width:83.0%;"></div></div><span class="v">~۸۳٪</span></div>
+<div class="hb"><span class="t">ساندویچ «انتخاب سالم»</span><div class="track"><div class="fill " style="width:33.0%;background:var(--link)"></div></div><span class="v">~۳۳٪</span></div>
+<div class="hb"><span class="t">ساندویچ «دهان‌آب‌انداز»</span><div class="track"><div class="fill f-good" style="width:61.0%;"></div></div><span class="v">~۶۱٪</span></div>
+<figcaption>شکل ۳. درصد تقریبی انتخاب‌کنندگان هر غذا با برچسب سلامت‌محور (خاکستری) و طعم‌محور (سبز)؛ خوانده‌شده از نمودار اسلاید ۲۵.</figcaption></figure>
+<h3>۴. مستخدمان هتل (۲۰۰۷)</h3>
+<p>کرام و لنگر به ۸۴ مستخدم هتل در هفت هتل گفتند کار روزانه‌شان (مرتب کردن تخت، جاروکشی) خودش ورزش کافی است و طبق توصیه‌های بهداشتی «فعال» به حساب می‌آیند. گروه کنترل این اطلاعات را نگرفت. چهار هفته بعد، رفتار بیرون از کار تغییری نکرده بود، اما گروه آگاه‌شده کار خود را ورزش می‌دانستند و وزن، شاخص تودهٔ بدن، درصد چربی، نسبت دور کمر به باسن و فشار خون‌شان کاهش یافته بود (اسلایدهای ۲۷ تا ۲۹)<sup class="c"><a href="#r-crumlanger">[۸]</a></sup>.</p>
+<div class="note"><b class="k">یادداشت ویراستار: احتیاط</b>مطالعهٔ مستخدمان هتل کوچک بود و تکرارهای بعدی نتایج یکسانی نداشتند؛ ممکن است گروه آگاه‌شده در کار، بی‌آنکه گزارش کنند، فعال‌تر شده باشند. پیام اصلی (انتظار بر پاسخ بدن اثر دارد) با ادبیات <a class="w" data-t="placebo">دارونما</a> هم‌خوان است، اما اندازهٔ اثرها را باید با احتیاط خواند.</div>
+<div class="key"><b class="k">نکتهٔ کلیدی ۱</b>بازتعبیر وقایع و اقدامات ابزار مهم و کلیدی در خزانهٔ خویشتنداری و تنظیم هیجان است (اسلاید ۳۰).</div>
+
+<h2 id="stress">ذهنیت استرس</h2>
+<p>کرام، سالووی و آکور (۲۰۱۳) دو ذهنیت را از هم جدا کردند (اسلایدهای ۳۱ و ۳۲)<sup class="c"><a href="#r-crum2013">[۹]</a></sup>:</p>
+<div class="cols2">
+<div class="card"><b class="h">استرس ناتوان‌کننده است</b><span class="en">Stress-is-debilitating</span>استرس به سلامت، یادگیری و کارایی آسیب می‌زند و باید از آن پرهیز کرد.</div>
+<div class="card"><b class="h">استرس بالابرنده و تقویت‌کننده است</b><span class="en">Stress-is-enhancing</span>استرس می‌تواند تمرکز، یادگیری، رشد و کارکرد را بهتر کند و باید از آن استفاده کرد.</div>
+</div>
+<h3>مقیاس ذهنیت استرس</h3>
+<p>هشت گویه، از ۰ (کاملاً مخالف) تا ۴ (کاملاً موافق). نسخهٔ عمومی (SMM-G) دربارهٔ استرس به‌طور کلی است و نسخهٔ اختصاصی (SMM-S) دربارهٔ یک عامل استرس مشخص (اسلایدهای ۳۳ و ۳۴). گویه‌های ۱، ۳، ۵ و ۷ معکوس نمره‌گذاری می‌شوند.</p>
+<ol class="tight">
+<li>اثرات استرس منفی هستند و باید از آن اجتناب کرد.</li>
+<li>تجربهٔ استرس باعث بهتر شدن یادگیری و رشد من می‌شود.</li>
+<li>تجربهٔ استرس سلامت و سرزندگی من را تحلیل می‌برد.</li>
+<li>استرس کارکرد و زایایی من را افزایش می‌دهد.</li>
+<li>تجربهٔ استرس مانع رشد و یادگیری در من می‌شود.</li>
+<li>استرس سلامت و انرژی من را بهبود می‌بخشد.</li>
+<li>استرس کارکرد و توانایی تولید من را خالی می‌کند.</li>
+<li>اثرات استرس مثبت هستند و باید مورد استفاده قرار گیرند.</li>
+</ol>
+<p>جدول اسلاید ۳۵ شواهد هر دو ذهنیت را در سه حوزه کنار هم می‌گذارد: <b>سلامت</b> (استرس با بیماری قلبی، دیابت و چاقی مرتبط است / استرس می‌تواند ایمنی را تقویت کند و «شکوفایی فیزیولوژیک» بسازد)، <b>یادگیری و رشد</b> (فرسودگی، کاهش عزت نفس / رشد پس از آسیب و تقویت اولویت‌ها) و <b>عملکرد</b> (فروپاشی ورزشکاران و خطای پزشکان / تصمیم‌های درخشان رهبران در بحران، خلبانی که روی رود هادسون نشست).</p>
+<h3>آزمایش ویدئو در بحران مالی</h3>
+<p>در اوج بحران مالی ۲۰۰۸، کارکنان یک مؤسسهٔ مالی بزرگ سه ویدئوی کوتاه دیدند که یا استرس را «تقویت‌کننده» نشان می‌داد یا «ناتوان‌کننده». گروه «تقویت‌کننده» در هفته‌های بعد ذهنیت مثبت‌تر، علائم جسمی کمتر و عملکرد کاری بهتری گزارش کردند (اسلاید ۳۶).</p>
+<div class="key"><b class="k">نکتهٔ کلیدی ۲</b>در جهت اصلاح ذهنیت استرس اقدام کنید (اسلاید ۳۷).</div>
+<div class="note"><b class="k">یادداشت ویراستار: در عمل</b>اصلاح ذهنیت استرس به معنای انکار استرس یا تحمل هر فشاری نیست. کرام سه گام پیشنهاد می‌کند: (۱) استرس را <b>بپذیر و نام‌گذاری کن</b>؛ (۲) آن را به چیزی که برایت مهم است <b>وصل کن</b> («این استرس هست چون این کار برایم مهم است»)؛ (۳) از انرژی آن برای همان هدف <b>استفاده کن</b>. در سازمان، این ذهنیت باید با کاهش واقعی فشارهای بی‌دلیل همراه شود، وگرنه به ابزار سرزنش کارکنان بدل می‌شود.</div>
+
+<h2 id="emodiversity">تنوع هیجانی: زیست‌بوم هیجان‌ها</h2>
+<p>کوئیدباخ و همکاران (۲۰۱۴) از استعارهٔ <b>تنوع زیستی</b> وام گرفتند (اسلاید ۳۹): همان‌طور که زیست‌بومی با گونه‌های متنوع پایدارتر است، زندگی هیجانیِ متنوع هم شاید سالم‌تر باشد. <a class="w" data-t="emodiversity">تنوع هیجانی</a> یعنی تجربهٔ گسترهٔ وسیع و متعادلی از هیجان‌ها، چه مثبت و چه منفی. در نمونه‌ای بیش از ۳۷ هزار نفری، تنوع هیجانی بیشتر با افسردگی کمتر همراه بود، و در نمونه‌ای دیگر با مراجعه به پزشک و مصرف دارو کمتر؛ مستقل از میانگین هیجان مثبت و منفی<sup class="c"><a href="#r-quoidbach">[۱۰]</a></sup>.</p>
+<figure><svg class="curve" viewBox="0 0 520 210" role="img" aria-label="دو دایرهٔ هیجان: تنوع کم با چند هیجان غالب، تنوع زیاد با سهم‌های برابر">
+<g transform="translate(130,100)">
+<path d="M0,0 L0,-80 A80,80 0 0,1 76,25 Z" fill="var(--good)" opacity=".9"/>
+<path d="M0,0 L76,25 A80,80 0 0,1 -47,65 Z" fill="var(--good)" opacity=".55"/>
+<path d="M0,0 L-47,65 A80,80 0 0,1 -80,0 Z" fill="var(--bad)" opacity=".8"/>
+<path d="M0,0 L-80,0 A80,80 0 0,1 0,-80 Z" fill="var(--bad)" opacity=".45"/>
+</g>
+<g transform="translate(390,100)">
+<path d="M0,0 L0,-80 A80,80 0 0,1 57,-57 Z" fill="var(--good)" opacity=".95"/>
+<path d="M0,0 L57,-57 A80,80 0 0,1 80,0 Z" fill="var(--good)" opacity=".75"/>
+<path d="M0,0 L80,0 A80,80 0 0,1 57,57 Z" fill="var(--good)" opacity=".55"/>
+<path d="M0,0 L57,57 A80,80 0 0,1 0,80 Z" fill="var(--good)" opacity=".35"/>
+<path d="M0,0 L0,80 A80,80 0 0,1 -57,57 Z" fill="var(--bad)" opacity=".95"/>
+<path d="M0,0 L-57,57 A80,80 0 0,1 -80,0 Z" fill="var(--bad)" opacity=".7"/>
+<path d="M0,0 L-80,0 A80,80 0 0,1 -57,-57 Z" fill="var(--bad)" opacity=".5"/>
+<path d="M0,0 L-57,-57 A80,80 0 0,1 0,-80 Z" fill="var(--bad)" opacity=".3"/>
+</g>
+<text x="130" y="200" text-anchor="middle">تنوع هیجانی کم</text><text x="390" y="200" text-anchor="middle">تنوع هیجانی زیاد</text>
+</svg><figcaption>شکل ۴. طرح ساده‌شدهٔ نمودار کوئیدباخ (اسلاید ۴۰): سبزها هیجان‌های مثبت (شادی، عشق، قدردانی، هیبت...) و قرمزها منفی (خشم، ترس، شرم، گناه...). میانگین «چقدر خوب» در دو دایره می‌تواند یکی باشد؛ تفاوت در تعداد و تعادل برش‌هاست.</figcaption></figure>
+<h3>سه مؤلفهٔ مفید هیجانی (اسلاید ۴۱)</h3>
+<div class="cols2">
+<div class="card"><b class="h"><a class="w" data-t="granularity">دانه‌داری هیجان</a></b><span class="en">Emotional granularity</span>توانایی تمایز ظریف میان هیجان‌ها: به جای «بدم»، تشخیص اینکه «دلخورم» یا «نگرانم» یا «شرمنده‌ام». لیزا فلدمن بارت نشان داد دانه‌داری بیشتر با تنظیم هیجان بهتر همراه است.</div>
+<div class="card"><b class="h"><a class="w" data-t="dialecticism">همگامی هیجانی</a></b><span class="en">Emotional covariation (dialecticism)</span>تجربهٔ هم‌زمان هیجان مثبت و منفی (تلخ‌وشیرین)؛ در فرهنگ‌های شرق آسیا رایج‌تر و با آسیب‌پذیری کمتر در برابر هیجان منفی همراه است.</div>
+<div class="card"><b class="h"><a class="w" data-t="emodiversity">تنوع هیجانی</a></b><span class="en">Emodiversity</span>گسترهٔ و تعادل هیجان‌های تجربه‌شده.</div>
+<div class="card"><b class="h">پیوند با درس‌ها دیگر</b>«<a class="w" data-t="psych-rich">زندگی غنی روانی</a>» در کارگاه مرز سلامت و اختلال، و «خزانه» یا تنظیم چندگانه در تغییر خویشتن و سرایت پیچیده.</div>
+</div>
+<div class="key"><b class="k">نکتهٔ کلیدی ۳</b>تنوع و داشتن خزانهٔ پیچیدهٔ هیجانی عنصر مهمی در خویشتنداری، انعطاف‌پذیری و کارآمدی است (اسلاید ۴۲).</div>
+
+<h2 id="stereotype">تهدید کلیشه‌ای</h2>
+<div class="note"><b class="k">تعریف</b><a class="w" data-t="stereotype-threat">تهدید کلیشه‌ای</a>: (۱) باورهای نهادینه و گسترده‌ای دربارهٔ برخی گروه‌ها وجود دارد؛ (۲) یادآوری یا هرگونه اشاره به عضویت فرد در آن گروه به فعال شدن آن باورها منجر می‌شود و عملکرد او را پایین می‌آورد (اسلاید ۴۷).</div>
+<p>مفهوم را کلود استیل (متولد ۱۹۴۶؛ میشیگان، استنفورد، کلمبیا، برکلی) و جاشوا آرونسون در ۱۹۹۵ معرفی کردند: دانشجویان سیاه‌پوست وقتی آزمون کلامی «سنجش توانایی ذهنی» معرفی می‌شد عملکرد پایین‌تری داشتند تا وقتی همان آزمون «تمرین حل مسئله» نامیده می‌شد (اسلاید ۴۸)<sup class="c"><a href="#r-steele">[۱۱]</a></sup>. کتاب ویراستهٔ اینزلیکت و اشمیدر مرجع جامع این حوزه است (اسلاید ۴۶)<sup class="c"><a href="#r-inzlicht">[۱۲]</a></sup>.</p>
+<h3>ورزشکاران و گلف (۱۹۹۹)</h3>
+<p>استون و همکاران یک تکلیف گلف را سه جور معرفی کردند: آزمون «توانایی ورزشی طبیعی»، آزمون «هوش راهبردی ورزشی» یا بدون توضیح. کلیشهٔ رایج در آمریکا: سیاه‌پوستان «استعداد طبیعی» دارند و سفیدپوستان «هوش ورزشی» (اسلایدهای ۴۹ تا ۵۱)<sup class="c"><a href="#r-stone">[۱۳]</a></sup>.</p>
+<table class="t">
+<tr><th>تعداد ضربه (کمتر = بهتر)</th><th>توانایی طبیعی</th><th>هوش ورزشی</th><th>کنترل</th></tr>
+<tr><td>شرکت‌کنندگان سیاه‌پوست</td><td class="n">۲۳٫۱</td><td class="n"><b>۲۷٫۲</b></td><td class="n">۲۲٫۱</td></tr>
+<tr><td>شرکت‌کنندگان سفیدپوست</td><td class="n"><b>۲۷٫۸</b></td><td class="n">۲۳٫۳</td><td class="n">۲۴٫۶</td></tr>
+</table>
+<p>هر گروه وقتی ضعیف‌تر شد که آزمون به حوزهٔ «کلیشهٔ منفی» خودش ربط داده شد. اسلاید ۵۰ هم یادآوری کرد که نرخ ترک تحصیل دانشگاهی در آمریکا برای دانشجویان آفریقایی‌تبار ۷۰٪ و برای سفیدپوستان ۴۲٪ گزارش شده است.</p>
+<h3>تصمیم‌های مالی (۲۰۱۰)</h3>
+<p>کار و استیل نشان دادند وقتی کلیشهٔ جنسیتی «زنان در ریاضی و پول ضعیف‌اند» فعال شود، زنان در انتخاب‌های مالی <b>ریسک‌گریزتر</b> و <b>زیان‌گریزتر</b> می‌شوند و مردان کمی برعکس؛ در شرط بی‌ربط تفاوتی دیده نشد (اسلایدهای ۵۲ تا ۵۴)<sup class="c"><a href="#r-carr">[۱۴]</a></sup>.</p>
+<figure><div class="hb"><span class="t">مرد، شرط بی‌ربط</span><div class="track"><div class="fill " style="width:55.0%;background:var(--link)"></div></div><span class="v">~۶.۶</span></div>
+<div class="hb"><span class="t">زن، شرط بی‌ربط</span><div class="track"><div class="fill " style="width:50.0%;background:var(--link)"></div></div><span class="v">~۶</span></div>
+<div class="hb"><span class="t">مرد، کلیشه فعال</span><div class="track"><div class="fill " style="width:31.7%;background:var(--link)"></div></div><span class="v">~۳.۸</span></div>
+<div class="hb"><span class="t">زن، کلیشه فعال</span><div class="track"><div class="fill f-bad" style="width:70.8%;"></div></div><span class="v">~۸.۵</span></div>
+<figcaption>شکل ۵. تعداد انتخاب‌های کم‌ریسک (ریسک‌گریزی)، خوانده‌شده از نمودار اسلاید ۵۳.</figcaption></figure>
+<div class="key"><b class="k">نکتهٔ کلیدی ۴</b>کماکان تهدید کلیشه‌ای یکی از فرایندهای تأثیرگذار بر فرد و سازمان‌هاست (اسلاید ۵۵).</div>
+<h3>پادزهر: چالش در برابر تهدید</h3>
+<p>آدام آلتر (نویسندهٔ «مقاومت‌ناپذیر»، «صورتی مست» و «آناتومی یک پیشرفت») و همکاران (۲۰۱۰) همان آزمون را با دو جملهٔ متفاوت معرفی کردند (اسلایدهای ۴۳ تا ۴۵ و ۵۶ تا ۶۰)<sup class="c"><a href="#r-alter">[۱۵]</a></sup>:</p>
+<div class="cols2">
+<div class="card"><b class="h">قاب تهدید</b>این آزمون نشان می‌دهد «الان در این نوع کار چقدر خوب هستید».</div>
+<div class="card"><b class="h">قاب چالش</b>«کار روی این مسائل ممکن است در مدرسه خیلی کمک کند، چون ذهن را تیز می‌کند و یادگیری ریاضی به درس‌هایتان کمک می‌کند».</div>
+</div>
+<figure><div class="hb"><span class="t">تهدید + یادآوری نژاد</span><div class="track"><div class="fill f-bad" style="width:37.7%;"></div></div><span class="v">۳۷.۷٪</span></div>
+<div class="hb"><span class="t">تهدید، بدون یادآوری</span><div class="track"><div class="fill " style="width:59.2%;background:var(--link)"></div></div><span class="v">۵۹.۲٪</span></div>
+<div class="hb"><span class="t">چالش + یادآوری نژاد</span><div class="track"><div class="fill f-good" style="width:66.7%;"></div></div><span class="v">۶۶.۷٪</span></div>
+<div class="hb"><span class="t">چالش، بدون یادآوری</span><div class="track"><div class="fill " style="width:55.9%;background:var(--link)"></div></div><span class="v">۵۵.۹٪</span></div>
+<figcaption>شکل ۶. درصد پاسخ درست دانش‌آموزان سیاه‌پوست در آزمون ریاضی پایان سال (آلتر و همکاران ۲۰۱۰، آزمایش ۱؛ اسلاید ۵۹). قاب چالش اثر یادآوری نژاد را نه‌تنها خنثی کرد، بلکه وارونه کرد.</figcaption></figure>
+<p>در آزمایش دوم با دانشجویان پرینستون، «برجستگی» با یادآوری تعداد هم‌کلاسی‌های دبیرستان‌شان که به دانشگاه رفته بودند دست‌کاری شد. دانشجویانی که از مدارس کم‌نماینده آمده بودند در قاب تهدید ۷۲٫۲٪ و در قاب چالش ۹۱٪ پاسخ درست داشتند (اسلاید ۶۰).</p>
+<div class="note"><b class="k">یادداشت ویراستار: در سازمان</b>آنچه از این پژوهش‌ها به مدیریت و آموزش می‌رسد: ارزیابی‌ها را «فرصت یادگیری» قاب کنید نه «سنجش استعداد ذاتی»؛ از یادآوری غیرضروری هویت گروهی پیش از آزمون پرهیز کنید (مثلاً پرسش جنسیت در ابتدای فرم)؛ نمونه‌های موفق از همان گروه را دیدنی کنید؛ و به جای «استعداد ثابت»، رشد را بستایید. تکرارهای اخیر نشان داده‌اند اندازهٔ اثر تهدید کلیشه‌ای در شرایط واقعی کوچک‌تر از آزمایش‌های اولیه است، اما همچنان معنادار و در گروه‌های واقعاً در معرض، مهم است.</div>
+
+<h2 id="ego">تخلیهٔ ایگو: آیا اراده تمام می‌شود؟</h2>
+<p>روی باومایستر (نویسندهٔ «اراده»، «شر»، «آیا مردان خوبی هم دارند؟» و «جنسیت انسانی»؛ اسلایدهای ۶۲ تا ۶۴) نظریه‌ای مطرح کرد که دهه‌ها بر روان‌شناسی خویشتنداری سایه انداخت: خویشتنداری مثل ماهیچه از یک منبع محدود تغذیه می‌کند و با استفاده خسته می‌شود. این خستگی را <a class="w" data-t="ego-depletion">تخلیهٔ ایگو</a> نامید.</p>
+<h3>فعالیت‌های پرهزینهٔ روانی (اسلاید ۶۵)</h3>
+<ul class="tight">
+<li>استمرار در کار و تلاش · مقاومت در برابر خستگی · دقت و تمرکز · مقاومت در برابر درد</li>
+<li>کنترل هوس و تکانه · انجام امور ناخوشایند اما مفید · دوری از قضاوت شتاب‌زده و سطحی · انتخاب فعال در مقابل انتخاب منفعل</li>
+</ul>
+<p>ابزارهای سنجش در این آزمایش‌ها: معماهای ردیابی حل‌نشدنی (کشیدن شکل بدون برداشتن قلم)، دست در آب یخ، فنر دستی (handgrip) و آزمون <a class="w" data-t="stroop">استروپ</a> (اسلایدهای ۶۶ تا ۶۹).</p>
+<h3>تربچه و شکلات (۱۹۹۸)</h3>
+<p>دانشجویان گرسنه در اتاقی با بوی شیرینی تازه نشستند. گروهی اجازه داشتند شکلات و کلوچه بخورند؛ گروهی باید فقط تربچه می‌خوردند و در برابر شیرینی مقاومت می‌کردند؛ گروه سوم هیچ خوراکی نداشت. سپس همه روی معمای حل‌نشدنی کار کردند (اسلایدهای ۷۰ تا ۷۴)<sup class="c"><a href="#r-baumeister1998">[۱۶]</a></sup>.</p>
+<table class="t">
+<tr><th>گروه</th><th>زمان پافشاری (دقیقه)</th><th>دفعات تلاش</th></tr>
+<tr><td>تربچه (مقاومت در برابر وسوسه)</td><td class="n"><b>۸٫۳۵</b></td><td class="n">۱۹٫۴۰</td></tr>
+<tr><td>شکلات</td><td class="n">۱۸٫۹۰</td><td class="n">۳۴٫۲۹</td></tr>
+<tr><td>بدون خوراکی</td><td class="n">۲۰٫۸۶</td><td class="n">۳۲٫۸۱</td></tr>
+</table>
+<p>در آزمایش دوم همان مقاله، نوشتن سخنرانیِ مخالف باور خود <b>با آزادی انتخاب</b> پافشاری بعدی را کم کرد؛ اما وقتی انتخابی در کار نبود، چنین اثری دیده نشد (اسلایدهای ۷۵ و ۷۶).</p>
+<table class="t">
+<tr><th>شرط</th><th>زمان پافشاری (دقیقه)</th></tr>
+<tr><td>سخنرانی موافق، با آزادی انتخاب</td><td class="n">۱۳٫۸۰</td></tr>
+<tr><td>سخنرانی مخالف، با آزادی انتخاب</td><td class="n">۱۴٫۳۰</td></tr>
+<tr><td>سخنرانی مخالف، بدون آزادی انتخاب</td><td class="n">۲۳٫۱۱</td></tr>
+<tr><td>بدون سخنرانی</td><td class="n">۲۵٫۳۰</td></tr>
+</table>
+<h3>انتخاب کردن هم خسته می‌کند (۲۰۰۸)</h3>
+<p>ووس، باومایستر و همکاران به گروهی گفتند از میان تی‌شرت، شامپو، شمع، جوراب و آب‌نبات پشت سر هم انتخاب کنند؛ گروه دیگر فقط محصولات را ارزیابی کردند (اسلایدهای ۷۷ تا ۷۹). انتخاب‌کنندگان بعداً<sup class="c"><a href="#r-vohs2008">[۱۷]</a></sup>:</p>
+<ul class="tight">
+<li>دست را کوتاه‌تر در آب یخ نگه داشتند: ۲۷٫۷ در برابر ۶۷٫۴ ثانیه (اسلاید ۸۱)؛</li>
+<li>از نوشیدنی بدمزه اما «مفید» کمتر نوشیدند: ۲٫۶ در برابر ۷٫۶۷ اونس (اسلاید ۸۰)؛</li>
+<li>در معماهای ردیابی تفاوت زمان پافشاری ۹٫۱۱ در برابر ۱۲٫۲۵ دقیقه بود (اسلاید ۸۲).</li>
+</ul>
+<h3>فقر و تصمیم (اسلاید ۸۳)</h3>
+<p>در پژوهشی در هند (دین اسپیرز، ۲۰۱۱)، تصمیم‌گیری دربارهٔ خرید صابون پیش از آزمون فنر دستی، برای افراد ثروتمند فرقی نکرد، اما افراد فقیر پس از تصمیم خرید زودتر فنر را رها کردند (حدود ۷۰ در برابر ۱۲۰ ثانیه). برای فقیر، هر خرید کوچک تصمیمی پرهزینه است.<sup class="c"><a href="#r-spears">[۱۸]</a></sup></p>
+<div class="note"><b class="k">آنچه طبق این نظریه اثر چشمگیر در کاهش توان «ایگو» دارد (اسلاید ۸۴)</b>مهار تکانه · مهار هیجان · انتخاب کردن و تصمیم‌گیری · اجتناب از پاسخ‌های خودکار</div>
+<h3>اما شاید همه‌اش در ذهن باشد</h3>
+<p>جاب، دوک و والتن (۲۰۱۰) پرسیدند آیا <b>باور</b> به محدود بودن اراده خودش علت است؟ فقط کسانی که باور داشتند اراده منبعی محدود است، پس از تکلیف خسته‌کننده خطای بیشتری در استروپ داشتند؛ کسانی که اراده را نامحدود می‌دانستند پس از تکلیف خسته‌کننده حتی کمی بهتر شدند (اسلایدهای ۸۵ و ۸۶)<sup class="c"><a href="#r-job">[۱۹]</a></sup>. کلارکسون و همکاران (۲۰۱۱) هم نشان دادند <b>خستگی ادراک‌شده</b>، مستقل از خستگی واقعی، حافظهٔ کاری را کم یا زیاد می‌کند (اسلایدهای ۸۷ و ۸۸)<sup class="c"><a href="#r-clarkson">[۲۰]</a></sup>.</p>
+<h3>نه سوخت، بلکه انگیزه: بهره‌برداری در برابر جست‌وجوگری</h3>
+<p>اینزلیکت، اشمایکل و مکری (۲۰۱۴) پیشنهاد کردند خویشتنداری «به نظر» محدود می‌آید نه چون سوختش تمام می‌شود، بلکه چون پس از کارِ «باید» (have-to) انگیزه و توجه ما به سوی کارِ «می‌خواهم» (want-to) می‌چرخد. ترازوی اسلاید ۸۹: یک کفه <a class="w" data-t="explore-exploit">بهره‌برداری</a>، کار و «باید»؛ کفهٔ دیگر جست‌وجوگری، فراغت و «می‌خواهم» (اسلایدهای ۸۹ تا ۹۱)<sup class="c"><a href="#r-inzlicht2014">[۲۱]</a></sup>.</p>
+<h3>بحران تکرارپذیری</h3>
+<p>آزمون‌های بزرگ‌تر اثر را نیافتند. در پژوهش چندمرکزی پیش‌ثبت‌شدهٔ ووس و همکاران (۲۰۲۱)، ۳۵۳۱ نفر در ۳۶ آزمایشگاه با دو تکلیف استاندارد (نوشتن متنی بدون استفاده از حروف خاص؛ و آزمون <a class="w" data-t="cet">برآورد شناختی</a> با پرسش‌هایی مثل «یک هندوانه چند دانه دارد؟») شرکت کردند. اندازهٔ اثر نزدیک صفر بود: d حدود ۰٫۰۶ (اسلایدهای ۹۷ تا ۱۰۱)<sup class="c"><a href="#r-vohs2021">[۲۲]</a></sup>. ویمر و همکاران (۲۰۱۹) هم نشان دادند تکلیف رایج «خط زدن حروف» (مثلاً خط زدن هر e که کنار حرف صدادار نیست) شاخص مناسبی برای تخلیهٔ ایگو نیست (اسلایدهای ۹۲ تا ۹۶)<sup class="c"><a href="#r-wimmer">[۲۳]</a></sup>.</p>
+<figure><svg class="curve" viewBox="0 0 520 150" role="img" aria-label="اندازهٔ اثر تخلیهٔ ایگو در پژوهش‌های اولیه و تکرارهای بزرگ">
+<line x1="20" y1="120" x2="300" y2="120"/><line x1="40" y1="20" x2="40" y2="126"/>
+<text x="40" y="140" text-anchor="middle">۰</text><text x="160" y="140" text-anchor="middle">۰٫۴</text><text x="280" y="140" text-anchor="middle">۰٫۸</text>
+<line x1="160" y1="116" x2="160" y2="124"/><line x1="280" y1="116" x2="280" y2="124"/>
+<line x1="210" y1="40" x2="262" y2="40" stroke="var(--bad)" stroke-width="2"/><circle cx="226" cy="40" r="7" fill="var(--bad)"/>
+<line x1="30" y1="72" x2="64" y2="72" stroke="var(--link)" stroke-width="2"/><circle cx="52" cy="72" r="7" fill="var(--link)"/>
+<line x1="34" y1="100" x2="82" y2="100" stroke="var(--link)" stroke-width="2"/><circle cx="58" cy="100" r="7" fill="var(--link)"/>
+<text x="510" y="44" direction="rtl" text-anchor="start">فراتحلیل اولیه، ۲۰۱۰ (حدود ۰٫۶۲)</text>
+<text x="510" y="76" direction="rtl" text-anchor="start">تکرار ۲۳ آزمایشگاه، ۲۰۱۶ (حدود ۰٫۰۴)</text>
+<text x="510" y="104" direction="rtl" text-anchor="start">تکرار ۳۶ آزمایشگاه، ۲۰۲۱ (حدود ۰٫۰۶)</text>
+</svg><figcaption>شکل ۷. اندازهٔ اثر (d) تخلیهٔ ایگو: از فراتحلیل اولیهٔ هاگر و همکاران (۲۰۱۰) تا تکرارهای پیش‌ثبت‌شده. طرح ساده‌شدهٔ ویراستار؛ عدد ۲۰۲۱ از اسلاید ۹۸.</figcaption></figure>
+<div class="note"><b class="k">یادداشت ویراستار</b>فرضیهٔ «گلوکز سوخت اراده است» (گایلیوت و همکاران، ۲۰۰۷) هم نقد جدی شد: مغز در یک تکلیف کوتاه گلوکز قابل‌توجهی مصرف نمی‌کند و حتی مزه کردن محلول قندی بدون بلعیدن آن اثر داشت، یعنی سازوکار انگیزشی است نه سوختی. تکرار رسمی هاگر و همکاران (۲۰۱۶) در ۲۳ آزمایشگاه با بیش از دو هزار شرکت‌کننده اثری نزدیک صفر یافت<sup class="c"><a href="#r-hagger2016">[۲۴]</a></sup>.</div>
+<div class="key"><b class="k">نکتهٔ کلیدی ۵</b>سایهٔ سنگین پدیدهٔ تخلیهٔ ایگو بر مدیریت خویشتن و رفتار سازمانی کماکان وجود دارد (اسلاید ۱۰۲).</div>
+<p>یعنی حتی اگر اثر آزمایشگاهی ضعیف باشد، <b>باور</b> به آن در سازمان‌ها زنده است و رفتار می‌سازد: «امروز خیلی تصمیم گرفتم، دیگر نمی‌کشم». یافتهٔ جاب و دوک نشان می‌دهد همین باور است که می‌تواند ما را خسته‌تر کند.</p>
+
+<h2 id="belonging">تعلق گروهی</h2>
+<p>درس با کتاب «تعلق» جفری کوهن (استنفورد) به پایان رسید (اسلایدهای ۱۰۳ و ۱۰۴)<sup class="c"><a href="#r-cohen">[۲۵]</a></sup>. کوهن نشان می‌دهد احساس تعلق، یا تهدید آن، چگونه رفتار، یادگیری و سلامت را شکل می‌دهد و چطور مداخله‌های کوچک می‌توانند آن را تقویت کنند.</p>
+<h3>گروه‌های حداقلی</h3>
+<p>هانری تاجفل (۱۹۱۹–۱۹۸۲) نوجوانان را بر پایهٔ معیاری بی‌معنا (مثلاً ترجیح نقاشی‌های کله یا کاندینسکی) به دو گروه تقسیم کرد. همین برچسب پوچ کافی بود تا افراد پاداش بیشتری به «گروه خود» بدهند، حتی به قیمت کمتر شدن سود مطلق خودشان؛ پایهٔ <a class="w" data-t="minimal-groups">نظریهٔ هویت اجتماعی</a> (اسلاید ۱۰۵)<sup class="c"><a href="#r-tajfel">[۲۶]</a></sup>.</p>
+<div class="note"><b class="k">یادداشت ویراستار: بابون‌ها</b>تصویر بابون‌ها (اسلاید ۱۰۶) احتمالاً به «دستهٔ جنگل» رابرت ساپولسکی اشاره دارد: وقتی نرهای پرخاشگر یک دستهٔ بابون پس از خوردن گوشت آلوده مردند، فرهنگ دسته آرام‌تر شد و این فرهنگ تا سال‌ها پس از آن، حتی با ورود نرهای تازه، پایدار ماند. یعنی فضای عاطفی یک گروه آموختنی و قابل تغییر است<sup class="c"><a href="#r-sapolsky">[۲۷]</a></sup>.</div>
+<div class="key"><b class="k">نکتهٔ کلیدی ۶</b>بخشی از تنوع هیجانی با تعلق گروهی و اثرات مثبت آن ارتباط دارد (اسلاید ۱۰۷).</div>
+<div class="note"><b class="k">یادداشت ویراستار: مداخلهٔ تعلق</b>والتن و کوهن (۲۰۱۱) به دانشجویان سال اول گفتند «احساس نگرانی دربارهٔ تعلق در آغاز دانشگاه رایج و موقتی است» و از آن‌ها خواستند برای دانشجویان بعدی بنویسند. این مداخلهٔ یک‌ساعته معدل دانشجویان سیاه‌پوست را در سه سال بعد بالا برد و شکاف را تقریباً نصف کرد<sup class="c"><a href="#r-walton">[۲۸]</a></sup>. پیوند با تهدید کلیشه‌ای روشن است: هر دو دربارهٔ این‌اند که «آیا جای من اینجاست؟».</div>
+
+<h2 id="keys">جمع‌بندی: شش نکتهٔ کلیدی</h2>
+<ol>
+<li>بازتعبیر وقایع و اقدامات ابزار مهم و کلیدی در خزانهٔ خویشتنداری و تنظیم هیجان است.</li>
+<li>در جهت اصلاح ذهنیت استرس اقدام کنید.</li>
+<li>تنوع و داشتن خزانهٔ پیچیدهٔ هیجانی عنصر مهمی در خویشتنداری، انعطاف‌پذیری و کارآمدی است.</li>
+<li>کماکان تهدید کلیشه‌ای یکی از فرایندهای تأثیرگذار بر فرد و سازمان‌هاست.</li>
+<li>سایهٔ سنگین پدیدهٔ تخلیهٔ ایگو بر مدیریت خویشتن و رفتار سازمانی کماکان وجود دارد.</li>
+<li>بخشی از تنوع هیجانی با تعلق گروهی و اثرات مثبت آن ارتباط دارد.</li>
+</ol>
+<h3>تمرین‌های پیشنهادی (ویراستار)</h3>
+<ul class="tight">
+<li><b>پیش از ارائه یا جلسهٔ سخت:</b> به جای «آرام باش»، با صدای بلند بگویید «هیجان‌زده‌ام».</li>
+<li><b>دفترچهٔ دانه‌داری:</b> یک هفته، هر شب سه هیجان روز را با دقیق‌ترین واژه‌ای که پیدا می‌کنید بنویسید.</li>
+<li><b>ذهنیت استرس:</b> مقیاس هشت‌گویه‌ای را برای یک عامل استرس مشخص در کارتان پر کنید و ببینید کدام گویه‌ها را می‌توان با شواهد واقعی بازنویسی کرد.</li>
+<li><b>در سازمان:</b> ارزیابی‌ها و آزمون‌ها را با قاب «چالش و یادگیری» معرفی کنید و تصمیم‌های مهم را به ساعت‌هایی منتقل کنید که انگیزه بالاست، نه لزوماً «سوخت».</li>
+</ul>
+
+<div class="nd-feel"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: هیجان و تنظیم آن</h3><ul><li class="nd-feel"><a href="s5.html" target="_blank" rel="noopener"><i></i>خویشتنداری و انتخاب موقعیت</a><small>معمای تنظیم هیجان ۲: سوگیری زمان حال، آزمون مارشمالو، انتخاب موقعیت، مزدوج‌سازی هوس و بازی‌گونه‌سازی</small></li><li class="nd-feel"><a href="s10.html" target="_blank" rel="noopener"><i></i>خرده‌فرهنگ‌های سازمانی</a><small>خرده‌فرهنگ‌های سازمانی: نام‌گذاری عاطفی، قطع کلام، گفت‌وگو با غریبه‌ها و تعریف کردن</small></li><li class="nd-feel"><a href="s4.html" target="_blank" rel="noopener"><i></i>معمای تنظیم هیجان</a><small>معمای تنظیم هیجان: DERS، پذیرش، مدل گراس، هیجان مثبت و چهار S پیش‌دستانه</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-work"><a href="emolabor.html" target="_blank" rel="noopener"><i></i>کار عاطفی</a><small>کار و سازمان › سلامت روان در کار · مشترک: بازتعبیر، تنوع هیجانی</small></li><li class="nd-body"><a href="body.html" target="_blank" rel="noopener"><i></i>نقشهٔ بدن و روان</a><small>بدن، تکامل و جنسیت › مغز، بدن و تکامل · مشترک: تنظیم هیجان، انتظار، دارونما و ادراک خطا</small></li><li class="nd-health"><a href="clinical.html" target="_blank" rel="noopener"><i></i>قفسهٔ بالینی</a><small>سلامت روان و درمان › مرز سلامت و اختلال · مشترک: بازتعبیر، ذهنیت استرس</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#7d4a86"><b>فلسفه</b>رواقیون می‌گفتند ما را رویدادها آزار نمی‌دهند، داوری ما دربارهٔ آن‌ها آزار می‌دهد؛ این همان ریشهٔ «بازتعبیر» است. <a href="graph.html#stoicism" target="_blank" rel="noopener">رواقی‌گری و ریشه‌های درمان شناختی ↗</a></div><div style="--xc:#4c5f7a"><b>علوم اعصاب</b>هیجان از پیش‌بینی مغز دربارهٔ حس‌های بدن ساخته می‌شود؛ محور استرس و مدار پاداش در آن نقش دارند. <a href="graph.html#n-affective" target="_blank" rel="noopener">علوم اعصاب عاطفی ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>قواعد نمایش هیجان را جامعه می‌نویسد؛ «کار عاطفی» هزینهٔ اجرای این قواعد در شغل است. <a href="graph.html#soc-work" target="_blank" rel="noopener">جامعه‌شناسی کار ↗</a></div><div style="--xc:#a3404f"><b>روان‌پزشکی</b>دشواری در تنظیم هیجان فرایندی مشترک در اضطراب، افسردگی و اعتیاد است. <a href="graph.html#mood" target="_blank" rel="noopener">اختلالات خلقی ↗</a></div></div><div class="worlds"><a href="land.html#gross-model" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html#gross-model" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides">اسلایدهای ٔ «مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی»، دکتر آذرخش مکری، ۱۱ بهمن ۱۴۰۴ (۱۰۸ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-gross"><span class="ltr">Gross, J. J. (1998). The emerging field of emotion regulation: An integrative review. <i>Review of General Psychology, 2</i>, 271–299.</span></li>
+<li id="r-grossjohn"><span class="ltr">Gross, J. J., &amp; John, O. P. (2003). Individual differences in two emotion regulation processes. <i>JPSP, 85</i>, 348–362.</span></li>
+<li id="r-brooks"><span class="ltr">Brooks, A. W. (2014). Get excited: Reappraising pre-performance anxiety as excitement. <i>J Exp Psychol: General, 143</i>(3), 1144–1158.</span></li>
+<li id="r-crum2011"><span class="ltr">Crum, A. J., Corbin, W. R., Brownell, K. D., &amp; Salovey, P. (2011). Mind over milkshakes. <i>Health Psychology, 30</i>(4), 424–429.</span></li>
+<li id="r-park2020"><span class="ltr">Park, C., Pagnini, F., &amp; Langer, E. (2020). Glucose metabolism responds to perceived sugar intake more than actual sugar intake. <i>Scientific Reports, 10</i>, 15633.</span></li>
+<li id="r-turnwald"><span class="ltr">Turnwald, B. P., &amp; Crum, A. J. (2019). Smart food policy for healthy food labeling: Leading with taste, not healthiness. <i>Preventive Medicine, 119</i>, 7–13.</span></li>
+<li id="r-crumlanger"><span class="ltr">Crum, A. J., &amp; Langer, E. J. (2007). Mind-set matters: Exercise and the placebo effect. <i>Psychological Science, 18</i>(2), 165–171.</span></li>
+<li id="r-crum2013"><span class="ltr">Crum, A. J., Salovey, P., &amp; Achor, S. (2013). Rethinking stress: The role of mindsets in determining the stress response. <i>JPSP, 104</i>(4), 716–733.</span></li>
+<li id="r-quoidbach"><span class="ltr">Quoidbach, J., Gruber, J., Mikolajczak, M., Kogan, A., Kotsou, I., &amp; Norton, M. I. (2014). Emodiversity and the emotional ecosystem. <i>J Exp Psychol: General, 143</i>, 2057–2066.</span></li>
+<li id="r-steele"><span class="ltr">Steele, C. M., &amp; Aronson, J. (1995). Stereotype threat and the intellectual test performance of African Americans. <i>JPSP, 69</i>, 797–811.</span></li>
+<li id="r-inzlicht"><span class="ltr">Inzlicht, M., &amp; Schmader, T. (Eds.) (2012). <i>Stereotype Threat: Theory, Process, and Application</i>. Oxford University Press.</span></li>
+<li id="r-stone"><span class="ltr">Stone, J., Lynch, C. I., Sjomeling, M., &amp; Darley, J. M. (1999). Stereotype threat effects on Black and White athletic performance. <i>JPSP, 77</i>(6), 1213–1227.</span></li>
+<li id="r-carr"><span class="ltr">Carr, P. B., &amp; Steele, C. M. (2010). Stereotype threat affects financial decision making. <i>Psychological Science, 21</i>(10), 1411–1416.</span></li>
+<li id="r-alter"><span class="ltr">Alter, A. L., Aronson, J., Darley, J. M., Rodriguez, C., &amp; Ruble, D. N. (2010). Rising to the threat: Reducing stereotype threat by reframing the threat as a challenge. <i>JESP, 46</i>, 166–171.</span></li>
+<li id="r-baumeister1998"><span class="ltr">Baumeister, R. F., Bratslavsky, E., Muraven, M., &amp; Tice, D. M. (1998). Ego depletion: Is the active self a limited resource? <i>JPSP, 74</i>, 1252–1265.</span></li>
+<li id="r-vohs2008"><span class="ltr">Vohs, K. D., Baumeister, R. F., Schmeichel, B. J., Twenge, J. M., Nelson, N. M., &amp; Tice, D. M. (2008). Making choices impairs subsequent self-control. <i>JPSP, 94</i>(5), 883–898.</span></li>
+<li id="r-spears"><span class="ltr">Spears, D. (2011). Economic decision-making in poverty depletes behavioral control. <i>B.E. Journal of Economic Analysis &amp; Policy, 11</i>(1).</span> شناسایی منبع نمودار اسلاید ۸۳ از ویراستار است.</li>
+<li id="r-job"><span class="ltr">Job, V., Dweck, C. S., &amp; Walton, G. M. (2010). Ego depletion—Is it all in your head? <i>Psychological Science, 21</i>, 1686–1693.</span></li>
+<li id="r-clarkson"><span class="ltr">Clarkson, J. J., Hirt, E. R., Chapman, D. A., &amp; Jia, L. (2011). The impact of illusory fatigue on executive control. <i>Social Psychological and Personality Science, 2</i>(3), 231–238.</span></li>
+<li id="r-inzlicht2014"><span class="ltr">Inzlicht, M., Schmeichel, B. J., &amp; Macrae, C. N. (2014). Why self-control seems (but may not be) limited. <i>Trends in Cognitive Sciences, 18</i>, 127–133.</span></li>
+<li id="r-vohs2021"><span class="ltr">Vohs, K. D., Schmeichel, B. J., Lohmann, S., et al. (2021). A multisite preregistered paradigmatic test of the ego-depletion effect. <i>Psychological Science, 32</i>(10), 1566–1581.</span></li>
+<li id="r-wimmer"><span class="ltr">Wimmer, M. C., Dome, L., Hancock, P. J. B., &amp; Wennekers, T. (2019). Is the letter cancellation task a suitable index of ego depletion? <i>Social Psychology, 50</i>, 345–354.</span></li>
+<li id="r-hagger2016"><span class="ltr">Hagger, M. S., Chatzisarantis, N. L. D., et al. (2016). A multilab preregistered replication of the ego-depletion effect. <i>Perspectives on Psychological Science, 11</i>(4), 546–573.</span></li>
+<li id="r-cohen"><span class="ltr">Cohen, G. L. (2022). <i>Belonging: The Science of Creating Connection and Bridging Divides</i>. W. W. Norton.</span></li>
+<li id="r-tajfel"><span class="ltr">Tajfel, H. (1970). Experiments in intergroup discrimination. <i>Scientific American, 223</i>(5), 96–102.</span></li>
+<li id="r-sapolsky"><span class="ltr">Sapolsky, R. M., &amp; Share, L. J. (2004). A pacific culture among wild baboons. <i>PLoS Biology, 2</i>(4), e106.</span></li>
+<li id="r-walton"><span class="ltr">Walton, G. M., &amp; Cohen, G. L. (2011). A brief social-belonging intervention improves academic and health outcomes of minority students. <i>Science, 331</i>, 1447–1451.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این جزوه پیش از رسیدن متن گفتاری سخنرانی، از روی ۱۰۸ اسلاید و مقاله‌ها و کتاب‌هایی که روی اسلایدها معرفی شده بودند ساخته شده است. عددها و نمودارها از خود اسلایدها خوانده شده‌اند. توضیح‌هایی که روی اسلاید نبودند و از مقاله‌های اصلی یا دانش عمومی رشته افزوده شده‌اند، در کادر «یادداشت ویراستار» آمده‌اند. وقتی متن سخنرانی برسد، مثال‌ها، پرسش و پاسخ‌ها و تأکیدهای خود مدرس به این صفحه اضافه می‌شود.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"emotion-regulation": {"fa": "تنظیم هیجان", "en": "Emotion regulation", "d": "فرایندهایی که با آن‌ها بر اینکه چه هیجانی، کی و چگونه تجربه و ابراز شود اثر می‌گذاریم. محور درس‌ها ۶ تا ۸ دوره.", "rel": ["gross-model", "reappraisal"], "s": "process", "g": "emotion-regulation"}, "self-control": {"fa": "خویشتنداری", "en": "Self-control", "d": "توانایی کنار گذاشتن پاسخ فوری یا وسوسه به سود هدفی بلندمدت‌تر.", "rel": ["ego-depletion", "emotion-regulation"], "s": "ego", "g": "ego-depletion"}, "complex-contagion": {"fa": "سرایت مرکب", "en": "Complex contagion", "d": "رفتار یا نوآوری‌ای که برای پذیرفته شدن به تماس با چند منبع نزدیک و تقویت متقابل نیاز دارد، نه یک تماس. دیمون سنتولا. در برابر سرایت ساده (مثل یک خبر).", "rel": [], "s": "recap"}, "gross-model": {"fa": "مدل فرایندی گراس", "en": "Process model of emotion regulation", "d": "پنج نقطهٔ مداخله در شکل‌گیری هیجان: انتخاب موقعیت، تغییر موقعیت، توجه، تغییر شناختی و تغییر پاسخ. جیمز گراس.", "rel": ["reappraisal", "emotion-regulation"], "s": "process", "g": "gross-model"}, "reappraisal": {"fa": "بازتعبیر", "en": "Cognitive reappraisal", "d": "تغییر معنای موقعیت تا اثر هیجانی آن تغییر کند. در مدل گراس «تغییر شناختی»؛ معمولاً سازگارانه‌تر از سرکوب ابراز.", "rel": ["anxiety-excitement", "gross-model", "mindset"], "s": "reappraisal", "g": "reappraisal"}, "anxiety-excitement": {"fa": "بازتعبیر اضطراب به هیجان", "en": "Anxiety reappraisal as excitement", "d": "گفتن «هیجان‌زده‌ام» به جای «آرامم» پیش از اجرا؛ برانگیختگی را حفظ و ارزش آن را مثبت می‌کند. آلیسون وود بروکس (۲۰۱۴).", "rel": ["reappraisal", "stress-mindset"], "s": "reappraisal", "g": "reappraisal"}, "mindset": {"fa": "ذهنیت", "en": "Mindset", "d": "باور یا چارچوب دربارهٔ یک پدیده که انتظار و پاسخ روانی و جسمی ما را شکل می‌دهد (آلیا کرام). نمونه‌ها: میلک‌شیک، قند ادراک‌شده، مستخدمان هتل.", "rel": ["stress-mindset", "placebo", "ghrelin"], "s": "mindsets", "g": "mindsets"}, "ghrelin": {"fa": "گرلین", "en": "Ghrelin", "d": "هورمون گرسنگی که از معده ترشح می‌شود و پس از غذا افت می‌کند. در آزمایش میلک‌شیک کرام، افت آن به برچسب کالری بستگی داشت نه کالری واقعی.", "rel": ["mindset"], "s": "mindsets", "g": "mindsets"}, "placebo": {"fa": "دارونما و انتظار", "en": "Placebo / expectation effects", "d": "تغییرات واقعی بدنی و ذهنی که از انتظار و باور به یک مداخله ناشی می‌شود، نه ماده یا عمل آن.", "rel": ["mindset"], "s": "mindsets", "g": "placebo-expectation"}, "stress-mindset": {"fa": "ذهنیت استرس", "en": "Stress mindset", "d": "باور به اینکه استرس ناتوان‌کننده است یا تقویت‌کننده. کرام، سالووی و آکور (۲۰۱۳)؛ با مقیاس ۸ گویه‌ای SMM سنجیده می‌شود و قابل تغییر است.", "rel": ["mindset", "anxiety-excitement"], "s": "stress", "g": "stress-mindset"}, "emodiversity": {"fa": "تنوع هیجانی", "en": "Emodiversity", "d": "گستره و تعادل هیجان‌های مثبت و منفی تجربه‌شده؛ با سلامت روان و جسم بهتر همراه است. کوئیدباخ و همکاران (۲۰۱۴).", "rel": ["granularity", "dialecticism", "psych-rich"], "s": "emodiversity", "g": "emodiversity"}, "granularity": {"fa": "دانه‌داری هیجان", "en": "Emotional granularity", "d": "توانایی تمایز ظریف میان هیجان‌ها و نام‌گذاری دقیق آن‌ها. لیزا فلدمن بارت.", "rel": ["emodiversity"], "s": "emodiversity", "g": "emodiversity"}, "dialecticism": {"fa": "همگامی هیجانی", "en": "Emotional covariation / dialecticism", "d": "تجربهٔ هم‌زمان هیجان مثبت و منفی؛ در فرهنگ‌های شرق آسیا رایج‌تر.", "rel": ["emodiversity"], "s": "emodiversity", "g": "emodiversity"}, "psych-rich": {"fa": "زندگی غنی روانی", "en": "Psychologically rich life", "d": "بُعد سوم زندگی خوب در کنار شادکامی و معنا: زندگی پر از تجربه‌های متنوع، جالب و دیدگاه‌گستر. شیگهیرو اویشی.", "rel": ["emodiversity"], "s": "emodiversity", "g": "psych-rich"}, "stereotype-threat": {"fa": "تهدید کلیشه‌ای", "en": "Stereotype threat", "d": "افت عملکرد وقتی عضویت فرد در گروهی که کلیشهٔ منفی دارد برجسته شود. استیل و آرونسون (۱۹۹۵). پادزهر: قاب چالش، تعلق، تأیید ارزش‌ها.", "rel": ["minimal-groups"], "s": "stereotype", "g": "stereotype-threat"}, "ego-depletion": {"fa": "تخلیهٔ ایگو", "en": "Ego depletion", "d": "نظریهٔ باومایستر: خویشتنداری از منبعی محدود تغذیه می‌کند و با استفاده خسته می‌شود. تکرارهای بزرگ (۲۰۱۶، ۲۰۲۱) اثر را نزدیک صفر یافتند؛ تبیین‌های انگیزشی جایگزین شده‌اند.", "rel": ["self-control", "explore-exploit", "stroop", "cet"], "s": "ego", "g": "ego-depletion"}, "stroop": {"fa": "آزمون استروپ", "en": "Stroop test", "d": "نام بردن رنگ جوهر واژه‌ای که نام رنگ دیگری است (واژهٔ «قرمز» با جوهر آبی). سنجهٔ کلاسیک مهار پاسخ خودکار.", "rel": ["ego-depletion"], "s": "ego"}, "cet": {"fa": "آزمون برآورد شناختی", "en": "Cognitive Estimation Test", "d": "پرسش‌هایی مثل «یک هندوانه چند دانه دارد؟» که پاسخ دقیق ندارند و برآورد معقول می‌طلبند. در تکرار چندمرکزی ۲۰۲۱ برای سنجش اثر تخلیه به کار رفت.", "rel": ["ego-depletion"], "s": "ego"}, "explore-exploit": {"fa": "بهره‌برداری در برابر جست‌وجوگری", "en": "Exploitation vs. exploration", "d": "توازن میان بهره بردن از منبع آشنا و جست‌وجوی تازه. اینزلیکت (۲۰۱۴): «خستگی اراده» شاید چرخش انگیزه از «باید» به «می‌خواهم» باشد.", "rel": ["ego-depletion"], "s": "ego", "g": "exploration"}, "minimal-groups": {"fa": "گروه‌های حداقلی", "en": "Minimal group paradigm", "d": "تقسیم افراد بر پایهٔ معیاری بی‌معنا کافی است تا به گروه خود سوگیری کنند. هانری تاجفل؛ پایهٔ نظریهٔ هویت اجتماعی.", "rel": ["stereotype-threat"], "s": "belonging", "g": "belonging"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

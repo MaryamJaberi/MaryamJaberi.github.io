@@ -1,0 +1,485 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>نقشهٔ بدن و روان</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an anatomical plate — the figure sits on the start side as a fixed index of glands, the reading card beside it; other views are single editorial columns. */
+:root{
+  --bg:#f4f3ef; --card:#fffefb; --ink:#22201d; --muted:#6a655e; --rule:#dcd7cd; --skin:#ece4d7; --line:#9d9080;
+  --hormone:#b8641f; --neuro:#2e6f8e; --immune:#a3405b; --factor:#5f7a2c; --accent:#7a3d1b;
+  --good:#2f7a4e; --mid:#a5780f; --weak:#a1473b;
+  --f-display:"Markazi Text","Vazirmatn",serif; --f-body:"Vazirmatn",Tahoma,sans-serif; --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141311; --card:#1c1a17; --ink:#ebe6dd; --muted:#a59d91; --rule:#33302b; --skin:#2a2620; --line:#7d7365;
+  --hormone:#e39553; --neuro:#6cb2d3; --immune:#de7a95; --factor:#a3c266; --accent:#e5a172;
+  --good:#6cc08f; --mid:#dcb04e; --weak:#e38476; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141311; --card:#1c1a17; --ink:#ebe6dd; --muted:#a59d91; --rule:#33302b; --skin:#2a2620; --line:#7d7365;
+  --hormone:#e39553; --neuro:#6cb2d3; --immune:#de7a95; --factor:#a3c266; --accent:#e5a172;
+  --good:#6cc08f; --mid:#dcb04e; --weak:#e38476; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.95;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 60px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--accent)}
+.top{max-width:1160px;margin:0 auto;padding-block:24px 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;align-items:end}
+@media (max-width:720px){.top{grid-template-columns:minmax(0,1fr)}}
+.top h1{font-family:var(--f-display);font-size:2.6rem;line-height:1;margin:0;text-wrap:balance}
+.top p{margin:6px 0 0;color:var(--muted);max-width:70ch;font-size:.95rem}
+.top .links{display:flex;flex-wrap:wrap;gap:12px;font-size:.82rem}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);max-width:1160px;margin:14px auto 0;border-bottom:1px solid var(--rule);display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav.tabs a{flex:none;padding:10px 14px;text-decoration:none;color:var(--muted);font-size:.92rem;border-bottom:2px solid transparent;margin-bottom:-1px}
+nav.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
+main{max-width:1160px;margin:0 auto}
+section.view{padding-top:22px}
+h2{font-family:var(--f-display);font-size:1.9rem;line-height:1.2;margin:0 0 4px;text-wrap:balance}
+p.lead{color:var(--muted);margin:0 0 16px;max-width:70ch}
+
+/* plate */
+.plate{display:grid;grid-template-columns:300px minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:860px){.plate{grid-template-columns:minmax(0,1fr)}}
+.fig{position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px);background:var(--card);border:1px solid var(--rule);padding:12px}
+@media (max-width:860px){.fig{position:static;display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:start}}
+.fig svg{width:100%;height:auto;display:block;max-height:480px}
+.fig .cap{font-size:.78rem;color:var(--muted);line-height:1.7;margin-top:6px}
+.org{cursor:pointer}
+.org circle.hit{fill:transparent}
+.org circle.dot{fill:var(--card);stroke:var(--accent);stroke-width:2}
+.org.on circle.dot{fill:var(--accent)}
+.org:focus-visible circle.dot{stroke:var(--ink);stroke-width:3}
+.org line.ld{stroke:var(--line);stroke-width:.6;opacity:.7}
+.org.on line.ld{stroke:var(--accent);opacity:1}
+.org text{font-size:10px;fill:var(--muted);font-family:var(--f-body);paint-order:stroke;stroke:var(--card);stroke-width:3px}
+.org.on text{fill:var(--ink);font-weight:700}
+.olist{display:none}
+@media (max-width:860px){.org text,.org line.ld{display:none}.olist{display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start}.fig svg{max-height:300px}}
+.olist button,.chips button{font:inherit;font-size:.8rem;background:var(--card);border:1px solid var(--rule);color:var(--ink);padding:3px 10px;border-radius:999px;cursor:pointer}
+.olist button[aria-pressed="true"],.chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chips button i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-inline-end:6px}
+.orgnote{font-size:.9rem;background:var(--card);border:1px dashed var(--rule);padding:8px 12px;margin-bottom:12px}
+.orgnote b{font-family:var(--f-display);font-size:1.25rem;margin-inline-end:6px}
+.ml{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px;margin-bottom:16px}
+.ml button{font:inherit;text-align:start;background:var(--card);border:1px solid var(--rule);padding:8px 10px;cursor:pointer;display:flex;flex-direction:column;gap:0;line-height:1.5}
+.ml button b{font-size:.95rem}
+.ml button small{font-family:var(--f-latin);font-style:italic;color:var(--muted);font-size:.78rem;direction:ltr;text-align:right}
+.ml button[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.ml button:focus-visible{outline:2px solid var(--accent)}
+.tbar{border-inline-start:4px solid var(--c,var(--line))}
+.t-hormone{--c:var(--hormone)} .t-neuro{--c:var(--neuro)} .t-immune{--c:var(--immune)} .t-factor{--c:var(--factor)}
+.det{background:var(--card);border:1px solid var(--rule);padding:18px 22px}
+.det h3{font-family:var(--f-display);font-size:2.2rem;line-height:1.1;margin:0}
+.det .en{font-family:var(--f-latin);font-style:italic;color:var(--muted);direction:ltr;text-align:right;margin:2px 0 10px}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.badge{font-size:.74rem;padding:1px 10px;border-radius:999px;border:1px solid var(--rule);color:var(--muted)}
+.badge.tp{border-color:var(--c);color:var(--c)}
+.ev-strong{border-color:var(--good)!important;color:var(--good)!important}
+.ev-mixed{border-color:var(--mid)!important;color:var(--mid)!important}
+.ev-weak{border-color:var(--weak)!important;color:var(--weak)!important}
+.det dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 16px;margin:0}
+@media (max-width:560px){.det dl{grid-template-columns:minmax(0,1fr)}.det dt{margin-top:6px}}
+.det dt{font-size:.8rem;color:var(--muted);padding-top:3px}
+.det dd{margin:0}
+.mv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:640px){.mv{grid-template-columns:minmax(0,1fr)}}
+.mv div{padding:10px 12px;font-size:.92rem;line-height:1.85}
+.mv .myth{background:color-mix(in srgb,var(--weak) 9%,var(--card));border:1px solid color-mix(in srgb,var(--weak) 35%,var(--rule))}
+.mv .evd{background:color-mix(in srgb,var(--good) 9%,var(--card));border:1px solid color-mix(in srgb,var(--good) 35%,var(--rule))}
+.mv b{display:block;font-size:.78rem}
+.mv .myth b{color:var(--weak)} .mv .evd b{color:var(--good)}
+.ud{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;font-size:.88rem}
+@media (max-width:640px){.ud{grid-template-columns:minmax(0,1fr)}}
+.ud ul{margin:0;padding-inline-start:18px}
+.ud h4{margin:0 0 2px;font-size:.78rem;color:var(--muted);font-weight:500}
+.clin{border-top:1px solid var(--rule);margin-top:12px;padding-top:10px;font-size:.9rem}
+.clin b{font-size:.78rem;color:var(--muted);display:block}
+.go{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go a{font-size:.8rem;padding:2px 10px;border:1px solid var(--rule);border-radius:999px;text-decoration:none}
+.go a.g{border-color:var(--accent)}
+.go a:hover{background:var(--skin)}
+
+/* axes */
+.axis{background:var(--card);border:1px solid var(--rule);padding:16px 18px;margin-bottom:14px}
+.axis h3{font-family:var(--f-display);font-size:1.6rem;margin:0;line-height:1.2}
+.axis .en{font-family:var(--f-latin);font-style:italic;color:var(--muted);direction:ltr;text-align:right;font-size:.85rem}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}
+.chain span{background:var(--skin);padding:4px 12px;font-size:.86rem}
+.chain i{font-style:normal;color:var(--muted)}
+.axis p{margin:6px 0 0;max-width:80ch}
+.axgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:860px){.axgrid{grid-template-columns:minmax(0,1fr)}}
+.axis .mini{float:inline-start;width:68px;margin-inline-end:12px}
+
+/* life */
+.life{list-style:none;margin:0;padding:0;position:relative}
+.life::before{content:"";position:absolute;inset-block:8px;inset-inline-start:11px;width:2px;background:var(--rule)}
+.life li{position:relative;padding-inline-start:36px;padding-bottom:18px}
+.life li::before{content:"";position:absolute;inset-inline-start:4px;top:9px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.life h3{margin:0;font-family:var(--f-display);font-size:1.45rem;line-height:1.3}
+.life p{margin:2px 0 0;max-width:80ch}
+.bh{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.bh{grid-template-columns:minmax(0,1fr)}}
+.bh article{background:var(--card);border:1px solid var(--rule);padding:14px 16px}
+.bh h3{margin:0 0 4px;font-family:var(--f-display);font-size:1.5rem;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.bh p{margin:0;font-size:.93rem}
+.note{background:var(--card);border:1px solid var(--rule);border-inline-start:3px solid var(--accent);padding:10px 14px;font-size:.9rem;margin:16px 0}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.78rem;color:var(--muted);margin-bottom:12px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:5px;vertical-align:-1px}
+.foot{max-width:1160px;margin:40px auto 0;border-top:1px solid var(--rule);padding-top:12px;font-size:.78rem;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.det{animation:fi .25s ease}@keyframes fi{from{opacity:.4}to{opacity:1}}}
+</style>
+
+<header class="top">
+  <div><h1>نقشهٔ بدن و روان</h1>
+  <p>هورمون‌ها، پیام‌رسان‌های مغز، محورهای بدن و مغز، و دوره‌های زندگی. برای هر مورد آمده که کجا ساخته می‌شود، چه می‌کند، با روان و رفتار چه رابطه‌ای دارد، و باور رایج دربارهٔ آن با شواهد علمی مقایسه شده است.</p></div>
+  <div class="links"><a href="index.html" target="_blank" rel="noopener">ویکی روان‌شناسی ↗</a><a href="graph.html" target="_blank" rel="noopener">دنیای روان ↗</a></div>
+</header>
+<nav class="tabs" aria-label="بخش‌ها">
+  <a href="#messengers" data-v="messengers">هورمون‌ها و پیام‌رسان‌ها</a>
+  <a href="#axes" data-v="axes">محورهای بدن و مغز</a>
+  <a href="#life" data-v="life">دوره‌های زندگی</a>
+  <a href="#behavior" data-v="behavior">بدن و رفتار</a>
+</nav>
+<main>
+<section class="view" id="v-messengers">
+  <div class="plate">
+    <div class="fig">
+      <svg id="body" viewBox="-52 0 304 372" role="group" aria-label="بدن انسان با غده‌ها و اندام‌ها"></svg>
+      <div>
+        <div class="olist" id="olist"></div>
+        <div class="cap">روی هر اندام یا غده بزنید تا پیام‌رسان‌های آن را ببینید. خط‌چین: عصب واگ، راه اصلی گفت‌وگوی بدن و مغز.</div>
+      </div>
+    </div>
+    <div>
+      <div class="legend"><span><i style="background:var(--hormone)"></i>هورمون</span><span><i style="background:var(--neuro)"></i>پیام‌رسان عصبی</span><span><i style="background:var(--immune)"></i>ایمنی</span><span><i style="background:var(--factor)"></i>عامل رشد</span><span>قوت شواهد: <b style="color:var(--good)">محکم</b> · <b style="color:var(--mid)">آمیخته</b> · <b style="color:var(--weak)">محدود</b></span></div>
+      <div class="chips" id="tfilter"></div>
+      <div class="orgnote" id="orgnote" hidden></div>
+      <div class="ml" id="ml"></div>
+      <div class="det" id="det" aria-live="polite"></div>
+      <div class="note">این صفحه آموزشی است و جای ارزیابی پزشکی را نمی‌گیرد. دربارهٔ دارو و دوز چیزی گفته نشده است؛ شروع، تغییر یا قطع هر دارو یا مکمل باید با پزشک باشد.</div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="v-axes" hidden>
+  <h2>محورهای بدن و مغز</h2>
+  <p class="lead">بدن و مغز از چند مسیر با هم حرف می‌زنند. هر کارت یک مسیر را از آغاز تا پایان نشان می‌دهد، همراه با غده‌هایی که در آن درگیرند و صفحه‌های مرتبط ویکی.</p>
+  <div class="axgrid" id="axes"></div>
+</section>
+
+<section class="view" id="v-life" hidden>
+  <h2>هورمون‌ها در دوره‌های زندگی</h2>
+  <p class="lead">بدن در هر دورهٔ زندگی شیمی متفاوتی دارد. این تغییرها روان را شکل می‌دهند، اما سرنوشت را تعیین نمی‌کنند؛ محیط، روابط و انتخاب‌ها هم به همان اندازه مهم‌اند.</p>
+  <ol class="life" id="lifel"></ol>
+</section>
+
+<section class="view" id="v-behavior" hidden>
+  <h2>بدن و رفتار</h2>
+  <p class="lead">کارهایی که از راه بدن به روان می‌رسند، و آنچه شواهد دربارهٔ اثرشان می‌گویند.</p>
+  <div class="bh" id="bh"></div>
+</section>
+</main>
+<footer class="foot">نقشهٔ بدن و روان · ویکی روان‌شناسی · منابع اصلی: درسنامه‌های غدد درون‌ریز و روان‌ایمنی‌شناسی، و پژوهش‌هایی که در متن نام برده شده‌اند</footer>
+<script>/* نقشهٔ بدن و روان — داده‌ها
+   M: پیام‌رسان‌ها. t: hormone | neuro | immune | factor ؛ o: اندام‌های سازنده ؛ w: کجا ساخته می‌شود ؛ d: چه می‌کند ؛ psy: پیوند با روان و رفتار ؛
+   myth: باور رایج ؛ ev: آنچه شواهد می‌گویند ؛ up/down: چه چیزهایی بالا یا پایینش می‌برد (بدون دارو و دوز) ؛ clin: نکتهٔ بالینی ؛ wiki: کلید صفحه‌ها ؛ g: گره‌های دنیای روان ؛ ev_lv: قوت شواهد */
+window.ORGANS = [
+ {id:"hypo", fa:"هیپوتالاموس", en:"Hypothalamus", x:100, y:44, d:"مرکز فرمان غدد در مغز؛ گرسنگی، تشنگی، دما، خواب و پاسخ استرس را تنظیم می‌کند و با هورمون‌هایش هیپوفیز را راه می‌اندازد."},
+ {id:"pit", fa:"هیپوفیز", en:"Pituitary gland", x:100, y:56, d:"غدهٔ نخودی‌شکل زیر مغز؛ «غدهٔ فرمانده» که تیروئید، فوق‌کلیه و غدد جنسی را به کار می‌اندازد. اکسی‌توسین و وازوپرسین هم از بخش پشتی آن آزاد می‌شوند."},
+ {id:"pineal", fa:"غدهٔ صنوبری", en:"Pineal gland", x:112, y:34, d:"در تاریکی ملاتونین می‌سازد و به بدن می‌گوید شب شده است."},
+ {id:"brain", fa:"مغز", en:"Brain", x:88, y:28, d:"پیام‌رسان‌های عصبی مثل دوپامین، سروتونین، گابا و گلوتامات در شبکه‌های عصبی کار می‌کنند. مغز هم فرمان می‌دهد و هم از بدن پیام می‌گیرد."},
+ {id:"thyroid", fa:"تیروئید", en:"Thyroid", x:100, y:100, d:"هورمون‌هایش سرعت سوخت‌وساز همهٔ بدن را تعیین می‌کنند؛ کم‌کاری یا پرکاری آن می‌تواند شبیه افسردگی یا اضطراب باشد."},
+ {id:"heart", fa:"قلب و رگ‌ها", en:"Heart", x:112, y:150, d:"ضربان و فشار خون با هیجان تغییر می‌کند؛ حس کردن ضربان قلب بخشی از «حس درونی» است."},
+ {id:"immune", fa:"دستگاه ایمنی", en:"Immune system", x:130, y:196, d:"سلول‌های ایمنی با مولکول‌های التهابی (سیتوکین‌ها) با مغز گفت‌وگو می‌کنند و می‌توانند خلق و انرژی را تغییر دهند."},
+ {id:"adrenal", fa:"غدد فوق‌کلیه", en:"Adrenal glands", x:84, y:206, d:"روی کلیه‌ها می‌نشینند؛ بخش بیرونی کورتیزول می‌سازد و بخش درونی آدرنالین و نورآدرنالین."},
+ {id:"pancreas", fa:"لوزالمعده", en:"Pancreas", x:110, y:226, d:"انسولین و گلوکاگون را می‌سازد و قند خون را تنظیم می‌کند."},
+ {id:"fat", fa:"بافت چربی", en:"Adipose tissue", x:70, y:246, d:"فقط انبار انرژی نیست؛ لپتین می‌سازد که به مغز از ذخیرهٔ انرژی خبر می‌دهد."},
+ {id:"gut", fa:"معده و روده", en:"Gut", x:100, y:262, d:"گرلین (هورمون گرسنگی) از معده می‌آید؛ بیشتر سروتونین بدن در روده ساخته می‌شود؛ عصب واگ و میکروب‌های روده با مغز در ارتباط‌اند."},
+ {id:"gonads", fa:"غدد جنسی", en:"Gonads", x:100, y:306, d:"تخمدان‌ها استروژن و پروژسترون، و بیضه‌ها تستوسترون می‌سازند. هر دو جنس هر سه هورمون را دارند، با مقدارهای متفاوت."},
+];
+
+window.M = [
+{id:"cortisol", fa:"کورتیزول", en:"Cortisol", t:"hormone", o:["adrenal"], ev_lv:"strong",
+ w:"بخش بیرونی غدد فوق‌کلیه، با فرمان هیپوفیز (محور HPA).",
+ d:"انرژی را برای مقابله آماده می‌کند: قند خون را بالا می‌برد، التهاب را مهار می‌کند و توجه را تیز می‌کند. صبح‌ها بیشترین مقدار را دارد (اوج بیداری) و شب‌ها کمترین.",
+ psy:"فشار روانی کوتاه‌مدت کورتیزول را بالا می‌برد و این طبیعی و مفید است. مشکل در فشار مزمن است: الگوی روزانه به هم می‌ریزد و با بی‌خوابی، افسردگی، مشکلات حافظه و تضعیف ایمنی همراه می‌شود.",
+ myth:"«کورتیزول هورمون بد است» و «خستگی فوق‌کلیه» علت خستگی مزمن است.",
+ ev:"کورتیزول برای زندگی ضروری است و بالا رفتنش در موقعیت سخت سازگارانه است. «خستگی فوق‌کلیه» بیماری شناخته‌شده‌ای نیست و انجمن غدد درون‌ریز آمریکا آزمون‌های بزاقی رایج برای آن را معتبر نمی‌داند. در افسردگی گاهی کورتیزول بالا و در PTSD گاهی پایین‌تر از معمول دیده می‌شود؛ یعنی رابطه ساده نیست.",
+ up:["فشار روانی، به‌ویژه ارزیابی اجتماعی (سخنرانی، امتحان)","کم‌خوابی","بیدار شدن صبح"], down:["خواب کافی و منظم","حمایت اجتماعی","ورزش منظم (پس از سازگاری بدن)"],
+ clin:"بیماری‌های واقعی فوق‌کلیه (کوشینگ با کورتیزول زیاد، آدیسون با کورتیزول کم) نشانه‌های روانی هم دارند و پزشک با آزمایش خون یا ادرار تشخیص می‌دهد.",
+ wiki:["s4","trauma","s8"], g:["n-stress","stress-mindset","ptsd"]},
+{id:"adrenaline", fa:"آدرنالین و نورآدرنالین", en:"Adrenaline & noradrenaline", t:"hormone", o:["adrenal","brain"], ev_lv:"strong",
+ w:"بخش درونی فوق‌کلیه (هورمون) و هستهٔ «لوکوس سرولئوس» در ساقهٔ مغز (پیام‌رسان عصبی).",
+ d:"پاسخ «جنگ یا گریز» را در چند ثانیه راه می‌اندازند: ضربان تند، تنفس سریع، عرق، انقباض عضله و هوشیاری بالا.",
+ psy:"حمله‌های هراس تجربهٔ شدید همین برانگیختگی‌اند که ذهن آن را خطر مرگ تعبیر می‌کند. اینکه برانگیختگی را «ترس» بخوانیم یا «آماده شدن»، بر عملکرد اثر می‌گذارد.",
+ myth:"برانگیختگی بدنی همیشه یعنی اضطراب و باید آن را آرام کرد.",
+ ev:"آزمایش‌های جیمیسون نشان دادند وقتی به افراد گفته می‌شود تپش قلب پیش از امتحان نشانهٔ آماده شدن بدن است، عملکرد بهتر و پاسخ قلبی-عروقی سالم‌تری دارند (بازتعبیر برانگیختگی). اندازهٔ اثرها متوسط است و همه‌جا تکرار نشده.",
+ up:["تهدید، هیجان، کافئین، درد"], down:["تنفس آهسته","پایان موقعیت تهدید","خواب"],
+ clin:"برخی داروهای قلبی که گیرندهٔ آدرنالین را مهار می‌کنند گاهی برای اضطراب اجرا تجویز می‌شوند؛ تصمیمش با پزشک است.",
+ wiki:["s8","s4"], g:["reappraisal","stress-mindset","anxiety"]},
+{id:"oxytocin", fa:"اکسی‌توسین", en:"Oxytocin", t:"hormone", o:["hypo","pit"], ev_lv:"mixed",
+ w:"در هیپوتالاموس ساخته و از هیپوفیز پشتی آزاد می‌شود؛ در مغز هم پیام‌رسان است.",
+ d:"در زایمان انقباض رحم و در شیردهی خروج شیر را راه می‌اندازد؛ در پیوند مادر و نوزاد و پیوندهای اجتماعی نقش دارد.",
+ psy:"توجه به نشانه‌های اجتماعی را بیشتر می‌کند؛ اما اثرش به موقعیت بستگی دارد: در کنار «خودی‌ها» نزدیکی، و در برابر «غیرخودی‌ها» گاهی جانب‌داری و دفاع بیشتر.",
+ myth:"«هورمون عشق و اعتماد» است و اسپری بینی آن آدم‌ها را مهربان‌تر و قابل‌اعتمادتر می‌کند.",
+ ev:"آزمایش مشهور کوسفلد (۲۰۰۵) که اکسی‌توسین بینی اعتماد را در بازی سرمایه‌گذاری بالا برد، در تکرارهای بزرگ‌تر تأیید نشد. مرورهای بعدی گفتند بسیاری از یافته‌های رفتاری اکسی‌توسین بینی شکننده‌اند. دی‌دریو نشان داد اکسی‌توسین می‌تواند طرفداری از گروه خودی را هم بیشتر کند.",
+ up:["تماس بدنی، آغوش، شیردهی، زایمان","اعتماد و نزدیکی اجتماعی"], down:["تنهایی و جدایی (شواهد غیرمستقیم)"],
+ clin:"اکسی‌توسین در زایمان کاربرد پزشکی استاندارد دارد؛ کاربردش برای اوتیسم یا اضطراب اجتماعی در کارآزمایی‌های بزرگ اثر روشنی نشان نداده است.",
+ wiki:["trust","friendly"], g:["social-trust","belonging","attachment"]},
+{id:"vasopressin", fa:"وازوپرسین", en:"Vasopressin", t:"hormone", o:["hypo","pit"], ev_lv:"weak",
+ w:"هیپوتالاموس و هیپوفیز پشتی.",
+ d:"آب بدن را نگه می‌دارد و فشار خون را تنظیم می‌کند.",
+ psy:"در موش‌های دشتی پیوند جفت را شکل می‌دهد؛ در انسان شواهد هنوز محدود و ناهمسوست.",
+ myth:"«ژن وفاداری» یا هورمون تک‌همسری در انسان است.",
+ ev:"یافته‌های موش‌های دشتی مهم و محکم‌اند، اما تعمیم آن‌ها به رابطه‌های انسانی هنوز اثبات نشده و مطالعه‌های ژنتیکی انسانی اثرهای کوچک و تکرارنشده داشته‌اند.",
+ up:["کم‌آبی","استرس"], down:["الکل (به همین دلیل ادرار بیشتر می‌شود)"],
+ clin:"", wiki:["badmen"], g:["evo-sex","attachment"]},
+{id:"testosterone", fa:"تستوسترون", en:"Testosterone", t:"hormone", o:["gonads","adrenal"], ev_lv:"mixed",
+ w:"بیضه‌ها (بیشتر)، تخمدان‌ها و فوق‌کلیه (کمتر). هم در مردان هست هم در زنان.",
+ d:"رشد عضله و استخوان، ویژگی‌های جنسی، میل جنسی و انرژی. پیش از تولد هم در سازمان‌دهی برخی بخش‌های مغز نقش دارد.",
+ psy:"بیشتر با «جست‌وجوی جایگاه» ارتباط دارد تا با پرخاشگری به‌تنهایی. در آزمایش آیزنگر (۲۰۱۰)، تستوسترون در بازی تقسیم پول پیشنهادهای منصفانه‌تری ایجاد کرد، اما کسانی که فکر می‌کردند تستوسترون گرفته‌اند ناعادلانه‌تر رفتار کردند.",
+ myth:"«تستوسترون یعنی خشونت» و تفاوت رفتار زن و مرد را تستوسترون توضیح می‌دهد.",
+ ev:"رابطهٔ تستوسترون و پرخاشگری در انسان ضعیف است و به موقعیت بستگی دارد (فرضیهٔ چالش). کوردلیا فاین در «تستوسترون رکس» نشان می‌دهد که فرهنگ و یادگیری هم بخش بزرگی از تفاوت‌ها را می‌سازند. تستوسترون مردان پس از پدر شدن و مراقبت از نوزاد پایین می‌آید (گتلر ۲۰۱۱).",
+ up:["پیروزی در رقابت (به‌طور موقت)","خواب کافی","بلوغ"], down:["پدر شدن و مراقبت از نوزاد","کم‌خوابی","چاقی و افزایش سن (حدود ۱٪ در سال پس از میانسالی)"],
+ clin:"مصرف خودسرانهٔ استروئیدهای آنابولیک خطر نوسان خلق، پرخاشگری، وابستگی و افسردگی هنگام قطع را دارد.",
+ wiki:["badmen","orientation","prestige","shelf6"], g:["evo-sex","sex-gender","prestige-dominance","sexual-orientation"]},
+{id:"estrogen", fa:"استروژن و پروژسترون", en:"Estrogen & progesterone", t:"hormone", o:["gonads"], ev_lv:"mixed",
+ w:"تخمدان‌ها (و در بارداری جفت)؛ مقدار کمتر در بیضه‌ها، چربی و مغز.",
+ d:"چرخهٔ قاعدگی، بارداری، سلامت استخوان و رگ. استروژن در مغز بر سروتونین و حافظه هم اثر دارد.",
+ psy:"بیشتر زنان در طول چرخه نوسان خلق جدی ندارند. حدود ۲ تا ۶ درصد اختلال ملال پیش از قاعدگی (PMDD) دارند که در DSM-5 یک اختلال افسردگی است؛ گویا مغزشان به تغییر عادی هورمون‌ها حساس‌تر است. دورهٔ پیش از یائسگی و پس از زایمان هم پنجره‌های خطر بیشتر برای افسردگی‌اند.",
+ myth:"زنان به‌خاطر هورمون‌ها «احساساتی‌تر» یا کم‌ثبات‌ترند؛ و در دورهٔ تخمک‌گذاری سلیقه‌شان در انتخاب شریک عوض می‌شود.",
+ ev:"مطالعه‌های روزانه نشان می‌دهند چرخه بخش کوچکی از نوسان خلق روزانه را توضیح می‌دهد؛ استرس، خواب و رویدادها نقش بیشتری دارند. فرضیهٔ «تغییر سلیقه در تخمک‌گذاری» در تکرارهای بزرگ و پیش‌ثبت‌شده (جونز و همکاران ۲۰۱۸) تأیید نشد.",
+ up:["بلوغ، بارداری"], down:["پس از زایمان (افت سریع)","یائسگی","ورزش بسیار شدید همراه با کم‌خوری (قطع قاعدگی)"],
+ clin:"افسردگی پس از زایمان شایع است (حدود ۱۰ تا ۱۵٪ مادران؛ پدران هم ممکن است دچار شوند) و درمان‌پذیر است. افت خلق شدید پیش از قاعدگی هم ارزش مراجعه به پزشک را دارد.",
+ wiki:["orientation","shelf6"], g:["sex-gender","brain-mosaic","mood"]},
+{id:"thyroid", fa:"هورمون‌های تیروئید", en:"Thyroid hormones (T3, T4)", t:"hormone", o:["thyroid","pit"], ev_lv:"strong",
+ w:"تیروئید، با فرمان هورمون TSH از هیپوفیز.",
+ d:"سرعت سوخت‌وساز، دمای بدن، ضربان قلب و انرژی را تعیین می‌کنند.",
+ psy:"کم‌کاری تیروئید می‌تواند خستگی، کندی فکر، افسردگی، افزایش وزن و سرمایی‌بودن بیاورد؛ پرکاری تیروئید بی‌قراری، اضطراب، تپش قلب، کاهش وزن و بی‌خوابی.",
+ myth:"خستگی و افسردگی همیشه «روانی» است.",
+ ev:"به همین دلیل در ارزیابی نخستین افسردگی یا اضطراب، پزشکان اغلب آزمایش تیروئید (TSH) را درخواست می‌کنند. اختلال تیروئید در زنان شایع‌تر است.",
+ up:[], down:["کمبود ید در رژیم غذایی"],
+ clin:"درمان مشکل تیروئید اغلب نشانه‌های روانی را هم برطرف می‌کند؛ تشخیص با آزمایش خون است.",
+ wiki:["psychopath","workshop"], g:["mood","anxiety","fatigue-syndromes"]},
+{id:"melatonin", fa:"ملاتونین", en:"Melatonin", t:"hormone", o:["pineal"], ev_lv:"strong",
+ w:"غدهٔ صنوبری، وقتی چشم تاریکی را گزارش می‌کند.",
+ d:"به بدن می‌گوید «شب شده»؛ ساعت بدن را با شب و روز هماهنگ می‌کند.",
+ psy:"نور شدید شبانه (به‌ویژه صفحه‌نمایش روشن نزدیک چشم) آن را عقب می‌اندازد. در نوجوانی ساعت بدن طبیعتاً دیرتر می‌شود و نوجوانان دیرتر خوابشان می‌برد.",
+ myth:"«قرص خواب طبیعی» است که آدم را بیهوش می‌کند.",
+ ev:"ملاتونین بیشتر «زمان‌بندی» خواب را تغییر می‌دهد تا اینکه خواب‌آور قوی باشد؛ برای پرواز طولانی و ساعت خواب دیرهنگام شواهد بهتری دارد تا برای بی‌خوابی معمولی. درمان اصلی بی‌خوابی مزمن درمان شناختی-رفتاری بی‌خوابی (CBT-I) است.",
+ up:["تاریکی","نور روز کافی در صبح (ملاتونین شب را منظم‌تر می‌کند)"], down:["نور شدید شبانه","کار شبانه و شیفتی"],
+ clin:"در برخی کشورها ملاتونین بدون نسخه فروخته می‌شود؛ برای کودکان و در کنار داروهای دیگر با پزشک مشورت کنید.",
+ wiki:["shelf8","s11"], g:["adolescence","psych-detachment"]},
+{id:"insulin", fa:"انسولین و قند خون", en:"Insulin & glucose", t:"hormone", o:["pancreas"], ev_lv:"mixed",
+ w:"لوزالمعده.",
+ d:"انسولین قند را از خون به سلول‌ها می‌برد؛ گلوکاگون در گرسنگی قند را آزاد می‌کند.",
+ psy:"افت شدید قند خون می‌تواند لرزش، تحریک‌پذیری و اضطراب بیاورد. دیابت با خطر بیشتر افسردگی همراه است و برعکس.",
+ myth:"«اراده با قند کار می‌کند»: خوردن شیرینی خویشتنداری تحلیل‌رفته را برمی‌گرداند.",
+ ev:"فرضیهٔ گلوکز در «تخلیهٔ ایگو» (گالیو و بامیستر ۲۰۰۷) در بازبینی‌ها و تکرارها تأیید نشد. مغز در کار ذهنی معمولی گلوکز قابل‌توجهی بیشتر مصرف نمی‌کند. در کتاب «مغز تلقین‌پذیر» آمده که حتی «قند خونی که فکر می‌کنیم داریم» بر احساس و عملکردمان اثر می‌گذارد.",
+ up:["غذا، به‌ویژه کربوهیدرات سریع"], down:["گرسنگی طولانی","ورزش"],
+ clin:"افرادی که دیابت دارند و دچار افسردگی‌اند، در درمان هر دو مشکل به هماهنگی پزشک و درمانگر نیاز دارند.",
+ wiki:["suggestible","s8"], g:["ego-depletion","placebo-expectation"]},
+{id:"ghrelin", fa:"گرلین و لپتین", en:"Ghrelin & leptin", t:"hormone", o:["gut","fat"], ev_lv:"strong",
+ w:"گرلین از معده و لپتین از بافت چربی.",
+ d:"گرلین پیام گرسنگی است و پیش از وعدهٔ غذا بالا می‌رود؛ لپتین پیام سیری و ذخیرهٔ کافی انرژی است.",
+ psy:"کم‌خوابی گرلین را بالا و لپتین را پایین می‌آورد و میل به غذاهای پرکالری را بیشتر می‌کند (اشپیگل ۲۰۰۴). گرلین بر سامانهٔ پاداش هم اثر دارد.",
+ myth:"گرسنگی فقط یعنی معدهٔ خالی.",
+ ev:"گرسنگی ترکیبی از سیگنال‌های هورمونی، عادت، زمان روز، هیجان و نشانه‌های محیطی است. در چاقی معمولاً لپتین زیاد است، اما مغز به آن «مقاوم» شده.",
+ up:["کم‌خوابی (گرلین)","رژیم سخت (گرلین)"], down:["خواب کافی","غذای پرپروتئین و فیبردار (سیری بیشتر)"],
+ clin:"", wiki:["habits","shelf15"], g:["habit","n-reward"]},
+{id:"cytokines", fa:"التهاب و سیتوکین‌ها", en:"Inflammation & cytokines", t:"immune", o:["immune","gut"], ev_lv:"mixed",
+ w:"سلول‌های ایمنی در همهٔ بدن؛ بافت چربی و روده هم منبع التهاب‌اند.",
+ d:"هنگام عفونت یا آسیب، سیتوکین‌ها ایمنی را بسیج می‌کنند و به مغز پیام می‌فرستند.",
+ psy:"«رفتار بیماری»: خستگی، بی‌لذتی، کناره‌گیری اجتماعی، خواب زیاد و کاهش اشتها. بدن در بیماری انرژی را ذخیره می‌کند. این الگو شباهت زیادی به افسردگی دارد.",
+ myth:"افسردگی یا کاملاً «شیمیایی» است یا کاملاً «روانی».",
+ ev:"بخشی از افراد افسرده (حدود یک‌چهارم) نشانگرهای التهابی بالا دارند. درمان با اینترفرون آلفا (برای برخی بیماری‌ها) در بخش بزرگی از بیماران افسردگی ایجاد می‌کند. این‌ها نشان می‌دهند ایمنی و خلق به هم گره خورده‌اند، اما التهاب علت همهٔ افسردگی‌ها نیست.",
+ up:["عفونت","چاقی","کم‌خوابی","استرس مزمن و تنهایی","سیگار"], down:["ورزش منظم","خواب کافی","رژیم غذایی متعادل"],
+ clin:"پژوهش‌ها دارند بررسی می‌کنند آیا داروهای ضدالتهاب برای زیرگروه «التهابی» افسردگی مفیدند؛ هنوز درمان استاندارد نیست.",
+ wiki:["anhedonia","shelf3","shelf10"], g:["anhedonia","mood","fatigue-control"]},
+{id:"dopamine", fa:"دوپامین", en:"Dopamine", t:"neuro", o:["brain"], ev_lv:"strong",
+ w:"هسته‌های کوچکی در مغز میانی (VTA و جسم سیاه) که به جسم مخطط و قشر پیش‌پیشانی پیام می‌فرستند.",
+ d:"در حرکت، یادگیری و انگیزه نقش دارد. «خطای پیش‌بینی پاداش» را رمز می‌کند: وقتی نتیجه بهتر از انتظار است فعال‌تر، و وقتی بدتر است کم‌فعال‌تر می‌شود.",
+ psy:"دوپامین بیشتر با «خواستن» (میل و انگیزه برای رسیدن) همراه است تا «دوست داشتن» (لذت خود تجربه). در اعتیاد، خواستن از دوست داشتن جدا می‌شود: مصرف‌کننده چیزی را شدیداً می‌خواهد که دیگر لذت چندانی برایش ندارد.",
+ myth:"«هورمون لذت» است؛ رسانهٔ اجتماعی «ضربهٔ دوپامین» می‌دهد؛ «روزهٔ دوپامین» مغز را ریست می‌کند.",
+ ev:"آزمایش‌های بریج نشان دادند حذف دوپامین در موش‌ها «دوست داشتن» شیرینی را از بین نمی‌برد، اما انگیزهٔ تلاش برای آن را از بین می‌برد. «روزهٔ دوپامین» پایهٔ عصبی ندارد؛ کم کردن محرک‌های عادت‌ساز ممکن است کمک کند، اما به دلیل تغییر عادت، نه ریست شدن دوپامین.",
+ up:["پاداش غیرمنتظره، تازگی، انتظار پاداش","محرک‌ها و بسیاری از مواد اعتیادآور"], down:["کم‌خوابی (کاهش گیرنده‌ها)","استرس مزمن"],
+ clin:"پارکینسون از کمبود دوپامین در مسیر حرکتی است. بسیاری از داروهای ضدروان‌پریشی گیرندهٔ دوپامین را مهار می‌کنند.",
+ wiki:["anhedonia","shelf15","clinicaddiction","ideo"], g:["n-reward","anhedonia","addiction-core","craving","curiosity-brain"]},
+{id:"serotonin", fa:"سروتونین", en:"Serotonin (5-HT)", t:"neuro", o:["brain","gut"], ev_lv:"mixed",
+ w:"هسته‌های رافه در ساقهٔ مغز؛ اما حدود ۹۰٪ سروتونین بدن در روده ساخته می‌شود و از سد خونی-مغزی نمی‌گذرد.",
+ d:"در خلق، خواب، اشتها، کنترل تکانه، درد و حرکت روده نقش دارد.",
+ psy:"با تحمل ناکامی، صبر برای پاداش و انعطاف رفتاری ارتباط دارد. داروهای ضدافسردگی رایج (SSRI) سطح آن را در فضای میان نورون‌ها بالا می‌برند.",
+ myth:"«افسردگی یعنی کمبود سروتونین» یا «عدم تعادل شیمیایی».",
+ ev:"مرور فراگیر مانکریف و همکاران (۲۰۲۲) شواهد منسجمی برای کمبود ساده سروتونین در افسردگی نیافت. این به معنای بی‌اثری داروها نیست: SSRIها برای بسیاری از بیماران، به‌ویژه در افسردگی متوسط تا شدید، مؤثرند، اما سازوکارشان پیچیده‌تر است (مثلاً اثر بر انعطاف‌پذیری عصبی و پردازش هیجان).",
+ up:["نور روز (شواهد محدود)","ورزش"], down:["کم‌خوابی"],
+ clin:"شروع، تغییر یا قطع داروهای ضدافسردگی باید با پزشک باشد؛ قطع ناگهانی می‌تواند نشانه‌های ناخوشایند ایجاد کند.",
+ wiki:["shelf3","workshop","s4"], g:["mood","psychopharm","psych-genetics"]},
+{id:"gaba", fa:"گابا و گلوتامات", en:"GABA & glutamate", t:"neuro", o:["brain"], ev_lv:"strong",
+ w:"در سراسر مغز؛ گلوتامات اصلی‌ترین پیام‌رسان برانگیزاننده و گابا اصلی‌ترین پیام‌رسان بازدارنده است.",
+ d:"تعادل این دو، میزان فعالیت شبکه‌های عصبی را تعیین می‌کند. یادگیری و حافظه به گلوتامات وابسته‌اند.",
+ psy:"الکل و داروهای آرام‌بخش گروه بنزودیازپین اثر گابا را تقویت می‌کنند؛ به همین دلیل آرام‌بخش‌اند، با هم خطرناک‌اند و وابستگی می‌آورند. کتامین روی گیرندهٔ گلوتامات اثر دارد و در درمان برخی افسردگی‌های مقاوم بررسی و به کار گرفته می‌شود.",
+ myth:"مکمل‌های خوراکی گابا اضطراب را درمان می‌کنند.",
+ ev:"گابای خوراکی به مقدار قابل‌توجه وارد مغز نمی‌شود و شواهد اثرش ضعیف است.",
+ up:[], down:[],
+ clin:"ترکیب الکل با آرام‌بخش‌ها یا مواد افیونی می‌تواند تنفس را متوقف کند. قطع ناگهانی مصرف طولانی الکل یا بنزودیازپین می‌تواند تشنج بدهد و باید زیر نظر پزشک باشد.",
+ wiki:["families","clinicaddiction","learnmem"], g:["alcohol","learning-memory","n-plasticity"]},
+{id:"opioid", fa:"اندورفین و سامانهٔ افیونی درونی", en:"Endorphins & endogenous opioids", t:"neuro", o:["brain","pit"], ev_lv:"mixed",
+ w:"مغز و هیپوفیز.",
+ d:"درد را کم می‌کنند و در «دوست داشتن» (لذت خود تجربه) نقش دارند.",
+ psy:"دردِ طرد اجتماعی و دردِ جسمی بخشی از مسیرهای عصبی مشترک دارند. پیوند اجتماعی، خنده و موسیقی گروهی با فعالیت این سامانه همراه است.",
+ myth:"«نشئگی دونده» فقط کار اندورفین است.",
+ ev:"اندورفین خون از سد مغز به‌سختی می‌گذرد؛ آزمایش‌های روی موش (فوس ۲۰۱۵) نشان دادند کانابینوئیدهای درونی هم در حس خوب پس از دویدن نقش مهمی دارند.",
+ up:["ورزش طولانی، خنده، آواز گروهی، تماس بدنی"], down:["مصرف طولانی مواد افیونی (تحمل)"],
+ clin:"وابستگی به مواد افیونی بیماری درمان‌پذیری است؛ درمان نگهدارنده با متادون یا بوپرنورفین خطر مرگ را به‌طور چشمگیری کم می‌کند.",
+ wiki:["families","clinicaddiction"], g:["opioids","methadone","substances"]},
+{id:"endocannabinoid", fa:"کانابینوئیدهای درونی", en:"Endocannabinoids", t:"neuro", o:["brain"], ev_lv:"mixed",
+ w:"در سراسر مغز و بدن، به‌هنگام نیاز ساخته می‌شوند (آناندامید و ۲-AG).",
+ d:"در تنظیم درد، اشتها، استرس، خواب و حافظه نقش دارند؛ مانند ترمز ظریف پیام‌رسانی عمل می‌کنند.",
+ psy:"حشیش با تقلید از همین سامانه اثر می‌کند. مصرف زیاد در نوجوانی با خطر بیشتر روان‌پریشی در افراد آسیب‌پذیر همراه است.",
+ myth:"حشیش چون «طبیعی» است بی‌خطر است.",
+ ev:"خطر برای مغز در حال رشد نوجوان و در مصرف روزانهٔ حشیش پرقدرت روشن‌تر است؛ رابطه دوطرفه و پیچیده است.",
+ up:["ورزش"], down:[],
+ clin:"", wiki:["families"], g:["cannabis","psychosis-risk"]},
+{id:"acetylcholine", fa:"استیل‌کولین", en:"Acetylcholine", t:"neuro", o:["brain"], ev_lv:"strong",
+ w:"هسته‌های قاعدهٔ مغز جلویی؛ و در اتصال عصب به عضله.",
+ d:"توجه، یادگیری و حافظه؛ همچنین انقباض عضله و پیام‌رسانی عصب واگ.",
+ psy:"در آلزایمر نورون‌های استیل‌کولینی آسیب می‌بینند؛ برخی داروهای آلزایمر تجزیهٔ آن را کند می‌کنند. نیکوتین روی گیرندهٔ آن اثر می‌گذارد.",
+ myth:"", ev:"",
+ up:["نیکوتین (تحریک گیرنده)"], down:["برخی داروهای ضدحساسیت و ضدادراری قدیمی (خطر گیجی در سالمندان)"],
+ clin:"در سالمندان، داروهای «آنتی‌کولینرژیک» می‌توانند گیجی و دلیریوم ایجاد کنند.",
+ wiki:["decision","shelf3"], g:["nicotine","delirium","consciousness"]},
+{id:"bdnf", fa:"فاکتور نوروتروفیک مغز (BDNF)", en:"Brain-derived neurotrophic factor", t:"factor", o:["brain"], ev_lv:"mixed",
+ w:"مغز (به‌ویژه هیپوکامپ) و عضله.",
+ d:"پروتئینی که به رشد، بقا و اتصال نورون‌ها کمک می‌کند؛ پایهٔ بخشی از انعطاف‌پذیری عصبی.",
+ psy:"استرس مزمن آن را کم و ورزش آن را زیاد می‌کند. یکی از توضیح‌های پیشنهادی برای اثر ورزش و برخی داروها بر خلق و یادگیری است.",
+ myth:"مکمل‌ها و «بازی‌های مغزی» BDNF و هوش را بالا می‌برند.",
+ ev:"اثر ورزش هوازی بر BDNF در خون نسبتاً پایدار است؛ اما تبدیل آن به بهبود حافظه و هوش در انسان سالم کوچک است. بازی‌های تمرین مغز معمولاً فقط در همان بازی بهتر می‌کنند.",
+ up:["ورزش هوازی","یادگیری","خواب"], down:["استرس مزمن","کم‌خوابی"],
+ clin:"", wiki:["learnmem","range"], g:["n-plasticity","learning-memory","desirable-difficulties"]},
+];
+
+/* محورها: گفت‌وگوهای بدن و مغز */
+window.AXES = [
+{id:"hpa", fa:"محور استرس (HPA)", en:"Hypothalamic–pituitary–adrenal axis", chain:["هیپوتالاموس: CRH","هیپوفیز: ACTH","فوق‌کلیه: کورتیزول","بازخورد منفی به مغز"], o:["hypo","pit","adrenal"],
+ d:"پاسخ استرسِ کندتر (دقیقه تا ساعت). کورتیزول وقتی کافی شد، به هیپوتالاموس و هیپوفیز می‌گوید بس است. در استرس مزمن این ترمز ضعیف می‌شود. تجربه‌های اوایل زندگی می‌توانند حساسیت این محور را برای سال‌ها تغییر دهند.",
+ wiki:["s4","trauma","crisis"], g:["n-stress","resilience","ptsd"]},
+{id:"sam", fa:"پاسخ سریع (سمپاتیک-فوق‌کلیه)", en:"Sympathetic–adrenal–medullary system", chain:["تهدید","دستگاه عصبی سمپاتیک","فوق‌کلیهٔ درونی: آدرنالین","ضربان و تنفس تند"], o:["brain","adrenal","heart"],
+ d:"پاسخ چندثانیه‌ای «جنگ یا گریز». دستگاه پاراسمپاتیک (از جمله عصب واگ) نقش ترمز و «استراحت و هضم» را دارد. تنفس آهسته و بازدم طولانی تا حدی این ترمز را فعال می‌کند (شواهد متوسط).",
+ wiki:["s8","s4"], g:["reappraisal","anxiety"]},
+{id:"gutbrain", fa:"محور روده و مغز", en:"Gut–brain axis", chain:["میکروب‌های روده","عصب واگ، ایمنی و هورمون‌ها","مغز","استرس و رفتار غذایی"], o:["gut","brain","immune"],
+ d:"روده و مغز در دو جهت با هم حرف می‌زنند: استرس حرکت و حساسیت روده را تغییر می‌دهد (مثلاً در سندرم رودهٔ تحریک‌پذیر) و روده هم به مغز پیام می‌فرستد. بیشتر شواهد اثر میکروب‌ها بر رفتار از حیوانات است. پروبیوتیک‌ها برای افسردگی و اضطراب انسان شواهد محدود و ناهمسو دارند.",
+ wiki:["clinical"], g:["health-anxiety","n-affective"]},
+{id:"circadian", fa:"ساعت بدن و خواب", en:"Circadian system", chain:["نور صبح به چشم","ساعت مرکزی مغز (SCN)","ملاتونین شب، کورتیزول صبح","خواب، دما، اشتها، خلق"], o:["brain","pineal","adrenal"],
+ d:"ساعت مرکزی در هیپوتالاموس با نور تنظیم می‌شود. کار شیفتی، نور شبانه و ساعت خواب نامنظم آن را به هم می‌زنند. کم‌خوابی واکنش هیجانی را شدیدتر می‌کند: در یک آزمایش، پس از یک شب بی‌خوابی، واکنش آمیگدال به تصویرهای منفی حدود ۶۰٪ بیشتر بود (یو و همکاران ۲۰۰۷).",
+ wiki:["s11","shelf8","solitude"], g:["adolescence","psych-detachment","n-affective"]},
+{id:"hpg", fa:"محور جنسی (HPG)", en:"Hypothalamic–pituitary–gonadal axis", chain:["هیپوتالاموس: GnRH","هیپوفیز: LH و FSH","تخمدان یا بیضه","استروژن، پروژسترون، تستوسترون"], o:["hypo","pit","gonads"],
+ d:"بلوغ، چرخهٔ قاعدگی و باروری را تنظیم می‌کند. استرس شدید، کم‌خوری و ورزش بسیار سنگین می‌توانند این محور را سرکوب کنند و قاعدگی را قطع کنند.",
+ wiki:["orientation","shelf6","badmen"], g:["sex-gender","sexual-orientation"]},
+{id:"pni", fa:"ایمنی و ذهن (روان‌ایمنی‌شناسی)", en:"Psychoneuroimmunology", chain:["استرس، تنهایی، کم‌خوابی","تغییر ایمنی و التهاب","سیتوکین‌ها به مغز","خستگی، بی‌لذتی، کناره‌گیری"], o:["immune","brain"],
+ d:"استرس مزمن و تنهایی با التهاب بیشتر همراه‌اند و التهاب به نوبهٔ خود خلق و انرژی را پایین می‌آورد. این دور می‌تواند خودش را تقویت کند. ورزش، خواب و پیوند اجتماعی از مؤثرترین راه‌های شکستن این دورند.",
+ wiki:["anhedonia","solitude","makingsense"], g:["anhedonia","belonging","fatigue-syndromes"]},
+{id:"intero", fa:"حس درونی (اینتروسپشن)", en:"Interoception", chain:["ضربان قلب، تنفس، روده، دما","عصب‌ها و نخاع","اینسولا در مغز","احساس و هیجان"], o:["heart","gut","brain"],
+ d:"مغز دائم وضعیت بدن را پیش‌بینی و تفسیر می‌کند. بر پایهٔ نظریهٔ هیجان ساخته‌شده (لیزا فلدمن بارت)، هیجان تفسیر مغز از این سیگنال‌ها در بافت موقعیت است. در اضطراب، سیگنال‌های عادی بدن خطرناک تعبیر می‌شوند؛ در آلکسی‌تایمی، فهم آن‌ها دشوار است.",
+ wiki:["shelf7","psychopath","clinical"], g:["constructed-emotion","alexithymia","health-anxiety","bdd"]},
+];
+
+/* چرخهٔ زندگی */
+window.LIFE = [
+ {fa:"پیش از تولد", d:"هورمون‌های جنسی پیش از تولد برخی بخش‌های مغز را «سازمان‌دهی» می‌کنند و استرس شدید مادر می‌تواند محور استرس جنین را تحت تأثیر بگذارد. اثرها احتمالی و چندعاملی‌اند.", wiki:["orientation","shelf6"], g:["sexual-orientation","brain-mosaic"]},
+ {fa:"کودکی", d:"دلبستگی امن و مراقبت پاسخگو محور استرس را تنظیم می‌کند. سختی‌های شدید و مزمن کودکی با تغییر پاسخ استرس و التهاب در بزرگسالی همراه است، اما سرنوشت نیست: بیشتر کودکان تاب‌آورند.", wiki:["happiness","trauma"], g:["attachment","resilience"]},
+ {fa:"بلوغ و نوجوانی", d:"افزایش هورمون‌های جنسی، حساسیت بیشتر سامانهٔ پاداش و جایگاه اجتماعی، و عقب رفتن ساعت بدن (نوجوانان دیرتر خوابشان می‌برد). قشر پیش‌پیشانی تا اوایل دههٔ سوم زندگی بالغ می‌شود.", wiki:["shelf8","superbloom"], g:["adolescence","social-media"]},
+ {fa:"بارداری و پس از زایمان", d:"بزرگ‌ترین تغییر هورمونی زندگی بزرگسال. افسردگی پس از زایمان در حدود ۱۰ تا ۱۵ درصد مادران رخ می‌دهد. علت آن ترکیب افت هورمون‌ها، کم‌خوابی، استرس و حمایت کم است. پدران هم ممکن است دچار افسردگی شوند.", wiki:[], g:["mood"]},
+ {fa:"پیش از یائسگی و یائسگی", d:"نوسان و افت استروژن؛ گرگرفتگی، اختلال خواب و خطر بیشتر افسردگی، به‌ویژه در کسانی که سابقهٔ افسردگی دارند. درمان‌های مؤثر برای نشانه‌ها وجود دارد؛ تصمیمش با پزشک است.", wiki:[], g:["mood"]},
+ {fa:"سالمندی", d:"تستوسترون مردان به‌تدریج کم می‌شود (حدود ۱٪ در سال پس از میانسالی) و خواب کوتاه‌تر و سبک‌تر می‌شود. در سالمندان، عفونت یا دارو می‌تواند گیجی ناگهانی (دلیریوم) بیاورد که فوریت پزشکی است.", wiki:["shelf3","falls"], g:["delirium","falls"]},
+];
+
+/* بدن و رفتار: کارهایی که از بدن به روان می‌رسد */
+window.BEHAV = [
+ {fa:"خواب", d:"کم‌خوابی واکنش هیجانی را شدیدتر، تمرکز را ضعیف‌تر و میل به غذای پرکالری را بیشتر می‌کند. بی‌خوابی هم نشانه و هم عامل خطر افسردگی است. درمان شناختی-رفتاری بی‌خوابی (CBT-I) درمان اول بی‌خوابی مزمن است.", ev:"strong", wiki:["s11","s15"], g:["psych-detachment","recovery-paradox"]},
+ {fa:"ورزش", d:"فراتحلیل بزرگ نوئتل و همکاران (BMJ، ۲۰۲۴) نشان داد پیاده‌روی یا دویدن، یوگا و تمرین قدرتی برای افسردگی اثر متوسطی دارند که با درمان‌های رایج قابل مقایسه است؛ اثر با شدت بیشتر بیشتر بود. ورزش اضطراب را هم کم می‌کند.", ev:"strong", wiki:["habits","s6"], g:["behavioral-activation","n-plasticity"]},
+ {fa:"تغذیه", d:"الگوی غذایی متعادل (مثلاً مدیترانه‌ای) با خطر کمتر افسردگی همراه است و یک کارآزمایی کوچک (اسمایلز، ۲۰۱۷) بهبود نشان داد؛ اما شواهد هنوز اولیه است. هیچ «غذای ضدافسردگی» جادویی وجود ندارد.", ev:"weak", wiki:["shelf15"], g:["habit"]},
+ {fa:"درد مزمن", d:"درد فقط سیگنال آسیب نیست؛ توجه، ترس، خلق و معنا شدت آن را تغییر می‌دهند (مدل زیستی-روانی-اجتماعی). درمان‌های روان‌شناختی مثل درمان شناختی-رفتاری و درمان پذیرش و تعهد برای درد مزمن اثر متوسطی دارند.", ev:"strong", wiki:["suggestible","s4"], g:["placebo-expectation","experiential-avoidance"]},
+ {fa:"دارونما و نوسبو", d:"انتظار می‌تواند واقعاً درد، تهوع و حتی عملکرد را تغییر دهد. انتظار منفی (نوسبو) هم عارضه‌های واقعی ایجاد می‌کند؛ مثلاً بخش بزرگی از عارضه‌های گزارش‌شده پس از واکسن در گروه دارونما هم دیده شد.", ev:"strong", wiki:["suggestible"], g:["nocebo","placebo-expectation","suggestibility"]},
+ {fa:"نشانه‌های بدنی بی‌توضیح", d:"گاهی نشانه‌های واقعی بدنی (خستگی، درد، سرگیجه) بدون بیماری عضوی قابل‌یافتن وجود دارند. این‌ها «خیالی» نیستند؛ تعامل مغز، بدن و توجه آن‌ها را می‌سازد و درمان ترکیبی پزشکی و روان‌شناختی کمک می‌کند.", ev:"mixed", wiki:["clinical","shelf10"], g:["fatigue-syndromes","health-anxiety","depersonalization"]},
+ {fa:"تنفس و آرام‌سازی", d:"تنفس آهسته (حدود شش نفس در دقیقه) و بازدم طولانی می‌تواند برانگیختگی را کم کند. شواهد اثر کوتاه‌مدت متوسط است، اما برای اختلال اضطرابی به‌تنهایی درمان کافی نیست.", ev:"mixed", wiki:["s4","s8"], g:["emotion-regulation"]},
+ {fa:"مواد و بدن", d:"الکل، نیکوتین، کافئین و محرک‌ها از مسیر همین پیام‌رسان‌ها اثر می‌کنند. ترک ناگهانی برخی از آن‌ها نشانه‌های جسمی شدید دارد و باید زیر نظر پزشک باشد.", ev:"strong", wiki:["families","clinicaddiction","decision"], g:["substances","alcohol","nicotine","stimulants"]},
+];
+</script>
+<script>
+const U = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html"}, LBL = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی"}, GRAPH = "graph.html", GFA = {"psyche": "دنیای روان", "psychology": "روان‌شناسی", "psychiatry": "روان‌پزشکی", "psychotherapy": "روان‌درمانی", "neuroscience": "علوم اعصاب", "p-history": "مکاتب و تاریخ روان‌شناسی", "p-dev": "روان‌شناسی رشد", "attachment": "دلبستگی", "p-cog": "روان‌شناسی شناختی", "exploration": "کاوش ـ بهره‌برداری", "p-social": "روان‌شناسی اجتماعی", "dehumanization": "انسانیت‌زدایی", "polarization": "قطبی‌شدن نیروی کار", "p-personality": "روان‌شناسی شخصیت", "need-for-cognition": "نیاز به دانایی", "p-emotion": "روان‌شناسی هیجان", "emotion-regulation": "تنظیم هیجان", "beach-ball": "سرکوب و اثر توپ ساحلی", "venting": "ونتینگ (تخلیهٔ هیجانی)", "challenger-listener": "شنوندهٔ چالشگر", "emotional-intelligence": "هوش هیجانی", "p-motivation": "روان‌شناسی انگیزش", "sdt": "خودتعیین‌گری و انگیزش درونی", "autonomy": "خودمختاری", "mcclelland": "سه‌گانهٔ مک‌کللند", "ego-depletion": "تخلیهٔ ایگو", "meaningful-work": "کار معنادار", "p-positive": "روان‌شناسی مثبت‌نگر", "strengths": "رویکرد مبتنی بر نقاط قوت", "progress-principle": "اصل پیشرفت", "savoring": "مزه‌مزه‌کردن", "p-health": "روان‌شناسی سلامت", "fatigue-syndromes": "سندرم‌های خستگی", "p-io": "روان‌شناسی صنعتی و سازمانی", "feeling-economy": "اقتصاد احساسی", "burnout": "فرسودگی شغلی", "psych-detachment": "جداشدن روانی از کار", "recovery-paradox": "پارادوکس بازیابی", "work-life-balance": "تعادل کار و زندگی", "great-resignation": "استعفای بزرگ", "quiet-quitting": "ترک آرام", "destructive-leadership": "رهبری مخرب", "emotional-labor": "کار هیجانی", "compassion-at-work": "شفقت در محیط کار", "psych-safety": "امنیت روانی", "scapegoating": "سرزنش و نقش قربانی", "self-selectors": "خودبرگزیدگان", "p-edu": "روان‌شناسی تربیتی", "perseverance": "پشتکار تحصیلی و نگرش به شکست", "p-clinical": "روان‌شناسی بالینی", "rumination": "نشخوار فکری", "running-commentary": "گزارشگر زنده", "p-psychometrics": "روان‌سنجی", "dx": "طبقه‌بندی و تشخیص", "mood": "اختلالات خلقی", "anxiety": "اختلالات اضطرابی", "personality-disorders": "اختلالات شخصیت", "vulnerable-narcissism": "خودشیفتگی آسیب‌پذیر", "addiction": "اعتیاد", "psychopharm": "روان‌داروشناسی", "t-psychodynamic": "روانکاوی و روان‌پویشی", "catharsis": "کاتارسیس و نظریهٔ هیدرولیکی هیجان", "t-behavioral": "رفتاردرمانی", "t-cbt": "درمان شناختی-رفتاری", "rfcbt": "درمان شناختی-رفتاری متمرکز بر نشخوار", "cbt-perfectionism": "درمان شناختی-رفتاری کمال‌طلبی", "perfectionism": "کمال‌طلبی", "t-thirdwave": "موج سوم رفتاردرمانی", "mct": "درمان فراشناختی", "t-compassion": "درمان‌های مبتنی بر شفقت", "self-compassion": "شفقت به خود", "three-systems": "مدل سه‌سیستمی هیجان", "drive-system": "سیستم سائق", "empathy-fatigue": "خستگی همدلی و انفصال همدلانه", "t-humanistic": "انسان‌گرا و وجودی", "pat": "درمان عاطفهٔ مثبت (PAT)", "t-systemic": "خانواده‌درمانی و سیستمی", "t-common": "عوامل مشترک درمان", "n-affective": "علوم اعصاب عاطفی", "n-cognitive": "علوم اعصاب شناختی", "dmn": "شبکهٔ حالت پیش‌فرض", "n-plasticity": "نوروپلاستیسیتی", "n-reward": "پاداش و دوپامین", "n-stress": "استرس و محور HPA", "anthropology": "انسان‌شناسی تکاملی", "self-domestication": "خوداهلی‌سازی", "belyaev-foxes": "روباه‌های بلیایف و نشانگان اهلی‌شدن", "dog-cognition": "شناخت اجتماعی سگ‌ها", "reactive-proactive": "دو نوع پرخاشگری", "execution-hypothesis": "فرضیهٔ اعدام و سلسله‌مراتب معکوس", "cultural-evolution": "تکامل فرهنگی", "collective-brain": "مغز جمعی", "norm-psychology": "روان‌شناسی هنجار", "creative-spark": "جرقهٔ خلاقیت", "art-origins": "ریشه‌های تکاملی هنر", "p-aesthetics": "روان‌شناسی هنر و زیبایی‌شناسی", "art-definition": "تعریف هنر", "aesthetic-judgment": "داوری زیبایی‌شناختی و مواجههٔ صرف", "music-emotion": "موسیقی و هیجان", "form-symbolism": "نمادگرایی صوری و آوایی", "aesthetic-emotion": "هیجان در موزه و لرزش زیبایی‌شناختی", "negative-art": "لذت از هنر غمناک و ترسناک", "effort-bias": "سوگیری تلاش", "forgery": "اصالت و جعل", "abstract-art": "«بچهٔ من هم بلد است»: هنر انتزاعی", "arts-transfer": "آیا هنر باهوش‌تر می‌کند؟", "fiction-empathy": "داستان و همدلی", "art-wellbeing": "ساختن هنر و حال خوب", "talent-practice": "استعداد و تمرین", "theory-of-mind": "نظریهٔ ذهن", "cooperative-eye": "چشم همکار و سفیدی چشم", "intergroup-contact": "تماس بین‌گروهی و کلاس پازلی", "curiosity": "کنجکاوی", "curiosity-types": "انواع کنجکاوی (برلاین)", "info-gap": "نظریهٔ شکاف اطلاعاتی", "hot-cold-gap": "شکاف همدلی گرم-سرد", "curiosity-brain": "عصب‌شناسی کنجکاوی", "n-human-brain": "مغز انسان و شمار نورون‌ها", "planning-fallacy": "خطای برنامه‌ریزی", "cognitive-rut": "افکار خودکار و شیار شناختی", "tunnel-vision": "دید تونلی و هایپرفوکس", "critical-thinking": "تفکر نقادانه و استدلال", "cognitive-biases": "سوگیری‌های شناختی", "conspiracy": "باور توطئه‌ای", "false-memory": "حافظهٔ کاذب", "placebo-expectation": "انتظار، دارونما و ادراک خطا", "statistical-thinking": "تفکر آماری", "sex-gender": "روان‌شناسی جنس و جنسیت", "brain-mosaic": "مغز موزاییکی", "anhedonia": "آنهدونیا و ظرفیت لذت", "addiction-core": "هستهٔ اعتیاد", "craving": "وسوسه", "nicotine": "وابستگی به نیکوتین", "self-medication": "فرضیهٔ خوددرمانی", "addiction-therapy": "اصول روان‌درمانی و مشاورهٔ اعتیاد", "substances": "الکل، افیونی‌ها و محرک‌ها", "mi": "مصاحبهٔ انگیزشی", "gross-model": "مدل فرایندی گراس", "reappraisal": "بازتعبیر", "mindsets": "ذهنیت‌ها", "stress-mindset": "ذهنیت استرس", "emodiversity": "تنوع هیجانی", "stereotype-threat": "تهدید کلیشه‌ای", "belonging": "تعلق و هویت گروهی", "replication-crisis": "بحران تکرارپذیری", "dimensional-dx": "رویکرد بُعدی به مشکلات روانی", "hitop": "HiTOP", "heterotypic": "پیوستگی ناهمسان", "overdiagnosis": "بیش‌تشخیص‌گذاری", "psychiatry-history": "تاریخ رده‌بندی روانپزشکی", "psych-genetics": "ژنتیک روانپزشکی", "transdiagnostic": "فرایندهای فراتشخیصی", "experiential-avoidance": "اجتناب تجربه‌ای", "rejection-sensitivity": "حساسیت به طرد", "worry-model": "الگوی نگرانی", "cognitive-rigidity": "سرسختی شناختی", "enduring-mh": "سلامت روان پایدار", "antisocial-subtypes": "زیرگونه‌های رفتار ضداجتماعی", "pbt": "درمان فرایندمدار", "emotional-agility": "چابکی هیجانی", "psych-rich": "زندگی غنی روانی", "solitude": "انگیزه برای خلوت", "range-generalists": "گستره و عمومی‌کاری", "learning-environments": "محیط یادگیری مهربان و بدخیم", "desirable-difficulties": "دشواری‌های مطلوب", "analogical-thinking": "تفکر قیاسی", "match-quality": "کیفیت تطبیق", "foxes-hedgehogs": "روباه‌ها و جوجه‌تیغی‌ها", "perma": "مدل PERMA", "hope": "نظریهٔ امید", "flow": "غرقگی (فلو)", "work-engagement": "درگیری کاری", "job-crafting": "طراحی شغل", "surface-deep": "بازی سطحی و عمیق", "goal-pursuit": "پویایی هدف و پیشرفت", "behavioral-addiction": "اعتیاد رفتاری", "descriptive-psychopathology": "آسیب‌شناسی روانی توصیفی", "delusion": "هذیان", "psychosis-risk": "حالات پرخطر پسیکوز (SIPS)", "bipolar": "اختلال دوقطبی", "alexithymia": "آلکسی‌تایمی", "neuroticism": "روان‌رنجوری", "unified-protocol": "پروتکل یکپارچه (UP)", "health-anxiety": "اضطراب سلامت", "bdd": "بدریخت‌انگاری بدن", "vigilance": "گوش‌به‌زنگی", "happiness-origins": "ریشه‌های شادکامی", "self-criticism": "سرزنش خود و منتقد درون", "compassion-collapse": "فروپاشی شفقت", "addiction-families": "اعتیاد و خانواده: بهبودی، درمان اجباری، آزمایش ادرار", "methadone": "درمان نگهدارنده با متادون", "stimulants": "شیشه و محرک‌ها", "suggestibility": "تلقین‌پذیری", "nocebo": "نوسبو", "habit": "عادت و تغییر عادت", "implementation-intentions": "قصد اجرایی", "relapse-prevention": "لغزش و پیشگیری از عود", "affective-forecasting": "پیش‌بینی عاطفی", "learned-helplessness": "درماندگی و خوش‌بینی آموخته", "self-narrative": "روایت خود و حس کارآمدی", "shell-shock": "موج‌گرفتگی (شل‌شاک)", "effort": "تلاش، سخت‌کوشی و اراده", "moral-hypocrisy": "ریاکاری اخلاقی", "morality-mh": "اخلاق و سلامت روان", "degeneration": "نظریهٔ انحطاط", "social-trust": "اعتماد اجتماعی", "human-progress": "خوش‌بینی به آیندهٔ بشر", "falls": "سقوط در بیماران بستری", "overjustification": "اثر توجیه بیش از حد", "work-motivation": "نظریه‌های انگیزش کاری", "envy": "رشک و حسادت", "decision-errors": "خطا در تصمیم‌گیری: پیش‌بینی و انتخاب نادرست", "opioids": "مواد افیونی و سم‌زدایی", "mattering": "اهمیت داشتن", "cannabis": "حشیش و کانابینوئیدها", "crisis-mh": "سلامت روان در بحران و جنگ", "resilience": "تاب‌آوری و انعطاف‌پذیری", "ptsd": "تروما و PTSD", "automaticity": "خودکاری و ذهن ناآگاه", "tight-loose": "فرهنگ سفت و شل", "narcissism-culture": "فرهنگ خودشیفتگی", "tech-panic": "فناوری، توجه و وحشت اخلاقی", "bullshit": "حرف مفت و شک‌ورزی داده‌ای", "msc": "شفقت به خودِ ذهن‌آگاهانه (MSC)", "acrim": "اصالت، خودشناسی و محور انتقاد", "complex-contagion": "سرایت پیچیده و چیدمان تغییر", "evo-sex": "تعارض جنسی و روان‌شناسی تکاملی", "conflict-power": "تعارض و قدرت در کار", "depersonalization": "مسخ شخصیت و مسخ واقعیت", "ideological-brain": "مغز ایدئولوژیک", "delirium": "دلیریوم", "open-vigilance": "گشودگی مراقب", "interpersonal-er": "تنظیم هیجان بین‌فردی", "fairness": "برابری و انصاف", "prestige-dominance": "پرستیژ و سلطه", "habituation": "خوگیری", "ego-disorders": "اختلالات خویشتن", "alcohol": "الکل", "intractable-conflict": "اختلاف‌های حل‌نشدنی", "sexual-orientation": "شکل‌گیری گرایش جنسی", "learning-memory": "یادگیری و حافظه", "consciousness": "هشیاری و توجه", "constructed-emotion": "هیجان ساخته‌شده", "adolescence": "نوجوانی و محبوبیت", "cooperation-competition": "همکاری و رقابت", "regulatory-mode": "شیوهٔ تنظیم: حرکت و سنجش", "victim-mindset": "ذهنیت قربانی و استحقاق", "behavioral-activation": "فعال‌سازی رفتاری", "fatigue-control": "خستگی به‌عنوان هیجان", "subjective-fear": "تجربهٔ ذهنی ترس", "meaning-making": "معنا و روان‌شناسی وجودی", "psychological-richness": "زندگی غنی از نظر روانی", "social-media": "رسانهٔ اجتماعی و ذهن", "gullibility": "زودباوری", "process-based-therapy": "درمان مبتنی بر فرایند", "ultrasociality": "فراجامعه‌پذیری", "positive-emotion-regulation": "تنظیم هیجان مثبت", "philosophy": "فلسفه", "phil-mind": "فلسفهٔ ذهن: آگاهی و اراده", "phil-ethics": "اخلاق و فلسفهٔ اخلاق", "existentialism": "فلسفهٔ وجودی و پدیدارشناسی", "stoicism": "رواقی‌گری و ریشه‌های درمان شناختی", "epistemology": "معرفت‌شناسی و شک‌ورزی", "phil-science": "فلسفهٔ علم", "phil-psychiatry": "فلسفهٔ روان‌پزشکی: اختلال چیست؟", "justice-theory": "فلسفهٔ سیاسی: عدالت و برابری", "sociology": "جامعه‌شناسی", "anomie": "آنومی و پیوند اجتماعی (دورکیم)", "social-capital": "سرمایهٔ اجتماعی", "stigma": "انگ و برچسب‌زنی (گافمن)", "medicalization": "پزشکی‌سازی", "stratification": "قشربندی و نابرابری", "soc-work": "جامعه‌شناسی کار", "soc-family": "جامعه‌شناسی خانواده", "soc-networks": "شبکه‌های اجتماعی و سرایت", "delay-gratification": "تأخیر پاداش و آزمون مارشمالو", "temptation-bundling": "مزدوج‌سازی هوس", "gamification": "بازی‌گونه‌سازی در کار", "hardiness": "سرسختی در برابر استرس", "akrasia": "ضعف اراده (آکراسیا)"};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const TFA = {hormone:"هورمون", neuro:"پیام‌رسان عصبی", immune:"ایمنی", factor:"عامل رشد"};
+const EVFA = {strong:"شواهد محکم", mixed:"شواهد آمیخته", weak:"شواهد محدود"};
+const OB = Object.fromEntries(ORGANS.map(o => [o.id,o]));
+const golinks = (wiki, g) => `<div class="go">${(wiki||[]).filter(k=>U[k]).map(k => `<a href="${U[k]}" target="_blank" rel="noopener">${LBL[k]||k}</a>`).join("")}${(g||[]).map(id => `<a class="g" href="${GRAPH}#${id}" target="_blank" rel="noopener">${GFA[id]||id} · دنیای روان</a>`).join("")}</div>`;
+
+/* body figure */
+const svg = document.getElementById("body");
+svg.innerHTML = `
+ <g fill="var(--skin)" stroke="var(--line)" stroke-width="1.2" stroke-linejoin="round">
+  <path d="M64 100 C 46 112 42 150 40 196 L 36 262 C 35 270 46 271 47 262 L 54 200 L 58 150" />
+  <path d="M136 100 C 154 112 158 150 160 196 L 164 262 C 165 270 154 271 153 262 L 146 200 L 142 150" />
+  <path d="M70 318 L 66 362 C 66 369 82 369 82 362 L 92 318 Z" />
+  <path d="M130 318 L 134 362 C 134 369 118 369 118 362 L 108 318 Z" />
+  <path d="M90 70 L 110 70 L 112 90 L 88 90 Z" />
+  <path d="M60 96 C 76 86 124 86 140 96 L 146 150 C 148 190 142 214 140 238 C 138 268 140 296 136 324 L 64 324 C 60 296 62 268 60 238 C 58 214 52 190 54 150 Z" />
+  <ellipse cx="100" cy="40" rx="27" ry="32" />
+ </g>
+ <path d="M96 62 C 92 90 104 120 98 160 C 92 200 106 230 100 262" fill="none" stroke="var(--line)" stroke-width="1.2" stroke-dasharray="3 3"/>
+ <path d="M76 38 C 76 18 124 18 124 38 C 124 52 76 52 76 38 Z" fill="none" stroke="var(--line)" stroke-width=".8" opacity=".7"/>
+ ${ORGANS.map(o => `<g class="org" data-o="${o.id}" tabindex="0" role="button" aria-label="${o.fa}" transform="translate(${o.x},${o.y})"><circle class="hit" r="12"/><circle class="dot" r="5.5"/><text x="${o.x<100?-10:10}" y="3.5" text-anchor="${o.x<100?'end':'start'}" direction="rtl">${o.fa}</text></g>`).join("")}`;
+/* labels sit in two outer columns with leader lines */
+svg.querySelectorAll(".org").forEach(g => { const o = OB[g.dataset.o]; const t = g.querySelector("text"); const left = o.x <= 100 && o.id !== "pineal";
+  const lx = left ? 26 - o.x : 174 - o.x; t.setAttribute("x", lx); t.setAttribute("text-anchor", left ? "start" : "end");
+  const ln = document.createElementNS("http://www.w3.org/2000/svg","line"); ln.setAttribute("x1", left ? -6 : 6); ln.setAttribute("x2", left ? lx+2 : lx-2); ln.setAttribute("y1",0); ln.setAttribute("y2",0); ln.setAttribute("class","ld"); g.insertBefore(ln, g.firstChild); });
+document.getElementById("olist").innerHTML = ORGANS.map(o => `<button type="button" data-o="${o.id}" aria-pressed="false">${o.fa}</button>`).join("");
+
+let curOrg = null, curType = "", curM = "cortisol";
+document.getElementById("tfilter").innerHTML = [["","همه"],["hormone","هورمون‌ها"],["neuro","پیام‌رسان‌های عصبی"],["immune","ایمنی"],["factor","عامل رشد"]].map(([k,t]) => `<button type="button" data-t="${k}" aria-pressed="${k===""}">${k?`<i style="background:var(--${k})"></i>`:""}${t}</button>`).join("");
+function list(){
+  const items = M.filter(m => (!curType || m.t === curType) && (!curOrg || m.o.includes(curOrg)));
+  document.getElementById("ml").innerHTML = items.map(m => `<button type="button" class="tbar t-${m.t}" data-m="${m.id}" aria-pressed="${m.id===curM}"><b>${m.fa}</b><small>${m.en}</small></button>`).join("") || `<span style="color:var(--muted);font-size:.9rem">موردی در این دسته نیست.</span>`;
+  const on = document.getElementById("orgnote");
+  if (curOrg) { const o = OB[curOrg]; on.hidden = false; on.innerHTML = `<b>${o.fa}</b><span style="font-family:var(--f-latin);font-style:italic;color:var(--muted)">${o.en}</span> · ${o.d} <button type="button" id="clr" style="font:inherit;font-size:.8rem;background:none;border:0;color:var(--accent);cursor:pointer;text-decoration:underline">نمایش همه</button>`; document.getElementById("clr").onclick = () => setOrg(null); }
+  else on.hidden = true;
+  svg.querySelectorAll(".org").forEach(g => g.classList.toggle("on", g.dataset.o === curOrg || (!curOrg && M.find(m=>m.id===curM)?.o.includes(g.dataset.o))));
+  document.querySelectorAll("#olist button").forEach(b => b.setAttribute("aria-pressed", b.dataset.o === curOrg));
+}
+function detail(id){
+  curM = id; const m = M.find(x => x.id === id);
+  document.getElementById("det").className = `det t-${m.t}`;
+  document.getElementById("det").innerHTML = `<h3>${m.fa}</h3><div class="en">${m.en}</div>
+   <div class="badges"><span class="badge tp">${TFA[m.t]}</span><span class="badge ev-${m.ev_lv}">${EVFA[m.ev_lv]}</span>${m.o.map(o=>`<span class="badge">${OB[o].fa}</span>`).join("")}</div>
+   <dl><dt>کجا ساخته می‌شود</dt><dd>${m.w}</dd><dt>چه می‌کند</dt><dd>${m.d}</dd><dt>روان و رفتار</dt><dd>${m.psy}</dd></dl>
+   ${m.myth ? `<div class="mv"><div class="myth"><b>باور رایج</b>${m.myth}</div><div class="evd"><b>آنچه شواهد می‌گویند</b>${m.ev}</div></div>` : ""}
+   ${(m.up.length||m.down.length) ? `<div class="ud"><div><h4>چه چیزهایی بالایش می‌برد</h4><ul>${m.up.map(x=>`<li>${x}</li>`).join("")||"<li>—</li>"}</ul></div><div><h4>چه چیزهایی پایینش می‌آورد</h4><ul>${m.down.map(x=>`<li>${x}</li>`).join("")||"<li>—</li>"}</ul></div></div>` : ""}
+   ${m.clin ? `<div class="clin"><b>نکتهٔ بالینی</b>${m.clin}</div>` : ""}
+   ${golinks(m.wiki, m.g)}`;
+  list();
+}
+function setOrg(o){ curOrg = o; const first = M.find(m => (!curType || m.t===curType) && (!o || m.o.includes(o))); if (first && o) curM = first.id; list(); if (first) detail(curM); }
+svg.addEventListener("click", e => { const g = e.target.closest(".org"); if (g) setOrg(curOrg === g.dataset.o ? null : g.dataset.o); });
+svg.addEventListener("keydown", e => { const g = e.target.closest(".org"); if (g && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); setOrg(curOrg === g.dataset.o ? null : g.dataset.o); } });
+document.getElementById("olist").addEventListener("click", e => { const b = e.target.closest("button"); if (b) setOrg(curOrg === b.dataset.o ? null : b.dataset.o); });
+document.getElementById("tfilter").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; curType = b.dataset.t; document.querySelectorAll("#tfilter button").forEach(x => x.setAttribute("aria-pressed", x === b)); list(); });
+document.getElementById("ml").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { detail(b.dataset.m); if (innerWidth < 860) document.getElementById("det").scrollIntoView({block:"start"}); } });
+
+/* axes */
+const miniFig = ids => `<svg class="mini" viewBox="30 0 140 340" aria-hidden="true"><ellipse cx="100" cy="40" rx="27" ry="32" fill="var(--skin)" stroke="var(--line)"/><path d="M60 96 C 76 86 124 86 140 96 L 146 150 C 148 190 142 214 140 238 C 138 268 140 296 136 324 L 64 324 C 60 296 62 268 60 238 C 58 214 52 190 54 150 Z" fill="var(--skin)" stroke="var(--line)"/>${ORGANS.map(o => `<circle cx="${o.x}" cy="${o.y}" r="${ids.includes(o.id)?8:3.5}" fill="${ids.includes(o.id)?'var(--accent)':'var(--line)'}" opacity="${ids.includes(o.id)?1:.5}"/>`).join("")}</svg>`;
+document.getElementById("axes").innerHTML = AXES.map(a => `<article class="axis">${miniFig(a.o)}<h3>${a.fa}</h3><div class="en">${a.en}</div><div class="chain">${a.chain.map(c=>`<span>${c}</span>`).join("<i>←</i>")}</div><p>${a.d}</p>${golinks(a.wiki,a.g)}</article>`).join("");
+document.getElementById("lifel").innerHTML = LIFE.map(l => `<li><h3>${l.fa}</h3><p>${l.d}</p>${golinks(l.wiki,l.g)}</li>`).join("");
+document.getElementById("bh").innerHTML = BEHAV.map(b => `<article><h3>${b.fa}<span class="badge ev-${b.ev}">${EVFA[b.ev]}</span></h3><p>${b.d}</p>${golinks(b.wiki,b.g)}</article>`).join("");
+
+/* routing */
+const VIEWS = ["messengers","axes","life","behavior"];
+function show(){ const v = VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "messengers";
+  VIEWS.forEach(x => document.getElementById("v-"+x).hidden = x !== v);
+  document.querySelectorAll("nav.tabs a").forEach(a => a.setAttribute("aria-current", a.dataset.v === v ? "page" : "false")); }
+addEventListener("hashchange", () => { show(); scrollTo(0,0); });
+show(); detail("cortisol");
+</script>
+
+</body></html>
