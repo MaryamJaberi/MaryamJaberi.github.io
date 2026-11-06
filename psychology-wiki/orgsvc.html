@@ -47,7 +47,7 @@ nav.main a[aria-current="page"]{color:var(--accent);background:var(--accent-soft
 .langs{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden;flex:none}
 .langs button{border:0;background:none;padding:5px 11px;font-size:.82rem;font-weight:700;cursor:pointer;color:var(--muted);font-family:var(--f-lat)}
 .langs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-@media (max-width:1180px){nav.main{order:3;width:100%;padding-bottom:4px}}
+@media (max-width:1320px){nav.main{order:3;width:100%;padding-bottom:4px}}
 /* generic */
 main{padding-block:28px 64px}
 .view[hidden]{display:none}
@@ -234,13 +234,36 @@ ol.refs a{word-break:break-all}
 ol.refs li.hl{background:var(--accent-soft);border-radius:8px;padding-inline:8px}
 @media (max-width:620px){.reqf{grid-template-columns:minmax(0,1fr)}}
 @media (min-width:821px){.ctaband{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}}
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:16px}
+.role{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px}
+.role .ric{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--wash);color:var(--accent);font-size:1.2rem}
+.role.core .ric{background:var(--accent);color:var(--accent-ink)}
+.role b{display:block} .role p{margin:6px 0 0;font-size:.93rem}
+.flow{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px;position:relative}
+.flow li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;align-items:start}
+.flow .fw{font-size:.8rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;padding-top:16px}
+.flow .card{padding-block:14px} .flow p{margin:6px 0 0;font-size:.93rem;color:var(--muted)}
+.who{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.who span{background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:2px 10px;font-size:.78rem;font-weight:700}
+table.see{border-collapse:collapse;width:100%;min-width:420px;font-size:.92rem}
+table.see th,table.see td{padding:10px 8px;border-bottom:1px solid var(--rule);text-align:start;vertical-align:top}
+table.see thead th{font-size:.8rem;color:var(--muted)}
+table.see td i{font-style:normal;font-weight:800;margin-inline-end:4px}
+table.see td.y i{color:var(--high)} table.see td.n i{color:var(--low)} table.see td.p i{color:var(--mid)}
+.emp{background:var(--high-soft);border-color:transparent}
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+a.doc{text-decoration:none;color:var(--ink);display:grid;gap:6px;align-content:start;transition:transform .15s}
+a.doc:hover{transform:translateY(-2px)}
+a.doc .dic{font-size:1.5rem;color:var(--accent)} a.doc .pill{justify-self:start} a.doc p{margin:0;font-size:.9rem;color:var(--muted)}
+@media (max-width:620px){.flow li{grid-template-columns:minmax(0,1fr);gap:4px}.flow .fw{padding-top:0}}
+footer.foot .wrap{gap:6px 18px;flex-wrap:wrap}
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;z-index:50;font-weight:600}
 </style>
 
 <header class="bar gut"><div class="wrap">
   <a class="logo" href="#home" aria-label="home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M7 21c3-7 6-7 9 0s6 7 9 0" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="11" r="2.6" fill="var(--accent-ink)"/></svg><span data-t="brand"></span></a>
   <nav class="main" aria-label="sections">
-    <a href="#home" data-v="home" data-t="nHome"></a><a href="#take" data-v="take" data-t="nTake"></a><a href="#report" data-v="report" data-t="nReport"></a><a href="#workshops" data-v="workshops" data-t="nWs"></a><a href="#method" data-v="method" data-t="nMethod"></a><a href="#sources" data-v="sources" data-t="nSrc"></a>
+    <a href="#home" data-v="home" data-t="nHome"></a><a href="#process" data-v="process" data-t="nProc"></a><a href="#take" data-v="take" data-t="nTake"></a><a href="#report" data-v="report" data-t="nReport"></a><a href="#workshops" data-v="workshops" data-t="nWs"></a><a href="#method" data-v="method" data-t="nMethod"></a><a href="#sources" data-v="sources" data-t="nSrc"></a>
   </nav>
   <div class="langs" role="group" aria-label="language"><button data-l="fa" lang="fa">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
 </div></header>
@@ -253,8 +276,9 @@ ol.refs li.hl{background:var(--accent-soft);border-radius:8px;padding-inline:8px
  <section class="view" id="v-workshops" hidden></section>
  <section class="view" id="v-method" hidden></section>
  <section class="view" id="v-sources" hidden></section>
+ <section class="view" id="v-process" hidden></section>
 </div></main>
-<footer class="foot gut"><div class="wrap row" style="justify-content:space-between"><span data-t="footer"></span><span data-t="by"></span></div></footer>
+<footer class="foot gut"><div class="wrap row" style="justify-content:space-between"><span data-t="footer"></span><span data-t="company"></span><span data-t="by"></span></div></footer>
 
 <script>
 /* پرسشنامه‌های واقعی دورهٔ «مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی» — متن فارسی از اسلایدهای همان جلسه.
@@ -1125,6 +1149,105 @@ Object.assign(T.fa, {
  wRead:"پیش‌زمینهٔ علمی در ویکی دوره",
  fa:"فارسی", srcSee:"منابع را ببینید"
 });
+/* Sanjesh — company (SoloNovate), how-we-work page: roles, timeline, who sees what, sample documents (en / nl / fa) */
+const DOCS_BASE = "../wellbeing-check/docs/";
+window.DOCLIST = [
+ {slug:"pilot-agreement", ic:"✎", aud:"mgmt"},
+ {slug:"data-processing", ic:"⛨", aud:"mgmt"},
+ {slug:"privacy-participants", ic:"☺", aud:"staff"},
+ {slug:"staff-announcement", ic:"✉", aud:"hr"}
+];
+Object.assign(T.en, {
+ nProc:"How it works", company:"SoloNovate · Rotterdam · registered with the Dutch Chamber of Commerce (KvK)",
+ prT:"How it works", prP:"A clear process with a small team: who does what, what everyone gets to see, and the documents we sign. No surprises for management or employees.",
+ rolesT:"Who does what",
+ roles:[["◆","SoloNovate · Maryam Jaberi","Your single point of contact","Sets up the survey, safeguards the data, analyses the answers, writes the report and coordinates everything from kick-off to repeat measurement."],
+  ["✚","Partner psychologist","Experienced, runs workshops for organisations","Checks the interpretation of the report, joins the debrief and delivers the workshops your teams choose."],
+  ["☎","Your contact person","Often HR or the office manager","Plans the round with us, informs staff using our template message and is the link to management."],
+  ["☺","Employees","The people it is all about","Decide for themselves whether to take part, answer anonymously in 8–18 minutes and see their own result straight away."],
+  ["▲","Management","Owner of the follow-up","Receives the group report, discusses it in the debrief, chooses next steps and shares a summary with staff."],
+  ["⚖","Works council","If your organisation has one","Is informed in advance and gives consent where the law requires it."]],
+ flowT:"The route, week by week",
+ flow:[["Week 0","Kick-off",["SoloNovate","Contact person"],"30 minutes: goals, job levels and planning. We sign the pilot agreement and the data processing agreement."],
+  ["Week 0","Inform staff",["Management","Works council"],"Management sends the template message: why, how anonymous, and what will happen with the results."],
+  ["Weeks 1–2","Survey open",["Employees"],"Anonymous questionnaires on phone or computer. Everyone sees their own result at once. One reminder halfway."],
+  ["Week 3","Analysis and report",["SoloNovate","Psychologist"],"We analyse the group data and the psychologist checks the interpretation. Groups under 5 stay hidden."],
+  ["Week 4","Debrief",["SoloNovate","Psychologist","Management"],"45 minutes: what the results mean and which two or three workshops to start with."],
+  ["Week 4","Back to the team",["Management"],"A short summary goes to all employees. They took part, so they hear what comes of it."],
+  ["After","Workshops and repeat check",["Psychologist","SoloNovate"],"The psychologist runs the workshops; a repeat check after 3–6 months shows what changed."]],
+ seeT:"Who sees what", seeP:"Anonymity is built into the process, not just promised.",
+ seeCols:["Individual answers (without names)","Group report (5+ people)"],
+ see:[["Employee","Only your own","Summary"],["Management and HR","Never","Yes"],["Partner psychologist","Never","Yes"],["SoloNovate","Yes, without names","Yes"]],
+ empT:"For employees: what happens to your answers",
+ emp:["You are never asked for your name, e-mail address or staff number.","Your manager and HR only ever see results of groups of 5 or more people.","You see your own result immediately, with two practical tips. Only you see it.","Taking part is voluntary. You can stop or skip a question at any time.","If you send a response code, send it to SoloNovate, never to your manager or HR."],
+ docsT:"Sample documents", docsP:"So you know exactly what you sign before you start. Each document is available in Dutch and English and can be printed or saved as PDF. These are drafts that we finalise together before the pilot.",
+ docs:{"pilot-agreement":["Pilot agreement","What the pilot includes, roles, anonymity, price, liability."],"data-processing":["Data processing agreement","GDPR art. 28: which data, security, retention and data breaches."],"privacy-participants":["Privacy notice for participants","In plain language for employees: who sees what and your rights."],"staff-announcement":["Announcement to staff","Template message from management, ready to adapt."]},
+ aud:{mgmt:"For management", staff:"For employees", hr:"For HR"}, open:"Open",
+ rCodeP:"Copy this code and e-mail it to SoloNovate, not to your manager or HR. It contains only answer numbers and your job level, not your name. We do not link your e-mail address to your answers and delete the e-mail after importing the code.", rMail:"E-mail code to SoloNovate",
+ faq:T.en.faq.map((x, i) => i === 4 ? ["How are responses collected in the pilot?","Each participant e-mails an anonymous response code (only answer numbers and job level) directly to SoloNovate, never to the employer. SoloNovate deletes those e-mails after importing. For a full roll-out a secure online collection can be set up."] : x),
+ footer:"Workplace Wellbeing Check by SoloNovate · pilot version · non-diagnostic"
+});
+Object.assign(T.nl, {
+ nProc:"Werkwijze", company:"SoloNovate · Rotterdam · ingeschreven bij de Kamer van Koophandel",
+ prT:"Werkwijze", prP:"Een helder proces met een klein team: wie wat doet, wie wat te zien krijgt en welke documenten we tekenen. Geen verrassingen voor management of medewerkers.",
+ rolesT:"Wie doet wat",
+ roles:[["◆","SoloNovate · Maryam Jaberi","Uw vaste aanspreekpunt","Richt de meting in, bewaakt de gegevens, analyseert de antwoorden, schrijft het rapport en coördineert alles van start tot herhaalmeting."],
+  ["✚","Partner-psycholoog","Ervaren, geeft workshops aan organisaties","Controleert de duiding van het rapport, is bij de nabespreking en geeft de workshops die uw teams kiezen."],
+  ["☎","Uw contactpersoon","Vaak HR of de officemanager","Plant de ronde met ons, informeert medewerkers met onze voorbeeldtekst en is de schakel naar het management."],
+  ["☺","Medewerkers","Om wie het draait","Kiezen zelf of ze meedoen, vullen anoniem in (8–18 minuten) en zien meteen hun eigen resultaat."],
+  ["▲","Management","Eigenaar van de opvolging","Ontvangt het groepsrapport, bespreekt het in de nabespreking, kiest vervolgstappen en deelt een samenvatting met medewerkers."],
+  ["⚖","Ondernemingsraad","Als uw organisatie er een heeft","Wordt vooraf geïnformeerd en geeft instemming waar de wet dat vraagt."]],
+ flowT:"De route, week voor week",
+ flow:[["Week 0","Start",["SoloNovate","Contactpersoon"],"30 minuten: doelen, functieniveaus en planning. We tekenen de pilotovereenkomst en de verwerkersovereenkomst."],
+  ["Week 0","Medewerkers informeren",["Management","OR"],"Het management stuurt de voorbeeldtekst: waarom, hoe anoniem, en wat er met de uitkomsten gebeurt."],
+  ["Week 1–2","Vragenlijst open",["Medewerkers"],"Anonieme vragenlijsten op telefoon of computer. Iedereen ziet direct het eigen resultaat. Halverwege één herinnering."],
+  ["Week 3","Analyse en rapport",["SoloNovate","Psycholoog"],"Wij analyseren de groepsgegevens en de psycholoog controleert de duiding. Groepen onder de 5 blijven verborgen."],
+  ["Week 4","Nabespreking",["SoloNovate","Psycholoog","Management"],"45 minuten: wat de uitkomsten betekenen en met welke twee of drie workshops u begint."],
+  ["Week 4","Terug naar het team",["Management"],"Een korte samenvatting gaat naar alle medewerkers. Zij deden mee, dus zij horen wat ermee gebeurt."],
+  ["Daarna","Workshops en herhaalmeting",["Psycholoog","SoloNovate"],"De psycholoog geeft de workshops; een herhaalmeting na 3–6 maanden laat zien wat er veranderd is."]],
+ seeT:"Wie ziet wat", seeP:"Anonimiteit zit in het proces ingebouwd; het is niet alleen een belofte.",
+ seeCols:["Individuele antwoorden (zonder naam)","Groepsrapport (5+ personen)"],
+ see:[["Medewerker","Alleen de eigen","Samenvatting"],["Management en HR","Nooit","Ja"],["Partner-psycholoog","Nooit","Ja"],["SoloNovate","Ja, zonder naam","Ja"]],
+ empT:"Voor medewerkers: wat er met uw antwoorden gebeurt",
+ emp:["Er wordt nooit naar uw naam, e-mailadres of personeelsnummer gevraagd.","Uw leidinggevende en HR zien alleen uitkomsten van groepen van 5 of meer mensen.","U ziet direct uw eigen resultaat met twee praktische tips. Alleen u ziet dat.","Meedoen is vrijwillig. U kunt altijd stoppen of een vraag overslaan.","Stuurt u een antwoordcode? Stuur die naar SoloNovate, nooit naar uw leidinggevende of HR."],
+ docsT:"Voorbeelddocumenten", docsP:"Zodat u vooraf precies weet wat u tekent. Elk document is er in het Nederlands en Engels en kan worden afgedrukt of als pdf bewaard. Het zijn concepten die we vóór de pilot samen afronden.",
+ docs:{"pilot-agreement":["Pilotovereenkomst","Wat de pilot omvat, rollen, anonimiteit, prijs, aansprakelijkheid."],"data-processing":["Verwerkersovereenkomst","AVG art. 28: welke gegevens, beveiliging, bewaartermijn en datalekken."],"privacy-participants":["Privacyverklaring voor deelnemers","In gewone taal voor medewerkers: wie wat ziet en uw rechten."],"staff-announcement":["Aankondiging aan medewerkers","Voorbeeldbericht van het management, klaar om aan te passen."]},
+ aud:{mgmt:"Voor management", staff:"Voor medewerkers", hr:"Voor HR"}, open:"Openen",
+ rCodeP:"Kopieer deze code en mail hem naar SoloNovate, niet naar uw leidinggevende of HR. De code bevat alleen antwoordcijfers en uw functieniveau, niet uw naam. We koppelen uw e-mailadres niet aan uw antwoorden en verwijderen de e-mail na het invoeren.", rMail:"Code mailen naar SoloNovate",
+ faq:T.nl.faq.map((x, i) => i === 4 ? ["Hoe worden antwoorden in de pilot verzameld?","Elke deelnemer mailt een anonieme antwoordcode (alleen antwoordcijfers en functieniveau) rechtstreeks naar SoloNovate, nooit naar de werkgever. SoloNovate verwijdert die e-mails na het invoeren. Voor een volledige uitrol kan een beveiligde online verzameling worden ingericht."] : x),
+ footer:"Welzijnsscan voor organisaties door SoloNovate · pilotversie · niet-diagnostisch"
+});
+Object.assign(T.fa, {
+ nProc:"روند کار", company:"SoloNovate · روتردام · ثبت‌شده در اتاق بازرگانی هلند (KvK)",
+ prT:"روند کار", prP:"روندی روشن با تیمی کوچک: چه کسی چه می‌کند، چه کسی چه چیزی می‌بیند و چه سندهایی امضا می‌کنیم. بی‌هیچ غافلگیری برای مدیران یا کارکنان.",
+ rolesT:"چه کسی چه می‌کند",
+ roles:[["◆","SoloNovate · مریم جابری","تنها طرف حساب شما","سنجش را راه می‌اندازد، از داده‌ها محافظت می‌کند، پاسخ‌ها را تحلیل می‌کند، گزارش را می‌نویسد و همه‌چیز را از شروع تا سنجش دوباره هماهنگ می‌کند."],
+  ["✚","روان‌شناس همکار","باتجربه، برگزارکنندهٔ کارگاه برای سازمان‌ها","تعبیر گزارش را بازبینی می‌کند، در جلسهٔ بازخورد حاضر است و کارگاه‌هایی را که تیم‌ها انتخاب می‌کنند اجرا می‌کند."],
+  ["☎","رابط سازمان","معمولاً منابع انسانی یا مدیر دفتر","دوره را با ما برنامه‌ریزی می‌کند، با متن نمونهٔ ما به کارکنان اطلاع می‌دهد و پل ارتباطی با مدیریت است."],
+  ["☺","کارکنان","کسانی که همه‌چیز برای آن‌هاست","خودشان تصمیم می‌گیرند شرکت کنند یا نه، در ۸ تا ۱۸ دقیقه ناشناس پاسخ می‌دهند و نتیجهٔ خودشان را همان لحظه می‌بینند."],
+  ["▲","مدیریت","صاحب پیگیری","گزارش گروهی را می‌گیرد، در جلسهٔ بازخورد بررسی می‌کند، گام‌های بعد را انتخاب می‌کند و خلاصه‌ای با کارکنان در میان می‌گذارد."],
+  ["⚖","شورای کار","اگر سازمان شورای کار دارد","از پیش مطلع می‌شود و هر جا قانون بخواهد، موافقت می‌دهد."]],
+ flowT:"مسیر، هفته به هفته",
+ flow:[["هفتهٔ ۰","شروع",["SoloNovate","رابط سازمان"],"۳۰ دقیقه: هدف‌ها، رده‌ها و زمان‌بندی. قرارداد اجرای آزمایشی و قرارداد پردازش داده را امضا می‌کنیم."],
+  ["هفتهٔ ۰","اطلاع به کارکنان",["مدیریت","شورای کار"],"مدیریت متن نمونه را می‌فرستد: چرا، چقدر ناشناس، و با نتیجه‌ها چه می‌شود."],
+  ["هفتهٔ ۱ و ۲","سنجش باز",["کارکنان"],"پرسشنامه‌های ناشناس روی گوشی یا رایانه. هر کس نتیجهٔ خودش را فوراً می‌بیند. یک یادآوری در میانهٔ کار."],
+  ["هفتهٔ ۳","تحلیل و گزارش",["SoloNovate","روان‌شناس"],"داده‌های گروهی را تحلیل می‌کنیم و روان‌شناس تعبیرها را بازبینی می‌کند. گروه‌های کمتر از ۵ نفر پنهان می‌مانند."],
+  ["هفتهٔ ۴","جلسهٔ بازخورد",["SoloNovate","روان‌شناس","مدیریت"],"۴۵ دقیقه: نتیجه‌ها چه معنایی دارند و با کدام دو یا سه کارگاه شروع کنیم."],
+  ["هفتهٔ ۴","بازگشت به تیم",["مدیریت"],"خلاصه‌ای کوتاه برای همهٔ کارکنان فرستاده می‌شود. آن‌ها شرکت کرده‌اند، پس باید بدانند نتیجه‌اش چه شد."],
+  ["پس از آن","کارگاه‌ها و سنجش دوباره",["روان‌شناس","SoloNovate"],"روان‌شناس کارگاه‌ها را اجرا می‌کند؛ سنجش دوباره پس از ۳ تا ۶ ماه تغییر را نشان می‌دهد."]],
+ seeT:"چه کسی چه می‌بیند", seeP:"ناشناس بودن در خود روند ساخته شده، نه فقط یک قول.",
+ seeCols:["پاسخ‌های فردی (بدون نام)","گزارش گروهی (۵ نفر و بیشتر)"],
+ see:[["کارمند","فقط پاسخ خودش","خلاصه"],["مدیریت و منابع انسانی","هرگز","بله"],["روان‌شناس همکار","هرگز","بله"],["SoloNovate","بله، بدون نام","بله"]],
+ empT:"برای کارکنان: با پاسخ‌های شما چه می‌شود",
+ emp:["هرگز نام، ایمیل یا شمارهٔ کارمندی شما پرسیده نمی‌شود.","مدیر و منابع انسانی فقط نتیجهٔ گروه‌های ۵ نفر و بیشتر را می‌بینند.","نتیجهٔ خودتان را همان لحظه با دو پیشنهاد عملی می‌بینید. فقط خودتان آن را می‌بینید.","شرکت داوطلبانه است. هر وقت خواستید می‌توانید کار را رها کنید یا از پرسشی بگذرید.","اگر کد پاسخ می‌فرستید، آن را برای SoloNovate بفرستید، هرگز برای مدیر یا منابع انسانی."],
+ docsT:"سندهای نمونه", docsP:"تا پیش از شروع دقیقاً بدانید چه چیزی را امضا می‌کنید. هر سند به هلندی و انگلیسی موجود است و می‌توان آن را چاپ کرد یا به‌صورت PDF ذخیره کرد. این‌ها پیش‌نویس‌اند و پیش از اجرای آزمایشی با هم نهایی می‌شوند.",
+ docs:{"pilot-agreement":["قرارداد اجرای آزمایشی","آنچه اجرای آزمایشی شامل می‌شود، نقش‌ها، ناشناس بودن، هزینه و مسئولیت."],"data-processing":["قرارداد پردازش داده","مادهٔ ۲۸ GDPR: چه داده‌ای، امنیت، مدت نگهداری و نشت داده."],"privacy-participants":["بیانیهٔ حریم خصوصی برای شرکت‌کنندگان","به زبان ساده برای کارکنان: چه کسی چه می‌بیند و حقوق شما."],"staff-announcement":["اطلاعیه به کارکنان","متن نمونهٔ مدیریت، آمادهٔ ویرایش."]},
+ aud:{mgmt:"برای مدیریت", staff:"برای کارکنان", hr:"برای منابع انسانی"}, open:"باز کردن (هلندی / انگلیسی)",
+ rCodeP:"این کد را کپی کنید و برای SoloNovate ایمیل کنید، نه برای مدیر یا منابع انسانی. کد فقط عدد پاسخ‌ها و رده را دارد، نه نام شما. ایمیل شما را به پاسخ‌هایتان وصل نمی‌کنیم و پس از وارد کردن کد، ایمیل را پاک می‌کنیم.", rMail:"ایمیل کد به SoloNovate",
+ faq:T.fa.faq.map((x, i) => i === 4 ? ["در اجرای آزمایشی پاسخ‌ها چطور جمع می‌شوند؟","هر شرکت‌کننده یک کد پاسخ ناشناس (فقط عدد پاسخ‌ها و رده) را مستقیم برای SoloNovate ایمیل می‌کند، هرگز برای کارفرما. SoloNovate این ایمیل‌ها را پس از وارد کردن کد پاک می‌کند. برای اجرای کامل می‌توان گردآوری آنلاین امن راه انداخت."] : x),
+ footer:"سنجش سلامت روانی سازمان از SoloNovate · نسخهٔ آزمایشی · غیرتشخیصی"
+});
+
 
 
 </script>
@@ -1182,7 +1305,7 @@ let DB = null, USER = null, CAN = false;
 
 /* ── router ── */
 let cur = "home", joinCode = null, ROUND = null;
-const VIEWS = ["home","take","result","report","workshops","method","sources"];
+const VIEWS = ["home","process","take","result","report","workshops","method","sources"];
 function route(){
   let h = (location.hash || "#home").slice(1);
   if(h.startsWith("join-")){ joinCode = h.slice(5).toUpperCase(); h = "take"; loadRound(); }
@@ -1190,7 +1313,7 @@ function route(){
   cur = h;
   VIEWS.forEach(v => document.getElementById("v-" + v).hidden = v !== h);
   document.querySelectorAll("nav.main a").forEach(a => a.setAttribute("aria-current", a.dataset.v === (h === "result" ? "take" : h) ? "page" : "false"));
-  ({home:renderHome, take:renderTake, result:renderResult, report:renderReport, workshops:renderWs, method:renderMethod, sources:renderSources})[h]();
+  ({home:renderHome, take:renderTake, result:renderResult, report:renderReport, workshops:renderWs, method:renderMethod, sources:renderSources, process:renderProc})[h]();
   window.scrollTo(0, 0);
   if(h === "sources" && pendingRef){ const el = document.getElementById("ref-" + pendingRef); pendingRef = null; if(el){ el.classList.add("hl"); setTimeout(() => el.scrollIntoView({block:"center"}), 30); } }
 }
@@ -1268,7 +1391,7 @@ function renderHome(){
       <p class="small muted" style="margin:14px 0 0"><span id="c-perday"></span> ${cite(["mkb"])}</p>
       <div class="callout" style="margin-top:12px"><div class="small">${t("cNote")}</div></div>
     </div></section>
-  <section class="blk"><h2>${t("howT")}</h2><div class="steps" style="margin-top:16px">${t("how").map(([a, b]) => `<div class="card step"><b>${a}</b><p>${b}</p></div>`).join("")}</div></section>
+  <section class="blk"><h2>${t("howT")}</h2><div class="steps" style="margin-top:16px">${t("how").map(([a, b]) => `<div class="card step"><b>${a}</b><p>${b}</p></div>`).join("")}</div><div class="row" style="margin-top:14px"><a class="btn sec" href="#process">${t("rolesT")} · ${t("seeT")} · ${t("docsT")} ${L === "fa" ? "←" : "→"}</a></div></section>
   <section class="blk"><h2>${t("measT")}</h2><p class="sub">${t("measP")}</p>
     <div class="grid">${DIMS.map(D => `<button class="card dim" aria-expanded="false"><span class="ic" style="background:${D.col}" aria-hidden="true">${ICON[D.id]}</span><b>${dn(D)}</b><p class="q">${D[L].q}</p>
       <div class="more"><p><b>${t("whatIs")}:</b> ${D[L].what}</p><p><b>${t("whatNot")}:</b> ${D[L].not}</p><p class="small muted">${instText(D.inst).name} · ${num(INST[D.inst].items.length)} ${t("items")}</p></div></button>`).join("")}</div></section>
@@ -1382,7 +1505,7 @@ function renderResult(){
      ${D.subs.length ? miniBars(D.subs.map(s => [window.SUBN[D.inst + "." + s][L], sc.sub[D.inst + "." + s]]).filter(x => x[1] != null)) : ""}<p class="small muted">${t("whatNot")}: ${D[L].not}</p></div>`).join("")}</details>
    <div class="card" style="margin-top:20px">
      ${R.r !== "self" ? `<div class="row" style="justify-content:space-between"><b>${t("rSend")}</b><button class="btn pri" id="send">${t("rSend")}</button></div><p id="sendmsg" class="small muted"></p>` : ""}
-     <b>${t("rCode")}</b><p class="small muted" style="margin:4px 0 8px">${t("rCodeP")}</p><div class="code" id="code">${code}</div><div class="row" style="margin-top:10px"><button class="btn sec" id="copy">${t("rCopy")}</button><a class="btn sec" href="#workshops">${t("nWs")}</a></div>
+     <b>${t("rCode")}</b><p class="small muted" style="margin:4px 0 8px">${t("rCodeP")}</p><div class="code" id="code">${code}</div><div class="row" style="margin-top:10px"><a class="btn pri" href="${mailto("Wellbeing Check · response code", code)}">${t("rMail")}</a><button class="btn sec" id="copy">${t("rCopy")}</button><a class="btn sec" href="#workshops">${t("nWs")}</a></div>
    </div>
    <p class="small muted" style="margin-top:16px">${t("rNot")}</p></div>`;
   document.getElementById("copy").onclick = async () => { try{ await navigator.clipboard.writeText(code); toast(t("rCopied")); }catch(e){ const r = document.createRange(); r.selectNodeContents(document.getElementById("code")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } };
@@ -1481,6 +1604,21 @@ function renderWs(){
    <p class="small muted" style="margin:10px 0"><b>${t("wEv")}:</b> ${W[L].ev} ${cite(W.refs)}</p>
    <p class="small muted" style="margin:0 0 6px">${t("wRead")}:</p><div class="chips">${W.wiki.filter(k => URLS[k]).map(k => wikiChip(k, "pill")).join("")}</div>
    <div style="margin-top:12px"><a class="small" href="${mailto(t("pPlan") + ": " + W[L].t, W[L].t)}">${t("pPlan")} ${L === "fa" ? "←" : "→"}</a></div></article>`).join("")}</div>`;
+}
+/* ── HOW IT WORKS ── */
+function renderProc(){
+  const yes = v => /^(Ja|Yes|بله)/.test(v), no = v => /^(Nooit|Never|هرگز)/.test(v);
+  document.getElementById("v-process").innerHTML = `<div class="kicker">SoloNovate · ${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("prT")}</h1><p class="lead">${t("prP")}</p>
+  <section class="blk"><h2>${t("rolesT")}</h2><div class="roles">${t("roles").map(([ic, a, b, c], i) => `<div class="card role${i < 2 ? " core" : ""}"><span class="ric" aria-hidden="true">${ic}</span><div><b>${a}</b><span class="small muted">${b}</span><p>${c}</p></div></div>`).join("")}</div></section>
+  <section class="blk"><h2>${t("flowT")}</h2><ol class="flow">${t("flow").map(([w, a, who, b]) => `<li><span class="fw">${w}</span><div class="card"><b>${a}</b><div class="who">${who.map(x => `<span>${x}</span>`).join("")}</div><p>${b}</p></div></li>`).join("")}</ol></section>
+  <section class="blk split">
+    <div class="card"><h2 style="font-size:1.3rem;margin-bottom:4px">${t("seeT")}</h2><p class="small muted" style="margin:0 0 12px">${t("seeP")}</p>
+      <div class="scroll"><table class="see"><thead><tr><th></th>${t("seeCols").map(c => `<th>${c}</th>`).join("")}</tr></thead><tbody>${t("see").map(([r, ...cs]) => `<tr><th scope="row">${r}</th>${cs.map(v => `<td class="${yes(v) ? "y" : no(v) ? "n" : "p"}"><i aria-hidden="true">${yes(v) ? "✓" : no(v) ? "✕" : "◐"}</i> ${v}</td>`).join("")}</tr>`).join("")}</tbody></table></div></div>
+    <div class="card emp"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("empT")}</h2><ul class="check">${t("emp").map(x => `<li>${x}</li>`).join("")}</ul>
+      <p class="small" style="margin:10px 0 0"><a href="${DOCS_BASE}privacy-participants.html" target="_blank" rel="noopener">${t("docs")["privacy-participants"][0]} ${L === "fa" ? "←" : "→"}</a></p></div>
+  </section>
+  <section class="blk"><h2>${t("docsT")}</h2><p class="sub">${t("docsP")}</p><div class="docs">${window.DOCLIST.map(d => { const [a, b] = t("docs")[d.slug]; return `<a class="card doc" href="${DOCS_BASE}${d.slug}.html${L === "en" ? "#en" : ""}" target="_blank" rel="noopener"><span class="dic" aria-hidden="true">${d.ic}</span><span class="pill">${t("aud")[d.aud]}</span><b>${a}</b><p>${b}</p><span class="small" style="color:var(--accent);font-weight:700">${t("open")} ${L === "fa" ? "←" : "→"}</span></a>`; }).join("")}</div></section>
+  <section class="ctaband"><div><h2>${t("ctaT")}</h2><p>${t("ctaP")}</p></div><div class="row"><a class="btn" href="#home" onclick="setTimeout(()=>document.getElementById('contact')?.scrollIntoView(),60)">${t("fSend")}</a><a class="btn sec" href="#report">${t("ctaDemo")}</a></div></section>`;
 }
 /* ── SOURCES ── */
 function renderSources(){
