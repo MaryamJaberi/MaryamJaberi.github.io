@@ -3,126 +3,336 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maryam Jaberi – Product Manager & Game Designer</title>
-<meta name="description" content="Product manager and game designer in Rotterdam. Search, streaming and education platforms, plus open games and tools people actually play.">
-<meta property="og:title" content="Maryam Jaberi – Product & Game Design">
-<meta property="og:description" content="I turn fuzzy ideas into products people can use, and I build the first playable version myself.">
+<title>Maryam Jaberi — Product Manager & Product Designer · Rotterdam</title>
+<meta name="description" content="Maryam Jaberi, Product Manager and Product Designer in Rotterdam. 6+ years on search, streaming and education products used by millions; 8 public projects she specified and shipped herself.">
+<link rel="canonical" href="https://maryamjaberi.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maryamjaberi.github.io/">
+<meta property="og:title" content="Maryam Jaberi — Product Manager & Product Designer · Rotterdam">
+<meta property="og:description" content="I turn fuzzy ideas into products people can use, and I build the first working version myself.">
+<meta property="og:image" content="https://maryamjaberi.github.io/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0c0614">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Maryam Jaberi","jobTitle":"Product Manager & Product Designer","address":{"@type":"PostalAddress","addressLocality":"Rotterdam","addressCountry":"NL"},"email":"mailto:m.jaberi1212@gmail.com","url":"https://maryamjaberi.github.io/","sameAs":["https://github.com/MaryamJaberi"],"knowsLanguage":["fa","en","nl"]}
+</script>
 <style>
-:root{--bg:#0c0614;--surface:#161022;--surface2:#1f1630;--line:#2e2344;--text:#f7f2ff;--muted:#b8a8d0;--accent:#e84ba3;--accent2:#9b6bff;--gold:#f0b429}
+:root{--bg:#0c0614;--surface:#161022;--surface2:#1f1630;--line:#2e2344;--text:#f7f2ff;--muted:#b8a8d0;--accent:#e84ba3;--accent2:#9b6bff;--gold:#f0b429;--ok:#3ecf8e}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;background-image:radial-gradient(ellipse 70% 40% at 50% -5%,rgba(232,75,163,.15),transparent)}
 a{color:inherit;text-decoration:none}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px;z-index:10}
+.skip:focus{left:8px}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-header.hero{padding:clamp(56px,12vw,140px) 0 48px;text-align:center}
-h1{font-size:clamp(40px,10vw,96px);line-height:.95;margin:0 0 12px;font-weight:800;letter-spacing:-.03em;background:linear-gradient(100deg,var(--accent),var(--accent2) 70%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-.role{font-size:clamp(16px,2.5vw,22px);color:var(--muted);margin:0 0 24px}
-.lead{max-width:36em;margin:0 auto 32px;font-size:clamp(16px,2vw,19px);color:var(--muted)}
+nav.top{position:sticky;top:0;z-index:5;background:rgba(12,6,20,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:20px;min-height:56px}
+nav.top .me{font-weight:800;margin-inline-end:auto}
+nav.top a.l{color:var(--muted);font-size:15px}
+nav.top a.l:hover{color:var(--text)}
+header.hero{padding:clamp(48px,10vw,120px) 0 48px;text-align:center}
+.open{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:14px;color:var(--muted);margin-bottom:22px}
+.open i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(62,207,142,.18)}
+h1{font-size:clamp(40px,10vw,92px);line-height:.95;margin:0 0 12px;font-weight:800;letter-spacing:-.03em;background:linear-gradient(100deg,var(--accent),var(--accent2) 70%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(16px,2.5vw,22px);color:var(--muted);margin:0 0 20px}
+.lead{max-width:36em;margin:0 auto 28px;font-size:clamp(16px,2vw,19px);color:var(--muted)}
+.proof{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin:0 auto 32px;max-width:760px;padding:0;list-style:none}
+.proof li{font-size:14px;color:var(--muted)}
+.proof b{display:block;font-size:24px;color:var(--text)}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;border:1px solid var(--line);transition:.2s}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;border:1px solid var(--line);transition:.2s}
 .btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn:hover{transform:translateY(-1px);border-color:var(--accent2)}
 section{padding:64px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(26px,4vw,40px);margin:0 0 32px;text-align:center}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s}
+h2{font-size:clamp(26px,4vw,40px);margin:0 0 10px;text-align:center}
+.sub{text-align:center;color:var(--muted);max-width:40em;margin:0 auto 36px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
 .card:hover{transform:translateY(-4px);border-color:var(--accent2)}
-.card-img{height:180px;background:linear-gradient(135deg,var(--surface2),#2a1f40);display:flex;align-items:center;justify-content:center;font-size:48px}
-.card-body{padding:20px 22px 24px}
-.card h3{margin:0 0 8px;font-size:20px}
+.card img,.card .ph{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;background:var(--surface2);border-bottom:1px solid var(--line)}
+.card .ph{display:flex;align-items:center;justify-content:center;font-size:56px;background:linear-gradient(135deg,var(--surface2),#2a1f40)}
+.card-body{padding:18px 22px 22px;display:flex;flex-direction:column;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.tag{font-size:12px;padding:2px 10px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);color:var(--muted)}
+.tag.live{color:var(--ok);border-color:rgba(62,207,142,.4)}
+.card h3{margin:0 0 6px;font-size:20px}
 .card p{margin:0 0 14px;color:var(--muted);font-size:15px}
-.links{display:flex;gap:16px;flex-wrap:wrap}
+.card .mine{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;margin-top:auto;margin-bottom:12px}
+.links{display:flex;gap:18px;flex-wrap:wrap}
 .links a{font-weight:600;color:var(--accent)}
-.links a:hover{color:var(--accent2)}
-.about{display:grid;gap:32px;grid-template-columns:1.3fr .7fr;align-items:start}
-.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.skill{background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--muted)}
-.timeline{max-width:720px;margin:0 auto}
-.tl-item{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.links a:hover{color:var(--accent2);text-decoration:underline}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,40px);margin-bottom:28px}
+.case-head{display:grid;grid-template-columns:1fr 280px;gap:28px;align-items:start;margin-bottom:8px}
+.case-head img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:14px;border:1px solid var(--line)}
+.case h3{font-size:clamp(22px,3vw,30px);margin:6px 0 8px}
+.case .kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.case .one{color:var(--muted);margin:0}
+.steps{display:grid;gap:22px 32px;grid-template-columns:1fr 1fr;margin-top:22px}
+.step h4{margin:0 0 6px;font-size:15px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.step p,.step li{color:var(--muted);font-size:15px;margin:0}
+.step ul{margin:0;padding-inline-start:18px}
+.step li+li{margin-top:4px}
+.about{display:grid;gap:36px;grid-template-columns:1.2fr .8fr;align-items:start}
+.about p{margin:0 0 14px}
+.howto{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 22px;color:var(--muted);font-size:15px}
+.howto b{color:var(--text)}
+.skillgrp h3{margin:0 0 8px;font-size:15px;color:var(--gold);text-transform:uppercase;letter-spacing:.06em}
+.skillgrp+.skillgrp{margin-top:18px}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:14px;color:var(--muted)}
+.timeline{max-width:760px;margin:0 auto}
+.tl-item{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
 .tl-year{color:var(--gold);font-weight:700;font-size:15px}
 .tl-content h3{margin:0 0 6px;font-size:17px}
 .tl-content p{margin:0;color:var(--muted);font-size:15px}
+.edu{max-width:760px;margin:36px auto 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.edu div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 18px;font-size:15px;color:var(--muted)}
+.edu b{color:var(--text);display:block}
+.contact{text-align:center}
+.contact .mail{font-size:clamp(18px,3vw,24px);font-weight:700;color:var(--accent)}
 footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
-
-@media (max-width: 700px) {
+@media (max-width:820px){.steps{grid-template-columns:1fr}.case-head{grid-template-columns:1fr}.case-head img{max-width:420px}}
+@media (max-width:700px){
   .wrap{padding:0 16px}
-  header.hero{padding:48px 0 36px}
+  nav.top a.l.opt{display:none}
   section{padding:48px 0}
-  h2{margin-bottom:24px}
   .about{grid-template-columns:1fr;gap:24px}
   .tl-item{grid-template-columns:1fr;gap:4px}
-  .tl-year{font-size:14px}
-  .card-img{height:140px;font-size:40px}
   .btn{min-height:44px;padding:0 18px;font-size:15px}
 }
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{nav.top,.cta,.skip{display:none}body{background:#fff;color:#000}}
 </style>
 </head>
 <body>
+<a class="skip" href="#work">Skip to projects</a>
+<nav class="top" aria-label="Main">
+<div class="wrap">
+<a class="me" href="#">Maryam Jaberi</a>
+<a class="l" href="#work">Projects</a>
+<a class="l opt" href="#cases">Case studies</a>
+<a class="l opt" href="#about">About</a>
+<a class="l" href="cv.pdf">CV</a>
+<a class="l" href="#contact">Contact</a>
+</div>
+</nav>
+
 <div class="wrap">
 <header class="hero">
+<div class="open"><i aria-hidden="true"></i>Open to Product Owner, Product Manager & Product Designer roles · Netherlands or remote</div>
 <h1>Maryam Jaberi</h1>
-<div class="role">Product Manager & Game Designer · Rotterdam</div>
-<p class="lead">I turn fuzzy ideas into products people can use, and I build the first playable version myself.</p>
-<div class="cta"><a class="btn main" href="#work">See the projects</a><a class="btn" href="#contact">Get in touch</a></div>
+<div class="role">Product Manager & Product Designer · Rotterdam</div>
+<p class="lead">I turn fuzzy ideas into products people can use — and I build the first working version myself, so teams can test the idea instead of debating it.</p>
+<ul class="proof">
+<li><b>6+ years</b>product roles in search, streaming & education</li>
+<li><b>5M+</b>users on the streaming product I grew</li>
+<li><b>8</b>public projects, 7 live</li>
+</ul>
+<div class="cta">
+<a class="btn main" href="#work">See the projects</a>
+<a class="btn" href="cv.pdf" download>Download CV (PDF)</a>
+<a class="btn" href="mailto:m.jaberi1212@gmail.com">Email me</a>
+</div>
 </header>
 
-<section id="work">
-<h2>Projects</h2>
+<section id="work" aria-labelledby="work-h">
+<h2 id="work-h">Projects</h2>
+<p class="sub">Each one started as a written spec and user stories, and ended as something you can open and use. Open any of them — they all run in the browser.</p>
 <div class="grid">
-<div class="card"><div class="card-img">🧭</div><div class="card-body"><h3>Workplace Wellbeing Check</h3><p>Anonymous psychological-wellbeing check for organisations. Validated scales, an instant personal snapshot, a report by job level and matched workshop recommendations. English, Dutch and Persian.</p><div class="links"><a href="https://maryamjaberi.github.io/wellbeing-check/" target="_blank">Open</a></div></div></div>
-<div class="card"><div class="card-img">🎮</div><div class="card-body"><h3>Dour — Turn</h3><p>Pass-the-phone word-guessing party game for 4–8 players. Teams sit opposite. Solo or multiplayer, nine languages, offline-capable PWA.</p><div class="links"><a href="https://maryamjaberi.github.io/Dour/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/Dour" target="_blank">Code</a></div></div></div>
-<div class="card"><div class="card-img">📚</div><div class="card-body"><h3>Dour: Language</h3><p>Language-learning version of Dour. Real vocabulary and phrases, CEFR levels, up to four learning languages. Design document and user stories included.</p><div class="links"><a href="https://maryamjaberi.github.io/Language-Learning-Party-Game/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/Language-Learning-Party-Game" target="_blank">Code</a></div></div></div>
-<div class="card"><div class="card-img">🌍</div><div class="card-body"><h3>Chrono Atlas</h3><p>Interactive map of Earth through deep time — Big Bang to +1,000 years. Continents, life, societies and the science of each age. Sourced and citation-backed.</p><div class="links"><a href="https://maryamjaberi.github.io/earth-through-time/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/earth-through-time" target="_blank">Code</a></div></div></div>
-<div class="card"><div class="card-img">🪶</div><div class="card-body"><h3>Par-e Simorgh</h3><p>Interactive model of contemporary Iran as a multi-round Mafia table. 37 roles, 7 nights (1979–2026), 76 sourced claims. Game theory as coordination, not zero-sum.</p><div class="links"><a href="https://maryamjaberi.github.io/simorgh/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/simorgh" target="_blank">Code</a></div></div></div>
-<div class="card"><div class="card-img">📖</div><div class="card-body"><h3>Ganjoor No</h3><p>Prototype redesign of the Persian literary archive. Clean information architecture and reading experience for poetry, with Iranian-inspired visual system.</p><div class="links"><a href="https://maryamjaberi.github.io/ganjoor-no/" target="_blank">Open</a><a href="https://github.com/MaryamJaberi/ganjoor-no" target="_blank">Code</a></div></div></div>
-<div class="card"><div class="card-img">🃏</div><div class="card-body"><h3>Miz Khoda (Mafia Host)</h3><p>Host assistant for Persian Mafia: scenario builder, role dealing, night actions and live voting. Data-driven rules instead of hard-coded logic.</p><div class="links"><a href="https://github.com/MaryamJaberi/Mafia" target="_blank">Code</a></div></div></div>
+
+<article class="card">
+<img src="assets/img/wellbeing.webp" alt="Workplace Wellbeing Check: landing page with a sample organisation report showing eight wellbeing dimensions" loading="lazy" width="720" height="450">
+<div class="card-body">
+<div class="tags"><span class="tag live">Live pilot</span><span class="tag">B2B service</span><span class="tag">EN · NL · FA</span></div>
+<h3>Workplace Wellbeing Check</h3>
+<p>Anonymous psychological-wellbeing check for organisations. 8 validated questionnaires, an instant personal snapshot, a report by job level and matched workshop recommendations.</p>
+<div class="mine">My role: problem framing, service design, scoring method, report and UX.</div>
+<div class="links"><a href="wellbeing-check/" target="_blank" rel="noopener">Try it</a><a href="wellbeing-check/#report">Sample report</a><a href="#case-wellbeing">Case study</a></div>
 </div>
+</article>
+
+<article class="card">
+<img src="assets/img/atlas.webp" alt="Chrono Atlas: world map with a timeline slider and a panel describing Earth at the selected time" loading="lazy" width="720" height="450">
+<div class="card-body">
+<div class="tags"><span class="tag live">Live</span><span class="tag">Education</span><span class="tag">Data product</span></div>
+<h3>Chrono Atlas</h3>
+<p>Interactive map of Earth through deep time — Big Bang to +1,000 years. Continents, life, societies and the science of each age, with every claim sourced.</p>
+<div class="mine">My role: product vision, release roadmap, source catalogue and data principles.</div>
+<div class="links"><a href="https://maryamjaberi.github.io/earth-through-time/" target="_blank" rel="noopener">Open</a><a href="https://github.com/MaryamJaberi/earth-through-time" target="_blank" rel="noopener">Code</a></div>
+</div>
+</article>
+
+<article class="card">
+<img src="assets/img/wiki.webp" alt="Psychology Wiki home page in Persian with search and counters for pages, terms, concepts, scientists and questionnaires" loading="lazy" width="720" height="450">
+<div class="card-body">
+<div class="tags"><span class="tag live">Live</span><span class="tag">Knowledge base</span><span class="tag">Persian</span></div>
+<h3>Psychology Wiki</h3>
+<p>A linked Persian encyclopedia built from a university-level lecture series: 85 pages, 576 glossary terms, 280 concepts, 596 scientists and 85 questionnaires you can fill in.</p>
+<div class="mine">My role: information architecture, editorial structure, interactive tools.</div>
+<div class="links"><a href="psychology-wiki/" target="_blank" rel="noopener">Open</a></div>
+</div>
+</article>
+
+<article class="card">
+<img src="assets/img/dour.webp" alt="Dour — Turn on a phone: game title, language picker with nine languages and a start button" loading="lazy" width="720" height="450">
+<div class="card-body">
+<div class="tags"><span class="tag live">Live</span><span class="tag">Party game</span><span class="tag">PWA · 9 languages</span></div>
+<h3>Dour — Turn</h3>
+<p>Pass-the-phone word-guessing party game for 4–8 players. Teams sit opposite, three difficulty levels, works offline.</p>
+<div class="mine">My role: game design, spec, QA checklist, shipped the PWA.</div>
+<div class="links"><a href="https://maryamjaberi.github.io/Dour/" target="_blank" rel="noopener">Play</a><a href="#case-dour">Case study</a><a href="https://github.com/MaryamJaberi/Dour" target="_blank" rel="noopener">Code</a></div>
+</div>
+</article>
+
+<article class="card">
+<img src="assets/img/lang.webp" alt="Dour: Language on a phone: home screen with group game, two-player duel and solo learning modes" loading="lazy" width="720" height="450">
+<div class="card-body">
+<div class="tags"><span class="tag live">Live</span><span class="tag">EdTech</span><span class="tag">Freemium design</span></div>
+<h3>Dour: Language</h3>
+<p>Language-learning version of Dour: real vocabulary and phrases by CEFR level, up to four learning languages at once, group, duel and solo modes.</p>
+<div class="mine">My role: design document, epics & user stories, revenue model, content structure.</div>
+<div class="links"><a href="https://maryamjaberi.github.io/Language-Learning-Party-Game/" target="_blank" rel="noopener">Play</a><a href="https://github.com/MaryamJaberi/Language-Learning-Party-Game" target="_blank" rel="noopener">Code</a></div>
+</div>
+</article>
+
+<article class="card">
+<div class="ph" aria-hidden="true">📖</div>
+<div class="card-body">
+<div class="tags"><span class="tag live">Live</span><span class="tag">Redesign</span><span class="tag">Persian</span></div>
+<h3>Ganjoor No</h3>
+<p>Prototype redesign of Ganjoor, the best-known online archive of Persian poetry: clearer information architecture, a calmer reading experience and an Iranian-inspired visual system.</p>
+<div class="mine">My role: IA, reading UX, visual system.</div>
+<div class="links"><a href="https://maryamjaberi.github.io/ganjoor-no/" target="_blank" rel="noopener">Open</a><a href="https://github.com/MaryamJaberi/ganjoor-no" target="_blank" rel="noopener">Code</a></div>
+</div>
+</article>
+
+<article class="card">
+<img src="assets/img/simorgh.webp" alt="Par-e Simorgh index page in Persian with a feather illustration" loading="lazy" width="720" height="450">
+<div class="card-body">
+<div class="tags"><span class="tag live">Live</span><span class="tag">Game theory</span><span class="tag">Persian · English</span></div>
+<h3>Par-e Simorgh</h3>
+<p>Interactive model of contemporary Iran as a multi-round Mafia table: 37 roles, 7 nights (1979–2026), 76 sourced claims. Game theory as coordination, not zero-sum.</p>
+<div class="mine">My role: system design, research, writing.</div>
+<div class="links"><a href="https://maryamjaberi.github.io/simorgh/" target="_blank" rel="noopener">Open</a><a href="https://github.com/MaryamJaberi/simorgh" target="_blank" rel="noopener">Code</a></div>
+</div>
+</article>
+
+<article class="card">
+<img src="assets/img/mafia.webp" alt="Miz Khoda Mafia host app: dashboard with game setup and join-by-QR options" loading="lazy" width="720" height="450">
+<div class="card-body">
+<div class="tags"><span class="tag">Code</span><span class="tag">Host tool</span><span class="tag">FA · EN · AR · TR</span></div>
+<h3>Miz Khoda (Mafia Host)</h3>
+<p>Host assistant for Persian Mafia: scenario builder, role dealing, night actions and live voting. Rules are data, not hard-coded logic, so new scenarios need no code.</p>
+<div class="mine">My role: rules modelling, host workflow, UX.</div>
+<div class="links"><a href="https://github.com/MaryamJaberi/Mafia" target="_blank" rel="noopener">Code</a></div>
+</div>
+</article>
+
+</div>
+<p class="sub" style="margin:28px auto 0">Currently building: <b>Hamrah</b>, a platform for finding a companion to work, learn or go to events with — MVP built, full product spec written for the next releases.</p>
 </section>
 
-<section id="about">
-<h2>About</h2>
+<section id="cases" aria-labelledby="cases-h">
+<h2 id="cases-h">Case studies</h2>
+<p class="sub">Two projects in more depth: what the problem was, which decisions I made, and what came out.</p>
+
+<article class="case" id="case-wellbeing">
+<div class="case-head">
+<div>
+<div class="kicker">B2B service · 2026</div>
+<h3>Workplace Wellbeing Check</h3>
+<p class="one">How do you give an organisation an honest picture of its people's psychological health — without exposing any individual?</p>
+</div>
+<img src="assets/img/wellbeing.webp" alt="" loading="lazy" width="720" height="450">
+</div>
+<div class="steps">
+<div class="step"><h4>Problem</h4><p>Wellbeing surveys are often home-made, so the numbers can't be compared or trusted. Employees fear being identified, so they answer politely, not honestly. And a score alone doesn't tell HR what to do next.</p></div>
+<div class="step"><h4>Decisions</h4><ul>
+<li><b>Validated instruments only</b> — 8 internationally validated questionnaires, one per dimension, instead of custom questions.</li>
+<li><b>Anonymity by design</b> — no names; any group smaller than 5 is never shown. Minimum 20 participants, 5 per job level.</li>
+<li><b>Give before you take</b> — every participant gets an instant personal snapshot, so answering honestly is worth it to them.</li>
+<li><b>One comparable scale</b> — every subscale converted to 0–100, reverse-keyed items flipped.</li>
+</ul></div>
+<div class="step"><h4>From score to action</h4><p>A dimension becomes a priority when its average is below 55 or more than 25% of people are in "needs attention". Each priority maps to a concrete workshop with goals and audience — so the report ends with a plan, not just a chart.</p></div>
+<div class="step"><h4>Result & next</h4><p>A working pilot in English, Dutch and Persian, with survey, organisation report, workshop catalogue and a public method page. Next: run it with a first organisation, including the works council (OR) step, and measure again after the workshops.</p></div>
+</div>
+<div class="links" style="margin-top:22px"><a href="wellbeing-check/" target="_blank" rel="noopener">Try the pilot</a><a href="wellbeing-check/#method" target="_blank" rel="noopener">Read the method</a></div>
+</article>
+
+<article class="case" id="case-dour">
+<div class="case-head">
+<div>
+<div class="kicker">Party game · PWA</div>
+<h3>Dour — Turn</h3>
+<p class="one">A word-guessing game that a group can start in ten seconds on one phone, in their own language, with no accounts and no Wi-Fi.</p>
+</div>
+<img src="assets/img/dour.webp" alt="" loading="lazy" width="720" height="450">
+</div>
+<div class="steps">
+<div class="step"><h4>Problem</h4><p>Card-based party games need a box of cards in one language. Existing apps assume everyone speaks English, need sign-up or a connection, and break the moment someone taps the wrong button mid-round.</p></div>
+<div class="step"><h4>Decisions</h4><ul>
+<li><b>One phone, passed around</b> — teams sit opposite each other, so the phone always moves to the next team naturally.</li>
+<li><b>Undo without pausing</b> — a floating undo button fixes accidental taps without stopping the clock or the fun.</li>
+<li><b>Sound that doesn't stress</b> — a soft wooden tick instead of a constant beep, and a short alarm only in the last 5 seconds.</li>
+<li><b>Difficulty as content</b> — easy single words, medium two-word terms, hard proverbs and idioms.</li>
+</ul></div>
+<div class="step"><h4>How I worked</h4><p>I wrote the rules and screens as a spec, built it with AI coding tools, then tested every release against my own 10-scenario checklist: startup, sound, no repeated words, timer, turn handover, winner screen, mobile layout, pause/reset, install and offline.</p></div>
+<div class="step"><h4>Result & next</h4><p>Live as an installable, offline-capable web app in 9 languages. The same core loop became <b>Dour: Language</b>, where the cards teach real vocabulary by CEFR level.</p></div>
+</div>
+<div class="links" style="margin-top:22px"><a href="https://maryamjaberi.github.io/Dour/" target="_blank" rel="noopener">Play Dour</a><a href="https://maryamjaberi.github.io/Language-Learning-Party-Game/" target="_blank" rel="noopener">Play Dour: Language</a></div>
+</article>
+</section>
+
+<section id="about" aria-labelledby="about-h">
+<h2 id="about-h">About</h2>
+<p class="sub">Product Owner and Product Manager with a designer's eye.</p>
 <div class="about">
 <div>
-<p>Product Owner and Product Manager with a designer’s eye. Background in search engines, video streaming and education platforms at scale — products used by millions.</p>
-<p>I also design and ship games and interactive tools in the open: party games, host assistants, teaching maps and literary interfaces. Each starts as a written spec and ends as something people can open and play.</p>
-<p>I enjoy the full loop from research and prioritisation to the first prototype, and use AI tools to move faster without losing craft.</p>
+<p>I spent six years in product roles on search engines, video streaming and education platforms at scale — products used by millions, built with teams from 20 to over 1,000 people.</p>
+<p>Since moving to the Netherlands I have been designing and shipping my own products in the open: B2B tools, learning products, party games and knowledge bases. I enjoy the full loop — from user research and prioritisation to the first version real people can use.</p>
+<div class="howto"><b>How I use AI.</b> I write the spec and user stories myself, then build with AI coding tools (Claude, Google AI Studio, Antigravity) and test against my own acceptance checklist. That is how one person shipped the eight projects above — the craft is in the spec and the testing, not in typing code.</div>
 </div>
 <div>
-<h3 style="margin:0 0 12px;font-size:18px">Skills</h3>
-<div class="skills">
-<span class="skill">Roadmaps & Backlog</span>
-<span class="skill">Stakeholder Management</span>
-<span class="skill">Agile & Scrum</span>
-<span class="skill">UX Research</span>
-<span class="skill">User Stories</span>
-<span class="skill">Game Systems</span>
-<span class="skill">Web Apps & PWAs</span>
-<span class="skill">AI Prototyping</span>
-</div>
-<p style="margin-top:20px;color:var(--muted);font-size:15px"><strong>Languages:</strong> Persian (native), English (B2), Dutch (A2)</p>
+<div class="skillgrp"><h3>Product</h3><div class="skills">
+<span class="skill">Roadmaps & backlog</span><span class="skill">Discovery</span><span class="skill">Prioritisation</span><span class="skill">Stakeholder management</span><span class="skill">Agile & Scrum</span><span class="skill">User stories & acceptance criteria</span><span class="skill">Metrics & A/B testing</span></div></div>
+<div class="skillgrp"><h3>Design</h3><div class="skills">
+<span class="skill">UX research</span><span class="skill">Usability testing</span><span class="skill">Information architecture</span><span class="skill">Service design</span><span class="skill">Game systems</span><span class="skill">Prototyping</span></div></div>
+<div class="skillgrp"><h3>Technical</h3><div class="skills">
+<span class="skill">Web apps & PWAs</span><span class="skill">AI-assisted prototyping</span><span class="skill">Jira & Confluence</span><span class="skill">Data-informed decisions</span></div></div>
+<p style="margin-top:20px;color:var(--muted);font-size:15px"><strong style="color:var(--text)">Languages:</strong> Persian (native), English (B2), Dutch (B1)</p>
 </div>
 </div>
 </section>
 
-<section id="exp">
-<h2>Experience</h2>
+<section id="exp" aria-labelledby="exp-h">
+<h2 id="exp-h">Experience</h2>
+<p class="sub">Most recent first.</p>
 <div class="timeline">
-<div class="tl-item"><div class="tl-year">2020–2022</div><div class="tl-content"><h3>Product Manager, Search — Hamrahe Aval (MCI)</h3><p>Led shopping-search roadmap for a 1,000+ person team. Built Persian ASR from scratch (3,000 hours of audio, 0.33% error). Onboarded 1,000 retailers, implemented Smart Answer Boxes (+10% correct clicks) and designed pre-launch testing workflows that cut communication errors by 10%.</p></div></div>
-<div class="tl-item"><div class="tl-year">2018–2020</div><div class="tl-content"><h3>Associate Product Manager — Arshan Media (GapFilm)</h3><p>Owned VOD across Android, Android TV, Web, Kids and CMS for +5M users. Grew the user base from 60,000 to 5M, increased average engagement by 5 minutes and multiplied CMS usage fourfold.</p></div></div>
-<div class="tl-item"><div class="tl-year">2016–2018</div><div class="tl-content"><h3>Product Owner — Shaya Smart Technologies</h3><p>Introduced Scrum (10% fewer bugs) and managed content for Payame Noor University’s platform (19 million users). Co-built MediaAd, which became Iran’s second-largest native advertising platform (0.1% CTR) and was later sold.</p></div></div>
-<div class="tl-item"><div class="tl-year">2022–present</div><div class="tl-content"><h3>Independent Product & Game Designer, Rotterdam</h3><p>Designing and shipping social games, host tools and interactive experiences in the open.</p></div></div>
+<div class="tl-item"><div class="tl-year">2022 – now</div><div class="tl-content"><h3>Independent Product & Game Designer — Rotterdam</h3><p>Specified, built and shipped 8 public projects (7 live): a B2B wellbeing-assessment pilot, two learning products, a 85-page knowledge base and four games and tools — in up to 9 languages. Moved to the Netherlands and reached Dutch B1.</p></div></div>
+<div class="tl-item"><div class="tl-year">2020 – 2022</div><div class="tl-content"><h3>Product Manager, Search — Hamrahe Aval (MCI)</h3><p>Led the shopping-search roadmap in a 1,000+ person organisation. Built Persian speech recognition from scratch (3,000 hours of audio). Onboarded 1,000 retailers, launched Smart Answer Boxes (+10% correct clicks) and designed pre-launch testing that cut cross-team errors by 10%.</p></div></div>
+<div class="tl-item"><div class="tl-year">2018 – 2020</div><div class="tl-content"><h3>Associate Product Manager — Arshan Media (GapFilm)</h3><p>Owned video-on-demand across Android, Android TV, web, kids and CMS. Grew users from 60,000 to over 5 million, raised average session engagement by about 5 minutes and scaled the CMS fourfold.</p></div></div>
+<div class="tl-item"><div class="tl-year">2016 – 2018</div><div class="tl-content"><h3>Product Owner — Shaya Smart Technologies</h3><p>Introduced Scrum (about 10% fewer bugs) and owned the backlog of Payame Noor University's platform (19 million students). Co-built MediaAd, which became Iran's second-largest native advertising platform and was later acquired.</p></div></div>
+</div>
+<div class="edu">
+<div><b>MSc Industrial Engineering</b>Iran University of Science and Technology · 2023</div>
+<div><b>Google UX Design</b>Professional Certificate</div>
+<div><b>IBM Product Manager</b>Professional Certificate</div>
+<div><b>Agile & Scrum</b>IBM / SkillUp</div>
 </div>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p style="text-align:center;max-width:32em;margin:0 auto 20px;color:var(--muted)">Open to Product Owner, Product Manager and product design roles in the Netherlands and remote.</p>
-<p style="text-align:center;font-size:18px;margin:0 0 24px"><a href="mailto:M.jaberi1212@gmail.com" style="color:var(--accent);font-weight:600">M.jaberi1212@gmail.com</a></p>
-<div class="cta"><a class="btn main" href="https://github.com/MaryamJaberi" target="_blank">GitHub</a></div>
+<section id="contact" class="contact" aria-labelledby="contact-h">
+<h2 id="contact-h">Contact</h2>
+<p class="sub">Open to Product Owner, Product Manager and Product Designer roles in the Netherlands and remote. Based in Rotterdam.</p>
+<p style="margin:0 0 24px"><a class="mail" href="mailto:m.jaberi1212@gmail.com">m.jaberi1212@gmail.com</a></p>
+<div class="cta">
+<a class="btn main" href="cv.pdf" download>Download CV (PDF)</a>
+<a class="btn" href="https://github.com/MaryamJaberi" target="_blank" rel="noopener">GitHub</a>
+</div>
 </section>
 </div>
-<footer>© Maryam Jaberi · Built by hand · GitHub Pages</footer>
+<footer>© 2026 Maryam Jaberi · Built by hand · Last updated November 2026</footer>
 </body>
 </html>
