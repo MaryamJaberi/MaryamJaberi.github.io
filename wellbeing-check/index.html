@@ -257,6 +257,14 @@ a.doc:hover{transform:translateY(-2px)}
 a.doc .dic{font-size:1.5rem;color:var(--accent)} a.doc .pill{justify-self:start} a.doc p{margin:0;font-size:.9rem;color:var(--muted)}
 @media (max-width:620px){.flow li{grid-template-columns:minmax(0,1fr);gap:4px}.flow .fw{padding-top:0}}
 footer.foot .wrap{gap:6px 18px;flex-wrap:wrap}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px}
+.person{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start}
+.person p{margin:8px 0;font-size:.93rem}
+.av{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:1.2rem;overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
+.person.ph{border:2px dashed var(--rule);background:transparent;box-shadow:none}
+.av.ph{background:var(--wash);color:var(--muted);border:2px dashed var(--rule)}
+.person.ph b,.person.ph p{color:var(--muted)}
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;z-index:50;font-weight:600}
 </style>
 
@@ -1150,6 +1158,31 @@ Object.assign(T.fa, {
  fa:"فارسی", srcSee:"منابع را ببینید"
 });
 /* Sanjesh — company (SoloNovate), how-we-work page: roles, timeline, who sees what, sample documents (en / nl / fa) */
+/* Team. Fill in PARTNER once the psychologist agrees; until then the card is only shown with ?partner=preview in the address. */
+window.PARTNER = {name:"", photo:"", link:"", reg:"",
+ role:{en:"", nl:"", fa:""}, bio:{en:"", nl:"", fa:""}, langs:{en:"", nl:"", fa:""}};
+const PARTNER_PREVIEW = /[?&]partner=preview/.test(location.search);
+Object.assign(T.en, {
+ company:"SoloNovate · Rotterdam · registered with the Dutch Chamber of Commerce (KvK) · VAT NL005072230B46",
+ teamT:"The team", teamP:"Small on purpose: you always know who you are dealing with.",
+ meRole:"Founder of SoloNovate · product and data", meBio:"Product manager with a background in search, video streaming and education platforms, and in UX research. Designs the check, safeguards the data and writes your report.", meLangs:"Dutch, English, Persian",
+ phName:"[Name of the psychologist]", phRole:"Psychologist · [registration, e.g. NIP or BIG]", phBio:"[Two or three sentences: experience, specialisation, the kinds of organisations and teams they have worked with.]", phLangs:"[Workshop languages]", phNote:"Preview — this is how the partner profile will look once filled in.",
+ langsL:"Languages", profile:"Profile"
+});
+Object.assign(T.nl, {
+ company:"SoloNovate · Rotterdam · ingeschreven bij de Kamer van Koophandel · btw-id NL005072230B46",
+ teamT:"Het team", teamP:"Bewust klein: u weet altijd met wie u te maken heeft.",
+ meRole:"Oprichter van SoloNovate · product en data", meBio:"Productmanager met ervaring in zoekmachines, videostreaming en onderwijsplatforms, en in UX-onderzoek. Ontwerpt de scan, bewaakt de gegevens en schrijft uw rapport.", meLangs:"Nederlands, Engels, Perzisch",
+ phName:"[Naam van de psycholoog]", phRole:"Psycholoog · [registratie, bijv. NIP of BIG]", phBio:"[Twee of drie zinnen: ervaring, specialisatie, met welke organisaties en teams gewerkt.]", phLangs:"[Talen van de workshops]", phNote:"Voorbeeld — zo ziet het profiel van de partner eruit zodra het is ingevuld.",
+ langsL:"Talen", profile:"Profiel"
+});
+Object.assign(T.fa, {
+ company:"SoloNovate · روتردام · ثبت‌شده در اتاق بازرگانی هلند (KvK) · شمارهٔ مالیاتی NL005072230B46",
+ teamT:"تیم", teamP:"عمداً کوچک: همیشه می‌دانید با چه کسی طرف هستید.",
+ meRole:"بنیان‌گذار SoloNovate · محصول و داده", meBio:"مدیر محصول با سابقه در موتور جست‌وجو، پخش ویدیو و پلتفرم‌های آموزشی، و در پژوهش تجربهٔ کاربری. سنجش را طراحی می‌کند، از داده‌ها محافظت می‌کند و گزارش شما را می‌نویسد.", meLangs:"هلندی، انگلیسی، فارسی",
+ phName:"[نام روان‌شناس]", phRole:"روان‌شناس · [عضویت حرفه‌ای، مثلاً NIP یا BIG]", phBio:"[دو یا سه جمله: تجربه، تخصص، با چه سازمان‌ها و تیم‌هایی کار کرده است.]", phLangs:"[زبان‌های کارگاه]", phNote:"پیش‌نمایش: پروفایل همکار پس از تکمیل این‌گونه دیده می‌شود.",
+ langsL:"زبان‌ها", profile:"پروفایل"
+});
 const DOCS_BASE = "docs/";
 window.DOCLIST = [
  {slug:"pilot-agreement", ic:"✎", aud:"mgmt"},
@@ -1158,7 +1191,7 @@ window.DOCLIST = [
  {slug:"staff-announcement", ic:"✉", aud:"hr"}
 ];
 Object.assign(T.en, {
- nProc:"How it works", company:"SoloNovate · Rotterdam · registered with the Dutch Chamber of Commerce (KvK)",
+ nProc:"How it works", 
  prT:"How it works", prP:"A clear process with a small team: who does what, what everyone gets to see, and the documents we sign. No surprises for management or employees.",
  rolesT:"Who does what",
  roles:[["◆","SoloNovate · Maryam Jaberi","Your single point of contact","Sets up the survey, safeguards the data, analyses the answers, writes the report and coordinates everything from kick-off to repeat measurement."],
@@ -1188,7 +1221,7 @@ Object.assign(T.en, {
  footer:"Workplace Wellbeing Check by SoloNovate · pilot version · non-diagnostic"
 });
 Object.assign(T.nl, {
- nProc:"Werkwijze", company:"SoloNovate · Rotterdam · ingeschreven bij de Kamer van Koophandel",
+ nProc:"Werkwijze", 
  prT:"Werkwijze", prP:"Een helder proces met een klein team: wie wat doet, wie wat te zien krijgt en welke documenten we tekenen. Geen verrassingen voor management of medewerkers.",
  rolesT:"Wie doet wat",
  roles:[["◆","SoloNovate · Maryam Jaberi","Uw vaste aanspreekpunt","Richt de meting in, bewaakt de gegevens, analyseert de antwoorden, schrijft het rapport en coördineert alles van start tot herhaalmeting."],
@@ -1218,7 +1251,7 @@ Object.assign(T.nl, {
  footer:"Welzijnsscan voor organisaties door SoloNovate · pilotversie · niet-diagnostisch"
 });
 Object.assign(T.fa, {
- nProc:"روند کار", company:"SoloNovate · روتردام · ثبت‌شده در اتاق بازرگانی هلند (KvK)",
+ nProc:"روند کار", 
  prT:"روند کار", prP:"روندی روشن با تیمی کوچک: چه کسی چه می‌کند، چه کسی چه چیزی می‌بیند و چه سندهایی امضا می‌کنیم. بی‌هیچ غافلگیری برای مدیران یا کارکنان.",
  rolesT:"چه کسی چه می‌کند",
  roles:[["◆","SoloNovate · مریم جابری","تنها طرف حساب شما","سنجش را راه می‌اندازد، از داده‌ها محافظت می‌کند، پاسخ‌ها را تحلیل می‌کند، گزارش را می‌نویسد و همه‌چیز را از شروع تا سنجش دوباره هماهنگ می‌کند."],
@@ -1606,9 +1639,19 @@ function renderWs(){
    <div style="margin-top:12px"><a class="small" href="${mailto(t("pPlan") + ": " + W[L].t, W[L].t)}">${t("pPlan")} ${L === "fa" ? "←" : "→"}</a></div></article>`).join("")}</div>`;
 }
 /* ── HOW IT WORKS ── */
+function teamCards(){
+  const P = window.PARTNER, has = !!P.name;
+  const card = (ini, name, role, bio, langs, link, ph) => `<div class="card person${ph ? " ph" : ""}"><span class="av${ph ? " ph" : ""}" aria-hidden="true">${ini}</span><div><b>${name}</b><span class="small muted" style="display:block">${role}</span><p>${bio}</p><p class="small muted" style="margin:0"><b>${t("langsL")}:</b> ${langs}</p>${link ? `<a class="small" href="${link}" target="_blank" rel="noopener">${t("profile")} ${L === "fa" ? "←" : "→"}</a>` : ""}</div></div>`;
+  const me = card("MJ", "Maryam Jaberi", t("meRole"), t("meBio"), t("meLangs"), "https://www.linkedin.com/in/maryam-jaberi-05b988140/", false);
+  const partner = has ? card(P.photo ? `<img src="${P.photo}" alt="">` : esc(P.name.split(" ").map(w => w[0]).join("").slice(0, 2)), esc(P.name), esc(P.role[L] || P.role.en) + (P.reg ? " · " + esc(P.reg) : ""), esc(P.bio[L] || P.bio.en), esc(P.langs[L] || P.langs.en), P.link, false)
+    : PARTNER_PREVIEW ? card("?", t("phName"), t("phRole"), t("phBio"), t("phLangs"), "", true) + "" : "";
+  return `<section class="blk"><h2>${t("teamT")}</h2><p class="sub">${t("teamP")}</p><div class="team">${me}${partner}</div>${!has && PARTNER_PREVIEW ? `<p class="small muted" style="margin:10px 0 0">${t("phNote")}</p>` : ""}</section>`;
+}
+
 function renderProc(){
   const yes = v => /^(Ja|Yes|بله)/.test(v), no = v => /^(Nooit|Never|هرگز)/.test(v);
   document.getElementById("v-process").innerHTML = `<div class="kicker">SoloNovate · ${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("prT")}</h1><p class="lead">${t("prP")}</p>
+  ${teamCards()}
   <section class="blk"><h2>${t("rolesT")}</h2><div class="roles">${t("roles").map(([ic, a, b, c], i) => `<div class="card role${i < 2 ? " core" : ""}"><span class="ric" aria-hidden="true">${ic}</span><div><b>${a}</b><span class="small muted">${b}</span><p>${c}</p></div></div>`).join("")}</div></section>
   <section class="blk"><h2>${t("flowT")}</h2><ol class="flow">${t("flow").map(([w, a, who, b]) => `<li><span class="fw">${w}</span><div class="card"><b>${a}</b><div class="who">${who.map(x => `<span>${x}</span>`).join("")}</div><p>${b}</p></div></li>`).join("")}</ol></section>
   <section class="blk split">
