@@ -42,12 +42,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .logo svg{width:30px;height:30px;flex:none}
 .logo span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 nav.main{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;max-width:100%}
-nav.main a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:7px 12px;border-radius:8px;font-size:.92rem;font-weight:600}
+nav.main a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:7px 10px;border-radius:8px;font-size:.92rem;font-weight:600}
 nav.main a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 .langs{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden;flex:none}
 .langs button{border:0;background:none;padding:5px 11px;font-size:.82rem;font-weight:700;cursor:pointer;color:var(--muted);font-family:var(--f-lat)}
 .langs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-@media (max-width:820px){nav.main{order:3;width:100%;padding-bottom:4px}}
+@media (max-width:1180px){nav.main{order:3;width:100%;padding-bottom:4px}}
 /* generic */
 main{padding-block:28px 64px}
 .view[hidden]{display:none}
@@ -210,13 +210,37 @@ footer.foot{border-top:1px solid var(--rule);padding-block:24px 40px;color:var(-
 .ctaband .row a{background:var(--accent-ink);color:var(--accent);border-color:transparent}
 .ctaband .row a.sec{background:transparent;color:var(--accent-ink);border:1.5px solid var(--accent-ink)}
 @media (max-width:820px){.why,.law{grid-template-columns:minmax(0,1fr)} .tl{grid-template-columns:minmax(0,1fr);gap:16px} .tl::before{display:none} .ctaband{grid-template-columns:minmax(0,1fr)}}
+input[type=number],input[type=email]{font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--rule);border-radius:10px;padding:10px 12px;width:100%;max-width:100%}
+input[type=range]{width:100%;accent-color:var(--accent)}
+a.cite{font-size:.75em;font-weight:700;text-decoration:none;vertical-align:super;line-height:0;margin-inline-start:1px;white-space:nowrap}
+.tagfa{font-size:.68rem;font-weight:700;opacity:.65;border:1px solid currentColor;border-radius:4px;padding:0 3px;margin-inline-start:4px}
+.calc .cin{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;align-items:start}
+.calc .cin label.f{align-content:start}
+.calc .cout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:18px}
+.calc .cout>div{background:var(--wash);border-radius:12px;padding:12px 14px}
+.calc .cout b{display:block;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.calc .cout span{font-size:.85rem;color:var(--muted)}
+.calc .cout .big b{color:var(--low)} .calc .cout .save b{color:var(--high)}
+.arbo{border-inline-start:4px solid var(--accent);padding-inline-start:18px}
+.reqf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;background:var(--card);color:var(--ink);border-radius:14px;padding:16px}
+.reqf .btn{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.ctaband .row a.btn.sec{background:transparent;color:var(--accent-ink);border:1.5px solid var(--accent-ink)}
+ol.refs{list-style:none;margin:10px 0 0;padding:6px 16px;display:grid}
+ol.refs li{display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:8px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:.9rem}
+ol.refs li:last-child{border-bottom:0}
+ol.refs .rn{font-weight:700;color:var(--accent)}
+ol.refs .rt{text-align:start;unicode-bidi:isolate}
+ol.refs a{word-break:break-all}
+ol.refs li.hl{background:var(--accent-soft);border-radius:8px;padding-inline:8px}
+@media (max-width:620px){.reqf{grid-template-columns:minmax(0,1fr)}}
+@media (min-width:821px){.ctaband{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}}
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;z-index:50;font-weight:600}
 </style>
 
 <header class="bar gut"><div class="wrap">
   <a class="logo" href="#home" aria-label="home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M7 21c3-7 6-7 9 0s6 7 9 0" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="11" r="2.6" fill="var(--accent-ink)"/></svg><span data-t="brand"></span></a>
   <nav class="main" aria-label="sections">
-    <a href="#home" data-v="home" data-t="nHome"></a><a href="#take" data-v="take" data-t="nTake"></a><a href="#report" data-v="report" data-t="nReport"></a><a href="#workshops" data-v="workshops" data-t="nWs"></a><a href="#method" data-v="method" data-t="nMethod"></a>
+    <a href="#home" data-v="home" data-t="nHome"></a><a href="#take" data-v="take" data-t="nTake"></a><a href="#report" data-v="report" data-t="nReport"></a><a href="#workshops" data-v="workshops" data-t="nWs"></a><a href="#method" data-v="method" data-t="nMethod"></a><a href="#sources" data-v="sources" data-t="nSrc"></a>
   </nav>
   <div class="langs" role="group" aria-label="language"><button data-l="fa" lang="fa">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
 </div></header>
@@ -228,6 +252,7 @@ footer.foot{border-top:1px solid var(--rule);padding-block:24px 40px;color:var(-
  <section class="view" id="v-report" hidden></section>
  <section class="view" id="v-workshops" hidden></section>
  <section class="view" id="v-method" hidden></section>
+ <section class="view" id="v-sources" hidden></section>
 </div></main>
 <footer class="foot gut"><div class="wrap row" style="justify-content:space-between"><span data-t="footer"></span><span data-t="by"></span></div></footer>
 
@@ -602,7 +627,7 @@ gbs:{
  nl:{name:"Algemene schaal voor verbondenheid",intro:"In hoeverre bent u het eens met elke uitspraak?",anchors:["Helemaal oneens","","","","","","Helemaal eens"],items:[
  "Als ik bij andere mensen ben, voel ik me erbij horen.","Ik heb hechte banden met familie en vrienden.","Ik voel me een buitenstaander.","Ik heb het gevoel dat mensen niet om me geven.","Ik voel me geaccepteerd door anderen.","Omdat ik er niet bij hoor, voel ik me afstandelijk tijdens de feestdagen.","Ik voel me afgesneden van de rest van de wereld.","Ik heb het gevoel dat ik ergens bij hoor.","Als ik bij andere mensen ben, voel ik me een vreemde.","Ik heb een plek aan tafel bij anderen.","Ik voel me verbonden met anderen.","Vrienden en familie betrekken mij niet bij hun plannen."]}},
 wolf:{
- en:{name:"Work-reLated Flow inventory (WOLF)",intro:"Over the past two weeks, how often did you experience each of these?",anchors:["Never","Almost never","Sometimes","Regularly","Often","Very often","Always"],items:[
+ en:{name:"Work-Related Flow Inventory (WOLF)",intro:"Over the past two weeks, how often did you experience each of these?",anchors:["Never","Almost never","Sometimes","Regularly","Often","Very often","Always"],items:[
  "When I am working, I think about nothing else.","I get carried away by my work.","When I am working, I forget everything else around me.","I am totally immersed in my work.","My work gives me a good feeling.","I do my work with a lot of enjoyment.","I feel happy during my work.","I feel cheerful when I am working.","I would still do this work, even if I received less pay.","I find that I also want to work in my free time.","I work because I enjoy it.","When I am working on something, I am doing it for myself.","I get my motivation from the work itself, and not from the reward for it."]},
  nl:{name:"Flow in het werk (WOLF)",intro:"Hoe vaak heeft u in de afgelopen twee weken het volgende ervaren?",anchors:["Nooit","Bijna nooit","Soms","Regelmatig","Dikwijls","Zeer dikwijls","Altijd"],items:[
  "Als ik aan het werk ben, denk ik nergens anders aan.","Ik word meegesleept door mijn werk.","Als ik aan het werk ben, vergeet ik alles om me heen.","Ik ga helemaal op in mijn werk.","Mijn werk geeft me een goed gevoel.","Ik doe mijn werk met veel plezier.","Ik voel me gelukkig tijdens mijn werk.","Ik voel me opgewekt als ik aan het werk ben.","Ik zou dit werk ook doen als ik er minder voor betaald kreeg.","Ik merk dat ik ook in mijn vrije tijd wil werken.","Ik werk omdat ik ervan geniet.","Als ik ergens aan werk, doe ik dat voor mezelf.","Mijn motivatie komt uit het werk zelf en niet uit de beloning ervoor."]}},
@@ -656,7 +681,7 @@ window.DIMS = [
  en:{n:"Hope",q:"Do I have goals, ways to reach them, and the energy to go?",what:"Hope in the scientific sense: having goals, finding routes to them (pathways) and the energy and belief to pursue them (agency).",not:"Not the same as optimism; hope is about one's own ability to get there.",
   b:["Routes or energy to reach goals are low; more likely to feel stuck.","Goals and routes exist, but energy drops when obstacles appear.","Clear goals, several routes and enough energy; predicts better performance."],
   tips:["For one important goal, write at least three different routes.","Use WOOP: Wish, Outcome, inner Obstacle, and an \"if… then…\" Plan."]},
- nl:{n:"Hoop",q:"Heb ik doelen, wegen ernaartoe en de energie om te gaan?",what:"Hoop in wetenschappelijke zin: doelen hebben, wegen ernaartoe vinden (routes) en de energie en het vertrouwen om ze te volgen (daadkracht).",not:"Niet hetzelfde als optimisme; hoop gaat over het eigen vermogen om er te komen.",
+ nl:{n:"Hoop",q:"Heb ik doelen, wegen ernaartoe en de energie om te gaan?",what:"Hoop in wetenschappelijke zin: doelen hebben, wegen ernaartoe vinden (wegen naar het doel) en de energie en het vertrouwen om ze te volgen (doelgerichte energie).",not:"Niet hetzelfde als optimisme; hoop gaat over het eigen vermogen om er te komen.",
   b:["Routes of energie om doelen te bereiken zijn beperkt; sneller het gevoel vast te zitten.","Doelen en routes zijn er, maar de energie zakt bij obstakels.","Heldere doelen, meerdere routes en genoeg energie; voorspelt betere prestaties."],
   tips:["Schrijf voor één belangrijk doel minstens drie verschillende routes op.","Gebruik WOOP: Wens, Uitkomst, innerlijk Obstakel en een \"als… dan…\"-Plan."]}},
 {id:"belong", inst:"gbs", main:["total"], subs:["acc","rej"], col:"#7a4a8a",
@@ -697,7 +722,7 @@ window.DIMS = [
   b:["Temptations and distractions often win; the environment probably contains unhelpful cues.","Committed in some areas, procrastinating in others.","Usually sticks to long-term goals; mostly thanks to good habits rather than willpower."],
   tips:["Design your environment: put your phone in another room during deep work.","Bundle a hard task with a small pleasure (e.g. your favourite podcast only while walking)."]},
  nl:{n:"Zelfcontrole",q:"Weersta ik verleidingen en blijf ik bij doelen op lange termijn?",what:"Het vermogen impulsen te beheersen, verleidingen te weerstaan en vast te houden aan langetermijndoelen.",not:"Een lage score betekent geen zwakke wil; omgeving en gewoonten spelen een grote rol.",
-  b:["Verleidingen en afleiding winnen vaak; de omgeving bevat waarschijnlijk onhandige prikkels.","Op sommige gebieden toegewijd, op andere uitstelgedrag.","Houdt meestal vast aan langetermijndoelen; vooral dankzij goede gewoonten, niet wilskracht."],
+  b:["Verleidingen en afleiding winnen vaak; de omgeving bevat waarschijnlijk ongunstige prikkels.","Op sommige gebieden toegewijd, op andere uitstelgedrag.","Houdt meestal vast aan langetermijndoelen; vooral dankzij goede gewoonten, niet wilskracht."],
   tips:["Richt uw omgeving in: leg uw telefoon tijdens geconcentreerd werk in een andere kamer.","Koppel een zware taak aan een klein plezier (bijv. favoriete podcast alleen tijdens het wandelen)."]}}
 ];
 
@@ -707,9 +732,9 @@ window.SUBN = {
  "scs.ch":{fa:"اشتراک انسانی",en:"Common humanity",nl:"Gedeelde menselijkheid"},
  "scs.is":{fa:"انزوای کمتر",en:"Less isolation",nl:"Minder isolatie"},
  "scs.mi":{fa:"ذهن‌آگاهی",en:"Mindfulness",nl:"Mindfulness"},
- "scs.oi":{fa:"گیر نکردن در احساس منفی",en:"Less over-identification",nl:"Minder overidentificatie"},
- "ahs.path":{fa:"راه‌ها",en:"Pathways",nl:"Routes"},
- "ahs.agency":{fa:"عاملیت",en:"Agency",nl:"Daadkracht"},
+ "scs.oi":{fa:"غرق نشدن در احساس منفی",en:"Less over-identification (not swept away by feelings)",nl:"Minder overidentificatie (niet meegesleept door gevoelens)"},
+ "ahs.path":{fa:"راه‌ها (یافتن راه رسیدن به هدف)",en:"Pathways (ways to reach goals)",nl:"Wegen naar het doel"},
+ "ahs.agency":{fa:"عاملیت (انرژی برای رفتن به سوی هدف)",en:"Agency (goal-directed energy)",nl:"Doelgerichte energie"},
  "gbs.acc":{fa:"پذیرش و شمول",en:"Acceptance / inclusion",nl:"Acceptatie / insluiting"},
  "gbs.rej":{fa:"طرد کمتر",en:"Less rejection",nl:"Minder afwijzing"},
  "wolf.abs":{fa:"جذب در کار",en:"Absorption",nl:"Absorptie"},
@@ -736,34 +761,34 @@ window.PACKS = {
 };
 
 window.WS = [
- {id:"w-comp",dims:["compassion"],wiki:["s2","s3","compassion"],len:{fa:"۲ جلسهٔ ۳ ساعته",en:"2 × 3 hours",nl:"2 × 3 uur"},
-  fa:{t:"شفقت به خود و منتقد درون",who:"همهٔ رده‌ها؛ نسخهٔ ویژهٔ مدیران: رهبری مشفقانه",goals:["شناختن صدای منتقد درون و هزینه‌هایش","تمرین سه جزء شفقت به خود: مهربانی، اشتراک انسانی، ذهن‌آگاهی","برخورد با خطا در تیم بدون تحقیر"],ev:"فراتحلیل‌ها: آموزش شفقت به خود استرس و خودانتقادی را کاهش می‌دهد؛ اثرها متوسط‌اند."},
-  en:{t:"Self-compassion and the inner critic",who:"All levels; managers' version: compassionate leadership",goals:["Recognising the inner critic and its costs","Practising the three parts of self-compassion: kindness, common humanity, mindfulness","Handling mistakes in teams without humiliation"],ev:"Meta-analyses: self-compassion training reduces stress and self-criticism; effects are moderate."},
-  nl:{t:"Zelfcompassie en de innerlijke criticus",who:"Alle niveaus; versie voor managers: compassievol leiderschap",goals:["De innerlijke criticus en de kosten ervan herkennen","Oefenen met de drie delen van zelfcompassie: vriendelijkheid, gedeelde menselijkheid, mindfulness","Omgaan met fouten in teams zonder te vernederen"],ev:"Meta-analyses: training in zelfcompassie vermindert stress en zelfkritiek; de effecten zijn matig."}},
- {id:"w-flex",dims:["flex"],wiki:["s4","s7","shelf13"],len:{fa:"۲ جلسهٔ ۳ ساعته",en:"2 × 3 hours",nl:"2 × 3 uur"},
-  fa:{t:"انعطاف‌پذیری روانی و تنظیم هیجان",who:"همهٔ رده‌ها، به‌ویژه نقش‌های پرفشار",goals:["فاصله گرفتن از افکار بدون جنگیدن با آن‌ها","روشن کردن ارزش‌های کاری","مدل فرایندی تنظیم هیجان و چهار راهبرد پیش‌دستانه"],ev:"آموزش‌های مبتنی بر پذیرش و تعهد (ACT) در محیط کار، استرس را کاهش داده‌اند."},
-  en:{t:"Psychological flexibility and emotion regulation",who:"All levels, especially high-pressure roles",goals:["Stepping back from thoughts without fighting them","Clarifying work values","The process model of emotion regulation and four proactive strategies"],ev:"Workplace acceptance and commitment training (ACT) has reduced stress in trials."},
-  nl:{t:"Psychologische flexibiliteit en emotieregulatie",who:"Alle niveaus, vooral functies met veel druk",goals:["Afstand nemen van gedachten zonder ertegen te vechten","Werkwaarden helder krijgen","Het procesmodel van emotieregulatie en vier proactieve strategieën"],ev:"Acceptance and commitment training (ACT) op het werk verminderde stress in studies."}},
- {id:"w-hope",dims:["optim","hope"],wiki:["s9","riseabove"],len:{fa:"۱ جلسهٔ ۴ ساعته",en:"1 × 4 hours",nl:"1 × 4 uur"},
-  fa:{t:"امید و خوش‌بینی واقع‌بینانه",who:"همهٔ رده‌ها؛ مناسب دوره‌های تغییر سازمانی",goals:["تمرین «بهترین خود ممکن»","روش WOOP و برنامهٔ «اگر… آنگاه…»","اصل پیشرفت: دیدن پیشرفت‌های کوچک"],ev:"امید و خوش‌بینی تا حدی آموختنی‌اند؛ WOOP در چند کارآزمایی پیگیری هدف را بهتر کرده است."},
-  en:{t:"Hope and realistic optimism",who:"All levels; suited to periods of organisational change",goals:["The \"best possible self\" exercise","WOOP and \"if… then…\" planning","The progress principle: noticing small wins"],ev:"Hope and optimism are partly learnable; WOOP improved goal pursuit in several trials."},
-  nl:{t:"Hoop en realistisch optimisme",who:"Alle niveaus; geschikt bij organisatieveranderingen",goals:["De oefening \"best mogelijke zelf\"","WOOP en \"als… dan…\"-plannen","Het voortgangsprincipe: kleine successen zien"],ev:"Hoop en optimisme zijn deels aan te leren; WOOP verbeterde doelgericht gedrag in meerdere studies."}},
- {id:"w-belong",dims:["belong"],wiki:["s10","s8","mattering"],len:{fa:"۱ جلسهٔ ۳ ساعته + برنامهٔ تیمی",en:"1 × 3 hours + team programme",nl:"1 × 3 uur + teamprogramma"},
-  fa:{t:"تعلق و پیوند در کار",who:"تیم‌ها و مدیرانشان با هم",goals:["گفت‌وگو با غریبه‌ها و تعریف کردن صادقانه","برنامهٔ ورود و همراهی کارکنان تازه","اهمیت داشتن: دیده شدن و افزودن ارزش"],ev:"مداخله‌های کوتاه تعلق در محیط‌های آموزشی و کاری اثرهای پایدار نشان داده‌اند، هرچند همه تکرار نشده‌اند."},
-  en:{t:"Belonging and connection at work",who:"Teams together with their managers",goals:["Talking to strangers and giving honest compliments","Onboarding and buddy programmes for newcomers","Mattering: being seen and adding value"],ev:"Brief belonging interventions have shown lasting effects in schools and workplaces, though not all have replicated."},
-  nl:{t:"Verbondenheid op het werk",who:"Teams samen met hun leidinggevenden",goals:["Praten met onbekenden en oprechte complimenten geven","Inwerk- en buddyprogramma's voor nieuwkomers","Ertoe doen: gezien worden en waarde toevoegen"],ev:"Korte interventies voor verbondenheid lieten blijvende effecten zien op school en werk, al zijn niet alle herhaald."}},
- {id:"w-flow",dims:["flow"],wiki:["s11","s13","s15"],len:{fa:"۱ جلسهٔ ۴ ساعته",en:"1 × 4 hours",nl:"1 × 4 uur"},
-  fa:{t:"کار عمیق، غرقگی و جدا شدن از کار",who:"همهٔ رده‌ها؛ نسخهٔ مدیران: طراحی زمان بی‌وقفه برای تیم",goals:["طراحی شغل از پایین (job crafting)","بلوک‌های زمانی بی‌وقفه","جدا شدن روانی از کار پس از ساعت کاری"],ev:"طراحی شغل از پایین و جدا شدن از کار با درگیری بیشتر و فرسودگی کمتر همراه‌اند."},
-  en:{t:"Deep work, flow and detachment",who:"All levels; managers' version: protecting focus time for teams",goals:["Job crafting","Uninterrupted focus blocks","Psychological detachment after work hours"],ev:"Job crafting and detachment are linked with higher engagement and lower burnout."},
-  nl:{t:"Diep werk, flow en loskomen van werk",who:"Alle niveaus; versie voor managers: focustijd beschermen",goals:["Job crafting","Ononderbroken focusblokken","Psychologisch loskomen van werk na werktijd"],ev:"Job crafting en loskomen van werk gaan samen met meer bevlogenheid en minder burn-out."}},
- {id:"w-ei",dims:["ei"],wiki:["s14","s10","s4"],len:{fa:"۲ جلسهٔ ۳ ساعته",en:"2 × 3 hours",nl:"2 × 3 uur"},
-  fa:{t:"هوش هیجانی در عمل",who:"نقش‌های پرارتباط، مدیران و سرپرستان",goals:["نام‌گذاری دقیق هیجان","پاسخ به هیجان همکار و مراجع","کار عاطفی و پیشگیری از فرسودگی"],ev:"آموزش مهارت‌های هیجانی اثرهای کوچک تا متوسط دارد؛ مدل توانایی معتبرتر از مدل‌های ترکیبی است."},
-  en:{t:"Emotional intelligence in practice",who:"Customer-facing roles, managers and supervisors",goals:["Precise emotion labelling","Responding to colleagues' and clients' emotions","Emotional labour and burnout prevention"],ev:"Emotional skills training has small to moderate effects; the ability model is better supported than mixed models."},
-  nl:{t:"Emotionele intelligentie in de praktijk",who:"Klantgerichte functies, managers en leidinggevenden",goals:["Emoties precies benoemen","Reageren op emoties van collega's en klanten","Emotionele arbeid en burn-outpreventie"],ev:"Training in emotionele vaardigheden heeft kleine tot matige effecten; het vaardigheidsmodel is beter onderbouwd dan gemengde modellen."}},
- {id:"w-self",dims:["selfctrl"],wiki:["s5","s6","s7"],len:{fa:"۱ جلسهٔ ۴ ساعته",en:"1 × 4 hours",nl:"1 × 4 uur"},
-  fa:{t:"خویشتنداری با طراحی: محیط، عادت و مزدوج‌سازی هوس",who:"همهٔ رده‌ها؛ نسخهٔ مدیران: تلنگر و پیش‌فرض‌های سالم",goals:["انتخاب و تغییر موقعیت به‌جای زور اراده","ساختن عادت و نشانه‌های یادآور","مزدوج‌سازی هوس و ذخیرهٔ اضطراری"],ev:"راهبردهای موقعیتی در پژوهش‌ها مؤثرتر از سرکوب‌اند؛ اثر هر ابزار تکی کوچک است."},
-  en:{t:"Self-control by design: environment, habits and temptation bundling",who:"All levels; managers' version: nudges and healthy defaults",goals:["Choosing and changing situations instead of forcing willpower","Building habits and reminder cues","Temptation bundling and emergency reserves"],ev:"Situational strategies outperform suppression in studies; each single tool has a small effect."},
-  nl:{t:"Zelfcontrole door ontwerp: omgeving, gewoonten en verleidingsbundeling",who:"Alle niveaus; versie voor managers: nudges en gezonde standaarden",goals:["Situaties kiezen en veranderen in plaats van wilskracht forceren","Gewoonten en herinneringssignalen opbouwen","Verleidingsbundeling en noodreserves"],ev:"Situationele strategieën werken in onderzoek beter dan onderdrukking; elk afzonderlijk middel heeft een klein effect."}}
+ {id:"w-comp",dims:["compassion"],wiki:["s2","s3","compassion"],refs:["fer19"],len:{fa:"۲ جلسهٔ ۳ ساعته",en:"2 × 3 hours",nl:"2 × 3 uur"},
+  fa:{t:"شفقت به خود و منتقد درون",who:"همهٔ رده‌ها؛ نسخهٔ ویژهٔ مدیران: رهبری مشفقانه",goals:["شناختن صدای منتقد درون و هزینه‌هایش","تمرین سه جزء شفقت به خود: مهربانی با خود، اشتراک انسانی، ذهن‌آگاهی","برخورد با خطا در تیم بدون تحقیر"],ev:"فراتحلیلی از ۲۷ کارآزمایی تصادفی نشان داد آموزش شفقت به خود اثری متوسط بر کاهش استرس و خودانتقادی دارد."},
+  en:{t:"Self-compassion and the inner critic",who:"All levels; managers' version: compassionate leadership",goals:["Recognising the inner critic and what it costs","Practising the three parts of self-compassion: self-kindness, common humanity, mindfulness","Handling mistakes in teams without humiliation"],ev:"A meta-analysis of 27 randomised trials found moderate effects of self-compassion training on stress and self-criticism."},
+  nl:{t:"Zelfcompassie en de innerlijke criticus",who:"Alle niveaus; versie voor managers: compassievol leiderschap",goals:["De innerlijke criticus en wat die kost herkennen","Oefenen met de drie delen van zelfcompassie: vriendelijkheid voor jezelf, gedeelde menselijkheid, mindfulness","Omgaan met fouten in teams zonder iemand te kleineren"],ev:"Een meta-analyse van 27 gerandomiseerde studies vond matige effecten van zelfcompassietraining op stress en zelfkritiek."}},
+ {id:"w-flex",dims:["flex"],wiki:["s4","s7","shelf13"],refs:["unr22"],len:{fa:"۲ جلسهٔ ۳ ساعته",en:"2 × 3 hours",nl:"2 × 3 uur"},
+  fa:{t:"انعطاف‌پذیری روانی و تنظیم هیجان",who:"همهٔ رده‌ها، به‌ویژه نقش‌های پرفشار",goals:["فاصله گرفتن از افکار بدون جنگیدن با آن‌ها","روشن کردن ارزش‌های کاری","مدل فرایندی تنظیم هیجان و چهار راهبرد پیش‌دستانه"],ev:"فراتحلیل آموزش‌های مبتنی بر پذیرش و تعهد (ACT) در محیط کار، کاهش کوچک تا متوسط استرس و پریشانی را نشان داد؛ بیشترین اثر در کارکنان اداری بود."},
+  en:{t:"Psychological flexibility and emotion regulation",who:"All levels, especially high-pressure roles",goals:["Stepping back from thoughts without fighting them","Clarifying work values","The process model of emotion regulation and four proactive strategies"],ev:"A meta-analysis of workplace acceptance and commitment training (ACT) found small to moderate reductions in stress and distress, strongest among office employees."},
+  nl:{t:"Psychologische flexibiliteit en emotieregulatie",who:"Alle niveaus, vooral functies met veel druk",goals:["Afstand nemen van gedachten zonder ertegen te vechten","Werkwaarden helder krijgen","Het procesmodel van emotieregulatie en vier proactieve strategieën"],ev:"Een meta-analyse van acceptance and commitment training (ACT) op het werk vond een kleine tot matige afname van stress en psychische klachten, het sterkst bij kantoormedewerkers."}},
+ {id:"w-hope",dims:["optim","hope"],wiki:["s9","riseabove"],refs:["wan21","car19","ama11"],len:{fa:"۱ جلسهٔ ۴ ساعته",en:"1 × 4 hours",nl:"1 × 4 uur"},
+  fa:{t:"امید و خوش‌بینی واقع‌بینانه",who:"همهٔ رده‌ها؛ مناسب دوره‌های تغییر سازمانی",goals:["تمرین «بهترین خود ممکن»","روش WOOP و برنامه‌های «اگر… آنگاه…»","اصل پیشرفت: دیدن پیشرفت‌های کوچک"],ev:"روش WOOP (مقایسهٔ ذهنی آرزو و مانع، همراه با برنامهٔ «اگر… آنگاه…») اثری کوچک تا متوسط بر رسیدن به هدف دارد؛ تمرین «بهترین خود ممکن» خوش‌بینی را اندکی بالا می‌برد."},
+  en:{t:"Hope and realistic optimism",who:"All levels; suited to periods of organisational change",goals:["The \"best possible self\" exercise","WOOP and \"if… then…\" plans","The progress principle: noticing small wins"],ev:"WOOP (mental contrasting with \"if… then…\" plans) has a small-to-medium effect on reaching goals; the best-possible-self exercise raises optimism modestly."},
+  nl:{t:"Hoop en realistisch optimisme",who:"Alle niveaus; geschikt bij organisatieveranderingen",goals:["De oefening \"best mogelijke zelf\"","WOOP en \"als… dan…\"-plannen","Het voortgangsprincipe: kleine successen zien"],ev:"WOOP (mentaal contrasteren met \"als… dan…\"-plannen) heeft een klein tot middelgroot effect op het bereiken van doelen; de oefening \"best mogelijke zelf\" verhoogt optimisme in beperkte mate."}},
+ {id:"w-belong",dims:["belong"],wiki:["s10","s8","mattering"],refs:["wal11","wal23"],len:{fa:"۱ جلسهٔ ۳ ساعته + برنامهٔ تیمی",en:"1 × 3 hours + team programme",nl:"1 × 3 uur + teamprogramma"},
+  fa:{t:"تعلق و پیوند در کار",who:"تیم‌ها و مدیرانشان با هم",goals:["گفت‌وگو با غریبه‌ها و تعریف کردن صادقانه","برنامهٔ ورود و همراه (بادی) برای کارکنان تازه","اهمیت داشتن: دیده شدن و افزودن ارزش"],ev:"یک مداخلهٔ کوتاه تعلق در پژوهشی شناخته‌شده اثر ماندگار داشت؛ پژوهش تکراری بزرگی در ۲۰۲۳ نشان داد اثر آن به بافت و شرایط بستگی دارد."},
+  en:{t:"Belonging and connection at work",who:"Teams together with their managers",goals:["Talking to strangers and giving honest compliments","Onboarding and buddy programmes for newcomers","Mattering: being seen and adding value"],ev:"A brief belonging intervention had lasting effects in a well-known study; a large 2023 follow-up found that the effect depends on the setting."},
+  nl:{t:"Verbondenheid op het werk",who:"Teams samen met hun leidinggevenden",goals:["Praten met onbekenden en oprechte complimenten geven","Inwerk- en buddyprogramma's voor nieuwkomers","Ertoe doen: gezien worden en waarde toevoegen"],ev:"Een korte interventie voor verbondenheid had in een bekende studie blijvende effecten; een groot vervolgonderzoek uit 2023 liet zien dat het effect afhangt van de omgeving."}},
+ {id:"w-flow",dims:["flow"],wiki:["s11","s13","s15"],refs:["rud17","wen17"],len:{fa:"۱ جلسهٔ ۴ ساعته",en:"1 × 4 hours",nl:"1 × 4 uur"},
+  fa:{t:"کار عمیق، غرقگی و جدا شدن از کار",who:"همهٔ رده‌ها؛ نسخهٔ مدیران: حفاظت از زمان تمرکز تیم",goals:["طراحی شغل از پایین (job crafting)","بلوک‌های زمانی بی‌وقفه برای تمرکز","جدا شدن روانی از کار پس از ساعت کاری"],ev:"فراتحلیل‌ها طراحی شغل از پایین را با درگیری بیشتر در کار، و جدا شدن روانی پس از کار را با خستگی کمتر مرتبط می‌دانند؛ بیشتر این شواهد همبستگی‌اند، نه علّی."},
+  en:{t:"Deep work, flow and detachment",who:"All levels; managers' version: protecting focus time for teams",goals:["Job crafting: reshaping your job from the bottom up","Uninterrupted focus blocks","Psychological detachment after work hours"],ev:"Meta-analyses link job crafting with higher work engagement, and detachment after work with less exhaustion; most of this evidence is correlational."},
+  nl:{t:"Geconcentreerd werk, flow en loskomen van werk",who:"Alle niveaus; versie voor managers: focustijd van het team beschermen",goals:["Job crafting: je werk zelf bijschaven","Ononderbroken focusblokken","Psychologisch loskomen van werk na werktijd"],ev:"Meta-analyses koppelen job crafting aan meer bevlogenheid, en loskomen van werk aan minder uitputting; dit bewijs is grotendeels correlationeel."}},
+ {id:"w-ei",dims:["ei"],wiki:["s14","s10","s4"],refs:["mat19","jos10"],len:{fa:"۲ جلسهٔ ۳ ساعته",en:"2 × 3 hours",nl:"2 × 3 uur"},
+  fa:{t:"هوش هیجانی در عمل",who:"نقش‌های پرارتباط با مشتری، مدیران و سرپرستان",goals:["نام‌گذاری دقیق هیجان","پاسخ به هیجان همکار و مشتری","کار عاطفی و پیشگیری از فرسودگی"],ev:"آموزش هوش هیجانی به‌طور میانگین نمرهٔ آن را به اندازهٔ متوسط بالا می‌برد؛ هوش هیجانیِ خودگزارشی با ویژگی‌های شخصیت هم‌پوشانی دارد، پس نمره‌ها را با احتیاط بخوانید."},
+  en:{t:"Emotional intelligence in practice",who:"Customer-facing roles, managers and supervisors",goals:["Precise emotion labelling","Responding to colleagues' and clients' emotions","Emotional labour and burnout prevention"],ev:"On average, EI training raises EI scores moderately; self-report EI overlaps with personality, so read scores with care."},
+  nl:{t:"Emotionele intelligentie in de praktijk",who:"Klantgerichte functies, managers en leidinggevenden",goals:["Emoties precies benoemen","Reageren op emoties van collega's en klanten","Emotionele arbeid en burn-outpreventie"],ev:"Training verhoogt EI-scores gemiddeld matig; zelfgerapporteerde EI overlapt met persoonlijkheid, dus lees scores met zorg."}},
+ {id:"w-self",dims:["selfctrl"],wiki:["s5","s6","s7"],refs:["duc16","mil14"],len:{fa:"۱ جلسهٔ ۴ ساعته",en:"1 × 4 hours",nl:"1 × 4 uur"},
+  fa:{t:"خویشتنداری با طراحی: محیط، عادت و جفت کردن وسوسه با کار",who:"همهٔ رده‌ها؛ نسخهٔ مدیران: تلنگر و پیش‌فرض‌های سالم",goals:["انتخاب و تغییر موقعیت به‌جای زور اراده","ساختن عادت و نشانه‌های یادآور","جفت کردن لذت با کار لازم (temptation bundling) و «ذخیرهٔ اضطراری» (روزهای استثنای از پیش تعیین‌شده)"],ev:"شکل دادن به موقعیت مؤثرتر از تکیه بر ارادهٔ لحظه‌ای است؛ جفت کردن لذت با کار در یک آزمایش میدانی کمک کرد، اما اثرش با گذشت زمان کم شد."},
+  en:{t:"Self-control by design: environment, habits and temptation bundling",who:"All levels; managers' version: nudges and healthy defaults",goals:["Choosing and changing situations instead of forcing willpower","Building habits and reminder cues","Temptation bundling (pairing a treat with a chore) and emergency reserves (planned skip days)"],ev:"Shaping the situation works better than relying on willpower in the moment; temptation bundling helped in a field experiment, but the effect faded over time."},
+  nl:{t:"Zelfcontrole door ontwerp: omgeving, gewoonten en iets leuks koppelen aan een taak",who:"Alle niveaus; versie voor managers: nudges en gezonde standaardkeuzes",goals:["Situaties kiezen en veranderen in plaats van wilskracht forceren","Gewoonten en geheugensteuntjes opbouwen","Iets leuks koppelen aan een taak (temptation bundling) en noodreserves (vooraf geplande uitzonderingsdagen)"],ev:"De situatie inrichten werkt beter dan vertrouwen op wilskracht op het moment zelf; iets leuks koppelen aan een taak hielp in een veldexperiment, maar het effect nam na verloop van tijd af."}}
 ];
 /* Sanjesh — interface strings */
 window.T = {
@@ -859,8 +884,8 @@ en:{
  wGoals:"Goals", wWho:"Audience", wLen:"Duration", wEv:"Evidence", wRead:"Background reading in the course wiki", wFor:"For dimension",
  mT:"Method", mP:"Transparent about what we measure, how we score, and where the limits are.",
  mInst:"Questionnaires", mScore:"Scoring", mScoreP:"Each subscale's mean is converted to a 0–100 range: (mean − minimum) ÷ (maximum − minimum) × 100. Reverse-keyed items are flipped first. Where a high score on the original questionnaire means more difficulty (e.g. AAQ-II), the score is reversed so that \"higher = better\" everywhere.",
- mBands:"Bands", mBandsP:"Below 37.5: needs attention · 37.5 to 62.5: moderate · above 62.5: strong. These are conventions (lower and upper quarter of the scale), not clinical cut-offs.",
- mLim:"Limitations", mLimL:["All questionnaires are self-report and can be affected by today's mood or a wish to look good.","Bands have no population norms; comparisons within the organisation and over time are more valid than comparisons with a \"national average\".","The English and Dutch wording in this service is prepared for organisational screening; for research, use the validated versions (see references).","This tool is not designed for, and must not be used for, decisions about individuals (hiring, performance reviews)."],
+ mBands:"Score bands", mBandsP:"Below 37.5: needs attention · 37.5 to 62.5: moderate · above 62.5: strong. These are conventions (lower and upper quarter of the scale), not clinical cut-offs.",
+ mLim:"Limitations", mLimL:["All questionnaires are self-report and can be affected by today's mood or a wish to look good.","Bands have no population norms; comparisons within the organisation and over time are more valid than comparisons with a \"national average\".","The English and Dutch wording in this service is prepared for organisational screening; for research, use the validated versions (see Sources).","This tool is not designed for, and must not be used for, decisions about individuals (hiring, performance reviews)."],
  mEth:"Ethics and privacy", mEthL:["Participation is voluntary and anyone can stop at any time.","Only month and year are recorded, not the exact date or time.","Reports are group-level only, with a minimum group size of 5.","Personal results are shown only on the respondent's own device."],
  mCourse:"This service grew out of Dr. Azarakhsh Mokri's course \"Personal and Human Skills in Organisations and Educational Centres\". The questionnaires are the ones presented in the course slides.",
  mWiki:"Full course wiki (Persian)", mOrgPsy:"Work and organisational psychology", items:"items", scale:"Scale", ref:"Reference", session:"Course booklet",
@@ -889,14 +914,14 @@ nl:{
  tResume:"Onafgemaakte scan voortzetten", tRestart:"Opnieuw beginnen",
  rT:"Uw resultaten in één oogopslag", rP:"Scores lopen van 0 tot 100 en zijn altijd zo geschreven dat hoger beter betekent.", rStr:"Uw sterke punten", rGrow:"Ruimte om te groeien", rTips:"Twee korte tips", rDetail:"Details en subschalen",
  rSend:"Anoniem naar mijn organisatie sturen", rSent:"Uw antwoorden zijn anoniem opgeslagen. Dank u wel!", rCode:"Antwoordcode", rCodeP:"Lukt direct versturen niet, kopieer dan deze code en stuur hem naar de coördinator. De code bevat alleen de antwoordcijfers en uw niveau, niet uw naam.", rCopy:"Code kopiëren", rCopied:"Gekopieerd",
- rCare:"Voelt u zich al een tijd somber of heeft u het gevoel het niet aan te kunnen? Praat met de bedrijfsarts, uw huisarts of een counselor. Hulp vragen is een teken van kracht.",
+ rCare:"Voelt u zich al een tijd somber of heeft u het gevoel het niet aan te kunnen? Praat met de bedrijfsarts, uw huisarts of een psycholoog. Hulp vragen is een teken van kracht.",
  rNot:"Dit resultaat is een momentopname van de antwoorden van vandaag, geen etiket of diagnose.",
  band:["Aandacht nodig","Gemiddeld","Sterk"],
  pT:"Organisatierapport", pP:"Een kaart van het mentale welzijn van uw organisatie per niveau, met prioriteiten en aanbevolen workshops.",
  pSrc:"Rapportgegevens", pDemo:"Voorbeelddata (demonstratie)", pLive:"Echte antwoorden van deze ronde", pImport:"Antwoordcodes importeren", pImportP:"Plak hier antwoordcodes (één per regel).", pImportGo:"Toevoegen", pAdded:"antwoorden toegevoegd",
  pN:"Deelnemers", pLevels:"Niveaus", pAvg:"Totaalgemiddelde", pLowShare:"Aandeel \"aandacht nodig\"",
  pHeat:"Kaart per niveau", pHeatP:"Elke cel is het gemiddelde van één dimensie binnen één niveau. Warme kleuren: aandacht nodig; koele kleuren: sterk. Cellen met minder dan 5 personen zijn verborgen voor anonimiteit.",
- pDist:"Verdeling per dimensie", pDistP:"Welk deel van de mensen in elke band valt. Een gemiddelde kan een kleine groep die het zwaar heeft verbergen.",
+ pDist:"Verdeling per dimensie", pDistP:"Welk deel van de mensen in elke scoreklasse valt. Een gemiddelde kan een kleine groep die het zwaar heeft verbergen.",
  pPri:"Prioriteiten en aanbevolen plan", pPriP:"Dimensies met een gemiddelde onder 55, of met meer dan 25% van de mensen in \"aandacht nodig\".", pNoPri:"Geen enkele dimensie haalde de drempel. Suggestie: opfrisworkshops om sterke punten te behouden.",
  pWhy:"Waarom", pFor:"Vooral voor", pStrengths:"Sterke punten van de organisatie", pGap:"Grootste verschil tussen niveaus",
  pHidden:"minder dan 5", pNone:"Nog geen antwoorden.", pExport:"Samenvatting kopiëren (CSV)",
@@ -906,7 +931,7 @@ nl:{
  wGoals:"Doelen", wWho:"Doelgroep", wLen:"Duur", wEv:"Onderbouwing", wRead:"Achtergrond in de cursuswiki", wFor:"Voor dimensie",
  mT:"Methode", mP:"Open over wat we meten, hoe we scoren en waar de grenzen liggen.",
  mInst:"Vragenlijsten", mScore:"Scoring", mScoreP:"Het gemiddelde van elke subschaal wordt omgezet naar 0–100: (gemiddelde − minimum) ÷ (maximum − minimum) × 100. Omgekeerde items worden eerst omgedraaid. Waar een hoge score op de oorspronkelijke vragenlijst meer moeite betekent (bijv. AAQ-II), wordt de score omgekeerd zodat overal geldt: hoger = beter.",
- mBands:"Banden", mBandsP:"Onder 37,5: aandacht nodig · 37,5 tot 62,5: gemiddeld · boven 62,5: sterk. Dit zijn afspraken (onderste en bovenste kwart van de schaal), geen klinische afkappunten.",
+ mBands:"Scoreklassen", mBandsP:"Onder 37,5: aandacht nodig · 37,5 tot 62,5: gemiddeld · boven 62,5: sterk. Dit zijn afspraken (onderste en bovenste kwart van de schaal), geen klinische afkappunten.",
  mLim:"Beperkingen", mLimL:["Alle vragenlijsten zijn zelfrapportage en kunnen beïnvloed worden door de stemming van de dag of de wens goed over te komen.","De banden hebben geen bevolkingsnormen; vergelijken binnen de organisatie en over de tijd is betrouwbaarder dan met een \"landelijk gemiddelde\".","De Engelse en Nederlandse formuleringen zijn opgesteld voor screening in organisaties; gebruik voor onderzoek de gevalideerde versies (zie bronnen).","Dit instrument is niet bedoeld voor, en mag niet gebruikt worden voor, beslissingen over individuen (werving, beoordelingen)."],
  mEth:"Ethiek en privacy", mEthL:["Deelname is vrijwillig en iedereen kan op elk moment stoppen.","Alleen maand en jaar worden vastgelegd, niet de exacte datum of tijd.","Rapporten zijn alleen op groepsniveau, met een minimale groepsgrootte van 5.","Persoonlijke resultaten worden alleen op het eigen apparaat getoond."],
  mCourse:"Deze dienst is ontstaan uit de cursus \"Persoonlijke en menselijke vaardigheden in organisaties en onderwijsinstellingen\" van dr. Azarakhsh Mokri. De vragenlijsten zijn die uit de cursusdia's.",
@@ -926,7 +951,7 @@ Object.assign(T.en, {
  lawT:"Fits Dutch and European rules",
  law:[["GDPR","No names or identifiers are collected; results are reported only for groups of 5 or more."],["Arbowet","Supports the employer's policy on psychosocial workload (PSA) and can feed into the risk inventory (RI&E)."],["Works council","A staff survey like this is usually discussed with the works council (WOR art. 27); we help prepare it."]],
  faqT:"Frequently asked questions",
- faq:[["How long does it take for employees?","The core check takes about 8 minutes; the extended version about 18. It works on any phone or computer."],["Can managers see individual answers?","No. There are no names, and the organisation report only shows groups of five or more people."],["Is this a diagnosis?","No. It is a validated, non-clinical check to see group patterns and choose the right support. Anyone who is struggling is pointed to the company doctor or a counsellor."],["Are the questionnaires validated?","Yes: internationally published scales with their original scoring keys (see Method). Licences for paid use are checked with the authors before a commercial roll-out."],["How are responses collected in the pilot?","In the pilot each participant sends an anonymous response code containing only answer numbers and job level; for a full roll-out a secure online collection can be set up."],["What happens after the report?","Workshops matched to the priorities, and an optional repeat measurement after 3 to 6 months to see what changed."]],
+ faq:[["How long does it take for employees?","The core check takes about 8 minutes; the extended version about 18. It works on any phone or computer."],["Can managers see individual answers?","No. There are no names, and the organisation report only shows groups of five or more people."],["Is this a diagnosis?","No. It is a validated, non-clinical check to see group patterns and choose the right support. Anyone who is struggling is pointed to the company doctor, their GP or a psychologist."],["Are the questionnaires validated?","Yes: internationally published scales with their original scoring keys (see Method). Licences for paid use are checked with the authors before a commercial roll-out."],["How are responses collected in the pilot?","In the pilot each participant sends an anonymous response code containing only answer numbers and job level; for a full roll-out a secure online collection can be set up."],["What happens after the report?","Workshops matched to the priorities, and an optional repeat measurement after 3 to 6 months to see what changed."]],
  ctaT:"Interested in a pilot?", ctaP:"Take the check yourself, look at the sample report, and get in touch to discuss a pilot for your team or organisation.",
  ctaContact:"Contact Maryam Jaberi", src:"Source", footer:"Workplace Wellbeing Check · pilot version · non-diagnostic · designed by Maryam Jaberi"
 });
@@ -942,7 +967,7 @@ Object.assign(T.nl, {
  lawT:"Past bij Nederlandse en Europese regels",
  law:[["AVG","Er worden geen namen of identificerende gegevens verzameld; uitkomsten worden alleen gerapporteerd voor groepen van 5 of meer."],["Arbowet","Ondersteunt het beleid van de werkgever op psychosociale arbeidsbelasting (PSA) en kan bijdragen aan de RI&E."],["Ondernemingsraad","Een medewerkersonderzoek als dit wordt meestal met de OR besproken (WOR art. 27); wij helpen dit voorbereiden."]],
  faqT:"Veelgestelde vragen",
- faq:[["Hoeveel tijd kost het medewerkers?","De basisscan duurt ongeveer 8 minuten, de uitgebreide versie ongeveer 18. Het werkt op elke telefoon of computer."],["Kunnen leidinggevenden individuele antwoorden zien?","Nee. Er worden geen namen gevraagd en het organisatierapport toont alleen groepen van vijf of meer personen."],["Is dit een diagnose?","Nee. Het is een gevalideerde, niet-klinische scan om groepspatronen te zien en de juiste ondersteuning te kiezen. Wie het zwaar heeft, wordt verwezen naar de bedrijfsarts of een vertrouwenspersoon."],["Zijn de vragenlijsten gevalideerd?","Ja: internationaal gepubliceerde schalen met hun oorspronkelijke scoringssleutels (zie Methode). Licenties voor betaald gebruik worden vóór een commerciële uitrol met de auteurs afgestemd."],["Hoe worden antwoorden in de pilot verzameld?","In de pilot stuurt elke deelnemer een anonieme antwoordcode met alleen antwoordcijfers en functieniveau; voor een volledige uitrol kan een beveiligde online verzameling worden ingericht."],["Wat gebeurt er na het rapport?","Workshops die passen bij de prioriteiten, en desgewenst een herhaalmeting na 3 tot 6 maanden om te zien wat er veranderd is."]],
+ faq:[["Hoeveel tijd kost het medewerkers?","De basisscan duurt ongeveer 8 minuten, de uitgebreide versie ongeveer 18. Het werkt op elke telefoon of computer."],["Kunnen leidinggevenden individuele antwoorden zien?","Nee. Er worden geen namen gevraagd en het organisatierapport toont alleen groepen van vijf of meer personen."],["Is dit een diagnose?","Nee. Het is een gevalideerde, niet-klinische scan om groepspatronen te zien en de juiste ondersteuning te kiezen. Wie het zwaar heeft, wordt verwezen naar de bedrijfsarts, de huisarts of een psycholoog."],["Zijn de vragenlijsten gevalideerd?","Ja: internationaal gepubliceerde schalen met hun oorspronkelijke scoringssleutels (zie Methode). Licenties voor betaald gebruik worden vóór een commerciële uitrol met de auteurs afgestemd."],["Hoe worden antwoorden in de pilot verzameld?","In de pilot stuurt elke deelnemer een anonieme antwoordcode met alleen antwoordcijfers en functieniveau; voor een volledige uitrol kan een beveiligde online verzameling worden ingericht."],["Wat gebeurt er na het rapport?","Workshops die passen bij de prioriteiten, en desgewenst een herhaalmeting na 3 tot 6 maanden om te zien wat er veranderd is."]],
  ctaT:"Interesse in een pilot?", ctaP:"Vul de scan zelf in, bekijk het voorbeeldrapport en neem contact op om een pilot voor uw team of organisatie te bespreken.",
  ctaContact:"Contact met Maryam Jaberi", src:"Bron", footer:"Workplace Wellbeing Check · pilotversie · niet-diagnostisch · ontworpen door Maryam Jaberi"
 });
@@ -962,13 +987,152 @@ Object.assign(T.fa, {
  ctaT:"به اجرای آزمایشی علاقه دارید؟", ctaP:"سنجش را خودتان امتحان کنید، نمونهٔ گزارش را ببینید و برای گفت‌وگو دربارهٔ اجرای آزمایشی در تیم یا سازمان‌تان تماس بگیرید.",
  ctaContact:"تماس با مریم جابری", src:"منبع", footer:"سنجش سلامت روانی سازمان · نسخهٔ آزمایشی · غیرتشخیصی · طراحی: مریم جابری"
 });
+/* Sanjesh — pre-pilot additions: sector focus, absence-cost estimate, report → action, licence transparency, Arbowet/RI&E, request form, separate sources (en / nl / fa) */
+window.CONTACT_EMAIL = "M.jaberi1212@gmail.com";
+window.REFS = [
+ {id:"nea25", g:"stats", t:"TNO & CBS (2026). Factsheet Nationale Enquête Arbeidsomstandigheden (NEA) 2025 — 21% of employees report burnout complaints.", u:"https://monitorarbeid.tno.nl/wp-content/uploads/sites/16/2026/04/Factsheet-NEA2025.pdf"},
+ {id:"who22", g:"stats", t:"WHO & ILO (2022, 28 September). WHO and ILO call for new measures to tackle mental health issues at work [joint news release].", u:"https://www.who.int/news/item/28-09-2022-who-and-ilo-call-for-new-measures-to-tackle-mental-health-issues-at-work"},
+ {id:"icd11", g:"stats", t:"WHO (2019, 28 May). Burn-out an \"occupational phenomenon\": International Classification of Diseases (ICD-11).", u:"https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases"},
+ {id:"cbs26", g:"stats", t:"CBS (2026, 4 June). Ziekteverzuim in eerste kwartaal hoger dan gemiddeld in afgelopen 30 jaar — absence rate 5.4% over 2025; 9% of absent employees cite psychological complaints or burnout.", u:"https://www.cbs.nl/nl-nl/nieuws/2026/23/ziekteverzuim-in-eerste-kwartaal-hoger-dan-gemiddeld-in-afgelopen-30-jaar"},
+ {id:"tno24", g:"stats", t:"TNO (2024). Report TNO 2024 R11785 (NEA analyses): absence for psychological complaints, overstrain or burnout lasts 63 working days on average; 75% (partly) work-related.", u:"https://publications.tno.nl/publication/34643167/dEleSs74/TNO-2024-R11785.pdf"},
+ {id:"arbo24", g:"stats", t:"HR Praktijk (2024). Arbobalans: kosten loondoorbetaling nemen toe — €8.3 bn for (partly) work-related absence in 2023, of which €4.9 bn due to psychosocial workload (summary of TNO Arbobalans 2024).", u:"https://www.hrpraktijk.nl/juridisch/arbeidsovereenkomst/arbobalans-kosten-loondoorbetaling-nemen-toe-en-zzpers-gezonder/"},
+ {id:"arbo18", g:"stats", t:"HR Praktijk (2018). Arbobalans 2018 — about a quarter of all absence days relate to psychological complaints, overstrain or burnout (summary of TNO Arbobalans 2018).", u:"https://www.hrpraktijk.nl/medewerker/ziekteverzuim/arbobalans-2018-psychosociale-arbeidsbelasting-en-burn-outklachten-blijven-toenemen/"},
+ {id:"mkb", g:"stats", t:"MKB Servicedesk (2026). Wat kost een zieke werknemer? — on average €250 to €400 per absence day.", u:"https://www.mkbservicedesk.nl/personeel/verzuim-reintegratie/wat-kost-ziekteverzuim-per-medewerker-bereken-je-kosten"},
+ {id:"arbowet", g:"law", t:"Arbeidsomstandighedenwet (Arbowet), art. 3(2): policy to prevent or limit psychosocial workload; art. 5: risk inventory and evaluation (RI&E) with plan of action.", u:"https://wetten.overheid.nl/BWBR0010346/"},
+ {id:"arbobes", g:"law", t:"Arbeidsomstandighedenbesluit (Arbobesluit), art. 2.15: assess psychosocial workload risks in the RI&E and set measures in the plan of action.", u:"https://wetten.overheid.nl/BWBR0008498/"},
+ {id:"arboportaal", g:"law", t:"Arboportaal, Ministerie van SZW. Psychosociale arbeidsbelasting (PSA).", u:"https://www.arboportaal.nl/onderwerpen/psychosociale-arbeidsbelasting"},
+ {id:"wor", g:"law", t:"Wet op de ondernemingsraden (WOR), art. 27: works council consent on arrangements such as staff surveys and working-conditions policy.", u:"https://wetten.overheid.nl/BWBR0002747/"},
+ {id:"gdpr", g:"law", t:"Regulation (EU) 2016/679, General Data Protection Regulation (GDPR / AVG).", u:"https://eur-lex.europa.eu/eli/reg/2016/679/oj"},
+ {id:"fer19", g:"ev", t:"Ferrari, M., Hunt, C., Harrysunker, A., Abbott, M. J., Beath, A. P., & Einstein, D. A. (2019). Self-compassion interventions and psychosocial outcomes: A meta-analysis of RCTs. Mindfulness, 10(8), 1455–1473.", u:"https://doi.org/10.1007/s12671-019-01134-6"},
+ {id:"unr22", g:"ev", t:"Unruh, I., Neubert, M., Wilhelm, M., & Euteneuer, F. (2022). ACT in the workplace: A meta-analytic examination of randomized controlled trials. Journal of Contextual Behavioral Science, 26, 114–124.", u:"https://doi.org/10.1016/j.jcbs.2022.09.003"},
+ {id:"wan21", g:"ev", t:"Wang, G., Wang, Y., & Gai, X. (2021). A meta-analysis of the effects of mental contrasting with implementation intentions on goal attainment. Frontiers in Psychology, 12, 565202.", u:"https://doi.org/10.3389/fpsyg.2021.565202"},
+ {id:"car19", g:"ev", t:"Carrillo, A., Rubio-Aparicio, M., Molinari, G., Enrique, Á., Sánchez-Meca, J., & Baños, R. M. (2019). Effects of the Best Possible Self intervention: A systematic review and meta-analysis. PLoS ONE, 14(9), e0222386.", u:"https://doi.org/10.1371/journal.pone.0222386"},
+ {id:"ama11", g:"ev", t:"Amabile, T., & Kramer, S. (2011). The progress principle: Using small wins to ignite joy, engagement, and creativity at work. Harvard Business Review Press.", u:""},
+ {id:"wal11", g:"ev", t:"Walton, G. M., & Cohen, G. L. (2011). A brief social-belonging intervention improves academic and health outcomes of minority students. Science, 331(6023), 1447–1451.", u:"https://doi.org/10.1126/science.1198364"},
+ {id:"wal23", g:"ev", t:"Walton, G. M., Murphy, M. C., Logel, C., et al. (2023). Where and with whom does a brief social-belonging intervention promote progress in college? Science, 380(6644), 499–505.", u:"https://doi.org/10.1126/science.ade4420"},
+ {id:"rud17", g:"ev", t:"Rudolph, C. W., Katz, I. M., Lavigne, K. N., & Zacher, H. (2017). Job crafting: A meta-analysis of relationships with individual differences, job characteristics, and work outcomes. Journal of Vocational Behavior, 102, 112–138.", u:"https://doi.org/10.1016/j.jvb.2017.05.008"},
+ {id:"wen17", g:"ev", t:"Wendsche, J., & Lohmann-Haislah, A. (2017). A meta-analysis on antecedents and outcomes of detachment from work. Frontiers in Psychology, 7, 2072.", u:"https://doi.org/10.3389/fpsyg.2016.02072"},
+ {id:"mat19", g:"ev", t:"Mattingly, V., & Kraiger, K. (2019). Can emotional intelligence be trained? A meta-analytical investigation. Human Resource Management Review, 29(2), 140–155.", u:"https://doi.org/10.1016/j.hrmr.2018.03.002"},
+ {id:"jos10", g:"ev", t:"Joseph, D. L., & Newman, D. A. (2010). Emotional intelligence: An integrative meta-analysis and cascading model. Journal of Applied Psychology, 95(1), 54–78.", u:"https://doi.org/10.1037/a0017286"},
+ {id:"duc16", g:"ev", t:"Duckworth, A. L., Gendler, T. S., & Gross, J. J. (2016). Situational strategies for self-control. Perspectives on Psychological Science, 11(1), 35–55.", u:"https://doi.org/10.1177/1745691615623247"},
+ {id:"mil14", g:"ev", t:"Milkman, K. L., Minson, J. A., & Volpp, K. G. M. (2014). Holding the Hunger Games hostage at the gym: An evaluation of temptation bundling. Management Science, 60(2), 283–299.", u:"https://doi.org/10.1287/mnsc.2013.1784"}
+];
+/* English and Dutch titles for the Persian course-wiki pages linked from workshops and the method table */
+window.LABELS_I18N = {
+ s2:{fa:"شفقت به خود",en:"Self-compassion",nl:"Zelfcompassie"},
+ s3:{fa:"از سرزنش خود تا شفقت به خود",en:"From self-blame to self-compassion",nl:"Van zelfverwijt naar zelfcompassie"},
+ compassion:{fa:"قفسهٔ کتاب: شفقت و خودانتقادی",en:"Book shelf: compassion and self-criticism",nl:"Boekenplank: compassie en zelfkritiek"},
+ s4:{fa:"معمای تنظیم هیجان",en:"The puzzle of emotion regulation",nl:"De puzzel van emotieregulatie"},
+ s7:{fa:"تغییر خویشتن به‌جای تغییر محیط",en:"Changing yourself instead of your surroundings",nl:"Jezelf veranderen in plaats van je omgeving"},
+ shelf13:{fa:"قفسهٔ کتاب: درمان فرایندمحور و چابکی هیجانی",en:"Book shelf: process-based therapy and emotional agility",nl:"Boekenplank: procesgerichte therapie en emotionele wendbaarheid"},
+ s9:{fa:"خوش‌بینی و امید به آینده",en:"Optimism and hope for the future",nl:"Optimisme en hoop voor de toekomst"},
+ riseabove:{fa:"فراتر برو (کافمن، ۲۰۲۴): از ذهنیت قربانی تا رشد",en:"Rise Above (Kaufman, 2024): from victim mindset to growth",nl:"Rise Above (Kaufman, 2024): van slachtofferdenken naar groei"},
+ s10:{fa:"خرده‌فرهنگ‌های سازمانی و اثرشان بر انگیزش",en:"Organisational subcultures and motivation",nl:"Subculturen in organisaties en motivatie"},
+ s8:{fa:"بازتعبیر، تخلیهٔ ایگو و ذهنیت‌ها",en:"Reappraisal, ego depletion and mindsets",nl:"Herwaardering, ego-uitputting en mindsets"},
+ mattering:{fa:"انسان‌ها چگونه اهمیت پیدا می‌کنند",en:"How people come to matter",nl:"Hoe mensen ertoe gaan doen"},
+ s11:{fa:"ونتینگ: درد دل کردن کی کمک می‌کند؟",en:"Venting: when does talking it out help?",nl:"Stoom afblazen: wanneer helpt het?"},
+ s13:{fa:"انگیزش: تنظیم بیرونی، درون‌فکنی‌شده و درونی",en:"Motivation: external, introjected and intrinsic",nl:"Motivatie: extern, geïntrojecteerd en intrinsiek"},
+ s15:{fa:"هیجان مثبت، فراغت و اشتراک خوشی‌ها",en:"Positive emotion, leisure and sharing good news",nl:"Positieve emotie, vrije tijd en goed nieuws delen"},
+ s14:{fa:"هوش هیجانی: توانایی، ویژگی یا ترکیب؟",en:"Emotional intelligence: ability, trait or mix?",nl:"Emotionele intelligentie: vaardigheid, eigenschap of mengvorm?"},
+ s5:{fa:"خویشتنداری و انتخاب موقعیت",en:"Self-control and choosing situations",nl:"Zelfcontrole en situaties kiezen"},
+ s6:{fa:"انتخاب و تغییر محیط برای خویشتنداری",en:"Choosing and changing your environment",nl:"Je omgeving kiezen en veranderen"},
+ s12:{fa:"کمال‌گرایی: ممتاز اما تحت فشار",en:"Perfectionism: excellent but under pressure",nl:"Perfectionisme: uitblinken onder druk"}
+};
+/* which sources back which home-page cards */
+window.WHY_REFS = [["nea25"],["who22"],["icd11"]];
+window.LAW_REFS = [["gdpr"],["arbowet","arbobes"],["wor"]];
+
+Object.assign(T.en, {
+ heroK:"For tech, IT and professional-services companies · 20–250 employees",
+ for:[["HR and People & Culture","Choose training based on data, not guesswork."],["Founders and leadership","See gaps between levels and hidden strengths before they show up as absence or turnover."],["Team leads","Know where your team needs support, without seeing anyone's individual answers."],["Employees","Self-insight and short, practical suggestions."]],
+ why:[["1 in 5","Dutch employees report burnout complaints (21% in 2025)."],["12 billion","working days are lost worldwide each year to depression and anxiety, costing about US$1 trillion in productivity."],["Occupational","The WHO classifies burnout (ICD-11) as an occupational phenomenon: a work problem, not only a personal one."]],
+ calcT:"What does stress-related absence cost you?", calcP:"A quick estimate for your organisation. Change the numbers to match your situation.",
+ cEmp:"Number of employees", cAbs:"Absence rate (%)", cAbsH:"Dutch average in 2025: 5.4%", cSal:"Average gross annual salary (€)", cShare:"Share of absence days due to stress or psychological complaints (%)", cShareH:"National estimate: about a quarter", cRed:"Scenario: stress-related absence falls by",
+ cDays:"absence days per year", cStress:"of which stress-related", cCost:"cost of stress-related absence per year", cSave:"saving per year in this scenario",
+ cPerDay:"Cost per absence day used here: {x} (salary × 1.3 for employer costs ÷ 220 working days). Dutch estimates range from €250 to €400 per day.",
+ cNote:"This is a scenario, not a prediction. A questionnaire score does not translate directly into fewer absence days. Use the estimate to judge whether prevention is worth investing in, and the repeat measurement to see what actually changed.",
+ actT:"From report to action", actP:"A report alone changes nothing. We stay involved until the first workshops have taken place.",
+ act:[["Debrief","45 minutes with management and HR: what the results mean and what to tackle first."],["Choose","Two or three workshops matched to your priorities and job levels."],["Deliver","Workshops are run by a qualified trainer or work and organisational psychologist based in the Netherlands, arranged by us: one point of contact from measurement to action."],["Measure again","A repeat check after 3 to 6 months shows what changed."]],
+ wsPartner:"Delivery: each workshop is run by a qualified trainer or work and organisational psychologist based in the Netherlands, arranged and coordinated by us.",
+ pilotNoteT:"About this pilot version", pilotNote:"In the pilot, the answers are used only to produce your organisation's report and to validate the service, nothing else. Licences for commercial use of the questionnaires are being arranged with their authors in parallel. We mention this up front so there are no surprises.",
+ arboT:"Helps you meet your Arbowet obligations", arboP:"Dutch employers must have a policy to prevent, or at least limit, psychosocial workload (PSA) such as work stress, and must assess PSA risks in their risk inventory (RI&E) with a plan of action.",
+ arbo:[["Data for the PSA part of your RI&E","Anonymous group results by job level, as one source of evidence for where psychosocial risks lie."],["Input for your plan of action","The workshop plan and repeat measurement give concrete, dated measures you can record."],["Visible follow-up","Before-and-after results help show the works council that you act on the risks."]],
+ arboNote:"The check does not replace your RI&E or its review by a certified expert; it supplies data for it.",
+ law:[["GDPR","No names or identifiers are collected; results are reported only for groups of 5 or more."],["Arbowet","Supports the employer's PSA policy (art. 3(2)) and the PSA assessment in the RI&E (Arbobesluit art. 2.15)."],["Works council","A staff survey like this is usually discussed with the works council (WOR art. 27); we help prepare it."]],
+ faq:[["How long does it take for employees?","The quick version takes about 8 minutes; the complete version about 18. It works on any phone or computer."],["Can managers see individual answers?","No. There are no names, and the organisation report only shows groups of five or more people."],["Is this a diagnosis?","No. It is a non-clinical check based on validated questionnaires, to see group patterns and choose the right support. Anyone who is struggling is pointed to the company doctor, their GP or a psychologist."],["Are the questionnaires validated?","Yes: internationally published scales with their original scoring keys (see Method and Sources). In the pilot the data are used only for your report and to validate the service; licences for commercial use are being arranged with the authors in parallel."],["How are responses collected in the pilot?","In the pilot each participant sends an anonymous response code containing only answer numbers and job level; for a full roll-out a secure online collection can be set up."],["What happens after the report?","A debrief, two or three workshops run by a qualified partner in the Netherlands, and a repeat measurement after 3 to 6 months to see what changed."]],
+ ctaT:"Interested in a pilot?", ctaP:"Take the check yourself, look at the sample report, and send a short request.",
+ fName:"Your name", fOrg:"Organisation", fMail:"E-mail", fSize:"Number of employees", fMsg:"Message (optional)", fSend:"Request a pilot", fSent:"Your e-mail app opens with the request filled in; just press send.", sizes:["20–50","50–100","100–250","Other"], ctaAbout:"About Maryam Jaberi",
+ pPlan:"Plan this workshop",
+ nSrc:"Sources", sT:"Sources", sP:"Every figure, legal reference and research claim on this site, with a link to the original.",
+ gStats:"Figures and costs", gLaw:"Laws and rules", gEv:"Research behind the workshops", gInst:"Questionnaires", gCourse:"Course",
+ courseRef:"Mokri, A. Personal and Human Skills in Organisations and Educational Centres [course; Persian]. Course notes collected in the Psychology Wiki.",
+ wP:"Each workshop targets one or two dimensions and draws on the material of Dr. Mokri's course. The reading links open the course wiki pages; titles are translated here, the pages themselves are in Persian.",
+ wRead:"Background reading in the course wiki (pages in Persian)",
+ fa:"Persian", srcSee:"see Sources", footer:"Workplace Wellbeing Check · pilot version · non-diagnostic · designed by Maryam Jaberi"
+});
+Object.assign(T.nl, {
+ heroK:"Voor tech-, IT- en zakelijke dienstverleners · 20–250 medewerkers",
+ for:[["HR en People & Culture","Training kiezen op basis van data, niet op gevoel."],["Oprichters en directie","Verschillen tussen niveaus en verborgen sterke punten zien vóórdat ze opduiken als verzuim of verloop."],["Teamleiders","Weten waar uw team steun nodig heeft, zonder individuele antwoorden te zien."],["Medewerkers","Zelfinzicht en korte, praktische tips."]],
+ why:[["1 op de 5","Nederlandse werknemers heeft burn-outklachten (21% in 2025)."],["12 miljard","werkdagen gaan wereldwijd jaarlijks verloren door depressie en angst, goed voor zo'n 1 biljoen dollar aan productiviteit."],["Werkgerelateerd","De WHO classificeert burn-out (ICD-11) als een beroepsgerelateerd fenomeen: een werkprobleem, niet alleen een persoonlijk probleem."]],
+ calcT:"Wat kost verzuim door werkstress u?", calcP:"Een snelle schatting voor uw organisatie. Pas de getallen aan uw eigen situatie aan.",
+ cEmp:"Aantal medewerkers", cAbs:"Verzuimpercentage (%)", cAbsH:"Landelijk gemiddelde 2025: 5,4%", cSal:"Gemiddeld bruto jaarsalaris (€)", cShare:"Deel van de verzuimdagen door stress of psychische klachten (%)", cShareH:"Landelijke schatting: ongeveer een kwart", cRed:"Scenario: stressgerelateerd verzuim daalt met",
+ cDays:"verzuimdagen per jaar", cStress:"waarvan stressgerelateerd", cCost:"kosten van stressgerelateerd verzuim per jaar", cSave:"besparing per jaar in dit scenario",
+ cPerDay:"Gebruikte kosten per verzuimdag: {x} (salaris × 1,3 voor werkgeverslasten ÷ 220 werkdagen). Nederlandse schattingen lopen van € 250 tot € 400 per dag.",
+ cNote:"Dit is een scenario, geen voorspelling. Een score op de vragenlijst vertaalt zich niet rechtstreeks in minder verzuimdagen. Gebruik de schatting om te beoordelen of preventie de investering waard is, en de herhaalmeting om te zien wat er echt veranderd is.",
+ actT:"Van rapport naar actie", actP:"Een rapport alleen verandert niets. Wij blijven betrokken tot de eerste workshops gegeven zijn.",
+ act:[["Nabespreking","45 minuten met management en HR: wat de uitkomsten betekenen en wat u eerst aanpakt."],["Kiezen","Twee of drie workshops die passen bij uw prioriteiten en functieniveaus."],["Uitvoeren","De workshops worden gegeven door een gekwalificeerde trainer of arbeids- en organisatiepsycholoog in Nederland, door ons geregeld: één aanspreekpunt van meting tot actie."],["Opnieuw meten","Een herhaalmeting na 3 tot 6 maanden laat zien wat er veranderd is."]],
+ wsPartner:"Uitvoering: elke workshop wordt gegeven door een gekwalificeerde trainer of arbeids- en organisatiepsycholoog in Nederland, door ons geregeld en gecoördineerd.",
+ pilotNoteT:"Over deze pilotversie", pilotNote:"In de pilot worden de antwoorden alleen gebruikt voor het rapport van uw organisatie en om de dienst te valideren, voor niets anders. Licenties voor commercieel gebruik van de vragenlijsten worden tegelijkertijd met de auteurs geregeld. We zeggen dit vooraf, zodat er geen verrassingen zijn.",
+ arboT:"Helpt u te voldoen aan de Arbowet", arboP:"Werkgevers moeten beleid voeren om psychosociale arbeidsbelasting (PSA), zoals werkstress, te voorkomen of te beperken, en de PSA-risico's beoordelen in hun risico-inventarisatie en -evaluatie (RI&E) met een plan van aanpak.",
+ arbo:[["Data voor het PSA-deel van uw RI&E","Anonieme groepsuitkomsten per functieniveau, als één van de bronnen om te zien waar psychosociale risico's liggen."],["Input voor uw plan van aanpak","Het workshopplan en de herhaalmeting leveren concrete, gedateerde maatregelen die u kunt vastleggen."],["Zichtbare opvolging","Uitkomsten vóór en na helpen de OR te laten zien dat u iets doet met de risico's."]],
+ arboNote:"De scan vervangt uw RI&E of de toetsing daarvan door een gecertificeerde deskundige niet; hij levert er gegevens voor.",
+ law:[["AVG","Er worden geen namen of identificerende gegevens verzameld; uitkomsten worden alleen gerapporteerd voor groepen van 5 of meer."],["Arbowet","Ondersteunt het PSA-beleid van de werkgever (art. 3 lid 2) en de PSA-beoordeling in de RI&E (Arbobesluit art. 2.15)."],["Ondernemingsraad","Een medewerkersonderzoek als dit wordt meestal met de OR besproken (WOR art. 27); wij helpen dit voorbereiden."]],
+ faq:[["Hoeveel tijd kost het medewerkers?","De snelle versie duurt ongeveer 8 minuten, de volledige versie ongeveer 18. Het werkt op elke telefoon of computer."],["Kunnen leidinggevenden individuele antwoorden zien?","Nee. Er worden geen namen gevraagd en het organisatierapport toont alleen groepen van vijf of meer personen."],["Is dit een diagnose?","Nee. Het is een niet-klinische scan op basis van gevalideerde vragenlijsten, om groepspatronen te zien en de juiste ondersteuning te kiezen. Wie het zwaar heeft, wordt verwezen naar de bedrijfsarts, de huisarts of een psycholoog."],["Zijn de vragenlijsten gevalideerd?","Ja: internationaal gepubliceerde schalen met hun oorspronkelijke scoringssleutels (zie Methode en Bronnen). In de pilot worden de gegevens alleen gebruikt voor uw rapport en om de dienst te valideren; licenties voor commercieel gebruik worden tegelijkertijd met de auteurs geregeld."],["Hoe worden antwoorden in de pilot verzameld?","In de pilot stuurt elke deelnemer een anonieme antwoordcode met alleen antwoordcijfers en functieniveau; voor een volledige uitrol kan een beveiligde online verzameling worden ingericht."],["Wat gebeurt er na het rapport?","Een nabespreking, twee of drie workshops door een gekwalificeerde partner in Nederland, en een herhaalmeting na 3 tot 6 maanden om te zien wat er veranderd is."]],
+ ctaT:"Interesse in een pilot?", ctaP:"Vul de scan zelf in, bekijk het voorbeeldrapport en stuur een korte aanvraag.",
+ fName:"Uw naam", fOrg:"Organisatie", fMail:"E-mailadres", fSize:"Aantal medewerkers", fMsg:"Bericht (optioneel)", fSend:"Pilot aanvragen", fSent:"Uw e-mailprogramma opent met de aanvraag ingevuld; u hoeft alleen nog op verzenden te drukken.", sizes:["20–50","50–100","100–250","Anders"], ctaAbout:"Over Maryam Jaberi",
+ pPlan:"Deze workshop plannen",
+ nSrc:"Bronnen", sT:"Bronnen", sP:"Alle cijfers, wetsverwijzingen en onderzoeksclaims op deze site, met een link naar het origineel.",
+ gStats:"Cijfers en kosten", gLaw:"Wet- en regelgeving", gEv:"Onderzoek achter de workshops", gInst:"Vragenlijsten", gCourse:"Cursus",
+ courseRef:"Mokri, A. Persoonlijke en menselijke vaardigheden in organisaties en onderwijsinstellingen [cursus; Perzisch]. Cursusaantekeningen verzameld in de Psychologie-wiki.",
+ wP:"Elke workshop richt zich op één of twee dimensies en bouwt op het materiaal van de cursus van dr. Mokri. De leeslinks openen de pagina's van de cursuswiki; de titels zijn hier vertaald, de pagina's zelf zijn in het Perzisch.",
+ wRead:"Achtergrond in de cursuswiki (pagina's in het Perzisch)",
+ fa:"Perzisch", srcSee:"zie Bronnen", brandShort:"Welzijnsscan", footer:"Welzijnsscan voor organisaties · pilotversie · niet-diagnostisch · ontworpen door Maryam Jaberi"
+});
+Object.assign(T.fa, {
+ heroK:"برای شرکت‌های فناوری، فناوری اطلاعات و خدمات حرفه‌ای · ۲۰ تا ۲۵۰ نفر",
+ for:[["منابع انسانی","انتخاب آموزش بر پایهٔ داده، نه حدس."],["بنیان‌گذاران و مدیران ارشد","دیدن فاصلهٔ رده‌ها و نقاط قوت پنهان، پیش از آنکه به شکل غیبت یا ترک کار دیده شوند."],["سرپرستان تیم","دانستن اینکه تیم کجا به حمایت نیاز دارد، بی‌آنکه پاسخ فردی کسی دیده شود."],["کارکنان","خودشناسی و پیشنهادهای کوتاه و عملی."]],
+ why:[["از هر ۵ نفر ۱ نفر","از کارکنان هلندی نشانه‌های فرسودگی گزارش می‌کنند (۲۱٪ در ۲۰۲۵)."],["۱۲ میلیارد","روز کاری در جهان هر سال به خاطر افسردگی و اضطراب از دست می‌رود؛ حدود هزار میلیارد دلار بهره‌وری."],["پدیدهٔ شغلی","سازمان جهانی بهداشت (ICD-11) فرسودگی را «پدیدهٔ شغلی» می‌داند: مشکل کار، نه فقط مشکل فرد."]],
+ calcT:"غیبت ناشی از استرس چقدر برایتان هزینه دارد؟", calcP:"برآوردی سریع برای سازمان شما. عددها را با وضعیت خودتان عوض کنید.",
+ cEmp:"تعداد کارکنان", cAbs:"نرخ غیبت (٪)", cAbsH:"میانگین هلند در ۲۰۲۵: ۵٫۴٪", cSal:"میانگین حقوق ناخالص سالانه (یورو)", cShare:"سهم روزهای غیبت به خاطر استرس یا مشکلات روانی (٪)", cShareH:"برآورد ملی: حدود یک‌چهارم", cRed:"سناریو: غیبت ناشی از استرس کم شود به اندازهٔ",
+ cDays:"روز غیبت در سال", cStress:"که از آن مربوط به استرس است", cCost:"هزینهٔ سالانهٔ غیبت ناشی از استرس", cSave:"صرفه‌جویی سالانه در این سناریو",
+ cPerDay:"هزینهٔ هر روز غیبت در این محاسبه: {x} (حقوق × ۱٫۳ برای هزینه‌های کارفرما ÷ ۲۲۰ روز کاری). برآوردهای هلندی بین ۲۵۰ تا ۴۰۰ یورو در روز است.",
+ cNote:"این یک سناریوست، نه پیش‌بینی. نمرهٔ پرسشنامه مستقیماً به روزهای غیبت کمتر تبدیل نمی‌شود. از این برآورد برای سنجیدن ارزش سرمایه‌گذاری در پیشگیری استفاده کنید و از سنجش دوباره برای دیدن تغییر واقعی.",
+ actT:"از گزارش تا اقدام", actP:"گزارش به‌تنهایی چیزی را عوض نمی‌کند. ما تا برگزاری نخستین کارگاه‌ها همراه شما هستیم.",
+ act:[["جلسهٔ بازخورد","۴۵ دقیقه با مدیریت و منابع انسانی: نتیجه‌ها چه معنایی دارند و از کجا شروع کنیم."],["انتخاب","دو یا سه کارگاه متناسب با اولویت‌ها و رده‌ها."],["اجرا","کارگاه‌ها را یک مربی یا روان‌شناس کار و سازمانِ واجد شرایط در هلند اجرا می‌کند و هماهنگی با ماست؛ از سنجش تا اقدام فقط یک طرف حساب دارید."],["سنجش دوباره","سنجش دوباره پس از ۳ تا ۶ ماه نشان می‌دهد چه چیزی تغییر کرده است."]],
+ wsPartner:"اجرا: هر کارگاه را یک مربی یا روان‌شناس کار و سازمانِ واجد شرایط در هلند اجرا می‌کند؛ هماهنگی و پیگیری با ماست.",
+ pilotNoteT:"دربارهٔ این نسخهٔ آزمایشی", pilotNote:"در اجرای آزمایشی، پاسخ‌ها فقط برای ساختن گزارش سازمان شما و اعتبارسنجی این خدمت به کار می‌روند، نه هیچ کار دیگری. مجوز استفادهٔ تجاری از پرسشنامه‌ها هم‌زمان با پدیدآورندگانشان در حال هماهنگی است. این را از اول می‌گوییم تا غافلگیری‌ای در کار نباشد.",
+ arboT:"کمک به انجام تکلیف‌های قانون شرایط کار هلند (Arbowet)", arboP:"کارفرمایان در هلند باید سیاستی برای پیشگیری یا دست‌کم کاهش فشار روانی-اجتماعی کار (PSA)، مانند استرس شغلی، داشته باشند و خطرهای PSA را در ارزیابی خطر (RI&E) همراه با برنامهٔ اقدام بسنجند.",
+ arbo:[["داده برای بخش PSA در RI&E","نتیجه‌های گروهی و ناشناس به تفکیک رده، به‌عنوان یکی از منابع برای دیدن جای خطرهای روانی-اجتماعی."],["ورودی برای برنامهٔ اقدام","برنامهٔ کارگاه و سنجش دوباره، اقدام‌های مشخص و تاریخ‌دار برای ثبت فراهم می‌کنند."],["پیگیری قابل نشان دادن","نتیجه‌های پیش و پس از اقدام کمک می‌کند به شورای کار نشان دهید که به خطرها رسیدگی می‌کنید."]],
+ arboNote:"این سنجش جای RI&E یا بازبینی آن به دست کارشناس دارای گواهی را نمی‌گیرد؛ برای آن داده فراهم می‌کند.",
+ law:[["GDPR","نام یا شناسه‌ای گرفته نمی‌شود؛ نتیجه فقط برای گروه‌های ۵ نفر و بیشتر گزارش می‌شود."],["قانون شرایط کار (Arbowet)","به سیاست کارفرما دربارهٔ فشار روانی-اجتماعی کار (PSA؛ مادهٔ ۳ بند ۲) و ارزیابی PSA در RI&E (مادهٔ ۲.۱۵ آیین‌نامهٔ Arbobesluit) کمک می‌کند."],["شورای کار","چنین سنجشی معمولاً با شورای کار مطرح می‌شود (مادهٔ ۲۷ WOR)؛ در آماده کردنش کمک می‌کنیم."]],
+ faq:[["کارکنان چقدر وقت می‌گذارند؟","نسخهٔ سریع حدود ۸ دقیقه و نسخهٔ کامل حدود ۱۸ دقیقه. روی هر گوشی یا رایانه کار می‌کند."],["مدیران پاسخ فردی را می‌بینند؟","نه. نامی پرسیده نمی‌شود و گزارش سازمان فقط گروه‌های پنج نفر و بیشتر را نشان می‌دهد."],["این تشخیص است؟","نه. سنجشی غیربالینی بر پایهٔ پرسشنامه‌های معتبر است، برای دیدن الگوهای گروهی و انتخاب حمایت درست. هر کس حال خوبی ندارد به پزشک شرکت، پزشک خانواده یا روان‌شناس معرفی می‌شود."],["پرسشنامه‌ها معتبرند؟","بله: مقیاس‌های منتشرشدهٔ بین‌المللی با کلید نمره‌گذاری اصلی (بخش روش علمی و منابع). در اجرای آزمایشی داده‌ها فقط برای گزارش شما و اعتبارسنجی خدمت به کار می‌روند؛ مجوز استفادهٔ تجاری هم‌زمان با پدیدآورندگان در حال هماهنگی است."],["در اجرای آزمایشی پاسخ‌ها چطور جمع می‌شوند؟","هر شرکت‌کننده یک کد پاسخ ناشناس می‌فرستد که فقط عدد پاسخ‌ها و رده را دارد؛ برای اجرای کامل می‌توان گردآوری آنلاین امن راه انداخت."],["بعد از گزارش چه می‌شود؟","جلسهٔ بازخورد، دو یا سه کارگاه با اجرای یک همکار واجد شرایط در هلند، و سنجش دوباره پس از ۳ تا ۶ ماه برای دیدن تغییر."]],
+ ctaT:"به اجرای آزمایشی علاقه دارید؟", ctaP:"سنجش را خودتان امتحان کنید، نمونهٔ گزارش را ببینید و یک درخواست کوتاه بفرستید.",
+ fName:"نام شما", fOrg:"سازمان", fMail:"ایمیل", fSize:"تعداد کارکنان", fMsg:"پیام (اختیاری)", fSend:"درخواست اجرای آزمایشی", fSent:"برنامهٔ ایمیل شما با متن آماده باز می‌شود؛ فقط کافی است ارسال را بزنید.", sizes:["۲۰ تا ۵۰","۵۰ تا ۱۰۰","۱۰۰ تا ۲۵۰","دیگر"], ctaAbout:"دربارهٔ مریم جابری",
+ pPlan:"برنامه‌ریزی این کارگاه",
+ nSrc:"منابع", sT:"منابع", sP:"همهٔ آمارها، ارجاع‌های قانونی و ادعاهای پژوهشی این سایت، با پیوند به منبع اصلی. عنوان منابع به زبان اصلی آمده است.",
+ gStats:"آمار و هزینه‌ها", gLaw:"قانون و مقررات", gEv:"پژوهش‌های پشتوانهٔ کارگاه‌ها", gInst:"پرسشنامه‌ها", gCourse:"دوره",
+ courseRef:"مکری، آذرخش. دورهٔ «مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی». یادداشت‌های دوره در ویکی روان‌شناسی گردآوری شده است.",
+ wRead:"پیش‌زمینهٔ علمی در ویکی دوره",
+ fa:"فارسی", srcSee:"منابع را ببینید"
+});
+
 
 </script>
 <script>
 const URLS = {"s1": "s1.html", "art": "art.html", "friendly": "friendly.html", "curiosity": "curiosity.html", "decision": "decision.html", "s8": "s8.html", "workshop": "workshop.html", "range": "range.html", "poswork": "poswork.html", "emolabor": "emolabor.html", "hub": "index.html", "habits": "habits.html", "psychopath": "psychopath.html", "clinical": "clinical.html", "happiness": "happiness.html", "s3": "s3.html", "families": "families.html", "change": "change.html", "motivation": "motivation.html", "suggestible": "suggestible.html", "effort": "effort.html", "perfection": "perfection.html", "morality": "morality.html", "trust": "trust.html", "optimism": "optimism.html", "falls": "falls.html", "theories": "theories.html", "anhedonia": "anhedonia.html", "mistakes": "mistakes.html", "conspiracy": "conspiracy.html", "envy": "envy.html", "jensen": "jensen.html", "clinicaddiction": "clinicaddiction.html", "memory": "memory.html", "mattering": "mattering.html", "crisis": "crisis.html", "trauma": "trauma.html", "bargh": "bargh.html", "gelfand": "gelfand.html", "bored": "bored.html", "bullshit": "bullshit.html", "compassion": "compassion.html", "s2": "s2.html", "s4": "s4.html", "s7": "s7.html", "illusions": "illusions.html", "badmen": "badmen.html", "shelf2": "shelf2.html", "ideo": "ideo.html", "shelf3": "shelf3.html", "shelf4": "shelf4.html", "s11": "s11.html", "fairness": "fairness.html", "prestige": "prestige.html", "lookagain": "lookagain.html", "shelf5": "shelf5.html", "s6": "s6.html", "s9": "s9.html", "s10": "s10.html", "s12": "s12.html", "s13": "s13.html", "conflict": "conflict.html", "orientation": "orientation.html", "learnmem": "learnmem.html", "planning": "planning.html", "shelf6": "shelf6.html", "shelf7": "shelf7.html", "shelf8": "shelf8.html", "shelf9": "shelf9.html", "riseabove": "riseabove.html", "shelf10": "shelf10.html", "shelf11": "shelf11.html", "shelf12": "shelf12.html", "makingsense": "makingsense.html", "superbloom": "superbloom.html", "solitude": "solitude.html", "shelf13": "shelf13.html", "shelf14": "shelf14.html", "s14": "s14.html", "s15": "s15.html", "ultrasociety": "ultrasociety.html", "shelf15": "shelf15.html", "orgsvc": "orgsvc.html", "orgpsych": "orgpsych.html", "body": "body.html", "atlas2": "atlas2.html", "learn": "learn.html", "library": "library.html", "land": "land.html", "s5": "s5.html", "timeline": "timeline.html", "scales": "scales.html", "path": "path.html", "prism": "prism.html", "lineage": "lineage.html", "heat": "heat.html", "river": "river.html", "evidence": "evidence.html", "debate": "debate.html", "guess": "guess.html", "lab": "lab.html", "effect": "effect.html", "emotions": "emotions.html"};
 const INST = Object.fromEntries(window.INST.map(i => [i.id, i]));
 const LV = window.LEVELS, DIMS = window.DIMS, WS = window.WS, PACKS = window.PACKS;
-let L = "en";
+let L = "nl";
 try{ const s = localStorage.getItem("sj-lang"); if(s && T[s]) L = s; }catch(e){}
 const PCT = () => L === "fa" ? "٪" : "%";
 const SEP = () => L === "fa" ? "، " : ", ";
@@ -1018,7 +1182,7 @@ let DB = null, USER = null, CAN = false;
 
 /* ── router ── */
 let cur = "home", joinCode = null, ROUND = null;
-const VIEWS = ["home","take","result","report","workshops","method"];
+const VIEWS = ["home","take","result","report","workshops","method","sources"];
 function route(){
   let h = (location.hash || "#home").slice(1);
   if(h.startsWith("join-")){ joinCode = h.slice(5).toUpperCase(); h = "take"; loadRound(); }
@@ -1026,8 +1190,9 @@ function route(){
   cur = h;
   VIEWS.forEach(v => document.getElementById("v-" + v).hidden = v !== h);
   document.querySelectorAll("nav.main a").forEach(a => a.setAttribute("aria-current", a.dataset.v === (h === "result" ? "take" : h) ? "page" : "false"));
-  ({home:renderHome, take:renderTake, result:renderResult, report:renderReport, workshops:renderWs, method:renderMethod})[h]();
+  ({home:renderHome, take:renderTake, result:renderResult, report:renderReport, workshops:renderWs, method:renderMethod, sources:renderSources})[h]();
   window.scrollTo(0, 0);
+  if(h === "sources" && pendingRef){ const el = document.getElementById("ref-" + pendingRef); pendingRef = null; if(el){ el.classList.add("hl"); setTimeout(() => el.scrollIntoView({block:"center"}), 30); } }
 }
 async function loadRound(){
   if(!DB || !joinCode) return;
@@ -1044,11 +1209,36 @@ function setLang(l){
 document.querySelector(".langs").addEventListener("click", e => { const b = e.target.closest("button"); if(b) setLang(b.dataset.l); });
 addEventListener("hashchange", route);
 
+/* ── sources & citations ── */
+const REF_ORDER = () => { const inst = [...new Set(DIMS.map(D => D.inst))].map(id => ({id:"inst-" + id, g:"inst", t:INST[id].en + ". " + INST[id].ref, u:""})); return [...window.REFS, ...inst, {id:"course", g:"course", t:t("courseRef"), u:URLS.hub}]; };
+const refNo = id => REF_ORDER().findIndex(r => r.id === id) + 1;
+const cite = ids => (ids || []).filter(id => refNo(id) > 0).sort((x, y) => refNo(x) - refNo(y)).map(id => `<a class="cite" href="#sources" data-ref="${id}" title="${esc(t("srcSee"))}">[${num(refNo(id))}]</a>`).join("");
+let pendingRef = null;
+document.addEventListener("click", e => { const a = e.target.closest("a.cite"); if(a) pendingRef = a.dataset.ref; });
+const wikiLabel = k => { const x = window.LABELS_I18N[k]; return x ? x[L] : (LABELS[k] || k); };
+const wikiChip = (k, cls) => `<a class="${cls}" href="${URLS[k]}" target="_blank" rel="noopener">${esc(wikiLabel(k))}${L === "fa" ? "" : ` <span class="tagfa">FA</span>`}</a>`;
+const money = v => { try{ return new Intl.NumberFormat(L === "fa" ? "fa-IR" : L === "nl" ? "nl-NL" : "en-GB", {style:"currency", currency:"EUR", maximumFractionDigits:0}).format(v); }catch(e){ return "€" + Math.round(v); } };
+const mailto = (subject, body) => `mailto:${window.CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
 /* ── HOME ── */
 const ICON = {compassion:"♥",flex:"≈",optim:"☀",hope:"↗",belong:"◎",flow:"∿",ei:"☺",selfctrl:"⌖"};
 function miniBars(rows){ return `<div class="bars">${rows.map(([lab, v]) => `<div class="br"><span class="lab">${esc(lab)}</span><div class="trk"><i style="width:${v}%;background:${BC[band(v)]}"></i></div><span class="v">${num(v)}</span></div>`).join("")}</div>`; }
+
+const CALC = store.get("sj-calc", {n:60, abs:5.4, sal:50000, share:25, red:10});
+function calcOut(){
+  const c = CALC, perDay = c.sal * 1.3 / 220, days = c.n * 220 * c.abs / 100, sdays = days * c.share / 100, cost = sdays * perDay, save = cost * c.red / 100;
+  return {perDay, days, sdays, cost, save};
+}
+function paintCalc(){
+  const o = calcOut(), q = id => document.getElementById(id);
+  if(!q("c-days")) return;
+  q("c-days").textContent = num(o.days); q("c-sdays").textContent = num(o.sdays); q("c-cost").textContent = money(o.cost); q("c-save").textContent = money(o.save);
+  q("c-redv").textContent = num(CALC.red) + PCT();
+  q("c-perday").textContent = t("cPerDay").replace("{x}", money(o.perDay));
+}
 function renderHome(){
   const demo = demoData(); const agg = DIMS.map(D => [dn(D), avg(demo.map(r => r.d[D.id]))]);
+  const field = (id, lab, hint, val, min, max, step) => `<label class="f">${lab}<input type="number" id="${id}" value="${val}" min="${min}" max="${max}" step="${step}" inputmode="decimal">${hint ? `<span class="small muted" style="font-weight:400">${hint}</span>` : ""}</label>`;
   document.getElementById("v-home").innerHTML = `
   <div class="hero">
     <div><div class="kicker">${t("heroK")}</div><h1>${t("heroT")}</h1><p class="lead">${t("heroP")}</p>
@@ -1059,24 +1249,63 @@ function renderHome(){
     <div class="card preview" aria-label="${t("ctaDemo")}"><div class="row" style="justify-content:space-between;margin-bottom:12px"><b>${t("pT")}</b><span class="pill">${t("pDemo")}</span></div>${miniBars(agg)}
       <div class="legendb">${t("band").map((b, i) => `<span><i style="background:${BC[i]}"></i>${b}</span>`).join("")}</div></div>
   </div>
-  <section class="blk"><h2>${t("whyT")}</h2><p class="sub">${t("whyP")}</p><div class="why">${t("why").map(([a,b,c]) => `<div class="card"><b>${a}</b><p>${b}</p><small>${t("src")}: ${c}</small></div>`).join("")}</div></section>
+  <section class="blk"><h2>${t("whyT")}</h2><p class="sub">${t("whyP")}</p><div class="why">${t("why").map(([a,b], i) => `<div class="card"><b>${a}</b><p>${b} ${cite(window.WHY_REFS[i])}</p></div>`).join("")}</div></section>
+  <section class="blk"><h2>${t("calcT")}</h2><p class="sub">${t("calcP")}</p>
+    <div class="card calc">
+      <div class="cin">
+        ${field("c-n", t("cEmp"), "", CALC.n, 1, 100000, 1)}
+        ${field("c-abs", t("cAbs") + " " + cite(["cbs26"]), t("cAbsH"), CALC.abs, 0, 50, 0.1)}
+        ${field("c-sal", t("cSal"), "", CALC.sal, 0, 1000000, 500)}
+        ${field("c-share", t("cShare") + " " + cite(["arbo18","tno24"]), t("cShareH"), CALC.share, 0, 100, 1)}
+        <label class="f">${t("cRed")} <b id="c-redv"></b><input type="range" id="c-red" min="5" max="30" step="5" value="${CALC.red}"></label>
+      </div>
+      <div class="cout">
+        <div><b id="c-days"></b><span>${t("cDays")}</span></div>
+        <div><b id="c-sdays"></b><span>${t("cStress")}</span></div>
+        <div class="big"><b id="c-cost"></b><span>${t("cCost")}</span></div>
+        <div class="big save"><b id="c-save"></b><span>${t("cSave")}</span></div>
+      </div>
+      <p class="small muted" style="margin:14px 0 0"><span id="c-perday"></span> ${cite(["mkb"])}</p>
+      <div class="callout" style="margin-top:12px"><div class="small">${t("cNote")}</div></div>
+    </div></section>
   <section class="blk"><h2>${t("howT")}</h2><div class="steps" style="margin-top:16px">${t("how").map(([a, b]) => `<div class="card step"><b>${a}</b><p>${b}</p></div>`).join("")}</div></section>
   <section class="blk"><h2>${t("measT")}</h2><p class="sub">${t("measP")}</p>
     <div class="grid">${DIMS.map(D => `<button class="card dim" aria-expanded="false"><span class="ic" style="background:${D.col}" aria-hidden="true">${ICON[D.id]}</span><b>${dn(D)}</b><p class="q">${D[L].q}</p>
-      <div class="more"><p><b>${t("whatIs")}:</b> ${D[L].what}</p><p><b>${t("whatNot")}:</b> ${D[L].not}</p><p class="small muted">${instText(D.inst).name} · ${INST[D.inst].items.length} ${t("items")}</p></div></button>`).join("")}</div></section>
+      <div class="more"><p><b>${t("whatIs")}:</b> ${D[L].what}</p><p><b>${t("whatNot")}:</b> ${D[L].not}</p><p class="small muted">${instText(D.inst).name} · ${num(INST[D.inst].items.length)} ${t("items")}</p></div></button>`).join("")}</div></section>
+  <section class="blk arbo"><h2>${t("arboT")}</h2><p class="sub">${t("arboP")} ${cite(["arbowet","arbobes","arboportaal"])}</p>
+    <div class="law">${t("arbo").map(([a,b]) => `<div class="card"><b>${a}</b><p>${b}</p></div>`).join("")}</div>
+    <p class="small muted" style="margin:12px 0 0">${t("arboNote")}</p></section>
   <section class="blk"><h2>${t("getT")}</h2><div class="gets">${t("get").map(([a,b]) => `<div class="card"><b>${a}</b><p>${b}</p></div>`).join("")}</div></section>
+  <section class="blk"><h2>${t("actT")}</h2><p class="sub">${t("actP")}</p>
+    <div class="tl">${t("act").map(([a,b], i) => `<div><span class="dot">${num(i+1)}</span><b style="margin-top:10px">${a}</b><p>${b}</p></div>`).join("")}</div>
+    <div class="row" style="margin-top:16px"><a class="btn sec" href="#workshops">${t("nWs")} ${L === "fa" ? "←" : "→"}</a></div></section>
   <section class="blk"><h2>${t("pilotT")}</h2><p class="sub">${t("pilotP")}</p>
     <div class="tl">${t("pilot").map(([w,a,b], i) => `<div><span class="dot">${num(i+1)}</span><span class="wk">${w}</span><b>${a}</b><p>${b}</p></div>`).join("")}</div>
-    <div class="need"><b>${t("needT")}:</b>${t("need").map(x => `<span>${x}</span>`).join("")}</div></section>
+    <div class="need"><b>${t("needT")}:</b>${t("need").map(x => `<span>${x}</span>`).join("")}</div>
+    <div class="callout" style="margin-top:16px"><b>${t("pilotNoteT")}</b><div class="small">${t("pilotNote")}</div></div></section>
   <section class="blk split">
     <div class="card"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("privT")}</h2><ul class="check">${t("priv").map(x => `<li>${x}</li>`).join("")}</ul></div>
     <div class="card"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("forT")}</h2><div style="display:grid;gap:10px">${t("for").map(([a, b]) => `<div><b>${a}</b><div class="muted small">${b}</div></div>`).join("")}</div>
       <div class="callout" style="margin-top:16px"><b>${t("notT")}</b><div class="small">${t("not")}</div></div></div>
   </section>
-  <section class="blk"><h2>${t("lawT")}</h2><div class="law">${t("law").map(([a,b]) => `<div class="card"><b>${a}</b><p>${b}</p></div>`).join("")}</div></section>
+  <section class="blk"><h2>${t("lawT")}</h2><div class="law">${t("law").map(([a,b], i) => `<div class="card"><b>${a}</b><p>${b} ${cite(window.LAW_REFS[i])}</p></div>`).join("")}</div></section>
   <section class="blk"><h2>${t("faqT")}</h2><div class="faq">${t("faq").map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("")}</div></section>
-  <section class="ctaband"><div><h2>${t("ctaT")}</h2><p>${t("ctaP")}</p></div><div class="row"><a class="btn" href="https://maryamjaberi.github.io/" target="_blank" rel="noopener">${t("ctaContact")}</a><a class="btn sec" href="#report">${t("ctaDemo")}</a></div></section>`;
+  <section class="ctaband" id="contact"><div><h2>${t("ctaT")}</h2><p>${t("ctaP")}</p>
+      <div class="row" style="margin-top:14px"><a class="btn sec" href="#report">${t("ctaDemo")}</a><a class="btn sec" href="https://maryamjaberi.github.io/" target="_blank" rel="noopener">${t("ctaAbout")}</a></div></div>
+    <form id="req" class="reqf">
+      <label class="f">${t("fName")}<input type="text" name="name" required maxlength="80" autocomplete="name"></label>
+      <label class="f">${t("fOrg")}<input type="text" name="org" required maxlength="120" autocomplete="organization"></label>
+      <label class="f">${t("fMail")}<input type="email" name="mail" required maxlength="120" autocomplete="email"></label>
+      <label class="f">${t("fSize")}<select name="size">${t("sizes").map(x => `<option>${x}</option>`).join("")}</select></label>
+      <label class="f" style="grid-column:1/-1">${t("fMsg")}<textarea name="msg" maxlength="1500"></textarea></label>
+      <div style="grid-column:1/-1"><button class="btn" type="submit">${t("fSend")}</button></div>
+    </form></section>`;
   document.querySelectorAll("#v-home .dim").forEach(b => b.onclick = () => b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") !== "true"));
+  [["c-n","n"],["c-abs","abs"],["c-sal","sal"],["c-share","share"],["c-red","red"]].forEach(([id, k]) => { const el = document.getElementById(id); el.oninput = () => { const v = parseFloat(el.value); if(!isNaN(v) && v >= 0){ CALC[k] = v; store.set("sj-calc", CALC); paintCalc(); } }; });
+  paintCalc();
+  document.getElementById("req").onsubmit = e => { e.preventDefault(); const f = new FormData(e.target);
+    const body = [`${t("fName")}: ${f.get("name")}`, `${t("fOrg")}: ${f.get("org")}`, `${t("fMail")}: ${f.get("mail")}`, `${t("fSize")}: ${f.get("size")}`, "", f.get("msg") || ""].join("\n");
+    location.href = mailto(`${t("fSend")} — ${f.get("org")}`, body); toast(t("fSent")); };
 }
 
 /* ── TAKE ── */
@@ -1210,7 +1439,7 @@ function renderReport(){
      <div class="pri">${pri.length ? pri.map((x, i) => { const W = WS.find(w => w.dims.includes(x.D.id)); const tgt = lvs.map(l => ({l, ...cell(x.D, l.id)})).filter(c => c.n >= 5).sort((a, b) => a.m - b.m).slice(0, 2);
        return `<div class="card pcard"><span class="rank">${num(i + 1)}</span><div><h4>${dn(x.D)} <span class="pill b${band(x.m)}">${num(x.m)} · ${num(x.low * 100)}${L === "fa" ? "٪" : "%"} ${t("band")[0]}</span></h4>
         <p style="margin:6px 0"><b>${t("pWhy")}:</b> ${x.D[L].b[band(x.m)]}</p>${tgt.length ? `<p class="small" style="margin:0"><b>${t("pFor")}:</b> ${tgt.map(c => c.l[L]).join(L === "fa" ? "، " : ", ")}</p>` : ""}
-        ${W ? `<div class="ws"><b>${W[L].t}</b> <span class="small muted">· ${W.len[L]}</span><div class="small">${W[L].goals.join(" · ")}</div><a class="small" href="#workshops">${t("nWs")} ${L === "fa" ? "←" : "→"}</a></div>` : ""}</div></div>`; }).join("") : `<div class="card">${t("pNoPri")}</div>`}</div>
+        ${W ? `<div class="ws"><b>${W[L].t}</b> <span class="small muted">· ${W.len[L]}</span><div class="small">${W[L].goals.join(" · ")}</div><div class="row" style="gap:14px;margin-top:6px"><a class="small" href="#workshops">${t("nWs")} ${L === "fa" ? "←" : "→"}</a><a class="small" href="${mailto(t("pPlan") + ": " + W[L].t, W[L].t)}">${t("pPlan")}</a></div></div>` : ""}</div></div>`; }).join("") : `<div class="card">${t("pNoPri")}</div>`}</div>
      <div class="row" style="margin-top:14px"><button class="btn sec" id="csv">${t("pExport")}</button></div></section>`;
   const admin = !DB ? "" : `<section class="blk"><h2>${t("pAdmin")}</h2><p class="sub">${t("pAdminP")}</p>${CAN && DB ? `<div class="card"><form id="mk" class="split"><label class="f">${t("pOrg")}<input type="text" name="org" required maxlength="80"></label><label class="f">${t("pRoundName")}<input type="text" name="title" required maxlength="80"></label>
      <fieldset style="margin:0"><legend style="font-size:.93rem">${t("tPack")}</legend><div class="choice">${Object.keys(PACKS).map((p, i) => `<label><input type="radio" name="pk" value="${p}" ${i ? "checked" : ""}><span>${PACKS[p][L]}</span></label>`).join("")}</div></fieldset>
@@ -1245,21 +1474,29 @@ async function loadLive(){
 /* ── WORKSHOPS ── */
 function renderWs(){
   document.getElementById("v-workshops").innerHTML = `<div class="kicker">${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("wT")}</h1><p class="lead">${t("wP")}</p>
+  <div class="callout" style="margin-top:16px"><div class="small">${t("wsPartner")}</div></div>
   <div class="grid" style="margin-top:22px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">${WS.map(W => `<article class="card wcard"><div class="chips">${W.dims.map(d => `<span class="pill" style="background:${dimOf(d).col};color:#fff">${dn(dimOf(d))}</span>`).join("")}</div>
    <h3>${W[L].t}</h3><dl><dt>${t("wWho")}</dt><dd>${W[L].who}</dd><dt>${t("wLen")}</dt><dd>${W.len[L]}</dd></dl>
    <p style="margin:12px 0 0"><b>${t("wGoals")}</b></p><ul>${W[L].goals.map(g => `<li>${g}</li>`).join("")}</ul>
-   <p class="small muted" style="margin:10px 0"><b>${t("wEv")}:</b> ${W[L].ev}</p>
-   <p class="small muted" style="margin:0 0 6px">${t("wRead")}${L === "fa" ? "" : " (Persian)"}:</p><div class="chips">${W.wiki.filter(k => URLS[k]).map(k => `<a class="pill" lang="fa" dir="rtl" href="${URLS[k]}">${esc(LABELS[k] || k)}</a>`).join("")}</div></article>`).join("")}</div>`;
+   <p class="small muted" style="margin:10px 0"><b>${t("wEv")}:</b> ${W[L].ev} ${cite(W.refs)}</p>
+   <p class="small muted" style="margin:0 0 6px">${t("wRead")}:</p><div class="chips">${W.wiki.filter(k => URLS[k]).map(k => wikiChip(k, "pill")).join("")}</div>
+   <div style="margin-top:12px"><a class="small" href="${mailto(t("pPlan") + ": " + W[L].t, W[L].t)}">${t("pPlan")} ${L === "fa" ? "←" : "→"}</a></div></article>`).join("")}</div>`;
+}
+/* ── SOURCES ── */
+function renderSources(){
+  const all = REF_ORDER(), groups = [["stats","gStats"],["law","gLaw"],["ev","gEv"],["inst","gInst"],["course","gCourse"]];
+  document.getElementById("v-sources").innerHTML = `<div class="kicker">${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("sT")}</h1><p class="lead">${t("sP")}</p>
+  ${groups.map(([g, k]) => `<section class="blk"><h2 style="font-size:1.3rem">${t(k)}</h2><ol class="refs card">${all.map((r, i) => r.g !== g ? "" : `<li id="ref-${r.id}" value="${i + 1}"><span class="rn">${num(i + 1)}</span><span ${g === "course" ? "" : `dir="ltr" lang="${g === "law" || g === "stats" ? "" : "en"}" class="rt"`}>${esc(r.t)}${r.u ? ` <a href="${r.u}" target="_blank" rel="noopener">${esc(r.u.replace(/^https?:\/\//, "").replace(/\/$/, "").slice(0, 60))}</a>` : ""}</span></li>`).join("")}</ol></section>`).join("")}`;
 }
 /* ── METHOD ── */
 function renderMethod(){
   const ids = [...new Set(DIMS.map(D => D.inst))];
   document.getElementById("v-method").innerHTML = `<div class="kicker">${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("mT")}</h1><p class="lead">${t("mP")}</p>
-  <section class="blk"><h2>${t("mInst")}</h2><div class="card scroll"><table class="t"><thead><tr><th>${t("dims")}</th><th>${t("mInst")}</th><th>${t("items")}</th><th>${t("scale")}</th><th>${t("ref")}</th><th>${t("session")}${L === "fa" ? "" : " (FA)"}</th></tr></thead><tbody>
-  ${ids.map(id => { const I = INST[id], D = DIMS.find(x => x.inst === id); return `<tr><td><b>${dn(D)}</b></td><td>${esc(instText(id).name)}<br>${L === "en" ? "" : `<span class="small muted ltr">${esc(I.en)}</span>`}</td><td>${num(I.items.length)}</td><td>${num(I.min)}–${num(I.max)}</td><td class="small"><span class="ltr">${esc(I.ref)}</span></td><td>${URLS[I.ses] ? `<a lang="fa" dir="rtl" href="${URLS[I.ses]}">${esc(LABELS[I.ses] || I.ses)}</a>` : ""}</td></tr>`; }).join("")}</tbody></table></div></section>
+  <section class="blk"><h2>${t("mInst")}</h2><div class="card scroll"><table class="t"><thead><tr><th>${t("dims")}</th><th>${t("mInst")}</th><th>${t("items")}</th><th>${t("scale")}</th><th>${t("ref")}</th><th>${t("session")}</th></tr></thead><tbody>
+  ${ids.map(id => { const I = INST[id], D = DIMS.find(x => x.inst === id); return `<tr><td><b>${dn(D)}</b></td><td>${esc(instText(id).name)}<br>${L === "en" ? "" : `<span class="small muted ltr">${esc(I.en)}</span>`}</td><td>${num(I.items.length)}</td><td>${num(I.min)}–${num(I.max)}</td><td class="small"><span class="ltr">${esc(I.ref.split(").")[0] + ")")}</span> ${cite(["inst-" + id])}</td><td>${URLS[I.ses] ? wikiChip(I.ses, "") : ""}</td></tr>`; }).join("")}</tbody></table></div></section>
   <section class="blk split"><div class="card"><h2 style="font-size:1.25rem;margin-bottom:8px">${t("mScore")}</h2><p style="margin:0">${t("mScoreP")}</p><h2 style="font-size:1.25rem;margin:18px 0 8px">${t("mBands")}</h2><p style="margin:0">${t("mBandsP")}</p>
    <div class="trk" style="margin-top:12px;height:18px"></div><div class="legendb">${t("band").map((b, i) => `<span><i style="background:${BC[i]}"></i>${b}</span>`).join("")}</div></div>
-   <div class="card"><h2 style="font-size:1.25rem;margin-bottom:8px">${t("mLim")}</h2><ul style="margin:0;padding-inline-start:20px">${t("mLimL").map(x => `<li>${x}</li>`).join("")}</ul><h2 style="font-size:1.25rem;margin:18px 0 8px">${t("mEth")}</h2><ul class="check">${t("mEthL").map(x => `<li>${x}</li>`).join("")}</ul></div></section>
+   <div class="card"><h2 style="font-size:1.25rem;margin-bottom:8px">${t("mLim")}</h2><ul style="margin:0;padding-inline-start:20px">${t("mLimL").map(x => `<li>${x}</li>`).join("")}</ul><p class="small" style="margin:8px 0 0"><a href="#sources">${t("sT")} ${L === "fa" ? "←" : "→"}</a></p><h2 style="font-size:1.25rem;margin:18px 0 8px">${t("mEth")}</h2><ul class="check">${t("mEthL").map(x => `<li>${x}</li>`).join("")}</ul></div></section>
   <section class="blk"><div class="card"><p style="margin:0">${t("mCourse")}</p><div class="row" style="margin-top:12px"><a class="btn sec" href="${URLS.hub}">${t("mWiki")}</a><a class="btn sec" href="${URLS.orgpsych}">${t("mOrgPsy")}</a></div></div></section>`;
 }
 const LABELS = {"s1": "فرسودگی و شغل معنادار", "s8": "بازتعبیر و ذهنیت‌ها", "workshop": "کارگاه سلامت و اختلال", "decision": "خودشناسی و تصمیم", "art": "هنر", "friendly": "بقای دوستانه‌ترین", "curiosity": "کنجکاوی", "range": "گستره", "poswork": "مثبت‌گرایی در کار", "emolabor": "کار عاطفی", "habits": "خویشتنداری و عادت‌ها", "psychopath": "آسیب‌شناسی توصیفی", "s11": "ونتینگ و جدا شدن از کار", "fairness": "برابری و انصاف", "prestige": "پرستیژ و سلطه", "lookagain": "دوباره نگاه کن", "shelf5": "قفسهٔ آسیب‌شناسی", "s5": "خویشتنداری و انتخاب موقعیت", "s6": "محیط، عادت و تلنگر", "s9": "خوش‌بینی و امید", "s10": "خرده‌فرهنگ‌های سازمانی", "s12": "کمال‌گرایی در کار", "s13": "انگیزش و خودتنظیمی", "conflict": "اختلاف‌های حل‌نشدنی", "orientation": "گرایش جنسی", "learnmem": "یادگیری و حافظه", "planning": "خطای برنامه‌ریزی", "shelf6": "قفسهٔ گرایش", "shelf7": "قفسهٔ هیجان", "shelf8": "قفسهٔ نوجوانی", "shelf9": "قفسهٔ انگیزه و تعارض", "riseabove": "فراتر برو", "shelf10": "قفسهٔ نیازها و خستگی", "shelf11": "قفسهٔ بهنجاری", "shelf12": "خطاهای شناختی (پول)", "makingsense": "معنا بساز", "superbloom": "سوپربلوم", "solitude": "خلوت", "shelf13": "قفسهٔ درمان فرایندی", "shelf14": "قفسهٔ زندگی غنی", "s14": "هوش هیجانی", "s15": "هیجان مثبت و انگیزه", "ultrasociety": "فراجامعه", "shelf15": "قفسهٔ عادت و میل", "clinical": "قفسهٔ بالینی", "happiness": "ریشه‌های شادکامی", "s3": "منتقد درون و رهبری مشفقانه", "families": "اعتیاد و خانواده", "change": "عادت‌ها و تغییر", "motivation": "انگیزه", "suggestible": "مغز تلقین‌پذیر", "effort": "تلاش و اراده", "perfection": "کمال‌گرایی", "morality": "اخلاق", "trust": "اعتماد", "optimism": "خوش‌بینی", "falls": "سقوط بیماران", "theories": "نظریه‌های انگیزش", "anhedonia": "بی‌لذتی", "mistakes": "خطا در تصمیم", "conspiracy": "توطئه", "envy": "حسادت", "jensen": "جنسن", "clinicaddiction": "اعتیاد (درمانگران)", "memory": "فریب حافظه", "mattering": "اهمیت داشتن", "crisis": "بحران", "trauma": "پایان تروما", "bargh": "پیش از آنکه بدانی", "gelfand": "سفت و شل", "bored": "فناوری و احساس", "bullshit": "حرف مفت", "compassion": "شفقت و خودانتقادی", "s2": "شفقت به خود", "s4": "معمای تنظیم هیجان", "s7": "تغییر خویشتن و سرایت پیچیده", "illusions": "خطاهای شناختی", "badmen": "مردان بد", "shelf2": "هدف، عادت، تفکر", "ideo": "مغز ایدئولوژیک", "shelf3": "بالینی ۲", "shelf4": "ذهن و طبیعت", "orgpsych": "روان‌شناسی سازمانی", "orgsvc": "سنجش سلامت سازمان", "body": "نقشهٔ بدن و روان", "atlas2": "اطلس رشته‌ها", "learn": "مرکز یادگیری", "hub": "صفحهٔ اصلی ویکی", "scales": "سنجش‌خانه", "path": "پل‌یاب", "prism": "منشور رشته‌ها", "lineage": "شجره‌نامهٔ ایده‌ها", "heat": "همسایگی موضوع‌ها", "river": "رود ایده‌ها", "evidence": "سنجهٔ اعتبار", "debate": "میدان مناظره", "guess": "اول حدس بزن", "lab": "آزمایشگاه", "effect": "اندازهٔ اثر", "emotions": "اطلس هیجان‌ها"};
