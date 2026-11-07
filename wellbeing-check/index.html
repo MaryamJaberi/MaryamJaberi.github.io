@@ -47,7 +47,9 @@ nav.main a[aria-current="page"]{color:var(--accent);background:var(--accent-soft
 .langs{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden;flex:none}
 .langs button{border:0;background:none;padding:5px 11px;font-size:.82rem;font-weight:700;cursor:pointer;color:var(--muted);font-family:var(--f-lat)}
 .langs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-@media (max-width:1320px){nav.main{order:3;width:100%;padding-bottom:4px}}
+nav.main{order:3;width:100%;padding-bottom:4px}
+.hcta{font-size:.85rem;padding:7px 14px;min-height:0}
+@media (max-width:560px){.bar .hcta{display:none}}
 /* generic */
 main{padding-block:28px 64px}
 .view[hidden]{display:none}
@@ -267,6 +269,14 @@ footer.foot .wrap{gap:6px 18px;flex-wrap:wrap}
 .person.ph b,.person.ph p{color:var(--muted)}
 .card.partner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:end;border-inline-start:4px solid var(--accent)}
 @media (max-width:700px){.card.partner{grid-template-columns:minmax(0,1fr)}}
+.aud{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+a.audc{text-decoration:none;color:var(--ink);display:grid;gap:6px;align-content:start;transition:transform .15s,border-color .15s}
+a.audc:hover{transform:translateY(-2px);border-color:var(--accent)}
+a.audc .ric{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-size:1.1rem}
+a.audc p{margin:0;font-size:.92rem;color:var(--muted)} a.audc .go{color:var(--accent);font-weight:700;font-size:.9rem;margin-top:4px}
+.tl.tl5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.tl.tl5{grid-template-columns:minmax(0,1fr)}}
+[id]{scroll-margin-top:120px}
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;z-index:50;font-weight:600}
 </style>
 
@@ -275,6 +285,7 @@ footer.foot .wrap{gap:6px 18px;flex-wrap:wrap}
   <nav class="main" aria-label="sections">
     <a href="#home" data-v="home" data-t="nHome"></a><a href="#process" data-v="process" data-t="nProc"></a><a href="#take" data-v="take" data-t="nTake"></a><a href="#report" data-v="report" data-t="nReport"></a><a href="#workshops" data-v="workshops" data-t="nWs"></a><a href="#method" data-v="method" data-t="nMethod"></a><a href="#sources" data-v="sources" data-t="nSrc"></a>
   </nav>
+  <a class="btn pri hcta" href="#home" data-go="home:contact" data-t="fSend"></a>
   <div class="langs" role="group" aria-label="language"><button data-l="fa" lang="fa">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
 </div></header>
 
@@ -1160,6 +1171,28 @@ Object.assign(T.fa, {
  fa:"فارسی", srcSee:"منابع را ببینید"
 });
 /* Sanjesh — company (SoloNovate), how-we-work page: roles, timeline, who sees what, sample documents (en / nl / fa) */
+/* Home restructure: audience paths, one journey from measurement to action */
+Object.assign(T.en, {
+ audT:"Where would you like to start?",
+ paths:[["▲","Leadership","What it costs, what you get and how a pilot runs.","Cost estimate","home:calc"],["☎","HR","The route week by week, who does what, and ready-made documents.","Process and documents","process:docs"],["☺","Employees","What happens to your answers, and try the check yourself.","Your privacy","process:emp"],["✚","Psychologists and trainers","Questionnaires, evidence and working with us as a partner.","Partnership","process:partner"]],
+ tryIt:"Try the check yourself (8 min)",
+ jT:"From measurement to action", jP:"A four-week pilot, then workshops. One department or the whole organisation.",
+ jAfter:["After","Workshops and repeat check","Workshops by an experienced psychologist or trainer; a repeat check after 3–6 months shows what changed."]
+});
+Object.assign(T.nl, {
+ audT:"Waar wilt u beginnen?",
+ paths:[["▲","Directie","Wat het kost, wat het oplevert en hoe een pilot verloopt.","Kostenschatting","home:calc"],["☎","HR","De route week voor week, wie wat doet, en kant-en-klare documenten.","Werkwijze en documenten","process:docs"],["☺","Medewerkers","Wat er met uw antwoorden gebeurt, en probeer de scan zelf.","Uw privacy","process:emp"],["✚","Psychologen en trainers","Vragenlijsten, onderbouwing en samenwerken als partner.","Samenwerken","process:partner"]],
+ tryIt:"Probeer de scan zelf (8 min)",
+ jT:"Van meting tot actie", jP:"Een pilot van vier weken, daarna workshops. Eén afdeling of de hele organisatie.",
+ jAfter:["Daarna","Workshops en herhaalmeting","Workshops door een ervaren psycholoog of trainer; een herhaalmeting na 3–6 maanden laat zien wat er veranderd is."]
+});
+Object.assign(T.fa, {
+ audT:"از کجا شروع کنید؟",
+ paths:[["▲","مدیران ارشد","هزینه، دستاورد و روند اجرای آزمایشی.","برآورد هزینه","home:calc"],["☎","منابع انسانی","مسیر هفته به هفته، نقش‌ها و سندهای آماده.","روند کار و سندها","process:docs"],["☺","کارکنان","با پاسخ‌هایتان چه می‌شود؛ و خودتان سنجش را امتحان کنید.","حریم خصوصی شما","process:emp"],["✚","روان‌شناسان و مربیان","پرسشنامه‌ها، پشتوانهٔ پژوهشی و همکاری با ما.","همکاری","process:partner"]],
+ tryIt:"خودتان امتحان کنید (۸ دقیقه)",
+ jT:"از سنجش تا اقدام", jP:"اجرای آزمایشی چهارهفته‌ای و بعد کارگاه‌ها. یک بخش یا کل سازمان.",
+ jAfter:["پس از آن","کارگاه‌ها و سنجش دوباره","کارگاه‌ها با یک روان‌شناس یا مربی باتجربه؛ سنجش دوباره پس از ۳ تا ۶ ماه تغییر را نشان می‌دهد."]
+});
 /* Team. Fill in PARTNER once the psychologist agrees; until then the card is only shown with ?partner=preview in the address. */
 window.PARTNER = {name:"", photo:"", link:"", reg:"",
  role:{en:"", nl:"", fa:""}, bio:{en:"", nl:"", fa:""}, langs:{en:"", nl:"", fa:""}};
@@ -1432,6 +1465,7 @@ function route(){
   document.querySelectorAll("nav.main a").forEach(a => a.setAttribute("aria-current", a.dataset.v === (h === "result" ? "take" : h) ? "page" : "false"));
   ({home:renderHome, take:renderTake, result:renderResult, report:renderReport, workshops:renderWs, method:renderMethod, sources:renderSources, process:renderProc})[h]();
   window.scrollTo(0, 0);
+  if(pendingGo){ const el = document.getElementById(pendingGo); pendingGo = null; if(el) setTimeout(() => el.scrollIntoView({block:"start"}), 40); }
   if(h === "sources" && pendingRef){ const el = document.getElementById("ref-" + pendingRef); pendingRef = null; if(el){ el.classList.add("hl"); setTimeout(() => el.scrollIntoView({block:"center"}), 30); } }
 }
 async function loadRound(){
@@ -1453,7 +1487,9 @@ addEventListener("hashchange", route);
 const REF_ORDER = () => { const inst = [...new Set(DIMS.map(D => D.inst))].map(id => ({id:"inst-" + id, g:"inst", t:INST[id].en + ". " + INST[id].ref, u:""})); return [...window.REFS, ...inst, {id:"course", g:"course", t:t("courseRef"), u:URLS.hub}]; };
 const refNo = id => REF_ORDER().findIndex(r => r.id === id) + 1;
 const cite = ids => (ids || []).filter(id => refNo(id) > 0).sort((x, y) => refNo(x) - refNo(y)).map(id => `<a class="cite" href="#sources" data-ref="${id}" title="${esc(t("srcSee"))}">[${num(refNo(id))}]</a>`).join("");
-let pendingRef = null;
+let pendingRef = null, pendingGo = null;
+document.addEventListener("click", e => { const a = e.target.closest("[data-go]"); if(!a) return; const [v, id] = a.dataset.go.split(":");
+  if((location.hash.slice(1) || "home") === v){ e.preventDefault(); document.getElementById(id)?.scrollIntoView({behavior:"smooth", block:"start"}); } else { pendingGo = id; } });
 document.addEventListener("click", e => { const a = e.target.closest("a.cite"); if(a) pendingRef = a.dataset.ref; });
 const wikiLabel = k => { const x = window.LABELS_I18N[k]; return x ? x[L] : (LABELS[k] || k); };
 const wikiChip = (k, cls) => `<a class="${cls}" href="${URLS[k]}" target="_blank" rel="noopener">${esc(wikiLabel(k))}${L === "fa" ? "" : ` <span class="tagfa">FA</span>`}</a>`;
@@ -1482,15 +1518,26 @@ function renderHome(){
   document.getElementById("v-home").innerHTML = `
   <div class="hero">
     <div><div class="kicker">${t("heroK")}</div><h1>${t("heroT")}</h1><p class="lead">${t("heroP")}</p>
-      <div class="row"><a class="btn pri" href="#take">${t("ctaTake")}</a><a class="btn sec" href="#report">${t("ctaDemo")}</a></div>
+      <div class="row"><a class="btn pri" href="#home" data-go="home:contact">${t("fSend")}</a><a class="btn sec" href="#report">${t("ctaDemo")}</a><a class="small" href="#take" style="font-weight:700">${t("tryIt")} ${L === "fa" ? "←" : "→"}</a></div>
       <p class="small muted" style="margin:14px 0 0">${t("proto")}</p>
       <div class="facts"><div><b>${t("f1")}</b><span>${t("f1s")}</span></div><div><b>${t("f2")}</b><span>${t("f2s")}</span></div><div><b>${t("f3")}</b><span>${t("f3s")}</span></div></div>
     </div>
     <div class="card preview" aria-label="${t("ctaDemo")}"><div class="row" style="justify-content:space-between;margin-bottom:12px"><b>${t("pT")}</b><span class="pill">${t("pDemo")}</span></div>${miniBars(agg)}
       <div class="legendb">${t("band").map((b, i) => `<span><i style="background:${BC[i]}"></i>${b}</span>`).join("")}</div></div>
   </div>
+  
+  <section class="blk"><h2>${t("audT")}</h2><div class="aud">${t("paths").map(([ic, a, b, c, go]) => `<a class="card audc" href="#${go.split(":")[0]}" data-go="${go}"><span class="ric" aria-hidden="true">${ic}</span><b>${a}</b><p>${b}</p><span class="go">${c} ${L === "fa" ? "←" : "→"}</span></a>`).join("")}</div></section>
   <section class="blk"><h2>${t("whyT")}</h2><p class="sub">${t("whyP")}</p><div class="why">${t("why").map(([a,b], i) => `<div class="card"><b>${a}</b><p>${b} ${cite(window.WHY_REFS[i])}</p></div>`).join("")}</div></section>
-  <section class="blk"><h2>${t("calcT")}</h2><p class="sub">${t("calcP")}</p>
+  <section class="blk"><h2>${t("measT")}</h2><p class="sub">${t("measP")}</p>
+    <div class="grid">${DIMS.map(D => `<button class="card dim" aria-expanded="false"><span class="ic" style="background:${D.col}" aria-hidden="true">${ICON[D.id]}</span><b>${dn(D)}</b><p class="q">${D[L].q}</p>
+      <div class="more"><p><b>${t("whatIs")}:</b> ${D[L].what}</p><p><b>${t("whatNot")}:</b> ${D[L].not}</p><p class="small muted">${instText(D.inst).name} · ${num(INST[D.inst].items.length)} ${t("items")}</p></div></button>`).join("")}</div></section>
+  <section class="blk"><h2>${t("getT")}</h2><div class="gets">${t("get").map(([a,b]) => `<div class="card"><b>${a}</b><p>${b}</p></div>`).join("")}</div></section>
+  <section class="blk" id="pilot"><h2>${t("jT")}</h2><p class="sub">${t("jP")}</p>
+    <div class="tl tl5">${[...t("pilot"), t("jAfter")].map(([w,a,b], i) => `<div><span class="dot">${num(i+1)}</span><span class="wk">${w}</span><b>${a}</b><p>${b}</p></div>`).join("")}</div>
+    <div class="need"><b>${t("needT")}:</b>${t("need").map(x => `<span>${x}</span>`).join("")}</div>
+    <div class="row" style="margin-top:14px"><a class="btn sec" href="#process">${t("rolesT")} · ${t("seeT")} · ${t("docsT")} ${L === "fa" ? "←" : "→"}</a><a class="btn sec" href="#workshops">${t("nWs")} ${L === "fa" ? "←" : "→"}</a></div>
+    <div class="callout" style="margin-top:16px"><b>${t("pilotNoteT")}</b><div class="small">${t("pilotNote")}</div></div></section>
+  <section class="blk" id="calc"><h2>${t("calcT")}</h2><p class="sub">${t("calcP")}</p>
     <div class="card calc">
       <div class="cin">
         ${field("c-n", t("cEmp"), "", CALC.n, 1, 100000, 1)}
@@ -1508,25 +1555,13 @@ function renderHome(){
       <p class="small muted" style="margin:14px 0 0"><span id="c-perday"></span> ${cite(["mkb"])}</p>
       <div class="callout" style="margin-top:12px"><div class="small">${t("cNote")}</div></div>
     </div></section>
-  <section class="blk"><h2>${t("howT")}</h2><div class="steps" style="margin-top:16px">${t("how").map(([a, b]) => `<div class="card step"><b>${a}</b><p>${b}</p></div>`).join("")}</div><div class="row" style="margin-top:14px"><a class="btn sec" href="#process">${t("rolesT")} · ${t("seeT")} · ${t("docsT")} ${L === "fa" ? "←" : "→"}</a></div></section>
-  <section class="blk"><h2>${t("measT")}</h2><p class="sub">${t("measP")}</p>
-    <div class="grid">${DIMS.map(D => `<button class="card dim" aria-expanded="false"><span class="ic" style="background:${D.col}" aria-hidden="true">${ICON[D.id]}</span><b>${dn(D)}</b><p class="q">${D[L].q}</p>
-      <div class="more"><p><b>${t("whatIs")}:</b> ${D[L].what}</p><p><b>${t("whatNot")}:</b> ${D[L].not}</p><p class="small muted">${instText(D.inst).name} · ${num(INST[D.inst].items.length)} ${t("items")}</p></div></button>`).join("")}</div></section>
   <section class="blk arbo"><h2>${t("arboT")}</h2><p class="sub">${t("arboP")} ${cite(["arbowet","arbobes","arboportaal"])}</p>
     <div class="law">${t("arbo").map(([a,b]) => `<div class="card"><b>${a}</b><p>${b}</p></div>`).join("")}</div>
     <p class="small muted" style="margin:12px 0 0">${t("arboNote")}</p></section>
-  <section class="blk"><h2>${t("getT")}</h2><div class="gets">${t("get").map(([a,b]) => `<div class="card"><b>${a}</b><p>${b}</p></div>`).join("")}</div></section>
-  <section class="blk"><h2>${t("actT")}</h2><p class="sub">${t("actP")}</p>
-    <div class="tl">${t("act").map(([a,b], i) => `<div><span class="dot">${num(i+1)}</span><b style="margin-top:10px">${a}</b><p>${b}</p></div>`).join("")}</div>
-    <div class="row" style="margin-top:16px"><a class="btn sec" href="#workshops">${t("nWs")} ${L === "fa" ? "←" : "→"}</a></div></section>
-  <section class="blk"><h2>${t("pilotT")}</h2><p class="sub">${t("pilotP")}</p>
-    <div class="tl">${t("pilot").map(([w,a,b], i) => `<div><span class="dot">${num(i+1)}</span><span class="wk">${w}</span><b>${a}</b><p>${b}</p></div>`).join("")}</div>
-    <div class="need"><b>${t("needT")}:</b>${t("need").map(x => `<span>${x}</span>`).join("")}</div>
-    <div class="callout" style="margin-top:16px"><b>${t("pilotNoteT")}</b><div class="small">${t("pilotNote")}</div></div></section>
   <section class="blk split">
     <div class="card"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("privT")}</h2><ul class="check">${t("priv").map(x => `<li>${x}</li>`).join("")}</ul></div>
-    <div class="card"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("forT")}</h2><div style="display:grid;gap:10px">${t("for").map(([a, b]) => `<div><b>${a}</b><div class="muted small">${b}</div></div>`).join("")}</div>
-      <div class="callout" style="margin-top:16px"><b>${t("notT")}</b><div class="small">${t("not")}</div></div></div>
+    <div class="card"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("notT")}</h2><p style="margin:0">${t("not")}</p>
+      <p class="small" style="margin:14px 0 0"><a href="#method">${t("nMethod")} ${L === "fa" ? "←" : "→"}</a> · <a href="#sources">${t("nSrc")} ${L === "fa" ? "←" : "→"}</a></p></div>
   </section>
   <section class="blk"><h2>${t("lawT")}</h2><div class="law">${t("law").map(([a,b], i) => `<div class="card"><b>${a}</b><p>${b} ${cite(window.LAW_REFS[i])}</p></div>`).join("")}</div></section>
   <section class="blk"><h2>${t("faqT")}</h2><div class="faq">${t("faq").map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("")}</div></section>
@@ -1741,11 +1776,11 @@ function renderProc(){
   <section class="blk split">
     <div class="card"><h2 style="font-size:1.3rem;margin-bottom:4px">${t("seeT")}</h2><p class="small muted" style="margin:0 0 12px">${t("seeP")}</p>
       <div class="scroll"><table class="see"><thead><tr><th></th>${t("seeCols").map(c => `<th>${c}</th>`).join("")}</tr></thead><tbody>${t("see").map(([r, ...cs]) => `<tr><th scope="row">${r}</th>${cs.map(v => `<td class="${yes(v) ? "y" : no(v) ? "n" : "p"}"><i aria-hidden="true">${yes(v) ? "✓" : no(v) ? "✕" : "◐"}</i> ${v}</td>`).join("")}</tr>`).join("")}</tbody></table></div></div>
-    <div class="card emp"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("empT")}</h2><ul class="check">${t("emp").map(x => `<li>${x}</li>`).join("")}</ul>
+    <div class="card emp" id="emp"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("empT")}</h2><ul class="check">${t("emp").map(x => `<li>${x}</li>`).join("")}</ul>
       <p class="small" style="margin:10px 0 0"><a href="${DOCS_BASE}privacy-participants.html" target="_blank" rel="noopener">${t("docs")["privacy-participants"][0]} ${L === "fa" ? "←" : "→"}</a></p></div>
   </section>
-  <section class="blk"><h2>${t("docsT")}</h2><p class="sub">${t("docsP")}</p><div class="docs">${window.DOCLIST.map(d => { const [a, b] = t("docs")[d.slug]; return `<a class="card doc" href="${DOCS_BASE}${d.slug}.html${L === "en" ? "#en" : ""}" target="_blank" rel="noopener"><span class="dic" aria-hidden="true">${d.ic}</span><span class="pill">${t("aud")[d.aud]}</span><b>${a}</b><p>${b}</p><span class="small" style="color:var(--accent);font-weight:700">${t("open")} ${L === "fa" ? "←" : "→"}</span></a>`; }).join("")}</div></section>
-  <section class="blk"><div class="card partner"><div><h2 style="font-size:1.3rem;margin-bottom:6px">${t("partT")}</h2><p class="sub" style="margin:0 0 12px">${t("partP")}</p><ul class="check">${t("partL").map(x => `<li>${x}</li>`).join("")}</ul><p class="small muted" style="margin:10px 0 0">${t("partAsk")}</p></div><div><a class="btn pri" href="${mailto(t("partSubj"), "")}">${t("partCta")}</a></div></div></section>
+  <section class="blk" id="docs"><h2>${t("docsT")}</h2><p class="sub">${t("docsP")}</p><div class="docs">${window.DOCLIST.map(d => { const [a, b] = t("docs")[d.slug]; return `<a class="card doc" href="${DOCS_BASE}${d.slug}.html${L === "en" ? "#en" : ""}" target="_blank" rel="noopener"><span class="dic" aria-hidden="true">${d.ic}</span><span class="pill">${t("aud")[d.aud]}</span><b>${a}</b><p>${b}</p><span class="small" style="color:var(--accent);font-weight:700">${t("open")} ${L === "fa" ? "←" : "→"}</span></a>`; }).join("")}</div></section>
+  <section class="blk" id="partner"><div class="card partner"><div><h2 style="font-size:1.3rem;margin-bottom:6px">${t("partT")}</h2><p class="sub" style="margin:0 0 12px">${t("partP")}</p><ul class="check">${t("partL").map(x => `<li>${x}</li>`).join("")}</ul><p class="small muted" style="margin:10px 0 0">${t("partAsk")}</p></div><div><a class="btn pri" href="${mailto(t("partSubj"), "")}">${t("partCta")}</a></div></div></section>
   <section class="ctaband"><div><h2>${t("ctaT")}</h2><p>${t("ctaP")}</p></div><div class="row"><a class="btn" href="#home" onclick="setTimeout(()=>document.getElementById('contact')?.scrollIntoView(),60)">${t("fSend")}</a><a class="btn sec" href="#report">${t("ctaDemo")}</a></div></section>`;
 }
 /* ── SOURCES ── */
