@@ -307,12 +307,12 @@ html[dir="rtl"] .dtrk{background:linear-gradient(to left,var(--low-soft) 0 37.5%
 </style>
 
 <header class="bar gut"><div class="wrap">
-  <a class="logo" href="#home" aria-label="home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M7 21c3-7 6-7 9 0s6 7 9 0" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="11" r="2.6" fill="var(--accent-ink)"/></svg><span data-t="brand"></span></a>
-  <nav class="main" aria-label="sections">
+  <a class="logo" href="#home" aria-label="home" data-ta="ariaHome"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M7 21c3-7 6-7 9 0s6 7 9 0" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="11" r="2.6" fill="var(--accent-ink)"/></svg><span data-t="brand"></span></a>
+  <nav class="main" aria-label="sections" data-ta="ariaNav">
     <a href="#home" data-v="home" data-t="nHome"></a><a href="#process" data-v="process" data-t="nProc"></a><a href="#take" data-v="take" data-t="nTake"></a><a href="#report" data-v="report" data-t="nReport"></a><a href="#workshops" data-v="workshops" data-t="nWs"></a><a href="#method" data-v="method" data-t="nMethod"></a><a href="#sources" data-v="sources" data-t="nSrc"></a>
   </nav>
   <a class="btn pri hcta" href="#home" data-go="home:contact" data-t="fSend"></a>
-  <div class="langs" role="group" aria-label="language"><button data-l="fa" lang="fa">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
+  <div class="langs" role="group" aria-label="language" data-ta="ariaLang"><button data-l="fa" lang="fa">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
 </div></header>
 
 <main class="gut"><div class="wrap">
@@ -1475,6 +1475,41 @@ for(const l of ["en","nl","fa"]) Object.assign(T[l], S[l]);
 const SHORT = {nea25:"TNO & CBS, NEA 2025", who22:"WHO & ILO, 2022", icd11:"WHO, ICD-11 (2019)", cbs26:"CBS, 2026", tno24:"TNO, 2024", arbo24:"TNO Arbobalans 2024", arbo18:"TNO Arbobalans 2018", mkb:"MKB Servicedesk, 2026", arbowet:"Arbowet", arbobes:"Arbobesluit", arboportaal:"Arboportaal (SZW)", wor:"WOR", gdpr:"AVG / GDPR"};
 window.REFS.forEach(r => { r.s = SHORT[r.id] || (() => { const m = r.t.match(/^([^,]+),.*?\((\d{4})/); if(!m) return r.t.slice(0, 40); const many = (r.t.split("(")[0].match(/&|,/g) || []).length > 1; return m[1] + (many ? " et al." : "") + ", " + m[2]; })(); });
 }
+
+{
+const D = {
+ nea25:{en:"21% of employees report burnout complaints", nl:"21% van de werknemers heeft burn-outklachten", fa:"۲۱٪ کارکنان نشانه‌های فرسودگی گزارش می‌کنند"},
+ who22:{en:"12 billion working days lost each year to depression and anxiety", nl:"jaarlijks 12 miljard werkdagen verloren door depressie en angst", fa:"سالانه ۱۲ میلیارد روز کاری به خاطر افسردگی و اضطراب از دست می‌رود"},
+ icd11:{en:"burnout classified as an occupational phenomenon", nl:"burn-out geclassificeerd als beroepsgerelateerd fenomeen", fa:"فرسودگی به‌عنوان پدیدهٔ شغلی طبقه‌بندی شده است"},
+ cbs26:{en:"absence rate 5.4% over 2025; 9% of absent employees cite psychological complaints or burnout", nl:"verzuim 5,4% over 2025; 9% van de verzuimers noemt psychische klachten of burn-out", fa:"نرخ غیبت ۵٫۴٪ در ۲۰۲۵؛ ۹٪ غایبان مشکلات روانی یا فرسودگی را دلیل می‌دانند"},
+ tno24:{en:"absence for psychological complaints lasts 63 working days on average; 75% (partly) work-related", nl:"verzuim door psychische klachten duurt gemiddeld 63 werkdagen; 75% (deels) werkgerelateerd", fa:"غیبت به خاطر مشکلات روانی به‌طور میانگین ۶۳ روز کاری طول می‌کشد؛ ۷۵٪ آن (تا حدی) به کار مربوط است"},
+ arbo24:{en:"€8.3 bn for (partly) work-related absence in 2023, of which €4.9 bn due to psychosocial workload", nl:"€ 8,3 mld voor (deels) werkgerelateerd verzuim in 2023, waarvan € 4,9 mld door psychosociale arbeidsbelasting", fa:"۸٫۳ میلیارد یورو هزینهٔ غیبت (تا حدی) مرتبط با کار در ۲۰۲۳، که ۴٫۹ میلیارد آن به خاطر فشار روانی-اجتماعی کار است"},
+ arbo18:{en:"about a quarter of all absence days relate to psychological complaints, overstrain or burnout", nl:"ongeveer een kwart van alle verzuimdagen hangt samen met psychische klachten, overspannenheid of burn-out", fa:"حدود یک‌چهارم روزهای غیبت به مشکلات روانی، فشار بیش از حد یا فرسودگی مربوط است"},
+ mkb:{en:"on average €250 to €400 per absence day", nl:"gemiddeld € 250 tot € 400 per verzuimdag", fa:"به‌طور میانگین ۲۵۰ تا ۴۰۰ یورو برای هر روز غیبت"},
+ arbowet:{en:"art. 3(2): policy to prevent or limit psychosocial workload; art. 5: risk inventory and evaluation (RI&E) with plan of action", nl:"art. 3 lid 2: beleid om psychosociale arbeidsbelasting te voorkomen of te beperken; art. 5: risico-inventarisatie en -evaluatie (RI&E) met plan van aanpak", fa:"مادهٔ ۳ بند ۲: سیاست پیشگیری یا کاهش فشار روانی-اجتماعی کار؛ مادهٔ ۵: ارزیابی خطر (RI&E) همراه با برنامهٔ اقدام"},
+ arbobes:{en:"art. 2.15: assess psychosocial workload risks in the RI&E and set measures in the plan of action", nl:"art. 2.15: PSA-risico's beoordelen in de RI&E en maatregelen opnemen in het plan van aanpak", fa:"مادهٔ ۲.۱۵: سنجش خطرهای فشار روانی-اجتماعی در RI&E و ثبت اقدام‌ها در برنامهٔ اقدام"},
+ arboportaal:{en:"government information on psychosocial workload", nl:"overheidsinformatie over psychosociale arbeidsbelasting", fa:"اطلاعات رسمی دولت هلند دربارهٔ فشار روانی-اجتماعی کار"},
+ wor:{en:"art. 27: works council consent on arrangements such as staff surveys and working-conditions policy", nl:"art. 27: instemmingsrecht van de OR, onder meer bij medewerkersonderzoek en arbobeleid", fa:"مادهٔ ۲۷: حق موافقت شورای کار، از جمله دربارهٔ نظرسنجی کارکنان و سیاست شرایط کار"},
+ gdpr:{en:"General Data Protection Regulation", nl:"Algemene verordening gegevensbescherming", fa:"مقررات عمومی حفاظت از داده‌های اتحادیهٔ اروپا"}
+};
+const TITLE = {
+ nea25:"TNO & CBS (2026). Factsheet Nationale Enquête Arbeidsomstandigheden (NEA) 2025.",
+ who22:"WHO & ILO (2022, 28 September). WHO and ILO call for new measures to tackle mental health issues at work.",
+ icd11:"WHO (2019, 28 May). Burn-out an \"occupational phenomenon\": International Classification of Diseases.",
+ cbs26:"CBS (2026, 4 juni). Ziekteverzuim in eerste kwartaal hoger dan gemiddeld in afgelopen 30 jaar.",
+ tno24:"TNO (2024). Rapport TNO 2024 R11785 (NEA-analyses).",
+ arbo24:"HR Praktijk (2024). Arbobalans: kosten loondoorbetaling nemen toe (samenvatting TNO Arbobalans 2024).",
+ arbo18:"HR Praktijk (2018). Arbobalans 2018: psychosociale arbeidsbelasting en burn-outklachten blijven toenemen.",
+ mkb:"MKB Servicedesk (2026). Wat kost een zieke werknemer?",
+ arbowet:"Arbeidsomstandighedenwet (Arbowet).", arbobes:"Arbeidsomstandighedenbesluit (Arbobesluit).",
+ arboportaal:"Arboportaal, Ministerie van SZW. Psychosociale arbeidsbelasting (PSA).",
+ wor:"Wet op de ondernemingsraden (WOR).", gdpr:"Verordening (EU) 2016/679 / Regulation (EU) 2016/679 (AVG / GDPR)."
+};
+window.REFS.forEach(r => { if(TITLE[r.id]){ r.title = TITLE[r.id]; r.d = D[r.id]; } });
+Object.assign(T.en, {ariaHome:"Home", ariaNav:"Sections", ariaLang:"Language"});
+Object.assign(T.nl, {ariaHome:"Startpagina", ariaNav:"Onderdelen", ariaLang:"Taal", sP:"Alle cijfers, wetsverwijzingen en onderzoeksclaims op deze site, met een link naar het origineel. Titels van publicaties staan in hun oorspronkelijke taal."});
+Object.assign(T.fa, {ariaHome:"صفحهٔ اصلی", ariaNav:"بخش‌ها", ariaLang:"زبان"});
+}
 }
 
 
@@ -1557,6 +1592,7 @@ function setLang(l){
   document.documentElement.lang = l; document.documentElement.dir = l === "fa" ? "rtl" : "ltr";
   document.title = t("brand");
   document.querySelectorAll("[data-t]").forEach(e => e.textContent = t(e.dataset.t));
+  document.querySelectorAll("[data-ta]").forEach(e => e.setAttribute("aria-label", t(e.dataset.ta)));
   document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === l));
   route();
 }
@@ -1564,7 +1600,7 @@ document.querySelector(".langs").addEventListener("click", e => { const b = e.ta
 addEventListener("hashchange", route);
 
 /* ── sources & citations ── */
-const REF_ORDER = () => { const inst = [...new Set(DIMS.map(D => D.inst))].map(id => ({id:"inst-" + id, g:"inst", t:INST[id].en + ". " + INST[id].ref, u:""})); return [...window.REFS, ...inst, {id:"course", g:"course", t:t("courseRef"), u:URLS.hub}]; };
+const REF_ORDER = () => { const inst = [...new Set(DIMS.map(D => D.inst))].map(id => ({id:"inst-" + id, g:"inst", t:INST[id].en + ". " + INST[id].ref, u:""})); return [...window.REFS.map(r => r.title ? {...r, t:r.title.replace(/\.$/, "") + " — " + r.d[L] + "."} : r), ...inst, {id:"course", g:"course", t:t("courseRef"), u:URLS.hub}]; };
 const refNo = id => REF_ORDER().findIndex(r => r.id === id) + 1;
 const refOf = id => REF_ORDER().find(r => r.id === id);
 const cite = ids => (ids || []).filter(id => refNo(id) > 0).sort((x, y) => refNo(x) - refNo(y)).map(id => { const r = refOf(id); return r.u ? `<a class="cite" href="${r.u}" target="_blank" rel="noopener" title="${esc(r.t)}">[${num(refNo(id))}]</a>` : `<a class="cite" href="#sources" data-ref="${id}" title="${esc(r.t)}">[${num(refNo(id))}]</a>`; }).join("");
@@ -1739,7 +1775,7 @@ function renderResult(){
      ${D.subs.length ? miniBars(D.subs.map(s => [window.SUBN[D.inst + "." + s][L], sc.sub[D.inst + "." + s]]).filter(x => x[1] != null)) : ""}<p class="small muted">${t("whatNot")}: ${D[L].not}</p></div>`).join("")}</details>
    <div class="card" style="margin-top:20px">
      ${R.r !== "self" ? `<div class="row" style="justify-content:space-between"><b>${t("rSend")}</b><button class="btn pri" id="send">${t("rSend")}</button></div><p id="sendmsg" class="small muted"></p>` : ""}
-     <b>${t("rCode")}</b><p class="small muted" style="margin:4px 0 8px">${t("rCodeP")}</p><div class="code" id="code">${code}</div><div class="row" style="margin-top:10px"><a class="btn pri" href="${mailto("Wellbeing Check · response code", code)}">${t("rMail")}</a><button class="btn sec" id="copy">${t("rCopy")}</button><a class="btn sec" href="#workshops">${t("nWs")}</a></div>
+     <b>${t("rCode")}</b><p class="small muted" style="margin:4px 0 8px">${t("rCodeP")}</p><div class="code" id="code">${code}</div><div class="row" style="margin-top:10px"><a class="btn pri" href="${mailto(t("brandShort") + " · " + t("rCode"), code)}">${t("rMail")}</a><button class="btn sec" id="copy">${t("rCopy")}</button><a class="btn sec" href="#workshops">${t("nWs")}</a></div>
    </div>
    <p class="small muted" style="margin-top:16px">${t("rNot")}</p></div>`;
   document.getElementById("copy").onclick = async () => { try{ await navigator.clipboard.writeText(code); toast(t("rCopied")); }catch(e){ const r = document.createRange(); r.selectNodeContents(document.getElementById("code")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } };
@@ -1938,7 +1974,7 @@ function renderProc(){
 function renderSources(){
   const all = REF_ORDER(), groups = [["stats","gStats"],["law","gLaw"],["ev","gEv"],["inst","gInst"],["course","gCourse"]];
   document.getElementById("v-sources").innerHTML = `<div class="kicker">${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("sT")}</h1><p class="lead">${t("sP")}</p>
-  ${groups.map(([g, k]) => `<section class="blk"><h2 style="font-size:1.3rem">${t(k)}</h2><ol class="refs card">${all.map((r, i) => r.g !== g ? "" : `<li id="ref-${r.id}" value="${i + 1}"><span class="rn">${num(i + 1)}</span><span ${g === "course" ? "" : `dir="ltr" lang="${g === "law" || g === "stats" ? "" : "en"}" class="rt"`}>${esc(r.t)}${r.u ? ` <a href="${r.u}" target="_blank" rel="noopener">${esc(r.u.replace(/^https?:\/\//, "").replace(/\/$/, "").slice(0, 60))}</a>` : ""}</span></li>`).join("")}</ol></section>`).join("")}`;
+  ${groups.map(([g, k]) => `<section class="blk"><h2 style="font-size:1.3rem">${t(k)}</h2><ol class="refs card">${all.map((r, i) => r.g !== g ? "" : `<li id="ref-${r.id}" value="${i + 1}"><span class="rn">${num(i + 1)}</span><span ${g === "course" ? "" : `${g === "law" || g === "stats" ? (L === "fa" ? `dir="rtl"` : "") : `dir="ltr" lang="en"`} class="rt"`}>${esc(r.t)}${r.u ? ` <a href="${r.u}" target="_blank" rel="noopener">${esc(r.u.replace(/^https?:\/\//, "").replace(/\/$/, "").slice(0, 60))}</a>` : ""}</span></li>`).join("")}</ol></section>`).join("")}`;
 }
 /* ── METHOD ── */
 function renderMethod(){
