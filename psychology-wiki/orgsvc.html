@@ -277,6 +277,32 @@ a.audc p{margin:0;font-size:.92rem;color:var(--muted)} a.audc .go{color:var(--ac
 .tl.tl5{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media (max-width:900px){.tl.tl5{grid-template-columns:minmax(0,1fr)}}
 [id]{scroll-margin-top:120px}
+.kpi small{display:block;color:var(--muted);font-size:.78rem;margin-top:2px}
+.rvtabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:22px}
+.rvtabs button{border:1.5px solid var(--rule);background:var(--card);border-radius:999px;padding:7px 14px;font:inherit;font-weight:700;font-size:.88rem;color:var(--muted);cursor:pointer}
+.rvtabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.rvhead h2{margin:0 0 10px}
+.rvexp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.rvexp>div{background:var(--wash);border-radius:12px;padding:10px 14px} .rvexp p{margin:4px 0 0;font-size:.9rem;color:var(--muted)}
+@media (max-width:700px){.rvexp{grid-template-columns:minmax(0,1fr)}}
+.keyi{margin-top:12px;background:var(--accent-soft);border-radius:12px;padding:12px 16px;border-inline-start:4px solid var(--accent)} .keyi p{margin:4px 0 0}
+.sumlist{margin:0;padding-inline-start:20px;display:grid;gap:10px}
+.dumb{display:grid;gap:14px}
+.dr{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr) 3.2em;gap:12px;align-items:center}
+.dtrk{position:relative;height:18px;border-radius:99px;background:linear-gradient(to right,var(--low-soft) 0 37.5%,var(--mid-soft) 37.5% 62.5%,var(--high-soft) 62.5%)}
+html[dir="rtl"] .dtrk{background:linear-gradient(to left,var(--low-soft) 0 37.5%,var(--mid-soft) 37.5% 62.5%,var(--high-soft) 62.5%)}
+.dtrk .dline{position:absolute;top:8px;height:2px;background:var(--ink);opacity:.45}
+.dtrk i{position:absolute;top:2px;width:14px;height:14px;border-radius:50%;margin-inline-start:-7px;border:2px solid var(--card)}
+.dr .v,.br .dlt{font-weight:800;font-variant-numeric:tabular-nums;font-size:.9rem}
+.dscale{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr) 3.2em;gap:12px;font-size:.72rem;color:var(--muted)}
+.dscale span:nth-child(1){grid-column:2;grid-row:1;justify-self:start} .dscale span:nth-child(2){grid-column:2;grid-row:1;justify-self:center} .dscale span:nth-child(3){grid-column:2;grid-row:1;justify-self:end}
+.br.br4{grid-template-columns:minmax(120px,190px) minmax(0,1fr) 3.2em 3.6em}
+.br .dlt{direction:ltr;unicode-bidi:isolate;text-align:end} .br .dlt.pos{color:var(--high)} .br .dlt.neg{color:var(--low)}
+.trk s{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);margin-inline-start:-1px}
+.pair{display:grid;gap:3px} .trk.thin{height:9px}
+.subg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:12px}
+.srcl{display:block;margin-top:8px;font-size:.8rem;color:var(--muted)} .srcl a{color:var(--accent);font-weight:600}
+@media (max-width:520px){.dr,.br.br4,.dscale{grid-template-columns:minmax(0,1fr) 3em}.dr .lab,.br.br4 .lab{grid-column:1/-1}.br.br4{grid-template-columns:minmax(0,1fr) 3em 3.4em}.dscale span{grid-column:1!important}}
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;z-index:50;font-weight:600}
 </style>
 
@@ -1395,6 +1421,60 @@ Object.assign(T.fa, {
  partAsk:"به دنبال تجربهٔ کار گروهی در سازمان‌ها، عضویت حرفه‌ای مرتبط (مثلاً NIP یا BIG) و توان برگزاری کارگاه به هلندی یا انگلیسی هستیم.",
  partCta:"همکار شوید", partSubj:"درخواست همکاری — سنجش سلامت سازمان"
 });
+
+/* Report views (several report models, each explained) + direct source links */
+{
+const S = {
+ en:{rvTabs:"Report views", whatL:"What you see", howL:"How to read it", keyL:"Key insight", srcL:"Source",
+  rv:{sum:["Summary","The main findings in plain language.","Scores run from 0 to 100: 0 is the lowest possible answer on every question, 100 the highest. Below 37.5 = needs attention, 37.5–62.5 = moderate, above 62.5 = strong."],
+   heat:["By job level","The average score of each job level on each dimension.","Read across a row to compare levels; read down a column to see one level's profile. Warm colours need attention, green is strong. Groups under 5 people are hidden."],
+   gap:["Differences between levels","For each dimension: where each job level scores, from lowest to highest.","A long line means levels experience this very differently. That often points to the work or the role, not to individuals."],
+   dist:["Spread","How many people fall into each band, per dimension.","An average can hide a group that is struggling. The red part is the share of people who need attention."],
+   prof:["Level profile","One job level compared with the organisation as a whole.","The bar is the level's score, the thin line the organisation average. The number on the right is the difference: positive means better than average."],
+   sub:["Underlying aspects","The parts that make up each dimension.","When a dimension is low, this shows which part pulls it down, and so which kind of workshop helps most. Higher is always better here."],
+   time:["Over time","The first measurement next to the repeat measurement.","Light bar = first measurement, dark bar = repeat. Changes smaller than about 3 points can be chance."],
+   plan:["Action plan","What to work on first, for whom, and with which workshop.","A dimension is a priority when its average is below 55 or more than 25% of people need attention."]},
+  kpiSub:["people answered","job levels with 5+ people","average of all dimensions (0–100)","of all scores are in 'needs attention'"],
+  sumN:"Based on {n} respondents in {k} job levels.", sumStrong:"Strongest: {a}.", sumWeak:"Needs most attention: {d} ({m}); {p} of people score in 'needs attention'.", sumGap:"Largest difference between levels: {d}, with {hi} at {a} and {lo} at {b}.", sumNext:"Suggested first step: the workshop '{w}', mainly for {who}.", and:" and ",
+  heatKey:"Lowest score: {lv} on {d} ({v}). Highest: {lv2} on {d2} ({v2}).", gapKey:"Largest gap: {d} — {lo} {a} versus {hi} {b} ({x} points).", distKey:"{d}: {p} of people need attention, although the average is {m}.",
+  profSel:"Job level", profUp:"{lv} scores above the organisation average on {a}.", profDown:"{lv} scores below the organisation average on {b}.", profFlat:"{lv} scores close to the organisation average everywhere.", orgAvg:"organisation average",
+  subKey:"Lowest aspect: {s} within {d} ({v}).", timeDemo:"Simulated example: repeat measurement four months after workshops on self-compassion and flow.", timeKey:"Largest improvement: {d} (+{x}). Smallest change: {d2} ({y}).", timeNone:"This view becomes available after the repeat measurement (3–6 months after the workshops).", t1:"First measurement", t2:"Repeat measurement",
+  rHow:"Each score runs from 0 to 100. The coloured background shows the band: red needs attention, yellow is moderate, green is strong. This is a snapshot, not a diagnosis."},
+ nl:{rvTabs:"Rapportweergaven", whatL:"Wat u ziet", howL:"Zo leest u het", keyL:"Belangrijkste inzicht", srcL:"Bron",
+  rv:{sum:["Samenvatting","De belangrijkste uitkomsten in gewone taal.","Scores lopen van 0 tot 100: 0 is het laagst mogelijke antwoord op elke vraag, 100 het hoogste. Onder 37,5 = aandacht nodig, 37,5–62,5 = gemiddeld, boven 62,5 = sterk."],
+   heat:["Per functieniveau","De gemiddelde score van elk functieniveau op elke dimensie.","Lees een rij om niveaus te vergelijken; lees een kolom voor het profiel van één niveau. Warme kleuren vragen aandacht, groen is sterk. Groepen onder de 5 personen zijn verborgen."],
+   gap:["Verschillen tussen niveaus","Per dimensie: waar elk functieniveau scoort, van laag naar hoog.","Een lange lijn betekent dat niveaus dit heel verschillend ervaren. Dat wijst vaak op het werk of de rol, niet op individuen."],
+   dist:["Spreiding","Hoeveel mensen in elke scoreklasse vallen, per dimensie.","Een gemiddelde kan een groep verbergen die het zwaar heeft. Het rode deel is het aandeel mensen dat aandacht nodig heeft."],
+   prof:["Profiel per niveau","Eén functieniveau vergeleken met de hele organisatie.","De balk is de score van het niveau, de dunne lijn het organisatiegemiddelde. Het getal rechts is het verschil: positief is beter dan gemiddeld."],
+   sub:["Onderliggende aspecten","De onderdelen waaruit elke dimensie bestaat.","Is een dimensie laag, dan ziet u hier welk onderdeel hem omlaag trekt, en dus welk soort workshop het meest helpt. Hoger is hier altijd beter."],
+   time:["Verloop in de tijd","De eerste meting naast de herhaalmeting.","Lichte balk = eerste meting, donkere balk = herhaalmeting. Verschillen kleiner dan ongeveer 3 punten kunnen toeval zijn."],
+   plan:["Actieplan","Waar u eerst aan werkt, voor wie, en met welke workshop.","Een dimensie is een prioriteit als het gemiddelde onder 55 ligt of meer dan 25% van de mensen aandacht nodig heeft."]},
+  kpiSub:["mensen deden mee","functieniveaus met 5+ personen","gemiddelde van alle dimensies (0–100)","van alle scores valt in 'aandacht nodig'"],
+  sumN:"Gebaseerd op {n} deelnemers in {k} functieniveaus.", sumStrong:"Sterkst: {a}.", sumWeak:"Meeste aandacht nodig: {d} ({m}); {p} van de mensen scoort in 'aandacht nodig'.", sumGap:"Grootste verschil tussen niveaus: {d}, met {hi} op {a} en {lo} op {b}.", sumNext:"Voorgestelde eerste stap: de workshop '{w}', vooral voor {who}.", and:" en ",
+  heatKey:"Laagste score: {lv} op {d} ({v}). Hoogste: {lv2} op {d2} ({v2}).", gapKey:"Grootste verschil: {d} — {lo} {a} tegenover {hi} {b} ({x} punten).", distKey:"{d}: {p} van de mensen heeft aandacht nodig, terwijl het gemiddelde {m} is.",
+  profSel:"Functieniveau", profUp:"{lv} scoort boven het organisatiegemiddelde op {a}.", profDown:"{lv} scoort onder het organisatiegemiddelde op {b}.", profFlat:"{lv} scoort overal dicht bij het organisatiegemiddelde.", orgAvg:"organisatiegemiddelde",
+  subKey:"Laagste aspect: {s} binnen {d} ({v}).", timeDemo:"Gesimuleerd voorbeeld: herhaalmeting vier maanden na workshops over zelfcompassie en flow.", timeKey:"Grootste verbetering: {d} (+{x}). Kleinste verandering: {d2} ({y}).", timeNone:"Deze weergave is beschikbaar na de herhaalmeting (3–6 maanden na de workshops).", t1:"Eerste meting", t2:"Herhaalmeting",
+  rHow:"Elke score loopt van 0 tot 100. De achtergrondkleur toont de scoreklasse: rood = aandacht nodig, geel = gemiddeld, groen = sterk. Dit is een momentopname, geen diagnose."},
+ fa:{rvTabs:"نماهای گزارش", whatL:"چه می‌بینید", howL:"چطور بخوانید", keyL:"نکتهٔ اصلی", srcL:"منبع",
+  rv:{sum:["خلاصه","یافته‌های اصلی به زبان ساده.","نمره‌ها از ۰ تا ۱۰۰ است: ۰ یعنی پایین‌ترین پاسخ ممکن به همهٔ پرسش‌ها و ۱۰۰ بالاترین. زیر ۳۷٫۵ = نیازمند توجه، ۳۷٫۵ تا ۶۲٫۵ = متوسط، بالای ۶۲٫۵ = قوی."],
+   heat:["به تفکیک رده","میانگین نمرهٔ هر رده در هر بُعد.","هر ردیف را بخوانید تا رده‌ها را مقایسه کنید؛ هر ستون نیم‌رخ یک رده است. رنگ گرم یعنی نیازمند توجه، سبز یعنی قوی. گروه‌های کمتر از ۵ نفر پنهان‌اند."],
+   gap:["فاصلهٔ میان رده‌ها","برای هر بُعد: هر رده کجا قرار دارد، از پایین‌ترین تا بالاترین.","خط بلند یعنی رده‌ها این بُعد را خیلی متفاوت تجربه می‌کنند؛ این معمولاً به کار یا نقش برمی‌گردد، نه به افراد."],
+   dist:["پراکندگی","چند نفر در هر سطح قرار دارند، برای هر بُعد.","میانگین ممکن است گروهی را که حالش خوب نیست پنهان کند. بخش قرمز سهم کسانی است که نیاز به توجه دارند."],
+   prof:["نیم‌رخ هر رده","یک رده در مقایسه با کل سازمان.","نوار نمرهٔ آن رده است و خط باریک میانگین سازمان. عدد سمت دیگر تفاوت است: مثبت یعنی بهتر از میانگین."],
+   sub:["جزء‌های هر بُعد","بخش‌هایی که هر بُعد از آن‌ها ساخته شده است.","اگر بُعدی پایین است، اینجا می‌بینید کدام جزء آن را پایین کشیده و در نتیجه کدام کارگاه بیشتر کمک می‌کند. اینجا همیشه بالاتر یعنی بهتر."],
+   time:["روند در زمان","سنجش اول کنار سنجش دوباره.","نوار روشن = سنجش اول، نوار تیره = سنجش دوباره. تغییرهای کمتر از حدود ۳ امتیاز ممکن است تصادفی باشند."],
+   plan:["برنامهٔ اقدام","روی چه چیزی اول کار کنیم، برای چه کسانی و با کدام کارگاه.","بُعدی اولویت است که میانگینش زیر ۵۵ باشد یا بیش از ۲۵٪ افراد نیازمند توجه باشند."]},
+  kpiSub:["نفر شرکت کردند","رده با ۵ نفر یا بیشتر","میانگین همهٔ ابعاد (۰ تا ۱۰۰)","از همهٔ نمره‌ها در «نیازمند توجه»"],
+  sumN:"بر پایهٔ {n} پاسخ‌دهنده در {k} رده.", sumStrong:"قوی‌ترین: {a}.", sumWeak:"بیشترین نیاز به توجه: {d} ({m})؛ {p} افراد در «نیازمند توجه» هستند.", sumGap:"بیشترین فاصلهٔ میان رده‌ها: {d}، {hi} با {a} و {lo} با {b}.", sumNext:"قدم اول پیشنهادی: کارگاه «{w}»، بیشتر برای {who}.", and:" و ",
+  heatKey:"پایین‌ترین نمره: {lv} در {d} ({v}). بالاترین: {lv2} در {d2} ({v2}).", gapKey:"بیشترین فاصله: {d} — {lo} {a} در برابر {hi} {b} ({x} امتیاز).", distKey:"{d}: {p} افراد نیازمند توجه‌اند، هرچند میانگین {m} است.",
+  profSel:"رده", profUp:"{lv} در {a} بالاتر از میانگین سازمان است.", profDown:"{lv} در {b} پایین‌تر از میانگین سازمان است.", profFlat:"{lv} در همهٔ ابعاد نزدیک میانگین سازمان است.", orgAvg:"میانگین سازمان",
+  subKey:"پایین‌ترین جزء: {s} در {d} ({v}).", timeDemo:"نمونهٔ شبیه‌سازی‌شده: سنجش دوباره چهار ماه پس از کارگاه‌های شفقت به خود و غرقگی.", timeKey:"بیشترین بهبود: {d} (+{x}). کمترین تغییر: {d2} ({y}).", timeNone:"این نما پس از سنجش دوباره (۳ تا ۶ ماه پس از کارگاه‌ها) در دسترس است.", t1:"سنجش اول", t2:"سنجش دوباره",
+  rHow:"هر نمره از ۰ تا ۱۰۰ است. رنگ پس‌زمینه سطح را نشان می‌دهد: قرمز نیازمند توجه، زرد متوسط، سبز قوی. این یک تصویر لحظه‌ای است، نه تشخیص."}
+};
+for(const l of ["en","nl","fa"]) Object.assign(T[l], S[l]);
+const SHORT = {nea25:"TNO & CBS, NEA 2025", who22:"WHO & ILO, 2022", icd11:"WHO, ICD-11 (2019)", cbs26:"CBS, 2026", tno24:"TNO, 2024", arbo24:"TNO Arbobalans 2024", arbo18:"TNO Arbobalans 2018", mkb:"MKB Servicedesk, 2026", arbowet:"Arbowet", arbobes:"Arbobesluit", arboportaal:"Arboportaal (SZW)", wor:"WOR", gdpr:"AVG / GDPR"};
+window.REFS.forEach(r => { r.s = SHORT[r.id] || (() => { const m = r.t.match(/^([^,]+),.*?\((\d{4})/); if(!m) return r.t.slice(0, 40); const many = (r.t.split("(")[0].match(/&|,/g) || []).length > 1; return m[1] + (many ? " et al." : "") + ", " + m[2]; })(); });
+}
 }
 
 
@@ -1486,7 +1566,9 @@ addEventListener("hashchange", route);
 /* ── sources & citations ── */
 const REF_ORDER = () => { const inst = [...new Set(DIMS.map(D => D.inst))].map(id => ({id:"inst-" + id, g:"inst", t:INST[id].en + ". " + INST[id].ref, u:""})); return [...window.REFS, ...inst, {id:"course", g:"course", t:t("courseRef"), u:URLS.hub}]; };
 const refNo = id => REF_ORDER().findIndex(r => r.id === id) + 1;
-const cite = ids => (ids || []).filter(id => refNo(id) > 0).sort((x, y) => refNo(x) - refNo(y)).map(id => `<a class="cite" href="#sources" data-ref="${id}" title="${esc(t("srcSee"))}">[${num(refNo(id))}]</a>`).join("");
+const refOf = id => REF_ORDER().find(r => r.id === id);
+const cite = ids => (ids || []).filter(id => refNo(id) > 0).sort((x, y) => refNo(x) - refNo(y)).map(id => { const r = refOf(id); return r.u ? `<a class="cite" href="${r.u}" target="_blank" rel="noopener" title="${esc(r.t)}">[${num(refNo(id))}]</a>` : `<a class="cite" href="#sources" data-ref="${id}" title="${esc(r.t)}">[${num(refNo(id))}]</a>`; }).join("");
+const srcLine = ids => `<span class="srcl">${t("srcL")}: ${(ids || []).map(id => { const r = refOf(id); return r ? (r.u ? `<a href="${r.u}" target="_blank" rel="noopener" title="${esc(r.t)}">${esc(r.s || r.t)} ↗</a>` : esc(r.s || r.t)) : ""; }).join(" · ")}</span>`;
 let pendingRef = null, pendingGo = null;
 document.addEventListener("click", e => { const a = e.target.closest("[data-go]"); if(!a) return; const [v, id] = a.dataset.go.split(":");
   if((location.hash.slice(1) || "home") === v){ e.preventDefault(); document.getElementById(id)?.scrollIntoView({behavior:"smooth", block:"start"}); } else { pendingGo = id; } });
@@ -1527,7 +1609,7 @@ function renderHome(){
   </div>
   
   <section class="blk"><h2>${t("audT")}</h2><div class="aud">${t("paths").map(([ic, a, b, c, go]) => `<a class="card audc" href="#${go.split(":")[0]}" data-go="${go}"><span class="ric" aria-hidden="true">${ic}</span><b>${a}</b><p>${b}</p><span class="go">${c} ${L === "fa" ? "←" : "→"}</span></a>`).join("")}</div></section>
-  <section class="blk"><h2>${t("whyT")}</h2><p class="sub">${t("whyP")}</p><div class="why">${t("why").map(([a,b], i) => `<div class="card"><b>${a}</b><p>${b} ${cite(window.WHY_REFS[i])}</p></div>`).join("")}</div></section>
+  <section class="blk"><h2>${t("whyT")}</h2><p class="sub">${t("whyP")}</p><div class="why">${t("why").map(([a,b], i) => `<div class="card"><b>${a}</b><p>${b}</p>${srcLine(window.WHY_REFS[i])}</div>`).join("")}</div></section>
   <section class="blk"><h2>${t("measT")}</h2><p class="sub">${t("measP")}</p>
     <div class="grid">${DIMS.map(D => `<button class="card dim" aria-expanded="false"><span class="ic" style="background:${D.col}" aria-hidden="true">${ICON[D.id]}</span><b>${dn(D)}</b><p class="q">${D[L].q}</p>
       <div class="more"><p><b>${t("whatIs")}:</b> ${D[L].what}</p><p><b>${t("whatNot")}:</b> ${D[L].not}</p><p class="small muted">${instText(D.inst).name} · ${num(INST[D.inst].items.length)} ${t("items")}</p></div></button>`).join("")}</div></section>
@@ -1552,10 +1634,10 @@ function renderHome(){
         <div class="big"><b id="c-cost"></b><span>${t("cCost")}</span></div>
         <div class="big save"><b id="c-save"></b><span>${t("cSave")}</span></div>
       </div>
-      <p class="small muted" style="margin:14px 0 0"><span id="c-perday"></span> ${cite(["mkb"])}</p>
+      <p class="small muted" style="margin:14px 0 0"><span id="c-perday"></span></p><p style="margin:6px 0 0">${srcLine(["cbs26","arbo18","tno24","mkb"])}</p>
       <div class="callout" style="margin-top:12px"><div class="small">${t("cNote")}</div></div>
     </div></section>
-  <section class="blk arbo"><h2>${t("arboT")}</h2><p class="sub">${t("arboP")} ${cite(["arbowet","arbobes","arboportaal"])}</p>
+  <section class="blk arbo"><h2>${t("arboT")}</h2><p class="sub">${t("arboP")}<br>${srcLine(["arbowet","arbobes","arboportaal"])}</p>
     <div class="law">${t("arbo").map(([a,b]) => `<div class="card"><b>${a}</b><p>${b}</p></div>`).join("")}</div>
     <p class="small muted" style="margin:12px 0 0">${t("arboNote")}</p></section>
   <section class="blk split">
@@ -1563,7 +1645,7 @@ function renderHome(){
     <div class="card"><h2 style="font-size:1.3rem;margin-bottom:12px">${t("notT")}</h2><p style="margin:0">${t("not")}</p>
       <p class="small" style="margin:14px 0 0"><a href="#method">${t("nMethod")} ${L === "fa" ? "←" : "→"}</a> · <a href="#sources">${t("nSrc")} ${L === "fa" ? "←" : "→"}</a></p></div>
   </section>
-  <section class="blk"><h2>${t("lawT")}</h2><div class="law">${t("law").map(([a,b], i) => `<div class="card"><b>${a}</b><p>${b} ${cite(window.LAW_REFS[i])}</p></div>`).join("")}</div></section>
+  <section class="blk"><h2>${t("lawT")}</h2><div class="law">${t("law").map(([a,b], i) => `<div class="card"><b>${a}</b><p>${b}</p>${srcLine(window.LAW_REFS[i])}</div>`).join("")}</div></section>
   <section class="blk"><h2>${t("faqT")}</h2><div class="faq">${t("faq").map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("")}</div></section>
   <section class="ctaband" id="contact"><div><h2>${t("ctaT")}</h2><p>${t("ctaP")}</p>
       <div class="row" style="margin-top:14px"><a class="btn sec" href="#report">${t("ctaDemo")}</a><a class="btn sec" href="https://maryamjaberi.github.io/" target="_blank" rel="noopener">${t("ctaAbout")}</a></div></div>
@@ -1645,7 +1727,7 @@ function renderResult(){
   const strong = sorted.slice(0, 2), grow = sorted.slice(-2).reverse();
   const anyLow = ds.some(D => sc.d[D.id] < 30 && (D.id === "flex" || D.id === "compassion" || D.id === "belong"));
   const code = encode(R);
-  el.innerHTML = `<div class="take"><div class="kicker">${t("tRound")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("rT")}</h1><p class="lead">${t("rP")}</p>
+  el.innerHTML = `<div class="take"><div class="kicker">${t("tRound")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("rT")}</h1><p class="lead">${t("rP")}</p><div class="keyi" style="margin-top:14px"><p>${t("rHow")}</p></div>
    <div class="card" style="margin-top:20px">${miniBars(ds.map(D => [dn(D), sc.d[D.id]]))}<div class="legendb">${t("band").map((b, i) => `<span><i style="background:${BC[i]}"></i>${b}</span>`).join("")}</div></div>
    <div class="split" style="margin-top:14px">
     <div class="card"><b>${t("rStr")}</b>${strong.map(D => `<p style="margin:8px 0 0"><span class="pill b${band(sc.d[D.id])}">${dn(D)} · ${num(sc.d[D.id])}</span><br><span class="small">${D[L].b[band(sc.d[D.id])]}</span></p>`).join("")}</div>
@@ -1667,14 +1749,14 @@ function renderResult(){
 
 /* ── REPORT ── */
 const avg = a => { const v = a.filter(x => x != null); return v.length ? v.reduce((s, x) => s + x, 0) / v.length : null; };
-function demoData(){
-  let seed = 42; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+function demoData(seed0 = 42, shift = {}){
+  let seed = seed0; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
   const g = () => { let s = 0; for(let i = 0; i < 6; i++) s += rnd(); return (s - 3) / Math.sqrt(.5); };
   const base = {compassion:52, flex:63, optim:58, hope:66, belong:64, flow:50, ei:64, selfctrl:57};
   const off = {staff:{compassion:-4, flow:-9, belong:-5, hope:-3}, lead:{compassion:-8, flex:-6, selfctrl:2}, mid:{compassion:-12, flex:-9, flow:-2, optim:-5}, senior:{flow:12, hope:8, optim:9, belong:6}};
   const n = {staff:96, lead:38, mid:31, senior:15}; const out = [];
   for(const [lv, k] of Object.entries(n)) for(let i = 0; i < k; i++){ const d = {}, sub = {};
-    for(const D of DIMS){ d[D.id] = Math.max(2, Math.min(98, base[D.id] + ((off[lv] || {})[D.id] || 0) + g() * 15));
+    for(const D of DIMS){ d[D.id] = Math.max(2, Math.min(98, base[D.id] + (shift[D.id] || 0) + ((off[lv] || {})[D.id] || 0) + g() * 15));
       D.subs.forEach((s, j) => sub[D.inst + "." + s] = Math.max(2, Math.min(98, d[D.id] + g() * 10 + (j - D.subs.length / 2) * 3))); }
     out.push({lv, d, sub}); }
   return out;
@@ -1697,25 +1779,92 @@ function renderReport(){
   if(REP.src === "demo") srcExtra = `<p class="small muted" style="margin:10px 0 0">${t("pDemoNote")}</p>`;
   if(REP.src === "import") srcExtra = `<div class="card" style="margin-top:12px"><label class="f">${t("pImportP")}<textarea id="imp" placeholder="SJ1-…"></textarea></label><div class="row" style="margin-top:10px"><button class="btn pri" id="impgo">${t("pImportGo")}</button><span class="small muted">${num(REP.imported.length)} ${t("pN")}</span></div></div>`;
   if(REP.src === "live") srcExtra = `<div class="row" style="margin-top:12px"><label class="f" style="min-width:240px">${t("pChoose")}<select id="rsel">${REP.rounds.map(r => `<option value="${r.id}" ${REP.round === r.id ? "selected" : ""}>${esc(r.org)} · ${esc(r.title)} (${r.id})</option>`).join("")}</select></label></div>`;
+  const fmt = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k] ?? "");
+  const pct = x => num(x * 100) + PCT();
+  const LVC = {staff:"#1d6d74", lead:"#c9a227", mid:"#b5523b", senior:"#5b4a8b", student:"#5b6572"};
+  const okLv = lvs.filter(l => rows.filter(r => r.lv === l.id).length >= 5);
+  const lvCells = D => okLv.map(l => ({l, ...cell(D, l.id)}));
+  const join2 = a => a.join(t("and"));
+  const box = k => { const [h, what, how] = t("rv")[k]; return `<div class="rvhead"><h2>${h}</h2><div class="rvexp"><div><b>${t("whatL")}</b><p>${what}</p></div><div><b>${t("howL")}</b><p>${how}</p></div></div></div>`; };
+  const keyBox = s => s ? `<div class="keyi"><b>${t("keyL")}</b><p>${s}</p></div>` : "";
+  const legend = `<div class="legendb">${t("band").map((b, i) => `<span><i style="background:${BC[i]}"></i>${b}</span>`).join("")}</div>`;
+  const lvLegend = `<div class="legendb">${okLv.map(l => `<span><i style="background:${LVC[l.id]}"></i>${l[L]}</span>`).join("")}</div>`;
+  const tab = REP.tab || "sum";
+  let panel = "";
+  if(tab === "sum"){
+    const worst = [...all].sort((a, b) => a.m - b.m)[0];
+    const top = pri[0] || worst; const W = WS.find(w => w.dims.includes(top.D.id));
+    const who = lvCells(top.D).sort((a, b) => a.m - b.m).slice(0, 2).map(c => c.l[L]);
+    const lines = [fmt(t("sumN"), {n:num(rows.length), k:num(okLv.length)}),
+      fmt(t("sumStrong"), {a:join2(strengths.map(x => `${dn(x.D)} (${num(x.m)})`))}),
+      fmt(t("sumWeak"), {d:dn(worst.D), m:num(worst.m), p:pct(worst.low)}),
+      gap ? fmt(t("sumGap"), {d:dn(gap.D), hi:gap.hi[L], a:num(cell(gap.D, gap.hi.id).m), lo:gap.lo[L], b:num(cell(gap.D, gap.lo.id).m)}) : "",
+      W ? fmt(t("sumNext"), {w:W[L].t, who:join2(who)}) : ""].filter(Boolean);
+    panel = box("sum") + `<div class="split"><div class="card"><ul class="sumlist">${lines.map(x => `<li>${x}</li>`).join("")}</ul></div>
+      <div class="card">${miniBars(all.map(x => [dn(x.D), x.m]))}${legend}</div></div>`;
+  }
+  if(tab === "heat"){
+    const cs = []; dims.forEach(D => lvCells(D).forEach(c => cs.push({D, ...c})));
+    const lo = cs.reduce((a, b) => a.m < b.m ? a : b, cs[0]), hi = cs.reduce((a, b) => a.m > b.m ? a : b, cs[0]);
+    panel = box("heat") + `<div class="card scroll"><table class="heat"><thead><tr><th></th>${lvs.map(l => `<th>${l[L]}<br><span style="font-weight:400">${num(rows.filter(r => r.lv === l.id).length)}</span></th>`).join("")}<th>${L === "fa" ? "همه" : L === "nl" ? "Totaal" : "All"}</th></tr></thead><tbody>
+     ${dims.map(D => `<tr><th class="dn" scope="row">${dn(D)}</th>${lvs.map(l => { const c = cell(D, l.id); return c.n < 5 ? `<td class="na">${t("pHidden")}</td>` : `<td style="${heatCol(c.m)}">${num(c.m)}</td>`; }).join("")}${(() => { const c = cell(D); return `<td style="${heatCol(c.m)};outline:2px solid var(--rule)">${num(c.m)}</td>`; })()}</tr>`).join("")}</tbody></table>${legend}</div>`
+     + (lo ? keyBox(fmt(t("heatKey"), {lv:lo.l[L], d:dn(lo.D), v:num(lo.m), lv2:hi.l[L], d2:dn(hi.D), v2:num(hi.m)})) : "");
+  }
+  if(tab === "gap"){
+    const g = dims.map(D => { const c = lvCells(D); if(!c.length) return null; const mn = c.reduce((a, b) => a.m < b.m ? a : b), mx = c.reduce((a, b) => a.m > b.m ? a : b); return {D, c, mn, mx, w:mx.m - mn.m}; }).filter(Boolean).sort((a, b) => b.w - a.w);
+    panel = box("gap") + `<div class="card"><div class="dumb">${g.map(x => `<div class="dr"><span class="lab">${dn(x.D)}</span><div class="dtrk"><span class="dline" style="inset-inline-start:${x.mn.m}%;width:${x.w}%"></span>${x.c.map(c => `<i style="inset-inline-start:${c.m}%;background:${LVC[c.l.id]}" title="${esc(c.l[L])}: ${num(c.m)}"></i>`).join("")}</div><span class="v">${num(x.w)}</span></div>`).join("")}
+      <div class="dscale"><span>0</span><span>50</span><span>100</span></div></div>${lvLegend}</div>`
+      + (g[0] ? keyBox(fmt(t("gapKey"), {d:dn(g[0].D), lo:g[0].mn.l[L], a:num(g[0].mn.m), hi:g[0].mx.l[L], b:num(g[0].mx.m), x:num(g[0].w)})) : "");
+  }
+  if(tab === "dist"){
+    const hid = [...all].sort((a, b) => b.low - a.low)[0];
+    panel = box("dist") + `<div class="card"><div class="bars">${all.map(x => { const lo = x.low * 100, mi = x.mid * 100, hi = 100 - lo - mi; return `<div class="br"><span class="lab">${dn(x.D)}</span><div class="stack">${[[lo, "var(--low)"], [mi, "var(--mid)"], [hi, "var(--high)"]].map(([p, c]) => `<span style="width:${p}%;background:${c}">${p >= 9 ? num(p) + PCT() : ""}</span>`).join("")}</div><span class="v">${num(x.m)}</span></div>`; }).join("")}</div>${legend}</div>`
+      + (hid ? keyBox(fmt(t("distKey"), {d:dn(hid.D), p:pct(hid.low), m:num(hid.m)})) : "");
+  }
+  if(tab === "prof"){
+    const sel = okLv.find(l => l.id === REP.lvSel) || okLv[0];
+    if(sel){ const diffs = all.map(x => ({D:x.D, org:x.m, v:cell(x.D, sel.id).m})).map(x => ({...x, d:x.v - x.org}));
+      const up = [...diffs].sort((a, b) => b.d - a.d).filter(x => x.d > 2).slice(0, 2), dn2 = [...diffs].sort((a, b) => a.d - b.d).filter(x => x.d < -2).slice(0, 2);
+      panel = box("prof") + `<div class="card"><label class="f" style="max-width:280px;margin-bottom:14px">${t("profSel")}<select id="lvsel">${okLv.map(l => `<option value="${l.id}" ${l.id === sel.id ? "selected" : ""}>${l[L]} (${num(rows.filter(r => r.lv === l.id).length)})</option>`).join("")}</select></label>
+        <div class="bars">${diffs.map(x => `<div class="br br4"><span class="lab">${dn(x.D)}</span><div class="trk"><i style="width:${x.v}%;background:${BC[band(x.v)]}"></i><s style="inset-inline-start:${x.org}%" title="${t("orgAvg")}"></s></div><span class="v">${num(x.v)}</span><span class="dlt ${x.d >= 0 ? "pos" : "neg"}">${x.d >= 0 ? "+" : "−"}${num(Math.abs(x.d))}</span></div>`).join("")}</div>
+        <div class="legendb"><span><i style="background:var(--ink);width:2px;border-radius:0"></i>${t("orgAvg")}</span></div></div>`
+        + keyBox([up.length ? fmt(t("profUp"), {lv:sel[L], a:join2(up.map(x => dn(x.D)))}) : "", dn2.length ? fmt(t("profDown"), {lv:sel[L], b:join2(dn2.map(x => dn(x.D)))}) : ""].filter(Boolean).join(" ") || fmt(t("profFlat"), {lv:sel[L]}));
+    }
+  }
+  if(tab === "sub"){
+    const subs = dims.filter(D => D.subs.length).map(D => ({D, s:D.subs.map(k => ({k, n:window.SUBN[D.inst + "." + k][L], m:avg(rows.map(r => (r.sub || {})[D.inst + "." + k]))})).filter(x => x.m != null)})).filter(x => x.s.length);
+    let low = null; subs.forEach(x => x.s.forEach(s => { if(!low || s.m < low.m) low = {...s, D:x.D}; }));
+    panel = box("sub") + `<div class="subg">${subs.map(x => `<div class="card"><b>${dn(x.D)} <span class="pill b${band(cell(x.D).m)}">${num(cell(x.D).m)}</span></b><div style="margin-top:12px">${miniBars(x.s.map(s => [s.n, s.m]))}</div></div>`).join("")}</div>`
+      + (low ? keyBox(fmt(t("subKey"), {s:low.n, d:dn(low.D), v:num(low.m)})) : "");
+  }
+  if(tab === "time"){
+    if(REP.src !== "demo"){ panel = box("time") + `<div class="card"><p style="margin:0">${t("timeNone")}</p></div>`; }
+    else { const r2 = demoData(7, {compassion:6, flow:5, flex:1, belong:1}); const m2 = D => avg(r2.map(r => r.d[D.id]));
+      const ch = dims.map(D => ({D, a:cell(D).m, b:m2(D)})).map(x => ({...x, d:x.b - x.a})); const best = [...ch].sort((a, b) => b.d - a.d)[0], least = [...ch].sort((a, b) => Math.abs(a.d) - Math.abs(b.d))[0];
+      panel = box("time") + `<p class="small muted" style="margin:0 0 10px">${t("timeDemo")}</p><div class="card"><div class="bars">${ch.map(x => `<div class="br br4"><span class="lab">${dn(x.D)}</span><div class="pair"><div class="trk thin"><i style="width:${x.a}%;background:var(--accent);opacity:.35"></i></div><div class="trk thin"><i style="width:${x.b}%;background:var(--accent)"></i></div></div><span class="v">${num(x.b)}</span><span class="dlt ${x.d >= 0 ? "pos" : "neg"}">${x.d >= 0 ? "▲ +" : "▼ −"}${num(Math.abs(x.d))}</span></div>`).join("")}</div>
+        <div class="legendb"><span><i style="background:var(--accent);opacity:.35"></i>${t("t1")}</span><span><i style="background:var(--accent)"></i>${t("t2")}</span></div></div>`
+        + keyBox(fmt(t("timeKey"), {d:dn(best.D), x:num(best.d), d2:dn(least.D), y:(least.d >= 0 ? "+" : "−") + num(Math.abs(least.d))}));
+    }
+  }
+  if(tab === "plan"){
+    panel = box("plan") + `<div class="split" style="margin-bottom:14px"><div class="card"><b>${t("pStrengths")}</b><div class="chips" style="margin-top:8px">${strengths.map(x => `<span class="pill b2">${dn(x.D)} · ${num(x.m)}</span>`).join("")}</div></div>
+     ${gap ? `<div class="card"><b>${t("pGap")}</b><p style="margin:6px 0 0">${dn(gap.D)}: <b>${gap.hi[L]}</b> ${num(cell(gap.D, gap.hi.id).m)} ↔ <b>${gap.lo[L]}</b> ${num(cell(gap.D, gap.lo.id).m)}</p></div>` : ""}</div>
+     <div class="pri">${pri.length ? pri.map((x, i) => { const W = WS.find(w => w.dims.includes(x.D.id)); const tgt = lvCells(x.D).sort((a, b) => a.m - b.m).slice(0, 2);
+       return `<div class="card pcard"><span class="rank">${num(i + 1)}</span><div><h4>${dn(x.D)} <span class="pill b${band(x.m)}">${num(x.m)} · ${pct(x.low)} ${t("band")[0]}</span></h4>
+        <p style="margin:6px 0"><b>${t("pWhy")}:</b> ${x.D[L].b[band(x.m)]}</p>${tgt.length ? `<p class="small" style="margin:0"><b>${t("pFor")}:</b> ${tgt.map(c => c.l[L]).join(SEP())}</p>` : ""}
+        ${W ? `<div class="ws"><b>${W[L].t}</b> <span class="small muted">· ${W.len[L]}</span><div class="small">${W[L].goals.join(" · ")}</div><div class="row" style="gap:14px;margin-top:6px"><a class="small" href="#workshops">${t("nWs")} ${L === "fa" ? "←" : "→"}</a><a class="small" href="${mailto(t("pPlan") + ": " + W[L].t, W[L].t)}">${t("pPlan")}</a></div></div>` : ""}</div></div>`; }).join("") : `<div class="card">${t("pNoPri")}</div>`}</div>`;
+  }
+  const order = ["sum","heat","gap","dist","prof","sub","time","plan"];
   const body = !rows.length ? `<div class="card" style="margin-top:20px"><p>${t("pNone")}</p></div>` : `
    <div class="kpis" style="margin-top:20px">
-     <div class="card kpi"><b>${num(rows.length)}</b><span>${t("pN")}</span></div>
-     <div class="card kpi"><b>${num(lvs.length)}</b><span>${t("pLevels")}</span></div>
-     <div class="card kpi"><b>${num(avg(all.map(x => x.m)))}</b><span>${t("pAvg")}</span></div>
-     <div class="card kpi"><b>${num(avg(all.map(x => x.low)) * 100)}${PCT()}</b><span>${t("pLowShare")}</span></div>
+     <div class="card kpi"><b>${num(rows.length)}</b><span>${t("pN")}</span><small>${t("kpiSub")[0]}</small></div>
+     <div class="card kpi"><b>${num(okLv.length)}</b><span>${t("pLevels")}</span><small>${t("kpiSub")[1]}</small></div>
+     <div class="card kpi"><b>${num(avg(all.map(x => x.m)))}</b><span>${t("pAvg")}</span><small>${t("kpiSub")[2]}</small></div>
+     <div class="card kpi"><b>${pct(avg(all.map(x => x.low)))}</b><span>${t("pLowShare")}</span><small>${t("kpiSub")[3]}</small></div>
    </div>
-   <section class="blk"><h2>${t("pHeat")}</h2><p class="sub">${t("pHeatP")}</p><div class="card scroll"><table class="heat"><thead><tr><th></th>${lvs.map(l => `<th>${l[L]}<br><span style="font-weight:400">${num(rows.filter(r => r.lv === l.id).length)}</span></th>`).join("")}<th>${L === "fa" ? "همه" : L === "nl" ? "Totaal" : "All"}</th></tr></thead><tbody>
-     ${dims.map(D => `<tr><th class="dn" scope="row">${dn(D)}</th>${lvs.map(l => { const c = cell(D, l.id); return c.n < 5 ? `<td class="na">${t("pHidden")}</td>` : `<td style="${heatCol(c.m)}">${num(c.m)}</td>`; }).join("")}${(() => { const c = cell(D); return `<td style="${heatCol(c.m)};outline:2px solid var(--rule)">${num(c.m)}</td>`; })()}</tr>`).join("")}</tbody></table></div></section>
-   <section class="blk"><h2>${t("pDist")}</h2><p class="sub">${t("pDistP")}</p><div class="card"><div class="bars">${all.map(x => { const lo = x.low * 100, mi = x.mid * 100, hi = 100 - lo - mi; return `<div class="br"><span class="lab">${dn(x.D)}</span><div class="stack">${[[lo, "var(--low)"], [mi, "var(--mid)"], [hi, "var(--high)"]].map(([p, c]) => `<span style="width:${p}%;background:${c}">${p >= 9 ? num(p) + "٪".replace("٪", L === "fa" ? "٪" : "%") : ""}</span>`).join("")}</div><span class="v">${num(x.m)}</span></div>`; }).join("")}</div>
-     <div class="legendb">${t("band").map((b, i) => `<span><i style="background:${BC[i]}"></i>${b}</span>`).join("")}</div></div></section>
-   <section class="blk"><h2>${t("pPri")}</h2><p class="sub">${t("pPriP")}</p>
-     <div class="split" style="margin-bottom:14px"><div class="card"><b>${t("pStrengths")}</b><div class="chips" style="margin-top:8px">${strengths.map(x => `<span class="pill b2">${dn(x.D)} · ${num(x.m)}</span>`).join("")}</div></div>
-     ${gap ? `<div class="card"><b>${t("pGap")}</b><p style="margin:6px 0 0">${dn(gap.D)}: <b>${gap.hi[L]}</b> ${num(cell(gap.D, gap.hi.id).m)} ↔ <b>${gap.lo[L]}</b> ${num(cell(gap.D, gap.lo.id).m)}</p></div>` : ""}</div>
-     <div class="pri">${pri.length ? pri.map((x, i) => { const W = WS.find(w => w.dims.includes(x.D.id)); const tgt = lvs.map(l => ({l, ...cell(x.D, l.id)})).filter(c => c.n >= 5).sort((a, b) => a.m - b.m).slice(0, 2);
-       return `<div class="card pcard"><span class="rank">${num(i + 1)}</span><div><h4>${dn(x.D)} <span class="pill b${band(x.m)}">${num(x.m)} · ${num(x.low * 100)}${L === "fa" ? "٪" : "%"} ${t("band")[0]}</span></h4>
-        <p style="margin:6px 0"><b>${t("pWhy")}:</b> ${x.D[L].b[band(x.m)]}</p>${tgt.length ? `<p class="small" style="margin:0"><b>${t("pFor")}:</b> ${tgt.map(c => c.l[L]).join(L === "fa" ? "، " : ", ")}</p>` : ""}
-        ${W ? `<div class="ws"><b>${W[L].t}</b> <span class="small muted">· ${W.len[L]}</span><div class="small">${W[L].goals.join(" · ")}</div><div class="row" style="gap:14px;margin-top:6px"><a class="small" href="#workshops">${t("nWs")} ${L === "fa" ? "←" : "→"}</a><a class="small" href="${mailto(t("pPlan") + ": " + W[L].t, W[L].t)}">${t("pPlan")}</a></div></div>` : ""}</div></div>`; }).join("") : `<div class="card">${t("pNoPri")}</div>`}</div>
-     <div class="row" style="margin-top:14px"><button class="btn sec" id="csv">${t("pExport")}</button></div></section>`;
+   <nav class="rvtabs" aria-label="${t("rvTabs")}">${order.map(k => `<button data-rv="${k}" aria-pressed="${tab === k}">${t("rv")[k][0]}</button>`).join("")}</nav>
+   <section class="blk rvpanel" style="margin-top:14px">${panel}</section>
+   <div class="row" style="margin-top:14px"><button class="btn sec" id="csv">${t("pExport")}</button></div>`;
   const admin = !DB ? "" : `<section class="blk"><h2>${t("pAdmin")}</h2><p class="sub">${t("pAdminP")}</p>${CAN && DB ? `<div class="card"><form id="mk" class="split"><label class="f">${t("pOrg")}<input type="text" name="org" required maxlength="80"></label><label class="f">${t("pRoundName")}<input type="text" name="title" required maxlength="80"></label>
      <fieldset style="margin:0"><legend style="font-size:.93rem">${t("tPack")}</legend><div class="choice">${Object.keys(PACKS).map((p, i) => `<label><input type="radio" name="pk" value="${p}" ${i ? "checked" : ""}><span>${PACKS[p][L]}</span></label>`).join("")}</div></fieldset>
      <fieldset style="margin:0"><legend style="font-size:.93rem">${t("pLevels")}</legend><div class="choice">${LV.map(l => `<label><input type="checkbox" name="lv" value="${l.id}" ${l.id !== "student" ? "checked" : ""}><span>${l[L]}</span></label>`).join("")}</div></fieldset>
@@ -1723,6 +1872,8 @@ function renderReport(){
      ${REP.rounds.length ? `<h3 style="margin:20px 0 8px;font-size:1.05rem">${t("pRounds")}</h3><div style="display:grid;gap:8px">${REP.rounds.map(r => `<div class="row" style="justify-content:space-between;border-top:1px solid var(--rule);padding-top:8px"><span><b>${esc(r.org)}</b> · ${esc(r.title)} <span class="pill">${r.id}</span></span><span class="code" style="max-height:none;padding:4px 8px">${location.href.split("#")[0]}#join-${r.id.toLowerCase()}</span></div>`).join("")}</div>` : ""}</div>` : `<div class="callout">${t("pNoAdmin")}</div>`}</section>`;
   el.innerHTML = `<div class="kicker">${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("pT")}</h1><p class="lead">${t("pP")}</p><div style="margin-top:20px">${tabs}${srcExtra}</div>${body}${admin}`;
   el.querySelectorAll("[data-src]").forEach(b => b.onclick = () => { REP.src = b.dataset.src; if(REP.src === "live") subscribeRounds(); renderReport(); });
+  el.querySelectorAll("[data-rv]").forEach(b => b.onclick = () => { REP.tab = b.dataset.rv; const y = scrollY; renderReport(); scrollTo(0, y); });
+  const ls = document.getElementById("lvsel"); if(ls) ls.onchange = () => { REP.lvSel = ls.value; const y = scrollY; renderReport(); scrollTo(0, y); };
   const ig = document.getElementById("impgo"); if(ig) ig.onclick = () => { let k = 0; document.getElementById("imp").value.split(/\s+/).filter(Boolean).forEach(c => { try{ const o = decode(c); if(o && o.a){ REP.imported.push(o); k++; } }catch(e){} }); toast(num(k) + " " + t("pAdded")); renderReport(); };
   const rs = document.getElementById("rsel"); if(rs) rs.onchange = () => { REP.round = rs.value; loadLive(); };
   const mk = document.getElementById("mk"); if(mk) mk.onsubmit = async e => { e.preventDefault(); const f = new FormData(mk); const id = Array.from({length:6}, () => "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"[Math.floor(Math.random() * 32)]).join("");
