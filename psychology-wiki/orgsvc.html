@@ -265,6 +265,8 @@ footer.foot .wrap{gap:6px 18px;flex-wrap:wrap}
 .person.ph{border:2px dashed var(--rule);background:transparent;box-shadow:none}
 .av.ph{background:var(--wash);color:var(--muted);border:2px dashed var(--rule)}
 .person.ph b,.person.ph p{color:var(--muted)}
+.card.partner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:end;border-inline-start:4px solid var(--accent)}
+@media (max-width:700px){.card.partner{grid-template-columns:minmax(0,1fr)}}
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;z-index:50;font-weight:600}
 </style>
 
@@ -928,7 +930,7 @@ nl:{
  nHome:"Overzicht", nTake:"Vragenlijst invullen", nReport:"Organisatierapport", nWs:"Workshops", nMethod:"Methode", lang:"Taal",
  heroK:"Voor organisaties en onderwijsinstellingen",
  heroT:"Zie hoe het met het mentale welzijn van uw organisatie gesteld is, en waar u begint.",
- heroP:"Medewerkers vullen in ongeveer 15 minuten anoniem gevalideerde wetenschappelijke vragenlijsten in. Iedereen ziet direct een persoonlijke samenvatting; de organisatie krijgt een rapport per functieniveau, met wetenschappelijke duiding en een plan met aanbevolen workshops.",
+ heroP:"In ongeveer 15 minuten vullen medewerkers anoniem internationaal gevalideerde vragenlijsten in. Iedereen ziet direct een persoonlijke samenvatting; de organisatie krijgt een rapport per functieniveau, met wetenschappelijke duiding en een plan met aanbevolen workshops.",
  ctaTake:"Start de scan", ctaDemo:"Bekijk een voorbeeldrapport",
  f1:"8 dimensies", f1s:"Gemeten met 8 internationaal gevalideerde vragenlijsten", f2:"Anoniem", f2s:"Geen namen; groepen kleiner dan 5 worden nooit getoond", f3:"3 talen", f3s:"Perzisch, Engels en Nederlands",
  howT:"Hoe het werkt",
@@ -1280,6 +1282,88 @@ Object.assign(T.fa, {
  faq:T.fa.faq.map((x, i) => i === 4 ? ["در اجرای آزمایشی پاسخ‌ها چطور جمع می‌شوند؟","هر شرکت‌کننده یک کد پاسخ ناشناس (فقط عدد پاسخ‌ها و رده) را مستقیم برای SoloNovate ایمیل می‌کند، هرگز برای کارفرما. SoloNovate این ایمیل‌ها را پس از وارد کردن کد پاک می‌کند. برای اجرای کامل می‌توان گردآوری آنلاین امن راه انداخت."] : x),
  footer:"سنجش سلامت روانی سازمان از SoloNovate · نسخهٔ آزمایشی · غیرتشخیصی"
 });
+/* Review round (expert, HR, large-organisation and partner perspectives): honest framing as psychological resources, translation status, partner programme */
+{
+const repl = (arr, i, v) => arr.map((x, j) => j === i ? v : x);
+Object.assign(T.en, {
+ heroK:"For knowledge-intensive organisations · pilots from 20 employees",
+ how:repl(T.en.how, 0, ["Set up","We set up a survey round; your contact person shares the link with employees."]),
+ get:repl(T.en.get, 2, ["A workshop plan","Two or three workshops matched to your priorities, with format and duration."]),
+ need:[...T.en.need, "Roughly 3 hours of HR time in total, spread over four weeks"],
+ not:"It is not a clinical diagnosis and does not replace counselling or treatment. It measures psychological resources, such as self-compassion, flexibility and belonging, not burnout or workload. Its purpose is to see group patterns and choose the right support.",
+ arbo:[["A building block for the PSA part of your RI&E","PSA risks are mainly about the work itself: workload, autonomy, support and undesirable behaviour. This check adds the other side: which psychological resources your teams have, by job level. Use it alongside a work-conditions survey, not instead of it."],T.en.arbo[1],T.en.arbo[2]],
+ arboNote:"The check does not replace your RI&E, a survey of working conditions, or the review by a certified expert; it adds to them.",
+ law:repl(T.en.law, 1, ["Arbowet","Supports the employer's PSA policy (art. 3(2)) as one source next to the work-conditions part of the RI&E (Arbobesluit art. 2.15)."]),
+ act:repl(T.en.act, 2, ["Deliver","Workshops are run by an experienced psychologist or trainer from our partner network in the Netherlands, arranged by us: one point of contact from measurement to action."]),
+ wsPartner:"Delivery: each workshop is run by an experienced psychologist or trainer from our partner network in the Netherlands, arranged and coordinated by us.",
+ faq:[T.en.faq[0], T.en.faq[1], T.en.faq[2],
+  ["Are the questionnaires validated?","All eight are internationally published and validated in their original language, and we use their original scoring keys (see Method and Sources). The English items follow the original wording; the Dutch and Persian versions used here have not yet been validated separately in this form, so the pilot data are used to check the reliability of each scale. Licences for commercial use are being arranged with the authors."],
+  ["Does this measure work stress or burnout?","Not directly. It measures psychological resources that help people deal with pressure. Work-related risks such as workload and autonomy are measured with a survey of working conditions. The two complement each other, and we are happy to help you combine them."],
+  ["Does it work for large organisations?","Yes. A pilot can start with one department or location and then be extended. Anonymity rules stay the same at every size: results only for groups of at least 5 people."],
+  T.en.faq[4], T.en.faq[5]],
+ mBandsP:"Below 37.5: needs attention · 37.5 to 62.5: moderate · above 62.5: strong. These thresholds are conventions based on the scale range, not population norms or clinical cut-offs.",
+ mLimL:repl(T.en.mLimL, 2, "The questionnaires are validated in their original language and the English items follow the original wording. The Dutch and Persian versions used here have not been validated separately in this form; their reliability is checked in the pilot. For research, use the officially validated versions (see Sources)."),
+ for:[...T.en.for, ["Psychologists and trainers","Work with us as a workshop partner: we bring the data and the clients, you bring the expertise."]],
+ sizes:["20–50","50–250","250–1,000","1,000+","Other"],
+ by:"Inspired by the course \"Personal and Human Skills in Organisations and Educational Centres\" by Dr. Azarakhsh Mokri",
+ partT:"For psychologists and trainers", partP:"Do you run workshops or coaching for organisations? We are building a small network of partners.",
+ partL:["We do the measurement, the report and the client contact; you do what you are good at.","Every assignment starts with data: you know which themes and job levels need attention before the first session.","Workshop outlines with evidence and sources are ready to use and adapt.","You set your own rates and decide which assignments you take."],
+ partAsk:"We are looking for experience with groups in organisations, a relevant professional registration (for example NIP or BIG) and workshops in Dutch or English.",
+ partCta:"Become a partner", partSubj:"Partner enquiry — Wellbeing Check"
+});
+Object.assign(T.nl, {
+ heroK:"Voor kennisintensieve organisaties · pilots vanaf 20 medewerkers",
+ how:repl(T.nl.how, 0, ["Opzetten","Wij zetten een meetronde op; uw contactpersoon deelt de link met medewerkers."]),
+ get:repl(T.nl.get, 2, ["Een workshopplan","Twee of drie workshops die passen bij uw prioriteiten, met vorm en duur."]),
+ need:[...T.nl.need, "In totaal ongeveer 3 uur tijd van HR, verspreid over vier weken"],
+ not:"Het is geen klinische diagnose en vervangt geen begeleiding of behandeling. Het meet psychologische hulpbronnen, zoals zelfcompassie, flexibiliteit en verbondenheid, geen burn-out of werkdruk. Het doel is groepspatronen te zien en de juiste ondersteuning te kiezen.",
+ arbo:[["Een bouwsteen voor het PSA-deel van uw RI&E","PSA-risico's gaan vooral over het werk zelf: werkdruk, autonomie, steun en ongewenst gedrag. Deze scan voegt de andere kant toe: welke psychologische hulpbronnen uw teams hebben, per functieniveau. Gebruik hem naast een onderzoek naar arbeidsomstandigheden, niet in plaats daarvan."],T.nl.arbo[1],T.nl.arbo[2]],
+ arboNote:"De scan vervangt uw RI&E, een onderzoek naar arbeidsomstandigheden of de toetsing door een gecertificeerde deskundige niet; hij vult ze aan.",
+ law:repl(T.nl.law, 1, ["Arbowet","Ondersteunt het PSA-beleid van de werkgever (art. 3 lid 2) als één bron naast het deel over arbeidsomstandigheden in de RI&E (Arbobesluit art. 2.15)."]),
+ act:repl(T.nl.act, 2, ["Uitvoeren","De workshops worden gegeven door een ervaren psycholoog of trainer uit ons partnernetwerk in Nederland, door ons geregeld: één aanspreekpunt van meting tot actie."]),
+ wsPartner:"Uitvoering: elke workshop wordt gegeven door een ervaren psycholoog of trainer uit ons partnernetwerk in Nederland, door ons geregeld en gecoördineerd.",
+ faq:[T.nl.faq[0], T.nl.faq[1], T.nl.faq[2],
+  ["Zijn de vragenlijsten gevalideerd?","Alle acht zijn internationaal gepubliceerd en gevalideerd in hun oorspronkelijke taal, en we gebruiken hun oorspronkelijke scoringssleutels (zie Methode en Bronnen). De Engelse items volgen de oorspronkelijke formulering; de Nederlandse en Perzische versies die we hier gebruiken zijn in deze vorm nog niet apart gevalideerd, dus met de pilotdata controleren we de betrouwbaarheid per schaal. Licenties voor commercieel gebruik worden met de auteurs geregeld."],
+  ["Meet dit werkstress of burn-out?","Niet direct. Het meet psychologische hulpbronnen die mensen helpen met druk om te gaan. Werkgebonden risico's zoals werkdruk en autonomie meet u met een onderzoek naar arbeidsomstandigheden. De twee vullen elkaar aan, en we denken graag mee over het combineren."],
+  ["Werkt het ook voor grote organisaties?","Ja. Een pilot kan beginnen bij één afdeling of locatie en daarna worden uitgebreid. De anonimiteitsregels blijven bij elke omvang gelijk: uitkomsten alleen voor groepen van minimaal 5 personen."],
+  T.nl.faq[4], T.nl.faq[5]],
+ mBandsP:"Onder 37,5: aandacht nodig · 37,5 tot 62,5: gemiddeld · boven 62,5: sterk. Deze grenzen zijn afspraken op basis van het schaalbereik, geen populatienormen of klinische afkappunten.",
+ mLimL:repl(T.nl.mLimL, 2, "De vragenlijsten zijn gevalideerd in hun oorspronkelijke taal en de Engelse items volgen de oorspronkelijke formulering. De Nederlandse en Perzische versies die we hier gebruiken zijn in deze vorm niet apart gevalideerd; de betrouwbaarheid wordt in de pilot gecontroleerd. Gebruik voor onderzoek de officieel gevalideerde versies (zie Bronnen)."),
+ for:[...T.nl.for, ["Psychologen en trainers","Werk met ons samen als workshoppartner: wij brengen de data en de klanten, u de expertise."]],
+ sizes:["20–50","50–250","250–1.000","1.000+","Anders"],
+ by:"Geïnspireerd door de cursus \"Persoonlijke en menselijke vaardigheden in organisaties en onderwijsinstellingen\" van dr. Azarakhsh Mokri",
+ partT:"Voor psychologen en trainers", partP:"Geeft u workshops of coaching aan organisaties? We bouwen een klein netwerk van partners.",
+ partL:["Wij doen de meting, het rapport en het klantcontact; u doet waar u goed in bent.","Elke opdracht begint met data: u weet vóór de eerste sessie welke thema's en functieniveaus aandacht nodig hebben.","Workshopopzetten met onderbouwing en bronnen liggen klaar om te gebruiken en aan te passen.","U bepaalt uw eigen tarief en welke opdrachten u aanneemt."],
+ partAsk:"We zoeken ervaring met groepen in organisaties, een relevante beroepsregistratie (bijvoorbeeld NIP of BIG) en workshops in het Nederlands of Engels.",
+ partCta:"Partner worden", partSubj:"Aanmelding partner — Welzijnsscan"
+});
+Object.assign(T.fa, {
+ heroK:"برای سازمان‌های دانش‌محور · اجرای آزمایشی از ۲۰ نفر",
+ how:repl(T.fa.how, 0, ["راه‌اندازی","ما دورهٔ سنجش را راه می‌اندازیم و رابط سازمان پیوند آن را برای کارکنان می‌فرستد."]),
+ get:repl(T.fa.get, 2, ["برنامهٔ کارگاه","دو یا سه کارگاه متناسب با اولویت‌ها، با قالب و مدت."]),
+ need:[...T.fa.need, "در مجموع حدود ۳ ساعت وقت منابع انسانی، در طول چهار هفته"],
+ not:"تشخیص بالینی نیست و جای مشاوره یا درمان را نمی‌گیرد. «منابع روانی» مانند شفقت به خود، انعطاف‌پذیری و تعلق را می‌سنجد، نه فرسودگی یا فشار کاری را. هدفش دیدن الگوهای گروهی و انتخاب حمایت درست است.",
+ arbo:[["یک جزء از بخش PSA در RI&E","خطرهای PSA بیشتر به خود کار مربوط‌اند: حجم کار، اختیار، حمایت و رفتارهای ناپسند. این سنجش سوی دیگر را اضافه می‌کند: تیم‌ها به تفکیک رده چه منابع روانی‌ای دارند. آن را در کنار یک سنجش شرایط کار به کار ببرید، نه به جای آن."],T.fa.arbo[1],T.fa.arbo[2]],
+ arboNote:"این سنجش جای RI&E، سنجش شرایط کار یا بازبینی کارشناس دارای گواهی را نمی‌گیرد؛ آن‌ها را کامل می‌کند.",
+ law:repl(T.fa.law, 1, ["قانون شرایط کار (Arbowet)","به سیاست کارفرما دربارهٔ PSA (مادهٔ ۳ بند ۲) کمک می‌کند، به‌عنوان یک منبع در کنار بخش شرایط کار در RI&E (مادهٔ ۲.۱۵ آیین‌نامهٔ Arbobesluit)."]),
+ act:repl(T.fa.act, 2, ["اجرا","کارگاه‌ها را یک روان‌شناس یا مربی باتجربه از شبکهٔ همکاران ما در هلند اجرا می‌کند و هماهنگی با ماست؛ از سنجش تا اقدام فقط یک طرف حساب دارید."]),
+ wsPartner:"اجرا: هر کارگاه را یک روان‌شناس یا مربی باتجربه از شبکهٔ همکاران ما در هلند اجرا می‌کند؛ هماهنگی و پیگیری با ماست.",
+ faq:[T.fa.faq[0], T.fa.faq[1], T.fa.faq[2],
+  ["پرسشنامه‌ها معتبرند؟","هر هشت پرسشنامه در سطح بین‌المللی منتشر و در زبان اصلی‌شان اعتباریابی شده‌اند و ما کلید نمره‌گذاری اصلی‌شان را به کار می‌بریم (بخش روش علمی و منابع). گویه‌های انگلیسی همان متن اصلی‌اند؛ نسخه‌های هلندی و فارسیِ به‌کاررفته در اینجا هنوز به همین شکل جداگانه اعتباریابی نشده‌اند، پس با داده‌های اجرای آزمایشی پایایی هر مقیاس را بررسی می‌کنیم. مجوز استفادهٔ تجاری با پدیدآورندگان در حال هماهنگی است."],
+  ["این سنجش استرس شغلی یا فرسودگی را می‌سنجد؟","نه مستقیماً. منابع روانی‌ای را می‌سنجد که به آدم‌ها کمک می‌کند با فشار کنار بیایند. خطرهای کاری مثل حجم کار و اختیار را با سنجش شرایط کار می‌سنجند. این دو مکمل هم‌اند و در ترکیبشان کمکتان می‌کنیم."],
+  ["برای سازمان‌های بزرگ هم مناسب است؟","بله. اجرای آزمایشی می‌تواند از یک بخش یا یک شعبه شروع شود و بعد گسترش یابد. قاعدهٔ ناشناس بودن در هر اندازه‌ای یکسان است: نتیجه فقط برای گروه‌های دست‌کم ۵ نفره."],
+  T.fa.faq[4], T.fa.faq[5]],
+ mBandsP:"زیر ۳۷٫۵: نیازمند توجه · ۳۷٫۵ تا ۶۲٫۵: متوسط · بالای ۶۲٫۵: قوی. این مرزها قراردادی و بر پایهٔ دامنهٔ مقیاس‌اند، نه هنجار جمعیتی یا نقطهٔ برش بالینی.",
+ mLimL:repl(T.fa.mLimL, 2, "پرسشنامه‌ها در زبان اصلی‌شان اعتباریابی شده‌اند و گویه‌های انگلیسی همان متن اصلی‌اند. نسخه‌های هلندی و فارسیِ به‌کاررفته در اینجا به همین شکل جداگانه اعتباریابی نشده‌اند و پایایی‌شان در اجرای آزمایشی بررسی می‌شود؛ برای پژوهش از نسخه‌های رسمیِ اعتباریابی‌شده استفاده کنید (بخش منابع)."),
+ for:[...T.fa.for, ["روان‌شناسان و مربیان","به‌عنوان همکار کارگاه با ما کار کنید: داده و مشتری با ما، تخصص با شما."]],
+ sizes:["۲۰ تا ۵۰","۵۰ تا ۲۵۰","۲۵۰ تا ۱۰۰۰","بیش از ۱۰۰۰","دیگر"],
+ partT:"برای روان‌شناسان و مربیان", partP:"برای سازمان‌ها کارگاه یا کوچینگ برگزار می‌کنید؟ در حال ساختن یک شبکهٔ کوچک از همکاران هستیم.",
+ partL:["سنجش، گزارش و ارتباط با مشتری با ماست؛ شما کاری را می‌کنید که در آن بهترین هستید.","هر پروژه با داده شروع می‌شود: پیش از جلسهٔ اول می‌دانید کدام موضوع‌ها و رده‌ها نیاز به توجه دارند.","طرح کارگاه‌ها با پشتوانهٔ پژوهشی و منبع، آمادهٔ استفاده و تغییر است.","نرخ خودتان را تعیین می‌کنید و خودتان تصمیم می‌گیرید کدام پروژه را بپذیرید."],
+ partAsk:"به دنبال تجربهٔ کار گروهی در سازمان‌ها، عضویت حرفه‌ای مرتبط (مثلاً NIP یا BIG) و توان برگزاری کارگاه به هلندی یا انگلیسی هستیم.",
+ partCta:"همکار شوید", partSubj:"درخواست همکاری — سنجش سلامت سازمان"
+});
+}
+
 
 
 
@@ -1471,7 +1555,7 @@ function renderTake(){
   const el = document.getElementById("v-take");
   if(S && S.started && S.step < packInst(S.pack).length) return renderQ();
   const packs = ROUND ? [ROUND.pack] : Object.keys(PACKS);
-  const levels = ROUND && ROUND.levels ? LV.filter(l => ROUND.levels.includes(l.id)) : LV;
+  const levels = ROUND && ROUND.levels ? LV.filter(l => ROUND.levels.includes(l.id)) : LV.filter(l => l.id !== "student");
   const nItems = p => packInst(p).reduce((s, i) => s + INST[i].items.length, 0);
   el.innerHTML = `<div class="take"><div class="kicker">${t("tRound")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("tT")}</h1>
     <p class="lead">${joinCode ? `${t("tJoin")}: <b>${esc(ROUND ? ROUND.org + " · " + ROUND.title : joinCode)}</b>` : t("tSelf")}</p>
@@ -1661,6 +1745,7 @@ function renderProc(){
       <p class="small" style="margin:10px 0 0"><a href="${DOCS_BASE}privacy-participants.html" target="_blank" rel="noopener">${t("docs")["privacy-participants"][0]} ${L === "fa" ? "←" : "→"}</a></p></div>
   </section>
   <section class="blk"><h2>${t("docsT")}</h2><p class="sub">${t("docsP")}</p><div class="docs">${window.DOCLIST.map(d => { const [a, b] = t("docs")[d.slug]; return `<a class="card doc" href="${DOCS_BASE}${d.slug}.html${L === "en" ? "#en" : ""}" target="_blank" rel="noopener"><span class="dic" aria-hidden="true">${d.ic}</span><span class="pill">${t("aud")[d.aud]}</span><b>${a}</b><p>${b}</p><span class="small" style="color:var(--accent);font-weight:700">${t("open")} ${L === "fa" ? "←" : "→"}</span></a>`; }).join("")}</div></section>
+  <section class="blk"><div class="card partner"><div><h2 style="font-size:1.3rem;margin-bottom:6px">${t("partT")}</h2><p class="sub" style="margin:0 0 12px">${t("partP")}</p><ul class="check">${t("partL").map(x => `<li>${x}</li>`).join("")}</ul><p class="small muted" style="margin:10px 0 0">${t("partAsk")}</p></div><div><a class="btn pri" href="${mailto(t("partSubj"), "")}">${t("partCta")}</a></div></div></section>
   <section class="ctaband"><div><h2>${t("ctaT")}</h2><p>${t("ctaP")}</p></div><div class="row"><a class="btn" href="#home" onclick="setTimeout(()=>document.getElementById('contact')?.scrollIntoView(),60)">${t("fSend")}</a><a class="btn sec" href="#report">${t("ctaDemo")}</a></div></section>`;
 }
 /* ── SOURCES ── */
