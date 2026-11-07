@@ -48,6 +48,7 @@ input[type=search],input[type=text],input[type=number],select{font:inherit;font-
 footer.foot{margin-top:40px;border-top:1px solid var(--rule);padding-top:12px;font-size:.82rem;color:var(--muted)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 [hidden]{display:none!important}
+@media (max-width:600px){.chips.rail{flex-wrap:nowrap;display:flex;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px;margin-inline:-16px;padding-inline:16px}.chips.rail>*{flex:none}}
 
 .pick{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto;gap:10px;align-items:end}
 @media (max-width:720px){.pick{grid-template-columns:minmax(0,1fr)}}
@@ -125,19 +126,19 @@ function bfs(s, t, banned){
   return path;
 }
 const ELAB = {up:"زیرمجموعهٔ", down:"در برگیرندهٔ", x:"پیوند میان‌رشته‌ای با"};
-function nodeCard(id, end){
+function nodeCard(id, end, seen){
   const n = BY[id], f = field(id);
-  const pg = (n.w||[]).filter(k => URLS[k]).map(k => `<a href="${URLS[k]}" target="_blank" rel="noopener">${esc(LABEL[k]||k)}</a>`).join("");
+  const pg = (n.w||[]).filter(k => URLS[k] && !(seen && seen.has(k)) && (seen ? (seen.add(k), true) : true)).map(k => `<a href="${URLS[k]}" target="_blank" rel="noopener">${esc(LABEL[k]||k)}</a>`).join("");
   return `<div class="step${end?" end":""}" style="--fc:${fcol(id)}"><div class="rail"><span class="dot"></span></div>
     <div class="node"><h3>${esc(NM(n))}${LG === "fa" ? `<span class="en">${esc(n.en)}</span>` : ""}</h3><div class="fld">${f.id !== id ? esc(NM(f)) : "رشته"}</div>
     ${LG === "fa" ? `<p>${esc(n.s)}</p>${n.ppl && n.ppl.length ? `<div class="ppl">${n.ppl.map(esc).join(" · ")}</div>` : ""}` : ""}
     <div class="links"><a href="${GRAPH}#${id}" target="_blank" rel="noopener">در دنیای روان ↗</a>${pg}</div></div></div>`;
 }
 function render(path, title){
-  let h = "";
+  let h = ""; const seen = new Set();
   path.forEach(([id, ty], i) => {
     if (i > 0) h += `<div class="step"><div class="rail"></div><div class="edge">↓ <b>${ELAB[ty]}</b></div></div>`;
-    h += nodeCard(id, i === 0 || i === path.length - 1);
+    h += nodeCard(id, i === 0 || i === path.length - 1, seen);
   });
   return `<div class="chain">${h}</div>`;
 }
@@ -166,7 +167,7 @@ let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 214748364
 const POOL = N.filter(n => n.d >= 3 && n.w.length);
 function surprising(tries){ for (let k = 0; k < tries; k++){ const a = POOL[Math.floor(rnd()*POOL.length)], b = POOL[Math.floor(rnd()*POOL.length)];
   if (a.id === b.id || field(a.id).id === field(b.id).id) continue; const p = bfs(a.id, b.id, new Set()); if (p && p.length >= 4 && p.length <= 6) return [a.id, b.id]; } return null; }
-const pairs = []; while (pairs.length < 6) { const p = surprising(200); if (!p) break; if (!pairs.some(q => q[0]===p[0]||q[1]===p[1])) pairs.push(p); }
+const pairs = []; while (pairs.length < 4) { const p = surprising(200); if (!p) break; if (!pairs.some(q => q[0]===p[0]||q[1]===p[1])) pairs.push(p); }
 document.getElementById("pairs").innerHTML = pairs.map(([x,y]) => `<button class="chip" data-x="${x}" data-y="${y}">${esc(NM(BY[x]))} ↔ ${esc(NM(BY[y]))}</button>`).join("");
 document.getElementById("pairs").addEventListener("click", e => { const b = e.target.closest("[data-x]"); if (b) setPair(b.dataset.x, b.dataset.y); });
 document.getElementById("rnd").addEventListener("click", () => { seed = Math.floor(Math.random()*1e9) + 1; const p = surprising(300); if (p) setPair(...p); });
