@@ -1,0 +1,100 @@
+{
+ "id": "phil:trolley",
+ "kind": "concept",
+ "title": {
+  "fa": "مسئلهٔ تراموا و دو نظام داوری اخلاقی",
+  "en": "The trolley problem and two systems of moral judgment",
+  "nl": "Het trolleyprobleem en twee systemen van moreel oordeel"
+ },
+ "aliases": [],
+ "parent": "phil:ethics",
+ "field": "phil:ethics",
+ "summary": {
+  "fa": "تراموایی پنج نفر را می‌کشد؛ با کشیدن اهرم یک نفر می‌میرد. اکثریت اهرم را می‌کشند. اگر برای نجات پنج نفر باید یک نفر را از روی پل هل دهید، اکثریت نمی‌کنند. چرا؟ گرین نشان داد نسخهٔ دوم مناطق هیجانی مغز را درگیر می‌کند؛ اخلاق ما دو موتور دارد که همیشه با هم نمی‌خوانند.",
+  "en": "A trolley will kill five; pulling a lever kills one instead. Most pull. If saving five requires pushing one man off a bridge, most refuse. Why? Greene showed the second version engages emotional brain regions; our morality has two engines that do not always agree.",
+  "nl": "Een tram zal vijf mensen doden; een hendel overhalen doodt in plaats daarvan één. De meesten halen over. Als je om vijf te redden één man van een brug moet duwen, weigeren de meesten. Waarom? Greene toonde dat de tweede versie emotionele hersengebieden aanspreekt; onze moraal heeft twee motoren die niet altijd samengaan."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فوت (۱۹۶۷) و تامسون (۱۹۸۵): مسئله برای آزمودن «اصل اثر دوگانه» ساخته شد: فرق هست میان کشتن به‌عنوان وسیله (هل دادن) و مرگ به‌عنوان پیامد پیش‌بینی‌شده (اهرم).",
+    "en": "Foot (1967) and Thomson (1985): the problem was built to test the \"doctrine of double effect\": there is a difference between killing as a means (pushing) and death as a foreseen side effect (the lever).",
+    "nl": "Foot (1967) and Thomson (1985): the problem was built to test the \"doctrine of double effect\": there is a difference between killing as a means (pushing) and death as a foreseen side effect (the lever)."
+   },
+   "sources": [
+    "src:97a4e96aa0",
+    "src:c224580718"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گرین و همکاران (۲۰۰۱): معماهای «شخصی» (هل دادن) مناطق هیجانی و معماهای «غیرشخصی» (اهرم) مناطق کنترل شناختی را بیشتر فعال می‌کنند؛ «نظریهٔ دوفرایندی» داوری اخلاقی. تکرارها اصل الگو را تأیید و جزئیات آناتومیک را تعدیل کرده‌اند.",
+    "en": "Greene et al. (2001): \"personal\" dilemmas (pushing) activate emotional regions more, \"impersonal\" ones (the lever) cognitive-control regions; the \"dual-process theory\" of moral judgment. Replications have confirmed the broad pattern and revised the anatomical details.",
+    "nl": "Greene et al. (2001): \"personal\" dilemmas (pushing) activate emotional regions more, \"impersonal\" ones (the lever) cognitive-control regions; the \"dual-process theory\" of moral judgment. Replications have confirmed the broad pattern and revised the anatomical details."
+   },
+   "sources": [
+    "src:2a1a13399f"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "هایت (۲۰۰۱): داوری اخلاقی بیشتر شهودی و سریع است و استدلال بعداً برای توجیه می‌آید («سگ هیجانی و دم عقلانی‌اش»)؛ وقتی توجیهی پیدا نمی‌کنیم و باز هم بر داوری می‌مانیم، «لال شدن اخلاقی» رخ می‌دهد.",
+    "en": "Haidt (2001): moral judgment is mostly fast and intuitive, with reasoning arriving afterwards to justify (\"the emotional dog and its rational tail\"); when we find no justification yet hold the judgment, \"moral dumbfounding\" occurs.",
+    "nl": "Haidt (2001): moral judgment is mostly fast and intuitive, with reasoning arriving afterwards to justify (\"the emotional dog and its rational tail\"); when we find no justification yet hold the judgment, \"moral dumbfounding\" occurs."
+   },
+   "sources": [
+    "src:11a1bafc17"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:phil-ethics",
+   "rel": "same-as",
+   "note": {
+    "fa": "اخلاق در ویکی روان",
+    "en": "Ethics in the psychology wiki",
+    "nl": "Ethics in the psychology wiki"
+   }
+  },
+  {
+   "to": "psy:moral-hypocrisy",
+   "rel": "bridges",
+   "note": {
+    "fa": "ریاکاری اخلاقی",
+    "en": "Moral hypocrisy",
+    "nl": "Moral hypocrisy"
+   }
+  },
+  {
+   "to": "phil:three-theories",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "سه نظریهٔ اخلاقی",
+    "en": "The three moral theories",
+    "nl": "The three moral theories"
+   }
+  }
+ ],
+ "people": [
+  "core:philippa-foot",
+  "core:joshua-greene",
+  "core:jonathan-haidt"
+ ],
+ "sources": [
+  "src:11a1bafc17",
+  "src:2a1a13399f",
+  "src:97a4e96aa0",
+  "src:c224580718"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

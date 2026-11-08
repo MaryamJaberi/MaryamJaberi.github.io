@@ -1,0 +1,81 @@
+{
+ "id": "phil:knobe-effect",
+ "kind": "concept",
+ "title": {
+  "fa": "فلسفهٔ تجربی و اثر نوب",
+  "en": "Experimental philosophy and the Knobe effect",
+  "nl": "Experimentele filosofie en het Knobe-effect"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "مدیری برنامه‌ای را تصویب می‌کند که سود دارد و «اتفاقاً» به محیط زیست آسیب می‌زند؛ اکثریت می‌گویند عمداً آسیب زد. همان داستان با «اتفاقاً» به محیط زیست کمک می‌کند؛ اکثریت می‌گویند عمداً کمک نکرد. داوری اخلاقی ما مفهوم «قصد» را عوض می‌کند. فلسفهٔ تجربی به جای تکیه بر شهود فیلسوف در اتاقش، شهود مردم را می‌سنجد.",
+  "en": "A chairman approves a programme that makes profit and \"incidentally\" harms the environment; most say he harmed it intentionally. Same story but it incidentally helps the environment; most say he did not help intentionally. Our moral judgement changes the concept of \"intention\". Experimental philosophy measures people's intuitions instead of relying on the philosopher's intuition in his armchair.",
+  "nl": "Een bestuursvoorzitter keurt een programma goed dat winst maakt en \"toevallig\" het milieu schaadt; de meesten zeggen dat hij het opzettelijk schaadde. Hetzelfde verhaal maar het helpt toevallig het milieu; de meesten zeggen dat hij niet opzettelijk hielp. Ons morele oordeel verandert het begrip \"opzet\". Experimentele filosofie meet de intuïties van mensen in plaats van te vertrouwen op de intuïtie van de filosoof in zijn leunstoel."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نوب (۲۰۰۳): ۸۲ درصد در سناریوی آسیب گفتند «عمدی» و فقط ۲۳ درصد در سناریوی کمک؛ یافته‌ای که ده‌ها بار و در فرهنگ‌های مختلف تکرار شده و نشان می‌دهد مفاهیم «توصیفی» ما از ارزش‌داوری جدا نیستند.",
+    "en": "Knobe (2003): 82 percent in the harm scenario said \"intentionally\", only 23 percent in the help scenario; a finding replicated dozens of times across cultures, showing our \"descriptive\" concepts are not separate from evaluation.",
+    "nl": "Knobe (2003): 82 percent in the harm scenario said \"intentionally\", only 23 percent in the help scenario; a finding replicated dozens of times across cultures, showing our \"descriptive\" concepts are not separate from evaluation."
+   },
+   "sources": [
+    "src:0fb6d8f626"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فلسفهٔ تجربی (x-phi) از ۲۰۰۰ به بعد روش‌های روان‌شناسی را به پرسش‌های فلسفی آورد: آیا شهود دربارهٔ دانش، ارادهٔ آزاد یا هویت در فرهنگ‌های مختلف فرق می‌کند؟ پاسخ: کمتر از آنچه اول گمان می‌رفت، ولی نه هیچ.",
+    "en": "Experimental philosophy (x-phi) from 2000 on brought psychology's methods to philosophical questions: do intuitions about knowledge, free will or identity differ across cultures? Answer: less than first thought, but not nil.",
+    "nl": "Experimental philosophy (x-phi) from 2000 on brought psychology's methods to philosophical questions: do intuitions about knowledge, free will or identity differ across cultures? Answer: less than first thought, but not nil."
+   },
+   "sources": [
+    "src:0fb6d8f626"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "atlas:xphi",
+   "rel": "part-of",
+   "note": {
+    "fa": "پل فلسفهٔ تجربی",
+    "en": "The experimental philosophy bridge",
+    "nl": "The experimental philosophy bridge"
+   }
+  },
+  {
+   "to": "phil:trolley",
+   "rel": "see-also",
+   "note": {
+    "fa": "شهودهای اخلاقی",
+    "en": "Moral intuitions",
+    "nl": "Moral intuitions"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "bridges",
+   "note": {
+    "fa": "سوگیری‌های شناختی",
+    "en": "Cognitive biases",
+    "nl": "Cognitive biases"
+   }
+  }
+ ],
+ "people": [
+  "core:joshua-knobe"
+ ],
+ "sources": [
+  "src:0fb6d8f626"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

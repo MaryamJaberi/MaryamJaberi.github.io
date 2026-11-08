@@ -1,0 +1,97 @@
+{
+ "id": "phil:free-will",
+ "kind": "concept",
+ "title": {
+  "fa": "ارادهٔ آزاد: لیبت، فرانکفورت و سازگارگرایی",
+  "en": "Free will: Libet, Frankfurt and compatibilism",
+  "nl": "Vrije wil: Libet, Frankfurt en compatibilisme"
+ },
+ "aliases": [],
+ "parent": "phil:mind",
+ "field": "phil:mind",
+ "summary": {
+  "fa": "اگر هر تصمیم را حالت قبلی مغز تعیین می‌کند، آزادی کجاست؟ آزمایش لیبت نشان داد فعالیت مغز پیش از «احساس تصمیم» شروع می‌شود، اما تفسیرش محل بحث است. سازگارگرایان می‌گویند آزادی یعنی عمل کردن بر اساس خواسته‌هایی که خودت تأییدشان می‌کنی، نه رهایی از علیت.",
+  "en": "If every decision is fixed by the prior state of the brain, where is freedom? Libet's experiment showed brain activity begins before the \"feeling of deciding\", but its interpretation is disputed. Compatibilists say freedom means acting on desires you yourself endorse, not escaping causation.",
+  "nl": "Als elke beslissing wordt bepaald door de vorige toestand van het brein, waar is dan de vrijheid? Libets experiment toonde dat hersenactiviteit begint vóór het \"gevoel van beslissen\", maar de interpretatie is omstreden. Compatibilisten zeggen dat vrijheid betekent handelen naar verlangens die je zelf onderschrijft, niet ontsnappen aan causaliteit."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "لیبت (۱۹۸۳): «پتانسیل آمادگی» حدود ۳۵۰ میلی‌ثانیه پیش از آنکه آزمودنی گزارش کند «تصمیم گرفتم» آغاز می‌شود؛ خود لیبت نتیجه گرفت آگاهی حق «وتو» دارد.",
+    "en": "Libet (1983): the \"readiness potential\" begins about 350 milliseconds before the subject reports \"I decided\"; Libet himself concluded consciousness retains a \"veto\".",
+    "nl": "Libet (1983): the \"readiness potential\" begins about 350 milliseconds before the subject reports \"I decided\"; Libet himself concluded consciousness retains a \"veto\"."
+   },
+   "sources": [
+    "src:15efed7dc1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شورگر و همکاران (۲۰۱۲): پتانسیل آمادگی ممکن است نه «تصمیم ناخودآگاه»، که نوسان تصادفی فعالیت باشد که وقتی از آستانه بگذرد حرکت را می‌اندازد؛ یعنی آزمایش لیبت دربارهٔ ارادهٔ آزاد کمتر از آنچه مشهور شد می‌گوید.",
+    "en": "Schurger et al. (2012): the readiness potential may be not an \"unconscious decision\" but random fluctuation of activity that triggers movement when it crosses a threshold; so Libet's experiment says less about free will than its fame suggests.",
+    "nl": "Schurger et al. (2012): the readiness potential may be not an \"unconscious decision\" but random fluctuation of activity that triggers movement when it crosses a threshold; so Libet's experiment says less about free will than its fame suggests."
+   },
+   "sources": [
+    "src:c758d9c037"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "فرانکفورت (۱۹۷۱): شخص بودن یعنی داشتن «خواسته‌های مرتبهٔ دوم»: معتادی که می‌خواهد نخواهد، با معتادی که از اعتیادش راضی است فرق دارد؛ آزادی اراده یعنی هماهنگی خواسته‌ها با این مرتبهٔ بالاتر، فارغ از جبر فیزیکی.",
+    "en": "Frankfurt (1971): being a person means having \"second-order desires\": the addict who wishes not to want differs from the addict content with addiction; freedom of the will is the fit between desires and this higher order, regardless of physical determinism.",
+    "nl": "Frankfurt (1971): being a person means having \"second-order desires\": the addict who wishes not to want differs from the addict content with addiction; freedom of the will is the fit between desires and this higher order, regardless of physical determinism."
+   },
+   "sources": [
+    "src:2c51e9c7e5"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:akrasia",
+   "rel": "bridges",
+   "note": {
+    "fa": "ضعف اراده در ویکی روان",
+    "en": "Weakness of will in the psychology wiki",
+    "nl": "Weakness of will in the psychology wiki"
+   }
+  },
+  {
+   "to": "psy:addiction",
+   "rel": "bridges",
+   "note": {
+    "fa": "اعتیاد و خواسته‌های مرتبهٔ دوم",
+    "en": "Addiction and second-order desires",
+    "nl": "Addiction and second-order desires"
+   }
+  },
+  {
+   "to": "tabar:genetic-essentialism",
+   "rel": "bridges",
+   "note": {
+    "fa": "جبر ژنتیکی",
+    "en": "Genetic determinism",
+    "nl": "Genetic determinism"
+   }
+  }
+ ],
+ "people": [
+  "core:harry-frankfurt",
+  "core:daniel-dennett"
+ ],
+ "sources": [
+  "src:15efed7dc1",
+  "src:2c51e9c7e5",
+  "src:c758d9c037"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

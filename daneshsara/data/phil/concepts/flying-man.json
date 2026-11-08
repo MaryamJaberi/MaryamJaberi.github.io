@@ -1,0 +1,86 @@
+{
+ "id": "phil:flying-man",
+ "kind": "concept",
+ "title": {
+  "fa": "انسان معلق ابن سینا",
+  "en": "Avicenna's floating man",
+  "nl": "Avicenna's zwevende mens"
+ },
+ "aliases": [
+  "انسان پرنده",
+  "Flying man",
+  "Floating man"
+ ],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "تصور کن ناگهان آفریده شده‌ای، معلق در هوا، چشم بسته، بی‌هیچ حسی از بدن. ابن سینا می‌گوید حتی در این حال از وجود «خود» آگاهی. پس خودآگاهی به بدن و حواس وابسته نیست و نفس چیزی غیر از بدن است. این آزمایش فکری قرن یازدهم هنوز در فلسفهٔ ذهن نقل می‌شود.",
+  "en": "Imagine you were created suddenly, floating in air, eyes closed, with no sensation of your body. Avicenna says that even so you would be aware of your \"self\". Hence self-awareness does not depend on body or senses, and the soul is something other than the body. This eleventh-century thought experiment is still cited in philosophy of mind.",
+  "nl": "Stel je voor dat je plotseling werd geschapen, zwevend in de lucht, ogen dicht, zonder enig lichaamsgevoel. Avicenna zegt dat je ook dan je van je \"zelf\" bewust zou zijn. Dus hangt zelfbewustzijn niet af van lichaam of zintuigen, en is de ziel iets anders dan het lichaam. Dit gedachte-experiment uit de elfde eeuw wordt nog steeds aangehaald in de filosofie van de geest."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مرمورا (۱۹۸۶): استدلال در «شفا» و «اشارات» آمده و بیش از آنکه برهان باشد، «تنبیه» (یادآوری) است: توجه دادن به اینکه آگاهی از خود، پیش از هر ادراکی، همیشه حاضر است. شباهت و تفاوتش با کوگیتوی دکارت موضوع بحثی زنده است.",
+    "en": "Marmura (1986): the argument appears in the \"Shifa\" and the \"Isharat\" and is less a proof than a \"pointer\" (tanbih): drawing attention to the fact that self-awareness, before any perception, is always present. Its likeness to and difference from Descartes' cogito is a live debate.",
+    "nl": "Marmura (1986): the argument appears in the \"Shifa\" and the \"Isharat\" and is less a proof than a \"pointer\" (tanbih): drawing attention to the fact that self-awareness, before any perception, is always present. Its likeness to and difference from Descartes' cogito is a live debate."
+   },
+   "sources": [
+    "src:fceff29ae7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آدامسون (۲۰۱۶): ابن سینا نظریهٔ نفس ارسطو را با استدلال‌های تازه به سمت جوهر مستقل برد و فلسفهٔ ذهن قرون وسطای لاتین (از جمله توماس آکویناس) را عمیقاً شکل داد.",
+    "en": "Adamson (2016): Avicenna pushed Aristotle's theory of soul toward an independent substance with new arguments and deeply shaped Latin medieval philosophy of mind (including Thomas Aquinas).",
+    "nl": "Adamson (2016): Avicenna pushed Aristotle's theory of soul toward an independent substance with new arguments and deeply shaped Latin medieval philosophy of mind (including Thomas Aquinas)."
+   },
+   "sources": [
+    "src:67b0ad90cf"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:skepticism-cogito",
+   "rel": "see-also",
+   "note": {
+    "fa": "کوگیتوی دکارت",
+    "en": "Descartes' cogito",
+    "nl": "Descartes' cogito"
+   }
+  },
+  {
+   "to": "phil:hard-problem",
+   "rel": "see-also",
+   "note": {
+    "fa": "آگاهی و بدن",
+    "en": "Consciousness and body",
+    "nl": "Consciousness and body"
+   }
+  },
+  {
+   "to": "phil:illumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "علم حضوری سهروردی",
+    "en": "Suhrawardi's knowledge by presence",
+    "nl": "Suhrawardi's knowledge by presence"
+   }
+  }
+ ],
+ "people": [
+  "core:avicenna"
+ ],
+ "sources": [
+  "src:67b0ad90cf",
+  "src:fceff29ae7"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

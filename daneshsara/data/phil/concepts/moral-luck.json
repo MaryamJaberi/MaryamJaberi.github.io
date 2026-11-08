@@ -1,0 +1,84 @@
+{
+ "id": "phil:moral-luck",
+ "kind": "concept",
+ "title": {
+  "fa": "بخت اخلاقی",
+  "en": "Moral luck",
+  "nl": "Moreel geluk"
+ },
+ "aliases": [],
+ "parent": "phil:ethics",
+ "field": "phil:ethics",
+ "summary": {
+  "fa": "دو راننده با یک بی‌احتیاطی: جلوی یکی کودکی می‌پرد و می‌میرد، جلوی دیگری نه. اولی قاتل است و دومی فقط بی‌احتیاط؛ اما تنها فرقشان شانس بود. اگر فقط آنچه در کنترل ماست اخلاقاً مهم است، پس تقریباً هیچ‌چیز مهم نیست: شخصیت، موقعیت و نتیجه همه تا حد زیادی بخت‌اند.",
+  "en": "Two drivers equally careless: a child runs in front of one and dies, not the other. The first is a killer, the second merely careless; yet the only difference was luck. If only what is in our control matters morally, almost nothing matters: character, circumstance and outcome are all largely luck.",
+  "nl": "Twee even onvoorzichtige bestuurders: voor de een rent een kind de weg op en sterft, voor de ander niet. De eerste is een doder, de tweede slechts onvoorzichtig; toch was het enige verschil geluk. Als alleen wat in onze macht ligt moreel telt, telt bijna niets: karakter, omstandigheid en uitkomst zijn grotendeels geluk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ویلیامز (۱۹۸۱) و نیگل (۱۹۷۹): چهار نوع بخت اخلاقی: نتیجه، موقعیت (آلمانی ۱۹۳۳ در برابر آلمانی مهاجر به آرژانتین)، سرشت (مزاجی که با آن به دنیا آمده‌ای) و علّی. شهود «فقط کنترل مهم است» با شهودهای روزمرهٔ سرزنش ناسازگار است و این تناقض حل نشده است.",
+    "en": "Williams (1981) and Nagel (1979): four kinds of moral luck: resultant, circumstantial (a German in 1933 versus one who emigrated to Argentina), constitutive (the temperament you were born with) and causal. The intuition \"only control matters\" conflicts with our everyday intuitions of blame, and the paradox is unresolved.",
+    "nl": "Williams (1981) and Nagel (1979): four kinds of moral luck: resultant, circumstantial (a German in 1933 versus one who emigrated to Argentina), constitutive (the temperament you were born with) and causal. The intuition \"only control matters\" conflicts with our everyday intuitions of blame, and the paradox is unresolved."
+   },
+   "sources": [
+    "src:3ad423b7df",
+    "src:be9c4483b2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با ژنتیک و جامعه: اگر خویشتن‌داری و هوش تا حدی وراثتی و طبقه تا حدی ارثی است، «شایستگی» بیش از آنچه می‌پنداریم بخت است؛ استدلالی که هاردن و رالز هر دو به‌کار گرفته‌اند.",
+    "en": "Link to genetics and society: if self-control and intelligence are partly heritable and class partly inherited, \"merit\" is more luck than we assume; an argument used by both Harden and Rawls.",
+    "nl": "Link to genetics and society: if self-control and intelligence are partly heritable and class partly inherited, \"merit\" is more luck than we assume; an argument used by both Harden and Rawls."
+   },
+   "sources": [
+    "src:3ad423b7df"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:heritability",
+   "rel": "bridges",
+   "note": {
+    "fa": "بخت سرشتی و وراثت‌پذیری",
+    "en": "Constitutive luck and heritability",
+    "nl": "Constitutive luck and heritability"
+   }
+  },
+  {
+   "to": "phil:veil-of-ignorance",
+   "rel": "see-also",
+   "note": {
+    "fa": "رالز: استعدادها دارایی مشترک‌اند",
+    "en": "Rawls: talents as a common asset",
+    "nl": "Rawls: talents as a common asset"
+   }
+  },
+  {
+   "to": "psy:learned-helplessness",
+   "rel": "bridges",
+   "note": {
+    "fa": "کنترل و درماندگی",
+    "en": "Control and helplessness",
+    "nl": "Control and helplessness"
+   }
+  }
+ ],
+ "people": [
+  "core:bernard-williams",
+  "core:thomas-nagel"
+ ],
+ "sources": [
+  "src:3ad423b7df",
+  "src:be9c4483b2"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

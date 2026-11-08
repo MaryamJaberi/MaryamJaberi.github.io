@@ -1,0 +1,96 @@
+{
+ "id": "phil:paradigms",
+ "kind": "concept",
+ "title": {
+  "fa": "پارادایم‌ها و انقلاب‌های علمی",
+  "en": "Paradigms and scientific revolutions",
+  "nl": "Paradigma's en wetenschappelijke revoluties"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "کوهن با نگاه تاریخی نشان داد علم بیشتر وقت‌ها «عادی» است: حل معما درون یک پارادایم (مجموعه‌ای از فرض‌ها، روش‌ها و نمونه‌های الگو). ناهنجاری‌ها انباشته می‌شوند تا بحران و سپس انقلاب: پارادایم تازه‌ای که با قبلی «قیاس‌ناپذیر» است. پیشرفت علم خطی و انباشتی نیست.",
+  "en": "Kuhn, looking at history, showed science is mostly \"normal\": puzzle-solving within a paradigm (a set of assumptions, methods and exemplars). Anomalies accumulate until crisis and then revolution: a new paradigm \"incommensurable\" with the old. Scientific progress is not linear and cumulative.",
+  "nl": "Kuhn toonde historisch dat wetenschap meestal \"normaal\" is: puzzels oplossen binnen een paradigma (een geheel van aannames, methoden en voorbeelden). Anomalieën stapelen zich op tot crisis en dan revolutie: een nieuw paradigma dat \"incommensurabel\" is met het oude. Wetenschappelijke vooruitgang is niet lineair en cumulatief."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کوهن (۱۹۶۲): دانشمندانِ پارادایم‌های رقیب تا حدی «در جهان‌های متفاوت» کار می‌کنند و حتی داده را متفاوت می‌بینند؛ گذار به پارادایم تازه شبیه «تغییر گشتالت» است و با دلیل صرف انجام نمی‌شود. منتقدان این را نسبی‌گرایی خواندند؛ کوهن انکار کرد.",
+    "en": "Kuhn (1962): scientists of rival paradigms work partly \"in different worlds\" and even see data differently; the shift to a new paradigm resembles a \"gestalt switch\" and is not made by argument alone. Critics called this relativism; Kuhn denied it.",
+    "nl": "Kuhn (1962): scientists of rival paradigms work partly \"in different worlds\" and even see data differently; the shift to a new paradigm resembles a \"gestalt switch\" and is not made by argument alone. Critics called this relativism; Kuhn denied it."
+   },
+   "sources": [
+    "src:1d46a7c051"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "داگلاس (۲۰۰۹): آرمان «علمِ خالی از ارزش» ناممکن است، چون هر پذیرش فرضیه خطر خطا دارد و اینکه چقدر شاهد «کافی» است به پیامدهای خطا (ارزش‌ها) بستگی دارد؛ ارزش‌ها نقش مشروع ولی غیرمستقیم دارند.",
+    "en": "Douglas (2009): the ideal of \"value-free science\" is impossible, because accepting any hypothesis risks error, and how much evidence is \"enough\" depends on the consequences of error (values); values have a legitimate but indirect role.",
+    "nl": "Douglas (2009): the ideal of \"value-free science\" is impossible, because accepting any hypothesis risks error, and how much evidence is \"enough\" depends on the consequences of error (values); values have a legitimate but indirect role."
+   },
+   "sources": [
+    "src:c6bde39ef4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "روان‌شناسی و روان‌پزشکی نمونهٔ خوبی از «علم چندپارادایمی»اند: روان‌کاوی، رفتارگرایی، شناخت‌گرایی و عصب‌زیست‌شناسی هم‌زمان زیسته‌اند؛ بحث «نظام تشخیص» (DSM در برابر ابعادی) جدال پارادایمی زنده است.",
+    "en": "Psychology and psychiatry are good examples of a \"multi-paradigm science\": psychoanalysis, behaviourism, cognitivism and neurobiology have coexisted; the \"diagnostic system\" debate (DSM versus dimensional) is a live paradigm struggle.",
+    "nl": "Psychology and psychiatry are good examples of a \"multi-paradigm science\": psychoanalysis, behaviourism, cognitivism and neurobiology have coexisted; the \"diagnostic system\" debate (DSM versus dimensional) is a live paradigm struggle."
+   },
+   "sources": [
+    "src:1d46a7c051"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:falsification",
+   "rel": "contrasts",
+   "note": {
+    "fa": "پوپر",
+    "en": "Popper",
+    "nl": "Popper"
+   }
+  },
+  {
+   "to": "psy:dimensional-dx",
+   "rel": "bridges",
+   "note": {
+    "fa": "تشخیص ابعادی در برابر مقوله‌ای",
+    "en": "Dimensional versus categorical diagnosis",
+    "nl": "Dimensional versus categorical diagnosis"
+   }
+  },
+  {
+   "to": "psy:p-history",
+   "rel": "bridges",
+   "note": {
+    "fa": "تاریخ روان‌شناسی",
+    "en": "The history of psychology",
+    "nl": "The history of psychology"
+   }
+  }
+ ],
+ "people": [
+  "core:thomas-kuhn",
+  "core:heather-douglas"
+ ],
+ "sources": [
+  "src:1d46a7c051",
+  "src:c6bde39ef4"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

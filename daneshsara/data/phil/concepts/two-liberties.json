@@ -1,0 +1,85 @@
+{
+ "id": "phil:two-liberties",
+ "kind": "concept",
+ "title": {
+  "fa": "دو مفهوم آزادی",
+  "en": "Two concepts of liberty",
+  "nl": "Twee begrippen van vrijheid"
+ },
+ "aliases": [],
+ "parent": "phil:political",
+ "field": "phil:political",
+ "summary": {
+  "fa": "برلین: آزادی «منفی» یعنی نبودن مانع بیرونی (کسی جلویم را نگیرد)؛ آزادی «مثبت» یعنی ارباب خود بودن و تحقق «خودِ واقعی». او هشدار داد مفهوم دوم به‌راحتی به استبداد می‌انجامد: کسی که ادعا می‌کند «خودِ واقعی» تو را بهتر از تو می‌شناسد، به نام آزادی‌ات تو را مجبور می‌کند.",
+  "en": "Berlin: \"negative\" liberty is the absence of external obstacles (no one stops me); \"positive\" liberty is being one's own master and realising the \"true self\". He warned that the second easily turns to tyranny: whoever claims to know your \"true self\" better than you will coerce you in the name of your freedom.",
+  "nl": "Berlin: \"negatieve\" vrijheid is de afwezigheid van uiterlijke belemmeringen (niemand houdt me tegen); \"positieve\" vrijheid is meester over zichzelf zijn en het \"ware zelf\" verwezenlijken. Hij waarschuwde dat het tweede gemakkelijk in tirannie omslaat: wie beweert jouw \"ware zelf\" beter te kennen dan jij, zal je dwingen in naam van jouw vrijheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "برلین (۱۹۵۸): ارزش‌های انسانی «کثرت‌گرا» و گاه ناسازگارند (آزادی و برابری، عدالت و رحمت)؛ هیچ نظام واحدی همه را با هم تحقق نمی‌دهد و ادعای چنین نظامی خطرناک است. از این‌جا دفاع او از کثرت‌گرایی لیبرال می‌آید.",
+    "en": "Berlin (1958): human values are \"plural\" and sometimes incompatible (liberty and equality, justice and mercy); no single system realises them all, and claiming such a system is dangerous. Hence his defence of liberal pluralism.",
+    "nl": "Berlin (1958): human values are \"plural\" and sometimes incompatible (liberty and equality, justice and mercy); no single system realises them all, and claiming such a system is dangerous. Hence his defence of liberal pluralism."
+   },
+   "sources": [
+    "src:3f08753416"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آرنت (۱۹۶۳): «ابتذال شر»: آیشمن نه هیولا که کارمندی بی‌فکر بود که وظیفه انجام می‌داد؛ شر بزرگ از ناتوانی در اندیشیدن از منظر دیگری برمی‌آید. پیوند با آزمایش میلگرام و روان‌شناسی اطاعت. نقدها: شواهد بعدی نشان داد آیشمن ایدئولوژیک‌تر از تصویر آرنت بود.",
+    "en": "Arendt (1963): the \"banality of evil\": Eichmann was not a monster but a thoughtless functionary doing his job; great evil arises from the inability to think from another's standpoint. Links to Milgram and the psychology of obedience. Critiques: later evidence showed Eichmann more ideological than Arendt's portrait.",
+    "nl": "Arendt (1963): the \"banality of evil\": Eichmann was not a monster but a thoughtless functionary doing his job; great evil arises from the inability to think from another's standpoint. Links to Milgram and the psychology of obedience. Critiques: later evidence showed Eichmann more ideological than Arendt's portrait."
+   },
+   "sources": [
+    "src:0053354674"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:autonomy",
+   "rel": "bridges",
+   "note": {
+    "fa": "خودمختاری",
+    "en": "Autonomy",
+    "nl": "Autonomy"
+   }
+  },
+  {
+   "to": "psy:dehumanization",
+   "rel": "bridges",
+   "note": {
+    "fa": "انسان‌زدایی و اطاعت",
+    "en": "Dehumanization and obedience",
+    "nl": "Dehumanization and obedience"
+   }
+  },
+  {
+   "to": "phil:capabilities",
+   "rel": "see-also",
+   "note": {
+    "fa": "قابلیت به‌عنوان آزادی مثبت سنجش‌پذیر",
+    "en": "Capability as measurable positive liberty",
+    "nl": "Capability as measurable positive liberty"
+   }
+  }
+ ],
+ "people": [
+  "core:isaiah-berlin",
+  "core:hannah-arendt"
+ ],
+ "sources": [
+  "src:0053354674",
+  "src:3f08753416"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

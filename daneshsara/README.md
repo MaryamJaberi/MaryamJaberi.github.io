@@ -30,3 +30,6 @@ python3 build/site.py <site dir>
 
 ## ویکی جامعه (soc)
 - `build/soc_seed.py` (با `build/seedlib.py`) → ۲۹ گره (ریشه، ۶ حوزه، ۲۱ مدخل)، ۵ یادداشت «برای ایران» (اعتماد، جینی، تغییر ارزش‌ها، دین‌داری، شهرنشینی)، ۴۵ منبع. `python3 build/reader.py soc` → `soc/index.html`.
+
+## ویکی فلسفه (phil)
+- `build/phil_seed.py` → ۳۰ گره (ریشه، ۷ حوزه، ۲۲ مدخل) از معرفت‌شناسی و ذهن تا فلسفهٔ ایرانی‌اسلامی؛ ۴۵ منبع. `python3 build/reader.py phil` → `phil/index.html`.

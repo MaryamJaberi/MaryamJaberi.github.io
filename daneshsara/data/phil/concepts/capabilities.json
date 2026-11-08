@@ -1,0 +1,96 @@
+{
+ "id": "phil:capabilities",
+ "kind": "concept",
+ "title": {
+  "fa": "رویکرد قابلیت‌ها",
+  "en": "The capabilities approach",
+  "nl": "De capabilities-benadering"
+ },
+ "aliases": [],
+ "parent": "phil:political",
+ "field": "phil:political",
+ "summary": {
+  "fa": "سن و نوسبام: توسعه و عدالت را نه با درآمد یا رضایت، که با «قابلیت‌ها» بسنجید: آنچه آدم‌ها واقعاً می‌توانند باشند و بکنند (سالم زیستن، آموختن، مشارکت، ابراز خود). دو نفر با درآمد برابر می‌توانند قابلیت‌های بسیار نابرابر داشته باشند. فهرست ده‌گانهٔ نوسبام پایهٔ لایهٔ «برای ایران» در دانش‌سراست.",
+  "en": "Sen and Nussbaum: measure development and justice not by income or satisfaction but by \"capabilities\": what people can actually be and do (live healthily, learn, participate, express themselves). Two people with equal incomes can have very unequal capabilities. Nussbaum's list of ten underlies Daneshsara's \"for Iran\" layer.",
+  "nl": "Sen en Nussbaum: meet ontwikkeling en rechtvaardigheid niet aan inkomen of tevredenheid maar aan \"capabilities\": wat mensen werkelijk kunnen zijn en doen (gezond leven, leren, deelnemen, zich uiten). Twee mensen met gelijk inkomen kunnen zeer ongelijke capabilities hebben. Nussbaums lijst van tien ligt ten grondslag aan de laag \"voor Iran\" in Daneshsara."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سن (۱۹۹۹): آزادی هم هدف توسعه است هم وسیله‌اش؛ قحطی در دموکراسی‌های دارای مطبوعات آزاد رخ نداده است. شاخص توسعهٔ انسانی سازمان ملل از همین رویکرد زاده شد.",
+    "en": "Sen (1999): freedom is both the end and the means of development; no famine has occurred in a democracy with a free press. The UN Human Development Index was born of this approach.",
+    "nl": "Sen (1999): freedom is both the end and the means of development; no famine has occurred in a democracy with a free press. The UN Human Development Index was born of this approach."
+   },
+   "sources": [
+    "src:8dcb40e0c8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نوسبام (۲۰۱۱): ده قابلیت مرکزی: زندگی؛ سلامت بدنی؛ یکپارچگی بدنی؛ حس و تخیل و اندیشه؛ عواطف؛ عقل عملی؛ پیوستگی (با دیگران و احترام)؛ دیگر گونه‌ها؛ بازی؛ کنترل بر محیط سیاسی و مادی. هر جامعه باید «آستانه‌ای» از هر یک را برای همه تضمین کند.",
+    "en": "Nussbaum (2011): ten central capabilities: life; bodily health; bodily integrity; senses, imagination and thought; emotions; practical reason; affiliation (with others and respect); other species; play; control over one's political and material environment. Every society should guarantee a \"threshold\" of each for all.",
+    "nl": "Nussbaum (2011): ten central capabilities: life; bodily health; bodily integrity; senses, imagination and thought; emotions; practical reason; affiliation (with others and respect); other species; play; control over one's political and material environment. Every society should guarantee a \"threshold\" of each for all."
+   },
+   "sources": [
+    "src:4d85b3dee0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: فهرست «پدرسالارانه» و غربی خوانده شده؛ سن عمداً فهرست نمی‌دهد و آن را به گفت‌وگوی عمومی هر جامعه می‌سپارد. اندازه‌گیری قابلیت‌ها دشوارتر از اندازه‌گیری درآمد است.",
+    "en": "Critique: the list has been called \"paternalistic\" and Western; Sen deliberately gives no list, leaving it to each society's public deliberation. Measuring capabilities is harder than measuring income.",
+    "nl": "Critique: the list has been called \"paternalistic\" and Western; Sen deliberately gives no list, leaving it to each society's public deliberation. Measuring capabilities is harder than measuring income."
+   },
+   "sources": [
+    "src:8dcb40e0c8"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:veil-of-ignorance",
+   "rel": "critiques",
+   "note": {
+    "fa": "رالز و «کالاهای اولیه»",
+    "en": "Rawls and \"primary goods\"",
+    "nl": "Rawls and \"primary goods\""
+   }
+  },
+  {
+   "to": "soc:mobility",
+   "rel": "bridges",
+   "note": {
+    "fa": "نابرابری فرصت",
+    "en": "Inequality of opportunity",
+    "nl": "Inequality of opportunity"
+   }
+  },
+  {
+   "to": "psy:autonomy",
+   "rel": "bridges",
+   "note": {
+    "fa": "خودمختاری در روان‌شناسی",
+    "en": "Autonomy in psychology",
+    "nl": "Autonomy in psychology"
+   }
+  }
+ ],
+ "people": [
+  "core:amartya-sen",
+  "core:martha-nussbaum"
+ ],
+ "sources": [
+  "src:4d85b3dee0",
+  "src:8dcb40e0c8"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
