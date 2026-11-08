@@ -8,9 +8,11 @@ B = json.load(open(f'{R}/atlas/bridges.json', encoding='utf-8'))
 keep = ('id', 'fam', 'par', 'fa', 'en', 'nl', 'q', 'ppl', 'b', 'wikis')
 fields = [{k: f[k] for k in keep if k in f} for f in A['fields']]
 bridges = {k: {'people': v.get('people', []), 'title': v.get('title')} for k, v in B.items()}
+people = json.load(open(f'{R}/core/people.json', encoding='utf-8'))
+PN = {v['name']['fa']: k.split(':')[1] for k, v in people.items()}
 tpl = open(f'{HERE}/lands.tpl.html', encoding='utf-8').read()
 out = (tpl.replace('__FAM__', json.dumps(A['fam'], ensure_ascii=False))
           .replace('__FIELDS__', json.dumps(fields, ensure_ascii=False))
-          .replace('__BRIDGES__', json.dumps(bridges, ensure_ascii=False)))
+          .replace('__BRIDGES__', json.dumps(bridges, ensure_ascii=False)).replace('__PN__', json.dumps(PN, ensure_ascii=False)))
 open(f'{R}/atlas/lands.html', 'w', encoding='utf-8').write(out)
 print('lands.html', len(out), 'fields', len(fields), 'bridges', len(bridges))
