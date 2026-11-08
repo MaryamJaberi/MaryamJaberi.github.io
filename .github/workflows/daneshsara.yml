@@ -7,7 +7,7 @@ on:
     paths: ['daneshsara/**']
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,9 +22,3 @@ jobs:
         run: |
           for w in daneshsara/data/*/; do w=$(basename "$w"); [ "$w" = psy ] || python3 daneshsara/build/reader.py "$w"; done
           python3 daneshsara/build/lands.py
-      - name: Commit regenerated pages (push only)
-        if: github.event_name == 'push'
-        run: |
-          git config user.name "daneshsara-bot"; git config user.email "actions@users.noreply.github.com"
-          git add daneshsara/core/registry.json daneshsara/*/index.html daneshsara/atlas/lands.html
-          git diff --cached --quiet || (git commit -m "build: regenerate registry and pages [skip ci]" && git push)
