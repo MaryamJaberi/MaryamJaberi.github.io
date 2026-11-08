@@ -1,0 +1,81 @@
+{
+ "id": "phil:language-games",
+ "kind": "concept",
+ "title": {
+  "fa": "بازی‌های زبانی و معنا به‌مثابهٔ کاربرد",
+  "en": "Language games and meaning as use",
+  "nl": "Taalspelen en betekenis als gebruik"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "ویتگنشتاینِ متأخر: معنای واژه، شیء یا تصویری در ذهن نیست؛ کاربرد آن در یک «بازی زبانی» و شکل زندگی است. بسیاری از مسئله‌های فلسفی («ذهن چیست؟») از بیرون کشیدن واژه از بازی‌اش پدید می‌آیند. استدلال زبان خصوصی می‌گوید زبانی که فقط برای یک نفر معنا داشته باشد ممکن نیست.",
+  "en": "The later Wittgenstein: a word's meaning is not an object or a picture in the mind but its use within a \"language game\" and a form of life. Many philosophical problems (\"what is mind?\") arise from pulling a word out of its game. The private language argument says a language meaningful to only one person is impossible.",
+  "nl": "De latere Wittgenstein: de betekenis van een woord is geen object of beeld in de geest, maar zijn gebruik binnen een \"taalspel\" en een levensvorm. Veel filosofische problemen (\"wat is geest?\") ontstaan door een woord uit zijn spel te trekken. Het privétaalargument zegt dat een taal die slechts voor één persoon betekenis heeft, onmogelijk is."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ویتگنشتاین (۱۹۵۳): «بازی» را نمی‌شود با یک تعریف مشترک تعریف کرد؛ بازی‌ها «شباهت خانوادگی» دارند. این مفهوم به روان‌شناسی مقوله‌بندی (نمونه‌های اولیهٔ راش) و به بحث «اختلال روانی چیست» راه یافت: شاید اختلال‌ها هم فقط شباهت خانوادگی داشته باشند.",
+    "en": "Wittgenstein (1953): \"game\" cannot be defined by one shared feature; games bear \"family resemblances\". The idea passed into the psychology of categorisation (Rosch's prototypes) and into the debate on \"what is a mental disorder\": perhaps disorders too only share family resemblances.",
+    "nl": "Wittgenstein (1953): \"game\" cannot be defined by one shared feature; games bear \"family resemblances\". The idea passed into the psychology of categorisation (Rosch's prototypes) and into the debate on \"what is a mental disorder\": perhaps disorders too only share family resemblances."
+   },
+   "sources": [
+    "src:0755e72be8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیامد برای روان‌شناسی: «چرا می‌ترسی؟» را نباید همیشه با جست‌وجوی یک حالت درونی پاسخ داد؛ بخشی از معنای واژه‌های ذهنی در رفتار و بافت است. از این‌جا تا رفتارگرایی منطقی یک قدم است، که ویتگنشتاین خودش برنداشت.",
+    "en": "A consequence for psychology: \"why are you afraid?\" need not always be answered by seeking an inner state; part of the meaning of mental words lies in behaviour and context. From here to logical behaviourism is one step, which Wittgenstein himself did not take.",
+    "nl": "A consequence for psychology: \"why are you afraid?\" need not always be answered by seeking an inner state; part of the meaning of mental words lies in behaviour and context. From here to logical behaviourism is one step, which Wittgenstein himself did not take."
+   },
+   "sources": [
+    "src:0755e72be8"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:phil-psychiatry",
+   "rel": "bridges",
+   "note": {
+    "fa": "اختلال چیست؟",
+    "en": "What is a disorder?",
+    "nl": "What is a disorder?"
+   }
+  },
+  {
+   "to": "psy:dx",
+   "rel": "bridges",
+   "note": {
+    "fa": "تشخیص و شباهت خانوادگی",
+    "en": "Diagnosis and family resemblance",
+    "nl": "Diagnosis and family resemblance"
+   }
+  },
+  {
+   "to": "phil:hard-problem",
+   "rel": "contrasts",
+   "note": {
+    "fa": "ویتگنشتاین «مسئلهٔ دشوار» را سردرگمی زبانی می‌دانست",
+    "en": "Wittgenstein would call the \"hard problem\" a linguistic confusion",
+    "nl": "Wittgenstein would call the \"hard problem\" a linguistic confusion"
+   }
+  }
+ ],
+ "people": [
+  "core:ludwig-wittgenstein"
+ ],
+ "sources": [
+  "src:0755e72be8"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

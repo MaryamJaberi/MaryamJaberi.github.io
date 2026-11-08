@@ -1,0 +1,83 @@
+{
+ "id": "phil:cave",
+ "kind": "concept",
+ "title": {
+  "fa": "تمثیل غار",
+  "en": "The allegory of the cave",
+  "nl": "De allegorie van de grot"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "زندانیانی که از کودکی رو به دیوار بسته‌اند، سایه‌ها را واقعیت می‌پندارند؛ کسی که آزاد می‌شود و خورشید را می‌بیند، وقتی برمی‌گردد باور نمی‌شود و حتی تهدید می‌شود. افلاطون این را دربارهٔ آموزش و فیلسوف‌پادشاه گفت؛ امروز استعارهٔ هر حباب اطلاعاتی و هر «بیداری» است.",
+  "en": "Prisoners chained since childhood facing a wall take shadows for reality; one who is freed and sees the sun is disbelieved, even threatened, when he returns. Plato told it about education and the philosopher-king; today it is the metaphor for every information bubble and every \"awakening\".",
+  "nl": "Gevangenen die sinds hun kindertijd geketend naar een muur kijken, houden schaduwen voor werkelijkheid; wie bevrijd wordt en de zon ziet, wordt bij terugkeer niet geloofd, zelfs bedreigd. Plato vertelde het over opvoeding en de filosoof-koning; vandaag is het de metafoor voor elke informatiebubbel en elk \"ontwaken\"."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "افلاطون (جمهور، کتاب هفتم): آموزش «ریختن دانش در روح» نیست، چرخاندن کل روح از سایه به نور است؛ و کسی که دیده، وظیفه دارد به غار برگردد، هرچند به زیانش باشد.",
+    "en": "Plato (Republic, Book VII): education is not \"pouring knowledge into the soul\" but turning the whole soul from shadow to light; and the one who has seen has a duty to go back down into the cave, even at his own cost.",
+    "nl": "Plato (Republic, Book VII): education is not \"pouring knowledge into the soul\" but turning the whole soul from shadow to light; and the one who has seen has a duty to go back down into the cave, even at his own cost."
+   },
+   "sources": [
+    "src:cb319b234e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خوانش انتقادی: تمثیل به‌راحتی ابزار نخبه‌گرایی می‌شود («ما نور را دیده‌ایم، شما سایه را»)؛ هر گروهی که خود را بیرون غار می‌داند، باید بپرسد سایه‌های خودش کدام‌اند. سهروردی و روایت‌های اشراقی همین تصویر را با نور بازنوشتند.",
+    "en": "A critical reading: the allegory easily becomes a tool of elitism (\"we have seen the light, you the shadows\"); any group that places itself outside the cave should ask which shadows are its own. Suhrawardi and the Illuminationist narratives rewrote the same image with light.",
+    "nl": "A critical reading: the allegory easily becomes a tool of elitism (\"we have seen the light, you the shadows\"); any group that places itself outside the cave should ask which shadows are its own. Suhrawardi and the Illuminationist narratives rewrote the same image with light."
+   },
+   "sources": [
+    "src:cb319b234e"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:conspiracy",
+   "rel": "bridges",
+   "note": {
+    "fa": "توطئه‌باوری و «بیداری»",
+    "en": "Conspiracy belief and \"awakening\"",
+    "nl": "Conspiracy belief and \"awakening\""
+   }
+  },
+  {
+   "to": "phil:illumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "اشراق",
+    "en": "Illumination",
+    "nl": "Illumination"
+   }
+  },
+  {
+   "to": "soc:preference-falsification",
+   "rel": "bridges",
+   "note": {
+    "fa": "آنچه همه می‌بینند و نمی‌گویند",
+    "en": "What everyone sees and no one says",
+    "nl": "What everyone sees and no one says"
+   }
+  }
+ ],
+ "people": [
+  "core:plato"
+ ],
+ "sources": [
+  "src:cb319b234e"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

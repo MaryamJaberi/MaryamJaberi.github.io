@@ -1,0 +1,82 @@
+{
+ "id": "soc:iran-fertility",
+ "kind": "concept",
+ "title": {
+  "fa": "گذار باروری ایران: از ۶٫۵ به زیر ۲",
+  "en": "Iran's fertility transition: from 6.5 to below 2",
+  "nl": "De Iraanse vruchtbaarheidstransitie: van 6,5 naar onder de 2"
+ },
+ "aliases": [],
+ "parent": "soc:demography",
+ "field": "soc:demography",
+ "summary": {
+  "fa": "یکی از سریع‌ترین افت‌های باروری ثبت‌شده در جهان: میانگین فرزند هر زن از حدود ۶٫۵ در اوایل دههٔ ۱۳۶۰ به حدود ۲ در ۱۳۷۹ و زیر ۲ پس از آن رسید؛ با سواد زنان، شهرنشینی، شبکهٔ بهداشت روستایی و برنامهٔ تنظیم خانواده. سیاست‌های تشویقی دههٔ ۱۳۹۰ روند را برنگرداندند.",
+  "en": "One of the fastest fertility declines ever recorded: children per woman fell from about 6.5 in the early 1980s to about 2 in 2000 and below 2 after; driven by women's literacy, urbanisation, the rural health network and the family planning programme. Pronatalist policies of the 2010s did not reverse the trend.",
+  "nl": "Een van de snelste vruchtbaarheidsdalingen ooit geregistreerd: kinderen per vrouw daalde van zo'n 6,5 begin jaren tachtig naar ongeveer 2 in 2000 en daaronder nadien; gedreven door alfabetisering van vrouwen, verstedelijking, het rurale gezondheidsnetwerk en het gezinsplanningsprogramma. Pronatalistisch beleid in de jaren 2010 keerde de trend niet."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "عباسی‌شوازی، مک‌دونالد و حسینی‌چاووشی (۲۰۰۹): افت باروری در همهٔ استان‌ها، شهر و روستا و همهٔ سطوح سواد رخ داد؛ عامل کلیدی، تغییر «ایده‌آل خانواده» و دسترسی به وسایل پیشگیری از راه خانه‌های بهداشت بود، نه فقط توسعهٔ اقتصادی.",
+    "en": "Abbasi-Shavazi, McDonald and Hosseini-Chavoshi (2009): fertility fell in every province, in cities and villages and at all literacy levels; the key factors were a changed \"family ideal\" and access to contraception through rural health houses, not economic development alone.",
+    "nl": "Abbasi-Shavazi, McDonald and Hosseini-Chavoshi (2009): fertility fell in every province, in cities and villages and at all literacy levels; the key factors were a changed \"family ideal\" and access to contraception through rural health houses, not economic development alone."
+   },
+   "sources": [
+    "src:cded26c9f1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سازمان ملل (۲۰۲۴): نرخ باروری کل ایران حدود ۱٫۷؛ جمعیت در میانهٔ قرن به اوج می‌رسد و سپس سالمند می‌شود. همین الگو در ترکیه، تونس و بسیاری از کشورهای اسلامی دیده می‌شود و «استثنای فرهنگی» را رد می‌کند.",
+    "en": "United Nations (2024): Iran's total fertility rate about 1.7; population peaks mid-century and then ages. The same pattern appears in Turkey, Tunisia and many other Muslim countries, refuting a \"cultural exception\".",
+    "nl": "United Nations (2024): Iran's total fertility rate about 1.7; population peaks mid-century and then ages. The same pattern appears in Turkey, Tunisia and many other Muslim countries, refuting a \"cultural exception\"."
+   },
+   "sources": [
+    "src:67de606631"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:demographic-transition",
+   "rel": "part-of",
+   "note": {
+    "fa": "نمونه‌ای از گذار جمعیتی",
+    "en": "A case of demographic transition",
+    "nl": "A case of demographic transition"
+   }
+  },
+  {
+   "to": "soc:value-change",
+   "rel": "explains",
+   "note": {
+    "fa": "تغییر ایده‌آل خانواده",
+    "en": "The changed family ideal",
+    "nl": "The changed family ideal"
+   }
+  },
+  {
+   "to": "soc:urbanism",
+   "rel": "see-also",
+   "note": {
+    "fa": "شهرنشینی",
+    "en": "Urbanisation",
+    "nl": "Urbanisation"
+   }
+  }
+ ],
+ "people": [
+  "core:mohammad-jalal-abbasi-shavazi"
+ ],
+ "sources": [
+  "src:67de606631",
+  "src:cded26c9f1"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:fertility",
+ "wikidata": null,
+ "status": "draft"
+}

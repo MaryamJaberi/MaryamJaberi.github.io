@@ -1,14 +1,14 @@
 {
 "stats": {
-"concepts": 371,
-"concepts_with_sources": 332,
-"cross_wiki_links": 90,
+"concepts": 379,
+"concepts_with_sources": 338,
+"cross_wiki_links": 95,
 "bridge_links": 133,
-"iran_notes": 15,
+"iran_notes": 16,
 "fields": 77,
 "bridges": 25,
-"people": 629,
-"sources": 669,
+"people": 630,
+"sources": 678,
 "built": "2026-11-08"
 },
 "entries": {
@@ -3396,6 +3396,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:demographic-transition": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "گذار جمعیتی",
+"en": "The demographic transition",
+"nl": "De demografische transitie"
+},
+"url": "soc/#demographic-transition",
+"status": "draft",
+"wikidata": null
+},
 "soc:institutions-inclusive": {
 "wiki": "soc",
 "type": "concept",
@@ -3636,6 +3648,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:demography": {
+"wiki": "soc",
+"type": "field",
+"title": {
+"fa": "جمعیت",
+"en": "Population",
+"nl": "Bevolking"
+},
+"url": "soc/#demography",
+"status": "draft",
+"wikidata": null
+},
 "soc:secularization": {
 "wiki": "soc",
 "type": "concept",
@@ -3693,6 +3717,18 @@
 "nl": "Urbanisme als levenswijze"
 },
 "url": "soc/#urbanism",
+"status": "draft",
+"wikidata": null
+},
+"soc:iran-fertility": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "گذار باروری ایران: از ۶٫۵ به زیر ۲",
+"en": "Iran's fertility transition: from 6.5 to below 2",
+"nl": "De Iraanse vruchtbaarheidstransitie: van 6,5 naar onder de 2"
+},
+"url": "soc/#iran-fertility",
 "status": "draft",
 "wikidata": null
 },
@@ -3852,6 +3888,18 @@
 "status": "draft",
 "wikidata": null
 },
+"tabar:human-genome": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "ژنوم انسان: ۹۹٫۹ درصد مشترک",
+"en": "The human genome: 99.9 percent shared",
+"nl": "Het menselijk genoom: 99,9 procent gedeeld"
+},
+"url": "tabar/#human-genome",
+"status": "draft",
+"wikidata": null
+},
 "tabar:iranian-genetic-diversity": {
 "wiki": "tabar",
 "type": "concept",
@@ -3873,6 +3921,18 @@
 "nl": "Genetische opvoeding"
 },
 "url": "tabar/#nature-of-nurture",
+"status": "draft",
+"wikidata": null
+},
+"tabar:basics": {
+"wiki": "tabar",
+"type": "field",
+"title": {
+"fa": "مبانی",
+"en": "Basics",
+"nl": "Grondslagen"
+},
+"url": "tabar/#basics",
 "status": "draft",
 "wikidata": null
 },
@@ -4068,6 +4128,18 @@
 "status": "draft",
 "wikidata": null
 },
+"tabar:mutation-selection-drift": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "جهش، انتخاب و رانش",
+"en": "Mutation, selection and drift",
+"nl": "Mutatie, selectie en drift"
+},
+"url": "tabar/#mutation-selection-drift",
+"status": "draft",
+"wikidata": null
+},
 "tabar:gwas-polygenic": {
 "wiki": "tabar",
 "type": "concept",
@@ -4101,6 +4173,18 @@
 "nl": "De wiskunde van voorouders: waarom we allemaal verwant zijn"
 },
 "url": "tabar/#common-ancestors",
+"status": "draft",
+"wikidata": null
+},
+"phil:cave": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "تمثیل غار",
+"en": "The allegory of the cave",
+"nl": "De allegorie van de grot"
+},
+"url": "phil/#cave",
 "status": "draft",
 "wikidata": null
 },
@@ -4341,6 +4425,18 @@
 "nl": "De capabilities-benadering"
 },
 "url": "phil/#capabilities",
+"status": "draft",
+"wikidata": null
+},
+"phil:language-games": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "بازی‌های زبانی و معنا به‌مثابهٔ کاربرد",
+"en": "Language games and meaning as use",
+"nl": "Taalspelen en betekenis als gebruik"
+},
+"url": "phil/#language-games",
 "status": "draft",
 "wikidata": null
 },
@@ -5578,6 +5674,16 @@
 "en": "How common are illicit drug use disorders in Iran?"
 },
 "url": "iran/#drug-use-disorders",
+"grade": "A"
+},
+"iran:fertility": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "باروری در ایران چقدر و چگونه افت کرد؟",
+"en": "How far and how did fertility fall in Iran?"
+},
+"url": "iran/#fertility",
 "grade": "A"
 },
 "iran:zagros-neolithic": {
@@ -13902,6 +14008,19 @@
 "url": "core/people.html#pierre-hadot",
 "wikis": [
 "phil"
+]
+},
+"core:mohammad-jalal-abbasi-shavazi": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "محمدجلال عباسی‌شوازی",
+"en": "Mohammad Jalal Abbasi-Shavazi",
+"nl": "Mohammad Jalal Abbasi-Shavazi"
+},
+"url": "core/people.html#mohammad-jalal-abbasi-shavazi",
+"wikis": [
+"soc"
 ]
 }
 }
