@@ -1,0 +1,86 @@
+{
+ "id": "tabar:neanderthal-admixture",
+ "kind": "concept",
+ "title": {
+  "fa": "آمیزش با نئاندرتال‌ها و دنیسوواها",
+  "en": "Admixture with Neanderthals and Denisovans",
+  "nl": "Vermenging met Neanderthalers en Denisovamensen"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "انسان خردمند با خویشاوندان کهن خود فرزند آورد: همهٔ مردم بیرون آفریقا حدود ۱ تا ۲ درصد دی‌ان‌ای نئاندرتال دارند و مردم اقیانوسیه تا چند درصد دی‌ان‌ای دنیسووا. «ما» و «آن‌ها» گونه‌های کاملاً جدا نبودند.",
+  "en": "Homo sapiens had children with its archaic relatives: everyone outside Africa carries about 1 to 2 percent Neanderthal DNA, and people of Oceania up to several percent Denisovan DNA. \"Us\" and \"them\" were not fully separate species.",
+  "nl": "Homo sapiens kreeg kinderen met zijn archaïsche verwanten: iedereen buiten Afrika draagt zo'n 1 tot 2 procent Neanderthaler-DNA, en mensen uit Oceanië tot enkele procenten Denisova-DNA. \"Wij\" en \"zij\" waren geen volledig gescheiden soorten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گرین و همکاران (۲۰۱۰): پیش‌نویس ژنوم نئاندرتال از استخوان‌های غار ویندیا (کرواسی)؛ مردم اوراسیا ۱ تا ۴ درصد (برآورد بعدی: حدود ۲ درصد) با نئاندرتال‌ها اشتراک دارند و آفریقایی‌ها تقریباً هیچ.",
+    "en": "Green et al. (2010): draft Neanderthal genome from Vindija Cave (Croatia) bones; Eurasians share 1 to 4 percent (later estimate: about 2 percent) with Neanderthals, Africans almost none.",
+    "nl": "Green et al. (2010): draft Neanderthal genome from Vindija Cave (Croatia) bones; Eurasians share 1 to 4 percent (later estimate: about 2 percent) with Neanderthals, Africans almost none."
+   },
+   "sources": [
+    "src:ca65b3b7c6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رایش و همکاران (۲۰۱۰): از یک بند انگشت در غار دنیسووا (سیبری) گروهی ناشناختهٔ انسان‌های کهن کشف شد که ۴ تا ۶ درصد ژنوم مردم ملانزی را می‌سازد.",
+    "en": "Reich et al. (2010): from one finger bone in Denisova Cave (Siberia), an unknown archaic human group was discovered that makes up 4 to 6 percent of Melanesian genomes.",
+    "nl": "Reich et al. (2010): from one finger bone in Denisova Cave (Siberia), an unknown archaic human group was discovered that makes up 4 to 6 percent of Melanesian genomes."
+   },
+   "sources": [
+    "src:3c51e5e6aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پابو برای این کار نوبل پزشکی ۲۰۲۲ را گرفت. بعضی واریانت‌های نئاندرتالی امروز با ایمنی، پوست و حتی شدت کووید-۱۹ پیوند دارند.",
+    "en": "Pääbo received the 2022 Nobel Prize in Medicine for this work. Some Neanderthal variants are today linked to immunity, skin and even COVID-19 severity.",
+    "nl": "Pääbo received the 2022 Nobel Prize in Medicine for this work. Some Neanderthal variants are today linked to immunity, skin and even COVID-19 severity."
+   },
+   "sources": [
+    "src:8b730d2385"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:out-of-africa",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از داستان خروج از آفریقا",
+    "en": "Part of the out-of-Africa story",
+    "nl": "Part of the out-of-Africa story"
+   }
+  },
+  {
+   "to": "tabar:ancient-dna",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "نخستین پیروزی بزرگ دی‌ان‌ای باستانی",
+    "en": "The first major triumph of ancient DNA",
+    "nl": "The first major triumph of ancient DNA"
+   }
+  }
+ ],
+ "people": [
+  "core:svante-p-bo",
+  "core:david-reich"
+ ],
+ "sources": [
+  "src:3c51e5e6aa",
+  "src:8b730d2385",
+  "src:ca65b3b7c6"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

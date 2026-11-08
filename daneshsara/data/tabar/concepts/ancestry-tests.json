@@ -1,0 +1,96 @@
+{
+ "id": "tabar:ancestry-tests",
+ "kind": "concept",
+ "title": {
+  "fa": "آزمون‌های تجاری تبار",
+  "en": "Commercial ancestry tests",
+  "nl": "Commerciële afstammingstests"
+ },
+ "aliases": [],
+ "parent": "tabar:genealogy",
+ "field": "tabar:genealogy",
+ "summary": {
+  "fa": "«۴۲ درصد ایرانی، ۱۸ درصد قفقازی…» این درصدها مقایسهٔ دی‌ان‌ای شما با پنل مرجعِ شرکت است، نه واقعیتی ثابت؛ با تغییر پنل، عدد عوض می‌شود. برای یافتن خویشاوند زنده دقیق‌اند، برای «هویت» گمراه‌کننده.",
+  "en": "\"42 percent Iranian, 18 percent Caucasian…\" These percentages compare your DNA to the company's reference panel, not a fixed reality; change the panel and the number changes. Accurate for finding living relatives, misleading for \"identity\".",
+  "nl": "\"42 procent Iraans, 18 procent Kaukasisch…\" Deze percentages vergelijken uw DNA met het referentiepanel van het bedrijf, geen vaststaande werkelijkheid; verander het panel en het getal verandert. Nauwkeurig om levende verwanten te vinden, misleidend voor \"identiteit\"."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "رویال و همکاران (۲۰۱۰، انجمن ژنتیک انسانی آمریکا): استنباط تبار به پنل مرجع، الگوریتم و تعریف «جمعیت» وابسته است؛ درصدها را نباید با هویت قومی یا سلامت یکی گرفت.",
+    "en": "Royal et al. (2010, American Society of Human Genetics): ancestry inference depends on the reference panel, the algorithm and the definition of \"population\"; percentages must not be equated with ethnic identity or health.",
+    "nl": "Royal et al. (2010, American Society of Human Genetics): ancestry inference depends on the reference panel, the algorithm and the definition of \"population\"; percentages must not be equated with ethnic identity or health."
+   },
+   "sources": [
+    "src:9e55a626fc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارلیش و همکاران (۲۰۱۸): با پایگاه‌دادهٔ ۱٫۲۸ میلیون نفر، حدود ۶۰ درصد آمریکاییانِ اروپایی‌تبار از راه خویشاوند دور (پسرعموی درجهٔ سه) قابل شناسایی‌اند، حتی اگر خودشان آزمایش نداده باشند؛ همین روش قاتل زنجیره‌ای «گلدن استیت» را در ۲۰۱۸ لو داد.",
+    "en": "Erlich et al. (2018): with a database of 1.28 million people, about 60 percent of European-ancestry Americans can be identified via a distant relative (third cousin) even if they never tested; the same method exposed the \"Golden State Killer\" in 2018.",
+    "nl": "Erlich et al. (2018): with a database of 1.28 million people, about 60 percent of European-ancestry Americans can be identified via a distant relative (third cousin) even if they never tested; the same method exposed the \"Golden State Killer\" in 2018."
+   },
+   "sources": [
+    "src:b4623b437c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برای ایرانیان: پنل‌های مرجع شرکت‌ها از خاورمیانه نمونهٔ کمی دارند، پس برچسب‌ها («ایرانی/قفقازی/عرب») درشت و ناپایدارند.",
+    "en": "For Iranians: companies' reference panels have few Middle Eastern samples, so the labels (\"Iranian/Caucasian/Arab\") are coarse and unstable.",
+    "nl": "For Iranians: companies' reference panels have few Middle Eastern samples, so the labels (\"Iranian/Caucasian/Arab\") are coarse and unstable."
+   },
+   "sources": [
+    "src:3c4d0940c4"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:haplogroups",
+   "rel": "part-of",
+   "note": {
+    "fa": "خطوط مادری و پدری در گزارش",
+    "en": "Maternal and paternal lines in the report",
+    "nl": "Maternal and paternal lines in the report"
+   }
+  },
+  {
+   "to": "tabar:common-ancestors",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "ریاضی نیاکان",
+    "en": "The mathematics of ancestors",
+    "nl": "The mathematics of ancestors"
+   }
+  },
+  {
+   "to": "tabar:race-biology",
+   "rel": "see-also",
+   "note": {
+    "fa": "خوشه در برابر نژاد",
+    "en": "Cluster versus race",
+    "nl": "Cluster versus race"
+   }
+  }
+ ],
+ "people": [
+  "core:yaniv-erlich"
+ ],
+ "sources": [
+  "src:3c4d0940c4",
+  "src:9e55a626fc",
+  "src:b4623b437c"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

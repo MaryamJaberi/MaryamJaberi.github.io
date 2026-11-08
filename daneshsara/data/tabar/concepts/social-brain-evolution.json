@@ -1,0 +1,107 @@
+{
+ "id": "tabar:social-brain-evolution",
+ "kind": "concept",
+ "title": {
+  "fa": "جهش اجتماعی: چرا مغز اجتماعی شدیم",
+  "en": "The social leap: why our brains went social",
+  "nl": "De sociale sprong: waarom ons brein sociaal werd"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "فون هیپل استدلال می‌کند بزرگ‌ترین تغییر تکاملی انسان نه ابزار، که همکاری بود: نیاکان ما وقتی از جنگل به ساوانا رانده شدند، با سنگ‌پرانیِ گروهی و تقسیم کار زنده ماندند و مغزی ساختند که برای زندگی در گروه طراحی شده است؛ با همهٔ شادی‌ها و رنج‌هایش.",
+  "en": "Von Hippel argues that humanity's biggest evolutionary change was not tools but cooperation: when our ancestors were pushed from forest to savanna they survived by group stone-throwing and division of labour, building a brain designed for group life, with all its joys and pains.",
+  "nl": "Von Hippel betoogt dat de grootste evolutionaire verandering van de mens niet gereedschap was maar samenwerking: toen onze voorouders van bos naar savanne werden gedreven, overleefden ze door groepsgewijs stenen gooien en arbeidsdeling, en bouwden een brein ontworpen voor groepsleven, met al zijn vreugden en pijnen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فرضیهٔ مرکزی کتاب: ایستادن روی دو پا دست‌ها را آزاد کرد، پرتاب دقیقِ گروهی شکارچیان را دور نگه داشت، و «انتخاب طبیعی» شروع کرد به پاداش دادن به کسانی که بهتر هماهنگ می‌شدند. این یک روایت تکاملیِ قابل دفاع اما آزمون‌ناپذیر به معنای دقیق است.",
+    "en": "The book's central hypothesis: standing upright freed the hands, accurate group throwing kept predators away, and natural selection began rewarding those who coordinated better. A defensible evolutionary narrative, but not strictly testable.",
+    "nl": "The book's central hypothesis: standing upright freed the hands, accurate group throwing kept predators away, and natural selection began rewarding those who coordinated better. A defensible evolutionary narrative, but not strictly testable."
+   },
+   "sources": [
+    "src:4fb5cf55a3"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پیامدهای روان‌شناختی که کتاب می‌شمرد: شادی ما از پیوند و جایگاه اجتماعی می‌آید، نه از ثروت مطلق؛ خودفریبی برای قانع کردن دیگران تکامل یافته؛ و نوآوری محصول «مغز جمعی» است.",
+    "en": "Psychological consequences the book draws: our happiness comes from social bonds and standing, not absolute wealth; self-deception evolved to persuade others; innovation is the product of the \"collective brain\".",
+    "nl": "Psychological consequences the book draws: our happiness comes from social bonds and standing, not absolute wealth; self-deception evolved to persuade others; innovation is the product of the \"collective brain\"."
+   },
+   "sources": [
+    "src:4fb5cf55a3",
+    "src:d8fb384d44"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این تز با نظریهٔ تکامل فرهنگی هنریک و فرضیهٔ خوداهلی‌سازی رنگهام هم‌خوان است؛ هر سه ریشهٔ ویژگی انسان را در زندگی گروهی می‌بینند.",
+    "en": "The thesis agrees with Henrich's cultural evolution theory and Wrangham's self-domestication hypothesis; all three locate the root of human distinctiveness in group life.",
+    "nl": "The thesis agrees with Henrich's cultural evolution theory and Wrangham's self-domestication hypothesis; all three locate the root of human distinctiveness in group life."
+   },
+   "sources": [
+    "src:d8fb384d44"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:cultural-evolution",
+   "rel": "bridges",
+   "note": {
+    "fa": "تکامل فرهنگی و مغز جمعی",
+    "en": "Cultural evolution and the collective brain",
+    "nl": "Cultural evolution and the collective brain"
+   }
+  },
+  {
+   "to": "psy:self-domestication",
+   "rel": "bridges",
+   "note": {
+    "fa": "خوداهلی‌سازی",
+    "en": "Self-domestication",
+    "nl": "Self-domestication"
+   }
+  },
+  {
+   "to": "psy:happiness-origins",
+   "rel": "bridges",
+   "note": {
+    "fa": "خاستگاه شادی",
+    "en": "The origins of happiness",
+    "nl": "The origins of happiness"
+   }
+  },
+  {
+   "to": "psy:evo-sex",
+   "rel": "see-also",
+   "note": {
+    "fa": "روان‌شناسی تکاملی در ویکی روان",
+    "en": "Evolutionary psychology in the psychology wiki",
+    "nl": "Evolutionary psychology in the psychology wiki"
+   }
+  }
+ ],
+ "people": [
+  "core:william-von-hippel",
+  "core:joseph-henrich",
+  "core:richard-wrangham"
+ ],
+ "sources": [
+  "src:4fb5cf55a3",
+  "src:d8fb384d44"
+ ],
+ "booklets": [],
+ "origin": "book:social-leap",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

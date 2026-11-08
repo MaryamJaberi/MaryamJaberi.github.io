@@ -1,0 +1,109 @@
+{
+ "id": "tabar:heritability",
+ "kind": "concept",
+ "title": {
+  "fa": "وراثت‌پذیری",
+  "en": "Heritability",
+  "nl": "Erfelijkheid"
+ },
+ "aliases": [
+  "heritability",
+  "وراثت پذیری"
+ ],
+ "parent": "tabar:behavior-genetics",
+ "field": "tabar:behavior-genetics",
+ "summary": {
+  "fa": "وراثت‌پذیری نسبتی از تفاوت‌های یک صفت در یک جمعیت است که به تفاوت‌های ژنتیکی برمی‌گردد؛ دربارهٔ یک فرد، یا دربارهٔ تغییرپذیری، هیچ نمی‌گوید.",
+  "en": "Heritability is the share of differences in a trait within a population that traces to genetic differences; it says nothing about an individual, nor about changeability.",
+  "nl": "Erfelijkheid is het aandeel van de verschillen in een eigenschap binnen een populatie dat teruggaat op genetische verschillen; het zegt niets over een individu, noch over veranderbaarheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فراتحلیل ۵۰ سال مطالعهٔ دوقلوها (۱۴٬۵۵۸٬۹۰۳ جفت دوقلو، ۱۷٬۸۰۴ صفت): همهٔ صفات انسانی وراثت‌پذیرند؛ میانگین ۴۹ درصد.",
+    "en": "Meta-analysis of 50 years of twin studies (14,558,903 twin pairs, 17,804 traits): all human traits are heritable; the average is 49 percent.",
+    "nl": "Meta-analysis of 50 years of twin studies (14,558,903 twin pairs, 17,804 traits): all human traits are heritable; the average is 49 percent."
+   },
+   "sources": [
+    "src:06c7402bec"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وراثت‌پذیری ۵۰ درصد یعنی نیمی از تفاوت‌های بین افراد در آن جمعیت و آن محیط ژنتیکی است، نه اینکه نیمی از صفتِ یک نفر ژنتیکی است.",
+    "en": "Heritability of 50 percent means half the differences between people in that population and environment are genetic, not that half of one person's trait is genetic.",
+    "nl": "Heritability of 50 percent means half the differences between people in that population and environment are genetic, not that half of one person's trait is genetic."
+   },
+   "sources": [
+    "src:ba8f3ee8f4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مثال کلاسیک: قد بسیار وراثت‌پذیر است و با این حال میانگین قد در یک قرن ده‌ها سانتی‌متر بالا رفته؛ وراثت‌پذیری بالا با تغییر محیطی بزرگ سازگار است.",
+    "en": "Classic example: height is highly heritable, yet average height rose by many centimetres in a century; high heritability is compatible with large environmental change.",
+    "nl": "Classic example: height is highly heritable, yet average height rose by many centimetres in a century; high heritability is compatible with large environmental change."
+   },
+   "sources": [
+    "src:1deae47297"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«قانون اول» ترکهایمر: همهٔ صفات رفتاری انسان وراثت‌پذیرند. قانون دوم: اثر بزرگ شدن در یک خانواده کوچک‌تر از اثر ژن‌هاست. قانون سوم: بخش بزرگی از واریانس را نه ژن توضیح می‌دهد نه خانواده.",
+    "en": "Turkheimer's first law: all human behavioural traits are heritable. Second: the effect of being raised in the same family is smaller than the effect of genes. Third: a large share of variance is explained by neither genes nor families.",
+    "nl": "Turkheimer's first law: all human behavioural traits are heritable. Second: the effect of being raised in the same family is smaller than the effect of genes. Third: a large share of variance is explained by neither genes nor families."
+   },
+   "sources": [
+    "src:ba8f3ee8f4"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:twin-adoption",
+   "rel": "measured-by",
+   "note": {
+    "fa": "با مطالعهٔ دوقلوها و فرزندخواندگی برآورد می‌شود",
+    "en": "Estimated with twin and adoption studies",
+    "nl": "Estimated with twin and adoption studies"
+   }
+  },
+  {
+   "to": "tabar:gene-environment",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا عدد وراثت‌پذیری در محیط‌های مختلف فرق می‌کند",
+    "en": "Why the heritability figure differs across environments",
+    "nl": "Why the heritability figure differs across environments"
+   }
+  },
+  {
+   "to": "tabar:genetic-essentialism",
+   "rel": "critiques",
+   "note": {
+    "fa": "سوءبرداشت رایج: «ژنتیکی یعنی سرنوشت»",
+    "en": "Common misreading: \"genetic means destiny\"",
+    "nl": "Common misreading: \"genetic means destiny\""
+   }
+  }
+ ],
+ "people": [
+  "core:robert-plomin",
+  "core:eric-turkheimer"
+ ],
+ "sources": [
+  "src:06c7402bec",
+  "src:1deae47297",
+  "src:ba8f3ee8f4"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

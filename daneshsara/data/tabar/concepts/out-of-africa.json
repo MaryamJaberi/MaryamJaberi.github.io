@@ -1,0 +1,76 @@
+{
+ "id": "tabar:out-of-africa",
+ "kind": "concept",
+ "title": {
+  "fa": "خاستگاه آفریقایی انسان خردمند",
+  "en": "The African origin of Homo sapiens",
+  "nl": "De Afrikaanse oorsprong van Homo sapiens"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "همهٔ انسان‌های امروزی از جمعیتی برآمده‌اند که در آفریقا شکل گرفت و در ۵۰ تا ۷۰ هزار سال اخیر در جهان پخش شد؛ تنوع ژنتیکی بیرون آفریقا زیرمجموعه‌ای از تنوع درون آفریقاست.",
+  "en": "All living humans descend from a population that formed in Africa and spread across the world in the last 50 to 70 thousand years; genetic diversity outside Africa is a subset of the diversity within it.",
+  "nl": "Alle levende mensen stammen af van een bevolking die in Afrika ontstond en zich in de laatste 50 tot 70 duizend jaar over de wereld verspreidde; de genetische diversiteit buiten Afrika is een deelverzameling van die binnen Afrika."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بیشترین تنوع ژنتیکی انسان در آفریقاست و هرچه از آفریقا دورتر می‌شویم تنوع کمتر می‌شود: اثر «بنیان‌گذار» پیاپی مهاجرت‌های کوچک.",
+    "en": "Human genetic diversity is greatest in Africa and declines with distance from it: the serial \"founder effect\" of small migrating groups.",
+    "nl": "Human genetic diversity is greatest in Africa and declines with distance from it: the serial \"founder effect\" of small migrating groups."
+   },
+   "sources": [
+    "src:50f6134be0",
+    "src:3dd3045232"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تصویر امروزی پیچیده‌تر از یک خروج واحد است: چند موج، بازگشت‌ها، و ساختار جمعیتی درون آفریقا («چندمنطقه‌ای آفریقایی»)، همراه با آمیزش با انسان‌های کهن بیرون آفریقا.",
+    "en": "Today's picture is more complex than a single exit: several waves, back-migrations, and population structure within Africa (\"African multiregionalism\"), plus admixture with archaic humans outside Africa.",
+    "nl": "Today's picture is more complex than a single exit: several waves, back-migrations, and population structure within Africa (\"African multiregionalism\"), plus admixture with archaic humans outside Africa."
+   },
+   "sources": [
+    "src:8b730d2385"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:neanderthal-admixture",
+   "rel": "see-also",
+   "note": {
+    "fa": "آمیزش با نئاندرتال و دنیسووا",
+    "en": "Admixture with Neanderthals and Denisovans",
+    "nl": "Admixture with Neanderthals and Denisovans"
+   }
+  },
+  {
+   "to": "tabar:race-biology",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "چرا تنوع انسانی پیوسته است نه گسسته",
+    "en": "Why human variation is continuous, not discrete",
+    "nl": "Why human variation is continuous, not discrete"
+   }
+  }
+ ],
+ "people": [
+  "core:svante-p-bo",
+  "core:sarah-tishkoff"
+ ],
+ "sources": [
+  "src:3dd3045232",
+  "src:50f6134be0",
+  "src:8b730d2385"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,14 +1,14 @@
 {
 "stats": {
-"concepts": 280,
-"concepts_with_sources": 265,
-"cross_wiki_links": 0,
+"concepts": 312,
+"concepts_with_sources": 289,
+"cross_wiki_links": 20,
 "bridge_links": 56,
-"iran_notes": 0,
+"iran_notes": 6,
 "fields": 77,
 "bridges": 25,
-"people": 582,
-"sources": 536,
+"people": 596,
+"sources": 578,
 "built": "2026-11-08"
 },
 "entries": {
@@ -3372,6 +3372,390 @@
 "status": "reviewed",
 "wikidata": null
 },
+"tabar:genetics-society": {
+"wiki": "tabar",
+"type": "field",
+"title": {
+"fa": "ژن، نژاد و اخلاق",
+"en": "Genes, race & ethics",
+"nl": "Genen, ras & ethiek"
+},
+"url": "tabar/#genetics-society",
+"status": "draft",
+"wikidata": null
+},
+"tabar:out-of-africa": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "خاستگاه آفریقایی انسان خردمند",
+"en": "The African origin of Homo sapiens",
+"nl": "De Afrikaanse oorsprong van Homo sapiens"
+},
+"url": "tabar/#out-of-africa",
+"status": "draft",
+"wikidata": null
+},
+"tabar:epigenetics": {
+"wiki": "tabar",
+"type": "field",
+"title": {
+"fa": "اپی‌ژنتیک",
+"en": "Epigenetics",
+"nl": "Epigenetica"
+},
+"url": "tabar/#epigenetics",
+"status": "draft",
+"wikidata": null
+},
+"tabar:transgenerational": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "وراثت اپی‌ژنتیک بین‌نسلی",
+"en": "Transgenerational epigenetic inheritance",
+"nl": "Transgenerationele epigenetische overerving"
+},
+"url": "tabar/#transgenerational",
+"status": "draft",
+"wikidata": null
+},
+"tabar:genealogy": {
+"wiki": "tabar",
+"type": "field",
+"title": {
+"fa": "تبارشناسی و شجره",
+"en": "Genealogy",
+"nl": "Genealogie"
+},
+"url": "tabar/#genealogy",
+"status": "draft",
+"wikidata": null
+},
+"tabar:ancient-dna": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "انقلاب دی‌ان‌ای باستانی",
+"en": "The ancient DNA revolution",
+"nl": "De oud-DNA-revolutie"
+},
+"url": "tabar/#ancient-dna",
+"status": "draft",
+"wikidata": null
+},
+"tabar:social-brain-evolution": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "جهش اجتماعی: چرا مغز اجتماعی شدیم",
+"en": "The social leap: why our brains went social",
+"nl": "De sociale sprong: waarom ons brein sociaal werd"
+},
+"url": "tabar/#social-brain-evolution",
+"status": "draft",
+"wikidata": null
+},
+"tabar:zagros-neolithic": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "کشاورزان نوسنگی زاگرس",
+"en": "Zagros Neolithic farmers",
+"nl": "Neolithische boeren van de Zagros"
+},
+"url": "tabar/#zagros-neolithic",
+"status": "draft",
+"wikidata": null
+},
+"tabar:population-genetics": {
+"wiki": "tabar",
+"type": "field",
+"title": {
+"fa": "ژنومیک جمعیت و تبار",
+"en": "Population genomics & ancestry",
+"nl": "Populatiegenomica & afstamming"
+},
+"url": "tabar/#population-genetics",
+"status": "draft",
+"wikidata": null
+},
+"tabar:eugenics": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "به‌نژادی: تاریخ تاریک ژنتیک",
+"en": "Eugenics: the dark history of genetics",
+"nl": "Eugenetica: de donkere geschiedenis van de genetica"
+},
+"url": "tabar/#eugenics",
+"status": "draft",
+"wikidata": null
+},
+"tabar:tabar": {
+"wiki": "tabar",
+"type": "root",
+"title": {
+"fa": "تبار و ژنتیک",
+"en": "Lineage & Genetics",
+"nl": "Afstamming & genetica"
+},
+"url": "tabar/#tabar",
+"status": "draft",
+"wikidata": null
+},
+"tabar:iranian-genetic-diversity": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "تنوع ژنتیکی مردم ایران",
+"en": "Genetic diversity of the Iranian population",
+"nl": "Genetische diversiteit van de Iraanse bevolking"
+},
+"url": "tabar/#iranian-genetic-diversity",
+"status": "draft",
+"wikidata": null
+},
+"tabar:nature-of-nurture": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "ژن‌های والدین به‌عنوان محیط فرزند",
+"en": "Genetic nurture",
+"nl": "Genetische opvoeding"
+},
+"url": "tabar/#nature-of-nurture",
+"status": "draft",
+"wikidata": null
+},
+"tabar:steppe-indo-iranian": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "تبار استپی و زبان‌های هندوایرانی",
+"en": "Steppe ancestry and the Indo-Iranian languages",
+"nl": "Steppe-afstamming en de Indo-Iraanse talen"
+},
+"url": "tabar/#steppe-indo-iranian",
+"status": "draft",
+"wikidata": null
+},
+"tabar:iq-heritability-debate": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "بحث وراثت‌پذیری هوش و اثر فلین",
+"en": "The IQ heritability debate and the Flynn effect",
+"nl": "Het debat over erfelijkheid van IQ en het Flynn-effect"
+},
+"url": "tabar/#iq-heritability-debate",
+"status": "draft",
+"wikidata": null
+},
+"tabar:behavior-genetics": {
+"wiki": "tabar",
+"type": "field",
+"title": {
+"fa": "ژنتیک رفتاری",
+"en": "Behaviour genetics",
+"nl": "Gedragsgenetica"
+},
+"url": "tabar/#behavior-genetics",
+"status": "draft",
+"wikidata": null
+},
+"tabar:medical-genetics": {
+"wiki": "tabar",
+"type": "field",
+"title": {
+"fa": "ژنتیک پزشکی و جامعه",
+"en": "Medical genetics & society",
+"nl": "Medische genetica & samenleving"
+},
+"url": "tabar/#medical-genetics",
+"status": "draft",
+"wikidata": null
+},
+"tabar:lactase-gene-culture": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "تداوم لاکتاز: نمونهٔ هم‌تکاملی ژن و فرهنگ",
+"en": "Lactase persistence: a case of gene–culture coevolution",
+"nl": "Lactasepersistentie: een geval van gen-cultuur-co-evolutie"
+},
+"url": "tabar/#lactase-gene-culture",
+"status": "draft",
+"wikidata": null
+},
+"tabar:twin-adoption": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "مطالعات دوقلوها و فرزندخواندگی",
+"en": "Twin and adoption studies",
+"nl": "Tweeling- en adoptiestudies"
+},
+"url": "tabar/#twin-adoption",
+"status": "draft",
+"wikidata": null
+},
+"tabar:thalassemia-screening": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "برنامهٔ ملی غربالگری تالاسمی ایران",
+"en": "Iran's national thalassaemia screening programme",
+"nl": "Het Iraanse nationale screeningsprogramma voor thalassemie"
+},
+"url": "tabar/#thalassemia-screening",
+"status": "draft",
+"wikidata": null
+},
+"tabar:gene-environment": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "تعامل و همبستگی ژن و محیط",
+"en": "Gene–environment interplay",
+"nl": "Samenspel van gen en omgeving"
+},
+"url": "tabar/#gene-environment",
+"status": "draft",
+"wikidata": null
+},
+"tabar:genetic-essentialism": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "ذات‌گرایی ژنتیکی",
+"en": "Genetic essentialism",
+"nl": "Genetisch essentialisme"
+},
+"url": "tabar/#genetic-essentialism",
+"status": "draft",
+"wikidata": null
+},
+"tabar:epigenetic-marks": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "نشانه‌های اپی‌ژنتیک",
+"en": "Epigenetic marks",
+"nl": "Epigenetische merktekens"
+},
+"url": "tabar/#epigenetic-marks",
+"status": "draft",
+"wikidata": null
+},
+"tabar:ancestry-tests": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "آزمون‌های تجاری تبار",
+"en": "Commercial ancestry tests",
+"nl": "Commerciële afstammingstests"
+},
+"url": "tabar/#ancestry-tests",
+"status": "draft",
+"wikidata": null
+},
+"tabar:consanguinity": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "ازدواج خویشاوندی",
+"en": "Consanguineous marriage",
+"nl": "Verwantschapshuwelijk"
+},
+"url": "tabar/#consanguinity",
+"status": "draft",
+"wikidata": null
+},
+"tabar:heritability": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "وراثت‌پذیری",
+"en": "Heritability",
+"nl": "Erfelijkheid"
+},
+"url": "tabar/#heritability",
+"status": "draft",
+"wikidata": null
+},
+"tabar:haplogroups": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "هاپلوگروه‌ها: مادرتبار و پدرتبار",
+"en": "Haplogroups: maternal and paternal lines",
+"nl": "Haplogroepen: moeder- en vaderlijn"
+},
+"url": "tabar/#haplogroups",
+"status": "draft",
+"wikidata": null
+},
+"tabar:neanderthal-admixture": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "آمیزش با نئاندرتال‌ها و دنیسوواها",
+"en": "Admixture with Neanderthals and Denisovans",
+"nl": "Vermenging met Neanderthalers en Denisovamensen"
+},
+"url": "tabar/#neanderthal-admixture",
+"status": "draft",
+"wikidata": null
+},
+"tabar:human-evolution": {
+"wiki": "tabar",
+"type": "field",
+"title": {
+"fa": "تکامل انسان",
+"en": "Human evolution",
+"nl": "Menselijke evolutie"
+},
+"url": "tabar/#human-evolution",
+"status": "draft",
+"wikidata": null
+},
+"tabar:gwas-polygenic": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "مطالعات گسترهٔ ژنوم و نمرهٔ چندژنی",
+"en": "GWAS and polygenic scores",
+"nl": "GWAS en polygene scores"
+},
+"url": "tabar/#gwas-polygenic",
+"status": "draft",
+"wikidata": null
+},
+"tabar:race-biology": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "آیا «نژاد» مقولهٔ زیست‌شناختی است؟",
+"en": "Is \"race\" a biological category?",
+"nl": "Is \"ras\" een biologische categorie?"
+},
+"url": "tabar/#race-biology",
+"status": "draft",
+"wikidata": null
+},
+"tabar:common-ancestors": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "ریاضی نیاکان: چرا همه خویشاوندیم",
+"en": "The mathematics of ancestors: why we are all related",
+"nl": "De wiskunde van voorouders: waarom we allemaal verwant zijn"
+},
+"url": "tabar/#common-ancestors",
+"status": "draft",
+"wikidata": null
+},
 "atlas:genetics": {
 "wiki": "atlas",
 "type": "field",
@@ -4477,6 +4861,66 @@
 "wikis": [
 "tabar"
 ]
+},
+"iran:zagros-neolithic": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "کشاورزان نخستین زاگرس از نظر ژنتیکی که بودند؟",
+"en": "Who were the first Zagros farmers, genetically?"
+},
+"url": "iran/#zagros-neolithic",
+"grade": "A"
+},
+"iran:iranome": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "چرا تفسیر آزمایش ژنتیک در ایران به مرجع بومی نیاز دارد؟",
+"en": "Why does interpreting genetic tests in Iran need a local reference?"
+},
+"url": "iran/#iranome",
+"grade": "A"
+},
+"iran:genetic-heterogeneity": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "ساختار ژنتیکی گروه‌های قومی ایران چگونه است؟",
+"en": "What is the genetic structure of Iran's ethnic groups?"
+},
+"url": "iran/#genetic-heterogeneity",
+"grade": "A"
+},
+"iran:thalassemia-screening": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "آیا غربالگری ملی تالاسمی در ایران کار کرد؟",
+"en": "Did Iran's national thalassaemia screening work?"
+},
+"url": "iran/#thalassemia-screening",
+"grade": "A"
+},
+"iran:consanguinity": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "ازدواج خویشاوندی در ایران چقدر رایج است؟",
+"en": "How common is consanguineous marriage in Iran?"
+},
+"url": "iran/#consanguinity",
+"grade": "A"
+},
+"iran:steppe-ancestry": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "آیا ژنتیک «ورود آریایی‌ها» را تأیید می‌کند؟",
+"en": "Does genetics confirm \"the arrival of the Aryans\"?"
+},
+"url": "iran/#steppe-ancestry",
+"grade": "B"
 },
 "core:wilhelm-wundt": {
 "wiki": "core",
@@ -8583,7 +9027,8 @@
 },
 "url": "core/people.html#arthur-jensen",
 "wikis": [
-"psy"
+"psy",
+"tabar"
 ]
 },
 "core:robert-plomin": {
@@ -8596,7 +9041,8 @@
 },
 "url": "core/people.html#robert-plomin",
 "wikis": [
-"psy"
+"psy",
+"tabar"
 ]
 },
 "core:thomas-bouchard": {
@@ -8635,7 +9081,8 @@
 },
 "url": "core/people.html#eric-turkheimer",
 "wikis": [
-"psy"
+"psy",
+"tabar"
 ]
 },
 "core:stefan-hofmann": {
@@ -12042,6 +12489,188 @@
 "url": "core/people.html#david-laibson",
 "wikis": [
 "psy"
+]
+},
+"core:david-reich": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "دیوید رایش",
+"en": "David Reich",
+"nl": "David Reich"
+},
+"url": "core/people.html#david-reich",
+"wikis": [
+"tabar"
+]
+},
+"core:svante-p-bo": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سوانته پابو",
+"en": "Svante Pääbo",
+"nl": "Svante Pääbo"
+},
+"url": "core/people.html#svante-p-bo",
+"wikis": [
+"tabar"
+]
+},
+"core:francis-galton": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فرانسیس گالتون",
+"en": "Francis Galton",
+"nl": "Francis Galton"
+},
+"url": "core/people.html#francis-galton",
+"wikis": [
+"tabar"
+]
+},
+"core:richard-lewontin": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ریچارد لوونتین",
+"en": "Richard Lewontin",
+"nl": "Richard Lewontin"
+},
+"url": "core/people.html#richard-lewontin",
+"wikis": [
+"tabar"
+]
+},
+"core:james-flynn": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جیمز فلین",
+"en": "James Flynn",
+"nl": "James Flynn"
+},
+"url": "core/people.html#james-flynn",
+"wikis": [
+"tabar"
+]
+},
+"core:william-von-hippel": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ویلیام فون هیپل",
+"en": "William von Hippel",
+"nl": "William von Hippel"
+},
+"url": "core/people.html#william-von-hippel",
+"wikis": [
+"tabar"
+]
+},
+"core:luigi-luca-cavalli-sforza": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "لوئیجی لوکا کاوالی‌اسفورتسا",
+"en": "Luigi Luca Cavalli-Sforza",
+"nl": "Luigi Luca Cavalli-Sforza"
+},
+"url": "core/people.html#luigi-luca-cavalli-sforza",
+"wikis": [
+"tabar"
+]
+},
+"core:kathryn-paige-harden": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کاترین پیج هاردن",
+"en": "Kathryn Paige Harden",
+"nl": "Kathryn Paige Harden"
+},
+"url": "core/people.html#kathryn-paige-harden",
+"wikis": [
+"tabar"
+]
+},
+"core:gregor-mendel": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "گرگور مندل",
+"en": "Gregor Mendel",
+"nl": "Gregor Mendel"
+},
+"url": "core/people.html#gregor-mendel",
+"wikis": [
+"tabar"
+]
+},
+"core:charles-darwin": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "چارلز داروین",
+"en": "Charles Darwin",
+"nl": "Charles Darwin"
+},
+"url": "core/people.html#charles-darwin",
+"wikis": [
+"tabar"
+]
+},
+"core:sarah-tishkoff": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سارا تیشکوف",
+"en": "Sarah Tishkoff",
+"nl": "Sarah Tishkoff"
+},
+"url": "core/people.html#sarah-tishkoff",
+"wikis": [
+"tabar"
+]
+},
+"core:bas-heijmans": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "باس هایمانس",
+"en": "Bas Heijmans",
+"nl": "Bas Heijmans"
+},
+"url": "core/people.html#bas-heijmans",
+"wikis": [
+"tabar"
+]
+},
+"core:yaniv-erlich": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "یانیو ارلیش",
+"en": "Yaniv Erlich",
+"nl": "Yaniv Erlich"
+},
+"url": "core/people.html#yaniv-erlich",
+"wikis": [
+"tabar"
+]
+},
+"core:bernadette-modell": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "برنادت مودل",
+"en": "Bernadette Modell",
+"nl": "Bernadette Modell"
+},
+"url": "core/people.html#bernadette-modell",
+"wikis": [
+"tabar"
 ]
 }
 }

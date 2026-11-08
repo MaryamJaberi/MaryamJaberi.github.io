@@ -1,0 +1,31 @@
+{
+ "id": "iran:iranome",
+ "domain": "tabar",
+ "question": {
+  "fa": "چرا تفسیر آزمایش ژنتیک در ایران به مرجع بومی نیاز دارد؟",
+  "en": "Why does interpreting genetic tests in Iran need a local reference?"
+ },
+ "finding": {
+  "fa": "اگزوم ۸۰۰ نفر از ۸ گروه قومی؛ درصد قابل توجهی از واریانت‌ها در پایگاه‌های جهانی ثبت نشده بود.",
+  "en": "Exomes of 800 people from 8 ethnic groups; a notable share of variants was absent from global databases."
+ },
+ "year": 2019,
+ "method": "exome sequencing, 800 individuals",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "Fattahi, Z., et al. (2019). Iranome: A catalog of genomic variations in the Iranian population. Human Mutation, 40(11), 1968–1984.",
+   "url": "https://doi.org/10.1002/humu.23880"
+  }
+ ],
+ "fields": [
+  "popgen"
+ ],
+ "concepts": [
+  "tabar:iranian-genetic-diversity"
+ ],
+ "capability": [
+  2
+ ]
+}

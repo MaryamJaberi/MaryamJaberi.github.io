@@ -1,0 +1,84 @@
+{
+ "id": "tabar:transgenerational",
+ "kind": "concept",
+ "title": {
+  "fa": "وراثت اپی‌ژنتیک بین‌نسلی",
+  "en": "Transgenerational epigenetic inheritance",
+  "nl": "Transgenerationele epigenetische overerving"
+ },
+ "aliases": [],
+ "parent": "tabar:epigenetics",
+ "field": "tabar:epigenetics",
+ "summary": {
+  "fa": "ادعای محبوب: ترومای پدربزرگ در ژن‌های نوه «ثبت» می‌شود. در گیاهان و کرم‌ها مستند است؛ در موش‌ها شواهدی هست؛ در انسان، شواهد مستقیم ضعیف و مطالعات کوچک و تکرارنشده‌اند. اثرهای بین‌نسلی از راه رفتار و محیط واقعی‌اند، ولی لزوماً «اپی‌ژنتیک» نیستند.",
+  "en": "The popular claim: grandfather's trauma is \"recorded\" in the grandchild's genes. Documented in plants and worms; some evidence in mice; in humans, direct evidence is weak and the studies small and unreplicated. Intergenerational effects via behaviour and environment are real, but not necessarily \"epigenetic\".",
+  "nl": "De populaire claim: het trauma van opa wordt \"vastgelegd\" in de genen van het kleinkind. Gedocumenteerd bij planten en wormen; enig bewijs bij muizen; bij mensen is het directe bewijs zwak en zijn de studies klein en niet gerepliceerd. Intergenerationele effecten via gedrag en omgeving zijn echt, maar niet per se \"epigenetisch\"."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هورستمکه (۲۰۱۸): برای ادعای وراثت اپی‌ژنتیک واقعی در انسان باید اثر در نسلی دیده شود که هیچ تماس مستقیمی با محرک نداشته (نسل سوم از مادر، نسل دوم از پدر)، و باید عوامل ژنتیکی، فرهنگی و اکولوژیک حذف شوند؛ تقریباً هیچ مطالعهٔ انسانی این شرط‌ها را برآورده نمی‌کند.",
+    "en": "Horsthemke (2018): to claim real epigenetic inheritance in humans, the effect must appear in a generation with no direct exposure to the stimulus (third generation via mother, second via father), and genetic, cultural and ecological factors must be excluded; almost no human study meets these conditions.",
+    "nl": "Horsthemke (2018): to claim real epigenetic inheritance in humans, the effect must appear in a generation with no direct exposure to the stimulus (third generation via mother, second via father), and genetic, cultural and ecological factors must be excluded; almost no human study meets these conditions."
+   },
+   "sources": [
+    "src:07fb5aa7b9"
+   ],
+   "flags": [
+    "unreplicated"
+   ]
+  },
+  {
+   "text": {
+    "fa": "مطالعهٔ پرارجاع فرزندان بازماندگان هولوکاست (یهودا ۲۰۱۶) ۳۲ خانواده داشت و نتایجش در تحلیل‌های بعدی تضعیف شد؛ با این حال اثر تروما بر فرزندان از راه فرزندپروری و محیط به‌خوبی مستند است.",
+    "en": "The much-cited study of Holocaust survivors' children (Yehuda 2016) had 32 families and its results weakened under later analysis; yet the effect of trauma on children through parenting and environment is well documented.",
+    "nl": "The much-cited study of Holocaust survivors' children (Yehuda 2016) had 32 families and its results weakened under later analysis; yet the effect of trauma on children through parenting and environment is well documented."
+   },
+   "sources": [
+    "src:07fb5aa7b9"
+   ],
+   "flags": [
+    "unreplicated",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:epigenetic-marks",
+   "rel": "part-of",
+   "note": {
+    "fa": "سازوکار پیشنهادی",
+    "en": "The proposed mechanism",
+    "nl": "The proposed mechanism"
+   }
+  },
+  {
+   "to": "psy:ptsd",
+   "rel": "bridges",
+   "note": {
+    "fa": "تروما در ویکی روان",
+    "en": "Trauma in the psychology wiki",
+    "nl": "Trauma in the psychology wiki"
+   }
+  },
+  {
+   "to": "tabar:genetic-essentialism",
+   "rel": "see-also",
+   "note": {
+    "fa": "چرا این ادعا این‌قدر جذاب است",
+    "en": "Why this claim is so attractive",
+    "nl": "Why this claim is so attractive"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:07fb5aa7b9"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

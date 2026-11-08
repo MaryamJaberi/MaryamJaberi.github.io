@@ -1,0 +1,71 @@
+{
+ "id": "tabar:nature-of-nurture",
+ "kind": "concept",
+ "title": {
+  "fa": "ژن‌های والدین به‌عنوان محیط فرزند",
+  "en": "Genetic nurture",
+  "nl": "Genetische opvoeding"
+ },
+ "aliases": [],
+ "parent": "tabar:behavior-genetics",
+ "field": "tabar:behavior-genetics",
+ "summary": {
+  "fa": "ژن‌هایی که والدین به فرزند نمی‌دهند هم روی او اثر می‌گذارند: از راه رفتار و محیطی که همان ژن‌ها در والدین می‌سازند. مرز ژن و محیط این‌جا محو می‌شود.",
+  "en": "Even the genes parents do not pass on affect the child, through the behaviour and environment those genes create in the parents. Here the boundary between gene and environment dissolves.",
+  "nl": "Ook de genen die ouders niet doorgeven, beïnvloeden het kind, via het gedrag en de omgeving die die genen bij de ouders scheppen. Hier vervaagt de grens tussen gen en omgeving."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کُنگ و همکاران (۲۰۱۸، ایسلند): آللِ‌های والدین که به فرزند منتقل نشده بودند، حدود ۳۰ درصدِ اثرِ آلل‌های منتقل‌شده را روی تحصیلات فرزند داشتند.",
+    "en": "Kong et al. (2018, Iceland): parental alleles not transmitted to the child had about 30 percent of the effect on the child's education that transmitted alleles had.",
+    "nl": "Kong et al. (2018, Iceland): parental alleles not transmitted to the child had about 30 percent of the effect on the child's education that transmitted alleles had."
+   },
+   "sources": [
+    "src:0d7705b088"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیامد: بخشی از «وراثت‌پذیری» صفات اجتماعی در واقع از راه محیط عمل می‌کند؛ نمره‌های چندژنی بین خانواده‌ها این دو را قاطی می‌کنند.",
+    "en": "Implication: part of the \"heritability\" of social traits actually operates through environment; between-family polygenic scores mix the two.",
+    "nl": "Implication: part of the \"heritability\" of social traits actually operates through environment; between-family polygenic scores mix the two."
+   },
+   "sources": [
+    "src:4e5c76eea4"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:gwas-polygenic",
+   "rel": "critiques",
+   "note": {
+    "fa": "چرا نمرهٔ چندژنی درون خانواده ضعیف‌تر است",
+    "en": "Why polygenic scores weaken within families",
+    "nl": "Why polygenic scores weaken within families"
+   }
+  },
+  {
+   "to": "tabar:gene-environment",
+   "rel": "part-of",
+   "note": {
+    "fa": "نوعی همبستگی منفعل ژن–محیط",
+    "en": "A kind of passive gene–environment correlation",
+    "nl": "A kind of passive gene–environment correlation"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:0d7705b088",
+  "src:4e5c76eea4"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

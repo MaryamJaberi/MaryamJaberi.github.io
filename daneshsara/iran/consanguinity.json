@@ -1,0 +1,31 @@
+{
+ "id": "iran:consanguinity",
+ "domain": "tabar",
+ "question": {
+  "fa": "ازدواج خویشاوندی در ایران چقدر رایج است؟",
+  "en": "How common is consanguineous marriage in Iran?"
+ },
+ "finding": {
+  "fa": "در نمونهٔ ملی بیش از ۳۰۰ هزار زوج: ۳۸٫۶ درصد خویشاوندی، ۲۷٫۹ درصد دخترعمو/پسرعمو و معادل‌ها؛ تفاوت زیاد بین استان‌ها. داده مربوط به اوایل دههٔ ۱۳۸۰ است و روند کاهشی گزارش شده.",
+  "en": "In a national sample of over 300,000 couples: 38.6% consanguineous, 27.9% first cousins or equivalents; large provincial variation. Data from the early 2000s; a declining trend has been reported."
+ },
+ "year": 2004,
+ "method": "national survey",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "Saadat, M., Ansari-Lari, M., & Farhud, D. D. (2004). Consanguineous marriage in Iran. Annals of Human Biology, 31(2), 263–269.",
+   "url": "https://doi.org/10.1080/03014460310001652211"
+  }
+ ],
+ "fields": [
+  "medgen"
+ ],
+ "concepts": [
+  "tabar:consanguinity"
+ ],
+ "capability": [
+  2
+ ]
+}

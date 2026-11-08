@@ -1,0 +1,124 @@
+{
+ "id": "tabar:race-biology",
+ "kind": "concept",
+ "title": {
+  "fa": "آیا «نژاد» مقولهٔ زیست‌شناختی است؟",
+  "en": "Is \"race\" a biological category?",
+  "nl": "Is \"ras\" een biologische categorie?"
+ },
+ "aliases": [],
+ "parent": "tabar:genetics-society",
+ "field": "tabar:genetics-society",
+ "summary": {
+  "fa": "حدود ۸۵ تا ۹۰ درصد تنوع ژنتیکی انسان درون جمعیت‌هاست، نه بین آن‌ها؛ تنوع، پیوسته و جغرافیایی است، نه گسسته. با این حال الگوریتم‌ها می‌توانند تبار قاره‌ای را از دی‌ان‌ای تشخیص دهند. هر دو واقعیت درست‌اند؛ «نژاد» اجتماعی مقوله‌ای واقعی با پیامد واقعی است، اما مرزهایش زیست‌شناختی نیست.",
+  "en": "About 85 to 90 percent of human genetic variation lies within populations, not between them; variation is continuous and geographic, not discrete. Yet algorithms can infer continental ancestry from DNA. Both facts are true; social \"race\" is a real category with real consequences, but its boundaries are not biological.",
+  "nl": "Zo'n 85 tot 90 procent van de menselijke genetische variatie ligt binnen populaties, niet ertussen; variatie is continu en geografisch, niet discreet. Toch kunnen algoritmen continentale afstamming uit DNA afleiden. Beide feiten kloppen; sociaal \"ras\" is een echte categorie met echte gevolgen, maar de grenzen ervan zijn niet biologisch."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "لوونتین (۱۹۷۲): حدود ۸۵ درصد تنوع ژنتیکی بین افراد درون یک جمعیت است، ۸ درصد بین جمعیت‌های یک «نژاد» و فقط ۶ درصد بین «نژاد»ها؛ نتیجه: طبقه‌بندی نژادی ارزش زیست‌شناختی اندکی دارد.",
+    "en": "Lewontin (1972): about 85 percent of genetic variation is between individuals within a population, 8 percent between populations of one \"race\" and only 6 percent between \"races\"; conclusion: racial classification has little biological value.",
+    "nl": "Lewontin (1972): about 85 percent of genetic variation is between individuals within a population, 8 percent between populations of one \"race\" and only 6 percent between \"races\"; conclusion: racial classification has little biological value."
+   },
+   "sources": [
+    "src:f5e4bb7bf1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ادواردز (۲۰۰۳، «مغالطهٔ لوونتین»): درست است که هر ژن به‌تنهایی کم اطلاع می‌دهد، ولی همبستگی میان هزاران ژن اجازه می‌دهد تبار قاره‌ای با دقت بالا تشخیص داده شود؛ روزنبرگ (۲۰۰۲) با ۳۷۷ نشانگر پنج تا شش خوشهٔ جغرافیایی یافت.",
+    "en": "Edwards (2003, \"Lewontin's fallacy\"): true, each gene alone says little, but correlations among thousands of genes allow continental ancestry to be inferred with high accuracy; Rosenberg (2002) found five to six geographic clusters with 377 markers.",
+    "nl": "Edwards (2003, \"Lewontin's fallacy\"): true, each gene alone says little, but correlations among thousands of genes allow continental ancestry to be inferred with high accuracy; Rosenberg (2002) found five to six geographic clusters with 377 markers."
+   },
+   "sources": [
+    "src:fa0bbed230",
+    "src:50f6134be0"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "جمع‌بندی انجمن انسان‌شناسان زیستی آمریکا (۲۰۱۹): خوشه‌های ژنتیکی وجود دارند ولی با «نژاد»های اجتماعی منطبق نیستند، مرز گسسته ندارند و به نمونه‌گیری وابسته‌اند؛ نژاد ساختهٔ اجتماعی با ریشهٔ تاریخی است، نه واحد زیستی.",
+    "en": "The American Association of Biological Anthropologists' summary (2019): genetic clusters exist but do not map onto social \"races\", have no discrete boundaries and depend on sampling; race is a social construct with historical roots, not a biological unit.",
+    "nl": "The American Association of Biological Anthropologists' summary (2019): genetic clusters exist but do not map onto social \"races\", have no discrete boundaries and depend on sampling; race is a social construct with historical roots, not a biological unit."
+   },
+   "sources": [
+    "src:58cd70ce2e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در ایران مفهوم «نژاد آریایی» میراث نژادشناسی اروپایی قرن نوزدهم است؛ دی‌ان‌ای باستانی نشان می‌دهد ایرانیان، مانند همهٔ جمعیت‌ها، آمیزه‌ای از چند لایهٔ تبارند.",
+    "en": "In Iran the notion of an \"Aryan race\" is a legacy of nineteenth-century European raciology; ancient DNA shows Iranians, like all populations, are a blend of several ancestry layers.",
+    "nl": "In Iran the notion of an \"Aryan race\" is a legacy of nineteenth-century European raciology; ancient DNA shows Iranians, like all populations, are a blend of several ancestry layers."
+   },
+   "sources": [
+    "src:73a4e45469",
+    "src:02461bf7f4"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:out-of-africa",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا تنوع پیوسته است",
+    "en": "Why variation is continuous",
+    "nl": "Why variation is continuous"
+   }
+  },
+  {
+   "to": "tabar:iq-heritability-debate",
+   "rel": "see-also",
+   "note": {
+    "fa": "تفاوت میانگین گروه‌ها",
+    "en": "Mean differences between groups",
+    "nl": "Mean differences between groups"
+   }
+  },
+  {
+   "to": "psy:dehumanization",
+   "rel": "bridges",
+   "note": {
+    "fa": "انسان‌زدایی در ویکی روان",
+    "en": "Dehumanization in the psychology wiki",
+    "nl": "Dehumanization in the psychology wiki"
+   }
+  },
+  {
+   "to": "tabar:eugenics",
+   "rel": "see-also",
+   "note": {
+    "fa": "تاریخ تاریک",
+    "en": "The dark history",
+    "nl": "The dark history"
+   }
+  }
+ ],
+ "people": [
+  "core:richard-lewontin",
+  "core:luigi-luca-cavalli-sforza"
+ ],
+ "sources": [
+  "src:02461bf7f4",
+  "src:50f6134be0",
+  "src:58cd70ce2e",
+  "src:73a4e45469",
+  "src:f5e4bb7bf1",
+  "src:fa0bbed230"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

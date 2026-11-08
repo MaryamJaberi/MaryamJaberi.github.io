@@ -1,0 +1,90 @@
+{
+ "id": "tabar:haplogroups",
+ "kind": "concept",
+ "title": {
+  "fa": "هاپلوگروه‌ها: مادرتبار و پدرتبار",
+  "en": "Haplogroups: maternal and paternal lines",
+  "nl": "Haplogroepen: moeder- en vaderlijn"
+ },
+ "aliases": [
+  "mtDNA",
+  "Y-DNA",
+  "حوای میتوکندریایی",
+  "آدم کروموزوم Y"
+ ],
+ "parent": "tabar:population-genetics",
+ "field": "tabar:population-genetics",
+ "summary": {
+  "fa": "دی‌ان‌ای میتوکندری فقط از مادر و کروموزوم Y فقط از پدر می‌رسد؛ پس دو «خطِ» تبار را بی‌آمیزش دنبال می‌کنند. خوب برای ردگیری مهاجرت‌های کهن، ضعیف برای گفتن «شما کی هستید»: فقط دو نیا از هزاران نیای شما.",
+  "en": "Mitochondrial DNA comes only from the mother and the Y chromosome only from the father, so they trace two unmixed \"lines\" of descent. Good for tracking ancient migrations, poor at telling \"who you are\": just two of your thousands of ancestors.",
+  "nl": "Mitochondriaal DNA komt alleen van de moeder en het Y-chromosoom alleen van de vader, dus volgen ze twee onvermengde \"lijnen\" van afstamming. Goed om oude migraties te volgen, slecht om te zeggen \"wie u bent\": slechts twee van uw duizenden voorouders."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کان، استونکینگ و ویلسون (۱۹۸۷): همهٔ دی‌ان‌ای‌های میتوکندری امروزی به یک زن در آفریقا، حدود ۲۰۰ هزار سال پیش می‌رسند («حوای میتوکندریایی»)؛ او تنها زن زمان خود نبود، فقط تنها کسی است که خطِ مادری‌اش ناگسسته مانده.",
+    "en": "Cann, Stoneking and Wilson (1987): all present-day mitochondrial DNA traces to one woman in Africa about 200 thousand years ago (\"mitochondrial Eve\"); she was not the only woman of her time, merely the only one whose maternal line survived unbroken.",
+    "nl": "Cann, Stoneking and Wilson (1987): all present-day mitochondrial DNA traces to one woman in Africa about 200 thousand years ago (\"mitochondrial Eve\"); she was not the only woman of her time, merely the only one whose maternal line survived unbroken."
+   },
+   "sources": [
+    "src:3dd3045232"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کروموزوم Y همین کار را برای خط پدری می‌کند و به دلیل جهش آهسته و نبودِ نوترکیبی نشانگر خوبی برای مهاجرت‌های مردان است.",
+    "en": "The Y chromosome does the same for the paternal line and, due to slow mutation and no recombination, is a good marker of male migrations.",
+    "nl": "The Y chromosome does the same for the paternal line and, due to slow mutation and no recombination, is a good marker of male migrations."
+   },
+   "sources": [
+    "src:9e723d4592"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ده نسل عقب‌تر شما تا ۱٬۰۲۴ نیا دارید؛ هاپلوگروه فقط دربارهٔ ۲ نفر از آن‌ها حرف می‌زند. «هاپلوگروه R1a دارم پس آریایی‌ام» خطای رایج است.",
+    "en": "Ten generations back you have up to 1,024 ancestors; a haplogroup speaks about 2 of them. \"I have haplogroup R1a so I am Aryan\" is a common error.",
+    "nl": "Ten generations back you have up to 1,024 ancestors; a haplogroup speaks about 2 of them. \"I have haplogroup R1a so I am Aryan\" is a common error."
+   },
+   "sources": [
+    "src:9e55a626fc"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:ancestry-tests",
+   "rel": "part-of",
+   "note": {
+    "fa": "یکی از سه چیزی که آزمون‌های تبار گزارش می‌کنند",
+    "en": "One of three things ancestry tests report",
+    "nl": "One of three things ancestry tests report"
+   }
+  },
+  {
+   "to": "tabar:common-ancestors",
+   "rel": "see-also",
+   "note": {
+    "fa": "ریاضی نیاکان",
+    "en": "The mathematics of ancestors",
+    "nl": "The mathematics of ancestors"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:3dd3045232",
+  "src:9e55a626fc",
+  "src:9e723d4592"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

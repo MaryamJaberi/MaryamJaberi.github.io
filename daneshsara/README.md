@@ -18,3 +18,9 @@ python3 build/validate.py        # خطا = منتشر نشود
 python3 build/site.py <site dir>
 ```
 متن CC BY-SA 4.0 · کد MIT · فونت وزیرمتن OFL
+
+
+## ویکی تبار (tabar) — فاز ۲
+- `build/tabar_seed.py` → `data/tabar/concepts/*.json` (۳۲ گره: ریشه، ۷ حوزه، ۲۴ مدخل)، `iran/*.json` (۶ یادداشت)، و افزودنِ افراد/منابع به هسته (افزایشی).
+- `build/reader.py tabar` → `tabar/index.html` خوانندهٔ عمومی ویکی (برای soc و phil هم همین اسکریپت).
+- همهٔ مدخل‌ها `status: draft` تا بازبینی کارشناس.

@@ -1,0 +1,87 @@
+{
+ "id": "tabar:gene-environment",
+ "kind": "concept",
+ "title": {
+  "fa": "تعامل و همبستگی ژن و محیط",
+  "en": "Gene–environment interplay",
+  "nl": "Samenspel van gen en omgeving"
+ },
+ "aliases": [],
+ "parent": "tabar:behavior-genetics",
+ "field": "tabar:behavior-genetics",
+ "summary": {
+  "fa": "ژن و محیط دو ستون جدا نیستند: ژن‌ها محیط را انتخاب و برمی‌انگیزند، و محیط تعیین می‌کند ژن‌ها چقدر بروز کنند. این است که «چند درصد ژن، چند درصد محیط» سؤال بدی است.",
+  "en": "Genes and environment are not two separate columns: genes select and evoke environments, and environments set how much genes express. That is why \"what percent genes, what percent environment\" is a bad question.",
+  "nl": "Genen en omgeving zijn geen twee aparte kolommen: genen selecteren en roepen omgevingen op, en omgevingen bepalen hoeveel genen tot uiting komen. Daarom is \"hoeveel procent genen, hoeveel procent omgeving\" een slechte vraag."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سه نوع همبستگی ژن–محیط: منفعل (والدین هم ژن می‌دهند هم محیط)، برانگیزاننده (کودک کنجکاو پاسخ‌های غنی‌تری می‌گیرد)، و فعال (آدم‌ها محیطی را انتخاب می‌کنند که با گرایش‌هایشان جور است).",
+    "en": "Three kinds of gene–environment correlation: passive (parents give both genes and environment), evocative (a curious child draws richer responses), and active (people choose environments that fit their dispositions).",
+    "nl": "Three kinds of gene–environment correlation: passive (parents give both genes and environment), evocative (a curious child draws richer responses), and active (people choose environments that fit their dispositions)."
+   },
+   "sources": [
+    "src:6104f13aa6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ترکهایمر (۲۰۰۳): در کودکان خانواده‌های فقیر آمریکایی وراثت‌پذیری هوش نزدیک صفر و در خانواده‌های مرفه بالا بود؛ محرومیت نمی‌گذارد تفاوت‌های ژنتیکی بروز کنند.",
+    "en": "Turkheimer (2003): among children of poor US families the heritability of IQ was near zero, among affluent families high; deprivation keeps genetic differences from showing.",
+    "nl": "Turkheimer (2003): among children of poor US families the heritability of IQ was near zero, among affluent families high; deprivation keeps genetic differences from showing."
+   },
+   "sources": [
+    "src:bf306944ea"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تکرار: فراتحلیل ۲۰۱۶ این تعامل را در آمریکا تأیید کرد ولی در اروپای غربی و استرالیا نه؛ احتمالاً چون سیستم‌های رفاهی کف محیط را بالا می‌برند. یافته‌ای وابسته به بافت، نه قانون جهانی.",
+    "en": "Replication: a 2016 meta-analysis confirmed the interaction in the US but not in Western Europe or Australia, probably because welfare systems raise the environmental floor. A context-dependent finding, not a universal law.",
+    "nl": "Replication: a 2016 meta-analysis confirmed the interaction in the US but not in Western Europe or Australia, probably because welfare systems raise the environmental floor. A context-dependent finding, not a universal law."
+   },
+   "sources": [
+    "src:65b756684e"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:heritability",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا وراثت‌پذیری یک عدد ثابت نیست",
+    "en": "Why heritability is not a fixed number",
+    "nl": "Why heritability is not a fixed number"
+   }
+  },
+  {
+   "to": "tabar:iq-heritability-debate",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "بدون این مفهوم بحث هوش گمراه‌کننده است",
+    "en": "Without this concept the IQ debate misleads",
+    "nl": "Without this concept the IQ debate misleads"
+   }
+  }
+ ],
+ "people": [
+  "core:eric-turkheimer"
+ ],
+ "sources": [
+  "src:6104f13aa6",
+  "src:65b756684e",
+  "src:bf306944ea"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

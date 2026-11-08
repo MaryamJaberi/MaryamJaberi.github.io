@@ -1,0 +1,31 @@
+{
+ "id": "iran:thalassemia-screening",
+ "domain": "tabar",
+ "question": {
+  "fa": "آیا غربالگری ملی تالاسمی در ایران کار کرد؟",
+  "en": "Did Iran's national thalassaemia screening work?"
+ },
+ "finding": {
+  "fa": "غربالگری پیش از ازدواج از ۱۹۹۷ همراه با مشاوره و تشخیص پیش از تولد؛ کاهش چشمگیر تولد نوزادان مبتلا در استان‌های هدف در سال‌های اول.",
+  "en": "Premarital screening since 1997 with counselling and prenatal diagnosis; a marked fall in affected births in target provinces in the first years."
+ },
+ "year": 2004,
+ "method": "programme evaluation",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "Samavat, A., & Modell, B. (2004). Iranian national thalassaemia screening programme. BMJ, 329(7475), 1134–1137.",
+   "url": "https://doi.org/10.1136/bmj.329.7475.1134"
+  }
+ ],
+ "fields": [
+  "medgen"
+ ],
+ "concepts": [
+  "tabar:thalassemia-screening"
+ ],
+ "capability": [
+  2
+ ]
+}

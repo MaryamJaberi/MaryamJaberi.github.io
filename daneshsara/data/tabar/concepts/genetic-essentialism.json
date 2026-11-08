@@ -1,0 +1,82 @@
+{
+ "id": "tabar:genetic-essentialism",
+ "kind": "concept",
+ "title": {
+  "fa": "ذات‌گرایی ژنتیکی",
+  "en": "Genetic essentialism",
+  "nl": "Genetisch essentialisme"
+ },
+ "aliases": [],
+ "parent": "tabar:genetics-society",
+ "field": "tabar:genetics-society",
+ "summary": {
+  "fa": "گرایش ذهن به اینکه ژن را «ذات» پنهان و تغییرناپذیر بداند: اگر چیزی ژنتیکی است، پس طبیعی، ثابت، سرنوشت و مرزبندی‌کننده است. این سوگیری شناختی مستند است و نحوهٔ خبررسانی علمی آن را تشدید یا تضعیف می‌کند.",
+  "en": "The mind's tendency to treat genes as a hidden, unchangeable \"essence\": if something is genetic, then it is natural, fixed, fated and boundary-drawing. This cognitive bias is documented, and the way science is reported amplifies or dampens it.",
+  "nl": "De neiging van de geest om genen te zien als een verborgen, onveranderlijke \"essentie\": als iets genetisch is, dan is het natuurlijk, vast, lotsbestemd en grensbepalend. Deze cognitieve bias is gedocumenteerd, en de manier waarop wetenschap wordt bericht versterkt of dempt haar."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دار-نیمرود و هاینه (۲۰۱۱): خواندن توضیح ژنتیکی برای یک رفتار (مثلاً چاقی یا تفاوت ریاضی زن و مرد) باعث می‌شود افراد آن را تغییرناپذیرتر بدانند، کمتر خود را مسئول بدانند و کلیشه‌ها را بیشتر بپذیرند، حتی وقتی وراثت‌پذیری واقعی ناچیز است.",
+    "en": "Dar-Nimrod and Heine (2011): reading a genetic explanation for a behaviour (e.g. obesity or sex differences in maths) makes people see it as more fixed, feel less responsible and accept stereotypes more, even when real heritability is negligible.",
+    "nl": "Dar-Nimrod and Heine (2011): reading a genetic explanation for a behaviour (e.g. obesity or sex differences in maths) makes people see it as more fixed, feel less responsible and accept stereotypes more, even when real heritability is negligible."
+   },
+   "sources": [
+    "src:d5508c7aeb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پادزهر: هر بار که عدد وراثت‌پذیری می‌بینید، سه سؤال بپرسید: در کدام جمعیت؟ در کدام محیط؟ و آیا دربارهٔ تغییرپذیری چیزی می‌گوید؟ (پاسخ سومی همیشه «نه» است.)",
+    "en": "Antidote: whenever you see a heritability figure, ask three questions: in which population? In which environment? And does it say anything about changeability? (The third answer is always \"no\".)",
+    "nl": "Antidote: whenever you see a heritability figure, ask three questions: in which population? In which environment? And does it say anything about changeability? (The third answer is always \"no\".)"
+   },
+   "sources": [
+    "src:ba8f3ee8f4",
+    "src:b1c0eba86d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:heritability",
+   "rel": "critiques",
+   "note": {
+    "fa": "سوءبرداشت از وراثت‌پذیری",
+    "en": "Misreading heritability",
+    "nl": "Misreading heritability"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "bridges",
+   "note": {
+    "fa": "سوگیری‌های شناختی در ویکی روان",
+    "en": "Cognitive biases in the psychology wiki",
+    "nl": "Cognitive biases in the psychology wiki"
+   }
+  },
+  {
+   "to": "psy:mindsets",
+   "rel": "bridges",
+   "note": {
+    "fa": "ذهنیت رشد در برابر ثابت",
+    "en": "Growth versus fixed mindset",
+    "nl": "Growth versus fixed mindset"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:b1c0eba86d",
+  "src:ba8f3ee8f4",
+  "src:d5508c7aeb"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

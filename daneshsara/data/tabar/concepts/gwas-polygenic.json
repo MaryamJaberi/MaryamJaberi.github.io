@@ -1,0 +1,116 @@
+{
+ "id": "tabar:gwas-polygenic",
+ "kind": "concept",
+ "title": {
+  "fa": "مطالعات گسترهٔ ژنوم و نمرهٔ چندژنی",
+  "en": "GWAS and polygenic scores",
+  "nl": "GWAS en polygene scores"
+ },
+ "aliases": [
+  "GWAS",
+  "polygenic score",
+  "PGS",
+  "PRS"
+ ],
+ "parent": "tabar:behavior-genetics",
+ "field": "tabar:behavior-genetics",
+ "summary": {
+  "fa": "به جای جست‌وجوی «ژنِ» یک صفت، میلیون‌ها تفاوت کوچک در ژنوم صدها هزار نفر با صفت مقایسه می‌شود؛ حاصل، نمره‌ای است که اندکی پیش‌بینی می‌کند و خیلی سوءتعبیر می‌شود.",
+  "en": "Instead of hunting for \"the gene\" of a trait, millions of tiny genome differences in hundreds of thousands of people are compared with the trait; the result is a score that predicts a little and is misread a lot.",
+  "nl": "In plaats van te zoeken naar \"het gen\" van een eigenschap worden miljoenen kleine genoomverschillen bij honderdduizenden mensen vergeleken met de eigenschap; het resultaat is een score die weinig voorspelt en veel verkeerd wordt gelezen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مطالعهٔ ۱٫۱ میلیون نفر: ۱٬۲۷۱ واریانت مرتبط با سال‌های تحصیل؛ نمرهٔ چندژنی حاصل حدود ۱۱ تا ۱۳ درصد واریانس را در نمونه‌های مستقل توضیح می‌دهد.",
+    "en": "Study of 1.1 million people: 1,271 variants associated with years of schooling; the resulting polygenic score explains about 11 to 13 percent of variance in independent samples.",
+    "nl": "Study of 1.1 million people: 1,271 variants associated with years of schooling; the resulting polygenic score explains about 11 to 13 percent of variance in independent samples."
+   },
+   "sources": [
+    "src:69bb669df7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درون خانواده (مقایسهٔ خواهر و برادر) قدرت پیش‌بینی نمرهٔ تحصیل تقریباً نصف می‌شود: بخشی از آنچه «ژنتیکی» می‌نمود، اثر محیطِ خانواده و ژن‌های والدین بود («طبیعتِ تربیت»).",
+    "en": "Within families (comparing siblings), the education score's predictive power roughly halves: part of what looked \"genetic\" was family environment and parental genes (\"the nature of nurture\").",
+    "nl": "Within families (comparing siblings), the education score's predictive power roughly halves: part of what looked \"genetic\" was family environment and parental genes (\"the nature of nurture\")."
+   },
+   "sources": [
+    "src:4e5c76eea4",
+    "src:0d7705b088"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمره‌های چندژنی ساخته‌شده روی جمعیت‌های اروپایی‌تبار در جمعیت‌های دیگر بسیار ضعیف‌تر کار می‌کنند؛ استفادهٔ بالینی زودهنگام می‌تواند نابرابری سلامت را بیشتر کند.",
+    "en": "Polygenic scores built on European-ancestry populations work much worse in other populations; premature clinical use could widen health disparities.",
+    "nl": "Polygenic scores built on European-ancestry populations work much worse in other populations; premature clinical use could widen health disparities."
+   },
+   "sources": [
+    "src:f02227bf85"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«وراثت‌پذیری گمشده»: نمره‌های چندژنی هنوز بسیار کمتر از برآورد دوقلوها توضیح می‌دهند؛ دلایل احتمالی: واریانت‌های نادر، اثرهای بسیار کوچک، تعامل‌ها، و بیش‌برآورد دوقلوها.",
+    "en": "\"Missing heritability\": polygenic scores still explain far less than twin estimates; likely reasons include rare variants, very small effects, interactions, and inflated twin estimates.",
+    "nl": "\"Missing heritability\": polygenic scores still explain far less than twin estimates; likely reasons include rare variants, very small effects, interactions, and inflated twin estimates."
+   },
+   "sources": [
+    "src:88fc1feb66",
+    "src:5cdd7ce079"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psych-genetics",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "شکست ژن‌های کاندید افسردگی",
+    "en": "The failure of candidate genes for depression",
+    "nl": "The failure of candidate genes for depression"
+   }
+  },
+  {
+   "to": "tabar:heritability",
+   "rel": "measured-by",
+   "note": {
+    "fa": "برآورد وراثت‌پذیری از خودِ دی‌ان‌ای",
+    "en": "Estimating heritability from DNA itself",
+    "nl": "Estimating heritability from DNA itself"
+   }
+  },
+  {
+   "to": "tabar:ancestry-tests",
+   "rel": "see-also",
+   "note": {
+    "fa": "چرا پنل مرجع مهم است",
+    "en": "Why the reference panel matters",
+    "nl": "Why the reference panel matters"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-plomin",
+  "core:kathryn-paige-harden"
+ ],
+ "sources": [
+  "src:0d7705b088",
+  "src:4e5c76eea4",
+  "src:5cdd7ce079",
+  "src:69bb669df7",
+  "src:88fc1feb66",
+  "src:f02227bf85"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "tabar:steppe-indo-iranian",
+ "kind": "concept",
+ "title": {
+  "fa": "تبار استپی و زبان‌های هندوایرانی",
+  "en": "Steppe ancestry and the Indo-Iranian languages",
+  "nl": "Steppe-afstamming en de Indo-Iraanse talen"
+ },
+ "aliases": [],
+ "parent": "tabar:population-genetics",
+ "field": "tabar:population-genetics",
+ "summary": {
+  "fa": "ژنتیک نشان می‌دهد در هزارهٔ دوم پیش از میلاد تباری از استپ اوراسیا به جنوب و میانهٔ آسیا رسید؛ این را با گسترش زبان‌های هندوایرانی پیوند می‌دهند. پیوند ژن و زبان اما استنباط است، نه مشاهده، و میان باستان‌شناسان و زبان‌شناسان محل بحث.",
+  "en": "Genetics shows that in the second millennium BCE ancestry from the Eurasian steppe reached South and Central Asia; this is linked to the spread of Indo-Iranian languages. The gene–language link, however, is inference not observation, and is debated among archaeologists and linguists.",
+  "nl": "Genetica toont dat in het tweede millennium v.Chr. afstamming uit de Euraziatische steppe Zuid- en Centraal-Azië bereikte; dit wordt gekoppeld aan de verspreiding van de Indo-Iraanse talen. De koppeling gen–taal is echter een gevolgtrekking, geen waarneming, en omstreden onder archeologen en taalkundigen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نراسیمهان و همکاران (۲۰۱۹): ۵۲۳ ژنوم باستانی از آسیای میانه و جنوبی؛ تبار استپی (یامنایا/سینتاشتا) در نیمهٔ دوم هزارهٔ دوم پیش از میلاد در منطقه ظاهر می‌شود و با تبار «کشاورزان ایرانی» و شکارچیان جنوب آسیا می‌آمیزد.",
+    "en": "Narasimhan et al. (2019): 523 ancient genomes from Central and South Asia; steppe ancestry (Yamnaya/Sintashta) appears in the region in the second half of the second millennium BCE and mixes with \"Iranian farmer\" and South Asian hunter-gatherer ancestry.",
+    "nl": "Narasimhan et al. (2019): 523 ancient genomes from Central and South Asia; steppe ancestry (Yamnaya/Sintashta) appears in the region in the second half of the second millennium BCE and mixes with \"Iranian farmer\" and South Asian hunter-gatherer ancestry."
+   },
+   "sources": [
+    "src:73a4e45469"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همین مطالعه تأکید می‌کند تبار «ایرانیِ» جنوب آسیا از جمعیت زاگرس آمده، نه از مهاجرت هم‌زمان با کشاورزی؛ یعنی چند لایهٔ زمانی متفاوت.",
+    "en": "The same study stresses that the \"Iranian\" ancestry of South Asia came from Zagros-related population, not from a migration contemporary with farming; several distinct time layers.",
+    "nl": "The same study stresses that the \"Iranian\" ancestry of South Asia came from Zagros-related population, not from a migration contemporary with farming; several distinct time layers."
+   },
+   "sources": [
+    "src:73a4e45469"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: ژن زبان نمی‌گوید. تطبیق خوشهٔ ژنتیکی با «آریایی‌ها» یا یک زبان، فرضیه است و تاریخ سوءاستفاده‌های سیاسی از آن طولانی است. این صفحه پیوند ژن–زبان را «مطرح‌شده» می‌داند، نه اثبات‌شده.",
+    "en": "Critique: genes do not speak a language. Matching a genetic cluster to \"the Aryans\" or to a language is a hypothesis, and the history of its political misuse is long. This page treats the gene–language link as proposed, not proven.",
+    "nl": "Critique: genes do not speak a language. Matching a genetic cluster to \"the Aryans\" or to a language is a hypothesis, and the history of its political misuse is long. This page treats the gene–language link as proposed, not proven."
+   },
+   "sources": [
+    "src:8b730d2385"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:ancient-dna",
+   "rel": "part-of",
+   "note": {
+    "fa": "یافته‌ای از دی‌ان‌ای باستانی",
+    "en": "A finding from ancient DNA",
+    "nl": "A finding from ancient DNA"
+   }
+  },
+  {
+   "to": "tabar:race-biology",
+   "rel": "see-also",
+   "note": {
+    "fa": "خطر سوءاستفادهٔ هویتی از خوشه‌های ژنتیکی",
+    "en": "The risk of identity misuse of genetic clusters",
+    "nl": "The risk of identity misuse of genetic clusters"
+   }
+  }
+ ],
+ "people": [
+  "core:david-reich"
+ ],
+ "sources": [
+  "src:73a4e45469",
+  "src:8b730d2385"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:steppe-ancestry",
+ "wikidata": null,
+ "status": "draft"
+}

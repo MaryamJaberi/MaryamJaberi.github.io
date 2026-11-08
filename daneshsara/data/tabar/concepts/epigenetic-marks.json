@@ -1,0 +1,75 @@
+{
+ "id": "tabar:epigenetic-marks",
+ "kind": "concept",
+ "title": {
+  "fa": "نشانه‌های اپی‌ژنتیک",
+  "en": "Epigenetic marks",
+  "nl": "Epigenetische merktekens"
+ },
+ "aliases": [],
+ "parent": "tabar:epigenetics",
+ "field": "tabar:epigenetics",
+ "summary": {
+  "fa": "متیل شدن دی‌ان‌ای و تغییر هیستون‌ها تعیین می‌کنند کدام ژن‌ها در کدام سلول خوانده شوند؛ این نشانه‌ها با تغذیه، استرس و سن تغییر می‌کنند. اپی‌ژنتیک واقعی و مهم است، اما بیشتر آنچه در رسانه‌ها «اپی‌ژنتیک» خوانده می‌شود، گمانه است.",
+  "en": "DNA methylation and histone changes determine which genes are read in which cell; these marks change with nutrition, stress and age. Epigenetics is real and important, but much of what the media call \"epigenetics\" is speculation.",
+  "nl": "DNA-methylering en histonveranderingen bepalen welke genen in welke cel worden afgelezen; deze merktekens veranderen met voeding, stress en leeftijd. Epigenetica is echt en belangrijk, maar veel van wat de media \"epigenetica\" noemen, is speculatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "قحطی هلند (زمستان ۱۹۴۴–۴۵): افرادی که در اوایل بارداری در معرض قحطی بودند، شش دهه بعد متیل شدن کمتری در ژن IGF2 داشتند؛ شاهدی که محیط پیش از تولد ردی ماندگار در تنظیم ژن می‌گذارد.",
+    "en": "The Dutch Hunger Winter (1944–45): people exposed to famine in early gestation had less methylation of the IGF2 gene six decades later; evidence that the prenatal environment leaves a lasting trace in gene regulation.",
+    "nl": "The Dutch Hunger Winter (1944–45): people exposed to famine in early gestation had less methylation of the IGF2 gene six decades later; evidence that the prenatal environment leaves a lasting trace in gene regulation."
+   },
+   "sources": [
+    "src:540fb9c6d0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«ساعت اپی‌ژنتیک» از الگوی متیل شدن سن زیستی را برآورد می‌کند و با سلامت و مرگ‌ومیر همبسته است؛ ابزار پژوهشی امیدبخش، هنوز نه ابزار بالینی.",
+    "en": "The \"epigenetic clock\" estimates biological age from methylation patterns and correlates with health and mortality; a promising research tool, not yet a clinical one.",
+    "nl": "The \"epigenetic clock\" estimates biological age from methylation patterns and correlates with health and mortality; a promising research tool, not yet a clinical one."
+   },
+   "sources": [
+    "src:07fb5aa7b9"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:transgenerational",
+   "rel": "see-also",
+   "note": {
+    "fa": "آیا به نسل بعد می‌رسد؟",
+    "en": "Does it reach the next generation?",
+    "nl": "Does it reach the next generation?"
+   }
+  },
+  {
+   "to": "psy:n-stress",
+   "rel": "bridges",
+   "note": {
+    "fa": "استرس و مغز در ویکی روان",
+    "en": "Stress and the brain in the psychology wiki",
+    "nl": "Stress and the brain in the psychology wiki"
+   }
+  }
+ ],
+ "people": [
+  "core:bas-heijmans"
+ ],
+ "sources": [
+  "src:07fb5aa7b9",
+  "src:540fb9c6d0"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
