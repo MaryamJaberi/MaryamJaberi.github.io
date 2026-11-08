@@ -1,0 +1,30 @@
+name: Daneshsara — validate & build
+on:
+  push:
+    branches: [main, master]
+    paths: ['daneshsara/**', '.github/workflows/daneshsara.yml']
+  pull_request:
+    paths: ['daneshsara/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install jsonschema
+      - name: Validate data (schemas, cross-references, registry)
+        run: python3 daneshsara/build/validate.py
+      - name: Build wiki readers and the lands map
+        run: |
+          for w in daneshsara/data/*/; do w=$(basename "$w"); [ "$w" = psy ] || python3 daneshsara/build/reader.py "$w"; done
+          python3 daneshsara/build/lands.py
+      - name: Commit regenerated pages (push only)
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "daneshsara-bot"; git config user.email "actions@users.noreply.github.com"
+          git add daneshsara/core/registry.json daneshsara/*/index.html daneshsara/atlas/lands.html
+          git diff --cached --quiet || (git commit -m "build: regenerate registry and pages [skip ci]" && git push)
