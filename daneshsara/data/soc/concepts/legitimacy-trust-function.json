@@ -1,0 +1,128 @@
+{
+ "id": "soc:legitimacy-trust-function",
+ "kind": "concept",
+ "title": {
+  "fa": "مشروعیت: اعتماد، کارکرد و تعلق‌خاطر",
+  "en": "Legitimacy: trust, performance and attachment",
+  "nl": "Legitimiteit: vertrouwen, functioneren en verbondenheid"
+ },
+ "aliases": [],
+ "parent": "soc:cohesion",
+ "field": "soc:cohesion",
+ "summary": {
+  "fa": "مشروعیت یعنی مردم یک حکومت یا نهاد را حق‌دار و پذیرفتنی بدانند. در این گفتگو مشروعیت با دو چیز سنجیده می‌شود: اعتماد و کارکرد. اعتماد دیر ساخته می‌شود و زود خرج می‌شود. هرچه تعلق‌خاطر شهروندان به جامعه کمتر باشد، مشروعیت هم ضعیف‌تر است.",
+  "en": "Legitimacy means people regard a government or institution as rightful and acceptable. The talk measures it by two things: trust and performance. Trust is built slowly and spent quickly. The weaker citizens' attachment to society, the weaker legitimacy is.",
+  "nl": "Legitimiteit betekent dat mensen een overheid of instelling als rechtmatig aanvaarden; het hangt af van vertrouwen en functioneren."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، مشروعیت را با دو متغیر می‌توان سنجید: اعتماد مردم به یک نظام یا گروه، و اینکه آن نظام هنوز به کار مردم می‌آید یا نه. اگر این دو تغییر کنند، مشروعیت هم تغییر می‌کند.",
+    "en": "Per the lecturer, legitimacy can be gauged by two variables: how far people trust a system or group, and whether it still serves them. If either shifts, legitimacy shifts.",
+    "nl": "Per the lecturer, legitimacy can be gauged by two variables: how far people trust a system or group, and whether it still serves them. If either shifts, legitimacy shifts."
+   },
+   "sources": [
+    "src:3d2974cdd2"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، اعتمادِ اجتماعی در طول زمان و با پایبندی به قانون و شفافیت ساخته می‌شود، اما به‌سرعت می‌تواند تخلیه شود و بازسازی‌اش دشوار است؛ او اعتماد را یکی از شاخص‌های سرمایهٔ اجتماعی می‌داند.",
+    "en": "Per the lecturer, social trust is built over time through rule-following and transparency, yet can be drained quickly and is hard to rebuild; he treats it as an indicator of social capital.",
+    "nl": "Per the lecturer, social trust is built over time through rule-following and transparency, yet can be drained quickly and is hard to rebuild; he treats it as an indicator of social capital."
+   },
+   "sources": [
+    "src:3d2974cdd2"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، حوزهٔ سیاست (دولت)، بازار و جامعه مثل سه سیستم باز هستند که با هم در ارتباط‌اند. در تبیین اجتماعی بیشتر از همبستگی سخن می‌گویند تا علیت، چون معلوم نیست کدام یک زودتر آسیب می‌بیند.",
+    "en": "Per the lecturer, the state, the market and society act like three open systems that interact; social explanations speak more of correlation than causation, since it is unclear which is damaged first.",
+    "nl": "Per the lecturer, the state, the market and society act like three open systems that interact; social explanations speak more of correlation than causation, since it is unclear which is damaged first."
+   },
+   "sources": [
+    "src:3d2974cdd2"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، اعتراض نشانهٔ امید و تعلق‌خاطر است؛ وقتی امید از بین برود، مردم به‌جای اعتراض بی‌تفاوت می‌شوند یا مهاجرت می‌کنند. این مضمون شبیه چارچوب «خروج، اعتراض و وفاداری» هیرشمن است.",
+    "en": "Per the lecturer, protest signals hope and attachment; when hope is gone people grow indifferent or emigrate rather than protest. This resembles Hirschman's exit-voice-loyalty framework.",
+    "nl": "Per the lecturer, protest signals hope and attachment; when hope is gone people grow indifferent or emigrate rather than protest. This resembles Hirschman's exit-voice-loyalty framework."
+   },
+   "sources": [
+    "src:6ec0c8ba1e"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در نظریهٔ وبر مشروعیت می‌تواند بر سنت، کاریزما یا قانون و نظام اداری استوار باشد؛ اعتماد و کارکرد دو عامل مهم‌اند ولی تنها عوامل نیستند. حکومتی هم ممکن است با زور و ترس سال‌ها دوام بیاورد بی‌آنکه مشروع باشد.",
+    "en": "In Weber's account legitimacy can rest on tradition, charisma or legal-rational authority; trust and performance matter but are not the only factors, and a regime may endure for years on coercion without being legitimate.",
+    "nl": "In Weber's account legitimacy can rest on tradition, charisma or legal-rational authority; trust and performance matter but are not the only factors, and a regime may endure for years on coercion without being legitimate."
+   },
+   "sources": [
+    "src:820aa3f6c0"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:generalized-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد تعمیم‌یافته",
+    "en": "Generalised trust",
+    "nl": "Generalised trust"
+   }
+  },
+  {
+   "to": "soc:social-capital",
+   "rel": "part-of",
+   "note": {
+    "fa": "اعتماد یکی از شاخص‌های سرمایهٔ اجتماعی است",
+    "en": "Trust is an indicator of social capital",
+    "nl": "Trust is an indicator of social capital"
+   }
+  },
+  {
+   "to": "soc:clear-horizon-exit-voice",
+   "rel": "see-also",
+   "note": {
+    "fa": "افق روشن و مهاجرت",
+    "en": "Clear horizon and emigration",
+    "nl": "Clear horizon and emigration"
+   }
+  }
+ ],
+ "people": [
+  "core:max-weber",
+  "core:albert-o-hirschman"
+ ],
+ "sources": [
+  "src:3d2974cdd2",
+  "src:6ec0c8ba1e",
+  "src:820aa3f6c0"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

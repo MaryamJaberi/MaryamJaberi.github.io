@@ -15,7 +15,8 @@ for f in sorted(glob.glob(f'{R}/build/lectures/*.json')):
     stem = os.path.basename(f)[:-5]; d = json.load(open(f, encoding='utf-8'))
     for e in d['entries']:
         W = e['wiki']; S.W = W
-        lec_cite = f"Sabouri, D. (n.d.). {d['lecture']} [ویدیو]. YouTube, کانال @darwinsabouri. {URL.get(stem, CHANNEL)} (زیرنویس خودکار)"
+        spk = d.get('speaker') or 'Sabouri, D.'; chn = d.get('channel') or 'کانال @darwinsabouri'
+        lec_cite = f"{spk} (n.d.). {d['lecture']} [ویدیو]. YouTube، {chn}. {URL.get(stem, CHANNEL)} (زیرنویس خودکار)"
         lec = S.src(lec_cite, 3, URL.get(stem, CHANNEL))
         ext = [S.src(x['cite'], x.get('tier', 2)) for x in d.get('sources', [])]
         pts = []

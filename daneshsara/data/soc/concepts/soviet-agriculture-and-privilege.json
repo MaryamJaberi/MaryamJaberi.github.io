@@ -1,0 +1,113 @@
+{
+ "id": "soc:soviet-agriculture-and-privilege",
+ "kind": "concept",
+ "title": {
+  "fa": "کشاورزی ناکارآمد و امتیازهای نخبگان در شوروی",
+  "en": "Soviet agriculture and elite privilege",
+  "nl": "Sovjetlandbouw en elitevoorrechten"
+ },
+ "aliases": [],
+ "parent": "soc:inequality",
+ "field": "soc:inequality",
+ "summary": {
+  "fa": "مهمان برنامه کمبود غذا و ناکارآمدی کشاورزی جمعی را نشانهٔ ضعف برنامه‌ریزی مرکزی می‌داند و از فروشگاه‌های ویژهٔ نخبگان می‌گوید. مدارک عمومی نشان می‌دهد این تصویر در کلیات درست است، اما برخی عددها اغراق‌آمیزند.",
+  "en": "The guest treats food shortages and inefficient collective farming as signs of weak central planning, and describes special shops for the elite. The broad picture matches the evidence, though some figures are exaggerated.",
+  "nl": "De gast ziet voedseltekorten en inefficiënte collectieve landbouw als tekenen van zwakke centrale planning; het grote beeld klopt, sommige cijfers zijn overdreven."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ طهماسبی، روسیهٔ پیش از انقلاب صادرکنندهٔ بزرگ غله بود، اما شوروی در دههٔ ۱۹۷۰ برای تأمین غذا به واردات روی آورد. او می‌گوید بخش بزرگی از محصول به‌خاطر حمل‌ونقل و انبارداری بد از بین می‌رفت و زمین‌های خصوصی کوچک کشاورزان سهم بسیار بالایی از میوه و سبزی تولید می‌کردند.",
+    "en": "Per Tahmasebi, pre-revolutionary Russia was a major grain exporter, yet by the 1970s the USSR relied on food imports. He says much of the harvest was lost to poor transport and storage, while tiny private plots supplied a very large share of fruit and vegetables.",
+    "nl": "Per Tahmasebi, pre-revolutionary Russia was a major grain exporter, yet by the 1970s the USSR relied on food imports. He says much of the harvest was lost to poor transport and storage, while tiny private plots supplied a very large share of fruit and vegetables."
+   },
+   "sources": [
+    "src:d8b9e96f0a"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این بخش با پژوهش‌ها هماهنگ است: زمین‌های خصوصی خانوارها کمتر از ده درصد زمین کشاورزی را داشتند و بخش چشمگیری از سبزی، میوه و فرآورده‌های دامی را تولید می‌کردند. اما ادعای او دربارهٔ «هفت برابر بودن تولید آمریکا» دقیق نیست و تنها با تعریف‌های مشخص قابل بررسی است.",
+    "en": "This broadly matches research: household private plots held a small share of farmland yet produced a notable part of vegetables, fruit and livestock products. The claim that US output was seven times the Soviet figure is imprecise and depends on how output is defined.",
+    "nl": "This broadly matches research: household private plots held a small share of farmland yet produced a notable part of vegetables, fruit and livestock products. The claim that US output was seven times the Soviet figure is imprecise and depends on how output is defined."
+   },
+   "sources": [
+    "src:aab1946dbd"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ او سطح زندگی مردم شوروی از بیشتر کشورهای اروپای شرقی پایین‌تر بود و شوروی در مبادله با اقمار بخشی از کالای صنعتی آن‌ها را می‌پذیرفت، مثلاً اتوبوس‌های مجارستانی در مسکو. دربارهٔ اینکه مبادله برای شوروی «زیان» بود، پژوهشگران نظر یکسانی ندارند.",
+    "en": "He says Soviet living standards were below most of Eastern Europe, and that the USSR took manufactured goods from satellites, such as Hungarian buses in Moscow. Scholars disagree on whether this trade was a net loss for the USSR.",
+    "nl": "He says Soviet living standards were below most of Eastern Europe, and that the USSR took manufactured goods from satellites, such as Hungarian buses in Moscow. Scholars disagree on whether this trade was a net loss for the USSR."
+   },
+   "sources": [
+    "src:aab1946dbd"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، نخبگان حزبی در فروشگاه‌های بسته با کالاهای کمیاب و وارداتی خرید می‌کردند، در حالی که مردم عادی با کمبود روبه‌رو بودند. وجود چنین امتیازهایی را پژوهش‌های مربوط به نومنکلاتورا هم تأیید می‌کنند.",
+    "en": "Per the speaker, party elites shopped in closed stores stocked with scarce and imported goods while ordinary people faced shortages. Research on the nomenklatura likewise documents such privileges.",
+    "nl": "Per the speaker, party elites shopped in closed stores stocked with scarce and imported goods while ordinary people faced shortages. Research on the nomenklatura likewise documents such privileges."
+   },
+   "sources": [
+    "src:d8b9e96f0a",
+    "src:aab1946dbd"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:soviet-arms-race-and-detente",
+   "rel": "see-also",
+   "note": {
+    "fa": "رقابت تسلیحاتی و تنش‌زدایی",
+    "en": "Arms race and detente",
+    "nl": "Arms race and detente"
+   }
+  },
+  {
+   "to": "soc:inequality-health",
+   "rel": "see-also",
+   "note": {
+    "fa": "نابرابری و سلامت",
+    "en": "Inequality and health",
+    "nl": "Inequality and health"
+   }
+  },
+  {
+   "to": "soc:marx-capitalism-dynamics",
+   "rel": "contrasts",
+   "note": {
+    "fa": "پویایی سرمایه‌داری نزد مارکس",
+    "en": "Marx on capitalism's dynamics",
+    "nl": "Marx on capitalism's dynamics"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:aab1946dbd",
+  "src:d8b9e96f0a"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

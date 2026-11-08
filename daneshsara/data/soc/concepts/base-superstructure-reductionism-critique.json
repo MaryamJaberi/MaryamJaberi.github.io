@@ -1,0 +1,112 @@
+{
+ "id": "soc:base-superstructure-reductionism-critique",
+ "kind": "concept",
+ "title": {
+  "fa": "نقد تقلیل‌گرایی اقتصادی: زیربنا و روبنا",
+  "en": "The reductionism critique: base and superstructure",
+  "nl": "Kritiek op economisch reductionisme: basis en bovenbouw"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "در طرح مارکس، دین، حقوق، سیاست و خانواده «روبنا»ی جامعه‌اند و بر شیوهٔ تولید («زیربنا») استوارند. منتقدان می‌گویند این نگاه پدیده‌های اجتماعی را بیش از حد ساده می‌کند. مجری نیز چنین استدلال می‌کند و مثال فقر را می‌آورد.",
+  "en": "In Marx's scheme religion, law, politics and family form a 'superstructure' resting on the mode of production (the 'base'). Critics say this oversimplifies social life. The host argues so, using poverty as an example.",
+  "nl": "Bij Marx vormen religie, recht, politiek en gezin een 'bovenbouw' op de productiewijze (de 'basis'). Critici vinden dit te simplistisch."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "خلاصهٔ آموزه: شیوهٔ تولید زیربنای جامعه است و نهادهایی مثل دین، حقوق و سیاست روبنایی‌اند که از آن شکل می‌گیرند.",
+    "en": "In short: the mode of production is the base, and institutions like religion, law and politics are a superstructure shaped by it.",
+    "nl": "In short: the mode of production is the base, and institutions like religion, law and politics are a superstructure shaped by it."
+   },
+   "sources": [
+    "src:3fb7083ee3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، این نگاه تقلیل‌گرایانه است: خانواده و حقوق و سیاست چیزی بیش از ابزار تولید و منافع اقتصادی‌اند و جامعه مثل فیزیک نیست که با یک فشار در یک جهت حرکت کند.",
+    "en": "Per the lecturer, this is reductionist: family, law and politics are more than tools of production, and society is not like physics where one push moves it in one direction.",
+    "nl": "Per the lecturer, this is reductionist: family, law and politics are more than tools of production, and society is not like physics where one push moves it in one direction."
+   },
+   "sources": [
+    "src:3fb7083ee3"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، اینکه فقر را با گرفتن پول از سرمایه‌دار و دادن به کارگر حل‌شده بدانیم ساده‌انگارانه است؛ نحوهٔ مواجهه با فقر پیچیده‌تر است.",
+    "en": "Per the lecturer, treating poverty as solved by transferring money from capitalist to worker is naive; how a society faces poverty is a more complex matter.",
+    "nl": "Per the lecturer, treating poverty as solved by transferring money from capitalist to worker is naive; how a society faces poverty is a more complex matter."
+   },
+   "sources": [
+    "src:3fb7083ee3"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "توضیح لازم: خودِ مارکسیسم هم این انتقاد را پذیرفته است. انگلس در نامه‌های متأخرش گفت اقتصاد فقط «در نهایت» تعیین‌کننده است، و آلتوسر از «استقلال نسبی» روبنا گفت. وبر هم نشان داد اندیشه‌ها (مثل اخلاق پروتستانی) می‌توانند بر اقتصاد اثر بگذارند.",
+    "en": "Needed context: Marxists themselves accepted this criticism. Engels' late letters said the economy is determining only 'in the last instance', Althusser spoke of the relative autonomy of the superstructure, and Weber showed ideas (e.g. Protestant ethic) can shape the economy.",
+    "nl": "Needed context: Marxists themselves accepted this criticism. Engels' late letters said the economy is determining only 'in the last instance', Althusser spoke of the relative autonomy of the superstructure, and Weber showed ideas (e.g. Protestant ethic) can shape the economy."
+   },
+   "sources": [
+    "src:454ba8a172"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:marx-historical-materialism",
+   "rel": "critiques",
+   "note": {
+    "fa": "نقد زیربنا و روبنا",
+    "en": "Critique of base and superstructure",
+    "nl": "Critique of base and superstructure"
+   }
+  },
+  {
+   "to": "soc:althusser-structural-marxism",
+   "rel": "bridges",
+   "note": {
+    "fa": "استقلال نسبی روبنا نزد آلتوسر",
+    "en": "Relative autonomy in Althusser",
+    "nl": "Relative autonomy in Althusser"
+   }
+  },
+  {
+   "to": "soc:protestant-ethic",
+   "rel": "contrasts",
+   "note": {
+    "fa": "وبر: اندیشه‌ها بر اقتصاد اثر می‌گذارند",
+    "en": "Weber: ideas shape the economy",
+    "nl": "Weber: ideas shape the economy"
+   }
+  }
+ ],
+ "people": [
+  "core:friedrich-engels",
+  "core:max-weber"
+ ],
+ "sources": [
+  "src:3fb7083ee3",
+  "src:454ba8a172"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

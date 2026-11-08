@@ -1,0 +1,152 @@
+{
+ "id": "phil:fallacy-language-and-false-authority",
+ "kind": "concept",
+ "title": {
+  "fa": "مغالطه‌های زبانی و معرفتی: توسل به جهل، فضل‌فروشی، آمار ساختگی، بار ارزشی واژه‌ها، مرجع کاذب و تجسم",
+  "en": "Language and knowledge fallacies: appeal to ignorance, pedantry, bogus numbers, loaded words, false authority, reification",
+  "nl": "Taal- en kennisfouten: beroep op onwetendheid, schijngeleerdheid, schijncijfers, beladen woorden, valse autoriteit, verdinglijking"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "این بخش شش ترفند را کنار هم می‌گذارد که به شیوهٔ حرف زدن و نحوهٔ استناد به دانش مربوط‌اند: نتیجه‌گرفتن از ندانستن، پنهان شدن پشت واژه‌های سخت، آمار بی‌معنا، واژه‌های بار‌دار، استناد به کسی که متخصص آن موضوع نیست و واقعی‌انگاشتن مفاهیم انتزاعی. او تأکید می‌کند که بعضی از این‌ها، مثل ارجاع به کارشناس یا استدلال از سکوت شواهد، همیشه مغالطه نیستند.",
+  "en": "This entry groups six tricks about how we talk and how we cite knowledge: concluding from ignorance, hiding behind hard words, meaningless statistics, loaded vocabulary, citing someone who is no expert on the topic, and treating abstractions as concrete things. The lecturer stresses that some of these, such as consulting an expert or arguing from missing evidence, are not always fallacies.",
+  "nl": "Zes trucs rond taalgebruik en het aanhalen van kennis: conclusies uit onwetendheid, schuilen achter moeilijke woorden, betekenisloze cijfers, beladen woorden, een niet-deskundige als autoriteit en abstracties als concrete dingen behandelen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "توسل به جهل: از «هیچ‌کس خبر ندارد» نتیجه می‌گیرند «پس وجود ندارد». مثال سخنران: نبودن دلیل بر موجودات فرازمینی، دلیل نبودنشان نیست. اما او می‌گوید این استدلال همیشه نادرست نیست: وقتی اگر رویدادی رخ داده بود باید ردپای آشکاری می‌گذاشت و نگذاشته، نبود شواهد خودش شاهد است.",
+    "en": "Appeal to ignorance: 'nobody knows of X, so X does not exist'. Yet the lecturer notes it is not always fallacious: when an event would surely have left traces and none exist, absence of evidence is itself some evidence.",
+    "nl": "Appeal to ignorance: 'nobody knows of X, so X does not exist'. Yet the lecturer notes it is not always fallacious: when an event would surely have left traces and none exist, absence of evidence is itself some evidence."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فضل‌فروشی: استفاده از واژه‌های پیچیده یا نقل متن به زبانی که مخاطب نمی‌فهمد (مثلاً آیات به عربی) تا او را تحت تأثیر قرار دهند. آمار ساختگی (کمیت‌گرایی): عددهایی که معنایش روشن نیست، مثل «رشد ۱۰۰ درصد» بدون دانستن مبنا، یا «از هر ده نفر نه نفر» بدون روش شمارش.",
+    "en": "Pedantry and bogus numbers: obscure vocabulary or untranslated quotations to impress; statistics with no base or method, such as '100% growth' without the starting value.",
+    "nl": "Pedantry and bogus numbers: obscure vocabulary or untranslated quotations to impress; statistics with no base or method, such as '100% growth' without the starting value."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بار ارزشی واژه‌ها: انتخاب واژه‌ای مثبت یا منفی برای یک رویداد که قضاوت را از پیش جا می‌اندازد؛ مثل «عملیات ویژه» به‌جای «حمله»، یا «معترض» برای یک گروه و «اغتشاشگر» برای گروه مشابه دیگر.",
+    "en": "Loaded language: choosing positive or negative words to settle the judgement in advance, e.g. 'special operation' versus 'invasion', or 'protesters' versus 'rioters' for similar crowds.",
+    "nl": "Loaded language: choosing positive or negative words to settle the judgement in advance, e.g. 'special operation' versus 'invasion', or 'protesters' versus 'rioters' for similar crowds."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "توسل به مرجع کاذب: ارجاع به متخصص در حوزهٔ تخصصش معقول است (هرچند برهان قطعی نیست)، اما استناد به کسی که در آن موضوع صلاحیت ندارد، مثل نقل قول از یک رهبر دینی در بحث اقتصاد، مغالطه است.",
+    "en": "False authority: citing an expert within their field is reasonable though not conclusive; citing someone with no competence in the topic is fallacious.",
+    "nl": "False authority: citing an expert within their field is reasonable though not conclusive; citing someone with no competence in the topic is fallacious."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تجسم: مفهوم انتزاعی (مثل «نظام») چنان رفتار می‌شود که گویی موجودی واقعی است که باید به هر قیمتی حفظش کرد، حتی به قیمت رنج انسان‌های واقعی. به گفتهٔ سخنران، این استدلال را حکومت‌ها برای توجیه سرکوب به کار می‌برند.",
+    "en": "Reification: an abstract concept ('the system') is treated as a real thing to be preserved at any cost, even at the cost of real people's suffering. Per the lecturer, regimes use this to justify repression.",
+    "nl": "Reification: an abstract concept ('the system') is treated as a real thing to be preserved at any cost, even at the cost of real people's suffering. Per the lecturer, regimes use this to justify repression."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "مثال شق‌القمر از سخنران (استدلال از سکوت منابع تمدن‌های دیگر) استدلالی تاریخی است که مورد اختلاف است: مخالفانش می‌گویند رویدادهای ادعایی ممکن است محلی، کوتاه یا بی‌ثبت مانده باشند و منابع دورهٔ آن عصر اندک است؛ آن‌ها نیز دربارهٔ باورهای دینی نظر می‌دهند. این بخش نظر سخنران است نه حکم تاریخ‌نگاری.",
+    "en": "The lecturer's 'splitting of the moon' example is an argument from silence in other civilizations' records; it is contested, since sources are sparse and a brief, local or unrecorded event is not excluded. It reflects his opinion, not a settled historiographical verdict.",
+    "nl": "The lecturer's 'splitting of the moon' example is an argument from silence in other civilizations' records; it is contested, since sources are sparse and a brief, local or unrecorded event is not excluded. It reflects his opinion, not a settled historiographical verdict."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهش‌های معاصر دربارهٔ مغالطه‌ها نشان می‌دهد «توسل به جهل» و «مرجع» وقتی به‌صورت احتمالی و با شرط‌های درست به کار روند، می‌توانند استدلال‌های معتبرند؛ مغالطه بودن آن‌ها به بافت بستگی دارد.",
+    "en": "Contemporary argumentation theory (Walton) shows that argument from ignorance and from authority can be reasonable presumptive arguments under the right conditions; whether they are fallacious depends on context.",
+    "nl": "Contemporary argumentation theory (Walton) shows that argument from ignorance and from authority can be reasonable presumptive arguments under the right conditions; whether they are fallacious depends on context."
+   },
+   "sources": [
+    "src:05d15fe653"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:fallacies",
+   "rel": "part-of",
+   "note": {
+    "fa": "از خانوادهٔ مغالطه‌ها",
+    "en": "Part of the family of fallacies",
+    "nl": "Part of the family of fallacies"
+   }
+  },
+  {
+   "to": "phil:fallacy-appeals-to-feeling-and-force",
+   "rel": "see-also",
+   "note": {
+    "fa": "ترفندهای فشار و احساس",
+    "en": "Appeals to feeling and force",
+    "nl": "Appeals to feeling and force"
+   }
+  },
+  {
+   "to": "phil:epistemic-injustice",
+   "rel": "see-also",
+   "note": {
+    "fa": "مرجعیت و اعتبار دانش با بی‌عدالتی معرفتی پیوند دارد",
+    "en": "Authority and credibility connect to epistemic injustice",
+    "nl": "Authority and credibility connect to epistemic injustice"
+   }
+  },
+  {
+   "to": "phil:epistemology",
+   "rel": "part-of",
+   "note": {
+    "fa": "معرفت‌شناسی",
+    "en": "Epistemology",
+    "nl": "Epistemology"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:05d15fe653",
+  "src:a81ae2997d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
