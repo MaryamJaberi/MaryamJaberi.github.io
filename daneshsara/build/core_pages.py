@@ -11,7 +11,7 @@ for c in concepts:
     cited = set(c.get('sources', [])) | {s for pt in c.get('points', []) for s in pt.get('sources', [])}
     for s in cited: sref.setdefault(s, []).append(c['id'])
 def ref(ids): return [{'id': i, 'title': reg[i]['title'], 'url': '../' + reg[i]['url'], 'wiki': i.split(':')[0]} for i in sorted(set(ids)) if i in reg]
-P = [{'id': k, 'name': v['name'], 'years': v.get('years', ''), 'note': v.get('note', {}).get('fa', ''), 'wikis': v.get('wikis', []), 'in': ref(pref.get(k, []))} for k, v in people.items()]
+P = [{'id': k, 'name': v['name'], 'years': v.get('years', ''), 'note': v.get('note', {}).get('fa', ''), 'wikis': v.get('wikis', []), 'qid': v.get('wikidata'), 'in': ref(pref.get(k, []))} for k, v in people.items()]
 P.sort(key=lambda x: -len(x['in']))
 S = [{'id': k, 'cite': v['cite'], 'year': v.get('year'), 'tier': v.get('tier'), 'url': v.get('url'), 'wikis': v.get('wikis', []), 'in': ref(sref.get(k, []))} for k, v in sources.items()]
 S.sort(key=lambda x: (-(x['year'] or 0), x['cite']))
@@ -74,7 +74,7 @@ const UI = {fa:{home:"خانه",h1:"چهره‌ها",lead:"همهٔ پژوهشگ
 function render(){
   const items = D.filter(p => (!w || p.wikis.includes(w)) && (!q || JSON.stringify(p.name).toLowerCase().includes(q) || (p.note || "").toLowerCase().includes(q)));
   document.getElementById("bar").innerHTML = `<input id="q" type="search" placeholder="${T("ph")}" value="${esc(q)}">` + ["", "psy", "soc", "tabar", "phil"].map(k => `<button data-w="${k}" aria-pressed="${w === k}">${k ? WN[L][k] : T("all")}</button>`).join("") + `<span style="align-self:center;color:var(--ink-3);font-size:var(--small)">${fa(items.length)} ${T("n")}</span>`;
-  document.getElementById("list").innerHTML = items.slice(0, shown).map(p => `<article class="card row" id="${p.id.split(":")[1]}"><h3>${esc(tx(p.name))}${L === "fa" && p.name.en ? `<small dir="ltr">${esc(p.name.en)}</small>` : ""}${p.years ? `<small>${fa(p.years)}</small>` : ""}</h3>${p.note && L === "fa" ? `<div class="n">${esc(p.note)}</div>` : ""}<div class="tags">${p.in.map(c => `<a class="${c.wiki}" href="${c.url}">${esc(tx(c.title))}</a>`).join("")}</div></article>`).join("");
+  document.getElementById("list").innerHTML = items.slice(0, shown).map(p => `<article class="card row" id="${p.id.split(":")[1]}"><h3>${esc(tx(p.name))}${L === "fa" && p.name.en ? `<small dir="ltr">${esc(p.name.en)}</small>` : ""}${p.years ? `<small>${fa(p.years)}</small>` : ""}${p.qid ? `<small><a href="https://www.wikidata.org/wiki/${p.qid}" target="_blank" rel="noopener" style="color:var(--ink-3)">Wikidata ↗</a></small>` : ""}</h3>${p.note && L === "fa" ? `<div class="n">${esc(p.note)}</div>` : ""}<div class="tags">${p.in.map(c => `<a class="${c.wiki}" href="${c.url}">${esc(tx(c.title))}</a>`).join("")}</div></article>`).join("");
   document.getElementById("more").innerHTML = items.length > shown ? `<button data-more>${T("more")} (${fa(items.length - shown)})</button>` : "";
 }'''
 SOURCES_JS = '''
