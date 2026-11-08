@@ -1,0 +1,71 @@
+{
+ "id": "tabar:human-genome",
+ "kind": "concept",
+ "title": {
+  "fa": "ژنوم انسان: ۹۹٫۹ درصد مشترک",
+  "en": "The human genome: 99.9 percent shared",
+  "nl": "Het menselijk genoom: 99,9 procent gedeeld"
+ },
+ "aliases": [],
+ "parent": "tabar:basics",
+ "field": "tabar:basics",
+ "summary": {
+  "fa": "حدود ۳ میلیارد حرف، نزدیک به ۲۰ هزار ژن پروتئین‌ساز، و دو انسان تصادفی در حدود یک حرف از هر هزار حرف با هم فرق دارند. همین یک‌دهم درصد، همهٔ تفاوت‌های ارثی ما را می‌سازد.",
+  "en": "About 3 billion letters, close to 20 thousand protein-coding genes, and two random humans differ in about one letter in a thousand. That tenth of a percent carries all our inherited differences.",
+  "nl": "Zo'n 3 miljard letters, bijna 20 duizend eiwitcoderende genen, en twee willekeurige mensen verschillen in ongeveer één letter op duizend. Dat tiende procent draagt al onze erfelijke verschillen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کنسرسیوم ژنوم انسان (۲۰۰۱): پیش‌نویس ژنوم، تعداد ژن‌ها بسیار کمتر از ۱۰۰ هزارِ پیش‌بینی‌شده (امروز حدود ۲۰ هزار)؛ بیش از ۹۸ درصد ژنوم پروتئین نمی‌سازد و بخشی از آن تنظیم‌کنندهٔ ژن‌هاست.",
+    "en": "Human Genome Consortium (2001): the draft genome had far fewer genes than the 100 thousand predicted (today about 20 thousand); over 98 percent of the genome does not code for protein, and part of it regulates genes.",
+    "nl": "Human Genome Consortium (2001): the draft genome had far fewer genes than the 100 thousand predicted (today about 20 thousand); over 98 percent of the genome does not code for protein, and part of it regulates genes."
+   },
+   "sources": [
+    "src:788a171c8d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پروژهٔ ۱۰۰۰ ژنوم (۲۰۱۵، ۲٬۵۰۴ نفر از ۲۶ جمعیت): هر فرد حدود ۴ تا ۵ میلیون جایگاه متفاوت با ژنوم مرجع دارد؛ بیشتر واریانت‌های شایع در همهٔ قاره‌ها یافت می‌شوند و واریانت‌های نادر جغرافیایی‌ترند.",
+    "en": "The 1000 Genomes Project (2015, 2,504 people from 26 populations): each person differs from the reference at about 4 to 5 million sites; most common variants are found on every continent, while rare variants are more geographically specific.",
+    "nl": "The 1000 Genomes Project (2015, 2,504 people from 26 populations): each person differs from the reference at about 4 to 5 million sites; most common variants are found on every continent, while rare variants are more geographically specific."
+   },
+   "sources": [
+    "src:7a7e4a41da"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:race-biology",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا تنوع درون‌جمعیتی بیشتر است",
+    "en": "Why within-population variation dominates",
+    "nl": "Why within-population variation dominates"
+   }
+  },
+  {
+   "to": "tabar:mutation-selection-drift",
+   "rel": "see-also",
+   "note": {
+    "fa": "نیروهایی که این تنوع را می‌سازند",
+    "en": "The forces that make this variation",
+    "nl": "The forces that make this variation"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:788a171c8d",
+  "src:7a7e4a41da"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,34 @@
+{
+ "id": "iran:fertility",
+ "domain": "soc",
+ "question": {
+  "fa": "باروری در ایران چقدر و چگونه افت کرد؟",
+  "en": "How far and how did fertility fall in Iran?"
+ },
+ "finding": {
+  "fa": "از حدود ۶٫۵ فرزند به ازای هر زن در اوایل دههٔ ۱۳۶۰ به حدود ۲ در ۱۳۷۹ و حدود ۱٫۷ در دههٔ ۱۴۰۰؛ افت در همهٔ استان‌ها و سطوح سواد. سیاست‌های تشویقی اخیر روند را برنگردانده‌اند.",
+  "en": "From about 6.5 children per woman in the early 1980s to about 2 in 2000 and about 1.7 in the 2020s; the decline occurred in all provinces and literacy levels. Recent pronatalist policies have not reversed it."
+ },
+ "year": 2024,
+ "method": "census and DHS-type surveys; UN estimates",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "Abbasi-Shavazi, M. J., McDonald, P., & Hosseini-Chavoshi, M. (2009). The Fertility Transition in Iran: Revolution and Reproduction. Springer.",
+   "url": "https://doi.org/10.1007/978-90-481-3198-3"
+  },
+  {
+   "title": "United Nations, Department of Economic and Social Affairs, Population Division (2024). World Population Prospects 2024.",
+   "url": "https://population.un.org/wpp/"
+  }
+ ],
+ "fields": [],
+ "concepts": [
+  "soc:iran-fertility"
+ ],
+ "capability": [
+  2,
+  10
+ ]
+}

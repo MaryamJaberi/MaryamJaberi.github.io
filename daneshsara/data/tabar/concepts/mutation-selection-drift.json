@@ -1,0 +1,83 @@
+{
+ "id": "tabar:mutation-selection-drift",
+ "kind": "concept",
+ "title": {
+  "fa": "جهش، انتخاب و رانش",
+  "en": "Mutation, selection and drift",
+  "nl": "Mutatie, selectie en drift"
+ },
+ "aliases": [],
+ "parent": "tabar:basics",
+ "field": "tabar:basics",
+ "summary": {
+  "fa": "جهش خام‌مایهٔ تنوع را می‌سازد، انتخاب طبیعی آن را بر اساس بقا و تولیدمثل غربال می‌کند، و رانش (شانس) در جمعیت‌های کوچک فراوانی ژن‌ها را بی‌دلیل بالا و پایین می‌برد. بیشتر تفاوت‌های ژنتیکی میان جمعیت‌ها حاصل رانش و مهاجرت‌اند، نه انتخاب.",
+  "en": "Mutation makes the raw material of variation, natural selection sifts it by survival and reproduction, and drift (chance) in small populations pushes gene frequencies up and down for no reason. Most genetic differences between populations come from drift and migration, not selection.",
+  "nl": "Mutatie levert de grondstof van variatie, natuurlijke selectie zeeft haar op overleving en voortplanting, en drift (toeval) duwt in kleine populaties genfrequenties zonder reden op en neer. De meeste genetische verschillen tussen populaties komen door drift en migratie, niet door selectie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کُنگ و همکاران (۲۰۱۲، ایسلند): هر نوزاد حدود ۶۰ جهش تازه دارد که در والدینش نبود، و تعدادشان با هر سال سنِ پدر حدود ۲ تا افزایش می‌یابد؛ سن پدر مهم‌ترین عامل جهش‌های نو است.",
+    "en": "Kong et al. (2012, Iceland): each newborn carries about 60 new mutations absent in its parents, and the number rises by about 2 per year of the father's age; paternal age is the main driver of new mutations.",
+    "nl": "Kong et al. (2012, Iceland): each newborn carries about 60 new mutations absent in its parents, and the number rises by about 2 per year of the father's age; paternal age is the main driver of new mutations."
+   },
+   "sources": [
+    "src:1a78fe1a85"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فیلد و همکاران (۲۰۱۶): با روش جدید، نشانه‌های انتخاب طبیعی در بریتانیایی‌ها در فقط ۲ هزار سال اخیر یافت شد (تداوم لاکتاز، رنگ مو و چشم، قد)؛ تکامل انسان ادامه دارد، ولی اثرها کوچک و کند هستند.",
+    "en": "Field et al. (2016): with a new method, signs of natural selection in Britons within just the last 2 thousand years were found (lactase persistence, hair and eye colour, height); human evolution continues, but the effects are small and slow.",
+    "nl": "Field et al. (2016): with a new method, signs of natural selection in Britons within just the last 2 thousand years were found (lactase persistence, hair and eye colour, height); human evolution continues, but the effects are small and slow."
+   },
+   "sources": [
+    "src:116163adcf"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:lactase-gene-culture",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "نمونهٔ انتخاب اخیر",
+    "en": "A case of recent selection",
+    "nl": "A case of recent selection"
+   }
+  },
+  {
+   "to": "tabar:out-of-africa",
+   "rel": "explains",
+   "note": {
+    "fa": "اثر بنیان‌گذار = رانش",
+    "en": "Founder effect = drift",
+    "nl": "Founder effect = drift"
+   }
+  },
+  {
+   "to": "tabar:human-genome",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "ژنوم",
+    "en": "The genome",
+    "nl": "The genome"
+   }
+  }
+ ],
+ "people": [
+  "core:charles-darwin",
+  "core:gregor-mendel"
+ ],
+ "sources": [
+  "src:116163adcf",
+  "src:1a78fe1a85"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
