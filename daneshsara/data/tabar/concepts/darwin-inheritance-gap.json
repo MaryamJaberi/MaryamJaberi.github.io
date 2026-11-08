@@ -1,0 +1,127 @@
+{
+ "id": "tabar:darwin-inheritance-gap",
+ "kind": "concept",
+ "title": {
+  "fa": "خلأ وراثت در نظریهٔ داروین: وراثت آمیخته و ارث اکتسابی",
+  "en": "The inheritance gap in Darwin's theory: blending and acquired characters",
+  "nl": "De erfelijkheidskloof in Darwins theorie: vermenging en verworven eigenschappen"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "نظریهٔ داروین به وراثت نیاز داشت، اما در ۱۸۵۹ هیچ نظریهٔ درستی برای آن وجود نداشت. داروین بیشتر به «دیدگاه رایج زمانه» تکیه کرد: آمیزش والدین ویژگی‌ها را کم‌وبیش مخلوط می‌کند و استفاده یا ناستفادهٔ یک عضو می‌تواند به نسل بعد برسد. هر دو بخش با ژنتیک مندلی کنار گذاشته یا اصلاح شدند.",
+  "en": "Darwin's theory needed heredity, but in 1859 no correct theory of it existed. He leaned on the common views of his day: parental traits roughly mix, and use or disuse of an organ can be passed on. Mendelian genetics later discarded or corrected both.",
+  "nl": "Darwins theorie had erfelijkheid nodig, maar in 1859 bestond er geen juiste theorie. Hij leunde op gangbare ideeën: vermenging van ouderlijke eigenschappen en erfelijkheid van gebruik en niet-gebruik. De Mendeliaanse genetica verwierp of corrigeerde beide."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "داروین در «خاستگاه گونه‌ها» (چاپ نخست) می‌پذیرد که قانون‌های وراثت «ناشناخته» است و از «آمیزش و درهم‌شدن» ویژگی‌ها هم به‌عنوان یک خطر برای ماندگاری تفاوت‌های کوچک حرف می‌زند. فلیمینگ جنکین در ۱۸۶۷ استدلال کرد که اگر وراثت واقعاً آمیخته باشد، یک ویژگی تازه در جمعیت بزرگ رقیق می‌شود و از میان می‌رود.",
+    "en": "In the first edition Darwin admits the laws of inheritance are unknown and treats the 'blending' of traits through crossing as a threat to small differences persisting. Fleeming Jenkin argued in 1867 that under true blending a new trait would be diluted away in a large population.",
+    "nl": "In the first edition Darwin admits the laws of inheritance are unknown and treats the 'blending' of traits through crossing as a threat to small differences persisting. Fleeming Jenkin argued in 1867 that under true blending a new trait would be diluted away in a large population."
+   },
+   "sources": [
+    "src:84786f7bfa"
+   ],
+   "flags": [
+    "dated"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پاسخ درست را مندل (۱۸۶۶) پیش‌تر یافته بود، ولی دانش او تا حدود ۱۹۰۰ جدی گرفته نشد: وراثت «ذره‌ای» است. ژن‌ها مخلوط نمی‌شوند و بدون تغییر منتقل می‌شوند، پس تنوع در جمعیت حفظ می‌شود و انتخاب بر آن عمل می‌کند. بدین ترتیب «وراثت آمیخته» به‌عنوان نظریهٔ عمومی وراثت رد شد.",
+    "en": "The right answer had been found by Mendel (1866) but was not taken seriously until about 1900: inheritance is particulate. Genes do not blend and are passed on intact, so variation is preserved for selection to act on. Blending as a general theory of heredity was thereby rejected.",
+    "nl": "The right answer had been found by Mendel (1866) but was not taken seriously until about 1900: inheritance is particulate. Genes do not blend and are passed on intact, so variation is preserved for selection to act on. Blending as a general theory of heredity was thereby rejected."
+   },
+   "sources": [
+    "src:1de9de3693"
+   ],
+   "flags": [
+    "dated"
+   ]
+  },
+  {
+   "text": {
+    "fa": "داروین استفاده/ناستفاده را هم در کنار انتخاب طبیعی علت دگرگونی می‌دانست (مثلاً کوچک‌شدن چشم موش کور). دیدگاه «ارث اکتسابی» نزدیک به لامارک است. این فرض اکنون در شکل کلاسیک خود رد شده است؛ وایسمان (۱۸۹۳) میان سلول‌های جنسی و بدنی فرق گذاشت و اثر مستقیم یک‌عمرِ فرد بر ژن‌ها نشان داده نشد. داروین در کتاب بعدی (۱۸۶۸) فرضیهٔ «پانژنز» را ارائه داد که ذره‌های ریز از همهٔ اندام‌ها به سلول جنسی می‌رسند؛ این فرضیه شواهدی نیافت.",
+    "en": "Darwin also counted use and disuse alongside natural selection as a cause of change (for example, reduced eyes in burrowing animals). Such 'acquired inheritance' is close to Lamarck's view. In its classic form it is now rejected; Weismann (1893) separated germ cells from body cells, and direct passing of a lifetime's effects to genes was not shown. In a later book (1868) Darwin proposed 'pangenesis', where tiny particles travel from all organs to the sex cells; it found no support.",
+    "nl": "Darwin also counted use and disuse alongside natural selection as a cause of change (for example, reduced eyes in burrowing animals). Such 'acquired inheritance' is close to Lamarck's view. In its classic form it is now rejected; Weismann (1893) separated germ cells from body cells, and direct passing of a lifetime's effects to genes was not shown. In a later book (1868) Darwin proposed 'pangenesis', where tiny particles travel from all organs to the sex cells; it found no support."
+   },
+   "sources": [
+    "src:84786f7bfa",
+    "src:636e24d0d2",
+    "src:f1896c7feb"
+   ],
+   "flags": [
+    "dated"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ امروزی: پژوهش‌های اپی‌ژنتیک نشان داده‌اند در موارد محدود برخی نشانه‌های شیمیایی روی دی‌ان‌ای می‌تواند به نسل بعد برسد، ولی این به‌هیچ‌وجه بازگشت به لامارک در انسان نیست و شواهد برای وراثت بین‌نسلی در پستانداران هنوز محدود و بحث‌برانگیز است.",
+    "en": "Modern note: epigenetics shows that in limited cases some chemical marks on DNA can pass to the next generation, but this is not a return to Lamarck in humans, and evidence for transgenerational inheritance in mammals remains limited and debated.",
+    "nl": "Modern note: epigenetics shows that in limited cases some chemical marks on DNA can pass to the next generation, but this is not a return to Lamarck in humans, and evidence for transgenerational inheritance in mammals remains limited and debated."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:epigenetics",
+   "rel": "see-also",
+   "note": {
+    "fa": "اپی‌ژنتیک",
+    "en": "Epigenetics",
+    "nl": "Epigenetics"
+   }
+  },
+  {
+   "to": "tabar:transgenerational",
+   "rel": "contrasts",
+   "note": {
+    "fa": "وراثت اپی‌ژنتیک بین‌نسلی",
+    "en": "Transgenerational epigenetic inheritance",
+    "nl": "Transgenerational epigenetic inheritance"
+   }
+  },
+  {
+   "to": "tabar:epigenetic-marks",
+   "rel": "see-also",
+   "note": {
+    "fa": "نشانه‌های اپی‌ژنتیک",
+    "en": "Epigenetic marks",
+    "nl": "Epigenetic marks"
+   }
+  },
+  {
+   "to": "tabar:mutation-selection-drift",
+   "rel": "see-also",
+   "note": {
+    "fa": "جهش، انتخاب و رانش",
+    "en": "Mutation, selection and drift",
+    "nl": "Mutation, selection and drift"
+   }
+  }
+ ],
+ "people": [
+  "core:gregor-mendel",
+  "core:august-weismann",
+  "core:jean-baptiste-lamarck",
+  "core:fleeming-jenkin"
+ ],
+ "sources": [
+  "src:1de9de3693",
+  "src:636e24d0d2",
+  "src:84786f7bfa",
+  "src:f1896c7feb"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

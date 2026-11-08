@@ -1,0 +1,109 @@
+{
+ "id": "soc:fournier-index-ml-sediment-yield-models",
+ "kind": "concept",
+ "title": {
+  "fa": "برآورد رسوب با شاخص فورنیه و یادگیری ماشین (رگرسیون، جنگل تصادفی، شبکهٔ عصبی)",
+  "en": "Estimating sediment yield with the Fournier index and machine learning (regression, random forest, neural network)",
+  "nl": "Sedimentopbrengst schatten met de Fournier-index en machine learning (regressie, random forest, neuraal netwerk)"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "این مقاله ابتدا با شاخص فورنیه، یک فرمول تجربی ساده بر پایهٔ بارندگی، ارتفاع و شیب، رسوب سالانهٔ سه زیرحوضه را برآورد کرد. سپس سه مدل یادگیری ماشین آموزش دید تا همان نقشه را با ده متغیر محیطی بازسازی کند. شبکهٔ عصبی و جنگل تصادفی بهتر از رگرسیون خطی عمل کردند؛ اما «درستی» همین‌جا یعنی تطابق با نقشهٔ فورنیه، نه با رسوب اندازه‌گیری‌شده.",
+  "en": "The paper first estimated annual sediment yield for three sub-basins with the Fournier index, a simple empirical formula using rainfall, elevation and slope. It then trained three machine-learning models to reproduce that map from ten environmental variables. The neural network and random forest beat linear regression, but 'accuracy' here means agreement with the Fournier map, not with measured sediment.",
+  "nl": "Het artikel schatte de jaarlijkse sedimentopbrengst eerst met de Fournier-index (regenval, hoogte, helling) en trainde daarna drie machine-learningmodellen om die kaart na te bootsen; ANN en random forest scoorden beter dan lineaire regressie, maar dit meet overeenstemming met de Fournier-kaart, niet met gemeten sediment."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "شاخص فورنیه (۱۹۶۰) روشی تجربی و کم‌هزینه است که فقط به چند داده نیاز دارد؛ نسخهٔ به‌کاررفته در مقاله بارندگی ماهانه و سالانه، ارتفاع میانگین و شیب میانگین حوضه را ترکیب می‌کند. محاسبه در پلتفرم گوگل ارث انجین با داده‌های ماهواره‌ای و مدل رقومی ارتفاع انجام شد.",
+    "en": "The Fournier index (1960) is a cheap empirical method needing few inputs; the version used combines monthly and annual rainfall, mean elevation and mean slope, computed on Google Earth Engine from satellite data and a digital elevation model.",
+    "nl": "The Fournier index (1960) is a cheap empirical method needing few inputs; the version used combines monthly and annual rainfall, mean elevation and mean slope, computed on Google Earth Engine from satellite data and a digital elevation model."
+   },
+   "sources": [
+    "src:78cd77674c",
+    "src:393899ca06"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از ۱۵ شاخص محیطی، پس از بررسی همبستگی، ۱۰ متغیر ماندند، از جمله شیب، ارتفاع، درصد رس و ماسه، شاخص پوشش گیاهی (NDVI)، شاخص موقعیت توپوگرافی، انحنای زمین، نقشهٔ سنگ‌شناسی و فاصله از شبکهٔ زهکشی. داده‌ها ۷۰٪ برای آموزش و ۳۰٪ برای آزمون تقسیم شدند.",
+    "en": "Of 15 environmental indices, 10 variables remained after checking correlations, including slope, elevation, clay and sand percentages, vegetation index (NDVI), topographic position, terrain curvature, lithology and distance to the drainage network. Data were split 70% for training and 30% for testing.",
+    "nl": "Of 15 environmental indices, 10 variables remained after checking correlations, including slope, elevation, clay and sand percentages, vegetation index (NDVI), topographic position, terrain curvature, lithology and distance to the drainage network. Data were split 70% for training and 30% for testing."
+   },
+   "sources": [
+    "src:78cd77674c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نتایج آزمون (ضریب همبستگی پیرسون با نقشهٔ فورنیه): ابهررود MLR ۰٫۶۱، RF ۰٫۸۲، ANN ۰٫۸۸؛ خررود ۰٫۷۰، ۰٫۹۰ و ۰٫۹۲؛ حاجی‌عرب ۰٫۶۰، ۰٫۸۵ و ۰٫۹۲. نویسندگان ANN را برای ادامه برگزیدند. (جنگل تصادفی: برایمن ۲۰۰۱.)",
+    "en": "Test results (Pearson r against the Fournier map): Abharrud MLR 0.61, RF 0.82, ANN 0.88; Khorrud 0.70, 0.90, 0.92; Haji-Arab 0.60, 0.85, 0.92. The authors chose ANN for the later steps. (Random forest: Breiman 2001.)",
+    "nl": "Test results (Pearson r against the Fournier map): Abharrud MLR 0.61, RF 0.82, ANN 0.88; Khorrud 0.70, 0.90, 0.92; Haji-Arab 0.60, 0.85, 0.92. The authors chose ANN for the later steps. (Random forest: Breiman 2001.)"
+   },
+   "sources": [
+    "src:78cd77674c",
+    "src:540e435267"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هشدار: ورودی «حقیقت» برای آموزش، خروجی خود فرمول فورنیه است نه رسوب اندازه‌گیری‌شدهٔ صحرایی. ضمناً شیب و ارتفاع هم در فورنیه و هم در متغیرهای مدل هستند، پس بخشی از تطابق ساختاری است. مقدار مطلق رسوب در جدول مقاله (هزاران تا صدها هزار تن در کیلومترمربع در سال) بسیار بالاتر از مقادیر معمول اندازه‌گیری‌شده است؛ فقط برای مقایسهٔ نسبی مناطق مناسب است.",
+    "en": "Warning: the training 'truth' is the output of the Fournier formula itself, not field-measured sediment. Slope and elevation also feed both the formula and the model variables, so part of the agreement is built in. Absolute values in the paper's table (thousands to hundreds of thousands of t/km2/yr) are far above typical measured rates; use them only for relative comparison between areas.",
+    "nl": "Warning: the training 'truth' is the output of the Fournier formula itself, not field-measured sediment. Slope and elevation also feed both the formula and the model variables, so part of the agreement is built in. Absolute values in the paper's table (thousands to hundreds of thousands of t/km2/yr) are far above typical measured rates; use them only for relative comparison between areas."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:qazvin-plain-settlement-sediment-negative-link",
+   "rel": "explains",
+   "note": {
+    "fa": "سکونتگاه‌های دشت قزوین و رسوب‌گذاری",
+    "en": "Qazvin Plain settlements and sediment yield",
+    "nl": "Qazvin Plain settlements and sediment yield"
+   }
+  },
+  {
+   "to": "soc:ahp-pca-site-suitability-model",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدل مطلوبیت مکانی با AHP و PCA",
+    "en": "The AHP and PCA suitability model",
+    "nl": "The AHP and PCA suitability model"
+   }
+  },
+  {
+   "to": "soc:sediment-burial-bias-site-detection",
+   "rel": "see-also",
+   "note": {
+    "fa": "سوگیری دفن‌شدگی",
+    "en": "Burial bias",
+    "nl": "Burial bias"
+   }
+  }
+ ],
+ "people": [
+  "core:fran-ois-fournier",
+  "core:leo-breiman"
+ ],
+ "sources": [
+  "src:393899ca06",
+  "src:540e435267",
+  "src:78cd77674c"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

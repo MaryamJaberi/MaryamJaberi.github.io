@@ -1,0 +1,104 @@
+{
+ "id": "soc:sediment-burial-bias-site-detection",
+ "kind": "concept",
+ "title": {
+  "fa": "سوگیری دفن‌شدگی: چرا محوطهٔ کمتر یعنی لزوماً سکونت کمتر نیست",
+  "en": "Burial bias: fewer sites does not necessarily mean less settlement",
+  "nl": "Begravingsbias: minder vindplaatsen betekent niet per se minder bewoning"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "رسوب‌گذاری شدید می‌تواند محوطه‌های باستانی را زیر لایه‌های رسوب پنهان کند و کشف آن‌ها را سخت‌تر سازد. پس اگر در منطقه‌ای با رسوب زیاد محوطهٔ کمی پیدا شده، دو توضیح رقیب وجود دارد: مردم آنجا را کمتر انتخاب می‌کردند، یا محوطه‌ها هستند ولی زیر خاک‌اند. مقالهٔ قزوین هر دو را مطرح می‌کند و نمی‌تواند میان آن‌ها داوری کند.",
+  "en": "Heavy sediment accumulation can hide archaeological sites under deposits and make them harder to find. So where few sites are recorded in high-sediment areas there are two rival explanations: people chose such places less, or the sites exist but are buried. The Qazvin paper raises both and cannot decide between them.",
+  "nl": "Zware sedimentatie kan vindplaatsen onder afzettingen verbergen. Weinig vondsten in zulke gebieden kunnen dus wijzen op een lagere voorkeur van de bewoners of op begraven vindplaatsen; het artikel kan dit niet beslechten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسندگان صریحاً می‌گویند احتمال دفن‌شدگی محوطه‌ها در مناطق با رسوب‌گذاری شدید بالاست و این می‌تواند همبستگی منفی را بسازد یا تقویت کند؛ بنابراین شمار کمتر محوطه همیشه نشانهٔ انتخاب آگاهانهٔ مردم گذشته نیست.",
+    "en": "The authors explicitly note that burial of sites is likely in strongly aggrading areas and could create or strengthen the negative correlation, so fewer recorded sites is not always evidence of deliberate past choice.",
+    "nl": "The authors explicitly note that burial of sites is likely in strongly aggrading areas and could create or strengthen the negative correlation, so fewer recorded sites is not always evidence of deliberate past choice."
+   },
+   "sources": [
+    "src:78cd77674c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدل، «احتمال حضور» را بر پایهٔ محوطه‌های شناخته‌شده می‌سازد؛ محوطه‌های دفن‌شده در داده نیستند و در نتیجه وزن‌دهی و نتیجه ممکن است به‌طور ناخواسته به نفع نواحی کم‌رسوب کج شود. نویسندگان این را یکی از محدودیت‌های اصلی روش می‌دانند.",
+    "en": "The model builds 'presence probability' from known sites; buried sites are absent from the data, so weights and results may be unintentionally tilted toward low-sediment zones. The authors count this among the main limitations of the method.",
+    "nl": "The model builds 'presence probability' from known sites; buried sites are absent from the data, so weights and results may be unintentionally tilted toward low-sediment zones. The authors count this among the main limitations of the method."
+   },
+   "sources": [
+    "src:78cd77674c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیشنهاد نویسندگان برای آینده: بررسی داده‌های زیرسطحی، ژئوفیزیک (مثل روش‌های غیرمخرب) یا کاوش‌های تکمیلی تا اعتبار نتایج سنجیده شود. این پیشنهاد هنوز اجرا نشده است.",
+    "en": "The authors' suggestion for future work: subsurface data, geophysical survey or complementary excavation to test the results. This has not yet been carried out.",
+    "nl": "The authors' suggestion for future work: subsurface data, geophysical survey or complementary excavation to test the results. This has not yet been carried out."
+   },
+   "sources": [
+    "src:78cd77674c"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ تکمیلی ویراستار: نرخ‌های فرسایش و رسوب امروز (که مدل بر آن‌ها بنا شده) لزوماً بازتاب دورهٔ هولوسن نیستند؛ اقلیم، پوشش گیاهی و کاربری زمین در ۶ تا ۹ هزار سال پیش فرق داشته است. پس رابطهٔ امروزی را نباید بی‌واسطه به گذشته نسبت داد.",
+    "en": "Editor's caveat: present-day erosion and sedimentation rates, on which the model is built, need not reflect the Holocene; climate, vegetation and land use 6,000-9,000 years ago differed. A modern relationship should not be projected directly onto the past.",
+    "nl": "Editor's caveat: present-day erosion and sedimentation rates, on which the model is built, need not reflect the Holocene; climate, vegetation and land use 6,000-9,000 years ago differed. A modern relationship should not be projected directly onto the past."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:qazvin-plain-settlement-sediment-negative-link",
+   "rel": "see-also",
+   "note": {
+    "fa": "سکونتگاه‌های دشت قزوین و رسوب‌گذاری",
+    "en": "Qazvin Plain settlements and sediment yield",
+    "nl": "Qazvin Plain settlements and sediment yield"
+   }
+  },
+  {
+   "to": "soc:persian-plateau-palaeolithic-record",
+   "rel": "see-also",
+   "note": {
+    "fa": "شواهد پارینه‌سنگی و اقلیمی فلات ایران",
+    "en": "The Palaeolithic and climate record of the Iranian Plateau",
+    "nl": "The Palaeolithic and climate record of the Iranian Plateau"
+   }
+  },
+  {
+   "to": "tabar:persian-plateau-hub",
+   "rel": "see-also",
+   "note": {
+    "fa": "فلات ایران: مرکز مهاجرت‌ها",
+    "en": "The Iranian Plateau as a hub",
+    "nl": "The Iranian Plateau as a hub"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:78cd77674c"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

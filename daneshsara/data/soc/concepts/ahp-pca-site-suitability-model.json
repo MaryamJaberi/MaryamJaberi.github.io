@@ -1,0 +1,106 @@
+{
+ "id": "soc:ahp-pca-site-suitability-model",
+ "kind": "concept",
+ "title": {
+  "fa": "مدل مطلوبیت مکانی برای سکونتگاه‌های پیش‌از‌تاریخ: AHP و تحلیل مؤلفه‌های اصلی",
+  "en": "A site-suitability model for prehistoric settlement: AHP and principal component analysis",
+  "nl": "Een geschiktheidsmodel voor prehistorische nederzettingen: AHP en hoofdcomponentenanalyse"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "برای اینکه بدانند کدام نقاط از نظر طبیعی برای ماندن مناسب بوده‌اند، نویسندگان هفت معیار محیطی (آب، شیب، ارتفاع، پوشش گیاهی و...) را با وزن‌هایی که از تحلیل مؤلفه‌های اصلی (PCA) و فرایند تحلیل سلسله‌مراتبی (AHP) به‌دست آمد ترکیب کردند و نقشهٔ مطلوبیت ساختند. بیشتر محوطه‌های شناخته‌شده روی مطلوبیت متوسط تا بالا افتادند. این یک مدل امروزی از یک انتخاب باستانی است و فرض‌های خودش را دارد.",
+  "en": "To ask which places were naturally suitable for settlement, the authors combined seven environmental criteria (water, slope, elevation, vegetation and others) using weights derived from principal component analysis (PCA) and the analytic hierarchy process (AHP), and mapped suitability. Most known sites fell in medium to high suitability. It is a modern model of an ancient choice and carries its own assumptions.",
+  "nl": "De auteurs combineerden zeven milieucriteria met gewichten uit PCA en AHP tot een geschiktheidskaart; de meeste bekende vindplaatsen vielen in middelhoge tot hoge geschiktheid, maar het model rust op moderne aannames."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هفت معیار: پوشش گیاهی، فاصله تا منابع آبی، فاصله تا گسل‌ها، شیب، ارتفاع، جهت شیب و تجمع جریان سطحی. وزن اولیه از PCA بر داده‌های محیطی‌ای که با محوطه‌ها مرتبط بودند می‌آمد؛ سپس در ماتریس مقایسهٔ زوجی AHP به‌کار رفت و نسبت سازگاری زیر ۰٫۱ شد (که در روش AHP «قابل‌قبول» شمرده می‌شود).",
+    "en": "Seven criteria: vegetation, distance to water, distance to faults, slope, elevation, aspect and flow accumulation. Initial weights came from PCA of environmental data linked to the sites, then entered an AHP pairwise comparison matrix whose consistency ratio fell below 0.1 (the usual acceptability threshold for AHP).",
+    "nl": "Seven criteria: vegetation, distance to water, distance to faults, slope, elevation, aspect and flow accumulation. Initial weights came from PCA of environmental data linked to the sites, then entered an AHP pairwise comparison matrix whose consistency ratio fell below 0.1 (the usual acceptability threshold for AHP)."
+   },
+   "sources": [
+    "src:78cd77674c",
+    "src:2274cebd46"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقشهٔ نهایی از جمع وزنی لایه‌های نرمال‌شده (۰ تا ۱) ساخته شد؛ هرچه عدد بالاتر، شرایط طبیعی برای سکونت مناسب‌تر. این نقشه برای شناسایی نواحی با پتانسیل باستان‌شناختی بالا و هدایت بررسی‌های میدانی آینده هم پیشنهاد شده است.",
+    "en": "The final map is a weighted sum of normalised layers (0 to 1); higher means naturally more suitable for settlement. The authors also propose it to flag areas of high archaeological potential and guide future fieldwork.",
+    "nl": "The final map is a weighted sum of normalised layers (0 to 1); higher means naturally more suitable for settlement. The authors also propose it to flag areas of high archaeological potential and guide future fieldwork."
+   },
+   "sources": [
+    "src:78cd77674c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در ابهررود بیش از ۹۰٪ محوطه‌ها در کلاس مطلوبیت متوسط و رسوب کم تا متوسط افتادند. در خررود حدود یک‌سوم محوطه‌ها در کلاس‌های پایین و خیلی پایین قرار گرفتند و بقیه در رسوب بالا؛ در حاجی‌عرب بیشتر محوطه‌ها مطلوبیت متوسط تا بالا و رسوب کم تا متوسط داشتند. نمونهٔ محوطه‌ها در هر زیرحوضه کوچک و در حاجی‌عرب بسیار کوچک است.",
+    "en": "In Abharrud over 90% of sites fell in the medium suitability class with low to moderate sediment. In Khorrud about a third of sites fell in the low and very low classes, with the rest in high-sediment cells; in Haji-Arab most sites had medium to high suitability and low to medium sediment. Site samples per sub-basin are small, and tiny in Haji-Arab.",
+    "nl": "In Abharrud over 90% of sites fell in the medium suitability class with low to moderate sediment. In Khorrud about a third of sites fell in the low and very low classes, with the rest in high-sediment cells; in Haji-Arab most sites had medium to high suitability and low to medium sediment. Site samples per sub-basin are small, and tiny in Haji-Arab."
+   },
+   "sources": [
+    "src:78cd77674c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محدودیت‌ها: معیارها و وزن‌ها بر محیط امروز و مدل‌های رقومی با دقت ۳۰ متر استوارند؛ محوطه‌های دفن‌شده در تعیین وزن‌ها نیستند؛ و چون برخی ورودی‌ها (شیب، ارتفاع) هم در برآورد رسوب و هم در مطلوبیت به‌کار رفته‌اند، همبستگی بین دو نقشه تا حدی ساختگی است. معیارهای اجتماعی مانند فرهنگ و روابط مبادله در مدل نیستند.",
+    "en": "Limits: criteria and weights rest on today's environment and 30 m elevation models; buried sites are absent when weights are derived; and because some inputs (slope, elevation) feed both the sediment estimate and the suitability map, the correlation between the two maps is partly built in. Social factors such as culture and exchange are not in the model.",
+    "nl": "Limits: criteria and weights rest on today's environment and 30 m elevation models; buried sites are absent when weights are derived; and because some inputs (slope, elevation) feed both the sediment estimate and the suitability map, the correlation between the two maps is partly built in. Social factors such as culture and exchange are not in the model."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:qazvin-plain-settlement-sediment-negative-link",
+   "rel": "part-of",
+   "note": {
+    "fa": "سکونتگاه‌های دشت قزوین و رسوب‌گذاری",
+    "en": "Qazvin Plain settlements and sediment yield",
+    "nl": "Qazvin Plain settlements and sediment yield"
+   }
+  },
+  {
+   "to": "soc:fournier-index-ml-sediment-yield-models",
+   "rel": "see-also",
+   "note": {
+    "fa": "برآورد رسوب با شاخص فورنیه و یادگیری ماشین",
+    "en": "Sediment estimation with Fournier index and machine learning",
+    "nl": "Sediment estimation with Fournier index and machine learning"
+   }
+  },
+  {
+   "to": "tabar:zagros-neolithic",
+   "rel": "see-also",
+   "note": {
+    "fa": "کشاورزان نوسنگی زاگرس",
+    "en": "Zagros Neolithic farmers",
+    "nl": "Zagros Neolithic farmers"
+   }
+  }
+ ],
+ "people": [
+  "core:thomas-l-saaty"
+ ],
+ "sources": [
+  "src:2274cebd46",
+  "src:78cd77674c"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
