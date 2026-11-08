@@ -33,3 +33,7 @@ python3 build/site.py <site dir>
 
 ## ویکی فلسفه (phil)
 - `build/phil_seed.py` → ۳۰ گره (ریشه، ۷ حوزه، ۲۲ مدخل) از معرفت‌شناسی و ذهن تا فلسفهٔ ایرانی‌اسلامی؛ ۴۵ منبع. `python3 build/reader.py phil` → `phil/index.html`.
+
+## لایهٔ «برای ایران»
+- یادداشت‌ها در `iran/*.json` (طرح‌وارهٔ `core/schema/iran.schema.json`: پرسش، یافته، سال، روش، ردهٔ A–D، محل بحث، نقد، منبع، قابلیت‌های نوسبام ۱–۱۰).
+- `python3 build/iran_page.py` → `iran/index.html` (به تفکیک حوزه و قابلیت).
