@@ -24,7 +24,7 @@ main{padding-block:var(--s6) var(--s16)}
 .tabs button[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
 .sec h2{font-size:var(--h3);margin:var(--s6) 0 var(--s3)}
 .notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--s4)}
-.note{padding:var(--s5);display:grid;gap:10px;border-inline-start:4px solid var(--fc,var(--primary))}
+.note{scroll-margin-top:90px;padding:var(--s5);display:grid;gap:10px;border-inline-start:4px solid var(--fc,var(--primary))}
 .note .q{font-weight:700;font-size:var(--h4);margin:0}
 .note .f{margin:0;line-height:1.8}
 .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:var(--chip);color:var(--ink-3)}
@@ -75,7 +75,7 @@ const fa = s => L === "fa" ? String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹
 const FC = {psy:"var(--fam-psy)", soc:"var(--fam-soc)", tabar:"var(--fam-bio)", phil:"var(--fam-hum)"};
 let mode = "dom";
 function card(n){
-  return `<article class="card note" style="--fc:${FC[n.domain] || "var(--primary)"}"><h3 class="q">${esc(tx(n.question))}</h3><p class="f">${esc(tx(n.finding))}</p>
+  return `<article class="card note" id="${n.id.split(":")[1]}" style="--fc:${FC[n.domain] || "var(--primary)"}"><h3 class="q">${esc(tx(n.question))}</h3><p class="f">${esc(tx(n.finding))}</p>
    <div class="meta"><i class="g ${n.grade}">${n.grade}</i><span>${fa(n.year)}</span>${n.method ? `<span>${T("method")}: ${esc(n.method)}</span>` : ""}${n.contested ? `<span class="flag">${T("contested")}</span>` : ""}<span>${esc(T("dom")[n.domain] || n.domain)}</span></div>
    ${n.critique ? `<p class="crit"><b>${T("critique")}:</b> ${esc(n.critique)}</p>` : ""}
    ${n._concepts.length ? `<div class="links">${n._concepts.map(c => `<a href="${c.url}">${esc(tx(c.title))} ↗</a>`).join("")}</div>` : ""}
@@ -98,6 +98,7 @@ document.addEventListener("click", ev => { const b = ev.target.closest("[data-m]
 function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + " — " + (L === "fa" ? "دانش‌سرا" : "Daneshsara"); render(); }
 document.querySelector(".lang").addEventListener("click", ev => { const b = ev.target.closest("[data-l]"); if (!b) return; L = b.dataset.l; try { localStorage.setItem("ds-lang", L); } catch(_) {} i18n(); });
 i18n();
+if (location.hash) setTimeout(() => { const e = document.getElementById(location.hash.slice(1)); if (e) { e.scrollIntoView({block: "start"}); e.style.outline = "2px solid var(--primary)"; } }, 50);
 </script>
 </body>
 </html>
