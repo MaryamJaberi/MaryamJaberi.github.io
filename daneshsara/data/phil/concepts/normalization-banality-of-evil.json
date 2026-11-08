@@ -1,0 +1,114 @@
+{
+ "id": "phil:normalization-banality-of-evil",
+ "kind": "concept",
+ "title": {
+  "fa": "عادی‌سازی ناکارآمدی و «ابتذال شر» آرنت",
+  "en": "Normalising dysfunction and Arendt's 'banality of evil'",
+  "nl": "Normaliseren van wanbeheer en Arendts 'banaliteit van het kwaad'"
+ },
+ "aliases": [],
+ "parent": "phil:political",
+ "field": "phil:political",
+ "summary": {
+  "fa": "مجری‌ها می‌گویند وقتی مسئولان گم‌شدن کالا یا قطع آب و برق را «عادی» می‌نامند و برای امتیازهای ناعادلانه توجیه می‌آورند، این «ابتذال شر» است. این مدخل معنای اصلی مفهوم آرنت و بحث‌های دربارهٔ آن را توضیح می‌دهد.",
+  "en": "The hosts say that when officials call lost goods or power and water cuts 'normal' and justify unfair privileges, this is the 'banality of evil'. The entry explains Arendt's original concept and the debates over it.",
+  "nl": "De presentatoren noemen het 'banaliteit van het kwaad' wanneer functionarissen verlies van goederen of stroomuitval 'normaal' noemen en privileges rechtvaardigen. Dit lemma legt Arendts oorspronkelijke begrip en de discussie uit."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ مجری‌ها، عادی‌خواندن ناکارآمدی و فساد و سپس توجیه نابرابری‌ها نمونه‌ای از «ابتذال شر» است. آن‌ها این را بدون حکم دربارهٔ تک‌تک افراد، به‌عنوان نقد زبان رسمی به‌کار می‌برند.",
+    "en": "Per the hosts, calling dysfunction and corruption 'normal' and then excusing inequalities is an example of the 'banality of evil'. They use it as a critique of official language, not as a verdict on named individuals.",
+    "nl": "Per the hosts, calling dysfunction and corruption 'normal' and then excusing inequalities is an example of the 'banality of evil'. They use it as a critique of official language, not as a verdict on named individuals."
+   },
+   "sources": [
+    "src:9433492748"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "آرنت در «آیشمان در اورشلیم» (۱۹۶۳) نوشت که آیشمان بیشتر از آنکه هیولا باشد، آدمی بی‌اندیشه و پیرو دستور بود. مقصودش توجیه‌کردن شر نبود، بلکه این بود که شر بزرگ می‌تواند از بی‌فکری و اطاعت بیاید.",
+    "en": "In Eichmann in Jerusalem (1963) Arendt wrote that Eichmann was less a monster than a thoughtless, order-following functionary. She did not mean justifying evil, but that great evil can arise from thoughtlessness and obedience.",
+    "nl": "In Eichmann in Jerusalem (1963) Arendt wrote that Eichmann was less a monster than a thoughtless, order-following functionary. She did not mean justifying evil, but that great evil can arise from thoughtlessness and obedience."
+   },
+   "sources": [
+    "src:e744201744"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاربرد مجری‌ها آزاد و استعاری است: «عادی‌سازی» با «بی‌فکری یک کارمند در ماشین کشتار» تفاوت بزرگی دارد و مقایسهٔ مستقیم می‌تواند مفهوم را از اندازه بیندازد.",
+    "en": "The hosts' use is loose and metaphorical: normalising dysfunction differs greatly from a functionary's thoughtlessness inside a killing machine, and a direct comparison can stretch the concept.",
+    "nl": "The hosts' use is loose and metaphorical: normalising dysfunction differs greatly from a functionary's thoughtlessness inside a killing machine, and a direct comparison can stretch the concept."
+   },
+   "sources": [
+    "src:9433492748"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "خود نظر آرنت هم مورد اختلاف است: پژوهشگرانی مانند برتینا استانگنت (۲۰۱۱) با استناد به اسناد تازه گفته‌اند آیشمان ایدئولوگ آگاهی بود و آن‌قدر که آرنت تصور می‌کرد بی‌فکر نبود.",
+    "en": "Arendt's thesis itself is disputed: scholars such as Bettina Stangneth (2011) argue from new documents that Eichmann was a committed ideologue and less thoughtless than Arendt portrayed.",
+    "nl": "Arendt's thesis itself is disputed: scholars such as Bettina Stangneth (2011) argue from new documents that Eichmann was a committed ideologue and less thoughtless than Arendt portrayed."
+   },
+   "sources": [
+    "src:52d4dc9d84"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:selective-access-white-sim-rent",
+   "rel": "see-also",
+   "note": {
+    "fa": "نمونه‌ای که مجری‌ها این مفهوم را به آن اطلاق می‌کنند",
+    "en": "The case the hosts apply this concept to",
+    "nl": "The case the hosts apply this concept to"
+   }
+  },
+  {
+   "to": "phil:political",
+   "rel": "part-of",
+   "note": {
+    "fa": "فلسفهٔ سیاسی",
+    "en": "Political philosophy",
+    "nl": "Political philosophy"
+   }
+  },
+  {
+   "to": "phil:moral-luck",
+   "rel": "see-also",
+   "note": {
+    "fa": "مسئولیت اخلاقی و شرایط",
+    "en": "Moral responsibility and circumstance",
+    "nl": "Moral responsibility and circumstance"
+   }
+  }
+ ],
+ "people": [
+  "core:hannah-arendt",
+  "core:bettina-stangneth"
+ ],
+ "sources": [
+  "src:52d4dc9d84",
+  "src:9433492748",
+  "src:e744201744"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

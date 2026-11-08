@@ -1,0 +1,155 @@
+{
+ "id": "phil:fallacy-dodging-burden-of-proof",
+ "kind": "concept",
+ "title": {
+  "fa": "ترفندهای طفره از دلیل آوردن: بستن راه استدلال، مسموم کردن چاه و طلب برهان از مخالف",
+  "en": "Dodging the burden of proof: closing the argument, poisoning the well, shifting the burden",
+  "nl": "Het ontlopen van bewijslast: argument afsluiten, de put vergiftigen, bewijslast omkeren"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "به‌جز گزاره‌های بدیهی، هر ادعایی به دلیل نیاز دارد و بار اثبات بر دوش مدعی است. سخنران چند ترفند را معرفی می‌کند که گوینده با آن‌ها از آوردن دلیل فرار می‌کند یا مخاطب را پیشاپیش خلع‌سلاح می‌کند: ادعا را طوری می‌گوید که نقدناپذیر شود، مخالفان را از قبل تحقیر می‌کند، موافقان را تحسین می‌کند، تکرار می‌کند یا از مخالف می‌خواهد خلافش را ثابت کند. این بخش هفت ترفند از فهرست نوزده‌تایی سخنران را گرد می‌آورد.",
+  "en": "Apart from self-evident statements, every claim needs a reason, and the burden of proof lies on the claimant. The lecturer presents several tricks used to avoid giving reasons or to disarm the listener in advance: making a claim unfalsifiable, belittling opponents beforehand, flattering supporters, repeating the claim, or demanding that opponents disprove it. This entry groups seven items from his list of nineteen.",
+  "nl": "Behalve vanzelfsprekende uitspraken heeft elke bewering een reden nodig; de bewijslast ligt bij wie iets beweert. De spreker behandelt trucs om geen argument te hoeven geven: de bewering onweerlegbaar maken, tegenstanders vooraf kleineren, aanhangers vleien, herhalen of de ander laten bewijzen dat het niet zo is."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بستن راه استدلال: گوینده ادعایی می‌کند و همزمان چیزی می‌گوید که هیچ پاسخ و نقدی را ممکن نکند؛ مثلاً هر دو نتیجهٔ دعا (برآورده شدن یا نشدن) را دلیل درستی حرف خودش می‌داند، یا می‌گوید «عقل در این باره راه‌گشا نیست، دلتان را باز کنید».",
+    "en": "Closing the path of argument: the speaker makes a claim and adds a move that makes any rebuttal impossible, e.g. treating both outcomes of a prayer as proof, or saying reason cannot help here and one must 'open the heart'.",
+    "nl": "Closing the path of argument: the speaker makes a claim and adds a move that makes any rebuttal impossible, e.g. treating both outcomes of a prayer as proof, or saying reason cannot help here and one must 'open the heart'."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مسموم کردن چاه: به‌جای دلیل، پیشاپیش به مخالفان ادعا صفتی ناپسند می‌چسبانند («همه، جز خائنان…»)، تا کسی جرئت مخالفت نکند. نام آن از این است که گفتن «آب چاه مسموم است» بدون آزمایش، مردم را از نوشیدن باز می‌دارد؛ سخنران قصهٔ «لباس نامرئی پادشاه» را مثال می‌زند.",
+    "en": "Poisoning the well: instead of reasons, a nasty label is attached in advance to anyone who might disagree, so that people fear to object. The lecturer illustrates it with the tale of the king's invisible clothes.",
+    "nl": "Poisoning the well: instead of reasons, a nasty label is attached in advance to anyone who might disagree, so that people fear to object. The lecturer illustrates it with the tale of the king's invisible clothes."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیشاپیش تعریف کردن از موافقان (تملق): می‌گویند «بچهٔ خوب حرف پدر و مادرش را بی‌چون‌وچرا می‌پذیرد» یا «آدم باانصاف حقانیت این کتاب را می‌پذیرد»، تا شنونده برای اینکه خود را در آن گروه خوب جا بزند، ادعا را بپذیرد.",
+    "en": "Flattering supporters in advance: 'a good child obeys without question'; the listener accepts the claim to be counted among the praised group.",
+    "nl": "Flattering supporters in advance: 'a good child obeys without question'; the listener accepts the claim to be counted among the praised group."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طلب برهان از مخالف (وارونه کردن بار اثبات): «ثابت کن زندگی پس از مرگ وجود ندارد». بار اثبات با کسی است که ادعا می‌کند، نه با کسی که نمی‌پذیرد؛ نتوانستن مخالف در رد ادعا، دلیل درستی آن نیست.",
+    "en": "Shifting the burden of proof: 'prove there is no afterlife'. The burden stays with the claimant; the opponent's failure to refute is not evidence for the claim.",
+    "nl": "Shifting the burden of proof: 'prove there is no afterlife'. The burden stays with the claimant; the opponent's failure to refute is not evidence for the claim."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دوراهی کاذب: وانمود می‌شود فقط دو راه هست («یا قانون را بپذیر یا برو») و راه سوم وجود ندارد. تکرار: به‌جای دلیل، همان ادعا بارها و با واژه‌های درشت‌تر گفته می‌شود تا اثری کاذب بگذارد. «هر بچه‌مدرسه‌ای می‌داند…» نیز ادعای ناروشن را بدیهی جلوه می‌دهد و منتقد را شرمنده می‌کند.",
+    "en": "False dilemma, repetition and 'everyone knows': pretending only two options exist, repeating the claim in stronger words instead of arguing, or labelling a non-obvious claim as obvious so the critic feels ashamed.",
+    "nl": "False dilemma, repetition and 'everyone knows': pretending only two options exist, repeating the claim in stronger words instead of arguing, or labelling a non-obvious claim as obvious so the critic feels ashamed."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، نمونه‌های سیاسی و دینی (مثلاً دربارهٔ حجاب اجباری یا مرجع قرار دادن یک رهبر) نمونهٔ این ترفندهاست. این داوری‌ها دیدگاه خود اوست و دربارهٔ هر کدام باید جداگانه استدلال شود؛ برچسب «مغالطه» نشان نمی‌دهد که نتیجهٔ آن ادعا نادرست است، فقط نشان می‌دهد این استدلال کافی نیست.",
+    "en": "Per the lecturer, political and religious examples illustrate these tricks. These are his judgments; each case needs its own argument, and calling an argument fallacious shows only that it is insufficient, not that its conclusion is false.",
+    "nl": "Per the lecturer, political and religious examples illustrate these tricks. These are his judgments; each case needs its own argument, and calling an argument fallacious shows only that it is insufficient, not that its conclusion is false."
+   },
+   "sources": [
+    "src:a81ae2997d"
+   ],
+   "flags": [
+    "editor-note",
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در منطق غیررسمی، «مسموم کردن چاه» و «بار اثبات» ریشه در بحث‌های کلاسیک دارد و پژوهشگران معاصر مغالطه‌ها را وابسته به بافت گفت‌وگو می‌دانند: همیشه هر نوع «طلب دلیل از مخالف» مغالطه نیست (مثلاً در دادگاه یا در بحث‌های پیش‌فرض‌ها بار اثبات به طرف دیگر می‌رود).",
+    "en": "In informal logic, contemporary scholars (Hamblin, Walton) treat fallacies as context-dependent; asking the opponent for reasons is not always a fallacy, and burdens can legitimately shift (e.g. presumptions, legal settings).",
+    "nl": "In informal logic, contemporary scholars (Hamblin, Walton) treat fallacies as context-dependent; asking the opponent for reasons is not always a fallacy, and burdens can legitimately shift (e.g. presumptions, legal settings)."
+   },
+   "sources": [
+    "src:06a4d503e5",
+    "src:05d15fe653"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:fallacies",
+   "rel": "part-of",
+   "note": {
+    "fa": "از خانوادهٔ مغالطه‌ها و استدلال غیررسمی",
+    "en": "Part of the family of fallacies and informal reasoning",
+    "nl": "Part of the family of fallacies and informal reasoning"
+   }
+  },
+  {
+   "to": "phil:falsification",
+   "rel": "see-also",
+   "note": {
+    "fa": "ادعای نقدناپذیر با ابطال‌پذیری رابطه دارد",
+    "en": "Unfalsifiable claims relate to falsifiability",
+    "nl": "Unfalsifiable claims relate to falsifiability"
+   }
+  },
+  {
+   "to": "phil:epistemology",
+   "rel": "part-of",
+   "note": {
+    "fa": "معرفت‌شناسی",
+    "en": "Epistemology",
+    "nl": "Epistemology"
+   }
+  },
+  {
+   "to": "phil:fallacy-appeals-to-feeling-and-force",
+   "rel": "see-also",
+   "note": {
+    "fa": "ترفندهای فشار و احساس",
+    "en": "Tricks of pressure and emotion",
+    "nl": "Tricks of pressure and emotion"
+   }
+  }
+ ],
+ "people": [
+  "core:charles-l-hamblin",
+  "core:douglas-walton"
+ ],
+ "sources": [
+  "src:05d15fe653",
+  "src:06a4d503e5",
+  "src:a81ae2997d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
