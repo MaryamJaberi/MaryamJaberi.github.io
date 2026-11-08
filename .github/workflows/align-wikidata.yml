@@ -1,0 +1,24 @@
+name: Daneshsara — align people with Wikidata
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  align:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install jsonschema
+      - name: Search Wikidata for every person without a QID
+        run: python3 daneshsara/build/wikidata_align.py
+      - name: Validate and rebuild registers
+        run: |
+          python3 daneshsara/build/validate.py
+          python3 daneshsara/build/core_pages.py
+      - name: Commit results
+        run: |
+          git config user.name "daneshsara-bot"; git config user.email "actions@users.noreply.github.com"
+          git add daneshsara/core/people.json daneshsara/core/wikidata_review.json daneshsara/core/registry.json daneshsara/core/people.html
+          git diff --cached --quiet || (git commit -m "data: Wikidata alignment for people (auto, pending review) [skip ci]" && git pull --rebase && git push)
