@@ -1,0 +1,127 @@
+{
+ "id": "soc:latent-function-intervention-risk",
+ "kind": "concept",
+ "title": {
+  "fa": "کارکرد پنهان و خطر دخالت مستقیم: چرا «مهندسی اجتماعی» پیامد پیش‌بینی‌نشده دارد",
+  "en": "Latent functions and the risk of direct intervention: why 'social engineering' has unforeseen effects",
+  "nl": "Latente functies en het risico van directe ingrepen: waarom 'sociale engineering' onvoorziene gevolgen heeft"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "کارکردگرایان می‌گویند نهادها به هم وابسته‌اند؛ پس دست‌بردن در یک بخش اثر پراکنده دارد. سخنران با مفهوم کارکرد پنهان و مثال سیاست‌های جمعیتی توضیح می‌دهد چرا تصمیم‌های اجتماعی پیامدهای ناخواسته می‌آورند و چرا «فرهنگ‌سازی» را نمی‌پسندد.",
+  "en": "Functionalists hold that institutions are interdependent, so tinkering with one part ripples outward. With the idea of latent function and a population-policy example, the lecturer explains unintended effects of social decisions and why he dislikes the phrase 'culture-making'.",
+  "nl": "Functionalisten stellen dat instituties onderling afhankelijk zijn, dus een ingreep op één plek heeft brede gevolgen. De docent gebruikt dit om onbedoelde gevolgen van beleid toe te lichten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، چون سیستم اجتماعی اجزای وابسته دارد و رو به تعادل است، دخالت مستقیم از بیرون پیامدهایی دارد که نمی‌شود پیش‌بینی کرد؛ این را «کارکرد پنهان» می‌نامد، در برابر کارکرد آشکار تصمیم.",
+    "en": "Per the lecturer, because a social system has interdependent parts and tends towards balance, direct outside intervention has effects one cannot foresee; he calls these 'latent functions', as against the manifest purpose of a decision.",
+    "nl": "Per the lecturer, because a social system has interdependent parts and tends towards balance, direct outside intervention has effects one cannot foresee; he calls these 'latent functions', as against the manifest purpose of a decision."
+   },
+   "sources": [
+    "src:e2a9f64440",
+    "src:920332b9a8"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نمونهٔ او: سیاست‌های جمعیتی که چند بار جهتشان عوض شد و محدودیت‌ها و مشوق‌های مالی؛ می‌گوید ممنوعیت‌ها می‌تواند بازار زیرزمینی و فساد پزشکی بسازد. این ادعای علّی بدون شواهد در سخنرانی آمده و ارزیابی سیاسی آن بر عهدهٔ خواننده است.",
+    "en": "His example: population policies that reversed direction, with restrictions and cash incentives; he suggests bans can create a black market and medical corruption. This causal claim is given without evidence in the lecture and its political assessment is left to the reader.",
+    "nl": "His example: population policies that reversed direction, with restrictions and cash incentives; he suggests bans can create a black market and medical corruption. This causal claim is given without evidence in the lecture and its political assessment is left to the reader."
+   },
+   "sources": [
+    "src:e2a9f64440"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ تکمیلی: مفاهیم کارکرد آشکار و پنهان را رابرت مرتون در «نظریهٔ اجتماعی و ساختار اجتماعی» پرداخته، نه پارسونز. پیامد ناخواسته را همهٔ مکتب‌ها می‌پذیرند و فقط کارکردگرایان نمی‌گویند.",
+    "en": "Caveat: the manifest/latent distinction was developed by Robert Merton in Social Theory and Social Structure, not by Parsons. Unintended consequences are accepted across schools, not only functionalism.",
+    "nl": "Caveat: the manifest/latent distinction was developed by Robert Merton in Social Theory and Social Structure, not by Parsons. Unintended consequences are accepted across schools, not only functionalism."
+   },
+   "sources": [
+    "src:920332b9a8"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه مقابل: پوپر اصلاح تدریجی و آزمون‌پذیر را «مهندسی گام‌به‌گام» می‌نامد و از آن دفاع می‌کند؛ و منتقدان کارکردگرایی می‌گویند تأکید بر تعادل می‌تواند به محافظه‌کاری و توجیه وضع موجود برسد.",
+    "en": "Opposing view: Popper defended piecemeal, testable reform ('piecemeal social engineering'), and critics say functionalism's stress on equilibrium can slide into conservatism and defence of the status quo.",
+    "nl": "Opposing view: Popper defended piecemeal, testable reform ('piecemeal social engineering'), and critics say functionalism's stress on equilibrium can slide into conservatism and defence of the status quo."
+   },
+   "sources": [
+    "src:4395470e0e"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:parsons-social-system",
+   "rel": "explains",
+   "note": {
+    "fa": "نظام اجتماعی پارسونز",
+    "en": "Parsons's social system",
+    "nl": "Parsons's social system"
+   }
+  },
+  {
+   "to": "soc:structural-functionalism",
+   "rel": "part-of",
+   "note": {
+    "fa": "کارکردگرایی ساختاری",
+    "en": "Structural functionalism",
+    "nl": "Structural functionalism"
+   }
+  },
+  {
+   "to": "soc:institutions-interdependence",
+   "rel": "see-also",
+   "note": {
+    "fa": "وابستگی نهادها",
+    "en": "Institutional interdependence",
+    "nl": "Institutional interdependence"
+   }
+  },
+  {
+   "to": "soc:dynamic-culture-shadow-institutions",
+   "rel": "see-also",
+   "note": {
+    "fa": "نهادهای سایه",
+    "en": "Shadow institutions",
+    "nl": "Shadow institutions"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-k-merton",
+  "core:karl-popper"
+ ],
+ "sources": [
+  "src:4395470e0e",
+  "src:920332b9a8",
+  "src:e2a9f64440"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

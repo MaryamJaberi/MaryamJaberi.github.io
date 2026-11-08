@@ -1,0 +1,109 @@
+{
+ "id": "tabar:brain-body-size-climate",
+ "kind": "concept",
+ "title": {
+  "fa": "اقلیم و اندازهٔ مغز و بدن در جنس انسان (هوموها)",
+  "en": "Climate and brain and body size in the genus Homo",
+  "nl": "Klimaat en brein- en lichaamsgrootte in het geslacht Homo"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "مانوئل ویل و همکارانش ۲۰۸ فسیل انسان‌سان از یک میلیون سال گذشته را با مدل اقلیمی سنجیدند. دما اندازهٔ بدن را در همهٔ گونه‌ها خوب پیش‌بینی کرد (قاعدهٔ برگمان)، اما اقلیم فقط بخشی از الگوی اندازهٔ مغز را توضیح داد.",
+  "en": "Manuel Will and colleagues combined 208 Homo fossils from the last million years with a climate model. Temperature predicted body size well across taxa (Bergmann's rule), but climate explained only part of the pattern in brain size.",
+  "nl": "Will en collega's combineerden 208 Homo-fossielen van het laatste miljoen jaar met een klimaatmodel: temperatuur voorspelde lichaamsgrootte goed (regel van Bergmann), maar verklaarde slechts deels de hersengrootte."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پژوهش برای نخستین بار یک مجموعهٔ بزرگ فسیل (۲۰۸ نمونه) با مختصات جغرافیایی را به یک شبیه‌ساز مدل اقلیمی جهانی گره می‌زند تا برای هر فسیل مقدارهای محیطی همان زمان و مکان به دست آید، و فرضیه‌ها را با آمار رسمی می‌آزماید.",
+    "en": "For the first time, a large fossil dataset (n=208) with spatial coordinates is linked to a global climate-model emulator so each fossil gets the environment of its own time and place, and hypotheses are tested in a formal statistical framework.",
+    "nl": "For the first time, a large fossil dataset (n=208) with spatial coordinates is linked to a global climate-model emulator so each fossil gets the environment of its own time and place, and hypotheses are tested in a formal statistical framework."
+   },
+   "sources": [
+    "src:9d23cb01bc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دما اندازهٔ بدن را در همهٔ گونه‌های بررسی‌شدهٔ هومو مطابق قاعدهٔ برگمان پیش‌بینی می‌کند (گرم‌تر، بدن کوچک‌تر)؛ نویسندگان آن را احتمالاً اثر مستقیم اقلیم بر فیزیولوژی می‌دانند.",
+    "en": "Temperature predicted body size in all studied Homo taxa following Bergmann's rule (warmer, smaller bodies), which the authors consider likely a direct effect of climate on physiology.",
+    "nl": "Temperature predicted body size in all studied Homo taxa following Bergmann's rule (warmer, smaller bodies), which the authors consider likely a direct effect of climate on physiology."
+   },
+   "sources": [
+    "src:9d23cb01bc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تولید اولیهٔ خالص (فراوانی گیاه) و تغییرپذیری درازمدت بارش اندازهٔ مغز را در انسان‌های باستانی خوب پیش‌بینی می‌کرد، اما در انسان امروزی نه. نویسندگان این اثر را غیرمستقیم می‌دانند، مثلاً از راه توان شناختی و احتمال انقراض.",
+    "en": "Net primary productivity and long-term variability of precipitation predicted brain size in archaic humans but not in modern humans. The authors think these effects were indirect, acting for example through cognitive ability and extinction risk.",
+    "nl": "Net primary productivity and long-term variability of precipitation predicted brain size in archaic humans but not in modern humans. The authors think these effects were indirect, acting for example through cognitive ability and extinction risk."
+   },
+   "sources": [
+    "src:9d23cb01bc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خود نویسندگان تأکید می‌کنند که اقلیم بخشی از الگوی زمانی را توضیح می‌دهد و علت‌های دیگر (جمعیت‌شناختی، اجتماعی، تغذیه‌ای، فناورانه) هم کنار هم عمل کرده‌اند. «اقلیم، مغز را بزرگ کرد» نتیجهٔ این پژوهش نیست. خوانندگان باید بدانند که این فقط چکیده‌ای کوتاه است و مدل، پیش‌فرض‌ها و عدم‌قطعیت‌ها در مقالهٔ کامل بررسی می‌شود.",
+    "en": "The authors stress that climate explains only part of the temporal pattern and that demographic, social, dietary and technological causes also interacted. 'Climate made brains bigger' is not this study's conclusion. This is only a short abstract; the model, assumptions and uncertainties belong to the full paper.",
+    "nl": "The authors stress that climate explains only part of the temporal pattern and that demographic, social, dietary and technological causes also interacted. 'Climate made brains bigger' is not this study's conclusion. This is only a short abstract; the model, assumptions and uncertainties belong to the full paper."
+   },
+   "sources": [
+    "src:9d23cb01bc"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:out-of-africa",
+   "rel": "see-also",
+   "note": {
+    "fa": "خاستگاه آفریقایی انسان خردمند",
+    "en": "The African origin of Homo sapiens",
+    "nl": "The African origin of Homo sapiens"
+   }
+  },
+  {
+   "to": "tabar:social-brain-evolution",
+   "rel": "contrasts",
+   "note": {
+    "fa": "تبیین اجتماعی تکامل مغز",
+    "en": "The social explanation of brain evolution",
+    "nl": "The social explanation of brain evolution"
+   }
+  },
+  {
+   "to": "tabar:neanderthal-admixture",
+   "rel": "see-also",
+   "note": {
+    "fa": "نئاندرتال‌ها و دنیسوواها",
+    "en": "Neanderthals and Denisovans",
+    "nl": "Neanderthals and Denisovans"
+   }
+  }
+ ],
+ "people": [
+  "core:manuel-will",
+  "core:mario-krapp",
+  "core:jay-t-stock",
+  "core:andrea-manica"
+ ],
+ "sources": [
+  "src:9d23cb01bc"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

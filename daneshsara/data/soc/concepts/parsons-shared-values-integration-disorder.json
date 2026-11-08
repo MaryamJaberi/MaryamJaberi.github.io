@@ -1,0 +1,120 @@
+{
+ "id": "soc:parsons-shared-values-integration-disorder",
+ "kind": "concept",
+ "title": {
+  "fa": "ارزش‌های مشترک و یکپارچگی: چرا پارسونز جامعهٔ بی‌ارزش‌مشترک را «آشفته» می‌داند",
+  "en": "Shared values and integration: why Parsons calls a value-fragmented society disordered",
+  "nl": "Gedeelde waarden en integratie: waarom Parsons een gefragmenteerde samenleving 'verward' noemt"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "وقتی نهادها از هم جدا و تخصصی شدند، سؤال این است که چه چیز آن‌ها را به هم پیوند می‌دهد. پاسخ پارسونز به روایت سخنران: ارزش‌های بنیادین مشترک. اگر خانواده، آموزش، اقتصاد و رسانه ارزش‌های ناسازگار بدهند، فرد دچار تعارض می‌شود.",
+  "en": "Once institutions become separate and specialised, what ties them together? In the lecturer's reading, Parsons answers: shared basic values. If family, school, economy and media transmit clashing values, individuals face conflict.",
+  "nl": "Wanneer instituties zich specialiseren, wat bindt ze dan? Volgens Parsons: gedeelde basiswaarden. Botsen de waarden van gezin, school en economie, dan raakt het individu verscheurd."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، پارسونز معیار پیشرفت جامعه را میزان تفکیک و تمایز نهادها و کارکردهایشان می‌داند. نهادی که بر دیگر نهادها چیره شود نشان جامعهٔ نیمه‌راه است.",
+    "en": "Per the lecturer, Parsons measures societal progress by how far institutions and functions are differentiated; one institution dominating the rest signals an unfinished transition.",
+    "nl": "Per the lecturer, Parsons measures societal progress by how far institutions and functions are differentiated; one institution dominating the rest signals an unfinished transition."
+   },
+   "sources": [
+    "src:e2a9f64440",
+    "src:58a696ccbe"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پس از تفکیک، پیوند خردهنظام‌ها از راه ارزش‌های مشترک است که در خانواده، آموزش، اقتصاد، دین و رسانه رخنه می‌کند. نظام کنش از نظر او درون فرهنگ و ارزش‌ها شکل می‌گیرد.",
+    "en": "After differentiation, the subsystems are bound by values that permeate family, education, economy, religion and media. For Parsons, action systems take shape within culture and values.",
+    "nl": "After differentiation, the subsystems are bound by values that permeate family, education, economy, religion and media. For Parsons, action systems take shape within culture and values."
+   },
+   "sources": [
+    "src:e2a9f64440",
+    "src:58a696ccbe",
+    "src:1b3af37865"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، اگر ارزش‌ها در نهادها فرق کنند، فرد باید برای هر میدان رفتار دیگری بسازد و دچار فروپاشی روانی می‌شود. نمونهٔ او تناقض ارزش‌های خانواده با ارزش‌هایی است که فرد در بازار و رسانه می‌بیند.",
+    "en": "Per the lecturer, if values differ across institutions, individuals must adopt different conduct in each arena and may break down; he cites the clash between taught honesty and what people meet in markets and media.",
+    "nl": "Per the lecturer, if values differ across institutions, individuals must adopt different conduct in each arena and may break down; he cites the clash between taught honesty and what people meet in markets and media."
+   },
+   "sources": [
+    "src:e2a9f64440"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نقد: لاکوود (۱۹۵۶) و داهرندورف (۱۹۵۸) گفتند پارسونز به اجماع ارزشی بیش از حد تکیه می‌کند و تعارض، قدرت و منافع را کم می‌بیند. جوامع تکثرگرا هم اغلب با ارزش‌های ناهمخوان و حتی تضاد باقی می‌مانند. تفسیر سخنران دربارهٔ تعارض ارزش‌ها در یک کشور معین هم یک داوری سیاسی است و اینجا بررسی نشده.",
+    "en": "Critique: Lockwood (1956) and Dahrendorf (1958) argued Parsons leans too heavily on value consensus and underrates conflict, power and interests; pluralist societies often endure with divergent values. The lecturer's application to a particular country is a political judgement and is not assessed here.",
+    "nl": "Critique: Lockwood (1956) and Dahrendorf (1958) argued Parsons leans too heavily on value consensus and underrates conflict, power and interests; pluralist societies often endure with divergent values. The lecturer's application to a particular country is a political judgement and is not assessed here."
+   },
+   "sources": [
+    "src:230cd79f98",
+    "src:75c33114b1"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:parsons-pattern-variables-evolution",
+   "rel": "part-of",
+   "note": {
+    "fa": "تکامل جوامع",
+    "en": "Societal evolution",
+    "nl": "Societal evolution"
+   }
+  },
+  {
+   "to": "soc:functionalism-vs-conflict-culture",
+   "rel": "contrasts",
+   "note": {
+    "fa": "کارکردگرایی در برابر تضاد",
+    "en": "Functionalism versus conflict",
+    "nl": "Functionalism versus conflict"
+   }
+  },
+  {
+   "to": "soc:cohesion",
+   "rel": "see-also",
+   "note": {
+    "fa": "انسجام اجتماعی",
+    "en": "Social cohesion",
+    "nl": "Social cohesion"
+   }
+  }
+ ],
+ "people": [
+  "core:talcott-parsons",
+  "core:ralf-dahrendorf"
+ ],
+ "sources": [
+  "src:1b3af37865",
+  "src:230cd79f98",
+  "src:58a696ccbe",
+  "src:75c33114b1",
+  "src:e2a9f64440"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

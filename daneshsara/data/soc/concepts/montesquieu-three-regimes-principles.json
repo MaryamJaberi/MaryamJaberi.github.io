@@ -1,0 +1,112 @@
+{
+ "id": "soc:montesquieu-three-regimes-principles",
+ "kind": "concept",
+ "title": {
+  "fa": "مونتسکیو: جمهوری، پادشاهی و استبداد و «احساس بنیادین» هرکدام",
+  "en": "Montesquieu: republic, monarchy, despotism and the driving sentiment of each",
+  "nl": "Montesquieu: republiek, monarchie, despotisme en hun drijvende gevoel"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "مونتسکیو حکومت‌ها را نه بر پایهٔ «چه کسی» که بر پایهٔ «چگونه» حکومت می‌کند دسته‌بندی کرد. هر نوع بر یک احساس سیاسی تکیه دارد: فضیلت، شرف یا ترس. سخنران این دسته‌بندی را نمونه‌ای از نگاه جامعه‌شناختی به سیاست می‌داند.",
+  "en": "Montesquieu sorted governments by how they rule, not by who rules. Each type rests on a political sentiment: virtue, honour or fear. The lecturer presents this as an early sociological approach to politics.",
+  "nl": "Montesquieu deelde regeringen in naar hoe er geregeerd wordt, niet door wie. Elk type steunt op een politiek gevoel: deugd, eer of angst."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "جمهوری: همهٔ مردم یا بخشی از آن‌ها حاکمیت دارند. پادشاهی: یک نفر ولی با قوانین ثابت حکومت می‌کند. استبداد: یک نفر بدون قانون و قاعده و به هوس خود.",
+    "en": "Republic: all or part of the people hold sovereignty. Monarchy: one person rules by fixed, established laws. Despotism: one person rules without law or rule, by whim.",
+    "nl": "Republic: all or part of the people hold sovereignty. Monarchy: one person rules by fixed, established laws. Despotism: one person rules without law or rule, by whim."
+   },
+   "sources": [
+    "src:e2a9f64440",
+    "src:622e38b9a9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جمهوری به فضیلت تکیه دارد، پادشاهی به شرف و استبداد به ترس. فضیلت اینجا به‌معنای سیاسی است: احترام به قانون و گذشتن از منافع فردی برای جمع، نه پارسایی اخلاقی. شرف یعنی پاس‌داشت جایگاه و مرتبهٔ اجتماعی.",
+    "en": "The republic relies on virtue, monarchy on honour, despotism on fear. Virtue here is political (respect for law and putting the common good above self), not private piety; honour means regard for one's rank.",
+    "nl": "The republic relies on virtue, monarchy on honour, despotism on fear. Virtue here is political (respect for law and putting the common good above self), not private piety; honour means regard for one's rank."
+   },
+   "sources": [
+    "src:e2a9f64440",
+    "src:622e38b9a9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، مونتسکیو به هابز نزدیک است اما بدبینی هابز دربارهٔ طبیعت انسان را ندارد.",
+    "en": "Per the lecturer, Montesquieu is close to Hobbes yet lacks Hobbes's pessimism about human nature.",
+    "nl": "Per the lecturer, Montesquieu is close to Hobbes yet lacks Hobbes's pessimism about human nature."
+   },
+   "sources": [
+    "src:e2a9f64440"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ تکمیلی: شهرت اصلی مونتسکیو در سیاست جدا کردن قوا و نقش اقلیم و جغرافیا در قوانین است که در این جلسه نیامده. دسته‌بندی او همچنین دربارهٔ استبداد «شرقی» تصویری کلیشه‌ای ساخت که پژوهشگران بعدی (از جمله نقد ادوارد سعید به شرق‌شناسی) نقد کرده‌اند.",
+    "en": "Caveat: Montesquieu is best known for separation of powers and for climate and geography, neither covered here. His portrait of 'oriental' despotism is a stereotype later criticised, for instance in the wider critique of Orientalism.",
+    "nl": "Caveat: Montesquieu is best known for separation of powers and for climate and geography, neither covered here. His portrait of 'oriental' despotism is a stereotype later criticised, for instance in the wider critique of Orientalism."
+   },
+   "sources": [
+    "src:622e38b9a9"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:montesquieu-chance-vs-deep-causes",
+   "rel": "see-also",
+   "note": {
+    "fa": "علت‌های عمیق",
+    "en": "Deep causes",
+    "nl": "Deep causes"
+   }
+  },
+  {
+   "to": "soc:enlightenment-break",
+   "rel": "part-of",
+   "note": {
+    "fa": "زمینهٔ روشنگری",
+    "en": "Enlightenment backdrop",
+    "nl": "Enlightenment backdrop"
+   }
+  },
+  {
+   "to": "soc:institutions",
+   "rel": "see-also",
+   "note": {
+    "fa": "نهادها",
+    "en": "Institutions",
+    "nl": "Institutions"
+   }
+  }
+ ],
+ "people": [
+  "core:montesquieu",
+  "core:thomas-hobbes"
+ ],
+ "sources": [
+  "src:622e38b9a9",
+  "src:e2a9f64440"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

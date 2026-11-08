@@ -1,0 +1,107 @@
+{
+ "id": "soc:circumscription-agent-based-model",
+ "kind": "concept",
+ "title": {
+  "fa": "آزمودن نظریهٔ محصورسازی کارنیرو با مدل‌سازی عاملی",
+  "en": "Testing Carneiro's circumscription theory with agent-based models",
+  "nl": "Carneiro's circumscriptietheorie getoetst met agent-based modellen"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "آلیس ویلیامز با مدل‌های شبیه‌سازی عاملی فرضیه‌های نظریهٔ محصورسازی رابرت کارنیرو دربارهٔ پیدایش دولت را صریح می‌کند و می‌سنجد. نتیجهٔ کلی: این روش می‌تواند بحث‌های بن‌بست‌شده را روشن کند و نشان دهد کدام داده‌های باستان‌شناختی کم است.",
+  "en": "Alice Williams uses agent-based simulations to make explicit and test the assumptions of Robert Carneiro's circumscription theory of state origins. Overall result: the method can unstick deadlocked debates and show which archaeological data are missing.",
+  "nl": "Alice Williams gebruikt agent-based simulaties om de aannames van Carneiro's circumscriptietheorie expliciet te maken en te toetsen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کارنیرو (۱۹۷۰) گفته بود موانع جغرافیایی، منبعی یا اجتماعی بر جابه‌جایی جمعیت می‌تواند به پیدایش جوامع پیچیده کمک کند. به نوشتهٔ ویلیامز، برای و علیه این نظریه نمونه‌های بسیار آورده شده و بحث به نتیجه نرسیده است.",
+    "en": "Carneiro (1970) proposed that geographic, resource or social barriers to population movement can promote the rise of complex societies. Williams writes that many examples have been cited for and against, and the debate remains unresolved.",
+    "nl": "Carneiro (1970) proposed that geographic, resource or social barriers to population movement can promote the rise of complex societies. Williams writes that many examples have been cited for and against, and the debate remains unresolved."
+   },
+   "sources": [
+    "src:9d23cb01bc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او مدل‌هایی بر پایهٔ فرض‌های نظریه ساخت تا فرض‌های آشکار و پنهان آن روشن شود و ببیند در چه شرایطی در چشم‌اندازهای انتزاعی تأیید می‌شود. سپس مدل‌ها را با داده‌های باستان‌شناختی و محیطی مناطق مشخص تنظیم کرد.",
+    "en": "She built models from the theory's assumptions to clarify its explicit and implicit premises and to find the conditions under which it holds in abstract landscapes, then parameterised them with archaeological and environmental data from specific regions.",
+    "nl": "She built models from the theory's assumptions to clarify its explicit and implicit premises and to find the conditions under which it holds in abstract landscapes, then parameterised them with archaeological and environmental data from specific regions."
+   },
+   "sources": [
+    "src:9d23cb01bc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ چکیده، آزمایش‌ها اثر شرایط محصورکننده بر شکل‌گیری پیچیدگی اجتماعی را کمّی می‌کنند و روشن می‌سازند کدام شکاف‌های پژوهش باستان‌شناختی باید پر شود تا نظریه تأیید یا رد شود. چکیده خود مقدار این اثر یا حکم نهایی دربارهٔ نظریه را نمی‌دهد.",
+    "en": "According to the abstract, the experiments quantify the effect of circumscribing conditions on social complexity and pinpoint the archaeological gaps to be filled before the theory can be firmly supported or rejected. The abstract itself gives neither the effect size nor a final verdict on the theory.",
+    "nl": "According to the abstract, the experiments quantify the effect of circumscribing conditions on social complexity and pinpoint the archaeological gaps to be filled before the theory can be firmly supported or rejected. The abstract itself gives neither the effect size nor a final verdict on the theory."
+   },
+   "sources": [
+    "src:9d23cb01bc"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نظریهٔ کارنیرو تنها تبیین پیدایش دولت نیست و منتقدان عوامل دیگر (تجارت، دین، رهبری، آبیاری) را مهم می‌دانند. مدل شبیه‌سازی هم تابع فرض‌های سازنده‌اش است و «اثبات» تاریخی نمی‌آورد؛ فقط نشان می‌دهد فرض‌ها چه نتایجی دارند.",
+    "en": "Carneiro's is not the only account of state origins; critics stress other factors (trade, religion, leadership, irrigation). A simulation also depends on its builder's assumptions and offers no historical proof, only the consequences of assumptions.",
+    "nl": "Carneiro's is not the only account of state origins; critics stress other factors (trade, religion, leadership, irrigation). A simulation also depends on its builder's assumptions and offers no historical proof, only the consequences of assumptions."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:fair-data-prehistory-databases",
+   "rel": "part-of",
+   "note": {
+    "fa": "پایگاه‌های داده و اصول FAIR",
+    "en": "Databases and FAIR principles",
+    "nl": "Databases and FAIR principles"
+   }
+  },
+  {
+   "to": "soc:institutions-inclusive",
+   "rel": "see-also",
+   "note": {
+    "fa": "نهادهای فراگیر و بهره‌کش",
+    "en": "Inclusive and extractive institutions",
+    "nl": "Inclusive and extractive institutions"
+   }
+  },
+  {
+   "to": "soc:collective-action",
+   "rel": "see-also",
+   "note": {
+    "fa": "مسئلهٔ کنش جمعی",
+    "en": "The collective action problem",
+    "nl": "The collective action problem"
+   }
+  }
+ ],
+ "people": [
+  "core:alice-j-williams",
+  "core:robert-l-carneiro"
+ ],
+ "sources": [
+  "src:9d23cb01bc"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

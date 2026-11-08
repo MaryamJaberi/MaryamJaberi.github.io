@@ -1,0 +1,108 @@
+{
+ "id": "phil:value-bracketing-dualistic-thinking",
+ "kind": "concept",
+ "title": {
+  "fa": "دوگانه‌پنداری و تعلیق نسبت ارزشی در پژوهش",
+  "en": "Dualistic thinking and suspending value judgements in inquiry",
+  "nl": "Dualistisch denken en het opschorten van waardeoordelen in onderzoek"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "سخنران می‌گوید ذهن اسطوره‌ای جهان را به خیر و شر تقسیم می‌کند و چیزهای مقدس و شیطانی هر دو از بازاندیشی کنار می‌مانند. او از پژوهشگر می‌خواهد، به‌عنوان پژوهشگر و نه شهروند، نسبت ارزشی خود با مفاهیمی مثل جبر، دیکتاتوری و آزادی را موقتاً معلق کند.",
+  "en": "The lecturer says mythic thinking splits the world into good and evil and that both the sacred and the demonised are shielded from re-examination. He asks the researcher, as researcher and not as citizen, to suspend value judgements toward concepts such as determinism, dictatorship or freedom.",
+  "nl": "De spreker stelt dat mythisch denken de wereld in goed en kwaad splitst en vraagt de onderzoeker waardeoordelen tijdelijk op te schorten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، دوگانه‌پنداری (روز/شب، خیر/شر) از ابتدای شناخت انسان از جهان بوده و در اسطورهٔ آفرینش ایرانی (اهورامزدا و اهریمن) هم دیده می‌شود.",
+    "en": "Per the lecturer, dualistic thinking (day/night, good/evil) goes back to the earliest human understanding of the world and appears in Iranian creation myths (Ahura Mazda and Ahriman).",
+    "nl": "Per the lecturer, dualistic thinking (day/night, good/evil) goes back to the earliest human understanding of the world and appears in Iranian creation myths (Ahura Mazda and Ahriman)."
+   },
+   "sources": [
+    "src:672f7b9fdb"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید مفاهیم مقدس از دسترس پرسش کنار می‌روند، اما مفاهیم «شیطانی» (مثلاً خشونت یا دیکتاتوری) هم بدون بررسی رد می‌شوند؛ حتی روشنفکران ضدمیتوس به همین دوگانگی برمی‌گردند.",
+    "en": "He says sacred concepts are put beyond questioning, but 'demonised' ones (violence, dictatorship) are also rejected unexamined; even anti-myth intellectuals fall back on the same binary.",
+    "nl": "He says sacred concepts are put beyond questioning, but 'demonised' ones (violence, dictatorship) are also rejected unexamined; even anti-myth intellectuals fall back on the same binary."
+   },
+   "sources": [
+    "src:672f7b9fdb"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "راه‌حل او تعلیق نسبت ارزشی است و آن را به «اپوخه» هوسرل نسبت می‌دهد. با این حال اپوخه در پدیدارشناسی تعلیق باور به وجود جهان طبیعی است؛ ایدهٔ بی‌طرفی ارزشی پژوهشگر بیشتر به وبر و رسالهٔ «علم به‌مثابه حرفه» برمی‌گردد.",
+    "en": "His remedy is suspending value stances, which he links to Husserl's epoché. Strictly, the epoché suspends belief in the natural world's existence; the researcher's value neutrality is closer to Weber's 'Science as a Vocation'.",
+    "nl": "His remedy is suspending value stances, which he links to Husserl's epoché. Strictly, the epoché suspends belief in the natural world's existence; the researcher's value neutrality is closer to Weber's 'Science as a Vocation'."
+   },
+   "sources": [
+    "src:1743dd21ce",
+    "src:744006ab4d"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بی‌طرفی ارزشی نیز بحث‌برانگیز است: منتقدانی مثل مکتب فرانکفورت و فمینیسم معرفت‌شناختی می‌گویند پژوهش هرگز کاملاً عاری از ارزش نیست؛ سخنران خود میان پژوهشگر و شهروند فرق می‌گذارد و می‌پذیرد که شهروند ناگزیر قضاوت ارزشی دارد.",
+    "en": "Value neutrality is itself disputed: critics from the Frankfurt School and feminist epistemology argue inquiry is never fully value-free; the lecturer himself distinguishes researcher from citizen and accepts that citizens must make value judgements.",
+    "nl": "Value neutrality is itself disputed: critics from the Frankfurt School and feminist epistemology argue inquiry is never fully value-free; the lecturer himself distinguishes researcher from citizen and accepts that citizens must make value judgements."
+   },
+   "sources": [
+    "src:672f7b9fdb"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:sacred-and-taboo",
+   "rel": "see-also",
+   "note": {
+    "fa": "مقدس و تابو",
+    "en": "The sacred and the taboo",
+    "nl": "The sacred and the taboo"
+   }
+  },
+  {
+   "to": "phil:hegel-phenomenology-spirit",
+   "rel": "see-also",
+   "note": {
+    "fa": "هگل",
+    "en": "Hegel",
+    "nl": "Hegel"
+   }
+  }
+ ],
+ "people": [
+  "core:edmund-husserl",
+  "core:max-weber"
+ ],
+ "sources": [
+  "src:1743dd21ce",
+  "src:672f7b9fdb",
+  "src:744006ab4d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
