@@ -37,3 +37,6 @@ python3 build/site.py <site dir>
 ## لایهٔ «برای ایران»
 - یادداشت‌ها در `iran/*.json` (طرح‌وارهٔ `core/schema/iran.schema.json`: پرسش، یافته، سال، روش، ردهٔ A–D، محل بحث، نقد، منبع، قابلیت‌های نوسبام ۱–۱۰).
 - `python3 build/iran_page.py` → `iran/index.html` (به تفکیک حوزه و قابلیت).
+
+## دفترهای مشترک
+- `python3 build/core_pages.py` → `core/people.html` (۶۲۹ چهره با مدخل‌هایشان) و `core/sources.html` (۶۶۹ منبع با رده و مدخل‌های استفاده‌کننده).
