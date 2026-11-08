@@ -1,0 +1,89 @@
+{
+ "id": "tabar:zagros-neolithic",
+ "kind": "concept",
+ "title": {
+  "fa": "کشاورزان نوسنگی زاگرس",
+  "en": "Zagros Neolithic farmers",
+  "nl": "Neolithische boeren van de Zagros"
+ },
+ "aliases": [
+  "گنج دره",
+  "Ganj Dareh",
+  "Wezmeh"
+ ],
+ "parent": "tabar:population-genetics",
+ "field": "tabar:population-genetics",
+ "summary": {
+  "fa": "ژنوم افراد ۹ تا ۱۰ هزار سال پیش از غرب ایران نشان داد کشاورزی در زاگرس به دست جمعیتی جدا از کشاورزان آناتولی آغاز شد؛ جمعیتی که به تبار ایرانیان امروز، جنوب آسیا و قفقاز کمک کرده است.",
+  "en": "Genomes of people from western Iran 9 to 10 thousand years ago showed that farming in the Zagros began among a population separate from Anatolian farmers; a population that contributed to the ancestry of today's Iranians, South Asians and the Caucasus.",
+  "nl": "Genomen van mensen uit West-Iran van 9 tot 10 duizend jaar geleden toonden dat de landbouw in de Zagros begon bij een bevolking los van de Anatolische boeren; een bevolking die bijdroeg aan de afstamming van hedendaagse Iraniërs, Zuid-Aziaten en de Kaukasus."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بروشکی و همکاران (۲۰۱۶): چهار ژنوم از گنج دره و غار وزمه (کرمانشاه) و ابدول حسین (لرستان)، ۷ تا ۱۰ هزار سال پیش؛ شباهت ژنتیکی‌شان به کشاورزان آناتولی بسیار کم بود.",
+    "en": "Broushaki et al. (2016): four genomes from Ganj Dareh and Wezmeh Cave (Kermanshah) and Abdul Hosein (Lorestan), 7 to 10 thousand years old; their genetic similarity to Anatolian farmers was very low.",
+    "nl": "Broushaki et al. (2016): four genomes from Ganj Dareh and Wezmeh Cave (Kermanshah) and Abdul Hosein (Lorestan), 7 to 10 thousand years old; their genetic similarity to Anatolian farmers was very low."
+   },
+   "sources": [
+    "src:22aa9386b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نتیجه: کشاورزی در هلال حاصلخیز دو خاستگاه جمعیتی داشت و در زاگرس احتمالاً به‌صورت مستقل یا از راه انتقال ایده (نه مهاجرت مردم) پدید آمد.",
+    "en": "Conclusion: farming in the Fertile Crescent had two population origins and in the Zagros likely arose independently or through the spread of ideas rather than people.",
+    "nl": "Conclusion: farming in the Fertile Crescent had two population origins and in the Zagros likely arose independently or through the spread of ideas rather than people."
+   },
+   "sources": [
+    "src:22aa9386b9",
+    "src:519a39f1f8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این تبار زاگرسی بعدها در شکل‌گیری جمعیت‌های دشت ایران، جنوب آسیا (به‌ویژه در تبار «ایرانیِ باستان» مردم هند و پاکستان) و قفقاز سهم داشت.",
+    "en": "This Zagros ancestry later contributed to the populations of the Iranian plateau, South Asia (notably the \"ancient Iranian\" ancestry of people in India and Pakistan) and the Caucasus.",
+    "nl": "This Zagros ancestry later contributed to the populations of the Iranian plateau, South Asia (notably the \"ancient Iranian\" ancestry of people in India and Pakistan) and the Caucasus."
+   },
+   "sources": [
+    "src:73a4e45469",
+    "src:519a39f1f8"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:ancient-dna",
+   "rel": "part-of",
+   "note": {
+    "fa": "یکی از یافته‌های انقلاب دی‌ان‌ای باستانی",
+    "en": "One finding of the ancient DNA revolution",
+    "nl": "One finding of the ancient DNA revolution"
+   }
+  },
+  {
+   "to": "tabar:iranian-genetic-diversity",
+   "rel": "explains",
+   "note": {
+    "fa": "بخشی از ریشهٔ تنوع ژنتیکی ایرانیان امروز",
+    "en": "Part of the root of today's Iranian genetic diversity",
+    "nl": "Part of the root of today's Iranian genetic diversity"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:22aa9386b9",
+  "src:519a39f1f8",
+  "src:73a4e45469"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:zagros-neolithic",
+ "wikidata": null,
+ "status": "draft"
+}

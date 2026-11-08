@@ -1,0 +1,86 @@
+{
+ "id": "tabar:consanguinity",
+ "kind": "concept",
+ "title": {
+  "fa": "ازدواج خویشاوندی",
+  "en": "Consanguineous marriage",
+  "nl": "Verwantschapshuwelijk"
+ },
+ "aliases": [],
+ "parent": "tabar:medical-genetics",
+ "field": "tabar:medical-genetics",
+ "summary": {
+  "fa": "ازدواج با خویشاوند نزدیک در ایران و بسیاری از کشورهای خاورمیانه و جنوب آسیا رایج است. احتمال بیماری مغلوب در فرزندان دخترعمو/پسرعمو از حدود ۲ تا ۳ درصد به ۴ تا ۶ درصد می‌رسد؛ کم نیست، ولی «فاجعه» هم نیست، و با مشاورهٔ ژنتیک قابل مدیریت است.",
+  "en": "Marriage to a close relative is common in Iran and many countries of the Middle East and South Asia. The chance of a recessive disorder in children of first cousins rises from about 2 to 3 percent to 4 to 6 percent; not trivial, not a \"catastrophe\", and manageable with genetic counselling.",
+  "nl": "Trouwen met een naaste verwant is gangbaar in Iran en veel landen in het Midden-Oosten en Zuid-Azië. De kans op een recessieve aandoening bij kinderen van volle neven en nichten stijgt van zo'n 2 à 3 procent naar 4 à 6 procent; niet te verwaarlozen, geen \"ramp\", en beheersbaar met genetische counseling."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سعادت و همکاران (۲۰۰۴): در نمونهٔ ملی بیش از ۳۰۰ هزار زوج ایرانی، ۳۸٫۶ درصد ازدواج‌ها خویشاوندی و ۲۷٫۹ درصد بین دخترعمو/پسرعمو و معادل‌ها بود؛ با تفاوت زیاد بین استان‌ها.",
+    "en": "Saadat et al. (2004): in a national sample of over 300 thousand Iranian couples, 38.6 percent of marriages were consanguineous and 27.9 percent between first cousins or equivalents, with large provincial differences.",
+    "nl": "Saadat et al. (2004): in a national sample of over 300 thousand Iranian couples, 38.6 percent of marriages were consanguineous and 27.9 percent between first cousins or equivalents, with large provincial differences."
+   },
+   "sources": [
+    "src:38e3f2042a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سازوکار: هر فرد چند واریانت مغلوب بیماری‌زا حمل می‌کند؛ خویشاوندان احتمال بیشتری دارند همان واریانت را از نیای مشترک داشته باشند. برای همین سهم بیماری‌های مغلوب نادر در جمعیت‌های با ازدواج خویشاوندی بالاست.",
+    "en": "Mechanism: everyone carries a few recessive disease variants; relatives are likelier to share the same variant from a common ancestor. That is why rare recessive disorders are over-represented in populations with high consanguinity.",
+    "nl": "Mechanism: everyone carries a few recessive disease variants; relatives are likelier to share the same variant from a common ancestor. That is why rare recessive disorders are over-represented in populations with high consanguinity."
+   },
+   "sources": [
+    "src:38e3f2042a",
+    "src:3c4d0940c4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نگاه متوازن: ازدواج خویشاوندی کارکردهای اجتماعی و اقتصادی دارد و در ایران رو به کاهش است؛ پاسخ علمی نه تحقیر، که غربالگری ناقلان و مشاورهٔ پیش از ازدواج است.",
+    "en": "A balanced view: consanguinity has social and economic functions and is declining in Iran; the scientific answer is not stigma but carrier screening and premarital counselling.",
+    "nl": "A balanced view: consanguinity has social and economic functions and is declining in Iran; the scientific answer is not stigma but carrier screening and premarital counselling."
+   },
+   "sources": [
+    "src:0aa129f24c"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:thalassemia-screening",
+   "rel": "applies-to",
+   "note": {
+    "fa": "نمونهٔ موفق غربالگری در ایران",
+    "en": "A successful screening example in Iran",
+    "nl": "A successful screening example in Iran"
+   }
+  },
+  {
+   "to": "tabar:iranian-genetic-diversity",
+   "rel": "see-also",
+   "note": {
+    "fa": "واریانت‌های بومی و پایگاه مرجع",
+    "en": "Local variants and a reference database",
+    "nl": "Local variants and a reference database"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:0aa129f24c",
+  "src:38e3f2042a",
+  "src:3c4d0940c4"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:consanguinity",
+ "wikidata": null,
+ "status": "draft"
+}

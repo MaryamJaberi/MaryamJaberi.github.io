@@ -1,0 +1,86 @@
+{
+ "id": "tabar:twin-adoption",
+ "kind": "concept",
+ "title": {
+  "fa": "مطالعات دوقلوها و فرزندخواندگی",
+  "en": "Twin and adoption studies",
+  "nl": "Tweeling- en adoptiestudies"
+ },
+ "aliases": [],
+ "parent": "tabar:behavior-genetics",
+ "field": "tabar:behavior-genetics",
+ "summary": {
+  "fa": "دوقلوهای همسان در برابر ناهمسان، و فرزندخوانده‌ها در برابر خانوادهٔ زیستی و پرورشی: دو آزمایش طبیعی که ژن و محیط را از هم جدا می‌کنند.",
+  "en": "Identical versus fraternal twins, and adoptees versus their biological and adoptive families: two natural experiments that pull genes and environment apart.",
+  "nl": "Eeneiige versus twee-eiige tweelingen, en adoptiekinderen versus hun biologische en adoptiefamilie: twee natuurlijke experimenten die genen en omgeving uit elkaar halen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "منطق: اگر دوقلوهای همسان (۱۰۰٪ ژن مشترک) در صفتی شبیه‌تر از ناهمسان‌ها (~۵۰٪) باشند، تفاوت را به ژن نسبت می‌دهیم؛ مشروط به فرض «محیط برابر».",
+    "en": "Logic: if identical twins (100 percent shared genes) resemble each other more than fraternal twins (~50 percent), the difference is attributed to genes, given the \"equal environments\" assumption.",
+    "nl": "Logic: if identical twins (100 percent shared genes) resemble each other more than fraternal twins (~50 percent), the difference is attributed to genes, given the \"equal environments\" assumption."
+   },
+   "sources": [
+    "src:1deae47297"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرزندخوانده‌ها در بزرگسالی در هوش و شخصیت به والدین زیستی که هرگز ندیده‌اند شبیه‌ترند تا به والدین پرورشی؛ این یکی از ده یافتهٔ تکرارشدهٔ ژنتیک رفتاری است.",
+    "en": "Adult adoptees resemble biological parents they never met more than their adoptive parents in intelligence and personality; one of behaviour genetics' ten replicated findings.",
+    "nl": "Adult adoptees resemble biological parents they never met more than their adoptive parents in intelligence and personality; one of behaviour genetics' ten replicated findings."
+   },
+   "sources": [
+    "src:1deae47297"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: فرض محیط برابر برای دوقلوهای همسان کامل برقرار نیست (با آنها شبیه‌تر رفتار می‌شود)، و این می‌تواند وراثت‌پذیری را کمی بیش‌برآورد کند.",
+    "en": "Critique: the equal-environments assumption does not fully hold for identical twins (they are treated more alike), which may slightly inflate heritability.",
+    "nl": "Critique: the equal-environments assumption does not fully hold for identical twins (they are treated more alike), which may slightly inflate heritability."
+   },
+   "sources": [
+    "src:ba8f3ee8f4"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:heritability",
+   "rel": "measured-by",
+   "note": {
+    "fa": "ابزار اصلی برآورد وراثت‌پذیری",
+    "en": "The main tool for estimating heritability",
+    "nl": "The main tool for estimating heritability"
+   }
+  },
+  {
+   "to": "tabar:gwas-polygenic",
+   "rel": "contrasts",
+   "note": {
+    "fa": "روش جدیدتر: مستقیم از دی‌ان‌ای",
+    "en": "The newer method: directly from DNA",
+    "nl": "The newer method: directly from DNA"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-plomin"
+ ],
+ "sources": [
+  "src:1deae47297",
+  "src:ba8f3ee8f4"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

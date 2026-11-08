@@ -1,0 +1,88 @@
+{
+ "id": "tabar:common-ancestors",
+ "kind": "concept",
+ "title": {
+  "fa": "ریاضی نیاکان: چرا همه خویشاوندیم",
+  "en": "The mathematics of ancestors: why we are all related",
+  "nl": "De wiskunde van voorouders: waarom we allemaal verwant zijn"
+ },
+ "aliases": [
+  "pedigree collapse",
+  "فروریزی شجره",
+  "نیای مشترک"
+ ],
+ "parent": "tabar:genealogy",
+ "field": "tabar:genealogy",
+ "summary": {
+  "fa": "تعداد نیاکان شما در هر نسل دو برابر می‌شود و در ۳۰ نسل از جمعیت کل زمین در آن زمان بیشتر؛ پس شجره‌ها خیلی زود در هم می‌روند. مدل‌سازی نشان می‌دهد نیای مشترک همهٔ انسان‌های زنده فقط چند هزار سال پیش می‌زیسته است.",
+  "en": "Your number of ancestors doubles each generation and within 30 generations exceeds the whole population of Earth at the time; so family trees collapse into each other quickly. Modelling shows the common ancestor of all living humans lived only a few thousand years ago.",
+  "nl": "Uw aantal voorouders verdubbelt elke generatie en overschrijdt binnen 30 generaties de hele wereldbevolking van toen; stambomen vallen dus snel in elkaar. Modellering toont dat de gemeenschappelijke voorouder van alle levende mensen slechts enkele duizenden jaren geleden leefde."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "رودی، اولسن و چانگ (۲۰۰۴): با مدل‌سازی مهاجرت واقع‌بینانه، نیای مشترک همهٔ انسان‌های امروز حدود ۲ تا ۵ هزار سال پیش می‌زیسته و کمی عقب‌تر، هر کسی که آن زمان فرزندانی باقی گذاشته، نیای همهٔ ماست («نقطهٔ نیاکان یکسان»).",
+    "en": "Rohde, Olson and Chang (2004): with realistic migration modelling, the common ancestor of all living humans lived about 2 to 5 thousand years ago, and a little earlier everyone who left descendants is an ancestor of all of us (the \"identical ancestors point\").",
+    "nl": "Rohde, Olson and Chang (2004): with realistic migration modelling, the common ancestor of all living humans lived about 2 to 5 thousand years ago, and a little earlier everyone who left descendants is an ancestor of all of us (the \"identical ancestors point\")."
+   },
+   "sources": [
+    "src:fd409ac468"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیامد عملی: ادعای «از نسل فلان پادشاه یا پیامبر بودن» در این افق زمانی تقریباً دربارهٔ همه صادق است و دربارهٔ هیچ‌کس خاص نیست؛ شجره‌نامه‌های یک‌خطی تنها یکی از میلیون‌ها مسیر را دنبال می‌کنند.",
+    "en": "Practical implication: claiming descent \"from such-and-such king or prophet\" within this horizon is roughly true of everyone and distinctive of no one; single-line pedigrees follow only one of millions of paths.",
+    "nl": "Practical implication: claiming descent \"from such-and-such king or prophet\" within this horizon is roughly true of everyone and distinctive of no one; single-line pedigrees follow only one of millions of paths."
+   },
+   "sources": [
+    "src:fd409ac468"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "از نظر ژنتیک، بعد از حدود ۷ تا ۸ نسل بیشتر نیاکان شما هیچ قطعه‌ای از دی‌ان‌ای به شما نداده‌اند: نیای شجره‌ای بودن با نیای ژنتیکی بودن فرق دارد.",
+    "en": "Genetically, after about 7 to 8 generations most of your ancestors have passed you no DNA segment at all: being a genealogical ancestor differs from being a genetic ancestor.",
+    "nl": "Genetically, after about 7 to 8 generations most of your ancestors have passed you no DNA segment at all: being a genealogical ancestor differs from being a genetic ancestor."
+   },
+   "sources": [
+    "src:9e55a626fc"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:haplogroups",
+   "rel": "see-also",
+   "note": {
+    "fa": "دو خط از هزاران",
+    "en": "Two lines out of thousands",
+    "nl": "Two lines out of thousands"
+   }
+  },
+  {
+   "to": "tabar:ancestry-tests",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "برای فهم درصدهای آزمون تبار",
+    "en": "For understanding ancestry-test percentages",
+    "nl": "For understanding ancestry-test percentages"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:9e55a626fc",
+  "src:fd409ac468"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

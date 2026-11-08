@@ -1,0 +1,96 @@
+{
+ "id": "tabar:iranian-genetic-diversity",
+ "kind": "concept",
+ "title": {
+  "fa": "تنوع ژنتیکی مردم ایران",
+  "en": "Genetic diversity of the Iranian population",
+  "nl": "Genetische diversiteit van de Iraanse bevolking"
+ },
+ "aliases": [
+  "Iranome",
+  "ایرانوم"
+ ],
+ "parent": "tabar:population-genetics",
+ "field": "tabar:population-genetics",
+ "summary": {
+  "fa": "ایرانیان یکی از ناهمگن‌ترین جمعیت‌های ژنتیکی خاورمیانه‌اند؛ گروه‌های بزرگ (فارس، کرد، لر، آذری، عرب) به هم نزدیک‌اند و چند گروه (بلوچ، ترکمن، سیستانی) تمایز بیشتری دارند؛ و بخش قابل توجهی از واریانت‌های ایرانی در پایگاه‌های داده جهانی غایب است.",
+  "en": "Iranians are among the most genetically heterogeneous populations of the Middle East; the large groups (Persians, Kurds, Lurs, Azeris, Arabs) are close to one another while a few (Baloch, Turkmen, Sistani) are more distinct; and a notable share of Iranian variants is absent from global databases.",
+  "nl": "Iraniërs behoren tot de genetisch meest heterogene bevolkingen van het Midden-Oosten; de grote groepen (Perzen, Koerden, Loeren, Azeri's, Arabieren) liggen dicht bij elkaar terwijl enkele (Beloetsji, Turkmenen, Sistani) meer afwijken; en een opmerkelijk deel van de Iraanse varianten ontbreekt in wereldwijde databanken."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مهرجو و همکاران (۲۰۱۹): ۱٬۰۲۱ نفر از ۱۱ گروه قومی؛ ایرانیان خوشهٔ «ایرانی مرکزی» بزرگی تشکیل می‌دهند و تمایز بین‌گروهی در کل کم اما در بلوچ‌ها، ترکمن‌ها و سیستانی‌ها بیشتر است؛ نشانه‌هایی از انزوای تاریخی و آمیزش با همسایگان شرقی.",
+    "en": "Mehrjoo et al. (2019): 1,021 people from 11 ethnic groups; Iranians form a large \"central Iranian\" cluster with low overall between-group differentiation, higher among Baloch, Turkmen and Sistani; signs of historical isolation and admixture with eastern neighbours.",
+    "nl": "Mehrjoo et al. (2019): 1,021 people from 11 ethnic groups; Iranians form a large \"central Iranian\" cluster with low overall between-group differentiation, higher among Baloch, Turkmen and Sistani; signs of historical isolation and admixture with eastern neighbours."
+   },
+   "sources": [
+    "src:02461bf7f4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ایرانوم (۲۰۱۹): توالی اگزوم ۸۰۰ نفر از ۸ گروه قومی؛ درصد قابل توجهی از واریانت‌ها در پایگاه‌های بین‌المللی ثبت نشده بود؛ بدون مرجع بومی، تفسیر آزمایش‌های ژنتیک بالینی در ایران خطا دارد.",
+    "en": "Iranome (2019): exome sequences of 800 people from 8 ethnic groups; a notable share of variants had not been recorded in international databases; without a local reference, interpreting clinical genetic tests in Iran is error-prone.",
+    "nl": "Iranome (2019): exome sequences of 800 people from 8 ethnic groups; a notable share of variants had not been recorded in international databases; without a local reference, interpreting clinical genetic tests in Iran is error-prone."
+   },
+   "sources": [
+    "src:3c4d0940c4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فلات ایران در طول تاریخ چهارراه مهاجرت بوده؛ با این حال داده‌ها نشان می‌دهد لایهٔ اصلی تبار، پیوستگی طولانی با جمعیت‌های باستانی خود منطقه دارد، نه جایگزینی کامل.",
+    "en": "The Iranian plateau has been a crossroads of migration throughout history; yet the data show that the main layer of ancestry has long continuity with the region's own ancient populations rather than full replacement.",
+    "nl": "The Iranian plateau has been a crossroads of migration throughout history; yet the data show that the main layer of ancestry has long continuity with the region's own ancient populations rather than full replacement."
+   },
+   "sources": [
+    "src:02461bf7f4",
+    "src:73a4e45469"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:zagros-neolithic",
+   "rel": "explains",
+   "note": {
+    "fa": "لایهٔ باستانی تبار ایرانیان",
+    "en": "The ancient layer of Iranian ancestry",
+    "nl": "The ancient layer of Iranian ancestry"
+   }
+  },
+  {
+   "to": "tabar:gwas-polygenic",
+   "rel": "applies-to",
+   "note": {
+    "fa": "چرا پنل مرجع بومی لازم است",
+    "en": "Why a local reference panel is needed",
+    "nl": "Why a local reference panel is needed"
+   }
+  },
+  {
+   "to": "tabar:consanguinity",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساختار ازدواج و بار واریانت‌های مغلوب",
+    "en": "Marriage structure and the load of recessive variants",
+    "nl": "Marriage structure and the load of recessive variants"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:02461bf7f4",
+  "src:3c4d0940c4",
+  "src:73a4e45469"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:genetic-heterogeneity",
+ "wikidata": null,
+ "status": "draft"
+}

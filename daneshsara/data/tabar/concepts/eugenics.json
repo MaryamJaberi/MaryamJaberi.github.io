@@ -1,0 +1,85 @@
+{
+ "id": "tabar:eugenics",
+ "kind": "concept",
+ "title": {
+  "fa": "به‌نژادی: تاریخ تاریک ژنتیک",
+  "en": "Eugenics: the dark history of genetics",
+  "nl": "Eugenetica: de donkere geschiedenis van de genetica"
+ },
+ "aliases": [],
+ "parent": "tabar:genetics-society",
+ "field": "tabar:genetics-society",
+ "summary": {
+  "fa": "گالتون در ۱۸۸۳ واژهٔ eugenics را ساخت: «بهبود نژاد» با کنترل تولیدمثل. در نیمهٔ اول قرن بیستم به عقیم‌سازی اجباری ده‌ها هزار نفر در آمریکا و اسکاندیناوی و به نسل‌کشی نازی انجامید. ژنتیک امروز با همین سابقه زندگی می‌کند و هر بحث «ژن و جامعه» باید آن را به یاد داشته باشد.",
+  "en": "Galton coined \"eugenics\" in 1883: \"improving the race\" by controlling reproduction. In the first half of the twentieth century it led to the forced sterilisation of tens of thousands in the US and Scandinavia and to Nazi genocide. Genetics lives with this record today, and every \"genes and society\" debate must remember it.",
+  "nl": "Galton muntte in 1883 het woord \"eugenetica\": \"het ras verbeteren\" door de voortplanting te sturen. In de eerste helft van de twintigste eeuw leidde het tot gedwongen sterilisatie van tienduizenden in de VS en Scandinavië en tot de nazi-genocide. De genetica leeft vandaag met dit verleden, en elk debat over \"genen en samenleving\" moet het onthouden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کولز (۱۹۸۵): جنبش به‌نژادی در آمریکا و بریتانیا جریانی «پیشرو» و علمی‌نما بود؛ قوانین عقیم‌سازی در بیش از ۳۰ ایالت آمریکا تصویب شد و دیوان عالی در ۱۹۲۷ (پروندهٔ باک علیه بل) آن را تأیید کرد.",
+    "en": "Kevles (1985): the eugenics movement in the US and Britain was a \"progressive\", science-flavoured current; sterilisation laws passed in over 30 US states and the Supreme Court upheld them in 1927 (Buck v. Bell).",
+    "nl": "Kevles (1985): the eugenics movement in the US and Britain was a \"progressive\", science-flavoured current; sterilisation laws passed in over 30 US states and the Supreme Court upheld them in 1927 (Buck v. Bell)."
+   },
+   "sources": [
+    "src:34537dde7a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درس برای امروز: هاردن استدلال می‌کند پذیرفتن نقش ژن‌ها در تفاوت‌های اجتماعی لزوماً به‌نژادی نیست؛ می‌تواند، برعکس، پایه‌ای برای برابری‌خواهی باشد («بخت‌آزمایی ژنتیکی» را نباید با شایستگی اشتباه گرفت). این موضع خودش محل بحث است.",
+    "en": "A lesson for today: Harden argues that accepting the role of genes in social differences is not necessarily eugenic; it can, conversely, ground egalitarianism (the \"genetic lottery\" must not be mistaken for merit). That position is itself debated.",
+    "nl": "A lesson for today: Harden argues that accepting the role of genes in social differences is not necessarily eugenic; it can, conversely, ground egalitarianism (the \"genetic lottery\" must not be mistaken for merit). That position is itself debated."
+   },
+   "sources": [
+    "src:b1c0eba86d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:race-biology",
+   "rel": "see-also",
+   "note": {
+    "fa": "نژاد و زیست‌شناسی",
+    "en": "Race and biology",
+    "nl": "Race and biology"
+   }
+  },
+  {
+   "to": "atlas:genethics",
+   "rel": "part-of",
+   "note": {
+    "fa": "پل اخلاق ژنتیک",
+    "en": "The genetic ethics bridge",
+    "nl": "The genetic ethics bridge"
+   }
+  },
+  {
+   "to": "psy:degeneration",
+   "rel": "bridges",
+   "note": {
+    "fa": "نظریهٔ انحطاط در ویکی روان",
+    "en": "Degeneration theory in the psychology wiki",
+    "nl": "Degeneration theory in the psychology wiki"
+   }
+  }
+ ],
+ "people": [
+  "core:francis-galton",
+  "core:kathryn-paige-harden"
+ ],
+ "sources": [
+  "src:34537dde7a",
+  "src:b1c0eba86d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,98 @@
+{
+ "id": "tabar:ancient-dna",
+ "kind": "concept",
+ "title": {
+  "fa": "انقلاب دی‌ان‌ای باستانی",
+  "en": "The ancient DNA revolution",
+  "nl": "De oud-DNA-revolutie"
+ },
+ "aliases": [],
+ "parent": "tabar:population-genetics",
+ "field": "tabar:population-genetics",
+ "summary": {
+  "fa": "از ۲۰۱۰ به بعد خواندن ژنوم از استخوان‌های هزاران‌ساله ممکن شد و تاریخ جمعیت‌ها را بازنویسی کرد: تقریباً هیچ جمعیت امروزی «خالص» نیست؛ همه حاصل چند موج مهاجرت و آمیزش‌اند.",
+  "en": "From 2010 on, reading genomes from bones thousands of years old became possible and rewrote population history: almost no living population is \"pure\"; all are the product of several waves of migration and admixture.",
+  "nl": "Vanaf 2010 werd het mogelijk genomen uit duizenden jaren oude botten te lezen, wat de bevolkingsgeschiedenis herschreef: vrijwel geen levende bevolking is \"zuiver\"; alle zijn het product van meerdere migratie- en vermengingsgolven."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "رایش: جمعیت‌های امروزی اروپا آمیزه‌ای از دست‌کم سه جمعیت کاملاً متفاوت‌اند (شکارچی‌گردآورندگان غربی، کشاورزان آناتولی، و دامداران استپ)؛ الگوی مشابه در بیشتر مناطق جهان دیده می‌شود.",
+    "en": "Reich: today's European populations are a mixture of at least three very different populations (western hunter-gatherers, Anatolian farmers and steppe herders); a similar pattern appears in most regions of the world.",
+    "nl": "Reich: today's European populations are a mixture of at least three very different populations (western hunter-gatherers, Anatolian farmers and steppe herders); a similar pattern appears in most regions of the world."
+   },
+   "sources": [
+    "src:8b730d2385"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کشاورزی در خاور نزدیک از دو جمعیت کاملاً جدا آغاز شد: کشاورزان زاگرس و کشاورزان آناتولی/شام که از نظر ژنتیکی به اندازهٔ اروپاییان و شرق آسیایی‌های امروز با هم فرق داشتند.",
+    "en": "Farming in the Near East began among two quite separate populations: Zagros farmers and Anatolian/Levantine farmers, genetically about as different as today's Europeans and East Asians.",
+    "nl": "Farming in the Near East began among two quite separate populations: Zagros farmers and Anatolian/Levantine farmers, genetically about as different as today's Europeans and East Asians."
+   },
+   "sources": [
+    "src:519a39f1f8",
+    "src:22aa9386b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هشدار روش‌شناختی: نمونه‌های باستانی پراکنده‌اند و «جمعیت» در این مطالعات یک خوشهٔ آماری است، نه قوم یا زبان؛ پیوند دادنش به هویت‌های امروزی کار دانش نیست.",
+    "en": "Methodological caution: ancient samples are sparse, and a \"population\" in these studies is a statistical cluster, not an ethnicity or a language; tying it to present-day identities is not science.",
+    "nl": "Methodological caution: ancient samples are sparse, and a \"population\" in these studies is a statistical cluster, not an ethnicity or a language; tying it to present-day identities is not science."
+   },
+   "sources": [
+    "src:8b730d2385"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:zagros-neolithic",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "نمونهٔ ایران: کشاورزان زاگرس",
+    "en": "The Iranian case: Zagros farmers",
+    "nl": "The Iranian case: Zagros farmers"
+   }
+  },
+  {
+   "to": "tabar:neanderthal-admixture",
+   "rel": "see-also",
+   "note": {
+    "fa": "آمیزش با نئاندرتال‌ها",
+    "en": "Admixture with Neanderthals",
+    "nl": "Admixture with Neanderthals"
+   }
+  },
+  {
+   "to": "atlas:archaeogen",
+   "rel": "part-of",
+   "note": {
+    "fa": "پل باستان‌ژنتیک",
+    "en": "The archaeogenetics bridge",
+    "nl": "The archaeogenetics bridge"
+   }
+  }
+ ],
+ "people": [
+  "core:david-reich",
+  "core:svante-p-bo"
+ ],
+ "sources": [
+  "src:22aa9386b9",
+  "src:519a39f1f8",
+  "src:8b730d2385"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

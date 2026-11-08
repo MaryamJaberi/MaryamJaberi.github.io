@@ -1,0 +1,114 @@
+{
+ "id": "tabar:iq-heritability-debate",
+ "kind": "concept",
+ "title": {
+  "fa": "بحث وراثت‌پذیری هوش و اثر فلین",
+  "en": "The IQ heritability debate and the Flynn effect",
+  "nl": "Het debat over erfelijkheid van IQ en het Flynn-effect"
+ },
+ "aliases": [],
+ "parent": "tabar:behavior-genetics",
+ "field": "tabar:behavior-genetics",
+ "summary": {
+  "fa": "از مقالهٔ جنجالی جنسن (۱۹۶۹) تا اثر فلین: هوش درون جمعیت‌ها بسیار وراثت‌پذیر است و با این حال نمره‌های هوش در یک قرن حدود سه نمره در دهه بالا رفت. این دو واقعیت با هم سازگارند و درس مهمی دربارهٔ وراثت‌پذیری می‌دهند.",
+  "en": "From Jensen's controversial 1969 article to the Flynn effect: IQ within populations is highly heritable, and yet IQ scores rose about three points per decade over a century. Both facts are compatible and teach an important lesson about heritability.",
+  "nl": "Van Jensens omstreden artikel uit 1969 tot het Flynn-effect: IQ is binnen populaties sterk erfelijk, en toch stegen IQ-scores een eeuw lang met zo'n drie punten per decennium. Beide feiten zijn verenigbaar en leren iets belangrijks over erfelijkheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "جنسن (۱۹۶۹) استدلال کرد وراثت‌پذیری هوش حدود ۰٫۸ است و برنامه‌های جبرانی آموزشی اثر کمی داشته‌اند؛ و فرضیهٔ سهم ژنتیکی در تفاوت میانگین گروه‌های نژادی را مطرح کرد. مقاله یکی از پرمناقشه‌ترین متون تاریخ روان‌شناسی شد.",
+    "en": "Jensen (1969) argued that IQ heritability is about 0.8 and compensatory education had little effect, and raised the hypothesis of a genetic share in mean differences between racial groups. The article became one of the most contested texts in psychology.",
+    "nl": "Jensen (1969) argued that IQ heritability is about 0.8 and compensatory education had little effect, and raised the hypothesis of a genetic share in mean differences between racial groups. The article became one of the most contested texts in psychology."
+   },
+   "sources": [
+    "src:c25a1254f7"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "خطای منطقی مرکزی که منتقدان نشان دادند: وراثت‌پذیری بالا درون گروه هیچ چیز دربارهٔ علت تفاوت بین گروه‌ها نمی‌گوید (مثال بذرهای یکسان در دو خاک متفاوت).",
+    "en": "The central logical error critics pointed out: high heritability within a group says nothing about the cause of differences between groups (the same seeds in two different soils).",
+    "nl": "The central logical error critics pointed out: high heritability within a group says nothing about the cause of differences between groups (the same seeds in two different soils)."
+   },
+   "sources": [
+    "src:ba8f3ee8f4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثر فلین: در ۱۴ کشور نمرهٔ هوش خام در یک نسل ۵ تا ۲۵ نمره بالا رفت؛ فراتحلیل ۲۰۱۵ (۴ میلیون نفر، ۳۱ کشور): حدود ۳ نمره در دهه، با کند شدن در دهه‌های اخیر. ژن‌ها در یک نسل عوض نمی‌شوند؛ پس این محیط است.",
+    "en": "The Flynn effect: in 14 nations raw IQ scores rose 5 to 25 points in a generation; a 2015 meta-analysis (4 million people, 31 countries): about 3 points per decade, slowing recently. Genes do not change in a generation; this is environment.",
+    "nl": "The Flynn effect: in 14 nations raw IQ scores rose 5 to 25 points in a generation; a 2015 meta-analysis (4 million people, 31 countries): about 3 points per decade, slowing recently. Genes do not change in a generation; this is environment."
+   },
+   "sources": [
+    "src:ba9f6ce267",
+    "src:81bc3ff922"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جمع‌بندی امروزی: وراثت‌پذیری هوش در بزرگسالی حدود ۰٫۵ تا ۰٫۸ و در کودکی کمتر است؛ نمره‌های چندژنی هنوز فقط چند درصد را پیش‌بینی می‌کنند؛ و تفاوت میانگین گروه‌ها توضیح ژنتیکی اثبات‌شده ندارد.",
+    "en": "Current summary: adult IQ heritability is about 0.5 to 0.8 and lower in childhood; polygenic scores still predict only a few percent; and mean differences between groups have no demonstrated genetic explanation.",
+    "nl": "Current summary: adult IQ heritability is about 0.5 to 0.8 and lower in childhood; polygenic scores still predict only a few percent; and mean differences between groups have no demonstrated genetic explanation."
+   },
+   "sources": [
+    "src:5cdd7ce079",
+    "src:65b756684e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:gene-environment",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "تعامل ژن و محیط",
+    "en": "Gene–environment interplay",
+    "nl": "Gene–environment interplay"
+   }
+  },
+  {
+   "to": "tabar:race-biology",
+   "rel": "see-also",
+   "note": {
+    "fa": "آیا نژاد مقولهٔ زیستی است؟",
+    "en": "Is race a biological category?",
+    "nl": "Is race a biological category?"
+   }
+  },
+  {
+   "to": "psy:p-psychometrics",
+   "rel": "bridges",
+   "note": {
+    "fa": "روان‌سنجی هوش در ویکی روان",
+    "en": "Psychometrics of intelligence in the psychology wiki",
+    "nl": "Psychometrics of intelligence in the psychology wiki"
+   }
+  }
+ ],
+ "people": [
+  "core:arthur-jensen",
+  "core:james-flynn",
+  "core:eric-turkheimer"
+ ],
+ "sources": [
+  "src:5cdd7ce079",
+  "src:65b756684e",
+  "src:81bc3ff922",
+  "src:ba8f3ee8f4",
+  "src:ba9f6ce267",
+  "src:c25a1254f7"
+ ],
+ "booklets": [],
+ "origin": "course:arthur-jensen",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

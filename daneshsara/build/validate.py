@@ -37,7 +37,7 @@ known = set(concepts) | set(people) | set(sources) | set(irans) | {'atlas:' + k 
 titles = {}
 for c in concepts.values():
     for l in c.get('links', []):
-        if l['to'] not in concepts and l['to'] not in redirects: errors.append(f'{c["id"]}: link to unknown {l["to"]}')
+        if l['to'] not in known and l['to'] not in redirects: errors.append(f'{c["id"]}: link to unknown {l["to"]}')
     for pid in c.get('people', []):
         if pid not in people: errors.append(f'{c["id"]}: unknown person {pid}')
     for sid in c.get('sources', []):
@@ -61,7 +61,7 @@ def url_of(cid):
     if w == 'iran': return f'iran/#{slug}'
     if w == 'core': return f'core/people.html#{slug}'
     if w == 'src': return f'core/sources.html#{slug}'
-    return f'{w}/graph.html#{slug}'
+    return f'{w}/graph.html#{slug}' if w == 'psy' else f'{w}/#{slug}'
 reg = {}
 for c in concepts.values():
     reg[c['id']] = {'wiki': c['id'].split(':')[0], 'type': c['kind'], 'title': c['title'], 'url': url_of(c['id']), 'status': c['status'], 'wikidata': c.get('wikidata')}

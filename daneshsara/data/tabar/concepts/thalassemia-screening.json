@@ -1,0 +1,72 @@
+{
+ "id": "tabar:thalassemia-screening",
+ "kind": "concept",
+ "title": {
+  "fa": "برنامهٔ ملی غربالگری تالاسمی ایران",
+  "en": "Iran's national thalassaemia screening programme",
+  "nl": "Het Iraanse nationale screeningsprogramma voor thalassemie"
+ },
+ "aliases": [],
+ "parent": "tabar:medical-genetics",
+ "field": "tabar:medical-genetics",
+ "summary": {
+  "fa": "از ۱۹۹۷ غربالگری ناقلان تالاسمی پیش از ازدواج در ایران اجباری شد، همراه با مشاوره و بعدها تشخیص پیش از تولد. یکی از معدود برنامه‌های ژنتیک جمعیتی موفق در کشورهای با درآمد متوسط، و الگویی که در BMJ معرفی شد.",
+  "en": "From 1997 premarital carrier screening for thalassaemia became mandatory in Iran, with counselling and later prenatal diagnosis. One of the few successful population-genetics programmes in a middle-income country, presented as a model in the BMJ.",
+  "nl": "Vanaf 1997 werd premaritale dragerscreening voor thalassemie in Iran verplicht, met counseling en later prenatale diagnostiek. Een van de weinige geslaagde populatiegenetische programma's in een middeninkomensland, in de BMJ als model gepresenteerd."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "صمدوت و مودل (۲۰۰۴): زوج‌های هر دو ناقل، مشاوره می‌گیرند و می‌توانند ازدواج نکنند، ازدواج کنند و تشخیص پیش از تولد انجام دهند، یا خطر را بپذیرند؛ در سال‌های اول، تولد نوزادان مبتلا در استان‌های هدف به‌طور چشمگیری کاهش یافت.",
+    "en": "Samavat and Modell (2004): couples who are both carriers receive counselling and may not marry, marry and use prenatal diagnosis, or accept the risk; in the first years the birth of affected infants fell markedly in the target provinces.",
+    "nl": "Samavat and Modell (2004): couples who are both carriers receive counselling and may not marry, marry and use prenatal diagnosis, or accept the risk; in the first years the birth of affected infants fell markedly in the target provinces."
+   },
+   "sources": [
+    "src:0aa129f24c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درس‌های برنامه: ادغام در نظام بهداشت اولیه، حمایت رهبران مذهبی از مجوز سقط درمانی (فتوای ۱۹۹۷)، و احترام به انتخاب زوج به جای ممنوعیت.",
+    "en": "Lessons of the programme: integration in primary health care, religious leaders' support for a therapeutic abortion permit (1997 ruling), and respect for the couple's choice rather than prohibition.",
+    "nl": "Lessons of the programme: integration in primary health care, religious leaders' support for a therapeutic abortion permit (1997 ruling), and respect for the couple's choice rather than prohibition."
+   },
+   "sources": [
+    "src:0aa129f24c"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:consanguinity",
+   "rel": "applies-to",
+   "note": {
+    "fa": "چرا غربالگری در ایران اهمیت ویژه دارد",
+    "en": "Why screening matters especially in Iran",
+    "nl": "Why screening matters especially in Iran"
+   }
+  },
+  {
+   "to": "atlas:genethics",
+   "rel": "bridges",
+   "note": {
+    "fa": "پل اخلاق ژنتیک",
+    "en": "The genetic ethics bridge",
+    "nl": "The genetic ethics bridge"
+   }
+  }
+ ],
+ "people": [
+  "core:bernadette-modell"
+ ],
+ "sources": [
+  "src:0aa129f24c"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:thalassemia-screening",
+ "wikidata": null,
+ "status": "draft"
+}

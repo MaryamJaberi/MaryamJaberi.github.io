@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>__TITLE_FA__ — دانش‌سرا</title>
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink)}
+.brand svg{width:26px;height:26px;color:var(--primary)}
+.crumbs{font-size:var(--small);color:var(--ink-2)}.crumbs a{color:var(--ink-2)}
+.lang{display:flex;gap:2px;border:1px solid var(--line-strong);border-radius:var(--r-full);padding:2px}
+.lang button{font:inherit;font-size:var(--chip);padding:4px 10px;border:0;border-radius:var(--r-full);background:transparent;color:var(--ink-2);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+main{padding-block:var(--s6) var(--s16)}
+.hero{display:grid;gap:var(--s3);margin-bottom:var(--s6)}
+.hero h1{margin:0}
+.hero p{color:var(--ink-2);font-size:1.05rem;max-width:70ch;margin:0}
+.draft{display:inline-flex;align-items:center;gap:8px;font-size:var(--chip);padding:4px 12px;border-radius:var(--r-full);background:var(--warn-bg,#FBF1D9);color:var(--warn-ink,#6B4E00);border:1px solid var(--warn-line,#E8D39A)}
+.search{display:flex;gap:8px;margin:var(--s4) 0}
+.search input{font:inherit;flex:1;min-width:0;padding:10px 14px;border-radius:var(--r-md);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink)}
+.fields{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:var(--s6)}
+.fields button{font:inherit;font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.fields button[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--s4)}
+.grid .card{padding:var(--s5);display:grid;gap:8px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.grid .card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.grid h3{margin:0;font-size:var(--h4)}
+.grid p{margin:0;color:var(--ink-2);font-size:var(--small);line-height:1.75;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.kick{font-size:var(--chip);color:var(--primary);font-weight:700}
+.sub{color:var(--ink-3);font-size:var(--small);direction:ltr;text-align:start;unicode-bidi:isolate}
+[dir=rtl] .sub{text-align:right}
+.fsec{margin-bottom:var(--s8)} .fsec h2{font-size:var(--h3);margin:0 0 var(--s1)} .fsec>p{margin:0 0 var(--s4);color:var(--ink-2);max-width:70ch}
+article.detail{display:grid;gap:var(--s5);max-width:78ch}
+article.detail h1{margin:0}
+article.detail .lead{font-size:1.1rem;line-height:1.9;margin:0}
+.back{font:inherit;font-size:var(--small);border:0;background:transparent;color:var(--primary);cursor:pointer;padding:0;text-align:start}
+.pts{display:grid;gap:var(--s3);margin:0;padding:0;list-style:none}
+.pts li{padding:var(--s4) var(--s5);border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);line-height:1.85;position:relative}
+.pts li .ref{font-size:var(--chip);color:var(--ink-3);display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.flag{font-size:var(--chip);padding:1px 8px;border-radius:var(--r-full);border:1px solid}
+.flag.unreplicated{color:#8A2E2E;border-color:#E3B4B4;background:#FBEDED}
+.flag.contested{color:#6B4E00;border-color:#E8D39A;background:#FBF1D9}
+.flag.dated{color:var(--ink-2);border-color:var(--line-strong)}
+.flag.editor-note{color:var(--primary);border-color:var(--primary)}
+h2.sec{font-size:var(--small);color:var(--ink-2);font-weight:600;margin:var(--s2) 0 0;text-transform:uppercase;letter-spacing:.04em}
+.links{display:grid;gap:6px}
+.links a{display:flex;gap:10px;align-items:baseline;padding:8px 12px;border-radius:var(--r-md);border:1px solid var(--line);background:var(--surface);text-decoration:none;color:var(--ink)}
+.links a:hover{border-color:var(--primary)}
+.links .rel{font-size:var(--chip);color:var(--primary);min-width:7em}
+.links .nt{font-size:var(--small);color:var(--ink-2)}
+.links .ext{font-size:var(--chip);color:var(--ink-3)}
+.ppl{display:flex;flex-wrap:wrap;gap:6px}
+.ppl span{font-size:var(--small);padding:4px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface)}
+.ppl small{color:var(--ink-3)}
+.iran{border-inline-start:4px solid var(--primary);padding:var(--s4) var(--s5);border-radius:var(--r-md);background:var(--surface);display:grid;gap:8px}
+.iran .q{font-weight:700}
+.grade{display:inline-block;font-size:var(--chip);padding:1px 8px;border-radius:var(--r-full);background:var(--ink);color:var(--paper)}
+ol.src{direction:ltr;text-align:left;padding-inline-start:1.4em;margin:0;display:grid;gap:6px;font-size:var(--small);color:var(--ink-2);line-height:1.7}
+ol.src a{color:var(--primary)}
+.status{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:var(--small);color:var(--ink-3)}
+footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(--ink-3);font-size:var(--small)}
+@media (prefers-color-scheme: dark){:root:not([data-theme=light]) .flag.unreplicated{background:#3A1F1F;color:#F2B8B8;border-color:#6B3A3A} :root:not([data-theme=light]) .flag.contested,:root:not([data-theme=light]) .draft{background:#3A3010;color:#F0D78A;border-color:#6B5A2A}}
+:root[data-theme=dark] .flag.unreplicated{background:#3A1F1F;color:#F2B8B8;border-color:#6B3A3A} :root[data-theme=dark] .flag.contested,:root[data-theme=dark] .draft{background:#3A3010;color:#F0D78A;border-color:#6B5A2A}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg><span>دانش‌سرا</span></a>
+ <div class="crumbs"><a href="../" data-i="home">خانه</a> › <a href="./" id="wname">__TITLE_FA__</a></div>
+ <div class="lang" role="group" aria-label="زبان"><button data-l="fa" aria-pressed="true">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
+</div></header>
+<main class="wrap" id="main"></main>
+<footer class="foot"><div class="wrap" data-i="foot"></div></footer>
+<script>
+const D = __DATA__;
+const UI = {
+ fa:{home:"خانه",foot:"این ویکی روی هستهٔ مشترک دانش‌سرا ساخته شده؛ هر گزاره منبع دارد و پرچم‌های «تکرارنشده»، «محل بحث» و «یادداشت سردبیر» وضعیت شواهد را نشان می‌دهند. همهٔ صفحه‌ها تا بازبینی کارشناس «پیش‌نویس»اند.",draft:"پیش‌نویس — در انتظار بازبینی کارشناس",reviewed:"بازبینی‌شده",expert:"تأیید کارشناس",search:"جست‌وجو در این ویکی…",all:"همه",back:"‹ همهٔ مدخل‌ها",points:"گزاره‌ها",links:"پیوندها",people:"چهره‌ها",iran:"برای ایران",sources:"منابع",grade:"ردهٔ داده",contested:"محل بحث",critique:"نقد",method:"روش",concepts:"مدخل",
+  rel:{"part-of":"بخشی از","explains":"توضیح می‌دهد","evidence-for":"شاهدِ","evidence-against":"شاهد علیه","contrasts":"در برابر","prerequisite":"پیش‌نیاز","same-as":"همان","applies-to":"کاربرد در","measured-by":"سنجش با","critiques":"نقد","bridges":"پل به","see-also":"ببینید"},
+  flag:{"unreplicated":"تکرارنشده","contested":"محل بحث","dated":"قدیمی","editor-note":"یادداشت سردبیر"},tier:"ردهٔ منبع",inwiki:"در ویکی"},
+ en:{home:"Home",foot:"This wiki runs on Daneshsara's shared core; every statement has a source, and the flags \"unreplicated\", \"contested\" and \"editor's note\" show the state of the evidence. All pages are drafts until expert review.",draft:"Draft — awaiting expert review",reviewed:"Reviewed",expert:"Expert-approved",search:"Search this wiki…",all:"All",back:"‹ All entries",points:"Statements",links:"Links",people:"People",iran:"Iran lens",sources:"Sources",grade:"Data grade",contested:"Contested",critique:"Critique",method:"Method",concepts:"entries",
+  rel:{"part-of":"part of","explains":"explains","evidence-for":"evidence for","evidence-against":"evidence against","contrasts":"contrasts with","prerequisite":"prerequisite","same-as":"same as","applies-to":"applies to","measured-by":"measured by","critiques":"critiques","bridges":"bridge to","see-also":"see also"},
+  flag:{"unreplicated":"unreplicated","contested":"contested","dated":"dated","editor-note":"editor's note"},tier:"Source tier",inwiki:"in wiki"},
+ nl:{home:"Home",foot:"Deze wiki draait op de gedeelde kern van Daneshsara; elke bewering heeft een bron, en de vlaggen \"niet gerepliceerd\", \"omstreden\" en \"redactienoot\" tonen de stand van het bewijs. Alle pagina's zijn concepten tot expertreview.",draft:"Concept — wacht op expertreview",reviewed:"Gereviewd",expert:"Door expert goedgekeurd",search:"Zoek in deze wiki…",all:"Alles",back:"‹ Alle lemma's",points:"Beweringen",links:"Verbanden",people:"Personen",iran:"Iran-lens",sources:"Bronnen",grade:"Datakwaliteit",contested:"Omstreden",critique:"Kritiek",method:"Methode",concepts:"lemma's",
+  rel:{"part-of":"deel van","explains":"verklaart","evidence-for":"bewijs voor","evidence-against":"bewijs tegen","contrasts":"tegenover","prerequisite":"voorkennis","same-as":"hetzelfde als","applies-to":"toegepast op","measured-by":"gemeten met","critiques":"bekritiseert","bridges":"brug naar","see-also":"zie ook"},
+  flag:{"unreplicated":"niet gerepliceerd","contested":"omstreden","dated":"verouderd","editor-note":"redactienoot"},tier:"Bronniveau",inwiki:"in wiki"}
+};
+let L = "fa"; try { L = localStorage.getItem("ds-lang") || "fa"; } catch(_) {}
+const T = k => (UI[L] && UI[L][k]) ?? UI.fa[k];
+const tx = o => !o ? "" : (typeof o === "string" ? o : (L === "fa" ? o.fa : (o[L] || o.en || o.fa)) || "");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fa = s => L === "fa" ? String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]) : String(s);
+const BY = Object.fromEntries(D.concepts.map(c => [c.id, c]));
+const ROOT = D.concepts.find(c => c.kind === "root"), FIELDS = D.concepts.filter(c => c.kind === "field").sort((a, b) => (D.order || []).indexOf(a.id) - (D.order || []).indexOf(b.id)), ITEMS = D.concepts.filter(c => c.kind === "concept" || c.kind === "subfield");
+let fieldSel = null, q = "";
+const titleOf = id => BY[id] ? tx(BY[id].title) : (D.ext[id] ? tx(D.ext[id].title) : id);
+const urlOf = id => BY[id] ? "#" + id.split(":")[1] : (D.ext[id] ? D.ext[id].url : null);
+function list(){
+  const items = ITEMS.filter(c => (!fieldSel || c.field === fieldSel || c.parent === fieldSel) && (!q || JSON.stringify([c.title, c.summary, c.aliases]).toLowerCase().includes(q.toLowerCase())));
+  const groups = FIELDS.filter(f => !fieldSel || f.id === fieldSel).map(f => ({f, items: items.filter(c => c.field === f.id || c.parent === f.id)})).filter(g => g.items.length);
+  return `<section class="hero"><h1>${esc(tx(ROOT.title))}</h1><p>${esc(tx(ROOT.summary))}</p><div><span class="draft">⚑ ${T("draft")} · ${fa(ITEMS.length)} ${T("concepts")}</span></div>
+    ${ROOT.links && ROOT.links.length ? `<div class="ppl">${ROOT.links.map(l => `<a class="chip" style="text-decoration:none" href="${urlOf(l.to)}">${esc(tx(l.note))} ↗</a>`).join("")}</div>` : ""}</section>
+   <div class="search"><input id="q" type="search" placeholder="${T("search")}" value="${esc(q)}" aria-label="${T("search")}"></div>
+   <div class="fields"><button data-f="" aria-pressed="${!fieldSel}">${T("all")}</button>${FIELDS.map(f => `<button data-f="${f.id}" aria-pressed="${fieldSel === f.id}">${esc(tx(f.title))}</button>`).join("")}</div>
+   ${groups.map(g => `<section class="fsec"><h2>${esc(tx(g.f.title))}</h2><p>${esc(tx(g.f.summary))}</p><div class="grid">${g.items.map(c => `<div class="card" data-go="${c.id}" tabindex="0" role="link"><div class="kick">${esc(tx(g.f.title))}</div><h3>${esc(tx(c.title))}</h3>${L === "fa" && c.title.en ? `<div class="sub">${esc(c.title.en)}</div>` : ""}<p>${esc(tx(c.summary))}</p></div>`).join("")}</div></section>`).join("")}`;
+}
+function detail(c){
+  const f = c.field && BY[c.field] || c.parent && BY[c.parent];
+  const srcIds = []; const sref = id => { let i = srcIds.indexOf(id); if (i < 0) { srcIds.push(id); i = srcIds.length - 1; } return i + 1; };
+  const pts = (c.points || []).map(p => { const refs = (p.sources || []).map(sref); return `<li>${esc(tx(p.text))}<div class="ref">${(p.flags || []).map(fl => `<span class="flag ${fl}">${esc(T("flag")[fl] || fl)}</span>`).join("")}${refs.map(n => `<span>[${fa(n)}]</span>`).join("")}</div></li>`; }).join("");
+  (c.sources || []).forEach(sref);
+  const links = (c.links || []).map(l => { const u = urlOf(l.to); if (!u) return ""; const extW = !BY[l.to] ? l.to.split(":")[0] : ""; return `<a href="${u}"><span class="rel">${esc(T("rel")[l.rel] || l.rel)}</span><span><b>${esc(titleOf(l.to))}</b>${extW ? ` <span class="ext">(${T("inwiki")} ${extW})</span>` : ""}<div class="nt">${esc(tx(l.note))}</div></span></a>`; }).join("");
+  const ppl = (c.people || []).map(id => D.people[id]).filter(Boolean).map(p => `<span>${esc(tx(p.name))}${p.years ? ` <small>${fa(p.years)}</small>` : ""}${L === "fa" && p.note && p.note.fa ? ` <small>— ${esc(p.note.fa)}</small>` : ""}</span>`).join("");
+  const ir = c.iran && D.iran[c.iran];
+  const iran = ir ? `<h2 class="sec">${T("iran")}</h2><div class="iran"><div class="q">${esc(tx(ir.question))}</div><div>${esc(tx(ir.finding))}</div><div class="status"><span class="grade">${T("grade")} ${esc(ir.grade)}</span><span>${fa(ir.year)}</span>${ir.method ? `<span>${T("method")}: ${esc(ir.method)}</span>` : ""}${ir.contested ? `<span class="flag contested">${T("contested")}</span>` : ""}</div>${ir.critique ? `<div class="nt"><b>${T("critique")}:</b> ${esc(ir.critique)}</div>` : ""}<div class="ref" dir="ltr" style="font-size:var(--chip);color:var(--ink-3);text-align:left">${(ir.source || []).map(s => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)).join("<br>")}</div></div>` : "";
+  const srcs = srcIds.map((id, i) => { const s = D.sources[id]; if (!s) return ""; return `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.cite)}</a>` : esc(s.cite)} <small>(${T("tier")} ${fa(s.tier)})</small></li>`; }).join("");
+  return `<article class="detail"><button class="back" data-back>${T("back")}</button>
+   <div><div class="kick">${f ? esc(tx(f.title)) : ""}</div><h1>${esc(tx(c.title))}</h1>${L === "fa" && c.title.en ? `<div class="sub">${esc(c.title.en)}${c.title.nl && c.title.nl !== c.title.en ? ` · ${esc(c.title.nl)}` : ""}</div>` : ""}</div>
+   <p class="lead">${esc(tx(c.summary))}</p>
+   ${pts ? `<h2 class="sec">${T("points")}</h2><ol class="pts">${pts}</ol>` : ""}
+   ${iran}
+   ${links ? `<h2 class="sec">${T("links")}</h2><div class="links">${links}</div>` : ""}
+   ${ppl ? `<h2 class="sec">${T("people")}</h2><div class="ppl">${ppl}</div>` : ""}
+   ${srcs ? `<h2 class="sec">${T("sources")}</h2><ol class="src">${srcs}</ol>` : ""}
+   <div class="status"><span class="draft">⚑ ${T(c.status)}</span>${c.origin ? `<span>${esc(c.origin)}</span>` : ""}</div></article>`;
+}
+function render(){
+  const h = location.hash.slice(1); const c = h && BY[D.wiki + ":" + h];
+  document.getElementById("main").innerHTML = c ? detail(c) : list();
+  if (c) window.scrollTo({top: 0}); else { const i = document.getElementById("q"); if (i && q) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
+}
+document.addEventListener("click", ev => {
+  const g = ev.target.closest("[data-go]"); if (g) { location.hash = g.dataset.go.split(":")[1]; return; }
+  if (ev.target.closest("[data-back]")) { history.pushState(null, "", location.pathname); render(); return; }
+  const f = ev.target.closest("[data-f]"); if (f) { fieldSel = f.dataset.f || null; render(); }
+});
+document.addEventListener("keydown", ev => { if ((ev.key === "Enter" || ev.key === " ") && ev.target.matches("[data-go]")) { ev.preventDefault(); ev.target.click(); } });
+document.addEventListener("input", ev => { if (ev.target.id === "q") { q = ev.target.value; render(); } });
+window.addEventListener("hashchange", render);
+function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); document.getElementById("wname").textContent = tx(ROOT.title); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = tx(ROOT.title) + " — " + (L === "fa" ? "دانش‌سرا" : "Daneshsara"); render(); }
+document.querySelector(".lang").addEventListener("click", ev => { const b = ev.target.closest("[data-l]"); if (!b) return; L = b.dataset.l; try { localStorage.setItem("ds-lang", L); } catch(_) {} i18n(); });
+i18n();
+</script>
+</body>
+</html>

@@ -115,8 +115,19 @@ for n in D:
     }
     json.dump(c, open(f"{OUT}/data/psy/concepts/{n['id']}.json", 'w'), ensure_ascii=False, indent=1)
     count += 1
-json.dump(people, open(OUT + '/core/people.json', 'w'), ensure_ascii=False, indent=1)
-json.dump(sources, open(OUT + '/core/sources.json', 'w'), ensure_ascii=False, indent=1)
+# keep entries other wikis added (anything not owned by psy), then overwrite psy's
+def keep(path, mine):
+    old = json.load(open(path)) if os.path.exists(path) else {}
+    for k, v in old.items():
+        if k in mine:
+            for w in v.get('wikis', []):
+                if w not in mine[k]['wikis']: mine[k]['wikis'].append(w)
+            if v.get('url') and not mine[k].get('url'): mine[k]['url'] = v['url']
+        elif 'psy' not in v.get('wikis', []):
+            mine[k] = v
+    return mine
+json.dump(keep(OUT + '/core/people.json', people), open(OUT + '/core/people.json', 'w'), ensure_ascii=False, indent=1)
+json.dump(keep(OUT + '/core/sources.json', sources), open(OUT + '/core/sources.json', 'w'), ensure_ascii=False, indent=1)
 json.dump({k: {'fa': v['fa'], 'url': v['url']} for k, v in BK.items()},
           open(OUT + '/data/psy/booklets.json', 'w'), ensure_ascii=False, indent=1)
 rels = {}

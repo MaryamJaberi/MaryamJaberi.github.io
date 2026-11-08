@@ -1,0 +1,74 @@
+{
+ "id": "tabar:lactase-gene-culture",
+ "kind": "concept",
+ "title": {
+  "fa": "تداوم لاکتاز: نمونهٔ هم‌تکاملی ژن و فرهنگ",
+  "en": "Lactase persistence: a case of gene–culture coevolution",
+  "nl": "Lactasepersistentie: een geval van gen-cultuur-co-evolutie"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "بیشتر پستانداران بعد از شیرخوارگی توان هضم شیر را از دست می‌دهند؛ در جمعیت‌هایی که دامداری کردند، جهش‌هایی که هضم شیر را تا بزرگسالی نگه می‌دارند در چند هزار سال رایج شد. فرهنگ (دامداری) ژن را انتخاب کرد.",
+  "en": "Most mammals lose the ability to digest milk after infancy; in populations that kept cattle, mutations that keep milk digestion into adulthood became common within a few thousand years. Culture (herding) selected the gene.",
+  "nl": "De meeste zoogdieren verliezen na de zuigelingentijd het vermogen melk te verteren; in bevolkingen die vee hielden, werden mutaties die melkvertering tot in de volwassenheid behouden binnen enkele duizenden jaren gangbaar. Cultuur (veeteelt) selecteerde het gen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تیشکوف و همکاران (۲۰۰۷): در شرق آفریقا جهش‌هایی متفاوت از جهش اروپایی، به‌طور مستقل، تداوم لاکتاز ایجاد کرده‌اند؛ تکامل همگرا زیر فشار یک شیوهٔ زندگی مشترک.",
+    "en": "Tishkoff et al. (2007): in East Africa mutations different from the European one independently produced lactase persistence; convergent evolution under the pressure of a shared way of life.",
+    "nl": "Tishkoff et al. (2007): in East Africa mutations different from the European one independently produced lactase persistence; convergent evolution under the pressure of a shared way of life."
+   },
+   "sources": [
+    "src:e6dfee157f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این یکی از قوی‌ترین نمونه‌های انتخاب طبیعی اخیر در انسان است و نشان می‌دهد تکامل انسان با کشاورزی متوقف نشد، بلکه شتاب گرفت.",
+    "en": "This is one of the strongest examples of recent natural selection in humans and shows that human evolution did not stop with agriculture but accelerated.",
+    "nl": "This is one of the strongest examples of recent natural selection in humans and shows that human evolution did not stop with agriculture but accelerated."
+   },
+   "sources": [
+    "src:d8fb384d44"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "atlas:geneculture",
+   "rel": "part-of",
+   "note": {
+    "fa": "پل هم‌تکاملی ژن و فرهنگ",
+    "en": "The gene–culture coevolution bridge",
+    "nl": "The gene–culture coevolution bridge"
+   }
+  },
+  {
+   "to": "psy:cultural-evolution",
+   "rel": "bridges",
+   "note": {
+    "fa": "تکامل فرهنگی",
+    "en": "Cultural evolution",
+    "nl": "Cultural evolution"
+   }
+  }
+ ],
+ "people": [
+  "core:sarah-tishkoff",
+  "core:luigi-luca-cavalli-sforza"
+ ],
+ "sources": [
+  "src:d8fb384d44",
+  "src:e6dfee157f"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
