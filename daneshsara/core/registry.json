@@ -1,14 +1,14 @@
 {
 "stats": {
-"concepts": 379,
-"concepts_with_sources": 338,
-"cross_wiki_links": 95,
+"concepts": 380,
+"concepts_with_sources": 339,
+"cross_wiki_links": 96,
 "bridge_links": 133,
 "iran_notes": 16,
 "fields": 77,
 "bridges": 25,
-"people": 630,
-"sources": 678,
+"people": 631,
+"sources": 681,
 "built": "2026-11-08"
 },
 "entries": {
@@ -4545,6 +4545,18 @@
 "nl": "Stoïcisme: wat in onze macht ligt"
 },
 "url": "phil/#stoicism",
+"status": "draft",
+"wikidata": null
+},
+"phil:bastiat-law-state": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "باستیا: قانون، دولت و «چپاول قانونی»",
+"en": "Bastiat: law, the state and \"legal plunder\"",
+"nl": "Bastiat: wet, staat en \"wettelijke plundering\""
+},
+"url": "phil/#bastiat-law-state",
 "status": "draft",
 "wikidata": null
 },
@@ -14021,6 +14033,19 @@
 "url": "core/people.html#mohammad-jalal-abbasi-shavazi",
 "wikis": [
 "soc"
+]
+},
+"core:fr-d-ric-bastiat": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فردریک باستیا",
+"en": "Frédéric Bastiat",
+"nl": "Frédéric Bastiat"
+},
+"url": "core/people.html#fr-d-ric-bastiat",
+"wikis": [
+"phil"
 ]
 }
 }
