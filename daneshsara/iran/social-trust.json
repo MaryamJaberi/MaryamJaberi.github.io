@@ -1,0 +1,34 @@
+{
+ "id": "iran:social-trust",
+ "domain": "soc",
+ "question": {
+  "fa": "اعتماد تعمیم‌یافتهٔ ایرانیان چقدر است؟",
+  "en": "How high is Iranians' generalised trust?"
+ },
+ "finding": {
+  "fa": "در پیمایش جهانی ارزش‌ها حدود ۱۰ تا ۱۵ درصد می‌گویند «به بیشتر مردم می‌شود اعتماد کرد» (ردهٔ کشورهای کم‌اعتماد)؛ پیمایش ملی ارزش‌ها و نگرش‌ها نیز کاهش اعتماد به مردم را از موج اول (۱۳۷۹) تا سوم (۱۳۹۴) نشان می‌دهد. رقم دقیق به موج و شیوهٔ نمونه‌گیری وابسته است.",
+  "en": "In the World Values Survey about 10 to 15 percent say \"most people can be trusted\" (a low-trust country); the national Values and Attitudes survey also shows trust in people falling from wave 1 (2000) to wave 3 (2015). Exact figures depend on wave and sampling."
+ },
+ "year": 2020,
+ "method": "national probability surveys (WVS; IVAS)",
+ "grade": "B",
+ "contested": false,
+ "source": [
+  {
+   "title": "Haerpfer, C., Inglehart, R., Moreno, A., Welzel, C., et al. (Eds.) (2022). World Values Survey Wave 7 (2017–2022) Cross-National Data-Set. WVSA Secretariat.",
+   "url": "https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp"
+  },
+  {
+   "title": "وزارت فرهنگ و ارشاد اسلامی، دفتر طرح‌های ملی (۱۳۷۹، ۱۳۸۲، ۱۳۹۴). پیمایش ملی ارزش‌ها و نگرش‌های ایرانیان، موج‌های اول تا سوم.",
+   "url": ""
+  }
+ ],
+ "fields": [],
+ "concepts": [
+  "soc:generalized-trust"
+ ],
+ "capability": [
+  7
+ ],
+ "critique": "سؤال واحد و ترجمه‌اش در ایران بحث‌برانگیز است؛ اعتماد «خاص» (به خانواده و آشنایان) بالا و «عام» پایین است و باید جدا گزارش شود."
+}

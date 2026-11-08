@@ -1,0 +1,102 @@
+{
+ "id": "soc:social-movements",
+ "kind": "concept",
+ "title": {
+  "fa": "جنبش‌های اجتماعی و سیاست اعتراضی",
+  "en": "Social movements and contentious politics",
+  "nl": "Sociale bewegingen en contentieuze politiek"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "جنبش، کارزاری پایدار با نمایش «ارزشمندی، وحدت، تعداد و تعهد» است. چه چیزی جنبش می‌سازد؟ نارضایتی همیشه هست؛ فرق را منابع، فرصت‌های سیاسی و «قاب‌بندی» می‌گذارند. و شواهد کمّی می‌گویند مقاومت بی‌خشونت تاریخاً بیش از مسلحانه به نتیجه رسیده، هرچند نرخ موفقیتش در دههٔ اخیر افت کرده.",
+  "en": "A movement is a sustained campaign displaying \"worthiness, unity, numbers and commitment\". What makes one? Grievance is always there; resources, political opportunities and \"framing\" make the difference. And the quantitative evidence says nonviolent resistance has historically succeeded more often than armed struggle, though its success rate has fallen in the last decade.",
+  "nl": "Een beweging is een volgehouden campagne die \"waardigheid, eenheid, aantallen en toewijding\" toont. Wat maakt haar? Grieven zijn er altijd; middelen, politieke kansen en \"framing\" maken het verschil. En het kwantitatieve bewijs zegt dat geweldloos verzet historisch vaker slaagde dan gewapende strijd, al is het slagingspercentage het laatste decennium gedaald."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تیلی (۲۰۰۴) و تارو (۲۰۱۱): «رپرتوار اعتراض» (تظاهرات، اعتصاب، طومار) اختراع مدرن است و با دولت ملی و رسانه رشد کرد؛ چرخه‌های اعتراض با باز شدن فرصت سیاسی اوج می‌گیرند و با سرکوب یا نهادینه شدن فرو می‌نشینند.",
+    "en": "Tilly (2004) and Tarrow (2011): the \"repertoire of contention\" (demonstration, strike, petition) is a modern invention that grew with the nation-state and media; cycles of protest peak as political opportunity opens and subside with repression or institutionalisation.",
+    "nl": "Tilly (2004) and Tarrow (2011): the \"repertoire of contention\" (demonstration, strike, petition) is a modern invention that grew with the nation-state and media; cycles of protest peak as political opportunity opens and subside with repression or institutionalisation."
+   },
+   "sources": [
+    "src:b59a77572e",
+    "src:cebd699d72"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چنووت و استفان (۲۰۱۱، ۳۲۳ کارزار ۱۹۰۰–۲۰۰۶): کارزارهای بی‌خشونت ۵۳ درصد و مسلحانه ۲۶ درصد موفق بودند؛ هیچ کارزاری با مشارکت فعال ۳٫۵ درصد جمعیت شکست نخورد. چنووت (۲۰۲۱): از ۲۰۱۰ نرخ موفقیت بی‌خشونت به زیر ۳۵ درصد افتاده؛ «قاعدهٔ ۳٫۵ درصد» توصیفی است نه تضمین.",
+    "en": "Chenoweth and Stephan (2011, 323 campaigns 1900–2006): nonviolent campaigns succeeded 53 percent of the time, armed ones 26 percent; no campaign with active participation of 3.5 percent of the population failed. Chenoweth (2021): since 2010 nonviolent success has fallen below 35 percent; the \"3.5 percent rule\" is descriptive, not a guarantee.",
+    "nl": "Chenoweth and Stephan (2011, 323 campaigns 1900–2006): nonviolent campaigns succeeded 53 percent of the time, armed ones 26 percent; no campaign with active participation of 3.5 percent of the population failed. Chenoweth (2021): since 2010 nonviolent success has fallen below 35 percent; the \"3.5 percent rule\" is descriptive, not a guarantee."
+   },
+   "sources": [
+    "src:41c1e6a2e7",
+    "src:040033aaf5"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بیات (۲۰۱۰) برای خاورمیانه مفهوم «ناجنبش» را ساخت: تغییر آرام و پراکندهٔ زندگی روزمره توسط میلیون‌ها نفر معمولی (پوشش، کار غیررسمی، حضور زنان در فضای عمومی) که رهبر و سازمان ندارد ولی مرزها را جابه‌جا می‌کند؛ «پیشروی آرام مردم عادی».",
+    "en": "Bayat (2010) coined \"nonmovements\" for the Middle East: the quiet, dispersed change of everyday life by millions of ordinary people (dress, informal work, women's presence in public space) with no leader or organisation, yet shifting boundaries; \"the quiet encroachment of the ordinary\".",
+    "nl": "Bayat (2010) coined \"nonmovements\" for the Middle East: the quiet, dispersed change of everyday life by millions of ordinary people (dress, informal work, women's presence in public space) with no leader or organisation, yet shifting boundaries; \"the quiet encroachment of the ordinary\"."
+   },
+   "sources": [
+    "src:248ed932c7"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:preference-falsification",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا بسیج ناگهانی است",
+    "en": "Why mobilisation is sudden",
+    "nl": "Why mobilisation is sudden"
+   }
+  },
+  {
+   "to": "soc:collective-action",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "مسئلهٔ کنش جمعی",
+    "en": "The collective action problem",
+    "nl": "The collective action problem"
+   }
+  },
+  {
+   "to": "psy:polarization",
+   "rel": "bridges",
+   "note": {
+    "fa": "قطبی شدن در ویکی روان",
+    "en": "Polarization in the psychology wiki",
+    "nl": "Polarization in the psychology wiki"
+   }
+  }
+ ],
+ "people": [
+  "core:charles-tilly",
+  "core:erica-chenoweth",
+  "core:asef-bayat"
+ ],
+ "sources": [
+  "src:040033aaf5",
+  "src:248ed932c7",
+  "src:41c1e6a2e7",
+  "src:b59a77572e",
+  "src:cebd699d72"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

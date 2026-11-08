@@ -1,0 +1,74 @@
+{
+ "id": "soc:mobility",
+ "kind": "concept",
+ "title": {
+  "fa": "تحرک بین‌نسلی",
+  "en": "Intergenerational mobility",
+  "nl": "Intergenerationele mobiliteit"
+ },
+ "aliases": [],
+ "parent": "soc:inequality",
+ "field": "soc:inequality",
+ "summary": {
+  "fa": "چقدر درآمد و جایگاه فرزند به والدینش بسته است؟ در کشورهای اسکاندیناوی کم، در آمریکا و بریتانیا زیاد، و بر خلاف تصور، «رؤیای آمریکایی» در کانادا و دانمارک دست‌یافتنی‌تر است تا در آمریکا.",
+  "en": "How much does a child's income and standing depend on the parents'? Little in Scandinavia, much in the US and Britain, and contrary to the myth, the \"American dream\" is more attainable in Canada and Denmark than in America.",
+  "nl": "Hoezeer hangen inkomen en positie van een kind af van de ouders? Weinig in Scandinavië, veel in de VS en Groot-Brittannië, en anders dan de mythe wil, is de \"American dream\" beter haalbaar in Canada en Denemarken dan in Amerika."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "چتی و همکاران (۲۰۱۴، داده‌های مالیاتی ۴۰ میلیون نفر): تحرک در آمریکا از شهری به شهر دیگر دو تا سه برابر فرق می‌کند؛ پنج همبستهٔ قوی: تفکیک نژادی و فضایی کمتر، نابرابری کمتر، مدارس بهتر، سرمایهٔ اجتماعی بیشتر، و خانواده‌های دووالده بیشتر.",
+    "en": "Chetty et al. (2014, tax data on 40 million people): mobility in the US varies two- to threefold between cities; five strong correlates: less racial and spatial segregation, less inequality, better schools, more social capital, and more two-parent families.",
+    "nl": "Chetty et al. (2014, tax data on 40 million people): mobility in the US varies two- to threefold between cities; five strong correlates: less racial and spatial segregation, less inequality, better schools, more social capital, and more two-parent families."
+   },
+   "sources": [
+    "src:9570a0451f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«منحنی گتسبی بزرگ»: کشورهای نابرابرتر تحرک کمتری دارند؛ نابرابری نتیجه، نابرابری فرصت نسل بعد می‌شود.",
+    "en": "The \"Great Gatsby curve\": more unequal countries have less mobility; inequality of outcome becomes the next generation's inequality of opportunity.",
+    "nl": "The \"Great Gatsby curve\": more unequal countries have less mobility; inequality of outcome becomes the next generation's inequality of opportunity."
+   },
+   "sources": [
+    "src:9570a0451f",
+    "src:6c0c807f94"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:gwas-polygenic",
+   "rel": "bridges",
+   "note": {
+    "fa": "سهم ژن و خانواده در تحصیلات",
+    "en": "The share of genes and family in education",
+    "nl": "The share of genes and family in education"
+   }
+  },
+  {
+   "to": "soc:gini-inequality",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "اندازه‌گیری نابرابری",
+    "en": "Measuring inequality",
+    "nl": "Measuring inequality"
+   }
+  }
+ ],
+ "people": [
+  "core:raj-chetty"
+ ],
+ "sources": [
+  "src:6c0c807f94",
+  "src:9570a0451f"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

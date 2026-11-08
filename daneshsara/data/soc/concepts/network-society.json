@@ -1,0 +1,70 @@
+{
+ "id": "soc:network-society",
+ "kind": "concept",
+ "title": {
+  "fa": "جامعهٔ شبکه‌ای",
+  "en": "The network society",
+  "nl": "De netwerkmaatschappij"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "کاستلز: در عصر اطلاعات، قدرت و ثروت در «فضای جریان‌ها» (شبکه‌های مالی، رسانه‌ای، فنی) جابه‌جا می‌شود و از «فضای مکان‌ها» (شهر، کشور) جدا می‌افتد؛ هویت‌های مقاومت (ملی، دینی، محلی) پاسخِ آدم‌های جامانده‌اند.",
+  "en": "Castells: in the information age, power and wealth move in the \"space of flows\" (financial, media, technical networks) and come loose from the \"space of places\" (city, country); resistance identities (national, religious, local) are the response of those left behind.",
+  "nl": "Castells: in het informatietijdperk bewegen macht en rijkdom in de \"ruimte van stromen\" (financiële, media-, technische netwerken) en raken los van de \"ruimte van plaatsen\" (stad, land); verzetsidentiteiten (nationaal, religieus, lokaal) zijn het antwoord van wie achterblijft."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کاستلز (۱۹۹۶): شبکه شکل سازمانی غالب می‌شود چون انعطاف‌پذیر، مقیاس‌پذیر و بقاپذیر است؛ اما منطقش «دوگانه» است: یا درون شبکه‌ای یا بی‌ارزش. این تز پیش از شبکه‌های اجتماعی نوشته شد و بسیاری از پیش‌بینی‌هایش را آن‌ها تأیید کردند.",
+    "en": "Castells (1996): the network becomes the dominant organisational form because it is flexible, scalable and survivable; but its logic is \"binary\": either you are in the network or you are worthless. The thesis was written before social media and many of its predictions were borne out by them.",
+    "nl": "Castells (1996): the network becomes the dominant organisational form because it is flexible, scalable and survivable; but its logic is \"binary\": either you are in the network or you are worthless. The thesis was written before social media and many of its predictions were borne out by them."
+   },
+   "sources": [
+    "src:7af26b32fe"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:weak-ties",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "ساختار شبکه",
+    "en": "Network structure",
+    "nl": "Network structure"
+   }
+  },
+  {
+   "to": "psy:polarization",
+   "rel": "bridges",
+   "note": {
+    "fa": "قطبی شدن در شبکه‌ها",
+    "en": "Polarization in networks",
+    "nl": "Polarization in networks"
+   }
+  },
+  {
+   "to": "soc:social-movements",
+   "rel": "see-also",
+   "note": {
+    "fa": "جنبش‌های شبکه‌ای",
+    "en": "Networked movements",
+    "nl": "Networked movements"
+   }
+  }
+ ],
+ "people": [
+  "core:manuel-castells"
+ ],
+ "sources": [
+  "src:7af26b32fe"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

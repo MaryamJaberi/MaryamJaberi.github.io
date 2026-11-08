@@ -1,0 +1,85 @@
+{
+ "id": "soc:protestant-ethic",
+ "kind": "concept",
+ "title": {
+  "fa": "اخلاق پروتستانی و روح سرمایه‌داری",
+  "en": "The Protestant ethic and the spirit of capitalism",
+  "nl": "De protestantse ethiek en de geest van het kapitalisme"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "وبر پرسید چرا سرمایه‌داری عقلانی اول در اروپای پروتستان شکوفا شد و پاسخ داد: کار سخت و ریاضت‌کشانه به‌عنوان نشانهٔ رستگاری، پس‌انداز به جای مصرف، و حساب‌گری روزمره. تز پرنفوذی که شواهد تجربی‌اش مختلط است.",
+  "en": "Weber asked why rational capitalism first flourished in Protestant Europe and answered: ascetic hard work as a sign of salvation, saving over consumption, and everyday calculation. An influential thesis with mixed empirical evidence.",
+  "nl": "Weber vroeg waarom het rationele kapitalisme eerst in protestants Europa opbloeide en antwoordde: ascetisch hard werken als teken van verlossing, sparen boven consumeren, en alledaagse berekening. Een invloedrijke these met gemengd empirisch bewijs."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "وبر (۱۹۰۵): هدف نشان دادن «قرابت انتخابی» میان یک اخلاق دینی و یک نظام اقتصادی بود، نه علیت یک‌طرفه؛ خودش هشدار داد که «قفس آهنین» سرمایه‌داری دیگر به روح دینی نیازی ندارد.",
+    "en": "Weber (1905): the aim was to show an \"elective affinity\" between a religious ethic and an economic system, not one-way causation; he himself warned that capitalism's \"iron cage\" no longer needs the religious spirit.",
+    "nl": "Weber (1905): the aim was to show an \"elective affinity\" between a religious ethic and an economic system, not one-way causation; he himself warned that capitalism's \"iron cage\" no longer needs the religious spirit."
+   },
+   "sources": [
+    "src:44db2d1cb1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هنریک (۲۰۲۰) روایت جایگزین می‌دهد: ممنوعیت‌های کلیسای غربی بر ازدواج خویشاوندی خانواده‌های گسترده را شکست و روان‌شناسی «فردگرا، غیرشخصی و تحلیلی» ساخت که بعدها بازار و دموکراسی روی آن سوار شد؛ پروتستانتیسم بیشتر سوادآموزی را بالا برد تا اخلاق کار.",
+    "en": "Henrich (2020) offers an alternative account: the Western Church's bans on cousin marriage broke extended kin groups and produced an \"individualist, impersonal, analytic\" psychology on which markets and democracy later rode; Protestantism raised literacy more than the work ethic.",
+    "nl": "Henrich (2020) offers an alternative account: the Western Church's bans on cousin marriage broke extended kin groups and produced an \"individualist, impersonal, analytic\" psychology on which markets and democracy later rode; Protestantism raised literacy more than the work ethic."
+   },
+   "sources": [
+    "src:6858037a34"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:consanguinity",
+   "rel": "bridges",
+   "note": {
+    "fa": "ازدواج خویشاوندی و ساختار خانواده",
+    "en": "Cousin marriage and family structure",
+    "nl": "Cousin marriage and family structure"
+   }
+  },
+  {
+   "to": "psy:cultural-evolution",
+   "rel": "bridges",
+   "note": {
+    "fa": "تکامل فرهنگی",
+    "en": "Cultural evolution",
+    "nl": "Cultural evolution"
+   }
+  },
+  {
+   "to": "soc:secularization",
+   "rel": "see-also",
+   "note": {
+    "fa": "دین در جامعهٔ مدرن",
+    "en": "Religion in modern society",
+    "nl": "Religion in modern society"
+   }
+  }
+ ],
+ "people": [
+  "core:max-weber",
+  "core:joseph-henrich"
+ ],
+ "sources": [
+  "src:44db2d1cb1",
+  "src:6858037a34"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

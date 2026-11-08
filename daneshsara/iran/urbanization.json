@@ -1,0 +1,29 @@
+{
+ "id": "iran:urbanization",
+ "domain": "soc",
+ "question": {
+  "fa": "شهرنشینی در ایران چقدر و چقدر سریع بوده است؟",
+  "en": "How urban is Iran, and how fast did it get there?"
+ },
+ "finding": {
+  "fa": "سرشماری ۱۳۹۵: ۷۴ درصد شهرنشین (از حدود ۳۱ درصد در ۱۳۳۵)؛ تهران و حومه بیش از ۱۵ میلیون نفر.",
+  "en": "2016 census: 74 percent urban (from about 31 percent in 1956); Tehran and periphery over 15 million."
+ },
+ "year": 2016,
+ "method": "national census",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "مرکز آمار ایران (۱۳۹۵). نتایج سرشماری عمومی نفوس و مسکن ۱۳۹۵.",
+   "url": "https://www.amar.org.ir"
+  }
+ ],
+ "fields": [],
+ "concepts": [
+  "soc:urbanism"
+ ],
+ "capability": [
+  10
+ ]
+}

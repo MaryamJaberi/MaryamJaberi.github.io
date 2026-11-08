@@ -1,0 +1,98 @@
+{
+ "id": "soc:value-change",
+ "kind": "concept",
+ "title": {
+  "fa": "تغییر ارزش‌ها: از بقا به ابراز خود",
+  "en": "Value change: from survival to self-expression",
+  "nl": "Waardeverandering: van overleving naar zelfexpressie"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "اینگلهارت با پنجاه سال پیمایش در صد کشور نشان داد با امنیت اقتصادی و وجودی، ارزش‌ها از «بقا» (نظم، سنت، دین) به «ابراز خود» (آزادی، برابری جنسیتی، تحمل تفاوت) می‌چرخند؛ تغییر بیشتر از راه جایگزینی نسل‌هاست تا تغییر عقیدهٔ افراد. ایران روی این نقشه حرکت کرده است.",
+  "en": "Inglehart, with fifty years of surveys in a hundred countries, showed that with economic and existential security values turn from \"survival\" (order, tradition, religion) to \"self-expression\" (freedom, gender equality, tolerance of difference); change comes more through generational replacement than individuals changing their minds. Iran has moved on this map.",
+  "nl": "Inglehart toonde met vijftig jaar surveys in honderd landen dat waarden met economische en existentiële zekerheid verschuiven van \"overleving\" (orde, traditie, religie) naar \"zelfexpressie\" (vrijheid, gendergelijkheid, tolerantie); verandering komt meer door generatiewisseling dan doordat individuen van mening veranderen. Iran heeft zich op deze kaart bewogen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اینگلهارت و ولزل (۲۰۰۵): دو محور «سنتی–سکولارعقلانی» و «بقا–ابراز خود» بیشتر واریانس ارزش‌های جهان را می‌گیرند؛ توسعه کشورها را روی هر دو به جلو می‌راند، ولی میراث فرهنگی (مسیحی، اسلامی، کنفوسیوسی…) جای شروع را تعیین می‌کند.",
+    "en": "Inglehart and Welzel (2005): two axes, \"traditional–secular-rational\" and \"survival–self-expression\", capture most of the world's variance in values; development pushes countries forward on both, but cultural heritage (Christian, Islamic, Confucian…) sets the starting point.",
+    "nl": "Inglehart and Welzel (2005): two axes, \"traditional–secular-rational\" and \"survival–self-expression\", capture most of the world's variance in values; development pushes countries forward on both, but cultural heritage (Christian, Islamic, Confucian…) sets the starting point."
+   },
+   "sources": [
+    "src:d7a317cebe"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اینگلهارت (۲۰۱۸): تغییر ارزش‌ها نسلی است و زمانی خودش را در سیاست نشان می‌دهد که نسل جدید اکثریت شود؛ ناامنی تازه (بحران اقتصادی، مهاجرت) می‌تواند واکنش «اقتدارگرایانه» بسازد، اما روند بلندمدت را برنگردانده است.",
+    "en": "Inglehart (2018): value change is generational and shows up in politics when the new cohort becomes the majority; new insecurity (economic crisis, migration) can produce an \"authoritarian reflex\", but has not reversed the long-run trend.",
+    "nl": "Inglehart (2018): value change is generational and shows up in politics when the new cohort becomes the majority; new insecurity (economic crisis, migration) can produce an \"authoritarian reflex\", but has not reversed the long-run trend."
+   },
+   "sources": [
+    "src:8f0d6ab822"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در سه موج پیمایش ملی ارزش‌ها و نگرش‌های ایرانیان (۱۳۷۹، ۱۳۸۲، ۱۳۹۴) و موج‌های پیمایش جهانی ارزش‌ها، ایران روی محور بقا–ابراز خود جابه‌جا شده: افزایش اهمیت آزادی فردی و برابری جنسیتی، به‌ویژه در نسل‌های جوان‌تر و شهرها.",
+    "en": "Across the three waves of the national Iranian Values and Attitudes survey (2000, 2003, 2015) and the World Values Survey waves, Iran has moved on the survival–self-expression axis: rising weight of individual freedom and gender equality, especially among younger cohorts and in cities.",
+    "nl": "Across the three waves of the national Iranian Values and Attitudes survey (2000, 2003, 2015) and the World Values Survey waves, Iran has moved on the survival–self-expression axis: rising weight of individual freedom and gender equality, especially among younger cohorts and in cities."
+   },
+   "sources": [
+    "src:95287955fe",
+    "src:4a310ccbde"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:generations",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکار نسلی تغییر",
+    "en": "The generational mechanism of change",
+    "nl": "The generational mechanism of change"
+   }
+  },
+  {
+   "to": "soc:secularization",
+   "rel": "see-also",
+   "note": {
+    "fa": "دین",
+    "en": "Religion",
+    "nl": "Religion"
+   }
+  },
+  {
+   "to": "psy:p-personality",
+   "rel": "bridges",
+   "note": {
+    "fa": "ارزش‌ها در روان‌شناسی",
+    "en": "Values in psychology",
+    "nl": "Values in psychology"
+   }
+  }
+ ],
+ "people": [
+  "core:ronald-inglehart"
+ ],
+ "sources": [
+  "src:4a310ccbde",
+  "src:8f0d6ab822",
+  "src:95287955fe",
+  "src:d7a317cebe"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:values-shift",
+ "wikidata": null,
+ "status": "draft"
+}

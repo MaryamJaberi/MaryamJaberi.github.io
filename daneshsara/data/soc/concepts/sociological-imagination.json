@@ -1,0 +1,72 @@
+{
+ "id": "soc:sociological-imagination",
+ "kind": "concept",
+ "title": {
+  "fa": "بینش جامعه‌شناختی",
+  "en": "The sociological imagination",
+  "nl": "De sociologische verbeelding"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "توان دیدن پیوند میان «گرفتاری‌های شخصی» و «مسائل عمومی»: بیکاری یک نفر مشکل اوست؛ بیکاری یک‌پنجم جامعه مسئله‌ای ساختاری است که با نصیحت فردی حل نمی‌شود.",
+  "en": "The capacity to see the link between \"personal troubles\" and \"public issues\": one person's unemployment is their trouble; a fifth of society unemployed is a structural issue no individual advice will fix.",
+  "nl": "Het vermogen om het verband te zien tussen \"persoonlijke moeilijkheden\" en \"publieke kwesties\": de werkloosheid van één persoon is diens probleem; een vijfde van de samenleving werkloos is een structurele kwestie die geen individueel advies oplost."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "میلز (۱۹۵۹): جامعه‌شناسی یعنی پیوند زدن زندگی‌نامه و تاریخ؛ هر مشکل فردی را باید پرسید در چه ساختاری و در چه دوره‌ای پدید آمده.",
+    "en": "Mills (1959): sociology means connecting biography and history; of every personal problem ask in what structure and what era it arose.",
+    "nl": "Mills (1959): sociology means connecting biography and history; of every personal problem ask in what structure and what era it arose."
+   },
+   "sources": [
+    "src:accf4bea5e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این نگاه پادزهر «روان‌شناسی‌زدگی» است: تبدیل مسائل ساختاری (مسکن، اشتغال) به ضعف اراده یا شخصیت افراد.",
+    "en": "This view is the antidote to \"psychologism\": turning structural problems (housing, jobs) into individuals' failures of will or character.",
+    "nl": "This view is the antidote to \"psychologism\": turning structural problems (housing, jobs) into individuals' failures of will or character."
+   },
+   "sources": [
+    "src:accf4bea5e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:medicalization",
+   "rel": "bridges",
+   "note": {
+    "fa": "پزشکی‌سازی در ویکی روان",
+    "en": "Medicalization in the psychology wiki",
+    "nl": "Medicalization in the psychology wiki"
+   }
+  },
+  {
+   "to": "soc:social-construction",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساخت اجتماعی واقعیت",
+    "en": "The social construction of reality",
+    "nl": "The social construction of reality"
+   }
+  }
+ ],
+ "people": [
+  "core:c-wright-mills"
+ ],
+ "sources": [
+  "src:accf4bea5e"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,96 @@
+{
+ "id": "soc:generalized-trust",
+ "kind": "concept",
+ "title": {
+  "fa": "اعتماد تعمیم‌یافته",
+  "en": "Generalised trust",
+  "nl": "Gegeneraliseerd vertrouwen"
+ },
+ "aliases": [],
+ "parent": "soc:cohesion",
+ "field": "soc:cohesion",
+ "summary": {
+  "fa": "پاسخ به یک سؤال ساده: «به‌طور کلی می‌شود به بیشتر مردم اعتماد کرد یا باید خیلی مراقب بود؟» این عدد میان کشورها از زیر ۱۰ تا بالای ۶۰ درصد فرق می‌کند، دهه‌ها پایدار می‌ماند، و با رشد اقتصادی، سلامت و کیفیت حکمرانی همبسته است. در ایران پایین است.",
+  "en": "The answer to one simple question: \"Generally speaking, can most people be trusted, or must one be very careful?\" It ranges from under 10 to over 60 percent across countries, stays stable for decades, and correlates with growth, health and quality of government. In Iran it is low.",
+  "nl": "Het antwoord op één eenvoudige vraag: \"Kunnen de meeste mensen over het algemeen worden vertrouwd, of moet men heel voorzichtig zijn?\" Het loopt tussen landen van onder de 10 tot boven de 60 procent, blijft decennialang stabiel en hangt samen met groei, gezondheid en bestuurskwaliteit. In Iran is het laag."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "روتشتاین و اوسلانر (۲۰۰۵): برابری (اقتصادی و فرصتی) و نبود فساد قوی‌ترین پیش‌بینی‌کننده‌های اعتماد تعمیم‌یافته‌اند؛ نابرابری اعتماد را می‌خورد و بی‌اعتمادی سیاست‌های برابرساز را ناممکن می‌کند: تلهٔ اجتماعی.",
+    "en": "Rothstein and Uslaner (2005): equality (economic and of opportunity) and absence of corruption are the strongest predictors of generalised trust; inequality eats trust and distrust makes equalising policies impossible: a social trap.",
+    "nl": "Rothstein and Uslaner (2005): equality (economic and of opportunity) and absence of corruption are the strongest predictors of generalised trust; inequality eats trust and distrust makes equalising policies impossible: a social trap."
+   },
+   "sources": [
+    "src:d4458872cb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آلگان و کاهوک (۲۰۱۰): با اعتماد ارثی مهاجران آمریکایی (بر حسب کشور مبدأ) نشان دادند اعتماد علّتِ رشد است نه فقط معلولش؛ اگر اعتماد آفریقا در سطح سوئد بود، درآمد سرانه‌اش چند برابر بود.",
+    "en": "Algan and Cahuc (2010): using the inherited trust of US immigrants (by country of origin) they showed trust causes growth, not only follows it; had Africa Sweden's trust level, its income per head would be several times higher.",
+    "nl": "Algan and Cahuc (2010): using the inherited trust of US immigrants (by country of origin) they showed trust causes growth, not only follows it; had Africa Sweden's trust level, its income per head would be several times higher."
+   },
+   "sources": [
+    "src:196ab6bdb8"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در پیمایش جهانی ارزش‌ها، اعتماد تعمیم‌یافتهٔ ایرانیان در موج‌های اخیر در حدود ۱۰ تا ۱۵ درصد و در ردهٔ کشورهای کم‌اعتماد است؛ در پیمایش ملی ارزش‌ها و نگرش‌ها نیز اعتماد به «مردم» از موج اول تا سوم کاهش نشان می‌دهد.",
+    "en": "In the World Values Survey, Iranians' generalised trust in recent waves is around 10 to 15 percent, among the low-trust countries; the national Values and Attitudes survey also shows trust in \"people\" falling from the first to the third wave.",
+    "nl": "In the World Values Survey, Iranians' generalised trust in recent waves is around 10 to 15 percent, among the low-trust countries; the national Values and Attitudes survey also shows trust in \"people\" falling from the first to the third wave."
+   },
+   "sources": [
+    "src:4a310ccbde",
+    "src:95287955fe"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:social-trust",
+   "rel": "same-as",
+   "note": {
+    "fa": "اعتماد اجتماعی در ویکی روان (درس اعتماد)",
+    "en": "Social trust in the psychology wiki (the trust lecture)",
+    "nl": "Social trust in the psychology wiki (the trust lecture)"
+   }
+  },
+  {
+   "to": "soc:inequality-health",
+   "rel": "explains",
+   "note": {
+    "fa": "نابرابری چگونه اعتماد را می‌خورد",
+    "en": "How inequality eats trust",
+    "nl": "How inequality eats trust"
+   }
+  },
+  {
+   "to": "soc:institutions-inclusive",
+   "rel": "see-also",
+   "note": {
+    "fa": "فساد و نهادها",
+    "en": "Corruption and institutions",
+    "nl": "Corruption and institutions"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:196ab6bdb8",
+  "src:4a310ccbde",
+  "src:95287955fe",
+  "src:d4458872cb"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:social-trust",
+ "wikidata": null,
+ "status": "draft"
+}

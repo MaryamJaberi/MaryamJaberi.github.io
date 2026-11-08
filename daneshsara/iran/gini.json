@@ -1,0 +1,29 @@
+{
+ "id": "iran:gini",
+ "domain": "soc",
+ "question": {
+  "fa": "نابرابری درآمد در ایران چقدر است؟",
+  "en": "How unequal is income in Iran?"
+ },
+ "finding": {
+  "fa": "ضریب جینی در دههٔ اخیر حدود ۳۸ تا ۴۲ (بانک جهانی و مرکز آمار)؛ پس از ۱۳۹۰ کمی کاهش و در سال‌های تورم بالا دوباره افزایش. نابرابری ثروت اندازه‌گیری رسمی ندارد.",
+  "en": "The Gini has been about 38 to 42 in the last decade (World Bank and Statistical Centre); a slight fall after 2011 and renewed rise in high-inflation years. Wealth inequality has no official measurement."
+ },
+ "year": 2022,
+ "method": "household budget surveys",
+ "grade": "B",
+ "contested": false,
+ "source": [
+  {
+   "title": "World Bank (2024). Gini index — Iran, Islamic Rep. World Development Indicators.",
+   "url": "https://data.worldbank.org/indicator/SI.POV.GINI?locations=IR"
+  }
+ ],
+ "fields": [],
+ "concepts": [
+  "soc:gini-inequality"
+ ],
+ "capability": [
+  10
+ ]
+}

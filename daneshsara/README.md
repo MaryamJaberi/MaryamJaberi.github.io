@@ -27,3 +27,6 @@ python3 build/site.py <site dir>
 
 ## خط ساخت خودکار
 `.github/workflows/daneshsara.yml`: با هر push به `daneshsara/`، اعتبارسنجی (schema + ارجاع‌ها + رجیستری) اجرا می‌شود و در صورت خطا شکست می‌خورد؛ سپس خواننده‌های ویکی و نقشهٔ سرزمین‌ها دوباره ساخته و در صورت تغییر کامیت می‌شوند.
+
+## ویکی جامعه (soc)
+- `build/soc_seed.py` (با `build/seedlib.py`) → ۲۹ گره (ریشه، ۶ حوزه، ۲۱ مدخل)، ۵ یادداشت «برای ایران» (اعتماد، جینی، تغییر ارزش‌ها، دین‌داری، شهرنشینی)، ۴۵ منبع. `python3 build/reader.py soc` → `soc/index.html`.

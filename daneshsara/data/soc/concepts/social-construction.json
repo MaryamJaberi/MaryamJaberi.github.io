@@ -1,0 +1,71 @@
+{
+ "id": "soc:social-construction",
+ "kind": "concept",
+ "title": {
+  "fa": "ساخت اجتماعی واقعیت",
+  "en": "The social construction of reality",
+  "nl": "De sociale constructie van de werkelijkheid"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "پول، ازدواج، مرز، «نوجوانی»: چیزهایی که فقط چون همه باور دارند وجود دارند و با این حال کاملاً واقعی‌اند. ساخت اجتماعی یعنی «ساخته‌شده»، نه «خیالی».",
+  "en": "Money, marriage, borders, \"adolescence\": things that exist only because everyone believes in them, and are nonetheless entirely real. Socially constructed means \"made\", not \"imaginary\".",
+  "nl": "Geld, huwelijk, grenzen, \"adolescentie\": dingen die alleen bestaan omdat iedereen erin gelooft, en toch volkomen echt zijn. Sociaal geconstrueerd betekent \"gemaakt\", niet \"ingebeeld\"."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "برگر و لاکمن (۱۹۶۶): واقعیت اجتماعی در سه حرکت ساخته می‌شود: برونی‌سازی (آدم‌ها عادت می‌سازند)، عینیت‌یافتگی (عادت به نهاد تبدیل می‌شود و «همیشه همین‌طور بوده») و درونی‌سازی (نسل بعد آن را طبیعی می‌بیند).",
+    "en": "Berger and Luckmann (1966): social reality is built in three moves: externalisation (people make habits), objectivation (the habit becomes an institution that \"was always so\") and internalisation (the next generation sees it as natural).",
+    "nl": "Berger and Luckmann (1966): social reality is built in three moves: externalisation (people make habits), objectivation (the habit becomes an institution that \"was always so\") and internalisation (the next generation sees it as natural)."
+   },
+   "sources": [
+    "src:f5c4df1661"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هکینگ (۱۹۹۹): گفتن «X ساخت اجتماعی است» وقتی معنادار است که X اجتناب‌ناپذیر فرض شده باشد؛ و بعضی ساخته‌ها «نوع‌های تعاملی»اند: برچسب، رفتار برچسب‌خورده را عوض می‌کند (اثر حلقه‌ای).",
+    "en": "Hacking (1999): saying \"X is socially constructed\" is meaningful when X was assumed inevitable; and some constructs are \"interactive kinds\": the label changes the behaviour of the labelled (the looping effect).",
+    "nl": "Hacking (1999): saying \"X is socially constructed\" is meaningful when X was assumed inevitable; and some constructs are \"interactive kinds\": the label changes the behaviour of the labelled (the looping effect)."
+   },
+   "sources": [
+    "src:2e8dc6a169"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:dx",
+   "rel": "bridges",
+   "note": {
+    "fa": "تشخیص روان‌پزشکی به‌عنوان نوع تعاملی",
+    "en": "Psychiatric diagnosis as an interactive kind",
+    "nl": "Psychiatric diagnosis as an interactive kind"
+   }
+  },
+  {
+   "to": "tabar:race-biology",
+   "rel": "bridges",
+   "note": {
+    "fa": "نژاد: ساخت اجتماعی با پیامد واقعی",
+    "en": "Race: a social construct with real consequences",
+    "nl": "Race: a social construct with real consequences"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:2e8dc6a169",
+  "src:f5c4df1661"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
