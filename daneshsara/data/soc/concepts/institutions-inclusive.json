@@ -1,0 +1,101 @@
+{
+ "id": "soc:institutions-inclusive",
+ "kind": "concept",
+ "title": {
+  "fa": "نهادهای فراگیر و بهره‌کش",
+  "en": "Inclusive and extractive institutions",
+  "nl": "Inclusieve en extractieve instituties"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "چرا ملت‌ها شکست می‌خورند؟ عجم‌اوغلو و رابینسون: نه جغرافیا و نه فرهنگ، بلکه نهادهای سیاسی و اقتصادی. نهاد فراگیر به اکثریت اجازهٔ مشارکت و مالکیت امن می‌دهد؛ نهاد بهره‌کش ثروت را از اکثریت به اقلیت حاکم منتقل می‌کند و نوآوری را، چون قدرت را تهدید می‌کند، سرکوب.",
+  "en": "Why do nations fail? Acemoglu and Robinson: neither geography nor culture, but political and economic institutions. Inclusive institutions let the majority participate and hold property securely; extractive ones move wealth from the majority to a ruling minority and suppress innovation because it threatens power.",
+  "nl": "Waarom falen naties? Acemoglu en Robinson: niet geografie of cultuur, maar politieke en economische instituties. Inclusieve instituties laten de meerderheid deelnemen en veilig bezitten; extractieve verplaatsen rijkdom van de meerderheid naar een heersende minderheid en onderdrukken innovatie omdat ze de macht bedreigt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نورث (۱۹۹۰): نهادها «قواعد بازی»اند، رسمی و غیررسمی، و با کاهش عدم قطعیت هزینهٔ مبادله را پایین می‌آورند؛ وابستگی به مسیر توضیح می‌دهد چرا نهادهای ناکارآمد دوام می‌آورند.",
+    "en": "North (1990): institutions are the \"rules of the game\", formal and informal, lowering transaction costs by reducing uncertainty; path dependence explains why inefficient institutions persist.",
+    "nl": "North (1990): institutions are the \"rules of the game\", formal and informal, lowering transaction costs by reducing uncertainty; path dependence explains why inefficient institutions persist."
+   },
+   "sources": [
+    "src:9064c99339"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "عجم‌اوغلو، جانسون و رابینسون (۲۰۰۱): با مرگ‌ومیر مهاجران اروپایی به‌عنوان متغیر ابزاری نشان دادند مستعمره‌هایی که اروپاییان در آن ساکن شدند نهادهای فراگیر و امروز درآمد بالاتر دارند. مقاله‌ای بنیادین که داده‌های مرگ‌ومیرش را آلبوی (۲۰۱۲) زیر سؤال برد؛ نوبل اقتصاد ۲۰۲۴ به همین پژوهش داده شد.",
+    "en": "Acemoglu, Johnson and Robinson (2001): using European settler mortality as an instrument, showed colonies where Europeans settled got inclusive institutions and higher incomes today. A foundational paper whose mortality data Albouy (2012) questioned; the 2024 Nobel in economics went to this research.",
+    "nl": "Acemoglu, Johnson and Robinson (2001): using European settler mortality as an instrument, showed colonies where Europeans settled got inclusive institutions and higher incomes today. A foundational paper whose mortality data Albouy (2012) questioned; the 2024 Nobel in economics went to this research."
+   },
+   "sources": [
+    "src:d27c5710a2",
+    "src:2079f7c2a8"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نفت نمونهٔ کلاسیک «نفرین منابع» است: درآمدی که بی‌نیاز از مالیات شهروندان است، پاسخ‌گویی را کم و نهادهای بهره‌کش را پایدار می‌کند؛ این الگو برای ایران بسیار بحث شده است.",
+    "en": "Oil is the classic \"resource curse\": revenue that needs no taxation of citizens lowers accountability and stabilises extractive institutions; this pattern has been much debated for Iran.",
+    "nl": "Oil is the classic \"resource curse\": revenue that needs no taxation of citizens lowers accountability and stabilises extractive institutions; this pattern has been much debated for Iran."
+   },
+   "sources": [
+    "src:dc6b74b89e"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:generalized-trust",
+   "rel": "explains",
+   "note": {
+    "fa": "فساد، نهادها و اعتماد",
+    "en": "Corruption, institutions and trust",
+    "nl": "Corruption, institutions and trust"
+   }
+  },
+  {
+   "to": "soc:collective-action",
+   "rel": "see-also",
+   "note": {
+    "fa": "چگونه نهادها تغییر می‌کنند",
+    "en": "How institutions change",
+    "nl": "How institutions change"
+   }
+  },
+  {
+   "to": "psy:human-progress",
+   "rel": "bridges",
+   "note": {
+    "fa": "پیشرفت انسانی در ویکی روان",
+    "en": "Human progress in the psychology wiki",
+    "nl": "Human progress in the psychology wiki"
+   }
+  }
+ ],
+ "people": [
+  "core:daron-acemoglu",
+  "core:douglass-north"
+ ],
+ "sources": [
+  "src:2079f7c2a8",
+  "src:9064c99339",
+  "src:d27c5710a2",
+  "src:dc6b74b89e"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

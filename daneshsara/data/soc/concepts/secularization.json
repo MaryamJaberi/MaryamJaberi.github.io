@@ -1,0 +1,100 @@
+{
+ "id": "soc:secularization",
+ "kind": "concept",
+ "title": {
+  "fa": "سکولار شدن: امنیت وجودی و دین",
+  "en": "Secularization: existential security and religion",
+  "nl": "Secularisering: existentiële zekerheid en religie"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "نظریهٔ کلاسیک می‌گفت مدرنیته دین را کم‌رنگ می‌کند؛ آمریکا و جهان اسلام استثنا به نظر می‌رسیدند. نوریس و اینگلهارت پاسخ دادند: متغیر اصلی «امنیت وجودی» است؛ هرجا زندگی امن و پیش‌بینی‌پذیر شود، دین‌داری افت می‌کند، و چون جمعیت کشورهای دین‌دار سریع‌تر رشد می‌کند، جهان در کل سکولار نمی‌شود.",
+  "en": "The classic theory said modernity fades religion; America and the Muslim world looked like exceptions. Norris and Inglehart replied: the key variable is \"existential security\"; wherever life becomes safe and predictable religiosity falls, and because religious countries' populations grow faster, the world as a whole does not secularise.",
+  "nl": "De klassieke theorie zei dat moderniteit religie doet verbleken; Amerika en de islamitische wereld leken uitzonderingen. Norris en Inglehart antwoordden: de sleutelvariabele is \"existentiële zekerheid\"; waar het leven veilig en voorspelbaar wordt, daalt religiositeit, en omdat de bevolking van religieuze landen sneller groeit, seculariseert de wereld als geheel niet."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نوریس و اینگلهارت (۲۰۱۱): دین‌داری با آسیب‌پذیری (فقر، بیماری، ناامنی) همبستگی قوی دارد؛ در کشورهای ثروتمندِ با دولت رفاه قوی، حضور در عبادتگاه و اهمیت خدا در زندگی پایین‌ترین است. آمریکا با نابرابری و ناامنی بالاترش تا حدی توضیح داده می‌شود.",
+    "en": "Norris and Inglehart (2011): religiosity correlates strongly with vulnerability (poverty, illness, insecurity); in rich countries with strong welfare states, attendance and the importance of God in life are lowest. America is partly explained by its higher inequality and insecurity.",
+    "nl": "Norris and Inglehart (2011): religiosity correlates strongly with vulnerability (poverty, illness, insecurity); in rich countries with strong welfare states, attendance and the importance of God in life are lowest. America is partly explained by its higher inequality and insecurity."
+   },
+   "sources": [
+    "src:782cc6ae73"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دادهٔ ایران: پیمایش ملی ارزش‌ها و نگرش‌ها افت نسلی در مناسک جمعی (نماز جماعت، مسجد) همراه با پایداری باورهای شخصی را نشان می‌دهد؛ پیمایش آنلاین گمان (۲۰۲۰، حدود ۵۰ هزار پاسخ‌گو) سهم بالایی از «بی‌دین» یا «معنوی بدون دین» گزارش کرد، اما نمونه‌اش غیراحتمالی و اینترنتی است و نباید با پیمایش ملی یکی گرفته شود.",
+    "en": "Iranian data: the national Values and Attitudes survey shows a generational fall in collective ritual (congregational prayer, mosque) alongside stable personal belief; the online GAMAAN survey (2020, about 50,000 respondents) reported a high share of \"non-religious\" or \"spiritual but not religious\", but its sample is non-probability and internet-based and must not be equated with a national survey.",
+    "nl": "Iranian data: the national Values and Attitudes survey shows a generational fall in collective ritual (congregational prayer, mosque) alongside stable personal belief; the online GAMAAN survey (2020, about 50,000 respondents) reported a high share of \"non-religious\" or \"spiritual but not religious\", but its sample is non-probability and internet-based and must not be equated with a national survey."
+   },
+   "sources": [
+    "src:95287955fe",
+    "src:6d79b4e77e"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دورکیم: کارکرد دین پیش از هر چیز انسجام جمعی است («جامعه خودش را می‌پرستد»)؛ از این رو با افول مناسک، نهادهای جایگزینِ هم‌بستگی (ورزش، ملی‌گرایی، جنبش‌ها) پر می‌شوند.",
+    "en": "Durkheim: religion's function is first of all collective cohesion (\"society worships itself\"); hence as ritual declines, substitute institutions of solidarity (sport, nationalism, movements) fill the space.",
+    "nl": "Durkheim: religion's function is first of all collective cohesion (\"society worships itself\"); hence as ritual declines, substitute institutions of solidarity (sport, nationalism, movements) fill the space."
+   },
+   "sources": [
+    "src:fcce5dbd78"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:value-change",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از تغییر ارزش‌ها",
+    "en": "Part of value change",
+    "nl": "Part of value change"
+   }
+  },
+  {
+   "to": "psy:meaning-making",
+   "rel": "bridges",
+   "note": {
+    "fa": "معناسازی در ویکی روان",
+    "en": "Meaning-making in the psychology wiki",
+    "nl": "Meaning-making in the psychology wiki"
+   }
+  },
+  {
+   "to": "soc:protestant-ethic",
+   "rel": "see-also",
+   "note": {
+    "fa": "دین و اقتصاد",
+    "en": "Religion and economy",
+    "nl": "Religion and economy"
+   }
+  }
+ ],
+ "people": [
+  "core:ronald-inglehart",
+  "core:emile-durkheim"
+ ],
+ "sources": [
+  "src:6d79b4e77e",
+  "src:782cc6ae73",
+  "src:95287955fe",
+  "src:fcce5dbd78"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:religiosity",
+ "wikidata": null,
+ "status": "draft"
+}

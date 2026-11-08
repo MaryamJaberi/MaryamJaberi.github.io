@@ -1,0 +1,75 @@
+{
+ "id": "soc:generations",
+ "kind": "concept",
+ "title": {
+  "fa": "نسل‌ها: مسئلهٔ مانهایم",
+  "en": "Generations: Mannheim's problem",
+  "nl": "Generaties: het probleem van Mannheim"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "هم‌سن بودن نسل نمی‌سازد؛ تجربهٔ مشترک رویدادهای بزرگ در سال‌های شکل‌گیری (۱۷ تا ۲۵ سالگی) نسل می‌سازد. برچسب‌های «دههٔ شصتی، هشتادی» تا جایی معنا دارند که به چنین تجربهٔ مشترکی اشاره کنند؛ وگرنه سن، دوره و نسل را قاطی می‌کنند.",
+  "en": "Being the same age does not make a generation; the shared experience of great events in the formative years (17 to 25) does. Labels like \"the sixties-born, the eighties-born\" are meaningful insofar as they point to such shared experience; otherwise they confuse age, period and cohort.",
+  "nl": "Even oud zijn maakt geen generatie; de gedeelde ervaring van grote gebeurtenissen in de vormende jaren (17 tot 25) wel. Labels als \"de jaren-zestig-geborenen\" zijn betekenisvol voor zover ze naar zo'n gedeelde ervaring verwijzen; anders verwarren ze leeftijd, periode en cohort."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مانهایم (۱۹۲۸): «موقعیت نسلی» (هم‌زمانی تولد) تنها امکان است؛ «نسل بالفعل» وقتی پدید می‌آید که هم‌سالان در جریان تاریخی مشترکی درگیر شوند، و درون آن «واحدهای نسلی» متفاوت و حتی متخاصم شکل می‌گیرند.",
+    "en": "Mannheim (1928): \"generational location\" (being born together) is only a possibility; an \"actual generation\" arises when age-peers are caught up in a shared historical current, and within it different, even hostile, \"generation units\" form.",
+    "nl": "Mannheim (1928): \"generational location\" (being born together) is only a possibility; an \"actual generation\" arises when age-peers are caught up in a shared historical current, and within it different, even hostile, \"generation units\" form."
+   },
+   "sources": [
+    "src:18b66d31f0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مسئلهٔ روش‌شناختی: هر تفاوت مشاهده‌شده میان جوانان و پیران می‌تواند اثر سن (همه با پیری محافظه‌کارتر می‌شوند)، اثر دوره (همه در یک بحران تغییر می‌کنند) یا اثر نسل باشد؛ جدا کردن این سه با داده‌های مقطعی ناممکن است و نیاز به پیمایش‌های تکرارشونده دارد.",
+    "en": "The methodological problem: any observed difference between young and old may be an age effect (everyone grows more conservative), a period effect (everyone changes in a crisis) or a cohort effect; separating the three is impossible with cross-sectional data and needs repeated surveys.",
+    "nl": "The methodological problem: any observed difference between young and old may be an age effect (everyone grows more conservative), a period effect (everyone changes in a crisis) or a cohort effect; separating the three is impossible with cross-sectional data and needs repeated surveys."
+   },
+   "sources": [
+    "src:8f0d6ab822"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:value-change",
+   "rel": "explains",
+   "note": {
+    "fa": "تغییر ارزش‌ها از راه جایگزینی نسل‌ها",
+    "en": "Value change through generational replacement",
+    "nl": "Value change through generational replacement"
+   }
+  },
+  {
+   "to": "psy:adolescence",
+   "rel": "bridges",
+   "note": {
+    "fa": "نوجوانی و سال‌های شکل‌گیری",
+    "en": "Adolescence and the formative years",
+    "nl": "Adolescence and the formative years"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-mannheim"
+ ],
+ "sources": [
+  "src:18b66d31f0",
+  "src:8f0d6ab822"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

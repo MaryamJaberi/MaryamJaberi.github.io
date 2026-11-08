@@ -1,0 +1,80 @@
+{
+ "id": "soc:urbanism",
+ "kind": "concept",
+ "title": {
+  "fa": "شهرنشینی به‌مثابه شیوهٔ زندگی",
+  "en": "Urbanism as a way of life",
+  "nl": "Urbanisme als levenswijze"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "ورث گفت اندازه، تراکم و ناهمگونی شهر روابط را سطحی، نقش‌ها را تکه‌تکه و کنترل اجتماعی غیررسمی را ضعیف می‌کند. سه‌چهارم ایرانیان اکنون شهرنشین‌اند؛ جابه‌جایی‌ای که در یک نسل رخ داد و بسیاری از تنش‌های ارزشی امروز را توضیح می‌دهد.",
+  "en": "Wirth argued that a city's size, density and heterogeneity make relations superficial, roles fragmented and informal social control weak. Three-quarters of Iranians now live in cities; a shift that happened within one generation and explains many of today's value tensions.",
+  "nl": "Wirth stelde dat omvang, dichtheid en heterogeniteit van de stad relaties oppervlakkig, rollen gefragmenteerd en informele sociale controle zwak maken. Driekwart van de Iraniërs woont nu in steden; een verschuiving binnen één generatie die veel van de huidige waardespanningen verklaart."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ورث (۱۹۳۸): تعریف جامعه‌شناختی شهر: سکونت‌گاه بزرگ، متراکم و دائمیِ افراد ناهمگون؛ پیامدها: روابط ثانویه و ابزاری، تخصصی شدن، تحمل تفاوت، و در عین حال بی‌نامی و آنومی.",
+    "en": "Wirth (1938): the sociological definition of a city: a large, dense, permanent settlement of heterogeneous individuals; consequences: secondary and instrumental relations, specialisation, tolerance of difference, and also anonymity and anomie.",
+    "nl": "Wirth (1938): the sociological definition of a city: a large, dense, permanent settlement of heterogeneous individuals; consequences: secondary and instrumental relations, specialisation, tolerance of difference, and also anonymity and anomie."
+   },
+   "sources": [
+    "src:0fd2854ccd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سرشماری ۱۳۹۵: ۷۴ درصد جمعیت ایران شهرنشین است، در برابر حدود ۳۱ درصد در ۱۳۳۵؛ تهران و حاشیه‌اش بیش از ۱۵ میلیون نفر. نقدِ ورث: روستاییان مهاجر در شهر اغلب «روستای درون شهر» می‌سازند و پیوندهای قوی را حفظ می‌کنند.",
+    "en": "The 2016 census: 74 percent of Iran's population is urban, against about 31 percent in 1956; Tehran and its periphery exceed 15 million. The critique of Wirth: rural migrants in the city often build a \"village in the city\" and keep strong ties.",
+    "nl": "The 2016 census: 74 percent of Iran's population is urban, against about 31 percent in 1956; Tehran and its periphery exceed 15 million. The critique of Wirth: rural migrants in the city often build a \"village in the city\" and keep strong ties."
+   },
+   "sources": [
+    "src:1f3b6b5f19"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:migration-theories",
+   "rel": "see-also",
+   "note": {
+    "fa": "مهاجرت",
+    "en": "Migration",
+    "nl": "Migration"
+   }
+  },
+  {
+   "to": "soc:anomie",
+   "rel": "explains",
+   "note": {
+    "fa": "آنومی شهری",
+    "en": "Urban anomie",
+    "nl": "Urban anomie"
+   }
+  },
+  {
+   "to": "psy:belonging",
+   "rel": "bridges",
+   "note": {
+    "fa": "تعلق در ویکی روان",
+    "en": "Belonging in the psychology wiki",
+    "nl": "Belonging in the psychology wiki"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:0fd2854ccd",
+  "src:1f3b6b5f19"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:urbanization",
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "soc:collective-action",
+ "kind": "concept",
+ "title": {
+  "fa": "مسئلهٔ کنش جمعی و سواری مجانی",
+  "en": "The collective action problem and free-riding",
+  "nl": "Het collectieve-actieprobleem en meeliften"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "اگر همه از نتیجه سود می‌برند چه شرکت کنند چه نکنند، عقلانی است که کسی هزینه ندهد؛ پس کالاهای عمومی کمتر از نیاز تولید می‌شوند و گروه‌های بزرگ سخت‌تر از گروه‌های کوچک بسیج می‌شوند. استروم نشان داد اجتماعات محلی این مسئله را قرن‌ها بدون دولت و بدون بازار حل کرده‌اند.",
+  "en": "If everyone benefits from the outcome whether or not they take part, it is rational for no one to bear the cost; so public goods are under-produced and large groups mobilise with more difficulty than small ones. Ostrom showed local communities have solved this for centuries without state or market.",
+  "nl": "Als iedereen van de uitkomst profiteert, of hij nu meedoet of niet, is het rationeel dat niemand de kosten draagt; dus worden publieke goederen te weinig geproduceerd en mobiliseren grote groepen moeilijker dan kleine. Ostrom toonde dat lokale gemeenschappen dit eeuwenlang hebben opgelost zonder staat of markt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اولسون (۱۹۶۵): گروه‌های کوچک با منافع متمرکز (یک صنف) بر گروه‌های بزرگ با منافع پراکنده (مصرف‌کنندگان) پیروز می‌شوند؛ از همین رو سیاست‌گذاری به سمت لابی‌های کوچک کج می‌شود.",
+    "en": "Olson (1965): small groups with concentrated interests (a trade lobby) beat large groups with diffuse interests (consumers); hence policy tilts toward small lobbies.",
+    "nl": "Olson (1965): small groups with concentrated interests (a trade lobby) beat large groups with diffuse interests (consumers); hence policy tilts toward small lobbies."
+   },
+   "sources": [
+    "src:a659e764c0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "استروم (۱۹۹۰): در ده‌ها نمونهٔ مرتع، آبیاری و شیلات، اجتماعات محلی با هشت اصل طراحی (مرز روشن، قواعد متناسب با محل، مشارکت در قاعده‌گذاری، پایش، مجازات پلکانی، حل اختلاف ارزان، به رسمیت شناخته شدن، لایه‌بندی) منابع مشترک را پایدار نگه داشتند. قنات‌های ایران از نمونه‌های کلاسیک این ادبیات‌اند.",
+    "en": "Ostrom (1990): in dozens of pasture, irrigation and fishery cases, local communities kept commons sustainable with eight design principles (clear boundaries, locally fitted rules, participation in rule-making, monitoring, graduated sanctions, cheap conflict resolution, recognition, nesting). Iran's qanats are classic cases in this literature.",
+    "nl": "Ostrom (1990): in dozens of pasture, irrigation and fishery cases, local communities kept commons sustainable with eight design principles (clear boundaries, locally fitted rules, participation in rule-making, monitoring, graduated sanctions, cheap conflict resolution, recognition, nesting). Iran's qanats are classic cases in this literature."
+   },
+   "sources": [
+    "src:286dec0d93"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:cooperation-competition",
+   "rel": "bridges",
+   "note": {
+    "fa": "همکاری در ویکی روان",
+    "en": "Cooperation in the psychology wiki",
+    "nl": "Cooperation in the psychology wiki"
+   }
+  },
+  {
+   "to": "psy:fairness",
+   "rel": "bridges",
+   "note": {
+    "fa": "انصاف و تنبیه نوع‌دوستانه",
+    "en": "Fairness and altruistic punishment",
+    "nl": "Fairness and altruistic punishment"
+   }
+  },
+  {
+   "to": "soc:social-movements",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "جنبش‌ها به‌عنوان حل مسئلهٔ کنش جمعی",
+    "en": "Movements as solutions to the collective action problem",
+    "nl": "Movements as solutions to the collective action problem"
+   }
+  }
+ ],
+ "people": [
+  "core:mancur-olson",
+  "core:elinor-ostrom"
+ ],
+ "sources": [
+  "src:286dec0d93",
+  "src:a659e764c0"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

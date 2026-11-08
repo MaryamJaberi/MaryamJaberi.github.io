@@ -1,0 +1,81 @@
+{
+ "id": "soc:migration-theories",
+ "kind": "concept",
+ "title": {
+  "fa": "نظریه‌های مهاجرت",
+  "en": "Theories of migration",
+  "nl": "Migratietheorieën"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "چرا مردم مهاجرت می‌کنند و چرا ادامه می‌دهند؟ اقتصاد نئوکلاسیک می‌گوید اختلاف دستمزد؛ «اقتصاد نوین مهاجرت» می‌گوید خانواده برای پراکندن ریسک یک نفر را می‌فرستد؛ نظریهٔ شبکه می‌گوید هر مهاجر هزینهٔ مهاجرت بعدی را کم می‌کند، برای همین مهاجرت خودتداوم‌بخش است.",
+  "en": "Why do people migrate and why does it continue? Neoclassical economics says wage gaps; the \"new economics of migration\" says the household sends one member to spread risk; network theory says each migrant lowers the cost of the next, which is why migration sustains itself.",
+  "nl": "Waarom migreren mensen en waarom gaat het door? De neoklassieke economie zegt loonverschillen; de \"nieuwe migratie-economie\" zegt dat het huishouden één lid stuurt om risico te spreiden; de netwerktheorie zegt dat elke migrant de kosten voor de volgende verlaagt, waardoor migratie zichzelf in stand houdt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مسی و همکاران (۱۹۹۳): نظریه‌ها رقیب نیستند، لایه‌های مختلف یک پدیده‌اند: آغاز مهاجرت را عوامل ساختاری و اقتصادی توضیح می‌دهند، تداومش را شبکه‌ها و نهادها («علیت انباشتی»).",
+    "en": "Massey et al. (1993): the theories are not rivals but layers of one phenomenon: structural and economic factors explain the start of migration, networks and institutions its continuation (\"cumulative causation\").",
+    "nl": "Massey et al. (1993): the theories are not rivals but layers of one phenomenon: structural and economic factors explain the start of migration, networks and institutions its continuation (\"cumulative causation\")."
+   },
+   "sources": [
+    "src:7712b264c9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برای ایران، مهاجرت تحصیل‌کردگان («فرار مغزها») و مهاجرت از افغانستان به ایران دو جریان بزرگ‌اند که هر دو با نظریهٔ شبکه بهتر از اختلاف دستمزد توضیح داده می‌شوند؛ آمار دقیق مهاجرت خروجی ایران رسماً منتشر نمی‌شود و برآوردها پراکنده‌اند.",
+    "en": "For Iran, the emigration of the educated (\"brain drain\") and migration from Afghanistan into Iran are the two large flows, both better explained by network theory than by wage gaps; precise statistics on emigration from Iran are not officially published and estimates vary widely.",
+    "nl": "For Iran, the emigration of the educated (\"brain drain\") and migration from Afghanistan into Iran are the two large flows, both better explained by network theory than by wage gaps; precise statistics on emigration from Iran are not officially published and estimates vary widely."
+   },
+   "sources": [
+    "src:7712b264c9"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:weak-ties",
+   "rel": "explains",
+   "note": {
+    "fa": "شبکه‌ها در مهاجرت",
+    "en": "Networks in migration",
+    "nl": "Networks in migration"
+   }
+  },
+  {
+   "to": "tabar:ancient-dna",
+   "rel": "bridges",
+   "note": {
+    "fa": "مهاجرت در مقیاس هزاره‌ها",
+    "en": "Migration on the scale of millennia",
+    "nl": "Migration on the scale of millennia"
+   }
+  },
+  {
+   "to": "soc:urbanism",
+   "rel": "see-also",
+   "note": {
+    "fa": "شهر مقصد",
+    "en": "The destination city",
+    "nl": "The destination city"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:7712b264c9"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

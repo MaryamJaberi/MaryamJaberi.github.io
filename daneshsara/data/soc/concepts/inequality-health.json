@@ -1,0 +1,85 @@
+{
+ "id": "soc:inequality-health",
+ "kind": "concept",
+ "title": {
+  "fa": "نابرابری و سلامت جامعه",
+  "en": "Inequality and the health of society",
+  "nl": "Ongelijkheid en de gezondheid van de samenleving"
+ },
+ "aliases": [],
+ "parent": "soc:inequality",
+ "field": "soc:inequality",
+ "summary": {
+  "fa": "ویلکینسون و پیکت ادعا کردند در کشورهای ثروتمند، نه ثروت که نابرابری است که با امید به زندگی، اعتماد، جرم، سلامت روان و چاقی همبسته است. تز پرنفوذی که داده‌هایش را منتقدان جدی به چالش کشیده‌اند؛ همبستگی هست، علیت و اندازه محل بحث است.",
+  "en": "Wilkinson and Pickett claimed that among rich countries it is inequality, not wealth, that correlates with life expectancy, trust, crime, mental health and obesity. An influential thesis whose data serious critics have challenged; the correlation exists, causation and magnitude are debated.",
+  "nl": "Wilkinson en Pickett stelden dat onder rijke landen niet rijkdom maar ongelijkheid samenhangt met levensverwachting, vertrouwen, criminaliteit, mentale gezondheid en obesitas. Een invloedrijke these waarvan serieuze critici de data hebben aangevochten; de correlatie bestaat, causaliteit en omvang zijn omstreden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "«تراز روح» (۲۰۰۹): در ۲۳ کشور ثروتمند و ۵۰ ایالت آمریکا، شاخص ترکیبی مشکلات اجتماعی با نابرابری همبستگی قوی و با درآمد سرانه همبستگی ناچیز دارد؛ سازوکار پیشنهادی: استرس مقایسه و منزلت.",
+    "en": "\"The Spirit Level\" (2009): across 23 rich countries and 50 US states, a composite index of social problems correlates strongly with inequality and barely with income per head; the proposed mechanism is status and comparison stress.",
+    "nl": "\"The Spirit Level\" (2009): across 23 rich countries and 50 US states, a composite index of social problems correlates strongly with inequality and barely with income per head; the proposed mechanism is status and comparison stress."
+   },
+   "sources": [
+    "src:cbebbd48aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد (ساندرز ۲۰۱۰ و دیگران): انتخاب کشورها و شاخص‌ها نتیجه را عوض می‌کند، چند همبستگی با حذف یکی دو کشور پرت از بین می‌رود، و فرهنگ و تاریخ به‌عنوان متغیر سوم کنترل نشده‌اند. فراتحلیل‌های بعدی اثر نابرابری بر سلامت را «کوچک ولی واقعی» برآورد کرده‌اند.",
+    "en": "Critique (Saunders 2010 and others): the choice of countries and indices changes the result, several correlations vanish when one or two outliers are dropped, and culture and history are uncontrolled third variables. Later meta-analyses estimate the effect of inequality on health as \"small but real\".",
+    "nl": "Critique (Saunders 2010 and others): the choice of countries and indices changes the result, several correlations vanish when one or two outliers are dropped, and culture and history are uncontrolled third variables. Later meta-analyses estimate the effect of inequality on health as \"small but real\"."
+   },
+   "sources": [
+    "src:9ff749e8d1"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:generalized-trust",
+   "rel": "explains",
+   "note": {
+    "fa": "نابرابری و اعتماد",
+    "en": "Inequality and trust",
+    "nl": "Inequality and trust"
+   }
+  },
+  {
+   "to": "psy:n-stress",
+   "rel": "bridges",
+   "note": {
+    "fa": "استرس منزلت در بدن",
+    "en": "Status stress in the body",
+    "nl": "Status stress in the body"
+   }
+  },
+  {
+   "to": "soc:gini-inequality",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "اندازه‌گیری نابرابری",
+    "en": "Measuring inequality",
+    "nl": "Measuring inequality"
+   }
+  }
+ ],
+ "people": [
+  "core:richard-wilkinson"
+ ],
+ "sources": [
+  "src:9ff749e8d1",
+  "src:cbebbd48aa"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

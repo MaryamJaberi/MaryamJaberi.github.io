@@ -1,0 +1,74 @@
+{
+ "id": "soc:anomie",
+ "kind": "concept",
+ "title": {
+  "fa": "آنومی (بی‌هنجاری)",
+  "en": "Anomie",
+  "nl": "Anomie"
+ },
+ "aliases": [],
+ "parent": "soc:cohesion",
+ "field": "soc:cohesion",
+ "summary": {
+  "fa": "وقتی قواعد مشترک سست می‌شوند یا میان هدف‌های تبلیغ‌شده و راه‌های مجاز رسیدن به آن‌ها شکاف می‌افتد؛ دورکیم آن را با خودکشی، مرتون با کج‌روی پیوند زد.",
+  "en": "When shared rules loosen, or a gap opens between advertised goals and the legitimate means of reaching them; Durkheim tied it to suicide, Merton to deviance.",
+  "nl": "Wanneer gedeelde regels verslappen, of een kloof ontstaat tussen de aangeprezen doelen en de legitieme middelen om ze te bereiken; Durkheim verbond het met zelfdoding, Merton met deviantie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دورکیم (۱۸۹۷): نرخ خودکشی واقعیتی اجتماعی است، نه جمع تصمیم‌های فردی؛ در دوره‌های تغییر تند اقتصادی (هم رونق، هم رکود) بالا می‌رود چون معیارهای «کافی» گم می‌شوند.",
+    "en": "Durkheim (1897): the suicide rate is a social fact, not the sum of individual decisions; it rises in periods of rapid economic change (boom as much as bust) because the standards of \"enough\" are lost.",
+    "nl": "Durkheim (1897): the suicide rate is a social fact, not the sum of individual decisions; it rises in periods of rapid economic change (boom as much as bust) because the standards of \"enough\" are lost."
+   },
+   "sources": [
+    "src:4f2939bd32"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مرتون (۱۹۳۸): وقتی فرهنگ همه را به هدف واحدی (ثروت) می‌خواند ولی ساختار راه مشروع را برای همه باز نمی‌گذارد، پنج پاسخ پدید می‌آید: همنوایی، نوآوری (کج‌روی)، مناسک‌گرایی، انزوا، شورش.",
+    "en": "Merton (1938): when culture calls everyone to the same goal (wealth) but structure keeps legitimate paths closed to many, five adaptations appear: conformity, innovation (deviance), ritualism, retreatism, rebellion.",
+    "nl": "Merton (1938): when culture calls everyone to the same goal (wealth) but structure keeps legitimate paths closed to many, five adaptations appear: conformity, innovation (deviance), ritualism, retreatism, rebellion."
+   },
+   "sources": [
+    "src:b67c05b1c8"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anomie",
+   "rel": "same-as",
+   "note": {
+    "fa": "همین مفهوم در ویکی روان، با تأکید روانی",
+    "en": "The same concept in the psychology wiki, with the psychological emphasis",
+    "nl": "The same concept in the psychology wiki, with the psychological emphasis"
+   }
+  },
+  {
+   "to": "soc:inequality-health",
+   "rel": "see-also",
+   "note": {
+    "fa": "نابرابری و سلامت",
+    "en": "Inequality and health",
+    "nl": "Inequality and health"
+   }
+  }
+ ],
+ "people": [
+  "core:emile-durkheim",
+  "core:robert-k-merton"
+ ],
+ "sources": [
+  "src:4f2939bd32",
+  "src:b67c05b1c8"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

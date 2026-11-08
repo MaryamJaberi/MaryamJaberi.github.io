@@ -1,0 +1,74 @@
+{
+ "id": "soc:weak-ties",
+ "kind": "concept",
+ "title": {
+  "fa": "قدرت پیوندهای ضعیف",
+  "en": "The strength of weak ties",
+  "nl": "De kracht van zwakke banden"
+ },
+ "aliases": [],
+ "parent": "soc:cohesion",
+ "field": "soc:cohesion",
+ "summary": {
+  "fa": "شغل‌ها، ایده‌ها و اخبار تازه بیشتر از آشنایان دور می‌رسند تا دوستان نزدیک، چون دوستان نزدیک همان چیزهایی را می‌دانند که ما می‌دانیم. پیوند ضعیف پلِ میان خوشه‌هاست.",
+  "en": "Jobs, ideas and news arrive more often through acquaintances than close friends, because close friends know what we know. The weak tie is the bridge between clusters.",
+  "nl": "Banen, ideeën en nieuws komen vaker via kennissen dan via goede vrienden, omdat goede vrienden weten wat wij weten. De zwakke band is de brug tussen clusters."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گرانووتر (۱۹۷۳): از کسانی که از راه آشنا شغل پیدا کرده بودند، بیشترشان آن آشنا را «گاه‌به‌گاه» یا «به‌ندرت» می‌دیدند، نه «اغلب».",
+    "en": "Granovetter (1973): of those who found a job through a contact, most saw that contact \"occasionally\" or \"rarely\", not \"often\".",
+    "nl": "Granovetter (1973): of those who found a job through a contact, most saw that contact \"occasionally\" or \"rarely\", not \"often\"."
+   },
+   "sources": [
+    "src:91ed9b7316"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سنتولا (۲۰۱۰): اما رفتارهای پرهزینه (ترک سیگار، پیوستن به جنبش) برعکس از راه پیوندهای قوی و پرتکرار پخش می‌شوند: «سرایت پیچیده» به تأیید چند منبع نیاز دارد.",
+    "en": "Centola (2010): but costly behaviours (quitting smoking, joining a movement) spread instead through strong, redundant ties: \"complex contagion\" needs confirmation from several sources.",
+    "nl": "Centola (2010): but costly behaviours (quitting smoking, joining a movement) spread instead through strong, redundant ties: \"complex contagion\" needs confirmation from several sources."
+   },
+   "sources": [
+    "src:9021d6ca27"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:complex-contagion",
+   "rel": "same-as",
+   "note": {
+    "fa": "سرایت پیچیده در ویکی روان",
+    "en": "Complex contagion in the psychology wiki",
+    "nl": "Complex contagion in the psychology wiki"
+   }
+  },
+  {
+   "to": "soc:social-capital",
+   "rel": "part-of",
+   "note": {
+    "fa": "سازوکار سرمایهٔ پل‌زننده",
+    "en": "The mechanism of bridging capital",
+    "nl": "The mechanism of bridging capital"
+   }
+  }
+ ],
+ "people": [
+  "core:mark-granovetter",
+  "core:damon-centola"
+ ],
+ "sources": [
+  "src:9021d6ca27",
+  "src:91ed9b7316"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

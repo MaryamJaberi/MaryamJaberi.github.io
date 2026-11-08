@@ -1,0 +1,75 @@
+{
+ "id": "soc:gini-inequality",
+ "kind": "concept",
+ "title": {
+  "fa": "اندازه‌گیری نابرابری: ضریب جینی و فراتر از آن",
+  "en": "Measuring inequality: the Gini and beyond",
+  "nl": "Ongelijkheid meten: de Gini en verder"
+ },
+ "aliases": [],
+ "parent": "soc:inequality",
+ "field": "soc:inequality",
+ "summary": {
+  "fa": "جینی صفر یعنی همه برابر، یک یعنی همه‌چیز دست یک نفر. ایران در دههٔ اخیر حدود ۰٫۴۰ است: بالاتر از اروپا، نزدیک ترکیه و آمریکا، پایین‌تر از آمریکای لاتین. ولی جینی سهم «یک درصد بالا» و ثروت (نه درآمد) را پنهان می‌کند.",
+  "en": "A Gini of zero means everyone equal, one means everything in one hand. Iran in the last decade is about 0.40: higher than Europe, near Turkey and the US, lower than Latin America. But the Gini hides the \"top one percent\" share and wealth (as opposed to income).",
+  "nl": "Een Gini van nul betekent iedereen gelijk, één betekent alles in één hand. Iran zit het laatste decennium rond 0,40: hoger dan Europa, dicht bij Turkije en de VS, lager dan Latijns-Amerika. Maar de Gini verbergt het aandeel van de \"top één procent\" en vermogen (tegenover inkomen)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بانک جهانی: جینی درآمدی ایران در سال‌های اخیر در بازهٔ ۳۸ تا ۴۲ گزارش شده؛ مرکز آمار ایران ارقام مشابهی می‌دهد و در سال‌های تورم بالا افزایش دیده می‌شود.",
+    "en": "World Bank: Iran's income Gini in recent years is reported in the 38 to 42 range; the Statistical Centre of Iran gives similar figures, rising in high-inflation years.",
+    "nl": "World Bank: Iran's income Gini in recent years is reported in the 38 to 42 range; the Statistical Centre of Iran gives similar figures, rising in high-inflation years."
+   },
+   "sources": [
+    "src:8a3dd521dc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیکتی (۲۰۱۴): وقتی بازده سرمایه از رشد اقتصاد بیشتر باشد (r > g)، ثروت موروثی نسبت به درآمد کار بزرگ می‌شود؛ نابرابری ثروت همه‌جا بسیار بیشتر از نابرابری درآمد است.",
+    "en": "Piketty (2014): when the return on capital exceeds economic growth (r > g), inherited wealth grows relative to earned income; wealth inequality is everywhere far larger than income inequality.",
+    "nl": "Piketty (2014): when the return on capital exceeds economic growth (r > g), inherited wealth grows relative to earned income; wealth inequality is everywhere far larger than income inequality."
+   },
+   "sources": [
+    "src:6c0c807f94"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:mobility",
+   "rel": "see-also",
+   "note": {
+    "fa": "نابرابری فرصت در برابر نابرابری نتیجه",
+    "en": "Inequality of opportunity versus of outcome",
+    "nl": "Inequality of opportunity versus of outcome"
+   }
+  },
+  {
+   "to": "soc:inequality-health",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیامدهای نابرابری",
+    "en": "The consequences of inequality",
+    "nl": "The consequences of inequality"
+   }
+  }
+ ],
+ "people": [
+  "core:thomas-piketty"
+ ],
+ "sources": [
+  "src:6c0c807f94",
+  "src:8a3dd521dc"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": "iran:gini",
+ "wikidata": null,
+ "status": "draft"
+}

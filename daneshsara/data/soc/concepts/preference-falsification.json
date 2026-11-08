@@ -1,0 +1,83 @@
+{
+ "id": "soc:preference-falsification",
+ "kind": "concept",
+ "title": {
+  "fa": "تحریف ترجیحات و غافلگیری انقلاب‌ها",
+  "en": "Preference falsification and the surprise of revolutions",
+  "nl": "Voorkeursvervalsing en de verrassing van revoluties"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "وقتی ابراز مخالفت هزینه دارد، مردم در جمع چیزی می‌گویند که باور ندارند؛ پس هیچ‌کس نمی‌داند چند نفر مثل او فکر می‌کنند، حتی حکومت. یک جرقهٔ کوچک می‌تواند آستانه‌های پنهان را پشت سر هم بیندازد و رژیمی که دیروز پایدار می‌نمود امروز فرو بریزد. برای همین انقلاب‌ها، از جمله ۱۳۵۷، همیشه «تصورناپذیر» بوده‌اند.",
+  "en": "When expressing dissent is costly, people say in public what they do not believe; so no one knows how many think like them, not even the regime. A small spark can trip hidden thresholds in a cascade, and a regime that looked stable yesterday collapses today. That is why revolutions, including 1979, were always \"unthinkable\".",
+  "nl": "Wanneer afwijkende meningen uiten kostbaar is, zeggen mensen in het openbaar wat ze niet geloven; dus weet niemand hoeveel anderen zo denken, zelfs het regime niet. Een kleine vonk kan verborgen drempels in een cascade doen omslaan, en een regime dat gisteren stabiel leek, stort vandaag in. Daarom waren revoluties, ook die van 1979, altijd \"ondenkbaar\"."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کوران (۱۹۹۱): هر فرد آستانه‌ای دارد («وقتی این‌قدر نفر بیرون باشند، من هم می‌آیم»)؛ توزیع این آستانه‌ها پنهان است، پس هم ثبات ظاهری و هم فروپاشی ناگهانی هر دو قابل توضیح‌اند و پیش‌بینی ساختاری ناممکن است.",
+    "en": "Kuran (1991): each person has a threshold (\"when this many are out, I join\"); the distribution of thresholds is hidden, so both apparent stability and sudden collapse are explicable and structural prediction is impossible.",
+    "nl": "Kuran (1991): each person has a threshold (\"when this many are out, I join\"); the distribution of thresholds is hidden, so both apparent stability and sudden collapse are explicable and structural prediction is impossible."
+   },
+   "sources": [
+    "src:8d71ed0d5f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کرزمن (۲۰۰۴): انقلاب ایران را نه ساختارها (اقتصاد، دولت، دین) که «تجربهٔ زیستهٔ» مردم توضیح می‌دهد: تا پاییز ۱۳۵۷ اکثریت انقلاب را ممکن نمی‌دانستند و درست وقتی ممکن شد که مردم دیدند دیگران هم به خیابان آمده‌اند. ناجنبش‌های بیات و آبشار کوران در همین‌جا به هم می‌رسند.",
+    "en": "Kurzman (2004): the Iranian revolution is explained less by structures (economy, state, religion) than by people's \"lived experience\": until autumn 1978 most thought revolution impossible, and it became possible exactly when people saw others in the street. Bayat's nonmovements and Kuran's cascade meet here.",
+    "nl": "Kurzman (2004): the Iranian revolution is explained less by structures (economy, state, religion) than by people's \"lived experience\": until autumn 1978 most thought revolution impossible, and it became possible exactly when people saw others in the street. Bayat's nonmovements and Kuran's cascade meet here."
+   },
+   "sources": [
+    "src:435917f7dd"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:social-movements",
+   "rel": "explains",
+   "note": {
+    "fa": "پویایی بسیج",
+    "en": "The dynamics of mobilisation",
+    "nl": "The dynamics of mobilisation"
+   }
+  },
+  {
+   "to": "psy:norm-psychology",
+   "rel": "bridges",
+   "note": {
+    "fa": "روان‌شناسی هنجار و ناآگاهی جمعی",
+    "en": "Norm psychology and pluralistic ignorance",
+    "nl": "Norm psychology and pluralistic ignorance"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور و اطلاعات در جامعهٔ بسته",
+    "en": "Belief and information in a closed society",
+    "nl": "Belief and information in a closed society"
+   }
+  }
+ ],
+ "people": [
+  "core:timur-kuran",
+  "core:charles-kurzman"
+ ],
+ "sources": [
+  "src:435917f7dd",
+  "src:8d71ed0d5f"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
