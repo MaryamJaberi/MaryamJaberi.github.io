@@ -1,0 +1,125 @@
+{
+ "id": "psy:empathy-fatigue",
+ "kind": "concept",
+ "title": {
+  "fa": "خستگی همدلی و انفصال همدلانه",
+  "en": "Empathy fatigue · Compassionate detachment",
+  "nl": "Empathievermoeidheid · compassievolle afstand"
+ },
+ "parent": "psy:t-compassion",
+ "field": "psy:t-compassion",
+ "summary": {
+  "fa": "قرارگرفتن مداوم در معرض رنج دیگران (پریشانی همدلانه) فرسوده می‌کند. نف و گرمر: مراقبان دچار «خستگی همدلی» می‌شوند، نه خستگی شفقت.",
+  "en": "Constant exposure to others' suffering (empathic distress) wears us out. Neff and Germer: carers suffer from “empathy fatigue”, not compassion fatigue.",
+  "nl": "Voortdurend blootgesteld zijn aan het lijden van anderen (empathische distress) put uit. Neff en Germer: zorgverleners krijgen ‘empathievermoeidheid’, geen compassievermoeidheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "همدلی یعنی هم‌احساس‌شدن با درد دیگری؛ شفقت یعنی درد را حس کنی و همزمان مهربانی و میل به کمک داشته باشی.",
+    "en": "Empathy means feeling with another's pain; compassion means feeling the pain while also having kindness and the wish to help.",
+    "nl": "Empathie betekent meevoelen met andermans pijn; compassie betekent de pijn voelen en tegelijk vriendelijkheid en de wens om te helpen hebben."
+   },
+   "sources": [
+    "src:35be63408f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شفقت انرژی‌بخش است و از غرق‌شدن در درد دیگری محافظت می‌کند.",
+    "en": "Compassion is energising and protects against drowning in another's pain.",
+    "nl": "Compassie geeft energie en beschermt tegen verdrinken in andermans pijn."
+   },
+   "sources": [
+    "src:35be63408f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پاسخ مدرس در پرسش و پاسخ: «انفصال همدلانه»؛ همدلی از دور، نه غرق‌شدن و نه بی‌همدلی.",
+    "en": "The lecturer's answer in the Q&A: “compassionate detachment”; empathy from a distance, neither drowning nor lacking empathy.",
+    "nl": "Het antwoord van de docent bij de vragen: ‘compassievolle afstand’; empathie op afstand, niet verdrinken en ook niet zonder empathie."
+   },
+   "sources": [
+    "src:35be63408f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاربرد: مدیری که روزانه ونتینگ کارکنان را می‌شنود، استادی که رنج دستیاران را می‌بیند.",
+    "en": "Application: a manager who hears staff venting every day, a professor who sees assistants' suffering.",
+    "nl": "Toepassing: een leidinggevende die dagelijks medewerkers hoort klagen, een hoogleraar die het lijden van assistenten ziet."
+   },
+   "sources": [
+    "src:35be63408f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آموزش شفقت (نه همدلی صرف) هیجان مثبت و شبکه‌های پیوند را فعال می‌کند (کلیمکی و سینگر ۲۰۱۴).",
+    "en": "Compassion training (not mere empathy) activates positive emotion and affiliation networks (Klimecki and Singer 2014).",
+    "nl": "Compassietraining (niet alleen empathie) activeert positieve emotie en verbindingsnetwerken (Klimecki en Singer 2014)."
+   },
+   "sources": [
+    "src:35be63408f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بلوم: همدلی مانند نورافکن تنگ است و سوگیری دارد؛ شفقت عقلانی جایگزین بهتری است.",
+    "en": "Bloom: empathy is like a narrow spotlight and biased; rational compassion is a better alternative.",
+    "nl": "Bloom: empathie is als een smalle spot en vooringenomen; rationele compassie is een beter alternatief."
+   },
+   "sources": [
+    "src:35be63408f"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:venting",
+   "rel": "see-also",
+   "note": {
+    "fa": "شنیدن مداوم شکایت",
+    "en": "Constantly hearing complaints",
+    "nl": "Steeds klachten aanhoren"
+   }
+  },
+  {
+   "to": "psy:burnout",
+   "rel": "see-also",
+   "note": {
+    "fa": "مسیر به فرسودگی",
+    "en": "Path to burnout",
+    "nl": "Weg naar burn-out"
+   }
+  }
+ ],
+ "people": [
+  "core:kristin-neff",
+  "core:christopher-germer",
+  "core:tania-singer",
+  "core:olga-klimecki",
+  "core:paul-bloom"
+ ],
+ "sources": [
+  "src:35be63408f",
+  "src:c4158294c7"
+ ],
+ "booklets": [
+  "qa",
+  "s3:collapse",
+  "compassion:burnout",
+  "shelf7:empathy"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

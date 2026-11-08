@@ -1,0 +1,105 @@
+{
+ "id": "psy:beach-ball",
+ "kind": "concept",
+ "title": {
+  "fa": "سرکوب و اثر توپ ساحلی",
+  "en": "Suppression · Beach ball effect",
+  "nl": "Onderdrukking · strandbaleffect"
+ },
+ "parent": "psy:emotion-regulation",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "هیجان یا فکری که سرکوب شود مثل توپ بادی زیر آب است: یا پایین نمی‌رود یا با شتاب بیرون می‌پرد.",
+  "en": "A suppressed emotion or thought is like a beach ball held under water: it either won't go down or shoots back up with force.",
+  "nl": "Een onderdrukte emotie of gedachte is als een strandbal onder water: hij gaat niet naar beneden of schiet met kracht omhoog."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پایهٔ پژوهشی: آزمایش «خرس سفید» وگنر و همکاران (۱۹۸۷)؛ کسانی که سعی کردند به خرس سفید فکر نکنند، بعداً بیشتر به آن فکر کردند (فرایندهای کنایی).",
+    "en": "Research basis: the “white bear” experiment by Wegner and colleagues (1987); people who tried not to think of a white bear later thought of it more (ironic processes).",
+    "nl": "Onderzoeksbasis: het ‘witte beer’-experiment van Wegner en collega's (1987); wie probeerde niet aan een witte beer te denken, dacht er later juist meer aan (ironische processen)."
+   },
+   "sources": [
+    "src:5a04fdc6a6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نف و گرمر (فصل ۹ کتاب فرسودگی): «آنچه در برابرش مقاومت می‌کنیم می‌ماند و قوی‌تر می‌شود.»",
+    "en": "Neff and Germer (chapter 9 of the burnout book): “What we resist persists and grows stronger.”",
+    "nl": "Neff en Germer (hoofdstuk 9 van het burn-outboek): ‘Waar we ons tegen verzetten, blijft en wordt sterker.’"
+   },
+   "sources": [
+    "src:5a04fdc6a6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در سازمان: سیاست «اینجا کسی حق غرزدن ندارد» به ترک آرام، فرسودگی و ریزش نیرو می‌انجامد.",
+    "en": "In organisations: a policy of “nobody gets to complain here” leads to quiet quitting, burnout and staff turnover.",
+    "nl": "In organisaties: een beleid van ‘hier mag niemand klagen’ leidt tot stil stoppen, burn-out en personeelsverloop."
+   },
+   "sources": [
+    "src:5a04fdc6a6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اسلاید ۳۴: توپی که روی آن نوشته‌اند خشم، غم، گناه.",
+    "en": "Slide 34: a ball labelled anger, sadness, guilt.",
+    "nl": "Slide 34: een bal met de woorden woede, verdriet, schuld."
+   },
+   "sources": [
+    "src:5a04fdc6a6"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:venting",
+   "rel": "see-also",
+   "note": {
+    "fa": "دوگانهٔ بیان/سرکوب",
+    "en": "Expression/suppression dichotomy",
+    "nl": "Tweedeling uiten/onderdrukken"
+   }
+  },
+  {
+   "to": "psy:emotional-labor",
+   "rel": "see-also",
+   "note": {
+    "fa": "هزینهٔ مهار",
+    "en": "Cost of holding back",
+    "nl": "Kosten van inhouden"
+   }
+  },
+  {
+   "to": "psy:burnout",
+   "rel": "see-also",
+   "note": {
+    "fa": "سرکوب فرسودگی را بدتر می‌کند",
+    "en": "Suppression worsens burnout",
+    "nl": "Onderdrukken verergert burn-out"
+   }
+  }
+ ],
+ "people": [
+  "core:daniel-wegner"
+ ],
+ "sources": [
+  "src:5a04fdc6a6",
+  "src:bcb83be61c"
+ ],
+ "booklets": [
+  "t-beach-ball"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

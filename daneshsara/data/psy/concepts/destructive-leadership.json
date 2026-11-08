@@ -1,0 +1,79 @@
+{
+ "id": "psy:destructive-leadership",
+ "kind": "concept",
+ "title": {
+  "fa": "رهبری مخرب",
+  "en": "Destructive leadership",
+  "nl": "Destructief leiderschap"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "رفتارهای نظام‌مند و تکرارشوندهٔ مدیر که به منافع سازمان یا بهزیستی کارکنان آسیب می‌زند؛ از بدرفتاری و تحقیر تا بی‌توجهی.",
+  "en": "Systematic, repeated behaviour by a manager that harms the organisation's interests or employees' well-being; from abuse and humiliation to neglect.",
+  "nl": "Systematisch, herhaald gedrag van een leidinggevende dat de belangen van de organisatie of het welzijn van werknemers schaadt; van mishandeling en vernedering tot verwaarlozing."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اینارسن و همکاران (۲۰۰۷) رهبری مخرب را در دو بُعد ضدکارکنان و ضدسازمان طبقه‌بندی کردند.",
+    "en": "Einarsen and colleagues (2007) classified destructive leadership along two dimensions: anti-subordinate and anti-organisation.",
+    "nl": "Einarsen en collega's (2007) deelden destructief leiderschap in langs twee dimensies: tegen medewerkers en tegen de organisatie."
+   },
+   "sources": [
+    "src:c5f9fd5fc1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«نظارت توهین‌آمیز» (تپر ۲۰۰۰) یکی از پرمطالعه‌ترین شکل‌هاست.",
+    "en": "“Abusive supervision” (Tepper 2000) is one of the most studied forms.",
+    "nl": "‘Abusive supervision’ (Tepper 2000) is een van de meest onderzochte vormen."
+   },
+   "sources": [
+    "src:c5f9fd5fc1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کتاب مرجع دوره فنی و پرآمار است و در جلسه‌های بعد پوشش داده می‌شود.",
+    "en": "The course's reference book is technical and data-heavy and is covered in later sessions.",
+    "nl": "Het naslagwerk van de cursus is technisch en vol cijfers en komt in latere sessies aan bod."
+   },
+   "sources": [
+    "src:c5f9fd5fc1"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:scapegoating",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرهنگ سرزنش",
+    "en": "Blame culture",
+    "nl": "Schuldcultuur"
+   }
+  }
+ ],
+ "people": [
+  "core:birgit-schyns",
+  "core:pedro-neves",
+  "core:kimberley-breevaart",
+  "core:bennett-tepper"
+ ],
+ "sources": [
+  "src:c5f9fd5fc1",
+  "src:bdf0e8d136"
+ ],
+ "booklets": [
+  "exit"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

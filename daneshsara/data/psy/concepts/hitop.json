@@ -1,0 +1,111 @@
+{
+ "id": "psy:hitop",
+ "kind": "concept",
+ "title": {
+  "fa": "HiTOP",
+  "en": "Hierarchical Taxonomy of Psychopathology",
+  "nl": "Hiërarchische taxonomie van psychopathologie (HiTOP)"
+ },
+ "parent": "psy:dx",
+ "field": "psy:dx",
+ "summary": {
+  "fa": "رده‌بندی سلسله‌مراتبی و بُعدی آسیب‌شناسی روانی که از هم‌وقوعی واقعی علائم استخراج شده است (کوتوف و ۳۹ همکار، ۲۰۱۷).",
+  "en": "A hierarchical, dimensional classification of psychopathology derived from how symptoms actually co-occur (Kotov and 39 colleagues, 2017).",
+  "nl": "Een hiërarchische, dimensionale indeling van psychopathologie, afgeleid uit hoe symptomen werkelijk samen voorkomen (Kotov en 39 collega's, 2017)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "لایه‌ها: عامل کلی p ← طیف‌ها ← زیرعامل‌ها ← سندرم‌ها ← اجزا و علائم.",
+    "en": "Layers: the general p factor → spectra → subfactors → syndromes → components and symptoms.",
+    "nl": "Lagen: de algemene p-factor → spectra → subfactoren → syndromen → componenten en symptomen."
+   },
+   "sources": [
+    "src:edcb5e7533"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شش طیف: درون‌سازی، برون‌سازی بی‌مهار، برون‌سازی ستیزه‌جو، اختلال فکر، انفصال، جسمانی‌سازی.",
+    "en": "Six spectra: internalising, disinhibited externalising, antagonistic externalising, thought disorder, detachment, somatoform.",
+    "nl": "Zes spectra: internaliseren, ongeremd externaliseren, antagonistisch externaliseren, denkstoornis, onthechting, somatoform."
+   },
+   "sources": [
+    "src:edcb5e7533"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "زیرعامل‌های درون‌سازی: دیسترس، ترس، خوردن، مشکلات جنسی، مانیا (مشترک با اختلال فکر).",
+    "en": "Internalising subfactors: distress, fear, eating, sexual problems, mania (shared with thought disorder).",
+    "nl": "Subfactoren van internaliseren: distress, angst, eten, seksuele problemen, manie (gedeeld met denkstoornis)."
+   },
+   "sources": [
+    "src:edcb5e7533"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرضیهٔ سلسله‌مراتب علّی: عوامل خطر بیشتر روی سطوح بالا اثر می‌گذارند تا تک‌تک تشخیص‌ها.",
+    "en": "The causal hierarchy hypothesis: risk factors act more on higher levels than on individual diagnoses.",
+    "nl": "De causale-hiërarchiehypothese: risicofactoren werken meer in op hogere niveaus dan op afzonderlijke diagnoses."
+   },
+   "sources": [
+    "src:edcb5e7533"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تفاوت با RDoC: HiTOP توصیفی و بالینی، RDoC سازوکاری و پژوهشی (از مدارهای مغزی شروع می‌کند).",
+    "en": "The difference with RDoC: HiTOP is descriptive and clinical, RDoC mechanistic and research-oriented (it starts from brain circuits).",
+    "nl": "Het verschil met RDoC: HiTOP is beschrijvend en klinisch, RDoC mechanistisch en op onderzoek gericht (het begint bij hersencircuits)."
+   },
+   "sources": [
+    "src:edcb5e7533"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:transdiagnostic",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرایندهای مشترک",
+    "en": "Shared processes",
+    "nl": "Gedeelde processen"
+   }
+  },
+  {
+   "to": "psy:personality-disorders",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدل بُعدی شخصیت",
+    "en": "Dimensional model of personality",
+    "nl": "Dimensionaal persoonlijkheidsmodel"
+   }
+  }
+ ],
+ "people": [
+  "core:roman-kotov",
+  "core:robert-krueger",
+  "core:david-watson",
+  "core:avshalom-caspi-and-terrie-moffitt"
+ ],
+ "sources": [
+  "src:edcb5e7533",
+  "src:0d0e7ea036"
+ ],
+ "booklets": [
+  "workshop:hitop",
+  "shelf3:lahey"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

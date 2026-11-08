@@ -1,0 +1,130 @@
+{
+ "id": "psy:ptsd",
+ "kind": "concept",
+ "title": {
+  "fa": "تروما و PTSD",
+  "en": "Trauma & PTSD",
+  "nl": "Trauma en PTSS"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "تاریخچهٔ یک تشخیص: از ستون فقرات راه‌آهن و شوک انفجار تا DSM-III (۱۹۸۰)؛ و پرسش هنجارسازی در برابر اعتباردهی.",
+  "en": "The history of a diagnosis: from railway spine and shell shock to DSM-III (1980); and the question of normalising versus validating.",
+  "nl": "De geschiedenis van een diagnose: van ‘railway spine’ en shellshock tot de DSM-III (1980); en de vraag naar normaliseren tegenover erkennen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اوپنهایم (۱۸۸۹): نخستین کاربرد «تروما» برای روان.",
+    "en": "Oppenheim (1889): the first use of “trauma” for the mind.",
+    "nl": "Oppenheim (1889): het eerste gebruik van ‘trauma’ voor de psyche."
+   },
+   "sources": [
+    "src:a8dd2597d5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "DSM-I «واکنش استرس شدید»، DSM-II «واکنش سازگاری»، DSM-III «PTSD».",
+    "en": "DSM-I “gross stress reaction”, DSM-II “adjustment reaction”, DSM-III “PTSD”.",
+    "nl": "DSM-I ‘gross stress reaction’, DSM-II ‘adjustment reaction’, DSM-III ‘PTSS’."
+   },
+   "sources": [
+    "src:a8dd2597d5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "۶۳۶٬۱۲۰ ترکیب ممکن نشانه در DSM-5 (گالاتزر-لوی و برایانت ۲۰۱۳).",
+    "en": "636,120 possible symptom combinations in DSM-5 (Galatzer-Levy and Bryant 2013).",
+    "nl": "636.120 mogelijke symptoomcombinaties in de DSM-5 (Galatzer-Levy en Bryant 2013)."
+   },
+   "sources": [
+    "src:a8dd2597d5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "۱۱ سپتامبر: ۷٫۵٪ در منهتن، ۲۰٪ جنوب خیابان کانال، ۳۰٪ درون برج‌ها؛ افت سریع در ماه‌های بعد.",
+    "en": "9/11: 7.5% in Manhattan, 20% south of Canal Street, 30% inside the towers; a rapid decline in the following months.",
+    "nl": "11 september: 7,5% in Manhattan, 20% ten zuiden van Canal Street, 30% in de torens; een snelle daling in de maanden daarna."
+   },
+   "sources": [
+    "src:a8dd2597d5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«بدن فراموش نمی‌کند» (ون در کولک) در برابر «پایان تروما» (بونانو).",
+    "en": "“The body keeps the score” (van der Kolk) versus “the end of trauma” (Bonanno).",
+    "nl": "‘Het lichaam onthoudt alles’ (van der Kolk) tegenover ‘het einde van trauma’ (Bonanno)."
+   },
+   "sources": [
+    "src:a8dd2597d5"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:shell-shock",
+   "rel": "see-also",
+   "note": {
+    "fa": "تاریخ",
+    "en": "History",
+    "nl": "Geschiedenis"
+   }
+  },
+  {
+   "to": "psy:resilience",
+   "rel": "see-also",
+   "note": {
+    "fa": "مسیرها",
+    "en": "Pathways",
+    "nl": "Wegen"
+   }
+  },
+  {
+   "to": "psy:dimensional-dx",
+   "rel": "see-also",
+   "note": {
+    "fa": "مرز تشخیص",
+    "en": "Diagnostic boundary",
+    "nl": "Diagnostische grens"
+   }
+  },
+  {
+   "to": "psy:nocebo",
+   "rel": "see-also",
+   "note": {
+    "fa": "برچسب",
+    "en": "Label",
+    "nl": "Etiket"
+   }
+  }
+ ],
+ "people": [
+  "core:hermann-oppenheim",
+  "core:bessel-van-der-kolk",
+  "core:sandro-galea",
+  "core:richard-bryant"
+ ],
+ "sources": [
+  "src:a8dd2597d5",
+  "src:55a4a9b340"
+ ],
+ "booklets": [
+  "trauma:history",
+  "trauma:nyc",
+  "trauma:validation"
+ ],
+ "origin": "trauma",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

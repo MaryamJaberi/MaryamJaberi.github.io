@@ -1,0 +1,98 @@
+{
+ "id": "psy:neuroticism",
+ "kind": "concept",
+ "title": {
+  "fa": "روان‌رنجوری",
+  "en": "Neuroticism",
+  "nl": "Neuroticisme"
+ },
+ "parent": "psy:p-personality",
+ "field": "psy:p-personality",
+ "summary": {
+  "fa": "گرایش به هیجان منفی مکرر و شدید با حس کنترل‌ناپذیری و بیزاری از خود هیجان؛ صفت زیربنایی اختلالات اضطرابی و افسردگی (سائر-زاوالا و بارلو).",
+  "en": "A tendency towards frequent, intense negative emotion with a sense of uncontrollability and aversion to the emotion itself; the underlying trait of anxiety and depressive disorders (Sauer-Zavala and Barlow).",
+  "nl": "Een neiging tot frequente, heftige negatieve emotie met een gevoel van oncontroleerbaarheid en afkeer van de emotie zelf; de onderliggende eigenschap van angst- en depressieve stoornissen (Sauer-Zavala en Barlow)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آسیب‌پذیری سه‌گانه: زیستی عام + روانی عام (کنترل‌ناپذیری) + روانی اختصاصی.",
+    "en": "Triple vulnerability: general biological + general psychological (uncontrollability) + specific psychological.",
+    "nl": "Drievoudige kwetsbaarheid: algemeen biologisch + algemeen psychologisch (oncontroleerbaarheid) + specifiek psychologisch."
+   },
+   "sources": [
+    "src:daeeea8e54"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«سندرم نوروتیک عام»: یک صفت، چند اختلال.",
+    "en": "The “general neurotic syndrome”: one trait, several disorders.",
+    "nl": "Het ‘algemeen neurotisch syndroom’: één eigenschap, meerdere stoornissen."
+   },
+   "sources": [
+    "src:daeeea8e54"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "روان‌رنجوری بیش از آنچه تصور می‌شد تغییرپذیر است و با درمان کاهش می‌یابد.",
+    "en": "Neuroticism is more changeable than was thought and decreases with treatment.",
+    "nl": "Neuroticisme is veranderlijker dan gedacht en neemt af met behandeling."
+   },
+   "sources": [
+    "src:daeeea8e54"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یکی از پنج عامل بزرگ شخصیت؛ در HiTOP نزدیک به طیف درون‌سازی.",
+    "en": "One of the Big Five personality factors; in HiTOP close to the internalising spectrum.",
+    "nl": "Een van de vijf grote persoonlijkheidsfactoren; in HiTOP dicht bij het internaliserende spectrum."
+   },
+   "sources": [
+    "src:daeeea8e54"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:hitop",
+   "rel": "see-also",
+   "note": {
+    "fa": "درون‌سازی",
+    "en": "Internalising",
+    "nl": "Internaliseren"
+   }
+  },
+  {
+   "to": "psy:experiential-avoidance",
+   "rel": "explains",
+   "note": {
+    "fa": "پیامد رفتاری",
+    "en": "Behavioural consequence",
+    "nl": "Gedragsgevolg"
+   }
+  }
+ ],
+ "people": [
+  "core:david-barlow",
+  "core:shannon-sauer-zavala",
+  "core:hans-eysenck"
+ ],
+ "sources": [
+  "src:daeeea8e54"
+ ],
+ "booklets": [
+  "clinical:neuroticism",
+  "psychopath:anxiety"
+ ],
+ "origin": "clinical",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

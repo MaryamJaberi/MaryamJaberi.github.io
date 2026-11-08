@@ -1,0 +1,101 @@
+{
+ "id": "psy:dog-cognition",
+ "kind": "concept",
+ "title": {
+  "fa": "شناخت اجتماعی سگ‌ها",
+  "en": "Dog social cognition",
+  "nl": "Sociale cognitie bij honden"
+ },
+ "parent": "psy:self-domestication",
+ "field": "psy:self-domestication",
+ "summary": {
+  "fa": "سگ‌ها در خواندن نشانه‌های ارتباطی انسان (اشاره، نگاه) از شامپانزه‌ها و گرگ‌ها بهترند؛ نه چون باهوش‌ترند، بلکه چون اهلی‌شدن هوش «اجتماعی» آن‌ها را ساخت.",
+  "en": "Dogs are better than chimpanzees and wolves at reading human communicative cues (pointing, gaze); not because they are smarter, but because domestication shaped their “social” intelligence.",
+  "nl": "Honden zijn beter dan chimpansees en wolven in het lezen van menselijke communicatieve signalen (wijzen, blik); niet omdat ze slimmer zijn, maar omdat domesticatie hun ‘sociale’ intelligentie vormde."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هیر، براون، ویلیامسون و توماسلو (۲۰۰۲، Science): با نشانهٔ اجتماعی، سگ‌ها بیشتر از شامپانزه‌ها ظرف درست را یافتند.",
+    "en": "Hare, Brown, Williamson and Tomasello (2002, Science): with a social cue, dogs found the right container more often than chimpanzees.",
+    "nl": "Hare, Brown, Williamson en Tomasello (2002, Science): met een sociaal signaal vonden honden vaker de juiste bak dan chimpansees."
+   },
+   "sources": [
+    "src:5bb4ee3501"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در حافظهٔ غیراجتماعی سگ و گرگ فرقی نداشتند؛ در پیروی از نگاه، اشاره و ضربه سگ‌ها بسیار بهتر بودند.",
+    "en": "In non-social memory dogs and wolves did not differ; in following gaze, pointing and tapping, dogs were much better.",
+    "nl": "In niet-sociaal geheugen verschilden honden en wolven niet; in het volgen van blik, wijzen en tikken waren honden veel beter."
+   },
+   "sources": [
+    "src:5bb4ee3501"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "توله‌های ۹ هفته‌ای، حتی با تماس کم با انسان، از اشاره پیروی کردند؛ پس آموخته نیست.",
+    "en": "Nine-week-old puppies, even with little human contact, followed pointing; so it is not learned.",
+    "nl": "Pups van negen weken volgden wijzen, zelfs met weinig menselijk contact; het is dus niet aangeleerd."
+   },
+   "sources": [
+    "src:5bb4ee3501"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هوروویتز (۲۰۰۹): ۳۷۶ از ۳۹۷ نشانهٔ دعوت به بازی به سوی سگی فرستاده شد که حواسش جمع بود.",
+    "en": "Horowitz (2009): 376 of 397 play invitations were sent to a dog that was paying attention.",
+    "nl": "Horowitz (2009): 376 van de 397 speluitnodigingen gingen naar een hond die oplette."
+   },
+   "sources": [
+    "src:5bb4ee3501"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حسادت در سگ‌ها (هریس و پروووست، ۲۰۱۴): واکنش شدیدتر وقتی صاحب به سگ عروسکی محبت می‌کرد تا به کدو یا کتاب.",
+    "en": "Jealousy in dogs (Harris and Prouvost, 2014): a stronger reaction when the owner showed affection to a toy dog than to a pumpkin or a book.",
+    "nl": "Jaloezie bij honden (Harris en Prouvost, 2014): een sterkere reactie als het baasje een speelgoedhond aandacht gaf dan een pompoen of een boek."
+   },
+   "sources": [
+    "src:5bb4ee3501"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:theory-of-mind",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیروی از نگاه و اشاره",
+    "en": "Following gaze and pointing",
+    "nl": "Blik en wijzen volgen"
+   }
+  }
+ ],
+ "people": [
+  "core:brian-hare",
+  "core:alexandra-horowitz",
+  "core:adam-miklosi"
+ ],
+ "sources": [
+  "src:5bb4ee3501",
+  "src:05feff1d7b",
+  "src:2ca4bd7fec"
+ ],
+ "booklets": [
+  "friendly:dogs"
+ ],
+ "origin": "friendly",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

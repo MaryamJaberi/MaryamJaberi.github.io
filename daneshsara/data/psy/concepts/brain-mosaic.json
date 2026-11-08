@@ -1,0 +1,87 @@
+{
+ "id": "psy:brain-mosaic",
+ "kind": "concept",
+ "title": {
+  "fa": "مغز موزاییکی",
+  "en": "The mosaic brain",
+  "nl": "Het mozaïekbrein"
+ },
+ "parent": "psy:sex-gender",
+ "field": "psy:sex-gender",
+ "summary": {
+  "fa": "دافنا جوئل و همکاران با تحلیل بیش از ۱۴۰۰ تصویر مغز نشان دادند مغز «مردانه» و «زنانه» وجود ندارد؛ هر مغز موزاییکی از ویژگی‌هایی است که برخی در زنان رایج‌ترند، برخی در مردان و برخی در هر دو.",
+  "en": "Analysing over 1,400 brain scans, Daphna Joel and colleagues showed there is no “male” or “female” brain; each brain is a mosaic of features, some more common in women, some in men and some in both.",
+  "nl": "Op basis van meer dan 1400 hersenscans toonden Daphna Joel en collega's aan dat er geen ‘mannelijk’ of ‘vrouwelijk’ brein bestaat; elk brein is een mozaïek van kenmerken, sommige vaker bij vrouwen, sommige bij mannen en sommige bij beide."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تفاوت‌های میانگین جنسی در برخی ساختارها هست، اما در سطح فرد، بسته به مجموعه‌داده، فقط ۰ تا ۸٪ مغزها به‌طور یکدست «مردانه‌وار» یا «زنانه‌وار» بودند.",
+    "en": "There are average sex differences in some structures, but at the individual level, depending on the dataset, only 0 to 8% of brains were consistently “male-typical” or “female-typical”.",
+    "nl": "Er zijn gemiddelde sekseverschillen in sommige structuren, maar op individueel niveau was, afhankelijk van de dataset, maar 0 tot 8% van de breinen consequent ‘mannelijk’ of ‘vrouwelijk’."
+   },
+   "sources": [
+    "src:31a8ff6164"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جوئل جنس را با سه نشانهٔ ژن، گناد و اندام تناسلی (3G) توصیف می‌کند؛ و همین هم برای چند نفر در صد یکدست نیست.",
+    "en": "Joel describes sex by three markers, genes, gonads and genitals (3G); and even this is not uniform for a few people in a hundred.",
+    "nl": "Joel beschrijft sekse met drie kenmerken, genen, geslachtsklieren en geslachtsorganen (3G); en zelfs dat is bij een paar op de honderd mensen niet eenduidig."
+   },
+   "sources": [
+    "src:31a8ff6164"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فاین: آنچه از «تعدد سازوکارها» پدید می‌آید نه مغز مردانه یا زنانه، بلکه موزاییکی متغیر است.",
+    "en": "Fine: what emerges from the “multiplicity of mechanisms” is not a male or female brain but a variable mosaic.",
+    "nl": "Fine: wat uit de ‘veelheid aan mechanismen’ voortkomt, is geen mannelijk of vrouwelijk brein maar een wisselend mozaïek."
+   },
+   "sources": [
+    "src:31a8ff6164"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: برخی پژوهشگران (مثل دل جیودیچه) می‌گویند با ترکیب چندمتغیره می‌توان جنس را از مغز با دقت بالا پیش‌بینی کرد؛ بحث روش‌شناختی ادامه دارد.",
+    "en": "Critique: some researchers (such as Del Giudice) say multivariate combinations can predict sex from the brain with high accuracy; the methodological debate continues.",
+    "nl": "Kritiek: sommige onderzoekers (zoals Del Giudice) zeggen dat multivariate combinaties sekse met grote nauwkeurigheid uit het brein kunnen voorspellen; het methodologische debat gaat door."
+   },
+   "sources": [
+    "src:31a8ff6164"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-plasticity",
+   "rel": "see-also",
+   "note": {
+    "fa": "تجربه مغز را شکل می‌دهد",
+    "en": "Experience shapes the brain",
+    "nl": "Ervaring vormt het brein"
+   }
+  }
+ ],
+ "people": [
+  "core:daphna-joel",
+  "core:margaret-mccarthy",
+  "core:marco-del-giudice"
+ ],
+ "sources": [
+  "src:31a8ff6164",
+  "src:85b30c4635"
+ ],
+ "booklets": [],
+ "origin": "book",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

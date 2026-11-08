@@ -1,0 +1,98 @@
+{
+ "id": "psy:execution-hypothesis",
+ "kind": "concept",
+ "title": {
+  "fa": "فرضیهٔ اعدام و سلسله‌مراتب معکوس",
+  "en": "Execution hypothesis · Reverse dominance",
+  "nl": "Executiehypothese · omgekeerde dominantie"
+ },
+ "parent": "psy:self-domestication",
+ "field": "psy:self-domestication",
+ "summary": {
+  "fa": "رنگهام: از حدود ۳۰۰ هزار سال پیش، زبان به زیردستان اجازه داد پنهانی توطئه کنند و قلدرهای پرخاشگر را بکشند؛ این حذف نسل به نسل پرخاشگری واکنشی را کاهش داد.",
+  "en": "Wrangham: from about 300,000 years ago, language let subordinates secretly conspire and kill aggressive bullies; this removal, generation after generation, reduced reactive aggression.",
+  "nl": "Wrangham: vanaf ongeveer 300.000 jaar geleden liet taal ondergeschikten in het geheim samenspannen en agressieve pestkoppen doden; dit verwijderen verminderde generatie na generatie de reactieve agressie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "«توطئهٔ مبتنی بر زبان کلید بود، چون به نرهای بتای پچ‌پچ‌کننده قدرت داد با هم متحد شوند و نرهای آلفای قلدر را بکشند.»",
+    "en": "“Language-based conspiracy was key, because it gave whispering beta males the power to join forces to kill bullying alpha males.”",
+    "nl": "‘Samenzwering op basis van taal was de sleutel, omdat het fluisterende bètamannetjes de macht gaf om samen pestende alfamannetjes te doden.’"
+   },
+   "sources": [
+    "src:c1166b4849"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ریشهٔ ایده به داروین برمی‌گردد. رنگهام تأکید می‌کند این توضیح علمی است و به معنای تأیید اعدام امروزی نیست.",
+    "en": "The idea goes back to Darwin. Wrangham stresses it is a scientific explanation and does not mean endorsing executions today.",
+    "nl": "Het idee gaat terug op Darwin. Wrangham benadrukt dat het een wetenschappelijke verklaring is en geen goedkeuring van executies vandaag."
+   },
+   "sources": [
+    "src:c1166b4849"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کریستوفر بوم: در جوامع شکارچی-گردآورنده «سلسله‌مراتب معکوس» هست؛ گروه با تمسخر، طرد و در نهایت قتل، جاه‌طلبان را مهار می‌کند.",
+    "en": "Christopher Boehm: hunter-gatherer societies have a “reverse dominance hierarchy”; the group restrains the ambitious through ridicule, exclusion and ultimately killing.",
+    "nl": "Christopher Boehm: jager-verzamelaarssamenlevingen hebben een ‘omgekeerde dominantiehiërarchie’; de groep houdt ambitieuzen in toom met spot, uitsluiting en uiteindelijk doden."
+   },
+   "sources": [
+    "src:c1166b4849"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیامد اخلاقی (رنگهام، فصل ۱۰): وجدان، شرم و هم‌رنگی با هنجار از همین تاریخ آمده‌اند؛ کسی که هنجار را نمی‌فهمد حذف می‌شد.",
+    "en": "The moral consequence (Wrangham, chapter 10): conscience, shame and conformity to norms come from this history; whoever did not understand the norm was eliminated.",
+    "nl": "Het morele gevolg (Wrangham, hoofdstuk 10): geweten, schaamte en conformisme komen uit deze geschiedenis; wie de norm niet begreep, werd verwijderd."
+   },
+   "sources": [
+    "src:c1166b4849"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:norm-psychology",
+   "rel": "see-also",
+   "note": {
+    "fa": "هنجارها و مجازات",
+    "en": "Norms and punishment",
+    "nl": "Normen en straf"
+   }
+  },
+  {
+   "to": "psy:scapegoating",
+   "rel": "see-also",
+   "note": {
+    "fa": "سرزنش و طرد",
+    "en": "Blame and exclusion",
+    "nl": "Schuld en uitsluiting"
+   }
+  }
+ ],
+ "people": [
+  "core:richard-wrangham",
+  "core:christopher-boehm"
+ ],
+ "sources": [
+  "src:c1166b4849",
+  "src:8605a2e601",
+  "src:d49e8b9606"
+ ],
+ "booklets": [
+  "friendly:aggression"
+ ],
+ "origin": "friendly",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

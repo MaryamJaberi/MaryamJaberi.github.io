@@ -1,0 +1,77 @@
+{
+ "id": "psy:akrasia",
+ "kind": "concept",
+ "title": {
+  "fa": "ضعف اراده (آکراسیا)",
+  "en": "Akrasia",
+  "nl": "Akrasia (zwakte van de wil)"
+ },
+ "parent": "psy:phil-ethics",
+ "field": "psy:phil-ethics",
+ "summary": {
+  "fa": "پرسش کهن ارسطو: چطور کسی می‌داند کار بهتر چیست و باز کار بدتر را می‌کند؟ سوگیری زمان حال و تنزیل هذلولوی پاسخ‌های تجربی امروزند.",
+  "en": "Aristotle's old question: how can someone know what is better and still do what is worse? Present bias and hyperbolic discounting are today's empirical answers.",
+  "nl": "De oude vraag van Aristoteles: hoe kan iemand weten wat beter is en toch het slechtere doen? Voorkeur voor het heden en hyperbolisch verdisconteren zijn de empirische antwoorden van nu."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سقراط در «پروتاگوراس» می‌گفت هر خطایی از نادانی است؛ ارسطو در «اخلاق نیکوماخوس» ضعف اراده را واقعی دانست.",
+    "en": "In the Protagoras, Socrates said every wrongdoing comes from ignorance; in the Nicomachean Ethics, Aristotle held that weakness of will is real.",
+    "nl": "In de Protagoras zei Socrates dat elk verkeerd handelen uit onwetendheid voortkomt; in de Ethica Nicomachea hield Aristoteles vol dat zwakte van de wil echt bestaat."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اولیس که خود را به دکل بست، کهن‌ترین نمونهٔ «ابزار تعهد» است.",
+    "en": "Ulysses tying himself to the mast is the oldest example of a “commitment device”.",
+    "nl": "Odysseus die zich aan de mast liet vastbinden, is het oudste voorbeeld van een ‘commitment device’."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:delay-gratification",
+   "rel": "see-also",
+   "note": {
+    "fa": "تأخیر پاداش",
+    "en": "Delayed reward",
+    "nl": "Uitgestelde beloning"
+   }
+  },
+  {
+   "to": "psy:decision-errors",
+   "rel": "see-also",
+   "note": {
+    "fa": "خطای تصمیم",
+    "en": "Decision error",
+    "nl": "Beslisfout"
+   }
+  },
+  {
+   "to": "psy:effort",
+   "rel": "see-also",
+   "note": {
+    "fa": "اراده",
+    "en": "Willpower",
+    "nl": "Wilskracht"
+   }
+  }
+ ],
+ "people": [
+  "core:aristotle",
+  "core:david-laibson"
+ ],
+ "sources": [],
+ "booklets": [
+  "s5:disciplines"
+ ],
+ "origin": "s5",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

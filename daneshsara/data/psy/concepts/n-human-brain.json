@@ -1,0 +1,108 @@
+{
+ "id": "psy:n-human-brain",
+ "kind": "subfield",
+ "title": {
+  "fa": "مغز انسان و شمار نورون‌ها",
+  "en": "The human brain's neuron count",
+  "nl": "Aantal neuronen in het menselijk brein"
+ },
+ "parent": "psy:neuroscience",
+ "field": null,
+ "summary": {
+  "fa": "سوزانا هرکولانو-هوزل با روش «سوپ مغز» نشان داد مغز انسان حدود ۸۶ میلیارد نورون دارد، حدود ۱۶ میلیارد در قشر مخ؛ بیشتر از هر جانور دیگر در قشر.",
+  "en": "Using the “brain soup” method, Suzana Herculano-Houzel showed the human brain has about 86 billion neurons, about 16 billion of them in the cerebral cortex; more cortical neurons than any other animal.",
+  "nl": "Met de ‘hersensoep’-methode toonde Suzana Herculano-Houzel aan dat het menselijk brein ongeveer 86 miljard neuronen heeft, waarvan ongeveer 16 miljard in de hersenschors; meer corticale neuronen dan enig ander dier."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تفاوت ۸۶ با «صد میلیارد» رایج، به اندازهٔ کل مغز یک بابون است.",
+    "en": "The difference between 86 and the popular “hundred billion” is the size of a whole baboon brain.",
+    "nl": "Het verschil tussen 86 en de populaire ‘honderd miljard’ is zo groot als het hele brein van een baviaan."
+   },
+   "sources": [
+    "src:2c16d3239b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اورانگوتان حدود ۳۰ میلیارد، موش صحرایی ۱۸۹ میلیون نورون؛ مخچه حدود ۶۹ میلیارد.",
+    "en": "An orang-utan has about 30 billion neurons, a rat 189 million; the cerebellum about 69 billion.",
+    "nl": "Een orang-oetan heeft ongeveer 30 miljard neuronen, een rat 189 miljoen; de kleine hersenen ongeveer 69 miljard."
+   },
+   "sources": [
+    "src:2c16d3239b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مغز انسان مغز نخستیِ بزرگ‌شده است، نه استثنا؛ ویژگی‌اش شمار مطلق نورون‌های قشری است.",
+    "en": "The human brain is a scaled-up primate brain, not an exception; what sets it apart is the absolute number of cortical neurons.",
+    "nl": "Het menselijk brein is een opgeschaald primatenbrein, geen uitzondering; wat het onderscheidt is het absolute aantal corticale neuronen."
+   },
+   "sources": [
+    "src:2c16d3239b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مغز حدود ۲۰٪ انرژی بدن را مصرف می‌کند؛ پختن غذا (رنگهام، «آتش‌گرفتن») این انرژی را فراهم کرد.",
+    "en": "The brain uses about 20% of the body's energy; cooking (Wrangham, Catching Fire) provided this energy.",
+    "nl": "Het brein gebruikt ongeveer 20% van de energie van het lichaam; koken (Wrangham, Catching Fire) leverde deze energie."
+   },
+   "sources": [
+    "src:2c16d3239b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لیویو: همین ظرفیت، پرسیدن «چرا؟» را ممکن کرد.",
+    "en": "Livio: this same capacity made asking “why?” possible.",
+    "nl": "Livio: hetzelfde vermogen maakte het mogelijk om ‘waarom?’ te vragen."
+   },
+   "sources": [
+    "src:2c16d3239b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anthropology",
+   "rel": "see-also",
+   "note": {
+    "fa": "تکامل مغز",
+    "en": "Brain evolution",
+    "nl": "Evolutie van het brein"
+   }
+  },
+  {
+   "to": "psy:curiosity",
+   "rel": "see-also",
+   "note": {
+    "fa": "ظرفیت پرسیدن",
+    "en": "Capacity to ask",
+    "nl": "Vermogen om te vragen"
+   }
+  }
+ ],
+ "people": [
+  "core:suzana-herculano-houzel",
+  "core:richard-wrangham"
+ ],
+ "sources": [
+  "src:2c16d3239b",
+  "src:1efec709bc"
+ ],
+ "booklets": [
+  "curiosity:why"
+ ],
+ "origin": "curiosity",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,108 @@
+{
+ "id": "psy:cognitive-rigidity",
+ "kind": "concept",
+ "title": {
+  "fa": "سرسختی شناختی",
+  "en": "Cognitive rigidity",
+  "nl": "Cognitieve rigiditeit"
+ },
+ "parent": "psy:transdiagnostic",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "ادامهٔ همان راهبرد حتی وقتی جواب نمی‌دهد؛ فرایند محوری مشکلات تفکر و عاطفه در کارگاه.",
+  "en": "Sticking to the same strategy even when it does not work; a core process of thinking and emotional problems in the workshop.",
+  "nl": "Dezelfde strategie blijven volgen ook als die niet werkt; een kernproces van denk- en emotionele problemen in de workshop."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مقیاس «استمرار و یکنواختی پاسخ»: «وقتی به مشکل می‌خورم تلاشم را دو برابر می‌کنم و همان روش را ادامه می‌دهم».",
+    "en": "The “response persistence and sameness” scale: “When I run into a problem, I double my efforts and continue the same way”.",
+    "nl": "De schaal ‘volharden en eentonigheid in reageren’: ‘Als ik op een probleem stuit, verdubbel ik mijn inspanning en ga ik op dezelfde manier door’."
+   },
+   "sources": [
+    "src:4f6e1e4f8d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در سطح سازمان: «ابزارهایت را زمین بگذار» (کارل وایک، کتاب گستره).",
+    "en": "At organisational level: “drop your tools” (Karl Weick, the book Range).",
+    "nl": "Op organisatieniveau: ‘laat je gereedschap vallen’ (Karl Weick, het boek Range)."
+   },
+   "sources": [
+    "src:4f6e1e4f8d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "WCST (سختی واکنشی)، AUT (سختی زایشی)، RAT (هر دو).",
+    "en": "WCST (reactive rigidity), AUT (generative rigidity), RAT (both).",
+    "nl": "WCST (reactieve rigiditeit), AUT (generatieve rigiditeit), RAT (beide)."
+   },
+   "sources": [
+    "src:4f6e1e4f8d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انعطاف کمتر با آمادگی بیشتر برای مردن برای گروه همراه بود (زمیگرود ۲۰۱۹).",
+    "en": "Less flexibility went with greater willingness to die for the group (Zmigrod 2019).",
+    "nl": "Minder flexibiliteit ging samen met een grotere bereidheid om voor de groep te sterven (Zmigrod 2019)."
+   },
+   "sources": [
+    "src:4f6e1e4f8d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "استرس جدایی حتی در نوزادان ۱۵ ماهه انعطاف را کم کرد (سیهاگن ۲۰۱۵).",
+    "en": "Separation stress reduced flexibility even in 15-month-old infants (Seehagen 2015).",
+    "nl": "Scheidingsstress verminderde de flexibiliteit zelfs bij baby's van 15 maanden (Seehagen 2015)."
+   },
+   "sources": [
+    "src:4f6e1e4f8d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:cognitive-rut",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  },
+  {
+   "to": "psy:exploration",
+   "rel": "contrasts",
+   "note": {
+    "fa": "نقطهٔ مقابل",
+    "en": "Opposite",
+    "nl": "Tegenpool"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:4f6e1e4f8d",
+  "src:c6f17b4dac"
+ ],
+ "booklets": [
+  "workshop:hitop",
+  "ideo:flex",
+  "ideo:dopamine",
+  "ideo:factors"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,122 @@
+{
+ "id": "psy:affective-forecasting",
+ "kind": "concept",
+ "title": {
+  "fa": "پیش‌بینی عاطفی",
+  "en": "Affective forecasting",
+  "nl": "Affectief voorspellen"
+ },
+ "parent": "psy:p-emotion",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "پیش‌بینی اینکه در آینده چه حسی خواهیم داشت؛ معمولاً شدت و به‌ویژه دوام احساسات را بیش از واقع برآورد می‌کنیم.",
+  "en": "Predicting how we will feel in the future; we usually overestimate the intensity and especially the duration of feelings.",
+  "nl": "Voorspellen hoe we ons in de toekomst zullen voelen; meestal overschatten we de intensiteit en vooral de duur van gevoelens."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "خطای پایداری (durability bias) و غفلت از «سیستم ایمنی روانی» (گیلبرت و همکاران، ۱۹۹۸).",
+    "en": "The durability bias and neglect of the “psychological immune system” (Gilbert and colleagues, 1998).",
+    "nl": "De duurzaamheidsbias en het over het hoofd zien van het ‘psychologisch immuunsysteem’ (Gilbert en collega's, 1998)."
+   },
+   "sources": [
+    "src:a485a5c91e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از رموز حفظ تغییر: دیدن کسانی که مسیر مشابه را رفته‌اند خطا را اصلاح می‌کند.",
+    "en": "One secret of maintaining change: seeing people who have taken a similar path corrects the error.",
+    "nl": "Een geheim van verandering vasthouden: mensen zien die een vergelijkbare weg zijn gegaan, corrigeert de fout."
+   },
+   "sources": [
+    "src:a485a5c91e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تمرین: «آیا تا تاریخ X، Y رخ می‌دهد؟» و مقایسه با واقعیت.",
+    "en": "Exercise: “Will Y happen by date X?”, then compare with reality.",
+    "nl": "Oefening: ‘Gebeurt Y vóór datum X?’, en daarna vergelijken met de werkelijkheid."
+   },
+   "sources": [
+    "src:a485a5c91e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سوگیری تأثیر، غفلت ایمنی و کانون‌گرایی؛ شخصیت پیش‌بینی را بیش از آنچه فکر می‌کنیم شکل می‌دهد.",
+    "en": "Impact bias, immune neglect and focalism; personality shapes prediction more than we think.",
+    "nl": "Impactbias, het negeren van het immuunsysteem en focalisme; persoonlijkheid vormt voorspellingen meer dan we denken."
+   },
+   "sources": [
+    "src:a485a5c91e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کانمن ۱۹۹۳: ۶۹٪ نسخهٔ دردناک‌تر با پایان بهتر را ترجیح دادند (اوج و پایان).",
+    "en": "Kahneman 1993: 69% preferred the more painful version with a better ending (peak and end).",
+    "nl": "Kahneman 1993: 69% verkoos de pijnlijkere versie met een beter einde (piek en eind)."
+   },
+   "sources": [
+    "src:a485a5c91e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یادآوری چند خاطره به جای شدیدترین، پیش‌بینی را دقیق‌تر کرد (موروج ۲۰۰۵).",
+    "en": "Recalling several memories instead of the most intense one made predictions more accurate (Morewedge 2005).",
+    "nl": "Meerdere herinneringen ophalen in plaats van de heftigste maakte voorspellingen nauwkeuriger (Morewedge 2005)."
+   },
+   "sources": [
+    "src:a485a5c91e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:happiness-origins",
+   "rel": "see-also",
+   "note": {
+    "fa": "شادکامی",
+    "en": "Happiness",
+    "nl": "Geluk"
+   }
+  },
+  {
+   "to": "psy:habit",
+   "rel": "see-also",
+   "note": {
+    "fa": "حفظ تغییر",
+    "en": "Maintaining change",
+    "nl": "Verandering vasthouden"
+   }
+  }
+ ],
+ "people": [
+  "core:daniel-gilbert",
+  "core:timothy-wilson"
+ ],
+ "sources": [
+  "src:a485a5c91e",
+  "src:876672ed56"
+ ],
+ "booklets": [
+  "motivation:forecast",
+  "change:forecast",
+  "mistakes:impact",
+  "mistakes:peak"
+ ],
+ "origin": "motivation",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,96 @@
+{
+ "id": "psy:work-engagement",
+ "kind": "concept",
+ "title": {
+  "fa": "درگیری کاری",
+  "en": "Work engagement",
+  "nl": "Bevlogenheid"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "حالت ذهنی مثبت در کار با سه بُعد نیرومندی، وقف و جذب؛ در مدل خواسته‌ها و منابع شغلی (JD-R) از منابع شغلی تغذیه می‌شود.",
+  "en": "A positive state of mind at work with three dimensions: vigour, dedication and absorption; in the job demands-resources (JD-R) model it is fed by job resources.",
+  "nl": "Een positieve gemoedstoestand op het werk met drie dimensies: vitaliteit, toewijding en absorptie; in het Job Demands-Resources-model (JD-R) wordt ze gevoed door hulpbronnen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مقیاس اوترخت (UWES)؛ ساختار سه‌عاملی یا یک‌عاملی.",
+    "en": "The Utrecht scale (UWES); a three-factor or one-factor structure.",
+    "nl": "De Utrechtse schaal (UWES); een structuur met drie factoren of één factor."
+   },
+   "sources": [
+    "src:a005b779bf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "منابع (حمایت، خودمختاری، بازخورد) ← درگیری؛ خواسته‌های زیاد ← فرسودگی.",
+    "en": "Resources (support, autonomy, feedback) → engagement; high demands → burnout.",
+    "nl": "Hulpbronnen (steun, autonomie, feedback) → bevlogenheid; hoge eisen → burn-out."
+   },
+   "sources": [
+    "src:a005b779bf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حتی نوسان روزانهٔ منابع، نوسان روزانهٔ درگیری را توضیح می‌دهد.",
+    "en": "Even daily fluctuation in resources explains daily fluctuation in engagement.",
+    "nl": "Zelfs dagelijkse schommelingen in hulpbronnen verklaren dagelijkse schommelingen in bevlogenheid."
+   },
+   "sources": [
+    "src:a005b779bf"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:burnout",
+   "rel": "contrasts",
+   "note": {
+    "fa": "قطب مقابل",
+    "en": "Opposite pole",
+    "nl": "Tegenpool"
+   }
+  },
+  {
+   "to": "psy:quiet-quitting",
+   "rel": "see-also",
+   "note": {
+    "fa": "کناره‌گیری",
+    "en": "Withdrawal",
+    "nl": "Terugtrekking"
+   }
+  },
+  {
+   "to": "psy:flow",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  }
+ ],
+ "people": [
+  "core:wilmar-schaufeli",
+  "core:arnold-bakker",
+  "core:sebastiaan-rothmann"
+ ],
+ "sources": [
+  "src:a005b779bf"
+ ],
+ "booklets": [
+  "poswork:org",
+  "s11:flow"
+ ],
+ "origin": "poswork",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

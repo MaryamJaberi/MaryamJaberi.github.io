@@ -1,0 +1,277 @@
+{
+ "id": "psy:goal-pursuit",
+ "kind": "concept",
+ "title": {
+  "fa": "پویایی هدف و پیشرفت",
+  "en": "Dynamics of goal pursuit",
+  "nl": "Dynamiek van doelnastreving"
+ },
+ "parent": "psy:p-motivation",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "چگونه نوع هدف، شیوهٔ دیدن پیشرفت، میانهٔ راه و بازخورد انگیزه را می‌سازند یا از بین می‌برند؛ بیشتر از پژوهش‌های آیلت فیشباخ.",
+  "en": "How the type of goal, the way progress is seen, the middle of the road and feedback build or destroy motivation; mostly from Ayelet Fishbach's research.",
+  "nl": "Hoe het soort doel, de manier waarop vooruitgang wordt gezien, het midden van de weg en feedback motivatie opbouwen of afbreken; vooral uit het onderzoek van Ayelet Fishbach."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هدف اقدامی («ورزش کنم») معمولاً بهتر از هدف اجتنابی («سیگار نکشم»).",
+    "en": "An approach goal (“I will exercise”) usually works better than an avoidance goal (“I won't smoke”).",
+    "nl": "Een toenaderingsdoel (‘ik ga sporten’) werkt meestal beter dan een vermijdingsdoel (‘ik rook niet’)."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هدف مشخص: دونده‌های ماراتن برای زمان‌های گرد (۳:۰۰، ۴:۰۰) شتاب می‌گیرند.",
+    "en": "A specific goal: marathon runners speed up for round times (3:00, 4:00).",
+    "nl": "Een specifiek doel: marathonlopers versnellen voor ronde tijden (3:00, 4:00)."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هدف تجمعی (ارزش هر گام نسبی کم می‌شود) و همه‌یاهیچ؛ پیشرفت ← تعهد (فستینگر، بم).",
+    "en": "Cumulative goals (each step's relative value shrinks) and all-or-nothing goals; progress → commitment (Festinger, Bem).",
+    "nl": "Cumulatieve doelen (de relatieve waarde van elke stap neemt af) en alles-of-niets-doelen; vooruitgang → betrokkenheid (Festinger, Bem)."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«انجام‌شده» در برابر «باقی‌مانده» (کو و فیشباخ ۲۰۰۸): با تعهد سست به انجام‌شده، با تعهد قوی به باقی‌مانده نگاه کن.",
+    "en": "“Done” versus “to go” (Koo and Fishbach 2008): with weak commitment look at what's done, with strong commitment at what's left.",
+    "nl": "‘Gedaan’ tegenover ‘te gaan’ (Koo en Fishbach 2008): bij zwakke betrokkenheid kijk naar wat gedaan is, bij sterke naar wat nog rest."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرضیهٔ مساحت کم: به ناحیهٔ کوچک‌تر نگاه کن (کارت مُهر سوشی).",
+    "en": "The small-area hypothesis: look at the smaller area (the sushi stamp card).",
+    "nl": "De klein-gebiedhypothese: kijk naar het kleinere gebied (de stempelkaart van de sushizaak)."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پای در میان در (فریدمن و فریزر ۱۹۶۶): پذیرش تابلوی بزرگ ۷۶٪ پس از نشان کوچک، در برابر ۱۷٪.",
+    "en": "Foot in the door (Freedman and Fraser 1966): 76% accepted a large sign after a small badge, versus 17%.",
+    "nl": "Voet tussen de deur (Freedman en Fraser 1966): 76% accepteerde een groot bord na een klein speldje, tegenover 17%."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تعادل («حالا می‌توانم شل کنم») در برابر انسجام («حالا ادامه می‌دهم»): رژیم و کاتولیسیسم در برابر معتادان گمنام و کالوینیسم.",
+    "en": "Balancing (“now I can relax”) versus highlighting (“now I'll keep going”): dieting and Catholicism versus Alcoholics Anonymous and Calvinism.",
+    "nl": "Balanceren (‘nu mag ik het rustiger aan doen’) tegenover consistentie (‘nu ga ik door’): diëten en katholicisme tegenover de Anonieme Alcoholisten en het calvinisme."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بحران میانهٔ راه: کیفیت کار U شکل است؛ اعمال اول و آخر بیشتر معرّف خود دانسته می‌شوند.",
+    "en": "The midpoint crisis: work quality is U-shaped; first and last acts are seen as more representative of the self.",
+    "nl": "De crisis halverwege: de kwaliteit van het werk is U-vormig; de eerste en laatste daden worden meer als typerend voor jezelf gezien."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثر شروع تازه (دای، میلکمن و ریس ۲۰۱۴): جست‌وجوی «رژیم» در آغاز هفته، ماه و سال بالا می‌رود.",
+    "en": "The fresh-start effect (Dai, Milkman and Riis 2014): searches for “diet” rise at the start of a week, month and year.",
+    "nl": "Het fresh-starteffect (Dai, Milkman en Riis 2014): zoekopdrachten naar ‘dieet’ nemen toe aan het begin van een week, maand en jaar."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازخورد: تازه‌کارها مثبت می‌خواهند، متخصصان منفی؛ مشاوره دادن به دیگران انگیزه را بیشتر از مشاوره گرفتن بالا برد.",
+    "en": "Feedback: novices want positive, experts negative; giving advice to others raised motivation more than receiving it.",
+    "nl": "Feedback: beginners willen positieve, experts negatieve; anderen advies geven verhoogde de motivatie meer dan advies krijgen."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ضدهدفمندی: «می‌سوزاند اما میکروب را می‌کشد»؛ درد بیشتر ≈ اثر بیشتر.",
+    "en": "Anti-goals: “It stings but it kills the germs”; more pain ≈ more effect.",
+    "nl": "Antidoelgerichtheid: ‘Het prikt, maar het doodt de bacteriën’; meer pijn ≈ meer effect."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دوگانهٔ هدف/وسیله (شادی و فیشباخ): کمتر در وسیله سرمایه می‌گذاریم؛ «وسیله را هدف ببینید».",
+    "en": "The goal/means duality (Shady and Fishbach): we invest less in means; “see the means as the goal”.",
+    "nl": "De dualiteit doel/middel (Shady en Fishbach): we investeren minder in middelen; ‘zie het middel als doel’."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "غذای «مفید» را کودکان کمتر خوردند (مایماران و فیشباخ ۲۰۱۴)؛ برچسب‌های مزه‌محور مصرف سبزی را بالا بردند (ترنوالد ۲۰۱۹).",
+    "en": "Children ate less food described as “healthy” (Maimaran and Fishbach 2014); taste-focused labels increased vegetable intake (Turnwald 2019).",
+    "nl": "Kinderen aten minder van eten dat ‘gezond’ werd genoemd (Maimaran en Fishbach 2014); smaakgerichte etiketten verhoogden de groenteconsumptie (Turnwald 2019)."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تراژدی اورست ۱۹۹۶: اهداف خوب هم خطرناک‌اند.",
+    "en": "The 1996 Everest tragedy: good goals can be dangerous too.",
+    "nl": "De Everest-tragedie van 1996: ook goede doelen kunnen gevaarlijk zijn."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مسئلهٔ میانه و اثر شروع تازه (دای، میلکمن و ریس ۲۰۱۴).",
+    "en": "The middle problem and the fresh-start effect (Dai, Milkman and Riis 2014).",
+    "nl": "Het middenprobleem en het fresh-starteffect (Dai, Milkman en Riis 2014)."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ذخیرهٔ اضطراری: ادامه پس از شکست ۷۳٪ در برابر ۶۳٪ (شریف و شو ۲۰۲۱).",
+    "en": "An emergency reserve: continuing after failure 73% versus 63% (Sharif and Shu 2021).",
+    "nl": "Een noodreserve: doorgaan na falen 73% tegenover 63% (Sharif en Shu 2021)."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "WOOP: آرزو، نتیجه، مانع، برنامه (اوتینگن).",
+    "en": "WOOP: wish, outcome, obstacle, plan (Oettingen).",
+    "nl": "WOOP: wens, uitkomst, obstakel, plan (Oettingen)."
+   },
+   "sources": [
+    "src:a2fde25101"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:sdt",
+   "rel": "see-also",
+   "note": {
+    "fa": "انگیزش",
+    "en": "Motivation",
+    "nl": "Motivatie"
+   }
+  },
+  {
+   "to": "psy:progress-principle",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیشرفت",
+    "en": "Progress",
+    "nl": "Vooruitgang"
+   }
+  },
+  {
+   "to": "psy:perseverance",
+   "rel": "see-also",
+   "note": {
+    "fa": "پشتکار",
+    "en": "Perseverance",
+    "nl": "Doorzettingsvermogen"
+   }
+  },
+  {
+   "to": "psy:mindsets",
+   "rel": "see-also",
+   "note": {
+    "fa": "ذهنیت رشد",
+    "en": "Growth mindset",
+    "nl": "Groeimindset"
+   }
+  },
+  {
+   "to": "psy:habit",
+   "rel": "see-also",
+   "note": {
+    "fa": "از هدف به عادت",
+    "en": "From goal to habit",
+    "nl": "Van doel naar gewoonte"
+   }
+  }
+ ],
+ "people": [
+  "core:ayelet-fishbach",
+  "core:minjung-koo",
+  "core:maggie-toure-tillery",
+  "core:katherine-milkman",
+  "core:angela-duckworth"
+ ],
+ "sources": [
+  "src:a2fde25101",
+  "src:72eb8613b6",
+  "src:04ab40d39a",
+  "src:b6bef08c20"
+ ],
+ "booklets": [
+  "habits:todate",
+  "habits:part1",
+  "shelf2:fishbach",
+  "s6:reserve",
+  "s9:fantasy",
+  "s9:goals"
+ ],
+ "origin": "habits",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

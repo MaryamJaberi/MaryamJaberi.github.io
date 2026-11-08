@@ -1,0 +1,95 @@
+{
+ "id": "psy:hot-cold-gap",
+ "kind": "concept",
+ "title": {
+  "fa": "شکاف همدلی گرم-سرد",
+  "en": "Hot-cold empathy gap",
+  "nl": "Warm-koud empathiekloof"
+ },
+ "parent": "psy:info-gap",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "لوونشتاین: در حالت آرام («سرد») شدت میل‌ها و هیجان‌های خود در حالت برانگیخته («گرم») را دست‌کم می‌گیریم، و برعکس.",
+  "en": "Loewenstein: in a calm (“cold”) state we underestimate the strength of our desires and emotions in an aroused (“hot”) state, and vice versa.",
+  "nl": "Loewenstein: in een kalme (‘koude’) toestand onderschatten we hoe sterk onze verlangens en emoties zijn in een opgewonden (‘warme’) toestand, en omgekeerd."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در حالت سیری برای فردا رژیم می‌گیریم و در گرسنگی آن را می‌شکنیم.",
+    "en": "When full we plan a diet for tomorrow, and when hungry we break it.",
+    "nl": "Met een volle maag plannen we een dieet voor morgen, en met honger breken we het."
+   },
+   "sources": [
+    "src:de837219db"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در اعتیاد: کسی که در حالت سرد تصمیم به ترک می‌گیرد، قدرت وسوسه در حالت گرم را پیش‌بینی نمی‌کند.",
+    "en": "In addiction: someone who decides to quit in a cold state does not foresee the power of craving in a hot state.",
+    "nl": "Bij verslaving: wie in een koude toestand besluit te stoppen, voorziet niet hoe sterk de trek in een warme toestand is."
+   },
+   "sources": [
+    "src:de837219db"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در تصمیم‌گیری: پیش‌بینی رفتار خود در موقعیت پرهیجان (خشم، ترس، میل جنسی) خطاست.",
+    "en": "In decision-making: predicting one's own behaviour in emotional situations (anger, fear, sexual desire) goes wrong.",
+    "nl": "Bij beslissen: je eigen gedrag voorspellen in emotionele situaties (woede, angst, seksueel verlangen) gaat mis."
+   },
+   "sources": [
+    "src:de837219db"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با خطای برنامه‌ریزی: «این بار فرق می‌کند» در حالت سرد گفته می‌شود.",
+    "en": "Link with the planning fallacy: “This time it's different” is said in a cold state.",
+    "nl": "Link met de planningsdrogreden: ‘Dit keer is het anders’ wordt in een koude toestand gezegd."
+   },
+   "sources": [
+    "src:de837219db"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:craving",
+   "rel": "see-also",
+   "note": {
+    "fa": "وسوسه",
+    "en": "Craving",
+    "nl": "Trek"
+   }
+  },
+  {
+   "to": "psy:planning-fallacy",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیش‌بینی خود",
+    "en": "Predicting oneself",
+    "nl": "Jezelf voorspellen"
+   }
+  }
+ ],
+ "people": [
+  "core:george-loewenstein"
+ ],
+ "sources": [
+  "src:de837219db"
+ ],
+ "booklets": [
+  "curiosity:gap"
+ ],
+ "origin": "curiosity",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

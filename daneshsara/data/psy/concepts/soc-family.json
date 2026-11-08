@@ -1,0 +1,93 @@
+{
+ "id": "psy:soc-family",
+ "kind": "subfield",
+ "title": {
+  "fa": "جامعه‌شناسی خانواده",
+  "en": "Sociology of the family",
+  "nl": "Gezinssociologie"
+ },
+ "parent": "psy:sociology",
+ "field": null,
+ "summary": {
+  "fa": "ازدواج، طلاق، والدگری و رابطهٔ نسل‌ها در دگرگونی اجتماعی. خانواده هم منبع حمایت است و هم میدان فشار؛ مثلاً در اعتیاد یکی از اعضا.",
+  "en": "Marriage, divorce, parenting and relations between generations amid social change. The family is both a source of support and a field of pressure; for example when a member has an addiction.",
+  "nl": "Huwelijk, scheiding, ouderschap en de relatie tussen generaties in een veranderende samenleving. Het gezin is zowel een bron van steun als een veld van druk; bijvoorbeeld bij verslaving van een gezinslid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کوچک شدن خانواده و دیرتر شدن ازدواج در بسیاری کشورها، از جمله ایران.",
+    "en": "Smaller families and later marriage in many countries, including Iran.",
+    "nl": "Kleinere gezinnen en later trouwen in veel landen, waaronder Iran."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "والدگری فشرده و «هلیکوپتری» در طبقهٔ متوسط.",
+    "en": "Intensive and “helicopter” parenting in the middle class.",
+    "nl": "Intensief en ‘helikopter’-ouderschap in de middenklasse."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خانواده‌درمانی و سیستمی پل این حوزه به درمان است.",
+    "en": "Family and systemic therapy is this field's bridge to treatment.",
+    "nl": "Gezins- en systeemtherapie is de brug van dit vakgebied naar behandeling."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:addiction-families",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتیاد و خانواده",
+    "en": "Addiction and the family",
+    "nl": "Verslaving en het gezin"
+   }
+  },
+  {
+   "to": "psy:attachment",
+   "rel": "see-also",
+   "note": {
+    "fa": "دلبستگی",
+    "en": "Attachment",
+    "nl": "Gehechtheid"
+   }
+  },
+  {
+   "to": "psy:t-systemic",
+   "rel": "applies-to",
+   "note": {
+    "fa": "خانواده‌درمانی",
+    "en": "Family therapy",
+    "nl": "Gezinstherapie"
+   }
+  },
+  {
+   "to": "psy:tight-loose",
+   "rel": "see-also",
+   "note": {
+    "fa": "والدگری و فرهنگ",
+    "en": "Parenting and culture",
+    "nl": "Ouderschap en cultuur"
+   }
+  }
+ ],
+ "people": [
+  "core:anthony-giddens",
+  "core:annette-lareau"
+ ],
+ "sources": [],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,107 @@
+{
+ "id": "psy:consciousness",
+ "kind": "concept",
+ "title": {
+  "fa": "هشیاری و توجه",
+  "en": "Consciousness and attention disorders",
+  "nl": "Stoornissen van bewustzijn en aandacht"
+ },
+ "parent": "psy:descriptive-psychopathology",
+ "field": "psy:descriptive-psychopathology",
+ "summary": {
+  "fa": "هشیاری یعنی آگاهی از خود و محیط در «اینجا و اکنون»؛ اختلالات آن از تیرگی شعور و دلیریوم تا بهت؛ و انواع توجه.",
+  "en": "Consciousness means awareness of oneself and the environment “here and now”; its disorders range from clouding of consciousness and delirium to stupor; and the types of attention.",
+  "nl": "Bewustzijn betekent besef van jezelf en de omgeving ‘hier en nu’; de stoornissen ervan lopen van bewustzijnsdaling en delirium tot stupor; en de soorten aandacht."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دلیریوم: منشأ جسمی، شروع سریع، نوسان، اشکال توجه.",
+    "en": "Delirium: a physical origin, rapid onset, fluctuation, impaired attention.",
+    "nl": "Delirium: een lichamelijke oorzaak, snel begin, schommelingen, verstoorde aandacht."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حالت شفق، مستی بیمارگونه، خودکاری.",
+    "en": "Twilight states, pathological intoxication, automatisms.",
+    "nl": "Schemertoestanden, pathologische dronkenschap, automatismen."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نظریه‌ها: پردازش پیش‌بین، فضای کاری سراسری، مرتبهٔ بالاتر.",
+    "en": "Theories: predictive processing, global workspace, higher-order.",
+    "nl": "Theorieën: voorspellende verwerking, globale werkruimte, hogere orde."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سه شبکهٔ توجه پوزنر: گوش‌به‌زنگی، جهت‌یابی، کنترل اجرایی.",
+    "en": "Posner's three attention networks: alerting, orienting, executive control.",
+    "nl": "De drie aandachtsnetwerken van Posner: alertheid, oriëntatie, executieve controle."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بینش سه‌بعدی (دیوید ۱۹۹۰)؛ فراشناخت، شناخت اجتماعی و ذهنی‌سازی در پسیکوز.",
+    "en": "Three-dimensional insight (David 1990); metacognition, social cognition and mentalisation in psychosis.",
+    "nl": "Driedimensionaal inzicht (David 1990); metacognitie, sociale cognitie en mentaliseren bij psychose."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:delirium",
+   "rel": "see-also",
+   "note": {
+    "fa": "سرسام",
+    "en": "Delirium",
+    "nl": "Delirium"
+   }
+  },
+  {
+   "to": "psy:ego-disorders",
+   "rel": "see-also",
+   "note": {
+    "fa": "خویشتن",
+    "en": "Self",
+    "nl": "Zelf"
+   }
+  },
+  {
+   "to": "psy:learning-memory",
+   "rel": "see-also",
+   "note": {
+    "fa": "حافظه",
+    "en": "Memory",
+    "nl": "Geheugen"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-jaspers",
+  "core:donald-broadbent"
+ ],
+ "sources": [],
+ "booklets": [
+  "psychopath:consc",
+  "psychopath:attention",
+  "shelf8:jackson",
+  "psychopath:thought8"
+ ],
+ "origin": "psychopath",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

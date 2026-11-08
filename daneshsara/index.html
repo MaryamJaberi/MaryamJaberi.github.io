@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>دانش‌سرا</title>
+<meta name="description" content="دانش‌سرای ایران — چند ویکی فارسی به‌هم‌پیوسته: روان، جامعه، تبار و ژنتیک، فلسفه؛ با پل‌های میان‌رشته‌ای و لایهٔ «برای ایران».">
+<link rel="stylesheet" href="core/design/tokens.css">
+<style>
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);font-size:1.1rem}
+.brand svg{width:28px;height:28px;color:var(--primary)}
+nav.main{display:flex;gap:var(--s5);font-size:var(--small)}nav.main a{color:var(--ink-2)}
+.lang{display:flex;gap:2px;border:1px solid var(--line-strong);border-radius:var(--r-full);padding:2px}
+.lang button{font:inherit;font-size:var(--chip);padding:4px 10px;border:0;border-radius:var(--r-full);background:transparent;color:var(--ink-2);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.hero{text-align:center;padding-block:var(--s12) var(--s8)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.2rem);margin-bottom:var(--s3)}
+.hero .lead{margin-inline:auto;color:var(--ink-2);font-size:1.15rem;max-width:60ch}
+.search{position:relative;max-width:640px;margin:var(--s8) auto 0}
+.search input{width:100%;font:inherit;font-size:1.05rem;padding:14px 48px 14px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink)}
+html[dir=ltr] .search input{padding:14px 18px 14px 48px}
+.search svg{position:absolute;top:50%;inset-inline-end:18px;transform:translateY(-50%);width:20px;height:20px;color:var(--ink-3)}
+.results{position:absolute;inset-inline:0;top:calc(100% + 6px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);text-align:start;max-height:360px;overflow:auto;z-index:4;display:none}
+.results.on{display:block}
+.results a{display:flex;justify-content:space-between;gap:var(--s3);padding:10px 16px;color:var(--ink);border-bottom:1px solid var(--line)}
+.results a:hover{background:var(--surface-subtle);text-decoration:none}
+.results a:last-child{border-bottom:0}
+.results .w{font-size:var(--chip)}
+.stats{display:flex;justify-content:center;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s8)}
+.stat{min-width:150px;text-align:center}
+.stat b{display:block;font-size:1.9rem;color:var(--primary);font-variant-numeric:tabular-nums}
+.stat span{font-size:var(--small);color:var(--ink-2)}
+section{padding-block:var(--s10)}
+section h2{text-align:center;margin-bottom:var(--s2)}
+section .sub{text-align:center;color:var(--ink-2);margin:0 auto var(--s8)}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s4)}
+.path{display:flex;flex-direction:column;gap:var(--s2);color:var(--ink)}
+.path:hover{text-decoration:none;box-shadow:var(--shadow-md)}
+.path h3{font-size:var(--h4);margin:0}.path p{margin:0;color:var(--ink-2);font-size:var(--small)}
+.wikis{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--s4)}
+.wiki{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:var(--s3);color:var(--ink)}
+.wiki::before{content:"";position:absolute;inset-inline:0;top:0;height:5px;background:var(--c)}
+.wiki:hover{text-decoration:none;box-shadow:var(--shadow-md)}
+.wiki h3{margin:var(--s2) 0 0;display:flex;align-items:center;gap:10px}
+.wiki h3 i{width:12px;height:12px;border-radius:50%;background:var(--c);display:inline-block}
+.wiki p{margin:0;color:var(--ink-2);font-size:var(--small)}
+.wiki .nums{display:flex;gap:var(--s4);margin-top:auto;font-size:var(--caption);color:var(--ink-2)}
+.wiki .nums b{color:var(--ink);font-variant-numeric:tabular-nums}
+.wiki .soon{display:inline-block;font-size:var(--chip);padding:2px 10px;border-radius:var(--r-full);background:var(--surface-subtle);color:var(--ink-3);width:max-content}
+.atlas{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--s6);align-items:center}
+.atlas .card{padding:var(--s6)}
+.fams{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3)}
+.cta{display:flex;gap:var(--s3);flex-wrap:wrap;margin-top:var(--s5)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4);text-align:center}
+.three .card b{display:block;font-size:1.6rem;color:var(--primary)}
+footer{border-top:1px solid var(--line);padding:var(--s8) 0;color:var(--ink-3);font-size:var(--caption)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--s3)}
+@media (max-width:760px){.atlas{grid-template-columns:1fr}.three{grid-template-columns:1fr}nav.main{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="./"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2.2"/><circle cx="5" cy="7" r="1.6"/><circle cx="19" cy="7" r="1.6"/><circle cx="5" cy="17" r="1.6"/><circle cx="19" cy="17" r="1.6"/><path d="M6.4 7.8 10.2 11M17.6 7.8 13.8 11M6.4 16.2 10.2 13M17.6 16.2 13.8 13"/></svg><span data-i="brand">دانش‌سرا</span></a>
+ <nav class="main"><a href="#wikis" data-i="n1">ویکی‌ها</a><a href="atlas/" data-i="n2">اطلس رشته‌ها</a><a href="atlas/bridge.html" data-i="n3">پل‌ها</a><a href="#iran" data-i="n4">برای ایران</a></nav>
+ <div class="lang" role="group" aria-label="language"><button data-l="fa" aria-pressed="true">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
+</div></header>
+
+<main>
+ <section class="hero wrap">
+  <h1 data-i="h1">دانش‌سرای ایران</h1>
+  <p class="lead" data-i="lead">چند ویکی فارسی به‌هم‌پیوسته دربارهٔ انسان: روان، جامعه، تبار و ژنتیک، فلسفه. هر مفهوم یک خانه و یک منبع دارد؛ رشته‌های میان‌رشته‌ای پل می‌زنند؛ و در پایان همه به یک پرسش می‌رسند: این دانش‌ها برای مردم و سرزمین ایران چه می‌گویند؟</p>
+  <div class="search">
+   <input id="q" type="search" autocomplete="off" placeholder="جست‌وجو در همهٔ ویکی‌ها: اعتماد، فرگشت، سهروردی…" data-ph="ph" aria-label="search">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+   <div class="results" id="res" role="listbox"></div>
+  </div>
+  <div class="stats" id="stats"></div>
+ </section>
+
+ <section class="wrap">
+  <h2 data-i="startT">از کجا شروع کنم؟</h2>
+  <p class="sub" data-i="startS">چهار مسیر، بسته به اینکه چرا آمده‌اید.</p>
+  <div class="paths">
+   <a class="card path" href="psy/learn.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V5a1 1 0 0 1 1-1h6v15H5a1 1 0 0 0-1 1zM12 4h7a1 1 0 0 1 1 1v14a1 1 0 0 0 1 1h-9z"/></svg><h3 data-i="p1">تازه‌کارم</h3><p data-i="p1s">مرکز یادگیری: مسیرهای خواندن از ساده به پیچیده.</p></a>
+   <a class="card path" href="atlas/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/></svg><h3 data-i="p2">دنبال یک موضوعم</h3><p data-i="p2s">جست‌وجو، یا اطلس رشته‌ها برای دیدن اینکه موضوع کجای علم نشسته.</p></a>
+   <a class="card path" href="psy/scales.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><h3 data-i="p3">خودم را بسنجم</h3><p data-i="p3s">سنجش‌خانه: پرسشنامه‌های معتبر با منبع اصلی؛ هیچ داده‌ای ذخیره نمی‌شود.</p></a>
+   <a class="card path" href="#iran"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg><h3 data-i="p4">این علم‌ها برای ایران چه می‌گویند؟</h3><p data-i="p4s">لنز ایران: داده با سال و روش، پرسش‌های باز، و چند روایت.</p></a>
+  </div>
+ </section>
+
+ <section class="wrap" id="wikis">
+  <h2 data-i="wikisT">ویکی‌ها</h2>
+  <p class="sub" data-i="wikisS">هر ویکی همان ساختار را دارد: رشته، زیررشته، مفهوم؛ با گراف، سرزمین، کتابخانه و چهره‌ها.</p>
+  <div class="wikis" id="wikis-grid"></div>
+ </section>
+
+ <section class="wrap">
+  <div class="atlas">
+   <div>
+    <h2 style="text-align:start" data-i="atlasT">یک اطلس برای همهٔ ویکی‌ها</h2>
+    <p data-i="atlasS">۷۷ رشته در پنج خانواده؛ رشته‌های اصلی روی لبهٔ دایره و ۵۳ رشتهٔ میان‌رشته‌ای در درون، میان رشته‌هایی که از آن‌ها ساخته شده‌اند. ۲۵ پل تازه هرکدام صفحهٔ خودشان را دارند: اثر بنیادی، مرجع امروز، یافتهٔ کلیدی با وضعیت تکرار، و کتاب فارسی.</p>
+    <div class="fams"><span class="chip fam-bio" data-i="f-bio">زیست و پزشکی</span><span class="chip fam-psy" data-i="f-psy">روان</span><span class="chip fam-soc" data-i="f-soc">جامعه</span><span class="chip fam-hum" data-i="f-hum">فلسفه و علوم انسانی</span><span class="chip fam-formal" data-i="f-formal">داده و رایانش</span></div>
+    <div class="cta"><a class="btn" href="atlas/" data-i="atlasB">باز کردن اطلس</a><a class="btn ghost" href="atlas/bridge.html" data-i="bridgeB">۲۵ صفحهٔ پل</a></div>
+   </div>
+   <div class="three">
+    <div class="card"><b id="n-fields">۷۷</b><span data-i="s-fields">رشته</span></div>
+    <div class="card"><b id="n-bridges">۲۵</b><span data-i="s-bridges">صفحهٔ پل</span></div>
+    <div class="card"><b id="n-cross">۰</b><span data-i="s-cross">پیوند میان‌ویکی</span></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="wrap" id="iran">
+  <h2 data-i="iranT">برای ایران</h2>
+  <p class="sub" data-i="iranS">لایهٔ «برای ایران» در فاز ۴ ساخته می‌شود: روی هر رشته یک برگه با داده‌های واقعی دربارهٔ ایران، هر عدد با سال، روش و ردهٔ کیفیت. فعلاً نشانه‌هایش را در صفحه‌های پل می‌بینید.</p>
+  <div class="paths" id="iran-grid"></div>
+ </section>
+</main>
+<footer><div class="wrap">
+ <span data-i="foot1">دانش‌سرا · زیر چتر SoloNovate · متن CC BY-SA 4.0، کد MIT</span>
+ <span id="built"></span>
+ <span data-i="foot2">هیچ ردیابی، هیچ ذخیرهٔ داده</span>
+</div></footer>
+
+<script>
+const UI={
+fa:{brand:"دانش‌سرا",n1:"ویکی‌ها",n2:"اطلس رشته‌ها",n3:"پل‌ها",n4:"برای ایران",h1:"دانش‌سرای ایران",lead:"چند ویکی فارسی به‌هم‌پیوسته دربارهٔ انسان: روان، جامعه، تبار و ژنتیک، فلسفه. هر مفهوم یک خانه و یک منبع دارد؛ رشته‌های میان‌رشته‌ای پل می‌زنند؛ و در پایان همه به یک پرسش می‌رسند: این دانش‌ها برای مردم و سرزمین ایران چه می‌گویند؟",ph:"جست‌وجو در همهٔ ویکی‌ها: اعتماد، فرگشت، سهروردی…",
+ startT:"از کجا شروع کنم؟",startS:"چهار مسیر، بسته به اینکه چرا آمده‌اید.",p1:"تازه‌کارم",p1s:"مرکز یادگیری: مسیرهای خواندن از ساده به پیچیده.",p2:"دنبال یک موضوعم",p2s:"جست‌وجو، یا اطلس رشته‌ها برای دیدن اینکه موضوع کجای علم نشسته.",p3:"خودم را بسنجم",p3s:"سنجش‌خانه: پرسشنامه‌های معتبر با منبع اصلی؛ هیچ داده‌ای ذخیره نمی‌شود.",p4:"این علم‌ها برای ایران چه می‌گویند؟",p4s:"لنز ایران: داده با سال و روش، پرسش‌های باز، و چند روایت.",
+ wikisT:"ویکی‌ها",wikisS:"هر ویکی همان ساختار را دارد: رشته، زیررشته، مفهوم؛ با گراف، سرزمین، کتابخانه و چهره‌ها.",
+ atlasT:"یک اطلس برای همهٔ ویکی‌ها",atlasS:"۷۷ رشته در پنج خانواده؛ رشته‌های اصلی روی لبهٔ دایره و ۵۳ رشتهٔ میان‌رشته‌ای در درون، میان رشته‌هایی که از آن‌ها ساخته شده‌اند. ۲۵ پل تازه هرکدام صفحهٔ خودشان را دارند: اثر بنیادی، مرجع امروز، یافتهٔ کلیدی با وضعیت تکرار، و کتاب فارسی.",
+ "f-bio":"زیست و پزشکی","f-psy":"روان","f-soc":"جامعه","f-hum":"فلسفه و علوم انسانی","f-formal":"داده و رایانش",atlasB:"باز کردن اطلس",bridgeB:"۲۵ صفحهٔ پل","s-fields":"رشته","s-bridges":"صفحهٔ پل","s-cross":"پیوند میان‌ویکی",
+ iranT:"برای ایران",iranS:"لایهٔ «برای ایران» در فاز ۴ ساخته می‌شود: روی هر رشته یک برگه با داده‌های واقعی دربارهٔ ایران، هر عدد با سال، روش و ردهٔ کیفیت. فعلاً نشانه‌هایش را در صفحه‌های پل می‌بینید.",
+ foot1:"دانش‌سرا · زیر چتر SoloNovate · متن CC BY-SA 4.0، کد MIT",foot2:"هیچ ردیابی، هیچ ذخیرهٔ داده",built:"ساخت",
+ live:"زنده",soon:"در راه",building:"در حال ساخت",concepts:"مفهوم",sourced:"منبع‌دار",people:"چهره",tools:"ابزار",
+ w:{psy:["ویکی روان","روان‌شناسی، روان‌پزشکی، علوم اعصاب و درمان؛ از درس دکتر آذرخش مکری. ۲۱ ابزار، سه زبان."],tabar:["ویکی تبار","فرگشت انسان، ژنتیک جمعیت و تبارشناسی؛ از گفت‌وگوهای دکتر وحدتی‌نسب و کتاب‌های مرجع."],soc:["ویکی جامعه","جامعه‌شناسی، سرمایهٔ اجتماعی، نهادها و دگرگونی ارزش‌ها."],phil:["ویکی فلسفه","فلسفهٔ علم، ذهن و اخلاق؛ سنت ایرانی از ابن‌سینا تا امروز."]},
+ kinds:{concept:"مفهوم",field:"رشته",subfield:"زیررشته",bridge:"پل",person:"چهره",iran:"ایران",root:"ریشه"},
+ iranCards:[["atlas/bridge.html#archaeogen","باستان‌ژنتیک","ژنوم نوسنگی گنج‌دره، بز اهلی‌شدهٔ زاگرس، تبار کشاورز ایرانی تا هند و استپ."],["atlas/bridge.html#geneculture","ژن و فرهنگ","پایداری لاکتاز حدود ۹.۵٪ در کنار ده هزار سال دامداری: معمای زنده."],["atlas/bridge.html#genethics","اخلاق ژنتیک","غربالگری اجباری تالاسمی پیش از ازدواج: هم داده هم بستر اخلاقی."],["atlas/bridge.html#philsocsci","فلسفهٔ علوم اجتماعی","بحث اسلامی‌سازی علوم انسانی دقیقاً پرسش همین پل است."]]},
+en:{brand:"Daneshsara",n1:"Wikis",n2:"Atlas",n3:"Bridges",n4:"For Iran",h1:"Daneshsara",lead:"Interlinked Persian wikis about human beings: mind, society, lineage and genetics, philosophy. Every concept has one home and a source; interdisciplinary fields bridge the wikis; and all of it leads to one question: what do these sciences say about the people and land of Iran?",ph:"Search all wikis: trust, evolution, Suhrawardi…",
+ startT:"Where do I start?",startS:"Four paths, depending on why you came.",p1:"I am new",p1s:"Learning centre: reading paths from simple to advanced.",p2:"I am looking for a topic",p2s:"Search, or the atlas to see where a topic sits in science.",p3:"Assess myself",p3s:"Validated questionnaires with their original source; nothing is stored.",p4:"What do these sciences say about Iran?",p4s:"The Iran lens: data with year and method, open questions, several voices.",
+ wikisT:"Wikis",wikisS:"Every wiki shares one structure: field, subfield, concept; with a graph, a land, a library and people.",
+ atlasT:"One atlas for all wikis",atlasS:"77 fields in five families; core disciplines on the rim and 53 interdisciplinary fields inside, between the disciplines they are built from. 25 new bridges each have their own page: founding work, standard reference, key finding with replication status, Persian books.",
+ "f-bio":"Life & medicine","f-psy":"Mind","f-soc":"Society","f-hum":"Philosophy & humanities","f-formal":"Data & computing",atlasB:"Open the atlas",bridgeB:"25 bridge pages","s-fields":"fields","s-bridges":"bridge pages","s-cross":"cross-wiki links",
+ iranT:"For Iran",iranS:"The Iran layer comes in phase 4: a note on every field with real data about Iran, each number with year, method and a quality grade. For now its traces appear on the bridge pages.",
+ foot1:"Daneshsara · under SoloNovate · text CC BY-SA 4.0, code MIT",foot2:"No tracking, no data stored",built:"built",
+ live:"live",soon:"coming",building:"in progress",concepts:"concepts",sourced:"sourced",people:"people",tools:"tools",
+ w:{psy:["Psychology wiki","Psychology, psychiatry, neuroscience and therapy; from Dr Azarakhsh Mokri's course. 21 tools, three languages."],tabar:["Lineage wiki","Human evolution, population genetics and ancestry; from Dr Vahdati Nasab's talks and reference books."],soc:["Sociology wiki","Sociology, social capital, institutions and value change."],phil:["Philosophy wiki","Philosophy of science, mind and ethics; the Iranian tradition from Avicenna to today."]},
+ kinds:{concept:"concept",field:"field",subfield:"subfield",bridge:"bridge",person:"person",iran:"Iran",root:"root"},
+ iranCards:[["atlas/bridge.html#archaeogen","Archaeogenetics","Neolithic genomes of Ganj Dareh, Zagros goat domestication, Iranian-farmer ancestry to India and the steppe."],["atlas/bridge.html#geneculture","Gene and culture","Lactase persistence around 9.5% next to ten thousand years of herding: a live puzzle."],["atlas/bridge.html#genethics","Ethics of genetics","Mandatory premarital thalassemia screening: both data and ethical context."],["atlas/bridge.html#philsocsci","Philosophy of social science","The 'Islamization of the humanities' debate is exactly this bridge's question."]]},
+nl:{brand:"Daneshsara",n1:"Wiki's",n2:"Atlas",n3:"Bruggen",n4:"Voor Iran",h1:"Daneshsara",lead:"Verbonden Perzische wiki's over de mens: psyche, samenleving, afstamming en genetica, filosofie. Elk begrip heeft één thuis en een bron; interdisciplinaire velden slaan bruggen; en alles leidt naar één vraag: wat zeggen deze wetenschappen over de mensen en het land Iran?",ph:"Zoek in alle wiki's: vertrouwen, evolutie, Suhrawardi…",
+ startT:"Waar begin ik?",startS:"Vier paden, afhankelijk van waarom u kwam.",p1:"Ik ben nieuw",p1s:"Leercentrum: leesroutes van eenvoudig naar gevorderd.",p2:"Ik zoek een onderwerp",p2s:"Zoeken, of de atlas om te zien waar een onderwerp in de wetenschap zit.",p3:"Mezelf meten",p3s:"Gevalideerde vragenlijsten met hun oorspronkelijke bron; er wordt niets opgeslagen.",p4:"Wat zeggen deze wetenschappen over Iran?",p4s:"De Iran-lens: data met jaar en methode, open vragen, meerdere stemmen.",
+ wikisT:"Wiki's",wikisS:"Elke wiki heeft dezelfde structuur: vakgebied, deelgebied, begrip; met een grafiek, een land, een bibliotheek en personen.",
+ atlasT:"Eén atlas voor alle wiki's",atlasS:"77 vakgebieden in vijf families; kerndisciplines op de rand en 53 interdisciplinaire velden binnenin. 25 nieuwe bruggen hebben elk een eigen pagina: grondleggend werk, standaardwerk, kernbevinding met replicatiestatus, Perzische boeken.",
+ "f-bio":"Leven & geneeskunde","f-psy":"Psyche","f-soc":"Samenleving","f-hum":"Filosofie & geesteswetenschappen","f-formal":"Data & informatica",atlasB:"Open de atlas",bridgeB:"25 brugpagina's","s-fields":"vakgebieden","s-bridges":"brugpagina's","s-cross":"verbindingen tussen wiki's",
+ iranT:"Voor Iran",iranS:"De Iran-laag komt in fase 4: een notitie bij elk vakgebied met echte data over Iran, elk getal met jaar, methode en kwaliteitsgraad. Voorlopig ziet u de sporen op de brugpagina's.",
+ foot1:"Daneshsara · onder SoloNovate · tekst CC BY-SA 4.0, code MIT",foot2:"Geen tracking, geen opslag",built:"gebouwd",
+ live:"live",soon:"komt eraan",building:"in opbouw",concepts:"begrippen",sourced:"met bron",people:"personen",tools:"tools",
+ w:{psy:["Psychologie-wiki","Psychologie, psychiatrie, neurowetenschap en therapie; uit de cursus van dr. Azarakhsh Mokri. 21 tools, drie talen."],tabar:["Afstammingswiki","Menselijke evolutie, populatiegenetica en afstamming; uit de gesprekken van dr. Vahdati Nasab en naslagwerken."],soc:["Sociologie-wiki","Sociologie, sociaal kapitaal, instituties en waardenverandering."],phil:["Filosofie-wiki","Wetenschapsfilosofie, geest en ethiek; de Iraanse traditie van Avicenna tot nu."]},
+ kinds:{concept:"begrip",field:"vakgebied",subfield:"deelgebied",bridge:"brug",person:"persoon",iran:"Iran",root:"wortel"},
+ iranCards:[["atlas/bridge.html#archaeogen","Archeogenetica","Neolithische genomen van Ganj Dareh, geitendomesticatie in de Zagros, Iraanse boerenafstamming tot India en de steppe."],["atlas/bridge.html#geneculture","Gen en cultuur","Lactasepersistentie rond 9,5% naast tienduizend jaar veeteelt: een levend raadsel."],["atlas/bridge.html#genethics","Ethiek van de genetica","Verplichte thalassemiescreening voor het huwelijk: data én ethische context."],["atlas/bridge.html#philsocsci","Filosofie van de sociale wetenschappen","Het debat over 'islamisering van de geesteswetenschappen' is precies de vraag van deze brug."]]}
+};
+let L=(()=>{try{return localStorage.getItem('ds-lang')||'fa'}catch(e){return 'fa'}})();
+let REG=null,STATS=null;
+const T=k=>UI[L][k]||UI.fa[k]||k;
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fa=n=>L==='fa'?String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]):String(n);
+const WIKIS=[['psy','var(--fam-psy)','psy/','live'],['tabar','var(--fam-bio)',null,'building'],['soc','var(--fam-soc)',null,'soon'],['phil','var(--fam-hum)',null,'soon']];
+function setLang(l){L=l;try{localStorage.setItem('ds-lang',l)}catch(e){}
+ document.documentElement.lang=l;document.documentElement.dir=l==='fa'?'rtl':'ltr';
+ document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
+ document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T(e.dataset.i));
+ document.getElementById('q').placeholder=T('ph');
+ render();}
+function render(){
+ const g=document.getElementById('wikis-grid');
+ g.innerHTML=WIKIS.map(([k,c,href,st])=>{const [name,desc]=UI[L].w[k];
+  const s=STATS&&k==='psy'?`<div class="nums"><span><b>${fa(STATS.concepts)}</b> ${T('concepts')}</span><span><b>${fa(STATS.concepts_with_sources)}</b> ${T('sourced')}</span><span><b>${fa(STATS.people)}</b> ${T('people')}</span><span><b>${fa(21)}</b> ${T('tools')}</span></div>`:`<span class="soon">${T(st)}</span>`;
+  const tag=href?'a':'div';return `<${tag} class="card wiki" style="--c:${c}" ${href?`href="${href}"`:''}><h3><i></i>${esc(name)}</h3><p>${esc(desc)}</p>${s}</${tag}>`}).join('');
+ document.getElementById('iran-grid').innerHTML=UI[L].iranCards.map(([h,t,d])=>`<a class="card path" href="${h}"><h3>${esc(t)}</h3><p>${esc(d)}</p></a>`).join('');
+ if(STATS){document.getElementById('n-fields').textContent=fa(STATS.fields);document.getElementById('n-bridges').textContent=fa(STATS.bridges);document.getElementById('n-cross').textContent=fa(STATS.cross_wiki_links+STATS.bridge_links);
+  document.getElementById('stats').innerHTML=[[STATS.concepts,'concepts'],[STATS.concepts_with_sources,'sourced'],[STATS.fields,'s-fields'],[STATS.bridges,'s-bridges'],[STATS.people,'people']].map(([n,k])=>`<div class="stat"><b>${fa(n)}</b><span>${T(k)}</span></div>`).join('');
+  document.getElementById('built').textContent=T('built')+' '+STATS.built;}
+}
+// search
+const norm=s=>String(s||'').toLowerCase().replace(/[يك]/g,c=>({'ي':'ی','ك':'ک'}[c])).replace(/[‌ً-ٰٟ]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه');
+const inp=document.getElementById('q'),res=document.getElementById('res');
+inp.addEventListener('input',()=>{const q=norm(inp.value.trim());if(!REG||q.length<2){res.classList.remove('on');return}
+ const hits=[];for(const [id,e] of Object.entries(REG)){if(e.type==='person'&&q.length<3)continue;const t=Object.values(e.title||{}).filter(Boolean).join(' ');if(norm(t).includes(q)){hits.push([id,e]);if(hits.length>=12)break}}
+ res.innerHTML=hits.map(([id,e])=>`<a href="${esc(e.url)}"><span>${esc(e.title[L]||e.title.fa||e.title.en)}</span><span class="w chip">${UI[L].kinds[e.type]||e.type} · ${e.wiki}</span></a>`).join('')||`<a><span class="caption">—</span></a>`;
+ res.classList.add('on');});
+document.addEventListener('click',e=>{if(!e.target.closest('.search'))res.classList.remove('on')});
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+fetch('core/registry.json').then(r=>r.json()).then(r=>{REG=r.entries;STATS=r.stats;render();}).catch(()=>{});
+setLang(L);
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+{
+ "id": "psy:reappraisal",
+ "kind": "concept",
+ "title": {
+  "fa": "بازتعبیر",
+  "en": "Cognitive reappraisal",
+  "nl": "Cognitieve herwaardering"
+ },
+ "parent": "psy:emotion-regulation",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "تغییر معنای موقعیت تا اثر هیجانی آن تغییر کند. نکتهٔ کلیدی ۱ جلسهٔ ۸: ابزار مهم و کلیدی در خزانهٔ خویشتنداری و تنظیم هیجان.",
+  "en": "Changing the meaning of a situation so its emotional impact changes. Key point 1 of session 8: an important tool in the toolkit of self-control and emotion regulation.",
+  "nl": "De betekenis van een situatie veranderen zodat de emotionele impact verandert. Kernpunt 1 van sessie 8: een belangrijk instrument voor zelfbeheersing en emotieregulatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تعریف: «نوعی تغییر شناختی که در آن شرایط ایجادکنندهٔ هیجان به‌گونه‌ای ساخته یا بازسازی می‌شوند که اثر هیجانی آن متفاوت گردد».",
+    "en": "Definition: “a form of cognitive change in which the circumstances giving rise to an emotion are constructed or reconstructed so that their emotional impact differs”.",
+    "nl": "Definitie: ‘een vorm van cognitieve verandering waarbij de omstandigheden die een emotie oproepen zo worden opgebouwd of herbouwd dat de emotionele impact verandert’."
+   },
+   "sources": [
+    "src:d669fb664b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بروکس (۲۰۱۴): گفتن «هیجان‌زده‌ام» به‌جای «آرامم»؛ دقت آواز کارائوکه ۸۰٫۵٪ در برابر ۵۳٪ برای «مضطربم».",
+    "en": "Brooks (2014): saying “I am excited” instead of “I am calm”; karaoke singing accuracy 80.5% versus 53% for “I am anxious”.",
+    "nl": "Brooks (2014): ‘ik ben opgewonden’ zeggen in plaats van ‘ik ben kalm’; nauwkeurigheid bij karaoke 80,5% tegenover 53% bij ‘ik ben angstig’."
+   },
+   "sources": [
+    "src:d669fb664b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سخنرانی: متقاعدکننده‌تر، مطمئن‌تر و طولانی‌تر. ریاضی: عملکرد بهتر با ضربان قلب یکسان.",
+    "en": "Speeches: more persuasive, more confident and longer. Maths: better performance with the same heart rate.",
+    "nl": "Toespraken: overtuigender, zelfverzekerder en langer. Wiskunde: betere prestaties bij dezelfde hartslag."
+   },
+   "sources": [
+    "src:d669fb664b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "۹۱٪ مردم در برابر اضطراب سعی می‌کنند آرام شوند؛ اما آرام شدن سخت‌تر از تغییر برچسب برانگیختگی است.",
+    "en": "91% of people try to calm down when anxious; but calming down is harder than relabelling the arousal.",
+    "nl": "91% van de mensen probeert bij angst rustig te worden; maar rustig worden is moeilijker dan de opwinding een ander etiket geven."
+   },
+   "sources": [
+    "src:d669fb664b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قاب «چالش» در برابر «تهدید» (آلتر ۲۰۱۰) و طراحی شناختی شغل، شکل‌های دیگر بازتعبیرند.",
+    "en": "The “challenge” versus “threat” frame (Alter 2010) and cognitive job crafting are other forms of reappraisal.",
+    "nl": "Het kader ‘uitdaging’ tegenover ‘dreiging’ (Alter 2010) en cognitieve job crafting zijn andere vormen van herwaardering."
+   },
+   "sources": [
+    "src:d669fb664b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازتعبیر برای عادت: سیگار ← «کلکسیون ترکیبات سرطان‌زا»؛ غذای لذیذ ← «مجموعهٔ چربی و کالری مضر».",
+    "en": "Reappraisal for habits: a cigarette → “a collection of carcinogens”; tasty food → “a package of harmful fat and calories”.",
+    "nl": "Herwaardering bij gewoonten: een sigaret → ‘een verzameling kankerverwekkende stoffen’; lekker eten → ‘een pakket schadelijk vet en calorieën’."
+   },
+   "sources": [
+    "src:d669fb664b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:stress-mindset",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌منطق",
+    "en": "Same logic",
+    "nl": "Dezelfde logica"
+   }
+  },
+  {
+   "to": "psy:stereotype-threat",
+   "rel": "critiques",
+   "note": {
+    "fa": "قاب چالش",
+    "en": "Challenge frame",
+    "nl": "Uitdagingskader"
+   }
+  },
+  {
+   "to": "psy:job-crafting",
+   "rel": "see-also",
+   "note": {
+    "fa": "طراحی شناختی",
+    "en": "Cognitive design",
+    "nl": "Cognitief ontwerp"
+   }
+  },
+  {
+   "to": "psy:surface-deep",
+   "rel": "see-also",
+   "note": {
+    "fa": "بازی عمیق",
+    "en": "Deep acting",
+    "nl": "Diep acteren"
+   }
+  }
+ ],
+ "people": [
+  "core:alison-wood-brooks",
+  "core:james-gross",
+  "core:kevin-ochsner"
+ ],
+ "sources": [
+  "src:d669fb664b"
+ ],
+ "booklets": [
+  "s8:reappraisal",
+  "change:tips",
+  "s5:less"
+ ],
+ "origin": "s8",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

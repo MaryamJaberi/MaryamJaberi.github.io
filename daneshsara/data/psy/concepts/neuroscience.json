@@ -1,0 +1,65 @@
+{
+ "id": "psy:neuroscience",
+ "kind": "field",
+ "title": {
+  "fa": "علوم اعصاب",
+  "en": "Neuroscience",
+  "nl": "Neurowetenschap"
+ },
+ "parent": "psy:psyche",
+ "field": null,
+ "summary": {
+  "fa": "مطالعهٔ ساختار و کارکرد دستگاه عصبی، از مولکول و نورون تا شبکه‌های مغزی و رفتار. شاخه‌های شناختی و عاطفی آن پل مستقیم به روان‌شناسی‌اند.",
+  "en": "The study of the structure and function of the nervous system, from molecules and neurons to brain networks and behaviour. Its cognitive and affective branches are a direct bridge to psychology.",
+  "nl": "De studie van bouw en werking van het zenuwstelsel, van moleculen en neuronen tot hersennetwerken en gedrag. De cognitieve en affectieve takken vormen een directe brug naar de psychologie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آموزهٔ نورون (رامون ای کاخال) پایهٔ علوم اعصاب نوین است: مغز از سلول‌های مجزا ساخته شده که از راه سیناپس ارتباط دارند.",
+    "en": "The neuron doctrine (Ramón y Cajal) is the basis of modern neuroscience: the brain is made of separate cells that communicate through synapses.",
+    "nl": "De neuronleer (Ramón y Cajal) is de basis van de moderne neurowetenschap: het brein bestaat uit afzonderlijke cellen die via synapsen communiceren."
+   },
+   "sources": [
+    "src:9445ab3875"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ابزارها: fMRI، EEG، مطالعهٔ ضایعه، الگوهای حیوانی، تحریک مغناطیسی.",
+    "en": "Tools: fMRI, EEG, lesion studies, animal models, magnetic stimulation.",
+    "nl": "Instrumenten: fMRI, EEG, laesieonderzoek, diermodellen, magnetische stimulatie."
+   },
+   "sources": [
+    "src:9445ab3875"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در این دوره: لودو (جوانه روی شاخهٔ موجود)، سیستم‌های تهدید و سائق، و پایهٔ زیستی استرس.",
+    "en": "In this course: LeDoux (a bud on an existing branch), the threat and drive systems, and the biological basis of stress.",
+    "nl": "In deze cursus: LeDoux (een knop aan een bestaande tak), het dreigings- en driftsysteem, en de biologische basis van stress."
+   },
+   "sources": [
+    "src:9445ab3875"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:santiago-ramon-y-cajal",
+  "core:donald-hebb"
+ ],
+ "sources": [
+  "src:9445ab3875",
+  "src:a839ddd74c"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

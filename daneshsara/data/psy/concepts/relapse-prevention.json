@@ -1,0 +1,99 @@
+{
+ "id": "psy:relapse-prevention",
+ "kind": "concept",
+ "title": {
+  "fa": "لغزش و پیشگیری از عود",
+  "en": "Lapse & relapse prevention",
+  "nl": "Uitglijder en terugvalpreventie"
+ },
+ "parent": "psy:addiction-therapy",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "تمایز لغزش از عود و آماده شدن برای لغزش؛ «لغزش فاجعه نیست».",
+  "en": "Distinguishing a lapse from a relapse and preparing for lapses; “a lapse is not a disaster”.",
+  "nl": "Een uitglijder onderscheiden van een terugval en je voorbereiden op uitglijders; ‘een uitglijder is geen ramp’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مارلات و گوردون: «اثر نقض پرهیز»، یعنی «حالا که خراب شد...».",
+    "en": "Marlatt and Gordon: the “abstinence violation effect”, that is, “now that it's ruined…”.",
+    "nl": "Marlatt en Gordon: het ‘abstinentieschendingseffect’, oftewel ‘nu het toch al mis is…’."
+   },
+   "sources": [
+    "src:ef54310e25"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نشانه‌های عود قریب‌الوقوع: تغییر الگوی زندگی، گله و بهانه‌گیری، شک در ارزش تغییر، رفتارهای غیرمستقیم مرتبط، توقف رفتارهای سازنده.",
+    "en": "Signs of imminent relapse: a change in lifestyle, complaining and finding excuses, doubting the value of change, indirectly related behaviours, stopping constructive behaviours.",
+    "nl": "Tekenen van dreigende terugval: een veranderd leefpatroon, klagen en uitvluchten zoeken, twijfel aan de waarde van verandering, indirect verwant gedrag, stoppen met constructief gedrag."
+   },
+   "sources": [
+    "src:ef54310e25"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قول و قسم بندرت کارساز است؛ درس گرفتن از هر لغزش و «ضدشکنندگی».",
+    "en": "Promises and oaths rarely work; learning from each lapse and “antifragility”.",
+    "nl": "Beloften en eden werken zelden; leren van elke uitglijder en ‘antifragiliteit’."
+   },
+   "sources": [
+    "src:ef54310e25"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لغزش را گزارش و تحلیل کنید؛ اما «بیماران نمی‌توانند هم در درمان بمانند و هم مصرف کنند».",
+    "en": "Report and analyse lapses; but “patients cannot both stay in treatment and keep using”.",
+    "nl": "Meld en analyseer uitglijders; maar ‘patiënten kunnen niet tegelijk in behandeling blijven en blijven gebruiken’."
+   },
+   "sources": [
+    "src:ef54310e25"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:habit",
+   "rel": "see-also",
+   "note": {
+    "fa": "عادت",
+    "en": "Habit",
+    "nl": "Gewoonte"
+   }
+  },
+  {
+   "to": "psy:addiction-families",
+   "rel": "see-also",
+   "note": {
+    "fa": "خانواده",
+    "en": "Family",
+    "nl": "Gezin"
+   }
+  }
+ ],
+ "people": [
+  "core:alan-marlatt",
+  "core:judith-gordon"
+ ],
+ "sources": [
+  "src:ef54310e25"
+ ],
+ "booklets": [
+  "change:tips",
+  "families:course",
+  "families:craving",
+  "families:lapse"
+ ],
+ "origin": "change",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

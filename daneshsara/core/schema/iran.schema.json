@@ -1,0 +1,16 @@
+{"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "iran.schema.json", "title": "برگهٔ ایران",
+ "type": "object", "required": ["id", "question", "finding", "year", "grade", "source"], "additionalProperties": false,
+ "properties": {
+  "id": {"type": "string", "pattern": "^iran:[a-z0-9-]+$"},
+  "domain": {"enum": ["tabar", "soc", "psy", "phil", "cross"]},
+  "question": {"type": "object", "required": ["fa"], "properties": {"fa": {"type": "string"}, "en": {"type": "string"}, "nl": {"type": "string"}}},
+  "finding": {"type": "object", "required": ["fa"], "properties": {"fa": {"type": "string"}, "en": {"type": "string"}, "nl": {"type": "string"}}},
+  "year": {"type": ["integer", "string"]},
+  "method": {"type": "string"},
+  "grade": {"enum": ["A", "B", "C", "D"], "description": "الف ب ج د — ردهٔ کیفیت داده"},
+  "contested": {"type": "boolean"},
+  "critique": {"type": "string"},
+  "source": {"type": "array", "items": {"type": "object", "required": ["title", "url"], "properties": {"title": {"type": "string"}, "url": {"type": "string"}}}},
+  "fields": {"type": "array", "items": {"type": "string"}, "description": "رشته‌های اطلس مرتبط"},
+  "concepts": {"type": "array", "items": {"type": "string"}},
+  "capability": {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 10}}}}

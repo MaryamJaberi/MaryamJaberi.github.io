@@ -1,0 +1,132 @@
+{
+ "id": "psy:surface-deep",
+ "kind": "concept",
+ "title": {
+  "fa": "بازی سطحی و عمیق",
+  "en": "Surface vs. deep acting",
+  "nl": "Oppervlakkig versus diep acteren"
+ },
+ "parent": "psy:emotional-labor",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "دو شکل کار عاطفی: تغییر ابراز بدون تغییر احساس (سطحی) و تغییر خود احساس (عمیق). بازی سطحی با فرسودگی و بی‌خوابی همراه است.",
+  "en": "Two forms of emotional labour: changing expression without changing feeling (surface) and changing the feeling itself (deep). Surface acting goes with burnout and insomnia.",
+  "nl": "Twee vormen van emotiewerk: de uiting veranderen zonder het gevoel te veranderen (oppervlakkig) en het gevoel zelf veranderen (diep). Oppervlakkig acteren gaat samen met burn-out en slapeloosheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "قواعد احساس (چه باید حس کرد) و قواعد ابراز (چه باید نشان داد) برای گروه‌های مختلف متفاوت‌اند.",
+    "en": "Feeling rules (what one should feel) and display rules (what one should show) differ for different groups.",
+    "nl": "Gevoelsregels (wat je hoort te voelen) en uitingsregels (wat je hoort te tonen) verschillen per groep."
+   },
+   "sources": [
+    "src:d887bc2ac7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مربیان شنای زن باید «لگد بزن» را با لحن پرسشی و شیرین بگویند؛ مردان نه («واکنش تلافی‌جویانه به خلاف‌کلیشه»).",
+    "en": "Female swimming coaches have to say “kick” in a sweet, questioning tone; men don't (“backlash against counter-stereotypical behaviour”).",
+    "nl": "Vrouwelijke zwemcoaches moeten ‘trappen’ op een lieve, vragende toon zeggen; mannen niet (‘backlash tegen anti-stereotiep gedrag’)."
+   },
+   "sources": [
+    "src:d887bc2ac7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فراتحلیل هولسهگر و شوه (۲۰۱۱): بازی سطحی با خستگی عاطفی، بازی عمیق با پیامد منفی کمتر.",
+    "en": "Hülsheger and Schewe's meta-analysis (2011): surface acting goes with emotional exhaustion, deep acting with fewer negative outcomes.",
+    "nl": "Meta-analyse van Hülsheger en Schewe (2011): oppervlakkig acteren gaat samen met emotionele uitputting, diep acteren met minder negatieve gevolgen."
+   },
+   "sources": [
+    "src:d887bc2ac7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کار شناختی (دامینگر ۲۰۱۹): زنان بیشتر پیش‌بینی نیازها و پایش را بر عهده دارند، که نامرئی‌ترین بخش‌هاست.",
+    "en": "Cognitive labour (Daminger 2019): women more often take on anticipating needs and monitoring, the most invisible parts.",
+    "nl": "Cognitief werk (Daminger 2019): vrouwen nemen vaker het voorzien van behoeften en het bewaken op zich, de meest onzichtbare onderdelen."
+   },
+   "sources": [
+    "src:d887bc2ac7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جعبهٔ مردانگی (پروموندو ۲۰۱۷): هفت ستون قواعد احساسی سخت برای مردان.",
+    "en": "The Man Box (Promundo 2017): seven pillars of rigid emotional rules for men.",
+    "nl": "De Man Box (Promundo 2017): zeven pijlers van starre gevoelsregels voor mannen."
+   },
+   "sources": [
+    "src:d887bc2ac7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمایش سطحی ← تحلیل منابع خودتنظیمی ← الکل بیشتر بعد از کار (سیر، گرندی و چی ۲۰۲۰).",
+    "en": "Surface display → depleted self-regulation resources → more alcohol after work (Sayre, Grandey and Chi 2020).",
+    "nl": "Oppervlakkig tonen → uitgeputte zelfregulatie → meer alcohol na het werk (Sayre, Grandey en Chi 2020)."
+   },
+   "sources": [
+    "src:d887bc2ac7"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:gross-model",
+   "rel": "contrasts",
+   "note": {
+    "fa": "سرکوب در برابر بازتعبیر",
+    "en": "Suppression versus reappraisal",
+    "nl": "Onderdrukken tegenover herwaarderen"
+   }
+  },
+  {
+   "to": "psy:burnout",
+   "rel": "explains",
+   "note": {
+    "fa": "پیامد",
+    "en": "Consequence",
+    "nl": "Gevolg"
+   }
+  },
+  {
+   "to": "psy:emodiversity",
+   "rel": "see-also",
+   "note": {
+    "fa": "فقر خزانه",
+    "en": "Impoverished repertoire",
+    "nl": "Arm repertoire"
+   }
+  }
+ ],
+ "people": [
+  "core:arlie-hochschild",
+  "core:alicia-grandey",
+  "core:ute-hulsheger",
+  "core:allison-gabriel"
+ ],
+ "sources": [
+  "src:d887bc2ac7",
+  "src:8eff81571b",
+  "src:d5342676d3"
+ ],
+ "booklets": [
+  "emolabor:mechanics",
+  "s11:alcohol"
+ ],
+ "origin": "emolabor",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

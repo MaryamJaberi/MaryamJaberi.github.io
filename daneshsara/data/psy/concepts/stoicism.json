@@ -1,0 +1,86 @@
+{
+ "id": "psy:stoicism",
+ "kind": "subfield",
+ "title": {
+  "fa": "رواقی‌گری و ریشه‌های درمان شناختی",
+  "en": "Stoicism",
+  "nl": "Stoïcisme"
+ },
+ "parent": "psy:philosophy",
+ "field": null,
+ "summary": {
+  "fa": "اپیکتتوس: «آدم‌ها را نه خود چیزها، بلکه برداشتشان از چیزها آشفته می‌کند». آلبرت الیس و آرون بک همین جمله را از ریشه‌های درمان شناختی دانسته‌اند.",
+  "en": "Epictetus: “People are disturbed not by things, but by the views they take of them.” Albert Ellis and Aaron Beck have cited this line among the roots of cognitive therapy.",
+  "nl": "Epictetus: ‘Het zijn niet de dingen zelf die mensen verontrusten, maar hun opvattingen erover.’ Albert Ellis en Aaron Beck noemden deze zin als een van de wortels van cognitieve therapie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تمایز آنچه در کنترل ماست از آنچه نیست؛ شبیه دعای آرامش و پذیرش.",
+    "en": "Distinguishing what is in our control from what is not; like the Serenity Prayer and acceptance.",
+    "nl": "Onderscheiden wat binnen onze macht ligt en wat niet; zoals het sereniteitsgebed en aanvaarding."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازتعبیر در مدل گراس شکل امروزی همین ایده است.",
+    "en": "Reappraisal in Gross's model is the modern form of this idea.",
+    "nl": "Herwaardering in het model van Gross is de moderne vorm van dit idee."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رواقی‌گری دربارهٔ سرکوب احساس نیست، دربارهٔ داوری دربارهٔ احساس است.",
+    "en": "Stoicism is not about suppressing feeling but about our judgement of feeling.",
+    "nl": "Het stoïcisme gaat niet over gevoel onderdrukken, maar over ons oordeel over gevoel."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:t-cbt",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان شناختی",
+    "en": "Cognitive therapy",
+    "nl": "Cognitieve therapie"
+   }
+  },
+  {
+   "to": "psy:reappraisal",
+   "rel": "see-also",
+   "note": {
+    "fa": "بازتعبیر",
+    "en": "Reappraisal",
+    "nl": "Herwaardering"
+   }
+  },
+  {
+   "to": "psy:emotion-regulation",
+   "rel": "see-also",
+   "note": {
+    "fa": "تنظیم هیجان",
+    "en": "Emotion regulation",
+    "nl": "Emotieregulatie"
+   }
+  }
+ ],
+ "people": [
+  "core:epictetus",
+  "core:seneca",
+  "core:marcus-aurelius",
+  "core:albert-ellis"
+ ],
+ "sources": [],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

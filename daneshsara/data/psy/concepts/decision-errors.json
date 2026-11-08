@@ -1,0 +1,123 @@
+{
+ "id": "psy:decision-errors",
+ "kind": "concept",
+ "title": {
+  "fa": "خطا در تصمیم‌گیری: پیش‌بینی و انتخاب نادرست",
+  "en": "Misprediction & mischoice",
+  "nl": "Verkeerd voorspellen en verkeerd kiezen"
+ },
+ "parent": "psy:p-cog",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "دو خطا: حس آینده را اشتباه پیش‌بینی می‌کنیم و هنگام انتخاب، با منطقی متفاوت از تجربه، گزینه‌ها را می‌سنجیم.",
+  "en": "Two errors: we mispredict how we will feel, and when choosing we weigh options with a logic different from experience.",
+  "nl": "Twee fouten: we voorspellen verkeerd hoe we ons zullen voelen, en bij het kiezen wegen we opties af met een andere logica dan de ervaring."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سوگیری تمایز (هسی و ژانگ ۲۰۰۴): ارزیابی توأم هنگام انتخاب در برابر ارزیابی منفرد هنگام تجربه.",
+    "en": "Distinction bias (Hsee and Zhang 2004): joint evaluation when choosing versus single evaluation when experiencing.",
+    "nl": "Onderscheidingsbias (Hsee en Zhang 2004): gezamenlijke beoordeling bij het kiezen tegenover afzonderlijke beoordeling bij het beleven."
+   },
+   "sources": [
+    "src:e76fe16900"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بیشینه‌سازی واسطه: امتیاز ۱۰۰ در برابر ۶۰، گزینش کار طولانی را از حدود ۲۵٪ به ۵۲٪ رساند.",
+    "en": "Medium maximisation: 100 points versus 60 raised choosing the long task from about 25% to 52%.",
+    "nl": "Maximalisatie van het tussenmedium: 100 punten tegenover 60 verhoogde de keuze voor de lange taak van ongeveer 25% naar 52%."
+   },
+   "sources": [
+    "src:e76fe16900"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کوری انتخاب (یوهانسون و هال ۲۰۰۵): بیشتر افراد جابه‌جایی چهره را نفهمیدند و برایش دلیل آوردند.",
+    "en": "Choice blindness (Johansson and Hall 2005): most people didn't notice the faces being swapped and gave reasons for their choice.",
+    "nl": "Keuzeblindheid (Johansson en Hall 2005): de meeste mensen merkten niet dat de gezichten werden verwisseld en gaven redenen voor hun keuze."
+   },
+   "sources": [
+    "src:e76fe16900"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«اعمال ترجیحات را می‌سازند» (آریلی و نورتون).",
+    "en": "“Actions create preferences” (Ariely and Norton).",
+    "nl": "‘Handelingen scheppen voorkeuren’ (Ariely en Norton)."
+   },
+   "sources": [
+    "src:e76fe16900"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بیشینه‌سازی در برابر بسنده‌کاری؛ توانش تصمیم‌گیری بزرگسالان (A-DMC).",
+    "en": "Maximising versus satisficing; adult decision-making competence (A-DMC).",
+    "nl": "Maximaliseren tegenover genoegen nemen; beslisvaardigheid bij volwassenen (A-DMC)."
+   },
+   "sources": [
+    "src:e76fe16900"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:affective-forecasting",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیش‌بینی",
+    "en": "Forecasting",
+    "nl": "Voorspellen"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "سوگیری‌ها",
+    "en": "Biases",
+    "nl": "Biases"
+   }
+  },
+  {
+   "to": "psy:planning-fallacy",
+   "rel": "see-also",
+   "note": {
+    "fa": "برنامه‌ریزی",
+    "en": "Planning",
+    "nl": "Planning"
+   }
+  }
+ ],
+ "people": [
+  "core:christopher-hsee",
+  "core:petter-johansson",
+  "core:lars-hall",
+  "core:daniel-kahneman",
+  "core:george-loewenstein"
+ ],
+ "sources": [
+  "src:e76fe16900",
+  "src:79a68500a9",
+  "src:6a8f799b77"
+ ],
+ "booklets": [
+  "mistakes:choice",
+  "mistakes:blind",
+  "mistakes:frugal"
+ ],
+ "origin": "mistakes",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

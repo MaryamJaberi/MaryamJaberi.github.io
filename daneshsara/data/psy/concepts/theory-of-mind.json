@@ -1,0 +1,111 @@
+{
+ "id": "psy:theory-of-mind",
+ "kind": "concept",
+ "title": {
+  "fa": "نظریهٔ ذهن",
+  "en": "Theory of mind",
+  "nl": "Theory of mind"
+ },
+ "parent": "psy:p-dev",
+ "field": "psy:p-dev",
+ "summary": {
+  "fa": "توانایی نسبت‌دادن باور، قصد و میل به دیگران و فهمیدن اینکه دیگران ذهنی جدا از ما دارند. از حدود نه‌ماهگی با دنبال کردن نگاه و اشاره آغاز می‌شود.",
+  "en": "The ability to attribute beliefs, intentions and desires to others and to understand that others have minds separate from ours. It begins at about nine months with following gaze and pointing.",
+  "nl": "Het vermogen om overtuigingen, bedoelingen en verlangens aan anderen toe te schrijven en te begrijpen dat anderen een eigen geest hebben. Het begint rond negen maanden met het volgen van blik en wijzen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آزمون «باور نادرست» (ویمر و پرنر، ۱۹۸۳؛ آزمون سالی-آن): کودکان حدود چهارسالگی می‌فهمند دیگری می‌تواند باور نادرست داشته باشد.",
+    "en": "The false-belief test (Wimmer and Perner, 1983; the Sally-Anne test): at about four, children understand that another person can hold a false belief.",
+    "nl": "De false-belieftest (Wimmer en Perner, 1983; de Sally-Annetest): rond vier jaar begrijpen kinderen dat een ander een onjuiste overtuiging kan hebben."
+   },
+   "sources": [
+    "src:19d429a545"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "توماسلو: توجه مشترک و فهم قصد، پایهٔ فرهنگ و زبان است.",
+    "en": "Tomasello: joint attention and understanding intention are the basis of culture and language.",
+    "nl": "Tomasello: gedeelde aandacht en begrip van intenties zijn de basis van cultuur en taal."
+   },
+   "sources": [
+    "src:19d429a545"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شبکهٔ مغزی (اسلاید ۲۶): mPFC، پیش‌گوه، TPJ، pSTS و آمیگدال.",
+    "en": "The brain network (slide 26): mPFC, precuneus, TPJ, pSTS and amygdala.",
+    "nl": "Het hersennetwerk (slide 26): mPFC, precuneus, TPJ, pSTS en amygdala."
+   },
+   "sources": [
+    "src:19d429a545"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در اختلال طیف اوتیسم دشواری در نظریهٔ ذهن دیده می‌شود (بارون-کوهن، «کوری ذهن»).",
+    "en": "Difficulties in theory of mind are seen in autism spectrum disorder (Baron-Cohen, “mindblindness”).",
+    "nl": "Bij autismespectrumstoornis worden problemen met theory of mind gezien (Baron-Cohen, ‘mindblindness’)."
+   },
+   "sources": [
+    "src:19d429a545"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آزمون «خواندن ذهن از روی چشم‌ها» (RMET) یکی از سنجه‌های آن در بزرگسالان است.",
+    "en": "The “Reading the Mind in the Eyes” test (RMET) is one of its measures in adults.",
+    "nl": "De test ‘Reading the Mind in the Eyes’ (RMET) is een van de maten ervan bij volwassenen."
+   },
+   "sources": [
+    "src:19d429a545"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-cognitive",
+   "rel": "see-also",
+   "note": {
+    "fa": "شبکهٔ مغزی",
+    "en": "Brain network",
+    "nl": "Hersennetwerk"
+   }
+  },
+  {
+   "to": "psy:emotional-intelligence",
+   "rel": "see-also",
+   "note": {
+    "fa": "فهم هیجان دیگران",
+    "en": "Understanding others' emotions",
+    "nl": "Emoties van anderen begrijpen"
+   }
+  }
+ ],
+ "people": [
+  "core:henry-wellman",
+  "core:simon-baron-cohen",
+  "core:michael-tomasello",
+  "core:rebecca-saxe"
+ ],
+ "sources": [
+  "src:19d429a545",
+  "src:c4fc0bd522",
+  "src:cbf80743e5"
+ ],
+ "booklets": [
+  "friendly:eyes"
+ ],
+ "origin": "friendly",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

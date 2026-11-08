@@ -1,0 +1,129 @@
+{
+ "id": "psy:cognitive-rut",
+ "kind": "concept",
+ "title": {
+  "fa": "افکار خودکار و شیار شناختی",
+  "en": "Automatic thoughts · Cognitive ruts",
+  "nl": "Automatische gedachten · cognitieve sleuren"
+ },
+ "parent": "psy:p-cog",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "بیشتر کارها و قضاوت‌های ما خودکار است؛ ذهن برای صرفه‌جویی انرژی به عادت نیاز دارد. مشکل وقتی است که این مسیرها انعطاف‌ناپذیر شوند و مثل شیار جادهٔ خاکی، ما را هر بار به همان واکنش ببرند.",
+  "en": "Most of our actions and judgements are automatic; the mind needs habits to save energy. The problem comes when these paths become rigid and, like ruts in a dirt road, take us to the same reaction every time.",
+  "nl": "De meeste handelingen en oordelen zijn automatisch; de geest heeft gewoonten nodig om energie te sparen. Het probleem ontstaat als die paden star worden en ons, als sporen in een zandweg, steeds naar dezelfde reactie leiden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "افکار خودکار لزوماً بد نیستند؛ مشکل انعطاف‌ناپذیری است.",
+    "en": "Automatic thoughts are not necessarily bad; the problem is rigidity.",
+    "nl": "Automatische gedachten zijn niet per se slecht; het probleem is starheid."
+   },
+   "sources": [
+    "src:6ead119473"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هر تکرار شیار را عمیق‌تر می‌کند: «ما خودمان برای خودمان شیار می‌سازیم.»",
+    "en": "Each repetition deepens the rut: “We dig our own ruts.”",
+    "nl": "Elke herhaling maakt het spoor dieper: ‘We graven onze eigen sporen.’"
+   },
+   "sources": [
+    "src:6ead119473"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ترمز ذهنی: «این فکر از کجا آمد؟ شواهدی دارم؟ راه دیگر دیدن چیست؟» (همان ذهن‌آگاهی).",
+    "en": "The mental brake: “Where did this thought come from? Do I have evidence? What is another way of seeing it?” (mindfulness itself).",
+    "nl": "De mentale rem: ‘Waar komt deze gedachte vandaan? Heb ik bewijs? Hoe kan ik het anders zien?’ (mindfulness zelf)."
+   },
+   "sources": [
+    "src:6ead119473"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خروج از شیار: تغییر موقعیت، شروع فعالیت متفاوت، گفت‌وگو با دیگران.",
+    "en": "Getting out of the rut: changing the situation, starting a different activity, talking with others.",
+    "nl": "Uit het spoor komen: de situatie veranderen, een andere activiteit beginnen, met anderen praten."
+   },
+   "sources": [
+    "src:6ead119473"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تمرین ثبت سه‌ستونه: موقعیت، فکر خودکار، شواهد و جایگزین.",
+    "en": "The three-column record exercise: situation, automatic thought, evidence and alternative.",
+    "nl": "De oefening met drie kolommen: situatie, automatische gedachte, bewijs en alternatief."
+   },
+   "sources": [
+    "src:6ead119473"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کتاب گستره: آتش‌نشانان مان گالچ ابزارهایشان را رها نکردند (کارل وایک)؛ شیار شناختی در سطح هویت حرفه‌ای.",
+    "en": "The book Range: the Mann Gulch firefighters did not drop their tools (Karl Weick); a cognitive rut at the level of professional identity.",
+    "nl": "Het boek Range: de brandweerlieden van Mann Gulch lieten hun gereedschap niet vallen (Karl Weick); een cognitief spoor op het niveau van beroepsidentiteit."
+   },
+   "sources": [
+    "src:6ead119473"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:running-commentary",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  },
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "شیار هیجانی",
+    "en": "Emotional rut",
+    "nl": "Emotionele sleur"
+   }
+  },
+  {
+   "to": "psy:cognitive-rigidity",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  }
+ ],
+ "people": [
+  "core:aaron-beck",
+  "core:daniel-kahneman"
+ ],
+ "sources": [
+  "src:6ead119473",
+  "src:77d861b97c"
+ ],
+ "booklets": [
+  "decision:automatic",
+  "range:tools"
+ ],
+ "origin": "decision",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

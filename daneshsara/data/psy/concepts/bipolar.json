@@ -1,0 +1,132 @@
+{
+ "id": "psy:bipolar",
+ "kind": "concept",
+ "title": {
+  "fa": "اختلال دوقطبی",
+  "en": "Bipolar disorder",
+  "nl": "Bipolaire stoornis"
+ },
+ "parent": "psy:mood",
+ "field": "psy:mood",
+ "summary": {
+  "fa": "دوره‌های مانیا یا هیپومانیا همراه با افسردگی؛ از «جنون دوری» فالره و «جنون شیدایی‌افسردگی» کریپلین تا طیف دوقطبی امروز.",
+  "en": "Episodes of mania or hypomania together with depression; from Falret's “circular insanity” and Kraepelin's “manic-depressive insanity” to today's bipolar spectrum.",
+  "nl": "Episoden van manie of hypomanie samen met depressie; van de ‘folie circulaire’ van Falret en de ‘manisch-depressieve waanzin’ van Kraepelin tot het huidige bipolaire spectrum."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "DSM-5: افزایش انرژی و فعالیت به معیار A افزوده شد؛ STEP-BD نشان داد تشخیص مانیا حدود ۵۰٪ کم و تشخیص افسردگی تا دو برابر می‌شود.",
+    "en": "DSM-5: increased energy and activity were added to criterion A; STEP-BD showed this cuts mania diagnoses by about 50% and up to doubles depression diagnoses.",
+    "nl": "DSM-5: meer energie en activiteit werden aan criterium A toegevoegd; STEP-BD liet zien dat diagnoses van manie daardoor met ongeveer 50% dalen en diagnoses van depressie tot het dubbele stijgen."
+   },
+   "sources": [
+    "src:1e3456fa44"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مانیا ≥۷ روز یا بستری، با پسیکوز ممکن؛ هیپومانیا ≥۴ روز، بدون بستری و پسیکوز.",
+    "en": "Mania ≥7 days or hospitalisation, psychosis possible; hypomania ≥4 days, without hospitalisation or psychosis.",
+    "nl": "Manie ≥7 dagen of opname, psychose mogelijk; hypomanie ≥4 dagen, zonder opname of psychose."
+   },
+   "sources": [
+    "src:1e3456fa44"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نوع ۱: یک مانیا کافی است؛ نوع ۲: هیپومانیا + افسردگی، هرگز مانیا؛ سیکلوتایمی ≥۲ سال.",
+    "en": "Type 1: one manic episode is enough; type 2: hypomania + depression, never mania; cyclothymia ≥2 years.",
+    "nl": "Type 1: één manische episode is genoeg; type 2: hypomanie + depressie, nooit manie; cyclothymie ≥2 jaar."
+   },
+   "sources": [
+    "src:1e3456fa44"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چرخهٔ سریع: ≥۴ حمله در ۱۲ ماه.",
+    "en": "Rapid cycling: ≥4 episodes in 12 months.",
+    "nl": "Rapid cycling: ≥4 episoden in 12 maanden."
+   },
+   "sources": [
+    "src:1e3456fa44"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تمایز با شخصیت مرزی: نوسان خودبه‌خودی در برابر واکنش به طرد؛ هم‌پوشانی حدود ۱۵٪.",
+    "en": "Distinguishing from borderline personality: spontaneous mood swings versus reaction to rejection; overlap about 15%.",
+    "nl": "Onderscheid met borderline-persoonlijkheid: spontane stemmingswisselingen tegenover reactie op afwijzing; overlap ongeveer 15%."
+   },
+   "sources": [
+    "src:1e3456fa44"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بیماری‌زایی تجمعی و BDNF: هر حمله بیماری را بدخیم‌تر می‌کند؛ درمان سریع و کامل.",
+    "en": "Cumulative pathogenicity and BDNF: each episode makes the illness worse; prompt, complete treatment.",
+    "nl": "Cumulatieve schadelijkheid en BDNF: elke episode maakt de ziekte ernstiger; snelle, volledige behandeling."
+   },
+   "sources": [
+    "src:1e3456fa44"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طول دورهٔ افسردگی حدود ۳ برابر مانیاست.",
+    "en": "Depressive episodes last about 3 times as long as manic ones.",
+    "nl": "Depressieve episoden duren ongeveer 3 keer zo lang als manische."
+   },
+   "sources": [
+    "src:1e3456fa44"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:personality-disorders",
+   "rel": "see-also",
+   "note": {
+    "fa": "شخصیت مرزی",
+    "en": "Borderline personality",
+    "nl": "Borderline-persoonlijkheid"
+   }
+  },
+  {
+   "to": "psy:psychopharm",
+   "rel": "see-also",
+   "note": {
+    "fa": "تثبیت‌کننده‌های خلق",
+    "en": "Mood stabilisers",
+    "nl": "Stemmingsstabilisatoren"
+   }
+  }
+ ],
+ "people": [
+  "core:jean-pierre-falret",
+  "core:emil-kraepelin",
+  "core:jules-angst",
+  "core:kay-redfield-jamison"
+ ],
+ "sources": [
+  "src:1e3456fa44",
+  "src:c77e028780"
+ ],
+ "booklets": [
+  "psychopath:mania"
+ ],
+ "origin": "psychopath",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

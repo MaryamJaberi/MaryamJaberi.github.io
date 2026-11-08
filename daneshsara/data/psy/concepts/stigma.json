@@ -1,0 +1,94 @@
+{
+ "id": "psy:stigma",
+ "kind": "subfield",
+ "title": {
+  "fa": "انگ و برچسب‌زنی (گافمن)",
+  "en": "Stigma & labeling",
+  "nl": "Stigma en etikettering"
+ },
+ "parent": "psy:sociology",
+ "field": null,
+ "summary": {
+  "fa": "گافمن انگ را «هویت لکه‌دار» نامید و در «آسایشگاه‌ها» نشان داد نهاد بستهٔ بیمارستان روانی خود بیمار را می‌سازد. نظریهٔ برچسب‌زنی می‌گوید برچسب می‌تواند رفتار را تثبیت کند.",
+  "en": "Goffman called stigma a “spoiled identity” and showed in Asylums that the closed institution of the mental hospital itself shapes the patient. Labelling theory says a label can entrench behaviour.",
+  "nl": "Goffman noemde stigma een ‘bezoedelde identiteit’ en liet in Asylums zien dat de gesloten instelling van het psychiatrisch ziekenhuis zelf de patiënt vormt. De etiketteringstheorie zegt dat een etiket gedrag kan vastzetten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "انگ مهم‌ترین مانع درخواست کمک برای مشکلات روانی است.",
+    "en": "Stigma is the main barrier to seeking help for mental health problems.",
+    "nl": "Stigma is de grootste drempel om hulp te zoeken bij psychische problemen."
+   },
+   "sources": [
+    "src:025edeb12b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خودانگ‌زنی: پذیرفتن کلیشه‌ها دربارهٔ خود.",
+    "en": "Self-stigma: accepting stereotypes about oneself.",
+    "nl": "Zelfstigma: stereotypen over jezelf aanvaarden."
+   },
+   "sources": [
+    "src:025edeb12b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تماس مستقیم با افرادی که اختلال روانی دارند مؤثرترین راه کاهش انگ است.",
+    "en": "Direct contact with people who have a mental disorder is the most effective way to reduce stigma.",
+    "nl": "Direct contact met mensen met een psychische stoornis is de meest effectieve manier om stigma te verminderen."
+   },
+   "sources": [
+    "src:025edeb12b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:overdiagnosis",
+   "rel": "see-also",
+   "note": {
+    "fa": "برچسب",
+    "en": "Label",
+    "nl": "Etiket"
+   }
+  },
+  {
+   "to": "psy:psychiatry-history",
+   "rel": "see-also",
+   "note": {
+    "fa": "تاریخ آسایشگاه",
+    "en": "History of the asylum",
+    "nl": "Geschiedenis van het gesticht"
+   }
+  },
+  {
+   "to": "psy:intergroup-contact",
+   "rel": "see-also",
+   "note": {
+    "fa": "تماس",
+    "en": "Contact",
+    "nl": "Contact"
+   }
+  }
+ ],
+ "people": [
+  "core:erving-goffman",
+  "core:howard-becker",
+  "core:thomas-scheff"
+ ],
+ "sources": [
+  "src:025edeb12b",
+  "src:52e516f8bd"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

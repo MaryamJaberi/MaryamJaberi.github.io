@@ -1,0 +1,99 @@
+{
+ "id": "psy:falls",
+ "kind": "subfield",
+ "title": {
+  "fa": "سقوط در بیماران بستری",
+  "en": "Inpatient falls",
+  "nl": "Valincidenten in de kliniek"
+ },
+ "parent": "psy:psychiatry",
+ "field": null,
+ "summary": {
+  "fa": "سقوط در بخش‌های روانپزشکی ۳ تا ۴ برابر بخش‌های عمومی است؛ ابزارهای تخمین خطر، داروهای افزایندهٔ خطر و پیشگیری.",
+  "en": "Falls on psychiatric wards are 3 to 4 times more common than on general wards; risk-estimation tools, medications that raise risk, and prevention.",
+  "nl": "Valincidenten op psychiatrische afdelingen komen 3 tot 4 keer vaker voor dan op algemene afdelingen; instrumenten om risico in te schatten, medicatie die het risico verhoogt, en preventie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "۱۰ تا ۱۷ سقوط در هر ۱۰۰۰ روز-بیمار؛ ایده‌آل حدود ۳.",
+    "en": "10 to 17 falls per 1,000 patient-days; ideally about 3.",
+    "nl": "10 tot 17 valincidenten per 1000 patiëntdagen; ideaal ongeveer 3."
+   },
+   "sources": [
+    "src:b0b2e1e246"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طبقه‌بندی مورس: فیزیولوژیک قابل پیش‌بینی، تصادفی، فیزیولوژیک غیرقابل پیش‌بینی.",
+    "en": "Morse's classification: anticipated physiological, accidental, unanticipated physiological.",
+    "nl": "De indeling van Morse: voorspelbaar fysiologisch, toevallig, onvoorspelbaar fysiologisch."
+   },
+   "sources": [
+    "src:b0b2e1e246"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ابزارهای هندریچ II، ویلسون-سیمز (۷ امتیاز برای سم‌زدایی) و ادمونسون.",
+    "en": "The Hendrich II, Wilson-Sims (7 points for detoxification) and Edmonson tools.",
+    "nl": "De instrumenten Hendrich II, Wilson-Sims (7 punten voor ontgifting) en Edmonson."
+   },
+   "sources": [
+    "src:b0b2e1e246"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ضدافسردگی‌ها، ضدپسیکوزها و بنزودیازپین‌ها نسبت شانس سقوط حدود ۱٫۶ تا ۱٫۷.",
+    "en": "Antidepressants, antipsychotics and benzodiazepines have an odds ratio for falls of about 1.6 to 1.7.",
+    "nl": "Antidepressiva, antipsychotica en benzodiazepinen hebben een oddsratio voor vallen van ongeveer 1,6 tot 1,7."
+   },
+   "sources": [
+    "src:b0b2e1e246"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کارآزمایی لنست ۲۰۱۵: آموزش بیمار و کادر سقوط را از ۱۳٫۸ به ۷٫۸ در ۱۰۰۰ روز-بیمار رساند.",
+    "en": "A 2015 Lancet trial: educating patients and staff reduced falls from 13.8 to 7.8 per 1,000 patient-days.",
+    "nl": "Een studie in The Lancet (2015): voorlichting aan patiënten en personeel verminderde vallen van 13,8 naar 7,8 per 1000 patiëntdagen."
+   },
+   "sources": [
+    "src:b0b2e1e246"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psychopharm",
+   "rel": "see-also",
+   "note": {
+    "fa": "داروها",
+    "en": "Medications",
+    "nl": "Medicijnen"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:b0b2e1e246",
+  "src:7171e3b42e"
+ ],
+ "booklets": [
+  "falls:scale",
+  "falls:tools",
+  "falls:prevent",
+  "shelf3:delirium"
+ ],
+ "origin": "falls",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,145 @@
+{
+ "id": "psy:curiosity",
+ "kind": "concept",
+ "title": {
+  "fa": "کنجکاوی",
+  "en": "Curiosity",
+  "nl": "Nieuwsgierigheid"
+ },
+ "parent": "psy:p-motivation",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "میل به دانستن، کاویدن و پر کردن شکاف‌های دانش. هابز آن را «شهوت ذهن» نامید و وجه تمایز انسان دانست؛ اینشتین: «من فقط به طرز پرشوری کنجکاوم.»",
+  "en": "The desire to know, explore and fill gaps in knowledge. Hobbes called it the “lust of the mind” and saw it as what sets humans apart; Einstein: “I am only passionately curious.”",
+  "nl": "Het verlangen om te weten, te verkennen en gaten in kennis te vullen. Hobbes noemde het de ‘lust van de geest’ en zag het als wat de mens onderscheidt; Einstein: ‘Ik ben alleen hartstochtelijk nieuwsgierig.’"
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ماریو لیویو: کنجکاوی ترکیبی دوپهلو از هیجان و دلهره است؛ تا حدی ابهام آن را بیشتر می‌کند و از آن به بعد ترس می‌آورد.",
+    "en": "Mario Livio: curiosity is an ambiguous mix of excitement and apprehension; ambiguity increases it up to a point, and beyond that brings fear.",
+    "nl": "Mario Livio: nieuwsgierigheid is een dubbelzinnige mix van opwinding en onrust; onduidelijkheid vergroot haar tot op zekere hoogte, en daarna brengt ze angst."
+   },
+   "sources": [
+    "src:db3abd091e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انواع (برلاین): ادراکی/شناختی و اختصاصی/فراگیر.",
+    "en": "Types (Berlyne): perceptual/epistemic and specific/diversive.",
+    "nl": "Soorten (Berlyne): perceptueel/epistemisch en specifiek/divers."
+   },
+   "sources": [
+    "src:db3abd091e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نظریهٔ شکاف اطلاعاتی لوونشتاین: کنجکاوی از احساس شکاف میان دانسته و خواسته پدید می‌آید.",
+    "en": "Loewenstein's information-gap theory: curiosity arises from sensing a gap between what is known and what is wanted.",
+    "nl": "De informatiekloftheorie van Loewenstein: nieuwsgierigheid ontstaat uit het gevoel van een kloof tussen wat je weet en wat je wilt weten."
+   },
+   "sources": [
+    "src:db3abd091e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کودکان «دانشمندان کوچک»اند: جایی بیشتر کاوش می‌کنند که شواهد درهم یا ناقض انتظار است (شولتز و بوناویتز).",
+    "en": "Children are “little scientists”: they explore more where evidence is confounded or violates expectations (Schulz and Bonawitz).",
+    "nl": "Kinderen zijn ‘kleine wetenschappers’: ze verkennen meer waar het bewijs verward is of verwachtingen tegenspreekt (Schulz en Bonawitz)."
+   },
+   "sources": [
+    "src:db3abd091e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چیکسنت‌میهایی: افراد خلاق کنجکاوی کودکی را تا بزرگسالی نگه می‌دارند.",
+    "en": "Csikszentmihalyi: creative people keep childhood curiosity into adulthood.",
+    "nl": "Csikszentmihalyi: creatieve mensen houden hun kindernieuwsgierigheid tot op volwassen leeftijd."
+   },
+   "sources": [
+    "src:db3abd091e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«کنجکاوی مسری است» (جملهٔ پایانی سخنرانی).",
+    "en": "“Curiosity is contagious” (the closing line of the talk).",
+    "nl": "‘Nieuwsgierigheid is besmettelijk’ (de slotzin van de lezing)."
+   },
+   "sources": [
+    "src:db3abd091e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "روی تاریک: «کنجکاوی گربه را کشت»؛ پری‌های دریایی به اولیس دانش وعده می‌دادند.",
+    "en": "The dark side: “curiosity killed the cat”; the Sirens promised Ulysses knowledge.",
+    "nl": "De schaduwkant: ‘nieuwsgierigheid doodde de kat’; de sirenen beloofden Odysseus kennis."
+   },
+   "sources": [
+    "src:db3abd091e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:exploration",
+   "rel": "see-also",
+   "note": {
+    "fa": "کاوش",
+    "en": "Exploration",
+    "nl": "Verkennen"
+   }
+  },
+  {
+   "to": "psy:perseverance",
+   "rel": "see-also",
+   "note": {
+    "fa": "یادگیری",
+    "en": "Learning",
+    "nl": "Leren"
+   }
+  },
+  {
+   "to": "psy:psychological-richness",
+   "rel": "see-also",
+   "note": {
+    "fa": "غنا",
+    "en": "Richness",
+    "nl": "Rijkdom"
+   }
+  }
+ ],
+ "people": [
+  "core:mario-livio",
+  "core:daniel-berlyne",
+  "core:george-loewenstein",
+  "core:todd-kashdan",
+  "core:susan-engel"
+ ],
+ "sources": [
+  "src:db3abd091e",
+  "src:310fea2439",
+  "src:2c73e6d88e",
+  "src:124df9ce1f"
+ ],
+ "booklets": [
+  "curiosity:voices",
+  "shelf14:oishi"
+ ],
+ "origin": "curiosity",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

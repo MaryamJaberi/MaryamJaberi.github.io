@@ -1,0 +1,119 @@
+{
+ "id": "psy:social-media",
+ "kind": "concept",
+ "title": {
+  "fa": "رسانهٔ اجتماعی و ذهن",
+  "en": "Social media, misinformation and mental health",
+  "nl": "Sociale media, desinformatie en mentale gezondheid"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "ارتباط بیشتر لزوماً فهم بیشتر نمی‌آورد: اخبار نادرست سریع‌تر پخش می‌شوند، تکرار باورپذیری می‌سازد، و نقش شبکه‌های اجتماعی در بحران سلامت روان نوجوانان محل بحث جدی است (نیکلاس کار).",
+  "en": "More connection does not necessarily bring more understanding: false news spreads faster, repetition creates believability, and the role of social media in the youth mental health crisis is seriously debated (Nicholas Carr).",
+  "nl": "Meer verbinding brengt niet per se meer begrip: nepnieuws verspreidt zich sneller, herhaling maakt geloofwaardig, en de rol van sociale media in de mentale-gezondheidscrisis bij jongeren is onderwerp van serieus debat (Nicholas Carr)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اخبار نادرست دورتر، سریع‌تر و گسترده‌تر از اخبار درست پخش می‌شوند (وسوقی ۲۰۱۸).",
+    "en": "False news spreads farther, faster and more widely than true news (Vosoughi 2018).",
+    "nl": "Nepnieuws verspreidt zich verder, sneller en breder dan waar nieuws (Vosoughi 2018)."
+   },
+   "sources": [
+    "src:827dedcfbb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تکرار ← درست به نظر رسیدن ← اشتراک‌گذاری بیشتر (ولانی و شاروت ۲۰۲۳).",
+    "en": "Repetition → seeming true → more sharing (Vellani and Sharot 2023).",
+    "nl": "Herhaling → waar lijken → vaker delen (Vellani en Sharot 2023)."
+   },
+   "sources": [
+    "src:827dedcfbb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مواجهه با دیدگاه مخالف در توییتر قطبی‌شدن را بیشتر کرد (بیل ۲۰۱۸).",
+    "en": "Exposure to opposing views on Twitter increased polarisation (Bail 2018).",
+    "nl": "Blootstelling aan tegengestelde standpunten op Twitter vergrootte de polarisatie (Bail 2018)."
+   },
+   "sources": [
+    "src:827dedcfbb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هایت: رسانهٔ اجتماعی علت اضطراب نوجوانان است؛ اوجرز و اوربن: اثر کوچک و شواهد علّی محدود.",
+    "en": "Haidt: social media cause adolescent anxiety; Odgers and Orben: a small effect and limited causal evidence.",
+    "nl": "Haidt: sociale media veroorzaken angst bij tieners; Odgers en Orben: een klein effect en beperkt causaal bewijs."
+   },
+   "sources": [
+    "src:827dedcfbb"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:tech-panic",
+   "rel": "see-also",
+   "note": {
+    "fa": "هراس",
+    "en": "Dread",
+    "nl": "Angst en vrees"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "حقیقت توهمی",
+    "en": "Illusory truth",
+    "nl": "Illusoire waarheid"
+   }
+  },
+  {
+   "to": "psy:consciousness",
+   "rel": "see-also",
+   "note": {
+    "fa": "توجه",
+    "en": "Attention",
+    "nl": "Aandacht"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "توطئه",
+    "en": "Conspiracy",
+    "nl": "Samenzwering"
+   }
+  }
+ ],
+ "people": [
+  "core:nicholas-carr",
+  "core:jonathan-haidt",
+  "core:cass-sunstein"
+ ],
+ "sources": [
+  "src:827dedcfbb",
+  "src:482e2aae3f"
+ ],
+ "booklets": [
+  "superbloom:history",
+  "superbloom:polar",
+  "superbloom:misinfo",
+  "superbloom:youth"
+ ],
+ "origin": "superbloom",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

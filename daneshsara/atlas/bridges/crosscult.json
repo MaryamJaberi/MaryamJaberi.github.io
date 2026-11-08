@@ -1,0 +1,73 @@
+{
+ "id": "crosscult",
+ "field": "crosscult",
+ "between": [
+  "psychology",
+  "anthro"
+ ],
+ "title": {
+  "fa": "روان‌شناسی بین‌فرهنگی",
+  "en": "Cross-cultural psychology",
+  "nl": "Crossculturele psychologie"
+ },
+ "question": {
+  "fa": "کدام یافته‌های روان‌شناسی در همهٔ فرهنگ‌ها درست است و کدام فقط در غرب؟",
+  "en": "Which psychological findings hold across cultures, and which only in the West?"
+ },
+ "definition": {
+  "fa": "مطالعهٔ تطبیقی اینکه فرهنگ چگونه فرایندهای روانی را شکل می‌دهد و آیا یافته‌ها به همهٔ جمعیت‌های انسانی تعمیم می‌یابند."
+ },
+ "landmark": {
+  "fa": "سگال، کمپبل و هرسکوویتس ۱۹۶۶: خطای مولر–لایر بین فرهنگ‌ها فرق دارد؛ انجمن IACCP ۱۹۷۲",
+  "url": "https://en.wikipedia.org/wiki/Cross-cultural_psychology"
+ },
+ "reference": {
+  "fa": "Berry و همکاران، Cross-Cultural Psychology (۲۰۱۱)؛ Heine، Cultural Psychology (۲۰۲۰)"
+ },
+ "venue": {
+  "fa": "IACCP؛ Journal of Cross-Cultural Psychology"
+ },
+ "people": [
+  "جوزف هنریک",
+  "استیون هاینه",
+  "شینوبو کیتایاما",
+  "میشل گلفند"
+ ],
+ "finding": {
+  "fa": "نقد WEIRD (هنریک، هاینه و نورنزایان ۲۰۱۰): نمونه‌های غربی، تحصیل‌کرده، صنعتی، ثروتمند و دموکراتیک در ادراک و بازی‌های انصاف و فردگرایی استثنایند. یافتهٔ فراتحلیلی مستحکم و محرک اصلی بحث تعمیم‌پذیری.",
+  "replication": "robust",
+  "url": "https://doi.org/10.1017/S0140525X0999152X"
+ },
+ "persian": [
+  {
+   "title": "روان‌شناسی فرهنگی، هاینه",
+   "publisher": "سمت",
+   "url": "https://taaghche.com/book/114789",
+   "verified": true
+  },
+  {
+   "title": "جغرافیای تفکر، نیسبت",
+   "publisher": "نظری",
+   "url": "https://taaghche.com/book/38241",
+   "verified": true
+  },
+  {
+   "title": "انسان کژگونه، هنریک",
+   "publisher": "نیماژ",
+   "url": "https://taaghche.com/book/176903",
+   "verified": true
+  }
+ ],
+ "concepts": {
+  "psy": [
+   "psy:p-social",
+   "psy:cultural-evolution",
+   "psy:norm-psychology"
+  ]
+ },
+ "iran": {
+  "fa": "داده‌های روان‌شناسی ایران بیشتر از نمونهٔ دانشجویی تهران است؛ همان مشکل WEIRD در مقیاس داخلی."
+ },
+ "status": "established",
+ "review": "draft"
+}

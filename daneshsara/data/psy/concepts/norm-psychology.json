@@ -1,0 +1,88 @@
+{
+ "id": "psy:norm-psychology",
+ "kind": "concept",
+ "title": {
+  "fa": "روان‌شناسی هنجار",
+  "en": "Norm psychology",
+  "nl": "Normpsychologie"
+ },
+ "parent": "psy:cultural-evolution",
+ "field": "psy:cultural-evolution",
+ "summary": {
+  "fa": "هنریک: انسان به‌طور شهودی فرض می‌کند جهان اجتماعی قاعده‌مند است، حتی پیش از آنکه قواعد را بداند؛ هنجارها را سریع می‌آموزد و از ناقضان انتظار مجازات دارد.",
+  "en": "Henrich: humans intuitively assume the social world is rule-governed even before they know the rules; they learn norms quickly and expect violators to be punished.",
+  "nl": "Henrich: mensen nemen intuïtief aan dat de sociale wereld door regels wordt bepaald, nog voordat ze de regels kennen; ze leren normen snel en verwachten dat overtreders worden gestraft."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کودکان خیلی زود، وقتی کسی بازی را «اشتباه» انجام می‌دهد، به او اعتراض می‌کنند؛ حتی اگر قاعده دلبخواهی باشد.",
+    "en": "Very early on, children protest when someone plays a game “wrong”, even if the rule is arbitrary.",
+    "nl": "Al heel vroeg protesteren kinderen als iemand een spel ‘verkeerd’ speelt, zelfs als de regel willekeurig is."
+   },
+   "sources": [
+    "src:79ca43baea"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هنجارها و پاداش رعایت آن‌ها، به گفتهٔ هنریک، روند خوداهلی‌سازی را پیش بردند.",
+    "en": "According to Henrich, norms and the reward for following them drove the process of self-domestication.",
+    "nl": "Volgens Henrich dreven normen en de beloning voor het naleven ervan het proces van zelfdomesticatie aan."
+   },
+   "sources": [
+    "src:79ca43baea"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شرم و گناه هیجان‌های هنجاری‌اند: هشدار درونی دربارهٔ نقض هنجار.",
+    "en": "Shame and guilt are normative emotions: an inner alarm about breaking a norm.",
+    "nl": "Schaamte en schuld zijn normatieve emoties: een innerlijk alarm bij het overtreden van een norm."
+   },
+   "sources": [
+    "src:79ca43baea"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با سازمان: فرهنگ سازمانی مجموعه‌ای از هنجارهای نانوشته است؛ تغییرش با بخشنامه دشوار است (اصل خودبرگزیدگان).",
+    "en": "Link with organisations: organisational culture is a set of unwritten norms; it is hard to change by decree (the self-selectors principle).",
+    "nl": "Link met organisaties: organisatiecultuur is een verzameling ongeschreven normen; die verander je moeilijk per decreet (het principe van zelfselecteerders)."
+   },
+   "sources": [
+    "src:79ca43baea"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-selectors",
+   "rel": "see-also",
+   "note": {
+    "fa": "تغییر فرهنگ",
+    "en": "Changing culture",
+    "nl": "Cultuur veranderen"
+   }
+  }
+ ],
+ "people": [
+  "core:joseph-henrich",
+  "core:michael-tomasello"
+ ],
+ "sources": [
+  "src:79ca43baea"
+ ],
+ "booklets": [
+  "friendly:aggression",
+  "gelfand:idea"
+ ],
+ "origin": "book",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

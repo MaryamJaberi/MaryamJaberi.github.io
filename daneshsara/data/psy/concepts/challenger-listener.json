@@ -1,0 +1,70 @@
+{
+ "id": "psy:challenger-listener",
+ "kind": "concept",
+ "title": {
+  "fa": "شنوندهٔ چالشگر",
+  "en": "Challenger listener",
+  "nl": "De uitdagende luisteraar"
+ },
+ "parent": "psy:venting",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "شنونده‌ای که هم به ونتینگ گوش می‌دهد و هم آن را به چالش می‌کشد: «نه، این‌طور نیست؛ اجازه بده روشنت کنم.»",
+  "en": "A listener who both hears the venting and challenges it: “No, that's not how it is; let me clarify.”",
+  "nl": "Een luisteraar die het stoom afblazen aanhoort en tegelijk uitdaagt: ‘Nee, zo zit het niet; laat me het uitleggen.’"
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بهفر، کرونین و مک‌کارتی (۲۰۲۰) این سبک را سازنده‌ترین واکنش به ونتینگ یافتند؛ به یادگیری و رشد سازمان می‌انجامد.",
+    "en": "Behfar, Cronin and McCarthy (2020) found this style the most constructive response to venting; it leads to learning and organisational growth.",
+    "nl": "Behfar, Cronin en McCarthy (2020) vonden deze stijl de meest constructieve reactie op stoom afblazen; ze leidt tot leren en groei van de organisatie."
+   },
+   "sources": [
+    "src:90e6536f84"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "غرزن‌ها معمولاً از این شنونده فرار می‌کنند و شنوندهٔ صرفاً تأییدکننده را ترجیح می‌دهند.",
+    "en": "Complainers usually avoid this listener and prefer one who simply agrees.",
+    "nl": "Klagers vermijden deze luisteraar meestal en geven de voorkeur aan iemand die alleen instemt."
+   },
+   "sources": [
+    "src:90e6536f84"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "الهام از کتاب The Challenger Customer: سازمان‌ها به‌اشتباه روی مشتریان همیشه‌راضی سرمایه‌گذاری می‌کنند.",
+    "en": "Inspired by the book The Challenger Customer: organisations wrongly invest in customers who are always satisfied.",
+    "nl": "Geïnspireerd door het boek The Challenger Customer: organisaties investeren ten onrechte in klanten die altijd tevreden zijn."
+   },
+   "sources": [
+    "src:90e6536f84"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:kristin-behfar",
+  "core:matthew-cronin",
+  "core:brent-adamson-matthew-dixon"
+ ],
+ "sources": [
+  "src:90e6536f84",
+  "src:1e234b8258"
+ ],
+ "booklets": [
+  "t-challenger-listener",
+  "s11:challenger-h",
+  "s11:ultimatum"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

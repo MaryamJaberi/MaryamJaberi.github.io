@@ -1,0 +1,121 @@
+{
+ "id": "psy:evo-sex",
+ "kind": "subfield",
+ "title": {
+  "fa": "تعارض جنسی و روان‌شناسی تکاملی",
+  "en": "Sexual conflict (evolutionary)",
+  "nl": "Seksueel conflict (evolutionair)"
+ },
+ "parent": "psy:anthropology",
+ "field": null,
+ "summary": {
+  "fa": "تبیین تکاملی فریب، آزار، تعقیب و خشونت (دیوید باس)؛ توضیح، توجیه نیست؛ با نقدهای ذات‌انگاری.",
+  "en": "An evolutionary explanation of deception, harassment, stalking and violence (David Buss); explanation is not justification; with critiques of essentialism.",
+  "nl": "Een evolutionaire verklaring van misleiding, intimidatie, stalking en geweld (David Buss); verklaren is niet rechtvaardigen; met kritiek op essentialisme."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کلارک و هتفیلد: تفاوت بزرگ پاسخ به پیشنهاد جنسی؛ کانلی (۲۰۱۱): با کنترل خطر ادراک‌شده کوچک‌تر می‌شود.",
+    "en": "Clark and Hatfield: a large difference in responses to a sexual offer; Conley (2011): it shrinks when perceived risk is controlled for.",
+    "nl": "Clark en Hatfield: een groot verschil in reacties op een seksueel aanbod; Conley (2011): het wordt kleiner als je corrigeert voor ervaren risico."
+   },
+   "sources": [
+    "src:7c5ffd0935"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شکاف جنسی-اجتماعی و SOI (اشمیت ۲۰۰۳، ۵۲ کشور).",
+    "en": "The sociosexual gap and the SOI (Schmitt 2003, 52 countries).",
+    "nl": "De sociaalseksuele kloof en de SOI (Schmitt 2003, 52 landen)."
+   },
+   "sources": [
+    "src:7c5ffd0935"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثر سیندرلا (دیلی و ویلسون).",
+    "en": "The Cinderella effect (Daly and Wilson).",
+    "nl": "Het assepoestereffect (Daly en Wilson)."
+   },
+   "sources": [
+    "src:7c5ffd0935"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثر تجمعی عوامل خطر تعرض (ملاموث)؛ قدرت و شکارچی‌گری (کلتنر).",
+    "en": "The cumulative effect of risk factors for sexual assault (Malamuth); power and predation (Keltner).",
+    "nl": "Het cumulatieve effect van risicofactoren voor seksueel geweld (Malamuth); macht en roofzucht (Keltner)."
+   },
+   "sources": [
+    "src:7c5ffd0935"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: مغالطهٔ طبیعت‌گرایانه، ابطال‌پذیری، هم‌پوشانی جنسیتی (فاین).",
+    "en": "Critique: the naturalistic fallacy, falsifiability, overlap between the sexes (Fine).",
+    "nl": "Kritiek: de naturalistische drogreden, falsifieerbaarheid, overlap tussen de seksen (Fine)."
+   },
+   "sources": [
+    "src:7c5ffd0935"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:sex-gender",
+   "rel": "critiques",
+   "note": {
+    "fa": "نقد",
+    "en": "Critique",
+    "nl": "Kritiek"
+   }
+  },
+  {
+   "to": "psy:envy",
+   "rel": "see-also",
+   "note": {
+    "fa": "حسادت",
+    "en": "Envy",
+    "nl": "Afgunst"
+   }
+  },
+  {
+   "to": "psy:antisocial-subtypes",
+   "rel": "see-also",
+   "note": {
+    "fa": "سه‌گانهٔ تاریک",
+    "en": "Dark triad",
+    "nl": "Duistere triade"
+   }
+  }
+ ],
+ "people": [
+  "core:david-buss",
+  "core:david-schmitt",
+  "core:cordelia-fine"
+ ],
+ "sources": [
+  "src:7c5ffd0935",
+  "src:289003bde6"
+ ],
+ "booklets": [
+  "badmen:gap",
+  "badmen:conflict",
+  "badmen:family",
+  "badmen:critique"
+ ],
+ "origin": "badmen",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

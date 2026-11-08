@@ -1,0 +1,139 @@
+{
+ "id": "psy:conspiracy",
+ "kind": "concept",
+ "title": {
+  "fa": "باور توطئه‌ای",
+  "en": "Conspiracy belief",
+  "nl": "Geloof in complotten"
+ },
+ "parent": "psy:critical-thinking",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "باور به اینکه رویدادها حاصل نقشهٔ پنهانی گروهی قدرتمندند. گرایمز: «ماهیت باور توطئه‌ای نه حمایت نظریه‌ها از هم، بلکه باور کلی‌تر به توطئه است.»",
+  "en": "The belief that events are the product of a secret plot by a powerful group. Grimes: “The nature of conspiratorial belief is not that the theories support each other, but a more general belief in conspiracy.”",
+  "nl": "De overtuiging dat gebeurtenissen het resultaat zijn van een geheim plan van een machtige groep. Grimes: ‘Complotdenken draait niet om theorieën die elkaar steunen, maar om een algemener geloof in samenzwering.’"
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "«بن‌لادن شرودینگر»: کسانی که باور داشتند بن‌لادن پیش از حمله مرده بود، همزمان بیشتر باور داشتند هنوز زنده است؛ تناقض مهم نیست، روایت توطئه مهم است.",
+    "en": "“Schrödinger's bin Laden”: people who believed bin Laden was already dead before the raid were also more likely to believe he was still alive; the contradiction doesn't matter, the conspiracy narrative does.",
+    "nl": "‘Schrödingers Bin Laden’: wie geloofde dat Bin Laden al dood was vóór de inval, geloofde ook vaker dat hij nog leefde; de tegenspraak doet er niet toe, het complotverhaal wel."
+   },
+   "sources": [
+    "src:71e3d9f256"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فستینگر، «وقتی پیشگویی شکست می‌خورد» (۱۹۵۶): پیروان فرقه پس از شکست پیشگویی پایان جهان، باورشان قوی‌تر شد؛ ناهماهنگی شناختی.",
+    "en": "Festinger, When Prophecy Fails (1956): after the end-of-the-world prophecy failed, cult members' belief grew stronger; cognitive dissonance.",
+    "nl": "Festinger, When Prophecy Fails (1956): nadat de voorspelling van het einde van de wereld uitbleef, werd het geloof van de sekteleden sterker; cognitieve dissonantie."
+   },
+   "sources": [
+    "src:71e3d9f256"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گرایمز (۲۰۱۶): مدل ریاضی نشان می‌دهد توطئه‌های بزرگ با هزاران عضو در چند سال لو می‌روند.",
+    "en": "Grimes (2016): a mathematical model shows that large conspiracies with thousands of members leak within a few years.",
+    "nl": "Grimes (2016): een wiskundig model laat zien dat grote samenzweringen met duizenden leden binnen een paar jaar uitlekken."
+   },
+   "sources": [
+    "src:71e3d9f256"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با انسانیت‌زدایی و قطبی‌شدن: باور توطئه‌ای گروه مقابل را شرور و یکپارچه می‌بیند.",
+    "en": "Link with dehumanisation and polarisation: conspiratorial belief sees the opposing group as evil and monolithic.",
+    "nl": "Link met ontmenselijking en polarisatie: complotdenken ziet de andere groep als kwaadaardig en één blok."
+   },
+   "sources": [
+    "src:71e3d9f256"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "باورهای توطئه با هم همبسته و حتی متناقض‌اند (دیانا هم «مرده» و هم «زنده»).",
+    "en": "Conspiracy beliefs are correlated and even contradictory (Diana both “dead” and “alive”).",
+    "nl": "Complotovertuigingen hangen samen en spreken elkaar zelfs tegen (Diana zowel ‘dood’ als ‘levend’)."
+   },
+   "sources": [
+    "src:71e3d9f256"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هشت سرچشمه: شخصیت و تفکر تک‌منطقی، ردیابی بیش‌فعال عاملیت، گرایش سیاسی، فقدان کنترل، پذیرش اولیهٔ گزاره‌ها، قطبی‌شدن، تفکر شهودی (CRT)، میل به منحصربه‌فرد بودن؛ و ناتوانی در تشخیص دروغ (دقت حدود ۵۴٪).",
+    "en": "Eight sources: personality and monological thinking, hyperactive agency detection, political leaning, lack of control, initial acceptance of claims, polarisation, intuitive thinking (CRT), the need for uniqueness; and an inability to detect lies (accuracy about 54%).",
+    "nl": "Acht bronnen: persoonlijkheid en monologisch denken, hyperactieve detectie van handelende krachten, politieke voorkeur, gebrek aan controle, aanvankelijk aanvaarden van beweringen, polarisatie, intuïtief denken (CRT), de behoefte uniek te zijn; en het onvermogen leugens te herkennen (nauwkeurigheid ongeveer 54%)."
+   },
+   "sources": [
+    "src:71e3d9f256"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تهدید معنا (کافکا) به جبران معنا در جای دیگر می‌انجامد.",
+    "en": "A threat to meaning (Kafka) leads to compensating for meaning elsewhere.",
+    "nl": "Een bedreiging van betekenis (Kafka) leidt tot het compenseren van betekenis elders."
+   },
+   "sources": [
+    "src:71e3d9f256"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:polarization",
+   "rel": "see-also",
+   "note": {
+    "fa": "قطبی‌شدن",
+    "en": "Polarisation",
+    "nl": "Polarisatie"
+   }
+  },
+  {
+   "to": "psy:gullibility",
+   "rel": "see-also",
+   "note": {
+    "fa": "زودباوری",
+    "en": "Gullibility",
+    "nl": "Goedgelovigheid"
+   }
+  }
+ ],
+ "people": [
+  "core:leon-festinger",
+  "core:karen-douglas",
+  "core:david-robert-grimes",
+  "core:karen-douglas",
+  "core:roland-imhoff",
+  "core:jan-willem-van-prooijen",
+  "core:travis-proulx"
+ ],
+ "sources": [
+  "src:71e3d9f256",
+  "src:7674bbdf7a",
+  "src:fdb082327a",
+  "src:8576ec7b89"
+ ],
+ "booklets": [
+  "conspiracy:what",
+  "conspiracy:sources",
+  "shelf14:gull"
+ ],
+ "origin": "book",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

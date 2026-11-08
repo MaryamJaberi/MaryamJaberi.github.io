@@ -1,0 +1,119 @@
+{
+ "id": "psy:vulnerable-narcissism",
+ "kind": "concept",
+ "title": {
+  "fa": "خودشیفتگی آسیب‌پذیر",
+  "en": "Vulnerable narcissism",
+  "nl": "Kwetsbaar narcisme"
+ },
+ "parent": "psy:personality-disorders",
+ "field": "psy:personality-disorders",
+ "summary": {
+  "fa": "شکل پنهان خودشیفتگی: نوروتیسیزم + خصومت + احساس استحقاق (اسلاید ۸۴). در برابر خودشیفتگی «بزرگ‌منشانه» که آشکار و پرمدعاست.",
+  "en": "The hidden form of narcissism: neuroticism + hostility + entitlement (slide 84). Contrasted with “grandiose” narcissism, which is overt and boastful.",
+  "nl": "De verborgen vorm van narcisme: neuroticisme + vijandigheid + aanspraak (slide 84). Tegenover ‘grandioos’ narcisme, dat openlijk en opschepperig is."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پینکاس و لوکوویتسکی (۲۰۱۰) تمایز بزرگ‌منشانه/آسیب‌پذیر را جمع‌بندی کردند.",
+    "en": "Pincus and Lukowitsky (2010) summarised the grandiose/vulnerable distinction.",
+    "nl": "Pincus en Lukowitsky (2010) vatten het onderscheid grandioos/kwetsbaar samen."
+   },
+   "sources": [
+    "src:488acddd7e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گیلبرت به مرور کریزان و جوهر (۲۰۱۵) اشاره می‌کند: بُعد آسیب‌پذیر با شرم-خشم، نشخوار انتقام‌جویانه و بی‌اعتمادی پیوند دارد؛ «ترکیبی بسیار سمی».",
+    "en": "Gilbert cites Krizan and Johar's review (2015): the vulnerable dimension is linked to shame-rage, vengeful rumination and distrust; “a very toxic combination”.",
+    "nl": "Gilbert verwijst naar het overzicht van Krizan en Johar (2015): de kwetsbare dimensie hangt samen met schaamte-woede, wraakzuchtig piekeren en wantrouwen; ‘een zeer giftige combinatie’."
+   },
+   "sources": [
+    "src:488acddd7e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کوهات خودشیفتگی را از دید «روان‌شناسی خود» و نیاز به بازتاب همدلانه توضیح داد.",
+    "en": "Kohut explained narcissism through “self psychology” and the need for empathic mirroring.",
+    "nl": "Kohut verklaarde narcisme vanuit de ‘zelfpsychologie’ en de behoefte aan empathisch spiegelen."
+   },
+   "sources": [
+    "src:488acddd7e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در سازمان: یکی از الگوهای شخصیت سمی و سرزنش.",
+    "en": "In organisations: one of the patterns of toxic personality and blame.",
+    "nl": "In organisaties: een van de patronen van giftige persoonlijkheid en schuld geven."
+   },
+   "sources": [
+    "src:488acddd7e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "نشخوار انتقام‌جویانه",
+    "en": "Vengeful rumination",
+    "nl": "Wraakzuchtig piekeren"
+   }
+  },
+  {
+   "to": "psy:scapegoating",
+   "rel": "applies-to",
+   "note": {
+    "fa": "سرزنش در سازمان",
+    "en": "Blame in organisations",
+    "nl": "Schuld in organisaties"
+   }
+  },
+  {
+   "to": "psy:t-psychodynamic",
+   "rel": "see-also",
+   "note": {
+    "fa": "نظریهٔ کوهات",
+    "en": "Kohut's theory",
+    "nl": "Theorie van Kohut"
+   }
+  },
+  {
+   "to": "psy:victim-mindset",
+   "rel": "see-also",
+   "note": {
+    "fa": "قربانی",
+    "en": "Victim",
+    "nl": "Slachtoffer"
+   }
+  }
+ ],
+ "people": [
+  "core:heinz-kohut",
+  "core:aaron-pincus",
+  "core:zlatan-krizan"
+ ],
+ "sources": [
+  "src:488acddd7e",
+  "src:d4423b1d4d",
+  "src:25dc79f3a5"
+ ],
+ "booklets": [
+  "toxic",
+  "bored:narcissism",
+  "riseabove:narc"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

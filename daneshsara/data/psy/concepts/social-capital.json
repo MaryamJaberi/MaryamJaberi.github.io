@@ -1,0 +1,93 @@
+{
+ "id": "psy:social-capital",
+ "kind": "subfield",
+ "title": {
+  "fa": "سرمایهٔ اجتماعی",
+  "en": "Social capital",
+  "nl": "Sociaal kapitaal"
+ },
+ "parent": "psy:sociology",
+ "field": null,
+ "summary": {
+  "fa": "شبکه‌ها، اعتماد و هنجارهای همکاری که زندگی جمعی را ممکن می‌کنند. پاتنام در «بولینگ تنها» کاهش آن را در آمریکا نشان داد.",
+  "en": "The networks, trust and norms of cooperation that make collective life possible. In Bowling Alone, Putnam showed its decline in the United States.",
+  "nl": "De netwerken, het vertrouwen en de normen van samenwerking die samenleven mogelijk maken. In Bowling Alone liet Putnam de afname ervan in de Verenigde Staten zien."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سرمایهٔ «پیونددهنده» (درون گروه) و «پل‌زننده» (میان گروه‌ها).",
+    "en": "“Bonding” capital (within the group) and “bridging” capital (between groups).",
+    "nl": "‘Bindend’ kapitaal (binnen de groep) en ‘overbruggend’ kapitaal (tussen groepen)."
+   },
+   "sources": [
+    "src:68ad65542d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اعتماد عمومی بالا (مثل کشورهای شمال اروپا) با بهزیستی بیشتر همراه است.",
+    "en": "High general trust (as in the Nordic countries) goes with greater well-being.",
+    "nl": "Hoog algemeen vertrouwen (zoals in de Noordse landen) gaat samen met meer welzijn."
+   },
+   "sources": [
+    "src:68ad65542d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بوردیو سرمایهٔ اجتماعی را کنار سرمایهٔ اقتصادی و فرهنگی، منبع نابرابری می‌دانست.",
+    "en": "Bourdieu saw social capital, alongside economic and cultural capital, as a source of inequality.",
+    "nl": "Bourdieu zag sociaal kapitaal, naast economisch en cultureel kapitaal, als bron van ongelijkheid."
+   },
+   "sources": [
+    "src:68ad65542d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:social-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد اجتماعی",
+    "en": "Social trust",
+    "nl": "Sociaal vertrouwen"
+   }
+  },
+  {
+   "to": "psy:happiness-origins",
+   "rel": "see-also",
+   "note": {
+    "fa": "شادکامی",
+    "en": "Happiness",
+    "nl": "Geluk"
+   }
+  },
+  {
+   "to": "psy:cooperation-competition",
+   "rel": "see-also",
+   "note": {
+    "fa": "همکاری",
+    "en": "Cooperation",
+    "nl": "Samenwerking"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-putnam",
+  "core:pierre-bourdieu",
+  "core:james-coleman"
+ ],
+ "sources": [
+  "src:68ad65542d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

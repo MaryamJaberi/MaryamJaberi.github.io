@@ -1,0 +1,167 @@
+{
+ "id": "psy:social-trust",
+ "kind": "concept",
+ "title": {
+  "fa": "اعتماد اجتماعی",
+  "en": "Social trust",
+  "nl": "Sociaal vertrouwen"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "آمادگی برای آسیب‌پذیر کردن خود در برابر اعمال دیگران؛ و اینکه چرا اعتماد عمومی میان ملت‌ها و نسل‌ها این‌قدر متفاوت است.",
+  "en": "Willingness to make oneself vulnerable to others' actions; and why general trust varies so much between nations and generations.",
+  "nl": "Bereidheid om jezelf kwetsbaar te maken voor het handelen van anderen; en waarom algemeen vertrouwen zo sterk verschilt tussen landen en generaties."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بازی اعتماد: حدود ۸۰٪ جبران می‌کنند، مردم ۴۰ تا ۵۰٪ برآورد می‌کنند؛ ما کمتر از آنچه باید اعتماد می‌کنیم.",
+    "en": "The trust game: about 80% reciprocate, people estimate 40 to 50%; we trust less than we should.",
+    "nl": "Het vertrouwensspel: ongeveer 80% geeft terug, mensen schatten 40 tot 50%; we vertrouwen minder dan we zouden moeten."
+   },
+   "sources": [
+    "src:dfc4b5c0fc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سرمایهٔ اجتماعی پیونددهنده در برابر پیوندی؛ «جامعهٔ جمع‌گرا امنیت می‌آفریند اما اعتماد را از بین می‌برد» (یاماگیشی).",
+    "en": "Bridging versus bonding social capital; “a collectivist society creates security but destroys trust” (Yamagishi).",
+    "nl": "Overbruggend tegenover bindend sociaal kapitaal; ‘een collectivistische samenleving schept veiligheid maar vernietigt vertrouwen’ (Yamagishi)."
+   },
+   "sources": [
+    "src:dfc4b5c0fc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پاتنام: کاهش اعتماد آمریکایی‌ها بیشتر از جانشینی نسل‌هاست.",
+    "en": "Putnam: Americans' declining trust is mostly due to generational replacement.",
+    "nl": "Putnam: de afname van vertrouwen bij Amerikanen komt vooral door de vervanging van generaties."
+   },
+   "sources": [
+    "src:dfc4b5c0fc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دانمارک: افزایش اعتماد در ۳۰ سال با تحصیلات و نهادهای سالم.",
+    "en": "Denmark: trust rose over 30 years with education and healthy institutions.",
+    "nl": "Denemarken: het vertrouwen steeg in 30 jaar dankzij onderwijs en gezonde instellingen."
+   },
+   "sources": [
+    "src:dfc4b5c0fc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اعتماد نسل دوم مهاجران مانند کشور میزبان است.",
+    "en": "The trust of second-generation immigrants resembles that of the host country.",
+    "nl": "Het vertrouwen van tweede generatie migranten lijkt op dat van het gastland."
+   },
+   "sources": [
+    "src:dfc4b5c0fc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اکسی‌توسین: یافتهٔ کوسفلد در فراتحلیل‌ها تأیید نشد (ناوه ۲۰۱۵).",
+    "en": "Oxytocin: Kosfeld's finding was not confirmed in meta-analyses (Nave 2015).",
+    "nl": "Oxytocine: de bevinding van Kosfeld werd in meta-analyses niet bevestigd (Nave 2015)."
+   },
+   "sources": [
+    "src:dfc4b5c0fc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار درس ون لانگه: فرهنگی‌تر از ژنتیکی؛ ریشه در تجربه؛ اعتماد کمتر از حد؛ «دوز سالم».",
+    "en": "Van Lange's four lessons: more cultural than genetic; rooted in experience; we under-trust; a “healthy dose”.",
+    "nl": "De vier lessen van Van Lange: meer cultureel dan genetisch; geworteld in ervaring; we vertrouwen te weinig; een ‘gezonde dosis’."
+   },
+   "sources": [
+    "src:dfc4b5c0fc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آزمون کیف پول و پرسش اعتماد روزنبرگ (۱۹۵۶) در پیش‌بینی بهزیستی ملی.",
+    "en": "The wallet test and Rosenberg's trust question (1956) in predicting national well-being.",
+    "nl": "De portemonneetest en de vertrouwensvraag van Rosenberg (1956) bij het voorspellen van nationaal welzijn."
+   },
+   "sources": [
+    "src:dfc4b5c0fc"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:intergroup-contact",
+   "rel": "see-also",
+   "note": {
+    "fa": "تماس",
+    "en": "Contact",
+    "nl": "Contact"
+   }
+  },
+  {
+   "to": "psy:cooperative-eye",
+   "rel": "see-also",
+   "note": {
+    "fa": "تکامل همکاری",
+    "en": "Evolution of cooperation",
+    "nl": "Evolutie van samenwerking"
+   }
+  },
+  {
+   "to": "psy:moral-hypocrisy",
+   "rel": "see-also",
+   "note": {
+    "fa": "اخلاق",
+    "en": "Morality",
+    "nl": "Moraal"
+   }
+  },
+  {
+   "to": "psy:psych-safety",
+   "rel": "see-also",
+   "note": {
+    "fa": "سازمان",
+    "en": "Organisation",
+    "nl": "Organisatie"
+   }
+  }
+ ],
+ "people": [
+  "core:david-dunning",
+  "core:toshio-yamagishi",
+  "core:robert-putnam",
+  "core:harry-triandis",
+  "core:paul-van-lange",
+  "core:eric-uslaner"
+ ],
+ "sources": [
+  "src:dfc4b5c0fc",
+  "src:893fcdadde",
+  "src:468ce93eee"
+ ],
+ "booklets": [
+  "trust:what",
+  "trust:games",
+  "trust:nations",
+  "happiness:society"
+ ],
+ "origin": "trust",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

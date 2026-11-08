@@ -1,0 +1,95 @@
+{
+ "id": "psy:enduring-mh",
+ "kind": "concept",
+ "title": {
+  "fa": "سلامت روان پایدار",
+  "en": "Enduring mental health",
+  "nl": "Blijvende mentale gezondheid"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "نداشتن هیچ اختلال روانی از کودکی تا میانسالی؛ در کوهورت دانیدین فقط ۱۷٫۳٪ (۱۷۱ نفر) تا ۳۸ سالگی.",
+  "en": "Having no mental disorder from childhood to midlife; in the Dunedin cohort only 17.3% (171 people) up to age 38.",
+  "nl": "Geen enkele psychische stoornis hebben van de kindertijd tot de middelbare leeftijd; in het Dunedin-cohort slechts 17,3% (171 mensen) tot 38 jaar."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "شیفر، کسپی، موفیت و همکاران (۲۰۱۷).",
+    "en": "Schaefer, Caspi, Moffitt and colleagues (2017).",
+    "nl": "Schaefer, Caspi, Moffitt en collega's (2017)."
+   },
+   "sources": [
+    "src:dc7b37a2ee"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این گروه دستاورد تحصیلی و اجتماعی‌اقتصادی، رضایت از زندگی و روابط بهتری داشتند.",
+    "en": "This group had better educational and socioeconomic attainment, life satisfaction and relationships.",
+    "nl": "Deze groep had betere opleidings- en sociaaleconomische resultaten, levenstevredenheid en relaties."
+   },
+   "sources": [
+    "src:dc7b37a2ee"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "با در نظر گرفتن محدودیت‌های سنجش، سلامت پایدار احتمالاً حتی کمتر است.",
+    "en": "Given the limitations of measurement, enduring health is probably even rarer.",
+    "nl": "Gezien de beperkingen van de meting is blijvende gezondheid waarschijnlijk nog zeldzamer."
+   },
+   "sources": [
+    "src:dc7b37a2ee"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یعنی تجربهٔ دست‌کم یک دورهٔ «اختلال» هنجار آماری است، نه استثنا.",
+    "en": "That is, experiencing at least one episode of “disorder” is the statistical norm, not the exception.",
+    "nl": "Dat wil zeggen: minstens één periode van ‘stoornis’ meemaken is de statistische norm, geen uitzondering."
+   },
+   "sources": [
+    "src:dc7b37a2ee"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:overdiagnosis",
+   "rel": "see-also",
+   "note": {
+    "fa": "تفسیر",
+    "en": "Interpretation",
+    "nl": "Interpretatie"
+   }
+  },
+  {
+   "to": "psy:dimensional-dx",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیوستار",
+    "en": "Continuum",
+    "nl": "Continuüm"
+   }
+  }
+ ],
+ "people": [
+  "core:terrie-moffitt-avshalom-caspi"
+ ],
+ "sources": [
+  "src:dc7b37a2ee"
+ ],
+ "booklets": [
+  "workshop:origins"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

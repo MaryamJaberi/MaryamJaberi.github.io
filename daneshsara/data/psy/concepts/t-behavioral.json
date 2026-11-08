@@ -1,0 +1,77 @@
+{
+ "id": "psy:t-behavioral",
+ "kind": "subfield",
+ "title": {
+  "fa": "رفتاردرمانی",
+  "en": "Behavior therapy",
+  "nl": "Gedragstherapie"
+ },
+ "parent": "psy:psychotherapy",
+ "field": null,
+ "summary": {
+  "fa": "درمان بر پایهٔ اصول یادگیری: شرطی‌سازی کلاسیک و عامل، مواجهه و تقویت.",
+  "en": "Treatment based on the principles of learning: classical and operant conditioning, exposure and reinforcement.",
+  "nl": "Behandeling op basis van leerprincipes: klassieke en operante conditionering, exposure en bekrachtiging."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پاولوف: شرطی‌سازی کلاسیک.",
+    "en": "Pavlov: classical conditioning.",
+    "nl": "Pavlov: klassieke conditionering."
+   },
+   "sources": [
+    "src:b73cfc3e1e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اسکینر: شرطی‌سازی عامل و برنامه‌های تقویت.",
+    "en": "Skinner: operant conditioning and schedules of reinforcement.",
+    "nl": "Skinner: operante conditionering en bekrachtigingsschema's."
+   },
+   "sources": [
+    "src:b73cfc3e1e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ولپی (۱۹۵۸): حساسیت‌زدایی نظام‌مند برای فوبیا.",
+    "en": "Wolpe (1958): systematic desensitisation for phobia.",
+    "nl": "Wolpe (1958): systematische desensitisatie bij fobie."
+   },
+   "sources": [
+    "src:b73cfc3e1e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فعال‌سازی رفتاری برای افسردگی امروز درمانی مستقل و مؤثر است.",
+    "en": "Behavioural activation for depression is today an effective treatment in its own right.",
+    "nl": "Gedragsactivatie bij depressie is nu een effectieve behandeling op zich."
+   },
+   "sources": [
+    "src:b73cfc3e1e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:ivan-pavlov",
+  "core:b-f-skinner",
+  "core:joseph-wolpe"
+ ],
+ "sources": [
+  "src:b73cfc3e1e",
+  "src:dfc070906a"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

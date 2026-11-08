@@ -1,0 +1,105 @@
+{
+ "id": "psy:constructed-emotion",
+ "kind": "concept",
+ "title": {
+  "fa": "هیجان ساخته‌شده",
+  "en": "Theory of constructed emotion",
+  "nl": "Theorie van geconstrueerde emotie"
+ },
+ "parent": "psy:p-emotion",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "لیزا فلدمن بارت: هیجان‌ها «مدار» ثابت و جهانی در مغز ندارند؛ مغز با پیش‌بینی و مفهوم‌هایی که آموخته‌ایم، از حس‌های بدنی هیجان می‌سازد.",
+  "en": "Lisa Feldman Barrett: emotions have no fixed, universal “circuits” in the brain; the brain constructs emotion from bodily sensations using prediction and the concepts we have learned.",
+  "nl": "Lisa Feldman Barrett: emoties hebben geen vaste, universele ‘circuits’ in de hersenen; het brein construeert emotie uit lichamelijke sensaties met voorspelling en aangeleerde begrippen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مغز پیش‌بین: ادراک، حدس مغز است که با داده‌های حسی اصلاح می‌شود.",
+    "en": "The predictive brain: perception is the brain's guess, corrected by sensory data.",
+    "nl": "Het voorspellende brein: waarneming is de gok van het brein, bijgesteld door zintuiglijke gegevens."
+   },
+   "sources": [
+    "src:53575ceba4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بودجه‌بندی بدن (آلوستاز) و حس درونی.",
+    "en": "Body budgeting (allostasis) and interoception.",
+    "nl": "Het lichaamsbudget (allostase) en interoceptie."
+   },
+   "sources": [
+    "src:53575ceba4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دانه‌بندی هیجانی: واژه‌های دقیق‌تر برای هیجان با تنظیم بهتر همراه است.",
+    "en": "Emotional granularity: more precise words for emotions go with better regulation.",
+    "nl": "Emotionele granulariteit: preciezere woorden voor emoties gaan samen met betere regulatie."
+   },
+   "sources": [
+    "src:53575ceba4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: بسیاری از پژوهشگران (مانند اکمن و همکاران) بر هسته‌های جهانی هیجان تأکید دارند؛ بحث ادامه دارد.",
+    "en": "Critique: many researchers (such as Ekman and colleagues) stress universal cores of emotion; the debate continues.",
+    "nl": "Kritiek: veel onderzoekers (zoals Ekman en collega's) benadrukken universele kernen van emotie; het debat gaat door."
+   },
+   "sources": [
+    "src:53575ceba4"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:emotion-regulation",
+   "rel": "see-also",
+   "note": {
+    "fa": "تنظیم",
+    "en": "Regulation",
+    "nl": "Regulatie"
+   }
+  },
+  {
+   "to": "psy:emodiversity",
+   "rel": "see-also",
+   "note": {
+    "fa": "تنوع هیجانی",
+    "en": "Emotional diversity",
+    "nl": "Emotionele diversiteit"
+   }
+  },
+  {
+   "to": "psy:aesthetic-emotion",
+   "rel": "see-also",
+   "note": {
+    "fa": "هیجان",
+    "en": "Emotion",
+    "nl": "Emotie"
+   }
+  }
+ ],
+ "people": [
+  "core:lisa-feldman-barrett",
+  "core:paul-ekman"
+ ],
+ "sources": [
+  "src:53575ceba4"
+ ],
+ "booklets": [
+  "shelf7:barrett"
+ ],
+ "origin": "shelf7",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

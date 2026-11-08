@@ -1,0 +1,66 @@
+{
+ "id": "psy:psychiatry",
+ "kind": "field",
+ "title": {
+  "fa": "روان‌پزشکی",
+  "en": "Psychiatry",
+  "nl": "Psychiatrie"
+ },
+ "parent": "psy:psyche",
+ "field": null,
+ "summary": {
+  "fa": "شاخه‌ای از پزشکی که به تشخیص، پیشگیری و درمان اختلالات روانی می‌پردازد. روان‌پزشک پزشک است و می‌تواند دارو تجویز کند؛ امروز رویکرد غالب «زیستی-روانی-اجتماعی» است.",
+  "en": "The branch of medicine that diagnoses, prevents and treats mental disorders. A psychiatrist is a physician and can prescribe medication; today the dominant approach is “biopsychosocial”.",
+  "nl": "De tak van de geneeskunde die psychische stoornissen vaststelt, voorkomt en behandelt. Een psychiater is arts en kan medicatie voorschrijven; de heersende benadering is nu ‘biopsychosociaal’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نظام‌های طبقه‌بندی اصلی: DSM (انجمن روان‌پزشکی آمریکا) و ICD (سازمان جهانی بهداشت).",
+    "en": "The main classification systems: DSM (American Psychiatric Association) and ICD (World Health Organization).",
+    "nl": "De belangrijkste classificatiesystemen: DSM (American Psychiatric Association) en ICD (Wereldgezondheidsorganisatie)."
+   },
+   "sources": [
+    "src:fd4b6b5966"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درمان ترکیبی: دارو، روان‌درمانی، مداخلات اجتماعی و گاه روش‌های تحریک مغزی.",
+    "en": "Combined treatment: medication, psychotherapy, social interventions and sometimes brain stimulation.",
+    "nl": "Gecombineerde behandeling: medicatie, psychotherapie, sociale interventies en soms hersenstimulatie."
+   },
+   "sources": [
+    "src:fd4b6b5966"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدل زیستی-روانی-اجتماعی را جورج انگل در ۱۹۷۷ پیشنهاد کرد.",
+    "en": "The biopsychosocial model was proposed by George Engel in 1977.",
+    "nl": "Het biopsychosociale model werd in 1977 voorgesteld door George Engel."
+   },
+   "sources": [
+    "src:fd4b6b5966"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:philippe-pinel",
+  "core:emil-kraepelin",
+  "core:eric-kandel"
+ ],
+ "sources": [
+  "src:fd4b6b5966",
+  "src:fa802d99ba"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

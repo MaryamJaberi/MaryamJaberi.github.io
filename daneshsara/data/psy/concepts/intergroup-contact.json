@@ -1,0 +1,110 @@
+{
+ "id": "psy:intergroup-contact",
+ "kind": "concept",
+ "title": {
+  "fa": "تماس بین‌گروهی و کلاس پازلی",
+  "en": "Intergroup contact · Jigsaw classroom",
+  "nl": "Contact tussen groepen · jigsaw-klas"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "آلپورت (۱۹۵۴): تماس میان گروه‌ها در شرایط برابر، با هدف مشترک، همکاری و حمایت نهادی، پیش‌داوری را کاهش می‌دهد. کلاس پازلی ارونسون نسخهٔ اجرایی آن است.",
+  "en": "Allport (1954): contact between groups under equal status, with a common goal, cooperation and institutional support, reduces prejudice. Aronson's jigsaw classroom is its practical version.",
+  "nl": "Allport (1954): contact tussen groepen bij gelijke status, met een gemeenschappelijk doel, samenwerking en steun van instellingen, vermindert vooroordelen. Aronsons jigsaw-klas is de praktische uitwerking."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آلپورت پیش‌داوری را «بیزاری مبتنی بر تعمیم نادرست و انعطاف‌ناپذیر» تعریف کرد.",
+    "en": "Allport defined prejudice as “an antipathy based upon a faulty and inflexible generalisation”.",
+    "nl": "Allport definieerde vooroordeel als ‘een antipathie gebaseerd op een gebrekkige en starre generalisatie’."
+   },
+   "sources": [
+    "src:c3ce060d06"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کلاس پازلی (ارونسون، آستین ۱۹۷۱): هر کودک بخشی از درس را می‌داند؛ پس از شش هفته کودکان اعضای گروه را از هر نژادی بیشتر دوست داشتند و عزت‌نفس اقلیت‌ها بالا رفت.",
+    "en": "The jigsaw classroom (Aronson, Austin 1971): each child knows part of the lesson; after six weeks children liked group members of every race more and minority self-esteem rose.",
+    "nl": "De jigsaw-klas (Aronson, Austin 1971): elk kind kent een deel van de les; na zes weken vonden kinderen groepsgenoten van elke afkomst aardiger en steeg de zelfwaardering van minderheden."
+   },
+   "sources": [
+    "src:c3ce060d06"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پتیگرو و ترپ (۲۰۰۶): فراتحلیل ۵۱۵ پژوهش اثر تماس را تأیید کرد؛ حتی تماس خیالی و تماس غیرمستقیم (دوستِ دوست) هم اثر دارند.",
+    "en": "Pettigrew and Tropp (2006): a meta-analysis of 515 studies confirmed the contact effect; even imagined contact and indirect contact (a friend of a friend) have an effect.",
+    "nl": "Pettigrew en Tropp (2006): een meta-analyse van 515 studies bevestigde het contacteffect; zelfs ingebeeld contact en indirect contact (een vriend van een vriend) werken."
+   },
+   "sources": [
+    "src:c3ce060d06"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هیر: «رقیبان سیاسی در یک دموکراسی لیبرال نمی‌توانند دشمن باشند. معاشرت با رقیبان آن‌ها را انسانی می‌کند.»",
+    "en": "Hare: “Political rivals in a liberal democracy cannot be enemies. Spending time with rivals humanises them.”",
+    "nl": "Hare: ‘Politieke rivalen in een liberale democratie kunnen geen vijanden zijn. Omgaan met rivalen maakt hen menselijk.’"
+   },
+   "sources": [
+    "src:c3ce060d06"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با سازمان: کارگروه‌های میان‌بخشی و تیم‌های متنوع با هدف مشترک.",
+    "en": "Link with organisations: cross-department workgroups and diverse teams with a shared goal.",
+    "nl": "Link met organisaties: afdelingsoverstijgende werkgroepen en diverse teams met een gemeenschappelijk doel."
+   },
+   "sources": [
+    "src:c3ce060d06"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:polarization",
+   "rel": "see-also",
+   "note": {
+    "fa": "کاهش قطبی‌شدن",
+    "en": "Reducing polarisation",
+    "nl": "Polarisatie verminderen"
+   }
+  },
+  {
+   "to": "psy:p-edu",
+   "rel": "see-also",
+   "note": {
+    "fa": "کلاس درس",
+    "en": "The classroom",
+    "nl": "Het klaslokaal"
+   }
+  }
+ ],
+ "people": [
+  "core:gordon-allport",
+  "core:elliot-aronson",
+  "core:thomas-pettigrew"
+ ],
+ "sources": [
+  "src:c3ce060d06",
+  "src:6ad6b9a5e3",
+  "src:c989d53945"
+ ],
+ "booklets": [
+  "friendly:remedy"
+ ],
+ "origin": "friendly",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

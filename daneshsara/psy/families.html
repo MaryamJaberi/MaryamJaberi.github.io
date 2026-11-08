@@ -1,0 +1,808 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>اعتیاد: نکاتی برای خانواده‌ها</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-health">
+  <div class="brand">ویکی روان‌شناسی <small>سخنرانی‌های دکتر آذرخش مکری</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-health" target="_blank" rel="noopener">سلامت روان و درمان</a><span class="sep">›</span><a class="tp" href="index.html#t-addiction" target="_blank" rel="noopener">اعتیاد</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><span class="on" aria-current="page">اعتیاد و خانواده</span><a href="clinicaddiction.html" target="_blank" rel="noopener">اعتیاد (درمانگران)</a><a href="decision.html" target="_blank" rel="noopener">خودشناسی و تصمیم</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#what">اعتیاد چیست؟</a></li>
+<li><a href="#badfeel">حس بد و تنظیم هیجان</a></li>
+<li><a href="#course">سیر اعتیاد</a></li>
+<li><a href="#damage">تخریب اعتیاد</a></li>
+<li><a href="#recovery">مفهوم بهبودی</a></li>
+<li><a href="#treatment">ویژگی‌های درمان خوب</a></li>
+<li><a href="#coercive">درمان اجباری</a></li>
+<li><a href="#urine">اعتیاد و آزمایش ادرار</a></li>
+<li><a href="#craving">جلوگیری از وسوسه</a></li>
+<li><a href="#lapse">لغزش</a></li>
+<li><a href="#methadone">متادون</a></li>
+<li><a href="#meth">شیشه و مواد محرک</a></li>
+<li><a href="#fatigue">خستگی و بی‌حالی</a></li>
+<li><a href="#cannabis">حشیش</a></li>
+<li><a href="#opium">تریاک و سایر مواد افیونی</a></li>
+<li><a href="#alcohol">الکل و وابستگی به آن</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>نکاتی دربارهٔ اعتیاد برای خانواده‌ها و مراجعان</h1>
+<p class="lede-sub">خانواده‌ها معمولاً «مصرف» را می‌بینند؛ این مجموعه می‌خواهد آن‌ها «اعتیاد» و «تخریب» را ببینند. از اینکه اعتیاد چیست و چه سیری دارد، تا <a class="w" data-t="recovery">بهبودی</a>، درمان خوب، <a class="w" data-t="coercive">درمان اجباری</a>، آزمایش ادرار، وسوسه، لغزش، متادون، شیشه، خستگی و حشیش.</p>
+<aside class="infobox" aria-label="مشخصات مجموعه"><div class="ib-h">مجموعه در یک نگاه</div><dl>
+<dt>عنوان</dt><dd>نکاتی دربارهٔ اعتیاد برای خانواده‌ها و مراجعان <span class="ltr">(Facts for Families and Clients)</span></dd>
+<dt>مدرس</dt><dd>دکتر آذرخش مکری</dd>
+<dt>بخش‌ها</dt><dd>اعتیاد چیست · حس بد و تنظیم هیجان · سیر اعتیاد · تخریب · مفهوم بهبودی · ویژگی‌های درمان خوب · درمان اجباری و ابهامات آن · آزمایش ادرار · جلوگیری از وسوسه · لغزش · متادون (دو بخش) · شیشه و مواد محرک · خستگی و بی‌حالی · حشیش · تریاک و مواد افیونی · الکل</dd>
+<dt>مخاطب</dt><dd>خانواده‌ها و مراجعان</dd>
+</dl></aside>
+
+<h2 id="what">اعتیاد چیست؟</h2>
+<p><sup class="c"><a href="#r-slides">[۱]</a></sup> نخستین درس: اعتیاد پدیدهٔ پیچیده‌ای است، درک درست آن ضروری است، و بسیاری از آنچه شنیده‌اید نامربوط یا غلط است. کلید فهم، جدا کردن <b>دو جنبه</b> است:</p>
+<div class="cols2">
+<div class="card"><b class="h">۱. اثرات مستقیم مواد</b>ناشی از حضور ماده یا خروج آن از مغز و بدن؛ برای هر ماده متفاوت و بسیار متنوع. <b>با قطع مصرف معمولاً طی ۱ تا ۳ ماه برطرف می‌شوند</b> و حتی بدون خواست بیمار قابل درمان‌اند.<br><small>مصرف: تیره شدن لب و پوست، بهت‌زدگی، گیجی، فراموشی، پرخاشگری، خواب‌آلودگی، پرحرفی، پرتحرکی، لاغری یا پرخوری.<br>قطع: درد بدن، کم‌حرفی، پرش عضلات، بی‌اشتهایی، بی‌خوابی، لرز، تهوع، عرق‌ریزش.</small></div>
+<div class="card"><b class="h">۲. <a class="w" data-t="addictive-behavior">رفتار اعتیادی</a></b>یک <b>یادگیری سمج و معیوب</b>: بیمار می‌آموزد برای رفع «حس بد» به مواد پناه ببرد؛ با گذر زمان راه‌های دیگر مقابله با احساسات ناخوشایند کنار گذاشته می‌شوند و مواد تنها پناهگاه می‌شود. با تغییرات مهمی در مغز همراه است.</div>
+</div>
+<div class="note"><b class="k">علائم بسیار خطرناک</b>اوردوز مرگبار در الکل یا مواد افیونی · جنون (توهم) در مصرف شیشه · تشنج در قطع الکل یا بنزودیازپین‌ها (مثل دیازپام). علائم مصرف و قطع مصرف بین مواد مختلف گاه مشترک و گاه کاملاً متضادند.</div>
+<figure><div class="chain">
+<div class="box">کار، تحصیل، ورزش، دوستان، خانواده، تفریح</div><span class="arr">←</span><div class="box hl">به‌تدریج همه کنار می‌روند</div><span class="arr">←</span><div class="box">مواد: تنها راه کنار آمدن با حس بد</div>
+</div><figcaption>شکل ۱. تنگ شدن خزانهٔ مقابله (اسلایدهای ۱۸ تا ۲۳).</figcaption></figure>
+<ul>
+<li><b>صرف دور نگه داشتن معتاد از مواد به بهبودی نمی‌انجامد:</b> اثرات مستقیم را از بین می‌برد و بخشی از بهبودی است، اما بر یادگیری‌های غلط دوران اعتیاد اثر زیادی ندارد.</li>
+<li><b>نقش فعال و تلاش مستمر بیمار لازم است:</b> وظیفهٔ بیمار یافتن راهی جز مواد برای حل مشکلات و احساس خوب بودن است (کار، ورزش، موسیقی، یادگیری). فقط خود او می‌تواند این را انجام دهد. درمان را فرایندی طولانی با افت‌وخیز ببینید.</li>
+<li>درمان اعتیاد اجزا و مراحل مختلفی دارد.</li>
+</ul>
+
+<h2 id="badfeel">حس بد و تنظیم هیجان</h2>
+<ul>
+<li><b>همهٔ انسان‌ها حس بد را تجربه می‌کنند:</b> احساس شکست، طرد شدن، ناخواسته بودن یا سرزنش خود. زندگی طبیعی بدون حس بد محال است.</li>
+<li>نمونه‌ها: بی‌قراری و اضطراب، تنها ماندن و طرد شدن، حسادت، سرزنش خود، درد در بدن، بی‌خوابی، عصبانیت، غمگینی، بی‌حوصلگی، خستگی، خجالت، کلافگی.</li>
+<li><b>حس‌های بد تا ابد نمی‌مانند</b>؛ انسان‌ها برای رهایی از آن‌ها کارهای خاصی می‌کنند: تلویزیون، تنقلات، موبایل و کامپیوتر، کتاب، صبر کردن، گشتن در خیابان، صحبت با دوستان، رفتن به منزل اقوام، خرید، خوابیدن. قدرت مهار حس بد به <a class="w" data-t="emoreg">تنظیم هیجان</a> مربوط است.</li>
+</ul>
+<div class="cols2">
+<div class="card"><b class="h">تمرین اول</b>سه حس بدی را که هفتهٔ گذشته تجربه کردید به یاد آورید؛ یک خاطرهٔ خیلی دردناک را در نظر بگیرید و حس بد خود را توضیح دهید.</div>
+<div class="card"><b class="h">تمرین دوم</b>روش‌های اصلی شما در کاهش حس بد چیست؟ کدام از همه مفیدتر است؟ کدام بیشتر آزارتان می‌دهد؟</div>
+</div>
+<div class="key"><b class="k">دو نکتهٔ مهم</b>در تنظیم مناسب هیجان، فرد فرصت انطباق با محیط دارد؛ در بدتنظیمی هیجانی این فرصت از دست می‌رود. تنظیم هیجان مهارتی است که بخش زیادی از آن در کودکی و نوجوانی کسب می‌شود؛ و <b>معتادان یاد گرفته‌اند برای گریز از حس بد تنها یا خیلی زیاد به مواد متکی باشند.</b></div>
+
+<h2 id="course">سیر اعتیاد</h2>
+<p>پاسخ به این پرسش‌ها که «معتادان چه ویژگی‌هایی دارند؟ چرا اعتیادشان را نمی‌پذیرند؟ آیا باید به آن‌ها فشار آورد؟» به <b>مرحلهٔ اعتیاد</b> بستگی دارد. استعارهٔ اسلایدها: انگور ← کشمش، و هیزم ← آتش ← زغال ← خاکستر.</p>
+<table class="t">
+<tr><th>مرحله</th><th>ویژگی</th></tr>
+<tr><td><b>الف. اوایل اعتیاد</b></td><td>«دوران طلایی»: مصرف بسیار لذت‌بخش، عارضهٔ چندانی ندیده، علاقه‌ای به درمان ندارد و خود را مشکل‌دار نمی‌داند.</td></tr>
+<tr><td><b>ب. پیشرفت اعتیاد</b></td><td>مواد مثل سابق لذت‌بخش نیستند، روحیه افت کرده، گهگاه تصمیم به ترک دارد اما دودل است؛ همکاری هنوز جدی نیست.</td></tr>
+<tr><td><b>ج. اعتیاد پیشرفته</b></td><td>روحیه خراب، مصرف لذت‌بخش نیست، خود متوجه مشکلات است اما دوست ندارد سرزنش شود؛ تصمیم به ترک دارد اما مرتب تعلل می‌کند.</td></tr>
+<tr><td><b>د. اقدام به ترک</b></td><td>خود اقدام به ترک می‌کند، انگیزهٔ بالا دارد و علاقه‌مند است رها شود.</td></tr>
+</table>
+<ul>
+<li><b>بهبودی خودبه‌خودی:</b> برخی مصرف‌کنندگان پیش از رسیدن به مرحلهٔ «ج» خودبه‌خود ترک می‌کنند؛ خوشبختانه تعدادشان قابل توجه است.</li>
+<li><b><a class="w" data-t="ambivalence">دودلی</a>:</b> بخش عمدهٔ عمر مصرف‌کنندگان در حس دودلی نسبت به مواد می‌گذرد.</li>
+<li><b>عود:</b> سیر اعتیاد چرخه‌ای است (الف ← ب ← ج ← د ← عود ← ...). عود بیشتر ناشی از <b>ناتوانی در پرهیز</b> است تا نشانه‌ای از عدم صداقت یا فریبکاری.</li>
+<li><b>طرز برخورد</b> با مصرف‌کننده تا حد زیادی به مرحلهٔ اعتیاد مرتبط است.</li>
+<li><b>مفهوم «ته خط»:</b> باور ما این است که لازم نیست معتادان حتماً به انتهای خط برسند تا ترک کنند.</li>
+<li><b>انگیزه:</b> لازم نیست انگیزهٔ ترک به کمال برسد تا درمان آغاز شود؛ ترک به خاطر اموری غیر از خود (خانواده، کار) هم ممکن است.</li>
+</ul>
+<div class="note"><b class="k">پیوند با دنیای روان</b>این مراحل با «مدل مراحل تغییر» پروچاسکا و دیکلمنته (پیش‌تأمل، تأمل، آمادگی، عمل، نگهداری) هم‌خوان است؛ و دودلی همان چیزی است که «<a class="w" data-t="mi">مصاحبهٔ انگیزشی</a>» با آن کار می‌کند.</div>
+
+<h2 id="damage">تخریب اعتیاد</h2>
+<p>خانواده‌ها بیشتر <b>مصرف</b> را می‌بینند تا <a class="w" data-t="damage">تخریب</a> را. اما «مشکل در اعتیاد تخریب آن است». حوزه‌های تخریب: موقعیت کلی اجتماعی · سلامت روانی · اخلاق و رفتار · وضعیت بدنی و ظاهری · علاقه به معنویات · کار، تحصیل و درآمد.</p>
+<ul>
+<li>تخریب در افراد مختلف یکسان نیست و به نوع ماده، شخصیت و شرایط بستگی دارد.</li>
+<li><b>مصرف مواد در پاسخ به حس بد بسیار مخرب‌تر است</b> تا مصرف تفریحی.</li>
+<li>مصرف ماده علت تنها بخشی از تخریب است؛ از عوامل دیگر آگاه باشید و تفکری چندبعدی داشته باشید.</li>
+<li>تخریب مهم‌تر از نوع ماده است: اثری که اعتیاد بر جا می‌گذارد مهم‌تر از خود ماده است.</li>
+<li><b>تأکید بر تخریب نقش سازنده دارد:</b> در مواجهه با معتاد، بحث دربارهٔ تخریب کمک‌کننده‌تر از بحث دربارهٔ مصرف است؛ در سیر درمان ترمیم تخریب‌ها را پایش کنید.</li>
+</ul>
+<div class="note"><b class="k">ابزار: جدول پایش فعالیت روزانه</b>برای هر روز هفته: ساعت بیدار شدن، فعالیت صبح تا ظهر، ۱۲ تا ۶ عصر، ۶ تا شب، و ساعت خواب. ترمیم تخریب را عینی و دیدنی می‌کند (پیوند با «فعال‌سازی رفتاری»).</div>
+
+<h2 id="recovery">مفهوم بهبودی</h2>
+<p>بهبودی فرایندی پیچیده است و همه دربارهٔ آن ۱۰۰٪ هم‌نظر نیستند؛ مرحله دارد و همه‌یاهیچ نیست؛ ابعاد گوناگونی دارد که همه باید محقق شوند؛ و بهترین کسی که می‌تواند آن را تشخیص دهد خود شمایید. پیش از قضاوت بپرسید: شدت اعتیاد و تخریب چقدر بوده؟ و فرد پیش از اعتیاد چه وضعیتی داشته؟</p>
+<figure><div class="chain">
+<div class="box">عدم مصرف مواد</div><span class="arr">+</span><div class="box">سلامت روان و بدن</div><span class="arr">+</span><div class="box hl">شهروند سالم</div>
+</div><figcaption>شکل ۲. سه لایهٔ <a class="w" data-t="recovery">بهبودی</a>. «عدم مصرف مواد» به‌تنهایی کافی نیست.</figcaption></figure>
+<div class="cols2">
+<div class="card"><b class="h">عدم مصرف</b>نه مواد مخدر · نه مواد دیگر (الکل، حشیش) · نه مصرف خودسر هیچ دارویی · سیگار نکشیدن یا مصرف اندک.</div>
+<div class="card"><b class="h">سلامت روان و بدن</b>نبود افسردگی و اضطراب بیمارگونه · خواب و چرخهٔ فعالیت طبیعی · تسلط بر خود و کنترل خشم · نبود جنون و بدبینی مرضی · انرژی طبیعی · رضایت از زندگی و لذت بردن از آن.</div>
+<div class="card"><b class="h">شهروند سالم</b>رعایت قوانین اجتماعی · ارتباط صمیمی و سالم · شاغل و مفید برای خانواده و جامعه · حس دلبستگی · زندگی هدفدار.</div>
+<div class="card"><b class="h">زمان</b>بیشتر صاحب‌نظران معتقدند در اعتیاد سنگین، برای رسیدن به سطح ایمنی قابل قبول، فرد باید <b>۵ سال</b> در شرایط بهبودی بماند؛ پیش از آن وضعیت شکننده است. در اعتیاد سبک، <b>۲ سال</b> توصیه می‌شود.</div>
+</div>
+<p><b>متادون یا بوپرنورفین تجویزشده:</b> برخی گروه‌ها بهبودی تحت این داروها را قابل قبول و برخی ناقص می‌دانند. اما اگر فرد دارو را خودسر مصرف می‌کند، دوز را کم و زیاد می‌کند، دارو بر او اثر محسوس می‌گذارد یا هنگام مشکلات به آن پناه می‌برد، به بهبودی نرسیده است.</p>
+
+<h2 id="treatment">ویژگی‌های درمان خوب</h2>
+<ol>
+<li><b>ارتباط درمانی بسیار مهم است.</b> پرسش‌نامهٔ ۱۲ گویه‌ای <a class="w" data-t="alliance">اتحاد درمانی</a> (۱ هیچ‌وقت تا ۷ همیشه): «من و درمانگرم دربارهٔ کارهایی که باید انجام دهم اتفاق نظر داریم»، «به توانایی درمانگرم اعتماد دارم»، «حس می‌کنم درمانگرم مرا تأیید می‌کند»، «من و درمانگرم هدف‌هایی را دنبال می‌کنیم که هر دو به آن‌ها باور داریم».</li>
+<li><b>درمان شبیه تعمیرگاه نیست:</b> بیمار را «تحویل» نمی‌دهید که «تعمیرشده» پس بگیرید.</li>
+<li><b>وظیفهٔ درمانگر اطلاعات دادن به خانواده نیست.</b></li>
+<li><b>درمانگر دلال یا واسط بین بیمار و خانواده نیست.</b> نمونه درخواست‌های نادرست: «از او بپرسید هنوز مصرف می‌کند؟»، «بگویید از آن دختر دوری کند»، «دارویی بدهید که طرف مواد نرود»؛ و از سوی بیمار: «اگر مادرم به حرفم گوش ندهد، دوباره مصرف می‌کنم».</li>
+<li><b>نقش فعال فرد معتاد ضروری است؛ بیمار مسئول درمان خویش است.</b></li>
+<li><b>درمان صرفاً دارویی ممکن نیست.</b> داروها (نالترکسون، متادون، بوپرنورفین، تنتور اپیوم) ابزارند؛ از «سبک مقابلهٔ شیمیایی» باید اجتناب کرد.</li>
+<li><b>تغییر فراگیر در سبک زندگی لازم است</b> («خطای ماشین لباسشویی»: انتظار اینکه آدم وارد درمان شود و تمیز بیرون بیاید).</li>
+<li><b>درمان مناسب زمان می‌برد.</b></li>
+<li><b>درگیرسازی منطقی خانواده‌ها.</b></li>
+<li><b>تلاش برای یافتن راه‌حل به جای مقصر</b> («پدرش با او بد برخورد می‌کرد»، «خیلی در رفاه بود»، «اختلاف ما به او آسیب زد»...).</li>
+<li><b>افزایش فعالیت:</b> فعال‌سازی رفتاری.</li>
+<li><b>درمان اختصاصی و منطبق بر نیازها.</b></li>
+</ol>
+
+<h2 id="coercive">درمان اجباری</h2>
+<p>پرسش‌های شایع: آیا معتاد باید حتماً خودش بخواهد؟ آیا <a class="w" data-t="coercive">درمان اجباری</a> فایده دارد؟ وظیفهٔ خانواده چیست؟ نکات بسیار مهم:</p>
+<ol>
+<li><b>بین اثرات مستقیم مواد و اعتیاد تمایز قائل شوید.</b> هشدار: بخش قابل توجهی از مصرف‌کنندگان شیشه که حاضر به درمان نیستند، از جنون متامفتامینی رنج می‌برند.</li>
+<li><b>اعتیاد یک چرخه یا فرایند است.</b></li>
+<li><b>منظور، راغب‌سازی و حرکت دادن به سوی ترک است</b>، نه زندانی کردن.</li>
+<li><b>نصیحت، مصاحبه با متخصص و ریشه‌یابی چندان مؤثر نیست</b> (اغراق دربارهٔ توان مصاحبهٔ تخصصی).</li>
+<li><b>نقش کلیدی افراد مهم زندگی.</b></li>
+<li><b>تأکید بر عوارض و شواهد عینی نگران‌کننده:</b> مستند، با تأکید بر تخریب، بدون مبهم‌گویی و بار قضاوتی.</li>
+<li><b>اعمال نوعی تحریم و فشار در صورت استمرار شواهد عینی.</b></li>
+<li><b>تشویق به مراجعه به درمانگر به‌عنوان یک گزینه.</b></li>
+<li><b>دستگیری و ارجاع اجباری به مرکز بستری اثر کمی دارد</b>؛ به تله انداختن کمکی نمی‌کند.</li>
+</ol>
+<table class="t">
+<tr><th>موارد نگران‌کنندهٔ نامناسب (مبهم، قضاوتی)</th><th>موارد مناسب (عینی، مستند)</th></tr>
+<tr><td>«عوض شدی» · «شل و ول شدی» · «تو خودتی» · «مشکوک می‌زنی» · «یه خبریه» · «خلاف می‌کنی»</td><td>کاهش نمرات · کم شدن درآمد · دیر خوابیدن و دیر بیدار شدن · کاهش توان بدنی · جریمه یا تصادف‌های مکرر · چرت زدن در روز</td></tr>
+</table>
+<div class="cols2">
+<div class="card"><b class="h">ویژگی فشارها و تحریم‌ها</b>شفاف و مشخص · غیرحیثیتی و غیرهیجانی · قابل برگشت · شدنی · تدریجی و افزایش‌یابنده. نمونه از خفیف به شدید: محدود کردن پول توجیبی، توقیف خودرو، قطع موبایل، محدودیت رفت‌وآمد و حضور در جمع؛ تا ترک منزل، پیگیری قضایی، جدایی.</div>
+<div class="card"><b class="h">برخی دلایل شکست</b>نبود اتحاد میان افراد مهم · جدی نبودن در تحریم‌ها · رویکرد هیجانی و عصبی · نبود قاطعیت · زمان کم و عجله. هشدار: موفقیت ۱۰۰٪ نخواهد بود و عده‌ای پاسخ مطلوب نمی‌دهند.</div>
+</div>
+<h3>چند ابهام</h3>
+<ul>
+<li><b>اگر مصرف این‌قدر لذت‌بخش است، چطور انتظار داریم کنار بگذارد؟</b> آمادگی برای تغییر از ترازوی «اثر لذت‌دهی» در برابر «عوارض رفتار» شکل می‌گیرد؛ کار خانواده سنگین‌تر کردن کفهٔ عوارض است.</li>
+<li><b>اگر خانواده اهرمی ندارد؟</b> کار دشوار است: اهرم‌های عاطفی و معاشرتی، اظهار رسمی نارضایتی؛ اهرم‌های ضعیف در درازمدت اثرگذارند؛ آرامش را حفظ کنید.</li>
+<li><b>چرا باید از برخورد هیجانی اجتناب کرد؟</b> برخورد هیجانی حس بد را بیشتر می‌کند و حس بد اعتیاد را شدیدتر.</li>
+<li><b>نگران واکنش شدید فرد نیستیم؟</b> اشتباهات رایج: برخورد هیجانی، اشاره به موارد غیرمستند، تأکید صرف بر مصرف به جای تخریب، ندادن گزینه به فرد، رعایت نکردن سیر تدریجی. در عده‌ای امکان تشدید وضعیت هست، «اما هزینه‌ای است که به نفع همه است».</li>
+<li><b>مشاوره با متخصص؟</b> «<a class="w" data-t="mi">مصاحبهٔ انگیزشی</a>» می‌تواند کمک کند.</li>
+<li><b>اقدامات کیفری و قانونی؟</b> فقط پس از ناامیدی از گزینه‌های دیگر، در جوی به دور از خشم و کینه، با هشدار قبلی، با ماهیت برگشت‌پذیر و با راهی برای خروج.</li>
+</ul>
+<div class="note"><b class="k">یادداشت ویراستار</b>این رویکرد به CRAFT (آموزش تقویت جامعه و خانواده؛ رابرت مایرز) شباهت دارد: خانواده یاد می‌گیرد رفتار بی‌مصرفی را تقویت کند، پیامد طبیعی مصرف را برندارد، و درمان را به‌عنوان گزینه پیشنهاد دهد. در کارآزمایی‌ها، CRAFT بیش از رویارویی سنتی («مداخلهٔ جانسون») به ورود فرد به درمان انجامیده است<sup class="c"><a href="#r-craft">[۲]</a></sup>.</div>
+
+<h2 id="urine">اعتیاد و آزمایش ادرار</h2>
+<table class="t">
+<tr><th>روش</th><th>کاربرد</th><th>حساسیت</th><th>اختصاصی بودن</th></tr>
+<tr><td>تست سریع (و کیت بزاقی)</td><td>کلینیک‌های درمان اعتیاد؛ ارزان و سریع؛ هر ماده کیت جدا</td><td class="n">حدود ۸۰ تا ۹۵٪</td><td>متوسط تا زیاد</td></tr>
+<tr><td>کروماتوگرافی مایع / TLC</td><td>آزمایشگاه‌های تشخیص طبی؛ نسبتاً گران؛ پاسخ ۲ تا ۳ روزه</td><td class="n">حدود ۹۰ تا ۹۵٪</td><td>زیاد</td></tr>
+<tr><td>کروماتوگرافی گازی</td><td>آزمایشگاه‌های بسیار تخصصی و مراجع قانونی؛ گران</td><td class="n">نزدیک ۱۰۰٪</td><td>بسیار زیاد</td></tr>
+<tr><td>آزمایش مو</td><td>سابقهٔ مصرف طولانی‌تر</td><td colspan="2">آزمایش خون جایگاه مهمی ندارد.</td></tr>
+</table>
+<p>مدت قابل تشخیص در ادرار برای بیشتر مواد حدود ۳ روز و برای حشیش تا حدود ۱۰ روز است (اسلاید ۸).</p>
+<div class="key"><b class="k">نکات بسیار مهم</b><ul class="tight">
+<li>آزمایش مثبت، حتی اگر درست باشد، فقط یعنی مصرف ماده طی ۳ روز گذشته. <b>مصرف مواد ≠ اعتیاد.</b></li>
+<li>آزمایش منفی هم به معنی نبود اعتیاد نیست؛ کافی است ۳ روز مصرف نکند.</li>
+<li>تشخیص اعتیاد بر اساس مجموعه‌ای از رفتارها و حالات بالینی درازمدت است.</li>
+<li>آزمایش مثبت به معنی شکست درمان و بازگشت اعتیاد نیست (مدیریت لغزش را مرور کنید).</li>
+<li>در مراکز درمانی فقط بیمار حق دارد از نتیجه باخبر شود؛ دیگران فقط با اجازهٔ او.</li>
+<li>هدف آزمایش مچ‌گیری، آزار یا القای شرم نیست.</li>
+</ul></div>
+<p><b>چرا انجام می‌شود؟</b> ارزش قانونی (رانندگی، ضرب و جرح، اهمال)، ابزار انضباطی برای شاغلان، نظارت در مشاغل خاص، ورزش. در مراکز درمانی، معمولاً هفتگی و با تست سریع (کافی برای اهداف درمانی، بدون سندیت قضایی). <b>پنج کارکرد درمانی:</b> پیشگیری و کاهش وسوسه · پایش پیشرفت · بازخورد به بیمار · ابزار توافق و قرارداد با بستگان · پاداش و گاه اقدام تنبیهی.</p>
+<p><b>وقتی بیمار نتیجه را انکار می‌کند:</b> مثبت کاذب معمولاً علت اصلی نیست. دلایل دیگر: انکار بیماری (که فقط خاص اعتیاد نیست؛ همهٔ ما دربارهٔ طول عمر، سلامت، هوش و اخلاق خود خوش‌بینی‌های عجیب داریم)، احساس شرم و درماندگی، مطلوب‌نمایی اجتماعی، برداشت نادرست از دلیل آزمایش، و گاه تلاش آگاهانه برای فریب. برخورد درست درمانگر: فرصت طلایی گفت‌وگو، تأمل دربارهٔ رابطهٔ درمانی، تکرار پس از چند روز.</p>
+
+<h2 id="craving">جلوگیری از وسوسه</h2>
+<p><a class="w" data-t="craving">وسوسه</a> میل شدید به مصرف مواد (یا انجام یک کار) است. امروز آن را با «ارزیابی لحظه‌ای» روی گوشی همراه اندازه می‌گیرند و حتی نقشهٔ وسوسه را در محله‌های شهر رسم کرده‌اند: وسوسهٔ هرویین و کوکائین، خلق منفی و استرس، با نقاط فعالیت مواد و بی‌نظمی اجتماعی هم‌پوشانی دارد<sup class="c"><a href="#r-epstein">[۳]</a></sup>.</p>
+<table class="t">
+<tr><th>نوع وسوسه</th><th>توضیح</th></tr>
+<tr><td>وسوسهٔ قطع مصرف</td><td>با قطع ماده بالا می‌رود و می‌ماند؛ با گذشت زمان کم می‌شود. در شیشه، وسوسه طی حدود ۱۰ هفته به‌تدریج پایین می‌آید (برای همهٔ راه‌های مصرف).</td></tr>
+<tr><td>وابسته به نشانه</td><td>قله‌های ناگهانی با دیدن محل مصرف، دوستان مصرف‌کننده، فروشنده، وسایل، تصاویر مواد، پول، یا فرد مصرف‌کرده. در ترک سیگار، احتمال لغزش با تعداد برخورد روزانه با ویترین فروش سیگار (POST) بالا رفت.</td></tr>
+<tr><td>ناشی از حس بد</td><td>غم، تنهایی، خشم، استرس.</td></tr>
+<tr><td>ناشی از لذت و سرخوشی</td><td>جشن، موفقیت، «حالا که خوبم».</td></tr>
+<tr><td>مربوط به انتظار مصرف</td><td>در پروازها وسوسهٔ سیگار نه با سطح نیکوتین، بلکه با <b>نزدیک شدن به زمان امکان مصرف</b> بالا می‌رفت: در پرواز کوتاه و بلند، اوج وسوسه نزدیک فرود بود<sup class="c"><a href="#r-dar">[۴]</a></sup>.</td></tr>
+</table>
+<h3>برای وسوسه چه کنیم؟</h3>
+<ol>
+<li><b>دربارهٔ وسوسه حرف بزنید:</b> حالاتش را توصیف کنید، موقعیت‌ها و شرایط قبل و بعد آن را بگویید.</li>
+<li><b>واکنش خود به وسوسه را بگویید:</b> درماندگی، خشم، سرزنش خود و شرم، ناامیدی، اضطراب.</li>
+<li><b>ثبت وسوسه‌ها به‌عنوان تکلیف:</b> جدول، گزارش موردی، میانگین روزانه، حداکثرها.</li>
+<li><b>وسوسه را فاجعه نبینید:</b> در جریان بهبودی طبیعی است، تا مدت‌ها آزارتان می‌دهد، و گذراست. «<b>موج‌سواری با وسوسه</b>»: موج اوج می‌گیرد و فرو می‌نشیند. فنون: تنفس آهسته، دوش، ۲۰ دقیقه ورزش ملایم، گوش دادن به یکی دو آهنگ، عبادت و دعا.</li>
+<li><b>اجتناب از نشانه‌ها و شروع‌کننده‌ها:</b> بشناسید، فهرست کنید، راه اجتناب بیابید و تمرین کنید؛ اما <b>امکان ندارد از همهٔ شروع‌کننده‌ها دوری کنید.</b></li>
+<li><b>حذف امکان مصرف:</b> همراه نداشتن مواد و وسایل، حمل نکردن پول، تنها نماندن، سپردن به دیگران.</li>
+<li><b>آزمایش ادرار منظم</b> با تعهد به گفتن نتیجه به بستگان خاص و نمودار نتایج.</li>
+<li><b>کنترل علائم محرومیت</b> با درمان دارویی زیر نظر پزشک.</li>
+<li><b>جلوگیری از اثر مواد با دارو</b> (مانند نالترکسون، یا متادون و بوپرنورفین با دوز مناسب).</li>
+<li><b>مدیریت حالات خلقی:</b> کنترل خشم، درمان افسردگی، خویشتنداری هیجانی.</li>
+<li><b>حلقهٔ جدید اطرافیان:</b> تغییر شبکهٔ دوستان، محیط‌ها و پاتوق‌ها؛ کمک از دوستان جدید و افراد در بهبودی. «تغییر توپ و یار و زمین بازی».</li>
+<li><b>مدیریت لغزش:</b> پذیرش محدودیت‌های خود؛ «لغزش فاجعه نیست».</li>
+</ol>
+<div class="note"><b class="k">توجه</b>مصرف حتی اندک مواد مخدر یا الکل وسوسه را افزایش می‌دهد. و «<b>وسوسه از جنس تشنگی نیست</b>»: با «یک بار رفع کردن» فروکش نمی‌کند، بلکه تقویت می‌شود. («افسانهٔ بالش» را هم در صفحهٔ «<a class="w" data-t="habitchange">عادت‌ها و تغییر</a>» ببینید.)</div>
+
+<h2 id="lapse">لغزش</h2>
+<p>مصرف‌کنندگان پس از ترک ممکن است دوباره مصرف کنند؛ اگر گهگاه و در حد چند بار باشد، به آن <a class="w" data-t="lapse">لغزش</a> می‌گویند. متأسفانه بسیاری از لغزش‌ها زمینه‌ساز عود تمام‌عیارند: «گریز به یه‌ریز تبدیل می‌شود». تکلیف خانواده‌ها و درمانگران چیست؟</p>
+<div class="cols2">
+<div class="card"><b class="h">بدانیم</b>بپذیریم که با وجود قول اکید، بخش عمده‌ای لغزش خواهند داشت. لغزش پس از ترک فاجعه نیست. بسیاری از بهبودیافتگان لغزش‌های متعدد داشته‌اند. قول، قسم و تعهد، ولو سفت‌وسخت، بندرت کارساز است.</div>
+<div class="card"><b class="h">انجام دهیم</b>از برخورد هیجانی، پرخاشگرانه، تحقیرآمیز و سرزنش‌کننده پرهیز کنیم. بیمار متعهد شود لغزش را حتماً به درمانگر گزارش کند و پس از لغزش، ناامید نشده، در اولین فرصت با درمانگر تماس بگیرد.</div>
+</div>
+<p><b>در جلسهٔ درمان:</b> فرد احساسات و افکار قبل و بعد از لغزش را بحث می‌کند؛ به تحلیل وقایع پیشین می‌پردازد؛ برای ماندن در درمان تشویق می‌شود؛ با درمانگر راه‌هایی برای جلوگیری از تکرار طراحی می‌کند؛ و روند کلی لغزش‌ها و بهبودی پیگیری می‌شود.</p>
+<div class="key"><b class="k">مرز این سیاست</b>بیماران نمی‌توانند هم در درمان بمانند و هم مصرف کنند؛ بالاخره یک طرف غلبه می‌کند. پذیرش لغزش <b>دستاویز و بهانهٔ لغزش</b> نمی‌شود.</div>
+
+<h2 id="methadone">متادون</h2>
+<h3>متادون چگونه اثر می‌کند؟</h3>
+<ul>
+<li>ماده‌ای مخدر و <b>صناعی</b> است (از تریاک به دست نمی‌آید)، بسیار قوی و با اثر ضددرد.</li>
+<li><b>هشدار ایمنی:</b> به گفتهٔ اسلایدها، ۷۰ میلی‌گرم متادون می‌تواند یک بزرگسال بدون تحمل را بکشد و کودکان با حتی ۳۰ میلی‌گرم ممکن است دچار مسمومیت مرگبار شوند. متادون را دور از دسترس کودکان نگه دارید.</li>
+<li>اثر طولانی دارد (بیش از ۲۴ ساعت)، شروع و پایان اثرش کند است؛ برخلاف هرویین و کراک که اوج و افت تند در شبانه‌روز دارند.</li>
+<li>وابستگی جسمی قابل توجه اما <b>لذت‌بخشی و اعتیادزایی کمی</b> دارد، و در دوز ثابت مناسب، اثر لذت‌بخش مواد افیونی دیگر را مهار (بلوک) می‌کند. مصرف‌کنندگان: «طی روز زیاد نوسان نمی‌کنیم (خط صاف)».</li>
+<li>فقط برای مواد افیونی کاربرد دارد (تریاک، شیره، هرویین، کراک، مورفین، کدئین، ترامادول، تمجزیک...). برای حشیش، شیشه، بنزودیازپین، الکل و اکستازی <b>کاربردی ندارد</b>.</li>
+<li><b>صرف مصرف متادون به بهبودی نمی‌انجامد</b>؛ فقط فرصتی فراهم می‌کند تا بیمار به زندگی بازگردد. تا کی؟ تا زمان بهبودی. سرانجام: قطع بسیار تدریجی. ترک متادون با علائم همراه است، اما تجربهٔ علائم ترک با اعتیاد برابر نیست: «اعتیاد یک یادگیری معیوب روانی است نه وابستگی بدنی».</li>
+<li>درمان با بوپرنورفین شباهت زیادی به درمان با متادون دارد.</li>
+</ul>
+<h3>ده اصل درمان صحیح با متادون</h3>
+<ol>
+<li><b>انتخاب درست:</b> درمان نگهدارنده برای همه لازم نیست، شاید برای یک‌سوم معتادان. معیارها: اعتیاد جدی افیونی، تخریب بالا، ترک‌های ناموفق متعدد، عود سریع، افت شدید پس از ترک، اعتیاد پرخطر، عدم تحمل علائم ترک.</li>
+<li><b>دوز مناسب:</b> دوزی که مصرف مواد افیونی را بی‌اثر یا قطع کند. دوز ثابتی برای همه ندارد و فقط پزشک آن را تعیین می‌کند.</li>
+<li><b>انتظار منطقی:</b> اخلاق خوب، استعداد، پشتکار، انرژی، شادابی و نفرت از مواد جزو وظایف متادون نیست.</li>
+<li><b>تلاش فردی</b> در کنار دوز مناسب بسیار مهم است.</li>
+<li><b>متادون ابزار حل مشکلات نیست.</b></li>
+<li><b>ثبات:</b> در مصرف مناسب نباید نوسان زیاد هیجانی در شبانه‌روز دیده شود.</li>
+<li>دوز بالا عوارض زیادی دارد: بی‌خوابی یا خواب‌آلودگی، ناتوانی جنسی، دردهای متعدد، افسردگی و خستگی.</li>
+<li>مواد مخدر دیگر همراه متادون مصرف نشود.</li>
+<li>مصرف خودسر نباشد و با نظارت و پایش پزشک باشد (آزمایش ادرار فقط یکی از روش‌هاست).</li>
+<li>به مدت کافی ادامه یابد. درمان نگهدارنده را با «سم‌زدایی با متادون» اشتباه نکنید.</li>
+</ol>
+
+<h2 id="meth">شیشه و مواد محرک</h2>
+<p>مواد محرک عمده در ایران: کوکائین (طبیعی، از برگ کوکا)، و صناعی‌ها: متامفتامین (شیشه)، آمفتامین، اکستازی و ریتالین. <b>همهٔ محرک‌ها اثرات مشابهی دارند؛ تفاوت در قدرت و طول اثر است.</b></p>
+<h3>تاریخچه</h3>
+<p><b>کوکائین:</b> برگ کوکا ۰٫۲۵ تا ۰٫۷۵٪ کوکائین دارد و بومیان آمریکای لاتین حدود ۸۰۰۰ سال آن را جویده‌اند (چای کوکا هنوز در بولیوی رایج است). از عصاره، خمیر، پودر و سپس کراک (قابل کشیدن) ساخته شد. در داروهای مسکن استفاده می‌شد؛ شرلوک هلمز و فروید مصرف‌کننده بودند؛ و کوکاکولای جان پمبرتون در آغاز کوکائین داشت. (کاکائو با کوکا ربطی ندارد.) به گفتهٔ اسلاید، کراک کوکائین بسیاری از دستاوردهای جنبش سیاه‌پوستان آمریکا را بر باد داد.</p>
+<p><b>آمفتامین‌ها:</b> در جست‌وجوی دارو، با الهام از مولکول آدرنالین و گیاه افدرا، در ژاپن و آمریکا (۱۹۲۹) ساخته شدند. مولکول ساده‌ای دارند. «بنزدرین» به‌عنوان دارو تبلیغ می‌شد و حتی در دههٔ ۱۹۷۰ داروی چاقی بود. اثرات: افزایش اعتمادبه‌نفس، دقت و تمرکز، رفع ترس، انرژی، سرخوشی، کاهش خستگی و خواب و اشتها، برداشتن مهارها. سرانجام حوالی ۱۹۷۰ (۱۳۵۲ در ایران) از داروخانه‌ها جمع شدند.</p>
+<p><b>مفهوم «فاز»:</b> بخش مهمی از اثرات محرک‌ها یادگرفتنی و حتی تلقینی است (پیوند با «<a class="w" data-t="suggestibility">مغز تلقین‌پذیر</a>»).</p>
+<h3>پس مشکل کجاست؟</h3>
+<ol class="tight">
+<li>اثرات موقتی است.</li>
+<li>قطع مصرف عوارض ناراحت‌کننده دارد: خستگی شدید، افسردگی، کندی، پرخوابی یا بی‌خوابی، بی‌حوصلگی، بی‌تفاوتی، گوشه‌گیری، افزایش اشتها، وسوسهٔ شدید، ناامیدی، بی‌انگیزگی، فراموشی.</li>
+<li>عوارض ناراحت‌کننده حین مصرف: پرخاشگری، افسردگی و خودکشی، تحلیل بدن، انزوا، بدبینی و جنون، کاهش حافظه، رفتارهای تکراری، ناتوانی جنسی، فشار خون و بزرگی قلب، خونریزی مغزی، سکته قلبی، آسیب کلیه، انقباض و انسداد عروق، عفونت و زخم‌های پوستی.</li>
+</ol>
+<h3>جنون شیشه</h3>
+<ul>
+<li>تا <b>یک‌سوم</b> مصرف‌کننده‌ها مبتلا می‌شوند؛ با مصرف سنگین و طولانی بیشتر؛ بی‌خوابی به آن دامن می‌زند؛ در جریان پسیکوز بیماران می‌توانند خطرناک شوند.</li>
+<li><b>توهم‌های شایع:</b> شنیدن صدا، حس‌های خیالی در بدن، دیدن اشباح، احساس حرکت موجودات ریز روی بدن.</li>
+<li><b>هذیان‌های شایع:</b> دوربین و شنود در منزل، کنترل با دستگاه‌های پیشرفته، تعقیب توسط جاسوس و نیروهای امنیتی، تلاش برای قتل یا مسموم‌سازی، کنترل افکار، پیام از تلویزیون و ماهواره، خیانت اطرافیان، ادعاهای واهی دربارهٔ قدرت و ثروت.</li>
+<li><b>نکتهٔ بسیار مهم:</b> این تصویر می‌تواند با اسکیزوفرنی یا دوقطبی اشتباه شود. در کسانی که پسیکوز شیشه را تجربه کرده‌اند، مصرف دوباره به‌سرعت به بازگشت پسیکوز می‌انجامد.</li>
+<li><b>درمان:</b> قطع مصرف (حدود ۸۵٪ طی یک ماه بهبود می‌یابند)، مراجعه به مرکز روانپزشکی و داروی ضدپسیکوز. اگر طی ۶ ماه بهبود حاصل نشود، امکان مزمن شدن پسیکوز وجود دارد. در پسیکوز، درمان اجباری مجاز است.</li>
+</ul>
+<h3>درمان اعتیاد به محرک‌ها</h3>
+<ul>
+<li>بسیاری از علائم ناگوار طی یک ماه برطرف می‌شوند.</li>
+<li>در صورت پسیکوز حتماً به پزشک مراجعه کنید.</li>
+<li><b>دارودرمانی کمک زیادی نمی‌کند</b> (سهم دارو در درمان حدود ۱۵٪ و سهم غیردارویی حدود ۸۵٪؛ اسلاید ۸۱).</li>
+<li>پس از مدتی «<b>سه‌گانهٔ مشکل‌ساز</b>»، یعنی وسوسه، خستگی و بی‌حوصلگی/افسردگی، بزرگ‌ترین مانع بهبودی می‌شود؛ پاسخ: مداخلات روانی-اجتماعی.</li>
+</ul>
+<h3>چند پرسش رایج</h3>
+<table class="t">
+<tr><th>پرسش</th><th>پاسخ</th></tr>
+<tr><td>آیا شیشه اعتیاد دارد؟</td><td>شیشه به قولی اعتیادآورترین مادهٔ بشری است.</td></tr>
+<tr><td>آیا شیشه به ترک مواد مخدر کمک می‌کند؟</td><td>خیر؛ هیچ جایگاهی در درمان اعتیاد به تریاک، هرویین و کراک ندارد.</td></tr>
+<tr><td>آیا اثرات شیشه برگشت‌پذیر است؟</td><td>بله، قسمت عمدهٔ اثرات با قطع مصرف به‌تدریج اصلاح می‌شوند.</td></tr>
+<tr><td>آیا شیشه درمان مشکلات جنسی است؟</td><td>خیر؛ اثرش موقتی است و به‌سرعت به ضد خود تبدیل می‌شود.</td></tr>
+<tr><td>آیا متادون در درمان شیشه کمک می‌کند؟</td><td>خیر؛ هیچ جایگاهی ندارد.</td></tr>
+<tr><td>آیا متادون به مصرف شیشه می‌انجامد؟</td><td>خیر؛ اما وقتی مصرف‌کنندهٔ مواد افیونی آن‌ها را کنار می‌گذارد، ممکن است به سوی مواد دیگر برود.</td></tr>
+<tr><td>چرا مصرف توأم شیشه و مواد افیونی شایع است؟</td><td>این دو برخی اثرات ناخوشایند هم را کم می‌کنند، اما اعتیاد شدیدتری شکل می‌گیرد.</td></tr>
+</table>
+<h3>معمای ریتالین</h3>
+<p>تجویز طبی ریتالین و آمفتامین‌ها با مصرف غیرقانونی فرق اساسی دارد: مقدار بسیار کمتر (چند ده میلی‌گرم در برابر یک تا دو گرم)، خوراکی، بدون افزایش دلخواه دوز، کنترل مصرف به دست فرد دیگر، وقفه‌های دوره‌ای، هدف کنترل علائم خاص نه سرخوشی، پایش منظم عوارض، و فقط برای فرد مبتلا به اختلال.</p>
+<h2 id="fatigue">خستگی و بی‌حالی</h2>
+<p>سه نوع خستگی: <b>فیزیولوژیک</b> (پس از کار و فعالیت، طبیعی)، <b>ثانویه به بیماری</b>، و <b>مزمن با منشأ روانی</b>.</p>
+<div class="cols2">
+<div class="card"><b class="h">خستگی در سرطان</b>در ۲۵ تا ۹۹٪ بیماران دیده می‌شود؛ پیش و پس از تشخیص، پس از شیمی‌درمانی و حتی پس از درمان کامل. با شدت سرطان ارتباط مستقیم ندارد، مستقل از افسردگی است، و پس از درد شایع‌ترین شکایت است.</div>
+<div class="card"><b class="h">خستگی در ام‌اس</b>شایع‌ترین شکایت؛ با شدت ناتوانی و عوارض عصبی ارتباط مستقیم ندارد، مستقل از افسردگی است، و ارتباط زیادی با رضایت از زندگی دارد.</div>
+</div>
+<p>سایر علل ثانویه: بیماری‌های روماتیسمی و خودایمنی، پس از سکتهٔ مغزی، ایدز.</p>
+<ul>
+<li>۲۰ تا ۲۵٪ مردم از خستگی گذرا (۲ هفته) و حدود ۵٪ از خستگی بیش از ۶ ماه رنج می‌برند؛ در زنان شایع‌تر است (در دختران تا ۳ برابر پسران، با تفاوتی که از ۱۳ سالگی ظاهر می‌شود) و اثر بسیار زیادی بر رضایت از زندگی دارد.</li>
+<li>ابزار سنجش: <b>پرسش‌نامهٔ خستگی چالدر</b> (۱۴ گویه، از خستگی و نیاز به استراحت تا تمرکز، پیدا کردن کلمات و حافظه) و <b>CIS</b> (چک‌لیست قدرت فردی، ۲۰ گویه).</li>
+<li>مفاهیم کلیدی: خستگی پس از فعالیت، خستگی پس از استرس، <a class="w" data-t="boom">چرخهٔ کم-زیاد</a> (فعالیت انفجاری در روزهای خوب و از پا افتادن بعد از آن)، و تحلیل رفتن (کاهش توان بدن در اثر استراحت طولانی).</li>
+<li><b>مواد محرک و خستگی:</b> از برگ کوکا تا آگهی دکسدرین و متامفتامین، محرک‌ها همیشه با وعدهٔ رفع خستگی فروخته شده‌اند؛ اما <b>مصرف درازمدت شیشه خود خستگی شدید می‌آورد.</b></li>
+</ul>
+<h3>اقدامات درمانی</h3>
+<ol class="tight">
+<li>بررسی کامل پزشکی (آزمایش‌های پایه، هورمون‌ها، عوامل عفونی، تصویربرداری).</li>
+<li>اجتناب از درمان‌های نادرست: ویتامین و «آمپول تقویتی» بی‌مورد، رژیم‌های پرکالری، مصرف مواد مخدر (ترامادول، تریاک).</li>
+<li>ارزیابی و ثبت منظم خستگی با پرسش‌نامه، جدول و نمودار (خود این کار جنبهٔ درمانی دارد).</li>
+<li>شناسایی شروع‌کننده‌های خستگی.</li>
+<li>پرهیز از چرخهٔ کم-زیاد.</li>
+<li>استراحت اجباری در زمان مقرر.</li>
+<li>کنار گذاشتن باور غلط دربارهٔ «استراحت‌درمانی».</li>
+<li>ورزش افزایش‌یابندهٔ تدریجی (GET).</li>
+<li>اصلاح اختلالات خواب.</li>
+<li>فعالیت منظم و افزایش‌یابندهٔ ذهنی.</li>
+<li>افزایش فعالیت‌های لذت‌بخش.</li>
+<li>دارودرمانی در موارد خاص و فقط با نظر پزشک.</li>
+<li>تنظیم امور روزمره و سبک زندگی منظم.</li>
+<li>پذیرش محدودیت‌ها: پذیرش خستگی و تنظیم امور بر مبنای انرژی کمتر روزانه.</li>
+</ol>
+<div class="note"><b class="k">چند باور نادرست</b>«فعالیت جنسی خستگی مزمن را تشدید می‌کند»؛ «خستگی همیشه از افسردگی است»؛ «خستگی پس از قطع محرک‌ها ناشی از آسیب مغزی غیرقابل جبران است». هر سه نادرست‌اند.</div>
+<div class="note"><b class="k">یادداشت ویراستار</b>جایگاه «ورزش افزایش‌یابندهٔ تدریجی» در سندرم خستگی مزمن (ME/CFS) پس از کارآزمایی PACE محل بحث جدی شده و راهنمای NICE (۲۰۲۱) آن را برای ME/CFS دیگر توصیه نمی‌کند؛ اما برای خستگی‌های دیگر (مثلاً پس از ترک محرک‌ها، یا خستگی سرطان) فعالیت تدریجی همچنان توصیه می‌شود. مرزبندی با پزشک ضروری است<sup class="c"><a href="#r-nice">[۵]</a></sup>.</div>
+
+<h2 id="cannabis">حشیش</h2>
+<p>نام‌ها: حشیش، بنگ، علف، گراس، ماریجوانا، سیگاری، گل؛ ماهیت همه یکسان است. گیاه شاهدانه (Cannabis sativa، indica و ruderalis) یک‌ساله، نر و ماده، و با کاربردهای متعدد (فیبر، کاغذ، روغن، خوراک طیور).</p>
+<ul>
+<li>صمغ برگ و گل حدود ۶۰ ترکیب کانابینوئیدی دارد؛ در گیاه ماده، جوان و رشدیافته در مناطق گرم و خشک بیشتر است. مادهٔ اصلی <b>THC</b> (دلتا-۹-تتراهیدروکانابینول) و در کنارش <b>کانابیدیول</b> (CBD). غلظت THC بین ۲ تا ۲۰٪ (متوسط ۴٪) و ظاهراً در سال‌های اخیر بیشتر شده است.</li>
+<li><b>تاریخچه:</b> حدود ۸۰۰۰ سال؛ گیاه سوخته در چین، جنوب آسیا و مصر؛ رایج در سیبری، ایران، بین‌النهرین و شاخ آفریقا؛ پاپیروس ابرس؛ و ورود معاصر به اروپا با لشکرکشی ناپلئون به مصر.</li>
+<li><b>شایع‌ترین مادهٔ غیرمجاز:</b> حدود ۱۶۰ میلیون مصرف‌کننده در جهان؛ حدود ۱۰٪ مصرف‌کنندگان وابسته می‌شوند؛ شروع بیشتر در نوجوانی.</li>
+<li>THC محلول در چربی است، در بافت چربی جمع می‌شود و گاه تا <b>۲۸ روز</b> در آزمایش دیده می‌شود؛ و چون در آب حل نمی‌شود، تزریقش عملاً ناممکن است.</li>
+<li><b>کانابینوئیدهای صناعی</b> (از جان هافمن، حدود ۲۰۰۰؛ JWH-018 و JWH-073): خطر مضاعف به سبب غلظت بالا، نداشتن کانابیدیول و دشواری تشخیص در آزمایش.</li>
+</ul>
+<h3>اثرات</h3>
+<ul>
+<li><b>روان‌گردان حاد</b> (در ۲۰ تا ۵۰٪ مصرف‌کنندگان): حس تغییر در واقعیت، بدبینی و پارانویا، پرش افکار، خودبزرگ‌بینی، افکار انتساب، اشکال توجه، توهم دیداری و شنیداری، و تغییر درک زمان. خبر خوب: این حالات حاد چندان جدی نیستند و با قطع مصرف برطرف می‌شوند؛ در مصرف‌کنندگان باسابقه کمتر و در کانابینوئیدهای صناعی بیشترند.</li>
+<li><b>پسیکوز:</b> مصرف حشیش بروز پسیکوز را در افراد سالم حدود <b>۲ تا ۳ برابر</b> می‌کند؛ افراد با حالات خفیف پسیکوز علاقهٔ بیشتری به حشیش دارند؛ و خطر احتمالاً بیشتر در نوجوانی و اوایل مصرف است.</li>
+<li><b>شناخت:</b> اشکال حافظه، تمرکز، تصمیم‌گیری، برنامه‌ریزی؛ بسیاری با یک ماه پرهیز طبیعی می‌شوند؛ اما مصرف سنگین با شروع پیش از ۱۸ سالگی تا حدی توان شناختی را کم می‌کند (پیوند با نازک‌شدن قشر پیشانی در صفحهٔ <a class="w" data-t="anh2">بی‌لذتی</a>). اختلالات شناختی حشیش به‌مراتب کمتر از الکل و محرک‌هاست.</li>
+<li><b>عوارض جسمی:</b> مسمومیت مرگبار بسیار نادر؛ تپش قلب، افزایش فشار خون، اشتها و وزن؛ سرفه، برونشیت و احتمال سرطان ریه؛ افزایش تصادفات رانندگی؛ اثر بر ایمنی، باروری و پروستات هنوز محل پرسش است.</li>
+<li><b>درمان:</b> حد واسط روان‌درمانی سیگار و مواد افیونی/محرک: تأکید بر پاکی اولیه، نقش زودرس علائم محرومیت در هفته‌های اول، و نقش دیررس مهارت‌های مقابله و تنظیم هیجان.</li>
+</ul>
+
+<h2 id="opium">تریاک و سایر مواد افیونی</h2>
+<div class="simple"><b class="k">به زبان ساده</b>تریاک، شیره، هرویین، «کراک» ایرانی، مورفین، کدئین، ترامادول، متادونِ غیرمجاز و داروهایی مثل پتدین و دیفنوکسیلات همه از یک خانواده‌اند: <b>مواد افیونی</b>. همه بر یک گیرندهٔ مغزی اثر می‌کنند؛ درد را کم می‌کنند، آرامش و سرخوشی می‌آورند و با مصرف مداوم، بدن به آن‌ها وابسته می‌شود. تفاوت اصلی‌شان در <b>سرعت و شدت اثر</b> است و همین تفاوت، میزان اعتیادآوری و تخریب را تعیین می‌کند.</div>
+<p><sup class="c"><a href="#r-opium">[۶]</a></sup> مواد را در چهار دستهٔ کلی قرار می‌دهند: <b>محرک‌ها</b> (شیشه، کوکائین)، <b>افیونی‌ها</b>، <b>آرام‌بخش‌ها</b> (الکل، بنزودیازپین‌ها) و <b>توهم‌زاها و حشیش</b>.</p>
+<h3>تاریخچهٔ کوتاه</h3>
+<ul>
+<li>در تمدن سومری (کهن‌ترین تمدن شناخته‌شده) خشخاش را «هول گیل» یعنی «گیاه شادی» می‌نامیدند. در پاپیروس ابرس مصر (حدود ۳۵۰۰ سال پیش) و در نوشته‌های هومر (برای «فراموشی درد»)، بقراط و زکریای رازی از خواص آن یاد شده است.</li>
+<li>«تریاق» (Theriac) در اصل معجونی دارویی و پادزهر بود که از زمان میتریداتس، پادشاه پونتوس، ساخته می‌شد: زنجبیل، دارچین، زعفران، عصارهٔ خشخاش و حتی گوشت افعی. واژهٔ «تریاک» از همین نام آمده است.</li>
+<li><b>نکتهٔ مهم:</b> در بیشتر تاریخ، تریاک برای درمان (ضددرد، ضداسهال، ضدسرفه، خواب‌آور، ضداضطراب) مصرف می‌شد. مصرف برای لذت و خوشگذرانی سابقه‌ای حدود ۵۰۰ ساله دارد و با «دود کردن» تریاک در چین گسترش یافت؛ روشی که اثر را سریع‌تر و لذت را بیشتر می‌کرد. ژان شاردن، جهانگرد فرانسوی، مصرف تریاک در ایران صفوی را هم گزارش کرده است.</li>
+<li>در ۱۸۰۴ فریدریش سرتورنر، داروساز آلمانی، <b>مورفین</b> را از تریاک جدا کرد و نامش را از «مورفئوس»، خدای رؤیا، گرفت. تریاک حدود ۳ تا ۱۲ درصد مورفین دارد.</li>
+</ul>
+<h3>چرا یک ماده اعتیادآورتر است؟</h3>
+<p>اعتیادآوری بیشتر است اگر ماده:</p>
+<div class="cols2">
+<div class="card"><b class="h">خالص‌تر باشد</b>هرویین و «کراک» از تریاک خالص‌ترند.</div>
+<div class="card"><b class="h">سریع‌تر اثر کند</b>هرچه اوج و افت تندتر، چرخهٔ «لذت ← حال بد ← مصرف دوباره» قوی‌تر.</div>
+<div class="card"><b class="h">با راه سریع‌تر به مغز برسد</b>تزریق و دود کردن سریع‌تر از خوردن.</div>
+</div>
+<p>الگوی اثر در یک شبانه‌روز: متادون (در درمان صحیح) منحنی تقریباً همواری دارد؛ تریاک چند اوج ملایم؛ هرویین اوج‌های تندتر؛ و «کراک» ایرانی (که در واقع نوعی هرویین فشرده است) اوج و افت‌های بسیار تند و پی‌درپی، که در آن مصرف دیگر برای «لذت» نیست، بلکه برای «رفع حال بد» است. به همین دلیل <b>تخریب در کراک شدید</b> است.</p>
+<h3>اثرات و خطر اوردوز</h3>
+<p>اثرات مصرف: آرامش و خواب‌آلودگی، بی‌دردی، سرخوشی، یبوست، خارش، جلوگیری از سرفه، و مهم‌تر از همه <b>کاهش تنفس</b>. مرگ در اوردوز معمولاً به دلیل توقف تنفس است.</p>
+<div class="note"><b class="k">خطر جدی: اوردوز</b><ul class="tight">
+<li>بیشترین خطر مرگ <b>بعد از دوره‌ای پرهیز</b> است (پس از سم‌زدایی، زندان یا بستری)، چون تحمل بدن از بین رفته و مقدار «همیشگی» می‌تواند کشنده باشد.</li>
+<li>ترکیب مواد افیونی با الکل، بنزودیازپین‌ها یا داروهای خواب‌آور خطر را چند برابر می‌کند.</li>
+<li>«تزریق هوا» یا آب نمک برای برگرداندن اوردوز <b>افسانه</b> است و خطرناک. در صورت خواب‌آلودگی شدید، تنفس آهسته یا خرخر، کبود شدن لب‌ها یا مردمک‌های بسیار تنگ: فوراً با اورژانس (۱۱۵) تماس بگیرید. داروی <b>نالوکسان</b> اثر اوردوز را موقتاً برمی‌گرداند.</li></ul></div>
+<h3>تحمل، وابستگی و محرومیت</h3>
+<div class="chain"><span class="box">تحمل<br><span class="small">اثر همان مقدار کمتر می‌شود</span></span><span class="arr">←</span><span class="box">وابستگی بدنی<br><span class="small">بدن با ماده تعادل تازه‌ای می‌سازد</span></span><span class="arr">←</span><span class="box hl">علائم محرومیت<br><span class="small">با قطع یا کاهش مصرف</span></span></div>
+<p>علائم محرومیت از مواد افیونی: لرزش، خمیازه، آبریزش بینی، اشک‌ریزش و عطسه، عرق‌ریزش، گشادی مردمک، احساس گرما و سرما، اضطراب و بی‌قراری، اسهال، تهوع و استفراغ، پرش عضلات، درد استخوان و عضله، پرخاشگری، بی‌خوابی، بی‌اشتهایی، دل‌درد، و بالا رفتن فشار خون و ضربان قلب.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>محرومیت از مواد افیونی بسیار ناخوشایند است اما در فرد سالم معمولاً خطر مرگ مستقیم ندارد (برخلاف محرومیت از الکل و بنزودیازپین‌ها که می‌تواند تشنج و دلیریوم بدهد). در سالمندان، بیماران قلبی، زنان باردار و نوزادان، اما، علائم محرومیت می‌تواند خطرناک باشد و باید زیر نظر پزشک باشد. برخی علائم (بی‌خوابی، بی‌حالی، وسوسه) تا هفته‌ها و ماه‌ها باقی می‌مانند (محرومیت طول‌کشیده).</div>
+<h3>عوارض مصرف درازمدت</h3>
+<ul>
+<li>وابستگی جسمی و وابستگی روانی (اعتیاد) با همهٔ تخریب‌های همراه آن؛</li>
+<li>خطر مرگ بر اثر مسمومیت (اوردوز)؛</li>
+<li>اختلالات گوارشی (به‌ویژه یبوست مزمن)؛</li>
+<li><b>سندرم بیش‌دردی</b>: مصرف طولانی، خود باعث حساس‌تر شدن به درد می‌شود؛ و بسیاری از معتادان از دردهای گوناگون شکایت دارند؛</li>
+<li>عوارض تنفسی، ناباروری و اختلالات جنسی؛</li>
+<li>عوارض تزریق: هپاتیت، HIV، عفونت دریچهٔ قلب (اندوکاردیت)؛</li>
+<li>در برخی مواد (مانند ترامادول) <b>تشنج</b>.</li>
+</ul>
+<h3>درمان</h3>
+<p>درمان اعتیاد به همهٔ مواد افیونی کمابیش مشابه است. چهار الگوی کلی: <b>سم‌زدایی</b>، <b>درمان پرهیزمدار</b>، <b>درمان نگهدارنده (جایگزین)</b> و <b>کاهش آسیب</b>. نکتهٔ کلیدی: «سم‌زدایی درمان نیست؛ فقط شروع درمان است» و به‌تنهایی اثری بر موفقیت درازمدت ندارد.</p>
+<p>چه کسانی برای <b>درمان نگهدارنده</b> مناسب‌ترند؟ کسانی که اعتیاد جدی و پرخطر دارند، چندین بار ترک ناموفق داشته‌اند، پس از ترک سریع عود می‌کنند، تحمل علائم ترک را ندارند یا پس از ترک دچار افت شدید کارکرد می‌شوند.</p>
+<div class="cols2">
+<div class="card"><b class="h">متادون برای سم‌زدایی</b>چند هفته تا چند ماه، با کاهش تدریجی. موفقیت زیادی ندارد و وزارت بهداشت هم توصیه کرده از این الگو استفاده نشود. برخی بیماران قطع سریع متادون را سخت‌تر از قطع خود ماده می‌دانند. سم‌زدایی با بوپرنورفین روش مقبول‌تری است.</div>
+<div class="card"><b class="h">متادون برای درمان نگهدارنده</b>چندین ماه تا چند سال. هدف، ثبات و بازگشت به زندگی است و موفقیت آن به‌مراتب بیشتر است. جزئیات در بخش <a href="#methadone">متادون</a>.</div>
+</div>
+<p>هدف نهایی، همان سه لایهٔ <a class="w" data-t="recovery">بهبودی</a> است: عدم مصرف مواد، بدن و روان سالم، و شهروند سالم.</p>
+<p class="small">مقدار و شیوهٔ مصرف هر دارو را فقط پزشک معالج تعیین می‌کند؛ این صفحه عمداً هیچ مقدار دارویی ذکر نمی‌کند.</p>
+
+<h2 id="alcohol">الکل و وابستگی به آن</h2>
+<div class="simple"><b class="k">به زبان ساده</b>الکل در بسیاری از کشورها قانونی و رایج است، اما یکی از پرهزینه‌ترین مواد برای سلامت است: تقریباً به همهٔ اعضای بدن آسیب می‌زند. خطرناک‌ترین نکته برای خانواده‌ها این است که <b>قطع ناگهانی الکل در فرد وابسته می‌تواند تشنج و حتی مرگ بیاورد</b> و باید زیر نظر پزشک باشد. در ایران، خطر اضافهٔ <b>الکل تقلبی</b> (متانول) هم وجود دارد.</div>
+<p><sup class="c"><a href="#r-alcohol">[۷]</a></sup> اسلایدها بر اساس گزارش‌های پیشین سازمان جهانی بهداشت می‌گویند حدود ۱۴۰ میلیون نفر در جهان به الکل وابسته‌اند و سالانه حدود ۳/۳ میلیون نفر بر اثر عوارض مصرف الکل جان می‌دهند. بار اقتصادی آن هم بسیار سنگین است.</p>
+<div class="note"><b class="k">یادداشت ویراستار: آمار تازه</b>گزارش ۲۰۲۴ سازمان جهانی بهداشت (داده‌های ۲۰۱۹) حدود ۲/۶ میلیون مرگ در سال را به الکل نسبت می‌دهد و برآورد می‌کند حدود ۴۰۰ میلیون نفر اختلال مصرف الکل دارند که حدود ۲۰۹ میلیون نفرشان وابسته‌اند. تفاوت ارقام بیشتر به تغییر روش برآورد مربوط است. <sup class="c"><a href="#r-who">[۸]</a></sup></div>
+<h3>تاریخ و تقطیر</h3>
+<p>تقطیر الکل با دانشمندان دورهٔ اسلامی پیوند دارد: جابر بن حیان (Geber)، زکریای رازی، و ابوالقاسم زهراوی (Albucasis) در کتاب «التصریف» دستگاه «قرع و انبیق» را برای تقطیر توصیف کردند. واژهٔ «الکل» هم از عربی (الکُحل) گرفته شده است.</p>
+<h3>مقدار مصرف مهم است</h3>
+<p>در وابستگی به الکل، مقدار مصرف عامل تعیین‌کنندهٔ مهمی است. مصرف سرانه در کشورها بسیار متفاوت است (مثلاً اوکراین و روسیه حدود ۱۵ لیتر الکل خالص در سال برای هر نفر، پاکستان کمتر از ۱ لیتر). در آمریکا مصرف سرانه در اوایل قرن نوزدهم (حدود ۲۷ لیتر در ۱۸۳۰) بسیار بیشتر از امروز (حدود ۸ لیتر) بود.</p>
+<p>تعریف «نوشیدن پرخطر» (مؤسسهٔ ملی سوءمصرف الکل آمریکا): یک «نوشیدنی استاندارد» حدود ۱۴ گرم الکل خالص است (مثلاً یک لیوان آبجو، یک گیلاس شراب یا یک پیک مشروب قوی).</p>
+<table class="t">
+<tr><th></th><th>مردان</th><th>زنان</th></tr>
+<tr><td>در یک روز</td><td>بیش از ۴ نوشیدنی</td><td>بیش از ۳ نوشیدنی</td></tr>
+<tr><td>در هفته</td><td>بیش از ۱۴ نوشیدنی</td><td>بیش از ۷ نوشیدنی</td></tr>
+</table>
+<p class="small">این ارقام «مرز مصرف پرخطر» هستند، نه «مقدار بی‌خطر». سازمان جهانی بهداشت تأکید می‌کند هیچ مقدار کاملاً بی‌خطری برای الکل وجود ندارد. <sup class="c"><a href="#r-who">[۸]</a></sup></p>
+<ul>
+<li>حدود یک‌سوم کسانی که در نوجوانی الکل مصرف می‌کنند به مصرف سنگین و الکلیسم می‌رسند؛ شروع زودتر، خطر بیشتر.</li>
+<li>وابستگی به الکل و بیماری‌های روان‌پزشکی (افسردگی، اضطراب، اختلال دوقطبی) رابطهٔ تنگاتنگ و دوطرفه دارند.</li>
+</ul>
+<h3>اثرات الکل در بدن</h3>
+<p>الکل از دهان، معده و روده جذب می‌شود؛ با معدهٔ خالی و همراه نوشیدنی‌های گازدار سریع‌تر. حداکثر سطح خونی حدود ۳۰ تا ۹۰ دقیقه بعد از مصرف است؛ بیشتر آن در کبد متابولیزه می‌شود و بدن در هر ساعت تقریباً فقط یک نوشیدنی استاندارد را می‌تواند پاک کند (قهوه یا دوش آب سرد این سرعت را بیشتر نمی‌کند). مواد جانبی نوشیدنی‌ها (congeners) مانند متانول، آلدئیدها و تانن‌ها در طعم و خماری نقش دارند.</p>
+<p>با افزایش سطح خونی الکل، اثرات به ترتیب ظاهر می‌شوند:</p>
+<div class="chain"><span class="box">آرامش، احساس خوب، کم شدن خجالت</span><span class="arr">←</span><span class="box">برداشته شدن مهارها، سرخوشی</span><span class="arr">←</span><span class="box">نوسان خلق، خشم، غمگینی، گیجی، تهوع</span><span class="arr">←</span><span class="box">اختلال تعادل، فراموشی، استفراغ</span><span class="arr">←</span><span class="box hl">خواب‌آلودگی شدید، بیهوشی، کما، کندی تنفس و قلب، مرگ</span></div>
+<div class="cols2">
+<div class="card"><b class="h">فراموشی الکلی (بلک‌اوت)</b>تا ۴۰٪ مصرف‌کنندگان آن را تجربه کرده‌اند: فرد بیدار است و کار می‌کند، اما بعداً چیزی به یاد نمی‌آورد؛ چون الکل ثبت حافظهٔ تازه را مختل می‌کند. به‌تنهایی به معنای وابستگی نیست، اما نشانهٔ مصرف خطرناک است.</div>
+<div class="card"><b class="h">خواب</b>الکل در ابتدا خواب‌آور است، اما مصرف زیاد خواب عمیق و REM را کم می‌کند، خواب را تکه‌تکه و کابوس‌ها را بیشتر می‌کند. اختلال خواب تا ماه‌ها بعد از قطع مصرف می‌ماند و می‌تواند عامل عود باشد.</div>
+</div>
+<h3>عوارض جسمی مصرف درازمدت</h3>
+<ul>
+<li><b>کبد:</b> کبد چرب، هپاتیت الکلی و سیروز؛ و پانکراتیت.</li>
+<li><b>قلب و عروق:</b> افزایش فشار خون، چربی و کلسترول، بیماری عضلهٔ قلب.</li>
+<li><b>سرطان‌ها:</b> از جمله سرطان پستان، دهان، مری و کبد.</li>
+<li><b>گوارش و خون:</b> ریفلاکس، زخم و التهاب معده، کم‌خونی، کمبود ویتامین‌های B1، B12 و فولات، کاهش ایمنی.</li>
+<li><b>مغز و اعصاب:</b> سندرم ورنیکه-کورساکوف (به دلیل کمبود ویتامین B1؛ اختلال شدید حافظه)، زوال عقل الکلی، آسیب اعصاب محیطی، آسیب مخچه (اختلال تعادل)، آتروفی مغز.</li>
+<li><b>غدد:</b> دیابت و کاهش هورمون‌های جنسی.</li>
+</ul>
+<h3>اختلال مصرف الکل (DSM-5)</h3>
+<p>الگوی مشکل‌ساز مصرف که به ناراحتی یا افت کارکرد قابل توجه بینجامد، با <b>دست‌کم ۲ مورد از ۱۱ معیار</b> در یک سال: مصرف بیشتر یا طولانی‌تر از قصد · میل یا تلاش ناموفق برای کم کردن · صرف زمان زیاد برای تهیه، مصرف یا بهبودی · وسوسه · کوتاهی در وظایف کار، تحصیل یا خانه · ادامه با وجود مشکلات بین‌فردی · کنار گذاشتن فعالیت‌های مهم · مصرف در موقعیت‌های خطرناک (مثلاً رانندگی) · ادامه با وجود آگاهی از آسیب جسمی یا روانی · تحمل · محرومیت.</p>
+<p><b>نشانه‌هایی که خانواده می‌بیند:</b> شکایت دوستان و خانواده، مستی‌های مکرر، مشکلات زناشویی، پرخاشگری در مستی، تهوع و لرزش صبحگاهی، مصرف پنهانی، مشکلات مالی، شکایت محل کار و مرخصی‌های استعلاجی، از دست دادن مکرر شغل، ترک‌های ناموفق و احساس از دست دادن کنترل.</p>
+<p>ابزارهای غربالگری: پرسشنامهٔ AUDIT (سازمان جهانی بهداشت)، CAGE، MAST و PDS. آزمایش‌های خون مانند GGT، CDT، MCV و آنزیم‌های کبدی (AST و ALT) می‌توانند شاخص مصرف سنگین باشند، اما هیچ‌کدام به‌تنهایی حساس و قطعی نیستند.</p>
+<h3>قطع مصرف: هشدار مهم</h3>
+<div class="note"><b class="k">علائم محرومیت از الکل جدی و خطرسازند</b>در فرد وابسته، چند ساعت تا چند روز بعد از کاهش یا قطع مصرف، این علائم می‌آیند: تعریق و ضربان بالا، لرزش دست، بی‌خوابی، تهوع یا استفراغ، توهم‌ها یا خطاهای گذرای بینایی، لمسی یا شنوایی، بی‌قراری، اضطراب، و <b>تشنج</b>. در شدیدترین شکل، <b>دلیریوم ترمنس</b> (هذیان لرزان) با گیجی، توهم، تب و اختلال قلبی رخ می‌دهد که بدون درمان می‌تواند کشنده باشد. <b>هیچ‌گاه فرد وابسته به الکل را بدون نظر پزشک «یک‌باره ترک» ندهید.</b></div>
+<p>داروهایی که پزشکان در سم‌زدایی الکل به کار می‌برند عمدتاً از خانوادهٔ بنزودیازپین‌ها هستند؛ و داروهایی مانند آکامپروسات، نالترکسون و دی‌سولفیرام برای پیشگیری از عود به کار می‌روند. تجویز و مقدار همهٔ این‌ها کاملاً تخصصی است. همچنین تجویز ویتامین B1 (تیامین) برای پیشگیری از آسیب مغزی ورنیکه اهمیت دارد.</p>
+<h3>پیش‌آگهی: همه بدتر نمی‌شوند</h3>
+<p>یک پژوهش بزرگ ملی در آمریکا (داوسون و همکاران ۲۰۰۵) کسانی را که پیش از سال گذشته وابستگی به الکل داشتند پیگیری کرد. در سال اخیر: <sup class="c"><a href="#r-dawson">[۹]</a></sup></p>
+<div class="hb"><span class="t">هنوز وابسته</span><div class="track"><div class="fill f-bad" style="width:83.3%;"></div></div><span class="v">۲۵٪</span></div>
+<div class="hb"><span class="t">بهبود نسبی</span><div class="track"><div class="fill " style="width:90.0%;background:var(--link)"></div></div><span class="v">۲۷٪</span></div>
+<div class="hb"><span class="t">بی‌علامت اما مصرف پرخطر</span><div class="track"><div class="fill " style="width:40.0%;background:var(--link)"></div></div><span class="v">۱۲٪</span></div>
+<div class="hb"><span class="t">مصرف کم‌خطر بی‌علامت</span><div class="track"><div class="fill f-good" style="width:60.0%;"></div></div><span class="v">۱۸٪</span></div>
+<div class="hb"><span class="t">پرهیز کامل</span><div class="track"><div class="fill f-good" style="width:60.0%;"></div></div><span class="v">۱۸٪</span></div>
+<p>یعنی نزدیک به نیمی از آن‌ها بی‌علامت شده بودند و بسیاری بدون درمان رسمی. این یافته امیدبخش است، اما پیش‌بینی اینکه چه کسی بهبود می‌یابد دشوار است؛ و برای کسانی که وابستگی شدید یا بیماری کبدی دارند، پرهیز کامل امن‌ترین هدف است.</p>
+<div class="note"><b class="k">یادداشت ویراستار: خطر متانول در ایران</b>در کشورهایی که الکل غیرقانونی است، نوشیدنی‌های تقلبی و دست‌ساز ممکن است <b>متانول</b> داشته باشند. مسمومیت با متانول با سردرد، تهوع، درد شکم، تاری دید یا «دیدن برف» شروع می‌شود و می‌تواند به کوری دائمی و مرگ بینجامد؛ علائم ممکن است ۱۲ تا ۲۴ ساعت بعد ظاهر شوند. در بهار ۱۳۹۹ صدها نفر در ایران بر اثر این مسمومیت جان باختند. با هر علامت مشکوک پس از نوشیدن الکل، فوراً به اورژانس مراجعه کنید؛ درمان زودهنگام جان نجات می‌دهد. <sup class="c"><a href="#r-methanol">[۱۰]</a></sup></div>
+
+
+<div class="nd-health"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: اعتیاد</h3><ul><li class="nd-health"><a href="decision.html" target="_blank" rel="noopener"><i></i>خودشناسی و تصمیم</a><small>خودشناسی، تصمیم‌گیری و ذهن انسان</small></li><li class="nd-health"><a href="clinicaddiction.html" target="_blank" rel="noopener"><i></i>اعتیاد (درمانگران)</a><small>اعتیاد برای درمانگران و مشاوران</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-body"><a href="body.html" target="_blank" rel="noopener"><i></i>نقشهٔ بدن و روان</a><small>بدن، تکامل و جنسیت › مغز، بدن و تکامل · مشترک: تنظیم هیجان، آنهدونیا و ظرفیت لذت</small></li><li class="nd-feel"><a href="learnmem.html" target="_blank" rel="noopener"><i></i>یادگیری و حافظه</a><small>هیجان و ذهن › یادگیری و کنجکاوی · مشترک: وسوسه، بی‌لذتی</small></li><li class="nd-self"><a href="perfection.html" target="_blank" rel="noopener"><i></i>کمال‌گرایی</a><small>خود و رشد › شفقت، منتقد درون و کمال‌گرایی · مشترک: چرخهٔ کم-زیاد</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#4c5f7a"><b>علوم اعصاب</b>اعتیاد مدار پاداش و یادگیری عادت را تغییر می‌دهد. <a href="graph.html#n-reward" target="_blank" rel="noopener">پاداش و دوپامین ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>انگ و طرد اجتماعی، درمان اعتیاد را دشوارتر از خود ماده می‌کند. <a href="graph.html#stigma" target="_blank" rel="noopener">انگ و برچسب‌زنی (گافمن) ↗</a></div><div style="--xc:#2f7a55"><b>اقتصاد رفتاری</b>تنزیل شدید آینده و انتخاب‌های ناسازگار در زمان، در اعتیاد پررنگ‌اند. <a href="graph.html#decision-errors" target="_blank" rel="noopener">خطا در تصمیم‌گیری: پیش‌بینی و انتخاب نادرست ↗</a></div><div style="--xc:#7d4a86"><b>فلسفه</b>آیا معتاد اختیار دارد؟ بحث اراده و مسئولیت. <a href="graph.html#akrasia" target="_blank" rel="noopener">ضعف اراده (آکراسیا) ↗</a></div></div><div class="worlds"><a href="land.html#addiction-families" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html#addiction-families" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides">اسلایدهای مجموعهٔ «نکاتی دربارهٔ اعتیاد برای خانواده‌ها و مراجعان»، دکتر آذرخش مکری (۱۶ بخش). <span class="badge">ضمیمه</span></li>
+<li id="r-craft"><span class="ltr">Meyers, R. J., Miller, W. R., Smith, J. E., &amp; Tonigan, J. S. (2002). A randomized trial of two methods for engaging treatment-refusing drug users through concerned significant others. <i>JCCP, 70</i>(5), 1182–1185.</span> افزودهٔ ویراستار.</li>
+<li id="r-epstein"><span class="ltr">Epstein, D. H., Tyburski, M., Craig, I. M., et al. (2014). Real-time tracking of neighborhood surroundings and mood in urban drug misusers: Application of a new method to study behavior in its geographical context. <i>Drug and Alcohol Dependence, 134</i>, 22–29.</span> (شناسایی نقشه‌ها از ویراستار)</li>
+<li id="r-dar"><span class="ltr">Dar, R., Rosen-Korakin, N., Shapira, O., Gottlieb, Y., &amp; Frenk, H. (2010). The craving to smoke in flight attendants: Relations with smoking deprivation, anticipation of smoking, and actual smoking. <i>J. Abnormal Psychology, 119</i>(1), 248–253.</span></li>
+<li id="r-nice"><span class="ltr">NICE (2021). <i>Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management</i> (NG206).</span> افزودهٔ ویراستار.</li>
+<li id="r-opium">اسلایدهای «تریاک و سایر مواد افیونی» از مجموعهٔ «نکاتی دربارهٔ اعتیاد برای خانواده‌ها و مراجعان»، دکتر آذرخش مکری (۹۵ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-alcohol">اسلایدهای «الکل و وابستگی به آن»، دکتر آذرخش مکری (۵۰ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-who"><span class="ltr">World Health Organization (2024). <i>Global status report on alcohol and health and treatment of substance use disorders</i>. Geneva: WHO; NIAAA. <i>Drinking levels defined</i>.</span> افزودهٔ ویراستار.</li>
+<li id="r-dawson"><span class="ltr">Dawson, D. A., Grant, B. F., Stinson, F. S., Chou, P. S., Huang, B., &amp; Ruan, W. J. (2005). Recovery from DSM-IV alcohol dependence: United States, 2001–2002. <i>Addiction, 100</i>(3), 281–292.</span></li>
+<li id="r-methanol"><span class="ltr">Aghababaeian, H., et al. (2020). Alcohol intake in an attempt to fight COVID-19: A medical myth in Iran. <i>Alcohol, 88</i>, 29–32; WHO (2014). <i>Methanol poisoning outbreaks</i> (information note).</span> افزودهٔ ویراستار.</li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این صفحه از اسلایدهای مجموعهٔ آموزشی ساخته شده است. اطلاعات دارویی و پزشکی آن برای آگاهی عمومی خانواده‌هاست و جای مشاورهٔ پزشک و مرکز درمان را نمی‌گیرد. دوز هیچ دارویی را بدون نظر پزشک تغییر ندهید. در هر حالت خطرناک (اوردوز، تشنج، جنون و پرخاشگری خطرناک، افکار خودکشی) فوراً با اورژانس تماس بگیرید. افزوده‌های ویراستار در کادر جدا آمده‌اند.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · سخنرانی‌های دکتر آذرخش مکری</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"lapse": {"fa": "لغزش", "en": "Lapse", "d": "مصرف گهگاه و چندباره پس از ترک؛ فاجعه نیست، باید گزارش و تحلیل شود، اما نباید بهانهٔ مصرف شود.", "rel": ["craving"], "s": "lapse", "g": "relapse-prevention"}, "anh2": {"fa": "بی‌لذتی", "en": "Anhedonia", "d": "صفحهٔ بی‌لذتی؛ مطالعهٔ IMAGEN دربارهٔ حشیش در نوجوانی.", "rel": [], "s": "cannabis", "g": "anhedonia"}, "emoreg": {"fa": "تنظیم هیجان", "en": "Emotion regulation", "d": "توان مهار و تغییر حس بد؛ مهارتی که بیشتر در کودکی و نوجوانی آموخته می‌شود. معتادان آموخته‌اند برای گریز از حس بد بیش از حد به مواد تکیه کنند.", "rel": ["addictive-behavior", "craving"], "s": "badfeel", "g": "emotion-regulation"}, "craving": {"fa": "وسوسه", "en": "Craving", "d": "میل شدید به مصرف؛ انواع: قطع مصرف، وابسته به نشانه، ناشی از حس بد، ناشی از سرخوشی، و انتظار مصرف. گذراست و «از جنس تشنگی نیست».", "rel": ["emoreg"], "s": "craving", "g": "craving"}, "boom": {"fa": "چرخهٔ کم-زیاد", "en": "Boom-bust activity", "d": "فعالیت زیاد در روزهای خوب و از پا افتادن پس از آن؛ از عوامل تداوم خستگی مزمن و هدف اصلی مداخله.", "rel": [], "s": "fatigue", "g": "fatigue-syndromes"}, "habitchange": {"fa": "عادت‌ها و تغییر", "en": "Habit change", "d": "صفحهٔ سخنرانی عادت‌ها و تغییر: کنترل پیش‌سازها، مدیریت لغزش، افسانهٔ بالش.", "rel": [], "s": "craving", "g": "habit"}, "addictive-behavior": {"fa": "رفتار اعتیادی", "en": "Addictive behavior", "d": "یادگیری سمج و معیوب: پناه بردن به مواد برای رفع «حس بد» تا جایی که راه‌های دیگر مقابله کنار گذاشته شوند. با تغییرات مغزی همراه است و با دور ماندن از مواد به‌تنهایی اصلاح نمی‌شود.", "rel": ["damage", "recovery"], "s": "what", "g": "addiction-core"}, "ambivalence": {"fa": "دودلی", "en": "Ambivalence", "d": "هم خواستن و هم نخواستن تغییر؛ بخش عمدهٔ عمر مصرف‌کنندگان در این حالت می‌گذرد. محور کار مصاحبهٔ انگیزشی.", "rel": ["mi"], "s": "course", "g": "mi"}, "damage": {"fa": "تخریب اعتیاد", "en": "Addiction-related damage", "d": "آسیب اعتیاد به موقعیت اجتماعی، سلامت روان، اخلاق، بدن، معنویت، کار و درآمد. «مشکل در اعتیاد تخریب آن است»؛ تأکید بر تخریب سازنده‌تر از تأکید بر مصرف است.", "rel": ["addictive-behavior", "coercive"], "s": "damage", "g": "addiction-families"}, "recovery": {"fa": "بهبودی", "en": "Recovery", "d": "سه لایه: عدم مصرف مواد، سلامت روان و بدن، و شهروند سالم. در اعتیاد سنگین حدود ۵ سال و در سبک حدود ۲ سال برای رسیدن به سطح ایمنی.", "rel": ["addictive-behavior"], "s": "recovery", "g": "addiction-families"}, "alliance": {"fa": "اتحاد درمانی", "en": "Therapeutic alliance", "d": "توافق دربارهٔ اهداف و کارها و پیوند عاطفی میان درمانگر و مراجع؛ از قوی‌ترین پیش‌بین‌های نتیجهٔ درمان.", "rel": ["mi"], "s": "treatment", "g": "t-common"}, "coercive": {"fa": "درمان اجباری", "en": "Coerced treatment / leverage", "d": "راغب‌سازی مصرف‌کننده به درمان با شواهد عینی تخریب و فشارهای شفاف، غیرحیثیتی، برگشت‌پذیر و تدریجی؛ همراه با پیشنهاد درمان به‌عنوان گزینه. به تله انداختن و ارجاع اجباری اثر کمی دارد.", "rel": ["damage", "mi"], "s": "coercive", "g": "addiction-families"}, "mi": {"fa": "مصاحبهٔ انگیزشی", "en": "Motivational interviewing", "d": "روش میلر و رولنیک برای کار با دودلی و تقویت انگیزهٔ تغییر از درون خود فرد.", "rel": ["ambivalence"], "s": "coercive", "g": "mi"}, "suggestibility": {"fa": "تلقین‌پذیری", "en": "Suggestibility", "d": "اثر انتظار و تلقین بر تجربه و حتی فیزیولوژی؛ بخشی از اثر مواد هم یادگرفتنی و تلقینی است.", "rel": [], "s": "meth", "g": "suggestibility"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

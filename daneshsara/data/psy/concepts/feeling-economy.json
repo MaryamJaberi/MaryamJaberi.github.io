@@ -1,0 +1,99 @@
+{
+ "id": "psy:feeling-economy",
+ "kind": "concept",
+ "title": {
+  "fa": "اقتصاد احساسی",
+  "en": "The Feeling Economy",
+  "nl": "De gevoelseconomie"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "نظریهٔ راست و هوانگ: هوش مصنوعی به‌ترتیب کارهای مکانیکی، تحلیلی و شهودی را می‌گیرد و هوش همدلانه به ارزشمندترین مهارت انسانی در کار بدل می‌شود.",
+  "en": "Rust and Huang's theory: AI takes over mechanical, then analytical, then intuitive tasks, and empathic intelligence becomes the most valuable human skill at work.",
+  "nl": "De theorie van Rust en Huang: AI neemt achtereenvolgens mechanische, analytische en intuïtieve taken over, en empathische intelligentie wordt de waardevolste menselijke vaardigheid op het werk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پلکان هوش: مکانیکی ← تحلیلی ← شهودی ← همدلانه.",
+    "en": "The intelligence ladder: mechanical → analytical → intuitive → empathic.",
+    "nl": "De intelligentieladder: mechanisch → analytisch → intuïtief → empathisch."
+   },
+   "sources": [
+    "src:37255c9d63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آزمون‌های استخدام قدیم هوش مکانیکی را می‌سنجیدند (کدام چرخ‌دنده بالا می‌چرخد؟).",
+    "en": "Old hiring tests measured mechanical intelligence (which gear turns upwards?).",
+    "nl": "Vroegere selectietests maten mechanische intelligentie (welk tandwiel draait omhoog?)."
+   },
+   "sources": [
+    "src:37255c9d63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدیری که تحلیل را از هوش مصنوعی می‌گیرد، باید بداند وقتی جمع دعوا کرد یا بی‌انگیزه شد چه کند.",
+    "en": "A manager who gets analysis from AI must know what to do when the team fights or loses motivation.",
+    "nl": "Een leidinggevende die de analyse van AI krijgt, moet weten wat te doen als het team ruzie krijgt of de motivatie verliest."
+   },
+   "sources": [
+    "src:37255c9d63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از این به بعد بابت مهار هیجان و روحیه‌دادن پول داده می‌شود.",
+    "en": "From now on people will be paid for holding back emotion and lifting spirits.",
+    "nl": "Voortaan worden mensen betaald voor het inhouden van emotie en het opbeuren van anderen."
+   },
+   "sources": [
+    "src:37255c9d63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هکمن: اگر مهارت‌های عاطفی ارزشمندترین بخش کار انسانی‌اند، چرا کمترین مزد را دارند؟",
+    "en": "Hackman: if emotional skills are the most valuable part of human work, why are they paid least?",
+    "nl": "Hackman: als emotionele vaardigheden het waardevolste deel van menselijk werk zijn, waarom worden ze dan het slechtst betaald?"
+   },
+   "sources": [
+    "src:37255c9d63"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:emotional-labor",
+   "rel": "see-also",
+   "note": {
+    "fa": "کار هیجانی قیمت‌گذاری می‌شود",
+    "en": "Emotional labour has a price",
+    "nl": "Emotiewerk heeft een prijs"
+   }
+  }
+ ],
+ "people": [
+  "core:roland-rust",
+  "core:ming-hui-huang"
+ ],
+ "sources": [
+  "src:37255c9d63"
+ ],
+ "booklets": [
+  "shifts",
+  "emolabor:value"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

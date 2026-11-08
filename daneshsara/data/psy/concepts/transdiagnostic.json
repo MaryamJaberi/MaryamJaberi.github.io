@@ -1,0 +1,157 @@
+{
+ "id": "psy:transdiagnostic",
+ "kind": "concept",
+ "title": {
+  "fa": "فرایندهای فراتشخیصی",
+  "en": "Transdiagnostic processes",
+  "nl": "Transdiagnostische processen"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "سازوکارهای روانی مشترک میان چند تشخیص که می‌توان مستقیم هدف درمان قرارشان داد؛ هستهٔ کارگاه مرز سلامت و اختلال.",
+  "en": "Psychological mechanisms shared across several diagnoses that can be targeted directly in treatment; the core of the health-and-disorder workshop.",
+  "nl": "Psychologische mechanismen die meerdere diagnoses gemeen hebben en direct in de behandeling kunnen worden aangepakt; de kern van de workshop over gezondheid en stoornis."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "چهار فرایند فراگیر درون‌سازی: اجتناب تجربه‌ای، حساسیت به طرد، نشخوار و حسرت، نبود لذت.",
+    "en": "Four broad internalising processes: experiential avoidance, rejection sensitivity, rumination and regret, lack of pleasure.",
+    "nl": "Vier brede internaliserende processen: experiëntiële vermijding, afwijzingsgevoeligheid, piekeren en spijt, gebrek aan plezier."
+   },
+   "sources": [
+    "src:69e2ef6abd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرایندهای برون‌سازی: نبود مهار، ستیزه‌جویی؛ تفکر و عاطفه: سرسختی شناختی.",
+    "en": "Externalising processes: disinhibition, antagonism; thinking and emotion: cognitive rigidity.",
+    "nl": "Externaliserende processen: ongeremdheid, antagonisme; denken en emotie: cognitieve rigiditeit."
+   },
+   "sources": [
+    "src:69e2ef6abd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "الگوی نگرانی: نابردباری در برابر عدم قطعیت، باورهای مثبت به نگرانی، نگرش منفی به معضلات، اجتناب شناختی.",
+    "en": "The worry model: intolerance of uncertainty, positive beliefs about worry, negative problem orientation, cognitive avoidance.",
+    "nl": "Het piekermodel: intolerantie voor onzekerheid, positieve opvattingen over piekeren, negatieve probleemoriëntatie, cognitieve vermijding."
+   },
+   "sources": [
+    "src:69e2ef6abd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقیاس‌های هشت‌گویه‌ای کارگاه: اجتناب، نشخوار، پنهان‌سازی، تمرکز بر کوتاه‌مدت، استمرار پاسخ، پرخاش، تعبیر منفی.",
+    "en": "The workshop's eight-item scales: avoidance, rumination, concealment, short-term focus, response persistence, aggression, negative interpretation.",
+    "nl": "De schalen van acht items uit de workshop: vermijding, piekeren, verbergen, kortetermijnfocus, volharden in dezelfde reactie, agressie, negatieve interpretatie."
+   },
+   "sources": [
+    "src:69e2ef6abd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«خمیرمایهٔ اولیه»: فقدان والد، سوءرفتار و تنبیه منفی؛ خویشتنداری پایین و گوشه‌گیری در سه سالگی.",
+    "en": "The “primal dough”: loss of a parent, maltreatment and harsh punishment; low self-control and withdrawal at age three.",
+    "nl": "Het ‘oerdeeg’: verlies van een ouder, mishandeling en harde straf; weinig zelfbeheersing en teruggetrokkenheid op driejarige leeftijd."
+   },
+   "sources": [
+    "src:69e2ef6abd"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:hitop",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساختار",
+    "en": "Structure",
+    "nl": "Structuur"
+   }
+  },
+  {
+   "to": "psy:pbt",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان",
+    "en": "Treatment",
+    "nl": "Behandeling"
+   }
+  },
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "یکی از فرایندها",
+    "en": "One of the processes",
+    "nl": "Een van de processen"
+   }
+  },
+  {
+   "to": "psy:anhedonia",
+   "rel": "see-also",
+   "note": {
+    "fa": "یکی از فرایندها",
+    "en": "One of the processes",
+    "nl": "Een van de processen"
+   }
+  },
+  {
+   "to": "psy:unified-protocol",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان",
+    "en": "Treatment",
+    "nl": "Behandeling"
+   }
+  },
+  {
+   "to": "psy:neuroticism",
+   "rel": "see-also",
+   "note": {
+    "fa": "صفت زیربنایی",
+    "en": "Underlying trait",
+    "nl": "Onderliggende eigenschap"
+   }
+  },
+  {
+   "to": "psy:process-based-therapy",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرایند",
+    "en": "Process",
+    "nl": "Proces"
+   }
+  }
+ ],
+ "people": [
+  "core:steven-hayes",
+  "core:stefan-hofmann",
+  "core:matthew-mckay"
+ ],
+ "sources": [
+  "src:69e2ef6abd",
+  "src:869122c4da",
+  "src:19bd7f9d3f"
+ ],
+ "booklets": [
+  "workshop:processes",
+  "shelf7:mckay",
+  "shelf13:roadmap"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

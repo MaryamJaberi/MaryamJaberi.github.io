@@ -1,0 +1,182 @@
+{
+ "id": "psy:burnout",
+ "kind": "concept",
+ "title": {
+  "fa": "فرسودگی شغلی",
+  "en": "Burnout",
+  "nl": "Burn-out"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "نشانگانی ناشی از تنش مزمن کاری که مدیریت نشده است. سه نشانه: خستگی، مسخ شخصیت (بدبینی و فاصله از کار) و کاهش احساس کارآمدی.",
+  "en": "A syndrome resulting from chronic workplace stress that has not been managed. Three signs: exhaustion, depersonalisation (cynicism and distance from work) and reduced sense of efficacy.",
+  "nl": "Een syndroom als gevolg van chronische werkstress die niet goed is aangepakt. Drie kenmerken: uitputting, depersonalisatie (cynisme en afstand tot het werk) en verminderd gevoel van bekwaamheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هربرت فرویدنبرگر اصطلاح را در ۱۹۷۴ ساخت؛ کریستینا مسلش و جکسون (۱۹۸۱) آن را با پرسش‌نامهٔ MBI سنجش‌پذیر کردند.",
+    "en": "Herbert Freudenberger coined the term in 1974; Christina Maslach and Jackson (1981) made it measurable with the MBI questionnaire.",
+    "nl": "Herbert Freudenberger bedacht de term in 1974; Christina Maslach en Jackson (1981) maakten het meetbaar met de MBI-vragenlijst."
+   },
+   "sources": [
+    "src:575beaee57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در ICD-11 به‌عنوان «پدیدهٔ شغلی» (کد QD85) آمده، نه بیماری.",
+    "en": "In ICD-11 it is listed as an “occupational phenomenon” (code QD85), not an illness.",
+    "nl": "In de ICD-11 staat het als ‘beroepsgerelateerd verschijnsel’ (code QD85), niet als ziekte."
+   },
+   "sources": [
+    "src:575beaee57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مسیر اصلی در جلسهٔ ۱: ناتوانی در جداشدن روانی از کار پس از ساعت کاری.",
+    "en": "The main route in session 1: the inability to detach psychologically from work after working hours.",
+    "nl": "De belangrijkste route in sessie 1: het onvermogen om na werktijd psychologisch los te komen van het werk."
+   },
+   "sources": [
+    "src:575beaee57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نف و گرمر: سرکوب درد و سرزنش خود فرسودگی را بدتر می‌کند؛ شفقت به خود حس امنیت لازم برای عبور از آن را می‌دهد.",
+    "en": "Neff and Germer: suppressing pain and blaming oneself worsen burnout; self-compassion gives the sense of safety needed to get through it.",
+    "nl": "Neff en Germer: pijn onderdrukken en jezelf verwijten verergeren burn-out; zelfcompassie geeft het gevoel van veiligheid dat nodig is om erdoorheen te komen."
+   },
+   "sources": [
+    "src:575beaee57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کمال‌طلبان در برابر فرسودگی آسیب‌پذیرترند (فراتحلیل هیل و کوران ۲۰۱۶).",
+    "en": "Perfectionists are more vulnerable to burnout (Hill and Curran's 2016 meta-analysis).",
+    "nl": "Perfectionisten zijn kwetsbaarder voor burn-out (meta-analyse van Hill en Curran 2016)."
+   },
+   "sources": [
+    "src:575beaee57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدل خواسته‌ها و منابع شغلی (JD-R): خواسته‌های زیاد ← فرسودگی؛ منابع ← درگیری کاری.",
+    "en": "The job demands-resources model (JD-R): high demands → burnout; resources → work engagement.",
+    "nl": "Het Job Demands-Resources-model (JD-R): hoge eisen → burn-out; hulpbronnen → bevlogenheid."
+   },
+   "sources": [
+    "src:575beaee57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کار عاطفی (به‌ویژه بازی سطحی) از عوامل شناخته‌شدهٔ فرسودگی است.",
+    "en": "Emotional labour (especially surface acting) is a known factor in burnout.",
+    "nl": "Emotiewerk (vooral oppervlakkig acteren) is een bekende factor bij burn-out."
+   },
+   "sources": [
+    "src:575beaee57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شفقت به خودِ ذهن‌آگاهانه برای فرسودگی (نف و گرمر ۲۰۲۴): پذیرش نرم، «نه» گفتن، ارزش‌ها، مربی درون.",
+    "en": "Mindful self-compassion for burnout (Neff and Germer 2024): gentle acceptance, saying “no”, values, the inner coach.",
+    "nl": "Mindful zelfcompassie bij burn-out (Neff en Germer 2024): zachte aanvaarding, ‘nee’ zeggen, waarden, de innerlijke coach."
+   },
+   "sources": [
+    "src:575beaee57"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:dx",
+   "rel": "see-also",
+   "note": {
+    "fa": "پدیدهٔ شغلی در ICD-11",
+    "en": "Occupational phenomenon in ICD-11",
+    "nl": "Beroepsgerelateerd verschijnsel in ICD-11"
+   }
+  },
+  {
+   "to": "psy:n-stress",
+   "rel": "explains",
+   "note": {
+    "fa": "پایهٔ زیستی",
+    "en": "Biological basis",
+    "nl": "Biologische basis"
+   }
+  },
+  {
+   "to": "psy:perfectionism",
+   "rel": "see-also",
+   "note": {
+    "fa": "عامل خطر",
+    "en": "Risk factor",
+    "nl": "Risicofactor"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "see-also",
+   "note": {
+    "fa": "محافظ",
+    "en": "Protective",
+    "nl": "Beschermend"
+   }
+  },
+  {
+   "to": "psy:fatigue-syndromes",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌پوشانی",
+    "en": "Overlap",
+    "nl": "Overlap"
+   }
+  },
+  {
+   "to": "psy:work-engagement",
+   "rel": "contrasts",
+   "note": {
+    "fa": "قطب مقابل",
+    "en": "Opposite pole",
+    "nl": "Tegenpool"
+   }
+  }
+ ],
+ "people": [
+  "core:herbert-freudenberger",
+  "core:christina-maslach",
+  "core:michael-leiter"
+ ],
+ "sources": [
+  "src:575beaee57",
+  "src:8d0c1e940d",
+  "src:1371320d71"
+ ],
+ "booklets": [
+  "t-burnout",
+  "poswork:org",
+  "compassion:burnout",
+  "orgpsych:stress"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

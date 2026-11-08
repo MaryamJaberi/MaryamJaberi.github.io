@@ -1,0 +1,144 @@
+{
+ "id": "psy:mattering",
+ "kind": "concept",
+ "title": {
+  "fa": "اهمیت داشتن",
+  "en": "Mattering",
+  "nl": "Ertoe doen (mattering)"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "احساس ارزشمند بودن و افزودن ارزش، در خود، رابطه، کار و جامعه (آیزاک و اورا پریلتنسکی).",
+  "en": "The sense of being valued and adding value, in oneself, relationships, work and society (Isaac and Ora Prilleltensky).",
+  "nl": "Het gevoel gewaardeerd te worden en waarde toe te voegen, in jezelf, relaties, werk en samenleving (Isaac en Ora Prilleltensky)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "عزت نفس نشانگر ارزش ارتباطی است (سنج‌سنج لیری)؛ بی‌ارزشی به افسردگی یا پرخاشگری می‌انجامد؛ ۱۳ از ۱۵ تیرانداز مدرسه قربانی طرد بودند.",
+    "en": "Self-esteem is a gauge of relational value (Leary's sociometer); feeling worthless leads to depression or aggression; 13 of 15 school shooters had been victims of rejection.",
+    "nl": "Zelfwaardering is een meter van relationele waarde (de sociometer van Leary); je waardeloos voelen leidt tot depressie of agressie; 13 van de 15 schoolschutters waren slachtoffer van afwijzing."
+   },
+   "sources": [
+    "src:0c32607aa5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "راهبه‌ها: هیجان مثبت در نوشته‌های جوانی با ۶٫۹ تا ۱۰٫۷ سال عمر بیشتر همراه بود.",
+    "en": "The nuns: positive emotion in writings from youth went with 6.9 to 10.7 more years of life.",
+    "nl": "De nonnen: positieve emotie in teksten uit hun jeugd ging samen met 6,9 tot 10,7 jaar langer leven."
+   },
+   "sources": [
+    "src:0c32607aa5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارزش‌گذاری افراطی والدین خودشیفتگی را پیش‌بینی می‌کند، نه عزت نفس (برومِلمن).",
+    "en": "Parental overvaluation predicts narcissism, not self-esteem (Brummelman).",
+    "nl": "Overwaardering door ouders voorspelt narcisme, geen zelfwaardering (Brummelman)."
+   },
+   "sources": [
+    "src:0c32607aa5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هوش جمعی گروه با حساسیت اجتماعی و نوبت برابر در گفت‌وگو پیوند دارد، نه با هوش اعضا (وولی ۲۰۱۰).",
+    "en": "A group's collective intelligence is linked to social sensitivity and equal turn-taking in conversation, not to members' intelligence (Woolley 2010).",
+    "nl": "De collectieve intelligentie van een groep hangt samen met sociale gevoeligheid en gelijke spreekbeurten, niet met de intelligentie van de leden (Woolley 2010)."
+   },
+   "sources": [
+    "src:0c32607aa5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "عدالت رویه‌ای در کنار توزیعی؛ شیب اجتماعی افسردگی؛ «تردمیل اهمیت»؟",
+    "en": "Procedural justice alongside distributive justice; the social gradient of depression; a “mattering treadmill”?",
+    "nl": "Procedurele rechtvaardigheid naast verdelende rechtvaardigheid; de sociale gradiënt van depressie; een ‘mattering-loopband’?"
+   },
+   "sources": [
+    "src:0c32607aa5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقیاس ضداهمیت (فلت): احساس نامرئی بودن و بی‌اهمیتی.",
+    "en": "The anti-mattering scale (Flett): feeling invisible and unimportant.",
+    "nl": "De anti-matteringschaal (Flett): je onzichtbaar en onbelangrijk voelen."
+   },
+   "sources": [
+    "src:0c32607aa5"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:belonging",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعلق",
+    "en": "Belonging",
+    "nl": "Verbondenheid"
+   }
+  },
+  {
+   "to": "psy:meaningful-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "کار",
+    "en": "Work",
+    "nl": "Werk"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "see-also",
+   "note": {
+    "fa": "عزت نفس سالم",
+    "en": "Healthy self-esteem",
+    "nl": "Gezond zelfbeeld"
+   }
+  },
+  {
+   "to": "psy:happiness-origins",
+   "rel": "see-also",
+   "note": {
+    "fa": "بهزیستی",
+    "en": "Well-being",
+    "nl": "Welzijn"
+   }
+  }
+ ],
+ "people": [
+  "core:isaac-prilleltensky",
+  "core:ora-prilleltensky",
+  "core:mark-leary",
+  "core:adam-grant",
+  "core:anita-williams-woolley"
+ ],
+ "sources": [
+  "src:0c32607aa5",
+  "src:d0bfcad454",
+  "src:344107d6c1"
+ ],
+ "booklets": [
+  "mattering:what",
+  "mattering:work",
+  "mattering:justice",
+  "riseabove:mattering"
+ ],
+ "origin": "mattering",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

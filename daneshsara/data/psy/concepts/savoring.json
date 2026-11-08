@@ -1,0 +1,97 @@
+{
+ "id": "psy:savoring",
+ "kind": "concept",
+ "title": {
+  "fa": "مزه‌مزه‌کردن",
+  "en": "Savoring",
+  "nl": "Genieten (savoring)"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "توجه آگاهانه به تجربهٔ خوشایند و طولانی‌کردن آن؛ در گذشته (یادآوری)، حال (لذت‌بردن) یا آینده (پیش‌چشیدن). برایانت و وروف (۲۰۰۷) چارچوب آن را ساختند.",
+  "en": "Deliberately attending to a pleasant experience and prolonging it: in the past (reminiscing), present (enjoying) or future (anticipating). Bryant and Veroff (2007) built its framework.",
+  "nl": "Bewust aandacht geven aan een prettige ervaring en die verlengen: in het verleden (terugdenken), het heden (genieten) of de toekomst (vooruitkijken). Bryant en Veroff (2007) bouwden het kader."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در جلسهٔ ۱ به‌عنوان نقطهٔ مقابل نشخوار آمد (اسلاید ۵۲: Savoring versus rumination).",
+    "en": "In session 1 it came up as the opposite of rumination (slide 52: savoring versus rumination).",
+    "nl": "In sessie 1 kwam het naar voren als tegenpool van piekeren (slide 52: savoring versus rumination)."
+   },
+   "sources": [
+    "src:e4d66ee2a4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یکی از راه‌های ساکت‌کردن گزارشگر زنده: توجه به جای منفی‌ها روی تجربهٔ خوشایند لنگر می‌اندازد.",
+    "en": "One way to silence the running commentary: attention anchors on the pleasant experience instead of the negative.",
+    "nl": "Een manier om het doorlopende commentaar stil te zetten: de aandacht verankert zich in de prettige ervaring in plaats van het negatieve."
+   },
+   "sources": [
+    "src:e4d66ee2a4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از تکنیک‌های درمان عاطفهٔ مثبت (PAT) برای کاهش بی‌لذتی است.",
+    "en": "It is one of the techniques of Positive Affect Treatment (PAT) for reducing anhedonia.",
+    "nl": "Het is een van de technieken van Positive Affect Treatment (PAT) om anhedonie te verminderen."
+   },
+   "sources": [
+    "src:e4d66ee2a4"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:rumination",
+   "rel": "contrasts",
+   "note": {
+    "fa": "نقطهٔ مقابل",
+    "en": "Opposite",
+    "nl": "Tegenpool"
+   }
+  },
+  {
+   "to": "psy:pat",
+   "rel": "see-also",
+   "note": {
+    "fa": "تکنیک PAT",
+    "en": "PAT technique",
+    "nl": "PAT-techniek"
+   }
+  },
+  {
+   "to": "psy:positive-emotion-regulation",
+   "rel": "see-also",
+   "note": {
+    "fa": "کمرنگ کردن",
+    "en": "Dampening",
+    "nl": "Afzwakken"
+   }
+  }
+ ],
+ "people": [
+  "core:fred-bryant",
+  "core:joseph-veroff"
+ ],
+ "sources": [
+  "src:e4d66ee2a4"
+ ],
+ "booklets": [
+  "t-savoring",
+  "s4:gross",
+  "s15:leisure",
+  "s15:dampening"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

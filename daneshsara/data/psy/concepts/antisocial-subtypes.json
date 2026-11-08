@@ -1,0 +1,86 @@
+{
+ "id": "psy:antisocial-subtypes",
+ "kind": "concept",
+ "title": {
+  "fa": "زیرگونه‌های رفتار ضداجتماعی",
+  "en": "Aggression vs. rule-breaking",
+  "nl": "Agressie versus regels overtreden"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "رفتار ضداجتماعی دو چهره دارد: پرخاشگری (وراثت‌پذیرتر، زودآغاز) و قانون‌شکنی غیرپرخاشگرانه (بیشتر محیطی).",
+  "en": "Antisocial behaviour has two faces: aggression (more heritable, early onset) and non-aggressive rule-breaking (more environmental).",
+  "nl": "Antisociaal gedrag heeft twee gezichten: agressie (erfelijker, vroeg begin) en niet-agressief regels overtreden (meer omgevingsgebonden)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پرسش‌نامهٔ STAB-32: پرخاشگری فیزیکی، پرخاشگری اجتماعی، قانون‌شکنی.",
+    "en": "The STAB-32 questionnaire: physical aggression, social aggression, rule-breaking.",
+    "nl": "De vragenlijst STAB-32: fysieke agressie, sociale agressie, regels overtreden."
+   },
+   "sources": [
+    "src:dd2542eaec"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برت و همکاران (۲۰۱۵): ویژگی‌های محله قانون‌شکنی بزرگسالی را پیش‌بینی می‌کند، نه پرخاشگری را.",
+    "en": "Burt and colleagues (2015): neighbourhood characteristics predict adult rule-breaking, not aggression.",
+    "nl": "Burt en collega's (2015): buurtkenmerken voorspellen regels overtreden op volwassen leeftijd, niet agressie."
+   },
+   "sources": [
+    "src:dd2542eaec"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قساوت یا بی‌تفاوتی به دیگران مسیری به اختلالات برون‌ساز؛ رفتار خشن والدین، به‌ویژه پدر، آن را تشدید می‌کند.",
+    "en": "Callousness or indifference to others is a path to externalising disorders; harsh parental behaviour, especially by the father, intensifies it.",
+    "nl": "Kilheid of onverschilligheid tegenover anderen is een route naar externaliserende stoornissen; hard gedrag van ouders, vooral van de vader, versterkt die."
+   },
+   "sources": [
+    "src:dd2542eaec"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:reactive-proactive",
+   "rel": "see-also",
+   "note": {
+    "fa": "پرخاشگری واکنشی و کنشی",
+    "en": "Reactive and proactive aggression",
+    "nl": "Reactieve en proactieve agressie"
+   }
+  },
+  {
+   "to": "psy:hitop",
+   "rel": "see-also",
+   "note": {
+    "fa": "طیف برون‌سازی",
+    "en": "Externalising spectrum",
+    "nl": "Externaliserend spectrum"
+   }
+  }
+ ],
+ "people": [
+  "core:alexandra-burt"
+ ],
+ "sources": [
+  "src:dd2542eaec"
+ ],
+ "booklets": [
+  "workshop:intro",
+  "morality:evolution",
+  "badmen:conflict"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

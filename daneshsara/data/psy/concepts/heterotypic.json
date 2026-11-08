@@ -1,0 +1,73 @@
+{
+ "id": "psy:heterotypic",
+ "kind": "concept",
+ "title": {
+  "fa": "پیوستگی ناهمسان",
+  "en": "Heterotypic continuity",
+  "nl": "Heterotypische continuïteit"
+ },
+ "parent": "psy:dx",
+ "field": "psy:dx",
+ "summary": {
+  "fa": "وقتی تشخیص امروز تشخیص دیگری را در آینده پیش‌بینی می‌کند؛ شاهدی بر ناپایداری دسته‌های تشخیصی.",
+  "en": "When today's diagnosis predicts a different diagnosis in the future; evidence that diagnostic categories are unstable.",
+  "nl": "Wanneer de diagnose van vandaag een andere diagnose in de toekomst voorspelt; een aanwijzing dat diagnostische categorieën instabiel zijn."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پیوستگی همسان: همان تشخیص ادامه می‌یابد. ناهمسان: «تغییر تظاهرات» یا «انعطاف فنوتیپی».",
+    "en": "Homotypic continuity: the same diagnosis persists. Heterotypic: “changing manifestations” or “phenotypic plasticity”.",
+    "nl": "Homotypische continuïteit: dezelfde diagnose blijft bestaan. Heterotypisch: ‘veranderende verschijningsvormen’ of ‘fenotypische plasticiteit’."
+   },
+   "sources": [
+    "src:a0ad84542e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لاهی و همکاران (۲۰۱۴)، ۲۸٬۹۵۸ نفر در NESARC با فاصلهٔ سه سال: الگوی تبدیل تشخیص‌ها از ساختار هم‌ابتلایی آن‌ها پیروی می‌کند.",
+    "en": "Lahey and colleagues (2014), 28,958 people in NESARC three years apart: the pattern of diagnoses changing follows their comorbidity structure.",
+    "nl": "Lahey en collega's (2014), 28.958 mensen in NESARC met drie jaar ertussen: het patroon waarin diagnoses veranderen, volgt hun comorbiditeitsstructuur."
+   },
+   "sources": [
+    "src:a0ad84542e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جمع‌بندی کارگاه: این دربارهٔ ماهیت ذاتی و پایدار تشخیص‌ها تردید جدی ایجاد می‌کند.",
+    "en": "The workshop's conclusion: this casts serious doubt on the inherent, stable nature of diagnoses.",
+    "nl": "De conclusie van de workshop: dit zet het idee van een vaste, inherente aard van diagnoses ernstig ter discussie."
+   },
+   "sources": [
+    "src:a0ad84542e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:hitop",
+   "rel": "explains",
+   "note": {
+    "fa": "توضیح ساختاری",
+    "en": "Structural explanation",
+    "nl": "Structurele verklaring"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:a0ad84542e"
+ ],
+ "booklets": [
+  "workshop:origins"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,90 @@
+{
+ "id": "psy:curiosity-brain",
+ "kind": "concept",
+ "title": {
+  "fa": "عصب‌شناسی کنجکاوی",
+  "en": "Neuroscience of curiosity",
+  "nl": "Neurowetenschap van nieuwsgierigheid"
+ },
+ "parent": "psy:curiosity",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "کنجکاوی شناختی مدار پاداش را فعال می‌کند و یادگیری را بهتر می‌کند؛ کنجکاوی ادراکی ابتدا نواحی ناخوشی را فعال می‌کند و رفعش پاداش‌دهنده است.",
+  "en": "Epistemic curiosity activates the reward circuit and improves learning; perceptual curiosity first activates regions linked to discomfort, and resolving it is rewarding.",
+  "nl": "Epistemische nieuwsgierigheid activeert het beloningscircuit en verbetert het leren; perceptuele nieuwsgierigheid activeert eerst gebieden die met onbehagen samenhangen, en het oplossen ervan is belonend."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کانگ و همکاران (۲۰۰۹): کنجکاوی دربارهٔ پرسش‌های عمومی با فعالیت هستهٔ دمدار چپ و قشر پیش‌پیشانی جانبی همراه بود؛ اکومبنس فعال نشد. افراد برای دانستن پاسخ «هزینه» می‌پرداختند.",
+    "en": "Kang and colleagues (2009): curiosity about trivia questions went with activity in the left caudate and lateral prefrontal cortex; the accumbens was not activated. People “paid” to learn the answer.",
+    "nl": "Kang en collega's (2009): nieuwsgierigheid naar quizvragen ging samen met activiteit in de linker nucleus caudatus en de laterale prefrontale cortex; de accumbens werd niet geactiveerd. Mensen ‘betaalden’ om het antwoord te weten."
+   },
+   "sources": [
+    "src:c492f31025"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گروبر، گلمن و رانگاناث (۲۰۱۴): با کنجکاوی بیشتر، اکومبنس و SN/VTA فعال‌تر شد؛ حتی چهره‌های بی‌ربطی که در آن حالت دیده شدند بهتر به یاد ماندند (همبسته با SN/VTA و هیپوکامپ).",
+    "en": "Gruber, Gelman and Ranganath (2014): with more curiosity the accumbens and SN/VTA were more active; even unrelated faces seen in that state were remembered better (correlated with SN/VTA and hippocampus).",
+    "nl": "Gruber, Gelman en Ranganath (2014): bij meer nieuwsgierigheid waren de accumbens en SN/VTA actiever; zelfs ongerelateerde gezichten die in die toestand werden gezien, werden beter onthouden (samenhangend met SN/VTA en hippocampus)."
+   },
+   "sources": [
+    "src:c492f31025"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یپما و همکاران (۲۰۱۲): تصاویر تار، قشر کمربندی قدامی و اینسولای قدامی را فعال کرد (ناخوشی و تعارض)؛ رفع ابهام، استریاتوم و هیپوکامپ را.",
+    "en": "Jepma and colleagues (2012): blurred images activated the anterior cingulate and anterior insula (discomfort and conflict); resolving the ambiguity activated the striatum and hippocampus.",
+    "nl": "Jepma en collega's (2012): wazige beelden activeerden de voorste cingulaire cortex en de voorste insula (onbehagen en conflict); het oplossen van de onduidelijkheid activeerde het striatum en de hippocampus."
+   },
+   "sources": [
+    "src:c492f31025"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاربرد آموزشی: مطالب مهم را در لحظه‌های کنجکاوی ارائه کنید.",
+    "en": "Educational application: present important material in moments of curiosity.",
+    "nl": "Toepassing in het onderwijs: bied belangrijke stof aan op momenten van nieuwsgierigheid."
+   },
+   "sources": [
+    "src:c492f31025"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-reward",
+   "rel": "explains",
+   "note": {
+    "fa": "مدار پاداش",
+    "en": "Reward circuit",
+    "nl": "Beloningscircuit"
+   }
+  }
+ ],
+ "people": [
+  "core:min-jeong-kang-colin-camerer",
+  "core:matthias-gruber-charan-ranganath",
+  "core:marieke-jepma"
+ ],
+ "sources": [
+  "src:c492f31025",
+  "src:eb570f0680",
+  "src:d821674930"
+ ],
+ "booklets": [
+  "curiosity:brain"
+ ],
+ "origin": "curiosity",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,43 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "concept.schema.json",
+ "title": "مفهوم دانش‌سرا",
+ "type": "object",
+ "required": ["id", "kind", "title", "summary", "status"],
+ "additionalProperties": false,
+ "properties": {
+  "id": {"type": "string", "pattern": "^(psy|soc|tabar|phil):[a-z0-9]+(-[a-z0-9]+)*$"},
+  "kind": {"enum": ["root", "field", "subfield", "concept"]},
+  "title": {"$ref": "#/$defs/tri", "required": ["fa"]},
+  "aliases": {"type": "array", "items": {"type": "string"}},
+  "parent": {"type": ["string", "null"], "pattern": "^[a-z]+:[a-z0-9-]+$"},
+  "field": {"type": ["string", "null"], "pattern": "^[a-z]+:[a-z0-9-]+$"},
+  "summary": {"$ref": "#/$defs/tri", "required": ["fa"]},
+  "points": {"type": "array", "items": {
+    "type": "object", "required": ["text"], "additionalProperties": false,
+    "properties": {
+      "text": {"$ref": "#/$defs/tri"},
+      "sources": {"type": "array", "items": {"type": "string", "pattern": "^src:[a-f0-9]{10}$"}},
+      "flags": {"type": "array", "items": {"enum": ["unreplicated", "contested", "dated", "editor-note"]}},
+      "note": {"$ref": "#/$defs/tri"}
+    }}},
+  "links": {"type": "array", "items": {
+    "type": "object", "required": ["to", "rel"], "additionalProperties": false,
+    "properties": {
+      "to": {"type": "string", "pattern": "^[a-z]+:[a-z0-9-]+$"},
+      "rel": {"enum": ["part-of", "explains", "evidence-for", "evidence-against", "contrasts", "prerequisite", "same-as", "applies-to", "measured-by", "critiques", "bridges", "see-also"]},
+      "note": {"$ref": "#/$defs/tri"}
+    }}},
+  "people": {"type": "array", "items": {"type": "string", "pattern": "^core:[a-z0-9-]+$"}},
+  "sources": {"type": "array", "items": {"type": "string", "pattern": "^src:[a-f0-9]{10}$"}},
+  "booklets": {"type": "array", "items": {"type": "string"}},
+  "origin": {"type": ["string", "null"]},
+  "iran": {"type": ["string", "null"], "pattern": "^iran:[a-z0-9-]+$"},
+  "wikidata": {"type": ["string", "null"], "pattern": "^Q[0-9]+$"},
+  "openalex": {"type": ["string", "null"]},
+  "status": {"enum": ["draft", "reviewed", "expert"]},
+  "expert": {"type": "object", "properties": {"name": {"type": "string"}, "date": {"type": "string"}}}
+ },
+ "$defs": {"tri": {"type": "object", "additionalProperties": false,
+   "properties": {"fa": {"type": ["string", "null"]}, "en": {"type": ["string", "null"]}, "nl": {"type": ["string", "null"]}}}}
+}

@@ -1,0 +1,112 @@
+{
+ "id": "psy:statistical-thinking",
+ "kind": "concept",
+ "title": {
+  "fa": "تفکر آماری",
+  "en": "Statistical thinking",
+  "nl": "Statistisch denken"
+ },
+ "parent": "psy:critical-thinking",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "شهود ما در احتمال و آمار بسیار خطاکار است؛ و همین خطاها در دادگاه، پزشکی و رسانه هزینهٔ انسانی واقعی دارند.",
+  "en": "Our intuitions about probability and statistics are very error-prone, and these errors carry real human costs in courts, medicine and the media.",
+  "nl": "Onze intuïtie over kans en statistiek is erg foutgevoelig, en die fouten hebben echte menselijke kosten in rechtbanken, geneeskunde en media."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مسئلهٔ مونتی هال: تغییر انتخاب احتمال برد را دو برابر می‌کند؛ کبوترها با تمرین بهتر از ریاضی‌دانان آن را یاد گرفتند (هربرانسون و شرودر، ۲۰۱۰).",
+    "en": "The Monty Hall problem: switching doubles the chance of winning; pigeons learned it better than mathematicians with practice (Herbranson and Schroeder, 2010).",
+    "nl": "Het Monty Hall-probleem: wisselen verdubbelt de winkans; duiven leerden het met oefening beter dan wiskundigen (Herbranson en Schroeder, 2010)."
+   },
+   "sources": [
+    "src:baeb752dcb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سالی کلارک: مادری که با استدلال آماری نادرست (ضرب احتمال‌های غیرمستقل) به قتل فرزندانش محکوم شد و بعد تبرئه.",
+    "en": "Sally Clark: a mother convicted of killing her children on faulty statistical reasoning (multiplying non-independent probabilities) and later acquitted.",
+    "nl": "Sally Clark: een moeder die op grond van een foute statistische redenering (niet-onafhankelijke kansen vermenigvuldigen) werd veroordeeld voor het doden van haar kinderen en later werd vrijgesproken."
+   },
+   "sources": [
+    "src:baeb752dcb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پارادوکس سیمپسون: پذیرش دانشگاه برکلی (۱۹۷۳) در کل به ضرر زنان به نظر می‌رسید، اما در هر دانشکده نه.",
+    "en": "Simpson's paradox: Berkeley admissions (1973) seemed to disfavour women overall, but not within each department.",
+    "nl": "De paradox van Simpson: de toelating in Berkeley (1973) leek in totaal nadelig voor vrouwen, maar niet binnen elke faculteit."
+   },
+   "sources": [
+    "src:baeb752dcb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همبستگی‌های جعلی، اندازهٔ اثر در برابر معناداری، و «چرا بیشتر یافته‌های منتشرشده نادرست‌اند» (یوآنیدیس، ۲۰۰۵).",
+    "en": "Spurious correlations, effect size versus significance, and “Why most published research findings are false” (Ioannidis, 2005).",
+    "nl": "Schijncorrelaties, effectgrootte tegenover significantie, en ‘Why most published research findings are false’ (Ioannidis, 2005)."
+   },
+   "sources": [
+    "src:baeb752dcb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با روان‌شناسی: بحران تکرارپذیری؛ همان دقتی که در جلسهٔ ۱ برای تشخیص یافتهٔ «بازاری» خواسته شد.",
+    "en": "Link with psychology: the replication crisis; the same rigour asked for in session 1 to spot “marketable” findings.",
+    "nl": "Link met de psychologie: de replicatiecrisis; dezelfde zorgvuldigheid die in sessie 1 werd gevraagd om ‘verkoopbare’ bevindingen te herkennen."
+   },
+   "sources": [
+    "src:baeb752dcb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پارادوکس برکسون، پارادوکس شاتل (بازرسی)، سانسور از راست، و تعداد در برابر نرخ.",
+    "en": "Berkson's paradox, the inspection paradox, right-censoring, and counts versus rates.",
+    "nl": "De paradox van Berkson, de inspectieparadox, rechtscensurering, en aantallen tegenover percentages."
+   },
+   "sources": [
+    "src:baeb752dcb"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:p-psychometrics",
+   "rel": "see-also",
+   "note": {
+    "fa": "روش پژوهش",
+    "en": "Research method",
+    "nl": "Onderzoeksmethode"
+   }
+  }
+ ],
+ "people": [
+  "core:gerd-gigerenzer",
+  "core:john-ioannidis"
+ ],
+ "sources": [
+  "src:baeb752dcb",
+  "src:d1b824293c",
+  "src:d094d09af8"
+ ],
+ "booklets": [
+  "bullshit:selection",
+  "bullshit:viz"
+ ],
+ "origin": "book",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

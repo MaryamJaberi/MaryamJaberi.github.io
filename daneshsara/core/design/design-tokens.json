@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "name": "Psychology Wiki Design Tokens",
+    "version": "1.0.0",
+    "description": "Design tokens for maryamjaberi.github.io/psychology-wiki redesign",
+    "direction": "rtl"
+  },
+  "color": {
+    "paper": {
+      "value": "#F7F4EF",
+      "description": "Main background / warm paper"
+    },
+    "surface": {
+      "value": "#FFFFFF",
+      "description": "Cards and elevated surfaces"
+    },
+    "surface-subtle": {
+      "value": "#F1EDE6",
+      "description": "Subtle backgrounds, chips bg"
+    },
+    "ink": {
+      "value": "#1C1915",
+      "description": "Primary text"
+    },
+    "ink-secondary": {
+      "value": "#5C574F",
+      "description": "Secondary text, captions"
+    },
+    "ink-muted": {
+      "value": "#8A847A",
+      "description": "Muted / disabled text"
+    },
+    "border": {
+      "value": "#E8E4DC",
+      "description": "Default borders"
+    },
+    "border-strong": {
+      "value": "#D4CFC5",
+      "description": "Stronger borders"
+    },
+    "primary": {
+      "value": "#0A6B60",
+      "description": "Primary brand (deep turquoise)"
+    },
+    "primary-soft": {
+      "value": "#E6F2F0",
+      "description": "Primary soft background"
+    },
+    "primary-hover": {
+      "value": "#08574E",
+      "description": "Primary hover"
+    },
+    "accent": {
+      "value": "#1C39BB",
+      "description": "Accent (lapis)"
+    },
+    "accent-soft": {
+      "value": "#E8ECF8",
+      "description": "Accent soft"
+    },
+    "success": {
+      "value": "#2F6B4F"
+    },
+    "warning": {
+      "value": "#B45309"
+    },
+    "error": {
+      "value": "#9F1239"
+    },
+    "discipline": {
+      "philosophy": "#5B4B8A",
+      "sociology": "#2A6F7A",
+      "neuroscience": "#C45C26",
+      "anthropology": "#3D6B4F",
+      "behavioral-econ": "#8B5A2B",
+      "psychiatry": "#6B3A5A"
+    }
+  },
+  "typography": {
+    "font-family": {
+      "sans": "Vazirmatn, IRANSansX, Tahoma, system-ui, sans-serif",
+      "mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+    },
+    "scale": {
+      "h1": { "size": "2.75rem", "lineHeight": "1.2", "weight": "700" },
+      "h2": { "size": "1.875rem", "lineHeight": "1.25", "weight": "700" },
+      "h3": { "size": "1.375rem", "lineHeight": "1.3", "weight": "600" },
+      "h4": { "size": "1.125rem", "lineHeight": "1.35", "weight": "600" },
+      "body": { "size": "1rem", "lineHeight": "1.65", "weight": "400" },
+      "body-sm": { "size": "0.9375rem", "lineHeight": "1.6", "weight": "400" },
+      "caption": { "size": "0.8125rem", "lineHeight": "1.4", "weight": "500" },
+      "chip": { "size": "0.75rem", "lineHeight": "1.3", "weight": "500" }
+    }
+  },
+  "spacing": {
+    "scale": [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96],
+    "unit": "px"
+  },
+  "radius": {
+    "sm": "6px",
+    "md": "10px",
+    "lg": "14px",
+    "xl": "20px",
+    "full": "9999px"
+  },
+  "shadow": {
+    "sm": "0 1px 2px rgba(28, 25, 21, 0.05)",
+    "md": "0 4px 12px rgba(28, 25, 21, 0.06)",
+    "lg": "0 8px 24px rgba(28, 25, 21, 0.08)"
+  },
+  "breakpoints": {
+    "xs": "360px",
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1440px"
+  },
+  "zIndex": {
+    "dropdown": 50,
+    "sticky": 100,
+    "modal": 200,
+    "toast": 300
+  }
+}

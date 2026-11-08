@@ -1,0 +1,139 @@
+{
+ "id": "psy:addiction-families",
+ "kind": "concept",
+ "title": {
+  "fa": "اعتیاد و خانواده: بهبودی، درمان اجباری، آزمایش ادرار",
+  "en": "Families, recovery & leverage",
+  "nl": "Families, herstel en hefboom"
+ },
+ "parent": "psy:addiction-therapy",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "آنچه خانواده‌ها باید دربارهٔ سیر اعتیاد، تخریب، مفهوم بهبودی، درمان خوب و فشار سنجیده بدانند.",
+  "en": "What families need to know about the course of addiction, damage, the meaning of recovery, good treatment and measured pressure.",
+  "nl": "Wat families moeten weten over het verloop van verslaving, schade, de betekenis van herstel, goede behandeling en weloverwogen druk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سیر اعتیاد: اوایل («دوران طلایی») ← پیشرفت ← پیشرفته ← اقدام به ترک ← عود؛ لازم نیست به «ته خط» برسد.",
+    "en": "The course of addiction: the early phase (“golden age”) → progression → advanced → attempts to quit → relapse; it doesn't have to hit “rock bottom”.",
+    "nl": "Het verloop van verslaving: de vroege fase (‘gouden tijd’) → voortschrijden → gevorderd → stoppogingen → terugval; het hoeft niet tot ‘het dieptepunt’ te komen."
+   },
+   "sources": [
+    "src:eae98ba0f8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«مشکل در اعتیاد تخریب آن است»؛ بحث دربارهٔ تخریب سازنده‌تر از بحث دربارهٔ مصرف است.",
+    "en": "“The problem with addiction is its damage”; talking about damage is more constructive than talking about use.",
+    "nl": "‘Het probleem van verslaving is de schade’; praten over schade is constructiever dan praten over gebruik."
+   },
+   "sources": [
+    "src:eae98ba0f8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بهبودی سه لایه دارد: عدم مصرف، سلامت روان و بدن، شهروند سالم؛ ۵ سال در اعتیاد سنگین، ۲ سال در سبک.",
+    "en": "Recovery has three layers: not using, mental and physical health, being a healthy citizen; 5 years in severe addiction, 2 in mild.",
+    "nl": "Herstel heeft drie lagen: niet gebruiken, mentale en lichamelijke gezondheid, een gezonde burger zijn; 5 jaar bij zware verslaving, 2 bij lichte."
+   },
+   "sources": [
+    "src:eae98ba0f8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فشارها: شفاف، غیرحیثیتی، غیرهیجانی، برگشت‌پذیر، تدریجی؛ همراه با پیشنهاد درمان به‌عنوان گزینه.",
+    "en": "Pressures: transparent, not humiliating, not emotional, reversible, gradual; together with offering treatment as an option.",
+    "nl": "Druk: transparant, niet vernederend, niet emotioneel, omkeerbaar, geleidelijk; samen met het aanbieden van behandeling als optie."
+   },
+   "sources": [
+    "src:eae98ba0f8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آزمایش ادرار مثبت فقط یعنی مصرف در ۳ روز گذشته؛ مصرف ≠ اعتیاد؛ هدف مچ‌گیری نیست.",
+    "en": "A positive urine test only means use in the past 3 days; use ≠ addiction; the aim is not to catch someone out.",
+    "nl": "Een positieve urinetest betekent alleen gebruik in de afgelopen 3 dagen; gebruik ≠ verslaving; het doel is niet iemand betrappen."
+   },
+   "sources": [
+    "src:eae98ba0f8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درمانگر دلال میان خانواده و بیمار نیست.",
+    "en": "The therapist is not a go-between for the family and the patient.",
+    "nl": "De therapeut is geen tussenpersoon tussen het gezin en de patiënt."
+   },
+   "sources": [
+    "src:eae98ba0f8"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:mi",
+   "rel": "see-also",
+   "note": {
+    "fa": "انگیزه",
+    "en": "Motivation",
+    "nl": "Motivatie"
+   }
+  },
+  {
+   "to": "psy:methadone",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان دارویی",
+    "en": "Drug treatment",
+    "nl": "Medicamenteuze behandeling"
+   }
+  },
+  {
+   "to": "psy:relapse-prevention",
+   "rel": "see-also",
+   "note": {
+    "fa": "لغزش",
+    "en": "Lapse",
+    "nl": "Uitglijder"
+   }
+  },
+  {
+   "to": "psy:opioids",
+   "rel": "see-also",
+   "note": {
+    "fa": "مواد افیونی",
+    "en": "Opioids",
+    "nl": "Opioïden"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-meyers",
+  "core:william-miller"
+ ],
+ "sources": [
+  "src:eae98ba0f8",
+  "src:7a33e0bf56"
+ ],
+ "booklets": [
+  "families:recovery",
+  "families:coercive",
+  "families:urine"
+ ],
+ "origin": "families",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

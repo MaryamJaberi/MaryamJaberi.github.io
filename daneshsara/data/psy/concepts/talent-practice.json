@@ -1,0 +1,100 @@
+{
+ "id": "psy:talent-practice",
+ "kind": "concept",
+ "title": {
+  "fa": "استعداد و تمرین",
+  "en": "Talent vs. deliberate practice",
+  "nl": "Talent versus doelbewuste oefening"
+ },
+ "parent": "psy:p-aesthetics",
+ "field": "psy:p-aesthetics",
+ "summary": {
+  "fa": "تمرین عامدانه لازم است، اما کافی نیست: کسانی که سال‌ها با شدت یکسان تمرین می‌کنند به یک سطح نمی‌رسند. دیدگاه کهن «استعداد ذاتی» تا حدی درست بود.",
+  "en": "Deliberate practice is necessary but not sufficient: people who practise for years with the same intensity do not reach the same level. The old view of “innate talent” was partly right.",
+  "nl": "Doelbewuste oefening is nodig maar niet voldoende: mensen die jarenlang even intensief oefenen, bereiken niet hetzelfde niveau. De oude opvatting van ‘aangeboren talent’ was deels juist."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اریکسون: «قاعدهٔ ده هزار ساعت» تمرین عامدانه (که مالکوم گلدول عمومی کرد).",
+    "en": "Ericsson: the “ten-thousand-hour rule” of deliberate practice (popularised by Malcolm Gladwell).",
+    "nl": "Ericsson: de ‘tienduizenduurregel’ van doelbewuste oefening (populair gemaakt door Malcolm Gladwell)."
+   },
+   "sources": [
+    "src:acaf88e62c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مکنامارا، همبریک و اسوالد (۲۰۱۴، فراتحلیل): تمرین فقط بخشی از تفاوت عملکرد را توضیح می‌دهد (در موسیقی حدود یک‌پنجم).",
+    "en": "Macnamara, Hambrick and Oswald (2014, meta-analysis): practice explains only part of the difference in performance (in music about one fifth).",
+    "nl": "Macnamara, Hambrick en Oswald (2014, meta-analyse): oefening verklaart maar een deel van het prestatieverschil (in muziek ongeveer een vijfde)."
+   },
+   "sources": [
+    "src:acaf88e62c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وینر: کودکان تیزهوش «خشم برای تسلط» دارند؛ انگیزهٔ درونی شدید برای کار در حوزهٔ خود.",
+    "en": "Winner: gifted children have a “rage to master”; intense intrinsic motivation to work in their domain.",
+    "nl": "Winner: hoogbegaafde kinderen hebben een ‘rage to master’; een sterke intrinsieke drang om in hun domein te werken."
+   },
+   "sources": [
+    "src:acaf88e62c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مک‌نامارا (۲۰۱۴): سهم تمرین آگاهانه در بازی‌ها ۲۶٪، موسیقی ۲۱٪، ورزش ۱۸٪، آموزش ۴٪ و حرفه‌ها کمتر از ۱٪.",
+    "en": "Macnamara (2014): the share of deliberate practice is 26% in games, 21% in music, 18% in sport, 4% in education and under 1% in professions.",
+    "nl": "Macnamara (2014): het aandeel van doelbewuste oefening is 26% bij spellen, 21% bij muziek, 18% bij sport, 4% in het onderwijs en minder dan 1% in beroepen."
+   },
+   "sources": [
+    "src:acaf88e62c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تسای و بناجی: متخصصان «طبیعی‌ها» را بر «تلاشگرها» ترجیح می‌دهند.",
+    "en": "Tsay and Banaji: experts prefer “naturals” over “strivers”.",
+    "nl": "Tsay en Banaji: experts geven de voorkeur aan ‘naturals’ boven ‘strivers’."
+   },
+   "sources": [
+    "src:acaf88e62c"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:sdt",
+   "rel": "see-also",
+   "note": {
+    "fa": "انگیزهٔ درونی",
+    "en": "Intrinsic motivation",
+    "nl": "Intrinsieke motivatie"
+   }
+  }
+ ],
+ "people": [
+  "core:anders-ericsson",
+  "core:david-hambrick"
+ ],
+ "sources": [
+  "src:acaf88e62c",
+  "src:7e88ef373d"
+ ],
+ "booklets": [
+  "art:talent",
+  "effort:science"
+ ],
+ "origin": "art",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

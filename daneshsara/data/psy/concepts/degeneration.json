@@ -1,0 +1,88 @@
+{
+ "id": "psy:degeneration",
+ "kind": "concept",
+ "title": {
+  "fa": "نظریهٔ انحطاط",
+  "en": "Degeneration theory",
+  "nl": "Degeneratietheorie"
+ },
+ "parent": "psy:psychiatry-history",
+ "field": "psy:psychiatry-history",
+ "summary": {
+  "fa": "نظریهٔ مورل (قرن نوزدهم) که بیماری روانی، جرم و «فساد اخلاقی» را نشانهٔ زوال ارثی نسل‌ها می‌دید.",
+  "en": "Morel's nineteenth-century theory that saw mental illness, crime and “moral corruption” as signs of hereditary degeneration across generations.",
+  "nl": "De negentiende-eeuwse theorie van Morel die psychische ziekte, misdaad en ‘morele verdorvenheid’ zag als tekenen van erfelijke degeneratie over generaties."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پس از شکست ۱۸۷۱ به ترسی ملی در فرانسه بدل شد.",
+    "en": "After the defeat of 1871 it became a national fear in France.",
+    "nl": "Na de nederlaag van 1871 werd het in Frankrijk een nationale angst."
+   },
+   "sources": [
+    "src:60be50d820"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لومبروزو: «جنایتکار مادرزاد» و نشانه‌های جسمی؛ مفهوم بازگشت نیاکانی.",
+    "en": "Lombroso: the “born criminal” and physical stigmata; the concept of atavism.",
+    "nl": "Lombroso: de ‘geboren misdadiger’ en lichamelijke kenmerken; het begrip atavisme."
+   },
+   "sources": [
+    "src:60be50d820"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پایانش: اصلاح نژاد و «هنر منحط» نازی‌ها.",
+    "en": "Its end: eugenics and the Nazis' “degenerate art”.",
+    "nl": "Het einde ervan: eugenetica en de ‘entartete Kunst’ van de nazi's."
+   },
+   "sources": [
+    "src:60be50d820"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درس: آمیختن بی‌احتیاط «بیماری» و «بدی» علم را به ابزار سرکوب بدل می‌کند.",
+    "en": "The lesson: carelessly mixing “illness” and “badness” turns science into a tool of repression.",
+    "nl": "De les: ‘ziekte’ en ‘slechtheid’ onvoorzichtig vermengen maakt van wetenschap een instrument van onderdrukking."
+   },
+   "sources": [
+    "src:60be50d820"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:morality-mh",
+   "rel": "see-also",
+   "note": {
+    "fa": "امروز",
+    "en": "Today",
+    "nl": "Vandaag"
+   }
+  }
+ ],
+ "people": [
+  "core:benedict-augustin-morel",
+  "core:cesare-lombroso",
+  "core:john-hughlings-jackson"
+ ],
+ "sources": [
+  "src:60be50d820"
+ ],
+ "booklets": [
+  "morality:degeneration"
+ ],
+ "origin": "morality",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

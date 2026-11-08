@@ -1,0 +1,75 @@
+{
+ "id": "psy:behavioral-activation",
+ "kind": "concept",
+ "title": {
+  "fa": "فعال‌سازی رفتاری",
+  "en": "Behavioral activation",
+  "nl": "Gedragsactivatie"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "افسردگی با کاهش تقویت مثبت همراه است؛ با برنامه‌ریزی فعالیت‌های خوشایند و معنادار، حتی بدون انگیزهٔ اولیه، خلق بهتر می‌شود: «اول عمل، بعد انگیزه».",
+  "en": "Depression goes with reduced positive reinforcement; scheduling pleasant and meaningful activities, even without initial motivation, improves mood: “action first, motivation later”.",
+  "nl": "Depressie gaat samen met minder positieve bekrachtiging; plezierige en betekenisvolle activiteiten plannen, ook zonder aanvankelijke motivatie, verbetert de stemming: ‘eerst doen, dan komt de motivatie’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فهرست رویدادهای خوشایند لوینسون: ۳۲۰ فعالیت، نمره‌گذاری بسامد و خوشایندی.",
+    "en": "Lewinsohn's Pleasant Events Schedule: 320 activities, scored for frequency and pleasantness.",
+    "nl": "De lijst van plezierige activiteiten van Lewinsohn: 320 activiteiten, gescoord op frequentie en plezier."
+   },
+   "sources": [
+    "src:21eaf06297"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فعالیت‌هایی که خوشایندند اما کم انجام می‌شوند، نقطهٔ شروع‌اند.",
+    "en": "Activities that are pleasant but rarely done are the starting point.",
+    "nl": "Activiteiten die plezierig zijn maar weinig worden gedaan, zijn het startpunt."
+   },
+   "sources": [
+    "src:21eaf06297"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anhedonia",
+   "rel": "see-also",
+   "note": {
+    "fa": "بی‌لذتی",
+    "en": "Anhedonia",
+    "nl": "Anhedonie"
+   }
+  },
+  {
+   "to": "psy:emotional-agility",
+   "rel": "see-also",
+   "note": {
+    "fa": "عمل",
+    "en": "Action",
+    "nl": "Handelen"
+   }
+  }
+ ],
+ "people": [
+  "core:peter-lewinsohn"
+ ],
+ "sources": [
+  "src:21eaf06297"
+ ],
+ "booklets": [
+  "shelf11:pes",
+  "riseabove:agility",
+  "s15:investment"
+ ],
+ "origin": "shelf11",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,85 @@
+{
+ "id": "psy:analogical-thinking",
+ "kind": "concept",
+ "title": {
+  "fa": "تفکر قیاسی",
+  "en": "Analogical thinking",
+  "nl": "Analoog denken"
+ },
+ "parent": "psy:p-cog",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "دیدن شباهت ساختاری میان حوزه‌های به ظاهر بی‌ربط؛ چند قیاس دور بهتر از یک قیاس نزدیک.",
+  "en": "Seeing structural similarity between seemingly unrelated domains; several distant analogies are better than one close one.",
+  "nl": "Structurele gelijkenis zien tussen schijnbaar ongerelateerde domeinen; meerdere verre analogieën zijn beter dan één nabije."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مسئلهٔ پرتو دانکر: ۱۰٪ بدون کمک، ۳۰٪ با داستان دژ، ۸۰٪ با دو داستان و راهنمایی (گیک و هالیوک).",
+    "en": "Duncker's radiation problem: 10% unaided, 30% with the fortress story, 80% with two stories and a hint (Gick and Holyoak).",
+    "nl": "Het bestralingsprobleem van Duncker: 10% zonder hulp, 30% met het verhaal over de vesting, 80% met twee verhalen en een hint (Gick en Holyoak)."
+   },
+   "sources": [
+    "src:4c5af5ca49"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کپلر و زنجیرهٔ قیاس‌ها برای فهم حرکت سیارات.",
+    "en": "Kepler and his chain of analogies to understand planetary motion.",
+    "nl": "Kepler en zijn keten van analogieën om de beweging van planeten te begrijpen."
+   },
+   "sources": [
+    "src:4c5af5ca49"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«دید بیرونی» در برآورد پروژه‌ها شکلی از تفکر قیاسی است.",
+    "en": "The “outside view” in project estimates is a form of analogical thinking.",
+    "nl": "Het ‘buitenperspectief’ bij projectschattingen is een vorm van analoog denken."
+   },
+   "sources": [
+    "src:4c5af5ca49"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:planning-fallacy",
+   "rel": "see-also",
+   "note": {
+    "fa": "دید بیرونی",
+    "en": "Outside view",
+    "nl": "Buitenperspectief"
+   }
+  },
+  {
+   "to": "psy:creative-spark",
+   "rel": "see-also",
+   "note": {
+    "fa": "خلاقیت",
+    "en": "Creativity",
+    "nl": "Creativiteit"
+   }
+  }
+ ],
+ "people": [
+  "core:keith-holyoak",
+  "core:dedre-gentner"
+ ],
+ "sources": [
+  "src:4c5af5ca49"
+ ],
+ "booklets": [
+  "range:analogy"
+ ],
+ "origin": "range",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

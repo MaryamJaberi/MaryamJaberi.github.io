@@ -1,0 +1,99 @@
+{
+ "id": "psy:flow",
+ "kind": "concept",
+ "title": {
+  "fa": "غرقگی (فلو)",
+  "en": "Flow",
+  "nl": "Flow"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "حالت غرق شدن کامل در فعالیتی با هدف روشن، بازخورد فوری و تعادل چالش و مهارت (چیکسنت‌میهایی).",
+  "en": "A state of complete absorption in an activity with a clear goal, immediate feedback and a balance of challenge and skill (Csikszentmihalyi).",
+  "nl": "Een toestand van volledig opgaan in een activiteit met een duidelijk doel, directe feedback en een balans tussen uitdaging en vaardigheid (Csikszentmihalyi)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "زمان گم می‌شود، خودآگاهی کم می‌شود و فعالیت به خودی خود پاداش است.",
+    "en": "Time disappears, self-consciousness fades and the activity is its own reward.",
+    "nl": "De tijd verdwijnt, zelfbewustzijn neemt af en de activiteit is haar eigen beloning."
+   },
+   "sources": [
+    "src:ce371691d8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در معلمان، صنعتگران و کشاورزان هم دیده می‌شود (فصل‌های بخش سوم دست‌نامه).",
+    "en": "Also seen in teachers, craftspeople and farmers (chapters of part three of the handbook).",
+    "nl": "Ook te zien bij leraren, ambachtslieden en boeren (hoofdstukken uit deel drie van het handboek)."
+   },
+   "sources": [
+    "src:ce371691d8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با درگیری کاری (بُعد «جذب»).",
+    "en": "Link with work engagement (the “absorption” dimension).",
+    "nl": "Link met bevlogenheid (de dimensie ‘absorptie’)."
+   },
+   "sources": [
+    "src:ce371691d8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پرسشنامهٔ WOLF (بکر ۲۰۰۸): جذب، لذت از کار، انگیزهٔ درونی.",
+    "en": "The WOLF questionnaire (Bakker 2008): absorption, work enjoyment, intrinsic motivation.",
+    "nl": "De WOLF-vragenlijst (Bakker 2008): absorptie, werkplezier, intrinsieke motivatie."
+   },
+   "sources": [
+    "src:ce371691d8"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:work-engagement",
+   "rel": "see-also",
+   "note": {
+    "fa": "جذب",
+    "en": "Absorption",
+    "nl": "Absorptie"
+   }
+  },
+  {
+   "to": "psy:curiosity",
+   "rel": "see-also",
+   "note": {
+    "fa": "انگیزهٔ درونی",
+    "en": "Intrinsic motivation",
+    "nl": "Intrinsieke motivatie"
+   }
+  }
+ ],
+ "people": [
+  "core:mihaly-csikszentmihalyi",
+  "core:jeanne-nakamura"
+ ],
+ "sources": [
+  "src:ce371691d8"
+ ],
+ "booklets": [
+  "poswork:individual",
+  "s11:flow",
+  "s9:goals",
+  "s10:venting"
+ ],
+ "origin": "poswork",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

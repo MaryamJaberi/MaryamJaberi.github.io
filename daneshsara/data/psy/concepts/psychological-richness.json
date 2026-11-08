@@ -1,0 +1,94 @@
+{
+ "id": "psy:psychological-richness",
+ "kind": "concept",
+ "title": {
+  "fa": "زندگی غنی از نظر روانی",
+  "en": "Psychological richness",
+  "nl": "Psychologische rijkdom"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "بُعد سوم زندگی خوب در کنار شادی و معنا: تجربه‌های متنوع، تازه و جذاب که دیدگاه را تغییر می‌دهند (اویشی).",
+  "en": "The third dimension of a good life alongside happiness and meaning: varied, novel and interesting experiences that change perspective (Oishi).",
+  "nl": "De derde dimensie van een goed leven naast geluk en betekenis: gevarieerde, nieuwe en boeiende ervaringen die het perspectief veranderen (Oishi)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در درازمدت، از کارهایی که نکردیم بیشتر پشیمان می‌شویم.",
+    "en": "In the long run, we regret more the things we didn't do.",
+    "nl": "Op lange termijn hebben we meer spijt van wat we niet deden."
+   },
+   "sources": [
+    "src:062f9e7be3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مواد غنا: تازگی، بازیگوشی، ساختن، هنر و طبیعت، و سختی‌هایی که به داستان تبدیل شوند.",
+    "en": "The ingredients of richness: novelty, playfulness, making things, art and nature, and hardships that turn into stories.",
+    "nl": "De ingrediënten van rijkdom: nieuwheid, speelsheid, dingen maken, kunst en natuur, en tegenslagen die verhalen worden."
+   },
+   "sources": [
+    "src:062f9e7be3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "با گشودگی به تجربه و کنجکاوی همراه است.",
+    "en": "It goes with openness to experience and curiosity.",
+    "nl": "Het gaat samen met openheid voor ervaringen en nieuwsgierigheid."
+   },
+   "sources": [
+    "src:062f9e7be3"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:curiosity",
+   "rel": "see-also",
+   "note": {
+    "fa": "کنجکاوی",
+    "en": "Curiosity",
+    "nl": "Nieuwsgierigheid"
+   }
+  },
+  {
+   "to": "psy:habituation",
+   "rel": "see-also",
+   "note": {
+    "fa": "خوگیری",
+    "en": "Habituation",
+    "nl": "Gewenning"
+   }
+  },
+  {
+   "to": "psy:meaning-making",
+   "rel": "see-also",
+   "note": {
+    "fa": "معنا",
+    "en": "Meaning",
+    "nl": "Betekenis"
+   }
+  }
+ ],
+ "people": [
+  "core:shigehiro-oishi"
+ ],
+ "sources": [
+  "src:062f9e7be3"
+ ],
+ "booklets": [
+  "shelf14:oishi",
+  "makingsense:sources"
+ ],
+ "origin": "shelf14",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

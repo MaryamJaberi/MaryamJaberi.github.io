@@ -1,0 +1,95 @@
+{
+ "id": "psy:phil-ethics",
+ "kind": "subfield",
+ "title": {
+  "fa": "اخلاق و فلسفهٔ اخلاق",
+  "en": "Ethics & moral philosophy",
+  "nl": "Ethiek en moraalfilosofie"
+ },
+ "parent": "psy:philosophy",
+ "field": null,
+ "summary": {
+  "fa": "خوبی، وظیفه و فضیلت. سه سنت بزرگ: پیامدگرایی (نتیجه)، وظیفه‌گرایی (قاعده) و اخلاق فضیلت (منش). روان‌شناسی اخلاق می‌پرسد آدم‌ها در عمل چطور قضاوت می‌کنند.",
+  "en": "Goodness, duty and virtue. Three great traditions: consequentialism (outcome), deontology (rule) and virtue ethics (character). Moral psychology asks how people actually judge.",
+  "nl": "Goedheid, plicht en deugd. Drie grote tradities: consequentialisme (uitkomst), deontologie (regel) en deugdethiek (karakter). De morele psychologie vraagt hoe mensen in de praktijk oordelen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "معمای تراموا تفاوت شهودهای پیامدگرا و وظیفه‌گرا را نشان می‌دهد.",
+    "en": "The trolley problem shows the difference between consequentialist and deontological intuitions.",
+    "nl": "Het trolleyprobleem laat het verschil zien tussen consequentialistische en deontologische intuïties."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اخلاق فضیلت ارسطویی با روان‌شناسی مثبت‌نگر و «توانمندی‌های منش» پیوند دارد.",
+    "en": "Aristotelian virtue ethics is linked to positive psychology and “character strengths”.",
+    "nl": "Aristotelische deugdethiek is verbonden met positieve psychologie en ‘karaktersterktes’."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آیا مشکلات اخلاقی می‌توانند اختلال روانی باشند؟ (سخنرانی اخلاق و سلامت روان)",
+    "en": "Can moral problems be mental disorders? (the talk on morality and mental health)",
+    "nl": "Kunnen morele problemen psychische stoornissen zijn? (de lezing over moraal en mentale gezondheid)"
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:morality-mh",
+   "rel": "see-also",
+   "note": {
+    "fa": "اخلاق و سلامت روان",
+    "en": "Morality and mental health",
+    "nl": "Moraal en mentale gezondheid"
+   }
+  },
+  {
+   "to": "psy:moral-hypocrisy",
+   "rel": "see-also",
+   "note": {
+    "fa": "ریاکاری",
+    "en": "Hypocrisy",
+    "nl": "Hypocrisie"
+   }
+  },
+  {
+   "to": "psy:strengths",
+   "rel": "see-also",
+   "note": {
+    "fa": "فضیلت و توانمندی",
+    "en": "Virtue and strengths",
+    "nl": "Deugd en sterke kanten"
+   }
+  },
+  {
+   "to": "psy:empathy-fatigue",
+   "rel": "see-also",
+   "note": {
+    "fa": "همدلی",
+    "en": "Empathy",
+    "nl": "Empathie"
+   }
+  }
+ ],
+ "people": [
+  "core:aristotle",
+  "core:kant",
+  "core:john-stuart-mill",
+  "core:philippa-foot"
+ ],
+ "sources": [],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

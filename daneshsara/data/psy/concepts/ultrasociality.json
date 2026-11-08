@@ -1,0 +1,113 @@
+{
+ "id": "psy:ultrasociality",
+ "kind": "concept",
+ "title": {
+  "fa": "فراجامعه‌پذیری",
+  "en": "Ultrasociality",
+  "nl": "Ultrasocialiteit"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "توانایی انسان برای همکاری با میلیون‌ها غریبه؛ تورچین آن را محصول رقابت و جنگ میان گروه‌ها در ده هزار سال اخیر می‌داند (انتخاب گروهی چندسطحی).",
+  "en": "The human ability to cooperate with millions of strangers; Turchin sees it as a product of competition and war between groups over the last ten thousand years (multilevel group selection).",
+  "nl": "Het menselijk vermogen om met miljoenen vreemden samen te werken; Turchin ziet het als een product van concurrentie en oorlog tussen groepen in de laatste tienduizend jaar (meerniveau-groepsselectie)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "از گروه‌های ده‌ها نفره تا دولت-ملت‌های صدها میلیونی.",
+    "en": "From groups of dozens to nation-states of hundreds of millions.",
+    "nl": "Van groepen van tientallen mensen tot natiestaten van honderden miljoenen."
+   },
+   "sources": [
+    "src:5dd7bdded0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "میمون قاتل یا وحشی نجیب؟ شواهد جبل صحابه و نقد فرای.",
+    "en": "Killer ape or noble savage? The evidence from Jebel Sahaba and Fry's critique.",
+    "nl": "Moordaap of edele wilde? Het bewijs van Jebel Sahaba en de kritiek van Fry."
+   },
+   "sources": [
+    "src:5dd7bdded0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سلاح پرتابی برابرکنندهٔ بزرگ؛ زیگزاگ نابرابری (بوم).",
+    "en": "The projectile weapon as the great equaliser; the zigzag of inequality (Boehm).",
+    "nl": "Het werpwapen als grote gelijkmaker; de zigzag van ongelijkheid (Boehm)."
+   },
+   "sources": [
+    "src:5dd7bdded0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انتخاب گروهی چندسطحی هنوز محل بحث است.",
+    "en": "Multilevel group selection is still debated.",
+    "nl": "Groepsselectie op meerdere niveaus staat nog ter discussie."
+   },
+   "sources": [
+    "src:5dd7bdded0"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-domestication",
+   "rel": "see-also",
+   "note": {
+    "fa": "اهلی‌سازی",
+    "en": "Domestication",
+    "nl": "Domesticatie"
+   }
+  },
+  {
+   "to": "psy:cooperation-competition",
+   "rel": "see-also",
+   "note": {
+    "fa": "همکاری",
+    "en": "Cooperation",
+    "nl": "Samenwerking"
+   }
+  },
+  {
+   "to": "psy:intractable-conflict",
+   "rel": "see-also",
+   "note": {
+    "fa": "جنگ",
+    "en": "War",
+    "nl": "Oorlog"
+   }
+  }
+ ],
+ "people": [
+  "core:peter-turchin",
+  "core:steven-pinker",
+  "core:azar-gat",
+  "core:douglas-fry",
+  "core:christopher-boehm"
+ ],
+ "sources": [
+  "src:5dd7bdded0",
+  "src:2d97959940"
+ ],
+ "booklets": [
+  "ultrasociety:ultra",
+  "ultrasociety:violence",
+  "ultrasociety:gs",
+  "ultrasociety:equalizer",
+  "ultrasociety:debate"
+ ],
+ "origin": "ultrasociety",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

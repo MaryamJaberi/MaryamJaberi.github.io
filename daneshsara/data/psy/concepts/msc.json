@@ -1,0 +1,106 @@
+{
+ "id": "psy:msc",
+ "kind": "concept",
+ "title": {
+  "fa": "شفقت به خودِ ذهن‌آگاهانه (MSC)",
+  "en": "Mindful Self-Compassion",
+  "nl": "Mindful zelfcompassie"
+ },
+ "parent": "psy:t-compassion",
+ "field": "psy:t-compassion",
+ "summary": {
+  "fa": "برنامهٔ گروهی ۸ هفته‌ای کریستین نف و کریستوفر گرمر برای پرورش شفقت به خود، با نسخهٔ ویژهٔ فرسودگی.",
+  "en": "Kristin Neff and Christopher Germer's 8-week group programme for cultivating self-compassion, with a special version for burnout.",
+  "nl": "Het achtweekse groepsprogramma van Kristin Neff en Christopher Germer om zelfcompassie te ontwikkelen, met een speciale versie voor burn-out."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "وقفهٔ شفقت به خود: ذهن‌آگاهی، انسانیت مشترک، مهربانی.",
+    "en": "The self-compassion break: mindfulness, common humanity, kindness.",
+    "nl": "De zelfcompassiepauze: mindfulness, gedeelde menselijkheid, vriendelijkheid."
+   },
+   "sources": [
+    "src:758fba319e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پس‌زدگی (backdraft): بیدار شدن دردهای کهنه با مهربانی.",
+    "en": "Backdraft: old pain awakening with kindness.",
+    "nl": "Backdraft: oude pijn die opleeft door vriendelijkheid."
+   },
+   "sources": [
+    "src:758fba319e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پله‌ها: مقاومت، کاوش، تحمل، اجازه دادن، دوستی.",
+    "en": "The steps: resistance, exploration, tolerance, allowing, friendship.",
+    "nl": "De stappen: weerstand, verkennen, verdragen, toelaten, vriendschap."
+   },
+   "sources": [
+    "src:758fba319e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نامهٔ مشفقانه به خود: کاهش افسردگی تا ۳ ماه (شاپیرا و مونگرین ۲۰۱۰).",
+    "en": "A compassionate letter to oneself: depression reduced for up to 3 months (Shapira and Mongrain 2010).",
+    "nl": "Een compassievolle brief aan jezelf: minder depressie tot 3 maanden later (Shapira en Mongrain 2010)."
+   },
+   "sources": [
+    "src:758fba319e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:burnout",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرسودگی",
+    "en": "Burnout",
+    "nl": "Burn-out"
+   }
+  },
+  {
+   "to": "psy:empathy-fatigue",
+   "rel": "see-also",
+   "note": {
+    "fa": "مراقبان",
+    "en": "Carers",
+    "nl": "Zorgverleners"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "see-also",
+   "note": {
+    "fa": "سازه",
+    "en": "Construct",
+    "nl": "Construct"
+   }
+  }
+ ],
+ "people": [
+  "core:kristin-neff",
+  "core:christopher-germer"
+ ],
+ "sources": [
+  "src:758fba319e"
+ ],
+ "booklets": [
+  "compassion:neff",
+  "compassion:burnout"
+ ],
+ "origin": "compassion",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

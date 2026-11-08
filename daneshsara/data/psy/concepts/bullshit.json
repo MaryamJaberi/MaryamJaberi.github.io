@@ -1,0 +1,153 @@
+{
+ "id": "psy:bullshit",
+ "kind": "concept",
+ "title": {
+  "fa": "حرف مفت و شک‌ورزی داده‌ای",
+  "en": "Calling bullshit",
+  "nl": "Onzin ontmaskeren"
+ },
+ "parent": "psy:critical-thinking",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "بی‌اعتنایی به حقیقت در لباس عدد، نمودار و الگوریتم؛ و جعبه‌ابزار تشخیص آن (برگستروم و وست؛ فرانکفورت).",
+  "en": "Disregard for truth dressed up in numbers, charts and algorithms, and a toolkit for spotting it (Bergstrom and West; Frankfurt).",
+  "nl": "Onverschilligheid voor de waarheid, verpakt in getallen, grafieken en algoritmen, en een gereedschapskist om haar te herkennen (Bergstrom en West; Frankfurt)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "حرف مفت مجاب‌کننده و گریزان؛ «ابهام روشن‌نشدنی».",
+    "en": "Persuasive and evasive bullshit; “unclarifiable unclarity”.",
+    "nl": "Overtuigende en ontwijkende onzin; ‘onophelderbare onduidelijkheid’."
+   },
+   "sources": [
+    "src:d46fdd0710"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اصل برندولینی و قانون گودهارت.",
+    "en": "Brandolini's law and Goodhart's law.",
+    "nl": "De wet van Brandolini en de wet van Goodhart."
+   },
+   "sources": [
+    "src:d46fdd0710"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همبستگی‌های کاذب: سن دوشیزهٔ آمریکا و قتل با بخار؛ لک‌لک و نوزاد.",
+    "en": "Spurious correlations: Miss America's age and murders by steam; storks and babies.",
+    "nl": "Schijncorrelaties: de leeftijd van Miss America en moorden met stoom; ooievaars en baby's."
+   },
+   "sources": [
+    "src:d46fdd0710"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پارادوکس برکسون، پارادوکس شاتل، سانسور از راست (سن مرگ نوازندگان).",
+    "en": "Berkson's paradox, the inspection paradox, right-censoring (musicians' age at death).",
+    "nl": "De paradox van Berkson, de inspectieparadox, rechtscensurering (de leeftijd waarop muzikanten sterven)."
+   },
+   "sources": [
+    "src:d46fdd0710"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محور بریده، محور نامنظم، کیک سه‌بعدی.",
+    "en": "Truncated axes, irregular axes, 3D pie charts.",
+    "nl": "Afgekapte assen, onregelmatige assen, 3D-taartdiagrammen."
+   },
+   "sources": [
+    "src:d46fdd0710"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هاسکی-گرگ و «مجرمیت از چهره»: الگوریتم چیز دیگری یاد گرفته بود.",
+    "en": "Husky-versus-wolf and “criminality from faces”: the algorithm had learned something else.",
+    "nl": "Husky tegenover wolf en ‘criminaliteit uit gezichten’: het algoritme had iets anders geleerd."
+   },
+   "sources": [
+    "src:d46fdd0710"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ماهی آزاد مرده در fMRI و مقایسه‌های چندگانه.",
+    "en": "The dead salmon in the fMRI and multiple comparisons.",
+    "nl": "De dode zalm in de fMRI en meervoudige vergelijkingen."
+   },
+   "sources": [
+    "src:d46fdd0710"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:statistical-thinking",
+   "rel": "see-also",
+   "note": {
+    "fa": "آمار",
+    "en": "Statistics",
+    "nl": "Statistiek"
+   }
+  },
+  {
+   "to": "psy:replication-crisis",
+   "rel": "see-also",
+   "note": {
+    "fa": "سوگیری انتشار",
+    "en": "Publication bias",
+    "nl": "Publicatiebias"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "اطلاعات نادرست",
+    "en": "Misinformation",
+    "nl": "Desinformatie"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "سوگیری",
+    "en": "Bias",
+    "nl": "Bias"
+   }
+  }
+ ],
+ "people": [
+  "core:carl-bergstrom",
+  "core:jevin-west",
+  "core:harry-frankfurt"
+ ],
+ "sources": [
+  "src:d46fdd0710",
+  "src:1b87d09e9b"
+ ],
+ "booklets": [
+  "bullshit:what",
+  "bullshit:correlation",
+  "bullshit:viz",
+  "bullshit:ml",
+  "bullshit:science"
+ ],
+ "origin": "bullshit",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

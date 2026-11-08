@@ -1,0 +1,99 @@
+{
+ "id": "psy:stress-mindset",
+ "kind": "concept",
+ "title": {
+  "fa": "ذهنیت استرس",
+  "en": "Stress mindset",
+  "nl": "Stressmindset"
+ },
+ "parent": "psy:mindsets",
+ "field": "psy:p-health",
+ "summary": {
+  "fa": "باور به اینکه استرس ناتوان‌کننده است یا تقویت‌کننده. نکتهٔ کلیدی ۲ جلسهٔ ۸: در جهت اصلاح ذهنیت استرس اقدام کنید.",
+  "en": "The belief that stress is debilitating or enhancing. Key point 2 of session 8: take steps to improve your stress mindset.",
+  "nl": "De overtuiging dat stress verzwakt of juist versterkt. Kernpunt 2 van sessie 8: werk aan het verbeteren van je stressmindset."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مقیاس SMM هشت گویه (۰ تا ۴)؛ نسخهٔ عمومی (SMM-G) و اختصاصی برای یک عامل استرس (SMM-S).",
+    "en": "The SMM has eight items (0 to 4); a general version (SMM-G) and a specific version for one stressor (SMM-S).",
+    "nl": "De SMM heeft acht items (0 tot 4); een algemene versie (SMM-G) en een specifieke versie voor één stressor (SMM-S)."
+   },
+   "sources": [
+    "src:eef922c33d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شواهد هر دو ذهنیت در سه حوزه: سلامت، یادگیری و رشد، عملکرد.",
+    "en": "Evidence for both mindsets in three areas: health, learning and growth, performance.",
+    "nl": "Bewijs voor beide mindsets op drie gebieden: gezondheid, leren en groei, prestaties."
+   },
+   "sources": [
+    "src:eef922c33d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آزمایش در بحران مالی ۲۰۰۸: ویدئوهای «استرس تقویت‌کننده است» علائم جسمی را کم و عملکرد کاری را بهتر کرد.",
+    "en": "An experiment during the 2008 financial crisis: “stress is enhancing” videos reduced physical symptoms and improved work performance.",
+    "nl": "Een experiment tijdens de financiële crisis van 2008: video's met de boodschap ‘stress versterkt’ verminderden lichamelijke klachten en verbeterden werkprestaties."
+   },
+   "sources": [
+    "src:eef922c33d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سه گام کرام: پذیرش و نام‌گذاری، وصل کردن به آنچه مهم است، استفاده از انرژی آن.",
+    "en": "Crum's three steps: acknowledge and name it, connect it to what matters, use its energy.",
+    "nl": "De drie stappen van Crum: erkennen en benoemen, verbinden met wat belangrijk is, de energie ervan gebruiken."
+   },
+   "sources": [
+    "src:eef922c33d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-stress",
+   "rel": "see-also",
+   "note": {
+    "fa": "فیزیولوژی استرس",
+    "en": "Stress physiology",
+    "nl": "Stressfysiologie"
+   }
+  },
+  {
+   "to": "psy:reappraisal",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌منطق",
+    "en": "Same logic",
+    "nl": "Dezelfde logica"
+   }
+  }
+ ],
+ "people": [
+  "core:alia-crum",
+  "core:peter-salovey",
+  "core:shawn-achor"
+ ],
+ "sources": [
+  "src:eef922c33d",
+  "src:98bedbc9e2"
+ ],
+ "booklets": [
+  "s8:stress",
+  "s5:hardiness"
+ ],
+ "origin": "s8",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

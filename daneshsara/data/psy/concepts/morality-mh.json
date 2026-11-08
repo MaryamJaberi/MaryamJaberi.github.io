@@ -1,0 +1,130 @@
+{
+ "id": "psy:morality-mh",
+ "kind": "concept",
+ "title": {
+  "fa": "اخلاق و سلامت روان",
+  "en": "Morality & mental health",
+  "nl": "Moraal en mentale gezondheid"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "آیا مشکلات اخلاقی نوعی اختلال روانپزشکی‌اند؟ بازگشت روانپزشکی و روان‌شناسی به رفتار اخلاقی و خطرهای «گرایش درمانی».",
+  "en": "Are moral problems a kind of psychiatric disorder? Psychiatry and psychology turning back to moral behaviour, and the risks of a “therapeutic turn”.",
+  "nl": "Zijn morele problemen een soort psychiatrische stoornis? De terugkeer van psychiatrie en psychologie naar moreel gedrag, en de risico's van een ‘therapeutische wending’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کلونینجر: خودراهبری و همکاری (منش) قوی‌ترین پیش‌بین اختلال شخصیت‌اند؛ با خودراهبری زیر ۱۶، ۹۴٪ اختلال شخصیت.",
+    "en": "Cloninger: self-directedness and cooperativeness (character) are the strongest predictors of personality disorder; with self-directedness below 16, 94% have a personality disorder.",
+    "nl": "Cloninger: zelfsturing en coöperativiteit (karakter) zijn de sterkste voorspellers van een persoonlijkheidsstoornis; bij een zelfsturing onder 16 heeft 94% een persoonlijkheidsstoornis."
+   },
+   "sources": [
+    "src:464be0cc38"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«اختلالات روانی ارزش‌بار» (VLMD) مانند اعتیاد و اختلال شخصیت.",
+    "en": "“Value-laden mental disorders” (VLMD) such as addiction and personality disorder.",
+    "nl": "‘Waardebeladen psychische stoornissen’ (VLMD) zoals verslaving en persoonlijkheidsstoornis."
+   },
+   "sources": [
+    "src:464be0cc38"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پنج مسیر بازگشت: تکامل همکاری، یافته‌های مولکولی (اکسی‌توسین)، همدلی (سینگر، بارتال)، سایکوپاتی، و اراده.",
+    "en": "Five routes back: the evolution of cooperation, molecular findings (oxytocin), empathy (Singer, Bartal), psychopathy, and will.",
+    "nl": "Vijf wegen terug: de evolutie van samenwerking, moleculaire bevindingen (oxytocine), empathie (Singer, Bartal), psychopathie, en wil."
+   },
+   "sources": [
+    "src:464be0cc38"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آنگرمایر (۲۰۱۳): باور به علت مغزی اسکیزوفرنی بیشتر شد اما پذیرش بیماران کمتر.",
+    "en": "Angermeyer (2013): belief in a brain cause of schizophrenia increased, but acceptance of patients decreased.",
+    "nl": "Angermeyer (2013): het geloof in een hersenoorzaak van schizofrenie nam toe, maar de aanvaarding van patiënten nam af."
+   },
+   "sources": [
+    "src:464be0cc38"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پرسش باز: مشکلات اخلاقی ماهیت وجودی دارند یا سازهٔ اجتماعی‌اند؟",
+    "en": "An open question: are moral problems existential in nature or social constructs?",
+    "nl": "Een open vraag: zijn morele problemen existentieel van aard of sociale constructen?"
+   },
+   "sources": [
+    "src:464be0cc38"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:personality-disorders",
+   "rel": "see-also",
+   "note": {
+    "fa": "شخصیت",
+    "en": "Personality",
+    "nl": "Persoonlijkheid"
+   }
+  },
+  {
+   "to": "psy:antisocial-subtypes",
+   "rel": "see-also",
+   "note": {
+    "fa": "سایکوپاتی",
+    "en": "Psychopathy",
+    "nl": "Psychopathie"
+   }
+  },
+  {
+   "to": "psy:moral-hypocrisy",
+   "rel": "see-also",
+   "note": {
+    "fa": "ریا",
+    "en": "Hypocrisy",
+    "nl": "Hypocrisie"
+   }
+  },
+  {
+   "to": "psy:social-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد",
+    "en": "Trust",
+    "nl": "Vertrouwen"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-cloninger",
+  "core:walter-sinnott-armstrong",
+  "core:frans-de-waal",
+  "core:tania-singer",
+  "core:adrian-raine"
+ ],
+ "sources": [
+  "src:464be0cc38",
+  "src:34c61e3b0d"
+ ],
+ "booklets": [
+  "morality:question",
+  "morality:evolution"
+ ],
+ "origin": "morality",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

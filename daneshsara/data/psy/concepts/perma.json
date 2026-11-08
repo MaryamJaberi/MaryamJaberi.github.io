@@ -1,0 +1,82 @@
+{
+ "id": "psy:perma",
+ "kind": "concept",
+ "title": {
+  "fa": "مدل PERMA",
+  "en": "PERMA model of well-being",
+  "nl": "PERMA-model van welzijn"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "مدل بهزیستی سلیگمن: هیجان مثبت، درگیری، روابط، معنا، دستاورد.",
+  "en": "Seligman's model of well-being: positive emotion, engagement, relationships, meaning, accomplishment.",
+  "nl": "Het welzijnsmodel van Seligman: positieve emotie, betrokkenheid, relaties, betekenis, prestatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سلیگمن (۲۰۱۱): موضوع روان‌شناسی مثبت‌گرا «بهزیستی» است، نه «شادکامی».",
+    "en": "Seligman (2011): the subject of positive psychology is “well-being”, not “happiness”.",
+    "nl": "Seligman (2011): het onderwerp van de positieve psychologie is ‘welzijn’, niet ‘geluk’."
+   },
+   "sources": [
+    "src:9f54ddbd43"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هر پنج مؤلفه در محیط کار قابل پرورش‌اند (دست‌نامهٔ وایلی ۲۰۱۷).",
+    "en": "All five components can be cultivated at work (Wiley handbook 2017).",
+    "nl": "Alle vijf componenten zijn op het werk te ontwikkelen (Wiley-handboek 2017)."
+   },
+   "sources": [
+    "src:9f54ddbd43"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:progress-principle",
+   "rel": "see-also",
+   "note": {
+    "fa": "دستاورد",
+    "en": "Accomplishment",
+    "nl": "Prestatie"
+   }
+  },
+  {
+   "to": "psy:meaningful-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "معنا",
+    "en": "Meaning",
+    "nl": "Betekenis"
+   }
+  },
+  {
+   "to": "psy:flow",
+   "rel": "see-also",
+   "note": {
+    "fa": "درگیری",
+    "en": "Engagement",
+    "nl": "Betrokkenheid"
+   }
+  }
+ ],
+ "people": [
+  "core:martin-seligman"
+ ],
+ "sources": [
+  "src:9f54ddbd43"
+ ],
+ "booklets": [
+  "poswork:why"
+ ],
+ "origin": "poswork",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

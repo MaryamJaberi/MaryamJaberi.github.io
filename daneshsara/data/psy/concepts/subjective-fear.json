@@ -1,0 +1,94 @@
+{
+ "id": "psy:subjective-fear",
+ "kind": "concept",
+ "title": {
+  "fa": "تجربهٔ ذهنی ترس",
+  "en": "Subjective fear (two-system view)",
+  "nl": "Subjectieve angst (twee-systemenvisie)"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "مدارهای دفاعی بدن (مانند آمیگدال) با احساس آگاهانهٔ ترس یکی نیستند؛ درمان‌هایی که فقط واکنش بدنی را هدف گرفته‌اند، اغلب احساس ترس را چندان تغییر نداده‌اند (لدو و همکاران).",
+  "en": "The body's defensive circuits (such as the amygdala) are not the same as the conscious feeling of fear; treatments that target only the bodily reaction have often changed the feeling of fear little (LeDoux and colleagues).",
+  "nl": "De verdedigingscircuits van het lichaam (zoals de amygdala) zijn niet hetzelfde als het bewuste gevoel van angst; behandelingen die alleen de lichamelijke reactie aanpakken, veranderden het angstgevoel vaak weinig (LeDoux en collega's)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نشانه‌های بدنی، رفتاری و ذهنی ترس همبستگی ضعیفی دارند.",
+    "en": "Bodily, behavioural and mental signs of fear are only weakly correlated.",
+    "nl": "Lichamelijke, gedragsmatige en mentale tekenen van angst hangen maar zwak samen."
+   },
+   "sources": [
+    "src:e7a5952b7d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیشنهاد: استفاده از علم آگاهی (نظریهٔ مرتبهٔ بالاتر) در فهم اختلال‌ها.",
+    "en": "Proposal: use the science of consciousness (higher-order theory) to understand disorders.",
+    "nl": "Voorstel: gebruik de wetenschap van bewustzijn (hogere-ordetheorie) om stoornissen te begrijpen."
+   },
+   "sources": [
+    "src:e7a5952b7d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: برخی پژوهشگران احساس‌های پایه را زیرقشری می‌دانند.",
+    "en": "Critique: some researchers see basic feelings as subcortical.",
+    "nl": "Kritiek: sommige onderzoekers zien basisgevoelens als subcorticaal."
+   },
+   "sources": [
+    "src:e7a5952b7d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anxiety",
+   "rel": "see-also",
+   "note": {
+    "fa": "اضطراب",
+    "en": "Anxiety",
+    "nl": "Angst"
+   }
+  },
+  {
+   "to": "psy:consciousness",
+   "rel": "see-also",
+   "note": {
+    "fa": "آگاهی",
+    "en": "Consciousness",
+    "nl": "Bewustzijn"
+   }
+  },
+  {
+   "to": "psy:constructed-emotion",
+   "rel": "see-also",
+   "note": {
+    "fa": "هیجان",
+    "en": "Emotion",
+    "nl": "Emotie"
+   }
+  }
+ ],
+ "people": [
+  "core:joseph-ledoux",
+  "core:hakwan-lau"
+ ],
+ "sources": [
+  "src:e7a5952b7d"
+ ],
+ "booklets": [
+  "shelf11:mental"
+ ],
+ "origin": "shelf11",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,90 @@
+{
+ "id": "psy:negative-art",
+ "kind": "concept",
+ "title": {
+  "fa": "لذت از هنر غمناک و ترسناک",
+  "en": "Enjoying negative emotion in art",
+  "nl": "Genieten van negatieve emotie in kunst"
+ },
+ "parent": "psy:p-aesthetics",
+ "field": "psy:p-aesthetics",
+ "summary": {
+  "fa": "چرا موسیقی غمگین گوش می‌دهیم و فیلم وحشت می‌بینیم؟ پاسخ: هیجان آمیخته، فاصلهٔ زیبایی‌شناختی، و معناسازی؛ نه مازوخیسم.",
+  "en": "Why do we listen to sad music and watch horror films? Answer: mixed emotion, aesthetic distance and meaning-making; not masochism.",
+  "nl": "Waarom luisteren we naar droevige muziek en kijken we horrorfilms? Antwoord: gemengde emotie, esthetische afstand en betekenisgeving; geen masochisme."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دلایل لذت غم ناب: حس القاشده نوستالژی است نه غم؛ غم واقعی نیست؛ «غم من نیست»؛ غم غیرشخصی؛ مازوخیسم خوش‌خیم (پل روزین).",
+    "en": "Reasons for enjoying pure sadness: the feeling evoked is nostalgia, not sadness; the sadness isn't real; “it's not my sadness”; impersonal sadness; benign masochism (Paul Rozin).",
+    "nl": "Redenen om van puur verdriet te genieten: het opgewekte gevoel is nostalgie, geen verdriet; het verdriet is niet echt; ‘het is niet mijn verdriet’; onpersoonlijk verdriet; goedaardig masochisme (Paul Rozin)."
+   },
+   "sources": [
+    "src:f820b02a0c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اندرید و کوهن (۲۰۰۷): علاقه‌مندان فیلم وحشت همانقدر می‌ترسند اما همزمان شادی هم حس می‌کنند. فرضیه‌های «پیامد»، «نبود هیجان منفی» و «وانمود» رد شدند.",
+    "en": "Andrade and Cohen (2007): horror fans are just as frightened but feel joy at the same time. The “consequence”, “no negative emotion” and “pretend” hypotheses were rejected.",
+    "nl": "Andrade en Cohen (2007): liefhebbers van horror zijn even bang, maar voelen tegelijk vreugde. De hypothesen ‘gevolg’, ‘geen negatieve emotie’ en ‘doen alsof’ werden verworpen."
+   },
+   "sources": [
+    "src:f820b02a0c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فیلم غمگین: نه حال بد، نه لذت ساده؛ «مفهوم پیچیدهٔ تکان‌دهندگی» (being moved).",
+    "en": "A sad film: neither feeling bad nor simple pleasure; “the complex concept of being moved”.",
+    "nl": "Een droevige film: niet je slecht voelen en ook geen eenvoudig plezier; ‘het complexe begrip ontroering’ (being moved)."
+   },
+   "sources": [
+    "src:f820b02a0c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارسطو: تراژدی کاتارسیس می‌آورد؛ وینر: کارکرد اصلی، معناسازی است.",
+    "en": "Aristotle: tragedy brings catharsis; Winner: its main function is meaning-making.",
+    "nl": "Aristoteles: tragedie brengt catharsis; Winner: de hoofdfunctie is betekenisgeving."
+   },
+   "sources": [
+    "src:f820b02a0c"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:catharsis",
+   "rel": "see-also",
+   "note": {
+    "fa": "تراژدی و کاتارسیس",
+    "en": "Tragedy and catharsis",
+    "nl": "Tragedie en catharsis"
+   }
+  }
+ ],
+ "people": [
+  "core:paul-rozin",
+  "core:eduardo-andrade",
+  "core:joel-cohen",
+  "core:tuomas-eerola"
+ ],
+ "sources": [
+  "src:f820b02a0c",
+  "src:921cf05bbf"
+ ],
+ "booklets": [
+  "art:negative"
+ ],
+ "origin": "art",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

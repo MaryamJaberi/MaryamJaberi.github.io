@@ -1,0 +1,119 @@
+{
+ "id": "psy:victim-mindset",
+ "kind": "concept",
+ "title": {
+  "fa": "ذهنیت قربانی و استحقاق",
+  "en": "Victim mindset and entitlement",
+  "nl": "Slachtoffermindset en aanspraak"
+ },
+ "parent": "psy:p-personality",
+ "field": "psy:p-personality",
+ "summary": {
+  "fa": "«قربانی شدن از بیرون می‌آید، نقش قربانی از درون.» ذهنیت قربانی همیشگی با احساس استحقاق همراه است و رشد را متوقف می‌کند (کافمن).",
+  "en": "“Victimisation comes from outside; the victim role comes from inside.” A permanent victim mindset goes with entitlement and halts growth (Kaufman).",
+  "nl": "‘Slachtofferschap komt van buiten, de slachtofferrol van binnen.’ Een blijvende slachtoffermindset gaat samen met aanspraak en remt groei (Kaufman)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "استحقاق قربانی: یادآوری بی‌عدالتی رفتار خودخواهانه را بیشتر کرد (زیتک ۲۰۱۰).",
+    "en": "Victim entitlement: being reminded of injustice increased selfish behaviour (Zitek 2010).",
+    "nl": "Aanspraak als slachtoffer: herinnerd worden aan onrecht vergrootte egoïstisch gedrag (Zitek 2010)."
+   },
+   "sources": [
+    "src:45d9e360c8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خودشیفتگی آسیب‌پذیر = روان‌رنجوری + خصومت + استحقاق.",
+    "en": "Vulnerable narcissism = neuroticism + hostility + entitlement.",
+    "nl": "Kwetsbaar narcisme = neuroticisme + vijandigheid + aanspraak."
+   },
+   "sources": [
+    "src:45d9e360c8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پذیرش مسئولیت (نه تقصیر)، پذیرش خود و پذیرش زندگی.",
+    "en": "Accepting responsibility (not blame), accepting oneself and accepting life.",
+    "nl": "Verantwoordelijkheid aanvaarden (geen schuld), jezelf aanvaarden en het leven aanvaarden."
+   },
+   "sources": [
+    "src:45d9e360c8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شرم: بی‌ارزش شدن در نگاه دیگران کافی است و خطا لازم نیست (رابرتسون ۲۰۱۸)؛ با نقدهای روش‌شناختی.",
+    "en": "Shame: being devalued in others' eyes is enough, no wrongdoing is needed (Robertson 2018); with methodological critiques.",
+    "nl": "Schaamte: in de ogen van anderen minder waard worden is genoeg, een fout is niet nodig (Robertson 2018); met methodologische kritiek."
+   },
+   "sources": [
+    "src:45d9e360c8"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:vulnerable-narcissism",
+   "rel": "see-also",
+   "note": {
+    "fa": "خودشیفتگی",
+    "en": "Narcissism",
+    "nl": "Narcisme"
+   }
+  },
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "نشخوار",
+    "en": "Rumination",
+    "nl": "Piekeren"
+   }
+  },
+  {
+   "to": "psy:mattering",
+   "rel": "see-also",
+   "note": {
+    "fa": "اهمیت",
+    "en": "Mattering",
+    "nl": "Ertoe doen"
+   }
+  },
+  {
+   "to": "psy:resilience",
+   "rel": "see-also",
+   "note": {
+    "fa": "تاب‌آوری",
+    "en": "Resilience",
+    "nl": "Veerkracht"
+   }
+  }
+ ],
+ "people": [
+  "core:scott-barry-kaufman",
+  "core:edith-eger",
+  "core:carl-rogers"
+ ],
+ "sources": [
+  "src:45d9e360c8",
+  "src:0a9b40658a"
+ ],
+ "booklets": [
+  "riseabove:entitle",
+  "riseabove:narc",
+  "riseabove:growth",
+  "riseabove:shame"
+ ],
+ "origin": "riseabove",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

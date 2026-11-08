@@ -1,0 +1,131 @@
+{
+ "id": "psy:ideological-brain",
+ "kind": "concept",
+ "title": {
+  "fa": "مغز ایدئولوژیک",
+  "en": "The ideological brain",
+  "nl": "Het ideologische brein"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "ساختار تفکر ایدئولوژیک (دگمای سخت و مرزبندی هویتی) و پیوند آن با انعطاف‌ناپذیری شناختی (لئور زمیگرود).",
+  "en": "The structure of ideological thinking (rigid dogma and identity boundaries) and its link with cognitive inflexibility (Leor Zmigrod).",
+  "nl": "De structuur van ideologisch denken (starre dogma's en identiteitsgrenzen) en het verband met cognitieve inflexibiliteit (Leor Zmigrod)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تمرکز بر ساختار در برابر محتوای باور.",
+    "en": "Focusing on the structure versus the content of belief.",
+    "nl": "Focus op de structuur tegenover de inhoud van overtuigingen."
+   },
+   "sources": [
+    "src:3dd2c68fad"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شیوع بیماری‌های عفونی با اقتدارگرایی همراه است (۴۶ کشور).",
+    "en": "The prevalence of infectious diseases goes with authoritarianism (46 countries).",
+    "nl": "De prevalentie van infectieziekten gaat samen met autoritarisme (46 landen)."
+   },
+   "sources": [
+    "src:3dd2c68fad"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بی‌دینی با انعطاف بیشتر در سه آزمون همراه بود؛ بحث «سختی دو انتها» در برابر «سختی راست» باز است.",
+    "en": "Non-religiosity went with more flexibility on three tests; the debate “rigidity at both extremes” versus “rigidity of the right” is open.",
+    "nl": "Niet-religieus zijn ging samen met meer flexibiliteit op drie tests; het debat ‘rigiditeit aan beide uitersten’ tegenover ‘rigiditeit van rechts’ is nog open."
+   },
+   "sources": [
+    "src:3dd2c68fad"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "عوامل تشدید: استرس، طرد، کمبود منابع، بی‌اهمیتی، برجسته شدن مرگ.",
+    "en": "Aggravating factors: stress, rejection, scarce resources, insignificance, mortality salience.",
+    "nl": "Verergerende factoren: stress, afwijzing, schaarse middelen, je onbelangrijk voelen, het besef van sterfelijkheid."
+   },
+   "sources": [
+    "src:3dd2c68fad"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کمبود اقتصادی ادراک نژاد را تغییر داد (کراش و آمودیو ۲۰۱۴).",
+    "en": "Economic scarcity changed the perception of race (Krosch and Amodio 2014).",
+    "nl": "Economische schaarste veranderde de waarneming van ras (Krosch en Amodio 2014)."
+   },
+   "sources": [
+    "src:3dd2c68fad"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:cognitive-rigidity",
+   "rel": "see-also",
+   "note": {
+    "fa": "سختی",
+    "en": "Hardship",
+    "nl": "Tegenspoed"
+   }
+  },
+  {
+   "to": "psy:tight-loose",
+   "rel": "see-also",
+   "note": {
+    "fa": "تهدید",
+    "en": "Threat",
+    "nl": "Dreiging"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور",
+    "en": "Belief",
+    "nl": "Overtuiging"
+   }
+  },
+  {
+   "to": "psy:tech-panic",
+   "rel": "see-also",
+   "note": {
+    "fa": "فناوری و خشم",
+    "en": "Technology and anger",
+    "nl": "Technologie en woede"
+   }
+  }
+ ],
+ "people": [
+  "core:leor-zmigrod",
+  "core:trevor-robbins",
+  "core:else-frenkel-brunswik"
+ ],
+ "sources": [
+  "src:3dd2c68fad",
+  "src:340228d02d"
+ ],
+ "booklets": [
+  "ideo:bis",
+  "ideo:what",
+  "ideo:flex",
+  "ideo:ontology",
+  "ideo:factors"
+ ],
+ "origin": "ideo",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

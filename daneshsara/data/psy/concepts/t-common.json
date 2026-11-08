@@ -1,0 +1,99 @@
+{
+ "id": "psy:t-common",
+ "kind": "subfield",
+ "title": {
+  "fa": "عوامل مشترک درمان",
+  "en": "Common factors",
+  "nl": "Gemeenschappelijke factoren"
+ },
+ "parent": "psy:psychotherapy",
+ "field": null,
+ "summary": {
+  "fa": "عناصری که در همهٔ روان‌درمانی‌ها مشترک‌اند و بخش بزرگی از اثر درمان را توضیح می‌دهند.",
+  "en": "Elements shared by all psychotherapies that explain a large part of treatment effect.",
+  "nl": "Elementen die alle psychotherapieën gemeen hebben en die een groot deel van het behandeleffect verklaren."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اتحاد درمانی (بوردین ۱۹۷۹): توافق بر هدف، توافق بر تکلیف، پیوند عاطفی.",
+    "en": "The therapeutic alliance (Bordin 1979): agreement on goals, agreement on tasks, emotional bond.",
+    "nl": "De therapeutische alliantie (Bordin 1979): overeenstemming over doelen, overeenstemming over taken, emotionele band."
+   },
+   "sources": [
+    "src:7b14d39559"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همدلی درمانگر، انتظار بهبود، و توضیح قانع‌کننده از مشکل.",
+    "en": "The therapist's empathy, the expectation of improvement, and a convincing explanation of the problem.",
+    "nl": "De empathie van de therapeut, de verwachting van verbetering en een overtuigende verklaring van het probleem."
+   },
+   "sources": [
+    "src:7b14d39559"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«حکم دودو» (روزنزوایگ ۱۹۳۶): همه برنده‌اند و همه جایزه می‌گیرند.",
+    "en": "The “Dodo bird verdict” (Rosenzweig 1936): everybody has won and all must have prizes.",
+    "nl": "Het ‘dodo-oordeel’ (Rosenzweig 1936): iedereen heeft gewonnen en iedereen krijgt een prijs."
+   },
+   "sources": [
+    "src:7b14d39559"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در اعتیاد: پژوهش‌های بزرگ نشان دادند شیوه‌های مختلف روان‌درمانی اثربخشی مشابهی دارند و تمرکز به کیفیت ارتباط درمانی منتقل شد (پژوهش‌های وندربیلت، هانس استراپ).",
+    "en": "In addiction: large studies showed different psychotherapies are similarly effective, and the focus shifted to the quality of the therapeutic relationship (the Vanderbilt studies, Hans Strupp).",
+    "nl": "Bij verslaving: grote studies lieten zien dat verschillende psychotherapieën vergelijkbaar effectief zijn, en de aandacht verschoof naar de kwaliteit van de therapeutische relatie (de Vanderbilt-studies, Hans Strupp)."
+   },
+   "sources": [
+    "src:7b14d39559"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پرسش‌نامهٔ ۱۲ گویه‌ای اتحاد درمانی در مجموعهٔ خانواده‌ها؛ «درمان شبیه تعمیرگاه نیست».",
+    "en": "The 12-item therapeutic alliance questionnaire in the families series; “treatment is not like a repair shop”.",
+    "nl": "De vragenlijst van 12 items over de therapeutische alliantie in de reeks voor families; ‘behandeling is geen garage’."
+   },
+   "sources": [
+    "src:7b14d39559"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:addiction-therapy",
+   "rel": "applies-to",
+   "note": {
+    "fa": "ارتباط درمانی در اعتیاد",
+    "en": "Therapeutic relationship in addiction",
+    "nl": "Therapeutische relatie bij verslaving"
+   }
+  }
+ ],
+ "people": [
+  "core:edward-bordin",
+  "core:bruce-wampold"
+ ],
+ "sources": [
+  "src:7b14d39559"
+ ],
+ "booklets": [
+  "decision:therapy",
+  "families:treatment"
+ ],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

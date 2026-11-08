@@ -1,0 +1,87 @@
+{
+ "id": "psy:depersonalization",
+ "kind": "concept",
+ "title": {
+  "fa": "مسخ شخصیت و مسخ واقعیت",
+  "en": "Depersonalization / derealization",
+  "nl": "Depersonalisatie / derealisatie"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "احساس جدایی از خود یا غیرواقعی بودن جهان با واقعیت‌سنجی سالم؛ شیوع اختلال پایدار حدود ۱ تا ۲ درصد.",
+  "en": "Feeling detached from oneself or that the world is unreal, with intact reality testing; persistent disorder affects about 1 to 2 percent.",
+  "nl": "Het gevoel los te staan van jezelf of dat de wereld onwerkelijk is, met intacte realiteitstoetsing; de aanhoudende stoornis komt voor bij ongeveer 1 tot 2 procent."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مقیاس مسخ شخصیت کمبریج (سی‌یرا و بریوس ۲۰۰۰، ۲۹ گویه).",
+    "en": "The Cambridge Depersonalisation Scale (Sierra and Berrios 2000, 29 items).",
+    "nl": "De Cambridge Depersonalisatieschaal (Sierra en Berrios 2000, 29 items)."
+   },
+   "sources": [
+    "src:b7be248de6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تلنگرها: پانیک، استرس شدید، حشیش.",
+    "en": "Triggers: panic, severe stress, cannabis.",
+    "nl": "Uitlokkers: paniek, ernstige stress, cannabis."
+   },
+   "sources": [
+    "src:b7be248de6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاهش واکنش هیجانی اینسولا.",
+    "en": "Reduced emotional reactivity of the insula.",
+    "nl": "Verminderde emotionele reactiviteit van de insula."
+   },
+   "sources": [
+    "src:b7be248de6"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anxiety",
+   "rel": "see-also",
+   "note": {
+    "fa": "پانیک",
+    "en": "Panic",
+    "nl": "Paniek"
+   }
+  },
+  {
+   "to": "psy:cannabis",
+   "rel": "see-also",
+   "note": {
+    "fa": "تلنگر",
+    "en": "Nudge",
+    "nl": "Nudge"
+   }
+  }
+ ],
+ "people": [
+  "core:daphna-shohamy",
+  "core:geoffrey-abboud"
+ ],
+ "sources": [
+  "src:b7be248de6"
+ ],
+ "booklets": [
+  "shelf2:dpdr",
+  "psychopath:self",
+  "shelf5:oyebode"
+ ],
+ "origin": "shelf2",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

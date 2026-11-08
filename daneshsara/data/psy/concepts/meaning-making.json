@@ -1,0 +1,120 @@
+{
+ "id": "psy:meaning-making",
+ "kind": "concept",
+ "title": {
+  "fa": "معنا و روان‌شناسی وجودی",
+  "en": "Meaning making and existential psychology",
+  "nl": "Betekenisgeving en existentiële psychologie"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "انسان برای جهانی که گاهی پوچ به نظر می‌رسد معنا می‌سازد؛ وقتی معنا تهدید شود، به باورها و گروه‌ها محکم‌تر می‌چسبد (هاینه؛ نظریهٔ مدیریت وحشت).",
+  "en": "Humans make meaning for a world that sometimes seems absurd; when meaning is threatened, they cling more tightly to beliefs and groups (Heine; terror management theory).",
+  "nl": "Mensen geven betekenis aan een wereld die soms absurd lijkt; als betekenis wordt bedreigd, klampen ze zich steviger vast aan overtuigingen en groepen (Heine; terror-managementtheorie)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مدل نگهداری معنا: تهدید معنا ← جبران با چسبیدن به ارزش‌ها.",
+    "en": "The meaning maintenance model: threat to meaning → compensating by clinging to values.",
+    "nl": "Het betekenisonderhoudsmodel: bedreiging van betekenis → compenseren door vast te houden aan waarden."
+   },
+   "sources": [
+    "src:80d3bf89eb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدیریت وحشت: جاودانگی نمادین از راه فرهنگ، ارزش‌ها و فرزندان؛ تکرار اثر پایه در Many Labs 4 ناموفق بود.",
+    "en": "Terror management: symbolic immortality through culture, values and children; the replication of the basic effect in Many Labs 4 failed.",
+    "nl": "Terror-management: symbolische onsterfelijkheid via cultuur, waarden en kinderen; de replicatie van het basiseffect in Many Labs 4 mislukte."
+   },
+   "sources": [
+    "src:80d3bf89eb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوستگی فرهنگی در جامعه‌های بومی کانادا با خودکشی بسیار کمتر جوانان همراه بود (چندلر).",
+    "en": "Cultural continuity in Canadian Indigenous communities went with much lower youth suicide (Chandler).",
+    "nl": "Culturele continuïteit in inheemse gemeenschappen in Canada ging samen met veel minder zelfdoding onder jongeren (Chandler)."
+   },
+   "sources": [
+    "src:80d3bf89eb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "احساس معنا در کشورهای فقیرتر بیشتر است، بیشتر از راه دین‌داری (اویشی و داینر ۲۰۱۴).",
+    "en": "A sense of meaning is greater in poorer countries, mostly through religiosity (Oishi and Diener 2014).",
+    "nl": "Het gevoel van betekenis is groter in armere landen, vooral via religiositeit (Oishi en Diener 2014)."
+   },
+   "sources": [
+    "src:80d3bf89eb"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:belonging",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیوند",
+    "en": "Connection",
+    "nl": "Verbinding"
+   }
+  },
+  {
+   "to": "psy:psychological-richness",
+   "rel": "see-also",
+   "note": {
+    "fa": "غنا",
+    "en": "Richness",
+    "nl": "Rijkdom"
+   }
+  },
+  {
+   "to": "psy:meaningful-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "کار",
+    "en": "Work",
+    "nl": "Werk"
+   }
+  },
+  {
+   "to": "psy:tight-loose",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرهنگ",
+    "en": "Culture",
+    "nl": "Cultuur"
+   }
+  }
+ ],
+ "people": [
+  "core:steven-heine",
+  "core:ernest-becker",
+  "core:sheldon-solomon",
+  "core:michael-chandler"
+ ],
+ "sources": [
+  "src:80d3bf89eb",
+  "src:e83d976b71"
+ ],
+ "booklets": [
+  "makingsense:mmm",
+  "makingsense:tmt",
+  "makingsense:continuity",
+  "makingsense:sources"
+ ],
+ "origin": "makingsense",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

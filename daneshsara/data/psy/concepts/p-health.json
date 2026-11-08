@@ -1,0 +1,66 @@
+{
+ "id": "psy:p-health",
+ "kind": "subfield",
+ "title": {
+  "fa": "روان‌شناسی سلامت",
+  "en": "Health Psychology",
+  "nl": "Gezondheidspsychologie"
+ },
+ "parent": "psy:psychology",
+ "field": null,
+ "summary": {
+  "fa": "رابطهٔ ذهن، رفتار و سلامت جسمی: استرس، مقابله، بیماری مزمن و رفتارهای سلامت.",
+  "en": "The relationship between mind, behaviour and physical health: stress, coping, chronic illness and health behaviours.",
+  "nl": "De relatie tussen geest, gedrag en lichamelijke gezondheid: stress, coping, chronische ziekte en gezondheidsgedrag."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سلیه: «نشانگان سازگاری عمومی» با سه مرحلهٔ هشدار، مقاومت، فرسودگی.",
+    "en": "Selye: the “general adaptation syndrome” with three stages: alarm, resistance, exhaustion.",
+    "nl": "Selye: het ‘algemeen adaptatiesyndroom’ met drie fasen: alarm, weerstand, uitputting."
+   },
+   "sources": [
+    "src:cff00f293c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لازاروس و فولکمن (۱۹۸۴): استرس حاصل ارزیابی فرد از تقاضا و منابع خود است (مدل تعاملی).",
+    "en": "Lazarus and Folkman (1984): stress comes from a person's appraisal of the demands and their own resources (the transactional model).",
+    "nl": "Lazarus en Folkman (1984): stress ontstaat uit iemands inschatting van de eisen en de eigen hulpbronnen (het transactionele model)."
+   },
+   "sources": [
+    "src:cff00f293c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بار آلوستاتیک (مک‌ایون): هزینهٔ تجمعی سازگاری‌های مکرر بدن با استرس.",
+    "en": "Allostatic load (McEwen): the cumulative cost of the body's repeated adaptations to stress.",
+    "nl": "Allostatische belasting (McEwen): de opgetelde kosten van herhaalde aanpassingen van het lichaam aan stress."
+   },
+   "sources": [
+    "src:cff00f293c"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:hans-selye",
+  "core:richard-lazarus",
+  "core:bruce-mcewen"
+ ],
+ "sources": [
+  "src:cff00f293c",
+  "src:093ada15df"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

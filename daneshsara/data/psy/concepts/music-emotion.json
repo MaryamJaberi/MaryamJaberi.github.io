@@ -1,0 +1,102 @@
+{
+ "id": "psy:music-emotion",
+ "kind": "concept",
+ "title": {
+  "fa": "موسیقی و هیجان",
+  "en": "Music and emotion",
+  "nl": "Muziek en emotie"
+ },
+ "parent": "psy:p-aesthetics",
+ "field": "psy:p-aesthetics",
+ "summary": {
+  "fa": "موسیقی هیجان را بیان می‌کند، با تقلید از نوای گفتار (سرعت، بلندی، زیر و بمی)، و هیجان را در شنونده هم برمی‌انگیزد؛ اما نرم‌شده با فاصلهٔ زیبایی‌شناختی.",
+  "en": "Music expresses emotion by imitating the melody of speech (tempo, loudness, pitch), and also arouses emotion in the listener, though softened by aesthetic distance.",
+  "nl": "Muziek drukt emotie uit door de melodie van spraak na te bootsen (tempo, luidheid, toonhoogte), en wekt ook emotie op bij de luisteraar, al verzacht door esthetische afstand."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "یوسلین: موسیقی «صدای فوق‌بیانگر» است.",
+    "en": "Juslin: music is a “super-expressive voice”.",
+    "nl": "Juslin: muziek is een ‘superexpressieve stem’."
+   },
+   "sources": [
+    "src:91d8e84711"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قبیلهٔ مافا در کامرون (فریتس و همکاران، ۲۰۰۹): مایهٔ ماژور را ۶۵٪ شاد دانستند (غربی‌ها ۹۹٪)؛ پیوند «مینور = غم» تا حدی آموختنی است.",
+    "en": "The Mafa people of Cameroon (Fritz and colleagues, 2009): 65% heard major keys as happy (Westerners 99%); the “minor = sad” link is partly learned.",
+    "nl": "Het Mafa-volk in Kameroen (Fritz en collega's, 2009): 65% hoorde majeur als vrolijk (westerlingen 99%); het verband ‘mineur = droevig’ is deels aangeleerd."
+   },
+   "sources": [
+    "src:91d8e84711"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هیجان موسیقایی روی دو محور برانگیختگی و ارزش قرار می‌گیرد.",
+    "en": "Musical emotion sits on two axes: arousal and valence.",
+    "nl": "Muzikale emotie ligt op twee assen: opwinding en valentie."
+   },
+   "sources": [
+    "src:91d8e84711"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مردم می‌توانند موسیقی را غمگین بشنوند و نوستالژی حس کنند؛ یعنی «شنیدن» و «حس‌کردن» متمایزند.",
+    "en": "People can hear music as sad while feeling nostalgia; that is, “hearing” and “feeling” are distinct.",
+    "nl": "Mensen kunnen muziek als droevig horen en tegelijk nostalgie voelen; ‘horen’ en ‘voelen’ zijn dus verschillend."
+   },
+   "sources": [
+    "src:91d8e84711"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "موسیقی نواحی پاداش را فعال و ضربان و تنفس را تند می‌کند.",
+    "en": "Music activates reward areas and speeds up heart rate and breathing.",
+    "nl": "Muziek activeert beloningsgebieden en versnelt hartslag en ademhaling."
+   },
+   "sources": [
+    "src:91d8e84711"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-reward",
+   "rel": "see-also",
+   "note": {
+    "fa": "پاداش موسیقایی",
+    "en": "Musical reward",
+    "nl": "Muzikale beloning"
+   }
+  }
+ ],
+ "people": [
+  "core:patrik-juslin",
+  "core:thomas-fritz",
+  "core:isabelle-peretz",
+  "core:aniruddh-patel"
+ ],
+ "sources": [
+  "src:91d8e84711",
+  "src:4507f1f061",
+  "src:7401595a21"
+ ],
+ "booklets": [
+  "art:music"
+ ],
+ "origin": "art",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

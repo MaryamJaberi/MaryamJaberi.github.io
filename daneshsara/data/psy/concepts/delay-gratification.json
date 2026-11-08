@@ -1,0 +1,79 @@
+{
+ "id": "psy:delay-gratification",
+ "kind": "concept",
+ "title": {
+  "fa": "تأخیر پاداش و آزمون مارشمالو",
+  "en": "Delay of gratification",
+  "nl": "Uitstel van behoeftebevrediging"
+ },
+ "parent": "psy:p-dev",
+ "field": "psy:p-dev",
+ "summary": {
+  "fa": "توانایی صبر کردن برای پاداش بزرگ‌تر. والتر میشل با آزمون مارشمالو نشان داد کودکان با ترفندهایی مثل نگاه نکردن، آواز خواندن و تکرار قاعده صبر می‌کنند.",
+  "en": "The ability to wait for a larger reward. With the marshmallow test, Walter Mischel showed that children wait using tricks such as not looking, singing and repeating the rule.",
+  "nl": "Het vermogen om te wachten op een grotere beloning. Met de marshmallowtest liet Walter Mischel zien dat kinderen wachten met trucs zoals niet kijken, zingen en de regel herhalen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کودکان بزرگ‌تر بیشتر از ترفندهای زبانی و نمادین استفاده می‌کنند.",
+    "en": "Older children use more verbal and symbolic tricks.",
+    "nl": "Oudere kinderen gebruiken meer verbale en symbolische trucs."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تکرار بزرگ واتس و همکاران (۲۰۱۸): رابطه با موفقیت بعدی حدود نصف گزارش اولیه بود و با کنترل پیشینهٔ خانوادگی تقریباً از بین رفت.",
+    "en": "Watts and colleagues' large replication (2018): the relation with later success was about half the original report and almost vanished after controlling for family background.",
+    "nl": "De grote replicatie van Watts en collega's (2018): het verband met later succes was ongeveer de helft van het oorspronkelijke en verdween bijna na correctie voor gezinsachtergrond."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:effort",
+   "rel": "see-also",
+   "note": {
+    "fa": "خویشتنداری",
+    "en": "Self-control",
+    "nl": "Zelfbeheersing"
+   }
+  },
+  {
+   "to": "psy:stratification",
+   "rel": "see-also",
+   "note": {
+    "fa": "کمبود و طبقه",
+    "en": "Scarcity and class",
+    "nl": "Schaarste en klasse"
+   }
+  },
+  {
+   "to": "psy:akrasia",
+   "rel": "see-also",
+   "note": {
+    "fa": "ضعف اراده",
+    "en": "Weakness of will",
+    "nl": "Zwakte van de wil"
+   }
+  }
+ ],
+ "people": [
+  "core:walter-mischel",
+  "core:stephanie-carlson",
+  "core:tyler-watts"
+ ],
+ "sources": [],
+ "booklets": [
+  "s5:marshmallow",
+  "s5:strategies"
+ ],
+ "origin": "s5",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "psy:process-based-therapy",
+ "kind": "concept",
+ "title": {
+  "fa": "درمان مبتنی بر فرایند",
+  "en": "Process-based therapy",
+  "nl": "Procesgerichte therapie"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "به جای پروتکل برای هر تشخیص، فرایندهای تغییری را هدف بگیریم که رنج همین فرد را نگه می‌دارند (هیز و هافمن).",
+  "en": "Instead of a protocol per diagnosis, target the change processes that maintain this particular person's suffering (Hayes and Hofmann).",
+  "nl": "In plaats van een protocol per diagnose: richt je op de veranderprocessen die het lijden van juist deze persoon in stand houden (Hayes en Hofmann)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مدل فرا-تکاملی گسترده: شش بُعد (شناخت، هیجان، توجه، خود، انگیزه، رفتار) در دو سطح دیگر و چهار فرایند تکاملی.",
+    "en": "The extended evolutionary meta-model: six dimensions (cognition, emotion, attention, self, motivation, behaviour) at two further levels and four evolutionary processes.",
+    "nl": "Het uitgebreide evolutionaire metamodel: zes dimensies (cognitie, emotie, aandacht, zelf, motivatie, gedrag) op nog twee niveaus en vier evolutionaire processen."
+   },
+   "sources": [
+    "src:a78526b125"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رویکرد شبکه‌ای و هسته‌های درمانی.",
+    "en": "The network approach and treatment cores.",
+    "nl": "De netwerkbenadering en behandelkernen."
+   },
+   "sources": [
+    "src:a78526b125"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقشهٔ راه فراتشخیصی: سازوکارهای آسیب‌پذیری و پاسخ.",
+    "en": "The transdiagnostic roadmap: mechanisms of vulnerability and response.",
+    "nl": "De transdiagnostische routekaart: mechanismen van kwetsbaarheid en respons."
+   },
+   "sources": [
+    "src:a78526b125"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شواهد برتری درمان شخصی‌سازی‌شده هنوز محدود است.",
+    "en": "Evidence for the superiority of personalised treatment is still limited.",
+    "nl": "Bewijs dat gepersonaliseerde behandeling beter is, is nog beperkt."
+   },
+   "sources": [
+    "src:a78526b125"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:transdiagnostic",
+   "rel": "see-also",
+   "note": {
+    "fa": "فراتشخیصی",
+    "en": "Transdiagnostic",
+    "nl": "Transdiagnostisch"
+   }
+  },
+  {
+   "to": "psy:hitop",
+   "rel": "see-also",
+   "note": {
+    "fa": "بُعدی",
+    "en": "Dimensional",
+    "nl": "Dimensionaal"
+   }
+  },
+  {
+   "to": "psy:dimensional-dx",
+   "rel": "see-also",
+   "note": {
+    "fa": "ابعاد",
+    "en": "Dimensions",
+    "nl": "Dimensies"
+   }
+  },
+  {
+   "to": "psy:emotional-agility",
+   "rel": "see-also",
+   "note": {
+    "fa": "انعطاف",
+    "en": "Flexibility",
+    "nl": "Flexibiliteit"
+   }
+  }
+ ],
+ "people": [
+  "core:steven-hayes",
+  "core:stefan-hofmann"
+ ],
+ "sources": [
+  "src:a78526b125",
+  "src:627a209a5c"
+ ],
+ "booklets": [
+  "shelf13:beyond",
+  "shelf13:pbt",
+  "shelf13:roadmap"
+ ],
+ "origin": "shelf13",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

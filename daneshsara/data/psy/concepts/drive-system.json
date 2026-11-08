@@ -1,0 +1,73 @@
+{
+ "id": "psy:drive-system",
+ "kind": "concept",
+ "title": {
+  "fa": "سیستم سائق",
+  "en": "Drive system",
+  "nl": "Driftsysteem"
+ },
+ "parent": "psy:three-systems",
+ "field": "psy:t-compassion",
+ "summary": {
+  "fa": "سیستمی که ما را به خواستن، دنبال‌کردن و به دست آوردن منابع و دستاورد برمی‌انگیزد؛ با هیجان و سرزندگی همراه است.",
+  "en": "The system that motivates us to want, pursue and obtain resources and achievements; it comes with excitement and vitality.",
+  "nl": "Het systeem dat ons aanzet om middelen en prestaties te willen, na te streven en te verwerven; het gaat samen met opwinding en vitaliteit."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پیروزی‌های کوچک امابیل این سیستم را روشن می‌کنند.",
+    "en": "Amabile's small wins switch this system on.",
+    "nl": "De kleine overwinningen van Amabile zetten dit systeem aan."
+   },
+   "sources": [
+    "src:97976f9a5e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اگر سائق از تهدید تغذیه کند («اگر موفق نشوم بی‌ارزشم»)، به کمال‌طلبی و فرسودگی می‌انجامد.",
+    "en": "If drive feeds on threat (“If I don't succeed I'm worthless”), it leads to perfectionism and burnout.",
+    "nl": "Als drift zich voedt met dreiging (‘Als ik niet slaag, ben ik waardeloos’), leidt dat tot perfectionisme en burn-out."
+   },
+   "sources": [
+    "src:97976f9a5e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از نظر عصبی با مدار دوپامین و «خواستن» پیوند دارد.",
+    "en": "Neurally it is linked to the dopamine circuit and “wanting”.",
+    "nl": "Neuraal hangt het samen met het dopaminecircuit en ‘willen’."
+   },
+   "sources": [
+    "src:97976f9a5e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-reward",
+   "rel": "explains",
+   "note": {
+    "fa": "پایهٔ دوپامینی",
+    "en": "Dopamine basis",
+    "nl": "Dopaminebasis"
+   }
+  }
+ ],
+ "people": [
+  "core:paul-gilbert"
+ ],
+ "sources": [
+  "src:97976f9a5e"
+ ],
+ "booklets": [],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

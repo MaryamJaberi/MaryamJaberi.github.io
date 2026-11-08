@@ -1,0 +1,87 @@
+{
+ "id": "psy:great-resignation",
+ "kind": "concept",
+ "title": {
+  "fa": "استعفای بزرگ",
+  "en": "The Great Resignation",
+  "nl": "De Grote Ontslaggolf"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "موج ترک کار پس از کووید ۱۹ با وجود شرایط بد بازار. اصطلاح را آنتونی کلاتس، روان‌شناس سازمانی، در ۲۰۲۱ مطرح کرد.",
+  "en": "The wave of resignations after COVID-19 despite a bad job market. The term was coined in 2021 by organisational psychologist Anthony Klotz.",
+  "nl": "De golf van ontslagnames na COVID-19, ondanks een slechte arbeidsmarkt. De term werd in 2021 bedacht door organisatiepsycholoog Anthony Klotz."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "Xu، Dust و Liu (۲۰۲۳): اضطراب مرگ ناشی از همه‌گیری، از راه نیاز به کار معنادار و اهمیت وظیفه، به ترک کار مرتبط بود.",
+    "en": "Xu, Dust and Liu (2023): pandemic-driven death anxiety was linked to quitting through the need for meaningful work and task significance.",
+    "nl": "Xu, Dust en Liu (2023): doodsangst door de pandemie hing samen met ontslag nemen via de behoefte aan betekenisvol werk en het belang van de taak."
+   },
+   "sources": [
+    "src:9b480dfe22"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تصور رایج: در بحران افراد به کار می‌چسبند. واقعیت: بسیاری می‌پرسند «این‌همه جان‌کندن برای چه؟»",
+    "en": "The common assumption: in a crisis people cling to their jobs. The reality: many ask, “What is all this toil for?”",
+    "nl": "De gangbare aanname: in een crisis klampen mensen zich vast aan hun baan. De werkelijkheid: velen vragen ‘Waarvoor al dat gezwoeg?’"
+   },
+   "sources": [
+    "src:9b480dfe22"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدرس آن را به شرایط ایران (جنگ دوازده‌روزه، تحریم، تورم) هم تعمیم داد.",
+    "en": "The lecturer extended it to Iran's situation as well (the twelve-day war, sanctions, inflation).",
+    "nl": "De docent trok het door naar de situatie in Iran (de twaalfdaagse oorlog, sancties, inflatie)."
+   },
+   "sources": [
+    "src:9b480dfe22"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "روند بلندمدت هم‌سو: سهم مردان در سن کار خارج از بازار کار از ۱۹۴۵ تا ۲۰۱۶ پیوسته بالا رفته (اسلاید ۲۰).",
+    "en": "A long-term trend in the same direction: the share of working-age men outside the labour market rose steadily from 1945 to 2016 (slide 20).",
+    "nl": "Een langetermijntrend in dezelfde richting: het aandeel mannen in de werkende leeftijd buiten de arbeidsmarkt steeg gestaag van 1945 tot 2016 (slide 20)."
+   },
+   "sources": [
+    "src:9b480dfe22"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:meaningful-work",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکار",
+    "en": "Mechanism",
+    "nl": "Mechanisme"
+   }
+  }
+ ],
+ "people": [
+  "core:anthony-klotz",
+  "core:fa-eab15e70"
+ ],
+ "sources": [
+  "src:9b480dfe22"
+ ],
+ "booklets": [
+  "exit"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

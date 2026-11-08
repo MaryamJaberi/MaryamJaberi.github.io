@@ -1,0 +1,88 @@
+{
+ "id": "psy:autonomy",
+ "kind": "concept",
+ "title": {
+  "fa": "خودمختاری",
+  "en": "Autonomy",
+  "nl": "Autonomie"
+ },
+ "parent": "psy:sdt",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "احساس اینکه رفتارم از خودم سرچشمه می‌گیرد و کسی مرا وادار نکرده. از نیازهای پایه در خودتعیین‌گری و از ارکان کار معنادار.",
+  "en": "The sense that my behaviour comes from me and nobody forced me. One of the basic needs in self-determination theory and a pillar of meaningful work.",
+  "nl": "Het gevoel dat mijn gedrag van mezelf komt en niemand me dwingt. Een van de basisbehoeften in de zelfdeterminatietheorie en een pijler van betekenisvol werk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پاسخ مدرس دربارهٔ مشاغلی مثل بلاگری: آنچه به نظر ما بی‌معناست ممکن است برای فرد به‌خاطر خودمختاری معنادار باشد.",
+    "en": "The lecturer's answer about jobs such as blogging: what seems meaningless to us may be meaningful to the person because of autonomy.",
+    "nl": "Het antwoord van de docent over beroepen zoals bloggen: wat ons zinloos lijkt, kan voor iemand betekenisvol zijn vanwege autonomie."
+   },
+   "sources": [
+    "src:0cc6ee3a55"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تقاضا برای خودمختاری در سازمان و دانشگاه رو به افزایش است؛ دانشجو می‌خواهد در سرفصل‌ها نظر بدهد.",
+    "en": "Demand for autonomy is rising in organisations and universities; students want a say in the curriculum.",
+    "nl": "De vraag naar autonomie groeit in organisaties en universiteiten; studenten willen meepraten over het lesprogramma."
+   },
+   "sources": [
+    "src:0cc6ee3a55"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وقتی شرایط اقتصادی بدتر می‌شود، تقاضا برای خودمختاری بیشتر می‌شود: «حالا که خوب پول نمی‌دهند، دست‌کم نظر داشته باشم.»",
+    "en": "When economic conditions worsen, demand for autonomy grows: “Since they don't pay well, at least let me have a say.”",
+    "nl": "Als de economische omstandigheden verslechteren, groeit de vraag naar autonomie: ‘Nu ze niet goed betalen, wil ik op zijn minst inspraak.’"
+   },
+   "sources": [
+    "src:0cc6ee3a55"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "والدگری هلیکوپتری با خودکارآمدی کمتر و افسردگی و اضطراب بیشتر همراه است؛ حمایت از خودمختاری برعکس (رید ۲۰۱۶).",
+    "en": "Helicopter parenting goes with lower self-efficacy and more depression and anxiety; supporting autonomy does the opposite (Reed 2016).",
+    "nl": "Helikopterouderschap gaat samen met minder zelfeffectiviteit en meer depressie en angst; autonomie ondersteunen doet het omgekeerde (Reed 2016)."
+   },
+   "sources": [
+    "src:0cc6ee3a55"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:meaningful-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "رکن کار معنادار",
+    "en": "Pillar of meaningful work",
+    "nl": "Pijler van betekenisvol werk"
+   }
+  }
+ ],
+ "people": [
+  "core:edward-deci",
+  "core:richard-ryan"
+ ],
+ "sources": [
+  "src:0cc6ee3a55"
+ ],
+ "booklets": [
+  "qa",
+  "gelfand:parenting"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

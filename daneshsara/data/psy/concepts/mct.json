@@ -1,0 +1,73 @@
+{
+ "id": "psy:mct",
+ "kind": "concept",
+ "title": {
+  "fa": "درمان فراشناختی",
+  "en": "Metacognitive Therapy",
+  "nl": "Metacognitieve therapie"
+ },
+ "parent": "psy:t-thirdwave",
+ "field": "psy:t-thirdwave",
+ "summary": {
+  "fa": "درمان آدریان ولز: مشکل اصلی محتوای فکر نیست، بلکه «نشانگان شناختی-توجهی» است؛ نگرانی، نشخوار و پایش تهدید که با باورهای فراشناختی ادامه می‌یابند.",
+  "en": "Adrian Wells's therapy: the main problem is not the content of thought but the “cognitive attentional syndrome”: worry, rumination and threat monitoring maintained by metacognitive beliefs.",
+  "nl": "De therapie van Adrian Wells: het hoofdprobleem is niet de inhoud van gedachten maar het ‘cognitief-attentioneel syndroom’: piekeren, malen en dreiging bewaken, in stand gehouden door metacognitieve overtuigingen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "باور مثبت فراشناختی: «نگرانی کمکم می‌کند آماده باشم.» باور منفی: «نشخوار کنترل‌ناپذیر است.»",
+    "en": "Positive metacognitive belief: “Worrying helps me be prepared.” Negative belief: “Rumination is uncontrollable.”",
+    "nl": "Positieve metacognitieve overtuiging: ‘Piekeren helpt me voorbereid te zijn.’ Negatieve overtuiging: ‘Malen is oncontroleerbaar.’"
+   },
+   "sources": [
+    "src:92dff8ee21"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تکنیک‌ها: «ذهن‌آگاهی گسلیده»، به‌تعویق‌انداختن نگرانی، آموزش توجه.",
+    "en": "Techniques: “detached mindfulness”, postponing worry, attention training.",
+    "nl": "Technieken: ‘detached mindfulness’, piekeren uitstellen, aandachtstraining."
+   },
+   "sources": [
+    "src:92dff8ee21"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مستقیماً به ابزار ساکت‌کردن گزارشگر زنده مرتبط است.",
+    "en": "Directly related to the tool for silencing the running commentary.",
+    "nl": "Direct verbonden met het instrument om het doorlopende commentaar stil te zetten."
+   },
+   "sources": [
+    "src:92dff8ee21"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:running-commentary",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساکت‌کردن",
+    "en": "Silencing",
+    "nl": "Tot zwijgen brengen"
+   }
+  }
+ ],
+ "people": [
+  "core:adrian-wells"
+ ],
+ "sources": [
+  "src:92dff8ee21"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

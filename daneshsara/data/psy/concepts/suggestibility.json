@@ -1,0 +1,133 @@
+{
+ "id": "psy:suggestibility",
+ "kind": "concept",
+ "title": {
+  "fa": "تلقین‌پذیری",
+  "en": "Suggestibility",
+  "nl": "Suggestibiliteit"
+ },
+ "parent": "psy:p-cog",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "اثر انتظار، اقتدار و بافت بر تجربه، انتخاب و حتی فیزیولوژی؛ موضوع کتاب «مغز تلقین‌پذیر» امیر راز.",
+  "en": "The effect of expectation, authority and context on experience, choice and even physiology; the subject of Amir Raz's book The Suggestible Brain.",
+  "nl": "Het effect van verwachting, autoriteit en context op ervaring, keuze en zelfs fysiologie; het onderwerp van Amir Raz' boek The Suggestible Brain."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مسئلهٔ انتساب اعتبار: صلاحیت، سایه‌افکنی، مهار نهان، جلوگیری.",
+    "en": "The credit-assignment problem: priority, overshadowing, latent inhibition, blocking.",
+    "nl": "Het probleem van krediettoekenning: prioriteit, overschaduwing, latente inhibitie, blokkering."
+   },
+   "sources": [
+    "src:573a9b8fcd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حس عاملیت: احساس و قضاوت؛ مدل مقایسه‌گر؛ اصل انحصاری بودن (وگنر).",
+    "en": "The sense of agency: feeling and judgement; the comparator model; the exclusivity principle (Wegner).",
+    "nl": "Het gevoel van regie: gevoel en oordeel; het comparatormodel; het exclusiviteitsprincipe (Wegner)."
+   },
+   "sources": [
+    "src:573a9b8fcd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "القای فکر با MRI ازکارافتاده (اولسون ۲۰۱۶)؛ اجبار برجستگی: حدود ۳۰٪ کارت ۱۵۰ میلی‌ثانیه‌ای را برگزیدند.",
+    "en": "Thought insertion with a broken MRI (Olson 2016); forced salience: about 30% chose the card shown for 150 milliseconds.",
+    "nl": "Gedachten inbrengen met een kapotte MRI (Olson 2016); afgedwongen opvallendheid: ongeveer 30% koos de kaart die 150 milliseconden werd getoond."
+   },
+   "sources": [
+    "src:573a9b8fcd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پایلس و کوهن (۲۰۲۰): پرایم‌های گفتگویی شعبده‌باز بدون آگاهی انتخاب را جهت دادند.",
+    "en": "Pailhès and Kuhn (2020): a magician's verbal primes steered choice without awareness.",
+    "nl": "Pailhès en Kuhn (2020): verbale primes van een goochelaar stuurden de keuze zonder dat mensen het merkten."
+   },
+   "sources": [
+    "src:573a9b8fcd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قند خون از زمان ادراک‌شده پیروی کرد (پارک ۲۰۱۶)؛ میلک‌شیک «پرکالری» گرلین را بیشتر پایین آورد (کرام ۲۰۱۱).",
+    "en": "Blood sugar followed perceived time (Park 2016); a “high-calorie” milkshake lowered ghrelin more (Crum 2011).",
+    "nl": "De bloedsuiker volgde de ervaren tijd (Park 2016); een ‘calorierijke’ milkshake verlaagde ghreline meer (Crum 2011)."
+   },
+   "sources": [
+    "src:573a9b8fcd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«آنچه فکر می‌کنیم با آنچه خالصاً زیستی می‌پنداریم تعامل دارد.»",
+    "en": "“What we think interacts with what we consider purely biological.”",
+    "nl": "‘Wat we denken, heeft wisselwerking met wat we puur biologisch achten.’"
+   },
+   "sources": [
+    "src:573a9b8fcd"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:placebo-expectation",
+   "rel": "see-also",
+   "note": {
+    "fa": "دارونما",
+    "en": "Placebo",
+    "nl": "Placebo"
+   }
+  },
+  {
+   "to": "psy:nocebo",
+   "rel": "see-also",
+   "note": {
+    "fa": "نوسبو",
+    "en": "Nocebo",
+    "nl": "Nocebo"
+   }
+  },
+  {
+   "to": "psy:false-memory",
+   "rel": "see-also",
+   "note": {
+    "fa": "حافظه",
+    "en": "Memory",
+    "nl": "Geheugen"
+   }
+  }
+ ],
+ "people": [
+  "core:amir-raz",
+  "core:jay-olson",
+  "core:gustav-kuhn",
+  "core:ellen-langer"
+ ],
+ "sources": [
+  "src:573a9b8fcd",
+  "src:6c9aa3b4c6"
+ ],
+ "booklets": [
+  "suggestible:credit",
+  "suggestible:agency",
+  "shelf4:mercier",
+  "psychopath:self"
+ ],
+ "origin": "suggestible",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,97 @@
+{
+ "id": "psy:desirable-difficulties",
+ "kind": "concept",
+ "title": {
+  "fa": "دشواری‌های مطلوب",
+  "en": "Desirable difficulties",
+  "nl": "Gewenste moeilijkheden"
+ },
+ "parent": "psy:p-edu",
+ "field": "psy:p-edu",
+ "summary": {
+  "fa": "بیورک: شرایطی که یادگیری را کندتر و سخت‌تر اما ماندگارتر و انتقال‌پذیرتر می‌کند.",
+  "en": "Bjork: conditions that make learning slower and harder but more durable and transferable.",
+  "nl": "Bjork: omstandigheden die leren trager en moeilijker maken, maar duurzamer en beter overdraagbaar."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فاصله‌گذاری، آزمون به جای مرور، تولید پیش از آموزش، درهم‌آمیختگی (interleaving).",
+    "en": "Spacing, testing instead of re-reading, generating before being taught, interleaving.",
+    "nl": "Spreiding, toetsen in plaats van herlezen, eerst zelf genereren en dan instructie, interleaving."
+   },
+   "sources": [
+    "src:2cd91284f1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درهم‌آمیختگی: کارت‌های سزان، پیکاسو و رنوار را بُر بزنید؛ یادگیرنده تشخیص نوع مسئله را یاد می‌گیرد.",
+    "en": "Interleaving: shuffle cards of Cézanne, Picasso and Renoir; the learner learns to recognise the type of problem.",
+    "nl": "Interleaving: schud kaarten van Cézanne, Picasso en Renoir; de leerling leert het soort probleem herkennen."
+   },
+   "sources": [
+    "src:2cd91284f1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آکادمی نیروی هوایی (کارل و وست ۲۰۱۰): استادانی که نمرهٔ حسابان ۱ و ارزشیابی بهتری گرفتند، به عملکرد بعدی دانشجویان آسیب زدند.",
+    "en": "The Air Force Academy (Carrell and West 2010): professors whose Calculus I students got better grades and gave better evaluations harmed those students' later performance.",
+    "nl": "De Air Force Academy (Carrell en West 2010): docenten van wie de studenten betere cijfers voor Calculus I haalden en betere evaluaties gaven, schaadden de latere prestaties van die studenten."
+   },
+   "sources": [
+    "src:2cd91284f1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«باید آسان کرد که سخت شود» (نیت کورنل).",
+    "en": "“Make it easy to make it hard” (Nate Kornell).",
+    "nl": "‘Maak het makkelijk om het moeilijk te maken’ (Nate Kornell)."
+   },
+   "sources": [
+    "src:2cd91284f1"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:perseverance",
+   "rel": "see-also",
+   "note": {
+    "fa": "کشمکش سازنده",
+    "en": "Constructive struggle",
+    "nl": "Constructieve worsteling"
+   }
+  },
+  {
+   "to": "psy:p-cog",
+   "rel": "see-also",
+   "note": {
+    "fa": "حافظه",
+    "en": "Memory",
+    "nl": "Geheugen"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-elizabeth-bjork",
+  "core:nate-kornell"
+ ],
+ "sources": [
+  "src:2cd91284f1",
+  "src:635219cdd5"
+ ],
+ "booklets": [
+  "range:learning"
+ ],
+ "origin": "range",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

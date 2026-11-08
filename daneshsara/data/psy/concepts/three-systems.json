@@ -1,0 +1,99 @@
+{
+ "id": "psy:three-systems",
+ "kind": "concept",
+ "title": {
+  "fa": "مدل سه‌سیستمی هیجان",
+  "en": "Three-systems model (Gilbert)",
+  "nl": "Driesystemenmodel (Gilbert)"
+ },
+ "parent": "psy:t-compassion",
+ "field": "psy:t-compassion",
+ "summary": {
+  "fa": "گیلبرت هیجان را در سه سیستم کارکردی می‌بیند که باید متوازن باشند: تهدید و محافظت، سائق و منبع‌جویی، و آرام‌بخشی و پیوند.",
+  "en": "Gilbert sees emotion in three functional systems that need to be in balance: threat and protection, drive and resource-seeking, and soothing and connection.",
+  "nl": "Gilbert ziet emotie in drie functionele systemen die in balans moeten zijn: dreiging en bescherming, drift en bronnen zoeken, en kalmering en verbinding."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سیستم تهدید: خشم، اضطراب، انزجار؛ برای محافظت و ایمنی‌جویی.",
+    "en": "Threat system: anger, anxiety, disgust; for protection and safety-seeking.",
+    "nl": "Dreigingssysteem: woede, angst, afkeer; voor bescherming en veiligheid zoeken."
+   },
+   "sources": [
+    "src:b1db4c1730"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سیستم سائق: خواستن، دنبال‌کردن، دستاورد؛ هیجان و سرزندگی.",
+    "en": "Drive system: wanting, pursuing, achieving; excitement and vitality.",
+    "nl": "Driftsysteem: willen, nastreven, presteren; opwinding en vitaliteit."
+   },
+   "sources": [
+    "src:b1db4c1730"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سیستم آرام‌بخشی: رضایت، امنیت، پیوند؛ با مهربانی و دلبستگی فعال می‌شود.",
+    "en": "Soothing system: contentment, safety, connection; activated by kindness and attachment.",
+    "nl": "Kalmeringssysteem: tevredenheid, veiligheid, verbondenheid; geactiveerd door vriendelijkheid en gehechtheid."
+   },
+   "sources": [
+    "src:b1db4c1730"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در بسیاری از مشکلات، تهدید و سائق بزرگ و آرام‌بخشی کوچک است؛ درمان سیستم سوم را تقویت می‌کند.",
+    "en": "In many problems, threat and drive are large and soothing small; treatment strengthens the third system.",
+    "nl": "Bij veel problemen zijn dreiging en drift groot en kalmering klein; behandeling versterkt het derde systeem."
+   },
+   "sources": [
+    "src:b1db4c1730"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چارچوب خوبی برای کنار هم گذاشتن محورهای دوره: نشخوار (تهدید)، اصل پیشرفت و کمال‌طلبی (سائق)، شفقت و بازیابی (آرام‌بخشی).",
+    "en": "A good framework for bringing the course's themes together: rumination (threat), the progress principle and perfectionism (drive), compassion and recovery (soothing).",
+    "nl": "Een goed kader om de thema's van de cursus samen te brengen: piekeren (dreiging), het vooruitgangsprincipe en perfectionisme (drift), compassie en herstel (kalmering)."
+   },
+   "sources": [
+    "src:b1db4c1730"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-affective",
+   "rel": "explains",
+   "note": {
+    "fa": "پایهٔ عصبی",
+    "en": "Neural basis",
+    "nl": "Neurale basis"
+   }
+  }
+ ],
+ "people": [
+  "core:paul-gilbert"
+ ],
+ "sources": [
+  "src:b1db4c1730"
+ ],
+ "booklets": [
+  "axes",
+  "s3:compassion",
+  "compassion:cft"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

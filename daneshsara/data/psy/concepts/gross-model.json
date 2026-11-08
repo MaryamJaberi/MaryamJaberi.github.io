@@ -1,0 +1,125 @@
+{
+ "id": "psy:gross-model",
+ "kind": "concept",
+ "title": {
+  "fa": "مدل فرایندی گراس",
+  "en": "Process model of emotion regulation",
+  "nl": "Procesmodel van emotieregulatie"
+ },
+ "parent": "psy:emotion-regulation",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "جیمز گراس تنظیم هیجان را روی خط زمانی شکل‌گیری هیجان می‌چیند: پنج نقطهٔ مداخله، از انتخاب موقعیت تا تغییر پاسخ.",
+  "en": "James Gross places emotion regulation on the timeline of emotion generation: five points of intervention, from situation selection to response modulation.",
+  "nl": "James Gross plaatst emotieregulatie op de tijdlijn van het ontstaan van emotie: vijf interventiepunten, van situatiekeuze tot responsmodulatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پنج خانواده: انتخاب موقعیت، تغییر موقعیت، به‌کارگیری توجه، تغییر شناختی (بازتعبیر)، تغییر پاسخ (مثلاً سرکوب).",
+    "en": "Five families: situation selection, situation modification, attentional deployment, cognitive change (reappraisal), response modulation (for example suppression).",
+    "nl": "Vijf families: situatiekeuze, situatie aanpassen, aandacht richten, cognitieve verandering (herwaardering), responsmodulatie (bijvoorbeeld onderdrukking)."
+   },
+   "sources": [
+    "src:46837c26e1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مثال اسلاید: یک قرار عاشقانه؛ تصمیم به رفتن، میز کنار شومینه، چشیدن لقمه‌ها، «چه خوش‌شانسم»، ابراز لذت.",
+    "en": "The slide's example: a romantic date; deciding to go, a table by the fireplace, savouring each bite, “how lucky I am”, expressing enjoyment.",
+    "nl": "Het voorbeeld op de slide: een romantisch afspraakje; besluiten te gaan, een tafel bij de open haard, elke hap proeven, ‘wat heb ik geluk’, plezier tonen."
+   },
+   "sources": [
+    "src:46837c26e1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "راهکارهای پیشایند (چهار مرحلهٔ اول) معمولاً کم‌هزینه‌تر از راهکارهای پاسخ‌محورند.",
+    "en": "Antecedent strategies (the first four stages) usually cost less than response-focused strategies.",
+    "nl": "Antecedente strategieën (de eerste vier fasen) kosten meestal minder dan responsgerichte strategieën."
+   },
+   "sources": [
+    "src:46837c26e1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گراس و جان (۲۰۰۳): بازتعبیر با بهزیستی بیشتر، سرکوب با حافظهٔ ضعیف‌تر و روابط کم‌کیفیت‌تر همراه است.",
+    "en": "Gross and John (2003): reappraisal goes with greater well-being, suppression with poorer memory and lower-quality relationships.",
+    "nl": "Gross en John (2003): herwaardering gaat samen met meer welzijn, onderdrukking met een slechter geheugen en relaties van mindere kwaliteit."
+   },
+   "sources": [
+    "src:46837c26e1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تنظیم هیجان مثبت پیش، حین و پس از تجربه (کوئیدباخ، میکولایچاک و گراس ۲۰۱۵).",
+    "en": "Regulating positive emotion before, during and after the experience (Quoidbach, Mikolajczak and Gross 2015).",
+    "nl": "Positieve emotie reguleren vóór, tijdens en na de ervaring (Quoidbach, Mikolajczak en Gross 2015)."
+   },
+   "sources": [
+    "src:46837c26e1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار S پیش‌دستانه: جست‌وجوی درون، تعبیهٔ تمرکز، انتخاب میدان، تغییر موقعیت.",
+    "en": "The four proactive S's: search inside, set focus, select the arena, shift the situation.",
+    "nl": "De vier proactieve S'en: binnen zoeken, focus inbouwen, het speelveld kiezen, de situatie veranderen."
+   },
+   "sources": [
+    "src:46837c26e1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انتخاب توهمی هم پاسخ فیزیولوژیک را تا حدی تنظیم می‌کند (تویار و دن-گلاوزر).",
+    "en": "Illusory choice also partly regulates the physiological response (Tuval and Dan-Glauser).",
+    "nl": "Een schijnkeuze reguleert ook gedeeltelijk de fysiologische reactie (Tuval en Dan-Glauser)."
+   },
+   "sources": [
+    "src:46837c26e1"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:surface-deep",
+   "rel": "see-also",
+   "note": {
+    "fa": "بازی سطحی ≈ سرکوب",
+    "en": "Surface acting ≈ suppression",
+    "nl": "Oppervlakkig acteren ≈ onderdrukken"
+   }
+  }
+ ],
+ "people": [
+  "core:james-gross",
+  "core:oliver-john"
+ ],
+ "sources": [
+  "src:46837c26e1",
+  "src:a7e45a41af"
+ ],
+ "booklets": [
+  "s8:process",
+  "s4:gross",
+  "s4:proactive",
+  "s7:strategies",
+  "s5:components"
+ ],
+ "origin": "s8",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

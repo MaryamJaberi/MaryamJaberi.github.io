@@ -1,0 +1,87 @@
+{
+ "id": "psy:compassion-collapse",
+ "kind": "concept",
+ "title": {
+  "fa": "فروپاشی شفقت",
+  "en": "Compassion collapse",
+  "nl": "Instorten van compassie"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "کاهش پاسخ دلسوزانه وقتی شمار قربانیان بیشتر می‌شود؛ «یک مرگ تراژدی است، یک میلیون آمار».",
+  "en": "The decline in compassionate response as the number of victims grows; “one death is a tragedy, a million is a statistic”.",
+  "nl": "Het afnemen van de compassievolle reactie naarmate het aantal slachtoffers groeit; ‘één dode is een tragedie, een miljoen is een statistiek’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اسلوویک: کمک به یک کودک شناسنامه‌دار بیشتر از کمک به دو کودک یا آمار گروهی است.",
+    "en": "Slovic: people help one identified child more than two children or group statistics.",
+    "nl": "Slovic: mensen helpen één kind met een naam meer dan twee kinderen of groepsstatistieken."
+   },
+   "sources": [
+    "src:c3b2f8ac69"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کامرون و پین (۲۰۱۱): فروپاشی شفقت تا حدی مقابله‌ای انگیزه‌دار است؛ کسانی که انتظار دارند کمکی از دستشان برنیاید، احساس را مهار می‌کنند.",
+    "en": "Cameron and Payne (2011): compassion collapse is partly motivated emotion regulation; people who expect they can't help hold back their feelings.",
+    "nl": "Cameron en Payne (2011): het instorten van compassie is deels gemotiveerde emotieregulatie; wie verwacht niet te kunnen helpen, houdt zijn gevoel in."
+   },
+   "sources": [
+    "src:c3b2f8ac69"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با خستگی همدلی در کارکنان درمانی و رهبران.",
+    "en": "Link with empathy fatigue in healthcare staff and leaders.",
+    "nl": "Link met empathievermoeidheid bij zorgpersoneel en leiders."
+   },
+   "sources": [
+    "src:c3b2f8ac69"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:empathy-fatigue",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرسودگی",
+    "en": "Burnout",
+    "nl": "Burn-out"
+   }
+  },
+  {
+   "to": "psy:compassion-at-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "سازمان",
+    "en": "Organisation",
+    "nl": "Organisatie"
+   }
+  }
+ ],
+ "people": [
+  "core:paul-slovic",
+  "core:daryl-cameron"
+ ],
+ "sources": [
+  "src:c3b2f8ac69",
+  "src:6e64cbb79c"
+ ],
+ "booklets": [
+  "s3:collapse",
+  "s2:collapse"
+ ],
+ "origin": "s3",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

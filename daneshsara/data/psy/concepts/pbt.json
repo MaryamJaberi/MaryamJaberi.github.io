@@ -1,0 +1,97 @@
+{
+ "id": "psy:pbt",
+ "kind": "subfield",
+ "title": {
+  "fa": "درمان فرایندمدار",
+  "en": "Process-based therapy",
+  "nl": "Procesgerichte therapie"
+ },
+ "parent": "psy:psychotherapy",
+ "field": null,
+ "summary": {
+  "fa": "به جای پروتکل جداگانه برای هر تشخیص، فرایندهای غیرکارکردی را اصلاح و فرایندهای کارکردی را تقویت کن (هافمن و هیز).",
+  "en": "Instead of a separate protocol for each diagnosis, correct dysfunctional processes and strengthen functional ones (Hofmann and Hayes).",
+  "nl": "In plaats van een apart protocol per diagnose: disfunctionele processen corrigeren en functionele versterken (Hofmann en Hayes)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گزارهٔ ۷ کارگاه: مداخله بر مبنای فرایند (process-based).",
+    "en": "The workshop's proposition 7: process-based intervention.",
+    "nl": "Stelling 7 van de workshop: procesgerichte interventie."
+   },
+   "sources": [
+    "src:8a1de76fbf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرایندهای تغییر در شش بُعد: شناخت، هیجان، توجه، خود، انگیزش، رفتار؛ در سطوح زیستی و اجتماعی.",
+    "en": "Change processes in six dimensions: cognition, emotion, attention, self, motivation, behaviour; at biological and social levels.",
+    "nl": "Veranderprocessen in zes dimensies: cognitie, emotie, aandacht, zelf, motivatie, gedrag; op biologisch en sociaal niveau."
+   },
+   "sources": [
+    "src:8a1de76fbf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تحلیل شبکه‌ای فرد (idionomic): هر مراجع شبکهٔ فرایندهای خودش را دارد.",
+    "en": "Individual network analysis (idionomic): each client has their own network of processes.",
+    "nl": "Individuele netwerkanalyse (idionomisch): elke cliënt heeft een eigen netwerk van processen."
+   },
+   "sources": [
+    "src:8a1de76fbf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سنت‌گرایی: نظام دسته‌ای فواید خود را دارد و به راحتی قابل حذف نیست (گزارهٔ ۱۰).",
+    "en": "Traditionalism: the categorical system has its benefits and cannot easily be dropped (proposition 10).",
+    "nl": "Traditionalisme: het categoriale systeem heeft voordelen en is niet makkelijk te schrappen (stelling 10)."
+   },
+   "sources": [
+    "src:8a1de76fbf"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:transdiagnostic",
+   "rel": "see-also",
+   "note": {
+    "fa": "هدف",
+    "en": "Target",
+    "nl": "Doel"
+   }
+  },
+  {
+   "to": "psy:t-cbt",
+   "rel": "explains",
+   "note": {
+    "fa": "ریشه",
+    "en": "Root",
+    "nl": "Wortel"
+   }
+  }
+ ],
+ "people": [
+  "core:stefan-hofmann",
+  "core:steven-hayes"
+ ],
+ "sources": [
+  "src:8a1de76fbf",
+  "src:0936ea052e"
+ ],
+ "booklets": [
+  "workshop:aims"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

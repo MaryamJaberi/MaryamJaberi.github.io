@@ -1,0 +1,108 @@
+{
+ "id": "psy:interpersonal-er",
+ "kind": "concept",
+ "title": {
+  "fa": "تنظیم هیجان بین‌فردی",
+  "en": "Interpersonal emotion regulation",
+  "nl": "Interpersoonlijke emotieregulatie"
+ },
+ "parent": "psy:emotion-regulation",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "کمک گرفتن از دیگران برای آرام شدن، یا کمک به آرام شدن دیگران؛ حمایت مسئله‌محور + اعتباربخشی مؤثرتر از همدردی صرف است.",
+  "en": "Getting help from others to calm down, or helping others calm down; problem-focused support + validation is more effective than sympathy alone.",
+  "nl": "Hulp van anderen krijgen om tot rust te komen, of anderen helpen tot rust te komen; probleemgerichte steun + erkenning werkt beter dan alleen medeleven."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "حمایت مسئله‌محور در مرکز تماس تنش را کم کرد؛ حمایت صرفاً هیجانی نه (لیتل ۲۰۱۳).",
+    "en": "Problem-focused support in a call centre reduced strain; purely emotional support did not (Little 2013).",
+    "nl": "Probleemgerichte steun in een callcenter verminderde de spanning; puur emotionele steun niet (Little 2013)."
+   },
+   "sources": [
+    "src:e33415c16e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هم‌نشخواری: همدردی که آتش را تندتر می‌کند.",
+    "en": "Co-rumination: sympathy that fans the flames.",
+    "nl": "Co-ruminatie: medeleven dat het vuur verder aanwakkert."
+   },
+   "sources": [
+    "src:e33415c16e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اعتباربخشی: فهمیدن احساس بدون لزوم موافقت (لاینهان؛ فلک ۲۰۲۴).",
+    "en": "Validation: understanding a feeling without having to agree (Linehan; Fleck 2024).",
+    "nl": "Valideren: een gevoel begrijpen zonder het ermee eens te hoeven zijn (Linehan; Fleck 2024)."
+   },
+   "sources": [
+    "src:e33415c16e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:venting",
+   "rel": "see-also",
+   "note": {
+    "fa": "درد دل",
+    "en": "Unburdening",
+    "nl": "Je hart luchten"
+   }
+  },
+  {
+   "to": "psy:challenger-listener",
+   "rel": "see-also",
+   "note": {
+    "fa": "شنونده",
+    "en": "Listener",
+    "nl": "Luisteraar"
+   }
+  },
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "نشخوار",
+    "en": "Rumination",
+    "nl": "Piekeren"
+   }
+  },
+  {
+   "to": "psy:compassion-at-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "شفقت",
+    "en": "Compassion",
+    "nl": "Compassie"
+   }
+  }
+ ],
+ "people": [
+  "core:karen-niven",
+  "core:bernard-rime",
+  "core:keren-bahar",
+  "core:caroline-fleck"
+ ],
+ "sources": [
+  "src:e33415c16e",
+  "src:2be70f946b"
+ ],
+ "booklets": [
+  "s11:listener",
+  "s11:functions",
+  "s11:validation"
+ ],
+ "origin": "s11",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,133 @@
+{
+ "id": "psy:dimensional-dx",
+ "kind": "concept",
+ "title": {
+  "fa": "رویکرد بُعدی به مشکلات روانی",
+  "en": "Dimensional approach",
+  "nl": "Dimensionale benadering"
+ },
+ "parent": "psy:dx",
+ "field": "psy:dx",
+ "summary": {
+  "fa": "مشکلات روانی پیوستاری‌اند نه «هست/نیست». کارگاه مرز سلامت و اختلال: به جای «بیماری» و «اختلال»، از «مشکل روانی» و «عدم تطبیق» یاد کنیم.",
+  "en": "Psychological problems lie on a continuum, not “present/absent”. The health-and-disorder workshop: instead of “illness” and “disorder”, speak of “psychological problems” and “mismatch”.",
+  "nl": "Psychische problemen liggen op een continuüm, niet ‘wel/niet’. De workshop over de grens tussen gezondheid en stoornis: spreek in plaats van ‘ziekte’ en ‘stoornis’ over ‘psychische problemen’ en ‘mismatch’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هفت دلیل لاهی، تیمیر و کروگر (۲۰۲۲): تجربی طیفی‌اند؛ پایاترند؛ پیش‌بینی بهتر؛ تشخیص دوگانه تخت پروکروستس است؛ دسته‌ها به واقعی‌پنداری و فهم ایستا می‌انجامند؛ رویکرد طیفی انگ کمتری دارد.",
+    "en": "Lahey, Tiemeier and Krueger's seven reasons (2022): they are empirically dimensional; more reliable; better prediction; dichotomous diagnosis is a Procrustean bed; categories lead to reification and static understanding; a dimensional approach carries less stigma.",
+    "nl": "De zeven redenen van Lahey, Tiemeier en Krueger (2022): ze zijn empirisch dimensionaal; betrouwbaarder; betere voorspelling; dichotome diagnose is een procrustesbed; categorieën leiden tot reïficatie en statisch begrip; een dimensionale benadering stigmatiseert minder."
+   },
+   "sources": [
+    "src:a77a2c408a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تطبیق (FIT): انطباقی بودن رفتار بیشتر مسئلهٔ تناسب آن با محیط است (لاهی).",
+    "en": "Fit (FIT): whether behaviour is adaptive is more a question of how well it fits the environment (Lahey).",
+    "nl": "Passendheid (FIT): of gedrag adaptief is, is meer een kwestie van hoe goed het bij de omgeving past (Lahey)."
+   },
+   "sources": [
+    "src:a77a2c408a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هینشاو: مشکلات روانی در تعامل فرد با جهان‌اند، نه درون فرد.",
+    "en": "Hinshaw: psychological problems lie in the interaction between the person and the world, not inside the person.",
+    "nl": "Hinshaw: psychische problemen liggen in de wisselwerking tussen persoon en wereld, niet in de persoon."
+   },
+   "sources": [
+    "src:a77a2c408a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مادزلی: میل ذهن به تقسیم‌بندی جایی که طبیعت تفکیکی ندارد و تبدیل آن به موجودیت‌های حقیقی.",
+    "en": "Maudsley: the mind's urge to divide where nature makes no division, and to turn the divisions into real entities.",
+    "nl": "Maudsley: de drang van de geest om te verdelen waar de natuur geen scheiding maakt, en de verdelingen tot echte entiteiten te maken."
+   },
+   "sources": [
+    "src:a77a2c408a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پنج تعبیر دربارهٔ اختلال: واقع‌گرا، نام‌گرا، برساخت‌گرا، عمل‌گرا، انکارگرا.",
+    "en": "Five interpretations of disorder: realist, nominalist, constructivist, pragmatist, eliminativist.",
+    "nl": "Vijf opvattingen over stoornis: realistisch, nominalistisch, constructivistisch, pragmatisch, eliminativistisch."
+   },
+   "sources": [
+    "src:a77a2c408a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هفت دلیل لِهی و همکاران (۲۰۲۲): بُعدی بودن، پایایی، اعتبار، تخت پروکروستس، شیءانگاری، تغییر در زمان، انگ.",
+    "en": "The seven reasons of Lahey and colleagues (2022): dimensionality, reliability, validity, the Procrustean bed, reification, change over time, stigma.",
+    "nl": "De zeven redenen van Lahey en collega's (2022): dimensionaliteit, betrouwbaarheid, validiteit, het procrustesbed, reïficatie, verandering in de tijd, stigma."
+   },
+   "sources": [
+    "src:a77a2c408a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:hitop",
+   "rel": "see-also",
+   "note": {
+    "fa": "نمونهٔ عملیاتی",
+    "en": "Practical example",
+    "nl": "Praktijkvoorbeeld"
+   }
+  },
+  {
+   "to": "psy:strengths",
+   "rel": "see-also",
+   "note": {
+    "fa": "ویژگی کارکردی",
+    "en": "Functional feature",
+    "nl": "Functioneel kenmerk"
+   }
+  },
+  {
+   "to": "psy:overdiagnosis",
+   "rel": "explains",
+   "note": {
+    "fa": "پیامد دسته‌ای",
+    "en": "Categorical consequence",
+    "nl": "Categoriaal gevolg"
+   }
+  }
+ ],
+ "people": [
+  "core:benjamin-lahey",
+  "core:robert-krueger",
+  "core:stephen-hinshaw",
+  "core:thomas-szasz"
+ ],
+ "sources": [
+  "src:a77a2c408a",
+  "src:5ee0c1c6e0",
+  "src:5b0da9c099"
+ ],
+ "booklets": [
+  "workshop:dimensions",
+  "shelf3:lahey",
+  "shelf11:lahey"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

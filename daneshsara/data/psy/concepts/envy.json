@@ -1,0 +1,147 @@
+{
+ "id": "psy:envy",
+ "kind": "concept",
+ "title": {
+  "fa": "رشک و حسادت",
+  "en": "Envy & jealousy",
+  "nl": "Afgunst en jaloezie"
+ },
+ "parent": "psy:p-emotion",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "رشک: درد برتری دیگری و آرزوی داشتن آنچه او دارد؛ حسادت: ترس از دست دادن توجه یا رابطه به نفع رقیب.",
+  "en": "Envy: the pain of another's advantage and wanting what they have; jealousy: fear of losing attention or a relationship to a rival.",
+  "nl": "Afgunst: de pijn van andermans voordeel en willen hebben wat de ander heeft; jaloezie: angst om aandacht of een relatie aan een rivaal te verliezen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هلموت شوک: رشک پنهان‌ترین شور انسانی است.",
+    "en": "Helmut Schoeck: envy is the most hidden of human passions.",
+    "nl": "Helmut Schoeck: afgunst is de meest verborgen menselijke hartstocht."
+   },
+   "sources": [
+    "src:960d3cd742"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جوامع پیش‌مدرن رشک‌محور بودند؛ «اصل کالای محدود» جرج فاستر.",
+    "en": "Pre-modern societies were envy-driven; George Foster's “image of limited good”.",
+    "nl": "Premoderne samenlevingen werden door afgunst gedreven; het ‘beeld van beperkt goed’ van George Foster."
+   },
+   "sources": [
+    "src:960d3cd742"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رشک خصمانه در برابر خوش‌خیم؛ شادی از رنج دیگری؛ کینهٔ ماکس شلر.",
+    "en": "Malicious versus benign envy; Schadenfreude; Max Scheler's ressentiment.",
+    "nl": "Kwaadaardige tegenover goedaardige afgunst; leedvermaak; het ressentiment van Max Scheler."
+   },
+   "sources": [
+    "src:960d3cd742"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«سزاوار بودن» دیگری رشک خوش‌خیم را بالا و خصمانه را پایین می‌برد.",
+    "en": "The other person “deserving it” raises benign envy and lowers malicious envy.",
+    "nl": "Als de ander het ‘verdient’, neemt goedaardige afgunst toe en kwaadaardige af."
+   },
+   "sources": [
+    "src:960d3cd742"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حسادت در نوزادان ۶ ماهه (سیبیل هارت) و در سگ‌ها (هریس ۲۰۱۴).",
+    "en": "Jealousy in 6-month-old infants (Sybil Hart) and in dogs (Harris 2014).",
+    "nl": "Jaloezie bij baby's van 6 maanden (Sybil Hart) en bij honden (Harris 2014)."
+   },
+   "sources": [
+    "src:960d3cd742"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رشک در محل کار: خشم، غیبت، فرسودگی و ضعف همبستگی.",
+    "en": "Envy at work: anger, absenteeism, burnout and weak solidarity.",
+    "nl": "Afgunst op het werk: woede, verzuim, burn-out en weinig solidariteit."
+   },
+   "sources": [
+    "src:960d3cd742"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سوزان مت: حسادت کودکان از گناه (۱۸۹۰ تا ۱۹۱۵) به نیازی «طبیعی» در جامعهٔ مصرفی (۱۹۱۵ تا ۱۹۳۰) بدل شد.",
+    "en": "Susan Matt: children's envy turned from a sin (1890 to 1915) into a “natural” need in consumer society (1915 to 1930).",
+    "nl": "Susan Matt: afgunst bij kinderen veranderde van een zonde (1890 tot 1915) in een ‘natuurlijke’ behoefte in de consumptiemaatschappij (1915 tot 1930)."
+   },
+   "sources": [
+    "src:960d3cd742"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:scapegoating",
+   "rel": "see-also",
+   "note": {
+    "fa": "بلاگردانی",
+    "en": "Scapegoating",
+    "nl": "Zondebok maken"
+   }
+  },
+  {
+   "to": "psy:attachment",
+   "rel": "see-also",
+   "note": {
+    "fa": "دلبستگی",
+    "en": "Attachment",
+    "nl": "Gehechtheid"
+   }
+  },
+  {
+   "to": "psy:social-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "کالای محدود و اعتماد",
+    "en": "Limited good and trust",
+    "nl": "Beperkt goed en vertrouwen"
+   }
+  }
+ ],
+ "people": [
+  "core:helmut-schoeck",
+  "core:george-foster",
+  "core:max-scheler",
+  "core:sybil-hart",
+  "core:melanie-klein"
+ ],
+ "sources": [
+  "src:960d3cd742",
+  "src:f6ff14d0b5",
+  "src:e7d6bb6d3e"
+ ],
+ "booklets": [
+  "envy:sins",
+  "envy:family",
+  "envy:jealousy",
+  "bored:history",
+  "fairness:zerosum"
+ ],
+ "origin": "envy",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

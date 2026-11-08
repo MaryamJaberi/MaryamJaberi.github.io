@@ -1,0 +1,90 @@
+{
+ "id": "psy:curiosity-types",
+ "kind": "concept",
+ "title": {
+  "fa": "انواع کنجکاوی (برلاین)",
+  "en": "Berlyne's types of curiosity",
+  "nl": "Soorten nieuwsgierigheid volgens Berlyne"
+ },
+ "parent": "psy:curiosity",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "برلاین کنجکاوی را روی دو محور گذاشت: ادراکی در برابر شناختی، و اختصاصی در برابر فراگیر.",
+  "en": "Berlyne placed curiosity on two axes: perceptual versus epistemic, and specific versus diversive.",
+  "nl": "Berlyne plaatste nieuwsgierigheid op twee assen: perceptueel tegenover epistemisch, en specifiek tegenover divers."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ادراکی: با محرک تازه، مبهم یا عجیب برانگیخته می‌شود و با تکرار کم می‌شود؛ حالتی ناخوشایند، شبیه خارش.",
+    "en": "Perceptual: aroused by a new, ambiguous or strange stimulus and reduced by repetition; an unpleasant state, like an itch.",
+    "nl": "Perceptueel: opgewekt door een nieuwe, vage of vreemde prikkel en minder door herhaling; een onaangename toestand, als jeuk."
+   },
+   "sources": [
+    "src:9234679b6d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شناختی: میل واقعی به دانش؛ «شهوت ذهن» هابز و «اشتها برای دانستن» کانت.",
+    "en": "Epistemic: a genuine desire for knowledge; Hobbes's “lust of the mind” and Kant's “appetite for knowing”.",
+    "nl": "Epistemisch: een echt verlangen naar kennis; de ‘lust van de geest’ van Hobbes en de ‘honger naar weten’ van Kant."
+   },
+   "sources": [
+    "src:9234679b6d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اختصاصی: معطوف به یک پرسش یا پاسخ معین (کلمه‌ای که نوک زبانم است).",
+    "en": "Specific: directed at a particular question or answer (the word on the tip of my tongue).",
+    "nl": "Specifiek: gericht op een bepaalde vraag of een bepaald antwoord (het woord dat op het puntje van mijn tong ligt)."
+   },
+   "sources": [
+    "src:9234679b6d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فراگیر: جست‌وجوی هر محرک تازه برای فرار از کسالت؛ مثل ورق زدن بی‌هدف.",
+    "en": "Diversive: seeking any new stimulus to escape boredom; like flipping pages aimlessly.",
+    "nl": "Divers: elke nieuwe prikkel zoeken om aan verveling te ontsnappen; zoals doelloos bladeren."
+   },
+   "sources": [
+    "src:9234679b6d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جوردن لیتمن بعدها دو حالت را جدا کرد: کنجکاوی «علاقه» (لذت‌بخش) و «محرومیت» (ناخوشایند، نیاز به دانستن).",
+    "en": "Jordan Litman later separated two states: “interest” curiosity (pleasant) and “deprivation” curiosity (unpleasant, a need to know).",
+    "nl": "Jordan Litman onderscheidde later twee toestanden: ‘interesse’-nieuwsgierigheid (prettig) en ‘deprivatie’-nieuwsgierigheid (onaangenaam, een behoefte om te weten)."
+   },
+   "sources": [
+    "src:9234679b6d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:daniel-berlyne",
+  "core:jordan-litman"
+ ],
+ "sources": [
+  "src:9234679b6d",
+  "src:bd5dbf2de2"
+ ],
+ "booklets": [
+  "curiosity:types",
+  "lookagain:curiosity"
+ ],
+ "origin": "curiosity",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

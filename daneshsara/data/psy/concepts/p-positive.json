@@ -1,0 +1,124 @@
+{
+ "id": "psy:p-positive",
+ "kind": "subfield",
+ "title": {
+  "fa": "روان‌شناسی مثبت‌نگر",
+  "en": "Positive Psychology",
+  "nl": "Positieve psychologie"
+ },
+ "parent": "psy:psychology",
+ "field": null,
+ "summary": {
+  "fa": "مطالعهٔ علمی آنچه زندگی را ارزشمند می‌کند: هیجان مثبت، توانمندی‌ها، معنا و شکوفایی. سلیگمن در ۱۹۹۸ به‌عنوان رئیس انجمن روان‌شناسی آمریکا آن را به‌عنوان یک جنبش مطرح کرد.",
+  "en": "The scientific study of what makes life worth living: positive emotion, strengths, meaning and flourishing. Seligman launched it as a movement in 1998 as president of the American Psychological Association.",
+  "nl": "De wetenschappelijke studie van wat het leven de moeite waard maakt: positieve emotie, sterke kanten, betekenis en floreren. Seligman lanceerde het in 1998 als beweging, als voorzitter van de American Psychological Association."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مدل PERMA سلیگمن: هیجان مثبت، درگیری، روابط، معنا، دستاورد.",
+    "en": "Seligman's PERMA model: positive emotion, engagement, relationships, meaning, accomplishment.",
+    "nl": "Het PERMA-model van Seligman: positieve emotie, betrokkenheid, relaties, betekenis, prestatie."
+   },
+   "sources": [
+    "src:ca5dc47af2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نظریهٔ «گسترش و ساختن» فردریکسون: هیجان مثبت دامنهٔ توجه و منابع روانی را گسترش می‌دهد.",
+    "en": "Fredrickson's “broaden and build” theory: positive emotion broadens the scope of attention and builds psychological resources.",
+    "nl": "De ‘broaden and build’-theorie van Fredrickson: positieve emotie verbreedt de aandacht en bouwt psychologische hulpbronnen op."
+   },
+   "sources": [
+    "src:ca5dc47af2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "غرقگی (Flow) چیکسنت‌میهایی: حالت جذب کامل در کاری با چالش و مهارت متوازن.",
+    "en": "Csikszentmihalyi's flow: a state of full absorption in a task with balanced challenge and skill.",
+    "nl": "Flow van Csikszentmihalyi: een toestand van volledig opgaan in een taak met een evenwicht tussen uitdaging en vaardigheid."
+   },
+   "sources": [
+    "src:ca5dc47af2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طبقه‌بندی VIA پترسون و سلیگمن (۲۰۰۴): ۲۴ توانمندی منش در ۶ فضیلت.",
+    "en": "Peterson and Seligman's VIA classification (2004): 24 character strengths in 6 virtues.",
+    "nl": "De VIA-classificatie van Peterson en Seligman (2004): 24 karaktersterktes in 6 deugden."
+   },
+   "sources": [
+    "src:ca5dc47af2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: خطر «مثبت‌اندیشی سمی» و نادیده‌گرفتن رنج؛ موج دوم (لوماس، ایوتزان) به این پاسخ داد.",
+    "en": "Critique: the risk of “toxic positivity” and ignoring suffering; the second wave (Lomas, Ivtzan) responded to this.",
+    "nl": "Kritiek: het risico van ‘toxische positiviteit’ en het negeren van lijden; de tweede golf (Lomas, Ivtzan) reageerde hierop."
+   },
+   "sources": [
+    "src:ca5dc47af2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مرور دست‌نامهٔ مثبت‌گرایی در کار: PERMA، امید، غرقگی، معنا، درگیری کاری، طراحی شغل.",
+    "en": "Review of the handbook of positivity at work: PERMA, hope, flow, meaning, work engagement, job design.",
+    "nl": "Bespreking van het handboek positiviteit op het werk: PERMA, hoop, flow, betekenis, bevlogenheid, functieontwerp."
+   },
+   "sources": [
+    "src:ca5dc47af2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "احتیاط: «نسبت مثبت‌گرایی» ۲٫۹ به ۱ فردریکسون و لوسادا به دلیل خطای ریاضی پس گرفته شد (براون، سوکال و فریدمن ۲۰۱۳).",
+    "en": "Caution: Fredrickson and Losada's 2.9-to-1 “positivity ratio” was retracted because of a mathematical error (Brown, Sokal and Friedman 2013).",
+    "nl": "Let op: de ‘positiviteitsratio’ van 2,9 op 1 van Fredrickson en Losada werd ingetrokken wegens een wiskundige fout (Brown, Sokal en Friedman 2013)."
+   },
+   "sources": [
+    "src:ca5dc47af2"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:happiness-origins",
+   "rel": "see-also",
+   "note": {
+    "fa": "علم بهزیستی",
+    "en": "The science of well-being",
+    "nl": "De wetenschap van welzijn"
+   }
+  }
+ ],
+ "people": [
+  "core:martin-seligman",
+  "core:mihaly-csikszentmihalyi",
+  "core:barbara-fredrickson",
+  "core:christopher-peterson"
+ ],
+ "sources": [
+  "src:ca5dc47af2",
+  "src:ba8c3123bf",
+  "src:464930a06c"
+ ],
+ "booklets": [
+  "poswork:why"
+ ],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

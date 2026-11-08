@@ -1,0 +1,117 @@
+{
+ "id": "psy:ego-disorders",
+ "kind": "concept",
+ "title": {
+  "fa": "اختلالات خویشتن",
+  "en": "Ego disorders & dissociation",
+  "nl": "Ik-stoornissen en dissociatie"
+ },
+ "parent": "psy:descriptive-psychopathology",
+ "field": "psy:descriptive-psychopathology",
+ "summary": {
+  "fa": "آسیب در احساس‌های بدیهی «من»: زنده بودن، فعال بودن، یکپارچگی، هویت و مرزها؛ و تاریخ هیستری، هیپنوتیزم و تجزیه.",
+  "en": "Disturbance in the self-evident feelings of “I”: being alive, being active, unity, identity and boundaries; and the history of hysteria, hypnosis and dissociation.",
+  "nl": "Verstoring van de vanzelfsprekende ‘ik’-gevoelens: leven, actief zijn, eenheid, identiteit en grenzen; en de geschiedenis van hysterie, hypnose en dissociatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پنج بُعد خویشتن (شارفتر).",
+    "en": "Five dimensions of the self (Scharfetter).",
+    "nl": "Vijf dimensies van het zelf (Scharfetter)."
+   },
+   "sources": [
+    "src:e9c578fec9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شارکو و سالپتریر در برابر مکتب نانسی: هیپنوتیزم = تلقین.",
+    "en": "Charcot and the Salpêtrière versus the Nancy school: hypnosis = suggestion.",
+    "nl": "Charcot en de Salpêtrière tegenover de school van Nancy: hypnose = suggestie."
+   },
+   "sources": [
+    "src:e9c578fec9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هلن اسمیت و فلورنوا؛ سیبل و نقش تلقین.",
+    "en": "Hélène Smith and Flournoy; Sybil and the role of suggestion.",
+    "nl": "Hélène Smith en Flournoy; Sybil en de rol van suggestie."
+   },
+   "sources": [
+    "src:e9c578fec9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "متسینگر: «خود» مدلی است که مغز می‌سازد.",
+    "en": "Metzinger: the “self” is a model the brain builds.",
+    "nl": "Metzinger: het ‘zelf’ is een model dat het brein bouwt."
+   },
+   "sources": [
+    "src:e9c578fec9"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:depersonalization",
+   "rel": "see-also",
+   "note": {
+    "fa": "مسخ",
+    "en": "Depersonalisation",
+    "nl": "Depersonalisatie"
+   }
+  },
+  {
+   "to": "psy:suggestibility",
+   "rel": "see-also",
+   "note": {
+    "fa": "تلقین",
+    "en": "Suggestion",
+    "nl": "Suggestie"
+   }
+  },
+  {
+   "to": "psy:false-memory",
+   "rel": "see-also",
+   "note": {
+    "fa": "حافظه",
+    "en": "Memory",
+    "nl": "Geheugen"
+   }
+  },
+  {
+   "to": "psy:delusion",
+   "rel": "see-also",
+   "note": {
+    "fa": "کنترل‌شدگی",
+    "en": "Feeling controlled",
+    "nl": "Gevoel bestuurd te worden"
+   }
+  }
+ ],
+ "people": [
+  "core:jean-martin-charcot",
+  "core:hippolyte-bernheim",
+  "core:theodore-flournoy",
+  "core:christian-scharfetter",
+  "core:thomas-metzinger"
+ ],
+ "sources": [
+  "src:e9c578fec9"
+ ],
+ "booklets": [
+  "psychopath:self"
+ ],
+ "origin": "psychopath",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

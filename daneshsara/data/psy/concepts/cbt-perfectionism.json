@@ -1,0 +1,68 @@
+{
+ "id": "psy:cbt-perfectionism",
+ "kind": "concept",
+ "title": {
+  "fa": "درمان شناختی-رفتاری کمال‌طلبی",
+  "en": "CBT for perfectionism",
+  "nl": "CGT voor perfectionisme"
+ },
+ "parent": "psy:t-cbt",
+ "field": "psy:t-cbt",
+ "summary": {
+  "fa": "پروتکل ایگن، وید، شفران و آنتونی برای کاهش «کمال‌طلبی بالینی»: تعریف ارزش خود بر اساس دستیابی به استانداردهای سخت‌گیرانه با وجود پیامدهای منفی.",
+  "en": "The protocol of Egan, Wade, Shafran and Antony for reducing “clinical perfectionism”: basing self-worth on meeting demanding standards despite negative consequences.",
+  "nl": "Het protocol van Egan, Wade, Shafran en Antony om ‘klinisch perfectionisme’ te verminderen: zelfwaarde baseren op het halen van strenge normen ondanks negatieve gevolgen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آزمایش‌های رفتاری: انجام عمدی کار «به اندازهٔ کافی خوب» و دیدن پیامد واقعی.",
+    "en": "Behavioural experiments: deliberately doing a task “well enough” and seeing the real outcome.",
+    "nl": "Gedragsexperimenten: bewust een taak ‘goed genoeg’ doen en de werkelijke uitkomst zien."
+   },
+   "sources": [
+    "src:4d31134bc9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گسترش منابع ارزش خود فراتر از دستاورد.",
+    "en": "Broadening the sources of self-worth beyond achievement.",
+    "nl": "De bronnen van eigenwaarde verbreden tot buiten prestaties."
+   },
+   "sources": [
+    "src:4d31134bc9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کار روی تعلل، وارسی و اجتناب که کمال‌طلبی می‌سازد.",
+    "en": "Working on the procrastination, checking and avoidance that perfectionism creates.",
+    "nl": "Werken aan het uitstelgedrag, controleren en vermijden dat perfectionisme veroorzaakt."
+   },
+   "sources": [
+    "src:4d31134bc9"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:sarah-egan",
+  "core:tracey-wade",
+  "core:roz-shafran",
+  "core:martin-antony"
+ ],
+ "sources": [
+  "src:4d31134bc9"
+ ],
+ "booklets": [
+  "perfection"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

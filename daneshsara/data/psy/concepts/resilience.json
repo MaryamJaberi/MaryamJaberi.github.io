@@ -1,0 +1,165 @@
+{
+ "id": "psy:resilience",
+ "kind": "concept",
+ "title": {
+  "fa": "تاب‌آوری و انعطاف‌پذیری",
+  "en": "Resilience & flexibility",
+  "nl": "Veerkracht en flexibiliteit"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "شایع‌ترین واکنش به رویدادهای بالقوه آسیب‌زا: پریشانی گذرا و کارکرد پایدار؛ راز آن انعطاف است نه یک صفت ثابت (بونانو).",
+  "en": "The most common response to potentially traumatic events: transient distress and stable functioning; its secret is flexibility, not a fixed trait (Bonanno).",
+  "nl": "De meest voorkomende reactie op mogelijk traumatische gebeurtenissen: tijdelijke ontreddering en stabiel functioneren; het geheim is flexibiliteit, geen vaste eigenschap (Bonanno)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سه مسیر: تاب‌آوری (حدود دو سوم)، بهبودی، و نشانه‌های مزمن (حدود یک دهم).",
+    "en": "Three trajectories: resilience (about two thirds), recovery, and chronic symptoms (about one tenth).",
+    "nl": "Drie trajecten: veerkracht (ongeveer twee derde), herstel, en chronische klachten (ongeveer een tiende)."
+   },
+   "sources": [
+    "src:eaa2b3a5e4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ادراک شدت تروما بیش از شدت عینی آن پیامد را پیش‌بینی می‌کند.",
+    "en": "Perceived severity of trauma predicts outcome more than its objective severity.",
+    "nl": "De ervaren ernst van een trauma voorspelt de uitkomst beter dan de objectieve ernst."
+   },
+   "sources": [
+    "src:eaa2b3a5e4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "معمای تاب‌آوری: هر عامل سهم کوچکی دارد و بزرگ‌ترین برش «توضیح‌داده‌نشده» است.",
+    "en": "The resilience puzzle: each factor contributes a little, and the largest slice is “unexplained”.",
+    "nl": "Het veerkrachtraadsel: elke factor draagt een beetje bij, en het grootste deel is ‘onverklaard’."
+   },
+   "sources": [
+    "src:eaa2b3a5e4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ذهنیت انعطاف‌پذیر: خوش‌بینی، اعتماد به مقابله، نگاه چالشی.",
+    "en": "A flexibility mindset: optimism, confidence in coping, a challenge orientation.",
+    "nl": "Een flexibele mindset: optimisme, vertrouwen in je copingvermogen, een uitdagende blik."
+   },
+   "sources": [
+    "src:eaa2b3a5e4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "توالی انعطاف: حساسیت به زمینه، ذخیرهٔ اقدامات، پایش بازخورد.",
+    "en": "The flexibility sequence: context sensitivity, a repertoire of actions, feedback monitoring.",
+    "nl": "De flexibiliteitsreeks: gevoeligheid voor context, een repertoire aan handelingen, feedback bewaken."
+   },
+   "sources": [
+    "src:eaa2b3a5e4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سرسختی (کوباسا): تعهد، کنترل، چالش.",
+    "en": "Hardiness (Kobasa): commitment, control, challenge.",
+    "nl": "Hardiness (Kobasa): betrokkenheid, controle, uitdaging."
+   },
+   "sources": [
+    "src:eaa2b3a5e4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گنجینهٔ راهبردها و هماهنگی راهبرد با موقعیت (بونانو)؛ فراشناخت پیوند خویشتنداری و موفقیت را میانجی می‌کند (بورگلر و هنکه ۲۰۲۳).",
+    "en": "A repertoire of strategies and matching strategy to situation (Bonanno); metacognition mediates the link between self-control and success (Bürgler and Hennecke 2023).",
+    "nl": "Een repertoire aan strategieën en de strategie afstemmen op de situatie (Bonanno); metacognitie medieert het verband tussen zelfbeheersing en succes (Bürgler en Hennecke 2023)."
+   },
+   "sources": [
+    "src:eaa2b3a5e4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بونانو: «تجربهٔ بالقوه آسیب‌زا»؛ تاب‌آوری شایع‌ترین واکنش است.",
+    "en": "Bonanno: “potentially traumatic experience”; resilience is the most common response.",
+    "nl": "Bonanno: ‘mogelijk traumatische ervaring’; veerkracht is de meest voorkomende reactie."
+   },
+   "sources": [
+    "src:eaa2b3a5e4"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:ptsd",
+   "rel": "see-also",
+   "note": {
+    "fa": "تروما",
+    "en": "Trauma",
+    "nl": "Trauma"
+   }
+  },
+  {
+   "to": "psy:emotion-regulation",
+   "rel": "see-also",
+   "note": {
+    "fa": "انعطاف هیجانی",
+    "en": "Emotional flexibility",
+    "nl": "Emotionele flexibiliteit"
+   }
+  },
+  {
+   "to": "psy:stress-mindset",
+   "rel": "critiques",
+   "note": {
+    "fa": "نگاه چالشی",
+    "en": "Challenge view",
+    "nl": "Uitdagende blik"
+   }
+  },
+  {
+   "to": "psy:hope",
+   "rel": "see-also",
+   "note": {
+    "fa": "خوش‌بینی",
+    "en": "Optimism",
+    "nl": "Optimisme"
+   }
+  }
+ ],
+ "people": [
+  "core:george-bonanno",
+  "core:suzanne-kobasa",
+  "core:walter-mischel"
+ ],
+ "sources": [
+  "src:eaa2b3a5e4",
+  "src:81c884592f"
+ ],
+ "booklets": [
+  "trauma:trajectories",
+  "trauma:paradox",
+  "trauma:flex",
+  "s7:poly",
+  "s9:death",
+  "riseabove:labels"
+ ],
+ "origin": "trauma",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

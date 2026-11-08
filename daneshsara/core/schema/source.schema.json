@@ -1,0 +1,9 @@
+{"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "source.schema.json", "title": "منبع",
+ "type": "object", "required": ["id", "cite", "tier"], "additionalProperties": false,
+ "properties": {
+  "id": {"type": "string", "pattern": "^src:[a-f0-9]{10}$"},
+  "cite": {"type": "string"}, "year": {"type": ["integer", "null"]},
+  "tier": {"enum": [1, 2, 3, 4], "description": "۱ فراتحلیل/تکرار، ۲ مقالهٔ داوری‌شده یا آمار رسمی، ۳ کتاب یا سخنرانی متخصص، ۴ سرنخ"},
+  "url": {"type": "string"}, "doi": {"type": "string"},
+  "persian": {"type": "object", "properties": {"title": {"type": "string"}, "publisher": {"type": "string"}}},
+  "wikis": {"type": "array", "items": {"type": "string"}}}}

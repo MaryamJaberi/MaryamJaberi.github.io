@@ -1,0 +1,113 @@
+{
+ "id": "psy:anxiety",
+ "kind": "subfield",
+ "title": {
+  "fa": "اختلالات اضطرابی",
+  "en": "Anxiety disorders",
+  "nl": "Angststoornissen"
+ },
+ "parent": "psy:psychiatry",
+ "field": null,
+ "summary": {
+  "fa": "اضطراب فراگیر، پانیک، اضطراب اجتماعی و فوبیاها. در DSM-5 وسواس فکری-عملی فصل جداگانه یافت.",
+  "en": "Generalised anxiety, panic, social anxiety and phobias. In DSM-5, obsessive-compulsive disorder got its own chapter.",
+  "nl": "Gegeneraliseerde angst, paniek, sociale angst en fobieën. In de DSM-5 kreeg de obsessieve-compulsieve stoornis een eigen hoofdstuk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نگرانی در اضطراب فراگیر شکلی از تفکر تکراری رو به آینده است (بورکوویک).",
+    "en": "Worry in generalised anxiety is a form of future-oriented repetitive thinking (Borkovec).",
+    "nl": "Piekeren bij gegeneraliseerde angst is een vorm van op de toekomst gericht herhaald denken (Borkovec)."
+   },
+   "sources": [
+    "src:9b203385a9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درمان فراشناختی ولز نگرانی و نشخوار را با «نشانگان شناختی-توجهی» توضیح می‌دهد.",
+    "en": "Wells's metacognitive therapy explains worry and rumination through the “cognitive attentional syndrome”.",
+    "nl": "De metacognitieve therapie van Wells verklaart piekeren en malen via het ‘cognitief-attentioneel syndroom’."
+   },
+   "sources": [
+    "src:9b203385a9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مواجهه سنگ‌بنای درمان رفتاری اضطراب است.",
+    "en": "Exposure is the cornerstone of behavioural treatment of anxiety.",
+    "nl": "Exposure is de hoeksteen van gedragstherapie bij angst."
+   },
+   "sources": [
+    "src:9b203385a9"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "تفکر تکراری مشترک",
+    "en": "Shared repetitive thinking",
+    "nl": "Gedeeld herhaald denken"
+   }
+  },
+  {
+   "to": "psy:mct",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان",
+    "en": "Treatment",
+    "nl": "Behandeling"
+   }
+  },
+  {
+   "to": "psy:health-anxiety",
+   "rel": "see-also",
+   "note": {
+    "fa": "تمرکز بر بدن",
+    "en": "Focus on the body",
+    "nl": "Focus op het lichaam"
+   }
+  },
+  {
+   "to": "psy:neuroticism",
+   "rel": "see-also",
+   "note": {
+    "fa": "صفت زیربنایی",
+    "en": "Underlying trait",
+    "nl": "Onderliggende eigenschap"
+   }
+  },
+  {
+   "to": "psy:subjective-fear",
+   "rel": "see-also",
+   "note": {
+    "fa": "احساس ترس",
+    "en": "Feeling of fear",
+    "nl": "Angstgevoel"
+   }
+  }
+ ],
+ "people": [
+  "core:thomas-borkovec",
+  "core:adrian-wells"
+ ],
+ "sources": [
+  "src:9b203385a9"
+ ],
+ "booklets": [
+  "psychopath:anxiety",
+  "shelf11:mental"
+ ],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

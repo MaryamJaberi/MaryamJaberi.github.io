@@ -1,0 +1,73 @@
+{
+ "id": "psy:rejection-sensitivity",
+ "kind": "concept",
+ "title": {
+  "fa": "حساسیت به طرد",
+  "en": "Rejection sensitivity",
+  "nl": "Afwijzingsgevoeligheid"
+ },
+ "parent": "psy:transdiagnostic",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "انتظار مضطربانهٔ طرد، دیدن آن در نشانه‌های مبهم و واکنش شدید به آن؛ از چهار فرایند فراگیر درون‌سازی.",
+  "en": "Anxiously expecting rejection, seeing it in ambiguous cues and reacting strongly to it; one of the four broad internalising processes.",
+  "nl": "Angstig afwijzing verwachten, die zien in dubbelzinnige signalen en er heftig op reageren; een van de vier brede internaliserende processen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در اضطراب اجتماعی، افسردگی، شخصیت مرزی و روابط زناشویی دیده می‌شود.",
+    "en": "Seen in social anxiety, depression, borderline personality and marital relationships.",
+    "nl": "Te zien bij sociale angst, depressie, borderline-persoonlijkheid en huwelijksrelaties."
+   },
+   "sources": [
+    "src:549b55d9ac"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خلوت ناخودمختار («با دیگران حس می‌کنم تعلق ندارم») با آن پیوند دارد.",
+    "en": "Non-self-determined solitude (“With others I feel I don't belong”) is linked to it.",
+    "nl": "Niet-zelfgekozen alleen zijn (‘Bij anderen voel ik dat ik er niet bij hoor’) hangt ermee samen."
+   },
+   "sources": [
+    "src:549b55d9ac"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:belonging",
+   "rel": "see-also",
+   "note": {
+    "fa": "تهدید تعلق",
+    "en": "Belonging threat",
+    "nl": "Bedreigde verbondenheid"
+   }
+  },
+  {
+   "to": "psy:vulnerable-narcissism",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌پوشانی",
+    "en": "Overlap",
+    "nl": "Overlap"
+   }
+  }
+ ],
+ "people": [
+  "core:geraldine-downey"
+ ],
+ "sources": [
+  "src:549b55d9ac"
+ ],
+ "booklets": [
+  "workshop:processes"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

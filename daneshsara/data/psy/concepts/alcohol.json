@@ -1,0 +1,126 @@
+{
+ "id": "psy:alcohol",
+ "kind": "concept",
+ "title": {
+  "fa": "الکل",
+  "en": "Alcohol & alcohol use disorder",
+  "nl": "Alcohol en alcoholgebruiksstoornis"
+ },
+ "parent": "psy:substances",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "مادهٔ آرام‌بخش با آسیب گسترده به بدن؛ قطع ناگهانی در فرد وابسته می‌تواند تشنج و دلیریوم بدهد.",
+  "en": "A sedative substance with widespread damage to the body; sudden stopping in a dependent person can cause seizures and delirium.",
+  "nl": "Een kalmerend middel met brede schade aan het lichaam; plotseling stoppen bij iemand die afhankelijk is, kan epileptische aanvallen en delirium veroorzaken."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مرز مصرف پرخطر (NIAAA): مردان بیش از ۴ در روز یا ۱۴ در هفته؛ زنان بیش از ۳ یا ۷.",
+    "en": "The threshold for risky drinking (NIAAA): men more than 4 a day or 14 a week; women more than 3 or 7.",
+    "nl": "De grens voor riskant drinken (NIAAA): mannen meer dan 4 per dag of 14 per week; vrouwen meer dan 3 of 7."
+   },
+   "sources": [
+    "src:e2c9ccc81a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بلک‌اوت: اختلال ثبت حافظه.",
+    "en": "Blackout: impaired memory encoding.",
+    "nl": "Black-out: verstoorde opslag in het geheugen."
+   },
+   "sources": [
+    "src:e2c9ccc81a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ورنیکه-کورساکوف ناشی از کمبود تیامین.",
+    "en": "Wernicke-Korsakoff caused by thiamine deficiency.",
+    "nl": "Wernicke-Korsakoff door een tekort aan thiamine."
+   },
+   "sources": [
+    "src:e2c9ccc81a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نزدیک نیمی از وابستگان پیشین در سال اخیر بی‌علامت بودند (داوسون ۲۰۰۵).",
+    "en": "Nearly half of those previously dependent were symptom-free in the past year (Dawson 2005).",
+    "nl": "Bijna de helft van de mensen die eerder afhankelijk waren, had het afgelopen jaar geen klachten (Dawson 2005)."
+   },
+   "sources": [
+    "src:e2c9ccc81a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خطر متانول در نوشیدنی‌های تقلبی.",
+    "en": "The danger of methanol in counterfeit drinks.",
+    "nl": "Het gevaar van methanol in nagemaakte dranken."
+   },
+   "sources": [
+    "src:e2c9ccc81a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-medication",
+   "rel": "applies-to",
+   "note": {
+    "fa": "خوددرمانی",
+    "en": "Self-medication",
+    "nl": "Zelfmedicatie"
+   }
+  },
+  {
+   "to": "psy:delirium",
+   "rel": "see-also",
+   "note": {
+    "fa": "محرومیت",
+    "en": "Withdrawal",
+    "nl": "Onthouding"
+   }
+  },
+  {
+   "to": "psy:surface-deep",
+   "rel": "see-also",
+   "note": {
+    "fa": "بعد از کار",
+    "en": "After work",
+    "nl": "Na het werk"
+   }
+  },
+  {
+   "to": "psy:opioids",
+   "rel": "see-also",
+   "note": {
+    "fa": "ترکیب خطرناک",
+    "en": "Dangerous combination",
+    "nl": "Gevaarlijke combinatie"
+   }
+  }
+ ],
+ "people": [
+  "core:rhazes-al-razi",
+  "core:abulcasis-al-zahrawi"
+ ],
+ "sources": [
+  "src:e2c9ccc81a",
+  "src:ddc8db5403"
+ ],
+ "booklets": [
+  "families:alcohol"
+ ],
+ "origin": "families",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

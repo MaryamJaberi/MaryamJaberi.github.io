@@ -1,0 +1,114 @@
+{
+ "id": "psy:hope",
+ "kind": "concept",
+ "title": {
+  "fa": "نظریهٔ امید",
+  "en": "Hope theory",
+  "nl": "Hooptheorie"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "چارلز اسنایدر: امید = هدف روشن + تفکر مسیری (راه‌ها) + تفکر عاملی (اراده و انگیزه).",
+  "en": "Charles Snyder: hope = a clear goal + pathways thinking (routes) + agency thinking (will and motivation).",
+  "nl": "Charles Snyder: hoop = een duidelijk doel + wegen-denken (routes) + handelingsdenken (wil en motivatie)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "امید یکی از چهار مؤلفهٔ «سرمایهٔ روان‌شناختی» لوتانز است: امید، خودکارآمدی، تاب‌آوری، خوش‌بینی.",
+    "en": "Hope is one of the four components of Luthans's “psychological capital”: hope, self-efficacy, resilience, optimism.",
+    "nl": "Hoop is een van de vier componenten van het ‘psychologisch kapitaal’ van Luthans: hoop, zelfeffectiviteit, veerkracht, optimisme."
+   },
+   "sources": [
+    "src:c8763f6b3f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سازمان‌ها هم می‌توانند امیدوار یا ناامید باشند (واندلر و همکاران).",
+    "en": "Organisations too can be hopeful or hopeless (Wandeler and colleagues).",
+    "nl": "Ook organisaties kunnen hoopvol of hopeloos zijn (Wandeler en collega's)."
+   },
+   "sources": [
+    "src:c8763f6b3f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با امید و بهبود در جلسهٔ ۱.",
+    "en": "Link with hope and recovery in session 1.",
+    "nl": "Link met hoop en herstel in sessie 1."
+   },
+   "sources": [
+    "src:c8763f6b3f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "امید = مسیرها + عاملیت + هدف (اسنایدر).",
+    "en": "Hope = pathways + agency + goal (Snyder).",
+    "nl": "Hoop = wegen + handelingskracht + doel (Snyder)."
+   },
+   "sources": [
+    "src:c8763f6b3f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خیال‌پردازی مثبت پیش‌بینی‌کنندهٔ موفقیت کمتر و افسردگی بعدی است (اوتینگن).",
+    "en": "Positive fantasising predicts less success and later depression (Oettingen).",
+    "nl": "Positief fantaseren voorspelt minder succes en latere depressie (Oettingen)."
+   },
+   "sources": [
+    "src:c8763f6b3f"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:sdt",
+   "rel": "see-also",
+   "note": {
+    "fa": "انگیزش",
+    "en": "Motivation",
+    "nl": "Motivatie"
+   }
+  },
+  {
+   "to": "psy:perseverance",
+   "rel": "see-also",
+   "note": {
+    "fa": "پشتکار",
+    "en": "Perseverance",
+    "nl": "Doorzettingsvermogen"
+   }
+  }
+ ],
+ "people": [
+  "core:charles-snyder",
+  "core:shane-lopez",
+  "core:fred-luthans"
+ ],
+ "sources": [
+  "src:c8763f6b3f",
+  "src:86408e07ef",
+  "src:9dbb76253c",
+  "src:382b1fd902"
+ ],
+ "booklets": [
+  "poswork:individual",
+  "s9:hope",
+  "s9:skeptical",
+  "s9:beneficial"
+ ],
+ "origin": "poswork",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

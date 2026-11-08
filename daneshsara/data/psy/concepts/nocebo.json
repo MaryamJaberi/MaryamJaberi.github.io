@@ -1,0 +1,76 @@
+{
+ "id": "psy:nocebo",
+ "kind": "concept",
+ "title": {
+  "fa": "نوسبو",
+  "en": "Nocebo effect",
+  "nl": "Nocebo-effect"
+ },
+ "parent": "psy:placebo-expectation",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "عوارض ناخوشایندی که از انتظار منفی برمی‌خیزند، نه از مادهٔ فعال.",
+  "en": "Unpleasant side effects arising from negative expectation, not from the active substance.",
+  "nl": "Onaangename bijwerkingen die voortkomen uit negatieve verwachting, niet uit de werkzame stof."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فراتحلیل JAMA Netw Open (۲۰۲۲): ۱۲ کارآزمایی واکسن کووید، ۴۵٬۳۸۰ نفر؛ نوسبو حدود ۷۶٪ عوارض سیستمیک دوز اول (سردرد، خستگی).",
+    "en": "A meta-analysis in JAMA Network Open (2022): 12 COVID vaccine trials, 45,380 people; nocebo accounted for about 76% of systemic side effects after the first dose (headache, fatigue).",
+    "nl": "Een meta-analyse in JAMA Network Open (2022): 12 studies met COVID-vaccins, 45.380 mensen; nocebo verklaarde ongeveer 76% van de systemische bijwerkingen na de eerste dosis (hoofdpijn, vermoeidheid)."
+   },
+   "sources": [
+    "src:253ff47624"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«سرماخوردگی گل سرخ» مکنزی (۱۸۸۶) با گل مصنوعی.",
+    "en": "Mackenzie's “rose cold” (1886) with an artificial rose.",
+    "nl": "De ‘rozenverkoudheid’ van Mackenzie (1886) met een kunstroos."
+   },
+   "sources": [
+    "src:253ff47624"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیام بالینی: شیوهٔ بیان عوارض دارو خود بر عوارض اثر دارد.",
+    "en": "Clinical message: the way side effects are described itself affects side effects.",
+    "nl": "Klinische boodschap: de manier waarop bijwerkingen worden beschreven, beïnvloedt de bijwerkingen zelf."
+   },
+   "sources": [
+    "src:253ff47624"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:suggestibility",
+   "rel": "see-also",
+   "note": {
+    "fa": "چارچوب",
+    "en": "Framework",
+    "nl": "Kader"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:253ff47624"
+ ],
+ "booklets": [
+  "suggestible:nocebo",
+  "trauma:validation",
+  "clinicaddiction:brain",
+  "s11:ignorance"
+ ],
+ "origin": "suggestible",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

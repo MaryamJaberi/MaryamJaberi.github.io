@@ -1,0 +1,104 @@
+{
+ "id": "psy:quiet-quitting",
+ "kind": "concept",
+ "title": {
+  "fa": "ترک آرام",
+  "en": "Quiet quitting",
+  "nl": "Stil stoppen (quiet quitting)"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "انجام حداقل الزامات شغل، بدون وقت، تلاش یا اشتیاق اضافه؛ فقط تا حدی که اخراج نشوم. اصطلاح در ۲۰۲۲ در شبکه‌های اجتماعی فراگیر شد.",
+  "en": "Doing the minimum the job requires, without extra time, effort or enthusiasm; just enough not to be fired. The term went viral on social media in 2022.",
+  "nl": "Alleen het minimum doen dat de baan vraagt, zonder extra tijd, inzet of enthousiasme; net genoeg om niet ontslagen te worden. De term ging in 2022 viraal op sociale media."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "داده‌های زنگر فوکمن (۱۳٬۰۰۰ کارمند، ۲٬۸۰۱ مدیر): در دهک بالای مدیران ۳٪ ترک آرام و ۶۲٪ آمادگی برای تلاش بیشتر؛ در دهک پایین ۱۴٪ و ۲۰٪.",
+    "en": "Zenger Folkman data (13,000 employees, 2,801 managers): under the top tenth of managers, 3% quiet quitting and 62% willing to give extra effort; under the bottom tenth, 14% and 20%.",
+    "nl": "Gegevens van Zenger Folkman (13.000 medewerkers, 2801 leidinggevenden): onder het beste tiende van de leidinggevenden 3% stil stoppen en 62% bereid tot extra inzet; onder het slechtste tiende 14% en 20%."
+   },
+   "sources": [
+    "src:274422be5f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مهم‌ترین عامل تعیین‌کننده مدیر است، نه «نسلی بی‌انگیزه».",
+    "en": "The most important determining factor is the manager, not an “unmotivated generation”.",
+    "nl": "De belangrijkste bepalende factor is de leidinggevende, niet een ‘ongemotiveerde generatie’."
+   },
+   "sources": [
+    "src:274422be5f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "راهکار: مدیر توانمندتر، یعنی کسی که بین نتیجه‌گرفتن و توجه به نیاز دیگران توازن برقرار کند.",
+    "en": "The solution: a more capable manager, someone who balances getting results with attending to others' needs.",
+    "nl": "De oplossing: een bekwamere leidinggevende, iemand die resultaten boeken en aandacht voor de behoeften van anderen in balans brengt."
+   },
+   "sources": [
+    "src:274422be5f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سیاست سرکوب ونتینگ هم به ترک آرام می‌انجامد.",
+    "en": "A policy of suppressing venting also leads to quiet quitting.",
+    "nl": "Een beleid van stoom afblazen onderdrukken leidt ook tot stil stoppen."
+   },
+   "sources": [
+    "src:274422be5f"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:destructive-leadership",
+   "rel": "see-also",
+   "note": {
+    "fa": "نقش مدیر",
+    "en": "The manager's role",
+    "nl": "De rol van de leidinggevende"
+   }
+  },
+  {
+   "to": "psy:meaningful-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "نبود معنا",
+    "en": "Lack of meaning",
+    "nl": "Gebrek aan betekenis"
+   }
+  },
+  {
+   "to": "psy:beach-ball",
+   "rel": "explains",
+   "note": {
+    "fa": "پیامد سرکوب",
+    "en": "Consequence of suppression",
+    "nl": "Gevolg van onderdrukken"
+   }
+  }
+ ],
+ "people": [
+  "core:jack-zenger-joseph-folkman"
+ ],
+ "sources": [
+  "src:274422be5f"
+ ],
+ "booklets": [
+  "exit"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

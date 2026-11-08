@@ -1,0 +1,54 @@
+{
+ "id": "sociogenomics",
+ "field": "sociogenomics",
+ "between": [
+  "sociology",
+  "genetics",
+  "econ"
+ ],
+ "title": {
+  "fa": "سوسیوژنومیکس",
+  "en": "Sociogenomics",
+  "nl": "Sociogenomica"
+ },
+ "question": {
+  "fa": "دادهٔ ژنوم دربارهٔ تحصیل، درآمد و تحرک اجتماعی چه می‌گوید و چه نمی‌گوید؟",
+  "en": "What does genomic data say, and not say, about education, income and social mobility?"
+ },
+ "definition": {
+  "fa": "ادغام دادهٔ ژنتیک مولکولی در پژوهش علوم اجتماعی دربارهٔ تحصیل، درآمد، باروری و سلامت."
+ },
+ "landmark": {
+  "fa": "فریز، «ژنتیک و تبیین علوم اجتماعی»، AJS (۲۰۰۸)؛ اولین GWAS تحصیل، Science (۲۰۱۳)؛ کانلی و فلچر، The Genome Factor (۲۰۱۷)",
+  "url": "https://en.wikipedia.org/wiki/Sociogenomics"
+ },
+ "reference": {
+  "fa": "Mills, Barban & Tropf، An Introduction to Statistical Genetic Data Analysis (۲۰۲۰)؛ Harden، The Genetic Lottery (۲۰۲۱)"
+ },
+ "venue": {
+  "fa": "SSGAC؛ Nature Human Behaviour؛ Demography"
+ },
+ "people": [
+  "دانیل بنجامین",
+  "ملیندا میلز",
+  "دالتون کانلی",
+  "کاترین پیج هاردن"
+ ],
+ "finding": {
+  "fa": "نمرهٔ چندژنی تحصیل (Okbay ۲۰۲۲، ۳ میلیون نفر) ۱۲ تا ۱۶٪ واریانس را در نمونهٔ اروپایی‌تبار پیش‌بینی می‌کند؛ حدود نصف اثر در طرح خواهر–برادر ناپدید می‌شود (پرورش ژنتیکی و لایه‌بندی) و در تبار آفریقایی تقریباً کار نمی‌کند. هر دو هشدار اکنون اجماع‌اند.",
+  "replication": "mixed",
+  "url": "https://www.thessgac.org/"
+ },
+ "persian": [],
+ "concepts": {
+  "psy": [
+   "psy:psych-genetics",
+   "psy:social-capital"
+  ]
+ },
+ "iran": {
+  "fa": "هیچ GWAS ایرانی در این مقیاس وجود ندارد؛ نمره‌های اروپایی برای ایرانیان نامعتبرند. ایرانوم شروع جبران است."
+ },
+ "status": "emerging",
+ "review": "draft"
+}

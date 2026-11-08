@@ -1,0 +1,102 @@
+{
+ "id": "psy:soc-work",
+ "kind": "subfield",
+ "title": {
+  "fa": "جامعه‌شناسی کار",
+  "en": "Sociology of work",
+  "nl": "Arbeidssociologie"
+ },
+ "parent": "psy:sociology",
+ "field": null,
+ "summary": {
+  "fa": "کار به‌عنوان نهاد اجتماعی: تقسیم کار، بوروکراسی، بیگانگی و کار عاطفی. مفهوم «کار عاطفی» را جامعه‌شناس آرلی هاکسچایلد ساخت.",
+  "en": "Work as a social institution: division of labour, bureaucracy, alienation and emotional labour. The concept of “emotional labour” was coined by sociologist Arlie Hochschild.",
+  "nl": "Werk als sociale instelling: arbeidsdeling, bureaucratie, vervreemding en emotiewerk. Het begrip ‘emotiewerk’ (emotional labour) werd bedacht door sociologe Arlie Hochschild."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هاکسچایلد (۱۹۸۳): مهمانداران هواپیما و مدیریت تجاری‌شدهٔ احساس.",
+    "en": "Hochschild (1983): flight attendants and the commercialised management of feeling.",
+    "nl": "Hochschild (1983): stewardessen en het commercieel beheren van gevoelens."
+   },
+   "sources": [
+    "src:90558467cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وبر: «قفس آهنین» عقلانیت بوروکراتیک.",
+    "en": "Weber: the “iron cage” of bureaucratic rationality.",
+    "nl": "Weber: de ‘ijzeren kooi’ van bureaucratische rationaliteit."
+   },
+   "sources": [
+    "src:90558467cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تغییر نسلی انتظارات از کار در استعفای بزرگ و ترک آرام.",
+    "en": "Generational change in expectations of work in the Great Resignation and quiet quitting.",
+    "nl": "Generationele verandering in verwachtingen van werk bij de Grote Ontslaggolf en stil stoppen."
+   },
+   "sources": [
+    "src:90558467cc"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:emotional-labor",
+   "rel": "see-also",
+   "note": {
+    "fa": "کار عاطفی",
+    "en": "Emotional labour",
+    "nl": "Emotiewerk"
+   }
+  },
+  {
+   "to": "psy:quiet-quitting",
+   "rel": "see-also",
+   "note": {
+    "fa": "ترک آرام",
+    "en": "Quiet quitting",
+    "nl": "Stil stoppen"
+   }
+  },
+  {
+   "to": "psy:burnout",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرسودگی",
+    "en": "Burnout",
+    "nl": "Burn-out"
+   }
+  },
+  {
+   "to": "psy:p-io",
+   "rel": "see-also",
+   "note": {
+    "fa": "روان‌شناسی سازمانی",
+    "en": "Organisational psychology",
+    "nl": "Organisatiepsychologie"
+   }
+  }
+ ],
+ "people": [
+  "core:arlie-hochschild",
+  "core:max-weber",
+  "core:richard-sennett"
+ ],
+ "sources": [
+  "src:90558467cc"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

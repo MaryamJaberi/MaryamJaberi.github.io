@@ -1,0 +1,77 @@
+{
+ "id": "psy:gamification",
+ "kind": "concept",
+ "title": {
+  "fa": "بازی‌گونه‌سازی در کار",
+  "en": "Gamification",
+  "nl": "Gamificatie"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "افزودن عناصر بازی (امتیاز، چالش، جدول رده‌بندی) به کار یا یادگیری. اثرش به «رضایت» بازیکن بستگی دارد: فهم قاعده‌ها، منصفانه دانستن و درگیر شدن.",
+  "en": "Adding game elements (points, challenges, leaderboards) to work or learning. Its effect depends on the player's “consent”: understanding the rules, finding them fair and being engaged.",
+  "nl": "Spelelementen (punten, uitdagingen, ranglijsten) toevoegen aan werk of leren. Het effect hangt af van de ‘instemming’ van de speler: de regels begrijpen, ze eerlijk vinden en betrokken zijn."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بازی تحمیلی برای کسانی که با آن موافق نبودند، حال کاری را بدتر کرد (مولیک و روتبارد ۲۰۱۴).",
+    "en": "Imposed games worsened work mood for those who did not agree with them (Mollick and Rothbard 2014).",
+    "nl": "Opgelegde spellen verslechterden de werkstemming bij wie het er niet mee eens was (Mollick en Rothbard 2014)."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«دایرهٔ جادویی»: بازی وقتی کار می‌کند که قاعده‌های تازه داوطلبانه پذیرفته شوند.",
+    "en": "The “magic circle”: a game works when new rules are accepted voluntarily.",
+    "nl": "De ‘magische cirkel’: een spel werkt als nieuwe regels vrijwillig worden aanvaard."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:fairness",
+   "rel": "see-also",
+   "note": {
+    "fa": "انصاف",
+    "en": "Fairness",
+    "nl": "Billijkheid"
+   }
+  },
+  {
+   "to": "psy:flow",
+   "rel": "see-also",
+   "note": {
+    "fa": "غرقگی",
+    "en": "Flow",
+    "nl": "Flow"
+   }
+  },
+  {
+   "to": "psy:hardiness",
+   "rel": "contrasts",
+   "note": {
+    "fa": "چالش در برابر تهدید",
+    "en": "Challenge versus threat",
+    "nl": "Uitdaging tegenover dreiging"
+   }
+  }
+ ],
+ "people": [
+  "core:ethan-mollick",
+  "core:katie-salen-eric-zimmerman"
+ ],
+ "sources": [],
+ "booklets": [
+  "s5:gamify"
+ ],
+ "origin": "s5",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

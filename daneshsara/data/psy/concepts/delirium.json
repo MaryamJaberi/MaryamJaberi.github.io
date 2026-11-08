@@ -1,0 +1,85 @@
+{
+ "id": "psy:delirium",
+ "kind": "concept",
+ "title": {
+  "fa": "دلیریوم",
+  "en": "Delirium",
+  "nl": "Delirium"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "اختلال حاد و نوسانی توجه و آگاهی با علت جسمی؛ شایع در بخش ویژه و اغلب تشخیص‌داده‌نشده.",
+  "en": "An acute, fluctuating disturbance of attention and awareness with a physical cause; common in intensive care and often undiagnosed.",
+  "nl": "Een acute, wisselende stoornis van aandacht en bewustzijn met een lichamelijke oorzaak; vaak op de intensive care en vaak niet herkend."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "شش مقیاس شدت؛ ICDSC مناسب‌ترین برای بخش ویژه (کاروالیو ۲۰۱۳).",
+    "en": "Six severity scales; the ICDSC is most suitable for intensive care (Carvalho 2013).",
+    "nl": "Zes ernstschalen; de ICDSC is het meest geschikt voor de intensive care (Carvalho 2013)."
+   },
+   "sources": [
+    "src:b4ccbd761c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "DRS-R-98: ۱۳ گویهٔ شدت (۰ تا ۳) و ۳ گویهٔ تشخیصی.",
+    "en": "DRS-R-98: 13 severity items (0 to 3) and 3 diagnostic items.",
+    "nl": "DRS-R-98: 13 items voor ernst (0 tot 3) en 3 diagnostische items."
+   },
+   "sources": [
+    "src:b4ccbd761c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درمان اصلی: یافتن و درمان علت زمینه‌ای.",
+    "en": "The main treatment: finding and treating the underlying cause.",
+    "nl": "De belangrijkste behandeling: de onderliggende oorzaak vinden en behandelen."
+   },
+   "sources": [
+    "src:b4ccbd761c"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:falls",
+   "rel": "see-also",
+   "note": {
+    "fa": "عامل خطر سقوط",
+    "en": "Fall risk factor",
+    "nl": "Risicofactor voor vallen"
+   }
+  },
+  {
+   "to": "psy:psychosis-risk",
+   "rel": "see-also",
+   "note": {
+    "fa": "توهم",
+    "en": "Hallucination",
+    "nl": "Hallucinatie"
+   }
+  }
+ ],
+ "people": [
+  "core:paula-trzepacz"
+ ],
+ "sources": [
+  "src:b4ccbd761c"
+ ],
+ "booklets": [
+  "shelf3:delirium",
+  "psychopath:consc"
+ ],
+ "origin": "shelf3",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

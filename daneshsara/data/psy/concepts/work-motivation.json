@@ -1,0 +1,132 @@
+{
+ "id": "psy:work-motivation",
+ "kind": "concept",
+ "title": {
+  "fa": "نظریه‌های انگیزش کاری",
+  "en": "Work motivation theories",
+  "nl": "Theorieën over werkmotivatie"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "از مازلو و هرزبرگ تا انصاف، انتظار و هدف‌گذاری؛ مروری از سخنرانی مهمان دکتر علی فرهودیان.",
+  "en": "From Maslow and Herzberg to equity, expectancy and goal-setting; an overview from Dr Ali Farhoudian's guest lecture.",
+  "nl": "Van Maslow en Herzberg tot billijkheid, verwachting en doelstelling; een overzicht uit de gastlezing van dr. Ali Farhoudian."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هرزبرگ: عوامل بهداشتی (حقوق، شرایط) نارضایتی را برمی‌دارند؛ عوامل انگیزاننده (موفقیت، قدردانی، رشد) انگیزه می‌سازند.",
+    "en": "Herzberg: hygiene factors (pay, conditions) remove dissatisfaction; motivators (achievement, recognition, growth) create motivation.",
+    "nl": "Herzberg: hygiënefactoren (loon, omstandigheden) nemen ontevredenheid weg; motivatoren (prestatie, erkenning, groei) wekken motivatie."
+   },
+   "sources": [
+    "src:2db78e524b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ERG آلدرفر: پیشرفت و پسرفت در اثر ناکامی.",
+    "en": "Alderfer's ERG: progression, and regression through frustration.",
+    "nl": "ERG van Alderfer: vooruitgang, en terugval door frustratie."
+   },
+   "sources": [
+    "src:2db78e524b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انصاف (آدامز): واکنش‌ها به بی‌انصافی از کاهش تلاش تا ترک کار.",
+    "en": "Equity (Adams): reactions to unfairness range from reduced effort to quitting.",
+    "nl": "Billijkheid (Adams): reacties op onrecht lopen van minder inzet tot vertrekken."
+   },
+   "sources": [
+    "src:2db78e524b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انتظار (ورووم): تلاش ← عملکرد ← پاداش ← نیاز.",
+    "en": "Expectancy (Vroom): effort → performance → reward → need.",
+    "nl": "Verwachting (Vroom): inspanning → prestatie → beloning → behoefte."
+   },
+   "sources": [
+    "src:2db78e524b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هدف‌گذاری (لاک و لاتام): اهداف مشخص و دشوار با بازخورد.",
+    "en": "Goal-setting (Locke and Latham): specific, difficult goals with feedback.",
+    "nl": "Doelstelling (Locke en Latham): specifieke, moeilijke doelen met feedback."
+   },
+   "sources": [
+    "src:2db78e524b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هرم مازلو بیشتر چارچوب آموزشی است تا یافتهٔ تجربی.",
+    "en": "Maslow's pyramid is more a teaching framework than an empirical finding.",
+    "nl": "De piramide van Maslow is meer een onderwijskader dan een empirische bevinding."
+   },
+   "sources": [
+    "src:2db78e524b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:meaningful-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "معنا",
+    "en": "Meaning",
+    "nl": "Betekenis"
+   }
+  },
+  {
+   "to": "psy:mcclelland",
+   "rel": "see-also",
+   "note": {
+    "fa": "نیازها",
+    "en": "Needs",
+    "nl": "Behoeften"
+   }
+  },
+  {
+   "to": "psy:goal-pursuit",
+   "rel": "see-also",
+   "note": {
+    "fa": "هدف",
+    "en": "Target",
+    "nl": "Doel"
+   }
+  }
+ ],
+ "people": [
+  "core:frederick-herzberg",
+  "core:victor-vroom",
+  "core:edwin-locke",
+  "core:gary-latham",
+  "core:abraham-maslow"
+ ],
+ "sources": [
+  "src:2db78e524b",
+  "src:6d38e07432"
+ ],
+ "booklets": [
+  "theories:needs",
+  "theories:cognitive"
+ ],
+ "origin": "theories",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

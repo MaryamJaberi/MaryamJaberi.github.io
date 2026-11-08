@@ -1,0 +1,141 @@
+{
+ "id": "psy:addiction-therapy",
+ "kind": "concept",
+ "title": {
+  "fa": "اصول روان‌درمانی و مشاورهٔ اعتیاد",
+  "en": "Psychotherapy & counseling in addiction",
+  "nl": "Psychotherapie en counseling bij verslaving"
+ },
+ "parent": "psy:addiction",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "انگیزه پویاست نه ایستا؛ اجبار جای انگیزهٔ درونی را نمی‌گیرد؛ ارتباط درمانی، رازداری و بی‌طرفی ستون‌های کارند.",
+  "en": "Motivation is dynamic, not static; coercion does not replace inner motivation; the therapeutic relationship, confidentiality and neutrality are the pillars of the work.",
+  "nl": "Motivatie is dynamisch, niet statisch; dwang vervangt geen innerlijke motivatie; de therapeutische relatie, vertrouwelijkheid en neutraliteit zijn de pijlers van het werk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "انگیزهٔ پویا: به‌تدریج شکل می‌گیرد و بالا و پایین می‌رود؛ عقب‌گرد شکست کامل نیست. زنجیرهٔ اهداف کوچک.",
+    "en": "Dynamic motivation: it forms gradually and rises and falls; going backwards is not total failure. A chain of small goals.",
+    "nl": "Dynamische motivatie: ze ontstaat geleidelijk en gaat op en neer; terugvallen is geen volledige mislukking. Een keten van kleine doelen."
+   },
+   "sources": [
+    "src:50a654ba8a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اجبار: مراکز اجباری دههٔ ۱۹۳۰ (لکسینگتون) اثر پایدار نداشتند؛ اجبار قانونی امروزی (دادگاه مواد مخدر) اثر نسبتاً خوبی داشته، اما با احترام به حقوق بیمار.",
+    "en": "Coercion: the compulsory centres of the 1930s (Lexington) had no lasting effect; today's legal coercion (drug courts) has had fairly good results, but with respect for the patient's rights.",
+    "nl": "Dwang: de verplichte centra van de jaren dertig (Lexington) hadden geen blijvend effect; hedendaagse juridische drang (drugsrechtbanken) had redelijk goede resultaten, maar met respect voor de rechten van de patiënt."
+   },
+   "sources": [
+    "src:50a654ba8a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارتباط درمانی: شیوه‌های مختلف اثر مشابه دارند؛ کیفیت رابطه تعیین‌کننده است. خطر وابستگی به درمانگر؛ هدف استقلال.",
+    "en": "The therapeutic relationship: different methods have similar effects; the quality of the relationship is decisive. A risk of dependence on the therapist; the goal is independence.",
+    "nl": "De therapeutische relatie: verschillende methoden hebben vergelijkbare effecten; de kwaliteit van de relatie is doorslaggevend. Een risico op afhankelijkheid van de therapeut; het doel is zelfstandigheid."
+   },
+   "sources": [
+    "src:50a654ba8a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رازداری: «درمانگر هرگز دروغ نمی‌گوید؛ می‌گوید این را نمی‌توانم بگویم.» استثناها: خطر خودکشی، آسیب به دیگران، آزار کودک.",
+    "en": "Confidentiality: “A therapist never lies; they say ‘I can't tell you that.’” Exceptions: suicide risk, harm to others, child abuse.",
+    "nl": "Vertrouwelijkheid: ‘Een therapeut liegt nooit; hij zegt: dat kan ik niet vertellen.’ Uitzonderingen: suïciderisico, schade aan anderen, kindermishandeling."
+   },
+   "sources": [
+    "src:50a654ba8a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آزمایش ادرار: خط کنترل در کیت؛ مثبت فقط وجود ماده را نشان می‌دهد نه زمان یا میزان؛ همراه گفت‌وگوی بالینی تفسیر شود.",
+    "en": "Urine testing: the control line on the kit; a positive shows only the presence of the substance, not timing or amount; interpret it with a clinical conversation.",
+    "nl": "Urinetest: de controlestreep op de test; een positieve uitslag laat alleen de aanwezigheid van het middel zien, niet het tijdstip of de hoeveelheid; interpreteer haar samen met een klinisch gesprek."
+   },
+   "sources": [
+    "src:50a654ba8a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سه هدف درمان: مسمومیت حاد، ترک و خماری، حفظ و پیشگیری از عود؛ اهداف مکتوب مثل قرارداد.",
+    "en": "Three goals of treatment: acute intoxication, detox and withdrawal, maintenance and relapse prevention; written goals like a contract.",
+    "nl": "Drie doelen van behandeling: acute intoxicatie, ontwenning en onthouding, onderhoud en terugvalpreventie; schriftelijke doelen als een contract."
+   },
+   "sources": [
+    "src:50a654ba8a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "عاملیت و خانواده: مرز روشن، پرهیز از سرزنش و تهدید، گفت‌وگوی حمایتی.",
+    "en": "Agency and the family: clear boundaries, avoiding blame and threats, supportive conversation.",
+    "nl": "Handelingsvermogen en het gezin: duidelijke grenzen, verwijten en dreigementen vermijden, steunende gesprekken."
+   },
+   "sources": [
+    "src:50a654ba8a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیام متعادل دربارهٔ مغز: آسیب هست، یکسان نیست، و بخشی با قطع مصرف بهبود می‌یابد.",
+    "en": "A balanced message about the brain: there is damage, it is not uniform, and part of it improves after stopping.",
+    "nl": "Een evenwichtige boodschap over het brein: er is schade, die is niet bij iedereen gelijk, en een deel herstelt na het stoppen."
+   },
+   "sources": [
+    "src:50a654ba8a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:mi",
+   "rel": "see-also",
+   "note": {
+    "fa": "ابزار اصلی",
+    "en": "Main tool",
+    "nl": "Belangrijkste instrument"
+   }
+  },
+  {
+   "to": "psy:autonomy",
+   "rel": "see-also",
+   "note": {
+    "fa": "عاملیت",
+    "en": "Agency",
+    "nl": "Handelingsvermogen"
+   }
+  }
+ ],
+ "people": [
+  "core:hans-strupp",
+  "core:william-miller"
+ ],
+ "sources": [
+  "src:50a654ba8a",
+  "src:50d59365b2"
+ ],
+ "booklets": [
+  "decision:therapy"
+ ],
+ "origin": "decision",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

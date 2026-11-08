@@ -1,0 +1,132 @@
+{
+ "id": "psy:psychiatry-history",
+ "kind": "subfield",
+ "title": {
+  "fa": "تاریخ رده‌بندی روانپزشکی",
+  "en": "History of psychiatric classification",
+  "nl": "Geschiedenis van psychiatrische classificatie"
+ },
+ "parent": "psy:psychiatry",
+ "field": null,
+ "summary": {
+  "fa": "از اخلاط چهارگانهٔ بقراط و جالینوس تا ابن‌سینا، سیدنهام، لینه، کریپلین، نوکریپلینی‌ها و DSM.",
+  "en": "From the four humours of Hippocrates and Galen to Avicenna, Sydenham, Linnaeus, Kraepelin, the neo-Kraepelinians and the DSM.",
+  "nl": "Van de vier lichaamssappen van Hippocrates en Galenus tot Avicenna, Sydenham, Linnaeus, Kraepelin, de neo-kraepelinianen en de DSM."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اخلاط: دموی (خون، هوا)، صفراوی (صفرای زرد، آتش)، سوداوی (صفرای سیاه، خاک)، بلغمی (بلغم، آب).",
+    "en": "The humours: sanguine (blood, air), choleric (yellow bile, fire), melancholic (black bile, earth), phlegmatic (phlegm, water).",
+    "nl": "De lichaamssappen: sanguinisch (bloed, lucht), cholerisch (gele gal, vuur), melancholisch (zwarte gal, aarde), flegmatisch (slijm, water)."
+   },
+   "sources": [
+    "src:477edb92ba"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ابن‌سینا: مانیا همان مزاج دموی نیست؛ آمیزهٔ صفراوی و سوداوی است.",
+    "en": "Avicenna: mania is not the sanguine temperament; it is a mixture of choleric and melancholic.",
+    "nl": "Avicenna: manie is niet het sanguinische temperament; het is een mengsel van cholerisch en melancholisch."
+   },
+   "sources": [
+    "src:477edb92ba"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سیدنهام (۱۶۲۴–۱۶۸۹): بیماری به‌مثابهٔ موجودیت؛ لینه (۱۷۰۷–۱۷۷۸): رده‌بندی.",
+    "en": "Sydenham (1624–1689): disease as an entity; Linnaeus (1707–1778): classification.",
+    "nl": "Sydenham (1624–1689): ziekte als entiteit; Linnaeus (1707–1778): classificatie."
+   },
+   "sources": [
+    "src:477edb92ba"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اعتبارسنج‌ها: علامت، سیر، ژنتیک، آزمایشگاه و تصویربرداری، نوروفیزیولوژی، پاسخ به درمان (رابینز و گیوز ۱۹۷۰).",
+    "en": "Validators: symptoms, course, genetics, laboratory and imaging, neurophysiology, treatment response (Robins and Guze 1970).",
+    "nl": "Validatoren: symptomen, beloop, genetica, laboratorium en beeldvorming, neurofysiologie, respons op behandeling (Robins en Guze 1970)."
+   },
+   "sources": [
+    "src:477edb92ba"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کریپلین و کالباوم: جداسازی بر پایهٔ سیر؛ نوکریپلینی‌ها و DSM-III (۱۹۸۰).",
+    "en": "Kraepelin and Kahlbaum: separation based on course; the neo-Kraepelinians and DSM-III (1980).",
+    "nl": "Kraepelin en Kahlbaum: indeling op basis van beloop; de neo-kraepelinianen en de DSM-III (1980)."
+   },
+   "sources": [
+    "src:477edb92ba"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بریوس: «بهانهٔ فناوری»؛ امید به اینکه فناوری روزی زیست‌شناسی هر دسته را پیدا کند.",
+    "en": "Berrios: the “technological excuse”; the hope that technology will one day find the biology of each category.",
+    "nl": "Berrios: het ‘technologische excuus’; de hoop dat technologie ooit de biologie van elke categorie vindt."
+   },
+   "sources": [
+    "src:477edb92ba"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:p-history",
+   "rel": "see-also",
+   "note": {
+    "fa": "تاریخ روان‌شناسی",
+    "en": "History of psychology",
+    "nl": "Geschiedenis van de psychologie"
+   }
+  },
+  {
+   "to": "psy:shell-shock",
+   "rel": "see-also",
+   "note": {
+    "fa": "جنگ و هیستری",
+    "en": "War and hysteria",
+    "nl": "Oorlog en hysterie"
+   }
+  },
+  {
+   "to": "psy:degeneration",
+   "rel": "see-also",
+   "note": {
+    "fa": "انحطاط",
+    "en": "Degeneration",
+    "nl": "Degeneratie"
+   }
+  }
+ ],
+ "people": [
+  "core:hippocrates",
+  "core:galen",
+  "core:avicenna",
+  "core:emil-kraepelin",
+  "core:german-berrios"
+ ],
+ "sources": [
+  "src:477edb92ba",
+  "src:7a8ad56a77"
+ ],
+ "booklets": [
+  "workshop:what",
+  "psychopath:mood"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

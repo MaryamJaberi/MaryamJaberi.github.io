@@ -1,0 +1,142 @@
+{
+ "id": "psy:automaticity",
+ "kind": "concept",
+ "title": {
+  "fa": "خودکاری و ذهن ناآگاه",
+  "en": "Automaticity & priming",
+  "nl": "Automatisme en priming"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "اثر عوامل محیطی و ناپیدا بر نگرش، هدف، هیجان و رفتار (جان بارگ)؛ با یافته‌های محکم و یافته‌های زیر پرسش تکرارپذیری.",
+  "en": "The effect of environmental and hidden factors on attitudes, goals, emotions and behaviour (John Bargh); with robust findings and findings under replication doubt.",
+  "nl": "Het effect van omgevingsfactoren en verborgen factoren op houding, doelen, emoties en gedrag (John Bargh); met solide bevindingen en bevindingen waarvan de repliceerbaarheid ter discussie staat."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گرمای فنجان و «گرمی» دیگران (۲۰۰۸): در تکرارها تأیید نشد.",
+    "en": "A warm cup and others' “warmth” (2008): not confirmed in replications.",
+    "nl": "Een warm kopje en de ‘warmte’ van anderen (2008): in replicaties niet bevestigd."
+   },
+   "sources": [
+    "src:fae5213eef"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هوای بارانی و رضایت از زندگی (شوارتز و کلور ۱۹۸۳): خطای انتساب حال.",
+    "en": "Rainy weather and life satisfaction (Schwarz and Clore 1983): misattributing mood.",
+    "nl": "Regenachtig weer en levenstevredenheid (Schwarz en Clore 1983): stemming verkeerd toeschrijven."
+   },
+   "sources": [
+    "src:fae5213eef"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برش‌های نازک: کلیپ‌های ۳۰ ثانیه‌ای ارزیابی استاد را پیش‌بینی کردند (r≈۰٫۷۶).",
+    "en": "Thin slices: 30-second clips predicted teacher evaluations (r≈0.76).",
+    "nl": "Thin slices: fragmenten van 30 seconden voorspelden beoordelingen van docenten (r≈0,76)."
+   },
+   "sources": [
+    "src:fae5213eef"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قضاوت از چهره دربارهٔ ویژگی‌های پنهان اغلب از نرخ پایه بدتر است (اولیولا و تودوروف ۲۰۱۰).",
+    "en": "Judging hidden traits from faces is often worse than the base rate (Olivola and Todorov 2010).",
+    "nl": "Verborgen eigenschappen afleiden uit gezichten is vaak slechter dan de basisfrequentie (Olivola en Todorov 2010)."
+   },
+   "sources": [
+    "src:fae5213eef"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آگهی ضدسیگار شرکت سیگار، سیگار کشیدن را بیشتر کرد (هریس، پیرس و بارگ ۲۰۱۴).",
+    "en": "A tobacco company's anti-smoking ad increased smoking (Harris, Pierce and Bargh 2014).",
+    "nl": "Een antirookreclame van een tabaksbedrijf deed het roken toenemen (Harris, Pierce en Bargh 2014)."
+   },
+   "sources": [
+    "src:fae5213eef"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هدف فعال‌شده با هزینه و زمان خاموش می‌شود (خودکارهای نشت‌کرده).",
+    "en": "An activated goal switches off with cost and time (the leaking pens).",
+    "nl": "Een geactiveerd doel dooft uit door kosten en tijd (de lekkende pennen)."
+   },
+   "sources": [
+    "src:fae5213eef"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:replication-crisis",
+   "rel": "see-also",
+   "note": {
+    "fa": "تکرارپذیری",
+    "en": "Replicability",
+    "nl": "Repliceerbaarheid"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "سوگیری ضمنی",
+    "en": "Implicit bias",
+    "nl": "Impliciete bias"
+   }
+  },
+  {
+   "to": "psy:stereotype-threat",
+   "rel": "see-also",
+   "note": {
+    "fa": "هویت",
+    "en": "Identity",
+    "nl": "Identiteit"
+   }
+  },
+  {
+   "to": "psy:placebo-expectation",
+   "rel": "see-also",
+   "note": {
+    "fa": "انتظار",
+    "en": "Expectation",
+    "nl": "Verwachting"
+   }
+  }
+ ],
+ "people": [
+  "core:john-bargh",
+  "core:nalini-ambady",
+  "core:jennifer-eberhardt",
+  "core:norbert-schwarz"
+ ],
+ "sources": [
+  "src:fae5213eef",
+  "src:e70ecce01c"
+ ],
+ "booklets": [
+  "bargh:hidden",
+  "bargh:misattrib",
+  "bargh:thin",
+  "bargh:help"
+ ],
+ "origin": "bargh",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,165 @@
+{
+ "id": "psy:intractable-conflict",
+ "kind": "concept",
+ "title": {
+  "fa": "اختلاف‌های حل‌نشدنی",
+  "en": "Intractable conflict",
+  "nl": "Hardnekkig conflict"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "مناقشه‌های کهنه و بدخیم مانند «ابر» رفتار می‌کنند، نه «ساعت»: در جاذبه‌ها گیر می‌افتند و با راه‌حل مستقیم بدتر می‌شوند (پیتر کلمن).",
+  "en": "Old, malignant conflicts behave like “clouds”, not “clocks”: they get stuck in attractors and worsen with direct solutions (Peter Coleman).",
+  "nl": "Oude, kwaadaardige conflicten gedragen zich als ‘wolken’, niet als ‘klokken’: ze blijven hangen in attractoren en verergeren door directe oplossingen (Peter Coleman)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هدف گفت‌وگو در مدل ابرگونه توافق نیست.",
+    "en": "In the cloud model, the aim of dialogue is not agreement.",
+    "nl": "In het wolkenmodel is het doel van het gesprek geen overeenstemming."
+   },
+   "sources": [
+    "src:f861320647"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیچیده‌سازی هویت، روایت و شبکه.",
+    "en": "Complicating identity, narrative and networks.",
+    "nl": "Identiteit, verhaal en netwerken complexer maken."
+   },
+   "sources": [
+    "src:f861320647"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "واقع‌گرایی خام: من عینی‌ام، مخالفم سوگیری دارد.",
+    "en": "Naive realism: I am objective, my opponent is biased.",
+    "nl": "Naïef realisme: ik ben objectief, mijn tegenstander is bevooroordeeld."
+   },
+   "sources": [
+    "src:f861320647"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "باور به تغییرپذیری گروه‌ها نگرش را نرم کرد (هالپرین ۲۰۱۱).",
+    "en": "Believing that groups can change softened attitudes (Halperin 2011).",
+    "nl": "Geloven dat groepen kunnen veranderen, verzachtte houdingen (Halperin 2011)."
+   },
+   "sources": [
+    "src:f861320647"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پرسیدن دیدگاه دقیق‌تر از گرفتن دیدگاه است (اپلی).",
+    "en": "Perspective-getting is more accurate than perspective-taking (Epley).",
+    "nl": "Perspectief vragen is nauwkeuriger dan perspectief nemen (Epley)."
+   },
+   "sources": [
+    "src:f861320647"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گفت‌وگوی شش رهبر دو سوی بحث سقط جنین در بوستون: رابطه بهتر شد، عقیده‌ها محکم‌تر.",
+    "en": "Six leaders from both sides of the abortion debate in Boston talked: relationships improved, beliefs became firmer.",
+    "nl": "Zes leiders van beide kanten van het abortusdebat in Boston gingen in gesprek: de relaties verbeterden, de overtuigingen werden vaster."
+   },
+   "sources": [
+    "src:f861320647"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:conflict-power",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعارض",
+    "en": "Conflict",
+    "nl": "Conflict"
+   }
+  },
+  {
+   "to": "psy:cognitive-rigidity",
+   "rel": "see-also",
+   "note": {
+    "fa": "سادگی کاذب",
+    "en": "False simplicity",
+    "nl": "Valse eenvoud"
+   }
+  },
+  {
+   "to": "psy:fairness",
+   "rel": "see-also",
+   "note": {
+    "fa": "حاصل‌جمع صفر",
+    "en": "Zero-sum",
+    "nl": "Nulsom"
+   }
+  },
+  {
+   "to": "psy:mi",
+   "rel": "see-also",
+   "note": {
+    "fa": "محل‌یاب راه‌حل",
+    "en": "Solution locator",
+    "nl": "Oplossingenzoeker"
+   }
+  },
+  {
+   "to": "psy:cooperation-competition",
+   "rel": "see-also",
+   "note": {
+    "fa": "همکاری",
+    "en": "Cooperation",
+    "nl": "Samenwerking"
+   }
+  },
+  {
+   "to": "psy:regulatory-mode",
+   "rel": "see-also",
+   "note": {
+    "fa": "حرکت",
+    "en": "Locomotion",
+    "nl": "Locomotie"
+   }
+  }
+ ],
+ "people": [
+  "core:peter-coleman",
+  "core:lee-ross",
+  "core:nicholas-epley"
+ ],
+ "sources": [
+  "src:f861320647",
+  "src:6685c7bb1a"
+ ],
+ "booklets": [
+  "conflict:clock",
+  "conflict:relandscape",
+  "conflict:complexity",
+  "conflict:biases",
+  "shelf9:wayout",
+  "shelf9:handbook",
+  "conflict:dyads",
+  "conflict:polar",
+  "conflict:regmode",
+  "conflict:forgive"
+ ],
+ "origin": "conflict",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

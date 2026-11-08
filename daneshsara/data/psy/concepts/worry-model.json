@@ -1,0 +1,97 @@
+{
+ "id": "psy:worry-model",
+ "kind": "concept",
+ "title": {
+  "fa": "الگوی نگرانی",
+  "en": "Intolerance of uncertainty model of worry",
+  "nl": "Model van intolerantie voor onzekerheid bij piekeren"
+ },
+ "parent": "psy:transdiagnostic",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "الگوی دوگا و لادوسور برای نگرانی و اضطراب فراگیر: نابردباری در برابر عدم قطعیت، باورهای مثبت به نگرانی، نگرش منفی به معضلات و اجتناب شناختی.",
+  "en": "Dugas and Ladouceur's model of worry and generalised anxiety: intolerance of uncertainty, positive beliefs about worry, negative problem orientation and cognitive avoidance.",
+  "nl": "Het model van Dugas en Ladouceur voor piekeren en gegeneraliseerde angst: intolerantie voor onzekerheid, positieve opvattingen over piekeren, negatieve probleemoriëntatie en cognitieve vermijding."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پنج باور مثبت به نگرانی (WW-II): به حل مسئله کمک می‌کند، انگیزه می‌دهد، صفت مثبتی است، خودش مانع حادثه می‌شود، از هیجان منفی محافظت می‌کند.",
+    "en": "Five positive beliefs about worry (WW-II): it helps problem-solving, motivates, is a good trait, itself prevents misfortune, protects against negative emotion.",
+    "nl": "Vijf positieve opvattingen over piekeren (WW-II): het helpt bij problemen oplossen, motiveert, is een goede eigenschap, voorkomt zelf ongeluk, beschermt tegen negatieve emotie."
+   },
+   "sources": [
+    "src:5fedf7c666"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "IUS-12: دو بُعد اضطراب آینده‌نگر (میل به دانستن آینده) و اضطراب مهاری (فلج شدن در عدم قطعیت).",
+    "en": "IUS-12: two dimensions, prospective anxiety (wanting to know the future) and inhibitory anxiety (freezing under uncertainty).",
+    "nl": "IUS-12: twee dimensies, prospectieve angst (de toekomst willen kennen) en remmende angst (bevriezen bij onzekerheid)."
+   },
+   "sources": [
+    "src:5fedf7c666"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "NPOQ: دیدن مشکل به‌عنوان تهدید و شک به توانایی حل آن (متفاوت از مهارت حل مسئله).",
+    "en": "NPOQ: seeing a problem as a threat and doubting one's ability to solve it (different from problem-solving skill).",
+    "nl": "NPOQ: een probleem als bedreiging zien en twijfelen aan je vermogen het op te lossen (anders dan probleemoplossende vaardigheid)."
+   },
+   "sources": [
+    "src:5fedf7c666"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار فرایند GAD (دوگا): نابردباری در برابر عدم قطعیت، باورهای مثبت به نگرانی، نگرش منفی به مشکل، اجتناب شناختی.",
+    "en": "The four GAD processes (Dugas): intolerance of uncertainty, positive beliefs about worry, negative problem orientation, cognitive avoidance.",
+    "nl": "De vier processen bij GAS (Dugas): intolerantie voor onzekerheid, positieve opvattingen over piekeren, negatieve probleemoriëntatie, cognitieve vermijding."
+   },
+   "sources": [
+    "src:5fedf7c666"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anxiety",
+   "rel": "see-also",
+   "note": {
+    "fa": "اضطراب فراگیر",
+    "en": "Generalised anxiety",
+    "nl": "Gegeneraliseerde angst"
+   }
+  },
+  {
+   "to": "psy:mct",
+   "rel": "see-also",
+   "note": {
+    "fa": "فراشناخت نگرانی",
+    "en": "Metacognition of worry",
+    "nl": "Metacognitie van piekeren"
+   }
+  }
+ ],
+ "people": [
+  "core:michel-dugas",
+  "core:robert-ladouceur"
+ ],
+ "sources": [
+  "src:5fedf7c666"
+ ],
+ "booklets": [
+  "workshop:worry",
+  "psychopath:anxiety"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

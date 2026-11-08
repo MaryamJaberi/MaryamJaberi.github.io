@@ -1,0 +1,105 @@
+{
+ "id": "psy:stratification",
+ "kind": "subfield",
+ "title": {
+  "fa": "قشربندی و نابرابری",
+  "en": "Social stratification",
+  "nl": "Sociale stratificatie"
+ },
+ "parent": "psy:sociology",
+ "field": null,
+ "summary": {
+  "fa": "تقسیم نابرابر ثروت، قدرت و منزلت میان گروه‌ها. طبقهٔ اجتماعی با سلامت روان، امید به زندگی، فرصت تحصیلی و حتی هوش هیجانی رابطه دارد.",
+  "en": "The unequal distribution of wealth, power and status between groups. Social class is related to mental health, life expectancy, educational opportunity and even emotional intelligence.",
+  "nl": "De ongelijke verdeling van rijkdom, macht en status tussen groepen. Sociale klasse hangt samen met mentale gezondheid, levensverwachting, onderwijskansen en zelfs emotionele intelligentie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "شیب اجتماعی سلامت: در هر پله پایین‌تر، سلامت بدتر (مطالعات وایت‌هال).",
+    "en": "The social gradient of health: each rung lower, worse health (the Whitehall studies).",
+    "nl": "De sociale gradiënt van gezondheid: elke trede lager, slechtere gezondheid (de Whitehall-studies)."
+   },
+   "sources": [
+    "src:01ff34b8e6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "احساس نابرابری می‌تواند اعتماد و همدلی را کم کند.",
+    "en": "Feeling inequality can reduce trust and empathy.",
+    "nl": "Ongelijkheid ervaren kan vertrouwen en empathie verminderen."
+   },
+   "sources": [
+    "src:01ff34b8e6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تحرک اجتماعی در کشورهای مختلف بسیار متفاوت است.",
+    "en": "Social mobility differs greatly between countries.",
+    "nl": "Sociale mobiliteit verschilt sterk tussen landen."
+   },
+   "sources": [
+    "src:01ff34b8e6"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:fairness",
+   "rel": "see-also",
+   "note": {
+    "fa": "انصاف",
+    "en": "Fairness",
+    "nl": "Billijkheid"
+   }
+  },
+  {
+   "to": "psy:happiness-origins",
+   "rel": "see-also",
+   "note": {
+    "fa": "شادکامی",
+    "en": "Happiness",
+    "nl": "Geluk"
+   }
+  },
+  {
+   "to": "psy:emotional-intelligence",
+   "rel": "see-also",
+   "note": {
+    "fa": "نابرابری و هوش هیجانی",
+    "en": "Inequality and emotional intelligence",
+    "nl": "Ongelijkheid en emotionele intelligentie"
+   }
+  },
+  {
+   "to": "psy:delay-gratification",
+   "rel": "see-also",
+   "note": {
+    "fa": "صبر کردن و کمبود",
+    "en": "Waiting and scarcity",
+    "nl": "Wachten en schaarste"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-marx",
+  "core:max-weber",
+  "core:michael-marmot",
+  "core:richard-wilkinson"
+ ],
+ "sources": [
+  "src:01ff34b8e6"
+ ],
+ "booklets": [
+  "s5:mooc"
+ ],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

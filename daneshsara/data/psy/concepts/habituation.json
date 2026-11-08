@@ -1,0 +1,118 @@
+{
+ "id": "psy:habituation",
+ "kind": "concept",
+ "title": {
+  "fa": "خوگیری",
+  "en": "Habituation & dishabituation",
+  "nl": "Habituatie en dishabituatie"
+ },
+ "parent": "psy:p-cog",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "کاهش پاسخ به محرک تکراری؛ خوشی‌ها کم‌رنگ و بدی‌ها عادی می‌شوند. وقفه و تازگی آن را می‌شکند (شاروت و سانستین).",
+  "en": "Reduced response to a repeated stimulus; pleasures fade and bad things become normal. Breaks and novelty disrupt it (Sharot and Sunstein).",
+  "nl": "Een verminderde reactie op een herhaalde prikkel; genoegens vervagen en slechte dingen worden normaal. Pauzes en nieuwheid doorbreken dit (Sharot en Sunstein)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "وقفه در تجربهٔ خوشایند، لذت کلی را بیشتر می‌کند.",
+    "en": "A break in a pleasant experience increases overall enjoyment.",
+    "nl": "Een onderbreking in een prettige ervaring vergroot het totale plezier."
+   },
+   "sources": [
+    "src:0ccd489b0b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قطع فیس‌بوک چهار هفته: بهزیستی کمی بهتر، قطبی شدن کمتر (آلکات ۲۰۲۰).",
+    "en": "Quitting Facebook for four weeks: slightly better well-being, less polarisation (Allcott 2020).",
+    "nl": "Vier weken stoppen met Facebook: iets beter welzijn, minder polarisatie (Allcott 2020)."
+   },
+   "sources": [
+    "src:0ccd489b0b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مغز به دروغ هم خو می‌گیرد؛ دروغ‌ها کم‌کم بزرگ می‌شوند (گرت ۲۰۱۶).",
+    "en": "The brain also habituates to lying; lies gradually grow bigger (Garrett 2016).",
+    "nl": "Het brein went ook aan liegen; leugens worden geleidelijk groter (Garrett 2016)."
+   },
+   "sources": [
+    "src:0ccd489b0b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "روز H سوئد (۱۹۶۷): تصادف‌ها موقتاً کم شد.",
+    "en": "Sweden's H-Day (1967): accidents fell temporarily.",
+    "nl": "Dagen H in Zweden (1967): het aantal ongelukken daalde tijdelijk."
+   },
+   "sources": [
+    "src:0ccd489b0b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:happiness-origins",
+   "rel": "see-also",
+   "note": {
+    "fa": "سازگاری لذت‌جویانه",
+    "en": "Hedonic adaptation",
+    "nl": "Hedonische aanpassing"
+   }
+  },
+  {
+   "to": "psy:psych-rich",
+   "rel": "see-also",
+   "note": {
+    "fa": "تازگی",
+    "en": "Novelty",
+    "nl": "Nieuwheid"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "حقیقت توهمی",
+    "en": "Illusory truth",
+    "nl": "Illusoire waarheid"
+   }
+  },
+  {
+   "to": "psy:habit",
+   "rel": "see-also",
+   "note": {
+    "fa": "عادت",
+    "en": "Habit",
+    "nl": "Gewoonte"
+   }
+  }
+ ],
+ "people": [
+  "core:tali-sharot",
+  "core:cass-sunstein"
+ ],
+ "sources": [
+  "src:0ccd489b0b"
+ ],
+ "booklets": [
+  "lookagain:habituation",
+  "lookagain:joy",
+  "lookagain:social",
+  "lookagain:lying",
+  "lookagain:risk"
+ ],
+ "origin": "lookagain",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

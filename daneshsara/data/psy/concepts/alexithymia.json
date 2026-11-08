@@ -1,0 +1,96 @@
+{
+ "id": "psy:alexithymia",
+ "kind": "concept",
+ "title": {
+  "fa": "آلکسی‌تایمی",
+  "en": "Alexithymia",
+  "nl": "Alexithymie"
+ },
+ "parent": "psy:p-emotion",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "«بی‌واژگی برای احساس»: دشواری در شناسایی و توصیف احساسات، تفکر بیرون‌مدار و فانتزی کم‌رنگ. اصطلاح پیتر سیفنئوس (۱۹۷۰).",
+  "en": "“No words for feelings”: difficulty identifying and describing feelings, externally oriented thinking and a faint fantasy life. Term coined by Peter Sifneos (1970).",
+  "nl": "‘Geen woorden voor gevoelens’: moeite met het herkennen en beschrijven van gevoelens, naar buiten gericht denken en een vaag fantasieleven. Term van Peter Sifneos (1970)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ریشه در بیماری‌های روان‌تنی (مک‌لین ۱۹۴۹).",
+    "en": "Rooted in psychosomatic illness (MacLean 1949).",
+    "nl": "Wortelt in psychosomatische ziekte (MacLean 1949)."
+   },
+   "sources": [
+    "src:a257fe86fe"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقیاس TAS-20: ≥۶۱ آلکسی‌تایمیک، ۵۲ تا ۶۰ احتمالی، ≤۵۱ طبیعی.",
+    "en": "The TAS-20: ≥61 alexithymic, 52 to 60 possible, ≤51 normal.",
+    "nl": "De TAS-20: ≥61 alexithym, 52 tot 60 mogelijk, ≤51 normaal."
+   },
+   "sources": [
+    "src:a257fe86fe"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار جزء: شناسایی، توصیف، تفکر بیرون‌مدار، فانتزی اندک.",
+    "en": "Four components: identifying, describing, externally oriented thinking, little fantasy.",
+    "nl": "Vier componenten: herkennen, beschrijven, naar buiten gericht denken, weinig fantasie."
+   },
+   "sources": [
+    "src:a257fe86fe"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قطب مقابل دانه‌داری هیجان.",
+    "en": "The opposite pole of emotional granularity.",
+    "nl": "De tegenpool van emotionele granulariteit."
+   },
+   "sources": [
+    "src:a257fe86fe"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:emotional-intelligence",
+   "rel": "contrasts",
+   "note": {
+    "fa": "نقطهٔ مقابل",
+    "en": "Opposite",
+    "nl": "Tegenpool"
+   }
+  },
+  {
+   "to": "psy:emodiversity",
+   "rel": "see-also",
+   "note": {
+    "fa": "دانه‌داری",
+    "en": "Granularity",
+    "nl": "Granulariteit"
+   }
+  }
+ ],
+ "people": [
+  "core:peter-sifneos",
+  "core:graeme-taylor"
+ ],
+ "sources": [
+  "src:a257fe86fe"
+ ],
+ "booklets": [
+  "psychopath:alexithymia"
+ ],
+ "origin": "psychopath",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

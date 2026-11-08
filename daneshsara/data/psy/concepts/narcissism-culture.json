@@ -1,0 +1,121 @@
+{
+ "id": "psy:narcissism-culture",
+ "kind": "concept",
+ "title": {
+  "fa": "فرهنگ خودشیفتگی",
+  "en": "Cultural narcissism",
+  "nl": "Cultureel narcisme"
+ },
+ "parent": "psy:p-personality",
+ "field": "psy:p-personality",
+ "summary": {
+  "fa": "آیا فناوری و مدرنیته ما را خودشیفته‌تر کرده‌اند؟ از گناه غرور تا برچسب روان‌شناختی؛ از داگرئوتیپ تا سلفی.",
+  "en": "Have technology and modernity made us more narcissistic? From the sin of pride to a psychological label; from the daguerreotype to the selfie.",
+  "nl": "Hebben technologie en moderniteit ons narcistischer gemaakt? Van de zonde van hoogmoed tot een psychologisch label; van daguerreotypie tot selfie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "الیس (۱۸۹۸) و فروید (۱۹۱۴)؛ کوهوت: خودشیفتگی سالم و بیمارگون.",
+    "en": "Ellis (1898) and Freud (1914); Kohut: healthy and pathological narcissism.",
+    "nl": "Ellis (1898) en Freud (1914); Kohut: gezond en pathologisch narcisme."
+   },
+   "sources": [
+    "src:e1ccd31e91"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«جمعیت تنها» (ریسمن ۱۹۵۰): سنت‌محور، درون‌محور (ژیروسکوپ)، دیگرمحور (رادار).",
+    "en": "“The Lonely Crowd” (Riesman 1950): tradition-directed, inner-directed (gyroscope), other-directed (radar).",
+    "nl": "‘The Lonely Crowd’ (Riesman 1950): traditiegericht, innerlijk gericht (gyroscoop), op anderen gericht (radar)."
+   },
+   "sources": [
+    "src:e1ccd31e91"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«فرهنگ خودشیفتگی» (لش ۱۹۷۹) و «همه‌گیری خودشیفتگی» (تونگی و کمبل ۲۰۰۹).",
+    "en": "“The Culture of Narcissism” (Lasch 1979) and “The Narcissism Epidemic” (Twenge and Campbell 2009).",
+    "nl": "‘The Culture of Narcissism’ (Lasch 1979) en ‘The Narcissism Epidemic’ (Twenge en Campbell 2009)."
+   },
+   "sources": [
+    "src:e1ccd31e91"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "داگرئوتیپ (۱۸۳۹) تصویرنگاری را مردمی کرد؛ «خودنمایی، سلامت عقل است» (۱۹۳۶).",
+    "en": "The daguerreotype (1839) democratised portraiture; “showing off is sanity” (1936).",
+    "nl": "De daguerreotypie (1839) maakte portretten voor iedereen bereikbaar; ‘opscheppen is gezond verstand’ (1936)."
+   },
+   "sources": [
+    "src:e1ccd31e91"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شواهد افزایش نسلی NPI مناقشه‌برانگیز است (وتزل ۲۰۱۷).",
+    "en": "Evidence of a generational rise in NPI scores is contested (Wetzel 2017).",
+    "nl": "Het bewijs voor een generationele stijging van NPI-scores is omstreden (Wetzel 2017)."
+   },
+   "sources": [
+    "src:e1ccd31e91"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:vulnerable-narcissism",
+   "rel": "see-also",
+   "note": {
+    "fa": "بالینی",
+    "en": "Clinical",
+    "nl": "Klinisch"
+   }
+  },
+  {
+   "to": "psy:tech-panic",
+   "rel": "see-also",
+   "note": {
+    "fa": "فناوری",
+    "en": "Technology",
+    "nl": "Technologie"
+   }
+  },
+  {
+   "to": "psy:mattering",
+   "rel": "see-also",
+   "note": {
+    "fa": "ارزش‌گذاری افراطی",
+    "en": "Overvaluation",
+    "nl": "Overwaardering"
+   }
+  }
+ ],
+ "people": [
+  "core:christopher-lasch",
+  "core:david-riesman",
+  "core:jean-twenge",
+  "core:susan-matt"
+ ],
+ "sources": [
+  "src:e1ccd31e91",
+  "src:d2647e02f7"
+ ],
+ "booklets": [
+  "bored:narcissism",
+  "bored:vanity",
+  "bored:riesman"
+ ],
+ "origin": "bored",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

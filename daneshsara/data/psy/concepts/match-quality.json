@@ -1,0 +1,86 @@
+{
+ "id": "psy:match-quality",
+ "kind": "concept",
+ "title": {
+  "fa": "کیفیت تطبیق",
+  "en": "Match quality",
+  "nl": "Matchkwaliteit"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "تناسب میان کار فرد و توانایی‌ها و گرایش‌هایش. نمونه‌گیری بیشتر پیش از انتخاب، تطبیق بهتر (عوفر ملامود).",
+  "en": "The fit between a person's work and their abilities and inclinations. More sampling before choosing gives a better match (Ofer Malamud).",
+  "nl": "De fit tussen iemands werk en zijn vaardigheden en voorkeuren. Meer proeven vóór het kiezen geeft een betere match (Ofer Malamud)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "انگلستان (انتخاب رشته پیش از دانشگاه) در برابر اسکاتلند (دو سال نمونه‌گیری): دانش‌آموختگان انگلیسی بیشتر به حوزهٔ بی‌ربط رفتند.",
+    "en": "England (choosing a subject before university) versus Scotland (two years of sampling): English graduates more often moved to an unrelated field.",
+    "nl": "Engeland (een richting kiezen vóór de universiteit) tegenover Schotland (twee jaar proeven): Engelse afgestudeerden stapten vaker over naar een ongerelateerd vakgebied."
+   },
+   "sources": [
+    "src:7f627d764e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«خودهای ممکن» (هرمینیا ایبارا): اول عمل کن و آزمایش کن، بعد خود تازه را بشناس.",
+    "en": "“Possible selves” (Herminia Ibarra): act and experiment first, then get to know the new self.",
+    "nl": "‘Mogelijke zelven’ (Herminia Ibarra): eerst handelen en experimenteren, dan het nieuwe zelf leren kennen."
+   },
+   "sources": [
+    "src:7f627d764e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پشتکار در کار نادرست هزینه است.",
+    "en": "Persevering at the wrong work is a cost.",
+    "nl": "Volharden in het verkeerde werk is een kostenpost."
+   },
+   "sources": [
+    "src:7f627d764e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:meaningful-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "معنا",
+    "en": "Meaning",
+    "nl": "Betekenis"
+   }
+  },
+  {
+   "to": "psy:job-crafting",
+   "rel": "see-also",
+   "note": {
+    "fa": "راه دیگر",
+    "en": "Another way",
+    "nl": "Een andere weg"
+   }
+  }
+ ],
+ "people": [
+  "core:ofer-malamud",
+  "core:herminia-ibarra"
+ ],
+ "sources": [
+  "src:7f627d764e",
+  "src:9cb011c99b"
+ ],
+ "booklets": [
+  "range:grit"
+ ],
+ "origin": "range",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

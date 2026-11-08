@@ -1,0 +1,96 @@
+{
+ "id": "psy:dmn",
+ "kind": "concept",
+ "title": {
+  "fa": "شبکهٔ حالت پیش‌فرض",
+  "en": "Default Mode Network",
+  "nl": "Default mode network"
+ },
+ "parent": "psy:n-cognitive",
+ "field": "psy:n-cognitive",
+ "summary": {
+  "fa": "شبکه‌ای از نواحی مغز که در استراحت و خیال‌پردازی و فکر دربارهٔ خود فعال است. رایکل و همکاران (۲۰۰۱) آن را معرفی کردند.",
+  "en": "A network of brain regions active during rest, daydreaming and thinking about oneself. Introduced by Raichle and colleagues (2001).",
+  "nl": "Een netwerk van hersengebieden dat actief is tijdens rust, dagdromen en nadenken over jezelf. Geïntroduceerd door Raichle en collega's (2001)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "با سرگردانی ذهن، فکر دربارهٔ گذشته و آینده، و روایت دربارهٔ خود مرتبط است.",
+    "en": "It is linked to mind-wandering, thinking about past and future, and the narrative about oneself.",
+    "nl": "Het hangt samen met afdwalen, denken over verleden en toekomst, en het verhaal over jezelf."
+   },
+   "sources": [
+    "src:521db980f0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مطالعات تصویربرداری فعالیت بیش از حد و ارتباط ناهنجار آن را در افسردگی و نشخوار گزارش کرده‌اند.",
+    "en": "Imaging studies have reported its overactivity and abnormal connectivity in depression and rumination.",
+    "nl": "Beeldvormingsonderzoek meldde overactiviteit en afwijkende connectiviteit ervan bij depressie en piekeren."
+   },
+   "sources": [
+    "src:521db980f0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پایهٔ عصبی‌ای که می‌تواند «گزارشگر زنده» را توضیح دهد؛ و «معمای رؤیاپردازی»: همین شبکه خلاقیت را هم می‌سازد.",
+    "en": "A neural basis that could explain the “running commentary”; and the “daydreaming paradox”: the same network also produces creativity.",
+    "nl": "Een neurale basis die het ‘doorlopende commentaar’ zou kunnen verklaren; en de ‘dagdroomparadox’: hetzelfde netwerk brengt ook creativiteit voort."
+   },
+   "sources": [
+    "src:521db980f0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وسل، استار و روبین (۲۰۱۲): وقتی اثر هنری بصری عمیقاً ما را تکان می‌دهد، شبکهٔ حالت پیش‌فرض فعال می‌شود؛ پشتوانهٔ ادعای وینر که هنر ما را به درون‌نگری وامی‌دارد.",
+    "en": "Vessel, Starr and Rubin (2012): when a visual artwork deeply moves us, the default mode network becomes active; support for Winner's claim that art turns us inward.",
+    "nl": "Vessel, Starr en Rubin (2012): als een beeldend kunstwerk ons diep raakt, wordt het default mode network actief; steun voor Winners stelling dat kunst ons naar binnen doet keren."
+   },
+   "sources": [
+    "src:521db980f0"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:running-commentary",
+   "rel": "explains",
+   "note": {
+    "fa": "پایهٔ عصبی احتمالی",
+    "en": "Possible neural basis",
+    "nl": "Mogelijke neurale basis"
+   }
+  },
+  {
+   "to": "psy:aesthetic-emotion",
+   "rel": "see-also",
+   "note": {
+    "fa": "تجربهٔ عمیق هنری",
+    "en": "Deep art experience",
+    "nl": "Diepe kunstervaring"
+   }
+  }
+ ],
+ "people": [
+  "core:marcus-raichle"
+ ],
+ "sources": [
+  "src:521db980f0",
+  "src:f2ae143eb8"
+ ],
+ "booklets": [
+  "art:museum"
+ ],
+ "origin": "art",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

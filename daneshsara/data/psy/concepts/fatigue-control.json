@@ -1,0 +1,103 @@
+{
+ "id": "psy:fatigue-control",
+ "kind": "concept",
+ "title": {
+  "fa": "خستگی به‌عنوان هیجان",
+  "en": "Fatigue as motivational control",
+  "nl": "Vermoeidheid als motivationele controle"
+ },
+ "parent": "psy:p-motivation",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "رابرت هاکی: خستگی تمام شدن انرژی نیست، بلکه هیجانی انطباقی است که هزینهٔ فرصت کار فعلی را اعلام می‌کند و هدف‌های دیگر را برجسته می‌کند.",
+  "en": "Robert Hockey: fatigue is not running out of energy but an adaptive emotion that signals the opportunity cost of the current task and brings other goals to the fore.",
+  "nl": "Robert Hockey: vermoeidheid is niet opraken van energie, maar een adaptieve emotie die de opportuniteitskosten van de huidige taak aangeeft en andere doelen naar voren haalt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مدل کنترل جبرانی: حفظ عملکرد با تلاش بیشتر، به قیمت خستگی.",
+    "en": "The compensatory control model: maintaining performance with more effort, at the cost of fatigue.",
+    "nl": "Het compenserende controlemodel: prestaties op peil houden met meer inspanning, ten koste van vermoeidheid."
+   },
+   "sources": [
+    "src:6ee67fa70e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کنترل کمتر بر کار = خستگی بیشتر.",
+    "en": "Less control over work = more fatigue.",
+    "nl": "Minder controle over het werk = meer vermoeidheid."
+   },
+   "sources": [
+    "src:6ee67fa70e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خستگی ذهنی زود شروع می‌شود و با تغییر کار یا انگیزه فروکش می‌کند.",
+    "en": "Mental fatigue starts early and subsides with a change of task or motivation.",
+    "nl": "Mentale vermoeidheid begint vroeg en neemt af bij een andere taak of meer motivatie."
+   },
+   "sources": [
+    "src:6ee67fa70e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:effort",
+   "rel": "see-also",
+   "note": {
+    "fa": "تلاش",
+    "en": "Effort",
+    "nl": "Inspanning"
+   }
+  },
+  {
+   "to": "psy:ego-depletion",
+   "rel": "see-also",
+   "note": {
+    "fa": "منبع",
+    "en": "Resource",
+    "nl": "Hulpbron"
+   }
+  },
+  {
+   "to": "psy:fatigue-syndromes",
+   "rel": "see-also",
+   "note": {
+    "fa": "بالینی",
+    "en": "Clinical",
+    "nl": "Klinisch"
+   }
+  },
+  {
+   "to": "psy:sdt",
+   "rel": "see-also",
+   "note": {
+    "fa": "انتخاب",
+    "en": "Choice",
+    "nl": "Keuze"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-hockey",
+  "core:angelo-mosso"
+ ],
+ "sources": [
+  "src:6ee67fa70e"
+ ],
+ "booklets": [
+  "shelf10:fatigue"
+ ],
+ "origin": "shelf10",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

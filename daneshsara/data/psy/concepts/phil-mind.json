@@ -1,0 +1,104 @@
+{
+ "id": "psy:phil-mind",
+ "kind": "subfield",
+ "title": {
+  "fa": "فلسفهٔ ذهن: آگاهی و اراده",
+  "en": "Philosophy of mind",
+  "nl": "Filosofie van de geest"
+ },
+ "parent": "psy:philosophy",
+ "field": null,
+ "summary": {
+  "fa": "آگاهی چیست و چطور از مغز برمی‌آید؟ آیا ارادهٔ آزاد داریم؟ آزمایش‌هایی مثل لیبت و القای فکر این پرسش‌ها را به آزمایشگاه آورده‌اند.",
+  "en": "What is consciousness and how does it arise from the brain? Do we have free will? Experiments like Libet's and thought insertion have brought these questions into the lab.",
+  "nl": "Wat is bewustzijn en hoe komt het voort uit de hersenen? Hebben we een vrije wil? Experimenten zoals dat van Libet en het inbrengen van gedachten hebben deze vragen naar het lab gebracht."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "«مسئلهٔ دشوار آگاهی» (چالمرز): چرا پردازش اطلاعات با تجربهٔ ذهنی همراه است؟",
+    "en": "The “hard problem of consciousness” (Chalmers): why does information processing come with subjective experience?",
+    "nl": "Het ‘moeilijke probleem van het bewustzijn’ (Chalmers): waarom gaat informatieverwerking samen met subjectieve ervaring?"
+   },
+   "sources": [
+    "src:5580f5d65a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آزمایش لیبت: فعالیت مغز پیش از «تصمیم آگاهانه» آغاز می‌شود؛ تفسیر آن هنوز محل بحث است.",
+    "en": "Libet's experiment: brain activity begins before the “conscious decision”; its interpretation is still debated.",
+    "nl": "Het experiment van Libet: hersenactiviteit begint vóór de ‘bewuste beslissing’; de interpretatie staat nog ter discussie."
+   },
+   "sources": [
+    "src:5580f5d65a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حس عاملیت را می‌توان با شعبده و تلقین دستکاری کرد.",
+    "en": "The sense of agency can be manipulated by magic tricks and suggestion.",
+    "nl": "Het gevoel van regie kan worden gemanipuleerd met goocheltrucs en suggestie."
+   },
+   "sources": [
+    "src:5580f5d65a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:consciousness",
+   "rel": "see-also",
+   "note": {
+    "fa": "هشیاری",
+    "en": "Consciousness",
+    "nl": "Bewustzijn"
+   }
+  },
+  {
+   "to": "psy:suggestibility",
+   "rel": "see-also",
+   "note": {
+    "fa": "حس عاملیت",
+    "en": "Sense of agency",
+    "nl": "Gevoel van regie"
+   }
+  },
+  {
+   "to": "psy:automaticity",
+   "rel": "see-also",
+   "note": {
+    "fa": "ذهن ناآگاه",
+    "en": "The unconscious mind",
+    "nl": "De onbewuste geest"
+   }
+  },
+  {
+   "to": "psy:constructed-emotion",
+   "rel": "see-also",
+   "note": {
+    "fa": "هیجان و مغز",
+    "en": "Emotion and the brain",
+    "nl": "Emotie en het brein"
+   }
+  }
+ ],
+ "people": [
+  "core:david-chalmers",
+  "core:daniel-dennett",
+  "core:patricia-churchland",
+  "core:benjamin-libet"
+ ],
+ "sources": [
+  "src:5580f5d65a",
+  "src:d5a68cb9b4"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

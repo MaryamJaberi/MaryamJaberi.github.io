@@ -1,0 +1,117 @@
+{
+ "id": "psy:cannabis",
+ "kind": "concept",
+ "title": {
+  "fa": "حشیش و کانابینوئیدها",
+  "en": "Cannabis",
+  "nl": "Cannabis"
+ },
+ "parent": "psy:substances",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "شایع‌ترین مادهٔ غیرمجاز جهان؛ THC و CBD، کانابینوئیدهای صناعی، پسیکوز و شناخت.",
+  "en": "The world's most common illicit substance; THC and CBD, synthetic cannabinoids, psychosis and cognition.",
+  "nl": "Het meest gebruikte illegale middel ter wereld; THC en CBD, synthetische cannabinoïden, psychose en cognitie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "حدود ۱۶۰ میلیون مصرف‌کننده؛ حدود ۱۰٪ وابسته می‌شوند؛ شروع بیشتر در نوجوانی.",
+    "en": "About 160 million users; about 10% become dependent; onset mostly in adolescence.",
+    "nl": "Ongeveer 160 miljoen gebruikers; ongeveer 10% raakt afhankelijk; meestal begonnen in de adolescentie."
+   },
+   "sources": [
+    "src:9f1ea1a86a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "THC محلول در چربی؛ گاه تا ۲۸ روز در آزمایش.",
+    "en": "THC is fat-soluble; sometimes detectable for up to 28 days.",
+    "nl": "THC is vetoplosbaar; soms tot 28 dagen aantoonbaar."
+   },
+   "sources": [
+    "src:9f1ea1a86a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثرات روان‌گردان حاد در ۲۰ تا ۵۰٪؛ گذرا.",
+    "en": "Acute psychoactive effects in 20 to 50%; transient.",
+    "nl": "Acute psychoactieve effecten bij 20 tot 50%; van voorbijgaande aard."
+   },
+   "sources": [
+    "src:9f1ea1a86a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خطر پسیکوز حدود ۲ تا ۳ برابر، به‌ویژه در نوجوانی.",
+    "en": "Psychosis risk about 2 to 3 times higher, especially in adolescence.",
+    "nl": "Psychoserisico ongeveer 2 tot 3 keer zo hoog, vooral in de adolescentie."
+   },
+   "sources": [
+    "src:9f1ea1a86a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اختلال شناختی بیشتر با یک ماه پرهیز برمی‌گردد؛ اما مصرف سنگین پیش از ۱۸ سالگی اثر ماندگارتری دارد.",
+    "en": "Cognitive impairment mostly reverses after a month of abstinence; but heavy use before 18 has a more lasting effect.",
+    "nl": "Cognitieve achteruitgang herstelt grotendeels na een maand abstinentie; maar zwaar gebruik vóór 18 jaar heeft een blijvender effect."
+   },
+   "sources": [
+    "src:9f1ea1a86a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کانابینوئیدهای صناعی (JWH): غلظت بالا، بدون CBD، دشوار در آزمایش.",
+    "en": "Synthetic cannabinoids (JWH): high concentration, no CBD, hard to detect.",
+    "nl": "Synthetische cannabinoïden (JWH): hoge concentratie, geen CBD, moeilijk aan te tonen."
+   },
+   "sources": [
+    "src:9f1ea1a86a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psychosis-risk",
+   "rel": "see-also",
+   "note": {
+    "fa": "پسیکوز",
+    "en": "Psychosis",
+    "nl": "Psychose"
+   }
+  },
+  {
+   "to": "psy:anhedonia",
+   "rel": "see-also",
+   "note": {
+    "fa": "نوجوانی و مغز",
+    "en": "Adolescence and the brain",
+    "nl": "Adolescentie en het brein"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:9f1ea1a86a",
+  "src:12994e3eff"
+ ],
+ "booklets": [
+  "families:cannabis",
+  "shelf2:dpdr"
+ ],
+ "origin": "families",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

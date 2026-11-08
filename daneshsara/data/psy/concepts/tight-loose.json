@@ -1,0 +1,154 @@
+{
+ "id": "psy:tight-loose",
+ "kind": "concept",
+ "title": {
+  "fa": "فرهنگ سفت و شل",
+  "en": "Tight vs loose cultures",
+  "nl": "Strakke versus losse culturen"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "قدرت هنجارها و تحمل انحراف در فرهنگ‌ها؛ برآمده از تهدیدهای تاریخی و بوم‌شناختی (میشل گلفند).",
+  "en": "The strength of norms and tolerance of deviance across cultures, arising from historical and ecological threats (Michele Gelfand).",
+  "nl": "De kracht van normen en de tolerantie voor afwijking in culturen, voortkomend uit historische en ecologische dreigingen (Michele Gelfand)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "۳۳ کشور (Science 2011): پاکستان، مالزی، هند و سنگاپور سفت؛ اوکراین، مجارستان، اسرائیل و هلند شل.",
+    "en": "33 countries (Science 2011): Pakistan, Malaysia, India and Singapore tight; Ukraine, Hungary, Israel and the Netherlands loose.",
+    "nl": "33 landen (Science 2011): Pakistan, Maleisië, India en Singapore strak; Oekraïne, Hongarije, Israël en Nederland los."
+   },
+   "sources": [
+    "src:47f873d031"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تهدید (تراکم جمعیت، جنگ، بلایا، کمبود) با سفتی رابطهٔ مستقیم دارد.",
+    "en": "Threat (population density, war, disasters, scarcity) is directly related to tightness.",
+    "nl": "Dreiging (bevolkingsdichtheid, oorlog, rampen, schaarste) hangt direct samen met strakheid."
+   },
+   "sources": [
+    "src:47f873d031"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سفتی: نظم و خودکنترلی؛ شلی: خلاقیت و تحمل.",
+    "en": "Tightness: order and self-control; looseness: creativity and tolerance.",
+    "nl": "Strakheid: orde en zelfbeheersing; losheid: creativiteit en tolerantie."
+   },
+   "sources": [
+    "src:47f873d031"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گلدیلاکس: بهزیستی در میانهٔ طیف بیشینه است.",
+    "en": "Goldilocks: well-being peaks in the middle of the spectrum.",
+    "nl": "Goudlokje: welzijn is het hoogst in het midden van het spectrum."
+   },
+   "sources": [
+    "src:47f873d031"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طبقهٔ کارگر «سفت‌تر» (انتخاب خودکار مشابه دیگران)؛ ایالت‌های جنوب آمریکا سفت‌تر و «فرهنگ حیثیت».",
+    "en": "The working class is “tighter” (choosing the same pen as others); US southern states are tighter and have a “culture of honour”.",
+    "nl": "De arbeidersklasse is ‘strakker’ (dezelfde pen kiezen als anderen); zuidelijke staten van de VS zijn strakker en hebben een ‘eercultuur’."
+   },
+   "sources": [
+    "src:47f873d031"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تهدید ← میل به سفتی ← گرایش به رهبر اقتدارگرا (پیوند با «گریز از آزادی» فروم).",
+    "en": "Threat → desire for tightness → attraction to an authoritarian leader (link with Fromm's “Escape from Freedom”).",
+    "nl": "Dreiging → verlangen naar strakheid → aantrekkingskracht van een autoritaire leider (link met ‘De angst voor vrijheid’ van Fromm)."
+   },
+   "sources": [
+    "src:47f873d031"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرهنگ‌های سخت‌گیر در سال نخست کووید موارد و مرگ کمتری داشتند (گلفند ۲۰۲۱).",
+    "en": "Strict cultures had fewer cases and deaths in the first year of COVID (Gelfand 2021).",
+    "nl": "Strenge culturen hadden in het eerste jaar van COVID minder gevallen en doden (Gelfand 2021)."
+   },
+   "sources": [
+    "src:47f873d031"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:norm-psychology",
+   "rel": "see-also",
+   "note": {
+    "fa": "هنجار",
+    "en": "Norm",
+    "nl": "Norm"
+   }
+  },
+  {
+   "to": "psy:cultural-evolution",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرهنگ",
+    "en": "Culture",
+    "nl": "Cultuur"
+   }
+  },
+  {
+   "to": "psy:social-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد",
+    "en": "Trust",
+    "nl": "Vertrouwen"
+   }
+  },
+  {
+   "to": "psy:autonomy",
+   "rel": "see-also",
+   "note": {
+    "fa": "والدگری",
+    "en": "Parenting",
+    "nl": "Ouderschap"
+   }
+  }
+ ],
+ "people": [
+  "core:michele-gelfand",
+  "core:harry-triandis",
+  "core:richard-nisbett",
+  "core:joseph-henrich"
+ ],
+ "sources": [
+  "src:47f873d031",
+  "src:18630e4e05"
+ ],
+ "booklets": [
+  "gelfand:idea",
+  "gelfand:threat",
+  "gelfand:tradeoffs",
+  "gelfand:class",
+  "makingsense:connection"
+ ],
+ "origin": "gelfand",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

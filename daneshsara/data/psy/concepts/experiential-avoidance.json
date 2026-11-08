@@ -1,0 +1,94 @@
+{
+ "id": "psy:experiential-avoidance",
+ "kind": "concept",
+ "title": {
+  "fa": "اجتناب تجربه‌ای",
+  "en": "Experiential avoidance",
+  "nl": "Experiëntiële vermijding"
+ },
+ "parent": "psy:transdiagnostic",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "تلاش برای فرار یا کنترل تجربه‌های درونی ناخوشایند؛ اثر کوتاه‌مدت مفید، اثر درازمدت مخرب.",
+  "en": "Trying to escape or control unpleasant inner experiences; helpful in the short term, harmful in the long term.",
+  "nl": "Proberen te ontsnappen aan of controle te krijgen over onaangename innerlijke ervaringen; nuttig op korte termijn, schadelijk op lange termijn."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پنج نوع: موقعیتی (نرفتن به مهمانی)، شناختی (مهار فکر و خاطره)، حفاظتی (وارسی، کمال‌گرایی، تعلل)، بدنی (کاهش تحرک و هیجان)، جایگزینی (الکل، قمار، غذا، بازی).",
+    "en": "Five kinds: situational (not going to a party), cognitive (suppressing thoughts and memories), protective (checking, perfectionism, procrastination), somatic (reducing activity and arousal), substitution (alcohol, gambling, food, gaming).",
+    "nl": "Vijf soorten: situationeel (niet naar een feest gaan), cognitief (gedachten en herinneringen onderdrukken), beschermend (controleren, perfectionisme, uitstellen), lichamelijk (minder bewegen en opwinding), vervangend (alcohol, gokken, eten, gamen)."
+   },
+   "sources": [
+    "src:593706934f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقیاس کارگاه: «سعی می‌کنم حس‌های بدم را خفه و بی‌حس کنم»، «وقتی چیزی ناراحت‌کننده است اجتناب می‌کنم».",
+    "en": "The workshop scale: “I try to numb or shut down my bad feelings”, “When something is upsetting, I avoid it”.",
+    "nl": "De schaal uit de workshop: ‘Ik probeer mijn slechte gevoelens te verdoven of af te sluiten’, ‘Als iets vervelend is, vermijd ik het’."
+   },
+   "sources": [
+    "src:593706934f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پادزهر در ACT: تمایل و پذیرش در خدمت ارزش‌ها.",
+    "en": "The antidote in ACT: willingness and acceptance in the service of values.",
+    "nl": "Het tegengif in ACT: bereidheid en aanvaarding in dienst van waarden."
+   },
+   "sources": [
+    "src:593706934f"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:t-thirdwave",
+   "rel": "applies-to",
+   "note": {
+    "fa": "هدف درمان",
+    "en": "Treatment target",
+    "nl": "Behandeldoel"
+   }
+  },
+  {
+   "to": "psy:emotional-agility",
+   "rel": "contrasts",
+   "note": {
+    "fa": "پادزهر",
+    "en": "Antidote",
+    "nl": "Tegengif"
+   }
+  },
+  {
+   "to": "psy:self-medication",
+   "rel": "see-also",
+   "note": {
+    "fa": "اجتناب جایگزینی",
+    "en": "Substitute avoidance",
+    "nl": "Vervangende vermijding"
+   }
+  }
+ ],
+ "people": [
+  "core:steven-hayes"
+ ],
+ "sources": [
+  "src:593706934f"
+ ],
+ "booklets": [
+  "workshop:avoidance",
+  "psychopath:anxiety"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

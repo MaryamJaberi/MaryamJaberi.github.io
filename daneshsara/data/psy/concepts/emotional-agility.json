@@ -1,0 +1,87 @@
+{
+ "id": "psy:emotional-agility",
+ "kind": "concept",
+ "title": {
+  "fa": "چابکی هیجانی",
+  "en": "Emotional agility",
+  "nl": "Emotionele wendbaarheid"
+ },
+ "parent": "psy:t-thirdwave",
+ "field": "psy:t-thirdwave",
+ "summary": {
+  "fa": "سوزان دیوید: نزدیک شدن به افکار و هیجان‌های دشوار با کنجکاوی، فاصله گرفتن از آن‌ها و عمل بر پایهٔ ارزش‌ها.",
+  "en": "Susan David: approaching difficult thoughts and emotions with curiosity, stepping back from them and acting on values.",
+  "nl": "Susan David: moeilijke gedachten en emoties met nieuwsgierigheid benaderen, er afstand van nemen en handelen vanuit waarden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "چهار گام: روبه‌رو شدن (showing up)، فاصله گرفتن (stepping out)، حرکت بر پایهٔ «چرا»ی خود (walking your why)، پیش رفتن با گام‌های کوچک.",
+    "en": "Four steps: showing up, stepping out, walking your why, moving on in small steps.",
+    "nl": "Vier stappen: je laten zien (showing up), afstand nemen (stepping out), je eigen ‘waarom’ volgen (walking your why), verder gaan met kleine stappen."
+   },
+   "sources": [
+    "src:24da809eab"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پادزهر اجتناب تجربه‌ای و «گیر افتادن» در فکر.",
+    "en": "The antidote to experiential avoidance and getting “hooked” on thoughts.",
+    "nl": "Het tegengif voor experiëntiële vermijding en ‘vastzitten’ in gedachten."
+   },
+   "sources": [
+    "src:24da809eab"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ترجمه‌های فارسی: «انعطاف‌پذیری هیجانی»، «چابکی در مدیریت هیجانات».",
+    "en": "Persian translations: “emotional flexibility”, “agility in managing emotions”.",
+    "nl": "Perzische vertalingen: ‘emotionele flexibiliteit’, ‘wendbaarheid in het hanteren van emoties’."
+   },
+   "sources": [
+    "src:24da809eab"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:experiential-avoidance",
+   "rel": "contrasts",
+   "note": {
+    "fa": "پادزهر",
+    "en": "Antidote",
+    "nl": "Tegengif"
+   }
+  },
+  {
+   "to": "psy:emotional-intelligence",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  }
+ ],
+ "people": [
+  "core:susan-david"
+ ],
+ "sources": [
+  "src:24da809eab",
+  "src:3e078f112f"
+ ],
+ "booklets": [
+  "workshop:books",
+  "riseabove:agility",
+  "shelf13:agility"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

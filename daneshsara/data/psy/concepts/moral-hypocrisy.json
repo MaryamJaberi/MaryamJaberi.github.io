@@ -1,0 +1,117 @@
+{
+ "id": "psy:moral-hypocrisy",
+ "kind": "concept",
+ "title": {
+  "fa": "ریاکاری اخلاقی",
+  "en": "Moral hypocrisy",
+  "nl": "Morele hypocrisie"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "انگیزهٔ اخلاقی به نظر رسیدن در چشم خود و دیگران، با پرهیز از هزینهٔ واقعاً اخلاقی بودن (دنیل بتسون).",
+  "en": "The motive to appear moral in one's own and others' eyes while avoiding the cost of actually being moral (Daniel Batson).",
+  "nl": "Het motief om in eigen ogen en die van anderen moreel te lijken, terwijl je de kosten van echt moreel zijn vermijdt (Daniel Batson)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "۸۰٪ تکلیف خوب را به خود دادند، تنها ۵٪ آن را اخلاقی‌ترین کار دانستند.",
+    "en": "80% gave themselves the good task; only 5% thought that was the most moral choice.",
+    "nl": "80% gaf zichzelf de leuke taak; slechts 5% vond dat de meest morele keuze."
+   },
+   "sources": [
+    "src:ffb81b3461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "با سکه: ۸۵ تا ۹۰٪ سکه‌اندازها باز هم به نفع خود تقسیم کردند.",
+    "en": "With a coin: 85 to 90% of coin-flippers still allocated in their own favour.",
+    "nl": "Met een munt: 85 tot 90% van de opgooiers verdeelde toch in eigen voordeel."
+   },
+   "sources": [
+    "src:ffb81b3461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آینه همراه با برجسته کردن معیار اخلاقی، رفتار عادلانه را بالا برد.",
+    "en": "A mirror together with highlighting the moral standard increased fair behaviour.",
+    "nl": "Een spiegel samen met het benadrukken van de morele norm verhoogde eerlijk gedrag."
+   },
+   "sources": [
+    "src:ffb81b3461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تاس پنهان: ۶۲٪ بیشترین پاداش را گزارش کردند (فیشباخر ۲۰۱۳).",
+    "en": "The hidden die: 62% reported the highest reward (Fischbacher 2013).",
+    "nl": "De verborgen dobbelsteen: 62% meldde de hoogste beloning (Fischbacher 2013)."
+   },
+   "sources": [
+    "src:ffb81b3461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سازوکارهای انکار، دوپاره‌سازی و گسست؛ و موضع موقعیت‌گرا (میلگرم، زیمباردو، اثر تماشاگر).",
+    "en": "Mechanisms of denial, splitting and dissociation; and the situationist stance (Milgram, Zimbardo, the bystander effect).",
+    "nl": "Mechanismen van ontkenning, splitsing en dissociatie; en het situationistische standpunt (Milgram, Zimbardo, het omstandereffect)."
+   },
+   "sources": [
+    "src:ffb81b3461"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:morality-mh",
+   "rel": "see-also",
+   "note": {
+    "fa": "اخلاق",
+    "en": "Morality",
+    "nl": "Moraal"
+   }
+  },
+  {
+   "to": "psy:dehumanization",
+   "rel": "see-also",
+   "note": {
+    "fa": "سوی تاریک",
+    "en": "Dark side",
+    "nl": "Schaduwkant"
+   }
+  },
+  {
+   "to": "psy:self-narrative",
+   "rel": "see-also",
+   "note": {
+    "fa": "هویت روایی",
+    "en": "Narrative identity",
+    "nl": "Narratieve identiteit"
+   }
+  }
+ ],
+ "people": [
+  "core:daniel-batson",
+  "core:urs-fischbacher"
+ ],
+ "sources": [
+  "src:ffb81b3461",
+  "src:d9d15ca81d"
+ ],
+ "booklets": [
+  "morality:hypocrisy"
+ ],
+ "origin": "morality",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

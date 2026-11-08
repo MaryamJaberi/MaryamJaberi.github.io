@@ -1,0 +1,109 @@
+{
+ "id": "psy:complex-contagion",
+ "kind": "concept",
+ "title": {
+  "fa": "سرایت پیچیده و چیدمان تغییر",
+  "en": "Complex contagion",
+  "nl": "Complexe besmetting"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "رفتارهای پرهزینه به تأیید از چند منبع نیاز دارند و در شبکه‌های خوشه‌ای بهتر پخش می‌شوند؛ «چیدمان مهم‌تر از محتواست».",
+  "en": "Costly behaviours need confirmation from several sources and spread better in clustered networks; “structure matters more than content”.",
+  "nl": "Kostbaar gedrag heeft bevestiging uit meerdere bronnen nodig en verspreidt zich beter in geclusterde netwerken; ‘de structuur is belangrijker dan de inhoud’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مدل آستانه‌ای گرانووتر (۱۹۷۸): نتیجهٔ جمعی از میانگین ترجیحات پیش‌بینی نمی‌شود.",
+    "en": "Granovetter's threshold model (1978): the collective outcome cannot be predicted from average preferences.",
+    "nl": "Het drempelmodel van Granovetter (1978): de collectieve uitkomst is niet te voorspellen uit gemiddelde voorkeuren."
+   },
+   "sources": [
+    "src:8a4cebc85b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازار موسیقی مصنوعی (سالگانیک ۲۰۰۶): تأثیر اجتماعی نابرابری را تشدید و پیش‌بینی‌پذیری را کم می‌کند.",
+    "en": "The artificial music market (Salganik 2006): social influence increases inequality and reduces predictability.",
+    "nl": "De kunstmatige muziekmarkt (Salganik 2006): sociale invloed vergroot ongelijkheid en vermindert voorspelbaarheid."
+   },
+   "sources": [
+    "src:8a4cebc85b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سنتولا (۲۰۱۰): شبکه‌های خوشه‌ای رفتار سلامت را بهتر از شبکه‌های تصادفی پخش کردند.",
+    "en": "Centola (2010): clustered networks spread health behaviour better than random networks.",
+    "nl": "Centola (2010): geclusterde netwerken verspreidden gezondheidsgedrag beter dan willekeurige netwerken."
+   },
+   "sources": [
+    "src:8a4cebc85b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ماشین‌های داروینی: تنوع، انتخاب، نگهداری، زمینه.",
+    "en": "Darwinian machines: variation, selection, retention, context.",
+    "nl": "Darwinistische machines: variatie, selectie, behoud, context."
+   },
+   "sources": [
+    "src:8a4cebc85b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-selectors",
+   "rel": "see-also",
+   "note": {
+    "fa": "هسته‌های تغییر",
+    "en": "Nuclei of change",
+    "nl": "Kernen van verandering"
+   }
+  },
+  {
+   "to": "psy:habit",
+   "rel": "see-also",
+   "note": {
+    "fa": "تغییر فردی",
+    "en": "Individual change",
+    "nl": "Individuele verandering"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "گروه‌های هم‌فکر",
+    "en": "Like-minded groups",
+    "nl": "Gelijkgestemde groepen"
+   }
+  }
+ ],
+ "people": [
+  "core:damon-centola",
+  "core:mark-granovetter",
+  "core:cass-sunstein"
+ ],
+ "sources": [
+  "src:8a4cebc85b",
+  "src:612ed12dae"
+ ],
+ "booklets": [
+  "s7:how",
+  "s7:selectors",
+  "s7:darwin"
+ ],
+ "origin": "s7",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

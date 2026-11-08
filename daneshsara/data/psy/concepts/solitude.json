@@ -1,0 +1,123 @@
+{
+ "id": "psy:solitude",
+ "kind": "concept",
+ "title": {
+  "fa": "انگیزه برای خلوت",
+  "en": "Motivation for solitude",
+  "nl": "Motivatie voor alleen zijn"
+ },
+ "parent": "psy:p-personality",
+ "field": "psy:p-personality",
+ "summary": {
+  "fa": "تنهایی دو چهره دارد: خلوت خودمختار (ترمیم، خلاقیت، معنویت) و خلوت ناخودمختار (گریز از اضطراب و طرد).",
+  "en": "Solitude has two faces: self-determined solitude (restoration, creativity, spirituality) and non-self-determined solitude (escaping anxiety and rejection).",
+  "nl": "Alleen zijn heeft twee gezichten: zelfgekozen alleen zijn (herstel, creativiteit, spiritualiteit) en niet-zelfgekozen alleen zijn (vluchten voor angst en afwijzing)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مقیاس MSS-SF (توماس و ازمیتیا ۲۰۱۹).",
+    "en": "The MSS-SF scale (Thomas and Azmitia 2019).",
+    "nl": "De schaal MSS-SF (Thomas en Azmitia 2019)."
+   },
+   "sources": [
+    "src:21e33bd106"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خودمختار: «به خلاقیتم دامن می‌زند»، «انرژی‌ام بازیابی می‌شود». ناخودمختار: «با دیگران نمی‌توانم خودم باشم».",
+    "en": "Self-determined: “It fuels my creativity”, “It restores my energy”. Not self-determined: “I can't be myself around others”.",
+    "nl": "Zelfgekozen: ‘Het voedt mijn creativiteit’, ‘Mijn energie herstelt’. Niet zelfgekozen: ‘Bij anderen kan ik mezelf niet zijn’."
+   },
+   "sources": [
+    "src:21e33bd106"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیام کارگاه: رفتار به خودی خود سالم یا ناسالم نیست؛ انگیزه و کارکرد آن تعیین‌کننده است.",
+    "en": "The workshop's message: a behaviour is not healthy or unhealthy in itself; its motive and function decide.",
+    "nl": "De boodschap van de workshop: een gedrag is op zich niet gezond of ongezond; het motief en de functie bepalen dat."
+   },
+   "sources": [
+    "src:21e33bd106"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خلوت با تنهایی فرق دارد؛ خلوت خودانگیخته با رشد شخصی و پذیرش خود همراه است.",
+    "en": "Solitude differs from loneliness; self-chosen solitude goes with personal growth and self-acceptance.",
+    "nl": "Alleen zijn is iets anders dan eenzaamheid; zelfgekozen alleen zijn gaat samen met persoonlijke groei en zelfaanvaarding."
+   },
+   "sources": [
+    "src:21e33bd106"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کارکرد خودمختار، نه درون‌گرایی، لذت از خلوت را پیش‌بینی می‌کند (نگوین و همکاران ۲۰۲۲).",
+    "en": "Autonomous motivation, not introversion, predicts enjoying solitude (Nguyen and colleagues 2022).",
+    "nl": "Autonome motivatie, niet introversie, voorspelt genieten van alleen zijn (Nguyen en collega's 2022)."
+   },
+   "sources": [
+    "src:21e33bd106"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کمرویی، اجتناب اجتماعی و غیراجتماعی بودن سه نوع کناره‌گیری‌اند.",
+    "en": "Shyness, social avoidance and unsociability are three kinds of withdrawal.",
+    "nl": "Verlegenheid, sociale vermijding en ongezelligheid zijn drie soorten terugtrekking."
+   },
+   "sources": [
+    "src:21e33bd106"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:sdt",
+   "rel": "see-also",
+   "note": {
+    "fa": "خودمختاری",
+    "en": "Autonomy",
+    "nl": "Autonomie"
+   }
+  },
+  {
+   "to": "psy:rejection-sensitivity",
+   "rel": "see-also",
+   "note": {
+    "fa": "خلوت گریزی",
+    "en": "Escapist solitude",
+    "nl": "Vluchtend alleen zijn"
+   }
+  }
+ ],
+ "people": [
+  "core:netta-weinstein",
+  "core:thuy-vy-nguyen"
+ ],
+ "sources": [
+  "src:21e33bd106",
+  "src:598f83f1e7"
+ ],
+ "booklets": [
+  "workshop:more",
+  "bored:boredom",
+  "solitude:define",
+  "solitude:sds",
+  "solitude:effects"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

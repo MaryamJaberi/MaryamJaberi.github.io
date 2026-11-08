@@ -1,0 +1,144 @@
+{
+ "id": "psy:n-reward",
+ "kind": "subfield",
+ "title": {
+  "fa": "پاداش و دوپامین",
+  "en": "Reward system · Dopamine",
+  "nl": "Beloningssysteem · dopamine"
+ },
+ "parent": "psy:neuroscience",
+ "field": null,
+ "summary": {
+  "fa": "مدار پاداش مغز (ناحیهٔ تگمنتال شکمی، هستهٔ اکومبنس، قشر پیش‌پیشانی) که یادگیری، انگیزه و «خواستن» را می‌سازد.",
+  "en": "The brain's reward circuit (ventral tegmental area, nucleus accumbens, prefrontal cortex), which underlies learning, motivation and “wanting”.",
+  "nl": "Het beloningscircuit van de hersenen (ventraal tegmentaal gebied, nucleus accumbens, prefrontale cortex), dat ten grondslag ligt aan leren, motivatie en ‘willen’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اولدز و میلنر (۱۹۵۴): موش‌ها برای تحریک ناحیهٔ «لذت» اهرم را هزاران بار فشار می‌دادند.",
+    "en": "Olds and Milner (1954): rats pressed a lever thousands of times to stimulate the “pleasure” area.",
+    "nl": "Olds en Milner (1954): ratten drukten duizenden keren op een hendel om het ‘plezier’-gebied te stimuleren."
+   },
+   "sources": [
+    "src:c6a4d6224d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شولتز: نورون‌های دوپامینی «خطای پیش‌بینی پاداش» را رمز می‌کنند؛ پاداشِ بهتر از انتظار، دوپامین بیشتر.",
+    "en": "Schultz: dopamine neurons encode the “reward prediction error”; a better-than-expected reward, more dopamine.",
+    "nl": "Schultz: dopamineneuronen coderen de ‘beloningsvoorspellingsfout’; een beloning die beter is dan verwacht, geeft meer dopamine."
+   },
+   "sources": [
+    "src:c6a4d6224d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بریج: دوپامین بیشتر «خواستن» است تا «دوست‌داشتن».",
+    "en": "Berridge: dopamine is more “wanting” than “liking”.",
+    "nl": "Berridge: dopamine is meer ‘willen’ dan ‘lekker vinden’."
+   },
+   "sources": [
+    "src:c6a4d6224d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با اصل پیشرفت: پیشرفت‌های کوچک و پیش‌بینی‌نشده سیگنال پاداش می‌سازند.",
+    "en": "Link with the progress principle: small, unexpected progress creates a reward signal.",
+    "nl": "Link met het vooruitgangsprincipe: kleine, onverwachte vooruitgang geeft een beloningssignaal."
+   },
+   "sources": [
+    "src:c6a4d6224d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کنجکاوی شناختی با فعالیت هستهٔ دمدار و SN/VTA همراه است و یادگیری را بهتر می‌کند (کانگ ۲۰۰۹؛ گروبر ۲۰۱۴).",
+    "en": "Epistemic curiosity goes with activity in the caudate nucleus and SN/VTA and improves learning (Kang 2009; Gruber 2014).",
+    "nl": "Epistemische nieuwsgierigheid gaat samen met activiteit in de nucleus caudatus en SN/VTA en verbetert het leren (Kang 2009; Gruber 2014)."
+   },
+   "sources": [
+    "src:c6a4d6224d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لرزش زیبایی‌شناختی در موسیقی همان نواحی لذت زیستی را فعال می‌کند (بلاد و زاتوره، ۲۰۰۱).",
+    "en": "Aesthetic chills in music activate the same areas as biological pleasure (Blood and Zatorre, 2001).",
+    "nl": "Esthetische rillingen bij muziek activeren dezelfde gebieden als biologisch genot (Blood en Zatorre, 2001)."
+   },
+   "sources": [
+    "src:c6a4d6224d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همین مدار در اعتیاد «ربوده» می‌شود.",
+    "en": "The same circuit is “hijacked” in addiction.",
+    "nl": "Hetzelfde circuit wordt bij verslaving ‘gekaapt’."
+   },
+   "sources": [
+    "src:c6a4d6224d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرید: انگیزهٔ نوع A (زیستی)، B (اجتماعی)، C (رشد ذهن).",
+    "en": "Farid: type A motivation (biological), B (social), C (growth of the mind).",
+    "nl": "Farid: motivatie van type A (biologisch), B (sociaal), C (groei van de geest)."
+   },
+   "sources": [
+    "src:c6a4d6224d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:curiosity-brain",
+   "rel": "see-also",
+   "note": {
+    "fa": "پاداش دانستن",
+    "en": "The reward of knowing",
+    "nl": "De beloning van weten"
+   }
+  },
+  {
+   "to": "psy:craving",
+   "rel": "see-also",
+   "note": {
+    "fa": "وسوسه",
+    "en": "Craving",
+    "nl": "Trek"
+   }
+  }
+ ],
+ "people": [
+  "core:wolfram-schultz",
+  "core:kent-berridge",
+  "core:james-olds"
+ ],
+ "sources": [
+  "src:c6a4d6224d",
+  "src:07ab7553ab"
+ ],
+ "booklets": [
+  "curiosity:brain",
+  "decision:substances",
+  "shelf15:freed"
+ ],
+ "origin": "curiosity",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

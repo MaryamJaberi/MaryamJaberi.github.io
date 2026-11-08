@@ -1,0 +1,86 @@
+{
+ "id": "psy:need-for-cognition",
+ "kind": "concept",
+ "title": {
+  "fa": "نیاز به دانایی",
+  "en": "Need for cognition",
+  "nl": "Behoefte aan denken (need for cognition)"
+ },
+ "parent": "psy:p-personality",
+ "field": "psy:p-personality",
+ "summary": {
+  "fa": "گرایش پایدار فرد به فکرکردن، کنجکاوی و لذت‌بردن از تلاش ذهنی. کاچیوپو و پتی (۱۹۸۲) آن را مفهوم‌پردازی کردند.",
+  "en": "A person's stable tendency to think, be curious and enjoy mental effort. Conceptualised by Cacioppo and Petty (1982).",
+  "nl": "Iemands stabiele neiging om na te denken, nieuwsgierig te zijn en te genieten van mentale inspanning. Uitgewerkt door Cacioppo en Petty (1982)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کسانی که بالا هستند کتاب می‌خوانند، از معما لذت می‌برند و وقتی خبر علمی پخش می‌شود گوششان تیز می‌شود.",
+    "en": "Those high in it read books, enjoy puzzles and prick up their ears when science news comes on.",
+    "nl": "Wie er hoog op scoort, leest boeken, geniet van puzzels en spitst de oren als er wetenschapsnieuws is."
+   },
+   "sources": [
+    "src:44afc496c4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در جلسهٔ ۱: صفتی است که در مدیران خوب اثر مخرب ونتینگ را کم می‌کند؛ کنجکاوی («داستان چه بوده؟») جای کلافگی را می‌گیرد.",
+    "en": "In session 1: a trait that in good managers reduces the harmful effect of venting; curiosity (“What was the story?”) takes the place of exasperation.",
+    "nl": "In sessie 1: een eigenschap die bij goede leidinggevenden het schadelijke effect van stoom afblazen vermindert; nieuwsgierigheid (‘Wat was het verhaal?’) vervangt ergernis."
+   },
+   "sources": [
+    "src:44afc496c4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "با مقیاس ۱۸ گویه‌ای Need for Cognition Scale سنجیده می‌شود.",
+    "en": "Measured with the 18-item Need for Cognition Scale.",
+    "nl": "Gemeten met de Need for Cognition Scale van 18 items."
+   },
+   "sources": [
+    "src:44afc496c4"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:venting",
+   "rel": "see-also",
+   "note": {
+    "fa": "کاهش اثر مخرب",
+    "en": "Reducing harmful effects",
+    "nl": "Schadelijke effecten verminderen"
+   }
+  },
+  {
+   "to": "psy:challenger-listener",
+   "rel": "explains",
+   "note": {
+    "fa": "پایهٔ شنیدن کنجکاوانه",
+    "en": "Basis of curious listening",
+    "nl": "Basis van nieuwsgierig luisteren"
+   }
+  }
+ ],
+ "people": [
+  "core:john-cacioppo",
+  "core:richard-petty"
+ ],
+ "sources": [
+  "src:44afc496c4"
+ ],
+ "booklets": [
+  "t-need-for-cognition",
+  "s11:receivers"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

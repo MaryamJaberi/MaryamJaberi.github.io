@@ -1,0 +1,105 @@
+{
+ "id": "psy:existentialism",
+ "kind": "subfield",
+ "title": {
+  "fa": "فلسفهٔ وجودی و پدیدارشناسی",
+  "en": "Existentialism & phenomenology",
+  "nl": "Existentialisme en fenomenologie"
+ },
+ "parent": "psy:philosophy",
+ "field": null,
+ "summary": {
+  "fa": "تجربهٔ زیسته از نگاه خود فرد: معنا، آزادی، تنهایی و مرگ. پدیدارشناسی هوسرل از راه یاسپرس به روان‌پزشکی رسید و فلسفهٔ وجودی از راه فرانکل و یالوم به روان‌درمانی.",
+  "en": "Lived experience from the person's own point of view: meaning, freedom, loneliness and death. Husserl's phenomenology reached psychiatry through Jaspers, and existential philosophy reached psychotherapy through Frankl and Yalom.",
+  "nl": "Geleefde ervaring vanuit het perspectief van de persoon zelf: betekenis, vrijheid, eenzaamheid en dood. De fenomenologie van Husserl bereikte de psychiatrie via Jaspers, en de existentiefilosofie de psychotherapie via Frankl en Yalom."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "یاسپرس روش پدیدارشناختی را پایهٔ «آسیب‌شناسی روانی عمومی» (۱۹۱۳) کرد.",
+    "en": "Jaspers made the phenomenological method the basis of “General Psychopathology” (1913).",
+    "nl": "Jaspers maakte de fenomenologische methode tot basis van de ‘Allgemeine Psychopathologie’ (1913)."
+   },
+   "sources": [
+    "src:b19f292541"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرانکل: انسان می‌تواند در سخت‌ترین شرایط هم معنا بیابد.",
+    "en": "Frankl: humans can find meaning even in the hardest conditions.",
+    "nl": "Frankl: de mens kan zelfs in de zwaarste omstandigheden betekenis vinden."
+   },
+   "sources": [
+    "src:b19f292541"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "روان‌شناسی وجودی تجربی: نظریهٔ مدیریت وحشت و مدل نگهداری معنا.",
+    "en": "Experimental existential psychology: terror management theory and the meaning maintenance model.",
+    "nl": "Experimentele existentiële psychologie: de terror-managementtheorie en het betekenisonderhoudsmodel."
+   },
+   "sources": [
+    "src:b19f292541"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:meaning-making",
+   "rel": "see-also",
+   "note": {
+    "fa": "معنا",
+    "en": "Meaning",
+    "nl": "Betekenis"
+   }
+  },
+  {
+   "to": "psy:descriptive-psychopathology",
+   "rel": "see-also",
+   "note": {
+    "fa": "پدیدارشناسی یاسپرس",
+    "en": "Jaspers's phenomenology",
+    "nl": "Fenomenologie van Jaspers"
+   }
+  },
+  {
+   "to": "psy:t-humanistic",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان وجودی",
+    "en": "Existential therapy",
+    "nl": "Existentiële therapie"
+   }
+  },
+  {
+   "to": "psy:solitude",
+   "rel": "see-also",
+   "note": {
+    "fa": "تنهایی و خلوت",
+    "en": "Loneliness and solitude",
+    "nl": "Eenzaamheid en alleen zijn"
+   }
+  }
+ ],
+ "people": [
+  "core:kierkegaard",
+  "core:heidegger",
+  "core:sartre",
+  "core:karl-jaspers",
+  "core:viktor-frankl",
+  "core:irvin-yalom"
+ ],
+ "sources": [
+  "src:b19f292541"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

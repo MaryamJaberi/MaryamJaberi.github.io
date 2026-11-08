@@ -1,0 +1,106 @@
+{
+ "id": "psy:acrim",
+ "kind": "concept",
+ "title": {
+  "fa": "اصالت، خودشناسی و محور انتقاد",
+  "en": "ASK & Axis of Criticism",
+  "nl": "ASK en de as van kritiek"
+ },
+ "parent": "psy:self-criticism",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "نظریهٔ گلن شاهار: انتقاد والد گوه‌ای میان اصالت و خودشناسی می‌کوبد و شبکهٔ انتقاد خانواده، مدرسه و جامعه آن را در طول عمر تقویت می‌کند.",
+  "en": "Golan Shahar's theory: parental criticism drives a wedge between authenticity and self-knowledge, and a network of criticism from family, school and society strengthens it across the lifespan.",
+  "nl": "De theorie van Golan Shahar: kritiek van ouders drijft een wig tussen authenticiteit en zelfkennis, en een netwerk van kritiek uit gezin, school en samenleving versterkt die over de hele levensloop."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آبشار خودانتقادی: خودانتقادی، رویداد منفی و فرسایش حمایت، افسردگی، و خودانتقادی بیشتر.",
+    "en": "The self-criticism cascade: self-criticism, negative events and eroded support, depression, and more self-criticism.",
+    "nl": "De zelfkritiekwaterval: zelfkritiek, negatieve gebeurtenissen en uitgeholde steun, depressie, en meer zelfkritiek."
+   },
+   "sources": [
+    "src:925eaf6bca"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سه دشواری خودشناسی: خودهای چندگانه، رویدادمندی (استرس)، دیگری (آینه‌داری).",
+    "en": "Three difficulties of self-knowledge: multiple selves, eventfulness (stress), the other (mirroring).",
+    "nl": "Drie moeilijkheden van zelfkennis: meerdere zelven, gebeurtenissen (stress), de ander (spiegelen)."
+   },
+   "sources": [
+    "src:925eaf6bca"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پروژه‌مندی: «کوشش برای شدن آنچه می‌توانم».",
+    "en": "Projectuality: “striving to become what I can be”.",
+    "nl": "Projectmatigheid: ‘streven te worden wat ik kan zijn’."
+   },
+   "sources": [
+    "src:925eaf6bca"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درمان تلفیقی: گرمی فعال، تحلیل خودهای چندگانه، ذهن‌آگاهی، کار با خانواده و مدرسه.",
+    "en": "Integrative treatment: active warmth, analysing multiple selves, mindfulness, working with family and school.",
+    "nl": "Integratieve behandeling: actieve warmte, meerdere zelven analyseren, mindfulness, werken met gezin en school."
+   },
+   "sources": [
+    "src:925eaf6bca"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:perfectionism",
+   "rel": "see-also",
+   "note": {
+    "fa": "مظنون دیگر",
+    "en": "Another suspect",
+    "nl": "Een andere verdachte"
+   }
+  },
+  {
+   "to": "psy:attachment",
+   "rel": "see-also",
+   "note": {
+    "fa": "آینه‌داری",
+    "en": "Mirroring",
+    "nl": "Spiegelen"
+   }
+  },
+  {
+   "to": "psy:sdt",
+   "rel": "see-also",
+   "note": {
+    "fa": "انگیزهٔ خودمختار",
+    "en": "Autonomous motivation",
+    "nl": "Autonome motivatie"
+   }
+  }
+ ],
+ "people": [
+  "core:golan-shahar",
+  "core:sidney-blatt",
+  "core:donald-winnicott"
+ ],
+ "sources": [
+  "src:925eaf6bca"
+ ],
+ "booklets": [
+  "compassion:erosion"
+ ],
+ "origin": "compassion",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

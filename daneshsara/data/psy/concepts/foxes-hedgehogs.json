@@ -1,0 +1,85 @@
+{
+ "id": "psy:foxes-hedgehogs",
+ "kind": "concept",
+ "title": {
+  "fa": "روباه‌ها و جوجه‌تیغی‌ها",
+  "en": "Foxes and hedgehogs",
+  "nl": "Vossen en egels"
+ },
+ "parent": "psy:critical-thinking",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "فیلیپ تتلاک: کارشناسان «جوجه‌تیغی» با یک نظریهٔ بزرگ پیش‌بینی بدی دارند؛ «روباه‌ها» با دانش متنوع و انعطاف بهتر پیش‌بینی می‌کنند.",
+  "en": "Philip Tetlock: “hedgehog” experts with one big theory forecast poorly; “foxes” with varied knowledge and flexibility forecast better.",
+  "nl": "Philip Tetlock: ‘egel’-experts met één grote theorie voorspellen slecht; ‘vossen’ met gevarieerde kennis en flexibiliteit voorspellen beter."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پروژهٔ بیست‌ساله، ده‌ها هزار پیش‌بینی؛ جوجه‌تیغی‌ها با افزایش تخصص بدتر شدند.",
+    "en": "A twenty-year project, tens of thousands of forecasts; hedgehogs got worse as their expertise grew.",
+    "nl": "Een project van twintig jaar, tienduizenden voorspellingen; egels werden slechter naarmate hun expertise groeide."
+   },
+   "sources": [
+    "src:a35aeb8584"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شرط‌بندی ارلیک و سایمون: دو جوجه‌تیغی که هر کدام بخشی از حقیقت را دیدند.",
+    "en": "The Ehrlich-Simon wager: two hedgehogs, each of whom saw part of the truth.",
+    "nl": "De weddenschap tussen Ehrlich en Simon: twee egels die elk een deel van de waarheid zagen."
+   },
+   "sources": [
+    "src:a35aeb8584"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«ابرپیش‌بین‌ها» در مسابقهٔ پیش‌بینی از تحلیلگران با اطلاعات محرمانه بهتر بودند.",
+    "en": "“Superforecasters” in a forecasting tournament beat analysts with classified information.",
+    "nl": "‘Superforecasters’ in een voorspellingstoernooi deden het beter dan analisten met geheime informatie."
+   },
+   "sources": [
+    "src:a35aeb8584"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:need-for-cognition",
+   "rel": "see-also",
+   "note": {
+    "fa": "گشودگی فکری",
+    "en": "Open-mindedness",
+    "nl": "Open denken"
+   }
+  },
+  {
+   "to": "psy:learning-environments",
+   "rel": "see-also",
+   "note": {
+    "fa": "محیط بدخیم",
+    "en": "Wicked environment",
+    "nl": "Verraderlijke omgeving"
+   }
+  }
+ ],
+ "people": [
+  "core:philip-tetlock"
+ ],
+ "sources": [
+  "src:a35aeb8584",
+  "src:9666966958"
+ ],
+ "booklets": [
+  "range:experts"
+ ],
+ "origin": "range",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

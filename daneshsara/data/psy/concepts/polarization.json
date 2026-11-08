@@ -1,0 +1,86 @@
+{
+ "id": "psy:polarization",
+ "kind": "concept",
+ "title": {
+  "fa": "قطبی‌شدن نیروی کار",
+  "en": "Workforce polarization",
+  "nl": "Polarisatie van de arbeidsmarkt"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "چهارمین تحول کتاب Emotionally Charged: نیروی کار و تحصیل متنوع‌تر و قطبی‌تر شده است؛ در غرب با سیاست‌های تنوع و شمول (DEI) و در ایران بیشتر به شکل قطبی‌شدن سیاسی.",
+  "en": "The fourth shift in the book Emotionally Charged: the workforce and student body have become more diverse and more polarised; in the West through diversity and inclusion (DEI) policies, in Iran more as political polarisation.",
+  "nl": "De vierde verschuiving in het boek Emotionally Charged: werknemers en studenten zijn diverser en gepolariseerder geworden; in het Westen via diversiteits- en inclusiebeleid (DEI), in Iran meer als politieke polarisatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "راست راست‌تر و چپ چپ‌تر می‌شود و مناقشه در محیط کار افزایش می‌یابد.",
+    "en": "The right moves further right and the left further left, and conflict at work increases.",
+    "nl": "Rechts wordt rechtser en links linkser, en conflicten op het werk nemen toe."
+   },
+   "sources": [
+    "src:c23f9e3d5c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شاهد مشاجرهٔ سیاسی همکاران بودن خود عامل تنش است که به خانه می‌آید و چرخهٔ بازیابی را مختل می‌کند.",
+    "en": "Witnessing colleagues' political arguments is itself a source of strain that comes home and disrupts the recovery cycle.",
+    "nl": "Getuige zijn van politieke ruzies tussen collega's is zelf een bron van spanning die mee naar huis gaat en de herstelcyclus verstoort."
+   },
+   "sources": [
+    "src:c23f9e3d5c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدیر ناچار است هیجان خود را مهار کند و فضای گفت‌وگو را نگه دارد؛ پیوند مستقیم با کار هیجانی.",
+    "en": "The manager has to hold back their own emotion and keep the space for dialogue open; a direct link to emotional labour.",
+    "nl": "De leidinggevende moet de eigen emotie inhouden en de ruimte voor gesprek bewaren; een directe link met emotiewerk."
+   },
+   "sources": [
+    "src:c23f9e3d5c"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:emotional-labor",
+   "rel": "see-also",
+   "note": {
+    "fa": "افزایش تقاضای کار هیجانی",
+    "en": "Rising demand for emotional labour",
+    "nl": "Groeiende vraag naar emotiewerk"
+   }
+  },
+  {
+   "to": "psy:recovery-paradox",
+   "rel": "see-also",
+   "note": {
+    "fa": "تنش بیرون از کار",
+    "en": "Stress outside work",
+    "nl": "Spanning buiten het werk"
+   }
+  }
+ ],
+ "people": [
+  "core:alicia-grandey",
+  "core:dena-denham-smith"
+ ],
+ "sources": [
+  "src:c23f9e3d5c"
+ ],
+ "booklets": [
+  "t-polarization",
+  "conflict:polar"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

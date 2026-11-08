@@ -1,0 +1,96 @@
+{
+ "id": "psy:learned-helplessness",
+ "kind": "concept",
+ "title": {
+  "fa": "درماندگی و خوش‌بینی آموخته",
+  "en": "Learned helplessness / optimism",
+  "nl": "Aangeleerde hulpeloosheid / optimisme"
+ },
+ "parent": "psy:p-motivation",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "انفعال پس از رویدادهای غیرقابل‌کنترل؛ و بازنگری عصب‌شناختی که می‌گوید آنچه آموخته می‌شود «کنترل» است.",
+  "en": "Passivity after uncontrollable events; and the neuroscientific revision saying that what is learned is “control”.",
+  "nl": "Passiviteit na oncontroleerbare gebeurtenissen; en de neurowetenschappelijke herziening die zegt dat wat wordt geleerd ‘controle’ is."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سلیگمن و مایر (۱۹۶۷): سگ‌های شوک‌خورده حتی وقتی فرار ممکن بود تلاش نکردند.",
+    "en": "Seligman and Maier (1967): shocked dogs did not try to escape even when escape was possible.",
+    "nl": "Seligman en Maier (1967): honden die schokken hadden gekregen, probeerden niet te ontsnappen, zelfs als dat kon."
+   },
+   "sources": [
+    "src:04e3b9d86b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حدود یک‌سوم هرگز درمانده نمی‌شوند؛ ریشهٔ «خوش‌بینی آموخته».",
+    "en": "About a third never become helpless; the root of “learned optimism”.",
+    "nl": "Ongeveer een derde wordt nooit hulpeloos; de wortel van ‘aangeleerd optimisme’."
+   },
+   "sources": [
+    "src:04e3b9d86b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مایر و سلیگمن (۲۰۱۶): انفعال پاسخ پیش‌فرض (DRN) است؛ DMS کنترل‌پذیری را تشخیص می‌دهد و vmPFC آن را مهار می‌کند.",
+    "en": "Maier and Seligman (2016): passivity is the default response (DRN); the DMS detects controllability and the vmPFC inhibits it.",
+    "nl": "Maier en Seligman (2016): passiviteit is de standaardreactie (DRN); de DMS herkent beïnvloedbaarheid en de vmPFC remt haar."
+   },
+   "sources": [
+    "src:04e3b9d86b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:mood",
+   "rel": "see-also",
+   "note": {
+    "fa": "افسردگی",
+    "en": "Depression",
+    "nl": "Depressie"
+   }
+  },
+  {
+   "to": "psy:hope",
+   "rel": "see-also",
+   "note": {
+    "fa": "امید",
+    "en": "Hope",
+    "nl": "Hoop"
+   }
+  },
+  {
+   "to": "psy:n-stress",
+   "rel": "see-also",
+   "note": {
+    "fa": "استرس",
+    "en": "Stress",
+    "nl": "Stress"
+   }
+  }
+ ],
+ "people": [
+  "core:martin-seligman",
+  "core:steven-maier"
+ ],
+ "sources": [
+  "src:04e3b9d86b",
+  "src:7fb218d823"
+ ],
+ "booklets": [
+  "motivation:behaviorism",
+  "illusions:control"
+ ],
+ "origin": "motivation",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

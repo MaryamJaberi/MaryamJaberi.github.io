@@ -1,0 +1,545 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>مرور کتاب: ریشه‌های شادکامی</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-self">
+  <div class="brand">ویکی روان‌شناسی <small>مرور کتاب‌ها</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-self" target="_blank" rel="noopener">خود و رشد</a><span class="sep">›</span><a class="tp" href="index.html#t-meaning" target="_blank" rel="noopener">معنا، امید و بهزیستی</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><a href="s9.html" target="_blank" rel="noopener">خوش‌بینی و امید</a><a href="makingsense.html" target="_blank" rel="noopener">معنا بساز</a><a href="riseabove.html" target="_blank" rel="noopener">فراتر برو</a><a href="solitude.html" target="_blank" rel="noopener">خلوت</a><a href="optimism.html" target="_blank" rel="noopener">خوش‌بینی</a><span class="on" aria-current="page">ریشه‌های شادکامی</span><a href="mattering.html" target="_blank" rel="noopener">اهمیت داشتن</a><a href="shelf14.html" target="_blank" rel="noopener">قفسهٔ زندگی غنی</a><a href="art.html" target="_blank" rel="noopener">هنر</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#paradigm">پارادایم تازه: بهزیستی به‌عنوان هدف</a></li>
+<li><a href="#adult">چه چیزی بزرگسال را راضی می‌کند؟</a></li>
+<li><a href="#income">پول، بیکاری و پارادوکس ایسترلین</a></li>
+<li><a href="#child">چه چیزی کودک را به بزرگسالی راضی می‌رساند؟</a></li>
+<li><a href="#lecture">از اسلایدهای جلسه: دید سخنرانی</a></li>
+<li><a href="#work-day">کار، بیکاری و یک روز معمولی</a></li>
+<li><a href="#events">خانواده و رویدادهای زندگی</a></li>
+<li><a href="#misery">بیماری روانی و «بیچارگی»</a></li>
+<li><a href="#society">نهادها، اعتماد و نوع‌دوستی</a></li>
+<li><a href="#policy">پیامد: سنجیدن سیاست با واحد شادکامی</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>ریشه‌های شادکامی: علم بهزیستی در طول زندگی</h1>
+<p class="lede-sub">چهار اقتصاددان، از جمله ریچارد لیارد، با داده‌های ده‌ها هزار نفر در بریتانیا، آمریکا، آلمان و استرالیا پرسیدند: از تولد تا پیری، چه چیزی واقعاً <a class="w" data-t="life-satisfaction">رضایت از زندگی</a> را می‌سازد؟ پاسخ غافلگیرکننده: <b>سلامت روان</b> و <b>رابطه</b>، بیش از پول و تحصیل.</p>
+<aside class="infobox" aria-label="مشخصات کتاب"><div class="ib-h">کتاب</div><dl>
+<dt>عنوان</dt><dd class="ltr">The Origins of Happiness: The Science of Well-Being over the Life Course</dd>
+<dt>نویسندگان</dt><dd>اندرو کلارک، سارا فلش، ریچارد لیارد، ناتاوود پودتاوی، جورج وارد</dd>
+<dt>ناشر</dt><dd>Princeton University Press، ۲۰۱۸ (ویرایش جلد نرم با پیش‌گفتار تازه)</dd>
+<dt>داده‌ها</dt><dd>کوهورت بریتانیا (BCS، متولدان ۱۹۷۰)، پنل‌های BHPS، SOEP آلمان، HILDA استرالیا، BRFSS آمریکا، ALSPAC</dd>
+<dt>ساختار</dt><dd>سه بخش: چه چیزی بزرگسال را شاد می‌کند؟ چه چیزی کودک را موفق می‌کند؟ و پیامد برای سیاست‌گذاری</dd>
+<dt>پیوند با دوره</dt><dd>فرسودگی و شغل معنادار (بهزیستی کاری، بیکاری)، دست‌نامهٔ مثبت‌گرایی در کار، کارگاه مرز سلامت و اختلال</dd>
+</dl></aside>
+
+<h2 id="paradigm">پارادایم تازه: بهزیستی به‌عنوان هدف</h2>
+<p><sup class="c"><a href="#r-origins">[۸]</a></sup> نویسندگان از جمله‌ای از توماس جفرسون آغاز می‌کنند: «مراقبت از زندگی و شادکامی انسان... تنها هدف مشروع حکومت خوب است». تا چندی پیش راهی برای سنجیدن شادکامی و شناختن عوامل آن نبود؛ اما چهل سال پژوهش در «بهزیستی ذهنی» آن را ممکن کرده است. سنجهٔ اصلی در بزرگسالان، پاسخ به یک پرسش است: «روی‌هم‌رفته این روزها چقدر از زندگی خود راضی هستید؟» (۰ تا ۱۰). در کودکان، که توانایی چنین داوری کمتری دارند، <b>خلق و احساس</b> کودک از زبان خودش، والدین و معلمان سنجیده می‌شود.</p>
+<div class="note"><b class="k">چرا سیاست‌مداران باید اهمیت بدهند؟</b>در اروپا، رضایت از زندگی رأی به حزب حاکم را بسیار بهتر پیش‌بینی کرد (همبستگی جزئی ۰٫۶۴) تا رشد اقتصادی (۰٫۳۶)، بیکاری (−۰٫۰۶) و تورم (۰٫۱۵).</div>
+
+<h2 id="adult">چه چیزی بزرگسال را راضی می‌کند؟</h2>
+<p>در کوهورت بریتانیا (رضایت از زندگی در ۳۴ و ۴۲ سالگی)، اثر نسبی عوامل بزرگسالی چنین بود (نمودار ۱٫۱):</p>
+<figure><div class="hb"><span class="t">سلامت هیجانی</span><div class="track"><div class="fill f-good" style="width:90.0%;"></div></div><span class="v">۰.۱۸</span></div>
+<div class="hb"><span class="t">داشتن شریک زندگی</span><div class="track"><div class="fill f-good" style="width:85.0%;"></div></div><span class="v">۰.۱۷</span></div>
+<div class="hb"><span class="t">بیکار نبودن</span><div class="track"><div class="fill " style="width:40.0%;background:var(--link)"></div></div><span class="v">۰.۰۸</span></div>
+<div class="hb"><span class="t">درآمد</span><div class="track"><div class="fill " style="width:35.0%;background:var(--link)"></div></div><span class="v">۰.۰۷</span></div>
+<div class="hb"><span class="t">سلامت جسمی</span><div class="track"><div class="fill " style="width:30.0%;background:var(--link)"></div></div><span class="v">۰.۰۶</span></div>
+<div class="hb"><span class="t">نداشتن سابقهٔ جرم</span><div class="track"><div class="fill " style="width:30.0%;background:var(--link)"></div></div><span class="v">۰.۰۶</span></div>
+<div class="hb"><span class="t">تحصیلات</span><div class="track"><div class="fill f-bad" style="width:10.0%;"></div></div><span class="v">۰.۰۲</span></div>
+<figcaption>شکل ۱. ضریب‌های استانداردشدهٔ پیش‌بینی رضایت از زندگی بزرگسالان (کتاب، نمودار ۱٫۱؛ کوهورت بریتانیا، R² = ۰٫۱۴۷).</figcaption></figure>
+<p>مهم‌ترین عامل‌ها <a class="w" data-t="mental-health-wb">سلامت روان</a> و <b>رابطه</b>‌اند؛ درآمد و تحصیلات اثری بسیار کوچک‌تر دارند. همان الگو در آمریکا، استرالیا و آلمان هم دیده شد: در جدول ۶٫۳ ضریب بیماری روانی بین −۰٫۱۱ تا −۰٫۳۲ و ضریب درآمد بین ۰٫۰۸ تا ۰٫۱۶ بود.</p>
+<h3>بیماری روانی و «فلاکت»</h3>
+<p>نویسندگان «فلاکت» (misery) را پایین‌ترین دهک رضایت از زندگی تعریف می‌کنند و می‌پرسند: اگر هر مشکل را به‌تنهایی از میان برداریم، چند درصد از فلاکت کم می‌شود؟ در آمریکا:</p>
+<figure><div class="hb"><span class="t">افسردگی یا اضطراب تشخیص‌داده‌شده</span><div class="track"><div class="fill f-bad" style="width:89.6%;"></div></div><span class="v">۲.۲۴ واحد درصد</span></div>
+<div class="hb"><span class="t">فقر (۲۰٪ پایین درآمد)</span><div class="track"><div class="fill " style="width:41.6%;background:var(--link)"></div></div><span class="v">۱.۰۴ واحد درصد</span></div>
+<div class="hb"><span class="t">بیماری جسمی (۲۰٪ پایین)</span><div class="track"><div class="fill " style="width:20.0%;background:var(--link)"></div></div><span class="v">۰.۵۰ واحد درصد</span></div>
+<div class="hb"><span class="t">بیکاری</span><div class="track"><div class="fill " style="width:11.6%;background:var(--link)"></div></div><span class="v">۰.۲۹ واحد درصد</span></div>
+<figcaption>شکل ۲. کاهش درصد افراد در فلاکت با حذف هر مشکل (آمریکا، BRFSS؛ کتاب، جدول ۶٫۱). حذف افسردگی و اضطراب بیش از دو برابر حذف فقر اثر دارد.</figcaption></figure>
+<p>این در حالی است که حتی در بریتانیا، با سخاوتمندترین بودجهٔ سلامت روان در میان بیشتر کشورها، فقط حدود <b>۱۳٪</b> هزینهٔ سلامت به سلامت روان می‌رسد. نویسندگان استدلال می‌کنند درمان روان‌شناختی شواهدمحور (مثل برنامهٔ IAPT بریتانیا که لیارد از طراحانش بود) حتی از نظر اقتصادی هزینهٔ خود را بازمی‌گرداند.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>نویسندگان تأکید می‌کنند «فلاکت» و «بیماری روانی» یکی نیستند: زنان به‌طور میانگین بهزیستی بیشتر اما بیماری روانی بیشتری دارند. این تمایز همان است که کارگاه «<a class="w" data-t="dimensional">مرز سلامت و اختلال</a>» بر آن تأکید داشت.</div>
+
+<h2 id="income">پول، بیکاری و پارادوکس ایسترلین</h2>
+<p><a class="w" data-t="easterlin">پارادوکس ایسترلین</a> دو واقعیت را کنار هم می‌گذارد: درون یک کشور در یک زمان، ثروتمندترها به‌طور میانگین شادترند؛ اما در طول زمان، با ثروتمندتر شدن همه، مردم شادتر نشده‌اند. در آمریکا، بریتانیا، آلمان و استرالیا درآمد سرانه پس از جنگ جهانی دوم بسیار بالا رفت، اما میانگین رضایت از زندگی تقریباً ثابت ماند.</p>
+<p>دو توضیح: <b>مقایسهٔ اجتماعی</b> (رضایت از درآمد به درآمد دیگران بستگی دارد) و <b>انطباق</b> (به درآمد بالاتر عادت می‌کنیم). اما انطباق کامل نیست، وگرنه ثروتمندان شادتر نبودند.</p>
+<p><b>بیکاری</b> برعکس، اثری فراتر از درآمد از دست رفته دارد و با «زخم» همراه است: حتی پس از بازگشت به کار، اثر آن ادامه می‌یابد؛ و افراد کمتر به آن عادت می‌کنند. پیوند با بحث «<a class="w" data-t="meaningful-work">کار معنادار</a>» در فرسودگی و شغل معنادار.</p>
+
+<h2 id="child">چه چیزی کودک را به بزرگسالی راضی می‌رساند؟</h2>
+<p>سه بُعد رشد کودک تا ۱۶ سالگی: <b>فکری</b> (بالاترین مدرک)، <b>رفتاری</b> (۱۷ پرسش از مادر) و <b>هیجانی</b> (۲۲ پرسش از کودک و ۸ از مادر). کدام رضایت از زندگی بزرگسالی را بهتر پیش‌بینی می‌کند؟</p>
+<figure><div class="hb"><span class="t">سلامت هیجانی در ۱۶ سالگی</span><div class="track"><div class="fill f-good" style="width:83.3%;"></div></div><span class="v">۰.۱۰</span></div>
+<div class="hb"><span class="t">مدرک تحصیلی</span><div class="track"><div class="fill " style="width:58.3%;background:var(--link)"></div></div><span class="v">۰.۰۷</span></div>
+<div class="hb"><span class="t">رفتار در ۱۶ سالگی</span><div class="track"><div class="fill " style="width:25.0%;background:var(--link)"></div></div><span class="v">۰.۰۳</span></div>
+<figcaption>شکل ۳. پیش‌بینی رضایت از زندگی بزرگسالی از روی پیامدهای کودکی (کتاب، نمودار ۱٫۲).</figcaption></figure>
+<ul>
+<li><b>رشد فکری</b> قوی‌ترین پیش‌بین درآمد، مدرک و اشتغال است.</li>
+<li><b>رشد رفتاری</b> بهترین پیش‌بین زندگی اجتماعی‌پسند و پیوند با شریک.</li>
+<li><b>رشد هیجانی</b> «به مراتب» بهترین پیش‌بین سلامت روان و جسم بزرگسالی؛ و چون سلامت روان نزدیک‌ترین علت رضایت است، بهترین پیش‌بین رضایت هم هست.</li>
+</ul>
+<h3>خانواده و مدرسه</h3>
+<figure><div class="hb"><span class="t">سلامت روان مادر</span><div class="track"><div class="fill f-good" style="width:85.7%;"></div></div><span class="v">+۰.۰۶</span></div>
+<div class="hb"><span class="t">درگیری والدین با کودک</span><div class="track"><div class="fill f-good" style="width:57.1%;"></div></div><span class="v">+۰.۰۴</span></div>
+<div class="hb"><span class="t">درآمد خانواده</span><div class="track"><div class="fill " style="width:28.6%;background:var(--link)"></div></div><span class="v">+۰.۰۲</span></div>
+<div class="hb"><span class="t">تحصیلات والدین</span><div class="track"><div class="fill " style="width:28.6%;background:var(--link)"></div></div><span class="v">+۰.۰۲</span></div>
+<div class="hb"><span class="t">کار کردن مادر</span><div class="track"><div class="fill " style="width:0.5%;background:var(--link)"></div></div><span class="v">-۰.۰۱</span></div>
+<div class="hb"><span class="t">بیکاری پدر</span><div class="track"><div class="fill f-bad" style="width:0.5%;"></div></div><span class="v">-۰.۰۳</span></div>
+<div class="hb"><span class="t">جدایی والدین</span><div class="track"><div class="fill f-bad" style="width:0.5%;"></div></div><span class="v">-۰.۰۳</span></div>
+<figcaption>شکل ۴. اثر پیشینهٔ خانوادگی بر رضایت از زندگی بزرگسالی (کتاب، نمودار ۱٫۳). نوار کوتاه یعنی اثر کوچک؛ علامت منفی یعنی اثر کاهنده.</figcaption></figure>
+<p>دو یافتهٔ برجسته: <b>کار کردن مادر</b> هیچ اثر معناداری بر شاد شدن فرزند در بزرگسالی ندارد؛ و <b>سلامت روان مادر</b> تعیین‌کننده است. مدرسه‌ها و معلم‌ها هم اثر قابل توجه و مستقلی بر بهزیستی هیجانی کودکان دارند. به تعبیر نویسندگان: «کودکی تمرین لباس نیست؛ خودِ زندگی است».</p>
+
+<h2 id="lecture">از اسلایدهای جلسه: دید سخنرانی</h2>
+<p>اسلایدهای جلسهٔ مرور کتاب (۹۱ اسلاید) بخش‌هایی از کتاب را برجسته کرده‌اند و پژوهش‌های دیگری را هم افزوده‌اند<sup class="c"><a href="#r-slides2">[۱]</a></sup>. جلسه با این واقعیت سیاسی آغاز می‌شود که سهم رأی دولت‌ها در انتخابات را <b>رضایت از زندگی</b> مردم بهتر پیش‌بینی می‌کند تا رشد اقتصادی، بیکاری یا تورم؛ و با <b>کمیسیون استیگلیتز</b> (۲۰۰۸) که خواست تولید ناخالص داخلی تنها سنجهٔ پیشرفت نباشد، و <b>نردبان کنتریل</b> (هَدلی کنتریل، ۱۹۰۶ تا ۱۹۶۹) که پرسش رایج رضایت از زندگی از آن آمده است.</p>
+<div class="key"><b class="k">«ثروت مانند آب دریاست؛ هرچه بیشتر بنوشی، تشنه‌تر می‌شوی.»</b>آرتور شوپنهاور. در داده‌های کتاب، <b>دو برابر شدن درآمد</b> رضایت از زندگی را تنها حدود <b>۰٫۲</b> واحد (در مقیاس ۰ تا ۱۰) بالا می‌برد. دو سازوکار: <b>مقایسهٔ اجتماعی</b> (درآمد دیگران) و <b>عادت کردن</b>.</div>
+<p><b>«رئیست چقدر می‌گیرد؟»</b> (کالن و پرز-تروگلیا، ۲۰۱۹): در یک بانک بزرگ، کارکنانی که فهمیدند مدیرانشان بیشتر می‌گیرند، کمی بیشتر تلاش کردند (حقوق بالاتر رئیس انگیزهٔ ارتقا می‌دهد)، اما کسانی که فهمیدند <b>همکاران هم‌رده</b> بیشتر می‌گیرند، ساعات کار و فروش کمتری داشتند (طبق اسلاید، حدود ۷ تا ۹ درصد کمتر به ازای ۱۰ درصد اختلاف)<sup class="c"><a href="#r-cullen">[۲]</a></sup>.</p>
+
+<h2 id="work-day">کار، بیکاری و یک روز معمولی</h2>
+<ul>
+<li><b>زخم بیکاری</b> (<span class="ltr">scarring</span>): هر سال سابقهٔ بیکاری، حتی پس از اشتغال مجدد، حدود ۰٫۱ از رضایت از زندگی می‌کاهد.</li>
+<li>هر ۱۰ درصد بیکاری در جامعه، رضایت <b>شاغلان</b> را هم حدود ۰٫۱۴ کم می‌کند (نگرانی از آینده).</li>
+<li>بیکاری گسترده، نارضایتی فرد بیکار را چندان تعدیل نمی‌کند: «مقایسهٔ اجتماعی اینجا کاربرد ندارد!»</li>
+<li>در هر چهار کشور، ساعات کار بیشتر (در مقایسه با کمتر از ۱۰ ساعت در هفته) با شادکامی کمتر همراه بود.</li>
+</ul>
+<p><b>روش بازسازی روز</b> (<span class="ltr">DRM</span>، کانمن و همکاران، ۲۰۰۴): ۹۰۹ زن شاغل در تگزاس روز قبل را قسمت‌به‌قسمت بازسازی کردند و حال خود را در هر قسمت (۰ تا ۶) گزارش دادند. نتایج با روش نمونه‌گیری تجربه (<span class="ltr">ESM</span>) هم‌خوان بود<sup class="c"><a href="#r-drm">[۳]</a></sup>:</p>
+<div class="hb"><span class="t">رابطهٔ جنسی</span><div class="track"><div class="fill f-good" style="width:94.0%;"></div></div><span class="v">۴.۷</span></div>
+<div class="hb"><span class="t">معاشرت</span><div class="track"><div class="fill f-good" style="width:80.0%;"></div></div><span class="v">۴.۰</span></div>
+<div class="hb"><span class="t">استراحت</span><div class="track"><div class="fill f-good" style="width:78.0%;"></div></div><span class="v">۳.۹</span></div>
+<div class="hb"><span class="t">دعا و نیایش</span><div class="track"><div class="fill f-good" style="width:76.0%;"></div></div><span class="v">۳.۸</span></div>
+<div class="hb"><span class="t">غذا خوردن</span><div class="track"><div class="fill f-good" style="width:76.0%;"></div></div><span class="v">۳.۸</span></div>
+<div class="hb"><span class="t">ورزش</span><div class="track"><div class="fill f-good" style="width:76.0%;"></div></div><span class="v">۳.۸</span></div>
+<div class="hb"><span class="t">تماشای تلویزیون</span><div class="track"><div class="fill " style="width:72.0%;background:var(--link)"></div></div><span class="v">۳.۶</span></div>
+<div class="hb"><span class="t">خرید</span><div class="track"><div class="fill " style="width:64.0%;background:var(--link)"></div></div><span class="v">۳.۲</span></div>
+<div class="hb"><span class="t">مراقبت از فرزندان</span><div class="track"><div class="fill " style="width:60.0%;background:var(--link)"></div></div><span class="v">۳.۰</span></div>
+<div class="hb"><span class="t">کار خانه</span><div class="track"><div class="fill " style="width:60.0%;background:var(--link)"></div></div><span class="v">۳.۰</span></div>
+<div class="hb"><span class="t">کار</span><div class="track"><div class="fill f-bad" style="width:54.0%;"></div></div><span class="v">۲.۷</span></div>
+<div class="hb"><span class="t">رفت‌وآمد به کار</span><div class="track"><div class="fill f-bad" style="width:52.0%;"></div></div><span class="v">۲.۶</span></div>
+<p class="small">میانگین شادکامی در هر فعالیت (۰ تا ۶)، اسلاید ۴۱.</p>
+<div class="cols2">
+<div class="card"><b class="h">شادکامی هنگام بودن با...</b>دوستان ۳٫۷ · بستگان ۳٫۴ · همسر ۳٫۳ · فرزندان ۳٫۳ · مراجعان ۲٫۸ · همکاران ۲٫۸ · تنهایی ۲٫۷ · <b>رئیس ۲٫۴</b></div>
+<div class="card"><b class="h">خستگی و خلق در طول روز</b>خستگی منحنی U‌شکل دارد: صبح بالا، ظهر کمترین، عصر و شب بیشترین. کسانی که ۶ ساعت یا کمتر خوابیده بودند در تمام ساعات خسته‌تر بودند. خلق منفی در طول روز رو به کاهش است.</div>
+</div>
+<table class="t"><thead><tr><th>عامل شغلی</th><th>اثر بر رضایت از زندگی (β)</th></tr></thead><tbody>
+<tr><td>حقوق (لگاریتمی)</td><td>۰٫۱۹</td></tr>
+<tr><td>همکاران حمایتگر</td><td>۰٫۲۷</td></tr>
+<tr><td>فرصت ارتقا / تنوع در کار</td><td>۰٫۲۵</td></tr>
+<tr><td>امنیت شغلی / خودمختاری</td><td>۰٫۲۳</td></tr>
+<tr><td>سرپرست خوب</td><td>۰٫۱۰</td></tr>
+<tr><td>فشار زمانی</td><td>−۰٫۱۱</td></tr>
+<tr><td>نگرانی کاری در خانه</td><td>−۰٫۳۲</td></tr>
+<tr><td>خطرناک بودن شغل</td><td>−۰٫۳۷</td></tr>
+<tr><td><b>تداخل کار با زندگی خانوادگی</b></td><td><b>−۰٫۴۹</b></td></tr>
+</tbody></table>
+<p class="small">اسلاید ۴۶. همکاران حمایتگر از حقوق اثر بیشتری دارند؛ و قوی‌ترین عامل منفی، <a class="w" data-t="burnout">تداخل کار و خانواده</a> است.</p>
+
+<h2 id="events">خانواده و رویدادهای زندگی</h2>
+<p>داده‌های طولی بریتانیا، آلمان و استرالیا نشان می‌دهد رضایت از زندگی در سال‌های پیش و پس از رویدادها چگونه تغییر می‌کند:</p>
+<ul>
+<li><b>شروع رابطهٔ پایدار:</b> افزایش پیش از رویداد و ماندگاری بخشی از آن (حدود ۰٫۳ تا ۰٫۵ واحد).</li>
+<li><b>جدایی:</b> افت در سال‌های پیش از جدایی (تا حدود یک واحد در زمان جدایی) و بازگشت تدریجی پس از آن.</li>
+<li><b>بیوه شدن:</b> افت شدید (بیش از یک واحد) و بازگشت کند در چند سال.</li>
+<li><b>بچه‌دار شدن:</b> افزایش کوچک پیرامون تولد و بازگشت به سطح پایه در دو سه سال.</li>
+</ul>
+<p><b>تفاوت‌های فردی در واکنش</b> (لوکاس و همکاران، ۲۰۰۳): میانگین‌ها پنهان می‌کنند که برخی پس از ازدواج بسیار شادتر می‌شوند و برخی ناشادتر؛ و سازگاری با بیوگی در کسانی که واکنش شدیدی داشتند تا حدود <b>۸ سال</b> طول کشید<sup class="c"><a href="#r-lucas">[۴]</a></sup>.</p>
+<p><b>شادکامی در سالمندی:</b> در میان عوامل اجتماعی، <b>تنهایی</b> قوی‌ترین عامل منفی (β حدود −۰٫۲۸) و <b>حمایت مثبت</b> قوی‌ترین عامل مثبت (حدود ۰٫۱۶) بود؛ اثر بیماری‌های جسمی جداگانه کوچک بود، و در سلامت روانی، <b>نشانه‌های افسردگی</b> (حدود −۰٫۱۳) بیش از همه اهمیت داشت.</p>
+
+<h2 id="misery">بیماری روانی و «بیچارگی»</h2>
+<p>کتاب «بیچارگی» (<span class="ltr">misery</span>) را سهم جمعیتی می‌داند که رضایتشان در پایین توزیع است، و می‌پرسد حذف هر عامل چقدر از آن را کم می‌کند (ضریب × شیوع):</p>
+<table class="t"><thead><tr><th>عامل</th><th>آمریکا (BRFSS)</th><th>استرالیا (HILDA)</th><th>بریتانیا (BCS)</th></tr></thead><tbody>
+<tr><td>فقر (۲۰٪ پایین درآمد)</td><td>۱٫۰۴</td><td>۰٫۸۴</td><td>۰٫۲۲</td></tr>
+<tr><td>بیکاری</td><td>۰٫۲۹</td><td>۰٫۲۳</td><td>۰٫۱۷</td></tr>
+<tr><td>بیماری جسمی</td><td>۰٫۵۰</td><td>۱٫۸۶</td><td>۰٫۳۸</td></tr>
+<tr><td><b>افسردگی یا اضطراب تشخیص‌داده‌شده</b></td><td><b>۲٫۲۴</b></td><td><b>۱٫۹۳</b></td><td><b>۲٫۱۳</b></td></tr>
+<tr><td>کل بیچارگی (درصد)</td><td>۵٫۶</td><td>۷٫۰</td><td>۸٫۰</td></tr>
+</tbody></table>
+<p class="small">اسلایدهای ۵۹ و ۶۰ (واحد: درصد جمعیت در بیچارگی که با حذف آن عامل کم می‌شود).</p>
+<ul>
+<li><b>«مضطرب یا افسرده و همچنان شاد؟»</b> (اسپینهوون و همکاران، ۲۰۱۵؛ پژوهش NESDA هلند): بخش قابل‌توجهی از افراد با اختلال اضطرابی یا افسردگی هم خود را «کاملاً یا بسیار شاد» یا «تا حدی شاد» می‌دانستند؛ بیماری و شادکامی دو قطب یک پیوستار نیستند. در میان اختلال‌ها، <b>اضطراب اجتماعی</b> قوی‌ترین پیوند منفی را با شادکامی داشت<sup class="c"><a href="#r-spinhoven">[۵]</a></sup>.</li>
+<li><b>کیفیت زندگی در اختلال‌های افسردگی و اضطراب</b> (راپاپورت و همکاران، ۲۰۰۵؛ داده‌های کارآزمایی سرترالین): درصد بیمارانی که کیفیت زندگی‌شان «شدیداً مختل» (بیش از ۲ انحراف معیار پایین‌تر از جامعه) بود، در افسردگی مزمن یا دوگانه بیش از ۸۰٪، در افسردگی اساسی حدود ۶۰٪ و در PTSD حدود ۶۰٪ بود؛ و تنها گروه کوچکی در محدودهٔ نرمال جامعه قرار داشتند<sup class="c"><a href="#r-rapaport">[۶]</a></sup>.</li>
+<li><b>جرم:</b> از میان مشکلات کودکی (۱۰ سالگی)، <b>مشکلات رفتاری</b> قوی‌ترین پیش‌بینی‌کنندهٔ محکومیت کیفری در جوانی بودند؛ مشکلات هیجانی حتی رابطهٔ منفی داشتند.</li>
+</ul>
+<div class="note"><b class="k">کتاب‌های در برابر (در اسلایدها)</b>جلسه کنار این داده‌ها، کتاب‌های منتقد «پزشکی‌سازی» را هم گذاشت: «از دست رفتن اندوه» و «همهٔ آنچه باید از آن بترسیم» (هورویتز و ویکفیلد)، «عصر مالیخولیا» (دن بلیزر)، «پیش از پروزاک» و «چگونه همه افسرده شدند» (ادوارد شورتر)، «پزشکی‌زدایی از بیچارگی» (رپلی و همکاران) و «مالیخولیا: بیماری غربی» (متیو بل). پرسش مشترک: کجا رنج بهنجار است و کجا اختلالی که درمان می‌خواهد؟ به <a class="w" data-t="dimensional">رویکرد بُعدی</a> بنگرید.</div>
+
+<h2 id="society">نهادها، اعتماد و نوع‌دوستی</h2>
+<p>در سطح کشورها، رضایت از زندگی را این عوامل پیش‌بینی می‌کنند (ضریب استانداردشده، شکل ۸٫۱ کتاب): درآمد ۰٫۳۸، سلامت (امید به زندگی سالم) ۰٫۲۴، حمایت اجتماعی ۰٫۲۰، آزادی ۰٫۱۸، <b>اعتماد</b> ۰٫۱۱ و سخاوت ۰٫۰۷.</p>
+<div class="cols2">
+<div class="card"><b class="h">پرسش اعتماد روزنبرگ (۱۹۵۶)</b>«بعضی مردم می‌گویند که می‌شود به اکثر مردم اعتماد کرد. عده‌ای دیگر می‌گویند که هنگام برخورد با دیگران هرقدر هم احتیاط کنی، زیاد نیست. شما در این مورد چه حسی دارید؟»</div>
+<div class="card"><b class="h">آزمون کیف پول</b>«اگر کیف پولتان گم شود، چقدر احتمال دارد پس داده شود؟» پاسخ این پرسش، بهزیستی ملی را به‌خوبی پیش‌بینی می‌کند، و در آزمایش‌های میدانی رها کردن کیف پول، مردم اغلب درست‌کارتر از انتظار بودند. به صفحهٔ «<a class="w" data-t="trust2">اعتماد اجتماعی</a>» بنگرید.</div>
+</div>
+<p><b>نوع‌دوستی عام</b> (<span class="ltr">impersonal prosociality</span>): کمک به غریبه‌ها و مؤسسه‌های خیریه، از نشانه‌های جوامع شاد است («مهربانی غریبه‌ها»، مایکل مک‌کالو). ریشه‌های تکاملی آن در «آخرین آغوش ماما» (فرانس دو وال) و «خاستگاه انصاف» (نیکلا بومار)؛ و حتی <b>طوطی‌های خاکستری آفریقایی</b> داوطلبانه به هم‌نوع خود کمک می‌کنند تا غذا به دست آورد (بروکس و فون بایرن)<sup class="c"><a href="#r-brucks">[۷]</a></sup>. کتاب‌های پیشنهادی جلسه: «فرضیهٔ شادکامی» (جاناتان هایت، ۲۰۰۶)، «چگونگی شادکامی» (سونیا لیوبومیرسکی)، «تفاوت‌های بین‌المللی در بهزیستی» (داینر، هلیول و کانمن) و «علم بهزیستی» (اد داینر).</p>
+
+<h2 id="policy">پیامد: سنجیدن سیاست با واحد شادکامی</h2>
+<p>پیشنهاد کتاب: هر سیاست عمومی را با «هزینه به ازای هر واحد رضایت از زندگی» بسنجیم، به جای فقط تولید ناخالص داخلی یا «سال‌های زندگی با کیفیت» (QALY) که سلامت روان را کم‌وزن می‌کند. با این معیار، درمان روان‌شناختی، حمایت از والدین و آموزش مهارت‌های زندگی در مدرسه از پربازده‌ترین سرمایه‌گذاری‌ها هستند.</p>
+<div class="note"><b class="k">یادداشت ویراستار: نقد</b>(۱) ضریب‌ها همبستگی‌اند؛ سلامت روان و رضایت از زندگی هر دو خوداظهاری‌اند و ممکن است بخشی از رابطه از یک «حال کلی» مشترک بیاید (نویسندگان برای کاستن از این مشکل، سلامت روان را با تأخیر زمانی وارد مدل کرده‌اند). (۲) داده‌ها از کشورهای ثروتمند غربی‌اند. (۳) R² مدل‌ها پایین است (۰٫۰۲ تا ۰٫۱۵)؛ یعنی بیشتر تفاوت رضایت میان افراد با این عوامل توضیح داده نمی‌شود و ژنتیک، شخصیت و رویدادهای پیش‌بینی‌ناپذیر سهم بزرگی دارند.</div>
+<div class="note"><b class="k">پیوند با دنیای روان</b>پیوند با «<a class="w" data-t="perma">PERMA</a>» (رابطه و معنا)، «<a class="w" data-t="enduring-mh">سلامت روان پایدار</a>» در کوهورت دانیدین (کارگاه مرز سلامت و اختلال) و «<a class="w" data-t="burnout">فرسودگی</a>» در فرسودگی و شغل معنادار.</div>
+
+<div class="nd-self"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: معنا، امید و بهزیستی</h3><ul><li class="nd-self"><a href="makingsense.html" target="_blank" rel="noopener"><i></i>معنا بساز</a><small>معنا بساز: روان‌شناسی وجودی</small></li><li class="nd-self"><a href="s9.html" target="_blank" rel="noopener"><i></i>خوش‌بینی و امید</a><small>خوش‌بینی و امید به آینده: امید، خوش‌بینی شکاکانه، WOOP و اصل پیشرفت</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-work"><a href="poswork.html" target="_blank" rel="noopener"><i></i>مثبت‌گرایی در کار</a><small>کار و سازمان › سلامت روان در کار · مشترک: فرسودگی شغلی، کار معنادار</small></li><li class="nd-work"><a href="orgsvc.html" target="_blank" rel="noopener"><i></i>سنجش سلامت سازمان</a><small>کار و سازمان › سنجش سازمان · مشترک: فرسودگی شغلی، کار معنادار</small></li><li class="nd-work"><a href="orgpsych.html" target="_blank" rel="noopener"><i></i>روان‌شناسی سازمانی</a><small>کار و سازمان › سلامت روان در کار · مشترک: فرسودگی شغلی، کار معنادار</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#7d4a86"><b>فلسفه</b>فلسفهٔ وجودی: آزادی، تنهایی، مرگ و بی‌معنایی؛ ریشهٔ معنادرمانی و روان‌درمانی وجودی. <a href="graph.html#existentialism" target="_blank" rel="noopener">فلسفهٔ وجودی و پدیدارشناسی ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>دورکیم: وقتی پیوند و قاعدهٔ اجتماعی سست شود (آنومی)، معنا و سلامت روان آسیب می‌بینند. <a href="graph.html#anomie" target="_blank" rel="noopener">آنومی و پیوند اجتماعی (دورکیم) ↗</a></div><div style="--xc:#8a6a2a"><b>انسان‌شناسی و تکامل</b>هنر و آیین از کهن‌ترین راه‌های ساختن معنا و پیوند گروهی‌اند. <a href="graph.html#art-origins" target="_blank" rel="noopener">ریشه‌های تکاملی هنر ↗</a></div></div><div class="worlds"><a href="land.html#happiness-origins" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html#happiness-origins" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides2">اسلایدهای جلسهٔ مرور کتاب «منشأ خوشبختی»، دکتر آذرخش مکری (۹۱ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-cullen"><span class="ltr">Cullen, Z., &amp; Perez-Truglia, R. (2019). How much does your boss make? The effects of salary comparisons. NBER Working Paper 24841 (later <i>Journal of Political Economy</i>, 2022).</span></li>
+<li id="r-drm"><span class="ltr">Kahneman, D., Krueger, A. B., Schkade, D. A., Schwarz, N., &amp; Stone, A. A. (2004). A survey method for characterizing daily life experience: The Day Reconstruction Method. <i>Science, 306</i>, 1776–1780.</span></li>
+<li id="r-lucas"><span class="ltr">Lucas, R. E., Clark, A. E., Georgellis, Y., &amp; Diener, E. (2003). Reexamining adaptation and the set point model of happiness: Reactions to changes in marital status. <i>JPSP, 84</i>(3), 527–539.</span></li>
+<li id="r-spinhoven"><span class="ltr">Spinhoven, P., Elzinga, B. M., Giltay, E. J., &amp; Penninx, B. W. J. H. (2015). Anxious or depressed and still happy? <i>PLoS ONE, 10</i>(10), e0139912.</span></li>
+<li id="r-rapaport"><span class="ltr">Rapaport, M. H., Clary, C., Fayyad, R., &amp; Endicott, J. (2005). Quality-of-life impairment in depressive and anxiety disorders. <i>American Journal of Psychiatry, 162</i>, 1171–1178.</span></li>
+<li id="r-brucks"><span class="ltr">Brucks, D., &amp; von Bayern, A. M. P. (2020). Parrots voluntarily help each other to obtain food rewards. <i>Current Biology, 30</i>(2), 292–297.</span></li>
+<li id="r-origins"><span class="ltr">Clark, A. E., Flèche, S., Layard, R., Powdthavee, N., &amp; Ward, G. (2018). <i>The Origins of Happiness: The Science of Well-Being over the Life Course</i>. Princeton University Press.</span> منبع اصلی. <span class="badge">ضمیمه</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">بخش‌های نخست بر پایهٔ متن کامل کتاب ضمیمه است و بخش‌های «از اسلایدهای جلسه» تا «نهادها، اعتماد و نوع‌دوستی» از ۹۱ اسلاید جلسهٔ مرور. این مرور و عددها از نمودارها و جدول‌های خود کتاب نقل شده‌اند. ضریب‌ها «بتای استانداردشده»اند، یعنی اثر نسبی هر عامل را با هم مقایسه‌پذیر می‌کنند؛ اما بیشتر داده‌ها همبستگی‌اند و نویسندگان خود دربارهٔ تفسیر علّی احتیاط می‌کنند. کادرهای ویراستار پیوندها و نقدها را می‌افزایند.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · مرور کتاب‌ها</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"trust2": {"fa": "اعتماد اجتماعی", "en": "Social trust", "d": "باور به اینکه می‌توان به بیشتر مردم اعتماد کرد؛ از قوی‌ترین پیش‌بینی‌کننده‌های بهزیستی ملی.", "rel": [], "s": "society", "g": "social-trust"}, "drm": {"fa": "روش بازسازی روز", "en": "Day Reconstruction Method", "d": "بازسازی قسمت‌به‌قسمت روز قبل و گزارش حال در هر قسمت (کانمن ۲۰۰۴).", "rel": ["life-satisfaction"], "s": "work-day", "g": "happiness-origins"}, "life-satisfaction": {"fa": "رضایت از زندگی", "en": "Life satisfaction", "d": "ارزیابی کلی فرد از زندگی‌اش (معمولاً ۰ تا ۱۰)؛ جزء شناختی بهزیستی ذهنی و سنجهٔ اصلی کتاب.", "rel": ["mental-health-wb", "easterlin"], "s": "paradigm", "g": "happiness-origins"}, "mental-health-wb": {"fa": "سلامت روان و بهزیستی", "en": "Mental health and well-being", "d": "در داده‌های چهار کشور، سلامت روان قوی‌ترین پیش‌بین رضایت از زندگی بود؛ حذف افسردگی و اضطراب بیش از دو برابر حذف فقر از «فلاکت» می‌کاهد.", "rel": ["life-satisfaction"], "s": "adult", "g": "happiness-origins"}, "easterlin": {"fa": "پارادوکس ایسترلین", "en": "Easterlin paradox", "d": "درون یک کشور ثروتمندترها شادترند، اما با رشد درآمد ملی در طول زمان، میانگین شادکامی بالا نمی‌رود. توضیح: مقایسهٔ اجتماعی و انطباق.", "rel": ["life-satisfaction"], "s": "income", "g": "happiness-origins"}, "dimensional": {"fa": "رویکرد بُعدی", "en": "Dimensional approach", "d": "مشکلات روانی روی پیوستار (کارگاه مرز سلامت و اختلال).", "rel": [], "s": "adult", "g": "dimensional-dx"}, "meaningful-work": {"fa": "کار معنادار", "en": "Meaningful work", "d": "کاری که برای فرد هدفمند و ارزشمند است (فرسودگی و شغل معنادار).", "rel": [], "s": "income", "g": "meaningful-work"}, "perma": {"fa": "مدل PERMA", "en": "PERMA", "d": "هیجان مثبت، درگیری، روابط، معنا، دستاورد (سلیگمن).", "rel": [], "s": "policy", "g": "perma"}, "enduring-mh": {"fa": "سلامت روان پایدار", "en": "Enduring mental health", "d": "نداشتن هیچ اختلال روانی تا میانسالی؛ فقط ۱۷٪ در کوهورت دانیدین.", "rel": [], "s": "policy", "g": "enduring-mh"}, "burnout": {"fa": "فرسودگی شغلی", "en": "Burnout", "d": "خستگی عاطفی، بدبینی و حس ناکارآمدی ناشی از استرس مزمن کاری.", "rel": [], "s": "policy", "g": "burnout"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

@@ -1,0 +1,112 @@
+{
+ "id": "psy:overdiagnosis",
+ "kind": "concept",
+ "title": {
+  "fa": "بیش‌تشخیص‌گذاری",
+  "en": "Overdiagnosis / diagnostic inflation",
+  "nl": "Overdiagnose / diagnostische inflatie"
+ },
+ "parent": "psy:dx",
+ "field": "psy:dx",
+ "summary": {
+  "fa": "برچسب زدن رنج عادی به‌عنوان اختلال و گسترش بی‌مورد تشخیص و درمان دارویی.",
+  "en": "Labelling ordinary suffering as disorder and needlessly expanding diagnosis and drug treatment.",
+  "nl": "Gewoon lijden als stoornis bestempelen en diagnose en medicamenteuze behandeling onnodig uitbreiden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آلن فرانسیس (رئیس کارگروه DSM-IV): «هدف درست DSM-5 محدودیت و کاهش تشخیص بود، نه توسعهٔ بی‌مورد».",
+    "en": "Allen Frances (chair of the DSM-IV task force): “The right goal for DSM-5 was to restrict and reduce diagnosis, not expand it needlessly.”",
+    "nl": "Allen Frances (voorzitter van de DSM-IV-werkgroep): ‘Het juiste doel van de DSM-5 was diagnoses beperken en verminderen, niet onnodig uitbreiden.’"
+   },
+   "sources": [
+    "src:c504097433"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«درد روانی همواره وجود داشته و بدون بیمار نامیدن همه می‌توان دربارهٔ آن صحبت کرد.»",
+    "en": "“Psychological pain has always existed, and we can talk about it without calling everyone ill.”",
+    "nl": "‘Psychische pijn heeft altijd bestaan, en we kunnen erover praten zonder iedereen ziek te noemen.’"
+   },
+   "sources": [
+    "src:c504097433"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شیوع بسیار بالای اختلال در کوهورت دانیدین (فقط ۱۷٪ هرگز اختلال نداشتند) هم نشانهٔ بیش‌تشخیص‌گذاری تلقی شد.",
+    "en": "The very high prevalence of disorder in the Dunedin cohort (only 17% never had a disorder) was also seen as a sign of overdiagnosis.",
+    "nl": "De zeer hoge prevalentie van stoornissen in het Dunedin-cohort (slechts 17% had nooit een stoornis) werd ook gezien als teken van overdiagnose."
+   },
+   "sources": [
+    "src:c504097433"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تورم تشخیصی و سه همه‌گیری کاذب کودکان به گفتهٔ فرانسس: اوتیسم، نقص توجه، دوقطبی کودکی.",
+    "en": "Diagnostic inflation and three false epidemics in children according to Frances: autism, attention deficit, childhood bipolar.",
+    "nl": "Diagnostische inflatie en drie valse epidemieën bij kinderen volgens Frances: autisme, aandachtstekort, bipolaire stoornis bij kinderen."
+   },
+   "sources": [
+    "src:c504097433"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کافمن: خودتشخیصی و چسبیدن به برچسب‌ها مانع رشد است.",
+    "en": "Kaufman: self-diagnosis and clinging to labels hinder growth.",
+    "nl": "Kaufman: zelfdiagnose en vasthouden aan etiketten belemmeren groei."
+   },
+   "sources": [
+    "src:c504097433"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:enduring-mh",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "شاهد",
+    "en": "Evidence",
+    "nl": "Bewijs"
+   }
+  },
+  {
+   "to": "psy:psychopharm",
+   "rel": "see-also",
+   "note": {
+    "fa": "مصرف نابجای دارو",
+    "en": "Inappropriate drug use",
+    "nl": "Oneigenlijk medicijngebruik"
+   }
+  }
+ ],
+ "people": [
+  "core:allen-frances",
+  "core:allen-frances"
+ ],
+ "sources": [
+  "src:c504097433",
+  "src:418c51a266"
+ ],
+ "booklets": [
+  "workshop:origins",
+  "bored:stupid",
+  "happiness:misery",
+  "shelf11:frances",
+  "riseabove:labels"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

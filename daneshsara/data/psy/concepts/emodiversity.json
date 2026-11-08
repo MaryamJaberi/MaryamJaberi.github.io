@@ -1,0 +1,116 @@
+{
+ "id": "psy:emodiversity",
+ "kind": "concept",
+ "title": {
+  "fa": "تنوع هیجانی",
+  "en": "Emodiversity",
+  "nl": "Emodiversiteit"
+ },
+ "parent": "psy:p-emotion",
+ "field": "psy:p-emotion",
+ "summary": {
+  "fa": "گستره و تعادل هیجان‌های مثبت و منفی تجربه‌شده؛ با استعارهٔ تنوع زیستی. نکتهٔ کلیدی ۳ جلسهٔ ۸: خزانهٔ پیچیدهٔ هیجانی عنصر مهم خویشتنداری، انعطاف و کارآمدی است.",
+  "en": "The range and balance of positive and negative emotions experienced; modelled on biodiversity. Key point 3 of session 8: a complex emotional repertoire is an important element of self-control, flexibility and effectiveness.",
+  "nl": "De breedte en balans van de beleefde positieve en negatieve emoties; naar het voorbeeld van biodiversiteit. Kernpunt 3 van sessie 8: een rijk emotioneel repertoire is belangrijk voor zelfbeheersing, flexibiliteit en effectiviteit."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کوئیدباخ و همکاران (۲۰۱۴): در بیش از ۳۷ هزار نفر، تنوع هیجانی بیشتر با افسردگی کمتر همراه بود؛ و در نمونه‌ای دیگر با مراجعه به پزشک و مصرف داروی کمتر، مستقل از میانگین هیجان مثبت و منفی.",
+    "en": "Quoidbach and colleagues (2014): in over 37,000 people, greater emotional diversity went with less depression; and in another sample with fewer doctor visits and less medication use, independent of mean positive and negative emotion.",
+    "nl": "Quoidbach en collega's (2014): bij meer dan 37.000 mensen ging grotere emotionele diversiteit samen met minder depressie; en in een andere steekproef met minder doktersbezoek en minder medicijngebruik, los van de gemiddelde positieve en negatieve emotie."
+   },
+   "sources": [
+    "src:d99eee9ca6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سه مؤلفهٔ مفید: دانه‌داری هیجان (تمایز ظریف)، همگامی هیجانی (تجربهٔ هم‌زمان مثبت و منفی)، تنوع هیجانی.",
+    "en": "Three helpful components: emotional granularity (fine distinctions), emotional synchrony (experiencing positive and negative together), emotional diversity.",
+    "nl": "Drie nuttige componenten: emotionele granulariteit (fijne onderscheidingen), emotionele synchronie (positief en negatief tegelijk beleven), emotionele diversiteit."
+   },
+   "sources": [
+    "src:d99eee9ca6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ کلیدی ۶: بخشی از تنوع هیجانی با تعلق گروهی و اثرات مثبت آن ارتباط دارد.",
+    "en": "Key point 6: part of emotional diversity is linked to group belonging and its positive effects.",
+    "nl": "Kernpunt 6: een deel van emotionele diversiteit hangt samen met groepsverbondenheid en de positieve gevolgen daarvan."
+   },
+   "sources": [
+    "src:d99eee9ca6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند: محدود کردن هیجان‌های مجاز (جعبهٔ مردانگی، قواعد احساس زنان) خزانه را فقیر می‌کند.",
+    "en": "Link: restricting permitted emotions (the “man box”, feeling rules for women) impoverishes the repertoire.",
+    "nl": "Link: de toegestane emoties beperken (de ‘mannendoos’, gevoelsregels voor vrouwen) maakt het repertoire armer."
+   },
+   "sources": [
+    "src:d99eee9ca6"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psych-rich",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  },
+  {
+   "to": "psy:belonging",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعلق",
+    "en": "Belonging",
+    "nl": "Verbondenheid"
+   }
+  },
+  {
+   "to": "psy:emotional-intelligence",
+   "rel": "see-also",
+   "note": {
+    "fa": "مهارت مرتبط",
+    "en": "Related skill",
+    "nl": "Verwante vaardigheid"
+   }
+  },
+  {
+   "to": "psy:alexithymia",
+   "rel": "contrasts",
+   "note": {
+    "fa": "قطب مقابل دانه‌داری",
+    "en": "Opposite pole of granularity",
+    "nl": "Tegenpool van granulariteit"
+   }
+  }
+ ],
+ "people": [
+  "core:jordi-quoidbach",
+  "core:june-gruber",
+  "core:lisa-feldman-barrett"
+ ],
+ "sources": [
+  "src:d99eee9ca6",
+  "src:3bfbaf8f44"
+ ],
+ "booklets": [
+  "s8:emodiversity"
+ ],
+ "origin": "s8",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

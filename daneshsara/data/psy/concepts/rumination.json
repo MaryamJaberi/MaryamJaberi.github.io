@@ -1,0 +1,198 @@
+{
+ "id": "psy:rumination",
+ "kind": "concept",
+ "title": {
+  "fa": "نشخوار فکری",
+  "en": "Rumination",
+  "nl": "Piekeren (ruminatie)"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "تفکر تکراری، مزاحم و منفعل دربارهٔ علت‌ها و پیامدهای ناراحتی. نولن-هوکسما (۱۹۹۱) در «نظریهٔ سبک‌های پاسخ» نشان داد نشخوار افسردگی را طولانی‌تر و شدیدتر می‌کند.",
+  "en": "Repetitive, intrusive and passive thinking about the causes and consequences of distress. Nolen-Hoeksema (1991), in “response styles theory”, showed that rumination makes depression longer and more severe.",
+  "nl": "Herhaald, opdringerig en passief denken over oorzaken en gevolgen van ellende. Nolen-Hoeksema (1991) liet in de ‘response styles theory’ zien dat piekeren depressie langer en zwaarder maakt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نف: نشخوار دربارهٔ گذشته به افسردگی، و دربارهٔ آیندهٔ احتمالی به اضطراب می‌انجامد.",
+    "en": "Neff: rumination about the past leads to depression, and about the possible future to anxiety.",
+    "nl": "Neff: piekeren over het verleden leidt tot depressie, en over een mogelijke toekomst tot angst."
+   },
+   "sources": [
+    "src:5a0dde2227"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دو زیرنوع: «سر در جیب بردن» (مقایسهٔ منفعل وضع فعلی با وضع مطلوب) که ناسازگار است، و «تأمل» که می‌تواند سازگار باشد.",
+    "en": "Two subtypes: “brooding” (passively comparing the current state with the desired one), which is maladaptive, and “reflection”, which can be adaptive.",
+    "nl": "Twee subtypen: ‘brooding’ (passief de huidige toestand vergelijken met de gewenste), wat onaangepast is, en ‘reflectie’, die adaptief kan zijn."
+   },
+   "sources": [
+    "src:5a0dde2227"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مسیر اصلی ناتوانی در جداشدن روانی از کار و فرسودگی.",
+    "en": "The main route to being unable to detach psychologically from work, and to burnout.",
+    "nl": "De belangrijkste route naar niet kunnen loskomen van het werk en naar burn-out."
+   },
+   "sources": [
+    "src:5a0dde2227"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اسلاید ۴۵: نشخوارها شاخه‌شاخه می‌شوند و ریشه می‌دوانند.",
+    "en": "Slide 45: ruminations branch out and put down roots.",
+    "nl": "Slide 45: piekergedachten vertakken zich en schieten wortel."
+   },
+   "sources": [
+    "src:5a0dde2227"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محور اول مداخلات دوره: Preoccupation and rumination-based interventions.",
+    "en": "The course's first line of interventions: preoccupation and rumination-based interventions.",
+    "nl": "De eerste interventielijn van de cursus: interventies gericht op preoccupatie en piekeren."
+   },
+   "sources": [
+    "src:5a0dde2227"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کارگاه مرز سلامت و اختلال: نشخوار و حسرت یکی از چهار فرایند فراگیر مشکلات درون‌ساز.",
+    "en": "Health-and-disorder workshop: rumination and regret are one of the four broad processes of internalising problems.",
+    "nl": "Workshop gezondheid en stoornis: piekeren en spijt vormen een van de vier brede processen van internaliserende problemen."
+   },
+   "sources": [
+    "src:5a0dde2227"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نشخوار خشم (مقیاس ۱۹ گویه‌ای سوخودولسکی): مرور تجربه‌های خشم، فانتزی انتقام، دشواری بخشیدن.",
+    "en": "Anger rumination (Sukhodolsky's 19-item scale): replaying anger experiences, revenge fantasies, difficulty forgiving.",
+    "nl": "Boosheidsrumineren (de 19-itemschaal van Sukhodolsky): ervaringen van woede herhalen, wraakfantasieën, moeite met vergeven."
+   },
+   "sources": [
+    "src:5a0dde2227"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقیاس نشخوار خشم: پس‌اندیشی، فکر انتقام، خاطرات خشم، فهمیدن علت‌ها.",
+    "en": "The anger rumination scale: angry afterthoughts, thoughts of revenge, angry memories, understanding of causes.",
+    "nl": "De schaal voor boosheidsrumineren: boze nagedachten, wraakgedachten, boze herinneringen, oorzaken begrijpen."
+   },
+   "sources": [
+    "src:5a0dde2227"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psych-detachment",
+   "rel": "see-also",
+   "note": {
+    "fa": "مانع جداشدن",
+    "en": "Obstacle to detaching",
+    "nl": "Obstakel voor loskomen"
+   }
+  },
+  {
+   "to": "psy:mood",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیش‌بینی‌کنندهٔ افسردگی",
+    "en": "Predictor of depression",
+    "nl": "Voorspeller van depressie"
+   }
+  },
+  {
+   "to": "psy:rfcbt",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان اختصاصی",
+    "en": "Specific treatment",
+    "nl": "Specifieke behandeling"
+   }
+  },
+  {
+   "to": "psy:mct",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان فراشناختی",
+    "en": "Metacognitive treatment",
+    "nl": "Metacognitieve behandeling"
+   }
+  },
+  {
+   "to": "psy:dmn",
+   "rel": "explains",
+   "note": {
+    "fa": "پایهٔ عصبی",
+    "en": "Neural basis",
+    "nl": "Neurale basis"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "contrasts",
+   "note": {
+    "fa": "پادزهر",
+    "en": "Antidote",
+    "nl": "Tegengif"
+   }
+  },
+  {
+   "to": "psy:savoring",
+   "rel": "contrasts",
+   "note": {
+    "fa": "نقطهٔ مقابل",
+    "en": "Opposite",
+    "nl": "Tegenpool"
+   }
+  },
+  {
+   "to": "psy:transdiagnostic",
+   "rel": "see-also",
+   "note": {
+    "fa": "فرایند فراتشخیصی",
+    "en": "Transdiagnostic process",
+    "nl": "Transdiagnostisch proces"
+   }
+  }
+ ],
+ "people": [
+  "core:susan-nolen-hoeksema",
+  "core:edward-watkins"
+ ],
+ "sources": [
+  "src:5a0dde2227",
+  "src:a5774343c9",
+  "src:3d98965e0e"
+ ],
+ "booklets": [
+  "rumination",
+  "workshop:processes",
+  "riseabove:rumination"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,58 @@
+{
+ "id": "psy:hardiness",
+ "kind": "concept",
+ "title": {
+  "fa": "سرسختی در برابر استرس",
+  "en": "Stress hardiness",
+  "nl": "Stressbestendigheid (hardiness)"
+ },
+ "parent": "psy:p-health",
+ "field": "psy:p-health",
+ "summary": {
+  "fa": "سوزان کوباسا (اواخر دههٔ ۱۹۷۰): سه باور تعهد، کنترل و دیدن استرس به‌عنوان چالش، افراد را در برابر استرس مقاوم‌تر می‌کند.",
+  "en": "Suzanne Kobasa (late 1970s): three beliefs, commitment, control and seeing stress as a challenge, make people more resistant to stress.",
+  "nl": "Suzanne Kobasa (eind jaren zeventig): drie overtuigingen, betrokkenheid, controle en stress zien als uitdaging, maken mensen beter bestand tegen stress."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "منتقدان: بخشی از آن با روان‌رنجوری پایین هم‌پوشانی دارد (فانک ۱۹۹۲).",
+    "en": "Critics: part of it overlaps with low neuroticism (Funk 1992).",
+    "nl": "Critici: een deel ervan overlapt met laag neuroticisme (Funk 1992)."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:stress-mindset",
+   "rel": "see-also",
+   "note": {
+    "fa": "ذهنیت استرس",
+    "en": "Stress mindset",
+    "nl": "Stressmindset"
+   }
+  },
+  {
+   "to": "psy:resilience",
+   "rel": "see-also",
+   "note": {
+    "fa": "تاب‌آوری",
+    "en": "Resilience",
+    "nl": "Veerkracht"
+   }
+  }
+ ],
+ "people": [
+  "core:suzanne-kobasa"
+ ],
+ "sources": [],
+ "booklets": [
+  "s5:hardiness"
+ ],
+ "origin": "s5",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

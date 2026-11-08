@@ -1,0 +1,143 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "field.schema.json",
+ "title": "رشته یا رشتهٔ میان‌رشته‌ای در اطلس",
+ "type": "object",
+ "required": [
+  "id",
+  "fa",
+  "en",
+  "q",
+  "s"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+  },
+  "fam": {
+   "enum": [
+    "bio",
+    "psy",
+    "soc",
+    "hum",
+    "formal"
+   ]
+  },
+  "b": {
+   "type": "boolean",
+   "description": "میان‌رشته‌ای"
+  },
+  "par": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "minItems": 2,
+   "description": "والدها برای رشتهٔ میان‌رشته‌ای"
+  },
+  "fa": {
+   "type": "string"
+  },
+  "en": {
+   "type": "string"
+  },
+  "nl": {
+   "type": "string"
+  },
+  "q": {
+   "type": "string",
+   "description": "پرسش اصلی رشته"
+  },
+  "s": {
+   "type": "string",
+   "description": "خلاصهٔ یک‌پاراگرافی"
+  },
+  "m": {
+   "type": "string",
+   "description": "روش‌ها"
+  },
+  "jobs": {
+   "type": "string"
+  },
+  "study": {
+   "type": "string"
+  },
+  "ppl": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "wiki": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "جزوه‌های ویکی روان"
+  },
+  "g": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "گره‌های گراف"
+  },
+  "aud": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "self",
+     "stu",
+     "pro"
+    ]
+   }
+  },
+  "wikis": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "psy",
+     "soc",
+     "tabar",
+     "phil"
+    ]
+   },
+   "description": "کدام ویکی‌ها دربارهٔ آن محتوا دارند"
+  },
+  "emerging": {
+   "type": "boolean"
+  },
+  "bridge": {
+   "type": "string",
+   "description": "شناسهٔ صفحهٔ پل"
+  },
+  "openalex": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "wikidata": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "src": {
+   "type": "string",
+   "description": "منبع تعریف"
+  },
+  "subs": {
+   "type": "array",
+   "items": {
+    "type": "array",
+    "items": {
+     "type": "string"
+    }
+   },
+   "description": "زیرشاخه‌ها [نام، توضیح]"
+  }
+ }
+}

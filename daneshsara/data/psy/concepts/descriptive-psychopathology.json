@@ -1,0 +1,94 @@
+{
+ "id": "psy:descriptive-psychopathology",
+ "kind": "subfield",
+ "title": {
+  "fa": "آسیب‌شناسی روانی توصیفی",
+  "en": "Descriptive psychopathology",
+  "nl": "Beschrijvende psychopathologie"
+ },
+ "parent": "psy:psychiatry",
+ "field": null,
+ "summary": {
+  "fa": "توصیف و نام‌گذاری دقیق تجربه‌های روانی پیش از نظریه؛ سنت پدیدارشناختی یاسپرس. موضوع دورهٔ جامع دکتر مکری (خرداد تا شهریور ۱۴۰۲).",
+  "en": "Precisely describing and naming psychological experiences before theory; Jaspers's phenomenological tradition. The subject of Dr Mokri's comprehensive course (June to September 2023).",
+  "nl": "Psychische ervaringen nauwkeurig beschrijven en benoemen, vóór de theorie; de fenomenologische traditie van Jaspers. Het onderwerp van de uitgebreide cursus van dr. Mokri (juni tot september 2023)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فهمیدن (Verstehen): دسترسی همدلانه به تجربهٔ بیمار؛ فهم ایستا (خود حالت) و تکوینی (برخاستن یک حالت از دیگری).",
+    "en": "Understanding (Verstehen): empathic access to the patient's experience; static understanding (the state itself) and genetic understanding (one state arising from another).",
+    "nl": "Begrijpen (Verstehen): empathische toegang tot de ervaring van de patiënt; statisch begrip (de toestand zelf) en genetisch begrip (de ene toestand die uit de andere voortkomt)."
+   },
+   "sources": [
+    "src:78e9a7bc94"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سه گام پدیدارشناسی یاسپرس: انتقال یافتن، احساس کردن، زیستن با تجربهٔ بیمار.",
+    "en": "Jaspers's three phenomenological steps: transposing oneself, feeling, living with the patient's experience.",
+    "nl": "De drie fenomenologische stappen van Jaspers: je verplaatsen, meevoelen, meeleven met de ervaring van de patiënt."
+   },
+   "sources": [
+    "src:78e9a7bc94"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بخش‌های رسیده: ۵ (خلق، دوقطبی، آلکسی‌تایمی)، ۷ (هذیان، اسکیزوفرنی)، SIPS.",
+    "en": "Parts received: 5 (mood, bipolar, alexithymia), 7 (delusion, schizophrenia), SIPS.",
+    "nl": "Ontvangen delen: 5 (stemming, bipolair, alexithymie), 7 (waan, schizofrenie), SIPS."
+   },
+   "sources": [
+    "src:78e9a7bc94"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psychiatry-history",
+   "rel": "see-also",
+   "note": {
+    "fa": "تاریخ",
+    "en": "History",
+    "nl": "Geschiedenis"
+   }
+  },
+  {
+   "to": "psy:dimensional-dx",
+   "rel": "contrasts",
+   "note": {
+    "fa": "در برابر",
+    "en": "Versus",
+    "nl": "Tegenover"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-jaspers",
+  "core:kurt-schneider",
+  "core:german-berrios",
+  "core:josef-parnas"
+ ],
+ "sources": [
+  "src:78e9a7bc94",
+  "src:66f9d95651",
+  "src:795b35779e"
+ ],
+ "booklets": [
+  "psychopath:mood",
+  "shelf5:taylor",
+  "shelf5:berrios",
+  "shelf5:sims",
+  "psychopath:self",
+  "psychopath:phenom"
+ ],
+ "origin": "psychopath",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

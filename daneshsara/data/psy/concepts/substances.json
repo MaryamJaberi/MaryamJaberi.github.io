@@ -1,0 +1,117 @@
+{
+ "id": "psy:substances",
+ "kind": "concept",
+ "title": {
+  "fa": "الکل، افیونی‌ها و محرک‌ها",
+  "en": "Alcohol, opioids & stimulants",
+  "nl": "Alcohol, opioïden en stimulantia"
+ },
+ "parent": "psy:addiction",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "اثرات و درمان سه خانوادهٔ اصلی مواد در جلسات مشاورهٔ اعتیاد.",
+  "en": "The effects and treatment of the three main families of substances in addiction counselling sessions.",
+  "nl": "De effecten en behandeling van de drie hoofdfamilies van middelen in verslavingscounseling."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "الکل: نوشیدنی استاندارد حدود ۱۴ گرم (۱۷٫۷ میلی‌لیتر) اتانول؛ نوشیدنی گازدار و معدهٔ خالی جذب را تند می‌کنند؛ اوج سطح خون ۳۰ تا ۹۰ دقیقه. قطع ناگهانی (تشنج، فشار خون شدید) نیاز به درمان پزشکی دارد.",
+    "en": "Alcohol: a standard drink is about 14 grams (17.7 ml) of ethanol; fizzy drinks and an empty stomach speed absorption; blood levels peak at 30 to 90 minutes. Stopping suddenly (seizures, very high blood pressure) needs medical treatment.",
+    "nl": "Alcohol: een standaardglas bevat ongeveer 14 gram (17,7 ml) ethanol; koolzuurhoudende dranken en een lege maag versnellen de opname; de bloedspiegel piekt na 30 tot 90 minuten. Plotseling stoppen (epileptische aanvallen, zeer hoge bloeddruk) vraagt om medische behandeling."
+   },
+   "sources": [
+    "src:abb435d835"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "افیونی‌ها (هروئین، تریاک، شیره، ترامادول): ضددرد، ضداسهال و ضدسرفه؛ اعتیادزایی از اثر لذت‌بخش و آرام‌بخش.",
+    "en": "Opioids (heroin, opium, opium residue, tramadol): painkilling, anti-diarrhoeal and cough-suppressing; their addictiveness comes from their pleasurable and calming effect.",
+    "nl": "Opioïden (heroïne, opium, opiumresidu, tramadol): pijnstillend, tegen diarree en hoestremmend; de verslavendheid komt van het prettige en kalmerende effect."
+   },
+   "sources": [
+    "src:abb435d835"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درمان نگهدارنده (متادون، بوپرنورفین): اثر جسمی، روانی و اجتماعی؛ «حس خوب ملایم» می‌تواند نقش شیء انتقالی داشته باشد؛ ثبات زندگی و تغییر هویت.",
+    "en": "Maintenance treatment (methadone, buprenorphine): physical, psychological and social effects; a “mild good feeling” can act as a transitional object; stability of life and change of identity.",
+    "nl": "Onderhoudsbehandeling (methadon, buprenorfine): lichamelijke, psychische en sociale effecten; een ‘mild goed gevoel’ kan als overgangsobject werken; stabiliteit in het leven en verandering van identiteit."
+   },
+   "sources": [
+    "src:abb435d835"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«نباید اعتیاد را مثل عفونت دید که با یک دارو کاملاً از بین می‌رود.»",
+    "en": "“Addiction should not be seen like an infection that is completely cured by a single drug.”",
+    "nl": "‘Verslaving moet niet worden gezien als een infectie die met één medicijn volledig verdwijnt.’"
+   },
+   "sources": [
+    "src:abb435d835"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محرک‌ها (در ایران عمدتاً آمفتامین‌ها): بیداری، انرژی، بی‌اشتهایی؛ در مصرف مداوم اضطراب، افسردگی و گاه روان‌پریشی. تأکید بر مداخلات روانی-اجتماعی.",
+    "en": "Stimulants (in Iran mainly amphetamines): wakefulness, energy, loss of appetite; with continued use anxiety, depression and sometimes psychosis. Emphasis on psychosocial interventions.",
+    "nl": "Stimulantia (in Iran vooral amfetaminen): wakker zijn, energie, minder eetlust; bij aanhoudend gebruik angst, depressie en soms psychose. Nadruk op psychosociale interventies."
+   },
+   "sources": [
+    "src:abb435d835"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psychopharm",
+   "rel": "applies-to",
+   "note": {
+    "fa": "دارودرمانی",
+    "en": "Drug treatment",
+    "nl": "Medicamenteuze behandeling"
+   }
+  },
+  {
+   "to": "psy:t-psychodynamic",
+   "rel": "see-also",
+   "note": {
+    "fa": "شیء انتقالی",
+    "en": "Transitional object",
+    "nl": "Overgangsobject"
+   }
+  },
+  {
+   "to": "psy:cannabis",
+   "rel": "see-also",
+   "note": {
+    "fa": "حشیش",
+    "en": "Cannabis",
+    "nl": "Cannabis"
+   }
+  }
+ ],
+ "people": [
+  "core:vincent-dole-marie-nyswander"
+ ],
+ "sources": [
+  "src:abb435d835",
+  "src:1e327cbeb5"
+ ],
+ "booklets": [
+  "decision:substances",
+  "families:cannabis"
+ ],
+ "origin": "decision",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

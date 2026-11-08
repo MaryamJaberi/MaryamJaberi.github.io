@@ -1,0 +1,123 @@
+{
+ "id": "psy:mindsets",
+ "kind": "concept",
+ "title": {
+  "fa": "ذهنیت‌ها",
+  "en": "Mindsets",
+  "nl": "Mindsets"
+ },
+ "parent": "psy:p-health",
+ "field": "psy:p-health",
+ "summary": {
+  "fa": "باورها و چارچوب‌هایی که با آن‌ها به یک پدیده نگاه می‌کنیم و پاسخ روانی و حتی فیزیولوژیک ما را شکل می‌دهند (آلیا کرام).",
+  "en": "The beliefs and frames through which we view a phenomenon, which shape our psychological and even physiological response (Alia Crum).",
+  "nl": "De overtuigingen en kaders waardoor we naar een verschijnsel kijken, en die onze psychologische en zelfs fysiologische reactie vormen (Alia Crum)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "میلک‌شیک (۲۰۱۱): همان شیک ۳۸۰ کالری با برچسب ۶۲۰ کالری افت گرلین بسیار شدیدتری داشت تا با برچسب ۱۴۰ کالری.",
+    "en": "Milkshake (2011): the same 380-calorie shake labelled 620 calories produced a much sharper drop in ghrelin than when labelled 140 calories.",
+    "nl": "Milkshake (2011): dezelfde shake van 380 calorieën met het etiket 620 calorieën gaf een veel sterkere daling van ghreline dan met het etiket 140 calorieën."
+   },
+   "sources": [
+    "src:be9a962120"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قند ادراک‌شده (۲۰۲۰): در بیماران دیابت نوع ۲، نوشیدنی یکسان با برچسب «پرقند» قند خون را بیشتر بالا برد.",
+    "en": "Perceived sugar (2020): in people with type 2 diabetes, the same drink labelled “high sugar” raised blood sugar more.",
+    "nl": "Ervaren suiker (2020): bij mensen met diabetes type 2 verhoogde dezelfde drank met het etiket ‘veel suiker’ de bloedsuiker meer."
+   },
+   "sources": [
+    "src:be9a962120"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نام‌گذاری طعم‌محور (۲۰۱۹): «چوب‌شورهای ترد سبزیجات با دیپ وسوسه‌انگیز» بیشتر از «سبزیجات پرفیبر» انتخاب شد و اثرش پایدار ماند.",
+    "en": "Taste-focused labelling (2019): “twisted citrus-glazed carrots” style names led to more vegetables being chosen than “high-fibre vegetables”, and the effect lasted.",
+    "nl": "Smaakgerichte namen (2019): namen in de stijl van ‘knapperige groentesticks met verleidelijke dip’ leidden tot vaker kiezen dan ‘vezelrijke groenten’, en het effect hield aan."
+   },
+   "sources": [
+    "src:be9a962120"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مستخدمان هتل (۲۰۰۷): آگاه شدن از اینکه کارشان ورزش است، پس از چهار هفته با کاهش وزن و فشار خون همراه بود (یافته‌ای بحث‌برانگیز).",
+    "en": "Hotel housekeepers (2007): learning that their work counts as exercise was followed after four weeks by lower weight and blood pressure (a contested finding).",
+    "nl": "Hotelschoonmakers (2007): na vier weken ging het besef dat hun werk beweging is samen met een lager gewicht en een lagere bloeddruk (een omstreden bevinding)."
+   },
+   "sources": [
+    "src:be9a962120"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با دارونما: انتظار بخشی از هر مداخله است.",
+    "en": "Link with placebo: expectation is part of every intervention.",
+    "nl": "Link met placebo: verwachting is onderdeel van elke interventie."
+   },
+   "sources": [
+    "src:be9a962120"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ذهنیت رشد (دوک): مداخلهٔ ملی آمریکا (یگر و همکاران، Nature ۲۰۱۹) اثر کوچک اما معناداری بر معدل دانش‌آموزان کم‌پیشرفت داشت.",
+    "en": "Growth mindset (Dweck): a US national intervention (Yeager and colleagues, Nature 2019) had a small but significant effect on the grades of lower-achieving students.",
+    "nl": "Groeimindset (Dweck): een landelijke interventie in de VS (Yeager en collega's, Nature 2019) had een klein maar significant effect op de cijfers van zwakker presterende leerlingen."
+   },
+   "sources": [
+    "src:be9a962120"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:placebo-expectation",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  },
+  {
+   "to": "psy:ego-depletion",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور به ارادهٔ محدود",
+    "en": "Belief in limited willpower",
+    "nl": "Geloof in beperkte wilskracht"
+   }
+  }
+ ],
+ "people": [
+  "core:alia-crum",
+  "core:ellen-langer",
+  "core:carol-dweck",
+  "core:carol-dweck"
+ ],
+ "sources": [
+  "src:be9a962120",
+  "src:e4fa3d9ab0",
+  "src:44379dcae3"
+ ],
+ "booklets": [
+  "s8:mindsets",
+  "habits:feedback"
+ ],
+ "origin": "s8",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

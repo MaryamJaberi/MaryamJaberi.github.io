@@ -1,0 +1,125 @@
+{
+ "id": "psy:mood",
+ "kind": "subfield",
+ "title": {
+  "fa": "اختلالات خلقی",
+  "en": "Mood disorders",
+  "nl": "Stemmingsstoornissen"
+ },
+ "parent": "psy:psychiatry",
+ "field": null,
+ "summary": {
+  "fa": "افسردگی اساسی، افسردگی مداوم (دیس‌تایمی) و اختلالات دوقطبی.",
+  "en": "Major depression, persistent depressive disorder (dysthymia) and bipolar disorders.",
+  "nl": "Depressieve stoornis, persisterende depressieve stoornis (dysthymie) en bipolaire stoornissen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "افسردگی اساسی: خلق افسرده یا بی‌لذتی (آن‌هدونیا) دست‌کم دو هفته، همراه با نشانه‌های دیگر.",
+    "en": "Major depression: depressed mood or anhedonia for at least two weeks, with other symptoms.",
+    "nl": "Depressieve stoornis: depressieve stemming of anhedonie gedurende minstens twee weken, samen met andere symptomen."
+   },
+   "sources": [
+    "src:1a673895a2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مثلث شناختی بک: نگاه منفی به خود، جهان و آینده.",
+    "en": "Beck's cognitive triad: a negative view of self, world and future.",
+    "nl": "De cognitieve triade van Beck: een negatieve kijk op jezelf, de wereld en de toekomst."
+   },
+   "sources": [
+    "src:1a673895a2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نشخوار یکی از قوی‌ترین پیش‌بینی‌کننده‌های شروع و تداوم افسردگی است.",
+    "en": "Rumination is one of the strongest predictors of the onset and persistence of depression.",
+    "nl": "Piekeren is een van de sterkste voorspellers van het ontstaan en voortduren van depressie."
+   },
+   "sources": [
+    "src:1a673895a2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بی‌لذتی هدف اصلی درمان عاطفهٔ مثبت (PAT) است.",
+    "en": "Anhedonia is the main target of Positive Affect Treatment (PAT).",
+    "nl": "Anhedonie is het belangrijkste doel van Positive Affect Treatment (PAT)."
+   },
+   "sources": [
+    "src:1a673895a2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آسیب‌شناسی روانی توصیفی (بخش ۵): تاریخ افسردگی دوگانه (درون‌زاد/واکنشی)، نوراستنی، و یاسپرس: افسردگی قابل فهم و غیرقابل فهم.",
+    "en": "Descriptive psychopathology (part 5): the history of the endogenous/reactive dichotomy of depression, neurasthenia, and Jaspers: understandable and un-understandable depression.",
+    "nl": "Beschrijvende psychopathologie (deel 5): de geschiedenis van de tweedeling endogene/reactieve depressie, neurasthenie, en Jaspers: begrijpelijke en onbegrijpelijke depressie."
+   },
+   "sources": [
+    "src:1a673895a2"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:pat",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان بی‌لذتی",
+    "en": "Treatment of anhedonia",
+    "nl": "Behandeling van anhedonie"
+   }
+  },
+  {
+   "to": "psy:t-cbt",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان شناختی افسردگی",
+    "en": "Cognitive therapy of depression",
+    "nl": "Cognitieve therapie bij depressie"
+   }
+  },
+  {
+   "to": "psy:anhedonia",
+   "rel": "see-also",
+   "note": {
+    "fa": "نشانهٔ اصلی",
+    "en": "Core symptom",
+    "nl": "Kernsymptoom"
+   }
+  },
+  {
+   "to": "psy:bipolar",
+   "rel": "see-also",
+   "note": {
+    "fa": "دوقطبی",
+    "en": "Bipolar",
+    "nl": "Bipolair"
+   }
+  }
+ ],
+ "people": [
+  "core:aaron-beck",
+  "core:kay-redfield-jamison"
+ ],
+ "sources": [
+  "src:1a673895a2"
+ ],
+ "booklets": [
+  "psychopath:mood"
+ ],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

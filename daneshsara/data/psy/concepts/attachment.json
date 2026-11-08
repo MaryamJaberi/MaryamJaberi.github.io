@@ -1,0 +1,104 @@
+{
+ "id": "psy:attachment",
+ "kind": "concept",
+ "title": {
+  "fa": "دلبستگی",
+  "en": "Attachment",
+  "nl": "Gehechtheid"
+ },
+ "parent": "psy:p-dev",
+ "field": "psy:p-dev",
+ "summary": {
+  "fa": "پیوند هیجانی پایدار کودک با مراقب، که به‌عنوان «پایگاه امن» و «پناهگاه» عمل می‌کند و الگوی روابط بعدی را شکل می‌دهد.",
+  "en": "A child's lasting emotional bond with a caregiver, which acts as a “secure base” and “safe haven” and shapes the pattern of later relationships.",
+  "nl": "De blijvende emotionele band van een kind met een verzorger, die werkt als ‘veilige basis’ en ‘veilige haven’ en het patroon van latere relaties vormt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بالبی دلبستگی را سیستمی تکاملی برای بقا می‌دانست.",
+    "en": "Bowlby saw attachment as an evolved system for survival.",
+    "nl": "Bowlby zag gehechtheid als een geëvolueerd systeem om te overleven."
+   },
+   "sources": [
+    "src:7e1a8eae8b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اینسورث با «موقعیت ناآشنا» سبک‌های ایمن، اجتنابی و دوسوگرا را شناسایی کرد؛ بعدها سبک آشفته هم افزوده شد.",
+    "en": "With the “strange situation”, Ainsworth identified secure, avoidant and ambivalent styles; a disorganised style was added later.",
+    "nl": "Met de ‘vreemde situatie’ onderscheidde Ainsworth veilige, vermijdende en ambivalente stijlen; later kwam de gedesorganiseerde stijl erbij."
+   },
+   "sources": [
+    "src:7e1a8eae8b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گیلبرت در درمان متمرکز بر شفقت، سیستم آرام‌بخشی را بر پایهٔ همین سیستم دلبستگی پستانداران توضیح می‌دهد.",
+    "en": "In compassion-focused therapy, Gilbert explains the soothing system on the basis of this mammalian attachment system.",
+    "nl": "In compassiegerichte therapie verklaart Gilbert het kalmeringssysteem vanuit dit gehechtheidssysteem van zoogdieren."
+   },
+   "sources": [
+    "src:7e1a8eae8b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نف: پستانداران با سیستم دلبستگی زاده می‌شوند و شفقت به خود از همین سیستم مراقبت بهره می‌گیرد.",
+    "en": "Neff: mammals are born with an attachment system, and self-compassion draws on this same care system.",
+    "nl": "Neff: zoogdieren worden geboren met een gehechtheidssysteem, en zelfcompassie maakt gebruik van ditzelfde zorgsysteem."
+   },
+   "sources": [
+    "src:7e1a8eae8b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:three-systems",
+   "rel": "explains",
+   "note": {
+    "fa": "پایهٔ سیستم آرام‌بخشی",
+    "en": "Basis of the soothing system",
+    "nl": "Basis van het kalmeringssysteem"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "see-also",
+   "note": {
+    "fa": "سیستم مراقبت",
+    "en": "Care system",
+    "nl": "Zorgsysteem"
+   }
+  },
+  {
+   "to": "psy:cooperative-eye",
+   "rel": "see-also",
+   "note": {
+    "fa": "نگاه و اکسی‌توسین",
+    "en": "Gaze and oxytocin",
+    "nl": "Blik en oxytocine"
+   }
+  }
+ ],
+ "people": [
+  "core:john-bowlby",
+  "core:mary-ainsworth"
+ ],
+ "sources": [
+  "src:7e1a8eae8b",
+  "src:afe595b418"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,106 @@
+{
+ "id": "psy:job-crafting",
+ "kind": "concept",
+ "title": {
+  "fa": "طراحی شغل",
+  "en": "Job crafting",
+  "nl": "Job crafting"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "تغییرات فعالانهٔ کارکنان در مرزهای وظیفه‌ای، رابطه‌ای و شناختی شغل خود (رژنیفسکی و داتن ۲۰۰۱).",
+  "en": "Employees' proactive changes to the task, relational and cognitive boundaries of their job (Wrzesniewski and Dutton 2001).",
+  "nl": "Proactieve veranderingen die werknemers aanbrengen in de taak-, relationele en cognitieve grenzen van hun baan (Wrzesniewski en Dutton 2001)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "طراحی وظیفه: افزودن یا کاستن وظایف، تمرکز بر بخش‌های لذت‌بخش.",
+    "en": "Task crafting: adding or dropping tasks, focusing on the enjoyable parts.",
+    "nl": "Taakcrafting: taken toevoegen of weglaten, focussen op de leuke onderdelen."
+   },
+   "sources": [
+    "src:142208f98a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طراحی رابطه: ساختن روابط تازه، محدود کردن تعامل‌های سمی.",
+    "en": "Relational crafting: building new relationships, limiting toxic interactions.",
+    "nl": "Relationele crafting: nieuwe relaties opbouwen, giftige interacties beperken."
+   },
+   "sources": [
+    "src:142208f98a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طراحی شناختی: نظافتچی بیمارستان که خود را بخشی از تیم درمان می‌بیند؛ شکل سازمانی بازتعبیر.",
+    "en": "Cognitive crafting: the hospital cleaner who sees themselves as part of the care team; an organisational form of reappraisal.",
+    "nl": "Cognitieve crafting: de schoonmaker in het ziekenhuis die zichzelf als deel van het zorgteam ziet; een organisatievorm van herwaardering."
+   },
+   "sources": [
+    "src:142208f98a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نتیجه: معنا، درگیری و بهزیستی بیشتر.",
+    "en": "Result: more meaning, engagement and well-being.",
+    "nl": "Resultaat: meer betekenis, betrokkenheid en welzijn."
+   },
+   "sources": [
+    "src:142208f98a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:meaningful-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساختن معنا",
+    "en": "Making meaning",
+    "nl": "Betekenis geven"
+   }
+  },
+  {
+   "to": "psy:reappraisal",
+   "rel": "see-also",
+   "note": {
+    "fa": "طراحی شناختی",
+    "en": "Cognitive design",
+    "nl": "Cognitief ontwerp"
+   }
+  },
+  {
+   "to": "psy:autonomy",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیش‌شرط",
+    "en": "Precondition",
+    "nl": "Voorwaarde"
+   }
+  }
+ ],
+ "people": [
+  "core:amy-wrzesniewski",
+  "core:jane-dutton",
+  "core:gavin-slemp"
+ ],
+ "sources": [
+  "src:142208f98a"
+ ],
+ "booklets": [
+  "poswork:org"
+ ],
+ "origin": "poswork",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,133 @@
+{
+ "id": "psy:self-criticism",
+ "kind": "concept",
+ "title": {
+  "fa": "سرزنش خود و منتقد درون",
+  "en": "Self-criticism",
+  "nl": "Zelfkritiek"
+ },
+ "parent": "psy:p-clinical",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "گفت‌وگوی درونی سرزنشگر و تحقیرآمیز پس از شکست یا خطا؛ عامل خطر فراتشخیصی برای افسردگی، اضطراب و فرسودگی.",
+  "en": "Blaming, belittling inner talk after failure or error; a transdiagnostic risk factor for depression, anxiety and burnout.",
+  "nl": "Verwijtende, kleinerende innerlijke dialoog na falen of een fout; een transdiagnostische risicofactor voor depressie, angst en burn-out."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سیدنی بلت: افسردگی «وابسته» (فقدان رابطه) در برابر «درون‌فکنانه» یا خودسرزنشی (شکست و بی‌ارزشی).",
+    "en": "Sidney Blatt: “anaclitic” depression (loss of relationship) versus “introjective” or self-blaming depression (failure and worthlessness).",
+    "nl": "Sidney Blatt: ‘anaclitische’ depressie (verlies van een relatie) tegenover ‘introjectieve’ of zelfverwijtende depressie (falen en waardeloosheid)."
+   },
+   "sources": [
+    "src:17bd1d05f2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "منتقد درون معمولاً با نیت «انگیزه دادن» حرف می‌زند، اما سامانهٔ تهدید را فعال می‌کند و تلاش بعدی را کم می‌کند.",
+    "en": "The inner critic usually speaks with the intention of “motivating”, but it activates the threat system and reduces later effort.",
+    "nl": "De innerlijke criticus spreekt meestal met de bedoeling ‘te motiveren’, maar activeert het dreigingssysteem en vermindert de latere inzet."
+   },
+   "sources": [
+    "src:17bd1d05f2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "با کمال‌گرایی ناسازگار و نشخوار ذهنی هم‌پوشانی زیادی دارد.",
+    "en": "It overlaps a great deal with maladaptive perfectionism and rumination.",
+    "nl": "Het overlapt sterk met onaangepast perfectionisme en piekeren."
+   },
+   "sources": [
+    "src:17bd1d05f2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پادزهر: شفقت به خود (گیلبرت، نف).",
+    "en": "The antidote: self-compassion (Gilbert, Neff).",
+    "nl": "Het tegengif: zelfcompassie (Gilbert, Neff)."
+   },
+   "sources": [
+    "src:17bd1d05f2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خودانتقادی آسیب‌پذیری فعال است: رویداد منفی می‌سازد و حمایت را فرسوده می‌کند (شاهار ۲۰۱۵).",
+    "en": "Self-criticism is an active vulnerability: it creates negative events and wears down support (Shahar 2015).",
+    "nl": "Zelfkritiek is een actieve kwetsbaarheid: ze schept negatieve gebeurtenissen en put steun uit (Shahar 2015)."
+   },
+   "sources": [
+    "src:17bd1d05f2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حتی با کنترل عزت نفس، کمال‌گرایی، روان‌رنجوری و نشخوار، آسیب‌شناسی را پیش‌بینی می‌کند.",
+    "en": "Even controlling for self-esteem, perfectionism, neuroticism and rumination, it predicts psychopathology.",
+    "nl": "Zelfs na correctie voor zelfwaardering, perfectionisme, neuroticisme en piekeren voorspelt het psychopathologie."
+   },
+   "sources": [
+    "src:17bd1d05f2"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-compassion",
+   "rel": "contrasts",
+   "note": {
+    "fa": "پادزهر",
+    "en": "Antidote",
+    "nl": "Tegengif"
+   }
+  },
+  {
+   "to": "psy:perfectionism",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  },
+  {
+   "to": "psy:rumination",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکار",
+    "en": "Mechanism",
+    "nl": "Mechanisme"
+   }
+  }
+ ],
+ "people": [
+  "core:sidney-blatt",
+  "core:paul-gilbert",
+  "core:tal-ben-shahar",
+  "core:golan-shahar"
+ ],
+ "sources": [
+  "src:17bd1d05f2",
+  "src:6ff2b7d01c",
+  "src:7a62394c55"
+ ],
+ "booklets": [
+  "s3:critic",
+  "s3:blatt",
+  "compassion:erosion"
+ ],
+ "origin": "s3",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

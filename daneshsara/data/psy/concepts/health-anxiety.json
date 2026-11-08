@@ -1,0 +1,108 @@
+{
+ "id": "psy:health-anxiety",
+ "kind": "concept",
+ "title": {
+  "fa": "اضطراب سلامت",
+  "en": "Health anxiety / hypochondriasis",
+  "nl": "Ziekteangst / hypochondrie"
+ },
+ "parent": "psy:anxiety",
+ "field": "psy:anxiety",
+ "summary": {
+  "fa": "نگرانی مداوم از داشتن یا گرفتار شدن به بیماری جدی، با وارسی، اطمینان‌جویی و اجتناب. DSM-5: اختلال اضطراب بیماری و اختلال علائم جسمی.",
+  "en": "Persistent worry about having or developing a serious illness, with checking, reassurance-seeking and avoidance. DSM-5: illness anxiety disorder and somatic symptom disorder.",
+  "nl": "Aanhoudende zorg over het hebben of krijgen van een ernstige ziekte, met controleren, geruststelling zoeken en vermijden. DSM-5: ziekteangststoornis en somatisch-symptoomstoornis."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "DSM-5 اصطلاح «خودبیمارانگاری» را به دلیل انگ و ریشه‌شناسی کهنه حذف کرد؛ ویراستاران کتاب می‌گویند مفهوم هم همراهش گم شد.",
+    "en": "DSM-5 dropped the term “hypochondriasis” because of stigma and outdated etymology; the book's editors say the concept was lost with it.",
+    "nl": "De DSM-5 liet de term ‘hypochondrie’ vallen vanwege stigma en een verouderde herkomst; de redacteuren van het boek zeggen dat het begrip mee verdween."
+   },
+   "sources": [
+    "src:ef2c25a2fa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چرخهٔ اطمینان‌جویی: آرامش کوتاه‌مدت، تداوم درازمدت.",
+    "en": "The reassurance-seeking cycle: short-term relief, long-term persistence.",
+    "nl": "De cyclus van geruststelling zoeken: verlichting op korte termijn, voortduren op lange termijn."
+   },
+   "sources": [
+    "src:ef2c25a2fa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«سایبرکندریا»: جست‌وجوی اینترنتی علائم.",
+    "en": "“Cyberchondria”: searching symptoms online.",
+    "nl": "‘Cyberchondrie’: symptomen online opzoeken."
+   },
+   "sources": [
+    "src:ef2c25a2fa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درمان: CBT، رابطهٔ منظم پزشک و بیمار، رویکرد بین‌فردی، دارو.",
+    "en": "Treatment: CBT, a regular doctor-patient relationship, an interpersonal approach, medication.",
+    "nl": "Behandeling: CGT, een vaste arts-patiëntrelatie, een interpersoonlijke benadering, medicatie."
+   },
+   "sources": [
+    "src:ef2c25a2fa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "DSM-5: اختلال علائم جسمی (۷۵٪) و اختلال اضطراب بیماری (۲۵٪).",
+    "en": "DSM-5: somatic symptom disorder (75%) and illness anxiety disorder (25%).",
+    "nl": "DSM-5: somatisch-symptoomstoornis (75%) en ziekteangststoornis (25%)."
+   },
+   "sources": [
+    "src:ef2c25a2fa"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:worry-model",
+   "rel": "contrasts",
+   "note": {
+    "fa": "نابردباری در برابر عدم قطعیت",
+    "en": "Intolerance of uncertainty",
+    "nl": "Intolerantie voor onzekerheid"
+   }
+  },
+  {
+   "to": "psy:vigilance",
+   "rel": "see-also",
+   "note": {
+    "fa": "گوش‌به‌زنگی به بدن",
+    "en": "Hypervigilance to the body",
+    "nl": "Overmatige alertheid op het lichaam"
+   }
+  }
+ ],
+ "people": [
+  "core:vladan-starcevic",
+  "core:russell-noyes"
+ ],
+ "sources": [
+  "src:ef2c25a2fa"
+ ],
+ "booklets": [
+  "clinical:health",
+  "psychopath:bodyawareness"
+ ],
+ "origin": "clinical",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

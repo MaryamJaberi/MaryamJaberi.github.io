@@ -1,0 +1,94 @@
+{
+ "id": "psy:gullibility",
+ "kind": "concept",
+ "title": {
+  "fa": "زودباوری",
+  "en": "Gullibility",
+  "nl": "Goedgelovigheid"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "انسان زودباور: برای زندگی اجتماعی ناچار به اعتمادیم؛ زودباوری یعنی پذیرش ادعای نادرست با وجود نشانه‌های هشدار (فورگاس و بامیستر).",
+  "en": "The gullible human: social life forces us to trust; gullibility means accepting a false claim despite warning signs (Forgas and Baumeister).",
+  "nl": "De goedgelovige mens: het sociale leven dwingt ons tot vertrouwen; goedgelovigheid betekent een onjuiste bewering aanvaarden ondanks waarschuwingssignalen (Forgas en Baumeister)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نزدیک‌بینی فراشناختی: داده‌ها را پردازش می‌کنیم اما کیفیت منبع را نمی‌سنجیم (فیدلر).",
+    "en": "Metacognitive myopia: we process data but don't assess the quality of the source (Fiedler).",
+    "nl": "Metacognitieve bijziendheid: we verwerken gegevens maar beoordelen de kwaliteit van de bron niet (Fiedler)."
+   },
+   "sources": [
+    "src:97227a77bf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خلق مثبت زودباوری را افزایش می‌دهد (فورگاس).",
+    "en": "Positive mood increases gullibility (Forgas).",
+    "nl": "Een positieve stemming vergroot goedgelovigheid (Forgas)."
+   },
+   "sources": [
+    "src:97227a77bf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "زودباوری علمی: دانشمندان هم یافته‌های ضعیف را می‌پذیرند.",
+    "en": "Scientific gullibility: scientists too accept weak findings.",
+    "nl": "Wetenschappelijke goedgelovigheid: ook wetenschappers aanvaarden zwakke bevindingen."
+   },
+   "sources": [
+    "src:97227a77bf"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "توطئه",
+    "en": "Conspiracy",
+    "nl": "Samenzwering"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "سوگیری",
+    "en": "Bias",
+    "nl": "Bias"
+   }
+  },
+  {
+   "to": "psy:social-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد",
+    "en": "Trust",
+    "nl": "Vertrouwen"
+   }
+  }
+ ],
+ "people": [
+  "core:joseph-forgas",
+  "core:roy-baumeister"
+ ],
+ "sources": [
+  "src:97227a77bf"
+ ],
+ "booklets": [
+  "shelf14:gull"
+ ],
+ "origin": "shelf14",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

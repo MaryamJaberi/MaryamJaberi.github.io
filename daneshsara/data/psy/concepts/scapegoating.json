@@ -1,0 +1,76 @@
+{
+ "id": "psy:scapegoating",
+ "kind": "concept",
+ "title": {
+  "fa": "سرزنش و نقش قربانی",
+  "en": "Scapegoating · Victim role",
+  "nl": "Zondebokken · slachtofferrol"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "الگوهای سرزنش در سازمان: انداختن تقصیر به گردن فرد یا گروهی به‌جای بررسی علت‌های نظام‌مند، و نقش قربانی که افراد به خود می‌گیرند.",
+  "en": "Blame patterns in organisations: pinning the fault on a person or group instead of examining systemic causes, and the victim role people take on.",
+  "nl": "Schuldpatronen in organisaties: de schuld bij een persoon of groep leggen in plaats van systemische oorzaken te onderzoeken, en de slachtofferrol die mensen aannemen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کاتینو: سازمان‌ها برای حفظ مشروعیت، به‌جای اصلاح سیستم، «بز بلاگردان» پیدا می‌کنند.",
+    "en": "Catino: to preserve legitimacy, organisations find a “scapegoat” instead of fixing the system.",
+    "nl": "Catino: om hun legitimiteit te bewaren, zoeken organisaties een ‘zondebok’ in plaats van het systeem te verbeteren."
+   },
+   "sources": [
+    "src:914867bff3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از محور چهارم مداخلات دوره: رفتارهای مخرب و سمی و حل تعارض.",
+    "en": "From the course's fourth line of interventions: destructive and toxic behaviours and conflict resolution.",
+    "nl": "Uit de vierde interventielijn van de cursus: destructief en giftig gedrag en conflictoplossing."
+   },
+   "sources": [
+    "src:914867bff3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "با خودشیفتگی آسیب‌پذیر و فرهنگ ونتینگ مخرب پیوند دارد.",
+    "en": "Linked to vulnerable narcissism and a destructive venting culture.",
+    "nl": "Verbonden met kwetsbaar narcisme en een destructieve cultuur van stoom afblazen."
+   },
+   "sources": [
+    "src:914867bff3"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:vulnerable-narcissism",
+   "rel": "see-also",
+   "note": {
+    "fa": "شخصیت سمی",
+    "en": "Toxic personality",
+    "nl": "Giftige persoonlijkheid"
+   }
+  }
+ ],
+ "people": [
+  "core:maurizio-catino"
+ ],
+ "sources": [
+  "src:914867bff3"
+ ],
+ "booklets": [
+  "toxic",
+  "envy:questions"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

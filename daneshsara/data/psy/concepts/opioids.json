@@ -1,0 +1,140 @@
+{
+ "id": "psy:opioids",
+ "kind": "concept",
+ "title": {
+  "fa": "مواد افیونی و سم‌زدایی",
+  "en": "Opioids & detoxification",
+  "nl": "Opioïden en detoxificatie"
+ },
+ "parent": "psy:substances",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "از خشخاش تا فنتانیل: دسته‌ها، اثرات، اعتیادآوری، علائم محرومیت و افسانهٔ «ترک خوب».",
+  "en": "From the poppy to fentanyl: classes, effects, addictiveness, withdrawal symptoms and the myth of the “good detox”.",
+  "nl": "Van papaver tot fentanyl: klassen, effecten, verslavendheid, onthoudingsverschijnselen en de mythe van de ‘goede ontwenning’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "طبیعی (مورفین، کدئین)، نیمه‌صناعی (هرویین، بوپرنورفین)، صناعی (متادون، فنتانیل)؛ گیرنده‌های μ، δ، κ.",
+    "en": "Natural (morphine, codeine), semi-synthetic (heroin, buprenorphine), synthetic (methadone, fentanyl); μ, δ and κ receptors.",
+    "nl": "Natuurlijk (morfine, codeïne), halfsynthetisch (heroïne, buprenorfine), synthetisch (methadon, fentanyl); μ-, δ- en κ-receptoren."
+   },
+   "sources": [
+    "src:63bfe2cec1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار ابداع که اعتیادآوری را تشدید کرد: تدخین، استخراج مورفین (۱۸۰۵)، سرنگ، هرویین (۱۸۹۸).",
+    "en": "Four inventions that intensified addictiveness: smoking, the extraction of morphine (1805), the syringe, heroin (1898).",
+    "nl": "Vier uitvindingen die de verslavendheid versterkten: roken, de isolatie van morfine (1805), de injectiespuit, heroïne (1898)."
+   },
+   "sources": [
+    "src:63bfe2cec1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محرومیت هرویین: شروع ۶–۱۲ ساعت، اوج حدود ۳ روز؛ متادون: اوج حدود ۷ روز، مدت ۱۲–۱۴ روز.",
+    "en": "Heroin withdrawal: onset 6–12 hours, peak about 3 days; methadone: peak about 7 days, duration 12–14 days.",
+    "nl": "Heroïneontwenning: begin na 6–12 uur, piek na ongeveer 3 dagen; methadon: piek na ongeveer 7 dagen, duur 12–14 dagen."
+   },
+   "sources": [
+    "src:63bfe2cec1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقیاس COWS؛ لوکوس سرولئوس و کلونیدین.",
+    "en": "The COWS scale; the locus coeruleus and clonidine.",
+    "nl": "De COWS-schaal; de locus coeruleus en clonidine."
+   },
+   "sources": [
+    "src:63bfe2cec1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نوع روش سم‌زدایی اثر اندکی بر پیش‌آگهی دارد؛ تجربهٔ رنج ترک به پرهیز کمک نمی‌کند.",
+    "en": "The detox method has little effect on prognosis; experiencing the suffering of withdrawal does not help abstinence.",
+    "nl": "De ontwenningsmethode heeft weinig invloed op de prognose; het lijden van de ontwenning doormaken helpt niet om abstinent te blijven."
+   },
+   "sources": [
+    "src:63bfe2cec1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "۳۰ تا ۶۰٪ معتادان درد مزمن دارند؛ بیش‌دردی ناشی از اپیوئید.",
+    "en": "30 to 60% of people with addiction have chronic pain; opioid-induced hyperalgesia.",
+    "nl": "30 tot 60% van de mensen met een verslaving heeft chronische pijn; door opioïden veroorzaakte hyperalgesie."
+   },
+   "sources": [
+    "src:63bfe2cec1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اعتیادآوری بیشتر: ماده خالص‌تر، اثر سریع‌تر، راه مصرف سریع‌تر.",
+    "en": "More addictive: purer substance, faster effect, faster route.",
+    "nl": "Verslavender: zuiverder middel, sneller effect, snellere toedieningsweg."
+   },
+   "sources": [
+    "src:63bfe2cec1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خطر اوردوز پس از دورهٔ پرهیز بیشتر است؛ «تزریق هوا» افسانه است.",
+    "en": "The risk of overdose is higher after a period of abstinence; “injecting air” is a myth.",
+    "nl": "Het risico op een overdosis is groter na een periode van abstinentie; ‘lucht inspuiten’ is een mythe."
+   },
+   "sources": [
+    "src:63bfe2cec1"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:methadone",
+   "rel": "applies-to",
+   "note": {
+    "fa": "درمان نگهدارنده",
+    "en": "Maintenance treatment",
+    "nl": "Onderhoudsbehandeling"
+   }
+  },
+  {
+   "to": "psy:addiction-core",
+   "rel": "see-also",
+   "note": {
+    "fa": "هسته",
+    "en": "Core",
+    "nl": "Kern"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:63bfe2cec1",
+  "src:99b34f4481"
+ ],
+ "booklets": [
+  "clinicaddiction:opiates",
+  "clinicaddiction:detox",
+  "families:opium"
+ ],
+ "origin": "clinicaddiction",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

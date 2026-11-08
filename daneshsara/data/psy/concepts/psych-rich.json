@@ -1,0 +1,95 @@
+{
+ "id": "psy:psych-rich",
+ "kind": "concept",
+ "title": {
+  "fa": "زندگی غنی روانی",
+  "en": "Psychologically rich life",
+  "nl": "Psychologisch rijk leven"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "بُعد سوم زندگی خوب در کنار لذت و معنا: تجربه‌های متنوع، جالب و دیدگاه‌گستر، حتی اگر همیشه خوشایند نباشند (شیگهیرو اویشی).",
+  "en": "The third dimension of a good life alongside pleasure and meaning: varied, interesting and perspective-changing experiences, even if not always pleasant (Shigehiro Oishi).",
+  "nl": "De derde dimensie van een goed leven naast plezier en betekenis: gevarieerde, interessante en perspectiefverruimende ervaringen, ook als die niet altijd prettig zijn (Shigehiro Oishi)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پرسش‌نامهٔ ۱۷ گویه‌ای: «زندگی من یک فیلم یا رمان خوب می‌شد»، «در بستر مرگم خواهم گفت کلی چیزها دیدم و یاد گرفتم».",
+    "en": "A 17-item questionnaire: “My life would make a good novel or movie”, “On my deathbed I'll say I've seen and learned a lot”.",
+    "nl": "Een vragenlijst van 17 items: ‘Mijn leven zou een goede roman of film opleveren’, ‘Op mijn sterfbed zeg ik dat ik veel heb gezien en geleerd’."
+   },
+   "sources": [
+    "src:cc690e77cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در کارگاه: پادزهر چهار فرایند فراگیر (به‌ویژه آنهدونیا).",
+    "en": "In the workshop: an antidote to the four broad processes (especially anhedonia).",
+    "nl": "In de workshop: een tegengif voor de vier brede processen (vooral anhedonie)."
+   },
+   "sources": [
+    "src:cc690e77cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با کنجکاوی، کاوش و تنوع هیجانی.",
+    "en": "Linked to curiosity, exploration and emotional diversity.",
+    "nl": "Verbonden met nieuwsgierigheid, verkennen en emotionele diversiteit."
+   },
+   "sources": [
+    "src:cc690e77cc"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:curiosity",
+   "rel": "see-also",
+   "note": {
+    "fa": "موتور",
+    "en": "Engine",
+    "nl": "Motor"
+   }
+  },
+  {
+   "to": "psy:emodiversity",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  },
+  {
+   "to": "psy:exploration",
+   "rel": "see-also",
+   "note": {
+    "fa": "کاوش",
+    "en": "Exploration",
+    "nl": "Verkennen"
+   }
+  }
+ ],
+ "people": [
+  "core:shigehiro-oishi"
+ ],
+ "sources": [
+  "src:cc690e77cc",
+  "src:9e4ebea8ec"
+ ],
+ "booklets": [
+  "workshop:processes",
+  "lookagain:rich"
+ ],
+ "origin": "workshop",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,110 @@
+{
+ "id": "psy:learning-environments",
+ "kind": "concept",
+ "title": {
+  "fa": "محیط یادگیری مهربان و بدخیم",
+  "en": "Kind vs. wicked learning environments",
+  "nl": "Vriendelijke versus verraderlijke leeromgevingen"
+ },
+ "parent": "psy:p-cog",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "رابین هوگارث: در محیط مهربان الگوها تکرار می‌شوند و بازخورد سریع و دقیق است؛ در محیط بدخیم تجربه ممکن است درس غلط بدهد.",
+  "en": "Robin Hogarth: in a kind environment patterns repeat and feedback is fast and accurate; in a wicked environment experience may teach the wrong lesson.",
+  "nl": "Robin Hogarth: in een vriendelijke omgeving herhalen patronen zich en is feedback snel en nauwkeurig; in een verraderlijke omgeving kan ervaring de verkeerde les leren."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مهربان: شطرنج، گلف. بدخیم: پیش‌بینی سیاسی، بازار، مدیریت، روان‌درمانی.",
+    "en": "Kind: chess, golf. Wicked: political forecasting, markets, management, psychotherapy.",
+    "nl": "Vriendelijk: schaken, golf. Verraderlijk: politieke voorspellingen, markten, management, psychotherapie."
+   },
+   "sources": [
+    "src:9b5e0b2fe9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پزشک نیویورکی که با دست‌های آلوده حصبه را منتقل می‌کرد و پیش‌بینی‌هایش «درست» درمی‌آمد.",
+    "en": "The New York doctor who spread typhoid with dirty hands and whose predictions “came true”.",
+    "nl": "De New Yorkse arts die met vuile handen tyfus verspreidde en wiens voorspellingen ‘uitkwamen’."
+   },
+   "sources": [
+    "src:9b5e0b2fe9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کانمن و کلاین (۲۰۰۹): شهود فقط در محیط‌های قاعده‌مند با بازخورد کافی معتبر است.",
+    "en": "Kahneman and Klein (2009): intuition is valid only in regular environments with enough feedback.",
+    "nl": "Kahneman en Klein (2009): intuïtie is alleen betrouwbaar in regelmatige omgevingen met voldoende feedback."
+   },
+   "sources": [
+    "src:9b5e0b2fe9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حتی در محیط مهربان، تخصص باریک انعطاف را کم می‌کند (بریج با ترتیب تازه، حسابداران با قانون تازه).",
+    "en": "Even in a kind environment, narrow expertise reduces flexibility (bridge with new rules, accountants with a new law).",
+    "nl": "Zelfs in een vriendelijke omgeving vermindert smalle expertise de flexibiliteit (bridge met nieuwe regels, accountants met een nieuwe wet)."
+   },
+   "sources": [
+    "src:9b5e0b2fe9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شهود کارشناس در محیط منظم با بازخورد سریع قابل اعتماد است (کانمن و کلاین ۲۰۰۹).",
+    "en": "Expert intuition is reliable in a regular environment with fast feedback (Kahneman and Klein 2009).",
+    "nl": "Intuïtie van experts is betrouwbaar in een regelmatige omgeving met snelle feedback (Kahneman en Klein 2009)."
+   },
+   "sources": [
+    "src:9b5e0b2fe9"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "شهود و سوگیری",
+    "en": "Intuition and bias",
+    "nl": "Intuïtie en bias"
+   }
+  },
+  {
+   "to": "psy:foxes-hedgehogs",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیش‌بینی",
+    "en": "Forecasting",
+    "nl": "Voorspellen"
+   }
+  }
+ ],
+ "people": [
+  "core:robin-hogarth",
+  "core:daniel-kahneman",
+  "core:gary-klein"
+ ],
+ "sources": [
+  "src:9b5e0b2fe9",
+  "src:7cbfd5ff2d"
+ ],
+ "booklets": [
+  "range:kind",
+  "shelf4:klein"
+ ],
+ "origin": "range",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

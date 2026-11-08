@@ -1,0 +1,105 @@
+{
+ "id": "psy:sex-gender",
+ "kind": "subfield",
+ "title": {
+  "fa": "روان‌شناسی جنس و جنسیت",
+  "en": "Psychology of sex & gender",
+  "nl": "Psychologie van sekse en gender"
+ },
+ "parent": "psy:psychology",
+ "field": null,
+ "summary": {
+  "fa": "کوردلیا فاین در «تستوسترون رکس» روایت رایج را نقد می‌کند: اینکه تکامل، از راه تستوسترون، مردان را ذاتاً رقابت‌جو و ریسک‌پذیر و زنان را محتاط و پرورش‌دهنده ساخته است.",
+  "en": "In Testosterone Rex, Cordelia Fine critiques the popular story that evolution, through testosterone, made men inherently competitive and risk-taking and women cautious and nurturing.",
+  "nl": "In Testosterone Rex bekritiseert Cordelia Fine het populaire verhaal dat de evolutie, via testosteron, mannen van nature competitief en risicozoekend maakte en vrouwen voorzichtig en zorgzaam."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آزمایش‌های بیتمن (۱۹۴۸) روی مگس میوه پایهٔ این ادعا بود که نرها از جفت‌گیری بیشتر سود می‌برند و ماده‌ها گزینشگرند؛ تکرارهای بعدی (گواتی و همکاران، ۲۰۱۲) خطاهای روش‌شناختی جدی در آن یافتند (فصل ۱).",
+    "en": "Bateman's experiments (1948) on fruit flies were the basis for the claim that males gain more from mating and females are choosy; later replications (Gowaty and colleagues, 2012) found serious methodological errors (chapter 1).",
+    "nl": "De experimenten van Bateman (1948) met fruitvliegjes waren de basis voor de bewering dat mannetjes meer winnen bij paren en vrouwtjes kieskeurig zijn; latere replicaties (Gowaty en collega's, 2012) vonden ernstige methodologische fouten (hoofdstuk 1)."
+   },
+   "sources": [
+    "src:c7910b83d1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در انسان، هزینه‌ها و سودهای تولیدمثل به فرهنگ، اقتصاد و بافت بستگی دارد؛ نه یک الگوی ثابت (فصل‌های ۲ و ۳).",
+    "en": "In humans, the costs and benefits of reproduction depend on culture, economy and context; not a fixed pattern (chapters 2 and 3).",
+    "nl": "Bij mensen hangen de kosten en baten van voortplanting af van cultuur, economie en context; geen vast patroon (hoofdstukken 2 en 3)."
+   },
+   "sources": [
+    "src:c7910b83d1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ریسک‌پذیری یک صفت واحد نیست؛ به حوزه بستگی دارد: زنی که در سرمایه‌گذاری محتاط است ممکن است در ورزش یا حرفه بسیار ریسک کند («دیوارگلی‌های چتربازی»، فصل ۵).",
+    "en": "Risk-taking is not a single trait; it depends on the domain: a woman cautious in investing may take big risks in sport or career (“skydiving wallflowers”, chapter 5).",
+    "nl": "Risico nemen is geen enkelvoudige eigenschap; het hangt af van het domein: een vrouw die voorzichtig belegt, kan grote risico's nemen in sport of carrière (‘parachutespringende muurbloempjes’, hoofdstuk 5)."
+   },
+   "sources": [
+    "src:c7910b83d1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تستوسترون علت ساده نیست: سطح آن هم رفتار را تحت تأثیر قرار می‌دهد و هم از موقعیت (برد، قدرت، مراقبت از نوزاد) تأثیر می‌پذیرد (فصل ۶).",
+    "en": "Testosterone is not a simple cause: its level both affects behaviour and is affected by the situation (winning, power, caring for a baby) (chapter 6).",
+    "nl": "Testosteron is geen eenvoudige oorzaak: het niveau beïnvloedt gedrag en wordt zelf beïnvloed door de situatie (winnen, macht, zorgen voor een baby) (hoofdstuk 6)."
+   },
+   "sources": [
+    "src:c7910b83d1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«افسانهٔ خواهران لمان» (فصل ۷): این ادعا که اگر زنان بانک را می‌گرداندند بحران ۲۰۰۸ رخ نمی‌داد، بر همان کلیشه‌ها تکیه دارد.",
+    "en": "The “Lehman Sisters myth” (chapter 7): the claim that the 2008 crisis would not have happened had women run the banks rests on the same stereotypes.",
+    "nl": "De ‘mythe van de Lehman Sisters’ (hoofdstuk 7): de bewering dat de crisis van 2008 niet zou zijn gebeurd als vrouwen de banken hadden geleid, steunt op dezelfde stereotypen."
+   },
+   "sources": [
+    "src:c7910b83d1"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:p-personality",
+   "rel": "see-also",
+   "note": {
+    "fa": "تفاوت‌های فردی",
+    "en": "Individual differences",
+    "nl": "Individuele verschillen"
+   }
+  }
+ ],
+ "people": [
+  "core:cordelia-fine",
+  "core:daphna-joel",
+  "core:angela-saini",
+  "core:simon-baron-cohen"
+ ],
+ "sources": [
+  "src:c7910b83d1",
+  "src:78e81f9581",
+  "src:fc4b4caa74",
+  "src:4f577ca453"
+ ],
+ "booklets": [
+  "badmen:critique",
+  "orientation:social",
+  "orientation:reimer"
+ ],
+ "origin": "book",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

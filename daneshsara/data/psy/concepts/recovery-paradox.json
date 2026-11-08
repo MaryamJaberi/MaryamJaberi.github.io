@@ -1,0 +1,76 @@
+{
+ "id": "psy:recovery-paradox",
+ "kind": "concept",
+ "title": {
+  "fa": "پارادوکس بازیابی",
+  "en": "Recovery paradox",
+  "nl": "Herstelparadox"
+ },
+ "parent": "psy:burnout",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "کسی که بیشترین نیاز را به بازیابی دارد، کمترین توان را برای آن دارد. زوننتاگ (۲۰۱۸) این چرخهٔ معیوب را توصیف کرد.",
+  "en": "Those who most need recovery have the least capacity for it. Sonnentag (2018) described this vicious cycle.",
+  "nl": "Wie herstel het hardst nodig heeft, heeft er de minste ruimte voor. Sonnentag (2018) beschreef deze vicieuze cirkel."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "چرخه: رویدادهای پرتنش ← برانگیختگی و تنش جسمی ← فرسودگی و بی‌درگیری ← عملکرد بدتر ← رویدادهای پرتنش بیشتر.",
+    "en": "The cycle: stressful events → arousal and physical strain → exhaustion and disengagement → worse performance → more stressful events.",
+    "nl": "De cyclus: stressvolle gebeurtenissen → opwinding en lichamelijke spanning → uitputting en onthechting → slechtere prestaties → meer stressvolle gebeurtenissen."
+   },
+   "sources": [
+    "src:cb3107749f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در مرکز چرخه «نیاز به بازیابی» است.",
+    "en": "At the centre of the cycle is the “need for recovery”.",
+    "nl": "In het midden van de cyclus staat de ‘herstelbehoefte’."
+   },
+   "sources": [
+    "src:cb3107749f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "روان‌پزشکی برای شکستن این چرخه ابزارهای زیادی دارد؛ بسیاری از آن‌ها به خاموش‌کردن نشخوار برمی‌گردند.",
+    "en": "Psychiatry has many tools to break this cycle; many of them come down to switching off rumination.",
+    "nl": "De psychiatrie heeft veel instrumenten om deze cyclus te doorbreken; veel daarvan komen neer op het uitzetten van piekeren."
+   },
+   "sources": [
+    "src:cb3107749f"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-stress",
+   "rel": "see-also",
+   "note": {
+    "fa": "برانگیختگی جسمی",
+    "en": "Physical arousal",
+    "nl": "Lichamelijke opwinding"
+   }
+  }
+ ],
+ "people": [
+  "core:sabine-sonnentag"
+ ],
+ "sources": [
+  "src:cb3107749f"
+ ],
+ "booklets": [
+  "t-recovery-paradox",
+  "s11:detach"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,102 @@
+{
+ "id": "psy:implementation-intentions",
+ "kind": "concept",
+ "title": {
+  "fa": "قصد اجرایی",
+  "en": "Implementation intentions",
+  "nl": "Implementatie-intenties"
+ },
+ "parent": "psy:habit",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "برنامه‌ریزی «اگر x، آنگاه y» که اجرای قصد را به یک نشانهٔ مشخص گره می‌زند (پیتر گولویتزر).",
+  "en": "“If x, then y” planning that ties carrying out an intention to a specific cue (Peter Gollwitzer).",
+  "nl": "‘Als x, dan y’-planning die het uitvoeren van een voornemen koppelt aan een specifiek signaal (Peter Gollwitzer)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "قصد هدف: «می‌خواهم لاغر شوم»؛ قصد اجرایی: «اگر رستوران رفتم، سالاد می‌خورم».",
+    "en": "Goal intention: “I want to lose weight”; implementation intention: “If I go to a restaurant, I'll have a salad.”",
+    "nl": "Doelintentie: ‘Ik wil afvallen’; implementatie-intentie: ‘Als ik naar een restaurant ga, neem ik een salade.’"
+   },
+   "sources": [
+    "src:560dcfbf31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فراتحلیل گولویتزر و شیران (۲۰۰۶): اثر متوسط تا بزرگ (d ≈ ۰٫۶۵) بر رسیدن به هدف.",
+    "en": "Gollwitzer and Sheeran's meta-analysis (2006): a medium to large effect (d ≈ 0.65) on goal attainment.",
+    "nl": "Meta-analyse van Gollwitzer en Sheeran (2006): een middelgroot tot groot effect (d ≈ 0,65) op het bereiken van doelen."
+   },
+   "sources": [
+    "src:560dcfbf31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پای در میان در (فریدمن و فریزر ۱۹۶۶): ۷۶٪ در برابر ۱۷٪.",
+    "en": "Foot in the door (Freedman and Fraser 1966): 76% versus 17%.",
+    "nl": "Voet tussen de deur (Freedman en Fraser 1966): 76% tegenover 17%."
+   },
+   "sources": [
+    "src:560dcfbf31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«اگر x شد، y را انجام می‌دهم» (گلویتزر).",
+    "en": "“If x happens, I will do y” (Gollwitzer).",
+    "nl": "‘Als x gebeurt, doe ik y’ (Gollwitzer)."
+   },
+   "sources": [
+    "src:560dcfbf31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نشانهٔ متمایز (مجسمهٔ فیل): ۷۴٪ در برابر ۴۲٪ (راجرز و میلکمن ۲۰۱۶).",
+    "en": "A distinctive cue (an elephant statue): 74% versus 42% (Rogers and Milkman 2016).",
+    "nl": "Een opvallend signaal (een olifantenbeeld): 74% tegenover 42% (Rogers en Milkman 2016)."
+   },
+   "sources": [
+    "src:560dcfbf31"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:goal-pursuit",
+   "rel": "see-also",
+   "note": {
+    "fa": "هدف",
+    "en": "Target",
+    "nl": "Doel"
+   }
+  }
+ ],
+ "people": [
+  "core:peter-gollwitzer",
+  "core:gabriele-oettingen"
+ ],
+ "sources": [
+  "src:560dcfbf31"
+ ],
+ "booklets": [
+  "change:selfcontrol",
+  "trauma:flex",
+  "habits:habit3",
+  "s6:cues",
+  "s6:plan"
+ ],
+ "origin": "change",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

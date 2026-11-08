@@ -1,0 +1,123 @@
+{
+ "id": "psy:addiction",
+ "kind": "subfield",
+ "title": {
+  "fa": "اعتیاد",
+  "en": "Addiction",
+  "nl": "Verslaving"
+ },
+ "parent": "psy:psychiatry",
+ "field": null,
+ "summary": {
+  "fa": "اختلالات مصرف مواد و اعتیادهای رفتاری؛ امروز به‌عنوان اختلال مغزی-رفتاری مزمن با عود دیده می‌شود.",
+  "en": "Substance use disorders and behavioural addictions; today seen as a chronic, relapsing brain-behaviour disorder.",
+  "nl": "Middelengebruiksstoornissen en gedragsverslavingen; tegenwoordig gezien als een chronische hersen-gedragsstoornis met terugval."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نظریهٔ «حساس‌شدن انگیزشی» بریج و رابینسون: «خواستن» از «دوست‌داشتن» جدا می‌شود.",
+    "en": "Berridge and Robinson's “incentive sensitisation” theory: “wanting” comes apart from “liking”.",
+    "nl": "De ‘incentive sensitisation’-theorie van Berridge en Robinson: ‘willen’ raakt los van ‘lekker vinden’."
+   },
+   "sources": [
+    "src:af6928e362"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نورا ولکاو با تصویربرداری نقش دوپامین و قشر پیشانی را نشان داد.",
+    "en": "Nora Volkow showed the role of dopamine and the frontal cortex with brain imaging.",
+    "nl": "Nora Volkow liet met hersenscans de rol van dopamine en de frontale cortex zien."
+   },
+   "sources": [
+    "src:af6928e362"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جلسهٔ ۱: امابیل پیروزی‌های کوچک را «مثل مواد مخدر» اعتیادآور توصیف می‌کند؛ همان مدار پاداش.",
+    "en": "Session 1: Amabile describes small wins as addictive “like drugs”; the same reward circuit.",
+    "nl": "Sessie 1: Amabile beschrijft kleine overwinningen als verslavend ‘als drugs’; hetzelfde beloningscircuit."
+   },
+   "sources": [
+    "src:af6928e362"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هستهٔ اعتیاد (جزوهٔ خودشناسی و تصمیم): تحمل، محرومیت، وسوسه و از دست رفتن کنترل؛ مستقل از نوع ماده.",
+    "en": "The core of addiction (booklet on self-knowledge and decision): tolerance, withdrawal, craving and loss of control, regardless of substance.",
+    "nl": "De kern van verslaving (bundel zelfkennis en beslissen): tolerantie, onthouding, trek en controleverlies, ongeacht het middel."
+   },
+   "sources": [
+    "src:af6928e362"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«درمان فقط ترک نیست؛ ساختن منابع لذت سالم بخش مهمی از فرایند است.»",
+    "en": "“Treatment is not just quitting; building healthy sources of pleasure is an important part of the process.”",
+    "nl": "‘Behandeling is niet alleen stoppen; gezonde bronnen van plezier opbouwen is een belangrijk deel van het proces.’"
+   },
+   "sources": [
+    "src:af6928e362"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نباید اعتیاد را مثل عفونت دید که با یک دارو از بین می‌رود؛ مجموعه‌ای زیستی-روانی-اجتماعی است.",
+    "en": "Addiction should not be seen like an infection cured by one drug; it is a biopsychosocial whole.",
+    "nl": "Verslaving moet niet worden gezien als een infectie die met één medicijn verdwijnt; het is een biopsychosociaal geheel."
+   },
+   "sources": [
+    "src:af6928e362"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-reward",
+   "rel": "explains",
+   "note": {
+    "fa": "مدار پاداش",
+    "en": "Reward circuit",
+    "nl": "Beloningscircuit"
+   }
+  },
+  {
+   "to": "psy:behavioral-addiction",
+   "rel": "see-also",
+   "note": {
+    "fa": "گسترهٔ رفتاری",
+    "en": "Behavioural range",
+    "nl": "Gedragsbreedte"
+   }
+  }
+ ],
+ "people": [
+  "core:nora-volkow",
+  "core:kent-berridge",
+  "core:terry-robinson",
+  "core:elvin-morton-jellinek",
+  "core:edward-khantzian",
+  "core:alan-marlatt"
+ ],
+ "sources": [
+  "src:af6928e362",
+  "src:437e142054"
+ ],
+ "booklets": [
+  "decision:counseling"
+ ],
+ "origin": "decision",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,106 @@
+{
+ "id": "psy:running-commentary",
+ "kind": "concept",
+ "title": {
+  "fa": "گزارشگر زنده",
+  "en": "Running commentary",
+  "nl": "Doorlopend commentaar"
+ },
+ "parent": "psy:rumination",
+ "field": "psy:p-clinical",
+ "summary": {
+  "fa": "صدای درونی که مثل گزارشگر فوتبال با سرعت رویدادها را تفسیر و قضاوت می‌کند و از دل نشخوار فکری می‌روید.",
+  "en": "An inner voice that, like a football commentator, interprets and judges events at speed, growing out of rumination.",
+  "nl": "Een innerlijke stem die als een voetbalcommentator razendsnel gebeurtenissen duidt en beoordeelt, en voortkomt uit piekeren."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در کارمندی که به خانه می‌آید، پرستاری که «دیگر نمی‌کشد» و دانش‌آموزی که امتحان بد داده دیده می‌شود.",
+    "en": "Seen in the employee coming home, the nurse who “can't take it any more” and the student who did badly in an exam.",
+    "nl": "Te zien bij de werknemer die thuiskomt, de verpleegkundige die ‘het niet meer trekt’ en de leerling die een slecht examen had."
+   },
+   "sources": [
+    "src:ecd0f6d25b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مانع پشتکار و تلاش دوباره پس از شکست است.",
+    "en": "It is an obstacle to perseverance and trying again after failure.",
+    "nl": "Het is een obstakel voor doorzettingsvermogen en opnieuw proberen na falen."
+   },
+   "sources": [
+    "src:ecd0f6d25b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دو راه مقابله: خاموش‌کردنش، یا «ضدآب‌کردن» خود مثل کفش جیر واکس‌خورده تا حرفش جذب نشود.",
+    "en": "Two ways of coping: switching it off, or “waterproofing” oneself like polished suede shoes so its words don't soak in.",
+    "nl": "Twee manieren om ermee om te gaan: het uitzetten, of jezelf ‘waterdicht’ maken zoals ingevette suède schoenen zodat de woorden niet binnendringen."
+   },
+   "sources": [
+    "src:ecd0f6d25b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تکنیک‌ها: رؤیاپردازی، تفکر آرزومندانه، مزه‌مزه‌کردن.",
+    "en": "Techniques: daydreaming, wishful thinking, savouring.",
+    "nl": "Technieken: dagdromen, wensdenken, genieten."
+   },
+   "sources": [
+    "src:ecd0f6d25b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فرضیهٔ پژوهشی مدرس: دشنام ممکن است موقتاً آن را ساکت کند (برای محیط کار توصیه نمی‌شود).",
+    "en": "The lecturer's research hypothesis: swearing may temporarily silence it (not recommended at work).",
+    "nl": "Onderzoekshypothese van de docent: vloeken kan het tijdelijk stil zetten (niet aanbevolen op het werk)."
+   },
+   "sources": [
+    "src:ecd0f6d25b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:perseverance",
+   "rel": "see-also",
+   "note": {
+    "fa": "مانع پشتکار",
+    "en": "Obstacle to perseverance",
+    "nl": "Obstakel voor doorzettingsvermogen"
+   }
+  },
+  {
+   "to": "psy:savoring",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساکت‌کننده",
+    "en": "Silencer",
+    "nl": "Dempende factor"
+   }
+  }
+ ],
+ "people": [
+  "core:camille-farrington"
+ ],
+ "sources": [
+  "src:ecd0f6d25b"
+ ],
+ "booklets": [
+  "rumination"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

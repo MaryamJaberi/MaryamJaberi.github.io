@@ -1,0 +1,121 @@
+{
+ "id": "psy:fatigue-syndromes",
+ "kind": "concept",
+ "title": {
+  "fa": "سندرم‌های خستگی",
+  "en": "Fatigue syndromes",
+  "nl": "Vermoeidheidssyndromen"
+ },
+ "parent": "psy:p-health",
+ "field": "psy:p-health",
+ "summary": {
+  "fa": "طیف حالت‌های خستگی مزمن جسمی و روانی که در جلسهٔ ۱ با چرخهٔ ناقص بازیابی و فرسودگی شغلی پیوند داده شد (اسلاید ۱۶، چوب‌کبریت‌هایی که پله‌پله می‌سوزند).",
+  "en": "A range of chronic physical and mental fatigue states that session 1 linked to an incomplete recovery cycle and burnout (slide 16: matchsticks burning down step by step).",
+  "nl": "Een reeks chronische lichamelijke en mentale vermoeidheidstoestanden die in sessie 1 werden gekoppeld aan een onvolledige herstelcyclus en burn-out (slide 16: lucifers die stap voor stap opbranden)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "خستگی جزء اول تعریف فرسودگی شغلی است.",
+    "en": "Exhaustion is the first part of the definition of burnout.",
+    "nl": "Uitputting is het eerste onderdeel van de definitie van burn-out."
+   },
+   "sources": [
+    "src:6368018e7b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وقتی بازیابی شبانه کامل نشود، خستگی روز به روز انباشته می‌شود.",
+    "en": "When night-time recovery is incomplete, fatigue builds up day after day.",
+    "nl": "Als het nachtelijk herstel onvolledig is, stapelt vermoeidheid zich dag na dag op."
+   },
+   "sources": [
+    "src:6368018e7b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تفاوت با خستگی معمول: با استراحت کوتاه برطرف نمی‌شود.",
+    "en": "Unlike ordinary tiredness, it does not go away with a short rest.",
+    "nl": "Anders dan gewone moeheid verdwijnt het niet na een korte rust."
+   },
+   "sources": [
+    "src:6368018e7b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "۲۰ تا ۲۵٪ مردم خستگی گذرا و حدود ۵٪ خستگی بیش از ۶ ماه دارند؛ در دختران تا ۳ برابر پسران، از ۱۳ سالگی.",
+    "en": "20 to 25% of people have transient fatigue and about 5% have fatigue for more than 6 months; in girls up to 3 times as often as in boys, from age 13.",
+    "nl": "20 tot 25% van de mensen heeft tijdelijke vermoeidheid en ongeveer 5% langer dan 6 maanden; bij meisjes tot 3 keer zo vaak als bij jongens, vanaf 13 jaar."
+   },
+   "sources": [
+    "src:6368018e7b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چرخهٔ کم-زیاد، تحلیل رفتن، و باور غلط به «استراحت‌درمانی».",
+    "en": "The boom-and-bust cycle, wearing down, and the false belief in “rest cures”.",
+    "nl": "De cyclus van te veel en te weinig, uitputting, en het misverstand van de ‘rustkuur’."
+   },
+   "sources": [
+    "src:6368018e7b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پرسش‌نامهٔ چالدر و CIS برای ثبت و پایش.",
+    "en": "The Chalder questionnaire and the CIS for recording and monitoring.",
+    "nl": "De Chalder-vragenlijst en de CIS om vast te leggen en te volgen."
+   },
+   "sources": [
+    "src:6368018e7b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:burnout",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌پوشانی",
+    "en": "Overlap",
+    "nl": "Overlap"
+   }
+  },
+  {
+   "to": "psy:recovery-paradox",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکار",
+    "en": "Mechanism",
+    "nl": "Mechanisme"
+   }
+  }
+ ],
+ "people": [
+  "core:sabine-sonnentag"
+ ],
+ "sources": [
+  "src:6368018e7b"
+ ],
+ "booklets": [
+  "detach",
+  "families:fatigue",
+  "perfection:fatigue",
+  "shelf3:shorter",
+  "shelf3:perfection"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

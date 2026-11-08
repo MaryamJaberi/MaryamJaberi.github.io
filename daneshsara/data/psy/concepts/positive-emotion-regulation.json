@@ -1,0 +1,120 @@
+{
+ "id": "psy:positive-emotion-regulation",
+ "kind": "concept",
+ "title": {
+  "fa": "تنظیم هیجان مثبت",
+  "en": "Capitalizing and dampening positive emotion",
+  "nl": "Positieve emotie versterken en afzwakken"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "هیجان مثبت سرمایه‌گذاری بلندمدت است: به اشتراک گذاشتن خبرهای خوب و پاسخ فعال-سازندهٔ دیگران آن را تقویت می‌کند؛ کمرنگ کردن خوشی از ترس سقوط، آن را از بین می‌برد.",
+  "en": "Positive emotion is a long-term investment: sharing good news and others' active-constructive responses strengthen it; dampening joy for fear of a fall destroys it.",
+  "nl": "Positieve emotie is een investering op lange termijn: goed nieuws delen en actief-constructieve reacties van anderen versterken haar; vreugde afzwakken uit angst voor een val maakt haar kapot."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هیجان مثبت کمتر در روزهای پراسترس، افسردگی و اضطراب ۷ سال بعد را پیش‌بینی کرد.",
+    "en": "Less positive emotion on stressful days predicted depression and anxiety 7 years later.",
+    "nl": "Minder positieve emotie op stressvolle dagen voorspelde depressie en angst 7 jaar later."
+   },
+   "sources": [
+    "src:d775168f90"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "DRAMMA: جدا شدن، خودمختاری، تسلط، معنا، پیوند.",
+    "en": "DRAMMA: detachment, relaxation, autonomy, mastery, meaning, affiliation.",
+    "nl": "DRAMMA: loskomen, ontspanning, autonomie, meesterschap, betekenis, verbondenheid."
+   },
+   "sources": [
+    "src:d775168f90"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فراغت پرتلاش معنادارتر است (اینزلیخت ۲۰۲۵).",
+    "en": "Effortful leisure is more meaningful (Inzlicht 2025).",
+    "nl": "Inspanningsvolle vrije tijd is betekenisvoller (Inzlicht 2025)."
+   },
+   "sources": [
+    "src:d775168f90"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اجتناب از تضاد: نگه داشتن عمدی خلق منفی.",
+    "en": "Contrast avoidance: deliberately keeping a negative mood.",
+    "nl": "Contrastvermijding: bewust een negatieve stemming vasthouden."
+   },
+   "sources": [
+    "src:d775168f90"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:savoring",
+   "rel": "see-also",
+   "note": {
+    "fa": "مزه‌مزه",
+    "en": "Savouring",
+    "nl": "Genieten"
+   }
+  },
+  {
+   "to": "psy:behavioral-activation",
+   "rel": "see-also",
+   "note": {
+    "fa": "فعال‌سازی",
+    "en": "Activation",
+    "nl": "Activatie"
+   }
+  },
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "نشخوار",
+    "en": "Rumination",
+    "nl": "Piekeren"
+   }
+  },
+  {
+   "to": "psy:emotion-regulation",
+   "rel": "see-also",
+   "note": {
+    "fa": "تنظیم",
+    "en": "Regulation",
+    "nl": "Regulatie"
+   }
+  }
+ ],
+ "people": [
+  "core:shelly-gable",
+  "core:harry-reis",
+  "core:michelle-newman",
+  "core:sabine-sonnentag"
+ ],
+ "sources": [
+  "src:d775168f90",
+  "src:50daaa90ca"
+ ],
+ "booklets": [
+  "s15:investment",
+  "s15:leisure",
+  "s15:capitalization",
+  "s15:dampening"
+ ],
+ "origin": "s15",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

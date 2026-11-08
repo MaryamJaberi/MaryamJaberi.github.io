@@ -1,0 +1,85 @@
+{
+ "id": "psy:soc-networks",
+ "kind": "subfield",
+ "title": {
+  "fa": "شبکه‌های اجتماعی و سرایت",
+  "en": "Social networks & contagion",
+  "nl": "Sociale netwerken en besmetting"
+ },
+ "parent": "psy:sociology",
+ "field": null,
+ "summary": {
+  "fa": "رفتار، احساس و باور در شبکه‌ها پخش می‌شوند. «قدرت پیوندهای ضعیف» (گرانووتر) و «سرایت پیچیده» (سنتولا) دو یافتهٔ کلیدی‌اند.",
+  "en": "Behaviour, feelings and beliefs spread through networks. “The strength of weak ties” (Granovetter) and “complex contagion” (Centola) are two key findings.",
+  "nl": "Gedrag, gevoelens en overtuigingen verspreiden zich via netwerken. ‘De kracht van zwakke banden’ (Granovetter) en ‘complexe besmetting’ (Centola) zijn twee kernbevindingen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پیوندهای ضعیف (آشنایان) اطلاعات تازه، مثل کار، می‌آورند.",
+    "en": "Weak ties (acquaintances) bring new information, such as jobs.",
+    "nl": "Zwakke banden (kennissen) brengen nieuwe informatie, zoals banen."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رفتارهای پرهزینه برای پذیرفته شدن به تقویت از چند منبع نیاز دارند.",
+    "en": "Costly behaviours need reinforcement from several sources to be adopted.",
+    "nl": "Kostbaar gedrag heeft bevestiging uit meerdere bronnen nodig om te worden overgenomen."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ادعای «سرایت چاقی و شادی» در شبکه‌ها با نقدهای روش‌شناختی روبه‌رو شد.",
+    "en": "The claim that “obesity and happiness are contagious” in networks faced methodological critiques.",
+    "nl": "De bewering dat ‘overgewicht en geluk besmettelijk zijn’ in netwerken kreeg methodologische kritiek."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:complex-contagion",
+   "rel": "see-also",
+   "note": {
+    "fa": "سرایت پیچیده",
+    "en": "Complex contagion",
+    "nl": "Complexe besmetting"
+   }
+  },
+  {
+   "to": "psy:social-media",
+   "rel": "see-also",
+   "note": {
+    "fa": "رسانهٔ اجتماعی",
+    "en": "Social media",
+    "nl": "Sociale media"
+   }
+  },
+  {
+   "to": "psy:polarization",
+   "rel": "see-also",
+   "note": {
+    "fa": "قطبی‌شدن",
+    "en": "Polarisation",
+    "nl": "Polarisatie"
+   }
+  }
+ ],
+ "people": [
+  "core:mark-granovetter",
+  "core:damon-centola",
+  "core:nicholas-christakis"
+ ],
+ "sources": [],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

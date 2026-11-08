@@ -1,0 +1,74 @@
+{
+ "id": "psy:conflict-power",
+ "kind": "concept",
+ "title": {
+  "fa": "تعارض و قدرت در کار",
+  "en": "Conflict & power at work",
+  "nl": "Conflict en macht op het werk"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "هفت راهبرد تعارض در بستر قدرت و «هوش تعارض» (کلمن و فرگوسن).",
+  "en": "Seven conflict strategies in the context of power, and “conflict intelligence” (Coleman and Ferguson).",
+  "nl": "Zeven conflictstrategieën in de context van macht, en ‘conflictintelligentie’ (Coleman en Ferguson)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تله‌های قدرت-تعارض، مانند «سرت را پایین نگه دار».",
+    "en": "Power-conflict traps, such as “keep your head down”.",
+    "nl": "Valkuilen van macht en conflict, zoals ‘hou je hoofd laag’."
+   },
+   "sources": [
+    "src:7e0cbec663"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هفت راهبرد: خیرخواهی عمل‌گرا، حمایت پرورش‌یافته، سلطهٔ سازنده، دلجویی راهبردی، خودمختاری گزینشی، انطباق اثربخش، سرپیچی اصولی.",
+    "en": "Seven strategies: pragmatic benevolence, cultivated support, constructive dominance, strategic appeasement, selective autonomy, effective adaptation, principled rebellion.",
+    "nl": "Zeven strategieën: pragmatische welwillendheid, gekweekte steun, constructieve dominantie, strategisch sussen, selectieve autonomie, effectieve aanpassing, principieel verzet."
+   },
+   "sources": [
+    "src:7e0cbec663"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:destructive-leadership",
+   "rel": "see-also",
+   "note": {
+    "fa": "رهبری",
+    "en": "Leadership",
+    "nl": "Leiderschap"
+   }
+  },
+  {
+   "to": "psy:psych-safety",
+   "rel": "see-also",
+   "note": {
+    "fa": "امنیت روانی",
+    "en": "Psychological safety",
+    "nl": "Psychologische veiligheid"
+   }
+  }
+ ],
+ "people": [
+  "core:peter-coleman",
+  "core:robert-ferguson"
+ ],
+ "sources": [
+  "src:7e0cbec663"
+ ],
+ "booklets": [
+  "shelf2:conflict"
+ ],
+ "origin": "shelf2",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

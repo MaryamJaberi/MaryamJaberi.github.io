@@ -1,0 +1,79 @@
+{
+ "id": "psy:fiction-empathy",
+ "kind": "concept",
+ "title": {
+  "fa": "داستان و همدلی",
+  "en": "Fiction, empathy and theory of mind",
+  "nl": "Fictie, empathie en theory of mind"
+ },
+ "parent": "psy:p-aesthetics",
+ "field": "psy:p-aesthetics",
+ "summary": {
+  "fa": "آیا خواندن رمان ما را همدل‌تر می‌کند؟ شواهد ضعیف است؛ اما ایفای نقش یک شخصیت (بازیگری) اثر قوی‌تری بر نظریهٔ ذهن و همدلی دارد.",
+  "en": "Does reading novels make us more empathic? The evidence is weak; but playing a character (acting) has a stronger effect on theory of mind and empathy.",
+  "nl": "Maakt romans lezen ons empathischer? Het bewijs is zwak; maar een personage spelen (acteren) heeft een sterker effect op theory of mind en empathie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مار و همکاران (۲۰۰۶): داستان‌خوان‌ها در آزمون «خواندن ذهن از روی چشم‌ها» بهترند؛ اما همبستگی است.",
+    "en": "Mar and colleagues (2006): fiction readers do better on the “Reading the Mind in the Eyes” test; but it is correlation.",
+    "nl": "Mar en collega's (2006): fictielezers scoren beter op de test ‘Reading the Mind in the Eyes’; maar het is correlatie."
+   },
+   "sources": [
+    "src:7a3075e7a7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کید و کاستانو (۲۰۱۳، Science): یک جلسه خواندن داستان ادبی نظریهٔ ذهن را بهتر می‌کند. تکرارها (پانرو و همکاران ۲۰۱۶؛ سامور و همکاران ۲۰۱۸) این را نیافتند.",
+    "en": "Kidd and Castano (2013, Science): one session of reading literary fiction improves theory of mind. Replications (Panero and colleagues 2016; Samur and colleagues 2018) did not find this.",
+    "nl": "Kidd en Castano (2013, Science): één sessie literaire fictie lezen verbetert theory of mind. Replicaties (Panero en collega's 2016; Samur en collega's 2018) vonden dit niet."
+   },
+   "sources": [
+    "src:7a3075e7a7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گلدستین و وینر (۲۰۱۲): یک سال آموزش بازیگری همدلی و نظریهٔ ذهن نوجوانان را بیشتر کرد.",
+    "en": "Goldstein and Winner (2012): a year of acting training increased adolescents' empathy and theory of mind.",
+    "nl": "Goldstein en Winner (2012): een jaar acteerles verhoogde de empathie en theory of mind van tieners."
+   },
+   "sources": [
+    "src:7a3075e7a7"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:theory-of-mind",
+   "rel": "see-also",
+   "note": {
+    "fa": "سنجه",
+    "en": "Measure",
+    "nl": "Meetinstrument"
+   }
+  }
+ ],
+ "people": [
+  "core:raymond-mar",
+  "core:keith-oatley",
+  "core:thalia-goldstein"
+ ],
+ "sources": [
+  "src:7a3075e7a7",
+  "src:760774e7ff",
+  "src:a1c06feed2"
+ ],
+ "booklets": [
+  "art:fiction"
+ ],
+ "origin": "art",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

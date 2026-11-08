@@ -1,0 +1,100 @@
+{
+ "id": "psy:shell-shock",
+ "kind": "concept",
+ "title": {
+  "fa": "موج‌گرفتگی (شل‌شاک)",
+  "en": "Shell shock",
+  "nl": "Shellshock"
+ },
+ "parent": "psy:psychiatry-history",
+ "field": "psy:psychiatry-history",
+ "summary": {
+  "fa": "لرزش، فلج، لال‌شدگی و حالت‌های بی‌پاسخ سربازان جنگ جهانی اول؛ نخست آسیب مغزی ناشی از انفجار پنداشته شد و بعد با هیستری و نوراستنی جنگ هم‌خانواده دانسته شد.",
+  "en": "Tremors, paralysis, mutism and unresponsive states in First World War soldiers; first thought to be brain damage from explosions, later grouped with hysteria and war neurasthenia.",
+  "nl": "Trillen, verlamming, stomheid en reactieloze toestanden bij soldaten in de Eerste Wereldoorlog; eerst gezien als hersenschade door explosies, later in één familie geplaatst met hysterie en oorlogsneurasthenie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ضمیمهٔ ویدئویی: فیلم حدود ۹۰ ثانیه‌ای سربازان فرانسوی پس از نبرد وردن (۱۹۱۶)، آرشیو آرته.",
+    "en": "Video supplement: a film of about 90 seconds of French soldiers after the Battle of Verdun (1916), from the ARTE archive.",
+    "nl": "Videobijlage: een film van ongeveer 90 seconden over Franse soldaten na de slag bij Verdun (1916), uit het archief van ARTE."
+   },
+   "sources": [
+    "src:24276678d8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چارلز مایرز اصطلاح را در ۱۹۱۵ در لنست رایج کرد.",
+    "en": "Charles Myers popularised the term in The Lancet in 1915.",
+    "nl": "Charles Myers maakte de term in 1915 bekend in The Lancet."
+   },
+   "sources": [
+    "src:24276678d8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همین علائم در سربازانی هم دیده شد که نزدیک انفجار نبودند.",
+    "en": "The same symptoms were also seen in soldiers who had not been near an explosion.",
+    "nl": "Dezelfde klachten werden ook gezien bij soldaten die niet in de buurt van een explosie waren geweest."
+   },
+   "sources": [
+    "src:24276678d8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ریشهٔ تاریخی مفهوم PTSD (DSM-III، ۱۹۸۰).",
+    "en": "The historical root of the PTSD concept (DSM-III, 1980).",
+    "nl": "De historische wortel van het begrip PTSS (DSM-III, 1980)."
+   },
+   "sources": [
+    "src:24276678d8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هری فار، اعدام‌شده در ۱۹۱۶ به جرم «بزدلی»؛ عفو ۳۰۶ سرباز در ۲۰۰۶ پس از کارزار دخترش.",
+    "en": "Harry Farr, executed in 1916 for “cowardice”; 306 soldiers were pardoned in 2006 after his daughter's campaign.",
+    "nl": "Harry Farr, in 1916 geëxecuteerd wegens ‘lafheid’; 306 soldaten kregen in 2006 gratie na de campagne van zijn dochter."
+   },
+   "sources": [
+    "src:24276678d8"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anxiety",
+   "rel": "see-also",
+   "note": {
+    "fa": "ترس و اضطراب",
+    "en": "Fear and anxiety",
+    "nl": "Angst"
+   }
+  }
+ ],
+ "people": [
+  "core:charles-myers",
+  "core:w-h-r-rivers"
+ ],
+ "sources": [
+  "src:24276678d8",
+  "src:cba0fe5594"
+ ],
+ "booklets": [
+  "psychopath:mood",
+  "trauma:history"
+ ],
+ "origin": "psychopath",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

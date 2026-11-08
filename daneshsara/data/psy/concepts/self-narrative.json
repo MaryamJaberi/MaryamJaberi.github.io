@@ -1,0 +1,111 @@
+{
+ "id": "psy:self-narrative",
+ "kind": "concept",
+ "title": {
+  "fa": "روایت خود و حس کارآمدی",
+  "en": "Self-narrative & self-efficacy",
+  "nl": "Zelfverhaal en zelfeffectiviteit"
+ },
+ "parent": "psy:p-personality",
+ "field": "psy:p-personality",
+ "summary": {
+  "fa": "داستانی که از زندگی خود می‌گوییم و باور به توانایی خود؛ دو موتور انگیزهٔ پایدار.",
+  "en": "The story we tell about our life and the belief in our own ability; two engines of lasting motivation.",
+  "nl": "Het verhaal dat we over ons leven vertellen en het geloof in ons eigen kunnen; twee motoren van blijvende motivatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مک‌آدامز: «خود رستگار»؛ روایت‌های رستگاری (بد ← خوب) با زایندگی پیوند دارند.",
+    "en": "McAdams: “the redemptive self”; redemption narratives (bad → good) are linked to generativity.",
+    "nl": "McAdams: ‘het verlossende zelf’; verlossingsverhalen (slecht → goed) hangen samen met generativiteit."
+   },
+   "sources": [
+    "src:ff5e0b44b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پاسوپاتی: گذشتهٔ شخصی با شنونده هم‌ساخته می‌شود.",
+    "en": "Pasupathi: the personal past is co-constructed with the listener.",
+    "nl": "Pasupathi: het persoonlijke verleden wordt samen met de luisteraar opgebouwd."
+   },
+   "sources": [
+    "src:ff5e0b44b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تکوین انگیزه: از واکنشی موقعیتی (پاداش، راهنما) تا فرد تکامل‌یافته (حس کارآمدی، نقد).",
+    "en": "The development of motivation: from situational reaction (reward, guidance) to the mature individual (sense of efficacy, critique).",
+    "nl": "De ontwikkeling van motivatie: van situationele reactie (beloning, begeleiding) naar het volgroeide individu (gevoel van bekwaamheid, kritiek)."
+   },
+   "sources": [
+    "src:ff5e0b44b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ سخنرانی: «نقل‌قول‌ها از زندگی خود جایگاه مهمی دارند» و «نظریهٔ بزرگی در رفتار انسان وجود ندارد».",
+    "en": "A point from the talk: “Quotations from one's own life matter a great deal” and “There is no grand theory of human behaviour”.",
+    "nl": "Een punt uit de lezing: ‘Citaten uit je eigen leven zijn heel belangrijk’ en ‘Er bestaat geen grote theorie van menselijk gedrag’."
+   },
+   "sources": [
+    "src:ff5e0b44b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هویت روایی مک‌آدامز: لایهٔ سوم شخصیت پس از صفت‌ها و انطباق‌های منشی.",
+    "en": "McAdams's narrative identity: the third layer of personality after traits and characteristic adaptations.",
+    "nl": "De narratieve identiteit van McAdams: de derde laag van persoonlijkheid na eigenschappen en karakteristieke aanpassingen."
+   },
+   "sources": [
+    "src:ff5e0b44b9"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:learned-helplessness",
+   "rel": "see-also",
+   "note": {
+    "fa": "کنترل",
+    "en": "Control",
+    "nl": "Controle"
+   }
+  },
+  {
+   "to": "psy:mindsets",
+   "rel": "see-also",
+   "note": {
+    "fa": "ذهنیت",
+    "en": "Mindset",
+    "nl": "Mindset"
+   }
+  }
+ ],
+ "people": [
+  "core:dan-mcadams",
+  "core:monisha-pasupathi",
+  "core:albert-bandura"
+ ],
+ "sources": [
+  "src:ff5e0b44b9",
+  "src:15860d8c5d"
+ ],
+ "booklets": [
+  "motivation:context",
+  "motivation:tips",
+  "psychopath:self"
+ ],
+ "origin": "motivation",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

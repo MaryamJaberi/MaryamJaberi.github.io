@@ -1,0 +1,79 @@
+{
+ "id": "psy:overjustification",
+ "kind": "concept",
+ "title": {
+  "fa": "اثر توجیه بیش از حد",
+  "en": "Overjustification effect",
+  "nl": "Overjustificatie-effect"
+ },
+ "parent": "psy:sdt",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "پاداش بیرونی مورد انتظار برای کاری که از درون دوست داریم، می‌تواند انگیزهٔ درونی را کم کند.",
+  "en": "An expected external reward for something we enjoy for its own sake can reduce intrinsic motivation.",
+  "nl": "Een verwachte externe beloning voor iets wat we om zichzelf graag doen, kan de intrinsieke motivatie verminderen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "لپر، گرین و نیسبت (۱۹۷۳): ۵۱ کودک نقاش؛ گروه «جایزهٔ مورد انتظار» بعداً کمتر نقاشی کشید.",
+    "en": "Lepper, Greene and Nisbett (1973): 51 children who drew; the “expected reward” group later drew less.",
+    "nl": "Lepper, Greene en Nisbett (1973): 51 tekenende kinderen; de groep met ‘verwachte beloning’ tekende later minder."
+   },
+   "sources": [
+    "src:68b431cfcb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پاداش غیرمنتظره یا اطلاعاتی این اثر را ندارد.",
+    "en": "An unexpected or informational reward does not have this effect.",
+    "nl": "Een onverwachte of informatieve beloning heeft dit effect niet."
+   },
+   "sources": [
+    "src:68b431cfcb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لپر ۱۹۷۳: جایزهٔ مورد انتظار ۸٫۵۹٪، بی‌جایزه ۱۶٫۷۳٪، غیرمنتظره ۱۸٫۰۹٪ زمان آزاد نقاشی.",
+    "en": "Lepper 1973: expected reward 8.59%, no reward 16.73%, unexpected reward 18.09% of free time spent drawing.",
+    "nl": "Lepper 1973: verwachte beloning 8,59%, geen beloning 16,73%, onverwachte beloning 18,09% van de vrije tijd aan tekenen besteed."
+   },
+   "sources": [
+    "src:68b431cfcb"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:work-motivation",
+   "rel": "see-also",
+   "note": {
+    "fa": "سازمان",
+    "en": "Organisation",
+    "nl": "Organisatie"
+   }
+  }
+ ],
+ "people": [
+  "core:mark-lepper",
+  "core:david-greene",
+  "core:richard-nisbett"
+ ],
+ "sources": [
+  "src:68b431cfcb"
+ ],
+ "booklets": [
+  "theories:intrinsic",
+  "habits:part1",
+  "s13:apply"
+ ],
+ "origin": "theories",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

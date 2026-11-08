@@ -1,0 +1,143 @@
+{
+ "id": "psy:delusion",
+ "kind": "concept",
+ "title": {
+  "fa": "هذیان",
+  "en": "Delusion",
+  "nl": "Waan"
+ },
+ "parent": "psy:descriptive-psychopathology",
+ "field": "psy:descriptive-psychopathology",
+ "summary": {
+  "fa": "باور نادرست و استوار، ناهمخوان با زمینهٔ فرهنگی، با قطعیت غیرعادی. یاسپرس: هذیان اولیهٔ غیرقابل فهم در برابر ایدهٔ هذیان‌گونهٔ قابل فهم.",
+  "en": "A false, firmly held belief, out of keeping with the cultural context, held with unusual certainty. Jaspers: the un-understandable primary delusion versus the understandable delusion-like idea.",
+  "nl": "Een onjuiste, vast gehouden overtuiging die niet past bij de culturele context, met ongewone zekerheid. Jaspers: de onbegrijpelijke primaire waan tegenover het begrijpelijke waanachtige idee."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "معیارهای یاسپرس: قضاوت نادرست، قطعیت بی‌همتا، نفوذناپذیری در برابر تجربه و استدلال، محتوای ناممکن.",
+    "en": "Jaspers's criteria: false judgement, incomparable certainty, imperviousness to experience and argument, impossible content.",
+    "nl": "De criteria van Jaspers: onjuist oordeel, ongeëvenaarde zekerheid, ongevoeligheid voor ervaring en argument, onmogelijke inhoud."
+   },
+   "sources": [
+    "src:c0fbb82449"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقدهای نگاه باورمحور: اشپیتسر (دانستن نه باور)، گندلر (باورواره)، بریوس («گزاره‌های کلامی تهی»).",
+    "en": "Critiques of the belief-based view: Spitzer (knowing, not believing), Gendler (alief), Berrios (“empty speech acts”).",
+    "nl": "Kritiek op de opvatting op basis van overtuiging: Spitzer (weten, niet geloven), Gendler (alief), Berrios (‘lege taalhandelingen’)."
+   },
+   "sources": [
+    "src:c0fbb82449"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ابعاد کندلر: پذیرش، گسترش، غرابت، بی‌سازمانی، فشار، واکنش عاطفی، رفتار.",
+    "en": "Kendler's dimensions: conviction, extension, bizarreness, disorganisation, pressure, affective response, behaviour.",
+    "nl": "De dimensies van Kendler: overtuiging, uitbreiding, bizarheid, desorganisatie, druk, affectieve reactie, gedrag."
+   },
+   "sources": [
+    "src:c0fbb82449"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوستار پسیکوز (فن‌آس) در برابر گسست کیفی یاسپرس.",
+    "en": "The psychosis continuum (van Os) versus Jaspers's qualitative break.",
+    "nl": "Het psychosecontinuüm (van Os) tegenover de kwalitatieve breuk van Jaspers."
+   },
+   "sources": [
+    "src:c0fbb82449"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هذیان «غریب»: پنج معنا و توافق ارزیاب ۰٫۴۵ تا ۰٫۶ (سرمولاس، ساس، پارناس ۲۰۱۰)؛ DSM-5 تأکید ویژه بر آن را حذف کرد.",
+    "en": "“Bizarre” delusions: five meanings and rater agreement of 0.45 to 0.6 (Cermolacce, Sass, Parnas 2010); DSM-5 dropped the special emphasis on them.",
+    "nl": "‘Bizarre’ wanen: vijf betekenissen en een overeenstemming tussen beoordelaars van 0,45 tot 0,6 (Cermolacce, Sass, Parnas 2010); de DSM-5 liet de bijzondere nadruk erop vallen."
+   },
+   "sources": [
+    "src:c0fbb82449"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "علائم رتبهٔ اول اشنایدر: اختصاصی نسبتاً خوب اما حساسیت پایین (کاکرین ۲۰۱۵).",
+    "en": "Schneider's first-rank symptoms: fairly good specificity but low sensitivity (Cochrane 2015).",
+    "nl": "De eersterangssymptomen van Schneider: redelijk specifiek maar weinig sensitief (Cochrane 2015)."
+   },
+   "sources": [
+    "src:c0fbb82449"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فروید: گرادیوا (۱۹۰۷) و شربر (۱۹۱۱)؛ «در هر هذیانی ذره‌ای از واقعیت هست»؛ پارانویا به‌عنوان فرافکنی.",
+    "en": "Freud: Gradiva (1907) and Schreber (1911); “in every delusion there is a grain of truth”; paranoia as projection.",
+    "nl": "Freud: Gradiva (1907) en Schreber (1911); ‘in elke waan zit een kern van waarheid’; paranoia als projectie."
+   },
+   "sources": [
+    "src:c0fbb82449"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:conspiracy",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "باور و شاهد",
+    "en": "Belief and evidence",
+    "nl": "Overtuiging en bewijs"
+   }
+  },
+  {
+   "to": "psy:false-memory",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور نادرست",
+    "en": "False belief",
+    "nl": "Onjuiste overtuiging"
+   }
+  },
+  {
+   "to": "psy:psychosis-risk",
+   "rel": "see-also",
+   "note": {
+    "fa": "مرحلهٔ پیش‌درآمد",
+    "en": "Prodromal stage",
+    "nl": "Prodromale fase"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-jaspers",
+  "core:kurt-schneider",
+  "core:carl-wernicke",
+  "core:jim-van-os",
+  "core:kenneth-kendler"
+ ],
+ "sources": [
+  "src:c0fbb82449",
+  "src:7e263e1629"
+ ],
+ "booklets": [
+  "psychopath:delusion",
+  "shelf5:oyebode"
+ ],
+ "origin": "psychopath",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

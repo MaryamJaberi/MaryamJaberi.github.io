@@ -1,0 +1,86 @@
+{
+ "id": "psy:unified-protocol",
+ "kind": "concept",
+ "title": {
+  "fa": "پروتکل یکپارچه (UP)",
+  "en": "Unified Protocol",
+  "nl": "Unified Protocol"
+ },
+ "parent": "psy:t-cbt",
+ "field": "psy:t-cbt",
+ "summary": {
+  "fa": "درمان فراتشخیصی بارلو برای اختلالات هیجانی: به جای هر اختلال، بیزاری از هیجان را هدف می‌گیرد.",
+  "en": "Barlow's transdiagnostic treatment for emotional disorders: instead of each disorder, it targets aversion to emotion.",
+  "nl": "De transdiagnostische behandeling van Barlow voor emotionele stoornissen: richt zich niet op elke stoornis apart, maar op de afkeer van emotie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پنج ماژول اصلی: آگاهی ذهن‌آگاهانه از هیجان، انعطاف شناختی، مقابله با رفتار هیجانی، تحمل حس‌های بدنی، مواجهه با هیجان.",
+    "en": "Five core modules: mindful emotion awareness, cognitive flexibility, countering emotional behaviours, tolerating physical sensations, emotion exposure.",
+    "nl": "Vijf kernmodules: mindful bewustzijn van emotie, cognitieve flexibiliteit, emotioneel gedrag tegengaan, lichamelijke sensaties verdragen, blootstelling aan emotie."
+   },
+   "sources": [
+    "src:ba4d168afc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به‌علاوهٔ انگیزش، شناخت کارکرد هیجان، و پیشگیری از عود.",
+    "en": "Plus motivation, understanding the function of emotion, and relapse prevention.",
+    "nl": "Plus motivatie, de functie van emotie begrijpen, en terugvalpreventie."
+   },
+   "sources": [
+    "src:ba4d168afc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فصل ۶ «دست‌نامهٔ بالینی اختلالات روانی» (ویرایش ششم).",
+    "en": "Chapter 6 of the Clinical Handbook of Psychological Disorders (6th edition).",
+    "nl": "Hoofdstuk 6 van het Clinical Handbook of Psychological Disorders (zesde editie)."
+   },
+   "sources": [
+    "src:ba4d168afc"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:pbt",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌سو",
+    "en": "Aligned",
+    "nl": "In dezelfde richting"
+   }
+  },
+  {
+   "to": "psy:reappraisal",
+   "rel": "see-also",
+   "note": {
+    "fa": "انعطاف شناختی",
+    "en": "Cognitive flexibility",
+    "nl": "Cognitieve flexibiliteit"
+   }
+  }
+ ],
+ "people": [
+  "core:david-barlow",
+  "core:todd-farchione"
+ ],
+ "sources": [
+  "src:ba4d168afc",
+  "src:5c0cd200d9"
+ ],
+ "booklets": [
+  "clinical:neuroticism"
+ ],
+ "origin": "clinical",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

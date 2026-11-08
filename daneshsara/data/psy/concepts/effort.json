@@ -1,0 +1,155 @@
+{
+ "id": "psy:effort",
+ "kind": "concept",
+ "title": {
+  "fa": "تلاش، سخت‌کوشی و اراده",
+  "en": "Effort & willpower",
+  "nl": "Inspanning en wilskracht"
+ },
+ "parent": "psy:p-motivation",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "چرا بعضی بیشتر تلاش می‌کنند؟ تلاش حاصل لذت، پیش‌بینی، یادگیری پاداش، ارزیابی پاداش و «ارزیدن تلاش» است؛ و باورها و تجربه‌های کودکی آن را شکل می‌دهند.",
+  "en": "Why do some people try harder? Effort comes from pleasure, prediction, reward learning, reward evaluation and whether effort is “worth it”; beliefs and childhood experiences shape it.",
+  "nl": "Waarom doen sommigen meer moeite? Inspanning komt voort uit plezier, voorspelling, beloningsleren, beloningswaardering en of de moeite ‘het waard’ is; overtuigingen en jeugdervaringen vormen haar."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "طرح‌وارهٔ «تلاش» بهتر از طرح‌وارهٔ «استعداد» است.",
+    "en": "An “effort” schema is better than a “talent” schema.",
+    "nl": "Een ‘inspannings’-schema is beter dan een ‘talent’-schema."
+   },
+   "sources": [
+    "src:d4c82cda0f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "COGED (وستبروک ۲۰۱۳): سالمندان تلاش شناختی را بیشتر «تخفیف» می‌دهند؛ کاهش ارزش تلاش در افسردگی، اسکیزوفرنی و دوران ترک بیشتر است.",
+    "en": "COGED (Westbrook 2013): older adults “discount” cognitive effort more; devaluing effort is greater in depression, schizophrenia and withdrawal.",
+    "nl": "COGED (Westbrook 2013): ouderen ‘verdisconteren’ cognitieve inspanning sterker; het lager waarderen van inspanning is groter bij depressie, schizofrenie en tijdens ontwenning."
+   },
+   "sources": [
+    "src:d4c82cda0f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیتزاگالی: یادگیری پاداش کمتر، پیامد بدتر افسردگی را پیش‌بینی کرد.",
+    "en": "Pizzagalli: weaker reward learning predicted a worse outcome of depression.",
+    "nl": "Pizzagalli: zwakker beloningsleren voorspelde een slechtere uitkomst van depressie."
+   },
+   "sources": [
+    "src:d4c82cda0f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پنج ریشه: تسلط مغز بر بدن، کنترل شناختی برتر، سرسختی آموخته، برجستگی انگیزشی، طرح‌وارهٔ تلاشگری.",
+    "en": "Five roots: the brain's mastery over the body, superior cognitive control, learned industriousness, motivational salience, an effortful self-schema.",
+    "nl": "Vijf wortels: beheersing van het lichaam door het brein, betere cognitieve controle, aangeleerde ijver, motivationele opvallendheid, een inspanningsgericht zelfschema."
+   },
+   "sources": [
+    "src:d4c82cda0f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مداخلات پیش‌دبستانی (پری، ابسداریان) با وجود محو اثر IQ، پیامدهای ماندگار داشتند.",
+    "en": "Preschool interventions (Perry, Abecedarian) had lasting effects even though the IQ effect faded.",
+    "nl": "Voorschoolse interventies (Perry, Abecedarian) hadden blijvende effecten, ook al verdween het IQ-effect."
+   },
+   "sources": [
+    "src:d4c82cda0f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سهم وراثت در انگیزه برای یادگیری حدود ۴۳٪ و محیط مشترک نزدیک صفر (کواس ۲۰۱۵).",
+    "en": "The heritability of motivation to learn is about 43% and shared environment close to zero (Kovas 2015).",
+    "nl": "De erfelijkheid van leermotivatie is ongeveer 43% en de gedeelde omgeving bijna nul (Kovas 2015)."
+   },
+   "sources": [
+    "src:d4c82cda0f"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anhedonia",
+   "rel": "see-also",
+   "note": {
+    "fa": "انگیزش",
+    "en": "Motivation",
+    "nl": "Motivatie"
+   }
+  },
+  {
+   "to": "psy:ego-depletion",
+   "rel": "see-also",
+   "note": {
+    "fa": "اراده",
+    "en": "Willpower",
+    "nl": "Wilskracht"
+   }
+  },
+  {
+   "to": "psy:perfectionism",
+   "rel": "see-also",
+   "note": {
+    "fa": "تلاش افراطی",
+    "en": "Excessive effort",
+    "nl": "Overmatige inspanning"
+   }
+  },
+  {
+   "to": "psy:mindsets",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور",
+    "en": "Belief",
+    "nl": "Overtuiging"
+   }
+  },
+  {
+   "to": "psy:fatigue-control",
+   "rel": "see-also",
+   "note": {
+    "fa": "خستگی",
+    "en": "Fatigue",
+    "nl": "Vermoeidheid"
+   }
+  }
+ ],
+ "people": [
+  "core:anders-ericsson",
+  "core:angela-duckworth",
+  "core:todd-braver",
+  "core:diego-pizzagalli",
+  "core:julian-stanley",
+  "core:camilla-benbow"
+ ],
+ "sources": [
+  "src:d4c82cda0f",
+  "src:d44c50af48",
+  "src:6fe2922800",
+  "src:767ed78d8c"
+ ],
+ "booklets": [
+  "effort:intro",
+  "effort:clinic",
+  "effort:origin",
+  "shelf10:fatigue"
+ ],
+ "origin": "effort",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

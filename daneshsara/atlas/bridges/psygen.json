@@ -1,0 +1,59 @@
+{
+ "id": "psygen",
+ "field": "psygen",
+ "between": [
+  "psychiatry",
+  "genetics"
+ ],
+ "title": {
+  "fa": "ژنتیک روان‌پزشکی",
+  "en": "Psychiatric genetics",
+  "nl": "Psychiatrische genetica"
+ },
+ "question": {
+  "fa": "سهم ژن‌ها در اختلال‌های روانی چقدر است و کدام ژن‌ها؟",
+  "en": "How much do genes contribute to mental disorders, and which genes?"
+ },
+ "definition": {
+  "fa": "بررسی سهم ژنتیکی اختلال‌های روان‌پزشکی با روش‌های دوقلو، خانوادگی و ژنوم‌گستر."
+ },
+ "landmark": {
+  "fa": "کالمان، The Genetics of Schizophrenia (۱۹۳۸)؛ روش دوقلوی مکتب مونیخ (رودین ۱۹۱۶)",
+  "url": "https://en.wikipedia.org/wiki/Psychiatric_genetics"
+ },
+ "reference": {
+  "fa": "Plomin و همکاران، Behavioral Genetics (۲۰۱۷)؛ Smoller و همکاران، Psychiatric Genetics and Genomics (۲۰۲۰)"
+ },
+ "venue": {
+  "fa": "ISPG؛ Molecular Psychiatry؛ Psychiatric Genetics"
+ },
+ "people": [
+  "کنت کندلر",
+  "نائومی ری",
+  "پاتریک سالیوان",
+  "جردن اسمولر"
+ ],
+ "finding": {
+  "fa": "فروپاشی ژن‌های نامزد: ۱۸ ژن مشهور افسردگی (5-HTTLPR، COMT، DRD2…) در ۶۲۰ هزار نفر هیچ پشتوانه‌ای نداشت (Border و همکاران ۲۰۱۹). اسکیزوفرنی اکنون ۲۸۷ جایگاه شایع با اثر بسیار کوچک دارد (Trubetskoy ۲۰۲۲).",
+  "replication": "failed",
+  "url": "https://pgc.unc.edu/"
+ },
+ "persian": [
+  {
+   "title": "نقشهٔ راه ژنتیک، پلومین",
+   "publisher": "گودو",
+   "url": "https://taaghche.com/book/336745",
+   "verified": true
+  }
+ ],
+ "concepts": {
+  "psy": [
+   "psy:psych-genetics"
+  ]
+ },
+ "iran": {
+  "fa": "ایرانوم ۸۰۰ ژنوم سالم از ۸ قوم دارد؛ دادهٔ ژنتیک روان‌پزشکی ایرانی در مقیاس GWAS هنوز وجود ندارد."
+ },
+ "status": "established",
+ "review": "draft"
+}

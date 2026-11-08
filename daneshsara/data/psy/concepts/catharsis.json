@@ -1,0 +1,111 @@
+{
+ "id": "psy:catharsis",
+ "kind": "concept",
+ "title": {
+  "fa": "کاتارسیس و نظریهٔ هیدرولیکی هیجان",
+  "en": "Catharsis · Hydraulic model",
+  "nl": "Catharsis · hydraulisch model"
+ },
+ "parent": "psy:t-psychodynamic",
+ "field": "psy:t-psychodynamic",
+ "summary": {
+  "fa": "دیدگاهی که هیجان را مثل فشار مایع در ظرف می‌بیند: اگر بیان نشود انباشته می‌شود و با بیان «تخلیه» می‌شود. ریشه در «مطالعاتی دربارهٔ هیستری» برویر و فروید (۱۸۹۵).",
+  "en": "A view of emotion as fluid pressure in a container: if not expressed it builds up, and expressing it “discharges” it. Rooted in Breuer and Freud's Studies on Hysteria (1895).",
+  "nl": "Een opvatting van emotie als vloeistofdruk in een vat: wordt ze niet geuit, dan hoopt ze zich op, en uiten ‘ontlaadt’ haar. Wortelt in Studies over hysterie van Breuer en Freud (1895)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در محیط سازمانی معادلش ونتینگ است: «مشکلاتت را بگو تا سبک شوی».",
+    "en": "In organisations its equivalent is venting: “Say what's bothering you and you'll feel lighter.”",
+    "nl": "In organisaties is het equivalent stoom afblazen: ‘Zeg wat je dwarszit en je voelt je lichter.’"
+   },
+   "sources": [
+    "src:d2c9608082"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهش‌های بوشمن (۲۰۰۲) نشان دادند خالی‌کردن خشم (مثلاً کوبیدن به کیسه‌بوکس) خشم و پرخاشگری بعدی را بیشتر می‌کند.",
+    "en": "Bushman's research (2002) showed that letting off anger (for example hitting a punching bag) increases later anger and aggression.",
+    "nl": "Onderzoek van Bushman (2002) liet zien dat woede afreageren (bijvoorbeeld op een bokszak slaan) latere woede en agressie juist vergroot."
+   },
+   "sources": [
+    "src:d2c9608082"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدرس: «اگر خشمت را مهار کنی، بعدها هزار جور مشکل پیدا می‌کنی» از زمان فروید گفته می‌شد؛ اما داستان به این سادگی نیست.",
+    "en": "The lecturer: “If you hold back your anger, you'll have a thousand problems later” has been said since Freud; but the story is not that simple.",
+    "nl": "De docent: ‘Als je je woede inhoudt, krijg je later duizend problemen’ wordt al sinds Freud gezegd; maar zo eenvoudig is het niet."
+   },
+   "sources": [
+    "src:d2c9608082"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دریک و وینر: کسانی که پس از یادآوری خاطرهٔ غمگین چیزی دیگر نقاشی کردند (حواس‌پرتی) بیشتر از کسانی که همان غم را نقاشی کردند (تخلیه) بهبود خلق داشتند.",
+    "en": "Drake and Winner: people who, after recalling a sad memory, drew something else (distraction) improved in mood more than those who drew the sadness itself (venting).",
+    "nl": "Drake en Winner: wie na het ophalen van een droevige herinnering iets anders tekende (afleiding), knapte meer op dan wie het verdriet zelf tekende (ontladen)."
+   },
+   "sources": [
+    "src:d2c9608082"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارسطو کاتارسیس را برای تماشاگر تراژدی و فروید «والایش» را برای هنرمند مطرح کرد.",
+    "en": "Aristotle proposed catharsis for the audience of tragedy, and Freud “sublimation” for the artist.",
+    "nl": "Aristoteles sprak over catharsis voor het publiek van een tragedie, en Freud over ‘sublimatie’ voor de kunstenaar."
+   },
+   "sources": [
+    "src:d2c9608082"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:venting",
+   "rel": "applies-to",
+   "note": {
+    "fa": "کاربرد سازمانی",
+    "en": "Organisational application",
+    "nl": "Toepassing in organisaties"
+   }
+  },
+  {
+   "to": "psy:art-wellbeing",
+   "rel": "measured-by",
+   "note": {
+    "fa": "آزمون تجربی در هنر",
+    "en": "Testing art empirically",
+    "nl": "Kunst empirisch toetsen"
+   }
+  }
+ ],
+ "people": [
+  "core:josef-breuer",
+  "core:sigmund-freud",
+  "core:brad-bushman"
+ ],
+ "sources": [
+  "src:d2c9608082",
+  "src:c0d01b8a6e"
+ ],
+ "booklets": [
+  "venting",
+  "art:wellbeing",
+  "s11:what"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

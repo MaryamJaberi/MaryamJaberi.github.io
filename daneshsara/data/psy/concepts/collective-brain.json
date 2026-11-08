@@ -1,0 +1,88 @@
+{
+ "id": "psy:collective-brain",
+ "kind": "concept",
+ "title": {
+  "fa": "مغز جمعی",
+  "en": "Collective brain",
+  "nl": "Het collectieve brein"
+ },
+ "parent": "psy:cultural-evolution",
+ "field": "psy:cultural-evolution",
+ "summary": {
+  "fa": "نوآوری حاصل ارتباط شمار زیادی از ذهن‌هاست، نه نبوغ فردی. جمعیت بزرگ‌تر و پیوسته‌تر دانش بیشتری انباشته می‌کند؛ جمعیت کوچک و منزوی آن را از دست می‌دهد.",
+  "en": "Innovation comes from connecting many minds, not individual genius. Larger, better-connected populations accumulate more knowledge; small, isolated ones lose it.",
+  "nl": "Innovatie ontstaat uit het verbinden van veel geesten, niet uit individueel genie. Grotere, beter verbonden bevolkingen stapelen meer kennis op; kleine, geïsoleerde verliezen haar."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تاسمانیایی‌ها پس از جدا شدن از استرالیا (بالا آمدن آب حدود ۱۰ هزار سال پیش) بخشی از فناوری‌هایشان، مثل ابزار استخوانی و ماهیگیری، را از دست دادند.",
+    "en": "After being cut off from Australia (rising seas about 10,000 years ago), Tasmanians lost some of their technologies, such as bone tools and fishing.",
+    "nl": "Na de afsnijding van Australië (stijgende zeespiegel ongeveer 10.000 jaar geleden) verloren de Tasmaniërs een deel van hun technologieën, zoals benen werktuigen en vissen."
+   },
+   "sources": [
+    "src:0f9637db90"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برخی گروه‌ها (جزایر آندامان، سیریونو در آمازون) توانایی روشن کردن آتش را از دست داده بودند و آتش را از گروه‌های دیگر می‌گرفتند.",
+    "en": "Some groups (the Andaman Islands, the Sirionó in the Amazon) had lost the ability to make fire and got fire from other groups.",
+    "nl": "Sommige groepen (de Andamanen, de Sirionó in de Amazone) waren het vermogen om vuur te maken kwijt en kregen vuur van andere groepen."
+   },
+   "sources": [
+    "src:0f9637db90"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آزمایش‌های آزمایشگاهی: گروه‌های بزرگ‌تر و پرارتباط‌تر در زنجیرهٔ انتقال مهارت، دانش پیچیده‌تری نگه می‌دارند.",
+    "en": "Lab experiments: larger, more connected groups in a skill-transmission chain retain more complex knowledge.",
+    "nl": "Laboratoriumexperimenten: grotere, beter verbonden groepen in een keten van vaardigheidsoverdracht behouden complexere kennis."
+   },
+   "sources": [
+    "src:0f9637db90"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با سازمان: تیم‌هایی که ارتباط بیشتری دارند نوآورترند؛ همان پیام فوئنتس دربارهٔ خلاقیت مشارکتی.",
+    "en": "Link with organisations: better-connected teams are more innovative; Fuentes's message about collaborative creativity.",
+    "nl": "Link met organisaties: beter verbonden teams zijn innovatiever; de boodschap van Fuentes over coöperatieve creativiteit."
+   },
+   "sources": [
+    "src:0f9637db90"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:creative-spark",
+   "rel": "see-also",
+   "note": {
+    "fa": "خلاقیت جمعی",
+    "en": "Collective creativity",
+    "nl": "Collectieve creativiteit"
+   }
+  }
+ ],
+ "people": [
+  "core:joseph-henrich",
+  "core:michael-muthukrishna"
+ ],
+ "sources": [
+  "src:0f9637db90",
+  "src:b26b188c5f"
+ ],
+ "booklets": [
+  "friendly:culture"
+ ],
+ "origin": "book",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,784 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>ویکی مهارت‌های انسانی — فرسودگی و شغل معنادار</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.sessions a.sx{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sessions a.sx:hover{color:var(--link);border-color:var(--link)}
+.sessions a.sx.graph{border-color:var(--link);color:var(--link)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-work">
+  <div class="brand">ویکی روان‌شناسی <small>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-work" target="_blank" rel="noopener">کار و سازمان</a><span class="sep">›</span><a class="tp" href="index.html#t-work" target="_blank" rel="noopener">سلامت روان در کار</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><span class="on" aria-current="page">فرسودگی و شغل معنادار</span><a href="s11.html" target="_blank" rel="noopener">ونتینگ و جدا شدن از کار</a><a href="orgpsych.html" target="_blank" rel="noopener">روان‌شناسی سازمانی</a><a href="poswork.html" target="_blank" rel="noopener">مثبت‌گرایی در کار</a><a href="emolabor.html" target="_blank" rel="noopener">کار عاطفی</a></nav></div>
+</header>
+
+<div class="wrap">
+<nav class="toc" aria-label="فهرست">
+  <h2>فهرست این درس</h2>
+  <ol>
+    <li><a href="#why">چرا این دوره؟</a></li>
+    <li><a href="#shifts">چهار تحول دنیای کار</a></li>
+    <li><a href="#detach">جداشدن روانی و بازیابی</a></li>
+    <li><a href="#exit">استعفای بزرگ و ترک آرام</a></li>
+    <li><a href="#labor">کار هیجانی</a></li>
+    <li><a href="#venting">ونتینگ</a></li>
+    <li><a href="#ego">تخلیهٔ ایگو</a></li>
+    <li><a href="#rumination">ذهن شلوغ و گزارشگر زنده</a></li>
+    <li><a href="#strengths">نقاط قوت و پیشرفت کوچک</a></li>
+    <li><a href="#perfection">تلهٔ کمال‌طلبی و انگیزه</a></li>
+    <li><a href="#ei">هوش هیجانی</a></li>
+    <li><a href="#toxic">رفتارهای سمی</a></li>
+    <li><a href="#axes">چهار محور مداخله</a></li>
+    <li><a href="#groups">کارگروه‌ها</a></li>
+    <li><a href="#qa">پرسش و پاسخ</a></li>
+    <li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+    <li><a href="#refs">منابع</a></li>
+  </ol>
+</nav>
+
+<main>
+<article>
+<h1>فرسودگی، کناره‌گیری خاموش و شغل معنادار</h1>
+<p class="lede-sub">جزوهٔ مرتب‌شدهٔ سخنرانی، همراه با اسلایدها و ارجاع به کتاب‌های منبع. واژه‌های <a class="w" data-t="rumination">آبی‌رنگ</a> قابل کلیک‌اند و مدخل خود را در واژه‌نامه باز می‌کنند؛ شماره‌های <sup class="c"><a href="#r-neff2011">[۱]</a></sup> به فهرست منابع می‌روند.</p>
+
+<aside class="infobox" aria-label="مشخصات صفحه">
+  <div class="ib-h">فرسودگی و شغل معنادار</div>
+  <dl>
+    <dt>دوره</dt><dd>مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی</dd>
+    <dt>مدرس</dt><dd>دکتر آذرخش مکری</dd>
+    <dt>طول دوره</dt><dd>۳۰ ساعت، حدود ۱۵ جلسهٔ دوساعته</dd>
+    <dt>مخاطب</dt><dd>مدیران، کارشناسان منابع انسانی، مشاوران تحصیلی و سازمانی، استادان و دانشجویان</dd>
+    <dt>اسلایدها</dt><dd>۹۰ اسلاید</dd>
+    <dt>کارکرد درس</dt><dd>نقشهٔ کلی دوره: محورها، مفاهیم پایه و کتاب‌های اصلی</dd>
+  </dl>
+</aside>
+
+<p>این درس «آرماتور اولیه» دوره را می‌سازد: فهرستی از پدیده‌هایی که در سازمان‌ها، مدارس و دانشگاه‌ها تکرار می‌شوند و در درس‌های بعد هرکدام جداگانه و با جزئیات بررسی خواهند شد. جزئیات هر مبحث به جلسهٔ خودش موکول شده و هدف امروز جهت‌گیری (اورینته شدن) شرکت‌کنندگان است.</p>
+
+<h2 id="why">چرا این دوره؟</h2>
+<p>به گفتهٔ مدرس، در یکی دو سال گذشته روشن شده است که میان آنچه در <b>بالین</b> (کلینیک روان‌پزشکی و روان‌شناسی)، در <b>محیط‌های تحصیلی</b> و در <b>سازمان‌ها</b> دیده می‌شود همگرایی جدی وجود دارد. عوامل مشترک <a class="w" data-t="resilience">تاب‌آوری</a>، انگیزش و موفقیت، و عوامل مخرب، در هر سه محیط بسیار شبیه‌اند؛ تا جایی که پژوهشگران خودشان می‌گویند بسیاری از یافته‌های روان‌شناسی بالینی از مدرسه، دانشگاه یا سازمان به دست آمده و برعکس.</p>
+<p>بنابراین دوره معادلی است برای «دورهٔ جامع مهارت‌های فردی و انسانی» بالینی، اما با هدف‌گیری دانشگاه، دبیرستان و سازمان. دو تذکر مهم:</p>
+<ul class="tight">
+  <li><b>این دوره درمانی نیست.</b> یافته‌ها از بالین آمده‌اند، اما سخن در مقام درمانگر گفته نمی‌شود؛ هدف انتقال یافته‌ها به محیط کار و تحصیل است.</li>
+  <li><b>جداکردن یافتهٔ متقن از یافتهٔ «بازاری».</b> بسیاری از مداخلات سازمانی مُد می‌شوند، فراگیر می‌شوند و فروکش می‌کنند. گاهی پشت ادعای اثربخشی، منفعت فردی (فروش پکیج، سخنرانی، تیم آموزشی) است و پژوهش‌های مستقل بعدی اثری نمی‌یابند. مدرس متعهد شده نشان دهد کدام یافته‌ها محکم‌اند.</li>
+</ul>
+<p>از این پس دو واژهٔ «سازمان» و «محیط آموزشی» در این دوره به یک معنا به کار می‌روند.</p>
+
+<h2 id="shifts">چهار تحول دنیای کار</h2>
+<p>کتاب آغاز دوره <a class="w" data-t="emotionally-charged">Emotionally Charged</a> است<sup class="c"><a href="#r-smith2025">[۲]</a></sup>، نوشتهٔ دینا دنهام اسمیت و الیشیا گرندی (۲۰۲۵) با زیرعنوان «چگونه در دنیای جدید کار رهبری کنیم». کتاب حدود دویست صفحه و به زبان ساده است و هنوز ترجمهٔ فارسی ندارد. به گفتهٔ این کتاب، در ده پانزده سال اخیر چهار تحول پررنگ شده است:</p>
+
+<figure>
+<div class="grid4">
+  <div class="shift"><span class="tag">Where we work</span><h4>جایی که کار می‌کنیم</h4><p>ظهور <a class="w" data-t="remote-work">کار از راه دور</a> و برنامه‌های انعطاف‌پذیر. مدل کنترل کلاسیک (ساعت‌زدن هفت صبح تا چهار عصر) در حال فروریختن است.</p></div>
+  <div class="shift"><span class="tag">How we work</span><h4>آنگونه که کار می‌کنیم</h4><p>استفادهٔ روزافزون از فناوری دیجیتال و هوش مصنوعی؛ ارزش مهارت‌های کلاسیک در مقایسه با مهارت‌های <a class="w" data-t="feeling-economy">هیجانی</a> کم می‌شود.</p></div>
+  <div class="shift"><span class="tag">Why we work</span><h4>دلیل کار کردن</h4><p>افزایش انتظار کارکنان از <a class="w" data-t="work-life-balance">تعادل کار و زندگی</a> و سلامت روان، و نیاز روبه‌رشد به <a class="w" data-t="meaningful-work">کار معنادار</a>.</p></div>
+  <div class="shift"><span class="tag">Who we work with</span><h4>با چه کسی کار می‌کنیم</h4><p>افزایش تنوع و <a class="w" data-t="polarization">قطبی‌شدن</a> نیروی کار و نیروی تحصیل.</p></div>
+</div>
+<figcaption>شکل ۱. چهارگانهٔ کتاب Emotionally Charged (اسلاید ۴). مدرس تأکید کرد این ادعاها را با دید نقادانه دنبال کرده و در منابع علمی تأییدشان را یافته است.</figcaption>
+</figure>
+
+<h3>اقتصاد احساسی: پلکان هوش</h3>
+<p>کتاب دوم، <a class="w" data-t="feeling-economy">The Feeling Economy</a> از رولند راست و مینگ‌هویی هوانگ است<sup class="c"><a href="#r-rust">[۳]</a></sup> با زیرعنوان «هوش مصنوعی چگونه عصر همدلی را می‌سازد». این کتاب با عنوان «اقتصاد احساسی» به فارسی ترجمه شده است. استدلالش این است که هوشِ ارزشمند در کار، در طول تاریخ پله‌پله تغییر کرده است:</p>
+
+<figure>
+<div class="fig-scroll">
+<div class="stairs">
+  <div class="st s1"><b>مکانیکی</b><span class="en">Mechanical</span>یادگیری و انطباق در حداقل</div>
+  <div class="st s2"><b>تحلیلی</b><span class="en">Analytical</span>یادگیری نظام‌مند بر پایهٔ داده</div>
+  <div class="st s3"><b>شهودی</b><span class="en">Intuitive</span>یادگیری بر پایهٔ فهم و خبرگی</div>
+  <div class="st s4"><b>همدلانه</b><span class="en">Empathetic</span>یادگیری همدلانه بر پایهٔ تجربه</div>
+</div>
+<div class="axis"><span>Time ←</span><span>Intelligence ↑</span></div>
+</div>
+<figcaption>شکل ۲. پلکان چهارگانهٔ هوش در مدل راست و هوانگ (اسلاید ۵). آزمون‌های قدیمی استخدام هوش مکانیکی را می‌سنجیدند (کدام چرخ‌دنده بالا می‌چرخد؟)، بعد استدلال و استنتاج، بعد خبرگی شهودی («حس می‌کنم این کالا فروش نمی‌کند»). وقتی هوش مصنوعی سه پلهٔ اول را پوشش می‌دهد، پلهٔ چهارم گران‌بها می‌شود.</figcaption>
+</figure>
+<p>مدیری که روند فروش را از هوش مصنوعی می‌گیرد، دیگر برای تحلیل به هوش مکانیکی و تحلیلی تکیه ندارد. آنچه مهم می‌شود این است که بفهمد وقتی در جمع دعوا شد چه کند، یا وقتی گروهی انگیزه ندارند و «بریده‌اند» چه مداخله‌ای لازم است. همین مهارت‌ها (مناسبات بین‌فردی، حفظ انگیزه و شادکامی، روحیه‌دادن، جلوگیری از مناقشه‌های بدخیم) موضوع این دوره‌اند.</p>
+
+<h2 id="detach">جداشدن روانی و بازیابی</h2>
+<p>یکی از روندهای جهانی، اهمیت‌یافتن <a class="w" data-t="work-life-balance">تعادل کار و زندگی</a> است؛ و برخلاف انتظار، نه فقط در میان مدیران پردرآمد، که در کارکنان کم‌درآمدِ نیازمند به حقوق هم. بعد از کرونا این روند شدیدتر شد. دنیل پینک می‌گوید:</p>
+<blockquote>
+  <p class="q-en">Psychological detachment from work, in addition to physical detachment, is crucial.</p>
+  <p class="q-fa">علاوه بر جداشدن فیزیکی، جداشدن روانی از کار بسیار کلیدی است.</p>
+  <footer>دنیل اچ. پینک (اسلاید ۹)</footer>
+</blockquote>
+<p>سابقاً کارمندی که بیرون از ساعت کار هم کار می‌کرد کارمند خوبی بود. امروز مدیران دریافته‌اند اگر کارکنان نتوانند بعد از ساعت کار ذهن خود را «خاموش» کنند، به‌تدریج دچار مشکلات اعصاب و روان، افت عملکرد، بی‌انگیزگی و <a class="w" data-t="burnout">فرسودگی شغلی</a> می‌شوند. پس <a class="w" data-t="psych-detachment">جداشدن روانی</a> حتی به سود خود سازمان است. جالب آنکه برخی افراد کار را به خانه می‌برند و حالشان خوب است، و برخی دیگر به‌سرعت افول می‌کنند؛ مسیر اصلی فرسودگی همان ناتوانی در بستن ذهن روی کار است.</p>
+
+<figure>
+<div class="flow">
+  <div class="box">عوامل تنش‌زای شغلی<span class="en">Job Stressors</span></div><span class="arr">←(۱)</span>
+  <div class="box hl">جداشدن روانی<span class="en">Psychological Detachment</span></div><span class="arr">←(۲)</span>
+  <div class="box">فشار و آسیب به بهزیستی<span class="en">Strain &amp; Impaired Well-Being</span></div>
+</div>
+<figcaption>شکل ۳. مدل پایهٔ «عامل تنش‌زا ـ جداشدن» (اسلاید ۱۱). (۱) تنش‌های کاری جداشدن روانی را دشوار می‌کنند؛ (۲) جداشدنِ کمتر به فشار بیشتر می‌انجامد؛ (۳) تنش‌ها مستقیم هم بر بهزیستی اثر دارند؛ (۴) جداشدن روانی شدت این اثر مستقیم را تعدیل می‌کند.</figcaption>
+</figure>
+
+<p>پژوهشگر اصلی این حوزه <a class="w" data-t="sonnentag">سابینه زوننتاگ</a> از دانشگاه مانهایم است. او پدیده‌ای به نام <a class="w" data-t="recovery-paradox">پارادوکس بازیابی</a> را توصیف کرده است<sup class="c"><a href="#r-sonnentag">[۴]</a></sup>: کسی که بیشتر از همه به بازیابی نیاز دارد، کمتر از همه می‌تواند بازیابی کند.</p>
+
+<figure>
+<div class="cycle" role="img" aria-label="چرخهٔ پارادوکس بازیابی">
+  <span></span><div class="box">رویدادهای پرتنش کاری<span class="en">Stressful work events</span></div><span></span>
+  <div class="box">عملکرد بدتر<span class="en">Worse performance</span></div>
+  <div class="box core">نیاز به بازیابی<span class="en">Need for recovery</span></div>
+  <div class="box">برانگیختگی و تنش جسمی<span class="en">Physiological arousal &amp; tension</span></div>
+  <span></span><div class="box">فرسوده و بی‌درگیر<span class="en">Burned out &amp; disengaged</span></div><span></span>
+</div>
+<figcaption>شکل ۴. چرخهٔ معیوب پارادوکس بازیابی (اسلاید ۱۵)، در جهت ساعت‌گرد: محیط پرتنش برانگیختگی می‌آورد؛ فرد به خانه می‌رود اما نمی‌تواند استراحت کند؛ فردا خسته‌تر سر کار می‌آید و عملکردش بدتر می‌شود؛ و همین رویدادهای پرتنش تازه می‌سازد.</figcaption>
+</figure>
+
+<p>راه شکستن این چرخه، خاموش‌کردن <a class="w" data-t="rumination">نشخوار فکری</a> است؛ حوزه‌ای که روان‌درمانی‌های مدرن «کوه بزرگی» از تکنیک برایش دارند و پژوهشگرانی مثل زوننتاگ نسخه‌های سبک‌ترش را به محیط کار آورده‌اند. این موضوع در <a href="#rumination">بخش ۸</a> و درس‌های بعد پی گرفته می‌شود. <a class="w" data-t="fatigue-syndromes">سندرم‌های خستگی</a> و فرسودگی شغلی تا حد زیادی با همین چرخه مرتبط‌اند.</p>
+
+<div class="note src"><b class="k">از منابع دوره: Mindful Self-Compassion for Burnout</b>
+نف و گرمر در فصل اول کتاب، فرسودگی را با سه نشانه تعریف می‌کنند: <b>خستگی</b> (احساس تهی‌شدن، چیزی برای دادن نماندن)، <b>مسخ شخصیت</b> (احساس جدایی، بدبینی یا نگرش منفی به کار) و <b>کاهش احساس موفقیت</b> (احساس ناکارآمدی و بی‌کفایتی). اصطلاح burnout را هربرت فرویدنبرگر در ۱۹۷۴ ساخت<sup class="c"><a href="#r-msc">[۵]</a></sup>. در فصل ۹ همین کتاب (<span class="en">Resistance is Futile</span>) آمده است: «سرکوب افکار و احساسات ناخواسته فقط آن‌ها را وقتی ناگزیر به سطح می‌آیند شدیدتر می‌کند. آنچه در برابرش مقاومت می‌کنیم می‌ماند و قوی‌تر می‌شود.» این با <a class="w" data-t="beach-ball">اثر توپ ساحلی</a> در بخش ونتینگ هم‌خوان است.</div>
+
+<h2 id="exit">استعفای بزرگ و ترک آرام</h2>
+<h3>استعفای بزرگ</h3>
+<p>شاید تصور کنیم در بحران، تورم و بیکاری، افراد «چهارچنگولی» به کارشان می‌چسبند. اما پژوهش‌ها نشان می‌دهند در بحران‌هایی مانند کووید ۱۹ (و به طریق اولی در شرایط ما: جنگ دوازده‌روزه، تحریم‌ها، اوضاع بد اقتصادی) بسیاری از افراد می‌پرسند «این‌همه جان‌کندن برای چه؟» و با وجود بازار بد، کار را رها می‌کنند. این پدیده <a class="w" data-t="great-resignation">استعفای بزرگ</a> نام گرفته است.</p>
+<div class="note src"><b class="k">مقالهٔ مرجع (اسلاید ۲۱)</b>
+Xu, Dust و Liu (۲۰۲۳) در <span class="en">Journal of Applied Psychology</span> نقش سه عامل را در استعفای بزرگ پس از کووید بررسی کردند: <b>اضطراب مرگ</b>، <b>نیاز به کار معنادار</b> و <b>اهمیت وظیفه</b> (task significance)<sup class="c"><a href="#r-xu">[۶]</a></sup>.</div>
+<p>مدرس این را فقط به گردن «نسل زد» نمی‌اندازد: «عزیزشدن جان» و سلامت روان در همهٔ گروه‌ها فراگیر شده و آن سرسختیِ «به هر قیمتی کار را نگه دار» دیگر وجود ندارد. اسلاید ۲۰ هم روند بلندمدت دیگری را نشان می‌دهد: سهم مردان در سن کار که اصلاً در بازار کار نیستند و دنبال کار هم نمی‌گردند، از ۱۹۴۵ تا ۲۰۱۶ پیوسته رو به افزایش بوده است.</p>
+
+<h3>ترک آرام</h3>
+<p>بیش از استعفای علنی، پدیده‌ای فراگیر شده به نام <a class="w" data-t="quiet-quitting">ترک آرام</a> (Quiet Quitting): «حداقل کار ممکن را می‌کنم، تا جایی که اخراجم نکنند؛ اگر هم اخراجم کنند چه بهتر.» تلاش و اشتیاق در حداقل نگه داشته می‌شود.</p>
+<blockquote><p class="q-en">Doing the minimum requirements of one's job and putting in no more time, effort, or enthusiasm than absolutely necessary.</p><p class="q-fa">انجام حداقل الزامات شغل، بدون صرف ذره‌ای وقت، تلاش یا اشتیاق بیش از آنچه مطلقاً لازم است.</p><footer>تعریف ترک آرام (اسلاید ۱۸)</footer></blockquote>
+
+<h3>شغل، حرفه، رسالت</h3>
+<p>در کنار این دو، <a class="w" data-t="meaningful-work">نیاز به کار معنادار</a> پررنگ شده است. سابقاً گفته می‌شد هرچه پاداش بیشتر، کار بیشتر؛ امروز افراد می‌پرسند «این کار چه معنایی دارد؟ به رشد من کمک می‌کند؟ خیرش به چه کسی می‌رسد؟» نگاه مدرس توصیفی است، نه قضاوتی: این اتفاق در همه‌جا (چین، کره، کشورهای همسایه) در حال رخ‌دادن است و سازمانی که پاسخش را ندهد با ریزش نیرو یا ترک آرام روبه‌رو می‌شود.</p>
+<figure>
+<div class="tiers">
+  <div><b>شغل</b><span class="en">Job</span><br>برای پاداش کار می‌کنم؛ پول می‌دهند، کار می‌کنم.</div>
+  <div><b>حرفه</b><span class="en">Career</span><br>رشد فردی، احساس مفید و محترم بودن، اثرگذاری و یادگیری.</div>
+  <div><b>رسالت</b><span class="en">Calling</span><br>کارم باید باری از دوش بشریت یا گروهی از مردم بردارد.</div>
+</div>
+<figcaption>شکل ۵. سه نگرش به کار (اسلاید ۲۲). هرچه به نسل‌های جدیدتر می‌رویم، دو پلهٔ دوم و سوم پررنگ‌تر می‌شوند؛ چرایی‌اش هنوز محل نظریه‌پردازی است.</figcaption>
+</figure>
+
+<h3>نقش مدیر در ترک آرام</h3>
+<p>مؤسسهٔ زنگر فوکمن داده‌های ارزیابی‌های ۳۶۰ درجه از سال ۲۰۲۰ را تحلیل کرد: بیش از ۱۳٬۰۰۰ کارمند، دربارهٔ ۲٬۸۰۱ مدیر<sup class="c"><a href="#r-zenger">[۷]</a></sup>. مهم‌ترین عامل تعیین‌کنندهٔ ترک آرام، <b>مدیر</b> است: هرچه رتبهٔ مدیر در «توازن میان نتیجه‌گرفتن و توجه به نیازهای دیگران» بالاتر، ترک آرام کمتر. یعنی ترک آرام بیش از آنکه ویژگی «نسلی بی‌انگیزه» باشد، به ویژگی‌های مدیران وابسته است.</p>
+<figure>
+<div class="legend"><span><i class="k-qq"></i>ترک آرام</span><span><i class="k-ne"></i>خنثی</span><span><i class="k-ex"></i>آماده برای تلاش بیشتر</span></div>
+<div class="bars" id="zf"></div>
+<figcaption>شکل ۶. درصد کارکنان در هر دهک رتبهٔ مدیر (اسلاید ۲۳، داده‌های Zenger Folkman). در دهک بالای مدیران فقط ۳٪ ترک آرام و ۶۲٪ آمادگی برای تلاش بیشتر دیده شد؛ در دهک پایین ۱۴٪ ترک آرام و تنها ۲۰٪ آمادگی. جمع برخی سطرها به دلیل گردکردن ۱۰۰ نمی‌شود.</figcaption>
+</figure>
+<p>مدیرانی که ترک آرام می‌سازند چه می‌کنند؟ کتاب <a class="w" data-t="destructive-leadership">Research Handbook on Destructive Leadership</a> (ویراستهٔ شینس، نِوِش و بریوارت)<sup class="c"><a href="#r-schyns">[۸]</a></sup> در این باره فنی‌تر و پرآمارتر از کتاب‌های قبلی است و بخشی از دوره بر آن تکیه خواهد کرد.</p>
+
+<h3>انتظارات تازه و قطبی‌شدن</h3>
+<p>یک انتظار تازه هم شکل گرفته: از مدیر، رئیس و استاد انتظار می‌رود از مشکلات فردی و روانی زیردستان آگاه باشد. «گفتم مشکلی دارم و شانه بالا انداخت» امروز شکایتی جدی است. در محیط دانشگاهی، با منابع آموزشی و هوش مصنوعی، «خوب درس‌دادن» سهم کمرنگ‌تری یافته است. تحول چهارم، <a class="w" data-t="polarization">تنوع و قطبی‌شدن</a> است: در غرب با سیاست‌های DEI (ورود اقلیت‌های قومی، جنسیتی و نژادی) و در ایران بیشتر به شکل قطبی‌شدن سیاسی. مدیر باید بتواند این تنش‌ها را مدیریت کند؛ مثلاً شاهد مشاجرهٔ سیاسی دو همکار بودن، خود یک عامل تنش است که به خانه می‌آید و چرخهٔ بازیابی را مختل می‌کند.</p>
+
+<h2 id="labor">کار هیجانی</h2>
+<p>با قطبی‌شدن و حضور گروه‌های متنوع، دیگر نمی‌توان هر حرفی را زد؛ باید هیجان خود را مهار کرد. این همان <a class="w" data-t="emotional-labor">کار هیجانی</a> (Emotional Labor) است. «امروز چه کردی؟» دیگر فقط به تولید و تدریس و حسابداری برنمی‌گردد: «لبخندم را نگه داشتم، نگذاشتم جو درس متشنج شود، وقتی همه ناامید بودند وانمود کردم اوضاع خوب است.» و سیستم‌ها بابت همین پول می‌دهند.</p>
+<p>اصطلاح را <a class="w" data-t="hochschild">آرلی راسل هاکشیلد</a> حدود چهل سال پیش ساخت، در کتاب <span class="en">The Managed Heart</span> («قلب مدیریت‌شده»، ۱۹۸۳؛ ویراست تازه ۲۰۱۲)<sup class="c"><a href="#r-hochschild">[۹]</a></sup>. او پدیده را در مهمانداران هواپیمایی دلتا کشف کرد که باید در هر شرایطی لبخند بزنند. نمونهٔ امروزی‌اش اپراتورهای تلفنی است: «خدمت همراه با لبخند» (Service with a smile).</p>
+<p>از دیدگاه روان‌پزشکی این «خوراک» بالینی است: از زمان فروید گفته می‌شد مهار هیجان بعدها به هزار شکل برمی‌گردد. در محیط آموزشی هم صادق است؛ نسل قبل معلمانی را به یاد دارد که بی‌محابا دشنام می‌دادند، اما امروز از استاد انتظار می‌رود حتی به شاگردی که درس نمی‌خواند احترام بگذارد و دلگرم‌کننده حرف بزند. کار هیجانی دو سو دارد: مهار خشم خود، و دلداری‌دادن و انگیزه‌دادن به کسی که روحیه‌اش را باخته.</p>
+<p>کتاب دیگر این حوزه <span class="en">Emotional Labor in the 21st Century</span> (گرندی، دیفندورف و راپ) است<sup class="c"><a href="#r-grandey">[۱۰]</a></sup> که نشان می‌دهد سازمان‌ها برای آن چه می‌کنند و چرا کار هیجانی یکی از وظایف اصلی مدیر است.</p>
+<div class="note src"><b class="k">از منابع دوره: Awakening Compassion at Work</b>
+وورلاین و داتن کار هیجانی را در برابر «رویکرد بخشنده به هیجان» قرار می‌دهند: «پژوهش‌ها نشان می‌دهد کار هیجانی می‌تواند تهی‌کننده باشد و به فرسودگی بینجامد. این تأیید می‌کند که <b>شفقت در کار را نمی‌توان با دستور ایجاد کرد</b>؛ شفقت وقتی پدید می‌آید که افراد به‌طور اصیل رنجی را ببینند و برای پاسخ به آن برانگیخته شوند.»<sup class="c"><a href="#r-worline">[۱۱]</a></sup> این نکته با اصل <a class="w" data-t="self-selectors">خودبرگزیدگان</a> در پایان درس یکی است.</div>
+
+<h2 id="venting">ونتینگ (تخلیهٔ هیجانی و غرزدن)</h2>
+<p>همکاری کنارتان نشسته و یکسره از رئیس، تورم، استاد و دانشگاه بد می‌گوید. با او چه کنیم؟ این پدیدهٔ <a class="w" data-t="venting">ونتینگ</a> است که امروز انبوهی از مطالعات دربارهٔ آن وجود دارد. نظریهٔ کلاسیک، که به <a class="w" data-t="catharsis">نظریهٔ هیدرولیکی هیجان</a> و کاتارسیس فروید برمی‌گردد، می‌گفت «حرفت را بزن تا سبک شوی». پژوهش‌های بعدی نشان دادند ونتینگ می‌تواند حس انتقام را بالا ببرد، فرد را «شارژ» و خشمگین‌تر کند و او را کلافه به خانه بفرستد. سوگیری فعلی این است که لحظه‌ای سبک می‌شوی اما بعد به‌تدریج منفجر می‌شوی.</p>
+<p>اما داستان ساده نیست. روزن و همکاران در مقاله‌ای با عنوان «وقتی گوش‌سپردن به بدرفتاری بدل می‌شود» بررسی کرده‌اند که شنیدن غرزدن کارکنان چه اثری بر رهبر دارد<sup class="c"><a href="#r-rosen">[۱۲]</a></sup>. فرهنگ ونتینگ گاهی مدیران را «خرد» می‌کند و تاب‌آوری‌شان را پایین می‌آورد، و حتی به بدرفتاری رهبر با کارکنان می‌انجامد؛ اما برخی رئیس‌ها نه‌تنها نمی‌شکنند، که استقبال می‌کنند.</p>
+
+<figure>
+<div class="flow">
+  <div class="box">ونتور<span class="en">Venter</span>کسی که تخلیه می‌کند</div><span class="arr">→ غر، شکایت، آرزو، «دیگر نمی‌کشم» →</span>
+  <div class="box">ونتی<span class="en">Ventee</span>کسی که تخلیه بر سر او انجام می‌شود</div>
+</div>
+<figcaption>شکل ۷. دو نقش در ونتینگ. نتیجه می‌تواند <a class="w" data-t="dehumanization">انسانیت‌زدایی</a> («این‌ها از صبح تا شب فقط غر می‌زنند») باشد، یا گفت‌وگویی سازنده.</figcaption>
+</figure>
+
+<h3>چه چیزی ونتینگ را سازنده می‌کند؟</h3>
+<ul class="tight">
+  <li><b>برجسته‌کردن شباهت‌ها:</b> اگر شباهت‌های ونتور و ونتی (هر دو پدریم، هر دو در همین شهر با همین هوا زندگی می‌کنیم) اول برجسته شود، نقش مخرب سریع پاک می‌شود.</li>
+  <li><b>برجسته‌نکردن اختلاف مالی:</b> تأکید بر فاصلهٔ درآمد در جریان ونتینگ به انسانیت‌زدایی می‌انجامد.</li>
+  <li><b>کنجکاوی:</b> وقتی <a class="w" data-t="need-for-cognition">نیاز به دانایی</a> در مدیر پررنگ است («داستان چه بوده؟»)، ونتینگ دیگر حالش را بد نمی‌کند.</li>
+  <li><b>شنوندهٔ چالشگر:</b> کریستین بهفر و همکاران مفهوم <a class="w" data-t="challenger-listener">شنوندهٔ چالشگر</a> را معرفی کرده‌اند<sup class="c"><a href="#r-behfar">[۱۳]</a></sup>: شنونده‌ای که هم گوش می‌دهد و هم به چالش می‌کشد («نه، این‌طور نیست؛ اجازه بده روشنت کنم»). این سبک بهترین نتیجه را دارد و به رشد سازمان کمک می‌کند، هرچند غرزن‌ها معمولاً از آن فرار می‌کنند. الهام آن از کتاب بازاریابی <span class="en">The Challenger Customer</span> است<sup class="c"><a href="#r-adamson">[۱۴]</a></sup> که می‌گوید سازمان‌ها به‌اشتباه روی مشتریان همیشه‌راضی سرمایه‌گذاری می‌کنند و از مشتری غرغرو غافل‌اند.</li>
+</ul>
+<p>ونتینگ همیشه شکایت از بدی‌ها نیست؛ می‌تواند ابراز ناتوانی («دیگر نمی‌کشم») یا حتی بیان آرزوها باشد. نوع ونتینگ مجاز در فرهنگ‌های مختلف (خشم، بی‌عدالتی، ناراحتی) هم متفاوت است. ونتینگ از دو مسیر به پژوهش راه یافت که مهم‌ترینش روان‌درمانی است: درمانگری که ساعت‌ها گوش می‌دهد و می‌داند گاهی گوش‌دادن مکرر به <a class="w" data-t="rumination">نشخوار</a> و <a class="w" data-t="brooding">سر در جیب بردن</a> می‌انجامد.</p>
+
+<h3>دوگانه‌ای بس دشوار</h3>
+<p>اسلاید ۳۰ این دوگانه را نام می‌برد: <b>حل مسئله و مواجهه</b> در برابر <b>اعتباربخشی</b>. آیا باید جلوی غرزن ایستاد و گفت شکایتش به‌جا نیست، یا گذاشت حرفش را بزند؟ پاسخ‌ها در جلسهٔ مربوط به ونتینگ می‌آید.</p>
+
+<h3>اثر توپ ساحلی</h3>
+<p>سرکوب‌کردن هم راه‌حل نیست. <a class="w" data-t="beach-ball">اثر توپ ساحلی</a> می‌گوید: توپ بادی را به زور زیر آب نگه دارید؛ یا زیر آب نمی‌رود، یا با شتاب بیرون می‌پرد. هیجاناتی که در سیستم خوب مدیریت نشوند (خشم، غم، گناه) به همین شکل بیرون می‌زنند و همه‌چیز را به هم می‌ریزند. سیاست «اینجا کسی حق غرزدن ندارد» به ترک آرام، فرسودگی و ریزش نیرو می‌انجامد.</p>
+<div class="note"><b class="k">پیشنهاد مدرس</b>«کارگروه ونتینگ» یا «کارگروه غرزنی»: ضبط ونتینگ‌های واقعی، مقایسهٔ انواع آن (مبتنی بر مشترکات، مبتنی بر بی‌عدالتی و...)، سنجش تغییر هیجانی شنونده، و ساختن «فرهنگ سالم ونتینگ» در سازمان، با کمک تحلیل‌های هوش مصنوعی. به جای کارگروه همیشگی «اعتیاد» در دانشگاه‌ها، کارگروهی برای «شکایت منطقی».</div>
+
+<h2 id="ego">تخلیهٔ ایگو و آونگ کاوش ـ بهره‌برداری</h2>
+<p><a class="w" data-t="baumeister">روی بامایستر</a> پدیدهٔ <a class="w" data-t="ego-depletion">تخلیهٔ ایگو</a> را مطرح کرد: اگر تکانه یا میل خود را مهار کنید، با گذشت زمان «سیستم مقاومت» تحلیل می‌رود. در آزمایش کلاسیک، کسانی که مجبور بودند به کلوچه‌های شکلاتی دست نزنند، بعد در حل معما بدتر عمل کردند و پس از آزادشدن مقدار بیشتری کلوچه خوردند. پیام ساده: هرجا خودمان را مهار کنیم، دچار افت خویشتن‌داری می‌شویم و «ضدحملهٔ» شدیدی در راه است.</p>
+<p>این پرسش را به محیط کار آورد: آیا باید خشم را مهار کرد؟ کار هیجانیِ «خدمت همراه با لبخند» طبق نظریهٔ بامایستر سمی‌ترین اتفاق برای مغز است و همان «حال ندارم کار کنم، صبح بلندشدن برایم جان‌کندن است» را می‌سازد. دانش‌آموزی که با اجبار درس می‌خواند هم به همین دلیل خسته می‌شود.</p>
+<p>اما خود این باور ممکن است فرساینده باشد: شاید وقتی به افراد گفتیم خودکنترلی خسته‌کننده است، بیشتر خسته شوند. مایکل اینزلیکت و همکاران نظریهٔ رقیب را مطرح کردند<sup class="c"><a href="#r-inzlicht">[۱۵]</a></sup>: چیزی به نام «خستگی روانی» نداریم؛ آنچه داریم الاکلنگی است میان دو نیاز.</p>
+
+<figure>
+<div class="pend">
+  <div class="side"><b>کاوش</b><span class="en">Exploration · Leisure · Want-to</span>گشت‌زدن، کنجکاوی، فراغت؛ آنچه دلم می‌خواهد</div>
+  <div class="mid" aria-hidden="true">⇄</div>
+  <div class="side"><b>بهره‌برداری</b><span class="en">Exploitation · Labor · Have-to</span>کارکردن، بهره‌گیری از منبع؛ آنچه باید</div>
+</div>
+<figcaption>شکل ۸. ترازوی اینزلیکت، اشمایکل و مکری (اسلاید ۴۰). مغز مثل آونگ میان این دو حالت نوسان می‌کند؛ حیوانی که مشغول خوردن است ناگهان می‌رود و گشتی می‌زند. بچه‌ای که ده دقیقه درس می‌خواند و سری به اینستاگرام می‌زند، شاید دارد آونگش را درست تنظیم می‌کند.</figcaption>
+</figure>
+<p>راهکارهای اولیه برای اینکه کاوش مخرب نشود:</p>
+<ul class="tight">
+  <li>کاوش <b>فعال</b> بهتر از منفعل است؛ چرخاندن بی‌هدف صفحهٔ «اکسپلور» کاوش خوبی نیست.</li>
+  <li>کاوشی که به <b>افزایش مهارت</b> بینجامد (مثلاً بازی‌ای که در آن پیشرفت می‌کنید) بهتر است.</li>
+  <li>آونگ را <b>قانونمند</b> کنید؛ مثلاً ۴۵ دقیقه این‌سو، ۱۵ دقیقه آن‌سو.</li>
+</ul>
+<div class="note"><b class="k">یادداشت ویراستار</b>نظریهٔ تخلیهٔ ایگو در سال‌های اخیر در آزمایش‌های تکرار بزرگ چندآزمایشگاهی (از جمله Hagger و همکاران، ۲۰۱۶) تأیید نشد. این یکی از دلایلی است که نظریه‌های رقیبی مثل مدل اینزلیکت مطرح شده‌اند و نمونه‌ای از همان دقتی است که مدرس دربارهٔ یافته‌های «بازاری» خواست.</div>
+
+<h2 id="rumination">ذهن شلوغ، نشخوار فکری و گزارشگر زنده</h2>
+<p>ژانر وسیعی از روان‌درمانی دربارهٔ این پرسش است: «چطور مغزم را خاموش کنم؟» با کسی بحث کرده‌ام و بیست روز است حرفش در سرم تکرار می‌شود. به این <a class="w" data-t="rumination">نشخوار فکری</a> (Rumination)، اشتغال ذهنی، افکار وسواسی یا تکراری می‌گویند. اسلاید ۴۵ آن را با ریشه‌های درهم‌تنیده نشان می‌دهد: نشخوارها شاخه‌شاخه می‌شوند و ریشه می‌دوانند.</p>
+<div class="note src"><b class="k">از منابع دوره: Self-Compassion (کریستین نف)</b>
+«وقتی ذهن به فکری منفی می‌چسبد، مثل صفحهٔ گرامافون خراب آن را بارها تکرار می‌کند. به این فرایند نشخوار می‌گویند (همان واژه‌ای که برای نشخوار گاو به کار می‌رود)؛ سبکی از فکرکردن که تکراری، مزاحم و کنترل‌ناپذیر است و می‌تواند به افسردگی و اضطراب بینجامد. نشخوار دربارهٔ رویدادهای منفی گذشته به افسردگی، و نشخوار دربارهٔ رویدادهای منفی احتمالی آینده به اضطراب منجر می‌شود.»<sup class="c"><a href="#r-neff2011">[۱]</a></sup></div>
+
+<h3>گزارشگر زنده</h3>
+<p><a class="w" data-t="farrington">کامیل فارینگتون</a> از دانشگاه شیکاگو دربارهٔ دانش‌آموزانی پژوهش کرده که نمره‌هایشان ناگهان از ۱۹ و ۲۰ سقوط می‌کند؛ همان که عوام می‌گویند «پشتش باد خورده». سازوکار: یک رویداد ناراحت‌کننده (امتحان بد، تمسخر معلم) به نشخوار بدل می‌شود و کم‌کم فرد صاحب یک <a class="w" data-t="running-commentary">گزارشگر زنده</a> (Running commentary) می‌شود؛ صدایی که مثل گزارشگر فوتبال با سرعت تفسیر و قضاوت می‌کند: «این تیم امروز خیلی بد بازی کرده، در این چهل‌وپنج دقیقه حتی یک حرکت خوب نداشته...». همین در کارمندی که به خانه می‌آید و پرستاری که «دیگر نمی‌کشد» هم دیده می‌شود.</p>
+<blockquote><p class="q-en">What distinguishes students with academic perseverance, Farrington says, is their resilient attitude toward failure.</p><p class="q-fa">آنچه دانش‌آموزان دارای پشتکار تحصیلی را متمایز می‌کند، به گفتهٔ فارینگتون، نگرش انعطاف‌پذیر آن‌ها دربارهٔ شکست است.</p><footer>اسلاید ۴۷</footer></blockquote>
+<p>گزارشگر زنده مانع <b>پشتکار</b> می‌شود. پرسش این است: چرا برخی ده بار شکست می‌خورند و باز ناامید نمی‌شوند؟ مقاله‌ای در Neuron با عنوان «To Apply Yourself Is Human, to Reapply Divine» (برگرفته از مصراع الکساندر پوپ: «خطا انسانی است، بخشش الهی») به همین پرسش می‌پردازد<sup class="c"><a href="#r-whalen">[۱۶]</a></sup>. پاسخ دو جزء دارد:</p>
+<ol class="tight">
+  <li><b>گزارشگر زنده را می‌بندند</b>، یا کاری می‌کنند که حرفش در آن‌ها جذب نشود.</li>
+  <li><b>احساس کنترل</b> دارند: بخشی از اوضاع دست من است. اسلاید ۴۸ عقب‌نشینی (setback) را به دو جعبهٔ «قابل کنترل» و «غیرقابل کنترل» تقسیم می‌کند.</li>
+</ol>
+<p>مدرس از استعارهٔ <b>کفش جیر</b> استفاده کرد: اگر روی جیر واکس یا روغن ضدآب بزنید، قطره‌های آب دیگر جذب نمی‌شوند. گزارشگر زنده هم می‌تواند وراجی خودش را بکند، اما در ما نفوذ نکند.</p>
+
+<div class="note src"><b class="k">از منابع دوره: When Life Gives You Lemons, Make Lemonade</b>
+میاگاوا و همکاران (۲۰۱۹) در دو مطالعه نشان دادند افراد دارای <a class="w" data-t="self-compassion">شفقت به خود</a> بالاتر، حتی پس از کنترل عزت‌نفس، بیشتر باور دارند که «شکست فرصت یادگیری است». نوشتن پیامی مشفقانه به خود پس از یادآوری ضعف‌ها همین باور سازگارانه را تقویت کرد<sup class="c"><a href="#r-miyagawa">[۱۷]</a></sup>. این همان «نگرش انعطاف‌پذیر دربارهٔ شکست» در یافته‌های فارینگتون است. در کتاب <span class="en">Mindful Self-Compassion for Burnout</span> هم آمده است که جنبهٔ ذهن‌آگاهی شفقت به خود «چرخهٔ نشخوار را می‌شکند» و از افکار منفی تکراری فاصله می‌دهد<sup class="c"><a href="#r-msc">[۵]</a></sup>.</div>
+
+<h3>ساکت‌کردن گزارشگر</h3>
+<p>یک خانواده از تکنیک‌ها گزارشگر زنده را با رؤیاپردازی خنثی می‌کنند: <a class="w" data-t="savoring">مزه‌مزه‌کردن</a> (Savoring) در برابر نشخوار، تفکر آرزومندانه، خیال‌پردازی (اسلایدهای ۵۲ تا ۵۴، «معمای رؤیاپردازی»). کتاب مرجع بالینی این بخش <span class="en">Rumination-Focused Cognitive-Behavioral Therapy for Depression</span> از ادوارد واتکینز است<sup class="c"><a href="#r-watkins">[۱۸]</a></sup>.</p>
+<p>مدرس سازوکار دیگری را هم مطرح کرد که در حال مطالعه‌اش است و شاید در فرهنگ ما پررنگ باشد: دشنام‌های رکیک ممکن است گزارشگر زنده را موقتاً ساکت کنند. او تأکید کرد این را برای محیط کار پیشنهاد نمی‌کند و فقط موضوعی برای پژوهش است.</p>
+
+<h2 id="strengths">نقاط قوت، هیجان مثبت و قدرت پیروزی‌های کوچک</h2>
+<p>رویکرد دیگر: اگر رنج می‌برید، به جای تمرکز بر ضعف‌ها، روی <a class="w" data-t="strengths-based">نقاط قوت</a> و آرمان‌ها تمرکز کنید و آن‌ها را «بزرگ‌تر» کنید. بنیان‌گذار این رویکرد <a class="w" data-t="clifton">دونالد کلیفتون</a> (۱۹۲۴–۲۰۰۳) بود و چهرهٔ سخنران امروزی‌اش مارکوس باکینگهام است.</p>
+<blockquote><p class="q-en">You will excel only by maximizing your strengths, never by fixing your weaknesses.</p><p class="q-fa">شما تنها از طریق حداکثررساندن توانمندی‌هایتان، و نه از طریق اصلاح ضعف‌هایتان، به درجات عالی خواهید رسید.</p><footer>مارکوس باکینگهام (اسلاید ۶۱)</footer></blockquote>
+<figure>
+<div class="pair">
+  <div><h5>تمرکز بر <span style="color:var(--good)">توانایی‌ها</span> و نقاط قوت</h5><ul class="tight"><li>خویشتن ایده‌آل</li><li>صفات پذیرفته‌شدهٔ خود</li><li>جست‌وجو و یافتن ویژگی‌های مثبت</li></ul></div>
+  <div><h5>تمرکز بر شناسایی <span style="color:var(--bad)">ضعف‌ها</span></h5><ul class="tight"><li>خویشتن واقعی</li><li>عادات و صفاتی که باید اصلاح شوند</li><li>یافتن ویژگی‌های منفی و برنامه‌ریزی برای اصلاح</li></ul></div>
+</div>
+<figcaption>شکل ۹. دو جهت‌گیری در رشد فردی و سازمانی (اسلاید ۵۷).</figcaption>
+</figure>
+<p>جوزف لودو، عصب‌پژوه، می‌گوید رشد مغز مثل جوانه‌زدن روی شاخهٔ موجود است، نه ساختن شاخهٔ تازه. پس اگر در ریاضی ضعیف و در تاریخ قوی هستید، شاید بهتر باشد تاریخ را «هایپرتروفی» کنید تا ضعف‌ها را جبران کند. در سازمان هم: بگردید ببینید چه چیزی قوی است و آن را پررنگ کنید.</p>
+<p>کتاب اصلی این بخش، که از منابع ردهٔ اول دوره است و همهٔ محتوایش پوشش داده می‌شود، <span class="en">The Wiley Blackwell Handbook of the Psychology of Positivity and Strengths-Based Approaches at Work</span> است<sup class="c"><a href="#r-oades">[۱۹]</a></sup>. دو چیز را هدف می‌گیرد: <b>نقاط قوت</b> و <b>مثبت‌گرایی</b> (هیجان مثبت). معادل بالینی آن <a class="w" data-t="pat">درمان عاطفهٔ مثبت (PAT)</a> است.</p>
+
+<h3>اصل پیشرفت</h3>
+<p><a class="w" data-t="progress-principle">اصل پیشرفت</a> از ترزا امابیل و استیون کریمر<sup class="c"><a href="#r-amabile">[۲۰]</a></sup> (و مقالهٔ مشهور HBR با عنوان «قدرت پیروزی‌های کوچک») می‌گوید پیروزی‌های کوچک و تکرارشان شما را از تله بیرون می‌کشد. امابیل از کارکنان پرسید روز خوب چه روزی است: روزی که در آن یک قدم جلو رفته‌اند. حتی در بازار خراب، یادگرفتن یک تکنیک تازه (مدرس مثال دستیاری را زد که یک پروسیجر جدید یاد گرفته) موتور فرد را روشن می‌کند. پیروزی‌های کوچک «مثل مواد مخدر» اعتیادآورند و فرد را جلو می‌اندازند.</p>
+<figure>
+<div class="pair" id="amabile"></div>
+<figcaption>شکل ۱۰. «در یک روز خوب/بد چه اتفاقی می‌افتد؟» (اسلایدهای ۶۵ و ۶۶). درصد روزهایی که هر رویداد گزارش شده است. پیشرفت در ۷۶٪ روزهای خوب و عقب‌نشینی در ۶۷٪ روزهای بد رخ داده؛ روزهای بد تقریباً تصویر آینه‌ای روزهای خوب‌اند. کاتالیزورها: رویدادهایی که مستقیماً به کار کمک می‌کنند؛ تغذیه‌کننده‌ها: رویدادهای بین‌فردی حمایتگر؛ بازدارنده‌ها و سموم: عکس آن‌ها.</figcaption>
+</figure>
+<p>کدام پیشرفت؟ <a class="w" data-t="mcclelland">دیوید مک‌کللند</a> (۱۹۱۷–۱۹۹۸) سه حوزهٔ اصلی انگیزش بشر را <b>تعلق</b> (Affiliation)، <b>قدرت</b> (Power) و <b>دستاورد</b> (Achievement) می‌داند. کافی است در یکی از این سه پیشرفت کنید: اگر در قدرت عقب‌نشینی دارید، شاید با چهار نفر دوست شده‌اید یا قراری گذاشته‌اید. همین «خُرده‌پیشرفت‌ها» ضررهای جاهای دیگر را جبران می‌کنند.</p>
+
+<h2 id="perfection">تلهٔ کمال‌طلبی و انگیزهٔ درونی</h2>
+<p>اما وابستگی بیش از حد به پیشرفت تهدیدی دارد: <a class="w" data-t="perfectionism">تلهٔ پیشروندهٔ کمال‌طلبی</a>. فرد «خورهٔ» آن می‌شود: ازدواج کامل، مدیریت بی‌نقص، قدرت و تعلق بیشتر و بیشتر. جایی باید فهمید که بس است و ترمز گذاشت؛ وگرنه سیستم فرد را می‌بلعد و به فرسودگی شغلی می‌رسد. حتی سازمان‌های بالنده، دانشگاه‌های درجه‌یک و دانش‌آموزان ممتاز باید یاد بگیرند «بس است».</p>
+<div class="note"><b class="k">دو تعریف (اسلایدهای ۷۰ و ۷۱)</b>
+<p style="margin:0 0 6px">کسانی که استانداردهایشان ورای دسترس یا عقل و خرد است؛ به‌صورت اجبارگونه و بی‌وقفه به سوی اهداف غیرممکن تلاش می‌کنند و <b>تمام ارزش خود را در موفقیت و دستاورد می‌بینند</b>.</p>
+<p style="margin:0">میل به باور اینکه برای هر مشکلی راه‌حلی عالی و بی‌نقص وجود دارد، انجام کار بی‌خطا نه‌تنها ممکن بلکه لازم است، و حتی اشتباهات کوچک پیامدهای جدی دارند.</p></div>
+<p>نشانهٔ تله: هویت فرد درگیر دستاورد است. سالم‌بودن یعنی دنبال قدرت و تعلق و موفقیت بروم، اما هویتم به آن گره نخورده باشد و جایی حس کنم «از این بهتر نمی‌شود و اشکالی ندارد». منابع: <span class="en">Cognitive-Behavioral Treatment of Perfectionism</span> (ایگن، وید، شفران و آنتونی)<sup class="c"><a href="#r-egan">[۲۱]</a></sup> و <span class="en">Never Enough</span> از جنیفر برهنی والاس<sup class="c"><a href="#r-wallace">[۲۲]</a></sup> با ترجمهٔ فارسی «وقتی هیچ چیز کافی نیست».</p>
+<div class="note src"><b class="k">از منابع دوره: نف و گرمر، و مرور سالانهٔ نف</b>
+فصل ۱۲ کتاب <span class="en">Mindful Self-Compassion for Burnout</span> با عنوان «وقتی خوب، خوب کافی نیست: پرهیز از گودال کمال‌طلبی» می‌گوید: «انسان‌ها (بنا به تعریف) ناکامل‌اند، پس کمال‌طلبی (بنا به تعریف) دست‌نیافتنی است. کمال‌طلبی می‌گوید هرگز به اندازهٔ کافی کار نمی‌کنی و هرگز به اندازهٔ کافی خوب نیستی.» کتاب به فراتحلیل هیل و کوران (۲۰۱۶) دربارهٔ رابطهٔ کمال‌طلبی و فرسودگی ارجاع می‌دهد<sup class="c"><a href="#r-msc">[۵]</a></sup>. نف در مرور سالانهٔ ۲۰۲۳ اضافه می‌کند که شفقت به خود با کمال‌طلبی ناسازگار (نگرانی افراطی دربارهٔ اشتباه) رابطهٔ منفی دارد، اما با <b>استانداردهای عملکرد بالا</b> رابطهٔ مثبت: افراد مشفق به خود هدف بالا می‌گذارند و سخت تلاش می‌کنند، اما می‌پذیرند که همیشه به هدف نمی‌رسند<sup class="c"><a href="#r-neff2023">[۲۳]</a></sup>. این همان «ترمزی» است که مدرس از آن سخن گفت.</div>
+
+<h3>طیف انگیزش</h3>
+<p>اینکه فشار از درون می‌آید یا از بیرون، مقولهٔ <a class="w" data-t="intrinsic-motivation">انگیزش درونی و بیرونی</a> است که در درس‌های بعد شرح داده می‌شود. اسلاید ۷۳ آن را به‌صورت طیف نشان می‌دهد (مثال‌ها از یادگیری زبان انگلیسی است):</p>
+<figure>
+<div class="fig-scroll">
+<div class="cont">
+  <div><b>بی‌انگیزگی</b><span class="en">Amotivation</span>«انگلیسی ارزش تلاش ندارد.»</div>
+  <div><b>تنظیم بیرونی</b><span class="en">External regulation</span>«اگر نخوانم معلم عصبانی می‌شود.»</div>
+  <div><b>تنظیم درون‌فکنده</b><span class="en">Introjected regulation</span>«می‌خواهم دیگران تحسینم کنند.»</div>
+  <div><b>تنظیم همانندسازی‌شده</b><span class="en">Identified regulation</span>«در آینده و رشد شخصی‌ام به کارم می‌آید.»</div>
+  <div><b>انگیزهٔ درونی</b><span class="en">Intrinsic regulation</span>«انگلیسی سرگرم‌کننده است.»</div>
+</div>
+<div class="cont-scale"><span>بدون تنظیم</span><span>تنظیم دیگرپیرو (انگیزهٔ بیرونی)</span><span>تنظیم خودپیرو</span></div>
+</div>
+<figcaption>شکل ۱۱. طیف انگیزش در نظریهٔ خودتعیین‌گری (اسلاید ۷۳). مداخلات محور دوم دوره بر پایهٔ همین نظریه‌اند.</figcaption>
+</figure>
+<p>کتاب <span class="en">Laziness Does Not Exist</span> از دوون پرایس<sup class="c"><a href="#r-price">[۲۴]</a></sup>، با ترجمهٔ فارسی «چیزی به نام تنبلی وجود ندارد»، می‌گوید آنچه «تنبلی» دانش‌آموز یا کارمند می‌نامیم، برایندی است از همین عوامل: تلهٔ کمال‌طلبی، انگیزه‌ای که از کنترل خارج شده، نشخوارهای عذاب‌آور و واکنش گزارشگر زنده به ناملایمات.</p>
+
+<h2 id="ei">هوش هیجانی</h2>
+<p><a class="w" data-t="emotional-intelligence">هوش هیجانی</a> در واقع همهٔ آن چیزی است که تا اینجا گفته شد: انگیزش، خویشتن‌داری، مهارت‌های اجتماعی. منبع این بخش <span class="en">The Psychologically Healthy Workplace</span> (گرویچ و بالارد) است<sup class="c"><a href="#r-grawitch">[۲۵]</a></sup>. مدل‌های اولیه را پیتر سالووی و جان مایر مطرح کردند.</p>
+<figure>
+<div class="matrix">
+  <span></span><span class="h">دانستن · Know</span><span class="h">انجام‌دادن · Do</span>
+  <span class="side">خود</span>
+  <div class="cell"><b>خودآگاهی</b><span class="en">Self-awareness</span>خودآگاهی هیجانی</div>
+  <div class="cell"><b>خودمدیریتی</b><span class="en">Self-management</span>تعادل هیجانی، انعطاف، دستاورد، مثبت‌نگری</div>
+  <span class="side">دیگران</span>
+  <div class="cell"><b>آگاهی اجتماعی</b><span class="en">Social awareness</span>همدلی، آگاهی سازمانی</div>
+  <div class="cell"><b>تعامل اجتماعی</b><span class="en">Social interaction</span>نفوذ، مربی‌گری، مدیریت تعارض، الهام‌بخشی، کار تیمی</div>
+</div>
+<figcaption>شکل ۱۲. چهارخانهٔ هوش هیجانی (اسلاید ۷۸). اسلاید ۷۷ پنج مؤلفه را نام می‌برد: انگیزش، همدلی، خودآگاهی، خودتنظیمی و مهارت‌های اجتماعی.</figcaption>
+</figure>
+<p>آیا هوش هیجانی را می‌توان افزایش داد؟ کارآزمایی تصادفی گیلار-کوربی و همکاران (۲۰۱۹) برنامهٔ آموزش هوش هیجانی را روی مدیران ارشد آزمود<sup class="c"><a href="#r-gilar">[۲۶]</a></sup>. مدرس هشدار داد بسیاری از مطالب رایج دربارهٔ هوش هیجانی علمی نیست (مثلاً آن را به «خواندن زبان بدن» یا «دستکاری دیگران» تقلیل می‌دهند)، در حالی که عناصرش بیشتر همین مهار <a class="w" data-t="emotional-labor">کار هیجانی</a> و مهار افکار مزاحم است.</p>
+<h3>نابرابری و افت هوش هیجانی</h3>
+<p>پژوهشی که مدرس به آن استناد کرد (اسلاید ۸۰، با آزمون STEU) نشان می‌دهد در جوامعی که <b>ادراک نابرابری</b> بالاست، هرچه جایگاه اقتصادی-اجتماعی ذهنی فرد بالاتر باشد، هوش هیجانی‌اش افت شدیدتری دارد؛ در جوامع با ادراک نابرابری پایین، این افت بسیار ملایم است. مدیران ارشد در چنین سیستم‌هایی فکر می‌کنند هیجانات دیگران را خوب می‌فهمند، اما اغلب «پرت می‌زنند».</p>
+<p>چرا؟ چون در این سیستم‌ها همه وانمود می‌کنند، کسی واقعیت را به بالادستی نمی‌گوید و افراد احساس <a class="w" data-t="psych-safety">امنیت روانی</a> نمی‌کنند. فرد بالادست کم‌کم مهارت تشخیص را از دست می‌دهد و تصمیم‌های شدیداً اشتباه می‌گیرد. مدرس تأکید کرد این سرزنش شخصیت مدیران نیست؛ ویژگی دینامیک چنین جوامعی است.</p>
+
+<h2 id="toxic">رفتارهای سمی و سرزنش</h2>
+<p>محور دیگر، <a class="w" data-t="victim-role">نقش قربانی</a>، سرزنش و شخصیت‌های سمی در سازمان است: افراد چگونه تقصیرها را گردن هم می‌اندازند و چگونه می‌توان جلوی شخصیت‌های سمی را گرفت. منبع: <span class="en">Scapegoating: How Organizations Assign Blame</span> از مائوریتسیو کاتینو<sup class="c"><a href="#r-catino">[۲۷]</a></sup>.</p>
+<p>اسلاید ۸۴ یکی از این الگوها را معرفی می‌کند: <a class="w" data-t="vulnerable-narcissism">خودشیفتگی آسیب‌پذیر</a> = نوروتیسیزم + خصومت + احساس استحقاق.</p>
+<div class="note src"><b class="k">از منابع دوره: Compassion Focused Therapy (ویراستهٔ پل گیلبرت)</b>
+گیلبرت به مرور کریزان و جوهر (۲۰۱۵) اشاره می‌کند که نشان می‌دهد «عمدتاً بُعد آسیب‌پذیر خودشیفتگی است که با گرایش به شرم-خشم، خصومت، نشخوار خشمگینانه و انتقام‌جویانه و بی‌اعتمادی بین‌فردی پیوند دارد؛ ترکیبی بسیار سمی.»<sup class="c"><a href="#r-gilbert">[۲۸]</a></sup> این پیوند میان خودشیفتگی آسیب‌پذیر و <a class="w" data-t="rumination">نشخوار</a> نشان می‌دهد محورهای دوره جدا از هم نیستند.</div>
+
+<h2 id="axes">چهار محور مداخله</h2>
+<p>مداخلاتی که در بالین وجود دارند و دوره نسخهٔ سازمانی‌شان را می‌سازد، در چهار دستهٔ عمده جا می‌گیرند. هوش هیجانی در دل همین چهار محور تدریس می‌شود: تکاملش، اجزایش، و اینکه کدام اجزا واقعاً قابل کسب‌اند.</p>
+<figure>
+<div class="axes">
+  <div class="ax"><div class="num">۱</div><div class="body"><b>مداخلات برای اصلاح اشتغال ذهنی و افکار تکراری</b><span class="en">Preoccupation and rumination-based interventions</span>«چه کنم که ذهنم آرام شود؟» <a class="w" data-t="rumination">نشخوار</a>، <a class="w" data-t="running-commentary">گزارشگر زنده</a>، <a class="w" data-t="psych-detachment">جداشدن روانی</a>.</div></div>
+  <div class="ax"><div class="num">۲</div><div class="body"><b>مداخلات برای انگیزش درونی</b><span class="en">Self-Determination based interventions</span>درونی‌کردن انگیزه و جلوگیری از تله‌های بدخیم پیشرفت؛ سه‌گانهٔ مک‌کللند می‌تواند بیمارگونه شود.</div></div>
+  <div class="ax"><div class="num">۳</div><div class="body"><b>مداخلات متکی بر هیجان مثبت</b><span class="en">PAT: Positive Affect Treatments</span>هیجان مثبت و نقاط قوت؛ <a class="w" data-t="progress-principle">اصل پیشرفت</a>.</div></div>
+  <div class="ax"><div class="num">۴</div><div class="body"><b>مداخله برای رفتارهای مخرب و سمی</b><span class="en">Conflict resolution</span>حل تعارض، سرزنش، <a class="w" data-t="vulnerable-narcissism">خودشیفتگی آسیب‌پذیر</a>.</div></div>
+</div>
+<figcaption>شکل ۱۳. چهار محور مداخلهٔ دوره (اسلاید ۸۶).</figcaption>
+</figure>
+
+<div class="note src"><b class="k">پیوند با منابع: مدل سه‌سیستمی گیلبرت</b>
+در کتاب <span class="en">Compassion Focused Therapy</span>، گیلبرت هیجان را در سه سیستم کارکردی می‌بیند<sup class="c"><a href="#r-gilbert">[۲۸]</a></sup>. این مدل نقشهٔ خوبی برای کنار هم گذاشتن محورهای این درس است:
+<div class="circles" style="margin-top:12px">
+  <div class="c-threat"><b>سیستم تهدید</b>محافظت و ایمنی‌جویی؛ خشم، اضطراب، انزجار<br><small>← نشخوار، کار هیجانی</small></div>
+  <div class="c-drive"><b>سیستم سائق</b>خواستن، دنبال‌کردن، دستاورد<br><small>← اصل پیشرفت، تلهٔ کمال‌طلبی</small></div>
+  <div class="c-soothe"><b>سیستم آرام‌بخشی</b>رضایت، امنیت، پیوند؛ مهربانی<br><small>← شفقت به خود، بازیابی</small></div>
+</div></div>
+
+<h2 id="groups">کارگروه‌ها و اصل خودبرگزیدگان</h2>
+<p>دوره فقط آموزشی نیست. کارگروه‌هایی ده تا بیست‌نفره، با دبیر و جانشین، در حال شکل‌گیری‌اند که مقالات به‌روز را دنبال می‌کنند، تجربه به اشتراک می‌گذارند و مداخلات را عملاً پیاده می‌کنند (خارج از سی ساعت دوره و بیشتر به‌صورت آنلاین). حضور در آن‌ها داوطلبانه است و هر نفر بهتر است فقط در یک کارگروه باشد:</p>
+<div class="chips"><span>اشتغال ذهنی و افکار تکراری مزاحم</span><span>هیجان مثبت و مقولهٔ بی‌لذتی / توانمندی‌های مثبت</span><span>اشتغال با کمال‌طلبی</span><span>کار هیجانی و تخلیهٔ هیجانی</span><span>ادراک هیجانی و مناقشه</span><span>انگیزش درونی و پدیدهٔ جذب‌شدگی</span></div>
+<p>اصل محوری: <a class="w" data-t="self-selectors">خودبرگزیدگان</a> (Self-selectors). همهٔ این مداخلات باید روی گروه داوطلبان انجام شود و نمی‌توان آن‌ها را با بخشنامه اجباری کرد. هسته‌ای از داوطلبان شکل می‌گیرد، آموزش می‌بیند، نشان و هویت می‌گیرد، و فرهنگ را از طریق «سرایت و نشت» در محیط خود تغییر می‌دهد؛ مثل بلوری که رشد می‌کند. بسیاری از سیستم‌های دولتی دقیقاً به همین دلیل شکست می‌خورند: بخشنامه می‌آید، فیلم اجباری می‌گذارند، و کاملاً شکست می‌خورد.</p>
+<blockquote><p class="q-fa" style="font-family:var(--f-display);font-size:1.5rem;line-height:1.6">طرز پیاده‌کردنش از محتوایش مهم‌تر است.</p><footer>دکتر مکری، دربارهٔ مهارت‌های نرم</footer></blockquote>
+<p>مهارت‌های نرم مثل تراشکاری یا زبان انگلیسی نیستند که پنجاه نفر را به کلاس بفرستید و آخرش امتحان بگیرید. تیم کار هیجانی باید کار را به خاطر دل خودش بکند، هویت و تعلق سازمانی داشته باشد و در اطرافیانش شناخته شود.</p>
+
+<h2 id="qa">پرسش و پاسخ</h2>
+<div class="qa"><p class="q">شخصیت مدیر و کارمند (مثلاً درون‌گرایی و برون‌گرایی) در ونتینگ چقدر مهم است؟</p>
+<p class="a">کمتر از آنچه فکر می‌کنیم ذاتی و شخصیتی است و بیشتر به دینامیک گروه برمی‌گردد. صفتی که در مدیران خوب کمک می‌کند <a class="w" data-t="need-for-cognition">نیاز به دانایی</a> است. همدلی هم دولبه است: همدلی زیاد شما را در قالب طرف می‌برد و آلام او را می‌گیرید؛ فاصلهٔ زیاد به بی‌همدلی (آنتی‌پاتی) می‌انجامد. پاسخ پژوهش‌ها <a class="w" data-t="compassionate-detachment">انفصال همدلانه</a> است: همدلی از دور. مثال بیمارستان: دستیاران می‌گویند استاد رنج ما را نمی‌بیند، و استاد نگران است که اگر این در را باز کند فرهنگ شکایت فراگیر شود.</p></div>
+<div class="qa"><p class="q">آیا ونتینگ از بالا به پایین ممکن است؟ مدیر باید نقابش را نگه دارد؟</p>
+<p class="a">کاملاً ممکن است. یافته‌ها نشان می‌دهند مدیر کل هم گاهی می‌تواند بگوید «اوضاع به‌هم‌ریخته است و زیر فشاریم»؛ دیده‌شدن ضعف در چهرهٔ ارشدها گاهی با «انسانی‌کردن» آن‌ها بازدهی را بالا می‌برد.</p></div>
+<div class="qa"><p class="q">میل به کار معنادار بیشتر شده، اما جوانان به سمت شغل‌هایی مثل بلاگری می‌روند که به نظر خالی از معناست. این تقابل را چطور توضیح می‌دهید؟</p>
+<p class="a">باید محتاط بود؛ آنچه به نظر ما بی‌معناست لزوماً بی‌معنا نیست. یکی از مهم‌ترین ویژگی‌های کار معنادار <a class="w" data-t="autonomy">خودمختاری</a> است: «دست خودم است، کسی مرا وادار نکرده.» تقاضا برای خودمختاری در سازمان و دانشگاه رو به افزایش است، و جالب آنکه وقتی اوضاع بدتر می‌شود بیشتر هم می‌شود: «حالا که خوب پول نمی‌دهند، دست‌کم در تصمیم‌ها نظر داشته باشم.»</p></div>
+<div class="qa"><p class="q">کارمندی هستم که می‌خواهم دربارهٔ شرایط کار و دستمزد با مدیرم صحبت کنم. این دوره برای کارفرماست یا کارمند؟</p>
+<p class="a">برای هر دو. این آموزش‌ها «سواد پایهٔ قرن بیست‌ویکم» برای محیط تحصیل و کارند و همه، از کارمند تا مدیر، باید آن‌ها را بدانند. لازم نیست مخاطب روان‌شناس باشد.</p></div>
+
+<div class="nd-work"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: سلامت روان در کار</h3><ul><li class="nd-work"><a href="orgpsych.html" target="_blank" rel="noopener"><i></i>روان‌شناسی سازمانی</a><small>روان‌شناسی کار و سازمان</small></li><li class="nd-work"><a href="poswork.html" target="_blank" rel="noopener"><i></i>مثبت‌گرایی در کار</a><small>مثبت‌گرایی و توانمندی در کار</small></li><li class="nd-work"><a href="s11.html" target="_blank" rel="noopener"><i></i>ونتینگ و جدا شدن از کار</a><small>ونتینگ: درد دل کردن کی کمک می‌کند؟ شنوندهٔ چالشگر، جدا شدن از کار و غرقگی</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-self"><a href="riseabove.html" target="_blank" rel="noopener"><i></i>فراتر برو</a><small>خود و رشد › معنا، امید و بهزیستی · مشترک: تاب‌آوری، نشخوار فکری</small></li><li class="nd-self"><a href="shelf10.html" target="_blank" rel="noopener"><i></i>قفسهٔ نیازها و خستگی</a><small>خود و رشد › انگیزه، عادت و اراده · مشترک: اصل پیشرفت، سندرم‌های خستگی</small></li><li class="nd-self"><a href="s3.html" target="_blank" rel="noopener"><i></i>منتقد درون و رهبری مشفقانه</a><small>خود و رشد › شفقت، منتقد درون و کمال‌گرایی · مشترک: شفقت به خود، خستگی همدلی</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>جامعه‌شناسی کار: کار عاطفی، ناامنی شغلی و جایگاه، فراتر از روان‌شناسی فرد. <a href="graph.html#soc-work" target="_blank" rel="noopener">جامعه‌شناسی کار ↗</a></div><div style="--xc:#7d4a86"><b>فلسفه</b>عدالت سازمانی و احترام؛ کار معنادار به‌عنوان مسئلهٔ اخلاقی. <a href="graph.html#justice-theory" target="_blank" rel="noopener">فلسفهٔ سیاسی: عدالت و برابری ↗</a></div><div style="--xc:#2f7a55"><b>اقتصاد رفتاری</b>اقتصاد احساس: ارزش کار عاطفی و مراقبتی در بازار کار. <a href="graph.html#feeling-economy" target="_blank" rel="noopener">اقتصاد احساسی ↗</a></div><div style="--xc:#4c5f7a"><b>علوم اعصاب</b>استرس مزمن در کار از راه محور HPA بدن را فرسوده می‌کند. <a href="graph.html#n-stress" target="_blank" rel="noopener">استرس و محور HPA ↗</a></div></div><div class="worlds"><a href="land.html" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>همهٔ اصطلاحات این درس. هر مدخل نشانی ثابت دارد و در درس‌های بعد هم به همین مدخل‌ها پیوند داده می‌شود.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="مثلاً نشخوار یا burnout" autocomplete="off">
+<div class="glossary" id="gl"></div>
+
+<h2 id="refs">منابع</h2>
+<p class="refs-h">منابع اصلی دوره (فایل‌های ضمیمه)</p>
+<ol class="refs">
+  <li id="r-neff2011"><span class="ltr">Neff, K. (2011). <i>Self-Compassion: The Proven Power of Being Kind to Yourself</i>. William Morrow.</span> فصل ۲ (سه جزء شفقت به خود)، فصل ۶ (نشخوار)، فصل ۷ (عزت‌نفس). <span class="badge">ضمیمه</span></li>
+  <li id="r-smith2025"><span class="ltr">Smith, D. D., &amp; Grandey, A. A. (2025). <i>Emotionally Charged: How to Lead in the New World of Work</i>.</span> کتاب آغاز دوره (اسلاید ۳).</li>
+  <li id="r-rust"><span class="ltr">Rust, R. T., &amp; Huang, M.-H. (2021). <i>The Feeling Economy: How Artificial Intelligence Is Creating the Era of Empathy</i>. Palgrave Macmillan.</span> ترجمهٔ فارسی: «اقتصاد احساسی».</li>
+  <li id="r-sonnentag"><span class="ltr">Sonnentag, S. (2018). The recovery paradox: Portraying the complex interplay between job stressors, lack of recovery, and poor well-being. <i>Research in Organizational Behavior, 38</i>, 169–185.</span></li>
+  <li id="r-msc"><span class="ltr">Neff, K., &amp; Germer, C. <i>Mindful Self-Compassion for Burnout</i>. Guilford Press.</span> فصل ۱ (تعریف فرسودگی)، فصل ۹ (مقاومت و سرکوب)، فصل ۱۱ (خستگی همدلی)، فصل ۱۲ (کمال‌طلبی). <span class="badge">ضمیمه</span></li>
+  <li id="r-xu"><span class="ltr">Xu, M., Dust, S. B., &amp; Liu, S. (2023). COVID-19 and the great resignation: The role of death anxiety, need for meaningful work, and task significance. <i>Journal of Applied Psychology, 108</i>(11), 1790–1811.</span></li>
+  <li id="r-zenger"><span class="ltr">Zenger Folkman. Managers' impact on quiet quitting. <i>Harvard Business Review</i> (data from 360 assessments, 2,801 managers).</span></li>
+  <li id="r-schyns"><span class="ltr">Schyns, B., Neves, P., &amp; Breevaart, K. (Eds.). <i>Research Handbook on Destructive Leadership: Forms, Context, and Boundary Conditions</i>. Edward Elgar.</span></li>
+  <li id="r-hochschild"><span class="ltr">Hochschild, A. R. (1983/2012). <i>The Managed Heart: Commercialization of Human Feeling</i>. University of California Press.</span></li>
+  <li id="r-grandey"><span class="ltr">Grandey, A. A., Diefendorff, J. M., &amp; Rupp, D. E. (Eds.). (2013). <i>Emotional Labor in the 21st Century</i>. Routledge.</span></li>
+  <li id="r-worline"><span class="ltr">Worline, M. C., &amp; Dutton, J. E. (2017). <i>Awakening Compassion at Work: The Quiet Power That Elevates People and Organizations</i>. Berrett-Koehler.</span> فصل ۱ (تعریف چهاربخشی شفقت: توجه، تفسیر، احساس، عمل). <span class="badge">ضمیمه</span></li>
+  <li id="r-rosen"><span class="ltr">Rosen, C. C., Gabriel, A. S., Lee, H. W., Koopman, J., &amp; Johnson, R. E. When lending an ear turns into mistreatment: An episodic examination of leader mistreatment in response to venting at work. <i>Personnel Psychology</i>.</span></li>
+  <li id="r-behfar"><span class="ltr">Behfar, K. J., Cronin, M. A., &amp; McCarthy, K. (2020). Realizing the upside of venting: The role of the "challenger listener". <i>Academy of Management Discoveries, 6</i>(4), 609–630.</span></li>
+  <li id="r-adamson"><span class="ltr">Adamson, B., Dixon, M., Spenner, P., &amp; Toman, N. (2015). <i>The Challenger Customer</i>. Portfolio.</span></li>
+  <li id="r-inzlicht"><span class="ltr">Inzlicht, M., Schmeichel, B. J., &amp; Macrae, C. N. (2014). Why self-control seems (but may not be) limited. <i>Trends in Cognitive Sciences, 18</i>, 127–133.</span></li>
+  <li id="r-whalen"><span class="ltr">Whalen, P. J., &amp; Kelley, W. M. To apply yourself is human, to reapply divine. <i>Neuron</i> (Previews).</span></li>
+  <li id="r-miyagawa"><span class="ltr">Miyagawa, Y., Niiya, Y., &amp; Taniguchi, J. (2019). When life gives you lemons, make lemonade: Self-compassion increases adaptive beliefs about failure. <i>Journal of Happiness Studies</i>.</span> <span class="badge">ضمیمه</span></li>
+  <li id="r-watkins"><span class="ltr">Watkins, E. R. (2016). <i>Rumination-Focused Cognitive-Behavioral Therapy for Depression</i>. Guilford Press.</span></li>
+  <li id="r-oades"><span class="ltr">Oades, L. G., Steger, M. F., Delle Fave, A., &amp; Passmore, J. (Eds.). (2017). <i>The Wiley Blackwell Handbook of the Psychology of Positivity and Strengths-Based Approaches at Work</i>.</span> از منابع ردهٔ اول دوره.</li>
+  <li id="r-amabile"><span class="ltr">Amabile, T., &amp; Kramer, S. (2011). <i>The Progress Principle</i>. HBR Press; and "The Power of Small Wins", <i>Harvard Business Review</i>.</span></li>
+  <li id="r-egan"><span class="ltr">Egan, S. J., Wade, T. D., Shafran, R., &amp; Antony, M. M. (2014). <i>Cognitive-Behavioral Treatment of Perfectionism</i>. Guilford Press.</span></li>
+  <li id="r-wallace"><span class="ltr">Wallace, J. B. (2023). <i>Never Enough: When Achievement Culture Becomes Toxic—and What We Can Do About It</i>.</span> ترجمهٔ فارسی: «وقتی هیچ چیز کافی نیست».</li>
+  <li id="r-neff2023"><span class="ltr">Neff, K. D. (2023). Self-compassion: Theory, method, research, and intervention. <i>Annual Review of Psychology, 74</i>, 193–218.</span> <span class="badge">ضمیمه</span></li>
+  <li id="r-price"><span class="ltr">Price, D. (2021). <i>Laziness Does Not Exist</i>. Atria.</span> ترجمهٔ فارسی: «چیزی به نام تنبلی وجود ندارد».</li>
+  <li id="r-grawitch"><span class="ltr">Grawitch, M. J., &amp; Ballard, D. W. (Eds.). (2016). <i>The Psychologically Healthy Workplace</i>. APA.</span></li>
+  <li id="r-gilar"><span class="ltr">Gilar-Corbi, R., Pozo-Rico, T., Sánchez, B., &amp; Castejón, J.-L. (2019). Can emotional intelligence be improved? A randomized experimental study of a business-oriented EI training program for senior managers. <i>PLoS ONE, 14</i>(10), e0224254.</span></li>
+  <li id="r-catino"><span class="ltr">Catino, M. <i>Scapegoating: How Organizations Assign Blame</i>. Cambridge University Press.</span></li>
+  <li id="r-gilbert"><span class="ltr">Gilbert, P. (Ed.). <i>Compassion Focused Therapy: Clinical Practice and Applications</i>. Routledge.</span> فصل ۲ (سه کارکرد هیجان) و بحث خودشیفتگی. <span class="badge">ضمیمه</span></li>
+  <li id="r-fierce"><span class="ltr">Neff, K. (2021). <i>Fierce Self-Compassion: How Women Can Harness Kindness to Speak Up, Claim Their Power, and Thrive</i>. Harper Wave.</span> فصل ۹ (توازن و برابری در کار) برای درس‌های بعد. <span class="badge">ضمیمه</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">متن از روی رونویسی خودکار سخنرانی بازنویسی و مرتب شده است؛ نام شرکت‌کنندگان در بخش پرسش و پاسخ حذف شده. کادرهای «از منابع دوره» پیوندهایی است که ویراستار میان سخنرانی و کتاب‌های ضمیمه برقرار کرده و جزو گفته‌های مدرس نیست. اعداد نمودارها از اسلایدها خوانده شده‌اند.</p>
+</article>
+</main>
+</div>
+
+<footer class="foot">ویکی روان‌شناسی · مهارت‌های فردی و انسانی در سازمان‌ها و مراکز آموزشی · فرسودگی و شغل معنادار</footer>
+
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4>
+  <div class="en" id="pop-en"></div>
+  <p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {
+  "rumination":{fa:"نشخوار فکری",en:"Rumination",d:"سبکی از فکرکردن که تکراری، مزاحم و کنترل‌ناپذیر است؛ فکر منفی مثل صفحهٔ خراب بارها تکرار می‌شود. نشخوار دربارهٔ گذشته با افسردگی و دربارهٔ آینده با اضطراب پیوند دارد. مسیر اصلی ناتوانی در جداشدن روانی از کار است.",rel:["running-commentary","brooding","psych-detachment","savoring","self-compassion"],s:"rumination"},
+  "running-commentary":{fa:"گزارشگر زنده",en:"Running commentary",d:"صدای درونی که مثل گزارشگر فوتبال با سرعت رویدادها را تفسیر و قضاوت می‌کند و از دل نشخوار فکری می‌روید. مانع پشتکار است. دو راه مقابله: خاموش‌کردنش، یا ضدآب‌کردن خود تا حرفش جذب نشود.",rel:["rumination","farrington","savoring"],s:"rumination"},
+  "brooding":{fa:"سر در جیب بردن",en:"Brooding",d:"شکلی از نشخوار که در آن فرد دربارهٔ یک موضوع برای خود داستان می‌بافد و اشتغال ذهنی می‌سازد. ونتینگِ بی‌حد می‌تواند به آن بینجامد.",rel:["rumination","venting"],s:"venting"},
+  "psych-detachment":{fa:"جداشدن روانی از کار",en:"Psychological detachment",d:"توانایی خاموش‌کردن ذهن نسبت به کار در ساعات غیرکاری، علاوه بر جداشدن فیزیکی. کمبود آن به فشار، افت بهزیستی و فرسودگی می‌انجامد. پژوهشگر اصلی: سابینه زوننتاگ.",rel:["recovery-paradox","sonnentag","burnout","work-life-balance"],s:"detach"},
+  "recovery-paradox":{fa:"پارادوکس بازیابی",en:"Recovery paradox",d:"کسی که بیشترین نیاز را به بازیابی دارد، کمترین توان را برای آن دارد: تنش کاری ← برانگیختگی ← ناتوانی در استراحت ← فرسودگی ← عملکرد بدتر ← تنش بیشتر.",rel:["psych-detachment","sonnentag","burnout"],s:"detach"},
+  "sonnentag":{fa:"سابینه زوننتاگ",en:"Sabine Sonnentag",d:"روان‌شناس سازمانی دانشگاه مانهایم آلمان؛ پژوهشگر اصلی جداشدن روانی از کار، بازیابی و پارادوکس بازیابی (۲۰۱۸).",rel:["psych-detachment","recovery-paradox"],s:"detach"},
+  "burnout":{fa:"فرسودگی شغلی",en:"Burnout",d:"سندرمی با سه نشانه: خستگی (تهی‌شدن)، مسخ شخصیت (بدبینی و جدایی از کار) و کاهش احساس موفقیت. اصطلاح را هربرت فرویدنبرگر در ۱۹۷۴ ساخت. به گفتهٔ نف و گرمر، سرکوب درد و سرزنش خود آن را بدتر می‌کند.",rel:["fatigue-syndromes","recovery-paradox","perfectionism","empathy-fatigue","self-compassion"],s:"detach"},
+  "fatigue-syndromes":{fa:"سندرم‌های خستگی",en:"Fatigue syndromes",d:"طیف حالت‌های خستگی مزمن که با چرخهٔ ناقص بازیابی و فرسودگی شغلی در ارتباط‌اند (اسلاید ۱۶).",rel:["burnout","recovery-paradox"],s:"detach"},
+  "work-life-balance":{fa:"تعادل کار و زندگی",en:"Work-life balance",d:"انتظار روبه‌رشد کارکنان، در همهٔ سطوح درآمدی، برای اینکه کار زندگی شخصی و سلامت روان را نخورد. پس از کووید ۱۹ شدیدتر شد.",rel:["psych-detachment","great-resignation"],s:"detach"},
+  "remote-work":{fa:"کار از راه دور",en:"Remote & flexible work",d:"نخستین تحول از چهار تحول کتاب Emotionally Charged؛ پایان مدل کنترل کلاسیک حضور و ساعت‌زدن.",rel:["emotionally-charged"],s:"shifts"},
+  "emotionally-charged":{fa:"Emotionally Charged",en:"Smith & Grandey, 2025",d:"کتاب آغاز دوره دربارهٔ رهبری در دنیای جدید کار. چهار تحول را برمی‌شمارد: جای کار، شیوهٔ کار، دلیل کار و همکاران.",rel:["feeling-economy","remote-work","polarization"],s:"shifts"},
+  "feeling-economy":{fa:"اقتصاد احساسی",en:"The Feeling Economy",d:"نظریهٔ راست و هوانگ: با پوشش هوش مکانیکی، تحلیلی و شهودی توسط هوش مصنوعی، هوش همدلانه و مهارت‌های هیجانی ارزشمندترین مهارت کار می‌شوند.",rel:["emotional-labor","emotional-intelligence"],s:"shifts"},
+  "great-resignation":{fa:"استعفای بزرگ",en:"The Great Resignation",d:"موج ترک کار پس از کووید ۱۹، با وجود شرایط بد بازار. Xu و همکاران (۲۰۲۳) نقش اضطراب مرگ، نیاز به کار معنادار و اهمیت وظیفه را در آن نشان دادند.",rel:["quiet-quitting","meaningful-work"],s:"exit"},
+  "quiet-quitting":{fa:"ترک آرام",en:"Quiet quitting",d:"انجام حداقل الزامات شغل، بدون وقت، تلاش یا اشتیاق اضافه؛ فقط تا جایی که اخراج نشوم. داده‌های زنگر فوکمن نشان می‌دهد مدیر مهم‌ترین عامل آن است.",rel:["great-resignation","destructive-leadership","meaningful-work"],s:"exit"},
+  "meaningful-work":{fa:"کار معنادار",en:"Need for meaningful work",d:"نیاز روبه‌رشد به کاری که به رشد فرد کمک کند و خیرش به جایی برسد. سه نگرش: شغل، حرفه، رسالت. خودمختاری از ارکان آن است.",rel:["autonomy","great-resignation","intrinsic-motivation"],s:"exit"},
+  "autonomy":{fa:"خودمختاری",en:"Autonomy",d:"احساس اینکه کار دست خودم است و کسی وادارم نکرده؛ از مهم‌ترین ویژگی‌های کار معنادار و انگیزهٔ درونی. تقاضا برای آن در شرایط سخت بیشتر می‌شود.",rel:["meaningful-work","intrinsic-motivation"],s:"qa"},
+  "destructive-leadership":{fa:"رهبری مخرب",en:"Destructive leadership",d:"رفتارها و ویژگی‌های مدیرانی که ترک آرام و آسیب می‌سازند. منبع: Research Handbook on Destructive Leadership.",rel:["quiet-quitting","victim-role"],s:"exit"},
+  "polarization":{fa:"تنوع و قطبی‌شدن نیروی کار",en:"Diverse & polarized workforce",d:"چهارمین تحول: ورود گروه‌های متنوع (DEI) و قطبی‌شدن، به‌ویژه سیاسی. مدیر باید تنش‌ها را مهار کند؛ مشاجرهٔ سیاسی همکاران خود عامل تنش است.",rel:["emotional-labor","emotionally-charged"],s:"exit"},
+  "emotional-labor":{fa:"کار هیجانی",en:"Emotional labor",d:"مدیریت و مهار هیجانات خود در کار (لبخند زدن، نشان‌ندادن خشم، روحیه‌دادن) که بخشی از وظیفهٔ شغلی است و بابتش پول داده می‌شود. اصطلاح از هاکشیلد (۱۹۸۳). می‌تواند تهی‌کننده باشد و به فرسودگی بینجامد.",rel:["hochschild","ego-depletion","beach-ball","feeling-economy"],s:"labor"},
+  "hochschild":{fa:"آرلی راسل هاکشیلد",en:"Arlie Russell Hochschild",d:"جامعه‌شناس آمریکایی و نویسندهٔ The Managed Heart (۱۹۸۳)؛ کار هیجانی را با مطالعهٔ مهمانداران هواپیمایی دلتا مفهوم‌پردازی کرد.",rel:["emotional-labor"],s:"labor"},
+  "venting":{fa:"ونتینگ (تخلیهٔ هیجانی، غرزدن)",en:"Venting",d:"بیان شکایت، ناراحتی یا ناتوانی نزد دیگری. ونتور تخلیه می‌کند و ونتی شنونده است. می‌تواند به نشخوار و انسانیت‌زدایی بینجامد یا با شنوندهٔ چالشگر سازنده شود.",rel:["catharsis","challenger-listener","dehumanization","beach-ball","brooding"],s:"venting"},
+  "catharsis":{fa:"نظریهٔ هیدرولیکی هیجان (کاتارسیس)",en:"Hydraulic model / Catharsis",d:"دیدگاه کلاسیک از زمان فروید که هیجان مثل فشار مایع است و با بیان‌کردن تخلیه می‌شود. پژوهش‌های بعدی نشان دادند تخلیه گاهی خشم را بیشتر می‌کند.",rel:["venting"],s:"venting"},
+  "challenger-listener":{fa:"شنوندهٔ چالشگر",en:"Challenger listener",d:"شنونده‌ای که هم به ونتینگ گوش می‌دهد و هم آن را به چالش می‌کشد. بهفر، کرونین و مک‌کارتی (۲۰۲۰) آن را سازنده‌ترین سبک دانستند.",rel:["venting","need-for-cognition"],s:"venting"},
+  "dehumanization":{fa:"انسانیت‌زدایی",en:"Dehumanization",d:"نگاه به دیگران به‌عنوان کمتر از انسان («این‌ها فقط غر می‌زنند»). در ونتینگ، برجسته‌کردن فاصلهٔ مالی آن را تشدید و برجسته‌کردن شباهت‌ها آن را خنثی می‌کند.",rel:["venting"],s:"venting"},
+  "need-for-cognition":{fa:"نیاز به دانایی",en:"Need for cognition",d:"گرایش پایدار به فکرکردن، کنجکاوی و دانستن. در مدیران، اثر مخرب ونتینگ را کم می‌کند.",rel:["venting","challenger-listener"],s:"venting"},
+  "beach-ball":{fa:"اثر توپ ساحلی",en:"Beach ball effect",d:"هیجان سرکوب‌شده مثل توپ بادی زیر آب است: یا پایین نمی‌رود یا با شتاب بیرون می‌پرد. سیاست سرکوب ونتینگ به ترک آرام و فرسودگی می‌انجامد.",rel:["venting","emotional-labor","ego-depletion"],s:"venting"},
+  "ego-depletion":{fa:"تخلیهٔ ایگو",en:"Ego depletion",d:"نظریهٔ بامایستر: خویشتن‌داری منبعی محدود است که با استفاده تحلیل می‌رود. آزمایش‌های تکرار بزرگ آن را تأیید نکردند و نظریهٔ رقیب اینزلیکت (کاوش ـ بهره‌برداری) مطرح شد.",rel:["baumeister","exploration","emotional-labor"],s:"ego"},
+  "baumeister":{fa:"روی بامایستر",en:"Roy Baumeister",d:"روان‌شناس اجتماعی برجسته؛ مطرح‌کنندهٔ نظریهٔ تخلیهٔ ایگو با آزمایش مشهور کلوچه‌های شکلاتی.",rel:["ego-depletion"],s:"ego"},
+  "exploration":{fa:"کاوش ـ بهره‌برداری",en:"Exploration vs. Exploitation",d:"مدل اینزلیکت و همکاران (۲۰۱۴): مغز مثل آونگ میان کار و بهره‌برداری (have-to) و کاوش و فراغت (want-to) نوسان می‌کند؛ «خستگی» نشانهٔ نیاز به جابه‌جایی است، نه تمام‌شدن منبع.",rel:["ego-depletion"],s:"ego"},
+  "farrington":{fa:"کامیل فارینگتون",en:"Camille Farrington",d:"پژوهشگر دانشگاه شیکاگو (UChicago CCSR) دربارهٔ پشتکار تحصیلی و افت ناگهانی دانش‌آموزان؛ عامل متمایزکننده را نگرش انعطاف‌پذیر به شکست می‌داند.",rel:["running-commentary","self-compassion"],s:"rumination"},
+  "savoring":{fa:"مزه‌مزه‌کردن",en:"Savoring",d:"توجه آگاهانه و طولانی‌کردن تجربهٔ خوشایند؛ نقطهٔ مقابل نشخوار و یکی از راه‌های ساکت‌کردن گزارشگر زنده.",rel:["rumination","running-commentary","pat"],s:"rumination"},
+  "self-compassion":{fa:"شفقت به خود",en:"Self-compassion",d:"به تعریف کریستین نف، سه جزء دارد: مهربانی با خود به‌جای قضاوت، اشتراک انسانی به‌جای انزوا، و ذهن‌آگاهی به‌جای هم‌هویت‌شدن افراطی. با فرسودگی، نشخوار و کمال‌طلبی ناسازگار رابطهٔ منفی دارد.",rel:["rumination","burnout","perfectionism","empathy-fatigue"],s:"rumination"},
+  "strengths-based":{fa:"رویکرد مبتنی بر نقاط قوت",en:"Strengths-based approach",d:"به جای اصلاح ضعف‌ها، توانمندی‌ها را پیدا و تقویت کن تا ضعف‌ها را جبران کنند. بنیان‌گذار: دونالد کلیفتون.",rel:["clifton","pat","progress-principle"],s:"strengths"},
+  "clifton":{fa:"دونالد کلیفتون",en:"Donald O. Clifton",d:"روان‌شناس آمریکایی (۱۹۲۴–۲۰۰۳)، بنیان‌گذار روان‌شناسی مبتنی بر نقاط قوت در سازمان.",rel:["strengths-based"],s:"strengths"},
+  "pat":{fa:"درمان عاطفهٔ مثبت",en:"Positive Affect Treatment (PAT)",d:"خانوادهٔ مداخلاتی که هیجانات مثبت را بالا می‌برند؛ معادل بالینی محور سوم دوره.",rel:["strengths-based","progress-principle","savoring"],s:"strengths"},
+  "progress-principle":{fa:"اصل پیشرفت",en:"The Progress Principle",d:"امابیل و کریمر: پیشرفت کوچک در کار معنادار مهم‌ترین عامل روز خوب است (۷۶٪ روزهای خوب). عقب‌نشینی‌ها مشخصهٔ روزهای بد‌ند.",rel:["mcclelland","perfectionism","pat"],s:"strengths"},
+  "mcclelland":{fa:"سه‌گانهٔ مک‌کللند",en:"McClelland's needs",d:"دیوید مک‌کللند (۱۹۱۷–۱۹۹۸): سه نیاز اصلی انگیزشی، تعلق، قدرت و دستاورد. پیشرفت در یکی کافی است تا ضررهای دیگر جبران شود.",rel:["progress-principle","perfectionism"],s:"strengths"},
+  "perfectionism":{fa:"کمال‌طلبی (تلهٔ کمال‌طلبی)",en:"Perfectionism trap",d:"استانداردهای ورای دسترس، تلاش اجبارگونه و دیدن تمام ارزش خود در دستاورد. تله وقتی است که هویت درگیر پیشرفت شود و ترمزی نباشد. با فرسودگی پیوند دارد.",rel:["progress-principle","burnout","self-compassion","intrinsic-motivation"],s:"perfection"},
+  "intrinsic-motivation":{fa:"انگیزش درونی و بیرونی",en:"Intrinsic / extrinsic motivation",d:"طیفی از بی‌انگیزگی تا تنظیم بیرونی، درون‌فکنده، همانندسازی‌شده و انگیزهٔ درونی (نظریهٔ خودتعیین‌گری). محور دوم مداخلات دوره.",rel:["autonomy","perfectionism","meaningful-work"],s:"perfection"},
+  "emotional-intelligence":{fa:"هوش هیجانی",en:"Emotional intelligence (EI)",d:"توانایی آگاهی و مدیریت هیجان در خود و دیگران؛ مؤلفه‌ها: انگیزش، همدلی، خودآگاهی، خودتنظیمی، مهارت اجتماعی. در جوامع با ادراک نابرابری بالا، در بالادستان افت می‌کند.",rel:["psych-safety","emotional-labor","feeling-economy"],s:"ei"},
+  "psych-safety":{fa:"امنیت روانی",en:"Psychological safety",d:"احساس اینکه می‌توان بدون ترس واقعیت را گفت. نبودش باعث می‌شود همه وانمود کنند و مدیر مهارت تشخیص را از دست بدهد.",rel:["emotional-intelligence"],s:"ei"},
+  "victim-role":{fa:"نقش قربانی",en:"Victim role / Scapegoating",d:"الگوهای سرزنش در سازمان: انداختن تقصیر به گردن دیگران و ساختن قربانی. منبع: Scapegoating از کاتینو.",rel:["vulnerable-narcissism","destructive-leadership"],s:"toxic"},
+  "vulnerable-narcissism":{fa:"خودشیفتگی آسیب‌پذیر",en:"Vulnerable narcissism",d:"ترکیب نوروتیسیزم، خصومت و احساس استحقاق. به گفتهٔ گیلبرت با شرم-خشم، نشخوار انتقام‌جویانه و بی‌اعتمادی پیوند دارد.",rel:["victim-role","rumination"],s:"toxic"},
+  "self-selectors":{fa:"خودبرگزیدگان",en:"Self-selectors",d:"داوطلبانی که خودشان به یک موضوع جذب می‌شوند، کارگروه می‌سازند و فرهنگ را از طریق سرایت تغییر می‌دهند. مهارت‌های نرم را نمی‌توان با بخشنامه اجباری کرد.",rel:["emotional-labor"],s:"groups"},
+  "compassionate-detachment":{fa:"انفصال همدلانه",en:"Compassionate detachment",d:"همدلی از فاصله: درد دیگری را می‌فهمم اما در آن غرق نمی‌شوم. میان همدلی افراطی و بی‌همدلی قرار می‌گیرد.",rel:["empathy-fatigue","venting"],s:"qa"},
+  "empathy-fatigue":{fa:"خستگی همدلی",en:"Empathy fatigue",d:"فرسودگی ناشی از قرارگرفتن مداوم در معرض رنج دیگران (empathic distress). نف و گرمر می‌گویند مراقبان دچار خستگی همدلی می‌شوند، نه خستگی شفقت؛ چون شفقت با مهربانی همراه است و انرژی می‌دهد.",rel:["compassionate-detachment","burnout","self-compassion"],s:"qa"},
+  "resilience":{fa:"تاب‌آوری",en:"Resilience",d:"توان بازگشت پس از فشار و شکست؛ از عوامل مشترک موفقیت در بالین، تحصیل و سازمان. موضوع محوری درس‌های آینده.",rel:["self-compassion","farrington"],s:"why"}
+};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+
+/* glossary */
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">در جزوه: <a href="#${t.s}">${document.querySelector('#'+t.s+'')?.textContent.trim()||""}</a>${rel?" · مرتبط: "+rel:""}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+
+/* wiki links */
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop");
+let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return;
+  lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+
+/* Zenger Folkman chart */
+const zf=[["۹۰–۱۰۰",3,35,62],["۸۰–۸۹",4,44,52],["۷۰–۷۹",2,55,43],["۶۰–۶۹",3,54,43],["۵۰–۵۹",4,62,34],["۴۰–۴۹",5,61,34],["۳۰–۳۹",4,63,33],["۲۰–۲۹",5,68,27],["۱۰–۱۹",8,71,23],["۱–۹",14,67,20]];
+document.getElementById("zf").innerHTML = `<div class="row"><span class="lbl">دهک مدیر</span><span></span></div>` + zf.map(([l,q,n,x])=>{
+  const s=q+n+x;
+  return `<div class="row"><span class="lbl">${l}</span><div class="stack" role="img" aria-label="دهک ${l}: ترک آرام ${fa(q)}٪، خنثی ${fa(n)}٪، تلاش بیشتر ${fa(x)}٪"><span class="k-qq" style="width:${q/s*100}%">${q>=4?fa(q):""}</span><span class="k-ne" style="width:${n/s*100}%">${fa(n)}</span><span class="k-ex" style="width:${x/s*100}%">${fa(x)}</span></div></div>`;
+}).join("");
+
+/* Amabile chart */
+const good=[["پیشرفت",76,"good"],["کاتالیزور",43,"good"],["تغذیه‌کننده",25,"good"],["عقب‌نشینی",13,"bad"],["بازدارنده",6,"bad"],["سموم",0,"bad"]];
+const bad=[["عقب‌نشینی",67,"bad"],["بازدارنده",42,"bad"],["سموم",18,"bad"],["پیشرفت",25,"good"],["کاتالیزور",12,"good"],["تغذیه‌کننده",4,"good"]];
+const hb=(title,arr)=>`<div><h5>${title}</h5>`+arr.map(([t,v,c])=>`<div class="hb"><span class="t">${t}</span><div class="track"><div class="fill f-${c}" style="width:${v/80*100}%"></div></div><span class="v">${fa(v)}٪</span></div>`).join("")+`</div>`;
+document.getElementById("amabile").innerHTML = hb("در یک روز <span style='color:var(--good)'>خوب</span>",good)+hb("در یک روز <span style='color:var(--bad)'>بد</span>",bad);
+
+/* toc highlight */
+const links=[...document.querySelectorAll("nav.toc a")];
+const secs=links.map(l=>document.querySelector(l.getAttribute("href")));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+secs.forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

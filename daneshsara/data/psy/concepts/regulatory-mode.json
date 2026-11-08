@@ -1,0 +1,107 @@
+{
+ "id": "psy:regulatory-mode",
+ "kind": "concept",
+ "title": {
+  "fa": "شیوهٔ تنظیم: حرکت و سنجش",
+  "en": "Regulatory mode (locomotion vs assessment)",
+  "nl": "Regulatiemodus (locomotie versus beoordeling)"
+ },
+ "parent": "psy:p-motivation",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "دو گرایش انگیزشی مستقل: «حرکت» (پیش رفتن از یک حالت به حالت بعد) و «سنجش» (ارزیابی و مقایسه). غلبهٔ حرکت بر سنجش آشتی را آسان‌تر می‌کند.",
+  "en": "Two independent motivational tendencies: “locomotion” (moving from one state to the next) and “assessment” (evaluating and comparing). Locomotion outweighing assessment makes reconciliation easier.",
+  "nl": "Twee onafhankelijke motivationele neigingen: ‘locomotie’ (van de ene toestand naar de volgende gaan) en ‘beoordeling’ (evalueren en vergelijken). Als locomotie de overhand heeft, wordt verzoening makkelijker."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پنج مطالعه و یک فراتحلیل؛ از سناریو تا گفت‌وگوی هم‌اتاقی‌ها (وب و همکاران ۲۰۱۷).",
+    "en": "Five studies and a meta-analysis; from scenarios to roommates' conversations (Webb and colleagues 2017).",
+    "nl": "Vijf studies en een meta-analyse; van scenario's tot gesprekken tussen huisgenoten (Webb en collega's 2017)."
+   },
+   "sources": [
+    "src:d61d15019d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سنجش زیاد بدون حرکت، آدم را در نشخوار «چه کسی مقصر است» نگه می‌دارد.",
+    "en": "A lot of assessment without moving keeps a person stuck ruminating on “who is to blame”.",
+    "nl": "Veel beoordelen zonder in beweging te komen, houdt iemand vast in piekeren over ‘wie de schuld heeft’."
+   },
+   "sources": [
+    "src:d61d15019d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بهترین نتیجه معمولاً از ترکیب هر دو است.",
+    "en": "The best results usually come from combining both.",
+    "nl": "De beste resultaten komen meestal uit een combinatie van beide."
+   },
+   "sources": [
+    "src:d61d15019d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سفر و تجربهٔ خارجی گسترده با گشودگی و اعتماد بیشتر همراه بود.",
+    "en": "Travel and broad foreign experience went with more openness and trust.",
+    "nl": "Reizen en ruime buitenlandervaring gingen samen met meer openheid en vertrouwen."
+   },
+   "sources": [
+    "src:d61d15019d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:intractable-conflict",
+   "rel": "see-also",
+   "note": {
+    "fa": "آشتی",
+    "en": "Reconciliation",
+    "nl": "Verzoening"
+   }
+  },
+  {
+   "to": "psy:sdt",
+   "rel": "see-also",
+   "note": {
+    "fa": "انگیزش",
+    "en": "Motivation",
+    "nl": "Motivatie"
+   }
+  },
+  {
+   "to": "psy:cooperation-competition",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعارض",
+    "en": "Conflict",
+    "nl": "Conflict"
+   }
+  }
+ ],
+ "people": [
+  "core:tory-higgins",
+  "core:arie-kruglanski",
+  "core:christine-webb"
+ ],
+ "sources": [
+  "src:d61d15019d"
+ ],
+ "booklets": [
+  "shelf9:webb",
+  "conflict:regmode"
+ ],
+ "origin": "shelf9",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

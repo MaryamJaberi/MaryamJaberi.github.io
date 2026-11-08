@@ -1,0 +1,134 @@
+{
+ "id": "psy:human-progress",
+ "kind": "concept",
+ "title": {
+  "fa": "خوش‌بینی به آیندهٔ بشر",
+  "en": "Human progress & optimism",
+  "nl": "Menselijke vooruitgang en optimisme"
+ },
+ "parent": "psy:p-positive",
+ "field": "psy:p-positive",
+ "summary": {
+  "fa": "داده‌های بلندمدت دربارهٔ امید به زندگی، قحطی، خشونت و فقر شدید؛ تز «پیشرفت» و نقدهای آن.",
+  "en": "Long-term data on life expectancy, famine, violence and extreme poverty; the “progress” thesis and its critiques.",
+  "nl": "Langetermijngegevens over levensverwachting, hongersnood, geweld en extreme armoede; de ‘vooruitgangs’-these en de kritiek erop."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فقر شدید جهانی: ۵۰٫۴٪ (۱۹۷۳) ← ۱۱٫۶٪ (۲۰۱۵).",
+    "en": "Extreme global poverty: 50.4% (1973) → 11.6% (2015).",
+    "nl": "Extreme armoede wereldwijd: 50,4% (1973) → 11,6% (2015)."
+   },
+   "sources": [
+    "src:4522e0db58"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انقلاب سبز: ۱۲٪ زمین بیشتر، ۳۰۰٪ تولید بیشتر (۱۹۶۱ تا ۲۰۰۹).",
+    "en": "The Green Revolution: 12% more land, 300% more production (1961 to 2009).",
+    "nl": "De Groene Revolutie: 12% meer land, 300% meer productie (1961 tot 2009)."
+   },
+   "sources": [
+    "src:4522e0db58"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاهش باروری در ایران حدود ۱۰ سال طول کشید؛ در بریتانیا ۹۵ سال.",
+    "en": "Iran's fertility decline took about 10 years; in Britain 95 years.",
+    "nl": "De daling van de vruchtbaarheid in Iran duurde ongeveer 10 jaar; in Groot-Brittannië 95 jaar."
+   },
+   "sources": [
+    "src:4522e0db58"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قتل در اروپا از ده‌ها در ۱۰۰٬۰۰۰ نفر به حدود ۱.",
+    "en": "Homicide in Europe fell from dozens per 100,000 people to about 1.",
+    "nl": "Moord in Europa daalde van tientallen per 100.000 mensen naar ongeveer 1."
+   },
+   "sources": [
+    "src:4522e0db58"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازگشت نابرابری پس از ۱۹۷۰ (پیکتی)؛ «نمودار فیل» میلانوویچ.",
+    "en": "The return of inequality after 1970 (Piketty); Milanović's “elephant curve”.",
+    "nl": "De terugkeer van ongelijkheid na 1970 (Piketty); de ‘olifantcurve’ van Milanović."
+   },
+   "sources": [
+    "src:4522e0db58"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقدها: داده‌های جنگ دم‌کلفت‌اند (طالب و چیریلو).",
+    "en": "Critiques: war data are fat-tailed (Taleb and Cirillo).",
+    "nl": "Kritiek: oorlogsgegevens hebben dikke staarten (Taleb en Cirillo)."
+   },
+   "sources": [
+    "src:4522e0db58"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:happiness-origins",
+   "rel": "see-also",
+   "note": {
+    "fa": "بهزیستی",
+    "en": "Well-being",
+    "nl": "Welzijn"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "چرا بدبینیم",
+    "en": "Why we are pessimistic",
+    "nl": "Waarom we pessimistisch zijn"
+   }
+  },
+  {
+   "to": "psy:hope",
+   "rel": "see-also",
+   "note": {
+    "fa": "امید",
+    "en": "Hope",
+    "nl": "Hoop"
+   }
+  }
+ ],
+ "people": [
+  "core:steven-pinker",
+  "core:max-roser",
+  "core:thomas-piketty",
+  "core:branko-milanovic",
+  "core:norman-borlaug"
+ ],
+ "sources": [
+  "src:4522e0db58",
+  "src:6304caf944",
+  "src:50d8888ad4"
+ ],
+ "booklets": [
+  "optimism:life",
+  "optimism:violence",
+  "optimism:wealth"
+ ],
+ "origin": "optimism",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

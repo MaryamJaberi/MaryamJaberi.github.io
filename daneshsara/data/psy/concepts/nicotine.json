@@ -1,0 +1,102 @@
+{
+ "id": "psy:nicotine",
+ "kind": "concept",
+ "title": {
+  "fa": "وابستگی به نیکوتین",
+  "en": "Tobacco use disorder",
+  "nl": "Tabaksgebruiksstoornis"
+ },
+ "parent": "psy:addiction",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "در DSM-5 «اختلال مصرف تنباکو» نام گرفته است. وابستگی به نیکوتین فقط مسئلهٔ فردی نیست؛ صنعت دخانیات و بازاریابی در آن نقش داشته‌اند.",
+  "en": "In DSM-5 it is called “tobacco use disorder”. Nicotine dependence is not only an individual matter; the tobacco industry and marketing have played a part.",
+  "nl": "In de DSM-5 heet het ‘tabaksgebruiksstoornis’. Nicotineafhankelijkheid is niet alleen een individuele kwestie; de tabaksindustrie en marketing hebben een rol gespeeld."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "جیمز بوکانان دیوک و «تنباکوی آمریکا» (حدود ۹۰٪ بازار) سیگار را با تولید انبوه و تبلیغات به کالای روزمره تبدیل کردند. شعار «برای یک کمل یک مایل راه می‌روم».",
+    "en": "James Buchanan Duke and the American Tobacco Company (about 90% of the market) turned cigarettes into an everyday product through mass production and advertising. The slogan “I'd walk a mile for a Camel”.",
+    "nl": "James Buchanan Duke en de American Tobacco Company (ongeveer 90% van de markt) maakten van sigaretten een alledaags product via massaproductie en reclame. De slogan ‘I'd walk a mile for a Camel’."
+   },
+   "sources": [
+    "src:da7702cd63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برخی معیارها، مثل کنار گذاشتن شغل، در نیکوتین کمتر دیده می‌شوند.",
+    "en": "Some criteria, such as giving up a job, are seen less with nicotine.",
+    "nl": "Sommige criteria, zoals een baan opgeven, komen bij nicotine minder voor."
+   },
+   "sources": [
+    "src:da7702cd63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آمار جلسه: حدود ۵ میلیون مرگ سالانه در جهان (برآورد تازه‌تر سازمان جهانی بهداشت: بیش از ۷ میلیون).",
+    "en": "Figures from the session: about 5 million deaths a year worldwide (the WHO's more recent estimate: over 7 million).",
+    "nl": "Cijfers uit de sessie: ongeveer 5 miljoen doden per jaar wereldwijd (recentere schatting van de WHO: meer dan 7 miljoen)."
+   },
+   "sources": [
+    "src:da7702cd63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درمان: رفتاری (مدیریت محرک، تغییر عادت)؛ دارویی (جایگزین نیکوتین، بوپروپیون از ۱ تا ۲ هفته پیش از ترک تا دست‌کم ۳ ماه، وارنیکلین ۶ تا ۱۲ هفته).",
+    "en": "Treatment: behavioural (cue management, habit change); medication (nicotine replacement, bupropion from 1–2 weeks before quitting for at least 3 months, varenicline for 6 to 12 weeks), as prescribed by a doctor.",
+    "nl": "Behandeling: gedragsmatig (omgaan met prikkels, gewoonteverandering); medicatie (nicotinevervanging, bupropion vanaf 1–2 weken vóór het stoppen tot minstens 3 maanden, varenicline 6 tot 12 weken), volgens voorschrift van een arts."
+   },
+   "sources": [
+    "src:da7702cd63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثر بوپروپیون مستقل از کاهش وسوسه است؛ ارزیابی بر اساس هفتهٔ اول کافی نیست.",
+    "en": "Bupropion's effect is independent of reduced craving; judging it on the first week is not enough.",
+    "nl": "Het effect van bupropion staat los van minder trek; het beoordelen op de eerste week is niet genoeg."
+   },
+   "sources": [
+    "src:da7702cd63"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سیگار الکترونیکی: احتمالاً کم‌خطرتر از سیگار، اما بی‌خطر نیست؛ هدف بهتر ترک کامل با کمک پزشک.",
+    "en": "E-cigarettes: probably less harmful than cigarettes, but not harmless; the better goal is quitting completely with a doctor's help.",
+    "nl": "E-sigaretten: waarschijnlijk minder schadelijk dan sigaretten, maar niet onschadelijk; het betere doel is volledig stoppen met hulp van een arts."
+   },
+   "sources": [
+    "src:da7702cd63"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:james-buchanan-duke",
+  "core:neal-benowitz"
+ ],
+ "sources": [
+  "src:da7702cd63",
+  "src:b78ee2ca2e",
+  "src:1b62d1493f"
+ ],
+ "booklets": [
+  "decision:nicotine",
+  "decision:tobacco"
+ ],
+ "origin": "decision",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

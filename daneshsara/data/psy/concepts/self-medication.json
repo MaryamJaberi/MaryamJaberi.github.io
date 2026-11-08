@@ -1,0 +1,97 @@
+{
+ "id": "psy:self-medication",
+ "kind": "concept",
+ "title": {
+  "fa": "فرضیهٔ خوددرمانی",
+  "en": "Self-medication hypothesis",
+  "nl": "Zelfmedicatiehypothese"
+ },
+ "parent": "psy:addiction",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "ادوارد خانتزیان: بسیاری مواد را برای تسکین ناراحتی و «درد روانی» درونی مصرف می‌کنند، نه صرفاً برای لذت؛ اعتیاد به‌عنوان اختلال خودتنظیمی.",
+  "en": "Edward Khantzian: many people use substances to soothe inner distress and “psychological pain”, not merely for pleasure; addiction as a disorder of self-regulation.",
+  "nl": "Edward Khantzian: veel mensen gebruiken middelen om innerlijk onbehagen en ‘psychische pijn’ te verzachten, niet alleen voor plezier; verslaving als stoornis van zelfregulatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ناراحتی لزوماً بیماری آشکار نیست: تحریک‌پذیری، بی‌انگیزگی، احساس درد روانی.",
+    "en": "Distress is not necessarily an obvious illness: irritability, lack of motivation, a feeling of psychological pain.",
+    "nl": "Onbehagen is niet per se een duidelijke ziekte: prikkelbaarheid, gebrek aan motivatie, een gevoel van psychische pijn."
+   },
+   "sources": [
+    "src:38f2ea9989"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نسخهٔ نخست ۱۹۸۵؛ بازنگری مشهور ۱۹۹۷.",
+    "en": "The first version in 1985; the well-known revision in 1997.",
+    "nl": "De eerste versie in 1985; de bekende herziening in 1997."
+   },
+   "sources": [
+    "src:38f2ea9989"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تقویت منفی (مصرف برای رهایی از ناخوشی) در برابر تقویت مثبت (مصرف برای لذت)؛ راه‌حل‌ها متفاوت‌اند.",
+    "en": "Negative reinforcement (using to escape discomfort) versus positive reinforcement (using for pleasure); the solutions differ.",
+    "nl": "Negatieve bekrachtiging (gebruiken om onbehagen kwijt te raken) tegenover positieve bekrachtiging (gebruiken voor plezier); de oplossingen verschillen."
+   },
+   "sources": [
+    "src:38f2ea9989"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تمرین: «قبل از مصرف چه حال ناخوشایندی داشتم؟ بعد از مصرف چه کم شد؟»",
+    "en": "Exercise: “What unpleasant state did I have before using? What eased after using?”",
+    "nl": "Oefening: ‘Welke nare toestand had ik vóór het gebruik? Wat werd minder na het gebruik?’"
+   },
+   "sources": [
+    "src:38f2ea9989"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انتقاد: پژوهش‌ها نشان داده‌اند انتخاب ماده همیشه با نوع ناراحتی هم‌خوان نیست.",
+    "en": "Critique: research has shown that the choice of substance does not always match the type of distress.",
+    "nl": "Kritiek: onderzoek liet zien dat de keuze van het middel niet altijd past bij het soort onbehagen."
+   },
+   "sources": [
+    "src:38f2ea9989"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:emotion-regulation",
+   "rel": "see-also",
+   "note": {
+    "fa": "خودتنظیمی",
+    "en": "Self-regulation",
+    "nl": "Zelfregulatie"
+   }
+  }
+ ],
+ "people": [
+  "core:edward-khantzian"
+ ],
+ "sources": [
+  "src:38f2ea9989"
+ ],
+ "booklets": [
+  "decision:counseling"
+ ],
+ "origin": "decision",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

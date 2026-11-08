@@ -1,0 +1,88 @@
+{
+ "id": "psy:n-affective",
+ "kind": "subfield",
+ "title": {
+  "fa": "علوم اعصاب عاطفی",
+  "en": "Affective Neuroscience",
+  "nl": "Affectieve neurowetenschap"
+ },
+ "parent": "psy:neuroscience",
+ "field": null,
+ "summary": {
+  "fa": "پایه‌های عصبی هیجان در انسان و حیوان.",
+  "en": "The neural bases of emotion in humans and animals.",
+  "nl": "De neurale basis van emotie bij mens en dier."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پنکسپ: هفت سیستم هیجانی اولیه در مغز پستانداران: جست‌وجو، خشم، ترس، شهوت، مراقبت، سوگ/پانیک، بازی.",
+    "en": "Panksepp: seven primary emotional systems in the mammalian brain: SEEKING, RAGE, FEAR, LUST, CARE, GRIEF/PANIC, PLAY.",
+    "nl": "Panksepp: zeven primaire emotionele systemen in het zoogdierbrein: ZOEKEN, WOEDE, ANGST, LUST, ZORG, ROUW/PANIEK, SPEL."
+   },
+   "sources": [
+    "src:135d47405d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لودو: مدار ترس و نقش آمیگدال؛ «راه کوتاه» و «راه بلند».",
+    "en": "LeDoux: the fear circuit and the role of the amygdala; the “low road” and the “high road”.",
+    "nl": "LeDoux: het angstcircuit en de rol van de amygdala; de ‘korte route’ en de ‘lange route’."
+   },
+   "sources": [
+    "src:135d47405d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "داماسیو: فرضیهٔ نشانگر بدنی؛ هیجان شرط تصمیم‌گیری خوب است.",
+    "en": "Damasio: the somatic marker hypothesis; emotion is a condition for good decision-making.",
+    "nl": "Damasio: de somatische-markerhypothese; emotie is een voorwaarde voor goed beslissen."
+   },
+   "sources": [
+    "src:135d47405d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سیستم جست‌وجوی پنکسپ با مدل کاوش اینزلیکت هم‌خوان است.",
+    "en": "Panksepp's SEEKING system fits Inzlicht's exploration model.",
+    "nl": "Het ZOEK-systeem van Panksepp sluit aan bij het verkenningsmodel van Inzlicht."
+   },
+   "sources": [
+    "src:135d47405d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:exploration",
+   "rel": "see-also",
+   "note": {
+    "fa": "سیستم جست‌وجو",
+    "en": "Seeking system",
+    "nl": "Zoeksysteem"
+   }
+  }
+ ],
+ "people": [
+  "core:jaak-panksepp",
+  "core:joseph-ledoux",
+  "core:antonio-damasio"
+ ],
+ "sources": [
+  "src:135d47405d",
+  "src:c723cf8660",
+  "src:045d5ea6db"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

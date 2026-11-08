@@ -1,0 +1,108 @@
+{
+ "id": "psy:psychosis-risk",
+ "kind": "concept",
+ "title": {
+  "fa": "حالات پرخطر پسیکوز (SIPS)",
+  "en": "Psychosis-risk syndromes",
+  "nl": "Psychoserisicosyndromen"
+ },
+ "parent": "psy:descriptive-psychopathology",
+ "field": "psy:descriptive-psychopathology",
+ "summary": {
+  "fa": "مصاحبهٔ ساختاریافتهٔ مک‌گلاشن، والش و وودز برای شناسایی مرحلهٔ پیش‌درآمد: علائم مثبت، منفی و آشفتگی روی مقیاس ۰ تا ۶.",
+  "en": "The structured interview of McGlashan, Walsh and Woods for identifying the prodromal stage: positive, negative and disorganised symptoms on a 0 to 6 scale.",
+  "nl": "Het gestructureerde interview van McGlashan, Walsh en Woods om de prodromale fase te herkennen: positieve, negatieve en gedesorganiseerde symptomen op een schaal van 0 tot 6."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سطح ۳ تا ۵: شدید اما فرد هنوز می‌تواند شک کند؛ سطح ۶: باور بی‌تردید.",
+    "en": "Levels 3 to 5: intense but the person can still doubt; level 6: belief without doubt.",
+    "nl": "Niveau 3 tot 5: intens maar de persoon kan nog twijfelen; niveau 6: overtuiging zonder twijfel."
+   },
+   "sources": [
+    "src:af032643f1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "APSS: علائم مثبت خفیف (۳ تا ۵) دست‌کم هفته‌ای یک بار به مدت یک ماه.",
+    "en": "APSS: attenuated positive symptoms (3 to 5) at least once a week for a month.",
+    "nl": "APSS: verzwakte positieve symptomen (3 tot 5) minstens één keer per week gedurende een maand."
+   },
+   "sources": [
+    "src:af032643f1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "BIPS: سطح ۶ فقط چند دقیقه در ماه.",
+    "en": "BIPS: level 6 for only a few minutes a month.",
+    "nl": "BIPS: niveau 6 slechts enkele minuten per maand."
+   },
+   "sources": [
+    "src:af032643f1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "GRD: خطر ژنتیکی (بستگان درجهٔ یک یا اسکیزوتایپال) و افت کارکرد ۳۰٪.",
+    "en": "GRD: genetic risk (first-degree relatives or schizotypal) and a 30% drop in functioning.",
+    "nl": "GRD: genetisch risico (eerstegraads familieleden of schizotypisch) en een daling van 30% in functioneren."
+   },
+   "sources": [
+    "src:af032643f1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حدود یک‌پنجم تا یک‌چهارم افراد پرخطر بالینی طی ۲ تا ۳ سال به پسیکوز می‌رسند.",
+    "en": "About a fifth to a quarter of clinically high-risk individuals develop psychosis within 2 to 3 years.",
+    "nl": "Ongeveer een vijfde tot een kwart van de klinisch hoogrisico-personen ontwikkelt binnen 2 tot 3 jaar een psychose."
+   },
+   "sources": [
+    "src:af032643f1"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:dimensional-dx",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیوستار",
+    "en": "Continuum",
+    "nl": "Continuüm"
+   }
+  },
+  {
+   "to": "psy:hitop",
+   "rel": "see-also",
+   "note": {
+    "fa": "طیف اختلال فکر",
+    "en": "Thought-disorder spectrum",
+    "nl": "Spectrum van denkstoornissen"
+   }
+  }
+ ],
+ "people": [
+  "core:thomas-mcglashan",
+  "core:scott-woods",
+  "core:allison-young"
+ ],
+ "sources": [
+  "src:af032643f1"
+ ],
+ "booklets": [
+  "psychopath:sips"
+ ],
+ "origin": "psychopath",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

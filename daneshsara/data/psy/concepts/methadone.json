@@ -1,0 +1,120 @@
+{
+ "id": "psy:methadone",
+ "kind": "concept",
+ "title": {
+  "fa": "درمان نگهدارنده با متادون",
+  "en": "Methadone maintenance",
+  "nl": "Methadononderhoud"
+ },
+ "parent": "psy:addiction-therapy",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "مادهٔ افیونی صناعی و طولانی‌اثر که در دوز ثابت مناسب، وسوسه و اثر مواد افیونی دیگر را مهار می‌کند و فرصت بازگشت به زندگی فراهم می‌کند.",
+  "en": "A synthetic, long-acting opioid that, at a suitable stable dose set by the treatment team, controls craving and the effects of other opioids and gives a chance to return to life.",
+  "nl": "Een synthetisch, langwerkend opioïde dat bij een geschikte, door het behandelteam vastgestelde stabiele dosis de trek en de effecten van andere opioïden onderdrukt en een kans biedt om terug te keren naar het leven."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فقط برای مواد افیونی؛ برای شیشه، حشیش، الکل و بنزودیازپین کاربرد ندارد.",
+    "en": "Only for opioids; it has no use for crystal meth, cannabis, alcohol or benzodiazepines.",
+    "nl": "Alleen voor opioïden; het heeft geen nut bij crystal meth, cannabis, alcohol of benzodiazepinen."
+   },
+   "sources": [
+    "src:20f93976a0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مسمومیت با آن می‌تواند کشنده باشد، به‌ویژه برای کودکان و افراد بدون تحمل؛ دور از دسترس نگه دارید.",
+    "en": "Poisoning with it can be fatal, especially for children and people without tolerance; keep it out of reach.",
+    "nl": "Vergiftiging ermee kan dodelijk zijn, vooral voor kinderen en mensen zonder tolerantie; buiten bereik bewaren."
+   },
+   "sources": [
+    "src:20f93976a0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شاید برای حدود یک‌سوم معتادان لازم باشد؛ دوز را فقط پزشک تعیین می‌کند.",
+    "en": "It may be needed for about a third of people with addiction; only a doctor sets the dose.",
+    "nl": "Het is misschien nodig voor ongeveer een derde van de mensen met een verslaving; alleen een arts stelt de dosis vast."
+   },
+   "sources": [
+    "src:20f93976a0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«متادون ابزار حل مشکلات نیست»؛ درمان نگهدارنده با سم‌زدایی فرق دارد.",
+    "en": "“Methadone is not a tool for solving problems”; maintenance treatment differs from detoxification.",
+    "nl": "‘Methadon is geen middel om problemen op te lossen’; onderhoudsbehandeling is iets anders dan ontgifting."
+   },
+   "sources": [
+    "src:20f93976a0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بوپرنورفین گزینهٔ مشابه است.",
+    "en": "Buprenorphine is a similar option.",
+    "nl": "Buprenorfine is een vergelijkbare optie."
+   },
+   "sources": [
+    "src:20f93976a0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هشت اصل درمان نگهدارنده؛ «درمان دارویی معجزه‌گر وجود ندارد».",
+    "en": "Eight principles of maintenance treatment; “there is no miracle drug treatment”.",
+    "nl": "Acht principes van onderhoudsbehandeling; ‘er bestaat geen wondermiddel’."
+   },
+   "sources": [
+    "src:20f93976a0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بوپرنورفین: آگونیست نسبی μ با اثر سقفی بر وقفهٔ تنفسی.",
+    "en": "Buprenorphine: a partial μ agonist with a ceiling effect on respiratory depression.",
+    "nl": "Buprenorfine: een partiële μ-agonist met een plafondeffect op ademhalingsdepressie."
+   },
+   "sources": [
+    "src:20f93976a0"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:addiction-families",
+   "rel": "see-also",
+   "note": {
+    "fa": "خانواده",
+    "en": "Family",
+    "nl": "Gezin"
+   }
+  }
+ ],
+ "people": [
+  "core:vincent-dole-marie-nyswander"
+ ],
+ "sources": [
+  "src:20f93976a0"
+ ],
+ "booklets": [
+  "families:methadone",
+  "clinicaddiction:pharm"
+ ],
+ "origin": "families",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

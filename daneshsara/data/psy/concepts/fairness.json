@@ -1,0 +1,135 @@
+{
+ "id": "psy:fairness",
+ "kind": "concept",
+ "title": {
+  "fa": "برابری و انصاف",
+  "en": "Fairness & egalitarianism",
+  "nl": "Rechtvaardigheid en egalitarisme"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "حساسیت انسان به تقسیم ناعادلانه: ریشه در برابری‌طلبی شکارچی-گردآورندگان، تفاوت میان فرهنگ‌ها، و ترجیح انصاف بر برابری صرف.",
+  "en": "Human sensitivity to unfair division: rooted in hunter-gatherer egalitarianism, varying across cultures, and a preference for fairness over mere equality.",
+  "nl": "Menselijke gevoeligheid voor oneerlijke verdeling: geworteld in het egalitarisme van jager-verzamelaars, verschillend per cultuur, en een voorkeur voor billijkheid boven louter gelijkheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سلسله‌مراتب وارونه (بوهم): اکثریت متحد، زورگو را مهار می‌کند.",
+    "en": "Reverse dominance hierarchy (Boehm): a united majority restrains the bully.",
+    "nl": "Omgekeerde dominantiehiërarchie (Boehm): een verenigde meerderheid houdt de pestkop in toom."
+   },
+   "sources": [
+    "src:65581141cb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تفکر حاصل‌جمع صفر و «انکار برد-برد» (جانسون ۲۰۲۲).",
+    "en": "Zero-sum thinking and “win-win denial” (Johnson 2022).",
+    "nl": "Nulsomdenken en ‘ontkenning van win-win’ (Johnson 2022)."
+   },
+   "sources": [
+    "src:65581141cb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار زاویهٔ حساسیت به بی‌عدالتی: قربانی، ناظر، ذی‌نفع، مرتکب.",
+    "en": "Four angles of justice sensitivity: victim, observer, beneficiary, perpetrator.",
+    "nl": "Vier invalshoeken van rechtvaardigheidsgevoeligheid: slachtoffer, waarnemer, begunstigde, dader."
+   },
+   "sources": [
+    "src:65581141cb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازار، دین جهانی و اندازهٔ جامعه با انصاف و تنبیه همراه‌اند (هنریک ۲۰۱۰).",
+    "en": "Markets, world religions and society size go with fairness and punishment (Henrich 2010).",
+    "nl": "Markten, wereldreligies en de omvang van de samenleving gaan samen met billijkheid en straf (Henrich 2010)."
+   },
+   "sources": [
+    "src:65581141cb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مردم با بی‌انصافی مخالف‌اند، نه با هر نابرابری (استارمنز ۲۰۱۷).",
+    "en": "People oppose unfairness, not every inequality (Starmans 2017).",
+    "nl": "Mensen zijn tegen oneerlijkheid, niet tegen elke ongelijkheid (Starmans 2017)."
+   },
+   "sources": [
+    "src:65581141cb"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-domestication",
+   "rel": "see-also",
+   "note": {
+    "fa": "تکامل",
+    "en": "Evolution",
+    "nl": "Evolutie"
+   }
+  },
+  {
+   "to": "psy:envy",
+   "rel": "see-also",
+   "note": {
+    "fa": "مقایسه",
+    "en": "Comparison",
+    "nl": "Vergelijking"
+   }
+  },
+  {
+   "to": "psy:norm-psychology",
+   "rel": "see-also",
+   "note": {
+    "fa": "هنجار",
+    "en": "Norm",
+    "nl": "Norm"
+   }
+  },
+  {
+   "to": "psy:prestige-dominance",
+   "rel": "see-also",
+   "note": {
+    "fa": "سلسله‌مراتب",
+    "en": "Hierarchy",
+    "nl": "Hiërarchie"
+   }
+  }
+ ],
+ "people": [
+  "core:christopher-boehm",
+  "core:richard-wrangham",
+  "core:joseph-henrich",
+  "core:manfred-schmitt"
+ ],
+ "sources": [
+  "src:65581141cb",
+  "src:c613fb3e74"
+ ],
+ "booklets": [
+  "fairness:evolution",
+  "fairness:zerosum",
+  "fairness:jsi",
+  "fairness:cultures",
+  "fairness:equity",
+  "conflict:complexity",
+  "shelf9:handbook",
+  "orgpsych:team"
+ ],
+ "origin": "fairness",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

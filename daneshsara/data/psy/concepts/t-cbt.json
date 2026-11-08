@@ -1,0 +1,96 @@
+{
+ "id": "psy:t-cbt",
+ "kind": "subfield",
+ "title": {
+  "fa": "درمان شناختی-رفتاری",
+  "en": "Cognitive Behavioral Therapy",
+  "nl": "Cognitieve gedragstherapie"
+ },
+ "parent": "psy:psychotherapy",
+ "field": null,
+ "summary": {
+  "fa": "رویکردی که می‌گوید افکار، احساسات و رفتارها به هم وابسته‌اند و با تغییر الگوهای فکری و رفتاری می‌توان رنج را کاهش داد. پرپشتوانه‌ترین روان‌درمانی از نظر پژوهشی.",
+  "en": "An approach holding that thoughts, feelings and behaviours are interconnected, and that changing thought and behaviour patterns can reduce suffering. The most research-supported psychotherapy.",
+  "nl": "Een benadering die stelt dat gedachten, gevoelens en gedrag samenhangen en dat het veranderen van denk- en gedragspatronen lijden kan verminderen. De best onderbouwde psychotherapie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بک: شناخت‌درمانی افسردگی (۱۹۷۹)، افکار خودآیند و خطاهای شناختی.",
+    "en": "Beck: cognitive therapy of depression (1979), automatic thoughts and cognitive errors.",
+    "nl": "Beck: cognitieve therapie bij depressie (1979), automatische gedachten en denkfouten."
+   },
+   "sources": [
+    "src:bed58901ee"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "الیس: درمان عقلانی-هیجانی-رفتاری (REBT، ۱۹۵۵) و مدل ABC.",
+    "en": "Ellis: rational emotive behaviour therapy (REBT, 1955) and the ABC model.",
+    "nl": "Ellis: rationeel-emotieve gedragstherapie (REBT, 1955) en het ABC-model."
+   },
+   "sources": [
+    "src:bed58901ee"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ساختار: جلسه‌های محدود، تکلیف خانگی، صورت‌بندی مشترک.",
+    "en": "Structure: a limited number of sessions, homework, a shared formulation.",
+    "nl": "Opbouw: een beperkt aantal sessies, huiswerk, een gedeelde formulering."
+   },
+   "sources": [
+    "src:bed58901ee"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نسخه‌های اختصاصی برای کمال‌طلبی و نشخوار در این دوره مرجع‌اند.",
+    "en": "Specific versions for perfectionism and rumination are references in this course.",
+    "nl": "Specifieke versies voor perfectionisme en piekeren zijn referenties in deze cursus."
+   },
+   "sources": [
+    "src:bed58901ee"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:cognitive-rut",
+   "rel": "see-also",
+   "note": {
+    "fa": "ثبت فکر",
+    "en": "Thought record",
+    "nl": "Gedachtenschema"
+   }
+  },
+  {
+   "to": "psy:unified-protocol",
+   "rel": "see-also",
+   "note": {
+    "fa": "نسخهٔ فراتشخیصی",
+    "en": "Transdiagnostic version",
+    "nl": "Transdiagnostische versie"
+   }
+  }
+ ],
+ "people": [
+  "core:aaron-beck",
+  "core:albert-ellis",
+  "core:judith-beck"
+ ],
+ "sources": [
+  "src:bed58901ee",
+  "src:dafaa02099"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

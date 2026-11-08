@@ -1,0 +1,108 @@
+{
+ "id": "psy:reactive-proactive",
+ "kind": "concept",
+ "title": {
+  "fa": "دو نوع پرخاشگری",
+  "en": "Reactive vs. proactive aggression",
+  "nl": "Reactieve versus proactieve agressie"
+ },
+ "parent": "psy:self-domestication",
+ "field": "psy:self-domestication",
+ "summary": {
+  "fa": "پارادوکس نیکی رنگهام: انسان در پرخاشگری واکنشی (داغ، فوری) بسیار کم و در پرخاشگری پیش‌کنشی (سرد، برنامه‌ریزی‌شده) استثنایی است. دو نوع پرخاشگری، دو زیست‌شناسی، دو تاریخ تکاملی.",
+  "en": "Richard Wrangham's paradox: humans are very low in reactive aggression (hot, immediate) and exceptional in proactive aggression (cold, planned). Two kinds of aggression, two biologies, two evolutionary histories.",
+  "nl": "De paradox van Richard Wrangham: mensen zijn zeer laag in reactieve agressie (heet, direct) en uitzonderlijk in proactieve agressie (koud, gepland). Twee soorten agressie, twee biologieën, twee evolutionaire geschiedenissen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "واکنشی: پاسخ به تهدید یا ناکامی، همراه خشم و ترس. در شامپانزه زیاد، در انسان و بونوبو کم.",
+    "en": "Reactive: a response to threat or frustration, with anger and fear. High in chimpanzees, low in humans and bonobos.",
+    "nl": "Reactief: een reactie op dreiging of frustratie, met woede en angst. Hoog bij chimpansees, laag bij mensen en bonobo's."
+   },
+   "sources": [
+    "src:0f8aacca96"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیش‌کنشی: حملهٔ هدفمند با آرامش و محاسبه؛ جنگ، اعدام، شکار. در انسان و شامپانزه زیاد، در بونوبو کم.",
+    "en": "Proactive: a targeted, calm and calculated attack; war, execution, hunting. High in humans and chimpanzees, low in bonobos.",
+    "nl": "Proactief: een doelgerichte, kalme en berekende aanval; oorlog, executie, jacht. Hoog bij mensen en chimpansees, laag bij bonobo's."
+   },
+   "sources": [
+    "src:0f8aacca96"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خوداهلی‌سازی واکنشی را کم کرد؛ اما پیش‌کنشی ائتلافی خودش ابزار این خوداهلی‌سازی بود.",
+    "en": "Self-domestication reduced reactive aggression; but coalitionary proactive aggression was itself the tool of that self-domestication.",
+    "nl": "Zelfdomesticatie verminderde reactieve agressie; maar coalitionaire proactieve agressie was zelf het instrument van die zelfdomesticatie."
+   },
+   "sources": [
+    "src:0f8aacca96"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هیر: واکنش‌دهی هیجانی بالا (یکه‌خوردن شدید) با فعالیت کمتر TPJ و mPFC هنگام تصمیم به تنبیه دیگران همراه است.",
+    "en": "Hare: high emotional reactivity (a strong startle) goes with less TPJ and mPFC activity when deciding to punish others.",
+    "nl": "Hare: hoge emotionele reactiviteit (een sterke schrikreactie) gaat samen met minder activiteit in TPJ en mPFC bij de beslissing anderen te straffen."
+   },
+   "sources": [
+    "src:0f8aacca96"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند با روان‌پزشکی: تمایز پرخاشگری تکانشی و ابزاری در اختلالات رفتاری کودکان و جامعه‌ستیزی.",
+    "en": "Link with psychiatry: distinguishing impulsive and instrumental aggression in childhood conduct disorders and psychopathy.",
+    "nl": "Link met de psychiatrie: onderscheid tussen impulsieve en instrumentele agressie bij gedragsstoornissen bij kinderen en psychopathie."
+   },
+   "sources": [
+    "src:0f8aacca96"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:n-stress",
+   "rel": "see-also",
+   "note": {
+    "fa": "پاسخ تهدید",
+    "en": "Threat response",
+    "nl": "Dreigingsreactie"
+   }
+  },
+  {
+   "to": "psy:emotion-regulation",
+   "rel": "see-also",
+   "note": {
+    "fa": "مهار واکنش",
+    "en": "Restraining reaction",
+    "nl": "Reactie inhouden"
+   }
+  }
+ ],
+ "people": [
+  "core:richard-wrangham",
+  "core:kenneth-dodge"
+ ],
+ "sources": [
+  "src:0f8aacca96",
+  "src:017a220c73"
+ ],
+ "booklets": [
+  "friendly:aggression"
+ ],
+ "origin": "friendly",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

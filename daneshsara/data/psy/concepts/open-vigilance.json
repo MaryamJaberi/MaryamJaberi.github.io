@@ -1,0 +1,94 @@
+{
+ "id": "psy:open-vigilance",
+ "kind": "concept",
+ "title": {
+  "fa": "گشودگی مراقب",
+  "en": "Open vigilance",
+  "nl": "Open waakzaamheid"
+ },
+ "parent": "psy:critical-thinking",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "انسان‌ها ساده‌لوح نیستند: سازوکارهای ارزیابی پیام، پذیرش سودمند و رد زیان‌بار را ممکن می‌کنند (هوگو مرسیه).",
+  "en": "Humans are not gullible: mechanisms for evaluating messages make it possible to accept the useful and reject the harmful (Hugo Mercier).",
+  "nl": "Mensen zijn niet goedgelovig: mechanismen om boodschappen te beoordelen maken het mogelijk het nuttige te aanvaarden en het schadelijke te verwerpen (Hugo Mercier)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تبلیغات، کارزارها و عوام‌فریبان معمولاً اثر بسیار کمی دارند.",
+    "en": "Propaganda, campaigns and demagogues usually have very little effect.",
+    "nl": "Propaganda, campagnes en demagogen hebben meestal heel weinig effect."
+   },
+   "sources": [
+    "src:fbcfacee7a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بیشتر باورهای غلط هزینهٔ عملی کمی دارند یا کارکرد اجتماعی دارند.",
+    "en": "Most false beliefs have little practical cost or serve a social function.",
+    "nl": "De meeste onjuiste overtuigingen hebben weinig praktische kosten of vervullen een sociale functie."
+   },
+   "sources": [
+    "src:fbcfacee7a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مشکل اصلی اغلب رد بیش از حد اطلاعات درست است.",
+    "en": "The main problem is often rejecting too much accurate information.",
+    "nl": "Het grootste probleem is vaak dat te veel juiste informatie wordt verworpen."
+   },
+   "sources": [
+    "src:fbcfacee7a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:suggestibility",
+   "rel": "contrasts",
+   "note": {
+    "fa": "در برابر",
+    "en": "Versus",
+    "nl": "Tegenover"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور غلط",
+    "en": "False belief",
+    "nl": "Onjuiste overtuiging"
+   }
+  },
+  {
+   "to": "psy:social-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد",
+    "en": "Trust",
+    "nl": "Vertrouwen"
+   }
+  }
+ ],
+ "people": [
+  "core:hugo-mercier",
+  "core:dan-sperber"
+ ],
+ "sources": [
+  "src:fbcfacee7a"
+ ],
+ "booklets": [
+  "shelf4:mercier"
+ ],
+ "origin": "shelf4",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

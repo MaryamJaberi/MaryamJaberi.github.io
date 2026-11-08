@@ -1,0 +1,94 @@
+{
+ "id": "psy:epistemology",
+ "kind": "subfield",
+ "title": {
+  "fa": "معرفت‌شناسی و شک‌ورزی",
+  "en": "Epistemology & skepticism",
+  "nl": "Kennistheorie en scepticisme"
+ },
+ "parent": "psy:philosophy",
+ "field": null,
+ "summary": {
+  "fa": "دانستن یعنی چه و کِی باور ما موجه است؟ پیوند مستقیم با تفکر نقادانه، توطئه‌باوری، زودباوری و اعتماد به گواهی دیگران.",
+  "en": "What does it mean to know, and when is our belief justified? Directly linked to critical thinking, conspiracy belief, gullibility and trust in others' testimony.",
+  "nl": "Wat betekent weten, en wanneer is een overtuiging gerechtvaardigd? Direct verbonden met kritisch denken, complotdenken, goedgelovigheid en vertrouwen in de getuigenis van anderen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "«دانش = باور صادق موجه» و مثال‌های نقض گتیه.",
+    "en": "“Knowledge = justified true belief” and Gettier's counterexamples.",
+    "nl": "‘Kennis = gerechtvaardigde ware overtuiging’ en de tegenvoorbeelden van Gettier."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اعتماد به متخصص بخش جدایی‌ناپذیر دانستن در جامعه است.",
+    "en": "Trust in experts is an inseparable part of knowing in society.",
+    "nl": "Vertrouwen in experts is een onlosmakelijk deel van kennen in een samenleving."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گشودگی مراقب (مرسیه): ما ذاتاً زودباور نیستیم، اما فیلترهایمان خطا می‌کنند.",
+    "en": "Open vigilance (Mercier): we are not inherently gullible, but our filters make mistakes.",
+    "nl": "Open waakzaamheid (Mercier): we zijn niet van nature goedgelovig, maar onze filters maken fouten."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:critical-thinking",
+   "rel": "see-also",
+   "note": {
+    "fa": "تفکر نقادانه",
+    "en": "Critical thinking",
+    "nl": "Kritisch denken"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور توطئه",
+    "en": "Conspiracy belief",
+    "nl": "Geloof in complotten"
+   }
+  },
+  {
+   "to": "psy:open-vigilance",
+   "rel": "see-also",
+   "note": {
+    "fa": "گشودگی مراقب",
+    "en": "Vigilant openness",
+    "nl": "Waakzame openheid"
+   }
+  },
+  {
+   "to": "psy:gullibility",
+   "rel": "see-also",
+   "note": {
+    "fa": "زودباوری",
+    "en": "Gullibility",
+    "nl": "Goedgelovigheid"
+   }
+  }
+ ],
+ "people": [
+  "core:david-hume",
+  "core:edmund-gettier",
+  "core:hugo-mercier"
+ ],
+ "sources": [],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

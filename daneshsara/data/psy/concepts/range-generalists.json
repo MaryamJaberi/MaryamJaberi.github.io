@@ -1,0 +1,95 @@
+{
+ "id": "psy:range-generalists",
+ "kind": "concept",
+ "title": {
+  "fa": "گستره و عمومی‌کاری",
+  "en": "Range: generalists vs. specialists",
+  "nl": "Range: generalisten versus specialisten"
+ },
+ "parent": "psy:p-edu",
+ "field": "psy:p-edu",
+ "summary": {
+  "fa": "دیوید اپستین: در جهانی با قواعد مبهم، نمونه‌گیری زودهنگام، تخصص دیرهنگام، یادگیری کند و تفکر قیاسی برنده‌اند.",
+  "en": "David Epstein: in a world with unclear rules, early sampling, late specialisation, slow learning and analogical thinking win.",
+  "nl": "David Epstein: in een wereld met onduidelijke regels winnen vroeg proeven, laat specialiseren, langzaam leren en analoog denken."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "راجر فدرر (چند ورزش، تخصص دیر) در برابر تایگر وودز (شروع زود و متمرکز).",
+    "en": "Roger Federer (several sports, late specialisation) versus Tiger Woods (an early, focused start).",
+    "nl": "Roger Federer (meerdere sporten, laat specialiseren) tegenover Tiger Woods (vroeg en gericht begonnen)."
+   },
+   "sources": [
+    "src:697e0f2d52"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دورهٔ نمونه‌گیری در نخبگان ورزشی قاعده است نه استثنا.",
+    "en": "A sampling period is the rule among elite athletes, not the exception.",
+    "nl": "Een periode van proeven is bij topsporters de regel, geen uitzondering."
+   },
+   "sources": [
+    "src:697e0f2d52"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کیفیت تطبیق، تفکر قیاسی، مزیت بیرونی‌ها، روباه‌ها در برابر جوجه‌تیغی‌ها.",
+    "en": "Match quality, analogical thinking, the outsider advantage, foxes versus hedgehogs.",
+    "nl": "Matchkwaliteit, analoog denken, het voordeel van buitenstaanders, vossen tegenover egels."
+   },
+   "sources": [
+    "src:697e0f2d52"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقد: هم عمق لازم است هم گستره (الگوی T شکل).",
+    "en": "Critique: both depth and breadth are needed (the T-shaped pattern).",
+    "nl": "Kritiek: zowel diepte als breedte is nodig (het T-vormige profiel)."
+   },
+   "sources": [
+    "src:697e0f2d52"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:talent-practice",
+   "rel": "contrasts",
+   "note": {
+    "fa": "در برابر تمرین زودهنگام",
+    "en": "Versus early practice",
+    "nl": "Tegenover vroeg oefenen"
+   }
+  },
+  {
+   "to": "psy:curiosity",
+   "rel": "see-also",
+   "note": {
+    "fa": "کاوش",
+    "en": "Exploration",
+    "nl": "Verkennen"
+   }
+  }
+ ],
+ "people": [
+  "core:david-epstein"
+ ],
+ "sources": [
+  "src:697e0f2d52"
+ ],
+ "booklets": [
+  "range:intro"
+ ],
+ "origin": "range",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

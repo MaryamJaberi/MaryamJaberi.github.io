@@ -1,0 +1,107 @@
+{
+ "id": "psy:adolescence",
+ "kind": "concept",
+ "title": {
+  "fa": "نوجوانی و محبوبیت",
+  "en": "Adolescence and popularity",
+  "nl": "Adolescentie en populariteit"
+ },
+ "parent": "psy:p-dev",
+ "field": "psy:p-dev",
+ "summary": {
+  "fa": "نوجوانی دورهٔ حساسیت بالای اجتماعی و ساختن هویت است؛ دو نوع محبوبیت (دوست‌داشتنی بودن و جایگاه) پیامدهای درازمدت متفاوتی دارند.",
+  "en": "Adolescence is a period of heightened social sensitivity and identity-building; two kinds of popularity (likeability and status) have different long-term outcomes.",
+  "nl": "De adolescentie is een periode van verhoogde sociale gevoeligheid en identiteitsvorming; twee soorten populariteit (aardig gevonden worden en status) hebben verschillende gevolgen op lange termijn."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "برآمدگی خاطرات: بیشتر خاطره‌های مهم از ۱۰ تا ۳۰ سالگی است.",
+    "en": "The reminiscence bump: most important memories come from ages 10 to 30.",
+    "nl": "De herinneringsbult: de meeste belangrijke herinneringen komen uit de leeftijd van 10 tot 30 jaar."
+   },
+   "sources": [
+    "src:092c956772"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خطرپذیری نوجوانان بیشتر در حضور هم‌سالان است.",
+    "en": "Adolescent risk-taking is greater in the presence of peers.",
+    "nl": "Risicogedrag van tieners is groter in aanwezigheid van leeftijdsgenoten."
+   },
+   "sources": [
+    "src:092c956772"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دوست‌داشتنی بودن با رابطه‌ها و سلامت بهتر؛ جایگاه با خطر اعتیاد و اضطراب همراه است (پرینستاین).",
+    "en": "Likeability goes with better relationships and health; status with risk of addiction and anxiety (Prinstein).",
+    "nl": "Aardig gevonden worden gaat samen met betere relaties en gezondheid; status met risico op verslaving en angst (Prinstein)."
+   },
+   "sources": [
+    "src:092c956772"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طرد اجتماعی در مغز شبیه درد پردازش می‌شود.",
+    "en": "Social rejection is processed in the brain like pain.",
+    "nl": "Sociale afwijzing wordt in het brein verwerkt als pijn."
+   },
+   "sources": [
+    "src:092c956772"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:mattering",
+   "rel": "see-also",
+   "note": {
+    "fa": "اهمیت داشتن",
+    "en": "Mattering",
+    "nl": "Ertoe doen"
+   }
+  },
+  {
+   "to": "psy:rejection-sensitivity",
+   "rel": "see-also",
+   "note": {
+    "fa": "طرد",
+    "en": "Rejection",
+    "nl": "Afwijzing"
+   }
+  },
+  {
+   "to": "psy:prestige-dominance",
+   "rel": "see-also",
+   "note": {
+    "fa": "جایگاه",
+    "en": "Status",
+    "nl": "Status"
+   }
+  }
+ ],
+ "people": [
+  "core:lucy-foulkes",
+  "core:mitch-prinstein"
+ ],
+ "sources": [
+  "src:092c956772",
+  "src:a32addc8be"
+ ],
+ "booklets": [
+  "shelf8:foulkes",
+  "shelf8:prinstein"
+ ],
+ "origin": "shelf8",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

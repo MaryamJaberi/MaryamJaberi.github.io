@@ -1,0 +1,127 @@
+{
+ "id": "psy:crisis-mh",
+ "kind": "concept",
+ "title": {
+  "fa": "سلامت روان در بحران و جنگ",
+  "en": "Mental health in crises",
+  "nl": "Mentale gezondheid in crises"
+ },
+ "parent": "psy:p-health",
+ "field": "psy:p-health",
+ "summary": {
+  "fa": "راهنمای انجمن روان‌شناسی و انجمن روانپزشکان ایران برای شرایط حمله: پذیرش هیجان، مدیریت اطلاعات، حمایت از کودکان و سالمندان، و پیوند اجتماعی.",
+  "en": "Guidance from the Psychological Association and the Psychiatric Association of Iran for times of attack: accepting emotion, managing information, supporting children and older people, and social connection.",
+  "nl": "Richtlijnen van de Psychologische Vereniging en de Psychiatrische Vereniging van Iran voor tijden van aanvallen: emotie aanvaarden, informatie hanteren, kinderen en ouderen steunen, en sociale verbondenheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ترس، اضطراب، اندوه و خشم در بحران طبیعی‌اند؛ سرکوب هیجان فشار را بیشتر می‌کند.",
+    "en": "Fear, anxiety, sadness and anger are normal in a crisis; suppressing emotion increases strain.",
+    "nl": "Angst, ongerustheid, verdriet en woede zijn normaal in een crisis; emotie onderdrukken vergroot de druk."
+   },
+   "sources": [
+    "src:29bd48779a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نام‌گذاری هیجان، تنفس، نوشتن، روال روزمره، خواب و تغذیه.",
+    "en": "Naming emotions, breathing, writing, daily routine, sleep and nutrition.",
+    "nl": "Emoties benoemen, ademhaling, schrijven, dagelijkse routine, slaap en voeding."
+   },
+   "sources": [
+    "src:29bd48779a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محدود کردن اخبار و دوری از شایعه.",
+    "en": "Limiting news and staying away from rumours.",
+    "nl": "Nieuws beperken en wegblijven van geruchten."
+   },
+   "sources": [
+    "src:29bd48779a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کودکان: توضیح ساده و صادقانه، روال عادی، فضای امن؛ سالمندان: ارتباط، مشارکت، اطلاعات درست.",
+    "en": "Children: a simple, honest explanation, a normal routine, a safe space; older people: connection, involvement, accurate information.",
+    "nl": "Kinderen: een eenvoudige, eerlijke uitleg, een gewone routine, een veilige plek; ouderen: contact, betrokkenheid, juiste informatie."
+   },
+   "sources": [
+    "src:29bd48779a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پنج اصل هابفول: امنیت، آرامش، کارآمدی، پیوند، امید.",
+    "en": "Hobfoll's five principles: safety, calm, efficacy, connectedness, hope.",
+    "nl": "De vijf principes van Hobfoll: veiligheid, rust, effectiviteit, verbondenheid, hoop."
+   },
+   "sources": [
+    "src:29bd48779a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پس از ۱۱ سپتامبر، شیوع PTSD در منهتن از ۷٫۵٪ در ماه دوم به حدود ۱٪ در بهار بعد رسید.",
+    "en": "After 9/11, PTSD prevalence in Manhattan fell from 7.5% in the second month to about 1% the following spring.",
+    "nl": "Na 11 september daalde de prevalentie van PTSS in Manhattan van 7,5% in de tweede maand naar ongeveer 1% het volgende voorjaar."
+   },
+   "sources": [
+    "src:29bd48779a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:emotion-regulation",
+   "rel": "see-also",
+   "note": {
+    "fa": "هیجان",
+    "en": "Emotion",
+    "nl": "Emotie"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "شایعه",
+    "en": "Rumour",
+    "nl": "Gerucht"
+   }
+  },
+  {
+   "to": "psy:shell-shock",
+   "rel": "see-also",
+   "note": {
+    "fa": "جنگ",
+    "en": "War",
+    "nl": "Oorlog"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:29bd48779a",
+  "src:14ebd4a925"
+ ],
+ "booklets": [
+  "crisis:mental",
+  "crisis:social",
+  "trauma:nyc"
+ ],
+ "origin": "crisis",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

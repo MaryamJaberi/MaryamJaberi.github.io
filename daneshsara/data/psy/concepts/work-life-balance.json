@@ -1,0 +1,76 @@
+{
+ "id": "psy:work-life-balance",
+ "kind": "concept",
+ "title": {
+  "fa": "تعادل کار و زندگی",
+  "en": "Work-life balance",
+  "nl": "Balans werk-privé"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "سومین تحول دنیای کار: افزایش انتظار کارکنان، در همهٔ سطوح درآمدی، برای اینکه کار زندگی و سلامت روانشان را نخورد.",
+  "en": "The third shift in the world of work: rising expectations among employees at every income level that work should not eat up their life and mental health.",
+  "nl": "De derde verschuiving in de wereld van werk: werknemers op elk inkomensniveau verwachten steeds meer dat werk hun leven en mentale gezondheid niet opslokt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "برخلاف انتظار، نه فقط مدیران پردرآمد که کارکنان کم‌درآمدِ نیازمند به حقوق هم این را می‌خواهند.",
+    "en": "Contrary to expectation, not only well-paid managers but also low-paid staff who need the salary want this.",
+    "nl": "Anders dan verwacht willen niet alleen goed betaalde managers dit, maar ook laagbetaalde medewerkers die het salaris nodig hebben."
+   },
+   "sources": [
+    "src:a0a0df7254"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پس از کووید ۱۹ شدیدتر شد.",
+    "en": "It grew stronger after COVID-19.",
+    "nl": "Het werd sterker na COVID-19."
+   },
+   "sources": [
+    "src:a0a0df7254"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«کار نمی‌ارزد؛ از زندگی‌ام می‌زند؛ با خانواده‌ام وقت نمی‌گذارم.»",
+    "en": "“Work isn't worth it; it eats into my life; I don't spend time with my family.”",
+    "nl": "‘Werk is het niet waard; het gaat ten koste van mijn leven; ik breng geen tijd door met mijn gezin.’"
+   },
+   "sources": [
+    "src:a0a0df7254"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:great-resignation",
+   "rel": "explains",
+   "note": {
+    "fa": "پیامد نبودنش",
+    "en": "What its absence leads to",
+    "nl": "Wat het ontbreken ervan veroorzaakt"
+   }
+  }
+ ],
+ "people": [
+  "core:dena-denham-smith",
+  "core:daniel-pink"
+ ],
+ "sources": [
+  "src:a0a0df7254"
+ ],
+ "booklets": [
+  "detach"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

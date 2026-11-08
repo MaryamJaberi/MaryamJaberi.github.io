@@ -1,0 +1,89 @@
+{
+ "id": "psy:bdd",
+ "kind": "concept",
+ "title": {
+  "fa": "بدریخت‌انگاری بدن",
+  "en": "Body dysmorphic disorder",
+  "nl": "Morfodysfore stoornis"
+ },
+ "parent": "psy:anxiety",
+ "field": "psy:anxiety",
+ "summary": {
+  "fa": "اشتغال ذهنی به نقصی خیالی یا جزئی در ظاهر با پریشانی و افت کارکرد؛ در خانوادهٔ وسواسی‌اجباری. شیوع حدود ۱ تا ۱٫۵٪.",
+  "en": "Preoccupation with an imagined or slight defect in appearance, with distress and impaired functioning; in the obsessive-compulsive family. Prevalence about 1 to 1.5%.",
+  "nl": "Preoccupatie met een ingebeeld of gering gebrek in het uiterlijk, met lijden en verminderd functioneren; behoort tot de obsessief-compulsieve familie. Prevalentie ongeveer 1 tot 1,5%."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "خودکشی، بستری و انزوای بالا؛ اختلالی «پنهان» به دلیل شرم.",
+    "en": "High rates of suicide, hospitalisation and isolation; a “hidden” disorder because of shame.",
+    "nl": "Hoge cijfers voor suïcide, opname en isolement; een ‘verborgen’ stoornis door schaamte."
+   },
+   "sources": [
+    "src:eb48dfa65c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وارسی آینه، پوشاندن، مقایسه، اطمینان‌جویی، کندن پوست.",
+    "en": "Mirror checking, camouflaging, comparing, reassurance-seeking, skin picking.",
+    "nl": "Controleren in de spiegel, camoufleren, vergelijken, geruststelling zoeken, aan de huid peuteren."
+   },
+   "sources": [
+    "src:eb48dfa65c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تصویر ذهنی از دیدگاه ناظر، مثل اضطراب اجتماعی.",
+    "en": "A mental image from an observer's perspective, as in social anxiety.",
+    "nl": "Een mentaal beeld vanuit het perspectief van een toeschouwer, zoals bij sociale angst."
+   },
+   "sources": [
+    "src:eb48dfa65c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جراحی زیبایی به‌ندرت کمک می‌کند؛ درمان: CBT و SSRI.",
+    "en": "Cosmetic surgery rarely helps; treatment: CBT and SSRIs.",
+    "nl": "Cosmetische chirurgie helpt zelden; behandeling: CGT en SSRI's."
+   },
+   "sources": [
+    "src:eb48dfa65c"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:perfectionism",
+   "rel": "see-also",
+   "note": {
+    "fa": "ارزش ظاهر",
+    "en": "Value of appearance",
+    "nl": "Waarde van het uiterlijk"
+   }
+  }
+ ],
+ "people": [
+  "core:david-veale",
+  "core:fugen-neziroglu",
+  "core:katharine-phillips"
+ ],
+ "sources": [
+  "src:eb48dfa65c"
+ ],
+ "booklets": [
+  "clinical:bdd",
+  "psychopath:bodyawareness"
+ ],
+ "origin": "clinical",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

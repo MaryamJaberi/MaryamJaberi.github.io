@@ -1,0 +1,30 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "bridge.schema.json",
+ "title": "صفحهٔ پل میان‌رشته‌ای",
+ "type": "object",
+ "required": ["id", "field", "between", "title", "question", "definition", "landmark", "reference", "finding", "status"],
+ "additionalProperties": false,
+ "properties": {
+  "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+  "field": {"type": "string", "description": "شناسهٔ رشته در اطلس"},
+  "between": {"type": "array", "items": {"type": "string"}, "minItems": 2, "description": "خانواده‌ها یا رشته‌های دو طرف"},
+  "title": {"type": "object", "required": ["fa", "en"], "properties": {"fa": {"type": "string"}, "en": {"type": "string"}, "nl": {"type": "string"}}},
+  "question": {"type": "object", "required": ["fa"], "properties": {"fa": {"type": "string"}, "en": {"type": "string"}, "nl": {"type": "string"}}},
+  "definition": {"type": "object", "required": ["fa"], "properties": {"fa": {"type": "string"}, "en": {"type": "string"}, "nl": {"type": "string"}}},
+  "landmark": {"type": "object", "required": ["fa"], "properties": {"fa": {"type": "string"}, "en": {"type": "string"}, "url": {"type": "string"}}},
+  "reference": {"type": "object", "required": ["fa"], "properties": {"fa": {"type": "string"}, "en": {"type": "string"}}},
+  "venue": {"type": "object", "properties": {"fa": {"type": "string"}, "en": {"type": "string"}, "url": {"type": "string"}}},
+  "people": {"type": "array", "items": {"type": "string"}},
+  "finding": {"type": "object", "required": ["fa", "replication"], "properties": {
+     "fa": {"type": "string"}, "en": {"type": "string"},
+     "replication": {"enum": ["robust", "mixed", "failed", "debate", "na"]},
+     "url": {"type": "string"}}},
+  "persian": {"type": "array", "items": {"type": "object", "required": ["title"], "properties": {"title": {"type": "string"}, "publisher": {"type": "string"}, "url": {"type": "string"}, "verified": {"type": "boolean"}}}},
+  "concepts": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "string"}}, "description": "به تفکیک ویکی: شناسهٔ مفاهیم"},
+  "iran": {"type": "object", "properties": {"fa": {"type": "string"}, "data": {"type": "array", "items": {"type": "string"}}}},
+  "url": {"type": "string"},
+  "status": {"enum": ["established", "emerging", "proposed"]},
+  "review": {"enum": ["draft", "reviewed", "expert"]}
+ }
+}

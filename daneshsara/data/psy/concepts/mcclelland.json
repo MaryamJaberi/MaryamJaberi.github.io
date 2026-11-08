@@ -1,0 +1,95 @@
+{
+ "id": "psy:mcclelland",
+ "kind": "concept",
+ "title": {
+  "fa": "سه‌گانهٔ مک‌کللند",
+  "en": "McClelland's needs theory",
+  "nl": "Behoeftetheorie van McClelland"
+ },
+ "parent": "psy:p-motivation",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "دیوید مک‌کللند سه نیاز انگیزشی اصلی را برشمرد: تعلق (Affiliation)، قدرت (Power) و دستاورد (Achievement).",
+  "en": "David McClelland identified three main motivational needs: affiliation, power and achievement.",
+  "nl": "David McClelland onderscheidde drie belangrijke motivationele behoeften: verbondenheid (affiliation), macht (power) en prestatie (achievement)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در جلسهٔ ۱: پیشرفت در یکی از این سه حوزه کافی است تا ضرر در حوزه‌های دیگر جبران شود (پیوند با اصل پیشرفت).",
+    "en": "In session 1: progress in one of these three areas is enough to make up for losses in the others (link to the progress principle).",
+    "nl": "In sessie 1: vooruitgang op één van deze drie gebieden is genoeg om verlies op de andere te compenseren (link met het vooruitgangsprincipe)."
+   },
+   "sources": [
+    "src:4bb865bef7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این سه می‌توانند بیمارگونه شوند و فرد را به تلهٔ کمال‌طلبی بکشانند، وقتی هویت فرد درگیرشان شود.",
+    "en": "These three can become pathological and draw a person into the perfectionism trap when their identity gets bound up in them.",
+    "nl": "Deze drie kunnen pathologisch worden en iemand in de val van perfectionisme trekken als de identiteit erin verstrikt raakt."
+   },
+   "sources": [
+    "src:4bb865bef7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مک‌کللند انگیزه را با آزمون اندریافت موضوع (TAT) می‌سنجید و دربارهٔ «جامعهٔ دستاوردگرا» نوشت.",
+    "en": "McClelland measured motivation with the Thematic Apperception Test (TAT) and wrote about the “achieving society”.",
+    "nl": "McClelland mat motivatie met de Thematische Apperceptietest (TAT) en schreef over de ‘prestatiegerichte samenleving’."
+   },
+   "sources": [
+    "src:4bb865bef7"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:progress-principle",
+   "rel": "see-also",
+   "note": {
+    "fa": "حوزه‌های پیشرفت",
+    "en": "Areas of progress",
+    "nl": "Groeigebieden"
+   }
+  },
+  {
+   "to": "psy:perfectionism",
+   "rel": "see-also",
+   "note": {
+    "fa": "شکل بیمارگونه",
+    "en": "Pathological form",
+    "nl": "Pathologische vorm"
+   }
+  },
+  {
+   "to": "psy:drive-system",
+   "rel": "see-also",
+   "note": {
+    "fa": "سیستم سائق",
+    "en": "Drive system",
+    "nl": "Driftsysteem"
+   }
+  }
+ ],
+ "people": [
+  "core:david-clarence-mcclelland"
+ ],
+ "sources": [
+  "src:4bb865bef7",
+  "src:955bc14469"
+ ],
+ "booklets": [
+  "t-mcclelland",
+  "theories:needs"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

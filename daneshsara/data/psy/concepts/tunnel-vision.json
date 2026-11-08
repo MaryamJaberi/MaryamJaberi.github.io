@@ -1,0 +1,96 @@
+{
+ "id": "psy:tunnel-vision",
+ "kind": "concept",
+ "title": {
+  "fa": "دید تونلی و هایپرفوکس",
+  "en": "Tunnel vision · Hyperfocus",
+  "nl": "Tunnelvisie · hyperfocus"
+ },
+ "parent": "psy:p-cog",
+ "field": "psy:p-cog",
+ "summary": {
+  "fa": "غرق شدن در یک مشکل یا هدف به‌طوری که گزینه‌ها، منابع کمک و پیامدهای گسترده‌تر پنهان می‌شوند. وقتی کسی احساس می‌کند در زندگی گیر کرده، اغلب دچار دید تونلی است.",
+  "en": "Being so absorbed in a problem or goal that options, sources of help and wider consequences are hidden. When someone feels stuck in life, they often have tunnel vision.",
+  "nl": "Zo opgaan in een probleem of doel dat opties, hulpbronnen en bredere gevolgen uit het zicht raken. Wie zich vastgelopen voelt in het leven, heeft vaak tunnelvisie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مثال مدرس: کسی که از بدنامی یا مشکل مالی ناراحت است فقط همان را می‌بیند، نه خانواده و دوستان و نهادهای کمک‌رسان.",
+    "en": "The lecturer's example: someone upset about disgrace or money problems sees only that, not family, friends and sources of help.",
+    "nl": "Voorbeeld van de docent: wie van streek is door schande of geldproblemen, ziet alleen dat, niet familie, vrienden en hulpinstanties."
+   },
+   "sources": [
+    "src:c567c0c682"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«من محدودکننده»: «تا وقتی خلق مادرم و سخت‌گیری پدرم درست نشود، نمی‌توانم زندگی کنم»؛ من به مسئلهٔ بیرونی گره خورده است.",
+    "en": "The “limiting self”: “Until my mother's mood and my father's strictness are fixed, I can't live”; the self is tied to an external problem.",
+    "nl": "Het ‘beperkende ik’: ‘Zolang de stemming van mijn moeder en de strengheid van mijn vader niet veranderen, kan ik niet leven’; het ik is vastgeknoopt aan een extern probleem."
+   },
+   "sources": [
+    "src:c567c0c682"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "راهکارها: روزنگار، برنامهٔ ساعتی، پرسش آگاهانه از گزینه‌ها، گفت‌وگو، کمک حرفه‌ای، «نقشهٔ گزینه‌ها» (جایگزین‌ها، پیامدها، بخش قابل کنترل، اقدام کوچک).",
+    "en": "Remedies: a journal, an hourly schedule, consciously asking about options, conversation, professional help, an “options map” (alternatives, consequences, the controllable part, a small action).",
+    "nl": "Remedies: een dagboek, een uurplanning, bewust naar opties vragen, gesprekken, professionele hulp, een ‘optiekaart’ (alternatieven, gevolgen, het beïnvloedbare deel, een kleine stap)."
+   },
+   "sources": [
+    "src:c567c0c682"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهش مرتبط (ویراستار): مولایناتان و شفیر در «کمبود» نشان دادند کمبود (پول، وقت) توجه را تونلی می‌کند و «پهنای باند» شناختی را کم.",
+    "en": "Related research (editor's note): in Scarcity, Mullainathan and Shafir showed that scarcity (of money, time) creates tunnel vision and reduces cognitive “bandwidth”.",
+    "nl": "Verwant onderzoek (noot van de redactie): in Scarcity lieten Mullainathan en Shafir zien dat schaarste (aan geld, tijd) tunnelvisie geeft en de cognitieve ‘bandbreedte’ verkleint."
+   },
+   "sources": [
+    "src:c567c0c682"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "تنگ‌نظری اجتماعی",
+    "en": "Social narrowness",
+    "nl": "Sociale kortzichtigheid"
+   }
+  },
+  {
+   "to": "psy:perseverance",
+   "rel": "see-also",
+   "note": {
+    "fa": "بخش قابل کنترل",
+    "en": "The controllable part",
+    "nl": "Het beïnvloedbare deel"
+   }
+  }
+ ],
+ "people": [
+  "core:sendhil-mullainathan-eldar-shafir"
+ ],
+ "sources": [
+  "src:c567c0c682",
+  "src:101831bbf2"
+ ],
+ "booklets": [
+  "decision:tunnel"
+ ],
+ "origin": "decision",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

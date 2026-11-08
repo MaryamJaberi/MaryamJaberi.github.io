@@ -1,0 +1,127 @@
+{
+ "id": "psy:stimulants",
+ "kind": "concept",
+ "title": {
+  "fa": "شیشه و محرک‌ها",
+  "en": "Stimulants & methamphetamine",
+  "nl": "Stimulantia en methamfetamine"
+ },
+ "parent": "psy:substances",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "کوکائین، آمفتامین، متامفتامین (شیشه)، اکستازی و ریتالین؛ اثرات مشابه با قدرت و طول اثر متفاوت.",
+  "en": "Cocaine, amphetamine, methamphetamine (crystal), ecstasy and Ritalin; similar effects with different strength and duration.",
+  "nl": "Cocaïne, amfetamine, methamfetamine (crystal meth), xtc en ritalin; vergelijkbare effecten met verschillende sterkte en duur."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آمفتامین‌ها در ۱۹۲۹ با الهام از آدرنالین و افدرا ساخته شدند و تا حدود ۱۹۷۰ دارو بودند.",
+    "en": "Amphetamines were made in 1929, inspired by adrenaline and ephedra, and were medicines until about 1970.",
+    "nl": "Amfetaminen werden in 1929 gemaakt, geïnspireerd door adrenaline en efedra, en waren tot ongeveer 1970 geneesmiddelen."
+   },
+   "sources": [
+    "src:2e7cf4f03f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جنون شیشه تا یک‌سوم مصرف‌کنندگان؛ ۸۵٪ طی یک ماه پس از قطع بهبود؛ اگر طی ۶ ماه بهبود نیابد خطر مزمن شدن.",
+    "en": "Meth psychosis in up to a third of users; 85% recover within a month of stopping; if not recovered within 6 months, there is a risk of chronicity.",
+    "nl": "Methamfetaminepsychose bij tot een derde van de gebruikers; 85% herstelt binnen een maand na het stoppen; zonder herstel binnen 6 maanden is er risico op chroniciteit."
+   },
+   "sources": [
+    "src:2e7cf4f03f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سه‌گانهٔ مشکل‌ساز پس از ترک: وسوسه، خستگی، بی‌حوصلگی/افسردگی.",
+    "en": "The troublesome trio after quitting: craving, fatigue, boredom/depression.",
+    "nl": "Het lastige drietal na het stoppen: trek, vermoeidheid, verveling/depressie."
+   },
+   "sources": [
+    "src:2e7cf4f03f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دارودرمانی سهم کمی دارد (حدود ۱۵٪)؛ مداخلات روانی-اجتماعی حدود ۸۵٪.",
+    "en": "Medication plays a small part (about 15%); psychosocial interventions about 85%.",
+    "nl": "Medicatie speelt een kleine rol (ongeveer 15%); psychosociale interventies ongeveer 85%."
+   },
+   "sources": [
+    "src:2e7cf4f03f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«فاز»: بخشی از اثر محرک‌ها یادگرفتنی و تلقینی است.",
+    "en": "“The buzz”: part of stimulants' effect is learned and suggestion.",
+    "nl": "‘De kick’: een deel van het effect van stimulantia is aangeleerd en suggestie."
+   },
+   "sources": [
+    "src:2e7cf4f03f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ریتالین تجویزی با مصرف غیرقانونی در مقدار، راه مصرف و نظارت تفاوت اساسی دارد.",
+    "en": "Prescribed Ritalin differs fundamentally from illicit use in amount, route and supervision.",
+    "nl": "Voorgeschreven ritalin verschilt wezenlijk van illegaal gebruik in hoeveelheid, toedieningsweg en toezicht."
+   },
+   "sources": [
+    "src:2e7cf4f03f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خطر خونریزی مغزی در متامفتامین حدود ۵ برابر؛ اختلال شناختی پس از قطع ابتدا بدتر و گاه تا ۶ ماه.",
+    "en": "Risk of brain haemorrhage with methamphetamine about 5-fold; cognitive impairment after stopping first worsens and sometimes lasts up to 6 months.",
+    "nl": "Risico op hersenbloeding bij methamfetamine ongeveer 5 keer zo groot; cognitieve achteruitgang na het stoppen wordt eerst erger en duurt soms tot 6 maanden."
+   },
+   "sources": [
+    "src:2e7cf4f03f"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:delusion",
+   "rel": "see-also",
+   "note": {
+    "fa": "هذیان",
+    "en": "Delusion",
+    "nl": "Waan"
+   }
+  },
+  {
+   "to": "psy:suggestibility",
+   "rel": "see-also",
+   "note": {
+    "fa": "فاز",
+    "en": "Phase",
+    "nl": "Fase"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:2e7cf4f03f"
+ ],
+ "booklets": [
+  "families:meth",
+  "clinicaddiction:stimulants"
+ ],
+ "origin": "families",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,103 @@
+{
+ "id": "psy:phil-psychiatry",
+ "kind": "subfield",
+ "title": {
+  "fa": "فلسفهٔ روان‌پزشکی: اختلال چیست؟",
+  "en": "Philosophy of psychiatry",
+  "nl": "Filosofie van de psychiatrie"
+ },
+ "parent": "psy:philosophy",
+ "field": null,
+ "summary": {
+  "fa": "مرز رنج عادی و بیماری کجاست؟ آیا اختلال‌ها «دسته‌های طبیعی»اند یا ساختهٔ ارزش‌های ما؟ تعریف ویکفیلد: اختلال یعنی «کژکاری زیان‌بار».",
+  "en": "Where is the line between ordinary suffering and illness? Are disorders “natural kinds” or products of our values? Wakefield's definition: a disorder is a “harmful dysfunction”.",
+  "nl": "Waar ligt de grens tussen gewoon lijden en ziekte? Zijn stoornissen ‘natuurlijke soorten’ of producten van onze waarden? De definitie van Wakefield: een stoornis is een ‘schadelijke disfunctie’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کژکاری (امری علمی) به‌علاوهٔ زیان (داوری ارزشی).",
+    "en": "Dysfunction (a scientific matter) plus harm (a value judgement).",
+    "nl": "Disfunctie (een wetenschappelijke kwestie) plus schade (een waardeoordeel)."
+   },
+   "sources": [
+    "src:a9bc899cfb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بحث مقوله‌ای در برابر ابعادی، و HiTOP.",
+    "en": "The categorical versus dimensional debate, and HiTOP.",
+    "nl": "Het debat categoriaal tegenover dimensionaal, en HiTOP."
+   },
+   "sources": [
+    "src:a9bc899cfb"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برچسب تشخیص می‌تواند هم کمک کند (دسترسی به درمان) هم آسیب بزند (انگ، روایت قربانی).",
+    "en": "A diagnostic label can both help (access to treatment) and harm (stigma, a victim narrative).",
+    "nl": "Een diagnostisch etiket kan zowel helpen (toegang tot behandeling) als schaden (stigma, een slachtofferverhaal)."
+   },
+   "sources": [
+    "src:a9bc899cfb"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:dimensional-dx",
+   "rel": "see-also",
+   "note": {
+    "fa": "ابعادی",
+    "en": "Dimensional",
+    "nl": "Dimensionaal"
+   }
+  },
+  {
+   "to": "psy:overdiagnosis",
+   "rel": "see-also",
+   "note": {
+    "fa": "بیش‌تشخیص",
+    "en": "Overdiagnosis",
+    "nl": "Overdiagnose"
+   }
+  },
+  {
+   "to": "psy:hitop",
+   "rel": "see-also",
+   "note": {
+    "fa": "HiTOP",
+    "en": null,
+    "nl": null
+   }
+  },
+  {
+   "to": "psy:morality-mh",
+   "rel": "see-also",
+   "note": {
+    "fa": "اخلاق و اختلال",
+    "en": "Morality and disorder",
+    "nl": "Moraal en stoornis"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-jaspers",
+  "core:jerome-wakefield",
+  "core:kenneth-kendler",
+  "core:allen-frances"
+ ],
+ "sources": [
+  "src:a9bc899cfb"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

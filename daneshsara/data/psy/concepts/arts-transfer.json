@@ -1,0 +1,101 @@
+{
+ "id": "psy:arts-transfer",
+ "kind": "concept",
+ "title": {
+  "fa": "آیا هنر باهوش‌تر می‌کند؟",
+  "en": "Arts and cognitive transfer",
+  "nl": "Kunst en cognitieve transfer"
+ },
+ "parent": "psy:p-aesthetics",
+ "field": "psy:p-aesthetics",
+ "summary": {
+  "fa": "ادعای رایج: آموزش هنر و موسیقی نمره و هوش‌بهر را بالا می‌برد. شواهد: همبستگی هست، علیت ضعیف است؛ ارزش واقعی در «عادت‌های ذهنی» است.",
+  "en": "A common claim: arts and music education raise grades and IQ. Evidence: there is correlation, but causation is weak; the real value lies in “habits of mind”.",
+  "nl": "Een gangbare bewering: kunst- en muziekonderwijs verhogen cijfers en IQ. Bewijs: er is samenhang, maar causaliteit is zwak; de echte waarde ligt in ‘denkgewoonten’."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "وان و وینر (۲۰۰۰): SAT ترکیبی از ۸۸۶ (بدون کلاس هنر) تا ۹۵۲ (چهار سال)؛ اما همبستگی است و خانواده‌های پردرآمد هر دو را دارند.",
+    "en": "Vaughn and Winner (2000): combined SAT from 886 (no art classes) to 952 (four years); but it is correlation, and high-income families have both.",
+    "nl": "Vaughn en Winner (2000): gecombineerde SAT van 886 (geen kunstlessen) tot 952 (vier jaar); maar het is correlatie, en gezinnen met een hoog inkomen hebben beide."
+   },
+   "sources": [
+    "src:03eb59f0be"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاترال (۱۹۹۷) و هیث (۱۹۹۸): دانش‌آموزان هنری‌تر نمرهٔ بهتر و ترک تحصیل کمتر دارند؛ در انگلستان رابطه معکوس و در هلند بی‌رابطه است.",
+    "en": "Catterall (1997) and Heath (1998): more artistic students have better grades and drop out less; in England the relation is reversed and in the Netherlands there is none.",
+    "nl": "Catterall (1997) en Heath (1998): kunstzinnigere leerlingen hebben betere cijfers en vallen minder vaak uit; in Engeland is het verband omgekeerd en in Nederland is er geen."
+   },
+   "sources": [
+    "src:03eb59f0be"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شلنبرگ (۲۰۰۴): ۱۴۴ کودک تصادفی؛ گروه‌های موسیقی حدود ۲٫۷ امتیاز هوش‌بهر بیشتر افزایش داشتند.",
+    "en": "Schellenberg (2004): 144 randomly assigned children; the music groups gained about 2.7 more IQ points.",
+    "nl": "Schellenberg (2004): 144 willekeurig ingedeelde kinderen; de muziekgroepen gingen er ongeveer 2,7 IQ-punten meer op vooruit."
+   },
+   "sources": [
+    "src:03eb59f0be"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فراتحلیل سالا و گوبه (۲۰۱۷): در پژوهش‌های باکیفیت، انتقال تقریباً صفر است. «اثر موتسارت» هم تکرار نشد.",
+    "en": "Sala and Gobet's meta-analysis (2017): in high-quality studies, transfer is close to zero. The “Mozart effect” did not replicate either.",
+    "nl": "Meta-analyse van Sala en Gobet (2017): in studies van hoge kwaliteit is de transfer bijna nul. Ook het ‘Mozart-effect’ werd niet gerepliceerd."
+   },
+   "sources": [
+    "src:03eb59f0be"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "عادت‌های ذهنی کارگاهی (هتلند، وینر و همکاران): دقیق‌دیدن، تجسم، کاوش، پشتکار، نقد و تأمل.",
+    "en": "Studio habits of mind (Hetland, Winner and colleagues): observing closely, envisioning, exploring, persisting, critiquing and reflecting.",
+    "nl": "Studio habits of mind (Hetland, Winner en collega's): nauwkeurig kijken, verbeelden, verkennen, volhouden, kritiek geven en reflecteren."
+   },
+   "sources": [
+    "src:03eb59f0be"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:p-edu",
+   "rel": "see-also",
+   "note": {
+    "fa": "آموزش",
+    "en": "Education",
+    "nl": "Onderwijs"
+   }
+  }
+ ],
+ "people": [
+  "core:glenn-schellenberg",
+  "core:giovanni-sala-fernand-gobet",
+  "core:lois-hetland"
+ ],
+ "sources": [
+  "src:03eb59f0be",
+  "src:c4ea361497",
+  "src:8e6760df89"
+ ],
+ "booklets": [
+  "art:smarter"
+ ],
+ "origin": "art",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

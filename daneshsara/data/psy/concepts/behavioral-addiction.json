@@ -1,0 +1,116 @@
+{
+ "id": "psy:behavioral-addiction",
+ "kind": "concept",
+ "title": {
+  "fa": "اعتیاد رفتاری",
+  "en": "Behavioral addiction",
+  "nl": "Gedragsverslaving"
+ },
+ "parent": "psy:addiction",
+ "field": "psy:addiction",
+ "summary": {
+  "fa": "از دست رفتن کنترل بر رفتاری غیرمادی (بازی، شبکهٔ اجتماعی، خرید، کار، ورزش) با پیامد زیان‌بار؛ موضوع کتاب «مقاومت‌ناپذیر» آدام آلتر.",
+  "en": "Loss of control over a non-substance behaviour (gaming, social media, shopping, work, exercise) with harmful consequences; the subject of Adam Alter's book Irresistible.",
+  "nl": "Controleverlies over een gedrag zonder middel (gamen, sociale media, winkelen, werken, sporten) met schadelijke gevolgen; het onderwerp van Adam Alters boek Irresistible."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گزارشی که آلتر نقل می‌کند، حدود ۴۱٪ مردم در یک سال دست‌کم یک اعتیاد رفتاری را تجربه کرده‌اند.",
+    "en": "According to a report Alter cites, about 41% of people have experienced at least one behavioural addiction in a year.",
+    "nl": "Volgens een rapport dat Alter aanhaalt, heeft ongeveer 41% van de mensen in een jaar minstens één gedragsverslaving meegemaakt."
+   },
+   "sources": [
+    "src:0f38a4b6a9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شش ماده: هدف، بازخورد، پیشرفت، تشدید، معلق‌گذاری، تعامل اجتماعی؛ همان سازوکارهای انگیزشی که برای عادت‌های خوب هم به کار می‌آیند.",
+    "en": "Six ingredients: goals, feedback, progress, escalation, cliffhangers, social interaction; the same motivational mechanisms that also work for good habits.",
+    "nl": "Zes ingrediënten: doelen, feedback, vooruitgang, escalatie, cliffhangers, sociale interactie; dezelfde motivationele mechanismen die ook voor goede gewoonten werken."
+   },
+   "sources": [
+    "src:0f38a4b6a9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«هرگز از جنس خودت نزن»: سازندگان فناوری‌ها فرزندانشان را از آن‌ها دور نگه می‌دارند.",
+    "en": "“Never get high on your own supply”: technology makers keep their children away from it.",
+    "nl": "‘Never get high on your own supply’: makers van technologie houden hun kinderen er weg van."
+   },
+   "sources": [
+    "src:0f38a4b6a9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "راه‌حل‌ها: پیشگیری در کودکی، معماری عادت و محیط، بازی‌وارسازی معکوس.",
+    "en": "Solutions: prevention in childhood, the architecture of habits and environment, reverse gamification.",
+    "nl": "Oplossingen: preventie in de kindertijd, de architectuur van gewoonten en omgeving, omgekeerde gamificatie."
+   },
+   "sources": [
+    "src:0f38a4b6a9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "DSM-5 فقط قمار را به‌طور رسمی اعتیاد رفتاری می‌داند؛ اختلال بازی اینترنتی در بخش «نیازمند پژوهش بیشتر» است.",
+    "en": "DSM-5 officially recognises only gambling as a behavioural addiction; internet gaming disorder is in the section “needing further research”.",
+    "nl": "De DSM-5 erkent officieel alleen gokken als gedragsverslaving; internetgamestoornis staat in het deel ‘verder onderzoek nodig’."
+   },
+   "sources": [
+    "src:0f38a4b6a9"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:craving",
+   "rel": "see-also",
+   "note": {
+    "fa": "وسوسه",
+    "en": "Craving",
+    "nl": "Trek"
+   }
+  },
+  {
+   "to": "psy:n-reward",
+   "rel": "see-also",
+   "note": {
+    "fa": "پاداش",
+    "en": "Reward",
+    "nl": "Beloning"
+   }
+  },
+  {
+   "to": "psy:goal-pursuit",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکارهای مشترک",
+    "en": "Shared mechanisms",
+    "nl": "Gedeelde mechanismen"
+   }
+  }
+ ],
+ "people": [
+  "core:adam-alter",
+  "core:mark-griffiths"
+ ],
+ "sources": [
+  "src:0f38a4b6a9"
+ ],
+ "booklets": [
+  "habits:alter"
+ ],
+ "origin": "habits",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

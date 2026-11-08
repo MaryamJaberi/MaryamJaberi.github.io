@@ -1,0 +1,85 @@
+{
+ "id": "psy:n-stress",
+ "kind": "subfield",
+ "title": {
+  "fa": "استرس و محور HPA",
+  "en": "Stress · HPA axis",
+  "nl": "Stress · HPA-as"
+ },
+ "parent": "psy:neuroscience",
+ "field": null,
+ "summary": {
+  "fa": "پاسخ زیستی به استرس از دو مسیر: سیستم سمپاتیک (آدرنالین، پاسخ جنگ یا گریز) و محور هیپوتالاموس-هیپوفیز-آدرنال (کورتیزول).",
+  "en": "The biological stress response along two routes: the sympathetic system (adrenaline, fight-or-flight) and the hypothalamic-pituitary-adrenal axis (cortisol).",
+  "nl": "De biologische stressreactie via twee routes: het sympathische zenuwstelsel (adrenaline, vecht-of-vluchtreactie) en de hypothalamus-hypofyse-bijnieras (cortisol)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پاسخ حاد سازگارانه است؛ فعال‌ماندن مزمن به بدن و مغز آسیب می‌زند (بار آلوستاتیک).",
+    "en": "The acute response is adaptive; chronic activation damages body and brain (allostatic load).",
+    "nl": "De acute reactie is adaptief; chronische activatie beschadigt lichaam en brein (allostatische belasting)."
+   },
+   "sources": [
+    "src:8275764283"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ساپولسکی: انسان‌ها برخلاف گورخر، با فکرکردن به تهدیدهای گذشته و آینده محور استرس را روشن نگه می‌دارند؛ همان نشخوار.",
+    "en": "Sapolsky: unlike zebras, humans keep the stress axis switched on by thinking about past and future threats; that is, rumination.",
+    "nl": "Sapolsky: anders dan zebra's houden mensen de stressas aan door te denken aan vroegere en toekomstige dreigingen; met andere woorden piekeren."
+   },
+   "sources": [
+    "src:8275764283"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پایهٔ «برانگیختگی و تنش جسمی» در چرخهٔ پارادوکس بازیابی.",
+    "en": "The basis of “arousal and physical strain” in the recovery-paradox cycle.",
+    "nl": "De basis van ‘opwinding en lichamelijke spanning’ in de cyclus van de herstelparadox."
+   },
+   "sources": [
+    "src:8275764283"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "روشن نگه‌داشتن محور استرس",
+    "en": "Keeping the stress axis switched on",
+    "nl": "De stressas aan laten staan"
+   }
+  },
+  {
+   "to": "psy:p-health",
+   "rel": "see-also",
+   "note": {
+    "fa": "روان‌شناسی سلامت",
+    "en": "Health psychology",
+    "nl": "Gezondheidspsychologie"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-sapolsky",
+  "core:bruce-mcewen",
+  "core:hans-selye"
+ ],
+ "sources": [
+  "src:8275764283",
+  "src:3107016a85"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

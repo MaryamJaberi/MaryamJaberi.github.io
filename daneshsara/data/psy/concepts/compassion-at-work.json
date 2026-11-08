@@ -1,0 +1,122 @@
+{
+ "id": "psy:compassion-at-work",
+ "kind": "concept",
+ "title": {
+  "fa": "شفقت در محیط کار",
+  "en": "Compassion at work",
+  "nl": "Compassie op het werk"
+ },
+ "parent": "psy:p-io",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "وورلاین و داتن شفقت را فرایندی چهاربخشی می‌دانند: توجه به رنج، تفسیر آن، احساس دغدغهٔ همدلانه، و اقدام برای کاستن از آن.",
+  "en": "Worline and Dutton see compassion as a four-part process: noticing suffering, interpreting it, feeling empathic concern, and acting to reduce it.",
+  "nl": "Worline en Dutton zien compassie als een proces in vier delen: lijden opmerken, het interpreteren, empathische bezorgdheid voelen en handelen om het te verminderen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "«رنج در کار هزینه‌ای پنهان برای توانایی انسانی است.»",
+    "en": "“Suffering at work is a hidden cost to human capability.”",
+    "nl": "‘Lijden op het werk is een verborgen kostenpost voor menselijk vermogen.’"
+   },
+   "sources": [
+    "src:72b04d0b65"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سازمان‌ها می‌توانند «شایستگی شفقت» را در ساختار، نقش‌ها و روال‌هایشان طراحی کنند.",
+    "en": "Organisations can design “compassion competence” into their structures, roles and routines.",
+    "nl": "Organisaties kunnen ‘compassiecompetentie’ inbouwen in hun structuren, rollen en routines."
+   },
+   "sources": [
+    "src:72b04d0b65"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شفقت را نمی‌توان دستور داد؛ وقتی افراد به‌طور اصیل رنجی را ببینند پدید می‌آید (پیوند با اصل خودبرگزیدگان).",
+    "en": "Compassion cannot be ordered; it arises when people genuinely see suffering (link to the self-selectors principle).",
+    "nl": "Compassie kan niet worden bevolen; ze ontstaat wanneer mensen lijden echt zien (link met het principe van zelfselecteerders)."
+   },
+   "sources": [
+    "src:72b04d0b65"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ریشهٔ پژوهشی: گروه Compassion Lab در دانشگاه میشیگان.",
+    "en": "Research root: the CompassionLab group at the University of Michigan.",
+    "nl": "Onderzoeksbasis: de groep CompassionLab aan de Universiteit van Michigan."
+   },
+   "sources": [
+    "src:72b04d0b65"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار مرحله: توجه، تفسیر، احساس، اقدام؛ شایستگی شفقت: گستره، مقیاس، سرعت، سفارشی‌سازی.",
+    "en": "Four stages: noticing, interpreting, feeling, acting; compassion competence: scope, scale, speed, customisation.",
+    "nl": "Vier fasen: opmerken, interpreteren, voelen, handelen; compassiecompetentie: reikwijdte, schaal, snelheid, maatwerk."
+   },
+   "sources": [
+    "src:72b04d0b65"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شش مانع که دل‌ها را سنگ می‌کند (ورلاین و داتون ۲۰۱۷).",
+    "en": "Six obstacles that harden hearts (Worline and Dutton 2017).",
+    "nl": "Zes obstakels die harten verharden (Worline en Dutton 2017)."
+   },
+   "sources": [
+    "src:72b04d0b65"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-compassion",
+   "rel": "see-also",
+   "note": {
+    "fa": "هم‌خانواده",
+    "en": "Related",
+    "nl": "Verwant"
+   }
+  },
+  {
+   "to": "psy:self-selectors",
+   "rel": "see-also",
+   "note": {
+    "fa": "نمی‌توان دستور داد",
+    "en": "Cannot be ordered",
+    "nl": "Kan niet worden bevolen"
+   }
+  }
+ ],
+ "people": [
+  "core:monica-worline",
+  "core:jane-dutton",
+  "core:jason-kanov"
+ ],
+ "sources": [
+  "src:72b04d0b65",
+  "src:0251cf91f6"
+ ],
+ "booklets": [
+  "labor",
+  "poswork:individual",
+  "compassion:work"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

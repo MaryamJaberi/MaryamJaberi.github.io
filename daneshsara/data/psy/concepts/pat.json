@@ -1,0 +1,105 @@
+{
+ "id": "psy:pat",
+ "kind": "subfield",
+ "title": {
+  "fa": "درمان عاطفهٔ مثبت (PAT)",
+  "en": "Positive Affect Treatment",
+  "nl": "Positive Affect Treatment"
+ },
+ "parent": "psy:psychotherapy",
+ "field": null,
+ "summary": {
+  "fa": "درمانی که میشل کراسک و همکاران در UCLA برای بی‌لذتی (آن‌هدونیا) ساختند؛ به‌جای کاهش هیجان منفی، مستقیماً سیستم پاداش و هیجان مثبت را هدف می‌گیرد.",
+  "en": "A therapy built by Michelle Craske and colleagues at UCLA for anhedonia; instead of reducing negative emotion, it directly targets the reward system and positive emotion.",
+  "nl": "Een therapie die Michelle Craske en collega's aan UCLA ontwikkelden voor anhedonie; in plaats van negatieve emotie te verminderen, richt ze zich direct op het beloningssysteem en positieve emotie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سه بخش: برنامه‌ریزی فعالیت‌های پاداش‌دهنده، توجه به مثبت‌ها (مزه‌مزه‌کردن)، و ساختن مثبت‌ها (قدردانی، مهربانی، سخاوت).",
+    "en": "Three parts: scheduling rewarding activities, attending to positives (savouring), and building positives (gratitude, kindness, generosity).",
+    "nl": "Drie delen: belonende activiteiten plannen, aandacht voor het positieve (genieten), en het positieve opbouwen (dankbaarheid, vriendelijkheid, vrijgevigheid)."
+   },
+   "sources": [
+    "src:5be8982b4b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کارآزمایی بالینی کراسک و همکاران (۲۰۱۹) نشان داد عاطفهٔ مثبت را بیش از درمانی متمرکز بر هیجان منفی افزایش می‌دهد.",
+    "en": "Craske and colleagues' clinical trial (2019) showed it increases positive affect more than a treatment focused on negative emotion.",
+    "nl": "De klinische studie van Craske en collega's (2019) liet zien dat het positief affect meer verhoogt dan een behandeling gericht op negatieve emotie."
+   },
+   "sources": [
+    "src:5be8982b4b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محور سوم مداخلات دوره: Positive Affect Treatments؛ نسخهٔ سازمانی آن در کارگروه هیجان مثبت.",
+    "en": "The course's third line of interventions: positive affect treatments; its organisational version in the positive-emotion workgroup.",
+    "nl": "De derde interventielijn van de cursus: behandelingen gericht op positief affect; de organisatieversie in de werkgroep positieve emotie."
+   },
+   "sources": [
+    "src:5be8982b4b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اصل پیشرفت امابیل همتای سازمانی آن است: شادکامی‌های کوچک موتور را روشن می‌کنند.",
+    "en": "Amabile's progress principle is its organisational counterpart: small joys switch on the engine.",
+    "nl": "Het vooruitgangsprincipe van Amabile is de tegenhanger in organisaties: kleine vreugdes zetten de motor aan."
+   },
+   "sources": [
+    "src:5be8982b4b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:progress-principle",
+   "rel": "see-also",
+   "note": {
+    "fa": "همتای سازمانی",
+    "en": "Organisational counterpart",
+    "nl": "Tegenhanger in organisaties"
+   }
+  },
+  {
+   "to": "psy:n-reward",
+   "rel": "see-also",
+   "note": {
+    "fa": "سیستم پاداش",
+    "en": "Reward system",
+    "nl": "Beloningssysteem"
+   }
+  },
+  {
+   "to": "psy:anhedonia",
+   "rel": "applies-to",
+   "note": {
+    "fa": "هدف درمان",
+    "en": "Treatment target",
+    "nl": "Behandeldoel"
+   }
+  }
+ ],
+ "people": [
+  "core:michelle-craske"
+ ],
+ "sources": [
+  "src:5be8982b4b",
+  "src:0fc93b696c"
+ ],
+ "booklets": [
+  "strengths"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

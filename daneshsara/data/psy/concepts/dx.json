@@ -1,0 +1,99 @@
+{
+ "id": "psy:dx",
+ "kind": "subfield",
+ "title": {
+  "fa": "طبقه‌بندی و تشخیص",
+  "en": "Classification · DSM / ICD",
+  "nl": "Classificatie · DSM / ICD"
+ },
+ "parent": "psy:psychiatry",
+ "field": null,
+ "summary": {
+  "fa": "نظام‌های رسمی طبقه‌بندی اختلالات روانی که زبان مشترک بالین و پژوهش را می‌سازند.",
+  "en": "The official classification systems of mental disorders that provide a common language for clinic and research.",
+  "nl": "De officiële classificatiesystemen van psychische stoornissen die kliniek en onderzoek een gemeenschappelijke taal geven."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "DSM-I در ۱۹۵۲؛ DSM-III (۱۹۸۰، به رهبری رابرت اسپیتزر) معیارهای صریح و «بی‌طرف از نظریه» آورد؛ DSM-5 در ۲۰۱۳ و DSM-5-TR در ۲۰۲۲.",
+    "en": "DSM-I in 1952; DSM-III (1980, led by Robert Spitzer) brought explicit, “theory-neutral” criteria; DSM-5 in 2013 and DSM-5-TR in 2022.",
+    "nl": "DSM-I in 1952; de DSM-III (1980, onder leiding van Robert Spitzer) bracht expliciete, ‘theorieneutrale’ criteria; DSM-5 in 2013 en DSM-5-TR in 2022."
+   },
+   "sources": [
+    "src:71af554f78"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ICD-11 سازمان جهانی بهداشت از ۲۰۲۲ اجرایی شد؛ فرسودگی را «پدیدهٔ شغلی» می‌داند نه بیماری.",
+    "en": "The WHO's ICD-11 came into effect in 2022; it treats burnout as an “occupational phenomenon”, not an illness.",
+    "nl": "De ICD-11 van de WHO is sinds 2022 van kracht; ze ziet burn-out als een ‘beroepsgerelateerd verschijnsel’, niet als ziekte."
+   },
+   "sources": [
+    "src:71af554f78"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چارچوب‌های جایگزین: RDoC (مؤسسهٔ ملی سلامت روان آمریکا، ۲۰۰۹) بر ابعاد زیستی-رفتاری، و HiTOP بر ابعاد پیوسته.",
+    "en": "Alternative frameworks: RDoC (US National Institute of Mental Health, 2009) based on biobehavioural dimensions, and HiTOP based on continuous dimensions.",
+    "nl": "Alternatieve kaders: RDoC (Amerikaans National Institute of Mental Health, 2009) op basis van biologisch-gedragsmatige dimensies, en HiTOP op basis van continue dimensies."
+   },
+   "sources": [
+    "src:71af554f78"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کارگاه «مرز میان سلامت و اختلال روان»: دوازده گزاره دربارهٔ ایرادات نظام دسته‌ای و جایگزین‌های بُعدی و فرایندی.",
+    "en": "The workshop “The line between mental health and disorder”: twelve propositions on the flaws of the categorical system and dimensional and process-based alternatives.",
+    "nl": "De workshop ‘De grens tussen mentale gezondheid en stoornis’: twaalf stellingen over de gebreken van het categoriale systeem en dimensionale en procesgerichte alternatieven."
+   },
+   "sources": [
+    "src:71af554f78"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پایایی بازآزمایی: درجه‌بندی ۰ تا ۳ علائم ۰٫۸۳، علائم دوگانه ۰٫۷۴، تشخیص دوگانه ۰٫۴۴ (لاهی و همکاران ۲۰۲۲).",
+    "en": "Test-retest reliability: 0-to-3 symptom ratings 0.83, dichotomous symptoms 0.74, dichotomous diagnosis 0.44 (Lahey and colleagues 2022).",
+    "nl": "Test-hertestbetrouwbaarheid: symptoomscores van 0 tot 3 0,83, dichotome symptomen 0,74, dichotome diagnose 0,44 (Lahey en collega's 2022)."
+   },
+   "sources": [
+    "src:71af554f78"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:dimensional-dx",
+   "rel": "see-also",
+   "note": {
+    "fa": "جایگزین بُعدی",
+    "en": "Dimensional alternative",
+    "nl": "Dimensionaal alternatief"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-spitzer",
+  "core:thomas-insel"
+ ],
+ "sources": [
+  "src:71af554f78",
+  "src:869d3eb58d"
+ ],
+ "booklets": [
+  "workshop:what"
+ ],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

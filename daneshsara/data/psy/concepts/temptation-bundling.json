@@ -1,0 +1,78 @@
+{
+ "id": "psy:temptation-bundling",
+ "kind": "concept",
+ "title": {
+  "fa": "مزدوج‌سازی هوس",
+  "en": "Temptation bundling",
+  "nl": "Temptation bundling"
+ },
+ "parent": "psy:p-motivation",
+ "field": "psy:p-motivation",
+ "summary": {
+  "fa": "گره زدن یک لذت فوری (مثل کتاب صوتی محبوب) به کاری که باید کرد (مثل ورزش). کیتی میلکمن نشان داد رفتن به باشگاه را در کوتاه‌مدت بیشتر می‌کند.",
+  "en": "Tying an instant pleasure (such as a favourite audiobook) to something you should do (such as exercise). Katy Milkman showed it increases gym visits in the short term.",
+  "nl": "Een direct genoegen (zoals een favoriet luisterboek) koppelen aan iets wat je moet doen (zoals sporten). Katy Milkman liet zien dat het sportschoolbezoek op korte termijn toeneemt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گروهی که کتاب صوتی را فقط در کمد باشگاه داشتند، در هفته‌های اول حدود ۵۱٪ بیشتر به باشگاه رفتند.",
+    "en": "The group that kept their audiobooks only in a gym locker went to the gym about 51% more in the first weeks.",
+    "nl": "De groep die de luisterboeken alleen in een kluisje in de sportschool had, ging de eerste weken ongeveer 51% vaker naar de sportschool."
+   },
+   "sources": [],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثرها کوچک و کوتاه‌مدت‌اند؛ ابزار شروع است، نه جایگزین عادت.",
+    "en": "The effects are small and short-lived; it is a starting tool, not a substitute for habit.",
+    "nl": "De effecten zijn klein en van korte duur; het is een hulpmiddel om te beginnen, geen vervanging van gewoonte."
+   },
+   "sources": [],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:habit",
+   "rel": "see-also",
+   "note": {
+    "fa": "عادت",
+    "en": "Habit",
+    "nl": "Gewoonte"
+   }
+  },
+  {
+   "to": "psy:goal-pursuit",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیگیری هدف",
+    "en": "Goal pursuit",
+    "nl": "Doelnastreving"
+   }
+  },
+  {
+   "to": "psy:gamification",
+   "rel": "see-also",
+   "note": {
+    "fa": "پاداش کوتاه",
+    "en": "Short-term reward",
+    "nl": "Beloning op korte termijn"
+   }
+  }
+ ],
+ "people": [
+  "core:katy-milkman",
+  "core:angela-duckworth"
+ ],
+ "sources": [],
+ "booklets": [
+  "s5:bundling",
+  "s5:stepup"
+ ],
+ "origin": "s5",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

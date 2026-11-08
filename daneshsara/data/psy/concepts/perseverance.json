@@ -1,0 +1,130 @@
+{
+ "id": "psy:perseverance",
+ "kind": "concept",
+ "title": {
+  "fa": "پشتکار تحصیلی و نگرش به شکست",
+  "en": "Academic perseverance",
+  "nl": "Academisch doorzettingsvermogen"
+ },
+ "parent": "psy:p-edu",
+ "field": "psy:p-edu",
+ "summary": {
+  "fa": "«آنچه دانش‌آموزان دارای پشتکار را متمایز می‌کند، نگرش انعطاف‌پذیر آن‌ها دربارهٔ شکست است.» (فارینگتون)",
+  "en": "“What distinguishes perseverant students is their flexible attitude towards failure.” (Farrington)",
+  "nl": "‘Wat volhardende studenten onderscheidt, is hun flexibele houding tegenover falen.’ (Farrington)"
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سقوط ناگهانی نمره («پشتش باد خورده») اغلب از یک رویداد ناراحت‌کننده آغاز می‌شود که به نشخوار و گزارشگر زنده بدل می‌شود.",
+    "en": "A sudden drop in grades (“something hit them”) often starts with an upsetting event that turns into rumination and the running commentary.",
+    "nl": "Een plotselinge daling in cijfers (‘er is iets gebeurd’) begint vaak met een vervelende gebeurtenis die overgaat in piekeren en doorlopend commentaar."
+   },
+   "sources": [
+    "src:b84049f056"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دو جزء پشتکار: بستن گزارشگر زنده و احساس کنترل (بخشی از اوضاع دست من است).",
+    "en": "Two components of perseverance: switching off the running commentary and a sense of control (part of the situation is in my hands).",
+    "nl": "Twee componenten van doorzettingsvermogen: het doorlopende commentaar uitzetten en een gevoel van controle (een deel van de situatie heb ik in de hand)."
+   },
+   "sources": [
+    "src:b84049f056"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "میاگاوا و همکاران (۲۰۱۹): شفقت به خود باور «شکست فرصت یادگیری است» را تقویت می‌کند.",
+    "en": "Miyagawa and colleagues (2019): self-compassion strengthens the belief that “failure is a learning opportunity”.",
+    "nl": "Miyagawa en collega's (2019): zelfcompassie versterkt de overtuiging dat ‘falen een kans is om te leren’."
+   },
+   "sources": [
+    "src:b84049f056"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقالهٔ Neuron با الهام از مصراع پوپ: «تلاش انسانی است؛ دوباره تلاش‌کردن الهی.»",
+    "en": "A Neuron article inspired by Pope's line: “To try is human; to try again, divine.”",
+    "nl": "Een artikel in Neuron geïnspireerd door de regel van Pope: ‘Proberen is menselijk; opnieuw proberen goddelijk.’"
+   },
+   "sources": [
+    "src:b84049f056"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کتاب گستره: پشتکار در کار نادرست هزینه است؛ کیفیت تطبیق مهم‌تر است (ملامود؛ وست‌پوینت).",
+    "en": "The book Range: persevering at the wrong work is a cost; match quality matters more (Malamud; West Point).",
+    "nl": "Het boek Range: doorzetten in het verkeerde werk is een kostenpost; de kwaliteit van de match telt meer (Malamud; West Point)."
+   },
+   "sources": [
+    "src:b84049f056"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دانیدین (موفیت ۲۰۱۱): شیب خویشتنداری کودکی سلامت، ثروت و جرم بزرگسالی را پیش‌بینی کرد.",
+    "en": "Dunedin (Moffitt 2011): the gradient of childhood self-control predicted adult health, wealth and crime.",
+    "nl": "Dunedin (Moffitt 2011): de mate van zelfbeheersing in de kindertijd voorspelde gezondheid, welvaart en criminaliteit op volwassen leeftijd."
+   },
+   "sources": [
+    "src:b84049f056"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:running-commentary",
+   "rel": "see-also",
+   "note": {
+    "fa": "مانع پشتکار",
+    "en": "Obstacle to perseverance",
+    "nl": "Obstakel voor doorzettingsvermogen"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "see-also",
+   "note": {
+    "fa": "تقویت‌کننده",
+    "en": "Amplifier",
+    "nl": "Versterker"
+   }
+  },
+  {
+   "to": "psy:match-quality",
+   "rel": "contrasts",
+   "note": {
+    "fa": "در برابر",
+    "en": "Versus",
+    "nl": "Tegenover"
+   }
+  }
+ ],
+ "people": [
+  "core:camille-farrington",
+  "core:yuki-miyagawa"
+ ],
+ "sources": [
+  "src:b84049f056",
+  "src:828ab56c89"
+ ],
+ "booklets": [
+  "rumination",
+  "range:grit",
+  "effort:origin"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

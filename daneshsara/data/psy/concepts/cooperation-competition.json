@@ -1,0 +1,106 @@
+{
+ "id": "psy:cooperation-competition",
+ "kind": "concept",
+ "title": {
+  "fa": "همکاری و رقابت",
+  "en": "Cooperation and competition (Deutsch)",
+  "nl": "Samenwerking en competitie (Deutsch)"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "مورتون دویچ: اینکه دو طرف هدف‌هایشان را مثبت یا منفی به هم وابسته ببینند، مسیر تعارض را تعیین می‌کند؛ و هر رابطه خودش را بازتولید می‌کند.",
+  "en": "Morton Deutsch: whether two sides see their goals as positively or negatively linked determines the course of conflict; and each relationship reproduces itself.",
+  "nl": "Morton Deutsch: of twee partijen hun doelen als positief of negatief verbonden zien, bepaalt het verloop van een conflict; en elke relatie reproduceert zichzelf."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "وابستگی مثبت: ارتباط باز، اعتماد، مسئلهٔ مشترک.",
+    "en": "Positive interdependence: open communication, trust, a shared problem.",
+    "nl": "Positieve afhankelijkheid: open communicatie, vertrouwen, een gedeeld probleem."
+   },
+   "sources": [
+    "src:3d9a28c13d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وابستگی منفی: پنهان‌کاری، بدگمانی، بازی قدرت.",
+    "en": "Negative interdependence: secrecy, suspicion, power games.",
+    "nl": "Negatieve afhankelijkheid: geheimzinnigheid, wantrouwen, machtsspelletjes."
+   },
+   "sources": [
+    "src:3d9a28c13d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قانون دویچ: همکاری همکاری می‌آورد، رقابت رقابت.",
+    "en": "Deutsch's law: cooperation breeds cooperation, competition breeds competition.",
+    "nl": "De wet van Deutsch: samenwerking roept samenwerking op, competitie roept competitie op."
+   },
+   "sources": [
+    "src:3d9a28c13d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مجادلهٔ سازنده به تصمیم بهتر می‌انجامد.",
+    "en": "Constructive controversy leads to better decisions.",
+    "nl": "Constructieve controverse leidt tot betere beslissingen."
+   },
+   "sources": [
+    "src:3d9a28c13d"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:intractable-conflict",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعارض",
+    "en": "Conflict",
+    "nl": "Conflict"
+   }
+  },
+  {
+   "to": "psy:fairness",
+   "rel": "see-also",
+   "note": {
+    "fa": "عدالت",
+    "en": "Justice",
+    "nl": "Rechtvaardigheid"
+   }
+  },
+  {
+   "to": "psy:social-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد",
+    "en": "Trust",
+    "nl": "Vertrouwen"
+   }
+  }
+ ],
+ "people": [
+  "core:morton-deutsch",
+  "core:peter-coleman"
+ ],
+ "sources": [
+  "src:3d9a28c13d"
+ ],
+ "booklets": [
+  "shelf9:handbook",
+  "ultrasociety:gs"
+ ],
+ "origin": "shelf9",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

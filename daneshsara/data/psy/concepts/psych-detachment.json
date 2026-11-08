@@ -1,0 +1,121 @@
+{
+ "id": "psy:psych-detachment",
+ "kind": "concept",
+ "title": {
+  "fa": "جداشدن روانی از کار",
+  "en": "Psychological detachment",
+  "nl": "Psychologisch loskomen"
+ },
+ "parent": "psy:burnout",
+ "field": "psy:p-io",
+ "summary": {
+  "fa": "«علاوه بر جداشدن فیزیکی، جداشدن روانی از کار بسیار کلیدی است.» (دنیل پینک) یعنی توانایی خاموش‌کردن ذهن نسبت به مسائل کار در ساعات غیرکاری.",
+  "en": "“Besides physical detachment, psychological detachment from work is key.” (Daniel Pink) That is, the ability to switch the mind off work issues outside working hours.",
+  "nl": "‘Naast fysiek loskomen is psychologisch loskomen van het werk cruciaal.’ (Daniel Pink) Dat wil zeggen: buiten werktijd je hoofd kunnen uitzetten voor werkzaken."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مدل تنش‌زا ـ جداشدن: تنش کاری جداشدن را سخت می‌کند و جداشدن کمتر به فشار بیشتر می‌انجامد.",
+    "en": "The stressor-detachment model: work stress makes detaching harder, and less detachment leads to more strain.",
+    "nl": "Het stressor-loskomenmodel: werkstress maakt loskomen moeilijker, en minder loskomen leidt tot meer spanning."
+   },
+   "sources": [
+    "src:0525273b4b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "زوننتاگ و فریتس (۲۰۰۷) چهار تجربهٔ بازیابی را برشمردند: جداشدن روانی، آرمیدگی، تسلط (یادگیری چیز تازه)، کنترل.",
+    "en": "Sonnentag and Fritz (2007) named four recovery experiences: psychological detachment, relaxation, mastery (learning something new), control.",
+    "nl": "Sonnentag en Fritz (2007) noemden vier herstelervaringen: psychologisch loskomen, ontspanning, meesterschap (iets nieuws leren), controle."
+   },
+   "sources": [
+    "src:0525273b4b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "افکار مزاحم کاری («یاد دعوا با رئیسم افتادم وقتی با بچه‌ام بازی می‌کردم») مانع اصلی‌اند.",
+    "en": "Intrusive work thoughts (“I remembered the fight with my boss while playing with my child”) are the main obstacle.",
+    "nl": "Opdringerige werkgedachten (‘ik dacht aan de ruzie met mijn baas terwijl ik met mijn kind speelde’) zijn het grootste obstakel."
+   },
+   "sources": [
+    "src:0525273b4b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدیران فهمیده‌اند که این حتی به سود سازمان است؛ نه فقط برای «رضای خدا».",
+    "en": "Managers have understood that this even benefits the organisation; it is not just charity.",
+    "nl": "Leidinggevenden hebben begrepen dat dit zelfs de organisatie ten goede komt; het is niet alleen liefdadigheid."
+   },
+   "sources": [
+    "src:0525273b4b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار تجربهٔ بازیابی: جدایی، آرامش، تسلط، کنترل (زوننتاگ و فریتز ۲۰۰۷).",
+    "en": "Four recovery experiences: detachment, relaxation, mastery, control (Sonnentag and Fritz 2007).",
+    "nl": "Vier herstelervaringen: loskomen, ontspanning, meesterschap, controle (Sonnentag en Fritz 2007)."
+   },
+   "sources": [
+    "src:0525273b4b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ناتوانی در جدا شدن بلافاصله بعد از کار، ورزش را در روزهای پرفشار کم می‌کند (کخ ۲۰۲۴).",
+    "en": "Being unable to detach right after work reduces exercise on high-pressure days (Koch 2024).",
+    "nl": "Niet meteen na het werk kunnen loskomen vermindert sporten op drukke dagen (Koch 2024)."
+   },
+   "sources": [
+    "src:0525273b4b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:rumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "مانع اصلی",
+    "en": "Main obstacle",
+    "nl": "Belangrijkste obstakel"
+   }
+  },
+  {
+   "to": "psy:work-life-balance",
+   "rel": "see-also",
+   "note": {
+    "fa": "هدف",
+    "en": "Target",
+    "nl": "Doel"
+   }
+  }
+ ],
+ "people": [
+  "core:sabine-sonnentag",
+  "core:charlotte-fritz",
+  "core:daniel-pink"
+ ],
+ "sources": [
+  "src:0525273b4b",
+  "src:35104326d5"
+ ],
+ "booklets": [
+  "detach",
+  "s11:detach"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

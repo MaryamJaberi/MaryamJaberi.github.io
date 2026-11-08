@@ -1,0 +1,476 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>اعتماد اجتماعی</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-social">
+  <div class="brand">ویکی روان‌شناسی <small>سخنرانی‌های دکتر آذرخش مکری</small></div>
+  <div class="navw"><nav class="crumb" aria-label="مسیر"><a href="index.html" target="_blank" rel="noopener">⌂ ویکی</a><span class="sep">›</span><a class="dm" href="index.html#d-social" target="_blank" rel="noopener">رابطه و جامعه</a><span class="sep">›</span><a class="tp" href="index.html#t-ethics" target="_blank" rel="noopener">اعتماد، انصاف و اخلاق</a></nav><nav class="sibs" aria-label="صفحه‌های همین موضوع"><span class="on" aria-current="page">اعتماد</span><a href="fairness.html" target="_blank" rel="noopener">برابری و انصاف</a><a href="prestige.html" target="_blank" rel="noopener">پرستیژ و سلطه</a><a href="morality.html" target="_blank" rel="noopener">اخلاق</a><a href="conflict.html" target="_blank" rel="noopener">اختلاف‌های حل‌نشدنی</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#what">اعتماد چیست؟</a></li>
+<li><a href="#measure">سنجش اعتماد</a></li>
+<li><a href="#games">بازی‌های اعتماد</a></li>
+<li><a href="#nations">اعتماد در ملت‌ها</a></li>
+<li><a href="#stable">پایدار یا تجربی؟</a></li>
+<li><a href="#oxytocin">اکسی‌توسین و مغز</a></li>
+<li><a href="#lessons">چهار درس (ون لانگه، ۲۰۱۵)</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>نگاهی به مقولهٔ اعتماد اجتماعی</h1>
+<p class="lede-sub">اعتماد یعنی خود را در برابر اعمال دیگران آسیب‌پذیر کردن. چطور آن را می‌سنجیم؟ چرا مردم کمتر از آنچه باید اعتماد می‌کنند؟ <a class="w" data-t="bridging">سرمایهٔ اجتماعی</a>، فرهنگ، ژنتیک، اکسی‌توسین و تقلید؛ و این جمع‌بندی که «اعتماد عمومی بیشتر فرهنگی است تا ژنتیکی».</p>
+<aside class="infobox" aria-label="مشخصات"><div class="ib-h">سخنرانی در یک نگاه</div><dl>
+<dt>عنوان</dt><dd>نگاهی به مقولهٔ اعتماد اجتماعی <span class="ltr">(Social Trust)</span></dd>
+<dt>سخنران</dt><dd>دکتر آذرخش مکری</dd>
+<dt>محورها</dt><dd>اریکسون و بیمن · تعریف و سنجش · بازی‌های اعتماد · کم‌برآوردی اعتماد · فیشینگ · کالاهای عمومی · تراژدی منابع مشترک · پاتنم · فردگرایی و جمع‌گرایی · یاماگیشی · ژنتیک و نسل‌ها · دانمارک · مهاجران · اکسی‌توسین · تقلید مردمک · نوزادان</dd>
+</dl></aside>
+
+<h2 id="what">اعتماد چیست؟</h2>
+<p><sup class="c"><a href="#r-slides">[۱]</a></sup> اعتماد را می‌توان فردی، کودکی، اخلاقی، ساده‌لوحی، هوش، ژنتیک یا فرهنگی دید؛ پایدار است یا سیال؟ و با اکسی‌توسین، فردگرایی، دموکراسی، توسعه و خوشبختی پیوند دارد.</p>
+<ul>
+<li><b>اریک اریکسون:</b> نخستین مرحلهٔ رشد روانی-اجتماعی، «اعتماد در برابر بی‌اعتمادی».</li>
+<li><b>ویلیام بیمن</b> («زبان، منزلت و قدرت در ایران»): زرنگی، تعارف، «فعل فرمودن»، «قربان شما»، «جان‌نثار»؛ زبانی که فاصله و احتیاط را رمزگذاری می‌کند. همچنین ماروین زونیس، «نخبگان سیاسی ایران».</li>
+</ul>
+<blockquote><p class="q-en">"Trust can be defined as the willingness or intention to make oneself vulnerable to the actions of others even with limited ability to influence these actions."</p><p class="q-fa">«اعتماد، آمادگی یا قصد قرار دادن خود در وضعیت آسیب‌پذیر در برابر اعمال دیگران است، حتی وقتی توان اثرگذاری بر این اعمال محدود است.»</p></blockquote>
+
+<h2 id="measure">سنجش اعتماد</h2>
+<p>روش‌ها: پرسش‌نامه و سؤال مستقیم، مشاهدهٔ رفتار، <b>بازی‌های اعتماد</b>، و آزمون‌های ناخودآگاه. پرسش مشهور روزنبرگ (۱۹۵۶): «بعضی می‌گویند به اکثر مردم می‌شود اعتماد کرد؛ بعضی می‌گویند هر قدر احتیاط کنی کم است. نظر شما چیست؟» دو پرسش‌نامهٔ مشهور: «ایمان به مردم» (روزنبرگ) و «اعتماد بین‌فردی» (راتر، ۱۹۶۷). ایرادها: جدایی باور از رفتار، «حرف مفت»، و اینکه منظور از «اکثریت» کیست. ماتریس اعتماد نشان می‌دهد اعتماد به خویشاوند، دوست، همکار و همسایه با اعتماد به «اکثر مردم» و غریبه‌ها همبستگی کمی دارد.</p>
+<p>آزمایش طبیعی: کیف پول گم‌شده. یا اسکناس ۲۰۰ فرانکی که روی زمین افتاده است.</p>
+
+<h2 id="games">بازی‌های اعتماد</h2>
+<p>یک‌طرفه، دوطرفه و ترتیبی: <b>بازی دیکتاتور</b>، <b>بازی اولتیماتوم</b>، و <b>بازی اعتماد</b>: نفر اول ۱۰ دلار دارد و می‌تواند آن را به نفر دوم بدهد؛ پول سه برابر (۳۰ دلار) می‌شود و نفر دوم تصمیم می‌گیرد چقدر (مثلاً ۱۵ دلار) برگرداند.</p>
+<div class="key"><b class="k">ما کمتر از آنچه باید اعتماد می‌کنیم (دانینگ و فچنهاور)</b>۷۵ تا ۹۰٪ اعتمادکنندگان می‌توانند انتظار جبران داشته باشند، چون حدود <b>۸۰٪</b> دریافت‌کنندگان پول را برمی‌گردانند؛ اما مردم احتمال جبران را تنها <b>۴۰ تا ۵۰٪</b> برآورد می‌کنند. با این حال بیشتر از آنچه برآوردشان توجیه می‌کند اعتماد می‌کنند؛ گویی اعتماد، جدا از محاسبه، یک «اصل» اجتماعی است<sup class="c"><a href="#r-dunning">[۲]</a></sup>.</div>
+<figure><div class="hb"><span class="t">جبران واقعی</span><div class="track"><div class="fill f-good" style="width:80.0%;"></div></div><span class="v">۸۰٪</span></div>
+<div class="hb"><span class="t">برآورد مردم از جبران</span><div class="track"><div class="fill f-bad" style="width:45.0%;"></div></div><span class="v">۴۵٪</span></div><figcaption>شکل ۱. فاصلهٔ باور و واقعیت در بازی اعتماد.</figcaption></figure>
+<ul>
+<li>دلایل کم‌برآوردی: <b>احساس تفوق اخلاقی</b> («من قابل اعتمادم، دیگران کمتر»)، <b>حرف مفت</b>، و <b>نظریهٔ مدیریت خطا</b> (هزینهٔ اعتماد بی‌جا بیشتر از هزینهٔ بی‌اعتمادی به نظر می‌رسد).</li>
+<li>مقایسهٔ سکه و انسان (اسلاید «۲x»): به نظر ویراستار اشاره به یافتهٔ «بیزاری از خیانت» دارد؛ مردم ریسکی را که از رفتار یک انسان برمی‌خیزد ناخوشایندتر از همان ریسک تصادفی می‌دانند.</li>
+<li><b>اجتماعی‌شدن:</b> اعتماد هم «ترجیح» است هم «اصل».</li>
+<li><b>بازخورد:</b> در زندگی واقعی وقتی اعتماد نمی‌کنیم هرگز نمی‌فهمیم که طرف قابل اعتماد بود؛ پس خطا اصلاح نمی‌شود. با بازخورد غیرمشروط، برآوردها اصلاح شد (از ۵۰٪ به حدود ۸۰٪).</li>
+<li>اسلاید ۲۸ دو عدد ۶۰٪ و ۶۱٫۴۵٪ را کنار اسکناس ۱۰۰ یورویی می‌گذارد؛ شرح آن در اسلایدها نیامده است.</li>
+<li><b>فیشینگ:</b> چن و همکاران (۲۰۱۸) با آزمایش‌های اقتصادی پیش‌بینی کردند چه کسی فریب ایمیل‌های جعلی را می‌خورد<sup class="c"><a href="#r-chen">[۳]</a></sup>. اعتماد و ساده‌لوحی یکی نیستند. («کمیابی»: مولاینیتن و شفیر، و فقر ذهن را تنگ می‌کند.)</li>
+</ul>
+<h3>کالاهای عمومی و تراژدی منابع مشترک</h3>
+<p>در <b>بازی کالاهای عمومی</b> هر کس سهمی به صندوق مشترک می‌دهد که چند برابر و بین همه تقسیم می‌شود. حدود ۵۸٪ مردم «همکاران مشروط»اند (به اندازهٔ دیگران مایه می‌گذارند)، ۲۵٪ «سواری‌مجانی‌بگیر» و بقیه الگوهای دیگر. در ۱۶ شهر جهان (از کپنهاگ تا ریاض)، همکاری و تنبیه «سواری‌مجانی‌بگیرها» بسیار متفاوت بود؛ و در برخی شهرها «تنبیه ضداجتماعی» (تنبیه همکاری‌کنندگان) دیده شد<sup class="c"><a href="#r-herrmann">[۴]</a></sup>. گرت هاردین (Science، ۱۹۶۸): «تراژدی منابع مشترک»؛ مسئلهٔ جمعیت راه‌حل فنی ندارد و توسعه‌ای بنیادین در اخلاق لازم دارد. ترافیک جاده‌ها نمونهٔ روزمرهٔ همین معماست.</p>
+
+<h2 id="nations">اعتماد در ملت‌ها</h2>
+<p>پیمایش‌ها: پیمایش جهانی ارزش‌ها (WVS) و پیمایش اجتماعی عمومی (GSS). اعتماد ملی با تولید ناخالص سرانه و تحصیلات همبسته است؛ نروژ، سوئد و دانمارک در صدرند.</p>
+<div class="cols2">
+<div class="card"><b class="h">سرمایهٔ اجتماعی پیونددهنده</b>(فراگیر) اعتماد به غریبه‌ها و گروه‌های دیگر؛ «شعاع اعتماد» بزرگ.</div>
+<div class="card"><b class="h">سرمایهٔ اجتماعی پیوندی</b>(انحصاری) اعتماد درون خانواده، قبیله و گروه خودی.</div>
+</div>
+<p>رابرت پاتنام («بولینگ تک‌نفره»، «بچه‌های ما»): در آمریکا اعتماد عمومی از حدود ۵۵٪ در دههٔ ۱۹۶۰ به حدود ۳۵٪ رسید و کاهش آن بیشتر از <b>جانشینی نسل‌ها</b> است: نسل‌های جدیدتر از آغاز کم‌اعتمادترند. نشانه‌های خرد: کسانی که در تابلوی «ایست» کاملاً می‌ایستند از حدود ۴۰٪ به نزدیک صفر رسیدند؛ و شمار نگهبانان و وکلا به ازای هر ۱۰۰۰ شاغل پس از ۱۹۷۰ جهش کرد.</p>
+<p><b>هری تریاندیس:</b> فردگرایی-جمع‌گرایی، مطلوبیت اجتماعی، فرهنگ‌های شرم. <b>توشیو یاماگیشی:</b> «<b>جامعهٔ جمع‌گرا امنیت می‌آفریند اما اعتماد را از بین می‌برد</b>»: در شبکه‌های بسته نیازی به اعتماد به غریبه نیست. در سطح فرد، فردگرایی با اعتماد عمومی همبستگی منفی دارد، اما در سطح کشور، کشورهای فردگرا اعتماد بیشتری دارند: «مسئلهٔ همبستگی بوم‌شناختی». اعتماد عمومی و فردگرایی فقط در کشورهای با «حاکمیت قانون» بالا با ثبات سیاسی بالا می‌روند.</p>
+
+<h2 id="stable">پایدار یا تجربی؟</h2>
+<p>دو فرضیه: «سال‌های اثرپذیر» (اعتماد در جوانی شکل می‌گیرد و می‌ماند) در برابر «گشودگی مادام‌العمر به تجربه».</p>
+<ul>
+<li><b>انتقال بین‌نسلی:</b> نگرش اعتماد کودک با پدر و مادر همبسته است.</li>
+<li><b>ژنتیک:</b> مطالعهٔ دوقلوهای سوئدی و آمریکایی (سزارینی و همکاران، ۲۰۰۸): وراثت‌پذیری رفتار در بازی اعتماد حدود ۱۰ تا ۲۰٪، و بیشتر تفاوت از محیط غیرمشترک<sup class="c"><a href="#r-cesarini">[۵]</a></sup>.</li>
+<li><b>شخصیت و هوش:</b> برون‌گرایی و توافق‌پذیری؛ و هوش و تحصیلات که اعتماد را بالا می‌برند (اریک اوسلنر: هوش ← تحصیلات ← وضع اقتصادی بهتر و تماس بیشتر با فرهنگ‌ها).</li>
+<li><b>استثنای دانمارکی:</b> اعتماد در دانمارک طی ۳۰ سال از حدود ۰٫۵ به ۰٫۸ رسید، در هر نسل؛ همراه با افزایش تحصیلات و کیفیت نهادها، حتی با افزایش نابرابری و تنوع قومی<sup class="c"><a href="#r-sonderskov">[۶]</a></sup>.</li>
+<li><b>میزان اعتماد در نسل دوم مهاجران مانند کشور میزبان است.</b></li>
+</ul>
+<div class="key"><b class="k">شاخص‌های تجربی مهم در افزایش اعتماد</b>تحصیلات · درآمد · عدالت و برابری اجتماعی · <b>نهادهای سالم</b>.</div>
+
+<h2 id="oxytocin">اکسی‌توسین و مغز</h2>
+<p>کوسفلد و همکاران (Nature، ۲۰۰۵): اسپری بینی اکسی‌توسین سرمایه‌گذاری در بازی اعتماد را بالا برد<sup class="c"><a href="#r-kosfeld">[۷]</a></sup>. پل زاک آن را «مولکول اخلاق» نامید. اما:</p>
+<ul>
+<li>در واقعیت مجازی، اکسی‌توسین فاصلهٔ بین‌فردی را کم کرد، اما فقط در زنانی که «محرومیت عشقی» (کناره‌گیری عاطفی والدین) کمی را تجربه کرده بودند (۱۸۰ زن، ۲۴ واحد)<sup class="c"><a href="#r-riem">[۸]</a></sup>.</li>
+<li>حتی <b>دارونما</b>ی معرفی‌شده به‌عنوان اکسی‌توسین اعتماد و نزدیک شدن را افزایش داد (یان و همکاران، ۲۰۱۸)<sup class="c"><a href="#r-yan">[۹]</a></sup>.</li>
+<li>اکسی‌توسین <b>حسادت</b> و «شادی از بدبختی دیگران» را هم بالا برد (شمای-تسوری، ۲۰۰۹).</li>
+<li>مرور انتقادی ناوه، کامرر و مک‌کالو (۲۰۱۵): در فراتحلیل آزمایش‌های بازی اعتماد، اثر کلی اکسی‌توسین نزدیک صفر و معنادار نبود<sup class="c"><a href="#r-nave">[۱۰]</a></sup>.</li>
+</ul>
+<p>«قتل در قطار سریع‌السیر شرق و مسئلهٔ نوروساینس»: وقتی همهٔ مظنونان در جنایت شریک‌اند، به دنبال یک «مقصر» واحد (یک مولکول) گشتن گمراه‌کننده است.</p>
+<h3>تقلید و احساس خودی بودن</h3>
+<p>چرخه: احساس خودی بودن ← تقلید ← اعتماد. <b>تقلید مردمک:</b> مردم به شریکی که مردمکش گشاد می‌شد بیشتر اعتماد کردند، اما فقط اگر هم‌گروه بود و مردمک خودشان هم هماهنگ گشاد می‌شد (کرت و همکاران، ۲۰۱۵)<sup class="c"><a href="#r-kret">[۱۱]</a></sup>. <b>نوزادان ۱۴ ماهه:</b> به گویندهٔ زبان مادری و زبان ناآشنا به یک اندازه نگاه کردند و هر دو گروه لامپ را روشن کردند؛ اما کار غیرعادی «روشن کردن لامپ با سر» را بیشتر از گویندهٔ زبان مادری تقلید کردند (۴۶٪ در برابر ۲۱٪)<sup class="c"><a href="#r-buttelmann">[۱۲]</a></sup>.</p>
+
+<h2 id="lessons">چهار درس (ون لانگه، ۲۰۱۵)</h2>
+<ol class="tight">
+<li>اعتماد عمومی بیشتر موضوعی فرهنگی است تا ژنتیکی.</li>
+<li>اعتماد عمیقاً در تجربه‌های تعامل اجتماعی، شبکه‌ها و رسانه‌ها ریشه دارد.</li>
+<li>مردم به‌طور کلی به دیگران <b>بیش از حد کم</b> اعتماد می‌کنند.</li>
+<li>تنظیم «مقدار سالمی» از اعتماد عمومی انطباقی است<sup class="c"><a href="#r-vanlange">[۱۳]</a></sup>.</li>
+</ol>
+
+<div class="nd-social"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: اعتماد، انصاف و اخلاق</h3><ul><li class="nd-social"><a href="morality.html" target="_blank" rel="noopener"><i></i>اخلاق</a><small>اخلاق و سلامت روان؛ تزویر و ریا</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-self"><a href="happiness.html" target="_blank" rel="noopener"><i></i>ریشه‌های شادکامی</a><small>خود و رشد › معنا، امید و بهزیستی · مشترک: اعتماد اجتماعی</small></li><li class="nd-body"><a href="body.html" target="_blank" rel="noopener"><i></i>نقشهٔ بدن و روان</a><small>بدن، تکامل و جنسیت › مغز، بدن و تکامل · مشترک: اعتماد اجتماعی</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#7d4a86"><b>فلسفه</b>نظریه‌های عدالت (رالز و دیگران) و پرسش برابری در برابر انصاف. <a href="graph.html#justice-theory" target="_blank" rel="noopener">فلسفهٔ سیاسی: عدالت و برابری ↗</a></div><div style="--xc:#8a6a2a"><b>انسان‌شناسی و تکامل</b>اخلاق انسان از همکاری گروه‌ها و هنجارهای مشترک تکامل یافته است. <a href="graph.html#norm-psychology" target="_blank" rel="noopener">روان‌شناسی هنجار ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>سرمایهٔ اجتماعی: اعتماد و شبکه‌ها مثل سرمایه‌ای جمعی عمل می‌کنند. <a href="graph.html#social-capital" target="_blank" rel="noopener">سرمایهٔ اجتماعی ↗</a></div></div><div class="worlds"><a href="land.html#social-trust" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="graph.html#social-trust" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="library.html" target="_blank" rel="noopener">کتابخانه</a><a href="timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides">اسلایدهای سخنرانی «نگاهی به مقولهٔ اعتماد اجتماعی»، دکتر آذرخش مکری (۱۲۴ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-dunning"><span class="ltr">Dunning, D., Anderson, J. E., Schlösser, T., Ehlebracht, D., &amp; Fetchenhauer, D. (2014). Trust at zero acquaintance: More a matter of respect than expectation of reward. <i>JPSP, 107</i>(1), 122–141; Fetchenhauer, D., &amp; Dunning, D. (2009). Do people trust too much or too little? <i>J. Economic Psychology, 30</i>, 263–276.</span></li>
+<li id="r-chen"><span class="ltr">Chen, Y., YeckehZaare, I., &amp; Zhang, A. F. (2018). Real or bogus: Predicting susceptibility to phishing with economic experiments. <i>PLoS ONE, 13</i>(6), e0198213.</span></li>
+<li id="r-herrmann"><span class="ltr">Herrmann, B., Thöni, C., &amp; Gächter, S. (2008). Antisocial punishment across societies. <i>Science, 319</i>, 1362–1367.</span> (شناسایی جدول از ویراستار)</li>
+<li id="r-cesarini"><span class="ltr">Cesarini, D., Dawes, C. T., Fowler, J. H., Johannesson, M., Lichtenstein, P., &amp; Wallace, B. (2008). Heritability of cooperative behavior in the trust game. <i>PNAS, 105</i>(10), 3721–3726.</span></li>
+<li id="r-sonderskov"><span class="ltr">Sønderskov, K. M., &amp; Dinesen, P. T. (2014). Danish exceptionalism: Explaining the unique increase in social trust over the past 30 years. <i>European Sociological Review, 30</i>(6), 782–795.</span></li>
+<li id="r-kosfeld"><span class="ltr">Kosfeld, M., Heinrichs, M., Zak, P. J., Fischbacher, U., &amp; Fehr, E. (2005). Oxytocin increases trust in humans. <i>Nature, 435</i>, 673–676.</span></li>
+<li id="r-riem"><span class="ltr">Riem, M., Kunst, L., Steenbakkers, F., et al. (2019). Oxytocin reduces interpersonal distance… <i>Psychoneuroendocrinology, 108</i>, 102–109.</span></li>
+<li id="r-yan"><span class="ltr">Yan, X., Yong, X., Huang, W., &amp; Ma, Y. (2018). Placebo treatment facilitates social trust and approach behavior. <i>PNAS, 115</i>(22), 5732–5737.</span></li>
+<li id="r-nave"><span class="ltr">Nave, G., Camerer, C., &amp; McCullough, M. (2015). Does oxytocin increase trust in humans? A critical review of research. <i>Perspectives on Psychological Science, 10</i>(6), 772–789.</span></li>
+<li id="r-kret"><span class="ltr">Kret, M. E., Fischer, A. H., &amp; De Dreu, C. K. W. (2015). Pupil-mimicry correlates with trust in in-group partners with dilating pupils. <i>Psychological Science, 26</i>(9), 1401–1410.</span></li>
+<li id="r-buttelmann"><span class="ltr">Buttelmann, D., Zmyj, N., Daum, M., &amp; Carpenter, M. (2013). Selective imitation of in-group over out-group members in 14-month-old infants. <i>Child Development, 84</i>, 422–428.</span></li>
+<li id="r-vanlange"><span class="ltr">Van Lange, P. A. M. (2015). Generalized trust: Four lessons from genetics and culture. <i>Current Directions in Psychological Science, 24</i>(1), 71–76.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این صفحه از اسلایدهای سخنرانی ساخته شده است؛ بیشتر اسلایدها نمودار و جدول‌اند و شرح آن‌ها از ویراستار است.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · سخنرانی‌های دکتر آذرخش مکری</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"bridging": {"fa": "سرمایهٔ اجتماعی", "en": "Bridging vs bonding social capital", "d": "پیونددهنده (اعتماد فراگیر به غریبه‌ها) در برابر پیوندی (اعتماد درون گروه). جامعهٔ جمع‌گرا امنیت می‌آفریند اما اعتماد عمومی را از بین می‌برد (یاماگیشی).", "rel": ["trustgame"], "s": "nations", "g": "social-trust"}, "trustgame": {"fa": "بازی اعتماد", "en": "Trust game", "d": "نفر اول پولی می‌فرستد که سه برابر می‌شود و نفر دوم تصمیم می‌گیرد چقدر برگرداند؛ حدود ۸۰٪ جبران می‌کنند اما مردم ۴۰ تا ۵۰٪ برآورد می‌کنند.", "rel": ["bridging", "oxt"], "s": "games", "g": "social-trust"}, "oxt": {"fa": "اکسی‌توسین", "en": "Oxytocin", "d": "هورمون پیوند؛ یافتهٔ مشهور افزایش اعتماد با اسپری آن در فراتحلیل‌ها تکرار نشد و اثرش به بافت و گروه وابسته است.", "rel": ["trustgame"], "s": "oxytocin", "g": "social-trust"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

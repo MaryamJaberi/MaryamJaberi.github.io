@@ -1,0 +1,143 @@
+{
+ "id": "psy:prestige-dominance",
+ "kind": "concept",
+ "title": {
+  "fa": "پرستیژ و سلطه",
+  "en": "Prestige vs dominance",
+  "nl": "Prestige versus dominantie"
+ },
+ "parent": "psy:p-social",
+ "field": "psy:p-social",
+ "summary": {
+  "fa": "دو راه رسیدن به جایگاه: احترام داوطلبانه برای مهارت (پرستیژ) یا ترس و زور (سلطه).",
+  "en": "Two routes to status: freely given respect for skill (prestige) or fear and force (dominance).",
+  "nl": "Twee wegen naar status: vrijwillig gegeven respect voor vaardigheid (prestige) of angst en dwang (dominantie)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پرستیژ: بهای دسترسی به یادگیری فرهنگی (هنریک و گیل-وایت ۲۰۰۱).",
+    "en": "Prestige: the price of access to cultural learning (Henrich and Gil-White 2001).",
+    "nl": "Prestige: de prijs voor toegang tot cultureel leren (Henrich en Gil-White 2001)."
+   },
+   "sources": [
+    "src:b267366001"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدل دوگانهٔ رهبری (فان فوخت و اسمیت ۲۰۱۹).",
+    "en": "The dual model of leadership (van Vugt and Smith 2019).",
+    "nl": "Het duale leiderschapsmodel (van Vugt en Smith 2019)."
+   },
+   "sources": [
+    "src:b267366001"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "غرور اصیل ↔ پرستیژ؛ غرور نخوت‌آمیز ↔ سلطه.",
+    "en": "Authentic pride ↔ prestige; hubristic pride ↔ dominance.",
+    "nl": "Authentieke trots ↔ prestige; hoogmoedige trots ↔ dominantie."
+   },
+   "sources": [
+    "src:b267366001"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در شرایط جنگ و تهدید، چهرهٔ سلطه‌گر برای کاپیتان، اما غیرسلطه‌جو برای دوست.",
+    "en": "Under war and threat, a dominant face is preferred for a captain, but a non-dominant one for a friend.",
+    "nl": "Bij oorlog en dreiging gaat de voorkeur uit naar een dominant gezicht voor een kapitein, maar naar een niet-dominant gezicht voor een vriend."
+   },
+   "sources": [
+    "src:b267366001"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "باور حاصل‌جمع صفر ترجیح سلطه را بالا می‌برد، نه پرستیژ.",
+    "en": "Zero-sum beliefs raise the preference for dominance, not prestige.",
+    "nl": "Nulsomovertuigingen vergroten de voorkeur voor dominantie, niet voor prestige."
+   },
+   "sources": [
+    "src:b267366001"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:destructive-leadership",
+   "rel": "see-also",
+   "note": {
+    "fa": "رهبری",
+    "en": "Leadership",
+    "nl": "Leiderschap"
+   }
+  },
+  {
+   "to": "psy:narcissism-culture",
+   "rel": "see-also",
+   "note": {
+    "fa": "غرور نخوت‌آمیز",
+    "en": "Hubristic pride",
+    "nl": "Hoogmoedige trots"
+   }
+  },
+  {
+   "to": "psy:fairness",
+   "rel": "see-also",
+   "note": {
+    "fa": "برابری",
+    "en": "Equality",
+    "nl": "Gelijkheid"
+   }
+  },
+  {
+   "to": "psy:cultural-evolution",
+   "rel": "see-also",
+   "note": {
+    "fa": "یادگیری فرهنگی",
+    "en": "Cultural learning",
+    "nl": "Cultureel leren"
+   }
+  },
+  {
+   "to": "psy:adolescence",
+   "rel": "see-also",
+   "note": {
+    "fa": "محبوبیت",
+    "en": "Popularity",
+    "nl": "Populariteit"
+   }
+  }
+ ],
+ "people": [
+  "core:joseph-henrich",
+  "core:joey-cheng",
+  "core:jessica-tracy",
+  "core:jon-maner",
+  "core:mark-van-vugt"
+ ],
+ "sources": [
+  "src:b267366001",
+  "src:5fff81813c"
+ ],
+ "booklets": [
+  "prestige:theory",
+  "prestige:dual",
+  "prestige:pride",
+  "prestige:maner",
+  "prestige:captain",
+  "shelf8:prinstein"
+ ],
+ "origin": "prestige",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

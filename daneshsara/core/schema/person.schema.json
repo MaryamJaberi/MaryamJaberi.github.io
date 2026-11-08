@@ -1,0 +1,8 @@
+{"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "person.schema.json", "title": "چهره",
+ "type": "object", "required": ["id", "name"], "additionalProperties": false,
+ "properties": {
+  "id": {"type": "string", "pattern": "^core:[a-z0-9-]+$"},
+  "name": {"type": "object", "required": ["fa"], "properties": {"fa": {"type": "string"}, "en": {"type": "string"}, "nl": {"type": "string"}}},
+  "years": {"type": "string"}, "note": {"type": "object"},
+  "wikidata": {"type": ["string", "null"], "pattern": "^Q[0-9]+$"},
+  "wikis": {"type": "array", "items": {"type": "string"}}}}

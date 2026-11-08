@@ -1,0 +1,77 @@
+{
+ "id": "psy:rfcbt",
+ "kind": "concept",
+ "title": {
+  "fa": "درمان شناختی-رفتاری متمرکز بر نشخوار",
+  "en": "Rumination-Focused CBT",
+  "nl": "Ruminatiegerichte CGT"
+ },
+ "parent": "psy:t-cbt",
+ "field": "psy:t-cbt",
+ "summary": {
+  "fa": "درمان ادوارد واتکینز که نشخوار را عادتی ذهنی می‌بیند که در موقعیت‌های خاص فعال می‌شود، و آن را با سبک فکری «عینی و مشخص» جایگزین می‌کند.",
+  "en": "Edward Watkins's therapy, which sees rumination as a mental habit triggered in specific situations and replaces it with a “concrete and specific” thinking style.",
+  "nl": "De therapie van Edward Watkins, die piekeren ziet als een mentale gewoonte die in bepaalde situaties wordt uitgelokt, en die vervangt door een ‘concrete en specifieke’ denkstijl."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تمایز تفکر «انتزاعی-ارزیابانه» (چرا همیشه این‌طور می‌شود؟) با «عینی-تجربی» (دقیقاً چه شد و قدم بعدی چیست؟).",
+    "en": "Distinguishing “abstract-evaluative” thinking (why does this always happen?) from “concrete-experiential” thinking (what exactly happened and what's the next step?).",
+    "nl": "Onderscheid tussen ‘abstract-evaluatief’ denken (waarom gebeurt dit altijd?) en ‘concreet-ervaringsgericht’ denken (wat gebeurde er precies en wat is de volgende stap?)."
+   },
+   "sources": [
+    "src:764a27c893"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تحلیل کارکردی: نشخوار چه کارکردی برای فرد دارد (اجتناب، احساس آمادگی)؟",
+    "en": "Functional analysis: what function does rumination serve for the person (avoidance, a feeling of being prepared)?",
+    "nl": "Functieanalyse: welke functie heeft piekeren voor de persoon (vermijding, een gevoel voorbereid te zijn)?"
+   },
+   "sources": [
+    "src:764a27c893"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تمرین‌های «جذب‌شدن» و تجربهٔ کامل لحظه به‌عنوان جایگزین.",
+    "en": "Exercises in “absorption” and fully experiencing the moment as an alternative.",
+    "nl": "Oefeningen in ‘opgaan’ en het moment volledig beleven als alternatief."
+   },
+   "sources": [
+    "src:764a27c893"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اسلاید ۵۶ دوره.",
+    "en": "Slide 56 of the course.",
+    "nl": "Slide 56 van de cursus."
+   },
+   "sources": [
+    "src:764a27c893"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [
+  "core:edward-watkins"
+ ],
+ "sources": [
+  "src:764a27c893"
+ ],
+ "booklets": [
+  "rumination",
+  "s3:practice"
+ ],
+ "origin": "course",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

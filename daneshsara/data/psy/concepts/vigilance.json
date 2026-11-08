@@ -1,0 +1,117 @@
+{
+ "id": "psy:vigilance",
+ "kind": "subfield",
+ "title": {
+  "fa": "گوش‌به‌زنگی",
+  "en": "Animal vigilance",
+  "nl": "Waakzaamheid bij dieren"
+ },
+ "parent": "psy:anthropology",
+ "field": null,
+ "summary": {
+  "fa": "پایش محیط برای شکارچی و رقیب؛ مبادله‌ای میان امنیت و تغذیه. ریشهٔ تکاملی سامانه‌های اضطراب (گای بوشان).",
+  "en": "Monitoring the environment for predators and rivals; a trade-off between safety and feeding. The evolutionary root of anxiety systems (Guy Bouchard).",
+  "nl": "Het afspeuren van de omgeving naar roofdieren en rivalen; een afweging tussen veiligheid en voeding. De evolutionaire wortel van angstsystemen (Guy Bouchard)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اثر اندازهٔ گروه: در گروه بزرگ‌تر، گوش‌به‌زنگی فردی کمتر.",
+    "en": "The group-size effect: in a larger group, individual vigilance is lower.",
+    "nl": "Het groepsgrootte-effect: in een grotere groep is de individuele waakzaamheid lager."
+   },
+   "sources": [
+    "src:9b7ddffb40"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سه سازوکار: چشم‌های بسیار، تشخیص جمعی، رقیق‌شدن خطر.",
+    "en": "Three mechanisms: many eyes, collective detection, risk dilution.",
+    "nl": "Drie mechanismen: veel ogen, gezamenlijke detectie, verdunning van risico."
+   },
+   "sources": [
+    "src:9b7ddffb40"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گوش‌به‌زنگی بین افراد سرایت می‌کند و هماهنگ می‌شود.",
+    "en": "Vigilance spreads between individuals and becomes synchronised.",
+    "nl": "Waakzaamheid verspreidt zich tussen individuen en raakt op elkaar afgestemd."
+   },
+   "sources": [
+    "src:9b7ddffb40"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بخشی از گوش‌به‌زنگی پایش رقبای درون گروه است.",
+    "en": "Part of vigilance is monitoring rivals within the group.",
+    "nl": "Een deel van de waakzaamheid is rivalen binnen de groep in de gaten houden."
+   },
+   "sources": [
+    "src:9b7ddffb40"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اصل «ردیاب دود» (رندولف نسی): هشدار کاذب ارزان‌تر از نادیده گرفتن خطر واقعی است.",
+    "en": "The “smoke detector principle” (Randolph Nesse): a false alarm is cheaper than ignoring a real danger.",
+    "nl": "Het ‘rookmelderprincipe’ (Randolph Nesse): een vals alarm is goedkoper dan een echt gevaar negeren."
+   },
+   "sources": [
+    "src:9b7ddffb40"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:anxiety",
+   "rel": "explains",
+   "note": {
+    "fa": "ریشهٔ تکاملی",
+    "en": "Evolutionary root",
+    "nl": "Evolutionaire wortel"
+   }
+  },
+  {
+   "to": "psy:belonging",
+   "rel": "see-also",
+   "note": {
+    "fa": "امنیت گروه",
+    "en": "Group safety",
+    "nl": "Groepsveiligheid"
+   }
+  },
+  {
+   "to": "psy:self-domestication",
+   "rel": "see-also",
+   "note": {
+    "fa": "تکامل اجتماعی",
+    "en": "Social evolution",
+    "nl": "Sociale evolutie"
+   }
+  }
+ ],
+ "people": [
+  "core:guy-bouchard",
+  "core:randolph-nesse"
+ ],
+ "sources": [
+  "src:9b7ddffb40",
+  "src:cdf73488f7"
+ ],
+ "booklets": [
+  "clinical:vigilance"
+ ],
+ "origin": "clinical",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}
