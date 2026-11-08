@@ -1,0 +1,115 @@
+{
+ "id": "tabar:darwin-sexual-selection",
+ "kind": "concept",
+ "title": {
+  "fa": "انتخاب جنسی (طرح نخست داروین)",
+  "en": "Sexual selection (Darwin's first sketch)",
+  "nl": "Seksuele selectie (Darwins eerste schets)"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "داروین انتخاب جنسی را دلیل ویژگی‌هایی می‌دانست که به زنده‌ماندن کمکی نمی‌کنند، مثل دم طاووس یا شاخ گوزن: سودشان در رقابت برای جفت است، نه در مبارزهٔ زنده‌ماندن. در چاپ ۱۸۵۹ فقط چند صفحه به آن داده شده است؛ بحث کامل‌تر را بعدها در «تبار انسان» (۱۸۷۱) آورد.",
+  "en": "Darwin saw sexual selection as the reason for traits that do not help survival, like the peacock's tail or stag's antlers: their benefit lies in competing for mates. The 1859 edition gives it only a few pages; the full treatment came later in The Descent of Man (1871).",
+  "nl": "Darwin zag seksuele selectie als verklaring voor eigenschappen die niet bijdragen aan overleven, zoals de pauwenstaart: ze helpen bij de strijd om partners. In 1859 beslaat het enkele pagina's; de uitwerking volgde in The Descent of Man (1871)."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "داروین می‌گوید این نوع انتخاب به مرگ بستگی ندارد، بلکه به تعداد فرزندان: نری که شاخ، رنگ یا آواز بهتری دارد جفت بیشتری می‌یابد. او دو سازوکار را از هم جدا می‌کند: رقابت مستقیم نرها با هم و گزینش جفت (معمولاً توسط ماده‌ها).",
+    "en": "He says this kind of selection depends not on death but on number of offspring: a male with better weapons, colour or song gets more mates. He distinguishes direct competition among males from mate choice (usually by females).",
+    "nl": "He says this kind of selection depends not on death but on number of offspring: a male with better weapons, colour or song gets more mates. He distinguishes direct competition among males from mate choice (usually by females)."
+   },
+   "sources": [
+    "src:84786f7bfa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در چاپ ۱۸۵۹ تأکید بیشتر روی رقابت نرها و نمونه‌هایی چون قوی‌شدن شاخ و ساختارهای نبرد است. دربارهٔ اینکه چرا ماده‌ها چنین ویژگی‌هایی را می‌پسندند توضیح مفصلی نمی‌دهد؛ این پرسش تا قرن بیستم بحث‌برانگیز ماند (والاس با گزینش جفت توسط ماده‌ها مخالف بود).",
+    "en": "The 1859 text stresses male-male contest and weapon-like structures. It does not explain at length why females prefer such traits; this stayed controversial into the twentieth century (Wallace doubted female choice).",
+    "nl": "The 1859 text stresses male-male contest and weapon-like structures. It does not explain at length why females prefer such traits; this stayed controversial into the twentieth century (Wallace doubted female choice)."
+   },
+   "sources": [
+    "src:84786f7bfa",
+    "src:6a5d7431c4"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پیشرفت بعدی: فیشر (۱۹۳۰) مدل «فرار» را پیشنهاد کرد که در آن ترجیح مادگان و صفت نرها هم‌زمان تقویت می‌شود، و زاهاوی (۱۹۷۵) «اصل معلولیت» را: صفت پرهزینه می‌تواند نشانهٔ صادقانهٔ کیفیت باشد. شواهد تجربی مفصل و دسته‌ای از آنها در کتاب آندرسون (۱۹۹۴) گردآوری شده است.",
+    "en": "Later progress: Fisher (1930) proposed the runaway model, where female preference and male trait reinforce each other, and Zahavi (1975) the handicap principle: a costly trait can be an honest signal of quality. Empirical evidence is reviewed in Andersson (1994).",
+    "nl": "Later progress: Fisher (1930) proposed the runaway model, where female preference and male trait reinforce each other, and Zahavi (1975) the handicap principle: a costly trait can be an honest signal of quality. Empirical evidence is reviewed in Andersson (1994)."
+   },
+   "sources": [
+    "src:40c28190f8",
+    "src:43f08defcb"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "هشدار: نتیجه‌گیری‌های سادهٔ «طبیعی بودنِ» رفتار جنسی در انسان از این نظریه محتاطانه باید باشد؛ نقش‌های جنسیتی انسان به فرهنگ، اقتصاد و تاریخ نیز وابسته است و پژوهش روان‌شناسی تکاملی در این زمینه دچار اختلاف نظر است.",
+    "en": "Caution: simple conclusions about what is 'natural' in human sexual behaviour must be treated carefully; human gender roles also depend on culture, economy and history, and evolutionary-psychology work here is disputed.",
+    "nl": "Caution: simple conclusions about what is 'natural' in human sexual behaviour must be treated carefully; human gender roles also depend on culture, economy and history, and evolutionary-psychology work here is disputed."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:evo-sex",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعارض جنسی و روان‌شناسی تکاملی",
+    "en": "Sexual conflict (evolutionary psychology)",
+    "nl": "Sexual conflict (evolutionary psychology)"
+   }
+  },
+  {
+   "to": "psy:sex-gender",
+   "rel": "see-also",
+   "note": {
+    "fa": "روان‌شناسی جنس و جنسیت",
+    "en": "Psychology of sex and gender",
+    "nl": "Psychology of sex and gender"
+   }
+  },
+  {
+   "to": "tabar:human-evolution",
+   "rel": "part-of",
+   "note": {
+    "fa": "تکامل انسان",
+    "en": "Human evolution",
+    "nl": "Human evolution"
+   }
+  }
+ ],
+ "people": [
+  "core:charles-darwin",
+  "core:amotz-zahavi"
+ ],
+ "sources": [
+  "src:40c28190f8",
+  "src:43f08defcb",
+  "src:6a5d7431c4",
+  "src:84786f7bfa"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

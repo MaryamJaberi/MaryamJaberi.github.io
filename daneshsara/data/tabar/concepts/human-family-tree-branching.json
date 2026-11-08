@@ -1,0 +1,102 @@
+{
+ "id": "tabar:human-family-tree-branching",
+ "kind": "concept",
+ "title": {
+  "fa": "درخت خانوادگی شاخه‌شاخهٔ انسان",
+  "en": "The branching human family tree",
+  "nl": "De vertakte menselijke stamboom"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "پیام ششم سند می‌گوید تبارنامهٔ انسان یک خط راست نیست، بلکه درختی شاخه‌دار و متنوع است، همانند درخت خانوادگی تقریباً همهٔ موجودات زندهٔ دیگر. در هر دوره چند گونهٔ انسان‌تبار هم‌زمان می‌زیسته‌اند.",
+  "en": "Message 6 of the handout says the human lineage is not a straight line but a branching, diverse tree, like the family trees of virtually all other living things. Several hominin species often lived at the same time.",
+  "nl": "Boodschap 6 stelt dat de menselijke afstamming geen rechte lijn is maar een vertakte, diverse boom, zoals bij bijna alle andere levende wezens."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تصویر قدیمی «میمون به انسان» با صف راست گمراه‌کننده است. سند تأکید می‌کند درخت خانوادگی انسان شاخه‌ها و بن‌بست‌های فراوان دارد و بیشتر گونه‌های آن منقرض شده‌اند.",
+    "en": "The old 'ape to human' march-of-progress picture is misleading. The handout stresses that the human tree has many branches and dead ends, and most of its species are extinct.",
+    "nl": "The old 'ape to human' march-of-progress picture is misleading. The handout stresses that the human tree has many branches and dead ends, and most of its species are extinct."
+   },
+   "sources": [
+    "src:a85b75e91c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سند برای آموزش این ایده به ابزارهای تعاملی (درخت گونه‌ها، فسیل‌های سه‌بعدی و «جمجمهٔ اسرارآمیز») ارجاع می‌دهد تا بازدیدکنندگان خودشان ویژگی‌های فسیل‌ها را مقایسه کنند.",
+    "en": "To teach the idea, the handout points to interactives (a species tree, 3D fossils and a 'mystery skull') so visitors compare fossil features themselves.",
+    "nl": "To teach the idea, the handout points to interactives (a species tree, 3D fossils and a 'mystery skull') so visitors compare fossil features themselves."
+   },
+   "sources": [
+    "src:a85b75e91c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمودار نمایشگاه از «۶ میلیون سال تکامل انسان» یاد می‌کند. این عدد رقم گرد آموزشی است؛ سن کهن‌ترین گونه‌های مدعی انسان‌تباری هنوز محل بحث است، و تعداد دقیق گونه‌ها و روابط میانشان میان پژوهشگران یکسان نیست.",
+    "en": "The exhibit diagram speaks of '6 million years of human evolution'. That is a round outreach figure; the age of the earliest claimed hominins is still debated, and researchers do not agree on the exact number of species or their relationships.",
+    "nl": "The exhibit diagram speaks of '6 million years of human evolution'. That is a round outreach figure; the age of the earliest claimed hominins is still debated, and researchers do not agree on the exact number of species or their relationships."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دی‌ان‌ای باستانی نشان داده شاخه‌ها فقط جدا نمانده‌اند و گاه با هم آمیخته‌اند (مثلاً انسان خردمند با نئاندرتال‌ها). پس «درخت» در عمل بیشتر شبیه شبکه‌ای از شاخه‌هاست. این نکته در سند نیامده و از ما است.",
+    "en": "Ancient DNA shows branches did not stay isolated but sometimes interbred (e.g. Homo sapiens with Neanderthals), so the 'tree' is in practice closer to a braided network. This is not in the handout; it is the editors' addition.",
+    "nl": "Ancient DNA shows branches did not stay isolated but sometimes interbred (e.g. Homo sapiens with Neanderthals), so the 'tree' is in practice closer to a braided network. This is not in the handout; it is the editors' addition."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:neanderthal-admixture",
+   "rel": "see-also",
+   "note": {
+    "fa": "آمیزش با نئاندرتال‌ها و دنیسوواها",
+    "en": "Admixture with Neanderthals and Denisovans",
+    "nl": "Admixture with Neanderthals and Denisovans"
+   }
+  },
+  {
+   "to": "tabar:out-of-africa",
+   "rel": "see-also",
+   "note": {
+    "fa": "خاستگاه آفریقایی انسان خردمند",
+    "en": "The African origin of Homo sapiens",
+    "nl": "The African origin of Homo sapiens"
+   }
+  },
+  {
+   "to": "tabar:human-evolution",
+   "rel": "part-of",
+   "note": {
+    "fa": "تکامل انسان",
+    "en": "Human evolution",
+    "nl": "Human evolution"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:a85b75e91c"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

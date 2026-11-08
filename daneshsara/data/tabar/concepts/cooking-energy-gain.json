@@ -1,0 +1,110 @@
+{
+ "id": "tabar:cooking-energy-gain",
+ "kind": "concept",
+ "title": {
+  "fa": "پختن چگونه انرژی غذا را بالا می‌برد",
+  "en": "How cooking raises the energy yield of food",
+  "nl": "Hoe koken de energieopbrengst van voedsel verhoogt"
+ },
+ "aliases": [],
+ "parent": "tabar:human-evolution",
+ "field": "tabar:human-evolution",
+ "summary": {
+  "fa": "نکتهٔ مرکزی رانگهم این است که پختن فقط طعم و ایمنی را بهتر نمی‌کند، بلکه مقدار انرژیِ قابل‌جذب را بالا می‌برد. دو سازوکار شیمیایی اصلی ژلاتینه‌شدن نشاسته و واسرشته‌شدن پروتئین است، و سازوکار سوم نرم‌شدن ساختار غذا که هزینهٔ گوارش را کم می‌کند. شواهد آزمایشگاهی در جانوران و انسان تا حد زیادی این نکته را تأیید می‌کنند، هرچند اندازهٔ اثر برای همهٔ غذاها یکسان نیست.",
+  "en": "Wrangham's central point is that cooking does not just improve taste and safety but raises the amount of usable energy. The main mechanisms are gelatinisation of starch, denaturation of protein, and softening of food structure, which lowers digestive cost. Laboratory evidence from animals and humans largely supports this, though the size of the effect differs by food.",
+  "nl": "Wranghams kernpunt: koken maakt voedsel niet alleen smakelijker en veiliger maar verhoogt ook de opneembare energie, via gelatinisering van zetmeel, denaturatie van eiwit en zachtere structuur. Laboratoriumonderzoek ondersteunt dit grotendeels, al verschilt het effect per voedingsmiddel."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نشاسته (مثل سیب‌زمینی و غلات) حدود نیمی از کالری روزانهٔ بیشتر مردم جهان را می‌سازد. نشاستهٔ خام در رودهٔ کوچک ناقص هضم می‌شود (در اندازه‌گیری روی بیماران ایلئوستومی، حدود نیمی از آن)، و بقیه به رودهٔ بزرگ می‌رسد و بازدهِ کمتری دارد. گرما دانه‌های نشاسته را متورم و شکسته می‌کند (ژلاتینه‌شدن) و هضم را بسیار آسان‌تر می‌کند.",
+    "en": "Starch (potatoes, cereals) supplies roughly half the daily calories of most people. Raw starch is digested incompletely in the small intestine (in measurements on ileostomy patients, about half), and the rest reaches the large intestine with lower yield. Heat swells and ruptures the granules (gelatinisation), making digestion much easier.",
+    "nl": "Starch (potatoes, cereals) supplies roughly half the daily calories of most people. Raw starch is digested incompletely in the small intestine (in measurements on ileostomy patients, about half), and the rest reaches the large intestine with lower yield. Heat swells and ruptures the granules (gelatinisation), making digestion much easier."
+   },
+   "sources": [
+    "src:c12cd83ad0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حرارت پروتئین‌ها را باز می‌کند (واسرشته‌شدن) و آنزیم‌های گوارشی راحت‌تر به آن‌ها می‌رسند. در مثال تخم‌مرغ، پروتئین پخته به‌مراتب کامل‌تر جذب می‌شود از پروتئین خام. این با باور رایجِ «تخم‌مرغ خام بهتر است» نمی‌خواند و نشان می‌دهد شهود ما اینجا راهنمای خوبی نیست.",
+    "en": "Heat unfolds proteins (denaturation) so digestive enzymes reach them more easily. In the egg example, cooked protein is absorbed far more completely than raw. This contradicts the popular belief that raw eggs are better, and shows intuition is a poor guide here.",
+    "nl": "Heat unfolds proteins (denaturation) so digestive enzymes reach them more easily. In the egg example, cooked protein is absorbed far more completely than raw. This contradicts the popular belief that raw eggs are better, and shows intuition is a poor guide here."
+   },
+   "sources": [
+    "src:c12cd83ad0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در حیوانات: موش‌های صحرایی با غذای نرم‌تر چاق‌تر شدند (مطالعهٔ اوکا و همکاران)، و در مارهای پیتون، گوشتِ ریزشده و پخته هزینهٔ گوارش را پایین آورد و انرژی خالص بیشتری برجا گذاشت (آزمایش‌های سکور و بوبک). نکته این است که فقط تغییر فیزیکی غذا هم می‌تواند اثر بگذارد.",
+    "en": "In animals: rats given softer food became heavier (Oka and colleagues), and in Burmese pythons ground and cooked meat lowered the cost of digestion, leaving more net energy (Secor and Boback experiments). Physical change in food alone can have an effect.",
+    "nl": "In animals: rats given softer food became heavier (Oka and colleagues), and in Burmese pythons ground and cooked meat lowered the cost of digestion, leaving more net energy (Secor and Boback experiments). Physical change in food alone can have an effect."
+   },
+   "sources": [
+    "src:c12cd83ad0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نظر ویراستار: نتایج به نوع غذا بستگی دارد. کارمودی، وینتراوب و رانگهم (۲۰۱۱) روی موش‌ها نشان دادند اثر فراوری روی غده‌ها و گوشت یکسان نیست، و خود رانگهم قبول دارد که اثر پختن بر پروتئین هنوز موضوع بحث است. پس عبارت «پختن همیشه انرژی را زیاد می‌کند» ساده‌تر از واقعیت است. همچنین بخش زیادی از شواهد از بیماران ایلئوستومی و آزمایش‌های حیوانی می‌آید و داده‌های کنترل‌شدهٔ بلندمدت روی انسان‌ها کم است.",
+    "en": "Editor's note: results depend on the food. Carmody, Weintraub and Wrangham (2011) found in mice that processing effects differ for tubers and meat, and Wrangham concedes the effect of cooking on protein is still debated. 'Cooking always raises energy' is therefore simpler than reality. Much of the evidence also comes from ileostomy patients and animal experiments; controlled long-term human data are scarce.",
+    "nl": "Editor's note: results depend on the food. Carmody, Weintraub and Wrangham (2011) found in mice that processing effects differ for tubers and meat, and Wrangham concedes the effect of cooking on protein is still debated. 'Cooking always raises energy' is therefore simpler than reality. Much of the evidence also comes from ileostomy patients and animal experiments; controlled long-term human data are scarce."
+   },
+   "sources": [
+    "src:c8517f2ad2",
+    "src:732c1fdbea"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:cooking-hypothesis",
+   "rel": "part-of",
+   "note": {
+    "fa": "فرضیهٔ پختن",
+    "en": "The cooking hypothesis",
+    "nl": "The cooking hypothesis"
+   }
+  },
+  {
+   "to": "tabar:raw-food-diet-evidence",
+   "rel": "see-also",
+   "note": {
+    "fa": "رژیم خام‌خواری و شواهدش",
+    "en": "Raw-food diets and what they show",
+    "nl": "Raw-food diets and what they show"
+   }
+  },
+  {
+   "to": "tabar:cooked-diet-body-and-brain",
+   "rel": "explains",
+   "note": {
+    "fa": "غذای پخته، روده و مغز",
+    "en": "Cooked food, gut and brain",
+    "nl": "Cooked food, gut and brain"
+   }
+  }
+ ],
+ "people": [
+  "core:rachel-n-carmody",
+  "core:stephen-m-secor"
+ ],
+ "sources": [
+  "src:732c1fdbea",
+  "src:c12cd83ad0",
+  "src:c8517f2ad2"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,137 @@
+{
+ "id": "tabar:ghost-populations-mixture",
+ "kind": "concept",
+ "title": {
+  "fa": "جمعیت‌های «روح»: ردیابی گروه‌های ناپدیدشده از رد ژنی‌شان",
+  "en": "'Ghost' populations: tracing vanished groups through the DNA they left",
+  "nl": "'Spookpopulaties': verdwenen groepen opsporen via hun DNA-sporen"
+ },
+ "aliases": [],
+ "parent": "tabar:population-genetics",
+ "field": "tabar:population-genetics",
+ "summary": {
+  "fa": "رایش نشان می‌دهد با آزمون‌های آماری می‌توان وجود گروه‌هایی را که امروز به‌شکل ناآمیخته نمانده‌اند از روی ژنوم نوادگانشان تشخیص داد؛ مثل «اوراسیایی‌های شمالیِ باستان» و «اوراسیایی‌های پایه». نتیجهٔ بزرگ او این است که خوشه‌های ژنتیکی امروز خودشان آمیزهٔ گروه‌های بسیار متفاوت گذشته‌اند. این تصویر قوی و پرکاربرد است، اما نتیجهٔ مدل‌های آماری است و جای و زمان زندگی «ارواح» را فقط با DNA باستانی می‌توان دقیق کرد.",
+  "en": "Reich shows that statistical tests can reveal groups that no longer exist in unmixed form, from the genomes of their descendants, such as the 'Ancient North Eurasians' and the 'Basal Eurasians'. His main conclusion is that today's genetic clusters are themselves mixtures of very different past groups. The picture is strong and widely used but is model-based; where and when the 'ghosts' lived can be pinned down only with ancient DNA.",
+  "nl": "Reich laat zien dat statistische toetsen groepen kunnen opsporen die niet meer ongemengd bestaan, zoals de 'Oude Noord-Euraziaten' en de 'Basale Euraziaten'. Zijn kernconclusie: de huidige genetische clusters zijn zelf mengsels van sterk verschillende groepen uit het verleden. Het beeld is sterk maar modelgebaseerd."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ایده: اگر چهار جمعیت فقط با یک درخت شاخه‌شاخه به هم مربوط بودند، یک آمارهٔ ساده (آزمون چهارجمعیتی) باید صفر شود. انحراف از صفر یعنی آمیزش، یعنی دست‌کم یکی از جمعیت‌ها آمیزه‌ای است. به این ترتیب می‌توان وجود جمعیتی را نتیجه گرفت که هیچ نمونهٔ ناآمیخته‌ای از آن در دست نیست؛ رایش به آن «روح» می‌گوید.",
+    "en": "The idea: if four populations were related by a simple branching tree, a simple statistic (the four-population test) should be zero. A deviation from zero signals mixture, so at least one population is a mixture. This lets researchers infer a population for which no unmixed sample exists, which Reich calls a 'ghost'.",
+    "nl": "The idea: if four populations were related by a simple branching tree, a simple statistic (the four-population test) should be zero. A deviation from zero signals mixture, so at least one population is a mixture. This lets researchers infer a population for which no unmixed sample exists, which Reich calls a 'ghost'."
+   },
+   "sources": [
+    "src:a4f00f41ff"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمونهٔ نخست: «اوراسیایی‌های شمالیِ باستان». نیک پترسون از روی داده‌های امروزی حدس زد که چنین گروهی هم به بومیان آمریکا و هم به اروپاییان شمالی تبار داده است. سپس ژنوم پسربچه‌ای ۲۴ هزارساله از مالتا در سیبری همین را تأیید کرد. حدود یک‌سوم تبار بومیان آمریکا از این گروه و باقی از شرق آسیایی‌هاست.",
+    "en": "First example: the 'Ancient North Eurasians'. Nick Patterson inferred from modern data that such a group contributed to both Native Americans and northern Europeans. The genome of a roughly 24,000-year-old boy from Mal'ta in Siberia then confirmed it. About a third of Native American ancestry comes from this group and the rest from East Asians.",
+    "nl": "First example: the 'Ancient North Eurasians'. Nick Patterson inferred from modern data that such a group contributed to both Native Americans and northern Europeans. The genome of a roughly 24,000-year-old boy from Mal'ta in Siberia then confirmed it. About a third of Native American ancestry comes from this group and the rest from East Asians."
+   },
+   "sources": [
+    "src:a4f00f41ff",
+    "src:47eeb4b276"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمونهٔ دوم: «اوراسیایی‌های پایه». ایوسیف لازاریدیس با همین ابزار دید که شاخه‌ای زودجداشده در تبار کشاورزان خاور نزدیک هست. تا زمان نگارش کتاب هیچ نمونهٔ مستقیمی از آن‌ها در دست نبود و رایش خودش مکان زندگی‌شان را حدس می‌نامد (شمال آفریقا؟). مردم ایران و لوانت در ده هزار سال پیش و پیش‌تر، هرکدام حدود ۵۰ درصد از این تبار داشتند.",
+    "en": "Second example: the 'Basal Eurasians'. Using the same tools Iosif Lazaridis found an early-split lineage in the ancestry of Near Eastern farmers. At the time of the book no direct sample existed, and Reich explicitly calls their homeland a speculation (North Africa?). People in Iran and the Levant 10,000+ years ago each had about 50 percent of this ancestry.",
+    "nl": "Second example: the 'Basal Eurasians'. Using the same tools Iosif Lazaridis found an early-split lineage in the ancestry of Near Eastern farmers. At the time of the book no direct sample existed, and Reich explicitly calls their homeland a speculation (North Africa?). People in Iran and the Levant 10,000+ years ago each had about 50 percent of this ancestry."
+   },
+   "sources": [
+    "src:a4f00f41ff",
+    "src:92e120a792",
+    "src:519a39f1f8"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "جمع‌بندی رایش: پیش از انقلاب ژنوم همه (از جمله خودش) فکر می‌کردند خوشه‌های بزرگ امروزی بازتاب انشعاب‌های بسیار قدیمی‌اند. اما در هر جمعیتی که بررسی شده (اروپایی، جنوب آسیایی، شرق آسیایی، آفریقایی) آمیختگی بنیادی دیده شده؛ به تعبیر او آمیزش در همهٔ سطوح تاریخ دیده می‌شود. این برداشت قوی است، ولی عبارتِ «هیچ جمعیت تنهِ ناآمیخته‌ای نبوده» نتیجهٔ مدل‌های برگزیده است و جای تفسیرهای دیگر هست.",
+    "en": "Reich's conclusion: before the genome revolution everyone, himself included, assumed today's big clusters mirror very old splits. In every population examined (European, South Asian, East Asian, African) fundamental mixture appears; in his words mixture is visible at every level of the history. This reading is strong, but the claim that there was never an unmixed trunk population rests on chosen models and allows alternative interpretations.",
+    "nl": "Reich's conclusion: before the genome revolution everyone, himself included, assumed today's big clusters mirror very old splits. In every population examined (European, South Asian, East Asian, African) fundamental mixture appears; in his words mixture is visible at every level of the history. This reading is strong, but the claim that there was never an unmixed trunk population rests on chosen models and allows alternative interpretations."
+   },
+   "sources": [
+    "src:a4f00f41ff"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "هشدارهای روش‌شناختی: آمارهٔ آمیزش نشان می‌دهد گروهی با آن ویژگی ژنتیکی وجود داشته، نه کجا و کِی زندگی می‌کرده یا چه نامی داشته است. مدل‌های آمیزش یکتا نیستند و با داده‌های بیشتر عوض می‌شوند. نام‌هایی مثل «اوراسیایی پایه» برچسب‌های مدلی‌اند، نه قوم یا ملتی واقعی.",
+    "en": "Methodological cautions: a mixture statistic shows that a group with a certain genetic profile existed, not where or when it lived or what it was called. Mixture models are not unique and change with more data. Names such as 'Basal Eurasian' are model labels, not real peoples or nations.",
+    "nl": "Methodological cautions: a mixture statistic shows that a group with a certain genetic profile existed, not where or when it lived or what it was called. Mixture models are not unique and change with more data. Names such as 'Basal Eurasian' are model labels, not real peoples or nations."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:basal-eurasian-ancestry",
+   "rel": "explains",
+   "note": {
+    "fa": "مدخل تفصیلی دربارهٔ اوراسیایی پایه",
+    "en": "Detailed entry on Basal Eurasians",
+    "nl": "Detailed entry on Basal Eurasians"
+   }
+  },
+  {
+   "to": "tabar:ancient-dna",
+   "rel": "part-of",
+   "note": {
+    "fa": "دی‌ان‌ای باستانی «ارواح» را نمونه‌دار می‌کند",
+    "en": "Ancient DNA turns 'ghosts' into samples",
+    "nl": "Ancient DNA turns 'ghosts' into samples"
+   }
+  },
+  {
+   "to": "tabar:near-east-first-farmers-structure",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساختار جمعیت نخستین کشاورزان خاور نزدیک",
+    "en": "Population structure of the first Near Eastern farmers",
+    "nl": "Population structure of the first Near Eastern farmers"
+   }
+  },
+  {
+   "to": "tabar:race-ancestry-reich-ethics",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیامد برای مفهوم نژاد",
+    "en": "Implications for the idea of race",
+    "nl": "Implications for the idea of race"
+   }
+  }
+ ],
+ "people": [
+  "core:nick-patterson",
+  "core:iosif-lazaridis",
+  "core:eske-willerslev"
+ ],
+ "sources": [
+  "src:47eeb4b276",
+  "src:519a39f1f8",
+  "src:92e120a792",
+  "src:a4f00f41ff"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
