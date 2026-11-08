@@ -21,6 +21,7 @@ jobs:
       - name: Build wiki readers and the lands map
         run: |
           for w in daneshsara/data/*/; do w=$(basename "$w"); [ "$w" = psy ] || python3 daneshsara/build/reader.py "$w"; done
+          python3 daneshsara/build/tabar_home.py
           python3 daneshsara/build/lands.py
           python3 daneshsara/build/iran_page.py
           python3 daneshsara/build/core_pages.py
