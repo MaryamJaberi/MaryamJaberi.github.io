@@ -1,14 +1,14 @@
 {
 "stats": {
-"concepts": 622,
-"concepts_with_sources": 581,
-"cross_wiki_links": 260,
+"concepts": 888,
+"concepts_with_sources": 847,
+"cross_wiki_links": 504,
 "bridge_links": 133,
 "iran_notes": 16,
 "fields": 77,
 "bridges": 25,
-"people": 975,
-"sources": 1298,
+"people": 1173,
+"sources": 1790,
 "built": "2026-11-08"
 },
 "entries": {
@@ -3384,6 +3384,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:futures-studies-foresight-forecasting": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آینده‌پژوهی، آینده‌نگاری و پیش‌بینی: سه کار متفاوت",
+"en": "Futures studies, foresight and forecasting: three different tasks",
+"nl": "Toekomstonderzoek, foresight en voorspellen: drie verschillende taken"
+},
+"url": "soc/#futures-studies-foresight-forecasting",
+"status": "draft",
+"wikidata": null
+},
 "soc:preference-falsification": {
 "wiki": "soc",
 "type": "concept",
@@ -3393,6 +3405,18 @@
 "nl": "Voorkeursvervalsing en de verrassing van revoluties"
 },
 "url": "soc/#preference-falsification",
+"status": "draft",
+"wikidata": null
+},
+"soc:tradition-tested-institutions-homeland-first": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "سنت آزموده و اولویت وطن: دفاع محافظه‌کارانهٔ سخنران",
+"en": "Tested tradition and the primacy of homeland: the lecturer's conservative case",
+"nl": "Beproefde traditie en het primaat van het vaderland: het conservatieve pleidooi van de spreker"
+},
+"url": "soc/#tradition-tested-institutions-homeland-first",
 "status": "draft",
 "wikidata": null
 },
@@ -3516,6 +3540,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:dogville-law-custom-gap-crime-function": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "شکاف قانون و عرف، و کارکرد جرم و مجازات (به بهانهٔ فیلم داگویل)",
+"en": "The gap between law and custom, and the function of crime and punishment (via the film Dogville)",
+"nl": "De kloof tussen wet en gewoonte, en de functie van misdaad en straf (via Dogville)"
+},
+"url": "soc/#dogville-law-custom-gap-crime-function",
+"status": "draft",
+"wikidata": null
+},
 "soc:tocqueville-religion-liberty-america": {
 "wiki": "soc",
 "type": "concept",
@@ -3552,6 +3588,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:telegram-public-sphere-iran-2010s": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تلگرام و حوزهٔ عمومی در ایران دههٔ ۱۳۹۰ (خوانش سخنران)",
+"en": "Telegram and the public sphere in 2010s Iran (the lecturer's reading)",
+"nl": "Telegram en de publieke sfeer in Iran in de jaren 2010 (lezing van de spreker)"
+},
+"url": "soc/#telegram-public-sphere-iran-2010s",
+"status": "draft",
+"wikidata": null
+},
+"soc:myth-binary-oppositions-simplify-world": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اسطوره و تقابل‌های دوتایی: چرا جهان را ساده می‌کنیم",
+"en": "Myth and binary oppositions: why we simplify the world",
+"nl": "Mythe en binaire tegenstellingen: waarom we de wereld vereenvoudigen"
+},
+"url": "soc/#myth-binary-oppositions-simplify-world",
+"status": "draft",
+"wikidata": null
+},
 "soc:development-theory-eras-anachronism": {
 "wiki": "soc",
 "type": "concept",
@@ -3561,6 +3621,18 @@
 "nl": "Tijdperken van ontwikkelingstheorie en het anachronisme"
 },
 "url": "soc/#development-theory-eras-anachronism",
+"status": "draft",
+"wikidata": null
+},
+"soc:no-clean-break-tradition-conservative-reading": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "گسست کامل از گذشته ممکن نیست؟ خوانش محافظه‌کارانهٔ سنت در گفت‌وگو دربارهٔ آیندهٔ ایران",
+"en": "Is a clean break from the past impossible? A conservative reading of tradition in the Iran-future talk",
+"nl": "Is een volledige breuk met het verleden onmogelijk? Een conservatieve lezing van traditie"
+},
+"url": "soc/#no-clean-break-tradition-conservative-reading",
 "status": "draft",
 "wikidata": null
 },
@@ -3576,6 +3648,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:why-religion-outlives-metaphysics": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "چرا دین و متافیزیک پس از «مرگ خدا» هنوز کار می‌کنند؟",
+"en": "Why religion and metaphysics still work after the 'death of God'",
+"nl": "Waarom religie en metafysica na de 'dood van God' nog werken"
+},
+"url": "soc/#why-religion-outlives-metaphysics",
+"status": "draft",
+"wikidata": null
+},
 "soc:industrial-modernity-backdrop": {
 "wiki": "soc",
 "type": "concept",
@@ -3588,6 +3672,42 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:orwell-english-democracy-1941": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اورول و دفاع از دموکراسی انگلیسی در برابر کمونیست‌ها و فاشیست‌ها",
+"en": "Orwell defending English democracy against communists and fascists",
+"nl": "Orwell en de verdediging van de Engelse democratie"
+},
+"url": "soc/#orwell-english-democracy-1941",
+"status": "draft",
+"wikidata": null
+},
+"soc:activism-iran-now-framing": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کنشگری در ایران اکنون: طرح مسئله و پرسش «من چه می‌توانم بکنم؟»",
+"en": "Activism in Iran now: framing the question 'what can I do?'",
+"nl": "Activisme in het Iran van nu: de vraag 'wat kan ik doen?'"
+},
+"url": "soc/#activism-iran-now-framing",
+"status": "draft",
+"wikidata": null
+},
+"soc:rural-urban-ethics-city-strangerhood-hallu-film": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اخلاق روستا و شهر، غریبگی و «بی‌اعتنایی مدنی»",
+"en": "Rural versus urban ethics, strangerhood and 'civil inattention'",
+"nl": "Plattelands- en stadsmoraal, vreemdelingschap en 'beleefde onverschilligheid'"
+},
+"url": "soc/#rural-urban-ethics-city-strangerhood-hallu-film",
+"status": "draft",
+"wikidata": null
+},
 "soc:mythic-time-state-vs-nation": {
 "wiki": "soc",
 "type": "concept",
@@ -3597,6 +3717,42 @@
 "nl": "De mythische tijd van de staat en de terugkeer naar het dagelijks leven"
 },
 "url": "soc/#mythic-time-state-vs-nation",
+"status": "draft",
+"wikidata": null
+},
+"soc:smith-division-of-labour-pin-factory": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تقسیم کار و کارگاه سنجاق‌سازی نزد آدام اسمیت، و پیوند آن با دورکیم",
+"en": "Adam Smith's division of labour and the pin factory, and its link to Durkheim",
+"nl": "Adam Smith over arbeidsdeling en de speldenfabriek, en de band met Durkheim"
+},
+"url": "soc/#smith-division-of-labour-pin-factory",
+"status": "draft",
+"wikidata": null
+},
+"soc:constitutional-awareness-state-capacity": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "از مشروطه تا دولت مقتدر: «سیر آگاهی» و نقدهای آن",
+"en": "From constitution to strong state: the 'path of awareness' reading and its critics",
+"nl": "Van grondwet tot sterke staat"
+},
+"url": "soc/#constitutional-awareness-state-capacity",
+"status": "draft",
+"wikidata": null
+},
+"soc:political-vs-social-freedom-constitutional-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آزادی سیاسی بدون آزادی اندیشیدن: نکتهٔ آجودانی دربارهٔ مشروطه",
+"en": "Political freedom without freedom of thought: Ajoudani's point on the constitutional era",
+"nl": "Politieke vrijheid zonder vrijheid van denken: Ajoudani over het constitutionele tijdperk"
+},
+"url": "soc/#political-vs-social-freedom-constitutional-iran",
 "status": "draft",
 "wikidata": null
 },
@@ -3648,6 +3804,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:death-myth-restoring-routine": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مرگ، اسطوره و بازگشت به روزمرگی",
+"en": "Death, myth and the return to everyday routine",
+"nl": "Dood, mythe en de terugkeer naar het dagelijks leven"
+},
+"url": "soc/#death-myth-restoring-routine",
+"status": "draft",
+"wikidata": null
+},
 "soc:theory": {
 "wiki": "soc",
 "type": "field",
@@ -3657,6 +3825,30 @@
 "nl": "Sociale theorie"
 },
 "url": "soc/#theory",
+"status": "draft",
+"wikidata": null
+},
+"soc:reference-dates-and-historical-turning-points": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تاریخ‌های مرجع: رخدادهایی که تاریخ را به پیش و پس تقسیم می‌کنند",
+"en": "Reference dates: events that split history into before and after",
+"nl": "Referentiedata: gebeurtenissen die de geschiedenis in een voor en na verdelen"
+},
+"url": "soc/#reference-dates-and-historical-turning-points",
+"status": "draft",
+"wikidata": null
+},
+"soc:ressentiment-revolution-intellectuals-thesis-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "فرضیهٔ کین‌توزی: اخلاق روستایی، انقلاب ۵۷ و روشنفکران",
+"en": "The ressentiment thesis: rural ethics, the 1979 revolution and intellectuals",
+"nl": "De ressentiment-these: plattelandsmoraal, 1979 en intellectuelen"
+},
+"url": "soc/#ressentiment-revolution-intellectuals-thesis-iran",
 "status": "draft",
 "wikidata": null
 },
@@ -3684,6 +3876,66 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:nation-as-umbrella-idea-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "«ایران» به‌مثابه چتر اجماع و خطر مفاهیم انتزاعی (دیدگاه سخنران)",
+"en": "'Iran' as an umbrella idea and the problem of abstract concepts (the lecturer's view)",
+"nl": "'Iran' als overkoepelend idee en het risico van abstracte begrippen (visie van de spreker)"
+},
+"url": "soc/#nation-as-umbrella-idea-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:structure-agency-dialectic-berger-giddens": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "دیالکتیک ساختار و کنش: برگر، لاکمن و گیدنز",
+"en": "The structure-agency dialectic: Berger, Luckmann and Giddens",
+"nl": "De dialectiek van structuur en handelen: Berger, Luckmann en Giddens"
+},
+"url": "soc/#structure-agency-dialectic-berger-giddens",
+"status": "draft",
+"wikidata": null
+},
+"soc:constitutional-era-press-freedom-and-disorder": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "دو سال آزادی و آشوب: چرا مشروطهٔ نوپا به توپ بسته شد؟ (روایت آجودانی)",
+"en": "Two years of freedom and disorder: why the young constitutional order was shelled (Ajoudani's reading)",
+"nl": "Twee jaar vrijheid en wanorde: waarom de jonge constitutionele orde werd beschoten"
+},
+"url": "soc/#constitutional-era-press-freedom-and-disorder",
+"status": "draft",
+"wikidata": null
+},
+"soc:apartment-film-merit-favors-bureaucracy": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "فیلم «آپارتمان» وایلدر: پیشرفت شغلی با امتیازدادن به مدیران، نه شایستگی",
+"en": "Wilder's «The Apartment»: career advancement by favours to managers, not merit",
+"nl": "Wilders «The Apartment»: carrière door gunsten aan managers in plaats van verdienste"
+},
+"url": "soc/#apartment-film-merit-favors-bureaucracy",
+"status": "draft",
+"wikidata": null
+},
+"soc:minimal-state-taxes-health-harm-reduction-views": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "دولت حداقلی، مالیات و درمان: دیدگاه راست-لیبرال سخنران و نقدها",
+"en": "Minimal state, taxes and healthcare: the lecturer's right-liberal view and its critics",
+"nl": "Minimale staat, belastingen en zorg: de liberale visie van de spreker"
+},
+"url": "soc/#minimal-state-taxes-health-harm-reduction-views",
+"status": "draft",
+"wikidata": null
+},
 "soc:paramount-reality-and-breaks": {
 "wiki": "soc",
 "type": "concept",
@@ -3693,6 +3945,66 @@
 "nl": "De dominante alledaagse werkelijkheid en de doorbraken van kunst en religie"
 },
 "url": "soc/#paramount-reality-and-breaks",
+"status": "draft",
+"wikidata": null
+},
+"soc:national-matter-memory-experience-hope-sabouri": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "امر ملی نزد صبوری: حافظه، تجربه و امید در سه زمان، با نقش زبان و اسطوره",
+"en": "The national as shared memory, experience and hope: Sabouri's view, with language and myth",
+"nl": "Het nationale als gedeeld geheugen, ervaring en hoop (Sabouri)"
+},
+"url": "soc/#national-matter-memory-experience-hope-sabouri",
+"status": "draft",
+"wikidata": null
+},
+"soc:uncertain-future-squander-hoard": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آیندهٔ مبهم: ولخرجی یا احتکار زمان حال، و ایدئولوژی‌ها و آینده",
+"en": "The ambiguous future: squandering or hoarding the present, and ideologies of the future",
+"nl": "De onzekere toekomst: het heden verspillen of oppotten, en ideologieën over de toekomst"
+},
+"url": "soc/#uncertain-future-squander-hoard",
+"status": "draft",
+"wikidata": null
+},
+"soc:institutional-lag-order-repression-reza-shah": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "«لَگ» تاریخی، نظم و سرکوب: خوانش سخنران از رسیدن به پهلوی اول",
+"en": "Institutional lag, order and repression: the lecturer's route to the first Pahlavi",
+"nl": "Institutionele achterstand, orde en repressie: de weg naar Reza Shah volgens de spreker"
+},
+"url": "soc/#institutional-lag-order-repression-reza-shah",
+"status": "draft",
+"wikidata": null
+},
+"soc:ibn-khaldun-founder-debate": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آیا ابن‌خلدون بنیان‌گذار جامعه‌شناسی است؟ بحث بر سر «پیشگامی»",
+"en": "Is Ibn Khaldun a founder of sociology? The debate over 'pioneer'",
+"nl": "Is Ibn Khaldun een grondlegger van de sociologie? Het debat over 'pionier'"
+},
+"url": "soc/#ibn-khaldun-founder-debate",
+"status": "draft",
+"wikidata": null
+},
+"soc:chogha-golan-plant-management": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "چغاگلان: کشت گیاهان وحشی پیش از اهلی‌شدن",
+"en": "Chogha Golan: cultivation of wild plants before domestication",
+"nl": "Chogha Golan: teelt van wilde planten vóór domesticatie"
+},
+"url": "soc/#chogha-golan-plant-management",
 "status": "draft",
 "wikidata": null
 },
@@ -3720,6 +4032,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:political-ideology-enemy-making-and-reality-gap": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ایدئولوژی سیاسی، دشمن‌سازی و شکاف رؤیا با واقعیت",
+"en": "Political ideology, enemy-making and the gap between dream and reality",
+"nl": "Politieke ideologie, vijandbeeldvorming en de kloof tussen droom en werkelijkheid"
+},
+"url": "soc/#political-ideology-enemy-making-and-reality-gap",
+"status": "draft",
+"wikidata": null
+},
 "soc:qajar-late-crisis-and-revision": {
 "wiki": "soc",
 "type": "concept",
@@ -3741,6 +4065,18 @@
 "nl": "Gegeneraliseerd vertrouwen"
 },
 "url": "soc/#generalized-trust",
+"status": "draft",
+"wikidata": null
+},
+"soc:armed-struggle-shortcut-thesis-and-hero-model": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مبارزهٔ مسلحانه، «میانبر تاریخ» و الگو شدن قهرمان",
+"en": "Armed struggle, the 'shortcut through history' and the hero as role model",
+"nl": "Gewapende strijd, de 'kortere weg door de geschiedenis' en de held als rolmodel"
+},
+"url": "soc/#armed-struggle-shortcut-thesis-and-hero-model",
 "status": "draft",
 "wikidata": null
 },
@@ -3768,6 +4104,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:kaveh-iranshahr-romantic-nationalism": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مجلهٔ کاوه و ایرانشهر: ملی‌گرایی رمانتیک و «رام‌کردن» مدرنیته",
+"en": "Kaveh and Iranshahr: romantic nationalism and the 'domestication' of modernity",
+"nl": "Kaveh en Iranshahr: romantisch nationalisme en het 'temmen' van de moderniteit"
+},
+"url": "soc/#kaveh-iranshahr-romantic-nationalism",
+"status": "draft",
+"wikidata": null
+},
+"soc:five-institutions-religion-capture-1979-thesis": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "پنج نهاد اجتماعی و فرضیهٔ «تسخیر نهادها» در انقلاب ۱۳۵۷",
+"en": "The five institutions and the 'institutional capture' thesis on 1979",
+"nl": "De vijf instituties en de these over 'institutionele overname' in 1979"
+},
+"url": "soc/#five-institutions-religion-capture-1979-thesis",
+"status": "draft",
+"wikidata": null
+},
 "soc:caucasus-historical-shocks-iran": {
 "wiki": "soc",
 "type": "concept",
@@ -3780,6 +4140,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:war-collective-will-embodied-leader": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "جنگ، اراده‌ٔ جمعی و رهبری که آن را «تجسم می‌دهد»",
+"en": "War, collective will and the leader as embodiment",
+"nl": "Oorlog, collectieve wil en de leider als belichaming"
+},
+"url": "soc/#war-collective-will-embodied-leader",
+"status": "draft",
+"wikidata": null
+},
 "soc:iranian-emigration-waves-history": {
 "wiki": "soc",
 "type": "concept",
@@ -3789,6 +4161,18 @@
 "nl": "Historische migratiegolven uit Iran: het verhaal van één spreker"
 },
 "url": "soc/#iranian-emigration-waves-history",
+"status": "draft",
+"wikidata": null
+},
+"soc:tobacco-protest-mobilization": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تحریم تنباکو: دین، بازار و اعتماد به نفس جمعی",
+"en": "The Tobacco Protest: religion, bazaar and collective self-confidence",
+"nl": "De tabaksprotesten: religie, bazaar en collectief zelfvertrouwen"
+},
+"url": "soc/#tobacco-protest-mobilization",
 "status": "draft",
 "wikidata": null
 },
@@ -3816,6 +4200,54 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:norms-as-collective-bargains-gender-division-labour": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "هنجارهای کهن به‌مثابه توافق کارکردی: خانواده، تقسیم کار و پیوند «زن و گناه»",
+"en": "Ancient norms as functional agreements: family, division of labour and the 'woman–sin' link",
+"nl": "Oude normen als functionele afspraken: gezin, arbeidsverdeling en de band 'vrouw–zonde'"
+},
+"url": "soc/#norms-as-collective-bargains-gender-division-labour",
+"status": "draft",
+"wikidata": null
+},
+"soc:ideology-thought-sacrificed-to-power": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ایدئولوژی به‌مثابه قربانی‌کردن اندیشه به پای قدرت",
+"en": "Ideology as sacrificing thought to political power",
+"nl": "Ideologie als het opofferen van denken aan politieke macht"
+},
+"url": "soc/#ideology-thought-sacrificed-to-power",
+"status": "draft",
+"wikidata": null
+},
+"soc:parsons-shared-values-integration-disorder": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ارزش‌های مشترک و یکپارچگی: چرا پارسونز جامعهٔ بی‌ارزش‌مشترک را «آشفته» می‌داند",
+"en": "Shared values and integration: why Parsons calls a value-fragmented society disordered",
+"nl": "Gedeelde waarden en integratie: waarom Parsons een gefragmenteerde samenleving 'verward' noemt"
+},
+"url": "soc/#parsons-shared-values-integration-disorder",
+"status": "draft",
+"wikidata": null
+},
+"soc:sacred-discourse-fall-power-vacuum-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "فروپاشی گفتمان قدسی و خلأ قدرت: آیا بعد از یک نظام، «خلأ گفتمانی» می‌آید؟",
+"en": "The fall of a sacred discourse and the power vacuum: is there really a 'discourse vacuum'?",
+"nl": "De val van een sacraal discours en het machtsvacuüm: bestaat er een 'discoursvacuüm'?"
+},
+"url": "soc/#sacred-discourse-fall-power-vacuum-iran",
+"status": "draft",
+"wikidata": null
+},
 "soc:religion-liberty-prosperity-claim": {
 "wiki": "soc",
 "type": "concept",
@@ -3840,6 +4272,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:utopia-linear-time-skipping-stages": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آرمان‌شهر، زمان خطی و «پریدن از مرحله‌ها»: ادعاهای سخنران و نقد آن‌ها",
+"en": "Utopia, linear time and 'skipping stages': the lecturer's claims and their critique",
+"nl": "Utopie, lineaire tijd en 'fasen overslaan': beweringen van de spreker en kritiek"
+},
+"url": "soc/#utopia-linear-time-skipping-stages",
+"status": "draft",
+"wikidata": null
+},
 "soc:soviet-agriculture-and-privilege": {
 "wiki": "soc",
 "type": "concept",
@@ -3861,6 +4305,30 @@
 "nl": "Nationale vernedering en collectieve woede"
 },
 "url": "soc/#national-humiliation-anger",
+"status": "draft",
+"wikidata": null
+},
+"soc:storytelling-as-knowing-and-activism": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "روایت‌گری، سفر قهرمان و آشنا کردن امر غریب به‌مثابه شکلی از کنشگری",
+"en": "Storytelling, the hero's journey and making the strange familiar as a form of activism",
+"nl": "Vertellen, de heldenreis en het vertrouwd maken van het vreemde als vorm van activisme"
+},
+"url": "soc/#storytelling-as-knowing-and-activism",
+"status": "draft",
+"wikidata": null
+},
+"soc:monarchism-republicanism-continuity-claim-iran-dialogue": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "پادشاهی‌خواهی در برابر جمهوری‌خواهی: ادعای پیوستگی تاریخی و «شاه دادگر»",
+"en": "Monarchism versus republicanism: the continuity claim and the 'just king'",
+"nl": "Monarchisme versus republikanisme: de continuïteitsclaim en de 'rechtvaardige koning'"
+},
+"url": "soc/#monarchism-republicanism-continuity-claim-iran-dialogue",
 "status": "draft",
 "wikidata": null
 },
@@ -3936,6 +4404,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:honor-control-women-reproduction-function": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ناموس و کنترل زنان: تبیین کارکردی و نقدهای آن",
+"en": "Honour and the control of women: a functional explanation and its critics",
+"nl": "Eer en controle over vrouwen: een functionele verklaring en kritiek"
+},
+"url": "soc/#honor-control-women-reproduction-function",
+"status": "draft",
+"wikidata": null
+},
 "soc:culture-concept-functions": {
 "wiki": "soc",
 "type": "concept",
@@ -3972,6 +4452,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:love-fidelity-marriage-anomie": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "وفاداری، ازدواج و آنومی در جهان تازه",
+"en": "Fidelity, marriage and anomie in a changing world",
+"nl": "Trouw, huwelijk en anomie in een veranderende wereld"
+},
+"url": "soc/#love-fidelity-marriage-anomie",
+"status": "draft",
+"wikidata": null
+},
+"soc:persian-plateau-palaeolithic-record": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "شواهد پارینه‌سنگی و اقلیمی فلات ایران در ۷۰ تا ۴۰ هزار سال پیش",
+"en": "The Palaeolithic and climatic record of the Persian Plateau, 70–40 kya",
+"nl": "Het paleolithische en klimaatrecord van het Iraanse plateau, 70–40 kya"
+},
+"url": "soc/#persian-plateau-palaeolithic-record",
+"status": "draft",
+"wikidata": null
+},
 "soc:institutions-needs-order": {
 "wiki": "soc",
 "type": "concept",
@@ -3981,6 +4485,42 @@
 "nl": "De vijf hoofdinstituties, behoeften en grenzen tussen instituties"
 },
 "url": "soc/#institutions-needs-order",
+"status": "draft",
+"wikidata": null
+},
+"soc:sacred-word-gravity-of-music": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کلمهٔ مقدس، سکوت در برابر ساز و جدیتِ غمگین",
+"en": "The sacred word, silence before the instrument, and the seriousness of sadness",
+"nl": "Het heilige woord, stilte voor het instrument en de ernst van verdriet"
+},
+"url": "soc/#sacred-word-gravity-of-music",
+"status": "draft",
+"wikidata": null
+},
+"soc:constitutional-monarchy-vs-republic-iran-debate": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "پادشاهی مشروطه یا جمهوری برای ایران: دلایل سخنران و دیدگاه مخالف",
+"en": "Constitutional monarchy or republic for Iran: the speaker's case and the opposing view",
+"nl": "Constitutionele monarchie of republiek voor Iran: zijn argumenten en de tegenpositie"
+},
+"url": "soc/#constitutional-monarchy-vs-republic-iran-debate",
+"status": "draft",
+"wikidata": null
+},
+"soc:tradition-modernity-rift-1979": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "شکاف سنت و مدرنیته در ایران و برداشت سخنران از انقلاب ۱۳۵۷",
+"en": "The tradition-modernity rift in Iran and the lecturer's reading of 1979",
+"nl": "De kloof tussen traditie en moderniteit in Iran en de lezing van 1979"
+},
+"url": "soc/#tradition-modernity-rift-1979",
 "status": "draft",
 "wikidata": null
 },
@@ -3996,6 +4536,54 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:cassirer-myth-prior-to-history-god-idea": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اسطوره پیش از تاریخ: کاسیرر و ایدهٔ خدا به‌مثابه سرچشمهٔ سرنوشت قوم",
+"en": "Myth before history: Cassirer and the idea of God as source of a people's fate",
+"nl": "Mythe vóór geschiedenis: Cassirer en het godsidee"
+},
+"url": "soc/#cassirer-myth-prior-to-history-god-idea",
+"status": "draft",
+"wikidata": null
+},
+"soc:modern-persian-song-love-imaginaire": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ترانهٔ نوین فارسی و ساخته‌شدن تصویری تازه از عشق",
+"en": "Modern Persian song and the making of a new image of love",
+"nl": "Het moderne Perzische lied en een nieuw beeld van liefde"
+},
+"url": "soc/#modern-persian-song-love-imaginaire",
+"status": "draft",
+"wikidata": null
+},
+"soc:latent-function-intervention-risk": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کارکرد پنهان و خطر دخالت مستقیم: چرا «مهندسی اجتماعی» پیامد پیش‌بینی‌نشده دارد",
+"en": "Latent functions and the risk of direct intervention: why 'social engineering' has unforeseen effects",
+"nl": "Latente functies en het risico van directe ingrepen: waarom 'sociale engineering' onvoorziene gevolgen heeft"
+},
+"url": "soc/#latent-function-intervention-risk",
+"status": "draft",
+"wikidata": null
+},
+"soc:left-islamist-affinity-1979-thesis-and-rival-accounts": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "چپ و اسلام‌گرایی در انقلاب ۱۳۵۷: تز «ساختار مشترک» و روایت‌های رقیب",
+"en": "The left and Islamism in 1979: the 'shared structure' thesis and rival accounts",
+"nl": "Links en islamisme in 1979: de these van de 'gedeelde structuur' en rivaliserende verklaringen"
+},
+"url": "soc/#left-islamist-affinity-1979-thesis-and-rival-accounts",
+"status": "draft",
+"wikidata": null
+},
 "soc:collective": {
 "wiki": "soc",
 "type": "field",
@@ -4005,6 +4593,18 @@
 "nl": "Collectieve actie & bewegingen"
 },
 "url": "soc/#collective",
+"status": "draft",
+"wikidata": null
+},
+"soc:women-in-stadiums-structure-and-premises": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ورود زنان به ورزشگاه: ساختار نهادی و آزمودن گزاره‌های مخالفان",
+"en": "Women's access to stadiums: institutional structure and testing the objections",
+"nl": "Toegang van vrouwen tot stadions: institutionele structuur en het toetsen van bezwaren"
+},
+"url": "soc/#women-in-stadiums-structure-and-premises",
 "status": "draft",
 "wikidata": null
 },
@@ -4032,6 +4632,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:parsons-american-outsider-general-theory": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "پارسونز، «نظریه‌پرداز درمان‌ناپذیر» در جامعه‌شناسی تجربه‌گرای آمریکا",
+"en": "Parsons, the 'incurable theorist' amid American empiricism",
+"nl": "Parsons, de 'ongeneeslijke theoreticus' temidden van Amerikaanse empirie"
+},
+"url": "soc/#parsons-american-outsider-general-theory",
+"status": "draft",
+"wikidata": null
+},
+"soc:four-layers-of-time-eternal-present": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "چهار لایهٔ زمان و «حال ابدی» پس از انباشت رخدادهای تروماتیک",
+"en": "Four layers of time and the eternal present after piled-up traumatic events",
+"nl": "Vier lagen van tijd en het eeuwige heden na opeenstapeling van traumatische gebeurtenissen"
+},
+"url": "soc/#four-layers-of-time-eternal-present",
+"status": "draft",
+"wikidata": null
+},
 "soc:razmara-assassination-rule-of-law": {
 "wiki": "soc",
 "type": "concept",
@@ -4041,6 +4665,18 @@
 "nl": "De moord op Razmara, de Fada'iyan-e Islam en de rechtsstaat"
 },
 "url": "soc/#razmara-assassination-rule-of-law",
+"status": "draft",
+"wikidata": null
+},
+"soc:death-awareness-ritual-afterlife-roles": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آگاهی از مرگ، آیین‌ها و «تغییر نقش» مردگان در جوامع سنتی",
+"en": "Awareness of death, rituals and the dead's «change of role» in traditional societies",
+"nl": "Besef van de dood, rituelen en de «rolverandering» van de doden in traditionele samenlevingen"
+},
+"url": "soc/#death-awareness-ritual-afterlife-roles",
 "status": "draft",
 "wikidata": null
 },
@@ -4065,6 +4701,30 @@
 "nl": "Socialistische planning, onbedoelde gevolgen en de 'nieuwe mens'"
 },
 "url": "soc/#socialist-planning-unintended-consequences-new-man",
+"status": "draft",
+"wikidata": null
+},
+"soc:order-as-social-danger-and-cultural-institutions": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نظم به‌مثابه خطر اجتماعی: نهادهای فرهنگی و تولید نقش‌ها",
+"en": "Order as a social danger: cultural institutions and the production of roles",
+"nl": "Orde als maatschappelijk gevaar: culturele instellingen en rolvorming"
+},
+"url": "soc/#order-as-social-danger-and-cultural-institutions",
+"status": "draft",
+"wikidata": null
+},
+"soc:austrian-school-subjective-value-and-marginalism": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مکتب اقتصادی اتریش: ارزش ذهنی، فایدهٔ نهایی و کنش فردی",
+"en": "The Austrian school: subjective value, marginal utility and individual action",
+"nl": "De Oostenrijkse school: subjectieve waarde, marginaal nut en individuele actie"
+},
+"url": "soc/#austrian-school-subjective-value-and-marginalism",
 "status": "draft",
 "wikidata": null
 },
@@ -4140,6 +4800,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:platform-state-of-nature-order-solidarity-bounds": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "وضع طبیعی، خاستگاه اخلاق و حدِ بهینهٔ همبستگی درون‌گروهی",
+"en": "The state of nature, the origin of morality and the optimum of in-group solidarity",
+"nl": "De natuurtoestand, de oorsprong van moraal en de optimale groepssolidariteit"
+},
+"url": "soc/#platform-state-of-nature-order-solidarity-bounds",
+"status": "draft",
+"wikidata": null
+},
 "soc:us-policy-and-shah-illness-in-1978": {
 "wiki": "soc",
 "type": "concept",
@@ -4149,6 +4821,18 @@
 "nl": "Amerikaans beleid en de ziekte van de sjah in de crisis van 1978"
 },
 "url": "soc/#us-policy-and-shah-illness-in-1978",
+"status": "draft",
+"wikidata": null
+},
+"soc:liberalism-nationalism-democracy-debate": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "لیبرالیسم، ناسیونالیسم و دموکراسی: روایت فوکویاما و نقد سخنران",
+"en": "Liberalism, nationalism and democracy: Fukuyama's account and the lecturer's reply",
+"nl": "Liberalisme, nationalisme en democratie: Fukuyama's verhaal en de reactie van de docent"
+},
+"url": "soc/#liberalism-nationalism-democracy-debate",
 "status": "draft",
 "wikidata": null
 },
@@ -4173,6 +4857,18 @@
 "nl": "Zagros-bergbewoners en Mesopotamische laaglanders: handel, oorlog en staatsvorming"
 },
 "url": "soc/#zagros-mesopotamia-exchange",
+"status": "draft",
+"wikidata": null
+},
+"soc:providence-to-social-determinism-and-agency-synthesis": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "از تقدیر الهی تا جبر اجتماعی؛ و آشتی ساختار و عاملیت",
+"en": "From divine providence to social determinism, and the structure-agency reconciliation",
+"nl": "Van goddelijke voorzienigheid tot sociaal determinisme, en de verzoening van structuur en handelen"
+},
+"url": "soc/#providence-to-social-determinism-and-agency-synthesis",
 "status": "draft",
 "wikidata": null
 },
@@ -4236,6 +4932,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:arendt-totalitarian-isolation-and-trust": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "انزوا، بی‌اعتمادی و بریدن پیوندها در جامعهٔ توتالیتر",
+"en": "Isolation, distrust and cut social bonds under totalitarianism",
+"nl": "Isolatie, wantrouwen en verbroken banden onder totalitarisme"
+},
+"url": "soc/#arendt-totalitarian-isolation-and-trust",
+"status": "draft",
+"wikidata": null
+},
+"soc:europe-church-state-nobility-checks": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کلیسا، شاه و اشراف: قدرت‌های رقیب در اروپای سده‌های میانه",
+"en": "Church, king and nobility: rival powers in medieval Europe",
+"nl": "Kerk, koning en adel: rivaliserende machten in middeleeuws Europa"
+},
+"url": "soc/#europe-church-state-nobility-checks",
+"status": "draft",
+"wikidata": null
+},
 "soc:legitimacy-trust-function": {
 "wiki": "soc",
 "type": "concept",
@@ -4248,6 +4968,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:state-intervention-in-culture-and-liberty": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "دولت بی‌طرف نیست: دخالت در فرهنگ برای آزادی؟",
+"en": "The state is not neutral: intervening in culture for the sake of liberty?",
+"nl": "De staat is niet neutraal: ingrijpen in cultuur ter wille van vrijheid?"
+},
+"url": "soc/#state-intervention-in-culture-and-liberty",
+"status": "draft",
+"wikidata": null
+},
 "soc:property-rights-public-wealth-iran": {
 "wiki": "soc",
 "type": "concept",
@@ -4257,6 +4989,18 @@
 "nl": "Eigendomsrechten, waqf en anfal: eigenaarloze rijkdom en prikkels"
 },
 "url": "soc/#property-rights-public-wealth-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:pahlavi-women-rights-institutionalization": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "حقوق زنان و دورهٔ پهلوی: ادعا و نقدها",
+"en": "Women's rights and the Pahlavi era: the claim and its critics",
+"nl": "Vrouwenrechten en het Pahlavi-tijdperk"
+},
+"url": "soc/#pahlavi-women-rights-institutionalization",
 "status": "draft",
 "wikidata": null
 },
@@ -4332,6 +5076,42 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:agency-inside-determinism-fear-of-freedom": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کنشگری درون جبر: نه «همه‌چیز ممکن است» و نه «هیچ کاری نمی‌شود»",
+"en": "Agency inside determinism: neither 'anything is possible' nor 'nothing can be done'",
+"nl": "Handelen binnen determinisme: niet 'alles kan' en niet 'er is niets aan te doen'"
+},
+"url": "soc/#agency-inside-determinism-fear-of-freedom",
+"status": "draft",
+"wikidata": null
+},
+"soc:culture-terminology-civilization-geertz-cockfight": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اصطلاح‌شناسی فرهنگ: خرده‌فرهنگ، تمدن، ترجمهٔ «فرهنگ» و مثال جنگ خروس بالی",
+"en": "Terminology of culture: subculture, civilisation, translating 'culture', and Geertz's Balinese cockfight",
+"nl": "Terminologie van cultuur: subcultuur, beschaving en Geertz' Balinese hanengevecht"
+},
+"url": "soc/#culture-terminology-civilization-geertz-cockfight",
+"status": "draft",
+"wikidata": null
+},
+"soc:dogville-othering-subjectivity-dehumanization": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "غریبه‌سازی، سلب سوژگی و آسان‌شدنِ خشونت (داگویل)",
+"en": "Othering, loss of subjectivity and how violence becomes easy (Dogville)",
+"nl": "Othering, verlies van subjectiviteit en hoe geweld gemakkelijk wordt (Dogville)"
+},
+"url": "soc/#dogville-othering-subjectivity-dehumanization",
+"status": "draft",
+"wikidata": null
+},
 "soc:sociological-imagination": {
 "wiki": "soc",
 "type": "concept",
@@ -4368,6 +5148,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:activism-three-axes-aim-method-scale": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "سه محور کنشگری: هدف، روش و مقیاس",
+"en": "Three axes of activism: aim, method and scale",
+"nl": "Drie assen van activisme: doel, methode en schaal"
+},
+"url": "soc/#activism-three-axes-aim-method-scale",
+"status": "draft",
+"wikidata": null
+},
 "soc:fiqh-minimal-vs-totalizing": {
 "wiki": "soc",
 "type": "concept",
@@ -4377,6 +5169,30 @@
 "nl": "Minimale versus allesomvattende fiqh: waar zit de rem op ontwikkeling? (visie van Borhani)"
 },
 "url": "soc/#fiqh-minimal-vs-totalizing",
+"status": "draft",
+"wikidata": null
+},
+"soc:institutions-as-social-memory": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نهاد به‌مثابه حافظهٔ اجتماعی و مقاومت در برابر تغییر",
+"en": "Institutions as social memory and resistance to change",
+"nl": "Instituties als sociaal geheugen en weerstand tegen verandering"
+},
+"url": "soc/#institutions-as-social-memory",
+"status": "draft",
+"wikidata": null
+},
+"soc:parsons-action-vs-behavior-empathic-reconstruction": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کنش در برابر رفتار و بازسازی همدلانه نزد پارسونز، و ساختن مفهوم برای فهم جهان آشفته",
+"en": "Action versus behaviour, empathic reconstruction, and building concepts to grasp a chaotic world in Parsons",
+"nl": "Handelen versus gedrag, empathische reconstructie en begrippen bouwen om een chaotische wereld te vatten"
+},
+"url": "soc/#parsons-action-vs-behavior-empathic-reconstruction",
 "status": "draft",
 "wikidata": null
 },
@@ -4476,6 +5292,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:myth-legend-fairy-tale-narrative-genres": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اسطوره، افسانه، لجند و قصهٔ پریان: تفاوت ژانرهای روایت",
+"en": "Myth, legend, history and fairy tale: kinds of narrative",
+"nl": "Mythe, legende, geschiedenis en sprookje: soorten verhalen"
+},
+"url": "soc/#myth-legend-fairy-tale-narrative-genres",
+"status": "draft",
+"wikidata": null
+},
 "soc:anomie": {
 "wiki": "soc",
 "type": "concept",
@@ -4500,6 +5328,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:platform-determinism-agency-structure": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "جبر و اختیار، فرد و جمع: بحث ساختار و کنشگر",
+"en": "Determinism and freedom, individual and collective: the structure-agency debate",
+"nl": "Determinisme en vrijheid, individu en collectief: het structuur-actordebat"
+},
+"url": "soc/#platform-determinism-agency-structure",
+"status": "draft",
+"wikidata": null
+},
 "soc:institutions": {
 "wiki": "soc",
 "type": "field",
@@ -4512,6 +5352,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:arendt-loneliness-and-the-structure-versus-agency-debate": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آرنت، تنهایی و بحث ساختار در برابر عاملیت",
+"en": "Arendt, loneliness and the structure-versus-agency debate",
+"nl": "Arendt, eenzaamheid en het debat tussen structuur en handelingsvermogen"
+},
+"url": "soc/#arendt-loneliness-and-the-structure-versus-agency-debate",
+"status": "draft",
+"wikidata": null
+},
 "soc:culture-industry-false-needs": {
 "wiki": "soc",
 "type": "concept",
@@ -4521,6 +5373,18 @@
 "nl": "De cultuurindustrie en valse behoeften"
 },
 "url": "soc/#culture-industry-false-needs",
+"status": "draft",
+"wikidata": null
+},
+"soc:fascism-theories-left-and-scholarly-definitions": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نظریه‌های فاشیسم: از تحلیل اقتصادی چپ تا تعریف‌های پژوهشگران",
+"en": "Theories of fascism: from left economic analysis to scholarly definitions",
+"nl": "Theorieën over fascisme: van linkse economische analyse tot wetenschappelijke definities"
+},
+"url": "soc/#fascism-theories-left-and-scholarly-definitions",
 "status": "draft",
 "wikidata": null
 },
@@ -4545,6 +5409,18 @@
 "nl": "De brand in Cinema Rex en de strijd over slachtofferaantallen"
 },
 "url": "soc/#rex-cinema-fire-and-casualty-figures",
+"status": "draft",
+"wikidata": null
+},
+"soc:liberal-economic-case-smith-ricardo": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "پایهٔ اقتصادی لیبرالیسم: اسمیت، ریکاردو و حقوق مالکیت",
+"en": "The economic pillar of liberalism: Smith, Ricardo and property rights",
+"nl": "De economische pijler van het liberalisme: Smith, Ricardo en eigendomsrechten"
+},
+"url": "soc/#liberal-economic-case-smith-ricardo",
 "status": "draft",
 "wikidata": null
 },
@@ -4632,6 +5508,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:crisis-meaning-vacuum": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "بحران به‌مثابهٔ خلأ معنا: وقتی قالب‌های آماده ترک برمی‌دارند",
+"en": "Crisis as a vacuum of meaning: when ready-made frames crack",
+"nl": "Crisis als betekenisvacuüm: wanneer kant-en-klare kaders scheuren"
+},
+"url": "soc/#crisis-meaning-vacuum",
+"status": "draft",
+"wikidata": null
+},
 "soc:social-construction": {
 "wiki": "soc",
 "type": "concept",
@@ -4644,6 +5532,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:secularism-vs-anti-religion-political-islam-roots": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "دین در جای خود: سکولاریسم به‌جای دین‌ستیزی، و پرسش از ریشهٔ اسلام سیاسی",
+"en": "Religion in its place: secularism instead of anti-religion, and the question of political Islam's roots",
+"nl": "Religie op haar plaats: seculiere staat in plaats van antireligie, en de wortels van politieke islam"
+},
+"url": "soc/#secularism-vs-anti-religion-political-islam-roots",
+"status": "draft",
+"wikidata": null
+},
 "soc:selective-access-white-sim-rent": {
 "wiki": "soc",
 "type": "concept",
@@ -4653,6 +5553,18 @@
 "nl": "Selectieve toegang als rent: de discussie over 'witte simkaarten'"
 },
 "url": "soc/#selective-access-white-sim-rent",
+"status": "draft",
+"wikidata": null
+},
+"soc:idea-realisation-gap-revolution": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ایدهٔ تحقق‌یافته و چهرهٔ دگرگون‌شده‌اش: خوانشی از انقلاب ۵۷",
+"en": "The realised idea and its altered face: a reading of the 1979 revolution",
+"nl": "Het gerealiseerde idee en zijn veranderde gezicht: een lezing van de revolutie van 1979"
+},
+"url": "soc/#idea-realisation-gap-revolution",
 "status": "draft",
 "wikidata": null
 },
@@ -4692,6 +5604,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:added-removed-method-sexchat-guilt": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "جایگزینی بدن با کلمه و نرم‌افزار: روش «کاسته‌ها و افزوده‌ها»، گناه و فانتزی",
+"en": "Replacing the body with words and software: the 'removed and added' method, guilt and fantasy",
+"nl": "Het lichaam vervangen door woorden en software: methode, schuld en fantasie"
+},
+"url": "soc/#added-removed-method-sexchat-guilt",
+"status": "draft",
+"wikidata": null
+},
 "soc:nehzat-1341-reform-agenda": {
 "wiki": "soc",
 "type": "concept",
@@ -4704,6 +5628,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:cultural-walls-sacred-demonized-labels": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مقدس، شیطانی و برچسب‌زنی: دیوارهای فرهنگی پیرامون پرسیدن",
+"en": "The sacred, the demonised and labelling: cultural walls around questioning",
+"nl": "Het heilige, het gedemoniseerde en etiketteren: culturele muren rond vragen stellen"
+},
+"url": "soc/#cultural-walls-sacred-demonized-labels",
+"status": "draft",
+"wikidata": null
+},
 "soc:object-relations-lens-iran": {
 "wiki": "soc",
 "type": "concept",
@@ -4713,6 +5649,18 @@
 "nl": "Een objectrelatiebril op de Iraanse samenleving"
 },
 "url": "soc/#object-relations-lens-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:millat-to-nation-meaning-shift-iran-two-views": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "از «ملت» به «نیشن»: معنای ایران و امر ملی در یک گفت‌وگوی دو نفره",
+"en": "From millat to 'nation': what 'Iran' and 'the national' mean, in a two-speaker dialogue",
+"nl": "Van 'millat' naar 'natie': wat 'Iran' en 'het nationale' betekenen"
+},
+"url": "soc/#millat-to-nation-meaning-shift-iran-two-views",
 "status": "draft",
 "wikidata": null
 },
@@ -4761,6 +5709,18 @@
 "nl": "Het historisch materialisme en de klassenstrijd bij Marx"
 },
 "url": "soc/#marx-historical-materialism",
+"status": "draft",
+"wikidata": null
+},
+"soc:death-modern-loneliness-grief-world": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مرگ در جهان مدرن: تنهایی دم مرگ، پزشکی‌شدن و سوگ به‌مثابه از دست دادن بخشی از جهان",
+"en": "Death in the modern world: loneliness of the dying, medicalisation and grief as loss of part of one's world",
+"nl": "De dood in de moderne wereld: eenzaamheid van de stervenden, medicalisering en rouw als verlies van een deel van je wereld"
+},
+"url": "soc/#death-modern-loneliness-grief-world",
 "status": "draft",
 "wikidata": null
 },
@@ -4824,6 +5784,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:apartment-film-love-conscience-culture": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "عشق رمانتیک، وجدان و اخلاق به‌مثابه ساختهٔ فرهنگی (تحلیل فیلم «آپارتمان»)",
+"en": "Romantic love, conscience and morality as cultural constructs (reading «The Apartment»)",
+"nl": "Romantische liefde, geweten en moraal als cultuurproduct (lezing van «The Apartment»)"
+},
+"url": "soc/#apartment-film-love-conscience-culture",
+"status": "draft",
+"wikidata": null
+},
 "soc:western-asian-kingship-legitimacy": {
 "wiki": "soc",
 "type": "concept",
@@ -4845,6 +5817,18 @@
 "nl": "Een helder perspectief, transparantie en emigratie"
 },
 "url": "soc/#clear-horizon-exit-voice",
+"status": "draft",
+"wikidata": null
+},
+"soc:mediating-institutions-ingroup-solidarity": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نهادهای میانجی و خطر همبستگی درون‌گروهی",
+"en": "Mediating institutions and the risk of in-group solidarity",
+"nl": "Bemiddelende instituties en het risico van in-groepsolidariteit"
+},
+"url": "soc/#mediating-institutions-ingroup-solidarity",
 "status": "draft",
 "wikidata": null
 },
@@ -4881,6 +5865,18 @@
 "nl": "Het einddoel van de geschiedenis bij Hegel en Marx: 'paradijs' en 'vagevuur'"
 },
 "url": "soc/#teleology-paradise-hegel-marx",
+"status": "draft",
+"wikidata": null
+},
+"soc:history-three-levels": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "سه سطح تاریخ: روایی، تفسیری و نظریه",
+"en": "Three levels of history: narrative, interpretive and theoretical",
+"nl": "Drie niveaus van geschiedenis"
+},
+"url": "soc/#history-three-levels",
 "status": "draft",
 "wikidata": null
 },
@@ -4929,6 +5925,18 @@
 "nl": "De kloof in staatscapaciteit na de Constitutie"
 },
 "url": "soc/#state-building-gap-iran-1906-1953",
+"status": "draft",
+"wikidata": null
+},
+"soc:revolution-1357-religion-left-fusion-and-charisma": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "انقلاب ۵۷ از چند زاویه: پیوند دین و چپ، تصرف نهادها و رهبری کاریزماتیک",
+"en": "The 1979 revolution from several angles: religion-left fusion, institutional takeover and charismatic leadership",
+"nl": "De revolutie van 1979 vanuit meerdere invalshoeken: religie en links, institutionele overname en charisma"
+},
+"url": "soc/#revolution-1357-religion-left-fusion-and-charisma",
 "status": "draft",
 "wikidata": null
 },
@@ -4992,6 +6000,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:montesquieu-chance-vs-deep-causes": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مونتسکیو: پشت رویدادهای تصادفی، علت‌های عمیق است",
+"en": "Montesquieu: behind chance events lie deep causes",
+"nl": "Montesquieu: achter toevallige gebeurtenissen liggen diepe oorzaken"
+},
+"url": "soc/#montesquieu-chance-vs-deep-causes",
+"status": "draft",
+"wikidata": null
+},
 "soc:marx-capitalism-dynamics": {
 "wiki": "soc",
 "type": "concept",
@@ -5001,6 +6021,18 @@
 "nl": "Marx over de dynamiek van het kapitalisme, meerwaarde en crisis"
 },
 "url": "soc/#marx-capitalism-dynamics",
+"status": "draft",
+"wikidata": null
+},
+"soc:crisis-religious-void-contested": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "خلأ حقیقت دینی و جایگزین‌های آن: ادعای سخنران و نقدها",
+"en": "The religious void and what fills it: the lecturer's claim and its critics",
+"nl": "Het religieuze vacuüm en wat het vult: de stelling van de spreker en kritiek"
+},
+"url": "soc/#crisis-religious-void-contested",
 "status": "draft",
 "wikidata": null
 },
@@ -5040,6 +6072,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:structures-before-birth-after-death-utopian-communes": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ساختار از پیش از تولد تا پس از مرگ و بحث ناکامی آرمان‌شهرهای بی‌نهاد",
+"en": "Structure from before birth to after death, and the debate on stateless and institution-free utopias",
+"nl": "Structuur van vóór de geboorte tot na de dood en het debat over instellingsloze utopieën"
+},
+"url": "soc/#structures-before-birth-after-death-utopian-communes",
+"status": "draft",
+"wikidata": null
+},
+"soc:fair-data-prehistory-databases": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "داده‌های باز و اصول فیر در پایگاه‌های باستان‌شناسی و دیرینه‌انسان‌شناسی",
+"en": "FAIR data and databases in archaeology and palaeoanthropology",
+"nl": "FAIR-data en databanken in archeologie en paleoantropologie"
+},
+"url": "soc/#fair-data-prehistory-databases",
+"status": "draft",
+"wikidata": null
+},
 "soc:ramsar-conferences-education-reform": {
 "wiki": "soc",
 "type": "concept",
@@ -5064,6 +6120,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:crisis-chronic-no-pause-theodicy": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "بحران پیاپی، ناتوانی از اندیشیدن به بحران و پرسش از «شر»",
+"en": "Chronic crisis, the inability to think about crisis, and the problem of evil",
+"nl": "Chronische crisis, het onvermogen erover na te denken en het probleem van het kwaad"
+},
+"url": "soc/#crisis-chronic-no-pause-theodicy",
+"status": "draft",
+"wikidata": null
+},
+"soc:nostalgia-loss-after-1979-admitting-error": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "دلتنگی برای جهان از دست‌رفته و پذیرش اشتباه جمعی پس از ۱۳۵۷",
+"en": "Nostalgia for a lost world and admitting collective error after 1979",
+"nl": "Nostalgie naar een verloren wereld en het erkennen van collectieve fouten na 1979"
+},
+"url": "soc/#nostalgia-loss-after-1979-admitting-error",
+"status": "draft",
+"wikidata": null
+},
 "soc:saffarid-pouriya-civic-networks": {
 "wiki": "soc",
 "type": "concept",
@@ -5073,6 +6153,18 @@
 "nl": "Ya'qub al-Saffar, Pouriya-ye Vali en lokale netwerken tegenover macht: de lezing van een filmmaker"
 },
 "url": "soc/#saffarid-pouriya-civic-networks",
+"status": "draft",
+"wikidata": null
+},
+"soc:national-interest-sustainability-indicators-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "منافع ملی به‌مثابهٔ پایداری ایران: شاخص‌های چندگانه، آبادانی و شادی",
+"en": "National interest as Iran's sustainability: multiple indicators, prosperity and joy",
+"nl": "Nationaal belang als duurzaamheid van Iran: meerdere indicatoren"
+},
+"url": "soc/#national-interest-sustainability-indicators-iran",
 "status": "draft",
 "wikidata": null
 },
@@ -5124,6 +6216,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:theological-to-sociological-determinism": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "از جبر الهیاتی تا جبر جامعه‌شناختی؛ تقدیر، شانس و جایگاه کنش",
+"en": "From theological to sociological determinism: fate, chance and the place of action",
+"nl": "Van theologisch naar sociologisch determinisme: lot, toeval en handelen"
+},
+"url": "soc/#theological-to-sociological-determinism",
+"status": "draft",
+"wikidata": null
+},
 "soc:shadow-institutions": {
 "wiki": "soc",
 "type": "concept",
@@ -5136,6 +6240,54 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:power-hierarchy-voluntary-authority": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "قدرت و سلسله‌مراتب: روایت کارکردگرایانه از سرچشمهٔ اقتدار و نقدهای آن",
+"en": "Power and hierarchy: a functionalist account of where authority comes from, and its critics",
+"nl": "Macht en hiërarchie: een functionalistisch verhaal over de oorsprong van gezag en de kritiek daarop"
+},
+"url": "soc/#power-hierarchy-voluntary-authority",
+"status": "draft",
+"wikidata": null
+},
+"soc:gender-coalition-not-enmity": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "جنسیت: ائتلاف به‌جای دشمن‌سازی",
+"en": "Gender: coalition instead of enemy-making",
+"nl": "Gender: coalitie in plaats van vijandbeelden"
+},
+"url": "soc/#gender-coalition-not-enmity",
+"status": "draft",
+"wikidata": null
+},
+"soc:homeland-soil-sacred-people-triad": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "از خاک تا میهن: سه‌گانهٔ امر قدسی، مردم و سرزمین",
+"en": "From soil to homeland: the triad of the sacred, the people and the land",
+"nl": "Van grond tot vaderland: de driehoek van het heilige, het volk en het land"
+},
+"url": "soc/#homeland-soil-sacred-people-triad",
+"status": "draft",
+"wikidata": null
+},
+"soc:threshold-of-transition-iran-1920s": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آستانهٔ گذار ۱۲۹۹–۱۳۰۴: روشنفکران، «مشت آهنین» و نوسازی از بالا",
+"en": "The threshold of transition 1920-1925: intellectuals, the 'iron fist' and top-down modernisation",
+"nl": "De drempel van overgang 1920-1925: intellectuelen, de 'ijzeren vuist' en modernisering van bovenaf"
+},
+"url": "soc/#threshold-of-transition-iran-1920s",
+"status": "draft",
+"wikidata": null
+},
 "soc:formal-vs-substantive-rationality": {
 "wiki": "soc",
 "type": "concept",
@@ -5145,6 +6297,18 @@
 "nl": "Formele en substantiële rationaliteit: Weber bij de Frankfurter Schule"
 },
 "url": "soc/#formal-vs-substantive-rationality",
+"status": "draft",
+"wikidata": null
+},
+"soc:spontaneous-institutions-vs-social-engineering": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نهادهای خودجوش در برابر مهندسی اجتماعی: منگر و نقد مهندسی فرهنگ",
+"en": "Spontaneous institutions versus social engineering: Menger and the critique of 'culture engineering'",
+"nl": "Spontane instituties versus sociale manipulatie: Menger en de kritiek op cultuurplanning"
+},
+"url": "soc/#spontaneous-institutions-vs-social-engineering",
 "status": "draft",
 "wikidata": null
 },
@@ -5172,6 +6336,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:abstract-ideals-contested-and-iran-umbrella-idea": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مفاهیم انتزاعی، تعریف‌های رقیب و «ایران» به‌عنوان چتر اجماع",
+"en": "Abstract ideals, rival definitions and 'Iran' as an umbrella for consensus",
+"nl": "Abstracte idealen, rivaliserende definities en 'Iran' als overkoepelend idee"
+},
+"url": "soc/#abstract-ideals-contested-and-iran-umbrella-idea",
+"status": "draft",
+"wikidata": null
+},
+"soc:hope-achievement-end-of-history-thinking": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "پایان‌باوری، امید و معنای «دستاورد» در رنج جمعی",
+"en": "End-of-history thinking, hope and the meaning of 'achievement' in collective suffering",
+"nl": "Eindtijd-denken, hoop en de betekenis van 'verworvenheid' bij collectief lijden"
+},
+"url": "soc/#hope-achievement-end-of-history-thinking",
+"status": "draft",
+"wikidata": null
+},
 "soc:iran-as-ideal-not-race": {
 "wiki": "soc",
 "type": "concept",
@@ -5181,6 +6369,54 @@
 "nl": "Iran als ideaal en smeltkroes, niet als ras: Fattahi's visie"
 },
 "url": "soc/#iran-as-ideal-not-race",
+"status": "draft",
+"wikidata": null
+},
+"soc:committed-art-vs-art-as-endurance": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "رسالت هنر یا تاب‌آوری: آیا هنر باید «فرزند زمانه» باشد؟",
+"en": "Mission of art or endurance: must art be 'a child of its time'?",
+"nl": "Opdracht van kunst of veerkracht: moet kunst 'kind van zijn tijd' zijn?"
+},
+"url": "soc/#committed-art-vs-art-as-endurance",
+"status": "draft",
+"wikidata": null
+},
+"soc:agency-inside-structure-power-resistance": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کنشگری فقط درون ساختار؛ گیدنز، فوکو و نقد «آگاه‌کردن مردم»",
+"en": "Agency only inside structure: Giddens, Foucault and the critique of 'raising people's awareness'",
+"nl": "Handelen alleen binnen structuur: Giddens, Foucault en kritiek op 'mensen bewust maken'"
+},
+"url": "soc/#agency-inside-structure-power-resistance",
+"status": "draft",
+"wikidata": null
+},
+"soc:strong-state-iron-fist-1300s-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "«دولت مقتدر» و «مشت آهنین» در ایران دههٔ ۱۳۰۰: منطق، تناقض و نقدها",
+"en": "The 'strong state' and the 'iron fist' in 1920s Iran: logic, paradox and critiques",
+"nl": "De 'sterke staat' en de 'ijzeren vuist' in Iran in de jaren 1920: logica, paradox en kritiek"
+},
+"url": "soc/#strong-state-iron-fist-1300s-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:mythic-power-symbols-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "قدرت اسطوره‌ای و فروپاشی نمادها",
+"en": "Mythic power and the collapse of symbols",
+"nl": "Mythische macht en het instorten van symbolen"
+},
+"url": "soc/#mythic-power-symbols-iran",
 "status": "draft",
 "wikidata": null
 },
@@ -5208,6 +6444,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:national-myth-tradition-hero-and-future": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اسطورهٔ ملی، سنت و قهرمان تاریخی: چرا سخنران می‌گوید آینده بر گذشته بنا می‌شود",
+"en": "National myth, tradition and the historical hero: why the lecturer says the future is built on the past",
+"nl": "Nationale mythen, traditie en de historische held"
+},
+"url": "soc/#national-myth-tradition-hero-and-future",
+"status": "draft",
+"wikidata": null
+},
 "soc:zoroastrian-flexibility-state-tolerance": {
 "wiki": "soc",
 "type": "concept",
@@ -5232,6 +6480,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:orwell-nationalism-transferred-loyalty": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ملی‌گرایی نزد اورول: وفاداری به یک آرمان یا قدرتِ بیرونی",
+"en": "Orwell's broad 'nationalism': loyalty to a cause or power beyond one's own country",
+"nl": "Orwells brede 'nationalisme': loyaliteit aan een idee of macht buiten het eigen land"
+},
+"url": "soc/#orwell-nationalism-transferred-loyalty",
+"status": "draft",
+"wikidata": null
+},
 "soc:social-capital": {
 "wiki": "soc",
 "type": "concept",
@@ -5253,6 +6513,18 @@
 "nl": "Gebruiken en hun veranderende functies"
 },
 "url": "soc/#custom-changing-functions",
+"status": "draft",
+"wikidata": null
+},
+"soc:eastern-fertile-crescent-agriculture": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "جایگاه شرق هلال حاصل‌خیز در پیدایش کشاورزی",
+"en": "The eastern Fertile Crescent in the origin of agriculture",
+"nl": "De oostelijke Vruchtbare Halve Maan en het ontstaan van landbouw"
+},
+"url": "soc/#eastern-fertile-crescent-agriculture",
 "status": "draft",
 "wikidata": null
 },
@@ -5304,6 +6576,54 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:intermediate-bodies-atomised-individual": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نهادهای میانی و فرد تنها: توکویل، فاشیسم و دولت قدرتمند",
+"en": "Intermediate bodies and the lone individual: Tocqueville, fascism and the strong state",
+"nl": "Tussenliggende organisaties en het geïsoleerde individu: Tocqueville, fascisme en de sterke staat"
+},
+"url": "soc/#intermediate-bodies-atomised-individual",
+"status": "draft",
+"wikidata": null
+},
+"soc:meaning-domains-myth-religion-separation": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تفکیک حوزه‌های معنا: دین، اسطوره و علم به نظر سخنران",
+"en": "Separating domains of meaning: religion, myth and science in the lecturer's view",
+"nl": "Scheiding van betekenisdomeinen: religie, mythe en wetenschap volgens de spreker"
+},
+"url": "soc/#meaning-domains-myth-religion-separation",
+"status": "draft",
+"wikidata": null
+},
+"soc:abadan-oil-city-early-modernity": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آبادان، شهر نفتی و نوسازی زودهنگام: «قرطی‌بازی» یا پیشگامی؟",
+"en": "Abadan, the oil city and early modernity: 'fast living' or pioneering?",
+"nl": "Abadan, de oliestad en vroege moderniteit: bandeloosheid of voortrekkersrol?"
+},
+"url": "soc/#abadan-oil-city-early-modernity",
+"status": "draft",
+"wikidata": null
+},
+"soc:reformation-print-westphalia-freedom": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اصلاح دینی، چاپ و صلح وستفالیا: راه‌های رسیدن به آزادی",
+"en": "The Reformation, the printing press and Westphalia: roads toward freedom",
+"nl": "De Reformatie, de boekdrukkunst en Westfalen: wegen naar vrijheid"
+},
+"url": "soc/#reformation-print-westphalia-freedom",
+"status": "draft",
+"wikidata": null
+},
 "soc:sino-soviet-split-and-two-front-burden": {
 "wiki": "soc",
 "type": "concept",
@@ -5340,6 +6660,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:ideology-frozen-world-and-end-promise": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ایدئولوژی، جهانِ ثابت و وعدهٔ پایان تاریخ",
+"en": "Ideology, the 'frozen' world and the promise of an end of history",
+"nl": "Ideologie, de 'bevroren' wereld en de belofte van een einde van de geschiedenis"
+},
+"url": "soc/#ideology-frozen-world-and-end-promise",
+"status": "draft",
+"wikidata": null
+},
 "soc:hafez-religious-roles-and-modern-state": {
 "wiki": "soc",
 "type": "concept",
@@ -5361,6 +6693,18 @@
 "nl": "Perzische taal, Iraanse identiteit en het etniciteitsdebat"
 },
 "url": "soc/#persian-language-iran-identity-ethnicity-debate",
+"status": "draft",
+"wikidata": null
+},
+"soc:belief-distance-and-social-order": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ایمان، فاصله و نظم اجتماعی در نگاه سخنران",
+"en": "Belief, distance and social order: the lecturer's thesis",
+"nl": "Geloof, afstand en sociale orde volgens de spreker"
+},
+"url": "soc/#belief-distance-and-social-order",
 "status": "draft",
 "wikidata": null
 },
@@ -5400,6 +6744,42 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:sublimation-sexual-order-politics": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "والایش فرویدی و نظم جنسیتی در پس شعارهای سیاسی",
+"en": "Freudian sublimation and gender order behind political slogans",
+"nl": "Freuds sublimatie en genderorde achter politieke leuzen"
+},
+"url": "soc/#sublimation-sexual-order-politics",
+"status": "draft",
+"wikidata": null
+},
+"soc:ideas-open-possibility-hope-despair-radicalization": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ایده‌ها امکان می‌سازند: فشار برای تحقق، امید، یأس و افراط",
+"en": "Ideas make events possible: pressure to realise, hope, despair and radicalisation",
+"nl": "Ideeën maken gebeurtenissen mogelijk: druk, hoop, wanhoop en radicalisering"
+},
+"url": "soc/#ideas-open-possibility-hope-despair-radicalization",
+"status": "draft",
+"wikidata": null
+},
+"soc:copernican-chain-causes-and-ideas-first": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "چهار علت تاریخی نهضت علمی و ادعای «ایده پیش از عمل»",
+"en": "Four historical causes of the scientific revolution and the 'ideas come first' claim",
+"nl": "Vier historische oorzaken van de wetenschappelijke revolutie en de stelling 'ideeën gaan voorop'"
+},
+"url": "soc/#copernican-chain-causes-and-ideas-first",
+"status": "draft",
+"wikidata": null
+},
 "soc:modern-iranian-brain-drain-debate": {
 "wiki": "soc",
 "type": "concept",
@@ -5421,6 +6801,42 @@
 "nl": "Onderlinge afhankelijkheid van sociale instituties en ontwikkeling"
 },
 "url": "soc/#institutions-interdependence",
+"status": "draft",
+"wikidata": null
+},
+"soc:glory-disenchantment-and-massification": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "از دست رفتن شکوه: افسون‌زدایی و توده‌ای شدن",
+"en": "The loss of grandeur: disenchantment and massification",
+"nl": "Het verlies van grandeur: onttovering en massificatie"
+},
+"url": "soc/#glory-disenchantment-and-massification",
+"status": "draft",
+"wikidata": null
+},
+"soc:collective-trauma-justice-revenge": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تروما و آشفتگی هیجانی جمعی، اعتماد و خطر انتقام در بازسازی جامعه",
+"en": "Collective trauma, emotional disorder, trust and the risk of revenge when rebuilding a society",
+"nl": "Collectief trauma, vertrouwen en het gevaar van wraak bij de wederopbouw van een samenleving"
+},
+"url": "soc/#collective-trauma-justice-revenge",
+"status": "draft",
+"wikidata": null
+},
+"soc:human-time-cyclical-linear-progress": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نسبت انسان با زمان: از چرخهٔ کشاورزی تا پیشرفت مدرن",
+"en": "Human relations to time: from the agrarian cycle to modern progress",
+"nl": "De menselijke omgang met tijd: van de agrarische cyclus tot moderne vooruitgang"
+},
+"url": "soc/#human-time-cyclical-linear-progress",
 "status": "draft",
 "wikidata": null
 },
@@ -5508,6 +6924,42 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:selective-return-to-past-history-memory-narrative": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "بازگشت گزینشی به گذشته: تاریخ، اسطوره و حافظهٔ جمعی (دیدگاه سخنران)",
+"en": "Selective return to the past: history, myth and collective memory (lecturer's view)",
+"nl": "Selectieve terugkeer naar het verleden: geschiedenis, mythe en collectief geheugen"
+},
+"url": "soc/#selective-return-to-past-history-memory-narrative",
+"status": "draft",
+"wikidata": null
+},
+"soc:sabouri-interview-pahlavi-record-and-1357-causes": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "گفت‌وگوی تاریخ اجتماعی ایران: دفاع از کارنامهٔ پهلوی و علل انقلاب ۵۷",
+"en": "Social history of Iran interview: a defence of the Pahlavi record and the causes of 1979",
+"nl": "Sociale geschiedenis van Iran: verdediging van de Pahlavi-periode en de oorzaken van 1979"
+},
+"url": "soc/#sabouri-interview-pahlavi-record-and-1357-causes",
+"status": "draft",
+"wikidata": null
+},
+"soc:national-myth-solidarity-vs-ethnic-division-debate": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اسطورهٔ ملی، هم‌بستگی و بحث هویت‌های قومی (دیدگاه سخنران)",
+"en": "National myth, solidarity and the debate over ethnic identities (the lecturer's view)",
+"nl": "Nationale mythe, solidariteit en het debat over etnische identiteiten (visie van de spreker)"
+},
+"url": "soc/#national-myth-solidarity-vs-ethnic-division-debate",
+"status": "draft",
+"wikidata": null
+},
 "soc:leader-as-mirror-and-hobbes-order-claim": {
 "wiki": "soc",
 "type": "concept",
@@ -5517,6 +6969,30 @@
 "nl": "De leider als spiegel en het primaat van orde: Souri over 'leiderschapsverering' en Hobbes"
 },
 "url": "soc/#leader-as-mirror-and-hobbes-order-claim",
+"status": "draft",
+"wikidata": null
+},
+"soc:meaning-of-signs-and-norm-change": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نشانه و مدلول در هنجارها: تغییر فرهنگ از راه تغییر معنا",
+"en": "Signs and meanings in norms: how culture changes when meanings shift",
+"nl": "Tekens en betekenis in normen: cultuurverandering door verschuivende betekenis"
+},
+"url": "soc/#meaning-of-signs-and-norm-change",
+"status": "draft",
+"wikidata": null
+},
+"soc:platform-class-resources-market-vs-planning": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "طبقه، تقسیم منابع و بازار آزاد در برابر تنظیم دولتی (فیلم پلتفرم)",
+"en": "Class, resource distribution and the free market versus state planning (The Platform)",
+"nl": "Klasse, verdeling van middelen en vrije markt versus staatsplanning (The Platform)"
+},
+"url": "soc/#platform-class-resources-market-vs-planning",
 "status": "draft",
 "wikidata": null
 },
@@ -5532,6 +7008,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:legitimacy-reduces-coercion-claim": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مشروعیت تاریخی به‌جای زور؟ ادعای سخنران دربارهٔ رهبری و گذار، با نقدها",
+"en": "Historical legitimacy instead of force? The lecturer's claim about leadership and transition, with critiques",
+"nl": "Historische legitimiteit in plaats van dwang? De claim van de spreker over leiderschap en transitie"
+},
+"url": "soc/#legitimacy-reduces-coercion-claim",
+"status": "draft",
+"wikidata": null
+},
 "soc:shariati-violence-claim-fanon-mojahedin": {
 "wiki": "soc",
 "type": "concept",
@@ -5541,6 +7029,30 @@
 "nl": "Leidde Shariati's denken tot geweld? Fanon, Sartre en de Mojahedin"
 },
 "url": "soc/#shariati-violence-claim-fanon-mojahedin",
+"status": "draft",
+"wikidata": null
+},
+"soc:modern-song-cinema-roles-iran-1340s-50s": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ترانه و سینما به‌مثابه الگوی زندگی مدرن در ایران دههٔ ۴۰ و ۵۰",
+"en": "Song and cinema as models of modern life in 1960s-70s Iran",
+"nl": "Lied en film als voorbeeld van modern leven in Iran, jaren zestig en zeventig"
+},
+"url": "soc/#modern-song-cinema-roles-iran-1340s-50s",
+"status": "draft",
+"wikidata": null
+},
+"soc:sacred-suffering-social-roles-and-ritual-form": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "رنج مقدس، نقش‌های اجتماعی و صورتِ آیین",
+"en": "Sacred suffering, social roles and the form of ritual",
+"nl": "Heilig lijden, sociale rollen en de vorm van ritueel"
+},
+"url": "soc/#sacred-suffering-social-roles-and-ritual-form",
 "status": "draft",
 "wikidata": null
 },
@@ -5577,6 +7089,30 @@
 "nl": "Revolutie of hervorming? Het debat Marcuse-Popper"
 },
 "url": "soc/#revolution-or-reform",
+"status": "draft",
+"wikidata": null
+},
+"soc:nation-making-gellner-anderson-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ساختن ملت: گلنر، اندرسون و ناسیونالیسم ایرانی",
+"en": "Making the nation: Gellner, Anderson and Iranian nationalism",
+"nl": "Natievorming: Gellner, Anderson en het Iraanse nationalisme"
+},
+"url": "soc/#nation-making-gellner-anderson-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:generation-born-in-iran-1360s": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نسل متولدین دههٔ ۶۰ خورشیدی در ایران: انقلاب، جنگ و سردرگمی نقش‌ها",
+"en": "Iran's 1360s (1980s) birth cohort: revolution, war and confused roles",
+"nl": "Het Iraanse geboortecohort van de jaren 1360 (jaren tachtig): revolutie, oorlog en verwarrende rollen"
+},
+"url": "soc/#generation-born-in-iran-1360s",
 "status": "draft",
 "wikidata": null
 },
@@ -5628,6 +7164,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:culture-as-whole-conservative-case-and-ideal-critique": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "فرهنگ به‌مثابه کلِ درهم‌تنیده و نقد آرمان‌های برابری‌خواه (دیدگاه سخنران)",
+"en": "Culture as an interwoven whole and a critique of egalitarian ideals (lecturer's view)",
+"nl": "Cultuur als verweven geheel en kritiek op egalitaire idealen (visie van de spreker)"
+},
+"url": "soc/#culture-as-whole-conservative-case-and-ideal-critique",
+"status": "draft",
+"wikidata": null
+},
 "soc:secularization": {
 "wiki": "soc",
 "type": "concept",
@@ -5637,6 +7185,18 @@
 "nl": "Secularisering: existentiële zekerheid en religie"
 },
 "url": "soc/#secularization",
+"status": "draft",
+"wikidata": null
+},
+"soc:war-veterans-return-unwitnessed-suffering": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "بازگشت از جنگ: بیگانگی با زندگی عادی و رنجِ بی‌شاهد",
+"en": "Returning from war: estrangement and suffering without a witness",
+"nl": "Terugkeer uit de oorlog: vervreemding en lijden zonder getuige"
+},
+"url": "soc/#war-veterans-return-unwitnessed-suffering",
 "status": "draft",
 "wikidata": null
 },
@@ -5688,6 +7248,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:labour-theory-vs-subjective-value-exploitation": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ارزش کار یا ارزش ذهنی؟ از اسمیت و مارکس تا انقلاب حاشیه‌ای",
+"en": "Labour value or subjective value? From Smith and Marx to the marginal revolution",
+"nl": "Arbeidswaarde of subjectieve waarde? Van Smith en Marx tot de marginale revolutie"
+},
+"url": "soc/#labour-theory-vs-subjective-value-exploitation",
+"status": "draft",
+"wikidata": null
+},
 "soc:identity-politics-postcolonial-jefferson-statue": {
 "wiki": "soc",
 "type": "concept",
@@ -5697,6 +7269,18 @@
 "nl": "Identiteitspolitiek, postkoloniale studies en het standbeeld van Jefferson"
 },
 "url": "soc/#identity-politics-postcolonial-jefferson-statue",
+"status": "draft",
+"wikidata": null
+},
+"soc:individual-blame-discourse-and-historical-chance": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "گفتمان مسئولیت فردی، شانس و پرسش «چه می‌توانم بکنم؟»",
+"en": "The discourse of individual responsibility, chance and the question 'what can I do?'",
+"nl": "Het discours van individuele verantwoordelijkheid, toeval en de vraag 'wat kan ik doen?'"
+},
+"url": "soc/#individual-blame-discourse-and-historical-chance",
 "status": "draft",
 "wikidata": null
 },
@@ -5748,6 +7332,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:circumscription-agent-based-model": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آزمودن نظریهٔ محصورسازی کارنیرو با مدل‌سازی عاملی",
+"en": "Testing Carneiro's circumscription theory with agent-based models",
+"nl": "Carneiro's circumscriptietheorie getoetst met agent-based modellen"
+},
+"url": "soc/#circumscription-agent-based-model",
+"status": "draft",
+"wikidata": null
+},
 "soc:migration-theories": {
 "wiki": "soc",
 "type": "concept",
@@ -5781,6 +7377,18 @@
 "nl": "Hofjongens en 'shahed-bazi' in Qadjaars Iran: schaarse bronnen, haastige beweringen"
 },
 "url": "soc/#qajar-ghulam-bacheh-sources",
+"status": "draft",
+"wikidata": null
+},
+"soc:respect-for-roles-anomie-return-of-authentic": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "احترام به نقش‌های اجتماعی، آنومی و «بازگشت امر اصیل» (دیدگاه سخنران)",
+"en": "Respect for social roles, anomie and the 'return of the authentic' (lecturer's view)",
+"nl": "Respect voor sociale rollen, anomie en de 'terugkeer van het authentieke'"
+},
+"url": "soc/#respect-for-roles-anomie-return-of-authentic",
 "status": "draft",
 "wikidata": null
 },
@@ -5844,6 +7452,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:agency-structure-leadership-power": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "عاملیت، ساختار و رهبری در دگرگونی‌های بزرگ: دو نگاه در یک گفت‌وگو",
+"en": "Agency, structure and leadership in large-scale change: two views in one conversation",
+"nl": "Agency, structuur en leiderschap bij grote maatschappelijke veranderingen: twee visies"
+},
+"url": "soc/#agency-structure-leadership-power",
+"status": "draft",
+"wikidata": null
+},
 "soc:society-as-collective-agent-iran-claim": {
 "wiki": "soc",
 "type": "concept",
@@ -5853,6 +7473,18 @@
 "nl": "De samenleving als collectieve actor: de claim van een Iraans 'collectief bewustzijn'"
 },
 "url": "soc/#society-as-collective-agent-iran-claim",
+"status": "draft",
+"wikidata": null
+},
+"soc:development-sequencing-political-economic": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ترتیب توسعه: اقتصاد نخست یا سیاست نخست؟ و خطای زمان‌پریشی",
+"en": "The sequence of development: economy first or politics first? and the anachronism trap",
+"nl": "De volgorde van ontwikkeling: economie of politiek eerst? en de valkuil van anachronisme"
+},
+"url": "soc/#development-sequencing-political-economic",
 "status": "draft",
 "wikidata": null
 },
@@ -5916,6 +7548,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:technology-as-norm-setter-body": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آیا فناوری جای فرهنگ می‌نشیند؟ و بدنِ زنانه در جامعه‌شناسی ایران",
+"en": "Does technology replace culture as norm-setter? And women's bodies in Iranian sociology",
+"nl": "Vervangt technologie cultuur als normgever? En het vrouwelijk lichaam in de Iraanse sociologie"
+},
+"url": "soc/#technology-as-norm-setter-body",
+"status": "draft",
+"wikidata": null
+},
 "soc:mexico-latin-america-legitimacy-history": {
 "wiki": "soc",
 "type": "concept",
@@ -5928,6 +7572,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:crisis-radicalism-simplification": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "رادیکالیسم و ساده‌سازی در بحران: جاذبهٔ دوگانهٔ خودی/غیرخودی و مطلق‌گرایی",
+"en": "Radicalism and simplification in crisis: the pull of us/them and absolutism",
+"nl": "Radicalisering en versimpeling in crisis: de aantrekkingskracht van wij/zij en absolutisme"
+},
+"url": "soc/#crisis-radicalism-simplification",
+"status": "draft",
+"wikidata": null
+},
 "soc:macro-micro-levels": {
 "wiki": "soc",
 "type": "concept",
@@ -5937,6 +7593,18 @@
 "nl": "Macro- en microniveau in de sociologie"
 },
 "url": "soc/#macro-micro-levels",
+"status": "draft",
+"wikidata": null
+},
+"soc:montesquieu-three-regimes-principles": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مونتسکیو: جمهوری، پادشاهی و استبداد و «احساس بنیادین» هرکدام",
+"en": "Montesquieu: republic, monarchy, despotism and the driving sentiment of each",
+"nl": "Montesquieu: republiek, monarchie, despotisme en hun drijvende gevoel"
+},
+"url": "soc/#montesquieu-three-regimes-principles",
 "status": "draft",
 "wikidata": null
 },
@@ -5976,6 +7644,66 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:iranian-nationalism-inclusive-umbrella-claim": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ملی‌گرایی ایرانی به‌مثابه «چتر فراگیر»: ادعای سخنران و نقدها",
+"en": "Iranian nationalism as an 'inclusive umbrella': the lecturer's claim and its critics",
+"nl": "Iraans nationalisme als 'inclusieve paraplu': de bewering van de spreker en kritiek"
+},
+"url": "soc/#iranian-nationalism-inclusive-umbrella-claim",
+"status": "draft",
+"wikidata": null
+},
+"soc:culture-as-signs-layered-analysis": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "فرهنگ به‌مثابه نشانه و تحلیل چندلایه‌ای رفتار روزمره",
+"en": "Culture as signs and layered analysis of everyday behaviour",
+"nl": "Cultuur als tekens en gelaagde analyse van alledaags gedrag"
+},
+"url": "soc/#culture-as-signs-layered-analysis",
+"status": "draft",
+"wikidata": null
+},
+"soc:left-intellectuals-ideology-thesis-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نقد ادبیات و روشنفکری چپ ایران: ادعای «پروژهٔ ایدئولوژیک»",
+"en": "Critique of Iran's left literary and intellectual scene: the 'ideological project' claim",
+"nl": "Kritiek op de Iraanse linkse intelligentsia: de 'ideologisch project'-stelling"
+},
+"url": "soc/#left-intellectuals-ideology-thesis-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:sexuality-technology-cultural-lag": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "فناوری ارتباطی و رفتار جنسی: تأخر هنجارها از عمل",
+"en": "Communication technology and sexuality: norms lagging behind practice",
+"nl": "Communicatietechnologie en seksualiteit: normen lopen achter"
+},
+"url": "soc/#sexuality-technology-cultural-lag",
+"status": "draft",
+"wikidata": null
+},
+"soc:intellectual-negotiating-with-possible-futures": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "روشنفکر چه کاری می‌کند؟ تعریف سوری و صبوری و شکاف روشنفکر و جامعه",
+"en": "What does an intellectual do? Souri's and Sabouri's definitions and the gap between intellectual and society",
+"nl": "Wat doet een intellectueel? De definities van Souri en Sabouri en de kloof met de samenleving"
+},
+"url": "soc/#intellectual-negotiating-with-possible-futures",
+"status": "draft",
+"wikidata": null
+},
 "soc:caucasus-policy-entanglement-iran": {
 "wiki": "soc",
 "type": "concept",
@@ -5985,6 +7713,18 @@
 "nl": "Verstrengeling in plaats van passiviteit: voorstellen voor Irans Kaukasusbeleid"
 },
 "url": "soc/#caucasus-policy-entanglement-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:social-treadmills-iran": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تردمیل‌های اجتماعی: کنشِ پرهزینه و بی‌کارکرد",
+"en": "Social treadmills: costly action without function",
+"nl": "Sociale loopbanden: kostbare actie zonder functie"
+},
+"url": "soc/#social-treadmills-iran",
 "status": "draft",
 "wikidata": null
 },
@@ -6024,6 +7764,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:eco-and-barthes-on-signs-and-language-of-fascism": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اکو و بارت دربارهٔ نشانه‌ها و زبان فاشیسم",
+"en": "Eco and Barthes on the signs and language of fascism",
+"nl": "Eco en Barthes over de tekens en de taal van het fascisme"
+},
+"url": "soc/#eco-and-barthes-on-signs-and-language-of-fascism",
+"status": "draft",
+"wikidata": null
+},
 "soc:neanderthal-extinction-gene-flow": {
 "wiki": "soc",
 "type": "concept",
@@ -6033,6 +7785,18 @@
 "nl": "Uitsterven van de Neanderthaler en genenstroom naar de moderne mens"
 },
 "url": "soc/#neanderthal-extinction-gene-flow",
+"status": "draft",
+"wikidata": null
+},
+"soc:dogville-human-nature-design-incentives": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "سرشت انسان، نبودِ سلسله‌مراتب و طراحی انگیزه‌ها در جامعه (داگویل)",
+"en": "Human nature, the absence of hierarchy and incentive design (Dogville)",
+"nl": "Menselijke natuur, het ontbreken van hiërarchie en prikkelontwerp (Dogville)"
+},
+"url": "soc/#dogville-human-nature-design-incentives",
 "status": "draft",
 "wikidata": null
 },
@@ -6060,6 +7824,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:marriage-as-shared-story-woolf": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ازدواج به‌مثابهٔ قصهٔ مشترک: خوانشی از «چه کسی از ویرجینیا وولف می‌ترسد؟»",
+"en": "Marriage as a shared story: reading Who's Afraid of Virginia Woolf?",
+"nl": "Huwelijk als gedeeld verhaal: Who's Afraid of Virginia Woolf?"
+},
+"url": "soc/#marriage-as-shared-story-woolf",
+"status": "draft",
+"wikidata": null
+},
 "soc:mordad-1332-dismissal-coup-definition": {
 "wiki": "soc",
 "type": "concept",
@@ -6069,6 +7845,18 @@
 "nl": "Augustus 1953: het ontslag van Mossadegh, het referendum en de definitie van 'staatsgreep'"
 },
 "url": "soc/#mordad-1332-dismissal-coup-definition",
+"status": "draft",
+"wikidata": null
+},
+"soc:intellectuals-vanguard-and-contempt-for-masses": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "روشنفکر، «آگاهی» و تحقیر مردم: نقد سخنران از چپ",
+"en": "Intellectuals, 'consciousness' and contempt for ordinary people: the lecturer's critique of the left",
+"nl": "Intellectuelen, 'bewustzijn' en minachting voor gewone mensen: de kritiek van de spreker op links"
+},
+"url": "soc/#intellectuals-vanguard-and-contempt-for-masses",
 "status": "draft",
 "wikidata": null
 },
@@ -6084,6 +7872,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:unveiling-1936-gender-order-and-symbols": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کشف حجاب ۱۳۱۴: نظم جنسیتی، نشانه‌های فرهنگی و دولت مدرن",
+"en": "The 1936 unveiling policy: gender order, cultural signs and the modern state",
+"nl": "Het ontsluieringsbeleid van 1936: genderorde, culturele tekens en de moderne staat"
+},
+"url": "soc/#unveiling-1936-gender-order-and-symbols",
+"status": "draft",
+"wikidata": null
+},
 "soc:medes-zagros-road-assyrian-frontier": {
 "wiki": "soc",
 "type": "concept",
@@ -6093,6 +7893,18 @@
 "nl": "De Meden en de Assyrische grens: de Grote Khorasan-weg en de rijkdommen van de Zagros"
 },
 "url": "soc/#medes-zagros-road-assyrian-frontier",
+"status": "draft",
+"wikidata": null
+},
+"soc:locations-of-awareness-prophet-institution-everyday": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "سه جای «آگاهی»: از پیامبر تا نهاد و روشنفکر تا زندگی روزمرهٔ مردم",
+"en": "Three places of 'awareness': from prophet to institution and intellectual to everyday life",
+"nl": "Drie plaatsen van 'bewustzijn': van profeet naar instituut en intellectueel tot het dagelijks leven"
+},
+"url": "soc/#locations-of-awareness-prophet-institution-everyday",
 "status": "draft",
 "wikidata": null
 },
@@ -6108,6 +7920,78 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:justice-idea-scarcity-sacred-conscience": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "عدالت از کمبود تا تقدس: چگونه یک ایدهٔ کارکردی به وجدان جمعی بدل می‌شود",
+"en": "From scarcity to the sacred: how a useful idea becomes collective conscience",
+"nl": "Van schaarste tot het heilige: hoe een nuttig idee collectief geweten wordt"
+},
+"url": "soc/#justice-idea-scarcity-sacred-conscience",
+"status": "draft",
+"wikidata": null
+},
+"soc:suicide-cultural-meanings-durkheim-types": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "خودکشی، قضاوت اجتماعی و انواع چهارگانهٔ دورکیم",
+"en": "Suicide, social judgment and Durkheim's four types",
+"nl": "Zelfdoding, sociaal oordeel en Durkheims vier typen"
+},
+"url": "soc/#suicide-cultural-meanings-durkheim-types",
+"status": "draft",
+"wikidata": null
+},
+"soc:macro-ideas-lag-and-slow-paradigm-shift": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "کلان‌ایده‌ها و ایده‌های زیرین: گذار آهسته و عقب‌ماندگی مفاهیم",
+"en": "Grand ideas and the sub-ideas beneath them: slow shifts and conceptual lag",
+"nl": "Grote ideeën en onderliggende ideeën: trage verschuivingen en achterblijvende begrippen"
+},
+"url": "soc/#macro-ideas-lag-and-slow-paradigm-shift",
+"status": "draft",
+"wikidata": null
+},
+"soc:asabiyya-ibn-khaldun-modern-respect": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "عصبیت ابن‌خلدون و جایگزین مدرن آن: «احترام به دستاوردها»",
+"en": "Ibn Khaldun's asabiyya and a modern substitute: 'respect for achievements'",
+"nl": "Ibn Khalduns asabiyya en een modern alternatief: 'respect voor verworvenheden'"
+},
+"url": "soc/#asabiyya-ibn-khaldun-modern-respect",
+"status": "draft",
+"wikidata": null
+},
+"soc:art-as-collective-recognition-bourdieu": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "هنر به‌مثابهٔ تأیید جمعی: جامعه‌شناسی هنر از ارگ باخ تا «همشهری کین»",
+"en": "Art as collective recognition: sociology of art from Bach's organ to Citizen Kane",
+"nl": "Kunst als collectieve erkenning: kunstsociologie van Bachs orgel tot Citizen Kane"
+},
+"url": "soc/#art-as-collective-recognition-bourdieu",
+"status": "draft",
+"wikidata": null
+},
+"soc:secession-territorial-integrity-debate": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تجزیه‌طلبی و یکپارچگی سرزمینی: ادعای سخنران و دیدگاه‌های مخالف",
+"en": "Secession and territorial integrity: the speaker's claim and opposing views",
+"nl": "Afscheiding en territoriale integriteit: de stelling van de spreker en tegenargumenten"
+},
+"url": "soc/#secession-territorial-integrity-debate",
+"status": "draft",
+"wikidata": null
+},
 "soc:pan-turkism-identity-politics-iran": {
 "wiki": "soc",
 "type": "concept",
@@ -6117,6 +8001,42 @@
 "nl": "Pan-Turkisme, Azerbeidzjaanse identiteit en cultuurpolitiek volgens Movahedian"
 },
 "url": "soc/#pan-turkism-identity-politics-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:art-and-ideas-before-1979-revolution": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "هنر، روشنفکران و «ممکن‌شدن» انقلاب در زبان",
+"en": "Art, intellectuals and making revolution thinkable in language",
+"nl": "Kunst, intellectuelen en de revolutie als denkbaar idee"
+},
+"url": "soc/#art-and-ideas-before-1979-revolution",
+"status": "draft",
+"wikidata": null
+},
+"soc:social-strain-lifestyle-change-new-generation": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "فشار اجتماعی، تغییر سبک زندگی و نسل جوان بی‌آرمان",
+"en": "Social strain, lifestyle change and the 'idealless' young generation",
+"nl": "Maatschappelijke spanning, levensstijlverandering en de jonge generatie"
+},
+"url": "soc/#social-strain-lifestyle-change-new-generation",
+"status": "draft",
+"wikidata": null
+},
+"soc:post-revolution-reconciliation-nonviolence-national-myth": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "آینده‌ای بدون خشونت: اعتراف به خطا، گذشت و اسطورهٔ ملی",
+"en": "A future without vengeance: acknowledging error, restraint and the national myth",
+"nl": "Een toekomst zonder wraak: erkenning van fouten, terughoudendheid en nationale mythe"
+},
+"url": "soc/#post-revolution-reconciliation-nonviolence-national-myth",
 "status": "draft",
 "wikidata": null
 },
@@ -6132,6 +8052,30 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:left-thinking-traits-sabouri-nasiri": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ویژگی‌های «چپ‌اندیشی» به روایت سخنران: بازخوانی و نقد",
+"en": "The traits of 'left-thinking' as the lecturer sees them: a summary and critique",
+"nl": "Kenmerken van 'links denken' volgens de spreker: samenvatting en kritiek"
+},
+"url": "soc/#left-thinking-traits-sabouri-nasiri",
+"status": "draft",
+"wikidata": null
+},
+"soc:revolution-guilt-golden-calf-utopia-reading": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "انقلاب ۵۷ به‌مثابه احساس گناه جمعی و آرمان‌شهر: خوانش اسطوره‌ای",
+"en": "The 1979 revolution as collective guilt and utopia: a mythic reading",
+"nl": "De revolutie van 1979 als collectief schuldgevoel en utopie"
+},
+"url": "soc/#revolution-guilt-golden-calf-utopia-reading",
+"status": "draft",
+"wikidata": null
+},
 "soc:value-change": {
 "wiki": "soc",
 "type": "concept",
@@ -6141,6 +8085,18 @@
 "nl": "Waardeverandering: van overleving naar zelfexpressie"
 },
 "url": "soc/#value-change",
+"status": "draft",
+"wikidata": null
+},
+"soc:archaic-hunt-ritual-logic-theological-stage": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "منطق آیین شکار در جهان اسطوره‌ای: ادعای «خرافه نیست»",
+"en": "The logic of hunting ritual in a mythic world: 'not mere superstition'",
+"nl": "De logica van jachtrituelen in een mythische wereld"
+},
+"url": "soc/#archaic-hunt-ritual-logic-theological-stage",
 "status": "draft",
 "wikidata": null
 },
@@ -6216,6 +8172,18 @@
 "status": "draft",
 "wikidata": null
 },
+"tabar:near-east-first-farmers-structure": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "ساختار ژنتیکی نخستین کشاورزان خاور نزدیک",
+"en": "The genetic structure of the first farmers of the Near East",
+"nl": "De genetische structuur van de eerste boeren van het Nabije Oosten"
+},
+"url": "tabar/#near-east-first-farmers-structure",
+"status": "draft",
+"wikidata": null
+},
 "tabar:social-brain-evolution": {
 "wiki": "tabar",
 "type": "concept",
@@ -6237,6 +8205,18 @@
 "nl": "Neolithische boeren van de Zagros"
 },
 "url": "tabar/#zagros-neolithic",
+"status": "draft",
+"wikidata": null
+},
+"tabar:eurasian-waves-eec-wec": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "دو موج گسترش از کانون: شرق اوراسیایی و غرب اوراسیایی",
+"en": "Two expansions from the Hub: East and West Eurasian Core",
+"nl": "Twee uitbreidingen vanuit de Hub: Oost- en West-Euraziatische kern"
+},
+"url": "tabar/#eurasian-waves-eec-wec",
 "status": "draft",
 "wikidata": null
 },
@@ -6300,6 +8280,18 @@
 "status": "draft",
 "wikidata": null
 },
+"tabar:persian-plateau-hub": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "فلات ایران به‌عنوان «کانون» انسان خردمند پس از خروج از آفریقا",
+"en": "The Persian Plateau as a 'Hub' for Homo sapiens after Out of Africa",
+"nl": "Het Iraanse plateau als 'Hub' voor Homo sapiens na Out of Africa"
+},
+"url": "tabar/#persian-plateau-hub",
+"status": "draft",
+"wikidata": null
+},
 "tabar:nature-of-nurture": {
 "wiki": "tabar",
 "type": "concept",
@@ -6348,6 +8340,18 @@
 "status": "draft",
 "wikidata": null
 },
+"tabar:brain-body-size-climate": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "اقلیم و اندازهٔ مغز و بدن در جنس انسان (هوموها)",
+"en": "Climate and brain and body size in the genus Homo",
+"nl": "Klimaat en brein- en lichaamsgrootte in het geslacht Homo"
+},
+"url": "tabar/#brain-body-size-climate",
+"status": "draft",
+"wikidata": null
+},
 "tabar:behavior-genetics": {
 "wiki": "tabar",
 "type": "field",
@@ -6369,6 +8373,18 @@
 "nl": "Medische genetica & samenleving"
 },
 "url": "tabar/#medical-genetics",
+"status": "draft",
+"wikidata": null
+},
+"tabar:basal-eurasian-ancestry": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "تبار «اوراسیایی پایه» و نئاندرتال‌ها",
+"en": "Basal Eurasian ancestry and Neanderthal ancestry",
+"nl": "Basaal-Euraziatische afstamming en Neanderthalers"
+},
+"url": "tabar/#basal-eurasian-ancestry",
 "status": "draft",
 "wikidata": null
 },
@@ -6528,6 +8544,18 @@
 "status": "draft",
 "wikidata": null
 },
+"tabar:iranian-farmer-legacy": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "میراث کشاورزان ایرانی در استپ، لوانت و جنوب آسیا",
+"en": "The legacy of the Iranian farmers in the steppe, the Levant and South Asia",
+"nl": "De erfenis van de Iraanse boeren in de steppe, de Levant en Zuid-Azië"
+},
+"url": "tabar/#iranian-farmer-legacy",
+"status": "draft",
+"wikidata": null
+},
 "tabar:gwas-polygenic": {
 "wiki": "tabar",
 "type": "concept",
@@ -6552,6 +8580,18 @@
 "status": "draft",
 "wikidata": null
 },
+"tabar:ochre-middle-stone-age": {
+"wiki": "tabar",
+"type": "concept",
+"title": {
+"fa": "کاربرد اُکر در عصر حجر میانیِ آفریقا",
+"en": "Ochre use in the African Middle Stone Age",
+"nl": "Het gebruik van oker in de Afrikaanse Middle Stone Age"
+},
+"url": "tabar/#ochre-middle-stone-age",
+"status": "draft",
+"wikidata": null
+},
 "tabar:common-ancestors": {
 "wiki": "tabar",
 "type": "concept",
@@ -6564,6 +8604,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:bastiat-free-trade-peace-1848-context": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "تجارت آزاد و صلح: ایدهٔ باستیا و پرسش‌هایی دربارهٔ آن",
+"en": "Free trade and peace: Bastiat's idea and its limits",
+"nl": "Vrijhandel en vrede: Bastiats idee en de grenzen ervan"
+},
+"url": "phil/#bastiat-free-trade-peace-1848-context",
+"status": "draft",
+"wikidata": null
+},
+"phil:conservative-history-event-narrative": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "تاریخ به‌مثابهٔ رخداد و روایت: نگاه محافظه‌کارانه به گذشته",
+"en": "History as event and narrative: a conservative view of the past",
+"nl": "Geschiedenis als gebeurtenis en verhaal: een conservatieve kijk op het verleden"
+},
+"url": "phil/#conservative-history-event-narrative",
+"status": "draft",
+"wikidata": null
+},
 "phil:iranian-qualitative-worldview-thesis": {
 "wiki": "phil",
 "type": "concept",
@@ -6573,6 +8637,30 @@
 "nl": "De these van een kwalitatieve, liefdegerichte Iraanse wereldvisie"
 },
 "url": "phil/#iranian-qualitative-worldview-thesis",
+"status": "draft",
+"wikidata": null
+},
+"phil:life-as-narrative-storyteller-god": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "زندگی به‌مثابه روایت: خدا، پدر و «دیگری» به‌عنوان راوی",
+"en": "Life as narrative: God, the father and the 'other' as narrator",
+"nl": "Het leven als verhaal: God, de vader en de ander als verteller"
+},
+"url": "phil/#life-as-narrative-storyteller-god",
+"status": "draft",
+"wikidata": null
+},
+"phil:where-ideas-live-plato-descartes-language-history-value": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ایده کجا خانه دارد؟ افلاطون، دکارت، زبان، تاریخ و ارزش ذهنی",
+"en": "Where do ideas live? Plato, Descartes, language, history and subjective value",
+"nl": "Waar wonen ideeën? Plato, Descartes, taal, geschiedenis en subjectieve waarde"
+},
+"url": "phil/#where-ideas-live-plato-descartes-language-history-value",
 "status": "draft",
 "wikidata": null
 },
@@ -6600,6 +8688,18 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:locke-state-of-nature": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "وضع طبیعی و حقوق طبیعی نزد جان لاک",
+"en": "John Locke on the state of nature and natural rights",
+"nl": "John Locke over de natuurtoestand en natuurlijke rechten"
+},
+"url": "phil/#locke-state-of-nature",
+"status": "draft",
+"wikidata": null
+},
 "phil:nietzsche-god-is-dead-nihilism": {
 "wiki": "phil",
 "type": "concept",
@@ -6609,6 +8709,18 @@
 "nl": "Nietzsche: 'God is dood' en het gevaar van nihilisme"
 },
 "url": "phil/#nietzsche-god-is-dead-nihilism",
+"status": "draft",
+"wikidata": null
+},
+"phil:machiavelli-republic-liberty-hobbes-contrast": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ماکیاول در «گفتارها»: جمهوری، آزادی و توسعهٔ رم؛ تفاوت با هابز",
+"en": "Machiavelli's Discourses: republic, liberty and Rome's growth, contrasted with Hobbes",
+"nl": "Machiavelli's Discorsi: republiek, vrijheid en Romes groei, in contrast met Hobbes"
+},
+"url": "phil/#machiavelli-republic-liberty-hobbes-contrast",
 "status": "draft",
 "wikidata": null
 },
@@ -6633,6 +8745,18 @@
 "nl": "Hafez en de logica van het claimen van waarheid en deugd"
 },
 "url": "phil/#hafez-monopoly-truth-virtue",
+"status": "draft",
+"wikidata": null
+},
+"phil:liberty-limits-and-moral-order": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "مرز آزادی، تحمیل عقیده و اخلاق به‌مثابه نظم اجتماعی",
+"en": "The limits of liberty, imposing beliefs, and morality as social order",
+"nl": "De grenzen van vrijheid, opgelegde overtuigingen en moraal als sociale orde"
+},
+"url": "phil/#liberty-limits-and-moral-order",
 "status": "draft",
 "wikidata": null
 },
@@ -6672,6 +8796,18 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:thought-vs-systematic-thinking-workshop": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "اندیشیدن در برابر تفکر: چرا تفکر نقادانه فقط یک مهارت فهرست‌وار نیست",
+"en": "Thought versus systematic thinking: why critical thinking is more than a checklist skill",
+"nl": "Denken versus systematisch nadenken: kritisch denken is meer dan een checklist"
+},
+"url": "phil/#thought-vs-systematic-thinking-workshop",
+"status": "draft",
+"wikidata": null
+},
 "phil:meaning-identity-uprooting-jozani": {
 "wiki": "phil",
 "type": "concept",
@@ -6681,6 +8817,30 @@
 "nl": "Betekenis, identiteit en ontworteling: de mens ingebed in cultuur en mythe"
 },
 "url": "phil/#meaning-identity-uprooting-jozani",
+"status": "draft",
+"wikidata": null
+},
+"phil:small-share-of-grand-things": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "سهم کوچک ما از چیزهای بزرگ: فاصله با آرمان و پایان‌پذیری",
+"en": "Our small share of grand things: distance from ideals and finitude",
+"nl": "Ons kleine aandeel in grote dingen"
+},
+"url": "phil/#small-share-of-grand-things",
+"status": "draft",
+"wikidata": null
+},
+"phil:bastiat-government-promises-1848-cycle": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "دو دست دولت و تناقض وعده‌ها: خوانش باستیا از چرخهٔ انقلاب‌های فرانسه",
+"en": "The state's two hands and the contradiction of promises: Bastiat on France's revolutionary cycle",
+"nl": "De twee handen van de staat: Bastiat over de Franse revolutiecyclus"
+},
+"url": "phil/#bastiat-government-promises-1848-cycle",
 "status": "draft",
 "wikidata": null
 },
@@ -6780,6 +8940,18 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:oedipus-moral-responsibility-and-modern-suffering": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "اودیپ، مسئولیت اخلاقی و رنج در جهان بی‌خدا",
+"en": "Oedipus, moral responsibility and suffering in a godless world",
+"nl": "Oedipus, morele verantwoordelijkheid en lijden in een wereld zonder God"
+},
+"url": "phil/#oedipus-moral-responsibility-and-modern-suffering",
+"status": "draft",
+"wikidata": null
+},
 "phil:paradigms": {
 "wiki": "phil",
 "type": "concept",
@@ -6840,6 +9012,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:ideas-heaven-or-history": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ایده در آسمان یا در تاریخ؟ دو نگاه به خانهٔ اندیشه‌ها",
+"en": "Ideas in heaven or in history? Two views of where ideas live",
+"nl": "Ideeën in de hemel of in de geschiedenis? Twee visies op de woonplaats van ideeën"
+},
+"url": "phil/#ideas-heaven-or-history",
+"status": "draft",
+"wikidata": null
+},
+"phil:thinking-inside-discourse-foucault-barthes-badiou": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ما درون گفتمان فکر می‌کنیم: فوکو، بارت و سه «وضعیت فلسفی» بدیو",
+"en": "We think inside discourse: Foucault, Barthes and Badiou's three philosophical situations",
+"nl": "We denken binnen discours: Foucault, Barthes en Badiou's drie filosofische situaties"
+},
+"url": "phil/#thinking-inside-discourse-foucault-barthes-badiou",
+"status": "draft",
+"wikidata": null
+},
 "phil:practical-reason-in-usuli-fiqh": {
 "wiki": "phil",
 "type": "concept",
@@ -6876,6 +9072,18 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:locke-labour-property-against-filmer": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "مالکیت از راه کار نزد لاک و پاسخ به فیلمر",
+"en": "Locke's labour theory of property and the reply to Filmer",
+"nl": "Lockes arbeidstheorie van eigendom en het antwoord aan Filmer"
+},
+"url": "phil/#locke-labour-property-against-filmer",
+"status": "draft",
+"wikidata": null
+},
 "phil:hallaj-historical-portrait": {
 "wiki": "phil",
 "type": "concept",
@@ -6888,6 +9096,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:arendt-action-and-dark-times": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "آرنت: کنش، گفتگو و «انسان‌ها در عصر ظلمت»",
+"en": "Arendt: action, dialogue and 'Men in Dark Times'",
+"nl": "Arendt: handelen, dialoog en 'Mensen in donkere tijden'"
+},
+"url": "phil/#arendt-action-and-dark-times",
+"status": "draft",
+"wikidata": null
+},
+"phil:gorgias-callicles-nature-versus-law-rhetoric-and-truth": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "رتوریک و حقیقت در «گرگیاس» افلاطون: کالیکلس و دعوای طبیعت و قانون",
+"en": "Rhetoric and truth in Plato's Gorgias: Callicles and nature versus law",
+"nl": "Retorica en waarheid in Plato's Gorgias: Callicles en natuur tegenover wet"
+},
+"url": "phil/#gorgias-callicles-nature-versus-law-rhetoric-and-truth",
+"status": "draft",
+"wikidata": null
+},
 "phil:illumination": {
 "wiki": "phil",
 "type": "concept",
@@ -6897,6 +9129,18 @@
 "nl": "Illuminationisme en kennis door aanwezigheid"
 },
 "url": "phil/#illumination",
+"status": "draft",
+"wikidata": null
+},
+"phil:parrhesia-courage-and-self-incurred-immaturity": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "پارسیا، شجاعت حقیقت‌گویی و «نابالغی خودخواسته» نزد کانت",
+"en": "Parrhesia, the courage of truth-telling and Kant's self-incurred immaturity",
+"nl": "Parrhesia, de moed om de waarheid te spreken en Kants zelfverschuldigde onmondigheid"
+},
+"url": "phil/#parrhesia-courage-and-self-incurred-immaturity",
 "status": "draft",
 "wikidata": null
 },
@@ -6924,6 +9168,18 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:omniscient-narrator-god-and-chance-as-worship": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "راوی دانای کل، خدا و میل به روایت‌شدن",
+"en": "The omniscient narrator, God and the wish to be narrated",
+"nl": "De alwetende verteller, God en de wens verteld te worden"
+},
+"url": "phil/#omniscient-narrator-god-and-chance-as-worship",
+"status": "draft",
+"wikidata": null
+},
 "phil:substantial-motion": {
 "wiki": "phil",
 "type": "concept",
@@ -6936,6 +9192,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:exception-trolley-oedipus-responsibility": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "وضعیت استثنا، مسئلهٔ تراموا و مسئولیت اخلاقی در بحران: خوانش اودیپ",
+"en": "State of exception, the trolley problem and moral responsibility in crisis: reading Oedipus",
+"nl": "Uitzonderingstoestand, het trolleyprobleem en morele verantwoordelijkheid in crisis: een lezing van Oedipus"
+},
+"url": "phil/#exception-trolley-oedipus-responsibility",
+"status": "draft",
+"wikidata": null
+},
+"phil:montesquieu-law-liberty-separation-of-powers": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "مونتسکیو: روح‌القوانین، تعریف آزادی و تفکیک قوا",
+"en": "Montesquieu: the Spirit of the Laws, liberty and the separation of powers",
+"nl": "Montesquieu: de geest van de wetten, vrijheid en machtenscheiding"
+},
+"url": "phil/#montesquieu-law-liberty-separation-of-powers",
+"status": "draft",
+"wikidata": null
+},
 "phil:ghazali-causation": {
 "wiki": "phil",
 "type": "concept",
@@ -6945,6 +9225,30 @@
 "nl": "Al-Ghazali, Averroes en het probleem van causaliteit"
 },
 "url": "phil/#ghazali-causation",
+"status": "draft",
+"wikidata": null
+},
+"phil:art-symbolic-forms-in-crisis": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "هنر به‌مثابه صورت نمادین در بحران: کاسیرر، موسیقی و بیان رنج",
+"en": "Art as symbolic form in crisis: Cassirer, music and expressing suffering",
+"nl": "Kunst als symbolische vorm in crisis: Cassirer, muziek en het uiten van lijden"
+},
+"url": "phil/#art-symbolic-forms-in-crisis",
+"status": "draft",
+"wikidata": null
+},
+"phil:doostdar-shayegan-khayyam-concept-definition-critique": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "نقد دوستدار بر شایگان: تعریف «تفکر» و مسئلهٔ متفکر ایرانی",
+"en": "Doostdar's critique of Shayegan: defining 'thinking' and the Iranian thinker",
+"nl": "Doostdars kritiek op Shayegan: wat is 'denken' en de Iraanse denker"
+},
+"url": "phil/#doostdar-shayegan-khayyam-concept-definition-critique",
 "status": "draft",
 "wikidata": null
 },
@@ -6969,6 +9273,42 @@
 "nl": "Epistemisch onrecht"
 },
 "url": "phil/#epistemic-injustice",
+"status": "draft",
+"wikidata": null
+},
+"phil:burke-contract-of-generations": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "برک و محافظه‌کاری: قرارداد میان مردگان، زندگان و آیندگان",
+"en": "Burke and conservatism: the contract among the dead, the living and the unborn",
+"nl": "Burke en conservatisme: het verdrag tussen doden, levenden en ongeborenen"
+},
+"url": "phil/#burke-contract-of-generations",
+"status": "draft",
+"wikidata": null
+},
+"phil:innocence-blame-and-limits-of-moral-codes": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "بی‌گناهی مطلق، مقصر و حدود نظام‌های اخلاقی",
+"en": "Absolute innocence, blame and the limits of moral codes",
+"nl": "Absolute onschuld, schuld en de grenzen van morele stelsels"
+},
+"url": "phil/#innocence-blame-and-limits-of-moral-codes",
+"status": "draft",
+"wikidata": null
+},
+"phil:hobbes-fear-sovereign-minimal-morality": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "هابز: ترس از وضع طبیعی، حاکم مقتدر و اخلاقِ حداقلی",
+"en": "Hobbes: fear of the state of nature, the strong sovereign and a minimal morality",
+"nl": "Hobbes: angst voor de natuurtoestand, de sterke soeverein en een minimale moraal"
+},
+"url": "phil/#hobbes-fear-sovereign-minimal-morality",
 "status": "draft",
 "wikidata": null
 },
@@ -7008,6 +9348,78 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:plato-aristotle-popper-political-philosophy-origins": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ریشه‌های فلسفهٔ سیاسی: افلاطون، ارسطو و پرسش «چه دولتی خوب است؟»",
+"en": "Origins of political philosophy: Plato, Aristotle and the question 'which state is good?'",
+"nl": "De wortels van de politieke filosofie: Plato, Aristoteles en de vraag welke staat goed is"
+},
+"url": "phil/#plato-aristotle-popper-political-philosophy-origins",
+"status": "draft",
+"wikidata": null
+},
+"phil:thinking-blurs-common-sense-and-ideologies": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "تفکر، شناخت عرفی و جاذبهٔ ایدئولوژی‌های دوگانه",
+"en": "Thinking, common sense and the pull of dualistic ideologies",
+"nl": "Denken, gezond verstand en de aantrekkingskracht van dualistische ideologieën"
+},
+"url": "phil/#thinking-blurs-common-sense-and-ideologies",
+"status": "draft",
+"wikidata": null
+},
+"phil:placing-a-concept-in-its-proper-field": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "گذاشتن مفهوم در بستر خودش و دقت در واژه‌ها",
+"en": "Placing a concept in its proper field and choosing exact words",
+"nl": "Een begrip in zijn eigen context plaatsen en precies formuleren"
+},
+"url": "phil/#placing-a-concept-in-its-proper-field",
+"status": "draft",
+"wikidata": null
+},
+"phil:machiavelli-fear-love-fox-lion": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ماکیاول: ترس یا محبت، شیر و روباه، و سیاست بی‌توهم",
+"en": "Machiavelli: fear or love, lion and fox, and politics without illusions",
+"nl": "Machiavelli: angst of liefde, leeuw en vos, politiek zonder illusies"
+},
+"url": "phil/#machiavelli-fear-love-fox-lion",
+"status": "draft",
+"wikidata": null
+},
+"phil:liberalism-moral-challenge-authority-judgment": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "لیبرالیسم به‌مثابه چالش اخلاقی: فرد، قضاوت و بازپس‌گیری مرجعیت",
+"en": "Liberalism as a moral challenge: the individual, judging others, and taking back authority",
+"nl": "Liberalisme als morele uitdaging: individu, oordelen en gezag"
+},
+"url": "phil/#liberalism-moral-challenge-authority-judgment",
+"status": "draft",
+"wikidata": null
+},
+"phil:existence-vs-presence-science-limits-meaning": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "«وجود» و «حضور»: حد روش تجربی در فهم جهان معنا (دیدگاه سخنران)",
+"en": "'Existence' versus 'presence': limits of the empirical method for the world of meaning (lecturer's view)",
+"nl": "'Bestaan' versus 'aanwezigheid': grenzen van de empirische methode voor betekenis"
+},
+"url": "phil/#existence-vs-presence-science-limits-meaning",
+"status": "draft",
+"wikidata": null
+},
 "phil:veil-of-ignorance": {
 "wiki": "phil",
 "type": "concept",
@@ -7017,6 +9429,30 @@
 "nl": "De sluier van onwetendheid en rechtvaardigheid als billijkheid"
 },
 "url": "phil/#veil-of-ignorance",
+"status": "draft",
+"wikidata": null
+},
+"phil:berlin-value-conflict-liberty-equality": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "برلین: ناسازگاری ارزش‌ها، آزادی در برابر برابری و خطر سیاست رمانتیک",
+"en": "Berlin on value conflict: liberty versus equality and the risk of romantic politics",
+"nl": "Berlin over waardenconflict: vrijheid versus gelijkheid en romantische politiek"
+},
+"url": "phil/#berlin-value-conflict-liberty-equality",
+"status": "draft",
+"wikidata": null
+},
+"phil:utopian-benevolence-accountability": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "خیرخواهی آرمان‌شهری، پذیرش اشتباه و حافظهٔ تاریخی",
+"en": "Utopian benevolence, owning mistakes and historical memory",
+"nl": "Utopische welwillendheid, fouten erkennen en historisch geheugen"
+},
+"url": "phil/#utopian-benevolence-accountability",
 "status": "draft",
 "wikidata": null
 },
@@ -7044,6 +9480,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:arendt-dark-times-isolation-and-public-speech": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "آرنت: ظلمت، انزوا و گفتگو به‌عنوان کنش",
+"en": "Arendt: dark times, isolation and speech as action",
+"nl": "Arendt: donkere tijden, isolement en spreken als handelen"
+},
+"url": "phil/#arendt-dark-times-isolation-and-public-speech",
+"status": "draft",
+"wikidata": null
+},
+"phil:montesquieu-climate-theory-and-slavery": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "نظریهٔ اقلیم و بردگی نزد مونتسکیو و نقد آن",
+"en": "Montesquieu's climate theory and slavery, and its critique",
+"nl": "Montesquieus klimaattheorie en slavernij, met kritiek"
+},
+"url": "phil/#montesquieu-climate-theory-and-slavery",
+"status": "draft",
+"wikidata": null
+},
 "phil:stories-memory-lying-fantasy": {
 "wiki": "phil",
 "type": "concept",
@@ -7068,6 +9528,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:choosing-the-field-and-tracing-concepts-upward": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "انتخاب میدان معرفتی و بازگرداندن مفهوم به کلِ بزرگ‌ترش",
+"en": "Choosing an epistemic field and tracing a concept to its larger whole",
+"nl": "Een kennisveld kiezen en een begrip terugvoeren op het grotere geheel"
+},
+"url": "phil/#choosing-the-field-and-tracing-concepts-upward",
+"status": "draft",
+"wikidata": null
+},
+"phil:questioning-questions-precise-word-and-thought": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "پرسش از پرسش‌ها: دقتِ پرسش و کلمه در اندیشیدن",
+"en": "Questioning questions: precision of question and word in thinking",
+"nl": "Vragen over vragen: precisie in vraag en woord"
+},
+"url": "phil/#questioning-questions-precise-word-and-thought",
+"status": "draft",
+"wikidata": null
+},
 "phil:hafez-rend-sincerity-vs-display": {
 "wiki": "phil",
 "type": "concept",
@@ -7077,6 +9561,18 @@
 "nl": "De rend tegenover de asceet: oprechtheid tegenover vertoonde deugd"
 },
 "url": "phil/#hafez-rend-sincerity-vs-display",
+"status": "draft",
+"wikidata": null
+},
+"phil:augustine-aquinas-government-as-punishment-or-reason": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "آگوستین و آکویناس: حکومت به‌مثابه تاوان گناه یا حاصل عقل",
+"en": "Augustine and Aquinas: government as punishment for sin or as a work of reason",
+"nl": "Augustinus en Thomas van Aquino: bestuur als straf voor zonde of als werk van de rede"
+},
+"url": "phil/#augustine-aquinas-government-as-punishment-or-reason",
 "status": "draft",
 "wikidata": null
 },
@@ -7092,6 +9588,66 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:burke-tocqueville-intermediary-groups-mass": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "گروه‌های میانی، جامعهٔ توده‌ای و استبداد اکثریت: برک و توکویل",
+"en": "Intermediary groups, mass society and the tyranny of the majority: Burke and Tocqueville",
+"nl": "Tussengroepen, massamaatschappij en tirannie van de meerderheid: Burke en Tocqueville"
+},
+"url": "phil/#burke-tocqueville-intermediary-groups-mass",
+"status": "draft",
+"wikidata": null
+},
+"phil:mill-individuality-custom-subjection-of-women": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "میل: فردیت، استبداد عرف و «انقیاد زنان»",
+"en": "Mill: individuality, the despotism of custom and The Subjection of Women",
+"nl": "Mill: individualiteit, de tirannie van de gewoonte en The Subjection of Women"
+},
+"url": "phil/#mill-individuality-custom-subjection-of-women",
+"status": "draft",
+"wikidata": null
+},
+"phil:smith-invisible-hand-free-trade-mercantilism": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "دست نامرئی، منفعت شخصی و حملهٔ اسمیت به مرکانتیلیسم",
+"en": "The invisible hand, self-interest and Smith's attack on mercantilism",
+"nl": "De onzichtbare hand, eigenbelang en Smiths aanval op het mercantilisme"
+},
+"url": "phil/#smith-invisible-hand-free-trade-mercantilism",
+"status": "draft",
+"wikidata": null
+},
+"phil:value-bracketing-dualistic-thinking": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "دوگانه‌پنداری و تعلیق نسبت ارزشی در پژوهش",
+"en": "Dualistic thinking and suspending value judgements in inquiry",
+"nl": "Dualistisch denken en het opschorten van waardeoordelen in onderzoek"
+},
+"url": "phil/#value-bracketing-dualistic-thinking",
+"status": "draft",
+"wikidata": null
+},
+"phil:guilt-truth-rhetoric-subjective-concepts": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "حقیقت به‌مثابه تفسیر، بلاغت و احساس گناه به‌عنوان مفهومی ذهنی",
+"en": "Truth as interpretation, rhetoric, and guilt as a subjective concept",
+"nl": "Waarheid als interpretatie, retoriek en schuld als subjectief begrip"
+},
+"url": "phil/#guilt-truth-rhetoric-subjective-concepts",
+"status": "draft",
+"wikidata": null
+},
 "phil:worldview-as-window": {
 "wiki": "phil",
 "type": "concept",
@@ -7104,6 +9660,18 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:happiness-duration-paradox": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "خوشبختی، پایدار ماندن و عاقبت‌اندیشی",
+"en": "Happiness, duration and over-thinking the future",
+"nl": "Geluk, duur en te veel vooruitdenken"
+},
+"url": "phil/#happiness-duration-paradox",
+"status": "draft",
+"wikidata": null
+},
 "phil:binary-thinking-in-politics": {
 "wiki": "phil",
 "type": "concept",
@@ -7113,6 +9681,78 @@
 "nl": "Binair denken in politiek en techniek"
 },
 "url": "phil/#binary-thinking-in-politics",
+"status": "draft",
+"wikidata": null
+},
+"phil:universal-love-nationalism-orwell": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "دوست‌داشتن همهٔ جهان یا وطن؟ ناسیونالیسم منتقل‌شده نزد اورول",
+"en": "Loving all humanity or the homeland? Orwell's 'transferred nationalism'",
+"nl": "Houden van de hele mensheid of van het vaderland? Orwells 'overgedragen nationalisme'"
+},
+"url": "phil/#universal-love-nationalism-orwell",
+"status": "draft",
+"wikidata": null
+},
+"phil:berlin-no-flawless-regime-trial-and-error": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "نبودِ نسخهٔ بی‌عیب سیاسی: کثرت‌گرایی ارزشی برلین و بحث «آزمون و خطا»",
+"en": "No flawless political regime: Berlin's value pluralism and the 'trial and error' debate",
+"nl": "Geen foutloos politiek model: Berlins waardenpluralisme en het 'trial and error'-debat"
+},
+"url": "phil/#berlin-no-flawless-regime-trial-and-error",
+"status": "draft",
+"wikidata": null
+},
+"phil:thinking-as-questioning-insight-not-technique": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "تفکر نقادانه: بینش پرسشگر، نه فقط تکنیک",
+"en": "Critical thinking as an inquiring outlook, not just a technique",
+"nl": "Kritisch denken als vragende houding, niet alleen een techniek"
+},
+"url": "phil/#thinking-as-questioning-insight-not-technique",
+"status": "draft",
+"wikidata": null
+},
+"phil:image-of-human-agent-or-object-political-theories": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "تصویر ما از انسان: فاعل خودآگاه یا ابژهٔ فریب‌خورده؟ ریشهٔ اختلاف مکتب‌های سیاسی به گفتهٔ سخنران",
+"en": "Our image of the human: conscious agent or deceived object? The lecturer on the root of political disagreements",
+"nl": "Ons mensbeeld: bewuste actor of misleid object? De spreker over de wortel van politieke verschillen"
+},
+"url": "phil/#image-of-human-agent-or-object-political-theories",
+"status": "draft",
+"wikidata": null
+},
+"phil:morality-origins-and-politics-split": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "منشأ اخلاق و جدایی اخلاق از سیاست: ماکیاولی، هابز و اخلاق حرفه‌ای",
+"en": "Where morality comes from and the split between ethics and politics: Machiavelli, Hobbes, professional ethics",
+"nl": "Herkomst van moraal en scheiding van ethiek en politiek"
+},
+"url": "phil/#morality-origins-and-politics-split",
+"status": "draft",
+"wikidata": null
+},
+"phil:youth-aging-access-to-world": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "پیری، دسترسی به جهان و مرگ به‌عنوان سرچشمهٔ معنا",
+"en": "Old age as lost access to the world, and death as a source of meaning",
+"nl": "Ouderdom als verlies van toegang tot de wereld, en de dood als bron van betekenis"
+},
+"url": "phil/#youth-aging-access-to-world",
 "status": "draft",
 "wikidata": null
 },
@@ -7137,6 +9777,66 @@
 "nl": "Drogredenen en informeel redeneren"
 },
 "url": "phil/#fallacies",
+"status": "draft",
+"wikidata": null
+},
+"phil:platform-narrative-truth-rhetoric-poetic-speech": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "امر واقع، روایت و حقیقت: بلاغت، سوفیست‌ها و سخن شاعرانه",
+"en": "Fact, narrative and truth: rhetoric, the sophists and poetic speech",
+"nl": "Feit, verhaal en waarheid: retoriek, sofisten en poëtische taal"
+},
+"url": "phil/#platform-narrative-truth-rhetoric-poetic-speech",
+"status": "draft",
+"wikidata": null
+},
+"phil:routine-novelty-lived-advice": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "روزمرگی، نظم، نبوغ و ناکامیِ نصیحت",
+"en": "Routine, order, genius and the failure of advice",
+"nl": "Routine, orde, genialiteit en het falen van advies"
+},
+"url": "phil/#routine-novelty-lived-advice",
+"status": "draft",
+"wikidata": null
+},
+"phil:hobbes-three-causes-of-conflict-leviathan": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "هابز: سه سرچشمهٔ نزاع، وضع طبیعی و لویاتان",
+"en": "Hobbes: three causes of quarrel, the state of nature and the Leviathan",
+"nl": "Hobbes: drie oorzaken van strijd, natuurtoestand en Leviathan"
+},
+"url": "phil/#hobbes-three-causes-of-conflict-leviathan",
+"status": "draft",
+"wikidata": null
+},
+"phil:blank-slate-and-human-nature-in-locke-hobbes-marx": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "لوح سفید و سرشت انسان: لاک، هابز و مارکس",
+"en": "The blank slate and human nature: Locke, Hobbes and Marx",
+"nl": "De onbeschreven lei en de menselijke natuur: Locke, Hobbes en Marx"
+},
+"url": "phil/#blank-slate-and-human-nature-in-locke-hobbes-marx",
+"status": "draft",
+"wikidata": null
+},
+"phil:aron-left-myths-freedom-equality-solitude": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "اسطوره‌های چپ از دید آرون و بهای آزادی: ناسازگاری با برابری و تنهایی",
+"en": "Aron on the myths of the Left and the price of freedom: tension with equality, and solitude",
+"nl": "Aron over de mythen van links en de prijs van vrijheid: spanning met gelijkheid, en eenzaamheid"
+},
+"url": "phil/#aron-left-myths-freedom-equality-solitude",
 "status": "draft",
 "wikidata": null
 },
@@ -7176,6 +9876,54 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:political-philosophy-human-nature-first": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "فلسفهٔ سیاسی چیست و چرا از «انسان چیست؟» شروع می‌شود",
+"en": "What political philosophy is, and why it starts from 'what is a human?'",
+"nl": "Wat politieke filosofie is en waarom ze begint bij 'wat is een mens?'"
+},
+"url": "phil/#political-philosophy-human-nature-first",
+"status": "draft",
+"wikidata": null
+},
+"phil:ideas-recognition-in-lived-life": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ایده و زندگی روزمره: چرا اثر هنری یا فلسفی ما را «می‌خواند»",
+"en": "Ideas and everyday life: why a work of art or philosophy 'reads' us",
+"nl": "Ideeën en dagelijks leven: waarom een kunstwerk ons 'leest'"
+},
+"url": "phil/#ideas-recognition-in-lived-life",
+"status": "draft",
+"wikidata": null
+},
+"phil:republicanism-monarchy-scholarly-background": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "جمهوری‌خواهی در برابر پادشاهی: ادعای سخنران و پیشینهٔ پژوهشی",
+"en": "Republicanism versus monarchy: the lecturer's claim and the scholarly background",
+"nl": "Republicanisme versus monarchie: de stelling van de spreker en de wetenschappelijke achtergrond"
+},
+"url": "phil/#republicanism-monarchy-scholarly-background",
+"status": "draft",
+"wikidata": null
+},
+"phil:machiavelli-ethics-politics-split": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ماکیاول و جدا شدن سیاست از اخلاق",
+"en": "Machiavelli and the separation of politics from ethics",
+"nl": "Machiavelli en de scheiding van politiek en ethiek"
+},
+"url": "phil/#machiavelli-ethics-politics-split",
+"status": "draft",
+"wikidata": null
+},
 "phil:uncritical-thinking-traits": {
 "wiki": "phil",
 "type": "concept",
@@ -7185,6 +9933,54 @@
 "nl": "Acht kenmerken van onkritisch denken"
 },
 "url": "phil/#uncritical-thinking-traits",
+"status": "draft",
+"wikidata": null
+},
+"phil:big-fish-storytelling-memory-and-truth": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "«ماهی بزرگ»: قصه‌گویی، حافظه و حقیقت",
+"en": "Big Fish: storytelling, memory and truth",
+"nl": "Big Fish: verhalen vertellen, geheugen en waarheid"
+},
+"url": "phil/#big-fish-storytelling-memory-and-truth",
+"status": "draft",
+"wikidata": null
+},
+"phil:mill-on-liberty-harm-principle-majority": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "میل، «دربارهٔ آزادی»: اصل زیان، ستم اکثریت و آزادی اندیشه",
+"en": "Mill's On Liberty: the harm principle, tyranny of the majority and freedom of thought",
+"nl": "Mills On Liberty: het schadebeginsel, tirannie van de meerderheid en vrijheid van denken"
+},
+"url": "phil/#mill-on-liberty-harm-principle-majority",
+"status": "draft",
+"wikidata": null
+},
+"phil:state-exception-security-approach-iran-view": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "وضعیت استثنایی، رویکرد امنیتی به فرهنگ و پیش‌بینی آینده (دیدگاه سخنران)",
+"en": "State of exception, the security approach to culture and a forecast (the lecturer's view)",
+"nl": "Uitzonderingstoestand, veiligheidsaanpak van cultuur en een voorspelling (visie van de spreker)"
+},
+"url": "phil/#state-exception-security-approach-iran-view",
+"status": "draft",
+"wikidata": null
+},
+"phil:cassirer-political-myth-four-techniques": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "اسطورهٔ سیاسی و فنون آن نزد کاسیرر: وقتی بحران سیاست را به اسطوره برمی‌گرداند",
+"en": "Cassirer on political myth and its techniques: when crisis returns politics to myth",
+"nl": "Cassirer over politieke mythen en hun technieken in tijden van crisis"
+},
+"url": "phil/#cassirer-political-myth-four-techniques",
 "status": "draft",
 "wikidata": null
 },
@@ -7236,6 +10032,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:theological-determinism-function-spinoza": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "جبر الهیاتی و کارکرد روانی آن: از متون مقدس تا اسپینوزا",
+"en": "Theological determinism and its psychological function: from scripture to Spinoza",
+"nl": "Theologisch determinisme en de psychologische functie ervan: van de Schrift tot Spinoza"
+},
+"url": "phil/#theological-determinism-function-spinoza",
+"status": "draft",
+"wikidata": null
+},
+"phil:accepting-repetition-festival-and-time": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "پذیرفتن تکرار: جشن، زمان چرخه‌ای و زمان خطی",
+"en": "Accepting repetition: festival, cyclical and linear time",
+"nl": "Herhaling aanvaarden: feest, cyclische en lineaire tijd"
+},
+"url": "phil/#accepting-repetition-festival-and-time",
+"status": "draft",
+"wikidata": null
+},
 "phil:soviet-terror-and-marx-link-debate": {
 "wiki": "phil",
 "type": "concept",
@@ -7257,6 +10077,78 @@
 "nl": "Experimentele filosofie en het Knobe-effect"
 },
 "url": "phil/#knobe-effect",
+"status": "draft",
+"wikidata": null
+},
+"phil:meaning-rebuilt-after-crisis-egypt-gilgamesh": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ساختنِ دوبارهٔ معنا پس از بحران: مصر باستان و گیلگمش",
+"en": "Rebuilding meaning after crisis: ancient Egypt and Gilgamesh",
+"nl": "Betekenis herbouwen na een crisis: het oude Egypte en Gilgamesj"
+},
+"url": "phil/#meaning-rebuilt-after-crisis-egypt-gilgamesh",
+"status": "draft",
+"wikidata": null
+},
+"phil:locke-state-of-nature-war-and-consent": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "وضع طبیعی، وضع جنگ و رضایت مردم در اندیشهٔ لاک",
+"en": "Locke on the state of nature, the state of war and consent",
+"nl": "Locke over de natuurtoestand, de oorlogstoestand en instemming"
+},
+"url": "phil/#locke-state-of-nature-war-and-consent",
+"status": "draft",
+"wikidata": null
+},
+"phil:hero-journey-storytelling-as-activism": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "سفر قهرمان و روایتگری: قصه به‌مثابه روش آموزش و نوعی کنشگری",
+"en": "The hero's journey and storytelling as a method of teaching and a form of activism",
+"nl": "De reis van de held en vertellen als lesmethode en vorm van activisme"
+},
+"url": "phil/#hero-journey-storytelling-as-activism",
+"status": "draft",
+"wikidata": null
+},
+"phil:lacan-no-sexual-relationship-her": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "لکان و «رابطهٔ جنسی وجود ندارد»؛ خوانشی از فیلم «او» (Her)",
+"en": "Lacan and 'there is no sexual relationship': reading the film Her",
+"nl": "Lacan en 'er is geen seksuele verhouding': de film Her"
+},
+"url": "phil/#lacan-no-sexual-relationship-her",
+"status": "draft",
+"wikidata": null
+},
+"phil:death-penalty-deterrence-retribution-debate": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "مجازات اعدام: بازدارندگی، انتقام و «بستن پرونده»",
+"en": "The death penalty: deterrence, retribution and 'closing the case'",
+"nl": "De doodstraf: afschrikking, wraak en 'het dossier sluiten'"
+},
+"url": "phil/#death-penalty-deterrence-retribution-debate",
+"status": "draft",
+"wikidata": null
+},
+"phil:berlin-power-of-ideas-romantic-roots": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "آیزایا برلین و «قدرت اندیشه»: ریشهٔ رمانتیک ایده‌های ویرانگر",
+"en": "Isaiah Berlin and the power of ideas: romantic roots of destructive doctrines",
+"nl": "Isaiah Berlin en de macht van ideeën: romantische wortels"
+},
+"url": "phil/#berlin-power-of-ideas-romantic-roots",
 "status": "draft",
 "wikidata": null
 },
@@ -7284,6 +10176,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:liberal-toleration-four-arguments": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "مدارای لیبرال: چهار استدلال پس از جنگ‌های مذهبی",
+"en": "Liberal toleration: four arguments after the wars of religion",
+"nl": "Liberale tolerantie: vier argumenten na de godsdienstoorlogen"
+},
+"url": "phil/#liberal-toleration-four-arguments",
+"status": "draft",
+"wikidata": null
+},
+"phil:fate-as-coping-determinism-in-scripture": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "کارکرد تقدیر و جبر: مالینوفسکی، میمونید و اسپینوزا",
+"en": "The function of fate and determinism: Malinowski, Maimonides and Spinoza",
+"nl": "De functie van lot en determinisme: Malinowski, Maimonides en Spinoza"
+},
+"url": "phil/#fate-as-coping-determinism-in-scripture",
+"status": "draft",
+"wikidata": null
+},
 "phil:skepticism-cogito": {
 "wiki": "phil",
 "type": "concept",
@@ -7293,6 +10209,18 @@
 "nl": "Cartesiaanse twijfel en het cogito"
 },
 "url": "phil/#skepticism-cogito",
+"status": "draft",
+"wikidata": null
+},
+"phil:locke-labor-property-colonial-debate": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "مالکیت و کار نزد لاک و بحث دربارهٔ استعمار",
+"en": "Locke on labour and property, and the colonialism debate",
+"nl": "Locke over arbeid en eigendom, en het debat over kolonialisme"
+},
+"url": "phil/#locke-labor-property-colonial-debate",
 "status": "draft",
 "wikidata": null
 },
@@ -7320,6 +10248,54 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:problem-making-and-question-origins": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "مسئله‌سازی و خاستگاهِ پرسش‌ها",
+"en": "Problem-making and the origins of questions",
+"nl": "Problemen formuleren en de oorsprong van vragen"
+},
+"url": "phil/#problem-making-and-question-origins",
+"status": "draft",
+"wikidata": null
+},
+"phil:good-evil-dualism-and-value-suspension": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "دوگانه‌پنداری خیر و شر و تعلیق نسبت ارزشی در پژوهش",
+"en": "Good-evil dualism and suspending value judgements in inquiry",
+"nl": "Dualisme van goed en kwaad en het opschorten van waardeoordelen"
+},
+"url": "phil/#good-evil-dualism-and-value-suspension",
+"status": "draft",
+"wikidata": null
+},
+"phil:naming-experience-sophists-language-limits": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "نام‌گذاری تجربه: نظریه‌پردازی به‌مثابه یافتن واژه برای وضعیت‌های انسانی",
+"en": "Naming experience: theorising as finding words for human situations",
+"nl": "Ervaring benoemen: theoretiseren als woorden vinden voor menselijke situaties"
+},
+"url": "phil/#naming-experience-sophists-language-limits",
+"status": "draft",
+"wikidata": null
+},
+"phil:idea-research-distance-and-hindsight": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ایده‌شناسی و دشواری فاصله گرفتن از ایده",
+"en": "Studying ideas: the problem of distance and hindsight",
+"nl": "Ideeën bestuderen: afstand en achteraf-vooroordeel"
+},
+"url": "phil/#idea-research-distance-and-hindsight",
+"status": "draft",
+"wikidata": null
+},
 "phil:fallacy-appeals-to-feeling-and-force": {
 "wiki": "phil",
 "type": "concept",
@@ -7329,6 +10305,30 @@
 "nl": "Beroep op gevoel en dwang: dreiging, omkoping, medelijden, wishful thinking, demagogie"
 },
 "url": "phil/#fallacy-appeals-to-feeling-and-force",
+"status": "draft",
+"wikidata": null
+},
+"phil:questioning-answers-belief-idea-judgment": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "پرسش از پاسخ‌ها: باور، ایده و داوری در فرهنگ",
+"en": "Questioning answers: belief, idea and judgment within culture",
+"nl": "Antwoorden bevragen: overtuiging, idee en oordeel binnen cultuur"
+},
+"url": "phil/#questioning-answers-belief-idea-judgment",
+"status": "draft",
+"wikidata": null
+},
+"phil:questioning-the-answers-and-the-question": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "پرسش از پاسخ‌های رایج و بازسازی خودِ پرسش",
+"en": "Questioning accepted answers and reformulating the question",
+"nl": "Vragen stellen bij gangbare antwoorden en de vraag herformuleren"
+},
+"url": "phil/#questioning-the-answers-and-the-question",
 "status": "draft",
 "wikidata": null
 },
@@ -7344,6 +10344,54 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:locke-toleration-church-state": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "لاک و مدارا: چرا دولت نباید ایمان را به زور تحمیل کند",
+"en": "Locke on toleration: why the state should not enforce belief",
+"nl": "Locke over tolerantie: waarom de staat geloof niet mag afdwingen"
+},
+"url": "phil/#locke-toleration-church-state",
+"status": "draft",
+"wikidata": null
+},
+"phil:nietzsche-nihilism-lowith-secularized-faith": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "نیست‌انگاری نیچه و تاریخِ وامدارِ مسیحیت: کنت، هگل و لویت",
+"en": "Nietzsche's nihilism and history indebted to Christianity: Comte, Hegel and Löwith",
+"nl": "Nietzsches nihilisme en de christelijke wortels van de geschiedenisfilosofie"
+},
+"url": "phil/#nietzsche-nihilism-lowith-secularized-faith",
+"status": "draft",
+"wikidata": null
+},
+"phil:gilgamesh-death-and-theology-of-suffering": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "گیل‌گمش، مرگ و الهیاتِ رنج",
+"en": "Gilgamesh, death and the theology of suffering",
+"nl": "Gilgamesj, de dood en de theologie van het lijden"
+},
+"url": "phil/#gilgamesh-death-and-theology-of-suffering",
+"status": "draft",
+"wikidata": null
+},
+"phil:belief-realms-exempt-from-reason-limits-of-critique": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ساحت‌های خودارجاع و مرز نقد عقلانی",
+"en": "Self-referential belief realms and the limits of rational critique",
+"nl": "Zelfverwijzende overtuigingsdomeinen en de grenzen van rationele kritiek"
+},
+"url": "phil/#belief-realms-exempt-from-reason-limits-of-critique",
+"status": "draft",
+"wikidata": null
+},
 "phil:political": {
 "wiki": "phil",
 "type": "field",
@@ -7353,6 +10401,18 @@
 "nl": "Politieke filosofie"
 },
 "url": "phil/#political",
+"status": "draft",
+"wikidata": null
+},
+"phil:truth-as-rhetorical-victory": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "حقیقت، گفتمان و بلاغت: ادعای سخنران دربارهٔ برساختِ حقیقت",
+"en": "Truth, discourse and rhetoric: the lecturer's constructivist claim",
+"nl": "Waarheid, discours en retoriek: de constructivistische stelling van de spreker"
+},
+"url": "phil/#truth-as-rhetorical-victory",
 "status": "draft",
 "wikidata": null
 },
@@ -7368,6 +10428,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:affirm-then-understand-versus-critical-stance": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "آری‌گفتن به جهان پیش از فهم، در برابر «نه» انتقادی؛ و تصویر سخنران از چپ و راست",
+"en": "Saying 'yes' to the world before understanding it, versus a critical 'no'; the lecturer's picture of left and right",
+"nl": "Eerst 'ja' zeggen tegen de wereld versus een kritisch 'nee'"
+},
+"url": "phil/#affirm-then-understand-versus-critical-stance",
+"status": "draft",
+"wikidata": null
+},
+"phil:locke-consent-conquest-tyranny-dissolution": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "لاک: رضایت، غلبه، غصب، ستمگری و حق برکناری حکومت",
+"en": "Locke: consent, conquest, usurpation, tyranny and the right to remove a government",
+"nl": "Locke: instemming, verovering, usurpatie, tirannie en het recht een regering af te zetten"
+},
+"url": "phil/#locke-consent-conquest-tyranny-dissolution",
+"status": "draft",
+"wikidata": null
+},
 "phil:conservatism-as-evolving-tradition": {
 "wiki": "phil",
 "type": "concept",
@@ -7377,6 +10461,30 @@
 "nl": "Conservatisme als behoud van een zich ontwikkelende traditie"
 },
 "url": "phil/#conservatism-as-evolving-tradition",
+"status": "draft",
+"wikidata": null
+},
+"phil:utilitarianism-bentham-mill-earthly-ethics": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "سودگرایی بنتام و میل: اخلاقِ زمینی بر پایهٔ لذت و رنج",
+"en": "Bentham and Mill's utilitarianism: an earthly ethics of pleasure and pain",
+"nl": "Utilitarisme van Bentham en Mill: een aardse ethiek van genot en pijn"
+},
+"url": "phil/#utilitarianism-bentham-mill-earthly-ethics",
+"status": "draft",
+"wikidata": null
+},
+"phil:defining-war-coup-revolution-craft": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "هنر تعریف‌کردن: جنگ، کودتا و انقلاب",
+"en": "The craft of defining: war, coup and revolution",
+"nl": "De kunst van het definiëren: oorlog, staatsgreep en revolutie"
+},
+"url": "phil/#defining-war-coup-revolution-craft",
 "status": "draft",
 "wikidata": null
 },
@@ -7416,6 +10524,42 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:mill-liberty-individuality-harm-principle": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "میل دربارهٔ آزادی، فردیت و اصل زیان",
+"en": "Mill on liberty, individuality and the harm principle",
+"nl": "Mill over vrijheid, individualiteit en het schadebeginsel"
+},
+"url": "phil/#mill-liberty-individuality-harm-principle",
+"status": "draft",
+"wikidata": null
+},
+"phil:art-purpose-form-enduring-themes": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "هنر چه رسالتی دارد؟ سرگرمی، فرم و مضمون‌های ماندگار",
+"en": "What is art for? Entertainment, form and enduring themes",
+"nl": "Waartoe dient kunst? Vermaak, vorm en blijvende thema's"
+},
+"url": "phil/#art-purpose-form-enduring-themes",
+"status": "draft",
+"wikidata": null
+},
+"phil:plato-kant-hegel-where-ideas-live": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ایده کجا ساکن است؟ افلاطون، کانت و هگل",
+"en": "Where do ideas live? Plato, Kant and Hegel",
+"nl": "Drie verblijfplaatsen van ideeën: Plato, Kant en Hegel"
+},
+"url": "phil/#plato-kant-hegel-where-ideas-live",
+"status": "draft",
+"wikidata": null
+},
 "phil:state-expectations-bastiat-loop": {
 "wiki": "phil",
 "type": "concept",
@@ -7425,6 +10569,18 @@
 "nl": "De cirkel van verwachtingen van de staat: brood of vrijheid?"
 },
 "url": "phil/#state-expectations-bastiat-loop",
+"status": "draft",
+"wikidata": null
+},
+"phil:locke-tyranny-resistance-and-limited-government": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "ستمگری، حق مقاومت و حکومت محدود نزد لاک",
+"en": "Locke on tyranny, the right to resist and limited government",
+"nl": "Locke over tirannie, het recht op verzet en beperkte regering"
+},
+"url": "phil/#locke-tyranny-resistance-and-limited-government",
 "status": "draft",
 "wikidata": null
 },
@@ -7452,6 +10608,30 @@
 "status": "draft",
 "wikidata": null
 },
+"phil:epistemic-homeland-lost-answers-distress": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "«وطن معرفتی» و پریشانی گذار: وقتی پاسخ‌های پیشین از دست می‌روند",
+"en": "The 'epistemic homeland' and transition distress: when earlier answers are lost",
+"nl": "De 'epistemisch vaderland' en transitiedistress: wanneer eerdere antwoorden verdwijnen"
+},
+"url": "phil/#epistemic-homeland-lost-answers-distress",
+"status": "draft",
+"wikidata": null
+},
+"phil:human-image-naming-and-ritual-reading": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "تصویر هر مکتب از انسان، نام‌گذاریِ وضعیت و خوانش آیینیِ کنش جمعی",
+"en": "Each school's image of the human, naming a situation, and the ritual reading of collective action",
+"nl": "Het mensbeeld van elke school, een situatie benoemen en de rituele lezing van collectieve actie"
+},
+"url": "phil/#human-image-naming-and-ritual-reading",
+"status": "draft",
+"wikidata": null
+},
 "phil:ethics-first-zoroaster-kalam-origins": {
 "wiki": "phil",
 "type": "concept",
@@ -7461,6 +10641,18 @@
 "nl": "Ethiek vóór het heilige? Zarathoestra, de oorsprong van kalam en het determinisme"
 },
 "url": "phil/#ethics-first-zoroaster-kalam-origins",
+"status": "draft",
+"wikidata": null
+},
+"phil:explaining-versus-justifying-suspended-judgment": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "توضیح دادن یا توجیه کردن؟ تعلیق داوری در تفکر",
+"en": "Explaining versus justifying: suspending judgment in thinking",
+"nl": "Verklaren of rechtvaardigen: oordeel opschorten bij het denken"
+},
+"url": "phil/#explaining-versus-justifying-suspended-judgment",
 "status": "draft",
 "wikidata": null
 },
@@ -8937,7 +12129,8 @@
 },
 "url": "core/people.html#jean-piaget",
 "wikis": [
-"psy"
+"psy",
+"phil"
 ]
 },
 "core:lev-vygotsky": {
@@ -9002,7 +12195,8 @@
 },
 "url": "core/people.html#daniel-kahneman",
 "wikis": [
-"psy"
+"psy",
+"phil"
 ]
 },
 "core:amos-tversky": {
@@ -9548,7 +12742,8 @@
 },
 "url": "core/people.html#viktor-frankl",
 "wikis": [
-"psy"
+"psy",
+"soc"
 ]
 },
 "core:martin-seligman": {
@@ -10407,7 +13602,8 @@
 "url": "core/people.html#carl-gustav-jung",
 "wikis": [
 "psy",
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:melanie-klein": {
@@ -10447,7 +13643,8 @@
 },
 "url": "core/people.html#anna-freud",
 "wikis": [
-"psy"
+"psy",
+"soc"
 ]
 },
 "core:josef-breuer": {
@@ -11175,7 +14372,8 @@
 },
 "url": "core/people.html#christopher-boehm",
 "wikis": [
-"psy"
+"psy",
+"soc"
 ]
 },
 "core:robert-boyd-peter-richerson": {
@@ -11331,7 +14529,8 @@
 },
 "url": "core/people.html#ludwig-wittgenstein",
 "wikis": [
-"psy"
+"psy",
+"phil"
 ]
 },
 "core:nelson-goodman": {
@@ -11397,7 +14596,8 @@
 "url": "core/people.html#pierre-bourdieu",
 "wikis": [
 "psy",
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:patrik-juslin": {
@@ -14456,7 +17656,8 @@
 },
 "url": "core/people.html#max-scheler",
 "wikis": [
-"psy"
+"psy",
+"soc"
 ]
 },
 "core:sybil-hart": {
@@ -15861,7 +19062,9 @@
 },
 "url": "core/people.html#john-stuart-mill",
 "wikis": [
-"psy"
+"psy",
+"phil",
+"soc"
 ]
 },
 "core:philippa-foot": {
@@ -16024,7 +19227,8 @@
 "url": "core/people.html#john-rawls",
 "wikis": [
 "psy",
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:amartya-sen": {
@@ -16038,7 +19242,8 @@
 "url": "core/people.html#amartya-sen",
 "wikis": [
 "psy",
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:robert-nozick": {
@@ -16052,7 +19257,8 @@
 "url": "core/people.html#robert-nozick",
 "wikis": [
 "psy",
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:emile-durkheim": {
@@ -16079,7 +19285,8 @@
 "url": "core/people.html#max-weber",
 "wikis": [
 "psy",
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:karl-marx": {
@@ -16108,7 +19315,8 @@
 "url": "core/people.html#erving-goffman",
 "wikis": [
 "psy",
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:james-coleman": {
@@ -16596,7 +19804,8 @@
 },
 "url": "core/people.html#erica-chenoweth",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:timur-kuran": {
@@ -16831,7 +20040,8 @@
 },
 "url": "core/people.html#isaiah-berlin",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:hannah-arendt": {
@@ -17029,7 +20239,8 @@
 },
 "url": "core/people.html#bronis-aw-malinowski",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:norbert-elias": {
@@ -17055,7 +20266,8 @@
 },
 "url": "core/people.html#michel-foucault",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:afsaneh-najmabadi": {
@@ -17081,7 +20293,8 @@
 },
 "url": "core/people.html#raymond-aron",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:mile-durkheim": {
@@ -17094,7 +20307,8 @@
 },
 "url": "core/people.html#mile-durkheim",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:howard-p-becker": {
@@ -17120,7 +20334,8 @@
 },
 "url": "core/people.html#g-w-f-hegel",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:jack-drescher": {
@@ -17146,7 +20361,8 @@
 },
 "url": "core/people.html#fareed-zakaria",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:samuel-p-huntington": {
@@ -17303,7 +20519,8 @@
 },
 "url": "core/people.html#james-g-frazer",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:marcel-mauss": {
@@ -17552,7 +20769,8 @@
 },
 "url": "core/people.html#baruch-spinoza",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:david-friedrich-strauss": {
@@ -17631,7 +20849,8 @@
 },
 "url": "core/people.html#pierre-joseph-proudhon",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:georg-luk-cs": {
@@ -17697,7 +20916,8 @@
 },
 "url": "core/people.html#louis-althusser",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:stuart-hall": {
@@ -17736,7 +20956,8 @@
 },
 "url": "core/people.html#walter-benjamin",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:felix-weil": {
@@ -17762,7 +20983,8 @@
 },
 "url": "core/people.html#j-rgen-habermas",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:zygmunt-bauman": {
@@ -17801,7 +21023,8 @@
 },
 "url": "core/people.html#claude-l-vi-strauss",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:baldwin-spencer-and-francis-gillen": {
@@ -18755,7 +21978,8 @@
 },
 "url": "core/people.html#daryush-shayegan",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:gabriel-garc-a-m-rquez": {
@@ -18781,7 +22005,8 @@
 },
 "url": "core/people.html#ernst-cassirer",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:georges-bataille": {
@@ -18886,7 +22111,8 @@
 },
 "url": "core/people.html#george-orwell",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:ehsan-tabari": {
@@ -19003,7 +22229,8 @@
 },
 "url": "core/people.html#theda-skocpol",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:ren-descartes": {
@@ -19029,7 +22256,8 @@
 },
 "url": "core/people.html#edmund-husserl",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:raymond-s-nickerson": {
@@ -19212,7 +22440,8 @@
 },
 "url": "core/people.html#ludwig-von-mises",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:shervin-vakili": {
@@ -19785,7 +23014,8 @@
 },
 "url": "core/people.html#alexis-de-tocqueville",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:john-of-england": {
@@ -20188,7 +23418,8 @@
 },
 "url": "core/people.html#jean-paul-sartre",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:hassan-i-sabbah": {
@@ -20214,7 +23445,8 @@
 },
 "url": "core/people.html#albert-o-hirschman",
 "wikis": [
-"soc"
+"soc",
+"phil"
 ]
 },
 "core:jared-diamond": {
@@ -20812,7 +24044,8 @@
 },
 "url": "core/people.html#darwin-sabouri",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:friedrich-nietzsche": {
@@ -20825,7 +24058,8 @@
 },
 "url": "core/people.html#friedrich-nietzsche",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:walter-kaufmann": {
@@ -20968,7 +24202,8 @@
 },
 "url": "core/people.html#edmund-burke",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:michael-oakeshott": {
@@ -20981,7 +24216,8 @@
 },
 "url": "core/people.html#michael-oakeshott",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:friedrich-hayek": {
@@ -20994,7 +24230,8 @@
 },
 "url": "core/people.html#friedrich-hayek",
 "wikis": [
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:reza-shah-pahlavi": {
@@ -21461,6 +24698,2598 @@
 "nl": "Damien Flas"
 },
 "url": "core/people.html#damien-flas",
+"wikis": [
+"soc"
+]
+},
+"core:iosif-lazaridis": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "یوسیف لازاریدیس",
+"en": "Iosif Lazaridis",
+"nl": "Iosif Lazaridis"
+},
+"url": "core/people.html#iosif-lazaridis",
+"wikis": [
+"tabar"
+]
+},
+"core:ron-pinhasi": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رون پینهاسی",
+"en": "Ron Pinhasi",
+"nl": "Ron Pinhasi"
+},
+"url": "core/people.html#ron-pinhasi",
+"wikis": [
+"tabar"
+]
+},
+"core:andrew-w-kandel": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اندرو کندل",
+"en": "Andrew W. Kandel",
+"nl": "Andrew W. Kandel"
+},
+"url": "core/people.html#andrew-w-kandel",
+"wikis": [
+"soc",
+"tabar"
+]
+},
+"core:miriam-n-haidle": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "میریام هایدله",
+"en": "Miriam N. Haidle",
+"nl": "Miriam N. Haidle"
+},
+"url": "core/people.html#miriam-n-haidle",
+"wikis": [
+"soc"
+]
+},
+"core:christian-sommer": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کریستین زومر",
+"en": "Christian Sommer",
+"nl": "Christian Sommer"
+},
+"url": "core/people.html#christian-sommer",
+"wikis": [
+"soc",
+"tabar"
+]
+},
+"core:volker-hochschild": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فولکر هوخشیلد",
+"en": "Volker Hochschild",
+"nl": "Volker Hochschild"
+},
+"url": "core/people.html#volker-hochschild",
+"wikis": [
+"soc"
+]
+},
+"core:rimtautas-dapschauskas": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ریمتاوتاس داپشاوسکاس",
+"en": "Rimtautas Dapschauskas",
+"nl": "Rimtautas Dapschauskas"
+},
+"url": "core/people.html#rimtautas-dapschauskas",
+"wikis": [
+"tabar"
+]
+},
+"core:matthias-g-den": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ماتیاس گودن",
+"en": "Matthias Göden",
+"nl": "Matthias Göden"
+},
+"url": "core/people.html#matthias-g-den",
+"wikis": [
+"tabar"
+]
+},
+"core:manuel-will": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مانوئل ویل",
+"en": "Manuel Will",
+"nl": "Manuel Will"
+},
+"url": "core/people.html#manuel-will",
+"wikis": [
+"tabar"
+]
+},
+"core:mario-krapp": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ماریو کراپ",
+"en": "Mario Krapp",
+"nl": "Mario Krapp"
+},
+"url": "core/people.html#mario-krapp",
+"wikis": [
+"tabar"
+]
+},
+"core:jay-t-stock": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جی تی. استاک",
+"en": "Jay T. Stock",
+"nl": "Jay T. Stock"
+},
+"url": "core/people.html#jay-t-stock",
+"wikis": [
+"tabar"
+]
+},
+"core:andrea-manica": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آندرئا مانیکا",
+"en": "Andrea Manica",
+"nl": "Andrea Manica"
+},
+"url": "core/people.html#andrea-manica",
+"wikis": [
+"tabar"
+]
+},
+"core:alice-j-williams": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آلیس ج. ویلیامز",
+"en": "Alice J. Williams",
+"nl": "Alice J. Williams"
+},
+"url": "core/people.html#alice-j-williams",
+"wikis": [
+"soc"
+]
+},
+"core:robert-l-carneiro": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رابرت کارنیرو",
+"en": "Robert L. Carneiro",
+"nl": "Robert L. Carneiro"
+},
+"url": "core/people.html#robert-l-carneiro",
+"wikis": [
+"soc"
+]
+},
+"core:leonardo-vallini": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "لئوناردو والینی",
+"en": "Leonardo Vallini",
+"nl": "Leonardo Vallini"
+},
+"url": "core/people.html#leonardo-vallini",
+"wikis": [
+"tabar"
+]
+},
+"core:luca-pagani": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "لوکا پاگانی",
+"en": "Luca Pagani",
+"nl": "Luca Pagani"
+},
+"url": "core/people.html#luca-pagani",
+"wikis": [
+"tabar"
+]
+},
+"core:mohamed-javad-shoaee": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "محمدجواد شعاعی",
+"en": "Mohamed Javad Shoaee",
+"nl": "Mohamed Javad Shoaee"
+},
+"url": "core/people.html#mohamed-javad-shoaee",
+"wikis": [
+"tabar"
+]
+},
+"core:michael-d-petraglia": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مایکل پتراگلیا",
+"en": "Michael D. Petraglia",
+"nl": "Michael D. Petraglia"
+},
+"url": "core/people.html#michael-d-petraglia",
+"wikis": [
+"soc"
+]
+},
+"core:eugenio-bortolini": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اوجنیو بورتولینی",
+"en": "Eugenio Bortolini",
+"nl": "Eugenio Bortolini"
+},
+"url": "core/people.html#eugenio-bortolini",
+"wikis": [
+"soc"
+]
+},
+"core:giulia-marciani": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جولیا مارچانی",
+"en": "Giulia Marciani",
+"nl": "Giulia Marciani"
+},
+"url": "core/people.html#giulia-marciani",
+"wikis": [
+"soc"
+]
+},
+"core:simone-riehl": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سیمونه ریهل",
+"en": "Simone Riehl",
+"nl": "Simone Riehl"
+},
+"url": "core/people.html#simone-riehl",
+"wikis": [
+"soc"
+]
+},
+"core:mohsen-zeidi": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "محسن زیدی",
+"en": "Mohsen Zeidi",
+"nl": "Mohsen Zeidi"
+},
+"url": "core/people.html#mohsen-zeidi",
+"wikis": [
+"soc"
+]
+},
+"core:nicholas-j-conard": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "نیکلاس کونارد",
+"en": "Nicholas J. Conard",
+"nl": "Nicholas J. Conard"
+},
+"url": "core/people.html#nicholas-j-conard",
+"wikis": [
+"soc"
+]
+},
+"core:heinrich-heine": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "هاینریش هاینه",
+"en": "Heinrich Heine",
+"nl": "Heinrich Heine"
+},
+"url": "core/people.html#heinrich-heine",
+"wikis": [
+"phil"
+]
+},
+"core:karl-l-with": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کارل لویت",
+"en": "Karl Löwith",
+"nl": "Karl Löwith"
+},
+"url": "core/people.html#karl-l-with",
+"wikis": [
+"phil"
+]
+},
+"core:james-george-frazer": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جیمز فریزر",
+"en": "James George Frazer",
+"nl": "James George Frazer"
+},
+"url": "core/people.html#james-george-frazer",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:carl-menger": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کارل منگر",
+"en": "Carl Menger",
+"nl": "Carl Menger"
+},
+"url": "core/people.html#carl-menger",
+"wikis": [
+"phil",
+"soc"
+]
+},
+"core:moses-maimonides": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "موسی بن میمون",
+"en": "Moses Maimonides",
+"nl": "Moses Maimonides"
+},
+"url": "core/people.html#moses-maimonides",
+"wikis": [
+"phil"
+]
+},
+"core:joseph-campbell": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جوزف کمبل",
+"en": "Joseph Campbell",
+"nl": "Joseph Campbell"
+},
+"url": "core/people.html#joseph-campbell",
+"wikis": [
+"phil",
+"soc"
+]
+},
+"core:dante-alighieri": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "دانته آلیگیری",
+"en": "Dante Alighieri",
+"nl": "Dante Alighieri"
+},
+"url": "core/people.html#dante-alighieri",
+"wikis": [
+"phil",
+"soc"
+]
+},
+"core:rosabeth-moss-kanter": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "روزابث ماس کانتر",
+"en": "Rosabeth Moss Kanter",
+"nl": "Rosabeth Moss Kanter"
+},
+"url": "core/people.html#rosabeth-moss-kanter",
+"wikis": [
+"soc"
+]
+},
+"core:peter-kropotkin": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "پیوتر کروپوتکین",
+"en": "Peter Kropotkin",
+"nl": "Peter Kropotkin"
+},
+"url": "core/people.html#peter-kropotkin",
+"wikis": [
+"soc"
+]
+},
+"core:rosa-luxemburg": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رزا لوکزامبورگ",
+"en": "Rosa Luxemburg",
+"nl": "Rosa Luxemburg"
+},
+"url": "core/people.html#rosa-luxemburg",
+"wikis": [
+"phil"
+]
+},
+"core:walter-bryce-gallie": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "والتر برایس گالی",
+"en": "Walter Bryce Gallie",
+"nl": "Walter Bryce Gallie"
+},
+"url": "core/people.html#walter-bryce-gallie",
+"wikis": [
+"soc"
+]
+},
+"core:susan-sontag": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سوزان سانتاگ",
+"en": "Susan Sontag",
+"nl": "Susan Sontag"
+},
+"url": "core/people.html#susan-sontag",
+"wikis": [
+"phil"
+]
+},
+"core:roland-barthes": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رولان بارت",
+"en": "Roland Barthes",
+"nl": "Roland Barthes"
+},
+"url": "core/people.html#roland-barthes",
+"wikis": [
+"phil",
+"soc"
+]
+},
+"core:alain-badiou": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آلن بدیو",
+"en": "Alain Badiou",
+"nl": "Alain Badiou"
+},
+"url": "core/people.html#alain-badiou",
+"wikis": [
+"phil"
+]
+},
+"core:robin-dunbar": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رابین دانبار",
+"en": "Robin Dunbar",
+"nl": "Robin Dunbar"
+},
+"url": "core/people.html#robin-dunbar",
+"wikis": [
+"phil"
+]
+},
+"core:alvin-plantinga": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آلوین پلانتینگا",
+"en": "Alvin Plantinga",
+"nl": "Alvin Plantinga"
+},
+"url": "core/people.html#alvin-plantinga",
+"wikis": [
+"phil"
+]
+},
+"core:aramesh-doostdar": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آرامش دوستدار",
+"en": "Aramesh Doostdar",
+"nl": "Aramesh Doostdar"
+},
+"url": "core/people.html#aramesh-doostdar",
+"wikis": [
+"phil"
+]
+},
+"core:omar-khayyam": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "عمر خیام",
+"en": "Omar Khayyam",
+"nl": "Omar Khayyam"
+},
+"url": "core/people.html#omar-khayyam",
+"wikis": [
+"phil"
+]
+},
+"core:callicles": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کالیکلس",
+"en": "Callicles",
+"nl": "Callicles"
+},
+"url": "core/people.html#callicles",
+"wikis": [
+"phil"
+]
+},
+"core:martin-heidegger": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مارتین هایدگر",
+"en": "Martin Heidegger",
+"nl": "Martin Heidegger"
+},
+"url": "core/people.html#martin-heidegger",
+"wikis": [
+"phil"
+]
+},
+"core:abu-hamid-al-ghazali": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ابوحامد غزالی",
+"en": "Abu Hamid al-Ghazali",
+"nl": "Abu Hamid al-Ghazali"
+},
+"url": "core/people.html#abu-hamid-al-ghazali",
+"wikis": [
+"phil"
+]
+},
+"core:maxim-gorky": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ماکسیم گورکی",
+"en": "Maxim Gorky",
+"nl": "Maxim Gorky"
+},
+"url": "core/people.html#maxim-gorky",
+"wikis": [
+"soc"
+]
+},
+"core:edward-albee": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ادوارد آلبی",
+"en": "Edward Albee",
+"nl": "Edward Albee"
+},
+"url": "core/people.html#edward-albee",
+"wikis": [
+"soc"
+]
+},
+"core:mike-nichols": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مایک نیکولز",
+"en": "Mike Nichols",
+"nl": "Mike Nichols"
+},
+"url": "core/people.html#mike-nichols",
+"wikis": [
+"soc"
+]
+},
+"core:s-ren-kierkegaard": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سورن کی‌یرکگور",
+"en": "Søren Kierkegaard",
+"nl": "Søren Kierkegaard"
+},
+"url": "core/people.html#s-ren-kierkegaard",
+"wikis": [
+"phil",
+"soc"
+]
+},
+"core:jacques-lacan": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ژاک لکان",
+"en": "Jacques Lacan",
+"nl": "Jacques Lacan"
+},
+"url": "core/people.html#jacques-lacan",
+"wikis": [
+"phil"
+]
+},
+"core:slavoj-i-ek": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اسلاوی ژیژک",
+"en": "Slavoj Žižek",
+"nl": "Slavoj Žižek"
+},
+"url": "core/people.html#slavoj-i-ek",
+"wikis": [
+"phil"
+]
+},
+"core:spike-jonze": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اسپایک جونز",
+"en": "Spike Jonze",
+"nl": "Spike Jonze"
+},
+"url": "core/people.html#spike-jonze",
+"wikis": [
+"phil"
+]
+},
+"core:valentine-m-moghadam": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ولنتین مقدم",
+"en": "Valentine M. Moghadam",
+"nl": "Valentine M. Moghadam"
+},
+"url": "core/people.html#valentine-m-moghadam",
+"wikis": [
+"soc"
+]
+},
+"core:wilhelm-dilthey": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ویلهلم دیلتای",
+"en": "Wilhelm Dilthey",
+"nl": "Wilhelm Dilthey"
+},
+"url": "core/people.html#wilhelm-dilthey",
+"wikis": [
+"phil"
+]
+},
+"core:gerda-lerner": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "گردا لرنر",
+"en": "Gerda Lerner",
+"nl": "Gerda Lerner"
+},
+"url": "core/people.html#gerda-lerner",
+"wikis": [
+"soc"
+]
+},
+"core:clifford-geertz": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کلیفورد گیرتس",
+"en": "Clifford Geertz",
+"nl": "Clifford Geertz"
+},
+"url": "core/people.html#clifford-geertz",
+"wikis": [
+"soc"
+]
+},
+"core:fyodor-dostoevsky": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فئودور داستایفسکی",
+"en": "Fyodor Dostoevsky",
+"nl": "Fyodor Dostoevsky"
+},
+"url": "core/people.html#fyodor-dostoevsky",
+"wikis": [
+"phil"
+]
+},
+"core:mircea-eliade": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "میرچا الیاده",
+"en": "Mircea Eliade",
+"nl": "Mircea Eliade"
+},
+"url": "core/people.html#mircea-eliade",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:ferdinand-t-nnies": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فردیناند تونیس",
+"en": "Ferdinand Tönnies",
+"nl": "Ferdinand Tönnies"
+},
+"url": "core/people.html#ferdinand-t-nnies",
+"wikis": [
+"soc"
+]
+},
+"core:lars-von-trier": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "لارس فون تریر",
+"en": "Lars von Trier",
+"nl": "Lars von Trier"
+},
+"url": "core/people.html#lars-von-trier",
+"wikis": [
+"soc"
+]
+},
+"core:jean-jacques-rousseau": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ژان‌ژاک روسو",
+"en": "Jean-Jacques Rousseau",
+"nl": "Jean-Jacques Rousseau"
+},
+"url": "core/people.html#jean-jacques-rousseau",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:kenneth-pomeranz": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کنت پومرانتس",
+"en": "Kenneth Pomeranz",
+"nl": "Kenneth Pomeranz"
+},
+"url": "core/people.html#kenneth-pomeranz",
+"wikis": [
+"soc"
+]
+},
+"core:francisco-franco": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فرانسیسکو فرانکو",
+"en": "Francisco Franco",
+"nl": "Francisco Franco"
+},
+"url": "core/people.html#francisco-franco",
+"wikis": [
+"soc"
+]
+},
+"core:paul-fussell": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "پل فاسل",
+"en": "Paul Fussell",
+"nl": "Paul Fussell"
+},
+"url": "core/people.html#paul-fussell",
+"wikis": [
+"soc"
+]
+},
+"core:peter-jackson": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "پیتر جکسون",
+"en": "Peter Jackson",
+"nl": "Peter Jackson"
+},
+"url": "core/people.html#peter-jackson",
+"wikis": [
+"soc"
+]
+},
+"core:charles-louis-de-secondat-baron-de-montesquieu": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مونتسکیو",
+"en": "Charles-Louis de Secondat, Baron de Montesquieu",
+"nl": "Charles-Louis de Secondat, Baron de Montesquieu"
+},
+"url": "core/people.html#charles-louis-de-secondat-baron-de-montesquieu",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:montesquieu": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مونتسکیو",
+"en": "Montesquieu",
+"nl": "Montesquieu"
+},
+"url": "core/people.html#montesquieu",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:ibn-khaldun": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ابن‌خلدون",
+"en": "Ibn Khaldun",
+"nl": "Ibn Khaldun"
+},
+"url": "core/people.html#ibn-khaldun",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:shahyar-ghanbari": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "شهیار قنبری",
+"en": "Shahyar Ghanbari",
+"nl": "Shahyar Ghanbari"
+},
+"url": "core/people.html#shahyar-ghanbari",
+"wikis": [
+"soc"
+]
+},
+"core:hamid-naficy": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "حمید نفیسی",
+"en": "Hamid Naficy",
+"nl": "Hamid Naficy"
+},
+"url": "core/people.html#hamid-naficy",
+"wikis": [
+"soc"
+]
+},
+"core:svetlana-boym": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سوتلانا بویم",
+"en": "Svetlana Boym",
+"nl": "Svetlana Boym"
+},
+"url": "core/people.html#svetlana-boym",
+"wikis": [
+"soc"
+]
+},
+"core:ernest-gellner": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ارنست گلنر",
+"en": "Ernest Gellner",
+"nl": "Ernest Gellner"
+},
+"url": "core/people.html#ernest-gellner",
+"wikis": [
+"soc"
+]
+},
+"core:mohamad-tavakoli-targhi": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "محمد توکلی‌طرقی",
+"en": "Mohamad Tavakoli-Targhi",
+"nl": "Mohamad Tavakoli-Targhi"
+},
+"url": "core/people.html#mohamad-tavakoli-targhi",
+"wikis": [
+"soc"
+]
+},
+"core:ferdowsi": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فردوسی",
+"en": "Ferdowsi",
+"nl": "Ferdowsi"
+},
+"url": "core/people.html#ferdowsi",
+"wikis": [
+"soc"
+]
+},
+"core:amir-parviz-pouyan": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "امیرپرویز پویان",
+"en": "Amir-Parviz Pouyan",
+"nl": "Amir-Parviz Pouyan"
+},
+"url": "core/people.html#amir-parviz-pouyan",
+"wikis": [
+"soc"
+]
+},
+"core:carl-schmitt": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کارل اشمیت",
+"en": "Carl Schmitt",
+"nl": "Carl Schmitt"
+},
+"url": "core/people.html#carl-schmitt",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:giorgio-agamben": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جورجو آگامبن",
+"en": "Giorgio Agamben",
+"nl": "Giorgio Agamben"
+},
+"url": "core/people.html#giorgio-agamben",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:robert-agnew": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رابرت آگنیو",
+"en": "Robert Agnew",
+"nl": "Robert Agnew"
+},
+"url": "core/people.html#robert-agnew",
+"wikis": [
+"soc"
+]
+},
+"core:mehdi-motaharnia": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مهدی مطهرنیا",
+"en": "Mehdi Motaharnia",
+"nl": "Mehdi Motaharnia"
+},
+"url": "core/people.html#mehdi-motaharnia",
+"wikis": [
+"soc"
+]
+},
+"core:h-g-wells": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اچ. جی. ولز",
+"en": "H. G. Wells",
+"nl": "H. G. Wells"
+},
+"url": "core/people.html#h-g-wells",
+"wikis": [
+"soc"
+]
+},
+"core:sohail-inayatullah": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سهیل عنایت‌الله",
+"en": "Sohail Inayatullah",
+"nl": "Sohail Inayatullah"
+},
+"url": "core/people.html#sohail-inayatullah",
+"wikis": [
+"soc"
+]
+},
+"core:philip-e-tetlock": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فیلیپ تتلاک",
+"en": "Philip E. Tetlock",
+"nl": "Philip E. Tetlock"
+},
+"url": "core/people.html#philip-e-tetlock",
+"wikis": [
+"soc"
+]
+},
+"core:halford-mackinder": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "هالفورد مکیندر",
+"en": "Halford Mackinder",
+"nl": "Halford Mackinder"
+},
+"url": "core/people.html#halford-mackinder",
+"wikis": [
+"soc"
+]
+},
+"core:nicholas-spykman": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "نیکلاس اسپایکمن",
+"en": "Nicholas Spykman",
+"nl": "Nicholas Spykman"
+},
+"url": "core/people.html#nicholas-spykman",
+"wikis": [
+"soc"
+]
+},
+"core:eva-illouz": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اوا ایلوز",
+"en": "Eva Illouz",
+"nl": "Eva Illouz"
+},
+"url": "core/people.html#eva-illouz",
+"wikis": [
+"soc"
+]
+},
+"core:andrew-r-george": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اندرو ر. جورج",
+"en": "Andrew R. George",
+"nl": "Andrew R. George"
+},
+"url": "core/people.html#andrew-r-george",
+"wikis": [
+"phil"
+]
+},
+"core:roger-scruton": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "راجر اسکروتن",
+"en": "Roger Scruton",
+"nl": "Roger Scruton"
+},
+"url": "core/people.html#roger-scruton",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:sayyid-qutb": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سید قطب",
+"en": "Sayyid Qutb",
+"nl": "Sayyid Qutb"
+},
+"url": "core/people.html#sayyid-qutb",
+"wikis": [
+"soc"
+]
+},
+"core:charles-taylor": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "چارلز تیلور",
+"en": "Charles Taylor",
+"nl": "Charles Taylor"
+},
+"url": "core/people.html#charles-taylor",
+"wikis": [
+"soc"
+]
+},
+"core:abbas-souri": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "عباس سوری",
+"en": "Abbas Souri",
+"nl": "Abbas Souri"
+},
+"url": "core/people.html#abbas-souri",
+"wikis": [
+"soc"
+]
+},
+"core:mohammad-ali-foroughi": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "محمدعلی فروغی",
+"en": "Mohammad-Ali Foroughi",
+"nl": "Mohammad-Ali Foroughi"
+},
+"url": "core/people.html#mohammad-ali-foroughi",
+"wikis": [
+"soc"
+]
+},
+"core:arnold-gehlen": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آرنولد گهلن",
+"en": "Arnold Gehlen",
+"nl": "Arnold Gehlen"
+},
+"url": "core/people.html#arnold-gehlen",
+"wikis": [
+"soc"
+]
+},
+"core:susan-neiman": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سوزان نیمن",
+"en": "Susan Neiman",
+"nl": "Susan Neiman"
+},
+"url": "core/people.html#susan-neiman",
+"wikis": [
+"soc"
+]
+},
+"core:robert-o-paxton": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رابرت پکستون",
+"en": "Robert O. Paxton",
+"nl": "Robert O. Paxton"
+},
+"url": "core/people.html#robert-o-paxton",
+"wikis": [
+"soc"
+]
+},
+"core:hermann-usener": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "هرمان اوزنر",
+"en": "Hermann Usener",
+"nl": "Hermann Usener"
+},
+"url": "core/people.html#hermann-usener",
+"wikis": [
+"phil"
+]
+},
+"core:morris-weitz": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "موریس وایتس",
+"en": "Morris Weitz",
+"nl": "Morris Weitz"
+},
+"url": "core/people.html#morris-weitz",
+"wikis": [
+"phil"
+]
+},
+"core:dmitri-shostakovich": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "دمیتری شوستاکوویچ",
+"en": "Dmitri Shostakovich",
+"nl": "Dmitri Shostakovich"
+},
+"url": "core/people.html#dmitri-shostakovich",
+"wikis": [
+"phil"
+]
+},
+"core:leonard-bernstein": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "لئونارد برنشتاین",
+"en": "Leonard Bernstein",
+"nl": "Leonard Bernstein"
+},
+"url": "core/people.html#leonard-bernstein",
+"wikis": [
+"phil"
+]
+},
+"core:will-kymlicka": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ویل کیمیلیکا",
+"en": "Will Kymlicka",
+"nl": "Will Kymlicka"
+},
+"url": "core/people.html#will-kymlicka",
+"wikis": [
+"soc"
+]
+},
+"core:billy-wilder": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "بیلی وایلدر",
+"en": "Billy Wilder",
+"nl": "Billy Wilder"
+},
+"url": "core/people.html#billy-wilder",
+"wikis": [
+"soc"
+]
+},
+"core:william-lloyd-warner": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ویلیام لوید وارنر",
+"en": "William Lloyd Warner",
+"nl": "William Lloyd Warner"
+},
+"url": "core/people.html#william-lloyd-warner",
+"wikis": [
+"soc"
+]
+},
+"core:allan-kellehear": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آلن کلهر",
+"en": "Allan Kellehear",
+"nl": "Allan Kellehear"
+},
+"url": "core/people.html#allan-kellehear",
+"wikis": [
+"soc"
+]
+},
+"core:sophocles": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سوفوکل",
+"en": "Sophocles",
+"nl": "Sophocles"
+},
+"url": "core/people.html#sophocles",
+"wikis": [
+"phil"
+]
+},
+"core:sharon-hays": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "شارون هیز",
+"en": "Sharon Hays",
+"nl": "Sharon Hays"
+},
+"url": "core/people.html#sharon-hays",
+"wikis": [
+"soc"
+]
+},
+"core:paul-val-ry": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "پل والری",
+"en": "Paul Valéry",
+"nl": "Paul Valéry"
+},
+"url": "core/people.html#paul-val-ry",
+"wikis": [
+"soc"
+]
+},
+"core:arthur-rosenberg": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آرتور روزنبرگ",
+"en": "Arthur Rosenberg",
+"nl": "Arthur Rosenberg"
+},
+"url": "core/people.html#arthur-rosenberg",
+"wikis": [
+"soc"
+]
+},
+"core:roger-griffin": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "راجر گریفین",
+"en": "Roger Griffin",
+"nl": "Roger Griffin"
+},
+"url": "core/people.html#roger-griffin",
+"wikis": [
+"soc"
+]
+},
+"core:julia-kristeva": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ژولیا کریستوا",
+"en": "Julia Kristeva",
+"nl": "Julia Kristeva"
+},
+"url": "core/people.html#julia-kristeva",
+"wikis": [
+"soc"
+]
+},
+"core:umberto-eco": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "امبرتو اکو",
+"en": "Umberto Eco",
+"nl": "Umberto Eco"
+},
+"url": "core/people.html#umberto-eco",
+"wikis": [
+"soc"
+]
+},
+"core:jeffrey-herf": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جفری هرف",
+"en": "Jeffrey Herf",
+"nl": "Jeffrey Herf"
+},
+"url": "core/people.html#jeffrey-herf",
+"wikis": [
+"soc"
+]
+},
+"core:christopher-r-browning": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کریستوفر براونینگ",
+"en": "Christopher R. Browning",
+"nl": "Christopher R. Browning"
+},
+"url": "core/people.html#christopher-r-browning",
+"wikis": [
+"soc"
+]
+},
+"core:alvin-toffler": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آلوین تافلر",
+"en": "Alvin Toffler",
+"nl": "Alvin Toffler"
+},
+"url": "core/people.html#alvin-toffler",
+"wikis": [
+"soc"
+]
+},
+"core:raewyn-connell": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ریوین کانل",
+"en": "Raewyn Connell",
+"nl": "Raewyn Connell"
+},
+"url": "core/people.html#raewyn-connell",
+"wikis": [
+"soc"
+]
+},
+"core:robert-d-putnam": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رابرت پاتنم",
+"en": "Robert D. Putnam",
+"nl": "Robert D. Putnam"
+},
+"url": "core/people.html#robert-d-putnam",
+"wikis": [
+"soc"
+]
+},
+"core:niccol-machiavelli": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "نیکولو ماکیاول",
+"en": "Niccolò Machiavelli",
+"nl": "Niccolò Machiavelli"
+},
+"url": "core/people.html#niccol-machiavelli",
+"wikis": [
+"phil"
+]
+},
+"core:titus-livius-livy": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "تیتوس لیویوس",
+"en": "Titus Livius (Livy)",
+"nl": "Titus Livius (Livy)"
+},
+"url": "core/people.html#titus-livius-livy",
+"wikis": [
+"phil"
+]
+},
+"core:michel-de-montaigne": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "میشل دومونتنی",
+"en": "Michel de Montaigne",
+"nl": "Michel de Montaigne"
+},
+"url": "core/people.html#michel-de-montaigne",
+"wikis": [
+"phil"
+]
+},
+"core:pierre-bayle": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "پیر بیل",
+"en": "Pierre Bayle",
+"nl": "Pierre Bayle"
+},
+"url": "core/people.html#pierre-bayle",
+"wikis": [
+"phil"
+]
+},
+"core:adam-smith": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آدام اسمیت",
+"en": "Adam Smith",
+"nl": "Adam Smith"
+},
+"url": "core/people.html#adam-smith",
+"wikis": [
+"soc",
+"phil"
+]
+},
+"core:david-ricardo": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "دیوید ریکاردو",
+"en": "David Ricardo",
+"nl": "David Ricardo"
+},
+"url": "core/people.html#david-ricardo",
+"wikis": [
+"soc"
+]
+},
+"core:francis-fukuyama": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فرانسیس فوکویاما",
+"en": "Francis Fukuyama",
+"nl": "Francis Fukuyama"
+},
+"url": "core/people.html#francis-fukuyama",
+"wikis": [
+"soc"
+]
+},
+"core:john-mcclelland": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جان مک‌للند",
+"en": "John McClelland",
+"nl": "John McClelland"
+},
+"url": "core/people.html#john-mcclelland",
+"wikis": [
+"soc"
+]
+},
+"core:ernst-nolte": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ارنست نولته",
+"en": "Ernst Nolte",
+"nl": "Ernst Nolte"
+},
+"url": "core/people.html#ernst-nolte",
+"wikis": [
+"soc"
+]
+},
+"core:constantine-i": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "قسطنطین یکم",
+"en": "Constantine I",
+"nl": "Constantine I"
+},
+"url": "core/people.html#constantine-i",
+"wikis": [
+"soc"
+]
+},
+"core:ambrose-of-milan": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آمبروز میلان",
+"en": "Ambrose of Milan",
+"nl": "Ambrose of Milan"
+},
+"url": "core/people.html#ambrose-of-milan",
+"wikis": [
+"soc"
+]
+},
+"core:martin-luther": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مارتین لوتر",
+"en": "Martin Luther",
+"nl": "Martin Luther"
+},
+"url": "core/people.html#martin-luther",
+"wikis": [
+"soc"
+]
+},
+"core:desiderius-erasmus": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اراسموس",
+"en": "Desiderius Erasmus",
+"nl": "Desiderius Erasmus"
+},
+"url": "core/people.html#desiderius-erasmus",
+"wikis": [
+"soc"
+]
+},
+"core:henry-viii": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "هنری هشتم",
+"en": "Henry VIII",
+"nl": "Henry VIII"
+},
+"url": "core/people.html#henry-viii",
+"wikis": [
+"soc"
+]
+},
+"core:michael-j-sandel": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مایکل سندل",
+"en": "Michael J. Sandel",
+"nl": "Michael J. Sandel"
+},
+"url": "core/people.html#michael-j-sandel",
+"wikis": [
+"phil"
+]
+},
+"core:c-b-macpherson": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "سی.بی. مک‌فرسن",
+"en": "C. B. Macpherson",
+"nl": "C. B. Macpherson"
+},
+"url": "core/people.html#c-b-macpherson",
+"wikis": [
+"phil"
+]
+},
+"core:robert-filmer": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رابرت فیلمر",
+"en": "Robert Filmer",
+"nl": "Robert Filmer"
+},
+"url": "core/people.html#robert-filmer",
+"wikis": [
+"phil"
+]
+},
+"core:friedrich-von-wieser": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فریدریش فون ویزر",
+"en": "Friedrich von Wieser",
+"nl": "Friedrich von Wieser"
+},
+"url": "core/people.html#friedrich-von-wieser",
+"wikis": [
+"soc"
+]
+},
+"core:thomas-aquinas": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "توماس آکویناس",
+"en": "Thomas Aquinas",
+"nl": "Thomas Aquinas"
+},
+"url": "core/people.html#thomas-aquinas",
+"wikis": [
+"phil"
+]
+},
+"core:harriet-taylor-mill": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "هریت تیلور میل",
+"en": "Harriet Taylor Mill",
+"nl": "Harriet Taylor Mill"
+},
+"url": "core/people.html#harriet-taylor-mill",
+"wikis": [
+"phil"
+]
+},
+"core:jeremy-bentham": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جرمی بنتام",
+"en": "Jeremy Bentham",
+"nl": "Jeremy Bentham"
+},
+"url": "core/people.html#jeremy-bentham",
+"wikis": [
+"phil"
+]
+},
+"core:james-mill": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جیمز میل",
+"en": "James Mill",
+"nl": "James Mill"
+},
+"url": "core/people.html#james-mill",
+"wikis": [
+"phil"
+]
+},
+"core:augustine-of-hippo": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آگوستین هیپویی",
+"en": "Augustine of Hippo",
+"nl": "Augustine of Hippo"
+},
+"url": "core/people.html#augustine-of-hippo",
+"wikis": [
+"phil"
+]
+},
+"core:charles-i": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "چارلز اول",
+"en": "Charles I",
+"nl": "Charles I"
+},
+"url": "core/people.html#charles-i",
+"wikis": [
+"phil"
+]
+},
+"core:louis-blanc": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "لویی بلان",
+"en": "Louis Blanc",
+"nl": "Louis Blanc"
+},
+"url": "core/people.html#louis-blanc",
+"wikis": [
+"phil"
+]
+},
+"core:norman-angell": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "نورمن اِنجل",
+"en": "Norman Angell",
+"nl": "Norman Angell"
+},
+"url": "core/people.html#norman-angell",
+"wikis": [
+"phil"
+]
+},
+"core:edmond-doutt": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ادموند دوته",
+"en": "Edmond Doutté",
+"nl": "Edmond Doutté"
+},
+"url": "core/people.html#edmond-doutt",
+"wikis": [
+"phil"
+]
+},
+"core:emma-rothschild": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اما راتچایلد",
+"en": "Emma Rothschild",
+"nl": "Emma Rothschild"
+},
+"url": "core/people.html#emma-rothschild",
+"wikis": [
+"phil"
+]
+},
+"core:william-stanley-jevons": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ویلیام استنلی جونز",
+"en": "William Stanley Jevons",
+"nl": "William Stanley Jevons"
+},
+"url": "core/people.html#william-stanley-jevons",
+"wikis": [
+"soc"
+]
+},
+"core:john-e-roemer": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جان رومر",
+"en": "John E. Roemer",
+"nl": "John E. Roemer"
+},
+"url": "core/people.html#john-e-roemer",
+"wikis": [
+"soc"
+]
+},
+"core:quentin-skinner": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کوئنتین اسکینر",
+"en": "Quentin Skinner",
+"nl": "Quentin Skinner"
+},
+"url": "core/people.html#quentin-skinner",
+"wikis": [
+"phil"
+]
+},
+"core:richard-hooker": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ریچارد هوکر",
+"en": "Richard Hooker",
+"nl": "Richard Hooker"
+},
+"url": "core/people.html#richard-hooker",
+"wikis": [
+"phil"
+]
+},
+"core:barbara-arneil": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "باربارا آرنیل",
+"en": "Barbara Arneil",
+"nl": "Barbara Arneil"
+},
+"url": "core/people.html#barbara-arneil",
+"wikis": [
+"phil"
+]
+},
+"core:james-tully": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جیمز تالی",
+"en": "James Tully",
+"nl": "James Tully"
+},
+"url": "core/people.html#james-tully",
+"wikis": [
+"phil"
+]
+},
+"core:jeremy-waldron": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جرمی والدرون",
+"en": "Jeremy Waldron",
+"nl": "Jeremy Waldron"
+},
+"url": "core/people.html#jeremy-waldron",
+"wikis": [
+"phil"
+]
+},
+"core:hasan-taqizadeh": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "حسن تقی‌زاده",
+"en": "Hasan Taqizadeh",
+"nl": "Hasan Taqizadeh"
+},
+"url": "core/people.html#hasan-taqizadeh",
+"wikis": [
+"soc"
+]
+},
+"core:mirza-fath-ali-akhundzadeh": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "میرزا فتحعلی آخوندزاده",
+"en": "Mirza Fath Ali Akhundzadeh",
+"nl": "Mirza Fath Ali Akhundzadeh"
+},
+"url": "core/people.html#mirza-fath-ali-akhundzadeh",
+"wikis": [
+"soc"
+]
+},
+"core:stephanie-cronin": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "استفانی کرونین",
+"en": "Stephanie Cronin",
+"nl": "Stephanie Cronin"
+},
+"url": "core/people.html#stephanie-cronin",
+"wikis": [
+"soc"
+]
+},
+"core:judith-butler": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جودیت باتلر",
+"en": "Judith Butler",
+"nl": "Judith Butler"
+},
+"url": "core/people.html#judith-butler",
+"wikis": [
+"phil"
+]
+},
+"core:maurice-halbwachs": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "موریس هالبواکس",
+"en": "Maurice Halbwachs",
+"nl": "Maurice Halbwachs"
+},
+"url": "core/people.html#maurice-halbwachs",
+"wikis": [
+"soc"
+]
+},
+"core:mirza-kuchak-khan": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "میرزا کوچک‌خان جنگلی",
+"en": "Mirza Kuchak Khan",
+"nl": "Mirza Kuchak Khan"
+},
+"url": "core/people.html#mirza-kuchak-khan",
+"wikis": [
+"soc"
+]
+},
+"core:aeschylus": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آیسخولوس",
+"en": "Aeschylus",
+"nl": "Aeschylus"
+},
+"url": "core/people.html#aeschylus",
+"wikis": [
+"soc"
+]
+},
+"core:g-k-chesterton": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جی. کی. چسترتون",
+"en": "G. K. Chesterton",
+"nl": "G. K. Chesterton"
+},
+"url": "core/people.html#g-k-chesterton",
+"wikis": [
+"soc"
+]
+},
+"core:william-kornhauser": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ویلیام کورنهاوزر",
+"en": "William Kornhauser",
+"nl": "William Kornhauser"
+},
+"url": "core/people.html#william-kornhauser",
+"wikis": [
+"soc"
+]
+},
+"core:paul-ricoeur": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "پل ریکور",
+"en": "Paul Ricoeur",
+"nl": "Paul Ricoeur"
+},
+"url": "core/people.html#paul-ricoeur",
+"wikis": [
+"soc"
+]
+},
+"core:michael-walzer": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مایکل والزر",
+"en": "Michael Walzer",
+"nl": "Michael Walzer"
+},
+"url": "core/people.html#michael-walzer",
+"wikis": [
+"phil"
+]
+},
+"core:blaise-pascal": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "بلز پاسکال",
+"en": "Blaise Pascal",
+"nl": "Blaise Pascal"
+},
+"url": "core/people.html#blaise-pascal",
+"wikis": [
+"phil"
+]
+},
+"core:edward-hallett-carr": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ادوارد هالت کار",
+"en": "Edward Hallett Carr",
+"nl": "Edward Hallett Carr"
+},
+"url": "core/people.html#edward-hallett-carr",
+"wikis": [
+"soc"
+]
+},
+"core:nazem-ol-eslam-kermani": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ناظم‌الاسلام کرمانی",
+"en": "Nazem-ol-Eslam Kermani",
+"nl": "Nazem-ol-Eslam Kermani"
+},
+"url": "core/people.html#nazem-ol-eslam-kermani",
+"wikis": [
+"soc"
+]
+},
+"core:naser-al-din-shah-qajar": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ناصرالدین‌شاه قاجار",
+"en": "Naser al-Din Shah Qajar",
+"nl": "Naser al-Din Shah Qajar"
+},
+"url": "core/people.html#naser-al-din-shah-qajar",
+"wikis": [
+"soc"
+]
+},
+"core:mirza-hasan-shirazi": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "میرزا حسن شیرازی",
+"en": "Mirza Hasan Shirazi",
+"nl": "Mirza Hasan Shirazi"
+},
+"url": "core/people.html#mirza-hasan-shirazi",
+"wikis": [
+"soc"
+]
+},
+"core:mirza-reza-kermani": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "میرزا رضا کرمانی",
+"en": "Mirza Reza Kermani",
+"nl": "Mirza Reza Kermani"
+},
+"url": "core/people.html#mirza-reza-kermani",
+"wikis": [
+"soc"
+]
+},
+"core:ernst-kantorowicz": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ارنست کانتورویچ",
+"en": "Ernst Kantorowicz",
+"nl": "Ernst Kantorowicz"
+},
+"url": "core/people.html#ernst-kantorowicz",
+"wikis": [
+"soc"
+]
+},
+"core:parvin-paidar": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "پروین پایدار",
+"en": "Parvin Paidar",
+"nl": "Parvin Paidar"
+},
+"url": "core/people.html#parvin-paidar",
+"wikis": [
+"soc"
+]
+},
+"core:janet-afary": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ژانت آفاری",
+"en": "Janet Afary",
+"nl": "Janet Afary"
+},
+"url": "core/people.html#janet-afary",
+"wikis": [
+"soc"
+]
+},
+"core:ziba-mir-hosseini": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "زیبا میرحسینی",
+"en": "Ziba Mir-Hosseini",
+"nl": "Ziba Mir-Hosseini"
+},
+"url": "core/people.html#ziba-mir-hosseini",
+"wikis": [
+"soc"
+]
+},
+"core:robert-hertz": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "روبر هرتس",
+"en": "Robert Hertz",
+"nl": "Robert Hertz"
+},
+"url": "core/people.html#robert-hertz",
+"wikis": [
+"soc"
+]
+},
+"core:richard-a-easterlin": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ریچارد ایسترلین",
+"en": "Richard A. Easterlin",
+"nl": "Richard A. Easterlin"
+},
+"url": "core/people.html#richard-a-easterlin",
+"wikis": [
+"soc"
+]
+},
+"core:william-h-sewell-jr": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ویلیام سیول",
+"en": "William H. Sewell Jr.",
+"nl": "William H. Sewell Jr."
+},
+"url": "core/people.html#william-h-sewell-jr",
+"wikis": [
+"soc"
+]
+},
+"core:hayden-white": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "هیدن وایت",
+"en": "Hayden White",
+"nl": "Hayden White"
+},
+"url": "core/people.html#hayden-white",
+"wikis": [
+"phil"
+]
+},
+"core:jos-ortega-y-gasset": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "خوزه اورتگا ای گاست",
+"en": "José Ortega y Gasset",
+"nl": "José Ortega y Gasset"
+},
+"url": "core/people.html#jos-ortega-y-gasset",
+"wikis": [
+"phil",
+"soc"
+]
+},
+"core:everett-m-rogers": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اورت راجرز",
+"en": "Everett M. Rogers",
+"nl": "Everett M. Rogers"
+},
+"url": "core/people.html#everett-m-rogers",
+"wikis": [
+"soc"
+]
+},
+"core:allen-buchanan": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آلن بوکانان",
+"en": "Allen Buchanan",
+"nl": "Allen Buchanan"
+},
+"url": "core/people.html#allen-buchanan",
+"wikis": [
+"soc"
+]
+},
+"core:robert-n-bellah": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "رابرت بلا",
+"en": "Robert N. Bellah",
+"nl": "Robert N. Bellah"
+},
+"url": "core/people.html#robert-n-bellah",
+"wikis": [
+"soc"
+]
+},
+"core:thomas-paine": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "توماس پین",
+"en": "Thomas Paine",
+"nl": "Thomas Paine"
+},
+"url": "core/people.html#thomas-paine",
+"wikis": [
+"phil"
+]
+},
+"core:philip-pettit": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فیلیپ پتیت",
+"en": "Philip Pettit",
+"nl": "Philip Pettit"
+},
+"url": "core/people.html#philip-pettit",
+"wikis": [
+"phil"
+]
+},
+"core:walter-bagehot": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "والتر بیجهوت",
+"en": "Walter Bagehot",
+"nl": "Walter Bagehot"
+},
+"url": "core/people.html#walter-bagehot",
+"wikis": [
+"phil"
+]
+},
+"core:jeffrey-c-alexander": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جفری الکساندر",
+"en": "Jeffrey C. Alexander",
+"nl": "Jeffrey C. Alexander"
+},
+"url": "core/people.html#jeffrey-c-alexander",
+"wikis": [
+"soc"
+]
+},
+"core:jon-elster": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "یون السر",
+"en": "Jon Elster",
+"nl": "Jon Elster"
+},
+"url": "core/people.html#jon-elster",
+"wikis": [
+"soc"
+]
+},
+"core:richard-j-evans": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ریچارد ایوانز",
+"en": "Richard J. Evans",
+"nl": "Richard J. Evans"
+},
+"url": "core/people.html#richard-j-evans",
+"wikis": [
+"soc"
+]
+},
+"core:fereydun-adamiyat": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "فریدون آدمیت",
+"en": "Fereydun Adamiyat",
+"nl": "Fereydun Adamiyat"
+},
+"url": "core/people.html#fereydun-adamiyat",
+"wikis": [
+"soc"
+]
+},
+"core:mashallah-ajoudani": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ماشاالله آجودانی",
+"en": "Mashallah Ajoudani",
+"nl": "Mashallah Ajoudani"
+},
+"url": "core/people.html#mashallah-ajoudani",
+"wikis": [
+"soc"
+]
+},
+"core:mohammad-ali-shah-qajar": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "محمدعلی‌شاه قاجار",
+"en": "Mohammad Ali Shah Qajar",
+"nl": "Mohammad Ali Shah Qajar"
+},
+"url": "core/people.html#mohammad-ali-shah-qajar",
+"wikis": [
+"soc"
+]
+},
+"core:georg-w-f-hegel": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "گئورگ ویلهلم فریدریش هگل",
+"en": "Georg W. F. Hegel",
+"nl": "Georg W. F. Hegel"
+},
+"url": "core/people.html#georg-w-f-hegel",
+"wikis": [
+"soc"
+]
+},
+"core:johann-georg-hamann": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "یوهان گئورگ هامان",
+"en": "Johann Georg Hamann",
+"nl": "Johann Georg Hamann"
+},
+"url": "core/people.html#johann-georg-hamann",
+"wikis": [
+"soc"
+]
+},
+"core:johann-gottfried-herder": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "یوهان گوتفرید هردر",
+"en": "Johann Gottfried Herder",
+"nl": "Johann Gottfried Herder"
+},
+"url": "core/people.html#johann-gottfried-herder",
+"wikis": [
+"soc"
+]
+},
+"core:giambattista-vico": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جامباتیستا ویکو",
+"en": "Giambattista Vico",
+"nl": "Giambattista Vico"
+},
+"url": "core/people.html#giambattista-vico",
+"wikis": [
+"soc"
+]
+},
+"core:voltaire": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ولتر",
+"en": "Voltaire",
+"nl": "Voltaire"
+},
+"url": "core/people.html#voltaire",
+"wikis": [
+"soc"
+]
+},
+"core:gotthold-ephraim-lessing": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "گوتهولد افرایم لسینگ",
+"en": "Gotthold Ephraim Lessing",
+"nl": "Gotthold Ephraim Lessing"
+},
+"url": "core/people.html#gotthold-ephraim-lessing",
+"wikis": [
+"phil"
+]
+},
+"core:ayn-al-qudat-hamadani": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "عین‌القضات همدانی",
+"en": "Ayn al-Qudat Hamadani",
+"nl": "Ayn al-Qudat Hamadani"
+},
+"url": "core/people.html#ayn-al-qudat-hamadani",
+"wikis": [
+"phil"
+]
+},
+"core:camron-michael-amin": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کامرون مایکل امین",
+"en": "Camron Michael Amin",
+"nl": "Camron Michael Amin"
+},
+"url": "core/people.html#camron-michael-amin",
+"wikis": [
+"soc"
+]
+},
+"core:anthony-d-smith": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "آنتونی اسمیت",
+"en": "Anthony D. Smith",
+"nl": "Anthony D. Smith"
+},
+"url": "core/people.html#anthony-d-smith",
+"wikis": [
+"soc"
+]
+},
+"core:hossein-kazemzadeh-iranshahr": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "حسین کاظم‌زاده ایرانشهر",
+"en": "Hossein Kazemzadeh Iranshahr",
+"nl": "Hossein Kazemzadeh Iranshahr"
+},
+"url": "core/people.html#hossein-kazemzadeh-iranshahr",
+"wikis": [
+"soc"
+]
+},
+"core:mahmoud-afshar": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "محمود افشار",
+"en": "Mahmoud Afshar",
+"nl": "Mahmoud Afshar"
+},
+"url": "core/people.html#mahmoud-afshar",
+"wikis": [
+"soc"
+]
+},
+"core:mohammad-ali-jamalzadeh": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "محمدعلی جمالزاده",
+"en": "Mohammad-Ali Jamalzadeh",
+"nl": "Mohammad-Ali Jamalzadeh"
+},
+"url": "core/people.html#mohammad-ali-jamalzadeh",
 "wikis": [
 "soc"
 ]

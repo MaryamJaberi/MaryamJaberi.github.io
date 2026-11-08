@@ -1,0 +1,100 @@
+{
+ "id": "soc:gender-coalition-not-enmity",
+ "kind": "concept",
+ "title": {
+  "fa": "جنسیت: ائتلاف به‌جای دشمن‌سازی",
+  "en": "Gender: coalition instead of enemy-making",
+  "nl": "Gender: coalitie in plaats van vijandbeelden"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "سخنران می‌گوید جنبش‌های اجتماعی مربوط به جنسیت اگر مردان را کنار بگذارند یا یک گروه را کاملاً ستمگر و دیگری را کاملاً قربانی نشان دهند شکست می‌خورند. به گفتهٔ او هر دو سو از وضع موجود سود و زیانی برده‌اند و تغییر با فهم مشترک و ائتلاف ممکن می‌شود. این نگاه یک موضع در بحث‌های جنبش اجتماعی است و منتقدان جدی دارد.",
+  "en": "The lecturer says gender-related social movements fail if they exclude men or portray one group as wholly oppressor and the other as wholly victim. Per the lecturer both sides have gained and lost under the existing order and change comes through shared understanding and coalition. This is one position in debates on social movements and has serious critics.",
+  "nl": "Volgens de spreker falen genderbewegingen die mannen buitensluiten; verandering vraagt coalitie. Deze visie heeft serieuze critici."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، دشمن‌سازی هیچ جامعه‌ای را پیش نبرده؛ دگرگونی در «ائتلاف همگانی و فهم مشترک» رخ می‌دهد. او می‌گوید پدرِ امروز با پدر بیست سال پیش یکی نیست و مردان هم خودبازنگری کرده‌اند.",
+    "en": "Per the lecturer, enemy-making has never moved a society forward; change happens through 'broad coalition and shared understanding'. He says today's fathers are not those of twenty years ago, and men too have revised their views.",
+    "nl": "Per the lecturer, enemy-making has never moved a society forward; change happens through 'broad coalition and shared understanding'. He says today's fathers are not those of twenty years ago, and men too have revised their views."
+   },
+   "sources": [
+    "src:ecd442eb69"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ سخنران، نظام مردسالار هم برای مرد و هم برای زن «منفعت» داشته است (مرد از زن مطیع، و زن از امنیت و نقش)، و همین ‌را باید دید به‌جای تقسیم‌بندی ساده قربانی/ستمگر. او تأکید می‌کند که تفاوت درصدی مهم نیست.",
+    "en": "Per the lecturer, patriarchy has offered 'benefits' to both men (an obedient wife) and women (security and role), and one should see this rather than a simple victim/oppressor split. He stresses that the percentage difference is not what matters.",
+    "nl": "Per the lecturer, patriarchy has offered 'benefits' to both men (an obedient wife) and women (security and role), and one should see this rather than a simple victim/oppressor split. He stresses that the percentage difference is not what matters."
+   },
+   "sources": [
+    "src:ecd442eb69"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نقد مقابل: بسیاری از پژوهشگران فمینیست ناهمسانی قدرت و منابع را واقعی و ساختاری می‌دانند؛ بیان «منفعت دوسویه» می‌تواند آن را کم‌اهمیت کند و ادعای برابری سودها با داده‌ها (دستمزد، مالکیت، قوانین خانواده) نمی‌خواند. در عین حال، پژوهش‌های جنبش‌های اجتماعی نشان می‌دهد ائتلاف گسترده در بسیاری موارد کارآمدتر است، پس هر دو نکته را باید سنجید.",
+    "en": "Counterpoint: many feminist scholars hold that asymmetries of power and resources are real and structural; 'mutual benefit' language can downplay this, and equal-benefit claims do not match data on pay, property and family law. Yet social-movement research suggests broad coalitions often work better, so both points deserve weighing.",
+    "nl": "Counterpoint: many feminist scholars hold that asymmetries of power and resources are real and structural; 'mutual benefit' language can downplay this, and equal-benefit claims do not match data on pay, property and family law. Yet social-movement research suggests broad coalitions often work better, so both points deserve weighing."
+   },
+   "sources": [
+    "src:5d7ae61c8b"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:social-movements",
+   "rel": "explains",
+   "note": {
+    "fa": "ائتلاف در جنبش‌های اجتماعی",
+    "en": "Coalitions in social movements",
+    "nl": "Coalitions in social movements"
+   }
+  },
+  {
+   "to": "soc:pahlavi-women-rights-institutionalization",
+   "rel": "see-also",
+   "note": {
+    "fa": "بحث حقوق زنان در دورهٔ پهلوی",
+    "en": "Women's rights debate in the Pahlavi era",
+    "nl": "Women's rights debate in the Pahlavi era"
+   }
+  },
+  {
+   "to": "soc:inequality",
+   "rel": "see-also",
+   "note": {
+    "fa": "نابرابری و تحرک",
+    "en": "Inequality and mobility",
+    "nl": "Inequality and mobility"
+   }
+  }
+ ],
+ "people": [
+  "core:ziba-mir-hosseini"
+ ],
+ "sources": [
+  "src:5d7ae61c8b",
+  "src:ecd442eb69"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
