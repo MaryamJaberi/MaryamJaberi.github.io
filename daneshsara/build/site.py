@@ -21,6 +21,8 @@ for p in sorted(glob.glob(SRC + '/*.html')):
         # shared atlas lives at daneshsara/atlas/; re-point tool links to ../psy/
         s2 = re.sub(r'href="((?!https?:|#|\.\./)[a-z0-9]+\.html)', lambda m: 'href="../psy/' + m.group(1), s)
         s2 = s2.replace('href="../psy/atlas2.html', 'href="./')
+        # the embedded tool menu / URL map (JSON strings like "land.html")
+        s2 = re.sub(r'"([a-z0-9]+)\.html"', lambda m: '"./"' if m.group(1) == 'atlas2' else f'"../psy/{m.group(1)}.html"', s2)
         open(DS + '/atlas/index.html', 'w', encoding='utf-8').write(s2)
         # psy/atlas2.html becomes a hop to the shared atlas
         s = ('<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>اطلس رشته‌ها</title>'

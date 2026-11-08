@@ -40,3 +40,6 @@ python3 build/site.py <site dir>
 
 ## دفترهای مشترک
 - `python3 build/core_pages.py` → `core/people.html` (۶۲۹ چهره با مدخل‌هایشان) و `core/sources.html` (۶۶۹ منبع با رده و مدخل‌های استفاده‌کننده).
+
+## بررسی پیوندها
+- `node build/linkcheck.js` (نیاز به Playwright): صفحه‌ها را رندر می‌کند و همهٔ پیوندهای داخلی را می‌آزماید؛ آخرین اجرا: ۶۴۴ پیوند، صفر شکسته.
