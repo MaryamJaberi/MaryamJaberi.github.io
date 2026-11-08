@@ -88,6 +88,7 @@ def tr(k):
     return {'fa': k, 'en': g[0], 'nl': g[1]}
 
 os.makedirs(OUT + '/data/psy/concepts', exist_ok=True)
+IRAN_MAP = json.load(open(OUT + '/data/psy/iran_map.json')) if os.path.exists(OUT + '/data/psy/iran_map.json') else {}
 count = 0; kinds = {}
 for n in D:
     d = depth(n)
@@ -109,7 +110,7 @@ for n in D:
         'sources': srcs,
         'booklets': ([n['c']] if isinstance(n.get('c'), str) else list(n.get('c') or [])),
         'origin': n.get('src'),
-        'iran': None,
+        'iran': IRAN_MAP.get('psy:' + n['id']),
         'wikidata': None,
         'status': 'reviewed' if n.get('src') else 'draft',
     }

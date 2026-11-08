@@ -1,0 +1,33 @@
+{
+ "id": "iran:drug-use-disorders",
+ "domain": "psy",
+ "question": {
+  "fa": "اختلال مصرف مواد غیرقانونی در ایران چقدر شایع است؟",
+  "en": "How common are illicit drug use disorders in Iran?"
+ },
+ "finding": {
+  "fa": "همان پیمایش ملی: شیوع دوازده‌ماههٔ اختلال مصرف مواد غیرقانونی ۲٫۴۴ درصد (مردان بسیار بیشتر از زنان)؛ مواد افیونی شایع‌ترین؛ هم‌ابتلایی بالا با اختلال‌های خلقی و اضطرابی و استفاده از خدمات درمانی کم.",
+  "en": "Same national survey: twelve-month prevalence of illicit drug use disorders 2.44 percent (men far more than women); opioids most common; high comorbidity with mood and anxiety disorders and low use of treatment services."
+ },
+ "year": 2011,
+ "method": "national household survey, CIDI",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "Amin-Esmaeili, M., Rahimi-Movaghar, A., Sharifi, V., et al. (2016). Epidemiology of illicit drug use disorders in Iran: Prevalence, correlates, comorbidity and service utilization results from the Iranian Mental Health Survey. Addiction, 111(10), 1836–1847.",
+   "url": "https://doi.org/10.1111/add.13453"
+  }
+ ],
+ "fields": [
+  "psychiatry"
+ ],
+ "concepts": [
+  "psy:addiction",
+  "psy:opioids"
+ ],
+ "capability": [
+  2,
+  6
+ ]
+}

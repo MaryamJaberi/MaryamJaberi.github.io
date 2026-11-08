@@ -1,0 +1,33 @@
+{
+ "id": "iran:suicide-rate",
+ "domain": "psy",
+ "question": {
+  "fa": "نرخ خودکشی در ایران در مقایسه با جهان چقدر است؟",
+  "en": "How does Iran's suicide rate compare with the world?"
+ },
+ "finding": {
+  "fa": "برآورد سازمان جهانی بهداشت (۲۰۱۹): نرخ سن‌استاندهٔ خودکشی ایران حدود ۵ در صد هزار، کمتر از میانگین جهانی (حدود ۹)؛ اما ثبت ناقص و انگ، برآوردها را کمتر از واقع می‌کند و تفاوت استانی (غرب کشور بالاتر) چشمگیر است.",
+  "en": "WHO estimate (2019): Iran's age-standardised suicide rate about 5 per 100,000, below the global mean (about 9); but under-registration and stigma depress estimates, and provincial variation (higher in the west) is marked."
+ },
+ "year": 2019,
+ "method": "WHO modelled estimate from vital registration",
+ "grade": "B",
+ "contested": false,
+ "critique": "ثبت مرگ ناشی از خودکشی در ایران کامل نیست؛ ارقام ملی را باید کمینه دانست.",
+ "source": [
+  {
+   "title": "World Health Organization (2021). Suicide worldwide in 2019: Global Health Estimates.",
+   "url": "https://www.who.int/publications/i/item/9789240026643"
+  }
+ ],
+ "fields": [
+  "psychiatry"
+ ],
+ "concepts": [
+  "psy:crisis-mh"
+ ],
+ "capability": [
+  1,
+  5
+ ]
+}
