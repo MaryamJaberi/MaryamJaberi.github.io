@@ -46,3 +46,7 @@ python3 build/site.py <site dir>
 
 ## صف بازبینی
 - `python3 build/review_page.py` → `core/review.html`: همهٔ پیش‌نویس‌ها (مدخل‌ها، پل‌ها، یادداشت‌های ایران) با چک‌لیست پنج‌گانه؛ تیک‌ها محلی‌اند و فهرست تأییدشده‌ها را خروجی می‌دهد تا وضعیت در داده تغییر کند (`status: reviewed` / `review: reviewed`).
+
+
+## ویکی تبار: صفحهٔ اصلی
+`build/tabar_home.py` صفحهٔ اصلی `tabar/index.html` را می‌سازد (کارت بزرگ «زمین در گذر زمان»، ابزارها، مدخل‌ها به تفکیک حوزه). فهرست مدخل‌ها در `tabar/entries.html` است (`build/reader.py tabar`)؛ آدرس‌های قدیمی `tabar/#slug` خودکار به آن هدایت می‌شوند.
