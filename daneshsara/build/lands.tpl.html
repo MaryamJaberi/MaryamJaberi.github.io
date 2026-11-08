@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>سرزمین دانش — دانش‌سرا</title>
+<meta name="description" content="هر رشته یک سرزمین، هر زیررشته یک شهر، هر رشتهٔ میان‌رشته‌ای یک راه میان شهرها؛ و دانشمندانی که این پل‌ها را ساختند.">
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink)}
+.brand svg{width:26px;height:26px;color:var(--primary)}
+.crumbs{font-size:var(--small);color:var(--ink-2)}.crumbs a{color:var(--ink-2)}
+.lang{display:flex;gap:2px;border:1px solid var(--line-strong);border-radius:var(--r-full);padding:2px}
+.lang button{font:inherit;font-size:var(--chip);padding:4px 10px;border:0;border-radius:var(--r-full);background:transparent;color:var(--ink-2);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+main{padding-block:var(--s6) var(--s16)}
+.hero h1{margin-bottom:var(--s2)}
+.hero p.lead{color:var(--ink-2);font-size:1.05rem;max-width:62ch}
+.legend{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s4) 0}
+.legend button{font:inherit;font-size:var(--small);padding:5px 12px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.legend button i{width:10px;height:10px;border-radius:50%;background:var(--fc)}
+.legend button[aria-pressed=true]{background:var(--fc);color:#fff;border-color:var(--fc)}
+.legend button[aria-pressed=true] i{background:#fff}
+.legend .sep{width:1px;background:var(--line);margin:4px 2px}
+.lay{display:grid;gap:var(--s6)}
+.mapbox{position:relative;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
+svg.map{display:block;width:100%;height:auto;touch-action:manipulation}
+@media (max-width:700px){.mapbox{overflow-x:auto}svg.map{min-width:720px}}
+.land{fill:var(--fc);fill-opacity:.10;stroke:var(--fc);stroke-opacity:.5;stroke-width:1.2;transition:fill-opacity .2s}
+.land.on{fill-opacity:.22}
+.land.dim{fill-opacity:.04;stroke-opacity:.2}
+.lname{font-size:15px;font-weight:700;fill:var(--fc);opacity:.9;pointer-events:none;letter-spacing:.2px}
+.road{pointer-events:none;fill:none;stroke:var(--ink-3);stroke-opacity:.38;stroke-width:1.3;stroke-dasharray:4 3;transition:stroke-opacity .2s,stroke-width .2s}
+.road.on{stroke:var(--primary);stroke-opacity:.95;stroke-width:2.4;stroke-dasharray:none}
+.road.dim{stroke-opacity:.08}
+.city circle:not(.hit){fill:var(--fc);stroke:var(--paper);stroke-width:2}
+.city text{font-size:11.5px;font-weight:600;fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+.city.dim{opacity:.3}
+.city.on circle:not(.hit){stroke:var(--ink);stroke-width:2.5;r:7}
+.hub rect{fill:var(--paper);stroke:var(--ink-2);stroke-width:1.2;transform:rotate(45deg);transform-box:fill-box;transform-origin:center}
+.hub text{font-size:9.5px;fill:var(--ink-2);pointer-events:none;paint-order:stroke;stroke:var(--paper);stroke-width:2.5px;stroke-linejoin:round}
+.hub.dim{opacity:.18}
+.hub.on rect{fill:var(--primary);stroke:var(--primary)}
+.hub.on text{fill:var(--ink);font-weight:700;font-size:10px}
+.hub.pg rect{stroke:var(--primary);stroke-width:1.8}
+.city,.hub{cursor:pointer}
+.hub circle.hit,.city circle.hit{fill:transparent;stroke:none}
+.nolabels .hub text{display:none}
+.tools{position:absolute;inset-inline-end:10px;top:10px;display:flex;gap:6px}
+.tools button{font:inherit;font-size:var(--chip);padding:4px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--paper);color:var(--ink-2);cursor:pointer}
+.tools button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--s4);align-items:start}
+.panel .card.wide{grid-column:1/-1}
+.back{font:inherit;font-size:var(--small);border:0;background:transparent;color:var(--primary);cursor:pointer;padding:0;margin-bottom:var(--s2)}
+.panel .card{padding:var(--s5)}
+.panel h2{font-size:var(--h3);margin:0 0 var(--s1)}
+.panel h3{font-size:var(--small);color:var(--ink-2);font-weight:600;margin:var(--s4) 0 var(--s2);text-transform:uppercase;letter-spacing:.04em}
+.panel p{margin:0 0 var(--s2);line-height:1.8}
+.kick{font-size:var(--chip);color:var(--fc);font-weight:700}
+.ppl{display:flex;flex-wrap:wrap;gap:6px}
+.ppl button,.lst button{font:inherit;font-size:var(--small);padding:4px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer;text-align:start}
+.ppl button.b{border-color:var(--primary);color:var(--primary)}
+.lst{display:grid;gap:6px}
+.lst button{display:flex;justify-content:space-between;gap:8px;border-radius:var(--r-md);padding:8px 12px}
+.lst button small{color:var(--ink-3)}
+.dots{display:inline-flex;gap:3px;vertical-align:middle}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--fc);display:inline-block}
+.pair{display:grid;grid-template-columns:1fr auto;gap:6px 10px;align-items:center;font-size:var(--small)}
+.bar{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--a),var(--b));width:var(--w)}
+.links a{font-size:var(--small)}
+.note{font-size:var(--chip);color:var(--ink-3);line-height:1.7}
+footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(--ink-3);font-size:var(--small)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg><span>دانش‌سرا</span></a>
+ <div class="crumbs"><a href="../">خانه</a> › <a href="./">اطلس</a> › <span data-i="crumb">سرزمین دانش</span></div>
+ <div class="lang" role="group" aria-label="زبان"><button data-l="fa" aria-pressed="true">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
+</div></header>
+<main class="wrap">
+ <section class="hero">
+  <h1 data-i="h1">سرزمین دانش</h1>
+  <p class="lead" data-i="lead">هر خانوادهٔ علم یک سرزمین است، هر رشته یک شهر، و هر رشتهٔ میان‌رشته‌ای راهی است که دو یا چند شهر را، گاهی از سرزمین‌های مختلف، به هم می‌رساند. روی شهرها و پل‌ها بزنید تا ببینید چه کسانی این راه‌ها را ساختند.</p>
+ </section>
+ <div class="legend" id="legend"></div>
+ <div class="lay">
+  <div class="mapbox"><div class="tools"><button id="lbl" aria-pressed="true" data-i="labels">نام پل‌ها</button><button id="reset" data-i="reset">همه</button></div><svg class="map" id="map" viewBox="0 0 1000 720" role="img" aria-label="نقشهٔ سرزمین‌های دانش"></svg></div>
+  <aside class="panel" id="panel"></aside>
+ </div>
+</main>
+<footer class="foot"><div class="wrap" data-i="foot">جای شهرها و شکل سرزمین‌ها قراردادی است؛ آنچه واقعی است شبکهٔ پیوندهاست: هر راه یک رشتهٔ میان‌رشته‌ای است که در اطلس ثبت شده و هر نام، پژوهشگری که در بنیان‌گذاری آن نقش داشته. فهرست نام‌ها کامل نیست و با بازبینی کارشناسان کامل‌تر می‌شود.</div></footer>
+<script>
+const FAM = __FAM__, FIELDS = __FIELDS__, BRIDGES = __BRIDGES__;
+const UI = {
+ fa:{crumb:"سرزمین دانش",h1:"سرزمین دانش",lead:"هر خانوادهٔ علم یک سرزمین است، هر رشته یک شهر، و هر رشتهٔ میان‌رشته‌ای راهی است که دو یا چند شهر را، گاهی از سرزمین‌های مختلف، به هم می‌رساند. روی شهرها و پل‌ها بزنید تا ببینید چه کسانی این راه‌ها را ساختند.",labels:"نام پل‌ها",reset:"همه",foot:"جای شهرها و شکل سرزمین‌ها قراردادی است؛ آنچه واقعی است شبکهٔ پیوندهاست: هر راه یک رشتهٔ میان‌رشته‌ای است که در اطلس ثبت شده و هر نام، پژوهشگری که در بنیان‌گذاری آن نقش داشته. فهرست نام‌ها کامل نیست و با بازبینی کارشناسان کامل‌تر می‌شود.",
+  overview:"نمای کلی",lands:"سرزمین",cities:"شهر",roads:"راه",builders:"پل‌ساز",pairs:"پرراه‌ترین مرزها",pairsS:"کدام سرزمین‌ها بیشترین راه را میان خود ساخته‌اند؟",top:"پل‌سازان بزرگ",topS:"کسانی که نامشان روی بیش از یک پل آمده.",city:"شهر",hub:"پل (رشتهٔ میان‌رشته‌ای)",inLand:"در سرزمین",founders:"بنیان‌گذاران و چهره‌ها",roadsFrom:"راه‌هایی که از این‌جا می‌گذرند",connects:"این راه چه شهرهایی را به هم می‌رساند",crossing:"میان سرزمین‌های",inside:"درون یک سرزمین",buildersOf:"سازندگان این پل",page:"صفحهٔ پل ↗",atlas:"در اطلس ↗",person:"پژوهشگر",onBridges:"روی این پل‌ها",onCities:"در این شهرها",lands2:"دو سرزمین را انتخاب کنید تا فقط راه‌های میانشان بماند.",none:"هنوز نامی ثبت نشده.",q:"پرسش این رشته",toLands:"به سرزمین‌های",
+  tipLegend:"یک سرزمین را بزنید تا راه‌هایش روشن شود؛ دومی را بزنید تا فقط راه‌های میان آن دو بماند."},
+ en:{crumb:"Land of Knowledge",h1:"Land of Knowledge",lead:"Each family of science is a land, each discipline a city, and each interdisciplinary field a road joining two or more cities, often across lands. Click cities and bridges to see who built the roads.",labels:"Bridge names",reset:"All",foot:"Positions and shapes are conventional; what is real is the network: every road is an interdisciplinary field recorded in the atlas, every name a researcher who helped found it. The name lists are incomplete and grow with expert review.",
+  overview:"Overview",lands:"lands",cities:"cities",roads:"roads",builders:"bridge-builders",pairs:"Busiest borders",pairsS:"Which lands have built the most roads between them?",top:"Great bridge-builders",topS:"People whose name appears on more than one bridge.",city:"City",hub:"Bridge (interdisciplinary field)",inLand:"in the land of",founders:"Founders and key figures",roadsFrom:"Roads passing through here",connects:"Cities this road joins",crossing:"Between the lands of",inside:"Within one land",buildersOf:"Builders of this bridge",page:"Bridge page ↗",atlas:"In the atlas ↗",person:"Researcher",onBridges:"On these bridges",onCities:"In these cities",lands2:"Pick two lands to keep only the roads between them.",none:"No names recorded yet.",q:"The field's question",toLands:"to the lands of",
+  tipLegend:"Click a land to light its roads; click a second to keep only the roads between the two."},
+ nl:{crumb:"Land van Kennis",h1:"Land van Kennis",lead:"Elke familie van wetenschap is een land, elke discipline een stad, en elk interdisciplinair veld een weg die twee of meer steden verbindt, vaak over landsgrenzen heen. Klik op steden en bruggen om te zien wie de wegen bouwde.",labels:"Brugnamen",reset:"Alles",foot:"Posities en vormen zijn conventioneel; wat echt is, is het netwerk: elke weg is een interdisciplinair veld uit de atlas, elke naam een onderzoeker die het mee oprichtte. De namenlijsten zijn onvolledig en groeien met expertreview.",
+  overview:"Overzicht",lands:"landen",cities:"steden",roads:"wegen",builders:"bruggenbouwers",pairs:"Drukste grenzen",pairsS:"Welke landen hebben de meeste wegen tussen elkaar gebouwd?",top:"Grote bruggenbouwers",topS:"Mensen van wie de naam op meer dan één brug staat.",city:"Stad",hub:"Brug (interdisciplinair veld)",inLand:"in het land",founders:"Grondleggers en sleutelfiguren",roadsFrom:"Wegen die hier passeren",connects:"Steden die deze weg verbindt",crossing:"Tussen de landen",inside:"Binnen één land",buildersOf:"Bouwers van deze brug",page:"Brugpagina ↗",atlas:"In de atlas ↗",person:"Onderzoeker",onBridges:"Op deze bruggen",onCities:"In deze steden",lands2:"Kies twee landen om alleen de wegen ertussen te houden.",none:"Nog geen namen vastgelegd.",q:"De vraag van dit veld",toLands:"naar de landen",
+  tipLegend:"Klik op een land om zijn wegen op te lichten; klik op een tweede om alleen de wegen ertussen te houden."}
+};
+let L = "fa"; try { L = localStorage.getItem("ds-lang") || "fa"; } catch(_) {}
+const T = k => (UI[L] && UI[L][k]) || UI.fa[k];
+const name = f => (L === "fa" ? f.fa : (f[L] || f.en || f.fa));
+const famName = id => { const f = FAM.find(x => x.id === id); return L === "fa" ? f.fa : (UI[L]["f-" + id] || {bio:"Life & medicine",psy:"Mind",soc:"Society",hum:"Philosophy & humanities",formal:"Data & computing"}[id]); };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fa = s => L === "fa" ? String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]) : String(s);
+const BY = Object.fromEntries(FIELDS.map(f => [f.id, f]));
+const CITIES = FIELDS.filter(f => f.fam), HUBS = FIELDS.filter(f => !f.fam);
+const famOf = f => { let c = f; while (c && !c.fam) c = BY[(c.par || [])[0]]; return c ? c.fam : "psy"; };
+HUBS.forEach(h => { h.lands = [...new Set(h.par.map(p => BY[p].fam))]; });
+// ---------- layout ----------
+const W = 1000, H = 720;
+const CENTER = {psy:[500,380], bio:[830,190], soc:[170,190], hum:[175,565], formal:[840,580]};
+const R0 = {psy:78, bio:72, soc:72, hum:70, formal:46};
+const GA = Math.PI * (3 - Math.sqrt(5));
+FAM.forEach(fm => {
+  const cs = CITIES.filter(c => c.fam === fm.id); const [cx, cy] = CENTER[fm.id];
+  cs.forEach((c, i) => { const r = cs.length === 1 ? 0 : R0[fm.id] * Math.sqrt((i + .6) / cs.length) * 1.25; const a = i * GA + (fm.id === "psy" ? .4 : 1.1); c.x = cx + r * Math.cos(a); c.y = cy + r * Math.sin(a) * .85; });
+});
+HUBS.forEach(h => { const ps = h.par.map(p => BY[p]); const w = p => (p.fam === 'psy' ? .55 : 1); const sw = ps.reduce((s, p) => s + w(p), 0); h.x = ps.reduce((s, p) => s + p.x * w(p), 0) / sw; h.y = ps.reduce((s, p) => s + p.y * w(p), 0) / sw; h.ox = h.x; h.oy = h.y; });
+for (let it = 0; it < 220; it++) {
+  const all = [...CITIES, ...HUBS];
+  for (const a of HUBS) {
+    let fx = (a.ox - a.x) * .02, fy = (a.oy - a.y) * .02;
+    for (const b of all) { if (a === b) continue; let dx = a.x - b.x, dy = a.y - b.y; let d = Math.hypot(dx, dy) || .01; const min = b.fam ? 50 : 44; if (d < min) { const k = (min - d) / d * .5; fx += dx * k; fy += dy * k; } }
+    a.x += fx; a.y += fy; a.x = Math.max(30, Math.min(W - 30, a.x)); a.y = Math.max(30, Math.min(H - 30, a.y));
+  }
+}
+function hull(pts){ pts = pts.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1]); const cr = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]); const lo = [], up = []; for (const p of pts) { while (lo.length >= 2 && cr(lo[lo.length - 2], lo[lo.length - 1], p) <= 0) lo.pop(); lo.push(p); } for (const p of pts.reverse()) { while (up.length >= 2 && cr(up[up.length - 2], up[up.length - 1], p) <= 0) up.pop(); up.push(p); } return lo.slice(0, -1).concat(up.slice(0, -1)); }
+function blob(cs, pad){ const pts = []; cs.forEach(c => { for (let k = 0; k < 10; k++) { const a = k / 10 * 2 * Math.PI; pts.push([c.x + pad * Math.cos(a), c.y + pad * .8 * Math.sin(a)]); } }); const h = hull(pts); let d = ""; const n = h.length; for (let i = 0; i < n; i++) { const p0 = h[(i - 1 + n) % n], p1 = h[i], p2 = h[(i + 1) % n], p3 = h[(i + 2) % n]; const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6], c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6]; d += (i === 0 ? `M${p1[0].toFixed(1)},${p1[1].toFixed(1)}` : "") + `C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`; } return d + "Z"; }
+// ---------- indexes ----------
+const PEOPLE = {};
+FIELDS.forEach(f => { const ppl = (f.fam ? f.ppl : ((BRIDGES[f.id] && BRIDGES[f.id].people) || f.ppl)) || []; f.people = ppl; ppl.forEach(p => { (PEOPLE[p] = PEOPLE[p] || {cities:[], hubs:[]})[f.fam ? "cities" : "hubs"].push(f.id); }); });
+const BUILDERS = Object.entries(PEOPLE).filter(([p, v]) => v.hubs.length >= 2 || (v.hubs.length && v.cities.length)).sort((a, b) => (b[1].hubs.length + b[1].cities.length) - (a[1].hubs.length + a[1].cities.length));
+const PAIRS = {};
+HUBS.forEach(h => { const ls = h.lands.slice().sort(); for (let i = 0; i < ls.length; i++) for (let j = i + 1; j < ls.length; j++) { const k = ls[i] + "|" + ls[j]; (PAIRS[k] = PAIRS[k] || []).push(h.id); } });
+// ---------- render map ----------
+const svg = document.getElementById("map");
+const fc = id => `var(--fam-${id})`;
+function draw(){
+  let s = "";
+  FAM.forEach(fm => { const cs = CITIES.filter(c => c.fam === fm.id); s += `<path class="land" data-land="${fm.id}" style="--fc:${fc(fm.id)}" d="${blob(cs, 44)}"/>`; });
+  FAM.forEach(fm => { const cs = CITIES.filter(c => c.fam === fm.id); const [cx] = CENTER[fm.id]; const top = fm.id === "psy" ? Math.max(...cs.map(c => c.y)) + 62 : Math.min(...cs.map(c => c.y)) - 54; s += `<text class="lname" style="--fc:${fc(fm.id)}" x="${cx}" y="${Math.max(22, top)}" text-anchor="middle">${esc(famName(fm.id))}</text>`; });
+  HUBS.forEach(h => h.par.forEach(p => { const c = BY[p]; const mx = (h.x + c.x) / 2 + (c.y - h.y) * .12, my = (h.y + c.y) / 2 - (c.x - h.x) * .12; s += `<path class="road" data-hub="${h.id}" data-city="${p}" d="M${h.x.toFixed(1)},${h.y.toFixed(1)}Q${mx.toFixed(1)},${my.toFixed(1)} ${c.x.toFixed(1)},${c.y.toFixed(1)}"/>`; }));
+  HUBS.forEach(h => { s += `<g class="hub${BRIDGES[h.id] ? " pg" : ""}" data-hub="${h.id}" tabindex="0" role="button" aria-label="${esc(name(h))}"><circle class="hit" cx="${h.x.toFixed(1)}" cy="${h.y.toFixed(1)}" r="12"/><rect x="${(h.x - 4.5).toFixed(1)}" y="${(h.y - 4.5).toFixed(1)}" width="9" height="9" rx="1.5"/><text x="${h.x.toFixed(1)}" y="${(h.y + 15).toFixed(1)}" text-anchor="middle">${esc(name(h))}</text></g>`; });
+  CITIES.forEach(c => { s += `<g class="city" data-city="${c.id}" style="--fc:${fc(c.fam)}" tabindex="0" role="button" aria-label="${esc(name(c))}"><circle class="hit" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="14"/><circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="6"/><text x="${c.x.toFixed(1)}" y="${(c.y - 10).toFixed(1)}" text-anchor="middle">${esc(name(c))}</text></g>`; });
+  svg.innerHTML = s;
+}
+// ---------- state ----------
+let sel = null, landsSel = [];
+function setClass(elq, on, dim){ document.querySelectorAll(elq).forEach(el => { el.classList.toggle("on", on(el)); el.classList.toggle("dim", dim(el)); }); }
+function apply(){
+  const hubOn = h => { if (sel && sel.type === "hub") return h.id === sel.id; if (sel && sel.type === "city") return h.par.includes(sel.id); if (sel && sel.type === "person") return PEOPLE[sel.id].hubs.includes(h.id); if (landsSel.length === 2) return landsSel.every(l => h.lands.includes(l)); if (landsSel.length === 1) return h.lands.includes(landsSel[0]); return null; };
+  const any = sel || landsSel.length;
+  setClass(".road", el => !!hubOn(BY[el.dataset.hub]), el => any && !hubOn(BY[el.dataset.hub]));
+  setClass(".hub", el => !!hubOn(BY[el.dataset.hub]), el => any && !hubOn(BY[el.dataset.hub]));
+  setClass(".city", el => sel ? (sel.type === "city" ? el.dataset.city === sel.id : sel.type === "hub" ? BY[sel.id].par.includes(el.dataset.city) : PEOPLE[sel.id].cities.includes(el.dataset.city) || PEOPLE[sel.id].hubs.some(h => BY[h].par.includes(el.dataset.city))) : false,
+           el => { if (sel) { const on = sel.type === "city" ? el.dataset.city === sel.id : sel.type === "hub" ? BY[sel.id].par.includes(el.dataset.city) : PEOPLE[sel.id].cities.includes(el.dataset.city) || PEOPLE[sel.id].hubs.some(h => BY[h].par.includes(el.dataset.city)); return !on; } return landsSel.length ? !landsSel.includes(BY[el.dataset.city].fam) : false; });
+  setClass(".land", el => landsSel.includes(el.dataset.land), el => landsSel.length ? !landsSel.includes(el.dataset.land) : false);
+  document.querySelectorAll("#legend [data-land]").forEach(b => b.setAttribute("aria-pressed", landsSel.includes(b.dataset.land)));
+  panel();
+}
+const dots = lands => `<span class="dots">${lands.map(l => `<i style="--fc:${fc(l)}"></i>`).join("")}</span>`;
+const hubBtn = h => `<button data-go="hub:${h.id}"><span>${esc(name(h))}</span><small>${dots(h.lands)}</small></button>`;
+const cityBtn = c => `<button data-go="city:${c.id}" style="--fc:${fc(c.fam)}"><span>${esc(name(c))}</span><small>${esc(famName(c.fam))}</small></button>`;
+const pplBtns = (ppl, cls = "") => ppl.length ? `<div class="ppl">${ppl.map(p => `<button class="${PEOPLE[p] && PEOPLE[p].hubs.length >= 2 ? "b" : cls}" data-go="person:${encodeURIComponent(p)}">${esc(p)}</button>`).join("")}</div>` : `<p class="note">${T("none")}</p>`;
+function panel(){
+  const P = document.getElementById("panel"); let s = "";
+  if (!sel) {
+    const pairs = Object.entries(PAIRS).sort((a, b) => b[1].length - a[1].length); const max = pairs[0][1].length;
+    const inLands = landsSel.length ? HUBS.filter(h => landsSel.every(l => h.lands.includes(l))) : null;
+    s += `<div class="card"><div class="kick" style="--fc:var(--primary)">${T("overview")}</div><p>${fa(FAM.length)} ${T("lands")} · ${fa(CITIES.length)} ${T("cities")} · ${fa(HUBS.length)} ${T("roads")} · ${fa(BUILDERS.length)} ${T("builders")}</p><p class="note">${T("tipLegend")}</p>`;
+    if (inLands) s += `<h3>${landsSel.length === 2 ? T("crossing") + " " + landsSel.map(famName).join(" – ") : famName(landsSel[0])} (${fa(inLands.length)})</h3><div class="lst">${inLands.map(hubBtn).join("")}</div>`;
+    s += `</div>`;
+    s += `<div class="card"><h2 style="font-size:var(--h4)">${T("pairs")}</h2><p class="note">${T("pairsS")}</p><div class="pair" style="margin-top:8px">${pairs.slice(0, 8).map(([k, v]) => { const [a, b] = k.split("|"); return `<span>${dots([a, b])} ${esc(famName(a))} – ${esc(famName(b))}</span><span style="display:flex;align-items:center;gap:6px"><span class="bar" style="--a:${fc(a)};--b:${fc(b)};--w:${(v.length / max * 90 + 10).toFixed(0)}px"></span><small>${fa(v.length)}</small></span>`; }).join("")}</div></div>`;
+    s += `<div class="card"><h2 style="font-size:var(--h4)">${T("top")}</h2><p class="note">${T("topS")}</p>${pplBtns(BUILDERS.slice(0, 18).map(x => x[0]))}</div>`;
+  } else if (sel.type === "city") {
+    const c = BY[sel.id]; const roads = HUBS.filter(h => h.par.includes(c.id)); const lands = [...new Set(roads.flatMap(h => h.lands).filter(l => l !== c.fam))];
+    s += `<div class="card wide" style="--fc:${fc(c.fam)}"><button class="back" data-back>‹ ${T("overview")}</button><div class="kick">${T("city")} · ${T("inLand")} ${esc(famName(c.fam))}</div><h2>${esc(name(c))}</h2>${c.q ? `<p class="note">${esc(c.q)}</p>` : ""}
+      <h3>${T("founders")}</h3>${pplBtns(c.people)}
+      <h3>${T("roadsFrom")} (${fa(roads.length)})</h3>${lands.length ? `<p class="note">${T("toLands")} ${lands.map(l => `${dots([l])} ${esc(famName(l))}`).join("، ")}</p>` : ""}<div class="lst">${roads.map(hubBtn).join("")}</div>
+      <h3>&nbsp;</h3><div class="links"><a href="./#${c.id}">${T("atlas")}</a></div></div>`;
+  } else if (sel.type === "hub") {
+    const h = BY[sel.id]; const cross = h.lands.length > 1;
+    s += `<div class="card wide"><button class="back" data-back>‹ ${T("overview")}</button><div class="kick" style="--fc:var(--primary)">${T("hub")}</div><h2>${esc(name(h))}</h2>${h.en && L === "fa" ? `<p class="note">${esc(h.en)}</p>` : ""}${h.q ? `<h3>${T("q")}</h3><p>${esc(h.q)}</p>` : ""}
+      <h3>${T("connects")}</h3><p class="note">${cross ? T("crossing") + " " + h.lands.map(l => `${dots([l])} ${esc(famName(l))}`).join("، ") : T("inside")}</p><div class="lst">${h.par.map(p => cityBtn(BY[p])).join("")}</div>
+      <h3>${T("buildersOf")}</h3>${pplBtns(h.people)}
+      <h3>&nbsp;</h3><div class="links" style="display:flex;gap:12px">${BRIDGES[h.id] ? `<a href="bridge.html#${h.id}">${T("page")}</a>` : ""}<a href="./#${h.id}">${T("atlas")}</a></div></div>`;
+  } else if (sel.type === "person") {
+    const v = PEOPLE[sel.id] || {cities:[], hubs:[]};
+    s += `<div class="card wide"><button class="back" data-back>‹ ${T("overview")}</button><div class="kick" style="--fc:var(--primary)">${T("person")}</div><h2>${esc(sel.id)}</h2>
+      ${v.hubs.length ? `<h3>${T("onBridges")} (${fa(v.hubs.length)})</h3><div class="lst">${v.hubs.map(id => hubBtn(BY[id])).join("")}</div>` : ""}
+      ${v.cities.length ? `<h3>${T("onCities")}</h3><div class="lst">${v.cities.map(id => cityBtn(BY[id])).join("")}</div>` : ""}</div>`;
+  }
+  P.innerHTML = s;
+}
+function go(type, id){ sel = {type, id}; apply(); try { history.replaceState(null, "", "#" + (type === "person" ? "p-" + encodeURIComponent(id) : id)); } catch(_) {} document.getElementById("panel").scrollIntoView({behavior:"smooth", block:"nearest"}); }
+document.addEventListener("click", ev => {
+  if (ev.target.closest("[data-back]")) { sel = null; apply(); return; }
+  const g = ev.target.closest("[data-go]"); if (g) { const [t, id] = g.dataset.go.split(/:(.*)/); go(t, decodeURIComponent(id)); return; }
+  const c = ev.target.closest(".city"); if (c) return go("city", c.dataset.city);
+  const h = ev.target.closest(".hub"); if (h) return go("hub", h.dataset.hub);
+  const land = ev.target.closest("[data-land]"); if (land) { const id = land.dataset.land; sel = null; landsSel = landsSel.includes(id) ? landsSel.filter(x => x !== id) : [...landsSel.slice(-1), id]; apply(); return; }
+});
+svg.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { const t = ev.target.closest(".city,.hub"); if (t) { ev.preventDefault(); t.click(); } } });
+document.getElementById("reset").addEventListener("click", () => { sel = null; landsSel = []; apply(); try { history.replaceState(null, "", location.pathname); } catch(_) {} });
+document.getElementById("lbl").addEventListener("click", ev => { const on = ev.currentTarget.getAttribute("aria-pressed") !== "true"; ev.currentTarget.setAttribute("aria-pressed", on); svg.classList.toggle("nolabels", !on); });
+function legend(){ document.getElementById("legend").innerHTML = FAM.map(fm => `<button data-land="${fm.id}" style="--fc:${fc(fm.id)}" aria-pressed="false"><i></i>${esc(famName(fm.id))} <small>(${fa(CITIES.filter(c => c.fam === fm.id).length)})</small></button>`).join(""); }
+function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => { el.textContent = T(el.dataset.i); }); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + " — " + (L === "fa" ? "دانش‌سرا" : "Daneshsara"); legend(); draw(); apply(); }
+document.querySelector(".lang").addEventListener("click", ev => { const b = ev.target.closest("[data-l]"); if (!b) return; L = b.dataset.l; try { localStorage.setItem("ds-lang", L); } catch(_) {} i18n(); });
+if (window.innerWidth < 600) { svg.classList.add("nolabels"); document.getElementById("lbl").setAttribute("aria-pressed", "false"); }
+i18n();
+const h0 = decodeURIComponent(location.hash.slice(1)); if (h0.startsWith("p-") && PEOPLE[h0.slice(2)]) go("person", h0.slice(2)); else if (BY[h0]) go(BY[h0].fam ? "city" : "hub", h0);
+</script>
+</body>
+</html>

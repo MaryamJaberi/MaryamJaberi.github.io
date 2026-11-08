@@ -14,6 +14,9 @@ for p in sorted(glob.glob(SRC + '/*.html')):
     k = os.path.basename(p)[:-5]
     names.append(k)
     s = open(p, encoding='utf-8').read()
+    if k == 'orgsvc':
+        # the Wellbeing Check is maintained in place at psychology-wiki/orgsvc.html (another workstream); mirror it, never redirect it
+        s = open(f'{ROOT}/psychology-wiki/orgsvc.html', encoding='utf-8').read()
     if k == 'atlas2':
         # shared atlas lives at daneshsara/atlas/; re-point tool links to ../psy/
         s2 = re.sub(r'href="((?!https?:|#|\.\./)[a-z0-9]+\.html)', lambda m: 'href="../psy/' + m.group(1), s)
@@ -27,6 +30,7 @@ for p in sorted(glob.glob(SRC + '/*.html')):
 # redirects from the old address
 RED = {}
 for k in names:
+    if k == 'orgsvc': continue
     target = f'../daneshsara/psy/{k}.html'
     RED[f'psychology-wiki/{k}.html'] = f'daneshsara/psy/{k}.html'
     page = (f'<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="robots" content="noindex">'

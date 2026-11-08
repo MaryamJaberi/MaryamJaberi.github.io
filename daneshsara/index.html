@@ -63,7 +63,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(-
 <body>
 <header class="top"><div class="wrap">
  <a class="brand" href="./"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2.2"/><circle cx="5" cy="7" r="1.6"/><circle cx="19" cy="7" r="1.6"/><circle cx="5" cy="17" r="1.6"/><circle cx="19" cy="17" r="1.6"/><path d="M6.4 7.8 10.2 11M17.6 7.8 13.8 11M6.4 16.2 10.2 13M17.6 16.2 13.8 13"/></svg><span data-i="brand">دانش‌سرا</span></a>
- <nav class="main"><a href="#wikis" data-i="n1">ویکی‌ها</a><a href="atlas/" data-i="n2">اطلس رشته‌ها</a><a href="atlas/bridge.html" data-i="n3">پل‌ها</a><a href="#iran" data-i="n4">برای ایران</a></nav>
+ <nav class="main"><a href="#wikis" data-i="n1">ویکی‌ها</a><a href="atlas/" data-i="n2">اطلس رشته‌ها</a><a href="atlas/bridge.html" data-i="n3">پل‌ها</a><a href="atlas/lands.html" data-i="n5">سرزمین دانش</a><a href="#iran" data-i="n4">برای ایران</a></nav>
  <div class="lang" role="group" aria-label="language"><button data-l="fa" aria-pressed="true">فا</button><button data-l="en">EN</button><button data-l="nl">NL</button></div>
 </div></header>
 
@@ -102,7 +102,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(-
     <h2 style="text-align:start" data-i="atlasT">یک اطلس برای همهٔ ویکی‌ها</h2>
     <p data-i="atlasS">۷۷ رشته در پنج خانواده؛ رشته‌های اصلی روی لبهٔ دایره و ۵۳ رشتهٔ میان‌رشته‌ای در درون، میان رشته‌هایی که از آن‌ها ساخته شده‌اند. ۲۵ پل تازه هرکدام صفحهٔ خودشان را دارند: اثر بنیادی، مرجع امروز، یافتهٔ کلیدی با وضعیت تکرار، و کتاب فارسی.</p>
     <div class="fams"><span class="chip fam-bio" data-i="f-bio">زیست و پزشکی</span><span class="chip fam-psy" data-i="f-psy">روان</span><span class="chip fam-soc" data-i="f-soc">جامعه</span><span class="chip fam-hum" data-i="f-hum">فلسفه و علوم انسانی</span><span class="chip fam-formal" data-i="f-formal">داده و رایانش</span></div>
-    <div class="cta"><a class="btn" href="atlas/" data-i="atlasB">باز کردن اطلس</a><a class="btn ghost" href="atlas/bridge.html" data-i="bridgeB">۲۵ صفحهٔ پل</a></div>
+    <div class="cta"><a class="btn" href="atlas/" data-i="atlasB">باز کردن اطلس</a><a class="btn ghost" href="atlas/bridge.html" data-i="bridgeB">۲۵ صفحهٔ پل</a><a class="btn ghost" href="atlas/lands.html" data-i="landsB">سرزمین دانش</a></div>
    </div>
    <div class="three">
     <div class="card"><b id="n-fields">۷۷</b><span data-i="s-fields">رشته</span></div>
@@ -130,7 +130,7 @@ fa:{brand:"دانش‌سرا",n1:"ویکی‌ها",n2:"اطلس رشته‌ها"
  startT:"از کجا شروع کنم؟",startS:"چهار مسیر، بسته به اینکه چرا آمده‌اید.",p1:"تازه‌کارم",p1s:"مرکز یادگیری: مسیرهای خواندن از ساده به پیچیده.",p2:"دنبال یک موضوعم",p2s:"جست‌وجو، یا اطلس رشته‌ها برای دیدن اینکه موضوع کجای علم نشسته.",p3:"خودم را بسنجم",p3s:"سنجش‌خانه: پرسشنامه‌های معتبر با منبع اصلی؛ هیچ داده‌ای ذخیره نمی‌شود.",p4:"این علم‌ها برای ایران چه می‌گویند؟",p4s:"لنز ایران: داده با سال و روش، پرسش‌های باز، و چند روایت.",
  wikisT:"ویکی‌ها",wikisS:"هر ویکی همان ساختار را دارد: رشته، زیررشته، مفهوم؛ با گراف، سرزمین، کتابخانه و چهره‌ها.",
  atlasT:"یک اطلس برای همهٔ ویکی‌ها",atlasS:"۷۷ رشته در پنج خانواده؛ رشته‌های اصلی روی لبهٔ دایره و ۵۳ رشتهٔ میان‌رشته‌ای در درون، میان رشته‌هایی که از آن‌ها ساخته شده‌اند. ۲۵ پل تازه هرکدام صفحهٔ خودشان را دارند: اثر بنیادی، مرجع امروز، یافتهٔ کلیدی با وضعیت تکرار، و کتاب فارسی.",
- "f-bio":"زیست و پزشکی","f-psy":"روان","f-soc":"جامعه","f-hum":"فلسفه و علوم انسانی","f-formal":"داده و رایانش",atlasB:"باز کردن اطلس",bridgeB:"۲۵ صفحهٔ پل","s-fields":"رشته","s-bridges":"صفحهٔ پل","s-cross":"پیوند میان‌ویکی",
+ "f-bio":"زیست و پزشکی","f-psy":"روان","f-soc":"جامعه","f-hum":"فلسفه و علوم انسانی","f-formal":"داده و رایانش",atlasB:"باز کردن اطلس",bridgeB:"۲۵ صفحهٔ پل",landsB:"سرزمین دانش: نقشهٔ شهرها و پل‌ها",n5:"سرزمین دانش","s-fields":"رشته","s-bridges":"صفحهٔ پل","s-cross":"پیوند میان‌ویکی",
  iranT:"برای ایران",iranS:"لایهٔ «برای ایران» در فاز ۴ ساخته می‌شود: روی هر رشته یک برگه با داده‌های واقعی دربارهٔ ایران، هر عدد با سال، روش و ردهٔ کیفیت. فعلاً نشانه‌هایش را در صفحه‌های پل می‌بینید.",
  foot1:"دانش‌سرا · زیر چتر SoloNovate · متن CC BY-SA 4.0، کد MIT",foot2:"هیچ ردیابی، هیچ ذخیرهٔ داده",built:"ساخت",
  live:"زنده",soon:"در راه",building:"در حال ساخت",concepts:"مفهوم",sourced:"منبع‌دار",people:"چهره",tools:"ابزار",
@@ -141,7 +141,7 @@ en:{brand:"Daneshsara",n1:"Wikis",n2:"Atlas",n3:"Bridges",n4:"For Iran",h1:"Dane
  startT:"Where do I start?",startS:"Four paths, depending on why you came.",p1:"I am new",p1s:"Learning centre: reading paths from simple to advanced.",p2:"I am looking for a topic",p2s:"Search, or the atlas to see where a topic sits in science.",p3:"Assess myself",p3s:"Validated questionnaires with their original source; nothing is stored.",p4:"What do these sciences say about Iran?",p4s:"The Iran lens: data with year and method, open questions, several voices.",
  wikisT:"Wikis",wikisS:"Every wiki shares one structure: field, subfield, concept; with a graph, a land, a library and people.",
  atlasT:"One atlas for all wikis",atlasS:"77 fields in five families; core disciplines on the rim and 53 interdisciplinary fields inside, between the disciplines they are built from. 25 new bridges each have their own page: founding work, standard reference, key finding with replication status, Persian books.",
- "f-bio":"Life & medicine","f-psy":"Mind","f-soc":"Society","f-hum":"Philosophy & humanities","f-formal":"Data & computing",atlasB:"Open the atlas",bridgeB:"25 bridge pages","s-fields":"fields","s-bridges":"bridge pages","s-cross":"cross-wiki links",
+ "f-bio":"Life & medicine","f-psy":"Mind","f-soc":"Society","f-hum":"Philosophy & humanities","f-formal":"Data & computing",atlasB:"Open the atlas",bridgeB:"25 bridge pages",landsB:"Land of Knowledge: cities and bridges",n5:"Land of Knowledge","s-fields":"fields","s-bridges":"bridge pages","s-cross":"cross-wiki links",
  iranT:"For Iran",iranS:"The Iran layer comes in phase 4: a note on every field with real data about Iran, each number with year, method and a quality grade. For now its traces appear on the bridge pages.",
  foot1:"Daneshsara · under SoloNovate · text CC BY-SA 4.0, code MIT",foot2:"No tracking, no data stored",built:"built",
  live:"live",soon:"coming",building:"in progress",concepts:"concepts",sourced:"sourced",people:"people",tools:"tools",
@@ -152,7 +152,7 @@ nl:{brand:"Daneshsara",n1:"Wiki's",n2:"Atlas",n3:"Bruggen",n4:"Voor Iran",h1:"Da
  startT:"Waar begin ik?",startS:"Vier paden, afhankelijk van waarom u kwam.",p1:"Ik ben nieuw",p1s:"Leercentrum: leesroutes van eenvoudig naar gevorderd.",p2:"Ik zoek een onderwerp",p2s:"Zoeken, of de atlas om te zien waar een onderwerp in de wetenschap zit.",p3:"Mezelf meten",p3s:"Gevalideerde vragenlijsten met hun oorspronkelijke bron; er wordt niets opgeslagen.",p4:"Wat zeggen deze wetenschappen over Iran?",p4s:"De Iran-lens: data met jaar en methode, open vragen, meerdere stemmen.",
  wikisT:"Wiki's",wikisS:"Elke wiki heeft dezelfde structuur: vakgebied, deelgebied, begrip; met een grafiek, een land, een bibliotheek en personen.",
  atlasT:"Eén atlas voor alle wiki's",atlasS:"77 vakgebieden in vijf families; kerndisciplines op de rand en 53 interdisciplinaire velden binnenin. 25 nieuwe bruggen hebben elk een eigen pagina: grondleggend werk, standaardwerk, kernbevinding met replicatiestatus, Perzische boeken.",
- "f-bio":"Leven & geneeskunde","f-psy":"Psyche","f-soc":"Samenleving","f-hum":"Filosofie & geesteswetenschappen","f-formal":"Data & informatica",atlasB:"Open de atlas",bridgeB:"25 brugpagina's","s-fields":"vakgebieden","s-bridges":"brugpagina's","s-cross":"verbindingen tussen wiki's",
+ "f-bio":"Leven & geneeskunde","f-psy":"Psyche","f-soc":"Samenleving","f-hum":"Filosofie & geesteswetenschappen","f-formal":"Data & informatica",atlasB:"Open de atlas",bridgeB:"25 brugpagina's",landsB:"Land van Kennis: steden en bruggen",n5:"Land van Kennis","s-fields":"vakgebieden","s-bridges":"brugpagina's","s-cross":"verbindingen tussen wiki's",
  iranT:"Voor Iran",iranS:"De Iran-laag komt in fase 4: een notitie bij elk vakgebied met echte data over Iran, elk getal met jaar, methode en kwaliteitsgraad. Voorlopig ziet u de sporen op de brugpagina's.",
  foot1:"Daneshsara · onder SoloNovate · tekst CC BY-SA 4.0, code MIT",foot2:"Geen tracking, geen opslag",built:"gebouwd",
  live:"live",soon:"komt eraan",building:"in opbouw",concepts:"begrippen",sourced:"met bron",people:"personen",tools:"tools",
