@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>راهنمای مشارکت — دانش‌سرا</title>
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink)} .brand svg{width:26px;height:26px;color:var(--primary)}
+main{padding-block:var(--s6) var(--s16);max-width:76ch} h1{margin:0 0 var(--s3)} h2{font-size:var(--h3);margin:var(--s8) 0 var(--s3)} p,li{line-height:1.9} .lead{color:var(--ink-2);font-size:1.05rem}
+.card{padding:var(--s5);margin:var(--s4) 0} code{font-size:.92em;background:var(--surface);padding:1px 6px;border-radius:6px;direction:ltr;unicode-bidi:embed}
+table{width:100%;border-collapse:collapse;font-size:var(--small)} td,th{padding:8px 10px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top}
+.g{display:inline-block;min-width:1.6em;text-align:center;font-size:var(--chip);font-weight:700;padding:1px 7px;border-radius:var(--r-full);color:#fff;background:var(--primary)}
+footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(--ink-3);font-size:var(--small)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg><span>دانش‌سرا</span></a><span style="font-size:var(--small);color:var(--ink-2)">راهنمای مشارکت</span></div></header>
+<main class="wrap">
+<h1>راهنمای مشارکت برای کارشناسان</h1>
+<p class="lead">دانش‌سرا مجموعه‌ای از ویکی‌های فارسیِ به‌هم‌پیوسته است (روان، جامعه، تبار و ژنتیک، فلسفه) که هر گزاره‌اش منبع دارد و وضعیت شواهدش پرچم خورده. همهٔ مدخل‌های تازه تا بازبینی یک کارشناس «پیش‌نویس»اند. اگر در یکی از این حوزه‌ها تخصص دارید، سه راه برای کمک هست و هیچ‌کدام به دانش فنی نیاز ندارد.</p>
+
+<h2>۱. بازبینی یک مدخل</h2>
+<p>به <a href="review.html">صف بازبینی</a> بروید، مدخلی از حوزهٔ خودتان را باز کنید و با این پنج پرسش بسنجید:</p>
+<div class="card"><ol>
+<li><b>منبع درست است؟</b> هر گزاره یک یا چند منبع دارد؛ یکی را باز کنید و ببینید واقعاً همان را می‌گوید (عدد، سال، نمونه).</li>
+<li><b>قطعیت درست است؟</b> یافته‌های تکرارنشده یا محل بحث باید پرچم «تکرارنشده» یا «محل بحث» داشته باشند، نه لحن قطعی.</li>
+<li><b>زبان ساده و دقیق است؟</b> برای خوانندهٔ غیرمتخصص فهمیدنی، بی‌هیچ تشخیص یا توصیهٔ فردی.</li>
+<li><b>پیوندها معنادارند؟</b> هر پیوند یک نوع رابطه دارد (بخشی از، توضیح می‌دهد، در برابر، شاهدِ…)؛ آیا درست انتخاب شده؟</li>
+<li><b>اگر دربارهٔ ایران است:</b> سال، روش و ردهٔ داده (A تا D) محتاطانه و درست است؟</li>
+</ol></div>
+<p>نتیجه را به یکی از این شکل‌ها بفرستید: «تأیید»، «تأیید با این اصلاح: …»، یا «رد، چون …». شناسهٔ مدخل (مثل <code>soc:anomie</code>) را هم بنویسید.</p>
+
+<h2>۲. پیشنهاد یک مدخل تازه</h2>
+<p>یک مدخل خوب این اجزا را دارد. اگر همین‌ها را در یک پیام یا فایل متنی بفرستید، ما به قالب داده تبدیلش می‌کنیم:</p>
+<table><tr><th>جزء</th><th>توضیح</th></tr>
+<tr><td>عنوان</td><td>فارسی، و اگر می‌دانید انگلیسی و هلندی</td></tr>
+<tr><td>خلاصه</td><td>دو تا چهار جمله برای خوانندهٔ عادی: چیست و چرا مهم است</td></tr>
+<tr><td>۲ تا ۵ گزاره</td><td>هر کدام یک ادعای مشخص با منبع (مقالهٔ داوری‌شده، کتاب دانشگاهی، یا گزارش رسمی)</td></tr>
+<tr><td>وضعیت شواهد</td><td>برای هر گزاره: تکرارشده / تکرارنشده / محل بحث</td></tr>
+<tr><td>پیوندها</td><td>به کدام مدخل‌های موجود ربط دارد و چه رابطه‌ای</td></tr>
+<tr><td>چهره‌ها</td><td>پژوهشگران کلیدی</td></tr>
+<tr><td>برای ایران (اختیاری)</td><td>اگر دادهٔ ایرانی معتبری هست: پرسش، یافته، سال، روش، منبع</td></tr></table>
+
+<h2>۳. یک یادداشت «برای ایران»</h2>
+<p>لایهٔ «برای ایران» پرسش‌هایی با پاسخ داده‌محور است. هر یادداشت یک ردهٔ داده می‌گیرد:</p>
+<div class="card"><p><span class="g">A</span> پیمایش ملی یا مطالعهٔ داوری‌شدهٔ قوی &nbsp; <span class="g" style="background:#2A6F7A">B</span> دادهٔ خوب با محدودیت نمونه یا زمان &nbsp; <span class="g" style="background:#B8860B">C</span> برآورد، نمونهٔ غیراحتمالی یا منبع ثانویه &nbsp; <span class="g" style="background:#8A2E2E">D</span> گمانه یا دادهٔ قدیمی</p>
+<p>اگر یافته محل بحث است، نقد را هم کنارش بنویسید. ما ترجیح می‌دهیم یک یادداشت با ردهٔ C و نقد صادقانه داشته باشیم تا عددی قطعی بدون منبع.</p></div>
+
+<h2>اصول سردبیری</h2>
+<ul>
+<li><b>بی‌طرفی در موضوع‌های محل بحث:</b> هر دو طرف با قوی‌ترین استدلالشان؛ حکم نهایی با خواننده.</li>
+<li><b>هیچ توصیهٔ درمانی یا دوز دارویی.</b> دانش‌سرا آموزشی است، نه بالینی.</li>
+<li><b>نام و شناسهٔ واحد:</b> هر پژوهشگر و هر منبع یک شناسه در هستهٔ مشترک دارد و در همهٔ ویکی‌ها همان است.</li>
+<li><b>مجوز:</b> متن‌ها CC BY-SA 4.0 و کد MIT؛ با مشارکت، می‌پذیرید که متن شما با همین مجوز منتشر شود.</li>
+<li><b>اعتبار:</b> نام بازبین‌ها و نویسندگان مدخل‌ها، با اجازهٔ خودشان، در مدخل ثبت می‌شود.</li>
+</ul>
+<p>راه ارتباط: از طریق مریم جابری (<a href="https://www.linkedin.com/in/maryam-jaberi-05b988140/" target="_blank" rel="noopener">LinkedIn</a>) یا مخزن <a href="https://github.com/MaryamJaberi/MaryamJaberi.github.io/tree/main/daneshsara" target="_blank" rel="noopener">GitHub</a>. جزئیات فنی قالب داده در <code>README.md</code> همان مخزن است.</p>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · زیر چتر SoloNovate</div></footer>
+</body>
+</html>
