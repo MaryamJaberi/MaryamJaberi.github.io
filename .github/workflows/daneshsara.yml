@@ -22,3 +22,4 @@ jobs:
         run: |
           for w in daneshsara/data/*/; do w=$(basename "$w"); [ "$w" = psy ] || python3 daneshsara/build/reader.py "$w"; done
           python3 daneshsara/build/lands.py
+          python3 daneshsara/build/iran_page.py
