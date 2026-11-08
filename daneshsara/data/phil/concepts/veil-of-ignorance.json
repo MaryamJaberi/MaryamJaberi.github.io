@@ -1,0 +1,85 @@
+{
+ "id": "phil:veil-of-ignorance",
+ "kind": "concept",
+ "title": {
+  "fa": "پردهٔ بی‌خبری و عدالت به‌مثابهٔ انصاف",
+  "en": "The veil of ignorance and justice as fairness",
+  "nl": "De sluier van onwetendheid en rechtvaardigheid als billijkheid"
+ },
+ "aliases": [],
+ "parent": "phil:political",
+ "field": "phil:political",
+ "summary": {
+  "fa": "رالز: اصول عدالت آن‌هایی‌اند که اگر نمی‌دانستید در جامعه کجا به دنیا می‌آیید (ثروتمند یا فقیر، زن یا مرد، باهوش یا نه) انتخاب می‌کردید. نتیجه: آزادی‌های برابر برای همه، و نابرابری فقط اگر به سود کم‌بهره‌ترین‌ها باشد. نوزیک پاسخ داد: عدالت در روند مالکیت است نه در الگوی توزیع.",
+  "en": "Rawls: the principles of justice are those you would choose if you did not know where in society you would be born (rich or poor, woman or man, clever or not). Result: equal liberties for all, and inequality only if it benefits the least advantaged. Nozick replied: justice lies in the process of acquisition, not in the pattern of distribution.",
+  "nl": "Rawls: de beginselen van rechtvaardigheid zijn die welke je zou kiezen als je niet wist waar in de samenleving je geboren wordt (rijk of arm, vrouw of man, slim of niet). Resultaat: gelijke vrijheden voor allen, en ongelijkheid alleen als ze de minstbedeelden ten goede komt. Nozick antwoordde: rechtvaardigheid zit in het proces van verwerving, niet in het verdelingspatroon."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "رالز (۱۹۷۱): در «وضع نخستین» افراد عقلانی و ریسک‌گریز اصل «بیشینه‌کردن کمینه» را برمی‌گزینند؛ استعدادهای طبیعی از نظر اخلاقی «دل‌بخواهی»اند و جامعه حق دارد ثمره‌شان را به‌عنوان دارایی مشترک ببیند.",
+    "en": "Rawls (1971): in the \"original position\" rational, risk-averse people choose the \"maximin\" principle; natural talents are morally \"arbitrary\" and society may treat their fruits as a common asset.",
+    "nl": "Rawls (1971): in the \"original position\" rational, risk-averse people choose the \"maximin\" principle; natural talents are morally \"arbitrary\" and society may treat their fruits as a common asset."
+   },
+   "sources": [
+    "src:830f23ad61"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نوزیک (۱۹۷۴): اگر هر کس دارایی‌اش را عادلانه به دست آورده و داوطلبانه مبادله کرده، توزیعِ حاصل عادلانه است هرقدر نابرابر؛ بازتوزیع اجباری «کار اجباری» است. آزمایش فکری ویلت چمبرلین. این دو کتاب هنوز دو قطب بحث عدالت‌اند.",
+    "en": "Nozick (1974): if everyone acquired holdings justly and exchanged voluntarily, the resulting distribution is just however unequal; forced redistribution is \"forced labour\". The Wilt Chamberlain thought experiment. The two books remain the two poles of the justice debate.",
+    "nl": "Nozick (1974): if everyone acquired holdings justly and exchanged voluntarily, the resulting distribution is just however unequal; forced redistribution is \"forced labour\". The Wilt Chamberlain thought experiment. The two books remain the two poles of the justice debate."
+   },
+   "sources": [
+    "src:009cb937f3"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:gini-inequality",
+   "rel": "bridges",
+   "note": {
+    "fa": "اندازه‌گیری نابرابری",
+    "en": "Measuring inequality",
+    "nl": "Measuring inequality"
+   }
+  },
+  {
+   "to": "phil:moral-luck",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "بخت اخلاقی",
+    "en": "Moral luck",
+    "nl": "Moral luck"
+   }
+  },
+  {
+   "to": "phil:capabilities",
+   "rel": "see-also",
+   "note": {
+    "fa": "نقد سن و نوسبام بر رالز",
+    "en": "Sen and Nussbaum's critique of Rawls",
+    "nl": "Sen and Nussbaum's critique of Rawls"
+   }
+  }
+ ],
+ "people": [
+  "core:john-rawls",
+  "core:robert-nozick"
+ ],
+ "sources": [
+  "src:009cb937f3",
+  "src:830f23ad61"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

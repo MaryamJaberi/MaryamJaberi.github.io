@@ -1,0 +1,100 @@
+{
+ "id": "phil:hard-problem",
+ "kind": "concept",
+ "title": {
+  "fa": "مسئلهٔ دشوار آگاهی",
+  "en": "The hard problem of consciousness",
+  "nl": "Het moeilijke probleem van bewustzijn"
+ },
+ "aliases": [],
+ "parent": "phil:mind",
+ "field": "phil:mind",
+ "summary": {
+  "fa": "توضیح اینکه مغز چگونه اطلاعات را پردازش می‌کند «مسئلهٔ آسان» است؛ مسئلهٔ دشوار این است که چرا این پردازش با تجربهٔ درونی همراه است: چرا دیدن قرمز «حسی» دارد؟ نیگل پرسید «خفاش بودن چگونه است؟» و گفت علم عینی به این «چگونگی» دسترسی ندارد.",
+  "en": "Explaining how the brain processes information is the \"easy problem\"; the hard problem is why that processing is accompanied by inner experience: why does seeing red \"feel\" like something? Nagel asked \"what is it like to be a bat?\" and said objective science has no access to that \"what it is like\".",
+  "nl": "Verklaren hoe het brein informatie verwerkt is het \"gemakkelijke probleem\"; het moeilijke probleem is waarom die verwerking gepaard gaat met innerlijke ervaring: waarom \"voelt\" rood zien als iets? Nagel vroeg \"hoe is het om een vleermuis te zijn?\" en zei dat objectieve wetenschap geen toegang heeft tot dat \"hoe het is\"."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "چالمرز (۱۹۹۵): حتی وقتی همهٔ کارکردها (توجه، گزارش، تمایز) توضیح داده شوند، این پرسش می‌ماند که چرا با تجربه همراه‌اند؛ پیشنهاد جنجالی‌اش: آگاهی ویژگی بنیادی طبیعت است (نوعی دوگانگی ویژگی‌ها).",
+    "en": "Chalmers (1995): even when all functions (attention, report, discrimination) are explained, the question remains why they are accompanied by experience; his controversial proposal: consciousness is a fundamental feature of nature (a kind of property dualism).",
+    "nl": "Chalmers (1995): even when all functions (attention, report, discrimination) are explained, the question remains why they are accompanied by experience; his controversial proposal: consciousness is a fundamental feature of nature (a kind of property dualism)."
+   },
+   "sources": [
+    "src:01f21f4eb5"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دنت (۱۹۹۱) مخالف است: «مسئلهٔ دشوار» توهمی است که از شهودهای ما دربارهٔ تجربه می‌آید؛ وقتی همهٔ مسئله‌های آسان حل شوند، چیزی باقی نمی‌ماند. این اختلاف، چهل سال است که حل نشده.",
+    "en": "Dennett (1991) disagrees: the \"hard problem\" is an illusion arising from our intuitions about experience; once all the easy problems are solved, nothing remains. The disagreement has stood unresolved for forty years.",
+    "nl": "Dennett (1991) disagrees: the \"hard problem\" is an illusion arising from our intuitions about experience; once all the easy problems are solved, nothing remains. The disagreement has stood unresolved for forty years."
+   },
+   "sources": [
+    "src:7ac7a18d33"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نیگل (۱۹۷۴): هرقدر دربارهٔ پژواک‌یابی خفاش بدانیم، نمی‌دانیم خفاش بودن از درون چگونه است؛ واقعیت‌های ذهنی به دیدگاه گره خورده‌اند و تقلیل‌گرایی فیزیکی آن‌ها را جا می‌اندازد.",
+    "en": "Nagel (1974): however much we know about bat echolocation, we do not know what being a bat is like from inside; mental facts are tied to a point of view, and physical reductionism leaves them out.",
+    "nl": "Nagel (1974): however much we know about bat echolocation, we do not know what being a bat is like from inside; mental facts are tied to a point of view, and physical reductionism leaves them out."
+   },
+   "sources": [
+    "src:379d80380f"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:phil-mind",
+   "rel": "same-as",
+   "note": {
+    "fa": "فلسفهٔ ذهن در ویکی روان",
+    "en": "Philosophy of mind in the psychology wiki",
+    "nl": "Philosophy of mind in the psychology wiki"
+   }
+  },
+  {
+   "to": "psy:consciousness",
+   "rel": "bridges",
+   "note": {
+    "fa": "هشیاری در روان‌پزشکی",
+    "en": "Consciousness in psychiatry",
+    "nl": "Consciousness in psychiatry"
+   }
+  },
+  {
+   "to": "phil:flying-man",
+   "rel": "see-also",
+   "note": {
+    "fa": "خودآگاهی بدون بدن نزد ابن سینا",
+    "en": "Self-awareness without body in Avicenna",
+    "nl": "Self-awareness without body in Avicenna"
+   }
+  }
+ ],
+ "people": [
+  "core:david-chalmers",
+  "core:thomas-nagel",
+  "core:daniel-dennett"
+ ],
+ "sources": [
+  "src:01f21f4eb5",
+  "src:379d80380f",
+  "src:7ac7a18d33"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

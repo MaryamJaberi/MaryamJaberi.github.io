@@ -1,0 +1,86 @@
+{
+ "id": "phil:ghazali-causation",
+ "kind": "concept",
+ "title": {
+  "fa": "غزالی، ابن رشد و مسئلهٔ علیت",
+  "en": "Al-Ghazali, Averroes and the problem of causation",
+  "nl": "Al-Ghazali, Averroes en het probleem van causaliteit"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "غزالی در «تهافت الفلاسفه» گفت پیوند آتش و سوختن ضروری نیست: فقط «عادت» است و خدا می‌تواند آن را نشکند؛ هفت قرن پیش از هیوم. ابن رشد پاسخ داد که بدون علیت ضروری، علم و حتی زبان فرو می‌ریزد. این مناظره دربارهٔ اینکه آیا علم می‌تواند بدون متافیزیکِ علیت کار کند، امروز هم زنده است.",
+  "en": "In the \"Incoherence of the Philosophers\" al-Ghazali said the link between fire and burning is not necessary: it is mere \"habit\", and God could break it; seven centuries before Hume. Averroes replied that without necessary causation, science and even language collapse. The debate over whether science can work without a metaphysics of causation is alive today.",
+  "nl": "In de \"Incoherentie van de filosofen\" zei al-Ghazali dat de band tussen vuur en verbranden niet noodzakelijk is: het is louter \"gewoonte\", en God kan die verbreken; zeven eeuwen vóór Hume. Averroes antwoordde dat zonder noodzakelijke causaliteit wetenschap en zelfs taal instorten. Het debat of wetenschap kan werken zonder een metafysica van causaliteit leeft vandaag nog."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گریفل (۲۰۰۹): برخلاف تصویر رایج، غزالی دشمن عقل و علم نبود؛ منطق و ریاضی را می‌پذیرفت و نقدش بر فلاسفه متوجه ادعاهای برهان‌ناپذیر متافیزیکی بود. روایت «غزالی علم اسلامی را کشت» را مورخان کنار گذاشته‌اند.",
+    "en": "Griffel (2009): contrary to the common picture, al-Ghazali was no enemy of reason or science; he accepted logic and mathematics, and his critique of the philosophers targeted indemonstrable metaphysical claims. Historians have abandoned the story that \"al-Ghazali killed Islamic science\".",
+    "nl": "Griffel (2009): contrary to the common picture, al-Ghazali was no enemy of reason or science; he accepted logic and mathematics, and his critique of the philosophers targeted indemonstrable metaphysical claims. Historians have abandoned the story that \"al-Ghazali killed Islamic science\"."
+   },
+   "sources": [
+    "src:aabff6f260"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "آدامسون (۲۰۲۱): محمد زکریای رازی، پزشک و فیلسوف ری، یک قرن پیش از ابن سینا موضعی رادیکال‌تر داشت: عقل برای همهٔ انسان‌ها کافی است و نیازی به مرجعیت نیست؛ تجربه‌گرایی بالینی‌اش (ثبت موردها، آزمودن درمان) او را پیشگام روش علمی در پزشکی می‌کند.",
+    "en": "Adamson (2021): Muhammad ibn Zakariya al-Razi, physician and philosopher of Rayy, held a more radical position a century before Avicenna: reason suffices for all humans and no authority is needed; his clinical empiricism (case records, testing treatments) makes him a pioneer of scientific method in medicine.",
+    "nl": "Adamson (2021): Muhammad ibn Zakariya al-Razi, physician and philosopher of Rayy, held a more radical position a century before Avicenna: reason suffices for all humans and no authority is needed; his clinical empiricism (case records, testing treatments) makes him a pioneer of scientific method in medicine."
+   },
+   "sources": [
+    "src:407de84392"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:skepticism-cogito",
+   "rel": "see-also",
+   "note": {
+    "fa": "هیوم و علیت",
+    "en": "Hume and causation",
+    "nl": "Hume and causation"
+   }
+  },
+  {
+   "to": "phil:falsification",
+   "rel": "bridges",
+   "note": {
+    "fa": "علم بدون یقین",
+    "en": "Science without certainty",
+    "nl": "Science without certainty"
+   }
+  },
+  {
+   "to": "psy:psychiatry-history",
+   "rel": "bridges",
+   "note": {
+    "fa": "رازی در تاریخ پزشکی و روان‌پزشکی",
+    "en": "Razi in the history of medicine and psychiatry",
+    "nl": "Razi in the history of medicine and psychiatry"
+   }
+  }
+ ],
+ "people": [
+  "core:al-ghazali",
+  "core:averroes",
+  "core:david-hume"
+ ],
+ "sources": [
+  "src:407de84392",
+  "src:aabff6f260"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

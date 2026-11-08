@@ -1,0 +1,86 @@
+{
+ "id": "phil:illumination",
+ "kind": "concept",
+ "title": {
+  "fa": "حکمت اشراق و علم حضوری",
+  "en": "Illuminationism and knowledge by presence",
+  "nl": "Illuminationisme en kennis door aanwezigheid"
+ },
+ "aliases": [
+  "Ishraq",
+  "اشراق"
+ ],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "سهروردی دو نوع دانستن را جدا کرد: «علم حصولی» که از راه مفهوم و صورت به چیزی می‌رسد، و «علم حضوری» که بی‌واسطه است: دانستنِ خود، دردِ خود، حالتِ خود. نور استعارهٔ مرکزی اوست: واقعیت درجاتی از نور است و آگاهی خودِ روشنی. امروز این تمایز را با «دانش اول‌شخص» در فلسفهٔ ذهن مقایسه می‌کنند.",
+  "en": "Suhrawardi separated two kinds of knowing: \"knowledge by acquisition\", reaching a thing through concept and form, and \"knowledge by presence\", which is immediate: knowing oneself, one's pain, one's state. Light is his central metaphor: reality is degrees of light and consciousness is luminosity itself. Today the distinction is compared with \"first-person knowledge\" in philosophy of mind.",
+  "nl": "Suhrawardi scheidde twee soorten weten: \"kennis door verwerving\", die een ding bereikt via begrip en vorm, en \"kennis door aanwezigheid\", die onmiddellijk is: zichzelf, zijn pijn, zijn toestand kennen. Licht is zijn centrale metafoor: de werkelijkheid bestaat uit graden van licht en bewustzijn is lichtendheid zelf. Vandaag wordt het onderscheid vergeleken met \"eerstepersoonskennis\" in de filosofie van de geest."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "والبریج (۲۰۰۰): سهروردی خود را احیاگر حکمت ایران باستان و افلاطون می‌دانست و در برابر مشائیان (ابن سینا) ایستاد؛ نقد او بر «تعریف» ارسطویی (هر تعریف به مفاهیمی نیاز دارد که خود تعریف‌ناشده‌اند) پیش‌درآمد بحث‌های مدرن است. در ۳۸ سالگی در حلب به حکم صلاح‌الدین کشته شد.",
+    "en": "Walbridge (2000): Suhrawardi saw himself as reviver of ancient Persian wisdom and of Plato, against the Peripatetics (Avicenna); his critique of Aristotelian \"definition\" (every definition needs concepts that are themselves undefined) anticipates modern debates. He was executed in Aleppo at 38 on Saladin's order.",
+    "nl": "Walbridge (2000): Suhrawardi saw himself as reviver of ancient Persian wisdom and of Plato, against the Peripatetics (Avicenna); his critique of Aristotelian \"definition\" (every definition needs concepts that are themselves undefined) anticipates modern debates. He was executed in Aleppo at 38 on Saladin's order."
+   },
+   "sources": [
+    "src:48c1bb6626"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تمثیل غار افلاطون و نورشناسی سهروردی یک خانواده‌اند: دانستن همچون دیدن در نور. این سنت از راه ملاصدرا تا امروز در حوزه‌های ایران تدریس می‌شود.",
+    "en": "Plato's cave and Suhrawardi's optics of light belong to one family: knowing as seeing in light. Through Mulla Sadra this tradition is taught in Iran's seminaries to this day.",
+    "nl": "Plato's cave and Suhrawardi's optics of light belong to one family: knowing as seeing in light. Through Mulla Sadra this tradition is taught in Iran's seminaries to this day."
+   },
+   "sources": [
+    "src:cb319b234e",
+    "src:48c1bb6626"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:hard-problem",
+   "rel": "bridges",
+   "note": {
+    "fa": "دانش اول‌شخص و مسئلهٔ دشوار",
+    "en": "First-person knowledge and the hard problem",
+    "nl": "First-person knowledge and the hard problem"
+   }
+  },
+  {
+   "to": "phil:substantial-motion",
+   "rel": "see-also",
+   "note": {
+    "fa": "ملاصدرا، وارث اشراق",
+    "en": "Mulla Sadra, heir of Illumination",
+    "nl": "Mulla Sadra, heir of Illumination"
+   }
+  },
+  {
+   "to": "phil:flying-man",
+   "rel": "see-also",
+   "note": {
+    "fa": "ابن سینا",
+    "en": "Avicenna",
+    "nl": "Avicenna"
+   }
+  }
+ ],
+ "people": [
+  "core:suhrawardi"
+ ],
+ "sources": [
+  "src:48c1bb6626",
+  "src:cb319b234e"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

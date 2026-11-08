@@ -1,0 +1,87 @@
+{
+ "id": "phil:stoicism",
+ "kind": "concept",
+ "title": {
+  "fa": "رواقی‌گری: آنچه در اختیار ماست",
+  "en": "Stoicism: what is up to us",
+  "nl": "Stoïcisme: wat in onze macht ligt"
+ },
+ "aliases": [],
+ "parent": "phil:life",
+ "field": "phil:life",
+ "summary": {
+  "fa": "اپیکتتوس: بعضی چیزها در اختیار ماست (داوری‌ها، خواسته‌ها، کنش‌ها) و بعضی نه (بدن، شهرت، دیگران). رنج از این می‌آید که دومی را بخواهیم کنترل کنیم. «آدم‌ها را نه چیزها، که داوری‌شان دربارهٔ چیزها آزار می‌دهد»؛ جمله‌ای که درمان شناختی‌رفتاری مستقیماً از آن زاده شد.",
+  "en": "Epictetus: some things are up to us (judgements, desires, actions) and some are not (body, reputation, others). Suffering comes from trying to control the latter. \"People are disturbed not by things but by their judgements about things\"; a sentence from which cognitive-behavioural therapy directly descends.",
+  "nl": "Epictetus: sommige dingen liggen in onze macht (oordelen, verlangens, handelingen) en sommige niet (lichaam, reputatie, anderen). Lijden komt van het willen beheersen van het tweede. \"Mensen worden niet verstoord door de dingen, maar door hun oordelen over de dingen\"; een zin waaruit de cognitieve gedragstherapie rechtstreeks voortkomt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "رابرتسون (۲۰۱۰): الیس و بک، بنیان‌گذاران درمان شناختی، صراحتاً اپیکتتوس و مارکوس اورلیوس را منبع خود نامیده‌اند؛ «دوگانهٔ کنترل»، «تمرین پیش‌اندیشیِ بدی‌ها» و «نگاه از بالا» معادل‌های مستقیم در CBT دارند.",
+    "en": "Robertson (2010): Ellis and Beck, founders of cognitive therapy, explicitly named Epictetus and Marcus Aurelius as their source; the \"dichotomy of control\", \"premeditation of adversity\" and the \"view from above\" have direct equivalents in CBT.",
+    "nl": "Robertson (2010): Ellis and Beck, founders of cognitive therapy, explicitly named Epictetus and Marcus Aurelius as their source; the \"dichotomy of control\", \"premeditation of adversity\" and the \"view from above\" have direct equivalents in CBT."
+   },
+   "sources": [
+    "src:c8cffc9694"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آدو (۱۹۹۵): فلسفهٔ باستان پیش از آنکه نظریه باشد «تمرین معنوی» و شیوهٔ زندگی بود؛ متن‌ها دفترچهٔ تمرین‌اند نه رساله. رواقی‌گری عامه‌پسند امروز گاهی این بُعد اجتماعی و اخلاقی (عدالت، خویشاوندی همهٔ انسان‌ها) را حذف می‌کند و به «خودیاری» تقلیلش می‌دهد.",
+    "en": "Hadot (1995): ancient philosophy was a \"spiritual exercise\" and way of life before it was theory; the texts are practice notebooks, not treatises. Today's popular Stoicism sometimes drops this social and ethical dimension (justice, the kinship of all humans) and reduces it to \"self-help\".",
+    "nl": "Hadot (1995): ancient philosophy was a \"spiritual exercise\" and way of life before it was theory; the texts are practice notebooks, not treatises. Today's popular Stoicism sometimes drops this social and ethical dimension (justice, the kinship of all humans) and reduces it to \"self-help\"."
+   },
+   "sources": [
+    "src:5834d9b57d",
+    "src:c039c6c9c6"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:reappraisal",
+   "rel": "bridges",
+   "note": {
+    "fa": "بازارزیابی شناختی",
+    "en": "Cognitive reappraisal",
+    "nl": "Cognitive reappraisal"
+   }
+  },
+  {
+   "to": "psy:psychotherapy",
+   "rel": "bridges",
+   "note": {
+    "fa": "روان‌درمانی",
+    "en": "Psychotherapy",
+    "nl": "Psychotherapy"
+   }
+  },
+  {
+   "to": "phil:absurd-meaning",
+   "rel": "contrasts",
+   "note": {
+    "fa": "اگزیستانسیالیسم: معنا ساخته می‌شود",
+    "en": "Existentialism: meaning is made",
+    "nl": "Existentialism: meaning is made"
+   }
+  }
+ ],
+ "people": [
+  "core:epictetus",
+  "core:pierre-hadot"
+ ],
+ "sources": [
+  "src:5834d9b57d",
+  "src:c039c6c9c6",
+  "src:c8cffc9694"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

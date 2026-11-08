@@ -1,0 +1,81 @@
+{
+ "id": "phil:epistemic-injustice",
+ "kind": "concept",
+ "title": {
+  "fa": "بی‌عدالتی معرفتی",
+  "en": "Epistemic injustice",
+  "nl": "Epistemisch onrecht"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "وقتی به حرف کسی به‌خاطر هویتش (زن، جوان، مهاجر، بیمار روانی) کمتر اعتماد می‌شود (بی‌عدالتی شهادتی) یا جامعه هنوز مفهومی برای بیان تجربه‌اش ندارد (بی‌عدالتی هرمنوتیکی؛ مثل «آزار جنسی» پیش از نام‌گذاری‌اش). فریکر دانستن را امری اخلاقی و اجتماعی کرد.",
+  "en": "When someone's word is trusted less because of their identity (woman, young, migrant, psychiatric patient) (testimonial injustice), or society lacks the concept to articulate their experience (hermeneutical injustice; like \"sexual harassment\" before it was named). Fricker made knowing an ethical and social matter.",
+  "nl": "Wanneer iemands woord minder wordt vertrouwd vanwege diens identiteit (vrouw, jong, migrant, psychiatrisch patiënt) (getuigenisonrecht), of de samenleving het begrip mist om diens ervaring te verwoorden (hermeneutisch onrecht; zoals \"seksuele intimidatie\" vóór die naam bestond). Fricker maakte van weten een ethische en sociale zaak."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فریکر (۲۰۰۷): بی‌عدالتی شهادتی هم به شنونده آسیب می‌زند (دانشی را از دست می‌دهد) هم به گوینده (در مقام دانندهٔ انسانی تحقیر می‌شود)؛ فضیلت لازم «عدالت شهادتی» است: اصلاح آگاهانهٔ پیش‌داوری در باورپذیری.",
+    "en": "Fricker (2007): testimonial injustice harms the hearer (who loses knowledge) and the speaker (demeaned as a human knower); the needed virtue is \"testimonial justice\": consciously correcting prejudice in credibility.",
+    "nl": "Fricker (2007): testimonial injustice harms the hearer (who loses knowledge) and the speaker (demeaned as a human knower); the needed virtue is \"testimonial justice\": consciously correcting prejudice in credibility."
+   },
+   "sources": [
+    "src:24f7ea1e01"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاربرد بالینی: گزارش درد و علائم بیماران زن و بیماران روان‌پزشکی به‌طور نظام‌مند کمتر جدی گرفته می‌شود؛ این مفهوم در اخلاق پزشکی و روان‌پزشکی پرکاربرد شده است.",
+    "en": "Clinical use: women's and psychiatric patients' reports of pain and symptoms are systematically taken less seriously; the concept has become widely used in medical and psychiatric ethics.",
+    "nl": "Clinical use: women's and psychiatric patients' reports of pain and symptoms are systematically taken less seriously; the concept has become widely used in medical and psychiatric ethics."
+   },
+   "sources": [
+    "src:24f7ea1e01"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:dehumanization",
+   "rel": "bridges",
+   "note": {
+    "fa": "انسان‌زدایی",
+    "en": "Dehumanization",
+    "nl": "Dehumanization"
+   }
+  },
+  {
+   "to": "psy:phil-psychiatry",
+   "rel": "bridges",
+   "note": {
+    "fa": "فلسفهٔ روان‌پزشکی",
+    "en": "Philosophy of psychiatry",
+    "nl": "Philosophy of psychiatry"
+   }
+  },
+  {
+   "to": "soc:social-construction",
+   "rel": "bridges",
+   "note": {
+    "fa": "مفاهیمی که جامعه می‌سازد",
+    "en": "Concepts a society makes",
+    "nl": "Concepts a society makes"
+   }
+  }
+ ],
+ "people": [
+  "core:miranda-fricker"
+ ],
+ "sources": [
+  "src:24f7ea1e01"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

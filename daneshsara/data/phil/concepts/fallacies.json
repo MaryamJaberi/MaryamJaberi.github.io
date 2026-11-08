@@ -1,0 +1,79 @@
+{
+ "id": "phil:fallacies",
+ "kind": "concept",
+ "title": {
+  "fa": "مغالطه‌ها و استدلال غیررسمی",
+  "en": "Fallacies and informal reasoning",
+  "nl": "Drogredenen en informeel redeneren"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "حمله به شخص به جای استدلال، مرد پوشالی، شیب لغزنده، توسل به طبیعت یا سنت، دوگانهٔ کاذب، مصادره به مطلوب. دانستن نام مغالطه‌ها مفید است، ولی والتون هشدار می‌دهد: بسیاری از این الگوها در بافت مناسب استدلال‌های معقولی‌اند؛ «مغالطه» بودن به بافت گفت‌وگو بستگی دارد نه به شکل.",
+  "en": "Attacking the person instead of the argument, straw man, slippery slope, appeal to nature or tradition, false dilemma, begging the question. Knowing the names is useful, but Walton warns: many of these patterns are reasonable arguments in the right context; being a \"fallacy\" depends on the dialogue context, not the form.",
+  "nl": "De persoon aanvallen in plaats van het argument, stroman, hellend vlak, beroep op natuur of traditie, vals dilemma, cirkelredenering. De namen kennen is nuttig, maar Walton waarschuwt: veel van deze patronen zijn in de juiste context redelijke argumenten; \"drogreden\" zijn hangt af van de gesprekscontext, niet van de vorm."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "والتون (۲۰۰۸): «توسل به مرجع» وقتی مرجع واقعاً متخصص موضوع است استدلال معتبری است؛ «شیب لغزنده» وقتی سازوکار لغزش نشان داده شود معقول است. فهرست مغالطه‌ها را باید به‌عنوان پرسش‌های انتقادی خواند، نه برچسب‌های خاتمه‌دهندهٔ بحث.",
+    "en": "Walton (2008): \"appeal to authority\" is a valid argument when the authority is actually expert on the matter; \"slippery slope\" is reasonable when the mechanism of slipping is shown. Read the list of fallacies as critical questions, not as debate-ending labels.",
+    "nl": "Walton (2008): \"appeal to authority\" is a valid argument when the authority is actually expert on the matter; \"slippery slope\" is reasonable when the mechanism of slipping is shown. Read the list of fallacies as critical questions, not as debate-ending labels."
+   },
+   "sources": [
+    "src:c3b2b1faf9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شایع‌ترین مغالطه در بحث‌های عمومی، «مغالطهٔ مغالطه» است: تصور اینکه چون استدلالِ کسی معیوب است، نتیجه‌اش غلط است.",
+    "en": "The commonest fallacy in public debate is the \"fallacy fallacy\": assuming that because someone's argument is flawed, their conclusion is false.",
+    "nl": "The commonest fallacy in public debate is the \"fallacy fallacy\": assuming that because someone's argument is flawed, their conclusion is false."
+   },
+   "sources": [
+    "src:c3b2b1faf9"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:critical-thinking",
+   "rel": "same-as",
+   "note": {
+    "fa": "تفکر نقادانه در ویکی روان",
+    "en": "Critical thinking in the psychology wiki",
+    "nl": "Critical thinking in the psychology wiki"
+   }
+  },
+  {
+   "to": "psy:bullshit",
+   "rel": "bridges",
+   "note": {
+    "fa": "حرف مفت",
+    "en": "Bullshit",
+    "nl": "Bullshit"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "bridges",
+   "note": {
+    "fa": "توطئه‌باوری",
+    "en": "Conspiracy beliefs",
+    "nl": "Conspiracy beliefs"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:c3b2b1faf9"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

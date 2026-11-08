@@ -1,0 +1,81 @@
+{
+ "id": "phil:personal-identity",
+ "kind": "concept",
+ "title": {
+  "fa": "هویت شخصی: من کیستم که همان می‌مانم؟",
+  "en": "Personal identity",
+  "nl": "Persoonlijke identiteit"
+ },
+ "aliases": [],
+ "parent": "phil:mind",
+ "field": "phil:mind",
+ "summary": {
+  "fa": "هر سلول بدن عوض می‌شود، خاطرات محو می‌شوند، شخصیت تغییر می‌کند؛ چه چیزی «من» بیست‌ساله را با من شصت‌ساله یکی می‌کند؟ پارفیت با آزمایش‌های فکری (دورنوردی، تقسیم مغز) نتیجه گرفت هویت آن چیزی نیست که مهم است؛ پیوستگی روانی است، و درجه‌پذیر.",
+  "en": "Every cell is replaced, memories fade, character changes; what makes the twenty-year-old \"me\" the same as the sixty-year-old? Parfit, with thought experiments (teleportation, brain splitting), concluded identity is not what matters; psychological continuity is, and it comes in degrees.",
+  "nl": "Elke cel wordt vervangen, herinneringen vervagen, karakter verandert; wat maakt de twintigjarige \"ik\" dezelfde als de zestigjarige? Parfit concludeerde met gedachte-experimenten (teleportatie, hersensplitsing) dat identiteit niet is wat ertoe doet; psychologische continuïteit wel, en die kent gradaties."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پارفیت (۱۹۸۴): اگر هر نیم‌کرهٔ مغز من به بدنی دیگر پیوند زده شود، کدام یک «من» است؟ هیچ پاسخی بهتر از دیگری نیست؛ پس پرسش هویت پاسخ تعین‌یافته ندارد و باید جایش را به پرسش «چقدر پیوستگی» بدهد.",
+    "en": "Parfit (1984): if each hemisphere of my brain were transplanted into another body, which is \"me\"? No answer is better than another; so the identity question has no determinate answer and should give way to \"how much continuity\".",
+    "nl": "Parfit (1984): if each hemisphere of my brain were transplanted into another body, which is \"me\"? No answer is better than another; so the identity question has no determinate answer and should give way to \"how much continuity\"."
+   },
+   "sources": [
+    "src:3adcfbbaf4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیامد اخلاقی که پارفیت می‌گیرد: مرز میان من و دیگران کم‌رنگ‌تر از آن است که فکر می‌کنیم؛ خودِ آینده‌ام کمی شبیه یک «دیگری» است، و این هم خودخواهی را سست می‌کند هم ترس از مرگ را.",
+    "en": "The ethical consequence Parfit draws: the boundary between me and others is thinner than we think; my future self is a little like \"someone else\", which loosens both selfishness and the fear of death.",
+    "nl": "The ethical consequence Parfit draws: the boundary between me and others is thinner than we think; my future self is a little like \"someone else\", which loosens both selfishness and the fear of death."
+   },
+   "sources": [
+    "src:3adcfbbaf4"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:delay-gratification",
+   "rel": "bridges",
+   "note": {
+    "fa": "خودِ آینده و تعویق لذت",
+    "en": "The future self and delayed gratification",
+    "nl": "The future self and delayed gratification"
+   }
+  },
+  {
+   "to": "phil:substantial-motion",
+   "rel": "see-also",
+   "note": {
+    "fa": "حرکت جوهری: نفسی که دائم می‌شود",
+    "en": "Substantial motion: a self in constant becoming",
+    "nl": "Substantial motion: a self in constant becoming"
+   }
+  },
+  {
+   "to": "psy:depersonalization",
+   "rel": "bridges",
+   "note": {
+    "fa": "مسخ شخصیت",
+    "en": "Depersonalization",
+    "nl": "Depersonalization"
+   }
+  }
+ ],
+ "people": [
+  "core:derek-parfit"
+ ],
+ "sources": [
+  "src:3adcfbbaf4"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,94 @@
+{
+ "id": "phil:falsification",
+ "kind": "concept",
+ "title": {
+  "fa": "ابطال‌پذیری",
+  "en": "Falsifiability",
+  "nl": "Falsifieerbaarheid"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "پوپر: علم با اثبات پیش نمی‌رود، با رد شدن. نظریه‌ای علمی است که بگوید چه مشاهده‌ای آن را غلط می‌کند؛ نظریه‌ای که همه‌چیز را توضیح می‌دهد (طالع‌بینی، و به گفتهٔ پوپر روان‌کاوی و مارکسیسم) چیزی نمی‌گوید. معیاری قدرتمند که خودش هم ایرادهای جدی دارد.",
+  "en": "Popper: science advances not by proof but by refutation. A theory is scientific if it says what observation would make it false; a theory that explains everything (astrology, and in Popper's view psychoanalysis and Marxism) says nothing. A powerful criterion that itself has serious problems.",
+  "nl": "Popper: wetenschap gaat vooruit niet door bewijs maar door weerlegging. Een theorie is wetenschappelijk als ze zegt welke waarneming haar onwaar zou maken; een theorie die alles verklaart (astrologie, en volgens Popper psychoanalyse en marxisme) zegt niets. Een krachtig criterium dat zelf ook ernstige problemen kent."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پوپر (۱۹۳۴/۱۹۵۹): هزار قوی سفید «همهٔ قوها سفیدند» را اثبات نمی‌کند، یک قوی سیاه آن را رد می‌کند؛ پس پاسخ هیوم به استقرا این است که علم اصلاً استقرایی نیست: حدس‌های جسورانه و تلاش برای ابطالشان.",
+    "en": "Popper (1934/1959): a thousand white swans do not prove \"all swans are white\", one black swan refutes it; so the answer to Hume on induction is that science is not inductive at all: bold conjectures and attempts to refute them.",
+    "nl": "Popper (1934/1959): a thousand white swans do not prove \"all swans are white\", one black swan refutes it; so the answer to Hume on induction is that science is not inductive at all: bold conjectures and attempts to refute them."
+   },
+   "sources": [
+    "src:78f5fd2e09"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کواین (۱۹۵۱) و تز دوئم: هیچ فرضیه‌ای تنها آزمایش نمی‌شود؛ همیشه با فرض‌های کمکی (ابزار، شرایط) همراه است، پس یک مشاهدهٔ ناقض می‌گوید «جایی اشتباه است» نه «کجا». دانشمندان در عمل نظریهٔ خوب را با یک ناهنجاری رها نمی‌کنند، و حق دارند.",
+    "en": "Quine (1951) and the Duhem thesis: no hypothesis is tested alone; it always comes with auxiliary assumptions (instruments, conditions), so a refuting observation says \"something is wrong\" not \"where\". In practice scientists do not drop a good theory over one anomaly, and rightly so.",
+    "nl": "Quine (1951) and the Duhem thesis: no hypothesis is tested alone; it always comes with auxiliary assumptions (instruments, conditions), so a refuting observation says \"something is wrong\" not \"where\". In practice scientists do not drop a good theory over one anomaly, and rightly so."
+   },
+   "sources": [
+    "src:3215a4a8ec"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاربرد امروزی: پیش‌ثبت فرضیه‌ها در پاسخ به بحران تکرارپذیری، در واقع ابطال‌پذیری را دوباره الزامی می‌کند: پیش از دیدن داده بگو چه نتیجه‌ای فرضیه‌ات را رد می‌کند.",
+    "en": "Current use: preregistration of hypotheses in response to the replication crisis effectively makes falsifiability obligatory again: before seeing the data, say what result would refute your hypothesis.",
+    "nl": "Current use: preregistration of hypotheses in response to the replication crisis effectively makes falsifiability obligatory again: before seeing the data, say what result would refute your hypothesis."
+   },
+   "sources": [
+    "src:78f5fd2e09"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:phil-science",
+   "rel": "same-as",
+   "note": {
+    "fa": "فلسفهٔ علم در ویکی روان",
+    "en": "Philosophy of science in the psychology wiki",
+    "nl": "Philosophy of science in the psychology wiki"
+   }
+  },
+  {
+   "to": "psy:replication-crisis",
+   "rel": "bridges",
+   "note": {
+    "fa": "بحران تکرارپذیری",
+    "en": "The replication crisis",
+    "nl": "The replication crisis"
+   }
+  },
+  {
+   "to": "phil:paradigms",
+   "rel": "contrasts",
+   "note": {
+    "fa": "کوهن: علم عادی ابطال نمی‌کند",
+    "en": "Kuhn: normal science does not refute",
+    "nl": "Kuhn: normal science does not refute"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-popper",
+  "core:w-v-o-quine"
+ ],
+ "sources": [
+  "src:3215a4a8ec",
+  "src:78f5fd2e09"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

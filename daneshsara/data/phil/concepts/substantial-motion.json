@@ -1,0 +1,86 @@
+{
+ "id": "phil:substantial-motion",
+ "kind": "concept",
+ "title": {
+  "fa": "حرکت جوهری ملاصدرا",
+  "en": "Mulla Sadra's substantial motion",
+  "nl": "Mulla Sadra's substantiële beweging"
+ },
+ "aliases": [
+  "حکمت متعالیه",
+  "Transcendent philosophy"
+ ],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "ارسطوییان می‌گفتند حرکت فقط در عَرَض‌هاست (رنگ، جا، اندازه) و جوهر ثابت می‌ماند. ملاصدرا گفت خود جوهر دائم در حرکت و «شدن» است؛ هستی اصیل و درجه‌پذیر است («تشکیک وجود») و نفس انسان «جسمانیة الحدوث، روحانیة البقاء»: از بدن برمی‌خیزد و در سیر خود مجرد می‌شود. تصویری پویا از خود که با هویت شخصی پارفیت و نوروپلاستیسیته گفت‌وگو می‌کند.",
+  "en": "Aristotelians held that motion occurs only in accidents (colour, place, size) while substance stays fixed. Mulla Sadra said substance itself is in constant motion and \"becoming\"; existence is primary and graded (\"modulation of being\"), and the human soul is \"bodily in origin, spiritual in survival\": it arises from the body and becomes immaterial along its journey. A dynamic picture of the self in dialogue with Parfit's personal identity and neuroplasticity.",
+  "nl": "Aristotelici meenden dat beweging alleen in accidenten plaatsvindt (kleur, plaats, grootte) terwijl de substantie vast blijft. Mulla Sadra zei dat de substantie zelf voortdurend in beweging en \"wording\" is; het zijn is primair en gradueel (\"modulatie van het zijn\"), en de menselijke ziel is \"lichamelijk in oorsprong, geestelijk in voortbestaan\": ze ontstaat uit het lichaam en wordt onderweg immaterieel. Een dynamisch beeld van het zelf dat in gesprek is met Parfits persoonlijke identiteit en neuroplasticiteit."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ریزوی (۲۰۰۹): «اصالت وجود» ملاصدرا یعنی آنچه واقعی است وجود است نه ماهیت، و وجود یک حقیقت واحد با شدت و ضعف است؛ این متافیزیک به او اجازه داد تغییر پیوستهٔ جوهر را بی‌تناقض بیندیشد.",
+    "en": "Rizvi (2009): Sadra's \"primacy of existence\" means what is real is existence not essence, and existence is one reality with intensity and weakness; this metaphysics let him think continuous substantial change without contradiction.",
+    "nl": "Rizvi (2009): Sadra's \"primacy of existence\" means what is real is existence not essence, and existence is one reality with intensity and weakness; this metaphysics let him think continuous substantial change without contradiction."
+   },
+   "sources": [
+    "src:60f242a8cf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حکمت متعالیه برنامهٔ درسی فلسفهٔ اسلامی در ایران معاصر را شکل داده (از طباطبایی و مطهری تا امروز)؛ خواندن انتقادی آن در کنار فلسفهٔ ذهن تحلیلی، پروژه‌ای است که تازه آغاز شده.",
+    "en": "The Transcendent Philosophy has shaped the curriculum of Islamic philosophy in contemporary Iran (from Tabataba'i and Motahhari to today); reading it critically alongside analytic philosophy of mind is a project only just begun.",
+    "nl": "The Transcendent Philosophy has shaped the curriculum of Islamic philosophy in contemporary Iran (from Tabataba'i and Motahhari to today); reading it critically alongside analytic philosophy of mind is a project only just begun."
+   },
+   "sources": [
+    "src:60f242a8cf"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:personal-identity",
+   "rel": "bridges",
+   "note": {
+    "fa": "هویت شخصی و پیوستگی",
+    "en": "Personal identity and continuity",
+    "nl": "Personal identity and continuity"
+   }
+  },
+  {
+   "to": "psy:n-plasticity",
+   "rel": "bridges",
+   "note": {
+    "fa": "انعطاف‌پذیری مغز",
+    "en": "Neuroplasticity",
+    "nl": "Neuroplasticity"
+   }
+  },
+  {
+   "to": "phil:illumination",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "اشراق",
+    "en": "Illumination",
+    "nl": "Illumination"
+   }
+  }
+ ],
+ "people": [
+  "core:mulla-sadra"
+ ],
+ "sources": [
+  "src:60f242a8cf"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

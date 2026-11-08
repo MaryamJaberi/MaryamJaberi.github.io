@@ -1,0 +1,96 @@
+{
+ "id": "phil:skepticism-cogito",
+ "kind": "concept",
+ "title": {
+  "fa": "شک دکارتی و «می‌اندیشم»",
+  "en": "Cartesian doubt and the cogito",
+  "nl": "Cartesiaanse twijfel en het cogito"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "دکارت برای یافتن چیزی تردیدناپذیر در همه‌چیز شک کرد: حواس، ریاضی، حتی وجود جهان (شاید شیطانی فریبم می‌دهد). یک چیز ماند: اینکه شک می‌کنم. از این‌جا دوگانگی ذهن و بدن زاده شد که فلسفهٔ ذهن هنوز با آن درگیر است.",
+  "en": "To find something indubitable Descartes doubted everything: the senses, mathematics, even the world's existence (perhaps a demon deceives me). One thing remained: that I doubt. From here mind–body dualism was born, with which philosophy of mind still wrestles.",
+  "nl": "Om iets onbetwijfelbaars te vinden betwijfelde Descartes alles: de zintuigen, de wiskunde, zelfs het bestaan van de wereld (misschien bedriegt een demon mij). Eén ding bleef: dat ik twijfel. Hieruit werd het lichaam-geestdualisme geboren, waarmee de filosofie van de geest nog worstelt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دکارت (۱۶۴۱): «می‌اندیشم، پس هستم» نه یک استدلال، که یک شهود است: هر بار که به آن فکر کنم، صادق است. از همین نقطه می‌خواست خدا، جهان و علم را دوباره بسازد؛ منتقدان گفتند از «اندیشه‌ای هست» به «منی هست» پریده است.",
+    "en": "Descartes (1641): \"I think, therefore I am\" is not an argument but an intuition: each time I think it, it is true. From this point he wanted to rebuild God, world and science; critics said he jumped from \"there is thinking\" to \"there is an I\".",
+    "nl": "Descartes (1641): \"I think, therefore I am\" is not an argument but an intuition: each time I think it, it is true. From this point he wanted to rebuild God, world and science; critics said he jumped from \"there is thinking\" to \"there is an I\"."
+   },
+   "sources": [
+    "src:cf48c80531"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هیوم (۱۷۴۸): شک معتدل‌تر و ماندگارتر: علیت را هرگز مشاهده نمی‌کنیم، فقط توالی را؛ استقرا (فردا هم خورشید طلوع می‌کند) هیچ توجیه عقلی ندارد و فقط «عادت» است. علم روی این شکاف بنا شده و پوپر پاسخش را با ابطال‌پذیری داد.",
+    "en": "Hume (1748): a milder, more lasting scepticism: we never observe causation, only succession; induction (the sun will rise tomorrow) has no rational justification and is mere \"custom\". Science is built over this gap, and Popper answered it with falsifiability.",
+    "nl": "Hume (1748): a milder, more lasting scepticism: we never observe causation, only succession; induction (the sun will rise tomorrow) has no rational justification and is mere \"custom\". Science is built over this gap, and Popper answered it with falsifiability."
+   },
+   "sources": [
+    "src:25045a0b50"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شش قرن پیش از دکارت، ابن سینا با «انسان معلق» استدلال مشابهی کرده بود: ببینید مدخل انسان معلق.",
+    "en": "Six centuries before Descartes, Avicenna had made a similar argument with the \"floating man\": see that entry.",
+    "nl": "Six centuries before Descartes, Avicenna had made a similar argument with the \"floating man\": see that entry."
+   },
+   "sources": [
+    "src:fceff29ae7"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:flying-man",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیشینهٔ ایرانی",
+    "en": "The Iranian precedent",
+    "nl": "The Iranian precedent"
+   }
+  },
+  {
+   "to": "phil:falsification",
+   "rel": "see-also",
+   "note": {
+    "fa": "پاسخ پوپر به مسئلهٔ استقرا",
+    "en": "Popper's answer to the problem of induction",
+    "nl": "Popper's answer to the problem of induction"
+   }
+  },
+  {
+   "to": "phil:hard-problem",
+   "rel": "explains",
+   "note": {
+    "fa": "ریشهٔ دوگانگی ذهن و بدن",
+    "en": "The root of mind–body dualism",
+    "nl": "The root of mind–body dualism"
+   }
+  }
+ ],
+ "people": [
+  "core:descartes",
+  "core:david-hume",
+  "core:avicenna"
+ ],
+ "sources": [
+  "src:25045a0b50",
+  "src:cf48c80531",
+  "src:fceff29ae7"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

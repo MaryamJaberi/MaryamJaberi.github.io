@@ -1,0 +1,82 @@
+{
+ "id": "phil:gettier",
+ "kind": "concept",
+ "title": {
+  "fa": "مسئلهٔ گتیه: دانستن فقط باور صادق موجه نیست",
+  "en": "The Gettier problem",
+  "nl": "Het Gettier-probleem"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "دو هزار سال تعریف دانش «باور صادقِ موجه» بود. گتیه در سه صفحه نشان داد می‌شود باوری موجه و صادق داشت که از روی شانس درست درآمده و دانش نیست. از آن پس معرفت‌شناسی دنبال «جزء چهارم» است.",
+  "en": "For two thousand years knowledge was defined as \"justified true belief\". In three pages Gettier showed one can have a belief that is justified and true but right by luck, and not knowledge. Epistemology has sought the \"fourth condition\" ever since.",
+  "nl": "Tweeduizend jaar lang was kennis \"gerechtvaardigde ware overtuiging\". In drie pagina's toonde Gettier dat men een overtuiging kan hebben die gerechtvaardigd en waar is, maar door toeval klopt, en geen kennis is. Sindsdien zoekt de kennistheorie de \"vierde voorwaarde\"."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گتیه (۱۹۶۳): اسمیت شواهد قوی دارد که جونز شغل را می‌گیرد و ده سکه در جیب دارد؛ نتیجه می‌گیرد «کسی که شغل را می‌گیرد ده سکه در جیب دارد». شغل را خودش می‌گیرد و اتفاقاً ده سکه در جیب دارد. باورش صادق و موجه است، اما دانش نیست.",
+    "en": "Gettier (1963): Smith has strong evidence that Jones will get the job and has ten coins in his pocket; he infers \"the man who gets the job has ten coins in his pocket\". Smith himself gets the job and happens to have ten coins. His belief is true and justified, but not knowledge.",
+    "nl": "Gettier (1963): Smith has strong evidence that Jones will get the job and has ten coins in his pocket; he infers \"the man who gets the job has ten coins in his pocket\". Smith himself gets the job and happens to have ten coins. His belief is true and justified, but not knowledge."
+   },
+   "sources": [
+    "src:7cf7e49835"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاربرد روزمره: درست درآمدنِ یک پیش‌بینی ثابت نمی‌کند پیش‌بینی‌کننده می‌دانست؛ باید پرسید آیا راهی که به باور رسید با صدقش پیوند داشت یا شانسی بود (مسئلهٔ «پیش‌گوهای موفق» و «تحلیل‌گران بورس»).",
+    "en": "Everyday use: a prediction coming true does not show the predictor knew; ask whether the route to the belief was connected to its truth or lucky (the problem of \"successful seers\" and \"stock analysts\").",
+    "nl": "Everyday use: a prediction coming true does not show the predictor knew; ask whether the route to the belief was connected to its truth or lucky (the problem of \"successful seers\" and \"stock analysts\")."
+   },
+   "sources": [
+    "src:7cf7e49835"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:epistemology",
+   "rel": "bridges",
+   "note": {
+    "fa": "معرفت‌شناسی و شک‌ورزی در ویکی روان",
+    "en": "Epistemology and scepticism in the psychology wiki",
+    "nl": "Epistemology and scepticism in the psychology wiki"
+   }
+  },
+  {
+   "to": "psy:critical-thinking",
+   "rel": "bridges",
+   "note": {
+    "fa": "تفکر نقادانه",
+    "en": "Critical thinking",
+    "nl": "Critical thinking"
+   }
+  },
+  {
+   "to": "phil:epistemic-injustice",
+   "rel": "see-also",
+   "note": {
+    "fa": "بعد اجتماعی دانستن",
+    "en": "The social dimension of knowing",
+    "nl": "The social dimension of knowing"
+   }
+  }
+ ],
+ "people": [
+  "core:edmund-gettier",
+  "core:plato"
+ ],
+ "sources": [
+  "src:7cf7e49835"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,110 @@
+{
+ "id": "phil:three-theories",
+ "kind": "concept",
+ "title": {
+  "fa": "سه نظریهٔ بزرگ اخلاق",
+  "en": "The three great moral theories",
+  "nl": "De drie grote morele theorieën"
+ },
+ "aliases": [],
+ "parent": "phil:ethics",
+ "field": "phil:ethics",
+ "summary": {
+  "fa": "پیامدگرایی (میل): کار درست آن است که بیشترین خیر را برای بیشترین افراد بیاورد. وظیفه‌گرایی (کانت): طوری عمل کن که بتوانی بخواهی قاعده‌ات قانون همگانی شود، و انسان را هرگز صرفاً وسیله قرار نده. اخلاق فضیلت (ارسطو): بپرس آدم خوب در این موقعیت چه می‌کرد. هر سه در جایی شکست می‌خورند و همین است که بحث زنده مانده.",
+  "en": "Consequentialism (Mill): the right act brings the greatest good to the greatest number. Deontology (Kant): act so you could will your maxim to be universal law, and never treat a person merely as a means. Virtue ethics (Aristotle): ask what a good person would do here. Each fails somewhere, which is why the debate lives.",
+  "nl": "Consequentialisme (Mill): de juiste daad brengt het grootste goed voor de meesten. Plichtethiek (Kant): handel zo dat je kunt willen dat je maxime een algemene wet wordt, en behandel een mens nooit louter als middel. Deugdethiek (Aristoteles): vraag wat een goed mens hier zou doen. Elk faalt ergens, en daarom leeft het debat."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "میل (۱۸۶۱): فایده را با کیفیت لذت‌ها می‌سنجد («سقراط ناراضی بهتر از خوک راضی»)؛ ایراد کلاسیک: اگر قربانی کردن یک بی‌گناه خوشبختی کل را بیشتر کند، پیامدگرایی ساده آن را تجویز می‌کند.",
+    "en": "Mill (1861): weighs utility by the quality of pleasures (\"better Socrates dissatisfied than a pig satisfied\"); the classic objection: if sacrificing an innocent raises total happiness, simple consequentialism prescribes it.",
+    "nl": "Mill (1861): weighs utility by the quality of pleasures (\"better Socrates dissatisfied than a pig satisfied\"); the classic objection: if sacrificing an innocent raises total happiness, simple consequentialism prescribes it."
+   },
+   "sources": [
+    "src:b73de9ad07"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کانت (۱۷۸۵): ارزش اخلاقی در نیت و از روی وظیفه عمل کردن است، نه نتیجه؛ ایراد کلاسیک: دروغ نگفتن حتی به قاتلی که سراغ دوستت را می‌گیرد.",
+    "en": "Kant (1785): moral worth lies in the will and acting from duty, not in outcomes; the classic objection: not lying even to the murderer asking where your friend is.",
+    "nl": "Kant (1785): moral worth lies in the will and acting from duty, not in outcomes; the classic objection: not lying even to the murderer asking where your friend is."
+   },
+   "sources": [
+    "src:d6e60b5165"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارسطو: فضیلت حد وسط میان دو رذیلت است (شجاعت میان ترسویی و بی‌باکی) و با عادت و تمرین به دست می‌آید؛ ایراد: برای تصمیم‌های تازه راهنمای روشنی نمی‌دهد. روان‌شناسی مثبت و «نقاط قوت شخصیت» از این سنت می‌آیند.",
+    "en": "Aristotle: virtue is the mean between two vices (courage between cowardice and recklessness) and is acquired by habit and practice; objection: it gives little clear guidance for novel decisions. Positive psychology and \"character strengths\" come from this tradition.",
+    "nl": "Aristotle: virtue is the mean between two vices (courage between cowardice and recklessness) and is acquired by habit and practice; objection: it gives little clear guidance for novel decisions. Positive psychology and \"character strengths\" come from this tradition."
+   },
+   "sources": [
+    "src:ca301d84b7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سینگر (۱۹۷۲): اگر می‌توانی جلوی بدی بزرگی را بگیری بی‌آنکه چیزی با اهمیت اخلاقی مشابه را از دست بدهی، باید بگیری؛ کودکی که در برکه غرق می‌شود با کودکی در قاره‌ای دیگر فرقی ندارد. استدلالی که جنبش «نوع‌دوستی مؤثر» را ساخت.",
+    "en": "Singer (1972): if you can prevent something very bad without sacrificing anything of comparable moral importance, you ought to; a child drowning in a pond is no different from a child on another continent. The argument that built the \"effective altruism\" movement.",
+    "nl": "Singer (1972): if you can prevent something very bad without sacrificing anything of comparable moral importance, you ought to; a child drowning in a pond is no different from a child on another continent. The argument that built the \"effective altruism\" movement."
+   },
+   "sources": [
+    "src:b8f9ac2eac"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:trolley",
+   "rel": "applies-to",
+   "note": {
+    "fa": "آزمون نظریه‌ها با معماها",
+    "en": "Testing the theories with dilemmas",
+    "nl": "Testing the theories with dilemmas"
+   }
+  },
+  {
+   "to": "psy:p-positive",
+   "rel": "bridges",
+   "note": {
+    "fa": "روان‌شناسی مثبت و فضیلت",
+    "en": "Positive psychology and virtue",
+    "nl": "Positive psychology and virtue"
+   }
+  },
+  {
+   "to": "phil:moral-luck",
+   "rel": "critiques",
+   "note": {
+    "fa": "بخت اخلاقی هر سه را به چالش می‌کشد",
+    "en": "Moral luck challenges all three",
+    "nl": "Moral luck challenges all three"
+   }
+  }
+ ],
+ "people": [
+  "core:john-stuart-mill",
+  "core:kant",
+  "core:aristotle"
+ ],
+ "sources": [
+  "src:b73de9ad07",
+  "src:b8f9ac2eac",
+  "src:ca301d84b7",
+  "src:d6e60b5165"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
