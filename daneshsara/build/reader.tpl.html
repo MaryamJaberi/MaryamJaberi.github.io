@@ -44,6 +44,7 @@ article.detail .lead{font-size:1.1rem;line-height:1.9;margin:0}
 .flag.unreplicated{color:#8A2E2E;border-color:#E3B4B4;background:#FBEDED}
 .flag.contested{color:#6B4E00;border-color:#E8D39A;background:#FBF1D9}
 .flag.dated{color:var(--ink-2);border-color:var(--line-strong)}
+.ev{font-size:var(--chip);padding:1px 8px;border-radius:var(--r-full);border:1px solid var(--line-strong);color:var(--ink-2)} .ev.t1{border-color:#2F7D4F;color:#2F7D4F} .ev.t2{border-color:#3C6EA8;color:#3C6EA8} .ev.t3{border-color:#8A6D1D;color:#8A6D1D} .ev.t4,.ev.t0{border-color:#8A2E2E;color:#8A2E2E}
 .flag.editor-note{color:var(--primary);border-color:var(--primary)}
 h2.sec{font-size:var(--small);color:var(--ink-2);font-weight:600;margin:var(--s2) 0 0;text-transform:uppercase;letter-spacing:.04em}
 .links{display:grid;gap:6px}
@@ -79,13 +80,13 @@ const D = __DATA__;
 const UI = {
  fa:{home:"خانه",foot:"این ویکی روی هستهٔ مشترک دانش‌سرا ساخته شده؛ هر گزاره منبع دارد و پرچم‌های «تکرارنشده»، «محل بحث» و «یادداشت سردبیر» وضعیت شواهد را نشان می‌دهند. همهٔ صفحه‌ها تا بازبینی کارشناس «پیش‌نویس»اند.",draft:"پیش‌نویس — در انتظار بازبینی کارشناس",reviewed:"بازبینی‌شده",expert:"تأیید کارشناس",search:"جست‌وجو در این ویکی…",all:"همه",back:"‹ همهٔ مدخل‌ها",points:"گزاره‌ها",links:"پیوندها",people:"چهره‌ها",iran:"برای ایران",sources:"منابع",grade:"ردهٔ داده",contested:"محل بحث",critique:"نقد",method:"روش",concepts:"مدخل",
   rel:{"part-of":"بخشی از","explains":"توضیح می‌دهد","evidence-for":"شاهدِ","evidence-against":"شاهد علیه","contrasts":"در برابر","prerequisite":"پیش‌نیاز","same-as":"همان","applies-to":"کاربرد در","measured-by":"سنجش با","critiques":"نقد","bridges":"پل به","see-also":"ببینید"},
-  flag:{"unreplicated":"تکرارنشده","contested":"محل بحث","dated":"قدیمی","editor-note":"یادداشت سردبیر"},tier:"ردهٔ منبع",inwiki:"در ویکی"},
+  flag:{"unreplicated":"تکرارنشده","contested":"محل بحث","dated":"قدیمی","editor-note":"یادداشت سردبیر"},tier:"ردهٔ منبع",ev:{1:"فراتحلیل/تکرار",2:"مقالهٔ داوری‌شده/آمار رسمی",3:"کتاب یا سخنرانی",4:"سرنخ",0:"بی‌منبع"},evl:"اعتبار منبع",inwiki:"در ویکی"},
  en:{home:"Home",foot:"This wiki runs on Daneshsara's shared core; every statement has a source, and the flags \"unreplicated\", \"contested\" and \"editor's note\" show the state of the evidence. All pages are drafts until expert review.",draft:"Draft — awaiting expert review",reviewed:"Reviewed",expert:"Expert-approved",search:"Search this wiki…",all:"All",back:"‹ All entries",points:"Statements",links:"Links",people:"People",iran:"Iran lens",sources:"Sources",grade:"Data grade",contested:"Contested",critique:"Critique",method:"Method",concepts:"entries",
   rel:{"part-of":"part of","explains":"explains","evidence-for":"evidence for","evidence-against":"evidence against","contrasts":"contrasts with","prerequisite":"prerequisite","same-as":"same as","applies-to":"applies to","measured-by":"measured by","critiques":"critiques","bridges":"bridge to","see-also":"see also"},
-  flag:{"unreplicated":"unreplicated","contested":"contested","dated":"dated","editor-note":"editor's note"},tier:"Source tier",inwiki:"in wiki"},
+  flag:{"unreplicated":"unreplicated","contested":"contested","dated":"dated","editor-note":"editor's note"},tier:"Source tier",ev:{1:"meta-analysis/replicated",2:"peer-reviewed/official data",3:"book or lecture",4:"lead only",0:"no source"},evl:"Evidence",inwiki:"in wiki"},
  nl:{home:"Home",foot:"Deze wiki draait op de gedeelde kern van Daneshsara; elke bewering heeft een bron, en de vlaggen \"niet gerepliceerd\", \"omstreden\" en \"redactienoot\" tonen de stand van het bewijs. Alle pagina's zijn concepten tot expertreview.",draft:"Concept — wacht op expertreview",reviewed:"Gereviewd",expert:"Door expert goedgekeurd",search:"Zoek in deze wiki…",all:"Alles",back:"‹ Alle lemma's",points:"Beweringen",links:"Verbanden",people:"Personen",iran:"Iran-lens",sources:"Bronnen",grade:"Datakwaliteit",contested:"Omstreden",critique:"Kritiek",method:"Methode",concepts:"lemma's",
   rel:{"part-of":"deel van","explains":"verklaart","evidence-for":"bewijs voor","evidence-against":"bewijs tegen","contrasts":"tegenover","prerequisite":"voorkennis","same-as":"hetzelfde als","applies-to":"toegepast op","measured-by":"gemeten met","critiques":"bekritiseert","bridges":"brug naar","see-also":"zie ook"},
-  flag:{"unreplicated":"niet gerepliceerd","contested":"omstreden","dated":"verouderd","editor-note":"redactienoot"},tier:"Bronniveau",inwiki:"in wiki"}
+  flag:{"unreplicated":"niet gerepliceerd","contested":"omstreden","dated":"verouderd","editor-note":"redactienoot"},tier:"Bronniveau",ev:{1:"meta-analyse/gerepliceerd",2:"peer-reviewed/officiële data",3:"boek of lezing",4:"aanwijzing",0:"geen bron"},evl:"Bewijs",inwiki:"in wiki"}
 };
 let L = "fa"; try { L = localStorage.getItem("ds-lang") || "fa"; } catch(_) {}
 const T = k => (UI[L] && UI[L][k]) ?? UI.fa[k];
@@ -109,7 +110,8 @@ function list(){
 function detail(c){
   const f = c.field && BY[c.field] || c.parent && BY[c.parent];
   const srcIds = []; const sref = id => { let i = srcIds.indexOf(id); if (i < 0) { srcIds.push(id); i = srcIds.length - 1; } return i + 1; };
-  const pts = (c.points || []).map(p => { const refs = (p.sources || []).map(sref); return `<li>${esc(tx(p.text))}<div class="ref">${(p.flags || []).map(fl => `<span class="flag ${fl}">${esc(T("flag")[fl] || fl)}</span>`).join("")}${refs.map(n => `<span>[${fa(n)}]</span>`).join("")}</div></li>`; }).join("");
+  const evOf = p => { const t = (p.sources || []).map(id => D.sources[id] && D.sources[id].tier).filter(Boolean); return t.length ? Math.min(...t) : 0; };
+  const pts = (c.points || []).map(p => { const refs = (p.sources || []).map(sref); const ev = evOf(p); return `<li>${esc(tx(p.text))}<div class="ref"><span class="ev t${ev}" title="${esc(T("evl"))}">${esc(T("ev")[ev])}</span>${(p.flags || []).map(fl => `<span class="flag ${fl}">${esc(T("flag")[fl] || fl)}</span>`).join("")}${refs.map(n => `<span>[${fa(n)}]</span>`).join("")}</div></li>`; }).join("");
   (c.sources || []).forEach(sref);
   const links = (c.links || []).map(l => { const u = urlOf(l.to); if (!u) return ""; const extW = !BY[l.to] ? l.to.split(":")[0] : ""; return `<a href="${u}"><span class="rel">${esc(T("rel")[l.rel] || l.rel)}</span><span><b>${esc(titleOf(l.to))}</b>${extW ? ` <span class="ext">(${T("inwiki")} ${extW})</span>` : ""}<div class="nt">${esc(tx(l.note))}</div></span></a>`; }).join("");
   const ppl = (c.people || []).map(id => D.people[id]).filter(Boolean).map(p => `<span>${esc(tx(p.name))}${p.years ? ` <small>${fa(p.years)}</small>` : ""}${L === "fa" && p.note && p.note.fa ? ` <small>— ${esc(p.note.fa)}</small>` : ""}</span>`).join("");
