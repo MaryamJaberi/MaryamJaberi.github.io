@@ -1,0 +1,677 @@
+<!doctype html><html lang="fa" dir="rtl"><head>
+<meta name="description" content="آیا «بیماری روانی» چیزی است که یا داری یا نداری، یا طیفی که همهٔ ما جایی رویش ایستاده‌ایم؟ این کارگاه از اخلاط بقراط تا HiTOP سفر می‌کند و نشان می‌دهد…"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><b>کارگاه مرز سلامت و اختلال روان</b></nav>
+<title>کارگاه مرز سلامت و اختلال روان | ویکی روان‌شناسی | دانش‌سرا</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-health">
+  <div class="brand">ویکی روان‌شناسی <small>کارگاه‌های دکتر آذرخش مکری</small></div>
+  <div class="navw"><nav class="sibs" aria-label="صفحه‌های همین موضوع"><span class="on" aria-current="page">کارگاه سلامت و اختلال</span><a href="psychopath.html" target="_blank" rel="noopener">آسیب‌شناسی توصیفی</a><a href="falls.html" target="_blank" rel="noopener">سقوط بیماران</a><a href="clinical.html" target="_blank" rel="noopener">قفسهٔ بالینی</a><a href="shelf3.html" target="_blank" rel="noopener">بالینی ۲</a><a href="shelf5.html" target="_blank" rel="noopener">قفسهٔ آسیب‌شناسی</a><a href="shelf11.html" target="_blank" rel="noopener">قفسهٔ بهنجاری</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#aims">دوازده گزاره: آنچه در این دو روز به آن پرداخته شد</a></li>
+<li><a href="#books">کتاب‌های معرفی‌شده</a></li>
+<li><a href="#intro">مقدمه: یک مثال از شکل‌گیری مشکلات</a></li>
+<li><a href="#processes">بخش اول: فرایندهای شایع و فراگیر</a></li>
+<li><a href="#what">بخش دوم: چیستی بیماری روانپزشکی</a></li>
+<li><a href="#origins">بخش سوم: پیدایش اشکالات؛ سه پژوهش</a></li>
+<li><a href="#dimensions">بخش چهارم: طیف و «مشکل» به جای «اختلال»</a></li>
+<li><a href="#hitop">بخش دوم کارگاه: HiTOP</a></li>
+<li><a href="#measure">سنجش فرایندها</a></li>
+<li><a href="#avoidance">پنج نوع اجتناب</a></li>
+<li><a href="#worry">الگوی نگرانی</a></li>
+<li><a href="#more">دو مقیاس دیگر: خشم و خلوت</a></li>
+<li><a href="#takeaway">جمع‌بندی</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>مرز میان سلامت و اختلال روان</h1>
+<p class="lede-sub">آیا «بیماری روانی» چیزی است که یا داری یا نداری، یا طیفی که همهٔ ما جایی رویش ایستاده‌ایم؟ این کارگاه از اخلاط بقراط تا HiTOP سفر می‌کند و نشان می‌دهد چرا به جای برچسب‌های جدا، باید <a class="w" data-t="transdiagnostic">فرایندهای مشترک</a> را شناخت و درمان کرد.</p>
+<aside class="infobox" aria-label="مشخصات کارگاه"><div class="ib-h">کارگاه در یک نگاه</div><dl>
+<dt>عنوان</dt><dd>مرز میان سلامت و اختلال روان</dd>
+<dt>مدرس</dt><dd>دکتر آذرخش مکری</dd>
+<dt>بخش اول</dt><dd>مقدمه، فرایندهای فراگیر، چیستی بیماری روانپزشکی، پیدایش اشکالات، طیف به جای اختلال</dd>
+<dt>بخش دوم</dt><dd>HiTOP، فرایندهای فراتشخیصی و سنجش آن‌ها، انواع اجتناب، الگوی نگرانی</dd>
+</dl></aside>
+
+<h2 id="aims">دوازده گزاره: آنچه در این دو روز به آن پرداخته شد</h2>
+<p><sup class="c"><a href="#r-slides1">[۱]</a></sup> کارگاه با دوازده گزاره شروع شد که نقشهٔ کل بحث است (اسلایدهای ۲ و ۳):</p>
+<ol>
+<li>نظام مبتنی بر تعریف اختلالات مجزای روانپزشکی (مانند DSM) دارای ایرادات جدی است.</li>
+<li>مطالعات زیادی نشان داده‌اند که در وجود اختلالات به‌صورت مجزا و پایدار، شبهه‌های فراوانی وجود دارد.</li>
+<li>مرز قاطع و کیفی بین آنچه اختلال نامیده می‌شود و کارکرد طبیعی وجود ندارد و این دو به آهستگی به هم تبدیل می‌شوند.</li>
+<li>بسیاری از ویژگی‌هایی که آسیب‌گونه می‌پنداریم، در زمان‌ها و موقعیت‌هایی کارکردی و انطباقی هستند.</li>
+<li>بنابراین بهتر است به جای واژگان بیماری و اختلال، از «<a class="w" data-t="psych-problem">مشکل روانی</a>» و «<a class="w" data-t="fit">عدم تطبیق</a>» (mismatch, non-fit) یاد شود.</li>
+<li>در افرادی که از مشکلات روانی رنج می‌برند، فرایندها یا کارکردهای دردسرسازی وجود دارد که در افراد شادکام و نیک‌زیست کمتر دیده می‌شوند.</li>
+<li>به جای تعبیهٔ درمان‌های مجزا، می‌توان این فرایندهای غیرکارکردی را اصلاح یا تعدیل و فرایندهای کارکردی را تقویت کرد: <a class="w" data-t="pbt">مداخله بر مبنای فرایند</a>.</li>
+<li>شناسایی این فرایندها به‌سرعت رو به توسعه است و در نظام‌های فراتشخیصی به کار می‌رود.</li>
+<li>به برخی از این فرایندها، ارزیابی و شناسایی زودهنگام و مداخلات و تکنیک‌هایشان اشاره می‌شود.</li>
+<li>نظام سنتی دسته‌بندی در هر حال فواید و کارکردهای خود را دارد و به راحتی قابل حذف نیست.</li>
+<li>به نظام‌های ابتکاری و جدیدتر (مانند <a class="w" data-t="hitop">HiTOP</a>) اشاره و فواید آن‌ها یادآوری می‌شود.</li>
+<li>روانپزشکی و روانشناسی بالینی و سلامت بدین‌گونه بالنده‌تر شده و جایگاه عالی‌تری خواهد یافت.</li>
+</ol>
+<div class="note"><b class="k">نکتهٔ مهم</b>گزارهٔ ۱۰ کلید فهم درست کارگاه است: پیام «DSM را دور بریزید» نیست. پیام این است که دسته‌ها ابزارند، نه واقعیت طبیعی؛ و کنار آن‌ها باید ابعاد و فرایندها را هم دید.</div>
+
+<h2 id="books">کتاب‌های معرفی‌شده</h2>
+<p>اسلایدهای ۴ تا ۱۵ قفسهٔ کتاب کارگاه را معرفی کردند؛ هر کدام از زاویه‌ای به همین پرسش می‌پردازد:</p>
+<div class="cols2">
+<div class="card"><b class="h">فراسوی DSM</b><span class="en">Hayes &amp; Hofmann (Eds.), Beyond the DSM (2020)</span>به سوی جایگزینی فرایندمحور برای تشخیص و درمان. دو ترجمهٔ فارسی: «فراسوی DSM» و «فراتر از DSM».<sup class="c"><a href="#r-beyond">[۳]</a></sup></div>
+<div class="card"><b class="h">آموزش درمان فرایندمدار</b><span class="en">Hofmann, Hayes &amp; Lorscheid, Learning Process-Based Therapy (2021)</span>راهنمای مهارت‌آموزی برای هدف گرفتن فرایندهای اصلی تغییر روانی. ترجمهٔ فارسی: «درمان فرایندمدار».<sup class="c"><a href="#r-pbt">[۴]</a></sup></div>
+<div class="card"><b class="h">چابکی هیجانی</b><span class="en">Susan David, Emotional Agility (2016)</span>رها شدن از گیر افتادن در افکار و هیجان‌ها و حرکت به سوی ارزش‌ها. ترجمه‌های فارسی: «انعطاف‌پذیری هیجانی»، «چابکی در مدیریت هیجانات».<sup class="c"><a href="#r-david">[۵]</a></sup></div>
+<div class="card"><b class="h">نجات بهنجار</b><span class="en">Allen Frances, Saving Normal (2013)</span>شورش یک خودی (رئیس کارگروه DSM-IV) علیه تورم تشخیصی، DSM-5، صنعت دارو و پزشکی‌سازی زندگی عادی.<sup class="c"><a href="#r-frances">[۶]</a></sup></div>
+<div class="card"><b class="h">ابعاد مشکلات روانی</b><span class="en">Benjamin B. Lahey, Dimensions of Psychological Problems (2021)</span>جایگزینی علمی‌تر و کم‌انگ‌تر برای دسته‌های تشخیصی.<sup class="c"><a href="#r-lahey2021">[۷]</a></sup></div>
+<div class="card"><b class="h">نقشهٔ راه فراتشخیصی</b><span class="en">Frank &amp; Davidson, The Transdiagnostic Road Map (2014)</span>راهنمای عملی صورت‌بندی مورد و طرح درمان بر پایهٔ فرایندها.</div>
+<div class="card"><b class="h">ذهن و هیجان‌ها</b><span class="en">McKay, Fanning &amp; Zurita Ona, Mind and Emotions (2011)</span>درمانی جهان‌شمول برای اختلالات هیجانی با مهارت‌هایی از CBT، ACT و DBT؛ مقیاس‌های فرایندی بخش دوم کارگاه به این رویکرد نزدیک‌اند.<sup class="c"><a href="#r-mckay">[۸]</a></sup></div>
+<div class="card"><b class="h">زندگی در سه بُعد</b><span class="en">Shigehiro Oishi, Life in Three Dimensions (2025)</span>کنجکاوی، کاوش و تجربه چطور زندگی را کامل‌تر می‌کنند؛ بُعد «غنای روانی».<sup class="c"><a href="#r-oishi">[۹]</a></sup></div>
+<div class="card"><b class="h">از دست دادن ذهن‌هایمان</b><span class="en">Lucy Foulkes, Losing Our Minds (2021)</span>چالش تعریف بیماری روانی. ترجمهٔ فارسی: «چگونه سلامت روان خود را از دست می‌دهیم؟».<sup class="c"><a href="#r-foulkes">[۱۰]</a></sup></div>
+</div>
+
+<h2 id="intro">مقدمه: یک مثال از شکل‌گیری مشکلات</h2>
+<h3>دو چهرهٔ رفتار ضداجتماعی</h3>
+<p><a class="w" data-t="stab">پرسش‌نامهٔ STAB-32</a> (انواع رفتار ضداجتماعی) سی‌ودو گویه دارد که هر کدام از «هیچ‌وقت» تا «تقریباً همیشه» پاسخ داده می‌شوند (اسلایدهای ۱۷ تا ۲۰). تحلیل عاملی سه زیرنوع را جدا می‌کند: پرخاشگری فیزیکی، پرخاشگری اجتماعی (مثل لو دادن راز یا شوراندن دیگران) و قانون‌شکنی. اسلایدها روی دو دستهٔ اصلی تمرکز کردند (اسلایدهای ۲۱ و ۲۲)<sup class="c"><a href="#r-burt">[۱۱]</a></sup>:</p>
+<div class="cols2">
+<div class="card"><b class="h">پرخاشگری (AGG)</b><span class="en">Aggression</span>خشونت و رفتارهای پرخاشگرانه. بار ژنتیکی بالاتر، سن بروز زودتر، و در عده‌ای به قانون‌شکنی منتهی می‌شود.</div>
+<div class="card"><b class="h">قانون‌شکنی غیرپرخاشگرانه (RB)</b><span class="en">Non-aggressive rule breaking</span>دزدی، فرار از خانه، فروش مواد، اخراج از کار. بیشتر تحت تأثیر محیط.</div>
+</div>
+<p>بِرت و همکاران (۲۰۱۵) نشان دادند ویژگی‌های محله (همبستگی اجتماعی، کنترل نامحسوس، کیفیت محله) قانون‌شکنی را در بزرگسالی پیش‌بینی می‌کند اما پرخاشگری را نه (اسلاید ۲۵). مسیر دیگر از <b>قساوت یا بی‌تفاوتی به دیگران</b> (callousness) به اختلالات برون‌ساز می‌رسد و رفتار خشن والدین، به‌ویژه پدر، آن را تشدید می‌کند (اسلایدهای ۲۳ و ۲۴).</p>
+<h3>خمیرمایهٔ اولیه</h3>
+<figure><div class="chain">
+<div class="box">فقدان والد، سوءرفتار، تنبیه منفی</div><span class="arr">←</span>
+<div class="box hl">خمیرمایهٔ اولیهٔ اختلال روانپزشکی</div><span class="arr">←</span>
+<div class="box">تشخیص‌های گوناگون در طول زندگی: «؟»</div>
+</div><figcaption>شکل ۱. یک خمیرمایهٔ مشترک و چند خروجی (اسلاید ۲۷). نشانه‌های اولیه در سه سالگی: خویشتنداری پایین، گوشه‌گیری و مشکلات هیجانی. همین خمیرمایه بسته به محیط و زمان به تشخیص‌های مختلفی می‌رسد.</figcaption></figure>
+<p>اسلایدهای ۲۶ و ۲۹ ساختار سه‌شاخهٔ مشکلات را نشان دادند: <b>درون‌سازی</b> (ترس‌ها، پانیک، اضطراب فراگیر، افسردگی، حساسیت به طرد...)، <b>برون‌سازی</b> (مخالفت‌جویی، ضداجتماعی واکنشی و کنشی، خودشیفتگی، بیش‌فعالی، سوءمصرف مواد) و <b>تفکر و عاطفه</b> (توهم، هذیان، عاطفهٔ سطحی، اوتیسم، خوردن، مانیا، وسواس). این همان اسکلت <a class="w" data-t="hitop">HiTOP</a> است که در بخش دوم کامل شد.</p>
+
+<h2 id="processes">بخش اول: فرایندهای شایع و فراگیر</h2>
+<p>مشکلات درون‌ساز (اسلاید ۳۰): ترس‌های اختصاصی، ترس‌های مرتبط با بیماری، پانیک، آگورافوبیا، ترس اجتماعی، حساسیت به طرد، وابستگی و جدایی، اضطراب فراگیر، افسردگی، و احساس بی‌انگیزگی و بی‌انرژی بودن. پشت این فهرست بلند، چهار فرایند مشترک دیده می‌شود (اسلاید ۳۱):</p>
+<div class="cols2">
+<div class="card"><b class="h"><a class="w" data-t="experiential-avoidance">اجتناب تجربه‌ای</a></b><span class="en">Experiential avoidance</span>تلاش برای فرار از افکار، احساس‌ها و خاطره‌های ناخوشایند، حتی وقتی این فرار هزینهٔ بلندمدت دارد.</div>
+<div class="card"><b class="h"><a class="w" data-t="rejection-sensitivity">حساسیت به طرد</a></b><span class="en">Rejection sensitivity</span>انتظار مضطربانهٔ طرد شدن، دیدن آن در نشانه‌های مبهم و واکنش شدید به آن.</div>
+<div class="card"><b class="h"><a class="w" data-t="rumination">نشخوار و حسرت</a></b><span class="en">Rumination / regret</span>فکر کردن تکراری و منفعل به مشکل، علت‌ها و پیامدهای آن، بدون رسیدن به عمل.</div>
+<div class="card"><b class="h"><a class="w" data-t="anhedonia">نبود لذت و هیجان مثبت</a></b><span class="en">Anhedonia / lack of positive affect</span>کاهش توانایی لذت بردن و انگیزه برای پاداش.</div>
+</div>
+<h3>پادزهر: سه بُعد زندگی خوب</h3>
+<p>در برابر این چهار فرایند، اسلاید ۳۲ سه بُعد زندگی خوب را گذاشت: <b>لذت (هدونیسم)</b>، <b>معنا</b> و <b>غنا</b>. شیگهیرو اویشی بُعد سوم را «<a class="w" data-t="psych-rich">زندگی غنی روانی</a>» نامیده: زندگی پر از تجربه‌های متنوع، جالب و دیدگاه‌گستر، حتی اگر همیشه خوشایند نباشد<sup class="c"><a href="#r-oishi2019">[۱۲]</a></sup>.</p>
+<details><summary>پرسش‌نامهٔ زندگی غنی روانی (۱۷ گویه؛ اسلاید ۳۳)</summary>
+<ol class="tight">
+<li>زندگی من از نظر روانی غنی بوده است.</li><li>زندگی من پر از تجارب گوناگون بوده است.</li><li>از نظر هیجانی زندگی غنی داشته‌ام.</li><li>خیلی تجارب جالب و جذابی داشته‌ام.</li><li>خیلی تجارب نو و بدیعی در زندگی داشته‌ام.</li><li>زندگی من پر از تجارب خاص و منحصربه‌فرد بوده است.</li><li>زندگی من شامل لحظات غنی و پر از هیجان است.</li><li>زندگی من دراماتیک بوده است.</li><li>از طریق تجارب دست اول مانند سفر و شرکت در کنسرت، طیف وسیعی از هیجانات را تجربه می‌کنم.</li><li>کلی داستان‌های شخصی دارم که برای دیگران نقل کنم.</li><li>در بستر مرگم احتمالاً خواهم گفت «زندگی جالبی داشتم».</li><li>در هنگام مرگ احتمالاً خواهم گفت «کلی چیزها دیدم و یاد گرفتم».</li><li>زندگی من یک فیلم یا رمان خوب می‌شد.</li><li>زندگی من یکنواخت بوده است. (معکوس)</li><li>من اغلب در زندگی‌ام حوصله‌ام سر می‌رود. (معکوس)</li><li>زندگی من بدون اتفاق خاصی بوده است. (معکوس)</li><li>نمی‌توانم به یاد بیاورم آخرین بار کی کار جدید و خاصی انجام دادم یا تجربه کردم. (معکوس)</li>
+</ol></details>
+
+<h2 id="what">بخش دوم: چیستی بیماری روانپزشکی</h2>
+<h3>از اخلاط تا رده‌بندی</h3>
+<p>بقراط، فیثاغورث و جالینوس سلامت را تعادل چهار <a class="w" data-t="humors">خِلط</a> می‌دانستند، هر یک با دو کیفیت از گرم، سرد، تر و خشک (اسلایدهای ۳۵ تا ۴۰):</p>
+<table class="t">
+<tr><th>خلط</th><th>مزاج</th><th>عنصر</th><th>کیفیت</th></tr>
+<tr><td>خون</td><td>دموی <span class="ltr">(Sanguine)</span></td><td>هوا</td><td>گرم و تر</td></tr>
+<tr><td>صفرای زرد</td><td>صفراوی <span class="ltr">(Choleric)</span></td><td>آتش</td><td>گرم و خشک</td></tr>
+<tr><td>صفرای سیاه</td><td>سودایی <span class="ltr">(Melancholic)</span></td><td>خاک</td><td>سرد و خشک</td></tr>
+<tr><td>بلغم</td><td>بلغمی <span class="ltr">(Phlegmatic)</span></td><td>آب</td><td>سرد و تر</td></tr>
+</table>
+<p>واژه‌هایی مثل «ملانکولی» و Saturnine (زحلی، تلخ‌مزاج؛ اسلاید ۴۱) یادگار همین دستگاه‌اند. ابن‌سینا ظرافت بیشتری افزود (اسلاید ۴۲): مانیا همان مزاج دموی نیست؛ مانیا آمیزهٔ صفراوی و سوداوی است؛ و ملانکولیا در برخی موارد آمیزهٔ سوداوی و بلغمی.</p>
+<p>توماس سیدنهام (۱۶۲۴–۱۶۸۹) بیماری را «موجودیتی» با سیر طبیعی مشخص دید و کارل لینه (۱۷۰۷–۱۷۷۸) روش رده‌بندی گیاهان را به بیماری‌ها هم کشاند (اسلایدهای ۴۳ و ۴۴). اعتبار یک بیماری در پزشکی با شش «اعتبارسنج» سنجیده می‌شود (اسلاید ۴۵):</p>
+<ul class="tight">
+<li>علامت‌شناسی · سیر و پیش‌آگهی · ژنتیک و وراثت</li>
+<li>یافته‌های آزمایشگاهی و تصویربرداری · یافته‌های نوروفیزیولوژیک · پاسخ به درمان‌های دارویی و غیردارویی</li>
+</ul>
+<p>مثال لوپوس (اسلایدهای ۴۶ و ۴۷) نشان می‌دهد یک بیماری جسمی چطور با علت، سازوکار، نشانه‌ها، آزمایش و عوارض تعریف می‌شود؛ چیزی که اختلال‌های روانپزشکی هنوز ندارند.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>این شش اعتبارسنج در اصل از معیارهای رابینز و گیوز (۱۹۷۰) برای اسکیزوفرنی می‌آیند که پایهٔ رویکرد «نوکریپلینی» و سپس DSM-III (۱۹۸۰) شد.</div>
+<h3>کریپلین و نوکریپلینی‌ها</h3>
+<p>امیل کریپلین و کارل لودویگ کالباوم (اسلاید ۴۸) بیماری‌های روانی را بر پایهٔ سیر و پیامد جدا کردند (مثلاً «جنون زودرس» در برابر جنون شیدایی‌افسردگی). جنبش <a class="w" data-t="neo-kraepelin">نوکریپلینی</a> در قرن بیستم همین ایده را به معیارهای تشخیصی صریح تبدیل کرد.</p>
+<blockquote><p class="q-en">A mental disorder is a syndrome characterized by clinically significant disturbance in an individual’s cognition, emotion regulation, or behavior that reflects a dysfunction in the psychological, biological, or developmental processes underlying mental functioning.</p><p class="q-fa">اختلال روانی سندرمی است که با اشکال عمدهٔ بالینی در شناخت، تنظیم هیجان یا رفتار فرد مشخص می‌شود و بازتاب اشکال کارکرد در فرایندهای روانی، زیستی یا تکوینیِ زیربنای کارکرد روان و رفتار است.</p><footer>تعریف DSM-5 (اسلاید ۵۰)</footer></blockquote>
+<p>هِرمان الیاس بریوس، تاریخ‌نگار روانپزشکی، از «<b>بهانهٔ فناوری</b>» (technology alibi) سخن می‌گوید: این امید که فناوری‌های تازه (تصویربرداری، ژنتیک) سرانجام زیست‌شناسی هر اختلال را پیدا می‌کنند و رده‌بندی امروز را توجیه می‌کنند.</p>
+<h3>دو دسته انتقاد اصلی</h3>
+<ol class="tight">
+<li><b>دسته‌بندی‌ها ایراد دارند</b> و بر واقعیت منطبق نیستند؛ بسیاری از تشخیص‌ها افراطی‌اند و مشکلات زندگی را پزشکی‌سازی می‌کنند.</li>
+<li><b>تمایز بیمار و سالم</b> اصولاً مشکل‌آفرین است؛ ما با طیفی روبه‌روییم که به‌تدریج مشکل‌سازتر می‌شود: دوگانه (categorical) در برابر <a class="w" data-t="dimensional">طیفی (بُعدی)</a> (اسلاید ۵۴).</li>
+</ol>
+<h3>پنج تعبیر دربارهٔ اختلالات روان</h3>
+<table class="t">
+<tr><th>دیدگاه</th><th>جملهٔ نمونه</th></tr>
+<tr><td>واقع‌گرایان <span class="ltr">(Realists)</span></td><td>«وجود دارند و آن‌ها را آن‌گونه که هستند می‌نامم.»</td></tr>
+<tr><td>نام‌گرایان <span class="ltr">(Nominalists)</span></td><td>«وجود دارند و آن‌ها را آن‌گونه که می‌بینم می‌نامم.»</td></tr>
+<tr><td>برساخت‌گرایان <span class="ltr">(Constructivists)</span></td><td>«تا زمانی که آن‌ها را ننامم، وجود ندارند.»</td></tr>
+<tr><td>عمل‌گرایان <span class="ltr">(Pragmatists)</span></td><td>«وجود دارند و آن‌گونه که به کارم می‌آید آن‌ها را می‌نامم.»</td></tr>
+<tr><td>انکارگرایان <span class="ltr">(Denialists)</span></td><td>«اصلاً آن‌ها را نمی‌نامم، چون منصفانه نیست.»</td></tr>
+</table>
+<p>جمع‌بندی اسلاید ۵۷: «تقریب واقعیت از راه مراحل پیاپی دانش» (<span class="ltr">Approximation of reality through successive stages of knowledge</span>).</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>این جدول شکل گسترش‌یافتهٔ لطیفهٔ معروف «سه داور بیسبال» است که کِنِت کندلر و دیگران برای توضیح وضعیت معرفت‌شناختی تشخیص روانپزشکی به کار برده‌اند. بیشتر پژوهشگران امروز موضعی بین عمل‌گرایی و «واقع‌گرایی تکرارشونده» دارند: دسته‌ها ابزارهای موقتی‌اند که با پیشرفت دانش اصلاح می‌شوند.</div>
+
+<h2 id="origins">بخش سوم: پیدایش اشکالات؛ سه پژوهش</h2>
+<h3>۱. ژن افسردگی وجود ندارد</h3>
+<p>بوردر و همکاران (۲۰۱۹) ۱۸ «ژن کاندید» مشهور افسردگی (مثل ناقل سروتونین) و تعاملشان با محیط را در نمونه‌هایی از ۶۲ هزار تا ۴۴۳ هزار نفر (جمعاً ۶۲۱٬۲۱۴ نفر) آزمودند. هیچ‌کدام بیش از ژن‌های تصادفی با افسردگی ارتباط نداشتند. نتیجهٔ مقاله: فرضیه‌های اولیه نادرست بودند و بیشتر یافته‌های ادبیات ژن کاندید احتمالاً «مثبت کاذب»اند (اسلایدهای ۶۱ تا ۷۱). این مقاله تا امروز بیش از ۲۲۰۰ بار استناد شده<sup class="c"><a href="#r-border">[۱۳]</a></sup>.</p>
+<div class="note"><b class="k">جمع‌بندی اسلاید ۷۲</b>ژن خاصی برای بیماری افسردگی شناسایی نشده است؛ این دربارهٔ سایر بیماری‌های روانپزشکی هم صادق است. تفکر ژن‌محور نمی‌تواند رفتار را به‌صورت ساده و مستقیم توضیح دهد.</div>
+<p class="note src"><b class="k">یادداشت ویراستار</b>این به معنای «وراثت نقشی ندارد» نیست: افسردگی حدود ۳۰ تا ۴۰ درصد وراثت‌پذیری دارد، اما از هزاران واریانت با اثر بسیار کوچک ساخته می‌شود (چندژنی)، نه از یک «ژن افسردگی».</p>
+<h3>۲. تشخیص‌ها جابه‌جا می‌شوند</h3>
+<p>دو نوع پیوستگی (اسلایدهای ۷۳ تا ۷۸): <b>پیوستگی همسان</b> (homotypic) یعنی همان تشخیص در طول زمان ادامه یابد؛ <a class="w" data-t="heterotypic">پیوستگی ناهمسان</a> (heterotypic) یعنی تشخیص امروز، تشخیص دیگری را در آینده پیش‌بینی کند؛ «تغییر تظاهرات» یا «انعطاف فنوتیپی».</p>
+<p>لاهی و همکاران (۲۰۱۴) در ۲۸٬۹۵۸ بزرگسال ۱۸ تا ۶۴ سالهٔ پیمایش ملی NESARC با فاصلهٔ سه سال (اسلایدهای ۷۹ تا ۸۳) نشان دادند الگوی تبدیل تشخیص‌ها به یکدیگر دقیقاً از ساختار هم‌ابتلایی آن‌ها در موج اول پیروی می‌کند: اختلال‌هایی که با هم دیده می‌شوند، به هم تبدیل هم می‌شوند<sup class="c"><a href="#r-lahey2014">[۱۴]</a></sup>.</p>
+<div class="note"><b class="k">جمع‌بندی همین بخش</b>تشخیص‌های روانپزشکی با گذشت چند سال به تشخیص‌های دیگری تبدیل می‌شوند؛ این دربارهٔ ماهیت ذاتی و پایدار آن‌ها تردید جدی ایجاد می‌کند.</div>
+<blockquote><p class="q-en">And there won’t be a Newton or an Einstein or a Darwin to provide a grand unifying biological theory of normality and mental disorder.</p><p class="q-fa">یک نیوتن یا انیشتین یا داروینی نخواهد بود که نظریهٔ زیستی بزرگ و واحدی برای سلامت و اختلال روان ارائه دهد.</p></blockquote>
+<h3>۳. آن‌هایی که هیچ‌گاه مریض نمی‌شوند</h3>
+<p>شیفر، کسپی، موفیت و همکاران (۲۰۱۷) در کوهورت دانیدین (نیوزیلند) که از تولد تا ۳۸ سالگی بارها ارزیابی شدند، پرسیدند چند نفر هرگز هیچ اختلال روانی نداشته‌اند. پاسخ: فقط <b>۱۷٫۳٪</b> (۱۷۱ نفر)<sup class="c"><a href="#r-schaefer">[۱۵]</a></sup>. این گروه <a class="w" data-t="enduring-mh">سلامت روان پایدار</a> در بزرگسالی دستاورد تحصیلی و اجتماعی‌اقتصادی، رضایت از زندگی و کیفیت روابط بهتری داشتند.</p>
+<figure><div class="hb"><span class="t">هرگز اختلال نداشتند</span><div class="track"><div class="fill f-good" style="width:17.3%;"></div></div><span class="v">۱۷.۳٪</span></div>
+<div class="hb"><span class="t">دست‌کم یک دورهٔ اختلال</span><div class="track"><div class="fill f-bad" style="width:82.7%;"></div></div><span class="v">۸۲.۷٪</span></div>
+<figcaption>شکل ۲. شیوع تجمعی اختلال روانی تا ۳۸ سالگی در کوهورت دانیدین (اسلاید ۹۰).</figcaption></figure>
+<ul class="tight">
+<li>فقدان والد، سوءرفتار و تنبیه منفی تأثیر بسزایی در شکل‌گیری علائم روانپزشکی دارد؛ اثر محافظتی جو مثبت خانوادگی ضعیف‌تر است.</li>
+<li>کسانی که بعدها علامت نشان می‌دهند، در ۳ سالگی خویشتنداری پایین، گوشه‌گیری و مشکلات هیجانی دارند.</li>
+<li><b>محدودیت‌ها:</b> برخی اختلال‌ها سنجیده نشدند؛ هر موج فقط سال قبل را می‌پرسید؛ حدود ۲۰٪ نزدیکان شواهدی از اختلالی گزارش کردند که خود فرد یادآوری نکرده بود؛ امکان کتمان یا فراموشی هست؛ ارزیابی تا ۳۸ سالگی بود. پس سلامت پایدار احتمالاً <b>حتی کمتر</b> است.</li>
+</ul>
+<h3>نتیجهٔ مهم‌تر: بیش‌تشخیص‌گذاری</h3>
+<p>شیوع بسیار بالای اختلالات در یک پیگیری تا ۳۸ سالگی نشان می‌دهد با <a class="w" data-t="overdiagnosis">بیش‌تشخیص‌گذاری</a> روبه‌روییم. آلن فرانسیس، رئیس کارگروه DSM-IV، از منتقدان سرسخت DSM-5 بود (اسلایدهای ۱۰۲ تا ۱۰۵):</p>
+<blockquote><p class="q-en">Psychological pain has always existed, and there are ways of talking about it without calling everyone unwell.</p><p class="q-fa">درد روانی همواره وجود داشته است و بدون توسل به بیمار نامیدن افراد، راه‌هایی برای صحبت دربارهٔ آن هست.</p></blockquote>
+<blockquote><p class="q-en">The right goal for DSM-5 would have been diagnostic restraint and deflation, not a further unwarranted expansion of diagnosis and treatment.</p><p class="q-fa">هدف درست برای DSM-5 محدودیت و کاهش تشخیص بود، نه توسعهٔ بی‌مورد تشخیص و درمان.</p><footer>آلن فرانسیس</footer></blockquote>
+
+<h2 id="dimensions">بخش چهارم: طیف و «مشکل» به جای «اختلال»</h2>
+<p>بنجامین لاهی، استیون هینشاو، آلبرت بندورا، راجر اسپری و هنری مادزلی هر کدام از زاویه‌ای همین را گفته‌اند (اسلایدهای ۱۰۷ تا ۱۱۹):</p>
+<div class="cols2">
+<div class="card"><b class="h">بنجامین لاهی</b>«حوزهٔ سلامت روان جهان را به "آسیب‌شناسی" و بقیه تقسیم کرده، درحالی‌که زندگی به سختی چنین دوگانه است.» و: «ذهن غیرعادی یا مریض وجود ندارد؛ فقط رفتاری که برای شما کار می‌کند یا نمی‌کند.»</div>
+<div class="card"><b class="h">استیون هینشاو (برکلی)</b>«مشکلات روانی در فرد قرار ندارند، بلکه در تعامل او با جهان پیرامون واقع شده‌اند.»</div>
+<div class="card"><b class="h">آلبرت بندورا</b>رفتار نابهنجار «رفتاری است که برای فرد مضر است یا از هنجارهای اجتماعی و اخلاقی پذیرفته‌شده بسیار دور است».</div>
+<div class="card"><b class="h">راجر اسپری (نوبل ۱۹۸۱)</b>«هرچه بیشتر یاد می‌گیریم، فردیتِ درونی شبکه‌های مغزی ما آن‌قدر پیچیده می‌شود که اختصاصی بودن اثر انگشت و چهره در مقایسه با آن ساده و ابتدایی می‌نماید.»</div>
+</div>
+<div class="note"><b class="k">مفهوم کلیدی: تطبیق (FIT)</b>«انطباقی (سالم) بودن رفتار ما در واقع بیشتر مسئلهٔ سازگاری یا متناسب بودن آن رفتار با محیط است» (لاهی). همان رفتار در یک محیط کارکردی و در محیط دیگر مشکل‌ساز است: <a class="w" data-t="fit">عدم تطبیق</a>.</div>
+<blockquote><p class="q-en">…a sufficiently strong propensity not only to make divisions in knowledge where there are none in nature, and then to impose the divisions upon nature… but to go further, and to convert the generalizations made from observation into positive entities, permitting for the future these artificial creations to tyrannize over the understanding.</p><p class="q-fa">میلی شدید نه تنها به ایجاد تقسیم‌بندی در دانش، جایی که در طبیعت چنان تفکیکی وجود ندارد، و تحمیل آن به طبیعت تا با باور ما سازگار شود؛ بلکه پیش‌تر رفتن و تبدیل این کلیت‌بخشی‌ها به موجودیت‌های حقیقی، به‌گونه‌ای که در آینده این ساخته‌های مصنوعی بر درک ما مسلط شوند.</p><footer>هنری مادزلی (۱۸۳۵–۱۹۱۸)</footer></blockquote>
+<h3>هفت دلیل لاهی، تیمیر و کروگر (۲۰۲۲)</h3>
+<p><sup class="c"><a href="#r-lahey2022">[۱۶]</a></sup></p>
+<ol>
+<li><b>مشکلات روانی به‌صورت تجربی طیفی و بُعدگونه‌اند</b>: عامل نهان، پیوسته و با توزیع نرمال؛ نه دو گروه جدا.</li>
+<li><b>ابعاد معتبرترند:</b> در ارزیابی دوباره به فاصلهٔ ۷ تا ۱۴ روز، همبستگی برای درجه‌بندی ۰ تا ۳ علائم ۰٫۸۳، برای علائم دوگانه (هست/نیست) ۰٫۷۴، و برای تشخیص دوگانه فقط ۰٫۴۴ بود.</li>
+<li><b>ابعاد پیش‌بینی‌کنندهٔ بهتری</b> برای پیامدهای نامطلوب‌اند.</li>
+<li><b>تشخیص‌های دوگانه «تخت پروکروستس»اند</b> و نیازهای فردی را نادیده می‌گیرند (پروکروستس در اسطورهٔ یونان مسافران را به اندازهٔ تختش می‌کشید یا می‌برید).</li>
+<li><b>دسته‌ها ما را به «واقعی‌پنداری» (reification) مشکلات</b> تشویق می‌کنند.</li>
+<li><b>دسته‌ها فهمی ایستا</b> از مشکلات ایجاد می‌کنند.</li>
+<li><b>رویکرد طیفی انگ کمتری</b> می‌سازد.</li>
+</ol>
+<figure><div class="hb"><span class="t">درجه‌بندی ۰ تا ۳ علائم</span><div class="track"><div class="fill f-good" style="width:83.0%;"></div></div><span class="v">۰.۸۳</span></div>
+<div class="hb"><span class="t">علائم دوگانه</span><div class="track"><div class="fill " style="width:74.0%;background:var(--link)"></div></div><span class="v">۰.۷۴</span></div>
+<div class="hb"><span class="t">تشخیص دوگانه</span><div class="track"><div class="fill f-bad" style="width:44.0%;"></div></div><span class="v">۰.۴۴</span></div>
+<figcaption>شکل ۳. پایایی بازآزمایی در سه شیوهٔ سنجش (اسلاید ۱۳۱).</figcaption></figure>
+<p><b>مشکلات روانی</b> در تعریف لاهی: هر جنبه‌ای از رفتار، به تعبیر گسترده احساسات، فکرها، ادراکات، انگیزه‌ها و اعمال ما، که باعث ناراحتی یا مانع کارکرد موفق در تحصیل، کار، خانواده و دیگر حوزه‌های مهم زندگی شود. توماس ساس (۱۹۲۰–۲۰۱۲) پیش‌تر از «مشکلات زندگی» (problems in living) سخن گفته بود. ویژگی مشکلات روانی: <b>معمولی بودن</b> و <b>شایع بودن</b>.</p>
+
+<h2 id="hitop">بخش دوم کارگاه: HiTOP</h2>
+<p><sup class="c"><a href="#r-slides2">[۲]</a></sup> <a class="w" data-t="hitop">رده‌بندی سلسله‌مراتبی آسیب‌شناسی روانی</a> (Kotov و ۳۹ همکار، ۲۰۱۷) به جای فهرست دسته‌های جدا، سلسله‌مراتبی از ابعاد می‌سازد که از هم‌ابتلایی واقعی علائم استخراج شده‌اند<sup class="c"><a href="#r-kotov">[۱۷]</a></sup>.</p>
+<figure><svg class="curve" viewBox="0 0 520 260" role="img" aria-label="ساختار سلسله‌مراتبی HiTOP">
+<rect x="200" y="8" width="120" height="30" rx="4" fill="var(--link-bg)" stroke="var(--link)"/><text x="260" y="28" text-anchor="middle">عامل p (کلی)</text>
+<g font-size="11">
+<rect x="4" y="80" width="78" height="40" rx="3" fill="none" stroke="var(--muted)"/><text x="43" y="98" text-anchor="middle">جسمانی‌</text><text x="43" y="112" text-anchor="middle">سازی</text>
+<rect x="90" y="80" width="78" height="40" rx="3" fill="none" stroke="var(--muted)"/><text x="129" y="104" text-anchor="middle">درون‌سازی</text>
+<rect x="176" y="80" width="78" height="40" rx="3" fill="none" stroke="var(--muted)"/><text x="215" y="98" text-anchor="middle">برون‌سازی</text><text x="215" y="112" text-anchor="middle">بی‌مهار</text>
+<rect x="262" y="80" width="78" height="40" rx="3" fill="none" stroke="var(--muted)"/><text x="301" y="98" text-anchor="middle">برون‌سازی</text><text x="301" y="112" text-anchor="middle">ستیزه‌جو</text>
+<rect x="348" y="80" width="78" height="40" rx="3" fill="none" stroke="var(--muted)"/><text x="387" y="104" text-anchor="middle">اختلال فکر</text>
+<rect x="434" y="80" width="78" height="40" rx="3" fill="none" stroke="var(--muted)"/><text x="473" y="104" text-anchor="middle">انفصال</text>
+<g stroke="var(--muted)"><line x1="260" y1="38" x2="43" y2="80"/><line x1="260" y1="38" x2="129" y2="80"/><line x1="260" y1="38" x2="215" y2="80"/><line x1="260" y1="38" x2="301" y2="80"/><line x1="260" y1="38" x2="387" y2="80"/><line x1="260" y1="38" x2="473" y2="80"/></g>
+<rect x="60" y="160" width="58" height="26" rx="3" fill="none" stroke="var(--rule)"/><text x="89" y="177" text-anchor="middle">خوردن</text>
+<rect x="122" y="160" width="50" height="26" rx="3" fill="none" stroke="var(--rule)"/><text x="147" y="177" text-anchor="middle">جنسی</text>
+<rect x="60" y="196" width="58" height="26" rx="3" fill="none" stroke="var(--rule)"/><text x="89" y="213" text-anchor="middle">دیسترس</text>
+<rect x="122" y="196" width="50" height="26" rx="3" fill="none" stroke="var(--rule)"/><text x="147" y="213" text-anchor="middle">ترس</text>
+<rect x="66" y="232" width="100" height="26" rx="3" fill="none" stroke="var(--rule)"/><text x="116" y="249" text-anchor="middle">مانیا (هر دو)</text>
+<rect x="180" y="160" width="70" height="26" rx="3" fill="none" stroke="var(--rule)"/><text x="215" y="177" text-anchor="middle">مصرف مواد</text>
+<rect x="232" y="200" width="70" height="26" rx="3" fill="none" stroke="var(--rule)"/><text x="267" y="217" text-anchor="middle">ضداجتماعی</text>
+<g stroke="var(--rule)"><line x1="129" y1="120" x2="89" y2="160"/><line x1="129" y1="120" x2="147" y2="160"/><line x1="129" y1="120" x2="89" y2="196"/><line x1="129" y1="120" x2="147" y2="196"/><line x1="129" y1="120" x2="116" y2="232"/><line x1="387" y1="120" x2="140" y2="240"/><line x1="215" y1="120" x2="215" y2="160"/><line x1="215" y1="120" x2="267" y2="200"/><line x1="301" y1="120" x2="267" y2="200"/></g>
+</g></svg><figcaption>شکل ۴. طرح ساده‌شدهٔ HiTOP (اسلایدهای ۱۳ تا ۱۶): طیف‌ها در ردیف میانی، زیرعامل‌ها پایین. «ضداجتماعی» هم به برون‌سازی بی‌مهار و هم ستیزه‌جو تعلق دارد و «مانیا» هم به درون‌سازی و هم اختلال فکر. لایه‌های پایین‌تر (سندرم‌ها، علائم) نشان داده نشده‌اند.</figcaption></figure>
+<div class="cols2">
+<div class="card"><b class="h">مشکلات برون‌ساز</b>حالات هیجانی مرزی (مشترک با درون‌ساز)، پرخاشگری و ستیزه‌جویی، ضداجتماعی واکنشی و کنشی، خودشیفته‌نمایشی، بی‌توجهی، بیش‌فعالی‌تکانشگری، سایکوپاتی، اعتیاد. دو فرایند پشت آن: <a class="w" data-t="disinhibition">نبود مهار و کنترل</a> و <b>ستیزه‌جویی و خشونت</b>.</div>
+<div class="card"><b class="h">مشکلات تفکر و عاطفه</b>توهم، هذیان، به‌هم‌ریختگی شدید، نبود کنش عاطفی، بی‌علاقگی اجتماعی، طیف اوتیسم، سرسختی شناختی، مشکلات خوردن، مانیا، مناسک وسواسی. فرایند محوری: <a class="w" data-t="cognitive-rigidity">سرسختی شناختی</a>.</div>
+</div>
+<h3>فرضیهٔ سلسله‌مراتب علّی</h3>
+<p>اسلاید ۱۷ این فرضیه را مطرح کرد که علت‌ها (ژنتیک، محیط) بیشتر روی سطوح بالای سلسله‌مراتب اثر می‌گذارند تا روی تک‌تک تشخیص‌ها؛ یعنی عوامل خطر «فراتشخیصی»‌اند. به همین دلیل، هدف گرفتن فرایندهای مشترک می‌تواند همزمان چند مشکل را بهبود دهد.</p>
+<div class="note"><b class="k">یادداشت ویراستار: HiTOP و RDoC</b>دو جایگزین بزرگ DSM اغلب با هم اشتباه می‌شوند. HiTOP (۲۰۱۷) <b>از بالا به پایین و توصیفی</b> است: علائم را بر اساس هم‌وقوعی آماری دسته‌بندی می‌کند و برای کار بالینی ساخته شده. RDoC مؤسسهٔ ملی سلامت روان آمریکا (۲۰۰۹) <b>از پایین به بالا و سازوکاری</b> است: از حوزه‌های کارکردی مغز (نظام‌های ارزش منفی و مثبت، شناخت، فرایندهای اجتماعی، برانگیختگی، حسی‌حرکتی) در سطوح ژن تا رفتار شروع می‌کند و بیشتر چارچوب پژوهشی است. هر دو با کارگاه هم‌سو هستند: ابعاد به جای دسته‌ها.</div>
+
+<h2 id="measure">سنجش فرایندها</h2>
+<p>بخش دوم کارگاه برای هر فرایند یک مقیاس هشت‌گویه‌ای معرفی کرد (اسلایدهای ۱۸ تا ۲۴). هر گویه روی طیفی از «اصلاً این‌گونه نیستم» تا «کاملاً این‌گونه هستم» پاسخ داده می‌شود.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>ساختار این هفت مقیاس (اجتناب تجربه‌ای، نشخوار، پنهان‌سازی هیجانی، تمرکز بر کوتاه‌مدت، استمرار پاسخ، پرخاش، تعبیر منفی) با «سیاههٔ جامع مقابله» (CCI-55) کتاب «ذهن و هیجان‌ها» از مک‌کی و همکاران مطابقت دارد که برای انتخاب مهارت‌های درمانی بر پایهٔ فرایند ساخته شده است.</div>
+<details><summary>اجتناب تجربه‌ای</summary><ol class="tight"><li>سعی می‌کنم از نظر هیجانی از شرایط ناراحت‌کننده فاصله بگیرم.</li><li>احساس‌های بد را از خودم دور می‌کنم.</li><li>وقتی حس بدی دارم، سعی می‌کنم به آن توجه نکنم.</li><li>سعی می‌کنم حس‌های بدم را خفه و بی‌حس کنم.</li><li>از شرایط مشکل‌آفرین خودم را دور می‌کنم.</li><li>وقتی مسائل دشوار می‌شوند، خودم را درگیرشان نمی‌کنم.</li><li>وقتی چیزی ناراحت‌کننده است، اجتناب می‌کنم.</li><li>از مناقشه‌های ناراحت‌کننده خودم را دور می‌کنم.</li></ol></details>
+<details><summary>نشخوار</summary><ol class="tight"><li>به همهٔ چیزهای بدی که ممکن است در یک موقعیت پیش بیاید فکر می‌کنم.</li><li>مرتب به یک وضعیت و نتایج بدِ ممکنش فکر می‌کنم.</li><li>دربارهٔ اتفاق‌های مشکل‌آفرین خیلی فکر می‌کنم.</li><li>سعی می‌کنم شرایط دشوار را تحلیل کنم یا بفهمم.</li><li>وقتی مشکلی هست، معمولاً به بدترین حالت ممکن فکر می‌کنم.</li><li>وقتی اتفاق بدی می‌افتد، خاطره‌اش را تکرار و تحلیل می‌کنم.</li><li>وقتی کاری را کرده‌ام که نباید می‌کردم، مکرر به آن فکر می‌کنم.</li><li>دربارهٔ چیزهایی که ممکن است اتفاق بیفتند نگران می‌شوم.</li></ol></details>
+<details><summary>پنهان‌سازی هیجانی</summary><ol class="tight"><li>با بروز ندادن، هیجاناتم را کنترل می‌کنم.</li><li>سعی می‌کنم نگذارم احساساتم معلوم شود.</li><li>وقتی حس منفی دارم، تلاش می‌کنم دیده نشود.</li><li>سعی می‌کنم فقط سمت آرام من دیده شود.</li><li>هیجاناتم را برای خودم نگه می‌دارم.</li><li>ناراحتی یا بی‌قراری‌ام را نشان نمی‌دهم.</li><li>فقط اجازه می‌دهم مردم حالات خوب مرا ببینند.</li><li>وقتی در رنجم، ظاهر مثبتم را حفظ می‌کنم.</li></ol></details>
+<details><summary>تمرکز بر کوتاه‌مدت</summary><ol class="tight"><li>بیشتر کاری را می‌کنم که فوراً حالم را خوب کند.</li><li>می‌خواهم حس‌های بدم فوراً برطرف شوند، حتی به قیمت دردسر بعدی.</li><li>دنبال راه‌حل‌های سریعم و فکر می‌کنم آینده خودش درست می‌شود.</li><li>کاری را می‌کنم که در لحظه حس خوب بدهد.</li><li>به آنچه فوراً رخ می‌دهد متمرکزم و به بعد فکر نمی‌کنم.</li><li>به چیزی فکر می‌کنم که فوراً کمک کند، نه آنچه در درازمدت خوب است.</li><li>دنبال راه‌حل سریعم حتی اگر موقت باشد.</li><li>اینکه الان چطور حالم را خوب کنم برایم مهم است.</li></ol></details>
+<details><summary>استمرار و یکنواختی پاسخ (سرسختی شناختی)</summary><ol class="tight"><li>وقتی به راه‌حلی عادت کنم، همیشه همان کار را می‌کنم.</li><li>راه خودم را برای مشکلات دارم و تمایلی به تغییر ندارم.</li><li>هرچه شود، اصرار دارم مسائل را به شیوهٔ خاصی حل کنم.</li><li>با مشکلات به روشی که همیشه کرده‌ام برخورد می‌کنم.</li><li>روشم را تغییر نمی‌دهم حتی اگر جواب ندهد.</li><li>همان راهبرد همیشگی را به کار می‌برم.</li><li>وقتی به مشکل می‌خورم، تلاشم را دو برابر می‌کنم و همان روش را ادامه می‌دهم.</li><li>گاهی فکر می‌کنم باید روشم را عوض کنم، اما آخر سر همان کار همیشگی را می‌کنم.</li></ol></details>
+<details><summary>پرخاش و خشونت</summary><ol class="tight"><li>گاهی دیگران را می‌زنم یا تهدید به زدن می‌کنم.</li><li>برای آرام شدن داد می‌زنم.</li><li>با حملهٔ کلامی احساساتم را آزاد می‌کنم.</li><li>عصبانی می‌شوم و حرف‌های تحقیرآمیز می‌زنم.</li><li>در شرایط دشوار عصبانی می‌شوم.</li><li>وقتی چیزی درست پیش نمی‌رود، خیلی حالم گرفته می‌شود.</li><li>وقتی زیر فشار سرخورده‌ام، عصبانی می‌شوم.</li><li>دربارهٔ انتقام خیلی خیال‌پردازی می‌کنم.</li></ol></details>
+<details><summary>تعبیر منفی</summary><ol class="tight"><li>خودم را به شکل منفی با دیگران مقایسه می‌کنم.</li><li>در خودم ایراد پیدا می‌کنم.</li><li>روش‌ها و کارهای دیگران را خیلی قضاوت می‌کنم.</li><li>روی اشتباهات و تقصیر دیگران خیلی تمرکز می‌کنم.</li><li>جنبهٔ منفی موقعیت‌ها را می‌بینم.</li><li>کلاً دیگران را خیلی قضاوت می‌کنم.</li><li>اغلب فکر می‌کنم امور بد مدیریت می‌شوند.</li><li>انتظار ندارم کارها خوب پیش بروند.</li></ol></details>
+
+<h2 id="avoidance">پنج نوع اجتناب</h2>
+<p>اجتناب همیشه یک الگو دارد: <b>اثر کوتاه‌مدت مفید، اثر درازمدت مخرب</b>. اسلایدهای ۲۷ تا ۳۲ برای هر نوع، نمونه آوردند<sup class="c"><a href="#r-mckay">[۸]</a></sup>:</p>
+<table class="t">
+<tr><th>نوع</th><th>تجربهٔ اجتناب‌شده</th><th>رفتار (اثر کوتاه‌مدت)</th><th>هزینهٔ درازمدت</th></tr>
+<tr><td><b>موقعیتی</b></td><td>احساس گیر افتادن در دید مردم</td><td>نرفتن به بازار، مهمانی</td><td>ناتوانی در کار و معاشرت</td></tr>
+<tr><td></td><td>احساس گناه نسبت به فرزند</td><td>امتناع از دیدن او</td><td>غریبه شدن با او</td></tr>
+<tr><td><b>شناختی</b><br><small>خاطره، فکر، تصویر</small></td><td>خاطرهٔ آسیب‌زا؛ افکار منفی دربارهٔ همسر</td><td>مهار اندیشیدن؛ فکر نکردن به ازدواج</td><td>تجمع اضطراب؛ تشدید مشکلات زناشویی</td></tr>
+<tr><td><b>حفاظتی</b><br><small>نظافت، وارسی، کمال‌گرایی، تعلل</small></td><td>ترس از شکست یا سرزنش؛ ترس از سرقت</td><td>کمال‌طلبی، دقت زیاد؛ امتناع از رقابت؛ حمل اسپری</td><td>فرسودگی؛ از دست دادن فرصت؛ بی‌اعتمادی و دید سوگیرانه</td></tr>
+<tr><td><b>بدنی</b></td><td>احساس خفگی؛ خستگی؛ برانگیختگی جنسی</td><td>کاهش تحرک و بروز هیجان؛ خواب بیشتر؛ امتناع از رابطه</td><td>آنهدونیا، انزوا، افسردگی، کاهش تحمل</td></tr>
+<tr><td><b>جایگزینی</b></td><td>کسالت، غم، اضطراب جمع، خشم</td><td>الکل، قمار، غذای پرکالری، بازی افراطی، آرام‌بخش</td><td>اعتیاد، ورشکستگی، اضافه وزن، انزوا</td></tr>
+</table>
+<div class="note"><b class="k">پیوند با دنیای روان</b>اجتناب تجربه‌ای هستهٔ مشترک بسیاری از درمان‌های موج سوم است. پادزهرش در درمان پذیرش و تعهد «تمایل» (willingness) و در کار سوزان دیوید «<a class="w" data-t="emotional-agility">چابکی هیجانی</a>» است: نزدیک شدن به هیجان دشوار در خدمت ارزش‌ها.</div>
+
+<h2 id="worry">الگوی نگرانی</h2>
+<p>در کنار چهار فرایند پایه، اسلاید ۳۵ چهار فرایند دیگر را برای نگرانی و اضطراب فراگیر افزود. این همان الگوی شناختی میشل دوگا و رابرت لادوسور است<sup class="c"><a href="#r-dugas">[۱۸]</a></sup>:</p>
+<figure><div class="chain">
+<div class="box hl"><a class="w" data-t="intolerance-uncertainty">نابردباری در برابر عدم قطعیت</a></div><span class="arr">←</span>
+<div class="box">باورهای مثبت دربارهٔ نگرانی</div><span class="arr">←</span>
+<div class="box">نگرش منفی به معضلات</div><span class="arr">←</span>
+<div class="box">اجتناب شناختی</div>
+</div><figcaption>شکل ۵. چهار مؤلفهٔ الگوی نگرانی (اسلاید ۳۶). نابردباری در برابر عدم قطعیت موتور اصلی است.</figcaption></figure>
+<h3>باورهای مثبت دربارهٔ نگرانی (WW-II)</h3>
+<p>پرسش‌نامهٔ «چرا نگرانی؟» (Why Worry-II) ۲۵ گویه دارد (اسلایدهای ۳۷ تا ۴۰) و پنج باور را می‌سنجد (اسلاید ۴۱):</p>
+<ol class="tight">
+<li>نگرانی به حل مسئله کمک می‌کند. («نگرانی به من کمک می‌کند بدانم چه کنم.»)</li>
+<li>نگرانی نیروی انگیزه‌دهنده است. («از راه نگرانی است که کارهای لازم را انجام می‌دهم.»)</li>
+<li>نگرانی صفت شخصیتی مثبتی است. («همین که نگرانم نشان می‌دهد آدم خوبی‌ام.»)</li>
+<li>نگرانی به خودی خود می‌تواند مانع وقایع ناخوشایند شود. («صرف نگران بودن می‌تواند مانع وقوع یک حادثه شود.»)</li>
+<li>نگرانی از هیجان منفی محافظت می‌کند. («اگر از پیش نگران باشم، وقتی اتفاق بدی می‌افتد کمتر سرخورده می‌شوم.»)</li>
+</ol>
+<h3>نابردباری در برابر عدم قطعیت (IUS-12)</h3>
+<p>دوازده گویه، مثل «وقایع غیرمنتظره خیلی مرا آزار می‌دهند»، «باید بتوانم همه چیز را از پیش برنامه‌ریزی کنم»، «کوچک‌ترین شکی مانع عمل من می‌شود» (اسلایدهای ۴۳ و ۴۴). دو نوع اضطراب ناشی از عدم قطعیت (اسلاید ۴۵):</p>
+<div class="cols2">
+<div class="card"><b class="h">اضطراب آینده‌نگر</b><span class="en">Prospective anxiety</span>میل به دانستن و پیش‌بینی آینده؛ ناراحتی از ندانستن.</div>
+<div class="card"><b class="h">اضطراب مهاری</b><span class="en">Inhibitory anxiety</span>عدم قطعیت فرد را فلج می‌کند و مانع عمل می‌شود.</div>
+</div>
+<h3>نگرش منفی به معضلات (NPOQ)</h3>
+<p>دوازده گویه دربارهٔ دیدن مشکل به‌عنوان تهدید و شک به توانایی خود در حل آن: «اغلب حتی پیش از تلاش برای یافتن راه‌حل به خودم می‌گویم حل مسئله دشوار است»، «مشکلاتم را بزرگ‌تر از آنچه هستند می‌بینم» (اسلایدهای ۴۷ و ۴۸). این مؤلفه با <b>مهارت</b> حل مسئله فرق دارد: فرد ممکن است مهارت داشته باشد اما به آن اعتماد نکند.</p>
+
+<h2 id="more">دو مقیاس دیگر: خشم و خلوت</h2>
+<h3>نشخوار خشم</h3>
+<p><a class="w" data-t="anger-rumination">مقیاس نشخوار خشم</a> (۱۹ گویه؛ اسلایدهای ۵۰ و ۵۱) شکل خاصی از نشخوار را می‌سنجد: مرور تجربه‌های خشم‌آلود، فکر به بی‌عدالتی‌ها، فانتزی انتقام، دشواری بخشیدن، «جنگیدن در ذهن» پس از پایان دعوا و یادآمدن خاطرات خشم پیش از خواب<sup class="c"><a href="#r-sukhodolsky">[۱۹]</a></sup>.</p>
+<h3>انگیزه برای خلوت (MSS-SF)</h3>
+<p>تنهایی دو چهره دارد (اسلایدهای ۵۵ و ۵۶)<sup class="c"><a href="#r-thomas">[۲۰]</a></sup>:</p>
+<div class="cols2">
+<div class="card"><b class="h">خلوت خودمختار</b>«به خلاقیتم دامن می‌زند»، «از سکوت و آرامش لذت می‌برم»، «به معنویتم نزدیک می‌شوم»، «با احساساتم در تماس می‌مانم»، «انرژی‌ام بازیابی می‌شود». <b>سالم و ترمیم‌کننده.</b></div>
+<div class="card"><b class="h">خلوت ناخودمختار (گریز)</b>«با دیگران مضطربم»، «حس دوست‌داشته‌شدن ندارم»، «نمی‌توانم خودم باشم»، «حس می‌کنم به آنجا تعلق ندارم». <b>نشانهٔ اجتناب و حساسیت به طرد.</b></div>
+</div>
+<p>یعنی خود رفتار (تنها بودن) سالم یا ناسالم نیست؛ انگیزه و کارکرد آن تعیین‌کننده است. این همان پیام کل کارگاه است: <b>فرایند را ببین، نه برچسب را.</b></p>
+
+<h2 id="takeaway">جمع‌بندی</h2>
+<ul>
+<li>مرز سلامت و اختلال تدریجی است؛ بیشتر ما در طول عمر دست‌کم یک دوره «اختلال» تجربه می‌کنیم.</li>
+<li>تشخیص‌ها ابزار ارتباط و پژوهش‌اند و کارکرد دارند، اما موجودیت‌های طبیعی و ثابت نیستند؛ در طول زمان به هم تبدیل می‌شوند و ژن اختصاصی ندارند.</li>
+<li>ابعاد پایاتر، معتبرتر و کم‌انگ‌ترند؛ HiTOP نمونهٔ عملیاتی آن است.</li>
+<li>پشت تشخیص‌های گوناگون، فرایندهای مشترکی هست: اجتناب تجربه‌ای، نشخوار، حساسیت به طرد، آنهدونیا، نابردباری در برابر عدم قطعیت، سرسختی شناختی، تمرکز بر کوتاه‌مدت، پرخاش و تعبیر منفی.</li>
+<li>درمان فرایندمدار این فرایندها را هدف می‌گیرد و هم‌زمان فرایندهای کارکردی (لذت، معنا، غنا، انعطاف) را تقویت می‌کند.</li>
+</ul>
+
+<div class="nd-health"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: مرز سلامت و اختلال</h3><ul><li class="nd-health"><a href="psychopath.html" target="_blank" rel="noopener"><i></i>آسیب‌شناسی توصیفی</a><small>آسیب‌شناسی روانی توصیفی</small></li><li class="nd-health"><a href="clinical.html" target="_blank" rel="noopener"><i></i>قفسهٔ بالینی</a><small>قفسهٔ بالینی</small></li><li class="nd-health"><a href="shelf3.html" target="_blank" rel="noopener"><i></i>بالینی ۲</a><small>قفسهٔ بالینی ۲</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-self"><a href="riseabove.html" target="_blank" rel="noopener"><i></i>فراتر برو</a><small>خود و رشد › معنا، امید و بهزیستی · مشترک: نشخوار خشم، چابکی هیجانی</small></li><li class="nd-self"><a href="happiness.html" target="_blank" rel="noopener"><i></i>ریشه‌های شادکامی</a><small>خود و رشد › معنا، امید و بهزیستی · مشترک: سلامت روان پایدار</small></li><li class="nd-body"><a href="shelf8.html" target="_blank" rel="noopener"><i></i>قفسهٔ نوجوانی</a><small>بدن، تکامل و جنسیت › نوجوانی، جنس و گرایش · مشترک: حساسیت به طرد</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#7d4a86"><b>فلسفه</b>فلسفهٔ روان‌پزشکی: «اختلال» چیست؟ مرز رنج طبیعی و بیماری کجاست؟ <a href="../tools/graph.html#phil-psychiatry" target="_blank" rel="noopener">فلسفهٔ روان‌پزشکی: اختلال چیست؟ ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>پزشکی‌سازی و انگ: برچسب تشخیصی هم کمک می‌کند و هم هزینهٔ اجتماعی دارد. <a href="../tools/graph.html#medicalization" target="_blank" rel="noopener">پزشکی‌سازی ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>گافمن: انگ هویت را «لکه‌دار» می‌کند و رفتار دیگران را تغییر می‌دهد. <a href="../tools/graph.html#stigma" target="_blank" rel="noopener">انگ و برچسب‌زنی (گافمن) ↗</a></div></div><div class="worlds"><a href="../tools/land.html#dimensional-dx" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="../tools/graph.html#dimensional-dx" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="../tools/library.html" target="_blank" rel="noopener">کتابخانه</a><a href="../tools/timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="../tools/atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="../index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides1">اسلایدهای بخش اول کارگاه «مرز میان سلامت و اختلال روان»، دکتر آذرخش مکری، ۱۰ مرداد ۱۴۰۴. <span class="badge">ضمیمه</span></li>
+<li id="r-slides2">اسلایدهای بخش دوم (پایانی) همان کارگاه، ۱۷ مرداد ۱۴۰۴. <span class="badge">ضمیمه</span></li>
+<li id="r-beyond"><span class="ltr">Hayes, S. C., &amp; Hofmann, S. G. (Eds.) (2020). <i>Beyond the DSM: Toward a Process-Based Alternative for Diagnosis and Mental Health Treatment</i>. Context Press.</span></li>
+<li id="r-pbt"><span class="ltr">Hofmann, S. G., Hayes, S. C., &amp; Lorscheid, D. N. (2021). <i>Learning Process-Based Therapy</i>. Context Press.</span></li>
+<li id="r-david"><span class="ltr">David, S. (2016). <i>Emotional Agility</i>. Avery.</span></li>
+<li id="r-frances"><span class="ltr">Frances, A. (2013). <i>Saving Normal</i>. William Morrow.</span></li>
+<li id="r-lahey2021"><span class="ltr">Lahey, B. B. (2021). <i>Dimensions of Psychological Problems</i>. Oxford University Press.</span></li>
+<li id="r-mckay"><span class="ltr">McKay, M., Fanning, P., &amp; Zurita Ona, P. E. (2011). <i>Mind and Emotions: A Universal Treatment for Emotional Disorders</i>. New Harbinger.</span></li>
+<li id="r-oishi"><span class="ltr">Oishi, S. (2025). <i>Life in Three Dimensions</i>. Doubleday.</span></li>
+<li id="r-foulkes"><span class="ltr">Foulkes, L. (2021). <i>Losing Our Minds: The Challenge of Defining Mental Illness</i>. Bodley Head.</span></li>
+<li id="r-burt"><span class="ltr">Burt, S. A., Klump, K. L., Kashy, D. A., Gorman-Smith, D., &amp; Neiderhiser, J. M. (2015). Neighborhood as a predictor of non-aggressive, but not aggressive, antisocial behaviors in adulthood. <i>Psychological Medicine, 45</i>(13), 2897–2907.</span></li>
+<li id="r-oishi2019"><span class="ltr">Oishi, S., Choi, H., Buttrick, N., et al. (2019). The psychologically rich life questionnaire. <i>Journal of Research in Personality, 81</i>, 257–270.</span></li>
+<li id="r-border"><span class="ltr">Border, R., Johnson, E. C., Evans, L. M., et al. (2019). No support for historical candidate gene or candidate gene-by-interaction hypotheses for major depression across multiple large samples. <i>American Journal of Psychiatry, 176</i>(5), 376–387.</span></li>
+<li id="r-lahey2014"><span class="ltr">Lahey, B. B., Zald, D. H., Hakes, J. K., Krueger, R. F., &amp; Rathouz, P. J. (2014). Patterns of heterotypic continuity associated with the cross-sectional correlational structure of prevalent mental disorders in adults. <i>JAMA Psychiatry, 71</i>, 989–996.</span></li>
+<li id="r-schaefer"><span class="ltr">Schaefer, J. D., Caspi, A., Belsky, D. W., et al. (2017). Enduring mental health: Prevalence and prediction. <i>Journal of Abnormal Psychology, 126</i>(2), 212–224.</span></li>
+<li id="r-lahey2022"><span class="ltr">Lahey, B. B., Tiemeier, H., &amp; Krueger, R. F. (2022). Seven reasons why binary diagnostic categories should be replaced with empirically sounder and less stigmatizing dimensions. <i>JCPP Advances, 2</i>(4), e12108.</span></li>
+<li id="r-kotov"><span class="ltr">Kotov, R., Krueger, R. F., Watson, D., et al. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to traditional nosologies. <i>Journal of Abnormal Psychology, 126</i>(4), 454–477.</span></li>
+<li id="r-dugas"><span class="ltr">Dugas, M. J., &amp; Robichaud, M. (2007). <i>Cognitive-Behavioral Treatment for Generalized Anxiety Disorder</i>. Routledge.</span> منبع الگو از ویراستار است.</li>
+<li id="r-sukhodolsky"><span class="ltr">Sukhodolsky, D. G., Golub, A., &amp; Cromwell, E. N. (2001). Development and validation of the anger rumination scale. <i>Personality and Individual Differences, 31</i>, 689–700.</span></li>
+<li id="r-thomas"><span class="ltr">Thomas, V., &amp; Azmitia, M. (2019). Motivation matters: Development and validation of the Motivation for Solitude Scale – Short Form (MSS-SF). <i>Journal of Adolescence, 70</i>, 33–42.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این صفحه از روی اسلایدهای دو بخش کارگاه و کتاب‌ها و مقاله‌هایی که روی اسلایدها معرفی شده‌اند ساخته شده است. گویه‌های پرسش‌نامه‌ها همان ترجمه‌های فارسی روی اسلایدهاست و فقط برای آشنایی آمده‌اند؛ برای تشخیص یا تصمیم بالینی کاربرد ندارند. توضیح‌های افزوده (پیشینهٔ تاریخی، نام سازندگان مقیاس‌ها، مقایسه با RDoC) در کادر «یادداشت ویراستار» آمده‌اند. پس از رسیدن متن سخنرانی، مثال‌ها و تأکیدهای مدرس به صفحه افزوده می‌شود.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · کارگاه‌های دکتر آذرخش مکری</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"transdiagnostic": {"fa": "فرایندهای فراتشخیصی", "en": "Transdiagnostic processes", "d": "سازوکارهای روانی مشترک میان چند تشخیص (مثل اجتناب تجربه‌ای، نشخوار، نابردباری در برابر عدم قطعیت) که می‌توان آن‌ها را مستقیم هدف درمان قرار داد.", "rel": ["pbt", "experiential-avoidance", "rumination", "hitop"], "s": "processes", "g": "transdiagnostic"}, "psych-problem": {"fa": "مشکل روانی", "en": "Psychological problem", "d": "هر جنبه‌ای از رفتار (احساس، فکر، ادراک، انگیزه، عمل) که باعث ناراحتی یا مانع کارکرد موفق شود (لاهی). جایگزین پیشنهادی برای «بیماری» و «اختلال».", "rel": ["fit", "dimensional"], "s": "dimensions", "g": "dimensional-dx"}, "fit": {"fa": "تطبیق و عدم تطبیق", "en": "Fit / mismatch", "d": "سالم یا ناسالم بودن رفتار بیشتر به تناسب آن با محیط بستگی دارد تا ذات آن. همان ویژگی در یک موقعیت انطباقی و در دیگری مشکل‌ساز است.", "rel": ["psych-problem"], "s": "dimensions", "g": "dimensional-dx"}, "pbt": {"fa": "درمان فرایندمدار", "en": "Process-based therapy (PBT)", "d": "رویکرد هافمن و هیز: به جای پروتکل برای هر تشخیص، فرایندهای تغییر (شناختی، هیجانی، توجهی، خود، انگیزشی، رفتاری) را در فرد شناسایی و هدف گرفتن.", "rel": ["transdiagnostic"], "s": "aims", "g": "pbt"}, "hitop": {"fa": "HiTOP", "en": "Hierarchical Taxonomy of Psychopathology", "d": "رده‌بندی سلسله‌مراتبی و بُعدی آسیب‌شناسی روانی (کوتوف و همکاران ۲۰۱۷): عامل کلی p، شش طیف (درون‌سازی، برون‌سازی بی‌مهار و ستیزه‌جو، اختلال فکر، انفصال، جسمانی‌سازی)، زیرعامل‌ها، سندرم‌ها و علائم.", "rel": ["dimensional", "transdiagnostic"], "s": "hitop", "g": "hitop"}, "stab": {"fa": "STAB-32", "en": "Subtypes of Antisocial Behavior Questionnaire", "d": "پرسش‌نامهٔ ۳۲ گویه‌ای انواع رفتار ضداجتماعی با سه زیرمقیاس: پرخاشگری فیزیکی، پرخاشگری اجتماعی و قانون‌شکنی (برت و دانلان).", "rel": [], "s": "intro", "g": "antisocial-subtypes"}, "experiential-avoidance": {"fa": "اجتناب تجربه‌ای", "en": "Experiential avoidance", "d": "تلاش برای فرار یا کنترل تجربه‌های درونی ناخوشایند (افکار، احساس‌ها، خاطره‌ها، حس‌های بدنی). پنج نوع: موقعیتی، شناختی، حفاظتی، بدنی، جایگزینی.", "rel": ["transdiagnostic", "emotional-agility"], "s": "avoidance", "g": "experiential-avoidance"}, "rejection-sensitivity": {"fa": "حساسیت به طرد", "en": "Rejection sensitivity", "d": "انتظار مضطربانهٔ طرد، دیدن آن در نشانه‌های مبهم و واکنش شدید به آن. از فرایندهای فراگیر درون‌سازی.", "rel": ["transdiagnostic"], "s": "processes", "g": "rejection-sensitivity"}, "rumination": {"fa": "نشخوار فکری", "en": "Rumination", "d": "فکر تکراری و منفعل دربارهٔ مشکل، علت‌ها و پیامدهایش؛ هستهٔ مشترک افسردگی و اضطراب.", "rel": ["anger-rumination", "transdiagnostic"], "s": "processes", "g": "rumination"}, "anger-rumination": {"fa": "نشخوار خشم", "en": "Anger rumination", "d": "مرور مکرر تجربه‌های خشم، بی‌عدالتی‌ها و فانتزی انتقام؛ خشم را طولانی و پرخاش را محتمل‌تر می‌کند. مقیاس ۱۹ گویه‌ای سوخودولسکی (۲۰۰۱).", "rel": ["rumination"], "s": "more", "g": "rumination"}, "anhedonia": {"fa": "آنهدونیا", "en": "Anhedonia", "d": "کاهش توانایی لذت بردن و انگیزه برای پاداش؛ از چهار فرایند فراگیر درون‌سازی.", "rel": ["transdiagnostic", "psych-rich"], "s": "processes", "g": "anhedonia"}, "psych-rich": {"fa": "زندگی غنی روانی", "en": "Psychologically rich life", "d": "بُعد سوم زندگی خوب در کنار شادکامی (لذت) و معنا: تنوع، تازگی و دیدگاه‌گستری تجربه‌ها. شیگهیرو اویشی؛ پرسش‌نامهٔ ۱۷ گویه‌ای.", "rel": ["anhedonia"], "s": "processes", "g": "psych-rich"}, "humors": {"fa": "اخلاط چهارگانه", "en": "Four humors", "d": "نظریهٔ بقراط و جالینوس: سلامت تعادل خون، صفرا، سودا و بلغم است و مزاج‌های دموی، صفراوی، سوداوی و بلغمی از غلبهٔ هر یک می‌آیند.", "rel": ["neo-kraepelin"], "s": "what", "g": "psychiatry-history"}, "neo-kraepelin": {"fa": "نوکریپلینی", "en": "Neo-Kraepelinian approach", "d": "جنبشی در روانپزشکی آمریکا (دههٔ ۱۹۷۰) که بیماری‌های روانی را موجودیت‌های جدا با معیارهای صریح دانست؛ پایهٔ DSM-III.", "rel": ["humors", "dimensional"], "s": "what", "g": "psychiatry-history"}, "dimensional": {"fa": "رویکرد طیفی (بُعدی)", "en": "Dimensional approach", "d": "مشکلات روانی را روی پیوستاری از خفیف تا شدید می‌سنجد، نه «هست/نیست». پایاتر، معتبرتر و کم‌انگ‌تر از دسته‌های دوگانه (لاهی و همکاران ۲۰۲۲).", "rel": ["hitop", "psych-problem"], "s": "dimensions", "g": "dimensional-dx"}, "heterotypic": {"fa": "پیوستگی ناهمسان", "en": "Heterotypic continuity", "d": "وقتی یک تشخیص در آینده تشخیص دیگری را پیش‌بینی می‌کند (مثلاً اضطراب کودکی ← افسردگی بزرگسالی). در برابر پیوستگی همسان.", "rel": ["dimensional"], "s": "origins", "g": "heterotypic"}, "enduring-mh": {"fa": "سلامت روان پایدار", "en": "Enduring mental health", "d": "نداشتن هیچ اختلال روانی از کودکی تا میانسالی؛ در کوهورت دانیدین فقط ۱۷٪ (شیفر و همکاران ۲۰۱۷).", "rel": ["overdiagnosis"], "s": "origins", "g": "enduring-mh"}, "overdiagnosis": {"fa": "بیش‌تشخیص‌گذاری", "en": "Overdiagnosis / diagnostic inflation", "d": "برچسب زدن رنج عادی به‌عنوان اختلال و گسترش بی‌مورد تشخیص و دارو. آلن فرانسیس، «نجات بهنجار».", "rel": ["enduring-mh", "dimensional"], "s": "origins", "g": "overdiagnosis"}, "disinhibition": {"fa": "نبود مهار", "en": "Disinhibition", "d": "ضعف کنترل تکانه و برنامه‌ریزی؛ فرایند مشترک بیش‌فعالی، سوءمصرف مواد و رفتار ضداجتماعی (طیف برون‌سازی بی‌مهار در HiTOP).", "rel": ["hitop"], "s": "hitop", "g": "hitop"}, "cognitive-rigidity": {"fa": "سرسختی شناختی", "en": "Cognitive rigidity", "d": "ادامهٔ همان راهبرد حتی وقتی جواب نمی‌دهد؛ ناتوانی در جابه‌جایی ذهنی. در مقیاس‌ها: «استمرار و یکنواختی پاسخ».", "rel": ["transdiagnostic"], "s": "hitop", "g": "cognitive-rigidity"}, "intolerance-uncertainty": {"fa": "نابردباری در برابر عدم قطعیت", "en": "Intolerance of uncertainty", "d": "گرایش به واکنش منفی به موقعیت‌های مبهم و نامطمئن؛ موتور اصلی نگرانی در الگوی دوگا. مقیاس IUS-12 با دو بُعد آینده‌نگر و مهاری.", "rel": ["transdiagnostic"], "s": "worry", "g": "worry-model"}, "emotional-agility": {"fa": "چابکی هیجانی", "en": "Emotional agility", "d": "سوزان دیوید: توانایی نزدیک شدن به افکار و هیجان‌های دشوار با کنجکاوی و فاصله، و عمل بر پایهٔ ارزش‌ها به جای گیر افتادن در آن‌ها.", "rel": ["experiential-avoidance"], "s": "avoidance", "g": "emotional-agility"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="../tools/graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="../tools/graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>

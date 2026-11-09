@@ -1,0 +1,667 @@
+<!doctype html><html lang="fa" dir="rtl"><head>
+<meta name="description" content="ذهن چطور برنامه‌ریزی می‌کند، چطور لذت می‌برد، چطور خودکار می‌شود و چطور دچار تنگ‌نظری می‌شود؛ و همین سازوکارها در وسوسه، اعتیاد و درمان آن چگونه کار…"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><b>خودشناسی، تصمیم و اعتیاد</b></nav>
+<title>خودشناسی، تصمیم و اعتیاد | ویکی روان‌شناسی | دانش‌سرا</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-health">
+  <div class="brand">ویکی روان‌شناسی <small>سخنرانی‌های دکتر آذرخش مکری</small></div>
+  <div class="navw"><nav class="sibs" aria-label="صفحه‌های همین موضوع"><a href="families.html" target="_blank" rel="noopener">اعتیاد و خانواده</a><a href="clinicaddiction.html" target="_blank" rel="noopener">اعتیاد (درمانگران)</a><span class="on" aria-current="page">خودشناسی و تصمیم</span></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#planning">خطای برنامه‌ریزی: «این بار فرق می‌کند»</a></li>
+<li><a href="#pleasure">لذت و هیجان مثبت: «دیگر از هیچ چیز لذت نمی‌برم»</a></li>
+<li><a href="#automatic">افکار خودکار، شیار شناختی و انعطاف‌پذیری</a></li>
+<li><a href="#tunnel">دید تونلی و هایپرفوکس</a></li>
+<li><a href="#craving">وسوسه چیست؟</a></li>
+<li><a href="#theories">نظریه‌های وسوسه</a></li>
+<li><a href="#culture">وسوسه، فرهنگ و زبان</a></li>
+<li><a href="#ema">ارزیابی لحظه‌ای محیطی</a></li>
+<li><a href="#tobacco">صنعت دخانیات و بازاریابی</a></li>
+<li><a href="#nicotine">تشخیص، آمار و درمان وابستگی به نیکوتین</a></li>
+<li><a href="#therapy">اصول روان‌درمانی پایه در اعتیاد</a></li>
+<li><a href="#counseling">مشاورهٔ پایه در سوءمصرف مواد</a></li>
+<li><a href="#substances">الکل، مواد افیونی و محرک‌ها</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>خودشناسی، تصمیم‌گیری و ذهن انسان</h1>
+<p class="lede-sub">ذهن چطور برنامه‌ریزی می‌کند، چطور لذت می‌برد، چطور خودکار می‌شود و چطور دچار تنگ‌نظری می‌شود؛ و همین سازوکارها در وسوسه، اعتیاد و درمان آن چگونه کار می‌کنند. بازنویسی ویکی‌گونهٔ جزوه‌های چهاربخشی، با واژه‌های <a class="w" data-t="planning-fallacy">قابل کلیک</a>.</p>
+<aside class="infobox" aria-label="مشخصات"><div class="ib-h">چهار بخش</div><dl>
+<dt>بخش ۱</dt><dd>خودشناسی و تصمیم (چهار جلسه): خطای برنامه‌ریزی، لذت، افکار خودکار، دید تونلی</dd>
+<dt>بخش ۲</dt><dd>وسوسه و نیکوتین (هفت جلسهٔ فارسی، پنج جلسهٔ انگلیسی)</dd>
+<dt>بخش ۳</dt><dd>اصول روان‌درمانی پایه در اعتیاد (هشت جلسه)</dd>
+<dt>بخش ۴</dt><dd>مشاورهٔ پایه در سوءمصرف مواد</dd>
+<dt>مدرس</dt><dd>دکتر آذرخش مکری و چند جلسهٔ انگلیسی</dd>
+<dt>منبع</dt><dd>جزوه‌های تنظیم‌شده از متن گفتاری سخنرانی‌ها</dd>
+</dl></aside>
+
+<p><sup class="c"><a href="#r-jozve">[۱]</a></sup> محور مشترک این جلسات، <b>مهارت‌های خودشناسی</b> است: شناخت اینکه ذهن ما چطور کار می‌کند، کجا خطا می‌کند و چطور می‌توان روی آن ترمز کشید. بخش نخست به خطاهای روزمره می‌پردازد و سه بخش بعد همان سازوکارها را در افراطی‌ترین شکلشان، یعنی اعتیاد، نشان می‌دهند.</p>
+
+<h2 id="planning">خطای برنامه‌ریزی: «این بار فرق می‌کند»</h2>
+<p>تقریباً همه تجربه کرده‌ایم: برای پروژه‌ای برنامه می‌ریزیم و فکر می‌کنیم زود تمام می‌شود، اما آخر کار وقت کم می‌آوریم. کتابی که قرار بود دو هفتهٔ دیگر تمام شود هنوز نیمه‌کاره است؛ و هر بار می‌گوییم «این بار حتماً سر وقت تمام می‌کنم» یا «این بار حتماً ترک می‌کنم». مدرس تأکید کرد این فقط مسئلهٔ مدیریت زمان نیست؛ پشت آن یک سوگیری شناختی پایدار هست.</p>
+<div class="note"><b class="k">تعریف</b><a class="w" data-t="planning-fallacy">خطای برنامه‌ریزی</a>: گرایش به برآورد زمان، هزینه یا میزان کار یک پروژه به‌صورت خوش‌بینانه‌تر از واقعیت، <b>حتی وقتی تجربهٔ مشابه در دست است</b>. دنیل کانمن و آموس تورسکی آن را در ۱۹۷۹ توصیف کردند.<sup class="c"><a href="#r-kt1979">[۲]</a></sup></div>
+<h3>مطالعهٔ موردی: برنامهٔ درسی</h3>
+<p>گروهی از برنامه‌ریزان آموزشی قرار بود یک برنامهٔ درسی تهیه کنند و تخمین زدند بین ۱۸ تا ۳۰ ماه طول می‌کشد. وقتی یکی از اعضا پرسید برنامه‌های قبلی به‌طور متوسط چقدر طول کشیده، پاسخ «حدود ۷ سال» بود؛ با این حال باز هم تصور کردند این بار فرق دارد. کار حدود ۸ سال طول کشید و در پایان، به دلیل تغییرات سازمانی، کنار گذاشته شد. (این ماجرای خود کانمن است که در «تفکر، سریع و کند» آن را روایت کرده؛ همان کسی که پرسید، او بود.)<sup class="c"><a href="#r-kahneman2011">[۳]</a></sup></p>
+<h3>ویژگی‌های کلیدی</h3>
+<ul class="tight">
+<li><b>خوش‌بینی برنامه‌ریز، نه خوش‌بینی آدم:</b> مشکل این نیست که آدم‌ها کلاً خوش‌بین‌اند؛ مشکل این است که با وجود شواهد قبلی باز هم تخمین خوش‌بینانه می‌زنند.</li>
+<li><b>«این بار فرق می‌کند»:</b> ذهن برای هر پروژهٔ تازه دلیلی پیدا می‌کند که شرایط متفاوت است (تیم قوی‌تر، تجربهٔ بیشتر، ابزار بهتر)؛ اما همین دلایل در پروژه‌های گذشته هم وجود داشت.</li>
+<li><b>پیش‌بینی خوش‌بینانه‌ای که به واقعیت نمی‌پیوندد:</b> پروژه‌های بزرگ عمرانی در کشورهای مختلف معمولاً دیرتر و گران‌تر از پیش‌بینی تمام می‌شوند؛ پس فقط مشکل ایرانیان یا کشورهای خاص نیست.</li>
+</ul>
+<h3>دو نوع تخمین</h3>
+<table class="t">
+<tr><th>نوع</th><th>پرسش اصلی</th><th>مثال</th><th>دقت ما</th></tr>
+<tr><td><a class="w" data-t="performance-estimate">تخمین عملکرد</a></td><td>این کار چقدر طول می‌کشد؟</td><td>خواندن ۱۰۰ صفحه چقدر وقت می‌برد؟</td><td>معمولاً خوب</td></tr>
+<tr><td><a class="w" data-t="completion-estimate">تخمین تکمیل</a></td><td>کی تمام می‌شود؟</td><td>این کتاب را کی تمام می‌کنم؟</td><td>خطای فاحش</td></tr>
+</table>
+<p>بیشترین خطا در تخمین تکمیل است، چون زندگی واقعی پر از وقفه، مزاحمت و کار پیش‌بینی‌نشده است.</p>
+<h3>چرا برنامه‌ریزی دقیق‌تر گاهی بدتر می‌شود؟</h3>
+<p>یافتهٔ جالب: کسانی که برنامهٔ خیلی ریز می‌نویسند (تک‌تک روزها و ساعت‌ها، جدول و نمودار) گاهی نتیجه‌شان بدتر از کسانی است که برنامهٔ کلی‌تر دارند. <b>جزئی‌نگری اعتماد کاذب می‌سازد:</b> وقتی هر بخش را جداگانه حساب می‌کنیم و همه درست به نظر می‌رسند، حس می‌کنیم کل پروژه هم دقیق است؛ اما جمع زمان‌های کوچک، وقفه‌ها، خستگی و نقطه‌های شکست <b>میان</b> بخش‌ها را حساب نمی‌کند.</p>
+<p>مدرس جمله‌ای منسوب به جورج برنارد شاو را نقل کرد: «از تاریخ می‌آموزیم که از تاریخ نمی‌آموزیم.» این تکرار ریشه در همان ساختار ذهنی دارد که باور می‌کند شرایط این بار متفاوت است.</p>
+<div class="note"><b class="k">راهکارهای عملی</b><ol class="tight">
+<li><b><a class="w" data-t="outside-view">دید بیرونی</a>:</b> به جای جزئیات این پروژه، به تاریخچهٔ پروژه‌های مشابه نگاه کنید. همیشه بپرسید «برنامه‌های قبلی من چقدر طول کشیدند؟»</li>
+<li>تخمین را با پروژه‌های مشابه گذشته مقایسه کنید؛ اگر تجربه ندارید، از باتجربه‌ها بپرسید.</li>
+<li><b>حاشیهٔ اطمینان:</b> اگر برآوردتان ۶ هفته است، برای تحویل ۸ تا ۱۰ هفته بگذارید.</li>
+<li>برنامهٔ ریز را فقط برای بخش‌های کاملاً مشخص به کار ببرید.</li>
+<li>هر بار گفتید «این بار فرق می‌کند»، مکث کنید و بپرسید «دقیقاً چه چیزی فرق کرده؟ شواهدی دارم؟»</li>
+</ol></div>
+
+<h2 id="pleasure">لذت و هیجان مثبت: «دیگر از هیچ چیز لذت نمی‌برم»</h2>
+<p>بسیاری از افراد می‌گویند دیگر از چیزی لذت نمی‌برند، صبح‌ها انگیزه ندارند و رفتن به دانشگاه یا کار برایشان بی‌معنا شده؛ از رایج‌ترین شکایت‌ها در مراجعات روان‌شناختی.</p>
+<div class="cols2">
+<div class="card"><b class="h">هیجان مثبت</b><span class="en">Positive emotion</span>حالت‌های خوشایند مثل شادی، رضایت و احساس خوب نسبت به زندگی و امور روزمره.</div>
+<div class="card"><b class="h"><a class="w" data-t="anhedonia">آنهدونیا (بی‌لذتی)</a></b><span class="en">Anhedonia</span>کاهش یا از دست رفتن توانایی لذت بردن از فعالیت‌هایی که پیش‌تر خوشایند بودند. می‌تواند نشانهٔ افسردگی یا خستگی روانی باشد، اما همیشه علامت بیماری نیست.</div>
+<div class="card"><b class="h">ظرفیت لذت</b><span class="en">Hedonic capacity</span>میزانی که فرد می‌تواند از تجربه‌های خوشایند لذت ببرد؛ در افراد متفاوت است.</div>
+<div class="card"><b class="h">مقیاس لذت (۱۹۹۵)</b>از فرد خواسته می‌شود در مقایسه با گذشته بگوید چقدر از چیزهای ساده لذت می‌برد: غذای مورد علاقه، حمام داغ یا دوش، بوی گل‌ها، نسیم دریا یا نان تازه. دامنهٔ پاسخ‌ها بسیار متفاوت بود.</div>
+</div>
+<div class="note"><b class="k">یادداشت ویراستار</b>مقیاس سال ۱۹۹۵ با این گویه‌ها احتمالاً «مقیاس لذت اسنیث-همیلتون» (SHAPS) است: پرسش‌نامه‌ای ۱۴ گویه‌ای برای سنجش آنهدونیا که دقیقاً همین نمونه‌ها را دارد.<sup class="c"><a href="#r-shaps">[۴]</a></sup></div>
+<h3>یخ‌زدگی لذت و چرخهٔ منفی</h3>
+<p>اگر فرد مدتی از امور لذت نبرد، این حالت می‌تواند مثل یخ‌زدگی شود: کمتر فعالیت می‌کند، کمتر تجربهٔ خوشایند می‌سازد، و همین کم‌تحرکی باعث می‌شود لذت بیشتر از دست برود.</p>
+<figure><div class="chain"><div class="box">لذت کمتر</div><span class="arr">←</span><div class="box">فعالیت کمتر</div><span class="arr">←</span><div class="box">تجربهٔ خوشایند کمتر</div><span class="arr">←</span><div class="box hl">لذت باز هم کمتر</div></div><figcaption>شکل ۱. چرخهٔ یخ‌زدگی لذت.</figcaption></figure>
+<p>این مسیر برعکس هم هست: وقتی خلق مثبت است، جهان را مثبت‌تر تفسیر می‌کنیم و تفسیرهای مثبت خلق را بالا نگه می‌دارند؛ یک حلقهٔ تقویتی. خلق منفی هم تفسیرهای منفی می‌سازد و آن‌ها خلق را پایین‌تر می‌برند؛ همان «افکار خودکار» در بخش بعد.</p>
+<h3>لذت اجتماعی و لذت فردی</h3>
+<p>افراد از نظر منبع لذت متفاوت‌اند: برخی از معاشرت، گپ و بازی گروهی؛ برخی از خلوت، نقاشی، موسیقی، آشپزی و تماشای منظره. مدرس تأکید کرد خلوت سالم است و نباید همیشه نشانهٔ انزوا دانسته شود؛ اما اگر فرد حتی در خلوت هم هیچ لذتی نبرد، باید بررسی شود.</p>
+<h3>لذت و اعتیاد: تقویت‌کننده‌های غیرمادی</h3>
+<p>یافتهٔ مهمی از حوزهٔ بهبود اعتیاد: اگر فرد در زندگی‌اش منابع لذت دیگری پیدا نکند، بازگشت به مواد سخت‌تر می‌شود؛ و اگر به او کمک شود لذت از فعالیت‌های سالم را دوباره تجربه کند، احتمال بهبودی بیشتر است. «درمان فقط ترک نیست؛ ساختن منابع لذت سالم بخش مهمی از فرایند است.» پژوهش‌هایی روی جوندگان هم نشان داده‌اند حیوانات در محیط غنی و امن رفتار لذت‌جویانهٔ سالم‌تری دارند تا در محیط فقیر و محدود.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>شناخته‌شده‌ترین نمونه، آزمایش «<a class="w" data-t="rat-park">پارک موش‌ها</a>»ی بروس الکساندر (دههٔ ۱۹۷۰) است: موش‌هایی که در فضای بزرگ، با هم‌نوعان و اسباب‌بازی زندگی می‌کردند، بسیار کمتر از آب مرفین‌دار نوشیدند تا موش‌های قفس‌های انفرادی. این آزمایش تأثیرگذار بود، اما تکرارهای بعدی نتایج یکدستی نداشته‌اند.<sup class="c"><a href="#r-alexander">[۵]</a></sup></div>
+<div class="note"><b class="k">تمرین: دفترچهٔ فعالیت‌های لذت‌بخش</b><ol class="tight">
+<li>جدولی سه‌ستونه بسازید: فعالیت‌هایی که در ماه گذشته انجام داده‌اید (و چند بار)؛ میزان لذت هرکدام (زیاد، متوسط، کم، هیچ)؛ یک فعالیت کوچک برای هفتهٔ آینده.</li>
+<li>هر هفته جدول را مرور کنید و ببینید کدام فعالیت‌ها بیشترین لذت را داشته‌اند.</li>
+<li>فعالیت‌های کوچک و قابل‌انجام انتخاب کنید؛ هدف شروع دوبارهٔ تجربهٔ لذت است، نه ساختن یک زندگی کامل در یک هفته.</li>
+</ol></div>
+<div class="note"><b class="k">پیوند با دنیای روان</b>این همان منطق «<a class="w" data-t="pat">درمان عاطفهٔ مثبت</a>» و «اصل پیشرفت» در فرسودگی و شغل معنادار است: لذت‌های کوچک موتور را روشن می‌کنند.</div>
+
+<h2 id="automatic">افکار خودکار، شیار شناختی و انعطاف‌پذیری</h2>
+<p>بیشتر کارهایی که هر روز انجام می‌دهیم خودکار است: مسیر رفت‌وآمد، نحوهٔ واکنش به یک پیام یا قضاوت دربارهٔ یک آدم. مدرس تأکید کرد <b>افکار خودکار لزوماً بد نیستند</b>: ذهن برای صرفه‌جویی در انرژی به عادت نیاز دارد. مشکل وقتی شروع می‌شود که این عادت‌ها انعطاف‌ناپذیر شوند.</p>
+<div class="cols2">
+<div class="card"><b class="h"><a class="w" data-t="automatic-thoughts">افکار خودکار</a></b>افکاری که سریع، بدون تأمل و تقریباً بی‌اختیار ظاهر می‌شوند.</div>
+<div class="card"><b class="h">تصمیم‌گیری آگاهانه</b>فکر کردن آهسته، سنجیده و با توجه به شواهد.</div>
+<div class="card"><b class="h"><a class="w" data-t="cognitive-rut">شیار شناختی</a></b>مسیر فکری عمیق و تکراری که ذهن هر بار در آن می‌رود؛ مثل جاده‌ای خاکی که بعد از مدتی ماشین‌ها همیشه در همان شیار حرکت می‌کنند.</div>
+<div class="card"><b class="h">انعطاف‌پذیری شناختی</b>توانایی تغییر مسیر فکری، دیدن راه‌حل‌های دیگر و خروج از شیار.</div>
+</div>
+<h3>تعادل کاوشگری و بهره‌برداری</h3>
+<p>مغز انسان و حتی برخی حیوانات باید میان دو حالت تعادل داشته باشند. سلامت روان، در این دیدگاه، نوعی تعادل میان این دو است.</p>
+<table class="t">
+<tr><th>حالت</th><th>مزیت</th><th>خطر افراطی</th></tr>
+<tr><td><a class="w" data-t="exploration">بهره‌برداری</a> (تکیه بر راه‌حل‌های شناخته‌شده)</td><td>صرفه‌جویی، کارایی</td><td>گیر کردن در شیار و تکرار همان اشتباه</td></tr>
+<tr><td>کاوشگری (جست‌وجوی تجربه و گزینهٔ تازه)</td><td>یادگیری، کشف راه‌حل‌های تازه</td><td>پراکندگی، ناتوانی در تمرکز و اتمام کار</td></tr>
+</table>
+<h3>ترمز ذهنی و ذهن‌آگاهی</h3>
+<p>مفهوم «ترمز» در سخنرانی: وقتی متوجه می‌شویم در حال اجرای یک فکر یا عادت خودکار هستیم، می‌توانیم لحظه‌ای مکث کنیم و بپرسیم: این فکر از کجا آمد؟ شواهدی برایش دارم؟ راه دیگر دیدن این موقعیت چیست؟ این مکث همان کاری است که در <a class="w" data-t="mindfulness">ذهن‌آگاهی</a> انجام می‌شود: آگاه شدن از فکر بدون اینکه بلافاصله آن را باور یا اجرا کنیم.</p>
+<p>مثال «این سری فرق می‌کند»: فردی که بارها تصمیم گرفته ترک کند، هر بار می‌گوید این سری واقعاً فرق می‌کند؛ اما اگر بپرسیم دقیقاً چه چیزی فرق کرده، پاسخ روشنی ندارد. این ترکیب شیار شناختی و خطای برنامه‌ریزی است.</p>
+<p>ما گاهی خودمان برای خودمان شیار می‌سازیم: هر بار که یک فکر را تکرار می‌کنیم، مسیرش عمیق‌تر می‌شود تا جایی که دیگر نمی‌توانیم از آن بیرون بیاییم؛ همان «تلهٔ ذهنی». راه خروج: تغییر موقعیت و تحریک ذهن به مسیرهای تازه؛ تغییر محیط، شروع فعالیت متفاوت یا گفت‌وگو با آدم‌های دیگر.</p>
+<div class="note"><b class="k">تمرین: ثبت افکار خودکار</b>یک موقعیت امروز را انتخاب کنید که واکنشتان شدید بود. سه ستون بسازید: <b>موقعیت</b> (چه شد؟)، <b>فکر خودکار</b> (اولین فکری که به ذهنتان آمد)، <b>شواهد و جایگزین</b> (چه شواهدی له و علیه این فکر دارید؟ تفسیر دیگر چه می‌تواند باشد؟). هفته‌ای یک بار فکرهای تکراری را مرور کنید تا ببینید کدام شیارها بیشتر تکرار می‌شوند. (این همان «ثبت فکر» در درمان شناختی-رفتاری بک است.)</div>
+
+<h2 id="tunnel">دید تونلی و هایپرفوکس</h2>
+<p>گاهی آدم در یک مشکل یا هدف آن‌قدر غرق می‌شود که بقیهٔ گزینه‌ها و امکانات از دیدش پنهان می‌شوند. در <a class="w" data-t="tunnel-vision">دید تونلی</a> فقط مشکل را می‌بینیم و منابع کمک، راه‌های جایگزین یا پیامدهای گسترده‌تر را نمی‌بینیم. <b>هایپرفوکس</b> تمرکز شدید و طولانی روی یک فعالیت یا فکر است که در لحظه مفید به نظر می‌رسد اما در بلندمدت ذهن را محدود می‌کند.</p>
+<p>مثال مدرس: فردی که از یک بدنامی یا مشکل مالی ناراحت است، فقط همان مسئله را می‌بیند؛ اما اگر کمی دید را باز کند، می‌بیند خانواده، دوستان یا نهادهای کمک‌رسان هم هستند. وقتی کسی احساس می‌کند در زندگی گیر کرده و نیاز به رشد دارد، اغلب دچار دید تونلی شده است.</p>
+<h3>دید تونلی و «من محدودکننده»</h3>
+<p>الگویی از روان‌درمانی: فردی می‌گوید «تا وقتی خلق مادرم و سخت‌گیری پدرم درست نشود، من نمی‌توانم زندگی کنم.» در این جمله «من» به یک مسئلهٔ بیرونی گره خورده است؛ همان جایی که دید تونلی شکل می‌گیرد. راهکار این است که مسئله را از زاویه‌های دیگر ببینیم و بفهمیم کدام بخش آن در کنترل ماست (همان تمایز «قابل کنترل و غیرقابل کنترل» در فرسودگی و شغل معنادار).</p>
+<div class="note"><b class="k">راهکارها</b><ol class="tight">
+<li><b>روزنگار:</b> هر روز چیزهایی را که اتفاق افتاده بنویسید، نه فقط آنچه ذهنتان را مشغول کرده.</li>
+<li><b>برنامهٔ ساعتی:</b> روز را بازه‌بندی کنید و کارهای هر بازه را بنویسید تا ببینید مسئلهٔ اصلی در کل روز چه جایگاهی دارد.</li>
+<li><b>آگاه کردن خود:</b> وقتی فقط یک مسئله را می‌بینید، آگاهانه بپرسید: گزینه‌های دیگری هست؟ چه کسانی می‌توانند کمک کنند؟</li>
+<li><b>گفت‌وگو:</b> نظر آدم‌های مورد اعتماد دید تازه می‌دهد.</li>
+<li><b>کمک حرفه‌ای:</b> درمانگر می‌تواند به گسترش دید و تغییر الگوهای فکری کمک کند.</li>
+<li><b>نقشهٔ گزینه‌ها:</b> مسئله را وسط کاغذ بنویسید و دورش در چهار جهت: گزینه‌های جایگزین، پیامدهای انجام‌دادن و انجام‌ندادن، بخش قابل کنترل، و یک اقدام کوچک.</li>
+</ol></div>
+<div class="note src"><b class="k">از منابع ضمیمه: میمون نابخرد (دیوید رابرت گرایمز)</b>گرایمز در فصل ۸ کتاب، شکل اجتماعی همین تنگ‌نظری را بررسی می‌کند: <a class="w" data-t="motivated-reasoning">استدلال انگیزه‌دار</a> و <a class="w" data-t="confirmation-bias">سوگیری تأیید</a>، یعنی گرایش به جست‌وجو، یادآوری و قاب‌بندی اطلاعات به شکلی که با باورهای پیشین ما بخواند. «مردم تمایل دارند آنچه را از نظر ایدئولوژیک برایشان جذاب است باور کنند و اطلاعاتی را که با باورهای عمیقشان در تعارض است فیلتر کنند. این همهٔ ما را تا حدی گرفتار می‌کند.»<sup class="c"><a href="#r-grimes">[۶]</a></sup></div>
+
+<h3>جمع‌بندی بخش نخست</h3>
+<table class="t">
+<tr><th>موضوع</th><th>ایدهٔ اصلی</th><th>نشانهٔ هشدار</th><th>اقدام کوچک</th></tr>
+<tr><td>خطای برنامه‌ریزی</td><td>تخمین را با تاریخچه مقایسه کن</td><td>«این بار فرق می‌کند»</td><td>مقایسه با پروژه‌های قبلی</td></tr>
+<tr><td>هیجان مثبت</td><td>لذت مهارتی است که می‌توان بازسازی کرد</td><td>«از هیچ کاری لذت نمی‌برم»</td><td>دفترچهٔ فعالیت‌های لذت‌بخش</td></tr>
+<tr><td>افکار خودکار</td><td>مکث کن و فکر را بررسی کن</td><td>همیشه همان واکنش یا قضاوت</td><td>ثبت سه‌ستونهٔ فکرها</td></tr>
+<tr><td>دید تونلی</td><td>گزینه‌های دیگر را ببین</td><td>«فقط یک راه‌حل در ذهنم است»</td><td>نقشهٔ گزینه‌ها</td></tr>
+</table>
+
+<h2 id="craving">وسوسه چیست؟</h2>
+<p>بخش دوم بر پایهٔ هفت جلسهٔ فارسی دربارهٔ وسوسه و درمان وابستگی به نیکوتین، و پنج جلسهٔ انگلیسی دربارهٔ تاریخ صنعت دخانیات، تشخیص اختلال مصرف تنباکو و سیگار الکترونیکی است.</p>
+<div class="note"><b class="k">تعریف</b><a class="w" data-t="craving">وسوسه</a> (Craving): تجربهٔ درونی یک میل شدید برای مصرف ماده یا انجام یک رفتار، که اغلب قابل ارضا نیست یا ارضایش دشوار است. در زبان روزمره «اشتیاق»، «هوس»، «خماری ذهنی» یا «فکرش مدام می‌آید» گفته می‌شود.</div>
+<h3>ریشهٔ تاریخی</h3>
+<ul class="tight">
+<li><b>اسطورهٔ تانتالوس:</b> پادشاهی که به خاطر گناهش در آب و زیر درخت میوه گرفتار شد، اما هرگز نتوانست بنوشد یا بخورد. واژهٔ انگلیسی tantalize (وسوسه کردن و آزار دادن بدون ارضا) از نام او آمده است.</li>
+<li><b>قرن ۱۸:</b> پزشکان گزارش داده‌اند بیماران وابسته به الکل حاضر بودند حتی به پرستاران رشوه بدهند تا کمی الکل به آن‌ها برسد.</li>
+<li><b>قرن بیستم:</b> الوین مورتون جلینک وسوسه را هستهٔ مرکزی الکلیسم دانست و از آن زمان روان‌پزشکان وسوسه را یکی از نشانه‌های اصلی اعتیاد پذیرفتند.</li>
+</ul>
+<h3>وسوسه امروز</h3>
+<p>در ۵۰ تا ۶۰ سال گذشته هزاران مقاله دربارهٔ وسوسه منتشر شده، بخش بزرگی از آن‌ها در دهه‌های اخیر؛ با این حال پرسش‌های بنیادی هنوز بی‌پاسخ‌اند: تعریف دقیق وسوسه چیست؟ آیا می‌توان آن را اندازه گرفت؟ آیا واقعاً هستهٔ اعتیاد است؟ آیا عود را پیش‌بینی می‌کند؟ مدرس هشدار داد قاعدهٔ ساده‌ای وجود ندارد: بعضی بسیار وسوسه می‌شوند و عود نمی‌کنند؛ بعضی تقریباً وسوسه نمی‌شوند اما دچار مصرف شدید یا مسمومیت می‌شوند. پس وسوسه را نباید صرفاً نشانهٔ ضعف اراده دید.</p>
+
+<h2 id="theories">نظریه‌های وسوسه</h2>
+<h3>محرومیت شرطی‌شده</h3>
+<p>قدیمی‌ترین توضیح: فرد در دوران مصرف بارها خماری را تجربه کرده و مغز این خماری را به محرک‌های محیطی (مکان، آدم‌ها، ساعت، بو) گره زده است. بعدها دیدن همان محرک‌ها باعث می‌شود بدن و ذهن دوباره میل و خماری را تجربه کنند. کسی که سال‌ها در یک کافه سیگار کشیده، با دیدن همان کافه وسوسه می‌شود، حتی اگر در آن لحظه خماری نداشته باشد. این نظریه از نظر درمانی مهم است: اگر درست باشد، می‌توان شرطی‌شدن را کاهش داد و محرک‌ها را مدیریت کرد.</p>
+<p><b>شواهد و انتقادها:</b> در آزمایش‌هایی روی افراد در پروازهای طولانی (که نمی‌توانستند سیگار بکشند)، انتظار می‌رفت با نزدیک‌شدن به زمان مصرف وسوسه بیشتر شود؛ اما گاهی برعکس دیده شد. افزون بر این، گاهی <b>سرخوشی</b> پس از مصرف خودش محرک شرطی می‌شود؛ یعنی فقط خماری نیست که وسوسه می‌سازد، لذت هم می‌سازد.</p>
+<h3>مدل شناختی مارلت</h3>
+<p>الن مارلت نظریه‌ای پیچیده‌تر ارائه داد و دو عامل را برجسته کرد:<sup class="c"><a href="#r-marlatt">[۷]</a></sup></p>
+<div class="cols2">
+<div class="card"><b class="h"><a class="w" data-t="self-efficacy">خودکارآمدی</a></b>«فکر می‌کنم تا چه حد می‌توانم بر این ماده یا رفتار مسلط باشم؟»</div>
+<div class="card"><b class="h"><a class="w" data-t="outcome-expectancy">انتظار از پیامد</a></b>«فکر می‌کنم مصرف چه نتیجه‌ای دارد؟ آرامشم می‌دهد؟»</div>
+</div>
+<p>به بیان مدرس، وسوسه وقتی بیشتر می‌شود که فرد فکر کند مصرف <b>امکان‌پذیر</b> است و فکر کند مصرف <b>به او کمک می‌کند</b>. اگر تصمیم گرفته باشد مصرف نکند یا مصرف امکان‌پذیر نباشد، وسوسه کمتر است.</p>
+<div class="note"><b class="k">تمرین: تحلیل یک موقعیت وسوسه‌انگیز</b>یک موقعیت اخیر را بنویسید (کجا بودید، چه کسی بود، چه احساسی داشتید)؛ محرک‌ها را فهرست کنید (مکان، ساعت، آدم، احساس)؛ دو پرسش مارلت را پاسخ دهید؛ و یک جایگزین کوچک برای محرک اصلی پیدا کنید (مثلاً مسیر دیگر یا کاری برای دست‌ها).</div>
+
+<h2 id="culture">وسوسه، فرهنگ و زبان</h2>
+<p>یکی از بحث‌برانگیزترین بخش‌های جلسات. مدرس توضیح داد برخی پدیده‌های روان‌پزشکی، مثل حملات پانیک یا وسواس، در فرهنگ‌های مختلف شکل‌های متفاوتی دارند؛ وسوسه هم ممکن است تا حدی پدیده‌ای اجتماعی-فرهنگی باشد.</p>
+<ul class="tight">
+<li>از گروهی دانشجوی مصری پرسیده شد آیا وسوسه‌ای برای شکلات دارند؛ تعداد کمی گفتند بله، هرچند بسیاری به شکلات دسترسی داشتند.</li>
+<li>در برخی زبان‌ها معادل دقیقی برای واژهٔ انگلیسی craving وجود ندارد؛ در برخی زبان‌های آسیایی، پاسخ اولیه به این پرسش حالت‌هایی مثل میل به غذا یا اشتیاق عاطفی است، نه وسوسهٔ مواد.</li>
+<li>در مقابل، مقاله‌هایی نشان داده‌اند تجربهٔ اشتیاق شدید در بسیاری از فرهنگ‌ها هست، اما با واژه‌های متفاوت بیان می‌شود.</li>
+</ul>
+<p><b>روش اعتبارسنجی:</b> پژوهشگران برای اطمینان از معادل یک واژه از <a class="w" data-t="back-translation">ترجمهٔ برگشتی</a> استفاده می‌کنند: یک نفر متن را ترجمه می‌کند و نفر دیگری که متن اصلی را ندیده آن را به زبان اول برمی‌گرداند؛ اگر معنا حفظ شود، معادل معتبر است.</p>
+<p><b>بحث باز:</b> آیا وسوسه تجربه‌ای جهانی است که زبان‌ها به شکل‌های مختلف بیان می‌کنند، یا مفهومی است که از فرهنگ‌های انگلیسی‌زبان و آمریکای شمالی وارد دیگران شده؟ این پرسش هنوز بحث دارد.</p>
+
+<h2 id="ema">ارزیابی لحظه‌ای محیطی</h2>
+<p><a class="w" data-t="ema">ارزیابی لحظه‌ای محیطی</a> (EMA) روشی است که در آن از فرد در زمان واقعی و در بستر زندگی خودش چند بار در روز پرسیده می‌شود الان چه احساسی دارد، چقدر وسوسه دارد و در چه موقعیتی است.</p>
+<ul class="tight">
+<li><b>چرا مهم است:</b> پرسش‌نامه‌ای که هفتهٔ بعد پر شود، خاطرهٔ فرد را ثبت می‌کند نه تجربهٔ لحظه‌ای او. EMA تغییرات سریع خلق و وسوسه در طول روز را نشان می‌دهد و رابطهٔ وسوسه با استرس و حال بد را آشکار می‌کند. مدرس گفت گاهی «حال بد» خودش همان احساس وسوسه است.</li>
+<li><b>طراحی:</b> پیام‌ها در زمان‌های تصادفی (مثلاً میان صبح و شب) فرستاده می‌شوند تا مزاحم نباشند و نتیجه زیر تأثیر یک زمان ثابت نباشد. اگر فرد پاسخ ندهد یادآور می‌فرستند و اگر باز پاسخ ندهد، آن پرسش کنار گذاشته می‌شود.</li>
+</ul>
+<div class="note"><b class="k">تمرین</b>سه بار در روز (صبح، ظهر، شب) از خودتان بپرسید و در جدول ثبت کنید: زمان، شدت وسوسه (۰ تا ۱۰)، حالت خلقی (۰ تا ۱۰)، موقعیت یا محرک.</div>
+
+<h2 id="tobacco">صنعت دخانیات و بازاریابی</h2>
+<p>هدف این فصل نشان دادن این است که وابستگی به نیکوتین فقط مسئلهٔ فردی نیست؛ بازاریابی و منافع اقتصادی هم در آن نقش داشته‌اند.</p>
+<ul class="tight">
+<li><b>جیمز بوکانان دیوک:</b> رئیس شرکت «تنباکوی آمریکا» که حدود ۹۰٪ تولید سیگار آمریکا را در اختیار داشت. شرکت او با ماشین‌های تولید انبوه و بازاریابی گسترده، سیگار را از کالای لوکس به کالای روزمرهٔ توده‌ها تبدیل کرد. در دههٔ ۱۹۱۰ این شرکت تجزیه شد و شرکت‌های جدید با تبلیغات قوی به رقابت پرداختند.</li>
+<li><b>تبلیغات و هویت:</b> یکی از شعارهای مشهور این بود: «برای یک کمل یک مایل راه می‌روم». تبلیغات سیگار را با آرامش، مردانگی و آزادی پیوند می‌داد و پیوند سیگار با هویت را تقویت می‌کرد.</li>
+<li><b>الگوی تکراری:</b> مدرس همین الگو را در صنعت‌های دیگر هم دید: تبلیغ یک ماده به‌عنوان چیزی علمی یا ضروری، حتی وقتی شواهد علمی خلافش را نشان می‌دهد (مثال او: ویتامین در شامپو).</li>
+</ul>
+<p><b>پرسش برای تأمل:</b> وقتی یک محصول سال‌ها تبلیغ شده و مردم به آن عادت کرده‌اند، آیا تصمیم فرد هنوز کاملاً آزاد است؟ این پرسش پیوندی است میان وسوسه، عادت و محیط.</p>
+
+<h2 id="nicotine">تشخیص، آمار و درمان وابستگی به نیکوتین</h2>
+<h3>تغییر نام</h3>
+<p>اصطلاح‌های «وابستگی به نیکوتین» و «خماری نیکوتین» در DSM-5 به «<a class="w" data-t="tobacco-use-disorder">اختلال مصرف تنباکو</a>» و «خماری تنباکو» تغییر کرد. مدرس گفت دلیل دقیق این تغییر را نمی‌داند، چون واژهٔ نیکوتین علمی‌تر است.</p>
+<h3>معیارها</h3>
+<p>حدود ۱۱ معیار برای اختلال مصرف مواد وجود دارد؛ اگر فرد دو یا بیشتر از آن‌ها را در یک سال داشته باشد، تشخیص داده می‌شود. نمونه‌ها: میل شدید یا وسوسه؛ تلاش ناموفق برای کاهش یا کنترل مصرف (بسیاری از سیگاری‌ها بارها ترک کرده‌اند و نتوانسته‌اند)؛ مصرف بیشتر یا طولانی‌تر از قصد اولیه؛ صرف زمان زیاد برای تهیه و مصرف؛ ادامهٔ مصرف با وجود آسیب شناخته‌شده. مدرس تأکید کرد برخی معیارها، مثل کنار گذاشتن شغل یا فعالیت‌های اجتماعی به خاطر سیگار، در نیکوتین کمتر دیده می‌شوند، برخلاف مواد سخت مثل هروئین.</p>
+<h3>آمار</h3>
+<p>بر اساس آماری که در جلسه ذکر شد، سالانه حدود ۵ میلیون نفر در جهان مستقیماً بر اثر عوارض سیگار جان می‌دهند و در آمریکا این عدد حدود ۴۴۰ هزار نفر است. ترک سیگار می‌تواند بخش بزرگی از سرطان‌ها و بیماری‌های تنفسی را کاهش دهد، و ساده‌ترین کمپین‌های آگاهی‌بخش باعث می‌شوند گروهی اقدام به ترک کنند.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>این عددها از متن گفتاری آمده‌اند و احتمالاً قدیمی‌اند. برآوردهای تازه‌تر سازمان جهانی بهداشت از بیش از ۷ میلیون مرگ در سال به دلیل مصرف مستقیم تنباکو (و حدود ۱٫۳ میلیون بر اثر دود دست دوم) سخن می‌گویند، و برآورد مرکز کنترل بیماری‌های آمریکا حدود ۴۸۰ هزار مرگ در سال است.</div>
+<h3>درمان</h3>
+<p><b>درمان‌های رفتاری</b> ساده‌تر و کاربردی‌ترند: مدیریت محرک‌ها و پرهیز از موقعیت‌های پرخطر، تغییر عادت‌ها، و تکنیک‌هایی مثل مدیریت پاداش و پیگیری نشانه‌ها.</p>
+<table class="t">
+<tr><th>دارو</th><th>نکتهٔ کلیدی طبق جلسه</th></tr>
+<tr><td><a class="w" data-t="nrt">جایگزین نیکوتین</a> (چسب، آدامس، اسپری)</td><td>نیکوتین را به شکل کنترل‌شده و بدون دود می‌دهد و خماری را کم می‌کند.</td></tr>
+<tr><td>بوپروپیون</td><td>معمولاً یک تا دو هفته قبل از روز ترک شروع می‌شود و دست‌کم تا ۳ ماه ادامه می‌یابد. اثرش بر ترک مستقل از کاهش وسوسه است؛ یعنی حتی اگر در ابتدا وسوسه کم نشود، می‌تواند کمک کند. پس ارزیابی دارو فقط بر اساس احساس فرد در هفتهٔ اول کافی نیست.</td></tr>
+<tr><td>وارنیکلین</td><td>معمولاً ۶ تا ۱۲ هفته مصرف می‌شود؛ قطع زودهنگام احتمال عود را زیاد می‌کند.</td></tr>
+</table>
+<div class="note"><b class="k">هشدار جلسه</b>گزارش‌هایی دربارهٔ افکار خودکشی در برخی مصرف‌کنندگان وارنیکلین و بوپروپیون ثبت شده، اما این موارد کم‌اند و قطعی نشده‌اند. اگر در حین مصرف دارو خلقتان ناگهان بد شد یا افکار خودکشی داشتید، فوراً با پزشک تماس بگیرید. این داروها فقط با نسخه و نظر پزشک مصرف شوند. (یادداشت ویراستار: هشدار جعبه‌سیاه FDA برای این داروها در ۲۰۱۶ پس از کارآزمایی بزرگ EAGLES برداشته شد، اما پایش خلق همچنان توصیه می‌شود.)</div>
+<h3>سیگار الکترونیکی: جایگزین یا خطر تازه؟</h3>
+<p>امروز معروف‌ترین جایگزین ترک سیگار است، اما به گفتهٔ مدرس هنوز مورد تأیید رسمی همهٔ مراجع پزشکی قرار نگرفته. نسل‌های اول با سوزاندن تنباکو یا زغال کار می‌کردند و مونوکسید کربن، قطران و ترکیبات سرطان‌زا مثل نیتروزآمین‌ها تولید می‌کردند. نسل جدید با باتری مایع حاوی نیکوتین (با پایهٔ پروپیلن‌گلیکول یا گلیسرول) را گرم می‌کند و بخار می‌سازد. پرسش مدرس: اگر فرد سیگار را با سیگار الکترونیکی جایگزین کند، خطر کمتر می‌شود؟ برخی شواهد کاهش خطر را نشان می‌دهند، اما این به معنای بی‌خطر بودن نیست و بهتر است هدف ترک کامل با کمک پزشک باشد.</p>
+
+<h2 id="therapy">اصول روان‌درمانی پایه در اعتیاد</h2>
+<p>بخش سوم بر پایهٔ هشت جلسهٔ فارسی دربارهٔ مداخلات روان‌شناختی پایه در اعتیاد است.</p>
+<h3>انگیزه برای شروع درمان</h3>
+<p>پرسش اصلی جلسه: آیا معتادی که با زور یا تهدید وارد درمان می‌شود بهبود می‌یابد؟ آیا بیمار حتماً باید «خودش با پای خودش» بیاید؟ مدرس گفت بسیاری از همکاران انگیزه را <b>ایستا</b> می‌بینند: فرد یا انگیزه دارد یا ندارد و باید صبر کرد. اما در تجربهٔ درمانی <a class="w" data-t="dynamic-motivation">انگیزه پویاست</a>: به‌تدریج شکل می‌گیرد و بالا و پایین می‌رود. معتادانی که موفق شده‌اند معمولاً در مسیر تردید بوده‌اند: یک روز تصمیم گرفته‌اند و بعد دوباره دچار شک شده‌اند. تغییر رفتار معمولاً با عقب‌گرد همراه است و عقب‌گرد به معنای شکست کامل نیست.</p>
+<p><b>اهداف کوچک و زنجیرهٔ انگیزه:</b> مثال کاهش وزن: فرد ابتدا فقط می‌خواهد شلوارش دور انداخته نشود؛ بعد هدف کوچک دیگری می‌گذارد؛ و همین زنجیرهٔ کوچک‌ها به تغییر پایدار کمک می‌کند. اگر بعد از تعطیلات یا دوره‌ای از ناپرهیزی فرد به همان هدف کوچک برگردد، مسیر ادامه پیدا می‌کند.</p>
+<p><b>پنج آر:</b> مدرس بخشی از یک چارچوب پنج‌تایی را معرفی کرد که به درک انگیزهٔ مصرف کمک می‌کند. یکی از آن‌ها لذت‌بخشی بود: بعضی افراد هنوز از مواد لذت می‌برند و جشن و معاشرت را با مصرف گره زده‌اند، پس انگیزه‌ای برای ترک ندارند. توضیح کامل پنج مورد در متن گفتاری نبود.</p>
+<div class="note"><b class="k">یادداشت ویراستار</b>در راهنمای بالینی ترک دخانیات خدمات بهداشت عمومی آمریکا (۲۰۰۸)، «پنج آر» برای کسانی که هنوز آمادهٔ ترک نیستند این‌هاست: <span class="en">Relevance</span> (ارتباط با زندگی خود فرد)، <span class="en">Risks</span> (خطرها)، <span class="en">Rewards</span> (فواید ترک)، <span class="en">Roadblocks</span> (موانع) و <span class="en">Repetition</span> (تکرار در هر ملاقات). معلوم نیست چارچوب مدرس دقیقاً همین بوده باشد.<sup class="c"><a href="#r-phs2008">[۹]</a></sup></div>
+<h3>تقویت مثبت و منفی</h3>
+<div class="cols2">
+<div class="card"><b class="h"><a class="w" data-t="reinforcement">تقویت مثبت</a></b>مصرف برای رسیدن به لذت و پاداش.</div>
+<div class="card"><b class="h">تقویت منفی</b>مصرف برای کاهش حالت‌های ناخوشایند (اضطراب، افسردگی، خماری).</div>
+</div>
+<p>درمانگر باید بداند فرد با کدام الگو درگیر است، چون راه‌حل‌ها متفاوت‌اند.</p>
+<div class="note"><b class="k">تمرین برای درمانگر یا خود فرد</b>یک جمله بنویسید: «من از مصرف چه چیزی به دست می‌آورم؟ لذت یا آرامش؟» یک هدف بسیار کوچک برای هفتهٔ بعد بنویسید. اگر عقب‌گرد رخ داد، به جای سرزنش بپرسید: کدام موقعیت باعث شد؟ و هدف کوچک بعدی چیست؟</div>
+
+<h3>نقش اجبار و زور</h3>
+<p><b>پیشینه:</b> در دههٔ ۱۹۳۰ مراکزی مثل <b>لکسینگتون</b> در آمریکا شکل گرفتند که معتادان را اجباری و طولانی نگه می‌داشتند. این مراکز با وجود نام درمانی بیشتر شبیه بازداشتگاه بودند و اثر درمانی پایداری نداشتند. با شکل‌گیری آزاداندیشی و حقوق بشر این پرسش مطرح شد که آیا می‌توان کسی را به زور درمان کرد.</p>
+<p><b>اجبار امروزی</b> بیشتر قانونی و غیرمستقیم است: محرومیت از حق حضانت فرزندان، محدودیت در بیمهٔ از کارافتادگی، یا ارجاع به <a class="w" data-t="drug-court">دادگاه مواد مخدر</a> که به جای حبس، مراحل درمان را تعیین می‌کند. مدرس گفت این شکل اجبار، برخلاف تصور قدیمی، اثر نسبتاً خوبی داشته است. با این حال تأکید کرد اجبار جای انگیزهٔ درونی را نمی‌گیرد و باید با احترام به حقوق بیمار و نظارت اخلاقی انجام شود. پرسش برای تأمل: آیا اجبار قانونی کمک به فرد است یا کنترل او؟ تفاوت در نحوهٔ اجرا و نیت درمانگر دیده می‌شود.</p>
+
+<h3>ارتباط درمانی</h3>
+<p><a class="w" data-t="therapeutic-alliance">ارتباط درمانی</a>: پیوند اعتماد و همکاری میان درمانگر و بیمار، که در همهٔ روان‌درمانی‌ها و به‌ویژه در اعتیاد عامل بسیار مهمی در موفقیت است. در پژوهش‌های بزرگ درمان اعتیاد، شیوه‌های مختلف روان‌درمانی از نظر اثربخشی شباهت زیادی داشتند و به همین دلیل تمرکز به کیفیت رابطه منتقل شد. یافتهٔ دیگر: معتادان اغلب در روابط بین‌فردی انعطاف کمی دارند، زود نسبت به دیگران بدبین می‌شوند و ممکن است دلبستگی شدید به درمانگر پیدا کنند.</p>
+<p><b>ویژگی‌های درمانگر خوب:</b> همدلی و مهربانی؛ بی‌طرفی؛ رازداری و رعایت قوانین؛ احترام به حقوق بیمار و خانواده. به تعبیر پژوهش‌های دانشگاه وندربیلت (هانس استراپ)، ویژگی‌هایی مثل مهربانی، هوش و کاریزما به عمق رابطهٔ درمانی کمک می‌کنند.</p>
+<p><b>خطر وابستگی به درمانگر:</b> برخی درمان‌ها، به‌ویژه روش‌های اجتماع‌محور، ممکن است ناخواسته وابستگی شدید به درمانگر ایجاد کنند. هدف درمان استقلال بیمار است. دو پرسش برای درمانگر: «آیا بیمار امروز قدری مستقل‌تر از هفتهٔ پیش است؟» و «در هر جلسه یک مهارت یا تصمیم را از خود بیمار بشنوم، نه از درمانگر.»</p>
+
+<h3>رازداری و بی‌طرفی</h3>
+<p>اطلاعاتی که بیمار در جلسه می‌گوید باید محفوظ بماند، مثل هر بیمار دیگر. در بسیاری از بیماران اعتیاد، خانواده یا دوستان به‌صورت خودکار و بدون اجازه از وضعیتشان باخبر می‌شوند؛ این بی‌طرفی و رازداری را خراب می‌کند.</p>
+<div class="note"><b class="k">قانون طلایی</b>درمانگر تحت هیچ شرایطی نباید دروغ بگوید. اگر آزمایش مثبت است، نباید به خانواده بگوید منفی بوده؛ باید بگوید «این را نمی‌توانم به شما بگویم».</div>
+<p><b>استثناها:</b> رازداری در موارد احتمال خودکشی، احتمال قتل یا آسیب به دیگران، و احتمال آسیب یا آزار کودکان محدود می‌شود. پیش از هر اعلامی باید قوانین حرفه‌ای و محلی بررسی شود. <b>بی‌طرفی:</b> درمانگر نباید طرف خانواده یا بیمار را بگیرد. تمرین: پیش از شروع درمان، با بیمار و خانواده دربارهٔ حدود رازداری صحبت کنید و مکتوب کنید چه گزارشی و چه زمانی به خانواده داده می‌شود.</p>
+
+<h3>آزمایش ادرار</h3>
+<p>آزمایش ادرار در طب اعتیاد جایگاه مهمی دارد، اما مدرس هشدار داد بسیاری از مردم و حتی برخی متخصصان نتیجه را بیش از حد ساده تفسیر می‌کنند.</p>
+<ul class="tight">
+<li><b>کیت‌های سریع:</b> روی کیت معمولاً یک <b>خط کنترل</b> هست؛ اگر این خط ظاهر نشود، آزمایش معتبر نیست، نه اینکه منفی باشد. اگر خط مربوط به ماده ظاهر <b>نشود</b>، معمولاً یعنی آزمایش مثبت است. خطوط بسیار کم‌رنگ هم مهم‌اند. کیت‌ها نمی‌گویند چه مقدار یا چه زمانی مصرف شده و نمی‌گویند ادرار واقعی بوده یا نه.</li>
+<li><b>کروماتوگرافی لایهٔ نازک:</b> روش دقیق‌تر آزمایشگاهی؛ ترکیب‌های ادرار روی صفحهٔ مخصوص لکه‌هایی ایجاد می‌کنند که با نمونهٔ مرجع مقایسه می‌شوند. نتیجه با تأخیر می‌رسد.</li>
+<li><b>نکات کلیدی:</b> آزمایش مثبت فقط وجود ماده را نشان می‌دهد، نه زمان یا میزان مصرف؛ برخی داروها نتیجه را تحت تأثیر قرار می‌دهند؛ نتیجه باید همراه با گفت‌وگوی بالینی تفسیر شود، نه به‌تنهایی.</li>
+</ul>
+
+<h3>مداخلات دارویی و غیردارویی</h3>
+<p>پیش از هر مداخله باید هدف درمان مشخص شود: (۱) <b>مسمومیت یا عوارض حاد</b>: اورژانس و اقدام پزشکی فوری؛ (۲) <b>ترک و خماری</b>: معمولاً در بستری کوتاه‌مدت یا با دارو کنترل می‌شود؛ (۳) <b>حفظ و پیشگیری از عود</b>: درمان‌های نگهدارنده، کلینیک متادون یا روان‌درمانی. اگر بیمار علائم روان‌پریشی یا افکار جدی خودکشی دارد، باید مثل هر بیمار روان‌پزشکی درمان شود.</p>
+<p>در مرحلهٔ بعد، درمانگر با <a class="w" data-t="mi">مصاحبهٔ انگیزشی</a> می‌فهمد فرد چرا به مواد روی آورده و چه چیزی می‌تواند او را به تغییر نزدیک کند؛ «این کار بیشتر پرسیدن است تا توصیه کردن».<sup class="c"><a href="#r-miller">[۱۰]</a></sup> <b>اهداف مکتوب:</b> اهداف درمان باید مکتوب شوند، مثل یک قرارداد درمانی با تاریخ و امضا (چند بار در هفته به جلسه می‌آید؟ چه دارویی با چه دوزی؟ چه تکلیفی تا جلسهٔ بعد؟). <b>اخراج:</b> هدف از اخراج بیمار از برنامهٔ درمانی باید حفظ جان او باشد، نه جلوگیری از دردسر برای مرکز.</p>
+
+<h2 id="counseling">مشاورهٔ پایه در سوءمصرف مواد</h2>
+<h3>اثرات مستقیم و هستهٔ اعتیاد</h3>
+<p>در مشاورهٔ موفق باید میان <b>اثرات مستقیم</b> هر ماده (یکی خواب‌آور است، یکی بی‌اشتهایی یا لرزش می‌آورد) و <a class="w" data-t="addiction-core">هستهٔ اعتیاد</a> تمایز گذاشت: مجموعه‌ای از رفتارها، علائم و مشکلات مشترک میان همهٔ مصرف‌کنندگان، مستقل از نوع ماده. بسیاری از کتاب‌ها و نظام‌های طبقه‌بندی هستهٔ اعتیاد را حول چهار پدیده توضیح می‌دهند:</p>
+<div class="cols2">
+<div class="card"><b class="h">۱. تحمل</b>برای رسیدن به همان اثر، مقدار بیشتری لازم است.</div>
+<div class="card"><b class="h">۲. محرومیت (خماری)</b>علائم جسمی و روانی پس از قطع مصرف.</div>
+<div class="card"><b class="h">۳. وسوسه</b>میل شدید و مداوم به مصرف.</div>
+<div class="card"><b class="h">۴. از دست رفتن کنترل</b>فرد می‌خواهد کم یا قطع کند، اما نمی‌تواند. جمله‌ای که بسیاری از مراجعان می‌گویند: «یک مدت من آن را مصرف می‌کردم؛ حالا او مرا دارد می‌کشد.»</div>
+</div>
+<p><b>هرم جامعهٔ مصرف‌کنندگان:</b> بخش بزرگی از مردم در پایهٔ هرم‌اند و مصرف نمی‌کنند یا کنترل‌شده مصرف می‌کنند؛ هرچه بالاتر برویم، شدت مصرف و وابستگی بیشتر می‌شود. مشاور باید بداند مراجعش در کدام لایه است.</p>
+
+<h3>فرضیهٔ خوددرمانی</h3>
+<p>در ۱۹۹۷ ادوارد خانتزیان مقالهٔ معروف خود را دربارهٔ <a class="w" data-t="self-medication">فرضیهٔ خوددرمانی</a> منتشر کرد (صورت نخست فرضیه را در ۱۹۸۵ مطرح کرده بود).<sup class="c"><a href="#r-khantzian">[۸]</a></sup> ایدهٔ اصلی: بسیاری از افراد مواد را برای تسکین ناراحتی درونی مصرف می‌کنند، نه صرفاً برای لذت. این ناراحتی لزوماً یک بیماری روان‌پزشکی آشکار مثل افسردگی یا وسواس نیست، بلکه حالت ناخوشایند درونی است: تحریک‌پذیری، بی‌انگیزگی، احساس درد روانی. مراجعان اغلب می‌گویند «من درد روانی دارم». خانتزیان پیشنهاد کرد اعتیاد را به‌عنوان <b>اختلال خودتنظیمی</b> ببینیم: تلاشی برای تنظیم حالت درونی.</p>
+<p>مدرس سه دستهٔ اصلی نظریه را برای توضیح اعتیاد معرفی کرد: اعتیاد به‌عنوان خوددرمانی؛ به‌عنوان رفتار اجبارگونه؛ و به‌عنوان یادگیری ناسازگار.</p>
+
+<h3>تعبیر درست از مغز و آسیب</h3>
+<p>مراجعان و خانواده‌ها اغلب می‌پرسند «مگر مواد روی مغز اثر ندارد؟» پاسخ باید هم راست باشد و هم گمراه‌کننده نباشد. مشاور در یک دوراهی است: نمی‌توان به فرد دروغ گفت که مواد هیچ آسیبی به مغز نمی‌زند؛ اما نباید با تصویرهای ترسناک و اغراق‌آمیز او را ترساند (پوسترهای پیشگیری که مغز را نابود نشان می‌دهند ممکن است اثر معکوس داشته باشند). پیام متعادل: بخش زیادی از بافت عصبی تحت تأثیر مصرف مداوم قرار می‌گیرد؛ این تغییرات همیشه و برای همه یکسان نیستند؛ و در بسیاری از موارد با قطع مصرف و درمان، بخشی از کارکردها بهبود می‌یابد.</p>
+
+<h3>عاملیت، انگیزه و خانواده</h3>
+<p>حفظ حس <a class="w" data-t="agency">عاملیت</a> در مراجع یکی از ارکان مشاوره است: فرد باید خودش تصمیم بگیرد و قدم بردارد؛ تا زمانی که چنین نشود، تلاش‌های درمانی دیگران کم‌اثر است. مدرس روش‌هایی را که فرد را به‌زور به کلینیک می‌برند یا بازداشت می‌کنند برای سوءمصرف مواد مؤثر ندانست؛ هدف ایجاد تغییر از درون است، با تشویق، پرسیدن و کمک به تصمیم. بسیاری از خانواده‌ها می‌گویند «او اصلاً انگیزه ندارد». توصیهٔ مدرس به خانواده‌ها: مرزهای روشن بگذارند، از سرزنش و تهدید پرهیز کنند و به جای کنترل، گفت‌وگوی حمایتی داشته باشند. نمونهٔ جملهٔ حمایتی: «من کنارت هستم؛ دوست داری دربارهٔ قدم بعدی صحبت کنیم؟»</p>
+
+<h2 id="substances">الکل، مواد افیونی و محرک‌ها</h2>
+<h3>الکل</h3>
+<p>الکل در کشور ما شاید در اولویت اول مواد نباشد، اما گروهی به آن وابسته می‌شوند و عوارض جدی پیدا می‌کنند؛ مراکز درمان غیرپزشکی هم باید با آن آشنا باشند.</p>
+<ul class="tight">
+<li><b><a class="w" data-t="standard-drink">نوشیدنی استاندارد</a>:</b> اغلب حدود ۱۷٫۷ میلی‌لیتر الکل خالص، تقریباً ۱۴ گرم اتانول. میلی‌لیتر و گرم یکسان نیستند چون چگالی اتانول کمتر از آب است.</li>
+<li><b>ترکیبات جانبی:</b> نوشیدنی‌های الکلی فقط اتانول نیستند؛ ترکیباتی مثل متانول، بوتانول، آلدئیدها و فنول‌ها بر طعم، بو، رنگ و برخی عوارض مثل سردرد اثر می‌گذارند.</li>
+<li><b>جذب:</b> مصرف با نوشیدنی گازدار و با معدهٔ خالی، سطح اتانول در مغز را سریع‌تر بالا می‌برد؛ هم وابستگی‌زاتر است و هم سمی‌تر. سطح خون معمولاً ۳۰ تا ۹۰ دقیقه پس از مصرف به اوج می‌رسد.</li>
+<li><b>قطع ناگهانی:</b> در قطع الکل، علائمی مثل تشنج یا افزایش شدید فشار خون خطرناک‌اند و نیاز به بستری و درمان پزشکی دارند؛ گروه‌های خودیاری یا تصمیم شخصی برای این موارد کافی نیست.</li>
+</ul>
+<h3>مواد افیونی و درمان نگهدارنده</h3>
+<p>مواد افیونی از خشخاش به دست می‌آیند. انسان‌ها هزاران سال از آن‌ها استفاده کرده‌اند، چون ضددرد، ضداسهال و ضدسرفه‌اند و حالت شادی‌آور و آرام‌بخش ایجاد می‌کنند؛ بخش بزرگی از درمان‌ها در طول تاریخ به آن‌ها وابسته بوده است. اعتیادزایی آن‌ها به همان دلیل است: اثر لذت‌بخش و آرام‌بخش که به‌مرور به تحمل، محرومیت و وسوسه می‌انجامد. هروئین، تریاک، شیره و ترامادول از این خانواده‌اند.</p>
+<p><a class="w" data-t="maintenance">درمان نگهدارنده</a> با داروهایی مثل متادون و بوپرنورفین اثرات چندبعدی دارد: جسمی، روانی و اجتماعی. این داروها معمولاً سرخوشی شدید ندارند، اما یک حس خوب ملایم ایجاد می‌کنند؛ برای برخی، همین حس ممکن است نقش یک <a class="w" data-t="transitional-object">شیء انتقالی</a> داشته باشد که ارتباط درمانی و ثبات را ممکن می‌کند. بسیاری از مراجعان در درمان نگهدارنده ثبات روزانه پیدا می‌کنند: نوسان کمتر، درگیری کمتر با قانون و احساس بهتر نسبت به خود. این تغییر هویت بخش مهمی از بهبودی است. مدرس هشدار داد نباید اعتیاد را مثل عفونت یا ضایعهٔ پوستی دید که با یک دارو کاملاً از بین می‌رود: اعتیاد یک مجموعهٔ زیستی-روانی-اجتماعی است.</p>
+<h3>مواد محرک</h3>
+<p>در ایران اصلی‌ترین مادهٔ محرک مشکل‌زا از خانوادهٔ آمفتامین‌هاست و چند ترکیب محرک دیگر هم در بازار وجود دارد. دسته‌بندی‌های سنتی مواد کامل نیستند؛ مثلاً حشیش و ماری‌جوانا گاهی توهم‌زا و گاهی آرام‌بخش طبقه‌بندی می‌شوند. محرک‌ها معمولاً هوشیاری و بیداری طولانی، انرژی بیشتر و اشتهای کمتر می‌آورند و در مصرف مداوم می‌توانند به وابستگی شدید، اضطراب، افسردگی و گاهی روان‌پریشی بینجامند. مدرس درمان دارویی مؤثر و گسترده‌ای برای محرک‌ها مثل مواد افیونی مطرح نکرد؛ تأکید او بیشتر روی مداخلات روانی-اجتماعی بود: مشاورهٔ انگیزشی، رفتاردرمانی و پیشگیری از عود. (جزوهٔ اصلی تصریح کرده که جزئیات درمان دارویی محرک‌ها در متن گفتاری کامل نبود.)</p>
+<div class="note"><b class="k">پیوند با دنیای روان</b>همان <a class="w" data-t="reward">مدار پاداش و دوپامین</a> که کنجکاوی و پیشرفت را می‌سازد (جزوهٔ کنجکاوی و فرسودگی و شغل معنادار)، در اعتیاد ربوده می‌شود. و همان «<a class="w" data-t="exploration">تعادل کاوش و بهره‌برداری</a>» که در شیار شناختی دیدیم، در اعتیاد به افراطی‌ترین شکل بهره‌برداری بدل می‌شود.</div>
+
+<div class="nd-health"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: اعتیاد</h3><ul><li class="nd-health"><a href="families.html" target="_blank" rel="noopener"><i></i>اعتیاد و خانواده</a><small>نکاتی دربارهٔ اعتیاد برای خانواده‌ها و مراجعان</small></li><li class="nd-health"><a href="clinicaddiction.html" target="_blank" rel="noopener"><i></i>اعتیاد (درمانگران)</a><small>اعتیاد برای درمانگران و مشاوران</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-body"><a href="../tools/body.html" target="_blank" rel="noopener"><i></i>نقشهٔ بدن و روان</a><small>بدن، تکامل و جنسیت › مغز، بدن و تکامل · مشترک: آنهدونیا و ظرفیت لذت، وابستگی به نیکوتین</small></li><li class="nd-feel"><a href="curiosity.html" target="_blank" rel="noopener"><i></i>کنجکاوی</a><small>هیجان و ذهن › یادگیری و کنجکاوی · مشترک: مدار پاداش و دوپامین، کاوش و بهره‌برداری</small></li><li class="nd-feel"><a href="range.html" target="_blank" rel="noopener"><i></i>گستره</a><small>هیجان و ذهن › یادگیری و کنجکاوی · مشترک: دید بیرونی، شیار شناختی</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#4c5f7a"><b>علوم اعصاب</b>اعتیاد مدار پاداش و یادگیری عادت را تغییر می‌دهد. <a href="../tools/graph.html#n-reward" target="_blank" rel="noopener">پاداش و دوپامین ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>انگ و طرد اجتماعی، درمان اعتیاد را دشوارتر از خود ماده می‌کند. <a href="../tools/graph.html#stigma" target="_blank" rel="noopener">انگ و برچسب‌زنی (گافمن) ↗</a></div><div style="--xc:#2f7a55"><b>اقتصاد رفتاری</b>تنزیل شدید آینده و انتخاب‌های ناسازگار در زمان، در اعتیاد پررنگ‌اند. <a href="../tools/graph.html#decision-errors" target="_blank" rel="noopener">خطا در تصمیم‌گیری: پیش‌بینی و انتخاب نادرست ↗</a></div><div style="--xc:#7d4a86"><b>فلسفه</b>آیا معتاد اختیار دارد؟ بحث اراده و مسئولیت. <a href="../tools/graph.html#akrasia" target="_blank" rel="noopener">ضعف اراده (آکراسیا) ↗</a></div></div><div class="worlds"><a href="../tools/land.html#addiction" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="../tools/graph.html#addiction" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="../tools/library.html" target="_blank" rel="noopener">کتابخانه</a><a href="../tools/timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="../tools/atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="../index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-jozve">جزوهٔ «خودشناسی، تصمیم‌گیری و ذهن انسان»، بخش‌های ۱ تا ۴؛ تنظیم‌شده از متن گفتاری سخنرانی‌های دکتر آذرخش مکری و چند جلسهٔ انگلیسی. <span class="badge">ضمیمه</span></li>
+<li id="r-kt1979"><span class="ltr">Kahneman, D., &amp; Tversky, A. (1979). Intuitive prediction: Biases and corrective procedures. <i>TIMS Studies in Management Science, 12</i>, 313–327.</span></li>
+<li id="r-kahneman2011"><span class="ltr">Kahneman, D. (2011). <i>Thinking, Fast and Slow</i>, ch. 23 “The Outside View”. Farrar, Straus and Giroux.</span> ترجمهٔ فارسی: «تفکر، سریع و کند».</li>
+<li id="r-shaps"><span class="ltr">Snaith, R. P., Hamilton, M., et al. (1995). A scale for the assessment of hedonic tone: The Snaith–Hamilton Pleasure Scale. <i>British Journal of Psychiatry, 167</i>, 99–103.</span></li>
+<li id="r-alexander"><span class="ltr">Alexander, B. K., Beyerstein, B. L., Hadaway, P. F., &amp; Coambs, R. B. (1981). Effect of early and later colony housing on oral ingestion of morphine in rats. <i>Pharmacology Biochemistry and Behavior, 15</i>(4), 571–576.</span></li>
+<li id="r-grimes"><span class="ltr">Grimes, D. R. (2019). <i>The Irrational Ape: Why Flawed Logic Puts Us All at Risk and How Critical Thinking Can Save the World</i>. Simon &amp; Schuster.</span> <span class="badge">ضمیمه</span></li>
+<li id="r-marlatt"><span class="ltr">Marlatt, G. A., &amp; Gordon, J. R. (Eds.). (1985). <i>Relapse Prevention: Maintenance Strategies in the Treatment of Addictive Behaviors</i>. Guilford.</span></li>
+<li id="r-khantzian"><span class="ltr">Khantzian, E. J. (1997). The self-medication hypothesis of substance use disorders: A reconsideration and recent applications. <i>Harvard Review of Psychiatry, 4</i>(5), 231–244.</span></li>
+<li id="r-phs2008"><span class="ltr">Fiore, M. C., et al. (2008). <i>Treating Tobacco Use and Dependence: 2008 Update</i>. U.S. Public Health Service.</span></li>
+<li id="r-miller"><span class="ltr">Miller, W. R., &amp; Rollnick, S. (2013). <i>Motivational Interviewing: Helping People Change</i> (3rd ed.). Guilford.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این صفحه بازنویسی چهار جزوهٔ «خودشناسی، تصمیم‌گیری و ذهن انسان» است که از متن گفتاری سخنرانی‌ها تنظیم شده بودند. متن جزوه‌ها با تشخیص نوری حروف خوانده شد؛ هرجا عبارتی ناخوانا بود یا جزوه خودش تصریح کرده بود که متن گفتاری کامل نیست، آن را آورده‌ام. کادرهای «یادداشت ویراستار» و «پیوند با دنیای روان» افزودهٔ ویراستارند. عددها، نام داروها و توصیه‌های درمانی را حتماً با منابع رسمی و پزشک بررسی کنید؛ این صفحه جای مشاورهٔ پزشکی نیست.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · سخنرانی‌های دکتر آذرخش مکری</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"planning-fallacy": {"fa": "خطای برنامه‌ریزی", "en": "Planning fallacy", "d": "گرایش به برآورد خوش‌بینانهٔ زمان، هزینه و کار یک پروژه، حتی با وجود تجربهٔ مشابه. کانمن و تورسکی (۱۹۷۹). نشانهٔ هشدار: «این بار فرق می‌کند».", "rel": ["outside-view", "performance-estimate", "completion-estimate"], "s": "planning", "g": "planning-fallacy"}, "outside-view": {"fa": "دید بیرونی", "en": "Outside view / reference class forecasting", "d": "به جای جزئیات پروژهٔ فعلی (دید درونی)، به نتیجهٔ پروژه‌های مشابه نگاه کن. راهکار اصلی کانمن برای خطای برنامه‌ریزی.", "rel": ["planning-fallacy"], "s": "planning", "g": "planning-fallacy"}, "performance-estimate": {"fa": "تخمین عملکرد", "en": "Performance estimate", "d": "برآورد مدت انجام یک کار مشخص (۱۰۰ صفحه چقدر طول می‌کشد؟). معمولاً نسبتاً دقیق است.", "rel": ["completion-estimate"], "s": "planning", "g": "planning-fallacy"}, "completion-estimate": {"fa": "تخمین تکمیل", "en": "Completion estimate", "d": "برآورد تاریخ پایان کار (کتاب را کی تمام می‌کنم؟). محل بیشترین خطا، چون وقفه‌ها و کارهای پیش‌بینی‌نشده را نادیده می‌گیرد.", "rel": ["performance-estimate"], "s": "planning", "g": "planning-fallacy"}, "anhedonia": {"fa": "آنهدونیا (بی‌لذتی)", "en": "Anhedonia", "d": "کاهش یا از دست رفتن توانایی لذت بردن از فعالیت‌هایی که پیش‌تر خوشایند بودند. از نشانه‌های اصلی افسردگی، اما همیشه بیماری نیست. با مقیاس SHAPS سنجیده می‌شود.", "rel": ["pat", "rat-park"], "s": "pleasure", "g": "anhedonia"}, "rat-park": {"fa": "پارک موش‌ها", "en": "Rat Park", "d": "آزمایش بروس الکساندر (دههٔ ۱۹۷۰): موش‌ها در محیط غنی و اجتماعی کمتر مرفین مصرف کردند. نمادی از نقش محیط و منابع لذت جایگزین در اعتیاد؛ تکرارهای بعدی نتایج یکدستی نداشتند.", "rel": ["anhedonia", "reward"], "s": "pleasure", "g": "addiction"}, "pat": {"fa": "درمان عاطفهٔ مثبت", "en": "Positive Affect Treatment", "d": "درمانی که مستقیماً سیستم پاداش و هیجان مثبت را هدف می‌گیرد (کراسک). از محورهای فرسودگی و شغل معنادار.", "rel": ["anhedonia"], "s": "pleasure", "g": "pat"}, "automatic-thoughts": {"fa": "افکار خودکار", "en": "Automatic thoughts", "d": "افکاری که سریع، بدون تأمل و تقریباً بی‌اختیار ظاهر می‌شوند. مفهوم مرکزی درمان شناختی بک. لزوماً بد نیستند؛ مشکل انعطاف‌ناپذیری است.", "rel": ["cognitive-rut", "mindfulness"], "s": "automatic", "g": "cognitive-rut"}, "cognitive-rut": {"fa": "شیار شناختی", "en": "Cognitive rut", "d": "مسیر فکری عمیق و تکراری که ذهن هر بار در آن می‌رود، مثل شیار جادهٔ خاکی. هر تکرار آن را عمیق‌تر می‌کند.", "rel": ["automatic-thoughts", "exploration", "tunnel-vision"], "s": "automatic", "g": "cognitive-rut"}, "mindfulness": {"fa": "ذهن‌آگاهی", "en": "Mindfulness", "d": "آگاهی از فکر و احساس در لحظه، بدون اینکه بلافاصله آن را باور یا اجرا کنیم. همان «ترمز ذهنی» سخنرانی.", "rel": ["automatic-thoughts"], "s": "automatic", "g": "t-thirdwave"}, "exploration": {"fa": "کاوش و بهره‌برداری", "en": "Exploration vs. exploitation", "d": "تعادل میان جست‌وجوی گزینهٔ تازه و تکیه بر راه‌حل‌های شناخته‌شده. افراط در بهره‌برداری = گیر کردن در شیار؛ افراط در کاوش = پراکندگی.", "rel": ["cognitive-rut"], "s": "automatic", "g": "exploration"}, "tunnel-vision": {"fa": "دید تونلی", "en": "Tunnel vision / hyperfocus", "d": "محدود شدن توجه به یک مسئله یا هدف، به‌طوری که گزینه‌ها، منابع کمک و پیامدهای گسترده‌تر دیده نمی‌شوند. هایپرفوکس شکل شدید و طولانی آن است.", "rel": ["cognitive-rut", "confirmation-bias"], "s": "tunnel", "g": "tunnel-vision"}, "motivated-reasoning": {"fa": "استدلال انگیزه‌دار", "en": "Motivated reasoning", "d": "ارزیابی شواهد به شکلی که باور پیشین را تأیید کند: سخت‌گیری بی‌اندازه برای شواهد مخالف و پذیرش بی‌نقد شواهد موافق (گرایمز، فصل ۸).", "rel": ["confirmation-bias"], "s": "tunnel", "g": "cognitive-biases"}, "confirmation-bias": {"fa": "سوگیری تأیید", "en": "Confirmation bias", "d": "گرایش به جست‌وجو، یادآوری و قاب‌بندی اطلاعات به شکلی که با باورهای پیشین بخواند و کم‌اهمیت جلوه دادن اطلاعات مخالف.", "rel": ["motivated-reasoning", "tunnel-vision"], "s": "tunnel", "g": "cognitive-biases"}, "craving": {"fa": "وسوسه", "en": "Craving", "d": "تجربهٔ درونی میل شدید به مصرف ماده یا انجام رفتار که ارضایش دشوار است. جلینک آن را هستهٔ الکلیسم دانست؛ امروز یکی از معیارهای DSM-5 است. رابطه‌اش با عود ساده نیست.", "rel": ["self-efficacy", "outcome-expectancy", "ema", "addiction-core"], "s": "craving", "g": "craving"}, "self-efficacy": {"fa": "خودکارآمدی", "en": "Self-efficacy", "d": "باور فرد به توانایی مقابله با یک موقعیت (بندورا). در مدل مارلت، خودکارآمدی پایین وسوسه و عود را بیشتر می‌کند.", "rel": ["outcome-expectancy", "craving"], "s": "theories", "g": "craving"}, "outcome-expectancy": {"fa": "انتظار از پیامد", "en": "Outcome expectancy", "d": "باور فرد دربارهٔ نتیجهٔ مصرف («آرامم می‌کند»). همراه خودکارآمدی، دو عامل اصلی وسوسه در مدل مارلت.", "rel": ["self-efficacy"], "s": "theories", "g": "craving"}, "back-translation": {"fa": "ترجمهٔ برگشتی", "en": "Back-translation", "d": "روش اعتبارسنجی ترجمه: متن ترجمه می‌شود و فرد دیگری بدون دیدن متن اصلی آن را به زبان اول برمی‌گرداند؛ اگر معنا حفظ شود، معادل معتبر است.", "rel": ["craving"], "s": "culture", "g": "craving"}, "ema": {"fa": "ارزیابی لحظه‌ای محیطی", "en": "Ecological Momentary Assessment (EMA)", "d": "پرسیدن چندبارهٔ حال و وسوسه در طول روز، در زمان واقعی و بستر زندگی فرد؛ داده‌ای کمتر آلوده به خطای حافظه.", "rel": ["craving"], "s": "ema", "g": "craving"}, "tobacco-use-disorder": {"fa": "اختلال مصرف تنباکو", "en": "Tobacco Use Disorder", "d": "نام DSM-5 برای وابستگی به نیکوتین؛ با دو یا بیشتر از حدود ۱۱ معیار اختلال مصرف مواد در یک سال تشخیص داده می‌شود.", "rel": ["nrt", "craving"], "s": "nicotine", "g": "nicotine"}, "nrt": {"fa": "جایگزین نیکوتین", "en": "Nicotine Replacement Therapy (NRT)", "d": "دادن کنترل‌شدهٔ نیکوتین بدون دود (چسب، آدامس، اسپری) برای کاهش خماری. در کنار بوپروپیون و وارنیکلین، درمان دارویی خط اول ترک سیگار.", "rel": ["tobacco-use-disorder"], "s": "nicotine", "g": "nicotine"}, "dynamic-motivation": {"fa": "انگیزهٔ پویا", "en": "Dynamic motivation", "d": "انگیزه ایستا نیست (یا دارد یا ندارد)؛ به‌تدریج شکل می‌گیرد و بالا و پایین می‌رود. عقب‌گرد بخشی از مسیر تغییر است، نه شکست.", "rel": ["mi", "agency"], "s": "therapy", "g": "addiction-therapy"}, "reinforcement": {"fa": "تقویت مثبت و منفی", "en": "Positive / negative reinforcement", "d": "تقویت مثبت: مصرف برای لذت. تقویت منفی: مصرف برای رهایی از حالت ناخوشایند (اضطراب، خماری). راه‌حل هرکدام متفاوت است.", "rel": ["self-medication"], "s": "therapy", "g": "addiction-therapy"}, "drug-court": {"fa": "دادگاه مواد مخدر", "en": "Drug court", "d": "دادگاهی که به جای حبس، مراحل درمان را تعیین می‌کند. شکلی از اجبار قانونی که اثر نسبتاً خوبی نشان داده است.", "rel": ["dynamic-motivation"], "s": "therapy", "g": "addiction-therapy"}, "therapeutic-alliance": {"fa": "ارتباط درمانی", "en": "Therapeutic alliance", "d": "پیوند اعتماد و همکاری درمانگر و بیمار؛ از قوی‌ترین عوامل مشترک اثر درمان. در اعتیاد باید مراقب وابستگی بیمار به درمانگر بود.", "rel": ["mi"], "s": "therapy", "g": "t-common"}, "mi": {"fa": "مصاحبهٔ انگیزشی", "en": "Motivational Interviewing", "d": "روش میلر و رولنیک برای کشف و تقویت انگیزهٔ تغییر از درون خود فرد؛ «بیشتر پرسیدن تا توصیه کردن». از پرشواهدترین مداخلات در اعتیاد.", "rel": ["dynamic-motivation", "agency"], "s": "therapy", "g": "mi"}, "addiction-core": {"fa": "هستهٔ اعتیاد", "en": "Core of addiction", "d": "مشکلات مشترک همهٔ مصرف‌کنندگان، مستقل از ماده: تحمل، محرومیت، وسوسه و از دست رفتن کنترل.", "rel": ["craving", "self-medication"], "s": "counseling", "g": "addiction-core"}, "self-medication": {"fa": "فرضیهٔ خوددرمانی", "en": "Self-medication hypothesis", "d": "خانتزیان: بسیاری مواد را برای تسکین درد روانی و ناراحتی درونی مصرف می‌کنند، نه فقط برای لذت؛ اعتیاد به‌عنوان اختلال خودتنظیمی.", "rel": ["reinforcement", "addiction-core"], "s": "counseling", "g": "self-medication"}, "agency": {"fa": "عاملیت", "en": "Agency", "d": "حس اینکه خود فرد تصمیم می‌گیرد و قدم برمی‌دارد. از ارکان مشاورهٔ اعتیاد؛ اجبار به‌تنهایی آن را نمی‌سازد.", "rel": ["dynamic-motivation", "mi"], "s": "counseling", "g": "addiction-therapy"}, "standard-drink": {"fa": "نوشیدنی استاندارد", "en": "Standard drink", "d": "واحد سنجش مصرف الکل؛ معمولاً حدود ۱۴ گرم (تقریباً ۱۷٫۷ میلی‌لیتر) اتانول خالص. تعریفش در کشورهای مختلف متفاوت است.", "rel": [], "s": "substances", "g": "substances"}, "maintenance": {"fa": "درمان نگهدارنده", "en": "Maintenance treatment", "d": "درمان طولانی‌مدت وابستگی به مواد افیونی با متادون یا بوپرنورفین؛ اثر جسمی، روانی و اجتماعی دارد و ثبات زندگی را ممکن می‌کند.", "rel": ["transitional-object"], "s": "substances", "g": "substances"}, "transitional-object": {"fa": "شیء انتقالی", "en": "Transitional object", "d": "مفهوم وینیکات: شیئی (مثل پتوی کودک) که گذار از وابستگی به استقلال را ممکن می‌کند. مدرس آن را برای نقش داروی نگهدارنده در ارتباط درمانی به کار برد.", "rel": ["maintenance"], "s": "substances", "g": "t-psychodynamic"}, "reward": {"fa": "مدار پاداش و دوپامین", "en": "Reward circuit", "d": "مدار دوپامینی پیش‌بینی پاداش و «خواستن»؛ در کنجکاوی، پیشرفت و اعتیاد مشترک است.", "rel": ["craving"], "s": "substances", "g": "n-reward"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="../tools/graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="../tools/graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>
