@@ -105,8 +105,8 @@ function tokens(s) {
 }
 const cov = (text, T) => { const m = T.filter(w => SH.tp(text, w)); return { m, f: m.length / T.length }; };
 function run(claim) {
-  const out = document.getElementById("out"); const T = tokens(claim);
-  if (!T.length) { out.innerHTML = `<div class="empty">ادعایی بنویسید (دست‌کم یک واژهٔ معنادار).</div>`; return; }
+  const out = document.getElementById("out"); const T0 = tokens(claim); const T = T0.length > 1 ? T0.filter(w => w !== "ایران") : T0;
+  if (!T0.length) { out.innerHTML = `<div class="empty">ادعایی بنویسید (دست‌کم یک واژهٔ معنادار).</div>`; return; }
   const need = T.length === 1 ? 1 : Math.max(2, Math.ceil(T.length * .4));
   const hits = [];
   D.concepts.forEach(c => {
@@ -124,7 +124,7 @@ function run(claim) {
   top.forEach(h => { const n = h.c.ir && D.notesById[h.c.ir]; if (n && !notes.some(x => x.n.id === n.id)) notes.push({ n, k: { m: [] } }); });
   const allPts = top.flatMap(h => h.ps.map(x => x.p));
   const cnt = f => allPts.filter(p => (p.f || []).includes(f)).length, strong = allPts.filter(p => p.tier === 1 || p.tier === 2).length;
-  let h = `<div class="card sum"><div class="meta"><span class="muted">واژه‌های جستجو:</span> ${T.map(w => `<span class="chip">${DS.esc(w)}</span>`).join(" ")}</div>`;
+  let h = `<div class="card sum"><div class="meta"><span class="muted">واژه‌های جستجو:</span> ${T0.map(w => `<span class="chip">${DS.esc(w)}</span>`).join(" ")}</div>`;
   if (!top.length) h += `<p style="margin:12px 0 0"><b>در دانش‌سرا شاهد واژگانی مرتبطی پیدا نشد.</b> این به معنای نادرستی ادعا نیست؛ فقط یعنی این موضوع (با این واژه‌ها) هنوز در دانش‌سرا نیامده یا با واژه‌های دیگری نوشته شده است. ادعا را ساده‌تر یا با هم‌معنی‌ها بنویسید.</p></div>`;
   else h += `<p style="margin:12px 0 0"><b>${DS.faDigits(top.length)} مدخل</b> با ${DS.faDigits(allPts.length)} گزارهٔ مرتبط${notes.length ? ` و <b>${DS.faDigits(notes.length)} یادداشت آماری ایران</b>` : ""}.
    از این گزاره‌ها ${DS.faDigits(strong)} با منبع ردهٔ ۱ یا ۲، ${DS.faDigits(cnt("contested"))} محل‌بحث، ${DS.faDigits(cnt("unreplicated"))} تکرارنشده و ${DS.faDigits(cnt("dated"))} قدیمی‌اند. <span class="muted">(فقط ${DS.faDigits(top.length)} مدخل برتر شمرده شده؛ در کل ${DS.faDigits(hits.length)} مدخل گاه‌واژه دارند.)</span></p></div>`;
