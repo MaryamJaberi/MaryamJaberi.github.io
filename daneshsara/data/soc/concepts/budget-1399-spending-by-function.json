@@ -1,0 +1,112 @@
+{
+ "id": "soc:budget-1399-spending-by-function",
+ "kind": "concept",
+ "title": {
+  "fa": "هزینه‌های بودجهٔ ۱۳۹۹ بر حسب امور: رفاه، آموزش، دفاع، سلامت",
+  "en": "1399 budget spending by function: welfare, education, defence, health",
+  "nl": "Uitgaven in begroting 1399 per functie: welzijn, onderwijs, defensie, gezondheid"
+ },
+ "aliases": [],
+ "parent": "soc:inequality",
+ "field": "soc:inequality",
+ "summary": {
+  "fa": "در جدول شمارهٔ ۶ لایحه، از حدود ۳٬۷۵۷ هزار میلیارد ریال اعتبار هزینه‌ای، امور رفاه اجتماعی ۲۹٫۵٪، آموزش و پژوهش ۲۲٫۷٪، دفاعی-امنیتی ۱۸٫۵٪ و سلامت ۱۷٫۳٪ را می‌گیرد.",
+  "en": "In the bill's Table 6, of about 3,757 thousand billion rials of current spending, social welfare gets 29.5%, education and research 22.7%, defence and security 18.5% and health 17.3%.",
+  "nl": "In tabel 6 van het voorstel gaat van circa 3.757 duizend miljard rial lopende uitgaven 29,5% naar sociale voorzieningen, 22,7% naar onderwijs en onderzoek, 18,5% naar defensie en veiligheid en 17,3% naar gezondheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مجموع اعتبارات هزینه‌ای حدود ۳٬۷۵۷ هزار میلیارد ریال و اعتبارات تملک دارایی سرمایه‌ای حدود ۵۹۴ هزار میلیارد ریال است.",
+    "en": "Total current-spending credits are about 3,757 thousand billion rials and capital-asset credits about 594 thousand billion.",
+    "nl": "Total current-spending credits are about 3,757 thousand billion rials and capital-asset credits about 594 thousand billion."
+   },
+   "sources": [
+    "src:c5c6734350"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "امور رفاه اجتماعی (بیمه‌های اجتماعی، حمایتی و ...) حدود ۱٬۱۰۹ هزار میلیارد ریال؛ آموزش و پژوهش ۸۵۴؛ دفاعی و امنیتی ۶۹۶؛ سلامت ۶۵۱؛ خدمات عمومی ۱۵۷؛ قضایی ۱۳۰؛ اقتصادی ۷۹٫۵؛ فرهنگ و گردشگری ۷۱ هزار میلیارد ریال هزینه‌ای است.",
+    "en": "Current spending: social welfare (social insurance, support schemes etc.) about 1,109 thousand billion rials; education and research 854; defence and security 696; health 651; general services 157; judiciary 130; economic affairs 79.5; culture and tourism 71.",
+    "nl": "Current spending: social welfare (social insurance, support schemes etc.) about 1,109 thousand billion rials; education and research 854; defence and security 696; health 651; general services 157; judiciary 130; economic affairs 79.5; culture and tourism 71."
+   },
+   "sources": [
+    "src:c5c6734350"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محیط زیست تنها حدود ۶٫۵ هزار میلیارد ریال (کمتر از ۰٫۲٪) و مسکن و عمران شهری و روستایی حدود ۲ هزار میلیارد ریال اعتبار هزینه‌ای دارد.",
+    "en": "Environment gets only about 6.5 thousand billion rials (under 0.2%) and housing and urban/rural development about 2 thousand billion in current spending.",
+    "nl": "Environment gets only about 6.5 thousand billion rials (under 0.2%) and housing and urban/rural development about 2 thousand billion in current spending."
+   },
+   "sources": [
+    "src:c5c6734350"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در اعتبارات سرمایه‌ای، امور اقتصادی با حدود ۲۵۱ هزار میلیارد ریال از ۵۹۴ هزار میلیارد، نزدیک ۴۲٪ را دارد.",
+    "en": "In capital credits, economic affairs take about 251 of 594 thousand billion rials, near 42%.",
+    "nl": "In capital credits, economic affairs take about 251 of 594 thousand billion rials, near 42%."
+   },
+   "sources": [
+    "src:c5c6734350"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جدول بر حسب «امور» است و نشان نمی‌دهد این پول چه کیفیتی از خدمات را می‌خرد یا دقیقاً به چه دهکی می‌رسد؛ برای سنجش اثر بر نابرابری باید با دادهٔ خانوار ترکیب شود.",
+    "en": "The table is by function; it does not show service quality or which income groups benefit, so assessing inequality effects requires combining it with household data.",
+    "nl": "The table is by function; it does not show service quality or which income groups benefit, so assessing inequality effects requires combining it with household data."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:inequality-health",
+   "rel": "see-also",
+   "note": {
+    "fa": "سلامت و نابرابری",
+    "en": "Health and inequality",
+    "nl": "Health and inequality"
+   }
+  },
+  {
+   "to": "soc:gini-inequality",
+   "rel": "bridges",
+   "note": {
+    "fa": "برای سنجش نابرابری لازم است",
+    "en": "Needed to measure inequality",
+    "nl": "Needed to measure inequality"
+   }
+  },
+  {
+   "to": "soc:budget-1399-bill-overview",
+   "rel": "part-of",
+   "note": {
+    "fa": "ساختار کلی لایحه",
+    "en": "The bill's overall structure",
+    "nl": "The bill's overall structure"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:c5c6734350"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

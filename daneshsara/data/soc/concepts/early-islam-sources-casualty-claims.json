@@ -1,0 +1,120 @@
+{
+ "id": "soc:early-islam-sources-casualty-claims",
+ "kind": "concept",
+ "title": {
+  "fa": "چگونه با شمار کشته‌شدگان در منابع کهن اسلامی برخورد کنیم؟",
+  "en": "Reading casualty figures in early Islamic sources",
+  "nl": "Hoe omgaan met dodencijfers in vroege islamitische bronnen"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "کتاب نمونه‌ای است از استفادهٔ گزینشی از تاریخ‌نگاری قرون نخست اسلام. این مدخل روشن می‌کند چرا عددهای طبری و مانند آن را نباید ساده جمع و به‌عنوان آمار قطعی خواند.",
+  "en": "The book is an example of selective use of early Islamic historiography. This entry explains why figures in al-Tabari and similar works should not simply be summed and read as firm statistics.",
+  "nl": "Het boek illustreert selectief gebruik van vroege islamitische geschiedschrijving; cijfers uit al-Tabari mogen niet zomaar worden opgeteld als harde statistiek."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده شمارهای پراکندهٔ کشته‌شدگان از چند منبع را جمع می‌زند و نتیجه می‌گیرد علی بیش از هر چهرهٔ تاریخی با دست خود کشته است؛ این ادعای مقایسه‌ای را با هیچ داده‌ای نمی‌سنجد.",
+    "en": "The author sums scattered casualty numbers from several sources and concludes Ali killed more personally than any historical figure; he tests this comparative claim against no data.",
+    "nl": "The author sums scattered casualty numbers from several sources and concludes Ali killed more personally than any historical figure; he tests this comparative claim against no data."
+   },
+   "sources": [
+    "src:d54b51b735"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "طبری (درگذشتهٔ ۹۲۳ م) گزارش‌هایی را که دست‌به‌دست شده بود، با روایت‌های گوناگون و گاه متناقض، چند سده پس از رویدادها گرد آورد.",
+    "en": "Al-Tabari (d. 923) compiled transmitted reports, often in conflicting variants, several centuries after the events.",
+    "nl": "Al-Tabari (d. 923) compiled transmitted reports, often in conflicting variants, several centuries after the events."
+   },
+   "sources": [
+    "src:74fc79f143"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهشگران تاریخ نخستین اسلام دربارهٔ اعتبار روایت‌های این دوره و عددهای آن‌ها، که اغلب گرد یا نمادین است، هشدار می‌دهند و بر نقد منبع پیش از استناد تأکید دارند.",
+    "en": "Scholars of early Islam warn about the reliability of narratives of this period and their figures, often rounded or schematic, and insist on source criticism before relying on them.",
+    "nl": "Scholars of early Islam warn about the reliability of narratives of this period and their figures, often rounded or schematic, and insist on source criticism before relying on them."
+   },
+   "sources": [
+    "src:cb413dd3c3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برای تصویر آکادمیک رقابت بر جانشینی پیامبر و جنگ‌های داخلی نخستین، اثر مادلونگ در دسترس‌ترین مرجع است.",
+    "en": "For the academic picture of the succession dispute and first civil wars, Madelung's monograph is a standard reference.",
+    "nl": "For the academic picture of the succession dispute and first civil wars, Madelung's monograph is a standard reference."
+   },
+   "sources": [
+    "src:224a1872a8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "داستان بنی‌قریظه نمونهٔ مسئلهٔ تاریخ‌مندی است: منابع کهن اعدام مردان را گزارش می‌کنند، اما پژوهشگران دربارهٔ جزئیات و شمار آن اختلاف دارند.",
+    "en": "The Banu Qurayza episode illustrates the historicity problem: early sources report executions of men, but scholars disagree over details and numbers.",
+    "nl": "The Banu Qurayza episode illustrates the historicity problem: early sources report executions of men, but scholars disagree over details and numbers."
+   },
+   "sources": [],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:ali-qatil-al-arab-polemic",
+   "rel": "critiques",
+   "note": {
+    "fa": "روش جدلی کتاب",
+    "en": "The book's polemical method",
+    "nl": "The book's polemical method"
+   }
+  },
+  {
+   "to": "soc:social-construction",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساخت اجتماعی واقعیت",
+    "en": "Social construction of reality",
+    "nl": "Social construction of reality"
+   }
+  },
+  {
+   "to": "soc:discourse-subject-genealogy",
+   "rel": "see-also",
+   "note": {
+    "fa": "نگاه تاریخی و تبارشناسی",
+    "en": "Historical view and genealogy",
+    "nl": "Historical view and genealogy"
+   }
+  }
+ ],
+ "people": [
+  "core:muhammad-ibn-jarir-al-tabari",
+  "core:wilferd-madelung"
+ ],
+ "sources": [
+  "src:224a1872a8",
+  "src:74fc79f143",
+  "src:cb413dd3c3",
+  "src:d54b51b735"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

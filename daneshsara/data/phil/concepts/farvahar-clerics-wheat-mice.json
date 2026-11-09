@@ -1,0 +1,134 @@
+{
+ "id": "phil:farvahar-clerics-wheat-mice",
+ "kind": "concept",
+ "title": {
+  "fa": "تمثیل انبار، گندم و موش‌ها: نقد متولیان دین در باغ شعور",
+  "en": "The barn, wheat and mice allegory: critique of religious custodians in The Garden of Consciousness",
+  "nl": "De allegorie van schuur, tarwe en muizen: kritiek op religieuze bewakers"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "نویسنده «انبار» را جان آدمی، «گندم» را فهم‌های اندوخته و «موش‌ها» را متولیان دین می‌داند که ذخیرهٔ فهم را به سود خود مصادره می‌کنند؛ این نگاه جدلی و تعمیمی است.",
+  "en": "The author casts the 'barn' as the human soul, 'wheat' as accumulated understanding and 'mice' as religious custodians who appropriate that store; the view is polemical and sweeping.",
+  "nl": "De auteur ziet de «schuur» als de menselijke ziel, de «tarwe» als opgebouwd inzicht en de «muizen» als religieuze bewakers die dat inzicht toe-eigenen; polemisch."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در این تمثیل هر دانهٔ گندم فهمی است که در عمر ذخیره می‌شود و موش‌ها کسانی‌اند که از بیرون و درون این ذخیره را می‌خورند و به سود خود می‌برند.",
+    "en": "In the allegory each grain of wheat is an understanding stored over a lifetime, and the mice are those who consume and exploit that store, from outside and within.",
+    "nl": "In the allegory each grain of wheat is an understanding stored over a lifetime, and the mice are those who consume and exploit that store, from outside and within."
+   },
+   "sources": [
+    "src:c05e5fe7c9"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید ماندگاری یک دین دلیل درستی آن نیست و آن را حاصل عادت و تربیت، و گاه زور، می‌داند.",
+    "en": "The author says a religion's longevity is no proof of its truth, and attributes it to habit and upbringing, and at times force.",
+    "nl": "The author says a religion's longevity is no proof of its truth, and attributes it to habit and upbringing, and at times force."
+   },
+   "sources": [
+    "src:c05e5fe7c9"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه رایج دانشگاهی: دوام ادیان را نمی‌توان فقط به زور و عادت فروکاست؛ کارکردهای اجتماعی، هویت‌ساز و معناساز دین (دورکیم) و نقش امنیت وجودی (نظریهٔ سکولارشدن) هم در پژوهش‌ها مطرح است، و ادعای «همهٔ ادیان با شمشیر ماندند» تعمیمی بی‌سند است.",
+    "en": "Mainstream scholarship: the persistence of religions cannot be reduced to force and habit; social, identity-forming and meaning-making functions (Durkheim) and existential security (secularization theory) also matter, and the claim that all religions survived by the sword is an unsupported generalisation.",
+    "nl": "Mainstream scholarship: the persistence of religions cannot be reduced to force and habit; social, identity-forming and meaning-making functions (Durkheim) and existential security (secularization theory) also matter, and the claim that all religions survived by the sword is an unsupported generalisation."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او مدعی است عارفان واقعی را متولیان دین مصادره و تحریف کرده‌اند و مولوی را نمونه می‌آورد.",
+    "en": "He claims genuine mystics were appropriated and distorted by religious custodians, citing Rumi as an example.",
+    "nl": "He claims genuine mystics were appropriated and distorted by religious custodians, citing Rumi as an example."
+   },
+   "sources": [
+    "src:c05e5fe7c9"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه رایج دانشگاهی: عرفان و تصوف اسلامی سنتی درونی و چندوجهی است و بسیاری از عارفان (از جمله مولوی) در چارچوب اسلام می‌اندیشیدند؛ تعمیم «عرفان همه‌اش بی‌ریشه و بی‌محتواست» با پژوهش‌های تاریخی همخوان نیست، هرچند نقد سوءاستفادهٔ ابزاری از عرفان مشروع است.",
+    "en": "Mainstream scholarship: Islamic mysticism is internally diverse, and many mystics (Rumi included) thought within Islam; the blanket claim that mysticism is rootless and empty does not match historical research, though criticism of its instrumental misuse is legitimate.",
+    "nl": "Mainstream scholarship: Islamic mysticism is internally diverse, and many mystics (Rumi included) thought within Islam; the blanket claim that mysticism is rootless and empty does not match historical research, though criticism of its instrumental misuse is legitimate."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:marx-religion-alienation",
+   "rel": "contrasts",
+   "note": {
+    "fa": "مارکس: دین به‌مثابه آه ستمدیده، نه توطئهٔ متولیان",
+    "en": "Marx: religion as the sigh of the oppressed, not a clerical plot",
+    "nl": "Marx: religion as the sigh of the oppressed, not a clerical plot"
+   }
+  },
+  {
+   "to": "soc:secularization",
+   "rel": "critiques",
+   "note": {
+    "fa": "توضیح علل دوام دین",
+    "en": "Explaining religion's persistence",
+    "nl": "Explaining religion's persistence"
+   }
+  },
+  {
+   "to": "soc:religion-ideology-iran-debate",
+   "rel": "see-also",
+   "note": {
+    "fa": "بحث دین به‌عنوان مسئلهٔ ایران",
+    "en": "Is religion Iran's problem?",
+    "nl": "Is religion Iran's problem?"
+   }
+  },
+  {
+   "to": "phil:farvahar-shoor-humanism",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از دیدگاه کلی کتاب",
+    "en": "Part of the book's overall stance",
+    "nl": "Part of the book's overall stance"
+   }
+  }
+ ],
+ "people": [
+  "core:jalal-al-din-rumi"
+ ],
+ "sources": [
+  "src:c05e5fe7c9"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

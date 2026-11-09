@@ -1,0 +1,105 @@
+{
+ "id": "phil:wiki-ab-semantic-field",
+ "kind": "concept",
+ "title": {
+  "fa": "«آب» در شعر فارسی: میدان معنایی یک واژه",
+  "en": "'Water' in Persian poetry: the semantic field of one word",
+  "nl": "'Water' in de Perzische poëzie: het betekenisveld van één woord"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "مدخل‌های «آب …» در آغاز کتاب نشان می‌دهد یک واژهٔ ساده چگونه صدها ترکیب و ده‌ها معنای کنایی می‌سازد؛ از شراب و اشک تا آبرو، رونق، جلا و جاودانگی.",
+  "en": "The 'ab …' entries at the start of the volume show how one plain word yields hundreds of compounds and dozens of figurative senses, from wine and tears to honor, prosperity, lustre and immortality.",
+  "nl": "De 'ab …'-lemma's tonen hoe één eenvoudig woord honderden samenstellingen en tientallen figuurlijke betekenissen oplevert."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در بخش خوانده‌شده، «آب» در کاربردهای شعری به‌تنهایی کنایه است از آبرو، رونق و منزلت، طراوت، تابناکی و جلا، اشک، و حتی نطفه؛ هر معنا با بیت‌هایی از شاعران گوناگون پشتیبانی می‌شود.",
+    "en": "In the portion read, 'ab' alone stands figuratively for honor, standing, freshness, lustre, tears and even semen, each backed by verses from different poets.",
+    "nl": "In the portion read, 'ab' alone stands figuratively for honor, standing, freshness, lustre, tears and even semen, each backed by verses from different poets."
+   },
+   "sources": [
+    "src:4e98147f31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "با صفت‌ها همان واژه معنای دیگر می‌گیرد: «آب حیات» زندگی جاوید (و در عرفان گاه سخن معشوق)، و ترکیب‌هایی مثل «آب حرام»، «آب تلخ»، «آب چو آتش» همه کنایه از شراب‌اند؛ «آب تلخ و شور» اشک است. یک مفهوم (شراب) با چندین ترکیب بیان می‌شود.",
+    "en": "With modifiers the word shifts: 'water of life' means eternal life; several different compounds all point to wine, while others mean tears. One concept is expressed by many compounds.",
+    "nl": "With modifiers the word shifts: 'water of life' means eternal life; several different compounds all point to wine, while others mean tears. One concept is expressed by many compounds."
+   },
+   "sources": [
+    "src:4e98147f31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "عبارت‌های فعلی هم معنای خود را دارند: «آب تیره کردن» نفاق‌انداختن، «آب تیره گشتن پیش کسی» از دست‌رفتن آبرو. تفاوت جزئی ساختار فعل، معنا را عوض می‌کند و برای همین مؤلف آن‌ها را جدا ثبت می‌کند.",
+    "en": "Verbal phrases carry their own senses: making the water murky means sowing discord; becoming murky before someone means losing face. Small structural differences change the meaning.",
+    "nl": "Verbal phrases carry their own senses: making the water murky means sowing discord; becoming murky before someone means losing face. Small structural differences change the meaning."
+   },
+   "sources": [
+    "src:4e98147f31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اسطورهٔ خضر و چشمهٔ آب حیات در ظلمات که کتاب برای توضیح «آب حیات» می‌آورد، نمونه‌ای است از اینکه کنایه‌ها فرهنگ و اسطوره را در خود ذخیره می‌کنند؛ شاعر با دو کلمه، یک داستان کامل را فرا می‌خواند.",
+    "en": "The Khidr legend behind 'water of life', which the book cites, shows how idioms store myth: two words evoke a whole story.",
+    "nl": "The Khidr legend behind 'water of life', which the book cites, shows how idioms store myth: two words evoke a whole story."
+   },
+   "sources": [
+    "src:4e98147f31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برخی معناها (مثل «آب» برای نطفه) را فرهنگ‌های امروز کمتر می‌شناسند؛ این فهرست تاریخی است و برای معنای امروزی واژه‌ها نباید جانشین فرهنگ‌های معیار شود.",
+    "en": "Some senses are rare in modern usage; this is a historical record, not a guide to present-day meaning.",
+    "nl": "Some senses are rare in modern usage; this is a historical record, not a guide to present-day meaning."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:wiki-kenaye-majaz-estiare",
+   "rel": "explains",
+   "note": {
+    "fa": "نمونهٔ عملی کنایه و استعاره",
+    "en": "A worked example of kenaye and metaphor",
+    "nl": "A worked example of kenaye and metaphor"
+   }
+  },
+  {
+   "to": "phil:wiki-usage-based-poetic-lexicon",
+   "rel": "see-also",
+   "note": {
+    "fa": "شیوهٔ ثبت معناها با شاهد",
+    "en": "How senses are recorded with witnesses",
+    "nl": "How senses are recorded with witnesses"
+   }
+  }
+ ],
+ "people": [
+  "core:khidr-al-khadir"
+ ],
+ "sources": [
+  "src:4e98147f31"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

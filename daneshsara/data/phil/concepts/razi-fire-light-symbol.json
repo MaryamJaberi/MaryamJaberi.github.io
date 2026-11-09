@@ -1,0 +1,88 @@
+{
+ "id": "phil:razi-fire-light-symbol",
+ "kind": "concept",
+ "title": {
+  "fa": "آتش و نور به‌مثابهٔ نماد معرفت در تفسیر خسروانی-اشراقی",
+  "en": "Fire and light as symbols of knowledge in the Khusravani-Ishraqi reading",
+  "nl": "Vuur en licht als symbolen van kennis in de Khosravani-ishraqi lezing"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "رضی آتش در گاتاها و نزد عارفان را نماد روشنایی دانش، شهود و راستی می‌داند نه صرفاً معبود مادی، و آن را با «نور» اشراقی یکی می‌گیرد. این خوانش نمادین یک تفسیر است.",
+  "en": "Razi reads fire in the Gathas and in Sufi writing as a symbol of the light of knowledge, intuition and truth rather than a material object of worship, and equates it with Illuminationist light. This symbolic reading is an interpretation.",
+  "nl": "Razi leest vuur als symbool van het licht van kennis en intuïtie, en gelijkt het met ishraqi-licht; een symbolische interpretatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید در گاتاها آتش نمادی از نور خالص، تفکر، شهود و راستی است و ستایش آن به ستایش نور معرفت برمی‌گردد.",
+    "en": "The author says that in the Gathas fire stands for pure light, thought, intuition and truth, and its praise is the praise of the light of knowledge.",
+    "nl": "The author says that in the Gathas fire stands for pure light, thought, intuition and truth, and its praise is the praise of the light of knowledge."
+   },
+   "sources": [
+    "src:8c09ee5f84"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او شرح شهرزوری (در «نزهة الارواح») دربارهٔ زرتشت را شرحی رمزی می‌داند: در آن سوختن بدن در آتش، نور در پوست و اشاره به سیاره‌ها را به تهذیب نفس و تابش نور معرفت تعبیر می‌کند.",
+    "en": "He treats the account of Zoroaster in Shahrazuri's Nuzhat al-arwah as a coded text, interpreting burning in fire, light entering the skin and planetary references as purification of the soul and illumination.",
+    "nl": "He treats the account of Zoroaster in Shahrazuri's Nuzhat al-arwah as a coded text, interpreting burning in fire, light entering the skin and planetary references as purification of the soul and illumination."
+   },
+   "sources": [
+    "src:8c09ee5f84"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "زندگی‌نامهٔ شهرزوری از زرتشت (زادگاه آذربایجان یا نجران، آمیخته با نجوم) افسانه‌آمیز است و نمی‌توان آن را زندگی‌نامهٔ تاریخی زرتشت شمرد؛ خوانش نمادین رضی نیز تفسیر خود اوست، نه نتیجهٔ متن‌شناختی مورد اجماع.",
+    "en": "Shahrazuri's biography of Zoroaster (birth in Azerbaijan or Najran, mixed with astrology) is legendary and cannot be taken as historical biography; Razi's symbolic reading is his own interpretation, not a text-critical consensus.",
+    "nl": "Shahrazuri's biography of Zoroaster (birth in Azerbaijan or Najran, mixed with astrology) is legendary and cannot be taken as historical biography; Razi's symbolic reading is his own interpretation, not a text-critical consensus."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:illumination",
+   "rel": "explains",
+   "note": {
+    "fa": "نور و نماد آتش در حکمت اشراق",
+    "en": "Light and the fire symbol in Illuminationism",
+    "nl": "Light and the fire symbol in Illuminationism"
+   }
+  },
+  {
+   "to": "phil:razi-khosravani-thesis",
+   "rel": "part-of",
+   "note": {
+    "fa": "چارچوب حکمت خسروانی نزد رضی",
+    "en": "Razi's Khusravani framework",
+    "nl": "Razi's Khusravani framework"
+   }
+  }
+ ],
+ "people": [
+  "core:shams-al-din-shahrazuri"
+ ],
+ "sources": [
+  "src:8c09ee5f84"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

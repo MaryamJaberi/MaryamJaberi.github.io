@@ -1,0 +1,81 @@
+{
+ "id": "soc:budget-1399-income-tax-brackets",
+ "kind": "concept",
+ "title": {
+  "fa": "پلکان مالیات بر حقوق در لایحهٔ ۱۳۹۹",
+  "en": "The wage-tax brackets in the 1399 bill",
+  "nl": "De loonbelastingschijven in het voorstel 1399"
+ },
+ "aliases": [],
+ "parent": "soc:inequality",
+ "field": "soc:inequality",
+ "summary": {
+  "fa": "لایحه معافیت مالیاتی سالانهٔ حقوق را ۳۶۰ میلیون ریال تعیین و نرخ‌های ۱۰ تا ۳۵ درصد را بر پلکان‌های مضربی از آن می‌گذارد.",
+  "en": "The bill sets the annual wage-tax exemption at 360 million rials and applies rates from 10% to 35% on bands expressed as multiples of it.",
+  "nl": "Het voorstel stelt de jaarlijkse loonbelastingvrijstelling op 360 miljoen rial en past tarieven van 10% tot 35% toe op schijven die veelvouden ervan zijn."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سقف معافیت مالیاتی سالانه ۳۶۰ میلیون ریال و برای مشمولان مواد ۱۰۱ و ۵۷ قانون مالیات‌های مستقیم ۲۸۸ میلیون ریال تعیین شده است.",
+    "en": "The annual exemption is set at 360 million rials, and 288 million for those covered by articles 57 and 101 of the Direct Taxes Act.",
+    "nl": "The annual exemption is set at 360 million rials, and 288 million for those covered by articles 57 and 101 of the Direct Taxes Act."
+   },
+   "sources": [
+    "src:c5c6734350"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مازاد تا ۱٫۵ برابر معافیت ۱۰٪، تا ۲٫۵ برابر ۱۵٪، تا ۴ برابر ۲۰٪، تا ۶ برابر ۲۵٪ و بالاتر از ۶ برابر ۳۵٪ مالیات دارد؛ ساختار پلکانی است، یعنی نرخ فقط بر همان بخش درآمد اعمال می‌شود.",
+    "en": "Income above the exemption is taxed at 10% up to 1.5 times it, 15% up to 2.5 times, 20% up to 4 times, 25% up to 6 times and 35% beyond 6 times; it is progressive, each rate applying only to its band.",
+    "nl": "Income above the exemption is taxed at 10% up to 1.5 times it, 15% up to 2.5 times, 20% up to 4 times, 25% up to 6 times and 35% beyond 6 times; it is progressive, each rate applying only to its band."
+   },
+   "sources": [
+    "src:c5c6734350"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مالیات حقوق بخش عمومی حدود ۷۳ و بخش خصوصی حدود ۸۳ هزار میلیارد ریال پیش‌بینی شده، یعنی هر دو در مجموع حدود ۸٪ کل مالیات‌ها (۱٬۹۵۰ هزار میلیارد).",
+    "en": "Wage-tax revenue is projected at about 73 thousand billion rials (public sector) and 83 (private sector), together about 8% of all tax revenue (1,950 thousand billion).",
+    "nl": "Wage-tax revenue is projected at about 73 thousand billion rials (public sector) and 83 (private sector), together about 8% of all tax revenue (1,950 thousand billion)."
+   },
+   "sources": [
+    "src:c5c6734350"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:gini-inequality",
+   "rel": "see-also",
+   "note": {
+    "fa": "اندازه‌گیری نابرابری",
+    "en": "Measuring inequality",
+    "nl": "Measuring inequality"
+   }
+  },
+  {
+   "to": "soc:budget-1399-revenue-oil-tax",
+   "rel": "part-of",
+   "note": {
+    "fa": "ساختار مالیاتی",
+    "en": "Tax structure",
+    "nl": "Tax structure"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:c5c6734350"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
