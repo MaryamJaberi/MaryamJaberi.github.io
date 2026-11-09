@@ -1,0 +1,109 @@
+{
+ "id": "phil:good-life-triangle",
+ "kind": "concept",
+ "title": {
+  "fa": "مثلث زندگی مطلوب: خوبی، خوشی، معنا",
+  "en": "The good-life triangle: virtue, well-being, meaning",
+  "nl": "De driehoek van het goede leven"
+ },
+ "aliases": [
+  "زندگی مطلوب",
+  "زندگی سعادتمندانه"
+ ],
+ "parent": "phil:life",
+ "field": "phil:life",
+ "summary": {
+  "fa": "صورت‌بندی‌ای که زندگی مطلوب را حاصل سه ضلع می‌داند: خوبی (پایبندی عقلانی به فضیلت اخلاقی)، خوشی (رضایت و تعادل روانی) و معنا (تعهد به هدف بلندمدت). هر سه لازم‌اند و نبود هر کدام دو تای دیگر را ناپایدار می‌کند.",
+  "en": "A framing in which a good life rests on three sides: virtue (a reasoned commitment to moral excellence), well-being (satisfaction and emotional balance) and meaning (commitment to long-term purpose). All three are needed; without one the others become unstable.",
+  "nl": "A framing in which a good life rests on three sides: virtue (a reasoned commitment to moral excellence), well-being (satisfaction and emotional balance) and meaning (commitment to long-term purpose). All three are needed; without one the others become unstable."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "خوبی: فضیلت‌هایی مثل صداقت، عدالت، مهربانی و مسئولیت‌پذیری، به شرط آنکه از راه استدلال پذیرفته شده باشند نه از راه اطاعت.",
+    "en": "Virtue: honesty, justice, kindness, responsibility — on condition that they are accepted through reasoning rather than obedience.",
+    "nl": "Virtue: honesty, justice, kindness, responsibility — on condition that they are accepted through reasoning rather than obedience."
+   },
+   "sources": [
+    "src:eae2e38bdf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خوشی: شادی، آرامش و تعادل عاطفی. سخنران به پیروی از ارسطو می‌گوید خوبی شرط لازم خوشی است، و خوشی به معنای نبودن رنج نیست بلکه رویارویی مؤثر با آن است.",
+    "en": "Well-being: joy, calm, emotional balance. Following Aristotle, the speaker holds that virtue is a necessary condition for well-being, and that well-being does not mean the absence of suffering but an effective relation to it.",
+    "nl": "Well-being: joy, calm, emotional balance. Following Aristotle, the speaker holds that virtue is a necessary condition for well-being, and that well-being does not mean the absence of suffering but an effective relation to it."
+   },
+   "sources": [
+    "src:eae2e38bdf",
+    "src:0885a14fe2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "معنا: زندگی‌ای که ارزش زیستن داشته باشد و غایتی فراتر از چرخهٔ روزمره. سخنران پوچی جوامع مدرن را به تکرار، فشار اجتماعی و مصرف‌گرایی نسبت می‌دهد.",
+    "en": "Meaning: a life judged worth living, with a purpose beyond the daily cycle. The speaker attributes modern emptiness to repetition, social pressure and consumerism.",
+    "nl": "Meaning: a life judged worth living, with a purpose beyond the daily cycle. The speaker attributes modern emptiness to repetition, social pressure and consumerism."
+   },
+   "sources": [
+    "src:eae2e38bdf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یادداشت ویراستار: این سه‌تایی تقریباً همان تفکیکی است که روان‌شناسی بهزیستی امروز میان لذت‌گرایانه (hedonic) و سعادت‌گرایانه (eudaimonic) و معنا می‌گذارد. این هم‌پوشانی را باید دید، ولی توجه داشت که شواهد تجربی دربارهٔ رابطهٔ علّی این سه با هم محکم نیست و بیشتر همبستگی است. ادعای «خوبی شرط لازم خوشی است» یک گزارهٔ فلسفی است، نه یافتهٔ آزموده‌شده.",
+    "en": "Editor's note: this triad closely tracks the distinction current well-being psychology draws between hedonic, eudaimonic and meaning-based well-being. The overlap is worth seeing, but the empirical evidence on causal relations among the three is weak and largely correlational. 'Virtue is necessary for well-being' is a philosophical claim, not a tested finding.",
+    "nl": "Editor's note: this triad closely tracks the distinction current well-being psychology draws between hedonic, eudaimonic and meaning-based well-being. The overlap is worth seeing, but the empirical evidence on causal relations among the three is weak and largely correlational. 'Virtue is necessary for well-being' is a philosophical claim, not a tested finding."
+   },
+   "sources": [
+    "src:0885a14fe2"
+   ],
+   "flags": [
+    "editor-note",
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:secular-wisdom",
+   "rel": "part-of",
+   "note": {
+    "fa": "حکمت سکولار",
+    "en": "Secular wisdom",
+    "nl": "Secular wisdom"
+   }
+  },
+  {
+   "to": "psy:psyche",
+   "rel": "bridges",
+   "note": {
+    "fa": "روان‌شناسی بهزیستی: شادکامی، معنا و رضایت",
+    "en": "Well-being psychology: happiness, meaning, satisfaction",
+    "nl": "Well-being psychology: happiness, meaning, satisfaction"
+   }
+  },
+  {
+   "to": "phil:ethics",
+   "rel": "see-also",
+   "note": {
+    "fa": "اخلاق فضیلت",
+    "en": "Virtue ethics",
+    "nl": "Virtue ethics"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:eae2e38bdf",
+  "src:0885a14fe2"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
