@@ -1,0 +1,101 @@
+{
+ "id": "soc:kazantzakis-japan-factory-wages",
+ "kind": "concept",
+ "title": {
+  "fa": "کار زنان در کارخانه‌های ژاپنِ ۱۹۳۵ به روایت کازانتزاکیس",
+  "en": "Women's factory work in 1935 Japan as Kazantzakis recounts it",
+  "nl": "Vrouwenarbeid in Japanse fabrieken in 1935 volgens Kazantzakis"
+ },
+ "aliases": [],
+ "parent": "soc:inequality",
+ "field": "soc:inequality",
+ "summary": {
+  "fa": "نویسنده در دیدار از کارخانه‌های کوبه و اوساکا از دستمزد بسیار کم و ساعت‌های کار طولانی زنان می‌نویسد و گفت‌وگویی با مهندسی نقل می‌کند که این وضع را با ارزانیِ زندگی در ژاپن توجیه می‌کند. این‌ها روایت یک مسافر و شنیده‌هایش‌اند، نه آمار رسمی.",
+  "en": "Visiting factories at Kobe and Osaka, the author writes of very low pay and long hours for women and reports a conversation with an engineer who justifies this by Japan's low cost of living. These are a traveller's account and hearsay, not official statistics.",
+  "nl": "Bij bezoeken aan fabrieken in Kobe en Osaka beschrijft de auteur lage lonen en lange werkdagen voor vrouwen en geeft hij een gesprek met een ingenieur weer. Het is een reizigersverslag, geen officiële statistiek."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "او می‌گوید مدیر یک کارخانه به او گفته زنان کارگر روزانه حدود نیم ین می‌گیرند؛ این عدد از زبان یک شنوندهٔ ناراضی و بدون سند آمده و تأییدنشده است.",
+    "en": "He says a factory manager told him women workers earn about half a yen a day; the figure comes second-hand, without documentation, and is unverified.",
+    "nl": "He says a factory manager told him women workers earn about half a yen a day; the figure comes second-hand, without documentation, and is unverified."
+   },
+   "sources": [
+    "src:e2b14c5eae"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید گزارشی پزشکی را به یاد دارد که بیشتر کارگران ریسندگی را زن و ساعت کارشان را ۱۴ تا ۱۶ ساعت و سلامتشان را در معرض افت سریع می‌داند؛ او منبع دقیقی نمی‌دهد.",
+    "en": "He recalls a medical report saying most spinning-mill workers were women, working fourteen to sixteen hours, with health declining quickly; he gives no precise source.",
+    "nl": "He recalls a medical report saying most spinning-mill workers were women, working fourteen to sixteen hours, with health declining quickly; he gives no precise source."
+   },
+   "sources": [
+    "src:e2b14c5eae"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "مهندسی که با او گفت‌وگو می‌کند استدلال می‌کند چون غذا و مسکن ژاپنی ساده و ارزان است، دستمزد کم عادلانه و برای رقابت صنعتی لازم است و با «اخلاق» و سودآوری جمع می‌شود؛ نویسنده این استدلال را نمی‌پذیرد.",
+    "en": "The engineer he talks to argues that because Japanese food and housing are simple and cheap, low wages are fair and needed for industrial competitiveness, and morality can be combined with profit; the author does not accept this.",
+    "nl": "The engineer he talks to argues that because Japanese food and housing are simple and cheap, low wages are fair and needed for industrial competitiveness, and morality can be combined with profit; the author does not accept this."
+   },
+   "sources": [
+    "src:e2b14c5eae"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نتیجه‌گیری نویسنده این است که چیرگی بر ماده بدون پیشرفت معنوی با بی‌عدالتی، بیماری و رشد قدرت مادی همراه می‌شود.",
+    "en": "His conclusion is that mastery over matter without spiritual progress brings injustice, illness and growth of material power.",
+    "nl": "His conclusion is that mastery over matter without spiritual progress brings injustice, illness and growth of material power."
+   },
+   "sources": [
+    "src:e2b14c5eae"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهش‌های تاریخ اقتصادی ژاپن نیز نقش پررنگ زنان در صنعت نساجیِ پیش از جنگ را مستند کرده‌اند؛ اما اعداد دستمزد و ساعت کار این کتاب را باید با آن پژوهش‌ها سنجید و نباید جایگزین آن‌ها شود.",
+    "en": "Economic-history research on Japan also documents the large role of women in the prewar textile industry; but the wage and hours figures in this book should be checked against that research, not substituted for it.",
+    "nl": "Economic-history research on Japan also documents the large role of women in the prewar textile industry; but the wage and hours figures in this book should be checked against that research, not substituted for it."
+   },
+   "sources": [
+    "src:6a20e2c644"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:industrial-modernity-backdrop",
+   "rel": "see-also",
+   "note": {
+    "fa": "صنعتی‌شدن و پیامدهای اجتماعی آن",
+    "en": "Industrialisation and its social consequences",
+    "nl": "Industrialisation and its social consequences"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:6a20e2c644",
+  "src:e2b14c5eae"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
