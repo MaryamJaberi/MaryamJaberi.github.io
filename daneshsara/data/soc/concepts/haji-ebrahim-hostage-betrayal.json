@@ -1,0 +1,98 @@
+{
+ "id": "soc:haji-ebrahim-hostage-betrayal",
+ "kind": "concept",
+ "title": {
+  "fa": "خیانت حاجی‌ابراهیم کلانتر و فروپاشی سپاهی که خانواده‌هایش در گروگان بود",
+  "en": "Haji Ebrahim's coup in Shiraz and the army that dissolved over hostage families",
+  "nl": "Het verraad van Haji Ebrahim in Sjiraz en het leger dat uiteenviel door gijzelaars"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "بر پایهٔ گزارش یک شاهد خارجی، وقتی لطفعلی‌خان زند با سپاهش از شیراز دور بود، کلانتر شهر ارگ را گرفت و با تهدید خانوادهٔ سران سپاه که در شهر مانده بودند، لشکر را از هم پاشاند. نمونه‌ای است از اینکه وفاداری نظامی در حکومت‌های پیشامدرن تا چه حد به گروگان‌گیری و کنترل شهر وابسته بود.",
+  "en": "According to a foreign eyewitness, while Lotf Ali Khan Zand was away from Shiraz with his army, the city's kalantar seized the citadel and broke the army by threatening the families of its commanders left in the city. It illustrates how far military loyalty in pre-modern states rested on hostage-taking and control of the capital.",
+  "nl": "Volgens een buitenlandse ooggetuige nam de kalantar van Sjiraz de citadel in terwijl Lotf Ali Khan Zand met zijn leger weg was, en liet hij het leger uiteenvallen door de gezinnen van de bevelhebbers te bedreigen. Het laat zien hoe sterk militaire loyaliteit in premoderne staten van gijzelaars en controle over de hoofdstad afhing."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "جونز روایت می‌کند که شش روز پس از حرکت لطفعلی‌خان از شیراز، حاجی‌ابراهیم کلانتر فرمانده قلعه (برخوردارخان) را بازداشت کرد و به مردم گفت این کار به دستور خود لطفعلی‌خان است.",
+    "en": "Jones recounts that six days after Lotf Ali Khan left Shiraz, the kalantar Haji Ebrahim arrested the fortress commander Barkhordar Khan and told the public that Lotf Ali Khan himself had ordered it.",
+    "nl": "Jones recounts that six days after Lotf Ali Khan left Shiraz, the kalantar Haji Ebrahim arrested the fortress commander Barkhordar Khan and told the public that Lotf Ali Khan himself had ordered it."
+   },
+   "sources": [
+    "src:7c2bec1363"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ جونز، کلانتر با نامه به سران لشکر در اردو تهدید کرد که اگر سپاه را ترک نکنند همسر و فرزندانشان در شیراز شکنجه می‌شوند؛ نتیجه این بود که اردو متلاشی شد و لطفعلی‌خان با شمار اندکی به دشتستان گریخت.",
+    "en": "Jones says the kalantar wrote to the army's commanders that their wives and children in Shiraz would be tortured unless the men left the camp; the camp collapsed and Lotf Ali Khan fled to Dashtestan with a handful of followers.",
+    "nl": "Jones says the kalantar wrote to the army's commanders that their wives and children in Shiraz would be tortured unless the men left the camp; the camp collapsed and Lotf Ali Khan fled to Dashtestan with a handful of followers."
+   },
+   "sources": [
+    "src:7c2bec1363"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یادداشت‌های مترجمان نشان می‌دهند اختلاف میان برخوردارخان و کلانتر را تاریخ‌نگاران دیگر (مثلاً مالکم) نیز آورده‌اند؛ پس گزارش جونز دربارهٔ هستهٔ ماجرا با منابع فارسی و انگلیسی دیگر هم‌خوان است، هرچند جزئیات و تاریخ‌ها در آن جابه‌جا شده‌اند.",
+    "en": "The translators' notes cite other historians (for example Malcolm) on the quarrel between Barkhordar Khan and the kalantar, so the core of Jones's story agrees with other Persian and English sources, although details and dates differ.",
+    "nl": "The translators' notes cite other historians (for example Malcolm) on the quarrel between Barkhordar Khan and the kalantar, so the core of Jones's story agrees with other Persian and English sources, although details and dates differ."
+   },
+   "sources": [
+    "src:7c2bec1363",
+    "src:35ade3495e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جونز خیانت را بیشتر به بدخواهی شخصی حاجی‌ابراهیم نسبت می‌دهد؛ ولی پژوهش‌های تاریخی معمولاً آن را در رقابت‌های درونی دستگاه زند، بی‌اعتمادی میان لطفعلی‌خان و اطرافیان و بازی میان حاکم و کلانتر شهر (به‌عنوان نمایندهٔ اعیان و بازاریان) می‌بینند.",
+    "en": "Jones puts the betrayal down largely to Haji Ebrahim's personal malice; historical scholarship generally sees it within Zand court rivalries, mistrust between Lotf Ali Khan and his circle, and the tension between a ruler and the city's kalantar as representative of notables and bazaar.",
+    "nl": "Jones puts the betrayal down largely to Haji Ebrahim's personal malice; historical scholarship generally sees it within Zand court rivalries, mistrust between Lotf Ali Khan and his circle, and the tension between a ruler and the city's kalantar as representative of notables and bazaar."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "نهادها و دولت",
+    "en": "Institutions & the state",
+    "nl": "Institutions & the state"
+   }
+  },
+  {
+   "to": "soc:cohesion",
+   "rel": "see-also",
+   "note": {
+    "fa": "انسجام و اعتماد",
+    "en": "Cohesion and trust",
+    "nl": "Cohesion and trust"
+   }
+  }
+ ],
+ "people": [
+  "core:haji-ebrahim-shirazi-kalantar",
+  "core:lotf-ali-khan-zand"
+ ],
+ "sources": [
+  "src:35ade3495e",
+  "src:7c2bec1363"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "phil:maeterlinck-death-and-afterlife",
+ "kind": "concept",
+ "title": {
+  "fa": "مرگ و پس از مرگ در گزیدهٔ منسوب به مترلینگ",
+  "en": "Death and the afterlife in the Maeterlinck-attributed selection",
+  "nl": "Dood en hiernamaals in de aan Maeterlinck toegeschreven selectie"
+ },
+ "aliases": [],
+ "parent": "phil:life",
+ "field": "phil:life",
+ "summary": {
+  "fa": "کتاب مرگ را پایان رنج و بخشی طبیعی از زندگی می‌بیند و در میانه به باورهای روح‌گرایی دربارهٔ ادامهٔ زندگی می‌رسد. بخش دوم علمی نیست.",
+  "en": "The book treats death as the end of suffering and a natural part of life, then turns to spiritualist beliefs about continued existence. The latter is not scientific.",
+  "nl": "Het boek ziet de dood als einde van lijden en als natuurlijk deel van het leven en komt dan bij spiritistische overtuigingen; dat laatste is niet wetenschappelijk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید زندگی با گریه و رنج آغاز می‌شود و عمر جاودان خسته‌کننده بود؛ اگر مرگ نبود بشر ناچار بود آن را اختراع کند.",
+    "en": "The author says life begins in crying and pain and that eternal life would be tedious; were there no death, humans would have to invent it.",
+    "nl": "The author says life begins in crying and pain and that eternal life would be tedious; were there no death, humans would have to invent it."
+   },
+   "sources": [
+    "src:5d6647be23"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او ترس از مرگ را بیشتر ترس از دست‌دادن زندگی و ناشناخته‌بودن می‌داند و می‌پرسد چرا از چیزی که پایان رنج است می‌ترسیم.",
+    "en": "He frames fear of death mostly as fear of losing life and of the unknown, asking why we fear what ends suffering.",
+    "nl": "He frames fear of death mostly as fear of losing life and of the unknown, asking why we fear what ends suffering."
+   },
+   "sources": [
+    "src:5d6647be23"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بخش میانی کتاب از «جسم سیال»، احضار ارواح و گزارش‌هایی دربارهٔ زندگی مردگان نقل می‌کند؛ این‌ها ادعای نویسندگان روح‌گرا هستند و نه یافتهٔ تأییدشده.",
+    "en": "The middle of the book reports on a 'fluidic body', summoning spirits and accounts of the dead's life; these are claims by spiritualist authors, not established findings.",
+    "nl": "The middle of the book reports on a 'fluidic body', summoning spirits and accounts of the dead's life; these are claims by spiritualist authors, not established findings."
+   },
+   "sources": [
+    "src:5d6647be23"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "یادداشت ویراستار: پژوهش‌های داوری‌شده شواهد تکرارپذیری برای ارتباط با مردگان یا جسم سیال نیافته‌اند؛ نظر رایج دانشگاهی آن‌ها را باور فرهنگی-دینی یا خطای ادراک و تلقین می‌داند.",
+    "en": "Editor note: peer-reviewed research has found no replicable evidence for contact with the dead or a fluidic body; the mainstream academic view treats them as cultural-religious belief or perception and suggestion effects.",
+    "nl": "Editor note: peer-reviewed research has found no replicable evidence for contact with the dead or a fluidic body; the mainstream academic view treats them as cultural-religious belief or perception and suggestion effects."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note",
+    "unreplicated"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:skepticism-cogito",
+   "rel": "contrasts",
+   "note": {
+    "fa": "روش شکاکانه در برابر ادعاهای بی‌شاهد",
+    "en": "Sceptical method versus evidence-free claims",
+    "nl": "Sceptical method versus evidence-free claims"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:5d6647be23"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
