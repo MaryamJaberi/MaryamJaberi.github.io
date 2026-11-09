@@ -26,7 +26,9 @@ def group(p):
         return 'psy-books'
     if d == 'psy/tools': return 'psy-tools'
     if d in ('soc', 'phil', 'tabar', 'iran'):
-        return {'soc': 'soc-home', 'phil': 'phil-home', 'tabar': 'tabar-home', 'iran': 'iran-home'}[d]
+        return d + '-home'
+    if d == 'miyan': return 'miyan'
+    if d == 'simorgh': return 'simorgh'
     if d in ('soc/tools', 'phil/tools', 'tabar/tools'): return d.split('/')[0] + '-tools'
     if d == 'iran/tools': return 'iran-tools'
     if d == 'atlas':
@@ -83,8 +85,9 @@ NODES = [
  ('tabar-home', 'wiki', 'تبار و ژنتیک', '', pl('tabar-home') + pl('tabar-tools'), ''),
  ('phil-home', 'wiki', 'فلسفه', '', pl('phil-home') + pl('phil-tools'), ''),
  ('ling', 'wiki', 'زبان‌شناسی', 'برنامه‌ریزی‌شده', [], 'به‌زودی'),
- ('iran-home', 'iran', 'برای ایران', '۱۶ برگهٔ داده با سال، روش و ردهٔ کیفیت', pl('iran-home') + pl('iran-tools'), ''),
- ('simorgh', 'sim', 'سیمرغ', 'ابزارها و وسایل آزادی و آیندهٔ ایران', [], 'در ساخت'),
+ ('miyan', 'atlas', 'ارتباط رشته‌ها', 'ویکی ۲۵ پل میان‌رشته‌ای', pl('miyan'), ''),
+ ('iran-home', 'iran', 'ویکی ایران', '۱۶ برگهٔ داده با سال، روش و ردهٔ کیفیت', pl('iran-home') + pl('iran-tools'), ''),
+ ('simorgh', 'sim', 'سیمرغ', 'تمثیل، راه‌حل و بازی بر پایهٔ وضعیت‌ها', pl('simorgh'), 'در ساخت'),
  ('atlas-worlds', 'atlas', 'جهان‌های اطلس', 'جهان دانش، سرزمین دانش، اطلس رشته‌ها، کتابخانه', pl('atlas-worlds'), ''),
  ('atlas-bridges', 'atlas', 'پل‌های میان‌رشته‌ای', '', pl('atlas-bridges'), ''),
  ('atlas-tools', 'atlas', 'ابزارهای اطلس', 'مقایسه، مسیر، شواهد…', pl('atlas-tools'), ''),

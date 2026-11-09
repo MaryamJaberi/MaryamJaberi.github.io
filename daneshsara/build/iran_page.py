@@ -194,5 +194,5 @@ if (location.hash) setTimeout(() => { const e = document.getElementById(location
 </body>
 </html>'''
 os.makedirs(f'{R}/iran', exist_ok=True)
-open(f'{R}/iran/index.html', 'w', encoding='utf-8').write(tpl.replace('__DATA__', json.dumps(DATA, ensure_ascii=False)))
-print('iran/index.html', len(notes), 'notes')
+open(f'{R}/iran/entries.html', 'w', encoding='utf-8').write(tpl.replace('__DATA__', json.dumps(DATA, ensure_ascii=False)))
+print('iran/entries.html', len(notes), 'notes')

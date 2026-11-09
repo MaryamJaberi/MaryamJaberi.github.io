@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ویکی ارتباط رشته‌ها | دانش‌سرا</title>
+<meta name="description" content="جایی که دو علم به هم می‌رسند، رشتهٔ تازه‌ای زاده می‌شود. این ویکی همان مرزها را می‌گیرد: روان‌شناسی بین‌فرهنگی، ژنتیک جامعه‌شناختی، باستان‌ژنتیک، فلسفهٔ تجربی و باقی. هر پل یک پرسش دارد، یک تعریف، نشانهٔ تاریخی‌اش، یافتهٔ محکمش، منبع فارسی اگر باشد، و پیوند به مفهوم‌های دو طرف.">
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+:root{--w:var(--fam-formal)}
+header.top{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:20}
+header.top .wrap{display:flex;align-items:center;gap:var(--s4);min-height:50px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--ink);text-decoration:none}
+.brand i{width:12px;height:12px;border-radius:4px;background:var(--w);display:inline-block}
+nav.main{display:flex;gap:var(--s3);flex-wrap:wrap;margin-inline-start:auto;font-size:var(--small)}
+nav.main a{color:var(--ink-2)}nav.main a:hover{color:var(--w)}
+.hero{padding:var(--s8) 0 var(--s5)}
+.hero h1{font-size:var(--h1);margin:0 0 var(--s3);line-height:var(--lh-tight)}
+.hero p.lead{color:var(--ink-2);max-width:48em;line-height:1.95;margin:0 0 var(--s4);font-size:1.03rem}
+.sib{font-size:var(--small);color:var(--ink-3);margin:0 0 var(--s4)}.sib a{color:var(--w);margin-inline-end:10px}
+.stats{display:flex;gap:var(--s6);flex-wrap:wrap;border-block:1px solid var(--line);padding-block:var(--s4)}
+.stats div{display:grid}.stats b{font-size:1.7rem;line-height:1.2;color:var(--ink)}
+.stats span{font-size:var(--chip);color:var(--ink-3)}
+section.sec{padding-block:var(--s6)}
+h2.sh{font-size:var(--h3);margin:0 0 6px}
+p.sub{color:var(--ink-3);font-size:var(--small);margin:0 0 var(--s4);max-width:44em;line-height:1.8}
+.qs{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.q{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper);color:var(--ink);text-decoration:none;line-height:1.6;font-size:var(--small)}
+.q:hover{border-color:var(--w)}.q i{color:var(--w);font-style:normal}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--s3)}
+.tool{display:grid;gap:6px;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);text-decoration:none;color:var(--ink);align-content:start}
+.tool:hover{border-color:var(--w)}.tool h3{margin:0;font-size:var(--h4)}
+.tool p{margin:0;font-size:var(--small);color:var(--ink-2);line-height:1.75}
+.tool .go{font-size:var(--chip);color:var(--w)}
+.brs{display:flex;gap:var(--s3);flex-wrap:wrap}
+.br{display:grid;gap:2px;padding:10px 16px;border:1px solid var(--line);border-radius:var(--r-full);background:var(--paper);text-decoration:none;color:var(--ink)}
+.br:hover{border-color:var(--w)}.br span{font-size:var(--chip);color:var(--ink-3)}
+.fld{margin-bottom:var(--s5)}
+.fld h3{margin:0 0 4px;font-size:var(--h4);color:var(--w)}
+.fld h3 small{color:var(--ink-3);font-weight:400;font-size:var(--chip)}
+.fld p{margin:0 0 10px;font-size:var(--small);color:var(--ink-2);line-height:1.8;max-width:46em}
+.lst{display:flex;flex-wrap:wrap;gap:7px}
+.lst a{font-size:var(--small);padding:4px 11px;border:1px solid var(--line);border-radius:var(--r-full);color:var(--ink-2);text-decoration:none;background:var(--paper)}
+.lst a:hover{border-color:var(--w);color:var(--ink)}
+.idx{columns:4 180px;column-gap:var(--s5)}
+.ig{break-inside:avoid;margin-bottom:var(--s4)}
+.ig b{display:block;color:var(--w);border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:5px}
+.ig a{display:block;font-size:var(--small);color:var(--ink-2);padding:2px 0;text-decoration:none}
+.ig a:hover{color:var(--w)}
+.road{margin:0;padding-inline-start:1.2em;line-height:2;color:var(--ink-2);font-size:var(--small);max-width:46em}
+footer.f{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var(--small);color:var(--ink-3)}
+footer.f a{color:var(--ink-2);margin-inline-end:var(--s4)}
+@media (max-width:640px){.stats{gap:var(--s4)}.stats b{font-size:1.35rem}.idx{columns:2 130px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="../"><i></i>دانش‌سرا</a>
+ <nav class="main"><a href="../atlas/bridge.html">همهٔ پل‌ها</a><a href="#tools">ابزارها</a><a href="#bridges">پل به رشته‌ها</a><a href="#contents">فهرست مطالب</a><a href="#index">نمایهٔ واژه‌ها</a><a href="#roadmap" hidden>در راه</a></nav>
+</div></header>
+<main class="wrap">
+ <section class="hero">
+  <h1>ویکی ارتباط رشته‌ها</h1>
+  <p class="lead">جایی که دو علم به هم می‌رسند، رشتهٔ تازه‌ای زاده می‌شود. این ویکی همان مرزها را می‌گیرد: روان‌شناسی بین‌فرهنگی، ژنتیک جامعه‌شناختی، باستان‌ژنتیک، فلسفهٔ تجربی و باقی. هر پل یک پرسش دارد، یک تعریف، نشانهٔ تاریخی‌اش، یافتهٔ محکمش، منبع فارسی اگر باشد، و پیوند به مفهوم‌های دو طرف.</p>
+  <p class="sib">کنار این ویکی: <a href="../psy/">روان</a><a href="../soc/">جامعه</a><a href="../tabar/">تبار و ژنتیک</a><a href="../phil/">فلسفه</a><a href="../iran/">ایران</a><a href="../simorgh/">سیمرغ</a></p>
+  <div class="stats"><div><b>۲۵</b><span>پل</span></div><div><b>۹</b><span>خانوادهٔ دانش</span></div><div><b>۱۰۴</b><span>چهره</span></div><div><b>۲۵</b><span>منبع مرجع</span></div><div><b>۳۴</b><span>منبع فارسی</span></div><div><b>۱۱</b><span>یادداشت ایران</span></div></div>
+ </section>
+
+ <section class="sec" id="questions">
+  <h2 class="sh">۱۲ پرسش که این ویکی جواب می‌دهد</h2>
+  <p class="sub">هر پل با یک پرسش شروع می‌شود؛ پرسشی که هیچ‌کدام از دو رشته به‌تنهایی جوابش را ندارد.</p>
+  <div class="qs"><a class="q" href="../atlas/bridge.html#evoethics">اگر شهودهای اخلاقی ما را انتخاب طبیعی ساخته، اخلاق هنوز توجیه دارد؟<i>←</i></a><a class="q" href="../atlas/bridge.html#anthroethics">مردم در زندگی روزمره چطور اخلاق را می‌ورزند، نه فقط از قاعده پیروی می‌کنند؟<i>←</i></a><a class="q" href="../atlas/bridge.html#cogarch">از ابزار و نقش و زیور، دربارهٔ ذهن گذشتگان چه می‌توان فهمید؟<i>←</i></a><a class="q" href="../atlas/bridge.html#archaeogen">DNA باستانی، باستان‌شناسی و زبان‌شناسی تاریخی با هم چه روایتی از مهاجرت‌ها می‌سازند؟<i>←</i></a><a class="q" href="../atlas/bridge.html#hbe">تنوع معیشت، ازدواج، فرزندپروری و باروری انسان‌ها پاسخ سازگارانه به کدام بوم است؟<i>←</i></a><a class="q" href="../atlas/bridge.html#bighistory">از مهبانگ تا امروز را می‌توان در یک روایت با آستانه‌های پیچیدگی گفت؟<i>←</i></a><a class="q" href="../atlas/bridge.html#socknow">جایگاه و منافع اجتماعی چطور تعیین می‌کند چه چیزی «دانش» شمرده شود؟<i>←</i></a><a class="q" href="../atlas/bridge.html#commpsy">به جای درمان فرد، چطور می‌توان بستر و محله را تغییر داد؟<i>←</i></a><a class="q" href="../atlas/bridge.html#crosscult">کدام یافته‌های روان‌شناسی در همهٔ فرهنگ‌ها درست است و کدام فقط در غرب؟<i>←</i></a><a class="q" href="../atlas/bridge.html#evopsychiatry">چرا انتخاب طبیعی ما را در برابر اختلال روانی آسیب‌پذیر گذاشته است؟<i>←</i></a><a class="q" href="../atlas/bridge.html#genethics">آزمایش، گزینش و ویرایش ژن تا کجا مجاز است و عدالت و سرشت انسان را چه می‌کند؟<i>←</i></a><a class="q" href="../atlas/bridge.html#sociobio">رفتار اجتماعی، از مورچه تا انسان، چه پایهٔ زیستی دارد؟<i>←</i></a></div>
+ </section>
+
+ <section class="sec" id="tools">
+  <h2 class="sh">۸ ابزار برای گشتن در این ویکی</h2>
+  <p class="sub">هر ابزار همین مدخل‌ها را از زاویه‌ای دیگر نشان می‌دهد.</p>
+  <div class="tools"><a class="tool" href="../atlas/tools/bridges.html"><h3>یابندهٔ پل‌ها</h3><p>وقتی می‌خواهید بدانید یک موضوع در چه پل‌های بین‌رشته‌ای قرار دارد و ویکی‌های دیگر دربارهٔ آن چه مفاهیمی دارند.</p><span class="go">باز کردن ←</span></a><a class="tool" href="../atlas/tools/compare.html"><h3>مقایسهٔ دو مفهوم</h3><p>وقتی می‌خواهید بدانید دو مفهوم (از هر ویکی) چه شباهت و تفاوتی دارند و کدام پشتوانهٔ بهتری دارد، آن‌ها را کنار هم بگذارید.</p><span class="go">باز کردن ←</span></a><a class="tool" href="../atlas/tools/contested.html"><h3>پیشخوان محل‌بحث‌ها</h3><p>همهٔ گزاره‌هایی که دانش‌سرا خودش علامت زده است: محل بحث، تکرارنشده، قدیمی یا یادداشت سردبیر. این‌ها جاهایی‌اند که باید با احتیاط خوانده شوند و جاهایی که بازبین </p><span class="go">باز کردن ←</span></a><a class="tool" href="../atlas/tools/evidence.html"><h3>نقشهٔ شواهد</h3><p>برای دیدن اینکه هر ویکی و هر حوزه چقدر به منابع قوی تکیه دارد، کجا بحث‌برانگیز است و کدام مدخل‌ها را باید زودتر بازبینی کرد.</p><span class="go">باز کردن ←</span></a><a class="tool" href="../atlas/tools/library.html"><h3>کتابخانه و اعتبار منابع</h3><p>کتاب‌هایی که مریم برای دانش‌سرا گذاشته، یکی‌یکی سنجیده شده‌اند: نویسنده، روش، ارجاع، سوگیری، و اینکه کتاب «برای چه چیزی» منبع خوبی است. اینجا می‌بینید کدام کتاب</p><span class="go">باز کردن ←</span></a><a class="tool" href="../atlas/tools/path.html"><h3>مسیر بین دو مفهوم</h3><p>وقتی می‌خواهید ببینید دو مفهوم دور از هم (مثلاً از دو ویکی) از چه راهی به هم می‌رسند و کجا مرز رشته‌ها را رد می‌کنند.</p><span class="go">باز کردن ←</span></a><a class="tool" href="../atlas/"><h3>اطلس رشته‌ها</h3><p>۷۷ رشته در پنج خانواده، با پرسش و خلاصهٔ هرکدام.</p><span class="go">باز کردن ←</span></a><a class="tool" href="../atlas/world.html"><h3>جهان دانش</h3><p>نقشهٔ زوم‌پذیر سرزمین‌ها، شهرها و راه‌های میان‌رشته‌ای.</p><span class="go">باز کردن ←</span></a></div>
+ </section>
+
+ <section class="sec" id="bridges">
+  <h2 class="sh">پل به رشته‌های دیگر</h2>
+  <p class="sub">پل‌ها به مفهوم‌های هر دو طرف وصل‌اند؛ این‌ها شمار مفهوم‌هایی است که از هر ویکی در پل‌ها آمده. اطلس‌های میان‌رشته‌ای این پیوندها را روی نقشه نشان می‌دهند.</p>
+  <div class="brs"><a class="br" href="../psy/"><b>روان</b><span>۵۶ مفهوم از این ویکی در پل‌ها</span></a><a class="br" href="../tabar/"><b>تبار و ژنتیک</b><span>۳۲ مفهوم از این ویکی در پل‌ها</span></a><a class="br" href="../phil/"><b>فلسفه</b><span>۲۵ مفهوم از این ویکی در پل‌ها</span></a><a class="br" href="../soc/"><b>جامعه</b><span>۲۰ مفهوم از این ویکی در پل‌ها</span></a><a class="br" href="../atlas/world.html"><b>جهان دانش</b><span>نقشهٔ زوم‌پذیر همهٔ ویکی‌ها</span></a><a class="br" href="../atlas/bridge.html"><b>پل‌ها</b><span>۲۵ رشتهٔ میان‌رشته‌ای</span></a><a class="br" href="../iran/"><b>برای ایران</b><span>همین مفهوم‌ها با دادهٔ ایران</span></a></div>
+ </section>
+
+ <section class="sec" id="contents">
+  <h2 class="sh">فهرست همهٔ مطالب</h2>
+  <p class="sub">پل‌ها به تفکیک خانوادهٔ دانشی که از آن می‌آیند.</p>
+  <section class="fld"><h3>جامعه ↔ فلسفه و علوم انسانی <small>۶</small></h3><div class="lst"><a href="../atlas/bridge.html#anthroethics">انسان‌شناسی اخلاق</a><a href="../atlas/bridge.html#socknow">جامعه‌شناسی معرفت</a><a href="../atlas/bridge.html#philsocsci">فلسفهٔ علوم اجتماعی</a><a href="../atlas/bridge.html#sts">مطالعات علم و فناوری</a><a href="../atlas/bridge.html#socepist">معرفت‌شناسی اجتماعی</a><a href="../atlas/bridge.html#crittheory">نظریهٔ انتقادی و فلسفهٔ اجتماعی</a></div></section><section class="fld"><h3>زیست و پزشکی ↔ جامعه <small>۶</small></h3><div class="lst"><a href="../atlas/bridge.html#hbe">بوم‌شناسی رفتاری انسان</a><a href="../atlas/bridge.html#sociobio">زیست‌جامعه‌شناسی</a><a href="../atlas/bridge.html#sociogenomics">سوسیوژنومیکس</a><a href="../atlas/bridge.html#biosocial">علم زیست‌اجتماعی</a><a href="../atlas/bridge.html#cultevo">فرگشت فرهنگی و وراثت دوگانه</a><a href="../atlas/bridge.html#geneculture">هم‌فرگشتی ژن و فرهنگ</a></div></section><section class="fld"><h3>زیست و پزشکی ↔ فلسفه و علوم انسانی <small>۳</small></h3><div class="lst"><a href="../atlas/bridge.html#evoethics">اخلاق فرگشتی</a><a href="../atlas/bridge.html#genethics">زیست‌اخلاق ژنتیک</a><a href="../atlas/bridge.html#philbio">فلسفهٔ زیست‌شناسی</a></div></section><section class="fld"><h3>درون زیست و پزشکی <small>۳</small></h3><div class="lst"><a href="../atlas/bridge.html#evopsychiatry">روان‌پزشکی فرگشتی</a><a href="../atlas/bridge.html#evomed">پزشکی فرگشتی</a><a href="../atlas/bridge.html#psygen">ژنتیک روان‌پزشکی</a></div></section><section class="fld"><h3>زیست و پزشکی ↔ جامعه ↔ فلسفه و علوم انسانی <small>۲</small></h3><div class="lst"><a href="../atlas/bridge.html#archaeogen">باستان‌ژنتیک و سنتز ژن–زبان–باستان‌شناسی</a><a href="../atlas/bridge.html#bighistory">تاریخ بزرگ</a></div></section><section class="fld"><h3>روان ↔ جامعه <small>۲</small></h3><div class="lst"><a href="../atlas/bridge.html#commpsy">روان‌شناسی اجتماع‌محور</a><a href="../atlas/bridge.html#crosscult">روان‌شناسی بین‌فرهنگی</a></div></section><section class="fld"><h3>روان ↔ جامعه ↔ فلسفه و علوم انسانی <small>۱</small></h3><div class="lst"><a href="../atlas/bridge.html#cogarch">باستان‌شناسی شناختی</a></div></section><section class="fld"><h3>زیست و پزشکی ↔ روان ↔ فلسفه و علوم انسانی <small>۱</small></h3><div class="lst"><a href="../atlas/bridge.html#embodied">شناخت بدن‌مند (4E)</a></div></section><section class="fld"><h3>روان ↔ فلسفه و علوم انسانی <small>۱</small></h3><div class="lst"><a href="../atlas/bridge.html#xphi">فلسفهٔ تجربی</a></div></section>
+ </section>
+
+ <section class="sec" id="index">
+  <h2 class="sh">نمایهٔ واژه‌ها</h2>
+  <p class="sub">۲۵ عنوان و نام دیگر، به ترتیب الفبا.</p>
+  <div class="idx"><div class="ig"><b>ا</b><div><a href="../atlas/bridge.html#evoethics">اخلاق فرگشتی</a><a href="../atlas/bridge.html#anthroethics">انسان‌شناسی اخلاق</a></div></div><div class="ig"><b>ب</b><div><a href="../atlas/bridge.html#cogarch">باستان‌شناسی شناختی</a><a href="../atlas/bridge.html#archaeogen">باستان‌ژنتیک و سنتز ژن–زبان–باستان‌شناسی</a><a href="../atlas/bridge.html#hbe">بوم‌شناسی رفتاری انسان</a></div></div><div class="ig"><b>ت</b><div><a href="../atlas/bridge.html#bighistory">تاریخ بزرگ</a></div></div><div class="ig"><b>ج</b><div><a href="../atlas/bridge.html#socknow">جامعه‌شناسی معرفت</a></div></div><div class="ig"><b>ر</b><div><a href="../atlas/bridge.html#commpsy">روان‌شناسی اجتماع‌محور</a><a href="../atlas/bridge.html#crosscult">روان‌شناسی بین‌فرهنگی</a><a href="../atlas/bridge.html#evopsychiatry">روان‌پزشکی فرگشتی</a></div></div><div class="ig"><b>ز</b><div><a href="../atlas/bridge.html#genethics">زیست‌اخلاق ژنتیک</a><a href="../atlas/bridge.html#sociobio">زیست‌جامعه‌شناسی</a></div></div><div class="ig"><b>س</b><div><a href="../atlas/bridge.html#sociogenomics">سوسیوژنومیکس</a></div></div><div class="ig"><b>ش</b><div><a href="../atlas/bridge.html#embodied">شناخت بدن‌مند (4E)</a></div></div><div class="ig"><b>ع</b><div><a href="../atlas/bridge.html#biosocial">علم زیست‌اجتماعی</a></div></div><div class="ig"><b>ف</b><div><a href="../atlas/bridge.html#cultevo">فرگشت فرهنگی و وراثت دوگانه</a><a href="../atlas/bridge.html#xphi">فلسفهٔ تجربی</a><a href="../atlas/bridge.html#philbio">فلسفهٔ زیست‌شناسی</a><a href="../atlas/bridge.html#philsocsci">فلسفهٔ علوم اجتماعی</a></div></div><div class="ig"><b>م</b><div><a href="../atlas/bridge.html#sts">مطالعات علم و فناوری</a><a href="../atlas/bridge.html#socepist">معرفت‌شناسی اجتماعی</a></div></div><div class="ig"><b>ن</b><div><a href="../atlas/bridge.html#crittheory">نظریهٔ انتقادی و فلسفهٔ اجتماعی</a></div></div><div class="ig"><b>ه</b><div><a href="../atlas/bridge.html#geneculture">هم‌فرگشتی ژن و فرهنگ</a></div></div><div class="ig"><b>پ</b><div><a href="../atlas/bridge.html#evomed">پزشکی فرگشتی</a></div></div><div class="ig"><b>ژ</b><div><a href="../atlas/bridge.html#psygen">ژنتیک روان‌پزشکی</a></div></div></div>
+ </section>
+<section class="sec" id="roadmap" hidden><h2 class="sh">در راه</h2><p class="sub">کارهایی که برای این ویکی مانده.</p><ul class="road"></ul></section>
+</main>
+<footer class="f"><div class="wrap"><a href="../">دانش‌سرا</a><a href="../atlas/bridge.html">همهٔ پل‌ها</a><a href="../atlas/sitemap.html">نقشهٔ سایت</a><a href="../core/contribute.html">مشارکت</a><a href="../core/sources.html">منابع</a></div></footer>
+<script>
+// old deep links  <wiki>/#slug  →  entries.html#slug
+(function(){var h=location.hash;if(h&&h.length>1&&!document.getElementById(h.slice(1)))location.replace("entries.html"+h);})();
+</script>
+</body>
+</html>

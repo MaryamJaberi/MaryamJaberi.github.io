@@ -21,6 +21,6 @@ title = root['title'] if root else {'fa': W, 'en': W, 'nl': W}
 tpl = open(f'{HERE}/reader.tpl.html', encoding='utf-8').read()
 out = tpl.replace('__DATA__', json.dumps(DATA, ensure_ascii=False)).replace('__TITLE_FA__', title['fa']).replace('__TITLE_EN__', title.get('en') or title['fa'])
 os.makedirs(f'{R}/{W}', exist_ok=True)
-OUT = 'index.html' if W == 'psy' else 'entries.html'  # soc/phil/tabar have a landing page at index.html
+OUT = 'index.html' if W == 'psy' else 'entries.html'
 open(f'{R}/{W}/{OUT}', 'w', encoding='utf-8').write(out)
 print(W, 'concepts', len(concepts), 'people', len(DATA['people']), 'sources', len(DATA['sources']), 'iran', len(DATA['iran']), 'ext', len(ext), 'bytes', len(out))
