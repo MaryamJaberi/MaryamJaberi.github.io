@@ -1,0 +1,577 @@
+{
+ "paper": true,
+ "book": {
+  "title": "تاریخ و میراث ایران",
+  "author": "گروه نویسندگان: لاورنس لاکهارت، ج. ا. بویل، پ. ر. ل. براون، پیتر اوری، ب. و. رابینسون، د. ن. ویلبر، آر. اچ. پیندر-ویلسن و نویسندهٔ فصل قالی (نام در OCR نامطمئن)",
+  "translator": "اردشیر زندنیا",
+  "year": "چاپ اول خرداد ۱۳۶۳ (اصل انگلیسی پیش از انقلاب؛ سال دقیق در متن نیامده)",
+  "publisher": "انتشارات جان‌زاده",
+  "type": "reference",
+  "read": "full",
+  "pages_or_sections_read": "OCR کل ۱۲۸ صفحه؛ خوانده‌شده: پیش‌گفتار، یادداشت ناشر، فصل‌های تاریخ، ادبیات و سفال، و بخش‌های عمده از نگارگری، معماری و قالی. صفحه‌های ۳۴–۳۵ و پایان فصل‌ها (تصاویر) ناخوانا.",
+  "drive_id": "19Qn275U5CAT2SYgeQlIIcPiRDC5rRnzI"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "کتاب مرجع عمومی از متخصصان بریتانیایی؛ به‌عنوان مرور مقدماتی قابل‌اتکا ولی قدیمی، بی‌ارجاع و با ترجمهٔ ویراسته‌شدهٔ ناشر.",
+  "reasons": [
+   "فصل‌ها را پژوهشگرانی نوشته‌اند که از امضا و دانش عمومی شناخته‌شده‌اند (لاکهارت و بویل در تاریخ ایران، براون در تاریخ باستان متأخر، اوری در ادبیات، رابینسون در نگارگری، ویلبر در معماری).",
+   "متن مقدماتی و تلخیصی است، بدون پانویس و ارجاع علمی؛ به‌جز تقریر نویسندگان، منبع نشان نمی‌دهد.",
+   "اصل کتاب مربوط به حدود دههٔ ۱۹۷۰ است و بخش‌هایی (مثلاً تبیین تشیع با شهربانو، نگاه اخلاقی به زوال صفویان، تعبیر «نژاد آریایی» و منشأ عروض) با پژوهش امروز نمی‌خواند.",
+   "ناشر ایرانی در یادداشت آغازین تغییراتی در متن اعمال کرده و ویراستار/مترجم پانویس‌های انتقادی افزوده؛ فقط ترجمه خوانده شد و تطبیق با اصل انگلیسی نشد.",
+   "OCR فارسی تاریخ‌ها را جا‌به‌جا ناپایدار خوانده (مثلاً چند تاریخ هجری/میلادی نامعتبر)، بنابراین ارقام فقط وقتی آمده‌اند که واضح بودند."
+  ],
+  "best_use_fa": "مرور مقدماتی دربارهٔ تاریخ سیاسی ایران تا قاجار و سنت‌های هنری و ادبی آن؛ نه منبع نخست برای تاریخ‌گذاری دقیق یا تحلیل علّی (به‌ویژه مشروطه، تشیع و زوال صفویان).",
+  "cautions": [
+   "بدون ارجاع؛ ارقام و تاریخ‌ها را با منابع دیگر بسنجید.",
+   "تفسیرهای ملی‌گرایانه یا اخلاق‌محور (مثل نقش اخلاق شاهان در زوال) دیدگاه نویسندگان است.",
+   "یادداشت ناشر چارچوبی ایدئولوژیک (ضداستعماری) دارد و بر متن اثر گذاشته است.",
+   "فصل پایانی تاریخ معاصر که در معرفی پشت جلد وعده شده در متن خوانده‌شده نبود."
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "کتاب مرور دانشگاهی-عمومی معتبری است و گزاره‌های مفیدی دربارهٔ تاریخ، ادبیات و هنر ایران دارد؛ گزاره‌های محل‌بحث به‌صورت جداگانه پرچم خورده‌اند.",
+ "summary_of_book_fa": "«تاریخ و میراث ایران» ترجمهٔ فارسی اردشیر زندنیا از مجموعه‌ای انگلیسی است که چند متخصص در آن تاریخ سیاسی ایران از هخامنشیان تا آغاز پهلوی و سپس ادبیات فارسی، نگارگری، معماری، سفال و قالی را مرور می‌کنند. ناشر در یادداشت آغازین آن را از دید سیاست استعماری قاب می‌گیرد.",
+ "entries": [
+  {
+   "id": "persian-literature-continuity-avery",
+   "wiki": "phil",
+   "field": "iranian",
+   "title": {
+    "fa": "ادبیات فارسی پس از اسلام: پیوستگی زبان و سنت (روایت اوری)",
+    "en": "Persian literature after Islam: continuity of language and tradition (Avery's survey)",
+    "nl": "Perzische literatuur na de islam: continuïteit van taal en traditie"
+   },
+   "summary": {
+    "fa": "پیتر اوری در یک فصل کوتاه نشان می‌دهد شعر فارسی نو در سده‌های نخست اسلامی در دربارهای شرق ایران شکل گرفت، با شاهنامه به نماد یکپارچگی فرهنگی بدل شد و تا دورهٔ مدرن با بازگشت‌های آگاهانه به سنت زنده ماند.",
+    "en": "In a short chapter Peter Avery traces how New Persian poetry took shape at eastern Iranian courts in the early Islamic centuries, how the Shahnameh became a symbol of cultural unity, and how the tradition survived through conscious returns to its models into the modern era.",
+    "nl": "Peter Avery schetst hoe de Nieuw-Perzische poëzie ontstond aan oost-Iraanse hoven, hoe de Shahnameh een symbool van culturele eenheid werd en hoe de traditie voortleefde tot in de moderne tijd."
+   },
+   "points": [
+    {
+     "fa": "به نظر اوری، شعر فارسی نو در حدود سدهٔ سوم هجری پدیدار می‌شود؛ نخستین نمونهٔ مکتوب شناخته‌شده را به شاعری در پیرامون فرمانروایان صفاری نسبت می‌دهد که امیر خواسته بود به زبانی که خودش می‌فهمد ستایش شود.",
+     "en": "Avery places the emergence of New Persian poetry around the third Islamic century and credits a poet in the circle of the Saffarid rulers with the earliest known written piece, composed because the ruler wanted praise in a language he understood.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او می‌گوید با گسترش حکومت‌های محلی ایرانی در سدهٔ نهم میلادی و کم‌شدن کنترل بغداد، شاعران ایرانی از عربی‌سرایی به زبان مادری روی آوردند و دربار سامانی در بخارا با شاعرانی مانند رودکی و شهید بلخی کانون این شعر شد.",
+     "en": "He argues that as local Iranian dynasties grew in the ninth century and Baghdad's control weakened, Iranian poets moved from composing in Arabic to their mother tongue, with the Samanid court at Bukhara, and poets such as Rudaki and Shahid Balkhi, as its centre.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اوری شاهنامهٔ فردوسی را بزرگ‌ترین پایهٔ این سنت می‌داند: اثری که اساطیر و خاطرهٔ مشترک ایران پیش از اسلام را نگه داشته و به زعم او به یکپارچگی ملی و پایداری زبان فارسی در دوره‌های پرآشوب یاری رسانده است.",
+     "en": "Avery treats Ferdowsi's Shahnameh as the greatest pillar of the tradition, preserving pre-Islamic myth and shared memory, and in his view supporting national cohesion and the stability of the Persian language in turbulent periods.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او مسیر شعر کلاسیک را با نام‌هایی چون سعدی (اخلاق‌گرا در نظم و نثر)، حافظ (غزل)، مولوی (مثنوی عرفانی)، نظامی (حماسهٔ رمانتیک و خمسه) و جامی (پایان‌بخش سنت) پی می‌گیرد و می‌گوید نگارگری ایرانی وام‌دار خیال‌پردازی نظامی است.",
+     "en": "He follows the classical line through Saadi (moralist in verse and prose), Hafez (the ghazal), Rumi (mystical masnavi), Nizami (romantic epic and the Khamsa) and Jami (last great figure of the tradition), and says Persian painting owes much to Nizami's imagery.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اوری عصر صفوی را برای هنر تصویری و معماری شکوفا، اما برای شعر درباری کم‌رونق می‌داند و علت را نبود حمایت شاهان از فارسی (که به ترکی بیشتر علاقه داشتند) و گرایش نویسندگان به متون دینی عربی‌محور توضیح می‌دهد.",
+     "en": "Avery sees the Safavid age as flourishing for painting and architecture but weak for courtly poetry, explaining this by the shahs' preference for Turkic verse and by writers' turn to Arabic-oriented religious manuals.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "دربارهٔ دوران جدید، او از دو موج بازگشت و نوآوری سخن می‌گوید: نخست بازگشت به سبک کهن (قاآنی، بهار)، سپس شعر و نثر متأثر از مطبوعات و ادبیات اروپایی (جمالزاده، هدایت، آل‌احمد، چوبک، نیما، فروغ و دیگران).",
+     "en": "On the modern era he describes two waves, a return to the old style (Qaani, Bahar) and then verse and prose shaped by the press and European literature (Jamalzadeh, Hedayat, Al-e Ahmad, Chubak, Nima, Forugh and others).",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ادعای اوری که عروض فارسی را اصلاح‌شدهٔ عروض عربی می‌داند، در پانویس مترجم/ویراستار فارسی رد شده است؛ منشأ وزن شعر فارسی در پژوهش‌ها محل بحث است و نباید قطعی گرفته شود. فصل او هم ارجاع و پانویس علمی ندارد.",
+     "en": "Avery's view that Persian prosody was adapted from Arabic is disputed in the Persian edition's own footnote; the origin of Persian metre remains debated and should not be taken as settled. The chapter also carries no scholarly references.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Peter Avery",
+     "fa": "پیتر اوری",
+     "years": "",
+     "note": "ایران‌شناس بریتانیایی (کمبریج)؛ نویسندهٔ فصل ادبیات؛ هویت از امضای فصل و دانش عمومی"
+    },
+    {
+     "latin": "Rudaki",
+     "fa": "رودکی",
+     "years": "",
+     "note": "شاعر دربار سامانی"
+    },
+    {
+     "latin": "Ferdowsi",
+     "fa": "فردوسی",
+     "years": "",
+     "note": "سراینده شاهنامه"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:iranian",
+     "rel": "part-of",
+     "fa": "بخشی از تاریخ فرهنگی ایرانی",
+     "en": "Part of Iranian cultural history"
+    },
+    {
+     "to": "tabar:steppe-indo-iranian",
+     "rel": "see-also",
+     "fa": "پیشینهٔ زبان‌های ایرانی",
+     "en": "Background of Iranian languages"
+    }
+   ]
+  },
+  {
+   "id": "parthian-sasanian-states-brown",
+   "wiki": "soc",
+   "field": "institutions",
+   "title": {
+    "fa": "دولت‌های اشکانی و ساسانی: ساختار، مشکلات و دستاورد (روایت براون)",
+    "en": "Parthian and Sasanian states: structure, problems and achievements (Brown's account)",
+    "nl": "De Parthische en Sassanidische staten: structuur, problemen en prestaties"
+   },
+   "summary": {
+    "fa": "فصل پیتر براون دورهٔ میان هخامنشیان و اسلام را «تهی سیاسی» نمی‌بیند؛ اشکانیان را حکومتی سست‌پیوند بر پایهٔ خاندان‌های بزرگ و ساسانیان را قدرتی مرکزگراتر با روحانیت سازمان‌یافته توصیف می‌کند که با فاصله، کوچ‌نشینان و تنوع دینی دست‌وپنجه نرم می‌کرد.",
+    "en": "Peter Brown's chapter refuses to treat the long span between the Achaemenids and Islam as a political void: he describes the Parthians as a loose state resting on great noble houses and the Sasanians as a more centralised power with an organised clergy, struggling with distance, steppe nomads and religious diversity.",
+    "nl": "Peter Brown beschrijft de Parthen als een losse staat op basis van adellijke huizen en de Sassaniden als een gecentraliseerder rijk met een georganiseerde geestelijkheid."
+   },
+   "points": [
+    {
+     "fa": "براون هشدار می‌دهد که اگر تاریخ را فقط ساخت امپراتوری‌های بزرگ بدانیم، پنج سده پس از هخامنشیان «حضیض» به نظر می‌رسد؛ در حالی که فرهنگی درهم‌آمیخته و جهان‌گرا زیر حکومت‌های سست‌تر رشد می‌کرد.",
+     "en": "Brown warns that if history is measured only by great empires, the centuries after the Achaemenids look like a trough, whereas a mixed, cosmopolitan culture was in fact thriving under weaker states.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او حکومت اشکانی را نظامی متکی بر وفاداری خاندان‌های بزرگ می‌داند که سپاه شخصی داشتند، و آن را با فئودالیسم باختری مقایسه می‌کند، ولی می‌گوید این مقایسه نگاهی باختری و ناعادلانه است؛ اشکانیان خود را حامی فرهنگ‌های گوناگون، از جمله یونانی، می‌دیدند.",
+     "en": "He describes Parthian rule as resting on the loyalty of great families with private armies, likens it to Western feudalism but calls that a biased Western lens, and says the Parthians saw themselves as patrons of several cultures, Greek included.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به گفتهٔ او ساسانیان از فارس برخاستند؛ اردشیر اول آخرین شاه اشکانی را شکست داد و در تیسفون لقب شاه‌شاهان گرفت، و شاپور اول در جنگ با روم امپراتور والریان را اسیر کرد؛ اسیران در ایران اسکان یافتند و به شهرهایی چون بیشاپور و گندی‌شاپور جان تازه دادند.",
+     "en": "In his telling the Sasanians rose from Fars; Ardashir I defeated the last Parthian king and took the title King of Kings at Ctesiphon, while Shapur I captured the Roman emperor Valerian, and deported captives were settled in Iran and helped build up cities such as Bishapur and Gundeshapur.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "براون سه مشکل پایدار ساسانیان را می‌شمارد: فاصلهٔ زیاد و دشواری حکومت بر قلمرو پهناور، فشار کوچ‌نشینان آسیای مرکزی (مثلاً هپتالیان) و تضاد میان روحانیت زرتشتی و اقلیت‌هایی مانند مسیحیان که ساسانیان برای جذبشان کوششی نکردند.",
+     "en": "Brown lists three lasting Sasanian problems: distance and the difficulty of governing a vast territory, pressure from Central Asian nomads such as the Hephthalites, and tension between the Zoroastrian clergy and minorities such as Christians, whom the state made little effort to absorb.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او دورهٔ خسرو اول را اوج می‌داند: دربار مرکزی و کارآمد در تیسفون، اصلاح مالیات از سهم‌بری سالانه به مالیات پولی، شکست هپتالیان، ترجمهٔ متون هندی و یونانی و پناه‌گرفتن فیلسوفان آتنی رانده‌شده نزد او.",
+     "en": "He treats the reign of Khusro I as the peak: an efficient central court at Ctesiphon, tax reform from crop-sharing to money payments, victory over the Hephthalites, translation of Indian and Greek texts and refuge given to expelled Athenian philosophers.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "یادداشت ویراستار: آن‌چه دربارهٔ مزدک و جنبش او می‌دانیم (از جمله «اشتراک زنان» و قتل‌عام پیروان که براون هم می‌آورد) عمدتاً از منابع مخالفان و بعدی است و باید با احتیاط خواند.",
+     "en": "Editor's note: what we know of Mazdak and his movement, including the 'sharing of women' and massacre that Brown also reports, comes largely from hostile and later sources and should be read with caution.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "براون پایان ساسانیان را با فرسودگی ناشی از جنگ با بیزانس، شیوع بیماری و ویرانی آبیاری عراق همراه می‌کند و می‌گوید فرهنگ ایرانی از امپراتوری قوی‌تر بود و در دربارهای کوچک و جامعه‌های زرتشتی ادامه یافت.",
+     "en": "Brown links the Sasanian end to exhaustion from war with Byzantium, plague and damaged irrigation in Iraq, and adds that Iranian culture proved stronger than the empire, continuing in small courts and Zoroastrian communities.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Peter R. L. Brown",
+     "fa": "پیتر براون",
+     "years": "",
+     "note": "تاریخ‌نگار دورهٔ باستان متأخر؛ نویسندهٔ فصل (هویت از امضای فصل با نام اختصاری و دانش عمومی)"
+    },
+    {
+     "latin": "Ardashir I",
+     "fa": "اردشیر یکم",
+     "years": "",
+     "note": "بنیان‌گذار ساسانیان"
+    },
+    {
+     "latin": "Khusro I",
+     "fa": "خسرو یکم انوشیروان",
+     "years": "",
+     "note": "شاه ساسانی؛ اصلاح مالیات"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:iranian",
+     "rel": "see-also",
+     "fa": "ایران پیش از اسلام در فرهنگ ایرانی",
+     "en": "Pre-Islamic Iran in Iranian culture"
+    },
+    {
+     "to": "tabar:steppe-indo-iranian",
+     "rel": "see-also",
+     "fa": "کوچ‌نشینان استپ و ایران",
+     "en": "Steppe nomads and Iran"
+    }
+   ]
+  },
+  {
+   "id": "safavid-shia-state-ottoman-pressure",
+   "wiki": "soc",
+   "field": "collective",
+   "title": {
+    "fa": "صفویان، تشیع و هویت ملی ایرانی در روایت لاکهارت و بویل",
+    "en": "The Safavids, Shi'ism and Iranian national identity in Lockhart and Boyle's account",
+    "nl": "De Safawiden, het sjiisme en de Iraanse nationale identiteit"
+   },
+   "summary": {
+    "fa": "لاکهارت و بویل در فصل «از چیرگی اسلام تا قاجار» می‌گویند گردآمدن ایرانیان زیر لوای تشیع در برابر عثمانی سنی، ایران را دوباره به صورت یک ملت درآورد؛ ولی علت زوال را بیشتر در اخلاق شاهان می‌جویند که تحلیلی ساده است.",
+    "en": "In their chapter from the Arab conquest to the Qajars, Lockhart and Boyle say rallying Iranians under Shi'ism against the Sunni Ottomans made Iran a nation again, but they explain the Safavid decline mostly through the vices of kings, a simplified analysis.",
+    "nl": "Lockhart en Boyle stellen dat het sjiisme tegenover de soennitische Ottomanen Iran weer tot een natie maakte, maar verklaren het verval vooral door de zwakheden van koningen."
+   },
+   "points": [
+    {
+     "fa": "به نظر نویسندگان، شاه اسماعیل با گردآوردن ایرانیان زیر لوای شیعه در برابر تهدید ترکان سنی عثمانی عنصری را زنده کرد که مدت‌ها فراموش شده بود و ایران بار دیگر «ملت» شد.",
+     "en": "The authors say Shah Ismail, by rallying Iranians under Shi'ism against the Sunni Ottoman threat, revived an element long forgotten, and Iran again appeared as a nation.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آنان شکست صفویان در چالدران را به توپخانه و سپاه منظم یکنی‌چری عثمانی نسبت می‌دهند، در حالی که سپاه صفوی بیشتر از جنگجویان ایلی بود؛ همچنین می‌گویند ایران نیروی دریایی نداشت و پرتغالی‌ها هرمز را گرفتند.",
+     "en": "They attribute the Safavid defeat at Chaldiran to Ottoman artillery and the trained Janissaries, against a Safavid army made mostly of tribal fighters, and note that Iran lacked a navy while the Portuguese held Hormuz.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "دربارهٔ شاه عباس اول می‌گویند او ارتش حقوق‌بگیر و توپخانه ساخت، قدرت سران ایلات ترکمان را کم کرد، پایتخت را به اصفهان برد، اروپاییان را پذیرفت و با کمک ناوگان کمپانی هند شرقی انگلیس هرمز را از پرتغالی‌ها پس گرفت.",
+     "en": "On Shah Abbas I they say he built a salaried army and artillery, reduced the power of Turkmen tribal chiefs, moved the capital to Isfahan, welcomed Europeans and retook Hormuz from the Portuguese with the help of the English East India Company's ships.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آنان فروپاشی صفویان را عمدتاً به مستی و ناتوانی شاهان بعدی و نفوذ حرم و علما نسبت می‌دهند؛ این روایت اخلاقی است و پژوهش‌های امروز بر عوامل ساختاری مانند ضعف مالی و نظامی و تغییر مسیرهای تجارت هم تأکید می‌کنند.",
+     "en": "They attribute the Safavid collapse chiefly to the drunkenness and weakness of later shahs and to harem and clerical influence; this is a moral narrative, and current scholarship also stresses structural factors such as fiscal and military weakness and shifting trade routes.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "لاکهارت و بویل گرایش ایرانیان به تشیع را با داستان ازدواج امام حسین با شهربانو، دختر یزدگرد سوم، توضیح می‌دهند؛ ویراستار فارسی همین‌جا در پانویس می‌گوید این توضیح ساده است و شیعیان در سده‌های نخست اندک بودند. این روایت در پژوهش‌های تاریخی نیز سست شمرده می‌شود.",
+     "en": "Lockhart and Boyle explain Iranian attraction to Shi'ism via the tale of Imam Husayn marrying Shahrbanu, daughter of Yazdegerd III; the Persian edition's own footnote calls this simplistic and notes Shi'is were few in early centuries. Historical scholarship also treats the tale as weak.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "درباره حملهٔ مغول، آنان ابن‌اثیر را شاهد فاجعهٔ بی‌سابقه می‌آورند ولی نتیجه می‌گیرند اثر بلندمدتش «کمتر شکننده» بود و راه را برای شکل‌گیری تدریجی دولت ملی هموار کرد؛ این دیدگاه نویسندگان است و بحث‌برانگیز.",
+     "en": "On the Mongol invasion they cite Ibn al-Athir as witness to an unprecedented catastrophe but conclude its long-term effect was less shattering and eased the gradual emergence of a national state; this is the authors' view and debatable.",
+     "flags": [
+      "contested"
+     ],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Laurence Lockhart",
+     "fa": "لاورنس لاکهارت",
+     "years": "",
+     "note": "تاریخ‌نگار ایران بریتانیایی؛ از امضای فصل"
+    },
+    {
+     "latin": "J. A. Boyle",
+     "fa": "جان اندرو بویل",
+     "years": "",
+     "note": "ایران‌شناس و تاریخ‌دان دورهٔ مغول؛ از امضای فصل"
+    },
+    {
+     "latin": "Shah Ismail I",
+     "fa": "شاه اسماعیل اول",
+     "years": "",
+     "note": "بنیان‌گذار صفویان"
+    },
+    {
+     "latin": "Shah Abbas I",
+     "fa": "شاه عباس اول",
+     "years": "",
+     "note": "اصلاح‌گر ارتش و ساخت اصفهان"
+    }
+   ],
+   "links": [
+    {
+     "to": "soc:religion-ideology-iran-debate",
+     "rel": "see-also",
+     "fa": "بحث دین و ایران",
+     "en": "The debate on religion and Iran"
+    },
+    {
+     "to": "soc:liberty-before-democracy-iran",
+     "rel": "see-also",
+     "fa": "آزادی‌های مدنی و نوسازی در ایران",
+     "en": "Civil liberties and modernisation in Iran"
+    }
+   ]
+  },
+  {
+   "id": "constitution-and-great-power-pressure-qajar",
+   "wiki": "soc",
+   "field": "institutions",
+   "title": {
+    "fa": "مشروطه و فشار قدرت‌های بزرگ بر ایران قاجار (روایت لاکهارت و بویل)",
+    "en": "The Constitution and great-power pressure on Qajar Iran (Lockhart and Boyle)",
+    "nl": "De grondwet en de druk van grootmachten op Qajar-Iran"
+   },
+   "summary": {
+    "fa": "پایان فصل تاریخ کتاب، سده‌های قاجار را از جنگ با روسیه تا امتیاز تنباکو، مشروطه، قرارداد ۱۹۰۷ روس و انگلیس، مأموریت شوستر و کودتای ۱۲۹۹ تا آغاز پهلوی کوتاه و گزارش‌گونه روایت می‌کند.",
+    "en": "The end of the book's history chapter narrates the Qajar era briefly: wars with Russia, the tobacco concession, the Constitution, the 1907 Anglo-Russian agreement, the Shuster mission and the 1921 coup up to the start of the Pahlavi dynasty.",
+    "nl": "Het slot van het geschiedenishoofdstuk vertelt beknopt over de Qajar-tijd: oorlogen met Rusland, de tabaksconcessie, de grondwet, het Brits-Russische verdrag van 1907 en het begin van de Pahlavi's."
+   },
+   "points": [
+    {
+     "fa": "نویسندگان می‌گویند فتحعلی‌شاه در دو جنگ با روسیه سرزمین‌های بسیاری را از دست داد، زیرا سپاه آموزش و سلاح نوین نداشت و شاه هزینهٔ تجهیزات را نمی‌داد؛ در همان دوره نفوذ بریتانیا نخست در برابر فرانسه و بعد روسیه بالا گرفت.",
+     "en": "The authors say Fath-Ali Shah lost much territory in two wars with Russia because the army lacked modern training and weapons and the shah would not pay for them; British influence in Iran grew in this period, first against France and then Russia.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "امیرکبیر را وزیری کاردان و پاک‌دست می‌شمارند که آموزش، روزنامه و اصلاحات دیگر را آغاز کرد ولی دشمنان بسیاری ساخت و کشته شد؛ و از اعتراض به امتیاز تنباکو در پایان پادشاهی ناصرالدین‌شاه به‌عنوان نشانهٔ تشنگی مردم به اصلاح یاد می‌کنند.",
+     "en": "They describe Amir Kabir as a capable, incorruptible minister who began education, a newspaper and other reforms but made many enemies and was killed, and cite the tobacco-concession protests late in Naser al-Din Shah's reign as a sign of popular hunger for reform.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به روایت آنان مظفرالدین‌شاه زیر فشار افکار عمومی فرمان مجلس را داد؛ قانون اساسی مشروطه تصویب شد و از جهاتی به حکومت مشروطهٔ بلژیک شبیه بود؛ محمدعلی‌شاه آن را زیر پا گذاشت و مجلس را با سپاهیان زیر فرمان افسر روسی بمباران کرد.",
+     "en": "They say Mozaffar al-Din Shah, under public pressure, decreed a national assembly; a constitution was adopted resembling the Belgian one in many respects, but Mohammad Ali Shah flouted it and bombarded the Majlis with troops under a Russian officer.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پیمان ۱۹۰۷ روس و انگلیس ایران را بدون آگاهی خودش به منطقه‌های نفوذ روس، بریتانیا و بی‌طرف تقسیم کرد؛ نویسندگان آن را توهین آشکار به ایران می‌خوانند، و می‌گویند اصلاحات مالی شوستر آمریکایی با مخالفت روسیه بی‌نتیجه ماند.",
+     "en": "The 1907 Anglo-Russian agreement divided Iran into Russian, British and neutral zones without Iran's knowledge; the authors call it a plain insult, and say the American Shuster's financial reforms failed because of Russian opposition.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آنان کودتای ۱۹۲۱ سید ضیاء و رضاخان، برآمدن رضاخان، رد طرح جمهوری به‌خاطر احساسات ضدجمهوری پس از اقدامات ترکیه و سرانجام انقراض قاجار و واگذاری سلطنت به رضاشاه پهلوی در ۱۹۲۵ را گزارش می‌کنند؛ چون این فصل فقط گزارش رخدادهاست، تحلیل علّی ندارد.",
+     "en": "They report the 1921 coup by Seyyed Zia and Reza Khan, Reza Khan's rise, abandonment of a republic project amid hostility to Turkey's secular steps, and the end of Qajar rule with the throne passing to Reza Shah Pahlavi in 1925; being a narrative chapter it offers little causal analysis.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ناشر ایرانی کتاب در یادداشت آغازین می‌گوید این اثر را پیش از انقلاب چند دانشمند انگلیسی نوشته و خوانندگان باید ستایش‌های آن را با دید سیاست استعماری سنجید؛ این قاب‌بندی دیدگاه ناشر است نه یافتهٔ پژوهشی.",
+     "en": "The Iranian publisher's note says the work was written before the revolution by several British scholars and that readers should weigh its praise against colonial politics; this framing is the publisher's stance, not a research finding.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Amir Kabir (Mirza Taqi Khan)",
+     "fa": "میرزا تقی‌خان امیرکبیر",
+     "years": "",
+     "note": "صدراعظم اصلاح‌گر ناصرالدین‌شاه"
+    },
+    {
+     "latin": "W. Morgan Shuster",
+     "fa": "مورگان شوستر",
+     "years": "",
+     "note": "مستشار مالی آمریکایی"
+    },
+    {
+     "latin": "Reza Khan",
+     "fa": "رضاخان",
+     "years": "",
+     "note": "بنیان‌گذار سلسلهٔ پهلوی"
+    }
+   ],
+   "links": [
+    {
+     "to": "soc:liberty-before-democracy-iran",
+     "rel": "see-also",
+     "fa": "آزادی و نوسازی در ایران",
+     "en": "Liberty and modernisation in Iran"
+    }
+   ]
+  },
+  {
+   "id": "iranian-arts-continuity-painting-architecture-ceramics-carpets",
+   "wiki": "soc",
+   "field": "values",
+   "title": {
+    "fa": "هنرهای ایرانی: نگارگری، معماری، سفال و قالی در فصل‌های کتاب",
+    "en": "Iranian arts in the book's chapters: painting, architecture, ceramics and carpets",
+    "nl": "Iraanse kunsten: miniatuurschilderkunst, architectuur, keramiek en tapijten"
+   },
+   "summary": {
+    "fa": "چهار فصل هنری کتاب، هر یک به قلم یک متخصص، بر پیوستگی سنت‌های ایرانی، نقش حمایت درباری و وام‌گیری از چین و دیگر مناطق تأکید می‌کنند.",
+    "en": "The book's four art chapters, each by a specialist, stress the continuity of Iranian traditions, the role of court patronage and borrowing from China and elsewhere.",
+    "nl": "De vier kunsthoofdstukken benadrukken de continuïteit van Iraanse tradities, hofmecenaat en ontlening aan China."
+   },
+   "points": [
+    {
+     "fa": "ب. و. رابینسون می‌گوید سبک اصیل نگارگری ایرانی پس از استقرار مغولان در اواخر سدهٔ سیزدهم شکل گرفت؛ ترکیبی از سنت بومی با تأثیر چینی و بیزانسی که نمونهٔ آن نسخه‌های جامع‌التواریخ رشیدالدین است.",
+     "en": "B. W. Robinson says authentic Persian miniature painting formed after the Mongol settlement in the late thirteenth century, mixing local tradition with Chinese and Byzantine influence, as seen in the manuscripts of Rashid al-Din's Jami' al-tawarikh.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او مسیر کتاب‌آرایی را از جلایریان و شیراز تا هرات بایسنغر و دربار سلطان حسین بایقرا دنبال می‌کند و بهزاد را اصلاح‌گر و نه انقلابی در چارچوب سنت می‌داند؛ نسخه‌ها را کار گروهی از هنرمندان با سبک‌های هم‌زمان می‌شمارد.",
+     "en": "He traces book painting from the Jalayirids and Shiraz to Baysunghur's Herat and the court of Sultan Husayn Bayqara, calls Behzad a reformer within the tradition rather than a revolutionary, and treats manuscripts as workshop products with several co-existing styles.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "د. ن. ویلبر می‌نویسد معماری ایرانی بیشتر درونگرا بود: تزئین با ساختار درمی‌آمیخت، آجر و گچ و کاشی لعابی مصالح اصلی بودند، و گنبد (اغلب با کاشی آبی) مهم‌ترین عنصر مذهبی شد؛ سنگ در دوران هخامنشی و آجر پس از آن غلبه داشت.",
+     "en": "D. N. Wilber writes that Iranian architecture was largely inward-looking: ornament merged with structure, brick, plaster and glazed tile were the main materials, and the dome, often blue-tiled, became the key religious element; stone dominated in the Achaemenid period and brick afterwards.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او تخت جمشید را حاصل کار صنعتگران و مصالح از سراسر امپراتوری می‌داند؛ شاهدش کتیبه‌های ساختمانی و لوح‌های گلی است. پاسارگاد را کهن‌تر و نزدیک به سنت شاهان کوچ‌نشین توصیف می‌کند.",
+     "en": "He describes Persepolis as built by craftsmen and materials drawn from across the empire, with building inscriptions and clay tablets as evidence, and presents Pasargadae as older and closer to a nomadic royal tradition.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آر. اچ. پیندر-ویلسن می‌گوید سفالگری ایران تقریباً پیوسته بوده و دو دورهٔ اوج دارد: عصر مس‌سنگی و سده‌های پس از اسلام؛ در دورهٔ سلجوقی با خمیر سخت، نقاشی زیر لعاب و میناکاری روی لعاب به اوج رسید، و چین همواره الهام‌بخش سفالگران بود.",
+     "en": "R. H. Pinder-Wilson says Iranian pottery was almost continuous with two peak periods, the Chalcolithic and the Islamic centuries; in the Seljuk period it peaked with a hard fritware body, underglaze painting and overglaze enamels, and China was a constant source of inspiration.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "فصل قالی می‌گوید قالی پازیریک در کوه‌های آلتای نشان می‌دهد قالی‌بافی بسیار کهن است، و قالی‌های کلاسیک ایران طرح‌هایی از مینیاتورهای تیموری و صفوی گرفته‌اند؛ قالی اردبیل را کار مقصود کاشانی می‌داند. نسبت دادن قالی پازیریک به ایران در پژوهش‌های امروز محل بحث است.",
+     "en": "The carpet chapter says the Pazyryk carpet from the Altai shows weaving is very old and that classical Persian carpets drew designs from Timurid and Safavid miniatures, crediting the Ardabil carpet to Maqsud Kashani. Attributing the Pazyryk carpet to Iran is debated in current scholarship.",
+     "flags": [
+      "contested"
+     ],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "B. W. Robinson",
+     "fa": "ب. و. رابینسون",
+     "years": "",
+     "note": "کارشناس نگارگری ایرانی؛ از امضای فصل"
+    },
+    {
+     "latin": "D. N. Wilber",
+     "fa": "دونالد ویلبر",
+     "years": "",
+     "note": "پژوهشگر معماری ایرانی؛ از امضای فصل"
+    },
+    {
+     "latin": "R. H. Pinder-Wilson",
+     "fa": "آر. اچ. پیندر-ویلسن",
+     "years": "",
+     "note": "پژوهشگر سفال اسلامی؛ از امضای فصل"
+    },
+    {
+     "latin": "Behzad",
+     "fa": "کمال‌الدین بهزاد",
+     "years": "",
+     "note": "نگارگر دربار هرات"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:iranian",
+     "rel": "see-also",
+     "fa": "هنر و فرهنگ ایرانی",
+     "en": "Iranian art and culture"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "تاریخ و میراث ایران، ترجمهٔ اردشیر زندنیا، تهران: انتشارات جان‌زاده، چاپ اول ۱۳۶۳ (فصل‌ها: لاکهارت و بویل؛ براون؛ اوری؛ رابینسون؛ ویلبر؛ پیندر-ویلسن؛ فصل قالی).",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "متن اسکن‌شده بود و لایهٔ متن فقط واترمارک داشت؛ فایل کامل (۱۲۸ صفحه، حدود ۲٫۴۸ مگابایت) دانلود و با tesseract (fas) OCR شد. دقت واژه‌ها خوب است ولی اعداد و تاریخ‌ها اغلب مخدوش (مثلاً سده‌ها و سال‌های هجری) و چند حرف‌نویسی نام‌ها خطادار؛ نام نویسندهٔ فصل قالی به صورت «زیگر» خوانده شد (احتمالاً Digby) و در مدخل‌ها نیامده. صفحه‌های ۳۴–۳۵ نویز بود. به همین دلیل از ارقام دقیق پرهیز شد و ادعاها بر پایهٔ متن واضح نوشته شد. فقط ترجمهٔ فارسی خوانده شد.",
+ "lecture": "تاریخ و میراث ایران",
+ "speaker": "گروه نویسندگان: لاورنس لاکهارت، ج. ا. بویل، پ. ر. ل. براون، پیتر اوری، ب. و. رابینسون، د. ن. ویلبر، آر. اچ. پیندر-ویلسن و نویسندهٔ فصل قالی (نام در OCR نامطمئن)",
+ "channel": "انتشارات جان‌زاده"
+}

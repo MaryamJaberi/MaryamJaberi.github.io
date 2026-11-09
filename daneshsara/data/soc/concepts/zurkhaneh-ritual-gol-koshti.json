@@ -1,0 +1,118 @@
+{
+ "id": "soc:zurkhaneh-ritual-gol-koshti",
+ "kind": "concept",
+ "title": {
+  "fa": "آیین زورخانه: گل‌کشتی، تومار و سلسله‌مراتب مرشد و پهلوان",
+  "en": "Zurkhaneh ritual: gol-kushti verses, the tumar and the hierarchy of morshed and pahlavan",
+  "nl": "Zurkhaneh-ritueel: gol-kushti, tumar en de rangorde van morshed en pahlavan"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "بخش دوم کتاب آداب و اصطلاحات را شرح می‌دهد: ورزش با ذکر و خواندن گل‌کشتی آغاز می‌شود، مرشد ضرب و آواز را می‌گرداند، و تومار پورِیای ولی روایتی نیمه‌افسانه‌ای از آیین کشتی است.",
+  "en": "The book's second part documents customs and vocabulary: sessions open with prayer and gol-kushti verses, the morshed leads rhythm and song, and the tumar of Pouriya-ye Vali is a semi-legendary account of wrestling ritual.",
+  "nl": "Deel twee beschrijft gebruiken: gebed, gol-kushti-verzen, de morshed en de tumar van Pouriya-ye Vali."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پیش از درگیری دو کشتی‌گیر، مرشد یا پهلوان حاضر «گل‌کشتی» می‌خواند: شعرهای کوتاه همراه با ستایش و یادآوری فنون که دو حریف را به آشتی و نظم فرامی‌خواند.",
+    "en": "Before two wrestlers engage, the morshed or senior wrestler recites gol-kushti, short verses mixing praise with reminders of techniques.",
+    "nl": "Before two wrestlers engage, the morshed or senior wrestler recites gol-kushti, short verses mixing praise with reminders of techniques."
+   },
+   "sources": [
+    "src:77d3b0a241"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده خود دیده است که گل‌کشتی خواندن در زورخانه‌ها رو به کم‌شدن بود (بر پایهٔ مشاهدهٔ سی سالهٔ او).",
+    "en": "He observed that reciting gol-kushti was already disappearing in zurkhanehs of his time.",
+    "nl": "He observed that reciting gol-kushti was already disappearing in zurkhanehs of his time."
+   },
+   "sources": [
+    "src:77d3b0a241"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در تومار پورِیای ولی، که کتاب آن را متنی افسانه‌ای از دورهٔ صفوی می‌داند، کشتی با نیایش، سجده به چهار سو و صلوات آغاز می‌شود و پهلوان با ترتیب مشخص نقش دستیاران را می‌پذیرد.",
+    "en": "In the Pouriya-ye Vali tumar, which the book treats as a legendary Safavid-era text, a bout opens with prayer, prostrations toward four directions and blessings, and assistants take defined roles.",
+    "nl": "In the Pouriya-ye Vali tumar, which the book treats as a legendary Safavid-era text, a bout opens with prayer, prostrations toward four directions and blessings, and assistants take defined roles."
+   },
+   "sources": [
+    "src:77d3b0a241"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همین متن دوازده صفت پهلوان و دو شیوهٔ کشتی (خراسانی «قبض» و دیلمی «اضطرار») را نام می‌برد.",
+    "en": "The same text names twelve qualities of a pahlavan and two wrestling styles, the Khorasani qabz and the Daylami iztirar.",
+    "nl": "The same text names twelve qualities of a pahlavan and two wrestling styles, the Khorasani qabz and the Daylami iztirar."
+   },
+   "sources": [
+    "src:77d3b0a241"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آیین جمعی با موسیقی، ذکر و بدن‌کار همگام حس همبستگی می‌آفریند؛ این تحلیل جامعه‌شناختی از ماست و در کتاب به این صورت نیامده است.",
+    "en": "Synchronised music, invocation and exertion produce group solidarity; this sociological reading is the editor's, not the book's.",
+    "nl": "Synchronised music, invocation and exertion produce group solidarity; this sociological reading is the editor's, not the book's."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "شخصیت پورِیای ولی تاریخی-افسانه‌ای است و تومارش را باید سندی دربارهٔ باورهای جامعهٔ بعدی دانست نه گزارشی دقیق از سدهٔ هفتم هجری.",
+    "en": "Pouriya-ye Vali is a historical-legendary figure and the tumar is better read as evidence of later beliefs than as an exact account of the 7th century AH.",
+    "nl": "Pouriya-ye Vali is a historical-legendary figure and the tumar is better read as evidence of later beliefs than as an exact account of the 7th century AH."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:collective-effervescence-ritual",
+   "rel": "explains",
+   "note": {
+    "fa": "غلیان جمعی و آیین",
+    "en": "Collective effervescence and ritual",
+    "nl": "Collective effervescence and ritual"
+   }
+  },
+  {
+   "to": "soc:futuwwa-ayyaran-code",
+   "rel": "see-also",
+   "note": {
+    "fa": "فتوت و عیاران",
+    "en": "Futuwwa and ayyars",
+    "nl": "Futuwwa and ayyars"
+   }
+  }
+ ],
+ "people": [
+  "core:pouriya-ye-vali"
+ ],
+ "sources": [
+  "src:77d3b0a241"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
