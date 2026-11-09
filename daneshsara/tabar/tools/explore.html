@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>کاوشگر تبار</title>
+<meta name="description" content="مفهوم‌های ویکی تبار و ژنتیک را بر اساس حوزه، ردهٔ منبع و پرچم اعتبار بگردید.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.what{font-size:1.05rem;color:var(--ink-2);max-width:68ch;margin:0 0 20px}
+.pill{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);min-height:40px;padding:6px 14px;font-size:.9rem;line-height:1.4}
+button.pill:hover{background:var(--surface-subtle);color:var(--ink)}
+.pill[aria-pressed=true],.pill.on{background:var(--primary-soft);border-color:var(--primary);color:var(--primary);font-weight:600}
+.pill:disabled{opacity:.4;cursor:default}
+button.btn2{min-height:44px}
+.ctrls{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px}
+.field{display:grid;gap:4px;font-size:.85rem;color:var(--ink-2)} .field input,.field select{width:100%;min-height:44px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+details.fold{margin-bottom:14px} details.fold>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;color:var(--ink-2);font-size:.9rem}
+.bar{display:flex;gap:2px;height:8px;border-radius:99px;overflow:hidden;background:var(--line)} .bar i{display:block;min-width:4px}
+.t1{background:#2F7D4F}.t2{background:#3C6EA8}.t3{background:#8A6D1D}.t4{background:#8A2E2E}.t0{background:var(--ink-3)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.78rem;color:var(--ink-2);margin-top:6px} .legend .sw{display:inline-block;width:9px;height:9px;border-radius:3px;margin-inline-end:5px}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))} .cards>*{min-width:0}
+.ent{display:flex;flex-direction:column;gap:8px} .ent h3{margin:0;font-size:1.08rem;line-height:1.55} .ent h3 a{color:var(--ink);text-decoration:none} .ent h3 a:hover{color:var(--primary);text-decoration:underline}
+.en{color:var(--ink-3);font-size:.85rem;direction:ltr;text-align:start} .sum{margin:0;font-size:.95rem;color:var(--ink-2);line-height:1.85}
+.pts{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px} .pts li{font-size:.9rem;padding:10px 12px;background:var(--surface-subtle);border-radius:10px;line-height:1.8} .pts .row{margin-top:6px;gap:6px}
+details>summary{cursor:pointer} .ent details summary{min-height:36px;display:flex;align-items:center;color:var(--primary);font-size:.9rem}
+.more{display:block;margin:22px auto 0}
+.count{color:var(--ink-2);font-size:.9rem;margin:6px 0 14px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:6px;background:var(--fam-bio)}
+.note.foot{margin-top:36px}
+mark{background:color-mix(in srgb,var(--warn) 28%,transparent);color:inherit;border-radius:4px;padding:0 3px}
+.toolcards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.toolcard{display:flex;flex-direction:column;gap:8px;border-top:4px solid var(--fam-bio)} .toolcard h3{margin:0;font-size:1.2rem} .toolcard p{margin:0;color:var(--ink-2);font-size:.95rem} .toolcard .btn{align-self:flex-start;margin-top:auto;min-height:44px;display:inline-flex;align-items:center}
+.toolcard.psy{border-top-color:var(--fam-psy)}
+.tag{font-size:.75rem;color:var(--ink-3)}
+@media (max-width:600px){.ctrls{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--line-strong)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><nav class="crumb" aria-label="مسیر"><a href="../../index.html">دانش‌سرا</a><span aria-hidden="true">›</span><a href="../index.html">تبار و ژنتیک</a><span aria-hidden="true">›</span><a href="index.html">ابزارها</a><span aria-hidden="true">›</span><span aria-current="page">کاوشگر تبار</span></nav></div></header>
+<main class="wrap" id="main">
+<h1>کاوشگر تبار</h1>
+<p class="what">همهٔ مفهوم‌های ویکی تبار و ژنتیک را بر اساس حوزه (ژنتیک رفتاری، تکامل انسان، ژنومیک جمعیت…)، ردهٔ منبع و پرچم‌های اعتبار فیلتر کنید. وقتی می‌خواهید فقط حرف‌های محکم‌تر یا فقط ادعاهای محل‌بحث را ببینید به کارتان می‌آید.</p>
+<div class="ctrls">
+  <label class="field" style="grid-column:1/-1">جستجو (عنوان، نام لاتین، نام‌های دیگر، خلاصه)<input type="search" id="q" placeholder="مثلاً: نئاندرتال" autocomplete="off"></label>
+  <label class="field">ردهٔ منبع (دست‌کم یک گزاره)<select id="tier"><option value="">همه</option></select></label>
+  <label class="field">پرچم<select id="flag"><option value="">همه</option></select></label>
+  <label class="field">برچسب اعتبار مدخل<select id="grade"><option value="">همه</option></select></label>
+  <label class="field">مرتب‌سازی<select id="sort"><option value="rel">پیش‌فرض (جستجو یا حوزه)</option><option value="grade">اعتبار (قوی‌تر اول)</option><option value="count">بیشترین گزاره</option><option value="title">الفبایی</option></select></label>
+</div>
+<details class="fold" id="domwrap" open><summary>حوزه‌ها <span class="muted" id="domsel" style="margin-inline-start:8px"></span></summary><div class="pills" id="doms" role="group" aria-label="حوزه‌ها"></div></details>
+<div class="row" style="margin-bottom:6px"><button class="pill" id="reset" type="button">پاک‌کردن همهٔ فیلترها</button></div>
+<p class="count" id="count" aria-live="polite"></p>
+<div class="cards" id="list"></div>
+<button class="btn ghost more" id="more" type="button" hidden>نمایش بیشتر</button>
+<div class="note foot" role="note">این ابزار پیش‌نویس است و محتوای مدخل‌ها بازبینی نشده. برچسب‌های اعتبار فقط از ردهٔ منبعِ ثبت‌شده و پرچم‌های داده محاسبه می‌شوند، نه از ارزیابی تازه؛ برای تصمیم مهم به خود منبع‌ها برگردید.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · محتوا از دادهٔ مشترک ویکی‌ها (core/tools/data.json) خوانده می‌شود.</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script type="module">
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=DS.esc, fd=DS.faDigits;
+const TIERS=[1,2,3,4,0], FLAGS=['unreplicated','contested','dated','editor-note'];
+let D;
+const mainEl=$('#main');
+function fail(e){
+  console.warn(e);
+  mainEl.innerHTML='<div class="empty" role="alert"><p>بارگذاری داده ناموفق بود. اتصال خود را بررسی کنید یا صفحه را دوباره باز کنید.</p><button id="retry" class="btn">تلاش دوباره</button></div>';
+  const b=$('#retry'); if(b) b.onclick=()=>location.reload();
+}
+try{ D=await DS.load(); }catch(e){ fail(e); throw e; }
+const pre=c=>{ if(!c._st){ c._st=DS.stats(c); c._g=DS.grade(c); } return c; };
+const domOf=c=> c.field&&D.fieldById[c.field]? D.fieldById[c.field].t.fa : 'سایر';
+function bar(st){
+  if(!st.n) return '<span class="muted">این مدخل هنوز گزارهٔ منبع‌دار ندارد.</span>';
+  const ks=TIERS.filter(k=>st.tiers[k]);
+  return `<div class="bar" role="img" aria-label="${esc(ks.map(k=>DS.TIER[k]+' '+fd(st.tiers[k])).join('، '))}">${ks.map(k=>`<i class="t${k}" style="flex:${st.tiers[k]}"></i>`).join('')}</div>
+  <div class="legend">${ks.map(k=>`<span><b class="sw t${k}"></b>${esc(DS.TIER[k])} ${fd(st.tiers[k])}</span>`).join('')}</div>`;
+}
+function flagsRow(st){ const f=FLAGS.filter(x=>st.flags[x]); return f.length?`<div class="row" style="gap:6px">${f.map(x=>`<span class="flag ${x}">${esc(DS.FLAG[x])} ${fd(st.flags[x])}</span>`).join('')}</div>`:''; }
+function ptHTML(p){ return `<li>${esc(p.t)}<div class="row">${DS.chipTier(p.tier||0)}${(p.f||[]).map(DS.chipFlag).join('')}</div></li>`; }
+function ptsHTML(c,lim){ const a=lim?c.pts.slice(0,lim):c.pts; return a.length?`<ul class="pts">${a.map(ptHTML).join('')}</ul>`:'<p class="muted">گزارهٔ منبع‌دار ثبت نشده است.</p>'; }
+function setHash(o){ const r={}; for(const k in o){ const v=o[k]; if(v!==''&&v!=null&&v!==false) r[k]=v; } DS.hash.set(r); }
+const collator=new Intl.Collator('fa');
+
+const W='tabar', PAGE=36;
+const ALL=D.concepts.filter(c=>c.w===W&&c.field).map(pre);
+const dc={}; ALL.forEach(c=>dc[c.field]=(dc[c.field]||0)+1);
+const doms=Object.keys(dc).sort((a,b)=>dc[b]-dc[a]||collator.compare(D.fieldById[a].t.fa,D.fieldById[b].t.fa));
+const S={q:'',f:new Set(),tier:'',flag:'',grade:'',sort:'rel',shown:PAGE};
+const el={q:$('#q'),tier:$('#tier'),flag:$('#flag'),grade:$('#grade'),sort:$('#sort'),doms:$('#doms'),list:$('#list'),count:$('#count'),more:$('#more'),domsel:$('#domsel')};
+TIERS.forEach(t=>el.tier.insertAdjacentHTML('beforeend',`<option value="${t}">${esc(DS.TIER[t])}</option>`));
+FLAGS.forEach(f=>el.flag.insertAdjacentHTML('beforeend',`<option value="${f}">دارای گزارهٔ «${esc(DS.FLAG[f])}»</option>`));
+['A','B','C','D'].forEach(g=>el.grade.insertAdjacentHTML('beforeend',`<option value="${g}">${esc(DS.GRADE[g])}</option>`));
+el.doms.innerHTML=doms.map(f=>`<button type="button" class="pill" data-f="${esc(f)}" aria-pressed="false">${esc(D.fieldById[f].t.fa)} <span class="muted">${fd(dc[f])}</span></button>`).join('');
+const gOrder={A:0,B:1,C:2,D:3};
+function filtered(){
+  let l=S.q?DS.search(D,S.q,c=>c.w===W&&c.field):ALL.slice();
+  l=l.map(pre).filter(c=>(!S.f.size||S.f.has(c.field))
+    &&(S.tier===''||c.pts.some(p=>String(p.tier||0)===S.tier))
+    &&(!S.flag||c.pts.some(p=>(p.f||[]).includes(S.flag)))
+    &&(!S.grade||c._g===S.grade));
+  if(S.sort==='grade') l.sort((a,b)=>gOrder[a._g]-gOrder[b._g]||b._st.n-a._st.n);
+  else if(S.sort==='count') l.sort((a,b)=>b._st.n-a._st.n);
+  else if(S.sort==='title') l.sort((a,b)=>collator.compare(a.t.fa,b.t.fa));
+  else if(!S.q) l.sort((a,b)=>doms.indexOf(a.field)-doms.indexOf(b.field)||collator.compare(a.t.fa,b.t.fa));
+  return l;
+}
+function card(c){
+  const st=c._st;
+  return `<article class="card ent" data-id="${esc(c.id)}">
+    <div class="row" style="gap:6px"><span class="chip ${W}">${esc(domOf(c))}</span>${DS.chipGrade(c._g)}</div>
+    <h3><a href="${esc(DS.url(D,c))}">${esc(c.t.fa)}</a></h3>
+    ${c.t.en?`<div class="en" lang="en">${esc(c.t.en)}</div>`:''}
+    <p class="sum">${esc(c.s.fa)}</p>
+    ${bar(st)}${flagsRow(st)}
+    ${st.n?`<details><summary>${fd(st.n)} گزارهٔ منبع‌دار</summary><div class="body"></div></details>`:''}
+    <a class="btn ghost" href="${esc(DS.url(D,c))}" style="align-self:flex-start;min-height:40px">مدخل کامل</a>
+  </article>`;
+}
+let cur=[];
+function render(reset){
+  if(reset) S.shown=PAGE;
+  cur=filtered();
+  const part=cur.slice(0,S.shown);
+  if(!cur.length){ el.list.innerHTML='<div class="empty" style="grid-column:1/-1">چیزی با این فیلترها پیدا نشد. فیلترها را کم کنید یا عبارت دیگری بنویسید.</div>'; }
+  else el.list.innerHTML=part.map(card).join('');
+  $$('details',el.list).forEach(d=>d.addEventListener('toggle',()=>{ const b=$('.body',d); if(d.open&&!b.firstChild){ b.innerHTML=ptsHTML(D.byId[d.closest('article').dataset.id]); } }));
+  el.count.textContent=cur.length?`${fd(cur.length)} مدخل از ${fd(ALL.length)}`:`۰ مدخل از ${fd(ALL.length)}`;
+  const rest=cur.length-part.length; el.more.hidden=rest<=0; el.more.textContent=`نمایش بیشتر (${fd(rest)} مدخل دیگر)`;
+  el.domsel.textContent=S.f.size?`${fd(S.f.size)} حوزه انتخاب شده`:'';
+  $$('#doms .pill').forEach(b=>b.setAttribute('aria-pressed',S.f.has(b.dataset.f)));
+}
+function save(){ setHash({q:S.q,f:[...S.f].join(','),tier:S.tier,flag:S.flag,grade:S.grade,sort:S.sort==='rel'?'':S.sort}); }
+function upd(){ save(); render(true); }
+el.q.addEventListener('input',()=>{S.q=el.q.value; upd();});
+['tier','flag','grade','sort'].forEach(k=>el[k].addEventListener('change',()=>{S[k]=el[k].value; upd();}));
+el.doms.addEventListener('click',e=>{ const b=e.target.closest('.pill'); if(!b) return; const f=b.dataset.f; S.f.has(f)?S.f.delete(f):S.f.add(f); upd(); });
+el.more.addEventListener('click',()=>{ S.shown+=PAGE; render(false); });
+$('#reset').addEventListener('click',()=>{ S.q='';S.f=new Set();S.tier=S.flag=S.grade='';S.sort='rel'; el.q.value='';['tier','flag','grade'].forEach(k=>el[k].value='');el.sort.value='rel'; upd(); });
+const h=DS.hash.get();
+if(h.q){S.q=h.q;el.q.value=h.q;} if(h.f) h.f.split(',').filter(f=>dc[f]).forEach(f=>S.f.add(f));
+['tier','flag','grade'].forEach(k=>{ if(h[k]){S[k]=h[k];el[k].value=h[k];} }); if(h.sort){S.sort=h.sort;el.sort.value=h.sort;}
+render(true);
+</script>
+</body></html>

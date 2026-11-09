@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مقایسهٔ نظریه‌ها و رویکردها</title>
+<meta name="description" content="دو مفهوم ویکی روان را کنار هم بگذارید و پشتوانه و پیوندهایشان را مقایسه کنید.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.what{font-size:1.05rem;color:var(--ink-2);max-width:68ch;margin:0 0 20px}
+.pill{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);min-height:40px;padding:6px 14px;font-size:.9rem;line-height:1.4}
+button.pill:hover{background:var(--surface-subtle);color:var(--ink)}
+.pill[aria-pressed=true],.pill.on{background:var(--primary-soft);border-color:var(--primary);color:var(--primary);font-weight:600}
+.pill:disabled{opacity:.4;cursor:default}
+button.btn2{min-height:44px}
+.ctrls{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px}
+.field{display:grid;gap:4px;font-size:.85rem;color:var(--ink-2)} .field input,.field select{width:100%;min-height:44px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+details.fold{margin-bottom:14px} details.fold>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;color:var(--ink-2);font-size:.9rem}
+.bar{display:flex;gap:2px;height:8px;border-radius:99px;overflow:hidden;background:var(--line)} .bar i{display:block;min-width:4px}
+.t1{background:#2F7D4F}.t2{background:#3C6EA8}.t3{background:#8A6D1D}.t4{background:#8A2E2E}.t0{background:var(--ink-3)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.78rem;color:var(--ink-2);margin-top:6px} .legend .sw{display:inline-block;width:9px;height:9px;border-radius:3px;margin-inline-end:5px}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))} .cards>*{min-width:0}
+.ent{display:flex;flex-direction:column;gap:8px} .ent h3{margin:0;font-size:1.08rem;line-height:1.55} .ent h3 a{color:var(--ink);text-decoration:none} .ent h3 a:hover{color:var(--primary);text-decoration:underline}
+.en{color:var(--ink-3);font-size:.85rem;direction:ltr;text-align:start} .sum{margin:0;font-size:.95rem;color:var(--ink-2);line-height:1.85}
+.pts{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px} .pts li{font-size:.9rem;padding:10px 12px;background:var(--surface-subtle);border-radius:10px;line-height:1.8} .pts .row{margin-top:6px;gap:6px}
+details>summary{cursor:pointer} .ent details summary{min-height:36px;display:flex;align-items:center;color:var(--primary);font-size:.9rem}
+.more{display:block;margin:22px auto 0}
+.count{color:var(--ink-2);font-size:.9rem;margin:6px 0 14px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:6px;background:var(--fam-bio)}
+.note.foot{margin-top:36px}
+mark{background:color-mix(in srgb,var(--warn) 28%,transparent);color:inherit;border-radius:4px;padding:0 3px}
+.toolcards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.toolcard{display:flex;flex-direction:column;gap:8px;border-top:4px solid var(--fam-bio)} .toolcard h3{margin:0;font-size:1.2rem} .toolcard p{margin:0;color:var(--ink-2);font-size:.95rem} .toolcard .btn{align-self:flex-start;margin-top:auto;min-height:44px;display:inline-flex;align-items:center}
+.toolcard.psy{border-top-color:var(--fam-psy)}
+.tag{font-size:.75rem;color:var(--ink-3)}
+@media (max-width:600px){.ctrls{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--line-strong)}}
+
+.pickers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:12px} .pk{display:grid;gap:8px;align-content:start}
+.opts{list-style:none;margin:0;padding:0;display:grid;gap:4px;max-height:260px;overflow:auto} .opts button{width:100%;text-align:start;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;min-height:44px;padding:8px 12px;font-size:.92rem} .opts button:hover{background:var(--primary-soft);color:var(--ink)}
+.picked{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;border-radius:12px;background:var(--primary-soft);border:1px solid var(--primary);min-height:44px} .picked b{font-weight:600}
+.picked button{background:none;border:0;color:var(--primary);padding:6px 10px;min-height:40px} .picked button:hover{background:none;text-decoration:underline;color:var(--primary)}
+.sug{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+table.cmp{table-layout:fixed} table.cmp th:first-child,table.cmp td:first-child{width:28%;color:var(--ink-2);font-weight:600} table.cmp td{word-break:break-word}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px} .two>*{min-width:0} .two h3{margin:0 0 6px;font-size:1.05rem}
+.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px} .rel a{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:4px 12px;border:1px solid var(--line-strong);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--surface);font-size:.88rem} .rel a:hover{border-color:var(--primary)}
+@media (max-width:720px){.pickers,.two{grid-template-columns:1fr} table.cmp th:first-child,table.cmp td:first-child{width:30%}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><nav class="crumb" aria-label="مسیر"><a href="../../index.html">دانش‌سرا</a><span aria-hidden="true">›</span><a href="../index.html">روان</a><span aria-hidden="true">›</span><a href="index.html">ابزارها</a><span aria-hidden="true">›</span><span aria-current="page">مقایسه</span></nav></div></header>
+<main class="wrap" id="main">
+<h1>مقایسهٔ نظریه‌ها و رویکردها</h1>
+<p class="what">دو مفهوم ویکی روان را کنار هم بگذارید و ببینید هر کدام روی چه منبعی ایستاده، چه گزاره‌هایی دارد و در داده چه پیوندی با هم یا با همسایه‌های مشترک دارند. برای وقتی به کارتان می‌آید که می‌خواهید بین دو رویکرد یا ایده قضاوت کنید و فقط «کدام معروف‌تر است» کافی نیست.</p>
+<div class="pickers">
+  <div class="pk" id="pkA"><label class="field">مفهوم نخست<input type="search" placeholder="جستجو و انتخاب…" autocomplete="off" aria-controls="oA"></label><ul class="opts" id="oA"></ul><div class="picked" hidden></div></div>
+  <div class="pk" id="pkB"><label class="field">مفهوم دوم<input type="search" placeholder="جستجو و انتخاب…" autocomplete="off" aria-controls="oB"></label><ul class="opts" id="oB"></ul><div class="picked" hidden></div></div>
+</div>
+<div class="row" style="margin-bottom:14px"><button class="pill" type="button" id="swap">جابه‌جایی دو مفهوم</button><button class="pill" type="button" id="clear">پاک‌کردن</button></div>
+<h2 style="font-size:1.05rem;margin-top:8px">جفت‌های «در برابر» که در داده ثبت شده</h2>
+<div class="sug" id="sug"></div>
+<div id="out" aria-live="polite"></div>
+<div class="note foot" role="note">این ابزار پیش‌نویس است و محتوای مدخل‌ها بازبینی نشده. برچسب‌های اعتبار فقط از ردهٔ منبعِ ثبت‌شده و پرچم‌های داده محاسبه می‌شوند، نه از ارزیابی تازه؛ برای تصمیم مهم به خود منبع‌ها برگردید. مقایسه فقط بر پایهٔ دادهٔ ثبت‌شده است؛ نبودن پیوند به معنای نبودن رابطه نیست.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · محتوا از دادهٔ مشترک ویکی‌ها (core/tools/data.json) خوانده می‌شود.</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script type="module">
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=DS.esc, fd=DS.faDigits;
+const TIERS=[1,2,3,4,0], FLAGS=['unreplicated','contested','dated','editor-note'];
+let D;
+const mainEl=$('#main');
+function fail(e){
+  console.warn(e);
+  mainEl.innerHTML='<div class="empty" role="alert"><p>بارگذاری داده ناموفق بود. اتصال خود را بررسی کنید یا صفحه را دوباره باز کنید.</p><button id="retry" class="btn">تلاش دوباره</button></div>';
+  const b=$('#retry'); if(b) b.onclick=()=>location.reload();
+}
+try{ D=await DS.load(); }catch(e){ fail(e); throw e; }
+const pre=c=>{ if(!c._st){ c._st=DS.stats(c); c._g=DS.grade(c); } return c; };
+const domOf=c=> c.field&&D.fieldById[c.field]? D.fieldById[c.field].t.fa : 'سایر';
+function bar(st){
+  if(!st.n) return '<span class="muted">این مدخل هنوز گزارهٔ منبع‌دار ندارد.</span>';
+  const ks=TIERS.filter(k=>st.tiers[k]);
+  return `<div class="bar" role="img" aria-label="${esc(ks.map(k=>DS.TIER[k]+' '+fd(st.tiers[k])).join('، '))}">${ks.map(k=>`<i class="t${k}" style="flex:${st.tiers[k]}"></i>`).join('')}</div>
+  <div class="legend">${ks.map(k=>`<span><b class="sw t${k}"></b>${esc(DS.TIER[k])} ${fd(st.tiers[k])}</span>`).join('')}</div>`;
+}
+function flagsRow(st){ const f=FLAGS.filter(x=>st.flags[x]); return f.length?`<div class="row" style="gap:6px">${f.map(x=>`<span class="flag ${x}">${esc(DS.FLAG[x])} ${fd(st.flags[x])}</span>`).join('')}</div>`:''; }
+function ptHTML(p){ return `<li>${esc(p.t)}<div class="row">${DS.chipTier(p.tier||0)}${(p.f||[]).map(DS.chipFlag).join('')}</div></li>`; }
+function ptsHTML(c,lim){ const a=lim?c.pts.slice(0,lim):c.pts; return a.length?`<ul class="pts">${a.map(ptHTML).join('')}</ul>`:'<p class="muted">گزارهٔ منبع‌دار ثبت نشده است.</p>'; }
+function setHash(o){ const r={}; for(const k in o){ const v=o[k]; if(v!==''&&v!=null&&v!==false) r[k]=v; } DS.hash.set(r); }
+const collator=new Intl.Collator('fa');
+
+const P=D.concepts.filter(c=>c.w==='psy'&&c.field).map(pre);
+const adj=new Map(); D.concepts.forEach(c=>(c.lk||[]).forEach(([to,rel])=>{ if(!D.byId[to]) return; (adj.get(c.id)||adj.set(c.id,new Map()).get(c.id)).set(to,rel); (adj.get(to)||adj.set(to,new Map()).get(to)); }));
+const S={a:'',b:''};
+function opts(side){
+  const box=$('#pk'+side), inp=$('input',box), ul=$('#o'+side);
+  const q=inp.value.trim();
+  if(!q){ ul.innerHTML=''; return; }
+  const r=DS.search(D,q,c=>c.w==='psy'&&c.field).slice(0,8);
+  ul.innerHTML=r.length?r.map(c=>`<li><button type="button" data-id="${esc(c.id)}">${esc(c.t.fa)} <span class="muted">· ${esc(domOf(c))}</span></button></li>`).join(''):'<li class="muted" style="padding:8px">چیزی پیدا نشد.</li>';
+}
+['A','B'].forEach(s=>{
+  const box=$('#pk'+s);
+  $('input',box).addEventListener('input',()=>opts(s));
+  $('#o'+s).addEventListener('click',e=>{ const b=e.target.closest('[data-id]'); if(!b) return; S[s.toLowerCase()]=b.dataset.id; $('input',box).value=''; update(); });
+  $('.picked',box).addEventListener('click',e=>{ if(e.target.closest('button')){ S[s.toLowerCase()]=''; update(); } });
+});
+$('#swap').onclick=()=>{ [S.a,S.b]=[S.b,S.a]; update(); };
+$('#clear').onclick=()=>{ S.a=S.b=''; update(); };
+const pairs=[]; { const seen=new Set(); P.forEach(c=>(c.lk||[]).forEach(([to,rel])=>{ const o=D.byId[to]; if(rel!=='contrasts'||!o||o.w!=='psy'||!o.field) return; const k=[c.id,to].sort().join('|'); if(seen.has(k)) return; seen.add(k); pairs.push([c.id,to]); })); }
+$('#sug').innerHTML=pairs.length?pairs.map(([a,b],i)=>`<button type="button" class="pill" data-i="${i}">${esc(D.byId[a].t.fa)} ⇄ ${esc(D.byId[b].t.fa)}</button>`).join(''):'<span class="muted">جفتی ثبت نشده است.</span>';
+$('#sug').addEventListener('click',e=>{ const b=e.target.closest('[data-i]'); if(!b) return; [S.a,S.b]=pairs[+b.dataset.i]; update(); window.scrollTo({top:$('#out').offsetTop-80,behavior:'smooth'}); });
+const pct=x=>fd(Math.round(x*100))+'٪';
+function col(c){ const st=c._st; return {
+  dom:esc(domOf(c)), grade:DS.chipGrade(c._g), n:fd(st.n), best:st.best?esc(DS.TIER[st.best]):'بی‌منبع', strong:st.n?pct(st.strong):'–', cont:st.n?pct(st.contested):'–',
+  fl:FLAGS.filter(f=>st.flags[f]).map(f=>`<span class="flag ${f}">${esc(DS.FLAG[f])} ${fd(st.flags[f])}</span>`).join(' ')||'–' }; }
+function ptsBlock(c){ return `<div class="card"><h3><a href="${esc(DS.url(D,c))}">${esc(c.t.fa)}</a></h3>${c.t.en?`<div class="en" lang="en">${esc(c.t.en)}</div>`:''}<p class="sum">${esc(c.s.fa)}</p>${bar(c._st)}${flagsRow(c._st)}${c._st.n?`<details style="margin-top:8px"><summary style="min-height:40px;display:flex;align-items:center;color:var(--primary)">گزاره‌ها (${fd(c._st.n)})</summary>${ptsHTML(c)}</details>`:''}</div>`; }
+function out(){
+  const o=$('#out'); const A=D.byId[S.a], B=D.byId[S.b];
+  if(!A||!B){ o.innerHTML='<div class="empty">دو مفهوم انتخاب کنید (یا یکی از جفت‌های بالا را بزنید) تا مقایسه اینجا بیاید.</div>'; return; }
+  if(A===B){ o.innerHTML='<div class="empty">دو مفهوم یکی‌اند؛ مفهوم دیگری برای مقایسه برگزینید.</div>'; return; }
+  const a=col(A), b=col(B);
+  const rows=[['حوزه','dom'],['برچسب اعتبار','grade'],['تعداد گزاره‌های منبع‌دار','n'],['بهترین ردهٔ منبع','best'],['سهم گزاره‌های فراتحلیل یا مقالهٔ داوری‌شده','strong'],['سهم گزاره‌های تکرارنشده، محل‌بحث یا قدیمی','cont'],['پرچم‌ها','fl']];
+  const direct=[]; const ra=(adj.get(A.id)||new Map()).get(B.id), rb=(adj.get(B.id)||new Map()).get(A.id);
+  if(ra) direct.push(`«${esc(A.t.fa)}» ← ${esc(DS.REL[ra]||ra)} ← «${esc(B.t.fa)}»`);
+  if(rb) direct.push(`«${esc(B.t.fa)}» ← ${esc(DS.REL[rb]||rb)} ← «${esc(A.t.fa)}»`);
+  const nb=id=>{ const s=new Set((adj.get(id)||new Map()).keys()); D.concepts.forEach(c=>{ if((c.lk||[]).some(l=>l[0]===id)) s.add(c.id); }); return s; };
+  const na=nb(A.id), nbb=nb(B.id); const shared=[...na].filter(x=>nbb.has(x)&&x!==A.id&&x!==B.id&&D.byId[x]);
+  o.innerHTML=`<div class="card scroll"><table class="cmp"><thead><tr><th></th><th>${esc(A.t.fa)}</th><th>${esc(B.t.fa)}</th></tr></thead><tbody>${rows.map(([l,k])=>`<tr><td>${l}</td><td>${a[k]}</td><td>${b[k]}</td></tr>`).join('')}</tbody></table></div>
+  <div class="two">${ptsBlock(A)}${ptsBlock(B)}</div>
+  <div class="card" style="margin-top:14px"><h3 style="margin:0 0 6px;font-size:1.05rem">پیوند در داده</h3>
+   ${direct.length?`<p style="margin:0 0 6px">پیوند مستقیم: ${direct.join('؛ ')}</p>`:'<p class="muted" style="margin:0 0 6px">پیوند مستقیمی میان این دو در داده ثبت نشده است.</p>'}
+   ${shared.length?`<p style="margin:0">همسایه‌های مشترک (مفهوم‌هایی که هر دو به آن‌ها پیوند دارند یا از آن‌ها پیوند گرفته‌اند):</p><div class="rel">${shared.slice(0,16).map(id=>{ const c=D.byId[id]; return `<a href="${esc(DS.url(D,c))}"><span class="chip ${c.w}">${esc(DS.WIKI[c.w])}</span>${esc(c.t.fa)}</a>`; }).join('')}</div>`:'<p class="muted" style="margin:0">همسایهٔ مشترکی ثبت نشده است.</p>'}</div>`;
+}
+function update(){
+  ['A','B'].forEach(s=>{ const box=$('#pk'+s), id=S[s.toLowerCase()], pk=$('.picked',box), c=D.byId[id];
+    pk.hidden=!c; $('label',box).hidden=!!c; $('#o'+s).innerHTML=''; if(c) pk.innerHTML=`<span><b>${esc(c.t.fa)}</b> <span class="muted">· ${esc(domOf(c))}</span></span><button type="button" aria-label="برداشتن ${esc(c.t.fa)}">برداشتن</button>`; });
+  out(); setHash({a:S.a,b:S.b});
+}
+const h=DS.hash.get(); if(h.a&&D.byId[h.a]) S.a=h.a; if(h.b&&D.byId[h.b]) S.b=h.b;
+update();
+</script>
+</body></html>
