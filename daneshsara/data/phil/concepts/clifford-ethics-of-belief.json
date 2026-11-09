@@ -1,0 +1,135 @@
+{
+ "id": "phil:clifford-ethics-of-belief",
+ "kind": "concept",
+ "title": {
+  "fa": "اخلاق باور: کلیفورد و نقد اسمارت",
+  "en": "The ethics of belief: Clifford and Smart's critique",
+  "nl": "De ethiek van het geloof: Clifford en Smarts kritiek"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "آیا باور بدون شواهد کافی از نظر اخلاقی نادرست است؟ کلیفورد می‌گوید همیشه؛ اسمارت این را قابل‌قبول و در عین حال بیش از حد سخت‌گیرانه می‌یابد.",
+  "en": "Is believing without sufficient evidence morally wrong? Clifford says always; Smart finds the idea attractive but too strict."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ویلیام کلیفورد، ریاضی‌دان بریتانیایی، مقاله‌ای به نام «اخلاق باور» در ۱۸۷۷ منتشر کرد. او برای مثال از صاحب کشتیِ مسافری فرتوتی گفت که با خوش‌باوری بدون بازرسی مطمئن می‌شود کشتی سالم است.",
+    "en": "The British mathematician W. K. Clifford published 'The Ethics of Belief' in 1877. His example is a shipowner who, with a decaying passenger ship, convinces himself without inspection that it is sound.",
+    "nl": "The British mathematician W. K. Clifford published 'The Ethics of Belief' in 1877. His example is a shipowner who, with a decaying passenger ship, convinces himself without inspection that it is sound."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به نظر کلیفورد حتی اگر کشتی سالم برسد، مالک باز هم مقصر است؛ چون باورش بر پایهٔ شواهد ساخته نشده بود. معیار او رفتار باورمند است، نه نتیجهٔ اتفاقی.",
+    "en": "For Clifford the owner is still guilty even if the ship arrives safely, because the belief was not built on evidence. The test is how the belief was formed, not the lucky outcome.",
+    "nl": "For Clifford the owner is still guilty even if the ship arrives safely, because the belief was not built on evidence. The test is how the belief was formed, not the lucky outcome."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اسمارت می‌گوید قاعدهٔ کلیفورد در عمل بیش از حد قوی است: بخش بزرگ دانش ما بر گواهیِ دیگران استوار است و هیچ‌کس شخصاً همهٔ آن را آزموده نیست؛ حتی خود کلیفورد به شیمی‌دانان اعتماد می‌کرد.",
+    "en": "Smart argues that Clifford's rule is too strong in practice: much of our knowledge rests on the testimony of others and no one has tested it all personally; Clifford himself trusted chemists.",
+    "nl": "Smart argues that Clifford's rule is too strong in practice: much of our knowledge rests on the testimony of others and no one has tested it all personally; Clifford himself trusted chemists."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده این را با دیدگاه تجربه‌گرایانهٔ کلیفورد و بحث پوپر دربارهٔ ابطال‌پذیری پیوند می‌دهد: برای او نظریه‌های علمی فقط ابطال می‌شوند و هیچ‌گاه کاملاً ثابت نمی‌شوند؛ این برداشت دربارهٔ علم را برخی فیلسوفان به نقد کشیده‌اند.",
+    "en": "He links this to Clifford's empiricism and Popper's falsifiability: scientific theories can be refuted but never fully proved. Some philosophers have criticised this picture of science.",
+    "nl": "He links this to Clifford's empiricism and Popper's falsifiability: scientific theories can be refuted but never fully proved. Some philosophers have criticised this picture of science."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقاله می‌گوید حتی علم مثل کشتی نویرات است که در دریا باید بازسازی شود: ما نمی‌توانیم همهٔ باورها را همزمان بیرون بریزیم و از صفر شروع کنیم.",
+    "en": "The article says even science is like Neurath's boat, repaired at sea: we cannot discard all beliefs at once and start from zero.",
+    "nl": "The article says even science is like Neurath's boat, repaired at sea: we cannot discard all beliefs at once and start from zero."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برخی فیلسوفان (مثلاً ویلیام جیمز در «اراده به باور») مخالف کلیفورد بودند و در شرایط معینی باور بدون شواهد قطعی را روا می‌دانستند؛ این اختلاف همچنان در معرفت‌شناسی باز است.",
+    "en": "Some philosophers, such as William James in 'The Will to Believe', opposed Clifford and allowed belief without conclusive evidence in some conditions; the dispute is still open in epistemology.",
+    "nl": "Some philosophers, such as William James in 'The Will to Believe', opposed Clifford and allowed belief without conclusive evidence in some conditions; the dispute is still open in epistemology."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:falsification",
+   "rel": "see-also",
+   "note": {
+    "fa": "ابطال‌پذیری پوپر",
+    "en": "Popper's falsifiability",
+    "nl": "Popper's falsifiability"
+   }
+  },
+  {
+   "to": "phil:gettier",
+   "rel": "see-also",
+   "note": {
+    "fa": "ارتباط با تعریف «دانش»",
+    "en": "relation to defining knowledge",
+    "nl": "relation to defining knowledge"
+   }
+  },
+  {
+   "to": "phil:epistemology",
+   "rel": "part-of",
+   "note": {
+    "fa": "معرفت‌شناسی",
+    "en": "epistemology",
+    "nl": "epistemology"
+   }
+  },
+  {
+   "to": "phil:atheism-agnosticism-terms",
+   "rel": "see-also",
+   "note": {
+    "fa": "کاربرد در بحث خداناباوری",
+    "en": "applied to the atheism debate",
+    "nl": "applied to the atheism debate"
+   }
+  }
+ ],
+ "people": [
+  "core:william-kingdon-clifford",
+  "core:karl-popper"
+ ],
+ "sources": [
+  "src:da5b2db461"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

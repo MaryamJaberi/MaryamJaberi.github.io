@@ -1,0 +1,92 @@
+{
+ "id": "soc:balance-sheet-equation",
+ "kind": "concept",
+ "title": {
+  "fa": "ترازنامه: دارایی‌ها، بدهی‌ها و حقوق صاحبان سهام",
+  "en": "The balance sheet: assets, liabilities and shareholders' equity",
+  "nl": "De balans: activa, passiva en eigen vermogen"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "ترازنامه تصویری از وضعیت مالی یک شرکت در یک لحظه است و بر معادلهٔ «دارایی = بدهی + حقوق صاحبان سهام» استوار است.",
+  "en": "The balance sheet is a snapshot of a firm's financial position at one moment, built on the equation assets = liabilities + shareholders' equity.",
+  "nl": "De balans is een momentopname van de financiële positie van een bedrijf, gebaseerd op activa = schulden + eigen vermogen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ترازنامه اقلام دارایی، بدهی و حقوق صاحبان سهام را در یک تاریخ مشخص (معمولاً پایان سال مالی) نشان می‌دهد و بر پایهٔ معادلهٔ دارایی = بدهی + سرمایه تنظیم می‌شود.",
+    "en": "The balance sheet shows assets, liabilities and equity on a given date (usually fiscal year-end) and rests on assets = liabilities + capital.",
+    "nl": "The balance sheet shows assets, liabilities and equity on a given date (usually fiscal year-end) and rests on assets = liabilities + capital."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دارایی باید منبع منافع آیندهٔ شرکت باشد، در کنترل شرکت باشد و بتوان آن را به پول تبدیل کرد؛ دارایی‌ها به جاری (نقد، حساب‌های دریافتنی، موجودی کالا، سرمایه‌گذاری کوتاه‌مدت) و غیرجاری (زمین، ساختمان، ماشین‌آلات، دارایی‌های نامشهود مانند حق اختراع) تقسیم می‌شوند.",
+    "en": "An asset must be a source of future benefit, under the firm's control and convertible into money; assets split into current (cash, receivables, inventory, short-term investments) and non-current (land, buildings, machinery, intangibles such as patents).",
+    "nl": "An asset must be a source of future benefit, under the firm's control and convertible into money; assets split into current (cash, receivables, inventory, short-term investments) and non-current (land, buildings, machinery, intangibles such as patents)."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بدهی‌ها به جاری (سررسید کمتر از یک سال یا یک چرخهٔ عملیاتی) و بلندمدت تقسیم می‌شوند؛ حقوق صاحبان سهام از آورده‌های سهامداران و سودهای انباشته و اندوخته‌ها تشکیل می‌شود.",
+    "en": "Liabilities split into current (due within a year or an operating cycle) and long-term; equity comes from shareholder contributions, retained earnings and reserves.",
+    "nl": "Liabilities split into current (due within a year or an operating cycle) and long-term; equity comes from shareholder contributions, retained earnings and reserves."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارقام ترازنامه بر پایهٔ بهای تمام‌شدهٔ تاریخی ثبت می‌شوند و لزوماً ارزش روز را نشان نمی‌دهند؛ جزوه این را به‌درستی یادآور می‌شود و به همین دلیل ارزش دفتری با ارزش بازار یکی نیست.",
+    "en": "Balance-sheet figures are recorded at historical cost and do not necessarily show current value; the booklet notes this, which is why book value differs from market value.",
+    "nl": "Balance-sheet figures are recorded at historical cost and do not necessarily show current value; the booklet notes this, which is why book value differs from market value."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:fundamental-analysis-intrinsic-value",
+   "rel": "explains",
+   "note": {
+    "fa": "تحلیل بنیادی بر صورت‌های مالی تکیه دارد",
+    "en": "Fundamental analysis relies on financial statements",
+    "nl": "Fundamental analysis relies on financial statements"
+   }
+  },
+  {
+   "to": "soc:income-statement-operating-vs-non",
+   "rel": "see-also",
+   "note": {
+    "fa": "ترازنامه لحظه‌ای است و صورت سود و زیان دوره‌ای",
+    "en": "The balance sheet is a point in time, the income statement covers a period",
+    "nl": "The balance sheet is a point in time, the income statement covers a period"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:db28320e57"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

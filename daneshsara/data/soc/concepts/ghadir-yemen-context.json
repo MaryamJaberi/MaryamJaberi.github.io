@@ -1,0 +1,95 @@
+{
+ "id": "soc:ghadir-yemen-context",
+ "kind": "concept",
+ "title": {
+  "fa": "زمینهٔ شکایت‌ها از علی پیش از غدیر، به روایت یک جزوهٔ منتقد",
+  "en": "Complaints against Ali before Ghadir, as told by a critical pamphlet",
+  "nl": "Klachten over Ali vóór Ghadir volgens een kritisch pamflet"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "جزوه می‌گوید سخن غدیر پاسخی به نارضایتی همراهان علی از رفتار او در سفر یمن بود، نه اعلام جانشینی. این برداشت یکی از قرائت‌های رقیب است.",
+  "en": "The pamphlet says the Ghadir statement answered grievances of Ali's companions about his conduct on the Yemen mission, not a succession announcement. This is one competing reading.",
+  "nl": "Het pamflet stelt dat de uitspraak bij Ghadir een antwoord was op klachten over Ali's optreden in Jemen, geen opvolgingsaankondiging."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "جزوه روایت می‌کند که در سفر یمن میان علی و خالد بن ولید اختلاف پیش آمد و علی از غنایم کنیزی برای خود برگزید؛ همراهان نزد پیامبر شکایت بردند.",
+    "en": "The pamphlet recounts a dispute between Ali and Khalid ibn al-Walid on the Yemen mission, in which Ali took a slave woman from the spoils; companions complained to the Prophet.",
+    "nl": "The pamphlet recounts a dispute between Ali and Khalid ibn al-Walid on the Yemen mission, in which Ali took a slave woman from the spoils; companions complained to the Prophet."
+   },
+   "sources": [
+    "src:2cb8478cd4"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "همچنین از شکایت سربازان دربارهٔ استفادهٔ علی از جامه‌ها و شترهای بیت‌المال سخن می‌گوید و نتیجه می‌گیرد که پیامبر در غدیر خواست دلخوری‌ها را فرو بنشاند و محبت به علی را یادآوری کند.",
+    "en": "It also describes soldiers' complaints about Ali's handling of garments and camels from the common stock, concluding that at Ghadir the Prophet wanted to calm resentment and urge affection for Ali.",
+    "nl": "It also describes soldiers' complaints about Ali's handling of garments and camels from the common stock, concluding that at Ghadir the Prophet wanted to calm resentment and urge affection for Ali."
+   },
+   "sources": [
+    "src:2cb8478cd4"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "جزوه در توصیف دشمنان و منتقدان لحن تند و جانبدارانه دارد و ادعاها را با ارجاع گزینشی (سیرهٔ ابن‌هشام، واقدی) می‌آورد.",
+    "en": "The pamphlet uses sharp, partisan language about opponents and cites sources (Ibn Hisham's Sira, al-Waqidi) selectively.",
+    "nl": "The pamphlet uses sharp, partisan language about opponents and cites sources (Ibn Hisham's Sira, al-Waqidi) selectively."
+   },
+   "sources": [
+    "src:2cb8478cd4"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پیوند حدیث غدیر با ماجرای یمن در برخی روایت‌ها و در بخشی از پژوهش‌ها مطرح شده، اما بیشتر محققان آن را تنها توضیح ممکن نمی‌دانند؛ شیعه این ارتباط را کافی برای کنار گذاشتن معنای جانشینی نمی‌داند. باید روایت‌ها را جداگانه سنجید.",
+    "en": "Some reports and some scholars link the Ghadir tradition to the Yemen episode, but most do not treat it as the only possible explanation, and Shia argue it does not rule out a succession meaning. The reports should be weighed individually.",
+    "nl": "Some reports and some scholars link the Ghadir tradition to the Yemen episode, but most do not treat it as the only possible explanation, and Shia argue it does not rule out a succession meaning. The reports should be weighed individually."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:ghadir-mawla-argument",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از استدلال کلی جزوه دربارهٔ غدیر",
+    "en": "Part of the pamphlet's overall Ghadir argument",
+    "nl": "Part of the pamphlet's overall Ghadir argument"
+   }
+  }
+ ],
+ "people": [
+  "core:khalid-ibn-al-walid"
+ ],
+ "sources": [
+  "src:2cb8478cd4"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

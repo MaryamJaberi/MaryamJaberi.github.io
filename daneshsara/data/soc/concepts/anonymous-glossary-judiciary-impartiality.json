@@ -1,0 +1,101 @@
+{
+ "id": "soc:anonymous-glossary-judiciary-impartiality",
+ "kind": "concept",
+ "title": {
+  "fa": "بی‌طرفی قاضی و کارکرد دادگاه از دید جزوهٔ «فرهنگ لغت»",
+  "en": "Judicial impartiality and the function of courts in the 'Farhang-e Loghat' pamphlet",
+  "nl": "Onpartijdigheid van de rechter en de rol van rechtbanken in het pamflet 'Farhang-e Loghat'"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "نویسندهٔ ناشناس با تعریف ساده‌ای از قاضی و دادگاه، مدعی می‌شود دادگاه‌های سیاسی و امنیتی در ایران بی‌طرف نیستند. این مدخل ادعا را به‌عنوان دیدگاه نویسنده گزارش و با معیارهای دانشگاهی مقایسه می‌کند.",
+  "en": "With simple definitions of judge and court, the anonymous author claims that political and security trials in Iran are not impartial. The entry reports this as the author's view and sets it against academic criteria.",
+  "nl": "Met eenvoudige definities van rechter en rechtbank beweert de anonieme auteur dat politieke en veiligheidsprocessen in Iran niet onpartijdig zijn; weergegeven als standpunt van de auteur."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید قاضی باید به هیچ‌یک از طرفین وابسته نباشد، هر دو طرف و شاهدان را بشنود و فقط بر پایهٔ مدارک و قانون حکم دهد؛ پس قاضیِ وابسته، قاضی به‌معنای واقعی نیست.",
+    "en": "The author says a judge must be independent of both parties, hear both sides and witnesses, and rule only on evidence and law; a dependent judge is therefore not truly a judge.",
+    "nl": "The author says a judge must be independent of both parties, hear both sides and witnesses, and rule only on evidence and law; a dependent judge is therefore not truly a judge."
+   },
+   "sources": [
+    "src:c535ca8a86"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او مدعی است در پرونده‌های سیاسی و امنیتی یک طرف دعوا خود حکومت است و همان نظام قاضی را تعیین می‌کند، بنابراین رأی «از پیش معین» است و دادگاه جایی نیست که صدای شاکی شنیده شود. این ادعا در جزوه با مثال کلی آمده و سند یا آمار مشخص ندارد.",
+    "en": "He claims that in political and security cases the state is itself a party and also appoints the judge, so the verdict is 'decided in advance' and the court is not a place where a complainant is heard. The pamphlet offers general illustrations, with no specific documents or statistics.",
+    "nl": "He claims that in political and security cases the state is itself a party and also appoints the judge, so the verdict is 'decided in advance' and the court is not a place where a complainant is heard. The pamphlet offers general illustrations, with no specific documents or statistics."
+   },
+   "sources": [
+    "src:c535ca8a86"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نویسنده دیوان عالی کشور را هم از همین زاویه زیر سؤال می‌برد و می‌گوید فرجام‌خواهی چیزی را تغییر نمی‌دهد؛ این نیز ادعای او و بی‌ارجاع است.",
+    "en": "The author questions the Supreme Court on the same grounds, saying appeals change nothing; this too is his unreferenced claim.",
+    "nl": "The author questions the Supreme Court on the same grounds, saying appeals change nothing; this too is his unreferenced claim."
+   },
+   "sources": [
+    "src:c535ca8a86"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه رایج دانشگاهی: استقلال و بی‌طرفی قضایی معیار شناخته‌شدهٔ دادرسی عادلانه است، و نهادهای بین‌المللی حقوق بشر دربارهٔ دادرسی پرونده‌های سیاسی و امنیتی در ایران نگرانی گزارش کرده‌اند؛ مقامات ایران این انتقادها را رد و دادگاه‌ها را مستقل و قانونی می‌دانند. برای داوری دربارهٔ پرونده‌ها باید به گزارش‌های مستند، حکم‌ها و پژوهش‌های داوری‌شده رجوع کرد نه به یک جزوهٔ بی‌نام.",
+    "en": "Mainstream academic view: judicial independence and impartiality are standard criteria of a fair trial, and international human-rights bodies have reported concerns about the handling of political and security cases in Iran; Iranian officials reject this criticism and describe the courts as independent and lawful. Judging particular cases calls for documented reports, rulings and peer-reviewed research, not an unsigned pamphlet.",
+    "nl": "Mainstream academic view: judicial independence and impartiality are standard criteria of a fair trial, and international human-rights bodies have reported concerns about the handling of political and security cases in Iran; Iranian officials reject this criticism and describe the courts as independent and lawful. Judging particular cases calls for documented reports, rulings and peer-reviewed research, not an unsigned pamphlet."
+   },
+   "sources": [
+    "src:c535ca8a86"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "نهادها و دولت",
+    "en": "Institutions and the state",
+    "nl": "Institutions and the state"
+   }
+  },
+  {
+   "to": "phil:political",
+   "rel": "see-also",
+   "note": {
+    "fa": "فلسفهٔ سیاسی: مشروعیت و حاکمیت قانون",
+    "en": "Political philosophy: legitimacy and the rule of law",
+    "nl": "Political philosophy: legitimacy and the rule of law"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:c535ca8a86"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

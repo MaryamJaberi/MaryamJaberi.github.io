@@ -1,0 +1,115 @@
+{
+ "id": "phil:fine-tuning-bayesian",
+ "kind": "concept",
+ "title": {
+  "fa": "استدلال تنظیم ظریف و نسخهٔ بیزی آن",
+  "en": "The fine-tuning argument and its Bayesian form",
+  "nl": "Het fine-tuningargument en de Bayesiaanse vorm ervan"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "برخی ثابت‌های فیزیکی در بازهٔ باریکی هستند که حیات را ممکن می‌کند. اسمارت می‌پرسد آیا این شاهدی به سود خداست؛ پاسخ او: شاید اندکی، نه چندان.",
+  "en": "Some physical constants lie in a narrow range that allows life. Smart asks whether this favours God; his answer: perhaps slightly, not much."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ثابت‌های بنیادی فیزیک و کیهان‌شناسی ظاهراً چنان‌اند که اگر اندکی فرق می‌کردند، کهکشان، ستاره و حیات پدید نمی‌آمد؛ برخی خداباوران این را نشانهٔ طراحی می‌دانند.",
+    "en": "The fundamental constants of physics and cosmology seem such that small changes would rule out galaxies, stars and life; some theists read this as a sign of design.",
+    "nl": "The fundamental constants of physics and cosmology seem such that small changes would rule out galaxies, stars and life; some theists read this as a sign of design."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نسخهٔ بیزی چنین است: اگر فرضیه h (وجود خالقی که حیات و آگاهی را می‌خواهد) شاهد e (تنظیم ظریف) را بهتر از رقیب‌های طبیعی توضیح دهد، باور به h معقول‌تر می‌شود. نویسنده این را بسیار شبیه استنتاج به بهترین تبیین می‌بیند.",
+    "en": "The Bayesian version: if hypothesis h (a creator who wants life and awareness) explains evidence e (fine-tuning) better than natural rivals, belief in h becomes more reasonable. The author sees this as close to inference to the best explanation.",
+    "nl": "The Bayesian version: if hypothesis h (a creator who wants life and awareness) explains evidence e (fine-tuning) better than natural rivals, belief in h becomes more reasonable. The author sees this as close to inference to the best explanation."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اسمارت می‌گوید حتی در بهترین حالت، این شاهد احتمالِ خداباوری را فقط اندکی بالا می‌برد؛ زیرا احتمال پیشین خدای هدف‌مند اصلاً بالا نیست و اهداف او نیز می‌توانستند به هزار شکل دیگر برآورده شوند.",
+    "en": "Smart says that even at best this evidence raises the probability of theism only slightly, since the prior of a purposive God is not high and his aims could be met in countless other ways.",
+    "nl": "Smart says that even at best this evidence raises the probability of theism only slightly, since the prior of a purposive God is not high and his aims could be met in countless other ways."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جایگزین طبیعی این است که جهان‌های بسیار با ثابت‌های گوناگون وجود داشته باشند و ما طبعاً در یکی از جهان‌های سازگار با حیات باشیم. نویسنده می‌پذیرد که چنین فرضیه‌ای فعلاً آزمون‌پذیر نیست و باید با احتیاط دید.",
+    "en": "The natural alternative is many universes with differing constants, with us naturally in a life-friendly one. The author admits such a hypothesis is not currently testable and should be treated cautiously.",
+    "nl": "The natural alternative is many universes with differing constants, with us naturally in a life-friendly one. The author admits such a hypothesis is not currently testable and should be treated cautiously."
+   },
+   "sources": [
+    "src:da5b2db461"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تنظیم ظریف و فرضیهٔ چندجهانی هر دو مناقشه‌برانگیزند. برخی فیزیکدانان و فیلسوفان استدلال را بی‌اعتبار می‌شمارند (مثلاً به دلیل مشکل تعریف احتمال برای ثابت‌ها)، و گروهی آن را جدی می‌گیرند.",
+    "en": "Both fine-tuning and the multiverse are disputed. Some physicists and philosophers reject the argument (for instance because probability over constants is ill-defined), while others take it seriously.",
+    "nl": "Both fine-tuning and the multiverse are disputed. Some physicists and philosophers reject the argument (for instance because probability over constants is ill-defined), while others take it seriously."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:science",
+   "rel": "part-of",
+   "note": {
+    "fa": "فلسفهٔ علم",
+    "en": "philosophy of science",
+    "nl": "philosophy of science"
+   }
+  },
+  {
+   "to": "phil:fallacies",
+   "rel": "see-also",
+   "note": {
+    "fa": "مراقب مغالطه‌های احتمالاتی",
+    "en": "watch for probability fallacies",
+    "nl": "watch for probability fallacies"
+   }
+  },
+  {
+   "to": "phil:atheism-agnosticism-terms",
+   "rel": "see-also",
+   "note": {
+    "fa": "زمینهٔ بحث خداباوری",
+    "en": "background of the theism debate",
+    "nl": "background of the theism debate"
+   }
+  }
+ ],
+ "people": [
+  "core:neil-a-manson",
+  "core:thomas-bayes"
+ ],
+ "sources": [
+  "src:da5b2db461"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

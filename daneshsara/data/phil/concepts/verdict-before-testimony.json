@@ -1,0 +1,115 @@
+{
+ "id": "phil:verdict-before-testimony",
+ "kind": "concept",
+ "title": {
+  "fa": "حکم پیش از گواهی: وقتی دادگاه نتیجه را از قبل می‌داند",
+  "en": "Verdict before testimony: when the court already knows the outcome",
+  "nl": "Vonnis vóór getuigenis: wanneer de rechtbank de uitkomst al kent"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "در نمایشنامه سرداران پیش از شنیدن آسیابان حکم کشتن داده‌اند و گواهی را فقط وقتی می‌پذیرند که با حکم بخواند؛ مثالی ادبی از چگونگی ساخته‌شدن «حقیقت» زیر فشار قدرت.",
+  "en": "In the play the commanders sentence the miller before hearing him and accept testimony only when it fits the verdict, a literary illustration of how 'truth' is shaped under pressure from power.",
+  "nl": "In het stuk veroordelen de bevelhebbers de molenaar voordat ze hem horen en accepteren ze alleen getuigenis dat bij het vonnis past; een literair voorbeeld van hoe 'waarheid' onder machtsdruk wordt gevormd."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سردار در همان آغاز حکم مرگ را می‌خواند و شکنجه را برمی‌شمارد، پیش از آنکه آسیابان حرفی بزند.",
+    "en": "The commander announces the death sentence and its tortures at the very start, before the miller has said anything.",
+    "nl": "The commander announces the death sentence and its tortures at the very start, before the miller has said anything."
+   },
+   "sources": [
+    "src:b842e9a104"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وقتی آسیابان بی‌گناهی‌اش را می‌گوید، موبد می‌گوید باور نکردنی است که او شاه را نکشته باشد، و فقط اعترافِ کشتن را «راستی» می‌شمارد.",
+    "en": "When the miller states his innocence the priest calls it unbelievable that he did not kill the king, and treats only the confession as 'the truth'.",
+    "nl": "When the miller states his innocence the priest calls it unbelievable that he did not kill the king, and treats only the confession as 'the truth'."
+   },
+   "sources": [
+    "src:b842e9a104"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آسیابان زیر فشار اعتراف می‌کند و بعد آن را پس می‌گیرد؛ نمایشنامه نشان می‌دهد اعتراف می‌تواند ساختهٔ ترس و سودجویی باشد، نه شاهد وقوع.",
+    "en": "Under pressure the miller confesses and later retracts; the play shows a confession can be produced by fear and interest rather than being evidence of what happened.",
+    "nl": "Under pressure the miller confesses and later retracts; the play shows a confession can be produced by fear and interest rather than being evidence of what happened."
+   },
+   "sources": [
+    "src:b842e9a104"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "سرکرده می‌گوید تاریخ را پیروزشدگان می‌نویسند؛ این جمله سخن یک شخصیت است و در پژوهش تاریخ کلیِ همیشه‌درست نیست و به‌صورت سنجش‌پذیر ثابت نشده.",
+    "en": "A character says history is written by the victors; this is a character's line and as a general rule in historical scholarship it is a rough saying rather than an established finding.",
+    "nl": "A character says history is written by the victors; this is a character's line and as a general rule in historical scholarship it is a rough saying rather than an established finding."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهش‌های روان‌شناسی قانونی نشان داده‌اند اعتراف‌های زیر فشار می‌توانند دروغ باشند؛ این نکته از دانش عمومی است، نه از کتاب.",
+    "en": "Forensic-psychology research has shown that coerced confessions can be false; this point is general knowledge, not from the book.",
+    "nl": "Forensic-psychology research has shown that coerced confessions can be false; this point is general knowledge, not from the book."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:epistemic-injustice",
+   "rel": "see-also",
+   "note": {
+    "fa": "قدرت چه کسی را «گواهِ معتبر» می‌داند",
+    "en": "Whom power treats as a credible witness",
+    "nl": "Whom power treats as a credible witness"
+   }
+  },
+  {
+   "to": "soc:preference-falsification",
+   "rel": "see-also",
+   "note": {
+    "fa": "گفتن آنچه قدرت می‌خواهد زیر ترس",
+    "en": "Saying what power wants under fear",
+    "nl": "Saying what power wants under fear"
+   }
+  },
+  {
+   "to": "psy:scapegoating",
+   "rel": "see-also",
+   "note": {
+    "fa": "یافتن مقصر برای تنگنا",
+    "en": "Finding a culprit for a crisis",
+    "nl": "Finding a culprit for a crisis"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:b842e9a104"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

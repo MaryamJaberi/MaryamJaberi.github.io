@@ -1,0 +1,95 @@
+{
+ "id": "phil:kasravi-mahdism-origin",
+ "kind": "concept",
+ "title": {
+  "fa": "خاستگاه مهدی‌باوری از دید کسروی",
+  "en": "Kasravi's account of the origin of Mahdism",
+  "nl": "Kasravi's verklaring van de oorsprong van het mahdisme"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "کسروی امامت و مهدی‌گری را دو داستان جدا می‌داند و پیدایش باور مهدی در میان مسلمانان را به انتظار منجی نزد ایرانیان و یهودیان و جنبش مختار پیوند می‌دهد.",
+  "en": "Kasravi treats the imamate and Mahdism as two separate stories and links the rise of the Mahdi idea among Muslims to saviour expectations among Iranians and Jews and to Mukhtar's movement.",
+  "nl": "Kasravi scheidt imamaat en mahdisme en koppelt de Mahdi-gedachte aan verwachtingen van een redder bij Perzen en Joden en aan Mukhtars beweging."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ کسروی انتظار منجی در دین‌های گوناگون هست: زردشتیان سوشیانت، یهودیان مسیحا و مسیحیان بازگشت مسیح.",
+    "en": "Kasravi notes that saviour expectation exists in many religions: Zoroastrians await Saoshyant, Jews the Messiah, Christians Christ's return.",
+    "nl": "Kasravi notes that saviour expectation exists in many religions: Zoroastrians await Saoshyant, Jews the Messiah, Christians Christ's return."
+   },
+   "sources": [
+    "src:f0785f1aac"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید ایرانیان این باور را به اسلام آوردند و مختار با پشتیبانی کیسان آن را دربارهٔ محمد بن حنفیه به‌کار برد تا کارش پیش رود؛ این روایت نظری و محل بحث است.",
+    "en": "He says Iranians brought this belief into Islam and that Mukhtar, with Kaysan, applied it to Muhammad ibn al-Hanafiyya to advance his cause; this is a theory open to dispute.",
+    "nl": "He says Iranians brought this belief into Islam and that Mukhtar, with Kaysan, applied it to Muhammad ibn al-Hanafiyya to advance his cause; this is a theory open to dispute."
+   },
+   "sources": [
+    "src:f0785f1aac"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهش دانشگاهی تأیید می‌کند که جنبش مختار و کیسانیه نخستین کاربرد شیعی واژهٔ مهدی را رقم زد، اما سرچشمهٔ فقط ایرانی و یهودی را نمی‌پذیرد و به حدیث‌های مهدی در منابع سنی و شیعه و زمینهٔ عربی و اسلامی هم اشاره می‌کند.",
+    "en": "Academic work confirms that Mukhtar's movement and the Kaysaniyya mark an early Shia use of the term Mahdi, but does not accept a purely Iranian-Jewish origin and points to Mahdi hadith in Sunni and Shia sources and an Arab-Islamic context.",
+    "nl": "Academic work confirms that Mukhtar's movement and the Kaysaniyya mark an early Shia use of the term Mahdi, but does not accept a purely Iranian-Jewish origin and points to Mahdi hadith in Sunni and Shia sources and an Arab-Islamic context."
+   },
+   "sources": [
+    "src:8db249f61f"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "کسروی شادمانی شیعیان از ظهور امام زمان را با این پرسش می‌سنجد که اگر او دین‌ها را یکی کند باید با دلیل و کوشش باشد نه معجزه، و می‌گوید کار خودش همان است.",
+    "en": "Kasravi challenges Shia hopes of the hidden imam: if he unites religions it must be through argument and effort, not miracle, and he says his own work already does this.",
+    "nl": "Kasravi challenges Shia hopes of the hidden imam: if he unites religions it must be through argument and effort, not miracle, and he says his own work already does this."
+   },
+   "sources": [
+    "src:f0785f1aac"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:kasravi-critique-of-imamate",
+   "rel": "part-of",
+   "note": {
+    "fa": "نقد امامت",
+    "en": "Critique of the imamate",
+    "nl": "Critique of the imamate"
+   }
+  }
+ ],
+ "people": [
+  "core:al-mukhtar-al-thaqafi",
+  "core:muhammad-ibn-al-hanafiyya"
+ ],
+ "sources": [
+  "src:8db249f61f",
+  "src:f0785f1aac"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

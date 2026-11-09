@@ -1,0 +1,83 @@
+{
+ "id": "soc:income-statement-operating-vs-non",
+ "kind": "concept",
+ "title": {
+  "fa": "صورت سود و زیان: درآمد عملیاتی و غیرعملیاتی",
+  "en": "The income statement: operating versus non-operating results",
+  "nl": "De winst-en-verliesrekening: operationeel versus niet-operationeel"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "صورت سود و زیان عملکرد شرکت را در یک دوره نشان می‌دهد و درآمد و هزینه را به بخش عملیاتی و غیرعملیاتی جدا می‌کند تا پایداری سود روشن شود.",
+  "en": "The income statement shows a firm's performance over a period and separates operating from non-operating items so the sustainability of profit is visible.",
+  "nl": "De winst-en-verliesrekening toont de prestaties over een periode en scheidt operationele van niet-operationele posten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "برخلاف ترازنامه، صورت سود و زیان یک دورهٔ زمانی (مثلاً سه‌ماهه، شش‌ماهه یا یک‌ساله) را پوشش می‌دهد و آن را می‌توان به‌صورت تک‌مرحله‌ای یا چندمرحله‌ای تنظیم کرد.",
+    "en": "Unlike the balance sheet, the income statement covers a period (quarter, half-year, year) and can be laid out in single-step or multi-step form.",
+    "nl": "Unlike the balance sheet, the income statement covers a period (quarter, half-year, year) and can be laid out in single-step or multi-step form."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درآمد عملیاتی از فعالیت اصلی شرکت و هدف‌های اساسنامه‌ای می‌آید و انتظار می‌رود تکرارپذیر و پایدار باشد؛ درآمد غیرعملیاتی، مثل فروش زمین توسط شرکتی که کارش تولید است، گذرا و غیرقابل پیش‌بینی است.",
+    "en": "Operating income comes from the firm's core activity and is expected to recur; non-operating income, such as a manufacturer selling land, is transient and hard to forecast.",
+    "nl": "Operating income comes from the firm's core activity and is expected to recur; non-operating income, such as a manufacturer selling land, is transient and hard to forecast."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بهای تمام‌شدهٔ کالا شامل مواد مستقیم، دستمزد مستقیم تولید و سربار تولید است؛ هزینه‌های عملیاتی (فروش، اداری) و هزینه‌های مالی (بهرهٔ وام) جداگانه می‌آیند.",
+    "en": "Cost of goods sold includes direct materials, direct production labour and manufacturing overhead; operating (selling, administrative) and financial (loan interest) costs are listed separately.",
+    "nl": "Cost of goods sold includes direct materials, direct production labour and manufacturing overhead; operating (selling, administrative) and financial (loan interest) costs are listed separately."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سود خالص پس از کسر مالیات به‌دست می‌آید و پایین‌ترین ردیف صورت است؛ جزوه یادآوری می‌کند که تحلیل‌گر باید فصلی بودن فروش و هزینه را در نظر بگیرد.",
+    "en": "Net profit is obtained after tax and is the bottom line; the booklet reminds the analyst to account for seasonality of sales and costs.",
+    "nl": "Net profit is obtained after tax and is the bottom line; the booklet reminds the analyst to account for seasonality of sales and costs."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:balance-sheet-equation",
+   "rel": "see-also",
+   "note": {
+    "fa": "ترازنامه وضعیت در یک لحظه را نشان می‌دهد",
+    "en": "The balance sheet gives the position at one moment",
+    "nl": "The balance sheet gives the position at one moment"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:db28320e57"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

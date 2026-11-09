@@ -1,0 +1,113 @@
+{
+ "id": "soc:fundamental-analysis-intrinsic-value",
+ "kind": "concept",
+ "title": {
+  "fa": "تحلیل بنیادی: ارزش ذاتی در برابر قیمت بازار",
+  "en": "Fundamental analysis: intrinsic value versus market price",
+  "nl": "Fundamentele analyse: intrinsieke waarde versus marktprijs"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "روشی برای ارزیابی سهام که با بررسی اقتصاد کشور، صنعت و صورت‌های مالی شرکت، «ارزش ذاتی» را برآورد و با قیمت بازار مقایسه می‌کند؛ این مدخل نگاه یک جزوهٔ مقدماتی فارسی را معرفی می‌کند.",
+  "en": "A method of valuing shares by estimating 'intrinsic value' from the economy, the industry and a firm's financial statements, then comparing it with the market price; this entry presents the view of a short introductory Persian booklet.",
+  "nl": "Een methode om aandelen te waarderen door de intrinsieke waarde te schatten uit economie, sector en jaarrekening en die met de marktprijs te vergelijken, volgens een korte Perzische inleiding."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به نظر نویسنده، تحلیل‌گر بنیادی فرض می‌کند قیمت بازار یک سهم ممکن است از ارزش واقعی (ذاتی) آن جدا باشد و کارش یافتن علت و اندازهٔ این فاصله است.",
+    "en": "The author says a fundamental analyst assumes a share's market price may differ from its real (intrinsic) value, and the task is to find the cause and size of the gap.",
+    "nl": "The author says a fundamental analyst assumes a share's market price may differ from its real (intrinsic) value, and the task is to find the cause and size of the gap."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اگر ارزش ذاتیِ برآوردشده از قیمت بازار بیشتر باشد، سهم ارزان‌تر از ارزش خود معامله می‌شود و خرید منطقی است؛ در حالت وارونه فروش منطقی است.",
+    "en": "If estimated intrinsic value exceeds the market price, the share trades below its worth and buying is rational; in the reverse case selling is rational.",
+    "nl": "If estimated intrinsic value exceeds the market price, the share trades below its worth and buying is rational; in the reverse case selling is rational."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جزوه دو رویکرد را نام می‌برد: از بالا به پایین (اقتصاد کلان، سپس صنعت، سپس شرکت) و از پایین به بالا (انتخاب شرکت از روی نسبت‌هایی مثل قیمت به سود هر سهم).",
+    "en": "The booklet names two approaches: top-down (macroeconomy, then industry, then firm) and bottom-up (picking firms from ratios such as price to earnings per share).",
+    "nl": "The booklet names two approaches: top-down (macroeconomy, then industry, then firm) and bottom-up (picking firms from ratios such as price to earnings per share)."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از نقاط قوت می‌شمارد که روش بر داده‌های واقعی شرکت تکیه دارد و برای سرمایه‌گذاری بلندمدت مناسب است؛ از ضعف‌ها، زمان‌بر بودن، وابستگی نتیجه به فرض‌های تحلیل‌گر و بی‌فایده‌بودن نسبی آن در معاملات کوتاه‌مدت.",
+    "en": "Strengths it lists: reliance on real firm data and suitability for long-term investing; weaknesses: it is time-consuming, depends on the analyst's assumptions, and is of little use for short-term trading.",
+    "nl": "Strengths it lists: reliance on real firm data and suitability for long-term investing; weaknesses: it is time-consuming, depends on the analyst's assumptions, and is of little use for short-term trading."
+   },
+   "sources": [
+    "src:db28320e57"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در ادبیات دانشگاهی مالی، این‌که قیمت‌ها از ارزش بنیادی مدام جدا بمانند محل مناقشه است: فرضیهٔ بازار کارا می‌گوید قیمت‌ها اطلاعات در دسترس را بازتاب می‌دهند و شکست دائمی بازار دشوار است، در حالی که مالی رفتاری از انحراف‌های پایدار دفاع می‌کند. جزوه به این بحث نمی‌پردازد.",
+    "en": "In academic finance, whether prices stay persistently away from fundamental value is disputed: the efficient-market hypothesis says prices reflect available information and beating the market consistently is hard, while behavioural finance argues for lasting deviations. The booklet does not discuss this debate.",
+    "nl": "In academic finance, whether prices stay persistently away from fundamental value is disputed: the efficient-market hypothesis says prices reflect available information and beating the market consistently is hard, while behavioural finance argues for lasting deviations. The booklet does not discuss this debate."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "نهادهای مالی بخشی از نهادهای اقتصادی‌اند",
+    "en": "Financial institutions belong among economic institutions",
+    "nl": "Financial institutions belong among economic institutions"
+   }
+  },
+  {
+   "to": "psy:cognitive-biases",
+   "rel": "see-also",
+   "note": {
+    "fa": "مالی رفتاری انحراف قیمت را با سوگیری‌های شناختی توضیح می‌دهد",
+    "en": "Behavioural finance explains price deviation by cognitive biases",
+    "nl": "Behavioural finance explains price deviation by cognitive biases"
+   }
+  },
+  {
+   "to": "soc:balance-sheet-equation",
+   "rel": "see-also",
+   "note": {
+    "fa": "ورودی اصلی تحلیل، صورت‌های مالی است",
+    "en": "The main input of the analysis is the financial statements",
+    "nl": "The main input of the analysis is the financial statements"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:db28320e57"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

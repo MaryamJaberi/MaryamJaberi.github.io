@@ -1,0 +1,95 @@
+{
+ "id": "phil:prototype-test-assumptions",
+ "kind": "concept",
+ "title": {
+  "fa": "آزمودن فرض‌ها با نمونهٔ اولیهٔ ارزان در کسب‌وکار نوپا",
+  "en": "Testing assumptions with a cheap prototype in a startup",
+  "nl": "Aannames testen met een goedkoop prototype"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "نویسنده می‌گوید ایدهٔ کسب‌وکار فرضیه‌ای دربارهٔ نیاز مشتری است و باید پیش از ساختن محصول کامل، با نمونه‌ای ساده (مثلاً ماکت سایت) در برابر واکنش واقعی مشتری آزموده شود.",
+  "en": "The author treats a business idea as a hypothesis about customer need that should be tested with a simple mock-up before the full product is built.",
+  "nl": "De auteur ziet een bedrijfsidee als hypothese over klantbehoefte die met een eenvoudige mock-up getest moet worden voordat het product volledig wordt gebouwd."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به نظر نویسنده، ایدهٔ کسب‌وکار فقط حدس فعلی کارآفرین است؛ باید روی کاغذ نوشته شود تا بعداً اصلاح شود.",
+    "en": "The author says a business idea is only the entrepreneur's current guess and should be written down so it can be revised.",
+    "nl": "The author says a business idea is only the entrepreneur's current guess and should be written down so it can be revised."
+   },
+   "sources": [
+    "src:fcfe35f96e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او پیشنهاد می‌کند نمونهٔ اولیه (مثلاً ماکت سایت با اسلایدهای ساده) به مشتری نشان داده شود تا ببینیم مشتری سود محصول را می‌فهمد و حاضر است پول بدهد یا نه.",
+    "en": "He suggests showing customers a prototype, such as a mock-up of the site made from simple slides, to see whether they grasp the benefit and would pay.",
+    "nl": "He suggests showing customers a prototype, such as a mock-up of the site made from simple slides, to see whether they grasp the benefit and would pay."
+   },
+   "sources": [
+    "src:fcfe35f96e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او از تجربهٔ خود روایت می‌کند که سایتی برای آگهی ملک ساخته شد و کامل پیاده شد، اما فرض اشتباه بود: مشاوران املاک تمایلی به ثبت اطلاعات خود نداشتند. به گفتهٔ او ساختن ماکت زودتر خطا را آشکار می‌کرد.",
+    "en": "He recounts a real-estate listing site that was fully built on a wrong assumption: agents did not want to enter their data. In his view a mock-up would have revealed the error sooner.",
+    "nl": "He recounts a real-estate listing site that was fully built on a wrong assumption: agents did not want to enter their data. In his view a mock-up would have revealed the error sooner."
+   },
+   "sources": [
+    "src:fcfe35f96e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این رویکرد همان منطق «محصول حداقلی قابل‌ارائه» در کارآفرینی ناب است (اریک ریس، ۲۰۱۱)؛ نویسنده این اصطلاح را به کار نمی‌برد و نظریهٔ علمی کامل نیست، بلکه قاعدهٔ عملی است که شواهد پژوهشی محدودی دارد.",
+    "en": "This approach mirrors the minimum-viable-product logic of lean startup (Ries, 2011); the author does not use that term, and it is a practical heuristic with limited research evidence rather than a settled theory.",
+    "nl": "This approach mirrors the minimum-viable-product logic of lean startup (Ries, 2011); the author does not use that term, and it is a practical heuristic with limited research evidence rather than a settled theory."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:falsification",
+   "rel": "see-also",
+   "note": {
+    "fa": "آزمودن فرض‌ها شبیه منطق ابطال‌پذیری است، هرچند در سطح عملی",
+    "en": "Testing assumptions echoes falsification, at a practical level",
+    "nl": "Testing assumptions echoes falsification, at a practical level"
+   }
+  },
+  {
+   "to": "phil:science",
+   "rel": "part-of",
+   "note": {
+    "fa": "نگاهی عملی به روش آزمون فرض",
+    "en": "A practical view of hypothesis testing",
+    "nl": "A practical view of hypothesis testing"
+   }
+  }
+ ],
+ "people": [
+  "core:eric-ries"
+ ],
+ "sources": [
+  "src:fcfe35f96e"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
