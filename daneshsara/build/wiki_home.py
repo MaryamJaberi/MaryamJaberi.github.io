@@ -57,7 +57,7 @@ def spec_base(W):
         qlead='هر کدام یک مدخل است با خلاصه، نکته‌ها، منبع و پیوند به ویکی‌های دیگر.',
         tools=tools_from(f'{W}/tools', 'tools/'), bridges=[(HREF[k], NAME[k], f'{fa(v)} پیوند از این ویکی') for k, v in sorted(xl.items(), key=lambda x: -x[1])],
         bridgelead=f'{fa(sum(xl.values()))} پیوند از مدخل‌های این ویکی به ویکی‌های دیگر دانش‌سرا می‌رود.',
-        fields=fields, fieldslead='مدخل‌ها به تفکیک شهرهای دانش این سرزمین.', index=idx, roadmap=[])
+        fields=fields, fieldslead='مدخل‌ها به تفکیک شهرهای دانش این سرزمین.', sublead='هر شهر یک رشته یا موضوع اصلی در این ویکی است؛ روی آن بزنید تا مدخل‌هایش را ببینید.', index=idx, roadmap=[])
 
 def spec_miyan():
     bs = load(f'{R}/atlas/bridges.json'); fl = load(f'{R}/atlas/fields.json')
@@ -88,7 +88,7 @@ def spec_miyan():
         tools=tools_from('atlas/tools', '../atlas/tools/') + [('../atlas/', 'اطلس رشته‌ها', '۷۷ رشته در پنج خانواده، با پرسش و خلاصهٔ هرکدام.'), ('../atlas/world.html', 'جهان دانش', 'نقشهٔ زوم‌پذیر سرزمین‌ها، شهرها و راه‌های میان‌رشته‌ای.')],
         bridges=[(HREF[k], NAME[k], f'{fa(v)} مفهوم از این ویکی در پل‌ها') for k, v in sorted(xl.items(), key=lambda x: -x[1])],
         bridgelead='پل‌ها به مفهوم‌های هر دو طرف وصل‌اند؛ این‌ها شمار مفهوم‌هایی است که از هر ویکی در پل‌ها آمده.',
-        fields=fields, fieldslead='پل‌ها به تفکیک خانوادهٔ دانشی که از آن می‌آیند.',
+        fields=fields, fieldslead='پل‌ها به تفکیک خانوادهٔ دانشی که از آن می‌آیند.', sublead='هر زیرمجموعه دو خانوادهٔ دانش است که این پل‌ها به هم وصلشان می‌کنند.',
         index=[(b['title']['fa'], url(b)) for b in B], roadmap=[])
 
 def spec_iran():
@@ -114,7 +114,7 @@ def spec_iran():
         tools=tools_from('iran/tools', 'tools/'),
         bridges=[(HREF[k], NAME[k], f'{fa(v)} مفهوم از این ویکی') for k, v in sorted(cx.items(), key=lambda x: -x[1])],
         bridgelead='هر یادداشت به مفهوم‌هایی وصل است که آن را توضیح می‌دهند؛ این‌ها شمار مفهوم‌های هر ویکی در این لایه است.',
-        fields=fields, fieldslead='یادداشت‌ها به تفکیک حوزهٔ دانشی که به آن می‌پردازند.',
+        fields=fields, fieldslead='یادداشت‌ها به تفکیک حوزهٔ دانشی که به آن می‌پردازند.', sublead='یادداشت‌های ایران به تفکیک ویکی علمی که آن‌ها را توضیح می‌دهد.',
         index=[(n['question']['fa'], url(n)) for n in ns], roadmap=[
             'ریشه‌یابی و شرح وضع موجود برای هر یادداشت، به‌صورت بخش جدا',
             'یادداشت تازه برای حوزه‌هایی که هنوز دادهٔ ایرانی ندارند (فلسفه هیچ یادداشتی ندارد)',
@@ -156,8 +156,10 @@ for W in (sys.argv[1:] or ['soc', 'phil', 'tabar', 'miyan', 'iran', 'simorgh']):
         .replace('__BRIDGELEAD__', E(s['bridgelead']))
         .replace('__BRIDGES__', ''.join(f'<a class="br" href="{E(u)}"><b>{E(t)}</b><span>{E(d)}</span></a>' for u, t, d in s['bridges']))
         .replace('__CHIDE__', ' hidden' if not s['fields'] else '').replace('__FIELDSLEAD__', E(s['fieldslead']))
-        .replace('__SECS__', ''.join(f'<section class="fld"><h3>{E(t)} <small>{fa(len(es))}</small></h3>' + (f'<p>{E(sm)}</p>' if sm else '') +
-            '<div class="lst">' + ''.join(f'<a href="{E(u)}">{E(n)}</a>' for n, u in es) + '</div></section>' for t, sm, es in s['fields']))
+        .replace('__NF__', fa(len(s['fields']))).replace('__SUBLEAD__', E(s.get('sublead') or 'هر زیرمجموعه یک بخش از این ویکی است؛ روی آن بزنید تا مدخل‌هایش را ببینید.'))
+        .replace('__SUBS__', ''.join(f'<a class="sub-c" href="#f-{i}"><b>{E(t)}</b><em>{fa(len(es))} مدخل</em>' + (f'<span>{E(sm[:110])}</span>' if sm else '') + '</a>' for i, (t, sm, es) in enumerate(s['fields'])))
+        .replace('__SECS__', ''.join(f'<section class="fld" id="f-{i}"><h3>{E(t)} <small>{fa(len(es))}</small></h3>' + (f'<p>{E(sm)}</p>' if sm else '') +
+            '<div class="lst">' + ''.join(f'<a href="{E(u)}">{E(n)}</a>' for n, u in es) + '</div></section>' for i, (t, sm, es) in enumerate(s['fields'])))
         .replace('__IHIDE__', ' hidden' if not idx else '').replace('__NI__', fa(len(idx)))
         .replace('__INDEX__', ''.join(f'<div class="ig"><b>{E(k)}</b><div>' + ''.join(f'<a href="{E(u)}">{E(t)}</a>' for t, u in v) + '</div></div>' for k, v in groups))
         .replace('__RHIDE__', ' hidden' if not s['roadmap'] else '')
