@@ -1,0 +1,102 @@
+{
+ "id": "phil:spinoza-mind-body-aspects",
+ "kind": "concept",
+ "title": {
+  "fa": "اسپینوزا: ذهن و تن دو جنبهٔ یک چیزند",
+  "en": "Spinoza: mind and body as two aspects of one thing",
+  "nl": "Spinoza: geest en lichaam als twee aspecten van één ding"
+ },
+ "aliases": [],
+ "parent": "phil:mind",
+ "field": "phil:mind",
+ "summary": {
+  "fa": "اسپینوزا مسئلهٔ تأثیر ذهن بر تن در فلسفهٔ دکارت را با این فرض حل می‌کند که ذهن و تن دو وجه از یک واقعیت‌اند، نه دو جوهر جدا.",
+  "en": "Spinoza dissolves Descartes's problem of how mind acts on body by treating them as two aspects of one reality rather than two separate substances.",
+  "nl": "Spinoza lost het probleem van Descartes op door geest en lichaam als twee kanten van één werkelijkheid te zien."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دکارت نمی‌توانست توضیح دهد چگونه ذهنِ اندیشنده بر جسمِ مکانیکی اثر می‌گذارد؛ اسپینوزا این مشکل را با رد دوگانگی جوهر کنار می‌زند.",
+    "en": "Descartes could not explain how a thinking mind acts on a mechanical body; Spinoza removes the difficulty by rejecting the duality of substances.",
+    "nl": "Descartes could not explain how a thinking mind acts on a mechanical body; Spinoza removes the difficulty by rejecting the duality of substances."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ او ذهن و تن یک فردند که گاهی زیر صفت اندیشه و گاهی زیر صفت امتداد دیده می‌شوند؛ ترتیب و پیوند ایده‌ها همان ترتیب و پیوند چیزهاست.",
+    "en": "In his words mind and body are one individual, conceived now under thought and now under extension; the order and connection of ideas matches that of things.",
+    "nl": "In his words mind and body are one individual, conceived now under thought and now under extension; the order and connection of ideas matches that of things."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مقایسه با فلسفهٔ ذهن معاصر: این دیدگاه را اغلب «نظریهٔ دو-وجهی» یا موازی‌گرایی می‌نامند و دربارهٔ تفسیر دقیقش اختلاف هست؛ مسئلهٔ دشوار آگاهی را هم حل‌شده نمی‌کند.",
+    "en": "Compared with contemporary philosophy of mind: the view is usually labelled dual-aspect theory or parallelism, its exact interpretation is debated, and it does not by itself solve the hard problem of consciousness.",
+    "nl": "Compared with contemporary philosophy of mind: the view is usually labelled dual-aspect theory or parallelism, its exact interpretation is debated, and it does not by itself solve the hard problem of consciousness."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:mind",
+   "rel": "part-of",
+   "note": {
+    "fa": "فلسفهٔ ذهن",
+    "en": "Philosophy of mind",
+    "nl": "Philosophy of mind"
+   }
+  },
+  {
+   "to": "phil:hard-problem",
+   "rel": "see-also",
+   "note": {
+    "fa": "مسئلهٔ دشوار آگاهی",
+    "en": "The hard problem of consciousness",
+    "nl": "The hard problem of consciousness"
+   }
+  },
+  {
+   "to": "phil:skepticism-cogito",
+   "rel": "critiques",
+   "note": {
+    "fa": "نقد ضمنی دوگانه‌انگاری دکارت",
+    "en": "Implicit critique of Cartesian dualism",
+    "nl": "Implicit critique of Cartesian dualism"
+   }
+  },
+  {
+   "to": "phil:spinoza-substance-monism",
+   "rel": "explains",
+   "note": {
+    "fa": "ریشه در یگانگی جوهر",
+    "en": "Rooted in the single-substance view",
+    "nl": "Rooted in the single-substance view"
+   }
+  }
+ ],
+ "people": [
+  "core:ren-descartes"
+ ],
+ "sources": [
+  "src:f251c9a3aa"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

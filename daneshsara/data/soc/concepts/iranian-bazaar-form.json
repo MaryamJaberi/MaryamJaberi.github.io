@@ -1,0 +1,127 @@
+{
+ "id": "soc:iranian-bazaar-form",
+ "kind": "concept",
+ "title": {
+  "fa": "شکل و ساختار کالبدی بازار ایرانی",
+  "en": "Form and spatial structure of the Iranian bazaar",
+  "nl": "Vorm en ruimtelijke structuur van de Iraanse bazaar"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "بازار ایرانی بیشتر نواری و در امتداد راه‌های شهر شکل می‌گرفت؛ یا ارگانیک و گام‌به‌گام، یا طراحی‌شده به دست یک حاکم یا بزرگ شهر؛ و گاهی هم گرد یک میدان.",
+  "en": "The Iranian bazaar was mostly a linear strip along a city's thoroughfares, either grown organically or planned by a ruler or notable, and sometimes gathered around a square.",
+  "nl": "De Iraanse bazaar was meestal een lineaire strook langs de hoofdwegen van de stad, organisch gegroeid of gepland, soms rond een plein."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "از نظر شکل، بازارها دو گروه‌اند: خطی (راسته‌ای) و متمرکز (میدانی).",
+    "en": "By layout the book sorts bazaars into linear and concentrated (square-based) types.",
+    "nl": "By layout the book sorts bazaars into linear and concentrated (square-based) types."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بیشتر بازارهای دائمی خطی‌اند، چون در امتداد راه‌ها و گذرگاه‌ها پدید آمدند.",
+    "en": "Most permanent bazaars are linear because they formed along roads and passages.",
+    "nl": "Most permanent bazaars are linear because they formed along roads and passages."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازار خطی ارگانیک به‌تدریج و همراه با رشد شهر بلند می‌شد؛ تهران، بخش‌هایی از اصفهان، یزد و کرمان نمونه‌اند.",
+    "en": "Organic linear bazaars grew gradually with the city; the author cites Tehran, parts of Isfahan, Yazd and Kerman.",
+    "nl": "Organic linear bazaars grew gradually with the city; the author cites Tehran, parts of Isfahan, Yazd and Kerman."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازار خطیِ طراحی‌شده زمانی ساخته می‌شد که حاکمی یا بزرگی تصمیم می‌گرفت راسته‌ای بسازد و معمار می‌گماشت؛ بازار وکیل شیراز و بازار اراک از این دسته‌اند.",
+    "en": "Planned linear bazaars arose when a ruler or notable commissioned architects to build a street; examples given are the Vakil bazaar in Shiraz and the Arak bazaar.",
+    "nl": "Planned linear bazaars arose when a ruler or notable commissioned architects to build a street; examples given are the Vakil bazaar in Shiraz and the Arak bazaar."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازار متمرکز یا برای بازارهای ادواری و موقت در فضایی باز کنار راه بود، یا گرد یک میدان شهری مانند میدان امام اصفهان.",
+    "en": "Concentrated bazaars were either periodic or temporary markets on open ground by a road, or formed around an urban square such as Isfahan's Imam Square.",
+    "nl": "Concentrated bazaars were either periodic or temporary markets on open ground by a road, or formed around an urban square such as Isfahan's Imam Square."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "طول راستهٔ بازار از چند صد متر در شهر کوچک تا چند کیلومتر در شهر بزرگ بود و عرض معمول آن حدود چهار تا شش متر.",
+    "en": "Length ranged from a few hundred metres in small towns to several kilometres in large ones, with a typical width of about four to six metres.",
+    "nl": "Length ranged from a few hundred metres in small towns to several kilometres in large ones, with a typical width of about four to six metres."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این تقسیم‌بندی توصیفی و مبتنی بر نمونه‌های شناخته‌شده است و در پژوهش معماری و شهرسازی ایران رایج است؛ ارقام درازا و پهنا تقریبی‌اند.",
+    "en": "The typology is descriptive and standard in Iranian architecture and urbanism scholarship; length and width figures are approximate.",
+    "nl": "The typology is descriptive and standard in Iranian architecture and urbanism scholarship; length and width figures are approximate."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:space",
+   "rel": "part-of",
+   "note": {
+    "fa": "فضا و شهر",
+    "en": "City and space",
+    "nl": "City and space"
+   }
+  },
+  {
+   "to": "soc:urbanism",
+   "rel": "see-also",
+   "note": {
+    "fa": "شهرنشینی",
+    "en": "Urbanism",
+    "nl": "Urbanism"
+   }
+  }
+ ],
+ "people": [
+  "core:hossein-soltanzadeh"
+ ],
+ "sources": [
+  "src:97b0537a97"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,136 @@
+{
+ "id": "phil:spinoza-substance-monism",
+ "kind": "concept",
+ "title": {
+  "fa": "اسپینوزا: خدا یا طبیعت و روش هندسی",
+  "en": "Spinoza: God or Nature and the geometric method",
+  "nl": "Spinoza: God of Natuur en de meetkundige methode"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "اسپینوزا کل هستی را یک جوهر یگانه می‌داند که هم «خدا» و هم «طبیعت» نامیده می‌شود و فلسفه‌اش را مانند اقلیدس از تعریف و اصل موضوع و قضیه می‌سازد؛ پایهٔ همهٔ نظام او تعریف جوهر است.",
+  "en": "Spinoza holds that reality is one single substance, called both God and Nature, and builds his philosophy like Euclid from definitions, axioms and propositions; the whole system rests on his definition of substance.",
+  "nl": "Spinoza ziet de werkelijkheid als één enkele substantie, God of Natuur, en bouwt zijn filosofie meetkundig op uit definities en axioma's."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اسپینوزا در «اخلاق» کار را با چند تعریف آغاز می‌کند (علت خود، جوهر، صفت، حالت، خدا، آزادی، سرمدیت) و همه چیز را مانند قضیه‌های هندسه از آن‌ها نتیجه می‌گیرد.",
+    "en": "In the Ethics Spinoza starts from a handful of definitions (self-caused, substance, attribute, mode, God, freedom, eternity) and derives everything from them like geometrical theorems.",
+    "nl": "In the Ethics Spinoza starts from a handful of definitions (self-caused, substance, attribute, mode, God, freedom, eternity) and derives everything from them like geometrical theorems."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جوهر یعنی آنچه در خود است و برای فهمیده‌شدن به مفهوم چیز دیگری نیاز ندارد؛ از این تعریف نتیجه می‌گیرد که فقط یک جوهر هست و آن همان «خدا یا طبیعت» است.",
+    "en": "Substance is what is in itself and needs no other concept to be grasped; from this he concludes there is only one substance, God or Nature.",
+    "nl": "Substance is what is in itself and needs no other concept to be grasped; from this he concludes there is only one substance, God or Nature."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این جوهر صفت‌های بی‌شمار دارد، اما ذهن انسان فقط دو تای آن را می‌شناسد: اندیشه و امتداد (بُعد جسمانی). چیزهای جزئی، حالت‌ها و دگرگونی‌های همین جوهرند.",
+    "en": "This substance has infinitely many attributes, yet the human mind knows only two: thought and extension. Particular things are modes, modifications, of it.",
+    "nl": "This substance has infinitely many attributes, yet the human mind knows only two: thought and extension. Particular things are modes, modifications, of it."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به روایت کتاب، اسپینوزا برای هستی خدا از شکلی از برهان وجودی استفاده می‌کند: چون وجود از ذات جوهر جدایی‌ناپذیر است، از خود تعریف جوهر می‌توان وجودش را نتیجه گرفت.",
+    "en": "As the book presents it, Spinoza argues for God's existence with a form of the ontological argument: since existence belongs to the nature of substance, it follows from the definition itself.",
+    "nl": "As the book presents it, Spinoza argues for God's existence with a form of the ontological argument: since existence belongs to the nature of substance, it follows from the definition itself."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده نظام اسپینوزا را زیبا و استوار بر تعریف‌های آغازین می‌داند و می‌گوید اگر کسی تعریف جوهر را نپذیرد، کل بنا فرو می‌ریزد.",
+    "en": "The author calls the system beautiful but stresses that it stands or falls with the opening definitions, above all that of substance.",
+    "nl": "The author calls the system beautiful but stresses that it stands or falls with the opening definitions, above all that of substance."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برهان وجودی و قطعیت «هندسی» اسپینوزا در فلسفهٔ امروز بسیار مناقشه‌برانگیز است: بسیاری تعریف‌ها را بدیهی نمی‌دانند و مقایسهٔ کتاب با نظریهٔ «همه‌چیز» در فیزیک بیشتر تمثیلی است تا استدلالی.",
+    "en": "Spinoza's ontological argument and his claim to geometric certainty are widely disputed today: many deny that his definitions are self-evident, and the book's comparison with a physical theory of everything is loose analogy rather than argument.",
+    "nl": "Spinoza's ontological argument and his claim to geometric certainty are widely disputed today: many deny that his definitions are self-evident, and the book's comparison with a physical theory of everything is loose analogy rather than argument."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:skepticism-cogito",
+   "rel": "contrasts",
+   "note": {
+    "fa": "دکارت دو جوهر (ذهن و ماده) می‌پذیرد؛ اسپینوزا یکی",
+    "en": "Descartes admits two substances; Spinoza only one",
+    "nl": "Descartes admits two substances; Spinoza only one"
+   }
+  },
+  {
+   "to": "phil:spinoza-mind-body-aspects",
+   "rel": "see-also",
+   "note": {
+    "fa": "نتیجهٔ یگانگی جوهر برای رابطهٔ ذهن و تن",
+    "en": "What substance monism means for mind and body",
+    "nl": "What substance monism means for mind and body"
+   }
+  },
+  {
+   "to": "phil:epistemology",
+   "rel": "part-of",
+   "note": {
+    "fa": "عقل‌گرایی در معرفت‌شناسی",
+    "en": "Rationalism within epistemology",
+    "nl": "Rationalism within epistemology"
+   }
+  },
+  {
+   "to": "phil:illumination",
+   "rel": "bridges",
+   "note": {
+    "fa": "همسنجی با وحدت وجود در سنت اشراقی و عرفانی ایرانی (به‌عنوان پل مقایسه، نه یکسان‌انگاری)",
+    "en": "A comparison point with unity-of-being thought in Iranian illuminationist and mystical traditions, not an identification",
+    "nl": "A comparison point with unity-of-being thought in Iranian illuminationist and mystical traditions, not an identification"
+   }
+  }
+ ],
+ "people": [
+  "core:baruch-benedictus-de-spinoza",
+  "core:ren-descartes"
+ ],
+ "sources": [
+  "src:f251c9a3aa"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "phil:spinoza-herem-reception",
+ "kind": "concept",
+ "title": {
+  "fa": "زندگی اسپینوزا: تکفیر، عدسی‌تراشی و پذیرش اندیشه‌اش",
+  "en": "Spinoza's life: excommunication, lens-grinding and reception",
+  "nl": "Het leven van Spinoza: ban, lenzen slijpen en receptie"
+ },
+ "aliases": [],
+ "parent": "phil:life",
+ "field": "phil:life",
+ "summary": {
+  "fa": "اسپینوزا (۱۶۳۲ تا ۱۶۷۷) در آمستردام به دنیا آمد، در ۱۶۵۶ از جامعهٔ یهودی طرد شد، با تراشیدن عدسی زندگی کرد، دعوت دانشگاه هایدلبرگ را رد کرد و «اخلاق» پس از مرگش منتشر شد.",
+  "en": "Spinoza (1632-1677) was born in Amsterdam, was excommunicated from the Jewish community in 1656, lived by grinding lenses, declined a Heidelberg chair, and his Ethics appeared after his death.",
+  "nl": "Spinoza (1632-1677) werd in 1656 uit de Joodse gemeenschap gebannen, leefde van het slijpen van lenzen; zijn Ethica verscheen postuum."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "او از خانواده‌ای یهودی-پرتغالی در آمستردام بود و در ۱۶۵۶ به‌دلیل آرای نامتعارف دربارهٔ تورات، خدا و فرشتگان رسماً از کنیسه طرد شد.",
+    "en": "He came from a Portuguese-Jewish family in Amsterdam and in 1656 was formally expelled from the synagogue for unorthodox views on the Torah, God and angels.",
+    "nl": "He came from a Portuguese-Jewish family in Amsterdam and in 1656 was formally expelled from the synagogue for unorthodox views on the Torah, God and angels."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پس از آن نزد دوستان مسیحی و فرقه‌های متساهل زندگی کرد و از تراشیدن عدسی کسب درآمد می‌کرد؛ بنا بر کتاب، غبار شیشه به ریه‌هایش آسیب زد و او در ۱۶۷۷ در لاهه درگذشت.",
+    "en": "Afterwards he lived among Christian friends and tolerant sects and earned a living grinding lenses; the book says glass dust harmed his lungs and he died in The Hague in 1677.",
+    "nl": "Afterwards he lived among Christian friends and tolerant sects and earned a living grinding lenses; the book says glass dust harmed his lungs and he died in The Hague in 1677."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او دعوت به استادی در هایدلبرگ را به‌خاطر شرط محدودکنندهٔ آزادی تدریس رد کرد و از دوستانش مانند اولدنبرگ و لایبنیتس نامه و دیدار داشت.",
+    "en": "He declined a Heidelberg professorship because of conditions on what he could teach, and corresponded with and met figures such as Oldenburg and Leibniz.",
+    "nl": "He declined a Heidelberg professorship because of conditions on what he could teach, and corresponded with and met figures such as Oldenburg and Leibniz."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«آثار پس از مرگ» بدون نام او منتشر شد و ممنوع گردید؛ بیل و هیوم به آن حمله کردند. بعدها اثرش بر آلمانی‌ها، هگل و مارکسیست‌ها تأثیر گذاشت.",
+    "en": "The Posthumous Works appeared without his name and was banned; Bayle and Hume attacked it, and later it influenced German thinkers, Hegel and Marxists.",
+    "nl": "The Posthumous Works appeared without his name and was banned; Bayle and Hume attacked it, and later it influenced German thinkers, Hegel and Marxists."
+   },
+   "sources": [
+    "src:f251c9a3aa"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "حکایت‌هایی مثل حملهٔ خنجر، پیشنهاد مستمری، سرگرمی عنکبوت‌ها و عشق به دختر معلمش از زندگینامه‌نویسان نخستین و شایعه است و کتاب خودش به ظنی بودن برخی اشاره می‌کند؛ تاریخ دقیق این رویدادها را باید از زندگینامه‌های پژوهشی گرفت.",
+    "en": "Stories such as the dagger attack, an offered pension, the spider pastime and a romance with his teacher's daughter stem from early biographers and rumour, and the book itself flags some as uncertain; exact details should come from scholarly biographies.",
+    "nl": "Stories such as the dagger attack, an offered pension, the spider pastime and a romance with his teacher's daughter stem from early biographers and rumour, and the book itself flags some as uncertain; exact details should come from scholarly biographies."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:life",
+   "rel": "part-of",
+   "note": {
+    "fa": "فلسفهٔ زندگی",
+    "en": "Philosophy of life",
+    "nl": "Philosophy of life"
+   }
+  },
+  {
+   "to": "phil:spinoza-liberty-state",
+   "rel": "see-also",
+   "note": {
+    "fa": "اندیشهٔ سیاسی و آزادی اندیشه",
+    "en": "Political thought and freedom of thought",
+    "nl": "Political thought and freedom of thought"
+   }
+  },
+  {
+   "to": "phil:hegel-phenomenology-spirit",
+   "rel": "see-also",
+   "note": {
+    "fa": "تأثیر بر هگل",
+    "en": "Influence on Hegel",
+    "nl": "Influence on Hegel"
+   }
+  }
+ ],
+ "people": [
+  "core:gottfried-wilhelm-leibniz",
+  "core:henry-oldenburg",
+  "core:pierre-bayle"
+ ],
+ "sources": [
+  "src:f251c9a3aa"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
