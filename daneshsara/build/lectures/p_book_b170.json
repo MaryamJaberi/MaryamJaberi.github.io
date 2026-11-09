@@ -1,0 +1,555 @@
+{
+ "paper": true,
+ "book": {
+  "title": "تاریخ پزشکی (ترجمهٔ A History of Medicine)",
+  "author": "Lisa Yount (لیزا یونت)",
+  "translator": "رضا یاسائی",
+  "year": "ترجمهٔ فارسی ۱۳۸۵؛ اصل انگلیسی حدود ۲۰۰۱ (تأییدنشده)",
+  "publisher": "ققنوس، تهران (مجموعهٔ تاریخ جهان)",
+  "type": "history",
+  "read": "partial",
+  "pages_or_sections_read": "OCR تسراکت فارسی صفحه‌های ۱ تا ۱۶۵ از ۱۷۶؛ خوانش دقیق فصل‌های ۱ تا ۸ به‌صورت گزینشی (پیشگفتار، جالینوس/وزالیوس، طاعون، آبله و جنر، پاستور و کخ، سلول، پرتو ایکس، پشه، پنی‌سیلین و واکسن‌ها، ژنتیک) و واژه‌نامه",
+  "drive_id": "1yy_343SzpnDlPrnXF2Ag4sVn5xxWAqHh"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "مرور تاریخی عمومی و ساده برای نوجوانان و عموم، نوشتهٔ نویسندهٔ حرفه‌ای علم؛ برای آشنایی اولیه خوب است، نه منبع پژوهشی.",
+  "reasons": [
+   "ترجمهٔ کتاب مجموعهٔ آموزشی «تاریخ جهان» برای نوجوانان (فیپا: ادبیات نوجوانان) از یک نویسندهٔ حرفه‌ای علم؛ نه پژوهش دانشگاهی.",
+   "یادداشت‌های پایانی، گزیده‌های منابع اولیه و کتاب‌نامه دارد؛ نقل‌قول‌ها از آثار مرجعی مانند تاریخ مصور پزشکی کمبریج (روی پورتر) و کلندنینگ آمده است.",
+   "محتوای اصلی (پاستور، کخ، جنر، اسنو، لیستر، راس) با اجماع تاریخ پزشکی همخوان است؛ چند تاریخ و تعمیم ساده‌شده یا قدیمی است.",
+   "روزآمدی تا حدود سال ۲۰۰۰؛ بخش‌های ژن‌درمانی و آیندهٔ پزشکی قدیمی‌اند."
+  ],
+  "best_use_fa": "برای دید کلی از سیر تاریخ پزشکی غربی و کشف‌های سدهٔ نوزدهم و بیستم و به‌عنوان نقطهٔ شروع مطالعه خوب است؛ برای تاریخ‌های دقیق، طب ایرانی‌اسلامی، چین و هند یا بحث‌های روز پزشکی باید به منابع تخصصی رجوع کرد.",
+  "cautions": [
+   "تمرکز بر اروپا و آمریکا؛ سهم طب اسلامی و ایرانی، چینی و هندی کم یا سطحی است.",
+   "چند تعمیم ساده‌شده (مثلاً «فقط دو داروی مفید»، تاریخ پاستوریزاسیون، تاریخ ریشه‌کنی آبله).",
+   "کیفیت ترجمهٔ فارسی و خطای OCR ممکن است در نام‌ها و تاریخ‌ها اثر بگذارد؛ هر عدد دقیق باید با منبع دیگر سنجیده شود."
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "منبع عمومی معتبر با اجماع علمی همخوان؛ پنج مدخل دربارهٔ موضوعات اصلی کتاب افزوده شد و اشتباهات ساده‌شده با یادداشت ویراستار علامت خورد.",
+ "summary_of_book_fa": "کتابی عمومی و مصور دربارهٔ تاریخ پزشکی از درمانگران نخستین و یونان و روم تا پزشکی علمی سدهٔ نوزدهم و بیستم. نظریهٔ میکروبی، واکسن‌ها، بهداشت عمومی، کشف نقش پشه و پیشرفت‌های قرن بیستم (پنی‌سیلین، ژنتیک، پیوند) را روایت می‌کند و گزیده‌هایی از منابع اولیه دارد.",
+ "entries": [
+  {
+   "id": "galen-to-vesalius-observation",
+   "wiki": "phil",
+   "field": "science",
+   "title": {
+    "fa": "از جالینوس تا وزالیوس: اقتدار کهن و مشاهدهٔ مستقیم در پزشکی",
+    "en": "From Galen to Vesalius: ancient authority versus direct observation in medicine",
+    "nl": "Van Galenus tot Vesalius: oud gezag versus directe waarneming in de geneeskunde"
+   },
+   "summary": {
+    "fa": "کتاب نشان می‌دهد پزشکی اروپا قرن‌ها بر نوشته‌های جالینوس و نظریهٔ اخلاط تکیه داشت و چگونه تشریح انسان و آموزش بر بالین بیمار در دورهٔ رنسانس و پس از آن این اقتدار را کم‌کم شکست.",
+    "en": "The book shows how European medicine long rested on Galen's writings and humoral theory, and how human dissection and bedside teaching gradually broke that authority from the Renaissance on.",
+    "nl": "Het boek laat zien hoe de Europese geneeskunde eeuwenlang op Galenus en de humorenleer steunde en hoe menselijke dissectie en onderwijs aan het ziekbed dat gezag geleidelijk doorbraken."
+   },
+   "points": [
+    {
+     "fa": "جالینوس (سدهٔ دوم میلادی، زادهٔ پرگاموم) پزشک گلادیاتورها بود، بر مشاهدهٔ دست‌اول تأکید می‌کرد و چون تشریح انسان دشوار بود، حیواناتی مانند میمون و خوک را تشریح می‌کرد و یافته‌ها را به انسان تعمیم می‌داد.",
+     "en": "Galen (2nd century CE, born in Pergamon) served as physician to gladiators, stressed first-hand observation, and, since human dissection was hard to obtain, dissected animals such as apes and pigs and generalised the findings to humans.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نوشته‌های جالینوس نزدیک به هزار و پانصد سال مرجع اصلی پزشکی اروپا ماند و نظریهٔ چهار خلط (اخلاط) و درمان‌هایی چون فصد و تنقیه تا سدهٔ هجدهم در بسیاری از پزشکان رایج بود.",
+     "en": "Galen's writings remained the main authority of European medicine for roughly 1,500 years, and humoral theory with treatments like bloodletting and purging stayed common among many physicians into the 18th century.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "وزالیوس در ۱۵۴۳ کتاب «دربارهٔ ساختمان بدن انسان» را با تصویرهای دقیق و بر پایهٔ تشریح انسان منتشر کرد و نشان داد جالینوس به‌سبب تشریح جانوران در مواردی خطا کرده بود؛ استادان هم‌عصرش به او تاخت.",
+     "en": "In 1543 Vesalius published 'On the Fabric of the Human Body', with precise illustrations based on human dissection, showing that Galen had erred in places because he dissected animals; contemporary professors attacked him.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در سدهٔ هفدهم و هجدهم، سیدنهام و بورهاوه آموزش بر بالین بیمار را رواج دادند و کار بیمارستانی بخشی از آموزش پزشکی شد؛ بیشا هم به‌جای اندام‌ها به ۲۱ نوع بافت پرداخت.",
+     "en": "In the 17th–18th centuries Sydenham and Boerhaave promoted bedside teaching so that hospital work became part of medical training; Bichat shifted attention from organs to 21 tissue types.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به گفتهٔ کتاب، با وجود پیشرفت کالبدشناسی، تا اواخر سدهٔ هجدهم دانش علمی تأثیر ناچیزی بر درمان روزمره داشت؛ پوست درخت سین‌چونا (کینین، برای مالاریا) و گل انگشتانه (دیژیتال، که ویترینگ در دههٔ ۱۷۸۰ بررسی کرد) از معدود داروهای واقعاً مفید آن زمان بودند.",
+     "en": "The book says that despite advances in anatomy, scientific knowledge had little effect on everyday treatment until the late 18th century; cinchona bark (quinine, for malaria) and foxglove (digitalis, studied by Withering in the 1780s) were among the few really useful drugs of the time.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ادعای کتاب که در آن زمان «فقط دو» داروی مفید وجود داشت ساده‌سازی است؛ داروهای دیگری مانند افیون هم اثر داشتند و درمان‌هایی چون مرکبات برای اسکوروی نیز شناخته‌شده بود. روایت تحول از اقتدار به مشاهده در کتاب برای نوجوانان ساده‌شده است.",
+     "en": "The book's claim that there were 'only two' useful drugs is a simplification; others such as opium had real effects, and remedies like citrus for scurvy were known. The story of a shift from authority to observation is simplified in this book written for young readers.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Galen",
+     "fa": "جالینوس",
+     "years": "c. 129–c. 216",
+     "note": "پزشک و نویسندهٔ یونانی‌رومی"
+    },
+    {
+     "latin": "Andreas Vesalius",
+     "fa": "آندریاس وزالیوس",
+     "years": "1514–1564",
+     "note": "بنیان‌گذار کالبدشناسی نوین"
+    },
+    {
+     "latin": "Thomas Sydenham",
+     "fa": "توماس سیدنهام",
+     "years": "1624–1689",
+     "note": "«بقراط انگلیسی»"
+    },
+    {
+     "latin": "Herman Boerhaave",
+     "fa": "هرمان بورهاوه",
+     "years": "1668–1738",
+     "note": "استاد پزشکی در لیدن"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:paradigms",
+     "rel": "see-also",
+     "fa": "عبور از چارچوب جالینوسی نمونه‌ای از تغییر پارادایم است",
+     "en": "Moving beyond Galenic doctrine is an example of paradigm change"
+    },
+    {
+     "to": "phil:science",
+     "rel": "part-of",
+     "fa": "تاریخ روش تجربی در علم",
+     "en": "History of the empirical method in science"
+    }
+   ]
+  },
+  {
+   "id": "germ-theory-and-kochs-postulates",
+   "wiki": "phil",
+   "field": "science",
+   "title": {
+    "fa": "نظریهٔ میکروبی بیماری، اصول کخ و نظریهٔ سلولی",
+    "en": "Germ theory of disease, Koch's postulates and cell theory",
+    "nl": "De kiemtheorie van ziekte, de postulaten van Koch en de celtheorie"
+   },
+   "summary": {
+    "fa": "کتاب پیدایش این باور را در سدهٔ نوزدهم شرح می‌دهد که میکروب‌های ویژه بیماری‌های ویژه را پدید می‌آورند، با نقش پاستور، لیستر و کخ، و در کنار آن نظریهٔ سلولی ویرشو.",
+    "en": "The book describes the 19th-century rise of the idea that specific microbes cause specific diseases, through Pasteur, Lister and Koch, alongside Virchow's cell theory.",
+    "nl": "Het boek beschrijft hoe in de 19e eeuw het idee ontstond dat specifieke microben specifieke ziekten veroorzaken, via Pasteur, Lister en Koch, naast Virchows celtheorie."
+   },
+   "points": [
+    {
+     "fa": "پاستور نشان داد میکروارگانیسم‌ها تخمیر را پدید می‌آورند و در مقاله‌هایی در ۱۸۷۸ فرضیهٔ میکروبی بیماری را مطرح کرد: موجودات ریز مهاجم علت بیماری‌اند و میکروب‌های گوناگون بیماری‌های گوناگون می‌آورند.",
+     "en": "Pasteur showed that microorganisms cause fermentation and in 1878 papers set out the germ theory of disease: invading microscopic organisms cause disease, and different microbes cause different diseases.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لیستر که میکروب‌ها را عامل عفونت زخم می‌دانست، از ۱۸۶۵ اسید کربولیک را برای ضدعفونی زخم و محیط جراحی به‌کار برد و مرگ‌ومیر ناشی از عفونت جراحی بسیار کم شد.",
+     "en": "Lister, who took microbes to be the cause of wound infection, began using carbolic acid in 1865 to disinfect wounds and the operating environment, and deaths from surgical infection fell sharply.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کخ روشی برای اثبات رابطهٔ علّی میکروب و بیماری ساخت: میکروب باید در بیماران یافت شود، از آنان جدا و در کشت خالص رشد داده شود، در جانور سالم همان بیماری را ایجاد کند و دوباره از جانور جدا شود؛ او در ۱۸۸۲ این را برای باکتری سل به‌کار برد.",
+     "en": "Koch devised a procedure for proving that a microbe causes a disease: it must be found in the sick, isolated and grown in pure culture, cause the same disease in a healthy animal, and be recovered again; in 1882 he applied it to the tuberculosis bacterium.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "با همین اصول، پژوهشگران بین ۱۸۷۹ و ۱۹۰۰ تقریباً هر سال عامل یکی از بیماری‌های مهم انسانی را شناسایی کردند.",
+     "en": "With this approach, researchers between 1879 and 1900 identified the cause of an important human disease almost every year.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "بیرینگ و کیتازاتو حدود ۱۸۹۰ آنتی‌سرم را یافتند (نخست برای دیفتری) و پاستور با تضعیف میکروب در آزمایشگاه برای سیاه‌زخم و هاری واکسن ساخت.",
+     "en": "Behring and Kitasato found antiserum around 1890 (first for diphtheria), and Pasteur made vaccines for anthrax and rabies by weakening microbes in the laboratory.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "شلایدن و شوان در ۱۸۳۹ اعلام کردند همهٔ موجودات زنده از سلول‌اند؛ ویرشو (۱۸۵۸) نشان داد هر سلول از سلولی دیگر می‌آید و بیماری را باید در تغییر سلول‌ها دید، هرچند به فرضیهٔ میکروبی بدگمان بود؛ کتاب می‌گوید هر دو دیدگاه تا حدی درست درآمدند.",
+     "en": "Schleiden and Schwann declared in 1839 that all living things consist of cells; Virchow (1858) argued that every cell comes from another cell and that disease should be seen in altered cells, though he doubted the germ theory; the book says both views proved partly right.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اصول کخ فقط برای بخشی از بیماری‌ها کامل برقرارند: ناقلان بی‌علامت و عامل‌هایی که در کشت خالص رشد نمی‌کنند (مانند ویروس‌ها) آن را نقض یا ناکافی می‌کنند. تاریخ پاستوریزاسیون هم در کتاب (۱۸۵۴) با تاریخ رایج در منابع تخصصی (دههٔ ۱۸۶۰) نمی‌خواند.",
+     "en": "Koch's postulates hold fully only for some diseases: asymptomatic carriers and agents that do not grow in pure culture (such as viruses) violate or limit them. The book's date for pasteurisation (1854) also differs from the usual date in specialist sources (the 1860s).",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Louis Pasteur",
+     "fa": "لویی پاستور",
+     "years": "1822–1895",
+     "note": "شیمیدان و زیست‌شناس فرانسوی"
+    },
+    {
+     "latin": "Joseph Lister",
+     "fa": "ژوزف لیستر",
+     "years": "1827–1912",
+     "note": "پایه‌گذار جراحی ضدعفونی"
+    },
+    {
+     "latin": "Robert Koch",
+     "fa": "روبرت کخ",
+     "years": "1843–1910",
+     "note": "باکتری‌شناس آلمانی"
+    },
+    {
+     "latin": "Rudolf Virchow",
+     "fa": "رودولف ویرشو",
+     "years": "1821–1902",
+     "note": "پایه‌گذار آسیب‌شناسی سلولی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:paradigms",
+     "rel": "see-also",
+     "fa": "پذیرش نظریهٔ میکروبی نمونه‌ای از تغییر پارادایم",
+     "en": "Acceptance of germ theory as an example of paradigm change"
+    },
+    {
+     "to": "phil:falsification",
+     "rel": "contrasts",
+     "fa": "آزمون‌پذیریِ ادعای علّی در پزشکی در برابر ابطال‌پذیری",
+     "en": "Testability of causal claims in medicine versus falsifiability"
+    },
+    {
+     "to": "phil:galen-to-vesalius-observation",
+     "rel": "see-also",
+     "fa": "ادامهٔ گذار از اقتدار به آزمایش",
+     "en": "Continuation of the shift from authority to experiment"
+    }
+   ]
+  },
+  {
+   "id": "cholera-slums-public-health",
+   "wiki": "soc",
+   "field": "inequality",
+   "title": {
+    "fa": "شهرهای صنعتی، فقر و بهداشت عمومی: از وبا تا قرنطینه",
+    "en": "Industrial cities, poverty and public health: from cholera to quarantine",
+    "nl": "Industriële steden, armoede en volksgezondheid: van cholera tot quarantaine"
+   },
+   "summary": {
+    "fa": "کتاب نشان می‌دهد انقلاب صنعتی با ازدحام و فقر زاغه‌ها بیماری‌های همه‌گیر را تشدید کرد و چگونه آمارگیری، پژوهش میدانی و اصلاحات بهداشتی پیش از پذیرش کامل نظریهٔ میکروبی جان‌ها را نجات داد.",
+    "en": "The book shows how the Industrial Revolution's crowding and poverty worsened epidemics, and how statistics, field research and sanitary reform saved lives even before germ theory was fully accepted.",
+    "nl": "Het boek toont hoe de industriële revolutie door drukte en armoede epidemieën verergerde en hoe statistiek, veldonderzoek en hygiënehervormingen levens redden nog vóór de kiemtheorie volledig werd aanvaard."
+   },
+   "points": [
+    {
+     "fa": "با صنعتی‌شدن، کارگران با درآمد کم، تغذیهٔ ناکافی و مسکن شلوغ و آلوده در شهرها می‌زیستند؛ سل (که در سدهٔ نوزدهم شایع‌تر شد) و وبا (نخستین همه‌گیری جهانی رسیده به اروپا ۱۸۳۲) این گروه‌ها را بیش از همه گرفتار کرد.",
+     "en": "With industrialisation workers lived in cities on low pay, poor diets and crowded, filthy housing; tuberculosis (more widespread in the 19th century) and cholera (first pandemic reaching Europe in 1832) hit these groups hardest.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در دوران طاعون سیاه (از ۱۳۴۷) شهرهایی مانند ونیز کشتی‌ها را چهل روز بیرون از بندر نگه می‌داشتند؛ واژهٔ قرنطینه از همین رسم آمده و نمونه‌ای از قوانین بهداشت عمومی بود.",
+     "en": "During the Black Death (from 1347) cities such as Venice held ships outside the port for forty days; the word quarantine comes from this practice, an early example of public-health law.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اصلاح‌گرانی چون ادوین چادویک با گردآوری آمار زاد و مرگ در محله‌های فقیر در ۱۸۴۲ پیوند فقر، کثافت و بیماری را مستند کردند.",
+     "en": "Reformers such as Edwin Chadwick documented the link between poverty, filth and disease by collecting birth and death data in poor districts, reporting in 1842.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "جان اسنو در همه‌گیری وبای ۱۸۵۴ لندن (محلهٔ سوهو) نشان داد موارد ابتلا به چاه آب مشترک مرتبط بود و نتیجه گرفت آب آلوده وبا را منتقل می‌کند؛ کخ بعدها عامل باکتریایی را شناسایی کرد و گمان اسنو را تأیید کرد.",
+     "en": "John Snow, in the 1854 London cholera outbreak (Soho), showed that cases clustered around a shared well and concluded that contaminated water spreads cholera; Koch later identified the bacterial agent and confirmed Snow's suspicion.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پیش از پذیرش نظریهٔ میکروبی، پزشکان میان دو تبیین «سرایت از تماس» و «هوای بد (میاسما)» مردد بودند و هرکدام اقدام‌های متفاوت (فرار و قرنطینه یا پاک‌سازی و بوی‌خوش) پیشنهاد می‌کرد.",
+     "en": "Before germ theory was accepted, physicians were torn between 'contagion by contact' and 'bad air (miasma)', each recommending different measures (flight and quarantine, or cleaning and fumigation).",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به گفتهٔ کتاب، پاک‌تر شدن محیط و بهبود تغذیه در کنار روش‌های نوین پیشگیری مرگ‌ومیر همه‌گیری‌ها را کم کرد و امید به زندگی در اروپا و آمریکای شمالی بالا رفت؛ پژوهش‌های بعدی نیز نقش بهداشت و تغذیه را در این افت مرگ‌ومیر پررنگ می‌دانند، گاه بیش از درمان‌های پزشکی.",
+     "en": "The book says cleaner environments and better nutrition together with new preventive methods reduced epidemic mortality and raised life expectancy in Europe and North America; later research likewise stresses sanitation and nutrition in this decline, sometimes more than medical treatment.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "John Snow",
+     "fa": "جان اسنو",
+     "years": "1813–1858",
+     "note": "پزشک انگلیسی و پیشگام همه‌گیرشناسی"
+    },
+    {
+     "latin": "Edwin Chadwick",
+     "fa": "ادوین چادویک",
+     "years": "1800–1890",
+     "note": "اصلاح‌گر بهداشت عمومی در بریتانیا"
+    }
+   ],
+   "links": [
+    {
+     "to": "soc:urbanism",
+     "rel": "see-also",
+     "fa": "زندگی شهری و شرایط سلامت",
+     "en": "Urban life and health conditions"
+    },
+    {
+     "to": "soc:industrial-modernity-backdrop",
+     "rel": "part-of",
+     "fa": "پیامدهای انقلاب صنعتی",
+     "en": "Consequences of the Industrial Revolution"
+    },
+    {
+     "to": "phil:germ-theory-and-kochs-postulates",
+     "rel": "explains",
+     "fa": "نظریهٔ میکروبی سازوکار وبا را توضیح داد",
+     "en": "Germ theory explained how cholera spreads"
+    }
+   ]
+  },
+  {
+   "id": "vaccination-jenner-to-polio",
+   "wiki": "phil",
+   "field": "science",
+   "title": {
+    "fa": "واکسیناسیون: از آبله‌کوبی و جنر تا واکسن فلج اطفال",
+    "en": "Vaccination: from variolation and Jenner to the polio vaccine",
+    "nl": "Vaccinatie: van variolatie en Jenner tot het poliovaccin"
+   },
+   "summary": {
+    "fa": "کتاب مسیر پیشگیری از بیماری با ایمن‌سازی را از آبله‌کوبی سنتی و آزمون جنر (۱۷۹۶) تا واکسن‌های سالک و سابین دنبال می‌کند.",
+    "en": "The book traces disease prevention through immunisation from traditional variolation and Jenner's test (1796) to the Salk and Sabin vaccines.",
+    "nl": "Het boek volgt ziektepreventie door immunisatie van traditionele variolatie en Jenners proef (1796) tot de vaccins van Salk en Sabin."
+   },
+   "points": [
+    {
+     "fa": "پیش از جنر، مردم با زدن مادهٔ زخم بیماران آبله به پوست خود (آبله‌کوبی) می‌کوشیدند نوع خفیف بیماری بگیرند و ایمن شوند؛ این روش در اوایل سدهٔ هجدهم به انگلستان رسید اما گاه خود به آبلهٔ شدید می‌انجامید.",
+     "en": "Before Jenner, people tried to give themselves a mild case of smallpox by rubbing material from patients' sores into the skin (variolation) to become immune; the method reached England in the early 18th century but sometimes caused severe smallpox.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "جنر که شنیده بود دوشندگان مبتلا به آبلهٔ گاوی به آبله نمی‌گیرند، در ۱۴ مه ۱۷۹۶ مادهٔ زخم آبلهٔ گاوی را به بازوی پسری هشت‌ساله (جیمز فیپس) زد و سپس نشان داد او در برابر آبلهٔ انسانی ایمن است؛ گزارش را با ۲۳ مورد دیگر در ۱۷۹۸ منتشر کرد.",
+     "en": "Jenner, having heard that milkmaids with cowpox did not get smallpox, on 14 May 1796 inoculated cowpox matter into the arm of eight-year-old James Phipps and then showed he resisted human smallpox; he published a report with 23 further cases in 1798.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پاستور اصطلاح واکسیناسیون را به‌پاس جنر برای ایمن‌سازی با میکروب تضعیف‌شده به‌کار برد و آن را از آبله به وبای مرغی، سیاه‌زخم و هاری گسترش داد.",
+     "en": "Pasteur used the term vaccination in honour of Jenner for immunisation with weakened microbes and extended it from smallpox to chicken cholera, anthrax and rabies.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در دههٔ ۱۹۵۰ یوناس سالک واکسن تزریقی ویروس کشته‌شده و آلبرت سابین واکسن خوراکی ویروس ضعیف‌شده ساختند؛ آزمون بزرگ واکسن سالک نزدیک به دو میلیون کودک را دربر گرفت و موفقیتش در ۱۲ آوریل ۱۹۵۵ اعلام شد و برنامه‌های واکسیناسیون فلج اطفال را در آمریکا و جاهای دیگر تقریباً ریشه‌کن کرد.",
+     "en": "In the 1950s Jonas Salk developed an injected killed-virus vaccine and Albert Sabin an oral weakened-virus vaccine; Salk's large trial involved nearly two million children, its success was announced on 12 April 1955, and vaccination programmes nearly eliminated polio in the United States and elsewhere.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کتاب ریشه‌کنی آبله در سراسر جهان را سال ۱۹۷۷ می‌آورد؛ در منابع تخصصی آخرین مورد طبیعی ۱۹۷۷ بود و سازمان جهانی بهداشت ریشه‌کنی را در ۱۹۸۰ رسماً اعلام کرد.",
+     "en": "The book dates worldwide eradication of smallpox to 1977; in specialist sources the last natural case was in 1977 and the World Health Organization formally declared eradication in 1980.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Edward Jenner",
+     "fa": "ادوارد جنر",
+     "years": "1749–1823",
+     "note": "پزشک انگلیسی؛ واکسن آبله"
+    },
+    {
+     "latin": "Jonas Salk",
+     "fa": "یوناس سالک",
+     "years": "1914–1995",
+     "note": "سازندهٔ واکسن تزریقی فلج اطفال"
+    },
+    {
+     "latin": "Albert Sabin",
+     "fa": "آلبرت سابین",
+     "years": "1906–1993",
+     "note": "سازندهٔ واکسن خوراکی فلج اطفال"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:germ-theory-and-kochs-postulates",
+     "rel": "part-of",
+     "fa": "واکسن‌سازی پاستور بر پایهٔ نظریهٔ میکروبی",
+     "en": "Pasteur's vaccines build on germ theory"
+    },
+    {
+     "to": "soc:cholera-slums-public-health",
+     "rel": "see-also",
+     "fa": "پیشگیری جمعی در بهداشت عمومی",
+     "en": "Collective prevention in public health"
+    }
+   ]
+  },
+  {
+   "id": "mosquito-vectors-tropical-medicine",
+   "wiki": "phil",
+   "field": "science",
+   "title": {
+    "fa": "کشف نقش پشه در انتقال بیماری و پیدایش طب گرمسیری",
+    "en": "Discovery of mosquito transmission and the rise of tropical medicine",
+    "nl": "Ontdekking van muggenoverdracht en het ontstaan van de tropische geneeskunde"
+   },
+   "summary": {
+    "fa": "کتاب نشان می‌دهد چگونه مانسون، راس، گراسی و رید و همکارانشان نقش پشه را در مالاریا، فیل‌پایی و تب زرد روشن کردند و چرا مهار پشه به ابزاری برای پیشگیری شد.",
+    "en": "The book shows how Manson, Ross, Grassi, Reed and colleagues clarified the mosquito's role in malaria, filariasis and yellow fever, and why mosquito control became a means of prevention.",
+    "nl": "Het boek laat zien hoe Manson, Ross, Grassi, Reed en collega's de rol van de mug bij malaria, filariasis en gele koorts ophelderden en waarom muggenbestrijding een preventiemiddel werd."
+   },
+   "points": [
+    {
+     "fa": "پاتریک مانسون در ۱۸۷۷ نشان داد انگل فیل‌پایی (الفانتیازیس) را پشه هنگام نیش‌زدن منتقل می‌کند؛ نخستین اثبات انتقال بیماری به‌وسیلهٔ یک حشره.",
+     "en": "In 1877 Patrick Manson showed that the parasite of elephantiasis (filariasis) is transmitted by mosquitoes when they bite, the first proof of disease transmission by an insect.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لاوران پیش‌تر نشان داده بود مالاریا را تک‌یاختهٔ انگلی پدید می‌آورد نه «هوای بد»؛ رونالد راس در ۲۰ اوت ۱۸۹۷ انگل را در معدهٔ پشه یافت و گراسی و بینیامی اندکی بعد چرخهٔ زندگی انگل انسانی را در پشهٔ آنوفل نشان دادند.",
+     "en": "Laveran had earlier shown that malaria is caused by a parasitic protozoan, not 'bad air'; on 20 August 1897 Ronald Ross found the parasite in a mosquito's stomach, and Grassi and Bignami soon after traced the human parasite's life cycle in the Anopheles mosquito.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "فینلی در ۱۸۸۱ پشه را عامل تب زرد دانست و گروه والتر رید در کوبا (پس از ۱۸۹۸) با داوطلبان انسانی آن را آزمود؛ مهار پشه در هاوانا و سپس در منطقهٔ کانال پاناما بیماری را مهار کرد.",
+     "en": "Finlay proposed in 1881 that mosquitoes spread yellow fever, and Walter Reed's team in Cuba (after 1898) tested it with human volunteers; mosquito control then curbed the disease in Havana and in the Panama Canal zone.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کتاب می‌گوید طب گرمسیری در اواخر سدهٔ نوزدهم بیشتر برای حفظ سلامت مهاجران و اتباع دولت‌های غربی در مستعمره‌ها پدید آمد، هرچند به بومیان هم سود می‌رساند. آزمایش بر داوطلبان در گروه رید پرسش‌های اخلاقی دربارهٔ رضایت آگاهانه برمی‌انگیزد که کتاب کمتر به آن می‌پردازد.",
+     "en": "The book says tropical medicine arose in the late 19th century largely to protect settlers and citizens of Western states in colonies, though it also benefited local people. Experiments on volunteers in Reed's group raise ethical questions about informed consent that the book treats only lightly.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Patrick Manson",
+     "fa": "پاتریک مانسون",
+     "years": "1844–1922",
+     "note": "پزشک بریتانیایی؛ پدر طب گرمسیری"
+    },
+    {
+     "latin": "Ronald Ross",
+     "fa": "رونالد راس",
+     "years": "1857–1932",
+     "note": "کاشف انتقال مالاریا با پشه"
+    },
+    {
+     "latin": "Walter Reed",
+     "fa": "والتر رید",
+     "years": "1851–1902",
+     "note": "پزشک ارتش آمریکا؛ تب زرد"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:germ-theory-and-kochs-postulates",
+     "rel": "part-of",
+     "fa": "از شناخت میکروب تا شناخت ناقل",
+     "en": "From knowing the microbe to knowing the vector"
+    },
+    {
+     "to": "phil:ethics",
+     "rel": "see-also",
+     "fa": "اخلاق آزمایش بر انسان",
+     "en": "Ethics of human experimentation"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "Yount, Lisa. A History of Medicine (World History series). Persian translation: تاریخ پزشکی، ترجمهٔ رضا یاسائی، تهران: ققنوس، ۱۳۸۵.",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "PDF اسکن‌شده بدون لایهٔ متن؛ OCR با tesseract (fas) در ۱۰۰ نقطه در اینچ روی صفحه‌های ۱ تا ۱۶۵. دقت متن عمدتاً خوب برای متن پیوسته، اما ارقام، تاریخ‌ها، پانویس‌های لاتین و بعضی جعبه‌ها خراب بودند؛ فقط اعدادی آمده که در OCR واضح یا با دانش عمومی هم‌خوان بودند. بخش‌های ژن‌درمانی، پیوند و فصل آخر (اخلاق و چالش‌ها) سطحی خوانده شد و مدخلی از آن‌ها ساخته نشد. سال اصل انگلیسی تأییدنشده.",
+ "lecture": "تاریخ پزشکی (ترجمهٔ A History of Medicine)",
+ "speaker": "Lisa Yount (لیزا یونت)",
+ "channel": "ققنوس، تهران (مجموعهٔ تاریخ جهان)"
+}

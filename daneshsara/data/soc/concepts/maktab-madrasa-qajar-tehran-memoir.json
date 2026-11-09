@@ -1,0 +1,99 @@
+{
+ "id": "soc:maktab-madrasa-qajar-tehran-memoir",
+ "kind": "concept",
+ "title": {
+  "fa": "مکتب‌خانه و مدرسهٔ طلبگی در تهران اواخر قاجار به روایت خاطرات",
+  "en": "The maktab and the madrasa in late-Qajar Tehran, from a memoir",
+  "nl": "De maktab en madrasa in laat-Qajar Teheran volgens een memoire"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "نویسنده که حدود ۱۲۶۸ شمسی در تهران زاده شد، آموزش کودکی (مکتب ملا‌باجی و مکتب مردانه) و سپس زندگی طلبگی را وصف می‌کند؛ منبعی دست‌اول برای فرهنگ روزمرهٔ آموزش پیش از مدرسه‌های نوین.",
+  "en": "Born in Tehran around 1889, the author describes early schooling (a woman teacher's maktab, then a boys' maktab) and later seminary life: a first-hand source on everyday education before modern schools.",
+  "nl": "Geboren rond 1889 in Teheran beschrijft de auteur de traditionele koranschool en het leven van seminaristen: een ooggetuigenbron over onderwijs vóór de moderne school."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کودک در چهار سالگی نزد معلمی زن (ملا‌باجی) رفت؛ الفبا، سپس عم‌جزء و سوره‌های کوتاه محور آموزش بود و شاگردان بزرگ‌تر به‌عنوان ناظم کارهای مکتب را سامان می‌دادند.",
+    "en": "At four the child went to a woman teacher (mulla-baji); the alphabet, then the last section of the Quran and short chapters formed the curriculum, with older pupils acting as monitors who ran chores.",
+    "nl": "At four the child went to a woman teacher (mulla-baji); the alphabet, then the last section of the Quran and short chapters formed the curriculum, with older pupils acting as monitors who ran chores."
+   },
+   "sources": [
+    "src:73da9fe994"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در مکتب‌خانهٔ دکانی دختران و پسران در دو سوی اتاق می‌نشستند و کار نظافت و خرید بین شاگردان تقسیم می‌شد.",
+    "en": "In the shop-front maktab girls and boys sat on opposite sides and cleaning and errands were shared among pupils.",
+    "nl": "In the shop-front maktab girls and boys sat on opposite sides and cleaning and errands were shared among pupils."
+   },
+   "sources": [
+    "src:73da9fe994"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در مدرسه، طلاب درس را به شکل مباحثهٔ دونفره می‌آموختند: یکی تقریر می‌کرد و دیگری اشکال می‌گرفت؛ پنجشنبه و جمعه تعطیل بود و جمعه‌ها به تفریح بیرون شهر می‌رفتند.",
+    "en": "In the madrasa students learned through paired debate, one explaining and the other objecting; Thursday and Friday were free and Fridays were spent on outings outside the city.",
+    "nl": "In the madrasa students learned through paired debate, one explaining and the other objecting; Thursday and Friday were free and Fridays were spent on outings outside the city."
+   },
+   "sources": [
+    "src:73da9fe994"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده از معلمی (بدایع‌نگار) یاد می‌کند که درس هیئت (نجوم کهن) می‌داد و در آن از آزادی سخن می‌رفت؛ این نشان می‌دهد حتی در محیط سنتی مباحث تازه راه می‌یافت.",
+    "en": "He mentions a teacher who taught traditional astronomy and spoke of freedom, suggesting new ideas reached even traditional settings.",
+    "nl": "He mentions a teacher who taught traditional astronomy and spoke of freedom, suggesting new ideas reached even traditional settings."
+   },
+   "sources": [
+    "src:73da9fe994"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همهٔ این جزئیات خاطره‌ای است و قابل بازبینی مستقل نیست؛ برای قیاس با پژوهش دربارهٔ تحول آموزش در ایران قاجار (پیدایش مدارس نوین و دارالفنون) باید به مطالعات دانشگاهی رجوع کرد.",
+    "en": "All of this is recollection and cannot be checked independently; for comparison with research on educational change in Qajar Iran (new-style schools, Dar al-Funun) consult academic studies.",
+    "nl": "All of this is recollection and cannot be checked independently; for comparison with research on educational change in Qajar Iran (new-style schools, Dar al-Funun) consult academic studies."
+   },
+   "sources": [
+    "src:73da9fe994"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "نهادها و دولت",
+    "en": "institutions and the state",
+    "nl": "institutions and the state"
+   }
+  }
+ ],
+ "people": [
+  "core:hassan-a-zam-qodsi"
+ ],
+ "sources": [
+  "src:73da9fe994"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

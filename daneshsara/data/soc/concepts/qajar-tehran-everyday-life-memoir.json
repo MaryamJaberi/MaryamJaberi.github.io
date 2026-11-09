@@ -1,0 +1,104 @@
+{
+ "id": "soc:qajar-tehran-everyday-life-memoir",
+ "kind": "concept",
+ "title": {
+  "fa": "تهران ناصری از نگاه یک خاطره‌نویس: خیابان‌ها، واگن اسبی و ماشین دودی",
+  "en": "Nasiri Tehran through a memoirist's eyes: streets, horse trams and the steam train",
+  "nl": "Teheran onder Naser al-Din Shah door de ogen van een memoirist"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "اعظام قدسی چینش خیابان‌ها، وسایل نقلیهٔ همگانی و عادات روزمرهٔ تهران آخر قرن نوزدهم را با جزئیات یادآوری می‌کند؛ ارزشش در جزئیات مکانی و رفتار روزمره است نه در داوری سیاسی‌اش.",
+  "en": "A'zam Qodsi recalls in detail the streets, public transport and daily habits of late-19th-century Tehran; its value lies in spatial and everyday detail, not in his political judgements.",
+  "nl": "A'zam Qodsi beschrijft straten, openbaar vervoer en dagelijks leven in Teheran eind 19e eeuw; de waarde zit in het alledaagse detail."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "وصف او از واگن اسبی روی ریل: یک مأمور (ممیز) بلیت‌ها را بین دو راهی‌ها وارسی می‌کرد، بخش جداگانه‌ای برای زنان بود و در سربالایی لاله‌زار اسب‌های اضافه به واگن بسته می‌شد.",
+    "en": "He describes the rail-borne horse tram: an inspector checked tickets at the passing points, there was a separate compartment for women, and extra horses were hitched on the Lalehzar slope.",
+    "nl": "He describes the rail-borne horse tram: an inspector checked tickets at the passing points, there was a separate compartment for women, and extra horses were hitched on the Lalehzar slope."
+   },
+   "sources": [
+    "src:73da9fe994"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ماشین دودی (قطار بخار) میان شهر و حضرت عبدالعظیم رفت‌وآمد می‌کرد، در اعیاد و ایام عزا دفعات بیشتر.",
+    "en": "The steam train ran between the city and Shah Abdol-Azim, more often on feast and mourning days.",
+    "nl": "The steam train ran between the city and Shah Abdol-Azim, more often on feast and mourning days."
+   },
+   "sources": [
+    "src:73da9fe994"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او از درمان‌های عامیانهٔ کوچه‌بازار یاد می‌کند، مثل «طبیب» زنی که با فوت‌کردن در بینی کودک نخودی بیرون می‌آورد؛ این‌ها خاطرهٔ شخصی‌اند و ارزش درمانی‌شان تأیید نشده.",
+    "en": "He recalls street folk-medicine, such as a woman healer blowing a pea out of a child's nose; these are personal memories and their medical value is unverified.",
+    "nl": "He recalls street folk-medicine, such as a woman healer blowing a pea out of a child's nose; these are personal memories and their medical value is unverified."
+   },
+   "sources": [
+    "src:73da9fe994"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "ستایش او از ارزانی و ثبات نرخ نان و گوشت در دوران ناصرالدین‌شاه برداشتی نوستالژیک و بی‌آمار است؛ پژوهش‌ها از قحطی‌ها و تورم‌های دورهٔ قاجار (مثلاً قحطی ۱۲۸۸–۱۲۹۰ قمری) یاد می‌کنند.",
+    "en": "His praise for cheap, stable bread and meat prices under Naser al-Din Shah is a nostalgic claim without figures; research notes famines and price shocks in the Qajar period (e.g. the great famine of 1870-72).",
+    "nl": "His praise for cheap, stable bread and meat prices under Naser al-Din Shah is a nostalgic claim without figures; research notes famines and price shocks in the Qajar period (e.g. the great famine of 1870-72)."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "روایت او از مرگ امیرکبیر (دسیسهٔ شاهزادگان و نقش امین‌اقدس) جزئیات درباری‌ای دارد که در منابع اصلی پژوهشی تأیید نمی‌شود؛ هستهٔ رویداد (تبعید به کاشان و قطع رگ در حمام فین) در تاریخ‌نگاری پذیرفته است.",
+    "en": "His account of Amir Kabir's death (a princes' plot and the role of Amin Aqdas) has court details not confirmed in main scholarly sources; the core (exile to Kashan and death by opening of veins in the Fin bath) is accepted in historiography.",
+    "nl": "His account of Amir Kabir's death (a princes' plot and the role of Amin Aqdas) has court details not confirmed in main scholarly sources; the core (exile to Kashan and death by opening of veins in the Fin bath) is accepted in historiography."
+   },
+   "sources": [
+    "src:949906ec51"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:berger-humor-authoritarian",
+   "rel": "see-also",
+   "note": {
+    "fa": "زندگی روزمره زیر حکومت استبدادی",
+    "en": "everyday life under authoritarian rule",
+    "nl": "everyday life under authoritarian rule"
+   }
+  }
+ ],
+ "people": [
+  "core:naser-al-din-shah",
+  "core:amir-kabir"
+ ],
+ "sources": [
+  "src:73da9fe994",
+  "src:949906ec51"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

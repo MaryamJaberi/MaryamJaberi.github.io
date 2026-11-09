@@ -1,0 +1,132 @@
+{
+ "id": "phil:final-causes-aristotle-to-mechanism",
+ "kind": "concept",
+ "title": {
+  "fa": "از علت غایی ارسطو تا طبیعتِ ماشین‌وار",
+  "en": "From Aristotle's final cause to a mechanical nature",
+  "nl": "Van Aristoteles' doeloorzaak naar een mechanische natuur"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "کتاب چهار علت ارسطو و غایت‌شناسی او را شرح می‌دهد و سپس نشان می‌دهد دکارت، هابز و اسپینوزا هر یک به شکلی علت غایی را از طبیعت کنار می‌گذارند. بحث از گذار علم مدرن از «چرا» به «چگونه» است.",
+  "en": "The book explains Aristotle's four causes and teleology, then shows how Descartes, Hobbes and Spinoza each remove final causes from nature, a shift from 'for what purpose' to 'by what mechanism'.",
+  "nl": "Het boek legt Aristoteles' vier oorzaken en teleologie uit en laat zien hoe Descartes, Hobbes en Spinoza het doeloorzaakdenken uit de natuur halen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ارسطو چهار علت را برمی‌شمارد: مادی، صوری، فاعلی و غایی؛ کتاب آن را با گاو (ماده، الگو، فرایند زیستی، رشد کامل) و گاو عروسکی توضیح می‌دهد.",
+    "en": "Aristotle lists four causes: material, formal, efficient and final; the book illustrates them with a cow (matter, pattern, biological process, full growth) and a toy cow.",
+    "nl": "Aristotle lists four causes: material, formal, efficient and final; the book illustrates them with a cow (matter, pattern, biological process, full growth) and a toy cow."
+   },
+   "sources": [
+    "src:76199e8f24"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارسطو طبیعت را هدفمند می‌داند و نه تصادفی؛ رشد موجود زنده به سوی غایتی درونی است.",
+    "en": "Aristotle takes nature as purposive rather than random: a living thing develops toward an inner end.",
+    "nl": "Aristotle takes nature as purposive rather than random: a living thing develops toward an inner end."
+   },
+   "sources": [
+    "src:76199e8f24"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دکارت به روایت کتاب علت غایی را در علم طبیعت رد می‌کند و چیزهای طبیعی را «ماده‌ای متحرک» با علت فاعلی می‌فهمد.",
+    "en": "In the book's account Descartes rejects final causes in natural science and understands natural things as matter in motion explained by efficient causes.",
+    "nl": "In the book's account Descartes rejects final causes in natural science and understands natural things as matter in motion explained by efficient causes."
+   },
+   "sources": [
+    "src:76199e8f24"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هابز ذهن را حرکتی در مغز و عقل را ابزار محاسبه می‌داند؛ اسپینوزا می‌گوید مفید بودن چیزی در طبیعت دلیل هدفمندی آن نیست و باور به هدف‌های الهی از همین خلط برمی‌خیزد.",
+    "en": "Hobbes takes mind as motion in the brain and reason as calculation; Spinoza says usefulness in nature does not show purpose, and belief in divine purposes arises from that confusion.",
+    "nl": "Hobbes takes mind as motion in the brain and reason as calculation; Spinoza says usefulness in nature does not show purpose, and belief in divine purposes arises from that confusion."
+   },
+   "sources": [
+    "src:76199e8f24"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«علت» در ارسطو بیشتر به معنای «چهار گونه پاسخ به چرا» است تا علتِ مدرن به‌عنوان رویدادِ پیشین؛ مثال «الگوی ژنتیکی» به‌جای علت صوری تعبیری امروزی است که خود ارسطو نمی‌شناخت.",
+    "en": "Aristotle's 'cause' is closer to four kinds of answer to 'why' than to the modern cause as an earlier event; 'genetic pattern' as the formal cause is a modern gloss Aristotle did not have.",
+    "nl": "Aristotle's 'cause' is closer to four kinds of answer to 'why' than to the modern cause as an earlier event; 'genetic pattern' as the formal cause is a modern gloss Aristotle did not have."
+   },
+   "sources": [
+    "src:bd2649a530"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بحث هدفمندی در زیست‌شناسی با نظریهٔ تکامل به شکل دیگری بازگشت؛ پس «حذف کامل غایت از طبیعت» روایتی تاریخی از فلسفهٔ قرن هفدهم است، نه حکم نهایی علم.",
+    "en": "The question of purpose returned in biology in another form with evolutionary theory, so 'removing purpose from nature entirely' is a story about seventeenth-century philosophy, not a final verdict of science.",
+    "nl": "The question of purpose returned in biology in another form with evolutionary theory, so 'removing purpose from nature entirely' is a story about seventeenth-century philosophy, not a final verdict of science."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:science",
+   "rel": "part-of",
+   "note": {
+    "fa": "از شاخهٔ فلسفهٔ علم",
+    "en": "Part of philosophy of science",
+    "nl": "Part of philosophy of science"
+   }
+  },
+  {
+   "to": "phil:skepticism-cogito",
+   "rel": "see-also",
+   "note": {
+    "fa": "دکارت و آغاز فلسفهٔ مدرن",
+    "en": "Descartes and the start of modern philosophy",
+    "nl": "Descartes and the start of modern philosophy"
+   }
+  },
+  {
+   "to": "phil:paradigms",
+   "rel": "see-also",
+   "note": {
+    "fa": "گذار از یک چارچوب علمی به دیگری",
+    "en": "Shifts between scientific frameworks",
+    "nl": "Shifts between scientific frameworks"
+   }
+  }
+ ],
+ "people": [
+  "core:aristotle",
+  "core:ren-descartes",
+  "core:baruch-spinoza"
+ ],
+ "sources": [
+  "src:76199e8f24",
+  "src:bd2649a530"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
