@@ -26,8 +26,20 @@ main{padding-block:var(--s6) var(--s16)}
 .legend .sep{width:1px;background:var(--line);margin:4px 2px}
 .lay{display:grid;gap:var(--s6)}
 .mapbox{position:relative;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
-svg.map{display:block;width:100%;height:auto;touch-action:manipulation}
-@media (max-width:700px){.mapbox{overflow-x:auto}svg.map{min-width:720px}}
+svg.map{display:block;width:100%;height:auto;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+svg.map.drag{cursor:grabbing}
+svg.map.far .hub:not(.on) text{opacity:0}
+svg.map.far .road{opacity:.55}
+.road,.land{vector-effect:non-scaling-stroke}
+svg.map{--ts:1}
+.lname{font-size:calc(15px*var(--ts))}
+.city text{font-size:calc(11.5px*var(--ts));stroke-width:calc(3px*var(--ts))}
+.hub text{font-size:calc(9.5px*var(--ts));stroke-width:calc(2.5px*var(--ts))}
+.hub.on text{font-size:calc(10px*var(--ts))}
+.city circle:not(.hit){transform-box:fill-box;transform-origin:center;transform:scale(var(--ts))}
+.hint{position:absolute;inset-inline-start:12px;bottom:10px;font-size:.74rem;color:var(--ink-2);background:color-mix(in srgb,var(--paper) 82%,transparent);padding:3px 10px;border-radius:var(--r-full);pointer-events:none}
+.tools button.sq{width:30px;padding:4px 0;font-size:1.05rem;line-height:1}
+@media (max-width:700px){.hint{display:none}}
 .land{fill:var(--fc);fill-opacity:.10;stroke:var(--fc);stroke-opacity:.5;stroke-width:1.2;transition:fill-opacity .2s}
 .land.on{fill-opacity:.22}
 .land.dim{fill-opacity:.04;stroke-opacity:.2}
@@ -39,7 +51,7 @@ svg.map{display:block;width:100%;height:auto;touch-action:manipulation}
 .city text{font-size:11.5px;font-weight:600;fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
 .city.dim{opacity:.3}
 .city.on circle:not(.hit){stroke:var(--ink);stroke-width:2.5;r:7}
-.hub rect{fill:var(--paper);stroke:var(--ink-2);stroke-width:1.2;transform:rotate(45deg);transform-box:fill-box;transform-origin:center}
+.hub rect{fill:var(--paper);stroke:var(--ink-2);stroke-width:1.2;transform:rotate(45deg) scale(var(--ts));transform-box:fill-box;transform-origin:center}
 .hub text{font-size:9.5px;fill:var(--ink-2);pointer-events:none;paint-order:stroke;stroke:var(--paper);stroke-width:2.5px;stroke-linejoin:round}
 .hub.dim{opacity:.18}
 .hub.on rect{fill:var(--primary);stroke:var(--primary)}
@@ -87,7 +99,7 @@ footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(-
  </section>
  <div class="legend" id="legend"></div>
  <div class="lay">
-  <div class="mapbox"><div class="tools"><button id="lbl" aria-pressed="true" data-i="labels">نام پل‌ها</button><button id="reset" data-i="reset">همه</button></div><svg class="map" id="map" viewBox="0 0 1000 720" role="img" aria-label="نقشهٔ سرزمین‌های دانش"></svg></div>
+  <div class="mapbox"><div class="tools"><button id="zin" class="sq" aria-label="+" type="button">+</button><button id="zout" class="sq" aria-label="−" type="button">−</button><button id="lbl" aria-pressed="true" data-i="labels">نام پل‌ها</button><button id="reset" data-i="reset">همه</button></div><svg class="map" id="map" viewBox="0 0 1000 720" role="img" aria-label="نقشهٔ سرزمین‌های دانش"></svg><div class="hint" data-i="zoomHint"></div></div>
   <aside class="panel" id="panel"></aside>
  </div>
 </main>
@@ -95,13 +107,13 @@ footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(-
 <script>
 const FAM = __FAM__, FIELDS = __FIELDS__, BRIDGES = __BRIDGES__, PN = __PN__;
 const UI = {
- fa:{crumb:"سرزمین دانش",h1:"سرزمین دانش",lead:"هر خانوادهٔ علم یک سرزمین است، هر رشته یک شهر، و هر رشتهٔ میان‌رشته‌ای راهی است که دو یا چند شهر را، گاهی از سرزمین‌های مختلف، به هم می‌رساند. روی شهرها و پل‌ها بزنید تا ببینید چه کسانی این راه‌ها را ساختند.",labels:"نام پل‌ها",reset:"همه",foot:"جای شهرها و شکل سرزمین‌ها قراردادی است؛ آنچه واقعی است شبکهٔ پیوندهاست: هر راه یک رشتهٔ میان‌رشته‌ای است که در اطلس ثبت شده و هر نام، پژوهشگری که در بنیان‌گذاری آن نقش داشته. فهرست نام‌ها کامل نیست و با بازبینی کارشناسان کامل‌تر می‌شود.",
+ fa:{crumb:"سرزمین دانش",h1:"سرزمین دانش",lead:"هر خانوادهٔ علم یک سرزمین است، هر رشته یک شهر، و هر رشتهٔ میان‌رشته‌ای راهی است که دو یا چند شهر را، گاهی از سرزمین‌های مختلف، به هم می‌رساند. روی شهرها و پل‌ها بزنید تا ببینید چه کسانی این راه‌ها را ساختند.",zoomHint:"چرخ ماوس یا دو انگشت: زوم · کشیدن: جابه‌جایی · زدن روی یک سرزمین: نزدیک‌تر شدن",labels:"نام پل‌ها",reset:"همه",foot:"جای شهرها و شکل سرزمین‌ها قراردادی است؛ آنچه واقعی است شبکهٔ پیوندهاست: هر راه یک رشتهٔ میان‌رشته‌ای است که در اطلس ثبت شده و هر نام، پژوهشگری که در بنیان‌گذاری آن نقش داشته. فهرست نام‌ها کامل نیست و با بازبینی کارشناسان کامل‌تر می‌شود.",
   overview:"نمای کلی",lands:"سرزمین",cities:"شهر",roads:"راه",builders:"پل‌ساز",pairs:"پرراه‌ترین مرزها",pairsS:"کدام سرزمین‌ها بیشترین راه را میان خود ساخته‌اند؟",top:"پل‌سازان بزرگ",topS:"کسانی که نامشان روی بیش از یک پل آمده.",city:"شهر",hub:"پل (رشتهٔ میان‌رشته‌ای)",inLand:"در سرزمین",founders:"بنیان‌گذاران و چهره‌ها",roadsFrom:"راه‌هایی که از این‌جا می‌گذرند",connects:"این راه چه شهرهایی را به هم می‌رساند",crossing:"میان سرزمین‌های",inside:"درون یک سرزمین",buildersOf:"سازندگان این پل",page:"صفحهٔ پل ↗",atlas:"در اطلس ↗",person:"پژوهشگر",onBridges:"روی این پل‌ها",onCities:"در این شهرها",lands2:"دو سرزمین را انتخاب کنید تا فقط راه‌های میانشان بماند.",none:"هنوز نامی ثبت نشده.",q:"پرسش این رشته",toLands:"به سرزمین‌های",
   register:"در دفتر چهره‌ها ↗",tipLegend:"یک سرزمین را بزنید تا راه‌هایش روشن شود؛ دومی را بزنید تا فقط راه‌های میان آن دو بماند."},
- en:{crumb:"Land of Knowledge",h1:"Land of Knowledge",lead:"Each family of science is a land, each discipline a city, and each interdisciplinary field a road joining two or more cities, often across lands. Click cities and bridges to see who built the roads.",labels:"Bridge names",reset:"All",foot:"Positions and shapes are conventional; what is real is the network: every road is an interdisciplinary field recorded in the atlas, every name a researcher who helped found it. The name lists are incomplete and grow with expert review.",
+ en:{crumb:"Land of Knowledge",h1:"Land of Knowledge",lead:"Each family of science is a land, each discipline a city, and each interdisciplinary field a road joining two or more cities, often across lands. Click cities and bridges to see who built the roads.",zoomHint:"Wheel or pinch to zoom · drag to pan · click a land to zoom in",labels:"Bridge names",reset:"All",foot:"Positions and shapes are conventional; what is real is the network: every road is an interdisciplinary field recorded in the atlas, every name a researcher who helped found it. The name lists are incomplete and grow with expert review.",
   overview:"Overview",lands:"lands",cities:"cities",roads:"roads",builders:"bridge-builders",pairs:"Busiest borders",pairsS:"Which lands have built the most roads between them?",top:"Great bridge-builders",topS:"People whose name appears on more than one bridge.",city:"City",hub:"Bridge (interdisciplinary field)",inLand:"in the land of",founders:"Founders and key figures",roadsFrom:"Roads passing through here",connects:"Cities this road joins",crossing:"Between the lands of",inside:"Within one land",buildersOf:"Builders of this bridge",page:"Bridge page ↗",atlas:"In the atlas ↗",person:"Researcher",onBridges:"On these bridges",onCities:"In these cities",lands2:"Pick two lands to keep only the roads between them.",none:"No names recorded yet.",q:"The field's question",toLands:"to the lands of",
   register:"In the people register ↗",tipLegend:"Click a land to light its roads; click a second to keep only the roads between the two."},
- nl:{crumb:"Land van Kennis",h1:"Land van Kennis",lead:"Elke familie van wetenschap is een land, elke discipline een stad, en elk interdisciplinair veld een weg die twee of meer steden verbindt, vaak over landsgrenzen heen. Klik op steden en bruggen om te zien wie de wegen bouwde.",labels:"Brugnamen",reset:"Alles",foot:"Posities en vormen zijn conventioneel; wat echt is, is het netwerk: elke weg is een interdisciplinair veld uit de atlas, elke naam een onderzoeker die het mee oprichtte. De namenlijsten zijn onvolledig en groeien met expertreview.",
+ nl:{crumb:"Land van Kennis",h1:"Land van Kennis",lead:"Elke familie van wetenschap is een land, elke discipline een stad, en elk interdisciplinair veld een weg die twee of meer steden verbindt, vaak over landsgrenzen heen. Klik op steden en bruggen om te zien wie de wegen bouwde.",zoomHint:"Scrollwiel of knijpen: zoom · slepen: verschuiven · klik op een land om in te zoomen",labels:"Brugnamen",reset:"Alles",foot:"Posities en vormen zijn conventioneel; wat echt is, is het netwerk: elke weg is een interdisciplinair veld uit de atlas, elke naam een onderzoeker die het mee oprichtte. De namenlijsten zijn onvolledig en groeien met expertreview.",
   overview:"Overzicht",lands:"landen",cities:"steden",roads:"wegen",builders:"bruggenbouwers",pairs:"Drukste grenzen",pairsS:"Welke landen hebben de meeste wegen tussen elkaar gebouwd?",top:"Grote bruggenbouwers",topS:"Mensen van wie de naam op meer dan één brug staat.",city:"Stad",hub:"Brug (interdisciplinair veld)",inLand:"in het land",founders:"Grondleggers en sleutelfiguren",roadsFrom:"Wegen die hier passeren",connects:"Steden die deze weg verbindt",crossing:"Tussen de landen",inside:"Binnen één land",buildersOf:"Bouwers van deze brug",page:"Brugpagina ↗",atlas:"In de atlas ↗",person:"Onderzoeker",onBridges:"Op deze bruggen",onCities:"In deze steden",lands2:"Kies twee landen om alleen de wegen ertussen te houden.",none:"Nog geen namen vastgelegd.",q:"De vraag van dit veld",toLands:"naar de landen",
   register:"In het personenregister ↗",tipLegend:"Klik op een land om zijn wegen op te lichten; klik op een tweede om alleen de wegen ertussen te houden."}
 };
@@ -201,7 +213,7 @@ function panel(){
   }
   P.innerHTML = s;
 }
-function go(type, id){ sel = {type, id}; apply(); try { history.replaceState(null, "", "#" + (type === "person" ? "p-" + encodeURIComponent(id) : id)); } catch(_) {} document.getElementById("panel").scrollIntoView({behavior:"smooth", block:"nearest"}); }
+function go(type, id){ sel = {type, id}; apply(); { const f = BY[id]; if ((type === "city" || type === "hub") && f && typeof focusPoint === "function") focusPoint(f.x, f.y, Math.min(vb.w, 420)); } try { history.replaceState(null, "", "#" + (type === "person" ? "p-" + encodeURIComponent(id) : id)); } catch(_) {} document.getElementById("panel").scrollIntoView({behavior:"smooth", block:"nearest"}); }
 document.addEventListener("click", ev => {
   if (ev.target.closest("[data-back]")) { sel = null; apply(); return; }
   const g = ev.target.closest("[data-go]"); if (g) { const [t, id] = g.dataset.go.split(/:(.*)/); go(t, decodeURIComponent(id)); return; }
@@ -210,7 +222,35 @@ document.addEventListener("click", ev => {
   const land = ev.target.closest("[data-land]"); if (land) { const id = land.dataset.land; sel = null; landsSel = landsSel.includes(id) ? landsSel.filter(x => x !== id) : [...landsSel.slice(-1), id]; apply(); return; }
 });
 svg.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { const t = ev.target.closest(".city,.hub"); if (t) { ev.preventDefault(); t.click(); } } });
-document.getElementById("reset").addEventListener("click", () => { sel = null; landsSel = []; apply(); try { history.replaceState(null, "", location.pathname); } catch(_) {} });
+
+// ---------- pan & zoom (map-like) ----------
+const FULL = {x:0, y:0, w:1000, h:720}, ASP = 720/1000;
+let vb = {...FULL}, anim = null;
+const clampVB = v => { v.w = Math.max(110, Math.min(1000, v.w)); v.h = v.w*ASP; v.x = Math.max(-60, Math.min(1060 - v.w, v.x)); v.y = Math.max(-40, Math.min(760 - v.h, v.y)); return v; };
+function paintVB(){ svg.setAttribute("viewBox", `${vb.x.toFixed(1)} ${vb.y.toFixed(1)} ${vb.w.toFixed(1)} ${vb.h.toFixed(1)}`); svg.classList.toggle("far", vb.w > 640); svg.style.setProperty("--ts", Math.pow(vb.w/1000, .72).toFixed(3)); }
+function zoomTo(t, ms){ t = clampVB({...t}); if (anim) cancelAnimationFrame(anim); const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches; if (reduce || !ms) { vb = t; paintVB(); return; } const a = {...vb}, t0 = performance.now(); const step = now => { let k = Math.min(1, (now - t0)/ms); k = 1 - Math.pow(1-k, 3); vb = {x:a.x+(t.x-a.x)*k, y:a.y+(t.y-a.y)*k, w:a.w+(t.w-a.w)*k, h:(a.w+(t.w-a.w)*k)*ASP}; paintVB(); if (k < 1) anim = requestAnimationFrame(step); }; anim = requestAnimationFrame(step); }
+function svgPt(cx, cy){ const r = svg.getBoundingClientRect(); return [vb.x + (cx - r.left)/r.width*vb.w, vb.y + (cy - r.top)/r.height*vb.h]; }
+function zoomAt(cx, cy, f, ms){ const [px, py] = svgPt(cx, cy); const w = Math.max(110, Math.min(1000, vb.w*f)); const k = w/vb.w; zoomTo({x:px-(px-vb.x)*k, y:py-(py-vb.y)*k, w, h:w*ASP}, ms); }
+function focusBox(b, pad){ const w0 = b.width*pad, h0 = b.height*pad; const w = Math.max(w0, h0/ASP, 200); zoomTo({x:b.x+b.width/2-w/2, y:b.y+b.height/2-w*ASP/2, w, h:w*ASP}, 480); }
+function focusPoint(x, y, w){ zoomTo({x:x-w/2, y:y-w*ASP/2, w, h:w*ASP}, 480); }
+function focusLand(id){ const el = svg.querySelector(`.land[data-land="${id}"]`); if (el) focusBox(el.getBBox(), 1.18); }
+svg.addEventListener("wheel", ev => { ev.preventDefault(); const f = Math.exp(ev.deltaY*(ev.deltaMode === 1 ? .05 : .0016)); zoomAt(ev.clientX, ev.clientY, f, 0); }, {passive:false});
+const ptrs = new Map(); let pdist = 0, moved = 0, pstart = null;
+svg.addEventListener("pointerdown", ev => { ptrs.set(ev.pointerId, [ev.clientX, ev.clientY]); moved = 0; if (anim) cancelAnimationFrame(anim); if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pdist = Math.hypot(a[0]-b[0], a[1]-b[1]); } });
+svg.addEventListener("pointermove", ev => {
+  if (!ptrs.has(ev.pointerId)) return; const prev = ptrs.get(ev.pointerId); ptrs.set(ev.pointerId, [ev.clientX, ev.clientY]);
+  if (ptrs.size === 1) { const dx = ev.clientX - prev[0], dy = ev.clientY - prev[1]; moved += Math.abs(dx) + Math.abs(dy); if (moved > 6) { if (!svg.classList.contains("drag")) { svg.classList.add("drag"); try { svg.setPointerCapture(ev.pointerId); } catch(_) {} } const r = svg.getBoundingClientRect(); vb = clampVB({x:vb.x - dx/r.width*vb.w, y:vb.y - dy/r.height*vb.h, w:vb.w, h:vb.h}); paintVB(); } }
+  else if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; const d = Math.hypot(a[0]-b[0], a[1]-b[1]); moved = 99; if (pdist) zoomAt((a[0]+b[0])/2, (a[1]+b[1])/2, pdist/d, 0); pdist = d; }
+});
+const pend = ev => { ptrs.delete(ev.pointerId); pdist = 0; if (!ptrs.size) setTimeout(() => svg.classList.remove("drag"), 0); };
+svg.addEventListener("pointerup", pend); svg.addEventListener("pointercancel", pend);
+document.addEventListener("click", ev => { if (moved > 6 && svg.contains(ev.target)) { ev.stopPropagation(); ev.preventDefault(); moved = 0; } }, true);
+svg.addEventListener("dblclick", ev => { ev.preventDefault(); zoomAt(ev.clientX, ev.clientY, .5, 300); });
+document.getElementById("zin").addEventListener("click", () => { const r = svg.getBoundingClientRect(); zoomAt(r.left + r.width/2, r.top + r.height/2, .6, 250); });
+document.getElementById("zout").addEventListener("click", () => { const r = svg.getBoundingClientRect(); zoomAt(r.left + r.width/2, r.top + r.height/2, 1.67, 250); });
+svg.addEventListener("click", ev => { const l = ev.target.closest(".land"); if (l && !ev.target.closest(".city,.hub")) { const id = l.dataset.land; if (landsSel.length === 1 && landsSel[0] === id && vb.w < 700) setTimeout(() => zoomTo(FULL, 450), 0); else focusLand(id); } });
+paintVB();
+document.getElementById("reset").addEventListener("click", () => { sel = null; landsSel = []; zoomTo(FULL, 450); apply(); try { history.replaceState(null, "", location.pathname); } catch(_) {} });
 document.getElementById("lbl").addEventListener("click", ev => { const on = ev.currentTarget.getAttribute("aria-pressed") !== "true"; ev.currentTarget.setAttribute("aria-pressed", on); svg.classList.toggle("nolabels", !on); });
 function legend(){ document.getElementById("legend").innerHTML = FAM.map(fm => `<button data-land="${fm.id}" style="--fc:${fc(fm.id)}" aria-pressed="false"><i></i>${esc(famName(fm.id))} <small>(${fa(CITIES.filter(c => c.fam === fm.id).length)})</small></button>`).join(""); }
 function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => { el.textContent = T(el.dataset.i); }); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + " — " + (L === "fa" ? "دانش‌سرا" : "Daneshsara"); legend(); draw(); apply(); }
