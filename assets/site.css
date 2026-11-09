@@ -21,8 +21,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 :focus-visible{outline:2.5px solid var(--magenta);outline-offset:3px;border-radius:6px}
-.skip{position:absolute;left:-999px;top:10px;background:var(--plum);color:#fff;padding:8px 14px;border-radius:8px;z-index:20}
-.skip:focus{left:12px}
+.skip{position:absolute;top:-80px;inset-inline-start:12px;background:var(--plum);color:#fff;padding:8px 14px;border-radius:8px;z-index:20}
+.skip:focus{top:10px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
 .narrow{max-width:760px}
 
@@ -76,18 +76,6 @@ p{margin:0 0 14px}
 .proof li{display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.4;color:var(--muted)}
 .proof svg{width:34px;height:34px;color:var(--plum)}
 .proof b{display:block;color:var(--ink);font-weight:600;font-size:16px}
-
-/* dark band with moving screenshots */
-.band{background:var(--night);color:#EDE8F7;padding:72px 0 0;overflow:hidden;margin-top:88px}
-.band .head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px}
-.band h2{color:#fff;margin:0;max-width:16em}
-.band p{color:#B9AFD0;margin:0;max-width:24em}
-.reel{display:flex;gap:18px;width:max-content;animation:reel 70s linear infinite;padding-bottom:72px}
-.reel:hover{animation-play-state:paused}
-.reel a{flex:none;width:360px;border-radius:var(--r-md);overflow:hidden;border:1px solid #3a2f55;background:#2a2142}
-.reel img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
-.reel span{display:block;padding:10px 14px;font-size:14px;color:#CFC6E3}
-@keyframes reel{to{transform:translateX(-50%)}}
 
 /* sections */
 .sec{padding:96px 0 0}
@@ -191,7 +179,6 @@ figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
   .hero .wrap,.sec-head,.feature,.contact .wrap{grid-template-columns:1fr;gap:28px}
   .feature:nth-of-type(even) .shot{order:0}
   .grid{grid-template-columns:1fr 1fr}
-  .band .head{flex-direction:column;align-items:start}
   .chapter{grid-template-columns:1fr;gap:12px;padding-top:52px}
   .chapter > h2{position:static}
   .overview{grid-template-columns:1fr 1fr}
@@ -199,17 +186,76 @@ figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
 }
 @media (max-width:560px){
   .wrap{padding:0 16px}
-  .nav .wrap{gap:14px}
+  .nav .wrap{gap:12px}
+  .nav a.l{display:none}
   .brand{font-size:18px}
   .brand svg{width:22px;height:22px}
   .proof ul{grid-template-columns:1fr 1fr}
   .grid,.process{grid-template-columns:1fr}
   .job{grid-template-columns:1fr;gap:4px}
-  .reel a{width:260px}
   .btn{min-height:46px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .reel{animation:none;width:auto;overflow-x:auto;padding-inline:16px}
+  .app:hover .ic,.app:focus-visible .ic{transform:none}
 }
-@media print{.nav,.band,.skip{display:none}body{background:#fff}}
+@media print{.nav,.skip{display:none}body{background:#fff}}
+
+/* ---- icons ---- */
+.ic{display:block;width:56px;height:56px;border-radius:14px;box-shadow:0 6px 16px -8px rgba(28,21,48,.45);flex:none}
+.ic.lg{width:64px;height:64px;border-radius:16px}
+.ic.sm{width:40px;height:40px;border-radius:10px}
+
+/* hero home screen */
+.home{justify-self:end;width:100%;max-width:470px;background:linear-gradient(165deg,#EAE3F7,#F6E4EE);border-radius:36px;padding:34px 30px 24px;border:1px solid var(--line)}
+.apps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:26px 14px}
+.app a{display:flex;flex-direction:column;align-items:center;gap:9px;text-decoration:none;font-size:14px;font-weight:600;line-height:1.25;text-align:center;color:var(--ink)}
+.app .ic{width:76px;height:76px;border-radius:20px;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.app a:hover .ic,.app a:focus-visible .ic{transform:translateY(-4px) rotate(-6deg)}
+.app:nth-child(even) a:hover .ic{transform:translateY(-4px) rotate(6deg)}
+.home p{margin:22px 0 0;text-align:center;font-size:14px;color:var(--muted)}
+
+.title-row{display:flex;align-items:center;gap:16px;margin-bottom:6px}
+.title-row h3{margin:0}
+.aka{font-size:14px;color:var(--muted);margin:0 0 12px}
+
+/* more projects as an icon list */
+.mlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.mlist li{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
+.mlist h3{font-size:24px;margin:0 0 2px}
+.mlist p{font-size:15.5px;color:var(--muted);margin:6px 0 10px}
+.mlist .links{font-size:15px}
+.soon{font-size:14px;font-weight:600;color:var(--plum)}
+
+/* dark band for the process */
+.dark{background:var(--night);color:#EDE8F7;margin-top:110px;padding:96px 0}
+.dark h2{color:#fff}
+.dark .sec-head p{color:#B9AFD0}
+.dark .process{border-top-color:#8E80B5}
+.dark .process li::before{background:var(--night);border-color:#8E80B5;color:#fff}
+.dark .process p{color:#B9AFD0}
+.dark .process h3{color:#fff}
+.sec.after-dark{padding-top:96px}
+
+/* language switch */
+.lang{font-size:15px;font-weight:600;text-decoration:none;color:var(--plum);border:1.5px solid var(--line);border-radius:999px;padding:6px 12px}
+.lang:hover{border-color:var(--plum)}
+
+/* ---- Persian (RTL) ---- */
+[dir=rtl] body{font-family:Vazirmatn,var(--sans);line-height:1.9}
+[dir=rtl] h1,[dir=rtl] h2,[dir=rtl] h3,[dir=rtl] .serif,[dir=rtl] .brand,[dir=rtl] .quote,[dir=rtl] .stat-row b,[dir=rtl] .contact .mail{font-family:Vazirmatn,var(--serif);font-weight:800;letter-spacing:0}
+[dir=rtl] h1{line-height:1.35;font-size:clamp(34px,4.3vw,58px)}
+[dir=rtl] h2,[dir=rtl] h3{line-height:1.45}
+[dir=rtl] .contact .mail,[dir=rtl] .stat-row b{font-weight:700}
+[dir=rtl] .quote{font-weight:600}
+[dir=rtl] .home{justify-self:start}
+[dir=rtl] .process li{padding:22px 0 0 22px}
+[dir=rtl] .process li::before{left:auto;right:0}
+[dir=rtl] .ltr{direction:ltr;unicode-bidi:isolate}
+[dir=rtl] .quote{padding:4px 20px 4px 0}
+[dir=rtl] .app:nth-child(odd) a:hover .ic{transform:translateY(-4px) rotate(6deg)}
+[dir=rtl] .app:nth-child(even) a:hover .ic{transform:translateY(-4px) rotate(-6deg)}
+@media (max-width:860px){.home{justify-self:center}.mlist{grid-template-columns:1fr}}
+@media (max-width:560px){.apps{gap:20px 8px}.app .ic{width:64px;height:64px;border-radius:17px}.home{padding:26px 16px 18px;border-radius:28px}}
+[dir=rtl] .process li::before{content:counter(s,persian)}
+.lang{font-family:Vazirmatn,var(--sans)}
