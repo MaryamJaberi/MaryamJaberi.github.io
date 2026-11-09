@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>کتابخانه و اعتبار منابع — دانش‌سرا</title>
+<link rel="stylesheet" href="../../core/design/tokens.css"><link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px;align-items:center}
+.book{display:grid;gap:8px} .book h3{margin:0;font-size:1.05rem;line-height:1.5}
+.meta{color:var(--ink-3);font-size:.88rem}
+.cau{margin:0;padding-inline-start:1.2em;color:var(--ink-2);font-size:.9rem}
+.ents{display:flex;flex-wrap:wrap;gap:6px}.ents a{font-size:.85rem;padding:3px 12px;border-radius:999px;border:1px solid var(--line-strong);text-decoration:none;color:var(--ink)}
+.ents a:hover{border-color:var(--primary);color:var(--primary)}
+.pill{cursor:pointer} .pill[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
+.t{display:inline-block;font-size:.78rem;padding:1px 10px;border-radius:999px;color:#fff}.t1{background:var(--grade-a)}.t2{background:var(--grade-a)}.t3{background:var(--grade-b)}.t4{background:var(--grade-d)}
+details summary{cursor:pointer;color:var(--primary);font-size:.9rem}
+.stat{display:flex;gap:18px;flex-wrap:wrap;margin:6px 0 0}.stat b{font-size:1.6rem;display:block;line-height:1.2}
+</style></head><body>
+<header class="top"><div class="wrap"><div class="crumb"><a href="../../index.html">خانه</a> › <a href="../index.html">اطلس</a> › <a href="index.html">ابزارهای اطلس</a> › <span>کتابخانه و اعتبار منابع</span></div></div></header>
+<main class="wrap">
+<h1>کتابخانه و اعتبار منابع</h1>
+<p class="lead">کتاب‌هایی که مریم برای دانش‌سرا گذاشته، یکی‌یکی سنجیده شده‌اند: نویسنده، روش، ارجاع، سوگیری، و اینکه کتاب «برای چه چیزی» منبع خوبی است. اینجا می‌بینید کدام کتاب چه رده‌ای گرفت، چقدر از آن خوانده شد و کدام مدخل‌ها از آن آمده‌اند.</p>
+<div class="note">رده‌ها: ۲ پژوهش/سند رسمی · ۳ کتاب معتبر یا مرجع · ۴ جدلی، بی‌ارجاع یا نامشخص (فقط به‌عنوان «دیدگاه نویسنده» وارد شده). کتاب جدلی برای فهم اندیشهٔ نویسنده منبع اولیه است، نه برای حقیقت تاریخی. همهٔ این داوری‌ها پیش‌نویس‌اند و باید بازبینی انسانی شوند.</div>
+<div class="stat" id="stat"></div>
+<div class="filters" id="f"></div>
+<input type="search" id="q" placeholder="جستجوی عنوان یا نویسنده…" aria-label="جستجو" style="width:100%;max-width:420px">
+<div class="grid" id="list" style="margin-top:16px"></div>
+</main>
+<footer class="foot"><div class="wrap">داده: data/library/books.json. هر دسته‌ای که کتاب‌ها بررسی شوند اینجا اضافه می‌شود.</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+const esc=DS.esc, TL={2:"پژوهش/سند رسمی",3:"کتاب یا مرجع معتبر",4:"جدلی یا نامشخص"}, RD={full:"کامل",partial:"بخشی خوانده شد","metadata-only":"خوانده نشد (اسکن)"};
+let B=[],tier="",rd="",q="";
+function card(b){
+  return `<article class="card book"><div class="row"><span class="t t${b.tier}">رده ${DS.faDigits(b.tier)}: ${TL[b.tier]||""}</span><span class="chip">${RD[b.read]||b.read||""}</span>${b.imported?'<span class="chip">وارد دانش‌سرا شد</span>':'<span class="chip">وارد نشد</span>'}</div>
+  <h3>${esc(b.title)}</h3><div class="meta">${esc(b.author||"نویسنده نامشخص")}${b.year?" · "+esc(b.year):""}</div>
+  <div>${esc(b.label)}</div>${b.best?`<div class="muted"><b>کاربرد:</b> ${esc(b.best)}</div>`:""}
+  ${(b.cautions||[]).length?`<details><summary>احتیاط‌ها</summary><ul class="cau">${b.cautions.map(c=>`<li>${esc(c)}</li>`).join("")}</ul></details>`:""}
+  ${!b.imported&&b.why?`<div class="muted">${esc(b.why)}</div>`:""}
+  ${b.entries.length?`<div class="ents">${b.entries.map(e=>`<a href="../../${esc(e.u)}">${esc(e.t)}</a>`).join("")}</div>`:""}</article>`;
+}
+function render(){
+  const w=DS.norm(q).split(" ").filter(Boolean);
+  const L=B.filter(b=>(!tier||b.tier==tier)&&(!rd||b.read==rd)&&w.every(x=>DS.norm(b.title+" "+(b.author||"")).includes(x)));
+  document.getElementById("list").innerHTML=L.length?L.map(card).join(""):'<div class="empty">چیزی پیدا نشد.</div>';
+  const c=t=>B.filter(b=>b.tier==t).length;
+  document.getElementById("stat").innerHTML=`<div><b>${DS.faDigits(B.length)}</b>کتاب بررسی‌شده</div><div><b>${DS.faDigits(B.filter(b=>b.imported).length)}</b>وارد دانش‌سرا</div><div><b>${DS.faDigits(B.filter(b=>b.read=="metadata-only").length)}</b>اسکن، نیازمند OCR</div>`;
+  document.getElementById("f").innerHTML=[["","همهٔ رده‌ها"],[2,"رده ۲"],[3,"رده ۳"],[4,"رده ۴"]].map(([k,n])=>`<button class="ghost pill" data-t="${k}" aria-pressed="${tier==k}">${n}${k?` (${DS.faDigits(c(k))})`:""}</button>`).join("")+[["","همهٔ وضعیت‌ها"],["partial","بخشی"],["full","کامل"],["metadata-only","خوانده نشد"]].map(([k,n])=>`<button class="ghost pill" data-r="${k}" aria-pressed="${rd==k}">${n}</button>`).join("");
+}
+document.getElementById("f").addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;if("t" in t.dataset)tier=t.dataset.t;else rd=t.dataset.r;render();});
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value;render();});
+fetch("../../data/library/books.json").then(r=>r.json()).then(d=>{B=d.sort((a,b)=>a.tier-b.tier);render();}).catch(()=>{document.getElementById("list").innerHTML='<div class="empty">بارگذاری فهرست ناموفق بود.</div>';});
+</script></body></html>

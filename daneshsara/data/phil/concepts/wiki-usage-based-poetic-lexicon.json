@@ -1,0 +1,106 @@
+{
+ "id": "phil:wiki-usage-based-poetic-lexicon",
+ "kind": "concept",
+ "title": {
+  "fa": "فرهنگ‌نویسی بر پایهٔ کاربرد شاعرانه",
+  "en": "Usage-based poetic lexicography",
+  "nl": "Lexicografie op basis van dichterlijk taalgebruik"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "فرهنگنامهٔ شعری واژه‌ها و ترکیب‌ها را نه با تعریف انتزاعی، بلکه با آنچه شاعران در بیت‌ها از آن اراده کرده‌اند توضیح می‌دهد؛ معنا از کاربرد برمی‌آید.",
+  "en": "The dictionary explains words and compounds not by abstract definition but by what poets meant in actual verses: meaning comes from use.",
+  "nl": "Een poëtisch woordenboek dat betekenis afleidt uit het gebruik van dichters in concrete verzen, niet uit abstracte definities."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "عفیفی هر مدخل را بر پایهٔ شاهدهای شعری از قرن سوم تا یازدهم هجری (از سبک خراسانی تا عراقی و هندی) معنا می‌کند؛ معیار او مفهوم عام واژه نیست، بلکه مقصود شاعر در همان بیت است.",
+    "en": "Each entry is defined from verse evidence spanning the 3rd-11th centuries AH (Khorasani, Iraqi and Indian styles); the criterion is the poet's intent in the verse, not the word's general sense.",
+    "nl": "Each entry is defined from verse evidence spanning the 3rd-11th centuries AH (Khorasani, Iraqi and Indian styles); the criterion is the poet's intent in the verse, not the word's general sense."
+   },
+   "sources": [
+    "src:4e98147f31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "روش کار: خواندن دیوان‌های چاپ‌شده، نوشتن هر ترکیب و کنایه بر برگهٔ جدا، مقایسهٔ شاهدها با هم و با فرهنگ‌های پیشین. مؤلف می‌گوید به حدود چهل هزار برگه رسید و بخشی از آن (مثل‌ها و حکمت‌ها) جدا چاپ شد.",
+    "en": "Method: reading printed divans, one slip per compound or idiom, comparing witnesses with each other and with earlier dictionaries; the author reports about forty thousand slips, part of which (proverbs) was published separately.",
+    "nl": "Method: reading printed divans, one slip per compound or idiom, comparing witnesses with each other and with earlier dictionaries; the author reports about forty thousand slips, part of which (proverbs) was published separately."
+   },
+   "sources": [
+    "src:4e98147f31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وقتی یک عنوان چند معنا دارد، هر معنا با شاهد خودش جدا می‌آید؛ ترکیب‌های نزدیک‌المعنا زیر یک مدخل جمع می‌شوند و ترکیب‌های ساخته‌شده با فعل‌های بودن/شدن/کردن/گشتن جدا ثبت می‌شوند تا تفاوت کاربردشان دیده شود.",
+    "en": "Several senses of one headword are listed separately, each with its own witness; near-synonymous compounds are grouped, while forms with different light verbs are recorded separately to show differences in use.",
+    "nl": "Several senses of one headword are listed separately, each with its own witness; near-synonymous compounds are grouped, while forms with different light verbs are recorded separately to show differences in use."
+   },
+   "sources": [
+    "src:4e98147f31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیشینهٔ این شیوه فرهنگ‌هایی مانند لغت فرس اسدی، معیار جمالی، بهار عجم و آنندراج است که لغت را همراه شاهد شعری می‌آوردند؛ عفیفی کار خود را ادامهٔ همین سنت می‌داند.",
+    "en": "The method continues a tradition of dictionaries that pair words with verse evidence, such as Asadi's Loghat-e Fors and Bahar-e Ajam, as the author himself presents it.",
+    "nl": "The method continues a tradition of dictionaries that pair words with verse evidence, such as Asadi's Loghat-e Fors and Bahar-e Ajam, as the author himself presents it."
+   },
+   "sources": [
+    "src:4e98147f31"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نقطهٔ ضعف روش: داوری دربارهٔ اینکه کدام معنا «حقیقی» و کدام «کنایی» است تا حدی سلیقه‌ای است (اولین معنای رایج در فرهنگ‌ها حقیقی و بقیه کنایه حساب شده)، و بیت‌ها گاه فقط معنای مدخل را مصادره می‌کنند نه آن را اثبات.",
+    "en": "A limit of the method: labelling a sense 'literal' or 'figurative' is partly a convention (the first sense in earlier dictionaries counts as literal, the rest as kenaye), and a verse may illustrate rather than prove a sense.",
+    "nl": "A limit of the method: labelling a sense 'literal' or 'figurative' is partly a convention (the first sense in earlier dictionaries counts as literal, the rest as kenaye), and a verse may illustrate rather than prove a sense."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:language-games",
+   "rel": "see-also",
+   "note": {
+    "fa": "معنا به‌مثابهٔ کاربرد، همان نگاه ویتگنشتاین",
+    "en": "Meaning as use, Wittgenstein's view",
+    "nl": "Meaning as use, Wittgenstein's view"
+   }
+  },
+  {
+   "to": "phil:wiki-kenaye-majaz-estiare",
+   "rel": "part-of",
+   "note": {
+    "fa": "مقولات بلاغی که فرهنگنامه بر آن‌ها تکیه دارد",
+    "en": "The rhetorical categories the dictionary relies on",
+    "nl": "The rhetorical categories the dictionary relies on"
+   }
+  }
+ ],
+ "people": [
+  "core:rahim-afifi",
+  "core:asadi-tusi"
+ ],
+ "sources": [
+  "src:4e98147f31"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

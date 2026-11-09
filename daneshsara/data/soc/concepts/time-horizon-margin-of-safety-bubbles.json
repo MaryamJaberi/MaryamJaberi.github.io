@@ -1,0 +1,122 @@
+{
+ "id": "soc:time-horizon-margin-of-safety-bubbles",
+ "kind": "concept",
+ "title": {
+  "fa": "افق زمانی، حاشیهٔ امن و حباب‌های مالی: ایده‌های هاوزل",
+  "en": "Time horizons, margin of safety and financial bubbles: Housel's ideas",
+  "nl": "Tijdshorizon, veiligheidsmarge en financiële zeepbellen bij Housel"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "هاوزل می‌گوید بقا در بلندمدت مهم‌تر از سود زودگذر است، شهود انسان رشد مرکب را دست‌کم می‌گیرد، و حباب‌ها وقتی شکل می‌گیرند که سرمایه‌گذارانِ با افق‌های متفاوت قیمت یکسانی را معقول می‌دانند. اینها دیدگاه‌هایی عملی‌اند و بخشی از آنها (مثل شهود نمایی) پشتوانهٔ پژوهشی دارد.",
+  "en": "Housel argues that long-run survival matters more than quick gains, that human intuition underrates compound growth, and that bubbles form when investors with different horizons treat one price as sensible. These are practical views; some (such as exponential-growth intuition) have research support.",
+  "nl": "Housel stelt dat overleven op lange termijn belangrijker is dan snelle winst, dat intuïtie samengestelde groei onderschat en dat zeepbellen ontstaan wanneer beleggers met verschillende horizons dezelfde prijs redelijk vinden. Het zijn praktische opvattingen; sommige hebben onderzoeksteun."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید برای ماندن در بازی باید «حاشیهٔ امن» داشت، یعنی برنامه‌ای که برای خطاهای پیش‌بینی‌نشده جا بگذارد، و فرق آن را با محافظه‌کاری این می‌داند که حاشیهٔ امن شانس بقا را در یک سطح ریسک بالا می‌برد. این مفهوم مهندسی در حوزهٔ رفتار مالی شناخته‌شده است.",
+    "en": "The author says staying in the game needs a margin of safety, a plan that leaves room for unforeseen errors, and distinguishes it from conservatism by saying it raises the chance of survival at a given level of risk. It is a familiar engineering idea applied to financial behaviour.",
+    "nl": "The author says staying in the game needs a margin of safety, a plan that leaves room for unforeseen errors, and distinguishes it from conservatism by saying it raises the chance of survival at a given level of risk. It is a familiar engineering idea applied to financial behaviour."
+   },
+   "sources": [
+    "src:ed03d52f74"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید ثروت بافت بیشتر زاییدهٔ مدت بسیار طولانی سرمایه‌گذاری است تا مهارت لحظه‌ای؛ و شهود ما در برابر رشد مرکب ناتوان است. پژوهش‌ها نشان داده‌اند آدم‌ها رشد نمایی را به‌طور سیستماتیک دست‌کم می‌گیرند.",
+    "en": "He says Buffett's wealth owes more to the sheer length of time invested than to momentary skill, and that our intuition handles compounding poorly. Research has shown people systematically underestimate exponential growth.",
+    "nl": "He says Buffett's wealth owes more to the sheer length of time invested than to momentary skill, and that our intuition handles compounding poorly. Research has shown people systematically underestimate exponential growth."
+   },
+   "sources": [
+    "src:ed03d52f74",
+    "src:10d7bb4a7d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او نمونه‌هایی می‌آورد (لیورمور، گورین) تا نشان دهد کسب ثروت و حفظ ثروت دو مهارت جدا هستند و بدهی و اهرم می‌تواند بازندهٔ باهوش را حذف کند. اینها مثال‌های گزینشی‌اند و نباید به‌عنوان قاعدهٔ آماری خواند.",
+    "en": "He gives cases (Livermore, Gorin) to show that earning wealth and keeping it are separate skills and that debt and leverage can eliminate even clever investors. These are selected cases, not statistical rules.",
+    "nl": "He gives cases (Livermore, Gorin) to show that earning wealth and keeping it are separate skills and that debt and leverage can eliminate even clever investors. These are selected cases, not statistical rules."
+   },
+   "sources": [
+    "src:ed03d52f74"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید در سرمایه‌گذاری و کسب‌وکار چند رویداد کم‌شمار بیشتر نتیجه را می‌سازند («دم دراز») و بنابراین شکست‌های مکرر طبیعی‌اند. این توزیع‌های چوله در سرمایه‌گذاری خطرپذیر شناخته‌شده است، ولی نسبت‌های عددی کتاب نمونه‌های شخصی‌اند.",
+    "en": "He argues that a few rare events produce most results in investing and business (the long tail), so frequent failure is normal. Skewed payoffs are well known in venture investing, but the book's ratios are illustrative.",
+    "nl": "He argues that a few rare events produce most results in investing and business (the long tail), so frequent failure is normal. Skewed payoffs are well known in venture investing, but the book's ratios are illustrative."
+   },
+   "sources": [
+    "src:ed03d52f74"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هاوزل حباب را حاصل ورود بازیگرانی با افق کوتاه می‌داند که قیمتی را معقول می‌دانند که برای سرمایه‌گذار بلندمدت نامعقول است. این تبیین، یکی از چند توضیح رقیب برای حباب‌هاست؛ نویسنده خودش هم می‌گوید علت قطعی نمی‌داند، و کتاب هیچ نوع توصیهٔ سرمایه‌گذاری شخصی برای خواننده معتبر نمی‌کند.",
+    "en": "Housel attributes bubbles to short-horizon players who find reasonable a price that is unreasonable for a long-term holder. This is one of several rival explanations for bubbles, and he admits no definitive cause is known; the book does not amount to valid personal investment advice.",
+    "nl": "Housel attributes bubbles to short-horizon players who find reasonable a price that is unreasonable for a long-term holder. This is one of several rival explanations for bubbles, and he admits no definitive cause is known; the book does not amount to valid personal investment advice."
+   },
+   "sources": [
+    "src:ed03d52f74"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:inequality",
+   "rel": "see-also",
+   "note": {
+    "fa": "نابرابری و تحرک",
+    "en": "Inequality and mobility",
+    "nl": "Inequality and mobility"
+   }
+  },
+  {
+   "to": "psy:decision-errors",
+   "rel": "see-also",
+   "note": {
+    "fa": "خطا در تصمیم‌گیری",
+    "en": "Errors in decision-making",
+    "nl": "Errors in decision-making"
+   }
+  },
+  {
+   "to": "soc:marx-capitalism-dynamics",
+   "rel": "contrasts",
+   "note": {
+    "fa": "پویایی سرمایه‌داری نزد مارکس",
+    "en": "Marx on the dynamics of capitalism",
+    "nl": "Marx on the dynamics of capitalism"
+   }
+  }
+ ],
+ "people": [
+  "core:warren-buffett"
+ ],
+ "sources": [
+  "src:10d7bb4a7d",
+  "src:ed03d52f74"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
