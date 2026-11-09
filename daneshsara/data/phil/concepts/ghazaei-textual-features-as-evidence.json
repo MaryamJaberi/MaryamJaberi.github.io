@@ -1,0 +1,106 @@
+{
+ "id": "phil:ghazaei-textual-features-as-evidence",
+ "kind": "concept",
+ "title": {
+  "fa": "ویژگی‌های متنی قرآن به‌عنوان «شواهد» در استدلال قضایی",
+  "en": "Textual features offered as evidence in Ghazaei's argument",
+  "nl": "Tekstuele kenmerken als bewijs in Ghazaei's betoog"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "نویسنده از پدیده‌هایی مثل تغییر ضمیر، ترتیب سوره‌ها، حروف مقطعه و واژه‌های وام‌گرفته برای دفاع از فرضیه‌اش استفاده می‌کند؛ بعضی مشاهده‌ها در پژوهش قرآنی شناخته‌شده‌اند، اما تفسیر او یکی از چند تفسیر ممکن است.",
+  "en": "The author uses features such as pronoun shifts, sura ordering, the mysterious letters and loanwords to support his hypothesis; some observations are familiar in Quranic studies, but his interpretation is only one among several possible ones.",
+  "nl": "De auteur gebruikt kenmerken zoals voornaamwoordwisselingen, de volgorde van de soera's, de losse letters en leenwoorden; de waarnemingen zijn bekend, zijn interpretatie is slechts één van meerdere."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "او می‌گوید ضمیر گوینده در قرآن میان «ما»، «او» و «من» جابه‌جا می‌شود و در بسیاری از جاها «ما» را به نویسندگان (نه خدا یا فرشتگان) برمی‌گرداند.",
+    "en": "He says the speaker's pronoun shifts between 'we' and 'he' and that in many places 'we' refers to the authors rather than God or angels.",
+    "nl": "He says the speaker's pronoun shifts between 'we' and 'he' and that in many places 'we' refers to the authors rather than God or angels."
+   },
+   "sources": [
+    "src:c40445dc04"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جابه‌جایی ضمیر در قرآن واقعاً پدیده‌ای شناخته‌شده است و در زبان‌شناسی و بلاغت قرآنی (التفات) توضیح‌های دیگری برایش هست؛ نتیجه‌گیری «نویسندگان انسانی متعدد» تنها یک خوانش است.",
+    "en": "The pronoun shift is a recognised feature of the Quran, with other explanations in Quranic linguistics and rhetoric (iltifat); 'multiple human authors' is only one possible reading.",
+    "nl": "The pronoun shift is a recognised feature of the Quran, with other explanations in Quranic linguistics and rhetoric (iltifat); 'multiple human authors' is only one possible reading."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید ترتیب سوره‌ها (تقریباً از بلند به کوتاه) و نبود زمینهٔ روشن در بسیاری آیات نشانهٔ گردآوری پراکنده است؛ و نمونه‌هایی (مانند آیه‌ای دربارهٔ «شجرهٔ ملعونه» که جای دیگر توضیح داده نشده) می‌آورد.",
+    "en": "He argues that the sura ordering (roughly long to short) and missing context in many verses show scattered compilation, citing examples such as the 'accursed tree' verse that is not explained elsewhere.",
+    "nl": "He argues that the sura ordering (roughly long to short) and missing context in many verses show scattered compilation, citing examples such as the 'accursed tree' verse that is not explained elsewhere."
+   },
+   "sources": [
+    "src:c40445dc04"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او حروف مقطعهٔ ابتدای سوره‌ها را رمزهایی عددی (گماتریا) و نشانگر شمارهٔ سطر در ملحقات می‌داند. معنای این حروف در پژوهش میان محققان اجماعی ندارد و پیشنهاد او از شواهد مستقل پشتیبانی نشده است.",
+    "en": "He reads the disconnected letters opening some suras as gematria codes marking line numbers in appendices. Scholars have no consensus on these letters, and his proposal lacks independent support.",
+    "nl": "He reads the disconnected letters opening some suras as gematria codes marking line numbers in appendices. Scholars have no consensus on these letters, and his proposal lacks independent support."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او به واژه‌هایی با ریشهٔ سریانی (از جمله «قرآن» از قریانا) اشاره می‌کند. اینکه واژگان قرآن وام‌واژه‌هایی از سریانی، عبری و حبشی دارد در پژوهش پذیرفته است، اما از آن نمی‌توان به‌تنهایی نتیجه گرفت که متن را مسیحیان نوشته‌اند.",
+    "en": "He points to words with Syriac roots (including 'Quran' from qeryana). Loanwords from Syriac, Hebrew and Ethiopic are accepted in scholarship, but this alone does not show that Christians wrote the text.",
+    "nl": "He points to words with Syriac roots (including 'Quran' from qeryana). Loanwords from Syriac, Hebrew and Ethiopic are accepted in scholarship, but this alone does not show that Christians wrote the text."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:fallacies",
+   "rel": "critiques",
+   "note": {
+    "fa": "از «توضیح‌ناپذیری» یک ابهام تا «اثبات» یک فرضیه راه درازی است",
+    "en": "From an unexplained puzzle to proof of a hypothesis is a long step",
+    "nl": "From an unexplained puzzle to proof of a hypothesis is a long step"
+   }
+  },
+  {
+   "to": "phil:epistemology",
+   "rel": "see-also",
+   "note": {
+    "fa": "شواهد درونی متن در برابر شواهد مستقل",
+    "en": "Internal textual evidence versus independent evidence",
+    "nl": "Internal textual evidence versus independent evidence"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:c40445dc04"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

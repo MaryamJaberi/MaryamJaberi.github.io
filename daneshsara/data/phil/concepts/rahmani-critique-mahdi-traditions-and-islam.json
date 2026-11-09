@@ -1,0 +1,106 @@
+{
+ "id": "phil:rahmani-critique-mahdi-traditions-and-islam",
+ "kind": "concept",
+ "title": {
+  "fa": "نقد رحمانی بر روایت‌های مهدوی و تاریخ اسلام: خشونت و تفسیر جدلی",
+  "en": "Rahmani's critique of Mahdist narrations and early Islam: violence and polemical reading",
+  "nl": "Rahmani's kritiek op Mahdistische overleveringen en het vroege islam: geweld en polemische lezing"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "نویسنده برخی روایت‌های شیعی دربارهٔ ظهور را خونریز و انتقام‌جویانه می‌داند و بنیان دین را هم به‌شکل جدلی بازمی‌خواند. این بخش دیدگاه یک منتقد است؛ پژوهشگران و عالمان دینی تصویرهای دیگری از این روایت‌ها و از آغاز اسلام ارائه می‌کنند.",
+  "en": "The author finds some Shia narrations about the Appearance bloody and vengeful and reads the foundations of the religion polemically. This is a critic's view; scholars and clerics offer other readings of these narrations and of early Islam.",
+  "nl": "De auteur vindt sommige sjiitische overleveringen over de verschijning bloedig en wraakzuchtig en leest de grondslagen van de religie polemisch. Dit is de visie van een criticus; geleerden bieden andere lezingen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده از کتاب‌هایی چون بحارالانوار نقل می‌کند که در آن‌ها سخن از خونریزی گسترده به دست مهدی و لشکرش آمده و نتیجه می‌گیرد کسی که خواهان ظهور است، به جنگ و ویرانی خوش‌بین است.",
+    "en": "He quotes works such as Bihar al-Anwar with passages on large-scale bloodshed by the Mahdi and his army, and concludes that whoever wants the Appearance welcomes war and destruction.",
+    "nl": "He quotes works such as Bihar al-Anwar with passages on large-scale bloodshed by the Mahdi and his army, and concludes that whoever wants the Appearance welcomes war and destruction."
+   },
+   "sources": [
+    "src:c704adf787"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او شرح روایت‌های بازگشت امامان و سلطنت‌های طولانی را افسانه‌وار و ناسازگار می‌خواند.",
+    "en": "He calls the accounts of the Imams' return and very long reigns legendary and inconsistent.",
+    "nl": "He calls the accounts of the Imams' return and very long reigns legendary and inconsistent."
+   },
+   "sources": [
+    "src:c704adf787"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در بخشی دربارهٔ آغاز اسلام، نویسنده پیامبر را با انگیزهٔ قدرت و غنیمت توصیف می‌کند و آیه‌هایی از قرآن را شاهد می‌آورد؛ این برداشت جدلی است.",
+    "en": "In a section on early Islam the author portrays the Prophet as driven by power and spoils and cites Qur'anic verses; this is a polemical reading.",
+    "nl": "In a section on early Islam the author portrays the Prophet as driven by power and spoils and cites Qur'anic verses; this is a polemical reading."
+   },
+   "sources": [
+    "src:c704adf787"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهش دانشگاهی دربارهٔ مهدی‌باوری (مثلاً آثار سچدینا و امانت) روایت‌ها را متنوع می‌داند: برخی خشونت‌آمیز و برخی دربارهٔ عدالت و امید؛ همچنین اعتبار سندی بسیاری از احادیث آخرالزمانی محل بحث است. روایت نویسنده از زندگی پیامبر با تاریخ‌نگاری دانشگاهی (بر پایهٔ منابعی مانند ابن‌اسحاق و طبری، با نقد منبع) هم‌خوان نیست و نباید به‌عنوان واقعیت تاریخی خوانده شود.",
+    "en": "Academic work on Mahdism (e.g. Sachedina, Amanat) finds the narrations varied: some violent, others about justice and hope, and the chains of many apocalyptic hadiths are disputed. The author's account of the Prophet's life does not match source-critical scholarship and should not be read as historical fact.",
+    "nl": "Academic work on Mahdism (e.g. Sachedina, Amanat) finds the narrations varied: some violent, others about justice and hope, and the chains of many apocalyptic hadiths are disputed. The author's account of the Prophet's life does not match source-critical scholarship and should not be read as historical fact."
+   },
+   "sources": [
+    "src:bb778a46c4",
+    "src:6ee1401c15"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:marx-religion-alienation",
+   "rel": "contrasts",
+   "note": {
+    "fa": "نقد دین نزد مارکس",
+    "en": "Marx's critique of religion",
+    "nl": "Marx's critique of religion"
+   }
+  },
+  {
+   "to": "soc:religion-ideology-iran-debate",
+   "rel": "see-also",
+   "note": {
+    "fa": "بحث دین و ایدئولوژی در ایران",
+    "en": "Religion and ideology in Iran debate",
+    "nl": "Religion and ideology in Iran debate"
+   }
+  }
+ ],
+ "people": [
+  "core:muhammad-al-majlisi"
+ ],
+ "sources": [
+  "src:6ee1401c15",
+  "src:bb778a46c4",
+  "src:c704adf787"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

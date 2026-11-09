@@ -1,0 +1,108 @@
+{
+ "id": "phil:ghazaei-quran-text-transmission-claims",
+ "kind": "concept",
+ "title": {
+  "fa": "نظر قضایی دربارهٔ گردآوری و انتقال متن قرآن",
+  "en": "Ghazaei on the compilation and transmission of the Quran text",
+  "nl": "Ghazaei over de samenstelling en overlevering van de Koran"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "نویسنده متن قرآن را مجموعه‌ای پراکنده و دست‌خوردهٔ گردآوری‌شده در زمان عثمان می‌داند و به دست‌نویس صنعا اشاره می‌کند. بخشی از این مطالب بر سنت اسلامی و پژوهش دانشگاهی تکیه دارد و بخشی بیش از شواهد پیش می‌رود.",
+  "en": "The author treats the Quran as a scattered, altered compilation assembled under Uthman and cites the Sanaa manuscript. Part rests on Islamic tradition and academic work; part goes beyond the evidence.",
+  "nl": "De auteur ziet de Koran als een versnipperde, bewerkte compilatie onder Oethman en wijst op het Sanaa-handschrift."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "طبق گزارش‌های حدیثی که نویسنده نقل می‌کند، در زمان عثمان یک نسخه (زید بن ثابت) رسمی شد و نسخه‌های دیگر (مانند ابن مسعود و ابی بن کعب) از میان رفت؛ ابن مسعود دو سوره پایانی را جزو قرآن نمی‌دانسته است.",
+    "en": "According to hadith reports the author cites, one recension (Zayd ibn Thabit) was made official under Uthman and others (Ibn Masud, Ubayy ibn Kab) were destroyed; Ibn Masud is said to have excluded the last two suras.",
+    "nl": "According to hadith reports the author cites, one recension (Zayd ibn Thabit) was made official under Uthman and others (Ibn Masud, Ubayy ibn Kab) were destroyed; Ibn Masud is said to have excluded the last two suras."
+   },
+   "sources": [
+    "src:c40445dc04"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده به دست‌نویس کشف‌شده در صنعا (۱۹۷۲) استناد می‌کند که زیر متن بالایی‌اش متن شسته‌شدهٔ دیگری با اختلافات جزئی دیده می‌شود و از آن نتیجه می‌گیرد متن قرآن مانند هر متن دست‌نویس دچار تغییر شده است.",
+    "en": "He cites the manuscript found in Sanaa (1972), whose erased lower text shows minor variants, and concludes the Quran changed over time like any hand-copied text.",
+    "nl": "He cites the manuscript found in Sanaa (1972), whose erased lower text shows minor variants, and concludes the Quran changed over time like any hand-copied text."
+   },
+   "sources": [
+    "src:c40445dc04"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وجود دست‌نویس صنعا و اختلاف قرائت‌ها واقعی و در پژوهش دانشگاهی مورد بحث است؛ اما بیشتر پژوهشگران تفاوت‌ها را جزئی می‌دانند و متن اصلی را در سدهٔ نخست هجری تقریباً پایدار می‌شمارند، نه ثابتی بی‌هیچ تغییر و نه متنی بی‌شکل.",
+    "en": "The Sanaa manuscript and reading variants are real and discussed in scholarship; most scholars regard the differences as minor and the core text as largely stable by the first Islamic century, neither unchanged in every detail nor formless.",
+    "nl": "The Sanaa manuscript and reading variants are real and discussed in scholarship; most scholars regard the differences as minor and the core text as largely stable by the first Islamic century, neither unchanged in every detail nor formless."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او ادعای «تحدی» قرآن (آوردن مانند آن) و فصاحت مطلق را رد می‌کند و متن را پراکنده و گاه مبهم می‌داند؛ این ارزیابی ادبی و ایمانی است و با داوری مؤمنان تفاوت بنیادی دارد.",
+    "en": "He rejects the Quran's 'challenge' to produce its like and its claimed perfect eloquence, calling it scattered and sometimes obscure; this is a literary and faith-laden judgment that differs fundamentally from believers' view.",
+    "nl": "He rejects the Quran's 'challenge' to produce its like and its claimed perfect eloquence, calling it scattered and sometimes obscure; this is a literary and faith-laden judgment that differs fundamentally from believers' view."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "مسلمانان سنتی متن را وحی کامل و حفظ‌شده می‌دانند و پژوهش‌های دانشگاهی میان دو قطب موضع‌های متفاوتی دارند؛ دیدگاه نویسنده یک قطب جدلی است.",
+    "en": "Traditional Muslims hold the text to be complete, preserved revelation, and academic studies take positions between the poles; the author's view is a polemical pole.",
+    "nl": "Traditional Muslims hold the text to be complete, preserved revelation, and academic studies take positions between the poles; the author's view is a polemical pole."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:epistemology",
+   "rel": "see-also",
+   "note": {
+    "fa": "حدیث و سنت به‌مثابه منبع تاریخی",
+    "en": "Hadith and tradition as historical sources",
+    "nl": "Hadith and tradition as historical sources"
+   }
+  },
+  {
+   "to": "phil:fallacies",
+   "rel": "critiques",
+   "note": {
+    "fa": "از اختلاف قرائت تا تغییر کلی متن",
+    "en": "From reading variants to wholesale change",
+    "nl": "From reading variants to wholesale change"
+   }
+  }
+ ],
+ "people": [
+  "core:uthman-ibn-affan"
+ ],
+ "sources": [
+  "src:c40445dc04"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
