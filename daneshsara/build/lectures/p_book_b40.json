@@ -1,0 +1,542 @@
+{
+ "paper": true,
+ "book": {
+  "title": "آشنایی با اسپینوزا (Spinoza in 90 Minutes)",
+  "author": "Paul Strathern (پل استراترن)",
+  "translator": "شهرام حمزه‌ای",
+  "year": "اصل انگلیسی ۱۹۹۶؛ ترجمهٔ فارسی ۱۳۷۹ (چاپ چهارم ۱۳۸۹)",
+  "publisher": "نشر مرکز (مجموعهٔ آشنایی با فیلسوفان)",
+  "type": "other",
+  "read": "full",
+  "pages_or_sections_read": "تمام متن (حدود ۷۸ صفحه): مقدمه، زندگی و آثار، مؤخره، گزیدهٔ نوشته‌ها، زمان‌نگاری، منابع پیشنهادی؛ فهرست‌های پایانی",
+  "drive_id": "1pk34rxbt_p8lJ_X-1wyClQ6d35SqCNIH"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "مدخل‌نویسی مردم‌پسند و خواندنی از یک نویسندهٔ حرفه‌ای، مناسب آشنایی اولیه اما نه مرجع دانشگاهی؛ جزئیات زندگی‌نامه و برخی قیاس‌ها باید با منابع پژوهشی سنجیده شوند.",
+  "reasons": [
+   "نویسنده (پل استراترن) نویسندهٔ آموزشی و مردم‌پسند است، نه متخصص مقالات داوری‌شدهٔ اسپینوزاپژوهی",
+   "خلاصهٔ مفاهیم اصلی (جوهر، صفت و حالت، خدا یا طبیعت، جبر، نظریهٔ سیاسی) با متن اخلاق و رسالهٔ الهی-سیاسی همخوان است",
+   "فاقد پانویس ارجاعی و روش‌شناسی؛ تنها فهرست کوتاه منابع پیشنهادی دارد",
+   "لحن طنز و تمثیل‌های سست (قیاس با فیزیک و نظریهٔ «همه‌چیز»، نظریهٔ کوانتوم) در مواردی دقت را کم می‌کند",
+   "بسیاری از حکایت‌های زندگی‌نامه‌ای از زندگینامه‌نویسان قدیمی (مانند کولروس) و شایعه است"
+  ],
+  "best_use_fa": "برای مرور سریع و روان ایده‌های اصلی اسپینوزا و زمینهٔ زندگی‌اش و ارجاع به متن خود اسپینوزا؛ نه برای جزئیات دقیق تاریخی، تفسیر دقیق براهین یا ادعاهای علمی.",
+  "cautions": [
+   "برخی تاریخ‌ها و نام‌ها در متن فارسی ممکن است اشتباه چاپی یا ترجمه‌ای داشته باشند (مثلاً سال دیدار با شاهزادهٔ کُنده ۱۶۳۷ آمده، درحالی‌که رویداد ۱۶۷۳ است)",
+   "ادعاهایی دربارهٔ اینکه لایبنیتس اندیشه‌های اسپینوزا را به خود بسته، یا دربارهٔ اجماع «فلاسفه و دانشمندان» امروز، ساده‌سازی یا نظر شخصی نویسنده است",
+   "قیاس با فیزیک جدید و هاوکینگ تمثیل است نه استدلال",
+   "اسپینوزا را در آثار خودش (اخلاق، رسالهٔ الهی-سیاسی) و با راهنماهای پژوهشی (مانند کمبریج کامپنیون) بسنجید"
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "کتاب متن کامل و خوانا دارد و مفاهیم محوری اسپینوزا را درست و روشن خلاصه می‌کند؛ مدخل‌ها با پرچم‌های یادداشت ویراستار برای بخش‌های مناقشه‌پذیر و ردهٔ ۳ نوشته شدند.",
+ "summary_of_book_fa": "کتابی کوتاه و مردم‌پسند دربارهٔ زندگی و اندیشهٔ اسپینوزا: از طرد او از جامعهٔ یهودی تا نظام هندسی «اخلاق»، یگانگی جوهر، جبر، عواطف و اندیشهٔ سیاسی، همراه با زمان‌نگاری فلسفه و منابع پیشنهادی. نویسنده با لحنی شوخ و گاه سطحی می‌نویسد و ارزیابی‌های خودش را هم به خواننده منتقل می‌کند.",
+ "entries": [
+  {
+   "id": "spinoza-substance-monism",
+   "wiki": "phil",
+   "field": "epistemology",
+   "title": {
+    "fa": "اسپینوزا: خدا یا طبیعت و روش هندسی",
+    "en": "Spinoza: God or Nature and the geometric method",
+    "nl": "Spinoza: God of Natuur en de meetkundige methode"
+   },
+   "summary": {
+    "fa": "اسپینوزا کل هستی را یک جوهر یگانه می‌داند که هم «خدا» و هم «طبیعت» نامیده می‌شود و فلسفه‌اش را مانند اقلیدس از تعریف و اصل موضوع و قضیه می‌سازد؛ پایهٔ همهٔ نظام او تعریف جوهر است.",
+    "en": "Spinoza holds that reality is one single substance, called both God and Nature, and builds his philosophy like Euclid from definitions, axioms and propositions; the whole system rests on his definition of substance.",
+    "nl": "Spinoza ziet de werkelijkheid als één enkele substantie, God of Natuur, en bouwt zijn filosofie meetkundig op uit definities en axioma's."
+   },
+   "points": [
+    {
+     "fa": "اسپینوزا در «اخلاق» کار را با چند تعریف آغاز می‌کند (علت خود، جوهر، صفت، حالت، خدا، آزادی، سرمدیت) و همه چیز را مانند قضیه‌های هندسه از آن‌ها نتیجه می‌گیرد.",
+     "en": "In the Ethics Spinoza starts from a handful of definitions (self-caused, substance, attribute, mode, God, freedom, eternity) and derives everything from them like geometrical theorems.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "جوهر یعنی آنچه در خود است و برای فهمیده‌شدن به مفهوم چیز دیگری نیاز ندارد؛ از این تعریف نتیجه می‌گیرد که فقط یک جوهر هست و آن همان «خدا یا طبیعت» است.",
+     "en": "Substance is what is in itself and needs no other concept to be grasped; from this he concludes there is only one substance, God or Nature.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "این جوهر صفت‌های بی‌شمار دارد، اما ذهن انسان فقط دو تای آن را می‌شناسد: اندیشه و امتداد (بُعد جسمانی). چیزهای جزئی، حالت‌ها و دگرگونی‌های همین جوهرند.",
+     "en": "This substance has infinitely many attributes, yet the human mind knows only two: thought and extension. Particular things are modes, modifications, of it.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به روایت کتاب، اسپینوزا برای هستی خدا از شکلی از برهان وجودی استفاده می‌کند: چون وجود از ذات جوهر جدایی‌ناپذیر است، از خود تعریف جوهر می‌توان وجودش را نتیجه گرفت.",
+     "en": "As the book presents it, Spinoza argues for God's existence with a form of the ontological argument: since existence belongs to the nature of substance, it follows from the definition itself.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نویسنده نظام اسپینوزا را زیبا و استوار بر تعریف‌های آغازین می‌داند و می‌گوید اگر کسی تعریف جوهر را نپذیرد، کل بنا فرو می‌ریزد.",
+     "en": "The author calls the system beautiful but stresses that it stands or falls with the opening definitions, above all that of substance.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "برهان وجودی و قطعیت «هندسی» اسپینوزا در فلسفهٔ امروز بسیار مناقشه‌برانگیز است: بسیاری تعریف‌ها را بدیهی نمی‌دانند و مقایسهٔ کتاب با نظریهٔ «همه‌چیز» در فیزیک بیشتر تمثیلی است تا استدلالی.",
+     "en": "Spinoza's ontological argument and his claim to geometric certainty are widely disputed today: many deny that his definitions are self-evident, and the book's comparison with a physical theory of everything is loose analogy rather than argument.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Baruch (Benedictus de) Spinoza",
+     "fa": "باروخ (بندیکت) اسپینوزا",
+     "years": "1632-1677",
+     "note": "فیلسوف عقل‌گرای هلندی با تبار یهودی پرتغالی"
+    },
+    {
+     "latin": "René Descartes",
+     "fa": "رنه دکارت",
+     "years": "1596-1650",
+     "note": "الگوی روشی و مخالف نظری اسپینوزا"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:skepticism-cogito",
+     "rel": "contrasts",
+     "fa": "دکارت دو جوهر (ذهن و ماده) می‌پذیرد؛ اسپینوزا یکی",
+     "en": "Descartes admits two substances; Spinoza only one"
+    },
+    {
+     "to": "phil:spinoza-mind-body-aspects",
+     "rel": "see-also",
+     "fa": "نتیجهٔ یگانگی جوهر برای رابطهٔ ذهن و تن",
+     "en": "What substance monism means for mind and body"
+    },
+    {
+     "to": "phil:epistemology",
+     "rel": "part-of",
+     "fa": "عقل‌گرایی در معرفت‌شناسی",
+     "en": "Rationalism within epistemology"
+    },
+    {
+     "to": "phil:illumination",
+     "rel": "bridges",
+     "fa": "همسنجی با وحدت وجود در سنت اشراقی و عرفانی ایرانی (به‌عنوان پل مقایسه، نه یکسان‌انگاری)",
+     "en": "A comparison point with unity-of-being thought in Iranian illuminationist and mystical traditions, not an identification"
+    }
+   ]
+  },
+  {
+   "id": "spinoza-mind-body-aspects",
+   "wiki": "phil",
+   "field": "mind",
+   "title": {
+    "fa": "اسپینوزا: ذهن و تن دو جنبهٔ یک چیزند",
+    "en": "Spinoza: mind and body as two aspects of one thing",
+    "nl": "Spinoza: geest en lichaam als twee aspecten van één ding"
+   },
+   "summary": {
+    "fa": "اسپینوزا مسئلهٔ تأثیر ذهن بر تن در فلسفهٔ دکارت را با این فرض حل می‌کند که ذهن و تن دو وجه از یک واقعیت‌اند، نه دو جوهر جدا.",
+    "en": "Spinoza dissolves Descartes's problem of how mind acts on body by treating them as two aspects of one reality rather than two separate substances.",
+    "nl": "Spinoza lost het probleem van Descartes op door geest en lichaam als twee kanten van één werkelijkheid te zien."
+   },
+   "points": [
+    {
+     "fa": "دکارت نمی‌توانست توضیح دهد چگونه ذهنِ اندیشنده بر جسمِ مکانیکی اثر می‌گذارد؛ اسپینوزا این مشکل را با رد دوگانگی جوهر کنار می‌زند.",
+     "en": "Descartes could not explain how a thinking mind acts on a mechanical body; Spinoza removes the difficulty by rejecting the duality of substances.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به گفتهٔ او ذهن و تن یک فردند که گاهی زیر صفت اندیشه و گاهی زیر صفت امتداد دیده می‌شوند؛ ترتیب و پیوند ایده‌ها همان ترتیب و پیوند چیزهاست.",
+     "en": "In his words mind and body are one individual, conceived now under thought and now under extension; the order and connection of ideas matches that of things.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مقایسه با فلسفهٔ ذهن معاصر: این دیدگاه را اغلب «نظریهٔ دو-وجهی» یا موازی‌گرایی می‌نامند و دربارهٔ تفسیر دقیقش اختلاف هست؛ مسئلهٔ دشوار آگاهی را هم حل‌شده نمی‌کند.",
+     "en": "Compared with contemporary philosophy of mind: the view is usually labelled dual-aspect theory or parallelism, its exact interpretation is debated, and it does not by itself solve the hard problem of consciousness.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "René Descartes",
+     "fa": "رنه دکارت",
+     "years": "1596-1650",
+     "note": "طرح‌کنندهٔ دوگانه‌انگاری ذهن و ماده"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:mind",
+     "rel": "part-of",
+     "fa": "فلسفهٔ ذهن",
+     "en": "Philosophy of mind"
+    },
+    {
+     "to": "phil:hard-problem",
+     "rel": "see-also",
+     "fa": "مسئلهٔ دشوار آگاهی",
+     "en": "The hard problem of consciousness"
+    },
+    {
+     "to": "phil:skepticism-cogito",
+     "rel": "critiques",
+     "fa": "نقد ضمنی دوگانه‌انگاری دکارت",
+     "en": "Implicit critique of Cartesian dualism"
+    },
+    {
+     "to": "phil:spinoza-substance-monism",
+     "rel": "explains",
+     "fa": "ریشه در یگانگی جوهر",
+     "en": "Rooted in the single-substance view"
+    }
+   ]
+  },
+  {
+   "id": "spinoza-determinism-affects",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "اسپینوزا: جبر، توهم اختیار و نظریهٔ عواطف",
+    "en": "Spinoza: determinism, the illusion of free will and the theory of the affects",
+    "nl": "Spinoza: determinisme, de illusie van vrije wil en de affecten"
+   },
+   "summary": {
+    "fa": "در نظام اسپینوزا همه‌چیز با ضرورت از طبیعت خدا برمی‌آید و اختیار آزاد توهمی است برخاسته از ناآگاهی به علت‌ها؛ آزادی واقعی یعنی فهم و تسلط عقلانی بر عواطف.",
+    "en": "In Spinoza's system everything follows by necessity from God's nature and free choice is an illusion born of ignorance of causes; real freedom means understanding and rational mastery of the emotions.",
+    "nl": "Bij Spinoza volgt alles uit noodzaak en is vrije wil een illusie; echte vrijheid is inzicht in en beheersing van de affecten."
+   },
+   "points": [
+    {
+     "fa": "زنجیرهٔ علت و معلول در جهان اسپینوزا به همان اندازه ضروری است که استنتاج منطقی؛ هیچ امر «ممکنی» جز آنچه ضرورت طبیعت الهی تعیین کرده نیست.",
+     "en": "In Spinoza's world the chain of cause and effect is as necessary as logical deduction; nothing is merely possible beyond what the necessity of the divine nature fixes.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "باور به اختیار از آن‌جا می‌آید که ما کارهای خود را می‌دانیم اما علت‌های واقعی‌شان را نه.",
+     "en": "Belief in free will arises because we are aware of our actions but ignorant of their true causes.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کتاب تأکید می‌کند که اسپینوزا «خواهش» را ذات انسان و لذت را گذر به کمال بیشتر می‌داند و دربارهٔ عشق، حسادت، امید و ترس تحلیل‌هایی روان‌شناختی و شگفت‌انگیز امروزی دارد؛ امید بدون ترس نیست و ترس بدون امید.",
+     "en": "The book stresses that he treats desire as the essence of humans and joy as a passage to greater perfection, with strikingly modern psychological analyses of love, jealousy, hope and fear; hope never comes without fear, nor fear without hope.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به روایت کتاب، «عشق عقلانی به خدا» نقطهٔ اوج اخلاق اوست؛ نویسنده آن را با تعریف عشق به‌عنوان لذتِ همراه علت بیرونی ناهماهنگ می‌یابد، و خدا هم قرار نیست این عشق را پاسخ دهد.",
+     "en": "As the book presents it, the intellectual love of God is the summit of his ethics; the author finds it at odds with his definition of love as joy joined to an external cause, and God is not supposed to love back.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "جبرگرایی سخت اسپینوزا در فلسفهٔ معاصر یکی از چند موضع در بحث اختیار است؛ بسیاری سازگارگرایی را برمی‌گزینند، و برداشت کتاب از خودکشی و از «غیرواقعی بودن» خطا فشرده و ساده‌شده است.",
+     "en": "Spinoza's strict determinism is one of several positions in the contemporary free-will debate (many prefer compatibilism), and the book's treatment of suicide and of error as mere privation is compressed and simplified.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Baruch Spinoza",
+     "fa": "باروخ اسپینوزا",
+     "years": "1632-1677",
+     "note": "نویسندهٔ اخلاق"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:free-will",
+     "rel": "contrasts",
+     "fa": "سازگارگرایی و اختیار در بحث معاصر",
+     "en": "Compatibilism and free will in the current debate"
+    },
+    {
+     "to": "phil:stoicism",
+     "rel": "see-also",
+     "fa": "همخوانی با تأکید رواقی بر فهم آنچه در اختیار ماست",
+     "en": "Resonates with the Stoic focus on what is up to us"
+    },
+    {
+     "to": "phil:ethics",
+     "rel": "part-of",
+     "fa": "اخلاق",
+     "en": "Ethics"
+    },
+    {
+     "to": "phil:spinoza-substance-monism",
+     "rel": "explains",
+     "fa": "جبر از یگانگی جوهر برمی‌خیزد",
+     "en": "Determinism follows from substance monism"
+    }
+   ]
+  },
+  {
+   "id": "spinoza-liberty-state",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "اسپینوزا: دولت برای آزادی و تفاوت اندیشه با عمل",
+    "en": "Spinoza: the state for the sake of freedom, and thought versus action",
+    "nl": "Spinoza: de staat ten dienste van vrijheid"
+   },
+   "summary": {
+    "fa": "اسپینوزا در رسالهٔ الهی-سیاسی هدف دولت را رهایی مردم از ترس و پرورش آزادانهٔ عقل می‌داند و آزادی کامل اندیشه را با پایبندی به قانون در عمل جمع می‌کند؛ دیدگاهی در برابر بدبینی هابز.",
+    "en": "In the Theological-Political Treatise Spinoza sees the state's purpose as freeing people from fear and letting reason flourish, combining full freedom of thought with obedience to law in action; a counterpoint to Hobbes's pessimism.",
+    "nl": "In zijn Theologisch-politiek traktaat ziet Spinoza de staat als bescherming van vrijheid en denkvrijheid, anders dan Hobbes."
+   },
+   "points": [
+    {
+     "fa": "هابز طبیعت انسان را بدون دولت خشن می‌دید و اطاعت از هر حکومتی را بهتر از هرج‌ومرج می‌شمرد؛ اسپینوزا نگاهی خوش‌بینانه‌تر و آزادی‌خواهانه‌تر دارد.",
+     "en": "Hobbes saw life without government as brutal and any rule as better than none; Spinoza takes a more hopeful, liberal view.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مشروعیت حکومت در نظر او از تأمین امنیت شهروندان می‌آید تا بتوانند جسم و ذهن خود را بی‌هراس بپرورند؛ هدف نهایی دولت آزادی است نه ترساندن یا مطیع‌سازی.",
+     "en": "Government's legitimacy comes from securing citizens so they can develop body and mind without fear; its final aim is freedom, not terror or mere obedience.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او میان آزادی اندیشه (کامل) و آزادی عمل (محدود به قانون و نبود تحریک به شورش) فرق می‌گذارد؛ کتاب این را با رویهٔ لیبرال‌دموکراسی‌های امروز می‌سنجد.",
+     "en": "He separates freedom of thought, which should be complete, from freedom of action, which stays within law and excludes incitement to riot; the book compares this to practice in modern liberal democracies.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "رساله در ۱۶۷۰ منتشر و چند سال بعد ممنوع شد؛ کتاب می‌گوید اسپینوزا معجزه‌ها را رویدادهای طبیعی می‌دانست و کوشیده بود نشان دهد فلسفه با دینداری و امنیت دولت ناسازگار نیست.",
+     "en": "The treatise appeared in 1670 and was banned a few years later; the book says Spinoza took miracles to be natural events and wanted to show that philosophy is compatible with piety and civil security.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "قتل یان دوویت در ۱۶۷۲ و آشفتگی سیاسی هلند در پس‌زمینهٔ اندیشهٔ سیاسی او قرار دارد؛ کتاب جزئیات را به‌شکل داستانی و گاه طنزآمیز بازگو می‌کند و برخی بخش‌های آن (مثل ماجرای پلاکارد) از روایت‌های زندگینامه‌نویسان نخستین است.",
+     "en": "The murder of Johan de Witt in 1672 and Dutch political turmoil frame his thinking; the book retells the details anecdotally and with jokes, and some episodes (such as the placard story) come from early biographers.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Thomas Hobbes",
+     "fa": "توماس هابز",
+     "years": "1588-1679",
+     "note": "نویسندهٔ لویاتان"
+    },
+    {
+     "latin": "Johan de Witt",
+     "fa": "یان دوویت",
+     "years": "1625-1672",
+     "note": "دولتمرد هلندی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:political",
+     "rel": "part-of",
+     "fa": "فلسفهٔ سیاسی",
+     "en": "Political philosophy"
+    },
+    {
+     "to": "phil:two-liberties",
+     "rel": "see-also",
+     "fa": "آزادی منفی و مثبت",
+     "en": "Negative and positive liberty"
+    },
+    {
+     "to": "phil:veil-of-ignorance",
+     "rel": "contrasts",
+     "fa": "قرارداد‌گرایی جدید و پرسش مشروعیت",
+     "en": "Modern contractualism and the question of legitimacy"
+    },
+    {
+     "to": "phil:spinoza-herem-reception",
+     "rel": "see-also",
+     "fa": "زمینهٔ زندگی و آزادی اندیشه",
+     "en": "Life context and freedom of thought"
+    }
+   ]
+  },
+  {
+   "id": "spinoza-herem-reception",
+   "wiki": "phil",
+   "field": "life",
+   "title": {
+    "fa": "زندگی اسپینوزا: تکفیر، عدسی‌تراشی و پذیرش اندیشه‌اش",
+    "en": "Spinoza's life: excommunication, lens-grinding and reception",
+    "nl": "Het leven van Spinoza: ban, lenzen slijpen en receptie"
+   },
+   "summary": {
+    "fa": "اسپینوزا (۱۶۳۲ تا ۱۶۷۷) در آمستردام به دنیا آمد، در ۱۶۵۶ از جامعهٔ یهودی طرد شد، با تراشیدن عدسی زندگی کرد، دعوت دانشگاه هایدلبرگ را رد کرد و «اخلاق» پس از مرگش منتشر شد.",
+    "en": "Spinoza (1632-1677) was born in Amsterdam, was excommunicated from the Jewish community in 1656, lived by grinding lenses, declined a Heidelberg chair, and his Ethics appeared after his death.",
+    "nl": "Spinoza (1632-1677) werd in 1656 uit de Joodse gemeenschap gebannen, leefde van het slijpen van lenzen; zijn Ethica verscheen postuum."
+   },
+   "points": [
+    {
+     "fa": "او از خانواده‌ای یهودی-پرتغالی در آمستردام بود و در ۱۶۵۶ به‌دلیل آرای نامتعارف دربارهٔ تورات، خدا و فرشتگان رسماً از کنیسه طرد شد.",
+     "en": "He came from a Portuguese-Jewish family in Amsterdam and in 1656 was formally expelled from the synagogue for unorthodox views on the Torah, God and angels.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پس از آن نزد دوستان مسیحی و فرقه‌های متساهل زندگی کرد و از تراشیدن عدسی کسب درآمد می‌کرد؛ بنا بر کتاب، غبار شیشه به ریه‌هایش آسیب زد و او در ۱۶۷۷ در لاهه درگذشت.",
+     "en": "Afterwards he lived among Christian friends and tolerant sects and earned a living grinding lenses; the book says glass dust harmed his lungs and he died in The Hague in 1677.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او دعوت به استادی در هایدلبرگ را به‌خاطر شرط محدودکنندهٔ آزادی تدریس رد کرد و از دوستانش مانند اولدنبرگ و لایبنیتس نامه و دیدار داشت.",
+     "en": "He declined a Heidelberg professorship because of conditions on what he could teach, and corresponded with and met figures such as Oldenburg and Leibniz.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "«آثار پس از مرگ» بدون نام او منتشر شد و ممنوع گردید؛ بیل و هیوم به آن حمله کردند. بعدها اثرش بر آلمانی‌ها، هگل و مارکسیست‌ها تأثیر گذاشت.",
+     "en": "The Posthumous Works appeared without his name and was banned; Bayle and Hume attacked it, and later it influenced German thinkers, Hegel and Marxists.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "حکایت‌هایی مثل حملهٔ خنجر، پیشنهاد مستمری، سرگرمی عنکبوت‌ها و عشق به دختر معلمش از زندگینامه‌نویسان نخستین و شایعه است و کتاب خودش به ظنی بودن برخی اشاره می‌کند؛ تاریخ دقیق این رویدادها را باید از زندگینامه‌های پژوهشی گرفت.",
+     "en": "Stories such as the dagger attack, an offered pension, the spider pastime and a romance with his teacher's daughter stem from early biographers and rumour, and the book itself flags some as uncertain; exact details should come from scholarly biographies.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Gottfried Wilhelm Leibniz",
+     "fa": "گوتفرید ویلهلم لایبنیتس",
+     "years": "1646-1716",
+     "note": "با اسپینوزا دیدار کرد"
+    },
+    {
+     "latin": "Henry Oldenburg",
+     "fa": "هنری اولدنبرگ",
+     "years": "c.1619-1677",
+     "note": "دبیر انجمن سلطنتی لندن و مکاتبه‌کنندهٔ اسپینوزا"
+    },
+    {
+     "latin": "Pierre Bayle",
+     "fa": "پیر بیل",
+     "years": "1647-1706",
+     "note": "از منتقدان نخستین اسپینوزا"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:life",
+     "rel": "part-of",
+     "fa": "فلسفهٔ زندگی",
+     "en": "Philosophy of life"
+    },
+    {
+     "to": "phil:spinoza-liberty-state",
+     "rel": "see-also",
+     "fa": "اندیشهٔ سیاسی و آزادی اندیشه",
+     "en": "Political thought and freedom of thought"
+    },
+    {
+     "to": "phil:hegel-phenomenology-spirit",
+     "rel": "see-also",
+     "fa": "تأثیر بر هگل",
+     "en": "Influence on Hegel"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "Strathern, Paul. Spinoza in 90 Minutes (1996); ترجمهٔ شهرام حمزه‌ای، آشنایی با اسپینوزا، نشر مرکز، ۱۳۷۹",
+   "tier": 3
+  },
+  {
+   "cite": "Spinoza, Benedictus de. Ethica (Opera Posthuma, 1677)",
+   "tier": 3
+  },
+  {
+   "cite": "Spinoza, Benedictus de. Tractatus Theologico-Politicus (1670)",
+   "tier": 3
+  },
+  {
+   "cite": "Hobbes, Thomas. Leviathan (1651)",
+   "tier": 3
+  },
+  {
+   "cite": "Nadler, Steven. Spinoza: A Life (Cambridge University Press, 1999)",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "متن PDF دارای لایهٔ متنی است؛ پس از رفع ترتیب معکوس با rev.py فارسی خوانا بود و تمام بدنهٔ اصلی خوانده شد. تنها چند خطای جزئی در نقطه‌گذاری، اعداد (مثلاً ۱۶۳۷ به‌جای ۱۶۷۳) و بخش‌های وارونه‌ماندهٔ کوتاه دیده شد. مدخل‌ها با کلمات خودم و بدون نقل طولانی نوشته شده‌اند؛ منابع ۱ تا ۴ از دانش خودم و فقط برای هم‌خوانی مفاهیم ذکر شده‌اند (در points به آن‌ها src داده نشده). گزاره‌های بی‌منبع با پرچم یادداشت ویراستار قضاوت خودم دربارهٔ نظر رایج دانشگاهی‌اند.",
+ "lecture": "آشنایی با اسپینوزا (Spinoza in 90 Minutes)",
+ "speaker": "Paul Strathern (پل استراترن)",
+ "channel": "نشر مرکز (مجموعهٔ آشنایی با فیلسوفان)"
+}

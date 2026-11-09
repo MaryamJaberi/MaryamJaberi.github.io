@@ -1,0 +1,390 @@
+{
+ "paper": true,
+ "book": {
+  "title": "آشنایی با هگل (Hegel in 90 Minutes)",
+  "author": "Paul Strathern (پل استراترن)",
+  "translator": "مسعود علیا",
+  "year": "1379 شمسی (چاپ اول؛ چاپ پنجم 1389)؛ اصل انگلیسی 1996",
+  "publisher": "نشر مرکز (مجموعهٔ «آشنایی با فیلسوفان»)",
+  "type": "other",
+  "read": "full",
+  "pages_or_sections_read": "تقریباً همهٔ متن: یادداشت ناشر، مقدمه، زندگی و آثار، مؤخره و گزیده‌ها (۸۰ صفحه؛ بخش گاه‌شمار و نمایهٔ پایانی فقط مرور شد)",
+  "drive_id": "1nT8iBHiRyD4bt-EFw6cohLKjis5ioLVM"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "مقدمهٔ عامه‌پسند و خواندنی ولی غیرداوری‌شده و جانب‌دارانه؛ برای آشنایی اولیه خوب است، نه برای داوری دربارهٔ اندیشهٔ هگل.",
+  "reasons": [
+   "نویسنده فیلسوف/نویسندهٔ مشهورِ عامه‌نویس است (نه متخصص دانشگاهی هگل) و کتاب بی‌ارجاع و پانویس علمی است",
+   "ترجمهٔ فارسی از ناشر معتبر؛ زبان روان و پانویس‌های مترجم مفید",
+   "لحن طنزآمیز و داوری‌های تند (مثلاً «یاوه‌سرایی»، پیوند هگل با فجایع قرن بیستم) سوگیری روشنی دارد",
+   "شرح دیالکتیک به قالب عامیانهٔ برنهاد–برابرنهاد–همنهاد تقلیل یافته که خودِ هگل به‌کار نبرد",
+   "گزیدهٔ متن‌های خود هگل و گاه‌شمار در پایان بخش مفید و قابل‌اتکا است"
+  ],
+  "best_use_fa": "برای ورود سریع به زندگی و چارچوب کلی نظام هگل و تصویر تاریخیِ دریافت او؛ نه به‌عنوان منبع دقیق برای تفسیر دیالکتیک، فلسفهٔ حق یا رابطهٔ هگل با مارکس و استبداد.",
+  "cautions": [
+   "قضاوت‌های ارزشی و حدس‌های روان‌شناختی نویسنده سند علمی ندارد",
+   "ادعای علیت میان هگل‌گرایی و تمامیت‌خواهی قرن بیستم تقلیل‌گرایانه است",
+   "برای هگل باید به شرح‌های دانشگاهی (پینکارد، تیلور، پیپین، دایرةالمعارف فلسفی استنفورد) رجوع کرد"
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "کتاب مقدمه‌ای رده ۳ و خواندنی است؛ دیدگاه‌های جدلی آن با پرچم و یادداشت ویراستار آمده و تکراری نیست: مدخل موجود phil:hegel-phenomenology-spirit دربارهٔ روح و تاریخ است و این سه مدخل دیالکتیک، زندگی و دولت/میراث را می‌پوشانند.",
+ "summary_of_book_fa": "کتاب کوتاه ۸۰ صفحه‌ای پل استراترن (ترجمهٔ مسعود علیا) زندگی و نظام هگل را با لحن طنزآمیز و انتقادی روایت می‌کند و با گزیده‌هایی از آثار او و گاه‌شمار تمام می‌شود. نویسنده دیالکتیک را «شاعرانه ولی غیرمنطقی» می‌داند و میراث سیاسی آن را تند نقد می‌کند.",
+ "entries": [
+  {
+   "id": "hegel-dialectic-method",
+   "wiki": "phil",
+   "field": "epistemology",
+   "title": {
+    "fa": "دیالکتیک هگل: تضاد، «نفی» و منطق به‌مثابهٔ متافیزیک",
+    "en": "Hegel's dialectic: contradiction, negation and logic as metaphysics",
+    "nl": "Hegels dialectiek: tegenspraak, negatie en logica als metafysica"
+   },
+   "summary": {
+    "fa": "هگل می‌خواست منطقِ سنتیِ «صورت‌بی‌محتوا» را کنار بزند و اندیشه و واقعیت را یکی بگیرد؛ روشش حرکتی است که هر مفهوم ناقص را به ضد خود می‌کشاند و در مرحله‌ای کامل‌تر نگه می‌دارد. استراترن این روش را با نگاهی انتقادی و بامزه روایت می‌کند.",
+    "en": "Hegel wanted to replace formal, content-free logic with a method in which thought and reality coincide; each incomplete concept generates its opposite and both are preserved in a fuller stage. Strathern retells this critically and wittily.",
+    "nl": "Hegel wilde de formele, inhoudsloze logica vervangen door een methode waarin denken en werkelijkheid samenvallen; elk onvolledig begrip roept zijn tegendeel op en beide worden in een rijker stadium bewaard."
+   },
+   "points": [
+    {
+     "fa": "به روایت کتاب، هگل منطق سنتی را «تهی از محتوا» می‌دانست: قالب یک قیاس همان می‌ماند چه دربارهٔ فیلسوفان باشد چه جادوگران، پس دربارهٔ جهان چیزی نمی‌گوید؛ او می‌خواست جدایی صورت و محتوا را پشت سر بگذارد.",
+     "en": "On the book's account Hegel thought traditional logic empty: a syllogism has the same form whether about philosophers or wizards and so tells us nothing about the world; he wanted to overcome the split between form and content.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "روش دیالکتیکی: مفهومی مثل «هستی» ناقص است و ضد خود («نیستی») را پدید می‌آورد؛ این دو در مفهومی بالاتر («شدن») جمع می‌شوند که آنچه در هر دو معقول بود نگه می‌دارد و خودش دوباره نقطهٔ آغاز می‌شود.",
+     "en": "Dialectical method: a concept such as 'being' is incomplete and generates its opposite ('nothing'); both are united in a higher concept ('becoming') that keeps what was rational in each and itself becomes a new starting point.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در «علم منطق» به‌جای قواعد استدلال، خودِ مقولات اندیشه (هستی، کمیت، نسبت، تضاد…) بررسی می‌شود؛ چون هگل اندیشه را با واقعیت یکی می‌گرفت، این منطق در عمل متافیزیک است. استراترن آن را «متافیزیکِ متافیزیک» می‌نامد.",
+     "en": "In the Science of Logic the categories of thought themselves (being, quantity, relation, contradiction...) are examined, not rules of inference; since Hegel identified thought and reality this logic is in effect metaphysics, which Strathern calls 'metaphysics of metaphysics'.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به باور هگل حقیقت را فقط وقتی می‌توان شناخت که خطا (ضدِ خود) را پدید آورده و بر آن چیره شده باشد؛ نمونهٔ دینی‌اش این است که هبوط ضروری بود تا انسان به خیر برسد.",
+     "en": "For Hegel truth is known only once it has produced and overcome its opposite, error; a religious illustration is that the Fall was necessary for humans to reach the good.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "استراترن حکم می‌کند که دیالکتیک نه منطقی است نه علمی و نظام هگل را «ایده‌ای شاعرانه» می‌خواند؛ مثال‌هایش (مثلاً سه‌گانهٔ هوا–زمین–آتش‌وآب) را نویسنده خودش ساخته و بی‌پایه می‌داند.",
+     "en": "Strathern judges the dialectic neither logical nor scientific and calls the system a 'poetic idea'; he mocks illustrative triads (air-earth-fire/water) that he treats as arbitrary.",
+     "flags": [
+      "contested"
+     ],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "قالب «برنهاد–برابرنهاد–همنهاد» را معمولاً به فیشته و روایت‌های بعدی نسبت می‌دهند؛ خود هگل بیشتر از «انتزاعی–سلبی–انضمامی (خرد‌ورزانه)» و «نفیِ نفی» سخن می‌گفت. پس این سه‌گانه تقلیلی از روش اوست و بسیاری از مثال‌های عامیانه‌اش از خودِ هگل نیست.",
+     "en": "The 'thesis-antithesis-synthesis' triad is usually traced to Fichte and later summaries; Hegel himself spoke of abstract/negative/concrete (speculative) moments and the 'negation of negation'. The triad is thus a simplification, and many popular examples are not Hegel's.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      1
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Georg Wilhelm Friedrich Hegel",
+     "fa": "گئورگ ویلهلم فریدریش هگل",
+     "years": "1770-1831",
+     "note": "فیلسوف آلمانی؛ «علم منطق» (۱۸۱۲–۱۸۱۶)"
+    },
+    {
+     "latin": "Johann Gottlieb Fichte",
+     "fa": "یوهان گوتلیب فیشته",
+     "years": "1762-1814",
+     "note": "فیلسوف آلمانی؛ پیش‌زمینهٔ سه‌گانهٔ دیالکتیکی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:hegel-phenomenology-spirit",
+     "rel": "see-also",
+     "fa": "روح و تاریخ در پدیدارشناسی",
+     "en": "Spirit and history in the Phenomenology"
+    },
+    {
+     "to": "phil:epistemology",
+     "rel": "part-of",
+     "fa": "معرفت‌شناسی",
+     "en": "Epistemology"
+    },
+    {
+     "to": "phil:fallacies",
+     "rel": "contrasts",
+     "fa": "منطق صوری و مغالطه‌ها در برابر منطق دیالکتیکی",
+     "en": "Formal logic and fallacies versus dialectical logic"
+    }
+   ]
+  },
+  {
+   "id": "hegel-life-formation-system",
+   "wiki": "phil",
+   "field": "epistemology",
+   "title": {
+    "fa": "از کانت و اسپینوزا تا نظام هگل: شکل‌گیری یک فیلسوف",
+    "en": "From Kant and Spinoza to Hegel's system: how a philosopher was formed",
+    "nl": "Van Kant en Spinoza naar Hegels systeem: de vorming van een filosoof"
+   },
+   "summary": {
+    "fa": "سرگذشت کوتاه هگل: توبینگن و دوستی با هولدرلین و شلینگ، شور کانت، تأثیر اسپینوزا، ینا و «پدیدارشناسی روح»، نورمبرگ، هایدلبرگ و برلین. روایت استراترن سرراست اما پر از طعنه و حدس روان‌شناختی است.",
+    "en": "A short life of Hegel: Tübingen and friendship with Hölderlin and Schelling, Kant's impact, Spinoza's influence, Jena and the Phenomenology, Nuremberg, Heidelberg and Berlin. Strathern's account is brisk but full of irony and psychologising guesses.",
+    "nl": "Een kort levensverhaal van Hegel: Tübingen, vriendschap met Hölderlin en Schelling, Kant, Spinoza, Jena, Neurenberg, Heidelberg en Berlijn."
+   },
+   "points": [
+    {
+     "fa": "هگل در ۱۷۷۰ در اشتوتگارت زاده شد، در ۱۸ سالگی به حوزهٔ الهیات توبینگن رفت و آنجا با شاعر هولدرلین و فیلسوف شلینگ دوست شد؛ هر سه از انقلاب فرانسه به شور آمدند.",
+     "en": "Hegel was born in Stuttgart in 1770, entered the Tübingen seminary at 18 and befriended the poet Hölderlin and the philosopher Schelling; all three were stirred by the French Revolution.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در روایت کتاب، «نقد عقل ناب» کانت راهِ برون‌رفت از شک هیوم بود: علیت ویژگیِ شیوهٔ ادراک ماست نه چیزی بیرون؛ این الگو جوان هگل را مجذوب کرد.",
+     "en": "In the book's telling Kant's Critique of Pure Reason answered Hume's scepticism: causality belongs to the way we perceive, not to the world itself; this fascinated the young Hegel.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در سال‌های معلمی سرخانه (برن و فرانکفورت) هگل اسپینوزا را خواند و به دید وحدتی فراگیر رسید که در آن کثرت‌های متناهی ناپایدارند؛ استراترن این را سرچشمهٔ نظام بعدی می‌داند.",
+     "en": "During his years as a private tutor (Bern, Frankfurt) Hegel read Spinoza and arrived at a vision of an all-encompassing unity in which finite multiplicities are not ultimate; Strathern sees this as the seed of the later system.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "«پدیدارشناسی روح» (۱۸۰۷) مراحل صعود ذهن از آگاهی ساده تا «دانش مطلق» را شرح می‌دهد؛ طبق نقل کتاب هگل پایان‌بندی آن را همزمان با ورود ناپلئون به ینا (۱۸۰۶) نوشت و او را «روح جهان بر اسب» خواند.",
+     "en": "The Phenomenology of Spirit (1807) describes the ascent of mind from simple consciousness to 'absolute knowing'; the book reports that Hegel finished it as Napoleon entered Jena (1806), calling him 'the world-spirit on horseback'.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پس از ینا هگل سردبیر روزنامه، سپس هشت سال مدیر دبیرستان نورمبرگ بود، «علم منطق» را نوشت، در ۱۸۱۶ به هایدلبرگ رفت (دانشنامهٔ علوم فلسفی ۱۸۱۷) و از ۱۸۱۸ تا مرگش در ۱۸۳۱ در برلین استاد بود.",
+     "en": "After Jena Hegel edited a newspaper, then spent eight years as a Nuremberg school head, wrote the Science of Logic, moved to Heidelberg in 1816 (Encyclopedia, 1817) and from 1818 until his death in 1831 was professor in Berlin.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کتاب لحن شوخ‌طبعانه و گاه تحقیرآمیز دارد؛ مثلاً حدس‌های روان‌شناختی دربارهٔ افسردگی هگل و رابطهٔ او با خواهرش را به فلسفه‌اش ربط می‌دهد. این‌ها نظر نویسنده است و بی‌سند علمی در متن آمده؛ برای زندگی‌نامه به آثار پژوهشی (مثل زندگی‌نامهٔ تری پینکارد یا یاکوبی) باید رجوع کرد.",
+     "en": "The book is flippant and sometimes disparaging, and links speculative psychological guesses (Hegel's depression, his sister) to his philosophy. These are the author's opinions without scholarly support; for biography consult scholarly works (e.g. Pinkard's).",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Friedrich Hölderlin",
+     "fa": "فریدریش هولدرلین",
+     "years": "1770-1843",
+     "note": "شاعر آلمانی، دوست هگل در توبینگن"
+    },
+    {
+     "latin": "F. W. J. Schelling",
+     "fa": "شلینگ",
+     "years": "1775-1854",
+     "note": "فیلسوف ایدئالیست آلمانی"
+    },
+    {
+     "latin": "Immanuel Kant",
+     "fa": "ایمانوئل کانت",
+     "years": "1724-1804",
+     "note": "فیلسوف آلمانی"
+    },
+    {
+     "latin": "Baruch Spinoza",
+     "fa": "باروخ اسپینوزا",
+     "years": "1632-1677",
+     "note": "فیلسوف هلندی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:hegel-phenomenology-spirit",
+     "rel": "see-also",
+     "fa": "محتوای پدیدارشناسی روح",
+     "en": "What the Phenomenology argues"
+    },
+    {
+     "to": "phil:epistemology",
+     "rel": "part-of",
+     "fa": "معرفت‌شناسی",
+     "en": "Epistemology"
+    },
+    {
+     "to": "phil:hegel-dialectic-method",
+     "rel": "explains",
+     "fa": "روش دیالکتیک",
+     "en": "The dialectical method"
+    }
+   ]
+  },
+  {
+   "id": "hegel-state-reception-strathern",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "هگل، دولت و میراث او: فلسفهٔ حق، «هگلی‌گری» و مارکس به روایت استراترن",
+    "en": "Hegel, the state and his legacy: Philosophy of Right, Hegelianism and Marx in Strathern's account",
+    "nl": "Hegel, de staat en zijn nalatenschap volgens Strathern"
+   },
+   "summary": {
+    "fa": "استراترن هگل پیر را فیلسوف رسمی دولت پروس و دیالکتیک او را سرچشمهٔ فکریِ مارکسیسم و حتی خطرهای سیاسی قرن بیستم می‌داند؛ این روایت محل بحث است و پژوهشگران امروز آن را یک‌جانبه می‌شمارند.",
+    "en": "Strathern portrays the older Hegel as official philosopher of the Prussian state and his dialectic as the source of Marxism and even twentieth-century political dangers; scholars today consider this one-sided.",
+    "nl": "Strathern schetst de latere Hegel als staatsfilosoof van Pruisen en bron van marxisme; deze lezing is omstreden."
+   },
+   "points": [
+    {
+     "fa": "در «فلسفهٔ حق» (۱۸۲۱) سه‌گانهٔ قانون انتزاعی، وجدان فردی و «زندگی اخلاقی» (خانواده، جامعهٔ مدنی، دولت) به‌عنوان صورتِ بالاتر جامعه مطرح می‌شود؛ هگل خانواده و صنف‌ها را پایهٔ جامعه می‌دانست.",
+     "en": "In the Philosophy of Right (1821) abstract right, individual conscience and ethical life (family, civil society, state) form the structure of society; Hegel saw family and corporations as its basis.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به نقل کتاب، دولت آرمانی هگل بیشتر شبیه مدل بریتانیایی بود تا پروسی: پادشاهی مشروطه، هیئت منصفه، مدارا با دگراندیشان دینی و یهودیان؛ ولی او از حکومت عوام و لایحهٔ اصلاحات بریتانیا (۱۸۳۱) بیزار بود.",
+     "en": "According to the book Hegel's ideal state resembled the British more than the Prussian model: constitutional monarchy, juries, toleration of religious dissenters and Jews; yet he disliked popular rule and criticised the British Reform Bill (1831).",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "هگل می‌گفت فرد تنها در دولت وجود عقلانی می‌یابد و تعلیم و تربیت باید او را از فردیت صرف به وجود عینی در دولت برساند؛ استراترن این را بدرفتار با آزادی فردی و هشداری سیاسی می‌داند.",
+     "en": "Hegel held that individuals attain rational existence only within the state and that education should lead them from mere subjectivity to objective existence in it; Strathern reads this as dangerous for individual liberty.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "استراترن می‌گوید «هگلی‌گری» حامی وضع موجود در آلمان قیصری و بریتانیای ویکتوریایی بود و مارکس با وارونه‌کردن دیالکتیک هگل به ماتریالیسم دیالکتیکی رسید؛ او فیلسوفان «تفسیر جهان» را در برابر «تغییر جهان» می‌گذارد.",
+     "en": "Strathern says Hegelianism supported the status quo in Wilhelmine Germany and Victorian Britain and that Marx, inverting Hegel's dialectic, arrived at dialectical materialism; he contrasts 'interpreting' with 'changing' the world.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نویسنده هگل را از نازیسم و استبداد قرن بیستم مبرا می‌داند، اما «پوچ‌انگاریِ فرد در برابر مطلق» را «باسیل» طاعون‌های سیاسی آن قرن می‌خواند. این ادعا بسیار تند و علّیِ ساده‌شده است.",
+     "en": "The author exonerates Hegel personally from Nazism but calls the dissolution of the individual into the Absolute the 'bacillus' of the century's political plagues; this is a harsh, oversimplified causal claim.",
+     "flags": [
+      "contested"
+     ],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پژوهش دانشگاهی امروز غالباً هگل را لیبرالِ نهادگرا و منتقد تعبیر ارتجاعی می‌داند؛ جملهٔ «هر آنچه عقلانی است واقعی است…» به معنای تأیید هر وضع موجود نیست، چون «واقعی» نزد او آنچه عقلانیتش را متحقق کرده است، نه صرفِ موجود. از سوی دیگر «پایان تاریخ» و دولت‌محوری او هم هنوز نقد می‌شود (پوپر).",
+     "en": "Current scholarship often reads Hegel as an institutional liberal and rejects the reactionary reading: 'what is rational is actual' does not endorse every existing order, since 'actual' means what realises its rationality, not mere existence. His teleology and statism are still criticised (Popper).",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      1
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Karl Marx",
+     "fa": "کارل مارکس",
+     "years": "1818-1883",
+     "note": "از هگل دیالکتیک را گرفت و آن را ماتریالیستی بازخوانی کرد"
+    },
+    {
+     "latin": "Karl Popper",
+     "fa": "کارل پوپر",
+     "years": "1902-1994",
+     "note": "منتقد تندِ هگل در «جامعهٔ باز و دشمنان آن»"
+    }
+   ],
+   "links": [
+    {
+     "to": "soc:marx-break-from-hegel",
+     "rel": "bridges",
+     "fa": "گسست مارکس از هگل",
+     "en": "Marx's break from Hegel"
+    },
+    {
+     "to": "soc:marx-young-hegelian-roots",
+     "rel": "see-also",
+     "fa": "مارکس جوان و وام او به هگل",
+     "en": "The young Marx's debt to Hegel"
+    },
+    {
+     "to": "soc:teleology-paradise-hegel-marx",
+     "rel": "see-also",
+     "fa": "غایت تاریخ در هگل و مارکس",
+     "en": "History's end-goal in Hegel and Marx"
+    },
+    {
+     "to": "phil:two-liberties",
+     "rel": "contrasts",
+     "fa": "آزادی مثبت/منفی در برابر آزادیِ دولتی هگل",
+     "en": "Positive/negative liberty versus Hegel's state freedom"
+    },
+    {
+     "to": "phil:political",
+     "rel": "part-of",
+     "fa": "فلسفهٔ سیاسی",
+     "en": "Political philosophy"
+    },
+    {
+     "to": "phil:hegel-phenomenology-spirit",
+     "rel": "see-also",
+     "fa": "روح و تاریخ نزد هگل",
+     "en": "Spirit and history in Hegel"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "Strathern, Paul. آشنایی با هگل. ترجمهٔ مسعود علیا. تهران: نشر مرکز، ۱۳۷۹ (Hegel in 90 Minutes, 1996).",
+   "tier": 3
+  },
+  {
+   "cite": "Stanford Encyclopedia of Philosophy، مدخل‌های «Hegel» و «Hegel's Dialectics» (دانش عمومی؛ بدون جزئیات صفحه).",
+   "tier": 2
+  }
+ ],
+ "quality_notes": "متن لایهٔ متنی سالم داشت و معکوس نبود (فقط پیوستگی خطوط و نشانه‌گذاری در استخراج PDF گاه به‌هم‌ریخته). حدود ۹۰٪ متن اصلی خوانده شد؛ ۳ مدخل بدون نقل مستقیم بیش از چهار کلمه. گزاره‌های با src=[1] از دانش عمومی/دایرةالمعارف است نه کتاب.",
+ "lecture": "آشنایی با هگل (Hegel in 90 Minutes)",
+ "speaker": "Paul Strathern (پل استراترن)",
+ "channel": "نشر مرکز (مجموعهٔ «آشنایی با فیلسوفان»)"
+}

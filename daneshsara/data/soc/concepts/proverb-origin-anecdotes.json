@@ -1,0 +1,93 @@
+{
+ "id": "soc:proverb-origin-anecdotes",
+ "kind": "concept",
+ "title": {
+  "fa": "داستان‌های خاستگاه مثل‌ها و محدودیت اعتبار آن‌ها",
+  "en": "Origin stories of proverbs and their limits as evidence",
+  "nl": "Ontstaansverhalen van spreekwoorden en hun beperkte bewijskracht"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "بعضی مدخل‌های فرهنگ امثال برای مثل یک داستان خاستگاه می‌آورند. این داستان‌ها زندگی‌ای در حافظهٔ جمعی دارند اما معمولاً سند تاریخی ندارند و باید روایت عامیانه شمرده شوند.",
+  "en": "Some dictionary entries give an origin story for a proverb. Such stories live in collective memory but usually lack historical documentation and count as folk narrative.",
+  "nl": "Sommige woordenboekvermeldingen geven een ontstaansverhaal bij een spreekwoord. Zulke verhalen leven in het collectieve geheugen, maar hebben meestal geen historische onderbouwing."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در بخش خوانده‌شده، مثل «با من هم پلاس» با حکایت بدهکار ورشکسته‌ای توضیح داده می‌شود که برای رهایی از طلبکاران خود را دیوانه نشان می‌داد.",
+    "en": "In the part read, the saying 'ba man ham palas' is explained with the tale of a bankrupt debtor who feigned madness to escape his creditors.",
+    "nl": "In the part read, the saying 'ba man ham palas' is explained with the tale of a bankrupt debtor who feigned madness to escape his creditors."
+   },
+   "sources": [
+    "src:69ea5a894b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مثل «ببخشید کتک شما را حلاج خورد» با حکایتی دربارهٔ فرمان اشتباه یک وزیر و گرفتار شدن فردی نامربوط توضیح داده می‌شود؛ یعنی مثل پیامد ناعادلانهٔ دستور سرسری را می‌گوید.",
+    "en": "The saying about the cotton-carder who received the beating is explained by a tale of a minister's careless order catching an unrelated man; the proverb voices the unjust result of a hasty command.",
+    "nl": "The saying about the cotton-carder who received the beating is explained by a tale of a minister's careless order catching an unrelated man; the proverb voices the unjust result of a hasty command."
+   },
+   "sources": [
+    "src:69ea5a894b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این حکایت‌ها نقش توضیح‌دهنده دارند: معنی مثل را در قالب داستان به خاطر می‌سپارند و حافظهٔ جمعی را زنده نگه می‌دارند.",
+    "en": "These tales work as explanations: they fix a proverb's meaning in story form and keep collective memory alive.",
+    "nl": "These tales work as explanations: they fix a proverb's meaning in story form and keep collective memory alive."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهشگران فولکلور معمولاً چنین داستان‌های خاستگاه را اغلب ریشه‌شناسی عامیانهٔ پسینی می‌دانند، یعنی داستانی که پس از رایج‌شدن مثل برای توضیحش ساخته شده است، مگر سند مستقل داشته باشند.",
+    "en": "Folklorists generally regard such origin tales as often secondary folk etymology, stories made after the proverb became common to explain it, unless independent evidence exists.",
+    "nl": "Folklorists generally regard such origin tales as often secondary folk etymology, stories made after the proverb became common to explain it, unless independent evidence exists."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:culture-concept-functions",
+   "rel": "part-of",
+   "note": {
+    "fa": "فرهنگ معنوی و حافظهٔ جمعی",
+    "en": "Non-material culture and collective memory",
+    "nl": "Non-material culture and collective memory"
+   }
+  },
+  {
+   "to": "soc:persian-proverb-dictionary-structure",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساختار فرهنگ امثال",
+    "en": "Structure of the proverb dictionary",
+    "nl": "Structure of the proverb dictionary"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:69ea5a894b"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

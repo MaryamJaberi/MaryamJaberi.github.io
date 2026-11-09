@@ -1,0 +1,279 @@
+{
+ "paper": true,
+ "book": {
+  "title": "فرهنگ امثال فارسی (شامل امثال، ضرب‌المثل‌ها، حکم، خرافات و فولکلورهای رایج و منسوخ)",
+  "author": "گردآوری و تدوین: یوسف جمشیدی‌پور (خوانش OCR؛ تا حدی نامطمئن)",
+  "translator": "",
+  "year": "نامشخص",
+  "publisher": "نامشخص (روی شناسنامه فقط چاپخانه و تیراژ دیده می‌شود)",
+  "type": "reference",
+  "read": "partial",
+  "pages_or_sections_read": "فایل دانلودشده بریده است (حدود ۹۱۷ کیلوبایت از ۴٫۴ مگابایت، حدود ۲۰٪). ۵۸ صفحهٔ سالم بازسازی و OCR شد: جلد، شناسنامه، فهرست منابع و مدخل‌های حرف «آ» تا آغاز «ببخشید». بقیه خوانده نشد.",
+  "drive_id": "1NlucTrc34VqYXXPw4zPiKMO5gsljCRk7"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "فرهنگ گردآوری‌شدهٔ امثال بر پایهٔ منابع کلاسیک (دهخدا، نفیسی و...)؛ برای دیدن زبان و باورهای رایج خوب است، نه برای ریشه‌یابی تاریخی مثل‌ها.",
+  "reasons": [
+   "فهرست مآخذ در خود کتاب، منابع شناخته‌شده‌ای مثل امثال و حکم دهخدا، فرهنگ نفیسی، فرهنگ لغات عامیانهٔ جمال‌زاده و امثال امینی را نام می‌برد؛ پس گردآوری ثانویه ولی بر پایهٔ منابع معتبر است.",
+   "ساختار فرهنگ‌نامه‌ای روشن: الفبایی، با معنی هر مثل، ارجاع به صورت‌های دیگر («رجوع به») و معادل («نظیر»).",
+   "گردآورنده از روی این ۵۸ صفحه استاد پژوهشگر شناخته‌شده‌ای نیست و ناشر و سال نامشخص است؛ برای هر مثل ارجاع دقیق به صفحهٔ منبع نمی‌دهد.",
+   "برخی مدخل‌ها داستان خاستگاه دارند که بیشتر روایت عامیانه‌اند و سند تاریخی ندارند."
+  ],
+  "best_use_fa": "خوب برای: دیدن صورت و معنای رایج مثل‌ها، گونه‌های هم‌معنا و نگرش‌های روزمرهٔ فارسی‌زبانان. مناسب نیست برای: اثبات ریشهٔ تاریخی یک مثل یا درستی داستان‌های پیدایش آن.",
+  "cautions": [
+   "فقط حدود یک‌پنجم کتاب خوانده شد (حرف «آ» تا آغاز «ب»).",
+   "OCR فارسی نویزدار است؛ فقط مثل‌ها و معنی‌هایی که واضح خوانده شد به کار رفته‌اند.",
+   "عنوان کتاب «خرافات» را هم شامل می‌شود؛ حضور یک باور در فرهنگ‌نامه تأیید درستی آن نیست.",
+   "هویت دقیق گردآورنده از OCR برداشت شده و ممکن است نادرست باشد."
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "کتاب مرجع است و همان بخش خوانده‌شده برای سه مدخل دربارهٔ ساختار، کارکرد اجتماعی و داستان‌های خاستگاه مثل‌ها کافی است؛ ولی چون بخش بزرگی خوانده نشده، مدخل‌ها به محتوای دیده‌شده محدود ماندند و هیچ فهرستی از مثل‌ها کپی نشد.",
+ "summary_of_book_fa": "فرهنگ الفبایی ضرب‌المثل‌ها و حکمت‌های عامیانهٔ فارسی که برای هر مثل معنی کوتاهی می‌دهد، به صورت‌های دیگر آن ارجاع می‌دهد و گاهی داستان پیدایشش را نقل می‌کند. فهرست مآخذ آن بر امثال و حکم دهخدا و چند فرهنگ دیگر تکیه دارد. فایل موجود ناقص است و فقط آغاز کتاب خوانده شد.",
+ "entries": [
+  {
+   "id": "persian-proverb-dictionary-structure",
+   "wiki": "soc",
+   "field": "values",
+   "title": {
+    "fa": "چگونه فرهنگ‌نامهٔ امثال فارسی ساخته می‌شود",
+    "en": "How a Persian proverb dictionary is built",
+    "nl": "Hoe een Perzisch spreekwoordenboek is opgebouwd"
+   },
+   "summary": {
+    "fa": "فرهنگ‌نامهٔ امثال مثل‌ها را الفبایی می‌چیند، معنی هر کدام را می‌گوید و صورت‌های هم‌معنا را به هم وصل می‌کند. این ساختار نشان می‌دهد مثل‌ها زنجیره‌ای از گونه‌های شفاهی‌اند، نه متن‌های ثابت.",
+    "en": "A proverb dictionary orders sayings alphabetically, glosses their meaning and links variant forms together. This structure shows proverbs as chains of oral variants rather than fixed texts.",
+    "nl": "Een spreekwoordenboek rangschikt uitdrukkingen alfabetisch, verklaart hun betekenis en koppelt varianten aan elkaar. Zo blijkt dat spreekwoorden mondelinge varianten zijn en geen vaste teksten."
+   },
+   "points": [
+    {
+     "fa": "مدخل‌ها بر پایهٔ نخستین واژهٔ مثل الفبایی چیده شده‌اند و در برابر هر مثل، معنی یا کاربرد آن با جملهٔ کوتاه توضیح داده می‌شود.",
+     "en": "Entries are alphabetised by the first word of the saying, and each is followed by a short gloss of its meaning or use.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "وقتی یک مثل چند صورت دارد، فرهنگ به‌جای تکرار توضیح، با «رجوع به» خواننده را به صورت اصلی می‌فرستد؛ پس یک مثل در عمل چند شکل رایج دارد.",
+     "en": "When a saying has several forms, the dictionary points to the main form with a cross-reference instead of repeating the gloss, so one proverb in practice circulates in several shapes.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "با برچسب «نظیر» مثل‌های هم‌معنا کنار هم گذاشته می‌شوند؛ مثلاً چند تعبیر برای کار بیهوده (مثل پیمودن آب با بال مرغ) به هم نزدیک شمرده شده‌اند.",
+     "en": "The label 'nazir' (equivalent) groups sayings of similar meaning; for instance several images for futile work (such as measuring water with a bird's wing) are tied together.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "فهرست مآخذ کتاب شامل امثال و حکم دهخدا، فرهنگ نفیسی، فرهنگ لغات عامیانهٔ جمال‌زاده و فرهنگ امثال امینی است؛ یعنی این اثر گردآوری ثانویه از فرهنگ‌نامه‌های پیشین است، نه پژوهش میدانی.",
+     "en": "The book's list of sources names Dehkhoda's Amthal va Hekam, Nafisi's dictionary, Jamalzadeh's colloquial dictionary and Amini's proverb dictionary, so it is a secondary compilation of earlier dictionaries, not field research.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "چنین گردآوری‌هایی برای کار علمی باید با نسخهٔ دهخدا و پژوهش‌های فولکلورشناسی تطبیق داده شوند؛ فرهنگ‌نامه‌های عمومی همیشه منبع ثبت‌شده برای هر مثل نمی‌دهند.",
+     "en": "For scholarly use such compilations should be checked against Dehkhoda and folklore studies, since general dictionaries do not always give a traceable source for each saying.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Ali-Akbar Dehkhoda",
+     "fa": "علی‌اکبر دهخدا",
+     "years": "۱۲۵۸–۱۳۳۴ ه‌ش",
+     "note": "گردآورندهٔ «امثال و حکم»، مأخذ اصلی این نوع فرهنگ‌ها"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:language-games",
+     "rel": "see-also",
+     "fa": "معنا در کاربرد؛ مثل‌ها هم معنایشان را از موقعیت می‌گیرند",
+     "en": "Meaning as use; proverbs also take meaning from situation"
+    },
+    {
+     "to": "soc:culture-concept-functions",
+     "rel": "part-of",
+     "fa": "مثل‌ها بخشی از فرهنگ معنوی‌اند",
+     "en": "Proverbs are part of non-material culture"
+    }
+   ]
+  },
+  {
+   "id": "proverbs-as-social-norm-shorthand",
+   "wiki": "soc",
+   "field": "values",
+   "title": {
+    "fa": "مثل‌های فارسی به‌مثابه خلاصهٔ هنجارهای اجتماعی",
+    "en": "Persian proverbs as shorthand for social norms",
+    "nl": "Perzische spreekwoorden als verkorte sociale normen"
+   },
+   "summary": {
+    "fa": "بسیاری از مثل‌های فارسی در یک تصویر کوتاه (اغلب آب) یک قاعدهٔ رفتاری یا ارزیابی اخلاقی را فشرده می‌کنند. با مثل‌ها می‌توان ارزش‌های رایج جامعه را شناخت، به شرط اینکه آن‌ها را شاهدی بر رفتار واقعی نگیریم.",
+    "en": "Many Persian proverbs pack a behavioural rule or moral judgment into one short image, often water. They show a society's common values, as long as we do not treat them as proof of actual behaviour.",
+    "nl": "Veel Perzische spreekwoorden vatten een gedragsregel of morele oordeel samen in één beeld, vaak water. Ze laten gangbare waarden zien, maar bewijzen het feitelijke gedrag niet."
+   },
+   "points": [
+    {
+     "fa": "در بخش خوانده‌شده، مدخل‌های آغازشده با «آب» بسیار فراوان‌اند و از خست و سخاوت تا ناامیدکردن و کار بیهوده را با تصویر آب می‌گویند؛ آب در این مثل‌ها زبان مشترک مفهوم‌های مختلف است.",
+     "en": "In the part read, entries beginning with 'ab' (water) are very numerous and express stinginess, generosity, disappointing someone or futile work through water imagery; water works as a shared vocabulary for varied ideas.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مثل‌هایی مثل «آبرو آب جوی نیست» آبرو را سرمایه‌ای می‌دانند که باید نگه داشت؛ و مثلی دربارهٔ آبی که به جوی برنمی‌گردد می‌گوید احترام از دست‌رفته به‌سادگی بازنمی‌گردد.",
+     "en": "Sayings like 'abru ab-e juy nist' treat honour as capital to be guarded, and another about water that does not return to the stream says lost respect is not easily regained.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مثل «آب از سرش گذشته» و مثل مشابه دربارهٔ حدی که پس از آن کم و زیاد فرقی ندارد، نگرش مردم به درماندگی و آستانهٔ بدبختی را نشان می‌دهند.",
+     "en": "The saying 'water has passed over his head' and a similar one about a threshold beyond which more or less no longer matters express attitudes to helplessness and the limit of misfortune.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مثل‌ها دانش مشترک و قابل‌تکرار می‌سازند؛ کارکرد آن‌ها یادآوری هنجار، سرزنش ملایم و تسلی است و می‌توان آن را با نگاه کارکردگرایانه به فرهنگ سنجید.",
+     "en": "Proverbs create shared, repeatable knowledge; their function is reminding of norms, mild reproach and consolation, which fits a functionalist view of culture.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "این‌که فراوانی تصویر آب نشانهٔ کم‌آبی سرزمین باشد، تفسیری رایج ولی اثبات‌نشده است؛ برای آزمونش باید بسامد تصویرها در زبان‌های دیگر هم مقایسه شود. همچنین مثل‌ها گاه با هم تناقض دارند و به‌جای رفتار واقعی، هنجارهای ایده‌آل یا موقعیتی را بازتاب می‌دهند.",
+     "en": "That the frequency of water imagery reflects a dry land is a popular but unproven interpretation; testing it needs comparison with other languages. Proverbs also contradict each other and reflect ideal or situational norms rather than real behaviour.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "soc:malinowski-functionalism",
+     "rel": "explains",
+     "fa": "کارکرد مثل‌ها در پاسخ به نیازهای اجتماعی",
+     "en": "Proverbs' function as response to social needs"
+    },
+    {
+     "to": "soc:culture-roles-social-control",
+     "rel": "see-also",
+     "fa": "مثل‌ها ابزار کنترل اجتماعی نرم‌اند",
+     "en": "Proverbs are a soft tool of social control"
+    },
+    {
+     "to": "soc:culture-concept-functions",
+     "rel": "part-of",
+     "fa": "فرهنگ معنوی",
+     "en": "Non-material culture"
+    }
+   ]
+  },
+  {
+   "id": "proverb-origin-anecdotes",
+   "wiki": "soc",
+   "field": "collective",
+   "title": {
+    "fa": "داستان‌های خاستگاه مثل‌ها و محدودیت اعتبار آن‌ها",
+    "en": "Origin stories of proverbs and their limits as evidence",
+    "nl": "Ontstaansverhalen van spreekwoorden en hun beperkte bewijskracht"
+   },
+   "summary": {
+    "fa": "بعضی مدخل‌های فرهنگ امثال برای مثل یک داستان خاستگاه می‌آورند. این داستان‌ها زندگی‌ای در حافظهٔ جمعی دارند اما معمولاً سند تاریخی ندارند و باید روایت عامیانه شمرده شوند.",
+    "en": "Some dictionary entries give an origin story for a proverb. Such stories live in collective memory but usually lack historical documentation and count as folk narrative.",
+    "nl": "Sommige woordenboekvermeldingen geven een ontstaansverhaal bij een spreekwoord. Zulke verhalen leven in het collectieve geheugen, maar hebben meestal geen historische onderbouwing."
+   },
+   "points": [
+    {
+     "fa": "در بخش خوانده‌شده، مثل «با من هم پلاس» با حکایت بدهکار ورشکسته‌ای توضیح داده می‌شود که برای رهایی از طلبکاران خود را دیوانه نشان می‌داد.",
+     "en": "In the part read, the saying 'ba man ham palas' is explained with the tale of a bankrupt debtor who feigned madness to escape his creditors.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مثل «ببخشید کتک شما را حلاج خورد» با حکایتی دربارهٔ فرمان اشتباه یک وزیر و گرفتار شدن فردی نامربوط توضیح داده می‌شود؛ یعنی مثل پیامد ناعادلانهٔ دستور سرسری را می‌گوید.",
+     "en": "The saying about the cotton-carder who received the beating is explained by a tale of a minister's careless order catching an unrelated man; the proverb voices the unjust result of a hasty command.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "این حکایت‌ها نقش توضیح‌دهنده دارند: معنی مثل را در قالب داستان به خاطر می‌سپارند و حافظهٔ جمعی را زنده نگه می‌دارند.",
+     "en": "These tales work as explanations: they fix a proverb's meaning in story form and keep collective memory alive.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "پژوهشگران فولکلور معمولاً چنین داستان‌های خاستگاه را اغلب ریشه‌شناسی عامیانهٔ پسینی می‌دانند، یعنی داستانی که پس از رایج‌شدن مثل برای توضیحش ساخته شده است، مگر سند مستقل داشته باشند.",
+     "en": "Folklorists generally regard such origin tales as often secondary folk etymology, stories made after the proverb became common to explain it, unless independent evidence exists.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "soc:culture-concept-functions",
+     "rel": "part-of",
+     "fa": "فرهنگ معنوی و حافظهٔ جمعی",
+     "en": "Non-material culture and collective memory"
+    },
+    {
+     "to": "soc:persian-proverb-dictionary-structure",
+     "rel": "see-also",
+     "fa": "ساختار فرهنگ امثال",
+     "en": "Structure of the proverb dictionary"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "جمشیدی‌پور، یوسف (گردآورنده). فرهنگ امثال فارسی: امثال، ضرب‌المثل‌ها، حکم، خرافات و فولکلورهای رایج و منسوخ. ناشر و سال نامشخص. (خوانش بخشی از آغاز کتاب با OCR)",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "فایل دانلودشده ناقص بود (حدود ۲۰٪ حجم واقعی؛ جدول مراجع بریده). صفحه‌ها با ساخت دستی فهرست صفحات از شیءهای تصویری JBIG2 بازسازی و با tesseract فارسی خوانده شدند. دقت OCR متوسط تا پایین است (شکستگی کلمه، نویسه‌های جابه‌جا، افتادگی). فقط عبارت‌هایی که واضح بودند آمده‌اند و هیچ عدد یا نام نامطمئنی (از جمله سال و ناشر) نیامده است. نام گردآورنده از جلد OCR شده و مطمئن نیست. تعداد کل مدخل‌های کتاب نامشخص است.",
+ "lecture": "فرهنگ امثال فارسی (شامل امثال، ضرب‌المثل‌ها، حکم، خرافات و فولکلورهای رایج و منسوخ)",
+ "speaker": "گردآوری و تدوین: یوسف جمشیدی‌پور (خوانش OCR؛ تا حدی نامطمئن)",
+ "channel": "نامشخص (روی شناسنامه فقط چاپخانه و تیراژ دیده می‌شود)"
+}

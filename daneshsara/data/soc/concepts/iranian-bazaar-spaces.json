@@ -1,0 +1,114 @@
+{
+ "id": "soc:iranian-bazaar-spaces",
+ "kind": "concept",
+ "title": {
+  "fa": "فضاهای بازار: قیصریه، تیمچه، کاروانسرا و پوشش",
+  "en": "Bazaar spaces: qaysariyya, timcheh, caravanserai and roofing",
+  "nl": "Ruimtes in de bazaar: qaysariyya, timcheh, karavanserai en overkapping"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "بازار از اجزایی ساخته می‌شد که هر یک کارکردی داشت؛ از قیصریهٔ کالاهای گرانبها تا کاروانسرای شهری و فضاهای خدماتی مانند آب‌انبار. سقف بازار با مصالح و دهانه فرق می‌کرد.",
+  "en": "The bazaar was assembled from distinct parts: the qaysariyya for luxury goods, the timcheh, the urban caravanserai and service spaces such as cisterns; roofing varied with material and span.",
+  "nl": "De bazaar bestond uit onderdelen met eigen functie: qaysariyya voor luxegoederen, timcheh, stadskaravanserai en dienstruimtes; de overkapping verschilde per materiaal en overspanning."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "قیصریه فضایی دردار بود که شب بسته می‌شد و بیشتر برای کالاهای لوکس و پارچه‌های عالی به کار می‌رفت.",
+    "en": "The qaysariyya was a gated space, closed at night, used mostly for luxury goods and fine textiles.",
+    "nl": "The qaysariyya was a gated space, closed at night, used mostly for luxury goods and fine textiles."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تیمچه بنایی سرپوشیده برای عرضهٔ کالاهای گرانبها مانند فرش بود، دور از باد و باران؛ در دورهٔ قاجار ترکیب تیمچه و کاروانسرا هم رایج شد.",
+    "en": "The timcheh was a roofed building for valuable goods such as carpets; in the Qajar period combined timcheh-caravanserai designs appeared.",
+    "nl": "The timcheh was a roofed building for valuable goods such as carpets; in the Qajar period combined timcheh-caravanserai designs appeared."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاروانسرای شهری جای عرضه و انبار کالا بود و حجره‌های طبقهٔ بالا اغلب دفتر و اداره بازرگانان بود؛ با کاروانسرای برون‌شهری که جای منزل مسافر و چارپا بود فرق داشت.",
+    "en": "The urban caravanserai was a place for selling and storing goods, with upper-floor rooms often serving merchants as offices, unlike the out-of-town caravanserai that housed travellers and animals.",
+    "nl": "The urban caravanserai was a place for selling and storing goods, with upper-floor rooms often serving merchants as offices, unlike the out-of-town caravanserai that housed travellers and animals."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازار اصلی فضاهای خدماتی مانند آب‌انبار، سقاخانه، اصطبل، یخچال و انبار هم داشت.",
+    "en": "A main bazaar also held service spaces such as cisterns, water points, stables, ice stores and warehouses.",
+    "nl": "A main bazaar also held service spaces such as cisterns, water points, stables, ice stores and warehouses."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بازارهای ادواری و موقت سقف نداشتند؛ تنها بخش‌هایی از بازارهای دائمی مسقف بود. پوشش چوبی تخت و پوشش آجری و گچی معمولاً گنبدی بود.",
+    "en": "Periodic and temporary markets had no roof; only parts of permanent bazaars were covered. Timber tended to give flat roofs, brick and plaster usually vaulted ones.",
+    "nl": "Periodic and temporary markets had no roof; only parts of permanent bazaars were covered. Timber tended to give flat roofs, brick and plaster usually vaulted ones."
+   },
+   "sources": [
+    "src:97b0537a97"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "توصیف‌های سفرنامه‌ای که کتاب نقل می‌کند دیدگاه مسافران خارجی و تاریخ‌نگاران کهن است و باید با شواهد باستان‌شناختی و اسنادی سنجیده شود.",
+    "en": "The travel accounts the book quotes reflect foreign travellers and medieval chroniclers and should be weighed against archaeological and documentary evidence.",
+    "nl": "The travel accounts the book quotes reflect foreign travellers and medieval chroniclers and should be weighed against archaeological and documentary evidence."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:space",
+   "rel": "part-of",
+   "note": {
+    "fa": "فضا و شهر",
+    "en": "City and space",
+    "nl": "City and space"
+   }
+  },
+  {
+   "to": "soc:iranian-bazaar-form",
+   "rel": "see-also",
+   "note": {
+    "fa": "شکل بازار",
+    "en": "Bazaar form",
+    "nl": "Bazaar form"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:97b0537a97"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

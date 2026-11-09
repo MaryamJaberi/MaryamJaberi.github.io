@@ -1,0 +1,105 @@
+{
+ "id": "soc:persian-proverb-dictionary-structure",
+ "kind": "concept",
+ "title": {
+  "fa": "چگونه فرهنگ‌نامهٔ امثال فارسی ساخته می‌شود",
+  "en": "How a Persian proverb dictionary is built",
+  "nl": "Hoe een Perzisch spreekwoordenboek is opgebouwd"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "فرهنگ‌نامهٔ امثال مثل‌ها را الفبایی می‌چیند، معنی هر کدام را می‌گوید و صورت‌های هم‌معنا را به هم وصل می‌کند. این ساختار نشان می‌دهد مثل‌ها زنجیره‌ای از گونه‌های شفاهی‌اند، نه متن‌های ثابت.",
+  "en": "A proverb dictionary orders sayings alphabetically, glosses their meaning and links variant forms together. This structure shows proverbs as chains of oral variants rather than fixed texts.",
+  "nl": "Een spreekwoordenboek rangschikt uitdrukkingen alfabetisch, verklaart hun betekenis en koppelt varianten aan elkaar. Zo blijkt dat spreekwoorden mondelinge varianten zijn en geen vaste teksten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مدخل‌ها بر پایهٔ نخستین واژهٔ مثل الفبایی چیده شده‌اند و در برابر هر مثل، معنی یا کاربرد آن با جملهٔ کوتاه توضیح داده می‌شود.",
+    "en": "Entries are alphabetised by the first word of the saying, and each is followed by a short gloss of its meaning or use.",
+    "nl": "Entries are alphabetised by the first word of the saying, and each is followed by a short gloss of its meaning or use."
+   },
+   "sources": [
+    "src:69ea5a894b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وقتی یک مثل چند صورت دارد، فرهنگ به‌جای تکرار توضیح، با «رجوع به» خواننده را به صورت اصلی می‌فرستد؛ پس یک مثل در عمل چند شکل رایج دارد.",
+    "en": "When a saying has several forms, the dictionary points to the main form with a cross-reference instead of repeating the gloss, so one proverb in practice circulates in several shapes.",
+    "nl": "When a saying has several forms, the dictionary points to the main form with a cross-reference instead of repeating the gloss, so one proverb in practice circulates in several shapes."
+   },
+   "sources": [
+    "src:69ea5a894b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "با برچسب «نظیر» مثل‌های هم‌معنا کنار هم گذاشته می‌شوند؛ مثلاً چند تعبیر برای کار بیهوده (مثل پیمودن آب با بال مرغ) به هم نزدیک شمرده شده‌اند.",
+    "en": "The label 'nazir' (equivalent) groups sayings of similar meaning; for instance several images for futile work (such as measuring water with a bird's wing) are tied together.",
+    "nl": "The label 'nazir' (equivalent) groups sayings of similar meaning; for instance several images for futile work (such as measuring water with a bird's wing) are tied together."
+   },
+   "sources": [
+    "src:69ea5a894b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فهرست مآخذ کتاب شامل امثال و حکم دهخدا، فرهنگ نفیسی، فرهنگ لغات عامیانهٔ جمال‌زاده و فرهنگ امثال امینی است؛ یعنی این اثر گردآوری ثانویه از فرهنگ‌نامه‌های پیشین است، نه پژوهش میدانی.",
+    "en": "The book's list of sources names Dehkhoda's Amthal va Hekam, Nafisi's dictionary, Jamalzadeh's colloquial dictionary and Amini's proverb dictionary, so it is a secondary compilation of earlier dictionaries, not field research.",
+    "nl": "The book's list of sources names Dehkhoda's Amthal va Hekam, Nafisi's dictionary, Jamalzadeh's colloquial dictionary and Amini's proverb dictionary, so it is a secondary compilation of earlier dictionaries, not field research."
+   },
+   "sources": [
+    "src:69ea5a894b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چنین گردآوری‌هایی برای کار علمی باید با نسخهٔ دهخدا و پژوهش‌های فولکلورشناسی تطبیق داده شوند؛ فرهنگ‌نامه‌های عمومی همیشه منبع ثبت‌شده برای هر مثل نمی‌دهند.",
+    "en": "For scholarly use such compilations should be checked against Dehkhoda and folklore studies, since general dictionaries do not always give a traceable source for each saying.",
+    "nl": "For scholarly use such compilations should be checked against Dehkhoda and folklore studies, since general dictionaries do not always give a traceable source for each saying."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:language-games",
+   "rel": "see-also",
+   "note": {
+    "fa": "معنا در کاربرد؛ مثل‌ها هم معنایشان را از موقعیت می‌گیرند",
+    "en": "Meaning as use; proverbs also take meaning from situation",
+    "nl": "Meaning as use; proverbs also take meaning from situation"
+   }
+  },
+  {
+   "to": "soc:culture-concept-functions",
+   "rel": "part-of",
+   "note": {
+    "fa": "مثل‌ها بخشی از فرهنگ معنوی‌اند",
+    "en": "Proverbs are part of non-material culture",
+    "nl": "Proverbs are part of non-material culture"
+   }
+  }
+ ],
+ "people": [
+  "core:ali-akbar-dehkhoda"
+ ],
+ "sources": [
+  "src:69ea5a894b"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
