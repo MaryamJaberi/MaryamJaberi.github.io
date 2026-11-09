@@ -9,9 +9,12 @@ for dp, _, fs in os.walk(R):
     if rel.startswith('build') or rel.startswith('.git'): continue
     for f in fs:
         if f.endswith('.html'):
-            p = os.path.normpath(os.path.join(rel, f)); pages[p] = open(os.path.join(R, p), encoding='utf-8', errors='ignore').read()
+            p = os.path.normpath(os.path.join(rel, f))
+            txt = open(os.path.join(R, p), encoding='utf-8', errors='ignore').read()
+            if 'http-equiv="refresh"' in txt: continue   # redirect stubs are not pages
+            pages[p] = txt
 def title(s, p):
-    m = re.search(r'<title>(.*?)</title>', s, re.S); t = re.sub(r'\s+', ' ', m.group(1)).split(' — ')[0].strip() if m else p
+    m = re.search(r'<title>(.*?)</title>', s, re.S); t = re.sub(r'\s+', ' ', m.group(1)).split(' | ')[0].strip() if m else p
     return t
 TITLE = {p: title(s, p) for p, s in pages.items()}
 PSY_TOOLS = {'graph', 'land', 'body', 'emotions', 'timeline', 'heat', 'river', 'lineage', 'prism', 'path', 'effect', 'evidence', 'debate', 'guess', 'lab', 'scales', 'learn', 'library', 'atlas2'}
@@ -22,9 +25,12 @@ def group(p):
         if f == 'index': return 'psy-home'
         if re.fullmatch(r's\d+', f): return 'psy-lessons'
         if f in PSY_TOOLS: return 'psy-tools'
-        if f in ('orgsvc', 'orgpsych'): return 'product-org'
+        if f == 'orgsvc': return 'product-org'
         return 'psy-books'
     if d == 'psy/tools': return 'psy-tools'
+    if d == 'psy/lessons': return 'psy-lessons'
+    if d == 'psy/topics': return 'psy-books'
+    if d == 'wellbeing': return 'product-org'
     if d in ('soc', 'phil', 'tabar', 'iran'):
         return d + '-home'
     if d == 'miyan': return 'miyan'

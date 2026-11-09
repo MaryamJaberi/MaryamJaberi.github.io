@@ -72,6 +72,7 @@ for p in sorted(glob.glob(f'{R}/**/*.html', recursive=True)):
     rel = os.path.relpath(p, R).replace(os.sep, '/')
     if rel.startswith('build/') or rel == 'index.html': continue
     s = open(p, encoding='utf-8').read()
+    if 'http-equiv="refresh"' in s: continue   # a redirect stub needs no breadcrumb
     s = re.sub(r'<nav class="ds-crumbs".*?</nav>\s*', '', s, flags=re.S)
     s = re.sub(r'<style id="ds-crumbs-css">.*?</style>\s*', '', s, flags=re.S)
     # drop the older, inconsistent breadcrumb bars so there is only one

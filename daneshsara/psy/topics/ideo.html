@@ -1,0 +1,468 @@
+<!doctype html><html lang="fa" dir="rtl"><head>
+<meta name="description" content="چرا برخی ذهن‌ها جذب ایدئولوژی‌های سخت می‌شوند؟ لئور زمیگرود به‌جای محتوای باورها به ساختار آن‌ها نگاه می‌کند: انعطاف‌ناپذیری شناختی در آزمون‌های ساده،…"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><b>مغز ایدئولوژیک</b></nav>
+<title>مغز ایدئولوژیک | ویکی روان‌شناسی | دانش‌سرا</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Vazirmatn:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: an encyclopedia article — sticky table of contents on the start (right) side, one readable column, infobox and figures set into the text. */
+:root{
+  --paper:#f6f7f6; --card:#ffffff; --ink:#1c2321; --muted:#5b6663; --rule:#d7dddb;
+  --link:#17606c; --link-bg:#e2eef0; --cite:#94560f; --cite-bg:#f6ecdf;
+  --good:#2d7a4c; --bad:#b0443a; --neutral:#9aa3a8;
+  --f-display:"Markazi Text","Vazirmatn",serif;
+  --f-body:"Vazirmatn",Tahoma,sans-serif;
+  --f-latin:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111615; --card:#171d1c; --ink:#e3e9e7; --muted:#9ba7a4; --rule:#2b3432;
+  --link:#72c3cf; --link-bg:#1a2c2f; --cite:#e2a85c; --cite-bg:#2c2318;
+  --good:#5cb882; --bad:#e07468; --neutral:#5d676c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:2;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* masthead */
+.mast{max-width:1180px;margin:0 auto;padding-block:28px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.mast .brand{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:0}
+.mast .brand small{font-family:var(--f-body);font-size:.8rem;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.sessions{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.sessions span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted)}
+.sessions span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* toc */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-top:32px;max-height:100vh;overflow:auto;font-size:.86rem;line-height:1.7}
+nav.toc h2{font-family:var(--f-body);font-size:.75rem;color:var(--muted);font-weight:500;margin:0 0 8px;letter-spacing:.02em}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex;gap:8px;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav.toc a::before{content:counter(t,persian);color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+nav.toc a:hover,nav.toc a.cur{background:var(--link-bg);color:var(--link)}
+@media (max-width:900px){nav.toc{position:static;max-height:none;border-bottom:1px solid var(--rule);padding-bottom:16px}
+  nav.toc ol{columns:2;column-gap:16px}}
+@media (max-width:480px){nav.toc ol{columns:1}}
+
+main{min-width:0;padding-top:24px}
+article{max-width:44rem}
+h1{font-family:var(--f-display);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.25;margin:8px 0 4px;text-wrap:balance}
+.lede-sub{color:var(--muted);font-size:.95rem;margin:0 0 24px}
+h2{font-family:var(--f-display);font-size:2rem;line-height:1.3;margin:56px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--rule);text-wrap:balance;scroll-margin-top:16px}
+h3{font-size:1.08rem;font-weight:700;margin:32px 0 4px;scroll-margin-top:16px}
+p{margin:0 0 14px}
+.en{font-family:var(--f-latin);font-style:italic;direction:ltr;unicode-bidi:isolate;font-size:.95em}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}
+
+/* wiki links & citations */
+a.w{color:var(--link);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}
+a.w:hover,a.w:focus-visible{background:var(--link-bg);outline:none;border-bottom-style:solid}
+sup.c a{color:var(--cite);text-decoration:none;font-size:.72rem;padding:0 2px;font-family:var(--f-body)}
+sup.c a:hover{background:var(--cite-bg)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+
+/* infobox */
+.infobox{float:left;width:270px;margin:6px 24px 16px 0;background:var(--card);border:1px solid var(--rule);font-size:.84rem;line-height:1.7}
+.infobox caption,.infobox .ib-h{font-family:var(--f-display);font-size:1.25rem;font-weight:700;text-align:center;padding:10px;background:var(--link-bg);color:var(--ink)}
+.infobox dl{margin:0;padding:6px 12px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.infobox dt{color:var(--muted)}
+.infobox dd{margin:0}
+@media (max-width:640px){.infobox{float:none;width:auto;margin:0 0 20px}}
+
+/* callouts */
+.note{border-inline-start:3px solid var(--link);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.note.src{border-color:var(--cite)}
+.note b.k{display:block;font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-bottom:2px}
+blockquote{margin:20px 0;padding:0 18px;border-inline-start:2px solid var(--rule)}
+blockquote .q-en{font-family:var(--f-latin);font-style:italic;direction:ltr;text-align:left;font-size:1.02rem;line-height:1.6;margin:0 0 6px}
+blockquote .q-fa{margin:0;color:var(--ink)}
+blockquote footer{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* figures */
+figure{margin:24px 0;background:var(--card);border:1px solid var(--rule);padding:18px 16px 12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.fig-scroll{overflow-x:auto}
+
+/* staircase */
+.stairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;direction:ltr;min-width:520px}
+.stairs .st{background:var(--link-bg);border-top:3px solid var(--link);padding:10px;direction:rtl;font-size:.82rem;line-height:1.6}
+.stairs .st b{display:block;font-size:.95rem}
+.stairs .st .en{display:block;font-size:.78rem;color:var(--muted)}
+.stairs .s1{height:96px}.stairs .s2{height:132px}.stairs .s3{height:168px}.stairs .s4{height:204px;background:var(--cite-bg);border-color:var(--cite)}
+.axis{display:flex;justify-content:space-between;direction:ltr;font-size:.75rem;color:var(--muted);margin-top:6px;min-width:520px}
+
+/* four shifts */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.grid4{grid-template-columns:minmax(0,1fr)}}
+.shift{background:var(--card);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.shift .tag{font-family:var(--f-latin);font-style:italic;color:var(--cite);direction:ltr;text-align:left;font-size:.9rem;display:block}
+.shift h4{margin:2px 0 4px;font-size:1.02rem}
+.shift p{font-size:.9rem;line-height:1.8;margin:0;color:var(--muted)}
+
+/* cycle */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:6px;align-items:center;justify-items:center;max-width:520px;margin:0 auto;font-size:.85rem;line-height:1.6;text-align:center}
+.cycle .box{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;width:100%;max-width:190px}
+.cycle .box .en{display:block;font-size:.75rem;color:var(--muted)}
+.cycle .core{background:var(--ink);color:var(--paper);padding:10px 12px;font-weight:700}
+.cycle .core .en{color:var(--paper);opacity:.75}
+.cycle .arr{color:var(--link);font-size:1.3rem;line-height:1}
+
+/* model flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:.86rem;text-align:center;line-height:1.6}
+.flow .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;min-width:120px}
+.flow .box.hl{border-color:var(--link);background:var(--link-bg)}
+.flow .box .en{display:block;font-size:.74rem;color:var(--muted)}
+.flow .arr{color:var(--link)}
+
+/* bar charts */
+.bars{display:grid;gap:5px;font-size:.78rem}
+.bars .row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center}
+.bars .lbl{color:var(--muted);text-align:left;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:20px;direction:ltr;background:var(--paper)}
+.stack span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap}
+.k-qq{background:var(--bad)} .k-ne{background:var(--neutral)} .k-ex{background:var(--good)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-inline-end:6px;vertical-align:middle}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:560px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair h5{margin:0 0 8px;font-size:.88rem}
+.hb{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 2.6rem;gap:8px;align-items:center;font-size:.8rem;margin-bottom:6px}
+.hb .t{color:var(--muted)}
+.hb .track{height:14px;background:var(--paper);border:1px solid var(--rule)}
+.hb .fill{height:100%}
+.hb .v{font-variant-numeric:tabular-nums;text-align:left}
+.f-good{background:var(--good)} .f-bad{background:var(--bad)}
+
+/* three-tier & continuum */
+.tiers{display:flex;flex-wrap:wrap;gap:0;align-items:stretch}
+.tiers > div{flex:1 1 150px;padding:12px 14px;border:1px solid var(--rule);margin-inline-end:-1px;background:var(--paper);font-size:.88rem;line-height:1.7}
+.tiers > div b{font-size:1.02rem;display:block}
+.tiers > div:nth-child(3){background:var(--cite-bg)}
+.cont{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:6px;min-width:600px;font-size:.8rem;line-height:1.6}
+.cont div{padding:10px;border-top:4px solid var(--neutral);background:var(--paper)}
+.cont div:nth-child(2){border-color:var(--bad)} .cont div:nth-child(3){border-color:var(--cite)} .cont div:nth-child(4){border-color:var(--link)} .cont div:nth-child(5){border-color:var(--good)}
+.cont b{display:block;font-size:.88rem}
+.cont .en{display:block;color:var(--muted);font-size:.74rem}
+.cont-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);min-width:600px;margin-top:6px}
+
+/* EI matrix */
+.matrix{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7}
+.matrix .h{font-size:.75rem;color:var(--muted);text-align:center;align-self:end}
+.matrix .side{font-size:.75rem;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center}
+.matrix .cell{background:var(--paper);border:1px solid var(--rule);padding:10px 12px}
+.matrix .cell b{display:block}
+
+/* pendulum */
+.pend{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;text-align:center;font-size:.86rem;line-height:1.7}
+.pend .side{padding:12px;background:var(--paper);border:1px solid var(--rule)}
+.pend .side b{display:block;font-size:1rem}
+.pend .mid{font-size:1.6rem;color:var(--link)}
+
+/* axes */
+.axes{display:grid;gap:8px}
+.axes .ax{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:stretch;background:var(--paper);border:1px solid var(--rule)}
+.axes .num{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.4rem}
+.axes .body{padding:8px 4px 8px 12px;font-size:.9rem;line-height:1.7;min-width:0}
+.axes .body .en{display:block;color:var(--muted);font-size:.78rem}
+
+/* three systems */
+.circles{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.circles div{flex:0 1 180px;aspect-ratio:1;max-width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:.8rem;line-height:1.6;border:2px solid}
+.circles b{font-size:.98rem}
+.c-threat{border-color:var(--bad)} .c-drive{border-color:var(--cite)} .c-soothe{border-color:var(--good)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.chips span{font-size:.8rem;padding:2px 10px;background:var(--link-bg);color:var(--link);border-radius:999px}
+
+ul.tight{margin:0 0 14px;padding-inline-start:20px}
+ul.tight li{margin-bottom:4px}
+
+/* Q&A */
+.qa{border-top:1px solid var(--rule);padding:12px 0}
+.qa .q{font-weight:700;margin:0 0 4px}
+.qa .a{margin:0;color:var(--ink)}
+
+/* glossary */
+.glossary{display:grid;gap:0}
+.gentry{border-top:1px solid var(--rule);padding:14px 0;scroll-margin-top:16px}
+.gentry:target{background:var(--link-bg);outline:8px solid var(--link-bg)}
+.gentry h4{margin:0;font-size:1.05rem}
+.gentry h4 .en{color:var(--muted);font-weight:400;margin-inline-start:8px;font-size:.88rem}
+.gentry p{margin:4px 0 6px;font-size:.93rem;line-height:1.9}
+.gentry .rel{font-size:.8rem;color:var(--muted)}
+.gentry .rel a{margin-inline-end:8px}
+.gfilter{width:100%;max-width:340px;font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;margin:8px 0 12px}
+
+/* references */
+ol.refs{padding-inline-start:22px;font-size:.88rem;line-height:1.8}
+ol.refs li{margin-bottom:8px;scroll-margin-top:16px}
+ol.refs li:target{background:var(--cite-bg)}
+ol.refs .ltr{display:block}
+.refs-h{font-size:.9rem;color:var(--muted);margin:20px 0 6px;font-weight:500}
+.badge{font-size:.7rem;padding:1px 8px;border-radius:999px;border:1px solid var(--cite);color:var(--cite);margin-inline-start:6px;white-space:nowrap}
+
+/* popover */
+#pop{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:14px 16px 12px;font-size:.9rem;line-height:1.85}
+#pop h4{margin:0;font-size:1.05rem;padding-inline-end:28px}
+#pop .en{color:var(--muted);font-size:.85rem}
+#pop p{margin:6px 0 8px}
+#pop .row{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.8rem}
+#pop .close{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;padding:4px}
+#pop .go{display:inline-block;margin-top:6px;font-size:.82rem;color:var(--link)}
+@media (max-width:560px){#pop{left:16px!important;right:16px!important;top:auto!important;bottom:calc(16px + env(safe-area-inset-bottom,0px))!important;width:auto}}
+
+.foot{max-width:1180px;margin:56px auto 0;border-top:1px solid var(--rule);padding-top:16px;font-size:.8rem;color:var(--muted)}
+.clear{clear:both}
+</style>
+
+<style>
+.mast nav.series{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.mast nav.series a,.mast nav.series span{padding:2px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.mast nav.series span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mast nav.series a:hover{color:var(--link);border-color:var(--link)}
+.mast nav.series a.graph{border-color:var(--link);color:var(--link)}
+.lecture{display:inline-block;font-size:.76rem;padding:2px 10px;border-radius:999px;background:var(--cite-bg);color:var(--cite);margin-inline-end:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--rule);padding:12px 14px;min-width:0;font-size:.92rem;line-height:1.85}
+.card b.h{display:block;font-size:1rem;margin-bottom:2px}
+.card .en{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+table.t{border-collapse:collapse;width:100%;font-size:.86rem;line-height:1.7}
+table.t th,table.t td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:start;vertical-align:top}
+table.t th{color:var(--muted);font-weight:500;font-size:.78rem}
+table.t td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.quad{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:6px;font-size:.84rem;line-height:1.7;text-align:center}
+.quad .ax{font-size:.74rem;color:var(--muted);align-self:center}
+.quad .cell{background:var(--paper);border:1px solid var(--rule);padding:10px}
+.quad .cell b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.86rem;line-height:1.6}
+.chain .box{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;text-align:center}
+.chain .box.hl{background:var(--link-bg);border-color:var(--link)}
+.chain .arr{color:var(--link)}
+.curve{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.curve path.ln{fill:none;stroke:var(--link);stroke-width:2.5}
+.curve path.ln2{fill:none;stroke:var(--cite);stroke-width:2.5}
+.curve line,.curve path.ax{stroke:var(--muted);stroke-width:1}
+.curve text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+.hb .t{font-size:.78rem}
+.key{background:var(--link-bg);border:1px solid var(--link);padding:12px 16px;margin:18px 0;font-size:1rem;line-height:1.9}
+.key b.k{display:block;font-size:.78rem;color:var(--link);font-weight:700;margin-bottom:2px}
+.simple{display:flow-root;background:var(--card);border:1px dashed var(--muted);border-inline-start:4px solid var(--cite);padding:12px 16px;margin:16px 0;font-size:1rem;line-height:2}
+.simple b.k{display:block;font-size:.78rem;color:var(--cite);font-weight:700;margin-bottom:2px}
+.simple ul{margin:4px 0 0;padding-inline-start:1.2em}
+td.ltr{direction:ltr;text-align:left;font-family:var(--f-latin);font-size:.82rem}
+</style>
+
+<style>
+:root{--d-feel:#2f6f8f;--d-self:#b2622a;--d-social:#7a4a8a;--d-work:#2f7a55;--d-health:#a3404f;--d-body:#6b7a2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}}
+:root[data-theme="dark"]{--d-feel:#6db3d4;--d-self:#e59a62;--d-social:#c08fd0;--d-work:#6cc394;--d-health:#e37b8a;--d-body:#b5c46a}
+.nd-feel{--c:var(--d-feel)}.nd-self{--c:var(--d-self)}.nd-social{--c:var(--d-social)}.nd-work{--c:var(--d-work)}.nd-health{--c:var(--d-health)}.nd-body{--c:var(--d-body)}
+.mast .navw{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 420px;align-items:flex-end}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:.84rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--link);text-decoration:underline}
+.crumb .sep{color:var(--muted);opacity:.6}
+.crumb a.dm{color:var(--c);font-weight:700}
+.crumb a.tp{color:var(--ink)}
+.sibs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:.78rem}
+.sibs a,.sibs span{padding:1px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);text-decoration:none}
+.sibs span.on{background:var(--c);border-color:var(--c);color:var(--paper)}
+.sibs a:hover{border-color:var(--c);color:var(--ink)}
+.mast{border-bottom:3px solid var(--c)}
+@media (max-width:900px){.mast .navw{align-items:flex-start}.sibs{justify-content:flex-start}}
+.nextbox{margin:34px 0 8px;border-top:3px solid var(--c);padding-top:12px}
+.nextbox h2{border:0;margin:0 0 4px;font-size:1.5rem}
+.nextbox p.lead2{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.nextg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.nextg{grid-template-columns:minmax(0,1fr)}}
+.nextg h3{font-size:.86rem;margin:0 0 6px;color:var(--muted);font-weight:500}
+.nextg ul{list-style:none;margin:0;padding:0}
+.nextg li{padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.7;font-size:.92rem}
+.nextg li a{text-decoration:none;color:var(--ink);font-weight:500;display:inline-flex;gap:6px;align-items:baseline}
+.nextg li a:hover{color:var(--c);text-decoration:underline}
+.nextg li a i{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.nextg li small{display:block;color:var(--muted);font-size:.78rem}
+</style>
+<header class="mast nd-social">
+  <div class="brand">ویکی روان‌شناسی <small>نقد و بررسی کتاب · دکتر آذرخش مکری</small></div>
+  <div class="navw"><nav class="sibs" aria-label="صفحه‌های همین موضوع"><a href="ultrasociety.html" target="_blank" rel="noopener">فراجامعه</a><a href="superbloom.html" target="_blank" rel="noopener">سوپربلوم</a><a href="jensen.html" target="_blank" rel="noopener">جنسن</a><a href="friendly.html" target="_blank" rel="noopener">بقای دوستانه‌ترین</a><a href="gelfand.html" target="_blank" rel="noopener">سفت و شل</a><span class="on" aria-current="page">مغز ایدئولوژیک</span><a href="bored.html" target="_blank" rel="noopener">فناوری و احساس</a><a href="shelf4.html" target="_blank" rel="noopener">ذهن و طبیعت</a></nav></div>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="فهرست"><h2>فهرست این جزوه</h2><ol>
+<li><a href="#bis">عوامل پنهان: سیستم ایمنی رفتاری</a></li>
+<li><a href="#what">ایدئولوژی چیست؟</a></li>
+<li><a href="#flex">سنجش انعطاف: سه آزمون</a></li>
+<li><a href="#ontology">نقشهٔ داده‌محور خودتنظیمی</a></li>
+<li><a href="#dopamine">دوپامین و ژن‌ها</a></li>
+<li><a href="#perception">ادراک تصاویر مبهم</a></li>
+<li><a href="#factors">عوامل تشدید: استرس، طرد، کمبود</a></li>
+<li><a href="#nx-h">در ادامه بخوانید</a></li>
+<li><a href="#glossary">واژه‌نامه</a></li>
+<li><a href="#refs">منابع</a></li>
+</ol></nav>
+<main><article>
+<h1>مغز ایدئولوژیک: علم تفکر انعطاف‌پذیر (لئور زمیگرود)</h1>
+<p class="lede-sub">چرا برخی ذهن‌ها جذب ایدئولوژی‌های سخت می‌شوند؟ لئور زمیگرود به‌جای <b>محتوای</b> باورها به <b>ساختار</b> آن‌ها نگاه می‌کند: <a class="w" data-t="rigid">انعطاف‌ناپذیری شناختی</a> در آزمون‌های ساده، دوپامین، و شرایطی مانند <b>استرس، طرد و کمبود منابع</b> که ذهن را سخت‌تر می‌کنند.</p>
+<aside class="infobox" aria-label="مشخصات کتاب"><div class="ib-h">کتاب در یک نگاه</div><dl>
+<dt>عنوان</dt><dd>مغز ایدئولوژیک: علم رادیکال تفکر انعطاف‌پذیر <span class="ltr">(The Ideological Brain)</span></dd>
+<dt>نویسنده</dt><dd>لئور زمیگرود (اسمیگراد)، دانشگاه کمبریج، ۲۰۲۵</dd>
+<dt>ناقد</dt><dd>دکتر آذرخش مکری</dd>
+<dt>محورها</dt><dd>سیستم ایمنی رفتاری و اقتدارگرایی، تعریف ایدئولوژی، دگمای سخت و مرزبندی هویتی، سنجش انعطاف (WCST، RAT، AUT)، چپ و راست و افراط، فداکاری برای گروه، دوپامین، ادراک تصاویر مبهم، عوامل تشدیدکننده</dd>
+</dl></aside>
+
+<h2 id="bis">عوامل پنهان: سیستم ایمنی رفتاری</h2>
+<p><sup class="c"><a href="#r-slides">[۱]</a></sup><sup class="c"><a href="#r-book">[۲]</a></sup> جلسه با «عوامل پنهان در تصمیمات ما» آغاز شد. <b>سیستم ایمنی رفتاری</b>، خط اول دفاع در برابر آلودگی، یعنی انزجار و پرهیز از ناشناخته‌ها، ممکن است به نگرش‌های اجتماعی هم سرریز کند. زمیگرود و همکاران (۲۰۲۱) شیوع تاریخی بیماری‌های عفونی (لیشمانیا، تریپانوزوما، جذام، شیستوزوما، فیلاریا، سل، مالاریا، دنگی و تیفوس) را با نگرش اقتدارگرایانه مقایسه کردند: در آمریکا (۲۰۶٬۳۰۸ نفر) و جهان (۵۱٬۹۳۳ نفر در ۴۶ کشور)<sup class="c"><a href="#r-pathogen">[۳]</a></sup>.</p>
+<div class="cols2">
+<div class="card"><b class="h">سنجش اقتدارگرایی: «کودکان بهتر است...»</b>مستقل باشند یا مؤدب؟ مطیع یا متکی به خود؟ خوش‌رفتار یا با ملاحظه؟ باادب یا کنجکاو؟ (انتخاب گزینهٔ اول = اقتدارگرایی بیشتر)</div>
+<div class="card"><b class="h">یافته</b>شیوع بیماری‌های عفونی، چه در سطح ایالت‌های آمریکا و چه میان کشورها، با اقتدارگرایی بیشتر همراه بود؛ و اقتدارگرایی، بخشی از رابطهٔ بیماری با قوانین ایالتی اقتدارگرایانه و حکمرانی غیردموکراتیک را میانجی می‌کرد. پیوند با «تهدید و فرهنگ سفت» در <a class="w" data-t="tight">گلفند</a>.</div>
+</div>
+
+<h2 id="what">ایدئولوژی چیست؟</h2>
+<p>واژهٔ «ایدئولوژی» (<span class="ltr">Idéologie</span>) را آنتوان دستوت دو تراسی (۱۷۵۴ تا ۱۸۳۶) به معنای «علم ایده‌ها» ساخت؛ ناپلئون آن را تحقیرآمیز به کار برد: «نظریه‌های غیرواقع‌بینانه‌ای که سعی در مداخله در حوزهٔ حکومت و سیاست داشتند.» بسامد این واژه در کتاب‌های انگلیسی تا حدود ۱۹۹۰ اوج گرفت و سپس کم شد.</p>
+<ul>
+<li>بین روان‌شناسان، جامعه‌شناسان و متخصصان علوم سیاسی تعریف واحدی دربارهٔ ایدئولوژی وجود ندارد.</li>
+<li>«ایدئولوژی نیرویی است که شناخت‌شناسانه باورها را دربارهٔ اینکه جامعه چگونه باید ساختار یابد و مردم چگونه باید رفتار کنند، سازماندهی می‌کند» (زمیگرود): <b>تعبیر و تجویز</b>.</li>
+<li>برخی آن را لازمهٔ انسجام جامعه دانسته‌اند و برخی فرایند تحریف واقعیت برای تأمین منافع گروهی اندک («آگاهی کاذب»).</li>
+<li>«بعید است تعصب فرد صرفاً نگرشی خاص به یک گروه باشد؛ احتمالاً انعکاسی از عادت کلی او در برخورد با جهان است» (گوردن آلپورت، «ماهیت تعصب»، ۱۹۵۴).</li>
+</ul>
+<div class="key"><b class="k">تمرکز بر ساختار در مقابل محتوا</b>زمیگرود (۲۰۲۲): بیشتر پژوهش‌ها بر <b>محتوای</b> باورهای ایدئولوژیک بوده‌اند تا <b>ساختار</b> آن‌ها. شاید بپرسیم چرا برخی افراد اصولاً جذب ایدئولوژی‌ها می‌شوند، و جست‌وجوی اشتراکات بین ایدئولوژی‌ها حوزهٔ مهم پژوهش است<sup class="c"><a href="#r-pps">[۴]</a></sup>.</div>
+<div class="cols2">
+<div class="card"><b class="h">بخش آموزه‌ای: دگمای سخت</b>• <b>توصیف</b>: تبیین مطلق از شرایط موجود<br>• <b>تجویز</b>: قواعد سخت برای فکر، رفتار و روابط<br>این باور که حقایق کاملاً درست یا نادرست وجود دارند؛ حقیقت محض وجود دارد؛ صاحبان ایدئولوژی به آن دست یافته‌اند؛ مرزهای قطعی بین دسته‌بندی‌ها هست.</div>
+<div class="card"><b class="h">بخش ارتباطی: مرزبندی هویتی</b>• <b>همانندسازی با خودی</b> (جانبداری درون‌گروهی)<br>• <b>اجتناب از غیرخودی</b> (بی‌اعتمادی و خصومت)<br>نشانه‌های قوی و باارزش هویتی؛ مرزبندی قوی میان خودی و غیرخودی؛ استفاده از استعاره‌های خویشاوندی (برادران، خانواده، وطن-مادر).</div>
+</div>
+<p>شاخص‌هایی که با تفکر ایدئولوژیک پیوند داده شده‌اند: کاهش تفکر گشوده (پنی‌کوک ۲۰۱۹)، حساسیت بیشتر به پریشانی و ترس، اجتناب از ریسک اجتماعی، تحمل‌ناپذیری عدم قطعیت (هاگ ۲۰۱۴)، حساسیت به انزجار و پرهیز از عوامل بیماری‌زا، شخصیت‌های بسیار تکانشی، و تفکر شهودی در برابر تحلیلی. اما اسلاید ۲۸ هشدار می‌دهد: «برخی از این شاخص‌ها ممکن است به <b>محتوای</b> تفکر ایدئولوژیک (مثلاً محافظه‌کاری) بازگردد تا ذات تفکر ایدئولوژیک.» نمونه: «حساسیت بیشتر محافظه‌کاران در مقایسه با لیبرال‌ها!؟» به هیجان‌های منفی، تهدید، غریبه‌ها و چندش.</p>
+
+<h2 id="flex">سنجش انعطاف: سه آزمون</h2>
+<p>زمیگرود، شاگرد ترور رابینز و باربارا ساهاکیان (کمبریج)، از آزمون‌های عصب‌روان‌شناختی استفاده می‌کند. پیشینه: السه فرنکل-برانسویک (۱۹۰۸ تا ۱۹۵۸) و «عدم تحمل ابهام» در پژوهش‌های شخصیت اقتدارطلب.</p>
+<table class="t"><thead><tr><th>آزمون</th><th>چه می‌سنجد</th><th>نوع انعطاف</th></tr></thead><tbody>
+<tr><td>دسته‌بندی کارت ویسکانسین (WCST)</td><td>کشف قاعدهٔ دسته‌بندی (رنگ، شکل، تعداد) و تغییر آن وقتی قاعده بی‌خبر عوض می‌شود</td><td>سختی واکنشی</td></tr>
+<tr><td>کاربردهای جایگزین (AUT)</td><td>هر چه کاربرد ممکن برای آجر یا گیرهٔ کاغذ</td><td>سختی خودبخودی (زایشی)</td></tr>
+<tr><td>تداعی دور (RAT)</td><td>یافتن واژهٔ مشترک سه واژه: dust / cereal / fish ← bowl</td><td>هر دو</td></tr>
+</tbody></table>
+<ul>
+<li><b>انعطاف شناختی و بی‌دینی</b> (زمیگرود، رنت‌فرو، زمیگرود و رابینز، ۲۰۱۹): افراد غیرمذهبی در هر سه آزمون (پس از کنترل سن، جنس و تحصیلات) عملکرد انعطاف‌پذیرتری داشتند؛ و کسانی که مذهبی بزرگ شده بودند ولی اکنون مذهبی نیستند، در میانه بودند<sup class="c"><a href="#r-relig">[۵]</a></sup>.</li>
+<li><b>سختی افراطی در برابر سختی راست:</b> در داده‌های حزبی آمریکا، رابطهٔ انعطاف و جهت‌گیری سیاسی گاه U وارونه (سختی در دو انتها) و گاه یک‌سویه (سختی بیشتر در سمت راست) دیده شده است؛ هر دو فرضیه در ادبیات مطرح‌اند<sup class="c"><a href="#r-rigid">[۶]</a></sup>.</li>
+<li><b>آمیختگی هویتی</b> (سوان و همکاران): تصویر دایره‌های «من» و «گروه» که کم‌کم روی هم می‌افتند، و نسخهٔ پویای آن (DIFI)؛ و گویه‌هایی مانند «من و گروهم یکی هستیم»، «برای گروهم بیش از هر عضو دیگری انجام می‌دهم».</li>
+<li><b>آمادگی برای مردن برای گروه:</b> زمیگرود، رنت‌فرو و رابینز (۲۰۱۹): انعطاف کمتر در WCST و RAT با اطمینان بیشتر به تصمیم «مردن برای گروه» در دوراهی واگن همراه بود (r حدود −۰٫۳۳ و −۰٫۲۲)؛ مسیر: انعطاف کمتر ← آمادگی جنگیدن برای گروه ← آمادگی مردن برای گروه<sup class="c"><a href="#r-extreme">[۷]</a></sup>.</li>
+</ul>
+<div class="key"><b class="k">«آنچه کشف کردم این بود که افراد مستعد فداکاری، آن‌ها که بیشتر حاضرند برای گروه بمیرند، در آزمون‌های انعطاف واکنشی و زایشی سخت‌تر هستند.»</b> و آدام فیلیپس: «تغییر کیش علاجی برای شک است؛ تنگ کردن ذهنی که آن را آزاد می‌کند... از نوعی پیچیدگی؛ از لذت بردن از پیچیدگی، تنوع و تناقض.»</div>
+
+<h2 id="ontology">نقشهٔ داده‌محور خودتنظیمی</h2>
+<p>آیزنبرگ و همکاران (۲۰۱۹، <i>Nature Communications</i>) ۱۲۹ متغیر از آزمون‌های رفتاری و ۶۴ متغیر از پرسش‌نامه‌ها را در صدها نفر سنجیدند: پرسش‌نامه‌ها به ۱۲ عامل (مانند ریسک مالی، کنترل خوردن، حساسیت به پاداش، تکانشگری، هیجان‌خواهی) و آزمون‌ها به ۵ عامل (پردازش راهبردی، پردازش سریع، احتیاط، ادراک-پاسخ، تنزیل) رسیدند. پرسش‌نامه‌ها پیامدهای واقعی (سلامت روان، چاقی، مصرف مواد) را بهتر از آزمون‌ها پیش‌بینی کردند<sup class="c"><a href="#r-eisenberg">[۸]</a></sup>.</p>
+<p>زمیگرود، آیزنبرگ و همکاران (۲۰۲۱، <i>Phil Trans R Soc B</i>) همین «هستی‌شناسی شناختی» را روی ۳۳۴ نفر با نگرش‌های ایدئولوژیک پیوند دادند: محافظه‌کاری، ملی‌گرایی و دگماتیسم با <b>احتیاط بیشتر</b>، انباشت کندتر شواهد در تصمیم‌گیری ادراکی و تکانشگری پیوند داشت؛ و پیش‌بینی با ترکیب داده‌های جمعیتی، شناختی و شخصیتی بهتر بود تا هر کدام به‌تنهایی<sup class="c"><a href="#r-signatures">[۹]</a></sup>.</p>
+
+<h2 id="dopamine">دوپامین و ژن‌ها</h2>
+<p>زمیگرود و رابینز (۲۰۲۱): تعامل ژن‌های <b>COMT</b> (تجزیهٔ دوپامین در قشر پیش‌پیشانی) و <b>DRD2</b> (گیرندهٔ دوپامین در جسم مخطط) با انعطاف شناختی در WCST پیوند داشت، به‌ویژه در افراد با هوش پایین‌تر. «افزایش فعالیت دوپامینرژیک در لوب پیشانی و کاهش در جسم مخطط با افزایش انعطاف‌پذیری همراه است.»<sup class="c"><a href="#r-dopamine">[۱۰]</a></sup></p>
+<div class="note"><b class="k">یادداشت ویراستار: احتیاط دربارهٔ ژن‌ها</b>پژوهش‌های «ژن نامزد» (مانند COMT و DRD2) در دهه‌های اخیر به‌شدت با شکست تکرار روبه‌رو شده‌اند؛ اثرهای واقعی ژنتیک بر صفات پیچیده بسیار کوچک و پخش در هزاران ژن است. این یافته را باید فرضیه‌ای اولیه دانست، نه سازوکار اثبات‌شده‌ای که «ایدئولوژی در ژن است».</div>
+
+<h2 id="perception">ادراک تصاویر مبهم</h2>
+<p>تصاویر دوپهلو: اسب-فک، اردک-خرگوش، پیرزن-دختر جوان و گلدان روبین؛ دختر رقصنده و مکعب نکر. بلیک و پالمیسانو (۲۰۲۱): کسانی که در آزمون کاربردهای جایگزین (تفکر واگرا) نمرهٔ بیشتری داشتند، در هر دقیقه بیشتر میان دو تفسیر مکعب نکر جابه‌جا شدند. انعطاف در فکر و انعطاف در دیدن به هم پیوسته‌اند<sup class="c"><a href="#r-blake">[۱۱]</a></sup>.</p>
+
+<h2 id="factors">عوامل تشدید: استرس، طرد، کمبود</h2>
+<p>«عوامل برای تشدید زمینه‌های فردی»: <b>استرس</b>، <b>طرد</b>، <b>کمبود منابع و ناترازی</b>، <b>بی‌اهمیتی</b> و <b>برجسته شدن مقولهٔ فنا و مرگ</b>.</p>
+<ul>
+<li><b>استرس در نوزادان</b> (سیهاگن و همکاران، ۲۰۱۵): کودکان ۱۵ ماهه یاد گرفتند فشار دادن دکمه‌ها به صدا و نور می‌انجامد؛ سپس عادت به یکی پیدا کردند و در فاز سوم، وقتی نتیجهٔ آن دکمه قطع شد، کودکانی که پیش‌تر <b>استرس جدایی</b> را تجربه کرده بودند بیشتر به فشار دادن همان دکمه ادامه دادند: «استرس جدایی باعث افزایش سختی در پاسخ شده و انعطاف‌پذیری را کاهش می‌دهد.»<sup class="c"><a href="#r-seehagen">[۱۲]</a></sup></li>
+<li><b>کمبود منابع و سوگیری در ادراک نژاد</b> (کراش و آمودیو، ۲۰۱۴): وقتی شرکت‌کنندگان آمریکایی سفیدپوست به کمبود اقتصادی (با واژه‌های زیرآستانه‌ای یا پیام کمبود) پیش‌زمینه‌سازی شدند، چهره‌های مبهم را زودتر «سیاه» دسته‌بندی کردند و تصویری که از «سیاه» ساختند تیره‌تر و کلیشه‌ای‌تر بود<sup class="c"><a href="#r-krosch">[۱۳]</a></sup>.</li>
+</ul>
+<p>جلسه با «سیاست-ادراکی» (poliptical) و کتاب «خشمگین» (کرت گری، ۲۰۲۵) پایان یافت: چرا بر سر اخلاق و سیاست می‌جنگیم و چگونه زمین مشترک بیابیم.</p>
+<div class="note"><b class="k">یادداشت ویراستار: نقدها و دو سوی بحث</b>(۱) بیشتر یافته‌ها همبستگی‌اند؛ معلوم نیست سختی شناختی علت جذب ایدئولوژی است یا تعلق ایدئولوژیک، شیوهٔ فکر را سخت می‌کند. (۲) دربارهٔ «سختی راست» در برابر «سختی دو انتها» اجماع نیست؛ پژوهش‌هایی مانند کار ژانگ و دیتو یا «فرضیهٔ قرینگی» نشان می‌دهند سوگیری و جزم‌اندیشی در همهٔ طیف‌های سیاسی دیده می‌شود. (۳) اندازهٔ اثرها معمولاً کوچک است و پیش‌بینی برای فرد بسیار ضعیف. (۴) «انعطاف» همیشه فضیلت مطلق نیست؛ در برخی موقعیت‌ها پایبندی به اصول ارزشمند است. پیام سازنده: شرایطی که سختی را تشدید می‌کنند (استرس، طرد، کمبود) را می‌توان در سطح جامعه کاهش داد. به <a class="w" data-t="consp">باور به توطئه</a> و <a class="w" data-t="reflect">بازگشت تأمل</a> بنگرید.</div>
+
+<div class="nd-social"><section class="nextbox" aria-labelledby="nx-h"><h2 id="nx-h">در ادامه بخوانید</h2><p class="lead2">صفحه‌هایی که بیشترین واژه و مفهوم مشترک را با این صفحه دارند.</p><div class="nextg"><div><h3>در همین موضوع: گروه، فرهنگ و فناوری</h3><ul><li class="nd-social"><a href="gelfand.html" target="_blank" rel="noopener"><i></i>سفت و شل</a><small>قانون‌سازان و قانون‌شکنان</small></li><li class="nd-social"><a href="shelf4.html" target="_blank" rel="noopener"><i></i>ذهن و طبیعت</a><small>قفسهٔ ذهن، طبیعت و قضاوت</small></li></ul></div><div><h3>پل به حوزه‌های دیگر</h3><ul><li class="nd-feel"><a href="range.html" target="_blank" rel="noopener"><i></i>گستره</a><small>هیجان و ذهن › یادگیری و کنجکاوی · مشترک: تفکر نقادانه و استدلال، سرسختی شناختی</small></li><li class="nd-self"><a href="shelf2.html" target="_blank" rel="noopener"><i></i>هدف، عادت، تفکر</a><small>خود و رشد › انگیزه، عادت و اراده · مشترک: باور به توطئه</small></li><li class="nd-self"><a href="../lessons/s7.html" target="_blank" rel="noopener"><i></i>تغییر خویشتن و سرایت پیچیده</a><small>خود و رشد › انگیزه، عادت و اراده · مشترک: باور به توطئه</small></li></ul></div></div><h3 style="font-size:.86rem;margin:18px 0 0;color:var(--muted);font-weight:500">از نگاه رشته‌های دیگر</h3><div class="xw"><div style="--xc:#8a6a2a"><b>انسان‌شناسی و تکامل</b>تکامل فرهنگی: فرهنگ با سرعتی بیشتر از ژن‌ها ما را شکل داده است. <a href="../tools/graph.html#cultural-evolution" target="_blank" rel="noopener">تکامل فرهنگی ↗</a></div><div style="--xc:#b06a1c"><b>جامعه‌شناسی</b>شبکه‌ها و سرایت اجتماعی: رفتارهای پرهزینه به تقویت از چند منبع نیاز دارند. <a href="../tools/graph.html#soc-networks" target="_blank" rel="noopener">شبکه‌های اجتماعی و سرایت ↗</a></div><div style="--xc:#7d4a86"><b>فلسفه</b>معرفت‌شناسی اجتماعی: به چه کسی و چرا اعتماد می‌کنیم. <a href="../tools/graph.html#epistemology" target="_blank" rel="noopener">معرفت‌شناسی و شک‌ورزی ↗</a></div></div><div class="worlds"><a href="../tools/land.html#ideological-brain" target="_blank" rel="noopener">روی نقشهٔ سرزمین روان</a><a href="../tools/graph.html#ideological-brain" target="_blank" rel="noopener">در گراف دنیای روان</a><a href="../tools/library.html" target="_blank" rel="noopener">کتابخانه</a><a href="../tools/timeline.html" target="_blank" rel="noopener">خط زمانی ایده‌ها</a><a href="../tools/atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها</a></div><p class="lead2" style="margin-top:12px"><a href="../index.html" target="_blank" rel="noopener">⌂ بازگشت به صفحهٔ اول ویکی</a></p></section><style>
+.xw{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.xw div{border:1px solid var(--rule);border-inline-start:4px solid var(--xc);padding:8px 12px;font-size:.88rem;line-height:1.75;background:var(--paper)}
+.xw b{display:block;font-size:.8rem;color:var(--xc)}
+.xw a{font-size:.78rem;color:var(--link)}
+.worlds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.worlds a{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;text-decoration:none;color:var(--ink)}
+.worlds a:hover{border-color:var(--c)}
+</style></div>
+<h2 id="glossary">واژه‌نامه</h2>
+<p>اصطلاحات این جزوه. مدخل‌هایی که نشان «دنیای روان» دارند، در نقشهٔ گرافی هم گرهٔ خود را دارند.</p>
+<label for="gq" class="refs-h" style="display:block;margin:0">جست‌وجو در واژه‌نامه</label>
+<input id="gq" class="gfilter" type="search" placeholder="جست‌وجو" autocomplete="off">
+<div class="glossary" id="gl"></div>
+<h2 id="refs">منابع</h2>
+<ol class="refs">
+<li id="r-slides">اسلایدهای جلسهٔ نقد «مغز ایدئولوژیک»، دکتر آذرخش مکری (۹۵ اسلاید). <span class="badge">ضمیمه</span></li>
+<li id="r-book"><span class="ltr">Zmigrod, L. (2025). <i>The Ideological Brain: The Radical Science of Flexible Thinking</i>. Henry Holt / Viking.</span></li>
+<li id="r-pathogen"><span class="ltr">Zmigrod, L., Ebert, T., Götz, F. M., &amp; Rentfrow, P. J. (2021). The psychological and socio-political consequences of infectious diseases. <i>Journal of Social and Political Psychology, 9</i>(2), 456–474.</span></li>
+<li id="r-pps"><span class="ltr">Zmigrod, L. (2022). A psychology of ideology: Unpacking the psychological structure of ideological thinking. <i>Perspectives on Psychological Science, 17</i>(4), 1072–1092.</span></li>
+<li id="r-relig"><span class="ltr">Zmigrod, L., Rentfrow, P. J., Zmigrod, S., &amp; Robbins, T. W. (2019). Cognitive flexibility and religious disbelief. <i>Psychological Research, 83</i>, 1749–1759.</span></li>
+<li id="r-rigid"><span class="ltr">Zmigrod, L. (2020). The role of cognitive rigidity in political ideologies: Theory, evidence, and future directions. <i>Current Opinion in Behavioral Sciences, 34</i>, 34–39.</span></li>
+<li id="r-extreme"><span class="ltr">Zmigrod, L., Rentfrow, P. J., &amp; Robbins, T. W. (2019). Cognitive inflexibility predicts extremist attitudes. <i>Frontiers in Psychology, 10</i>, 989.</span></li>
+<li id="r-eisenberg"><span class="ltr">Eisenberg, I. W., Bissett, P. G., Enkavi, A. Z., et al. (2019). Uncovering the structure of self-regulation through data-driven ontology discovery. <i>Nature Communications, 10</i>, 2319.</span></li>
+<li id="r-signatures"><span class="ltr">Zmigrod, L., Eisenberg, I. W., Bissett, P. G., Robbins, T. W., &amp; Poldrack, R. A. (2021). The cognitive and perceptual correlates of ideological attitudes: a data-driven approach. <i>Phil. Trans. R. Soc. B, 376</i>, 20200424.</span></li>
+<li id="r-dopamine"><span class="ltr">Zmigrod, L., &amp; Robbins, T. W. (2021). Dopamine, cognitive flexibility, and IQ: Epistatic COMT:DRD2 gene–gene interactions modulate mental rigidity. <i>Journal of Cognitive Neuroscience, 34</i>(1), 153–179.</span></li>
+<li id="r-blake"><span class="ltr">Blake, A., &amp; Palmisano, S. (2021). Divergent thinking influences the perception of ambiguous visual illusions. <i>Perception, 50</i>(5), 418–437.</span></li>
+<li id="r-seehagen"><span class="ltr">Seehagen, S., Schneider, S., Rudolph, J., Ernst, S., &amp; Zmyj, N. (2015). Stress impairs cognitive flexibility in infants. <i>PNAS, 112</i>(41), 12882–12886.</span></li>
+<li id="r-krosch"><span class="ltr">Krosch, A. R., &amp; Amodio, D. M. (2014). Economic scarcity alters the perception of race. <i>PNAS, 111</i>(25), 9079–9084.</span></li>
+</ol>
+<p class="refs-h">دربارهٔ این جزوه</p>
+<p style="font-size:.88rem;color:var(--muted)">این صفحه از اسلایدهای جلسهٔ نقد ساخته شده است؛ متن گفتاری در دست نبود. موضوع سیاسی است: یافته‌ها دربارهٔ <b>میانگین‌های گروهی</b>اند و دربارهٔ هیچ فرد یا جریان خاصی داوری نمی‌کنند. کادرهای «یادداشت ویراستار» نقدها و بحث‌های باز را می‌افزایند.</p>
+</article></main>
+</div>
+<footer class="foot">ویکی روان‌شناسی · نقد و بررسی کتاب · دکتر آذرخش مکری</footer>
+<div id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-h">
+  <button class="close" type="button" aria-label="بستن">×</button>
+  <h4 id="pop-h"></h4><div class="en" id="pop-en"></div><p id="pop-d"></p>
+  <div class="row" id="pop-rel"></div>
+  <a class="go" id="pop-go" href="#">مدخل کامل در واژه‌نامه ←</a>
+</div>
+
+<script>
+const T = {"rigid": {"fa": "انعطاف‌ناپذیری شناختی", "en": "Cognitive rigidity", "d": "دشواری در تغییر قاعده یا دیدگاه؛ با آزمون‌های WCST، AUT و RAT سنجیده می‌شود و با تفکر ایدئولوژیک پیوند داده شده است.", "rel": ["ideol"], "s": "flex", "g": "cognitive-rigidity"}, "ideol": {"fa": "ایدئولوژی (ساختار)", "en": "Ideology (structure)", "d": "دگمای سخت (توصیف و تجویز) و مرزبندی هویتی (خودی و غیرخودی).", "rel": ["rigid"], "s": "what", "g": "ideological-brain"}, "tight": {"fa": "فرهنگ سفت و شل", "en": "Tight-loose", "d": "گلفند: تهدید و سفتی هنجارها.", "rel": [], "s": "bis", "g": "tight-loose"}, "consp": {"fa": "باور به توطئه", "en": "Conspiracy beliefs", "d": "ساختار و سرچشمه‌های باور به توطئه.", "rel": [], "s": "factors", "g": "conspiracy"}, "reflect": {"fa": "بازگشت تأمل", "en": "New reflectionism", "d": "پنی‌کوک: اهمیت تفکر تحلیلی.", "rel": [], "s": "factors", "g": "critical-thinking"}};
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const gl = document.getElementById("gl");
+const keys = Object.keys(T).sort((a,b)=>T[a].fa.localeCompare(T[b].fa,"fa"));
+gl.innerHTML = keys.map(k=>{
+  const t=T[k];
+  const rel=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("");
+  const sec=t.s?document.getElementById(t.s):null;
+  const g=t.g?` · <a href="../tools/graph.html#${t.g}" target="_blank" rel="noopener">در دنیای روان ↗</a>`:"";
+  return `<div class="gentry" id="t-${k}" data-s="${(t.fa+" "+t.en).toLowerCase()}"><h4>${t.fa}<span class="en">${t.en}</span></h4><p>${t.d}</p><div class="rel">${sec?`در جزوه: <a href="#${t.s}">${sec.textContent.trim()}</a>`:""}${rel?" · مرتبط: "+rel:""}${g}</div></div>`;
+}).join("");
+document.getElementById("gq").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  gl.querySelectorAll(".gentry").forEach(el=>{el.hidden=q&&!el.dataset.s.includes(q)});
+});
+document.querySelectorAll("a.w[data-t]").forEach(a=>{ if(!a.getAttribute("href")) a.setAttribute("href","#t-"+a.dataset.t); });
+const pop=document.getElementById("pop"); let lastA=null;
+function openPop(a){
+  const t=T[a.dataset.t]; if(!t) return; lastA=a;
+  pop.querySelector("#pop-h").textContent=t.fa;
+  pop.querySelector("#pop-en").textContent=t.en;
+  pop.querySelector("#pop-d").textContent=t.d;
+  pop.querySelector("#pop-rel").innerHTML=(t.rel||[]).filter(r=>T[r]).map(r=>`<a class="w" data-t="${r}" href="#t-${r}">${T[r].fa}</a>`).join("") + (t.g?`<a href="../tools/graph.html#${t.g}" target="_blank" rel="noopener">دنیای روان ↗</a>`:"");
+  pop.querySelector("#pop-go").setAttribute("href","#t-"+a.dataset.t);
+  pop.hidden=false;
+  const r=a.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(Math.max(16,r.right-pw),window.innerWidth-pw-16);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-16) top=Math.max(16,r.top-ph-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+function closePop(){pop.hidden=true}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a.w[data-t]");
+  if(a && !a.closest(".gentry")){ e.preventDefault(); openPop(a); return; }
+  if(e.target.closest("#pop-go")){ closePop(); return; }
+  if(e.target.closest(".close")||!e.target.closest("#pop")) closePop();
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){closePop(); lastA&&lastA.focus();} });
+window.addEventListener("scroll",()=>{ if(!pop.hidden && lastA && window.innerWidth>560){ const r=lastA.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) closePop(); else openPop(lastA);} },{passive:true});
+const links=[...document.querySelectorAll("nav.toc a")];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("cur",l.getAttribute("href")==="#"+e.target.id)); } })},{rootMargin:"0px 0px -75% 0px"});
+links.map(l=>document.querySelector(l.getAttribute("href"))).forEach(s=>s&&io.observe(s));
+</script>
+
+</body></html>
