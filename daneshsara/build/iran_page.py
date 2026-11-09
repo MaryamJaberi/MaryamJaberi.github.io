@@ -186,7 +186,7 @@ function render(){
   document.getElementById("body").innerHTML = s;
 }
 document.addEventListener("click", ev => { const b = ev.target.closest("[data-m]"); if (b) { mode = b.dataset.m; render(); } });
-function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + " — " + (L === "fa" ? "دانش‌سرا" : "Daneshsara"); render(); }
+function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = (L === "fa" ? "همهٔ یادداشت‌ها | ویکی ایران | دانش‌سرا" : "All notes | Iran | Daneshsara"); render(); }
 document.querySelector(".lang").addEventListener("click", ev => { const b = ev.target.closest("[data-l]"); if (!b) return; L = b.dataset.l; try { localStorage.setItem("ds-lang", L); } catch(_) {} i18n(); });
 i18n();
 if (location.hash) setTimeout(() => { const e = document.getElementById(location.hash.slice(1)); if (e) { e.scrollIntoView({block: "start"}); e.style.outline = "2px solid var(--primary)"; } }, 50);

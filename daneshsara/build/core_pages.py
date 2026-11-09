@@ -17,7 +17,7 @@ S = [{'id': k, 'cite': v['cite'], 'year': v.get('year'), 'tier': v.get('tier'), 
 S.sort(key=lambda x: (-(x['year'] or 0), x['cite']))
 
 HEAD = '''<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>__T__ — دانش‌سرا</title><link rel="stylesheet" href="../core/design/tokens.css">
+<title>__T__ | هستهٔ مشترک | دانش‌سرا</title><meta name="description" content="__D__"><link rel="stylesheet" href="../core/design/tokens.css">
 <style>
 header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:var(--header-h)}
@@ -59,7 +59,7 @@ const fa = s => L === "fa" ? String(s).replace(/\\d/g, d => "۰۱۲۳۴۵۶۷۸�
 let q = "", w = "", shown = 60;
 '''
 TAIL = '''
-function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + " — " + (L === "fa" ? "دانش‌سرا" : "Daneshsara"); render(); }
+function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + (L === "fa" ? " | هستهٔ مشترک | دانش‌سرا" : " | Daneshsara"); render(); }
 document.querySelector(".lang").addEventListener("click", ev => { const b = ev.target.closest("[data-l]"); if (!b) return; L = b.dataset.l; try { localStorage.setItem("ds-lang", L); } catch(_) {} i18n(); });
 document.addEventListener("input", ev => { if (ev.target.id === "q") { q = ev.target.value.toLowerCase(); shown = 60; render(); const i = document.getElementById("q"); i.focus(); i.setSelectionRange(i.value.length, i.value.length); } });
 document.addEventListener("click", ev => { const b = ev.target.closest("[data-w]"); if (b) { w = b.dataset.w; shown = 60; render(); } if (ev.target.closest("[data-more]")) { shown += 100; render(); } });
@@ -87,6 +87,6 @@ function render(){
   document.getElementById("list").innerHTML = items.slice(0, shown).map(s => `<article class="card row" id="${s.id.split(":")[1]}"><div class="cite">${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.cite)}</a>` : esc(s.cite)} <span class="tier">${T("t")} ${fa(s.tier)}</span></div><div class="tags">${s.in.map(c => `<a class="${c.wiki}" href="${c.url}">${esc(tx(c.title))}</a>`).join("")}</div></article>`).join("");
   document.getElementById("more").innerHTML = items.length > shown ? `<button data-more>${T("more")} (${fa(items.length - shown)})</button>` : "";
 }'''
-open(f'{R}/core/people.html', 'w', encoding='utf-8').write(HEAD.replace('__T__', 'چهره‌ها').replace('__DATA__', json.dumps(P, ensure_ascii=False)) + PEOPLE_JS + TAIL)
-open(f'{R}/core/sources.html', 'w', encoding='utf-8').write(HEAD.replace('__T__', 'منابع').replace('__DATA__', json.dumps(S, ensure_ascii=False)) + SOURCES_JS + TAIL)
+open(f'{R}/core/people.html', 'w', encoding='utf-8').write(HEAD.replace('__T__', 'چهره‌ها').replace('__D__', 'فهرست چهره‌های علمی دانش‌سرا: هر کس در کدام مدخل‌ها آمده و کدام ویکی‌ها به او ارجاع داده‌اند.').replace('__DATA__', json.dumps(P, ensure_ascii=False)) + PEOPLE_JS + TAIL)
+open(f'{R}/core/sources.html', 'w', encoding='utf-8').write(HEAD.replace('__T__', 'منابع').replace('__D__', 'فهرست منابع دانش‌سرا با ردهٔ اعتبار از ۱ تا ۴؛ هر مدخل به منبع اصلی‌اش وصل است.').replace('__DATA__', json.dumps(S, ensure_ascii=False)) + SOURCES_JS + TAIL)
 print('people', len(P), 'with refs', sum(1 for p in P if p['in']), '| sources', len(S), 'with refs', sum(1 for s in S if s['in']))

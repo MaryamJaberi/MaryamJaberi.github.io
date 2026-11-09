@@ -1,5 +1,5 @@
 <!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>منابع — دانش‌سرا</title><link rel="stylesheet" href="../core/design/tokens.css">
+<title>منابع | هستهٔ مشترک | دانش‌سرا</title><meta name="description" content="فهرست منابع دانش‌سرا با ردهٔ اعتبار از ۱ تا ۴؛ هر مدخل به منبع اصلی‌اش وصل است."><link rel="stylesheet" href="../core/design/tokens.css">
 <style>
 header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:var(--header-h)}
@@ -49,7 +49,7 @@ function render(){
   document.getElementById("list").innerHTML = items.slice(0, shown).map(s => `<article class="card row" id="${s.id.split(":")[1]}"><div class="cite">${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.cite)}</a>` : esc(s.cite)} <span class="tier">${T("t")} ${fa(s.tier)}</span></div><div class="tags">${s.in.map(c => `<a class="${c.wiki}" href="${c.url}">${esc(tx(c.title))}</a>`).join("")}</div></article>`).join("");
   document.getElementById("more").innerHTML = items.length > shown ? `<button data-more>${T("more")} (${fa(items.length - shown)})</button>` : "";
 }
-function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + " — " + (L === "fa" ? "دانش‌سرا" : "Daneshsara"); render(); }
+function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + (L === "fa" ? " | هستهٔ مشترک | دانش‌سرا" : " | Daneshsara"); render(); }
 document.querySelector(".lang").addEventListener("click", ev => { const b = ev.target.closest("[data-l]"); if (!b) return; L = b.dataset.l; try { localStorage.setItem("ds-lang", L); } catch(_) {} i18n(); });
 document.addEventListener("input", ev => { if (ev.target.id === "q") { q = ev.target.value.toLowerCase(); shown = 60; render(); const i = document.getElementById("q"); i.focus(); i.setSelectionRange(i.value.length, i.value.length); } });
 document.addEventListener("click", ev => { const b = ev.target.closest("[data-w]"); if (b) { w = b.dataset.w; shown = 60; render(); } if (ev.target.closest("[data-more]")) { shown += 100; render(); } });

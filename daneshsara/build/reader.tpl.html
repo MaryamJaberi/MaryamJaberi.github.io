@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="description" content="__DESC__">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>__TITLE_FA__ — دانش‌سرا</title>
 <link rel="stylesheet" href="../core/design/tokens.css">
@@ -140,7 +141,7 @@ document.addEventListener("click", ev => {
 document.addEventListener("keydown", ev => { if ((ev.key === "Enter" || ev.key === " ") && ev.target.matches("[data-go]")) { ev.preventDefault(); ev.target.click(); } });
 document.addEventListener("input", ev => { if (ev.target.id === "q") { q = ev.target.value; render(); } });
 window.addEventListener("hashchange", render);
-function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); const _wn = document.getElementById("wname"); if (_wn) _wn.textContent = tx(ROOT.title); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = tx(ROOT.title) + " — " + (L === "fa" ? "دانش‌سرا" : "Daneshsara"); render(); }
+function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => el.textContent = T(el.dataset.i)); const _wn = document.getElementById("wname"); if (_wn) _wn.textContent = tx(ROOT.title); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = (L === "fa" ? "همهٔ مدخل‌ها | ویکی " + tx(ROOT.title) + " | دانش‌سرا" : "All entries | " + tx(ROOT.title) + " | Daneshsara"); render(); }
 document.querySelector(".lang").addEventListener("click", ev => { const b = ev.target.closest("[data-l]"); if (!b) return; L = b.dataset.l; try { localStorage.setItem("ds-lang", L); } catch(_) {} i18n(); });
 i18n();
 </script>

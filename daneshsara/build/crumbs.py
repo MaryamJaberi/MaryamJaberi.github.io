@@ -7,7 +7,7 @@ R = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/..')
 E = html.escape
 PSY_TOOLS = {'graph','land','body','emotions','timeline','heat','river','lineage','prism','path','effect','evidence',
              'debate','guess','lab','scales','learn','library','atlas2','explore','compare-theories'}
-WIKI = {'psy':'ویکی روان','soc':'ویکی جامعه','phil':'ویکی فلسفه','tabar':'ویکی تبار و ژنتیک',
+WIKI = {'psy':'ویکی روان‌شناسی','soc':'ویکی جامعه','phil':'ویکی فلسفه','tabar':'ویکی تبار و ژنتیک',
         'miyan':'ویکی ارتباط رشته‌ها','iran':'ویکی ایران','simorgh':'ویکی سیمرغ'}
 LAYER = {'psy':('لایهٔ علم','index.html#layers'),'soc':('لایهٔ علم','index.html#layers'),
          'phil':('لایهٔ علم','index.html#layers'),'tabar':('لایهٔ علم','index.html#layers'),
@@ -89,6 +89,28 @@ for p in sorted(glob.glob(f'{R}/**/*.html', recursive=True)):
         last = i == len(tr) - 1
         items.append(f'<b>{E(t)}</b>' if last or not u else f'<a href="{E(u)}">{E(t)}</a>')
     bar = CSS + '<nav class="ds-crumbs" aria-label="مسیر صفحه">' + '<i>›</i>'.join(items) + '</nav>'
+    # one title convention everywhere:  <page> | <wiki> | دانش‌سرا
+    names = [t for t, _ in tr[1:]]
+    mid = [n for n in names[:-1] if n.startswith('ویکی') or n in ('اطلس‌ها', 'هستهٔ مشترک')]
+    want = ' | '.join(dict.fromkeys([names[-1]] + mid[:1] + ['دانش‌سرا'])) if names else 'دانش‌سرا'
+    s = re.sub(r'<title[^>]*>.*?</title>', lambda _: '<title>' + E(want) + '</title>', s, count=1, flags=re.S)
+    # a missing meta description, taken from the page's own opening paragraph (never invented)
+    md = re.search(r'<meta name="description" content="([^"]*)"', s)
+    if not md or len(md.group(1).strip()) < 20:
+        body = s[s.find('<body'):]
+        lead = ''
+        for pat in (r'<p class="(?:lede|lead|sub|what)"[^>]*>(.*?)</p>', r'<p[^>]*>(.*?)</p>'):
+            for mm in re.finditer(pat, body, re.S):
+                txt = re.sub(r'\s+', ' ', re.sub('<[^>]*>', '', mm.group(1))).strip()
+                if len(txt) >= 40 and '{' not in txt and '$' not in txt: lead = txt; break
+            if lead: break
+        if lead:
+            if len(lead) > 155: lead = lead[:152].rsplit(' ', 1)[0] + '…'
+            tag = '<meta name="description" content="' + E(lead) + '">'
+            if md: s = s[:md.start()] + tag + s[md.end():]
+            else:
+                hm = re.search(r'<meta charset[^>]*>|<head[^>]*>', s)
+                if hm: s = s[:hm.end()] + '\n' + tag + s[hm.end():]
     m = re.search(r'<body[^>]*>', s)
     if not m: continue
     s = s[:m.end()] + '\n' + bar + s[m.end():]
