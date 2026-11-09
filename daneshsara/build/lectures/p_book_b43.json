@@ -1,0 +1,500 @@
+{
+ "paper": true,
+ "book": {
+  "title": "آشنایی با لاک (Locke in 90 Minutes)",
+  "author": "Paul Strathern (پل استراترن)",
+  "translator": "فریدون فاطمی",
+  "year": "اصل انگلیسی ۱۹۹۸؛ ترجمهٔ فارسی ۱۳۸۷",
+  "publisher": "نشر مرکز (مجموعهٔ آشنایی با فیلسوفان)",
+  "type": "other",
+  "read": "full",
+  "pages_or_sections_read": "تمام متن (حدود ۶۴ صفحه): یادداشت ناشر، درآمد، زندگی و آثار، سخن پایانی، گزیدهٔ نوشته‌ها؛ زمان‌نگاری‌ها مرور شد",
+  "drive_id": "12SR8oLNYK1KqM8sCWJ5usEjeJOPNCLx6"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "مدخل‌نویسی مردم‌پسند و خواندنی از یک نویسندهٔ حرفه‌ای، مناسب آشنایی اولیه با لاک ولی نه مرجع دانشگاهی؛ جزئیات زندگی‌نامه و تاریخ‌ها را باید با منابع پژوهشی سنجید.",
+  "reasons": [
+   "نویسنده نویسندهٔ آموزشی و مردم‌پسند است، نه پژوهشگر لاک‌شناس",
+   "خلاصهٔ آموزه‌های اصلی (لوح سفید، کیفیت‌های نخستین/ثانوی، قرارداد اجتماعی، حق مقاومت) با متن رساله و دو رساله همخوان است",
+   "ارجاع دقیق و پانویس ندارد؛ لحن طنزآمیز و گاهی حدسی است",
+   "گزیده‌هایی از متن‌های خود لاک دارد که ارزش منبع دست‌اول جزئی دارند"
+  ],
+  "best_use_fa": "برای آشنایی اولیه با خط اصلی فلسفهٔ لاک و پیوند معرفت‌شناسی و سیاست او خوب است؛ برای جزئیات پژوهشی، تاریخ‌ها یا بحث دربارهٔ مالکیت و برده‌داری نزد لاک مناسب نیست.",
+  "cautions": [
+   "تاریخ انتشار «دو رساله» در متن ۱۶۹۸ آمده؛ در واقع ۱۶۸۹ (با تاریخ جلد ۱۶۹۰) است",
+   "جمله‌های جنجالی دربارهٔ فیلسوفان دیگر (اسپینوزا، لایبنیتس، هگل) طنز نویسنده است، نه ارزیابی علمی",
+   "دربارهٔ مالکیت و رابطهٔ لاک با برده‌داری و کارولینا ساکت یا سطحی است"
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "متن کامل و خوانا بود؛ کتاب مقدمه‌ای معتبر برای لاک است و سه حوزه (معرفت‌شناسی، کیفیت‌ها، سیاست) را خلاصه می‌کند. مدخل لاک پیش‌تر در دانش‌سرا نبود. ادعاهای تاریخی و جنبه‌های حذف‌شده با یادداشت ویراستار علامت خورده است.",
+ "summary_of_book_fa": "کتابی کوتاه از مجموعهٔ «آشنایی با فیلسوفان» دربارهٔ زندگی و اندیشهٔ جان لاک: از جنگ داخلی انگلستان و پزشکی تا رساله دربارهٔ فهم انسانی و دو رساله دربارهٔ حکومت. نویسنده تجربه‌گرایی و لیبرالیسم لاک را دو رو از یک سکه می‌بیند و با طنز و گزیده‌هایی از متن لاک پایان می‌دهد.",
+ "entries": [
+  {
+   "id": "locke-empiricism-tabula-rasa",
+   "wiki": "phil",
+   "field": "epistemology",
+   "title": {
+    "fa": "لاک: ذهن همچون لوح سفید و آغاز تجربه‌گرایی",
+    "en": "Locke: the mind as blank slate and the start of empiricism",
+    "nl": "Locke: de geest als onbeschreven blad en het begin van het empirisme"
+   },
+   "summary": {
+    "fa": "لاک می‌گوید هیچ اصل فطری‌ای در ذهن نیست و همهٔ ایده‌ها از دو سرچشمه می‌آیند: حس بیرونی و نگریستن ذهن به کار خودش. دانش تجربی فقط محتمل است، اما با داوری سنجیده می‌توان میزان احتمال را سنجید.",
+    "en": "Locke denies innate principles: all ideas come from two sources, sensation and reflection on the mind's own workings. Empirical knowledge is only probable, yet judgment can gauge how probable.",
+    "nl": "Locke ontkent aangeboren beginselen: alle ideeën komen uit zintuiglijke ervaring en reflectie. Empirische kennis is slechts waarschijnlijk."
+   },
+   "points": [
+    {
+     "fa": "لاک اصول فطری همگانی را رد می‌کند: کودکان و کم‌خردان از اصولی مانند «هر چیز همان است که هست» آگاه نیستند، پس اجماع همگانی در کار نیست.",
+     "en": "Locke rejects universal innate principles: children and the severely impaired do not know maxims like 'whatever is, is', so there is no universal consensus.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ذهن در آغاز مانند لوحی سفید است و همهٔ مواد اندیشیدن از تجربه می‌آید؛ تجربه دو چشمه دارد: حس چیزهای بیرونی و بازاندیشی (نگاه درونی به کار ذهن).",
+     "en": "The mind starts as a blank sheet and all material for thought comes from experience, which has two fountains: sensation of external things and reflection on the mind's own operations.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به روایت کتاب، لاک مانند دکارت می‌پذیرفت که دانش برآمده از حس فقط احتمالی است، اما بر خلاف او برای این‌که همهٔ آن را بی‌اعتبار کند به داوری معمولی و استقرا تکیه کرد.",
+     "en": "As the book tells it, Locke agreed with Descartes that sense-based knowledge is only probable, but instead of discarding it relied on common sense and induction to judge its degree of probability.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لاک سه گونه دانستن را برمی‌شمرد: شهودی (دریافت مستقیم رابطهٔ دو ایده)، اثباتی (از راه استدلال، مانند ریاضیات) و حسی (آگاهی از چیزهای بیرونی)؛ دانش حسی کم‌یقین‌تر از دو دیگر ولی در معرض تردید جدی نیست.",
+     "en": "Locke lists three kinds of knowing: intuitive (direct grasp of an idea relation), demonstrative (by reasoning, as in mathematics) and sensitive (of external things); the last is less certain than the first two but not seriously doubtful.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اصل «لوح سفید» و رد کامل شهودهای فطری امروز بسیار ساده‌شده است؛ روان‌شناسی و علوم شناختی نشان می‌دهند نوزاد با گرایش‌ها و ساختارهای شناختی زیستی به جهان می‌آید.",
+     "en": "The pure 'blank slate' and total rejection of innate structure is now seen as too simple; developmental and cognitive science show infants arrive with biologically given dispositions and cognitive structures.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "John Locke",
+     "fa": "جان لاک",
+     "years": "1632-1704",
+     "note": "فیلسوف انگلیسی، بنیان‌گذار تجربه‌گرایی بریتانیایی و لیبرالیسم سیاسی"
+    },
+    {
+     "latin": "René Descartes",
+     "fa": "رنه دکارت",
+     "years": "1596-1650",
+     "note": "خردگرای فرانسوی که لاک از روشش اثر پذیرفت و از نتیجه‌اش فاصله گرفت"
+    },
+    {
+     "latin": "Pierre Gassendi",
+     "fa": "پیر گاسندی",
+     "years": "1592-1655",
+     "note": "فیلسوف و دانشمند فرانسوی، مدافع دانش حسی و اتمی‌گرایی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:epistemology",
+     "rel": "part-of",
+     "fa": "زیرمجموعهٔ معرفت‌شناسی",
+     "en": "Part of epistemology"
+    },
+    {
+     "to": "soc:enlightenment-break",
+     "rel": "see-also",
+     "fa": "زمینهٔ گذار از حکمت مدرسی به روشنگری",
+     "en": "The shift from scholasticism to the Enlightenment"
+    },
+    {
+     "to": "phil:science",
+     "rel": "bridges",
+     "fa": "پیوند با روش علمی استقرایی",
+     "en": "Links to the inductive scientific method"
+    }
+   ]
+  },
+  {
+   "id": "locke-ideas-qualities-essences",
+   "wiki": "phil",
+   "field": "science",
+   "title": {
+    "fa": "لاک: ایده‌های ساده و مرکب، کیفیت‌های نخستین و ثانوی، ذات اسمی",
+    "en": "Locke: simple and complex ideas, primary and secondary qualities, nominal essence",
+    "nl": "Locke: eenvoudige en samengestelde ideeën, primaire en secundaire kwaliteiten"
+   },
+   "summary": {
+    "fa": "لاک ایده‌های ساده را (مانند رنگ و گرما) بنای ایده‌های مرکب می‌داند و میان کیفیت‌های اندازه‌پذیر اشیا و کیفیت‌های وابسته به ادراک ما (رنگ و مزه) فرق می‌گذارد. از نظر او دسته‌بندی‌هایی مانند «سیب» ساختهٔ ذهن‌اند، نه صورت‌های ذاتی نهفته در چیزها.",
+    "en": "Locke treats simple ideas (colour, warmth) as building blocks of complex ones and distinguishes measurable primary qualities from perception-dependent secondary ones. Categories like 'apple' are mental constructions, not substantial forms in things.",
+    "nl": "Locke onderscheidt eenvoudige en samengestelde ideeën en primaire (meetbare) van secundaire kwaliteiten; categorieën zijn constructies van de geest."
+   },
+   "points": [
+    {
+     "fa": "ایده‌های ساده تجزیه‌ناپذیرند (رنگ، گرما، مزه)؛ ایده‌های مرکب از ترکیب آن‌ها ساخته می‌شوند و می‌توانند چیزی را بسازند که در جهان نمونه‌ای ندارد، مانند شبح.",
+     "en": "Simple ideas are indivisible (colour, warmth, taste); complex ideas are built from them and may produce things with no counterpart in the world, such as ghosts.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کیفیت‌های نخستین (امتداد، شکل، جسمیت، حرکت) در خود اشیا هستند و ایده‌هایمان از آن‌ها شبیه خودشان است؛ کیفیت‌های ثانوی (رنگ، بو، مزه) توانایی‌هایی در شیء برای پدید آوردن احساس در ما هستند و شبیه علتشان نیستند.",
+     "en": "Primary qualities (extension, shape, solidity, motion) belong to the objects and our ideas of them resemble them; secondary qualities (colour, smell, taste) are powers in objects to cause sensations and do not resemble their cause.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به نظر کتاب این تمایز بازتاب انقلاب علمی (گالیله، نیوتن) است که بر ویژگی‌های اندازه‌پذیر مانند حجم، وزن و سرعت تکیه داشت.",
+     "en": "The book sees this distinction as mirroring the scientific revolution (Galileo, Newton), which focused on measurable properties like volume, weight and speed.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لاک این فکر ارسطویی را رد می‌کند که واژه‌ها با «ذات حقیقی» چیزها می‌خوانند؛ ایده‌ای مانند «سیب» دسته‌بندی سودمندی است که ذهن پس از دیدن چند سیب می‌سازد.",
+     "en": "Locke rejects the Aristotelian idea that words match the real essences of things; an idea like 'apple' is a useful classification the mind builds after seeing several apples.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پرسش دشوار می‌ماند: وقتی ادراک ما از اندام‌های حسی می‌آید که شبیه شیء نیستند، چطور می‌دانیم ایده با شیء بیرونی می‌خواند؟ همین بعدها هیوم و برکلی را به چالش واداشت.",
+     "en": "A hard question remains: if perception comes through organs unlike the object, how do we know an idea matches the external thing? This later drove Berkeley and Hume's challenges.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "هر ذات‌گرایی به‌کلی کنار نرفته است؛ در فلسفهٔ علم امروز (مثلاً دربارهٔ انواع طبیعی) بحث میان ذات‌گرایان و نام‌گرایان ادامه دارد.",
+     "en": "Essentialism has not vanished entirely; in contemporary philosophy of science (e.g. natural kinds) the debate between essentialists and nominalists continues.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Galileo Galilei",
+     "fa": "گالیله",
+     "years": "1564-1642",
+     "note": "از پایه‌گذاران علم تجربی که لاک به آن تکیه داشت"
+    },
+    {
+     "latin": "Isaac Newton",
+     "fa": "اسحاق نیوتن",
+     "years": "1643-1727",
+     "note": "دوست و معاصر لاک"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:locke-empiricism-tabula-rasa",
+     "rel": "part-of",
+     "fa": "ادامهٔ نظریهٔ تجربه‌گرایانهٔ لاک",
+     "en": "Continues Locke's empiricist theory"
+    },
+    {
+     "to": "phil:science",
+     "rel": "see-also",
+     "fa": "پیوند با فلسفهٔ علم",
+     "en": "Philosophy of science"
+    },
+    {
+     "to": "phil:epistemology",
+     "rel": "part-of",
+     "fa": "زیرمجموعهٔ معرفت‌شناسی",
+     "en": "Epistemology"
+    }
+   ]
+  },
+  {
+   "id": "locke-natural-rights-social-contract",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "لاک: حقوق طبیعی، قرارداد اجتماعی و حق مقاومت",
+    "en": "Locke: natural rights, social contract and the right of resistance",
+    "nl": "Locke: natuurlijke rechten, sociaal contract en recht op verzet"
+   },
+   "summary": {
+    "fa": "لاک در «دو رساله دربارهٔ حکومت» از حالت طبیعی با آزادی و برابری آغاز می‌کند، حکومت را قراردادی برای حفاظت از زندگی، آزادی و مالکیت می‌داند و اگر حکومت از این هدف بگذرد مردم را محق به مقاومت می‌شمارد. به همین دلیل او را از پایه‌گذاران لیبرالیسم می‌دانند.",
+    "en": "In the Two Treatises of Government, Locke starts from a state of nature with freedom and equality, sees government as a contract protecting life, liberty and property, and grants the people a right to resist a government that betrays that purpose. He is thus a founder of liberalism.",
+    "nl": "In de Two Treatises ziet Locke de overheid als contract ter bescherming van leven, vrijheid en eigendom, met recht op verzet bij machtsmisbruik."
+   },
+   "points": [
+    {
+     "fa": "رسالهٔ نخست لاک ردیهٔ رابرت فیلمر و حق الاهی پادشاهان است؛ رسالهٔ دوم خاستگاه و حدود حکومت را بررسی می‌کند.",
+     "en": "Locke's first treatise refutes Robert Filmer and the divine right of kings; the second inquires into the origin and limits of government.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در حالت طبیعی مردم آزاد و برابرند و قانون طبیعت، که همان خرد است، به همه می‌آموزد به زندگی، تندرستی، آزادی یا دارایی دیگری آسیب نزنند.",
+     "en": "In the state of nature people are free and equal, and the law of nature, which is reason, teaches that none should harm another's life, health, liberty or possessions.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "چون در آن حالت هر کس داور کار خویش است، بی‌انصافی رخ می‌دهد؛ پس مردم با قراردادی اجتماعی حکومتی برپا می‌کنند که قانون وضع کند. آزادی نظریِ اولیه کم می‌شود ولی آزادی واقعی استوارتر می‌گردد.",
+     "en": "Since everyone judges their own case there, injustice arises; people therefore form government by social contract. Original theoretical liberty is curtailed but real liberty is strengthened.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پایهٔ اقتدار حکومت رضایت مردم است و هدفش حفاظت از زندگی، آزادی و مالکیت؛ تصمیم در جامعه با اکثریت گرفته می‌شود.",
+     "en": "Government's authority rests on the consent of the governed and its purpose is protecting life, liberty and property; decisions within the community are taken by the majority.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اگر حکمران از اختیار قانونی فراتر رود و حقوق شهروندان را نقض کند، با مردم در حال جنگ است و آنان حق دارند شورش کنند و از او رها شوند.",
+     "en": "If a ruler exceeds legal authority and violates citizens' rights, he puts himself at war with the people, who have the right to rebel and be rid of him.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به روایت کتاب این اندیشه‌ها الهام‌بخش اعلامیهٔ استقلال آمریکا و انقلاب فرانسه شد؛ با آنکه رسالهٔ دوم بیشتر برای مقابله با استبداد نوشته شده بود تا توجیه انقلاب ۱۶۸۸.",
+     "en": "The book says these ideas inspired the American Declaration of Independence and the French Revolution, although the treatise was written more against absolutism than merely to justify the 1688 revolution.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "دیدگاه لاک دربارهٔ مالکیت (آمیختن کار با طبیعت) و نظریهٔ قرارداد او در فصل‌های مفصل رسالهٔ دوم آمده است؛ کتاب به آن‌ها نمی‌پردازد و برای فهم دیدگاه لاک دربارهٔ مالکیت باید به متن اصلی مراجعه کرد.",
+     "en": "Locke's theory of property (mixing labour with nature) is developed at length in the Second Treatise; this short book barely covers it, so the original text is needed to understand Locke on property.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "لاک خود در تدوین «قانون اساسی بنیادین کارولینا» نقش داشت که اختیار مطلق ارباب بر برده را شامل می‌شد؛ منتقدان از همین‌رو میان آرمان آزادی او و عمل، ناهماهنگی می‌بینند.",
+     "en": "Locke himself took part in drafting the Fundamental Constitutions of Carolina, which gave masters absolute power over slaves; critics see a tension between his liberty ideals and this practice.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Robert Filmer",
+     "fa": "رابرت فیلمر",
+     "years": "1588-1653",
+     "note": "نظریه‌پرداز حق الاهی پادشاهان"
+    },
+    {
+     "latin": "Thomas Hobbes",
+     "fa": "تامس هابز",
+     "years": "1588-1679",
+     "note": "نظریه‌پرداز حکومت مطلق که لاک در جوانی با او همدل بود"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:two-liberties",
+     "rel": "explains",
+     "fa": "ریشهٔ آزادی منفی در سنت لیبرال",
+     "en": "Roots of negative liberty in the liberal tradition"
+    },
+    {
+     "to": "phil:spinoza-liberty-state",
+     "rel": "contrasts",
+     "fa": "سنجش با دولت و آزادی نزد اسپینوزا",
+     "en": "Compare Spinoza on state and liberty"
+    },
+    {
+     "to": "phil:bastiat-law-state",
+     "rel": "see-also",
+     "fa": "ادامهٔ لیبرالیسم کلاسیک",
+     "en": "Classical liberalism continued"
+    },
+    {
+     "to": "soc:liberty-before-democracy-iran",
+     "rel": "see-also",
+     "fa": "آزادی پیش از دموکراسی",
+     "en": "Liberty before democracy"
+    },
+    {
+     "to": "soc:enlightenment-break",
+     "rel": "part-of",
+     "fa": "زمینهٔ تاریخی روشنگری",
+     "en": "Enlightenment backdrop"
+    }
+   ]
+  },
+  {
+   "id": "locke-toleration-life-context",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "لاک: تساهل دینی، زندگی و زمانهٔ انقلاب انگلستان",
+    "en": "Locke: religious toleration, life and the English revolutions",
+    "nl": "Locke: godsdienstige tolerantie, leven en tijd"
+   },
+   "summary": {
+    "fa": "لاک (۱۶۳۲–۱۷۰۴) در دورهٔ جنگ داخلی، جمهوری، بازگشت سلطنت و انقلاب باشکوه زیست. از پیوریتن‌گرایی خانواده به تساهل رسید، پزشک و منشی لرد شافتسبری شد، به هلند گریخت و پس از ۱۶۸۸ بازگشت. استدلال او برای تساهل بر ناتوانی دولت در اجبار باورهای درونی استوار است.",
+    "en": "Locke (1632-1704) lived through civil war, commonwealth, restoration and the Glorious Revolution. From a Puritan home he reached toleration, served Lord Shaftesbury as physician and secretary, fled to Holland and returned after 1688. His case for toleration rests on the state's inability to compel inner belief.",
+    "nl": "Locke (1632-1704) leefde door burgeroorlog en Glorious Revolution; zijn pleidooi voor tolerantie steunt op de onmogelijkheid van gedwongen overtuiging."
+   },
+   "points": [
+    {
+     "fa": "لاک در خانواده‌ای هواخواه مجلس و پیوریتن بزرگ شد، در وست‌مینستر و آکسفورد درس خواند و به علم و پزشکی علاقه یافت؛ فلسفه را دیر، در حدود ۳۴ سالگی، با خواندن دکارت کشف کرد.",
+     "en": "Locke grew up in a Parliamentarian, Puritan family, studied at Westminster and Oxford and turned to science and medicine; he discovered philosophy late, around thirty-four, through Descartes.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لاک در جوانی با نگاه هابز به حکومت مطلق همدل بود ولی بعداً از آن فاصله گرفت و به حکومت محدود و تساهل رسید.",
+     "en": "In youth Locke was sympathetic to Hobbes's absolutist view of government but later moved away to limited government and toleration.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لاک در نوشته‌ای دربارهٔ تساهل می‌گوید هیچ‌کس آن‌قدر نمی‌داند که حق داشته باشد شکل دین دیگری را تعیین کند؛ اجبار فقط به همرنگی زبانی می‌انجامد و همه در برابر خدا پاسخگوییم.",
+     "en": "In a writing on toleration Locke argues that no one knows enough to dictate another's religion; compulsion yields only outward conformity, and all answer to God.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در دورهٔ شافتسبری لاک در تدوین نخستین پیش‌نویس قانون اساسی کارولینا و در هیئت تجارت و کشاورزی کار کرد؛ پس از ۱۶۸۳ در هلند در تبعید بود و بعد از ۱۶۸۸ بازگشت و در خانهٔ ماشام‌ها در اوتس زیست.",
+     "en": "Under Shaftesbury Locke helped with the early Carolina constitution and the trade board; he lived in exile in Holland after 1683, returned after 1688 and lived at Oates with the Masham household.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "خود لاک در «نامه‌ای دربارهٔ تساهل» تساهل را شامل کاتولیک‌ها و بی‌خدایان نمی‌دانست؛ تساهل او با معیار امروز محدود بود.",
+     "en": "In his Letter Concerning Toleration Locke himself did not extend toleration to Catholics or atheists; by modern standards his toleration was limited.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "نویسنده لاک را «تنها فیلسوف برجسته‌ای که وزیر شد» می‌خواند و بسیاری جزییات زندگی‌نامه‌ای را با طنز و حدس بیان می‌کند؛ این‌ها را باید با زندگی‌نامه‌های پژوهشی (مثلاً مایکل اِیرز یا مارشال) سنجید.",
+     "en": "The author calls Locke 'the only prominent philosopher who became a minister' and tells many biographical details with humour and conjecture; these should be checked against scholarly biographies.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Anthony Ashley Cooper, Earl of Shaftesbury",
+     "fa": "لرد شافتسبری",
+     "years": "1621-1683",
+     "note": "سیاستمدار و حامی لاک"
+    },
+    {
+     "latin": "Damaris Masham",
+     "fa": "دامارس ماشام",
+     "years": "1659-1708",
+     "note": "فیلسوف و یار فکری لاک"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:locke-natural-rights-social-contract",
+     "rel": "part-of",
+     "fa": "پیوند با نظریهٔ سیاسی لاک",
+     "en": "Part of Locke's political theory"
+    },
+    {
+     "to": "soc:secularization",
+     "rel": "see-also",
+     "fa": "زمینهٔ سکولار شدن",
+     "en": "Secularization backdrop"
+    },
+    {
+     "to": "soc:enlightenment-break",
+     "rel": "part-of",
+     "fa": "زمینهٔ روشنگری",
+     "en": "Enlightenment backdrop"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "Strathern, Paul. Locke in 90 Minutes (1998); ترجمهٔ فریدون فاطمی، آشنایی با لاک، نشر مرکز، ۱۳۸۷",
+   "tier": 3
+  },
+  {
+   "cite": "Locke, John. An Essay Concerning Human Understanding (1689/1690)",
+   "tier": 3
+  },
+  {
+   "cite": "Locke, John. Two Treatises of Government (1689/1690)",
+   "tier": 3
+  },
+  {
+   "cite": "Locke, John. A Letter Concerning Toleration (1689)",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "متن Drive لایهٔ متنی سالم و به ترتیب منطقی داشت (معکوس نبود)؛ دقت خوانش بالا با چند بریدگی جزئی پاراگراف. کتاب تمام خوانده شد. سال اصل انگلیسی (۱۹۹۸) و شمارهٔ صفحه از فراداده/دانش من است و در متن PDF دقیقاً تأیید نشد. گزاره‌های بی‌منبع با پرچم editor-note از دانش عمومی مطمئن (تساهل محدود لاک، کارولینا، روایت تاریخ انتشار) افزوده شد.",
+ "lecture": "آشنایی با لاک (Locke in 90 Minutes)",
+ "speaker": "Paul Strathern (پل استراترن)",
+ "channel": "نشر مرکز (مجموعهٔ آشنایی با فیلسوفان)"
+}
