@@ -1,4 +1,5 @@
 <!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><a href="../index.html#layers">لایهٔ علم</a><i>›</i><a href="../psy/">ویکی روان</a><i>›</i><a href="../psy/tools/">ابزارها</a><i>›</i><b>سرزمین روان</b></nav>
 <title>سرزمین روان</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,7 +135,6 @@ footer{margin-top:20px;font-size:.8rem;color:var(--muted)}
 <div class="wrap">
 <header class="top">
   <div>
-    <div class="crumb"><a href="index.html">⌂ ویکی روان</a> › سرزمین روان</div>
     <h1>سرزمین روان</h1>
     <p class="lede">همان دنیای روانِ گراف، این بار به شکل یک قاره. هر رشته یک سرزمین است با چشم‌انداز خودش، هر زیررشته یک استان و هر مفهوم یک شهر. دانشمندها در شهری زندگی می‌کنند که بیشترین کارشان آنجاست و به شهرهای دیگر «سفر» می‌کنند. جاده‌های خط‌چین، پیوندهای میان‌رشته‌ای‌اند.</p>
   </div>
@@ -342,8 +342,7 @@ function select(id, fromHash){
   const res = (RES[id] || []), vis = (VIS[id] || []);
   const sub = L.cities.filter(c => ND[c.id].p === id).map(c => c.id);
   const src = [].concat(n.src || []).filter(s => URLS[s]);
-  cin.innerHTML = `<div class="crumbs">${crumbs || "سرزمین روان"}</div>
-    <h2>${n.fa}</h2><div class="en" translate="no">${n.en || ""}</div>
+  cin.innerHTML = `<h2>${n.fa}</h2><div class="en" translate="no">${n.en || ""}</div>
     <span class="tag" style="background:var(--r-${reg})">${kind}${n.d === 1 ? " · " + KEY[id].t : ""}</span>
     <p>${n.s}${n.s.length >= 260 ? "…" : ""}</p>
     ${res.length ? `<h4>ساکنان این ${n.d <= 2 ? "مرکز" : "شهر"} (${fa(res.length)} دانشمند)</h4><div class="chips">${res.map(chipP).join("")}</div>` : ""}
@@ -364,7 +363,7 @@ function person(nm){
   d3.select("#c-" + CSS.escape(p.h)).classed("sel", true);
   p.v.forEach(v => { if(C[v]){ tripG.append("path").attr("class", "trip").attr("d", arc(h, C[v])); d3.select("#c-" + CSS.escape(v)).classed("hl", true); } });
   const regs = new Set([p.h, ...p.v].map(regOfNode));
-  cin.innerHTML = `<div class="crumbs">دانشمند</div><h2>${nm}</h2>
+  cin.innerHTML = `<h2>${nm}</h2>
     <p>${p.note.replace(nm, "").replace(/^[\s—(،]+/, "").replace(/^([^)]*)\)/, "($1)")}</p>
     <h4>خانه</h4><div class="chips">${chipN(p.h)}</div>
     ${p.v.length ? `<h4>سفرها (${fa(p.v.length)} جا در ${fa(regs.size)} سرزمین)</h4><div class="chips">${p.v.map(chipN).join("")}</div>` : `<p class="muted">فقط در خانهٔ خودش از او نام برده شده.</p>`}
