@@ -1,0 +1,25 @@
+/* ظاهر مشترک ابزارهای دانش‌سرا؛ روی core/design/tokens.css سوار می‌شود */
+*{box-sizing:border-box} html{-webkit-text-size-adjust:100%} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:var(--body);line-height:1.8}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;flex-wrap:wrap}
+.crumb{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--ink-2)} .crumb a{color:var(--primary);text-decoration:none;font-weight:600} .crumb a:hover{text-decoration:underline}
+main{padding-block:28px 72px} h1{font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 6px;line-height:1.35;text-wrap:balance} h2{font-size:1.25rem;margin:28px 0 10px} .lead{color:var(--ink-2);max-width:68ch;margin:0 0 18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))} .grid>*{min-width:0}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+input[type=text],input[type=search],select,textarea{font:inherit;font-size:1rem;padding:10px 14px;border-radius:12px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);min-width:0;max-width:100%}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+button,.btn{font:inherit;font-size:.95rem;padding:9px 18px;border-radius:999px;border:1px solid var(--primary);background:var(--primary);color:#fff;cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost,.btn.ghost{background:transparent;color:var(--primary)} button:hover,.btn:hover{background:var(--primary-hover);color:#fff}
+.chip{display:inline-block;font-size:.78rem;padding:1px 9px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2);background:var(--surface)}
+.chip.psy{border-color:var(--fam-psy);color:var(--fam-psy)} .chip.tabar{border-color:var(--fam-bio);color:var(--fam-bio)} .chip.soc{border-color:var(--fam-soc);color:var(--fam-soc)} .chip.phil{border-color:var(--fam-hum);color:var(--fam-hum)}
+.flag{font-size:.75rem;padding:1px 8px;border-radius:999px;border:1px solid}
+.flag.unreplicated{color:#8A2E2E;border-color:#E3B4B4;background:#FBEDED} .flag.contested{color:#6B4E00;border-color:#E8D39A;background:#FBF1D9} .flag.dated{color:var(--ink-2);border-color:var(--line-strong)} .flag.editor-note{color:var(--primary);border-color:var(--primary)}
+.ev{font-size:.75rem;padding:1px 8px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2)} .ev.t1{border-color:#2F7D4F;color:#2F7D4F} .ev.t2{border-color:#3C6EA8;color:#3C6EA8} .ev.t3{border-color:#8A6D1D;color:#8A6D1D} .ev.t4,.ev.t0{border-color:#8A2E2E;color:#8A2E2E}
+.gr{font-size:.78rem;padding:1px 9px;border-radius:999px;color:#fff} .gr.gA{background:var(--grade-a)} .gr.gB{background:var(--grade-b)} .gr.gC{background:var(--grade-c)} .gr.gD{background:var(--grade-d)}
+.muted{color:var(--ink-3);font-size:.9rem} .empty{padding:28px;text-align:center;color:var(--ink-3);border:1px dashed var(--line-strong);border-radius:16px}
+.note{background:var(--primary-soft);border:1px solid color-mix(in srgb,var(--primary) 25%,transparent);border-radius:12px;padding:10px 14px;font-size:.92rem;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;font-size:.92rem} th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top} th{color:var(--ink-2);font-weight:600}
+.scroll{overflow-x:auto} a{color:var(--primary)} footer.foot{border-top:1px solid var(--line);padding-block:24px;color:var(--ink-3);font-size:.88rem}
+@media (max-width:600px){main{padding-block:18px 56px} .card{padding:14px}}

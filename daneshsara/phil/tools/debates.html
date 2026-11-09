@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مناظره‌ها — فلسفه — دانش‌سرا</title>
+<meta name="description" content="جفت‌های رقیب در ویکی فلسفه، بر پایهٔ رابطه‌های «در برابر» و «نقد» میان مدخل‌ها">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.hero{margin-bottom:22px}.hero h1{margin-bottom:10px}.hero .lead{font-size:1.05rem;margin-bottom:0}
+.bar{display:grid;gap:14px;margin-bottom:18px}
+.bar label.l{display:block;font-size:.85rem;color:var(--ink-2);margin-bottom:4px}
+.bar input[type=search]{width:100%;min-height:44px}
+.bar .opts{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.bar select{width:100%;min-height:44px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{min-height:40px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font-size:.9rem;cursor:pointer}
+.pill:hover{background:var(--surface-subtle);color:var(--ink)}
+.pill[aria-pressed=true]{background:var(--primary);border-color:var(--primary);color:#fff}
+.pill small{opacity:.75;margin-inline-start:6px;font-size:.78rem}
+.status{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0 14px}
+button.ghost{min-height:40px}
+.k{display:flex;flex-direction:column;gap:8px}
+.k h3{margin:0;font-size:1.05rem;line-height:1.55}.k h3 a{color:var(--ink);text-decoration:none}.k h3 a:hover{color:var(--primary);text-decoration:underline}
+.k .sum{margin:0;color:var(--ink-2);font-size:.92rem;line-height:1.75;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.k .tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto;padding-top:4px}
+.k .meta{display:flex;flex-wrap:wrap;gap:6px}
+.st-d{font-size:.75rem;color:var(--ink-3)}
+.more{text-align:center;margin:22px 0}
+.src{font-size:.75rem;color:var(--ink-3);margin-inline-end:2px}
+.legend{margin-top:26px;font-size:.88rem;color:var(--ink-2)}
+.legend .row{gap:8px;margin-top:8px}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.dl{display:grid;gap:16px}
+.db{padding:14px}
+.db .top{display:flex;justify-content:center;margin-bottom:10px}
+.rel{font-size:.82rem;padding:2px 14px;border-radius:999px;background:var(--primary-soft);color:var(--primary);border:1px solid color-mix(in srgb,var(--primary) 30%,transparent)}
+.sides{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
+.vs{align-self:center;color:var(--ink-3);font-weight:700;font-size:.95rem}
+.sd{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--paper);display:flex;flex-direction:column;gap:8px;min-width:0}
+.sd.open{border-color:var(--primary)}
+.sd .sb{all:unset;cursor:pointer;display:block;font-weight:700;line-height:1.55;font-size:1rem;color:var(--ink);min-height:40px}
+.sd .sb:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:6px}
+.sd .sb::after{content:" ▾";color:var(--primary);font-weight:400}.sd.open .sb::after{content:" ▴"}
+.sd .sum{margin:0;color:var(--ink-2);font-size:.9rem;line-height:1.75}
+.sd .meta,.sd .tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.det{border-top:1px dashed var(--line-strong);padding-top:10px;display:grid;gap:10px}
+.det p{margin:0;font-size:.9rem;line-height:1.8}.pt{border-inline-start:3px solid var(--line-strong);padding-inline-start:10px}
+.pt .row{gap:6px;margin-bottom:4px}
+.go{font-size:.88rem}
+@media (max-width:700px){.sides{grid-template-columns:1fr}.vs{text-align:center}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<nav class="crumb" aria-label="مسیر"><a href="../../index.html">خانه</a><span aria-hidden="true">›</span><a href="../index.html">فلسفه</a><span aria-hidden="true">›</span><span aria-current="page">مناظره‌ها</span></nav>
+
+</div></header>
+<main class="wrap">
+<div id="app">
+<section class="hero"><h1>مناظره‌ها</h1>
+<p class="lead">مفاهیمی که در داده با رابطهٔ «در برابر» یا «نقد» به هم وصل شده‌اند به‌صورت جفت می‌آیند: طرف الف در برابر طرف ب. وقتی می‌خواهید دو موضع رقیب را کنار هم بسنجید و ببینید هر طرف چقدر پشتوانه دارد، از این‌جا شروع کنید.</p></section>
+<section class="card bar" aria-label="فیلترها">
+<div><label class="l" for="q">جستجو در عنوان و خلاصهٔ دو طرف</label><input type="search" id="q" placeholder="مثلاً: آزادی" autocomplete="off"></div>
+<div><span id="fl" style="display:block;font-size:.85rem;color:var(--ink-2);margin-bottom:6px">حوزه</span><div class="pills" id="fields" role="group" aria-labelledby="fl"></div></div>
+<div class="opts">
+<div><label class="l" for="rel">نوع رابطه</label><select id="rel"><option value="">همه</option><option value="contrasts">در برابر</option><option value="critiques">نقد</option></select></div>
+<div><label class="l" for="scope">دامنه</label><select id="scope"><option value="">همهٔ جفت‌ها</option><option value="phil">هر دو طرف از فلسفه</option><option value="x">یک طرف از ویکی دیگر</option></select></div>
+</div></section>
+<div class="status"><span id="count" class="muted" aria-live="polite"></span><button class="ghost" id="reset" type="button">پاک‌کردن فیلترها</button></div>
+<div id="res" class="dl"></div>
+</div>
+</main>
+<footer class="foot"><div class="wrap">
+<p style="margin:0 0 6px">این ابزار پیش‌نویس است و محتوای آن هنوز به‌طور کامل بازبینی نشده. برچسب‌های اعتبار (ردهٔ منبع، پرچم‌ها) از دادهٔ مدخل‌ها گرفته می‌شود و جای خواندن خود مدخل و منبع‌هایش را نمی‌گیرد. جفت‌ها فقط از رابطه‌های ثبت‌شدهٔ «در برابر/نقد» در داده ساخته شده‌اند و فهرست کامل مناظره‌های فلسفی نیست. برای رابطهٔ نقد، «طرف الف» همان مدخلی است که رابطه از آن ثبت شده. در جفت‌هایی که یک طرف از ویکی دیگر است، حوزه‌ٔ همان طرف نمایش داده می‌شود.</p>
+<p style="margin:0"><a href="index.html">ابزارهای فلسفه</a> · <a href="../index.html">بازگشت به ویکی فلسفه</a></p>
+</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+(async function(){
+const $=s=>document.querySelector(s), E=DS.esc, FA=DS.faDigits;
+const WN="فلسفه", FAM="phil";
+function fail(e){const m=$("#app");if(m)m.innerHTML='<div class="empty" role="alert">بارگذاری داده ناموفق بود. صفحه را دوباره باز کنید یا بعداً امتحان کنید.<br><span class="muted">'+E(e&&e.message||"")+'</span></div>';console.error(e)}
+let D;try{/* lib.js پایهٔ مسیر را از currentScript می‌گیرد که پس از بارگذاری تهی است؛ اینجا موقتاً برقرار می‌کنیم */const ls=document.querySelector('script[src$="core/tools/lib.js"]');try{Object.defineProperty(document,"currentScript",{configurable:true,get:()=>ls})}catch(_){}D=await DS.load();delete document.currentScript;if(!D||!D.concepts)throw new Error("داده نامعتبر")}catch(e){fail(e);return}
+const fname=id=>{const f=D.fieldById[id];return f?f.t.fa:""};
+const dq=s=>DS.norm(s);
+/* کارت برچسب‌دار یک مدخل: ردهٔ منبع، پرچم‌ها، وضعیت بازبینی */
+function tags(c){const s=DS.stats(c);let h=DS.chipGrade(DS.grade(c));
+ h+=' <span class="src">بهترین منبع:</span>'+DS.chipTier(s.best);
+ for(const f of ["unreplicated","contested","dated","editor-note"]) if(s.flags[f]) h+=' '+'<span class="flag '+f+'">'+E(DS.FLAG[f])+' ×'+FA(s.flags[f])+'</span>';
+ h+=' <span class="muted" style="font-size:.78rem">'+FA(s.n)+' گزاره</span>';
+ h+=' <span class="st-d">'+(c.st==="reviewed"?"بازبینی‌شده":"پیش‌نویس")+'</span>';return h}
+function card(c,extra){const w=DS.WIKI[c.w]||c.w;
+ return '<article class="card k"><div class="meta"><span class="chip '+E(c.w)+'">'+E(w)+'</span>'+(c.field?'<span class="chip">'+E(fname(c.field))+'</span>':'')+(extra||'')+'</div>'
+ +'<h3><a href="'+E(DS.url(D,c))+'">'+E(c.t.fa)+'</a></h3><p class="sum">'+E(c.s.fa)+'</p><div class="tags">'+tags(c)+'</div></article>'}
+const FIELDS=[["epistemology", "معرفت‌شناسی"], ["mind", "فلسفهٔ ذهن"], ["ethics", "اخلاق"], ["science", "فلسفهٔ علم"], ["political", "فلسفهٔ سیاسی"], ["iranian", "فلسفهٔ ایرانی‌اسلامی"], ["life", "فلسفهٔ زندگی"]];
+const phil=D.concepts.filter(c=>c.w===FAM);
+const pairs=new Map();
+D.concepts.forEach(c=>{if(c.w!==FAM)return;(c.lk||[]).forEach(([to,r])=>{if(r!=="contrasts"&&r!=="critiques")return;const o=D.byId[to];if(!o||o===c)return;
+ const k=[c.id,o.id].sort().join("|");let p=pairs.get(k);if(!p){p={a:c,b:o,rel:r};pairs.set(k,p)}else if(r==="critiques"&&p.rel!=="critiques"){p.rel=r;p.a=c;p.b=o}})});
+const list=[...pairs.values()].map(p=>({...p,x:p.a.w!==FAM||p.b.w!==FAM,text:dq(p.a.t.fa+" "+p.a.s.fa+" "+p.b.t.fa+" "+p.b.s.fa+" "+p.a.t.en+" "+p.b.t.en)}));
+const cnt={};list.forEach(p=>new Set([p.a.field,p.b.field]).forEach(f=>{if(f&&f.startsWith(FAM+":"))cnt[f]=(cnt[f]||0)+1}));
+const st=Object.assign({q:"",f:"",rel:"",sc:""},DS.hash.get());const sel=new Set(st.f?st.f.split(","):[]);
+$("#fields").innerHTML=FIELDS.map(([k,n])=>{const id=FAM+":"+k;return '<button type="button" class="pill" data-f="'+id+'" aria-pressed="false">'+E(n)+'<small>'+FA(cnt[id]||0)+'</small></button>'}).join("");
+$("#q").value=st.q;$("#rel").value=st.rel;$("#scope").value=st.sc;
+const open=new Set();
+function side(c,key){const S=DS.stats(c),isOpen=open.has(key);
+ let h='<div class="sd'+(isOpen?' open':'')+'"><div class="meta"><span class="chip '+E(c.w)+'">'+E(DS.WIKI[c.w]||c.w)+'</span>'+(c.field?'<span class="chip">'+E(fname(c.field))+'</span>':'')+'</div>'
+ +'<button type="button" class="sb" data-k="'+E(key)+'" aria-expanded="'+isOpen+'">'+E(c.t.fa)+'</button>'
+ +'<p class="sum">'+E(isOpen?c.s.fa:(c.s.fa.length>230?c.s.fa.slice(0,230).replace(/\s\S*$/,"")+"…":c.s.fa))+'</p><div class="tags">'+tags(c)+'</div>';
+ if(isOpen)h+='<div class="det">'+(c.pts.length?c.pts.map(p=>'<div class="pt"><div class="row">'+DS.chipTier(p.tier||0)+(p.f||[]).map(DS.chipFlag).join(" ")+'</div><p>'+E(p.t)+'</p></div>').join(""):'<p class="muted">این مدخل گزارهٔ ثبت‌شده ندارد.</p>')+'<a class="go" href="'+E(DS.url(D,c))+'">رفتن به مدخل کامل ‹</a></div>';
+ return h+'</div>'}
+function run(){const q=dq($("#q").value),rel=$("#rel").value,sc=$("#scope").value;
+ DS.hash.set(Object.fromEntries(Object.entries({q:$("#q").value,f:[...sel].join(","),rel,sc}).filter(([k,v])=>v)));
+ document.querySelectorAll("#fields .pill").forEach(b=>b.setAttribute("aria-pressed",sel.has(b.dataset.f)));
+ const ws=q.split(" ").filter(Boolean);
+ const r=list.filter(p=>(!sel.size||sel.has(p.a.field)||sel.has(p.b.field))&&(!rel||p.rel===rel)&&(!sc||(sc==="x")===p.x)&&ws.every(x=>p.text.includes(x)));
+ $("#count").textContent=r.length?FA(r.length)+" جفت از "+FA(list.length):"";
+ if(!r.length){$("#res").innerHTML='<div class="empty">جفتی با این فیلترها پیدا نشد.</div>';return}
+ $("#res").innerHTML=r.map(p=>{const id=p.a.id+"|"+p.b.id;
+  return '<article class="card db"><div class="top"><span class="rel">'+(p.rel==="critiques"?"طرف الف، طرف ب را نقد می‌کند":"در برابر هم")+'</span></div><div class="sides">'+side(p.a,id+"#a")+'<div class="vs" aria-hidden="true">در برابر</div>'+side(p.b,id+"#b")+'</div></article>'}).join("")}
+$("#fields").addEventListener("click",e=>{const b=e.target.closest(".pill");if(!b)return;sel.has(b.dataset.f)?sel.delete(b.dataset.f):sel.add(b.dataset.f);run()});
+let tm;$("#q").addEventListener("input",()=>{clearTimeout(tm);tm=setTimeout(run,150)});
+["rel","scope"].forEach(i=>$("#"+i).addEventListener("change",run));
+$("#res").addEventListener("click",e=>{const b=e.target.closest(".sb");if(!b)return;const k=b.dataset.k;open.has(k)?open.delete(k):open.add(k);run();const n=document.querySelector('.sb[data-k="'+CSS.escape(k)+'"]');if(n)n.focus()});
+$("#reset").addEventListener("click",()=>{sel.clear();$("#q").value="";$("#rel").value="";$("#scope").value="";run()});
+run();
+})();
+</script>
+</body>
+</html>

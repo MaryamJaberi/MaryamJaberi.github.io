@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ابزارهای اطلس</title>
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.hero{padding-block:8px 6px} .hero .lead{font-size:1.02rem}
+.pk{flex:1 1 280px;min-width:0;position:relative}
+.pk>label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;color:var(--ink-2)}
+.pkbox{position:relative}
+.pkbox input{width:100%;min-height:44px}
+.pklist{position:absolute;inset-inline:0;top:calc(100% + 4px);z-index:8;margin:0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--line-strong);border-radius:14px;box-shadow:var(--shadow-lg);max-height:340px;overflow:auto}
+.pklist li{padding:8px 12px;min-height:44px;border-radius:10px;cursor:pointer;display:flex;gap:8px;align-items:center;justify-content:space-between;line-height:1.5}
+.pklist li[aria-selected=true],.pklist li:hover{background:var(--primary-soft)}
+.pklist .none{cursor:default;color:var(--ink-3)}
+.pksel{margin-top:10px}
+.sel{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--line-strong);border-radius:14px;background:var(--surface)}
+.sel b{font-size:1.02rem;line-height:1.5}
+.xbtn{min-height:40px;min-width:40px;padding:4px 12px;background:transparent;color:var(--ink-2);border-color:var(--line-strong)}
+.xbtn:hover{background:var(--surface-subtle);color:var(--ink)}
+.controls{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:6px 0 22px}
+.btn,button{min-height:40px}
+.two{display:grid;gap:14px;grid-template-columns:1fr 1fr}.two>*{min-width:0}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.pt{padding:10px 0;border-top:1px solid var(--line)}.pt:first-child{border-top:0}
+.pt p{margin:0 0 6px;max-width:none;font-size:.96rem;line-height:1.8}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.sec{margin-top:26px}.sec>h2{margin-top:0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.sec>h2 small{font-weight:400;color:var(--ink-3)}
+.diff td.d,.diff th.d{background:var(--primary-soft);font-weight:700}
+.list{list-style:none;margin:0;padding:0}.list li{padding:8px 0;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap;align-items:center}.list li:first-child{border-top:0}
+details>summary{cursor:pointer;color:var(--primary);min-height:40px;display:flex;align-items:center}
+.ttl{font-size:1.15rem;font-weight:700;line-height:1.5;margin:0 0 6px}
+.sm{font-size:.9rem;color:var(--ink-2);line-height:1.8}
+.err{padding:16px;border:1px solid var(--err);color:var(--err);border-radius:14px;background:var(--surface)}
+.toggle{display:inline-flex;gap:8px;align-items:center;min-height:44px;cursor:pointer}.toggle input{width:20px;height:20px}
+h1,h2,.ttl,.card{overflow-wrap:anywhere}
+
+.tcs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.tc{display:flex;flex-direction:column;gap:8px;padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:20px;color:var(--ink);text-decoration:none;box-shadow:var(--shadow-sm);transition:transform .15s,border-color .15s,box-shadow .15s;min-height:200px}
+.tc:hover{transform:translateY(-3px);border-color:var(--primary);box-shadow:var(--shadow-md);text-decoration:none;color:var(--ink)}
+.tc .ic{color:var(--primary);width:64px;height:64px;display:grid;place-items:center;background:var(--primary-soft);border-radius:18px;margin-bottom:4px}
+.tc .ttl{font-size:1.2rem;margin:0}.tc .go{margin-top:auto;color:var(--primary);font-weight:600;padding-top:8px}
+@media(prefers-reduced-motion:reduce){.tc{transition:none}.tc:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><nav class="crumb" aria-label="مسیر"><a href="../../index.html">خانه</a><span aria-hidden="true">›</span><a href="../index.html">اطلس</a><span aria-hidden="true">›</span><a href="index.html">ابزارهای اطلس</a><span aria-hidden="true">›</span><span aria-current="page">ابزارهای اطلس</span></nav></div></header>
+<main class="wrap">
+<div class="hero"><h1>ابزارهای اطلس</h1><p class="lead">چهار ابزار برای کاوش میان‌رشته‌ای در دانش‌سرا: مقایسه، مسیر، شواهد و پل‌ها.</p></div>
+<div id="app"><div class="tcs"><a class="tc" href="compare.html"><span class="ic"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="5" y="9" width="16" height="30" rx="4"/><rect x="27" y="9" width="16" height="30" rx="4"/><path d="M24 16v16"/></svg></span><span class="ttl">مقایسهٔ دو مفهوم</span><span class="sm">دو مفهوم از هر ویکی را کنار هم بگذارید: گزاره‌ها، پیوندهای مشترک، اختلاف رده‌ها و نمرهٔ اعتبار.</span><span class="go">باز کردن ←</span></a><a class="tc" href="path.html"><span class="ic"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="36" r="4"/><circle cx="24" cy="14" r="4"/><circle cx="39" cy="32" r="4"/><path d="M12 33l9-15M28 16l9 12" /></svg></span><span class="ttl">مسیر بین دو مفهوم</span><span class="sm">کوتاه‌ترین زنجیرهٔ پیوندها میان دو مفهوم، با نوع رابطه در هر گام و پل‌های میان ویکی‌ها.</span><span class="go">باز کردن ←</span></a><a class="tc" href="evidence.html"><span class="ic"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="5" y="9" width="38" height="8" rx="4"/><rect x="5" y="20" width="38" height="8" rx="4"/><rect x="5" y="31" width="38" height="8" rx="4"/><path d="M5 13h20M5 24h28M5 35h12"/></svg></span><span class="ttl">نقشهٔ شواهد</span><span class="sm">توزیع ردهٔ منبع و سهم محل‌بحث در هر ویکی و حوزه، با ضعیف‌ترین و قوی‌ترین مدخل‌ها.</span><span class="go">باز کردن ←</span></a><a class="tc" href="bridges.html"><span class="ic"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 34h40M8 34V22M40 34V22M8 22c6-12 26-12 32 0"/></svg></span><span class="ttl">یابندهٔ پل‌ها</span><span class="sm">با یک واژه، پل‌های بین‌رشته‌ای و مفاهیم ویکی‌های مختلف را بیابید؛ مفاهیم پرارتباط میان ویکی‌ها.</span><span class="go">باز کردن ←</span></a></div></div>
+</main>
+<footer class="foot"><div class="wrap"><p class="note">این ابزار پیش‌نویس است و محتوا بازبینی نشده؛ همهٔ گزاره‌ها، رده‌های منبع و پرچم‌ها عیناً از دادهٔ دانش‌سرا آمده‌اند و ابزار ادعای تازه‌ای نمی‌افزاید. نمرهٔ اعتبار برآوردی ساده از توزیع رده‌های منبع است، نه داوری دربارهٔ درستی علمی. پیوندها فقط میان مدخل‌های موجود شمرده می‌شوند.</p></div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+
+function wchip(w){return `<span class="chip ${w}">${DS.esc(DS.WIKI[w]||w)}</span>`}
+function picker(root,opt){
+  const id='pk'+Math.random().toString(36).slice(2,7);
+  root.className='pk';
+  root.innerHTML=`<label for="${id}">${DS.esc(opt.label)}</label><div class="pkbox"><input id="${id}" type="search" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="${id}l" placeholder="${DS.esc(opt.ph||'جستجو در همهٔ ویکی‌ها…')}"><ul class="pklist" id="${id}l" role="listbox" hidden></ul></div><div class="pksel"></div>`;
+  const inp=root.querySelector('input'),ul=root.querySelector('ul'),sel=root.querySelector('.pksel');
+  let res=[],act=-1,cur=null;
+  const close=()=>{ul.hidden=true;inp.setAttribute('aria-expanded','false');act=-1};
+  function render(){
+    if(!res.length){ul.innerHTML='<li class="none">مدخلی پیدا نشد</li>';return}
+    ul.innerHTML=res.map((c,i)=>`<li role="option" data-i="${i}" aria-selected="${i===act}"><span>${DS.esc(c.t.fa)}</span>${wchip(c.w)}</li>`).join('');
+  }
+  function open(){const q=inp.value; if(!DS.norm(q)){close();return} res=DS.search(D,q).slice(0,8);act=res.length?0:-1;render();ul.hidden=false;inp.setAttribute('aria-expanded','true')}
+  function showSel(){
+    sel.innerHTML=cur?`<div class="sel"><div><b>${DS.esc(cur.t.fa)}</b><div class="tags" style="margin-top:4px">${wchip(cur.w)}<span class="muted">${DS.esc(cur.t.en||'')}</span></div></div><button type="button" class="xbtn ghost" aria-label="حذف انتخاب">×</button></div>`:'';
+    const x=sel.querySelector('button'); if(x)x.onclick=()=>{set(null,true);inp.focus()};
+  }
+  function set(id,fire){cur=id?D.byId[id]||null:null;showSel();if(cur){inp.value='';close()}if(fire!==false&&opt.onPick)opt.onPick(cur)}
+  function pick(i){const c=res[i];if(c){set(c.id)}}
+  inp.addEventListener('input',open);inp.addEventListener('focus',open);
+  inp.addEventListener('keydown',e=>{
+    if(e.key==='ArrowDown'){e.preventDefault();if(ul.hidden)open();else{act=Math.min(res.length-1,act+1);render()}}
+    else if(e.key==='ArrowUp'){e.preventDefault();act=Math.max(0,act-1);render()}
+    else if(e.key==='Enter'){if(!ul.hidden&&act>=0){e.preventDefault();pick(act)}}
+    else if(e.key==='Escape')close();
+  });
+  ul.addEventListener('mousedown',e=>{const li=e.target.closest('li[data-i]');if(li){e.preventDefault();pick(+li.dataset.i)}});
+  document.addEventListener('click',e=>{if(!root.contains(e.target))close()});
+  inp.addEventListener('blur',()=>setTimeout(close,120));
+  return {set:id=>set(id,false),get:()=>cur};
+}
+function ptHtml(p){return `<div class="pt"><p>${DS.esc(p.t)}</p><div class="tags">${DS.chipTier(p.tier||0)}${(p.f||[]).map(DS.chipFlag).join('')}</div></div>`}
+function pct(x){return DS.faDigits(Math.round(x*100))+'٪'}
+function fa(n){return DS.faDigits(n)}
+function buildAdj(D){
+  const adj={};D.concepts.forEach(c=>adj[c.id]=[]);
+  D.concepts.forEach(c=>(c.lk||[]).forEach(([to,rel])=>{if(!D.byId[to]||to===c.id)return;adj[c.id].push({to,rel,dir:'out'});adj[to].push({to:c.id,rel,dir:'in'})}));
+  return adj;
+}
+/* DS.load مسیر data.json را از currentScript می‌گیرد که پس از بارگذاری null است؛ برای مسیر نسبی درست، همین‌جا اصلاح می‌شود */
+(function(){const f=window.fetch;window.fetch=function(u,o){try{if(typeof u==='string'&&/(^|\/)data\.json$/.test(u)&&u.indexOf('core/tools')<0)u=new URL('../../core/tools/data.json',location.href).href}catch(_){}return f.call(this,u,o)}})();
+function failMsg(el,e){el.innerHTML=`<div class="err" role="alert">بارگذاری داده ناموفق بود. صفحه را دوباره باز کنید یا بعداً امتحان کنید.<br><small>${DS.esc(e&&e.message||e)}</small></div>`}
+
+
+</script>
+</body>
+</html>
