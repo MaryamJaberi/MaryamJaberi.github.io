@@ -30,6 +30,9 @@ html{scroll-padding-top:72px}
 .fail{padding:28px;text-align:center;border:1px dashed var(--err);border-radius:16px;color:var(--err)}
 .chip.mini{font-size:.72rem;padding:0 8px}
 .wk{font-weight:700}
+.note,.tip{max-width:none}.tip{max-width:68ch}
+label.row{flex-wrap:nowrap;align-items:flex-start}
+label.row input[type=checkbox]{flex:none;margin:2px 0 0}
 .grid>section .card{padding:14px}.nt{margin-top:2px}</style>
 </head>
 <body>
@@ -128,7 +131,7 @@ function render() {
   // یادداشت‌های آماری: مطابقت مستقیم، یا پیوندشده از مفاهیم برتر
   const nm = new Map();
   D.iran.forEach(n => { const h = T.t.filter(w => SH.tp(n._t, w) || n._t.includes(w)).length; if (T.mode === "and" ? h === T.t.length : h > 0) nm.set(n.id, { n, s: h + 2 }); });
-  SH.WIKIS.forEach(w => res[w].slice(0, 20).forEach(x => { if (x.c.ir && D.notesById[x.c.ir] && !nm.has(x.c.ir)) nm.set(x.c.ir, { n: D.notesById[x.c.ir], s: 1 }); }));
+  SH.WIKIS.forEach(w => res[w].forEach(x => { if (x.c.ir && T.t.some(t => SH.tp(x.c._nt, t) || SH.tp(x.c._ns, t)) && D.notesById[x.c.ir] && !nm.has(x.c.ir)) nm.set(x.c.ir, { n: D.notesById[x.c.ir], s: 1 }); }));
   const notes = [...nm.values()].sort((a, b) => b.s - a.s).map(x => x.n);
   let h = `<h2>یادداشت‌های آماری مرتبط <span class="muted">(${DS.faDigits(notes.length)})</span></h2>`;
   h += notes.length ? `<div class="grid">${notes.map(n => `<div class="card">${SH.noteBox(n)}</div>`).join("")}</div>` : `<div class="empty">یادداشت آماری ایرانی با این موضوع پیدا نشد. این یعنی «هنوز در داده نیست»، نه «چیزی وجود ندارد».</div>`;
