@@ -1,0 +1,70 @@
+{
+ "id": "soc:hedayat-folk-weather-signs",
+ "kind": "concept",
+ "title": {
+  "fa": "نشانه‌های باران و سرما در باور عامه: نمونه‌ای از دانش مردمی",
+  "en": "Rain and cold signs in popular belief: an example of folk knowledge",
+  "nl": "Volkse weertekens: een voorbeeld van volkskennis"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "بخشی از کتاب فهرستی از نشانه‌های پیش‌بینی هوا (رفتار پرندگان و جانوران، رنگ و حلقهٔ ماه و آسمان) را از منابع قدیمی نقل می‌کند؛ نمونه‌ای از دانش مشاهده‌ای عامه که گاه به باور نمادین آمیخته است.",
+  "en": "A section of the book cites lists of weather omens (animal and bird behaviour, the moon's halo and colour) from older sources, an example of observational folk knowledge mixed with symbolic belief.",
+  "nl": "Een deel van het boek somt weertekens op uit oudere bronnen: waarneming vermengd met symbolisch geloof."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "متن به نقل از منابع کهن نشانه‌هایی مانند بانگ بسیار گنجشک، رفتار موش و گرگ، یا هالهٔ ماه را علامت باران یا سرما می‌شمارد.",
+    "en": "Quoting older sources, the text counts signs such as loud sparrows, the behaviour of mice and wolves, or a halo around the moon as omens of rain or cold.",
+    "nl": "Quoting older sources, the text counts signs such as loud sparrows, the behaviour of mice and wolves, or a halo around the moon as omens of rain or cold."
+   },
+   "sources": [
+    "src:f2b0bf932c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چنین فهرست‌هایی بیانگر مشاهدهٔ طولانی طبیعت در جامعهٔ کشاورزی است، اما درستی هر نشانه جداگانه آزموده نشده و نباید پیش‌بینی علمی شمرده شود؛ فقط نمونه‌ای از شیوهٔ اندیشیدن عامه است.",
+    "en": "Such lists reflect long observation of nature in agrarian society, but each sign is untested and should not be treated as scientific forecasting; they illustrate popular ways of thinking.",
+    "nl": "Such lists reflect long observation of nature in agrarian society, but each sign is untested and should not be treated as scientific forecasting; they illustrate popular ways of thinking."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:custom-changing-functions",
+   "rel": "see-also",
+   "note": {
+    "fa": "رسم‌ها و کارکردها",
+    "en": "Customs and functions",
+    "nl": "Customs and functions"
+   }
+  },
+  {
+   "to": "soc:hedayat-nirangestan-origins-of-beliefs",
+   "rel": "part-of",
+   "note": {
+    "fa": "خاستگاه باورهای عامیانه",
+    "en": "Origins of popular beliefs",
+    "nl": "Origins of popular beliefs"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:f2b0bf932c"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

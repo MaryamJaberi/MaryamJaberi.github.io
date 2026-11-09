@@ -1,0 +1,104 @@
+{
+ "id": "phil:wiki-poetic-cosmos-vocab",
+ "kind": "concept",
+ "title": {
+  "fa": "واژگان جهان‌شناسی در شعر کلاسیک: عالم اصغر، عالم امر و خلق، عالم غیب",
+  "en": "Cosmological vocabulary in classical Persian poetry: microcosm, the realm of command and creation, the unseen",
+  "nl": "Kosmologisch vocabulaire in de klassieke Perzische poëzie"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "شاعران کلاسیک فارسی اصطلاحات فلسفی و عرفانی را به تصویر شعری تبدیل کرده‌اند. «عالم» در این شعرها یک واژه با لایه‌های مختلف است: جهان مادی، جهان درون، جهان ملکوت و جهان غیب.",
+  "en": "Classical Persian poets turned philosophical and Sufi terms into poetic imagery. The word 'ʿālam' carries several layers: the material world, the inner world, the angelic realm and the unseen.",
+  "nl": "Klassieke Perzische dichters maakten van filosofische en soefitermen poëtische beelden; 'ʿālam' heeft meerdere lagen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فرهنگ عفیفی «عالم اصغر» را کنایه از انسان (جهان کوچک) می‌آورد، در برابر جهان بزرگ؛ این همان ایدهٔ کهن تناظر انسان و کیهان است.",
+    "en": "The dictionary glosses 'small world' (ʿālam-i aṣghar) as the human being, set against the great world: the old idea of a correspondence between human and cosmos.",
+    "nl": "The dictionary glosses 'small world' (ʿālam-i aṣghar) as the human being, set against the great world: the old idea of a correspondence between human and cosmos."
+   },
+   "sources": [
+    "src:a554e9803d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«عالم امر» را جهان ملکوت و غیرمحسوس، و «عالم خلق» را جهان محسوس و جسمانی معنا می‌کند؛ شاعر با این دو واژه میان جهان دیدنی و نادیدنی مرز می‌گذارد.",
+    "en": "It explains the 'realm of command' as the angelic, non-sensory world and the 'realm of creation' as the sensory, bodily one; poets use the pair to mark the visible/invisible divide.",
+    "nl": "It explains the 'realm of command' as the angelic, non-sensory world and the 'realm of creation' as the sensory, bodily one; poets use the pair to mark the visible/invisible divide."
+   },
+   "sources": [
+    "src:a554e9803d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ترکیب‌های دیگری مثل «عالم جان» (جهان باطن)، «عالم خاکی» و «عالم فانی» (دنیا) و «عالم بالا» (آسمان) نشان می‌دهند که واژهٔ عالم هم برای مرتبهٔ وجود و هم برای تجربهٔ درونی به کار می‌رفت.",
+    "en": "Compounds such as 'world of the soul' (inner realm), 'earthly world' and 'perishable world' (this life), and 'upper world' (the heavens) show 'ʿālam' naming both a level of being and an inner experience.",
+    "nl": "Compounds such as 'world of the soul' (inner realm), 'earthly world' and 'perishable world' (this life), and 'upper world' (the heavens) show 'ʿālam' naming both a level of being and an inner experience."
+   },
+   "sources": [
+    "src:a554e9803d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این واژگان بیان شعریِ یک جهان‌بینی‌اند، نه استدلال فلسفی؛ برای سنجش خود فلسفه باید سراغ متن‌های فلسفی (مثلاً سهروردی و ملاصدرا) رفت.",
+    "en": "These words are the poetic expression of a worldview, not philosophical argument; to assess the philosophy itself one must turn to philosophical texts (e.g. Suhrawardi, Mulla Sadra).",
+    "nl": "These words are the poetic expression of a worldview, not philosophical argument; to assess the philosophy itself one must turn to philosophical texts (e.g. Suhrawardi, Mulla Sadra)."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:iranian",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از فلسفهٔ ایرانی‌اسلامی",
+    "en": "Part of Iranian-Islamic philosophy",
+    "nl": "Part of Iranian-Islamic philosophy"
+   }
+  },
+  {
+   "to": "phil:illumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "حکمت اشراق و نور و عوالم",
+    "en": "Illuminationism and its realms of light",
+    "nl": "Illuminationism and its realms of light"
+   }
+  },
+  {
+   "to": "phil:substantial-motion",
+   "rel": "see-also",
+   "note": {
+    "fa": "هستی‌شناسی ملاصدرا",
+    "en": "Mulla Sadra's ontology",
+    "nl": "Mulla Sadra's ontology"
+   }
+  }
+ ],
+ "people": [
+  "core:hafez",
+  "core:rumi"
+ ],
+ "sources": [
+  "src:a554e9803d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

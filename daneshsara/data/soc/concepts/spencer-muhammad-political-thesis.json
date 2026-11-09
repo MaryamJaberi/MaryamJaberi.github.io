@@ -1,0 +1,107 @@
+{
+ "id": "soc:spencer-muhammad-political-thesis",
+ "kind": "concept",
+ "title": {
+  "fa": "اسپنسر: محمد و جهاد در بحث سیاست غرب پس از ۱۱ سپتامبر",
+  "en": "Spencer: Muhammad, jihad and the post-9/11 Western policy debate",
+  "nl": "Spencer: Mohammed, jihad en het westerse beleidsdebat na 9/11"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "اسپنسر می‌گوید خشونت جهادگرایان با الگوی زندگی محمد پیوند دارد و تصویر «اسلام دین صلح» سیاست‌گذاران غرب را گمراه می‌کند. این دیدگاه شناخته‌شده و بسیار مورد مناقشه است؛ پژوهش دانشگاهی و بسیاری از مسلمانان آن را ساده‌انگارانه و گزینشی می‌دانند.",
+  "en": "Spencer argues that jihadist violence is linked to Muhammad's example and that the 'Islam is peace' image misleads Western policymakers. The view is widely contested; academic scholars and many Muslims consider it simplistic and selective.",
+  "nl": "Spencer stelt dat jihadistisch geweld samenhangt met het voorbeeld van Mohammed en dat het beeld 'islam is vrede' beleidsmakers misleidt. Het standpunt is sterk omstreden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به ادعای اسپنسر، رهبران غربی پس از ۱۱ سپتامبر بی‌آنکه محمد را بشناسند اسلام را «دین صلح» نامیده‌اند و برای سیاست خارجی شناخت واقعی از او لازم است.",
+    "en": "Spencer claims Western leaders after 9/11 called Islam a 'religion of peace' without knowing Muhammad, and that real knowledge of him is needed for foreign policy.",
+    "nl": "Spencer claims Western leaders after 9/11 called Islam a 'religion of peace' without knowing Muhammad, and that real knowledge of him is needed for foreign policy."
+   },
+   "sources": [
+    "src:f016772201"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او مثال‌هایی از سخنوران مسلمان و غیرمسلمان می‌آورد که محمد را قانون‌گذار صلح‌جو و دموکرات تصویر می‌کنند و آن را بازتاب ناقص تاریخ می‌داند.",
+    "en": "He quotes Muslim and non-Muslim speakers portraying Muhammad as a peaceful, democratic lawgiver and treats this as an incomplete reflection of history.",
+    "nl": "He quotes Muslim and non-Muslim speakers portraying Muhammad as a peaceful, democratic lawgiver and treats this as an incomplete reflection of history."
+   },
+   "sources": [
+    "src:f016772201"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دیدگاه مقابل پژوهش دانشگاهی: اسلام و مسلمانان ناهمگن‌اند؛ تفسیر خشونت یا صلح از متون و شخصیت بنیان‌گذار بسته به زمان، فرقه و زمینهٔ سیاسی فرق می‌کند. محققانی مانند وات و اسپوزیتو محمد را در زمینهٔ عربستان قرن هفتم می‌خوانند. منتقدان کتاب را نمونه‌ای از «اسلام‌هراسی» می‌دانند، و پژوهشگران حوزهٔ جهادگرایی علل سیاسی و اجتماعی را همراه با دینی مهم می‌شمارند.",
+    "en": "Academic counterview: Islam and Muslims are heterogeneous; readings of violence or peace in texts and in the founder vary by era, sect and political context. Scholars such as Watt and Esposito read Muhammad in the context of seventh-century Arabia. Critics classify the book as anti-Muslim polemic, and researchers on jihadism stress political and social causes alongside religious ones.",
+    "nl": "Academic counterview: Islam and Muslims are heterogeneous; readings of violence or peace in texts and in the founder vary by era, sect and political context. Scholars such as Watt and Esposito read Muhammad in the context of seventh-century Arabia. Critics classify the book as anti-Muslim polemic, and researchers on jihadism stress political and social causes alongside religious ones."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ روش: عنوان و چارچوب کتاب حکم کلی دربارهٔ یک دین می‌دهد؛ این با رویهٔ علمی مقایسه‌ای (بررسی دوره‌ها و تفسیرهای گوناگون) فاصله دارد.",
+    "en": "Method note: the title and framing pass a sweeping verdict on a whole religion, which departs from comparative scholarly practice of examining varied periods and interpretations.",
+    "nl": "Method note: the title and framing pass a sweeping verdict on a whole religion, which departs from comparative scholarly practice of examining varied periods and interpretations."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:muhammad-biography-sources-problem",
+   "rel": "see-also",
+   "note": {
+    "fa": "مسئلهٔ منابع پایهٔ استدلال کتاب",
+    "en": "The source problem underlying the argument",
+    "nl": "The source problem underlying the argument"
+   }
+  },
+  {
+   "to": "soc:values",
+   "rel": "part-of",
+   "note": {
+    "fa": "ارزش‌ها و دین",
+    "en": "Values and religion",
+    "nl": "Values and religion"
+   }
+  },
+  {
+   "to": "soc:secularization",
+   "rel": "contrasts",
+   "note": {
+    "fa": "چارچوب جامعه‌شناختی دین و سکولار شدن",
+    "en": "Sociological framing of religion and secularization",
+    "nl": "Sociological framing of religion and secularization"
+   }
+  }
+ ],
+ "people": [
+  "core:robert-spencer",
+  "core:w-montgomery-watt",
+  "core:john-esposito"
+ ],
+ "sources": [
+  "src:f016772201"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

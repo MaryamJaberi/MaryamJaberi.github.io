@@ -1,0 +1,70 @@
+{
+ "id": "phil:wiki-kenaye-meaning-as-use",
+ "kind": "concept",
+ "title": {
+  "fa": "کنایه در زبان فارسی: معنای ترکیب جدا از معنای تک‌تک واژه‌ها",
+  "en": "Persian kenāyeh: idiom meaning beyond its words",
+  "nl": "Perzische kenāyeh: betekenis van uitdrukkingen"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "کنایه یعنی ترکیبی که معنایش از جمع معنای واژه‌ها به دست نمی‌آید. فرهنگ‌های شعری مثل این کتاب معنای رایج هر ترکیب را از روی کاربردش در شعرها ثبت می‌کنند.",
+  "en": "A kenāyeh is a phrase whose meaning is not the sum of its words; poetic dictionaries record each phrase's usual meaning from how poets use it.",
+  "nl": "Een kenāyeh is een uitdrukking waarvan de betekenis meer is dan de som van de woorden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فرهنگ عفیفی برای هر ترکیب (مثل «عالم بر کسی تنگ شدن» که یعنی رنج و سختی) معنا را همراه چند بیت شاهد می‌آورد؛ معنا از کاربرد در متن‌ها استخراج می‌شود نه از ساختار واژه‌ها.",
+    "en": "For each phrase (e.g. 'the world narrows on someone', meaning hardship) the dictionary gives a gloss plus several verse examples: meaning is drawn from use in texts, not from the words' structure.",
+    "nl": "For each phrase (e.g. 'the world narrows on someone', meaning hardship) the dictionary gives a gloss plus several verse examples: meaning is drawn from use in texts, not from the words' structure."
+   },
+   "sources": [
+    "src:a554e9803d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یک ترکیب می‌تواند در دوره‌ها و متن‌های مختلف معنای متفاوت یا چندلایه داشته باشد (مثلاً «عالم آشوب» هم زیبایی و هم آشوب جهان)؛ پس تعریف فرهنگ، یک خلاصه است نه حکم نهایی.",
+    "en": "A phrase can have different or layered senses across periods and texts (e.g. 'world-disturber' for beauty or for turmoil), so a dictionary gloss is a summary, not a final ruling.",
+    "nl": "A phrase can have different or layered senses across periods and texts (e.g. 'world-disturber' for beauty or for turmoil), so a dictionary gloss is a summary, not a final ruling."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:language-games",
+   "rel": "bridges",
+   "note": {
+    "fa": "معنا به‌مثابه کاربرد",
+    "en": "Meaning as use",
+    "nl": "Meaning as use"
+   }
+  },
+  {
+   "to": "phil:iranian",
+   "rel": "part-of",
+   "note": {
+    "fa": "فرهنگ و اندیشهٔ ایرانی",
+    "en": "Iranian thought and culture",
+    "nl": "Iranian thought and culture"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:a554e9803d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

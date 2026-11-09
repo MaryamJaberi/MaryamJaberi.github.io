@@ -1,0 +1,95 @@
+{
+ "id": "phil:ohlig-source-criticism-early-islam",
+ "kind": "concept",
+ "title": {
+  "fa": "نقد منابع متأخر و تکیه بر سکه و کتیبه در بازنگری تاریخ اسلام",
+  "en": "Source criticism of late sources and reliance on coins and inscriptions in revisionist early-Islam history",
+  "nl": "Bronnenkritiek en het gebruik van munten en inscripties bij de herziening van de vroege islamgeschiedenis"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "اولیگ از «خواندن تاریخ از آخر» حرف می‌زند: از منابع قابل‌تأریخ‌تر مثل سکه و کتیبه شروع کنیم و بعد به متن‌های متأخر برسیم. این اصل روش‌شناختی معتبر است، اما نتیجه‌هایی که او می‌گیرد محل مناقشه‌اند.",
+  "en": "Ohlig proposes reading history backwards: begin from datable evidence such as coins and inscriptions, then turn to later texts. The principle is sound; his conclusions are contested.",
+  "nl": "Ohlig pleit ervoor de geschiedenis achterstevoren te lezen: begin met dateerbaar materiaal zoals munten en inscripties. Het principe is geldig, de conclusies zijn omstreden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گزارش‌های زندگی‌نامهٔ محمد و حدیث به گفتهٔ نویسنده بسیار دیرتر از وقایع نوشته شده‌اند، مثل کار ابن‌هشام در سدهٔ نهم میلادی، و بنابراین باید با احتیاط به آن‌ها نگریست.",
+    "en": "The author notes that the biographies of Muhammad and the hadith were written long after the events, for instance Ibn Hisham in the ninth century, so they call for caution.",
+    "nl": "The author notes that the biographies of Muhammad and the hadith were written long after the events, for instance Ibn Hisham in the ninth century, so they call for caution."
+   },
+   "sources": [
+    "src:f0cf426419"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او ادعا می‌کند بخشی از روایت سنتی از اساطیر پیشین، مثلاً داستان بودا و فیل، وام گرفته شده است. این تطبیق تحلیل خود اوست.",
+    "en": "He claims parts of the traditional account borrow from earlier myths, such as the Buddha and elephant story. That comparison is his own analysis.",
+    "nl": "He claims parts of the traditional account borrow from earlier myths, such as the Buddha and elephant story. That comparison is his own analysis."
+   },
+   "sources": [
+    "src:f0cf426419"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نویسنده بر نبودن عبارت‌هایی در کتیبه‌ها و سکه‌های قدیم تکیه می‌کند؛ اما نبودِ شاهد لزوماً نشانهٔ نبودنِ رویداد نیست و پژوهشگران بسیاری همان شواهد را متفاوت می‌خوانند.",
+    "en": "He leans on what early coins and inscriptions do not say; absence of evidence is not proof of absence, and many scholars read the same evidence differently.",
+    "nl": "He leans on what early coins and inscriptions do not say; absence of evidence is not proof of absence, and many scholars read the same evidence differently."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نمونهٔ دیگر او خط قرآن است: نسخه‌های قدیم بی‌نقطه و بی‌اعراب‌اند و همین امکان خوانش‌های متفاوت را می‌دهد.",
+    "en": "Another example is the Quranic script: the oldest copies lack dots and vowel marks, which allows differing readings.",
+    "nl": "Another example is the Quranic script: the oldest copies lack dots and vowel marks, which allows differing readings."
+   },
+   "sources": [
+    "src:f0cf426419"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:ohlig-late-islam-merv-thesis",
+   "rel": "part-of",
+   "note": {
+    "fa": "فرضیهٔ اولیگ",
+    "en": "Ohlig's thesis",
+    "nl": "Ohlig's thesis"
+   }
+  },
+  {
+   "to": "phil:iranian",
+   "rel": "see-also",
+   "note": {
+    "fa": "فلسفهٔ ایرانی‌اسلامی",
+    "en": "Iranian-Islamic philosophy",
+    "nl": "Iranian-Islamic philosophy"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:f0cf426419"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

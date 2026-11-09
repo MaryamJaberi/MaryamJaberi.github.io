@@ -1,0 +1,88 @@
+{
+ "id": "phil:luxenberg-syro-aramaic-quran-reading",
+ "kind": "concept",
+ "title": {
+  "fa": "خوانش سریانی-آرامی قرآن (لوکسنبرگ) و ارزیابی آن",
+  "en": "The Syro-Aramaic reading of the Quran (Luxenberg) and its assessment",
+  "nl": "De Syro-Aramese lezing van de Koran (Luxenberg) en de beoordeling ervan"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "اولیگ به پژوهش کریستوف لوکسنبرگ تکیه می‌کند که بخش‌هایی از قرآن را با زمینهٔ سریانی-آرامی بازمی‌خواند. این رویکرد جنجالی است؛ تأثیر سریانی بر قرآن پذیرفته‌تر از بازخوانی‌های ریشه‌ای لوکسنبرگ است.",
+  "en": "Ohlig relies on Christoph Luxenberg's re-reading of parts of the Quran against a Syro-Aramaic background. It is controversial: Syriac influence is widely accepted, Luxenberg's radical re-readings much less so.",
+  "nl": "Ohlig steunt op Luxenbergs herlezing van delen van de Koran tegen een Syro-Aramese achtergrond. Syrische invloed wordt breed erkend, Luxenbergs radicale herlezingen veel minder."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ کتاب، لوکسنبرگ نشان می‌دهد برخی بخش‌های قرآن با ریشه‌های سریانی-آرامی معنای تازه‌ای می‌یابند و از این رو متن زمینه‌ای مسیحی دارد.",
+    "en": "According to the book, Luxenberg shows that some Quranic passages take on new meanings via Syro-Aramaic roots, suggesting a Christian background.",
+    "nl": "According to the book, Luxenberg shows that some Quranic passages take on new meanings via Syro-Aramaic roots, suggesting a Christian background."
+   },
+   "sources": [
+    "src:f0cf426419"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "کتاب می‌گوید «حروف مرموز» آغاز سوره‌ها و بخش‌بندی متن نشانهٔ پیوند با سنت نیایشی مسیحی است.",
+    "en": "The book suggests the 'mysterious letters' opening surahs and the textual divisions point to a link with Christian liturgical tradition.",
+    "nl": "The book suggests the 'mysterious letters' opening surahs and the textual divisions point to a link with Christian liturgical tradition."
+   },
+   "sources": [
+    "src:f0cf426419"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بیشتر زبان‌شناسان وجود وام‌واژه‌ها و تأثیر سریانی بر زبان قرآن را می‌پذیرند، اما بازخوانی‌های بنیادی لوکسنبرگ را بی‌پشتوانهٔ کافی می‌دانند.",
+    "en": "Most linguists accept loanwords and Syriac influence on Quranic language but judge Luxenberg's radical re-readings insufficiently supported.",
+    "nl": "Most linguists accept loanwords and Syriac influence on Quranic language but judge Luxenberg's radical re-readings insufficiently supported."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:ohlig-source-criticism-early-islam",
+   "rel": "see-also",
+   "note": {
+    "fa": "نقد منابع",
+    "en": "Source criticism",
+    "nl": "Source criticism"
+   }
+  },
+  {
+   "to": "phil:ohlig-late-islam-merv-thesis",
+   "rel": "part-of",
+   "note": {
+    "fa": "فرضیهٔ اولیگ",
+    "en": "Ohlig's thesis",
+    "nl": "Ohlig's thesis"
+   }
+  }
+ ],
+ "people": [
+  "core:christoph-luxenberg"
+ ],
+ "sources": [
+  "src:f0cf426419"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,92 @@
+{
+ "id": "phil:muhammad-biography-sources-problem",
+ "kind": "concept",
+ "title": {
+  "fa": "مسئلهٔ منابع برای شناخت محمد تاریخی",
+  "en": "The source problem in knowing the historical Muhammad",
+  "nl": "Het bronnenprobleem bij het kennen van de historische Mohammed"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "شرح‌های مفصل زندگی محمد بسیار دیرتر از زمان او نوشته شده‌اند؛ پس جداکردن واقعیت از روایت دشوار است. اسپنسر این دشواری را می‌پذیرد و از آن در استدلال خود بهره می‌برد، و پژوهش دانشگاهی دربارهٔ اندازهٔ بی‌اعتمادی به منابع اختلاف دارد.",
+  "en": "The detailed biographies of Muhammad were written well after his lifetime, so separating fact from tradition is hard. Spencer accepts this difficulty and builds on it, while academic scholarship disagrees about how far the sources can be trusted.",
+  "nl": "De uitvoerige biografieën van Mohammed zijn lang na zijn leven geschreven, waardoor feit en overlevering moeilijk te scheiden zijn. Spencer erkent dit; de wetenschap verschilt van mening over hoe betrouwbaar de bronnen zijn."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ اسپنسر، قرآن روایت پیوسته‌ای از زندگی محمد نمی‌دهد و رویدادها را اغلب ناقص و با فرض آشنایی مخاطب به‌اشاره می‌آورد؛ بنابراین برای فهمیدن آن به حدیث و سیره نیاز هست.",
+    "en": "Spencer says the Quran gives no continuous life story, alluding to events as if the audience already knew them, so it must be read with hadith and sira.",
+    "nl": "Spencer says the Quran gives no continuous life story, alluding to events as if the audience already knew them, so it must be read with hadith and sira."
+   },
+   "sources": [
+    "src:f016772201"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او سیرهٔ ابن‌اسحاق را نخستین زندگی‌نامهٔ مفصل می‌داند که اصل آن گم شده و از راه ویرایش ابن‌هشام و نقل‌های طبری بازمانده است و بخش‌هایی از آن را پیشینیان حذف یا نقد کرده‌اند.",
+    "en": "He presents Ibn Ishaq's biography as the first detailed life, lost in its original form and surviving through Ibn Hisham's edition and Tabari's quotations, with parts omitted or criticized by earlier Muslim scholars.",
+    "nl": "He presents Ibn Ishaq's biography as the first detailed life, lost in its original form and surviving through Ibn Hisham's edition and Tabari's quotations, with parts omitted or criticized by earlier Muslim scholars."
+   },
+   "sources": [
+    "src:f016772201"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اجماع پژوهش دانشگاهی: سیره‌ها و مجموعه‌های حدیث، بین یک تا دو قرن پس از محمد تدوین شده‌اند و روایت‌ها گاه برای نیازهای حقوقی، سیاسی یا فرقه‌ای شکل گرفته‌اند؛ اختلاف بر سر شدت شک است (شاخت و گلدزیهر بدبین‌ترند، موتسکی و دیگران با روش تحلیل سند و متن خوش‌بین‌ترند).",
+    "en": "Mainstream academic view: the biographies and hadith collections were compiled one to two centuries after Muhammad and some reports reflect later legal, political or sectarian needs; scholars differ on the degree of skepticism (Schacht and Goldziher more sceptical, Motzki and others more optimistic via isnad-cum-matn analysis).",
+    "nl": "Mainstream academic view: the biographies and hadith collections were compiled one to two centuries after Muhammad and some reports reflect later legal, political or sectarian needs; scholars differ on the degree of skepticism (Schacht and Goldziher more sceptical, Motzki and others more optimistic via isnad-cum-matn analysis)."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "روش اسپنسر در بخش خوانده‌شده: با وجود اذعان به دشواری، روایت‌های کهن را برای ساختن تصویر محمد به کار می‌گیرد؛ منتقدان این را گزینش می‌دانند، چون روایت‌های هم‌سو با فرضیه را معتبر می‌شمارد. مسلمانان سنتی نیز علم رجال و سنجش سند دارند که کتاب آن را به تفصیل بحث نمی‌کند (در بخش خوانده‌شده).",
+    "en": "Spencer's method in the part read: despite admitting the difficulty, he uses the early reports to build his portrait; critics call this selective, since reports fitting his thesis are taken as reliable. Traditional Muslim scholars also have rijal and isnad criticism, which the book does not discuss at length (in the part read).",
+    "nl": "Spencer's method in the part read: despite admitting the difficulty, he uses the early reports to build his portrait; critics call this selective, since reports fitting his thesis are taken as reliable. Traditional Muslim scholars also have rijal and isnad criticism, which the book does not discuss at length (in the part read)."
+   },
+   "sources": [
+    "src:f016772201"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:epistemology",
+   "rel": "part-of",
+   "note": {
+    "fa": "نمونه‌ای از مسئلهٔ شناخت تاریخی از روی گواهی‌های متأخر",
+    "en": "An example of historical knowledge from late testimony",
+    "nl": "An example of historical knowledge from late testimony"
+   }
+  }
+ ],
+ "people": [
+  "core:ibn-ishaq",
+  "core:ibn-hisham",
+  "core:harald-motzki",
+  "core:joseph-schacht"
+ ],
+ "sources": [
+  "src:f016772201"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

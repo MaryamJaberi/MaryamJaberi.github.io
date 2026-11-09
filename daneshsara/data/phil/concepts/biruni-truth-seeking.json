@@ -1,0 +1,86 @@
+{
+ "id": "phil:biruni-truth-seeking",
+ "kind": "concept",
+ "title": {
+  "fa": "بیرونی و روحیهٔ حق‌گویی در پژوهش",
+  "en": "Biruni and the ethos of truth-telling in inquiry",
+  "nl": "Biruni en de houding van waarheidsvinding"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "ابوریحان بیرونی (۳۶۲–۴۴۰ ق) دانشمند همه‌فن‌حریف ایرانی بود. او شعار علمی خود را گفتن حق، حتی به زیان خود، می‌دانست و در گزارش آرای دیگران بی‌طرفی می‌جست.",
+  "en": "Abu Rayhan al-Biruni (973-1048 CE) was a polymath from Khwarazm whose stated principle was to tell the truth even against oneself, and to report others' views fairly.",
+  "nl": "Al-Biruni (973-1048) was een geleerde uit Khwarazm die streefde naar waarheid en eerlijke weergave van andermans opvattingen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بیرونی به گزارش همایی بیش از یک زبان را می‌دانست؛ فارسی و عربی و سریانی/عبری و سانسکریت را به‌یقین و یونانی را به‌احتمال، و از این رو منابع را دست‌اول می‌خواند.",
+    "en": "According to Homayi, Biruni knew Persian, Arabic, Hebrew/Syriac and Sanskrit with certainty and probably Greek, so he read sources at first hand.",
+    "nl": "According to Homayi, Biruni knew Persian, Arabic, Hebrew/Syriac and Sanskrit with certainty and probably Greek, so he read sources at first hand."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او در مقدمهٔ کتاب الهند اصل «حق را بگویید حتی علیه خودتان» را شعار خود می‌داند و دیگر نویسندگان را به‌خاطر گزارش بی‌غرض ستایش می‌کند؛ همایی او را در بی‌تعصبی کم‌مانند می‌شمارد.",
+    "en": "In the introduction to the Book of India he adopts the rule of speaking truth even against oneself; Homayi ranks him as rarely free of bias. This is an admiring editor's judgement.",
+    "nl": "In the introduction to the Book of India he adopts the rule of speaking truth even against oneself; Homayi ranks him as rarely free of bias. This is an admiring editor's judgement."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در دربار محمود غزنوی با صراحت سخن می‌گفت؛ نمونه‌اش انتقاد او از غرور سلطان به ثروتش است و همایی این را از دلایل بی‌مهری سلطان می‌داند (تفسیر مصحح).",
+    "en": "At Mahmud of Ghazni's court he spoke bluntly, for example rebuking the sultan's pride in his wealth; Homayi reads this as a reason for the sultan's coolness (the editor's interpretation).",
+    "nl": "At Mahmud of Ghazni's court he spoke bluntly, for example rebuking the sultan's pride in his wealth; Homayi reads this as a reason for the sultan's coolness (the editor's interpretation)."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:iranian",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از فلسفه و اندیشهٔ ایرانی-اسلامی",
+    "en": "part of Iranian-Islamic thought",
+    "nl": "part of Iranian-Islamic thought"
+   }
+  },
+  {
+   "to": "phil:science",
+   "rel": "see-also",
+   "note": {
+    "fa": "فلسفهٔ علم",
+    "en": "philosophy of science",
+    "nl": "philosophy of science"
+   }
+  }
+ ],
+ "people": [
+  "core:abu-rayhan-al-biruni",
+  "core:jalal-al-din-homayi"
+ ],
+ "sources": [
+  "src:342e87812d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
