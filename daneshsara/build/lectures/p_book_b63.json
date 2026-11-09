@@ -1,0 +1,583 @@
+{
+ "paper": true,
+ "book": {
+  "title": "مسئولیت شخصی در دوران دیکتاتوری",
+  "author": "هانا آرنت (Hannah Arendt)",
+  "translator": "بنیاد عبدالرحمن برومند (ویراستار: رضا ناصحی؛ مقدمه: لادن برومند)",
+  "year": "1964 (اصل)؛ ترجمهٔ فارسی 1387/2008",
+  "publisher": "بنیاد عبدالرحمن برومند، واشنگتن",
+  "type": "primary-source",
+  "read": "full",
+  "pages_or_sections_read": "هر ۲۶ صفحه با OCR (فارسی)؛ مقدمهٔ مترجم و تمام متن مقاله خوانده شد؛ بخش‌هایی از پاورقی‌ها و یکی‌دو سطر ناخوانا",
+  "drive_id": "1AKe9p-Q_vWqJadPe-GXKatBjZ93lMdAy"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "متن اصلیِ یک فیلسوف سیاسی شناخته‌شده، معتبر برای اندیشهٔ خود آرنت؛ ادعاهای تاریخی‌اش دربارهٔ آیشمن محل بحث است.",
+  "reasons": [
+   "نویسنده فیلسوف و نظریه‌پرداز برجستهٔ سیاسی است (دکتری فلسفه با یاسپرس؛ «ریشه‌های توتالیتاریسم»، «وضع بشر»).",
+   "متن سخنرانی/مقالهٔ استدلالی است، نه پژوهش تجربی؛ ارجاع و داده کم دارد و به روایت دادگاه اورشلیم تکیه می‌کند.",
+   "برگردان فارسی از نهاد حقوق‌بشری برومند است؛ ترجمه و پانویس‌ها روان و دقیق به نظر می‌رسد، اما مقدمهٔ مترجم روایتی سیاسی دربارهٔ جمهوری اسلامی دارد و از متن آرنت جداست.",
+   "منبع اولیه برای اندیشهٔ آرنت دربارهٔ مسئولیت، داوری و اطاعت؛ برای تصویر تاریخی-روان‌شناختیِ آیشمن، پژوهش‌های بعدی (مثل استانگنت) آن را اصلاح کرده‌اند."
+  ],
+  "best_use_fa": "منبع خوب برای فهم موضع آرنت دربارهٔ مسئولیت شخصی، مهره‌بودن، کمتر-بد، اندیشیدن و اطاعت؛ منبع مناسبی برای تعیین حقیقت تاریخی دربارهٔ آیشمن یا برای شواهد تجربی دربارهٔ رفتار آدمی نیست.",
+  "cautions": [
+   "تصویر آرنت از آیشمن مورد انتقاد تاریخ‌نگاران است.",
+   "پیوند مقدمه به سیاست امروز ایران نظر مترجم است، نه بخشی از استدلال آرنت.",
+   "OCR فارسی در برخی پانویس‌ها نادقیق است؛ این موارد استفاده نشد."
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "متن اصلیِ آرنت و منبع اولیه برای اندیشهٔ او؛ با موارد تکراری نسبت به b47 (وضع بشر) و b30 (فروم/آیشمن) ندارد و موضوع تازه (مسئولیت شخصی، مهره‌بودن، کمتر-بد، اندیشیدن، اطاعت) می‌افزاید؛ ادعاهای محل‌بحث با پرچم مشخص شده‌اند.",
+ "summary_of_book_fa": "مقالهٔ آرنت (۱۹۶۴) در پاسخ به جدل‌های پس از «آیشمن در اورشلیم» است. او مسئولیت شخصی را از مسئولیت سیاسی جدا می‌کند، نظریهٔ مهره‌بودن و استدلال کمتر-بد را رد می‌کند، کناره‌گیرانِ از رژیم نازی را با توان داوری و «زیستن با خود» توضیح می‌دهد و می‌گوید در سیاست به‌جای اطاعت باید از حمایت سخن گفت. ترجمهٔ فارسی از بنیاد برومند (۱۳۸۷).",
+ "entries": [
+  {
+   "id": "arendt-personal-responsibility-no-collective-guilt",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "آرنت: مسئولیت شخصی در برابر مسئولیت سیاسی؛ چرا «گناه جمعی» همه را تبرئه می‌کند",
+    "en": "Arendt: personal versus political responsibility, and why collective guilt exonerates everyone",
+    "nl": "Arendt: persoonlijke versus politieke verantwoordelijkheid en waarom collectieve schuld iedereen vrijpleit"
+   },
+   "summary": {
+    "fa": "آرنت میان مسئولیت سیاسی (که دولت‌ها و ملت‌ها از پیشینیان به ارث می‌برند) و مسئولیت شخصی (که به کارِ مشخصِ یک فرد برمی‌گردد) فرق می‌گذارد. به باور او گناه و بی‌گناهی فقط دربارهٔ افراد معنا دارد و سخن از گناه همگانی یا خطای «کل تاریخ» عملاً عاملان واقعی را پنهان می‌کند. او همچنین از اکراهِ رایج از داوری‌کردن دفاع نمی‌کند.",
+    "en": "Arendt separates political responsibility, which governments and nations inherit from predecessors, from personal responsibility for one's own deeds. In her view guilt and innocence make sense only for individuals; talk of universal guilt or the fault of a whole history hides the actual perpetrators. She also rejects the widespread reluctance to judge.",
+    "nl": "Arendt onderscheidt politieke verantwoordelijkheid, die regeringen en naties van voorgangers erven, van persoonlijke verantwoordelijkheid voor eigen daden. Schuld en onschuld hebben volgens haar alleen voor individuen betekenis; collectieve schuld verbergt de werkelijke daders."
+   },
+   "points": [
+    {
+     "fa": "آرنت مسئولیت سیاسی را چیزی می‌داند که هر حکومت برای کارهای پیشینیان و هر نسل با زاده‌شدن در یک تاریخ به دوش می‌کشد. مسئولیت شخصی، به‌تعبیر او، از این نوع نیست و به کاری برمی‌گردد که خودِ فرد کرده است.",
+     "en": "Arendt treats political responsibility as what a government carries for its predecessors and each generation carries by being born into a history. Personal responsibility, she says, is a different thing: it attaches to what the individual himself did.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "احساس گناه بابت کاری که خود نکرده‌ایم را او فقط در معنایی استعاری می‌پذیرد و از نظر اخلاقی همان‌قدر نادرست می‌شمارد که نداشتن هیچ احساس گناه بابت کاری که کرده‌ایم. اینکه در آلمانِ پس از جنگ بی‌گناهان از گناه می‌گفتند و عاملان کمتر پشیمان بودند، برایش نشانهٔ آشفتگی معیارهای اخلاقی بود.",
+     "en": "She accepts guilt for deeds not done only as a metaphor and judges it as morally wrong as feeling none for deeds done. That innocents spoke of guilt in postwar Germany while few perpetrators showed remorse seemed to her a sign of confused moral standards.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "استدلال او این است که وقتی همه گناهکار شمرده شوند هیچ‌کس گناهکار نیست؛ به همین دلیل متهم‌کردن کل آلمان، کل مسیحیت یا کل بشریت به‌جای یک نفر یا یک گروه مشخص، در عمل عاملان را تطهیر می‌کند. گناه و بی‌گناهی فقط وقتی معنا دارند که فردی باشند.",
+     "en": "Her argument is that when everyone is guilty no one is; blaming all of Germany, all of Christianity or all of mankind instead of a specific person or group in practice cleanses the actual doers. Guilt and innocence have meaning only when individual.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او نشان می‌دهد که توضیح رخدادها با جبر تاریخ، روح زمانه یا ضرورتی پنهان، پذیرفته و آسان است، اما همین که تقصیری مشخص به فردی مشخص نسبت داده شود اعتراض برمی‌خیزد؛ مثلاً ریشهٔ کارهای هیتلر را در افلاطون، هگل یا علم مدرن جستن بی‌دردسر است، ولی او را عامل دانستن «سطحی» خوانده می‌شود.",
+     "en": "She observes that explaining events by historical necessity, the spirit of the age or a hidden dialectic is welcome, whereas assigning a specific fault to a specific person draws outcry; tracing Hitler's deeds to Plato, Hegel or modern science is tolerated, but calling him an agent is called simplistic.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اینکه «تو آنجا نبودی، پس حق داوری نداری» را او نمی‌پذیرد: با چنین قاعده‌ای نه تاریخ‌نگاری ممکن بود نه دادرسی. ترس از داوری را هم نشانهٔ این گمان پنهان می‌داند که کسی مختار نیست و در نتیجه کسی مسئول نیست. (آیشمن نیز در برابر حکم همین را می‌گفت.)",
+     "en": "She rejects the objection 'you were not there, so you may not judge': under that rule neither history-writing nor trial would be possible. She reads the fear of judging as a hidden suspicion that nobody is free and hence nobody responsible. (Eichmann made the same argument against his verdict.)",
+     "flags": [],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "فیلسوف و نظریه‌پرداز سیاسی آلمانی‌تبار؛ گزارشگر محاکمهٔ آیشمن"
+    },
+    {
+     "latin": "Adolf Eichmann",
+     "fa": "آدولف آیشمن",
+     "years": "1906–1962",
+     "note": "مأمور عالی‌رتبهٔ رایش سوم در سازمان‌دادن تبعید یهودیان؛ محاکمه‌شده در اورشلیم ۱۹۶۱"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:moral-luck",
+     "rel": "see-also",
+     "fa": "بخت اخلاقی: وقتی مسئولیت به شرایطی بیرون از اراده گره می‌خورد",
+     "en": "Moral luck: when responsibility is tied to circumstances beyond one's will"
+    },
+    {
+     "to": "phil:arendt-natality-plurality",
+     "rel": "see-also",
+     "fa": "زادگی و تکثر نزد آرنت",
+     "en": "Natality and plurality in Arendt"
+    },
+    {
+     "to": "soc:fromm-bureaucratic-obedience-eichmann",
+     "rel": "see-also",
+     "fa": "بوروکراسی و آیشمن نزد فروم",
+     "en": "Bureaucracy and Eichmann in Fromm"
+    },
+    {
+     "to": "soc:arendt-cog-theory-orders-dictatorship",
+     "rel": "see-also",
+     "fa": "نظریهٔ مهره‌بودن و دستور مافوق",
+     "en": "The cog theory and superior orders"
+    }
+   ]
+  },
+  {
+   "id": "arendt-cog-theory-orders-dictatorship",
+   "wiki": "soc",
+   "field": "institutions",
+   "title": {
+    "fa": "نظریهٔ «مهره‌بودن»، دستور مافوق و تفاوت دیکتاتوری با توتالیتاریسم نزد آرنت",
+    "en": "Arendt on the 'cog' defence, superior orders, and dictatorship versus totalitarianism",
+    "nl": "Arendt over het 'radertje'-verweer, bevel van hogerhand en dictatuur versus totalitarisme"
+   },
+   "summary": {
+    "fa": "آرنت می‌گوید در توصیف سیاسیِ یک نظام همه مهره‌اند و قابل تعویض، اما دادگاه یک انسان را محاکمه می‌کند نه یک نظام را. او دیکتاتوری‌های معمول را از حکومت توتالیتر جدا می‌کند و نشان می‌دهد چرا دفاع‌هایی مثل «اقدام حکومتی» و «دستور مافوق» در مورد جنایت‌هایی که خودِ قانون رژیم شده بودند کارساز نیست.",
+    "en": "Arendt argues that in political description everyone in a system is a replaceable cog, but a court tries a person, not a system. She separates ordinary dictatorships from totalitarian rule and shows why defences such as 'act of state' and 'superior orders' fail when crime has itself become the regime's law.",
+    "nl": "Arendt stelt dat in politieke beschrijving iedereen in een systeem een inwisselbaar radertje is, maar dat een rechtbank een persoon berecht, geen systeem. Ze onderscheidt gewone dictaturen van totalitaire heerschappij."
+   },
+   "points": [
+    {
+     "fa": "وقتی نظامی را به‌شکل سیاسی توصیف می‌کنیم، ناگزیر همهٔ کارکنانش را پیچ و مهره‌هایی می‌بینیم که بدون تغییر نظام قابل تعویض‌اند. متهمان پس از جنگ از همین استدلال سود بردند: «اگر من نمی‌کردم دیگری می‌کرد.» در دیکتاتوری حتی تصمیم‌گیرندگان به یک نفر کاهش می‌یابند.",
+     "en": "Describing a system politically makes all its staff replaceable cogs without changing the system. Postwar defendants used this: 'if I had not done it, someone else would have.' In a dictatorship even the decision-makers shrink to one person.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به روایت آرنت، قضات اورشلیم این بینش را کنار گذاشتند: دادگاه نه نظام، نه تاریخ و نه یک «ایسم» بلکه یک شخص را محاکمه می‌کند، و پرسش بعدیِ دادگاه این است که چرا مهره شدی یا ماندی. به همین دلیل بود که مسئلهٔ مسئولیت شخصی اصلاً طرح‌شدنی شد. او همچنین تصویر دادستان از آیشمن به‌عنوان بزرگ‌ترین مهره را نمی‌پذیرفت.",
+     "en": "As Arendt tells it, the Jerusalem judges set aside that view: a court tries neither a system, history nor an 'ism' but a person, and its next question is why you became or stayed a cog. This is what made personal responsibility a live question. She also rejected the prosecution's picture of Eichmann as the biggest cog.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او دیوان‌سالاری را «حکومت هیچ‌کس» می‌نامد، جایی که جابه‌جاکردن مسئولیت امری روزمره است. نظام در دادگاه همچون شرایطی ملحوظ می‌شود که می‌تواند مخفِّف باشد، همان‌طور که فقر در جرم‌های ناشی از فقر، اما عذر موجه نیست.",
+     "en": "She calls bureaucracy the rule of nobody, where shifting responsibility is routine. In court the system counts as a circumstance that may mitigate, as poverty does in crimes bred by poverty, but not as a justifying excuse.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آرنت سه چیز را از هم جدا می‌کند: دیکتاتوری رومی که اقدامی اضطراریِ محدود بود؛ دیکتاتوری‌های مدرن نظامی یا تک‌حزبی که آزادی سیاسی را می‌گیرند اما زندگی غیرسیاسی را لزوماً نه و جنایتشان متوجه دشمنان آشکار است؛ و حکومت توتالیتر که بر همهٔ عرصه‌ها سلطه دارد، همه‌چیز را «هماهنگ» می‌کند و علیه مردمِ «بی‌گناه» حتی از نگاه حزب جنایت می‌کند. در جامعهٔ توتالیتر هر که در حوزهٔ عمومی بود به‌نوعی شریک می‌شد.",
+     "en": "Arendt separates three things: the Roman dictatorship as a limited emergency measure; modern military or one-party dictatorships, which end political freedom but not necessarily private life and aim their crimes at open enemies; and totalitarian rule, which dominates every sphere, coordinates everything, and commits crimes against people innocent even in the ruling party's eyes. In a totalitarian society anyone in public life became in some way complicit.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "«اقدام حکومتی» مفهومی است که جنایت را ضرورتی استثنایی برای بقای دولت و بیرون از قضاوت دادگاه می‌داند؛ «دستور مافوق» هم فرض می‌کند فرمان‌ها معمولاً قانونی‌اند و فرمان جنایتکارانه استثنا و آشکارا قابل‌تشخیص است. به نظر آرنت در رایش سوم جنایت قاعده شده بود و این استثنا بود که نشانهٔ «ممنوع» می‌خورد (مثلاً فرمان‌های پایانی هیملر برای توقف کشتار)، بنابراین چارچوب «جنایت به‌مثابه استثنا» از کار می‌افتد.",
+     "en": "'Act of state' treats crime as an exceptional necessity for the state's survival and beyond a court's reach; 'superior orders' assumes orders are normally lawful and a criminal one is an exception recognisable on its face. Arendt argues that in the Third Reich crime had become the rule and it was the exceptions that looked forbidden (e.g. Himmler's late orders to halt the killing), so the 'crime as exception' framework breaks down.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او تصور رایجِ «چند تبهکار با هم دست‌به‌دست داده بودند» را گمراه‌کننده می‌داند: کشتار را محترم‌ترین اعضای جامعه انجام دادند، بسیاری‌شان به ایدئولوژی باور نداشتند و کافی بود که با «ارادهٔ پیشوا» جور باشد. در تصویر او آیشمن از بی‌رحمیِ نالازم آشفته می‌شد، نه از خودِ کشتن.",
+     "en": "She calls the common picture of a band of criminals cooperating misleading: the killing was done by the most respectable members of a respectable society, many of whom did not hold the ideology and for whom it sufficed that it matched the Leader's will. In her portrait Eichmann was troubled by unnecessary cruelty, not by killing itself.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پژوهش‌های بعدی تاریخ‌نگاران (از جمله کار بتینا اشتانگنت دربارهٔ آیشمن پیش از اورشلیم) نشان می‌دهد آیشمن آن‌قدر که آرنت از روی شهادت‌های دادگاه برداشت کرد «ماشین بی‌اندیشه» نبود و به یهودستیزی و کار خود تعهد ایدئولوژیک داشت. این نقد به تصویر شخصیتی آیشمن مربوط است و بر استدلال کلی دربارهٔ مسئولیت شخصی خدشه‌ای وارد نمی‌کند، اما کسی که این متن را می‌خواند باید آن را بداند.",
+     "en": "Later historical work (notably Bettina Stangneth's study of Eichmann before Jerusalem) indicates that Eichmann was less of a thoughtless functionary than Arendt inferred from the trial testimony, and was ideologically committed to antisemitism and his work. This criticism concerns the portrait of his character; it does not directly undo the general argument about personal responsibility, but a reader should know it.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "فیلسوف و نظریه‌پرداز سیاسی آلمانی‌تبار؛ گزارشگر محاکمهٔ آیشمن"
+    },
+    {
+     "latin": "Adolf Eichmann",
+     "fa": "آدولف آیشمن",
+     "years": "1906–1962",
+     "note": "مأمور عالی‌رتبهٔ رایش سوم در سازمان‌دادن تبعید یهودیان؛ محاکمه‌شده در اورشلیم ۱۹۶۱"
+    }
+   ],
+   "links": [
+    {
+     "to": "soc:fromm-bureaucratic-obedience-eichmann",
+     "rel": "contrasts",
+     "fa": "فروم هم از آیشمن می‌گوید، با تأکید بر اطاعتِ درونی‌شده",
+     "en": "Fromm also treats Eichmann, stressing internalised obedience"
+    },
+    {
+     "to": "phil:arendt-obedience-is-support",
+     "rel": "explains",
+     "fa": "چرا «اطاعت» واژه‌ای گمراه‌کننده است",
+     "en": "Why 'obedience' is a misleading word"
+    },
+    {
+     "to": "soc:arendt-rise-of-the-social",
+     "rel": "bridges",
+     "fa": "همرنگی با جماعت و «امر اجتماعی» نزد آرنت",
+     "en": "Conformity and 'the social' in Arendt"
+    },
+    {
+     "to": "soc:institutions",
+     "rel": "part-of",
+     "fa": "نهادها و دولت",
+     "en": "Institutions & the state"
+    },
+    {
+     "to": "phil:arendt-personal-responsibility-no-collective-guilt",
+     "rel": "see-also",
+     "fa": "مسئولیت شخصی و گناه جمعی",
+     "en": "Personal responsibility and collective guilt"
+    }
+   ]
+  },
+  {
+   "id": "arendt-lesser-evil-argument",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "استدلال «کمتر بد» نزد آرنت: ماندن در پست برای جلوگیری از بدتر",
+    "en": "Arendt on the 'lesser evil' argument: staying in post to prevent worse",
+    "nl": "Arendt over het 'kleinste kwaad': op je post blijven om erger te voorkomen"
+   },
+   "summary": {
+    "fa": "بسیاری از کارمندان رژیم نازی پس از جنگ گفتند ماندند تا اوضاع بدتر نشود. آرنت این استدلال را از نظر سیاسی و اخلاقی نقد می‌کند: کسی که بد را بر بدتر برمی‌گزیند زود فراموش می‌کند بد برگزیده است، و حکومت توتالیتر خودش از همین منطق گام‌به‌گام برای آماده‌کردن همکاران استفاده می‌کرد.",
+    "en": "Many officials of the Nazi regime said after the war that they stayed so that things would not get worse. Arendt criticises this politically and morally: those who choose the lesser evil quickly forget they chose evil, and totalitarian rule itself used this step-by-step logic to prepare collaborators.",
+    "nl": "Veel functionarissen van het naziregime zeiden na de oorlog dat ze bleven om erger te voorkomen. Arendt bekritiseert dit: wie het kleinste kwaad kiest, vergeet snel dat hij kwaad koos."
+   },
+   "points": [
+    {
+     "fa": "استدلال رایج بود: ما شغل خود را نگه داشتیم تا از بدتر جلوگیری کنیم، و آنان که کنار کشیدند فقط به نجات روح خودشان اندیشیدند. آرنت می‌گوید این را فقط وقتی می‌شد از نظر سیاسی معقول دانست که این افراد در همان آغاز می‌کوشیدند رژیم را براندازند؛ حال آنکه آنان کارمندانی بودند که تخصصشان رژیم و جانشینش را سر پا نگه می‌داشت.",
+     "en": "The common claim was: we kept our jobs to prevent worse, and those who withdrew only thought of saving their own souls. Arendt says this could be politically reasonable only if these people had tried to topple the regime early on; instead they were officials whose expertise kept the regime, and its successor, running.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ضعف سیاسی این استدلال از نظر او این است که انتخاب‌کنندگان «کمتر بد» به‌سرعت فراموش می‌کنند که بد را انتخاب کرده‌اند؛ و بدیِ رایش سوم در پایان آن‌قدر عظیم شد که نامیدنش «کمتر بد» ممکن نبود.",
+     "en": "Its political weakness, she argues, is that those who choose the lesser evil quickly forget they chose an evil, and the Third Reich's evil ended up too monstrous to call 'lesser'.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او اضافه می‌کند که حکومت توتالیتر خود از این اصل بهره می‌برد: محو یهودیان به‌تدریج و در گام‌های پیاپی پیش رفت و هر بار با این دلیل که امتناع از همکاری اوضاع را بدتر می‌کند، تا جایی که بدتر ممکن نبود. بدین‌سان کارکنان دولت و مردم برای پذیرفتن بدیِ واقعی آماده می‌شدند.",
+     "en": "She adds that totalitarian rule itself exploited the principle: the persecution of Jews proceeded in steps, each justified by saying that refusal would make things worse, until nothing worse was possible. In this way officials and the public were prepared to accept real evil.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به گفتهٔ او رد کردن هر سازش با بد در برابر بدتر بیشتر موضعی دینی است تا فلسفی؛ او از تلمود و پاپ ژان بیست‌وسوم مثال می‌آورد و کانت را تنها استثنای فلسفی می‌داند. منتقدان چنین موضعی را اغلب به «پاکیزه‌خواهی اخلاقی» و بی‌خبری از واقعیت سیاسی متهم می‌کنند.",
+     "en": "She says rejecting any compromise with a lesser against a greater evil is a religious rather than philosophical position, citing the Talmud and Pope John XXIII, with Kant the lone philosophical exception. Critics often accuse such a stance of moral purism and ignorance of political reality.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "بحث «دست‌های آلوده» در فلسفهٔ اخلاق نشان می‌دهد که استدلال کمتر-بد همیشه نامشروع نیست و گاه رهبران ناچار از انتخابی با هزینهٔ اخلاقی‌اند (مثلاً مقالهٔ معروف والزر، ۱۹۷۳). نقد آرنت متوجه کاربرد این استدلال در چارچوبی است که سازوکار آن همکاریِ گام‌به‌گام با رژیمی جنایتکار بود، نه ردّ هر محاسبهٔ پیامدی.",
+     "en": "The 'dirty hands' debate in moral philosophy shows that lesser-evil reasoning is not always illegitimate and leaders sometimes face choices with a moral cost (e.g. Walzer's 1973 article). Arendt's critique targets its use where the mechanism was stepwise collaboration with a criminal regime, not every consequence-based calculation.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "فیلسوف و نظریه‌پرداز سیاسی آلمانی‌تبار؛ گزارشگر محاکمهٔ آیشمن"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:trolley",
+     "rel": "contrasts",
+     "fa": "مسئلهٔ تراموا: کشتن یک نفر برای نجات بیشتر؟",
+     "en": "The trolley problem: sacrificing one to save more?"
+    },
+    {
+     "to": "phil:three-theories",
+     "rel": "see-also",
+     "fa": "سه نظریهٔ بزرگ اخلاق؛ کانت و پیامدگرایی",
+     "en": "The three great moral theories; Kant and consequentialism"
+    },
+    {
+     "to": "phil:arendt-conscience-thinking-nonparticipants",
+     "rel": "see-also",
+     "fa": "کسانی که مشارکت نکردند و معیارشان",
+     "en": "Those who did not participate and their criterion"
+    },
+    {
+     "to": "phil:ethics",
+     "rel": "part-of",
+     "fa": "اخلاق",
+     "en": "Ethics"
+    }
+   ]
+  },
+  {
+   "id": "arendt-conscience-thinking-nonparticipants",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "آنان که مشارکت نکردند: اندیشیدن، «زیستن با خود» و ناپایداری ارزش‌ها نزد آرنت",
+    "en": "Those who did not participate: thinking, 'living with oneself' and the fragility of values in Arendt",
+    "nl": "Zij die niet meededen: denken, 'met jezelf leven' en de broosheid van waarden bij Arendt"
+   },
+   "summary": {
+    "fa": "آرنت می‌پرسد کسانی که در رژیم نازی همکاری نکردند چه فرقی داشتند. پاسخش: نه نظام ارزشی بهتر، بلکه توانایی داوریِ مستقل و رابطهٔ صادقانه با خود. در بحران، پایبندانِ صرف به ارزش‌ها و هنجارها قابل اعتماد نیستند چون ارزش‌ها یک‌شبه عوض می‌شوند؛ شکاک‌ها قابل‌اعتمادترند.",
+    "en": "Arendt asks what distinguished the few who did not collaborate under Nazi rule. Her answer: not a better set of values but the capacity for independent judgment and an honest relation to oneself. In crisis, mere adherents of values and norms are unreliable because values change overnight; sceptics are more reliable.",
+    "nl": "Arendt vraagt wat de weinigen die niet meewerkten onderscheidde. Haar antwoord: niet betere waarden, maar zelfstandig oordelen en een eerlijke verhouding tot jezelf."
+   },
+   "points": [
+    {
+     "fa": "به نظر او آنچه نخست آزارش می‌داد رفتار دشمنان نبود؛ رفتار دوستانی بود که یک‌شبه با «هماهنگ‌شدن» با رژیم عقیده عوض کردند و رابطه‌شان را با دوستان قدیمی بریدند. او این را بیش از مسئولیت شخصی، از کارافتادنِ گستردهٔ قوهٔ داوری می‌داند.",
+     "en": "What troubled her first, she says, was not the enemies' behaviour but that of friends who changed opinion overnight by 'coordinating' with the regime and dropped old friends. She reads this less as personal responsibility than as a broad breakdown of the power of judgment.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کسانی که کنار ماندند به نظر او نه نظام ارزشیِ بهتر داشتند و نه معیارهای قدیمی در وجدانشان ریشه‌دارتر بود؛ برعکس، اعضای محترم جامعه که از دگرگونی‌های آغازین متأثر نشده بودند نخستین کسانی بودند که تن دادند، چون صرفاً یک مجموعه ارزش را با مجموعه‌ای دیگر عوض کردند.",
+     "en": "Those who stayed out, she says, had neither a better value system nor older standards rooted more firmly in conscience; on the contrary, respectable members of society, unaffected by the early upheavals, were among the first to comply, merely swapping one set of values for another.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "معیار آنان به گمان آرنت این بود که پس از انجام کاری تا چه حد می‌توانند با خود در صلح زندگی کنند. نخواستند جنایت کنند نه چون هنوز به «قتل مکن» باور داشتند، بلکه چون نمی‌خواستند با یک قاتل، یعنی خودشان، زندگی کنند.",
+     "en": "Their criterion, as she sees it, was how far they could live at peace with themselves after certain acts. They refused to commit crime not so much from firm belief in 'thou shalt not kill' as from unwillingness to live with a murderer, namely themselves.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پیش‌شرط این داوری هوش بالا یا کمال اخلاقی نیست، بلکه آمادگی برای یکرنگی با خود است: همان گفتگوی خاموشِ خود با خویشتن که از سقراط و افلاطون «اندیشیدن» نامیده شده است. او تأکید می‌کند این اندیشیدن تخصصی نیست و مرز میان کسانی که می‌اندیشند و کسانی که نمی‌اندیشند به فاصلهٔ طبقاتی یا آموزشی ربط ندارد.",
+     "en": "The precondition of such judgment is not high intelligence or moral accomplishment but readiness to be at one with oneself: the silent dialogue of the self with itself that, since Socrates and Plato, has been called thinking. She stresses it is not specialist, and the line between those who think and those who do not has nothing to do with social or educational differences.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نتیجهٔ عملی‌اش این است که در چنین شرایطی پاسداران ارزش‌ها و هنجارها قابل اعتماد نیستند، چون ارزش‌ها یکشبه تغییر می‌کنند و فقط عادتِ پایبندی می‌ماند. شکاکان قابل‌اعتمادترند، نه از آن رو که شکاکیت خوب است بلکه چون مسائل را می‌سنجند. بهترین‌ها کسانی‌اند که فقط یک چیز را مسلم می‌دانند: تا زنده‌ایم باید با خود زندگی کنیم.",
+     "en": "Her practical conclusion is that in such conditions guardians of values and norms are unreliable, because values can change overnight leaving only the habit of adherence. Sceptics are more reliable, not because scepticism is good but because they examine matters. The best are those sure of one thing only: that as long as we live we must live with ourselves.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او می‌پذیرد که دربارهٔ آن اندک کناره‌گیران که «بی‌مسئولیت» خوانده می‌شوند باید گفت در شرایطی استثنایی مسئولیت در قبال جهان که اساساً سیاسی است بدون حداقلی از قدرت ممکن نیست؛ ناتوانیِ کامل عذر موجه است و حتی اعتراف به آن نیازمند فضیلت و حسن نیت است. او با اشاره به وکیل آیشمن که کشتارگاه‌ها را «مسئله‌ای پزشکی» نامید، می‌گوید اخلاق در فروپاشی‌اش به معنای ابتدایی خود، یعنی مجموعه‌ای از آداب، برملا شد که می‌شود مثل آداب غذاخوردن عوض کرد.",
+     "en": "She grants that for the few withdrawers accused of irresponsibility one must say that in extreme situations responsibility for the world, which is mainly political, cannot be assumed without a minimum of power; total inability is a valid excuse, and even admitting it takes virtue and good faith. Citing Eichmann's lawyer calling the death camps a 'medical matter', she says morality at its collapse showed itself in its original sense of customs that can be swapped like table manners.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "این گفته که اندیشیدنِ درونی مانع همکاری با شر می‌شود، یک تز فلسفی است و آزمون تجربیِ مستقیم نشده است. پژوهش‌های روان‌شناسی اجتماعی دربارهٔ اطاعت (مثل آزمایش‌های میلگرم) بر فشار موقعیت تأکید می‌کنند و در نگاه اول با تکیهٔ آرنت بر داوری فردی کشاکش دارند؛ دو رویکرد را بیشتر مکمل می‌دانند تا جایگزین.",
+     "en": "The claim that inner thinking blocks collaboration with evil is a philosophical thesis, not directly tested empirically. Social-psychology research on obedience (e.g. Milgram's experiments) stresses situational pressure and sits in tension with Arendt's reliance on individual judgment; the two approaches are better seen as complementary than as replacements.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      4
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "فیلسوف و نظریه‌پرداز سیاسی آلمانی‌تبار؛ گزارشگر محاکمهٔ آیشمن"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:arendt-obedience-is-support",
+     "rel": "see-also",
+     "fa": "از «چرا اطاعت کردی؟» به «چرا حمایت کردی؟»",
+     "en": "From 'why did you obey?' to 'why did you support?'"
+    },
+    {
+     "to": "phil:fromm-heteronomous-autonomous-obedience",
+     "rel": "contrasts",
+     "fa": "وجدان اقتدارگرا و وجدان انسانی نزد فروم",
+     "en": "Authoritarian versus humanistic conscience in Fromm"
+    },
+    {
+     "to": "soc:anomie",
+     "rel": "bridges",
+     "fa": "فروپاشی هنجارها و بی‌هنجاری",
+     "en": "Normative collapse and anomie"
+    },
+    {
+     "to": "phil:arendt-lesser-evil-argument",
+     "rel": "see-also",
+     "fa": "استدلال کمتر-بد",
+     "en": "The lesser-evil argument"
+    }
+   ]
+  },
+  {
+   "id": "arendt-obedience-is-support",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "آرنت: «اطاعت» در سیاست و اخلاق وجود ندارد، فقط «حمایت»",
+    "en": "Arendt: there is no 'obedience' in politics and morals, only 'support'",
+    "nl": "Arendt: er is geen 'gehoorzaamheid' in politiek en moraal, alleen 'steun'"
+   },
+   "summary": {
+    "fa": "آرنت مغالطهٔ دفاع «اطاعت از مافوق» را در یکی‌گرفتن رضایت و اطاعت می‌بیند: بزرگسال رضایت می‌دهد و کودک اطاعت می‌کند. به نظر او آنچه «اطاعت» نامیده می‌شود در واقع حمایت از اقدامی مشترک است، پس پرسش درست از همکاران رژیم «چرا حمایت کردید؟» است و همین نکته به امتناع جمعی از حمایت قدرت مقاومتِ بی‌خشونت می‌دهد.",
+    "en": "Arendt locates the fallacy of the 'obedience to superiors' defence in equating consent with obedience: an adult consents, a child obeys. What is called obedience is in fact support for a joint action, so the right question to a regime's collaborators is 'why did you support?'; this also gives collective withholding of support its force as nonviolent resistance.",
+    "nl": "Arendt ziet de denkfout van het verweer 'gehoorzaamheid aan meerderen' in het gelijkstellen van instemming en gehoorzaamheid: een volwassene stemt in, een kind gehoorzaamt."
+   },
+   "points": [
+    {
+     "fa": "استدلال رایج متهمان از نورنبرگ تا اورشلیم این بود که هر سازمانی اطاعت می‌خواهد، اطاعت مهم‌ترین فضیلت سیاسی است و آزادی بی‌قید وجدان پایان هر جامعهٔ سازمان‌یافته است. آرنت می‌گوید مغالطه در یکسان‌گرفتن رضایت با اطاعت است: حتی خودکامه‌ترین حکومت‌ها به‌گفتهٔ مدیسن بر رضایت استوارند، و بزرگسال رضایت می‌دهد در حالی که کودک اطاعت می‌کند.",
+     "en": "The defendants' standard argument from Nuremberg to Jerusalem was that every organisation demands obedience, obedience is the supreme political virtue, and unconditional freedom of conscience would end any organised society. Arendt says the fallacy lies in equating consent with obedience: even the most despotic governments, as Madison held, rest on consent, and an adult consents while a child obeys.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او می‌گوید مفهوم اطاعت در سیاست از الگوی «حاکم و محکوم» نزد افلاطون و ارسطو و از دو حوزهٔ مهدکودک و بردگی آمده و جای تصور دقیق‌تری را گرفته که عمل مشترک را دو مرحله می‌دید: آغاز به دست «رهبر» و اجرا به دست جمعی که به او می‌پیوندد.",
+     "en": "She says the notion of obedience entered politics from the ruler-and-ruled scheme of Plato and Aristotle and from the two domains of nursery and slavery, replacing a more exact earlier conception that saw joint action in two stages: a beginning by a 'leader' and a carrying-through by a group that joins him.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "بنا بر آن تصور، هیچ انسانی، هرقدر قوی، نمی‌تواند بدون دیگران کار خوب یا بد را به انجام برساند؛ رهبر بیش از «اولین در میان هم‌طرازان» نیست و کسانی که ظاهراً اطاعت می‌کنند در واقع از او و عملش حمایت می‌کنند. حتی در سازمانی بوروکراتیک، کارکرد مهره‌ها حمایت از اقدام مشترک است و من با اطاعت از قانون کشور از قانون اساسی‌اش حمایت می‌کنم.",
+     "en": "On that conception no human being, however strong, can accomplish good or bad without others; the leader is no more than the first among peers, and those who seem to obey actually support him and his act. Even in a bureaucratic organisation the cogs' function is support for a joint action, and by obeying my country's laws I support its constitution.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پس پرسش از همکاران رژیم نباید «چرا اطاعت کردید؟» بلکه «چرا حمایت کردید؟» باشد. به باور او در امور سیاسی و اخلاقی برای بزرگسالِ غیربرده چیزی به نام اطاعت وجود ندارد؛ تنها حوزهٔ ممکنِ این واژه دین است، که رابطهٔ خدا و انسان در آن مانند رابطهٔ بزرگسال و کودک دیده می‌شود. حذف این واژه از اندیشهٔ اخلاقی و سیاسی به نظر او به بازیافتن عزت نفس و جایگاه انسان کمک می‌کند.",
+     "en": "So the question to a regime's collaborators should be not 'why did you obey?' but 'why did you support?'. In politics and morals, she holds, there is no such thing as obedience for an adult who is not a slave; the only possible domain for the word is religion, where the God-human relation is seen like that of adult and child. Dropping the word from moral and political thought would, she thinks, help recover self-respect and human standing.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "از همین‌جا کناره‌گیران را کسانی می‌بیند که از حمایتی که با نام اطاعت مطالبه می‌شد امتناع کردند. اگر بسیاری چنین کنند، حتی بی‌شورش و مقاومت فعال، چنین حکومت‌هایی چه بر سرشان می‌آید؟ او این را یکی از شکل‌های اقدام و مقاومت بی‌خشونت می‌داند که قرن بیستم کشف می‌کند، و نافرمانی مدنی را مثال می‌زند.",
+     "en": "From this she sees the withdrawers as those who refused the support demanded under the name of obedience. If many did so, even without rebellion or active resistance, what would become of such regimes? She sees this as one form of the nonviolent action and resistance being discovered in her century, citing civil disobedience.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "همین نظر آرنت دربارهٔ اینکه قدرت بر حمایت مردم استوار است در آثار بعدی‌اش (مثلاً دربارهٔ خشونت، ۱۹۷۰) ادامه می‌یابد و با پژوهش‌های امروزِ مقاومت مدنی هم‌سو است؛ اما این تز هنجاری است و حقوق نظامی و بسیاری از نظام‌های حقوقی همچنان نقش محدودی برای دفاع «دستور مافوق» قائل‌اند، پس بحث دربارهٔ حدود اطاعت بسته نشده است.",
+     "en": "Her view that power rests on people's support continues in later work (e.g. on violence, 1970) and is consistent with modern research on civil resistance; but it is a normative thesis, and military law and many legal systems still allow a limited role for the 'superior orders' defence, so the debate on the limits of obedience is not closed.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "فیلسوف و نظریه‌پرداز سیاسی آلمانی‌تبار؛ گزارشگر محاکمهٔ آیشمن"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:fromm-heteronomous-autonomous-obedience",
+     "rel": "contrasts",
+     "fa": "فرمانبری دگرپیرو و خودپیرو نزد فروم",
+     "en": "Heteronomous and autonomous obedience in Fromm"
+    },
+    {
+     "to": "soc:fromm-why-obedience-is-virtue",
+     "rel": "contrasts",
+     "fa": "چرا فرمانبری فضیلت شمرده می‌شود؟",
+     "en": "Why is obedience counted a virtue?"
+    },
+    {
+     "to": "phil:arendt-natality-plurality",
+     "rel": "see-also",
+     "fa": "عمل مشترک و تکثر نزد آرنت",
+     "en": "Joint action and plurality in Arendt"
+    },
+    {
+     "to": "soc:arendt-cog-theory-orders-dictatorship",
+     "rel": "see-also",
+     "fa": "نظریهٔ مهره‌بودن",
+     "en": "The cog theory"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "آرنت، هانا. «مسئولیت شخصی در دوران دیکتاتوری». ترجمهٔ بنیاد عبدالرحمن برومند؛ ویراستاری رضا ناصحی؛ مقدمهٔ لادن برومند (۹ نوامبر ۲۰۰۸). واشنگتن: بنیاد عبدالرحمن برومند، ۱۳۸۷ (انتشار الکترونیکی، ۲۶ صفحه). اصل: Arendt, H. 'Personal Responsibility under Dictatorship', The Listener, 1964؛ بعدتر در Responsibility and Judgment (2003).",
+   "tier": 3
+  },
+  {
+   "cite": "Arendt, H. (1963). Eichmann in Jerusalem: A Report on the Banality of Evil. New York: Viking Press.",
+   "tier": 3
+  },
+  {
+   "cite": "Stangneth, B. (2011/2014). Eichmann Before Jerusalem: The Unexamined Life of a Mass Murderer. New York: Knopf.",
+   "tier": 3
+  },
+  {
+   "cite": "Walzer, M. (1973). Political Action: The Problem of Dirty Hands. Philosophy & Public Affairs, 2(2), 160–180.",
+   "tier": 2
+  },
+  {
+   "cite": "Milgram, S. (1963). Behavioral Study of Obedience. Journal of Abnormal and Social Psychology, 67(4), 371–378.",
+   "tier": 2
+  }
+ ],
+ "quality_notes": "متن لایهٔ PDF خراب بود (رمزگذاری فونت)؛ OCR فارسی با tesseract روی هر ۲۶ صفحه (۱۵۰dpi) انجام شد. دقت متن اصلی بالا و خوانا است؛ اعداد و تاریخ‌ها و برخی پانویس‌ها ناپایدار بودند (مثلاً سال تألیف در پانویس مقدمه) و سال ۱۹۶۴ از دانش خودم آمده است. هر مدخل با کلمات خودم نوشته شد؛ هیچ نقل بیش از چهار کلمه نیست. مدخل‌های آرنت و فروم موجود (b47، b30) تکرار نشدند و به آن‌ها پیوند داده شد؛ بخش «آیشمن» فروم از زاویهٔ دیگری است.",
+ "lecture": "مسئولیت شخصی در دوران دیکتاتوری",
+ "speaker": "هانا آرنت (Hannah Arendt)",
+ "channel": "بنیاد عبدالرحمن برومند، واشنگتن"
+}
