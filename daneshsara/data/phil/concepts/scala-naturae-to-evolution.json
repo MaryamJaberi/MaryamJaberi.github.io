@@ -1,0 +1,105 @@
+{
+ "id": "phil:scala-naturae-to-evolution",
+ "kind": "concept",
+ "title": {
+  "fa": "از نردبان طبیعت تا تکامل: ایدهٔ پیشرفت در زیست‌شناسی",
+  "en": "From the ladder of nature to evolution: the idea of progress in biology",
+  "nl": "Van de ladder van de natuur naar evolutie: het idee van vooruitgang in de biologie"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "مایر نشان می‌دهد پیش از داروین مصالحه‌ای میان خلقت ثابت و شواهد تازه «نردبان طبیعت» بود و سپس لامارک آن را به «پله‌برقی زیستی» تبدیل کرد. ایدهٔ تکامل به‌سوی کمال، خاستگاهی پیشاداروینی دارد.",
+  "en": "Mayr shows that before Darwin the compromise between fixed creation and new evidence was the 'ladder of nature', which Lamarck turned into a 'biological escalator'. The idea of evolution as progress toward perfection has a pre-Darwinian origin.",
+  "nl": "Mayr laat zien dat vóór Darwin de 'ladder van de natuur' het compromis was tussen vaste schepping en nieuw bewijs; Lamarck maakte er een 'biologische roltrap' van. Het idee van evolutie als vooruitgang is pre-darwiniaans."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نردبان طبیعت موجودات را از سنگ و مواد معدنی تا گلسنگ، گیاه، جانوران، پستانداران و در پایان انسان می‌چید و آن را ثابت و بازتاب نظم خالق می‌انگاشت.",
+    "en": "The ladder of nature ranked beings from minerals through lichens, plants and animals to mammals and finally humans, and was seen as fixed and as reflecting the Creator's order.",
+    "nl": "The ladder of nature ranked beings from minerals through lichens, plants and animals to mammals and finally humans, and was seen as fixed and as reflecting the Creator's order."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به روایت مایر لامارک نخستین کسی بود که این نردبان ایستا را به حرکتی زمانی از ساده به پیچیده و از پست به عالی بدل کرد (۱۸۰۹).",
+    "en": "In Mayr's account Lamarck first turned the static ladder into a temporal movement from simple to complex, lower to higher (1809).",
+    "nl": "In Mayr's account Lamarck first turned the static ladder into a temporal movement from simple to complex, lower to higher (1809)."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید تفکر تکاملی در سدهٔ هجدهم و نیمهٔ نخست سدهٔ نوزدهم به زبان‌شناسی، فلسفه، جامعه‌شناسی و اقتصاد هم رسید، اما در علم تا انتشار «دربارهٔ منشأ گونه‌ها» (۲۴ نوامبر ۱۸۵۹) اقلیت ماند.",
+    "en": "He says evolutionary thinking spread to linguistics, philosophy, sociology and economics in the late 18th and early 19th centuries but stayed a minority view in science until On the Origin of Species (24 Nov 1859).",
+    "nl": "He says evolutionary thinking spread to linguistics, philosophy, sociology and economics in the late 18th and early 19th centuries but stayed a minority view in science until On the Origin of Species (24 Nov 1859)."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نظر رایج دانشگاهی: تکامل داروینی ذاتاً جهت‌دار یا رو به «برتری» نیست و سازگاری با محیط محلی را بازتاب می‌دهد؛ «پیشرفت» در بیشتر تعبیرهای عمومی (و در جامعه‌شناسی تکامل‌گرای قرن نوزدهم) ایدهٔ جدا و بحث‌برانگیز است.",
+    "en": "Mainstream academic view: Darwinian evolution has no inherent direction toward 'superiority'; it tracks local adaptation, and 'progress' in popular readings, including 19th-century social evolutionism, is a separate and disputed idea.",
+    "nl": "Mainstream academic view: Darwinian evolution has no inherent direction toward 'superiority'; it tracks local adaptation, and 'progress' in popular readings, including 19th-century social evolutionism, is a separate and disputed idea."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:paradigms",
+   "rel": "explains",
+   "note": {
+    "fa": "گذار از جهان‌بینی ایستا به تکاملی نمونه‌ای از تغییر پارادایم",
+    "en": "Static-to-evolutionary shift as paradigm change",
+    "nl": "Static-to-evolutionary shift as paradigm change"
+   }
+  },
+  {
+   "to": "soc:parsons-pattern-variables-evolution",
+   "rel": "contrasts",
+   "note": {
+    "fa": "تکامل اجتماعی و پرسش جهت و پیشرفت",
+    "en": "Social evolution and the question of direction",
+    "nl": "Social evolution and the question of direction"
+   }
+  },
+  {
+   "to": "tabar:eugenics",
+   "rel": "see-also",
+   "note": {
+    "fa": "خطر برداشت پیشرفت‌گرایانه از تکامل",
+    "en": "Risk of progressivist readings of evolution",
+    "nl": "Risk of progressivist readings of evolution"
+   }
+  }
+ ],
+ "people": [
+  "core:jean-baptiste-lamarck",
+  "core:charles-darwin"
+ ],
+ "sources": [
+  "src:3c58932bc8"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

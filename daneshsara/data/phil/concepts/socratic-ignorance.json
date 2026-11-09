@@ -1,0 +1,106 @@
+{
+ "id": "phil:socratic-ignorance",
+ "kind": "concept",
+ "title": {
+  "fa": "دانایی سقراطی: دانستنِ ندانستن",
+  "en": "Socratic wisdom: knowing that one does not know",
+  "nl": "Socratische wijsheid: weten dat je niets weet"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "در دفاعیهٔ افلاطون، سقراط می‌گوید برتری او بر دیگران فقط این است که چیزی را که نمی‌داند، دانسته نمی‌پندارد. این نوعی فروتنی معرفتی است: دانش کامل از آنِ خدا و دانایی انسان محدود است.",
+  "en": "In Plato's Apology, Socrates claims his only edge over others is that he does not think he knows what he does not know. It is a form of epistemic humility: complete knowledge belongs to the divine and human wisdom is limited.",
+  "nl": "In Plato's Apologie stelt Socrates dat zijn enige voorsprong is dat hij niet denkt te weten wat hij niet weet: een vorm van epistemische bescheidenheid."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دوست سقراط، کرفون، از پیشگویی دلفی پرسید آیا کسی داناتر از سقراط هست و پاسخ آمد که نه. سقراط این پاسخ را معمایی دانست، چون خود را بی‌دانش می‌شمرد.",
+    "en": "Socrates' friend Chaerephon asked the Delphic oracle whether anyone was wiser than Socrates and was told no. Socrates took this as a riddle, since he considered himself without wisdom.",
+    "nl": "Socrates' friend Chaerephon asked the Delphic oracle whether anyone was wiser than Socrates and was told no. Socrates took this as a riddle, since he considered himself without wisdom."
+   },
+   "sources": [
+    "src:98ffa9a519"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برای حل معما نزد سیاستمداران، شاعران و پیشه‌وران رفت و آنان را آزمود. بیشترِ آنان که به دانایی شهرت داشتند، به چیزهایی که نمی‌دانستند ادعای دانایی می‌کردند.",
+    "en": "To solve the riddle he questioned politicians, poets and craftsmen. Most of those reputed to be wise claimed knowledge of things they did not know.",
+    "nl": "To solve the riddle he questioned politicians, poets and craftsmen. Most of those reputed to be wise claimed knowledge of things they did not know."
+   },
+   "sources": [
+    "src:98ffa9a519"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نتیجهٔ او: دانایی بشر در برابر دانایی راستین ناچیز است، و داناترین آدم کسی است که این را بپذیرد. شاعران را هم نه صاحب دانش، بلکه برخوردار از استعداد و الهام می‌داند.",
+    "en": "His conclusion: human wisdom is of little worth beside true wisdom, and the wisest person is the one who admits this. He also treats the poets as inspired rather than knowledgeable.",
+    "nl": "His conclusion: human wisdom is of little worth beside true wisdom, and the wisest person is the one who admits this. He also treats the poets as inspired rather than knowledgeable."
+   },
+   "sources": [
+    "src:98ffa9a519"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نتیجهٔ سقراط بخشی از نگاه فلسفی افلاطون است. این‌که «اعتراف به نادانی» تا چه حد فروتنی صادقانه و تا چه حد شیوه‌ای بیانی (طنز سقراطی) بوده، میان پژوهشگران محل بحث است.",
+    "en": "Socrates' conclusion is part of Plato's philosophical picture. How far this confession of ignorance was sincere humility and how far a rhetorical device (Socratic irony) is debated among scholars.",
+    "nl": "Socrates' conclusion is part of Plato's philosophical picture. How far this confession of ignorance was sincere humility and how far a rhetorical device (Socratic irony) is debated among scholars."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:epistemology",
+   "rel": "part-of",
+   "note": {
+    "fa": "از موضوعات معرفت‌شناسی",
+    "en": "A topic within epistemology",
+    "nl": "A topic within epistemology"
+   }
+  },
+  {
+   "to": "phil:gettier",
+   "rel": "contrasts",
+   "note": {
+    "fa": "تحلیل مدرن چیستیِ دانستن در برابر ادعای سقراط دربارهٔ مرز دانستن",
+    "en": "Modern analysis of what knowing is, set against Socrates' claim about the limits of knowing",
+    "nl": "Modern analysis of what knowing is, set against Socrates' claim about the limits of knowing"
+   }
+  },
+  {
+   "to": "phil:fallacies",
+   "rel": "see-also",
+   "note": {
+    "fa": "پرسش‌گری سقراطی ناسازگاری ادعاها را آشکار می‌کند",
+    "en": "Socratic questioning exposes inconsistencies in claims",
+    "nl": "Socratic questioning exposes inconsistencies in claims"
+   }
+  }
+ ],
+ "people": [
+  "core:socrates",
+  "core:plato",
+  "core:chaerephon"
+ ],
+ "sources": [
+  "src:98ffa9a519"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
