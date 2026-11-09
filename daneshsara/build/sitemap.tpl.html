@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>نقشهٔ سایت — دانش‌سرا</title>
+<meta name="description" content="همهٔ موضوع‌ها و صفحه‌های دانش‌سرا به‌صورت مایند مپ، گراف ارتباط‌ها و ساختار پیشنهادی.">
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+[hidden]{display:none!important}
+header.top{border-bottom:1px solid var(--line);background:var(--paper)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:48px;gap:var(--s4)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);text-decoration:none}.brand svg{width:24px;height:24px;color:var(--primary)}
+.crumbs{font-size:var(--small);color:var(--ink-3)}.crumbs a{color:var(--ink-2)}
+h1{font-size:var(--h2);margin:var(--s6) 0 var(--s2)}p.lead{color:var(--ink-2);max-width:46em;line-height:1.9;margin:0 0 var(--s4)}
+.tabs{display:flex;gap:6px;margin:var(--s4) 0;flex-wrap:wrap}
+.tabs button{font:inherit;padding:7px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--paper);color:var(--ink-2);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:var(--s4);align-items:start}
+.box{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:auto;position:relative}
+.side{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--paper);padding:var(--s4);position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+.side h2{font-size:var(--h4);margin:0 0 var(--s2)}.side h3{font-size:var(--small);color:var(--ink-2);margin:var(--s3) 0 var(--s2)}
+.side a{display:block;font-size:var(--small);padding:3px 0;color:var(--primary)}.side p{margin:0 0 var(--s2);line-height:1.8;font-size:var(--small)}
+.note{font-size:var(--chip);color:var(--ink-3);line-height:1.8}
+.badge{display:inline-block;padding:1px 9px;border-radius:var(--r-full);border:1px solid var(--line-strong);font-size:var(--chip);margin-inline-end:6px}
+.badge.w{border-color:#b7791f;color:#b7791f}.badge.r{border-color:#b3261e;color:#b3261e}
+svg text{font-family:inherit}
+.n{cursor:pointer}.n rect{stroke-width:1.5}.n:hover rect{filter:brightness(.96)}
+.tog{cursor:pointer}
+.k{display:flex;gap:14px;flex-wrap:wrap;font-size:var(--chip);color:var(--ink-2);margin:0 0 var(--s3)}.k i{display:inline-block;width:20px;height:0;border-top:3px solid;margin-inline-end:6px;vertical-align:3px}
+.prop{display:grid;gap:var(--s4);max-width:62em}.prop section{border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s4);background:var(--paper)}
+.prop h2{font-size:var(--h4);margin:0 0 var(--s2)}.prop ul{margin:0;padding-inline-start:1.2em;line-height:2}
+.done{color:#1f7a4d}.todo{color:#b7791f}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.side{position:static;max-height:none}.crumbs{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg><span>دانش‌سرا</span></a><div class="crumbs"><a href="../">خانه</a> › <a href="./">اطلس</a> › نقشهٔ سایت</div></div></header>
+<main class="wrap">
+ <h1>نقشهٔ سایت</h1>
+ <p class="lead">اول همهٔ موضوع‌ها را به‌صورت درخت (مایند مپ) می‌بینید، بعد گرافِ چیزهایی که به هم وصل‌اند، و در آخر ساختار پیشنهادی صفحه‌ها که از همین دو بیرون آمده. همهٔ شمارش‌ها از خود فایل‌های سایت محاسبه شده‌اند.</p>
+ <div class="tabs" id="tabs"><button data-t="tree" aria-pressed="true">۱ · درخت (مایند مپ)</button><button data-t="graph" aria-pressed="false">۲ · گراف ارتباط‌ها</button><button data-t="prop" aria-pressed="false">۳ · ساختار پیشنهادی</button></div>
+ <div id="v-tree" class="grid"><div class="box" id="treebox"><svg id="tree"></svg></div><aside class="side" id="side1"></aside></div>
+ <div id="v-graph" class="grid" hidden><div><div class="k"><span><i style="border-color:#8a8a8a"></i>پیوند میان صفحه‌ها</span><span><i style="border-color:#0a6b60;border-top-style:dashed"></i>پیوند مفهومی میان ویکی‌ها</span><span><i style="border-color:#b3261e"></i>گروهی که صفحهٔ بی‌پیوند دارد</span></div><div class="box"><svg id="graph" viewBox="0 0 760 640" style="width:100%;height:auto;display:block"></svg></div></div><aside class="side" id="side2"></aside></div>
+ <div id="v-prop" class="prop" hidden></div>
+</main>
+<script>/*__DATA__*/</script>
+<script>
+(() => {
+const $ = id => document.getElementById(id), D = window.SM;
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const COL = {wiki: "#2a6f7a", iran: "#0a6b60", sim: "#b7791f", atlas: "#5b4b8a", core: "#6b6b6b", ext: "#c45c26", product: "#b3261e"};
+const WCOL = {psy: "#0a6b60", soc: "#2a6f7a", phil: "#5b4b8a", tabar: "#c45c26"};
+const WNAME = {psy: "روان", soc: "جامعه", phil: "فلسفه", tabar: "تبار و ژنتیک"};
+const N = Object.fromEntries(D.nodes.map(n => [n.id, n]));
+const link = p => /^https?:/.test(p[0]) ? p[0] : "../" + p[0];
+// ----- tree -----
+const T = {id: "root", l: "دانش‌سرا", c: "#111", open: true, kids: [
+  {id: "b1", l: "۱ · ویکی‌ها", c: COL.wiki, open: true, kids: ["psy", "soc", "tabar", "phil"].map(w => ({id: "w-" + w, l: WNAME[w], c: WCOL[w], open: w === "psy", w, kids: D.cities[w].map(c => ({id: "c-" + w + c[0], l: c[0], sub: fa(c[1]) + " مدخل", c: WCOL[w], leaf: true, w, city: c[0]})).concat(w === "psy" ? [] : [])})).concat([{id: "w-ling", l: "زبان‌شناسی", sub: "به‌زودی", c: "#8a8a8a", leaf: true, node: "ling"}])},
+  {id: "b2", l: "۲ · لنز ایران", c: COL.iran, open: true, kids: [{id: "i1", l: "۱۶ برگهٔ داده", c: COL.iran, leaf: true, node: "iran-home"}]},
+  {id: "b3", l: "۳ · سیمرغ", sub: "در ساخت", c: COL.sim, leaf: true, node: "simorgh"},
+  {id: "b4", l: "اطلس‌های میان‌رشته‌ای", c: COL.atlas, open: true, kids: [{id: "a1", l: "جهان‌های اطلس", c: COL.atlas, leaf: true, node: "atlas-worlds"}, {id: "a2", l: "۲۵ پل", c: COL.atlas, leaf: true, node: "atlas-bridges"}, {id: "a3", l: "ابزارهای اطلس", c: COL.atlas, leaf: true, node: "atlas-tools"}, {id: "a4", l: "اطلس زمان (بیرونی)", c: COL.ext, leaf: true, node: "time"}]},
+  {id: "b5", l: "هستهٔ مشترک", c: COL.core, open: true, kids: [{id: "k1", l: fa(D.stats.people) + " چهره", c: COL.core, leaf: true, node: "core"}, {id: "k2", l: fa(D.stats.sources) + " منبع", c: COL.core, leaf: true, node: "core"}]},
+  {id: "b6", l: "صفحه‌های ویکی روان", c: WCOL.psy, open: false, kids: ["psy-lessons", "psy-books", "psy-tools", "psy-home"].map(id => ({id: "g-" + id, l: N[id].l, sub: fa(N[id].p.length) + " صفحه", c: WCOL.psy, leaf: true, node: id}))},
+  {id: "b7", l: "محصول جدا (الان داخل روان)", c: COL.product, open: true, kids: [{id: "p1", l: "سنجش سلامت سازمانی", c: COL.product, leaf: true, node: "product-org"}]}
+]};
+let selId = null;
+function layout() { let y = 0; const pos = []; const walk = (n, d) => { n.d = d; if (n.leaf || !n.open || !n.kids) { n.y = y; y += 1; } else { const s = y; n.kids.forEach(k => walk(k, d + 1)); n.y = (s + y - 1) / 2; } pos.push(n); }; walk(T, 0); return {pos, rows: y}; }
+function drawTree() {
+  const {pos, rows} = layout(), RH = 30, CW = 205, H = rows * RH + 30, maxd = Math.max(...pos.map(n => n.d)), Wd = (maxd + 1) * CW + 40; const svg = $("tree"); svg.setAttribute("width", Wd); svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${Wd} ${H}`);
+  const X = d => Wd - 20 - d * CW - 170, Y = n => 20 + n.y * RH; let s = "";
+  pos.forEach(n => { if (n.kids && n.open && !n.leaf) n.kids.forEach(k => { const x1 = X(n.d), y1 = Y(n), x2 = X(k.d) + 170, y2 = Y(k); s += `<path d="M${x1},${y1} C${x1 - 30},${y1} ${x2 + 30},${y2} ${x2},${y2}" fill="none" stroke="${k.c}" stroke-opacity=".5" stroke-width="1.6"/>`; }); });
+  pos.forEach(n => { const x = X(n.d), y = Y(n), w = 170; const has = n.kids && !n.leaf; const lab = n.l.length > 24 ? n.l.slice(0, 23) + "…" : n.l; s += `<g class="n" data-id="${n.id}"><rect x="${x}" y="${y - 12}" width="${w}" height="24" rx="12" fill="${n.d === 0 ? "#111" : n.c}" fill-opacity="${n.d === 0 ? 1 : .13}" stroke="${n.d === 0 ? "#111" : n.c}"${selId === n.id ? ' stroke-width="3"' : ""}/><text x="${x + w / 2}" y="${y + 4}" text-anchor="middle" font-size="12.5" font-weight="${n.d <= 1 ? 700 : 500}" fill="${n.d === 0 ? "#fff" : "currentColor"}">${esc(lab)}</text>${has ? `<text class="tog" x="${x - 9}" y="${y + 4}" text-anchor="middle" font-size="14" fill="${n.c}" data-tog="${n.id}">${n.open ? "−" : "+"}</text>` : ""}${n.sub ? `<text x="${x - 6}" y="${y + 4}" text-anchor="end" font-size="10" fill="#888">${esc(n.sub)}</text>` : ""}</g>`; });
+  svg.innerHTML = s;
+}
+const find = (n, id) => n.id === id ? n : (n.kids || []).reduce((a, k) => a || find(k, id), null);
+function side1(n) {
+  let h = "";
+  if (!n || n.id === "root") { h = `<h2>دانش‌سرا</h2><p>${fa(D.npages)} صفحه و ${fa(D.stats.concepts)} مفهوم. برای باز و بسته کردن شاخه‌ها روی «+» و «−» بزنید و برای دیدن صفحه‌های هر گروه روی نام آن.</p><h3>چیزی که اول پیدا شد</h3><p class="note">${fa(D.orphans.length)} صفحه هیچ پیوندی از جای دیگر ندارند (فقط با آدرس مستقیم پیدا می‌شوند)، و «سنجش سلامت سازمانی» که محصول جداست داخل ویکی روان نشسته است. به برگهٔ «گراف» بروید.</p>`; }
+  else if (n.node) { const x = N[n.node]; h = `<h2>${esc(x.l)}</h2>${x.s ? `<span class="badge w">${esc(x.s)}</span>` : ""}<p>${esc(x.n)}</p>${x.p.length ? `<h3>صفحه‌ها (${fa(x.p.length)})</h3>` + x.p.slice(0, 60).map(p => `<a href="${esc(link(p))}">${esc(p[1])}</a>`).join("") + (x.p.length > 60 ? `<p class="note">و ${fa(x.p.length - 60)} صفحهٔ دیگر</p>` : "") : "<p class='note'>هنوز صفحه‌ای ندارد.</p>"}${x.orph.length ? `<h3>صفحه‌های بی‌پیوند</h3><p class="note">این‌ها از هیچ صفحهٔ دیگری لینک نشده‌اند: ${fa(x.orph.length)} صفحه.</p>` : ""}`; }
+  else if (n.city) { h = `<h2>${esc(n.city)}</h2><span class="badge">${esc(WNAME[n.w])}</span><p>${esc(n.sub)} در این شهر. زیر هر شهر مفهوم‌ها و زیرموضوع‌ها هستند؛ آن‌ها را در «جهان دانش» با زوم می‌بینید.</p><a href="world.html">باز کردن جهان دانش ←</a><a href="../${n.w}/">ورود به ویکی ${esc(WNAME[n.w])} ←</a>`; }
+  else if (n.w) { const tot = D.cities[n.w].reduce((a, c) => a + c[1], 0); h = `<h2>ویکی ${esc(WNAME[n.w])}</h2><p>${fa(D.cities[n.w].length)} شهر (رشتهٔ اصلی) و ${fa(tot)} مدخل.</p><a href="../${n.w}/">ورود به ویکی ←</a>`; }
+  else h = `<h2>${esc(n.l)}</h2>`;
+  $("side1").innerHTML = h;
+}
+$("tree").addEventListener("click", e => { const t = e.target.closest("[data-tog]"); const g = e.target.closest(".n"); if (t) { const n = find(T, t.dataset.tog); n.open = !n.open; drawTree(); return; } if (g) { const n = find(T, g.dataset.id); selId = n.id; if (n.kids && !n.leaf && n.id !== "root") { n.open = !n.open; } drawTree(); side1(n); } });
+// ----- graph -----
+const ORDER = ["psy-home", "psy-lessons", "psy-books", "psy-tools", "product-org", "soc-home", "tabar-home", "phil-home", "ling", "iran-home", "simorgh", "atlas-worlds", "atlas-bridges", "atlas-tools", "core", "time", "home"];
+const GN = D.nodes.concat([{id: "home", br: "core", l: "صفحهٔ اول", n: "", p: [["index.html", "دانش‌سرا"]], s: "", in: 0, orph: []}]); const GM = Object.fromEntries(GN.map(n => [n.id, n]));
+const wikiHome = {psy: "psy-home", soc: "soc-home", phil: "phil-home", tabar: "tabar-home"};
+function drawGraph() {
+  const cx = 380, cy = 320, R = 255, P = {}; ORDER.forEach((id, i) => { const a = i / ORDER.length * 6.283 + 1.57; P[id] = [cx + Math.cos(a) * R, cy + Math.sin(a) * R * .93]; });
+  let s = ""; const mx = Math.max(...D.edges.map(e => e[2]), 1);
+  D.edges.forEach(([a, b, n]) => { if (!P[a] || !P[b]) return; s += `<path d="M${P[a][0]},${P[a][1]} Q${cx},${cy} ${P[b][0]},${P[b][1]}" fill="none" stroke="#8a8a8a" stroke-opacity="${.12 + .4 * n / mx}" stroke-width="${.6 + 3 * n / mx}"/>`; });
+  const wm = Math.max(...D.wl.map(e => e[2]), 1); D.wl.forEach(([a, b, n]) => { const A = P[wikiHome[a]], B = P[wikiHome[b]]; if (A && B) s += `<path d="M${A[0]},${A[1]} Q${cx},${cy} ${B[0]},${B[1]}" fill="none" stroke="#0a6b60" stroke-dasharray="6 5" stroke-opacity=".8" stroke-width="${1 + 5 * n / wm}"/><text x="${(A[0] + B[0]) / 2 * .5 + cx * .5}" y="${(A[1] + B[1]) / 2 * .5 + cy * .5}" font-size="11" fill="#0a6b60" text-anchor="middle">${fa(n)}</text>`; });
+  ORDER.forEach(id => { const n = GM[id], p = P[id], r = 12 + Math.min(14, Math.sqrt(Math.max(1, n.p.length)) * 2); const bad = n.orph && n.orph.length; s += `<g class="n" data-g="${id}"><circle cx="${p[0]}" cy="${p[1]}" r="${r}" fill="${COL[n.br] || "#888"}" fill-opacity="${n.s ? .15 : .85}" stroke="${bad ? "#b3261e" : COL[n.br]}" stroke-width="${bad ? 4 : 2}"${n.s === "به‌زودی" || n.s === "در ساخت" ? ' stroke-dasharray="4 3"' : ""}/><text x="${p[0]}" y="${p[1] + r + 14}" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">${esc(n.l)}</text></g>`; });
+  $("graph").innerHTML = s;
+}
+function side2(id) {
+  const weak = [], pagePair = (a, b) => (D.edges.find(e => e[0] === a && e[1] === b) || [0, 0, 0])[2] + (D.edges.find(e => e[0] === b && e[1] === a) || [0, 0, 0])[2];
+  D.wl.forEach(([a, b, n]) => { const pp = pagePair(wikiHome[a], wikiHome[b]); if (n >= 10 && pp < 2) weak.push(`${WNAME[a]} ↔ ${WNAME[b]}: ${fa(n)} پیوند مفهومی ولی ${fa(pp)} پیوند میان صفحه‌های ویکی‌ها`); });
+  let h;
+  if (id) { const n = GM[id]; const out = D.edges.filter(e => e[0] === id).sort((a, b) => b[2] - a[2]), inn = D.edges.filter(e => e[1] === id).sort((a, b) => b[2] - a[2]); h = `<h2>${esc(n.l)}</h2>${n.s ? `<span class="badge w">${esc(n.s)}</span>` : ""}<p>${esc(n.n)}</p><p>${fa(n.p.length)} صفحه.</p><h3>پیوند می‌دهد به</h3>${out.length ? out.map(e => `<p class="note">${esc(GM[e[1]] ? GM[e[1]].l : e[1])}: ${fa(e[2])}</p>`).join("") : "<p class='note'>هیچ گروه دیگری</p>"}<h3>پیوند می‌گیرد از</h3>${inn.length ? inn.map(e => `<p class="note">${esc(GM[e[0]] ? GM[e[0]].l : e[0])}: ${fa(e[2])}</p>`).join("") : "<p class='note'>هیچ گروه دیگری</p>"}${n.orph.length ? `<h3>صفحه‌های بی‌پیوند (${fa(n.orph.length)})</h3>${D.orphans.filter(o => n.orph.includes(o[0])).map(o => `<a href="../${esc(o[0])}">${esc(o[1])}</a>`).join("")}` : ""}`; }
+  else h = `<h2>نقاط ضعف ارتباط</h2><p class="note">روی یک گروه بزنید تا ورودی و خروجی‌اش را ببینید.</p><h3><span class="badge r">قرمز</span> صفحه‌های بی‌پیوند (${fa(D.orphans.length)})</h3><p class="note">این صفحه‌ها در سایت لینکی از هیچ صفحهٔ دیگر ندارند:</p>${D.orphans.map(o => `<a href="../${esc(o[0])}">${esc(o[1])}</a>`).join("")}${weak.length ? `<h3>ارتباط‌های ضعیف</h3>${weak.map(w => `<p class="note">${esc(w)}</p>`).join("")}` : ""}<h3>ویکی‌ها از نظر مفهومی چقدر به هم وصل‌اند؟</h3>${D.wl.sort((a, b) => b[2] - a[2]).map(e => `<p class="note">${WNAME[e[0]]} ↔ ${WNAME[e[1]]}: ${fa(e[2])} پیوند</p>`).join("")}`;
+  $("side2").innerHTML = h;
+}
+$("graph").addEventListener("click", e => { const g = e.target.closest("[data-g]"); side2(g ? g.dataset.g : null); });
+// ----- proposal -----
+$("v-prop").innerHTML = `
+<section><h2>اصل: هر چیز یک خانه دارد و یک مسیر</h2><ul><li><b>سه لایه از پایین به بالا:</b> ویکی‌ها ← لنز ایران ← سیمرغ. این‌ها در صفحهٔ اول دیده می‌شوند.</li><li><b>اطلس‌ها بیرون از لایه‌ها نیستند</b>، «پنجره» به لایه‌هاند: هرکدام نشان می‌دهد از کدام ویکی یا لایه می‌خواند.</li><li><b>ابزارها فقط در لایهٔ خودشان</b> می‌نشینند و در صفحهٔ اول نیستند (همان قاعدهٔ قبلی).</li><li><b>یک الگوی ثابت برای هر ویکی:</b> درباره ← شهرها (رشته‌های اصلی) ← اطلس‌های این ویکی ← کتاب‌ها ← درس‌ها.</li></ul></section>
+<section><h2>درخت پیشنهادی</h2><ul>
+<li>دانش‌سرا (صفحهٔ اول: سه لایه + اطلس‌ها)
+<ul><li>ویکی‌ها: روان · جامعه · تبار و ژنتیک · فلسفه · زبان‌شناسی (به‌زودی). هر ویکی: صفحهٔ اول، شهرها، اطلس‌ها و ابزارها، کتاب‌ها، درس‌ها</li>
+<li>لنز ایران: برگه‌های داده · ماتریس · خط زمانی · راستی‌آزما</li>
+<li>سیمرغ (در ساخت)</li>
+<li>اطلس‌های میان‌رشته‌ای: جهان دانش · سرزمین دانش · اطلس رشته‌ها · پل‌ها · کتابخانه · ابزارهای اطلس</li>
+<li>هستهٔ مشترک: چهره‌ها · منابع · صف بازبینی · مشارکت · نقشهٔ سایت</li></ul></li></ul></section>
+<section><h2>چه چیزی را عوض می‌کنیم</h2><ul>
+<li class="done">✓ صفحهٔ اول: تصویر لایه‌ای + اطلس‌ها با نمایش «از کجا می‌خواند»؛ ابزارها و شلوغی برداشته شد.</li>
+<li class="done">✓ جهان دانش و کتابخانهٔ جهان دانش: دو اطلس با زوم تا جزئیات.</li>
+<li class="done">✓ این نقشهٔ سایت و فهرست صفحه‌های بی‌پیوند.</li>
+<li class="todo">○ ۱۲ ابزار ویکی روان که لینک ندارند باید در «ابزارهای روان» لیست شوند.</li>
+<li class="todo">○ ویکی روان ۱۰۴ صفحه در یک پوشه دارد؛ باید به «درس‌ها»، «کتاب‌ها» و «ابزارها» تقسیم شود (همراه با تغییرمسیر تا لینک‌های قدیمی نشکنند).</li>
+<li class="todo">○ «سنجش سلامت سازمانی» محصول جداست؛ از داخل ویکی روان به جای خودش (wellbeing-check) منتقل یا با لینک از آن جدا شود.</li>
+<li class="todo">○ هر صفحهٔ اطلس یک نوار «این اطلس از کجا می‌خواند» داشته باشد، همان نقطه‌های رنگی صفحهٔ اول.</li>
+<li class="todo">○ پیوند میان ویکی‌ها در سطح صفحه: وقتی مفهومی در روان به جامعه وصل است، صفحه‌اش «ببینید در ویکی دیگر» بنمایاند.</li>
+<li class="todo">○ نسخهٔ انگلیسی و هلندی صفحهٔ اول و اطلس‌های تازه.</li></ul></section>`;
+// ----- tabs -----
+$("tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; document.querySelectorAll("#tabs button").forEach(x => x.setAttribute("aria-pressed", x === b)); ["tree", "graph", "prop"].forEach(t => { $("v-" + t).hidden = t !== b.dataset.t; }); });
+drawTree(); side1(null); drawGraph(); side2(null);
+})();
+</script>
+</body>
+</html>
