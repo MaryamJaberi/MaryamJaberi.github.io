@@ -1,0 +1,96 @@
+{
+ "id": "soc:nesin-sheep-wolf-fable",
+ "kind": "concept",
+ "title": {
+  "fa": "تمثیل نسین: گوسفندی که گرگ شد",
+  "en": "Nesin's fable: the lamb that became a wolf",
+  "nl": "Fabel van Nesin: het lam dat een wolf werd"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "در این تمثیل طنزآمیز چوپانی بی‌رحم از گله بیش از توانش می‌خواهد و برّه‌ای که فرار و دفاع می‌آموزد، سرانجام خشن می‌شود و گله را می‌درد. نسین با آن نشان می‌دهد که ستم می‌تواند ستمدیده را به خشونت بکشاند، اما این تصویر ادبی است و نه یافتهٔ پژوهشی.",
+  "en": "In this satirical fable a cruel shepherd demands more from his flock than it can give, and a lamb who learns to flee and fight turns violent and destroys the flock. Nesin uses it to suggest that oppression can push the oppressed to violence; it is a literary image, not a research finding.",
+  "nl": "In deze satirische fabel eist een wrede herder meer van zijn kudde dan die kan geven; een lam dat leert vluchten en vechten wordt zelf gewelddadig en vernietigt de kudde. Het is een literair beeld, geen onderzoeksresultaat."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "چوپان به‌جای مراقبت از گله، آن را بی‌وقفه می‌دوشد و می‌زند و حتی کمبودِ مردگان را از زندگان می‌خواهد؛ نسین با این تصویر حاکم بهره‌کش و نابخرد را نشان می‌دهد.",
+    "en": "The shepherd exploits and beats the flock without pause and even demands the dead animals' share from the living; Nesin draws an exploitative, irrational ruler.",
+    "nl": "The shepherd exploits and beats the flock without pause and even demands the dead animals' share from the living; Nesin draws an exploitative, irrational ruler."
+   },
+   "sources": [
+    "src:5ef27943f0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برّه برای گریز و دفاع، بدنش را سخت می‌کند، پاهایش بلند می‌شود، چنگال درمی‌آورد و صدایش عوض می‌شود؛ در داستان، شرایط فشار او را به چیزی دیگر بدل می‌کند.",
+    "en": "To escape and defend itself the lamb's body hardens and changes, with longer legs, claws and a new voice; in the story the pressure transforms it into something else.",
+    "nl": "To escape and defend itself the lamb's body hardens and changes, with longer legs, claws and a new voice; in the story the pressure transforms it into something else."
+   },
+   "sources": [
+    "src:5ef27943f0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چوپان وقتی خطر را می‌بیند اول تهدید می‌کند، بعد التماس و وعدهٔ محبت می‌دهد و آخر ادعای حمایت می‌کند؛ برّه پاسخ می‌دهد که ستم او را گرگ کرده است.",
+    "en": "Facing danger the shepherd first threatens, then pleads and promises affection, then claims to protect; the lamb replies that his cruelty made it a wolf.",
+    "nl": "Facing danger the shepherd first threatens, then pleads and promises affection, then claims to protect; the lamb replies that his cruelty made it a wolf."
+   },
+   "sources": [
+    "src:5ef27943f0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این تمثیل چرخهٔ ستم و خشونت را به‌صورت یک تصویر ساده بیان می‌کند. پژوهش‌های جامعه‌شناسی خشونت می‌گویند خشونت پاسخ‌گونه فقط یکی از مسیرهاست و شرایط سازمانی و سیاسی هم در آن نقش دارند؛ بنابراین نمی‌توان از تمثیل نتیجهٔ کلی گرفت.",
+    "en": "The fable states a cycle of oppression and violence as a simple image. Sociological work on violence suggests that reactive violence is only one pathway and that organisational and political conditions matter, so no general conclusion can be drawn from the fable.",
+    "nl": "The fable states a cycle of oppression and violence as a simple image. Sociological work on violence suggests that reactive violence is only one pathway and that organisational and political conditions matter, so no general conclusion can be drawn from the fable."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:berger-humor-authoritarian",
+   "rel": "see-also",
+   "note": {
+    "fa": "طنز در جامعهٔ استبدادزده",
+    "en": "humour under authoritarian rule",
+    "nl": "humour under authoritarian rule"
+   }
+  },
+  {
+   "to": "soc:nesin-bedbug-sultan",
+   "rel": "see-also",
+   "note": {
+    "fa": "تمثیل دیگر نسین دربارهٔ پارانویای قدرت",
+    "en": "another Nesin fable on the paranoia of power",
+    "nl": "another Nesin fable on the paranoia of power"
+   }
+  }
+ ],
+ "people": [
+  "core:aziz-nesin",
+  "core:reza-hamrah"
+ ],
+ "sources": [
+  "src:5ef27943f0"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
