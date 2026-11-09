@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>از نخستین انسان‌ها تا امروز</title>
+<meta name="description" content="خط زمانی مفهوم‌های ویکی تبار که در داده زمان دارند، از خروج از آفریقا تا DNA باستان.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.what{font-size:1.05rem;color:var(--ink-2);max-width:68ch;margin:0 0 20px}
+.pill{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);min-height:40px;padding:6px 14px;font-size:.9rem;line-height:1.4}
+button.pill:hover{background:var(--surface-subtle);color:var(--ink)}
+.pill[aria-pressed=true],.pill.on{background:var(--primary-soft);border-color:var(--primary);color:var(--primary);font-weight:600}
+.pill:disabled{opacity:.4;cursor:default}
+button.btn2{min-height:44px}
+.ctrls{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px}
+.field{display:grid;gap:4px;font-size:.85rem;color:var(--ink-2)} .field input,.field select{width:100%;min-height:44px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+details.fold{margin-bottom:14px} details.fold>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;color:var(--ink-2);font-size:.9rem}
+.bar{display:flex;gap:2px;height:8px;border-radius:99px;overflow:hidden;background:var(--line)} .bar i{display:block;min-width:4px}
+.t1{background:#2F7D4F}.t2{background:#3C6EA8}.t3{background:#8A6D1D}.t4{background:#8A2E2E}.t0{background:var(--ink-3)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.78rem;color:var(--ink-2);margin-top:6px} .legend .sw{display:inline-block;width:9px;height:9px;border-radius:3px;margin-inline-end:5px}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))} .cards>*{min-width:0}
+.ent{display:flex;flex-direction:column;gap:8px} .ent h3{margin:0;font-size:1.08rem;line-height:1.55} .ent h3 a{color:var(--ink);text-decoration:none} .ent h3 a:hover{color:var(--primary);text-decoration:underline}
+.en{color:var(--ink-3);font-size:.85rem;direction:ltr;text-align:start} .sum{margin:0;font-size:.95rem;color:var(--ink-2);line-height:1.85}
+.pts{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px} .pts li{font-size:.9rem;padding:10px 12px;background:var(--surface-subtle);border-radius:10px;line-height:1.8} .pts .row{margin-top:6px;gap:6px}
+details>summary{cursor:pointer} .ent details summary{min-height:36px;display:flex;align-items:center;color:var(--primary);font-size:.9rem}
+.more{display:block;margin:22px auto 0}
+.count{color:var(--ink-2);font-size:.9rem;margin:6px 0 14px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:6px;background:var(--fam-bio)}
+.note.foot{margin-top:36px}
+mark{background:color-mix(in srgb,var(--warn) 28%,transparent);color:inherit;border-radius:4px;padding:0 3px}
+.toolcards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.toolcard{display:flex;flex-direction:column;gap:8px;border-top:4px solid var(--fam-bio)} .toolcard h3{margin:0;font-size:1.2rem} .toolcard p{margin:0;color:var(--ink-2);font-size:.95rem} .toolcard .btn{align-self:flex-start;margin-top:auto;min-height:44px;display:inline-flex;align-items:center}
+.toolcard.psy{border-top-color:var(--fam-psy)}
+.tag{font-size:.75rem;color:var(--ink-3)}
+@media (max-width:600px){.ctrls{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--line-strong)}}
+
+.ruler{position:relative;height:74px;margin:6px 0 22px;padding-inline:4px} .ruler .axis{position:absolute;top:30px;inset-inline:6px;height:2px;background:var(--line-strong)}
+.ruler .tk{position:absolute;top:36px;transform:translateX(50%);font-size:.7rem;color:var(--ink-3);white-space:nowrap} .ruler .tk::before{content:"";position:absolute;top:-8px;left:50%;height:6px;border-inline-start:1px solid var(--line-strong)}
+.ruler .pt{position:absolute;top:23px;width:12px;height:12px;border-radius:50%;transform:translateX(50%);background:var(--fam-bio);border:2px solid var(--paper);padding:0;min-height:0}
+.ruler .pt.sci{background:var(--accent)} .ruler .pt:hover{transform:translateX(50%) scale(1.5)}
+.ruler .cap{position:absolute;top:0;font-size:.74rem;color:var(--ink-3)}
+.era{margin-top:30px;position:relative} .era h2{display:flex;align-items:center;gap:10px;font-size:1.1rem;color:var(--ink-2)} .era h2::after{content:"";flex:1;border-top:1px solid var(--line)}
+.evs{list-style:none;margin:0;padding:0;display:grid;gap:12px;border-inline-start:2px solid var(--line-strong);padding-inline-start:18px;margin-inline-start:6px}
+.evi{position:relative;display:grid;grid-template-columns:minmax(96px,150px) 1fr;gap:14px} .evi::before{content:"";position:absolute;inset-inline-start:-27px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--fam-bio);border:2px solid var(--paper)}
+.evi.sci::before{background:var(--accent)}
+.when{font-size:1.05rem;font-weight:700;line-height:1.5;color:var(--ink)} .when small{display:block;font-weight:400;color:var(--ink-3);font-size:.78rem;margin-top:2px}
+.evi h3{margin:0 0 4px;font-size:1rem} .evi h3 a{color:var(--primary)} .evi .tx{margin:0 0 8px;font-size:.93rem;color:var(--ink-2)}
+.undated{display:flex;flex-wrap:wrap;gap:8px} .undated a{display:inline-flex;align-items:center;min-height:40px;padding:4px 12px;border:1px solid var(--line-strong);border-radius:999px;background:var(--surface);text-decoration:none;color:var(--ink);font-size:.88rem} .undated a:hover{border-color:var(--primary);color:var(--primary)}
+@media (max-width:600px){.evi{grid-template-columns:1fr;gap:4px} .ruler .tk:nth-of-type(even){display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><nav class="crumb" aria-label="مسیر"><a href="../../index.html">دانش‌سرا</a><span aria-hidden="true">›</span><a href="../index.html">تبار و ژنتیک</a><span aria-hidden="true">›</span><a href="index.html">ابزارها</a><span aria-hidden="true">›</span><span aria-current="page">خط زمانی</span></nav></div></header>
+<main class="wrap" id="main">
+<h1>از نخستین انسان‌ها تا امروز</h1>
+<p class="what">مفهوم‌های ویکی تبار که در متنشان زمان دارند، به ترتیب از کهن‌ترین، روی یک خط زمانی. وقتی می‌خواهید بدانید «این ماجرا کِی بود و چه کسی چنین می‌گوید» به کارتان می‌آید. زمان‌ها برآورد پژوهشگران‌اند و با پیشرفت داده تغییر می‌کنند.</p>
+<div class="row" style="margin-bottom:14px" role="group" aria-label="نوع رویداد">
+  <button class="pill" type="button" data-k="" aria-pressed="true">همه</button>
+  <button class="pill" type="button" data-k="past" aria-pressed="false">زمان رویداد در گذشته</button>
+  <button class="pill" type="button" data-k="sci" aria-pressed="false">تاریخ پژوهش (سال کشف یا انتشار)</button>
+</div>
+<div class="ruler" id="ruler" aria-hidden="true"></div>
+<p class="muted" style="margin:-14px 0 0">نوار بالا مقیاس لگاریتمی دارد (راست: کهن‌تر، چپ: امروز). نقطهٔ نارنجی: زمان رویداد؛ نقطهٔ آبی: سال پژوهش.</p>
+<div id="out"></div>
+<h2 id="undated-h">بدون سال دقیق در داده</h2>
+<p class="muted">این مفهوم‌ها در متنشان سال یا بازهٔ زمانیِ مشخص ندارند (یا فقط بازهٔ مبهم مثل «چند هزار سال» دارند)؛ برای همین جایی روی خط نگرفته‌اند.</p>
+<div class="undated" id="undated"></div>
+<div class="note foot" role="note">این ابزار پیش‌نویس است و محتوای مدخل‌ها بازبینی نشده. برچسب‌های اعتبار فقط از ردهٔ منبعِ ثبت‌شده و پرچم‌های داده محاسبه می‌شوند، نه از ارزیابی تازه؛ برای تصمیم مهم به خود منبع‌ها برگردید. فقط رویدادهایی آمده‌اند که زمانشان در خود متنِ مدخل نوشته شده؛ نقطه‌های روی خط برآورد پژوهشگران‌اند و ممکن است عوض شوند.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · محتوا از دادهٔ مشترک ویکی‌ها (core/tools/data.json) خوانده می‌شود.</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script type="module">
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=DS.esc, fd=DS.faDigits;
+const TIERS=[1,2,3,4,0], FLAGS=['unreplicated','contested','dated','editor-note'];
+let D;
+const mainEl=$('#main');
+function fail(e){
+  console.warn(e);
+  mainEl.innerHTML='<div class="empty" role="alert"><p>بارگذاری داده ناموفق بود. اتصال خود را بررسی کنید یا صفحه را دوباره باز کنید.</p><button id="retry" class="btn">تلاش دوباره</button></div>';
+  const b=$('#retry'); if(b) b.onclick=()=>location.reload();
+}
+try{ D=await DS.load(); }catch(e){ fail(e); throw e; }
+const pre=c=>{ if(!c._st){ c._st=DS.stats(c); c._g=DS.grade(c); } return c; };
+const domOf=c=> c.field&&D.fieldById[c.field]? D.fieldById[c.field].t.fa : 'سایر';
+function bar(st){
+  if(!st.n) return '<span class="muted">این مدخل هنوز گزارهٔ منبع‌دار ندارد.</span>';
+  const ks=TIERS.filter(k=>st.tiers[k]);
+  return `<div class="bar" role="img" aria-label="${esc(ks.map(k=>DS.TIER[k]+' '+fd(st.tiers[k])).join('، '))}">${ks.map(k=>`<i class="t${k}" style="flex:${st.tiers[k]}"></i>`).join('')}</div>
+  <div class="legend">${ks.map(k=>`<span><b class="sw t${k}"></b>${esc(DS.TIER[k])} ${fd(st.tiers[k])}</span>`).join('')}</div>`;
+}
+function flagsRow(st){ const f=FLAGS.filter(x=>st.flags[x]); return f.length?`<div class="row" style="gap:6px">${f.map(x=>`<span class="flag ${x}">${esc(DS.FLAG[x])} ${fd(st.flags[x])}</span>`).join('')}</div>`:''; }
+function ptHTML(p){ return `<li>${esc(p.t)}<div class="row">${DS.chipTier(p.tier||0)}${(p.f||[]).map(DS.chipFlag).join('')}</div></li>`; }
+function ptsHTML(c,lim){ const a=lim?c.pts.slice(0,lim):c.pts; return a.length?`<ul class="pts">${a.map(ptHTML).join('')}</ul>`:'<p class="muted">گزارهٔ منبع‌دار ثبت نشده است.</p>'; }
+function setHash(o){ const r={}; for(const k in o){ const v=o[k]; if(v!==''&&v!=null&&v!==false) r[k]=v; } DS.hash.set(r); }
+const collator=new Intl.Collator('fa');
+
+const EV=[["primates-ape-ancestry-molecular-clock", 65000000.0, "past", "۶۵ میلیون سال پیش", "۶۵ میلیون سال پیش"], ["primates-ape-ancestry-molecular-clock", 6000000.0, "past", "حدود ۶ میلیون سال پیش", "نیای مشترک ما و شامپانزه حدود ۶ میلیون سال پیش"], ["earliest-bipeds-and-australopithecus", 6750000.0, "past", "۷ تا ۶٫۵ میلیون سال پیش", "سن ۷ تا ۶٫۵ میلیون سال"], ["lomekwi-3-site", 3300000.0, "past", "حدود ۳٫۳ میلیون سال پیش", "حدود ۳٫۳ میلیون سال"], ["meat-eating-hunting-hypothesis", 2600000.0, "past", "حدود ۲٫۶ میلیون سال پیش", "حدود ۲٫۶ میلیون سال پیش"], ["first-toolmakers-debate", 2340000.0, "past", "حدود ۲٫۳۴ میلیون سال پیش", "حدود ۲٫۳۴ میلیون سال پیش"], ["quaternary-climate-frameworks-dating", 2000000.0, "past", "حدود دو میلیون سال اخیر", "دو میلیون سال اخیر"], ["cooking-hypothesis", 1800000.0, "past", "حدود ۱٫۸ میلیون سال پیش", "حدود ۱٫۸ میلیون سال پیش"], ["brain-body-size-climate", 1000000.0, "past", "یک میلیون سال گذشته", "یک میلیون سال گذشته"], ["fire-control-dating-debate", 790000.0, "past", "حدود ۷۹۰ هزار سال پیش", "۷۹۰ هزار سال پیش"], ["ochre-middle-stone-age", 500000.0, "past", "۵۰۰ تا ۴۰ هزار سال پیش", "۵۰۰٬۰۰۰ تا ۴۰٬۰۰۰ سال پیش"], ["haplogroups", 200000.0, "past", "حدود ۲۰۰ هزار سال پیش", "حدود ۲۰۰ هزار سال پیش"], ["persian-plateau-hub", 65000.0, "past", "حدود ۷۰ تا ۶۰ هزار سال پیش", "حدود ۷۰ تا ۶۰ هزار سال پیش"], ["neanderthal-ancestry-selection", 51500.0, "past", "حدود ۵۴ تا ۴۹ هزار سال پیش", "۵۴ تا ۴۹ هزار سال پیش"], ["eurasian-waves-eec-wec", 45000.0, "past", "حدود ۴۵ هزار سال پیش", "موج اول (حدود ۴۵ هزار سال پیش)"], ["eurasian-waves-eec-wec", 38000.0, "past", "حدود ۳۸ هزار سال پیش", "موج دوم (حدود ۳۸ هزار سال پیش)"], ["quaternary-climate-frameworks-dating", 10000.0, "past", "حدود ۱۰ هزار سال پیش", "هولوسن، حدود ۱۰٬۰۰۰ سال پیش"], ["near-east-first-farmers-structure", 9926, "past", "۸۲۰۰ تا ۷۶۰۰ پیش از میلاد", "۸۲۰۰ تا ۷۶۰۰ پیش از میلاد"], ["zagros-neolithic", 8500, "past", "۷ تا ۱۰ هزار سال پیش", "۷ تا ۱۰ هزار سال پیش"], ["europe-three-streams-yamnaya", 9000, "past", "پس از حدود ۹ هزار سال پیش", "پس از حدود ۹ هزار سال پیش"], ["europe-three-streams-yamnaya", 5000, "past", "حدود ۵ هزار سال پیش", "حدود ۵ هزار سال پیش با فرهنگ طناب‌نقش"], ["sex-bias-inequality-genome", 5000, "past", "حدود ۵ هزار سال پیش", "حدود ۵ هزار سال پیش تنوع کروموزوم Y"], ["steppe-indo-iranian", 3500, "past", "هزارهٔ دوم پیش از میلاد", "در هزارهٔ دوم پیش از میلاد"], ["common-ancestors", 3500, "past", "حدود ۲ تا ۵ هزار سال پیش", "حدود ۲ تا ۵ هزار سال پیش"], ["caste-endogamy-founder-effect", 2500, "past", "۳ تا ۲ هزار سال پیش", "میان ۳ تا ۲ هزار سال پیش"], ["sex-bias-inequality-genome", 1000, "past", "۱۳۰۰ تا ۷۰۰ سال پیش", "۱۳۰۰ تا ۷۰۰ سال پیش"], ["darwin-inheritance-gap", 167, "sci", "۱۸۵۹", "در ۱۸۵۹ هیچ نظریهٔ درستی"], ["darwin-inheritance-gap", 160, "sci", "۱۸۶۶", "مندل (۱۸۶۶)"], ["darwin-inheritance-gap", 159, "sci", "۱۸۶۷", "فلیمینگ جنکین در ۱۸۶۷"], ["eugenics", 143, "sci", "۱۸۸۳", "گالتون در ۱۸۸۳"], ["darwin-inheritance-gap", 133, "sci", "۱۸۹۳", "وایسمان (۱۸۹۳)"], ["eugenics", 99, "sci", "۱۹۲۷", "دیوان عالی در ۱۹۲۷"], ["darwin-natural-selection", 58, "sci", "۱۹۶۸", "کیمورا، ۱۹۶۸"], ["darwin-natural-selection", 47, "sci", "۱۹۷۹", "لوونتین (۱۹۷۹)"], ["thalassemia-screening", 29, "sci", "۱۹۹۷", "از ۱۹۹۷ غربالگری"], ["ancient-dna", 16, "sci", "۲۰۱۰", "از ۲۰۱۰ به بعد"], ["neanderthal-admixture", 16, "sci", "۲۰۱۰", "گرین و همکاران (۲۰۱۰)"], ["neanderthal-admixture", 4, "sci", "۲۰۲۲", "نوبل پزشکی ۲۰۲۲"]];
+const ERAS=[[1e6,Infinity,'یک میلیون سال پیش و کهن‌تر'],[1e5,1e6,'۱۰۰ هزار تا یک میلیون سال پیش'],[1e4,1e5,'۱۰ تا ۱۰۰ هزار سال پیش'],[1e3,1e4,'۱ تا ۱۰ هزار سال پیش'],[0,1e3,'دو قرن اخیر: تاریخ پژوهش']];
+function sentence(src,q){
+  const i=src.indexOf(q); let b=-1,e=src.length-1;
+  for(let j=i-1;j>=0;j--){ if('.؛؟!\n'.includes(src[j])){ b=j; break; } }
+  for(let j=i+q.length;j<src.length;j++){ if('.؛؟!\n'.includes(src[j])){ e=j; break; } }
+  let s=src.slice(b+1,e+1).trim();
+  if(s.length>380){ const k=s.indexOf(q); s='… '+s.slice(Math.max(0,k-170),k+q.length+170).trim()+' …'; }
+  return s;
+}
+const items=[];
+for(const [id,ya,kind,lab,q] of EV){
+  const c=D.byId['tabar:'+id]; if(!c) continue; pre(c);
+  const pt=c.pts.find(p=>p.t.includes(q)); const src=pt?pt.t:(c.s.fa.includes(q)?c.s.fa:null);
+  if(!src) continue;
+  items.push({c,ya,kind,lab,q,pt,s:sentence(src,q)});
+}
+items.sort((a,b)=>b.ya-a.ya);
+const usedIds=new Set(items.map(x=>x.c.id));
+let K='';
+function item(x,i){
+  const meta = x.pt ? `${DS.chipTier(x.pt.tier||0)}${(x.pt.f||[]).map(DS.chipFlag).join('')}`
+    : `${DS.chipGrade(x.c._g)}<span class="muted">از خلاصهٔ مدخل (گزارهٔ جدا نیست)</span>`;
+  const sm=esc(x.s).replace(esc(x.q),`<mark>${esc(x.q)}</mark>`);
+  return `<li class="evi ${x.kind}" id="ev${i}"><div class="when">${esc(x.lab)}<small>${x.kind==='sci'?'سال در متن (پژوهش یا رویداد علمی)':'زمان رویداد، برآورد'}</small></div>
+  <div><h3><a href="${esc(DS.url(D,x.c))}">${esc(x.c.t.fa)}</a></h3><p class="tx">${sm}</p><div class="row" style="gap:6px">${meta}<span class="chip tabar">${esc(domOf(x.c))}</span></div></div></li>`;
+}
+function ruler(list){
+  const lo=0.5, hi=7.9, pos=ya=>Math.max(0,Math.min(100,(hi-Math.log10(ya))/(hi-lo)*100));
+  const ticks=[[1e1,'۱۰ سال'],[1e2,'۱۰۰ سال'],[1e3,'هزار'],[1e4,'۱۰ هزار'],[1e5,'۱۰۰ هزار'],[1e6,'یک میلیون'],[1e7,'۱۰ میلیون']];
+  $('#ruler').innerHTML='<div class="axis"></div>'+ticks.map(t=>`<span class="tk" style="right:${pos(t[0])}%">${t[1]}</span>`).join('')+
+    list.map(x=>`<a class="pt ${x.kind}" href="#ev${items.indexOf(x)}" tabindex="-1" title="${esc(x.c.t.fa)}: ${esc(x.lab)}" style="right:${pos(x.ya)}%;position:absolute"></a>`).join('');
+}
+function render(){
+  const list=items.filter(x=>!K||x.kind===K);
+  ruler(list);
+  const out=$('#out');
+  if(!list.length){ out.innerHTML='<div class="empty">رویدادی برای این فیلتر نیست.</div>'; return; }
+  out.innerHTML=ERAS.map(([a,b,t])=>{ const g=list.filter(x=>x.ya>=a&&x.ya<b); return g.length?`<section class="era"><h2>${esc(t)}</h2><ol class="evs">${g.map(x=>item(x,items.indexOf(x))).join('')}</ol></section>`:''; }).join('');
+  setHash({k:K});
+}
+$$('[data-k]').forEach(b=>b.addEventListener('click',()=>{ K=b.dataset.k; $$('[data-k]').forEach(x=>x.setAttribute('aria-pressed',x===b)); render(); }));
+const hh=DS.hash.get(); if(hh.k==='past'||hh.k==='sci'){ K=hh.k; $$('[data-k]').forEach(x=>x.setAttribute('aria-pressed',x.dataset.k===K)); }
+render();
+const rest=D.concepts.filter(c=>c.w==='tabar'&&c.field&&!usedIds.has(c.id)).sort((a,b)=>collator.compare(a.t.fa,b.t.fa));
+$('#undated').innerHTML=rest.length?rest.map(c=>`<a href="${esc(DS.url(D,c))}">${esc(c.t.fa)}</a>`).join(''):'<span class="muted">همهٔ مفهوم‌ها جایی روی خط دارند.</span>';
+</script>
+</body></html>

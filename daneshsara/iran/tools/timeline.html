@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>خط زمانی ایران — دانش‌سرا</title>
+<meta name="description" content="رویدادها و ادعاهای تاریخ‌دارِ مربوط به ایران را که در دانش‌سرا آمده‌اند، از ده‌ها هزار سال پیش تا امروز، با ردهٔ اعتبار و پیوند به مدخل می‌بینید؛ آنچه سال ندارد جدا مانده است.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+html{scroll-padding-top:72px}
+.tip{max-width:68ch;color:var(--ink-2);margin:0 0 22px;font-size:1.06rem}
+.cb,button.cb{background:var(--surface);color:var(--ink-2);border:1px solid var(--line-strong);border-radius:999px;min-height:40px;padding:6px 16px;font-size:.95rem}
+.cb:hover,button.cb:hover{background:var(--primary-soft);color:var(--ink);border-color:var(--primary)}
+.cb[aria-pressed=true],button.cb[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
+.seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;border-radius:0;background:transparent;color:var(--ink-2);min-height:40px;padding:6px 16px}
+.seg button:hover{background:var(--primary-soft);color:var(--ink)}
+.seg button[aria-pressed=true]{background:var(--primary);color:#fff}
+.field{min-height:44px;width:100%}
+.limit{border-top:1px solid var(--line);margin-top:36px;padding-top:16px}
+.cc{display:flex;flex-direction:column;gap:8px}
+.cc h3{margin:0;font-size:1.02rem;line-height:1.55}
+.cc h3 a{color:var(--ink);text-decoration:none} .cc h3 a:hover{color:var(--primary);text-decoration:underline}
+.cc .sn{margin:0;color:var(--ink-2);font-size:.92rem;line-height:1.75}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.q{border-inline-start:3px solid var(--line-strong);padding-inline-start:10px;color:var(--ink-2);font-size:.9rem;line-height:1.75;margin:0}
+.nt h4{margin:0 0 4px;font-size:.98rem;line-height:1.6} .nt p{margin:4px 0;font-size:.92rem}
+.nt a{font-weight:600}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.fail{padding:28px;text-align:center;border:1px dashed var(--err);border-radius:16px;color:var(--err)}
+.chip.mini{font-size:.72rem;padding:0 8px}
+.wk{font-weight:700}
+
+.band{margin:0 0 26px} .band>h2{display:flex;align-items:baseline;gap:10px;margin:0 0 12px;font-size:1.15rem} .band>h2 .muted{font-weight:400}
+.vt{list-style:none;margin:0;padding:0;border-inline-start:2px solid var(--line-strong);margin-inline-start:7px}
+.vt>li{position:relative;padding-inline-start:20px;padding-bottom:14px}
+.vt>li::before{content:"";position:absolute;inset-inline-start:-8px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--dot,var(--primary))}
+.ev-card{--dot:var(--primary)}
+.ev-card .when{font-weight:700;font-size:1.02rem;color:var(--ink)} .ev-card .ap{font-size:.8rem;color:var(--ink-3)}
+.ev-card h3{margin:2px 0 6px;font-size:.98rem;font-weight:600;line-height:1.55} .ev-card h3 a{color:var(--primary);text-decoration:none} .ev-card h3 a:hover{text-decoration:underline}
+.ev-card p{margin:6px 0 8px;font-size:.93rem;line-height:1.8}
+.hzw{overflow-x:auto;padding-bottom:12px;border:1px solid var(--line);border-radius:16px;background:var(--surface-subtle)}
+.hz{display:flex;gap:0;width:max-content;padding:18px 16px}
+.hz .band{margin:0;padding-inline:14px;border-inline-end:1px dashed var(--line-strong);flex:none}
+.hz .band:last-child{border-inline-end:0}
+.hz .band>h2{font-size:1rem;position:sticky;inset-inline-start:0}
+.hz .evs{display:flex;gap:14px;align-items:flex-start;border-top:3px solid var(--line-strong);padding-top:22px;position:relative}
+.hz .evs>.ev{position:relative;width:290px;flex:none} .hz .evs>.ev::before{content:"";position:absolute;top:-30px;inset-inline-start:18px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--primary)}
+.hz .vt{display:contents}
+.und{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.dated-note{font-size:.8rem}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <nav class="crumb" aria-label="مسیر"><a href="../../index.html">خانه</a><span aria-hidden="true">›</span><a href="../index.html">برای ایران</a><span aria-hidden="true">›</span><span aria-current="page">خط زمانی ایران</span></nav>
+ <a class="muted" href="index.html">همهٔ ابزارهای ایران</a>
+</div></header>
+<main class="wrap">
+ <h1>خط زمانی ایران</h1>
+ <p class="tip">رویدادها و ادعاهای تاریخ‌دارِ مربوط به ایران را که در دانش‌سرا آمده‌اند، از ده‌ها هزار سال پیش تا امروز، با ردهٔ اعتبار و پیوند به مدخل می‌بینید؛ آنچه سال ندارد جدا مانده است.</p>
+ <div id="app" aria-live="polite">
+<div class="card" style="margin-bottom:18px">
+ <div class="row" style="justify-content:space-between;gap:14px">
+  <div class="seg" role="group" aria-label="نوع نما"><button type="button" data-v="v" aria-pressed="true">عمودی</button><button type="button" data-v="h" aria-pressed="false">افقی</button></div>
+  <div class="row" id="wf" role="group" aria-label="فیلتر رشته"></div>
+ </div>
+ <div class="row" style="margin-top:12px;gap:16px">
+  <label class="row" style="gap:8px;cursor:pointer;min-height:40px"><input type="checkbox" id="st" style="width:20px;height:20px"> فقط گزاره‌های با ردهٔ منبع ۱ و ۲ (یا مدخل ردهٔ A و B)</label>
+  <label class="row" style="gap:8px;cursor:pointer;min-height:40px"><input type="checkbox" id="nt" checked style="width:20px;height:20px"> یادداشت‌های آماری ایران (به ترتیب سال داده)</label>
+ </div>
+</div>
+<p class="note" id="info"></p>
+<div id="out"><div class="empty">در حال بارگذاری…</div></div>
+</div>
+ <p class="muted limit">پیش‌نویس و بازبینی‌نشده: این خط زمانی تاریخ ایران نیست؛ فقط رویدادهایی را نشان می‌دهد که در مدخل‌های دانش‌سرا سالشان آمده، و بسیاری از آن‌ها روایت یک سخنران‌اند (پرچم و ردهٔ منبع را ببینید). همهٔ متن‌ها از دادهٔ دانش‌سرا آمده‌اند و ابزار چیزی بر آن نمی‌افزاید؛ ردهٔ منبع و پرچم‌ها را همیشه کنار گزاره بخوانید.</p>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · لایهٔ «برای ایران» · ابزارها</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+
+const SH = {};
+SH.IRX = /ایران|فارس|پارسی|زاگرس|چغاگلان|غار یافته|هندوایرانی/;
+SH.WIKIS = ["psy","soc","phil","tabar"];
+SH.FAM = {psy:"var(--fam-psy)",soc:"var(--fam-soc)",phil:"var(--fam-hum)",tabar:"var(--fam-bio)"};
+SH.tp = (text, term) => (" " + text).includes(" " + term);
+SH.prep = D => {
+  if (D._prep) return; D._prep = true;
+  D.concepts.forEach(c => {
+    c._nt = DS.norm(c.t.fa + " " + (c.al || []).join(" ")); c._ns = DS.norm(c.s.fa); c._pn = c.pts.map(p => DS.norm(p.t));
+    const t = SH.IRX.test(c._nt), s = SH.IRX.test(c._ns), p = c._pn.filter(x => SH.IRX.test(x)).length;
+    c._ir = { t, s, p, is: !!(c.ir || t || s || p >= 2), score: (c.ir ? 6 : 0) + (t ? 5 : 0) + (s ? 3 : 0) + Math.min(p, 5) };
+    c._full = c._nt + " " + c._ns + " " + c._pn.join(" ");
+  });
+  D.notesById = {}; D.iran.forEach(n => { n._t = DS.norm(n.q.fa + " " + n.f.fa); D.notesById[n.id] = n; });
+};
+SH.wchip = w => `<span class="chip ${w}">${DS.esc(DS.WIKI[w])}</span>`;
+SH.cut = (s, n) => { s = String(s || ""); if (s.length <= n) return s; const k = s.lastIndexOf(" ", n); return s.slice(0, k > n * .6 ? k : n) + "…"; };
+SH.noteUrl = n => "../index.html#" + n.id.split(":")[1];
+SH.flagChips = fl => (fl || []).filter(f => f in DS.FLAG && f !== "editor-note").map(DS.chipFlag).join(" ");
+SH.entryFlags = c => { const s = DS.stats(c); return ["contested","unreplicated","dated"].filter(f => s.flags[f]).map(f => `<span class="flag ${f}">${DS.esc(DS.FLAG[f])} ${DS.faDigits(s.flags[f])}</span>`).join(" "); };
+SH.conceptMeta = c => `${SH.wchip(c.w)} ${DS.chipGrade(DS.grade(c))} ${c.st === "draft" ? '<span class="chip mini">پیش‌نویس</span>' : ""} ${SH.entryFlags(c)}`;
+SH.noteBox = (n, extra) => `<div class="note nt"><h4>${DS.esc(n.q.fa)}</h4><p>${DS.esc(n.f.fa)}</p>
+  <div class="meta">${DS.chipGrade(n.grade)} <span class="chip mini">${DS.faDigits(n.year)}</span> ${n.method ? `<span class="chip mini">${DS.esc(n.method)}</span>` : ""} ${n.contested ? DS.chipFlag("contested") : ""} <a href="${SH.noteUrl(n)}">منبع و نقد در «برای ایران» ↗</a></div>${extra || ""}</div>`;
+SH.irSentence = c => { const i = c._pn.findIndex(x => SH.IRX.test(x)); if (i < 0) return ""; const p = c.pts[i]; return `<p class="q">«${DS.esc(SH.cut(p.t, 230))}» <span class="meta" style="display:inline-flex">${DS.chipTier(p.tier || 0)} ${SH.flagChips(p.f)}</span></p>`; };
+SH.fail = (e) => { console.info("load failed", e && e.message); document.getElementById("app").innerHTML = `<div class="fail" role="alert"><p><b>بارگذاری داده ناموفق بود.</b></p><p>اتصال را بررسی کنید و صفحه را دوباره باز کنید. اگر پرونده را مستقیم از دیسک باز کرده‌اید، آن را از یک کارساز محلی یا از نشانی سایت باز کنید.</p><button class="cb" onclick="location.reload()">تلاش دوباره</button></div>`; };
+SH.guard = fn => { if (typeof DS === "undefined") { SH.fail(new Error("lib")); return; } DS.load().then(D => { SH.prep(D); return fn(D); }).catch(SH.fail); };
+
+
+const SPEC = [
+["soc:persian-plateau-palaeolithic-record",0,"۱۳۰ تا ۷۱ هزار سال پیش",-128000],
+["soc:persian-plateau-palaeolithic-record",1,"۷۷ تا ۴۰ هزار سال پیش",-75000],
+["tabar:persian-plateau-hub",0,"۷۰ تا ۶۰ هزار سال پیش",-68000],
+["soc:chogha-golan-plant-management","s","۱۲٬۰۰۰ تا ۹۸۰۰ سال پیش",-9974],
+["tabar:near-east-first-farmers-structure",0,"۸۲۰۰ تا ۷۶۰۰ پیش از میلاد",-8200],
+["tabar:zagros-neolithic","s","۹ تا ۱۰ هزار سال پیش",-7974],
+["soc:goat-domestication-zagros","s","۱۰٬۰۰۰ سال پیش",-7974],
+["tabar:steppe-indo-iranian","s","هزارهٔ دوم پیش از میلاد",-1500],
+["soc:aryan-migration-linguistic-model",1,"هزارهٔ اول پیش از میلاد",-750],
+["soc:medes-zagros-road-assyrian-frontier",1,"۷۲۲ پیش از میلاد",-722],
+["soc:medes-zagros-road-assyrian-frontier",4,"۷۱۵ پیش از میلاد",-715],
+["soc:medes-zagros-road-assyrian-frontier",3,"۶۷۲ پیش از میلاد",-672],
+["soc:medes-name-iran-zahhak-astyages",4,"۵۵۰ پیش از میلاد",-550],
+["phil:accepting-repetition-festival-and-time",4,"۴۸۰ و ۴۷۹ پیش از میلاد",-480],
+["soc:achaemenid-west-exchange",2,"سدهٔ پنجم پیش از میلاد",-450],
+["soc:medes-name-iran-zahhak-astyages",1,"سدهٔ سوم میلادی",250],
+["soc:cultural-iran-sogdian-art",1,"سدهٔ ششم میلادی",550],
+["soc:early-islamic-iran-continuity-debate",0,"سدهٔ دوم هجری",766],
+["soc:persian-language-continuity-debate",3,"سدهٔ سوم و چهارم هجری",900],
+["soc:caucasus-historical-shocks-iran",4,"حدود ۱۱۴۱ تا ۱۲۰۹",1141],
+["phil:iranian-world-aesthetics-inner-outer",3,"آغاز سدهٔ هفدهم میلادی",1600],
+["soc:caucasus-historical-shocks-iran",0,"در آغاز قرن نوزدهم",1800],
+["soc:darcy-concession-anglo-persian-oil","s","امتیاز ۱۹۰۱ دارسی",1901],
+["soc:constitutional-era-press-freedom-and-disorder","s","۱۲۸۵ تا ۱۲۸۷",1906],
+["soc:reza-shah-state-building-constitutional-legacy",2,"کودتای ۱۲۹۹",1920],
+["soc:institutional-lag-order-repression-reza-shah",1,"دولتی که در ۱۳۰۴ باید قدرت را به دست می‌گرفت",1925],
+["soc:iran-modern-lawmaking-oscillation",2,"بین ۱۳۰۷ تا ۱۳۱۳",1928],
+["soc:secular-pantheon-poets-tombs",2,"۱۳۱۳ (۱۹۳۴)",1934],
+["soc:pahlavi-women-rights-institutionalization",1,"۱۹۳۶ (دی ۱۳۱۴)",1936],
+["soc:state-building-gap-iran-1906-1953",1,"۱۳۲۰ تا حدود ۱۳۲۵",1941],
+["soc:constitutional-monarchy-vs-republic-iran-debate",4,"کودتای ۱۳۳۲",1953],
+["soc:nehzat-azadi-charter-critique","s","اردیبهشت ۱۳۴۰ (می ۱۹۶۱)",1961],
+["soc:pahlavi-women-rights-institutionalization",1,"حق رأی زنان در ۱۹۶۳",1963],
+["soc:pahlavi-women-rights-institutionalization",1,"قانون حمایت خانواده در ۱۹۶۷",1967],
+["soc:state-intervention-price-control-iran",2,"(۱۳۵۲–۵۳)",1973],
+["soc:khomeini-network-and-1978-revolution-timeline","s","اعتراض قم در دی ۱۳۵۶",1978],
+["soc:khomeini-network-and-1978-revolution-timeline","s","۲۲ بهمن ۱۳۵۷",1979.1],
+["soc:student-movement-embassy-1979-debate","s","تسخیر سفارت آمریکا (۱۳۵۸)",1979.9],
+["soc:generation-born-in-iran-1360s","s","حدود ۱۹۸۱ تا ۱۹۹۰",1981],
+["soc:iran-fertility","s","اوایل دههٔ ۱۳۶۰",1981.5],
+["tabar:thalassemia-screening","s","از ۱۹۹۷",1997],
+["soc:journalism-speed-depth-persian-press",2,"دوم خرداد ۱۳۷۶",1997.4],
+["soc:telegram-public-sphere-iran-2010s",0,"سال ۱۳۷۲ (۱۹۹۳)",1993],
+["soc:iran-fertility","s","حدود ۲ در ۱۳۷۹",2000],
+["soc:telegram-public-sphere-iran-2010s",0,"از حدود ۱۳۹۰",2011],
+["soc:state-intervention-price-control-iran",3,"از ۱۳۹۱ را دورهٔ تحریم‌های فلج‌کننده",2012],
+["soc:iran-violence-fight-statistics",0,"۱۳۹۲ تا ۱۴۰۲",2013]
+]
+;
+const UNDATED = ["soc:yafteh-cave-aurignacian", "soc:zagros-mesopotamia-exchange", "soc:achaemenid-governance-and-rupture", "soc:western-asian-kingship-legitimacy", "soc:persian-royal-succession-primogeniture", "soc:sasanian-state-administration", "soc:sasanian-coinage-trade", "soc:justinianic-plague-sasanian-war", "soc:zoroastrian-flexibility-state-tolerance", "soc:neanderthals-iran-lifeways", "soc:abbasid-iranian-bureaucracy-viziers", "soc:persian-culture-in-abbasid-caliphate", "soc:umayyad-abbasid-political-traditions", "soc:early-islamic-iran-revolts-local-dynasties", "soc:iranshahr-diversity-ummah", "soc:qajar-harem-dynastic-politics", "soc:qajar-ghulam-bacheh-sources", "soc:qajar-mobility-modern-schools", "soc:qajar-late-crisis-and-revision", "soc:waqf-qajar-iran", "soc:kaveh-iranshahr-romantic-nationalism", "soc:iranian-emigration-waves-history", "soc:medes-modern-identity-claims", "tabar:iranian-farmer-legacy", "tabar:india-two-migrations-ani-asi", "tabar:iranian-genetic-diversity", "tabar:ancient-dna"];
+const BANDS = [
+ {max:-20000,l:"بیش از ۲۰ هزار سال پیش"},{max:-5000,l:"حدود ۱۰ هزار سال پیش"},{max:0,l:"هزاره‌های پیش از میلاد"},{max:1000,l:"هزارهٔ نخست میلادی"},
+ {max:1900,l:"هزارهٔ دوم میلادی تا ۱۸۹۹"},{max:1946,l:"۱۹۰۰ تا ۱۹۴۵"},{max:1979,l:"۱۹۴۶ تا ۱۹۷۸"},{max:2000,l:"۱۹۷۹ تا ۱۹۹۹"},{max:9999,l:"۲۰۰۰ تا امروز"}];
+const ST = { v: "v", w: new Set(SH.WIKIS), strong: false, nt: true };
+let D, EV = [];
+const approx = y => y >= 0 ? "≈ " + DS.faDigits(Math.round(y)) + " م" : (y > -3000 ? "≈ " + DS.faDigits(Math.round(-y)) + " پ.م" : "");
+function build() {
+  EV = [];
+  SPEC.forEach(([id, loc, quote, y]) => {
+    const c = D.byId[id]; if (!c) return;
+    const p = loc === "s" ? null : c.pts[loc]; const text = p ? p.t : c.s.fa;
+    if (!text || !text.includes(quote)) return;       // اگر عبارت در داده نبود، رویداد ساخته نمی‌شود
+    EV.push({ c, p, loc, quote, y, text });
+  });
+  EV.sort((a, b) => a.y - b.y);
+}
+function evCard(e) {
+  const c = e.c, n = c.ir && D.notesById[c.ir];
+  const cred = e.p ? `${DS.chipTier(e.p.tier || 0)} ${SH.flagChips(e.p.f)} <span class="chip mini">گزارهٔ ${DS.faDigits(e.loc + 1)}</span>` : `${DS.chipGrade(DS.grade(c))} <span class="chip mini">از خلاصهٔ مدخل</span> ${SH.entryFlags(c)}`;
+  const t = SH.cut(e.text, 300);
+  return `<article class="card ev-card"><div class="when">${DS.esc(e.quote)} <span class="ap">${approx(e.y)}</span></div>
+   <h3>${SH.wchip(c.w)} <a href="${DS.url(D, c)}">${DS.esc(c.t.fa)}</a></h3><p>${DS.esc(t)}</p><div class="meta">${cred}${c.st === "draft" ? ' <span class="chip mini">پیش‌نویس</span>' : ""}${n ? ` <a class="chip mini" href="${SH.noteUrl(n)}">یادداشت آماری ایران ↗</a>` : ""}</div></article>`;
+}
+function pass(e) {
+  if (!ST.w.has(e.c.w)) return false;
+  if (ST.strong) return e.p ? (e.p.tier === 1 || e.p.tier === 2) : ["A", "B"].includes(DS.grade(e.c));
+  return true;
+}
+function render() {
+  document.querySelectorAll("#wf button").forEach(b => b.setAttribute("aria-pressed", String(ST.w.has(b.dataset.w))));
+  document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === ST.v)));
+  const list = EV.filter(pass); const out = document.getElementById("out");
+  const bands = BANDS.map((b, i) => ({ ...b, ev: list.filter(e => e.y < b.max && (i === 0 || e.y >= BANDS[i - 1].max)) })).filter(b => b.ev.length);
+  document.getElementById("info").innerHTML = `${DS.faDigits(list.length)} رویداد یا ادعای تاریخ‌دار از ${DS.faDigits(EV.length)} مورد در داده. «≈» سالی است که فقط برای مرتب‌سازی از عبارت داده برآورد شده (سال خورشیدی + ۶۲۱)؛ عبارت اصلی داده در خود کارت آمده است.${ST.v === "h" ? " در نمای افقی فاصله‌ها مقیاس زمانی نیستند." : ""}`;
+  let h = "";
+  if (!bands.length) h += `<div class="empty">با این فیلترها رویدادی نیست. فیلتر رشته یا ردهٔ منبع را شل کنید.</div>`;
+  else {
+    const inner = bands.map(b => `<section class="band" aria-label="${DS.esc(b.l)}"><h2>${DS.esc(b.l)} <span class="muted">${DS.faDigits(b.ev.length)} مورد</span></h2>` + (ST.v === "h"
+      ? `<div class="evs">${b.ev.map(e => `<div class="ev">${evCard(e)}</div>`).join("")}</div>`
+      : `<ol class="vt">${b.ev.map(e => `<li>${evCard(e)}</li>`).join("")}</ol>`) + `</section>`).join("");
+    h += ST.v === "h" ? `<div class="hzw" tabindex="0" aria-label="محور افقی؛ با اسکرول افقی یا کلیدهای جهت‌دار جابه‌جا شوید"><div class="hz">${inner}</div></div>` : inner;
+  }
+  const und = UNDATED.map(id => D.byId[id]).filter(c => c && ST.w.has(c.w));
+  h += `<section class="band" style="margin-top:30px"><h2>بدون تاریخ دقیق در داده <span class="muted">${DS.faDigits(und.length)} مدخل</span></h2><p class="muted" style="margin-top:0">مدخل‌های تاریخی ایران که متنشان سال یا بازهٔ روشنی ندارد. جایشان را از خودمان حدس نمی‌زنیم؛ عنوان مدخل تنها سرنخ دوره است.</p><div class="und">${und.map(c => `<article class="card cc"><h3><a href="${DS.url(D, c)}">${DS.esc(c.t.fa)}</a></h3><div class="meta">${SH.conceptMeta(c)}</div><p class="sn">${DS.esc(SH.cut(c.s.fa, 150))}</p></article>`).join("") || '<div class="empty">برای این فیلتر موردی نیست.</div>'}</div></section>`;
+  if (ST.nt) {
+    const ns = D.iran.filter(n => ST.w.has(n.domain)).slice().sort((a, b) => a.year - b.year);
+    h += `<section class="band" style="margin-top:30px"><h2>یادداشت‌های آماری ایران، به ترتیب سال <span class="muted">${DS.faDigits(ns.length)} یادداشت</span></h2><p class="muted" style="margin-top:0">این سال، سال داده یا انتشار است، نه سال رویداد.</p><div class="und">${ns.map(n => `<div class="card">${SH.noteBox(n)}</div>`).join("")}</div></section>`;
+  }
+  out.innerHTML = h;
+  DS.hash.set({ v: ST.v, w: [...ST.w].join("."), s: ST.strong ? "1" : "0", n: ST.nt ? "1" : "0" });
+}
+SH.guard(d => {
+  D = d; build();
+  const h = DS.hash.get(); if (h.v === "h") ST.v = "h"; if (h.w) ST.w = new Set(h.w.split(".").filter(x => SH.WIKIS.includes(x))); ST.strong = h.s === "1"; ST.nt = h.n !== "0";
+  const st = document.getElementById("st"), nt = document.getElementById("nt"); st.checked = ST.strong; nt.checked = ST.nt;
+  document.getElementById("wf").innerHTML = SH.WIKIS.map(w => `<button type="button" class="cb chip-w" data-w="${w}" aria-pressed="true">${DS.esc(DS.WIKI[w])}</button>`).join("");
+  document.addEventListener("click", e => {
+    const v = e.target.closest(".seg button"); if (v) { ST.v = v.dataset.v; render(); return; }
+    const w = e.target.closest("#wf button"); if (w) { ST.w.has(w.dataset.w) ? ST.w.delete(w.dataset.w) : ST.w.add(w.dataset.w); render(); }
+  });
+  st.addEventListener("change", () => { ST.strong = st.checked; render(); });
+  nt.addEventListener("change", () => { ST.nt = nt.checked; render(); });
+  render();
+});
+
+</script>
+</body>
+</html>

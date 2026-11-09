@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>واژه‌نامهٔ تصویری ژنتیک</title>
+<meta name="description" content="واژه‌های کلیدی ژنتیک و تبار حرف‌به‌حرف، با نشان اعتبار و حالت کارت مرور.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.what{font-size:1.05rem;color:var(--ink-2);max-width:68ch;margin:0 0 20px}
+.pill{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);min-height:40px;padding:6px 14px;font-size:.9rem;line-height:1.4}
+button.pill:hover{background:var(--surface-subtle);color:var(--ink)}
+.pill[aria-pressed=true],.pill.on{background:var(--primary-soft);border-color:var(--primary);color:var(--primary);font-weight:600}
+.pill:disabled{opacity:.4;cursor:default}
+button.btn2{min-height:44px}
+.ctrls{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px}
+.field{display:grid;gap:4px;font-size:.85rem;color:var(--ink-2)} .field input,.field select{width:100%;min-height:44px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+details.fold{margin-bottom:14px} details.fold>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;color:var(--ink-2);font-size:.9rem}
+.bar{display:flex;gap:2px;height:8px;border-radius:99px;overflow:hidden;background:var(--line)} .bar i{display:block;min-width:4px}
+.t1{background:#2F7D4F}.t2{background:#3C6EA8}.t3{background:#8A6D1D}.t4{background:#8A2E2E}.t0{background:var(--ink-3)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.78rem;color:var(--ink-2);margin-top:6px} .legend .sw{display:inline-block;width:9px;height:9px;border-radius:3px;margin-inline-end:5px}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))} .cards>*{min-width:0}
+.ent{display:flex;flex-direction:column;gap:8px} .ent h3{margin:0;font-size:1.08rem;line-height:1.55} .ent h3 a{color:var(--ink);text-decoration:none} .ent h3 a:hover{color:var(--primary);text-decoration:underline}
+.en{color:var(--ink-3);font-size:.85rem;direction:ltr;text-align:start} .sum{margin:0;font-size:.95rem;color:var(--ink-2);line-height:1.85}
+.pts{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px} .pts li{font-size:.9rem;padding:10px 12px;background:var(--surface-subtle);border-radius:10px;line-height:1.8} .pts .row{margin-top:6px;gap:6px}
+details>summary{cursor:pointer} .ent details summary{min-height:36px;display:flex;align-items:center;color:var(--primary);font-size:.9rem}
+.more{display:block;margin:22px auto 0}
+.count{color:var(--ink-2);font-size:.9rem;margin:6px 0 14px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:6px;background:var(--fam-bio)}
+.note.foot{margin-top:36px}
+mark{background:color-mix(in srgb,var(--warn) 28%,transparent);color:inherit;border-radius:4px;padding:0 3px}
+.toolcards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.toolcard{display:flex;flex-direction:column;gap:8px;border-top:4px solid var(--fam-bio)} .toolcard h3{margin:0;font-size:1.2rem} .toolcard p{margin:0;color:var(--ink-2);font-size:.95rem} .toolcard .btn{align-self:flex-start;margin-top:auto;min-height:44px;display:inline-flex;align-items:center}
+.toolcard.psy{border-top-color:var(--fam-psy)}
+.tag{font-size:.75rem;color:var(--ink-3)}
+@media (max-width:600px){.ctrls{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--line-strong)}}
+
+.letters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px} .letters .pill{min-width:40px;justify-content:center;padding-inline:8px}
+.lh{margin:26px 0 10px;font-size:1.5rem;color:var(--primary);display:flex;align-items:center;gap:12px} .lh::after{content:"";flex:1;border-top:1px solid var(--line)}
+.terms{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+.term{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:start}
+.term .dn{grid-row:span 3;width:52px;height:52px} .term h3{margin:0;font-size:1.1rem;line-height:1.5} .term h3 a{color:var(--ink);text-decoration:none} .term h3 a:hover{color:var(--primary);text-decoration:underline}
+.term .also{font-size:.82rem;color:var(--ink-3)} .term .sum{grid-column:2;margin:0;font-size:.92rem;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden} .term .sum.open{display:block}
+.term .acts{grid-column:1/-1;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.term button.lnk{background:none;border:0;color:var(--primary);padding:8px 4px;min-height:40px;font-size:.88rem} .term button.lnk:hover{background:none;text-decoration:underline;color:var(--primary)}
+svg.dn circle{fill:none;stroke-width:5} svg.dn .bg{stroke:var(--line)} svg.dn .s1{stroke:#2F7D4F}svg.dn .s2{stroke:#3C6EA8}svg.dn .s3{stroke:#8A6D1D}svg.dn .s4{stroke:#8A2E2E}svg.dn .s0{stroke:var(--ink-3)} svg.dn text{fill:var(--ink);font-size:13px;font-weight:700;font-family:inherit}
+.rv{max-width:640px;margin-inline:auto;text-align:center;min-height:340px;display:flex;flex-direction:column;gap:16px;justify-content:center;padding:26px 22px}
+.rv .big{font-size:clamp(1.7rem,6vw,2.4rem);font-weight:700;line-height:1.5;margin:0;text-wrap:balance} .rv .prompt{color:var(--ink-3);margin:0}
+.rv .back{text-align:start;display:grid;gap:12px} .rv .back p{margin:0}
+.rv .acts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap} .rv .acts button{min-height:46px;min-width:140px}
+.prog{height:6px;border-radius:99px;background:var(--line);overflow:hidden;max-width:640px;margin:0 auto 14px} .prog i{display:block;height:100%;background:var(--primary)}
+.scorebar{display:flex;gap:16px;justify-content:center;color:var(--ink-2);font-size:.9rem;margin-bottom:10px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><nav class="crumb" aria-label="مسیر"><a href="../../index.html">دانش‌سرا</a><span aria-hidden="true">›</span><a href="../index.html">تبار و ژنتیک</a><span aria-hidden="true">›</span><a href="index.html">ابزارها</a><span aria-hidden="true">›</span><span aria-current="page">واژه‌نامه</span></nav></div></header>
+<main class="wrap" id="main">
+<h1>واژه‌نامهٔ تصویری ژنتیک</h1>
+<p class="what">واژه‌های کلیدی ویکی تبار، از عنوان‌ها و نام‌های دیگر، حرف‌به‌حرف و قابل جستجو. حلقهٔ کنار هر واژه نشان می‌دهد توضیحش روی چه ردهٔ منبعی ایستاده. اگر می‌خواهید واژه‌ها را یاد بگیرید، به «کارت مرور» بروید: واژه را می‌بینید، فکر می‌کنید، بعد جواب را.</p>
+<div class="row" style="margin-bottom:14px" role="group" aria-label="حالت نمایش">
+  <button class="pill" type="button" data-m="list" aria-pressed="true">فهرست</button>
+  <button class="pill" type="button" data-m="cards" aria-pressed="false">کارت مرور</button>
+</div>
+<section id="listview">
+  <label class="field" style="margin-bottom:12px">جستجو در واژه‌ها<input type="search" id="q" placeholder="مثلاً: هاپلوگروه یا GWAS" autocomplete="off"></label>
+  <div class="letters" id="letters" role="group" aria-label="حرف اول"></div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div id="terms"></div>
+</section>
+<section id="cardview" hidden>
+  <div class="ctrls" style="max-width:640px;margin-inline:auto"><label class="field">مجموعهٔ کارت‌ها<select id="deck"><option value="">همهٔ حوزه‌ها</option></select></label></div>
+  <div class="scorebar" aria-live="polite"><span id="sc1"></span><span id="sc2"></span></div>
+  <div class="prog" aria-hidden="true"><i id="pg" style="width:0"></i></div>
+  <div class="card rv" id="rv"></div>
+</section>
+<div class="note foot" role="note">این ابزار پیش‌نویس است و محتوای مدخل‌ها بازبینی نشده. برچسب‌های اعتبار فقط از ردهٔ منبعِ ثبت‌شده و پرچم‌های داده محاسبه می‌شوند، نه از ارزیابی تازه؛ برای تصمیم مهم به خود منبع‌ها برگردید. واژه‌ها فقط عنوان‌ها و نام‌های دیگر مدخل‌ها هستند، نه فهرست کامل اصطلاحات ژنتیک.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · محتوا از دادهٔ مشترک ویکی‌ها (core/tools/data.json) خوانده می‌شود.</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script type="module">
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=DS.esc, fd=DS.faDigits;
+const TIERS=[1,2,3,4,0], FLAGS=['unreplicated','contested','dated','editor-note'];
+let D;
+const mainEl=$('#main');
+function fail(e){
+  console.warn(e);
+  mainEl.innerHTML='<div class="empty" role="alert"><p>بارگذاری داده ناموفق بود. اتصال خود را بررسی کنید یا صفحه را دوباره باز کنید.</p><button id="retry" class="btn">تلاش دوباره</button></div>';
+  const b=$('#retry'); if(b) b.onclick=()=>location.reload();
+}
+try{ D=await DS.load(); }catch(e){ fail(e); throw e; }
+const pre=c=>{ if(!c._st){ c._st=DS.stats(c); c._g=DS.grade(c); } return c; };
+const domOf=c=> c.field&&D.fieldById[c.field]? D.fieldById[c.field].t.fa : 'سایر';
+function bar(st){
+  if(!st.n) return '<span class="muted">این مدخل هنوز گزارهٔ منبع‌دار ندارد.</span>';
+  const ks=TIERS.filter(k=>st.tiers[k]);
+  return `<div class="bar" role="img" aria-label="${esc(ks.map(k=>DS.TIER[k]+' '+fd(st.tiers[k])).join('، '))}">${ks.map(k=>`<i class="t${k}" style="flex:${st.tiers[k]}"></i>`).join('')}</div>
+  <div class="legend">${ks.map(k=>`<span><b class="sw t${k}"></b>${esc(DS.TIER[k])} ${fd(st.tiers[k])}</span>`).join('')}</div>`;
+}
+function flagsRow(st){ const f=FLAGS.filter(x=>st.flags[x]); return f.length?`<div class="row" style="gap:6px">${f.map(x=>`<span class="flag ${x}">${esc(DS.FLAG[x])} ${fd(st.flags[x])}</span>`).join('')}</div>`:''; }
+function ptHTML(p){ return `<li>${esc(p.t)}<div class="row">${DS.chipTier(p.tier||0)}${(p.f||[]).map(DS.chipFlag).join('')}</div></li>`; }
+function ptsHTML(c,lim){ const a=lim?c.pts.slice(0,lim):c.pts; return a.length?`<ul class="pts">${a.map(ptHTML).join('')}</ul>`:'<p class="muted">گزارهٔ منبع‌دار ثبت نشده است.</p>'; }
+function setHash(o){ const r={}; for(const k in o){ const v=o[k]; if(v!==''&&v!=null&&v!==false) r[k]=v; } DS.hash.set(r); }
+const collator=new Intl.Collator('fa');
+
+const ORDER='ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی'.split('');
+const normL=ch=>{ ch=ch.replace('ي','ی').replace('ك','ک'); if(ch==='آ'||ch==='أ'||ch==='إ') return 'ا'; return ch; };
+function head1(t){ const s=t.replace(/^[^\p{L}\p{N}]+/u,''); return s?s[0]:''; }
+function letterOf(t){ let ch=head1(t); if(!ch) return '#'; if(/[A-Za-z]/.test(ch)) return ch.toUpperCase(); ch=normL(ch); return ORDER.includes(ch)?ch:'#'; }
+const shortT=t=>t.split(/\s*[:：(]/)[0].trim();
+const terms=[];
+D.concepts.filter(c=>c.w==='tabar'&&c.field).forEach(c=>{
+  pre(c);
+  const seen=new Set(); const add=(term,kind)=>{ term=shortT(term); const k=DS.norm(term); if(!term||seen.has(k)) return; seen.add(k); terms.push({term,kind,c,L:letterOf(term),n:DS.norm([term,c.t.fa,c.t.en,(c.al||[]).join(' ')].join(' '))}); };
+  add(c.t.fa,'title'); (c.t.en&&add(c.t.en,'en')); (c.al||[]).forEach(a=>add(a,'alias'));
+});
+const isLatin=t=>/^[\x00-\x7F]/.test(t.L)&&/[A-Z]/.test(t.L);
+const letters=[...new Set(terms.map(t=>t.L))];
+const lkeys=[...ORDER.filter(l=>letters.includes(l)),...letters.filter(l=>/[A-Z]/.test(l)).sort(),...(letters.includes('#')?['#']:[])];
+let M='list', LET='', Q='';
+function donut(c){
+  const st=c._st; const n=st.n; if(!n) return `<svg class="dn" viewBox="0 0 44 44" role="img" aria-label="بدون گزارهٔ منبع‌دار"><circle class="bg" cx="22" cy="22" r="16"/><text x="22" y="27" text-anchor="middle">–</text></svg>`;
+  const C=2*Math.PI*16; let off=0; let seg='';
+  TIERS.forEach(k=>{ const v=st.tiers[k]; if(!v) return; const len=v/n*C; seg+=`<circle class="s${k}" cx="22" cy="22" r="16" stroke-dasharray="${len-1.5>0?len-1.5:len} ${C}" stroke-dashoffset="${-off}" transform="rotate(-90 22 22)"/>`; off+=len; });
+  return `<svg class="dn" viewBox="0 0 44 44" role="img" aria-label="${esc(TIERS.filter(k=>st.tiers[k]).map(k=>DS.TIER[k]+' '+fd(st.tiers[k])).join('، '))}"><circle class="bg" cx="22" cy="22" r="16"/>${seg}<text x="22" y="27" text-anchor="middle">${fd(n)}</text></svg>`;
+}
+function termCard(t){
+  const c=t.c;
+  const also = t.kind==='title'? (c.t.en?`<span lang="en" dir="ltr">${esc(c.t.en)}</span>`:'') : `نام دیگرِ «${esc(shortT(c.t.fa))}»`;
+  return `<article class="card term">${donut(c)}<div><h3><a href="${esc(DS.url(D,c))}">${esc(t.term)}</a></h3><div class="also">${also}</div></div>
+  <p class="sum">${esc(c.s.fa)}</p>
+  <div class="acts">${DS.chipGrade(c._g)}<span class="chip tabar">${esc(domOf(c))}</span><button class="lnk" type="button" data-exp>ادامه</button><a href="${esc(DS.url(D,c))}">مدخل</a></div></article>`;
+}
+function renderList(){
+  const q=DS.norm(Q); const w=q.split(' ').filter(Boolean);
+  let l=terms.filter(t=>(!LET||t.L===LET)&&w.every(x=>t.n.includes(x)));
+  const avail=new Set(terms.filter(t=>w.every(x=>t.n.includes(x))).map(t=>t.L));
+  $('#letters').innerHTML=`<button class="pill" type="button" data-l="" aria-pressed="${!LET}">همه</button>`+lkeys.map(k=>`<button class="pill" type="button" data-l="${k}" aria-pressed="${LET===k}" ${avail.has(k)?'':'disabled'}>${k==='#'?'سایر':k}</button>`).join('');
+  $('#count').textContent=`${fd(l.length)} واژه`;
+  if(!l.length){ $('#terms').innerHTML='<div class="empty">واژه‌ای پیدا نشد. حرف را «همه» کنید یا عبارت دیگری بنویسید.</div>'; return; }
+  l.sort((a,b)=>lkeys.indexOf(a.L)-lkeys.indexOf(b.L)||collator.compare(a.term,b.term));
+  let html='',cur=null;
+  l.forEach(t=>{ if(t.L!==cur){ if(cur!==null) html+='</div>'; cur=t.L; html+=`<h2 class="lh" id="L-${t.L}">${t.L==='#'?'سایر':t.L}</h2><div class="terms">`; } html+=termCard(t); });
+  $('#terms').innerHTML=html+'</div>';
+}
+$('#letters').addEventListener('click',e=>{ const b=e.target.closest('[data-l]'); if(!b||b.disabled) return; LET=b.dataset.l; renderList(); sv(); });
+$('#terms').addEventListener('click',e=>{ const b=e.target.closest('[data-exp]'); if(!b) return; const p=b.closest('.term').querySelector('.sum'); const o=p.classList.toggle('open'); b.textContent=o?'کمتر':'ادامه'; });
+$('#q').addEventListener('input',e=>{ Q=e.target.value; if(Q&&LET){ /* حرف را نگه می‌داریم؛ اگر خالی شد برگردد */ } renderList(); sv(); });
+/* کارت مرور */
+const deckSel=$('#deck'); const dset={}; terms.filter(t=>t.kind==='title').forEach(t=>dset[t.c.field]=(dset[t.c.field]||0)+1);
+Object.keys(dset).sort((a,b)=>dset[b]-dset[a]).forEach(f=>deckSel.insertAdjacentHTML('beforeend',`<option value="${esc(f)}">${esc(D.fieldById[f].t.fa)} (${fd(dset[f])})</option>`));
+let queue=[],revealed=false,known=0,again=0,total=0,DECK='';
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function startDeck(){ queue=shuffle(terms.filter(t=>t.kind==='title'&&(!DECK||t.c.field===DECK))); total=queue.length; known=again=0; revealed=false; renderCard(); }
+function renderCard(){
+  const rv=$('#rv'); $('#sc1').textContent=`بلد بودم: ${fd(known)}`; $('#sc2').textContent=`برای مرور دوباره: ${fd(again)}`;
+  $('#pg').style.width=total?Math.round(known/total*100)+'%':'0';
+  if(!queue.length){ rv.innerHTML=`<p class="big">مجموعه تمام شد</p><p class="prompt">${fd(known)} واژه را بلد بودید${again?` و ${fd(again)} بار برای مرور دوباره برگشتید`:''}.</p><div class="acts"><button type="button" id="restart">دوباره از اول</button></div>`; $('#restart').onclick=startDeck; return; }
+  const t=queue[0],c=t.c;
+  if(!revealed){ rv.innerHTML=`<p class="prompt">${fd(known+1)} از ${fd(total)} · این واژه یعنی چه؟ کمی فکر کنید.</p><p class="big">${esc(t.term)}</p>${c.t.en?`<p class="en" lang="en" style="text-align:center">${esc(c.t.en)}</p>`:''}<div class="acts"><button type="button" id="show" autofocus>ببین</button></div>`; $('#show').onclick=()=>{revealed=true;renderCard();}; }
+  else { rv.innerHTML=`<p class="big" style="font-size:1.3rem">${esc(t.term)}</p><div class="back"><div class="row" style="gap:10px">${donut(c).replace('class="dn"','class="dn" style="width:48px;height:48px"')}${DS.chipGrade(c._g)}<span class="chip tabar">${esc(domOf(c))}</span></div><p>${esc(c.s.fa)}</p>${flagsRow(c._st)}<a href="${esc(DS.url(D,c))}">خواندن مدخل کامل</a></div>
+    <div class="acts"><button type="button" id="ok">بلد بودم</button><button type="button" class="ghost" id="no">دوباره ببینم</button></div>`;
+    $('#ok').onclick=()=>{ queue.shift(); known++; revealed=false; renderCard(); $('#show')&&$('#show').focus(); };
+    $('#no').onclick=()=>{ queue.push(queue.shift()); again++; revealed=false; renderCard(); $('#show')&&$('#show').focus(); };
+    $('#ok').focus(); }
+}
+deckSel.addEventListener('change',()=>{ DECK=deckSel.value; startDeck(); sv(); });
+document.addEventListener('keydown',e=>{ if(M!=='cards'||e.target!==document.body) return; if(e.key==='Enter'||e.key===' '){ e.preventDefault(); const b=$('#show')||$('#ok'); if(b) b.click(); } });
+function setMode(m){ M=m; $$('[data-m]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.m===m)); $('#listview').hidden=m!=='list'; $('#cardview').hidden=m!=='cards'; if(m==='cards'&&!queue.length&&!total) startDeck(); }
+$$('[data-m]').forEach(b=>b.addEventListener('click',()=>{ setMode(b.dataset.m); sv(); }));
+function sv(){ setHash({m:M==='cards'?'cards':'',q:Q,l:LET,d:DECK}); }
+const h=DS.hash.get(); if(h.q){Q=h.q;$('#q').value=Q;} if(h.l&&lkeys.includes(h.l)) LET=h.l; if(h.d&&dset[h.d]){DECK=h.d;deckSel.value=h.d;}
+renderList(); setMode(h.m==='cards'?'cards':'list');
+</script>
+</body></html>
