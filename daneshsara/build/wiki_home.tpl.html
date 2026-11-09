@@ -56,7 +56,7 @@ footer.f a{color:var(--ink-2);margin-inline-end:var(--s4)}
 <body>
 <header class="top"><div class="wrap">
  <a class="brand" href="../"><i></i>دانش‌سرا</a>
- <nav class="main"><a href="entries.html">همهٔ مدخل‌ها</a><a href="#tools">ابزارها</a><a href="#bridges">پل به رشته‌ها</a><a href="#contents">فهرست مطالب</a><a href="#index">نمایهٔ واژه‌ها</a></nav>
+ <nav class="main"><a href="__ENTRIES_URL__">__ENTRIES_LABEL__</a><a href="#tools"__THIDE__>ابزارها</a><a href="#bridges">پل به رشته‌ها</a><a href="#contents"__CHIDE__>فهرست مطالب</a><a href="#index"__IHIDE__>نمایهٔ واژه‌ها</a><a href="#roadmap"__RHIDE__>در راه</a></nav>
 </div></header>
 <main class="wrap">
  <section class="hero">
@@ -68,11 +68,11 @@ footer.f a{color:var(--ink-2);margin-inline-end:var(--s4)}
 
  <section class="sec" id="questions"__QHIDE__>
   <h2 class="sh">__NQ__ پرسش که این ویکی جواب می‌دهد</h2>
-  <p class="sub">هر کدام یک مدخل است با خلاصه، نکته‌ها، منبع و پیوند به ویکی‌های دیگر.</p>
+  <p class="sub">__QLEAD__</p>
   <div class="qs">__QS__</div>
  </section>
 
- <section class="sec" id="tools">
+ <section class="sec" id="tools"__THIDE__>
   <h2 class="sh">__NT__ ابزار برای گشتن در این ویکی</h2>
   <p class="sub">هر ابزار همین مدخل‌ها را از زاویه‌ای دیگر نشان می‌دهد.</p>
   <div class="tools">__TOOLS__</div>
@@ -80,24 +80,24 @@ footer.f a{color:var(--ink-2);margin-inline-end:var(--s4)}
 
  <section class="sec" id="bridges">
   <h2 class="sh">پل به رشته‌های دیگر</h2>
-  <p class="sub">__NX__ پیوند از مدخل‌های این ویکی به ویکی‌های دیگر دانش‌سرا می‌رود. اطلس‌های میان‌رشته‌ای این پل‌ها را روی نقشه نشان می‌دهند.</p>
+  <p class="sub">__BRIDGELEAD__ اطلس‌های میان‌رشته‌ای این پیوندها را روی نقشه نشان می‌دهند.</p>
   <div class="brs">__BRIDGES__<a class="br" href="../atlas/world.html"><b>جهان دانش</b><span>نقشهٔ زوم‌پذیر همهٔ ویکی‌ها</span></a><a class="br" href="../atlas/bridge.html"><b>پل‌ها</b><span>۲۵ رشتهٔ میان‌رشته‌ای</span></a><a class="br" href="../iran/"><b>برای ایران</b><span>همین مفهوم‌ها با دادهٔ ایران</span></a></div>
  </section>
 
- <section class="sec" id="contents">
+ <section class="sec" id="contents"__CHIDE__>
   <h2 class="sh">فهرست همهٔ مطالب</h2>
-  <p class="sub">مدخل‌ها به تفکیک شهرهای دانش این سرزمین.</p>
+  <p class="sub">__FIELDSLEAD__</p>
   __SECS__
  </section>
 
- <section class="sec" id="index">
+ <section class="sec" id="index"__IHIDE__>
   <h2 class="sh">نمایهٔ واژه‌ها</h2>
   <p class="sub">__NI__ عنوان و نام دیگر، به ترتیب الفبا.</p>
   <div class="idx">__INDEX__</div>
  </section>
-__EXTRA__
+<section class="sec" id="roadmap"__RHIDE__><h2 class="sh">در راه</h2><p class="sub">کارهایی که برای این ویکی مانده.</p><ul class="road">__ROAD__</ul></section>
 </main>
-<footer class="f"><div class="wrap"><a href="../">دانش‌سرا</a><a href="entries.html">همهٔ مدخل‌ها</a><a href="../atlas/sitemap.html">نقشهٔ سایت</a><a href="../core/contribute.html">مشارکت</a><a href="../core/sources.html">منابع</a></div></footer>
+<footer class="f"><div class="wrap"><a href="../">دانش‌سرا</a><a href="__ENTRIES_URL__">__ENTRIES_LABEL__</a><a href="../atlas/sitemap.html">نقشهٔ سایت</a><a href="../core/contribute.html">مشارکت</a><a href="../core/sources.html">منابع</a></div></footer>
 <script>
 // old deep links  <wiki>/#slug  →  entries.html#slug
 (function(){var h=location.hash;if(h&&h.length>1&&!document.getElementById(h.slice(1)))location.replace("entries.html"+h);})();
