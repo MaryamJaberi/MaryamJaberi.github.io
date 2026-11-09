@@ -1,0 +1,109 @@
+{
+ "id": "phil:democratic-peace-observation",
+ "kind": "concept",
+ "title": {
+  "fa": "صلح مردم‌سالار: دموکراسی‌ها کمتر با یکدیگر می‌جنگند",
+  "en": "Democratic peace: democracies rarely fight one another",
+  "nl": "Democratische vrede: democratieën vechten zelden tegen elkaar"
+ },
+ "aliases": [],
+ "parent": "phil:political",
+ "field": "phil:political",
+ "summary": {
+  "fa": "راست استدلال می‌کند که در دو قرن گذشته جنگ میان دو دموکراسی تقریباً دیده نشده و دموکراسی‌ها در اختلافات با یکدیگر بیشتر به راه‌های مسالمت‌آمیز می‌روند؛ اما با کشورهای غیردموکراتیک گاه جنگیده‌اند. این رابطه به‌تنهایی با ثروت یا هم‌پیمانی توضیح داده نمی‌شود.",
+  "en": "Russett argues that war between two democracies has been almost unknown and that democracies lean on peaceful settlement with each other, though they have fought non-democracies.",
+  "nl": "Russett stelt dat oorlog tussen twee democratieën vrijwel niet voorkomt en dat democratieën onderling vaker vreedzame oplossingen kiezen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ راست، دو دموکراسی تثبیت‌شده در سدهٔ بیستم تقریباً هرگز به جنگ با یکدیگر نرفته‌اند؛ او این را یافتهٔ تجربی می‌نامد نه قاعده‌ای ثابت.",
+    "en": "Russett says two established democracies almost never went to war with each other in the twentieth century, and treats this as an empirical finding, not a law.",
+    "nl": "Russett says two established democracies almost never went to war with each other in the twentieth century, and treats this as an empirical finding, not a law."
+   },
+   "sources": [
+    "src:594d0080b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌افزاید دموکراسی‌ها بیشتر در خصومت‌های نظامی با کشورهای غیردموکراتیک درگیر شده‌اند و دموکراسی همیشه صلح‌آمیز نیست؛ استعمار و مداخلهٔ پنهان نمونه‌هایی است که یاد می‌کند.",
+    "en": "He adds that democracies have fought non-democracies and are not always peaceful; he mentions colonialism and covert interference.",
+    "nl": "He adds that democracies have fought non-democracies and are not always peaceful; he mentions colonialism and covert interference."
+   },
+   "sources": [
+    "src:594d0080b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به نقل از پژوهش‌های آماری، دموکراسی‌ها در اختلافات با هم بیشتر به میانجی‌گری و داوری سوم‌شخص تن می‌دهند (لنگ، دیکسون، ریموند).",
+    "en": "Citing statistical studies, democracies accept mediation and third-party arbitration more readily in disputes with each other (Leng, Dixon, Raymond).",
+    "nl": "Citing statistical studies, democracies accept mediation and third-party arbitration more readily in disputes with each other (Leng, Dixon, Raymond)."
+   },
+   "sources": [
+    "src:594d0080b9",
+    "src:3bcc8dfe6b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید این رابطه فقط ناشی از ثروت مشابه، رشد سریع یا دشمن مشترک در جنگ سرد نیست و پس از پایان جنگ سرد هم ادامه یافته است.",
+    "en": "He says the relation is not explained only by similar wealth, fast growth or a common Cold War enemy, and persisted after the Cold War.",
+    "nl": "He says the relation is not explained only by similar wealth, fast growth or a common Cold War enemy, and persisted after the Cold War."
+   },
+   "sources": [
+    "src:594d0080b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«صلح مردم‌سالار» پدیده‌ای آماری دربارهٔ جفت‌کشورهاست و هنوز در دانشگاه محل بحث است: منتقدان به تعریف دموکراسی و جنگ، کمبود نمونه، و نقش هم‌پیمانی و ثروت و تجارت ایراد می‌گیرند؛ پیش از ۱۹۴۵ داده‌ها اندک است.",
+    "en": "The democratic peace is a dyadic statistical pattern still debated in academia: critics question definitions of democracy and war, small samples, and the roles of alliances, wealth and trade; pre-1945 data are thin.",
+    "nl": "The democratic peace is a dyadic statistical pattern still debated in academia: critics question definitions of democracy and war, small samples, and the roles of alliances, wealth and trade; pre-1945 data are thin."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:political",
+   "rel": "part-of",
+   "note": {
+    "fa": "زیرمجموعهٔ فلسفهٔ سیاسی",
+    "en": "Part of political philosophy",
+    "nl": "Part of political philosophy"
+   }
+  },
+  {
+   "to": "phil:two-liberties",
+   "rel": "see-also",
+   "note": {
+    "fa": "آزادی منفی و مثبت زمینهٔ بحث دموکراسی است",
+    "en": "Liberty concepts frame the democracy debate",
+    "nl": "Liberty concepts frame the democracy debate"
+   }
+  }
+ ],
+ "people": [
+  "core:bruce-russett",
+  "core:immanuel-kant"
+ ],
+ "sources": [
+  "src:3bcc8dfe6b",
+  "src:594d0080b9"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
