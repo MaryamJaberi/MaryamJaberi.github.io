@@ -1,0 +1,77 @@
+{
+ "id": "phil:jasemi-novel-frame-prison-exile",
+ "kind": "concept",
+ "title": {
+  "fa": "رمان «تنها پیامبر؟» ج۲: قاب داستانی زندان و تبعید",
+  "en": "The novel 'The Only Prophet?' vol. 2: the prison and exile frame",
+  "nl": "De roman 'De enige profeet?' deel 2: kader van gevangenis en ballingschap"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "کتاب دو لایه دارد: خاطرات داستانی یک زندانی سیاسی ایرانی در دههٔ ۶۰ و گفت‌وگوهای راوی تبعیدی با پیرمردی در پارک. لایهٔ دوم جدلی‌ست و لایهٔ اول ادبیات شهادتی.",
+  "en": "The book has two layers: the fictional memories of an Iranian political prisoner in the 1980s, and the exiled narrator's talks with an old man in a park. The second is polemical; the first is testimonial fiction.",
+  "nl": "Twee lagen: fictieve gevangenisherinneringen en gesprekken in een park; de tweede laag is polemisch."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "راوی در زندان با شکنجه، سلول انفرادی و اعدام نمایشی روبه‌روست و مقام‌های زندان، از جمله اسدالله لاجوردی، در متن نام برده می‌شوند.",
+    "en": "The narrator faces torture, solitary cells and mock executions, and prison officials, including Asadollah Lajevardi, are named in the text.",
+    "nl": "The narrator faces torture, solitary cells and mock executions, and prison officials, including Asadollah Lajevardi, are named in the text."
+   },
+   "sources": [
+    "src:60ba609563"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بخش دیگر، گفت‌وگوهای روزانهٔ راوی با پیرمردی ناشناس در پارکی در خارج از ایران است که او را به بازاندیشی در باورهای دینی می‌کشاند؛ چاپ این کتاب نسخهٔ اینترنتی سال ۱۳۸۶ است.",
+    "en": "The other part is the narrator's daily talks with an unnamed old man in a park abroad, pushing him to rethink religious belief; this edition is an online copy from 2007 (1386).",
+    "nl": "The other part is the narrator's daily talks with an unnamed old man in a park abroad, pushing him to rethink religious belief; this edition is an online copy from 2007 (1386)."
+   },
+   "sources": [
+    "src:60ba609563"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ سردبیر: رویدادها و شخصیت‌ها داستانی‌اند و نباید به‌عنوان سند تاریخی زندان‌های دههٔ ۶۰ نقل شوند؛ برای آن موضوع به شهادت‌نامه‌ها و گزارش‌های پژوهشی مستقل مراجعه شود.",
+    "en": "Editor's note: events and characters are fictional and should not be cited as historical documents on 1980s prisons; use independent testimonies and research reports for that.",
+    "nl": "Editor's note: events and characters are fictional and should not be cited as historical documents on 1980s prisons; use independent testimonies and research reports for that."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:religion-ideology-iran-debate",
+   "rel": "see-also",
+   "note": {
+    "fa": "دین و ایدئولوژی در ایران",
+    "en": "religion and ideology in Iran",
+    "nl": "religion and ideology in Iran"
+   }
+  }
+ ],
+ "people": [
+  "core:asadollah-lajevardi"
+ ],
+ "sources": [
+  "src:60ba609563"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

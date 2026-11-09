@@ -1,0 +1,672 @@
+{
+ "paper": true,
+ "book": {
+  "title": "فلسفه سکسوالیته",
+  "author": "آلن سوبل (Alan Soble)",
+  "translator": "زهیر باقری نوع‌پرست",
+  "year": "ترجمه ۱۳۹۶ (تابستان)؛ سال متن اصلی نامشخص (کتاب‌شناسی تا ۱۹۹۹)",
+  "publisher": "نامشخص (نسخهٔ دیجیتال؛ طراح جلد و صفحه‌آرا: صفا قاسمی)",
+  "type": "reference",
+  "read": "full",
+  "pages_or_sections_read": "کل متن استخراج‌شده (حدود ۳۷ صفحه: مقدمه، متافیزیک سکسوالیته، ارزش‌گذاری اخلاقی، انحراف جنسی، بحث رضایت، تحلیل مفهومی، منابع)",
+  "drive_id": "1nJx3MCdnBuOxnkUj48a6xCehAvvx9pIM"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "مروری آموزشی از یک پژوهشگر شناخته‌شدهٔ فلسفهٔ جنسی که برای آشنایی با بحث‌های رایج مفید است، ولی ترجمهٔ فارسی تنها و قدیمی‌شده است.",
+  "reasons": [
+   "نویسنده (آلن سوبل) از چهره‌های شناخته‌شدهٔ فلسفهٔ جنس و عشق است و در کتاب‌شناسی همین متن چند اثر خودش و ویراستاری‌های مرجع دیده می‌شود (الف)",
+   "متن ارجاع‌های دقیق به آکویناس، کانت، نیگل، ماپس، ورتهایمر و غیره و فهرست منابع دارد؛ روشش تحلیل فلسفی است نه پژوهش تجربی (ب)",
+   "کتاب‌شناسی تا حدود ۱۹۹۹ است و دربارهٔ بحث‌های بعدی (مثلاً رضایت مثبت، جنسیت‌گرایی نو و پژوهش‌های تازه) ساکت است (ج)",
+   "لحن متعادل و آموزشی است؛ نظر نویسنده نسبتاً لیبرال است ولی دیدگاه قانون طبیعی را هم منصفانه شرح می‌دهد (د)",
+   "منبع ثانویه و مرور است، نه اثر اصلی؛ برای اندیشهٔ خود کانت یا نیگل باید به متن آن‌ها رفت (ه)"
+  ],
+  "best_use_fa": "برای نقشهٔ کلی بحث‌های فلسفهٔ جنسی (بدبینی/خوش‌بینی، قانون طبیعی در برابر لیبرالیسم، رضایت، تحلیل مفهومی) منبع خوبی است؛ برای آمار، روان‌شناسی تجربی یا حقوق امروز منبع نیست.",
+  "cautions": [
+   "هویت دقیق اثر اصلی (مقالهٔ دانشنامه‌ای یا فصل کتاب) و سال انتشار از متن به‌روشنی برنمی‌آید",
+   "کیفیت ترجمه متوسط است و گاهی اصطلاح‌ها غیرمعمول‌اند (مثلاً «فراگیتاشناس»)",
+   "متن PDF معکوس و ناخوانا بود و با اصلاح خودکار خوانده شد؛ ممکن است جزئیات اندکی ناقص باشد",
+   "موضوع حساس است ولی متن علمی و غیرصریح است"
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "مروری فلسفی و غیرصریح با ارجاع روشن و تعادل در شرح دیدگاه‌های رقیب؛ پنج مدخل مفهومی با گزاره‌های جداگانهٔ یادداشت ویراستار برای ادعاهای دینی-پزشکی.",
+ "summary_of_book_fa": "متنی مروری دربارهٔ فلسفهٔ سکسوالیته که نخست پرسش‌های هنجاری (بدبینی و خوش‌بینی متافیزیکی، ارزش‌گذاری اخلاقی، انحراف جنسی در قانون طبیعی و دیدگاه نیگل، کفایت رضایت) و سپس تحلیل مفهومی «فعالیت جنسی» را بررسی می‌کند. نویسنده بیشتر مسئله‌ها را می‌گشاید تا ببندد و دیدگاه‌های رقیب را کنار هم می‌گذارد.",
+ "entries": [
+  {
+   "id": "sexuality-metaphysical-optimism-pessimism",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "خوش‌بینی و بدبینی متافیزیکی دربارهٔ سکسوالیته",
+    "en": "Metaphysical optimism and pessimism about sexuality",
+    "nl": "Metafysisch optimisme en pessimisme over seksualiteit"
+   },
+   "summary": {
+    "fa": "فیلسوفان پیش از آنکه دربارهٔ درستی یا نادرستی کارهای جنسی داوری کنند، تصویری از «سرشت» میل جنسی دارند: یا آن را تهدیدی برای شأن انسان و رابطهٔ اخلاقی می‌دانند یا بخشی بی‌ضرر و حتی ارزشمند از زندگی. این تصویر پیشاپیش جهت داوری اخلاقی را تعیین می‌کند.",
+    "en": "Before judging particular sexual acts, philosophers hold a picture of what sexual desire is: either a threat to human dignity and moral relations, or a harmless and even valuable part of life. That picture steers later moral judgement.",
+    "nl": "Voordat filosofen seksuele handelingen moreel beoordelen, hebben ze een beeld van de aard van seksueel verlangen: een bedreiging voor menselijke waardigheid of een onschuldig, zelfs waardevol deel van het leven."
+   },
+   "points": [
+    {
+     "fa": "بدبین‌های متافیزیکی تکانهٔ جنسی و عمل بر پایهٔ آن را تقریباً همیشه برای شأن انسان نامناسب می‌دانند و آن را با اهداف و آرمان‌های بزرگ‌تر زندگی ناسازگار می‌بینند؛ نمونه‌هایی که کتاب نام می‌برد آگوستین، کانت و در برخی نوشته‌ها فروید است.",
+     "en": "Metaphysical pessimists see the sexual impulse, and acting on it, as almost always unfitting for human dignity and at odds with higher aims; the book names Augustine, Kant and, at times, Freud.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نزد کانت، میل جنسی به یک شخص در واقع میل به بدن و اندام‌های او است؛ در نتیجه شخص در جریان کنش جنسی به ابژه تبدیل می‌شود و هر دو طرف کنترل خود و توجه به انسان‌بودن دیگری را تا حدی از دست می‌دهند.",
+     "en": "For Kant, desire for a person is really desire for that person's body and parts, so the person becomes an object in the act and both sides partly lose self-control and attention to the other's humanity.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "از بدبینی متافیزیکی غالباً نتیجه گرفته می‌شود که فعالیت جنسی فقط درون ازدواج پایدار و تک‌همسری و برای فرزندآوری رواست؛ لذت جنسی در این دیدگاه ارزش ابزاری دارد، نه ارزش در خود. کتاب این دیدگاه را میان متفکران مسیحی مانند آگوستین رایج می‌داند.",
+     "en": "Pessimism often leads to the view that sex is justified only inside lasting monogamous marriage and for procreation, with pleasure valued only instrumentally; the book says this is common among Christian thinkers such as Augustine.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "خوش‌بین‌های متافیزیکی (نمونه‌ها: افلاطون در برخی نوشته‌ها، راسل، گاهی فروید و بسیاری از فیلسوفان امروز) سکسوالیته را بخشی بی‌ضرر از وجود تن‌دار انسان می‌دانند که فرگشت به ما داده و می‌تواند به خوشبختی بینجامد.",
+     "en": "Metaphysical optimists (e.g. Plato in some writings, Russell, sometimes Freud, many contemporary philosophers) treat sexuality as a harmless part of our embodied existence, given by evolution, that can contribute to happiness.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ایروینگ سینگر و پیش‌تر سی‌اس لوئیس میان نوعی میل کور و خودخواهانه و نوعی میل متوجه شخصِ مشخص فرق می‌گذارند؛ پوسانیاس در «ضیافت» افلاطون هم میان دو گونه شهوت (مبتذل و آسمانی) تمایز می‌نهد. از این منظر سکس به‌تنهایی نه خوب است نه بد و ارزش آن به نوع میل بستگی دارد.",
+     "en": "Irving Singer and, earlier, C. S. Lewis distinguish an indiscriminate, self-serving desire from desire directed at a particular person; Pausanias in Plato's Symposium likewise separates two kinds of lust. On this view sex is neither good nor bad by itself.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "خوش‌بین‌ها می‌گویند سکسوالیته می‌تواند به محبت و احترام و پیوند عاطفی بینجامد و ذاتاً شخص را به شیء تقلیل نمی‌دهد؛ تفاوت بدبین و خوش‌بین را می‌توان چنین گفت: بدبین تنها با مهار شدید اجتماعی سکسوالیته را ایمن می‌داند، خوش‌بین هیچ لزومی به چنین مهاری نمی‌بیند.",
+     "en": "Optimists hold that sexuality can foster affection and respect and does not by nature reduce persons to things; the contrast is that pessimists see safety only in strong social control, optimists see no need for it.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "از اینکه سکسوالیته حاصل فرگشت است نمی‌توان ارزش اخلاقی‌اش را نتیجه گرفت (مغالطهٔ طبیعت‌گرایانه)؛ اینکه چیزی «طبیعی» یا «تکامل‌یافته» است به‌خودی‌خود آن را خوب یا بد نمی‌کند. توصیف‌های بدبینانهٔ قدیمی (مثلاً دربارهٔ «تنزل» انسان در جریان میل جنسی) بیش از آنکه یافتهٔ تجربی باشند، باورهای فلسفی و دینیِ سازندهٔ آن دوره‌اند.",
+     "en": "That sexuality evolved does not settle its moral value (naturalistic fallacy); 'natural' does not mean good or bad. Older pessimistic descriptions are philosophical and religious commitments of their era rather than empirical findings.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Immanuel Kant",
+     "fa": "ایمانوئل کانت",
+     "years": "1724-1804",
+     "note": "بدبین متافیزیکیِ نمونه در این بحث"
+    },
+    {
+     "latin": "Irving Singer",
+     "fa": "ایروینگ سینگر",
+     "years": "1925-2015",
+     "note": "خوش‌بین متافیزیکی؛ کتاب «طبیعت عشق»"
+    },
+    {
+     "latin": "Augustine of Hippo",
+     "fa": "آگوستین قدیس",
+     "years": "354-430",
+     "note": "نمونهٔ بدبینی مسیحی"
+    },
+    {
+     "latin": "C. S. Lewis",
+     "fa": "سی‌اس لوئیس",
+     "years": "1898-1963",
+     "note": "تمایز شهوت و عشق در «چهار عشق»"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:ethics",
+     "rel": "part-of",
+     "fa": "زیرشاخهٔ اخلاق کاربردی و هنجاری",
+     "en": "Part of applied and normative ethics"
+    },
+    {
+     "to": "phil:three-theories",
+     "rel": "see-also",
+     "fa": "اخلاق کانتی یکی از سه نظریهٔ بزرگ است",
+     "en": "Kantian ethics is one of the three great theories"
+    },
+    {
+     "to": "soc:reification",
+     "rel": "see-also",
+     "fa": "ابژه‌شدن شخص و چیزوارگی",
+     "en": "Objectification and reification"
+    },
+    {
+     "to": "soc:sacred-and-taboo",
+     "rel": "see-also",
+     "fa": "تابو و ارزش‌گذاری امر جنسی",
+     "en": "Taboo and the valuation of the sexual"
+    },
+    {
+     "to": "phil:sexuality-moral-vs-nonmoral-evaluation",
+     "rel": "explains",
+     "fa": "این تصویر بر داوری اخلاقی اثر می‌گذارد",
+     "en": "This picture shapes moral evaluation"
+    }
+   ]
+  },
+  {
+   "id": "sexuality-moral-vs-nonmoral-evaluation",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "ارزیابی اخلاقی و غیراخلاقی فعالیت جنسی",
+    "en": "Moral and non-moral evaluation of sexual activity",
+    "nl": "Morele en niet-morele beoordeling van seksuele activiteit"
+   },
+   "summary": {
+    "fa": "یک عمل جنسی را می‌توان از دو منظر جدا سنجید: اخلاقی (روا یا ناروا) و غیراخلاقی (مثلاً رضایت‌بخش یا کسل‌کننده). این دو ربط ضروری ندارند و ترکیب‌های گوناگونی از آن‌ها پیش می‌آید.",
+    "en": "A sexual act can be judged from two separate standpoints: moral (right or wrong) and non-moral (e.g. satisfying or dull). The two are not necessarily linked, and all combinations occur.",
+    "nl": "Een seksuele handeling kan vanuit twee gezichtspunten worden beoordeeld: moreel (juist of onjuist) en niet-moreel (bijvoorbeeld bevredigend of saai). Beide zijn niet noodzakelijk gekoppeld."
+   },
+   "points": [
+    {
+     "fa": "ارزش‌گذاری اخلاقی می‌تواند به یک رویداد مشخص برگردد یا به یک نوع عمل؛ از نادرستی یک مورد مشخص نمی‌توان نادرستی همهٔ موارد همان نوع را نتیجه گرفت، چون نادرستی ممکن است از عاملی بی‌ربط به نوع عمل (مثلاً خیانت به همسر) بیاید.",
+     "en": "Moral evaluation can concern a particular act or a type of act; the wrongness of one instance does not show the whole type wrong, since the wrongness may come from something unrelated to the type (e.g. adultery).",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "منظور از ارزیابی غیراخلاقی معمولاً کیفیت تجربهٔ جنسی است: سکسِ «خوب» لذت جسمی یا عاطفی می‌آورد و سکسِ «بد» ناخوشایند یا بی‌حاصل است. کتاب برای روشن‌کردن تفاوت، رادیوی خوب را مثال می‌زند که از نظر فنی خوب است ولی خوبی‌اش معنای اخلاقی ندارد.",
+     "en": "Non-moral evaluation usually means the quality of the experience: 'good' sex brings bodily or emotional pleasure, 'bad' sex is unpleasant or fruitless. The book compares it to a good radio, good technically but not morally.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "چهار ترکیب ممکن است: خوب از هر دو جهت (رابطهٔ تازه‌مزدوجان)، بد اخلاقی ولی خوب غیراخلاقی (رابطهٔ خیانت‌آمیز بسیار لذت‌بخش)، خوب اخلاقی ولی بد غیراخلاقی (رابطهٔ روزمره و بی‌رمق زوجی وفادار) و بد از هر دو جهت. پس لذت‌بخش‌بودن نه دلیل اخلاقی‌بودن است نه نقض آن.",
+     "en": "All four combinations occur: good on both counts, morally bad but otherwise good, morally fine but otherwise dull, and bad on both. So pleasantness neither proves nor disproves moral rightness.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اگر کسی برای لذت‌بخشیدن به شریک خود تلاشی نکند، نادرستی اخلاقی او از انگیزه و بی‌توجهی‌اش می‌آید، نه از اینکه تجربه ضعیف بوده؛ زوجِ بی‌تجربه‌ای که نتوانند لذت بسازند لزوماً کار اخلاقاً نادرستی نکرده‌اند.",
+     "en": "If someone makes no effort to give pleasure to a partner, the wrong lies in motive and neglect, not in the poor experience; inexperienced partners who fail to please are not thereby doing wrong.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "فایده‌گرایانی مانند بنتام و میل ممکن است لذت دوطرفه را دلیلی اخلاقی بدانند؛ اما این ادعا خودش نظریه‌ای اخلاقی است و آن را نمی‌توان فقط از تعریف «سکس خوب» استنتاج کرد.",
+     "en": "Utilitarians such as Bentham and Mill may count mutual pleasure as a moral reason; but that is itself a moral theory, not something following from the definition of 'good sex'.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Jeremy Bentham",
+     "fa": "جرمی بنتام",
+     "years": "1748-1832",
+     "note": "فایده‌گرا"
+    },
+    {
+     "latin": "John Stuart Mill",
+     "fa": "جان استوارت میل",
+     "years": "1806-1873",
+     "note": "فایده‌گرا"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:ethics",
+     "rel": "part-of",
+     "fa": "اخلاق",
+     "en": "Ethics"
+    },
+    {
+     "to": "phil:three-theories",
+     "rel": "see-also",
+     "fa": "فایده‌گرایی و دیگر نظریه‌های بزرگ اخلاق",
+     "en": "Utilitarianism and the other great theories"
+    },
+    {
+     "to": "phil:sexuality-metaphysical-optimism-pessimism",
+     "rel": "see-also",
+     "fa": "تصویر کلی از سکسوالیته",
+     "en": "The broader picture of sexuality"
+    },
+    {
+     "to": "phil:sexuality-consent-sufficiency-debate",
+     "rel": "see-also",
+     "fa": "رضایت به‌عنوان معیار اخلاقی",
+     "en": "Consent as a moral criterion"
+    }
+   ]
+  },
+  {
+   "id": "sexuality-natural-law-nagel-perversion",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "انحراف جنسی: قانون طبیعی آکویناس در برابر تبیین روان‌شناختی نیگل",
+    "en": "Sexual perversion: Aquinas's natural law versus Nagel's psychological account",
+    "nl": "Seksuele perversie: Thomas' natuurrecht versus Nagels psychologische verklaring"
+   },
+   "summary": {
+    "fa": "آکویناس «غیرطبیعی» بودن را با ساختار کالبدی و غایت تولیدمثل می‌سنجد و آن را ناروا می‌داند؛ نیگل آن را با نقص در یک الگوی روان‌شناختی آگاهی دوسویه می‌سنجد و لزوماً ناروایش نمی‌داند. کتاب با این مقایسه نشان می‌دهد معیار «طبیعی» چقدر به پیش‌فرض‌های فلسفی بستگی دارد.",
+    "en": "Aquinas judges 'unnatural' by anatomy and the aim of procreation and deems it immoral; Nagel judges it by a failure of a psychological pattern of mutual awareness and does not deem it necessarily immoral. The comparison shows how much 'natural' depends on philosophical premises.",
+    "nl": "Thomas van Aquino beoordeelt 'onnatuurlijk' aan de hand van anatomie en voortplanting en acht het immoreel; Nagel gebruikt een psychologisch patroon van wederzijds bewustzijn en acht het niet noodzakelijk immoreel."
+   },
+   "points": [
+    {
+     "fa": "آکویناس بر پایهٔ مقایسهٔ انسان با پستانداران می‌گوید غایت اندام‌ها و فعالیت جنسی تولید مثل است؛ هر کار جنسی که امکان تولید مثل نداشته باشد (مثلاً با حیوانات، با هم‌جنس یا خودارضایی) برخلاف طرح الهی و در نتیجه غیرطبیعی و غیراخلاقی است. معیار او کالبدشناختی است و به روان‌شناسی انسان کاری ندارد.",
+     "en": "Aquinas, comparing humans with mammals, holds that the aim of sexual organs and activity is procreation; acts lacking that possibility are against the divine design, hence unnatural and immoral. His criterion is anatomical and ignores human psychology.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "توماس نیگل می‌گوید برای فهم سکسوالیتهٔ طبیعیِ انسان باید به آنچه انسان را از حیوانات جدا می‌کند، یعنی روان‌شناسی ویژهٔ او، نگاه کرد. به نظر او تعامل جنسی «کامل» آن است که هر دو طرف برانگیختگی خود و دیگری را بشناسند و با آن پاسخ دهند؛ انحراف یعنی غیبت یا نقص این الگو، نه جایگاه اندام‌ها.",
+     "en": "Thomas Nagel argues that natural human sexuality must be understood through what distinguishes humans, namely their psychology. A 'complete' encounter involves each person noticing and responding to the other's arousal; perversion is the absence or truncation of this pattern, not the placement of organs.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آکویناس و نیگل هر دو خودارضایی با لباس یا کفش (یادگارپرستی) را انحراف می‌شمارند ولی به دلایل کاملاً متفاوت: برای آکویناس چون منی در جای خود نمی‌رود؛ برای نیگل چون امکان آگاهی دوسویه از برانگیختگی وجود ندارد.",
+     "en": "Both call fetishistic solitary acts perversions but for different reasons: for Aquinas because seed is not placed where it should be; for Nagel because there is no possibility of mutual awareness of arousal.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نیگل برخلاف آکویناس مقابلِ هم‌جنس‌گرایی را نمی‌گیرد: رابطهٔ هم‌جنس‌ها ممکن است همان الگوی شناخت دوسویه را داشته باشد. همچنین او از انحراف نتیجه نمی‌گیرد که عمل لزوماً از نظر اخلاقی نادرست است؛ بنابراین طبیعی یا غیرطبیعی بودن تنها یکی از عوامل ممکن در داوری اخلاقی است.",
+     "en": "Unlike Aquinas, Nagel's account does not condemn same-sex activity as such, since it can have the mutual-recognition pattern; and he does not infer that perversion is necessarily immoral. 'Natural' is at most one factor in moral judgement.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کریستین گودرف، متکلم مسیحی، از چارچوب قانون طبیعی ولی با نگاه به کالبدشناسی زنانه نتیجه‌ای متفاوت می‌گیرد: چون کلیتوریس تنها برای لذت است، لذت جنسی نیز یکی از غایت‌های طرح الهی است و در نتیجه محدودیت‌های اخلاقیِ کمتری نسبت به روایت آکویناس پدید می‌آید.",
+     "en": "Christine Gudorf, a Christian theologian, uses a natural-law frame but looks at female anatomy: since the clitoris serves only pleasure, pleasure is also an aim of the divine design, so fewer moral restrictions follow than in Aquinas's account.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "از دید لیبرال سکولار، هر عمل داوطلبانه میان دو یا چند نفر که به دیگری آسیب نزند اصولاً رواست و غیرطبیعی‌بودن به‌تنهایی دلیل نادرستی نیست؛ ولی پیروان قانون طبیعی (و در شکل امروزین، کسانی مانند جان فینیس) می‌گویند برخی کنش‌ها حتی با رضایت هم تن را ابزار می‌کنند. کتاب هیچ‌یک را نهایی نمی‌داند.",
+     "en": "A secular liberal holds that any voluntary, harm-free act among adults is in principle permissible and that 'unnatural' alone is no reason; natural-law thinkers (today e.g. John Finnis) hold some acts instrumentalise the body even with consent. The book treats neither as settled.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "دیدگاه آکویناس الهیاتی است و فرض می‌کند طراحیِ الهی را از کالبد می‌توان خواند؛ پیش‌فرضی که فلسفهٔ سکولار و بسیاری از الهیات‌دانان امروزی نمی‌پذیرند. در دانش پزشکی و روان‌شناسی امروز هم‌جنس‌گرایی اختلال روانی شمرده نمی‌شود (حذف از راهنمای تشخیصی انجمن روانپزشکی آمریکا در ۱۹۷۳ و از طبقه‌بندی سازمان جهانی بهداشت در ۱۹۹۰) و خودارضایی زیان پزشکی ندارد؛ پس «انحراف» در این متن مفهومی فلسفی است نه تشخیص پزشکی.",
+     "en": "Aquinas's view is theological and assumes divine design can be read from anatomy, a premise secular philosophy and many theologians reject. In current medicine and psychology homosexuality is not a mental disorder (removed from the APA's manual in 1973 and WHO's classification in 1990) and masturbation is medically harmless; 'perversion' here is a philosophical concept, not a diagnosis.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Thomas Aquinas",
+     "fa": "توماس آکویناس",
+     "years": "1225-1274",
+     "note": "قانون طبیعی؛ «جامع الهیات»"
+    },
+    {
+     "latin": "Thomas Nagel",
+     "fa": "توماس نیگل",
+     "years": "1937-",
+     "note": "مقالهٔ «انحراف جنسی» (۱۹۶۹)"
+    },
+    {
+     "latin": "Christine E. Gudorf",
+     "fa": "کریستین گودرف",
+     "years": "",
+     "note": "متکلم مسیحی؛ «بدن، سکس و لذت»"
+    },
+    {
+     "latin": "John Finnis",
+     "fa": "جان فینیس",
+     "years": "1940-",
+     "note": "نظریه‌پرداز قانون طبیعی معاصر"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:ethics",
+     "rel": "part-of",
+     "fa": "اخلاق",
+     "en": "Ethics"
+    },
+    {
+     "to": "phil:sexuality-moral-vs-nonmoral-evaluation",
+     "rel": "see-also",
+     "fa": "تمایز ارزیابی اخلاقی و غیراخلاقی",
+     "en": "Moral vs non-moral evaluation"
+    },
+    {
+     "to": "phil:two-liberties",
+     "rel": "contrasts",
+     "fa": "چارچوب لیبرال آزادی انتخاب",
+     "en": "The liberal framework of freedom of choice"
+    },
+    {
+     "to": "soc:discourse-subject-genealogy",
+     "rel": "see-also",
+     "fa": "پزشکی‌سازی و ساخته‌شدن سوژه‌ها در گفتمان‌ها",
+     "en": "Medicalisation and the making of subjects in discourse"
+    },
+    {
+     "to": "psy:sexual-orientation",
+     "rel": "see-also",
+     "fa": "شکل‌گیری گرایش جنسی",
+     "en": "Development of sexual orientation"
+    },
+    {
+     "to": "phil:sexuality-consent-sufficiency-debate",
+     "rel": "contrasts",
+     "fa": "بحث کفایت رضایت",
+     "en": "The sufficiency-of-consent debate"
+    }
+   ]
+  },
+  {
+   "id": "sexuality-consent-sufficiency-debate",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "بحث رضایت در اخلاق جنسی: ضروری، کافی، و «داوطلبانه» به چه معنا؟",
+    "en": "The consent debate in sexual ethics: necessary, sufficient, and what counts as voluntary",
+    "nl": "Het toestemmingsdebat in de seksuele ethiek: noodzakelijk, voldoende, en wat is vrijwillig"
+   },
+   "summary": {
+    "fa": "آیا رضایت آگاهانه و آزادانهٔ طرفین برای رواییِ اخلاقیِ یک رابطهٔ جنسی کافی است؟ لیبرال‌ها آری، گروهی دیگر می‌گویند رضایت لازم است ولی کافی نیست. بحث دوم دربارهٔ معنای «داوطلبانه» و نقش فشارهای اقتصادی و اجتماعی است.",
+    "en": "Is free and informed consent enough to make a sexual relation morally permissible? Liberals say yes; others say it is necessary but not sufficient. A second debate concerns what counts as voluntary and the role of economic and social pressure.",
+    "nl": "Is vrije en geïnformeerde toestemming voldoende om een seksuele relatie moreel toelaatbaar te maken? Liberalen zeggen ja; anderen vinden het noodzakelijk maar niet voldoende. Een tweede debat gaat over wat vrijwillig is."
+   },
+   "points": [
+    {
+     "fa": "طرفدار کفایت رضایت (مثلاً توماس ماپس) به احترام به خودمختاری استناد می‌کند: اجازه‌ندادن به دیگری برای تصمیم دربارهٔ رابطهٔ جنسی‌اش قیم‌مآبی بی‌احترامانه است؛ پس تا وقتی به شخص ثالثی آسیب نمی‌رسد و رضایت واقعی هست، رابطه، حتی اتفاقی، از نظر اخلاقی ایرادی ندارد.",
+     "en": "Defenders of sufficiency (e.g. Thomas Mappes) appeal to respect for autonomy: refusing someone the right to decide about their sexual life is disrespectfully paternalistic; so with real consent and no harm to third parties, even casual sex is not wrong.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "منکران کفایت از جمله پیروان قانون طبیعی هستند، و نیز کسانی مانند کانت و پاپ ژان‌پل دوم که می‌گویند بدون عاملی دیگر (عشق، تعهد، ازدواج) دو نفر صرفاً ابزار یکدیگر می‌شوند؛ این گروه رضایت را شرط لازم می‌دانند ولی کافی نه. کسان دیگر هم به آسیب‌زایی بعضی رفتارها حتی با رضایت اشاره می‌کنند.",
+     "en": "Deniers of sufficiency include natural-law thinkers and also Kant and John Paul II, who say that without something further (love, commitment, marriage) partners merely use each other; consent is necessary, not sufficient. Others point to harm even where consent is given.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پرسش‌های دشوارِ عملی: رضایت چقدر باید صریح باشد؟ آیا «باشه، بیا سکس کنیم» رضایتی به هر کاری است؟ برخی تنها رضایت کلامی صریح را بس می‌دانند و بعضی نشانه‌های بدنی را نیز، که آنهم محل نزاع است.",
+     "en": "Practical difficulties: how explicit must consent be? Does a vague yes cover every act? Some philosophers accept only explicit verbal consent; others accept bodily signs, itself disputed.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "بحث دوم دربارهٔ معنای «داوطلبانه» است: جفری مورفی استدلال می‌کند که برخی تهدیدها و پیشنهادها ایرادی اخلاقی ندارند و اصلاً ارعاب نیستند؛ اونورا اونیل معتقد است سکس اتفاقی به این دلیل اشتباه است که رضایتِ موجود بعید است به‌اندازهٔ کافی داوطلبانه باشد.",
+     "en": "The second debate concerns 'voluntary': Jeffrie Murphy argues some threats and offers are not coercive or wrongful; Onora O'Neill holds casual sex wrong because the consent involved is unlikely to be voluntary enough.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "چارلین موهلنهارد و جنیفر شراگ می‌گویند هر فشاری ارعاب‌آمیز است و داوطلبانه‌بودن را نفی می‌کند؛ نمونه‌هایشان زنانی‌اند که از نظر اقتصادی به شریک وابسته‌اند. گاه گفته می‌شود در جامعهٔ نابرابر برخی گروه‌ها بیشتر در معرض فشار هستند و ایدئال «رابطهٔ واقعاً توافقی» برابری سیاسی و اقتصادی را می‌طلبد. کتاب می‌پرسد آیا هر فشاری واقعاً رابطه را ناروا می‌کند؟ و پاسخی قطعی نمی‌دهد.",
+     "en": "Charlene Muehlenhard and Jennifer Schrag claim any pressure is coercive and negates voluntariness, citing e.g. economically dependent women; it is argued that a truly consensual ideal needs political and economic equality. The book asks whether every pressure really makes the act wrong and leaves it open.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در حقوق و سیاست‌های نهادی امروز بسیاری از نظام‌ها به‌جای «نبود نه»، رضایت مثبت و آگاهانه را معیار می‌گیرند، ولی تعریف قانونی رضایت از کشوری به کشور دیگر فرق می‌کند. این متن بحثی فلسفی است و نباید به‌جای راهنمای حقوقی خوانده شود.",
+     "en": "Many legal systems and institutional policies now use affirmative, informed consent rather than absence of refusal, but the legal definition differs between jurisdictions. This text is a philosophical discussion, not legal guidance.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Thomas Mappes",
+     "fa": "توماس ماپس",
+     "years": "",
+     "note": "طرفدار کفایت رضایت آگاهانه"
+    },
+    {
+     "latin": "Alan Wertheimer",
+     "fa": "آلن ورتهایمر",
+     "years": "1940-2015",
+     "note": "«رضایت و روابط جنسی»"
+    },
+    {
+     "latin": "Jeffrie Murphy",
+     "fa": "جفری مورفی",
+     "years": "1940-2020",
+     "note": "دربارهٔ تهدید و ارعاب"
+    },
+    {
+     "latin": "Onora O'Neill",
+     "fa": "اونورا اونیل",
+     "years": "1941-",
+     "note": "نقد سکس اتفاقی"
+    },
+    {
+     "latin": "Charlene Muehlenhard",
+     "fa": "چارلین موهلنهارد",
+     "years": "",
+     "note": "روان‌شناس؛ فشار و ارعاب جنسی غیرخشونت‌آمیز"
+    }
+   ],
+   "links": [
+    {
+     "to": "psy:autonomy",
+     "rel": "explains",
+     "fa": "استدلال خودمختاری",
+     "en": "The autonomy argument"
+    },
+    {
+     "to": "phil:two-liberties",
+     "rel": "see-also",
+     "fa": "آزادی منفی و مثبت و قیم‌مآبی",
+     "en": "Negative/positive liberty and paternalism"
+    },
+    {
+     "to": "phil:ethics",
+     "rel": "part-of",
+     "fa": "اخلاق",
+     "en": "Ethics"
+    },
+    {
+     "to": "phil:three-theories",
+     "rel": "see-also",
+     "fa": "کانت و دیگر نظریه‌ها",
+     "en": "Kant and the other theories"
+    },
+    {
+     "to": "soc:inequality",
+     "rel": "see-also",
+     "fa": "نابرابری اقتصادی و آزادی واقعی انتخاب",
+     "en": "Economic inequality and real freedom of choice"
+    },
+    {
+     "to": "phil:sexuality-metaphysical-optimism-pessimism",
+     "rel": "see-also",
+     "fa": "ریشهٔ متافیزیکی این اختلاف‌ها",
+     "en": "Metaphysical roots of these disagreements"
+    }
+   ]
+  },
+  {
+   "id": "sexuality-conceptual-analysis-sexual-activity",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "تحلیل مفهومی «فعالیت جنسی» و «لذت جنسی»",
+    "en": "Conceptual analysis of 'sexual activity' and 'sexual pleasure'",
+    "nl": "Conceptuele analyse van 'seksuele activiteit' en 'seksueel genot'"
+   },
+   "summary": {
+    "fa": "فلسفهٔ مفهومی می‌کوشد مفاهیمی مانند میل، لذت و فعالیت جنسی را روشن تعریف کند. کتاب نشان می‌دهد «سکس داشتن» در زبان روزمره با «فعالیت جنسی» در اصطلاح فلسفی یکی نیست و تعریف فعالیت جنسی بر پایهٔ لذت مشکلاتی دارد.",
+    "en": "Conceptual philosophy tries to define notions such as desire, pleasure and sexual activity. The book shows that 'having sex' in everyday speech differs from the technical 'sexual activity', and that defining sexual activity by pleasure has problems.",
+    "nl": "Conceptuele filosofie probeert begrippen als verlangen, genot en seksuele activiteit te definiëren. 'Seks hebben' in het dagelijks taalgebruik verschilt van het technische 'seksuele activiteit', en een definitie via genot heeft problemen."
+   },
+   "points": [
+    {
+     "fa": "نویسنده فلسفهٔ مفهومی سکسوالیته را تحلیل و روشن‌کردن مفاهیم بنیادی (فعالیت، میل، احساس، انحراف) و مفاهیم کاربردی‌تر مانند روسپیگری، پورنوگرافی و تجاوز می‌داند و هشدار می‌دهد که این کار هم مثل فلسفهٔ هنجاری دشوار و محل نزاع است و نتایجش به‌ندرت قطعی می‌شود.",
+     "en": "The author describes conceptual philosophy of sexuality as analysing basic notions (activity, desire, sensation, perversion) and more applied ones (prostitution, pornography, rape), and warns it is as hard and disputed as normative work, with results rarely definitive.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "«سکس داشتن» مفهومی زبان عامه است که معمولاً به آمیزش دو غیرهم‌جنس اشاره دارد، در حالی که «فعالیت جنسی» اصطلاحی تخصصی و گسترده‌تر است؛ بنابراین کسی که می‌گوید «سکس نداشته‌ام» لزوماً دروغ یا خودفریبی نمی‌کند، چون ممکن است معنای عامیانه را در نظر داشته باشد. پژوهشی در ژورنال انجمن پزشکی آمریکا (۱۹۹۹) نشان داد بخش بزرگی از دانشجویان برخی از فعالیت‌ها را «سکس داشتن» نمی‌شمارند.",
+     "en": "'Having sex' is an everyday-language notion usually tied to heterosexual intercourse, whereas 'sexual activity' is a broader technical term; so denying 'having sex' is not necessarily lying. A 1999 JAMA study found many college students did not count some activities as 'having sex'.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "رابرت گری پیشنهاد می‌کند فعالیتی «جنسی» است که لذت جنسی تولید کند. این تعریف روشنی دارد (چیزی که لذت جنسی نیاورد، مثل دست‌دادن عادی، جنسی نیست)، ولی اشکال‌هایی نیز دارد: لذت جنسی با «کیفیت خوب» تجربه (از منظر غیراخلاقی) در هم آمیخته می‌شود؛ زوجی که کم‌لذت یا بی‌لذت‌اند دیگر فعالیت جنسی نداشته‌اند؛ و قربانی تجاوز نمی‌توانست بگوید به فعالیت جنسی وادار شده، که نتیجه‌ای ناپذیرفتنی است.",
+     "en": "Robert Gray proposes that an activity is sexual if it produces sexual pleasure. This is clear (ordinary handshakes are not sexual), but it conflates being sexual with being good non-morally; couples who get little pleasure would not be engaged in sexual activity; and a victim of rape could not say they were forced into sexual activity, an unacceptable result.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نویسنده نتیجه می‌گیرد که تحلیل مفهومی ناگزیر از تعریفی است که با «تفکر عادی» سازگار بماند و خود تحلیل می‌تواند به نتایج شگفت‌آور و مفید برسد؛ ولی رابطهٔ لذت و جنسی‌بودن را حل‌شده نمی‌داند.",
+     "en": "The author concludes that analysis must remain consistent with ordinary thought and can yield surprising, useful results, but does not treat the link between pleasure and the sexual as settled.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پاسخ‌های نظرسنجی دربارهٔ اینکه چه چیزی «سکس» شمرده می‌شود به شیوهٔ پرسش، نمونه و دورهٔ زمانی بستگی دارد و یک مطالعهٔ دانشجویی را نباید به کل جمعیت تعمیم داد.",
+     "en": "Survey answers about what counts as 'sex' depend on wording, sample and period; one student study should not be generalised to whole populations.",
+     "flags": [
+      "editor-note",
+      "unreplicated"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Robert Gray",
+     "fa": "رابرت گری",
+     "years": "",
+     "note": "تحلیل فعالیت جنسی بر پایهٔ لذت (۱۹۷۸)"
+    },
+    {
+     "latin": "Alan Soble",
+     "fa": "آلن سوبل",
+     "years": "",
+     "note": "نویسندهٔ متن"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:language-games",
+     "rel": "see-also",
+     "fa": "معنا به‌مثابهٔ کاربرد و تفاوت زبان عامه و فنی",
+     "en": "Meaning as use; everyday vs technical language"
+    },
+    {
+     "to": "phil:sexuality-moral-vs-nonmoral-evaluation",
+     "rel": "see-also",
+     "fa": "لذت و ارزیابی غیراخلاقی",
+     "en": "Pleasure and non-moral evaluation"
+    },
+    {
+     "to": "phil:sexuality-natural-law-nagel-perversion",
+     "rel": "see-also",
+     "fa": "مفهوم انحراف جنسی",
+     "en": "The concept of sexual perversion"
+    },
+    {
+     "to": "psy:sex-gender",
+     "rel": "see-also",
+     "fa": "روان‌شناسی جنس و جنسیت",
+     "en": "Psychology of sex and gender"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "آلن سوبل، «فلسفه سکسوالیته»، برگردان زهیر باقری نوع‌پرست، تابستان ۱۳۹۶ (PDF در Drive مریم)؛ ناشر و سال اصلی نامشخص.",
+   "tier": 3
+  },
+  {
+   "cite": "Nagel, Thomas. 'Sexual Perversion.' The Journal of Philosophy 66(1), 1969, pp. 5-17.",
+   "tier": 2
+  },
+  {
+   "cite": "Sanders, S. A. and Reinisch, J. M. 'Would You Say You Had Sex If...?' JAMA 281(3), 1999, pp. 275-277.",
+   "tier": 2
+  },
+  {
+   "cite": "Wertheimer, Alan. 'Consent and Sexual Relations.' Legal Theory 2(2), 1996, pp. 89-112.",
+   "tier": 2
+  },
+  {
+   "cite": "Soble, Alan. The Philosophy of Sex and Love: An Introduction. St. Paul: Paragon House, 1998.",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "متن Drive به‌صورت معکوس (ترتیب بصری) آمد؛ با NFKC، حذف کشیده و معکوس‌کردن هر خط بازیابی شد و کل متن (~۵۸ هزار نویسه) خوانده شد. ترتیب جمله‌ها درون پاراگراف‌های طولانی گاهی جابه‌جاست و چند عدد (مثل درصد پژوهش JAMA) مخدوش بود، پس نیامد. نام‌های لاتین از ارجاع‌ها و دانش مطمئن تکمیل شد. OCR لازم نشد. مدخل‌های فوکو/جنسیت در existing_ids وجود نداشت؛ فقط psy:sex-gender، psy:sexual-orientation و soc:discourse-subject-genealogy لینک شد.",
+ "lecture": "فلسفه سکسوالیته",
+ "speaker": "آلن سوبل (Alan Soble)",
+ "channel": "نامشخص (نسخهٔ دیجیتال؛ طراح جلد و صفحه‌آرا: صفا قاسمی)"
+}

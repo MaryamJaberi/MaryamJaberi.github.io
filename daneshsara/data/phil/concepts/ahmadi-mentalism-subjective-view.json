@@ -1,0 +1,117 @@
+{
+ "id": "phil:ahmadi-mentalism-subjective-view",
+ "kind": "concept",
+ "title": {
+  "fa": "اصل ذهن‌گرایی در «اصول هرمتیک»: جهان همان است که ذهن می‌بیند",
+  "en": "Mentalism in 'Hermetic Principles': the world is what the mind sees",
+  "nl": "Mentalisme in 'Hermetische principes': de wereld is wat de geest ziet"
+ },
+ "aliases": [],
+ "parent": "phil:mind",
+ "field": "phil:mind",
+ "summary": {
+  "fa": "نویسنده می‌گوید هر کس جهان را از دریچهٔ ذهن خود می‌بیند و با تغییر نگرش می‌تواند زندگی‌اش را عوض کند. بخش روان‌شناختی آن (بازتفسیر) پشتوانه دارد، اما ادعای ساختن رویدادهای بیرونی با فکر و پیوند آن با نسبیت اینشتین پذیرفته نیست.",
+  "en": "The author says everyone sees the world through their own mind and can change life by changing attitude. The psychological part (reappraisal) has support, but the claim that thought builds external events, and the link to Einstein's relativity, is not accepted.",
+  "nl": "De auteur stelt dat iedereen de wereld door de eigen geest ziet en het leven kan veranderen door de houding te veranderen. Het psychologische deel (herwaardering) is onderbouwd; de claim dat gedachten gebeurtenissen scheppen en de link met relativiteit niet."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده با مثال‌هایی (یک رویداد برای یکی دردسر و برای دیگری فرصت است؛ «بالا و پایین» و «چپ و راست» نسبی‌اند) نتیجه می‌گیرد که هر کس دنیای ذهنی خودش را می‌بیند.",
+    "en": "Through examples (the same event is a nuisance to one person, an opportunity to another; 'up/down' and 'left/right' are relative) the author concludes each person sees their own mental world.",
+    "nl": "Through examples (the same event is a nuisance to one person, an opportunity to another; 'up/down' and 'left/right' are relative) the author concludes each person sees their own mental world."
+   },
+   "sources": [
+    "src:16be04ce9e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید با تغییر نگرش و تصویرسازی ذهنی می‌توان مشکل شخصی، خانوادگی و شغلی را حل کرد و برای نوجوانان هم تمرین پیشنهاد می‌کند.",
+    "en": "He claims changing attitude and mental imagery can solve personal, family and work problems, and recommends exercises even for teenagers.",
+    "nl": "He claims changing attitude and mental imagery can solve personal, family and work problems, and recommends exercises even for teenagers."
+   },
+   "sources": [
+    "src:16be04ce9e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او این اصل را به نسبیت اینشتین پیوند می‌دهد و ادعا می‌کند انرژی افکار، رویدادهای بیرونی (مثلاً خرابی خودرو) را جذب می‌کند.",
+    "en": "He ties the principle to Einstein's relativity and claims the energy of thoughts attracts external events (for example a car being damaged).",
+    "nl": "He ties the principle to Einstein's relativity and claims the energy of thoughts attracts external events (for example a car being damaged)."
+   },
+   "sources": [
+    "src:16be04ce9e"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نظر رایج دانشگاهی: نسبیت در فیزیک دربارهٔ چارچوب‌های مرجع اندازه‌گیری است، نه ذهن ناظر؛ پس این پیوند سوء‌برداشت است. سازوکار «جذب» رویداد با فکر شاهد تجربی تکرارشده ندارد.",
+    "en": "Mainstream scholarly view: relativity in physics concerns measurement reference frames, not the observer's mind, so the link is a misreading. A mechanism by which thoughts attract events lacks replicated evidence.",
+    "nl": "Mainstream scholarly view: relativity in physics concerns measurement reference frames, not the observer's mind, so the link is a misreading. A mechanism by which thoughts attract events lacks replicated evidence."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note",
+    "unreplicated"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در مقابل، روان‌شناسی شناختی نشان داده شیوهٔ تفسیر رویداد (بازارزیابی شناختی) بر احساس و رفتار اثر دارد؛ این بخشِ دعوی معقول است و در درمان شناختی-رفتاری به کار می‌رود، هرچند به معنای تغییر خودِ رویداد نیست.",
+    "en": "By contrast, cognitive psychology shows that how one interprets an event (cognitive reappraisal) affects feeling and behaviour and is used in cognitive-behavioural therapy; this part is reasonable, though it does not change the event itself.",
+    "nl": "By contrast, cognitive psychology shows that how one interprets an event (cognitive reappraisal) affects feeling and behaviour and is used in cognitive-behavioural therapy; this part is reasonable, though it does not change the event itself."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:mind",
+   "rel": "see-also",
+   "note": {
+    "fa": "فلسفهٔ ذهن",
+    "en": "Philosophy of mind",
+    "nl": "Philosophy of mind"
+   }
+  },
+  {
+   "to": "phil:ahmadi-seven-hermetic-principles",
+   "rel": "part-of",
+   "note": {
+    "fa": "از هفت اصل هرمتیک",
+    "en": "One of the seven Hermetic principles",
+    "nl": "One of the seven Hermetic principles"
+   }
+  },
+  {
+   "to": "phil:science",
+   "rel": "contrasts",
+   "note": {
+    "fa": "فلسفهٔ علم",
+    "en": "Philosophy of science",
+    "nl": "Philosophy of science"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:16be04ce9e"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

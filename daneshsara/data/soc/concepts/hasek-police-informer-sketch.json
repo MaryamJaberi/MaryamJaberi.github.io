@@ -1,0 +1,110 @@
+{
+ "id": "soc:hasek-police-informer-sketch",
+ "kind": "concept",
+ "title": {
+  "fa": "مأمور نفوذی در دفتر مجله: طنز هاشک دربارهٔ جاسوس‌پروری پلیس",
+  "en": "The informer in the magazine office: Hašek's satire of police infiltration",
+  "nl": "De informant op de redactie: Hašeks satire op politie-infiltratie"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "راوی داستان می‌گوید مأموری با هویت جعلی به دفتر یک مجلهٔ کوچک آمد، با زبان و ظاهر مشکوک، و آخر کار با پول اندک و التماس خود را لو داد. این طنز وسیله‌ای است برای نشان‌دادن بی‌کفایتی پلیس، نه مدرک تاریخی.",
+  "en": "The narrator describes an agent with a false identity entering a small magazine's office, betraying himself through odd language and behaviour and ending by pleading for mercy. The comedy mocks police incompetence; it is not historical evidence.",
+  "nl": "De verteller beschrijft een agent met een valse identiteit op een tijdschriftredactie die zichzelf verraadt. De komedie bespot politie-onbekwaamheid; het is geen historisch bewijs."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مأمور خود را فراری سیاسی ایتالیایی معرفی می‌کند اما نه ایتالیایی و نه روسی درست بلد است؛ نویسندگان مجله بدگمان می‌شوند.",
+    "en": "The agent poses as an Italian political exile but cannot speak Italian or Russian convincingly; the editors grow suspicious.",
+    "nl": "The agent poses as an Italian political exile but cannot speak Italian or Russian convincingly; the editors grow suspicious."
+   },
+   "sources": [
+    "src:04e87a214d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "طبق گفتهٔ مأمور در داستان، حقوق ماهانه‌اش بسیار کم بود و برای نفوذ موفق وعدهٔ پاداش داشت؛ این جزئیات برای طنز آمده و راستی‌آزمایی نشده است.",
+    "en": "In the story the agent says his monthly pay was tiny and he was promised a bonus for a successful infiltration; this detail serves the comedy and is unverified.",
+    "nl": "In the story the agent says his monthly pay was tiny and he was promised a bonus for a successful infiltration; this detail serves the comedy and is unverified."
+   },
+   "sources": [
+    "src:04e87a214d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پاورقی مترجم می‌گوید فرد اصلی واقعی بوده و در ۱۹۱۷ در روسیه اعدام شده؛ این ادعا بی‌منبع است و باید با منابع تاریخی تطبیق شود.",
+    "en": "The translator's note says the person was real and was executed in Russia in 1917; the claim is unsourced and must be checked against historical sources.",
+    "nl": "The translator's note says the person was real and was executed in Russia in 1917; the claim is unsourced and must be checked against historical sources."
+   },
+   "sources": [
+    "src:04e87a214d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "استفاده از نفوذی و خبرچین توسط پلیس سیاسی در امپراتوری‌های پایان قرن نوزدهم واقعیتی تاریخی است، اما شکل و میزان آن در این داستان را باید پژوهش مستقل سنجید.",
+    "en": "Use of informers and infiltrators by political police in late imperial states is historically real, but this story's specifics need independent scholarship.",
+    "nl": "Use of informers and infiltrators by political police in late imperial states is historically real, but this story's specifics need independent scholarship."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:berger-humor-authoritarian",
+   "rel": "see-also",
+   "note": {
+    "fa": "طنز و شوخی علیه قدرت",
+    "en": "Humour against power",
+    "nl": "Humour against power"
+   }
+  },
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "پلیس و نهادهای دولت",
+    "en": "Police and state institutions",
+    "nl": "Police and state institutions"
+   }
+  },
+  {
+   "to": "soc:hasek-emperor-visit-preventive-arrests",
+   "rel": "see-also",
+   "note": {
+    "fa": "بازداشت‌های پیشگیرانه در همین داستان",
+    "en": "Preventive arrests in the same story",
+    "nl": "Preventive arrests in the same story"
+   }
+  }
+ ],
+ "people": [
+  "core:jaroslav-ha-ek"
+ ],
+ "sources": [
+  "src:04e87a214d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

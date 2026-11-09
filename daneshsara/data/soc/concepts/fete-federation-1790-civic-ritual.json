@@ -1,0 +1,105 @@
+{
+ "id": "soc:fete-federation-1790-civic-ritual",
+ "kind": "concept",
+ "title": {
+  "fa": "جشن فدراسیون ۱۴ ژوئیه ۱۷۹۰: آیین ملی و اتحاد پادشاه، ملت و قانون",
+  "en": "The Festival of the Federation, 14 July 1790: national ritual and the union of king, nation and law",
+  "nl": "Het Feest van de Federatie, 14 juli 1790: nationaal ritueel en de eenheid van koning, natie en wet"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "راوی رمان در مراسم میدان شان‌دومارس حاضر است و شور و اشک شادی جمعیت را توصیف می‌کند. این صحنه نمونه‌ای از ساختن اتحاد ملی از راه آیین است؛ اما فراموش نباید کرد که یک سال بعد این اتحاد با فرار شاه شکست.",
+  "en": "The narrator attends the ceremony on the Champ de Mars and describes the crowd's fervour and tears of joy. The scene illustrates national unity built through ritual, though a year later the unity broke with the king's flight.",
+  "nl": "De verteller woont de plechtigheid op het Marsveld bij en beschrijft de vervoering en vreugdetranen. De scène toont nationale eenheid via ritueel, die een jaar later door de vlucht van de koning werd verbroken."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "لوییز می‌گوید نمایندگان از سراسر کشور وارد پاریس شدند، با آغوش باز پذیرفته شدند، و در روز جشن، هشتاد و سه پرچم (برای هر استان) برفراز محراب میهن برافراشته شد؛ ترانهٔ «اوضاع سامان می‌یابد» بر هر زبان بود.",
+    "en": "Louise says delegates from across the country entered Paris, were welcomed with open arms, and on the day eighty-three banners (one per department) were raised over the altar of the fatherland; the song 'Ça ira' was on every tongue.",
+    "nl": "Louise says delegates from across the country entered Paris, were welcomed with open arms, and on the day eighty-three banners (one per department) were raised over the altar of the fatherland; the song 'Ça ira' was on every tongue."
+   },
+   "sources": [
+    "src:6e095ada5a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بیش از چهارصد هزار نفر در باران گرد آمدند و پادشاه سوگند قانون اساسی خورد؛ راوی می‌نویسد «پادشاه و ملت و قانون یکی شده‌اند». رقم جمعیت را راوی از شنیده‌ها نقل می‌کند و باید با احتیاط گرفت.",
+    "en": "More than four hundred thousand people gathered in the rain and the king swore to the constitution; the narrator writes that king, nation and law had become one. The crowd figure is hearsay and should be treated with caution.",
+    "nl": "More than four hundred thousand people gathered in the rain and the king swore to the constitution; the narrator writes that king, nation and law had become one. The crowd figure is hearsay and should be treated with caution."
+   },
+   "sources": [
+    "src:6e095ada5a"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به‌گفتهٔ مونا اوزوف، جشن‌های انقلابی تلاش می‌کردند اتحاد و مشروعیت تازه را به‌صورت آیین و نماد (پرچم، سرود، سوگند) بسازند؛ جشن فدراسیون نخستین و پرشورترین نمونهٔ آن بود.",
+    "en": "According to Mona Ozouf, revolutionary festivals tried to build the new unity and legitimacy through ritual and symbol (flags, songs, oaths); the Federation was the first and most fervent example.",
+    "nl": "According to Mona Ozouf, revolutionary festivals tried to build the new unity and legitimacy through ritual and symbol (flags, songs, oaths); the Federation was the first and most fervent example."
+   },
+   "sources": [
+    "src:9a8428780b"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این صحنه را باید با بی‌اعتمادی پس از فرار شاه (ژوئن ۱۷۹۱) خواند: شور آیینی نشانهٔ توافق پایدار نیست.",
+    "en": "The scene should be read alongside the distrust after the king's flight (June 1791): ritual fervour is no sign of lasting consensus.",
+    "nl": "The scene should be read alongside the distrust after the king's flight (June 1791): ritual fervour is no sign of lasting consensus."
+   },
+   "sources": [
+    "src:f0535c2f6e"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:collective-effervescence-ritual",
+   "rel": "explains",
+   "note": {
+    "fa": "نمونهٔ تاریخی غلیان جمعی و آیین انقلابی",
+    "en": "A historical case of collective effervescence and revolutionary ritual",
+    "nl": "A historical case of collective effervescence and revolutionary ritual"
+   }
+  },
+  {
+   "to": "soc:durkheim-sacred-society",
+   "rel": "see-also",
+   "note": {
+    "fa": "دورکایم: مقدس و پرستش جامعه",
+    "en": "Durkheim: the sacred and the worship of society",
+    "nl": "Durkheim: the sacred and the worship of society"
+   }
+  }
+ ],
+ "people": [
+  "core:mona-ozouf"
+ ],
+ "sources": [
+  "src:6e095ada5a",
+  "src:9a8428780b",
+  "src:f0535c2f6e"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

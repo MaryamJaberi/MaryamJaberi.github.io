@@ -1,0 +1,102 @@
+{
+ "id": "soc:hasek-emperor-visit-preventive-arrests",
+ "kind": "concept",
+ "title": {
+  "fa": "بازداشت‌های پیشگیرانه پیش از دیدار امپراتور: تصویر طنز هاشک",
+  "en": "Preventive arrests before an emperor's visit: Hašek's satirical portrait",
+  "nl": "Preventieve arrestaties voor een keizersbezoek: Hašeks satire"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "هاشک در داستانی طنزآمیز نشان می‌دهد پلیس مخفی پراگ پیش از هر بازدید امپراتور، کسانی را که به‌نظرش مشکوک بودند، بدون دلیل جدی بازداشت می‌کرد. این روایت یک طنز ادبی و برداشت راوی است، نه گزارش تاریخی.",
+  "en": "In a satirical story Hašek shows Prague's secret police rounding up anyone mildly suspicious before each imperial visit. It is a literary satire and the narrator's view, not a historical report.",
+  "nl": "In een satirisch verhaal toont Hašek hoe de geheime politie van Praag voor elk keizerlijk bezoek verdachte mensen oppakte. Het is literaire satire, geen historisch verslag."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "راوی می‌گوید پیش از هر دیدار امپراتور سلول‌های بازداشت پر از آدم‌های بی‌گناه می‌شد، حتی چاقوتیزکن‌ها به‌خاطر «شغل مشکوک».",
+    "en": "The narrator says cells filled with harmless people before every imperial visit, even knife-grinders held for a 'suspicious trade'.",
+    "nl": "The narrator says cells filled with harmless people before every imperial visit, even knife-grinders held for a 'suspicious trade'."
+   },
+   "sources": [
+    "src:04e87a214d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نمونه‌های طنز: نوازندهٔ دوره‌گردی که سی سال بازداشت می‌شد، عکاسی که شوخی کرد و زندان رفت، و بستنی‌فروشی که حرکت دستش مشکوک شمرده شد.",
+    "en": "Satirical examples: a street musician repeatedly detained, a photographer jailed for a joke, an ice-cream seller arrested for a hand gesture.",
+    "nl": "Satirical examples: a street musician repeatedly detained, a photographer jailed for a joke, an ice-cream seller arrested for a hand gesture."
+   },
+   "sources": [
+    "src:04e87a214d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "راوی می‌خواهد نشان دهد پلیس کوشید «امپراتور محبوب» را به افکار عمومی بقبولاند؛ این ارزیابی خود راوی است.",
+    "en": "The narrator claims the police worked to impose the image of a 'beloved emperor' on public opinion; this is the narrator's own assessment.",
+    "nl": "The narrator claims the police worked to impose the image of a 'beloved emperor' on public opinion; this is the narrator's own assessment."
+   },
+   "sources": [
+    "src:04e87a214d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "برای هر روایت کتابِ طنز، تعمیم‌دادن به همهٔ دورهٔ امپراتوری بدون پژوهش تاریخی (مثلاً دربارهٔ پلیس و نظارت در اتریش-مجارستان) نادرست است؛ برای داوری باید مورخان و آرشیوها را دید.",
+    "en": "As with any satire, generalising to the whole late-Habsburg period is unsafe without historical scholarship on policing and surveillance in Austria-Hungary.",
+    "nl": "As with any satire, generalising to the whole late-Habsburg period is unsafe without historical scholarship on policing and surveillance in Austria-Hungary."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "زمینهٔ نهادی: دولت و پلیس",
+    "en": "Institutional context: state and police",
+    "nl": "Institutional context: state and police"
+   }
+  },
+  {
+   "to": "soc:berger-humor-authoritarian",
+   "rel": "see-also",
+   "note": {
+    "fa": "طنز در برابر قدرت استبدادی",
+    "en": "Humour under authoritarian rule",
+    "nl": "Humour under authoritarian rule"
+   }
+  }
+ ],
+ "people": [
+  "core:jaroslav-ha-ek",
+  "core:franz-joseph-i"
+ ],
+ "sources": [
+  "src:04e87a214d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

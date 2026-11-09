@@ -1,0 +1,101 @@
+{
+ "id": "soc:bread-rumour-great-fear-1789",
+ "kind": "concept",
+ "title": {
+  "fa": "کمبود نان، شایعه و «ترس بزرگ» در تابستان ۱۷۸۹",
+  "en": "Bread shortage, rumour and the 'Great Fear' of summer 1789",
+  "nl": "Broodtekort, geruchten en de 'Grote Angst' van de zomer van 1789"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "رمان نشان می‌دهد چگونه گرانی و کمیابی نان و شایعهٔ راهزنان و دسیسهٔ اشراف، مردم پاریس و روستا را به هیجان و خشونت کشاند. این صحنه‌ها با پژوهش‌های تاریخی دربارهٔ «ترس بزرگ» همخوان است.",
+  "en": "The novel shows how dear, scarce bread and rumours of brigands and aristocratic plots stirred Paris and the countryside to agitation and violence. The scenes fit historical research on the 'Great Fear'.",
+  "nl": "De roman toont hoe duur, schaars brood en geruchten over rovers en adellijke complotten Parijs en het platteland deden opwellen. De scènes passen bij het onderzoek naar de 'Grote Angst'."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در دفتر، صف‌های نان در بازار پاریس طولانی و پرتنش است، نان بی‌کیفیت می‌شود و مردم باور دارند محتکران غله را نگه می‌دارند تا قیمت بالاتر برود.",
+    "en": "In the diary, bread queues in Parisian markets are long and tense, the bread is poor, and people believe hoarders hold back grain to push prices up.",
+    "nl": "In the diary, bread queues in Parisian markets are long and tense, the bread is poor, and people believe hoarders hold back grain to push prices up."
+   },
+   "sources": [
+    "src:6e095ada5a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نامهٔ کشیشِ روستا از شایعهٔ ورود دستهٔ راهزنان می‌گوید؛ روستاییان مسلح به داس و چنگک نگهبانی می‌دهند و سپس به قلعهٔ ارباب می‌روند و دفترهای حق‌وحقوق اربابی را می‌سوزانند، بی‌آنکه کسی کشته شود.",
+    "en": "A village priest's letter reports a rumour of arriving brigands; peasants armed with scythes and pitchforks keep watch and then go to the lord's château and burn the registers of seigneurial dues, with no one killed.",
+    "nl": "A village priest's letter reports a rumour of arriving brigands; peasants armed with scythes and pitchforks keep watch and then go to the lord's château and burn the registers of seigneurial dues, with no one killed."
+   },
+   "sources": [
+    "src:6e095ada5a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهش لوفور نشان داد «ترس بزرگ» (ژوئیه تا اوت ۱۷۸۹) موجی از هراس روستایی بود که از شایعهٔ راهزنی آغاز شد، در روستاها به‌سرعت پخش شد و در بسیاری از جاها به حمله به قلعه‌ها و سوزاندن اسناد اربابی انجامید؛ این الگو را رمان درست نشان می‌دهد.",
+    "en": "Lefebvre's study showed that the 'Great Fear' (July-August 1789) was a wave of rural panic that began with rumours of brigands, spread rapidly through villages and in many places led to attacks on châteaux and the burning of seigneurial documents; the novel portrays this pattern correctly.",
+    "nl": "Lefebvre's study showed that the 'Great Fear' (July-August 1789) was a wave of rural panic that began with rumours of brigands, spread rapidly through villages and in many places led to attacks on châteaux and the burning of seigneurial documents; the novel portrays this pattern correctly."
+   },
+   "sources": [
+    "src:396228ab6c",
+    "src:4270bfa96d"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نمونهٔ خوبی از اینکه شایعه در شرایط کمبود و بی‌اعتمادی به اقتدار، ‌عملاً رفتار جمعی را شکل می‌دهد؛ اما از یک رمان نباید برای سنجش میزان یا علت این رفتار استفاده کرد.",
+    "en": "A good illustration of how rumour, under scarcity and distrust of authority, actually shapes collective behaviour; but a novel cannot be used to measure its extent or causes.",
+    "nl": "A good illustration of how rumour, under scarcity and distrust of authority, actually shapes collective behaviour; but a novel cannot be used to measure its extent or causes."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:preference-falsification",
+   "rel": "see-also",
+   "note": {
+    "fa": "تحریف ترجیحات و غافلگیری انقلاب‌ها",
+    "en": "Preference falsification and the surprise of revolutions",
+    "nl": "Preference falsification and the surprise of revolutions"
+   }
+  },
+  {
+   "to": "soc:inequality",
+   "rel": "see-also",
+   "note": {
+    "fa": "نابرابری و تحرک",
+    "en": "Inequality and mobility",
+    "nl": "Inequality and mobility"
+   }
+  }
+ ],
+ "people": [
+  "core:georges-lefebvre"
+ ],
+ "sources": [
+  "src:396228ab6c",
+  "src:4270bfa96d",
+  "src:6e095ada5a"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
