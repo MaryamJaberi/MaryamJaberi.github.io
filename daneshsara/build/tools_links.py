@@ -5,7 +5,7 @@ import re, os
 R = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/..')
 CSS = '<style>.dstools{margin:20px 0;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:var(--primary-soft)}.dstools b{display:block;margin-bottom:8px;font-size:1rem}.dstools .r{display:flex;flex-wrap:wrap;gap:8px}.dstools a{padding:7px 16px;border-radius:999px;border:1px solid var(--primary);background:var(--surface);color:var(--primary);text-decoration:none;font-size:.92rem}.dstools a:hover{background:var(--primary);color:#fff}</style>'
 L = {
- 'atlas': ('اطلس', [('compare', 'مقایسهٔ دو مفهوم'), ('path', 'مسیر بین دو مفهوم'), ('evidence', 'نقشهٔ شواهد'), ('bridges', 'یابندهٔ پل‌ها'), ('library', 'کتابخانه و اعتبار منابع')]),
+ 'atlas': ('اطلس', [('compare', 'مقایسهٔ دو مفهوم'), ('path', 'مسیر بین دو مفهوم'), ('evidence', 'نقشهٔ شواهد'), ('bridges', 'یابندهٔ پل‌ها'), ('library', 'کتابخانه و اعتبار منابع'), ('contested', 'پیشخوان محل‌بحث‌ها')]),
  'iran': ('برای ایران', [('lens', 'ایران از دید هر رشته'), ('timeline', 'خط زمانی'), ('matrix', 'ماتریس مسئله × رشته'), ('check', 'راستی‌آزمای ادعا')]),
  'tabar': ('تبار', [('explore', 'کاوشگر'), ('timeline', 'خط زمانی'), ('glossary', 'واژه‌نامه و کارت مرور')]),
  'psy': ('روان', [('../learn', 'مرکز یادگیری'), ('../scales', 'خودسنجی'), ('explore', 'کاوشگر'), ('compare-theories', 'مقایسهٔ رویکردها')]),

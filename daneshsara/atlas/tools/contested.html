@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>پیشخوان محل‌بحث‌ها — دانش‌سرا</title>
+<link rel="stylesheet" href="../../core/design/tokens.css"><link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;align-items:center}
+.pill{cursor:pointer}.pill[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pt{display:grid;gap:8px}.pt p{margin:0;line-height:1.9}
+.pt .src{color:var(--ink-3);font-size:.85rem}
+.pt a.c{font-weight:600;text-decoration:none;color:var(--primary)}
+.count{color:var(--ink-3);margin:6px 0}
+</style></head><body>
+<header class="top"><div class="wrap"><div class="crumb"><a href="../../index.html">خانه</a> › <a href="../index.html">اطلس</a> › <a href="index.html">ابزارهای اطلس</a> › <span>پیشخوان محل‌بحث‌ها</span></div></div></header>
+<main class="wrap">
+<h1>پیشخوان محل‌بحث‌ها</h1>
+<p class="lead">همهٔ گزاره‌هایی که دانش‌سرا خودش علامت زده است: <b>محل بحث</b>، <b>تکرارنشده</b>، <b>قدیمی</b> یا <b>یادداشت سردبیر</b>. این‌ها جاهایی‌اند که باید با احتیاط خوانده شوند و جاهایی که بازبین انسانی باید اول به آن‌ها نگاه کند.</p>
+<div class="filters" id="f"></div>
+<input type="search" id="q" placeholder="جستجو در متن یا عنوان مدخل…" aria-label="جستجو" style="width:100%;max-width:420px">
+<div class="count" id="cnt"></div>
+<div class="grid" id="list"></div>
+</main>
+<footer class="foot"><div class="wrap">داده: core/tools/data.json. فقط ۲۰۰ گزارهٔ نخست هر فیلتر نشان داده می‌شود؛ برای محدودکردن از جستجو استفاده کنید.</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+const esc=DS.esc;let P=[],wiki="",flag="",q="";
+const FL=["contested","unreplicated","dated","editor-note"];
+function card(p){return `<article class="card pt"><div class="row"><span class="chip">${esc(DS.WIKI[p.w]||p.w)}</span>${p.f.filter(x=>FL.includes(x)).map(DS.chipFlag).join("")}${DS.chipTier(p.tier)}</div>
+<p>${esc(p.t)}</p><div class="src">در مدخل: <a class="c" href="../../${esc(p.u)}">${esc(p.title)}</a></div></article>`}
+function render(){
+ const w=DS.norm(q).split(" ").filter(Boolean);
+ const L=P.filter(p=>(!wiki||p.w==wiki)&&(!flag||p.f.includes(flag))&&w.every(x=>DS.norm(p.t+" "+p.title).includes(x)));
+ document.getElementById("cnt").textContent=DS.faDigits(L.length)+" گزاره";
+ document.getElementById("list").innerHTML=L.length?L.slice(0,200).map(card).join(""):'<div class="empty">چیزی پیدا نشد.</div>';
+ const W=[["","همهٔ ویکی‌ها"],...["soc","phil","tabar","psy"].map(k=>[k,DS.WIKI[k]])];
+ document.getElementById("f").innerHTML=W.map(([k,n])=>`<button class="ghost pill" data-w="${k}" aria-pressed="${wiki==k}">${n}</button>`).join("")+[["","همهٔ علامت‌ها"],...FL.map(k=>[k,DS.FLAG[k]])].map(([k,n])=>`<button class="ghost pill" data-fl="${k}" aria-pressed="${flag==k}">${n}</button>`).join("");
+}
+document.getElementById("f").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if("w" in b.dataset)wiki=b.dataset.w;else flag=b.dataset.fl;render();});
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value;render();});
+DS.load().then(d=>{
+ const o=[];d.concepts.forEach(c=>(c.pts||[]).forEach(p=>{if((p.f||[]).some(x=>FL.includes(x)&&x!="editor-note")||(p.f||[]).includes("editor-note"))o.push({w:c.w,t:p.t,f:p.f,tier:p.tier||0,title:(c.t&&c.t.fa)||c.id,u:c.u||"#"})}));
+ // contested/unreplicated/dated first, editor-note-only last
+ o.sort((a,b)=>(a.f.some(x=>x!="editor-note")?0:1)-(b.f.some(x=>x!="editor-note")?0:1));
+ P=o;render();
+}).catch(()=>{document.getElementById("list").innerHTML='<div class="empty">بارگذاری داده ناموفق بود.</div>';});
+</script></body></html>
