@@ -1,0 +1,115 @@
+{
+ "id": "soc:behrangi-committed-poetry",
+ "kind": "concept",
+ "title": {
+  "fa": "شعر و اجتماع: دفاع بهرنگی از هنر متعهد",
+  "en": "Poetry and society: Behrangi's defence of committed art",
+  "nl": "Poëzie en maatschappij: Behrangi's pleidooi voor geëngageerde kunst"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "بهرنگی می‌گوید شاعر امروز نمی‌تواند از جنبش‌ها و مسائل اجتماعی دور بماند، اما شعر بدون مهارت هنری هم به درد نمی‌خورد. او شاعران پایتخت‌نشینِ تفننی و مبهم‌گو را نقد می‌کند. این موضع، یک نظر در بحث کهنهٔ «هنر برای هنر یا هنر متعهد» است.",
+  "en": "Behrangi says today's poet cannot stay apart from social movements and issues, yet poetry without artistic skill is useless too. He criticises leisured, obscure capital-city poets. This is one position in the long debate between 'art for art's sake' and committed art.",
+  "nl": "Behrangi zegt dat de dichter van nu niet buiten maatschappelijke bewegingen kan staan, maar dat poëzie zonder vakmanschap ook nutteloos is. Dit is één positie in het oude debat tussen 'l'art pour l'art' en geëngageerde kunst."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به نظر بهرنگی روزگار شعرِ صرفاً تفننی و تزیینی گذشته است و شاعر خوب می‌خواهد به‌نحوی در جنبش‌های اجتماعی و مسائل سیاسی شریک باشد.",
+    "en": "In Behrangi's view the era of purely leisurely, decorative poetry is over; a good poet wants to take part in some way in social movements and political questions.",
+    "nl": "In Behrangi's view the era of purely leisurely, decorative poetry is over; a good poet wants to take part in some way in social movements and political questions."
+   },
+   "sources": [
+    "src:4a9aa49e78"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید مسئلهٔ اصلی شعر همچنان جنبهٔ هنری آن است: شاعری که فن و ظرافت هنر را نداند، حتی با مضمون خوب نمی‌تواند شعر را میان مردم ببرد.",
+    "en": "He says the core issue of poetry remains its artistic side: a poet who lacks craft cannot carry even a good theme to the people.",
+    "nl": "He says the core issue of poetry remains its artistic side: a poet who lacks craft cannot carry even a good theme to the people."
+   },
+   "sources": [
+    "src:4a9aa49e78"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بهرنگی از شاعر نمی‌خواهد دستور سیاسی بپذیرد؛ شاعر باید از آگاهی خودش «وکیل مدافع» مردم باشد، نه مجری سفارش سیاستمداران.",
+    "en": "Behrangi does not want the poet to take political orders; the poet should be the people's advocate out of his own awareness, not an executor of politicians' commissions.",
+    "nl": "Behrangi does not want the poet to take political orders; the poet should be the people's advocate out of his own awareness, not an executor of politicians' commissions."
+   },
+   "sources": [
+    "src:4a9aa49e78"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او شاعرانِ شهری را که با ابهام، یأس نمایشی و شهرت‌طلبی شعر می‌گویند، بی‌ارتباط با مردم و روستاها می‌داند و نیما یوشیج را به دلیل شناخت زندگی مردم محترم می‌شمارد.",
+    "en": "He regards urban poets who write in obscurity, staged despair and fame-seeking as cut off from villages and ordinary people, and respects Nima Yushij for knowing the life of the people.",
+    "nl": "He regards urban poets who write in obscurity, staged despair and fame-seeking as cut off from villages and ordinary people, and respects Nima Yushij for knowing the life of the people."
+   },
+   "sources": [
+    "src:4a9aa49e78"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این دیدگاه یکی از دو قطب بحث است؛ منتقدان تعهد را خطر تبدیل هنر به ابزار تبلیغ می‌دانند و هنر مستقل را ارزشمند می‌شمارند. داوری دربارهٔ شاعران نام‌برده نیز نظر شخصی بهرنگی است.",
+    "en": "This view is one pole of the debate; critics see a danger that committed art becomes a tool of propaganda and value autonomous art. His judgments on the poets he names are his personal opinion.",
+    "nl": "This view is one pole of the debate; critics see a danger that committed art becomes a tool of propaganda and value autonomous art. His judgments on the poets he names are his personal opinion."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:art-definition",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعریف هنر",
+    "en": "Defining art",
+    "nl": "Defining art"
+   }
+  },
+  {
+   "to": "soc:culture-industry-false-needs",
+   "rel": "contrasts",
+   "note": {
+    "fa": "هنر تفننی و صنعت فرهنگ",
+    "en": "Leisure art and the culture industry",
+    "nl": "Leisure art and the culture industry"
+   }
+  },
+  {
+   "to": "soc:culture-concept-functions",
+   "rel": "part-of",
+   "note": {
+    "fa": "فرهنگ و کارکردهای آن",
+    "en": "Culture and its functions",
+    "nl": "Culture and its functions"
+   }
+  }
+ ],
+ "people": [
+  "core:nima-yushij"
+ ],
+ "sources": [
+  "src:4a9aa49e78"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "soc:reformation-forerunners-and-church-decay",
+ "kind": "concept",
+ "title": {
+  "fa": "پیش از اصلاحات: فساد کلیسا و پیشگامان اصلاح",
+  "en": "Before the Reformation: church decay and the forerunners",
+  "nl": "Voor de Reformatie: verval van de kerk en de voorlopers"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "کتاب نشان می‌دهد پیش از لوتر، ثروت و قدرت کلیسا، رواج مناصب کلیسایی برای سود، و تأکید بر آیین‌های ظاهری نارضایتی‌ای ساخته بود که گروه‌هایی مانند والدوها را به نقد کلیسا کشاند و سرکوب شدند.",
+  "en": "The book argues that church wealth, office-seeking and stress on outward ritual produced discontent before Luther, which led groups such as the Waldensians to criticise the church and be suppressed.",
+  "nl": "Het boek stelt dat rijkdom, ambtsjacht en nadruk op uiterlijk ritueel vóór Luther onvrede wekten; groepen als de Waldenzen bekritiseerden de kerk en werden onderdrukt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده ثروت کلیسا را خطری برای آن می‌داند، چون مناصب کلیسایی افرادی را جذب می‌کرد که دنبال درآمد بودند، و می‌گوید توجه به ظاهر و آیین بر روحانیت درونی چیره شده بود.",
+    "en": "The author sees church wealth as a danger because posts attracted people seeking income, and says outward ritual had come to outweigh inner devotion.",
+    "nl": "The author sees church wealth as a danger because posts attracted people seeking income, and says outward ritual had come to outweigh inner devotion."
+   },
+   "sources": [
+    "src:79c59755e3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیتر والدو، بازرگانی که به موعظهٔ آزاد انجیل رسید، با ممنوعیت پاپ مواجه شد و تکفیر گردید؛ پیروانش (والدوها) در درهٔ کوه‌های آلپ باقی ماندند و امروز هم جماعتی کوچک از آنان هست.",
+    "en": "Peter Waldo, a merchant who turned to free preaching of the Gospel, was banned and excommunicated by the pope; his followers, the Waldensians, survived in the Alpine valleys and a small community still exists.",
+    "nl": "Peter Waldo, a merchant who turned to free preaching of the Gospel, was banned and excommunicated by the pope; his followers, the Waldensians, survived in the Alpine valleys and a small community still exists."
+   },
+   "sources": [
+    "src:79c59755e3",
+    "src:4529d0cfd3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کتاب جنبش آلبیژوا (کاتارها) را هم در شمار پیشگامان اصلاح می‌آورد و از جنگ صلیبی به فرمان پاپ اینوسنت سوم و کشتار گستردهٔ جنوب فرانسه سخن می‌گوید.",
+    "en": "The book also counts the Albigensians (Cathars) among the forerunners and describes the crusade called by Pope Innocent III and the mass killing in southern France.",
+    "nl": "The book also counts the Albigensians (Cathars) among the forerunners and describes the crusade called by Pope Innocent III and the mass killing in southern France."
+   },
+   "sources": [
+    "src:79c59755e3",
+    "src:4529d0cfd3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کاتارها دوگانه‌باور بودند (جهان زیر دو اصل خیر و شر) و مورخان امروز معمولاً آنان را آیینی جدا از مسیحیت کاتولیک می‌دانند، نه پیش‌درآمد پروتستانی؛ نویسنده خودش هم به این دوگانه‌باوری اشاره می‌کند ولی آنان را در همان روایت می‌گنجاند.",
+    "en": "The Cathars were dualists, and modern historians usually treat them as a separate faith, not a Protestant precursor; the author notes the dualism yet fits them into the same story.",
+    "nl": "The Cathars were dualists, and modern historians usually treat them as a separate faith, not a Protestant precursor; the author notes the dualism yet fits them into the same story."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:enlightenment-break",
+   "rel": "see-also",
+   "note": {
+    "fa": "زمینهٔ تاریخی گذار از حکمت مدرسی",
+    "en": "Historical backdrop to the shift from scholasticism",
+    "nl": "Historical backdrop to the shift from scholasticism"
+   }
+  },
+  {
+   "to": "soc:luther-indulgences-and-95-theses",
+   "rel": "part-of",
+   "note": {
+    "fa": "مقدمهٔ ظهور لوتر",
+    "en": "Prelude to Luther",
+    "nl": "Prelude to Luther"
+   }
+  }
+ ],
+ "people": [
+  "core:peter-waldo",
+  "core:innocent-iii"
+ ],
+ "sources": [
+  "src:4529d0cfd3",
+  "src:79c59755e3"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
