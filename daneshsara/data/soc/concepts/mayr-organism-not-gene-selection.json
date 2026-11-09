@@ -1,0 +1,94 @@
+{
+ "id": "soc:mayr-organism-not-gene-selection",
+ "kind": "concept",
+ "title": {
+  "fa": "مایر: فرد و جمعیت، نه ژن، محور تکامل (دیدگاه نویسنده)",
+  "en": "Mayr: the organism and population, not the gene, as the focus of evolution (author's view)",
+  "nl": "Mayr: het organisme en de populatie, niet het gen, centraal in evolutie (visie van de auteur)"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "مایر در پیش‌گفتار تقلیل تکامل به ژن را محکوم به شکست می‌داند و فرد را هدف اصلی انتخاب می‌شمارد. این دیدگاه مهم اما محل بحث است و در برابر دیدگاه «ژن‌محور» قرار دارد.",
+  "en": "In his preface Mayr calls gene-reductionist accounts doomed and treats the individual as the main object of selection. This is an important but debated stance, opposed to the gene-centred view.",
+  "nl": "In zijn voorwoord noemt Mayr genreductionistische verklaringen gedoemd en ziet hij het individu als hoofdobject van selectie. Dit standpunt is belangrijk maar omstreden, tegenover de gen-gecentreerde visie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مایر می‌نویسد تکامل با فنوتیپ افراد، جمعیت‌ها و گونه‌ها سروکار دارد و فقط «تغییر فراوانی ژن‌ها» نیست؛ فرد را هدف اصلی انتخاب و جمعیت را صحنهٔ تنوع می‌شمارد.",
+    "en": "Mayr writes that evolution concerns the phenotypes of individuals, populations and species, not just 'changes in gene frequencies'; the individual is the main object of selection and the population the stage of variation.",
+    "nl": "Mayr writes that evolution concerns the phenotypes of individuals, populations and species, not just 'changes in gene frequencies'; the individual is the main object of selection and the population the stage of variation."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او ادعای «ژن‌ها سوژهٔ انتخاب‌اند» را منسوخ می‌خواند و تکرارگرایی افراطی (فردزایی تکرار تبارزایی) را نیز ردشده می‌داند.",
+    "en": "He calls the claim that genes are the subject of selection obsolete and dismisses extreme recapitulationism (ontogeny repeating phylogeny) as refuted.",
+    "nl": "He calls the claim that genes are the subject of selection obsolete and dismisses extreme recapitulationism (ontogeny repeating phylogeny) as refuted."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نظر رایج دانشگاهی: انتخاب در چند سطح (ژن، سلول، فرد، گروه) بحث زندهٔ زیست‌شناسی است؛ نگاه ژن‌محور (داوکینز، ویلیامز) را بسیاری حسابداری ریاضی سودمند می‌دانند و نه ادعایی دربارهٔ علّیت، اما مایر همچنان از مدافعان برجستهٔ تمرکز بر فرد است. هر دو دیدگاه در ادبیات حضور دارند.",
+    "en": "Mainstream academic view: multilevel selection (gene, cell, individual, group) is a live debate; many treat the gene's-eye view as useful bookkeeping rather than a causal claim, yet Mayr remains a prominent advocate of the individual focus. Both views appear in the literature.",
+    "nl": "Mainstream academic view: multilevel selection (gene, cell, individual, group) is a live debate; many treat the gene's-eye view as useful bookkeeping rather than a causal claim, yet Mayr remains a prominent advocate of the individual focus. Both views appear in the literature."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:mutation-selection-drift",
+   "rel": "contrasts",
+   "note": {
+    "fa": "جهش، انتخاب و رانش",
+    "en": "Mutation, selection and drift",
+    "nl": "Mutation, selection and drift"
+   }
+  },
+  {
+   "to": "tabar:gene-environment",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعامل ژن و محیط",
+    "en": "Gene–environment interplay",
+    "nl": "Gene–environment interplay"
+   }
+  },
+  {
+   "to": "tabar:genetic-essentialism",
+   "rel": "see-also",
+   "note": {
+    "fa": "خطر تقلیل ژنی",
+    "en": "Risk of gene reductionism",
+    "nl": "Risk of gene reductionism"
+   }
+  }
+ ],
+ "people": [
+  "core:ernst-mayr",
+  "core:richard-dawkins"
+ ],
+ "sources": [
+  "src:3c58932bc8"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

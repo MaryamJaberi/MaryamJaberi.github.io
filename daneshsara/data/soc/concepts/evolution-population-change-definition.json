@@ -1,0 +1,116 @@
+{
+ "id": "soc:evolution-population-change-definition",
+ "kind": "concept",
+ "title": {
+  "fa": "تکامل به‌مثابه تغییر جمعیت‌ها: تعریف مایر",
+  "en": "Evolution as change in populations: Mayr's definition",
+  "nl": "Evolutie als verandering van populaties: Mayrs definitie"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "مایر تکامل را تغییر ویژگی‌های جمعیت موجودات زنده در طول زمان تعریف می‌کند و جمعیت را واحد تکامل می‌داند؛ ژن‌ها و افراد نقش دارند اما خودِ تغییر در سطح جمعیت دیده می‌شود. او تضاد تکامل با قانون آنتروپی را هم رد می‌کند.",
+  "en": "Mayr defines evolution as change in the properties of populations of organisms over time and treats the population as the unit of evolution. He also rejects the claim that evolution contradicts the entropy law.",
+  "nl": "Mayr definieert evolutie als verandering in de eigenschappen van populaties van organismen in de tijd, met de populatie als eenheid van evolutie. Hij wijst ook de bewering af dat evolutie de entropiewet tegenspreekt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "طبق توافق تلفیق تکاملی (حدود ۱۹۳۷ تا ۱۹۴۷) مایر تکامل را «تغییر در ویژگی‌های جمعیت» می‌خواند؛ جمعیت واحد تکامل است و ژن‌ها، افراد و گونه‌ها نیز نقش دارند.",
+    "en": "Following the evolutionary synthesis (about 1937–1947), Mayr defines evolution as change in population properties; the population is the unit, though genes, individuals and species also play roles.",
+    "nl": "Following the evolutionary synthesis (about 1937–1947), Mayr defines evolution as change in population properties; the population is the unit, though genes, individuals and species also play roles."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او تکامل را تغییری جهت‌دار نزد لامارک و دیگران می‌داند که بعدها به معنای «به‌سوی کمال» تعبیر شد؛ در مدل جدید، تکامل تغییر در جمعیت است نه صعود حتمی از پست به عالی.",
+    "en": "He notes that early thinkers saw evolution as directed change toward perfection; in the modern model it is change in populations, not a guaranteed climb from lower to higher.",
+    "nl": "He notes that early thinkers saw evolution as directed change toward perfection; in the modern model it is change in populations, not a guaranteed climb from lower to higher."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مایر می‌گوید تکامل با قانون آنتروپی در تضاد نیست چون این قانون برای سامانه‌های بسته است و موجودات زنده سامانه‌ای باز با ورودی پیوستهٔ انرژی خورشیدی‌اند.",
+    "en": "Mayr argues evolution does not contradict the entropy law, which applies to closed systems, whereas living things form an open system with continuous solar energy input.",
+    "nl": "Mayr argues evolution does not contradict the entropy law, which applies to closed systems, whereas living things form an open system with continuous solar energy input."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مایر یادآوری می‌کند که پیش از داروین اصطلاح «تکامل» ابتدا برای رشد جنین به کار می‌رفت (شارل بونه) و سپس به جهان زنده تعمیم یافت.",
+    "en": "He recalls that before Darwin 'evolution' first named embryonic development (Charles Bonnet) and was later extended to the living world.",
+    "nl": "He recalls that before Darwin 'evolution' first named embryonic development (Charles Bonnet) and was later extended to the living world."
+   },
+   "sources": [
+    "src:3c58932bc8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نظر رایج دانشگاهی: تعریف «تغییر فراوانی آلل‌ها در جمعیت در طول نسل‌ها» در زیست‌شناسی تکاملی استاندارد است و با تعریف مایر هم‌سو است؛ تأکید بر جمعیت اینجا اجماع دارد.",
+    "en": "Mainstream academic view: 'change in allele frequencies in a population over generations' is the standard working definition and is compatible with Mayr's; the population emphasis is consensus.",
+    "nl": "Mainstream academic view: 'change in allele frequencies in a population over generations' is the standard working definition and is compatible with Mayr's; the population emphasis is consensus."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "tabar:human-evolution",
+   "rel": "part-of",
+   "note": {
+    "fa": "چارچوب کلی تکامل انسان",
+    "en": "General frame for human evolution",
+    "nl": "General frame for human evolution"
+   }
+  },
+  {
+   "to": "tabar:mutation-selection-drift",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکارهای تغییر در جمعیت",
+    "en": "Mechanisms of population change",
+    "nl": "Mechanisms of population change"
+   }
+  },
+  {
+   "to": "tabar:population-genetics",
+   "rel": "see-also",
+   "note": {
+    "fa": "ژنومیک جمعیت",
+    "en": "Population genomics",
+    "nl": "Population genomics"
+   }
+  }
+ ],
+ "people": [
+  "core:ernst-mayr",
+  "core:jean-baptiste-lamarck"
+ ],
+ "sources": [
+  "src:3c58932bc8"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

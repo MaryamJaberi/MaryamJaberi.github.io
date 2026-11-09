@@ -1,0 +1,116 @@
+{
+ "id": "phil:ferdowsi-fate-pessimism-ahmadi",
+ "kind": "concept",
+ "title": {
+  "fa": "جبر سرنوشت و نگاه تلخ فردوسی در داستان یزدگرد (خوانش احمدی)",
+  "en": "Fate and Ferdowsi's bleak outlook in the Yazdgerd tale (Ahmadi's reading)",
+  "nl": "Noodlot en Ferdowsi's sombere kijk in het Yazdgerd-verhaal (lezing van Ahmadi)"
+ },
+ "aliases": [],
+ "parent": "phil:life",
+ "field": "phil:life",
+ "summary": {
+  "fa": "نویسنده داستان یزدگرد را رویارویی انسان با تقدیر می‌بیند: گردش ستارگان و «چرخ» سرنوشت را می‌نویسند و آدمی کوتاه می‌زید. این در متن شاهنامه ریشه دارد، اما یگانه خوانش ممکن نیست.",
+  "en": "The author reads the Yazdgerd tale as a human confronting fate: the stars and the 'wheel' write destiny and human life is short. This has roots in the text, but it is not the only possible reading.",
+  "nl": "De auteur leest het Yazdgerd-verhaal als de mens tegenover het lot: sterren en het 'rad' bepalen het noodlot en het leven is kort. Dit heeft wortels in de tekst, maar het is niet de enige mogelijke lezing."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در آغاز داستان شاهنامه هشدار می‌دهد که چرخ گردان هر شاهی را پایین می‌آورد و سرانجام بالین همه خشت است؛ بازگویی آن را به کام‌جویی نکردن و جویای نام نیک بودن پیوند می‌دهد.",
+    "en": "The tale opens with the warning that the turning wheel brings every king down and that every head ends on a brick pillow; the retelling links this to avoiding self-indulgence and seeking a good name.",
+    "nl": "The tale opens with the warning that the turning wheel brings every king down and that every head ends on a brick pillow; the retelling links this to avoiding self-indulgence and seeking a good name."
+   },
+   "sources": [
+    "src:337f5a8ecc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده جهان‌بینی فردوسی را در چهار اصل می‌گوید: زندگی کوتاه است، پر از رنج است، خدای سرنوشت بر آن فرمان می‌راند، و نباید دل به گل‌های زهردار جهان بست. او این را به «زروان»، خدای زمان و تقدیر، و باور به اثر ستارگان پیوند می‌دهد.",
+    "en": "He sums Ferdowsi's worldview in four principles: life is short, it is full of pain, a god of fate rules it, and one should not cling to the poisoned flowers of the world. He ties this to Zurvan, god of time and fate, and to belief in astral influence.",
+    "nl": "He sums Ferdowsi's worldview in four principles: life is short, it is full of pain, a god of fate rules it, and one should not cling to the poisoned flowers of the world. He ties this to Zurvan, god of time and fate, and to belief in astral influence."
+   },
+   "sources": [
+    "src:337f5a8ecc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رستم با آنکه شکست را در ستارگان می‌خواند، تسلیم نمی‌شود و می‌جنگد؛ بازگویی همین کشاکش میان تقدیر و کوشش را برجسته می‌کند.",
+    "en": "Rostam reads defeat in the stars yet does not surrender and fights; the retelling highlights this tension between fate and effort.",
+    "nl": "Rostam reads defeat in the stars yet does not surrender and fights; the retelling highlights this tension between fate and effort."
+   },
+   "sources": [
+    "src:337f5a8ecc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیوند مستقیم فردوسی با آیین زروانی و یک جهان‌بینی یکپارچه برای تمام شاهنامه فرضیه‌ای محل بحث است. پژوهشگران، نگاه بدبینانهٔ شاهنامه را به سنت ایرانی، وام‌های زروانی و اندیشهٔ دورهٔ اسلامی هر سه نسبت می‌دهند و کنار آن به آرمان دادگری و پهلوانی هم اشاره می‌کنند.",
+    "en": "A direct link between Ferdowsi and Zurvanism, and a single unified worldview for the whole Shahnameh, is a debated hypothesis. Scholars variously attribute the epic's gloomy strain to Iranian tradition, Zurvanite borrowings and Islamic-era thought, and also point to its ideals of justice and heroism.",
+    "nl": "A direct link between Ferdowsi and Zurvanism, and a single unified worldview for the whole Shahnameh, is a debated hypothesis. Scholars variously attribute the epic's gloomy strain to Iranian tradition, Zurvanite borrowings and Islamic-era thought, and also point to its ideals of justice and heroism."
+   },
+   "sources": [
+    "src:e0aea60b98"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:free-will",
+   "rel": "contrasts",
+   "note": {
+    "fa": "جبر و اختیار",
+    "en": "determinism and free will",
+    "nl": "determinism and free will"
+   }
+  },
+  {
+   "to": "phil:stoicism",
+   "rel": "contrasts",
+   "note": {
+    "fa": "آنچه در اختیار ماست",
+    "en": "what is up to us",
+    "nl": "what is up to us"
+   }
+  },
+  {
+   "to": "phil:moral-luck",
+   "rel": "see-also",
+   "note": {
+    "fa": "بخت و داوری اخلاقی",
+    "en": "luck and moral judgment",
+    "nl": "luck and moral judgment"
+   }
+  },
+  {
+   "to": "soc:yazdgerd-shahnameh-narrative-vs-history",
+   "rel": "part-of",
+   "note": {
+    "fa": "سرگذشت یزدگرد",
+    "en": "Yazdgerd's story",
+    "nl": "Yazdgerd's story"
+   }
+  }
+ ],
+ "people": [
+  "core:abolqasem-ferdowsi"
+ ],
+ "sources": [
+  "src:337f5a8ecc",
+  "src:e0aea60b98"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,105 @@
+{
+ "id": "soc:jasemi-polemic-method-and-sources",
+ "kind": "concept",
+ "title": {
+  "fa": "شیوهٔ استدلال و منابع در جزوهٔ جدلی جاسمی: ارزیابی روش",
+  "en": "Method and sources in Jasemi's polemic: an assessment",
+  "nl": "Methode en bronnen in de polemiek van Jasemi"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "جزوه از آیات قرآن و روایت‌های مجموعه‌های شیعی استفاده می‌کند اما بدون نقد سند، زمینهٔ تاریخی و تفسیرهای رقیب؛ لحن آن سیاسی و تحقیرآمیز است. برای شناخت اندیشهٔ نویسنده مفید است، نه برای داوری دربارهٔ آموزه‌های اسلامی.",
+  "en": "The pamphlet cites Quranic verses and reports from Shia collections, but without source criticism, historical context or rival interpretations; its tone is political and contemptuous. It is useful for understanding the author's thinking, not for judging Islamic teachings.",
+  "nl": "De brochure citeert koranverzen en overleveringen zonder bronkritiek of context; geschikt om het denken van de auteur te begrijpen, niet om islamitische leer te beoordelen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده به آیه‌های سوره‌های بقره، نساء و نور و به روایت‌هایی از مجموعه‌های حدیثی شیعه مانند کافی و من‌لایحضره‌الفقیه ارجاع می‌دهد.",
+    "en": "The author refers to verses from the Quranic chapters al-Baqara, al-Nisa and al-Nur and to reports from Shia hadith collections such as al-Kafi and Man la yahduruhu al-faqih.",
+    "nl": "The author refers to verses from the Quranic chapters al-Baqara, al-Nisa and al-Nur and to reports from Shia hadith collections such as al-Kafi and Man la yahduruhu al-faqih."
+   },
+   "sources": [
+    "src:d325ace7d3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارجاع‌ها معمولاً گزینشی‌اند: صحت و ضعف سند روایت‌ها، اختلاف مفسران و تغییر معنای واژه‌ها در تاریخ بررسی نمی‌شود و فهرست منابع یا پانویس روشمند ندارد.",
+    "en": "References are mostly selective: the reliability of reports, disagreement among exegetes and historical change in word meaning are not examined, and there is no systematic bibliography.",
+    "nl": "References are mostly selective: the reliability of reports, disagreement among exegetes and historical change in word meaning are not examined, and there is no systematic bibliography."
+   },
+   "sources": [
+    "src:d325ace7d3"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پایان و آغاز جزوه آشکارا سیاسی است و هدفش بسیج خوانندگان علیه حکومت دینی ایران است؛ زبانش تحقیرآمیز است و از معیارهای نوشتار دانشگاهی دور است.",
+    "en": "The opening and close are openly political, aiming to rally readers against Iran's clerical state; the language is contemptuous and far from academic norms.",
+    "nl": "The opening and close are openly political, aiming to rally readers against Iran's clerical state; the language is contemptuous and far from academic norms."
+   },
+   "sources": [
+    "src:d325ace7d3"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهش دانشگاهی دربارهٔ ازدواج موقت در ایران (مانند کار هائری) آن را پدیده‌ای حقوقی و اجتماعی با کارکردها و پیامدهای گوناگون و داوری‌های متفاوت توصیف می‌کند، نه یک روایت واحد.",
+    "en": "Academic research on temporary marriage in Iran (e.g. Haeri's ethnography) describes a legal and social institution with varied functions, consequences and judgements, not a single story.",
+    "nl": "Academic research on temporary marriage in Iran (e.g. Haeri's ethnography) describes a legal and social institution with varied functions, consequences and judgements, not a single story."
+   },
+   "sources": [
+    "src:7700ec49fe"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:jasemi-islam-women-marriage-polemic",
+   "rel": "part-of",
+   "note": {
+    "fa": "مدخل دیدگاه نویسنده",
+    "en": "Entry on the author's viewpoint",
+    "nl": "Entry on the author's viewpoint"
+   }
+  },
+  {
+   "to": "soc:secularization",
+   "rel": "see-also",
+   "note": {
+    "fa": "سکولار شدن و دین",
+    "en": "Secularization and religion",
+    "nl": "Secularization and religion"
+   }
+  }
+ ],
+ "people": [
+  "core:shahla-haeri",
+  "core:ziba-mir-hosseini"
+ ],
+ "sources": [
+  "src:7700ec49fe",
+  "src:d325ace7d3"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

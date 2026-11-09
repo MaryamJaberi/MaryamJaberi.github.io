@@ -1,0 +1,126 @@
+{
+ "id": "phil:socratic-examination-mission",
+ "kind": "concept",
+ "title": {
+  "fa": "رسالت پرسش‌گری سقراط و مراقبت از جان",
+  "en": "Socrates' mission of questioning and care of the soul",
+  "nl": "De missie van Socrates: bevragen en zorg voor de ziel"
+ },
+ "aliases": [],
+ "parent": "phil:life",
+ "field": "phil:life",
+ "summary": {
+  "fa": "سقراط در دفاعیه فلسفه‌ورزی را وظیفه‌ای الهی می‌داند: با همه گفت‌وگو کند و آنان را به توجه به جان و فضیلت، پیش از ثروت و شهرت، برانگیزد. او خود را «خارپشت/مگسِ» بیدارکنندهٔ شهر توصیف می‌کند.",
+  "en": "In the Apology Socrates presents philosophising as a divinely assigned task: to converse with everyone and urge them to care for the soul and virtue before wealth and fame. He compares himself to a gadfly stirring a sluggish horse, the city.",
+  "nl": "In de Apologie ziet Socrates filosoferen als een goddelijke opdracht: iedereen aanspreken en aansporen tot zorg voor de ziel en deugd boven rijkdom en roem, als een horzel die de stad wakker houdt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سقراط به همشهریان می‌گوید چرا به ثروت و جاه می‌اندیشند ولی به دانش و بهتر کردن روح خود نه. او می‌گوید ثروت از قابلیت نمی‌زاید، بلکه قابلیت (فضیلت) است که ثروت و دیگر نعمت‌ها را سودمند می‌کند.",
+    "en": "He asks fellow citizens why they care for money and reputation but not for knowledge and the improvement of their soul. He says wealth does not produce excellence; excellence makes wealth and other goods beneficial.",
+    "nl": "He asks fellow citizens why they care for money and reputation but not for knowledge and the improvement of their soul. He says wealth does not produce excellence; excellence makes wealth and other goods beneficial."
+   },
+   "sources": [
+    "src:98ffa9a519"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خود را مانند مگسی می‌نامد که خدا برای بیدارکردن و سرزنش شهرِ خواب‌آلود فرستاده است؛ تا زنده است از این کار دست نمی‌کشد حتی اگر آزادی‌اش به آن مشروط شود.",
+    "en": "He calls himself a gadfly sent by the god to rouse and reproach a drowsy city, and says he will not give up this work even if his acquittal were made conditional on it.",
+    "nl": "He calls himself a gadfly sent by the god to rouse and reproach a drowsy city, and says he will not give up this work even if his acquittal were made conditional on it."
+   },
+   "sources": [
+    "src:98ffa9a519"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برای نفی اتهام آموزگاری پولی می‌گوید از کسی مزد نگرفته و تهیدستی‌اش گواه است؛ خود را با سوفیست‌هایی مانند گرگیاس و پرودیکوس و هیپیاس که مزد می‌گرفتند، متفاوت می‌داند.",
+    "en": "Against the charge of teaching for pay, he points to his poverty as evidence and distinguishes himself from fee-charging sophists such as Gorgias, Prodicus and Hippias.",
+    "nl": "Against the charge of teaching for pay, he points to his poverty as evidence and distinguishes himself from fee-charging sophists such as Gorgias, Prodicus and Hippias."
+   },
+   "sources": [
+    "src:98ffa9a519"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مترجم فارسی واژهٔ یونانی «آرته» را «قابلیت» ترجمه کرده است، نه «فضیلت» یا «هنر»، و دلیلش را در پانوشت می‌آورد؛ پس هنگام استناد به متن فارسی باید دانست «قابلیت» اینجا به معنی تمامیت و شایستگیِ هر چیز در کار خودش است.",
+    "en": "The Persian translator renders the Greek 'arete' as 'qabiliyyat' (capability/excellence) rather than 'virtue' or 'art', explaining why in a footnote; readers should know it means the excellence of a thing at its own function.",
+    "nl": "The Persian translator renders the Greek 'arete' as 'qabiliyyat' (capability/excellence) rather than 'virtue' or 'art', explaining why in a footnote; readers should know it means the excellence of a thing at its own function."
+   },
+   "sources": [
+    "src:98ffa9a519"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تصویر سقراطی که همه‌جا مأمور خداست و جان را مهم‌تر از دنیا می‌شمارد، روایت افلاطون است و پیش‌فرض‌های دینی خاص خود را دارد. تاریخ‌نگاران دربارهٔ این‌که سقراط واقعی تا کجا چنین بود اختلاف دارند.",
+    "en": "The picture of Socrates as divinely commissioned and prizing the soul over worldly goods is Plato's account and carries its own religious assumptions; historians disagree about how far the real Socrates matched it.",
+    "nl": "The picture of Socrates as divinely commissioned and prizing the soul over worldly goods is Plato's account and carries its own religious assumptions; historians disagree about how far the real Socrates matched it."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:ethics",
+   "rel": "part-of",
+   "note": {
+    "fa": "اخلاقِ فضیلت‌محور و مراقبت از جان",
+    "en": "Virtue-centred ethics and care of the soul",
+    "nl": "Virtue-centred ethics and care of the soul"
+   }
+  },
+  {
+   "to": "phil:life",
+   "rel": "part-of",
+   "note": {
+    "fa": "پرسش از چگونه زیستن",
+    "en": "The question of how to live",
+    "nl": "The question of how to live"
+   }
+  },
+  {
+   "to": "phil:stoicism",
+   "rel": "see-also",
+   "note": {
+    "fa": "رواقیان فضیلت را برتر از ثروت می‌دانستند و خود را وارث سقراط می‌شمردند",
+    "en": "The Stoics ranked virtue above wealth and regarded Socrates as an ancestor",
+    "nl": "The Stoics ranked virtue above wealth and regarded Socrates as an ancestor"
+   }
+  },
+  {
+   "to": "phil:cave",
+   "rel": "see-also",
+   "note": {
+    "fa": "افلاطون در جمهوری نیز از بیداری و دگرگونی جان سخن می‌گوید",
+    "en": "Plato in the Republic also speaks of awakening and turning the soul",
+    "nl": "Plato in the Republic also speaks of awakening and turning the soul"
+   }
+  }
+ ],
+ "people": [
+  "core:gorgias-of-leontini",
+  "core:prodicus-of-ceos",
+  "core:hippias-of-elis"
+ ],
+ "sources": [
+  "src:98ffa9a519"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
