@@ -1,0 +1,105 @@
+{
+ "id": "soc:business-plan-as-tool",
+ "kind": "concept",
+ "title": {
+  "fa": "طرح کسب‌وکار و تقسیم بازار در یک راهنمای عملی ایرانی",
+  "en": "Business plan and market segmentation in a practical Iranian guide",
+  "nl": "Businessplan en marktsegmentatie in een Iraanse praktijkgids"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "نویسنده طرح کسب‌وکار را ابزاری برای شناخت و کاستن خطر می‌داند و می‌گوید بازار را با شاخص‌هایی مثل سن، شغل، منطقه و قیمت به گروه‌های کوچک‌تر تقسیم کنیم و یکی را هدف بگیریم.",
+  "en": "The author sees the business plan as a tool for understanding and reducing risk, and advises splitting the market by indicators such as age, job, region and price, then targeting one segment.",
+  "nl": "De auteur ziet het businessplan als instrument om risico te verkleinen en adviseert de markt te segmenteren op leeftijd, beroep, regio en prijs en één segment te kiezen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به نظر نویسنده بازار اینترنتی جایی است که سایت و موتور جستجو جای مغازه و خیابان را می‌گیرند و بیشتر مردم برای اطلاعات و ارتباط می‌آیند، نه خرید.",
+    "en": "In the author's view the online market replaces shops and streets with sites and search engines, and most people come for information and contact rather than purchase.",
+    "nl": "In the author's view the online market replaces shops and streets with sites and search engines, and most people come for information and contact rather than purchase."
+   },
+   "sources": [
+    "src:fcfe35f96e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او توصیه می‌کند بازار را با شاخص‌هایی مانند سن، شغل، منطقه یا سطح قیمت به بازارهای کوچک‌تر تقسیم کنیم و چون توان مالی و زمانی محدود است، یک بازار هدف انتخاب کنیم.",
+    "en": "He advises splitting the market by indicators like age, occupation, region or price level and, since means are limited, choosing one target market.",
+    "nl": "He advises splitting the market by indicators like age, occupation, region or price level and, since means are limited, choosing one target market."
+   },
+   "sources": [
+    "src:fcfe35f96e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او طرح کسب‌وکار را سندی پویا می‌داند که بخش‌های بازار و مالی هستهٔ آن‌اند، با حجم متناسب با کسب‌وکار، و می‌گوید داشتن طرح موفقیت را تضمین نمی‌کند، فقط احتمال شکست را کم می‌کند.",
+    "en": "He calls the plan a living document whose market and financial sections form its core, sized to the business, and says a plan does not guarantee success but lowers the chance of failure.",
+    "nl": "He calls the plan a living document whose market and financial sections form its core, sized to the business, and says a plan does not guarantee success but lowers the chance of failure."
+   },
+   "sources": [
+    "src:fcfe35f96e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید بیشتر کسب‌وکارهای اینترنتی نوپا در همان سال اول ورشکست می‌شوند؛ این عدد بی‌منبع است و با آمار رسمی رایج دربارهٔ کسب‌وکارهای نوپا (که نرخ شکست سال اول را بسیار کمتر نشان می‌دهد) سازگار نیست.",
+    "en": "The author claims most new internet businesses go bankrupt in year one; this is unsourced and inconsistent with commonly cited official startup statistics, which show a much lower first-year failure rate.",
+    "nl": "The author claims most new internet businesses go bankrupt in year one; this is unsourced and inconsistent with commonly cited official startup statistics, which show a much lower first-year failure rate."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهش‌های دانشگاهی دربارهٔ اثر برنامه‌نویسی رسمی بر بقای کسب‌وکار نوپا نتایج مختلط یا اثر مثبت اما کوچک و مشروط نشان داده‌اند؛ پس ادعای کتاب را باید کم‌اغراق خواند.",
+    "en": "Academic studies of formal planning and new-venture survival report mixed or small, conditional positive effects, so the book's claim should be read modestly.",
+    "nl": "Academic studies of formal planning and new-venture survival report mixed or small, conditional positive effects, so the book's claim should be read modestly."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "کسب‌وکار نوعی نهاد اقتصادی است",
+    "en": "A business is an economic institution",
+    "nl": "A business is an economic institution"
+   }
+  },
+  {
+   "to": "soc:network-society",
+   "rel": "see-also",
+   "note": {
+    "fa": "بازار اینترنتی در متن جامعهٔ شبکه‌ای",
+    "en": "The online market in a network society",
+    "nl": "The online market in a network society"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:fcfe35f96e"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

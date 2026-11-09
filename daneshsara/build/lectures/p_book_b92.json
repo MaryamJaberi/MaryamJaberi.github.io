@@ -1,0 +1,251 @@
+{
+ "paper": true,
+ "book": {
+  "title": "آشنایی با تحلیل بنیادی",
+  "author": "نامشخص",
+  "translator": "",
+  "year": "نامشخص",
+  "publisher": "نامشخص",
+  "type": "reference",
+  "read": "full",
+  "pages_or_sections_read": "کل جزوه (حدود ۲۸ صفحه: پیشگفتار، مفاهیم، ابزارها، ترازنامه، سود و زیان، جریان وجوه نقد، یادداشت‌ها)",
+  "drive_id": "13roON45jptWo3QTiMiT-mjqeUZ31ygv4"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "جزوهٔ آموزشی مقدماتی و بی‌نام دربارهٔ تحلیل بنیادی سهام؛ تعریف‌های حسابداری‌اش استاندارد و قابل‌اتکاست، اما نویسنده و ارجاع ندارد و ادعاهای دربارهٔ کارایی روش‌ها ساده‌شده است.",
+  "reasons": [
+   "نویسنده، ناشر و سال در متن دیده نشد",
+   "مفاهیم حسابداری (ترازنامه، سود و زیان، دارایی جاری/غیرجاری) با درسنامه‌های استاندارد هم‌خوان است",
+   "هیچ ارجاع یا داده‌ای ندارد و جنبهٔ آموزشی-مقدماتی دارد",
+   "به بحث دانشگاهی دربارهٔ کارایی بازار نمی‌پردازد",
+   "به‌روزبودن نامشخص است؛ به پایگاه کدال (www.codal.ir) اشاره می‌کند"
+  ],
+  "best_use_fa": "برای آشنایی اولیه با واژگان و ساختار صورت‌های مالی و منطق تحلیل بنیادی خوب است؛ برای ادعای دربارهٔ سودآوری روش‌ها، قیمت‌گذاری سهام یا اقتصاد ایران منبع مناسبی نیست.",
+  "cautions": [
+   "نویسنده مشخص نیست",
+   "ارجاع ندارد",
+   "جزوه ممکن است ناقص باشد (نسخهٔ min؛ جریان وجوه نقد و یادداشت‌ها کوتاه)",
+   "نکتهٔ مالیات و ۳۰ آذر در متن به مقررات ایران وابسته و ممکن است روزآمد نباشد",
+   "توصیه سرمایه‌گذاری نیست"
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "محتوای مقدماتی اما درست و ساختارمند است؛ سه مدخل کوتاه دربارهٔ منطق تحلیل بنیادی و دو صورت مالی اصلی افزوده شد. صورت جریان وجوه نقد به‌خاطر اهمیت کمتر برای دانش‌سرا مدخل جدا نگرفت.",
+ "summary_of_book_fa": "جزوهٔ کوتاهی که تحلیل بنیادی سهام را معرفی می‌کند: ارزش ذاتی در برابر قیمت بازار، رویکردهای بالا به پایین و پایین به بالا، ابزارهای اقتصادی و مالی، و سپس ساختار ترازنامه، صورت سود و زیان، جامع سود و زیان و جریان وجوه نقد و یادداشت‌های همراه.",
+ "entries": [
+  {
+   "id": "fundamental-analysis-intrinsic-value",
+   "wiki": "soc",
+   "field": "institutions",
+   "title": {
+    "fa": "تحلیل بنیادی: ارزش ذاتی در برابر قیمت بازار",
+    "en": "Fundamental analysis: intrinsic value versus market price",
+    "nl": "Fundamentele analyse: intrinsieke waarde versus marktprijs"
+   },
+   "summary": {
+    "fa": "روشی برای ارزیابی سهام که با بررسی اقتصاد کشور، صنعت و صورت‌های مالی شرکت، «ارزش ذاتی» را برآورد و با قیمت بازار مقایسه می‌کند؛ این مدخل نگاه یک جزوهٔ مقدماتی فارسی را معرفی می‌کند.",
+    "en": "A method of valuing shares by estimating 'intrinsic value' from the economy, the industry and a firm's financial statements, then comparing it with the market price; this entry presents the view of a short introductory Persian booklet.",
+    "nl": "Een methode om aandelen te waarderen door de intrinsieke waarde te schatten uit economie, sector en jaarrekening en die met de marktprijs te vergelijken, volgens een korte Perzische inleiding."
+   },
+   "points": [
+    {
+     "fa": "به نظر نویسنده، تحلیل‌گر بنیادی فرض می‌کند قیمت بازار یک سهم ممکن است از ارزش واقعی (ذاتی) آن جدا باشد و کارش یافتن علت و اندازهٔ این فاصله است.",
+     "en": "The author says a fundamental analyst assumes a share's market price may differ from its real (intrinsic) value, and the task is to find the cause and size of the gap.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اگر ارزش ذاتیِ برآوردشده از قیمت بازار بیشتر باشد، سهم ارزان‌تر از ارزش خود معامله می‌شود و خرید منطقی است؛ در حالت وارونه فروش منطقی است.",
+     "en": "If estimated intrinsic value exceeds the market price, the share trades below its worth and buying is rational; in the reverse case selling is rational.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "جزوه دو رویکرد را نام می‌برد: از بالا به پایین (اقتصاد کلان، سپس صنعت، سپس شرکت) و از پایین به بالا (انتخاب شرکت از روی نسبت‌هایی مثل قیمت به سود هر سهم).",
+     "en": "The booklet names two approaches: top-down (macroeconomy, then industry, then firm) and bottom-up (picking firms from ratios such as price to earnings per share).",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "از نقاط قوت می‌شمارد که روش بر داده‌های واقعی شرکت تکیه دارد و برای سرمایه‌گذاری بلندمدت مناسب است؛ از ضعف‌ها، زمان‌بر بودن، وابستگی نتیجه به فرض‌های تحلیل‌گر و بی‌فایده‌بودن نسبی آن در معاملات کوتاه‌مدت.",
+     "en": "Strengths it lists: reliance on real firm data and suitability for long-term investing; weaknesses: it is time-consuming, depends on the analyst's assumptions, and is of little use for short-term trading.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در ادبیات دانشگاهی مالی، این‌که قیمت‌ها از ارزش بنیادی مدام جدا بمانند محل مناقشه است: فرضیهٔ بازار کارا می‌گوید قیمت‌ها اطلاعات در دسترس را بازتاب می‌دهند و شکست دائمی بازار دشوار است، در حالی که مالی رفتاری از انحراف‌های پایدار دفاع می‌کند. جزوه به این بحث نمی‌پردازد.",
+     "en": "In academic finance, whether prices stay persistently away from fundamental value is disputed: the efficient-market hypothesis says prices reflect available information and beating the market consistently is hard, while behavioural finance argues for lasting deviations. The booklet does not discuss this debate.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "soc:institutions",
+     "rel": "part-of",
+     "fa": "نهادهای مالی بخشی از نهادهای اقتصادی‌اند",
+     "en": "Financial institutions belong among economic institutions"
+    },
+    {
+     "to": "psy:cognitive-biases",
+     "rel": "see-also",
+     "fa": "مالی رفتاری انحراف قیمت را با سوگیری‌های شناختی توضیح می‌دهد",
+     "en": "Behavioural finance explains price deviation by cognitive biases"
+    },
+    {
+     "to": "soc:balance-sheet-equation",
+     "rel": "see-also",
+     "fa": "ورودی اصلی تحلیل، صورت‌های مالی است",
+     "en": "The main input of the analysis is the financial statements"
+    }
+   ]
+  },
+  {
+   "id": "balance-sheet-equation",
+   "wiki": "soc",
+   "field": "institutions",
+   "title": {
+    "fa": "ترازنامه: دارایی‌ها، بدهی‌ها و حقوق صاحبان سهام",
+    "en": "The balance sheet: assets, liabilities and shareholders' equity",
+    "nl": "De balans: activa, passiva en eigen vermogen"
+   },
+   "summary": {
+    "fa": "ترازنامه تصویری از وضعیت مالی یک شرکت در یک لحظه است و بر معادلهٔ «دارایی = بدهی + حقوق صاحبان سهام» استوار است.",
+    "en": "The balance sheet is a snapshot of a firm's financial position at one moment, built on the equation assets = liabilities + shareholders' equity.",
+    "nl": "De balans is een momentopname van de financiële positie van een bedrijf, gebaseerd op activa = schulden + eigen vermogen."
+   },
+   "points": [
+    {
+     "fa": "ترازنامه اقلام دارایی، بدهی و حقوق صاحبان سهام را در یک تاریخ مشخص (معمولاً پایان سال مالی) نشان می‌دهد و بر پایهٔ معادلهٔ دارایی = بدهی + سرمایه تنظیم می‌شود.",
+     "en": "The balance sheet shows assets, liabilities and equity on a given date (usually fiscal year-end) and rests on assets = liabilities + capital.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "دارایی باید منبع منافع آیندهٔ شرکت باشد، در کنترل شرکت باشد و بتوان آن را به پول تبدیل کرد؛ دارایی‌ها به جاری (نقد، حساب‌های دریافتنی، موجودی کالا، سرمایه‌گذاری کوتاه‌مدت) و غیرجاری (زمین، ساختمان، ماشین‌آلات، دارایی‌های نامشهود مانند حق اختراع) تقسیم می‌شوند.",
+     "en": "An asset must be a source of future benefit, under the firm's control and convertible into money; assets split into current (cash, receivables, inventory, short-term investments) and non-current (land, buildings, machinery, intangibles such as patents).",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "بدهی‌ها به جاری (سررسید کمتر از یک سال یا یک چرخهٔ عملیاتی) و بلندمدت تقسیم می‌شوند؛ حقوق صاحبان سهام از آورده‌های سهامداران و سودهای انباشته و اندوخته‌ها تشکیل می‌شود.",
+     "en": "Liabilities split into current (due within a year or an operating cycle) and long-term; equity comes from shareholder contributions, retained earnings and reserves.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ارقام ترازنامه بر پایهٔ بهای تمام‌شدهٔ تاریخی ثبت می‌شوند و لزوماً ارزش روز را نشان نمی‌دهند؛ جزوه این را به‌درستی یادآور می‌شود و به همین دلیل ارزش دفتری با ارزش بازار یکی نیست.",
+     "en": "Balance-sheet figures are recorded at historical cost and do not necessarily show current value; the booklet notes this, which is why book value differs from market value.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "soc:fundamental-analysis-intrinsic-value",
+     "rel": "explains",
+     "fa": "تحلیل بنیادی بر صورت‌های مالی تکیه دارد",
+     "en": "Fundamental analysis relies on financial statements"
+    },
+    {
+     "to": "soc:income-statement-operating-vs-non",
+     "rel": "see-also",
+     "fa": "ترازنامه لحظه‌ای است و صورت سود و زیان دوره‌ای",
+     "en": "The balance sheet is a point in time, the income statement covers a period"
+    }
+   ]
+  },
+  {
+   "id": "income-statement-operating-vs-non",
+   "wiki": "soc",
+   "field": "institutions",
+   "title": {
+    "fa": "صورت سود و زیان: درآمد عملیاتی و غیرعملیاتی",
+    "en": "The income statement: operating versus non-operating results",
+    "nl": "De winst-en-verliesrekening: operationeel versus niet-operationeel"
+   },
+   "summary": {
+    "fa": "صورت سود و زیان عملکرد شرکت را در یک دوره نشان می‌دهد و درآمد و هزینه را به بخش عملیاتی و غیرعملیاتی جدا می‌کند تا پایداری سود روشن شود.",
+    "en": "The income statement shows a firm's performance over a period and separates operating from non-operating items so the sustainability of profit is visible.",
+    "nl": "De winst-en-verliesrekening toont de prestaties over een periode en scheidt operationele van niet-operationele posten."
+   },
+   "points": [
+    {
+     "fa": "برخلاف ترازنامه، صورت سود و زیان یک دورهٔ زمانی (مثلاً سه‌ماهه، شش‌ماهه یا یک‌ساله) را پوشش می‌دهد و آن را می‌توان به‌صورت تک‌مرحله‌ای یا چندمرحله‌ای تنظیم کرد.",
+     "en": "Unlike the balance sheet, the income statement covers a period (quarter, half-year, year) and can be laid out in single-step or multi-step form.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "درآمد عملیاتی از فعالیت اصلی شرکت و هدف‌های اساسنامه‌ای می‌آید و انتظار می‌رود تکرارپذیر و پایدار باشد؛ درآمد غیرعملیاتی، مثل فروش زمین توسط شرکتی که کارش تولید است، گذرا و غیرقابل پیش‌بینی است.",
+     "en": "Operating income comes from the firm's core activity and is expected to recur; non-operating income, such as a manufacturer selling land, is transient and hard to forecast.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "بهای تمام‌شدهٔ کالا شامل مواد مستقیم، دستمزد مستقیم تولید و سربار تولید است؛ هزینه‌های عملیاتی (فروش، اداری) و هزینه‌های مالی (بهرهٔ وام) جداگانه می‌آیند.",
+     "en": "Cost of goods sold includes direct materials, direct production labour and manufacturing overhead; operating (selling, administrative) and financial (loan interest) costs are listed separately.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "سود خالص پس از کسر مالیات به‌دست می‌آید و پایین‌ترین ردیف صورت است؛ جزوه یادآوری می‌کند که تحلیل‌گر باید فصلی بودن فروش و هزینه را در نظر بگیرد.",
+     "en": "Net profit is obtained after tax and is the bottom line; the booklet reminds the analyst to account for seasonality of sales and costs.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "soc:balance-sheet-equation",
+     "rel": "see-also",
+     "fa": "ترازنامه وضعیت در یک لحظه را نشان می‌دهد",
+     "en": "The balance sheet gives the position at one moment"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "آشنایی با تحلیل بنیادی (جزوهٔ مقدماتی؛ نویسنده، ناشر و سال نامشخص). فایل Drive 13roON45jptWo3QTiMiT-mjqeUZ31ygv4",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "متن PDF کاملاً معکوس (هر خط به‌صورت حرف‌به‌حرف برعکس) بود و مستقیم از متن استخراج‌شده خوانده شد؛ فهم متن خوب اما نه بی‌نقص (فاصله‌ها و بعضی واژه‌ها خراب‌اند). هیچ عدد یا نام دقیقی غیر از آدرس codal.ir و ساختار حسابداری نقل نشده است. دو نکته (کارایی بازار و مالی رفتاری) از دانش عمومی من است و بدون منبع و با پرچم contested آمده است. صورت جریان وجوه نقد و بخش یادداشت‌ها فقط سطحی خوانده و مدخل نشد.",
+ "lecture": "آشنایی با تحلیل بنیادی",
+ "speaker": "نامشخص",
+ "channel": "نامشخص"
+}

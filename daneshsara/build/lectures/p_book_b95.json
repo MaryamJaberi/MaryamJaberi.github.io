@@ -1,0 +1,569 @@
+{
+ "paper": true,
+ "book": {
+  "title": "منطق پوشالی: کتابی از آخوند بی‌دین‌شده",
+  "author": "نامشخص (ناشناس؛ در متن خود را طلبهٔ سابق معرفی می‌کند)",
+  "translator": "",
+  "year": "حدود ۱۴۰۰ شمسی / ۲۰۲۱ میلادی (استنباط از متن: ۱۳۸۹ سال پس از وفات محمد)",
+  "publisher": "نامشخص (انتشار آنلاین/PDF)",
+  "type": "religious-political",
+  "read": "partial",
+  "pages_or_sections_read": "فهرست، مقدمه، فصل‌های خدا، ادیان، اسلام، قرآن، مذاهب اسلامی، قضایای اسلام، فرق نو، مسیحیت، اخلاقیات، وسوسه‌های شیطانی، احترام به عقاید تا حدود صفحهٔ ۸۰؛ دو فصل پایانی («اگر خدا وجود داشته باشد» و «ماوراء») در متن استخراج‌شده نبود",
+  "drive_id": "1XRx1pHQU2GF2p0RXLVDsebfDq5JlK7TM"
+ },
+ "credibility": {
+  "tier": 4,
+  "label_fa": "جزوهٔ جدلیِ ضددینیِ نویسنده‌ای ناشناس؛ برای شناخت استدلال‌های او مفید، اما برای حقایق تاریخی، دینی یا علمی منبع معتبر نیست.",
+  "reasons": [
+   "نویسنده ناشناس است و صلاحیت علمی او قابل‌سنجش نیست؛ فقط می‌گوید طلبه بوده (الف).",
+   "ارجاع‌ها بیشتر به آیه‌ها، تفسیر المیزان، تفسیر نمونه، صحاح و سیرهٔ ابن‌اسحاق و چند سایت اینترنتی است؛ روش پژوهش مشخص و ارجاع داوری‌شده ندارد (ب).",
+   "منتشرشده حدود ۱۴۰۰ شمسی؛ برخی ادعاها (مثل پاسخ ناسا) از وب نقل شده و تاریخ‌گذاری دقیق ندارند (ج).",
+   "لحن تمسخرآمیز و اهانت‌آمیز، قصدِ صریح ردّ دین، و تعمیم به همهٔ مذاهب؛ جدلی است نه تحلیلی (د).",
+   "برای دیدگاه خود نویسنده منبع اولیه است؛ اما برای نظر عالمان یا تاریخ اسلام نه (ه).",
+   "نمونهٔ خطای علمی: بیان لامارکی از فرگشت؛ و تعمیم‌های تاریخی بدون بررسی (مثلاً دربارهٔ زنده‌به‌گورکردن دختران یا پیشگویی‌ها)."
+  ],
+  "best_use_fa": "برای دیدن چگونگی استدلال یک منتقد عامه‌پسند دین (در فضای فارسی‌زبان) و فهرست نقدهای متداول؛ نه برای داوری دربارهٔ تاریخ اسلام، تفسیر قرآن، علم یا فقه.",
+  "cautions": [
+   "نقل‌های حدیثی و کتاب‌شناختی را باید با منبع اصلی تطبیق داد؛ در متن PDF شماره صفحه‌ها و ارجاع‌ها گاه ناقص‌اند.",
+   "ادعای فرگشت لامارکی و برداشت برخی از برهان‌های فلسفی نادرست یا ساده‌شده است.",
+   "متن شامل تعابیر خشن دربارهٔ دین و پیامبر است؛ فقط دیدگاه نویسنده نقل شد و دیدگاه مقابل آمد."
+  ]
+ },
+ "decision": "add-as-viewpoint",
+ "decision_reason": "کتاب جدلی و ضعیف‌ارجاع است، پس به‌جای منبع واقعیت فقط به‌عنوان دیدگاه نویسنده با پرچم contested/editor-note و یادداشت دیدگاه رایج دانشگاهی وارد می‌شود؛ پنج مدخل کوتاه که هر مدخل ادعاهای او را از نقد و دیدگاه مقابل جدا می‌کند.",
+ "summary_of_book_fa": "نویسنده‌ای ناشناس که خود را طلبهٔ سابق می‌خواند، در یک جزوهٔ کوتاه براهین اثبات خدا، اعجاز قرآن، احکام اسلام، مسیحیت و اخلاق دینی را رد می‌کند و می‌گوید دین بیش از هر چیز با عقل نمی‌سازد. لحن کتاب مسخره‌آمیز و جدلی است و بیشتر سنجش‌ها برای شیعه است.",
+ "entries": [
+  {
+   "id": "god-arguments-ex-cleric-critique",
+   "wiki": "phil",
+   "field": "epistemology",
+   "title": {
+    "fa": "نقد براهین اثبات خدا از دید یک طلبهٔ سابق (دیدگاه یک نویسنده)",
+    "en": "An ex-seminarian's critique of the classical arguments for God (one author's view)",
+    "nl": "Kritiek van een voormalige seminarist op de klassieke godsbewijzen (standpunt van één auteur)"
+   },
+   "summary": {
+    "fa": "نویسندهٔ ناشناس کتاب، که خود را طلبهٔ سابق معرفی می‌کند، براهین نظم، علیت، امکان و وجوب، فطرت، حرکت و شرط‌بندی پاسکال را یکی‌یکی رد می‌کند. این فقط دیدگاه اوست؛ برخی اشکال‌هایش با نقدهای رایج فلسفی هم‌خوان است و برخی ساده‌سازی یا خطای علمی دارد.",
+    "en": "The anonymous author, who presents himself as a former seminary student, rejects the arguments from order, causation, contingency and necessity, innate disposition, motion, and Pascal's wager one by one. This is his viewpoint only: some objections match standard philosophical criticism, others are oversimplified or scientifically mistaken.",
+    "nl": "De anonieme auteur, een zelfverklaarde ex-seminarist, wijst de argumenten uit orde, causaliteit, contingentie, aangeboren godsbesef, beweging en de gok van Pascal één voor één af. Dit is slechts zijn standpunt; sommige bezwaren sluiten aan bij gangbare filosofische kritiek, andere zijn vereenvoudigd of wetenschappelijk onjuist."
+   },
+   "points": [
+    {
+     "fa": "نویسنده برهان نظم را ضعیف می‌داند و می‌گوید نمونه‌هایی که آیات قرآن از نظم می‌آورند (شب و روز، کشتی روی آب، باران) با خود قرآن هم کامل سازگار نیستند؛ مثلاً در مناطق نزدیک قطب شب و روز شش‌ماهه است.",
+     "en": "The author considers the argument from order weak and says the examples the Quran gives of order (day and night, ships on water, rain) are not even consistent with themselves; e.g. polar regions have half-year days and nights.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او می‌گوید ظاهر «نظم» را می‌توان با عادت و با فرگشت توضیح داد، و نمی‌شود از نظم یک سیارهٔ کوچک در جهانی عظیم، نظم کل جهان را نتیجه گرفت.",
+     "en": "He says the appearance of order can be explained by habit and by evolution, and that order on one small planet in a vast universe does not show order of the whole cosmos.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "توضیح او دربارهٔ فرگشت (دست و پا، و زرافه که با «تلاش» گردنش بلند شده) درست نیست: این تصویر لامارکی است. در زیست‌شناسی امروز، تغییر از راه گزینش طبیعی روی تفاوت‌های ارثی رخ می‌دهد، نه از تلاش فرد برای بقا.",
+     "en": "His account of evolution (limbs swapping roles, giraffes lengthening necks through effort) is wrong: it is a Lamarckian picture. In current biology change arises from natural selection acting on heritable variation, not from an individual's striving.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "دربارهٔ برهان علیت می‌گوید اگر هر چیزِ موجود علت می‌خواهد، چرا خدا نخواهد؛ و اگر تسلسل علل باطل است، پذیرفتن یک علتِ بی‌علت ادعای بی‌دلیل است. به نظر او پاسخ‌های مکارم شیرازی مصادره به مطلوب است.",
+     "en": "On the causal argument he asks why God would need no cause if everything existing does, and says accepting an uncaused cause is an unargued assumption; he calls Makarem Shirazi's reply question-begging.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اشکال «چرا خدا هم علت نمی‌خواهد» اشکال رایج و جدی در فلسفهٔ دین است، اما مدافعان می‌گویند اصل این برهان «هر موجود» علت ندارد بلکه «هر موجودِ ممکن یا آغازدار» علت دارد. ادعای او که پیش از مهبانگ «زمان» وجود نداشته و قوانین هم نبوده، یکی از چند نظر ممکن است نه نتیجهٔ قطعی فیزیک؛ و «پیدایش از هیچ» در فیزیک کوانتومی به خلأ کوانتومی با قوانین فیزیکی اشاره دارد که هیچِ فلسفی نیست.",
+     "en": "The objection 'why does God not need a cause' is a standard serious one, but defenders say the argument applies not to everything existing but to contingent or begun things. His claim that there was no time or law 'before' the Big Bang is one possible view, not a settled result of physics; and 'something from nothing' in quantum physics refers to a quantum vacuum governed by physical laws, which is not philosophical nothingness.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "در برهان امکان و وجوب، او برداشتش را این می‌گذارد که واجب‌الوجود به ممکن‌ها نیازمند می‌شود و پس چنین خدایی «نیازمند» است.",
+     "en": "On the contingency-and-necessity argument he reads it as making the necessary being dependent on contingent things, hence 'a needy God'.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در صورت‌بندی‌های کلاسیک (مثلاً ابن‌سینا) واجب‌الوجود به ممکنات نیاز ندارد؛ آنچه نویسنده می‌خواند تفسیری نادقیق است. نقد جدی این برهان از سوی هیوم و کانت بر درستی اصل «هر چیز علتی کافی دارد» و گذر از ممکنات به یک واجب است.",
+     "en": "In classical formulations (e.g. Avicenna) the necessary being does not depend on contingents; the author's reading is imprecise. The serious philosophical critique (Hume, Kant) targets the principle that everything has a sufficient reason and the move from contingents to one necessary being.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "برهان فطرت را او با تأثیر جامعه توضیح می‌دهد: کسی که در جامعه‌ای دین‌دار بزرگ شده، در خطر به همان خدای آموخته‌شده پناه می‌برد، و برای فطری‌بودن باور ربطی به درستی آن نیست.",
+     "en": "He explains the argument from innate disposition by social upbringing: someone raised in a religious society turns in danger to the god he was taught, and an innate belief does not show it is true.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "شرط پاسکال را با ایراد «خدایان فراوان» رد می‌کند: اگر صدها دین هستند، پذیرفتن یکی ممکن است خشم خدای دیگری را بیاورد.",
+     "en": "He rejects Pascal's wager with the 'many gods' objection: with hundreds of religions, adopting one may anger another god.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ایراد «خدایان فراوان» یکی از اشکال‌های شناخته‌شده و پذیرفتهٔ فلسفی بر شرط پاسکال است (در نقدهای دیدرو هم دیده می‌شود).",
+     "en": "The 'many gods' objection is a well-known, widely accepted philosophical objection to Pascal's wager (it appears already in Diderot's critique).",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "دیدگاه رایج دانشگاهی: دربارهٔ اثبات یا ابطال وجود خدا اجماعی نیست؛ فیلسوفان دین هم دلایل موافق و هم مخالف را جدی بررسی می‌کنند و بیشترشان هیچ برهانی را قاطع نمی‌دانند. کتاب به نظرات ایمانی مانند ابن‌سینا، یا ایرادهای خود مدافعان به نسخه‌های ساده‌شدهٔ این براهین نمی‌پردازد.",
+     "en": "Mainstream academic view: there is no consensus that God's existence is proven or disproven; philosophers of religion examine both sides seriously and most consider no argument decisive. The book does not engage the stronger classical versions or defenders' own criticism of simplified forms.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Blaise Pascal",
+     "fa": "بلز پاسکال",
+     "years": "1623-1662",
+     "note": "سازندهٔ «شرط پاسکال» در اندیشه‌ها"
+    },
+    {
+     "latin": "Ibn Sina (Avicenna)",
+     "fa": "ابن‌سینا",
+     "years": "980-1037",
+     "note": "از صورت‌بندهای کلاسیک برهان واجب و ممکن"
+    },
+    {
+     "latin": "Abdollah Javadi Amoli",
+     "fa": "عبدالله جوادی آملی",
+     "years": "1933-",
+     "note": "نویسندهٔ «تبیین براهین اثبات خدا» که کتاب به او ارجاع می‌دهد"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:epistemology",
+     "rel": "see-also",
+     "fa": "جایگاه ادعا و استدلال در معرفت‌شناسی",
+     "en": "Place of claim and argument in epistemology"
+    },
+    {
+     "to": "phil:falsification",
+     "rel": "contrasts",
+     "fa": "معیار ابطال‌پذیری در داوری دربارهٔ ادعاهای دینی و علمی",
+     "en": "Falsifiability as a test for religious and scientific claims"
+    },
+    {
+     "to": "soc:religion-ideology-iran-debate",
+     "rel": "see-also",
+     "fa": "بحث دین و ایران در جامعه‌شناسی",
+     "en": "The religion-and-Iran debate in sociology"
+    },
+    {
+     "to": "soc:secularization",
+     "rel": "see-also",
+     "fa": "زمینهٔ جامعه‌شناختی دین‌گریزی",
+     "en": "Sociological context of leaving religion"
+    }
+   ]
+  },
+  {
+   "id": "quran-miracle-claims-critique",
+   "wiki": "phil",
+   "field": "science",
+   "title": {
+    "fa": "نقد ادعاهای اعجاز قرآن: شق‌القمر، اعجاز علمی و اعجاز عددی (دیدگاه یک نویسنده)",
+    "en": "Critique of Quranic miracle claims: the split moon, scientific and numerical miracles (one author's view)",
+    "nl": "Kritiek op beweringen over Koranwonderen: de gespleten maan, wetenschappelijke en numerieke wonderen (standpunt van één auteur)"
+   },
+   "summary": {
+    "fa": "نویسنده ادعاهای رایج مسلمانان دربارهٔ اعجاز قرآن را (شق‌القمر، آیه‌های «علمی»، حساب حروف و کلمات، پیش‌گویی‌ها) بررسی و رد می‌کند. لحنش تمسخرآمیز است و برخی بخش‌ها منصفانه‌اند، اما خوانش او از زبان و تفسیر همیشه دقیق نیست.",
+    "en": "The author examines and rejects common Muslim claims about the Quran's miraculous character (split moon, 'scientific' verses, letter and word counting, prophecies). His tone is mocking; some points are fair, but his reading of language and exegesis is not always precise.",
+    "nl": "De auteur onderzoekt en verwerpt gangbare moslimclaims over het wonderlijke karakter van de Koran (gespleten maan, 'wetenschappelijke' verzen, tellen van letters en woorden, voorspellingen). Zijn toon is spottend; sommige punten zijn terecht, maar zijn lezing van taal en exegese is niet altijd nauwkeurig."
+   },
+   "points": [
+    {
+     "fa": "او می‌گوید برای شق‌القمر هیچ شاهد مستقل تاریخی یا علمی نیست، و می‌نویسد پاسخی از یک دانشمند ناسا نقل شده که شواهد علمی برای دو نیم‌شدن ماه نیست.",
+     "en": "He says there is no independent historical or scientific evidence for the splitting of the moon, and cites a reply attributed to a NASA-affiliated scientist that no scientific evidence exists for it.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به گفتهٔ او، خود قرآن شق‌القمر را معجزه نمی‌نامد بلکه آن را نشانه‌ای نزدیک به قیامت می‌آورد؛ و تفسیرِ «فعل ماضی برای رویداد قطعی آینده» را، که در تفسیر المیزان هم هست، ناکافی می‌داند.",
+     "en": "He argues the Quran itself does not call the split moon a miracle but links it to the approach of the Hour, and he finds the 'past tense for a certain future event' explanation, also found in al-Mizan, unconvincing.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "استفاده از فعل ماضی برای رویداد قطعی آینده در دستور عربی کلاسیک شناخته‌شده است؛ مفسران قدیم بیشتر شق‌القمر را رویدادی گذشته می‌دانستند و برخی معاصران آن را آینده‌نگر می‌دانند. از نظر علمی، شواهد زمین‌شناسی ماه و نبود هر گزارش مستقل، این رویداد را تأیید نمی‌کند.",
+     "en": "The past tense for a certain future event is a known feature of classical Arabic grammar; early exegetes mostly treated the split moon as a past event, while some modern readers take it as future. Scientifically, lunar geology and the lack of any independent report give no support for it.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "دربارهٔ ادعاهای «اعجاز علمی» (ستون نامرئی و جاذبه، گسترش جهان، مهبانگ، تنگی نفس در ارتفاع، اثر انگشت)، او هر مورد را با معنی ظاهری آیه یا واژه می‌سنجد و می‌گوید این برداشت‌ها پس از کشف علمی بر متن بار می‌شوند و پیش از آن کسی از متن آن علم را نیافته بود.",
+     "en": "On 'scientific miracle' claims (invisible pillars and gravity, expanding universe, Big Bang, breathlessness at altitude, fingerprints), he checks each against the plain wording and says these readings are imposed on the text after the science is discovered, which nobody derived beforehand.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اکثر پژوهشگران دانشگاهی این الگو را «تطبیق پسینی» می‌خوانند و آن را روش علمی نمی‌دانند؛ بسیاری از عالمان مسلمان هم قرآن را کتاب هدایت می‌دانند نه کتاب علوم تجربی. نقد او دربارهٔ اثر انگشت (آیه از سر انگشت می‌گوید) با بحث رایج همخوان است.",
+     "en": "Most academic scholars call this pattern retrofitting and not scientific method; many Muslim scholars likewise regard the Quran as a book of guidance, not of empirical science. His point about fingerprints (the verse speaks of fingertips) matches the common discussion.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "او ادعاهای «اعجاز عددی» و شمارش بسامد کلمه‌ها (مثل ربط عدد کلمات به روزهای سال یا تعداد امامان) و رمزگشایی حروف مقطعه را بی‌پایه می‌داند، چون شمارش‌ها با قیدهای دلخواه تنظیم شده‌اند و بسیاری از مسلمانان هم آن را رد می‌کنند.",
+     "en": "He regards numerical-miracle claims (word-frequency counts matched to days of the year or the number of imams) and decoding of the disconnected letters as baseless, because counts are tuned by arbitrary rules and many Muslims also reject them.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "الگوهایی که پس از جستجوی آزاد در یک متن بلند و با قیدهای انتخابی پیدا شوند، در آمار نمونهٔ آشنای «انتخاب پسینی» اند و ارزش اثباتی ندارند. این داوری دربارهٔ روش است نه دربارهٔ ایمان.",
+     "en": "Patterns found after free searching a long text with selectable rules are a familiar case of post hoc selection in statistics and carry no evidential weight; this is a judgment about method, not about faith.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "دربارهٔ پیشگویی پیروزی روم و شکست بت‌پرستان در بدر می‌گوید پیش‌بینی‌ای با دو حالت ممکن، مثل نتیجهٔ مسابقه، پیشگویی خاص نیست.",
+     "en": "On the prophecies of Roman victory and of the idolaters' defeat at Badr, he says a forecast with only two possible outcomes, like a match result, is not a distinctive prophecy.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "روایت‌های اسلامی خودشان آیهٔ روم را وعدهٔ بازگشت پیروزی در چند سال (بضع سنین) می‌دانند و آن را با رویدادهای واقعی جنگ روم و ساسانی (حدود ۶۲۴ تا ۶۲۸ میلادی) می‌سنجند؛ دانشگاهیان دربارهٔ دقت زمان‌بندی بحث دارند. نقد «دو حالت ممکن» ساده‌سازی است.",
+     "en": "Islamic tradition itself treats the Roman verse as a promise of a reversal within a few years, matched with real Byzantine-Sasanian war events (c. 624-628 CE); scholars debate the timing's precision. The 'only two outcomes' critique is a simplification.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Rashad Khalifa",
+     "fa": "رشاد خلیفه",
+     "years": "1935-1990",
+     "note": "زیست‌شیمی‌دان مصری-آمریکایی که نظریهٔ رمز عدد ۱۹ در قرآن را مطرح کرد؛ بیشتر مسلمانان آن را رد کردند"
+    },
+    {
+     "latin": "Allameh Tabataba'i",
+     "fa": "علامه طباطبایی",
+     "years": "1903-1981",
+     "note": "مفسر المیزان که کتاب به آن ارجاع می‌دهد"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:science",
+     "rel": "contrasts",
+     "fa": "علم تجربی و داوری دربارهٔ ادعاهای دینی",
+     "en": "Empirical science and judging religious claims"
+    },
+    {
+     "to": "phil:falsification",
+     "rel": "explains",
+     "fa": "چرا تطبیق پسینی ابطال‌پذیر نیست",
+     "en": "Why post hoc matching is not falsifiable"
+    },
+    {
+     "to": "phil:paradigms",
+     "rel": "see-also",
+     "fa": "داوری‌های علمی در تغییر پارادایم",
+     "en": "Scientific judgment across paradigm change"
+    }
+   ]
+  },
+  {
+   "id": "apostasy-ruling-critique",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "حکم ارتداد در فقه و نقد اخلاقی آن (دیدگاه یک نویسنده)",
+    "en": "The apostasy ruling in fiqh and its ethical critique (one author's view)",
+    "nl": "De afvalligheidsregel in de fiqh en de ethische kritiek erop (standpunt van één auteur)"
+   },
+   "summary": {
+    "fa": "نویسنده حکم قتل مرتد، به‌ویژه مرتد فطری، را ناعادلانه و ناسازگار با آزادی انتخاب می‌داند و پاسخ رایج «قرارداد پذیرفته‌اید» را رد می‌کند. در برابر او، عالمان مسلمان هم دیدگاه سنتی و هم دیدگاه‌های محدودکننده دارند.",
+    "en": "The author calls the death ruling for apostates, especially the 'innate' apostate, unjust and at odds with freedom of choice, and rejects the usual reply that the convert signed a contract. Muslim scholars hold both the traditional and more restrictive positions.",
+    "nl": "De auteur noemt de doodsstraf voor afvalligen, vooral de 'geboren' afvallige, onrechtvaardig en strijdig met keuzevrijheid, en verwerpt het gebruikelijke antwoord dat de bekeerling een contract tekende. Moslimgeleerden hebben zowel de traditionele als meer beperkende standpunten."
+   },
+   "points": [
+    {
+     "fa": "او توضیح می‌دهد که در فقه شیعه مرتد ملی (پدر و مادر غیرمسلمان) را می‌توان به توبه دعوت کرد، اما مرتد فطری (از والدین مسلمان) به‌اصطلاح حتی با توبه کشته می‌شود و فقط حکم زن حبس است؛ و روایتی از علی را به‌عنوان مستند می‌آورد.",
+     "en": "He explains that in Shia fiqh the 'milli' apostate (non-Muslim parents) may be invited to repent, while the 'fitri' apostate (Muslim parents) is said to be killed even after repenting, with imprisonment for women; and cites a narration attributed to Ali as the basis.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پاسخ مدافعان، یعنی اینکه ورود به اسلام مانند امضای قرارداد است، به نظر او مغالطه است: انتخاب بد (مثل همسر بد یا رئیس جمهور مستبد) ظلم بعدی را توجیه نمی‌کند.",
+     "en": "He treats the defenders' reply that entering Islam is like signing a contract as a fallacy: a bad choice (a bad spouse, a dictator as president) does not justify the later harm.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او می‌پرسد اگر نوجوانی پانزده‌ساله دین را پذیرفته و بعد برگشته، آیا با دانش و بلوغ ناکافی مجازات مرگ منصفانه است.",
+     "en": "He asks whether a death penalty is fair for a fifteen-year-old who adopted Islam and later left, given limited knowledge and maturity.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "دیدگاه فقهی کلاسیک (سنی و شیعی) بر مجازات ارتداد دارد، اما از قرن بیستم شماری از اندیشمندان مسلمان آن را به خیانت سیاسی یا جنگ با جامعه محدود می‌کنند و برای صرف تغییر باور به آیه «در دین اجباری نیست» استناد می‌کنند. در حقوق بین‌الملل حقوق بشر، حق تغییر دین جزو آزادی دین و وجدان شمرده می‌شود (ماده ۱۸ میثاق حقوق مدنی و سیاسی). بنابراین مسئله هم فقهی و هم حقوقی-اخلاقی است و نویسنده فقط یک سوی آن را بازگو می‌کند.",
+     "en": "The classical juristic view (Sunni and Shia) prescribes punishment for apostasy, but since the twentieth century a number of Muslim thinkers limit it to political treason or war against the community and cite the verse 'no compulsion in religion' for mere change of belief. In international human-rights law the right to change religion is part of freedom of religion and conscience (ICCPR art. 18). The issue is both juristic and legal-ethical; the author presents one side.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "phil:two-liberties",
+     "rel": "see-also",
+     "fa": "آزادی منفی و مثبت و حق تغییر باور",
+     "en": "Negative and positive liberty and the right to change belief"
+    },
+    {
+     "to": "soc:liberty-before-democracy-iran",
+     "rel": "see-also",
+     "fa": "آزادی‌های مدنی در بحث ایران",
+     "en": "Civil liberties in the Iranian debate"
+    },
+    {
+     "to": "phil:ethics",
+     "rel": "part-of",
+     "fa": "اخلاق و حقوق بنیادین",
+     "en": "Ethics and basic rights"
+    }
+   ]
+  },
+  {
+   "id": "ethics-without-religion-argument",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "آیا اخلاق به دین نیاز دارد؟ استدلال یک نویسندهٔ بی‌دین",
+    "en": "Does morality need religion? A non-religious author's argument",
+    "nl": "Heeft moraal religie nodig? Het betoog van een niet-religieuze auteur"
+   },
+   "summary": {
+    "fa": "نویسنده می‌گوید خوب‌بودن به انگیزهٔ پاداش و کیفر اخلاق نیست، اخلاق پیش از اسلام و مسیحیت هم بوده، و رفتار یک بی‌دین را نباید به همهٔ بی‌دینان نسبت داد. این استدلال‌ها با بحث‌های رایج فلسفهٔ اخلاق همخوان‌اند.",
+    "en": "The author says being good for reward or fear of punishment is not morality, that ethics existed before Islam and Christianity, and that one non-believer's behaviour should not be attributed to all. These arguments match familiar debates in moral philosophy.",
+    "nl": "De auteur stelt dat goed zijn uit vrees voor straf of voor beloning geen moraal is, dat ethiek bestond vóór islam en christendom, en dat het gedrag van één ongelovige niet aan alle ongelovigen mag worden toegeschreven. Deze argumenten sluiten aan bij bekende debatten in de moraalfilosofie."
+   },
+   "points": [
+    {
+     "fa": "او با مثال می‌گوید نتیجهٔ خوب با روش بد کار خوب نمی‌سازد: کسی که فقط از ترس پلیس دزدی نمی‌کند یا فقط برای بهشت نیکی می‌کند، با رفع آن انگیزه معلوم نیست چه می‌کند.",
+     "en": "With examples he argues a good result from a bad motive does not make a good act: someone who avoids theft only from fear of police, or does good only for paradise, is unreliable once that incentive is removed.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او به اخلاق نیکوماخوس ارسطو اشاره می‌کند که پیش از اسلام و مسیحیت نوشته شده و می‌گوید خود اسلام هم دعوت به اخلاق را به مخاطبی می‌داد که از پیش اخلاق را می‌شناخت.",
+     "en": "He points to Aristotle's Nicomachean Ethics, written before Islam and Christianity, and says Islam's call to morality addressed audiences who already knew ethics.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او نسبت‌دادن اعمال یک فرد بی‌دین به همهٔ بی‌دینان را مثل نسبت‌دادن تروریسم به همهٔ مسلمانان می‌داند؛ اما می‌افزاید بی‌دینی صرفاً یک نگرش است و کتاب احکام و تکلیف ندارد، در حالی که دین چنین متونی دارد.",
+     "en": "He sees attributing one non-believer's acts to all non-believers as like attributing terrorism to all Muslims, but adds that non-belief is only a stance with no scripture or commandments, while religions have such texts.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "استدلال اول قابل‌مقایسه با تمایز کانت میان عمل از روی وظیفه و عمل مطابق وظیفه است. اما در روان‌شناسی و جامعه‌شناسی دین پژوهش‌هایی هست که اثر باورهای دینی بر رفتار اخلاقی را نشان می‌دهد و نتایج آن‌ها یکدست نیست؛ ادعای کلی دربارهٔ «همهٔ دین‌داران» یا «همهٔ بی‌دینان» دقیق نیست.",
+     "en": "The first argument parallels Kant's distinction between acting from duty and merely in accordance with duty. Yet psychology and sociology of religion have studies on how belief affects moral behaviour with mixed results; sweeping claims about all believers or all non-believers are imprecise.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Aristotle",
+     "fa": "ارسطو",
+     "years": "384-322 پیش از میلاد",
+     "note": "نویسندهٔ اخلاق نیکوماخوس"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:three-theories",
+     "rel": "explains",
+     "fa": "وظیفه‌گرایی، نتیجه‌گرایی و فضیلت در برابر انگیزهٔ بهشت",
+     "en": "Deontology, consequentialism and virtue versus the heaven motive"
+    },
+    {
+     "to": "phil:ethics",
+     "rel": "part-of",
+     "fa": "اخلاق",
+     "en": "Ethics"
+    },
+    {
+     "to": "soc:values",
+     "rel": "see-also",
+     "fa": "ارزش‌ها و دین",
+     "en": "Values and religion"
+    }
+   ]
+  },
+  {
+   "id": "foreknowledge-free-will-critique",
+   "wiki": "phil",
+   "field": "mind",
+   "title": {
+    "fa": "علم الهی پیشین و اختیار انسان: نقد یک نویسنده",
+    "en": "Divine foreknowledge and human freedom: one author's critique",
+    "nl": "Goddelijke voorkennis en menselijke vrijheid: kritiek van één auteur"
+   },
+   "summary": {
+    "fa": "نویسنده می‌گوید اگر خدا آیندهٔ هر کس را از پیش بداند، آن کس راه دیگری ندارد و پس اختیار نیست؛ و داستان خضر و موسی را شاهد جبر می‌داند. این مسئلهٔ قدیم کلام و فلسفه است و پاسخ‌های مفصل‌تری دارد.",
+    "en": "The author says that if God knows everyone's future in advance, nobody can do otherwise, so there is no freedom; he reads the Khidr and Moses story as evidence of determinism. This is an old problem in theology and philosophy with more detailed answers.",
+    "nl": "De auteur stelt dat als God ieders toekomst vooraf kent, niemand anders kan handelen en er dus geen vrijheid is; hij leest het verhaal van Chidr en Mozes als bewijs van determinisme. Dit is een oud probleem in theologie en filosofie met uitgebreidere antwoorden."
+   },
+   "points": [
+    {
+     "fa": "او دو پاسخ رایج مسلمانان را رد می‌کند: «اثبات یک چیز نافی چیز دیگر نیست» و «هر کس اختیار را در خود احساس می‌کند». به نظر او علم پیشین با اختیار تناقض دارد، چون اگر انسان بتواند کاری را نکند، علم خدا نادرست می‌شود.",
+     "en": "He rejects two common Muslim replies: that proving one thing does not negate another, and that everyone feels free in themselves. In his view foreknowledge contradicts freedom, since if a person could refrain, God's knowledge would be wrong.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او داستان موسی و خضر (کشته‌شدن نوجوانی به‌خاطر کفر آینده‌اش) را شاهدی می‌گیرد که قرآن اختیار آینده را نمی‌پذیرد.",
+     "en": "He takes the story of Moses and Khidr (a youth killed for his future unbelief) as evidence that the Quran does not accept future freedom.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "استدلال او شکل مشهور «ناسازگاری علم پیشین و اختیار» است و فیلسوفان پاسخ‌های متفاوتی داده‌اند: بوئتیوس (خدا خارج از زمان)، مولینیسم، الهیات گشوده، و سازگارگرایی که اختیار را «نبودن اجبار» می‌داند. در کلام اسلامی هم اشعری با مفهوم کسب، معتزله با اختیار بنده، و در شیعه با «امر بین‌الامرین» پاسخ داده‌اند. خواننده را به سنجش این پاسخ‌ها ارجاع دهید، نه به برنده‌شدن ساده‌ی یک سو.",
+     "en": "His argument is the familiar form of the foreknowledge-freedom incompatibility, and philosophers answer differently: Boethius (God outside time), Molinism, open theism, and compatibilism which defines freedom as absence of coercion. In Islamic theology the Ash'arites answer with acquisition (kasb), the Mu'tazila with the servant's own agency, and Shia thought with 'a position between two positions'. The reader should weigh these answers rather than assume one side simply wins.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "phil:free-will",
+     "rel": "see-also",
+     "fa": "بحث اختیار و سازگارگرایی",
+     "en": "The free-will and compatibilism debate"
+    },
+    {
+     "to": "phil:iranian",
+     "rel": "see-also",
+     "fa": "کلام و فلسفهٔ ایرانی-اسلامی",
+     "en": "Iranian-Islamic theology and philosophy"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "نامشخص (ناشناس). «منطق پوشالی: کتابی از آخوند بی‌دین‌شده». PDF آنلاین، حدود ۱۴۰۰ ش./۲۰۲۱ م. (نشانی کتاب در Drive مریم).",
+   "tier": 4
+  },
+  {
+   "cite": "Pascal, B. Pensées (1670).",
+   "tier": 3
+  },
+  {
+   "cite": "Ibn Sina (Avicenna). al-Isharat wa al-Tanbihat (c. 11th century).",
+   "tier": 3
+  },
+  {
+   "cite": "United Nations. International Covenant on Civil and Political Rights (1966), article 18.",
+   "tier": 2
+  }
+ ],
+ "quality_notes": "متن Drive به‌صورت اشکال عرضی عربی و ترتیب بصری بود؛ NFKC و معکوس‌کردن هر خط آن را تا حد خواندن (ترتیب بعضی کلمات داخل خط جابه‌جا) بازیابی کرد. اعداد، آیه‌ها و نام‌ها فقط وقتی آمدند که واضح بودند. ناحیهٔ پایانی (فهرست ارجاعات خراب) و دو فصل آخر («اگر خدا وجود داشته باشد»، «ماوراء») در متن استخراج‌شده نبود یا ناخوانا بود. دقت خوانش حدود ۸۰٪؛ هیچ نقل مستقیم بلند نیامد.",
+ "lecture": "منطق پوشالی: کتابی از آخوند بی‌دین‌شده",
+ "speaker": "نامشخص (ناشناس؛ در متن خود را طلبهٔ سابق معرفی می‌کند)",
+ "channel": "نامشخص (انتشار آنلاین/PDF)"
+}
