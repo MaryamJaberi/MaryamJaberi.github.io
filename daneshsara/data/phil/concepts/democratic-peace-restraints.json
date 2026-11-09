@@ -1,0 +1,86 @@
+{
+ "id": "phil:democratic-peace-restraints",
+ "kind": "concept",
+ "title": {
+  "fa": "چرا دموکراسی‌ها با هم نمی‌جنگند؟ مهارهای نهادی و هنجاری",
+  "en": "Why democracies do not fight each other: institutional and normative restraints",
+  "nl": "Waarom democratieën elkaar niet bevechten: institutionele en normatieve beperkingen"
+ },
+ "aliases": [],
+ "parent": "phil:political",
+ "field": "phil:political",
+ "summary": {
+  "fa": "راست دو دسته توضیح می‌دهد: نهادهایی که تصمیم جنگ را کند و شفاف می‌کنند، و هنجارِ «خود زندگی کن و بگذار دیگران هم زندگی کنند» که به دموکراسی‌های دیگر هم تعمیم می‌یابد. او همچنین استدلالی تکاملی دربارهٔ گسترش دایرهٔ دموکراسی‌ها می‌آورد.",
+  "en": "Russett offers institutional constraints that slow and expose the decision for war, and a norm of live-and-let-live extended to other democracies, plus an argument about the growing democratic zone.",
+  "nl": "Russett noemt institutionele remmen op oorlogsbesluiten en een leef-en-laat-leven-norm tussen democratieën."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مهار نهادی: در دموکراسی تصمیم جنگ باید از فرایندهای نمایندگی، جدایی قوا و شفافیت نسبی بگذرد؛ پس فرصت کافی برای میانجی‌گری و مذاکره پیش از درگیری می‌ماند.",
+    "en": "Institutional restraint: war decisions pass through representation, separated powers and relative transparency, leaving time for mediation and bargaining.",
+    "nl": "Institutional restraint: war decisions pass through representation, separated powers and relative transparency, leaving time for mediation and bargaining."
+   },
+   "sources": [
+    "src:594d0080b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مهار هنجاری: دموکراسی‌ها اختلاف داخلی را مسالمت‌آمیز حل می‌کنند و انتظار دارند طرف دموکراتیک مقابل هم همین‌طور رفتار کند؛ راست آن را با عبارت «زندگی کن و بگذار زندگی کنند» توضیح می‌دهد.",
+    "en": "Normative restraint: democracies settle internal disputes peacefully and expect democratic counterparts to do likewise, which he glosses as live and let live.",
+    "nl": "Normative restraint: democracies settle internal disputes peacefully and expect democratic counterparts to do likewise, which he glosses as live and let live."
+   },
+   "sources": [
+    "src:594d0080b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "استدلال تکاملی راست: هرچه شمار دموکراسی‌ها بیشتر شود، دشمنان بالقوه‌شان کمتر و میدان صلح گسترده‌تر می‌شود و رفتار مسالمت‌آمیز تقویت می‌گردد.",
+    "en": "His expansion argument: as democracies multiply, potential enemies shrink and the zone of peace widens, reinforcing peaceful behaviour.",
+    "nl": "His expansion argument: as democracies multiply, potential enemies shrink and the zone of peace widens, reinforcing peaceful behaviour."
+   },
+   "sources": [
+    "src:594d0080b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این توضیح‌ها هنوز فرضیه‌اند؛ پژوهشگران دیگر سازوکارهایی مانند منافع اقتصادی نخبگان یا هزینهٔ سیاسی بیرون‌کردن رهبر جنگ‌طلب را هم بررسی می‌کنند و اجماعی کامل نیست.",
+    "en": "These explanations remain hypotheses; other scholars weigh mechanisms such as elite economic interests or audience costs, and there is no full consensus.",
+    "nl": "These explanations remain hypotheses; other scholars weigh mechanisms such as elite economic interests or audience costs, and there is no full consensus."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:democratic-peace-observation",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکارهای پشت الگوی آماری",
+    "en": "Mechanisms behind the pattern",
+    "nl": "Mechanisms behind the pattern"
+   }
+  }
+ ],
+ "people": [
+  "core:bruce-russett"
+ ],
+ "sources": [
+  "src:594d0080b9"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

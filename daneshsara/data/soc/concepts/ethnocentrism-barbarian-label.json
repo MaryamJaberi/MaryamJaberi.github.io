@@ -1,0 +1,114 @@
+{
+ "id": "soc:ethnocentrism-barbarian-label",
+ "kind": "concept",
+ "title": {
+  "fa": "قوم‌مداری و برچسب «وحشی»: بربر کسی است که به بربریت باور دارد",
+  "en": "Ethnocentrism and the 'savage' label: the barbarian believes in barbarism",
+  "nl": "Etnocentrisme en het etiket 'wilde': de barbaar gelooft in barbarij"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "از نگاه لوی‌استروس، کهن‌ترین واکنش انسان به شیوه‌های زندگیِ ناآشنا طردکردن آن‌هاست و برچسب‌هایی مثل «بربر» و «وحشی» همین طرد را بیان می‌کنند. مفهوم «بشریتِ فراگیر» تازه و شکننده است و خودِ طردکننده همان رفتاری را نشان می‌دهد که به «وحشی» نسبت می‌دهد.",
+  "en": "For Lévi-Strauss, the oldest human reaction to unfamiliar ways of life is to reject them, and labels like 'barbarian' and 'savage' express that rejection. The idea of a single inclusive humanity is recent and fragile, and the person who excludes others behaves exactly as the 'savage' he describes.",
+  "nl": "Volgens Lévi-Strauss is de oudste menselijke reactie op onbekende levenswijzen afwijzing, en woorden als 'barbaar' en 'wilde' drukken die afwijzing uit. Het idee van één omvattende mensheid is jong en kwetsbaar; wie anderen buitensluit, doet precies wat hij de 'wilde' verwijt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "او می‌گوید گوناگونی فرهنگ‌ها اغلب نه به‌عنوان پدیده‌ای طبیعی، بلکه به‌صورت نقص یا رسوایی دیده شده و پیشرفت دانش همیشه این توهم را از بین نبرده است.",
+    "en": "He says cultural diversity has often been seen as a defect or scandal rather than a natural phenomenon, and growing knowledge has not always dissolved that illusion.",
+    "nl": "He says cultural diversity has often been seen as a defect or scandal rather than a natural phenomenon, and growing knowledge has not always dissolved that illusion."
+   },
+   "sources": [
+    "src:429130b6be"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "واژهٔ «بربر» در یونان و «وحشی» در غرب هر دو چیزی را که با رسم خودی نمی‌خواند به بیرون از فرهنگ، یعنی به طبیعت، می‌رانند.",
+    "en": "The Greek 'barbarian' and the Western 'savage' both push whatever does not fit one's own customs outside culture, into nature.",
+    "nl": "The Greek 'barbarian' and the Western 'savage' both push whatever does not fit one's own customs outside culture, into nature."
+   },
+   "sources": [
+    "src:429130b6be"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بسیاری از جوامع کوچک نام خود را به معنی «انسان‌ها» می‌گذارند و دیگران را از بشریت بیرون می‌گذارند؛ پس مفهوم بشریتِ همگانی تازه است و تضمین‌شده نیست.",
+    "en": "Many small societies call themselves by a word meaning 'the people' and place outsiders outside humanity; so the concept of universal humanity is recent and not guaranteed.",
+    "nl": "Many small societies call themselves by a word meaning 'the people' and place outsiders outside humanity; so the concept of universal humanity is recent and not guaranteed."
+   },
+   "sources": [
+    "src:429130b6be"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمونه‌ای که می‌آورد: پس از کشف آمریکا، اسپانیایی‌ها هیئتی فرستادند تا بررسی کند بومیان روح دارند یا نه، و بومیان هم سفیدپوستان را در آب فرو می‌بردند تا ببینند جسدشان فاسد می‌شود یا نه. هر دو طرف دیگری را آزمودند.",
+    "en": "His example: after the discovery of America the Spanish sent a commission to test whether natives had souls, while natives drowned Spaniards to see whether their corpses decayed. Each side put the other to the test.",
+    "nl": "His example: after the discovery of America the Spanish sent a commission to test whether natives had souls, while natives drowned Spaniards to see whether their corpses decayed. Each side put the other to the test."
+   },
+   "sources": [
+    "src:429130b6be"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او اعلامیه‌های حقوق بشر را به‌خاطر نادیده‌گرفتن این نکته نقد می‌کند که انسان سرشتش را در فرهنگ‌های مشخص تحقق می‌بخشد، نه در بشریتی انتزاعی.",
+    "en": "He criticises declarations of human rights for overlooking that people realise their nature in concrete cultures, not in an abstract humanity.",
+    "nl": "He criticises declarations of human rights for overlooking that people realise their nature in concrete cultures, not in an abstract humanity."
+   },
+   "sources": [
+    "src:429130b6be"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:culture-concept-functions",
+   "rel": "bridges",
+   "note": {
+    "fa": "مفهوم فرهنگ",
+    "en": "The concept of culture",
+    "nl": "The concept of culture"
+   }
+  },
+  {
+   "to": "soc:enlightenment-break",
+   "rel": "contrasts",
+   "note": {
+    "fa": "آرمان جهان‌شمولی روشنگری",
+    "en": "Enlightenment universalism",
+    "nl": "Enlightenment universalism"
+   }
+  },
+  {
+   "to": "tabar:genetic-essentialism",
+   "rel": "see-also",
+   "note": {
+    "fa": "ذات‌گرایی ژنتیکی",
+    "en": "Genetic essentialism",
+    "nl": "Genetic essentialism"
+   }
+  }
+ ],
+ "people": [
+  "core:claude-l-vi-strauss"
+ ],
+ "sources": [
+  "src:429130b6be"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

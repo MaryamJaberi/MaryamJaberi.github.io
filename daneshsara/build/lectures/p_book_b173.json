@@ -1,0 +1,471 @@
+{
+ "paper": true,
+ "book": {
+  "title": "در باب معیار ذوق و تراژدی",
+  "author": "David Hume (دیوید هیوم)",
+  "translator": "علی سلمانی",
+  "year": "1385 (چاپ اول)؛ چاپ دوم 1388",
+  "publisher": "فرهنگستان هنر جمهوری اسلامی ایران، مؤسسهٔ تألیف ترجمه و نشر آثار هنری «متن»",
+  "type": "primary-source",
+  "read": "full",
+  "pages_or_sections_read": "کل متن (حدود ۷۲ صفحه: پیش‌گفتار ناشر، مقدمهٔ مترجم، دو مقالهٔ هیوم، پی‌نوشت‌ها و واژه‌نامه)",
+  "drive_id": "1xxgcm40-w6ZeYdJLH_nBIEjLm4y6OWCF"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "ترجمهٔ فارسی دو مقالهٔ کلاسیک هیوم؛ برای فهم اندیشهٔ خود هیوم منبع اولیهٔ معتبر است، نه گزارشی از پژوهش تجربی امروز.",
+  "reasons": [
+   "نویسنده فیلسوف برجستهٔ روشنگری است و دو مقاله (۱۷۵۷) از متون بنیادین زیبایی‌شناسی‌اند؛ برای نظر خود هیوم منبع اولیه است",
+   "ناشر نهادی دانشگاهی-دولتی (فرهنگستان هنر) است؛ مترجم مقدمه، پی‌نوشت توضیحی، فهرست اعلام و واژه‌نامه آورده و ویراستار دارد",
+   "متن بر چاپ لنز (۱۹۶۵) استوار است؛ ترجمه روان و اغلب دقیق به‌نظر می‌رسد، هرچند متن PDF جاهایی خطای حروف‌چینی/استخراج دارد",
+   "هیوم به روش تجربی عصر خود استدلال می‌کند، نه با آزمایش؛ ادعاهای او دربارهٔ روان‌شناسی لذت و انفعال فرضیهٔ فلسفی‌اند و آزمون تجربی جدید نشده‌اند",
+   "پیش‌گفتار و مقدمه چند نکتهٔ تفسیری مترجم را دارند (مثلاً بازگوکردن سوبژکتیو‌بودن) که تفسیرند، نه متن هیوم"
+  ],
+  "best_use_fa": "برای شناخت استدلال هیوم دربارهٔ ذوق و پارادوکس تراژدی و ورود به بحث‌های زیبایی‌شناسی خوب است؛ برای دانستن وضع کنونی پژوهش روان‌شناختی یا فلسفی دربارهٔ لذت زیبایی‌شناختی یا واکنش به تراژدی کافی نیست.",
+  "cautions": [
+   "ادعاهای او دربارهٔ ماندگاری آثار و اجماع منتقدان بازتاب ذوق اروپایی قرن هجدهم است",
+   "اشکال دور در تعریف منتقد ایده‌آل در بحث‌های بعدی مطرح شده",
+   "نظر او دربارهٔ کاتولیسیسم و تعصب دینی نظر یک فیلسوف شکاک پروتستان‌زاده است، نه داوری بی‌طرف",
+   "مقالهٔ تراژدی کوتاه است و نظریهٔ او یکی از چند پاسخ است",
+   "استخراج متن PDF خطاهای جزئی دارد"
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "متن اولیه و مهم فلسفهٔ زیبایی‌شناسی با ترجمهٔ نهادی؛ چهار مدخل فقط دربارهٔ آنچه هیوم گفته، با پرچم‌های لازم برای بحث‌برانگیزها.",
+ "summary_of_book_fa": "کتاب ترجمهٔ فارسی دو مقالهٔ دیوید هیوم است. در «معیار ذوق» او می‌پرسد اگر زیبایی در احساس است چگونه ذوق خوب از بد جدا می‌شود و منتقد ایده‌آل را با ویژگی‌هایی چون لطافت، ممارست و رهایی از پیشداوری تعریف می‌کند؛ در «تراژدی» توضیح می‌دهد چرا رنج نمایش‌داده‌شده لذت می‌آورد.",
+ "entries": [
+  {
+   "id": "hume-standard-of-taste",
+   "wiki": "phil",
+   "field": "epistemology",
+   "title": {
+    "fa": "هیوم و معیار ذوق: زیبایی در احساس است، اما همهٔ ذوق‌ها هم‌ارز نیستند",
+    "en": "Hume on the standard of taste: beauty lies in feeling, yet not all tastes are equal",
+    "nl": "Hume over de maatstaf van smaak"
+   },
+   "summary": {
+    "fa": "هیوم می‌پرسد اگر زیبایی کیفیتی در خود اشیا نیست و فقط در احساس ما پدید می‌آید، آیا می‌توان میان داوری‌های ذوقی متضاد قاضی شد؟ پاسخ او این است که احساس‌ها «درست» یا «نادرست» به معنای مطابقت با واقعیت نیستند، ولی چون سرشت انسان در اصول کلی مشترک است، می‌توان از ذوق بهتر و بدتر سخن گفت و قاعده‌های نقد را از تجربهٔ ذوق‌های ماندگار گرفت.",
+    "en": "Hume asks whether conflicting judgements of taste can be adjudicated if beauty is not a property of objects but arises in feeling. Sentiments are not true or false in the sense of matching fact, yet since human nature shares general principles, one can still speak of better and worse taste, and derive critical rules from what has lastingly pleased.",
+    "nl": "Hume vraagt of tegenstrijdige smaakoordelen te beoordelen zijn als schoonheid in het gevoel ligt. Gevoelens zijn niet waar of onwaar, maar omdat de menselijke natuur gedeelde beginselen heeft, bestaat er betere en slechtere smaak."
+   },
+   "points": [
+    {
+     "fa": "زیبایی و زشتی، مانند شیرینی و تلخی، کیفیتی مستقل از ذهن در خود چیزها نیستند؛ در ذهنی هستند که به آن چیز می‌نگرد، و هر ذهن ممکن است چیز متفاوتی ببیند.",
+     "en": "Like sweetness and bitterness, beauty and ugliness are not mind-independent properties of things; they exist in the mind that contemplates them, and each mind may perceive differently.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "هیوم میان «حکم دربارهٔ امر واقع» و «احساس» فرق می‌گذارد: حکم به چیزی بیرون از خود اشاره می‌کند و می‌تواند خطا باشد، ولی احساس فقط نشان‌دهندهٔ نسبتی میان شیء و ذهن است و به این معنا همیشه واقعی است.",
+     "en": "Hume distinguishes judgements about matters of fact, which point beyond themselves and can err, from sentiments, which only register a relation between object and mind and in that sense are always real.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "با این حال او ضرب‌المثل «دربارهٔ ذوق نباید بحث کرد» را فقط در موارد نزدیک به هم می‌پذیرد؛ برابر دانستن نبوغ دو نویسندهٔ بسیار نابرابر به‌نظر او به‌اندازهٔ ادعای یکی‌بودن تپهٔ خاک با کوه یاوه است.",
+     "en": "He accepts the proverb that taste admits no dispute only for closely matched cases; equating the genius of two vastly unequal authors seems to him as absurd as calling a molehill a mountain.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "قاعده‌های کلی هنر پیشینی و منطقی نیستند؛ از مشاهدهٔ آنچه در همهٔ ملت‌ها و دوره‌ها خوشایند بوده به دست می‌آیند و مانند دانش تجربی اعتبارشان وابسته به تجربه است.",
+     "en": "The general rules of art are not a priori or logical deductions; they come from observing what has pleased in all nations and ages, and rest on experience like empirical knowledge.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نشانهٔ بنیادین بودن این اصول، ماندگاری آثار است: هومر پس از دو هزار سال هنوز تحسین می‌شود، در حالی که نظام‌های فلسفی پی‌درپی جای هم را گرفته‌اند. هیوم این را شاهد وجود یک معیار می‌گیرد.",
+     "en": "Durability is his evidence for such principles: Homer is still admired after two millennia while philosophical systems have succeeded one another, which Hume takes as evidence of a standard.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "استدلال هیوم به‌طور شناخته‌شده با اشکال دور روبه‌روست: منتقد صاحب‌ذوق را از روی ذوق خوب می‌شناسیم و ذوق خوب را از روی منتقد؛ خود او می‌پذیرد که شناسایی چنین منتقدانی پرسشی دربارهٔ امر واقع است و آسان نیست. مباحث بعدی زیبایی‌شناسی این نقطه را بسیار بحث کرده‌اند.",
+     "en": "The argument is widely criticised as circular: the good critic is identified by good taste and good taste by the good critic. Hume himself admits that identifying such critics is a question of fact and not easy, and later aesthetics has debated the point at length.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "David Hume",
+     "fa": "دیوید هیوم",
+     "years": "1711-1776",
+     "note": "فیلسوف اسکاتلندی تجربه‌گرا"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:epistemology",
+     "rel": "part-of",
+     "fa": "پرسش از عینیت و ذهنی‌بودن داوری، بخشی از معرفت‌شناسی است",
+     "en": "Objectivity versus subjectivity of judgement is an epistemological question"
+    },
+    {
+     "to": "psy:aesthetic-judgment",
+     "rel": "see-also",
+     "fa": "بررسی تجربی داوری زیبایی‌شناختی",
+     "en": "Empirical study of aesthetic judgment"
+    },
+    {
+     "to": "phil:ethics",
+     "rel": "bridges",
+     "fa": "هیوم داوری اخلاقی و ذوقی را هر دو بر احساس بنا می‌کند",
+     "en": "Hume grounds moral and aesthetic judgement alike in sentiment"
+    },
+    {
+     "to": "phil:hume-ideal-critic",
+     "rel": "explains",
+     "fa": "شرایط منتقد ایده‌آل",
+     "en": "Conditions of the ideal critic"
+    }
+   ]
+  },
+  {
+   "id": "hume-ideal-critic",
+   "wiki": "phil",
+   "field": "epistemology",
+   "title": {
+    "fa": "منتقد ایده‌آل هیوم: لطافت ذوق، ممارست، مقایسه و رهایی از پیشداوری",
+    "en": "Hume's ideal critic: delicacy, practice, comparison and freedom from prejudice",
+    "nl": "Humes ideale criticus"
+   },
+   "summary": {
+    "fa": "هیوم می‌گوید حکم مشترک منتقدانی که چند ویژگی را با هم دارند معیار ذوق است: حس لطیف، ممارست، مقایسهٔ آثار، عقل سلیم و نبود پیشداوری. او لطافت ذوق را با داستانی از دن‌کیشوت توضیح می‌دهد.",
+    "en": "Hume holds that the joint verdict of critics who combine several qualities is the standard of taste: delicate sensibility, practice, comparison, good sense and absence of prejudice. He illustrates delicacy with a story from Don Quixote.",
+    "nl": "Volgens Hume is het gezamenlijke oordeel van critici met fijngevoeligheid, oefening, vergelijking, gezond verstand en zonder vooroordeel de maatstaf."
+   },
+   "points": [
+    {
+     "fa": "لطافت ذوق یعنی توان دریافت همهٔ اجزای ظریف یک اثر، حتی وقتی آمیخته‌اند؛ هیوم با داستان دو خویشاوند سانچو که در شراب طعم چرم و آهن را حس کردند و بعد کلید و تسمهٔ چرمی ته بشکه پیدا شد، نشان می‌دهد که حس ظریف را می‌توان با نمونه و مثال تأیید کرد.",
+     "en": "Delicacy of taste is the capacity to register every fine component of a work even when they are mixed; the tale of Sancho's kinsmen, who tasted leather and iron and were vindicated when a key on a leather thong was found in the cask, shows that a fine sense can be confirmed by example.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "ممارست لطافت را بالا می‌برد: داور باید نوع هنری را بارها دیده باشد و اثر مهم را بیش از یک‌بار بخواند، زیرا نخستین مواجهه مبهم است و زیبایی‌های سطحی زود جلب می‌کنند ولی زود هم رنگ می‌بازند.",
+     "en": "Practice sharpens delicacy: the judge must have repeated experience of a genre and should read an important work more than once, since first encounters are blurred and showy beauties please quickly but fade.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مقایسه لازم است؛ کسی که فقط یک نوع یا یک مرتبهٔ زیبایی را دیده نمی‌تواند مرتبهٔ اثر را بسنجد، و آشنایی با والاترین آثار است که ضعف آثار فرودست را آشکار می‌کند.",
+     "en": "Comparison is required: someone who has seen only one kind or grade of beauty cannot rank a work, and acquaintance with the highest achievements reveals the weakness of lesser ones.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "منتقد باید از پیشداوری رها باشد و خود را در جایگاه مخاطب اصلی اثر بگذارد، حتی اگر از عصر یا فرهنگ دیگری باشد، و دوستی یا دشمنی با نویسنده را کنار بگذارد.",
+     "en": "The critic must be free of prejudice and place himself in the position of the work's intended audience, even if from another age or culture, setting aside friendship or enmity toward the author.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "عقل سلیم هم لازم است، چون اثر کل منسجمی است با هدفی (اقناع در خطابه، آموزش در تاریخ، لذت در شعر) و باید دید اجزا با آن هدف می‌خوانند؛ از این رو ذوق سلیم کمتر بدون فهم سلیم دیده می‌شود.",
+     "en": "Good sense is needed too, since a work is a whole with an end (persuasion in oratory, instruction in history, pleasure in poetry) and one must judge whether the parts fit it; hence sound taste rarely lacks sound understanding.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نقد این روش: ممکن است «منتقد ایده‌آل» در عمل ذوق فرهنگی یک طبقه یا دوره را به نام معیار عام جا بزند؛ این اشکال در بحث‌های زیبایی‌شناسی پس از هیوم مطرح شده است.",
+     "en": "A criticism: the 'ideal critic' may in practice present the taste of one class or period as universal; this objection has been raised in post-Humean aesthetics.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "David Hume",
+     "fa": "دیوید هیوم",
+     "years": "1711-1776",
+     "note": "فیلسوف اسکاتلندی تجربه‌گرا"
+    },
+    {
+     "latin": "Miguel de Cervantes",
+     "fa": "میگل د سروانتس",
+     "years": "1547-1616",
+     "note": "نویسندهٔ دن‌کیشوت که هیوم داستان شراب را از آن می‌آورد"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:hume-standard-of-taste",
+     "rel": "part-of",
+     "fa": "شرح معیار ذوق",
+     "en": "Elaboration of the standard of taste"
+    },
+    {
+     "to": "phil:fallacies",
+     "rel": "see-also",
+     "fa": "اشکال دور در شناسایی منتقد خوب",
+     "en": "The circularity worry in identifying the good critic"
+    },
+    {
+     "to": "psy:aesthetic-judgment",
+     "rel": "see-also",
+     "fa": "اثر مواجههٔ مکرر بر داوری زیبایی‌شناختی",
+     "en": "Repeated exposure and aesthetic judgment"
+    }
+   ]
+  },
+  {
+   "id": "hume-irreducible-differences",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "اختلاف‌های ناگزیر ذوق: خلق‌وخو، سن، فرهنگ و حدود تسامح در اخلاق و دین",
+    "en": "Irreducible differences of taste: temperament, age, culture and the limits of tolerance in morals and religion",
+    "nl": "Onoverkomelijke smaakverschillen"
+   },
+   "summary": {
+    "fa": "هیوم می‌پذیرد که حتی با منتقد ایده‌آل، دو سرچشمهٔ اختلاف می‌ماند: سرشت و سن هر فرد، و آداب و باورهای عصر و کشور. در این حوزه‌ها هیچ معیار عینی نیست و هر دو طرف بی‌تقصیرند؛ اما اگر اثری فضیلت و رذیلت را وارونه نشان دهد یا تعصب دینی را فضیلت جلوه دهد، هیوم آن را نقص می‌داند.",
+    "en": "Hume concedes that even with ideal critics two sources of difference remain: individual temperament and age, and the manners and opinions of an age or country. Here no objective standard exists and both sides are blameless; but a work that inverts virtue and vice or presents religious bigotry as virtue is, for Hume, flawed.",
+    "nl": "Hume erkent twee blijvende bronnen van verschil: temperament en leeftijd, en cultuur."
+   },
+   "points": [
+    {
+     "fa": "جوان به عشق و احساس تمایل دارد و سالخورده به تأمل فلسفی؛ هیوم می‌گوید تلاش برای عوض‌کردن این گرایش‌های طبیعی بی‌حاصل است و ترجیح هر کس بی‌ضرر و ناگزیر است.",
+     "en": "The young incline to love and passion, the old to philosophical reflection; Hume says it is futile to try to alter such natural inclinations, and individual preferences are harmless and unavoidable.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آداب و رسوم بیگانه یا کهن را باید تا جایی که بی‌ضرر است پذیرفت؛ شگفت‌زدگی از آنها نشانهٔ ذوق کاذب است. با این حال هیوم اعتراف می‌کند که لذت‌بردن از آنها گاهی دشوار است.",
+     "en": "Foreign or ancient customs should be tolerated as far as they are harmless; being shocked by them shows false delicacy, though he admits enjoying them can be hard.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "هیوم میان خطای نظری و خطای اخلاقی فرق می‌گذارد: اثر را برای باورهای علمی و فلسفی نادرست عصرش به‌آسانی می‌بخشیم، اما شاعری که رذیلت را فضیلت نشان دهد، خواننده را از همدلی بازمی‌دارد و اثر را خراب می‌کند.",
+     "en": "He separates theoretical from moral error: false scientific or philosophical beliefs of an age are easily forgiven, but a poet who presents vice as virtue blocks the reader's sympathy and mars the work.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نمونهٔ او تعصب دینی است که به نظر وی وقتی به خرافه و تحقیر دیگر ادیان برسد، نقص اثر شمرده می‌شود؛ او تراژدی‌های پولیوکت (کورنی) و آتالی (راسین) را مثال می‌زند. این داوری دیدگاه هیوم است و پیروان آن دینی که او نقد می‌کند، آن را نمی‌پذیرند.",
+     "en": "His example is religious zeal that hardens into superstition and contempt for other faiths, which he counts as a flaw, citing Corneille's Polyeucte and Racine's Athalie. This is Hume's own judgement, which adherents of the faith he criticises would reject.",
+     "flags": [
+      "contested"
+     ],
+     "src": [
+      "lecture"
+     ]
+    },
+    {
+     "fa": "هیوم از پیکرهٔ اصول دینی به‌عنوان معیار داوری دربارهٔ فرهنگ و دانایی یک ملت دوری می‌کند، چون عقل انسان به آن مباحث راه ندارد؛ این با شکاکیت کلی او دربارهٔ الهیات سازگار است.",
+     "en": "He declines to use religious doctrine as a yardstick for the wisdom of a people, because human reason has no access to such matters, in line with his general scepticism about theology.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "David Hume",
+     "fa": "دیوید هیوم",
+     "years": "1711-1776",
+     "note": "فیلسوف اسکاتلندی تجربه‌گرا"
+    },
+    {
+     "latin": "Pierre Corneille",
+     "fa": "پیر کورنی",
+     "years": "1606-1684",
+     "note": "نمایشنامه‌نویس فرانسوی"
+    },
+    {
+     "latin": "Jean Racine",
+     "fa": "ژان راسین",
+     "years": "1639-1699",
+     "note": "نمایشنامه‌نویس فرانسوی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:hume-standard-of-taste",
+     "rel": "part-of",
+     "fa": "محدودیت‌های معیار ذوق",
+     "en": "Limits of the standard of taste"
+    },
+    {
+     "to": "phil:ethics",
+     "rel": "bridges",
+     "fa": "هم‌پوشانی داوری اخلاقی و زیبایی‌شناختی",
+     "en": "Overlap of moral and aesthetic judgment"
+    },
+    {
+     "to": "phil:three-theories",
+     "rel": "see-also",
+     "fa": "نظریه‌های اخلاق",
+     "en": "Moral theories"
+    }
+   ]
+  },
+  {
+   "id": "hume-tragedy-paradox",
+   "wiki": "phil",
+   "field": "mind",
+   "title": {
+    "fa": "پارادوکس تراژدی نزد هیوم: چرا از تماشای رنج لذت می‌بریم؟",
+    "en": "Hume on the paradox of tragedy: why do we enjoy watching suffering?",
+    "nl": "Hume over de paradox van de tragedie"
+   },
+   "summary": {
+    "fa": "هیوم می‌پرسد چرا انفعال‌های ناخوشایندی چون اندوه و ترس در تراژدی لذت می‌آورند ولی در واقعیت نه. پس از نقد دو پاسخ دوبو و فونتنل، پاسخ خودش این است که زیبایی بیان و تخیل و لذت تقلید، انفعال دردناک را به جریان لذت تبدیل می‌کنند.",
+    "en": "Hume asks why painful passions such as sorrow and fear please us in tragedy but not in life. After assessing the answers of Dubos and Fontenelle, he proposes that the beauty of expression, imagination and the pleasure of imitation convert the painful passion into pleasure.",
+    "nl": "Hume vraagt waarom pijnlijke emoties in de tragedie plezier geven. Zijn antwoord: schoonheid van uitdrukking zet de pijn om in genot."
+   },
+   "points": [
+    {
+     "fa": "دوبو می‌گوید ذهن از کسالت و بی‌حالی بیش از هر هیجانی بیزار است و برای فرار از آن هر انفعالی، حتی دردناک، را می‌جوید. هیوم می‌پذیرد که تا حدی درست است اما کافی نیست، چون همان موضوع در واقعیت آزارنده است.",
+     "en": "Dubos holds that the mind dislikes listlessness more than any emotion and seeks any passion to escape it. Hume grants this partly, but finds it insufficient, since the same subject distresses us in real life.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "فونتنل لذت و درد را دو سطح از یک تحریک می‌داند (مانند قلقلک) و می‌گوید آگاهی از ساختگی‌بودن نمایش درد را آنقدر کم می‌کند که لذت بماند. هیوم این را موجه می‌داند ولی ناکامل.",
+     "en": "Fontenelle treats pleasure and pain as degrees of one stimulation (as with tickling) and says awareness of fiction reduces the pain enough for pleasure to remain. Hume finds this plausible but incomplete.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پاسخ خود هیوم: بلاغت و نبوغ در بازنمایی و لذت از تقلید، احساس زیبایی‌شناختی نیرومندی می‌سازند که انفعال دردناک را تسخیر می‌کند و آن را به لذت بدل می‌کند؛ مثال او توصیف سیسرو از ستم ورس است. یعنی درد فرو نمی‌نشیند، بلکه جریان غالب لذت آن را در خود می‌برد.",
+     "en": "Hume's own answer: eloquence, artistry of representation and the pleasure of imitation form a strong aesthetic feeling that overpowers the painful passion and converts it into pleasure, as in Cicero's description of Verres' cruelty. The pain is not merely reduced; the dominant current of pleasure absorbs it.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "همین سازوکار می‌تواند وارونه شود: اگر موضوع بیش از حد هولناک باشد یا مخاطب درگیر ماجرا، فصاحت فقط رنج را بیشتر می‌کند؛ هیوم از والدین سوگوار و از روایت کلارندون دربارهٔ اعدام شاه چارلز مثال می‌آورد.",
+     "en": "The mechanism can reverse: if the subject is too horrifying or the audience too involved, eloquence only deepens the suffering; he cites bereaved parents and Clarendon's reticence about the king's death.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "هیوم می‌گوید حتی در رابطه‌های عادی انفعال فرعی (مانند کنجکاوی، حسادت یا دوری) می‌تواند انفعال غالب را تقویت کند؛ پس تراژدی یک استثنا نیست بلکه نمونه‌ای از قانونی کلی‌تر دربارهٔ انتقال نیروی یک انفعال به دیگری.",
+     "en": "He argues that in ordinary life a subordinate passion (curiosity, jealousy, absence) can strengthen the dominant one, so tragedy is an instance of a more general law about one passion transferring its force to another.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "«تبدیل» هیوم یکی از چند پاسخ به پارادوکس تراژدی است؛ دیگران پالایش ارسطو، نظریهٔ لذت متاپرسپتیو و نظریه‌های مبتنی بر لذت شناختی را پیشنهاد کرده‌اند و بحث همچنان باز است.",
+     "en": "Hume's 'conversion' is one of several answers to the paradox of tragedy; others include Aristotelian catharsis, meta-response theories and cognitive-pleasure accounts, and the debate remains open.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "David Hume",
+     "fa": "دیوید هیوم",
+     "years": "1711-1776",
+     "note": "فیلسوف اسکاتلندی تجربه‌گرا"
+    },
+    {
+     "latin": "Jean-Baptiste Dubos",
+     "fa": "ژان‌باتیست دوبو",
+     "years": "1670-1742",
+     "note": "نویسندهٔ تأملاتی انتقادی دربارهٔ شعر و نقاشی"
+    },
+    {
+     "latin": "Bernard de Fontenelle",
+     "fa": "برنار فونتنل",
+     "years": "1657-1757",
+     "note": "نویسندهٔ فرانسوی"
+    },
+    {
+     "latin": "Cicero",
+     "fa": "سیسرو",
+     "years": "106-43 ق.م",
+     "note": "خطیب رومی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:mind",
+     "rel": "part-of",
+     "fa": "پرسش از ماهیت هیجان و لذت",
+     "en": "A question about emotion and pleasure"
+    },
+    {
+     "to": "psy:aesthetic-emotion",
+     "rel": "see-also",
+     "fa": "هیجان زیبایی‌شناختی و تأثر",
+     "en": "Aesthetic emotion and being moved"
+    },
+    {
+     "to": "psy:p-aesthetics",
+     "rel": "see-also",
+     "fa": "روان‌شناسی هنر",
+     "en": "Psychology of art"
+    },
+    {
+     "to": "phil:hume-standard-of-taste",
+     "rel": "see-also",
+     "fa": "مقالهٔ همراه دربارهٔ ذوق",
+     "en": "Companion essay on taste"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "هیوم، دیوید. در باب معیار ذوق و تراژدی. ترجمهٔ علی سلمانی. تهران: فرهنگستان هنر جمهوری اسلامی ایران، ۱۳۸۸ (چاپ دوم). ترجمهٔ «Of the Standard of Taste» و «Of Tragedy».",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "متن PDF لایه‌دار بود و پس از rev.py خوانا شد؛ تمام متن خوانده شد. خطاهای اندک استخراج (علامت‌های جابه‌جاشده، افتادگی چند واژه در یک‌دو جمله) مشاهده شد ولی معنا روشن بود. هیچ عدد یا نامی بدون وضوح در متن نیامده است؛ تاریخ‌ها و نام‌های اعلام از فهرست اعلام کتاب. تاریخ انتشار اصلی دو مقاله (۱۷۵۷) از دانش عمومی است و در کتاب نیست، پس به‌عنوان منبع جداگانه نیامده. نکته‌های نقد (دور، پیشنهادهای دیگر دربارهٔ پارادوکس تراژدی) بی‌منبع و دانش ویراستار است.",
+ "lecture": "در باب معیار ذوق و تراژدی",
+ "speaker": "David Hume (دیوید هیوم)",
+ "channel": "فرهنگستان هنر جمهوری اسلامی ایران، مؤسسهٔ تألیف ترجمه و نشر آثار هنری «متن»"
+}

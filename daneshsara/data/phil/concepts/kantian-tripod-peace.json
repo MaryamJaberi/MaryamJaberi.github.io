@@ -1,0 +1,98 @@
+{
+ "id": "phil:kantian-tripod-peace",
+ "kind": "concept",
+ "title": {
+  "fa": "سه‌پایهٔ کانتی صلح: دموکراسی، وابستگی اقتصادی و سازمان‌های بین‌المللی",
+  "en": "The Kantian tripod of peace: democracy, trade and international organizations",
+  "nl": "De Kantiaanse driepoot van vrede: democratie, handel en internationale organisaties"
+ },
+ "aliases": [],
+ "parent": "phil:political",
+ "field": "phil:political",
+ "summary": {
+  "fa": "راست با الهام از طرح صلح پایدار کانت می‌گوید سه عامل یکدیگر را تقویت می‌کنند: حکومت جمهوری/مردم‌سالار، تجارت و وابستگی اقتصادی، و عضویت در سازمان‌های بین‌دولتی. او برای کشورهای دو‌به‌دو برآوردهای آماری از کاهش خطر جنگ می‌آورد.",
+  "en": "Following Kant's perpetual peace, Russett says democracy, economic interdependence and membership in intergovernmental organizations reinforce each other and lower dyadic war risk.",
+  "nl": "Naar Kants eeuwige vrede: democratie, economische onderlinge afhankelijkheid en internationale organisaties versterken elkaar."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کانت در ۱۷۹۵ صلح پایدار را به سه چیز وابسته دانست: قانون اساسی جمهوری، حقوق شهروند جهانی و اتحاد صلح‌آمیز دولت‌ها؛ راست این را الگوی خود می‌گیرد.",
+    "en": "In 1795 Kant tied perpetual peace to a republican constitution, cosmopolitan law and a pacific union of states; Russett takes this as his model.",
+    "nl": "In 1795 Kant tied perpetual peace to a republican constitution, cosmopolitan law and a pacific union of states; Russett takes this as his model."
+   },
+   "sources": [
+    "src:594d0080b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ او وابستگی اقتصادی و تجارت بزرگ، هزینهٔ جنگ را بالا می‌برد و اثر دموکراسی را کامل می‌کند، نه جایگزین آن می‌شود؛ بنابراین هر پایه دیگری را نیز محکم می‌کند.",
+    "en": "He says large-scale trade and interdependence raise the cost of war and complement, not replace, the effect of democracy, so each leg supports the others.",
+    "nl": "He says large-scale trade and interdependence raise the cost of war and complement, not replace, the effect of democracy, so each leg supports the others."
+   },
+   "sources": [
+    "src:594d0080b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید عضویت مشترک در سازمان‌های بین‌دولتی و وابستگی اقتصادی خطر جنگ میان جفت‌کشورها را حدود ۳۰ تا ۴۰ درصد کاهش داده است؛ این برآورد از پژوهش خود او و اونیل (۲۰۰۱) آمده و باید با دقت خوانده شود.",
+    "en": "He reports joint IGO membership and interdependence cut dyadic war risk by roughly 30-40 percent, an estimate from his own work with Oneal (2001) that should be read cautiously.",
+    "nl": "He reports joint IGO membership and interdependence cut dyadic war risk by roughly 30-40 percent, an estimate from his own work with Oneal (2001) that should be read cautiously."
+   },
+   "sources": [
+    "src:594d0080b9",
+    "src:3bcc8dfe6b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثر تجارت بر صلح در ادبیات علمی مورد مناقشه است؛ برخی پژوهش‌ها اثر معنادار نمی‌یابند و برخی وابستگی نامتقارن را عامل تنش می‌دانند، و سازمان‌های بین‌المللی هم گاه بی‌اثر یا ابزار قدرت‌های بزرگ‌اند.",
+    "en": "The trade-peace link is debated: some studies find no significant effect, some see asymmetric dependence as a source of tension, and international organizations are sometimes ineffective or tools of great powers.",
+    "nl": "The trade-peace link is debated: some studies find no significant effect, some see asymmetric dependence as a source of tension, and international organizations are sometimes ineffective or tools of great powers."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:democratic-peace-observation",
+   "rel": "part-of",
+   "note": {
+    "fa": "یکی از سه پایه",
+    "en": "One of the three legs",
+    "nl": "One of the three legs"
+   }
+  },
+  {
+   "to": "phil:political",
+   "rel": "part-of",
+   "note": {
+    "fa": "فلسفهٔ سیاسی",
+    "en": "Political philosophy",
+    "nl": "Political philosophy"
+   }
+  }
+ ],
+ "people": [
+  "core:immanuel-kant",
+  "core:john-oneal"
+ ],
+ "sources": [
+  "src:3bcc8dfe6b",
+  "src:594d0080b9"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
