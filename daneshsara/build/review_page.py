@@ -4,11 +4,27 @@ import json, os, glob
 HERE = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(HERE + '/..')
 def load(p): return json.load(open(p, encoding='utf-8'))
 reg = load(f'{R}/core/registry.json')['entries']
+SRC = load(f'{R}/core/sources.json')
+def cred(c):
+    """Entry credibility A-D from point-level best source tier + flags (same rule as DS.grade in core/tools/lib.js)."""
+    pts = c.get('points', [])
+    if not pts: return 'D'
+    n = len(pts); tiers = []
+    for pt in pts:
+        t = [SRC[i]['tier'] for i in pt.get('sources', []) if i in SRC and SRC[i].get('tier')]
+        tiers.append(min(t) if t else 0)
+    strong = sum(1 for t in tiers if t in (1, 2)) / n
+    weak = sum(1 for t in tiers if t in (0, 4)) / n
+    bad = sum(1 for pt in pts if set(pt.get('flags', [])) & {'contested', 'unreplicated', 'dated'}) / n
+    if strong >= .6 and bad < .35: return 'A'
+    if strong >= .3: return 'B'
+    if weak > .4: return 'D'
+    return 'C'
 items = []
 for p in glob.glob(f'{R}/data/*/concepts/*.json'):
     c = load(p)
     if c['status'] == 'draft' and c['kind'] in ('concept', 'subfield'):
-        items.append({'id': c['id'], 'wiki': c['id'].split(':')[0], 'title': c['title'], 'url': '../' + reg[c['id']]['url'], 'points': len(c.get('points', [])), 'sources': len(c.get('sources', [])), 'flags': sorted({f for pt in c.get('points', []) for f in pt.get('flags', [])})})
+        items.append({'id': c['id'], 'wiki': c['id'].split(':')[0], 'title': c['title'], 'url': '../' + reg[c['id']]['url'], 'points': len(c.get('points', [])), 'sources': len(c.get('sources', [])), 'flags': sorted({f for pt in c.get('points', []) for f in pt.get('flags', [])}), 'cred': cred(c)})
 for p in glob.glob(f'{R}/atlas/bridges/*.json'):
     b = load(p)
     if b.get('review') == 'draft':
@@ -33,6 +49,7 @@ table{width:100%;border-collapse:collapse;font-size:var(--small)} th,td{padding:
 tr.ok{background:color-mix(in srgb,var(--primary) 8%,transparent)}
 td a{color:var(--ink);font-weight:600;text-decoration:none} td a:hover{color:var(--primary)}
 .w{font-size:var(--chip);padding:1px 8px;border-radius:var(--r-full);border:1px solid var(--line-strong)} .w.psy{border-color:var(--fam-psy)} .w.tabar{border-color:var(--fam-bio)} .w.soc{border-color:var(--fam-soc)} .w.phil{border-color:var(--fam-hum)}
+.cr{font-size:var(--chip);padding:1px 9px;border-radius:var(--r-full);color:#fff;white-space:nowrap} .cr.cA{background:var(--grade-a)} .cr.cB{background:var(--grade-b)} .cr.cC{background:var(--grade-c)} .cr.cD{background:var(--grade-d)}
 .fl{font-size:var(--chip);color:#6B4E00} input[type=checkbox]{width:18px;height:18px;accent-color:var(--primary)}
 textarea{width:100%;min-height:90px;font:inherit;font-size:var(--small);padding:10px;border-radius:var(--r-md);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);direction:ltr}
 .exp{display:grid;gap:8px;margin-top:var(--s6)} .exp .row{display:flex;gap:8px;flex-wrap:wrap}
@@ -46,13 +63,13 @@ footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(-
 <p class="lead">همهٔ مدخل‌ها و یادداشت‌هایی که هنوز «پیش‌نویس»اند، یک‌جا. هر کدام را باز کنید، با چک‌لیست زیر بسنجید، و اگر قابل انتشار است تیک بزنید. تیک‌ها فقط در همین مرورگر ذخیره می‌شوند؛ در پایان «کپی فهرست تأییدشده‌ها» را بزنید و متن را برای من بفرستید تا وضعیتشان را به «بازبینی‌شده» تغییر دهم. اگر چیزی باید اصلاح شود، شناسه و نکته را در یادداشت پایین بنویسید.</p>
 <div class="card check"><b>چک‌لیست پنج‌گانه</b><ol><li>هر گزاره منبع دارد و منبع واقعاً همان را می‌گوید (یک نمونه را تصادفی باز کنید).</li><li>یافته‌های تکرارنشده یا محل بحث پرچم خورده‌اند و با «قطعی» نوشته نشده‌اند.</li><li>زبان ساده و دقیق است؛ هیچ تشخیص یا توصیهٔ فردی (از جمله دوز دارو) ندارد.</li><li>پیوندها به مدخل درست می‌روند و نوع رابطه معنادار است.</li><li>اگر دربارهٔ ایران است: سال، روش و ردهٔ داده درست و محتاطانه است.</li></ol></div>
 <div class="bar" id="bar"></div>
-<table><thead><tr><th></th><th>مدخل</th><th>ویکی</th><th>گزاره</th><th>منبع</th><th>پرچم</th></tr></thead><tbody id="tb"></tbody></table>
+<table><thead><tr><th></th><th>مدخل</th><th>ویکی</th><th>گزاره</th><th>منبع</th><th>اعتبار</th><th>پرچم</th></tr></thead><tbody id="tb"></tbody></table>
 <div class="exp"><b>یادداشت اصلاحات (شناسه: نکته)</b><textarea id="notes" placeholder="soc:anomie: مثال سوم مبهم است&#10;tabar:consanguinity: رقم ۳۸٫۶ را با منبع جدیدتر مقایسه کنید"></textarea>
 <div class="row"><button id="copy">کپی فهرست تأییدشده‌ها + یادداشت</button><button class="ghost" id="clear">پاک کردن تیک‌ها</button><span id="msg" style="align-self:center;color:var(--ink-3);font-size:var(--small)"></span></div></div>
 </main>
 <footer class="foot"><div class="wrap">این صفحه فقط برای بازبین است؛ هیچ داده‌ای به سرور نمی‌رود.</div></footer>
 <script>
-const D = __DATA__; const WN = {psy:"روان",tabar:"تبار",soc:"جامعه",phil:"فلسفه",atlas:"پل",iran:"ایران"};
+const D = __DATA__; const CN = {A:"پشتوانهٔ قوی",B:"پشتوانهٔ خوب",C:"عمدتاً کتاب/سخنرانی",D:"پشتوانهٔ ضعیف"}; const WN = {psy:"روان",tabar:"تبار",soc:"جامعه",phil:"فلسفه",atlas:"پل",iran:"ایران"};
 let w = ""; let ok = {}; try { ok = JSON.parse(localStorage.getItem("ds-review") || "{}"); } catch(_) {}
 let notes = ""; try { notes = localStorage.getItem("ds-review-notes") || ""; } catch(_) {}
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -60,7 +77,7 @@ const fa = s => String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
 function render(){
   const items = D.filter(x => !w || x.wiki === w); const done = D.filter(x => ok[x.id]).length;
   document.getElementById("bar").innerHTML = ["", "psy", "tabar", "soc", "phil", "atlas", "iran"].map(k => `<button data-w="${k}" aria-pressed="${w === k}">${k ? WN[k] : "همه"} <small>(${fa(D.filter(x => !k || x.wiki === k).length)})</small></button>`).join("") + `<span class="n">${fa(done)} از ${fa(D.length)} تأیید شده</span>`;
-  document.getElementById("tb").innerHTML = items.map(x => `<tr class="${ok[x.id] ? "ok" : ""}"><td><input type="checkbox" data-id="${x.id}" ${ok[x.id] ? "checked" : ""} aria-label="تأیید"></td><td><a href="${x.url}" target="_blank" rel="noopener">${esc(x.title.fa)}</a><div style="font-size:var(--chip);color:var(--ink-3);direction:ltr;text-align:start">${esc(x.id)}</div></td><td><span class="w ${x.wiki}">${WN[x.wiki]}</span>${x.grade ? ` <span class="w">${x.grade}</span>` : ""}</td><td>${x.points ? fa(x.points) : "—"}</td><td>${fa(x.sources)}</td><td class="fl">${x.flags.map(f => ({contested:"محل بحث",unreplicated:"تکرارنشده","editor-note":"یادداشت",dated:"قدیمی"}[f] || f)).join("، ")}</td></tr>`).join("");
+  document.getElementById("tb").innerHTML = items.map(x => `<tr class="${ok[x.id] ? "ok" : ""}"><td><input type="checkbox" data-id="${x.id}" ${ok[x.id] ? "checked" : ""} aria-label="تأیید"></td><td><a href="${x.url}" target="_blank" rel="noopener">${esc(x.title.fa)}</a><div style="font-size:var(--chip);color:var(--ink-3);direction:ltr;text-align:start">${esc(x.id)}</div></td><td><span class="w ${x.wiki}">${WN[x.wiki]}</span>${x.grade ? ` <span class="w">${x.grade}</span>` : ""}</td><td>${x.points ? fa(x.points) : "—"}</td><td>${fa(x.sources)}</td><td>${x.cred || x.grade ? `<span class="cr c${x.cred || x.grade}" title="${CN[x.cred || x.grade]}">${CN[x.cred || x.grade]}</span>` : "—"}</td><td class="fl">${x.flags.map(f => ({contested:"محل بحث",unreplicated:"تکرارنشده","editor-note":"یادداشت",dated:"قدیمی"}[f] || f)).join("، ")}</td></tr>`).join("");
   document.getElementById("notes").value = notes;
 }
 document.addEventListener("click", ev => { const b = ev.target.closest("[data-w]"); if (b) { w = b.dataset.w; render(); } });

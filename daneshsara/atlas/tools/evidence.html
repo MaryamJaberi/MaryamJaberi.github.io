@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>نقشهٔ شواهد</title>
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.hero{padding-block:8px 6px} .hero .lead{font-size:1.02rem}
+.pk{flex:1 1 280px;min-width:0;position:relative}
+.pk>label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;color:var(--ink-2)}
+.pkbox{position:relative}
+.pkbox input{width:100%;min-height:44px}
+.pklist{position:absolute;inset-inline:0;top:calc(100% + 4px);z-index:8;margin:0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--line-strong);border-radius:14px;box-shadow:var(--shadow-lg);max-height:340px;overflow:auto}
+.pklist li{padding:8px 12px;min-height:44px;border-radius:10px;cursor:pointer;display:flex;gap:8px;align-items:center;justify-content:space-between;line-height:1.5}
+.pklist li[aria-selected=true],.pklist li:hover{background:var(--primary-soft)}
+.pklist .none{cursor:default;color:var(--ink-3)}
+.pksel{margin-top:10px}
+.sel{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--line-strong);border-radius:14px;background:var(--surface)}
+.sel b{font-size:1.02rem;line-height:1.5}
+.xbtn{min-height:40px;min-width:40px;padding:4px 12px;background:transparent;color:var(--ink-2);border-color:var(--line-strong)}
+.xbtn:hover{background:var(--surface-subtle);color:var(--ink)}
+.controls{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:6px 0 22px}
+.btn,button{min-height:40px}
+.two{display:grid;gap:14px;grid-template-columns:1fr 1fr}.two>*{min-width:0}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.pt{padding:10px 0;border-top:1px solid var(--line)}.pt:first-child{border-top:0}
+.pt p{margin:0 0 6px;max-width:none;font-size:.96rem;line-height:1.8}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.sec{margin-top:26px}.sec>h2{margin-top:0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.sec>h2 small{font-weight:400;color:var(--ink-3)}
+.diff td.d,.diff th.d{background:var(--primary-soft);font-weight:700}
+.list{list-style:none;margin:0;padding:0}.list li{padding:8px 0;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap;align-items:center}.list li:first-child{border-top:0}
+details>summary{cursor:pointer;color:var(--primary);min-height:40px;display:flex;align-items:center}
+.ttl{font-size:1.15rem;font-weight:700;line-height:1.5;margin:0 0 6px}
+.sm{font-size:.9rem;color:var(--ink-2);line-height:1.8}
+.err{padding:16px;border:1px solid var(--err);color:var(--err);border-radius:14px;background:var(--surface)}
+.toggle{display:inline-flex;gap:8px;align-items:center;min-height:44px;cursor:pointer}.toggle input{width:20px;height:20px}
+h1,h2,.ttl,.card{overflow-wrap:anywhere}
+
+.bar{display:flex;height:16px;border-radius:999px;overflow:hidden;background:var(--surface-subtle);border:1px solid var(--line)}
+.bar i{display:block;height:100%}
+.b1{background:var(--ok)}.b2{background:var(--accent)}.b3{background:var(--warn)}.b4{background:var(--err)}.b0{background:var(--ink-3)}
+.lg{display:inline-flex;gap:6px;align-items:center;font-size:.85rem;color:var(--ink-2)}.lg i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.wcard{border-inline-start:5px solid var(--line-strong)}
+.wcard.psy{border-inline-start-color:var(--fam-psy)}.wcard.soc{border-inline-start-color:var(--fam-soc)}.wcard.phil{border-inline-start-color:var(--fam-hum)}.wcard.tabar{border-inline-start-color:var(--fam-bio)}
+.frow{padding:12px 0;border-top:1px solid var(--line)}
+.frow summary{list-style:none;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.6fr) auto;gap:6px 14px;align-items:center;min-height:44px}
+.frow summary::-webkit-details-marker{display:none}
+.frow summary .nm{font-weight:600}
+@media(max-width:700px){.frow summary{grid-template-columns:1fr}}
+.mini{font-size:.82rem;color:var(--ink-2);display:flex;gap:10px;flex-wrap:wrap}
+.cols{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:12px}.cols>*{min-width:0}
+@media(max-width:700px){.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><nav class="crumb" aria-label="مسیر"><a href="../../index.html">خانه</a><span aria-hidden="true">›</span><a href="../index.html">اطلس</a><span aria-hidden="true">›</span><a href="index.html">ابزارهای اطلس</a><span aria-hidden="true">›</span><span aria-current="page">نقشهٔ شواهد</span></nav></div></header>
+<main class="wrap">
+<div class="hero"><h1>نقشهٔ شواهد</h1><p class="lead">برای دیدن اینکه هر ویکی و هر حوزه چقدر به منابع قوی تکیه دارد، کجا بحث‌برانگیز است و کدام مدخل‌ها را باید زودتر بازبینی کرد.</p></div>
+<div id="app"><div class="controls"><div style="flex:0 1 260px"><label for="wf" style="display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;color:var(--ink-2)">ویکی</label><select id="wf" style="width:100%;min-height:44px"><option value="">همهٔ ویکی‌ها</option></select></div></div>
+<div id="legend" class="row" style="margin-bottom:14px"></div><div id="out"><div class="empty">در حال بارگذاری…</div></div></div>
+</main>
+<footer class="foot"><div class="wrap"><p class="note">این ابزار پیش‌نویس است و محتوا بازبینی نشده؛ همهٔ گزاره‌ها، رده‌های منبع و پرچم‌ها عیناً از دادهٔ دانش‌سرا آمده‌اند و ابزار ادعای تازه‌ای نمی‌افزاید. نمرهٔ اعتبار برآوردی ساده از توزیع رده‌های منبع است، نه داوری دربارهٔ درستی علمی. پیوندها فقط میان مدخل‌های موجود شمرده می‌شوند.</p></div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+
+function wchip(w){return `<span class="chip ${w}">${DS.esc(DS.WIKI[w]||w)}</span>`}
+function picker(root,opt){
+  const id='pk'+Math.random().toString(36).slice(2,7);
+  root.className='pk';
+  root.innerHTML=`<label for="${id}">${DS.esc(opt.label)}</label><div class="pkbox"><input id="${id}" type="search" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="${id}l" placeholder="${DS.esc(opt.ph||'جستجو در همهٔ ویکی‌ها…')}"><ul class="pklist" id="${id}l" role="listbox" hidden></ul></div><div class="pksel"></div>`;
+  const inp=root.querySelector('input'),ul=root.querySelector('ul'),sel=root.querySelector('.pksel');
+  let res=[],act=-1,cur=null;
+  const close=()=>{ul.hidden=true;inp.setAttribute('aria-expanded','false');act=-1};
+  function render(){
+    if(!res.length){ul.innerHTML='<li class="none">مدخلی پیدا نشد</li>';return}
+    ul.innerHTML=res.map((c,i)=>`<li role="option" data-i="${i}" aria-selected="${i===act}"><span>${DS.esc(c.t.fa)}</span>${wchip(c.w)}</li>`).join('');
+  }
+  function open(){const q=inp.value; if(!DS.norm(q)){close();return} res=DS.search(D,q).slice(0,8);act=res.length?0:-1;render();ul.hidden=false;inp.setAttribute('aria-expanded','true')}
+  function showSel(){
+    sel.innerHTML=cur?`<div class="sel"><div><b>${DS.esc(cur.t.fa)}</b><div class="tags" style="margin-top:4px">${wchip(cur.w)}<span class="muted">${DS.esc(cur.t.en||'')}</span></div></div><button type="button" class="xbtn ghost" aria-label="حذف انتخاب">×</button></div>`:'';
+    const x=sel.querySelector('button'); if(x)x.onclick=()=>{set(null,true);inp.focus()};
+  }
+  function set(id,fire){cur=id?D.byId[id]||null:null;showSel();if(cur){inp.value='';close()}if(fire!==false&&opt.onPick)opt.onPick(cur)}
+  function pick(i){const c=res[i];if(c){set(c.id)}}
+  inp.addEventListener('input',open);inp.addEventListener('focus',open);
+  inp.addEventListener('keydown',e=>{
+    if(e.key==='ArrowDown'){e.preventDefault();if(ul.hidden)open();else{act=Math.min(res.length-1,act+1);render()}}
+    else if(e.key==='ArrowUp'){e.preventDefault();act=Math.max(0,act-1);render()}
+    else if(e.key==='Enter'){if(!ul.hidden&&act>=0){e.preventDefault();pick(act)}}
+    else if(e.key==='Escape')close();
+  });
+  ul.addEventListener('mousedown',e=>{const li=e.target.closest('li[data-i]');if(li){e.preventDefault();pick(+li.dataset.i)}});
+  document.addEventListener('click',e=>{if(!root.contains(e.target))close()});
+  inp.addEventListener('blur',()=>setTimeout(close,120));
+  return {set:id=>set(id,false),get:()=>cur};
+}
+function ptHtml(p){return `<div class="pt"><p>${DS.esc(p.t)}</p><div class="tags">${DS.chipTier(p.tier||0)}${(p.f||[]).map(DS.chipFlag).join('')}</div></div>`}
+function pct(x){return DS.faDigits(Math.round(x*100))+'٪'}
+function fa(n){return DS.faDigits(n)}
+function buildAdj(D){
+  const adj={};D.concepts.forEach(c=>adj[c.id]=[]);
+  D.concepts.forEach(c=>(c.lk||[]).forEach(([to,rel])=>{if(!D.byId[to]||to===c.id)return;adj[c.id].push({to,rel,dir:'out'});adj[to].push({to:c.id,rel,dir:'in'})}));
+  return adj;
+}
+/* DS.load مسیر data.json را از currentScript می‌گیرد که پس از بارگذاری null است؛ برای مسیر نسبی درست، همین‌جا اصلاح می‌شود */
+(function(){const f=window.fetch;window.fetch=function(u,o){try{if(typeof u==='string'&&/(^|\/)data\.json$/.test(u)&&u.indexOf('core/tools')<0)u=new URL('../../core/tools/data.json',location.href).href}catch(_){}return f.call(this,u,o)}})();
+function failMsg(el,e){el.innerHTML=`<div class="err" role="alert">بارگذاری داده ناموفق بود. صفحه را دوباره باز کنید یا بعداً امتحان کنید.<br><small>${DS.esc(e&&e.message||e)}</small></div>`}
+
+
+let D;
+(async()=>{
+const out=document.getElementById('out'),sel=document.getElementById('wf');
+try{D=await DS.load();}catch(e){failMsg(out,e);return}
+const TL=[1,2,3,4,0];
+document.getElementById('legend').innerHTML=TL.map(t=>`<span class="lg"><i class="b${t}"></i>${DS.esc(DS.TIER[t])}</span>`).join('');
+Object.keys(DS.WIKI).forEach(w=>sel.insertAdjacentHTML('beforeend',`<option value="${w}">${DS.WIKI[w]}</option>`));
+const h=DS.hash.get();if(h.w&&DS.WIKI[h.w])sel.value=h.w;
+sel.onchange=()=>{DS.hash.set(sel.value?{w:sel.value}:{});render()};
+function agg(cs){
+  const a={n:0,c:cs.length,t:{1:0,2:0,3:0,4:0,0:0},cont:0,unrep:0,dated:0};
+  cs.forEach(c=>c.pts.forEach(p=>{a.n++;a.t[p.tier||0]++;if(p.f.includes('contested'))a.cont++;if(p.f.includes('unreplicated'))a.unrep++;if(p.f.includes('dated'))a.dated++}));
+  return a;
+}
+function bar(a){
+  if(!a.n)return '<div class="bar" role="img" aria-label="بدون گزاره"></div>';
+  return `<div class="bar" role="img" aria-label="${TL.map(t=>DS.TIER[t]+' '+pct(a.t[t]/a.n)).join('، ')}">${TL.map(t=>a.t[t]?`<i class="b${t}" style="width:${a.t[t]/a.n*100}%" title="${DS.esc(DS.TIER[t])}: ${fa(a.t[t])}"></i>`:'').join('')}</div>`;
+}
+function score(c){const s=DS.stats(c);return s.n?s.strong-s.contested*0.5:-1}
+function entry(c){const s=DS.stats(c);return `<li><a href="${DS.url(D,c)}">${DS.esc(c.t.fa)}</a> ${DS.chipGrade(DS.grade(c))}<span class="muted">${fa(s.n)} گزاره · ردهٔ ۱–۲: ${pct(s.strong)} · محل‌بحث/تکرارنشده/قدیمی: ${pct(s.contested)}</span></li>`}
+function fieldRow(f,cs){
+  const a=agg(cs);
+  const sorted=cs.slice().sort((x,y)=>score(x)-score(y)||DS.stats(x).n-DS.stats(y).n);
+  const weak=sorted.slice(0,5);
+  const strong=cs.filter(c=>DS.stats(c).n>=2).sort((x,y)=>score(y)-score(x)||DS.stats(y).n-DS.stats(x).n).slice(0,5);
+  const fd=D.fieldById[f],nm=fd?(fd.t.fa||fd.t):f;
+  return `<details class="frow"><summary><span class="nm">${DS.esc(nm)} <span class="muted">(${fa(cs.length)} مدخل)</span></span>${bar(a)}<span class="mini"><span>محل‌بحث ${pct(a.n?a.cont/a.n:0)}</span><span>تکرارنشده ${pct(a.n?a.unrep/a.n:0)}</span></span></summary>
+  <div class="cols"><div><h4 style="font-size:.98rem">ضعیف‌ترین مدخل‌ها</h4><ul class="list">${weak.map(entry).join('')}</ul></div>
+  <div><h4 style="font-size:.98rem">قوی‌ترین مدخل‌ها</h4>${strong.length?`<ul class="list">${strong.map(entry).join('')}</ul>`:'<p class="muted">مدخل دارای دست‌کم دو گزاره نیست.</p>'}</div></div></details>`;
+}
+function render(){
+  const ws=sel.value?[sel.value]:Object.keys(DS.WIKI);
+  let html='';
+  ws.forEach(w=>{
+    const cs=D.concepts.filter(c=>c.w===w);if(!cs.length)return;
+    const a=agg(cs),by={};cs.forEach(c=>(by[c.field]=by[c.field]||[]).push(c));
+    const keys=Object.keys(by).sort((x,y)=>by[y].length-by[x].length);
+    const noSrc=cs.filter(c=>!c.pts.length).length;
+    html+=`<section class="sec"><div class="card wcard ${w}"><h2 style="margin:0 0 4px">${wchip(w)} ویکی ${DS.esc(DS.WIKI[w])}</h2>
+    <p class="muted" style="margin:0 0 12px">${fa(cs.length)} مدخل · ${fa(a.n)} گزاره · ${fa(noSrc)} مدخل بدون گزاره · محل‌بحث ${pct(a.n?a.cont/a.n:0)} · تکرارنشده ${pct(a.n?a.unrep/a.n:0)} · قدیمی ${pct(a.n?a.dated/a.n:0)}</p>
+    ${bar(a)}<div class="mini" style="margin-top:8px">${TL.map(t=>`<span>${DS.esc(DS.TIER[t])}: ${fa(a.t[t])} (${pct(a.n?a.t[t]/a.n:0)})</span>`).join('')}</div>
+    <h3 style="font-size:1.05rem;margin-top:18px">حوزه‌ها <small class="muted">(برای دیدن ضعیف‌ترین و قوی‌ترین مدخل‌ها باز کنید)</small></h3>
+    ${keys.map(k=>fieldRow(k,by[k])).join('')}</div></section>`;
+  });
+  out.innerHTML=html||'<div class="empty">دادهٔ نمایشی نیست.</div>';
+}
+render();
+})();
+
+</script>
+</body>
+</html>

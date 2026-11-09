@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>اندیشمندان و نظریه‌ها — جامعه — دانش‌سرا</title>
+<meta name="description" content="مدخل‌های ویکی جامعه بر حسب نام اندیشمند">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.hero{margin-bottom:22px}.hero h1{margin-bottom:10px}.hero .lead{font-size:1.05rem;margin-bottom:0}
+.bar{display:grid;gap:14px;margin-bottom:18px}
+.bar label.l{display:block;font-size:.85rem;color:var(--ink-2);margin-bottom:4px}
+.bar input[type=search]{width:100%;min-height:44px}
+.bar .opts{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.bar select{width:100%;min-height:44px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{min-height:40px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font-size:.9rem;cursor:pointer}
+.pill:hover{background:var(--surface-subtle);color:var(--ink)}
+.pill[aria-pressed=true]{background:var(--primary);border-color:var(--primary);color:#fff}
+.pill small{opacity:.75;margin-inline-start:6px;font-size:.78rem}
+.status{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0 14px}
+button.ghost{min-height:40px}
+.k{display:flex;flex-direction:column;gap:8px}
+.k h3{margin:0;font-size:1.05rem;line-height:1.55}.k h3 a{color:var(--ink);text-decoration:none}.k h3 a:hover{color:var(--primary);text-decoration:underline}
+.k .sum{margin:0;color:var(--ink-2);font-size:.92rem;line-height:1.75;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.k .tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto;padding-top:4px}
+.k .meta{display:flex;flex-wrap:wrap;gap:6px}
+.st-d{font-size:.75rem;color:var(--ink-3)}
+.more{text-align:center;margin:22px 0}
+.src{font-size:.75rem;color:var(--ink-3);margin-inline-end:2px}
+.legend{margin-top:26px;font-size:.88rem;color:var(--ink-2)}
+.legend .row{gap:8px;margin-top:8px}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.tk{display:grid;gap:18px;grid-template-columns:minmax(240px,320px) 1fr;align-items:start}
+.tkl{position:sticky;top:70px}
+.tklist{display:flex;flex-direction:column;gap:2px;margin-top:10px;max-height:62vh;overflow-y:auto;padding-inline-end:4px}
+.tkb{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:42px;padding:6px 12px;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--ink);text-align:start;cursor:pointer;font-size:.95rem}
+.tkb:hover{background:var(--surface-subtle);color:var(--ink)}
+.tkb[aria-pressed=true]{background:var(--primary-soft);border-color:var(--primary);color:var(--ink)}
+.tkb .n{font-size:.78rem;color:var(--ink-3);white-space:nowrap}.tkb .la{color:var(--ink-3);font-size:.78rem;margin-inline-start:6px;direction:ltr;display:inline-block}
+.th h2{margin:0 0 4px;font-size:1.5rem}.th .grid{margin-top:14px}
+.co{margin:10px 0 4px}
+.sec{font-size:1rem;margin:22px 0 4px;color:var(--ink-2)}
+@media (max-width:800px){.tk{grid-template-columns:1fr}.tkl{position:static}.tklist{max-height:210px;flex-direction:row;flex-wrap:wrap;gap:6px}.tkb{border-color:var(--line-strong);width:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<nav class="crumb" aria-label="مسیر"><a href="../../index.html">خانه</a><span aria-hidden="true">›</span><a href="../index.html">جامعه</a><span aria-hidden="true">›</span><span aria-current="page">اندیشمندان</span></nav>
+
+</div></header>
+<main class="wrap">
+<div id="app">
+<section class="hero"><h1>اندیشمندان و نظریه‌ها</h1>
+<p class="lead">نام یک اندیشمند را انتخاب کنید تا مدخل‌هایی را ببینید که نامش در عنوان یا خلاصه‌شان آمده. وقتی از نظریه‌پردازی شنیده‌اید و می‌خواهید بدانید در کدام بحث‌ها حضور دارد، به کارتان می‌آید.</p></section>
+<div class="tk">
+<aside class="card tkl" aria-label="فهرست اندیشمندان"><label class="l" for="tq" style="display:block;font-size:.85rem;color:var(--ink-2);margin-bottom:4px">جستجوی اندیشمند</label><input type="search" id="tq" placeholder="نام را بنویسید" autocomplete="off" style="width:100%;min-height:44px"><div class="tklist" id="tl" role="group" aria-label="اندیشمندان"></div></aside>
+<section aria-live="polite"><div id="tr"></div></section>
+</div></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p style="margin:0 0 6px">این ابزار پیش‌نویس است و محتوای آن هنوز به‌طور کامل بازبینی نشده. برچسب‌های اعتبار (ردهٔ منبع، پرچم‌ها) از دادهٔ مدخل‌ها گرفته می‌شود و جای خواندن خود مدخل و منبع‌هایش را نمی‌گیرد. فهرست اندیشمندان در دادهٔ ویکی وجود ندارد؛ این‌جا فهرستی دستی از نام‌های رایج با تطبیق متنی به‌کار رفته، پس ممکن است نامی جا افتاده یا هم‌نام اشتباه شناسایی شده باشد.</p>
+<p style="margin:0"><a href="index.html">ابزارهای جامعه</a> · <a href="../index.html">بازگشت به ویکی جامعه</a></p>
+</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+(async function(){
+const $=s=>document.querySelector(s), E=DS.esc, FA=DS.faDigits;
+const WN="جامعه", FAM="soc";
+function fail(e){const m=$("#app");if(m)m.innerHTML='<div class="empty" role="alert">بارگذاری داده ناموفق بود. صفحه را دوباره باز کنید یا بعداً امتحان کنید.<br><span class="muted">'+E(e&&e.message||"")+'</span></div>';console.error(e)}
+let D;try{/* lib.js پایهٔ مسیر را از currentScript می‌گیرد که پس از بارگذاری تهی است؛ اینجا موقتاً برقرار می‌کنیم */const ls=document.querySelector('script[src$="core/tools/lib.js"]');try{Object.defineProperty(document,"currentScript",{configurable:true,get:()=>ls})}catch(_){}D=await DS.load();delete document.currentScript;if(!D||!D.concepts)throw new Error("داده نامعتبر")}catch(e){fail(e);return}
+const fname=id=>{const f=D.fieldById[id];return f?f.t.fa:""};
+const dq=s=>DS.norm(s);
+/* کارت برچسب‌دار یک مدخل: ردهٔ منبع، پرچم‌ها، وضعیت بازبینی */
+function tags(c){const s=DS.stats(c);let h=DS.chipGrade(DS.grade(c));
+ h+=' <span class="src">بهترین منبع:</span>'+DS.chipTier(s.best);
+ for(const f of ["unreplicated","contested","dated","editor-note"]) if(s.flags[f]) h+=' '+'<span class="flag '+f+'">'+E(DS.FLAG[f])+' ×'+FA(s.flags[f])+'</span>';
+ h+=' <span class="muted" style="font-size:.78rem">'+FA(s.n)+' گزاره</span>';
+ h+=' <span class="st-d">'+(c.st==="reviewed"?"بازبینی‌شده":"پیش‌نویس")+'</span>';return h}
+function card(c,extra){const w=DS.WIKI[c.w]||c.w;
+ return '<article class="card k"><div class="meta"><span class="chip '+E(c.w)+'">'+E(w)+'</span>'+(c.field?'<span class="chip">'+E(fname(c.field))+'</span>':'')+(extra||'')+'</div>'
+ +'<h3><a href="'+E(DS.url(D,c))+'">'+E(c.t.fa)+'</a></h3><p class="sum">'+E(c.s.fa)+'</p><div class="tags">'+tags(c)+'</div></article>'}
+const TH=[["مارکس", "Marx", ["مارکس", "Marx"]], ["دورکیم", "Durkheim", ["دورکیم", "Durkheim"]], ["وبر", "Weber", ["وبر", "Weber"]], ["پیتر برگر", "Berger", ["برگر", "Berger"]], ["هگل", "Hegel", ["هگل", "Hegel"]], ["پارسونز", "Parsons", ["پارسونز", "Parsons"]], ["مکتب فرانکفورت", "Frankfurt School", ["فرانکفورت", "Frankfurt School"]], ["گیدنز", "Giddens", ["گیدنز", "Giddens"]], ["آلتوسر", "Althusser", ["آلتوسر", "Althusser"]], ["بوردیو", "Bourdieu", ["بوردیو", "Bourdieu"]], ["کنت", "Comte", ["اگوست کنت", "Comte"]], ["لوکاچ", "Lukács", ["لوکاچ", "Lukács", "Lukacs"]], ["فوکو", "Foucault", ["فوکو", "Foucault"]], ["لوکمان", "Luckmann", ["لوکمان", "Luckmann"]], ["توکویل", "Tocqueville", ["توکویل", "Tocqueville"]], ["سارتر", "Sartre", ["سارتر", "Sartre"]], ["مالینوفسکی", "Malinowski", ["مالینوفسکی", "Malinowski"]], ["گافمن", "Goffman", ["گافمن", "Goffman"]], ["شریعتی", "Shariati", ["شریعتی", "Shariati"]], ["آرنت", "Arendt", ["آرنت", "Arendt"]], ["کاسیرر", "Cassirer", ["کاسیرر", "Cassirer"]], ["ابن‌خلدون", "Ibn Khaldun", ["ابن خلدون", "Ibn Khaldun"]], ["لاک", "Locke", ["لاک", "Locke"]], ["هابز", "Hobbes", ["هابز", "Hobbes"]], ["مونتسکیو", "Montesquieu", ["مونتسکیو", "Montesquieu"]], ["آدام اسمیت", "Adam Smith", ["آدام اسمیت", "Adam Smith"]], ["آرون", "Aron", ["ریمون آرون", "آرون", "Aron"]], ["رالز", "Rawls", ["رالز", "Rawls"]], ["گرامشی", "Gramsci", ["گرامشی", "Gramsci"]], ["مرتن", "Merton", ["مرتن", "Merton"]], ["اینگلهارت", "Inglehart", ["اینگلهارت", "Inglehart"]], ["فوکویاما", "Fukuyama", ["فوکویاما", "Fukuyama"]], ["نیچه", "Nietzsche", ["نیچه", "Nietzsche"]], ["کانت", "Kant", ["کانت", "Kant"]], ["جان استوارت میل", "Mill", ["استوارت میل", "Mill"]], ["زیمل", "Simmel", ["زیمل", "سیمل", "Simmel"]], ["نوزیک", "Nozick", ["نوزیک", "Nozick"]], ["پوپر", "Popper", ["پوپر", "Popper"]], ["افلاطون", "Plato", ["افلاطون", "Plato"]], ["برلین", "Berlin", ["آیزایا برلین", "Isaiah Berlin"]]];
+const LA="a-zà-ÿ", FAR="\\u0600-\\u06FF";
+function rx(v){const n=dq(v);if(/[a-z]/.test(n))return new RegExp("(?<![a-zà-ÿ])"+n.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"(?:ian|ean|ism|ist|s)?(?![a-zà-ÿ])");
+ return new RegExp("(?<![\\u0600-\\u06FF])"+n+"(?:ی|ها|های)?(?![\\u0600-\\u06FF])")}
+const people=TH.map(([fa,la,vs])=>({fa,la,re:vs.map(rx),hits:[]}));
+const mine=D.concepts.filter(c=>c.w===FAM);
+mine.forEach(c=>{const t=dq(c.t.fa+" "+c.t.en),s=dq(c.s.fa+" "+c.s.en);
+ people.forEach(p=>{const it=p.re.some(r=>r.test(t));const is=p.re.some(r=>r.test(s));if(it||is)p.hits.push({c,title:it})})});
+const list=people.filter(p=>p.hits.length).sort((a,b)=>b.hits.length-a.hits.length||a.fa.localeCompare(b.fa,"fa"));
+let cur=(DS.hash.get().p)||"";
+function renderList(){const q=dq($("#tq").value);
+ const l=list.filter(p=>!q||dq(p.fa+" "+p.la).includes(q));
+ $("#tl").innerHTML=l.length?l.map(p=>'<button type="button" class="tkb" data-p="'+E(p.fa)+'" aria-pressed="'+(p.fa===cur)+'"><span>'+E(p.fa)+'<span class="la">'+E(p.la)+'</span></span><span class="n">'+FA(p.hits.length)+' مدخل</span></button>').join(""):'<div class="empty" style="padding:14px">اندیشمندی با این نام نیست.</div>'}
+function renderRes(){const p=list.find(x=>x.fa===cur),r=$("#tr");
+ if(!list.length){r.innerHTML='<div class="empty">در دادهٔ این ویکی نام اندیشمندی پیدا نشد.</div>';return}
+ if(!p){r.innerHTML='<div class="empty">یک اندیشمند را از فهرست انتخاب کنید تا مدخل‌های مرتبط با او را ببینید. فهرست برحسب تعداد مدخل مرتب شده است.</div>';return}
+ const t=p.hits.filter(h=>h.title),s=p.hits.filter(h=>!h.title);
+ const co={};p.hits.forEach(h=>{people.forEach(q=>{if(q!==p&&q.hits.some(x=>x.c===h.c))co[q.fa]=(co[q.fa]||0)+1})});
+ const cos=Object.entries(co).sort((a,b)=>b[1]-a[1]).slice(0,8);
+ const byTier=p.hits.map(h=>DS.stats(h.c).best).filter(x=>x>0);
+ r.innerHTML='<div class="th"><h2>'+E(p.fa)+' <span class="muted" style="direction:ltr;display:inline-block">'+E(p.la)+'</span></h2>'
+ +'<p class="muted" style="margin:0">'+FA(p.hits.length)+' مدخل نام او را در عنوان یا خلاصه دارند ('+FA(t.length)+' مورد در عنوان). فهرست بر پایهٔ تطبیق نام است و نشان نمی‌دهد مدخل دربارهٔ آراء خود او است یا فقط از او نام می‌برد.</p>'
+ +(cos.length?'<div class="co row"><span class="muted">اغلب در کنار:</span>'+cos.map(([n,k])=>'<button type="button" class="pill" data-go="'+E(n)+'">'+E(n)+'<small>'+FA(k)+'</small></button>').join("")+'</div>':'')
+ +(t.length?'<h3 class="sec">نام او در عنوان مدخل</h3><div class="grid">'+t.map(h=>card(h.c)).join("")+'</div>':'')
+ +(s.length?'<h3 class="sec">نام او در خلاصهٔ مدخل</h3><div class="grid">'+s.map(h=>card(h.c)).join("")+'</div>':'')+'</div>'}
+function sel(n){cur=n;DS.hash.set(n?{p:n}:{});renderList();renderRes();if(n)$("#tr").scrollIntoView({block:"nearest"})}
+$("#tl").addEventListener("click",e=>{const b=e.target.closest(".tkb");if(b)sel(b.dataset.p===cur?"":b.dataset.p)});
+$("#tr").addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(b){sel(b.dataset.go);window.scrollTo({top:0})}});
+$("#tq").addEventListener("input",renderList);
+if(cur&&!list.some(p=>p.fa===cur))cur="";
+renderList();renderRes();
+})();
+</script>
+</body>
+</html>

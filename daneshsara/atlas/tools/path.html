@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مسیر بین دو مفهوم</title>
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.hero{padding-block:8px 6px} .hero .lead{font-size:1.02rem}
+.pk{flex:1 1 280px;min-width:0;position:relative}
+.pk>label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;color:var(--ink-2)}
+.pkbox{position:relative}
+.pkbox input{width:100%;min-height:44px}
+.pklist{position:absolute;inset-inline:0;top:calc(100% + 4px);z-index:8;margin:0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--line-strong);border-radius:14px;box-shadow:var(--shadow-lg);max-height:340px;overflow:auto}
+.pklist li{padding:8px 12px;min-height:44px;border-radius:10px;cursor:pointer;display:flex;gap:8px;align-items:center;justify-content:space-between;line-height:1.5}
+.pklist li[aria-selected=true],.pklist li:hover{background:var(--primary-soft)}
+.pklist .none{cursor:default;color:var(--ink-3)}
+.pksel{margin-top:10px}
+.sel{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--line-strong);border-radius:14px;background:var(--surface)}
+.sel b{font-size:1.02rem;line-height:1.5}
+.xbtn{min-height:40px;min-width:40px;padding:4px 12px;background:transparent;color:var(--ink-2);border-color:var(--line-strong)}
+.xbtn:hover{background:var(--surface-subtle);color:var(--ink)}
+.controls{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:6px 0 22px}
+.btn,button{min-height:40px}
+.two{display:grid;gap:14px;grid-template-columns:1fr 1fr}.two>*{min-width:0}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.pt{padding:10px 0;border-top:1px solid var(--line)}.pt:first-child{border-top:0}
+.pt p{margin:0 0 6px;max-width:none;font-size:.96rem;line-height:1.8}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.sec{margin-top:26px}.sec>h2{margin-top:0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.sec>h2 small{font-weight:400;color:var(--ink-3)}
+.diff td.d,.diff th.d{background:var(--primary-soft);font-weight:700}
+.list{list-style:none;margin:0;padding:0}.list li{padding:8px 0;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap;align-items:center}.list li:first-child{border-top:0}
+details>summary{cursor:pointer;color:var(--primary);min-height:40px;display:flex;align-items:center}
+.ttl{font-size:1.15rem;font-weight:700;line-height:1.5;margin:0 0 6px}
+.sm{font-size:.9rem;color:var(--ink-2);line-height:1.8}
+.err{padding:16px;border:1px solid var(--err);color:var(--err);border-radius:14px;background:var(--surface)}
+.toggle{display:inline-flex;gap:8px;align-items:center;min-height:44px;cursor:pointer}.toggle input{width:20px;height:20px}
+h1,h2,.ttl,.card{overflow-wrap:anywhere}
+
+.chain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;align-items:stretch}
+.chain>li.n{position:relative}
+.step{display:flex;gap:10px;align-items:center;padding:6px 18px;margin-inline:18px;border-inline-start:3px solid var(--line-strong);min-height:56px;flex-wrap:wrap}
+.step.x{border-inline-start-color:var(--fam-hum);background:var(--fam-hum-soft);border-radius:0 12px 12px 0;padding-block:8px}
+.step .ar{font-size:1.3rem;color:var(--ink-3)}
+.step .rl{font-weight:600}
+.bridge{font-size:.8rem;padding:2px 10px;border-radius:999px;background:var(--fam-hum);color:var(--paper);font-weight:600}
+.node{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.node .no{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--primary-soft);color:var(--primary);font-weight:700;font-size:.9rem;flex:none}
+.sum{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.sum .card{padding:10px 16px}.sum b{font-size:1.3rem;display:block;line-height:1.3}
+svg.strip{width:100%;height:auto;display:block;margin-bottom:16px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><nav class="crumb" aria-label="مسیر"><a href="../../index.html">خانه</a><span aria-hidden="true">›</span><a href="../index.html">اطلس</a><span aria-hidden="true">›</span><a href="index.html">ابزارهای اطلس</a><span aria-hidden="true">›</span><span aria-current="page">مسیر بین دو مفهوم</span></nav></div></header>
+<main class="wrap">
+<div class="hero"><h1>مسیر بین دو مفهوم</h1><p class="lead">وقتی می‌خواهید ببینید دو مفهوم دور از هم (مثلاً از دو ویکی) از چه راهی به هم می‌رسند و کجا مرز رشته‌ها را رد می‌کنند.</p></div>
+<div id="app"><div class="controls"><div id="pa"></div><div id="pb"></div></div>
+<div class="row" style="margin:-6px 0 18px"><label class="toggle"><input type="checkbox" id="nosee"> <span>بدون پیوندهای «ببینید» (فقط رابطه‌های معنادارتر)</span></label><button type="button" class="ghost" id="swap">جابه‌جایی</button><button type="button" class="ghost" id="demo">یک نمونه</button></div>
+<div id="out"><div class="empty">مبدأ و مقصد را انتخاب کنید.</div></div></div>
+</main>
+<footer class="foot"><div class="wrap"><p class="note">این ابزار پیش‌نویس است و محتوا بازبینی نشده؛ همهٔ گزاره‌ها، رده‌های منبع و پرچم‌ها عیناً از دادهٔ دانش‌سرا آمده‌اند و ابزار ادعای تازه‌ای نمی‌افزاید. نمرهٔ اعتبار برآوردی ساده از توزیع رده‌های منبع است، نه داوری دربارهٔ درستی علمی. پیوندها فقط میان مدخل‌های موجود شمرده می‌شوند.</p></div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+
+function wchip(w){return `<span class="chip ${w}">${DS.esc(DS.WIKI[w]||w)}</span>`}
+function picker(root,opt){
+  const id='pk'+Math.random().toString(36).slice(2,7);
+  root.className='pk';
+  root.innerHTML=`<label for="${id}">${DS.esc(opt.label)}</label><div class="pkbox"><input id="${id}" type="search" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="${id}l" placeholder="${DS.esc(opt.ph||'جستجو در همهٔ ویکی‌ها…')}"><ul class="pklist" id="${id}l" role="listbox" hidden></ul></div><div class="pksel"></div>`;
+  const inp=root.querySelector('input'),ul=root.querySelector('ul'),sel=root.querySelector('.pksel');
+  let res=[],act=-1,cur=null;
+  const close=()=>{ul.hidden=true;inp.setAttribute('aria-expanded','false');act=-1};
+  function render(){
+    if(!res.length){ul.innerHTML='<li class="none">مدخلی پیدا نشد</li>';return}
+    ul.innerHTML=res.map((c,i)=>`<li role="option" data-i="${i}" aria-selected="${i===act}"><span>${DS.esc(c.t.fa)}</span>${wchip(c.w)}</li>`).join('');
+  }
+  function open(){const q=inp.value; if(!DS.norm(q)){close();return} res=DS.search(D,q).slice(0,8);act=res.length?0:-1;render();ul.hidden=false;inp.setAttribute('aria-expanded','true')}
+  function showSel(){
+    sel.innerHTML=cur?`<div class="sel"><div><b>${DS.esc(cur.t.fa)}</b><div class="tags" style="margin-top:4px">${wchip(cur.w)}<span class="muted">${DS.esc(cur.t.en||'')}</span></div></div><button type="button" class="xbtn ghost" aria-label="حذف انتخاب">×</button></div>`:'';
+    const x=sel.querySelector('button'); if(x)x.onclick=()=>{set(null,true);inp.focus()};
+  }
+  function set(id,fire){cur=id?D.byId[id]||null:null;showSel();if(cur){inp.value='';close()}if(fire!==false&&opt.onPick)opt.onPick(cur)}
+  function pick(i){const c=res[i];if(c){set(c.id)}}
+  inp.addEventListener('input',open);inp.addEventListener('focus',open);
+  inp.addEventListener('keydown',e=>{
+    if(e.key==='ArrowDown'){e.preventDefault();if(ul.hidden)open();else{act=Math.min(res.length-1,act+1);render()}}
+    else if(e.key==='ArrowUp'){e.preventDefault();act=Math.max(0,act-1);render()}
+    else if(e.key==='Enter'){if(!ul.hidden&&act>=0){e.preventDefault();pick(act)}}
+    else if(e.key==='Escape')close();
+  });
+  ul.addEventListener('mousedown',e=>{const li=e.target.closest('li[data-i]');if(li){e.preventDefault();pick(+li.dataset.i)}});
+  document.addEventListener('click',e=>{if(!root.contains(e.target))close()});
+  inp.addEventListener('blur',()=>setTimeout(close,120));
+  return {set:id=>set(id,false),get:()=>cur};
+}
+function ptHtml(p){return `<div class="pt"><p>${DS.esc(p.t)}</p><div class="tags">${DS.chipTier(p.tier||0)}${(p.f||[]).map(DS.chipFlag).join('')}</div></div>`}
+function pct(x){return DS.faDigits(Math.round(x*100))+'٪'}
+function fa(n){return DS.faDigits(n)}
+function buildAdj(D){
+  const adj={};D.concepts.forEach(c=>adj[c.id]=[]);
+  D.concepts.forEach(c=>(c.lk||[]).forEach(([to,rel])=>{if(!D.byId[to]||to===c.id)return;adj[c.id].push({to,rel,dir:'out'});adj[to].push({to:c.id,rel,dir:'in'})}));
+  return adj;
+}
+/* DS.load مسیر data.json را از currentScript می‌گیرد که پس از بارگذاری null است؛ برای مسیر نسبی درست، همین‌جا اصلاح می‌شود */
+(function(){const f=window.fetch;window.fetch=function(u,o){try{if(typeof u==='string'&&/(^|\/)data\.json$/.test(u)&&u.indexOf('core/tools')<0)u=new URL('../../core/tools/data.json',location.href).href}catch(_){}return f.call(this,u,o)}})();
+function failMsg(el,e){el.innerHTML=`<div class="err" role="alert">بارگذاری داده ناموفق بود. صفحه را دوباره باز کنید یا بعداً امتحان کنید.<br><small>${DS.esc(e&&e.message||e)}</small></div>`}
+
+
+let D,adj;
+(async()=>{
+const out=document.getElementById('out');
+try{D=await DS.load();}catch(e){failMsg(out,e);return}
+adj=buildAdj(D);
+let A=null,B=null,no=false;
+const pa=picker(document.getElementById('pa'),{label:'از مفهوم',onPick:c=>{A=c;go()}});
+const pb=picker(document.getElementById('pb'),{label:'تا مفهوم',onPick:c=>{B=c;go()}});
+const cb=document.getElementById('nosee');cb.onchange=()=>{no=cb.checked;go()};
+document.getElementById('swap').onclick=()=>{const t=A;A=B;B=t;pa.set(A&&A.id);pb.set(B&&B.id);go()};
+document.getElementById('demo').onclick=()=>{
+  const cs=D.concepts.filter(c=>adj[c.id].length>1);
+  for(let i=0;i<400;i++){const x=cs[Math.floor(Math.random()*cs.length)],y=cs[Math.floor(Math.random()*cs.length)];
+    if(x.w===y.w)continue;const p=bfs(x.id,y.id);if(p&&p.length>=3&&p.length<=5){A=x;B=y;pa.set(x.id);pb.set(y.id);go();return}}
+};
+const h=DS.hash.get();
+if(h.a&&D.byId[h.a]){A=D.byId[h.a];pa.set(A.id)} if(h.b&&D.byId[h.b]){B=D.byId[h.b];pb.set(B.id)}
+if(h.ns==='1'){no=true;cb.checked=true}
+function bfs(s,t){
+  const prev={[s]:null},q=[s];
+  for(let i=0;i<q.length;i++){const u=q[i];if(u===t)break;
+    for(const e of adj[u]){if(no&&e.rel==='see-also')continue;if(e.to in prev)continue;prev[e.to]={from:u,e};q.push(e.to)}}
+  if(!(t in prev))return null;
+  const path=[];let u=t;while(prev[u]){path.unshift({id:u,e:prev[u].e,from:prev[u].from});u=prev[u].from}
+  path.unshift({id:s});return path;
+}
+function strip(p){
+  const n=p.length,W=Math.max(320,n*110),cs=getComputedStyle(document.documentElement);
+  let s=`<svg class="strip" viewBox="0 0 ${W} 70" role="img" aria-label="خلاصهٔ مسیر: ${n-1} گام"><g>`;
+  // RTL: first node at right
+  const x=i=>W-55-i*((W-110)/Math.max(1,n-1));
+  for(let i=1;i<n;i++){const cross=D.byId[p[i].id].w!==D.byId[p[i-1].id].w;
+    s+=`<line x1="${x(i-1)}" x2="${x(i)}" y1="30" y2="30" stroke="${cross?'var(--fam-hum)':'var(--line-strong)'}" stroke-width="${cross?4:2}" ${cross?'':'stroke-dasharray="0"'}/>`}
+  p.forEach((q,i)=>{const c=D.byId[q.id];s+=`<circle cx="${x(i)}" cy="30" r="13" fill="var(--surface)" stroke="var(--fam-${c.w==='psy'?'psy':c.w==='soc'?'soc':c.w==='phil'?'hum':'bio'})" stroke-width="3"/><text x="${x(i)}" y="35" text-anchor="middle" font-size="12" fill="var(--ink)">${DS.faDigits(i+1)}</text><text x="${x(i)}" y="60" text-anchor="middle" font-size="11" fill="var(--ink-2)">${DS.esc(DS.WIKI[c.w])}</text>`});
+  return s+'</g></svg>';
+}
+function render(){
+  if(!A||!B){out.innerHTML='<div class="empty">مبدأ و مقصد را انتخاب کنید.</div>';return}
+  if(A.id===B.id){out.innerHTML='<div class="empty">مبدأ و مقصد یکی‌اند.</div>';return}
+  const p=bfs(A.id,B.id);
+  if(!p){out.innerHTML=`<div class="empty">میان این دو مفهوم در گراف پیوندها مسیری نیست${no?' (بدون پیوندهای «ببینید»؛ تیک را بردارید و دوباره امتحان کنید)':''}.</div>`;return}
+  let cross=0;const ws=new Set();
+  for(let i=1;i<p.length;i++){if(D.byId[p[i].id].w!==D.byId[p[i-1].id].w)cross++}
+  p.forEach(q=>ws.add(D.byId[q.id].w));
+  let html=`<div class="sum"><div class="card"><b>${fa(p.length-1)}</b><span class="muted">گام</span></div><div class="card"><b>${fa(cross)}</b><span class="muted">پل میان‌ویکی</span></div><div class="card"><b>${fa(ws.size)}</b><span class="muted">ویکی در مسیر</span></div></div>`;
+  html+=strip(p)+'<ol class="chain">';
+  p.forEach((q,i)=>{
+    const c=D.byId[q.id];
+    if(i>0){
+      const pc=D.byId[p[i-1].id],x=pc.w!==c.w,e=q.e;
+      html+=`<li aria-hidden="false"><div class="step ${x?'x':''}"><span class="ar" aria-hidden="true">↓</span><span class="rl">${DS.esc(DS.REL[e.rel]||e.rel)}</span>${e.dir==='in'?'<span class="muted">(پیوند در جهت معکوس ثبت شده)</span>':''}${x?`<span class="bridge">پل میان‌رشته‌ای: ${DS.esc(DS.WIKI[pc.w])} ← ${DS.esc(DS.WIKI[c.w])}</span>`:''}</div></li>`;
+    }
+    const g=DS.grade(c);
+    html+=`<li class="n"><div class="card"><div class="node"><div style="display:flex;gap:10px;align-items:center;min-width:0"><span class="no">${fa(i+1)}</span><a class="ttl" style="margin:0" href="${DS.url(D,c)}">${DS.esc(c.t.fa)}</a></div><div class="tags">${wchip(c.w)}${DS.chipGrade(g)}</div></div><p class="sm" style="margin:8px 0 0;max-width:none">${DS.esc((c.s.fa||'').slice(0,170))}${(c.s.fa||'').length>170?'…':''}</p></div></li>`;
+  });
+  out.innerHTML=html+'</ol><p class="muted" style="margin-top:14px">کوتاه‌ترین مسیر در گراف بدون‌جهت پیوندها؛ ممکن است مسیرهای هم‌طول دیگری هم باشد.</p>';
+}
+function go(){const o={};if(A)o.a=A.id;if(B)o.b=B.id;if(no)o.ns='1';DS.hash.set(o);render()}
+render();
+})();
+
+</script>
+</body>
+</html>

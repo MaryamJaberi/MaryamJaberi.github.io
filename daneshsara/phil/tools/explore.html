@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>کاوشگر فلسفه — فلسفه — دانش‌سرا</title>
+<meta name="description" content="کاوش مدخل‌های ویکی فلسفه با فیلتر حوزه، ردهٔ منبع و پرچم اعتبار">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+.hero{margin-bottom:22px}.hero h1{margin-bottom:10px}.hero .lead{font-size:1.05rem;margin-bottom:0}
+.bar{display:grid;gap:14px;margin-bottom:18px}
+.bar label.l{display:block;font-size:.85rem;color:var(--ink-2);margin-bottom:4px}
+.bar input[type=search]{width:100%;min-height:44px}
+.bar .opts{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.bar select{width:100%;min-height:44px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{min-height:40px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font-size:.9rem;cursor:pointer}
+.pill:hover{background:var(--surface-subtle);color:var(--ink)}
+.pill[aria-pressed=true]{background:var(--primary);border-color:var(--primary);color:#fff}
+.pill small{opacity:.75;margin-inline-start:6px;font-size:.78rem}
+.status{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0 14px}
+button.ghost{min-height:40px}
+.k{display:flex;flex-direction:column;gap:8px}
+.k h3{margin:0;font-size:1.05rem;line-height:1.55}.k h3 a{color:var(--ink);text-decoration:none}.k h3 a:hover{color:var(--primary);text-decoration:underline}
+.k .sum{margin:0;color:var(--ink-2);font-size:.92rem;line-height:1.75;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.k .tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto;padding-top:4px}
+.k .meta{display:flex;flex-wrap:wrap;gap:6px}
+.st-d{font-size:.75rem;color:var(--ink-3)}
+.more{text-align:center;margin:22px 0}
+.src{font-size:.75rem;color:var(--ink-3);margin-inline-end:2px}
+.legend{margin-top:26px;font-size:.88rem;color:var(--ink-2)}
+.legend .row{gap:8px;margin-top:8px}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<nav class="crumb" aria-label="مسیر"><a href="../../index.html">خانه</a><span aria-hidden="true">›</span><a href="../index.html">فلسفه</a><span aria-hidden="true">›</span><span aria-current="page">کاوشگر</span></nav>
+
+</div></header>
+<main class="wrap">
+<div id="app">
+<section class="hero"><h1>کاوشگر فلسفه</h1>
+<p class="lead">در میان مدخل‌های ویکی فلسفه بگردید: بر حسب حوزه، ردهٔ بهترین منبع و پرچم‌های اعتبار فیلتر کنید یا جستجو کنید. وقتی می‌خواهید بدانید دربارهٔ موضوعی چه چیزی هست و چقدر روی آن می‌شود تکیه کرد، از این‌جا شروع کنید.</p></section>
+<section class="card bar" aria-label="فیلترها">
+<div><label class="l" for="q">جستجو در عنوان، نام‌های دیگر و خلاصه</label><input type="search" id="q" placeholder="مثلاً: تمثیل غار" autocomplete="off"></div>
+<div><span class="l" style="display:block;font-size:.85rem;color:var(--ink-2);margin-bottom:6px" id="fl">حوزه (می‌توانید چند حوزه را با هم انتخاب کنید)</span><div class="pills" id="fields" role="group" aria-labelledby="fl"></div></div>
+<div class="opts">
+<div><label class="l" for="tier">ردهٔ بهترین منبع</label><select id="tier"><option value="">همه</option><option value="1">فراتحلیل/تکرار</option><option value="2">مقالهٔ داوری‌شده/آمار رسمی</option><option value="3">کتاب یا سخنرانی</option><option value="0">سرنخ یا بی‌منبع</option></select></div>
+<div><label class="l" for="flag">پرچم</label><select id="flag"><option value="">همه</option><option value="unreplicated">دارای گزارهٔ تکرارنشده</option><option value="contested">دارای گزارهٔ محل‌بحث</option><option value="dated">دارای گزارهٔ قدیمی</option><option value="editor-note">دارای یادداشت سردبیر</option><option value="none">بدون هیچ پرچم</option></select></div>
+<div><label class="l" for="sort">ترتیب</label><select id="sort"><option value="rel">مرتبط‌ترین (یا ترتیب داده)</option><option value="grade">قوی‌ترین پشتوانه</option><option value="pts">بیشترین گزاره</option><option value="az">الفبایی</option></select></div>
+</div></section>
+<div class="status"><span id="count" class="muted" aria-live="polite"></span><button class="ghost" id="reset" type="button">پاک‌کردن فیلترها</button></div>
+<div class="grid" id="res"></div>
+<div class="more"><button class="ghost" id="more" type="button" hidden>نمایش بیشتر</button></div>
+<div class="legend"><b>راهنمای برچسب‌ها</b>
+<div class="row" id="lg"></div>
+<p class="muted" style="margin:8px 0 0">«پشتوانه» از نسبت گزاره‌های با منبع قوی (رده ۱ و ۲) به کل گزاره‌ها و سهم گزاره‌های پرچم‌دار محاسبه می‌شود؛ این یک نشانگر کلی است، نه داوری دربارهٔ درستی مدخل.</p></div>
+</div>
+</main>
+<footer class="foot"><div class="wrap">
+<p style="margin:0 0 6px">این ابزار پیش‌نویس است و محتوای آن هنوز به‌طور کامل بازبینی نشده. برچسب‌های اعتبار (ردهٔ منبع، پرچم‌ها) از دادهٔ مدخل‌ها گرفته می‌شود و جای خواندن خود مدخل و منبع‌هایش را نمی‌گیرد. جستجو فقط در عنوان، نام‌های دیگر و خلاصهٔ مدخل است، نه در متن گزاره‌ها.</p>
+<p style="margin:0"><a href="index.html">ابزارهای فلسفه</a> · <a href="../index.html">بازگشت به ویکی فلسفه</a></p>
+</div></footer>
+<script src="../../core/tools/lib.js"></script>
+<script>
+(async function(){
+const $=s=>document.querySelector(s), E=DS.esc, FA=DS.faDigits;
+const WN="فلسفه", FAM="phil";
+function fail(e){const m=$("#app");if(m)m.innerHTML='<div class="empty" role="alert">بارگذاری داده ناموفق بود. صفحه را دوباره باز کنید یا بعداً امتحان کنید.<br><span class="muted">'+E(e&&e.message||"")+'</span></div>';console.error(e)}
+let D;try{/* lib.js پایهٔ مسیر را از currentScript می‌گیرد که پس از بارگذاری تهی است؛ اینجا موقتاً برقرار می‌کنیم */const ls=document.querySelector('script[src$="core/tools/lib.js"]');try{Object.defineProperty(document,"currentScript",{configurable:true,get:()=>ls})}catch(_){}D=await DS.load();delete document.currentScript;if(!D||!D.concepts)throw new Error("داده نامعتبر")}catch(e){fail(e);return}
+const fname=id=>{const f=D.fieldById[id];return f?f.t.fa:""};
+const dq=s=>DS.norm(s);
+/* کارت برچسب‌دار یک مدخل: ردهٔ منبع، پرچم‌ها، وضعیت بازبینی */
+function tags(c){const s=DS.stats(c);let h=DS.chipGrade(DS.grade(c));
+ h+=' <span class="src">بهترین منبع:</span>'+DS.chipTier(s.best);
+ for(const f of ["unreplicated","contested","dated","editor-note"]) if(s.flags[f]) h+=' '+'<span class="flag '+f+'">'+E(DS.FLAG[f])+' ×'+FA(s.flags[f])+'</span>';
+ h+=' <span class="muted" style="font-size:.78rem">'+FA(s.n)+' گزاره</span>';
+ h+=' <span class="st-d">'+(c.st==="reviewed"?"بازبینی‌شده":"پیش‌نویس")+'</span>';return h}
+function card(c,extra){const w=DS.WIKI[c.w]||c.w;
+ return '<article class="card k"><div class="meta"><span class="chip '+E(c.w)+'">'+E(w)+'</span>'+(c.field?'<span class="chip">'+E(fname(c.field))+'</span>':'')+(extra||'')+'</div>'
+ +'<h3><a href="'+E(DS.url(D,c))+'">'+E(c.t.fa)+'</a></h3><p class="sum">'+E(c.s.fa)+'</p><div class="tags">'+tags(c)+'</div></article>'}
+const FIELDS=[["epistemology", "معرفت‌شناسی"], ["mind", "فلسفهٔ ذهن"], ["ethics", "اخلاق"], ["science", "فلسفهٔ علم"], ["political", "فلسفهٔ سیاسی"], ["iranian", "فلسفهٔ ایرانی‌اسلامی"], ["life", "فلسفهٔ زندگی"]];
+const PAGE=30;let shown=PAGE;
+const st=Object.assign({q:"",f:"",t:"",fl:"",s:"rel"},DS.hash.get());
+const all=D.concepts.filter(c=>c.w===FAM);
+const cnt={};all.forEach(c=>{if(c.field)cnt[c.field]=(cnt[c.field]||0)+1});
+const sel=new Set(st.f?st.f.split(","):[]);
+$("#fields").innerHTML=FIELDS.map(([k,n])=>{const id=FAM+":"+k;return '<button type="button" class="pill" data-f="'+id+'" aria-pressed="false">'+E(n)+'<small>'+FA(cnt[id]||0)+'</small></button>'}).join("");
+$("#lg").innerHTML=[1,2,3,4].map(t=>DS.chipTier(t)).join("")+["A","B","C","D"].map(g=>DS.chipGrade(g)).join("")+["unreplicated","contested","dated","editor-note"].map(f=>DS.chipFlag(f)).join("");
+$("#q").value=st.q;$("#tier").value=st.t;$("#flag").value=st.fl;$("#sort").value=st.s;
+const gr={A:0,B:1,C:2,D:3};
+function run(){
+ const q=$("#q").value,t=$("#tier").value,fl=$("#flag").value,s=$("#sort").value;
+ DS.hash.set(Object.fromEntries(Object.entries({q,f:[...sel].join(","),t,fl,s}).filter(([k,v])=>v&&!(k==="s"&&v==="rel"))));
+ document.querySelectorAll("#fields .pill").forEach(b=>b.setAttribute("aria-pressed",sel.has(b.dataset.f)));
+ const ok=c=>{if(sel.size&&!sel.has(c.field))return false;const S=DS.stats(c);
+  if(t!==""){if(t==="0"?(S.best!==0&&S.best!==4):S.best!==+t)return false}
+  if(fl==="none"){if(Object.values(S.flags).some(x=>x))return false}else if(fl&&!S.flags[fl])return false;return true};
+ let r=q.trim()?DS.search(D,q,c=>c.w===FAM&&ok(c)):all.filter(ok);
+ if(s==="grade")r=[...r].sort((a,b)=>gr[DS.grade(a)]-gr[DS.grade(b)]||b.pts.length-a.pts.length);
+ else if(s==="pts")r=[...r].sort((a,b)=>b.pts.length-a.pts.length);
+ else if(s==="az")r=[...r].sort((a,b)=>a.t.fa.localeCompare(b.t.fa,"fa"));
+ $("#count").textContent=r.length?FA(r.length)+" مدخل از "+FA(all.length):"";
+ const g=$("#res");
+ if(!r.length){g.innerHTML='<div class="empty" style="grid-column:1/-1">مدخلی با این فیلترها پیدا نشد. فیلترها را کم کنید یا عبارت دیگری را جستجو کنید.</div>';$("#more").hidden=true;return}
+ g.innerHTML=r.slice(0,shown).map(c=>card(c)).join("");$("#more").hidden=r.length<=shown;
+}
+const reset0=()=>{shown=PAGE;run()};
+$("#fields").addEventListener("click",e=>{const b=e.target.closest(".pill");if(!b)return;sel.has(b.dataset.f)?sel.delete(b.dataset.f):sel.add(b.dataset.f);reset0()});
+let tm;$("#q").addEventListener("input",()=>{clearTimeout(tm);tm=setTimeout(reset0,150)});
+["tier","flag","sort"].forEach(i=>$("#"+i).addEventListener("change",reset0));
+$("#more").addEventListener("click",()=>{shown+=PAGE;run()});
+$("#reset").addEventListener("click",()=>{sel.clear();$("#q").value="";$("#tier").value="";$("#flag").value="";$("#sort").value="rel";reset0()});
+run();
+})();
+</script>
+</body>
+</html>
