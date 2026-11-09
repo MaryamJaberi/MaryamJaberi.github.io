@@ -1,0 +1,116 @@
+{
+ "id": "phil:kafka-metamorphosis-work-identity",
+ "kind": "concept",
+ "title": {
+  "fa": "مسخ کافکا: هویتِ نان‌آور و فشار کار",
+  "en": "Kafka's Metamorphosis: the breadwinner's identity and the pressure of work",
+  "nl": "Kafka's Metamorfose: de identiteit van de kostwinner en werkdruk"
+ },
+ "aliases": [],
+ "parent": "phil:life",
+ "field": "phil:life",
+ "summary": {
+  "fa": "در روایت کافکا، گرگور سامسا پیش از دگرگونی‌اش کاملاً با نقشِ نان‌آور تعریف می‌شود. نخستین نگرانی‌اش پس از بیدار شدن نه بدنِ تازه، بلکه دیر رسیدن به قطار و واکنش مافوق است. این مدخل برداشتی ادبی از متن است، نه گزارش واقعیت.",
+  "en": "In Kafka's story Gregor Samsa is defined by his role as breadwinner. On waking, his first worry is not his new body but the missed train and his superiors' reaction. This is a literary reading of the text, not a factual report.",
+  "nl": "In Kafka's verhaal wordt Gregor Samsa bepaald door zijn rol als kostwinner; zijn eerste zorg is de gemiste trein, niet zijn nieuwe lichaam."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گرگور فروشندهٔ دوره‌گردِ پارچه است و در همان ساعت‌های اول از کارش گله می‌کند: سفرهای پیاپی، عوض‌کردن قطار، غذای بد و آدم‌هایی که هرگز دوباره نمی‌بیندشان.",
+    "en": "Gregor is a travelling cloth salesman who, within the first hour, complains about his job: constant travel, changing trains, bad meals and people he will never meet again.",
+    "nl": "Gregor is a travelling cloth salesman who, within the first hour, complains about his job: constant travel, changing trains, bad meals and people he will never meet again."
+   },
+   "sources": [
+    "src:ce52318632"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او خود را به‌خاطر بدهیِ خانواده به رئیس به کار بسته می‌داند و فکر می‌کند اگر این قید نبود، مدت‌ها پیش کنار گذاشته بود؛ برآورد خودش پنج یا شش سال دیگر است.",
+    "en": "He sees himself bound to the firm by his family's debt to the boss, and thinks that without it he would have quit long ago; by his own estimate, five or six more years.",
+    "nl": "He sees himself bound to the firm by his family's debt to the boss, and thinks that without it he would have quit long ago; by his own estimate, five or six more years."
+   },
+   "sources": [
+    "src:ce52318632"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "معاونِ شرکت به در خانه می‌آید تا غیبتش را بازخواست کند و در همان گفتار هم تهدید و هم گلایه از عملکرد اخیر او را پیش می‌کشد؛ کافکا شک‌آلودگیِ نظامِ کار را با همین صحنه نشان می‌دهد.",
+    "en": "The firm's chief clerk comes to the home to question his absence, mixing reproach and a hint of threat about his recent performance; the scene shows the suspicion built into this workplace.",
+    "nl": "The firm's chief clerk comes to the home to question his absence, mixing reproach and a hint of threat about his recent performance; the scene shows the suspicion built into this workplace."
+   },
+   "sources": [
+    "src:ce52318632"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گرگور حتی در هیئت حشره، با خطابهٔ طولانی از پشت در می‌کوشد موقعیت شغلی‌اش را نجات دهد و می‌گوید خرجِ پدر و مادر و خواهرش بر دوش اوست.",
+    "en": "Even as an insect, speaking from behind the door he tries to rescue his job, stressing that he supports his parents and sister.",
+    "nl": "Even as an insect, speaking from behind the door he tries to rescue his job, stressing that he supports his parents and sister."
+   },
+   "sources": [
+    "src:ce52318632"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تفسیرهای دانشگاهی دربارهٔ این داستان یکی نیستند؛ خوانش «از‌خودبیگانگیِ کار»، خوانش خانوادگی-روان‌کاوانه و خوانش دربارهٔ گناه و بوروکراسی همه رایج‌اند و داستان خود تفسیر نمی‌دهد.",
+    "en": "Academic readings of the story differ: alienated labour, family/psychoanalytic, and guilt/bureaucracy readings are all common; the text itself offers no interpretation.",
+    "nl": "Academic readings of the story differ: alienated labour, family/psychoanalytic, and guilt/bureaucracy readings are all common; the text itself offers no interpretation."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:marx-religion-alienation",
+   "rel": "see-also",
+   "note": {
+    "fa": "مفهوم از‌خودبیگانگی نزد مارکس برای مقایسه",
+    "en": "Marx's alienation, for comparison",
+    "nl": "Marx's alienation, for comparison"
+   }
+  },
+  {
+   "to": "psy:soc-work",
+   "rel": "see-also",
+   "note": {
+    "fa": "جامعه‌شناسی کار",
+    "en": "Sociology of work",
+    "nl": "Sociology of work"
+   }
+  },
+  {
+   "to": "psy:meaningful-work",
+   "rel": "contrasts",
+   "note": {
+    "fa": "کار بی‌معنا در برابر کار معنادار",
+    "en": "Meaningless vs meaningful work",
+    "nl": "Meaningless vs meaningful work"
+   }
+  }
+ ],
+ "people": [
+  "core:franz-kafka",
+  "core:sadegh-hedayat"
+ ],
+ "sources": [
+  "src:ce52318632"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

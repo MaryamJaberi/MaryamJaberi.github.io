@@ -1,0 +1,115 @@
+{
+ "id": "phil:kafka-metamorphosis-identity-recognition",
+ "kind": "concept",
+ "title": {
+  "fa": "مسخ کافکا: «آیا این هنوز گرگور است؟» هویت و شناسایی",
+  "en": "Kafka's Metamorphosis: 'Is this still Gregor?' Identity and recognition",
+  "nl": "Kafka's Metamorfose: 'Is dit nog Gregor?' identiteit en erkenning"
+ },
+ "aliases": [],
+ "parent": "phil:mind",
+ "field": "phil:mind",
+ "summary": {
+  "fa": "داستان آزمایشی ذهنی (به معنای ادبی) است دربارهٔ اینکه بدن، زبان و شناسایی دیگران تا چه حد ما را «همان آدم» نگه می‌دارند: گرگور هنوز می‌اندیشد و حس می‌کند، اما دیگران او را نمی‌فهمند.",
+  "en": "The story works as a literary thought experiment on how far body, language and others' recognition keep us 'the same person': Gregor still thinks and feels, but others cannot understand him.",
+  "nl": "Het verhaal is een literair gedachte-experiment over lichaam, taal en erkenning: Gregor denkt en voelt nog, maar anderen verstaan hem niet."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گرگور در درون همان آدم است: به خانواده‌اش فکر می‌کند، از آنان نگران است و حتی وقتی بدنش ناتوان شده تلاش می‌کند در را باز کند؛ اما صدایش برای دیگران ناآشنا و نامفهوم است و خودش هم از ماندنِ صدای انسانی‌اش مطمئن نیست.",
+    "en": "Inside, Gregor remains the same person: he thinks about and worries for his family and works to open the door despite his body; yet his voice is unintelligible to others and he himself is unsure it still sounds human.",
+    "nl": "Inside, Gregor remains the same person: he thinks about and worries for his family and works to open the door despite his body; yet his voice is unintelligible to others and he himself is unsure it still sounds human."
+   },
+   "sources": [
+    "src:ce52318632"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در دیدار با معاون، به‌محض باز شدن در، معاون عقب می‌کشد و مادر از حال می‌رود؛ شناسایی از راه بدن ناکام می‌ماند.",
+    "en": "When the door opens the chief clerk recoils and the mother collapses; recognition through the body fails.",
+    "nl": "When the door opens the chief clerk recoils and the mother collapses; recognition through the body fails."
+   },
+   "sources": [
+    "src:ce52318632"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خواهر در پایان استدلال می‌کند که اگر این موجود گرگور بود، خودش مدت‌ها پیش دریافته بود که زندگی با آدم‌ها ممکن نیست و رفته بود؛ این‌گونه تصمیم به دفع او را از طریق انکارِ هویتش توجیه می‌کند.",
+    "en": "The sister finally argues that were it Gregor he would long ago have realised living with humans is impossible and would have left; she justifies getting rid of it by denying its identity.",
+    "nl": "The sister finally argues that were it Gregor he would long ago have realised living with humans is impossible and would have left; she justifies getting rid of it by denying its identity."
+   },
+   "sources": [
+    "src:ce52318632"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خواهر پس از این سخنان در اتاق گرگور را قفل می‌کند و با نفس راحت می‌گوید بالاخره؛ گرگور در تاریکی می‌ماند. متن خود قضاوتی صریح نمی‌کند.",
+    "en": "After these words the sister locks Gregor's door with a sigh of relief, and he is left in the dark; the narration passes no explicit verdict.",
+    "nl": "After these words the sister locks Gregor's door with a sigh of relief, and he is left in the dark; the narration passes no explicit verdict."
+   },
+   "sources": [
+    "src:ce52318632"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فیلسوفان می‌توانند این موقعیت را با بحث هویت شخصی (پیوستگی روان‌شناختی در برابر پیوستگی بدنی) بسنجند، اما کافکا نظریهٔ فلسفی ارائه نمی‌دهد و این پیوند خوانشی ما است، نه ادعای کتاب. او همچنین بر این بود که حشره روی جلد تصویر نشود.",
+    "en": "Philosophers can set this scenario against debates on personal identity (psychological vs bodily continuity), but Kafka offers no philosophical theory; the link is our reading, not the book's claim. Kafka also reportedly asked that the insect not be illustrated on the cover.",
+    "nl": "Philosophers can set this scenario against debates on personal identity (psychological vs bodily continuity), but Kafka offers no philosophical theory; the link is our reading, not the book's claim. Kafka also reportedly asked that the insect not be illustrated on the cover."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:personal-identity",
+   "rel": "explains",
+   "note": {
+    "fa": "نمونهٔ ادبی برای بحث هویت شخصی",
+    "en": "A literary case for the personal-identity debate",
+    "nl": "A literary case for the personal-identity debate"
+   }
+  },
+  {
+   "to": "phil:absurd-meaning",
+   "rel": "see-also",
+   "note": {
+    "fa": "پوچی و معنا",
+    "en": "Absurdity and meaning",
+    "nl": "Absurdity and meaning"
+   }
+  },
+  {
+   "to": "psy:belonging",
+   "rel": "see-also",
+   "note": {
+    "fa": "تعلق و طرد",
+    "en": "Belonging and exclusion",
+    "nl": "Belonging and exclusion"
+   }
+  }
+ ],
+ "people": [
+  "core:franz-kafka"
+ ],
+ "sources": [
+  "src:ce52318632"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
