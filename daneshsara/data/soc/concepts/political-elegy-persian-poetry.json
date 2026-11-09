@@ -1,0 +1,115 @@
+{
+ "id": "soc:political-elegy-persian-poetry",
+ "kind": "concept",
+ "title": {
+  "fa": "سوگ‌سرایی سیاسی در شعر معاصر فارسی",
+  "en": "Political elegy in modern Persian poetry",
+  "nl": "Politieke elegie in de moderne Perzische poëzie"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "در این مجموعه، شعر وسیلهٔ یادکرد اعدام‌شدگان است: هر شعر برای فرد یا گروهی مشخص و برای مناسبتی سروده شده. این دیدگاه شاعر است و سند تاریخی نیست.",
+  "en": "In this collection poetry serves to commemorate people who were executed: each poem is tied to a named person or group and an occasion. It is the poet's viewpoint, not a historical record.",
+  "nl": "In deze bundel dient poëzie om geëxecuteerden te herdenken: elk gedicht is gewijd aan een persoon of groep en een aanleiding. Het is het standpunt van de dichter, geen historisch bewijs."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مقدمه می‌گوید شعرها در سال‌های گوناگون سروده شده‌اند اما موضوع همه یکی است: اعدام.",
+    "en": "The preface says the poems were written in different years but share one subject: executions.",
+    "nl": "The preface says the poems were written in different years but share one subject: executions."
+   },
+   "sources": [
+    "src:f766bbad98"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "عنوان شعرها به‌صورت «در شهادت…» همراه نام کسان یا گروه‌هاست؛ از جمله خسرو گلسرخی، خسرو روزبه، مهدی رضایی، احمد زیبرم و گروه حنیف‌نژاد. واژهٔ «شهادت» نگاه یادکننده را نشان می‌دهد.",
+    "en": "Poem titles take the form 'On the martyrdom of…' with a person's or group's name, including Khosrow Golsorkhi, Khosrow Ruzbeh, Mehdi Rezaei, Ahmad Zibarm and the Hanifnejad group. The word 'martyrdom' shows the commemorating stance.",
+    "nl": "Poem titles take the form 'On the martyrdom of…' with a person's or group's name, including Khosrow Golsorkhi, Khosrow Ruzbeh, Mehdi Rezaei, Ahmad Zibarm and the Hanifnejad group. The word 'martyrdom' shows the commemorating stance."
+   },
+   "sources": [
+    "src:f766bbad98"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در چند شعر مرگ‌شدگان با نور و خورشید و رستن در برابر تاریکی و زندان ترسیم می‌شوند؛ شعر درباره‌ٔ زندانیان دیگری را از دید خود نشان می‌دهد که همه در زنجیرند.",
+    "en": "Several poems set the dead against images of light, the sun and growth, opposed to darkness and prison; one poem depicts chained prisoners.",
+    "nl": "Several poems set the dead against images of light, the sun and growth, opposed to darkness and prison; one poem depicts chained prisoners."
+   },
+   "sources": [
+    "src:f766bbad98"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه رایج پژوهشی این است که شعر سوگ سیاسی را همچون حافظهٔ جمعی و گفتار اعتراضی بخوانند و برای واقعیت رویدادها و نقش افراد به اسناد و پژوهش تاریخی رجوع کنند؛ همهٔ احزاب و گروه‌های یادشده در ارزیابی تاریخی محل بحث‌اند.",
+    "en": "The common scholarly approach is to read political elegy as collective memory and protest speech, and to turn to documents and historical research for the facts of events and persons; the groups mentioned remain debated in historical assessment.",
+    "nl": "The common scholarly approach is to read political elegy as collective memory and protest speech, and to turn to documents and historical research for the facts of events and persons; the groups mentioned remain debated in historical assessment."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:collective-effervescence-ritual",
+   "rel": "see-also",
+   "note": {
+    "fa": "یادکرد جمعی و آیین‌های سوگ",
+    "en": "collective commemoration and ritual",
+    "nl": "collective commemoration and ritual"
+   }
+  },
+  {
+   "to": "soc:social-movements",
+   "rel": "see-also",
+   "note": {
+    "fa": "جنبش‌ها و سیاست اعتراض",
+    "en": "social movements and protest politics",
+    "nl": "social movements and protest politics"
+   }
+  },
+  {
+   "to": "phil:political",
+   "rel": "see-also",
+   "note": {
+    "fa": "فلسفهٔ سیاسی",
+    "en": "political philosophy",
+    "nl": "political philosophy"
+   }
+  }
+ ],
+ "people": [
+  "core:ahmad-shamlou",
+  "core:khosrow-golsorkhi",
+  "core:mehdi-rezaei"
+ ],
+ "sources": [
+  "src:f766bbad98"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

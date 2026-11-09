@@ -1,0 +1,97 @@
+{
+ "id": "phil:death-freedom-shamlou-poem",
+ "kind": "concept",
+ "title": {
+  "fa": "مرگ، آزادی و خودیابی در شعر «از مرگ» شاملو",
+  "en": "Death, freedom and self-discovery in Shamlou's poem 'On death'",
+  "nl": "Dood, vrijheid en zelfontdekking in Shamlou's gedicht 'Over de dood'"
+ },
+ "aliases": [],
+ "parent": "phil:life",
+ "field": "phil:life",
+ "summary": {
+  "fa": "شاعر در این شعر می‌گوید هرگز از مرگ نترسیده و مرگ را در پیوند با آزادی و پیداکردن خویشتن می‌سنجد. این بیان شاعرانه است و نظام فلسفی نیست.",
+  "en": "The poet states he has never feared death and weighs death against freedom and finding oneself. This is poetic statement, not a philosophical system.",
+  "nl": "De dichter zegt nooit bang voor de dood te zijn geweest en weegt de dood af tegen vrijheid en zelfontdekking. Het is een poëtische uitspraak, geen filosofisch systeem."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "شاعر می‌گوید هرگز از مرگ نهراسیده است (برداشت از متن ناقص).",
+    "en": "The poem opens by saying he has never been afraid of death (our reading of a partly corrupted text).",
+    "nl": "The poem opens by saying he has never been afraid of death (our reading of a partly corrupted text)."
+   },
+   "sources": [
+    "src:f766bbad98"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "شاعر آزادیِ برگزیدن و سپس یافتن خویشتن را ارزشی می‌داند که اگر مرگ بهای آن باشد، مرگ در برابرش کم‌اهمیت‌تر است.",
+    "en": "He treats the freedom to choose and then find oneself as a value so great that death, as its price, matters less. (Reading of an OCR-damaged passage; meaning approximate.)",
+    "nl": "He treats the freedom to choose and then find oneself as a value so great that death, as its price, matters less. (Reading of an OCR-damaged passage; meaning approximate.)"
+   },
+   "sources": [
+    "src:f766bbad98"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این نگاه به مرگ در سنت فلسفی با رواقی‌گری (پذیرش آنچه در اختیار ماست) و اگزیستانسیالیسم (معنا از انتخاب آزاد) قابل مقایسه است، اما شاملو در این شعر استدلال فلسفی نمی‌آورد؛ فقط موضع می‌گیرد.",
+    "en": "This stance can be compared with Stoicism and existentialism, but the poem offers no philosophical argument; it takes a position.",
+    "nl": "This stance can be compared with Stoicism and existentialism, but the poem offers no philosophical argument; it takes a position."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:stoicism",
+   "rel": "contrasts",
+   "note": {
+    "fa": "مقایسه با رواقی‌گری",
+    "en": "compare with Stoicism",
+    "nl": "compare with Stoicism"
+   }
+  },
+  {
+   "to": "phil:absurd-meaning",
+   "rel": "see-also",
+   "note": {
+    "fa": "معنا و مرگ نزد کامو و فرانکل",
+    "en": "meaning and death in Camus and Frankl",
+    "nl": "meaning and death in Camus and Frankl"
+   }
+  },
+  {
+   "to": "phil:two-liberties",
+   "rel": "see-also",
+   "note": {
+    "fa": "آزادی منفی و مثبت",
+    "en": "negative and positive liberty",
+    "nl": "negative and positive liberty"
+   }
+  }
+ ],
+ "people": [
+  "core:ahmad-shamlou"
+ ],
+ "sources": [
+  "src:f766bbad98"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
