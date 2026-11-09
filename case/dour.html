@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dour — case study — Maryam Jaberi</title>
+<meta name="description" content="Case study: designing a pass-the-phone party game that a group can start in ten seconds, in their own language, offline — and turning its core loop into a language-learning game.">
+<link rel="canonical" href="https://maryamjaberi.github.io/case/dour.html">
+<meta property="og:title" content="Dour — case study">
+<meta property="og:image" content="https://maryamjaberi.github.io/assets/img/dour.webp">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the case study</a>
+<nav class="nav" aria-label="Main">
+<div class="wrap">
+<a class="brand" href="../"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 27C9 17 15 8 26 5c-1 9-7 16-16 18"/><path d="M7 27 21 11M12 20h6M15 15.5h6"/></svg>Maryam Jaberi</a>
+<a class="l" href="../#work">Work</a>
+<a class="l" href="../cv.pdf">CV</a>
+<a class="btn sm" href="../#contact">Contact</a>
+</div>
+</nav>
+
+<main id="main">
+<header class="case-hero">
+<div class="wrap">
+<a class="back" href="../#work">Back to all work</a>
+<h1>A party game that starts in ten seconds</h1>
+<p class="lede">How I designed Dour, a word-guessing game for one phone passed around a room, and then reused its core loop to make language practice feel like a game night.</p>
+<div class="overview">
+<div><span>My role</span>Game and product design, spec, QA, release</div>
+<div><span>Platform</span>Installable web app (PWA), works offline</div>
+<div><span>Languages</span>Nine, from Persian to Ukrainian</div>
+<div><span>Status</span>Live; playtests with real groups next</div>
+</div>
+<div class="phones-fig" style="margin-top:40px"><img src="../assets/img/dour-0.webp" alt="Dour start screen: language picker with nine languages and a start button" width="390" height="780"><img src="../assets/img/lang-0.webp" alt="Dour: Language home: group game, two-player duel and solo learning" width="390" height="780"></div>
+<div class="links" style="margin-top:20px"><a class="btn solid sm" href="https://maryamjaberi.github.io/Dour/">Play Dour</a><a class="textlink" href="https://maryamjaberi.github.io/Language-Learning-Party-Game/">Play Dour: Language</a></div>
+</div>
+</header>
+
+<div class="wrap">
+<section class="chapter" aria-labelledby="c1">
+<h2 id="c1">The problem</h2>
+<div class="body">
+<p>Word-guessing card games are a staple of family evenings and parties, including in Iranian homes. But the box of cards is in one language, and most app versions assume everyone reads English, want an account and a connection, and fall apart the moment someone taps the wrong button mid-round.</p>
+<p class="quote">How might we let any group start a round in seconds, in the language they actually speak at that table?</p>
+</div>
+</section>
+
+<section class="chapter" aria-labelledby="c2">
+<h2 id="c2">Constraints I designed for</h2>
+<div class="body">
+<ul>
+<li><b>One device for everyone.</b> Not everyone at a party will install an app; the host's phone has to be enough.</li>
+<li><b>Mixed tables.</b> Different ages and languages in the same room.</li>
+<li><b>No reliable Wi-Fi.</b> Gardens, trips, a relative's living room.</li>
+<li><b>Noise and excitement.</b> People shout, grab the phone and tap the wrong thing. The game has to forgive that.</li>
+</ul>
+</div>
+</section>
+
+<section class="chapter" aria-labelledby="c3">
+<h2 id="c3">Decisions</h2>
+<div class="body">
+<div class="decision"><div><b>Teams sit opposite each other</b>So the phone always passes to the other team naturally, and nobody needs to be told whose turn it is.</div><div class="no"><b>Instead of</b>A turn indicator on screen that nobody reads in the middle of a round.</div></div>
+<div class="decision"><div><b>Undo without pausing</b>A floating undo button fixes an accidental tap while the clock keeps running.</div><div class="no"><b>Instead of</b>A pause-and-confirm dialog that kills the energy of the round.</div></div>
+<div class="decision"><div><b>Sound that doesn't stress</b>A soft wooden tick through the round, and a short alarm only in the last five seconds.</div><div class="no"><b>Instead of</b>A constant beep that makes people anxious and annoys neighbours.</div></div>
+<div class="decision"><div><b>Difficulty as content</b>Easy single words, medium two-word terms, hard proverbs and idioms.</div><div class="no"><b>Instead of</b>Shorter timers for "hard", which only makes the game more frantic.</div></div>
+<div class="decision"><div><b>No account needed</b>Open and play. Cloud sign-in is optional, for keeping history.</div><div class="no"><b>Instead of</b>Sign-up first, which loses the group before the first round.</div></div>
+</div>
+</section>
+
+<section class="chapter" aria-labelledby="c4">
+<h2 id="c4">How I built and tested it</h2>
+<div class="body">
+<p>I wrote the rules, screens and edge cases as a spec, built it with AI coding tools, and tested every release against my own ten-scenario checklist:</p>
+<ul>
+<li>Startup and first round</li><li>Sound effects</li><li>Word flow with no repeats</li><li>Timer accuracy</li><li>Turn handover</li><li>Winner screen</li><li>Mobile layout</li><li>Pause and reset</li><li>Install to home screen</li><li>Offline play</li>
+</ul>
+<p>Writing the checklist before the build meant every bug report pointed to a scenario, and the fix could be checked against the same scenario.</p>
+</div>
+</section>
+
+<section class="chapter" aria-labelledby="c5">
+<h2 id="c5">From game to learning product</h2>
+<div class="body">
+<p>Guessing a word from a teammate's description is exactly what a language learner needs to practise. So I rebuilt the loop as <b>Dour: Language</b>:</p>
+<ul>
+<li>Cards with real vocabulary and phrases, levelled by CEFR, A1 to C1.</li>
+<li>Up to four learning languages at once, so a mixed group can play together.</li>
+<li>Group, two-player duel and solo modes, with spaced review of mistakes.</li>
+<li>A freemium model where the free version keeps most features; I wrote the revenue model and the epics with user stories for it.</li>
+</ul>
+<p>The next design problem is difficulty: I am specifying an adaptive-difficulty algorithm so that cards get harder or easier per player, keeping rounds close.</p>
+</div>
+</section>
+
+<section class="chapter" aria-labelledby="c6">
+<h2 id="c6">Result and what's next</h2>
+<div class="body">
+<p>Dour is live as an installable, offline web app in nine languages, and Dour: Language is live with three modes. Neither has real users yet. The next step is structured playtests with real groups, measuring:</p>
+<ul>
+<li>Rounds per session and how many groups play again within a week.</li>
+<li>How often undo is used, and on which screen: a sign of where taps go wrong.</li>
+<li>The round where players stop, to tune round length and difficulty.</li>
+</ul>
+<h3>What I'd do differently</h3>
+<p>I added nine languages before testing with a single group. Word lists of uneven quality in some languages are now a risk. Next time I would playtest in one or two languages until the core loop is proven, then expand.</p>
+</div>
+</section>
+
+<div class="next-case">
+<p class="small">Next case study</p>
+<h2 style="margin:0 0 16px"><a href="wellbeing-check.html" style="text-decoration:none">A wellbeing check that ends in a plan, not a score</a></h2>
+<a class="textlink" href="wellbeing-check.html">Read it</a>
+</div>
+</div>
+</main>
+
+<footer style="margin-top:80px">
+<div class="wrap"><span>© 2026 Maryam Jaberi</span><a class="textlink" href="mailto:m.jaberi1212@gmail.com">m.jaberi1212@gmail.com</a></div>
+</footer>
+<script>const n=document.querySelector('.nav');addEventListener('scroll',()=>n.classList.toggle('scrolled',scrollY>8),{passive:true});</script>
+</body>
+</html>
