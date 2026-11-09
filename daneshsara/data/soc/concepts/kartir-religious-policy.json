@@ -1,0 +1,109 @@
+{
+ "id": "soc:kartir-religious-policy",
+ "kind": "concept",
+ "title": {
+  "fa": "کرتیر و سیاست دینی ساسانیان در سده سوم",
+  "en": "Kartir and Sasanian religious policy in the third century",
+  "nl": "Kartir en het religieuze beleid van de Sassaniden"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "کرتیر روحانی زرتشتی دوران شاپور یکم تا بهرام دوم است که در کتیبه‌های خود از ساختن آتشکده‌ها و راندن آیین‌های دیگر سخن می‌گوید؛ محاکمهٔ مانی در همین فضا رخ داد.",
+  "en": "Kartir, a Zoroastrian priest from Shapur I to Bahram II, boasted in his inscriptions of founding fire temples and suppressing other cults; Mani's trial belongs to this setting.",
+  "nl": "Kartir was een zoroastrische priester onder Shapur I tot Bahram II; zijn inscripties noemen vuurtempels en onderdrukking van andere culten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به نوشتهٔ مقاله و به نقل از هینتس، کرتیر در زمان اردشیر روحانی ساده بود، زیر شاپور یکم سرپرست انجمن مغان شد و در سنگ‌نوشتهٔ شاپور (کعبه زرتشت) پس از نایب‌السلطنه و پیش از شهربانان نام او آمده است.",
+    "en": "Citing Hintze, the article says Kartir was a simple priest under Ardashir, headed the magi under Shapur I, and appears in Shapur's Ka'ba-ye Zardosht inscription after the viceroy and before satraps.",
+    "nl": "Citing Hintze, the article says Kartir was a simple priest under Ardashir, headed the magi under Shapur I, and appears in Shapur's Ka'ba-ye Zardosht inscription after the viceroy and before satraps."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "زیر بهرام دوم کرتیر عنوان‌های بالاتری گرفت، از جمله «موبد هرمزد» و نگهبانی آتشکدهٔ ناهید در استخر و داوری کشور.",
+    "en": "Under Bahram II Kartir received higher titles, including 'mobed of Ohrmazd', charge of the Anahita fire temple at Istakhr and a judicial office.",
+    "nl": "Under Bahram II Kartir received higher titles, including 'mobed of Ohrmazd', charge of the Anahita fire temple at Istakhr and a judicial office."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در کتیبهٔ خود از راندن یهودیان، بودایی‌ها، برهمن‌ها، نصرانی‌ها و مسیحیان، مانویان و مانند آنان یاد می‌کند و می‌گوید آتشکده‌ها ساخته و مغان را بر آنها گماشته است.",
+    "en": "His inscription lists Jews, Buddhists, Brahmins, Nazarenes, Christians and Manichaeans as suppressed, and claims he founded fire temples and installed magi.",
+    "nl": "His inscription lists Jews, Buddhists, Brahmins, Nazarenes, Christians and Manichaeans as suppressed, and claims he founded fire temples and installed magi."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده اعدام مانی را در پادشاهی بهرام یکم به دخالت کرتیر نسبت می‌دهد؛ تاریخ‌ها در پژوهش جدید دقیق‌تر بررسی شده و نقش مستقیم کرتیر در محاکمهٔ مانی بر پایهٔ منابع مانوی بحث‌انگیز است.",
+    "en": "The author ties Mani's execution under Bahram I to Kartir; modern work examines this more carefully and Kartir's direct role in Mani's trial, drawn from Manichaean sources, remains debated.",
+    "nl": "The author ties Mani's execution under Bahram I to Kartir; modern work examines this more carefully and Kartir's direct role in Mani's trial, drawn from Manichaean sources, remains debated."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نویسنده سخنی هم دارد که تنسر، ابرسام و کرتیر یک تن بوده باشند؛ این نظر اقلیت است و در پژوهش مدرن پذیرفته نشده است.",
+    "en": "The article mentions a minority view that Tansar, Abarsam and Kartir were one person; mainstream scholarship does not accept this.",
+    "nl": "The article mentions a minority view that Tansar, Abarsam and Kartir were one person; mainstream scholarship does not accept this."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "نهادها و دولت",
+    "en": "Institutions and the state",
+    "nl": "Institutions and the state"
+   }
+  },
+  {
+   "to": "soc:secularization",
+   "rel": "contrasts",
+   "note": {
+    "fa": "سکولارشدن",
+    "en": "Secularization",
+    "nl": "Secularization"
+   }
+  }
+ ],
+ "people": [
+  "core:kartir",
+  "core:mani",
+  "core:walter-hinz"
+ ],
+ "sources": [
+  "src:0f37ec0e89"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

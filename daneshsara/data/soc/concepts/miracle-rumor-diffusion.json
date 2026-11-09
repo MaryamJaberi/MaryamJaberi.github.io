@@ -1,0 +1,86 @@
+{
+ "id": "soc:miracle-rumor-diffusion",
+ "kind": "concept",
+ "title": {
+  "fa": "چگونه شایعهٔ کرامت پخش می‌شود؟",
+  "en": "How miracle rumors spread",
+  "nl": "Hoe wondergeruchten zich verspreiden"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "جامعه‌شناسان شایعه را «خبر بداهه» می‌دانند که در ابهام و اشتیاق جمعی پخش می‌شود. داستان سیرجان مثالی ادبی از همین سازوکار است، بدون آنکه فریب‌کار بودن همهٔ بازیگران را اثبات کند.",
+  "en": "Sociologists treat rumor as 'improvised news' that spreads under ambiguity and collective desire. The Sirjan story is a literary example of the mechanism without proving that all actors were deceivers.",
+  "nl": "Sociologen zien een gerucht als 'geïmproviseerd nieuws' dat zich onder onzekerheid verspreidt. Het verhaal uit Sirjan illustreert dit literair."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تاماتسو شیبوتانی شایعه را تلاش گروه برای ساختن معنا در وضعیت مبهم می‌دانست؛ شایعه وقتی قوی‌تر می‌شود که موضوع مهم و اطلاعات رسمی ناکافی باشد.",
+    "en": "Tamotsu Shibutani saw rumor as a group's collective effort to make sense of an ambiguous situation; it strengthens when the topic matters and official information is thin.",
+    "nl": "Tamotsu Shibutani saw rumor as a group's collective effort to make sense of an ambiguous situation; it strengthens when the topic matters and official information is thin."
+   },
+   "sources": [
+    "src:97f24001a1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در داستان کتاب، اعلان در بازار، تأیید یک روضه‌خوان و انتشار شفاهی با هم اعتبار شایعه را بالا می‌برند؛ هر مرحله اعتماد بیشتری می‌سازد.",
+    "en": "In the book's story, a bazaar notice, a preacher's endorsement and oral spread together raise the rumor's credibility; each step builds more trust.",
+    "nl": "In the book's story, a bazaar notice, a preacher's endorsement and oral spread together raise the rumor's credibility; each step builds more trust."
+   },
+   "sources": [
+    "src:2b82216e45"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این سازوکار فقط خاص مذهب نیست: شایعه در اقتصاد، سیاست و شبکه‌های اجتماعی هم همین‌گونه پخش می‌شود.",
+    "en": "The mechanism is not specific to religion: rumors spread the same way in economics, politics and social media.",
+    "nl": "The mechanism is not specific to religion: rumors spread the same way in economics, politics and social media."
+   },
+   "sources": [
+    "src:97f24001a1"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:collective-effervescence-ritual",
+   "rel": "see-also",
+   "note": {
+    "fa": "هیجان جمعی",
+    "en": "Collective emotion",
+    "nl": "Collective emotion"
+   }
+  },
+  {
+   "to": "soc:imamzadeh-miracle-rumor-satire",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکار شایعه در داستان",
+    "en": "Rumor mechanism in the story",
+    "nl": "Rumor mechanism in the story"
+   }
+  }
+ ],
+ "people": [
+  "core:tamotsu-shibutani"
+ ],
+ "sources": [
+  "src:2b82216e45",
+  "src:97f24001a1"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

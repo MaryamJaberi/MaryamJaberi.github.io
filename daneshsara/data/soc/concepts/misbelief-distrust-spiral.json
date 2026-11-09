@@ -1,0 +1,116 @@
+{
+ "id": "soc:misbelief-distrust-spiral",
+ "kind": "concept",
+ "title": {
+  "fa": "بی‌اعتمادی اجتماعی به‌مثابه بستر باور اشتباه",
+  "en": "Social distrust as the soil of misbelief",
+  "nl": "Maatschappelijk wantrouwen als voedingsbodem voor foutieve overtuigingen"
+ },
+ "aliases": [],
+ "parent": "soc:cohesion",
+ "field": "soc:cohesion",
+ "summary": {
+  "fa": "آریلی سقوط فردی به باورهای توطئه‌ای را نشانهٔ فروپاشی اعتماد در سطح جامعه می‌خواند. وقتی اعتماد به یک نهاد از بین برود، بی‌اعتمادی به نهادهای دیگر آسان می‌شود و باورهای نامرتبط به هم می‌چسبند.",
+  "en": "Ariely reads individual slides into conspiratorial belief as a symptom of eroding trust at society level. Once trust in one institution is lost, distrust of others comes easily and unrelated beliefs cluster together.",
+  "nl": "Ariely leest individuele afglijding naar complotdenken als symptoom van afnemend vertrouwen in de samenleving. Verlies van vertrouwen in één instelling maakt wantrouwen jegens andere eenvoudig."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به گفتهٔ نویسنده، تقریباً همه‌جا (به‌جز اسکاندیناوی) بی‌اعتمادی رو به افزایش است، و باور اشتباه در همین بستر رشد می‌کند.",
+    "en": "The author says distrust is rising almost everywhere (Scandinavia aside) and that misbelief grows in that soil.",
+    "nl": "The author says distrust is rising almost everywhere (Scandinavia aside) and that misbelief grows in that soil."
+   },
+   "sources": [
+    "src:484b0e02cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چون بی‌اعتمادی از نهادی به نهاد دیگر سرایت می‌کند، کسی که یک باور توطئه‌ای دارد احتمال بیشتری دارد باورهای دیگرِ به‌ظاهر نامرتبط را هم بپذیرد: اگر شرکت‌های دارویی فاسدند، نهادهای ناظر بر آن‌ها هم همدست به نظر می‌آیند.",
+    "en": "Because distrust spreads from one institution to another, someone holding one conspiratorial belief is more likely to accept others that seem unrelated: if drug companies are corrupt, their regulators look complicit too.",
+    "nl": "Because distrust spreads from one institution to another, someone holding one conspiratorial belief is more likely to accept others that seem unrelated: if drug companies are corrupt, their regulators look complicit too."
+   },
+   "sources": [
+    "src:484b0e02cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده در پایان کتاب بر اهمیت بازسازی اعتماد و عواقب بی‌اعتمادی تأکید می‌کند و راه‌حل را بیشتر در بُعد انسانی (فهم و همدلی) می‌بیند تا فقط در فناوری و کنترل محتوا.",
+    "en": "The author closes by stressing the rebuilding of trust and the consequences of distrust, locating the remedy more in the human side (understanding, empathy) than in technology or content control alone.",
+    "nl": "The author closes by stressing the rebuilding of trust and the consequences of distrust, locating the remedy more in the human side (understanding, empathy) than in technology or content control alone."
+   },
+   "sources": [
+    "src:484b0e02cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ارتباط میان بی‌اعتمادی نهادی و باور توطئه‌ای در پژوهش‌های تجربی بارها همبستگی نشان داده است، اما جهت علیت روشن نیست: بی‌اعتمادی ممکن است هم علت و هم پیامد باور توطئه‌ای باشد و تجربهٔ واقعی تبعیض یا فساد هم بی‌اعتمادی موجه می‌سازد.",
+    "en": "Empirical work repeatedly finds a correlation between institutional distrust and conspiracy belief, but causal direction is unclear: distrust can be both cause and effect, and real experiences of discrimination or corruption can make distrust warranted.",
+    "nl": "Empirical work repeatedly finds a correlation between institutional distrust and conspiracy belief, but causal direction is unclear: distrust can be both cause and effect, and real experiences of discrimination or corruption can make distrust warranted."
+   },
+   "sources": [
+    "src:024416235f"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "ادعای آریلی دربارهٔ رشد جهانی بی‌اعتمادی و نقش هوش مصنوعی در تولید اطلاعات غلط، تحلیل کلی نویسنده است و برای هر کشور و دوره باید با داده‌های پیمایشی سنجیده شود.",
+    "en": "Ariely's claims about global growth of distrust and the role of AI in producing misinformation are broad judgments by the author and should be checked against survey data for each country and period.",
+    "nl": "Ariely's claims about global growth of distrust and the role of AI in producing misinformation are broad judgments by the author and should be checked against survey data for each country and period."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:generalized-trust",
+   "rel": "explains",
+   "note": {
+    "fa": "نمونهٔ پیامد افت اعتماد تعمیم‌یافته",
+    "en": "An example of the effects of falling generalised trust",
+    "nl": "An example of the effects of falling generalised trust"
+   }
+  },
+  {
+   "to": "soc:cohesion",
+   "rel": "see-also",
+   "note": {
+    "fa": "انسجام و اعتماد اجتماعی",
+    "en": "Cohesion and social trust",
+    "nl": "Cohesion and social trust"
+   }
+  },
+  {
+   "to": "psy:social-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد اجتماعی",
+    "en": "Social trust",
+    "nl": "Social trust"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:024416235f",
+  "src:484b0e02cc"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

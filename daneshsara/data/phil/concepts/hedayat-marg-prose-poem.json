@@ -1,0 +1,124 @@
+{
+ "id": "phil:hedayat-marg-prose-poem",
+ "kind": "concept",
+ "title": {
+  "fa": "«مرگ» هدایت: مرگ به‌مثابهٔ پناه در نثر شاعرانه",
+  "en": "Hedayat's 'Death': death as refuge in a prose poem",
+  "nl": "Hedayats 'De dood': de dood als toevluchtsoord"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "صادق هدایت در قطعهٔ کوتاه «مرگ» (۱۳۰۵، بلژیک) مرگ را نه دشمن، که آرام‌بخشِ رنج‌های زندگی تصویر می‌کند. این دیدگاهی ادبی است و نه استدلالی فلسفی.",
+  "en": "In his short piece 'Marg' (1926, Belgium), Sadegh Hedayat portrays death not as an enemy but as a soothing end to life's suffering. It is a literary stance, not a philosophical argument.",
+  "nl": "In het korte stuk 'Marg' (1926, België) schetst Sadegh Hedayat de dood niet als vijand maar als verlichting van het lijden. Het is een literaire houding, geen filosofisch betoog."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "متن با لحنی دوگانه آغاز می‌شود: واژهٔ «مرگ» را ترسناک و هیجان‌انگیز می‌خواند و می‌گوید شنیدنش حال آدمی را دگرگون می‌کند.",
+    "en": "The text opens ambivalently: the word 'death' is both frightening and thrilling, and hearing it stirs strong feeling.",
+    "nl": "The text opens ambivalently: the word 'death' is both frightening and thrilling, and hearing it stirs strong feeling."
+   },
+   "sources": [
+    "src:5b96b8e77b"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نویسنده مرگ را مانند مادری مهربان می‌بیند که انسان خسته را در پایان روز دشوار می‌خواباند؛ مرگ برای او مرهم اندوه و ناامیدی است.",
+    "en": "Hedayat likens death to a gentle mother putting a tired person to bed; death is the balm for grief and despair.",
+    "nl": "Hedayat likens death to a gentle mother putting a tired person to bed; death is the balm for grief and despair."
+   },
+   "sources": [
+    "src:5b96b8e77b"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید ترس مردم از مرگ بی‌پایه است و آن را «درخشان» و دروازهٔ امید می‌نامد؛ این ادعایی احساسی و ادبی است، نه شواهدی دربارهٔ آنچه پس از مرگ رخ می‌دهد.",
+    "en": "He claims people's fear of death is unfounded and calls it a gate of hope; this is an emotional, literary claim, not evidence about what follows death.",
+    "nl": "He claims people's fear of death is unfounded and calls it a gate of hope; this is an emotional, literary claim, not evidence about what follows death."
+   },
+   "sources": [
+    "src:5b96b8e77b"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در نگاه رایج روان‌شناسی و فلسفه، ستایشِ مرگ فقط یک موضع ادبی است. ترس از مرگ و جست‌وجوی معنا در زندگی از موضوع‌های پژوهش‌اند و این متن نه توصیه است و نه راهنما.",
+    "en": "In mainstream psychology and philosophy, praising death is a literary stance only; fear of death and the search for meaning in life are research topics, and this text is neither advice nor guidance.",
+    "nl": "In mainstream psychology and philosophy, praising death is a literary stance only; fear of death and the search for meaning in life are research topics, and this text is neither advice nor guidance."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "هدایت در همین قطعه پایان را با «زندگانی جاودانی» مرگ می‌بندد؛ پایانی ادبی و کنایی که نشان می‌دهد او بیش از آنکه نظریه بدهد، حالتی روحی را بیان می‌کند.",
+    "en": "The piece ends by saying death has 'eternal life'; a figurative, literary ending showing he voices a mood rather than a theory.",
+    "nl": "The piece ends by saying death has 'eternal life'; a figurative, literary ending showing he voices a mood rather than a theory."
+   },
+   "sources": [
+    "src:5b96b8e77b"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:iranian",
+   "rel": "part-of",
+   "note": {
+    "fa": "از ادبیات و اندیشهٔ ایرانی",
+    "en": "Part of Iranian thought and letters",
+    "nl": "Part of Iranian thought and letters"
+   }
+  },
+  {
+   "to": "phil:absurd-meaning",
+   "rel": "contrasts",
+   "note": {
+    "fa": "فرانکل و کامو پاسخ دیگری به رنج و پوچی می‌دهند: معنا ساختن در زندگی",
+    "en": "Frankl and Camus answer suffering differently: making meaning within life",
+    "nl": "Frankl and Camus answer suffering differently: making meaning within life"
+   }
+  },
+  {
+   "to": "phil:stoicism",
+   "rel": "contrasts",
+   "note": {
+    "fa": "رواقیان مرگ را می‌پذیرند ولی آن را راه گریز نمی‌دانند",
+    "en": "Stoics accept death without treating it as an escape",
+    "nl": "Stoics accept death without treating it as an escape"
+   }
+  }
+ ],
+ "people": [
+  "core:sadegh-hedayat"
+ ],
+ "sources": [
+  "src:5b96b8e77b"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

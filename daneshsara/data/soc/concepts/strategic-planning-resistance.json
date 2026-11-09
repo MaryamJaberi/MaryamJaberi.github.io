@@ -1,0 +1,118 @@
+{
+ "id": "soc:strategic-planning-resistance",
+ "kind": "concept",
+ "title": {
+  "fa": "برنامه‌ریزی راهبردی برای رهایی از دیکتاتوری و پیشگیری از استبداد تازه",
+  "en": "Strategic planning for liberation and preventing a new tyranny",
+  "nl": "Strategische planning voor bevrijding en het voorkomen van nieuwe tirannie"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "شارپ می‌گوید مقاومت بدون برنامهٔ راهبردی هدر می‌رود و باید از ابتدا برنامه‌ای برای دوران پس از سقوط داشت تا جای دیکتاتور را دیکتاتور تازه نگیرد. این بخش بیشتر توصیهٔ عملی است تا یافتهٔ تجربی.",
+  "en": "Sharp argues resistance without strategy is wasted and that planning for the post-dictatorship period is needed so a new dictator does not take over. This part is practical advice more than empirical finding.",
+  "nl": "Sharp stelt dat verzet zonder strategie verloren gaat en dat men ook de periode na de dictatuur moet plannen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به نظر شارپ بسیاری از مبارزات گذشته خودانگیخته و بی‌برنامه بوده و از همین رو شکست خورده یا نتیجه‌شان به شانس سپرده شده است.",
+    "en": "Sharp says many past struggles were spontaneous and unplanned, and so failed or left outcomes to chance.",
+    "nl": "Sharp says many past struggles were spontaneous and unplanned, and so failed or left outcomes to chance."
+   },
+   "sources": [
+    "src:b276430b51"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او برنامه‌ریزی را در سطح «راهبرد کلان» و بعد راهبرد و تاکتیک می‌بیند؛ هدف مهم‌تر یعنی نیاز به فکر دقیق‌تر.",
+    "en": "He distinguishes grand strategy from strategy and tactics; the more important the goal, the more careful the thinking needed.",
+    "nl": "He distinguishes grand strategy from strategy and tactics; the more important the goal, the more careful the thinking needed."
+   },
+   "sources": [
+    "src:b276430b51"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هدف را تنها سرنگونی دیکتاتور نمی‌داند، بلکه ساختن نظامی دموکراتیک؛ در غیر این صورت خطر آمدن مستبدی دیگر هست و فرانسه، روسیه، ایران و برمه را نمونه می‌آورد.",
+    "en": "He defines the goal not just as removing the dictator but building a democratic system, otherwise another tyrant may follow; he cites France, Russia, Iran and Burma.",
+    "nl": "He defines the goal not just as removing the dictator but building a democratic system, otherwise another tyrant may follow; he cites France, Russia, Iran and Burma."
+   },
+   "sources": [
+    "src:b276430b51"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برای پس از سقوط، دفاع در برابر کودتا را مبتنی بر ندادن مشروعیت و همکاری به توطئه‌گران می‌داند، و نیز قانون اساسی و تقسیم قدرت.",
+    "en": "For the aftermath, he bases anti-coup defence on denying legitimacy and cooperation to plotters, together with a constitution and division of power.",
+    "nl": "For the aftermath, he bases anti-coup defence on denying legitimacy and cooperation to plotters, together with a constitution and division of power."
+   },
+   "sources": [
+    "src:b276430b51"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهش‌های بعدی نشان می‌دهد انتقال پایدار به دموکراسی به عوامل ساختاری و نهادی بیش از آنچه شارپ می‌گوید بستگی دارد؛ ظاهراً کمپین‌های بی‌خشونت احتمال دموکراسی پایدارتر را بالا می‌برند اما تضمین نمی‌کنند.",
+    "en": "Later research suggests durable democratization depends on structural and institutional factors more than Sharp allows; nonviolent campaigns appear to raise the odds of lasting democracy but do not guarantee it.",
+    "nl": "Later research suggests durable democratization depends on structural and institutional factors more than Sharp allows; nonviolent campaigns appear to raise the odds of lasting democracy but do not guarantee it."
+   },
+   "sources": [
+    "src:fa72a0a484"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:liberty-before-democracy-iran",
+   "rel": "see-also",
+   "note": {
+    "fa": "آزادی پیش از دموکراسی در ایران",
+    "en": "liberty before democracy in Iran",
+    "nl": "liberty before democracy in Iran"
+   }
+  },
+  {
+   "to": "phil:two-liberties",
+   "rel": "bridges",
+   "note": {
+    "fa": "آزادی منفی و مثبت",
+    "en": "negative and positive liberty",
+    "nl": "negative and positive liberty"
+   }
+  },
+  {
+   "to": "soc:nonviolent-action-methods-mechanisms",
+   "rel": "see-also",
+   "note": {
+    "fa": "روش‌ها",
+    "en": "methods",
+    "nl": "methods"
+   }
+  }
+ ],
+ "people": [
+  "core:gene-sharp"
+ ],
+ "sources": [
+  "src:b276430b51",
+  "src:fa72a0a484"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
