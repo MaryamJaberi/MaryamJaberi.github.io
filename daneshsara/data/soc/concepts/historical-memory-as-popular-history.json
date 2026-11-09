@@ -1,0 +1,134 @@
+{
+ "id": "soc:historical-memory-as-popular-history",
+ "kind": "concept",
+ "title": {
+  "fa": "حافظهٔ تاریخی: تاریخِ آن‌گونه که مردم امروز می‌پندارند",
+  "en": "Historical memory as the popular reading of the past",
+  "nl": "Historisch geheugen: het volksbeeld van het verleden"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "نویسنده حافظهٔ تاریخی را برداشت همگانی یک جامعه از گذشتهٔ خود می‌داند؛ چیزی نزدیک به روایت شفاهی و عامیانه که لزوماً با پژوهش تاریخی یکی نیست و بر تاریخ‌نویسی و آموزش اثر می‌گذارد.",
+  "en": "The author defines historical memory as a society's shared, folk-like reading of its past, which need not match scholarly history yet shapes historiography and teaching.",
+  "nl": "De auteur ziet het historisch geheugen als het gedeelde volksbeeld van het verleden, dat niet altijd met de geschiedwetenschap overeenkomt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "به نظر نویسنده، حافظهٔ تاریخی همان چیزی است که مردمِ هر دوره «تاریخ» می‌دانند، چه درست باشد چه نه.",
+    "en": "The author says historical memory is whatever people of a given era take to be history, accurate or not.",
+    "nl": "The author says historical memory is whatever people of a given era take to be history, accurate or not."
+   },
+   "sources": [
+    "src:354825380e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از نگاه او این حافظه بیشتر رویدادهای شگفت، افراد استثنایی و کلیات را نگه می‌دارد و جزئیات را کم‌کم محو می‌کند.",
+    "en": "He holds that it keeps mainly striking events, exceptional figures and broad outlines, while details fade.",
+    "nl": "He holds that it keeps mainly striking events, exceptional figures and broad outlines, while details fade."
+   },
+   "sources": [
+    "src:354825380e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او می‌گوید این برداشت می‌تواند غرور و یکپارچگی ملی بسازد، اما تعصب و اغراق هم به‌بار می‌آورد، و مورخ هم خودش از حافظهٔ زمانهٔ خود تأثیر می‌گیرد.",
+    "en": "He argues it can build pride and unity but also bias and exaggeration, and that historians themselves draw on the memory of their own time.",
+    "nl": "He argues it can build pride and unity but also bias and exaggeration, and that historians themselves draw on the memory of their own time."
+   },
+   "sources": [
+    "src:354825380e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمونهٔ او: آداب و رسوم امروز اغلب با شکل اصلی‌شان فاصله دارند، ولی جامعه آن‌ها را همان‌طور که از بزرگ‌ترها شنیده به یاد می‌آورد.",
+    "en": "His example: present customs often differ from their origins, yet society recalls them as elders passed them on.",
+    "nl": "His example: present customs often differ from their origins, yet society recalls them as elders passed them on."
+   },
+   "sources": [
+    "src:354825380e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این تعریف ساده و بدون ارجاع به پژوهش‌های «حافظهٔ جمعی» است؛ در جامعه‌شناسی، هالْباکس حافظهٔ جمعی را ساختهٔ چارچوب‌های اجتماعی امروز می‌داند و نورا از «جاهای حافظه» و تمایز آن با تاریخ‌نگاری می‌گوید. کتاب این مفاهیم را نام نمی‌برد.",
+    "en": "The definition is informal and cites none of the scholarship on collective memory; Halbwachs saw it as shaped by present social frameworks and Nora distinguished memory sites from historiography, neither of which the book names.",
+    "nl": "The definition is informal and cites none of the scholarship on collective memory; Halbwachs saw it as shaped by present social frameworks and Nora distinguished memory sites from historiography, neither of which the book names."
+   },
+   "sources": [
+    "src:9f746365ba",
+    "src:99dce0f8f4"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "مفهوم «سنتِ ساخته‌شده» هم نشان می‌دهد بسیاری از آیین‌های «کهن» نسبتاً تازه ساخته شده‌اند، که با ایدهٔ کتاب دربارهٔ تغییر رسوم هم‌خوان است.",
+    "en": "The idea of 'invented tradition' shows many 'ancient' rites are fairly recent, which fits the book's point about customs shifting.",
+    "nl": "The idea of 'invented tradition' shows many 'ancient' rites are fairly recent, which fits the book's point about customs shifting."
+   },
+   "sources": [
+    "src:b2118a2996"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:false-memory",
+   "rel": "see-also",
+   "note": {
+    "fa": "حافظهٔ فردی هم بازسازی‌کننده و خطاپذیر است",
+    "en": "Individual memory is also reconstructive and error-prone",
+    "nl": "Individual memory is also reconstructive and error-prone"
+   }
+  },
+  {
+   "to": "soc:culture-roles-social-control",
+   "rel": "part-of",
+   "note": {
+    "fa": "فرهنگ و هویت جمعی",
+    "en": "Culture and collective identity",
+    "nl": "Culture and collective identity"
+   }
+  },
+  {
+   "to": "soc:collective-effervescence-ritual",
+   "rel": "see-also",
+   "note": {
+    "fa": "آیین و یادآوری جمعی",
+    "en": "Ritual and collective remembering",
+    "nl": "Ritual and collective remembering"
+   }
+  }
+ ],
+ "people": [
+  "core:maurice-halbwachs",
+  "core:pierre-nora"
+ ],
+ "sources": [
+  "src:354825380e",
+  "src:99dce0f8f4",
+  "src:9f746365ba",
+  "src:b2118a2996"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

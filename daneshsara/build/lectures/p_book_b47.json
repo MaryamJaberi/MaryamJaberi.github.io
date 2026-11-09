@@ -1,0 +1,657 @@
+{
+ "paper": true,
+ "book": {
+  "title": "وضع بشر (The Human Condition)",
+  "author": "هانا آرنت (Hannah Arendt)",
+  "translator": "مسعود علیا",
+  "year": "اصل: ۱۹۵۸؛ ترجمهٔ فارسی: ۱۳۹۰ (چاپ اول، فهرست‌نویسی ۱۳۸۹)",
+  "publisher": "ققنوس، تهران (اصل: University of Chicago Press)",
+  "type": "primary-source",
+  "read": "partial",
+  "pages_or_sections_read": "حدود ۱۷٪ از کتاب (تقریباً صفحه‌های ۱ تا ۸۲ از ۴۹۰): یادداشت مترجم، مقدمهٔ مارگارت کنوون، سپاسگزاری، سرآغاز، فصل ۱ (زندگی وقف عمل و وضع بشر)، فصل ۲ تا آغاز بخش ۶ (حیطهٔ عمومی/خصوصی). فصل‌های زحمت، کار، عمل و عصر مدرن خوانده نشد.",
+  "drive_id": "1BF-Fe3bQKklLlk5-nrLc91ADEo5uT2KY"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "کتاب معتبر و منبع اولیهٔ اندیشهٔ آرنت؛ ردهٔ ۳ (اثر کلاسیک فلسفهٔ سیاسی، نه پژوهش تجربی).",
+  "reasons": [
+   "نویسنده از نام‌آورترین نظریه‌پردازان سیاسی سدهٔ بیستم است و اثر را انتشارات دانشگاه شیکاگو منتشر کرده؛ متن بر پایهٔ درسگفتارهای دانشگاهی (شیکاگو ۱۹۵۶) است.",
+   "کتاب برای اندیشهٔ خود آرنت منبع اولیه است. مقدمهٔ ویراست دوم را پژوهشگر شناخته‌ای (مارگارت کنوون) نوشته است.",
+   "روش آن تحلیل پدیدارشناختی و تاریخی-مفهومی است، نه داده یا آزمون تجربی؛ ارجاع‌ها در پانوشت‌ها هست (در بخش خوانده‌شده).",
+   "ترجمهٔ فارسی از ویراست دوم است و مترجم توضیح اصطلاح‌ها (زحمت/کار/عمل، جهان) را داده؛ دقت ترجمه را با اصل نسنجیدم."
+  ],
+  "best_use_fa": "برای فهم مفهوم‌های آرنت (زحمت/کار/عمل، تکثر، زادگی، امر اجتماعی، حیطهٔ عمومی/خصوصی) منبع اصلی است. برای واقعیت‌های تاریخی دربارهٔ یونان، یا ادعاهای اقتصادی و علمی دربارهٔ جامعهٔ مدرن، منبع کافی نیست و باید با پژوهش تاریخی/تجربی سنجیده شود.",
+  "cautions": [
+   "فقط حدود ۱۷٪ کتاب (متن استخراج‌شدهٔ درایو) خوانده شد؛ فایل ۱۵ مگابایتی برای دانلود/OCR بیش از حد مجاز بود.",
+   "تصویر آرنت از پولیس آرمانی و گزینشی است؛ تمایز تیز عمومی/خصوصی و اجتماعی/سیاسی را بسیاری از منتقدان نمی‌پذیرند.",
+   "ادعاهای او دربارهٔ خودکاری، علم و جامعهٔ مصرف، تحلیل‌های ۱۹۵۰ هستند."
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "اثر کلاسیک و منبع اولیهٔ اندیشهٔ آرنت؛ مدخل آرنت در دانش‌سرا موجود نبود. فقط از بخش خوانده‌شده ۵ مدخل ساخته شد؛ بخش‌های زحمت، کار و عمل (فصل‌های ۳ تا ۶) می‌تواند بعداً اضافه شود.",
+ "summary_of_book_fa": "«وضع بشر» تحلیل آرنت از سه فعالیت بنیادین انسان (زحمت، کار و عمل) و شرایط متناظرشان است، همراه با نقد فلسفهٔ سیاسی سنتی و برآمدن «جامعهٔ زحمتکشان» در عصر مدرن. او می‌گوید عمل و تکثر که شرط سیاست‌اند در سنت فکری نادیده مانده‌اند. کتاب از درسگفتارهای ۱۹۵۶ برآمده و در ۱۹۵۸ منتشر شد.",
+ "entries": [
+  {
+   "id": "arendt-vita-activa-labor-work-action",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "آرنت: زحمت، کار و عمل؛ سه فعالیت بنیادین زندگی وقف عمل",
+    "en": "Arendt: labor, work and action — the three activities of the vita activa",
+    "nl": "Arendt: arbeid, werk en handelen — de drie basisactiviteiten van de vita activa"
+   },
+   "summary": {
+    "fa": "آرنت فعالیت‌های بنیادین انسان را سه چیز می‌داند: زحمت (نگه‌داشتن حیات بدن)، کار (ساختن جهانی از اشیای ماندگار) و عمل (کنش میان انسان‌ها). هر کدام با شرطی از شرایط زیستن بر زمین متناظر است. او می‌گوید سنت فکری غرب این سه را درهم‌آمیخته یا نادیده گرفته است.",
+    "en": "Arendt names three basic human activities: labor (sustaining bodily life), work (building a lasting world of things) and action (acting among other people). Each answers to a condition of life on earth, and she argues the Western tradition blurred or ignored the distinctions.",
+    "nl": "Arendt onderscheidt drie basisactiviteiten: arbeid (het lichaamsleven in stand houden), werk (een blijvende wereld van dingen maken) en handelen (onder anderen optreden). Volgens haar heeft de westerse traditie dit onderscheid vervaagd."
+   },
+   "points": [
+    {
+     "fa": "زحمت به روند زیستی بدن وابسته است: سوخت‌وساز، رشد و زوال. شرط زحمت خودِ زندگی است و حاصلش برای مصرف و بقای فرد و نوع است.",
+     "en": "Labor answers to the biological process of the body—metabolism, growth, decline. Its condition is life itself, and its products serve consumption and the survival of the individual and the species.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کار با غیرطبیعی‌بودن هستی انسان متناظر است. کار جهانی «مصنوع» از اشیا می‌سازد که زندگی‌های فردی درونش جا می‌گیرند و از آن‌ها بیشتر دوام می‌آورد. شرط کار «جهانی‌بودن» است.",
+     "en": "Work corresponds to the unnaturalness of human existence. It builds an artificial world of things that houses individual lives and outlasts them; its condition is worldliness.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "عمل تنها فعالیتی است که مستقیم و بی‌واسطهٔ اشیا میان انسان‌ها جریان دارد. شرطش «تکثر» است: انسان‌ها، نه یک انسان، روی زمین زندگی می‌کنند.",
+     "en": "Action is the only activity that goes on directly between people without the mediation of things. Its condition is plurality: men, not Man, live on earth and inhabit the world.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آرنت می‌گوید تکثر نه‌تنها شرط لازم بلکه شرط کافی زندگی سیاسی است. اگر انسان‌ها نسخه‌های تکرارشونده از یک الگو بودند، عمل تجملی بی‌ضرورت می‌شد.",
+     "en": "He argues that plurality is not just a necessary but the sufficient condition of political life; if humans were endless copies of one pattern, action would be an unnecessary luxury.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او این تمایز را در برابر کاربرد رایج می‌گذارد که labor و work را هر دو «کار» می‌نامد؛ مترجم فارسی برای حفظ تمایز «زحمت» و «کار» را به‌کار برده و برای مثال «تقسیم کار» را «تقسیم زحمت» ترجمه کرده است.",
+     "en": "The distinction cuts against ordinary usage that calls both 'work'; the Persian translator keeps it by rendering labor as زحمت and work as کار, so even 'division of labor' becomes 'division of زحمت'.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به گفتهٔ مقدمه‌نویس، کتاب بخشی از طرحی بزرگ‌تر دربارهٔ عناصر تمامیت‌خواهانه در مارکسیسم بود. آرنت می‌گفت مارکس عمل سیاسی را بر پایهٔ درهم‌آمیختن کار و زحمت می‌فهمد، و «ساختن» جامعه یا تاریخ انسان‌ها را مادهٔ خام می‌کند.",
+     "en": "The introduction explains that the book grew out of a larger project on totalitarian elements in Marxism. Arendt held that Marx misread political action through a blend of work and labor, and that 'making' history or society turns people into raw material.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "طبقه‌بندی سه‌گانه و «سلسله‌مراتب» ضمنی آن (عمل در بالا) نقدهای جدی دارد: بسیاری از منتقدان می‌گویند مرز میان زحمت، کار و عمل در تجربهٔ واقعی تیز نیست و ارزیابی او از کارِ معیشتی و مراقبتی کم‌بها است.",
+     "en": "The three-way scheme and its implicit hierarchy (action on top) is much criticised: many scholars say the lines between labor, work and action are blurrier in lived experience and that she undervalues subsistence and care work.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "نظریه‌پرداز سیاسی آلمانی‌تبار؛ نویسندهٔ «وضع بشر» و «خاستگاه‌های تمامیت‌خواهی»"
+    },
+    {
+     "latin": "Karl Marx",
+     "fa": "کارل مارکس",
+     "years": "1818–1883",
+     "note": "نقطهٔ مقابل آرنت در فهم زحمت و تاریخ"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:political",
+     "rel": "part-of",
+     "fa": "فلسفهٔ سیاسی",
+     "en": "Political philosophy"
+    },
+    {
+     "to": "phil:arendt-natality-plurality",
+     "rel": "see-also",
+     "fa": "زادگی و تکثر، شرط‌های عمل",
+     "en": "Natality and plurality as conditions of action"
+    },
+    {
+     "to": "soc:marx-capitalism-dynamics",
+     "rel": "contrasts",
+     "fa": "فهم متفاوت مارکس از تولید و تاریخ",
+     "en": "Marx's different account of production and history"
+    },
+    {
+     "to": "soc:marx-historical-materialism",
+     "rel": "critiques",
+     "fa": "نقد آرنت بر کاربرد «ساختن» در تاریخ",
+     "en": "Arendt's critique of 'making' history"
+    }
+   ]
+  },
+  {
+   "id": "arendt-natality-plurality",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "زادگی و تکثر: چرا آرنت عمل را «معجزهٔ آغاز» می‌داند",
+    "en": "Natality and plurality: why Arendt sees action as the miracle of beginning",
+    "nl": "Geboortelijkheid en pluraliteit: handelen als wonder van het beginnen"
+   },
+   "summary": {
+    "fa": "آرنت به‌جای میرایی (که هایدگر بر آن تأکید داشت) زادگی را مقولهٔ مرکزی اندیشهٔ سیاسی می‌گیرد: هر تولد آغازی تازه است و تازه‌وارد می‌تواند کاری نو بیاغازد. تکثر، یعنی یگانه‌بودن هر انسان، شرط این آغازهاست و همین عمل را پیش‌بینی‌ناپذیر می‌کند.",
+    "en": "Instead of mortality (Heidegger's emphasis) Arendt makes natality the central category of political thought: each birth is a new beginning and the newcomer can start something new. Plurality, the uniqueness of each person, makes this possible and also makes action unpredictable.",
+    "nl": "In plaats van de sterfelijkheid (Heidegger) stelt Arendt de geboortelijkheid centraal: elke geboorte is een nieuw begin. Pluraliteit maakt dat handelen onvoorspelbaar is."
+   },
+   "points": [
+    {
+     "fa": "از میان سه فعالیت، عمل نزدیک‌ترین رابطه را با زادگی دارد، چون آغازِ تازه‌ای که در تولد هست فقط وقتی در جهان پدیدار می‌شود که تازه‌وارد بتواند چیزی از نو بیاغازد.",
+     "en": "Of the three activities action is most closely tied to natality: the new beginning inherent in birth can only appear in the world because the newcomer can begin something anew.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آرنت می‌گوید رگه‌ای از زادگی در همهٔ فعالیت‌ها هست، و چون عمل فعالیت سیاسی تمام‌عیار است، مقولهٔ اصلی تفکر سیاسی باید زادگی باشد نه میرندگی؛ این برخلاف تفکر مابعدالطبیعی است.",
+     "en": "He says a trace of natality runs through all activities, and since action is the political activity par excellence, natality, not mortality, should be the central category of political thought, in contrast to metaphysical thinking.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به روایت مقدمه‌نویس، آرنت امید به امور انسانی را از این واقعیت می‌گیرد که انسان‌های تازه پیوسته به جهان می‌آیند و می‌توانند زنجیره‌های رویداد را بگسلند یا مسیر دیگری بدهند.",
+     "en": "The introduction reads Arendt as grounding faith and hope in human affairs in the fact that new people keep arriving, each able to interrupt chains of events or redirect them.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "تکثر یعنی همهٔ ما انسانیم، ولی هیچ‌کس عین هیچ کس دیگری نیست که تاکنون زیسته یا خواهد زیست؛ از همین‌رو نتیجهٔ عمل پیش‌بینی‌ناپذیر است.",
+     "en": "Plurality means that we are all human in the same way that nobody is ever identical to anyone who lived, lives or will live; hence the outcome of action cannot be foreseen.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مقدمه‌نویس دو راه‌حل آرنت برای خطرهای عمل را برمی‌شمارد: بخشایش، که زنجیرهٔ انتقام را می‌گسلد، و عهد و پیمان، که «جزیره‌های پیش‌بینی‌پذیری» در دل عدم‌قطعیت می‌سازد. هر دو فقط میان انسان‌ها کار می‌کنند و تنها به کمک دیگران ممکن‌اند.",
+     "en": "The introduction summarises two remedies for the perils of action: forgiveness, which breaks chains of revenge, and promising, which creates islands of predictability in uncertainty. Both work only among people and need others.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "خوانش «زادگی» به‌عنوان بنیاد سیاست، استعاره‌ای فلسفی است نه یک قانون تجربی دربارهٔ رفتار سیاسی. از نظر دانشگاهی بحث‌برانگیز است که چقدر می‌توان از آن برای تحلیل نهادهای واقعی بهره برد.",
+     "en": "Reading natality as the foundation of politics is a philosophical metaphor, not an empirical law of political behaviour. How far it can ground analysis of real institutions is debated in the scholarship.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "نظریه‌پرداز سیاسی آلمانی‌تبار؛ نویسندهٔ «وضع بشر» و «خاستگاه‌های تمامیت‌خواهی»"
+    },
+    {
+     "latin": "Martin Heidegger",
+     "fa": "مارتین هایدگر",
+     "years": "1889–1976",
+     "note": "آرنت در برابر تأکید او بر میرایی، زادگی را می‌نشاند"
+    },
+    {
+     "latin": "Margaret Canovan",
+     "fa": "مارگارت کنوون",
+     "years": "",
+     "note": "نویسندهٔ مقدمهٔ ویراست دوم"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:arendt-vita-activa-labor-work-action",
+     "rel": "part-of",
+     "fa": "سه فعالیت بنیادین",
+     "en": "The three basic activities"
+    },
+    {
+     "to": "soc:preference-falsification",
+     "rel": "bridges",
+     "fa": "غافلگیری انقلاب‌ها و پیش‌بینی‌ناپذیری عمل",
+     "en": "The surprise of revolutions and unpredictability of action"
+    },
+    {
+     "to": "phil:free-will",
+     "rel": "see-also",
+     "fa": "آغازکردن و ارادهٔ آزاد",
+     "en": "Beginning and free will"
+    },
+    {
+     "to": "phil:personal-identity",
+     "rel": "see-also",
+     "fa": "یگانگی هر انسان",
+     "en": "Uniqueness of each person"
+    }
+   ]
+  },
+  {
+   "id": "arendt-polis-household-public-private",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "پولیس و خانه: حیطهٔ عمومی و خصوصی نزد آرنت",
+    "en": "Polis and household: the public and private realms in Arendt",
+    "nl": "Polis en huishouden: het publieke en private domein bij Arendt"
+   },
+   "summary": {
+    "fa": "آرنت می‌گوید در فهم یونانی زندگی خانه قلمرو ضرورت بود و پولیس قلمرو آزادی، گفتار و عمل. به نظر او ترجمهٔ لاتینی و مدرن «سیاسی» به «اجتماعی» این تمایز را محو کرد.",
+    "en": "Arendt says that in Greek understanding the household was the realm of necessity and the polis the realm of freedom, speech and action. She argues that the Latin and modern rendering of 'political' as 'social' erased this distinction.",
+    "nl": "Volgens Arendt was het huishouden het rijk van de noodzaak en de polis dat van vrijheid, spraak en handelen; het moderne 'sociale' heeft dit onderscheid uitgewist."
+   },
+   "points": [
+    {
+     "fa": "به روایت آرنت، تأسیس پولیس برای هر شهروند «زندگی دوم» آورد: او به دو مرتبه تعلق دارد، آنچه از آنِ خود اوست (idion) و آنچه مشترک است (koinon).",
+     "en": "On Arendt's account the founding of the polis gave each citizen a 'second life': he belongs to two orders, what is his own (idion) and what is common (koinon).",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در خانه، نیازهای حیات (خوراک، زادوولد) فرمان می‌راندند و خشونت و فرمانروایی بر بردگان برای چیرگی بر ضرورت موجه بود؛ آزادی تنها در حیطهٔ سیاسی بود و چیرگی بر ضرورت در خانه شرط آن به‌شمار می‌رفت.",
+     "en": "In the household necessity ruled, and force and command over slaves were seen as justified ways to master necessity; freedom lived only in the political realm, for which mastery of necessity at home was the precondition.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "عمل (praxis) و سخن (lexis) دو فعالیتی‌اند که به نظر آرنت زندگی سیاسی را می‌سازند. یافتن واژهٔ درست در زمان درست خود عمل است، و تنها خشونت محض خاموش است.",
+     "en": "Action (praxis) and speech (lexis) are the two activities that, for Arendt, constitute political life. Finding the right words at the right time is itself action, and only sheer violence is mute.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او می‌گوید تعریف ارسطو از انسان به‌عنوان حیوان سیاسی و حیوان دارای سخن، نظر رایج پولیس را بیان می‌کرد و ترجمهٔ لاتین آن به «حیوان اجتماعی» (و «حیوان عقلانی») بدفهمی بزرگی است.",
+     "en": "She argues that Aristotle's formulas—political animal and speaking animal—voiced the polis's common view, and that the Latin 'social animal' (and 'rational animal') is a serious misunderstanding.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "از نظر آرنت، فرمانروایی مطلق و حیطهٔ سیاسی با هم جمع نمی‌شوند؛ قدرت رئیس خانه از قدرت پادشاه «کامل‌تر» نبود بلکه از نوعی دیگر بود (او با استدلال آکویناس مخالف است).",
+     "en": "For Arendt, absolute rule and the political realm are mutually exclusive; the household head's power was not a fuller version of kingly power but a different kind of thing, against Aquinas's comparison.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او همچنین می‌گوید پولیس حریم خانه را نگه می‌داشت نه از سر احترام به مالکیت خصوصی به معنای مدرن، بلکه چون بی‌داشتن جایی از آنِ خود نمی‌شد در امور جهان شرکت کرد.",
+     "en": "She adds that the polis respected the household not out of respect for private property in the modern sense but because one without a place of one's own could not take part in worldly affairs.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "تصویر آرنت از پولیس آرمانی و گزینشی است: آزادی شهروندان بر کار بردگان و زنان بنا بود، و منتقدان (از جمله فمینیست‌ها) می‌گویند جداکردن تیز «ضرورت» از «آزادی» حیطهٔ خصوصی را از سیاست بیرون می‌گذارد. مورخان نیز با ادعای او دربارهٔ جدایی کامل اقتصاد و سیاست در آتن موافق نیستند.",
+     "en": "Arendt's picture of the polis is idealised and selective: citizens' freedom rested on the labour of slaves and women, and critics (including feminist scholars) argue that a sharp necessity/freedom divide excludes the private sphere from politics. Historians also dispute that economy and politics were wholly separate in Athens.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "نظریه‌پرداز سیاسی آلمانی‌تبار؛ نویسندهٔ «وضع بشر» و «خاستگاه‌های تمامیت‌خواهی»"
+    },
+    {
+     "latin": "Aristotle",
+     "fa": "ارسطو",
+     "years": "384–322 پ.م.",
+     "note": "zoon politikon و bios politikos"
+    },
+    {
+     "latin": "Thomas Aquinas",
+     "fa": "توماس آکویناس",
+     "years": "1225–1274",
+     "note": "آرنت او را برای قیاس حکمرانی خانه و دولت نقد می‌کند"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:political",
+     "rel": "part-of",
+     "fa": "فلسفهٔ سیاسی",
+     "en": "Political philosophy"
+    },
+    {
+     "to": "soc:arendt-rise-of-the-social",
+     "rel": "see-also",
+     "fa": "برآمدن امر اجتماعی",
+     "en": "The rise of the social"
+    },
+    {
+     "to": "phil:two-liberties",
+     "rel": "contrasts",
+     "fa": "آزادی سیاسی در برابر آزادی منفی",
+     "en": "Political freedom versus negative liberty"
+    },
+    {
+     "to": "soc:goffman-regions-intimacy",
+     "rel": "bridges",
+     "fa": "پشت‌صحنه و جلوی صحنه در جامعه‌شناسی خُرد",
+     "en": "Back and front stage in micro-sociology"
+    }
+   ]
+  },
+  {
+   "id": "arendt-rise-of-the-social",
+   "wiki": "soc",
+   "field": "theory",
+   "title": {
+    "fa": "برآمدن «امر اجتماعی»: جامعه به‌مثابه خانوادهٔ بزرگ و همرنگی با جماعت",
+    "en": "The rise of 'the social': society as a giant household and conformism",
+    "nl": "De opkomst van 'het sociale': de samenleving als reusachtig huishouden en conformisme"
+   },
+   "summary": {
+    "fa": "به ادعای آرنت «امر اجتماعی» پدیده‌ای نو است که نه خصوصی است نه عمومی و با عصر مدرن و دولت ملی سر برآورد. در آن، تدبیر منزل در سطح ملی سیاست را کنار می‌زند و همرنگی با جماعت جای عمل را می‌گیرد.",
+    "en": "Arendt claims 'the social' is a modern phenomenon, neither private nor public, that arose with the modern age and the nation-state. National housekeeping displaces politics and conformism replaces action.",
+    "nl": "Volgens Arendt is 'het sociale' een modern verschijnsel, noch privé noch publiek, waarin nationaal huishouden de politiek verdringt en conformisme het handelen vervangt."
+   },
+   "points": [
+    {
+     "fa": "آرنت می‌گوید ما جمع مردم را چون خانواده‌ای می‌بینیم که امور روزمره‌اش را باید یک خانه‌داری عظیم ملی اداره کند؛ علم متناسب با آن دیگر علم سیاست نیست بلکه اقتصاد ملی است.",
+     "en": "Arendt says we now see peoples as one family whose daily affairs need a vast national housekeeping, and the matching science is no longer political science but national economics.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به نظر او در جامعه، فعالیت‌های مربوط به حفظ حیات و امرار معاش که پیش‌تر در خانه پنهان بودند وارد حیطهٔ همگانی شده‌اند، و تمایز عمومی/خصوصی برای ما دشوار فهمیدنی شده است.",
+     "en": "In her view, activities of sustaining life that used to stay hidden in the household moved into public view, so the old public/private distinction has become hard for us to grasp.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "اگر سیاست وسیلهٔ حفظ جامعه شود، چه جامعهٔ مؤمنان، مالکان، تولیدکنندگان یا زحمتکشان، آزادی به حیطهٔ اجتماعی می‌رود و خشونت به انحصار حکومت درمی‌آید؛ آرنت این را برخلاف فهم یونانی آزادی می‌داند.",
+     "en": "If politics becomes a means to preserve society—of believers, owners, producers or laborers—freedom moves into the social sphere and force becomes a government monopoly; she sees this as opposed to the Greek understanding of freedom.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به باور او جامعه همواره همرنگی می‌طلبد: اعضایش گویی خانوادهٔ بزرگی با یک عقیده و یک منفعت‌اند. برابری در جامعه برابری همتایان نیست، شبیه برابری اعضای خانواده زیر قدرت رئیس خانه است. او این گرایش را به توکویل ارجاع می‌دهد.",
+     "en": "She holds that society always demands conformism: members act as if they were one huge family with a single opinion and interest. Equality in society is not equality among peers but resembles family members' equality under the household head, a worry she links to Tocqueville.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "آرنت شورش رمانتیک‌ها و روسو علیه جامعه و کشف حیطهٔ شخصی را واکنشی به همین مطالبهٔ همرنگی می‌داند، و شکوفایی رمان و شعر را در همین رابطهٔ امر اجتماعی و امر شخصی می‌بیند.",
+     "en": "She reads Rousseau's and the Romantics' revolt against society, and their discovery of the intimate, as a reaction to this demand, and links the flowering of novel and poetry to the social–personal relation.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "مقدمه‌نویس می‌افزاید آرنت «جامعهٔ زحمتکشان» را مضمون دومی می‌داند که با نقد مارکس عجین است. جامعه‌ای که ممکن است با خودکاری از زحمت رها شود ولی فعالیت‌های والاتری برای آن رهایی نمی‌شناسد.",
+     "en": "The introduction adds that the 'society of laborers' is a second theme tied to her Marx critique: a society that may be freed from labor by automation yet knows no higher activities to be freed for.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "«امر اجتماعی» مفهومی بسیار بحث‌برانگیز است: منتقدان می‌گویند آرنت مسائل اجتماعی مانند فقر و نابرابری را غیرسیاسی می‌شمارد، و دانشمندان علوم اجتماعی ریشهٔ تاریخی این مفهوم را شواهد کافی نمی‌دانند. نظر او در ۱۹۵۸ نگارش شده و با جامعه‌شناسی تجربی هم‌سخن نیست.",
+     "en": "'The social' is a highly contested category: critics say Arendt treats social questions such as poverty and inequality as non-political, and social scientists find the historical story thinly evidenced. It dates from 1958 and does not engage empirical sociology.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "نظریه‌پرداز سیاسی آلمانی‌تبار؛ نویسندهٔ «وضع بشر» و «خاستگاه‌های تمامیت‌خواهی»"
+    },
+    {
+     "latin": "Alexis de Tocqueville",
+     "fa": "آلکسی دو توکویل",
+     "years": "1805–1859",
+     "note": "منبع نگرانی دربارهٔ همرنگی"
+    },
+    {
+     "latin": "Jean-Jacques Rousseau",
+     "fa": "ژان‌ژاک روسو",
+     "years": "1712–1778",
+     "note": "شورش علیه جامعه به‌نام حیطهٔ شخصی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:arendt-polis-household-public-private",
+     "rel": "explains",
+     "fa": "ریشهٔ تمایز عمومی/خصوصی",
+     "en": "Origin of the public/private distinction"
+    },
+    {
+     "to": "soc:theory",
+     "rel": "part-of",
+     "fa": "نظریهٔ اجتماعی",
+     "en": "Social theory"
+    },
+    {
+     "to": "soc:culture-industry-false-needs",
+     "rel": "see-also",
+     "fa": "مصرف و جامعهٔ توده",
+     "en": "Consumption and mass society"
+    },
+    {
+     "to": "soc:reification",
+     "rel": "see-also",
+     "fa": "چیزوارگی",
+     "en": "Reification"
+    },
+    {
+     "to": "soc:protestant-ethic",
+     "rel": "contrasts",
+     "fa": "روایت وبر از ریشهٔ ذهنیت اقتصادی مدرن",
+     "en": "Weber's account of modern economic mentality"
+    }
+   ]
+  },
+  {
+   "id": "arendt-human-condition-not-nature",
+   "wiki": "phil",
+   "field": "life",
+   "title": {
+    "fa": "وضع بشر در برابر طبیعت بشر؛ بیگانگی از زمین و جهان",
+    "en": "The human condition versus human nature; earth alienation and world alienation",
+    "nl": "De menselijke conditie versus de menselijke natuur; vervreemding van aarde en wereld"
+   },
+   "summary": {
+    "fa": "آرنت میان «وضع بشر» (شرایطی که ما را مشروط می‌کنند) و «طبیعت بشر» فرق می‌گذارد و می‌گوید تعریف‌کردن ذات انسان شبیه پریدن از روی سایهٔ خود است. در پیشگفتار، پرتاب ماهواره و خودکاری را نشانهٔ دو بیگانگی مدرن می‌خواند: بیگانگی از زمین و بیگانگی از جهان مشترک.",
+    "en": "Arendt distinguishes the human condition (the conditions that shape us) from human nature, and says defining man's essence is like jumping over one's own shadow. In the prologue she reads the first satellite and automation as signs of two modern alienations: from the earth and from the common world.",
+    "nl": "Arendt onderscheidt de menselijke conditie van de menselijke natuur. In de proloog ziet ze satelliet en automatisering als tekenen van vervreemding van de aarde en van de gemeenschappelijke wereld."
+   },
+   "points": [
+    {
+     "fa": "انسان‌ها موجوداتی مشروط‌اند، چون هر چه با آن رابطه می‌گیرند بلافاصله بخشی از شرایط وجود آن‌ها می‌شود، حتی اشیایی که خودشان ساخته‌اند.",
+     "en": "Humans are conditioned beings because whatever they come into contact with at once becomes part of the conditions of their existence—even things they themselves made.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "وضع بشر همان طبیعت بشر نیست. حتی فهرست کامل فعالیت‌ها و توانایی‌ها صفات ذاتی ما را نمی‌سازد، و تلاش برای تعریف طبیعت بشر معمولاً به ساختن خدایی فلسفی می‌انجامد.",
+     "en": "The human condition is not human nature: even the fullest list of our activities and capacities would not give essential traits, and attempts to define human nature tend to end in a philosophers' god.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او به پرسش آگوستین دربارهٔ اینکه انسان «برای خودش مسئله شده» اشاره می‌کند و می‌گوید پرسش «ما کیستیم؟» با شیوه‌های شناخت چیزها پاسخ نمی‌گیرد.",
+     "en": "She recalls Augustine's remark that man has become a question to himself and argues that 'who are we?' cannot be answered with the methods we use to know things.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به نظر آرنت علم مدرن از «نقطهٔ ارشمیدسی» بیرون از زمین به طبیعت نگریسته و به همین دلیل پیروز شده است. این امر ما را نوعی کیهان‌نشین کرده است که می‌تواند در گفتار عادی بیان‌ناپذیر باشد.",
+     "en": "She says modern natural science succeeded by looking at nature from an Archimedean point outside the earth, which risks making our knowledge unspeakable in ordinary language.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او پرتاب اولین ماهواره (۱۹۵۷) را رویدادی با اهمیتی بی‌همتا می‌خواند و می‌گوید پرسش اینکه با دانش جدید چه کنیم را علم نمی‌تواند تعیین کند، چون پرسشی سیاسی است.",
+     "en": "She calls the first satellite launch (1957) an event of unmatched importance, and says the question of what to do with new knowledge cannot be settled by science since it is a political one.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "خودکاری قرار است انسان را از بار زحمت رها کند، اما آرنت می‌ترسد جامعه‌ای از زحمتکشان فارغ از زحمت بماند که هیچ فعالیت والاتری نمی‌شناسد. او پیشنهادش را فقط «فکر کردن به آنچه می‌کنیم» می‌نامد.",
+     "en": "Automation promises to free humans from labor, yet Arendt fears a society of laborers without labor that knows no higher activity. Her proposal, she says, is simply to think what we are doing.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پیش‌بینی‌های آرنت دربارهٔ خودکاری و ساخت «جامعهٔ زحمتکشان» تحلیل‌های ۱۹۵۰اند و با شواهد تجربی اقتصاد کار معاصر آزموده نشده‌اند؛ همچنین بی‌اعتمادی او به داوری سیاسی دانشمندان نظری فلسفی است نه یافتهٔ تجربی.",
+     "en": "Arendt's forecasts on automation and the 'laborers' society' are 1950s diagnoses, not tested against empirical labour economics, and her distrust of scientists' political judgement is a philosophical stance rather than an empirical finding.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Hannah Arendt",
+     "fa": "هانا آرنت",
+     "years": "1906–1975",
+     "note": "نظریه‌پرداز سیاسی آلمانی‌تبار؛ نویسندهٔ «وضع بشر» و «خاستگاه‌های تمامیت‌خواهی»"
+    },
+    {
+     "latin": "Augustine of Hippo",
+     "fa": "آگوستین",
+     "years": "354–430",
+     "note": "پرسش «من برای خودم مسئله شده‌ام»"
+    },
+    {
+     "latin": "Archimedes",
+     "fa": "ارشمیدس",
+     "years": "حدود ۲۸۷–۲۱۲ پ.م.",
+     "note": "نقطهٔ اتکای ارشمیدسی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:life",
+     "rel": "part-of",
+     "fa": "فلسفهٔ زندگی",
+     "en": "Philosophy of life"
+    },
+    {
+     "to": "phil:arendt-vita-activa-labor-work-action",
+     "rel": "see-also",
+     "fa": "سه فعالیت بنیادین",
+     "en": "The three activities"
+    },
+    {
+     "to": "phil:personal-identity",
+     "rel": "see-also",
+     "fa": "من کیستم؟",
+     "en": "Who am I?"
+    },
+    {
+     "to": "phil:flying-man",
+     "rel": "contrasts",
+     "fa": "انسان معلق و تعریف ذات انسان",
+     "en": "The floating man and defining man's essence"
+    },
+    {
+     "to": "phil:capabilities",
+     "rel": "bridges",
+     "fa": "قابلیت‌های بشری و شرایط آن‌ها",
+     "en": "Human capabilities and their conditions"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "آرنت، هانا. وضع بشر. ترجمهٔ مسعود علیا. تهران: ققنوس، ۱۳۹۰ (ویراست دوم اصل شامل مقدمهٔ مارگارت کنوون، ۱۹۹۸)؛ اصل: Arendt, H. The Human Condition. University of Chicago Press, 1958.",
+   "tier": 3
+  },
+  {
+   "cite": "Arendt, H. (1958). The Human Condition. Chicago: University of Chicago Press.",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "متن Drive (read_file_content) خوانا و غیرمعکوس بود (نیاز به rev.py نبود) اما فقط حدود ۱۰۹ هزار نویسه، یعنی نزدیک ۱۷٪ کتاب (تا حدود ص ۸۲)، برگردانده شد. دانلود کامل با خطای «بیش از ۱۰ مگابایت» رد شد، پس OCR ممکن نبود. در بخش خوانده‌شده پراکندگی جزئی (واژه‌های جابه‌جا و فاصله‌های اضافی) بود ولی معنا قابل اتکا بود. هیچ عدد یا نقل مستقیم بلندی استفاده نشد. گزاره‌های «contested» از دانش عمومی دربارهٔ نقدهای آرنت‌پژوهی است.",
+ "lecture": "وضع بشر (The Human Condition)",
+ "speaker": "هانا آرنت (Hannah Arendt)",
+ "channel": "ققنوس، تهران (اصل: University of Chicago Press)"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "phil:locke-empiricism-tabula-rasa",
+ "kind": "concept",
+ "title": {
+  "fa": "لاک: ذهن همچون لوح سفید و آغاز تجربه‌گرایی",
+  "en": "Locke: the mind as blank slate and the start of empiricism",
+  "nl": "Locke: de geest als onbeschreven blad en het begin van het empirisme"
+ },
+ "aliases": [],
+ "parent": "phil:epistemology",
+ "field": "phil:epistemology",
+ "summary": {
+  "fa": "لاک می‌گوید هیچ اصل فطری‌ای در ذهن نیست و همهٔ ایده‌ها از دو سرچشمه می‌آیند: حس بیرونی و نگریستن ذهن به کار خودش. دانش تجربی فقط محتمل است، اما با داوری سنجیده می‌توان میزان احتمال را سنجید.",
+  "en": "Locke denies innate principles: all ideas come from two sources, sensation and reflection on the mind's own workings. Empirical knowledge is only probable, yet judgment can gauge how probable.",
+  "nl": "Locke ontkent aangeboren beginselen: alle ideeën komen uit zintuiglijke ervaring en reflectie. Empirische kennis is slechts waarschijnlijk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "لاک اصول فطری همگانی را رد می‌کند: کودکان و کم‌خردان از اصولی مانند «هر چیز همان است که هست» آگاه نیستند، پس اجماع همگانی در کار نیست.",
+    "en": "Locke rejects universal innate principles: children and the severely impaired do not know maxims like 'whatever is, is', so there is no universal consensus.",
+    "nl": "Locke rejects universal innate principles: children and the severely impaired do not know maxims like 'whatever is, is', so there is no universal consensus."
+   },
+   "sources": [
+    "src:6dffa2e8b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ذهن در آغاز مانند لوحی سفید است و همهٔ مواد اندیشیدن از تجربه می‌آید؛ تجربه دو چشمه دارد: حس چیزهای بیرونی و بازاندیشی (نگاه درونی به کار ذهن).",
+    "en": "The mind starts as a blank sheet and all material for thought comes from experience, which has two fountains: sensation of external things and reflection on the mind's own operations.",
+    "nl": "The mind starts as a blank sheet and all material for thought comes from experience, which has two fountains: sensation of external things and reflection on the mind's own operations."
+   },
+   "sources": [
+    "src:6dffa2e8b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به روایت کتاب، لاک مانند دکارت می‌پذیرفت که دانش برآمده از حس فقط احتمالی است، اما بر خلاف او برای این‌که همهٔ آن را بی‌اعتبار کند به داوری معمولی و استقرا تکیه کرد.",
+    "en": "As the book tells it, Locke agreed with Descartes that sense-based knowledge is only probable, but instead of discarding it relied on common sense and induction to judge its degree of probability.",
+    "nl": "As the book tells it, Locke agreed with Descartes that sense-based knowledge is only probable, but instead of discarding it relied on common sense and induction to judge its degree of probability."
+   },
+   "sources": [
+    "src:6dffa2e8b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لاک سه گونه دانستن را برمی‌شمرد: شهودی (دریافت مستقیم رابطهٔ دو ایده)، اثباتی (از راه استدلال، مانند ریاضیات) و حسی (آگاهی از چیزهای بیرونی)؛ دانش حسی کم‌یقین‌تر از دو دیگر ولی در معرض تردید جدی نیست.",
+    "en": "Locke lists three kinds of knowing: intuitive (direct grasp of an idea relation), demonstrative (by reasoning, as in mathematics) and sensitive (of external things); the last is less certain than the first two but not seriously doubtful.",
+    "nl": "Locke lists three kinds of knowing: intuitive (direct grasp of an idea relation), demonstrative (by reasoning, as in mathematics) and sensitive (of external things); the last is less certain than the first two but not seriously doubtful."
+   },
+   "sources": [
+    "src:6dffa2e8b9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اصل «لوح سفید» و رد کامل شهودهای فطری امروز بسیار ساده‌شده است؛ روان‌شناسی و علوم شناختی نشان می‌دهند نوزاد با گرایش‌ها و ساختارهای شناختی زیستی به جهان می‌آید.",
+    "en": "The pure 'blank slate' and total rejection of innate structure is now seen as too simple; developmental and cognitive science show infants arrive with biologically given dispositions and cognitive structures.",
+    "nl": "The pure 'blank slate' and total rejection of innate structure is now seen as too simple; developmental and cognitive science show infants arrive with biologically given dispositions and cognitive structures."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:epistemology",
+   "rel": "part-of",
+   "note": {
+    "fa": "زیرمجموعهٔ معرفت‌شناسی",
+    "en": "Part of epistemology",
+    "nl": "Part of epistemology"
+   }
+  },
+  {
+   "to": "soc:enlightenment-break",
+   "rel": "see-also",
+   "note": {
+    "fa": "زمینهٔ گذار از حکمت مدرسی به روشنگری",
+    "en": "The shift from scholasticism to the Enlightenment",
+    "nl": "The shift from scholasticism to the Enlightenment"
+   }
+  },
+  {
+   "to": "phil:science",
+   "rel": "bridges",
+   "note": {
+    "fa": "پیوند با روش علمی استقرایی",
+    "en": "Links to the inductive scientific method",
+    "nl": "Links to the inductive scientific method"
+   }
+  }
+ ],
+ "people": [
+  "core:john-locke",
+  "core:ren-descartes",
+  "core:pierre-gassendi"
+ ],
+ "sources": [
+  "src:6dffa2e8b9"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
