@@ -1,0 +1,403 @@
+{
+ "paper": true,
+ "book": {
+  "title": "عقل در تاریخ",
+  "author": "گئورگ ویلهلم فریدریش هگل (G. W. F. Hegel)",
+  "translator": "حمید عنایت",
+  "year": "چاپ نخست ۱۳۷۹؛ چاپ چهارم ۱۳۸۷ (نسخهٔ موجود)",
+  "publisher": "شفیعی، تهران",
+  "type": "primary-source",
+  "read": "partial",
+  "pages_or_sections_read": "OCR صفحه‌های اطلاعات کتاب، فهرست، پیشگفتار مترجم (حدود ۲۰ صفحه)، و حدود ۱۰۰ صفحهٔ آغازین متن اصلی (گونه‌های تاریخ‌نویسی، مفهوم روح، نیرنگ عقل، مردان تاریخ جهانی)؛ بخش‌های میانی و پایانی (آفریقا، آسیا، تقسیم‌بندی تاریخ جهانی، افزوده‌ها) خوانده نشد",
+  "drive_id": "1ajx9zqzp1xDl72Wn1IpIWDaqukkfTIJR"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "ترجمهٔ فارسی معتبر از متن هگل (مقدمهٔ درس‌های فلسفهٔ تاریخ) همراه پیشگفتار انتقادی مترجم؛ منبع اولیه برای اندیشهٔ هگل، نه منبع واقعیت تاریخی.",
+  "reasons": [
+   "نویسنده فیلسوف بسیار شناخته‌شده و اثر در دورهٔ دانشگاهی و رسمی مطالعات هگل مرجع است؛ اما متن مجموعه‌ای از یادداشت‌های درس است که پس از مرگ هگل از روی یادداشت‌های شاگردان و خودش تدوین شده است، نه کتابی که هگل خود منتشر کرده باشد",
+   "مترجم، حمید عنایت، اندیشمند سیاسی با تحصیلات آکسفورد، پیشگفتاری انتقادی و پاورقی‌های توضیحی افزوده است که کار را برای خواننده فارسی مطمئن‌تر می‌کند",
+   "متن اصلی هگل ارجاع علمی به معنای امروزی ندارد؛ ادعاهای تاریخی او دربارهٔ اقوام و دوره‌ها بر منابع و دانش اوایل قرن نوزدهم تکیه دارد و امروز منسوخ یا مناقشه‌برانگیز است",
+   "فلسفهٔ تاریخ هگل غایت‌گراست و ادعاهای متافیزیکی‌اش آزمون‌پذیر نیست؛ برای فهم اندیشهٔ هگل منبع دست‌اول است"
+  ],
+  "best_use_fa": "منبع خوب برای: فهم اندیشهٔ هگل دربارهٔ تاریخ، آزادی، روح قومی و نیرنگ عقل، و برای دیدن چگونگی خوانش ایرانی او. منبع مناسب نیست برای: واقعیت‌های تاریخی دربارهٔ آسیا، آفریقا یا ایران، یا به‌عنوان ارزیابی بی‌طرفانهٔ تمدن‌ها.",
+  "cautions": [
+   "بخش‌هایی از متن (مانند نگاه به آفریقا و آسیا که در فهرست آمده) از نگاه امروز اروپامحور و گاه تحقیرآمیز شمرده می‌شود؛ این بخش‌ها خوانده نشد و حکم دربارهٔ جزئیات آنها داده نمی‌شود",
+   "OCR فارسی با کیفیت متوسط است؛ اعداد، تاریخ‌ها و نام‌های لاتین ممکن است خراب باشند",
+   "فایل نشان‌دهندهٔ پرچم ناشر PDF.tarikhema.org است (نسخهٔ اسکن‌شده با واترمارک)"
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "منبع اولیهٔ معتبر برای اندیشهٔ هگل با ترجمهٔ آشنا و پیشگفتار انتقادی؛ مدخل‌ها فقط دیدگاه هگل را بیان می‌کنند و نقدهای رایج را کنارش می‌گذارند.",
+ "summary_of_book_fa": "ترجمهٔ حمید عنایت از مقدمهٔ «درس‌گفتارهای فلسفهٔ تاریخ» هگل است که نشان می‌دهد تاریخ جهانی چگونه روند تحقق آگاهی روح از آزادی است. پیشگفتار مترجم زمینهٔ تاریخی و نقدهای مهم را توضیح می‌دهد.",
+ "entries": [
+  {
+   "id": "hegel-three-ways-of-writing-history",
+   "wiki": "phil",
+   "field": "epistemology",
+   "title": {
+    "fa": "هگل: سه شیوهٔ تاریخ‌نویسی و جایگاه تاریخ فلسفی",
+    "en": "Hegel: three ways of writing history and the place of philosophical history",
+    "nl": "Hegel: drie manieren van geschiedschrijving"
+   },
+   "summary": {
+    "fa": "هگل در آغاز درس‌هایش تاریخ‌نویسی را به سه گونه بخش می‌کند: تاریخ دست‌اول، تاریخ اندیشیده و تاریخ فلسفی. هر گونه از ابزاری دیگر کار می‌گیرد و فقط گونهٔ سوم می‌خواهد معنای کلی رویدادها را بجوید.",
+    "en": "At the opening of his lectures Hegel divides historiography into original, reflective and philosophical history. Each uses a different faculty, and only the third seeks the overall meaning of events.",
+    "nl": "Hegel verdeelt de geschiedschrijving in oorspronkelijke, reflecterende en filosofische geschiedenis; alleen de laatste zoekt de algehele betekenis van de gebeurtenissen."
+   },
+   "points": [
+    {
+     "fa": "تاریخ دست‌اول گزارش شاهدان عینی است. مورخ در همان فضای فکری و فرهنگی رویدادها زندگی می‌کند، پس روح زمانه‌اش را بدون فاصله بازتاب می‌دهد؛ هگل هرودوت و توکودیدس را نمونه می‌آورد.",
+     "en": "Original history is the account of eyewitnesses. The historian lives in the same mental world as the events and so mirrors the spirit of his age without distance; Hegel gives Herodotus and Thucydides as examples.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "تاریخ اندیشیده از زمان و مکان مورخ فاصله می‌گیرد و گذشته را با نیروی فهم دوباره می‌سازد. به گفتهٔ هگل این گونه خود شاخه‌هایی دارد: تاریخ جامع، تاریخ عملی (درس‌آموز)، تاریخ انتقادی (تاریخِ تاریخ‌نگاری) و تاریخ تخصصی (مثلاً حقوق، هنر، دین).",
+     "en": "Reflective history steps back from the historian's own time and place and rebuilds the past through understanding. Hegel lists sub-kinds: general, pragmatic (moral lessons), critical (history of historiography) and specialised history (law, art, religion).",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "تاریخ فلسفی با عقل (نه فقط حس یا فهم) به گذشته می‌نگرد: فهم جدایی‌ها را می‌بیند و عقل پیوستگی‌ها را. هدف آن یافتن معنا و غایت در سیر تاریخ جهانی است.",
+     "en": "Philosophical history approaches the past with reason (not only perception or understanding): understanding sees separations, reason sees connections. Its aim is to find meaning and purpose in the course of world history.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "حمید عنایت در پیشگفتار مترجم، شاهنامه را نمونهٔ ایرانیِ «تاریخ عملی» می‌داند، چون هدف فردوسی تقویت شعور قومی ایرانیان زمانهٔ خود بوده است. این مثال از مترجم است، نه از هگل.",
+     "en": "In his translator's preface Hamid Enayat treats the Shahnameh as a Persian example of 'pragmatic history', since Ferdowsi aimed to strengthen his contemporaries' sense of national identity. This example is the translator's, not Hegel's.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "این تقسیم‌بندی ابزار مفیدی برای بحث دربارهٔ تاریخ‌نگاری است، اما اجماع پژوهشی امروز تاریخ را کمتر با یک «غایت» می‌سنجد و بیشتر بر روش، سند و تفسیر چندگانه تکیه دارد؛ تاریخ فلسفی به معنای هگلی در تاریخ‌نگاری حرفه‌ای جایگاه مرکزی ندارد.",
+     "en": "The scheme is a useful tool for thinking about historiography, but mainstream historical scholarship today rests more on method, sources and plural interpretation than on a single purpose; Hegelian philosophical history is not central to professional historiography.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Georg Wilhelm Friedrich Hegel",
+     "fa": "گئورگ ویلهلم فریدریش هگل",
+     "years": "1770–1831",
+     "note": "فیلسوف آلمانی؛ سخنرانی‌های فلسفهٔ تاریخ را در برلین ارائه کرد"
+    },
+    {
+     "latin": "Hamid Enayat",
+     "fa": "حمید عنایت",
+     "years": "1932–1976",
+     "note": "مترجم و نظریه‌پرداز سیاسی ایرانی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:hegel-phenomenology-spirit",
+     "rel": "part-of",
+     "fa": "بخشی از فلسفهٔ کلی هگل دربارهٔ روح و آزادی",
+     "en": "Part of Hegel's wider philosophy of spirit and freedom"
+    },
+    {
+     "to": "soc:enlightenment-break",
+     "rel": "see-also",
+     "fa": "زمینهٔ تاریخ‌نگری پس از روشنگری",
+     "en": "Background: historical thinking after the Enlightenment"
+    }
+   ]
+  },
+  {
+   "id": "hegel-cunning-of-reason",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "نیرنگ عقل نزد هگل",
+    "en": "Hegel's cunning of reason",
+    "nl": "Hegels sluwheid van de rede"
+   },
+   "summary": {
+    "fa": "هگل می‌گوید عقل در تاریخ از راه سودها و شورهای شخصی آدمیان پیش می‌رود، بی‌آنکه خود در ستیزه آسیب ببیند. این را «نیرنگ عقل» می‌نامد و بدین‌سان ستم و رنج تاریخ را به غایتی کلی پیوند می‌دهد.",
+    "en": "Hegel holds that reason advances through the private interests and passions of individuals while itself staying unharmed. He calls this the 'cunning of reason', linking the violence and suffering of history to a universal end.",
+    "nl": "Volgens Hegel werkt de rede via de particuliere belangen en hartstochten van mensen, zelf onaangetast: de 'list van de rede'."
+   },
+   "points": [
+    {
+     "fa": "به گفتهٔ هگل، امر کلی خودش وارد کشمکش و خطر نمی‌شود؛ سودها و عواطف جزئی را به میدان می‌فرستد تا در برخورد با هم فرسوده شوند، و از درون همین ستیزه و نابودی، چیزی کلی سر برمی‌آورد.",
+     "en": "In Hegel's account the universal does not itself enter conflict or danger; it sends particular interests and passions into the field to wear each other out, and out of this clash and destruction something universal emerges.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او می‌گوید بهای هستی گذرا را «افراد» و عواطفشان می‌پردازند، نه خود امر کلی. به این معنا افراد در مقام وسیله دیده می‌شوند، اما هگل می‌افزاید که در هر فرد جنبه‌ای هست (اخلاق و دینداری) که او را صرفاً وسیله نمی‌کند.",
+     "en": "He says the price of finite existence is paid by individuals and their passions, not by the universal itself. Individuals are thus treated as means, yet Hegel adds that each person has a side (morality, religiosity) that keeps them from being merely a means.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "هگل سزار را مثال می‌زند: سزار برای حفظ جان و منصب خود جنگید، اما کارش ناخواسته به پایان نظام جمهوری روم و به غایتی ضروری در تاریخ روم انجامید.",
+     "en": "Hegel gives Caesar as an example: he fought to protect his own life and office, yet his action unintentionally ended the Roman republic and served an end Hegel sees as necessary in Roman history.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "عنایت در پیشگفتار می‌نویسد هگل رویدادهای ناسازگار با پیشرفت را «انحراف زودگذر» یا استثنایی می‌شمرد که قاعده را تأیید می‌کنند، و پرسش انتقادی می‌گذارد: قرن بیستم با همهٔ پیشرفت دانش، جنایات سهمگین هم دید.",
+     "en": "In his preface Enayat notes that Hegel treats events at odds with progress as passing deviations or exceptions that confirm the rule, and poses the critical question: the twentieth century combined great scientific progress with enormous crimes.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "«نیرنگ عقل» یک آموزهٔ متافیزیکی است و با روش علمی آزمون‌پذیر نیست؛ منتقدان می‌گویند هر فاجعه‌ای را می‌توان پس از وقوع به‌عنوان «خدمت به عقل» بازتفسیر کرد، و این بازتفسیر رنج قربانیان را توجیه می‌کند.",
+     "en": "The 'cunning of reason' is a metaphysical doctrine, not testable by scientific method; critics argue any catastrophe can be reinterpreted after the fact as 'serving reason', which risks justifying the suffering of victims.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Georg Wilhelm Friedrich Hegel",
+     "fa": "گئورگ ویلهلم فریدریش هگل",
+     "years": "1770–1831",
+     "note": "فیلسوف آلمانی؛ سخنرانی‌های فلسفهٔ تاریخ را در برلین ارائه کرد"
+    }
+   ],
+   "links": [
+    {
+     "to": "soc:teleology-paradise-hegel-marx",
+     "rel": "see-also",
+     "fa": "خطر سیاسی نگاه غایت‌گرایانه به تاریخ",
+     "en": "The political risk of teleological views of history"
+    },
+    {
+     "to": "soc:marx-break-from-hegel",
+     "rel": "contrasts",
+     "fa": "مارکس همین طرح را به شیوهٔ تولید برمی‌گرداند",
+     "en": "Marx re-grounds the scheme in the mode of production"
+    },
+    {
+     "to": "phil:hegel-phenomenology-spirit",
+     "rel": "part-of",
+     "fa": "در چارچوب فلسفهٔ روح",
+     "en": "Within the philosophy of spirit"
+    }
+   ]
+  },
+  {
+   "id": "hegel-world-historical-individuals",
+   "wiki": "phil",
+   "field": "ethics",
+   "title": {
+    "fa": "مردان تاریخ جهانی و سنجش اخلاقی رهبران نزد هگل",
+    "en": "Hegel's world-historical individuals and the moral judgement of leaders",
+    "nl": "Hegels wereldhistorische individuen en de morele beoordeling van leiders"
+   },
+   "summary": {
+    "fa": "هگل می‌گوید بزرگان تاریخ کسانی‌اند که هدف شخصی‌شان با نیاز بنیادین زمانه یکی می‌شود. او معیار اخلاق فردی را برای داوری دربارهٔ آنان ناکافی می‌داند و منتقدان همین را خطرناک می‌دانند.",
+    "en": "Hegel says the great figures of history are those whose personal aims coincide with the deep need of their age. He finds individual moral standards inadequate for judging them, which critics find dangerous.",
+    "nl": "Volgens Hegel vallen de persoonlijke doelen van grote historische figuren samen met de diepe behoefte van hun tijd; individuele moraal acht hij ontoereikend om hen te beoordelen."
+   },
+   "points": [
+    {
+     "fa": "از دید هگل، آدم‌های بزرگ تاریخ جهانی کسانی هستند که خواستِ خصوصی‌شان در گوهر خود همان خواستِ روح جهانی است؛ سزار و اسکندر نمونه‌اند.",
+     "en": "For Hegel the great figures of world history are those whose private aims are in substance the will of the world spirit; Caesar and Alexander are his examples.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "او به «روانشناسان» که کار بزرگان را فقط به جاه‌طلبی و هوس نسبت می‌دهند می‌تازد و می‌گوید این نگاه کار را با انگیزه‌اش یکی می‌گیرد و فقط نکته‌های کوچک زندگی خصوصی را برجسته می‌کند.",
+     "en": "He attacks 'psychologising' accounts that reduce great deeds to ambition and passion, saying they confuse outcome with motive and dwell on small details of private life.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به گفتهٔ عنایت، هگل معیار داوری دربارهٔ رهبران را این می‌داند که تا چه اندازه آرزوی شخصی خود را با آرمان کلی قومشان هماهنگ کرده‌اند؛ عنایت این را به دیدگاه ماکیاول دربارهٔ سیاست و اخلاق نزدیک می‌یابد و می‌گوید رهبران ناسیونالیست قرن‌های نوزدهم و بیستم از هر دو نتایج همانندی گرفتند.",
+     "en": "According to Enayat, Hegel's criterion for judging leaders is how far they reconciled personal ambition with their people's universal aspiration; Enayat finds this close to Machiavelli on politics and morality, noting that nationalist leaders of the nineteenth and twentieth centuries drew similar conclusions from both.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "پژوهش دانشگاهی معمولاً این بخش را یکی از نقاط مناقشه‌برانگیز هگل می‌داند، چون سنجهٔ پیروزی تاریخی را جانشین سنجهٔ اخلاقی می‌کند؛ دیدگاه مقابل (اخلاق کانتی یا حقوق بشر) می‌گوید هیچ غایت تاریخی ظلم به افراد را موجه نمی‌کند.",
+     "en": "Academic commentary generally treats this as one of Hegel's most contested passages because it substitutes historical success for moral criteria; the opposing view (Kantian ethics or human rights) holds that no historical end justifies wronging individuals.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Georg Wilhelm Friedrich Hegel",
+     "fa": "گئورگ ویلهلم فریدریش هگل",
+     "years": "1770–1831",
+     "note": "فیلسوف آلمانی؛ سخنرانی‌های فلسفهٔ تاریخ را در برلین ارائه کرد"
+    },
+    {
+     "latin": "Niccolo Machiavelli",
+     "fa": "نیکولو ماکیاولی",
+     "years": "1469–1527",
+     "note": "اندیشمند سیاسی ایتالیایی"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:two-liberties",
+     "rel": "contrasts",
+     "fa": "دو مفهوم آزادی و حدّ اقتدار بر فرد",
+     "en": "Two liberties and the limits of authority over the individual"
+    },
+    {
+     "to": "soc:revolution-or-reform",
+     "rel": "see-also",
+     "fa": "بحث خشونت سیاسی و غایت تاریخ",
+     "en": "Debate on political violence and historical purpose"
+    }
+   ]
+  },
+  {
+   "id": "hegel-spirit-of-a-people-four-stages",
+   "wiki": "phil",
+   "field": "political",
+   "title": {
+    "fa": "روح قومی و چهار مرحلهٔ تاریخ جهانی نزد هگل",
+    "en": "Hegel's spirit of a people and the four stages of world history",
+    "nl": "Hegels volksgeest en de vier fasen van de wereldgeschiedenis"
+   },
+   "summary": {
+    "fa": "هگل تاریخ جهانی را گذار آگاهی روح از آزادی می‌داند که در هر مرحله در اصل ویژهٔ یک قوم تجسم می‌یابد. عنایت چهار مرحلهٔ شرقی، یونانی، رومی و ژرمانیک-مسیحی را یادآور می‌شود و بر تفسیرهای سیاسی گوناگونش اشاره می‌کند.",
+    "en": "Hegel sees world history as spirit's growing consciousness of freedom, each stage embodied in the principle of one people. Enayat recalls the four stages (Oriental, Greek, Roman, Germanic-Christian) and the divergent political readings of the scheme.",
+    "nl": "Hegel ziet de wereldgeschiedenis als het groeiende bewustzijn van vrijheid van de geest, in elke fase belichaamd in het beginsel van een volk."
+   },
+   "points": [
+    {
+     "fa": "هگل غایت روح جهانی در تاریخ را تحقق ذات خود، یعنی آزادی، می‌داند. تاریخ جهانی به گفتهٔ او گزارش کوشش روح برای دانستن این است که در نفس خود چیست.",
+     "en": "Hegel takes the aim of the world spirit in history to be realising its own essence, freedom. World history, he says, records spirit's effort to know what it is in itself.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "روح قومی، بروز روح جهانی در یک جمعیت معین است. وجدان همگانی هر قوم (حقوق، اخلاق، دین) آگاهی آن قوم از خویش است و هر قوم از فضای آن پرورش می‌یابد.",
+     "en": "The spirit of a people is the manifestation of world spirit in a particular population. A people's shared consciousness (law, morality, religion) is its self-awareness, and individuals grow up within it.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "هگل روند تکاملی هر قوم را شامل پایداری نهادها و سپس فرسودگی و فروپاشی آن می‌داند تا روح جهانی بتواند به مرحلهٔ بعد برود. گذار هر مرحله نیازمند شکستن معیارهای کلیِ پیشین است.",
+     "en": "Hegel describes each people's course as first sustaining its institutions and then their exhaustion and collapse so that world spirit can move on; each transition requires breaking the earlier universal standards.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "عنایت تأکید می‌کند که تفسیر این سروری فرهنگی یا سیاسی به سلیقهٔ مفسران بستگی داشته: پوپر این اندیشه را در پیدایش فاشیسم اثرگذار می‌دانست، اما اوینری معتقد بود مقصود هگل رهبری فرهنگی است.",
+     "en": "Enayat stresses that interpreting this primacy as cultural or political has depended on the commentator's own politics: Popper saw the idea as feeding into fascism, while Avineri argued Hegel meant cultural leadership.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "طرح چهار مرحله‌ای هگل امروز اروپامحور شمرده می‌شود، چون جایگاه ژرمانیک-مسیحی را اوج می‌گیرد و تمدن‌های دیگر را مرحلهٔ پیشین می‌انگارد. مورخان معاصر چنین سلسله‌مراتب خطی‌ای را نمی‌پذیرند. (مؤلف این مدخل بخش‌های آسیا و آفریقای کتاب را نخوانده است.)",
+     "en": "Hegel's four-stage scheme is now widely regarded as Eurocentric, since it crowns the Germanic-Christian world and treats other civilisations as earlier stages. Contemporary historians reject such a linear hierarchy. (The editor did not read the book's sections on Asia and Africa.)",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Georg Wilhelm Friedrich Hegel",
+     "fa": "گئورگ ویلهلم فریدریش هگل",
+     "years": "1770–1831",
+     "note": "فیلسوف آلمانی؛ سخنرانی‌های فلسفهٔ تاریخ را در برلین ارائه کرد"
+    },
+    {
+     "latin": "Karl Popper",
+     "fa": "کارل پوپر",
+     "years": "1902–1994",
+     "note": "فیلسوف علم و منتقد تاریخ‌باوری"
+    },
+    {
+     "latin": "Shlomo Avineri",
+     "fa": "شلومو اوینری",
+     "years": "1933–",
+     "note": "پژوهشگر فلسفهٔ سیاسی هگل"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:hegel-phenomenology-spirit",
+     "rel": "explains",
+     "fa": "روح و حرکت تاریخ به‌سوی آزادی",
+     "en": "Spirit and the movement of history toward freedom"
+    },
+    {
+     "to": "soc:culture-time-freedom",
+     "rel": "see-also",
+     "fa": "فرهنگ، زمان و آزادی",
+     "en": "Culture, time and freedom"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "هگل، گئورگ ویلهلم فریدریش. عقل در تاریخ. ترجمهٔ حمید عنایت. تهران: شفیعی، چاپ نخست ۱۳۷۹ (چاپ چهارم ۱۳۸۷).",
+   "tier": 3
+  },
+  {
+   "cite": "Popper, K. (1945). The Open Society and Its Enemies, vol. 2: Hegel and Marx. London: Routledge.",
+   "tier": 3
+  },
+  {
+   "cite": "Avineri, S. (1972). Hegel's Theory of the Modern State. Cambridge University Press.",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "PDF اسکن‌شده (۳۵۰ صفحه) بدون لایهٔ متن؛ دانلود کامل بود (۶۰۰۴۶۱۹ بایت). OCR با tesseract (fas) روی ~۲۴ صفحهٔ آغازین و صفحه‌های ۳۱–۲۰۰ انجام شد؛ کیفیت متن فارسی خوب بود ولی علائم و پاورقی‌ها گاهی خراب. فقط تکه‌های خوانا (سه شیوهٔ تاریخ‌نویسی، نیرنگ عقل، مردان تاریخ جهانی، پیشگفتار) خوانده و به‌کار رفت. سال‌ها و نام‌های لاتینِ مدخل‌ها از دانش عمومی است. گزارهٔ مربوط به ارزیابی اروپامحوری از دانش عمومی است و بی‌منبع است.",
+ "lecture": "عقل در تاریخ",
+ "speaker": "گئورگ ویلهلم فریدریش هگل (G. W. F. Hegel)",
+ "channel": "شفیعی، تهران"
+}

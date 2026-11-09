@@ -1,0 +1,377 @@
+{
+ "paper": true,
+ "book": {
+  "title": "مالک و زارع در ایران (Landlord and Peasant in Persia)",
+  "author": "Ann K. S. Lambton (آن لمتون)",
+  "translator": "منوچهر امیری",
+  "year": "انگلیسی ۱۹۵۳ (چاپ دوم ۱۹۶۹)؛ ترجمهٔ فارسی چاپ اول ۱۳۳۹، چاپ سوم ۱۳۶۲",
+  "publisher": "مرکز انتشارات علمی و فرهنگی (ترجمه)؛ Oxford University Press (اصل)",
+  "type": "scholarly",
+  "read": "partial",
+  "pages_or_sections_read": "حدود ۴۰–۵۰ صفحهٔ آغازین از بیش از ۷۰۰: پیش‌گفتارهای مترجم، دیباچهٔ ۱۹۶۹، «منابع تحقیق»، «پیشگفتار (ده)» و آغاز فصل نخست؛ متن استخراج‌شده بقیهٔ فصل‌ها را شامل نمی‌شد",
+  "drive_id": "1VYC6XPjrl9UkQ5L79-M8CaLJMlaM7Njj"
+ },
+ "credibility": {
+  "tier": 3,
+  "label_fa": "پژوهش دانشگاهی کلاسیک و پرارجاع از ایران‌شناسی برجسته؛ برای تاریخ زمین‌داری معتبر است اما دربارهٔ وضع روستای ایران تا ۱۳۲۸ و پیش از اصلاحات ارضی.",
+  "reasons": [
+   "نویسنده استاد زبان و ادبیات فارسی در دانشگاه لندن (SOAS) و پژوهشگر برجستهٔ تاریخ اجتماعی ایران است (نظر مترجم در متن و دانش عمومی)",
+   "پژوهش بر متون فارسی و عربی دست‌اول و کار میدانی ۱۹۴۸–۴۹ تکیه دارد و منابع و محدودیت داده را صریح می‌گوید",
+   "ترجمهٔ فارسی را مترجم با تعلیقات تکمیل و اشتباهات جزئی را تصحیح کرده است",
+   "اثر بیش از شصت سال پیش نوشته شده و بخش دوم پیش از اصلاحات ارضی ۱۳۴۰ است"
+  ],
+  "best_use_fa": "برای تاریخ نهادی و مالیاتی زمین‌داری و ساختار روستای پیش از اصلاحات خوب است؛ برای وضع امروز روستا، آمار اقتصادی یا تفسیرهای جدیدتر از مالکیت و اقطاع کافی نیست.",
+  "cautions": [
+   "تعمیم‌ها از مناطقی است که نویسنده شخصاً دیده؛ آمار جامع نیست",
+   "فرض «جامعهٔ ابتدایی اشتراکی» دربارهٔ ده فرضیهٔ نویسنده و قدیمی است",
+   "مترجم و منتقدان (محجوب، موحد) اشتباهات جزئی در متن و ترجمه یافته‌اند",
+   "فقط بخش آغازین کتاب خوانده شد؛ فصل‌های حقوقی، اقتصادی و میدانی بازبینی نشده‌اند"
+  ]
+ },
+ "decision": "add",
+ "decision_reason": "اثر دانشگاهی معتبر با مضمون مهم برای دانش‌سرا؛ چون فقط بخش آغازین خوانده شد، مدخل‌ها به همان بخش محدود ماند.",
+ "summary_of_book_fa": "لمتون در دو بخش تاریخ زمین‌داری و اداره درآمدهای ارضی ایران از صدر اسلام تا مشروطه و سپس وضع مالک و زارع در ایران پیش از اصلاحات ارضی را بررسی می‌کند. بخش‌های آغازین کتاب منابع، جغرافیا و ساختار ده را توضیح می‌دهد و اینکه فشار مالیاتی و اقطاع چگونه به شکل‌گیری طبقهٔ ملاک انجامید.",
+ "entries": [
+  {
+   "id": "persian-land-history-sources",
+   "wiki": "soc",
+   "field": "institutions",
+   "title": {
+    "fa": "منابع تاریخ زمین‌داری در ایران و محدودیت‌های داده",
+    "en": "Sources for the history of landholding in Iran and the limits of the data",
+    "nl": "Bronnen voor de geschiedenis van grondbezit in Iran en de beperkingen van de gegevens"
+   },
+   "summary": {
+    "fa": "لمتون برای بازسازی رابطهٔ مالک و زارع شش گروه منبع را برمی‌شمارد، از فقه تا تاریخ‌نگاری، و تأکید می‌کند که آمار قابل‌اعتماد برای تحلیل اقتصادی دقیق در دست نیست.",
+    "en": "Lambton lists six families of sources for reconstructing the landlord-peasant relationship, from jurisprudence to chronicles, and stresses that reliable statistics for a precise economic analysis do not exist.",
+    "nl": "Lambton onderscheidt zes soorten bronnen voor de reconstructie van de verhouding tussen landheer en pachter en benadrukt dat betrouwbare statistieken ontbreken."
+   },
+   "points": [
+    {
+     "fa": "نویسنده منابع را در گروه‌هایی جدا می‌کند: متون فقهی (سنی و شیعی)، آثار فلسفی دربارهٔ طبقات جامعه، نوشته‌های سیاست‌مداران، راهنماهای اداری برای شاهان و کارگزاران، جغرافی‌نویسان و تاریخ‌نگاران؛ و می‌گوید مرز میان چند گروه از این‌ها روشن نیست.",
+     "en": "The author separates the sources into groups: legal texts (Sunni and Shia), philosophical works on social classes, writings of statesmen, administrative guidebooks for rulers and officials, geographers and historians, and notes that the boundary between several of these groups is blurred.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به نظر او فقه شیعی تا دورهٔ صفوی بیشتر جنبهٔ نظری داشت، چون شیعیان جز در موارد استثنایی قدرت سیاسی نداشتند و به‌اندازهٔ فقیهان سنی ناچار نبودند نظر و عمل را با هم سازگار کنند.",
+     "en": "In his view Shia jurisprudence was more theoretical until the Safavid period, because the Shia rarely held political power and so, unlike Sunni jurists, were under little pressure to reconcile theory with practice.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "بخش دوم کتاب بر پژوهش میدانی خود او در ایران تکیه دارد (بیشتر از تیر ۱۳۲۷ تا شهریور ۱۳۲۸، با سفرهای پیشین در ۱۳۱۵–۱۳۱۶ و ۱۳۱۸–۱۳۲۴) و به مناطقی محدود است که خودش می‌شناخت؛ او می‌گوید برای تعمیم کلی شواهد کافی نیست.",
+     "en": "The second part rests on the author's own fieldwork in Iran (mostly July 1948 to September 1949, with earlier trips in 1936-37 and 1939-45) and is limited to regions she knew personally; she says the evidence is too thin for sweeping generalisation.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لمتون خودش کتاب را «مقدمه‌ای» بر موضوع می‌خواند و می‌گوید آمار مورداعتمادی برای بررسی جامع وضع اقتصادی مالک و زارع در دست نبود.",
+     "en": "Lambton calls the book an introduction to the subject and says there were no reliable statistics on which a full economic study could be based.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "چاپ ۱۹۶۹ تقریباً همان متن ۱۹۵۳ است و نویسنده تصریح می‌کند که اصلاحات ارضی ۱۳۴۰ رابطهٔ مالک و زارع را دگرگون کرد و آن را در کتابی جدا (اصلاحات ارضی ایران، ۱۹۶۲–۶۶) بررسی کرده است؛ پس بخش دوم تصویر پیش از اصلاحات است.",
+     "en": "The 1969 edition is essentially the 1953 text, and the author states that the 1962 land reform transformed landlord-peasant relations and is treated in a separate book (The Persian Land Reform 1962-66); the second part therefore describes the pre-reform situation.",
+     "flags": [],
+     "src": [
+      0,
+      1
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Ann K. S. Lambton",
+     "fa": "آن لمتون",
+     "years": "1912-2008",
+     "note": "ایران‌شناس بریتانیایی؛ استاد دانشگاه لندن"
+    }
+   ],
+   "links": [
+    {
+     "to": "soc:institutions",
+     "rel": "see-also",
+     "fa": "نهادها و دولت",
+     "en": "Institutions and the state"
+    }
+   ]
+  },
+  {
+   "id": "iranian-village-jooft-unit",
+   "wiki": "soc",
+   "field": "space",
+   "title": {
+    "fa": "ده و «جفت»: واحد سازمانی روستای ایرانی",
+    "en": "The village and the 'jooft': the organisational unit of the Iranian countryside",
+    "nl": "Het dorp en de 'jooft': de organisatorische eenheid van het Iraanse platteland"
+   },
+   "summary": {
+    "fa": "بر اساس لمتون، ده در ایران واحد اجتماعی و مالیاتی بوده و زمین آن بر پایهٔ «جفت» (زمینی که یک جفت گاو شخم می‌زند) تقسیم می‌شد؛ اقلیم خشک و آب، شکل سکونت را تعیین می‌کرد.",
+    "en": "According to Lambton the village was both a social and a fiscal unit in Iran, its land divided by the 'jooft' (what a pair of oxen can plough), while an arid climate and scarce water shaped settlement.",
+    "nl": "Volgens Lambton was het dorp in Iran zowel een sociale als een fiscale eenheid, met land verdeeld per 'jooft' (wat een span ossen kan ploegen); droogte en schaars water bepaalden de nederzettingsvorm."
+   },
+   "points": [
+    {
+     "fa": "دو عامل در پراکندگی جمعیت روستایی مؤثر بوده است: جغرافیا (پنج منطقه از جمله کوهستان دیم، فلات آبی، دشت‌های گرم و نوار ساحلی پرباران خزر) و تحولات سیاسی.",
+     "en": "Two factors shaped rural settlement: geography (five zones, including rain-fed uplands, irrigated plateau, hot lowlands and the rainy Caspian strip) and political developments.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "کم‌آبی مهم‌ترین قید کشاورزی بیرون از کرانهٔ خزر است؛ نیاز به قسمت‌کردن آب میان مردم، شکل زمین و توزیع آن و تجمع سکونت‌گاه‌ها را تحت‌تأثیر گذاشته و مزرعهٔ منفرد و جدا از ده را استثنا کرده است.",
+     "en": "Water scarcity is the chief constraint outside the Caspian rim; the need to share water influenced the shape and distribution of land and kept settlements clustered, making an isolated farm the exception.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "زمین ده معمولاً بر پایهٔ «جفت» (در شرق «زوج»، در خوزستان «خیش») اندازه‌گیری و میان زارعان به سهم‌های نسبتاً برابر تقسیم می‌شد، هم در ملک ارباب و هم در ملک خرده‌مالک؛ گاه سهم‌ها با قرعه دوباره پخش می‌شد.",
+     "en": "Village land was typically measured by the 'jooft' (called 'zowj' in the east and 'khish' in Khuzestan) and split into fairly equal shares among cultivators, on both landlord and smallholder estates; shares were sometimes redistributed by lot.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "به جفت حق استفاده از مرتع مشترک ده و گردآوری خار و خاشاک سوخت گره خورده بود؛ مالک به‌ندرت می‌توانست این حق را از روستاییان بگیرد.",
+     "en": "Attached to the jooft was the right to use the village's common pasture and to gather brushwood for fuel; a landlord could rarely remove this right.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "در نظام مالیاتی، مالیات ده را یک‌جا تعیین می‌کردند و روستاییان به‌طور جمعی مسئول بودند؛ این روش مدیریت را آسان می‌کرد و به بقای تقسیم برپایهٔ جفت کمک کرد.",
+     "en": "In the fiscal system a village's tax was assessed as a lump sum with collective responsibility, which eased administration and helped preserve the division by jooft.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لمتون از شکل تقسیم زمین، حق مرتع و مسئولیت جمعی نتیجه می‌گیرد که سکونت روستایی در آغاز بر پایهٔ یک جامعهٔ ابتدایی اشتراکی بوده و مالک بعدها بر آن افزوده شده است.",
+     "en": "From the form of land division, pasture rights and collective liability Lambton infers that rural settlement was originally based on a primitive communal society onto which the landlord was later imposed.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "چارچوب «جامعهٔ ابتدایی اشتراکی» برای دورهٔ پیش از اسلام شواهد مستقیم اندکی دارد؛ همان شواهد (قسمت‌بندی بر پایهٔ ابزار کشت، مسئولیت جمعی مالیات) با توضیح‌های دیگر هم سازگار است و پژوهش‌های جدیدتر این فرض را با احتیاط بیشتری می‌پذیرند.",
+     "en": "The 'primitive communal society' framework has little direct evidence for the pre-Islamic period; the same evidence (division by plough capacity, collective tax liability) fits other explanations too, and later scholarship treats the assumption more cautiously.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "soc:inequality",
+     "rel": "see-also",
+     "fa": "نابرابری و تحرک",
+     "en": "Inequality and mobility"
+    }
+   ]
+  },
+  {
+   "id": "landlord-class-formation-iran",
+   "wiki": "soc",
+   "field": "inequality",
+   "title": {
+    "fa": "شکل‌گیری طبقهٔ ملاک و روستاییان وابسته در ایران از دید لمتون",
+    "en": "The formation of the landlord class and a dependent peasantry in Iran, after Lambton",
+    "nl": "De vorming van de landheerklasse en een afhankelijke boerenbevolking in Iran volgens Lambton"
+   },
+   "summary": {
+    "fa": "لمتون استدلال می‌کند که سنگین‌شدن بار مالیات بر روستاییان و خرده‌مالکان آنان را به مالکان قدرتمند وابسته کرد و با رواج اقطاع، طبقهٔ ملاک و جمعیت روستایی شبه‌وابسته پدید آمد.",
+    "en": "Lambton argues that a growing tax burden on peasants and small owners made them dependent on powerful landholders, and with the spread of the iqta a landlord class and a quasi-servile rural population emerged.",
+    "nl": "Lambton stelt dat de groeiende belastingdruk boeren en kleine eigenaren afhankelijk maakte van machtige grondbezitters en dat met de iqta een landheerklasse en een quasi-horige plattelandsbevolking ontstond."
+   },
+   "points": [
+    {
+     "fa": "به نظر او نظام مالی گرایش داشت بار خراج را با گذشت زمان سنگین‌تر کند و این بار بیش از همه بر دوش کشاورزان و خرده‌مالکان افتاد که توان مقاومت کمتری داشتند.",
+     "en": "In his words the fiscal system tended to make the tax load heavier over time, and it fell most on cultivators and small owners, who had least capacity to resist.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "چنین روستاییانی به طبقه‌ای ثروتمندتر و نیرومندتر پناه بردند که هم در برابر حکومت از آنان دفاع می‌کرد و هم در برابر حکومت مسئول‌شان بود؛ نتیجه، پیدایش طبقهٔ مالکان مقتدر و تنزل خرده‌مالکان بود.",
+     "en": "Such villagers turned to a richer and stronger class that both protected them before the state and answered for them to it; the result was a powerful landowning class and the decline of smallholders.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "این روند با آمدن اجاره‌داران درآمد مالیاتی و سپس صاحبان اقطاع (از حدود سدهٔ پنجم هجری / یازدهم میلادی) شدت گرفت؛ صاحب اقطاع می‌توانست مالیات و بیگاری را هم بر مردم تحمیل کند.",
+     "en": "The process intensified with revenue farmers and then holders of the iqta (from about the 5th century AH / 11th century CE); an iqta holder could also levy taxes and impose forced labour on the people.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "لمتون می‌نویسد که در سدهٔ بیستم تیول‌داران سرانجام به طبقهٔ مالک تبدیل شدند و کلمهٔ «دهقان» از «زمین‌دار کوچک / رئیس ده» در دورهٔ ساسانی و آغاز دورهٔ اسلامی به «کشاورز» در امروز تغییر معنا داده است.",
+     "en": "Lambton writes that in the twentieth century the assignees finally became a landowning class, and that the word 'dehqan' shifted from a landed gentry / village head in Sasanian and early Islamic times to simply 'cultivator' today.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "این روایت تفسیر نویسنده از ساز و کار اقتصادی-مالیاتی است و بسته به منطقه و دوره تفاوت دارد؛ نظریهٔ او دربارهٔ اینکه اقطاع و تعهد مالیاتی چقدر در تغییر مالکیت مؤثر بوده، در پژوهش‌های بعدی (از جمله دربارهٔ استمرار مالکیت خصوصی) بحث و اصلاح شده است.",
+     "en": "This is the author's interpretation of a fiscal-economic mechanism and varies by region and period; later research has debated and refined how far the iqta and tax obligations drove changes in ownership, including the continuity of private property.",
+     "flags": [
+      "contested",
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [],
+   "links": [
+    {
+     "to": "soc:inequality",
+     "rel": "see-also",
+     "fa": "نابرابری و تحرک",
+     "en": "Inequality and mobility"
+    },
+    {
+     "to": "soc:marx-historical-materialism",
+     "rel": "contrasts",
+     "fa": "در مارکس تحلیل بر شیوهٔ تولید و طبقه است؛ لمتون بر مالیات و دولت تأکید دارد",
+     "en": "Marx stresses mode of production and class; Lambton stresses taxation and the state"
+    }
+   ]
+  },
+  {
+   "id": "medieval-persian-views-peasant-agriculture",
+   "wiki": "phil",
+   "field": "iranian",
+   "title": {
+    "fa": "دیدگاه‌های متون سیاسی و اخلاقی ایرانی دربارهٔ کشاورزی و دهقان",
+    "en": "Medieval Persian political and ethical texts on farming and the peasant",
+    "nl": "Middeleeuwse Perzische politieke en ethische teksten over landbouw en de boer"
+   },
+   "summary": {
+    "fa": "لمتون نشان می‌دهد که نظام‌الملک، قابوس‌نامه و غزالی بیشتر از دید پایداری حکومت به کشاورز می‌نگرند، حکیمان از دید نظم طبقاتی، و نجم‌الدین رازی از دید عبادت.",
+    "en": "Lambton shows that Nizam al-Mulk, the Qabus-nama and Ghazali treat the farmer mainly from the standpoint of the stability of rule, philosophers from that of social order, and Najm al-Din Razi from that of worship.",
+    "nl": "Lambton laat zien dat Nizam al-Mulk, de Qabus-nama en Ghazali de boer vooral bekijken vanuit de stabiliteit van het gezag, filosofen vanuit de sociale orde en Najm al-Din Razi vanuit de godsdienst."
+   },
+   "points": [
+    {
+     "fa": "در سیاست‌نامه نظام‌الملک، کارگزار مالیاتی باید با رعیت مدارا کند و به کشاورز درمانده وام بدهد تا از ده نرود؛ انگیزهٔ اصلی، به نظر لمتون، پر ماندن خزانه و پایداری سلطنت است نه ارزش ذاتی کشاورزی.",
+     "en": "In Nizam al-Mulk's Siyasatnameh, tax agents should treat peasants gently and lend to a struggling farmer so he does not leave; Lambton judges that the main motive is a full treasury and a stable throne rather than the intrinsic worth of farming.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "همین منطق در متن‌هایی مثل قابوس‌نامه (آبادانی ملک و عدالت سرچشمهٔ درآمد است) و نصیحة‌الملوک غزالی (عدالت شاه به آبادانی می‌انجامد) دیده می‌شود؛ هیچ‌یک نظر منظمی دربارهٔ وضع دهقان نمی‌دهند.",
+     "en": "The same logic appears in works such as the Qabus-nama (prosperity and justice are the source of revenue) and Ghazali's Nasihat al-Muluk (a just king brings prosperity); none gives a systematic view of the peasant's condition.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "نجم‌الدین (مرصاد‌العباد) برعکس، کشاورزی را راهی برای خدمت به خدا و خلق می‌داند و برای سه گروه آداب جدا می‌گذارد: مالکان، مباشران و کدخدایان، و زارعان و مزدوران؛ همه باید خود را واسطه بدانند و روزی‌دهنده را خدا.",
+     "en": "Najm al-Din, in contrast (Mirsad al-Ibad), sees farming as a way of serving God and creation and sets separate duties for three groups: owners, stewards and village heads, and tenants and labourers; all should regard themselves as intermediaries, with God as the true provider.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "حکیمان بر آن بودند که هر کس باید در جایگاه طبقاتی خود بماند؛ لمتون می‌گوید در عمل این نگاه به معنی ادای وظایف توسط دهقان بدون حقی برای او بود و این تمایل تا امروز، با تغییر اندک، باقی مانده است.",
+     "en": "Philosophers held that everyone should stay in their social station; Lambton says that in practice this meant the peasant owed duties with no rights, a tendency that persisted to the present with little change.",
+     "flags": [],
+     "src": [
+      0
+     ]
+    },
+    {
+     "fa": "انتساب همهٔ بخش‌های نصیحة‌الملوک به خود غزالی در پژوهش جدید محل تردید است (بخش دوم احتمالاً از دیگری است)، پس نقل آن به‌عنوان «اندیشهٔ غزالی» باید با احتیاط باشد.",
+     "en": "The attribution of all parts of the Nasihat al-Muluk to Ghazali himself is doubted in modern scholarship (the second part is probably by another hand), so citing it as 'Ghazali's thought' needs care.",
+     "flags": [
+      "editor-note"
+     ],
+     "src": [
+      "lecture"
+     ]
+    }
+   ],
+   "people": [
+    {
+     "latin": "Nizam al-Mulk",
+     "fa": "نظام‌الملک",
+     "years": "1018-1092",
+     "note": "وزیر سلجوقی، نویسندهٔ سیاست‌نامه"
+    },
+    {
+     "latin": "Najm al-Din Razi",
+     "fa": "نجم‌الدین رازی",
+     "years": "سدهٔ هفتم هجری",
+     "note": "نویسندهٔ مرصاد‌العباد"
+    },
+    {
+     "latin": "Al-Ghazali",
+     "fa": "غزالی",
+     "years": "1058-1111",
+     "note": "متکلم و فقیه؛ نصیحة‌الملوک به او منسوب است"
+    }
+   ],
+   "links": [
+    {
+     "to": "phil:ghazali-causation",
+     "rel": "see-also",
+     "fa": "غزالی در بحث علیت",
+     "en": "Ghazali on causation"
+    },
+    {
+     "to": "phil:iranian",
+     "rel": "part-of",
+     "fa": "فلسفهٔ ایرانی‌اسلامی",
+     "en": "Iranian-Islamic philosophy"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "cite": "Lambton, A. K. S. Landlord and Peasant in Persia: A Study of Land Tenure and Land Revenue Administration. London: Oxford University Press, 1953 (repr. 1969). ترجمهٔ فارسی: منوچهر امیری، مالک و زارع در ایران، تهران: مرکز انتشارات علمی و فرهنگی، چاپ سوم ۱۳۶۲",
+   "tier": 3
+  },
+  {
+   "cite": "Lambton, A. K. S. The Persian Land Reform 1962-1966. Oxford: Clarendon Press, 1969 (ذکرشده در دیباچهٔ کتاب)",
+   "tier": 3
+  }
+ ],
+ "quality_notes": "متن Drive لایهٔ متنی داشت و بخش خوانده‌شده با rev.py بدون OCR و با دقت خوب بازیابی شد (خطاهای جزئی املایی و ترتیب پاورقی‌ها)؛ اما متن استخراج‌شده فقط حدود ۱۰۵ هزار نویسه، یعنی نخستین ~۴۰–۵۰ صفحه، بود و فصل‌های بعد (سلجوقی تا مشروطه، بخش دوم) خوانده نشد. تاریخ‌ها و نام‌ها فقط از بخش خوانده‌شده آمده است؛ شرح‌های داخل بند «contested» نظر ویراستار از دانش عمومی است.",
+ "lecture": "مالک و زارع در ایران (Landlord and Peasant in Persia)",
+ "speaker": "Ann K. S. Lambton (آن لمتون)",
+ "channel": "مرکز انتشارات علمی و فرهنگی (ترجمه)؛ Oxford University Press (اصل)"
+}

@@ -1,0 +1,96 @@
+{
+ "id": "phil:mosquito-vectors-tropical-medicine",
+ "kind": "concept",
+ "title": {
+  "fa": "کشف نقش پشه در انتقال بیماری و پیدایش طب گرمسیری",
+  "en": "Discovery of mosquito transmission and the rise of tropical medicine",
+  "nl": "Ontdekking van muggenoverdracht en het ontstaan van de tropische geneeskunde"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "کتاب نشان می‌دهد چگونه مانسون، راس، گراسی و رید و همکارانشان نقش پشه را در مالاریا، فیل‌پایی و تب زرد روشن کردند و چرا مهار پشه به ابزاری برای پیشگیری شد.",
+  "en": "The book shows how Manson, Ross, Grassi, Reed and colleagues clarified the mosquito's role in malaria, filariasis and yellow fever, and why mosquito control became a means of prevention.",
+  "nl": "Het boek laat zien hoe Manson, Ross, Grassi, Reed en collega's de rol van de mug bij malaria, filariasis en gele koorts ophelderden en waarom muggenbestrijding een preventiemiddel werd."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پاتریک مانسون در ۱۸۷۷ نشان داد انگل فیل‌پایی (الفانتیازیس) را پشه هنگام نیش‌زدن منتقل می‌کند؛ نخستین اثبات انتقال بیماری به‌وسیلهٔ یک حشره.",
+    "en": "In 1877 Patrick Manson showed that the parasite of elephantiasis (filariasis) is transmitted by mosquitoes when they bite, the first proof of disease transmission by an insect.",
+    "nl": "In 1877 Patrick Manson showed that the parasite of elephantiasis (filariasis) is transmitted by mosquitoes when they bite, the first proof of disease transmission by an insect."
+   },
+   "sources": [
+    "src:318641d437"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لاوران پیش‌تر نشان داده بود مالاریا را تک‌یاختهٔ انگلی پدید می‌آورد نه «هوای بد»؛ رونالد راس در ۲۰ اوت ۱۸۹۷ انگل را در معدهٔ پشه یافت و گراسی و بینیامی اندکی بعد چرخهٔ زندگی انگل انسانی را در پشهٔ آنوفل نشان دادند.",
+    "en": "Laveran had earlier shown that malaria is caused by a parasitic protozoan, not 'bad air'; on 20 August 1897 Ronald Ross found the parasite in a mosquito's stomach, and Grassi and Bignami soon after traced the human parasite's life cycle in the Anopheles mosquito.",
+    "nl": "Laveran had earlier shown that malaria is caused by a parasitic protozoan, not 'bad air'; on 20 August 1897 Ronald Ross found the parasite in a mosquito's stomach, and Grassi and Bignami soon after traced the human parasite's life cycle in the Anopheles mosquito."
+   },
+   "sources": [
+    "src:318641d437"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فینلی در ۱۸۸۱ پشه را عامل تب زرد دانست و گروه والتر رید در کوبا (پس از ۱۸۹۸) با داوطلبان انسانی آن را آزمود؛ مهار پشه در هاوانا و سپس در منطقهٔ کانال پاناما بیماری را مهار کرد.",
+    "en": "Finlay proposed in 1881 that mosquitoes spread yellow fever, and Walter Reed's team in Cuba (after 1898) tested it with human volunteers; mosquito control then curbed the disease in Havana and in the Panama Canal zone.",
+    "nl": "Finlay proposed in 1881 that mosquitoes spread yellow fever, and Walter Reed's team in Cuba (after 1898) tested it with human volunteers; mosquito control then curbed the disease in Havana and in the Panama Canal zone."
+   },
+   "sources": [
+    "src:318641d437"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کتاب می‌گوید طب گرمسیری در اواخر سدهٔ نوزدهم بیشتر برای حفظ سلامت مهاجران و اتباع دولت‌های غربی در مستعمره‌ها پدید آمد، هرچند به بومیان هم سود می‌رساند. آزمایش بر داوطلبان در گروه رید پرسش‌های اخلاقی دربارهٔ رضایت آگاهانه برمی‌انگیزد که کتاب کمتر به آن می‌پردازد.",
+    "en": "The book says tropical medicine arose in the late 19th century largely to protect settlers and citizens of Western states in colonies, though it also benefited local people. Experiments on volunteers in Reed's group raise ethical questions about informed consent that the book treats only lightly.",
+    "nl": "The book says tropical medicine arose in the late 19th century largely to protect settlers and citizens of Western states in colonies, though it also benefited local people. Experiments on volunteers in Reed's group raise ethical questions about informed consent that the book treats only lightly."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:germ-theory-and-kochs-postulates",
+   "rel": "part-of",
+   "note": {
+    "fa": "از شناخت میکروب تا شناخت ناقل",
+    "en": "From knowing the microbe to knowing the vector",
+    "nl": "From knowing the microbe to knowing the vector"
+   }
+  },
+  {
+   "to": "phil:ethics",
+   "rel": "see-also",
+   "note": {
+    "fa": "اخلاق آزمایش بر انسان",
+    "en": "Ethics of human experimentation",
+    "nl": "Ethics of human experimentation"
+   }
+  }
+ ],
+ "people": [
+  "core:patrick-manson",
+  "core:ronald-ross",
+  "core:walter-reed"
+ ],
+ "sources": [
+  "src:318641d437"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
