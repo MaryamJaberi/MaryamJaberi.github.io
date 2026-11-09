@@ -1,0 +1,79 @@
+{
+ "id": "phil:biruni-india-ghazni-career",
+ "kind": "concept",
+ "title": {
+  "fa": "زندگی بیرونی: خوارزم، غزنه و هند",
+  "en": "Biruni's life: Khwarazm, Ghazna and India",
+  "nl": "Het leven van Biruni"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "بیرونی از خوارزم برخاست، پس از فتح خوارزم به دست محمود غزنوی در حلقهٔ او زیست و سفرش به هند کتاب الهند را پدید آورد.",
+  "en": "Biruni came from Khwarazm, lived in Mahmud of Ghazni's orbit after the conquest and wrote the Book of India after his time there.",
+  "nl": "Biruni kwam uit Khwarazm en schreef na zijn verblijf in India het Boek over India."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "همایی تولد او را ۳۶۲ ق (۹۷۲ م) در خوارزم و مرگش را ۴۴۰ ق در غزنین می‌نویسد.",
+    "en": "Homayi gives birth in 362 AH (972 CE) in Khwarazm and death in 440 AH at Ghazna.",
+    "nl": "Homayi gives birth in 362 AH (972 CE) in Khwarazm and death in 440 AH at Ghazna."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به روایت همایی، پس از فتح خوارزم در ۴۰۸ ق استادانی چون ابونصر عراق و عبدالصمد حکیم در پیوند با آن رویدادها یا به تهمت بددینی کشته شدند؛ جزئیات مرگ ابونصر تنها از یک منبع آمده است.",
+    "en": "Homayi notes that after the 408 AH conquest teachers like Abu Nasr Iraq and Abd al-Samad were reportedly killed on charges of impiety; the account of Abu Nasr rests on a single source.",
+    "nl": "Homayi notes that after the 408 AH conquest teachers like Abu Nasr Iraq and Abd al-Samad were reportedly killed on charges of impiety; the account of Abu Nasr rests on a single source."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بیرونی همراه سپاه محمود به هند رفت، سانسکریت را آموخت و کتاب الهند را درباره باورها و دانش هندی نوشت؛ همایی آن را تا امروز مرجع می‌شمارد (ستایش مصحح).",
+    "en": "He went to India with Mahmud's army, learned Sanskrit and wrote the Book of India; Homayi still calls it a leading reference (editor's praise).",
+    "nl": "He went to India with Mahmud's army, learned Sanskrit and wrote the Book of India; Homayi still calls it a leading reference (editor's praise)."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:iranian",
+   "rel": "part-of",
+   "note": {
+    "fa": "اندیشهٔ ایرانی-اسلامی",
+    "en": "Iranian-Islamic thought",
+    "nl": "Iranian-Islamic thought"
+   }
+  }
+ ],
+ "people": [
+  "core:mahmud-of-ghazni",
+  "core:abu-nasr-mansur-ibn-iraq"
+ ],
+ "sources": [
+  "src:342e87812d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

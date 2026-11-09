@@ -1,0 +1,108 @@
+{
+ "id": "phil:biruni-astrology-astronomy",
+ "kind": "concept",
+ "title": {
+  "fa": "بیرونی، تنجیم و نجوم: دانش و پیش‌گویی",
+  "en": "Biruni, astrology and astronomy: knowledge versus prediction",
+  "nl": "Biruni, astrologie en astronomie"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "در سدهٔ پنجم هجری «تنجیم» هم محاسبهٔ آسمان را در بر می‌گرفت و هم احکام نجوم. بیرونی محاسبه و رصد را عمیقاً می‌شناخت، اما امروز احکام نجوم علم شمرده نمی‌شود.",
+  "en": "In the 11th century 'tanjim' covered both astronomical calculation and astrological judgement. Biruni was a master of the former; today astrology is not regarded as science.",
+  "nl": "In de 11e eeuw omvatte tanjim zowel astronomie als astrologie; astrologie geldt nu niet als wetenschap."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نام کتاب «التفهیم لاوائل صناعة التنجیم» نشان می‌دهد درسنامه هندسه و حساب و هیئت را مقدمهٔ فن تنجیم می‌داند.",
+    "en": "The title shows the manual treats geometry, arithmetic and cosmography as groundwork for the art of astrology.",
+    "nl": "The title shows the manual treats geometry, arithmetic and cosmography as groundwork for the art of astrology."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همایی می‌نویسد بیرونی مقدمات و مسائل تنجیم را بهتر از همه می‌دانست، اما از منجمان طالع‌بین و غیب‌گو نبود و آنان را در آثارش نکوهش می‌کرد.",
+    "en": "Homayi writes that Biruni knew astrology's foundations better than anyone but was not a horoscope-casting fortune-teller and criticised such astrologers.",
+    "nl": "Homayi writes that Biruni knew astrology's foundations better than anyone but was not a horoscope-casting fortune-teller and criticised such astrologers."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همایی روایت چهارمقاله، که بیرونی را به‌خاطر حکم نجومی شش ماه زندانی می‌داند، سنددار نمی‌شمارد؛ این حکایت نامطمئن است.",
+    "en": "Homayi doubts the Chahar Maqala story that Biruni was jailed six months over an astrological judgement.",
+    "nl": "Homayi doubts the Chahar Maqala story that Biruni was jailed six months over an astrological judgement."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بیرونی در غزنه رصدهایی انجام داد؛ از جمله میل کلی را با رصد بیشینهٔ ارتفاع خورشید در انقلاب‌ها حدود ۲۳ درجه و ۳۵ دقیقه به‌دست آورد، که به مقدار امروزی (نزدیک ۲۳٫۴ درجه) بسیار نزدیک است.",
+    "en": "In Ghazna he measured the obliquity of the ecliptic by solstice noon altitudes at about 23 degrees 35 minutes, close to the modern value (~23.4 degrees).",
+    "nl": "In Ghazna he measured the obliquity of the ecliptic by solstice noon altitudes at about 23 degrees 35 minutes, close to the modern value (~23.4 degrees)."
+   },
+   "sources": [
+    "src:342e87812d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیش‌بینی سرنوشت و اخلاق افراد از وضع سیارات و برج‌ها در آزمون‌های کنترل‌شده بهتر از شانس نبوده و سازوکار فیزیکی شناخته‌شده‌ای ندارد؛ این دیدگاه اجماع علمی است و در متن نیامده.",
+    "en": "Predicting fate or personality from planetary positions has not beaten chance in controlled tests and has no known physical mechanism; this is the scientific consensus, not stated in the text.",
+    "nl": "Predicting fate or personality from planetary positions has not beaten chance in controlled tests and has no known physical mechanism; this is the scientific consensus, not stated in the text."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:falsification",
+   "rel": "critiques",
+   "note": {
+    "fa": "احکام نجوم از نظر ابطال‌پذیری",
+    "en": "astrology and falsifiability",
+    "nl": "astrology and falsifiability"
+   }
+  },
+  {
+   "to": "phil:science",
+   "rel": "see-also",
+   "note": {
+    "fa": "فلسفهٔ علم",
+    "en": "philosophy of science",
+    "nl": "philosophy of science"
+   }
+  }
+ ],
+ "people": [
+  "core:ptolemy"
+ ],
+ "sources": [
+  "src:342e87812d"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
