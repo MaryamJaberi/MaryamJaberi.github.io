@@ -34,6 +34,11 @@ main{padding-block:var(--s6) var(--s16)}
 .tabs button{font:inherit;font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
 .tabs button[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
 .sec h2{font-size:var(--h3);margin:var(--s6) 0 var(--s3)}
+.story{margin:14px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.story h4{margin:0 0 6px;font-size:var(--small);color:var(--ink);display:flex;gap:8px;align-items:baseline}
+.story h4 small{font-weight:400;color:var(--ink-3);font-size:var(--chip)}
+.story p{margin:0 0 8px;font-size:var(--small);color:var(--ink-2);line-height:1.95}
+.story p:last-child{margin-bottom:0}
 .viz{margin:2px 0 0;padding:0;border-top:1px solid var(--line);padding-top:10px}
 .vlab{font-size:var(--small);font-weight:700;color:var(--ink-2);margin-bottom:6px}
 .vlab2{display:block;font-size:var(--chip);color:var(--ink-3);margin:10px 0 4px}
@@ -151,6 +156,11 @@ function rangeViz(v){
   const a = ((v.max - v.hi) / (v.max - v.min) * 100), b = ((v.max - v.lo) / (v.max - v.min) * 100);
   return `<div class="scale"><span class="st"><u style="inset-inline-start:${a.toFixed(1)}%;width:${(b - a).toFixed(1)}%"></u></span><div class="se"><span>${fa(v.max)}٪</span><span>${fa(v.min)}٪</span></div><b class="sv">${fa(v.lo)} تا ${fa(v.hi)}٪</b></div>${v.unit ? `<p class="vunit">${esc(tx(v.unit))}</p>` : ""}`;
 }
+function sec(v, head, kicker){
+  if (!v) return "";
+  const body = tx(v).split("\n").filter(Boolean).map(p => `<p>${esc(p)}</p>`).join("");
+  return `<section class="story"><h4>${esc(head)}<small>${esc(kicker)}</small></h4>${body}</section>`;
+}
 function viz(n){
   const v = n.viz; if (!v) return "";
   if (v.kind === "none") return `<p class="vnone">${esc(tx(v.note))}</p>`;
@@ -168,6 +178,8 @@ function card(n){
   return `<article class="card note" id="${n.id.split(":")[1]}" style="--fc:${FC[n.domain] || "var(--primary)"}"><h3 class="q">${esc(tx(n.question))}</h3><p class="f">${esc(tx(n.finding))}</p>
    <div class="meta"><i class="g ${n.grade}">${n.grade}</i><span>${fa(n.year)}</span>${n.method ? `<span>${T("method")}: ${esc(n.method)}</span>` : ""}${n.contested ? `<span class="flag">${T("contested")}</span>` : ""}<span>${esc(T("dom")[n.domain] || n.domain)}</span></div>
    ${viz(n)}
+   ${sec(n.roots, "ریشه‌یابی", "چه شد که این‌طور شد")}
+   ${sec(n.now, "وضع موجود", "الان یعنی چه، برای چه کسی")}
    ${n.critique ? `<p class="crit"><b>${T("critique")}:</b> ${esc(n.critique)}</p>` : ""}
    ${n._concepts.length ? `<div class="links">${n._concepts.map(c => `<a href="${c.url}">${esc(tx(c.title))} ↗</a>`).join("")}</div>` : ""}
    <div class="src">${(n.source || []).map(s => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)).join("<br>")}</div></article>`;
