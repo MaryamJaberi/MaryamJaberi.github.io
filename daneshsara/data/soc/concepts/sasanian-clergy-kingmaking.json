@@ -1,0 +1,107 @@
+{
+ "id": "soc:sasanian-clergy-kingmaking",
+ "kind": "concept",
+ "title": {
+  "fa": "موبدان و عزل و نصب شاه در ساسانیان",
+  "en": "Clergy as kingmakers and rivals of the Sasanian crown",
+  "nl": "Geestelijken als koningmakers in het Sassanidenrijk"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "در منابع، روحانیان همراه اشراف در گزینش و گاه برکناری شاهان نقش داشتند؛ این قدرت بر شخصیت شاه و موازنهٔ اشراف بستگی داشت و خسرو اول آن را کاست.",
+  "en": "Sources show clergy and nobles jointly shaping royal succession and sometimes removal; the weight of the clergy depended on the king's strength, and Khosrow I curbed it.",
+  "nl": "Geestelijken hadden samen met de adel invloed op troonopvolging en soms afzetting; Khosrow I beperkte die macht."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده، به پیروی از کریستن‌سن، می‌گوید موبدان در گزینش و برکناری شاه نقش قاطع داشتند و حق عزل شاه حربه‌ای خطرناک در دست آنان بود.",
+    "en": "Following Christensen, the author argues the chief clergy had a decisive voice in choosing kings and that deposability was a dangerous weapon in their hands.",
+    "nl": "Following Christensen, the author argues the chief clergy had a decisive voice in choosing kings and that deposability was a dangerous weapon in their hands."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ مقاله هنگام ضعف شاه، روحانیان با اشراف و درباریان کار می‌کردند و نمونه‌اش برکناری قباد اول و نشاندن جاماسب است.",
+    "en": "In the article's account, when a king was weak clergy acted with nobles and courtiers; the deposition of Kavad I in favour of Jamasp is given as an example.",
+    "nl": "In the article's account, when a king was weak clergy acted with nobles and courtiers; the deposition of Kavad I in favour of Jamasp is given as an example."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در گزارش پروکوپیوس، موبدی وصیت‌نامهٔ قباد را در شورای بزرگان خواند و مانع ادعای پسر مهترش کاووس شد تا خسرو شاه شود؛ این نمونه‌ای از تعیین جانشین با تکیه بر وصیت و تأیید بزرگان است.",
+    "en": "In Procopius's report, a mobed read Kavad's testament to the assembled nobles and blocked the elder son Kaoses, so Khosrow succeeded.",
+    "nl": "In Procopius's report, a mobed read Kavad's testament to the assembled nobles and blocked the elder son Kaoses, so Khosrow succeeded."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به نوشتهٔ مقاله خسرو اول (انوشیروان) از قدرت روحانیان کاست و آنان را زیر نفوذ خود آورد؛ پس از او نیز در آخر سلطنت خسرو دوم، شکست از روم روحانیان و اشراف را در برکناری شاه همدست کرد.",
+    "en": "Per the article, Khosrow I reduced the clergy's power and brought it under royal control, while after military defeat under Khosrow II clergy and nobles again joined in removing him.",
+    "nl": "Per the article, Khosrow I reduced the clergy's power and brought it under royal control, while after military defeat under Khosrow II clergy and nobles again joined in removing him."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهش مدرن تأکید می‌کند که قدرت روحانیت یک‌دست و ثابت نبود و دعوا میان شاه، اشراف بزرگ و روحانیان بر سر منافع بود، نه پیروزی ساده یک «طبقهٔ روحانی» بر شاه.",
+    "en": "Modern scholarship stresses that clerical power was uneven and that struggles were three-cornered between king, great nobles and clergy, not a simple clerical dominance over the crown.",
+    "nl": "Modern scholarship stresses that clerical power was uneven and that struggles were three-cornered between king, great nobles and clergy, not a simple clerical dominance over the crown."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "نهادها و دولت",
+    "en": "Institutions and the state",
+    "nl": "Institutions and the state"
+   }
+  },
+  {
+   "to": "soc:religion-ideology-iran-debate",
+   "rel": "see-also",
+   "note": {
+    "fa": "دین و سیاست در ایران",
+    "en": "Religion and politics in Iran",
+    "nl": "Religion and politics in Iran"
+   }
+  }
+ ],
+ "people": [
+  "core:kavad-i",
+  "core:khosrow-i"
+ ],
+ "sources": [
+  "src:0f37ec0e89"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

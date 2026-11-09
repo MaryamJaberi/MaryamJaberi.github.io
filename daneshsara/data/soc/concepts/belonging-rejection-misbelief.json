@@ -1,0 +1,124 @@
+{
+ "id": "soc:belonging-rejection-misbelief",
+ "kind": "concept",
+ "title": {
+  "fa": "تعلق، طرد و جاذبهٔ گروه‌های باور اشتباه",
+  "en": "Belonging, rejection and the pull of misbelief groups",
+  "nl": "Erbij horen, afwijzing en de aantrekkingskracht van groepen met foutieve overtuigingen"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "به گفتهٔ آریلی نیاز به تعلق و ترس از طرد، فرد را به سوی گروه‌هایی می‌کشاند که باورهایش را می‌پذیرند. تمسخر و کنارگذاشتن از سوی دوستان و خانواده این کشش را تقویت می‌کند، پس همدلی و گفتگو مؤثرتر از تحقیر است.",
+  "en": "Ariely argues that the need to belong and fear of rejection pull people toward groups that accept their beliefs. Mockery or exclusion by friends and family strengthens that pull, so empathy and conversation work better than contempt.",
+  "nl": "Volgens Ariely trekken de behoefte om erbij te horen en angst voor afwijzing mensen naar groepen die hun overtuigingen accepteren. Spot en uitsluiting versterken dat; empathie werkt beter dan minachting."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده سازوکار اجتماعی را سه‌مرحله‌ای می‌بیند: جاذبهٔ نخستین به‌سوی گروه، گیر افتادن در آن، و سپس تقویت و عمیق‌تر شدن مشارکت در خرده‌فرهنگ باورمندان.",
+    "en": "The author sees the social mechanism in three steps: initial attraction to a group, being caught in it, and then reinforcement and deeper participation in the misbelief subculture.",
+    "nl": "The author sees the social mechanism in three steps: initial attraction to a group, being caught in it, and then reinforcement and deeper participation in the misbelief subculture."
+   },
+   "sources": [
+    "src:484b0e02cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وقتی کسی نظری غیرمعمول را در جمع دوستان مطرح می‌کند و حتی با شوخی مسخره می‌شود، ممکن است احساس تعلقش بکاهد و انرژی اجتماعی‌اش را به سوی غریبه‌هایی ببرد که او را جدی می‌گیرند.",
+    "en": "When someone voices an unusual idea among friends and is teased, even lightly, their sense of belonging may drop and their social energy may move toward strangers online who take them seriously.",
+    "nl": "When someone voices an unusual idea among friends and is teased, even lightly, their sense of belonging may drop and their social energy may move toward strangers online who take them seriously."
+   },
+   "sources": [
+    "src:484b0e02cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "از همین رو آریلی توصیه می‌کند به‌جای رد کردن، تمسخر یا قطع رابطه، با کنجکاوی و همدلی با باورمندان گفتگو شود؛ هرچند خودش می‌پذیرد که یک گفتگوی کوتاه و ناگهانی معمولاً نظر کسی را عوض نمی‌کند.",
+    "en": "Hence Ariely recommends curiosity and empathy over rejection, mockery or cutting ties, while admitting that one short, unexpected conversation rarely changes anyone's mind.",
+    "nl": "Hence Ariely recommends curiosity and empathy over rejection, mockery or cutting ties, while admitting that one short, unexpected conversation rarely changes anyone's mind."
+   },
+   "sources": [
+    "src:484b0e02cc"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تأثیر نیاز به تعلق و طرد اجتماعی بر رفتار از پژوهش‌های پایه‌ای روان‌شناسی اجتماعی (مثلاً کار بامایستر و لیری دربارهٔ «نیاز به تعلق») پشتیبانی می‌شود؛ اما اینکه طرد در عمل عامل اصلی ورود به گروه‌های توطئه‌ای باشد، بیشتر از روایت‌های موردی آریلی می‌آید تا از آزمون کنترل‌شده.",
+    "en": "The effect of the need to belong and of social exclusion is well supported by basic social psychology (for example Baumeister and Leary's work on the need to belong); but the claim that exclusion is the main route into conspiracy groups rests more on Ariely's case stories than on controlled tests.",
+    "nl": "The effect of the need to belong and of social exclusion is well supported by basic social psychology (for example Baumeister and Leary's work on the need to belong); but the claim that exclusion is the main route into conspiracy groups rests more on Ariely's case stories than on controlled tests."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بسیاری از شخصیت‌ها و گفتگوهای کتاب بازنویسی یا با تغییر نام و جزئیات آورده شده‌اند، پس برای اثبات تجربی کافی نیستند و باید روایت تلقی شوند.",
+    "en": "Many characters and conversations in the book are reworded or have changed names and details, so they work as narrative illustration, not empirical proof.",
+    "nl": "Many characters and conversations in the book are reworded or have changed names and details, so they work as narrative illustration, not empirical proof."
+   },
+   "sources": [
+    "src:484b0e02cc"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:belonging",
+   "rel": "explains",
+   "note": {
+    "fa": "نیاز به تعلق گروهی",
+    "en": "The need for group belonging",
+    "nl": "The need for group belonging"
+   }
+  },
+  {
+   "to": "psy:rejection-sensitivity",
+   "rel": "see-also",
+   "note": {
+    "fa": "حساسیت به طرد",
+    "en": "Rejection sensitivity",
+    "nl": "Rejection sensitivity"
+   }
+  },
+  {
+   "to": "soc:cohesion",
+   "rel": "see-also",
+   "note": {
+    "fa": "انسجام اجتماعی",
+    "en": "Social cohesion",
+    "nl": "Social cohesion"
+   }
+  },
+  {
+   "to": "psy:social-media",
+   "rel": "see-also",
+   "note": {
+    "fa": "شتاب‌دهندهٔ رسانهٔ اجتماعی",
+    "en": "Social media as an accelerator",
+    "nl": "Social media as an accelerator"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:484b0e02cc"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,98 @@
+{
+ "id": "soc:sasanian-clergy-christian-sources",
+ "kind": "concept",
+ "title": {
+  "fa": "آزار مسیحیان در گزارش‌های ساسانی و سوگیری منابع",
+  "en": "Persecution of Christians under the Sasanians: sources and bias",
+  "nl": "Vervolging van christenen onder de Sassaniden: bronnen en vooringenomenheid"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "مقاله می‌گوید سیاست روحانیان با اقلیت‌ها با موقعیت سیاسی ایران در برابر روم پیوند داشت و بیشتر آگاهی ما از منابع مسیحی است که ممکن است اغراق کرده باشند.",
+  "en": "The article links clerical policy toward minorities to rivalry with Rome and warns that most of our evidence comes from Christian sources that may exaggerate.",
+  "nl": "Het artikel verbindt het beleid tegenover minderheden aan de rivaliteit met Rome en waarschuwt dat de bronnen vooral christelijk zijn."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید پس از فرمان میلان (سدهٔ چهارم) مسیحیان ایران را به روم متمایل می‌دانستند و همین مایهٔ بدگمانی شاهان ساسانی و تشویق روحانیان به سخت‌گیری شد.",
+    "en": "The author argues that after Constantine's tolerance policy Iranian Christians were suspected of sympathy for Rome, which fuelled harsh policy encouraged by clergy.",
+    "nl": "The author argues that after Constantine's tolerance policy Iranian Christians were suspected of sympathy for Rome, which fuelled harsh policy encouraged by clergy."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نامی از چند موبدانِ موبد در آزار یا فشار بر مسیحیان می‌آورد (مثلاً مهرشاپور، آذربوزی، مهرنرسی). اغلب مأخذ او منابع مسیحی است و خود می‌گوید ممکن است «با آب‌وتاب» روایت شده باشد.",
+    "en": "He names several chief mobeds tied to pressure on Christians (e.g. Mihr-Shapur, Azarbuzi, Mihr-Narseh), drawing mostly on Christian sources and admitting some accounts may be embellished.",
+    "nl": "He names several chief mobeds tied to pressure on Christians (e.g. Mihr-Shapur, Azarbuzi, Mihr-Narseh), drawing mostly on Christian sources and admitting some accounts may be embellished."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به شهادت مقاله، همگدین موبد پس از گرویدن به مسیحیت به بهانهٔ خیانت کشته شد؛ نویسنده مأخذ او را الیشه (ارمنی) می‌داند و می‌گوید ممکن است گزارش اغراق‌آمیز باشد.",
+    "en": "The article reports that the mobed Hamgdin converted to Christianity and was killed on a treason pretext, citing the Armenian historian Elishe and noting possible exaggeration.",
+    "nl": "The article reports that the mobed Hamgdin converted to Christianity and was killed on a treason pretext, citing the Armenian historian Elishe and noting possible exaggeration."
+   },
+   "sources": [
+    "src:0f37ec0e89"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهش جدید برای این گزارش‌ها دو چیز را می‌افزاید: شهید‌نامه‌های سریانی ژانر دینی با هدف تبلیغ‌اند، و آزارها اغلب به جنگ و سیاست ایران و روم و گاه به ستیزهای درونی کلیسا هم بسته بود، نه دعوای ساده دینی.",
+    "en": "Modern scholarship adds that Syriac martyr acts are a devotional genre and that persecutions were often tied to war and politics with Rome, and sometimes to intra-church disputes, rather than purely religious.",
+    "nl": "Modern scholarship adds that Syriac martyr acts are a devotional genre and that persecutions were often tied to war and politics with Rome, and sometimes to intra-church disputes, rather than purely religious."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions",
+   "rel": "part-of",
+   "note": {
+    "fa": "نهادها و دولت",
+    "en": "Institutions and the state",
+    "nl": "Institutions and the state"
+   }
+  },
+  {
+   "to": "soc:religion-ideology-iran-debate",
+   "rel": "see-also",
+   "note": {
+    "fa": "دین و ایدئولوژی در ایران",
+    "en": "Religion and ideology in Iran",
+    "nl": "Religion and ideology in Iran"
+   }
+  }
+ ],
+ "people": [
+  "core:mihr-narseh",
+  "core:mar-aba-i"
+ ],
+ "sources": [
+  "src:0f37ec0e89"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
