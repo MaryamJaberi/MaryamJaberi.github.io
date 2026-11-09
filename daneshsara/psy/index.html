@@ -118,7 +118,9 @@ html.ltr ul li a > i{display:inline-block;transform:scaleX(-1)}
 .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)!important;padding-block:44px 20px!important;position:relative}
 .hero::before{content:"";position:absolute;inset:0 calc(50% - 50vw);z-index:-1;background:radial-gradient(60% 70% at 20% 40%,color-mix(in srgb,var(--d-feel) 10%,transparent),transparent 70%),radial-gradient(50% 60% at 85% 20%,color-mix(in srgb,var(--d-self) 9%,transparent),transparent 70%)}
 @media (max-width:900px){.hero{grid-template-columns:minmax(0,1fr)!important}}
-.kicker{font-size:.82rem;color:var(--link);font-weight:500;margin-bottom:8px}
+.kicker{font-size:.82rem;color:var(--link);font-weight:500;margin-bottom:6px;line-height:1.9;max-width:54ch}
+.sibrow{font-size:.8rem;color:var(--muted);line-height:2;margin:0 0 14px;max-width:54ch}
+.sibrow a{color:var(--link);text-decoration:none}.sibrow a:hover{text-decoration:underline}
 .hero h1{font-size:clamp(3rem,7.5vw,5.4rem)!important;letter-spacing:-.01em}
 .hero p.lead{font-size:1.06rem;max-width:50ch;margin-top:14px!important}
 .hero .srch{max-width:520px;margin-bottom:18px}
@@ -270,11 +272,12 @@ table.xt button:hover,table.xt button[aria-pressed="true"]{opacity:1;box-shadow:
 .subgrid b{font-size:1.05rem;line-height:1.4}
 .subgrid em{font-style:normal;font-size:.78rem;color:var(--fam-psy,var(--primary))}
 .subgrid span{font-size:.85rem;color:var(--ink-2);line-height:1.7}
-</style><nav class="dstools" aria-label="ابزارهای روان"><b>ابزارهای روان</b><div class="r"><a href="learn.html">مرکز یادگیری</a><a href="scales.html">خودسنجی</a><a href="tools/explore.html">کاوشگر</a><a href="tools/compare-theories.html">مقایسهٔ رویکردها</a><a href="tools/">همهٔ ابزارها ←</a></div></nav><!--/dstools-->
+</style><!--/dstools-->
 <div id="v-home">
 <section class="hero">
   <div class="htext">
-    <div class="kicker">دانشنامه‌ای فارسی از روان‌شناسی، به هم پیوسته با فلسفه، جامعه‌شناسی و علوم اعصاب · نخستین ویکی <a href="../" style="color:inherit;text-decoration:underline dotted">دانش‌سرا</a>: کنار <a href="../soc/" style="color:inherit">جامعه</a>، <a href="../tabar/" style="color:inherit">تبار و ژنتیک</a> و <a href="../phil/" style="color:inherit">فلسفه</a></div>
+    <div class="kicker">دانشنامه‌ای فارسی از روان‌شناسی، به هم پیوسته با فلسفه، جامعه‌شناسی و علوم اعصاب</div>
+    <p class="sibrow">نخستین ویکی <a href="../">دانش‌سرا</a> · کنار <a href="../soc/">جامعه</a>، <a href="../tabar/">تبار و ژنتیک</a>، <a href="../phil/">فلسفه</a> و <a href="../miyan/">ارتباط رشته‌ها</a></p>
     <h1>ویکی روان‌شناسی</h1>
     <p class="lead">سخنرانی‌ها، کارگاه‌ها و کتاب‌های معرفی‌شده در کلاس‌های دکتر آذرخش مکری، به زبان ساده و موضوع‌به‌موضوع؛ با نقشه، خط زمانی، کتابخانه و پرسشنامه‌هایی که می‌شود همین‌جا پر کرد.</p>
     <div class="srch" role="search">
@@ -290,6 +293,7 @@ table.xt button:hover,table.xt button[aria-pressed="true"]{opacity:1;box-shadow:
   </div>
 </section>
 
+<nav class="dstools" aria-label="ابزارهای روان"><b>ابزارهای روان</b><div class="r"><a href="learn.html">مرکز یادگیری</a><a href="scales.html">خودسنجی</a><a href="tools/explore.html">کاوشگر</a><a href="tools/compare-theories.html">مقایسهٔ رویکردها</a><a href="tools/">همهٔ ابزارها ←</a></div></nav>
 <section class="sec" id="subs">
   <header><div><div class="eyebrow">زیرمجموعه‌ها</div><h2>شش حوزهٔ این ویکی</h2></div><p>هر حوزه چند موضوع دارد و هر موضوع چند صفحه. روی یک حوزه بزنید تا صفحه‌هایش را ببینید.</p></header>
   <div class="subgrid" id="subgrid"></div>
