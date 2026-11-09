@@ -1,0 +1,103 @@
+{
+ "id": "soc:arabia-nomad-settled-regions",
+ "kind": "concept",
+ "title": {
+  "fa": "سرزمین‌های عرب: بادیه‌نشین و شهرنشین، ناحیه‌ها و بازرگانی یمن",
+  "en": "The Arabian lands: nomad and settled life, regions, and Yemen's trade",
+  "nl": "De Arabische landen: nomadisch en gevestigd leven, regio's en de handel van Jemen"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "سالم جغرافیای شبه‌جزیره را بر دو شیوهٔ زندگی بادیه و شهر پیوند می‌دهد و یمن را سرزمین کاخ‌ها، سدها و بازرگانی بخور می‌داند.",
+  "en": "Salim ties the geography of the peninsula to two ways of life, desert and town, and presents Yemen as a land of palaces, dams and incense trade.",
+  "nl": "Salim koppelt de geografie van het schiereiland aan twee levenswijzen, woestijn en stad, en beschrijft Jemen als land van paleizen, dammen en wierookhandel."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ساکنان به دو دسته‌اند: چادرنشینان بادیه (اعراب، «اهل وبر») و شهرنشینانی که به کشاورزی، بازرگانی و پیشه می‌پردازند («اهل مدر»).",
+    "en": "Inhabitants fall into two groups: tent-dwelling desert people ('a'rab, 'ahl al-wabar') and townsfolk who farm, trade and practise crafts ('ahl al-madar').",
+    "nl": "Inhabitants fall into two groups: tent-dwelling desert people ('a'rab, 'ahl al-wabar') and townsfolk who farm, trade and practise crafts ('ahl al-madar')."
+   },
+   "sources": [
+    "src:1a564e6c86"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یونانیان و رومیان سرزمین را «عربستان سنگی» (نبطیان)، «سعادتمند» (یمن) و «بیابانی» نامیدند. اهل شبه‌جزیره پنج بخش می‌شناختند: تهامه، نجد، حجاز، عروض و یمن.",
+    "en": "Greeks and Romans named the lands 'Arabia Petraea' (Nabataeans), 'Felix' (Yemen) and 'Deserta'. Residents knew five parts: Tihama, Najd, Hijaz, 'Arud and Yemen.",
+    "nl": "Greeks and Romans named the lands 'Arabia Petraea' (Nabataeans), 'Felix' (Yemen) and 'Deserta'. Residents knew five parts: Tihama, Najd, Hijaz, 'Arud and Yemen."
+   },
+   "sources": [
+    "src:1a564e6c86"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بارندگی فصلی در بیابان گاهی چراگاه و آب می‌آورد و گاهی سیل ویرانگر؛ نویسنده سیل عرم و نابودی قوم سبا را نمونه می‌آورد.",
+    "en": "Seasonal rain brings pasture and water at times and destructive floods at others; the author cites the 'arim flood and Saba's ruin as an example.",
+    "nl": "Seasonal rain brings pasture and water at times and destructive floods at others; the author cites the 'arim flood and Saba's ruin as an example."
+   },
+   "sources": [
+    "src:1a564e6c86"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یمن را به‌خاطر باران موسمی، سدها (از جمله ده‌ها سد در محصب، به روایت همدانی) و کاخ‌های بلند (غمدان و جز آن) پیشرفته‌ترین ناحیه می‌داند؛ بخور، کندر و دیگر محصولاتش به مصر و جاهای دیگر می‌رفت و مردمش واسطهٔ تجارت هند، عراق، شام و مصر بودند.",
+    "en": "He sees Yemen as the most advanced region thanks to seasonal rain, dams (Hamdani reports eighty in Yahsub) and tall palaces (Ghumdan and others); incense, frankincense and other goods went to Egypt and beyond, and its people brokered trade between India, Iraq, Syria and Egypt.",
+    "nl": "He sees Yemen as the most advanced region thanks to seasonal rain, dams (Hamdani reports eighty in Yahsub) and tall palaces (Ghumdan and others); incense, frankincense and other goods went to Egypt and beyond, and its people brokered trade between India, Iraq, Syria and Egypt."
+   },
+   "sources": [
+    "src:1a564e6c86"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نام «یمن» را ریشه‌یابی می‌کند: روایت‌های سنتی (راست مکه، میمنت) را کنار می‌گذارد و به‌جای آن «یمنات» در متن‌های کهن را خاستگاه می‌داند.",
+    "en": "On the name 'Yemen' he sets aside traditional explanations (right of Mecca, auspiciousness) in favour of 'Yamnat' in ancient texts.",
+    "nl": "On the name 'Yemen' he sets aside traditional explanations (right of Mecca, auspiciousness) in favour of 'Yamnat' in ancient texts."
+   },
+   "sources": [
+    "src:1a564e6c86"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:space",
+   "rel": "part-of",
+   "note": {
+    "fa": "جغرافیا و شیوهٔ زندگی",
+    "en": "Geography and way of life",
+    "nl": "Geography and way of life"
+   }
+  },
+  {
+   "to": "soc:institutions",
+   "rel": "see-also",
+   "note": {
+    "fa": "دولت‌های کهن و تجارت",
+    "en": "Early states and trade",
+    "nl": "Early states and trade"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:1a564e6c86"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
