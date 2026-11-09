@@ -1,0 +1,113 @@
+{
+ "id": "soc:book-viewpoint-protestant-progress-claim",
+ "kind": "concept",
+ "title": {
+  "fa": "ادعای «پیشرفت پروتستانی و عقب‌ماندگی کاتولیکی» در یک روایت کلیسایی",
+  "en": "The 'Protestant progress, Catholic decline' claim in a confessional history",
+  "nl": "De bewering 'protestantse vooruitgang, katholieke achteruitgang' in een confessionele geschiedenis"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "فصل پایانی کتاب نتیجه می‌گیرد کشورهای پروتستان پیشرفتی پیوسته داشته‌اند و کشورهای کاتولیک عقب مانده‌اند. این دیدگاه نویسنده است؛ پژوهش‌های دانشگاهی تصویری پیچیده‌تر می‌دهند.",
+  "en": "The closing chapter concludes that Protestant countries advanced steadily while Catholic ones fell behind. This is the author's view; academic research gives a more complex picture.",
+  "nl": "Het slothoofdstuk concludeert dat protestantse landen gestaag vooruitgingen en katholieke achterbleven. Dit is de visie van de auteur; onderzoek geeft een genuanceerder beeld."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نویسنده اسکاتلند و هلند پروتستان را با ایتالیا و اسپانیای کاتولیک مقایسه می‌کند و نتیجه می‌گیرد که کلیسای اصلاح‌شده با رشد، سواد و پیشرفت همراه بوده است.",
+    "en": "The author compares Protestant Scotland and Holland with Catholic Italy and Spain and concludes the reformed church went with growth, literacy and progress.",
+    "nl": "The author compares Protestant Scotland and Holland with Catholic Italy and Spain and concludes the reformed church went with growth, literacy and progress."
+   },
+   "sources": [
+    "src:79c59755e3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او آمار پیروان را تقریبی می‌داند و می‌گوید بسیاری در سرزمین‌های «کاتولیک» فقط اسماً کاتولیک‌اند؛ این احتیاط را خودش می‌پذیرد.",
+    "en": "He admits follower counts are approximate and that many in 'Catholic' lands are so only nominally.",
+    "nl": "He admits follower counts are approximate and that many in 'Catholic' lands are so only nominally."
+   },
+   "sources": [
+    "src:79c59755e3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهشگران این مقایسه را ساده‌انگارانه می‌دانند: ایتالیای سدهٔ شانزدهم از ثروتمندترین نواحی اروپا بود و تفاوت‌های اقتصادی را به سیاست، تجارت اقیانوسی، شهرنشینی و نهادها هم نسبت می‌دهند، نه فقط به مذهب.",
+    "en": "Scholars see this comparison as simplistic: sixteenth-century Italy was among Europe's richest regions, and economic divergence is also attributed to politics, Atlantic trade, urbanisation and institutions, not religion alone.",
+    "nl": "Scholars see this comparison as simplistic: sixteenth-century Italy was among Europe's richest regions, and economic divergence is also attributed to politics, Atlantic trade, urbanisation and institutions, not religion alone."
+   },
+   "sources": [
+    "src:4529d0cfd3"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پژوهش‌های کمّی (مثلاً بکر و وسمان دربارهٔ پروس) نشان می‌دهند پروتستان‌ها سواد بیشتری داشتند چون کتاب مقدس را باید می‌خواندند؛ این سازوکار از آن «برتری ذاتی مذهب» که کتاب می‌گوید مستدل‌تر است، هرچند خود آن تحلیل‌ها هم محل بحث‌اند.",
+    "en": "Quantitative studies (e.g. Becker and Woessmann on Prussia) find Protestants were more literate because they were expected to read scripture; this mechanism is better supported than inherent religious superiority, though those analyses are also debated.",
+    "nl": "Quantitative studies (e.g. Becker and Woessmann on Prussia) find Protestants were more literate because they were expected to read scripture; this mechanism is better supported than inherent religious superiority, though those analyses are also debated."
+   },
+   "sources": [
+    "src:87be5099d1"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "اصلاحات کاتولیک و شورای ترنت هم کلیسای کاتولیک را از درون تغییر داد؛ کتاب این را در پایان فصل نوزدهم بیشتر به‌صورت واکنش و سرکوب نشان می‌دهد.",
+    "en": "The Catholic Reformation and Trent also changed the Catholic church from within; the book mostly frames it as reaction and repression.",
+    "nl": "The Catholic Reformation and Trent also changed the Catholic church from within; the book mostly frames it as reaction and repression."
+   },
+   "sources": [
+    "src:4529d0cfd3"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:protestant-ethic",
+   "rel": "critiques",
+   "note": {
+    "fa": "بحث وبر دربارهٔ اخلاق پروتستانی",
+    "en": "Weber's Protestant ethic debate",
+    "nl": "Weber's Protestant ethic debate"
+   }
+  },
+  {
+   "to": "soc:enlightenment-break",
+   "rel": "see-also",
+   "note": {
+    "fa": "گذار به روشنگری",
+    "en": "Transition to the Enlightenment",
+    "nl": "Transition to the Enlightenment"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:4529d0cfd3",
+  "src:79c59755e3",
+  "src:87be5099d1"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,93 @@
+{
+ "id": "soc:shii-fiqh-women-three-divergences",
+ "kind": "concept",
+ "title": {
+  "fa": "فقه شیعه و زنان: سه تفاوت اصلی با فقه سنی (از مقدمهٔ ویراستار فارسی)",
+  "en": "Shi'i jurisprudence and women: three main divergences from Sunni law (Persian editor's introduction)",
+  "nl": "Sjiitische rechtspraak en vrouwen: drie verschillen met soennitisch recht (inleiding van de Perzische redacteur)"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "در مقدمهٔ ویراستار فارسی، و نه متن مرنیسی، آمده که فقه امامیه در سه زمینه با فقه سنی فرق دارد: طلاق بدعی را نمی‌پذیرد، ارث را بیشتر بر پایهٔ نزدیکی خویشاوندی می‌داند و نه تعصیب مردانه، و ازدواج موقت را جایز می‌شمارد. فقه زیدی و اسماعیلی به‌طور کلی به الگوی سنی نزدیک‌ترند. این بخش نوشتهٔ ویراستار است نه مرنیسی.",
+  "en": "The Persian editor's introduction (not Mernissi's text) says Imami jurisprudence differs from Sunni law on three points: it rejects 'innovated' divorce, bases inheritance more on closeness of kinship than male agnatic priority, and permits temporary marriage. Zaydi and Isma'ili law are described as generally closer to the Sunni pattern. This part is the editor's, not Mernissi's.",
+  "nl": "In de inleiding van de Perzische redacteur (niet Mernissi's tekst) staat dat het imamitische recht op drie punten van het soennitische afwijkt: verworpen 'vernieuwde' verstoting, erfrecht en tijdelijk huwelijk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ویراستار می‌نویسد فقه امامی طلاق بدعی (مثلاً سه طلاق در یک مجلس) را معتبر نمی‌داند و ظلم آن بر زن را محکوم می‌کند، در حالی که مذاهب سنی آن را نافذ می‌دانند.",
+    "en": "The editor writes that Imami law does not accept 'innovated' divorce (e.g. triple repudiation in one sitting) and condemns its injustice to the wife, whereas Sunni schools treat it as effective.",
+    "nl": "The editor writes that Imami law does not accept 'innovated' divorce (e.g. triple repudiation in one sitting) and condemns its injustice to the wife, whereas Sunni schools treat it as effective."
+   },
+   "sources": [
+    "src:e63fa2b5d6"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در ارث، بنا بر این مقدمه، فقه امامی خویشاوندان را فارغ از اینکه از طریق زن یا مرد به میت برسند بر پایهٔ نزدیکی مقدم می‌دارد و قاعدهٔ مردانهٔ تعصیب را رد می‌کند، هرچند سهم پسر دو برابر دختر در قاعدهٔ قرآنی می‌ماند.",
+    "en": "On inheritance, the introduction says Imami law ranks relatives by closeness whether related through women or men and rejects the male-agnate rule ('asaba), while keeping the Qur'anic two-to-one son/daughter share.",
+    "nl": "On inheritance, the introduction says Imami law ranks relatives by closeness whether related through women or men and rejects the male-agnate rule ('asaba), while keeping the Qur'anic two-to-one son/daughter share."
+   },
+   "sources": [
+    "src:e63fa2b5d6"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "ازدواج موقت (متعه) در فقه امامی جایز است، اما به گفتهٔ ویراستار زیدیان و اسماعیلیان و سنی‌ها آن را نمی‌پذیرند؛ او قاضی نعمان اسماعیلی را نمونه‌ای می‌داند که متعه را با تکیه بر منابع زیدی منع کرد.",
+    "en": "Temporary marriage (mut'a) is lawful in Imami law, but the editor says Zaydis, Isma'ilis and Sunnis reject it, citing the Isma'ili jurist al-Qadi al-Nu'man as banning it on Zaydi-sourced reports.",
+    "nl": "Temporary marriage (mut'a) is lawful in Imami law, but the editor says Zaydis, Isma'ilis and Sunnis reject it, citing the Isma'ili jurist al-Qadi al-Nu'man as banning it on Zaydi-sourced reports."
+   },
+   "sources": [
+    "src:e63fa2b5d6"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این بحث دربارهٔ اینکه این تفاوت‌ها واقعاً جایگاه زن را بالا برده‌اند یا نه محل نزاع است؛ ویراستار آن را «ارتقای قابل‌توجه» می‌داند، ولی برخی پژوهشگران متعه و ارث را از دید برابری جنسیتی نقد می‌کنند.",
+    "en": "Whether these differences truly raised women's status is disputed: the editor calls it a notable improvement, but some scholars criticise mut'a and inheritance rules from a gender-equality standpoint.",
+    "nl": "Whether these differences truly raised women's status is disputed: the editor calls it a notable improvement, but some scholars criticise mut'a and inheritance rules from a gender-equality standpoint."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:quran-women-violence-umm-salama-verse-debate",
+   "rel": "see-also",
+   "note": {
+    "fa": "بحث قرآنی دربارهٔ برابری و خشونت",
+    "en": "Qur'anic debate on equality and violence",
+    "nl": "Qur'anic debate on equality and violence"
+   }
+  }
+ ],
+ "people": [
+  "core:qadi-al-nu-man",
+  "core:ja-far-al-sadiq"
+ ],
+ "sources": [
+  "src:e63fa2b5d6"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "soc:child-view-of-family-rupture-pamuk",
+ "kind": "concept",
+ "title": {
+  "fa": "نگاه کودک به فروپاشی خانواده در داستان «آدم‌های مشهور» پاموک",
+  "en": "A child's view of family rupture in Pamuk's 'Famous People'",
+  "nl": "De kinderblik op een gebroken gezin in Pamuks 'Beroemde mensen'"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "داستان نشان می‌دهد کودکی که علت جدایی والدین را مستقیم نمی‌داند، آن را از نشانه‌های کوچک (غیبت پدر، خشم مادر، رفتن به خانهٔ مادربزرگ) و از راه بازی می‌خواند. مثالی ادبی برای بحران خانواده در یک خانوادهٔ شهری و گسترده در استانبول دههٔ ۱۹۵۰.",
+  "en": "The story shows a child who is not told why his parents are splitting and instead reads it through small signs (an absent father, an angry mother, a move to grandmother's flat) and through play. It is a literary example of family crisis in an urban extended family in 1950s Istanbul.",
+  "nl": "Het verhaal toont een kind dat niet te horen krijgt waarom zijn ouders uit elkaar gaan en dat de breuk afleest aan kleine tekenen en aan spel. Een literair voorbeeld van gezinscrisis in een stedelijke uitgebreide familie in Istanbul in de jaren vijftig."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "راوی پسربچه‌ای است که رویدادهای بزرگ خانواده را بدون توضیح بزرگ‌ترها و فقط از جزئیات روزمره می‌فهمد.",
+    "en": "The narrator is a boy who grasps the family's big events only through everyday details, without adults explaining them.",
+    "nl": "The narrator is a boy who grasps the family's big events only through everyday details, without adults explaining them."
+   },
+   "sources": [
+    "src:6fd7306378"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پس از رفتن پدر، مادر پسرها را به خانهٔ مادربزرگ می‌برد؛ در این آپارتمان چند نسل و خویشاوند نزدیک نقش حمایتی و کنترلی دارند.",
+    "en": "After the father leaves, the mother takes the boys to the grandmother's flat, where several generations and close relatives play both supportive and controlling roles.",
+    "nl": "After the father leaves, the mother takes the boys to the grandmother's flat, where several generations and close relatives play both supportive and controlling roles."
+   },
+   "sources": [
+    "src:6fd7306378"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این اثر داستان است و گزارش مستند نیست؛ شباهت روایت با زندگی نویسنده فقط تفسیر ادبی است و نمی‌توان از آن برای آمار یا الگوی عمومی طلاق و خانواده در ترکیه نتیجه گرفت.",
+    "en": "The work is fiction, not documentation; any resemblance to the author's life is literary interpretation, and it cannot support claims about general divorce or family patterns in Turkey.",
+    "nl": "The work is fiction, not documentation; any resemblance to the author's life is literary interpretation, and it cannot support claims about general divorce or family patterns in Turkey."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:soc-family",
+   "rel": "see-also",
+   "note": {
+    "fa": "جامعه‌شناسی خانواده",
+    "en": "Sociology of the family",
+    "nl": "Sociology of the family"
+   }
+  },
+  {
+   "to": "psy:t-systemic",
+   "rel": "see-also",
+   "note": {
+    "fa": "خانواده‌درمانی و سیستمی",
+    "en": "Family and systemic therapy",
+    "nl": "Family and systemic therapy"
+   }
+  }
+ ],
+ "people": [
+  "core:orhan-pamuk"
+ ],
+ "sources": [
+  "src:6fd7306378"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

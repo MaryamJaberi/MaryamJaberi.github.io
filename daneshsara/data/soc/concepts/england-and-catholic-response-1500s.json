@@ -1,0 +1,103 @@
+{
+ "id": "soc:england-and-catholic-response-1500s",
+ "kind": "concept",
+ "title": {
+  "fa": "ترجمهٔ کتاب مقدس، انگلستان و پاسخ کاتولیک در ایتالیا",
+  "en": "Bible translation, England and the Catholic response in Italy",
+  "nl": "Bijbelvertaling, Engeland en het katholieke antwoord in Italië"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "کتاب نقش ترجمهٔ کتاب مقدس به زبان مردم (تیندل در انگلیس) و شکست جنبش اصلاح در ایتالیا زیر فشار تفتیش عقاید را نشان می‌دهد.",
+  "en": "The book shows the role of vernacular Bible translation (Tyndale in England) and the failure of reform in Italy under the Inquisition.",
+  "nl": "Het boek laat de rol van volkstaalbijbels (Tyndale in Engeland) zien en het mislukken van hervorming in Italië onder de Inquisitie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ویلیام تیندل با دیدن بی‌خبری مردم از کتاب مقدس، آن را به انگلیسی ترجمه کرد، در خارج از کشور چاپ کرد و نسخه‌ها قاچاقی وارد انگلستان شد؛ او را سرانجام خفه کردند و سوزاندند.",
+    "en": "William Tyndale, seeing popular ignorance of scripture, translated it into English, printed it abroad, had copies smuggled in, and was finally strangled and burned.",
+    "nl": "William Tyndale, seeing popular ignorance of scripture, translated it into English, printed it abroad, had copies smuggled in, and was finally strangled and burned."
+   },
+   "sources": [
+    "src:79c59755e3",
+    "src:4529d0cfd3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هانری هشتم نخست مدافع پاپ و ضد لوتر بود و به همین سبب لقب «مدافع ایمان» گرفت؛ ماجرای جدایی انگلستان از روم معمولاً با مسئلهٔ طلاق و سیاست نیز پیوند داده می‌شود، که کتاب کمتر به آن می‌پردازد.",
+    "en": "Henry VIII was first a papal defender against Luther and earned the title 'Defender of the Faith'; the break with Rome is usually tied also to the divorce question and politics, which the book treats less.",
+    "nl": "Henry VIII was first a papal defender against Luther and earned the title 'Defender of the Faith'; the break with Rome is usually tied also to the divorce question and politics, which the book treats less."
+   },
+   "sources": [
+    "src:79c59755e3",
+    "src:4529d0cfd3"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در ایتالیا حلقه‌هایی از تحصیلکردگان به عدالت‌شمردگی نزدیک به لوتر گرایش داشتند و در کنفرانس رگنسبورگ (۱۵۴۱) با کانتارینی بر سر برخی آموزه‌ها توافق شد، اما بر سر اقتدار پاپ و عشای ربانی نه.",
+    "en": "In Italy, circles of educated people leaned toward a Lutheran-like view of justification; at the Regensburg colloquy (1541) with Contarini some doctrines were agreed, but not papal authority or the Eucharist.",
+    "nl": "In Italy, circles of educated people leaned toward a Lutheran-like view of justification; at the Regensburg colloquy (1541) with Contarini some doctrines were agreed, but not papal authority or the Eucharist."
+   },
+   "sources": [
+    "src:79c59755e3",
+    "src:4529d0cfd3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سپس تفتیش عقاید تازه‌سازمان‌یافته پروتستان‌گرایی را در ایتالیا تقریباً از میان برد؛ همین که بیشتر ایتالیایی‌ها با نقد فساد دربار پاپ هم‌نظر بودند ولی از کلیسا جدا نمی‌شدند، در روایت کتاب محور است.",
+    "en": "A reorganised Inquisition then almost eliminated Protestantism in Italy; the book stresses that many Italians shared criticism of papal-court corruption yet would not leave the church.",
+    "nl": "A reorganised Inquisition then almost eliminated Protestantism in Italy; the book stresses that many Italians shared criticism of papal-court corruption yet would not leave the church."
+   },
+   "sources": [
+    "src:79c59755e3",
+    "src:4529d0cfd3"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:swiss-reformation-zwingli-calvin",
+   "rel": "see-also",
+   "note": {
+    "fa": "اصلاحات سوئیس",
+    "en": "Swiss Reformation",
+    "nl": "Swiss Reformation"
+   }
+  },
+  {
+   "to": "soc:revolution-or-reform",
+   "rel": "see-also",
+   "note": {
+    "fa": "اصلاح یا انقلاب",
+    "en": "Reform or revolution",
+    "nl": "Reform or revolution"
+   }
+  }
+ ],
+ "people": [
+  "core:william-tyndale",
+  "core:gasparo-contarini"
+ ],
+ "sources": [
+  "src:4529d0cfd3",
+  "src:79c59755e3"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

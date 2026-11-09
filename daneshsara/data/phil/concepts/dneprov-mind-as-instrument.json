@@ -1,0 +1,128 @@
+{
+ "id": "phil:dneprov-mind-as-instrument",
+ "kind": "concept",
+ "title": {
+  "fa": "خانهٔ اهریمنی: انسان به‌مثابه ابزار حل مسئله",
+  "en": "The House of Ahriman: the human mind as a tool",
+  "nl": "Het huis van Ahriman: de menselijke geest als werktuig"
+ },
+ "aliases": [],
+ "parent": "phil:ethics",
+ "field": "phil:ethics",
+ "summary": {
+  "fa": "داستان علمی‌تخیلی دنپروف روایت می‌کند که چگونه یک شرکت با فشار و تحریک مغز، ریاضی‌دانان را به ماشین محاسبه تبدیل می‌کند، و مسئلهٔ اخلاقی استفاده از انسان صرفاً ابزار را پیش می‌کشد.",
+  "en": "Dneprov's science-fiction story shows a firm turning mathematicians into calculating machines by coercing their brains, and raises the ethical problem of treating people purely as tools.",
+  "nl": "Dneprovs sciencefictionverhaal toont een bedrijf dat wiskundigen door dwang tot rekenmachines maakt en de ethiek van mensen als louter middel aan de orde stelt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "راوی شرکتی را کشف می‌کند که مسئله‌های ریاضی دشوار را در یک تا دو روز و بسیار دقیق حل می‌کند و پاسخ‌ها را به مشتری می‌فروشد.",
+    "en": "The narrator discovers a firm that sells exact solutions to hard maths problems within a day or two.",
+    "nl": "The narrator discovers a firm that sells exact solutions to hard maths problems within a day or two."
+   },
+   "sources": [
+    "src:f3f8d81962"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رئیس شرکت، بازجوی سابق اس‌اس، ریاضی‌دانان را در ساختمانی کنار تیمارستان نگه می‌دارد و با دستگاهی که مغز را برق می‌دهد و درد می‌دهد وادار به کار می‌کند.",
+    "en": "The head, a former SS interrogator, keeps mathematicians in a building beside an asylum and forces them to work by an apparatus that shocks and pains their brains.",
+    "nl": "The head, a former SS interrogator, keeps mathematicians in a building beside an asylum and forces them to work by an apparatus that shocks and pains their brains."
+   },
+   "sources": [
+    "src:f3f8d81962"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "هر اسیر ناچار می‌شود برای حفظ خود شعار وفاداری به «استاد» را تکرار کند؛ نویسنده این را خودفریبی ناشی از ترس و شست‌وشوی ذهن نشان می‌دهد.",
+    "en": "Captives are made to repeat loyalty slogans to their master; the author portrays this as self-deception born of fear and brainwashing.",
+    "nl": "Captives are made to repeat loyalty slogans to their master; the author portrays this as self-deception born of fear and brainwashing."
+   },
+   "sources": [
+    "src:f3f8d81962"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مرزی که داستان می‌کشد: کار فکری آزاد به نفع دانش است، اما بهره‌کشی از ذهن بی‌رضایت جنایت است، حتی اگر نتیجه سودمند باشد.",
+    "en": "The story's line: free intellectual work serves knowledge, but exploiting a mind without consent is a crime even if the output is useful.",
+    "nl": "The story's line: free intellectual work serves knowledge, but exploiting a mind without consent is a crime even if the output is useful."
+   },
+   "sources": [
+    "src:f3f8d81962"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شخصیت‌های شرور می‌گویند «هدف روش را توجیه می‌کند»؛ داستان این را رد می‌کند و کنار آن مقاومت دسته‌جمعی قربانیان را می‌گذارد.",
+    "en": "The villains claim the end justifies the means; the story rejects this and sets against it the collective revolt of the victims.",
+    "nl": "The villains claim the end justifies the means; the story rejects this and sets against it the collective revolt of the victims."
+   },
+   "sources": [
+    "src:f3f8d81962"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این روایت ادبی است، نه گزارش واقعی؛ نمونهٔ استدلال کانتی (انسان هرگز فقط ابزار نیست) را در قالب داستان می‌آورد و دیدگاه پیامدگرا را که هدف را معیار می‌داند، نقد می‌کند.",
+    "en": "This is fiction rather than report; it dramatises a Kantian argument (a person is never merely a tool) against a crude consequentialism.",
+    "nl": "This is fiction rather than report; it dramatises a Kantian argument (a person is never merely a tool) against a crude consequentialism."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:three-theories",
+   "rel": "see-also",
+   "note": {
+    "fa": "سه نظریهٔ بزرگ اخلاق (وظیفه‌گرا، پیامدگرا، فضیلت)",
+    "en": "The three great moral theories",
+    "nl": "The three great moral theories"
+   }
+  },
+  {
+   "to": "phil:ethics",
+   "rel": "part-of",
+   "note": {
+    "fa": "اخلاق",
+    "en": "Ethics",
+    "nl": "Ethics"
+   }
+  },
+  {
+   "to": "soc:institutions-inclusive",
+   "rel": "contrasts",
+   "note": {
+    "fa": "نهادهای فراگیر در برابر نهادهای بهره‌کش",
+    "en": "Inclusive vs extractive institutions",
+    "nl": "Inclusive vs extractive institutions"
+   }
+  }
+ ],
+ "people": [
+  "core:anatoly-dneprov",
+  "core:parviz-shahriari"
+ ],
+ "sources": [
+  "src:f3f8d81962"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

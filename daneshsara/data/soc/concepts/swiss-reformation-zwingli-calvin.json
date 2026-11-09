@@ -1,0 +1,110 @@
+{
+ "id": "soc:swiss-reformation-zwingli-calvin",
+ "kind": "concept",
+ "title": {
+  "fa": "اصلاحات سوئیس: زوینگلی و کالوین",
+  "en": "The Swiss Reformation: Zwingli and Calvin",
+  "nl": "De Zwitserse Reformatie: Zwingli en Calvijn"
+ },
+ "aliases": [],
+ "parent": "soc:institutions",
+ "field": "soc:institutions",
+ "summary": {
+  "fa": "کتاب زوینگلی را مصلحی می‌داند که از کتاب مقدس برای رد اقتدار پاپ، برزخ و شفاعت قدیسان بهره برد و کالوین را نظام‌دهندهٔ فکری کلیساهای اصلاح‌شده.",
+  "en": "The book presents Zwingli as a reformer who used scripture against papal authority, purgatory and saintly intercession, and Calvin as the systematiser of the Reformed churches.",
+  "nl": "Het boek schetst Zwingli als hervormer die de Schrift tegen pauselijk gezag, vagevuur en heiligenbemiddeling inzette, en Calvijn als systematisering van de gereformeerde kerken."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "زوینگلی که در سوئیس از مزدوری سربازان برای پاپ و شاهان ناخرسند بود، در زوریخ موعظهٔ کتاب‌مقدسی را آغاز کرد و در یک مناظرهٔ عمومی از دعاوی خود دفاع کرد؛ شورای شهر به سود او رأی داد.",
+    "en": "Zwingli, disturbed by Swiss mercenary service to popes and kings, began scripture-based preaching in Zurich, defended his views in a public disputation, and the city council ruled in his favour.",
+    "nl": "Zwingli, disturbed by Swiss mercenary service to popes and kings, began scripture-based preaching in Zurich, defended his views in a public disputation, and the city council ruled in his favour."
+   },
+   "sources": [
+    "src:79c59755e3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "او برزخ، دیرنشینی، اعتراف اجباری، قربانی بودن عشای ربانی و شفاعت قدیسان را رد کرد و مسیح را یگانه میانجی دانست.",
+    "en": "He rejected purgatory, monasticism, compulsory confession, the Mass as sacrifice and saintly intercession, holding Christ the sole mediator.",
+    "nl": "He rejected purgatory, monasticism, compulsory confession, the Mass as sacrifice and saintly intercession, holding Christ the sole mediator."
+   },
+   "sources": [
+    "src:79c59755e3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کالوین در فرانسه با تحصیل حقوق و زبان‌ها شکل گرفت و از تجربهٔ توبه به اعتقاد به نجات تنها از راه ایمان رسید؛ نویسنده او را «مغز» کلیساهای اصلاح‌شده می‌نامد و به ژنو پیوند می‌دهد.",
+    "en": "Calvin, trained in law and languages in France, came through a conversion experience to salvation by faith alone; the author calls him the 'brain' of the Reformed churches and links him with Geneva.",
+    "nl": "Calvin, trained in law and languages in France, came through a conversion experience to salvation by faith alone; the author calls him the 'brain' of the Reformed churches and links him with Geneva."
+   },
+   "sources": [
+    "src:79c59755e3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کالوین کلیسای حقیقی را جماعت ایمانداران می‌دانست که با موعظهٔ کلام و برگزاری آیین‌ها شناخته می‌شود، نه الزاماً کلیسای ظاهری روم.",
+    "en": "Calvin held the true church to be the community of believers, marked by preached Word and sacraments, not necessarily the visible Roman church.",
+    "nl": "Calvin held the true church to be the community of believers, marked by preached Word and sacraments, not necessarily the visible Roman church."
+   },
+   "sources": [
+    "src:79c59755e3"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کتاب ژنو و اصلاحات را تقریباً بی‌نقص روایت می‌کند؛ روایت‌های دانشگاهی همچنین بر سخت‌گیری اخلاقی ژنو، اعدام سروتوس (۱۵۵۳) و اختلاف لوتری-اصلاح‌شده بر سر عشای ربانی تأکید دارند.",
+    "en": "The book narrates Geneva and the reforms almost without blemish; academic accounts also stress Geneva's moral discipline, the execution of Servetus (1553) and the Lutheran–Reformed dispute over the Eucharist.",
+    "nl": "The book narrates Geneva and the reforms almost without blemish; academic accounts also stress Geneva's moral discipline, the execution of Servetus (1553) and the Lutheran–Reformed dispute over the Eucharist."
+   },
+   "sources": [
+    "src:4529d0cfd3"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:luther-indulgences-and-95-theses",
+   "rel": "see-also",
+   "note": {
+    "fa": "لوتر",
+    "en": "Luther",
+    "nl": "Luther"
+   }
+  },
+  {
+   "to": "soc:protestant-ethic",
+   "rel": "bridges",
+   "note": {
+    "fa": "کالوینیسم و ریشهٔ بحث وبر",
+    "en": "Calvinism and the root of Weber's debate",
+    "nl": "Calvinism and the root of Weber's debate"
+   }
+  }
+ ],
+ "people": [
+  "core:huldrych-zwingli",
+  "core:john-calvin"
+ ],
+ "sources": [
+  "src:4529d0cfd3",
+  "src:79c59755e3"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
