@@ -34,6 +34,27 @@ main{padding-block:var(--s6) var(--s16)}
 .tabs button{font:inherit;font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
 .tabs button[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
 .sec h2{font-size:var(--h3);margin:var(--s6) 0 var(--s3)}
+.viz{margin:2px 0 0;padding:0;border-top:1px solid var(--line);padding-top:10px}
+.vlab{font-size:var(--small);font-weight:700;color:var(--ink-2);margin-bottom:6px}
+.vlab2{display:block;font-size:var(--chip);color:var(--ink-3);margin:10px 0 4px}
+.vbox{width:100%}.vbox svg{width:100%;height:auto;display:block}
+.vunit{font-size:var(--chip);color:var(--ink-3);margin:4px 0 0}
+.vnote{font-size:var(--chip);color:var(--ink-2);line-height:1.75;margin:8px 0 0}
+.vsrc{font-size:var(--chip);margin:6px 0 0}.vsrc a{color:var(--ink-3)}
+.vnone{font-size:var(--chip);color:var(--ink-3);border-top:1px dashed var(--line);padding-top:10px;margin:2px 0 0;line-height:1.7}
+.bars{display:grid;gap:6px}
+.bar{display:grid;grid-template-columns:minmax(0,9.5em) 1fr auto;align-items:center;gap:8px;font-size:var(--chip)}
+.bar .bl{color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .bt{background:var(--surface-subtle);border-radius:var(--r-full);height:9px;display:block;overflow:hidden}
+.bar .bt i{display:block;height:100%;border-radius:var(--r-full)}
+.bar b{font-variant-numeric:tabular-nums;color:var(--ink)}
+.scale{margin-top:4px}
+.scale .st{position:relative;display:block;height:10px;border-radius:var(--r-full);background:linear-gradient(to left,var(--surface-subtle),var(--primary-soft))}
+.scale .st i{position:absolute;top:-3px;width:4px;height:16px;border-radius:2px;background:var(--primary)}
+.scale .st u{position:absolute;top:0;height:10px;border-radius:var(--r-full);background:var(--primary);opacity:.75}
+.scale .se{display:flex;justify-content:space-between;font-size:var(--chip);color:var(--ink-3);margin-top:3px}
+.scale .sv{display:block;font-size:var(--small);color:var(--ink);margin-top:2px}
+.cmp{margin-top:6px}
 .notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--s4)}
 .note{scroll-margin-top:90px;padding:var(--s5);display:grid;gap:10px;border-inline-start:4px solid var(--fc,var(--primary))}
 .note .q{font-weight:700;font-size:var(--h4);margin:0}
@@ -83,11 +104,70 @@ const T = k => (UI[L] && UI[L][k]) ?? UI.fa[k];
 const tx = o => !o ? "" : (typeof o === "string" ? o : (L === "fa" ? o.fa : (o[L] || o.en || o.fa)) || "");
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fa = s => L === "fa" ? String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]) : String(s);
+/* ---- viz: every graphic is RTL, Persian-numbered, and never draws a number without a source ---- */
+const VW = 320, VH = 128, VP = {t:14, r:34, b:22, l:10};
+function nf(v, d){ let t = Number(v).toFixed(d === undefined ? (Math.abs(v) >= 10 ? 1 : 2) : d); if (t.indexOf(".") > -1) t = t.replace(/0+$/, "").replace(/\.$/, ""); return fa(t.replace(".", "٫")); }
+const jy = y => fa(y - 621);
+function vwrap(inner, lab, note, src){
+  return `<figure class="viz">${lab ? `<figcaption class="vlab">${esc(lab)}</figcaption>` : ""}${inner}${note ? `<p class="vnote">${esc(note)}</p>` : ""}${src ? `<p class="vsrc"><a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.title)}</a></p>` : ""}</figure>`;
+}
+function lineChart(v){
+  const segs = v.series, pts = segs.flatMap(s => s.points);
+  const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs);
+  let y0 = Math.min(...ys), y1 = Math.max(...ys); const pad = (y1 - y0) * .15 || 1; y0 -= pad; y1 += pad; if (y0 < 0 && Math.min(...ys) >= 0) y0 = 0;
+  // RTL: older years on the right, newer on the left
+  const X = x => VP.l + (x1 - x) / (x1 - x0 || 1) * (VW - VP.l - VP.r);
+  const Y = y => VP.t + (y1 - y) / (y1 - y0 || 1) * (VH - VP.t - VP.b);
+  const col = segs.length > 1 ? ["var(--ink-3)", "var(--primary)"] : ["var(--primary)"];
+  let g = "";
+  // y gridlines
+  [y0, (y0 + y1) / 2, y1].forEach(y => { g += `<line x1="${VP.l}" x2="${VW - VP.r}" y1="${Y(y).toFixed(1)}" y2="${Y(y).toFixed(1)}" stroke="var(--line)" stroke-width="1"/><text x="${VW - VP.r + 5}" y="${(Y(y) + 4).toFixed(1)}" font-size="9.5" fill="var(--ink-3)">${nf(y)}</text>`; });
+  segs.forEach((s, i) => {
+    const d = s.points.map((p, j) => (j ? "L" : "M") + X(p[0]).toFixed(1) + "," + Y(p[1]).toFixed(1)).join(" ");
+    g += `<path d="${d}" fill="none" stroke="${col[i] || col[0]}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    s.points.forEach(p => { g += `<circle cx="${X(p[0]).toFixed(1)}" cy="${Y(p[1]).toFixed(1)}" r="2.1" fill="${col[i] || col[0]}"><title>${jy(p[0])} (${fa(p[0])}): ${nf(p[1])}</title></circle>`; });
+    const e = s.points[s.points.length - 1], f = s.points[0];
+    const ex = X(e[0]), ea = ex < VP.l + 18 ? "start" : (ex > VW - VP.r - 18 ? "end" : "middle");
+    g += `<text x="${ex.toFixed(1)}" y="${(Y(e[1]) - 7).toFixed(1)}" font-size="10" font-weight="700" fill="${col[i] || col[0]}" text-anchor="${ea}">${nf(e[1])}</text>`;
+    if (segs.length > 1) g += `<text x="${((X(f[0]) + X(e[0])) / 2).toFixed(1)}" y="${VH - 12}" font-size="9" fill="${col[i] || col[0]}" text-anchor="middle">${esc(tx(s.name))}</text>`;
+  });
+  if (v.broken && segs.length > 1){
+    const bx = ((X(segs[0].points[segs[0].points.length - 1][0]) + X(segs[1].points[0][0])) / 2).toFixed(1);
+    g += `<line x1="${bx}" x2="${bx}" y1="${VP.t}" y2="${VH - VP.b}" stroke="var(--warn)" stroke-width="1.5" stroke-dasharray="4 3"/><text x="${bx}" y="${VP.t - 4}" font-size="9" fill="var(--warn)" text-anchor="middle">تغییر روش</text>`;
+  }
+  g += `<text x="${VW - VP.r}" y="${VH - 4}" font-size="9.5" fill="var(--ink-3)" text-anchor="end">${jy(x0)}</text><text x="${VP.l}" y="${VH - 4}" font-size="9.5" fill="var(--ink-3)">${jy(x1)}</text>`;
+  return `<div class="vbox"><svg viewBox="0 0 ${VW} ${VH}" role="img" aria-label="${esc(tx(v.label) || "")}" style="direction:ltr">${g}</svg></div>${v.unit ? `<p class="vunit">${esc(tx(v.unit))}</p>` : ""}`;
+}
+function barChart(bars, unit){
+  const m = Math.max(...bars.map(b => b.v));
+  return `<div class="bars">${bars.map(b => `<div class="bar"><span class="bl">${esc(tx(b))}</span><span class="bt"><i style="width:${(b.v / m * 100).toFixed(1)}%;background:${b.self ? "var(--primary)" : "var(--primary-soft)"}"></i></span><b>${nf(b.v, 1)}</b></div>`).join("")}</div>${unit ? `<p class="vunit">${esc(tx(unit))}</p>` : ""}`;
+}
+function scaleViz(v){
+  const pc = (x) => ((v.max - x) / (v.max - v.min) * 100).toFixed(1);
+  return `<div class="scale"><span class="st"><i style="inset-inline-start:${pc(v.v)}%"></i></span><div class="se"><span>${fa(v.max)}</span><span>${fa(v.min)}</span></div><b class="sv">${nf(v.v, 1)}</b></div>`;
+}
+function rangeViz(v){
+  const a = ((v.max - v.hi) / (v.max - v.min) * 100), b = ((v.max - v.lo) / (v.max - v.min) * 100);
+  return `<div class="scale"><span class="st"><u style="inset-inline-start:${a.toFixed(1)}%;width:${(b - a).toFixed(1)}%"></u></span><div class="se"><span>${fa(v.max)}٪</span><span>${fa(v.min)}٪</span></div><b class="sv">${fa(v.lo)} تا ${fa(v.hi)}٪</b></div>${v.unit ? `<p class="vunit">${esc(tx(v.unit))}</p>` : ""}`;
+}
+function viz(n){
+  const v = n.viz; if (!v) return "";
+  if (v.kind === "none") return `<p class="vnone">${esc(tx(v.note))}</p>`;
+  let body = "";
+  if (v.kind === "line") body = lineChart(v) + (v.compare ? `<div class="cmp"><span class="vlab2">${esc(tx(v.compare.unit))}</span>${barChart(v.compare.bars, null)}</div>` : "");
+  else if (v.kind === "bars") body = barChart(v.bars, v.unit);
+  else if (v.kind === "scale") body = scaleViz(v);
+  else if (v.kind === "range") body = rangeViz(v);
+  else return "";
+  return vwrap(body, tx(v.label), tx(v.note), v.source);
+}
 const FC = {psy:"var(--fam-psy)", soc:"var(--fam-soc)", tabar:"var(--fam-bio)", phil:"var(--fam-hum)"};
 let mode = "dom";
 function card(n){
   return `<article class="card note" id="${n.id.split(":")[1]}" style="--fc:${FC[n.domain] || "var(--primary)"}"><h3 class="q">${esc(tx(n.question))}</h3><p class="f">${esc(tx(n.finding))}</p>
    <div class="meta"><i class="g ${n.grade}">${n.grade}</i><span>${fa(n.year)}</span>${n.method ? `<span>${T("method")}: ${esc(n.method)}</span>` : ""}${n.contested ? `<span class="flag">${T("contested")}</span>` : ""}<span>${esc(T("dom")[n.domain] || n.domain)}</span></div>
+   ${viz(n)}
    ${n.critique ? `<p class="crit"><b>${T("critique")}:</b> ${esc(n.critique)}</p>` : ""}
    ${n._concepts.length ? `<div class="links">${n._concepts.map(c => `<a href="${c.url}">${esc(tx(c.title))} ↗</a>`).join("")}</div>` : ""}
    <div class="src">${(n.source || []).map(s => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)).join("<br>")}</div></article>`;

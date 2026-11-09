@@ -6,10 +6,10 @@
   "en": "How unequal is income in Iran?"
  },
  "finding": {
-  "fa": "ضریب جینی در دههٔ اخیر حدود ۳۸ تا ۴۲ (بانک جهانی و مرکز آمار)؛ پس از ۱۳۹۰ کمی کاهش و در سال‌های تورم بالا دوباره افزایش. نابرابری ثروت اندازه‌گیری رسمی ندارد.",
-  "en": "The Gini has been about 38 to 42 in the last decade (World Bank and Statistical Centre); a slight fall after 2011 and renewed rise in high-inflation years. Wealth inequality has no official measurement."
+  "fa": "بر پایهٔ بانک جهانی، ضریب جینی ایران از ۱۳۹۰ تا کنون میان ۳۴ تا ۳۷٫۵ نوسان کرده و آخرین رقم (۱۴۰۲) ۳۵٫۹ است. ارقام پیش از ۱۳۹۰ (۴۲ تا ۴۷) با روش دیگری محاسبه شده‌اند و مستقیم با این‌ها قابل مقایسه نیستند. نابرابری ثروت اندازه‌گیری رسمی ندارد.",
+  "en": "World Bank figures put Iran's Gini between 34 and 37.5 since 2011, most recently 35.9 (2023). Pre-2011 figures (42 to 47) use a different methodology and are not directly comparable. Wealth inequality has no official measurement."
  },
- "year": 2022,
+ "year": 2023,
  "method": "household budget surveys",
  "grade": "B",
  "contested": false,
@@ -25,5 +25,132 @@
  ],
  "capability": [
   10
- ]
+ ],
+ "viz": {
+  "kind": "line",
+  "unit": {
+   "fa": "ضریب جینی (۰ تا ۱۰۰)"
+  },
+  "label": {
+   "fa": "نابرابری درآمد، ۱۳۶۵ تا ۱۴۰۲"
+  },
+  "series": [
+   {
+    "name": {
+     "fa": "پیش از تغییر روش"
+    },
+    "points": [
+     [
+      1986,
+      47.4
+     ],
+     [
+      1990,
+      43.6
+     ],
+     [
+      1994,
+      43.0
+     ],
+     [
+      1998,
+      44.1
+     ],
+     [
+      2005,
+      43.6
+     ],
+     [
+      2006,
+      44.8
+     ],
+     [
+      2009,
+      42.1
+     ]
+    ]
+   },
+   {
+    "name": {
+     "fa": "پس از تغییر روش"
+    },
+    "points": [
+     [
+      2011,
+      34.7
+     ],
+     [
+      2013,
+      34.0
+     ],
+     [
+      2015,
+      35.3
+     ],
+     [
+      2017,
+      36.7
+     ],
+     [
+      2018,
+      37.4
+     ],
+     [
+      2019,
+      36.5
+     ],
+     [
+      2020,
+      35.8
+     ],
+     [
+      2021,
+      35.5
+     ],
+     [
+      2022,
+      34.8
+     ],
+     [
+      2023,
+      35.9
+     ]
+    ]
+   }
+  ],
+  "broken": true,
+  "compare": {
+   "year": "آخرین سال موجود",
+   "unit": {
+    "fa": "ضریب جینی"
+   },
+   "bars": [
+    {
+     "fa": "ترکیه (۲۰۲۳)",
+     "v": 43.7
+    },
+    {
+     "fa": "ایران (۲۰۲۳)",
+     "v": 35.9,
+     "self": true
+    },
+    {
+     "fa": "پاکستان (۲۰۲۴)",
+     "v": 33.5
+    },
+    {
+     "fa": "مصر (۲۰۲۱)",
+     "v": 28.5
+    }
+   ]
+  },
+  "note": {
+   "fa": "دو تکهٔ این خط را به هم وصل نکنید: میان ۱۳۸۸ و ۱۳۹۰ روش محاسبهٔ بانک جهانی عوض شده و افت از ۴۲ به ۳۵ بیشتر تغییر روش است تا تغییر واقعیت. نابرابری ثروت (نه درآمد) در ایران اندازه‌گیری رسمی ندارد."
+  },
+  "source": {
+   "title": "World Bank, World Development Indicators — Gini index (Iran, Islamic Rep.), retrieved 2026-11-09.",
+   "url": "https://data.worldbank.org/indicator/SI.POV.GINI?locations=IR"
+  }
+ },
+ "critique": "شکست روشی میان ۱۳۸۸ و ۱۳۹۰ باعث می‌شود افت ظاهری نابرابری بیشتر تغییر اندازه‌گیری باشد تا تغییر واقعیت؛ جینی درآمدی هم نابرابری ثروت و دسترسی را نشان نمی‌دهد."
 }
