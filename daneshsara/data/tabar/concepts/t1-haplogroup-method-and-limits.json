@@ -1,0 +1,130 @@
+{
+  "id": "tabar:t1-haplogroup-method-and-limits",
+  "kind": "concept",
+  "title": {
+    "fa": "روش هاپلوگروه‌محور در بازسازی تاریخ جمعیت‌ها و محدودیت‌های آن",
+    "en": "Haplogroup-based reconstruction of population history, and its limits",
+    "nl": "Haplogroepen als methode om populatiegeschiedenis te reconstrueren"
+  },
+  "aliases": [],
+  "parent": "tabar:population-genetics",
+  "field": "tabar:population-genetics",
+  "summary": {
+    "fa": "کتاب تاریخ جمعیت‌های انسانی را با ردگیری هاپلوگروه‌های کروموزوم Y و میتوکندری بازمی‌گوید. این مدخل منطق این روش و حدود اعتبارش را شرح می‌دهد.",
+    "en": "The book retells human population history by tracing Y-chromosome and mitochondrial haplogroups. This entry explains the logic of the method and where it stops being reliable.",
+    "nl": "Het boek vertelt de menselijke populatiegeschiedenis via Y-chromosoom- en mitochondriale haplogroepen; dit item beschrijft de methode en haar grenzen."
+  },
+  "points": [
+    {
+      "text": {
+        "fa": "هاپلوگروه مجموعه‌ای از گونه‌های ژنتیکی است که با هم و بدون بازآرایی به نسل بعد می‌رسند: بر کروموزوم Y از پدر به پسر و در میتوکندری از مادر به فرزندان. نویسنده با ردگیری آن‌ها شاخه‌های خویشاوندی جمعیت‌ها را بازسازی می‌کند.",
+        "en": "A haplogroup is a set of genetic variants inherited together as a block: on the Y chromosome from father to son, in mitochondria from mother to children. The author traces these to rebuild the branching relatedness of populations.",
+        "nl": "A haplogroup is a set of genetic variants inherited together as a block: on the Y chromosome from father to son, in mitochondria from mother to children. The author traces these to rebuild the branching relatedness of populations."
+      },
+      "sources": [
+        "src:93456bf0b8"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "زمان‌یابی بر «ساعت مولکولی» تکیه دارد: جهش‌های تصادفی در بخش‌های غیرکارکردی ژنوم با آهنگی تقریباً ثابت انباشته می‌شوند و از شمار آن‌ها می‌توان زمان جدایی دو شاخه را برآورد کرد.",
+        "en": "Dating relies on a molecular clock: random mutations in non-functional stretches of the genome accumulate at a roughly steady rate, and their count lets one estimate when two branches split.",
+        "nl": "Dating relies on a molecular clock: random mutations in non-functional stretches of the genome accumulate at a roughly steady rate, and their count lets one estimate when two branches split."
+      },
+      "sources": [
+        "src:93456bf0b8"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "به گفتهٔ نویسنده، ژنوم میتوکندری حدود شانزده‌هزار و پانصد جفت باز دارد و کروموزوم Y حدود شصت میلیون؛ از این رو ساعت Y دقیق‌تر است، در حالی که توالی میتوکندری کوچک‌تر و ناپایدارتر است و جهش‌های بیشتری نشان می‌دهد.",
+        "en": "By the author's account the mitochondrial genome has about 16,500 base pairs and the Y chromosome about 60 million, so the Y clock is more precise, whereas the small mitochondrial sequence is less stable and shows more mutations.",
+        "nl": "By the author's account the mitochondrial genome has about 16,500 base pairs and the Y chromosome about 60 million, so the Y clock is more precise, whereas the small mitochondrial sequence is less stable and shows more mutations."
+      },
+      "sources": [
+        "src:93456bf0b8"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "پیش از سال ۲۰۰۲ هر مرکز پژوهشی نام‌گذاری خودش را داشت و این سردرگمی می‌آفرید. کنسرسیومی نام‌گذاری استانده برای Y ساخت و کارافه و همکارانش در ۲۰۰۸ چارچوبی بازبینی‌شده با حدود ۳۱۱ شاخه و حدود ۶۰۰ نشانگر دوتایی پیشنهاد کردند.",
+        "en": "Before 2002 each lab used its own naming, which caused confusion. A consortium standardised Y naming, and in 2008 Karafet and colleagues proposed a revised tree with about 311 branches and about 600 binary markers.",
+        "nl": "Before 2002 each lab used its own naming, which caused confusion. A consortium standardised Y naming, and in 2008 Karafet and colleagues proposed a revised tree with about 311 branches and about 600 binary markers."
+      },
+      "sources": [
+        "src:93456bf0b8",
+        "src:715fe250c8"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "هاپلوگروه فقط دو رشتهٔ باریک از نیاکان هر فرد (خط پدرِ پدر و خط مادرِ مادر) را نشان می‌دهد و از ترکیب کل ژنوم بی‌خبر است. از دههٔ ۲۰۱۰ به بعد DNA باستانی و داده‌های ژنوم کامل بسیاری از نتیجه‌گیری‌های مبتنی بر هاپلوگروه را اصلاح کرده‌اند؛ برابر دانستن هاپلوگروه با «قوم» یا «زبان» ساده‌سازی است.",
+        "en": "A haplogroup follows only two thin strands of anyone's ancestry (the father's father line and the mother's mother line) and says nothing about the whole genome. Since the 2010s ancient DNA and whole-genome data have revised many haplogroup-only conclusions; equating a haplogroup with an 'ethnicity' or a 'language' is a simplification.",
+        "nl": "A haplogroup follows only two thin strands of anyone's ancestry (the father's father line and the mother's mother line) and says nothing about the whole genome. Since the 2010s ancient DNA and whole-genome data have revised many haplogroup-only conclusions; equating a haplogroup with an 'ethnicity' or a 'language' is a simplification."
+      },
+      "sources": [],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "کتاب چند نمونهٔ هاپلوگروه چهره‌های تاریخی و مشهور را هم می‌آورد؛ این نمونه‌ها اغلب بر داده‌های غیرمستقیم یا بازسازی‌های سست تکیه دارند و ارزش علمی محدودی دارند و نباید جدی گرفته شوند.",
+        "en": "The book also lists haplogroups of famous historical figures; these often rest on indirect or weak reconstructions and carry little scientific weight.",
+        "nl": "The book also lists haplogroups of famous historical figures; these often rest on indirect or weak reconstructions and carry little scientific weight."
+      },
+      "sources": [],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "tabar:haplogroups",
+      "rel": "explains",
+      "note": {
+        "fa": "توضیح عمومی هاپلوگروه‌ها",
+        "en": "General explanation of haplogroups",
+        "nl": "General explanation of haplogroups"
+      }
+    },
+    {
+      "to": "tabar:ancient-dna",
+      "rel": "see-also",
+      "note": {
+        "fa": "داده‌های باستانی بسیاری از برداشت‌های هاپلوگروهی را اصلاح کرده‌اند",
+        "en": "Ancient DNA has revised many haplogroup-only readings",
+        "nl": "Ancient DNA has revised many haplogroup-only readings"
+      }
+    },
+    {
+      "to": "tabar:population-genetics",
+      "rel": "part-of",
+      "note": {
+        "fa": "روش‌های ژنومیک جمعیت",
+        "en": "Population-genomics methods",
+        "nl": "Population-genomics methods"
+      }
+    }
+  ],
+  "people": [
+    "core:tatiana-karafet",
+    "core:bryan-sykes"
+  ],
+  "sources": [
+    "src:715fe250c8",
+    "src:93456bf0b8"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
+}
