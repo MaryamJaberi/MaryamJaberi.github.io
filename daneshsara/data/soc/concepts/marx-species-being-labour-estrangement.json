@@ -1,0 +1,107 @@
+{
+ "id": "soc:marx-species-being-labour-estrangement",
+ "kind": "concept",
+ "title": {
+  "fa": "انسان، کار و غربت: بازآفرینی جهان در ذهن و بیگانگی (والامنش دربارهٔ دست‌نوشته‌های ۱۸۴۴)",
+  "en": "Human, labour and estrangement: re-creating the world in thought (Valamanesh on the 1844 Manuscripts)",
+  "nl": "Mens, arbeid en vervreemding: de wereld herscheppen in het denken (Valamanesh over de Manuscripten van 1844)"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "نویسنده مفهوم مارکسی «انسان» را چنین می‌پروراند: انسان هم موجودی طبیعی است که برای بقا به بیرون از خود نیاز دارد و هم با کار و اندیشه جهان را در خود «بازمی‌آفریند»؛ از همین‌جا، با تقسیم کار، بیگانگی (غربت) آغاز می‌شود. تعبیرها و واژه‌سازی‌ها از خود اوست.",
+  "en": "The author develops a Marxian notion of the human: a natural being needing what lies outside it, who 're-creates' the world through labour and thought; division of labour then starts estrangement. The terminology is largely his own.",
+  "nl": "De auteur werkt een Marxiaans mensbeeld uit: een natuurlijk wezen dat buiten zichzelf behoeften heeft en de wereld via arbeid en denken 'herschept'; arbeidsdeling begint de vervreemding. De terminologie is deels van hemzelf."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بر پایهٔ دست‌نوشته‌های اقتصادی-فلسفی ۱۸۴۴: انسان نخست موجودی طبیعی و نیازمند است؛ گرسنگی نشان می‌دهد برای ارضای نیاز به موضوعی بیرون از خود محتاج است. به همین دلیل مارکس آفرینش ذهنی جهان را بی‌نیاز از جهان بیرونی نمی‌داند.",
+    "en": "Following the 1844 Manuscripts: the human is first a natural, needy being; hunger shows dependence on an object outside itself, so Marx does not treat the world as created by mind alone.",
+    "nl": "Following the 1844 Manuscripts: the human is first a natural, needy being; hunger shows dependence on an object outside itself, so Marx does not treat the world as created by mind alone."
+   },
+   "sources": [
+    "src:5e268c110f",
+    "src:2536feec8f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تمایز انسان از دیگر موجودات در تولید زندگی مادی و کار آگاهانه است؛ انسان فقط در جامعه (رابطه با دیگران) به خودآگاهی نوعی می‌رسد.",
+    "en": "What distinguishes humans is producing their material life through conscious labour; species self-awareness arises only socially, through relations with others.",
+    "nl": "What distinguishes humans is producing their material life through conscious labour; species self-awareness arises only socially, through relations with others."
+   },
+   "sources": [
+    "src:5e268c110f",
+    "src:2536feec8f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسنده می‌گوید انسان با «بازآفرینی اندیشیدهٔ واقعیت» در ذهن، جهان را درمی‌یابد؛ مشخص در اندیشه نتیجه است و نقطهٔ آغاز مشاهده؛ اما این به معنی ساخته‌شدن خودِ واقعیت توسط اندیشه نیست (او برای این نکته به مقدمهٔ «گروندریسه» ارجاع می‌دهد).",
+    "en": "He says humans grasp the world by a thought-reproduction of reality; the concrete is a result in thought though a starting point in observation, which does not mean thought produces reality itself (citing Marx's Grundrisse introduction).",
+    "nl": "He says humans grasp the world by a thought-reproduction of reality; the concrete is a result in thought though a starting point in observation, which does not mean thought produces reality itself (citing Marx's Grundrisse introduction)."
+   },
+   "sources": [
+    "src:5e268c110f"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ او بیگانگی با تقسیم کار (کار فکری از بدنی) آغاز می‌شود و شکل‌های دینی از جادو تا خدای یگانه را همراه آن می‌داند؛ ادعای «نخستین جادوگر پالئولیتیک نخستین تصاحب‌گر کار دیگری بود» حدسی فکری است و پشتوانهٔ باستان‌شناختی ارائه نشده.",
+    "en": "He ties estrangement to the division of mental and manual labour and links religious forms to it; the claim that a Palaeolithic magician first appropriated another's labour is speculative and not backed by archaeological evidence.",
+    "nl": "He ties estrangement to the division of mental and manual labour and links religious forms to it; the claim that a Palaeolithic magician first appropriated another's labour is speculative and not backed by archaeological evidence."
+   },
+   "sources": [],
+   "flags": [
+    "unreplicated",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:marx-religion-alienation",
+   "rel": "see-also",
+   "note": {
+    "fa": "دین و ریشهٔ بیگانگی",
+    "en": "Religion and the root of alienation",
+    "nl": "Religion and the root of alienation"
+   }
+  },
+  {
+   "to": "soc:reification",
+   "rel": "see-also",
+   "note": {
+    "fa": "چیزوارگی",
+    "en": "Reification",
+    "nl": "Reification"
+   }
+  },
+  {
+   "to": "soc:marx-historical-materialism",
+   "rel": "part-of",
+   "note": {
+    "fa": "زمینهٔ ماتریالیسم تاریخی",
+    "en": "Context of historical materialism",
+    "nl": "Context of historical materialism"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-marx"
+ ],
+ "sources": [
+  "src:2536feec8f",
+  "src:5e268c110f"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

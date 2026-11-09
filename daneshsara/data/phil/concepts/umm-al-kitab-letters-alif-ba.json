@@ -1,0 +1,90 @@
+{
+ "id": "phil:umm-al-kitab-letters-alif-ba",
+ "kind": "concept",
+ "title": {
+  "fa": "امّ‌الکتاب: رمز حرف‌ها و گفتگوی امام باقر با آموزگار",
+  "en": "Umm al-Kitab: letter symbolism and the Baqir-and-teacher dialogue",
+  "nl": "Umm al-Kitab: lettersymboliek en de dialoog van Baqir met de leraar"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "متن با روایتی از کودکی امام باقر و آموزگارش، الف و ب و نقطه را نمادی از محمد، علی و «نطق» می‌گیرد. این شیوهٔ معناجویی حرف‌ها در عرفان و باطنی‌گری اسلامی سابقه دارد.",
+  "en": "Through a story of the child Baqir and his teacher, the text reads alif, ba and the dot as symbols of Muhammad, Ali and 'speech'. Letter mysticism has a long history in Islamic esotericism.",
+  "nl": "In een verhaal over de jonge Baqir en zijn leraar leest de tekst alif, ba en de punt als symbolen. Letterbeschouwing kent een lange traditie in de islamitische esoterie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "متن آغاز می‌شود با گفتهٔ منسوب به جابر بن عبدالله دربارهٔ امام محمد باقر و نام‌های کتاب: امّ‌الکتاب، روح‌الکتاب، نورالکتاب و جز آن.",
+    "en": "The text opens with an account attributed to Jabir ibn Abdallah about Imam Muhammad al-Baqir and the book's many names: Mother of the Book, Spirit of the Book, Light of the Book and others.",
+    "nl": "The text opens with an account attributed to Jabir ibn Abdallah about Imam Muhammad al-Baqir and the book's many names: Mother of the Book, Spirit of the Book, Light of the Book and others."
+   },
+   "sources": [
+    "src:faa6ea75f8"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در داستانِ درس‌خواندن، کودک پنج‌ساله باقر به آموزگار می‌گوید الف نمایندهٔ محمد و ب نمایندهٔ علی است و نقطه نطق است؛ آموزگار از دانش او شگفت‌زده می‌شود.",
+    "en": "In the lesson story, the five-year-old Baqir tells his teacher that alif stands for Muhammad, ba for Ali, and the dot for speech; the teacher is astonished at his knowledge.",
+    "nl": "In the lesson story, the five-year-old Baqir tells his teacher that alif stands for Muhammad, ba for Ali, and the dot for speech; the teacher is astonished at his knowledge."
+   },
+   "sources": [
+    "src:faa6ea75f8"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این استناد به امام باقر را نمی‌توان تاریخی دانست؛ نسبت‌دادن آموزه‌های پنهان به امامان در متون غلات رایج بود و سند مستقلی بر آن نیست.",
+    "en": "The attribution to Imam Baqir cannot be treated as historical; assigning hidden teachings to imams was common in ghulat literature, and there is no independent proof.",
+    "nl": "The attribution to Imam Baqir cannot be treated as historical; assigning hidden teachings to imams was common in ghulat literature, and there is no independent proof."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:iranian",
+   "rel": "part-of",
+   "note": {
+    "fa": "اندیشهٔ ایرانی‌اسلامی",
+    "en": "Iranian-Islamic thought",
+    "nl": "Iranian-Islamic thought"
+   }
+  },
+  {
+   "to": "phil:illumination",
+   "rel": "see-also",
+   "note": {
+    "fa": "نور و معرفت در سنت اشراقی",
+    "en": "Light and knowledge in the illuminationist tradition",
+    "nl": "Light and knowledge in the illuminationist tradition"
+   }
+  }
+ ],
+ "people": [
+  "core:muhammad-al-baqir"
+ ],
+ "sources": [
+  "src:faa6ea75f8"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
