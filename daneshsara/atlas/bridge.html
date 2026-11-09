@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>پل‌های میان‌رشته‌ای — دانش‌سرا</title>
+<title>پل‌های میان‌رشته‌ای | اطلس‌ها | دانش‌سرا</title>
 <meta name="description" content="صفحه‌های پل: رشته‌هایی که میان دو یا چند علم ایستاده‌اند — اثر بنیادی، مرجع امروز، یافتهٔ کلیدی و وضعیت تکرار، ترجمهٔ فارسی، و برگهٔ ایران.">
 <link rel="stylesheet" href="../core/design/tokens.css">
 <style>
@@ -149,8 +149,8 @@ function renderDetail(id){
 function render(){
  const id=decodeURIComponent(location.hash.slice(1));
  renderFilters();
- if(id&&B[id]){document.getElementById('list').classList.add('off');document.getElementById('detail').classList.add('on');renderDetail(id);document.title=tx(B[id].title)+' — '+T('brand');window.scrollTo(0,0);}
- else{document.getElementById('list').classList.remove('off');document.getElementById('detail').classList.remove('on');renderList();document.title=T('title')+' — '+T('brand');}
+ if(id&&B[id]){document.getElementById('list').classList.add('off');document.getElementById('detail').classList.add('on');renderDetail(id);document.title=tx(B[id].title)+' | پل‌های میان‌رشته‌ای | '+T('brand');window.scrollTo(0,0);}
+ else{document.getElementById('list').classList.remove('off');document.getElementById('detail').classList.remove('on');renderList();document.title=T('title')+' | اطلس‌ها | '+T('brand');}
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
 window.addEventListener('hashchange',render);

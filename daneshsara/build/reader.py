@@ -19,7 +19,11 @@ DATA = {'wiki': W, 'order': order, 'concepts': list(concepts.values()), 'people'
 root = next((c for c in concepts.values() if c['kind'] == 'root'), None)
 title = root['title'] if root else {'fa': W, 'en': W, 'nl': W}
 tpl = open(f'{HERE}/reader.tpl.html', encoding='utf-8').read()
-out = tpl.replace('__DATA__', json.dumps(DATA, ensure_ascii=False)).replace('__TITLE_FA__', title['fa']).replace('__TITLE_EN__', title.get('en') or title['fa'])
+
+import html as _html
+_d = ((root.get('summary') or {}).get('fa') if root else '') or ('همهٔ مدخل‌های ویکی ' + title['fa'] + ' در دانش‌سرا، با خلاصه، نکته‌ها، منبع و پیوند به ویکی‌های دیگر.')
+_d = _html.escape(_d[:155])
+out = tpl.replace('__DATA__', json.dumps(DATA, ensure_ascii=False)).replace('__TITLE_FA__', title['fa']).replace('__TITLE_EN__', title.get('en') or title['fa']).replace('__DESC__', _d)
 os.makedirs(f'{R}/{W}', exist_ok=True)
 OUT = 'index.html' if W == 'psy' else 'entries.html'
 open(f'{R}/{W}/{OUT}', 'w', encoding='utf-8').write(out)
