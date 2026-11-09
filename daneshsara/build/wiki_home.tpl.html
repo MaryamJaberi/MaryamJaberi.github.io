@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ویکی __NAME__ | دانش‌سرا</title>
+<meta name="description" content="__LEAD__">
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+:root{--w:__COLOR__}
+header.top{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:20}
+header.top .wrap{display:flex;align-items:center;gap:var(--s4);min-height:50px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--ink);text-decoration:none}
+.brand i{width:12px;height:12px;border-radius:4px;background:var(--w);display:inline-block}
+nav.main{display:flex;gap:var(--s3);flex-wrap:wrap;margin-inline-start:auto;font-size:var(--small)}
+nav.main a{color:var(--ink-2)}nav.main a:hover{color:var(--w)}
+.hero{padding:var(--s8) 0 var(--s5)}
+.hero h1{font-size:var(--h1);margin:0 0 var(--s3);line-height:var(--lh-tight)}
+.hero p.lead{color:var(--ink-2);max-width:48em;line-height:1.95;margin:0 0 var(--s4);font-size:1.03rem}
+.sib{font-size:var(--small);color:var(--ink-3);margin:0 0 var(--s4)}.sib a{color:var(--w);margin-inline-end:10px}
+.stats{display:flex;gap:var(--s6);flex-wrap:wrap;border-block:1px solid var(--line);padding-block:var(--s4)}
+.stats div{display:grid}.stats b{font-size:1.7rem;line-height:1.2;color:var(--ink)}
+.stats span{font-size:var(--chip);color:var(--ink-3)}
+section.sec{padding-block:var(--s6)}
+h2.sh{font-size:var(--h3);margin:0 0 6px}
+p.sub{color:var(--ink-3);font-size:var(--small);margin:0 0 var(--s4);max-width:44em;line-height:1.8}
+.qs{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.q{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper);color:var(--ink);text-decoration:none;line-height:1.6;font-size:var(--small)}
+.q:hover{border-color:var(--w)}.q i{color:var(--w);font-style:normal}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--s3)}
+.tool{display:grid;gap:6px;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);text-decoration:none;color:var(--ink);align-content:start}
+.tool:hover{border-color:var(--w)}.tool h3{margin:0;font-size:var(--h4)}
+.tool p{margin:0;font-size:var(--small);color:var(--ink-2);line-height:1.75}
+.tool .go{font-size:var(--chip);color:var(--w)}
+.brs{display:flex;gap:var(--s3);flex-wrap:wrap}
+.br{display:grid;gap:2px;padding:10px 16px;border:1px solid var(--line);border-radius:var(--r-full);background:var(--paper);text-decoration:none;color:var(--ink)}
+.br:hover{border-color:var(--w)}.br span{font-size:var(--chip);color:var(--ink-3)}
+.fld{margin-bottom:var(--s5)}
+.fld h3{margin:0 0 4px;font-size:var(--h4);color:var(--w)}
+.fld h3 small{color:var(--ink-3);font-weight:400;font-size:var(--chip)}
+.fld p{margin:0 0 10px;font-size:var(--small);color:var(--ink-2);line-height:1.8;max-width:46em}
+.lst{display:flex;flex-wrap:wrap;gap:7px}
+.lst a{font-size:var(--small);padding:4px 11px;border:1px solid var(--line);border-radius:var(--r-full);color:var(--ink-2);text-decoration:none;background:var(--paper)}
+.lst a:hover{border-color:var(--w);color:var(--ink)}
+.idx{columns:4 180px;column-gap:var(--s5)}
+.ig{break-inside:avoid;margin-bottom:var(--s4)}
+.ig b{display:block;color:var(--w);border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:5px}
+.ig a{display:block;font-size:var(--small);color:var(--ink-2);padding:2px 0;text-decoration:none}
+.ig a:hover{color:var(--w)}
+.road{margin:0;padding-inline-start:1.2em;line-height:2;color:var(--ink-2);font-size:var(--small);max-width:46em}
+footer.f{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var(--small);color:var(--ink-3)}
+footer.f a{color:var(--ink-2);margin-inline-end:var(--s4)}
+@media (max-width:640px){.stats{gap:var(--s4)}.stats b{font-size:1.35rem}.idx{columns:2 130px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="../"><i></i>دانش‌سرا</a>
+ <nav class="main"><a href="entries.html">همهٔ مدخل‌ها</a><a href="#tools">ابزارها</a><a href="#bridges">پل به رشته‌ها</a><a href="#contents">فهرست مطالب</a><a href="#index">نمایهٔ واژه‌ها</a></nav>
+</div></header>
+<main class="wrap">
+ <section class="hero">
+  <h1>ویکی __TITLE__</h1>
+  <p class="lead">__LEAD__</p>
+  <p class="sib">کنار این ویکی: __SIB__</p>
+  <div class="stats">__STATS__</div>
+ </section>
+
+ <section class="sec" id="questions"__QHIDE__>
+  <h2 class="sh">__NQ__ پرسش که این ویکی جواب می‌دهد</h2>
+  <p class="sub">هر کدام یک مدخل است با خلاصه، نکته‌ها، منبع و پیوند به ویکی‌های دیگر.</p>
+  <div class="qs">__QS__</div>
+ </section>
+
+ <section class="sec" id="tools">
+  <h2 class="sh">__NT__ ابزار برای گشتن در این ویکی</h2>
+  <p class="sub">هر ابزار همین مدخل‌ها را از زاویه‌ای دیگر نشان می‌دهد.</p>
+  <div class="tools">__TOOLS__</div>
+ </section>
+
+ <section class="sec" id="bridges">
+  <h2 class="sh">پل به رشته‌های دیگر</h2>
+  <p class="sub">__NX__ پیوند از مدخل‌های این ویکی به ویکی‌های دیگر دانش‌سرا می‌رود. اطلس‌های میان‌رشته‌ای این پل‌ها را روی نقشه نشان می‌دهند.</p>
+  <div class="brs">__BRIDGES__<a class="br" href="../atlas/world.html"><b>جهان دانش</b><span>نقشهٔ زوم‌پذیر همهٔ ویکی‌ها</span></a><a class="br" href="../atlas/bridge.html"><b>پل‌ها</b><span>۲۵ رشتهٔ میان‌رشته‌ای</span></a><a class="br" href="../iran/"><b>برای ایران</b><span>همین مفهوم‌ها با دادهٔ ایران</span></a></div>
+ </section>
+
+ <section class="sec" id="contents">
+  <h2 class="sh">فهرست همهٔ مطالب</h2>
+  <p class="sub">مدخل‌ها به تفکیک شهرهای دانش این سرزمین.</p>
+  __SECS__
+ </section>
+
+ <section class="sec" id="index">
+  <h2 class="sh">نمایهٔ واژه‌ها</h2>
+  <p class="sub">__NI__ عنوان و نام دیگر، به ترتیب الفبا.</p>
+  <div class="idx">__INDEX__</div>
+ </section>
+__EXTRA__
+</main>
+<footer class="f"><div class="wrap"><a href="../">دانش‌سرا</a><a href="entries.html">همهٔ مدخل‌ها</a><a href="../atlas/sitemap.html">نقشهٔ سایت</a><a href="../core/contribute.html">مشارکت</a><a href="../core/sources.html">منابع</a></div></footer>
+<script>
+// old deep links  <wiki>/#slug  →  entries.html#slug
+(function(){var h=location.hash;if(h&&h.length>1&&!document.getElementById(h.slice(1)))location.replace("entries.html"+h);})();
+</script>
+</body>
+</html>
