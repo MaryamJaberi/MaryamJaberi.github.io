@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>جهان دانش — دانش‌سرا</title>
+<meta name="description" content="نقشهٔ زوم‌پذیر دانش‌سرا: هر ویکی یک سرزمین، هر رشته یک شهر، هر مفهوم یک محله؛ دانشمندان مغازه‌دار شهرها و راه‌های میان‌رشته‌ای‌اند.">
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+html,body{height:100%}
+body{display:flex;flex-direction:column;overflow:hidden}
+header.top{flex:none;background:color-mix(in srgb,var(--paper) 92%,transparent);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:48px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);text-decoration:none}
+.brand svg{width:24px;height:24px;color:var(--primary)}
+.crumbs{font-size:var(--small);color:var(--ink-3)}
+.crumbs a{color:var(--ink-2)}
+#app{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 400px}
+#stage{position:relative;min-width:0;min-height:0;background:var(--surface);overflow:hidden}
+canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab;outline:none}
+canvas.drag{cursor:grabbing}canvas.hit{cursor:pointer}
+.ov{position:absolute;z-index:2}
+#sbox{top:10px;inset-inline-start:10px;inset-inline-end:60px;max-width:420px}
+#q{width:100%;box-sizing:border-box;font:inherit;font-size:var(--small);padding:9px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--paper);color:var(--ink)}
+#res{margin-top:6px;background:var(--paper);border:1px solid var(--line-strong);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+#res button{display:flex;justify-content:space-between;gap:10px;width:100%;font:inherit;font-size:var(--small);padding:8px 12px;border:0;background:transparent;color:var(--ink);cursor:pointer;text-align:start;border-bottom:1px solid var(--line)}
+#res button:hover,#res button:focus{background:var(--primary-soft)}#res small{color:var(--ink-3)}
+#ctl{top:10px;inset-inline-end:10px;display:flex;flex-direction:column;gap:6px}
+#ctl button,.lv button,.pbtn{font:inherit;font-size:1.05rem;line-height:1;width:36px;height:36px;border-radius:50%;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink-2);cursor:pointer}
+#ctl button:hover{border-color:var(--primary);color:var(--primary)}
+#lv{bottom:12px;inset-inline-start:10px;display:flex;gap:4px;flex-wrap:wrap;max-width:calc(100% - 20px);align-items:center}
+#lv span{font-size:var(--chip);padding:3px 10px;border-radius:var(--r-full);border:1px solid var(--line);background:color-mix(in srgb,var(--paper) 85%,transparent);color:var(--ink-3)}
+#lv span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+#where{top:58px;inset-inline-start:12px;font-size:var(--small);color:var(--ink-2);background:color-mix(in srgb,var(--paper) 86%,transparent);padding:3px 12px;border-radius:var(--r-full);pointer-events:none;max-width:calc(100% - 80px)}
+#tip{position:absolute;z-index:3;pointer-events:none;background:var(--ink);color:var(--paper);font-size:var(--chip);padding:4px 10px;border-radius:var(--r-md);max-width:260px;display:none}
+#hint{bottom:48px;inset-inline-start:12px;font-size:var(--chip);color:var(--ink-3);pointer-events:none;background:color-mix(in srgb,var(--paper) 80%,transparent);padding:2px 10px;border-radius:var(--r-full)}
+#panel{overflow:auto;border-inline-start:1px solid var(--line);background:var(--paper);padding:var(--s5);min-height:0}
+#panel h2{font-size:var(--h3);margin:var(--s2) 0 var(--s1);line-height:1.5}
+#panel h3{font-size:var(--small);color:var(--ink-2);margin:var(--s4) 0 var(--s2)}
+#panel p{margin:0 0 var(--s2);line-height:1.9}
+.en{color:var(--ink-3);font-size:var(--small);direction:ltr;text-align:start}
+.kick{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:var(--chip)}
+.badge{padding:2px 9px;border-radius:var(--r-full);border:1px solid var(--line-strong);color:var(--ink-2);font-size:var(--chip)}
+.badge.f{color:#fff;border-color:transparent}
+.badge.warn{border-color:#b7791f;color:#b7791f}
+.path{display:flex;flex-wrap:wrap;gap:4px;font-size:var(--chip);align-items:center;color:var(--ink-3)}
+.path button,.chips button,.lst button{font:inherit;font-size:var(--small);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:var(--r-full);padding:3px 11px;cursor:pointer;text-align:start}
+.path button{font-size:var(--chip);padding:2px 9px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.lst{display:grid;gap:6px}
+.lst button{border-radius:var(--r-md);padding:7px 12px;display:flex;justify-content:space-between;gap:8px}
+.lst small{color:var(--ink-3);white-space:nowrap}
+ul.pts{margin:0;padding-inline-start:1.1em;display:grid;gap:8px;line-height:1.85}
+ul.pts li small{display:block;color:var(--ink-3)}
+.src{font-size:var(--chip);color:var(--ink-2);line-height:1.7;margin:0 0 6px;direction:ltr;text-align:start}
+.t{display:inline-block;min-width:1.4em;text-align:center;border-radius:4px;background:var(--primary-soft);color:var(--primary);margin-inline-end:6px;font-weight:700}
+.note{font-size:var(--chip);color:var(--ink-3);line-height:1.8}
+.pbtn{width:auto;height:auto;border-radius:var(--r-full);padding:6px 14px;font-size:var(--small)}
+.intro{display:grid;gap:var(--s3)}
+.legend{display:grid;gap:6px;font-size:var(--small)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-inline-end:8px;vertical-align:-1px}
+@media (max-width:860px){
+ #app{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto}
+ #panel{max-height:44vh;border-inline-start:0;border-top:1px solid var(--line);padding:var(--s4)}
+ .crumbs{display:none}#hint{display:none}
+ #sbox{inset-inline-end:56px}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg><span>دانش‌سرا</span></a>
+ <div class="crumbs"><a href="../">خانه</a> › <a href="./">اطلس</a> › <span>جهان دانش</span></div>
+</div></header>
+<div id="app">
+ <div id="stage">
+  <canvas id="cv" tabindex="0" role="application" aria-label="نقشهٔ زوم‌پذیر جهان دانش. با جست‌وجو یا دکمه‌های بزرگ‌نمایی گشت بزنید؛ کلید + و − بزرگ‌نمایی و کلیدهای جهت‌دار جابه‌جایی است."></canvas>
+  <div id="sbox" class="ov"><input id="q" type="search" placeholder="جست‌وجو: مفهوم، رشته یا دانشمند…" autocomplete="off" aria-label="جست‌وجو"><div id="res" hidden></div></div>
+  <div id="ctl" class="ov"><button id="zi" aria-label="نزدیک‌تر" title="نزدیک‌تر">+</button><button id="zo" aria-label="دورتر" title="دورتر">−</button><button id="hm" aria-label="کل جهان" title="کل جهان">⌂</button></div>
+  <div id="where" class="ov"></div>
+  <div id="hint" class="ov">چرخ ماوس یا دو انگشت: زوم · کشیدن: جابه‌جایی · هرچه نزدیک‌تر شوید جزئیات بیشتری پیدا می‌شود</div>
+  <div id="lv" class="ov"></div>
+  <div id="tip"></div>
+ </div>
+ <aside id="panel" aria-live="polite"></aside>
+</div>
+<script src="world-data.js"></script>
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const W = window.WORLD, N = W.nodes, PP = W.people, SRC = W.src, B = W.meta.bounds, LANDS = W.meta.lands;
+const cv = $("cv"), ctx = cv.getContext("2d");
+const LAND_FA = {psy:"روان‌شناسی", soc:"جامعه‌شناسی", phil:"فلسفه", tabar:"تبار و ژنتیک"};
+const FAMVAR = {psy:"--fam-psy", soc:"--fam-soc", phil:"--fam-hum", tabar:"--fam-bio"};
+const REL = {"see-also":"نگاه کنید به", "part-of":"بخشی از", contrasts:"در تقابل با", explains:"توضیح می‌دهد", bridges:"پل می‌زند به", critiques:"نقد می‌کند", "applies-to":"کاربرد در", prerequisite:"پیش‌نیاز", "same-as":"همان است با", "evidence-for":"شاهدی برای", "measured-by":"سنجیده با"};
+const TIER = {1:"فراتحلیل / پژوهش بازتکرارشده", 2:"پژوهش داوری‌شده یا منبع رسمی", 3:"کتاب یا نظر متخصص", 4:"سرنخ، جدلی یا نامعلوم"};
+const FLAG = {contested:"مناقشه‌برانگیز", "editor-note":"یادداشت ویراستار"};
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const faN = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const norm = s => String(s || "").toLowerCase().replace(/ي/g, "ی").replace(/ك/g, "ک").replace(/[‌ً-ٟ]/g, " ").replace(/\s+/g, " ").trim();
+
+// ---------- tree ----------
+const kids = N.map(() => []); N.forEach((n, i) => { n.id = i; if (n.p >= 0) kids[n.p].push(i); });
+const landNodes = Object.values(LANDS).map(l => l.root);
+const cities = N.filter(n => n.d === 1);
+const cityOf = i => { let n = N[i]; while (n && n.d > 1) n = N[n.p]; return n && n.d === 1 ? n.id : -1; };
+const pathOf = i => { const a = []; let n = N[i]; while (n) { a.unshift(n.id); n = n.p >= 0 ? N[n.p] : null; } return a; };
+const total = N.length;
+// level-of-detail: zoom at which each node's dot/label appears
+N.forEach(n => { n.lod = n.d === 0 ? 0 : n.d === 1 ? 1.5 : (4 + 26 * Math.pow(n.rk / total, .85)) * (n.n > 0 ? .55 : 1); });
+
+// ---------- roads (links between lands) ----------
+const roads = new Map(); const cross = [];
+N.forEach(n => n.lk.forEach(([to, rel, note]) => { const m = N[to]; if (!m || m.w === n.w || to < n.id) return; cross.push([n.id, to, rel, note]); const a = cityOf(n.id), b = cityOf(to); if (a < 0 || b < 0) return; const k = a < b ? a + "|" + b : b + "|" + a; (roads.get(k) || roads.set(k, {a: Math.min(a, b), b: Math.max(a, b), n: 0, l: []}).get(k)).n++; roads.get(k).l.push(cross.length - 1); }));
+const roadList = [...roads.values()];
+const curve = (a, b) => { const dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) || 1; const bend = Math.min(.22, 380 / d); return {mx: (a.x + b.x) / 2 - dy * bend, my: (a.y + b.y) / 2 + dx * bend}; };
+const quad = (a, b, c, t) => { const u = 1 - t; return [u * u * a.x + 2 * u * t * c.mx + t * t * b.x, u * u * a.y + 2 * u * t * c.my + t * t * b.y]; };
+const hash = (s, k) => { let h = 2166136261 ^ k; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return ((h >>> 0) % 10000) / 10000; };
+// shops
+PP.forEach((p, i) => {
+  p.i = i; const cs = p.c.map(c => N[c]);
+  if (p.x && p.ct.length === 2) { const A = N[p.ct[0]], Bn = N[p.ct[1]], c = curve(A, Bn); const t = .3 + .4 * hash(p.id, 1); const [x, y] = quad(A, Bn, c, t); const ang = hash(p.id, 2) * 6.283, off = 14 + 26 * hash(p.id, 3); p.px = x + Math.cos(ang) * off; p.py = y + Math.sin(ang) * off; p.road = true; }
+  else { let x = 0, y = 0; cs.forEach(c => { x += c.x; y += c.y; }); x /= cs.length; y /= cs.length; const ang = hash(p.id, 4) * 6.283, off = 22 + 30 * hash(p.id, 5); p.px = x + Math.cos(ang) * off; p.py = y + Math.sin(ang) * off; p.road = false; }
+  p.land = cs.length ? cs[0].w : "psy";
+});
+
+// ---------- view ----------
+let cw = 0, chh = 0, dpr = 1, s0 = 1;
+const view = {cx: (B[0] + B[2]) / 2, cy: (B[1] + B[3]) / 2, s: 1};
+const Z = () => view.s / s0;
+let FONT = "Vazirmatn, Tahoma, sans-serif"; let COL = {}; function readColors() { const cs = getComputedStyle(document.documentElement); const g = v => cs.getPropertyValue(v).trim(); FONT = g("--font") || FONT; COL = {paper: g("--paper") || "#fff", surface: g("--surface") || "#f7f7f7", ink: g("--ink") || "#111", ink2: g("--ink-2") || "#444", ink3: g("--ink-3") || "#777", line: g("--line") || "#ddd", primary: g("--primary") || "#0A6B60", psy: g("--fam-psy"), soc: g("--fam-soc"), phil: g("--fam-hum"), tabar: g("--fam-bio")}; dirty = true; }
+function resize() { const r = cv.getBoundingClientRect(); dpr = Math.min(2.5, window.devicePixelRatio || 1); cw = r.width; chh = r.height; cv.width = Math.round(cw * dpr); cv.height = Math.round(chh * dpr); const old = s0; s0 = Math.min(cw / (B[2] - B[0]), chh / (B[3] - B[1])); if (view.s === 1 || !old || old === 1) view.s = s0; else view.s *= s0 / old; dirty = true; }
+const sx = x => (x - view.cx) * view.s + cw / 2, sy = y => (y - view.cy) * view.s + chh / 2;
+const wx = x => (x - cw / 2) / view.s + view.cx, wy = y => (y - chh / 2) / view.s + view.cy;
+const clampView = () => { view.s = Math.max(s0 * .8, Math.min(s0 * 90, view.s)); view.cx = Math.max(B[0], Math.min(B[2], view.cx)); view.cy = Math.max(B[1], Math.min(B[3], view.cy)); };
+let dirty = true, anim = null;
+function fly(cx, cy, s, ms) { s = Math.max(s0 * .8, Math.min(s0 * 90, s)); if (anim) cancelAnimationFrame(anim); if (!ms || matchMedia("(prefers-reduced-motion: reduce)").matches) { view.cx = cx; view.cy = cy; view.s = s; clampView(); dirty = true; return; } const a = {...view}, t0 = performance.now(); const step = t => { let k = Math.min(1, (t - t0) / ms); k = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; view.cx = a.cx + (cx - a.cx) * k; view.cy = a.cy + (cy - a.cy) * k; view.s = a.s * Math.pow(s / a.s, k); dirty = true; if (k < 1) anim = requestAnimationFrame(step); }; anim = requestAnimationFrame(step); }
+const flyCircle = (n, pad = 2.3) => fly(n.x, n.y, Math.min(cw, chh) / (pad * n.r), 700);
+const flyNode = n => fly(n.x, n.y, s0 * Math.max(26, n.lod * 1.7), 800);
+function zoomAt(px, py, f) { const x = wx(px), y = wy(py); view.s = Math.max(s0 * .8, Math.min(s0 * 90, view.s * f)); view.cx = x - (px - cw / 2) / view.s; view.cy = y - (py - chh / 2) / view.s; clampView(); dirty = true; }
+
+// ---------- land blobs ----------
+function hull(pts) { pts = pts.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1]); const cr = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]); const lo = [], up = []; for (const p of pts) { while (lo.length >= 2 && cr(lo[lo.length - 2], lo[lo.length - 1], p) <= 0) lo.pop(); lo.push(p); } for (const p of pts.reverse()) { while (up.length >= 2 && cr(up[up.length - 2], up[up.length - 1], p) <= 0) up.pop(); up.push(p); } return lo.slice(0, -1).concat(up.slice(0, -1)); }
+const blobs = {};
+Object.entries(LANDS).forEach(([w, L]) => { const pts = []; kids[L.root].forEach(c => { const n = N[c]; for (let k = 0; k < 16; k++) { const a = k / 16 * 6.283; pts.push([n.x + (n.r + 70) * Math.cos(a), n.y + (n.r + 70) * Math.sin(a)]); } }); const h = hull(pts), m = h.length; const path = new Path2D(); for (let i = 0; i < m; i++) { const p0 = h[(i - 1 + m) % m], p1 = h[i], p2 = h[(i + 1) % m], p3 = h[(i + 2) % m]; if (!i) path.moveTo(p1[0], p1[1]); path.bezierCurveTo(p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6, p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6, p2[0], p2[1]); } path.closePath(); blobs[w] = path; });
+
+// ---------- selection ----------
+let sel = null; // {t:"n"|"p", i}
+const selLinks = () => { if (!sel) return []; if (sel.t === "n") return N[sel.i].lk.map(l => l[0]); return PP[sel.i].c; };
+
+// ---------- drawing ----------
+const LEVELS = ["سرزمین‌ها", "شهرها", "محله‌ها و موضوع‌ها", "همهٔ مفهوم‌ها", "جزئیات و مغازه‌ها"];
+const levelOf = z => z < 1.8 ? 0 : z < 5 ? 1 : z < 13 ? 2 : z < 35 ? 3 : 4;
+let lastLevel = -1;
+function wrap(text, max) { const w = text.split(/\s+/), out = []; let cur = ""; for (const t of w) { if ((cur + " " + t).trim().length > max && cur) { out.push(cur); cur = t; } else cur = (cur + " " + t).trim(); } if (cur) out.push(cur); return out; }
+function draw() {
+  dirty = false; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, cw, chh); ctx.fillStyle = COL.surface; ctx.fillRect(0, 0, cw, chh);
+  const z = Z(), lv = levelOf(z); if (lv !== lastLevel) { lastLevel = lv; $("lv").querySelectorAll("span").forEach((e, i) => e.classList.toggle("on", i === lv)); }
+  const vx0 = wx(-40), vx1 = wx(cw + 40), vy0 = wy(-40), vy1 = wy(chh + 40);
+  const inV = (x, y, r = 0) => x + r > vx0 && x - r < vx1 && y + r > vy0 && y - r < vy1;
+  const sl = new Set(selLinks());
+  // lands
+  ctx.lineJoin = "round";
+  for (const w in LANDS) { ctx.save(); ctx.setTransform(dpr * view.s, 0, 0, dpr * view.s, dpr * (cw / 2 - view.cx * view.s), dpr * (chh / 2 - view.cy * view.s)); ctx.globalAlpha = .12; ctx.fillStyle = COL[w]; ctx.fill(blobs[w]); ctx.globalAlpha = .6; ctx.lineWidth = 1.6 / view.s; ctx.strokeStyle = COL[w]; ctx.stroke(blobs[w]); ctx.restore(); }
+  // cities and inner districts
+  for (const n of N) {
+    if (n.d === 0 || n.n === 0) continue; const r = n.r * view.s; if (r < 6 || !inV(n.x, n.y, n.r)) continue;
+    ctx.beginPath(); ctx.arc(sx(n.x), sy(n.y), r, 0, 6.283);
+    if (n.d === 1) { ctx.globalAlpha = .08; ctx.fillStyle = COL[n.w]; ctx.fill(); ctx.globalAlpha = .45; ctx.lineWidth = 1.2; ctx.strokeStyle = COL[n.w]; ctx.stroke(); }
+    else { ctx.globalAlpha = Math.min(.35, r / 160); ctx.lineWidth = 1; ctx.strokeStyle = COL[n.w]; ctx.setLineDash([3, 4]); ctx.stroke(); ctx.setLineDash([]); }
+  }
+  ctx.globalAlpha = 1;
+  // roads between lands: aggregated first, individual links when zoomed in
+  const aggA = z < 14 ? .55 : Math.max(.08, .55 - (z - 14) / 40);
+  ctx.lineCap = "round";
+  for (const r of roadList) { const A = N[r.a], Bn = N[r.b], c = curve(A, Bn); if (!(inV(A.x, A.y, 4000) || inV(Bn.x, Bn.y, 4000))) continue; ctx.beginPath(); ctx.moveTo(sx(A.x), sy(A.y)); ctx.quadraticCurveTo(sx(c.mx), sy(c.my), sx(Bn.x), sy(Bn.y)); ctx.globalAlpha = aggA * .38; ctx.lineWidth = .7 + Math.sqrt(r.n) * .45; ctx.strokeStyle = COL.ink3; ctx.stroke(); }
+  if (z >= 9) { ctx.lineWidth = 1; ctx.strokeStyle = COL.primary; ctx.globalAlpha = Math.min(.45, (z - 9) / 25); for (const [a, b] of cross) { const A = N[a], Bn = N[b]; if (!inV(A.x, A.y) && !inV(Bn.x, Bn.y)) continue; const c = curve(A, Bn); ctx.beginPath(); ctx.moveTo(sx(A.x), sy(A.y)); ctx.quadraticCurveTo(sx(c.mx), sy(c.my), sx(Bn.x), sy(Bn.y)); ctx.stroke(); } }
+  ctx.globalAlpha = 1;
+  // selected links
+  if (sel && sel.t === "n") { const n = N[sel.i]; ctx.strokeStyle = COL.primary; ctx.lineWidth = 2; ctx.globalAlpha = .85; n.lk.forEach(([to]) => { const m = N[to]; const c = curve(n, m); ctx.beginPath(); ctx.moveTo(sx(n.x), sy(n.y)); ctx.quadraticCurveTo(sx(c.mx), sy(c.my), sx(m.x), sy(m.y)); ctx.stroke(); }); ctx.globalAlpha = 1; }
+  if (sel && sel.t === "p") { const p = PP[sel.i]; ctx.strokeStyle = COL.primary; ctx.lineWidth = 1.5; ctx.globalAlpha = .7; p.c.forEach(c => { const m = N[c]; ctx.beginPath(); ctx.moveTo(sx(p.px), sy(p.py)); ctx.lineTo(sx(m.x), sy(m.y)); ctx.stroke(); }); ctx.globalAlpha = 1; }
+  // dots (collect label candidates)
+  const cand = [];
+  for (const n of N) {
+    const x = sx(n.x), y = sy(n.y); if (x < -60 || x > cw + 60 || y < -40 || y > chh + 40) continue;
+    const isSel = sel && sel.t === "n" && sel.i === n.id, isLink = sl.has(n.id);
+    if (n.d === 0) { cand.push({n, x, y, pr: 0, f: Math.max(17, Math.min(30, 12 + 70 / Math.max(1, z))), b: true, col: COL[n.w], a: z < 9 ? 1 : Math.max(.35, 1 - (z - 9) / 20), txt: LAND_FA[n.w]}); continue; }
+    if (z < n.lod && !isSel && !isLink) continue;
+    const rr = n.d === 1 ? 6 : (n.n > 0 ? 4.2 : 3 + Math.min(2.2, Math.log(1 + n.rk > 0 ? 1 + (total - n.rk) / 150 : 1)));
+    ctx.beginPath(); ctx.arc(x, y, rr * (isSel ? 1.6 : 1), 0, 6.283); ctx.fillStyle = COL[n.w]; ctx.fill(); ctx.lineWidth = isSel ? 3 : 1.5; ctx.strokeStyle = isSel ? COL.ink : COL.surface; ctx.stroke();
+    if (n.d === 1) cand.push({n, x, y: y - 11, pr: 1, f: 15, b: true, col: COL.ink, a: 1, txt: n.t});
+    else cand.push({n, x, y: y - rr - 5, pr: isSel || isLink ? 0.5 : 2 + n.rk / total, f: n.n > 0 ? 12.5 : 11.5, b: n.n > 0, col: COL.ink, a: 1, txt: n.t, snip: z >= 40});
+  }
+  // shops
+  if (z >= 9) for (const p of PP) { const x = sx(p.px), y = sy(p.py); if (x < -20 || x > cw + 20 || y < -20 || y > chh + 20) continue; const k = Math.min(1.6, .75 + z / 70) * (p.road ? 1.15 : 1), isSel = sel && sel.t === "p" && sel.i === p.i; const wd = 8 * k, h = 6.5 * k; ctx.fillStyle = p.road ? COL.primary : COL.surface; ctx.strokeStyle = isSel ? COL.ink : (p.road ? COL.primary : COL.ink2); ctx.lineWidth = isSel ? 2.2 : 1.2; ctx.beginPath(); ctx.rect(x - wd / 2, y - h / 2 + 2 * k, wd, h - 2 * k); ctx.fill(); ctx.stroke(); ctx.beginPath(); ctx.moveTo(x - wd / 2 - 1, y - h / 2 + 2 * k); ctx.lineTo(x - wd / 2 + 1.2, y - h / 2 - 1.5 * k); ctx.lineTo(x + wd / 2 - 1.2, y - h / 2 - 1.5 * k); ctx.lineTo(x + wd / 2 + 1, y - h / 2 + 2 * k); ctx.closePath(); ctx.fillStyle = p.road ? COL.ink : COL[p.land]; ctx.fill(); ctx.stroke();
+    if (z >= 28 || isSel) cand.push({p, x, y: y + h / 2 + 11 * k, pr: isSel ? 0.4 : 3 + hash(p.id, 9) * .5, f: 11, b: false, col: p.road ? COL.primary : COL.ink2, a: 1, txt: p.n}); }
+  // labels with greedy collision avoidance
+  cand.sort((a, b) => a.pr - b.pr); const boxes = []; ctx.textAlign = "center"; ctx.textBaseline = "alphabetic"; ctx.lineJoin = "round"; ctx.direction = "rtl";
+  const fam = FONT;
+  let shown = 0;
+  for (const c of cand) {
+    if (shown > 260) break; ctx.font = `${c.b ? 700 : 500} ${c.f}px ${fam}`; const tw = ctx.measureText(c.txt).width; let lines = [c.txt], lh = c.f * 1.25;
+    let box = {x0: c.x - tw / 2 - 3, x1: c.x + tw / 2 + 3, y0: c.y - c.f, y1: c.y + 3};
+    let snipLines = null;
+    if (c.snip) { snipLines = wrap(c.n.s, 34).slice(0, 3); const mw = Math.max(...snipLines.map(t => t.length)) * 5.2; box = {x0: c.x - Math.max(tw, mw) / 2 - 3, x1: c.x + Math.max(tw, mw) / 2 + 3, y0: c.y - c.f, y1: c.y + 8 + snipLines.length * 13}; }
+    if (boxes.some(b => box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0)) { if (snipLines) { snipLines = null; box = {x0: c.x - tw / 2 - 3, x1: c.x + tw / 2 + 3, y0: c.y - c.f, y1: c.y + 3}; if (boxes.some(b => box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0)) continue; } else continue; }
+    boxes.push(box); shown++; ctx.globalAlpha = c.a; ctx.lineWidth = 3.5; ctx.strokeStyle = COL.surface; ctx.strokeText(c.txt, c.x, c.y); ctx.fillStyle = c.col; ctx.fillText(c.txt, c.x, c.y);
+    if (snipLines) { ctx.font = `400 10.5px ${fam}`; ctx.fillStyle = COL.ink3; snipLines.forEach((t, k) => { ctx.lineWidth = 3; ctx.strokeText(t, c.x, c.y + 13 * (k + 1)); ctx.fillText(t, c.x, c.y + 13 * (k + 1)); }); }
+    ctx.globalAlpha = 1;
+  }
+  updateWhere();
+}
+function updateWhere() {
+  const x = view.cx, y = view.cy; let best = null;
+  for (const n of N) { if (n.n === 0 && n.d > 1) continue; const d = Math.hypot(n.x - x, n.y - y); if (d < n.r && (!best || n.d > best.d)) best = n; }
+  const el = $("where"); if (!best) { el.textContent = "جهان دانش · " + (Z() < 1.3 ? "کل نقشه" : "میان سرزمین‌ها"); return; }
+  el.textContent = pathOf(best.id).map(i => N[i].d === 0 ? LAND_FA[N[i].w] : N[i].t).join(" › ");
+}
+function loop() { if (dirty) draw(); requestAnimationFrame(loop); }
+
+// ---------- panel ----------
+const kindFa = n => n.d === 0 ? "سرزمین" : n.d === 1 ? "شهر (رشتهٔ اصلی)" : (n.k === "subfield" ? "محله (زیررشته)" : "مفهوم");
+const pathBtns = i => pathOf(i).map(k => `<button data-n="${k}">${esc(N[k].d === 0 ? LAND_FA[N[k].w] : N[k].t)}</button>`).join('<span>›</span>');
+const srcHtml = idxs => idxs.length ? idxs.map(k => { const s = SRC[k]; return `<p class="src"><span class="t" title="${esc(TIER[s[2]] || "")}">${s[2] || "؟"}</span>${esc(s[0])}</p>`; }).join("") : '<p class="note">برای این مدخل منبعی ثبت نشده است.</p>';
+function introPanel() {
+  $("panel").innerHTML = `<div class="intro"><h2>جهان دانش</h2>
+  <p>این نقشه مثل نقشهٔ زمین کار می‌کند: هرچه نزدیک‌تر شوید، جزئیات بیشتری پیدا می‌شود. اول سرزمین‌ها، بعد شهرها، بعد محله‌ها و مفهوم‌ها، و در نزدیک‌ترین نما خلاصهٔ هر مفهوم و مغازهٔ دانشمندان.</p>
+  <div class="legend">${Object.keys(LANDS).map(w => `<div><i style="background:${COL[w]}"></i><b>${LAND_FA[w]}</b> · ${faN(kids[LANDS[w].root].length)} شهر · ${faN(N.filter(n => n.w === w).length - 1)} مدخل</div>`).join("")}</div>
+  <p class="note"><b>شهر</b> = رشتهٔ اصلی؛ <b>محله</b> = زیررشته یا مفهوم؛ <b>مغازه</b> = دانشمند. مغازهٔ سبز (پررنگ) روی راه‌ها، دانشمندی است که چند شهر را به هم وصل می‌کند؛ خط‌های خاکستری میان سرزمین‌ها پیوندهای میان‌رشته‌ای‌اند و ضخامتشان تعداد پیوندهاست.</p>
+  <p class="note">جای شهرها و مفهوم‌ها قراردادی است؛ آنچه واقعی است درخت موضوع‌ها، پیوندها و نام‌هاست. برچسب‌های اعتبار منابع (۱ تا ۴) را در هر مدخل می‌بینید.</p>
+  <div class="chips">${landNodes.map(r => `<button data-fly="${r}">${LAND_FA[N[r].w]}</button>`).join("")}</div></div>`;
+}
+function openNode(i, fly_) {
+  const n = N[i]; sel = {t: "n", i}; dirty = true; if (fly_) (n.d <= 1 ? flyCircle(n) : flyNode(n));
+  try { history.replaceState(null, "", "#" + n.i); } catch (_) {}
+  if (n.d === 0) { $("panel").innerHTML = `<div class="kick"><span class="badge f" style="background:${COL[n.w]}">سرزمین</span></div><h2>${esc(LAND_FA[n.w])}</h2><p>${faN(kids[i].length)} شهر و ${faN(N.filter(m => m.w === n.w).length - 1)} مدخل.</p><h3>شهرها</h3><div class="lst">${kids[i].map(c => `<button data-n="${c}"><span>${esc(N[c].t)}</span><small>${faN(N[c].n)} مدخل</small></button>`).join("")}</div>`; return; }
+  const cross = n.lk.filter(l => N[l[0]].w !== n.w), same = n.lk.filter(l => N[l[0]].w === n.w);
+  const lk = (arr, lab) => arr.length ? `<h3>${lab} (${faN(arr.length)})</h3><div class="lst">${arr.slice(0, 14).map(l => `<button data-n="${l[0]}"><span>${esc(REL[l[1]] || l[1])}: ${esc(N[l[0]].t)}${l[2] ? `<br><small>${esc(l[2])}</small>` : ""}</span><small>${esc(LAND_FA[N[l[0]].w])}</small></button>`).join("")}</div>` : "";
+  $("panel").innerHTML = `<div class="path">${pathBtns(i)}</div>
+   <div class="kick" style="margin-top:8px"><span class="badge f" style="background:${COL[n.w]}">${esc(LAND_FA[n.w])}</span><span class="badge">${kindFa(n)}</span><span class="badge ${n.st === "draft" ? "warn" : ""}">${n.st === "draft" ? "پیش‌نویس، هنوز بازبینی نشده" : "بازبینی‌شده"}</span></div>
+   <h2>${esc(n.t)}</h2>${n.e ? `<div class="en">${esc(n.e)}</div>` : ""}
+   ${n.s ? `<p>${esc(n.s)}</p>` : ""}
+   ${n.pt.length ? `<h3>نکته‌های اصلی</h3><ul class="pts">${n.pt.map(p => `<li>${esc(p[0])}${p[2].length ? `<small>${p[2].map(f => `<span class="badge warn">${esc(FLAG[f] || f)}</span>`).join(" ")}</small>` : ""}${p[1].length ? `<small>${p[1].map(k => `<span class="t">${SRC[k][2] || "؟"}</span>`).join("")}</small>` : ""}</li>`).join("")}</ul>` : ""}
+   ${lk(cross, "راه‌ها به سرزمین‌های دیگر")}${lk(same, "همسایه‌ها در همین سرزمین")}
+   ${n.pe.length ? `<h3>مغازه‌دارها: دانشمندان این محله (${faN(n.pe.length)})</h3><div class="chips">${n.pe.slice(0, 18).map(k => `<button data-p="${k}">${esc(PP[k].n)}${PP[k].x ? " ⇄" : ""}</button>`).join("")}</div>` : ""}
+   <h3>منبع‌ها</h3>${srcHtml(n.sr)}<p class="note">برچسب ۱ تا ۴ میزان اعتبار منبع است: ۱ فراتحلیل یا پژوهش بازتکرارشده، ۲ پژوهش داوری‌شده یا منبع رسمی، ۳ کتاب یا نظر متخصص، ۴ سرنخ یا جدلی.</p>
+   ${n.u ? `<p><a href="../${esc(n.u)}">مدخل کامل در ویکی ↗</a></p>` : ""}${n.ir ? `<p class="note">گره با ایران: ${esc(n.ir)}</p>` : ""}`;
+}
+function openPerson(k, fly_) {
+  const p = PP[k]; sel = {t: "p", i: k}; dirty = true; if (fly_) fly(p.px, p.py, s0 * 40, 800);
+  const cs = p.ct.map(c => N[c]);
+  $("panel").innerHTML = `<div class="kick"><span class="badge f" style="background:${p.road ? COL.primary : COL[p.land]}">${p.road ? "مغازه‌دار راه میان‌رشته‌ای" : "مغازه‌دار " + esc(LAND_FA[p.land])}</span></div>
+   <h2>${esc(p.n)}</h2>${p.en && p.en !== p.n ? `<div class="en">${esc(p.en)}</div>` : ""}${p.y ? `<p class="note">${esc(p.y)}</p>` : ""}${p.o ? `<p>${esc(p.o)}</p>` : ""}
+   ${p.road ? `<p class="note">مغازه‌اش روی راه میان «${esc(cs[0].t)}» و «${esc(cs[1].t)}» است، چون نامش در مدخل‌های هر دو شهر آمده.</p>` : ""}
+   <h3>قفسه‌های این مغازه: مدخل‌هایی که نامش در آن‌هاست (${faN(p.c.length)})</h3><div class="lst">${p.c.slice(0, 24).map(c => `<button data-n="${c}"><span>${esc(N[c].t)}</span><small>${esc(LAND_FA[N[c].w])}</small></button>`).join("")}</div>
+   <p class="note">منبع‌ها و کتاب‌ها در هر مدخل جداگانه ثبت شده‌اند و لزوماً اثر همین شخص نیستند؛ بنابراین اینجا فهرست آثار او را ادعا نمی‌کنیم.</p>
+   ${p.wd ? `<p><a href="https://www.wikidata.org/wiki/${esc(p.wd)}" target="_blank" rel="noopener">ویکی‌داده ↗</a></p>` : ""}`;
+}
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("[data-n],[data-p],[data-fly]"); if (!b) return;
+  if (b.dataset.n != null) openNode(+b.dataset.n, true); else if (b.dataset.p != null) openPerson(+b.dataset.p, true); else openNode(+b.dataset.fly, true);
+});
+
+// ---------- hit test ----------
+function hitTest(px, py) {
+  const z = Z(); let best = null, bd = 13;
+  if (z >= 9) for (const p of PP) { const d = Math.hypot(sx(p.px) - px, sy(p.py) - py); if (d < bd) { bd = d; best = {t: "p", i: p.i}; } }
+  for (const n of N) { if (n.d === 0) continue; if (z < n.lod) continue; const d = Math.hypot(sx(n.x) - px, sy(n.y) - py); if (d < bd) { bd = d; best = {t: "n", i: n.id}; } }
+  if (best) return best;
+  // inside a city / land circle?
+  const x = wx(px), y = wy(py); let c = null;
+  for (const n of N) { if (n.d !== 1 && n.d !== 0) continue; if (Math.hypot(n.x - x, n.y - y) < n.r && (!c || n.d > c.d)) c = n; }
+  return c ? {t: "c", i: c.id} : null;
+}
+
+// ---------- input ----------
+const ptrs = new Map(); let moved = 0, pd = 0;
+cv.addEventListener("wheel", e => { e.preventDefault(); const r = cv.getBoundingClientRect(); if (anim) cancelAnimationFrame(anim); zoomAt(e.clientX - r.left, e.clientY - r.top, Math.exp(-e.deltaY * (e.deltaMode === 1 ? .04 : .0009))); }, {passive: false});
+cv.addEventListener("pointerdown", e => { ptrs.set(e.pointerId, [e.clientX, e.clientY]); moved = 0; if (anim) cancelAnimationFrame(anim); if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pd = Math.hypot(a[0] - b[0], a[1] - b[1]); } });
+cv.addEventListener("pointermove", e => {
+  const r = cv.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+  if (!ptrs.has(e.pointerId)) { const h = hitTest(px, py); cv.classList.toggle("hit", !!h); const tip = $("tip"); if (h) { tip.textContent = h.t === "p" ? PP[h.i].n : (h.t === "c" ? (N[h.i].d === 0 ? LAND_FA[N[h.i].w] : N[h.i].t) : N[h.i].t); tip.style.display = "block"; tip.style.left = Math.min(px + 14, cw - 200) + "px"; tip.style.top = (py + 14) + "px"; } else tip.style.display = "none"; return; }
+  const prev = ptrs.get(e.pointerId); ptrs.set(e.pointerId, [e.clientX, e.clientY]);
+  if (ptrs.size === 1) { const dx = e.clientX - prev[0], dy = e.clientY - prev[1]; moved += Math.abs(dx) + Math.abs(dy); if (moved > 6) { cv.classList.add("drag"); try { cv.setPointerCapture(e.pointerId); } catch (_) {} view.cx -= dx / view.s; view.cy -= dy / view.s; clampView(); dirty = true; } }
+  else if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; const d = Math.hypot(a[0] - b[0], a[1] - b[1]); moved = 99; if (pd) zoomAt((a[0] + b[0]) / 2 - r.left, (a[1] + b[1]) / 2 - r.top, d / pd); pd = d; }
+});
+const up = e => { const was = ptrs.size === 1 && moved <= 6 && ptrs.has(e.pointerId); ptrs.delete(e.pointerId); pd = 0; cv.classList.remove("drag"); if (was && e.type === "pointerup") { const r = cv.getBoundingClientRect(), h = hitTest(e.clientX - r.left, e.clientY - r.top); if (h) { if (h.t === "p") openPerson(h.i, false); else if (h.t === "n") openNode(h.i, false); else openNode(h.i, true); } } };
+cv.addEventListener("pointerup", up); cv.addEventListener("pointercancel", up);
+cv.addEventListener("pointerleave", () => { $("tip").style.display = "none"; });
+cv.addEventListener("dblclick", e => { const r = cv.getBoundingClientRect(); zoomAt(e.clientX - r.left, e.clientY - r.top, 2); });
+const step = f => zoomAt(cw / 2, chh / 2, f);
+$("zi").onclick = () => step(1.8); $("zo").onclick = () => step(1 / 1.8);
+$("hm").onclick = () => { sel = null; introPanel(); fly((B[0] + B[2]) / 2, (B[1] + B[3]) / 2, s0, 800); try { history.replaceState(null, "", location.pathname); } catch (_) {} };
+cv.addEventListener("keydown", e => { const k = e.key, d = 60 / view.s; if (k === "+" || k === "=") step(1.5); else if (k === "-") step(1 / 1.5); else if (k === "ArrowLeft") view.cx -= d; else if (k === "ArrowRight") view.cx += d; else if (k === "ArrowUp") view.cy -= d; else if (k === "ArrowDown") view.cy += d; else if (k === "Home") $("hm").click(); else return; e.preventDefault(); clampView(); dirty = true; });
+document.addEventListener("keydown", e => { if (e.key === "/" && document.activeElement.tagName !== "INPUT") { e.preventDefault(); $("q").focus(); } });
+
+// ---------- search ----------
+const IDX = [...N.filter(n => n.d > 0).map(n => ({k: "n", i: n.id, s: norm(n.t + " " + n.e), t: n.t, sub: LAND_FA[n.w] + (n.d === 1 ? " · شهر" : ""), w: 1 / (1 + n.d)})), ...PP.map(p => ({k: "p", i: p.i, s: norm(p.n + " " + p.en), t: p.n, sub: "دانشمند", w: .2}))];
+$("q").addEventListener("input", e => { const q = norm(e.target.value), box = $("res"); if (q.length < 2) { box.hidden = true; return; } const out = []; for (const x of IDX) { const k = x.s.indexOf(q); if (k >= 0) out.push([k === 0 ? 0 : k < 8 ? 1 : 2, -x.w, x]); } out.sort((a, b) => a[0] - b[0] || a[1] - b[1]); const top = out.slice(0, 9).map(o => o[2]); box.innerHTML = top.length ? top.map(x => `<button data-s="${x.k}${x.i}"><span>${esc(x.t)}</span><small>${esc(x.sub)}</small></button>`).join("") : '<button disabled><span>نتیجه‌ای پیدا نشد</span></button>'; box.hidden = false; });
+$("res").addEventListener("click", e => { const b = e.target.closest("[data-s]"); if (!b) return; const k = b.dataset.s[0], i = +b.dataset.s.slice(1); $("res").hidden = true; $("q").value = ""; k === "p" ? openPerson(i, true) : openNode(i, true); });
+document.addEventListener("click", e => { if (!e.target.closest("#sbox")) $("res").hidden = true; });
+
+// ---------- start ----------
+$("lv").innerHTML = LEVELS.map(t => `<span>${t}</span>`).join("");
+readColors(); resize(); introPanel(); loop();
+addEventListener("resize", () => { resize(); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { readColors(); introPanel(); });
+new MutationObserver(() => { readColors(); }).observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme"]});
+const h0 = decodeURIComponent(location.hash.slice(1)); const hi = N.findIndex(n => n.i === h0); if (hi >= 0) { openNode(hi, false); fly(N[hi].x, N[hi].y, s0 * Math.max(26, N[hi].lod * 1.7), 0); }
+})();
+</script>
+</body>
+</html>
