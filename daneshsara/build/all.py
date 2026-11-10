@@ -5,7 +5,7 @@ import subprocess, sys, os
 H = os.path.dirname(os.path.abspath(__file__))
 STEPS = [['validate.py'], ['reader.py', 'soc'], ['reader.py', 'phil'], ['reader.py', 'tabar'], ['reader.py', 'tarikh'],
          ['wiki_home.py'], ['iran_page.py'], ['tools_data.py'], ['world.py'], ['lands.py'], ['core_pages.py'], ['library_plan.py'],
-         ['collection_page.py'], ['sakht_page.py'], ['sakht_day.py'], ['sakht_work.py'], ['coverage.py'], ['story.py'],
+         ['collection_page.py'], ['sakht_page.py'], ['sakht_day.py'], ['sakht_work.py'], ['coverage.py'], ['selfmap.py'], ['story.py'],
          ['crumbs.py'], ['sitemap.py'], ['crumbs.py'], ['atlas_source.py'], ['nav.py'], ['validate.py']]
 for st in STEPS:
     r = subprocess.run([sys.executable, os.path.join(H, st[0])] + st[1:], capture_output=True, text=True)
