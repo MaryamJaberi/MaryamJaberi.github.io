@@ -91,8 +91,8 @@ ul.pts li small{display:block;color:var(--ink-3)}
 const $ = id => document.getElementById(id);
 const W = window.WORLD, N = W.nodes, PP = W.people, SRC = W.src, B = W.meta.bounds, LANDS = W.meta.lands;
 const cv = $("cv"), ctx = cv.getContext("2d");
-const LAND_FA = {psy:"روان‌شناسی", soc:"جامعه‌شناسی", phil:"فلسفه", tabar:"تبار و ژنتیک"};
-const FAMVAR = {psy:"--fam-psy", soc:"--fam-soc", phil:"--fam-hum", tabar:"--fam-bio"};
+const LAND_FA = {psy:"روان‌شناسی", soc:"جامعه‌شناسی", phil:"فلسفه", tabar:"تبار و ژنتیک", tarikh:"تاریخ و ایران‌شناسی"};
+const FAMVAR = {psy:"--fam-psy", soc:"--fam-soc", phil:"--fam-hum", tabar:"--fam-bio", tarikh:"--fam-hist"};
 const REL = {"see-also":"نگاه کنید به", "part-of":"بخشی از", contrasts:"در تقابل با", explains:"توضیح می‌دهد", bridges:"پل می‌زند به", critiques:"نقد می‌کند", "applies-to":"کاربرد در", prerequisite:"پیش‌نیاز", "same-as":"همان است با", "evidence-for":"شاهدی برای", "measured-by":"سنجیده با"};
 const TIER = {1:"فراتحلیل / پژوهش بازتکرارشده", 2:"پژوهش داوری‌شده یا منبع رسمی", 3:"کتاب یا نظر متخصص", 4:"سرنخ، جدلی یا نامعلوم"};
 const FLAG = {contested:"مناقشه‌برانگیز", "editor-note":"یادداشت ویراستار"};
@@ -129,7 +129,7 @@ PP.forEach((p, i) => {
 let cw = 0, chh = 0, dpr = 1, s0 = 1;
 const view = {cx: (B[0] + B[2]) / 2, cy: (B[1] + B[3]) / 2, s: 1};
 const Z = () => view.s / s0;
-let FONT = "Vazirmatn, Tahoma, sans-serif"; let COL = {}; function readColors() { const cs = getComputedStyle(document.documentElement); const g = v => cs.getPropertyValue(v).trim(); FONT = g("--font") || FONT; COL = {paper: g("--paper") || "#fff", surface: g("--surface") || "#f7f7f7", ink: g("--ink") || "#111", ink2: g("--ink-2") || "#444", ink3: g("--ink-3") || "#777", line: g("--line") || "#ddd", primary: g("--primary") || "#0A6B60", psy: g("--fam-psy"), soc: g("--fam-soc"), phil: g("--fam-hum"), tabar: g("--fam-bio")}; dirty = true; }
+let FONT = "Vazirmatn, Tahoma, sans-serif"; let COL = {}; function readColors() { const cs = getComputedStyle(document.documentElement); const g = v => cs.getPropertyValue(v).trim(); FONT = g("--font") || FONT; COL = {paper: g("--paper") || "#fff", surface: g("--surface") || "#f7f7f7", ink: g("--ink") || "#111", ink2: g("--ink-2") || "#444", ink3: g("--ink-3") || "#777", line: g("--line") || "#ddd", primary: g("--primary") || "#0A6B60", psy: g("--fam-psy"), soc: g("--fam-soc"), phil: g("--fam-hum"), tabar: g("--fam-bio"), tarikh: g("--fam-hist")}; dirty = true; }
 function resize() { const r = cv.getBoundingClientRect(); dpr = Math.min(2.5, window.devicePixelRatio || 1); cw = r.width; chh = r.height; cv.width = Math.round(cw * dpr); cv.height = Math.round(chh * dpr); const old = s0; s0 = Math.min(cw / (B[2] - B[0]), chh / (B[3] - B[1])); if (view.s === 1 || !old || old === 1) view.s = s0; else view.s *= s0 / old; dirty = true; }
 const sx = x => (x - view.cx) * view.s + cw / 2, sy = y => (y - view.cy) * view.s + chh / 2;
 const wx = x => (x - cw / 2) / view.s + view.cx, wy = y => (y - chh / 2) / view.s + view.cy;

@@ -21,6 +21,7 @@ head = '<div class="gh"><span></span>' + ''.join(f'<span class="th" data-t="{i}"
 rows = ''.join(f'<div class="ln"><span class="lk"><b>{E(l["k"])}</b><small>{E(l["d"])}</small></span>' + ''.join(f'<ul class="cl" data-t="{i}">' + ''.join(f'<li>{E(x)}</li>' for x in c) + '</ul>' for i, c in enumerate(l['cells'])) + '</div>' for l in D['lanes'])
 safety = ''.join(f'<article class="sf"><h3>{E(s["k"])} {refs(s["src"])}</h3><ul>{"".join(f"<li>{E(x)}</li>" for x in s["items"])}</ul></article>' for s in D['safety'])
 basis = refs(['iso22319', 'usip09', 'sigir09'])
+cel = E(D['celebration_note']) + ' ' + refs(['helbing12'])
 srcs = ''.join(f'<li id="s-{k}"><span class="tier">ردهٔ {fa(SRC[k]["tier"])}</span> {E(SRC[k]["cite"])}{"، " + fa(SRC[k]["year"]) if SRC[k].get("year") else ""}{f""" <a href="{E(SRC[k]["url"])}" rel="noopener">پیوند ↗</a>""" if SRC[k].get("url") else ""}</li>' for k in used)
 page = f'''<!doctype html>
 <html lang="fa" dir="rtl">
@@ -74,6 +75,7 @@ footer.f{{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var
 <p class="sub">ستون‌ها زمان‌اند و ردیف‌ها آدم‌ها. ستون خط‌چین کارهایی است که همین حالا و بی‌خطر شدنی است.</p>
 <div class="tabs" id="tabs">{tabs}</div>
 {head}{rows}
+<p class="sub" style="margin-top:var(--s4)">{cel}</p>
 <div class="go"><a href="https://maryamjaberi.github.io/simorgh/gam.html">پیش از روز بعد: «قدمِ تو» در سیمرغ ↗</a><a href="work.html">متخصص هستید؟ میز کار ←</a><a href="index.html#risks">دفتر ریسک ←</a><a href="index.html#transition">درس‌های دوران گذار ←</a></div>
 </section>
 

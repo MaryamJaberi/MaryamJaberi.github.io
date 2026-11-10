@@ -136,7 +136,7 @@ footer.f{{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var
 
 <section id="road">
 <h2>نقشهٔ راه</h2>
-<p class="sub">هشت کار، به ترتیبی که باید پیش بروند. هیچ‌کدام هنوز از بازبینی متخصص نگذشته است.</p>
+<p class="sub">نُه کار، به ترتیبی که باید پیش بروند. هیچ‌کدام هنوز از بازبینی متخصص نگذشته است.</p>
 <ol class="road">{road}</ol>
 <div class="go"><a href="../sakht/">ساخت ایران ←</a><a href="../sakht/work.html">میز کار متخصص‌ها ←</a><a href="story.html">داستان پروژه ←</a><a href="collection.html">مخزن کتاب‌ها ←</a></div>
 </section>
