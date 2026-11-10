@@ -50,17 +50,18 @@ svg text{font-family:inherit}#tree{max-width:none;display:block}
 const $ = id => document.getElementById(id), D = window.SM;
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
-const COL = {wiki: "#2a6f7a", iran: "#0a6b60", sim: "#b7791f", atlas: "#5b4b8a", core: "#6b6b6b", ext: "#c45c26", product: "#b3261e"};
-const WCOL = {psy: "#0a6b60", soc: "#2a6f7a", phil: "#5b4b8a", tabar: "#c45c26"};
-const WNAME = {psy: "روان", soc: "جامعه", phil: "فلسفه", tabar: "تبار و ژنتیک"};
+const COL = {wiki: "#2a6f7a", iran: "#0a6b60", sim: "#b7791f", build: "#2f6b3a", atlas: "#5b4b8a", core: "#6b6b6b", ext: "#c45c26", product: "#b3261e"};
+const WCOL = {psy: "#0a6b60", soc: "#2a6f7a", phil: "#5b4b8a", tabar: "#c45c26", tarikh: "#8a6d2e"};
+const WNAME = {psy: "روان", soc: "جامعه", phil: "فلسفه", tabar: "تبار و ژنتیک", tarikh: "تاریخ و ایران‌شناسی"};
 const N = Object.fromEntries(D.nodes.map(n => [n.id, n]));
 const link = p => /^https?:/.test(p[0]) ? p[0] : "../" + p[0];
 // ----- tree -----
 const T = {id: "root", l: "دانش‌سرا", c: "#111", open: true, kids: [
-  {id: "b1", l: "۱ · ویکی‌ها", c: COL.wiki, open: true, kids: ["psy", "soc", "tabar", "phil"].map(w => ({id: "w-" + w, l: WNAME[w], c: WCOL[w], open: w === "psy", w, kids: D.cities[w].map(c => ({id: "c-" + w + c[0], l: c[0], sub: fa(c[1]) + " مدخل", c: WCOL[w], leaf: true, w, city: c[0]})).concat(w === "psy" ? [] : [])})).concat([{id: "w-ling", l: "زبان‌شناسی", sub: "به‌زودی", c: "#8a8a8a", leaf: true, node: "ling"}])},
+  {id: "b1", l: "۱ · ویکی‌ها", c: COL.wiki, open: true, kids: ["psy", "soc", "tabar", "phil", "tarikh"].map(w => ({id: "w-" + w, l: WNAME[w], c: WCOL[w], open: w === "psy", w, kids: D.cities[w].map(c => ({id: "c-" + w + c[0], l: c[0], sub: fa(c[1]) + " مدخل", c: WCOL[w], leaf: true, w, city: c[0]})).concat(w === "psy" ? [] : [])})).concat([{id: "w-ling", l: "زبان‌شناسی", sub: "به‌زودی", c: "#8a8a8a", leaf: true, node: "ling"}])},
   {id: "b15", l: "۱٫۵ · ارتباط رشته‌ها", c: COL.atlas, open: true, kids: [{id: "m1", l: "۲۵ پل", c: COL.atlas, leaf: true, node: "miyan"}]},
   {id: "b2", l: "۲ · ویکی ایران", c: COL.iran, open: true, kids: [{id: "i1", l: "۱۶ یادداشت", c: COL.iran, leaf: true, node: "iran-home"}]},
   {id: "b3", l: "۳ · سیمرغ", sub: "در ساخت", c: COL.sim, leaf: true, node: "simorgh"},
+  {id: "b35", l: "۴ · ساخت ایران", sub: "تازه", c: COL.build, leaf: true, node: "sakht"},
   {id: "b4", l: "اطلس‌های میان‌رشته‌ای", c: COL.atlas, open: true, kids: [{id: "a1", l: "جهان‌های اطلس", c: COL.atlas, leaf: true, node: "atlas-worlds"}, {id: "a2", l: "۲۵ پل", c: COL.atlas, leaf: true, node: "atlas-bridges"}, {id: "a3", l: "ابزارهای اطلس", c: COL.atlas, leaf: true, node: "atlas-tools"}, {id: "a4", l: "اطلس زمان (بیرونی)", c: COL.ext, leaf: true, node: "time"}]},
   {id: "b5", l: "هستهٔ مشترک", c: COL.core, open: true, kids: [{id: "k1", l: fa(D.stats.people) + " چهره", c: COL.core, leaf: true, node: "core"}, {id: "k2", l: fa(D.stats.sources) + " منبع", c: COL.core, leaf: true, node: "core"}]},
   {id: "b6", l: "صفحه‌های ویکی روان", c: WCOL.psy, open: false, kids: ["psy-lessons", "psy-books", "psy-tools", "psy-home"].map(id => ({id: "g-" + id, l: N[id].l, sub: fa(N[id].p.length) + " صفحه", c: WCOL.psy, leaf: true, node: id}))},
@@ -87,9 +88,9 @@ function side1(n) {
 }
 $("tree").addEventListener("click", e => { const t = e.target.closest("[data-tog]"); const g = e.target.closest(".n"); if (t) { const n = find(T, t.dataset.tog); n.open = !n.open; drawTree(); return; } if (g) { const n = find(T, g.dataset.id); selId = n.id; if (n.kids && !n.leaf && n.id !== "root") { n.open = !n.open; } drawTree(); side1(n); } });
 // ----- graph -----
-const ORDER = ["psy-home", "psy-lessons", "psy-books", "psy-tools", "product-org", "soc-home", "tabar-home", "phil-home", "ling", "miyan", "iran-home", "simorgh", "atlas-worlds", "atlas-bridges", "atlas-tools", "core", "time", "home"];
+const ORDER = ["psy-home", "psy-lessons", "psy-books", "psy-tools", "product-org", "soc-home", "tabar-home", "phil-home", "tarikh-home", "ling", "miyan", "iran-home", "simorgh", "sakht", "atlas-worlds", "atlas-bridges", "atlas-tools", "core", "time", "home"];
 const GN = D.nodes.concat([{id: "home", br: "core", l: "صفحهٔ اول", n: "", p: [["index.html", "دانش‌سرا"]], s: "", in: 0, orph: []}]); const GM = Object.fromEntries(GN.map(n => [n.id, n]));
-const wikiHome = {psy: "psy-home", soc: "soc-home", phil: "phil-home", tabar: "tabar-home"};
+const wikiHome = {psy: "psy-home", soc: "soc-home", phil: "phil-home", tabar: "tabar-home", tarikh: "tarikh-home"};
 function drawGraph() {
   const cx = 380, cy = 320, R = 255, P = {}; ORDER.forEach((id, i) => { const a = i / ORDER.length * 6.283 + 1.57; P[id] = [cx + Math.cos(a) * R, cy + Math.sin(a) * R * .93]; });
   let s = ""; const mx = Math.max(...D.edges.map(e => e[2]), 1);

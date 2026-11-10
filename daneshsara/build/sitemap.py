@@ -35,6 +35,7 @@ def group(p):
         return d + '-home'
     if d == 'miyan': return 'miyan'
     if d == 'simorgh': return 'simorgh'
+    if d == 'sakht': return 'sakht'
     if d in ('soc/tools', 'phil/tools', 'tabar/tools', 'tarikh/tools'): return d.split('/')[0] + '-tools'
     if d == 'iran/tools': return 'iran-tools'
     if d == 'atlas':
@@ -95,13 +96,14 @@ NODES = [
  ('miyan', 'atlas', 'ارتباط رشته‌ها', 'ویکی ۲۵ پل میان‌رشته‌ای', pl('miyan'), ''),
  ('iran-home', 'iran', 'ویکی ایران', '۱۶ برگهٔ داده با سال، روش و ردهٔ کیفیت', pl('iran-home') + pl('iran-tools'), ''),
  ('simorgh', 'sim', 'سیمرغ', 'تمثیل، راه‌حل و بازی بر پایهٔ وضعیت‌ها', pl('simorgh'), 'در ساخت'),
+ ('sakht', 'build', 'ساخت ایران', 'نهادهای ضروری، دوران گذار، دفتر ریسک، زیرساخت دیجیتال', pl('sakht'), 'تازه'),
  ('atlas-worlds', 'atlas', 'جهان‌های اطلس', 'جهان دانش، سرزمین دانش، اطلس رشته‌ها، کتابخانه', pl('atlas-worlds'), ''),
  ('atlas-bridges', 'atlas', 'پل‌های میان‌رشته‌ای', '', pl('atlas-bridges'), ''),
  ('atlas-tools', 'atlas', 'ابزارهای اطلس', 'مقایسه، مسیر، شواهد…', pl('atlas-tools'), ''),
  ('core', 'core', 'هستهٔ مشترک', 'چهره‌ها، منابع، صف بازبینی، مشارکت', pl('core'), ''),
  ('time', 'ext', 'اطلس زمان', 'مستقل در earth-through-time', [['https://maryamjaberi.github.io/earth-through-time/', 'اطلس زمان']], ''),
 ]
-BRANCH = {'wiki': 'ویکی‌ها', 'iran': 'لنز ایران', 'sim': 'سیمرغ', 'atlas': 'اطلس‌های میان‌رشته‌ای', 'core': 'هستهٔ مشترک', 'ext': 'خارج از این مخزن', 'product': 'محصول جدا'}
+BRANCH = {'wiki': 'ویکی‌ها', 'iran': 'لنز ایران', 'sim': 'سیمرغ', 'build': 'ساخت ایران', 'atlas': 'اطلس‌های میان‌رشته‌ای', 'core': 'هستهٔ مشترک', 'ext': 'خارج از این مخزن', 'product': 'محصول جدا'}
 data = {'nodes': [{'id': a, 'br': b, 'l': c, 'n': d, 'p': e, 's': f, 'in': sum(page_in[x[0]] for x in e), 'orph': [x[0] for x in e if page_in[x[0]] == 0]} for a, b, c, d, e, f in NODES],
         'edges': [[a, b, n] for (a, b), n in edges.items() if a != 'home' and b != 'home'], 'homeOut': [[b, n] for (a, b), n in edges.items() if a == 'home'],
         'cities': cities, 'wl': [[a, b, n] for (a, b), n in wl.items()], 'stats': stats, 'orphans': [[p, TITLE[p]] for p in orphans], 'branch': BRANCH, 'npages': len(pages)}
