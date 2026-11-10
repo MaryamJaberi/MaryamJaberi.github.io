@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ویکی تاریخ و ایران‌شناسی | دانش‌سرا</title>
+<meta name="description" content="چه شد که این‌طور شد؟ بزرگ‌ترین قفسهٔ مخزن دانش‌سرا (۲۸۲ کتاب) همین پرسش را دنبال می‌کند: تاریخ سیاسی و اجتماعی ایران، باستان‌شناسی، و تاریخ جهان در پیوند با آن. این ویکی تازه‌ساز است و با یک جلد از یک اثر کلاسیک شروع شده؛ بقیهٔ مخزن هنوز خوانده نشده.">
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+:root{--w:var(--fam-hist)}
+header.top{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:20}
+header.top .wrap{display:flex;align-items:center;gap:var(--s4);min-height:50px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--ink);text-decoration:none}
+.brand i{width:12px;height:12px;border-radius:4px;background:var(--w);display:inline-block}
+nav.main{display:flex;gap:var(--s3);flex-wrap:wrap;margin-inline-start:auto;font-size:var(--small)}
+nav.main a{color:var(--ink-2)}nav.main a:hover{color:var(--w)}
+.hero{padding:var(--s8) 0 var(--s5)}
+.hero h1{font-size:var(--h1);margin:0 0 var(--s3);line-height:var(--lh-tight)}
+.hero p.lead{color:var(--ink-2);max-width:48em;line-height:1.95;margin:0 0 var(--s4);font-size:1.03rem}
+.sib{font-size:var(--small);color:var(--ink-3);margin:0 0 var(--s4)}.sib a{color:var(--w);margin-inline-end:10px}
+.stats{display:flex;gap:var(--s6);flex-wrap:wrap;border-block:1px solid var(--line);padding-block:var(--s4)}
+.stats div{display:grid}.stats b{font-size:1.7rem;line-height:1.2;color:var(--ink)}
+.stats span{font-size:var(--chip);color:var(--ink-3)}
+section.sec{padding-block:var(--s6)}
+h2.sh{font-size:var(--h3);margin:0 0 6px}
+p.sub{color:var(--ink-3);font-size:var(--small);margin:0 0 var(--s4);max-width:44em;line-height:1.8}
+.qs{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.q{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper);color:var(--ink);text-decoration:none;line-height:1.6;font-size:var(--small)}
+.q:hover{border-color:var(--w)}.q i{color:var(--w);font-style:normal}
+.subs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:var(--s3)}
+.sub-c{display:grid;gap:5px;align-content:start;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--paper);text-decoration:none;color:var(--ink);border-inline-start:3px solid var(--w)}
+.sub-c:hover{border-color:var(--w)}
+.sub-c b{font-size:var(--h4);line-height:1.4}
+.sub-c em{font-style:normal;font-size:var(--chip);color:var(--w)}
+.sub-c span{font-size:var(--small);color:var(--ink-2);line-height:1.7}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--s3)}
+.tool{display:grid;gap:6px;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);text-decoration:none;color:var(--ink);align-content:start}
+.tool:hover{border-color:var(--w)}.tool h3{margin:0;font-size:var(--h4)}
+.tool p{margin:0;font-size:var(--small);color:var(--ink-2);line-height:1.75}
+.tool .go{font-size:var(--chip);color:var(--w)}
+.brs{display:flex;gap:var(--s3);flex-wrap:wrap}
+.br{display:grid;gap:2px;padding:10px 16px;border:1px solid var(--line);border-radius:var(--r-full);background:var(--paper);text-decoration:none;color:var(--ink)}
+.br:hover{border-color:var(--w)}.br span{font-size:var(--chip);color:var(--ink-3)}
+.fld{margin-bottom:var(--s5)}
+.fld h3{margin:0 0 4px;font-size:var(--h4);color:var(--w)}
+.fld h3 small{color:var(--ink-3);font-weight:400;font-size:var(--chip)}
+.fld p{margin:0 0 10px;font-size:var(--small);color:var(--ink-2);line-height:1.8;max-width:46em}
+.lst{display:flex;flex-wrap:wrap;gap:7px}
+.lst a{font-size:var(--small);padding:4px 11px;border:1px solid var(--line);border-radius:var(--r-full);color:var(--ink-2);text-decoration:none;background:var(--paper)}
+.lst a:hover{border-color:var(--w);color:var(--ink)}
+.idx{columns:4 180px;column-gap:var(--s5)}
+.ig{break-inside:avoid;margin-bottom:var(--s4)}
+.ig b{display:block;color:var(--w);border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:5px}
+.ig a{display:block;font-size:var(--small);color:var(--ink-2);padding:2px 0;text-decoration:none}
+.ig a:hover{color:var(--w)}
+.road{margin:0;padding-inline-start:1.2em;line-height:2;color:var(--ink-2);font-size:var(--small);max-width:46em}
+footer.f{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var(--small);color:var(--ink-3)}
+footer.f a{color:var(--ink-2);margin-inline-end:var(--s4)}
+@media (max-width:640px){.stats{gap:var(--s4)}.stats b{font-size:1.35rem}.idx{columns:2 130px}}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><a href="../index.html#layers">لایهٔ علم</a><i>›</i><b>ویکی تاریخ و ایران‌شناسی</b></nav>
+<header class="top"><div class="wrap">
+ <a class="brand" href="../"><i></i>دانش‌سرا</a>
+ <nav class="main"><a href="entries.html">همهٔ مدخل‌ها</a><a href="#tools" hidden>ابزارها</a><a href="#subs">زیرمجموعه‌ها</a><a href="#bridges">پل به رشته‌ها</a><a href="#contents">فهرست مطالب</a><a href="#index">نمایهٔ واژه‌ها</a><a href="#roadmap" hidden>در راه</a></nav>
+</div></header>
+<main class="wrap">
+ <section class="hero">
+  <h1>ویکی تاریخ و ایران‌شناسی</h1>
+  <p class="lead">چه شد که این‌طور شد؟ بزرگ‌ترین قفسهٔ مخزن دانش‌سرا (۲۸۲ کتاب) همین پرسش را دنبال می‌کند: تاریخ سیاسی و اجتماعی ایران، باستان‌شناسی، و تاریخ جهان در پیوند با آن. این ویکی تازه‌ساز است و با یک جلد از یک اثر کلاسیک شروع شده؛ بقیهٔ مخزن هنوز خوانده نشده.</p>
+  <p class="sib">کنار این ویکی: <a href="../psy/">روان</a><a href="../soc/">جامعه</a><a href="../tabar/">تبار و ژنتیک</a><a href="../phil/">فلسفه</a><a href="../miyan/">ارتباط رشته‌ها</a><a href="../iran/">ایران</a><a href="../simorgh/">سیمرغ</a></p>
+  <div class="stats"><div><b>۲</b><span>مدخل</span></div><div><b>۱</b><span>شهر دانش</span></div><div><b>۰</b><span>چهره</span></div><div><b>۱</b><span>منبع</span></div><div><b>۰</b><span>دادهٔ ایران</span></div></div>
+ </section>
+
+ <section class="sec" id="subs">
+  <h2 class="sh">۱ زیرمجموعهٔ این ویکی</h2>
+  <p class="sub">هر شهر یک رشته یا موضوع اصلی در این ویکی است؛ روی آن بزنید تا مدخل‌هایش را ببینید.</p>
+  <div class="subs"><a class="sub-c" href="#f-0"><b>ایران در سده‌های نخست اسلامی</b><em>۲ مدخل</em><span>از فروپاشی ساسانیان (سدهٔ ۷ م) تا برآمدن عباسیان (سدهٔ ۸ م): فتح عربی، نقش ایرانیان در تحولات سیاسی خلافت، و ج</span></a></div>
+ </section>
+
+ <section class="sec" id="questions" hidden>
+  <h2 class="sh">۰ پرسش که این ویکی جواب می‌دهد</h2>
+  <p class="sub">هر کدام یک مدخل است با خلاصه، نکته‌ها، منبع و پیوند به ویکی‌های دیگر.</p>
+  <div class="qs"></div>
+ </section>
+
+ <section class="sec" id="tools" hidden>
+  <h2 class="sh">۰ ابزار برای گشتن در این ویکی</h2>
+  <p class="sub">هر ابزار همین مدخل‌ها را از زاویه‌ای دیگر نشان می‌دهد.</p>
+  <div class="tools"></div>
+ </section>
+
+ <section class="sec" id="bridges">
+  <h2 class="sh">پل به رشته‌های دیگر</h2>
+  <p class="sub">۰ پیوند از مدخل‌های این ویکی به ویکی‌های دیگر دانش‌سرا می‌رود. اطلس‌های میان‌رشته‌ای این پیوندها را روی نقشه نشان می‌دهند.</p>
+  <div class="brs"><a class="br" href="../atlas/world.html"><b>جهان دانش</b><span>نقشهٔ زوم‌پذیر همهٔ ویکی‌ها</span></a><a class="br" href="../atlas/bridge.html"><b>پل‌ها</b><span>۲۵ رشتهٔ میان‌رشته‌ای</span></a><a class="br" href="../iran/"><b>برای ایران</b><span>همین مفهوم‌ها با دادهٔ ایران</span></a></div>
+ </section>
+
+ <section class="sec" id="contents">
+  <h2 class="sh">فهرست همهٔ مطالب</h2>
+  <p class="sub">مدخل‌ها به تفکیک شهرهای دانش این سرزمین.</p>
+  <section class="fld" id="f-0"><h3>ایران در سده‌های نخست اسلامی <small>۲</small></h3><p>از فروپاشی ساسانیان (سدهٔ ۷ م) تا برآمدن عباسیان (سدهٔ ۸ م): فتح عربی، نقش ایرانیان در تحولات سیاسی خلافت، و جنبش‌هایی که به سقوط امویان رسید.</p><div class="lst"><a href="entries.html#arab-conquest-iran">فتح عربی ایران: واقعهٔ جسر و پیامدش</a><a href="entries.html#abu-muslim-revolt">قیام سیاه‌جامگان ابومسلم خراسانی</a></div></section>
+ </section>
+
+ <section class="sec" id="index">
+  <h2 class="sh">نمایهٔ واژه‌ها</h2>
+  <p class="sub">۸ عنوان و نام دیگر، به ترتیب الفبا.</p>
+  <div class="idx"><div class="ig"><b>ا</b><div><a href="entries.html#abu-muslim-revolt">ابومسلم خراسانی</a><a href="entries.html#abu-muslim-revolt">انقلاب عباسی در خراسان</a></div></div><div class="ig"><b>ج</b><div><a href="entries.html#arab-conquest-iran">جنگ پل</a></div></div><div class="ig"><b>س</b><div><a href="entries.html#abu-muslim-revolt">سیاه‌جامگان</a></div></div><div class="ig"><b>ف</b><div><a href="entries.html#arab-conquest-iran">فتح ایران</a><a href="entries.html#arab-conquest-iran">فتح عربی ایران: واقعهٔ جسر و پیامدش</a></div></div><div class="ig"><b>ق</b><div><a href="entries.html#abu-muslim-revolt">قیام سیاه‌جامگان ابومسلم خراسانی</a></div></div><div class="ig"><b>و</b><div><a href="entries.html#arab-conquest-iran">واقعهٔ جسر</a></div></div></div>
+ </section>
+<section class="sec" id="roadmap" hidden><h2 class="sh">در راه</h2><p class="sub">کارهایی که برای این ویکی مانده.</p><ul class="road"></ul></section>
+</main>
+<footer class="f"><div class="wrap"><a href="../">دانش‌سرا</a><a href="entries.html">همهٔ مدخل‌ها</a><a href="../atlas/sitemap.html">نقشهٔ سایت</a><a href="../core/contribute.html">مشارکت</a><a href="../core/sources.html">منابع</a></div></footer>
+<script>
+// old deep links  <wiki>/#slug  →  entries.html#slug
+(function(){var h=location.hash,u="entries.html";if(h&&h.length>1&&/entries\.html$/.test(u)&&!document.getElementById(h.slice(1)))location.replace(u+h);})();
+</script>
+</body>
+</html>

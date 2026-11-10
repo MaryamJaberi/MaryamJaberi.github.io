@@ -24,7 +24,7 @@ for p in glob.glob(f'{R}/atlas/bridges/*.json'):
     b = load(p); bridges[b['id']] = b; check(S['bridge'], b, f'bridge:{b["id"]}')
     if b['field'] not in fields: errors.append(f'bridge:{b["id"]}: field {b["field"]} missing')
 concepts = {}
-for wiki in ['psy', 'soc', 'tabar', 'phil']:
+for wiki in ['psy', 'soc', 'tabar', 'phil', 'tarikh']:
     for p in glob.glob(f'{R}/data/{wiki}/concepts/*.json'):
         c = load(p); concepts[c['id']] = c; check(S['concept'], c, c['id'])
         if not c['id'].startswith(wiki + ':'): errors.append(f'{c["id"]}: wrong prefix for folder {wiki}')

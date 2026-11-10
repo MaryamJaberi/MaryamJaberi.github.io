@@ -38,7 +38,7 @@ main{padding-block:var(--s6) var(--s16)} h1{margin:0 0 var(--s2)} .lead{color:va
 .row .n{color:var(--ink-2);font-size:var(--small)}
 .cite{direction:ltr;text-align:left;font-size:var(--small);line-height:1.7} .cite a{color:var(--primary)}
 .tags{display:flex;flex-wrap:wrap;gap:6px} .tags a,.tags span{font-size:var(--chip);padding:2px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink);background:var(--surface)}
-.tags .psy{border-color:var(--fam-psy)} .tags .soc{border-color:var(--fam-soc)} .tags .tabar{border-color:var(--fam-bio)} .tags .phil{border-color:var(--fam-hum)}
+.tags .psy{border-color:var(--fam-psy)} .tags .soc{border-color:var(--fam-soc)} .tags .tabar{border-color:var(--fam-bio)} .tags .phil{border-color:var(--fam-hum)} .tags .tarikh{border-color:var(--fam-hist)}
 .tier{font-size:var(--chip);padding:1px 8px;border-radius:var(--r-full);background:var(--ink);color:var(--paper)}
 .more{text-align:center;margin-top:var(--s5)} .more button{font:inherit;padding:8px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
 footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(--ink-3);font-size:var(--small)}
@@ -50,7 +50,7 @@ footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(-
 <footer class="foot"><div class="wrap" data-i="foot"></div></footer>
 <script>
 const D = __DATA__;
-const WN = {fa:{psy:"روان",soc:"جامعه",tabar:"تبار",phil:"فلسفه"},en:{psy:"Mind",soc:"Society",tabar:"Lineage",phil:"Philosophy"},nl:{psy:"Geest",soc:"Samenleving",tabar:"Afstamming",phil:"Filosofie"}};
+const WN = {fa:{psy:"روان",soc:"جامعه",tabar:"تبار",phil:"فلسفه",tarikh:"تاریخ"},en:{psy:"Mind",soc:"Society",tabar:"Lineage",phil:"Philosophy",tarikh:"History"},nl:{psy:"Geest",soc:"Samenleving",tabar:"Afstamming",phil:"Filosofie",tarikh:"Geschiedenis"}};
 let L = "fa"; try { L = localStorage.getItem("ds-lang") || "fa"; } catch(_) {}
 const T = k => (UI[L] && UI[L][k]) ?? UI.fa[k];
 const tx = o => !o ? "" : (typeof o === "string" ? o : (L === "fa" ? o.fa : (o[L] || o.en || o.fa)) || "");
@@ -73,7 +73,7 @@ const UI = {fa:{home:"خانه",h1:"چهره‌ها",lead:"همهٔ پژوهشگ
  nl:{home:"Home",h1:"Personen",lead:"Elke onderzoeker die in de Daneshsara-wiki's wordt genoemd, met de lemma's waarin hij of zij voorkomt. Eén naam, één identificator, in elke wiki.",ph:"Zoek namen…",all:"Alles",inW:"in",more:"Meer tonen",n:"personen",foot:"De identificator van elke persoon is uniek in de gedeelde kern; Wikidata-koppelingen volgen in de volgende fase."}};
 function render(){
   const items = D.filter(p => (!w || p.wikis.includes(w)) && (!q || JSON.stringify(p.name).toLowerCase().includes(q) || (p.note || "").toLowerCase().includes(q)));
-  document.getElementById("bar").innerHTML = `<input id="q" type="search" placeholder="${T("ph")}" value="${esc(q)}">` + ["", "psy", "soc", "tabar", "phil"].map(k => `<button data-w="${k}" aria-pressed="${w === k}">${k ? WN[L][k] : T("all")}</button>`).join("") + `<span style="align-self:center;color:var(--ink-3);font-size:var(--small)">${fa(items.length)} ${T("n")}</span>`;
+  document.getElementById("bar").innerHTML = `<input id="q" type="search" placeholder="${T("ph")}" value="${esc(q)}">` + ["", "psy", "soc", "tabar", "phil", "tarikh"].map(k => `<button data-w="${k}" aria-pressed="${w === k}">${k ? WN[L][k] : T("all")}</button>`).join("") + `<span style="align-self:center;color:var(--ink-3);font-size:var(--small)">${fa(items.length)} ${T("n")}</span>`;
   document.getElementById("list").innerHTML = items.slice(0, shown).map(p => `<article class="card row" id="${p.id.split(":")[1]}"><h3>${esc(tx(p.name))}${L === "fa" && p.name.en ? `<small dir="ltr">${esc(p.name.en)}</small>` : ""}${p.years ? `<small>${fa(p.years)}</small>` : ""}${p.qid ? `<small><a href="https://www.wikidata.org/wiki/${p.qid}" target="_blank" rel="noopener" style="color:var(--ink-3)">Wikidata ↗</a></small>` : ""}</h3>${p.note && L === "fa" ? `<div class="n">${esc(p.note)}</div>` : ""}<div class="tags">${p.in.map(c => `<a class="${c.wiki}" href="${c.url}">${esc(tx(c.title))}</a>`).join("")}</div></article>`).join("");
   document.getElementById("more").innerHTML = items.length > shown ? `<button data-more>${T("more")} (${fa(items.length - shown)})</button>` : "";
 }'''
@@ -83,7 +83,7 @@ const UI = {fa:{home:"خانه",h1:"منابع",lead:"همهٔ منابعی که
  nl:{home:"Home",h1:"Bronnen",lead:"Elke bron waarnaar de wiki's verwijzen, met niveau (1 peer-reviewed artikel, 2 academisch boek, 3 rapport of web) en de lemma's die haar gebruiken.",ph:"Zoek in bronnen…",all:"Alles",more:"Meer tonen",n:"bronnen",t:"niveau",foot:"Het niveau gaat over het publicatietype, niet over de kwaliteit van de bevinding; replicatiestatus staat in de lemma's zelf."}};
 function render(){
   const items = D.filter(s => (!w || s.wikis.includes(w)) && (!q || s.cite.toLowerCase().includes(q)));
-  document.getElementById("bar").innerHTML = `<input id="q" type="search" placeholder="${T("ph")}" value="${esc(q)}">` + ["", "psy", "soc", "tabar", "phil"].map(k => `<button data-w="${k}" aria-pressed="${w === k}">${k ? WN[L][k] : T("all")}</button>`).join("") + `<span style="align-self:center;color:var(--ink-3);font-size:var(--small)">${fa(items.length)} ${T("n")}</span>`;
+  document.getElementById("bar").innerHTML = `<input id="q" type="search" placeholder="${T("ph")}" value="${esc(q)}">` + ["", "psy", "soc", "tabar", "phil", "tarikh"].map(k => `<button data-w="${k}" aria-pressed="${w === k}">${k ? WN[L][k] : T("all")}</button>`).join("") + `<span style="align-self:center;color:var(--ink-3);font-size:var(--small)">${fa(items.length)} ${T("n")}</span>`;
   document.getElementById("list").innerHTML = items.slice(0, shown).map(s => `<article class="card row" id="${s.id.split(":")[1]}"><div class="cite">${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.cite)}</a>` : esc(s.cite)} <span class="tier">${T("t")} ${fa(s.tier)}</span></div><div class="tags">${s.in.map(c => `<a class="${c.wiki}" href="${c.url}">${esc(tx(c.title))}</a>`).join("")}</div></article>`).join("");
   document.getElementById("more").innerHTML = items.length > shown ? `<button data-more>${T("more")} (${fa(items.length - shown)})</button>` : "";
 }'''

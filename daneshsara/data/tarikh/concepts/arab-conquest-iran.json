@@ -1,0 +1,59 @@
+{
+ "id": "tarikh:arab-conquest-iran",
+ "kind": "concept",
+ "title": {
+  "fa": "فتح عربی ایران: واقعهٔ جسر و پیامدش",
+  "en": "The Arab conquest of Iran: the Battle of the Bridge and its aftermath",
+  "nl": "De Arabische verovering van Iran: de Slag om de Brug en de nasleep"
+ },
+ "aliases": ["واقعهٔ جسر", "جنگ پل", "فتح ایران"],
+ "parent": "tarikh:early-islamic",
+ "field": "tarikh:early-islamic",
+ "summary": {
+  "fa": "اولین شکست بزرگ عرب‌های مسلمان در عراق از سپاه ساسانی (حدود ۱۳ هجری/۶۳۴ م)، در نبردی کنار یک پل بر فرات. شکست چنان شرم‌آور بود که فراریان در مدینه ماه‌ها از شرم خانه‌نشین شدند؛ عمر برای مدتی نام «عراق» را به زبان نمی‌آورد. این شکست موقتی بود، نه پایان ماجرا.",
+  "en": "The first major defeat of Muslim Arab forces in Iraq at Sasanian hands (c. 13 AH/634 CE), in a battle beside a bridge on the Euphrates. The defeat was so shameful that the fleeing survivors shut themselves in their homes in Medina for months; Caliph Umar avoided even saying the word \"Iraq\" for nearly a year. It was a temporary setback, not the end of the story.",
+  "nl": "De eerste grote nederlaag van moslim-Arabische troepen in Irak tegen de Sassaniden (ca. 13 AH/634 CE), in een slag bij een brug over de Eufraat. De nederlaag was zo beschamend dat de vluchtende overlevenden zich maandenlang thuis opsloten in Medina; kalief Omar vermeed bijna een jaar lang zelfs het woord \"Irak\" te noemen. Het was een tijdelijke terugslag, geen einde van het verhaal."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در واقعهٔ جسر، سپاه عرب به فرماندهی ابوعبید ثقفی از سپاه ساسانی به فرماندهی بهمن جادویه کنار پلی بر فرات شکست خورد؛ به‌روایت سیف بن عمر این نبرد در شعبان سال ۱۳ هجری روی داد، هرچند خود این تاریخ قطعی نیست — برخی آن را آخر رمضان همان سال، و ابن اسحاق آن را سال ۱۴ هجری نوشته‌اند.",
+    "en": "At the Battle of the Bridge, the Arab force under Abu Ubayd al-Thaqafi was defeated by the Sasanian force under Bahman Jadhuyeh beside a bridge on the Euphrates; per Sayf ibn Umar's account the battle took place in Sha'ban 13 AH, though even this date is disputed — some place it at the end of Ramadan of the same year, and Ibn Ishaq dates it to 14 AH.",
+    "nl": "In de Slag om de Brug werd de Arabische troepenmacht onder Abu Ubayd al-Thaqafi verslagen door de Sassanidische troepenmacht onder Bahman Jadhuyeh bij een brug over de Eufraat; volgens Sayf ibn Umar vond de slag plaats in Sha'ban 13 AH, al is zelfs deze datum omstreden — sommigen plaatsen het aan het einde van Ramadan van hetzelfde jaar, en Ibn Ishaq dateert het op 14 AH."
+   },
+   "sources": ["src:c4abd0c6f3"],
+   "flags": ["contested", "dated"]
+  },
+  {
+   "text": {
+    "fa": "شکست آن‌قدر شرم‌آور بود که فراریان به مدینه چون شرمسار از شرم روی نهان می‌کردند، در خانه گریه می‌کردند و خود را به‌خاطر پشت‌کردن به دشمن گناهکار می‌دانستند؛ گفته شده عمر تا نزدیک یک سال نام «عراق» را بر زبان نمی‌آورد.",
+    "en": "The defeat was so shameful that the fleeing survivors who reached Medina hid their faces in shame, wept at home, and considered themselves guilty for having turned their backs on the enemy; it is said Caliph Umar avoided even saying the word \"Iraq\" for nearly a year afterward.",
+    "nl": "De nederlaag was zo beschamend dat de vluchtelingen die Medina bereikten hun gezicht verborgen van schaamte, thuis huilden en zichzelf schuldig voelden omdat ze de vijand de rug hadden toegekeerd; er wordt gezegd dat kalief Omar bijna een jaar lang zelfs het woord \"Irak\" vermeed."
+   },
+   "sources": ["src:c4abd0c6f3"],
+   "flags": ["editor-note"],
+   "note": {
+    "fa": "این جزئیات روایی (شرم، گریه) از سنت تاریخ‌نگاری اسلامی سده‌های بعد می‌آید، نه سندی هم‌زمان با واقعه؛ به‌عنوان شاهدی از چگونگی روایت‌شدنِ این شکست در حافظهٔ تاریخی بخوانید، نه گزارشی صددرصد مستند.",
+    "en": "These narrative details (shame, weeping) come from the later Islamic historiographic tradition, not a document contemporary with the event; read them as evidence of how this defeat was remembered and narrated, not as a fully documented report.",
+    "nl": "Deze narratieve details (schaamte, huilen) komen uit de latere islamitische historiografische traditie, niet uit een document uit de tijd van de gebeurtenis zelf; lees ze als bewijs van hoe deze nederlaag werd herinnerd en verteld, niet als een volledig gedocumenteerd verslag."
+   }
+  },
+  {
+   "text": {
+    "fa": "عمر برای جبران شکست، طایفهٔ بَجیله را به فرماندهی جریر بن عبدالله بجلی با وعدهٔ ربع یا ثلث غنایم به عراق فرستاد؛ چندماه بعد در محلی به نام بویب (نهری از فرات) سپاه عرب دوباره با سپاه ایران به فرماندهی مهران بن مهربنداد روبه‌رو شد — این‌بار همراه با چند زنجیر فیل، که دیگر اعراب را مثل جسر نترساند.",
+    "en": "To redress the defeat, Umar sent the Bajila tribe under Jarir ibn Abdullah al-Bajali to Iraq with a promise of a quarter or third of the spoils; months later at a place called Buwayb (a canal off the Euphrates), the Arab force again faced the Persian army under Mihran ibn Mihrbandad — this time with war elephants, which no longer frightened the Arabs as they had at the Bridge.",
+    "nl": "Om de nederlaag te herstellen, stuurde Omar de Bajila-stam onder Jarir ibn Abdullah al-Bajali naar Irak met de belofte van een kwart of derde van de buit; maanden later op een plaats genaamd Buwayb (een kanaal van de Eufraat) stond de Arabische troepenmacht opnieuw tegenover het Perzische leger onder Mihran ibn Mihrbandad — deze keer met oorlogsolifanten, die de Arabieren niet meer schrik aanjoegen zoals bij de Brug."
+   },
+   "sources": ["src:c4abd0c6f3"],
+   "flags": []
+  }
+ ],
+ "links": [],
+ "people": [],
+ "sources": ["src:c4abd0c6f3"],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
