@@ -650,7 +650,7 @@
    ]
   }
  ],
- "ideas_note": "مخزن IranAzadAbad حدود ۳۰۰ ایده در ۱۷ دسته دارد (کشاورزی، هوش مصنوعی، هنر و فرهنگ، آموزش، انرژی، محیط‌زیست، مالی، سلامت، زیرساخت، اینترنت، تولید، رسانه، شهر هوشمند، اجتماعی، زیست‌بوم استارتاپی، گردشگری، عمومی). این‌ها ایده‌اند، نه یافتهٔ بررسی‌شده (ردهٔ ۴). فعلاً فقط صفحهٔ نخست خوانده شده است.",
+ "ideas_note": "مخزن IranAzadAbad حدود ۳۲۵ ایده در ۱۳ صفحه و ۱۷ دسته دارد. این‌ها ایده‌اند، نه یافتهٔ بررسی‌شده (ردهٔ ۴)، و تعداد رأی فقط نشان می‌دهد چند نفر در همان مخزن پسندیده‌اند. تا این‌جا صفحه‌های ۱ تا ۶ خوانده شده (۱۰ نوامبر ۲۰۲۶، ۱۹ آبان ۱۴۰۵)؛ فقط عنوان و شمارش‌ها، نه متن ایده‌ها.",
  "ideas": [
   {
    "t": "Yazd Solar Nexus",
@@ -801,6 +801,881 @@
    "c": "سلامت",
    "v": 0,
    "m": 1
+  },
+  {
+   "t": "پول تمیز",
+   "c": "مالی",
+   "v": 1,
+   "m": 0,
+   "n": 370
+  },
+  {
+   "t": "NA",
+   "c": "زیرساخت",
+   "v": 1,
+   "m": 0,
+   "n": 355
+  },
+  {
+   "t": "موزه نان یا حفظ انواع مختلف نان در کشور",
+   "c": "هنر و فرهنگ",
+   "v": 6,
+   "m": 2,
+   "n": 339
+  },
+  {
+   "t": "پلتفرم پیگیری عملکرد سیاستمداران و احزاب",
+   "c": "عمومی",
+   "v": 2,
+   "m": 1,
+   "n": 368
+  },
+  {
+   "t": "تدریس زبان فارسی باستان ( پهلوی)",
+   "c": "آموزش",
+   "v": 5,
+   "m": 1,
+   "n": 337
+  },
+  {
+   "t": "تدریس شاهنامه در دانشگاه‌ها",
+   "c": "آموزش",
+   "v": 7,
+   "m": 1,
+   "n": 335
+  },
+  {
+   "t": "General",
+   "c": "عمومی",
+   "v": 1,
+   "m": 0,
+   "n": 366
+  },
+  {
+   "t": "IranID: A National Mobile e-ID and Digital Signature Platform for Iran",
+   "c": "زیرساخت",
+   "v": 50,
+   "m": 39,
+   "n": 51
+  },
+  {
+   "t": "AI-Powered Operations Platform for Non-Digital Businesses",
+   "c": "زیرساخت",
+   "v": 3,
+   "m": 1,
+   "n": 81
+  },
+  {
+   "t": "Iran Biowaste to Energy & Biopolymers National Initiative — انرژی وپلیمر از پسماند ایران",
+   "c": "انرژی",
+   "v": 1,
+   "m": 0,
+   "n": 363
+  },
+  {
+   "t": "مسیر زندگی(همراه افراد اوتیستیک از کودکی تا استقلال شغلی)",
+   "c": "آموزش",
+   "v": 16,
+   "m": 16,
+   "n": 153
+  },
+  {
+   "t": "پروژه تولید برق از زباله در ایران WASTE TO ENERGY",
+   "c": "محیط‌زیست",
+   "v": 23,
+   "m": 13,
+   "n": 176
+  },
+  {
+   "t": "Center for Biodiversity of Iran",
+   "c": "محیط‌زیست",
+   "v": 1,
+   "m": 0,
+   "n": 362
+  },
+  {
+   "t": "Water supply for mineral processing facilities",
+   "c": "تولید",
+   "v": 1,
+   "m": 0,
+   "n": 361
+  },
+  {
+   "t": "بازسازی فرهنگ و تمدن ایران",
+   "c": "هنر و فرهنگ",
+   "v": 2,
+   "m": 0,
+   "n": 358
+  },
+  {
+   "t": "A Discovery layer for Iran's healthcare system",
+   "c": "سلامت",
+   "v": 2,
+   "m": 1,
+   "n": 319
+  },
+  {
+   "t": "Precision Biotech Hubs: Building Research-Driven Pharmaceutical Companies for Chronic and Complex Diseases",
+   "c": "سلامت",
+   "v": 5,
+   "m": 5,
+   "n": 100
+  },
+  {
+   "t": "Leadership test",
+   "c": "زیست‌بوم استارتاپی",
+   "v": 2,
+   "m": 1,
+   "n": 354
+  },
+  {
+   "t": "Virtual Reality Workforce Training for Rapid Industrial Upskilling",
+   "c": "آموزش",
+   "v": 1,
+   "m": 2,
+   "n": 301
+  },
+  {
+   "t": "JusticeAI سیستم هوشمند قضایی",
+   "c": "هوش مصنوعی",
+   "v": 1,
+   "m": 2,
+   "n": 341
+  },
+  {
+   "t": "National Secure Data Exchange Layer (NSDX)",
+   "c": "زیرساخت",
+   "v": 9,
+   "m": 3,
+   "n": 264
+  },
+  {
+   "t": "Iran Economic Dashboard: A Real-Time Economic Intelligence Platform for Iran’s Reconstruction",
+   "c": "عمومی",
+   "v": 1,
+   "m": 0,
+   "n": 356
+  },
+  {
+   "t": "AI-Driven Hardware Manufacturing Hub",
+   "c": "تولید",
+   "v": 1,
+   "m": 2,
+   "n": 233
+  },
+  {
+   "t": "پلتفرم ایران آزاد آباد: مرکزی برای عملیاتی کردن پروژه ها با مشارکت داوطلبانه عمومی و تخصصی",
+   "c": "عمومی",
+   "v": 3,
+   "m": 0,
+   "n": 352
+  },
+  {
+   "t": "Illegal logging of trees in the forest (detection)",
+   "c": "هوش مصنوعی",
+   "v": 4,
+   "m": 2,
+   "n": 334
+  },
+  {
+   "t": "A Dual-Token Engine for Industrial Rebirth and Financial Stability",
+   "c": "مالی",
+   "v": 2,
+   "m": 8,
+   "n": 67
+  },
+  {
+   "t": "طرح آزادسازی سرمایه‌های ملی منجمد شده در اماکن مذهبی",
+   "c": "مالی",
+   "v": 10,
+   "m": 1,
+   "n": 227
+  },
+  {
+   "t": "Gambling,alcohol,lottery,tobacco, substances .",
+   "c": "عمومی",
+   "v": 2,
+   "m": 1,
+   "n": 349
+  },
+  {
+   "t": "Tweet Hidden e aziz ( کار داوطلبانه)",
+   "c": "عمومی",
+   "v": 2,
+   "m": 1,
+   "n": 350
+  },
+  {
+   "t": "Brain-Circle Talent Exchange: Matching Diaspora Talent with Iranian Startups",
+   "c": "هوش مصنوعی",
+   "v": 2,
+   "m": 3,
+   "n": 336
+  },
+  {
+   "t": "A Digital-Ready State for a New Iran",
+   "c": "زیرساخت",
+   "v": 4,
+   "m": 2,
+   "n": 232
+  },
+  {
+   "t": "فرهنگ سازی هدفمند در ایران پس از جمهوری اسلامی",
+   "c": "عمومی",
+   "v": 32,
+   "m": 5,
+   "n": 9
+  },
+  {
+   "t": "هوانوردی",
+   "c": "گردشگری",
+   "v": 1,
+   "m": 0,
+   "n": 348
+  },
+  {
+   "t": "آموزش موسیقی پایه از مقاطع پیش دبستانی تا دیپلم",
+   "c": "آموزش",
+   "v": 3,
+   "m": 0,
+   "n": 347
+  },
+  {
+   "t": "آموزش نوین با هوش مصنوعی برای همه مقاطع تحصیلی",
+   "c": "آموزش",
+   "v": 9,
+   "m": 2,
+   "n": 119
+  },
+  {
+   "t": "سلامت دهان و دندان",
+   "c": "سلامت",
+   "v": 8,
+   "m": 1,
+   "n": 24
+  },
+  {
+   "t": "نظام مسکن شهری تحت مدیریت شهرداری برای تأمین اجاره‌های قابل‌پرداخت",
+   "c": "زیرساخت",
+   "v": 2,
+   "m": 0,
+   "n": 346
+  },
+  {
+   "t": "Iran Global Connect",
+   "c": "عمومی",
+   "v": 1,
+   "m": 1,
+   "n": 344
+  },
+  {
+   "t": "تحول سیستم پزشکی از درمان بە پیشگیری با دانش لانجویتی",
+   "c": "سلامت",
+   "v": 4,
+   "m": 0,
+   "n": 345
+  },
+  {
+   "t": "ساخت بنای یادبود جاویدنامان انقلاب ۱۴۰۴ ایران",
+   "c": "گردشگری",
+   "v": 3,
+   "m": 0,
+   "n": 343
+  },
+  {
+   "t": "Turn Central Iran into a low-cost lithium-ion battery manufacturing hub",
+   "c": "انرژی",
+   "v": 3,
+   "m": 0,
+   "n": 342
+  },
+  {
+   "t": "Does anybody have a solution for the Urmia Lake issue?",
+   "c": "کشاورزی",
+   "v": 5,
+   "m": 2,
+   "n": 53
+  },
+  {
+   "t": "راهبرد برای حریم خصوصی و امنیت دیجیتال - Strategy for Privacy and Digital Security (کاربرد هویت هوشمند در همه پرسی)",
+   "c": "اینترنت",
+   "v": 8,
+   "m": 12,
+   "n": 118
+  },
+  {
+   "t": "آموزش رانندگی با محوریت ایمنی ترافیک، و اصلاح قوانین",
+   "c": "آموزش",
+   "v": 3,
+   "m": 0,
+   "n": 338
+  },
+  {
+   "t": "تدوین قانون اساسی دموکراتیک",
+   "c": "عمومی",
+   "v": 1,
+   "m": 2,
+   "n": 311
+  },
+  {
+   "t": "دکترین نوسازی منطقه‌ای: زنجیره ارزش صنایع بومی (مدل پایلوت: ایلام)",
+   "c": "عمومی",
+   "v": 1,
+   "m": 0,
+   "n": 331
+  },
+  {
+   "t": "The Iranian Renaissance Subtitle: A Structural Solution to the Post-Islamic Meaning Vacuum",
+   "c": "اجتماعی",
+   "v": 1,
+   "m": 0,
+   "n": 330
+  },
+  {
+   "t": "پرورش خوک نژاد یورکشایر به عنوان جایگزین استراتژیک دام‌پروری سنتی",
+   "c": "کشاورزی",
+   "v": 3,
+   "m": 0,
+   "n": 329
+  },
+  {
+   "t": "Building/improving medical laboratories",
+   "c": "سلامت",
+   "v": 1,
+   "m": 0,
+   "n": 328
+  },
+  {
+   "t": "AI-Powered Mineral Intelligence Platform (AMIP)",
+   "c": "هوش مصنوعی",
+   "v": 1,
+   "m": 0,
+   "n": 327
+  },
+  {
+   "t": "Engagement App: Between Residents & Municipalities",
+   "c": "شهر هوشمند",
+   "v": 1,
+   "m": 0,
+   "n": 326
+  },
+  {
+   "t": "Barrier-free and family-friendly paths, public transports, restaurants and facilities",
+   "c": "اجتماعی",
+   "v": 2,
+   "m": 0,
+   "n": 325
+  },
+  {
+   "t": "Modernization & Standardization of Ski Resorts",
+   "c": "گردشگری",
+   "v": 1,
+   "m": 0,
+   "n": 324
+  },
+  {
+   "t": "Grand Iranian Museum (Iran's Dual Identity Interactive Museum)",
+   "c": "گردشگری",
+   "v": 1,
+   "m": 0,
+   "n": 323
+  },
+  {
+   "t": "Iran Clinical Trials Network",
+   "c": "سلامت",
+   "v": 2,
+   "m": 0,
+   "n": 322
+  },
+  {
+   "t": "Cloud-Based P2P Smart Energy Marketplace for Iran / پلتفرم بازار هوشمند انرژی ایران",
+   "c": "شهر هوشمند",
+   "v": 1,
+   "m": 0,
+   "n": 320
+  },
+  {
+   "t": "Planting the Future of Iran",
+   "c": "محیط‌زیست",
+   "v": 4,
+   "m": 1,
+   "n": 148
+  },
+  {
+   "t": "Diaspora Capital Bridge — A Trusted Investment Platform to Channel $46B+ Back to Iran",
+   "c": "مالی",
+   "v": 17,
+   "m": 4,
+   "n": 169
+  },
+  {
+   "t": "AI Mental Health Companion",
+   "c": "هوش مصنوعی",
+   "v": 2,
+   "m": 3,
+   "n": 289
+  },
+  {
+   "t": "آرشیو حقیقت برای آینده ایران یا: حافظه عمومی ایران: ثبت شواهد برای جلوگیری از تحریف تاریخی",
+   "c": "اجتماعی",
+   "v": 5,
+   "m": 0,
+   "n": 318
+  },
+  {
+   "t": "Iran Floating Solar Initiative: Generating Power While Saving Water",
+   "c": "محیط‌زیست",
+   "v": 1,
+   "m": 0,
+   "n": 315
+  },
+  {
+   "t": "Smart metering and rooftop solar net metering",
+   "c": "انرژی",
+   "v": 2,
+   "m": 2,
+   "n": 250
+  },
+  {
+   "t": "The Museum of Persian Civilization",
+   "c": "هنر و فرهنگ",
+   "v": 6,
+   "m": 6,
+   "n": 219
+  },
+  {
+   "t": "Industrial Symbiosis and circular value chain",
+   "c": "تولید",
+   "v": 2,
+   "m": 0,
+   "n": 314
+  },
+  {
+   "t": "A proper program for overcoming addiction",
+   "c": "سلامت",
+   "v": 1,
+   "m": 0,
+   "n": 312
+  },
+  {
+   "t": "بازیابی جشن های 2500 ساله",
+   "c": "گردشگری",
+   "v": 8,
+   "m": 1,
+   "n": 145
+  },
+  {
+   "t": "Affordable Mental, Emotional, and Behavioural Counselling and Clinical Services",
+   "c": "سلامت",
+   "v": 2,
+   "m": 4,
+   "n": 285
+  },
+  {
+   "t": "Hospital management",
+   "c": "سلامت",
+   "v": 2,
+   "m": 4,
+   "n": 52
+  },
+  {
+   "t": "THE EVERGREEN GRID INITIATIVE - Modernizing Iranian Agriculture through Solar Autonomy",
+   "c": "کشاورزی",
+   "v": 1,
+   "m": 0,
+   "n": 308
+  },
+  {
+   "t": "اصلاح نظام استخدام دولتی بر پایه شایسته‌سالاری و رقابت برابر",
+   "c": "عمومی",
+   "v": 2,
+   "m": 0,
+   "n": 309
+  },
+  {
+   "t": "الزام احراز تعهد و عدم تعارض منافع برای مقامات تصمیم‌گیر",
+   "c": "عمومی",
+   "v": 1,
+   "m": 0,
+   "n": 306
+  },
+  {
+   "t": "سفیرِ راه؛ طرح جامع نوسازی معابر و ورودی‌های ساختمان‌ها و دفاتر",
+   "c": "شهر هوشمند",
+   "v": 1,
+   "m": 0,
+   "n": 305
+  },
+  {
+   "t": "Cloud Migration and Modernization Studio",
+   "c": "اینترنت",
+   "v": 10,
+   "m": 5,
+   "n": 8
+  },
+  {
+   "t": "Vibrant Neighborhoods: Reviving Iran’s Historic Urban Fabrics",
+   "c": "هنر و فرهنگ",
+   "v": 1,
+   "m": 0,
+   "n": 303
+  },
+  {
+   "t": "Earthquake Early Warning Network",
+   "c": "محیط‌زیست",
+   "v": 2,
+   "m": 1,
+   "n": 295
+  },
+  {
+   "t": "IranID: Federated/Decentralized ID, instead of a universal ID",
+   "c": "زیرساخت",
+   "v": 1,
+   "m": 0,
+   "n": 298
+  },
+  {
+   "t": "Iran Tourism Super App",
+   "c": "گردشگری",
+   "v": 2,
+   "m": 3,
+   "n": 273
+  },
+  {
+   "t": "Capability Building in Education, Work, and Life Initiative",
+   "c": "آموزش",
+   "v": 1,
+   "m": 0,
+   "n": 32
+  },
+  {
+   "t": "Green Shield Iran — سپر سبز ایران",
+   "c": "محیط‌زیست",
+   "v": 2,
+   "m": 0,
+   "n": 302
+  },
+  {
+   "t": "گسترش سریع سرمایه‌گذاری و ساخت ایستگاههای استخراج نفت و گاز در میدانهای مشترک",
+   "c": "زیرساخت",
+   "v": 2,
+   "m": 0,
+   "n": 300
+  },
+  {
+   "t": "Urban Air Quality Monitoring Network",
+   "c": "محیط‌زیست",
+   "v": 1,
+   "m": 0,
+   "n": 299
+  },
+  {
+   "t": "Iran Smart Grid Initiative: A Flexible, Resilient, and Renewable-Ready Electrical Infrastructure",
+   "c": "انرژی",
+   "v": 3,
+   "m": 0,
+   "n": 297
+  },
+  {
+   "t": "Rebuilding Iranian National Aviation Connectivity",
+   "c": "زیرساخت",
+   "v": 2,
+   "m": 0,
+   "n": 296
+  },
+  {
+   "t": "The Silk Nerve: Iran’s AI-Driven Multimodal Transit Ecosystem",
+   "c": "زیرساخت",
+   "v": 2,
+   "m": 2,
+   "n": 284
+  },
+  {
+   "t": "ارتقای پایش و احیای منابع آب و خاک در ایران آزاد",
+   "c": "زیرساخت",
+   "v": 4,
+   "m": 1,
+   "n": 124
+  },
+  {
+   "t": "در راستای رابطه با دنیا هماهنگی روزهای تعطیل هفته و تفاوت زمانی با دنیا",
+   "c": "اجتماعی",
+   "v": 4,
+   "m": 0,
+   "n": 276
+  },
+  {
+   "t": "Turn Iran’s Customs System into “IranClear” A modern, fully digital customs and border system inspired by the UK’s CDS & GVMS",
+   "c": "مالی",
+   "v": 2,
+   "m": 0,
+   "n": 293
+  },
+  {
+   "t": "Persian Professional Gate (دروازه ارتباطی ایرانیان متخصص)",
+   "c": "اجتماعی",
+   "v": 1,
+   "m": 0,
+   "n": 292
+  },
+  {
+   "t": "مثلث توسعه هماهنگ زیرساخت‌های سه‌گانه گاز، آب،‌ و برق برای ایران آزاد",
+   "c": "زیرساخت",
+   "v": 2,
+   "m": 1,
+   "n": 290
+  },
+  {
+   "t": "The Upside Down Babylon Tower: Reviving & Developing the official mother tongues",
+   "c": "هوش مصنوعی",
+   "v": 1,
+   "m": 1,
+   "n": 291
+  },
+  {
+   "t": "Iran Reconstruction Investment Marketplace",
+   "c": "شهر هوشمند",
+   "v": 4,
+   "m": 2,
+   "n": 76
+  },
+  {
+   "t": "Police Unit- Unified Urban Safety Initiative (UUSI): Integrating Urban Law Enforcement for Enhanced Public Security and Traffic Efficiency",
+   "c": "زیرساخت",
+   "v": 1,
+   "m": 0,
+   "n": 288
+  },
+  {
+   "t": "Iran Future Ventures",
+   "c": "زیست‌بوم استارتاپی",
+   "v": 4,
+   "m": 3,
+   "n": 109
+  },
+  {
+   "t": "Ports - The Triple-Gateway Resiliency Strategy",
+   "c": "زیرساخت",
+   "v": 1,
+   "m": 0,
+   "n": 286
+  },
+  {
+   "t": "ثبت شماره همراه در نخستین انتخابات و انجام سایر انتخابات با یکبار رمز",
+   "c": "شهر هوشمند",
+   "v": 2,
+   "m": 2,
+   "n": 246
+  },
+  {
+   "t": "Integrated Traffic Data & Congestion Relief System - سامانه یکپارچه داده‌های ترافیکی و کاهش ازدحام",
+   "c": "زیرساخت",
+   "v": 1,
+   "m": 1,
+   "n": 271
+  },
+  {
+   "t": "Transparent Digital Financial Architecture for a New Iran",
+   "c": "مالی",
+   "v": 2,
+   "m": 3,
+   "n": 165
+  },
+  {
+   "t": "Transparent & Secure Blockchain Based Voting Platform سامانه رأی‌گیری مبتنی بر بلاکچین، شفاف و امن",
+   "c": "زیرساخت",
+   "v": 5,
+   "m": 4,
+   "n": 259
+  },
+  {
+   "t": "اقتصاد تکنولوژی محور.",
+   "c": "مالی",
+   "v": 2,
+   "m": 3,
+   "n": 275
+  },
+  {
+   "t": "راه اندازی مرکز تحقیقات هوافضا در کویر شهداد / Establishing a space research center in the Shahdad Desert, Kerman",
+   "c": "زیرساخت",
+   "v": 4,
+   "m": 2,
+   "n": 241
+  },
+  {
+   "t": "A Light Enterprise Architecture Management Tool",
+   "c": "عمومی",
+   "v": 1,
+   "m": 0,
+   "n": 1
+  },
+  {
+   "t": "Investats Global: Unlocking Iran’s Financial Data for International Investors",
+   "c": "مالی",
+   "v": 4,
+   "m": 6,
+   "n": 23
+  },
+  {
+   "t": "پلتفرم ملی بازارگردانی الگوریتمی برای بورس تهران",
+   "c": "مالی",
+   "v": 4,
+   "m": 1,
+   "n": 121
+  },
+  {
+   "t": "پول خصوصی",
+   "c": "مالی",
+   "v": 2,
+   "m": 1,
+   "n": 204
+  },
+  {
+   "t": "رفراندوم قانون اساسی هر بیست سال یکبار",
+   "c": "اجتماعی",
+   "v": 3,
+   "m": 0,
+   "n": 274
+  },
+  {
+   "t": "بازتوانی بینایی ایران / بازتوانی بینایی اعتراضات دی",
+   "c": "سلامت",
+   "v": 6,
+   "m": 0,
+   "n": 270
+  },
+  {
+   "t": "Geospatial Intelligence Platform for Iran (GIPI)",
+   "c": "هوش مصنوعی",
+   "v": 5,
+   "m": 2,
+   "n": 74
+  },
+  {
+   "t": "Rial stablecoin, backed by Ethereum, for Financial Freedom, Separation of Power, and Private Property Protection",
+   "c": "مالی",
+   "v": 4,
+   "m": 0,
+   "n": 269
+  },
+  {
+   "t": "Standardized Addressing System Using Postal Codes & House Number",
+   "c": "شهر هوشمند",
+   "v": 27,
+   "m": 2,
+   "n": 16
+  },
+  {
+   "t": "Universal Address ID (UAID)",
+   "c": "اجتماعی",
+   "v": 1,
+   "m": 0,
+   "n": 268
+  },
+  {
+   "t": "Build a National HPC Center for Iran",
+   "c": "زیرساخت",
+   "v": 1,
+   "m": 0,
+   "n": 267
+  },
+  {
+   "t": "Upgrading the museums",
+   "c": "هنر و فرهنگ",
+   "v": 1,
+   "m": 0,
+   "n": 266
+  },
+  {
+   "t": "Iran Ticket ایجاد و گسترش سیستم حمل و نقل ریلی به شکل برقی به همراه طرح بلیت ماهیانه",
+   "c": "زیرساخت",
+   "v": 5,
+   "m": 2,
+   "n": 197
+  },
+  {
+   "t": "Reimagining Music Education in Iran: A Human-Centered, Creativity-Driven System",
+   "c": "هنر و فرهنگ",
+   "v": 2,
+   "m": 2,
+   "n": 262
+  },
+  {
+   "t": "توسعه صنعت واینری‌های کوچک (شراب‌گیری) و گسترش باغداری انگور در راستای جذب گردشگران داخلی و خارجی",
+   "c": "گردشگری",
+   "v": 11,
+   "m": 5,
+   "n": 159
+  },
+  {
+   "t": "Build Manufacturing Technology Transfer Ecosystem through Middle East with Strong partnership globally",
+   "c": "تولید",
+   "v": 1,
+   "m": 0,
+   "n": 261
+  },
+  {
+   "t": "Launch the golden age of Iran's petrochemical industry",
+   "c": "انرژی",
+   "v": 2,
+   "m": 0,
+   "n": 256
+  },
+  {
+   "t": "Modernize Iran's aging refinery network",
+   "c": "انرژی",
+   "v": 2,
+   "m": 0,
+   "n": 255
+  },
+  {
+   "t": "Smart Roads - A Vehicle-to-Everything (V2X) traffic management system",
+   "c": "شهر هوشمند",
+   "v": 2,
+   "m": 0,
+   "n": 248
+  },
+  {
+   "t": "AI-Powered Teacher Assistant for Data-Driven Learning and Improving Education Quality",
+   "c": "آموزش",
+   "v": 3,
+   "m": 0,
+   "n": 254
+  },
+  {
+   "t": "Onshore and Offshore Exploration",
+   "c": "انرژی",
+   "v": 1,
+   "m": 0,
+   "n": 252
+  },
+  {
+   "t": "Digitalization of Chemical & Petrochemical Plants in Iran",
+   "c": "تولید",
+   "v": 2,
+   "m": 0,
+   "n": 251
+  },
+  {
+   "t": "Natural Gas and Power Generation Reform",
+   "c": "انرژی",
+   "v": 2,
+   "m": 0,
+   "n": 249
+  },
+  {
+   "t": "Zero-Hallucination Bilingual RAG Q&A Tool for Iran Prosperity Project Emergency Phase Documents",
+   "c": "هوش مصنوعی",
+   "v": 2,
+   "m": 0,
+   "n": 247
+  },
+  {
+   "t": "ساماندهی به ثبت محل اقامت افراد",
+   "c": "شهر هوشمند",
+   "v": 3,
+   "m": 0,
+   "n": 245
   }
  ],
  "phases": [
@@ -873,5 +1748,13 @@
     "soc:collective-trauma-justice-revenge"
    ]
   }
+ ],
+ "ideas_pages": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6
  ]
 }

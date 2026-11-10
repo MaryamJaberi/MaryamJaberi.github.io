@@ -95,7 +95,13 @@ digital = ''.join(f'<article class="card"><h3>{E(d["k"])}</h3><p>{E(d["body"])} 
 
 # ---- 5 · ideas: votes as bars, categories as counts
 ideas_sorted = sorted(D['ideas'], key=lambda x: -x['v']); vmax = max(x['v'] for x in ideas_sorted)
-bars = ''.join(f'<li><span class="it" dir="auto">{E(x["t"])}</span><span class="ic">{E(x["c"])}</span><span class="ib"><b style="width:{max(x["v"] / vmax * 100, 1.5):.1f}%"></b></span><span class="iv">{fa(x["v"])}</span></li>' for x in ideas_sorted)
+IURL = 'https://github.com/IranAzadAbad/ideas/discussions/'
+def ititle(x): return f'<a href="{IURL}{x["n"]}" rel="noopener" dir="auto">{E(x["t"])}</a>' if x.get('n') else f'<span dir="auto">{E(x["t"])}</span>'
+bars = ''.join(f'<li><span class="it">{ititle(x)}</span><span class="ic">{E(x["c"])}</span><span class="ib"><b style="width:{max(x["v"] / vmax * 100, 1.5):.1f}%"></b></span><span class="iv">{fa(x["v"])}</span></li>' for x in ideas_sorted[:30])
+bycat = collections.defaultdict(list)
+for x in ideas_sorted: bycat[x['c']].append(x)
+cmax = max(len(v) for v in bycat.values())
+allideas = ''.join(f'<details class="icat"><summary><span>{E(c)}</span><i><b style="width:{len(v) / cmax * 100:.0f}%"></b></i><em>{fa(len(v))} ایده · {fa(sum(x["v"] for x in v))} رأی</em></summary><ul>' + ''.join(f'<li>{ititle(x)} <em>{fa(x["v"])} رأی، {fa(x["m"])} نظر</em></li>' for x in v) + '</ul></details>' for c, v in sorted(bycat.items(), key=lambda kv: -len(kv[1])))
 cats = collections.Counter(x['c'] for x in D['ideas'])
 catchips = ''.join(f'<span class="chip">{E(c)} <b>{fa(n)}</b></span>' for c, n in cats.most_common())
 
@@ -207,6 +213,18 @@ p.sub{{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(
 .card p.now{{border-top:1px dashed var(--line-strong);padding-top:var(--s2);margin-bottom:0}}
 /* ideas */
 .cats{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--s4)}}
+h3.ih{{font-size:var(--h4);margin:var(--s5) 0 var(--s2)}}
+ol.ideas .it a,.icat a{{color:inherit;text-decoration:none;border-bottom:1px dotted var(--line-strong)}}
+.icats{{display:grid;gap:6px;max-width:60em}}
+details.icat{{border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface)}}
+details.icat summary{{display:grid;grid-template-columns:9em minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 14px;cursor:pointer;list-style:none}}
+details.icat summary::-webkit-details-marker{{display:none}}
+details.icat summary span{{font-weight:650}}
+details.icat summary i{{height:8px;border-radius:4px;background:var(--surface-subtle);overflow:hidden;display:block;direction:ltr}}
+details.icat summary i b{{display:block;height:100%;background:var(--ok);margin-inline-start:auto}}
+details.icat summary em,details.icat li em{{font-style:normal;font-size:var(--chip);color:var(--ink-3);white-space:nowrap}}
+details.icat ul{{margin:0;padding:4px 14px 12px 14px;list-style:none;display:grid;gap:6px;font-size:var(--small)}}
+@media (max-width:560px){{details.icat summary{{grid-template-columns:minmax(0,1fr) auto}}details.icat summary i{{grid-column:1/-1;order:3}}}}
 ol.ideas{{list-style:none;margin:0;padding:0;display:grid;gap:7px;max-width:60em}}
 ol.ideas li{{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;align-items:center}}
 .it{{font-size:var(--small);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}.ic{{font-size:var(--chip);color:var(--ink-3)}}
@@ -276,9 +294,12 @@ footer.f a{{color:var(--ink-2);margin-inline-end:var(--s4)}}
 <section id="ideas">
 <h2><b>۶</b> · ایده‌ها</h2>
 <p class="note">{E(D["ideas_note"])} {refs(["iaa"])}</p>
-<div class="cats">{catchips}</div>
-<p class="sub">طول هر نوار تعداد رأی در خود مخزن است ({fa(len(D["ideas"]))} ایدهٔ صفحهٔ نخست از حدود ۳۰۰).</p>
+<h3 class="ih">پررأی‌ترین‌ها</h3>
+<p class="sub">سی ایده با بیشترین رأی در خود مخزن، از {fa(len(D["ideas"]))} ایده‌ای که تا این‌جا خوانده شده. روی عنوان بزنید تا خود ایده باز شود.</p>
 <ol class="ideas">{bars}</ol>
+<h3 class="ih">همهٔ ایده‌ها، دسته به دسته</h3>
+<p class="sub">طول نوار تعداد ایده در هر دسته است. هر دسته را باز کنید تا فهرستش را ببینید.</p>
+<div class="icats">{allideas}</div>
 </section>
 
 <section id="links">
