@@ -8,12 +8,12 @@ E = html.escape
 PSY_TOOLS = {'graph','land','body','emotions','timeline','heat','river','lineage','prism','path','effect','evidence',
              'debate','guess','lab','scales','learn','library','atlas2','explore','compare-theories'}
 WIKI = {'psy':'ویکی روان‌شناسی','soc':'ویکی جامعه','phil':'ویکی فلسفه','tabar':'ویکی تبار و ژنتیک',
-        'tarikh':'ویکی تاریخ و ایران‌شناسی','miyan':'ویکی ارتباط رشته‌ها','iran':'ویکی ایران','simorgh':'ویکی سیمرغ'}
+        'tarikh':'ویکی تاریخ و ایران‌شناسی','miyan':'ویکی ارتباط رشته‌ها','iran':'ویکی ایران','simorgh':'ویکی سیمرغ','sakht':'ساخت ایران'}
 LAYER = {'psy':('لایهٔ علم','index.html#layers'),'soc':('لایهٔ علم','index.html#layers'),
          'phil':('لایهٔ علم','index.html#layers'),'tabar':('لایهٔ علم','index.html#layers'),
          'tarikh':('لایهٔ علم','index.html#layers'),
          'miyan':('لایهٔ علم','index.html#layers'),'atlas':('لایهٔ علم','index.html#layers'),
-         'iran':('لایهٔ ایران','index.html#layers'),'simorgh':('لایهٔ سیمرغ','index.html#layers'),
+         'iran':('لایهٔ ایران','index.html#layers'),'simorgh':('لایهٔ سیمرغ','index.html#layers'),'sakht':('لایهٔ ساخت','index.html#layers'),
          'core':('هستهٔ مشترک','atlas/sitemap.html')}
 
 CSS = ('<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));'

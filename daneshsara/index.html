@@ -31,6 +31,8 @@ p.sub{max-width:38em;margin:0 auto var(--s5);text-align:center;color:var(--ink-2
 .layer{position:relative;border-radius:20px;padding:16px 18px 18px;border:1.5px solid var(--line-strong);background:var(--paper);transition:opacity .25s,box-shadow .25s,border-color .25s}
 .layer .tag{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;flex-wrap:wrap}
 .layer .tag b{font-size:1.05rem}.layer .tag span{font-size:var(--small);color:var(--ink-3)}
+.layer.sakht{border-color:var(--c-sakht);background:color-mix(in srgb,var(--c-sakht) 8%,var(--paper))}
+.layer.sakht .status{border-color:var(--c-sakht);color:var(--c-sakht)}
 .layer.simorgh{border-style:dashed;border-color:#b7791f;background:color-mix(in srgb,#b7791f 7%,var(--paper))}
 .layer.iran{border-color:var(--primary);background:color-mix(in srgb,var(--primary) 8%,var(--paper))}
 .layer.base{background:var(--surface)}
@@ -63,7 +65,9 @@ p.sub{max-width:38em;margin:0 auto var(--s5);text-align:center;color:var(--ink-2
 h3.grp{max-width:980px;margin:var(--s6) auto var(--s3);font-size:var(--body);color:var(--ink-2)}
 footer{border-top:1px solid var(--line);margin-top:var(--s8);padding-block:var(--s6);color:var(--ink-3);font-size:var(--small)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content:space-between}
-:root{--c-psy:var(--fam-psy);--c-soc:var(--fam-soc);--c-phil:var(--fam-hum);--c-tabar:var(--fam-bio);--c-tarikh:var(--fam-hist);--c-ling:var(--ink-3);--c-iran:var(--primary);--c-simorgh:#b7791f}
+:root{--c-psy:var(--fam-psy);--c-soc:var(--fam-soc);--c-phil:var(--fam-hum);--c-tabar:var(--fam-bio);--c-tarikh:var(--fam-hist);--c-ling:var(--ink-3);--c-iran:var(--primary);--c-simorgh:#b7791f;--c-sakht:#2f6b3a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c-sakht:#7fc08a}}
+:root[data-theme="dark"]{--c-sakht:#7fc08a}
 @media (max-width:820px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}nav.main{display:none}}
 @media (max-width:420px){.tiles{grid-template-columns:1fr}}
 </style>
@@ -83,8 +87,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
 
  <section id="layers">
   <h2 class="sec">لایه‌ها</h2>
-  <p class="sub">از پایین به بالا: اول علم (هر مفهوم با منبع بررسی‌شده، پیوند میان علم‌ها و تصویرسازی علمی)، بعد همان مفهوم‌ها در ایران، و در آخر سیمرغ. روی یک اطلس در پایین‌تر نگه دارید تا ببینید از کدام بخش‌ها می‌خواند.</p>
+  <p class="sub">از پایین به بالا: اول علم (هر مفهوم با منبع بررسی‌شده، پیوند میان علم‌ها و تصویرسازی علمی)، بعد همان مفهوم‌ها در ایران، بعد سیمرغ، و در بالا ساخت ایران. روی یک اطلس در پایین‌تر نگه دارید تا ببینید از کدام بخش‌ها می‌خواند.</p>
   <div class="stack" id="stack">
+   <div class="layer sakht" data-k="sakht">
+    <div class="tag"><b>۴ · ساخت ایران</b><span>نهادها، دوران گذار، ریسک‌ها و ابزارهایی که باید آماده باشند</span><span class="status">تازه</span><span class="go"><a href="sakht/">ساخت ایران ←</a></span></div>
+    <p class="simbody">برای کشورداری چه نهادهایی ضروری است، دوران گذار چه می‌خواهد، چه خطرهایی در راه است و چه چیزی را می‌شود از امروز ساخت. با منبع، بر پایهٔ تجربهٔ کشورهای دیگر.</p>
+   </div>
+   <div class="arrow">راه‌حل به نهاد و ابزار تبدیل می‌شود</div>
    <div class="layer simorgh" data-k="simorgh">
     <div class="tag"><b>۳ · سیمرغ</b><span>تمثیل، راه‌حل و بازی بر پایهٔ همهٔ این وضعیت‌ها</span><span class="status">در حال ساخت</span><span class="go"><a href="simorgh/">ویکی سیمرغ ←</a></span></div>
     <p class="simbody">آنچه در دو لایهٔ پایین فهمیده‌ایم به یک تمثیل، یک راه‌حل و یک بازی تبدیل می‌شود: ابزارها و وسایلی برای آزادی و آیندهٔ ایران. هنوز عمومی نیست.</p>
@@ -147,7 +156,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
 <script>
 (() => {
 const $ = id => document.getElementById(id);
-const NAME = {psy:"روان", soc:"جامعه", phil:"فلسفه", tabar:"تبار و ژنتیک", ling:"زبان‌شناسی", iran:"برای ایران", simorgh:"سیمرغ"};
+const NAME = {psy:"روان", soc:"جامعه", phil:"فلسفه", tabar:"تبار و ژنتیک", ling:"زبان‌شناسی", iran:"برای ایران", simorgh:"سیمرغ", sakht:"ساخت ایران"};
 // dots on each atlas card
 document.querySelectorAll(".ac").forEach(a => { const u = a.dataset.u.split(" "); a.querySelector(".uses").innerHTML = "می‌خواند از: " + u.map(k => `<i style="--c:var(--c-${k})" title="${NAME[k]}"></i>`).join(""); });
 // highlight the layers an atlas draws on
