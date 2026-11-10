@@ -1,0 +1,69 @@
+{
+ "id": "tarikh:abbasid-golden-age",
+ "kind": "concept",
+ "title": {
+  "fa": "عصر طلایی عباسی و دنیای هزار و یک شب",
+  "en": "The Abbasid golden age and the world of 1001 Nights",
+  "nl": "Het Abbasidische gouden tijdperk en de wereld van 1001 Nachten"
+ },
+ "aliases": ["دنیای هزار و یک شب", "خلافت عباسی", "عهد مهدی و هارون"],
+ "parent": "tarikh:early-islamic",
+ "field": "tarikh:early-islamic",
+ "summary": {
+  "fa": "عباسیان، برخلاف امویان، حکومتی بر پایهٔ سیادت قومی عرب نساختند؛ قدرتشان را بر سیاه‌جامگان و خراسانیان استوار کردند و مرکز را به عراق — نزدیک جای پیشین تیسفون — بردند. دورهٔ مهدی و هارون‌الرشید، با شکوه دربار و زمینهٔ افسانه‌های هزار و یک شب، همراه بود، اما همان‌زمان نیز جنگ و ناامنی مرزی ادامه داشت.",
+  "en": "Unlike the Umayyads, the Abbasids did not build their rule on Arab tribal supremacy; they based their power on the black-banner troops and Khorasanians, and moved the center to Iraq — near the old site of Ctesiphon. The era of Mahdi and Harun al-Rashid brought a splendid court and the backdrop for the 1001 Nights tales, even as border wars and insecurity continued.",
+  "nl": "In tegenstelling tot de Omajjaden bouwden de Abbasiden hun heerschappij niet op Arabische stammenheerschappij; ze baseerden hun macht op de zwarte-vaandeltroepen en Khorasaniërs, en verplaatsten het centrum naar Irak — dicht bij de oude plek van Ctesiphon. Het tijdperk van Mahdi en Harun al-Rashid bracht een schitterend hof en de achtergrond voor de verhalen van 1001 Nachten, zelfs terwijl grensoorlogen en onveiligheid voortduurden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هدف عباسیان برخلاف امویان، ایجاد دولتی بود که غیرعرب نیز مانند عرب از حقوق و مزایا بهره‌مند باشد؛ قدرت خلیفه به‌ویژه در آغاز بیشتر بر نیروی سیاه‌جامگان و خراسانیان تکیه داشت، نه بر تعصب قومی عربی. مرکز خلافت نیز به عراق منتقل شد — همان‌جا که شاهنشاهی ساسانی مرکز داشت.",
+    "en": "Unlike the Umayyads, the Abbasids' aim was a state in which non-Arabs would enjoy the same rights as Arabs; caliphal power, especially at the outset, rested chiefly on the black-banner troops and Khorasanians rather than Arab tribal partisanship. The caliphate's center also moved to Iraq — the very region where the Sasanian empire had been centered.",
+    "nl": "In tegenstelling tot de Omajjaden was het doel van de Abbasiden een staat waarin niet-Arabieren dezelfde rechten zouden genieten als Arabieren; de kalifale macht, vooral in het begin, rustte vooral op de zwarte-vaandeltroepen en Khorasaniërs, niet op Arabisch stammenpartijdigheid. Het centrum van het kalifaat verhuisde ook naar Irak — precies de regio waar het Sassanidische rijk gecentreerd was geweest."
+   },
+   "sources": ["src:c182e55a07"],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دوران مهدی و به‌خصوص هارون‌الرشید با شکوه دربار چنان شهرت یافت که زمینهٔ افسانه‌های هزار و یک شب شد. با این‌همه، همین دوره دنیای جنگ و جهاد نیز بود — جهاد در مرز روم، هند، دیلم و خزر — و «مطوعه» (رزمندگان داوطلب) در زمان صلح غالباً خودسر می‌ماندند و ناامنی شهر را دامن می‌زدند.",
+    "en": "The era of Mahdi, and especially Harun al-Rashid, became so famed for the splendor of the court that it became the backdrop for the 1001 Nights tales. Yet the same period was also a world of war and jihad — on the frontiers with Byzantium, India, Daylam and the Khazars — and the \"mutawwi'a\" (volunteer fighters) often grew unruly in peacetime, feeding urban insecurity.",
+    "nl": "Het tijdperk van Mahdi, en vooral Harun al-Rashid, werd zo beroemd om de pracht van het hof dat het de achtergrond werd voor de verhalen van 1001 Nachten. Toch was dezelfde periode ook een wereld van oorlog en jihad — aan de grenzen met Byzantium, India, Daylam en de Khazaren — en de \"mutawwi'a\" (vrijwillige strijders) werden in vredestijd vaak onhandelbaar, wat onveiligheid in de stad voedde."
+   },
+   "sources": ["src:c182e55a07"],
+   "flags": ["editor-note"],
+   "note": {
+    "fa": "تصویر «عصر طلایی» در این متن خودِ روایتِ زرین‌کوب است، نه یک ارزیابی خنثا؛ در کنار شکوه دربار، ناامنی مرزی و خشونت داخلی هم ذکر شده — این مدخل هر دو را آورده تا تصویر یک‌سویه نشود.",
+    "en": "The \"golden age\" framing here is Zarrinkoub's own narrative choice, not a neutral assessment; alongside courtly splendor he also notes border insecurity and domestic violence — this entry includes both so the picture isn't one-sided.",
+    "nl": "Het \"gouden tijdperk\"-kader hier is Zarrinkoubs eigen narratieve keuze, geen neutrale beoordeling; naast hofse pracht vermeldt hij ook grensonveiligheid en binnenlands geweld — dit lemma neemt beide op zodat het beeld niet eenzijdig wordt."
+   }
+  }
+ ],
+ "links": [
+  {
+   "to": "tarikh:abu-muslim-revolt",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "قیام سیاه‌جامگان همان نیرویی بود که بنیاد قدرت عباسیان شد",
+    "en": "The black-banner revolt was the very force that became the foundation of Abbasid power",
+    "nl": "De zwarte-vaandelopstand was precies de kracht die de basis werd van de Abbasidische macht"
+   }
+  },
+  {
+   "to": "tarikh:tahirid-origins",
+   "rel": "part-of",
+   "note": {
+    "fa": "خاستگاه طاهریان در همین عصر عباسی شکل گرفت",
+    "en": "The Tahirids' origin took shape within this same Abbasid era",
+    "nl": "De oorsprong van de Tahiriden nam vorm aan binnen datzelfde Abbasidische tijdperk"
+   }
+  }
+ ],
+ "people": [],
+ "sources": ["src:c182e55a07"],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
