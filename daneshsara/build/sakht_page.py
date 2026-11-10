@@ -110,7 +110,8 @@ page = f'''<!doctype html>
 :root{{--c:var(--ok)}}
 h1{{font-size:var(--h1);margin:var(--s8) 0 var(--s4);line-height:var(--lh-tight);max-width:20ch;text-wrap:balance}}
 p.lead{{color:var(--ink-2);max-width:47em;line-height:2;margin:0 0 var(--s5);font-size:1.05rem}}
-.cta{{margin:0 0 var(--s4)}}.cta a{{display:inline-block;padding:9px 20px;border-radius:var(--r-full);background:var(--c);color:var(--paper);text-decoration:none;font-weight:650}}
+.cta{{margin:0 0 var(--s4)}}.cta a.g2{{background:none;color:var(--c);border:1px solid var(--c)}}
+.cta a{{display:inline-block;padding:9px 20px;border-radius:var(--r-full);background:var(--c);color:var(--paper);text-decoration:none;font-weight:650}}
 .glance{{display:flex;flex-wrap:wrap;gap:var(--s3);margin:0 0 var(--s5)}}
 .glance a{{display:grid;min-width:104px;padding:var(--s3) var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);text-decoration:none;color:inherit;border-top:3px solid var(--c)}}
 .glance a:hover{{border-color:var(--c)}}
@@ -216,7 +217,7 @@ footer.f a{{color:var(--ink-2);margin-inline-end:var(--s4)}}
 <main class="wrap">
 <h1>ساخت ایران: کشور را چه چیزی سر پا نگه می‌دارد</h1>
 <p class="lead">سه لایهٔ پایین می‌پرسند آدم و جامعه چطور کار می‌کنند، ایران کجا ایستاده و راه نجات چیست. این لایه می‌پرسد روز بعد چه باید آماده باشد. همه‌چیز بر پایهٔ تجربهٔ مستند کشورهای دیگر است، نه آرزو.</p>
-<p class="cta"><a href="work.html">متخصص هستید؟ ببینید کجا به شما نیاز داریم ←</a></p>
+<p class="cta"><a href="work.html">متخصص هستید؟ ببینید کجا به شما نیاز داریم ←</a> <a class="g2" href="../atlas/coverage.html">نقشهٔ پوشش ۲۰ حوزه ←</a></p>
 <nav class="glance" aria-label="بخش‌ها">
 <a href="#organs"><b>{fa(len(D["organs"]))}</b><span>کارکرد ضروری</span></a>
 <a href="#transition"><b>{fa(len(D["transition"]))}</b><span>درس دوران گذار</span></a>

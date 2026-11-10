@@ -25,11 +25,11 @@ seatmap = ''.join(f'<a class="sm {ST[s["st"]][1]}" href="#{s["id"]}"><b>{E(s["k"
 def task(t, s):
     at = f'<a href="index.html#{t["at"]}">{AT[t["at"]]} ←</a>' if t.get('at') else ''
     tpl = f'سلام، می‌خواهم روی مسئلهٔ {t["id"]} ({t["t"]}) کمک کنم.\nتخصص من: \nچه کاری می‌توانم بکنم: \nچقدر وقت دارم: \nکسی یا ایده‌ای که معرفی می‌کنم: '
-    return f'''<article class="task" id="{t["id"]}"><header><code>{t["id"]}</code><h4>{E(t["t"])}</h4><span class="sz">{E(t["size"])}</span></header>
+    return f'''<article class="task{" first" if s.get("first") == t["id"] else ""}" id="{t["id"]}"><header><code>{t["id"]}</code>{"<span class=fs>قدم اول</span>" if s.get("first") == t["id"] else ""}<h4>{E(t["t"])}</h4><span class="sz">{E(t["size"])}</span></header>
 <dl><dt>مسئله</dt><dd>{E(t["prob"])}</dd><dt>چه داریم</dt><dd>{E(t["have"])} {at}</dd><dt>چه می‌خواهیم</dt><dd>{E(t["need"])}</dd></dl>
 <button type="button" class="cp" data-t="{E(tpl)}">این را برمی‌دارم: کپی متن آماده</button></article>'''
 briefs = ''.join(f'''<section class="seat" id="{s["id"]}"><div class="sh"><h3>{E(s["k"])}</h3><span class="st {ST[s["st"]][1]}">{ST[s["st"]][0]}</span></div>
-<p class="who">{E(s["who"])}</p><p class="why">{E(s["why"])}</p><div class="tasks">{''.join(task(t, s) for t in s["tasks"])}</div></section>''' for s in seats)
+<p class="who">{E(s["who"])}</p><p class="why">{E(s["why"])}</p><p class="fst">از کجا شروع کنم؟ <a href="#{s["first"]}">{s["first"]} · {E(next(t["t"] for t in s["tasks"] if t["id"] == s["first"]))}</a> کوچک‌ترین و مستقل‌ترین مسئلهٔ این صندلی است.</p><div class="tasks">{''.join(task(t, s) for t in s["tasks"])}</div></section>''' for s in seats)
 NS = len(W['stages']) - 1
 streams = ''.join(f'<li><span>{E(x["k"])}</span><span class="bar" role="img" aria-label="{W["stages"][x["stage"]]}">{"".join(f"<i class={chr(34)}on{chr(34)}></i>" if i <= x["stage"] and x["stage"] > 0 and i > 0 else "<i></i>" for i in range(1, NS + 1))}</span><em>{W["stages"][x["stage"]]}</em></li>' for x in W['streams'])
 changes = ''.join(f'<li><time>{fa(d)}</time>{E(m)}</li>' for d, m in log)
@@ -70,6 +70,8 @@ p.sub{{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(
 .sh{{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}}.sh h3{{margin:0;font-size:var(--h4)}}
 .st{{font-size:var(--chip);font-weight:600;padding:1px 10px;border-radius:var(--r-full);border:1px solid currentColor}}
 .who{{margin:4px 0 0;font-size:var(--chip);color:var(--ink-3)}}.why{{margin:var(--s2) 0 var(--s3);color:var(--ink-2);line-height:1.95;max-width:46em}}
+.fst{{margin:0 0 var(--s3);font-size:var(--small);color:var(--ink-2)}}.fst a{{color:var(--c);font-weight:650}}
+.task.first{{border-color:var(--c)}}.fs{{font-size:var(--chip);font-weight:650;color:var(--paper);background:var(--c);border-radius:var(--r-full);padding:0 9px}}
 .tasks{{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:var(--s3)}}
 .task{{padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);display:grid;gap:var(--s2);align-content:start;min-width:0;scroll-margin-top:8px}}
 .task:target{{border-color:var(--c);box-shadow:0 0 0 2px var(--c)}}
@@ -129,7 +131,7 @@ footer.f{{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var
 <h2>کل پروژه کجاست</h2>
 <p class="sub">هیچ بخشی هنوز از بازبینی متخصص نگذشته است؛ همه‌چیز پیش‌نویس است.</p>
 <ul class="str">{streams}</ul>
-<div class="go"><a href="index.html">صفحهٔ ساخت ایران ←</a><a href="../atlas/story.html">داستان کل پروژه و کمبودها ←</a><a href="../atlas/sitemap.html">نقشهٔ سایت ←</a></div>
+<div class="go"><a href="../atlas/coverage.html">نقشهٔ پوشش و نقشهٔ راه ←</a><a href="index.html">صفحهٔ ساخت ایران ←</a><a href="../atlas/story.html">داستان کل پروژه و کمبودها ←</a><a href="../atlas/sitemap.html">نقشهٔ سایت ←</a></div>
 </section>
 
 <section class="b" id="log">
