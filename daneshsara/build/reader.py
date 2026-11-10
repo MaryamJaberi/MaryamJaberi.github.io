@@ -15,7 +15,8 @@ lids = {l['to'] for c in concepts.values() for l in c.get('links', []) if l['to'
 ext = {k: {'title': reg[k]['title'], 'url': '../' + reg[k]['url']} for k in lids if k in reg}
 order = load(f'{R}/data/{W}/order.json') if os.path.exists(f'{R}/data/{W}/order.json') else []
 DATA = {'wiki': W, 'order': order, 'concepts': list(concepts.values()), 'people': {k: people[k] for k in pids if k in people},
-        'sources': {k: sources[k] for k in sids if k in sources}, 'iran': {k: irans[k] for k in iids if k in irans}, 'ext': ext}
+        'sources': {k: sources[k] for k in sids if k in sources}, 'iran': {k: irans[k] for k in iids if k in irans}, 'ext': ext,
+        'merged': {a.split(':')[1]: b.split(':')[0] for a, b in (load(f'{R}/data/merged-concepts.json') if os.path.exists(f'{R}/data/merged-concepts.json') else {}).items() if a.startswith(W + ':')}}
 root = next((c for c in concepts.values() if c['kind'] == 'root'), None)
 title = root['title'] if root else {'fa': W, 'en': W, 'nl': W}
 tpl = open(f'{HERE}/reader.tpl.html', encoding='utf-8').read()

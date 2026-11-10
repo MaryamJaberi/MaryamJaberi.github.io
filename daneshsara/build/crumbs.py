@@ -76,6 +76,7 @@ for p in sorted(glob.glob(f'{R}/**/*.html', recursive=True)):
     if 'http-equiv="refresh"' in s: continue   # a redirect stub needs no breadcrumb
     s = re.sub(r'<nav class="ds-crumbs".*?</nav>\s*', '', s, flags=re.S)
     s = re.sub(r'<style id="ds-crumbs-css">.*?</style>\s*', '', s, flags=re.S)
+    s = re.sub(r'<script src="[^"]*core/nav\.js" defer></script>\s*', '', s)
     # drop the older, inconsistent breadcrumb bars so there is only one
     s = re.sub(r'<div class="crumbs"[^>]*>.*?</div>\s*', '', s, count=1, flags=re.S)
     tr = trail(rel, s)
@@ -91,6 +92,7 @@ for p in sorted(glob.glob(f'{R}/**/*.html', recursive=True)):
         last = i == len(tr) - 1
         items.append(f'<b>{E(t)}</b>' if last or not u else f'<a href="{E(u)}">{E(t)}</a>')
     bar = CSS + '<nav class="ds-crumbs" aria-label="مسیر صفحه">' + '<i>›</i>'.join(items) + '</nav>'
+    bar += '<script src="' + '../' * (rel.count('/')) + 'core/nav.js" defer></script>'
     # one title convention everywhere:  <page> | <wiki> | دانش‌سرا
     names = [t for t, _ in tr[1:]]
     mid = [n for n in names[:-1] if n.startswith('ویکی') or n in ('اطلس‌ها', 'هستهٔ مشترک')]

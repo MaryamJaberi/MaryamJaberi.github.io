@@ -10,8 +10,8 @@ for f in glob.glob(f'{R}/data/*/concepts/*.json'):
 REG = json.load(open(f'{R}/core/registry.json', encoding='utf-8'))['entries']
 P = json.load(open(f'{R}/core/people.json', encoding='utf-8'))
 S = json.load(open(f'{R}/core/sources.json', encoding='utf-8'))
-ROOTS = {'psy': 'psy:psyche', 'soc': 'soc:soc', 'phil': 'phil:phil', 'tabar': 'tabar:tabar'}
-ORDER = ['soc', 'phil', 'psy', 'tabar']
+ROOTS = {'psy': 'psy:psyche', 'soc': 'soc:soc', 'phil': 'phil:phil', 'tabar': 'tabar:tabar', 'tarikh': 'tarikh:tarikh'}
+ORDER = ['soc', 'phil', 'tarikh', 'psy', 'tabar']
 kids = collections.defaultdict(list)
 for i, d in C.items():
     if d['parent'] in C and i != d['parent']: kids[d['parent']].append(i)
@@ -56,6 +56,7 @@ cent = {'soc': (-radius['soc'] - gap / 2, 0), 'phil': (radius['phil'] + gap / 2,
         'psy': (-radius['psy'] - gap / 2, rowh1 + rowh2 + gap), 'tabar': (radius['tabar'] + gap / 2, rowh1 + rowh2 + gap)}
 # land centre of soc/phil on row 1: align vertically centred
 cent['soc'] = (cent['soc'][0], 0); cent['phil'] = (cent['phil'][0], 0)
+cent['tarikh'] = (gap / 2 + 2 * radius['phil'] + gap + radius['tarikh'], 0)
 absx = {}
 def place(i, ox, oy):
     x, y, r = pos[i]; absx[i] = (ox + x, oy + y, r)

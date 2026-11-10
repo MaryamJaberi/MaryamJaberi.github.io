@@ -130,6 +130,7 @@ function detail(c){
 }
 function render(){
   const h = location.hash.slice(1); const c = h && BY[D.wiki + ":" + h];
+  if (h && !c && D.merged && D.merged[h]) { location.replace("../" + D.merged[h] + "/entries.html#" + h); return; }
   document.getElementById("main").innerHTML = c ? detail(c) : list();
   if (c) window.scrollTo({top: 0}); else { const i = document.getElementById("q"); if (i && q) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
 }
