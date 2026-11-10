@@ -17,8 +17,8 @@
   /* معنایی */
   --ok:#2F6B4F; --warn:#B45309; --err:#9F1239;
   /* پنج خانوادهٔ اطلس (تصمیم بخش ۱۱ سند) */
-  --fam-bio:#C45C26; --fam-psy:#0A6B60; --fam-soc:#2A6F7A; --fam-hum:#5B4B8A; --fam-formal:#1C39BB;
-  --fam-bio-soft:#F7E6DD; --fam-psy-soft:#E6F2F0; --fam-soc-soft:#E3EFF1; --fam-hum-soft:#ECE8F3; --fam-formal-soft:#E8ECF8;
+  --fam-bio:#C45C26; --fam-psy:#0A6B60; --fam-soc:#2A6F7A; --fam-hum:#5B4B8A; --fam-formal:#1C39BB; --fam-hist:#8A6D2E;
+  --fam-bio-soft:#F7E6DD; --fam-psy-soft:#E6F2F0; --fam-soc-soft:#E3EFF1; --fam-hum-soft:#ECE8F3; --fam-formal-soft:#E8ECF8; --fam-hist-soft:#F3ECD9;
   /* ردهٔ داده */
   --grade-a:#2F6B4F; --grade-b:#0A6B60; --grade-c:#B45309; --grade-d:#9F1239;
   /* تایپ */
@@ -41,8 +41,8 @@
     --primary:#4FB3A6; --primary-soft:#0F2E2A; --primary-hover:#7CCBC0;
     --accent:#8FA3E8; --accent-soft:#1A2040;
     --ok:#6FBF95; --warn:#E0A050; --err:#E07090;
-    --fam-bio:#E08A5E; --fam-psy:#4FB3A6; --fam-soc:#6FB0BB; --fam-hum:#A08FD0; --fam-formal:#8FA3E8;
-    --fam-bio-soft:#3A2418; --fam-psy-soft:#0F2E2A; --fam-soc-soft:#10292D; --fam-hum-soft:#241E33; --fam-formal-soft:#1A2040;
+    --fam-bio:#E08A5E; --fam-psy:#4FB3A6; --fam-soc:#6FB0BB; --fam-hum:#A08FD0; --fam-formal:#8FA3E8; --fam-hist:#D4AE5A;
+    --fam-bio-soft:#3A2418; --fam-psy-soft:#0F2E2A; --fam-soc-soft:#10292D; --fam-hum-soft:#241E33; --fam-formal-soft:#1A2040; --fam-hist-soft:#332B16;
     --grade-a:#6FBF95; --grade-b:#4FB3A6; --grade-c:#E0A050; --grade-d:#E07090;
     --shadow-sm:none; --shadow-md:0 4px 12px rgba(0,0,0,.35); --shadow-lg:0 8px 24px rgba(0,0,0,.45);
   }
@@ -55,8 +55,8 @@
   --primary:#4FB3A6; --primary-soft:#0F2E2A; --primary-hover:#7CCBC0;
   --accent:#8FA3E8; --accent-soft:#1A2040;
   --ok:#6FBF95; --warn:#E0A050; --err:#E07090;
-  --fam-bio:#E08A5E; --fam-psy:#4FB3A6; --fam-soc:#6FB0BB; --fam-hum:#A08FD0; --fam-formal:#8FA3E8;
-  --fam-bio-soft:#3A2418; --fam-psy-soft:#0F2E2A; --fam-soc-soft:#10292D; --fam-hum-soft:#241E33; --fam-formal-soft:#1A2040;
+  --fam-bio:#E08A5E; --fam-psy:#4FB3A6; --fam-soc:#6FB0BB; --fam-hum:#A08FD0; --fam-formal:#8FA3E8; --fam-hist:#D4AE5A;
+  --fam-bio-soft:#3A2418; --fam-psy-soft:#0F2E2A; --fam-soc-soft:#10292D; --fam-hum-soft:#241E33; --fam-formal-soft:#1A2040; --fam-hist-soft:#332B16;
   --grade-a:#6FBF95; --grade-b:#4FB3A6; --grade-c:#E0A050; --grade-d:#E07090;
   --shadow-sm:none; --shadow-md:0 4px 12px rgba(0,0,0,.35); --shadow-lg:0 8px 24px rgba(0,0,0,.45);
 }
@@ -81,6 +81,7 @@ img,svg{max-width:100%}
 .chip.fam-soc{border-color:var(--fam-soc);color:var(--fam-soc);background:var(--fam-soc-soft)}
 .chip.fam-hum{border-color:var(--fam-hum);color:var(--fam-hum);background:var(--fam-hum-soft)}
 .chip.fam-formal{border-color:var(--fam-formal);color:var(--fam-formal);background:var(--fam-formal-soft)}
+.chip.fam-hist{border-color:var(--fam-hist);color:var(--fam-hist);background:var(--fam-hist-soft)}
 .status{font-size:var(--chip);padding:2px 8px;border-radius:var(--r-sm);border:1px dashed var(--line-strong);color:var(--ink-3)}
 .status.reviewed{border-style:solid;color:var(--primary);border-color:var(--primary)}
 .status.expert{border-style:solid;color:var(--ok);border-color:var(--ok)}

@@ -63,7 +63,7 @@ p.sub{max-width:38em;margin:0 auto var(--s5);text-align:center;color:var(--ink-2
 h3.grp{max-width:980px;margin:var(--s6) auto var(--s3);font-size:var(--body);color:var(--ink-2)}
 footer{border-top:1px solid var(--line);margin-top:var(--s8);padding-block:var(--s6);color:var(--ink-3);font-size:var(--small)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content:space-between}
-:root{--c-psy:var(--fam-psy);--c-soc:var(--fam-soc);--c-phil:var(--fam-hum);--c-tabar:var(--fam-bio);--c-ling:var(--ink-3);--c-iran:var(--primary);--c-simorgh:#b7791f}
+:root{--c-psy:var(--fam-psy);--c-soc:var(--fam-soc);--c-phil:var(--fam-hum);--c-tabar:var(--fam-bio);--c-tarikh:var(--fam-hist);--c-ling:var(--ink-3);--c-iran:var(--primary);--c-simorgh:#b7791f}
 @media (max-width:820px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}nav.main{display:none}}
 @media (max-width:420px){.tiles{grid-template-columns:1fr}}
 </style>
@@ -95,7 +95,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
     <p class="iranbody">هر مفهوم لایهٔ علم را در ایران می‌سنجیم: آمار و نتایج ایران (هر عدد با سال، روش و ردهٔ کیفیت)، ریشه‌یابی هر مسئله، و شرح وضعیت موجود. ماتریس مسئله × رشته نشان می‌دهد هر موضوع را کدام دانش‌ها روشن می‌کنند.</p>
    </div>
    <div class="arrow">علم به ایران وصل می‌شود</div>
-   <div class="layer base" data-k="psy soc phil tabar ling">
+   <div class="layer base" data-k="psy soc phil tabar tarikh ling">
     <div class="tag"><b>۱ · علم</b><span>علم‌ها، منبع‌هایشان و پیوند میان آن‌ها</span></div>
     <p class="iranbody">علم‌ها یکی‌یکی اضافه می‌شوند و منبع‌هایشان بررسی می‌شود. این لایه علم‌های گوناگون را به هم پیوند می‌دهد، پیوندهای موجود را نشان می‌دهد و مفهوم‌ها را با تصویرسازی علمی می‌فهماند (اطلس‌ها در پایین).</p>
     <div class="tiles">
@@ -103,6 +103,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
      <a class="tile" data-k="soc" style="--c:var(--c-soc)" href="soc/"><b>جامعه</b><small id="n-soc">اعتماد، نهاد، ارزش، نابرابری</small></a>
      <a class="tile" data-k="tabar" style="--c:var(--c-tabar)" href="tabar/"><b>تبار و ژنتیک</b><small id="n-tabar">وراثت، دیرینه‌شناسی، تبارشناسی</small></a>
      <a class="tile" data-k="phil" style="--c:var(--c-phil)" href="phil/"><b>فلسفه</b><small id="n-phil">ذهن، اخلاق، سیاست، فلسفهٔ ایرانی</small></a>
+     <a class="tile" data-k="tarikh" style="--c:var(--c-tarikh)" href="tarikh/"><b>تاریخ و ایران‌شناسی</b><small id="n-tarikh">تازه؛ فتح عربی و قیام ابومسلم</small></a>
      <a class="tile" data-k="miyan" style="--c:var(--primary)" href="miyan/"><b>ارتباط رشته‌ها</b><small>۲۵ پل میان این علم‌ها</small></a>
      <div class="tile soon" data-k="ling" style="--c:var(--c-ling)"><b>زبان‌شناسی</b><small>زبان، واژه و گویش‌ها</small></div>
     </div>
@@ -120,10 +121,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
    <a class="ac" data-u="psy soc phil tabar" href="atlas/lands.html"><b>سرزمین دانش</b><p>رشته‌ها شهرند و رشته‌های میان‌رشته‌ای راه؛ می‌بینید چه کسانی راه‌ها را ساختند.</p><span class="uses"></span></a>
    <a class="ac" data-u="psy soc phil tabar" href="atlas/"><b>اطلس رشته‌ها</b><p>۷۷ رشته در پنج خانواده با پل‌هایشان؛ برای انتخاب مسیر یادگیری و شغل.</p><span class="uses"></span></a>
    <a class="ac" data-u="psy soc phil tabar" href="atlas/bridge.html"><b>پل‌ها</b><p>۲۵ صفحه برای ۲۵ رشتهٔ میان‌رشته‌ای: اثر بنیادی، یافتهٔ کلیدی، کتاب فارسی.</p><span class="uses"></span></a>
-   <a class="ac" data-u="psy soc phil tabar" href="atlas/collection.html"><b>فهرست کتاب‌ها</b><p>۷۵۲ کتاب و سند مجموعه، دسته‌بندی‌شده به تفکیک رشته و قفسه.</p><span class="uses"></span></a>
-   <a class="ac" data-u="psy soc phil tabar" href="atlas/library-plan.html"><b>کتابخانهٔ جهان دانش</b><p>نقشهٔ یک کتابخانهٔ واقعی از بالا: تالار، قفسه، عطف کتاب با برچسب اعتبار. زوم کنید تا به کتاب برسید.</p><span class="uses"></span></a>
-   <a class="ac" data-u="psy soc phil tabar iran" href="atlas/story.html"><b>داستان پروژه</b><p>چه شد که این‌طور شد، الان کجاییم، و چه چیزی هنوز اینجا نیست.</p><span class="uses"></span></a>
-   <a class="ac" data-u="psy soc phil tabar iran" href="atlas/sitemap.html"><b>نقشهٔ سایت</b><p>همهٔ موضوع‌ها به‌صورت درخت، گرافِ ارتباط‌ها و ساختار پیشنهادی صفحه‌ها.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc phil tabar tarikh" href="atlas/collection.html"><b>فهرست کتاب‌ها</b><p>۷۵۲ کتاب و سند مجموعه، دسته‌بندی‌شده به تفکیک رشته و قفسه.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc phil tabar tarikh" href="atlas/library-plan.html"><b>کتابخانهٔ جهان دانش</b><p>نقشهٔ یک کتابخانهٔ واقعی از بالا: تالار، قفسه، عطف کتاب با برچسب اعتبار. زوم کنید تا به کتاب برسید.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc phil tabar tarikh iran" href="atlas/story.html"><b>داستان پروژه</b><p>چه شد که این‌طور شد، الان کجاییم، و چه چیزی هنوز اینجا نیست.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc phil tabar tarikh iran" href="atlas/sitemap.html"><b>نقشهٔ سایت</b><p>همهٔ موضوع‌ها به‌صورت درخت، گرافِ ارتباط‌ها و ساختار پیشنهادی صفحه‌ها.</p><span class="uses"></span></a>
    <a class="ac" data-u="iran psy soc phil tabar" href="iran/"><b>برای ایران</b><p>داده‌ها، خط زمانی و ماتریس مسئله × رشته برای ایران.</p><span class="uses"></span></a>
   </div>
 

@@ -7,10 +7,10 @@ HERE = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(HERE + '/
 load = lambda p: json.load(open(p, encoding='utf-8'))
 E = html.escape
 fa = lambda n: str(n).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))
-NAME = {'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار و ژنتیک', 'psy': 'روان', 'miyan': 'ارتباط رشته‌ها', 'iran': 'ایران', 'simorgh': 'سیمرغ'}
-VAR = {'soc': 'var(--fam-soc)', 'phil': 'var(--fam-hum)', 'tabar': 'var(--fam-bio)', 'psy': 'var(--fam-psy)',
+NAME = {'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار و ژنتیک', 'psy': 'روان', 'tarikh': 'تاریخ و ایران‌شناسی', 'miyan': 'ارتباط رشته‌ها', 'iran': 'ایران', 'simorgh': 'سیمرغ'}
+VAR = {'soc': 'var(--fam-soc)', 'phil': 'var(--fam-hum)', 'tabar': 'var(--fam-bio)', 'psy': 'var(--fam-psy)', 'tarikh': 'var(--fam-hist)',
        'miyan': 'var(--fam-formal)', 'iran': 'var(--primary)', 'simorgh': '#b7791f'}
-BASE = ['psy', 'soc', 'tabar', 'phil']
+BASE = ['psy', 'soc', 'tabar', 'phil', 'tarikh']
 ALL = BASE + ['miyan', 'iran', 'simorgh']
 HREF = {k: f'../{k}/' for k in ALL}
 
@@ -136,7 +136,7 @@ def spec_simorgh():
 SPEC = {'miyan': spec_miyan, 'iran': spec_iran, 'simorgh': spec_simorgh}
 TPL = open(f'{HERE}/wiki_home.tpl.html', encoding='utf-8').read()
 
-for W in (sys.argv[1:] or ['soc', 'phil', 'tabar', 'miyan', 'iran', 'simorgh']):
+for W in (sys.argv[1:] or ['soc', 'phil', 'tabar', 'tarikh', 'miyan', 'iran', 'simorgh']):
     s = SPEC[W]() if W in SPEC else spec_base(W)
     sibs = [k for k in ALL if k != W and k in NAME]
     idx = sorted({(re.sub(r'^[«"\'\s]+', '', t), u) for t, u in s['index']}, key=lambda x: x[0])

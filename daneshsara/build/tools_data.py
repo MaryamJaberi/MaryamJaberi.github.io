@@ -30,7 +30,7 @@ br = []
 for p in sorted(glob.glob(f'{R}/atlas/bridges/*.json')):
     b = L(p); br.append({'id': b['id'], 'between': b.get('between', []), 't': b['title'], 'q': b.get('question', {})})
 af = L(f'{R}/atlas/fields.json')
-out = {'concepts': con, 'fields': list(fields.values()), 'iran': iran, 'bridges': br, 'atlas': af, 'wikis': {'psy': 'روان', 'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار'}, 'tiers': {'1': 'فراتحلیل/تکرار', '2': 'مقالهٔ داوری‌شده/آمار رسمی', '3': 'کتاب یا سخنرانی', '4': 'سرنخ', '0': 'بی‌منبع'}}
+out = {'concepts': con, 'fields': list(fields.values()), 'iran': iran, 'bridges': br, 'atlas': af, 'wikis': {'psy': 'روان', 'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار', 'tarikh': 'تاریخ'}, 'tiers': {'1': 'فراتحلیل/تکرار', '2': 'مقالهٔ داوری‌شده/آمار رسمی', '3': 'کتاب یا سخنرانی', '4': 'سرنخ', '0': 'بی‌منبع'}}
 os.makedirs(f'{R}/core/tools', exist_ok=True)
 json.dump(out, open(f'{R}/core/tools/data.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 print('tools data', len(con), 'concepts', len(fields), 'fields', len(iran), 'iran', len(br), 'bridges', os.path.getsize(f'{R}/core/tools/data.json') // 1024, 'KB')

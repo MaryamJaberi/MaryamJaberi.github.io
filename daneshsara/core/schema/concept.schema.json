@@ -6,7 +6,7 @@
  "required": ["id", "kind", "title", "summary", "status"],
  "additionalProperties": false,
  "properties": {
-  "id": {"type": "string", "pattern": "^(psy|soc|tabar|phil):[a-z0-9]+(-[a-z0-9]+)*$"},
+  "id": {"type": "string", "pattern": "^(psy|soc|tabar|phil|tarikh):[a-z0-9]+(-[a-z0-9]+)*$"},
   "kind": {"enum": ["root", "field", "subfield", "concept"]},
   "title": {"$ref": "#/$defs/tri", "required": ["fa"]},
   "aliases": {"type": "array", "items": {"type": "string"}},

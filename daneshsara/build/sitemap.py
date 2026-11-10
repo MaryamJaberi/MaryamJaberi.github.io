@@ -31,11 +31,11 @@ def group(p):
     if d == 'psy/lessons': return 'psy-lessons'
     if d == 'psy/topics': return 'psy-books'
     if d == 'wellbeing': return 'product-org'
-    if d in ('soc', 'phil', 'tabar', 'iran'):
+    if d in ('soc', 'phil', 'tabar', 'tarikh', 'iran'):
         return d + '-home'
     if d == 'miyan': return 'miyan'
     if d == 'simorgh': return 'simorgh'
-    if d in ('soc/tools', 'phil/tools', 'tabar/tools'): return d.split('/')[0] + '-tools'
+    if d in ('soc/tools', 'phil/tools', 'tabar/tools', 'tarikh/tools'): return d.split('/')[0] + '-tools'
     if d == 'iran/tools': return 'iran-tools'
     if d == 'atlas':
         return 'atlas-bridges' if f == 'bridge' else 'atlas-worlds'
@@ -61,7 +61,7 @@ orphans = sorted(p for p in pages if page_in[p] == 0)
 C = {}
 for f in glob.glob(f'{R}/data/*/concepts/*.json'):
     d = json.load(open(f, encoding='utf-8')); C[d['id']] = d
-ROOT = {'psy': 'psy:psyche', 'soc': 'soc:soc', 'phil': 'phil:phil', 'tabar': 'tabar:tabar'}
+ROOT = {'psy': 'psy:psyche', 'soc': 'soc:soc', 'phil': 'phil:phil', 'tabar': 'tabar:tabar', 'tarikh': 'tarikh:tarikh'}
 def top_city(k, w):
     n = 0
     while C[k]['parent'] in C and C[k]['parent'] != ROOT[w] and n < 20: k = C[k]['parent']; n += 1
@@ -90,6 +90,7 @@ NODES = [
  ('soc-home', 'wiki', 'جامعه', '', pl('soc-home') + pl('soc-tools'), ''),
  ('tabar-home', 'wiki', 'تبار و ژنتیک', '', pl('tabar-home') + pl('tabar-tools'), ''),
  ('phil-home', 'wiki', 'فلسفه', '', pl('phil-home') + pl('phil-tools'), ''),
+ ('tarikh-home', 'wiki', 'تاریخ و ایران‌شناسی', 'تازه، از مخزن ۷۵۲ کتاب', pl('tarikh-home') + pl('tarikh-tools'), ''),
  ('ling', 'wiki', 'زبان‌شناسی', 'برنامه‌ریزی‌شده', [], 'به‌زودی'),
  ('miyan', 'atlas', 'ارتباط رشته‌ها', 'ویکی ۲۵ پل میان‌رشته‌ای', pl('miyan'), ''),
  ('iran-home', 'iran', 'ویکی ایران', '۱۶ برگهٔ داده با سال، روش و ردهٔ کیفیت', pl('iran-home') + pl('iran-tools'), ''),

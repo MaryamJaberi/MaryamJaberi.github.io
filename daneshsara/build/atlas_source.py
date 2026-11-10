@@ -4,9 +4,9 @@ Re-runnable: it rewrites its own block."""
 import os, re, glob, html
 R = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/..')
 os.chdir(R)
-NAME = {'psy': 'روان‌شناسی', 'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار و ژنتیک', 'iran': 'ایران', 'miyan': 'ارتباط رشته‌ها'}
+NAME = {'psy': 'روان‌شناسی', 'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار و ژنتیک', 'tarikh': 'تاریخ و ایران‌شناسی', 'iran': 'ایران', 'miyan': 'ارتباط رشته‌ها'}
 VAR = {'psy': 'var(--fam-psy)', 'soc': 'var(--fam-soc)', 'phil': 'var(--fam-hum)',
-       'tabar': 'var(--fam-bio)', 'iran': 'var(--primary)', 'miyan': 'var(--fam-formal)'}
+       'tabar': 'var(--fam-bio)', 'tarikh': 'var(--fam-hist)', 'iran': 'var(--primary)', 'miyan': 'var(--fam-formal)'}
 # which layer each atlas reads from, taken from the landing page's own data-u attributes
 SRC = {}
 land = open('index.html', encoding='utf-8').read()

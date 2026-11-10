@@ -8,8 +8,8 @@ C = {}
 for f in glob.glob(f'{R}/data/*/concepts/*.json'):
     d = json.load(open(f, encoding='utf-8')); C[d['id']] = d
 BOOKS = json.load(open(f'{R}/data/library/books.json', encoding='utf-8'))
-ROOT = {'psy': 'psy:psyche', 'soc': 'soc:soc', 'phil': 'phil:phil', 'tabar': 'tabar:tabar'}
-NAME = {'psy': 'روان‌شناسی', 'soc': 'جامعه‌شناسی', 'phil': 'فلسفه', 'tabar': 'تبار و ژنتیک'}
+ROOT = {'psy': 'psy:psyche', 'soc': 'soc:soc', 'phil': 'phil:phil', 'tabar': 'tabar:tabar', 'tarikh': 'tarikh:tarikh'}
+NAME = {'psy': 'روان‌شناسی', 'soc': 'جامعه‌شناسی', 'phil': 'فلسفه', 'tabar': 'تبار و ژنتیک', 'tarikh': 'تاریخ و ایران‌شناسی'}
 def city(i):
     while C[i]['parent'] in C and C[C[i]['parent']]['parent'] in C and C[i]['parent'] != i: i = C[i]['parent']
     return i
@@ -32,18 +32,20 @@ for k in BOOKS:
     placed[(w, cc.most_common(1)[0][0])].append(idx)
 rooms = []
 RW, RH, GAP = 900, 560, 260; ROWGAP = 250
-pos = {'soc': (60, 60), 'phil': (60 + RW + GAP, 60), 'psy': (60, 60 + RH + ROWGAP), 'tabar': (60 + RW + GAP, 60 + RH + ROWGAP)}
-for w in ['soc', 'phil', 'psy', 'tabar']:
+x0, x1, x2 = 60, 60 + RW + GAP, 60 + 2 * (RW + GAP)
+y0, y1 = 60, 60 + RH + ROWGAP
+pos = {'soc': (x0, y0), 'phil': (x1, y0), 'tarikh': (x2, y0), 'psy': (x0, y1), 'tabar': (x1, y1)}
+for w in ['soc', 'phil', 'tarikh', 'psy', 'tabar']:
     rx, ry = pos[w]; cs = cities[w]; cases = []
     cols = 2; rowsn = math.ceil(len(cs) / cols); cw, chh = 380, 58; padx = (RW - cols * cw) / (cols + 1); pady = 70; stepy = (RH - pady - 40) / max(1, rowsn)
     for i, c in enumerate(cs):
         col, row = i % cols, i // cols; bs = placed.get((w, c), [])
         cases.append({'c': c, 'title': C[c]['title']['fa'], 'x': rx + padx + col * (cw + padx), 'y': ry + pady + row * stepy, 'w': cw, 'h': chh + 38 * max(0, math.ceil(len(bs) / 40) - 1), 'b': bs, 'ne': len([1 for k in C if k.startswith(w + ':') and city(k) == c]) - 1 if False else None})
     rooms.append({'w': w, 'name': NAME[w], 'x': rx, 'y': ry, 'W': RW, 'H': RH, 'cases': cases})
-cx = 60 + RW + GAP / 2
-plan = {'rooms': rooms, 'table': {'x': cx, 'y': 60 + RH + ROWGAP / 2, 'r': 82, 'b': table},
-        'lobby': {'x': cx - 330, 'y': 60 + 2 * RH + ROWGAP + 60, 'w': 660, 'h': 70, 'b': lobby}, 'desk': {'x': cx, 'y': 60 + 2 * RH + ROWGAP + 190},
-        'books': out_books, 'bounds': [0, 0, 60 + 2 * RW + GAP + 60, 60 + 2 * RH + ROWGAP + 300]}
+cx = x0 + RW + GAP / 2
+plan = {'rooms': rooms, 'table': {'x': cx, 'y': y1 + RH / 2, 'r': 82, 'b': table},
+        'lobby': {'x': cx - 330, 'y': y1 + RH + 60, 'w': 660, 'h': 70, 'b': lobby}, 'desk': {'x': cx, 'y': y1 + RH + 190},
+        'books': out_books, 'bounds': [0, 0, x2 + RW + 60, y1 + RH + 300]}
 js = 'window.LIB=' + json.dumps(plan, ensure_ascii=False, separators=(',', ':')) + ';'
 tpl = open(f'{HERE}/library_plan.tpl.html', encoding='utf-8').read()
 open(f'{R}/atlas/library-plan.html', 'w', encoding='utf-8').write(tpl.replace('/*__DATA__*/', js))
