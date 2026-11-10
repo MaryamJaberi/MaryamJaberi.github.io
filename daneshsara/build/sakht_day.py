@@ -74,7 +74,7 @@ footer.f{{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var
 <p class="sub">ستون‌ها زمان‌اند و ردیف‌ها آدم‌ها. ستون خط‌چین کارهایی است که همین حالا و بی‌خطر شدنی است.</p>
 <div class="tabs" id="tabs">{tabs}</div>
 {head}{rows}
-<div class="go"><a href="work.html">متخصص هستید؟ میز کار ←</a><a href="index.html#risks">دفتر ریسک ←</a><a href="index.html#transition">درس‌های دوران گذار ←</a></div>
+<div class="go"><a href="https://maryamjaberi.github.io/simorgh/gam.html">پیش از روز بعد: «قدمِ تو» در سیمرغ ↗</a><a href="work.html">متخصص هستید؟ میز کار ←</a><a href="index.html#risks">دفتر ریسک ←</a><a href="index.html#transition">درس‌های دوران گذار ←</a></div>
 </section>
 
 <section id="safety">

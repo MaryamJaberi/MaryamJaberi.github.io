@@ -23,11 +23,14 @@ iranq = {os.path.basename(p)[:-5]: json.load(open(p, encoding='utf-8'))['questio
 risk_names = {r['k'] for r in SK['risks']}
 seat = {s['id']: s for s in WK['seats']}
 ideac = collections.Counter(x['c'] for x in SK['ideas'])
+SP = json.load(open('data/simorgh/problems.json', encoding='utf-8'))
+prob = collections.defaultdict(list)
+for x in SP['problems']: prob[x['domain']].append(x['t'])
 WN = {'soc': 'جامعه', 'phil': 'فلسفه', 'psy': 'روان', 'tabar': 'تبار', 'tarikh': 'تاریخ'}
 WV = {'soc': '--fam-soc', 'phil': '--fam-hum', 'psy': '--fam-psy', 'tabar': '--fam-bio', 'tarikh': '--fam-hist'}
 
 COLS = [('sci', 'علم', 'مفهوم در ویکی‌ها', '--fam-soc'), ('iran', 'ایران', 'یادداشت آماری', '--primary'),
-        ('risk', 'ریسک', 'در دفتر ریسک', '--err'), ('idea', 'ایده', 'از مخزن ایده‌ها', '--ok'), ('book', 'کتاب', 'در مخزن، نخوانده', '--fam-hist')]
+        ('prob', 'مشکل مردم', 'نقشهٔ مشکل‌های سیمرغ', '--warn'), ('risk', 'ریسک', 'در دفتر ریسک', '--err'), ('idea', 'ایده', 'از مخزن ایده‌ها', '--ok'), ('book', 'کتاب', 'در مخزن، نخوانده', '--fam-hist')]
 rows = []
 for d in CV['domains']:
     for f in d['fields']: assert f in ftitle, f
@@ -35,15 +38,15 @@ for d in CV['domains']:
     for r in d['risks']: assert r in risk_names, r
     for s in d['seats']: assert s in seat, s
     for s in d['shelves']: assert s in shelf, s
-    v = {'sci': sum(fcount[f] for f in d['fields']), 'iran': len(d['iran']), 'risk': len(d['risks']),
+    v = {'sci': sum(fcount[f] for f in d['fields']), 'iran': len(d['iran']), 'prob': len(prob[d['id']]), 'risk': len(d['risks']),
          'idea': sum(ideac[c] for c in d['ideas']), 'book': sum(shelf[s] for s in d['shelves'])}
     gap = ('علم این حوزه هنوز ویکی ندارد' if v['sci'] == 0 else 'آمار ایران ندارد' if v['iran'] == 0 else
-           'هنوز ریسک یا مسئله‌ای برایش ثبت نشده' if v['risk'] == 0 else 'هر سه لایه شروع شده')
+           'هنوز ریسک یا مشکلی برایش ثبت نشده' if v['risk'] + v['prob'] == 0 else 'هر سه لایه شروع شده')
     rows.append((d, v, gap))
 mx = {k: max(v[k] for _, v, _ in rows) or 1 for k, *_ in COLS}
 tot = {k: sum(v[k] for _, v, _ in rows) for k, *_ in COLS}
 nosci = sum(1 for _, v, _ in rows if v['sci'] == 0); noiran = sum(1 for _, v, _ in rows if v['iran'] == 0)
-full = sum(1 for _, v, _ in rows if v['sci'] and v['iran'] and v['risk'])
+full = sum(1 for _, v, _ in rows if v['sci'] and v['iran'] and (v['risk'] or v['prob']))
 
 def bub(k, n, var):
     if n == 0: return '<span class="bb z" aria-label="صفر"><i></i></span>'
@@ -56,6 +59,8 @@ def detail(d, v, gap):
         out.append('<p><b>در ویکی‌ها:</b> ' + ' '.join(f'<a class="wl" style="--w:var({WV[f.split(":")[0]]})" href="../{f.split(":")[0]}/"><i>{WN[f.split(":")[0]]}</i>{E(ftitle[f])} · {fa(fcount[f])}</a>' for f in d['fields']) + '</p>')
     if d['iran']:
         out.append('<p><b>آمار ایران:</b> ' + ' '.join(f'<a class="wl" style="--w:var(--primary)" href="../iran/entries.html#{i}"><i>ایران</i>{E(iranq[i][:44])}</a>' for i in d['iran']) + '</p>')
+    if prob[d['id']]:
+        out.append('<p><b>مشکل‌های مردم:</b> ' + '، '.join(E(x) for x in prob[d['id']]) + f' <a href="{E(SP["from"])}">نقشهٔ مشکل‌های سیمرغ ↗</a></p>')
     if d['risks']:
         out.append('<p><b>ریسک‌ها:</b> ' + '، '.join(E(r) for r in d['risks']) + ' <a href="../sakht/#risks">دفتر ریسک ←</a></p>')
     if d['seats']:
@@ -88,7 +93,7 @@ p.sub{{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(
 .nums div{{display:grid;min-width:120px;padding:var(--s3) var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);border-top:3px solid var(--c,var(--primary))}}
 .nums b{{font-size:1.7rem;line-height:1.15}}.nums span{{font-size:var(--chip);color:var(--ink-3)}}
 .mx{{max-width:64em}}
-.hd,.row summary{{display:grid;grid-template-columns:minmax(0,1.9fr) repeat(5,minmax(0,1fr));gap:4px;align-items:center}}
+.hd,.row summary{{display:grid;grid-template-columns:minmax(0,1.9fr) repeat(6,minmax(0,1fr));gap:4px;align-items:center}}
 .hd{{padding:8px 0;border-bottom:2px solid var(--line-strong);text-align:center}}
 .hd b{{display:block;font-size:var(--small)}}.hd small{{font-size:var(--caption,.7rem);color:var(--ink-3);line-height:1.4;display:block}}
 .row{{border-bottom:1px solid var(--line)}}.row[open]{{background:var(--surface)}}
@@ -96,7 +101,7 @@ p.sub{{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(
 .dn{{display:grid;gap:1px;padding-inline-start:6px;min-width:0}}.dn b{{font-size:var(--small)}}
 .dn em{{font-style:normal;font-size:var(--chip)}}.g0{{color:var(--err)}}.g1{{color:var(--warn)}}.g2{{color:var(--ok)}}
 .c{{display:grid;place-items:center}}
-.bb{{position:relative;display:grid;place-items:center;width:40px;height:40px}}
+.bb{{position:relative;display:grid;place-items:center;width:40px;height:40px;max-width:100%}}
 .bb i{{border-radius:50%;opacity:.38;display:block}}.bb b{{position:absolute;font-size:var(--chip);font-variant-numeric:tabular-nums}}
 .bb.z i{{width:12px;height:12px;border:1.5px dashed var(--ink-3);opacity:.7}}
 .dt{{padding:0 var(--s4) var(--s4);display:grid;gap:6px}}.dt p{{margin:0;font-size:var(--small);line-height:2;color:var(--ink-2)}}.dt b{{color:var(--ink)}}
@@ -104,7 +109,7 @@ p.sub{{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(
 .wl{{display:inline-flex;align-items:center;gap:6px;font-size:var(--chip);padding:1px 10px 1px 3px;border-radius:var(--r-full);border:1px solid color-mix(in srgb,var(--w) 45%,var(--line));color:var(--ink-2)!important;text-decoration:none;background:color-mix(in srgb,var(--w) 7%,var(--surface));margin-block:2px}}
 .wl i{{font-style:normal;font-weight:650;color:var(--paper);background:var(--w);border-radius:var(--r-full);padding:0 8px}}
 .seatl{{font-size:var(--chip);padding:1px 10px;border:1px solid var(--ok);border-radius:var(--r-full);color:var(--ok)!important;text-decoration:none;white-space:nowrap}}
-@media (max-width:640px){{.hd,.row summary{{grid-template-columns:repeat(5,minmax(0,1fr))}}.hd span:first-child{{display:none}}.dn{{grid-column:1/-1;padding-top:6px}}.hd small{{display:none}}}}
+@media (max-width:640px){{.hd,.row summary{{grid-template-columns:repeat(6,minmax(0,1fr))}}.hd span:first-child{{display:none}}.dn{{grid-column:1/-1;padding-top:6px}}.hd small{{display:none}}}}
 ol.road{{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3);max-width:60em;counter-reset:r}}
 ol.road li{{counter-increment:r;display:grid;grid-template-columns:minmax(0,1fr) 120px auto;gap:12px;align-items:center;padding:var(--s3) var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface)}}
 ol.road b::before{{content:counter(r,persian) " · ";color:var(--primary)}}
@@ -125,7 +130,7 @@ footer.f{{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var
 
 <section id="map">
 <h2>پوشش هر حوزه</h2>
-<p class="sub">اندازهٔ هر دایره در ستون خودش سنجیده می‌شود (ستون‌ها با هم مقایسه‌پذیر نیستند). دایرهٔ خط‌چینِ خالی یعنی صفر. شمارش‌ها خودکار از داده‌های سایت است؛ تنها تصمیم دستی این است که کدام رشتهٔ ویکی و کدام قفسه به کدام حوزه تعلق دارد. شمار ایده‌ها فقط از ۲۵ ایدهٔ واردشده است. روی هر ردیف بزنید.</p>
+<p class="sub">اندازهٔ هر دایره در ستون خودش سنجیده می‌شود (ستون‌ها با هم مقایسه‌پذیر نیستند). دایرهٔ خط‌چینِ خالی یعنی صفر. شمارش‌ها خودکار از داده‌های سایت است؛ تنها تصمیم دستی این است که کدام رشتهٔ ویکی و کدام قفسه به کدام حوزه تعلق دارد. شمار ایده‌ها فقط از ۲۵ ایدهٔ واردشده است و «مشکل مردم» رونوشتی از نقشهٔ مشکل‌های پَرِ سیمرغ است. روی هر ردیف بزنید.</p>
 <div class="mx">{head}{body}</div>
 </section>
 

@@ -10,6 +10,7 @@ fa = lambda n: str(n).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸�
 W = json.load(open('data/sakht/work.json', encoding='utf-8'))
 SK = json.load(open('data/sakht/sakht.json', encoding='utf-8'))
 reg = json.load(open('core/registry.json', encoding='utf-8'))['stats']
+SIM = 'https://maryamjaberi.github.io/simorgh/'
 ST = {'open': ('جای خالی', 'o'), 'talk': ('در گفت‌وگو', 't'), 'has': ('یک نفر هست؛ نفر دوم خوش‌آمد', 'h')}
 AT = {'organs': 'نهادهای ضروری', 'transition': 'دوران گذار', 'risks': 'دفتر ریسک', 'digital': 'زیرساخت دیجیتال', 'ideas': 'ایده‌ها', 'links': 'پیوند به ویکی‌ها', 'legacy': 'میراث ناکارآمد', 'sources': 'منابع'}
 seats = W['seats']; ntask = sum(len(s['tasks']) for s in seats)
@@ -29,7 +30,7 @@ def task(t, s):
 <dl><dt>مسئله</dt><dd>{E(t["prob"])}</dd><dt>چه داریم</dt><dd>{E(t["have"])} {at}</dd><dt>چه می‌خواهیم</dt><dd>{E(t["need"])}</dd></dl>
 <button type="button" class="cp" data-t="{E(tpl)}">این را برمی‌دارم: کپی متن آماده</button></article>'''
 briefs = ''.join(f'''<section class="seat" id="{s["id"]}"><div class="sh"><h3>{E(s["k"])}</h3><span class="st {ST[s["st"]][1]}">{ST[s["st"]][0]}</span></div>
-<p class="who">{E(s["who"])}</p><p class="why">{E(s["why"])}</p><p class="fst">از کجا شروع کنم؟ <a href="#{s["first"]}">{s["first"]} · {E(next(t["t"] for t in s["tasks"] if t["id"] == s["first"]))}</a> کوچک‌ترین و مستقل‌ترین مسئلهٔ این صندلی است.</p><div class="tasks">{''.join(task(t, s) for t in s["tasks"])}</div></section>''' for s in seats)
+<p class="who">{E(s["who"])}</p><p class="why">{E(s["why"])}</p><p class="fst">از کجا شروع کنم؟ <a href="#{s["first"]}">{s["first"]} · {E(next(t["t"] for t in s["tasks"] if t["id"] == s["first"]))}</a> کوچک‌ترین و مستقل‌ترین مسئلهٔ این صندلی است. نقش شما در سیمرغ: <a href="{SIM}gam.html#{s["sim"]["a"]}">کارت «{E(s["sim"]["t"])}» ↗</a>، و اگر خارج از ایران‌اید <a href="{SIM}gam.html#mohajer">«مهاجر و خارج‌نشین» ↗</a>.</p><div class="tasks">{''.join(task(t, s) for t in s["tasks"])}</div></section>''' for s in seats)
 NS = len(W['stages']) - 1
 streams = ''.join(f'<li><span>{E(x["k"])}</span><span class="bar" role="img" aria-label="{W["stages"][x["stage"]]}">{"".join(f"<i class={chr(34)}on{chr(34)}></i>" if i <= x["stage"] and x["stage"] > 0 and i > 0 else "<i></i>" for i in range(1, NS + 1))}</span><em>{W["stages"][x["stage"]]}</em></li>' for x in W['streams'])
 changes = ''.join(f'<li><time>{fa(d)}</time>{E(m)}</li>' for d, m in log)
@@ -118,6 +119,7 @@ footer.f{{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var
 <li><b>متن آماده را کپی کنید.</b> دکمهٔ زیر هر مسئله متنی می‌سازد با کد مسئله و چند جای خالی برای تخصص و وقت شما.</li>
 <li><b>برای کسی که شما را دعوت کرده بفرستید.</b> همان‌جا می‌توانید فرد یا ایدهٔ دیگری را هم معرفی کنید.</li>
 </ol>
+<p class="sub" style="margin-top:var(--s4)">این میز برای آماده‌کردنِ «روز بعد» است. برای اینکه امروز، در جایگاه خودتان، چه قدمی شدنی است، کارت‌های <a href="{SIM}gam.html">«قدمِ تو» در پَرِ سیمرغ ↗</a> را ببینید؛ بخش «خطر» همان صفحه را رد نکنید.</p>
 <p class="note">این صفحه هیچ نام و اطلاعاتی جمع نمی‌کند و فرمی ندارد. اگر در ایران هستید، دربارهٔ این کار در جای عمومی و با نام واقعی ننویسید و فقط از راه امنی که با دعوت‌کننده‌تان قرار گذاشته‌اید پیام بدهید.</p>
 </section>
 
