@@ -101,7 +101,7 @@ bars = ''.join(f'<li><span class="it">{ititle(x)}</span><span class="ic">{E(x["c
 bycat = collections.defaultdict(list)
 for x in ideas_sorted: bycat[x['c']].append(x)
 cmax = max(len(v) for v in bycat.values())
-allideas = ''.join(f'<details class="icat"><summary><span>{E(c)}</span><i><b style="width:{len(v) / cmax * 100:.0f}%"></b></i><em>{fa(len(v))} ایده · {fa(sum(x["v"] for x in v))} رأی</em></summary><ul>' + ''.join(f'<li>{ititle(x)} <em>{fa(x["v"])} رأی، {fa(x["m"])} نظر</em></li>' for x in v) + '</ul></details>' for c, v in sorted(bycat.items(), key=lambda kv: -len(kv[1])))
+allideas = ''.join(f'<details class="icat"><summary><span>{E(c)}</span><i><b style="width:{len(v) / cmax * 100:.0f}%"></b></i><em>{fa(len(v))} ایده · {fa(sum(x["v"] for x in v))} رأی</em></summary><ul>' + ''.join(f'<li>{ititle(x)} <em>' + ('رأی نامعلوم' if x.get('vu') else f'{fa(x["v"])} رأی، {fa(x["m"])} نظر') + '</em>' + (f'<p class="isum">{E(x["s"])}</p>' if x.get('s') else '') + '</li>' for x in v) + '</ul></details>' for c, v in sorted(bycat.items(), key=lambda kv: -len(kv[1])))
 cats = collections.Counter(x['c'] for x in D['ideas'])
 catchips = ''.join(f'<span class="chip">{E(c)} <b>{fa(n)}</b></span>' for c, n in cats.most_common())
 
@@ -213,6 +213,7 @@ p.sub{{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(
 .card p.now{{border-top:1px dashed var(--line-strong);padding-top:var(--s2);margin-bottom:0}}
 /* ideas */
 .cats{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--s4)}}
+.isum{{margin:3px 0 4px;color:var(--ink-2);line-height:1.85;max-width:52em}}
 h3.ih{{font-size:var(--h4);margin:var(--s5) 0 var(--s2)}}
 ol.ideas .it a,.icat a{{color:inherit;text-decoration:none;border-bottom:1px dotted var(--line-strong)}}
 .icats{{display:grid;gap:6px;max-width:60em}}

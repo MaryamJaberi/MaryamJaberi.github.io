@@ -14,6 +14,12 @@ for l in open(sys.argv[1], encoding='utf-8'):
     n = int(a[0]); new[n] = {"t": ' | '.join(a[1:-4]), "c": CAT[a[-4]], "v": int(a[-3]), "m": int(a[-2]), "n": n}
 tt = {x['t'] for x in new.values()}
 d['ideas'] = [i for i in old if i['t'] not in tt] + list(new.values())
+bod = json.load(open(R + '/data/sakht/ideas_bodies.json', encoding='utf-8'))['items'] if os.path.exists(R + '/data/sakht/ideas_bodies.json') else []
+byn = {i.get('n'): i for i in d['ideas'] if i.get('n')}; byt = {i['t']: i for i in d['ideas']}
+for b in bod:
+    tgt = byn.get(b.get('n')) or byt.get(b['t'])
+    if tgt: tgt['s'] = b['s']
+    else: d['ideas'].append({**b, 'v': 0, 'm': 0, 'vu': True})
 lo, hi = sys.argv[2].split('-'); d['ideas_pages'] = list(range(int(lo), int(hi) + 1))
-d['ideas_note'] = f"مخزن IranAzadAbad حدود ۳۲۵ ایده در ۱۳ صفحه و ۱۷ دسته دارد. این‌ها ایده‌اند، نه یافتهٔ بررسی‌شده (ردهٔ ۴)، و تعداد رأی فقط نشان می‌دهد چند نفر در همان مخزن پسندیده‌اند. تا این‌جا صفحه‌های {fa(lo)} تا {fa(hi)} خوانده شده (۱۱ نوامبر ۲۰۲۶، ۲۰ آبان ۱۴۰۵)؛ فقط عنوان و شمارش‌ها، نه متن ایده‌ها."
+d['ideas_note'] = f"مخزن IranAzadAbad حدود ۳۲۵ ایده در ۱۳ صفحه و ۱۷ دسته دارد. این‌ها ایده‌اند، نه یافتهٔ بررسی‌شده (ردهٔ ۴)، و تعداد رأی فقط نشان می‌دهد چند نفر در همان مخزن پسندیده‌اند. تا این‌جا صفحه‌های {fa(lo)} تا {fa(hi)} خوانده شده (۱۱ نوامبر ۲۰۲۶، ۲۰ آبان ۱۴۰۵)؛ بیشترشان فقط با عنوان و شمارش؛ برای {fa(sum(1 for i in d['ideas'] if i.get('s')))} ایده متن کامل خوانده و خلاصه شده است."
 json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1); print(len(d['ideas']), 'ideas')
