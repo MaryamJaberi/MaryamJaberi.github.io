@@ -53,6 +53,7 @@ h2.sec{font-size:var(--small);color:var(--ink-2);font-weight:600;margin:var(--s2
 .links a:hover{border-color:var(--primary)}
 .links .rel{font-size:var(--chip);color:var(--primary);min-width:7em}
 .links .nt{font-size:var(--small);color:var(--ink-2)}
+.rels{display:flex;flex-wrap:wrap;gap:6px}.rels a{font-size:var(--small);padding:5px 12px;border-radius:var(--r-full);border:1px solid var(--line);background:var(--surface);text-decoration:none;color:var(--ink-2)}.rels a:hover{border-color:var(--primary);color:var(--ink)}.rels .ext{font-size:var(--chip);color:var(--ink-3)}
 .links .ext{font-size:var(--chip);color:var(--ink-3)}
 .ppl{display:flex;flex-wrap:wrap;gap:6px}
 .ppl span{font-size:var(--small);padding:4px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface)}
@@ -114,6 +115,11 @@ function detail(c){
   const pts = (c.points || []).map(p => { const refs = (p.sources || []).map(sref); const ev = evOf(p); return `<li>${esc(tx(p.text))}<div class="ref"><span class="ev t${ev}" title="${esc(T("evl"))}">${esc(T("ev")[ev])}</span>${(p.flags || []).map(fl => `<span class="flag ${fl}">${esc(T("flag")[fl] || fl)}</span>`).join("")}${refs.map(n => `<span>[${fa(n)}]</span>`).join("")}</div></li>`; }).join("");
   (c.sources || []).forEach(sref);
   const links = (c.links || []).map(l => { const u = urlOf(l.to); if (!u) return ""; const extW = !BY[l.to] ? l.to.split(":")[0] : ""; return `<a href="${u}"><span class="rel">${esc(T("rel")[l.rel] || l.rel)}</span><span><b>${esc(titleOf(l.to))}</b>${extW ? ` <span class="ext">(${T("inwiki")} ${extW})</span>` : ""}<div class="nt">${esc(tx(l.note))}</div></span></a>`; }).join("");
+  const slug = c.id.split(":")[1];
+  const chipOf = id => { const u = urlOf(id); if (!u) return ""; const w = !BY[id] ? id.split(":")[0] : ""; return `<a href="${u}">${esc(titleOf(id))}${w ? ` <span class="ext">(${T("inwiki")} ${w})</span>` : ""}</a>`; };
+  const back = ((D.back || {})[slug] || []).map(chipOf).join("");
+  const same = ((D.same || {})[slug] || []).map(chipOf).join("");
+  const LB = {fa: ["به این مدخل پیوند داده‌اند", "از همین منبع"], en: ["Linked from", "From the same source"], nl: ["Verwezen vanuit", "Uit dezelfde bron"]}[L] || ["Linked from", "From the same source"];
   const ppl = (c.people || []).map(id => D.people[id]).filter(Boolean).map(p => `<span>${esc(tx(p.name))}${p.years ? ` <small>${fa(p.years)}</small>` : ""}${L === "fa" && p.note && p.note.fa ? ` <small>— ${esc(p.note.fa)}</small>` : ""}</span>`).join("");
   const ir = c.iran && D.iran[c.iran];
   const iran = ir ? `<h2 class="sec">${T("iran")}</h2><div class="iran"><div class="q">${esc(tx(ir.question))}</div><div>${esc(tx(ir.finding))}</div><div class="status"><span class="grade">${T("grade")} ${esc(ir.grade)}</span><span>${fa(ir.year)}</span>${ir.method ? `<span>${T("method")}: ${esc(ir.method)}</span>` : ""}${ir.contested ? `<span class="flag contested">${T("contested")}</span>` : ""}</div>${ir.critique ? `<div class="nt"><b>${T("critique")}:</b> ${esc(ir.critique)}</div>` : ""}<div class="ref" dir="ltr" style="font-size:var(--chip);color:var(--ink-3);text-align:left">${(ir.source || []).map(s => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)).join("<br>")}</div></div>` : "";
@@ -124,12 +130,15 @@ function detail(c){
    ${pts ? `<h2 class="sec">${T("points")}</h2><ol class="pts">${pts}</ol>` : ""}
    ${iran}
    ${links ? `<h2 class="sec">${T("links")}</h2><div class="links">${links}</div>` : ""}
+   ${back ? `<h2 class="sec">${LB[0]}</h2><div class="rels">${back}</div>` : ""}
+   ${same ? `<h2 class="sec">${LB[1]}</h2><div class="rels">${same}</div>` : ""}
    ${ppl ? `<h2 class="sec">${T("people")}</h2><div class="ppl">${ppl}</div>` : ""}
    ${srcs ? `<h2 class="sec">${T("sources")}</h2><ol class="src">${srcs}</ol>` : ""}
    <div class="status"><span class="draft">⚑ ${T(c.status)}</span>${c.origin ? `<span>${esc(c.origin)}</span>` : ""}</div></article>`;
 }
 function render(){
   const h = location.hash.slice(1); const c = h && BY[D.wiki + ":" + h];
+  if (h && !c && D.renamed && D.renamed[h]) { location.replace("#" + D.renamed[h]); return; }
   if (h && !c && D.merged && D.merged[h]) { location.replace("../" + D.merged[h] + "/entries.html#" + h); return; }
   document.getElementById("main").innerHTML = c ? detail(c) : list();
   if (c) window.scrollTo({top: 0}); else { const i = document.getElementById("q"); if (i && q) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }

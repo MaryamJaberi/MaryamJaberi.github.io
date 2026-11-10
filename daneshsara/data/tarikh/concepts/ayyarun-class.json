@@ -6,7 +6,11 @@
   "en": "The Ayyarun: the armed chivalry class of the medieval Islamic world",
   "nl": "De Ayyarun: de gewapende ridderlijkheidsklasse van de middeleeuwse islamitische wereld"
  },
- "aliases": ["عیار", "عیاری", "جوانمردی"],
+ "aliases": [
+  "عیار",
+  "عیاری",
+  "جوانمردی"
+ ],
  "parent": "tarikh:early-islamic",
  "field": "tarikh:early-islamic",
  "summary": {
@@ -21,7 +25,9 @@
     "en": "The ayyarun had an organization resembling parties or guilds, and in each city were to some degree linked with craft-guild structures. They had their own distinctive dress and customs, and showed their chief (\"sarhang\" or \"sar-ayyar\") an obedience approaching total submission.",
     "nl": "De ayyarun hadden een organisatie die leek op partijen of gilden, en waren in elke stad tot op zekere hoogte verbonden met ambachtsgilden. Ze hadden hun eigen kledij en gebruiken, en toonden hun leider (\"sarhang\" of \"sar-ayyar\") een gehoorzaamheid die bijna volledige onderwerping benaderde."
    },
-   "sources": ["src:f407762ded"],
+   "sources": [
+    "src:f407762ded"
+   ],
    "flags": []
   },
   {
@@ -30,7 +36,9 @@
     "en": "Their weaponry was often rudimentary — tar-coated reed spears, maces, swords, or even just stones and slings — and they often fought on foot without armor. Yet they played a role in major events: during the siege of Baghdad and the war between al-Amin and al-Ma'mun, Baghdad's ayyarun showed courage defending their city against Tahir's army.",
     "nl": "Hun bewapening was vaak rudimentair — met teer bestreken rieten speren, knotsen, zwaarden, of zelfs alleen stenen en slingers — en ze vochten vaak te voet zonder harnas. Toch speelden ze een rol in grote gebeurtenissen: tijdens het beleg van Bagdad en de oorlog tussen al-Amin en al-Ma'mun toonden Bagdads ayyarun moed bij de verdediging van hun stad tegen Tahirs leger."
    },
-   "sources": ["src:f407762ded"],
+   "sources": [
+    "src:f407762ded"
+   ],
    "flags": []
   },
   {
@@ -39,8 +47,12 @@
     "en": "In periods of weak central government, these same ayyarun could become a scourge on the populace: raiding the houses of nobles and the wealthy and extorting money from the great. The source states this contradiction openly rather than hiding it: \"despite being engaged in plunder and banditry ... they always showed care for loyalty and 'salt-eating' and protection of the oppressed.\"",
     "nl": "In periodes van zwak centraal gezag konden diezelfde ayyarun een plaag voor de bevolking worden: ze overvielen de huizen van edelen en rijken en persten geld af van de groten. De bron stelt deze tegenstrijdigheid openlijk en niet verhuld: \"ondanks dat ze zich bezighielden met plundering en roverij ... toonden ze altijd zorg voor trouw en 'zouteten' en bescherming van de verdrukten.\""
    },
-   "sources": ["src:f407762ded"],
-   "flags": ["editor-note"],
+   "sources": [
+    "src:f407762ded"
+   ],
+   "flags": [
+    "editor-note"
+   ],
    "note": {
     "fa": "این الگوی «راهزن نجیب» (بزهکار محلی که هم‌زمان حامی مردم عادی هم هست) در جامعه‌شناسی تاریخی با عنوان «راهزنی اجتماعی» شناخته می‌شود؛ مقایسه با آن ادبیات می‌تواند به ویکی جامعه پیوند بخورد، اما این مدخل هنوز به آن پیوند نخورده.",
     "en": "This \"noble bandit\" pattern (a local outlaw who is simultaneously a protector of common people) is known in historical sociology as \"social banditry\"; comparison with that literature could connect to the sociology wiki, though this entry is not yet cross-linked there.",
@@ -48,9 +60,39 @@
    }
   }
  ],
- "links": [],
+ "links": [
+  {
+   "to": "soc:futuwwa-ayyaran-code",
+   "rel": "see-also",
+   "note": {
+    "fa": "آیین و اخلاق همین گروه",
+    "en": "The code and ethics of this group",
+    "nl": "De code en ethiek van deze groep"
+   }
+  },
+  {
+   "to": "soc:zurkhaneh-institution-social-base",
+   "rel": "see-also",
+   "note": {
+    "fa": "نهادی که این سنت را ادامه داد",
+    "en": "An institution that carried this tradition on",
+    "nl": "Een instelling die deze traditie voortzette"
+   }
+  },
+  {
+   "to": "soc:inclusive-politics-needs-central-state",
+   "rel": "applies-to",
+   "note": {
+    "fa": "گروه‌های مسلح محلی وقتی دولت مرکزی ناتوان است",
+    "en": "Local armed groups when the central state is weak",
+    "nl": "Lokale gewapende groepen wanneer de centrale staat zwak is"
+   }
+  }
+ ],
  "people": [],
- "sources": ["src:f407762ded"],
+ "sources": [
+  "src:f407762ded"
+ ],
  "booklets": [],
  "origin": null,
  "iran": null,
