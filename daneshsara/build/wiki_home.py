@@ -7,11 +7,11 @@ HERE = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(HERE + '/
 load = lambda p: json.load(open(p, encoding='utf-8'))
 E = html.escape
 fa = lambda n: str(n).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))
-NAME = {'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار و ژنتیک', 'psy': 'روان', 'tarikh': 'تاریخ و ایران‌شناسی', 'miyan': 'ارتباط رشته‌ها', 'iran': 'ایران', 'simorgh': 'سیمرغ'}
+NAME = {'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار و ژنتیک', 'psy': 'روان', 'tarikh': 'تاریخ و ایران‌شناسی', 'miyan': 'ارتباط رشته‌ها', 'iran': 'ایران', 'simorgh': 'سیمرغ', 'sakht': 'ساخت ایران'}
 VAR = {'soc': 'var(--fam-soc)', 'phil': 'var(--fam-hum)', 'tabar': 'var(--fam-bio)', 'psy': 'var(--fam-psy)', 'tarikh': 'var(--fam-hist)',
-       'miyan': 'var(--fam-formal)', 'iran': 'var(--primary)', 'simorgh': '#b7791f'}
+       'miyan': 'var(--fam-formal)', 'iran': 'var(--primary)', 'simorgh': '#b7791f', 'sakht': 'var(--ok)'}
 BASE = ['psy', 'soc', 'tabar', 'phil', 'tarikh']
-ALL = BASE + ['miyan', 'iran', 'simorgh']
+ALL = BASE + ['miyan', 'iran', 'simorgh', 'sakht']
 HREF = {k: f'../{k}/' for k in ALL}
 
 def h1_of(p):
@@ -125,7 +125,7 @@ def spec_simorgh():
         lead='آخرین لایهٔ دانش‌سرا: آنچه در لایهٔ علم فهمیده‌ایم و در لایهٔ ایران سنجیده‌ایم، اینجا به یک تمثیل، یک راه‌حل و یک بازی تبدیل می‌شود — ابزارها و وسایلی برای آزادی و آیندهٔ ایران. این ویکی هنوز محتوایی ندارد؛ این صفحه جای خالی‌اش را نگه می‌دارد و می‌گوید چه چیزی باید در آن بیاید.',
         stats=[(0, 'مدخل'), (0, 'ابزار'), (3, 'بخش برنامه‌ریزی‌شده')],
         questions=[], qlead='', tools=[],
-        bridges=[(HREF['iran'], 'ایران', 'وضعیتی که سیمرغ از آن شروع می‌کند'), (HREF['miyan'], 'ارتباط رشته‌ها', 'پل‌هایی که راه‌حل از آن‌ها می‌آید')] + [(HREF[k], NAME[k], 'لایهٔ علم') for k in BASE],
+        bridges=[(HREF['sakht'], 'ساخت ایران', 'نهادها و ابزارهایی که راه‌حل به آن‌ها می‌رسد'), (HREF['iran'], 'ایران', 'وضعیتی که سیمرغ از آن شروع می‌کند'), (HREF['miyan'], 'ارتباط رشته‌ها', 'پل‌هایی که راه‌حل از آن‌ها می‌آید')] + [(HREF[k], NAME[k], 'لایهٔ علم') for k in BASE],
         bridgelead='سیمرغ از دو لایهٔ زیرش می‌خواند؛ تا وقتی آن دو کامل نشده‌اند، این لایه هم نمی‌تواند کامل شود.',
         fields=[], fieldslead='', index=[],
         roadmap=['تمثیل: سی مرغ و سیمرغ — چرا این داستان قالب کار است',
