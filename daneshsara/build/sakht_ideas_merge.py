@@ -15,5 +15,5 @@ for l in open(sys.argv[1], encoding='utf-8'):
 tt = {x['t'] for x in new.values()}
 d['ideas'] = [i for i in old if i['t'] not in tt] + list(new.values())
 lo, hi = sys.argv[2].split('-'); d['ideas_pages'] = list(range(int(lo), int(hi) + 1))
-d['ideas_note'] = f"مخزن IranAzadAbad حدود ۳۲۵ ایده در ۱۳ صفحه و ۱۷ دسته دارد. این‌ها ایده‌اند، نه یافتهٔ بررسی‌شده (ردهٔ ۴)، و تعداد رأی فقط نشان می‌دهد چند نفر در همان مخزن پسندیده‌اند. تا این‌جا صفحه‌های {fa(lo)} تا {fa(hi)} خوانده شده (۱۰ نوامبر ۲۰۲۶، ۱۹ آبان ۱۴۰۵)؛ فقط عنوان و شمارش‌ها، نه متن ایده‌ها."
+d['ideas_note'] = f"مخزن IranAzadAbad حدود ۳۲۵ ایده در ۱۳ صفحه و ۱۷ دسته دارد. این‌ها ایده‌اند، نه یافتهٔ بررسی‌شده (ردهٔ ۴)، و تعداد رأی فقط نشان می‌دهد چند نفر در همان مخزن پسندیده‌اند. تا این‌جا صفحه‌های {fa(lo)} تا {fa(hi)} خوانده شده (۱۱ نوامبر ۲۰۲۶، ۲۰ آبان ۱۴۰۵)؛ فقط عنوان و شمارش‌ها، نه متن ایده‌ها."
 json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1); print(len(d['ideas']), 'ideas')
