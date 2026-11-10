@@ -6,7 +6,11 @@
   "en": "The Arab conquest of Iran: the Battle of the Bridge and its aftermath",
   "nl": "De Arabische verovering van Iran: de Slag om de Brug en de nasleep"
  },
- "aliases": ["واقعهٔ جسر", "جنگ پل", "فتح ایران"],
+ "aliases": [
+  "واقعهٔ جسر",
+  "جنگ پل",
+  "فتح ایران"
+ ],
  "parent": "tarikh:early-islamic",
  "field": "tarikh:early-islamic",
  "summary": {
@@ -21,8 +25,13 @@
     "en": "At the Battle of the Bridge, the Arab force under Abu Ubayd al-Thaqafi was defeated by the Sasanian force under Bahman Jadhuyeh beside a bridge on the Euphrates; per Sayf ibn Umar's account the battle took place in Sha'ban 13 AH, though even this date is disputed — some place it at the end of Ramadan of the same year, and Ibn Ishaq dates it to 14 AH.",
     "nl": "In de Slag om de Brug werd de Arabische troepenmacht onder Abu Ubayd al-Thaqafi verslagen door de Sassanidische troepenmacht onder Bahman Jadhuyeh bij een brug over de Eufraat; volgens Sayf ibn Umar vond de slag plaats in Sha'ban 13 AH, al is zelfs deze datum omstreden — sommigen plaatsen het aan het einde van Ramadan van hetzelfde jaar, en Ibn Ishaq dateert het op 14 AH."
    },
-   "sources": ["src:c4abd0c6f3"],
-   "flags": ["contested", "dated"]
+   "sources": [
+    "src:c4abd0c6f3"
+   ],
+   "flags": [
+    "contested",
+    "dated"
+   ]
   },
   {
    "text": {
@@ -30,8 +39,12 @@
     "en": "The defeat was so shameful that the fleeing survivors who reached Medina hid their faces in shame, wept at home, and considered themselves guilty for having turned their backs on the enemy; it is said Caliph Umar avoided even saying the word \"Iraq\" for nearly a year afterward.",
     "nl": "De nederlaag was zo beschamend dat de vluchtelingen die Medina bereikten hun gezicht verborgen van schaamte, thuis huilden en zichzelf schuldig voelden omdat ze de vijand de rug hadden toegekeerd; er wordt gezegd dat kalief Omar bijna een jaar lang zelfs het woord \"Irak\" vermeed."
    },
-   "sources": ["src:c4abd0c6f3"],
-   "flags": ["editor-note"],
+   "sources": [
+    "src:c4abd0c6f3"
+   ],
+   "flags": [
+    "editor-note"
+   ],
    "note": {
     "fa": "این جزئیات روایی (شرم، گریه) از سنت تاریخ‌نگاری اسلامی سده‌های بعد می‌آید، نه سندی هم‌زمان با واقعه؛ به‌عنوان شاهدی از چگونگی روایت‌شدنِ این شکست در حافظهٔ تاریخی بخوانید، نه گزارشی صددرصد مستند.",
     "en": "These narrative details (shame, weeping) come from the later Islamic historiographic tradition, not a document contemporary with the event; read them as evidence of how this defeat was remembered and narrated, not as a fully documented report.",
@@ -44,13 +57,45 @@
     "en": "To redress the defeat, Umar sent the Bajila tribe under Jarir ibn Abdullah al-Bajali to Iraq with a promise of a quarter or third of the spoils; months later at a place called Buwayb (a canal off the Euphrates), the Arab force again faced the Persian army under Mihran ibn Mihrbandad — this time with war elephants, which no longer frightened the Arabs as they had at the Bridge.",
     "nl": "Om de nederlaag te herstellen, stuurde Omar de Bajila-stam onder Jarir ibn Abdullah al-Bajali naar Irak met de belofte van een kwart of derde van de buit; maanden later op een plaats genaamd Buwayb (een kanaal van de Eufraat) stond de Arabische troepenmacht opnieuw tegenover het Perzische leger onder Mihran ibn Mihrbandad — deze keer met oorlogsolifanten, die de Arabieren niet meer schrik aanjoegen zoals bij de Brug."
    },
-   "sources": ["src:c4abd0c6f3"],
+   "sources": [
+    "src:c4abd0c6f3"
+   ],
    "flags": []
   }
  ],
- "links": [],
+ "links": [
+  {
+   "to": "soc:jasemi-arab-conquest-iran-resistance-narrative",
+   "rel": "see-also",
+   "note": {
+    "fa": "روایت جدلی همین رویداد، برای مقایسه",
+    "en": "A polemical account of the same events, for comparison",
+    "nl": "Een polemisch relaas van dezelfde gebeurtenissen, ter vergelijking"
+   }
+  },
+  {
+   "to": "soc:early-islam-sources-casualty-claims",
+   "rel": "see-also",
+   "note": {
+    "fa": "چگونه عددهای منابع کهن را بخوانیم",
+    "en": "How to read the numbers in the early sources",
+    "nl": "Hoe de getallen in de vroege bronnen te lezen"
+   }
+  },
+  {
+   "to": "soc:sasanian-state-administration",
+   "rel": "see-also",
+   "note": {
+    "fa": "دولتی که در این جنگ‌ها فروپاشید",
+    "en": "The state that collapsed in these wars",
+    "nl": "De staat die in deze oorlogen instortte"
+   }
+  }
+ ],
  "people": [],
- "sources": ["src:c4abd0c6f3"],
+ "sources": [
+  "src:c4abd0c6f3"
+ ],
  "booklets": [],
  "origin": null,
  "iran": null,

@@ -8,7 +8,9 @@
  },
  "aliases": [
   "زندگی مطلوب",
-  "زندگی سعادتمندانه"
+  "زندگی سعادتمندانه",
+  "مثلث خوبی، خوشی، معنا",
+  "حکمت و زندگی مطلوب"
  ],
  "parent": "phil:life",
  "field": "phil:life",
@@ -65,6 +67,36 @@
     "editor-note",
     "contested"
    ]
+  },
+  {
+   "text": {
+    "fa": "این مثلث ساختهٔ خود سخنران است و یک نظریهٔ استاندارد نیست. چارچوب‌های مشابهی وجود دارند، مثل «زندگی لذت‌بخش، درگیر و معنادار» نزد سلیگمن یا «دل‌بستگی به چیزهای ارزشمند» نزد سوزان وولف، اما آن‌ها با هم یکی نیستند. همچنین این‌که همهٔ مکتب‌های باستان و شرق «زندگی خوب» را فقط پایبندی به اخلاق می‌دانستند ساده‌سازی است: رواقیان فضیلت را برای خوشبختی کافی می‌دانستند، ارسطو دارایی‌ها و شرایط بیرونی را هم لازم می‌شمرد، و هدف بودا رهایی از رنج است.",
+    "en": "The triangle is the lecturer's own construction, not a standard theory. Similar frameworks exist, such as the pleasant, engaged and meaningful lives in Seligman, or 'fitting fulfilment' in Susan Wolf, but they are not identical. Claiming that all ancient and Eastern schools simply equated the good life with moral commitment is a simplification: Stoics held virtue sufficient for happiness, Aristotle also required external goods, and the Buddha's aim is liberation from suffering.",
+    "nl": "The triangle is the lecturer's own construction, not a standard theory. Similar frameworks exist, such as the pleasant, engaged and meaningful lives in Seligman, or 'fitting fulfilment' in Susan Wolf, but they are not identical. Claiming that all ancient and Eastern schools simply equated the good life with moral commitment is a simplification: Stoics held virtue sufficient for happiness, Aristotle also required external goods, and the Buddha's aim is liberation from suffering."
+   },
+   "sources": [
+    "src:74af762861",
+    "src:f21fea0c4c",
+    "src:77b209e41f"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "پیوند دادن این مثلث به نیچه هم محل بحث است: نیچه خوشبختی را هدف زندگی نمی‌دانست («انسان در پی خوشبختی نیست، فقط انگلیسی چنین می‌کند») و آشتی‌دادن فضیلت و شادی به شیوهٔ سقراط و ارسطو را قبول نداشت. پس مثلث بیشتر ایدهٔ خود سخنران است تا پاسخ نیچه.",
+    "en": "Linking this triangle to Nietzsche is also debatable: Nietzsche did not treat happiness as life's aim ('man does not strive for happiness; only the Englishman does') and did not accept the Socratic-Aristotelian harmony of virtue and happiness. The triangle is thus more the lecturer's own idea than Nietzsche's answer.",
+    "nl": "Linking this triangle to Nietzsche is also debatable: Nietzsche did not treat happiness as life's aim ('man does not strive for happiness; only the Englishman does') and did not accept the Socratic-Aristotelian harmony of virtue and happiness. The triangle is thus more the lecturer's own idea than Nietzsche's answer."
+   },
+   "sources": [
+    "src:127df9d5d4"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
   }
  ],
  "links": [
@@ -96,19 +128,50 @@
    }
   },
   {
-   "to": "phil:wisdom-good-pleasant-meaningful",
+   "to": "phil:stoicism",
    "rel": "see-also",
    "note": {
-    "fa": "همین چارچوب در مدخلی دیگر؛ این دو باید یکی شوند",
-    "en": "The same framework in another entry; these two should be merged",
-    "nl": "Hetzelfde kader in een ander lemma; deze twee moeten worden samengevoegd"
+    "fa": "رواقی‌گری و زندگی خوب",
+    "en": "Stoicism and the good life",
+    "nl": "Stoicism and the good life"
+   }
+  },
+  {
+   "to": "phil:three-theories",
+   "rel": "see-also",
+   "note": {
+    "fa": "سه نظریهٔ بزرگ اخلاق",
+    "en": "The three great moral theories",
+    "nl": "The three great moral theories"
+   }
+  },
+  {
+   "to": "psy:happiness-origins",
+   "rel": "bridges",
+   "note": {
+    "fa": "ریشه‌های شادکامی",
+    "en": "The origins of happiness",
+    "nl": "The origins of happiness"
+   }
+  },
+  {
+   "to": "phil:nietzsche-god-is-dead-nihilism",
+   "rel": "part-of",
+   "note": {
+    "fa": "پاسخ سخنران به بحران مرگ خدا",
+    "en": "The lecturer's response to the death-of-God crisis",
+    "nl": "The lecturer's response to the death-of-God crisis"
    }
   }
  ],
  "people": [],
  "sources": [
   "src:eae2e38bdf",
-  "src:0885a14fe2"
+  "src:0885a14fe2",
+  "src:127df9d5d4",
+  "src:74af762861",
+  "src:77b209e41f",
+  "src:f21fea0c4c"
  ],
  "booklets": [],
  "origin": null,
