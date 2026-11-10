@@ -32,7 +32,7 @@ NAV = [
  ['۲ · ایران', [['iran/', 'ویکی ایران'], ['iran/tools/', 'ابزارهای ایران']]],
  ['۳ · سیمرغ', [['simorgh/', 'درگاه سیمرغ']]],
  ['۴ · ساخت ایران', [['sakht/', 'نهادها، گذار، ریسک'], ['sakht/day.html', 'روز بعد'], ['sakht/work.html', 'میز کار متخصص‌ها']]],
- ['اطلس‌ها و ابزارها', [['atlas/world.html', 'جهان دانش'], ['atlas/lands.html', 'سرزمین دانش'], ['atlas/', 'اطلس رشته‌ها'], ['atlas/library-plan.html', 'کتابخانه'], ['atlas/tools/', 'ابزارهای میان‌رشته‌ای'], ['psy/tools/', 'ابزارهای روان']]],
+ ['اطلس‌ها و ابزارها', [['atlas/world.html', 'جهان دانش'], ['atlas/lands.html', 'سرزمین دانش'], ['atlas/', 'اطلس رشته‌ها'], ['atlas/library-plan.html', 'کتابخانه'], ['atlas/tools/', 'ابزارهای میان‌رشته‌ای'], ['atlas/hidden-bridges.html', 'پل‌های پنهان'], ['psy/tools/', 'ابزارهای روان']]],
  ['راهنما', [['atlas/coverage.html', 'نقشهٔ پوشش و نقشهٔ راه'], ['atlas/story.html', 'داستان پروژه'], ['atlas/sitemap.html', 'نقشهٔ کامل سایت'], ['atlas/collection.html', 'مخزن کتاب‌ها'], ['core/sources.html', 'منابع'], ['core/people.html', 'چهره‌ها'], ['core/contribute.html', 'مشارکت']]],
 ]
 for _, items in NAV:
