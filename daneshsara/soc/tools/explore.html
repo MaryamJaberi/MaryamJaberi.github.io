@@ -81,7 +81,7 @@ function tags(c){const s=DS.stats(c);let h=DS.chipGrade(DS.grade(c));
 function card(c,extra){const w=DS.WIKI[c.w]||c.w;
  return '<article class="card k"><div class="meta"><span class="chip '+E(c.w)+'">'+E(w)+'</span>'+(c.field?'<span class="chip">'+E(fname(c.field))+'</span>':'')+(extra||'')+'</div>'
  +'<h3><a href="'+E(DS.url(D,c))+'">'+E(c.t.fa)+'</a></h3><p class="sum">'+E(c.s.fa)+'</p><div class="tags">'+tags(c)+'</div></article>'}
-const FIELDS=[["theory", "نظریهٔ اجتماعی"], ["cohesion", "انسجام، اعتماد و سرمایهٔ اجتماعی"], ["inequality", "نابرابری و تحرک"], ["institutions", "نهادها و دولت"], ["collective", "کنش جمعی و جنبش‌ها"], ["values", "ارزش‌ها، دین و نسل‌ها"], ["space", "شهر، مهاجرت و شبکه"], ["demography", "جمعیت"]];
+const FIELDS=[["theory", "نظریهٔ اجتماعی"], ["cohesion", "انسجام، اعتماد و سرمایهٔ اجتماعی"], ["inequality", "نابرابری و تحرک"], ["economy", "اقتصاد و بازار"], ["institutions", "نهادها و دولت"], ["collective", "کنش جمعی و جنبش‌ها"], ["values", "ارزش‌ها، دین و نسل‌ها"], ["space", "شهر، مهاجرت و شبکه"], ["demography", "جمعیت"]];
 const PAGE=30;let shown=PAGE;
 const st=Object.assign({q:"",f:"",t:"",fl:"",s:"rel"},DS.hash.get());
 const all=D.concepts.filter(c=>c.w===FAM);
