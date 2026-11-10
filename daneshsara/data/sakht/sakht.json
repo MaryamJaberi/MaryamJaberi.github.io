@@ -102,6 +102,63 @@
    "year": 2026,
    "tier": 4,
    "url": "https://github.com/IranAzadAbad/ideas/discussions"
+  },
+  "iddrs": {
+   "cite": "United Nations، Integrated Disarmament, Demobilization and Reintegration Standards (IDDRS)",
+   "year": 2019,
+   "tier": 2,
+   "url": "https://www.unddr.org/the-iddrs/"
+  },
+  "akerlof91": {
+   "cite": "Akerlof, Rose, Yellen & Hessenius، East Germany in from the Cold: The Economic Aftermath of Currency Union، Brookings Papers on Economic Activity 1991(1)",
+   "year": 1991,
+   "tier": 2
+  },
+  "stiglitz02": {
+   "cite": "Stiglitz، Globalization and Its Discontents، W. W. Norton (فصل‌های گذار روسیه)",
+   "year": 2002,
+   "tier": 3
+  },
+  "mian12": {
+   "cite": "Mian & Sufi، The Effects of Fiscal Stimulus: Evidence from the 2009 Cash for Clunkers Program، Quarterly Journal of Economics 127(3)",
+   "year": 2012,
+   "tier": 2
+  },
+  "unep09": {
+   "cite": "UNEP، From Conflict to Peacebuilding: The Role of Natural Resources and the Environment",
+   "year": 2009,
+   "tier": 2
+  },
+  "ostrom90": {
+   "cite": "Ostrom، Governing the Commons: The Evolution of Institutions for Collective Action، Cambridge University Press",
+   "year": 1990,
+   "tier": 3
+  },
+  "ross12": {
+   "cite": "Ross، The Oil Curse: How Petroleum Wealth Shapes the Development of Nations، Princeton University Press",
+   "year": 2012,
+   "tier": 3
+  },
+  "berkeley": {
+   "cite": "UN OHCHR & Human Rights Center, UC Berkeley، Berkeley Protocol on Digital Open Source Investigations",
+   "year": 2022,
+   "tier": 2
+  },
+  "fld": {
+   "cite": "Front Line Defenders، Workbook on Security: Practical Steps for Human Rights Defenders at Risk",
+   "year": 2011,
+   "tier": 3
+  },
+  "eff": {
+   "cite": "Electronic Frontier Foundation، Surveillance Self-Defense",
+   "year": null,
+   "tier": 3,
+   "url": "https://ssd.eff.org"
+  },
+  "iso22319": {
+   "cite": "ISO 22319: Security and resilience — Community resilience — Guidelines for planning the involvement of spontaneous volunteers",
+   "year": 2017,
+   "tier": 2
   }
  },
  "organs": [
@@ -502,6 +559,55 @@
     "soc:misbelief-distrust-spiral",
     "soc:miracle-rumor-diffusion"
    ]
+  },
+  {
+   "k": "جرم سازمان‌یافته و شبکه‌های قاچاق",
+   "p": "زیاد",
+   "s": "زیاد",
+   "speed": "تدریجی",
+   "signs": "پر شدن جای خالی دولت با باج‌گیری محلی، قاچاق سوخت و مواد، خرید مأموران.",
+   "prevent": "راه بازگشت قانونی برای بدنهٔ این شبکه‌ها (شغل، آموزش، عفو مشروط برای جرم‌های غیرخشن) و تمرکز پیگرد بر سران و جرم‌های خشن.",
+   "respond": "قطع منابع مالی پیش از درگیری؛ برنامهٔ بازپیوند زیر نظر مددکاران، نه فقط پلیس.",
+   "src": [
+    "iddrs",
+    "wdr11"
+   ],
+   "wiki": [
+    "tarikh:ayyarun-class"
+   ]
+  },
+  {
+   "k": "غارت منابع طبیعی",
+   "p": "زیاد",
+   "s": "زیاد",
+   "speed": "تدریجی تا ناگهانی",
+   "signs": "برداشت بی‌مجوز آب، معدن، جنگل و زمین در دورهٔ بی‌نظارتی؛ واگذاری شتاب‌زدهٔ امتیازها.",
+   "prevent": "توقف موقت واگذاری‌های تازه در دورهٔ گذار؛ ثبت علنی قراردادها؛ سپردن نگهبانی منابع مشترک به خود جامعهٔ محلی.",
+   "respond": "مستندسازی امن و بازبینی قراردادها پس از تثبیت؛ جبران و احیا.",
+   "src": [
+    "unep09",
+    "ostrom90",
+    "ross12"
+   ],
+   "wiki": [
+    "soc:institutional-erosion-blessings-curse"
+   ]
+  },
+  {
+   "k": "فروپاشی صنایع ناکارآمد و بیکاری انبوه",
+   "p": "زیاد",
+   "s": "زیاد",
+   "speed": "چند ماه",
+   "signs": "باز شدن واردات، افت ناگهانی فروش تولید داخلی، تعطیلی زنجیره‌ای کارخانه‌ها.",
+   "prevent": "باز کردن تدریجی و اعلام‌شدهٔ بازار؛ بیمهٔ بیکاری و بازآموزی پیش از تعطیلی، نه پس از آن.",
+   "respond": "حمایت از کارگر، نه از کارخانه؛ دسته‌بندی بنگاه‌ها به ماندنی، اصلاح‌شدنی و بستنی.",
+   "src": [
+    "akerlof91",
+    "stiglitz02"
+   ],
+   "wiki": [
+    "soc:institutions-inclusive"
+   ]
   }
  ],
  "risk_note": "ستون‌های «احتمال» و «شدت» برآورد ویراستار است بر پایهٔ تجربه‌های مستند گذار در کشورهای دیگر، نه اندازه‌گیری یا پیش‌بینی برای ایران. کار کارشناسان این است که این برآوردها را نقد و اصلاح کنند.",
@@ -697,5 +803,69 @@
   "صد روز نخست",
   "یک تا سه سال",
   "یک نسل (۱۵ تا ۳۰ سال)"
+ ],
+ "legacy_note": "چهار خانهٔ این نمودار چارچوب ویراستار برای فکر کردن است، نه یافتهٔ یک پژوهش. جای هر مورد را کارشناس همان حوزه باید تعیین کند.",
+ "legacy": [
+  {
+   "k": "کالاهای مصرفی قدیمی",
+   "ex": "خودروهای قدیمی داخلی، لوازم خانگی پرمصرف",
+   "q": "replace",
+   "body": "با باز شدن بازار کسی کالای قدیمی نمی‌خرد، ولی میلیون‌ها دستگاه در دست مردم است و دارایی خانواده‌هاست. تجربهٔ طرح اسقاط خودرو در آمریکا (۲۰۰۹) نشان داد یارانهٔ اسقاط بیشتر خریدها را چند ماه جلو می‌اندازد تا اینکه خرید تازه بسازد؛ پس جایگزینی باید تدریجی و با هدف ایمنی و آلودگی باشد، نه تحریک بازار.",
+   "src": [
+    "mian12"
+   ],
+   "wiki": []
+  },
+  {
+   "k": "کارخانه‌ها و صنایع",
+   "ex": "بنگاه‌هایی که فقط پشت دیوار تعرفه سرپا هستند",
+   "q": "triage",
+   "body": "آلمان شرقی پس از اتحاد پولی ۱۹۹۰ نشان داد بیشتر صنعتِ محافظت‌شده با قیمت و دستمزد تازه دوام نمی‌آورد. روسیه نشان داد خصوصی‌سازی شتاب‌زده بدون نهاد ناظر، دارایی عمومی را به دست گروهی کوچک می‌دهد. درس مشترک: اول دسته‌بندی، بعد تصمیم؛ و حمایت از کارگر، نه از بنگاه. سرعت درست خصوصی‌سازی میان اقتصاددانان محل مناقشه است.",
+   "src": [
+    "akerlof91",
+    "stiglitz02"
+   ],
+   "wiki": [
+    "soc:institutions-inclusive"
+   ],
+   "flag": "محل مناقشه"
+  },
+  {
+   "k": "فناوری‌ها و دستگاه‌ها",
+   "ex": "نرم‌افزارهای بومیِ اجباری، تجهیزات فرسودهٔ بیمارستان و شبکه",
+   "q": "keep",
+   "body": "هر چیزِ قدیمی دورریختنی نیست. دستگاهی که کار می‌کند تا رسیدن جایگزین باید سرپا بماند؛ کنار گذاشتن یک‌شبه همان خلأیی را می‌سازد که انحلال یک‌شبهٔ نهادها.",
+   "src": [
+    "sigir09"
+   ],
+   "wiki": [
+    "soc:institutions-as-social-memory"
+   ]
+  },
+  {
+   "k": "نیروی انسانیِ بی‌تخصص و رانتی",
+   "ex": "کسانی که با رابطه استخدام شده‌اند نه با شایستگی",
+   "q": "retrain",
+   "body": "قاعده همان قاعدهٔ گزینش است: رسیدگی فرد به فرد. کسی که جرمی نکرده ولی صلاحیت ندارد، بازآموزی یا جابه‌جایی می‌خواهد، نه مجازات. اخراج گروهی هم ناعادلانه است و هم ادارهٔ کشور را از کار می‌اندازد.",
+   "src": [
+    "ohchr-vet"
+   ],
+   "wiki": [
+    "soc:fromm-bureaucratic-obedience-eichmann"
+   ]
+  },
+  {
+   "k": "کسانی که سابقهٔ جرم دارند",
+   "ex": "اعضای ردهٔ پایین شبکه‌های قاچاق و باج‌گیری",
+   "q": "retrain",
+   "body": "استانداردهای سازمان ملل برای بازپیوند می‌گویند بدنه را باید از سران جدا کرد: برای بدنه راه بازگشت (شغل، آموزش، پذیرش در محله) و برای سران و جرم‌های خشن پیگرد قانونی. کسی که راه برگشت ندارد، به شبکه برمی‌گردد.",
+   "src": [
+    "iddrs"
+   ],
+   "wiki": [
+    "tarikh:ayyarun-class",
+    "soc:collective-trauma-justice-revenge"
+   ]
+  }
  ]
 }

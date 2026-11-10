@@ -11,7 +11,7 @@ W = json.load(open('data/sakht/work.json', encoding='utf-8'))
 SK = json.load(open('data/sakht/sakht.json', encoding='utf-8'))
 reg = json.load(open('core/registry.json', encoding='utf-8'))['stats']
 ST = {'open': ('جای خالی', 'o'), 'talk': ('در گفت‌وگو', 't'), 'has': ('یک نفر هست؛ نفر دوم خوش‌آمد', 'h')}
-AT = {'organs': 'نهادهای ضروری', 'transition': 'دوران گذار', 'risks': 'دفتر ریسک', 'digital': 'زیرساخت دیجیتال', 'ideas': 'ایده‌ها', 'links': 'پیوند به ویکی‌ها', 'sources': 'منابع'}
+AT = {'organs': 'نهادهای ضروری', 'transition': 'دوران گذار', 'risks': 'دفتر ریسک', 'digital': 'زیرساخت دیجیتال', 'ideas': 'ایده‌ها', 'links': 'پیوند به ویکی‌ها', 'legacy': 'میراث ناکارآمد', 'sources': 'منابع'}
 seats = W['seats']; ntask = sum(len(s['tasks']) for s in seats)
 cnt = {k: sum(1 for s in seats if s['st'] == k) for k in ST}
 
@@ -131,7 +131,7 @@ footer.f{{border-top:1px solid var(--line);padding-block:var(--s5);font-size:var
 <h2>کل پروژه کجاست</h2>
 <p class="sub">هیچ بخشی هنوز از بازبینی متخصص نگذشته است؛ همه‌چیز پیش‌نویس است.</p>
 <ul class="str">{streams}</ul>
-<div class="go"><a href="../atlas/coverage.html">نقشهٔ پوشش و نقشهٔ راه ←</a><a href="index.html">صفحهٔ ساخت ایران ←</a><a href="../atlas/story.html">داستان کل پروژه و کمبودها ←</a><a href="../atlas/sitemap.html">نقشهٔ سایت ←</a></div>
+<div class="go"><a href="day.html">روز بعد ←</a><a href="../atlas/coverage.html">نقشهٔ پوشش و نقشهٔ راه ←</a><a href="index.html">صفحهٔ ساخت ایران ←</a><a href="../atlas/story.html">داستان کل پروژه و کمبودها ←</a><a href="../atlas/sitemap.html">نقشهٔ سایت ←</a></div>
 </section>
 
 <section class="b" id="log">

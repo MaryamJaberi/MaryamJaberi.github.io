@@ -78,6 +78,12 @@ matrix = f'<div class="mx" dir="ltr"><div class="mxg">{cells}</div><div class="m
 risks = ''.join(f'''<details class="risk" id="r{n}"><summary><i class="rn">{fa(n)}</i><b>{E(r["k"])}</b><span class="meta">احتمال {pill(r["p"])} شدت {pill(r["s"])}<em>{E(r["speed"])}</em></span></summary>
 <div class="r3"><div><h4>نشانه‌های هشدار</h4><p>{E(r["signs"])}</p></div><div><h4>پیشگیری</h4><p>{E(r["prevent"])}</p></div><div><h4>واکنش سریع</h4><p>{E(r["respond"])} {refs(r["src"])}</p></div></div>{wiki(r["wiki"])}</details>''' for n, r in enumerate(risks_sorted, 1))
 
+# ---- legacy: what to keep, retrain, replace, sort (editor's frame, said so on the page)
+QN = [('keep', 'نگه‌دار تا جایگزین برسد', 'کار می‌کند؛ کنار گذاشتن یک‌شبه خلأ می‌سازد'), ('retrain', 'بازآموزی و راه بازگشت', 'آدم‌ها؛ رسیدگی فرد به فرد'),
+      ('replace', 'جایگزینی تدریجی', 'دارایی مردم است؛ با هدف ایمنی و آلودگی'), ('triage', 'اول دسته‌بندی، بعد تصمیم', 'ماندنی، اصلاح‌شدنی، بستنی')]
+quad = ''.join(f'<div class="qd q-{q}"><b>{t}</b><small>{d}</small>' + ''.join(f'<a href="#lg{i}">{E(x["k"])}</a>' for i, x in enumerate(D['legacy']) if x['q'] == q) + '</div>' for q, t, d in QN)
+legacy = ''.join(f'<article class="card" id="lg{i}"><h3>{E(x["k"])}{" <span class=flag>" + E(x["flag"]) + "</span>" if x.get("flag") else ""}</h3><p class="what">{E(x["ex"])}</p><p>{E(x["body"])} {refs(x["src"])}</p>{wiki(x["wiki"])}</article>' for i, x in enumerate(D['legacy']))
+
 # ---- 4 · digital: schematic of the data-exchange pattern
 inst = ['ثبت احوال', 'مالیات', 'سلامت', 'بانک', 'شهرداری']
 arch = f'''<figure class="arch"><div class="a1">شهروند</div><div class="ar">↓ یک ورود برای همهٔ خدمات</div>
@@ -191,7 +197,12 @@ p.sub{{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(
 .a4 span{{border:1px solid var(--line-strong);border-radius:var(--r-sm);padding:10px 2px;font-size:var(--chip);background:var(--surface)}}
 .ar{{color:var(--ink-3);font-size:var(--chip);padding:0!important}}
 .arch figcaption{{font-size:var(--chip);color:var(--ink-3);line-height:1.8;text-align:start;margin-top:var(--s2)}}
-.cards{{display:grid;gap:var(--s3)}}
+.cards{{display:grid;gap:var(--s3)}}.cards.two{{grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}}.card p.what{{color:var(--ink);font-weight:550}}.card:target{{border-color:var(--c);box-shadow:0 0 0 2px var(--c)}}
+.quad{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;max-width:44em;margin-bottom:var(--s4)}}
+.qd{{padding:var(--s3) var(--s4);border-radius:var(--r-md);border:1px solid var(--line-strong);display:grid;gap:4px;align-content:start;min-height:108px;background:var(--surface)}}
+.qd b{{font-size:var(--small)}}.qd small{{font-size:var(--chip);color:var(--ink-3);line-height:1.6}}
+.qd a{{justify-self:start;font-size:var(--chip);padding:2px 11px;border-radius:var(--r-full);background:var(--c);color:var(--paper);text-decoration:none;margin-top:2px}}
+.q-keep{{border-top:3px solid var(--ok)}}.q-retrain{{border-top:3px solid var(--primary)}}.q-replace{{border-top:3px solid var(--warn)}}.q-triage{{border-top:3px solid var(--err)}}
 .card{{padding:var(--s4) var(--s5);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);min-width:0}}
 .card p.now{{border-top:1px dashed var(--line-strong);padding-top:var(--s2);margin-bottom:0}}
 /* ideas */
@@ -217,11 +228,12 @@ footer.f a{{color:var(--ink-2);margin-inline-end:var(--s4)}}
 <main class="wrap">
 <h1>ساخت ایران: کشور را چه چیزی سر پا نگه می‌دارد</h1>
 <p class="lead">سه لایهٔ پایین می‌پرسند آدم و جامعه چطور کار می‌کنند، ایران کجا ایستاده و راه نجات چیست. این لایه می‌پرسد روز بعد چه باید آماده باشد. همه‌چیز بر پایهٔ تجربهٔ مستند کشورهای دیگر است، نه آرزو.</p>
-<p class="cta"><a href="work.html">متخصص هستید؟ ببینید کجا به شما نیاز داریم ←</a> <a class="g2" href="../atlas/coverage.html">نقشهٔ پوشش ۲۰ حوزه ←</a></p>
+<p class="cta"><a href="work.html">متخصص هستید؟ ببینید کجا به شما نیاز داریم ←</a> <a class="g2" href="day.html">روز بعد: چه کسی چه کار کند ←</a> <a class="g2" href="../atlas/coverage.html">نقشهٔ پوشش ۲۰ حوزه ←</a></p>
 <nav class="glance" aria-label="بخش‌ها">
 <a href="#organs"><b>{fa(len(D["organs"]))}</b><span>کارکرد ضروری</span></a>
 <a href="#transition"><b>{fa(len(D["transition"]))}</b><span>درس دوران گذار</span></a>
 <a href="#risks"><b>{fa(len(D["risks"]))}</b><span>ریسک</span></a>
+<a href="#legacy"><b>{fa(len(D["legacy"]))}</b><span>میراث ناکارآمد</span></a>
 <a href="#digital"><b>{fa(len(D["digital"]))}</b><span>زیرساخت دیجیتال</span></a>
 <a href="#ideas"><b>{fa(len(D["ideas"]))}</b><span>ایده</span></a>
 <a href="#sources"><b>{fa(len(SRC))}</b><span>منبع</span></a>
@@ -247,14 +259,22 @@ footer.f a{{color:var(--ink-2);margin-inline-end:var(--s4)}}
 <div>{risks}</div></div>
 </section>
 
+<section id="legacy">
+<h2><b>۴</b> · میراث ناکارآمد</h2>
+<p class="sub">مشکل‌های پنهانِ روز بعد: کالا، کارخانه، دستگاه و آدم‌هایی که در نظم قدیم جا افتاده‌اند. نه همه دورریختنی‌اند و نه همه ماندنی.</p>
+<p class="note">{E(D["legacy_note"])}</p>
+<div class="quad">{quad}</div>
+<div class="cards two">{legacy}</div>
+</section>
+
 <section id="digital">
-<h2><b>۴</b> · زیرساخت دیجیتال</h2>
+<h2><b>۵</b> · زیرساخت دیجیتال</h2>
 <p class="sub">چیزهایی که صدورشان به دولت نیاز دارد ولی طراحی‌شان نه.</p>
 <div class="dw">{arch}<div class="cards">{digital}</div></div>
 </section>
 
 <section id="ideas">
-<h2><b>۵</b> · ایده‌ها</h2>
+<h2><b>۶</b> · ایده‌ها</h2>
 <p class="note">{E(D["ideas_note"])} {refs(["iaa"])}</p>
 <div class="cats">{catchips}</div>
 <p class="sub">طول هر نوار تعداد رأی در خود مخزن است ({fa(len(D["ideas"]))} ایدهٔ صفحهٔ نخست از حدود ۳۰۰).</p>
