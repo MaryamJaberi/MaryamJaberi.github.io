@@ -8500,12 +8500,18 @@
   "label": "متن کلاسیک فلسفهٔ سیاسی؛ منبع اولیه برای اندیشهٔ هابز.",
   "best": "برای فهم استدلال خود هابز دربارهٔ حاکمیت؛ نه برای داوری تجربی دربارهٔ دولت‌ها.",
   "cautions": [],
-  "reasons": [],
+  "reasons": [
+   "متن اصلی هابز (۱۶۵۱) با مقدمهٔ مکفرسون؛ منبع اولیه است، نه پژوهش تجربی."
+  ],
   "decision": "add",
   "why": "متن اصلی هابز؛ برای ویکی فلسفه و بخش دولت در «ساخت ایران».",
   "imported": true,
   "entries": [
-   "phil:hobbes-diseases-of-the-commonwealth"
+   {
+    "id": "hobbes-diseases-of-the-commonwealth",
+    "t": "هابز: بیماری‌هایی که دولت را از درون ویران می‌کند (لویاتان، فصل ۲۹)",
+    "u": "phil/#hobbes-diseases-of-the-commonwealth"
+   }
   ],
   "read_note": "۲۰ آبان ۱۴۰۵: فصل ۲۹ (ص ۲۹۲–۳۰۱) از متن کامل خوانده شد؛ مدخل phil:hobbes-diseases-of-the-commonwealth. بقیهٔ ۵۶۱ صفحه مانده."
  }
