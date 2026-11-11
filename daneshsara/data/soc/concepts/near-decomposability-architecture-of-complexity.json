@@ -1,0 +1,111 @@
+{
+ "aliases": [
+  "near-decomposability",
+  "تجزیه‌پذیری نسبی",
+  "Hora and Tempus",
+  "ماژولار",
+  "modularity",
+  "سلسله‌مراتب"
+ ],
+ "people": [],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "id": "soc:near-decomposability-architecture-of-complexity",
+ "kind": "concept",
+ "title": {
+  "fa": "معماری پیچیدگی: سلسله‌مراتب و تجزیه‌پذیری نسبی",
+  "en": "The architecture of complexity: hierarchy and near-decomposability",
+  "nl": "De architectuur van complexiteit: hiërarchie en bijna-ontleedbaarheid"
+ },
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "هربرت سایمون در ۱۹۶۲ استدلال کرد که سامانه‌های پیچیدهٔ پایدار تقریباً همیشه لایه‌لایه‌اند: از زیرسامانه‌هایی ساخته شده‌اند که خود از زیرسامانه‌های کوچک‌تر ساخته شده‌اند. پیوندهای درون هر واحد قوی و پیوندهای میان واحدها ضعیف‌تر است، و همین ساختار است که ساختن، فهمیدن و تعمیر سامانه را شدنی می‌کند.",
+  "en": "Herbert Simon argued in 1962 that stable complex systems are almost always layered: built of subsystems that are themselves built of smaller subsystems. Links inside each unit are strong and links between units are weaker, and this structure is what makes a system possible to build, understand and repair.",
+  "nl": "Herbert Simon betoogde in 1962 dat stabiele complexe systemen bijna altijd gelaagd zijn: opgebouwd uit subsystemen die zelf uit kleinere subsystemen bestaan. Verbindingen binnen elke eenheid zijn sterk en verbindingen tussen eenheden zwakker, en die structuur maakt het mogelijk een systeem te bouwen, te begrijpen en te repareren."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "تمثیل او دو ساعت‌ساز است، هورا و تمپوس، که هر دو ساعت‌هایی هزارقطعه‌ای می‌سازند و مدام با زنگ تلفن مشتری از کار باز می‌مانند. تمپوس ساعت را یک‌تکه سوار می‌کند و با هر وقفه همهٔ کار نیمه‌تمام از هم می‌پاشد. هورا زیرمجموعه‌های ده‌قطعه‌ایِ پایدار می‌سازد و با هر وقفه فقط همان زیرمجموعهٔ در دست را از دست می‌دهد. هورا کامیاب می‌شود و تمپوس ورشکست.",
+    "en": "His parable is two watchmakers, Hora and Tempus, who both build watches of a thousand parts and are constantly interrupted by customers phoning. Tempus assembles the watch in one piece, and with each interruption the whole unfinished assembly falls apart. Hora builds stable sub-assemblies of ten parts and loses only the one in hand at each interruption. Hora prospers and Tempus goes out of business.",
+    "nl": "Zijn parabel gaat over twee horlogemakers, Hora en Tempus, die beiden horloges van duizend onderdelen bouwen en voortdurend door bellende klanten worden gestoord. Tempus zet het horloge in één stuk in elkaar, en bij elke onderbreking valt het hele onaffe geheel uiteen. Hora bouwt stabiele deelsamenstellingen van tien onderdelen en verliest bij elke onderbreking alleen wat hij in handen heeft. Hora floreert en Tempus gaat failliet."
+   },
+   "sources": [
+    "src:5f78e2db81"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نتیجهٔ سایمون: سامانهٔ پیچیده از سامانهٔ ساده بسیار تندتر پدید می‌آید اگر شکل‌های میانیِ پایدار در راه باشد. به گمان او برای همین است که در طبیعت و جامعه سلسله‌مراتب این‌همه دیده می‌شود. آنچه بی‌چنین پله‌هایی ساخته شود با نخستین اختلال فرو می‌ریزد.",
+    "en": "Simon's conclusion: a complex system evolves from a simple one far faster if there are stable intermediate forms along the way. In his view this is why hierarchy is so common in nature and society. Whatever is built without such steps collapses at the first disturbance.",
+    "nl": "Simons conclusie: een complex systeem ontstaat veel sneller uit een eenvoudig systeem als er onderweg stabiele tussenvormen zijn. Volgens hem is dat de reden dat hiërarchie in natuur en samenleving zo vaak voorkomt. Wat zonder zulke treden wordt gebouwd, stort bij de eerste verstoring in."
+   },
+   "sources": [
+    "src:5f78e2db81"
+   ]
+  },
+  {
+   "text": {
+    "fa": "تجزیه‌پذیری نسبی دو پیامد دارد. در کوتاه‌مدت هر زیرسامانه را می‌توان تقریباً جدا از بقیه بررسی کرد. در بلندمدت بقیهٔ سامانه فقط به‌صورت کلی و انباشته بر آن اثر می‌گذارد. برای همین می‌توان یک اداره، یک اندام یا یک فصل کتاب را فهمید بی‌آنکه همهٔ جزئیات کل را دانست.",
+    "en": "Near-decomposability has two consequences. In the short run each subsystem can be studied almost in isolation from the rest. In the long run the rest of the system affects it only in an aggregate way. That is why one can understand a department, an organ or a chapter without knowing every detail of the whole.",
+    "nl": "Bijna-ontleedbaarheid heeft twee gevolgen. Op korte termijn kan elk subsysteem vrijwel los van de rest worden bestudeerd. Op lange termijn beïnvloedt de rest van het systeem het alleen op geaggregeerde wijze. Daarom kan men een afdeling, een orgaan of een hoofdstuk begrijpen zonder elk detail van het geheel te kennen."
+   },
+   "sources": [
+    "src:5f78e2db81"
+   ]
+  },
+  {
+   "text": {
+    "fa": "کاربرد برای طراحی یک کار بزرگ، برداشت ویراستار: آن را به واحدهایی بشکنید که هرکدام به‌تنهایی کار کند و اگر بقیه متوقف شد سر پا بماند، و پیوند میان واحدها را کم و روشن نگه دارید. این برداشت از سایمون است و او دربارهٔ برنامه‌ریزی اجتماعی چنین حکمی نداده است.",
+    "en": "An application to designing a large undertaking, in the editor's reading: break it into units that each work on their own and survive if the rest stalls, and keep the links between units few and explicit. This is an inference from Simon; he made no such ruling about social planning.",
+    "nl": "Een toepassing op het ontwerpen van een grote onderneming, in de lezing van de redactie: verdeel haar in eenheden die elk op zichzelf werken en overeind blijven als de rest stilvalt, en houd de verbindingen tussen eenheden schaars en expliciet. Dit is een gevolgtrekking uit Simon; hij deed geen dergelijke uitspraak over sociale planning."
+   },
+   "sources": [
+    "src:5f78e2db81"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این مدخل از دانستهٔ پیشین ویراستار دربارهٔ منبع اصلی نوشته شده است، نه از بازخوانی متن در همین پروژه. عددها و جزئیات پیش از تأیید باید با اصل منبع سنجیده شوند.",
+    "en": "This entry is written from the editor's prior knowledge of the original source, not from a reading of the text within this project. Figures and details should be checked against the source before review.",
+    "nl": "Dit lemma is geschreven vanuit de voorkennis van de redactie over de oorspronkelijke bron, niet op basis van een lezing van de tekst binnen dit project. Cijfers en details moeten vóór beoordeling met de bron worden vergeleken."
+   },
+   "sources": [
+    "src:5f78e2db81"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:emergence-more-is-different",
+   "rel": "part-of",
+   "note": {
+    "fa": "سطح‌های سازمان",
+    "en": "Levels of organisation",
+    "nl": "Organisatieniveaus"
+   }
+  },
+  {
+   "to": "soc:spontaneous-institutions-vs-social-engineering",
+   "rel": "see-also",
+   "note": {
+    "fa": "ساختن گام‌به‌گام در برابر طرح یک‌جا",
+    "en": "Building step by step versus one grand design",
+    "nl": "Stap voor stap bouwen tegenover één groot ontwerp"
+   }
+  }
+ ],
+ "sources": [
+  "src:5f78e2db81"
+ ]
+}
