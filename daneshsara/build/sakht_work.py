@@ -22,6 +22,14 @@ try:
 except Exception:
     log = []
 
+_cats = sorted({i['c'] for i in SK['ideas']})
+def seat_ideas(s):
+    cs = [c for c in s.get('cats', []) if c in _cats]
+    if not cs: return ''
+    its = sorted([i for i in SK['ideas'] if i['c'] in cs], key=lambda i: -i.get('v', 0))
+    links = '، '.join(f'<a href="index.html#ic{_cats.index(c)}">{E(c)} ({fa(sum(1 for i in its if i["c"] == c))})</a>' for c in cs)
+    top = ''.join('<li>' + (f'<a href="https://github.com/IranAzadAbad/ideas/discussions/{i["n"]}" rel="noopener">{E(i["t"])}</a>' if i.get('n') else E(i['t'])) + f' <em>{fa(i.get("v", 0))} رأی</em></li>' for i in its[:3])
+    return f'<div class="sid"><p>ایده‌های مردم که به این صندلی می‌رسد: {links}. پررأی‌ترین‌ها:</p><ul>{top}</ul></div>'
 seatmap = ''.join(f'<a class="sm {ST[s["st"]][1]}" href="#{s["id"]}"><b>{E(s["k"])}</b><span>{ST[s["st"]][0].split("؛")[0]}</span><em>{fa(len(s["tasks"]))} مسئله</em></a>' for s in seats)
 def task(t, s):
     at = f'<a href="index.html#{t["at"]}">{AT[t["at"]]} ←</a>' if t.get('at') else ''
@@ -30,7 +38,7 @@ def task(t, s):
 <dl><dt>مسئله</dt><dd>{E(t["prob"])}</dd><dt>چه داریم</dt><dd>{E(t["have"])} {at}</dd><dt>چه می‌خواهیم</dt><dd>{E(t["need"])}</dd></dl>
 <button type="button" class="cp" data-t="{E(tpl)}">این را برمی‌دارم: کپی متن آماده</button></article>'''
 briefs = ''.join(f'''<section class="seat" id="{s["id"]}"><div class="sh"><h3>{E(s["k"])}</h3><span class="st {ST[s["st"]][1]}">{ST[s["st"]][0]}</span></div>
-<p class="who">{E(s["who"])}</p><p class="why">{E(s["why"])}</p><p class="fst">از کجا شروع کنم؟ <a href="#{s["first"]}">{s["first"]} · {E(next(t["t"] for t in s["tasks"] if t["id"] == s["first"]))}</a> کوچک‌ترین و مستقل‌ترین مسئلهٔ این صندلی است. نقش شما در سیمرغ: <a href="{SIM}gam.html#{s["sim"]["a"]}">کارت «{E(s["sim"]["t"])}» ↗</a>، و اگر خارج از ایران‌اید <a href="{SIM}gam.html#mohajer">«مهاجر و خارج‌نشین» ↗</a>.</p><div class="tasks">{''.join(task(t, s) for t in s["tasks"])}</div></section>''' for s in seats)
+<p class="who">{E(s["who"])}</p><p class="why">{E(s["why"])}</p><p class="fst">از کجا شروع کنم؟ <a href="#{s["first"]}">{s["first"]} · {E(next(t["t"] for t in s["tasks"] if t["id"] == s["first"]))}</a> کوچک‌ترین و مستقل‌ترین مسئلهٔ این صندلی است. نقش شما در سیمرغ: <a href="{SIM}gam.html#{s["sim"]["a"]}">کارت «{E(s["sim"]["t"])}» ↗</a>، و اگر خارج از ایران‌اید <a href="{SIM}gam.html#mohajer">«مهاجر و خارج‌نشین» ↗</a>.</p>{seat_ideas(s)}<div class="tasks">{''.join(task(t, s) for t in s["tasks"])}</div></section>''' for s in seats)
 NS = len(W['stages']) - 1
 streams = ''.join(f'<li><span>{E(x["k"])}</span><span class="bar" role="img" aria-label="{W["stages"][x["stage"]]}">{"".join(f"<i class={chr(34)}on{chr(34)}></i>" if i <= x["stage"] and x["stage"] > 0 and i > 0 else "<i></i>" for i in range(1, NS + 1))}</span><em>{W["stages"][x["stage"]]}</em></li>' for x in W['streams'])
 changes = ''.join(f'<li><time>{fa(d)}</time>{E(m)}</li>' for d, m in log)
@@ -66,6 +74,10 @@ p.sub{{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(
 .steps li::before{{content:counter(s,persian);display:grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:var(--c);color:var(--paper);font-weight:650;margin-bottom:6px}}
 .steps b{{color:var(--ink)}}
 .note{{padding:var(--s3) var(--s4);border-radius:var(--r-md);background:color-mix(in srgb,var(--warn) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--warn) 40%,var(--line));font-size:var(--small);line-height:1.9;color:var(--ink-2);max-width:60em;margin:var(--s4) 0 0}}
+.sid{{font-size:var(--fs-sm);color:var(--text-muted);margin-block:var(--s2)}}
+.sid p{{margin:0}}
+.sid ul{{margin:4px 0 0;padding-inline-start:1.4em}}
+.sid a{{color:inherit}}
 .seat{{padding-block:var(--s5);border-top:1px dashed var(--line-strong);scroll-margin-top:8px}}
 .seat:target{{background:color-mix(in srgb,var(--c) 6%,transparent);box-shadow:0 0 0 12px color-mix(in srgb,var(--c) 6%,transparent);border-radius:var(--r-md)}}
 .sh{{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}}.sh h3{{margin:0;font-size:var(--h4)}}

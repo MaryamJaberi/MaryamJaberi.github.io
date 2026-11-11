@@ -101,7 +101,10 @@ bars = ''.join(f'<li><span class="it">{ititle(x)}</span><span class="ic">{E(x["c
 bycat = collections.defaultdict(list)
 for x in ideas_sorted: bycat[x['c']].append(x)
 cmax = max(len(v) for v in bycat.values())
-allideas = ''.join(f'<details class="icat"><summary><span>{E(c)}</span><i><b style="width:{len(v) / cmax * 100:.0f}%"></b></i><em>{fa(len(v))} ایده · {fa(sum(x["v"] for x in v))} رأی</em></summary><ul>' + ''.join(f'<li>{ititle(x)} <em>' + ('رأی نامعلوم' if x.get('vu') else f'{fa(x["v"])} رأی، {fa(x["m"])} نظر') + '</em>' + (f'<p class="isum">{E(x["s"])}</p>' if x.get('s') else '') + '</li>' for x in v) + '</ul></details>' for c, v in sorted(bycat.items(), key=lambda kv: -len(kv[1])))
+_W = json.load(open('data/sakht/work.json', encoding='utf-8'))
+_cats = sorted(bycat)
+def _seats(c): return ''.join(f' <a class="sq" href="work.html#{s["id"]}">{E(s["k"])}</a>' for s in _W['seats'] if c in s.get('cats', []))
+allideas = ''.join(f'<details class="icat" id="ic{_cats.index(c)}"><summary><span>{E(c)}</span><i><b style="width:{len(v) / cmax * 100:.0f}%"></b></i><em>{fa(len(v))} ایده · {fa(sum(x["v"] for x in v))} رأی</em></summary>' + (f'<p class="sqs">صندلی‌هایی که این دسته را بررسی می‌کنند:{_seats(c)}</p>' if _seats(c) else '') + '<ul>' + ''.join(f'<li>{ititle(x)} <em>' + ('رأی نامعلوم' if x.get('vu') else f'{fa(x["v"])} رأی، {fa(x["m"])} نظر') + '</em>' + (f'<p class="isum">{E(x["s"])}</p>' if x.get('s') else '') + '</li>' for x in v) + '</ul></details>' for c, v in sorted(bycat.items(), key=lambda kv: -len(kv[1])))
 cats = collections.Counter(x['c'] for x in D['ideas'])
 catchips = ''.join(f'<span class="chip">{E(c)} <b>{fa(n)}</b></span>' for c, n in cats.most_common())
 
@@ -221,6 +224,9 @@ details.icat{{border:1px solid var(--line);border-radius:var(--r-md);background:
 details.icat summary{{display:grid;grid-template-columns:9em minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 14px;cursor:pointer;list-style:none}}
 details.icat summary::-webkit-details-marker{{display:none}}
 details.icat summary span{{font-weight:650}}
+.sqs{{margin:0;padding:4px 14px 8px;font-size:var(--fs-sm);color:var(--text-muted)}}
+.sq{{display:inline-block;margin-inline-start:6px;padding:1px 8px;border:1px solid var(--line-strong);border-radius:99px;color:inherit;text-decoration:none}}
+details.icat{{scroll-margin-top:8px}}
 details.icat summary i{{height:8px;border-radius:4px;background:var(--surface-subtle);overflow:hidden;display:block;direction:ltr}}
 details.icat summary i b{{display:block;height:100%;background:var(--ok);margin-inline-start:auto}}
 details.icat summary em,details.icat li em{{font-style:normal;font-size:var(--chip);color:var(--ink-3);white-space:nowrap}}
