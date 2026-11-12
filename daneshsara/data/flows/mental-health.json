@@ -1,0 +1,179 @@
+{
+ "id": "mental-health",
+ "order": 7,
+ "status": "draft",
+ "title": "اختلال روانی درمان‌نشده: از انگ تا خانواده",
+ "q": "چرا با وجود شیوع بالا، بیشتر مبتلایان درمان نمی‌شوند و هزینه‌اش به کجا می‌رسد؟",
+ "summary": "حدود ۲۳٫۶٪ بزرگسالان ایرانی در یک سال دست‌کم یک اختلال روانی دارند و استفاده از خدمات کم است. اختلال درمان‌نشده هم رنج فرد است و هم از راه خانواده، کار و خودکشی به جامعه می‌رسد.",
+ "nodes": [
+  {
+   "id": "stigma",
+   "l": 0,
+   "t": "انگ و تابو",
+   "d": "",
+   "wiki": [
+    "psy:stigma"
+   ],
+   "iran": null
+  },
+  {
+   "id": "cost",
+   "l": 0,
+   "t": "هزینه و کمبود متخصص در شهرهای کوچک",
+   "d": "",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "stressors",
+   "l": 0,
+   "t": "فشار اقتصادی و اجتماعی",
+   "d": "",
+   "wiki": [],
+   "iran": "iran:poverty-rate"
+  },
+  {
+   "id": "disorder",
+   "l": 1,
+   "t": "اختلال‌های اضطرابی و خلقی",
+   "d": "۲۳٫۶٪ در یک سال.",
+   "wiki": [
+    "psy:anxiety"
+   ],
+   "iran": "iran:mental-disorder-prevalence"
+  },
+  {
+   "id": "untreated",
+   "l": 2,
+   "t": "درمان نشدن",
+   "d": "",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "family",
+   "l": 3,
+   "t": "والدگری آسیب‌دیده؛ تجربهٔ ناگوار برای کودک",
+   "d": "",
+   "wiki": [
+    "psy:adverse-childhood-experiences"
+   ],
+   "iran": null
+  },
+  {
+   "id": "suicide",
+   "l": 3,
+   "t": "خودکشی",
+   "d": "ثبت ناقص.",
+   "wiki": [],
+   "iran": "iran:suicide-rate"
+  },
+  {
+   "id": "work",
+   "l": 3,
+   "t": "از دست رفتن توان کار",
+   "d": "",
+   "wiki": [],
+   "iran": null
+  }
+ ],
+ "edges": [
+  [
+   "stressors",
+   "disorder",
+   "A",
+   ""
+  ],
+  [
+   "stigma",
+   "untreated",
+   "A",
+   ""
+  ],
+  [
+   "cost",
+   "untreated",
+   "A",
+   ""
+  ],
+  [
+   "disorder",
+   "untreated",
+   "B",
+   ""
+  ],
+  [
+   "untreated",
+   "family",
+   "B",
+   ""
+  ],
+  [
+   "untreated",
+   "suicide",
+   "A",
+   ""
+  ],
+  [
+   "untreated",
+   "work",
+   "A",
+   ""
+  ]
+ ],
+ "loops": [
+  [
+   "family",
+   "stressors",
+   "نسل بعد"
+  ]
+ ],
+ "levers": [
+  {
+   "at": [
+    "cost",
+    "untreated"
+   ],
+   "t": "سلامت روان در مراقبت اولیه و بیمه",
+   "d": "درمان‌های کوتاه با پزشک خانواده و بهورز.",
+   "ev": "A",
+   "cost": "متوسط",
+   "time": "میان",
+   "iran": "ادغام از دههٔ ۱۳۶۰ آغاز شد.",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "stigma"
+   ],
+   "t": "کارزار ضدانگ با روایت افراد شناخته‌شده",
+   "d": "",
+   "ev": "B",
+   "cost": "کم",
+   "time": "کوتاه",
+   "iran": "",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "suicide"
+   ],
+   "t": "محدود کردن دسترسی به وسایل و خط تماس بحران",
+   "d": "",
+   "ev": "A",
+   "cost": "کم",
+   "time": "کوتاه",
+   "iran": "",
+   "precedent": ""
+  }
+ ],
+ "risk": null,
+ "sources": [
+  "Sharifi et al. (2015)",
+  "WHO (2021) Suicide worldwide in 2019"
+ ],
+ "wiki": [
+  "psy:stigma",
+  "psy:anxiety"
+ ]
+}

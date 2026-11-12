@@ -1,0 +1,45 @@
+{
+ "id": "iran:child-sexual-abuse",
+ "domain": "psy",
+ "question": {
+  "fa": "آزار جنسی کودکان در ایران چقدر شایع است و قانون چه می‌گوید؟",
+  "en": "How common is child sexual abuse in Iran, and what does the law say?"
+ },
+ "finding": {
+  "fa": "مرور نظام‌مند (۱۴۰۱): شیوع در پژوهش‌های ایرانی از ۱٫۵ تا ۳۲٫۵٪، بسته به تعریف و نمونه. عوامل خطر: مصرف مواد، سواد پایین، جدایی والدین، فقر و خانوادهٔ پرجمعیت. قانون‌های موجود آزار جنسی کودک را به‌طور مشخص پوشش نمی‌دهند و برنامهٔ ملی پیشگیری اجرا نشده است.",
+  "en": "Systematic review (2022): prevalence in Iranian studies ranged from 1.5% to 32.5% depending on definition and sample. Risk factors: substance use, low literacy, parental separation, poverty, large families. Existing laws do not specifically cover child sexual abuse and no national prevention programme has run."
+ },
+ "year": 2022,
+ "method": "systematic review",
+ "grade": "C",
+ "contested": true,
+ "source": [
+  {
+   "title": "Danaeifar, M., Arshi, M., & Moghanibashi-Mansourieh, A. (2022). Child sexual abuse in Iran: A systematic review of the prevalence, risk factors, consequences, interventions and laws. Journal of Injury and Violence Research, 14(2).",
+   "url": "https://read.qxmd.com/read/35906873/child-sexual-abuse-in-iran-a-systematic-review-of-the-prevalence-risk-factors-consequences-interventions-and-laws"
+  }
+ ],
+ "fields": [
+  "epi"
+ ],
+ "concepts": [
+  "psy:adverse-childhood-experiences",
+  "soc:social-roots-of-childhood-adversity"
+ ],
+ "capability": [
+  3,
+  4
+ ],
+ "viz": {
+  "kind": "none",
+  "note": {
+   "fa": "دامنهٔ ۱٫۵ تا ۳۲٫۵ درصد آن‌قدر گسترده است که رسم یک عدد گمراه‌کننده است؛ همین گستردگی، نشانهٔ نبود ابزار و تعریف مشترک است."
+  }
+ },
+ "roots": {
+  "fa": "تابوی گفت‌وگو دربارهٔ بدن، نبود آموزش مرزهای بدن، ترس از «آبرو»، ازدواج کودک و قانون ناکافی."
+ },
+ "now": {
+  "fa": "در پژوهش‌های دانشجویی گاهی صفر گزارش می‌شود که بیشتر نشانهٔ پنهان‌ماندن است تا نبودن."
+ }
+}

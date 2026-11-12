@@ -1,0 +1,205 @@
+{
+ "id": "family-stress",
+ "order": 4,
+ "status": "draft",
+ "title": "تورم و تحریم تا سفرهٔ خانه: الگوی استرس خانواده",
+ "q": "فشار اقتصاد کلان چگونه به رفتار پدر و مادر با کودک می‌رسد؟",
+ "summary": "الگوی استرس خانواده (کانگر و همکاران) یکی از تأییدشده‌ترین زنجیره‌های علوم اجتماعی است: کاهش درآمد ← فشار اقتصادی ← پریشانی والدین ← کشمکش و فرزندپروری خشن ← مشکلات کودک. در ایران تورم ۳۵ تا ۵۲ درصدی یعنی این زنجیره هر سال برای میلیون‌ها خانه فعال می‌شود.",
+ "nodes": [
+  {
+   "id": "macro",
+   "l": 0,
+   "t": "تحریم، تورم و رکود",
+   "d": "تورم حدود ۵۲٪ در ۱۴۰۲.",
+   "wiki": [],
+   "iran": "iran:poverty-rate"
+  },
+  {
+   "id": "jobs",
+   "l": 0,
+   "t": "بیکاری و شغل ناپایدار",
+   "d": "",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "safety-net",
+   "l": 0,
+   "t": "تور ایمنی اجتماعی ضعیف",
+   "d": "",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "pressure",
+   "l": 1,
+   "t": "فشار اقتصادی خانوار",
+   "d": "ناتوانی در پرداخت قبض و اجاره، کم آوردن غذا.",
+   "wiki": [
+    "soc:social-roots-of-childhood-adversity"
+   ],
+   "iran": null
+  },
+  {
+   "id": "distress",
+   "l": 1,
+   "t": "اضطراب و افسردگی والدین",
+   "d": "",
+   "wiki": [
+    "psy:anxiety"
+   ],
+   "iran": "iran:mental-disorder-prevalence"
+  },
+  {
+   "id": "marital",
+   "l": 2,
+   "t": "کشمکش زناشویی",
+   "d": "",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "parenting",
+   "l": 2,
+   "t": "فرزندپروری خشن یا بی‌حوصله",
+   "d": "",
+   "wiki": [
+    "psy:attachment"
+   ],
+   "iran": null
+  },
+  {
+   "id": "child",
+   "l": 3,
+   "t": "مشکلات هیجانی، رفتاری و تحصیلی کودک",
+   "d": "",
+   "wiki": [
+    "psy:adverse-childhood-experiences"
+   ],
+   "iran": null
+  }
+ ],
+ "edges": [
+  [
+   "macro",
+   "pressure",
+   "A",
+   ""
+  ],
+  [
+   "jobs",
+   "pressure",
+   "A",
+   ""
+  ],
+  [
+   "safety-net",
+   "pressure",
+   "B",
+   ""
+  ],
+  [
+   "pressure",
+   "distress",
+   "A",
+   ""
+  ],
+  [
+   "distress",
+   "marital",
+   "A",
+   ""
+  ],
+  [
+   "distress",
+   "parenting",
+   "A",
+   ""
+  ],
+  [
+   "marital",
+   "parenting",
+   "A",
+   ""
+  ],
+  [
+   "parenting",
+   "child",
+   "A",
+   ""
+  ],
+  [
+   "marital",
+   "child",
+   "A",
+   ""
+  ]
+ ],
+ "loops": [
+  [
+   "child",
+   "jobs",
+   "تحصیل کمتر، شغل ناپایدارتر در بزرگسالی"
+  ]
+ ],
+ "levers": [
+  {
+   "at": [
+    "safety-net",
+    "pressure"
+   ],
+   "t": "کمک نقدی هدفمند به خانوادهٔ دارای کودک",
+   "d": "",
+   "ev": "A",
+   "cost": "زیاد",
+   "time": "کوتاه",
+   "iran": "زیرساخت یارانه موجود است.",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "distress"
+   ],
+   "t": "درمان کوتاه افسردگی والدین در مراقبت اولیه",
+   "d": "",
+   "ev": "A",
+   "cost": "متوسط",
+   "time": "کوتاه",
+   "iran": "",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "parenting",
+    "marital"
+   ],
+   "t": "برنامهٔ فرزندپروری و حل کشمکش",
+   "d": "گروهی، ارزان، در مدرسه یا مرکز بهداشت.",
+   "ev": "A",
+   "cost": "کم",
+   "time": "کوتاه",
+   "iran": "",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "macro"
+   ],
+   "t": "مهار تورم",
+   "d": "بیرون از توان یک برنامهٔ اجتماعی؛ اما ریشه است.",
+   "ev": "B",
+   "cost": "زیاد",
+   "time": "بلند",
+   "iran": "",
+   "precedent": ""
+  }
+ ],
+ "risk": null,
+ "sources": [
+  "Conger, Conger & Martin (2010) J Marriage Fam",
+  "World Bank MPO (2025)"
+ ],
+ "wiki": [
+  "soc:social-roots-of-childhood-adversity"
+ ]
+}

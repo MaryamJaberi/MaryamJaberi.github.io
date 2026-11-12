@@ -34,7 +34,7 @@ def wiki(ids):
             t = json.load(open(f'data/{w}/concepts/{s}.json', encoding='utf-8'))['title']['fa']
         short = t if len(t) <= 46 else t[:44].rsplit(' ', 1)[0] + '…'
         nlinks[w] += 1
-        out.append(f'<a class="wl" style="--w:var({WV[w]})" href="../{w}/entries.html#{s}" title="{E(t)}"><i>{WN[w]}</i>{E(short)}</a>')
+        out.append(f'<a class="wl" style="--w:var({WV[w]})" href="{'../psy/tools/graph.html' if w == 'psy' else '../' + w + '/entries.html'}#{s}" title="{E(t)}"><i>{WN[w]}</i>{E(short)}</a>')
     return '<div class="wls"><span>در ویکی‌ها:</span>' + ''.join(out) + '</div>'
 
 LV = {'کم': 1, 'متوسط': 2, 'زیاد': 3, 'بسیار زیاد': 4, 'فاجعه‌بار': 5}

@@ -1,0 +1,45 @@
+{
+ "id": "iran:child-labour",
+ "domain": "soc",
+ "question": {
+  "fa": "چند کودک در ایران کار می‌کنند؟",
+  "en": "How many children work in Iran?"
+ },
+ "finding": {
+  "fa": "یونیسف به برآورد سازمان بهزیستی (۲۰۲۳) از حدود ۱۲۰ هزار کودک درگیر کار استناد می‌کند. برآوردهای فعالان مدنی چند برابر این عدد است. کودکان مهاجر افغان بی‌مدرک بیشترین آسیب را دارند (زباله‌گردی، تکدی، دستفروشی).",
+  "en": "UNICEF cites a 2023 State Welfare Organization estimate of about 120,000 children engaged in labour; activists’ estimates are many times higher. Undocumented Afghan refugee children are most affected (waste picking, begging, street vending)."
+ },
+ "year": 2023,
+ "method": "administrative estimate",
+ "grade": "D",
+ "contested": true,
+ "source": [
+  {
+   "title": "UNICEF Iran (n.d.). Children in street situations [برآورد سازمان بهزیستی، ۲۰۲۳].",
+   "url": "https://www.unicef.org/iran/en/children-street-situations"
+  }
+ ],
+ "fields": [
+  "epi"
+ ],
+ "concepts": [
+  "soc:social-roots-of-childhood-adversity"
+ ],
+ "capability": [
+  4,
+  5
+ ],
+ "viz": {
+  "kind": "none",
+  "note": {
+   "fa": "اختلاف برآوردها بیش از یک مرتبهٔ بزرگی است؛ عدد قابل رسمی نداریم."
+  }
+ },
+ "roots": {
+  "fa": "فقر و تورم، ترک تحصیل، مهاجرت بی‌مدرک، و اجرای ضعیف قانون کار."
+ },
+ "now": {
+  "fa": "کار کودک هم بی‌توجهی است و هم در معرض خشونت، اعتیاد و بهره‌کشی جنسی قرار گرفتن."
+ },
+ "critique": "شمار واقعی ناشناخته است؛ برآورد رسمی احتمالاً فقط بخشی از کودکان خیابانی را شامل می‌شود."
+}

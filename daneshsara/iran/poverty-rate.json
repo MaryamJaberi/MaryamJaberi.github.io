@@ -1,0 +1,65 @@
+{
+ "id": "iran:poverty-rate",
+ "domain": "soc",
+ "question": {
+  "fa": "چند درصد ایرانیان زیر خط فقر زندگی می‌کنند؟",
+  "en": "What share of Iranians live in poverty?"
+ },
+ "finding": {
+  "fa": "بانک جهانی (خط ۶٫۸۵ دلار روزانه، برابری قدرت خرید ۲۰۱۷): ۱۹٫۹٪ در ۱۴۰۲، پس از اوج ۲۹٫۳٪ در ۱۳۹۹؛ برآورد ۱۹٪ برای ۱۴۰۳ و پیش‌بینی افزایش به ۲۰٪ در ۱۴۰۴. تورم حدود ۵۲٪ در ۱۴۰۲ و ۳۵٪ در ۱۴۰۳.",
+  "en": "World Bank (US$6.85/day, 2017 PPP): 19.9% in 2023/24 after a 29.3% peak in 2020/21; estimated 19% for 2024/25, forecast to rise to 20% in 2025/26. Inflation about 52% in 2023/24 and 35% in 2024/25."
+ },
+ "year": 2024,
+ "method": "household survey-based estimate",
+ "grade": "B",
+ "contested": false,
+ "source": [
+  {
+   "title": "World Bank (2025). Macro Poverty Outlook, Spring 2025: Islamic Republic of Iran. Washington, DC: World Bank.",
+   "url": "https://thedocs.worldbank.org/en/doc/77351105a334213c64122e44c2efe523-0500072021/related/mpo-sm25-mena.pdf"
+  }
+ ],
+ "fields": [
+  "epi"
+ ],
+ "concepts": [
+  "soc:social-roots-of-childhood-adversity"
+ ],
+ "capability": [
+  2,
+  4
+ ],
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "درصد جمعیت زیر خط ۶٫۸۵ دلار"
+  },
+  "label": {
+   "fa": "نرخ فقر ایران، بانک جهانی"
+  },
+  "bars": [
+   {
+    "fa": "۱۳۹۹",
+    "v": 29.3
+   },
+   {
+    "fa": "۱۴۰۲",
+    "v": 19.9,
+    "self": true
+   },
+   {
+    "fa": "۱۴۰۳ (برآورد)",
+    "v": 19.0
+   }
+  ],
+  "note": {
+   "fa": "خط فقر بین‌المللی است و با خط فقر ملی فرق دارد؛ تورم بالا یعنی بسیاری از خانوارهای بالای خط هم هر سال توان خرید از دست می‌دهند."
+  }
+ },
+ "roots": {
+  "fa": "تحریم، تورم مزمن، بیکاری جوانان و نابرابری منطقه‌ای."
+ },
+ "now": {
+  "fa": "فشار اقتصادی از راه «الگوی استرس خانواده» به فرزندپروری خشن و کشمکش زناشویی وصل است."
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "id": "iran:violence-against-women",
+ "domain": "soc",
+ "question": {
+  "fa": "خشونت علیه زنان در خانه در ایران چقدر شایع است؟",
+  "en": "How common is domestic violence against women in Iran?"
+ },
+ "finding": {
+  "fa": "فراتحلیل ۴۷ پژوهش ایرانی (۱۴۰۳): شیوع کلی ۵۹٪؛ روانی ۵۰٪، جسمی ۲۵٪، جنسی ۲۰٪. آموزش، آگاهی و استقلال مالی زن مهم‌ترین عوامل مرتبط بودند.",
+  "en": "Meta-analysis of 47 Iranian studies (2025): overall prevalence 59%; psychological 50%, physical 25%, sexual 20%. Education, awareness and women’s financial independence were the main correlates."
+ },
+ "year": 2025,
+ "method": "meta-analysis of heterogeneous local studies",
+ "grade": "C",
+ "contested": true,
+ "source": [
+  {
+   "title": "Hasanpour Dehkordi, A., & Heydari, H. (2025). The prevalence of domestic violence in Iran: A systematic review and meta-analysis. Jundishapur Journal of Chronic Disease Care.",
+   "url": "https://repository.brieflands.com/items/d0b4e232-eed3-4a7c-bb6b-ff988d88fbe4"
+  }
+ ],
+ "fields": [
+  "epi"
+ ],
+ "concepts": [
+  "soc:social-roots-of-childhood-adversity"
+ ],
+ "capability": [
+  3,
+  7,
+  10
+ ],
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "درصد زنان در پژوهش‌های ترکیب‌شده"
+  },
+  "label": {
+   "fa": "گونه‌های خشونت علیه زنان، برآورد ترکیبی"
+  },
+  "bars": [
+   {
+    "fa": "هر نوع",
+    "v": 59,
+    "self": true
+   },
+   {
+    "fa": "روانی",
+    "v": 50
+   },
+   {
+    "fa": "جسمی",
+    "v": 25
+   },
+   {
+    "fa": "جنسی",
+    "v": 20
+   }
+  ],
+  "note": {
+   "fa": "پژوهش‌ها نمونه‌ها و تعریف‌های متفاوت دارند و بسیاری بیمارستانی یا محلی‌اند؛ عدد ترکیبی تصویر کلی است، نه شیوع دقیق ملی."
+  }
+ },
+ "roots": {
+  "fa": "وابستگی مالی، نبود قانون جامع منع خشونت خانگی، حضانت پس از هفت سالگی به نفع پدر، هنجارهای «حرف خانه بیرون نمی‌رود» و نبود پناهگاه کافی."
+ },
+ "now": {
+  "fa": "برای کودک، دیدن خشونت علیه مادر یکی از ده تجربهٔ ناگوار کودکی است؛ پس این عدد همزمان شاخص آسیب زنان و آسیب کودکان است."
+ }
+}
