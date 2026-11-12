@@ -1,99 +1,108 @@
 {
-  "id": "soc:true-furqan-scripture-imitation",
-  "kind": "concept",
-  "title": {
-    "fa": "«فرقان حق»: تقلید قالب قرآن در تبلیغ مسیحی",
-    "en": "The True Furqan: imitating the Qur'anic form for Christian outreach",
-    "nl": "De True Furqan: de vorm van de Koran nabootsen voor christelijke zending"
-  },
-  "aliases": [],
-  "parent": "soc:values",
-  "field": "soc:values",
-  "summary": {
-    "fa": "متنی تبشیری از ۱۹۹۹ که لحن و ساختار قرآن را برای مخاطب مسلمان وام می‌گیرد تا پیام مسیحی برساند. این مدخل فقط دیدگاه ناشران را گزارش می‌کند و نشان می‌دهد چرا چنین متنی مناقشه‌برانگیز است.",
-    "en": "A 1999 missionary text that borrows the voice and structure of the Qur'an to address Muslim readers with a Christian message. This entry reports the publishers' view only and explains why such a text is contested.",
-    "nl": "Een zendingstekst uit 1999 die stijl en opbouw van de Koran leent om moslims met een christelijke boodschap aan te spreken; het vermeldt alleen het standpunt van de uitgevers."
-  },
-  "points": [
-    {
-      "text": {
-        "fa": "کتاب خود را «فرقان حق» و مکمل «انجیل حق» می‌نامد و خطاب به «ملت عرب و جهان اسلام» می‌نویسد؛ هر سوره با عبارتی تثلیثی (پدر، کلمه، روح) آغاز می‌شود، همان جایگاه «بسم‌الله».",
-        "en": "The book calls itself the true Furqan, companion to a 'True Gospel', and addresses the Arab nation and the Muslim world; each chapter opens with a Trinitarian formula in the place of the Qur'anic basmala.",
-        "nl": "The book calls itself the true Furqan, companion to a 'True Gospel', and addresses the Arab nation and the Muslim world; each chapter opens with a Trinitarian formula in the place of the Qur'anic basmala."
-      },
-      "sources": [
-        "src:3a0e63837a"
-      ],
-      "flags": [
-        "contested"
-      ]
-    },
-    {
-      "text": {
-        "fa": "ناشر آن را در رستهٔ Apologetics/Comparative Religion فهرست کرده و تدوین آن را به «کمیتهٔ اجرایی» با دو نام Al Saffee و Al Mahdy نسبت می‌دهد؛ هویت واقعی نویسندگان در متن خوانده‌شده روشن نیست.",
-        "en": "The publisher files it under Apologetics/Comparative Religion and credits an 'Executive Committee' named Al Saffee and Al Mahdy; the real identity of the authors is not clear from the text read.",
-        "nl": "The publisher files it under Apologetics/Comparative Religion and credits an 'Executive Committee' named Al Saffee and Al Mahdy; the real identity of the authors is not clear from the text read."
-      },
-      "sources": [
-        "src:3a0e63837a"
-      ],
-      "flags": [
-        "contested"
-      ]
-    },
-    {
-      "text": {
-        "fa": "متن را وحی الهی معرفی می‌کند و صریحاً قرآن را ساختگی می‌خواند؛ این ادعا برای مسلمانان توهین‌آمیز است و برای هیچ‌یک از دو طرف با شواهد مستقل قابل‌اثبات نیست.",
-        "en": "It presents itself as divine revelation and calls the Qur'an a fabrication; Muslims find this offensive, and neither side's claim can be shown by independent evidence.",
-        "nl": "It presents itself as divine revelation and calls the Qur'an a fabrication; Muslims find this offensive, and neither side's claim can be shown by independent evidence."
-      },
-      "sources": [
-        "src:3a0e63837a"
-      ],
-      "flags": [
-        "contested",
-        "editor-note"
-      ]
-    },
-    {
-      "text": {
-        "fa": "دیدگاه رایج دانشگاهی: این کتاب پژوهش نیست بلکه متنی تبلیغی و ادبیات جدلی است؛ ارزشش برای جامعه‌شناسی دین در مطالعهٔ ارتباط بین‌ادیانی و تبشیر است، نه برای آگاهی دربارهٔ اسلام یا مسیحیت.",
-        "en": "Mainstream academic view: it is not scholarship but apologetic, polemical literature; its value is as a case for studying interfaith communication and missionary writing, not for learning about Islam or Christianity.",
-        "nl": "Mainstream academic view: it is not scholarship but apologetic, polemical literature; its value is as a case for studying interfaith communication and missionary writing, not for learning about Islam or Christianity."
-      },
-      "sources": [],
-      "flags": [
-        "editor-note"
-      ]
-    }
-  ],
-  "links": [
-    {
-      "to": "soc:sacred-and-taboo",
-      "rel": "see-also",
-      "note": {
-        "fa": "چرا تقلید از متن مقدس حساسیت می‌آفریند",
-        "en": "why imitating a sacred text provokes strong reactions",
-        "nl": "why imitating a sacred text provokes strong reactions"
-      }
-    },
-    {
-      "to": "soc:durkheim-sacred-society",
-      "rel": "bridges",
-      "note": {
-        "fa": "دین و هویت گروهی",
-        "en": "religion and group identity",
-        "nl": "religion and group identity"
-      }
-    }
-  ],
-  "people": [],
-  "sources": [
+ "id": "soc:true-furqan-scripture-imitation",
+ "kind": "concept",
+ "title": {
+  "fa": "«فرقان حق»: تقلید قالب قرآن در تبلیغ مسیحی",
+  "en": "The True Furqan: imitating the Qur'anic form for Christian outreach",
+  "nl": "De True Furqan: de vorm van de Koran nabootsen voor christelijke zending"
+ },
+ "aliases": [],
+ "parent": "soc:values",
+ "field": "soc:values",
+ "summary": {
+  "fa": "متنی تبشیری از ۱۹۹۹ که لحن و ساختار قرآن را برای مخاطب مسلمان وام می‌گیرد تا پیام مسیحی برساند. این مدخل فقط دیدگاه ناشران را گزارش می‌کند و نشان می‌دهد چرا چنین متنی مناقشه‌برانگیز است.",
+  "en": "A 1999 missionary text that borrows the voice and structure of the Qur'an to address Muslim readers with a Christian message. This entry reports the publishers' view only and explains why such a text is contested.",
+  "nl": "Een zendingstekst uit 1999 die stijl en opbouw van de Koran leent om moslims met een christelijke boodschap aan te spreken; het vermeldt alleen het standpunt van de uitgevers."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کتاب خود را «فرقان حق» و مکمل «انجیل حق» می‌نامد و خطاب به «ملت عرب و جهان اسلام» می‌نویسد؛ هر سوره با عبارتی تثلیثی (پدر، کلمه، روح) آغاز می‌شود، همان جایگاه «بسم‌الله».",
+    "en": "The book calls itself the true Furqan, companion to a 'True Gospel', and addresses the Arab nation and the Muslim world; each chapter opens with a Trinitarian formula in the place of the Qur'anic basmala.",
+    "nl": "The book calls itself the true Furqan, companion to a 'True Gospel', and addresses the Arab nation and the Muslim world; each chapter opens with a Trinitarian formula in the place of the Qur'anic basmala."
+   },
+   "sources": [
     "src:3a0e63837a"
-  ],
-  "booklets": [],
-  "origin": null,
-  "iran": null,
-  "wikidata": null,
-  "status": "draft"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "ناشر آن را در رستهٔ Apologetics/Comparative Religion فهرست کرده و تدوین آن را به «کمیتهٔ اجرایی» با دو نام Al Saffee و Al Mahdy نسبت می‌دهد؛ هویت واقعی نویسندگان در متن خوانده‌شده روشن نیست.",
+    "en": "The publisher files it under Apologetics/Comparative Religion and credits an 'Executive Committee' named Al Saffee and Al Mahdy; the real identity of the authors is not clear from the text read.",
+    "nl": "The publisher files it under Apologetics/Comparative Religion and credits an 'Executive Committee' named Al Saffee and Al Mahdy; the real identity of the authors is not clear from the text read."
+   },
+   "sources": [
+    "src:3a0e63837a"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "متن را وحی الهی معرفی می‌کند و صریحاً قرآن را ساختگی می‌خواند؛ این ادعا برای مسلمانان توهین‌آمیز است و برای هیچ‌یک از دو طرف با شواهد مستقل قابل‌اثبات نیست.",
+    "en": "It presents itself as divine revelation and calls the Qur'an a fabrication; Muslims find this offensive, and neither side's claim can be shown by independent evidence.",
+    "nl": "It presents itself as divine revelation and calls the Qur'an a fabrication; Muslims find this offensive, and neither side's claim can be shown by independent evidence."
+   },
+   "sources": [
+    "src:3a0e63837a"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه رایج دانشگاهی: این کتاب پژوهش نیست بلکه متنی تبلیغی و ادبیات جدلی است؛ ارزشش برای جامعه‌شناسی دین در مطالعهٔ ارتباط بین‌ادیانی و تبشیر است، نه برای آگاهی دربارهٔ اسلام یا مسیحیت.",
+    "en": "Mainstream academic view: it is not scholarship but apologetic, polemical literature; its value is as a case for studying interfaith communication and missionary writing, not for learning about Islam or Christianity.",
+    "nl": "Mainstream academic view: it is not scholarship but apologetic, polemical literature; its value is as a case for studying interfaith communication and missionary writing, not for learning about Islam or Christianity."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:sacred-and-taboo",
+   "rel": "see-also",
+   "note": {
+    "fa": "چرا تقلید از متن مقدس حساسیت می‌آفریند",
+    "en": "why imitating a sacred text provokes strong reactions",
+    "nl": "why imitating a sacred text provokes strong reactions"
+   }
+  },
+  {
+   "to": "soc:durkheim-sacred-society",
+   "rel": "bridges",
+   "note": {
+    "fa": "دین و هویت گروهی",
+    "en": "religion and group identity",
+    "nl": "religion and group identity"
+   }
+  },
+  {
+   "to": "phil:true-furqan-peace-and-trinity-claims",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدخل هم‌موضوع",
+    "en": "Related entry",
+    "nl": "Verwant lemma"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:3a0e63837a"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
 }

@@ -1,36 +1,45 @@
 {
-  "id": "tarikh:early-islamic",
-  "kind": "field",
-  "title": {
-    "fa": "ایران در سده‌های نخست اسلامی",
-    "en": "Iran in the early Islamic centuries",
-    "nl": "Iran in de vroege islamitische eeuwen"
+ "id": "tarikh:early-islamic",
+ "kind": "field",
+ "title": {
+  "fa": "ایران در سده‌های نخست اسلامی",
+  "en": "Iran in the early Islamic centuries",
+  "nl": "Iran in de vroege islamitische eeuwen"
+ },
+ "aliases": [],
+ "parent": "tarikh:tarikh",
+ "field": null,
+ "summary": {
+  "fa": "از فروپاشی ساسانیان (سدهٔ ۷ م) تا سر برآوردن نخستین حکومت‌های نیمه‌مستقل و مستقل ایرانی — طاهریان و صفاریان (سدهٔ ۹ م): فتح عربی، نقش ایرانیان در تحولات سیاسی خلافت، عصر طلایی عباسی، خانواده‌های ایرانی‌تباری که در خدمت خلافت قدرت یافتند، و طبقهٔ عیاران که از دل شورش محلی فرمانروا ساخت.",
+  "en": "From the fall of the Sasanians (7th c. CE) to the rise of the first semi-independent and fully independent Persian dynasties — the Tahirids and Saffarids (9th c. CE): the Arab conquest, Iranians' role in the caliphate's political upheavals, the Abbasid golden age, the Persian-descended families who gained power in the caliphate's service, and the ayyarun class that turned local revolt into a ruling dynasty.",
+  "nl": "Van de val van de Sassaniden (7e eeuw) tot de opkomst van de eerste semi-onafhankelijke en volledig onafhankelijke Perzische dynastieën — de Tahiriden en Saffariden (9e eeuw): de Arabische verovering, de rol van Iraniërs in de politieke omwentelingen van het kalifaat, het Abbasidische gouden tijdperk, de Perzisch afkomstige families die macht verwierven in dienst van het kalifaat, en de ayyarun-klasse die lokale opstand omzette in een heersende dynastie."
+ },
+ "points": [],
+ "links": [
+  {
+   "to": "soc:early-islamic-iran-continuity-debate",
+   "rel": "see-also",
+   "note": {
+    "fa": "بحث «دو قرن سکوت»: گسست یا پیوستگی",
+    "en": "The two centuries of silence debate: rupture or continuity",
+    "nl": "Het debat over twee eeuwen stilte: breuk of continuïteit"
+   }
   },
-  "aliases": [],
-  "parent": "tarikh:tarikh",
-  "field": null,
-  "summary": {
-    "fa": "از فروپاشی ساسانیان (سدهٔ ۷ م) تا سر برآوردن نخستین حکومت‌های نیمه‌مستقل و مستقل ایرانی — طاهریان و صفاریان (سدهٔ ۹ م): فتح عربی، نقش ایرانیان در تحولات سیاسی خلافت، عصر طلایی عباسی، خانواده‌های ایرانی‌تباری که در خدمت خلافت قدرت یافتند، و طبقهٔ عیاران که از دل شورش محلی فرمانروا ساخت.",
-    "en": "From the fall of the Sasanians (7th c. CE) to the rise of the first semi-independent and fully independent Persian dynasties — the Tahirids and Saffarids (9th c. CE): the Arab conquest, Iranians' role in the caliphate's political upheavals, the Abbasid golden age, the Persian-descended families who gained power in the caliphate's service, and the ayyarun class that turned local revolt into a ruling dynasty.",
-    "nl": "Van de val van de Sassaniden (7e eeuw) tot de opkomst van de eerste semi-onafhankelijke en volledig onafhankelijke Perzische dynastieën — de Tahiriden en Saffariden (9e eeuw): de Arabische verovering, de rol van Iraniërs in de politieke omwentelingen van het kalifaat, het Abbasidische gouden tijdperk, de Perzisch afkomstige families die macht verwierven in dienst van het kalifaat, en de ayyarun-klasse die lokale opstand omzette in een heersende dynastie."
-  },
-  "points": [],
-  "links": [
-    {
-      "to": "soc:early-islamic-iran-continuity-debate",
-      "rel": "see-also",
-      "note": {
-        "fa": "بحث «دو قرن سکوت»: گسست یا پیوستگی",
-        "en": "The two centuries of silence debate: rupture or continuity",
-        "nl": "Het debat over twee eeuwen stilte: breuk of continuïteit"
-      }
-    }
-  ],
-  "people": [],
-  "sources": [],
-  "booklets": [],
-  "origin": null,
-  "iran": null,
-  "wikidata": null,
-  "status": "draft"
+  {
+   "to": "tarikh:sources-early-islamic-iran-zarrinkoub",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدخل هم‌موضوع",
+    "en": "Related entry",
+    "nl": "Verwant lemma"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
 }
