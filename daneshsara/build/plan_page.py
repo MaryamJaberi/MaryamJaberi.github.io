@@ -134,7 +134,7 @@ details.card ul{margin:8px 0 0;padding-inline-start:18px;color:var(--ink-2);font
 </section>
 
 <section id="birds"><h2>سی مرغ <small>فهرست زنده</small></h2><p class="sub">هر مرغ یک گروه سازنده با یک هدف. این فهرست ثابت نیست: در طول راه مرغ‌ها کم، زیاد، یکی یا جدا می‌شوند. سه مرغ عمداً برای کسی است که تخصص ندارد.</p>
-<div class="grid" id="bg"></div></section>
+<div class="grid" id="bg"></div><p class="sub" style="margin-top:10px"><a href="birds.html">کارت هر مرغ را باز کن ←</a></p></section>
 
 <section id="ledger"><h2>دفتر ویرانی‌ها</h2><p class="sub">آنچه باید ساخته شود، در نوزده حوزه. روی هر حوزه بزنید تا ریز آسیب‌ها را ببینید.</p>
 <div class="meter" id="lm"></div><div class="legend" id="ll"></div>
@@ -186,7 +186,7 @@ const TODO = [
  ["با «شهر کی راه می‌افتد» بازی کن", "سه دقیقه؛ اصل کل پروژه را نشان می‌دهد", "#game"],
  ["«سهم من» را امتحان کن", "بگو قدم‌ها درست‌اند یا نه", "#me"],
  ["محصول شمارهٔ یک را شروع کن", "اولویت‌ها را من چیده‌ام؛ قدم اول هرکدام نوشته شده", "#money"],
- ["سی مرغ را نگاه کن", "فهرست زنده است؛ هر وقت چیزی کم یا زیاد دیدی بگو", "#birds"],
+ ["کارت‌های سی مرغ را ورق بزن", "فهرست زنده است؛ هر وقت چیزی کم یا زیاد دیدی بگو", "birds.html"],
  ["یک شب بازی با حلقهٔ خودی", "با اپ میز خدا و نقش‌های مافیای ایران", "https://maryamjaberi.github.io/simorgh/roles.html"],
  ["پروندهٔ امنیت را برای متخصص امنیت بفرست", "دعوت‌نامه با مدل تهدید و ده مسئلهٔ باز", "security.html"],
  ["نخستین مشتری آزمایشی سنجش سازمان", "صفحه‌ای که باید نشانشان بدهی", "../wellbeing/orgsvc.html"],
@@ -228,7 +228,7 @@ $("gm").innerHTML = D.game.map(g => `<div class="gmr"><div class="g1">${esc(g[0]
   $("qS").innerHTML = Object.keys(D.me).map(k => `<button type="button" data-v="${esc(k)}" aria-pressed="${k === skill}">${esc(k)}</button>`).join("");
   function show(){
     const m = D.me[skill];
-    $("steps").innerHTML = `<div class="step"><small>مرغ‌هایی که با تو جورند</small><b>${m[0].map(esc).join(" · ")}</b></div>
+    $("steps").innerHTML = `<div class="step"><small>مرغ‌هایی که با تو جورند</small><b>${m[0].map(b => `<a href="birds.html#${encodeURIComponent(b)}">${esc(b)}</a>`).join(" · ")}</b></div>
       <div class="step"><small>قدم امروز${loc === "in" ? " (داخل ایران: فقط کار کم‌خطر)" : ""}</small>${esc(loc === "in" ? m[2] : m[1])}</div>
       <div class="step"><small>روز آزادی</small>${esc(m[3])}</div>
       <div class="step"><small>صد روز اول</small>${esc(m[4])}</div>`;
@@ -239,7 +239,7 @@ $("gm").innerHTML = D.game.map(g => `<div class="gmr"><div class="g1">${esc(g[0]
 })();
 
 // birds
-$("bg").innerHTML = D.birds.map((f, i) => `<div class="card" style="--k:var(${FAM[i]})"><b>${esc(f[0])}</b><p>${f[1].map(esc).join(" · ")}</p></div>`).join("");
+$("bg").innerHTML = D.birds.map((f, i) => `<div class="card" style="--k:var(${FAM[i]})"><b>${esc(f[0])}</b><p>${f[1].map(b => `<a class="more" href="birds.html#${encodeURIComponent(b)}">${esc(b)}</a>`).join(" · ")}</p></div>`).join("");
 
 // meters
 function meter(list, idx, m, l){
