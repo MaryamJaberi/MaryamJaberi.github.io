@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آزمایشگاه تاریخ | ویکی تاریخ و ایران‌شناسی | دانش‌سرا</title>
+<meta name="description" content="چهار ابزار تعاملی برای خواندن تاریخ ایران: مبدل تقویم، فاصلهٔ منبع تا رویداد، چرخش ماه رمضان در سال خورشیدی و اول حدس بزن.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>:root{--lab:var(--fam-hist);--lab-soft:var(--fam-hist-soft)}
+.cal{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.cal div{background:var(--surface-subtle);border-radius:12px;padding:12px 14px;display:grid;gap:4px}
+.cal span{font-size:.85rem;color:var(--ink-2)}
+.cal b{font-size:1.25rem}
+.ins{display:flex;flex-wrap:wrap;gap:8px;align-items:end}
+.ins label{display:grid;gap:4px;font-size:.85rem;color:var(--ink-2)}
+.ins input,.ins select{font:inherit;min-height:44px;padding:4px 10px;border-radius:10px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink)}
+.ins input{width:6.5em}
+.lang{font-size:.75rem;padding:1px 8px;border-radius:99px;border:1px solid var(--line-strong);color:var(--ink-2);margin-inline-start:6px}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../tarikh/">ویکی تاریخ و ایران‌شناسی</a><i>›</i><a href="../../tarikh/tools/">ابزارها</a><i>›</i><b>آزمایشگاه تاریخ</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>آزمایشگاه تاریخ</h1>
+<p class="what">تاریخ را از راه منبع‌ها و تقویم‌ها می‌شناسیم، و هر دو می‌توانند ما را گمراه کنند: تاریخی که در یک کتاب «۱۵ ق» آمده در کتاب دیگر «۶۳۶ م» است، و گزارشی که می‌خوانیم شاید سیصد سال پس از رویداد نوشته شده باشد. این چهار ابزار برای دیدن همین دو مسئله‌اند. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note">تاریخ نگارش منبع‌های کهن اغلب تقریبی است (معمولاً سال درگذشت نویسنده یا تاریخ تقریبی پایان کتاب)؛ عددها برای مقایسه‌اند، نه برای نقل دقیق. تبدیل تقویم با تقویم قمری حسابی انجام می‌شود و ممکن است با رؤیت ماه یک یا دو روز فرق کند.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · آزمایشگاه تاریخ</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script>
+const {fa, css, lk} = LabKit;
+const DAY = 864e5;
+const fmt = cal => new Intl.DateTimeFormat("en-u-ca-" + cal + "-nu-latn", {year: "numeric", month: "numeric", day: "numeric", timeZone: "UTC"});
+const F = {persian: fmt("persian"), "islamic-civil": fmt("islamic-civil")};
+const parts = (cal, t) => { const o = {}; F[cal].formatToParts(new Date(t)).forEach(p => { if (p.type === "year" || p.type === "month" || p.type === "day") o[p.type] = +p.value; }); return [o.year, o.month, o.day]; };
+const cmp = (a, b) => a[0] - b[0] || a[1] - b[1] || a[2] - b[2];
+const T0 = Date.UTC(622, 6, 20), T1 = Date.UTC(2200, 0, 1);
+function toTime(cal, y, m, d){ // binary search over days
+  if (cal === "gregory") { const t = new Date(0); t.setUTCFullYear(y, m - 1, d); return t.getTime(); }
+  let lo = Math.floor(T0 / DAY), hi = Math.floor(T1 / DAY);
+  while (lo < hi) { const mid = Math.floor((lo + hi) / 2); if (cmp(parts(cal, mid * DAY), [y, m, d]) < 0) lo = mid + 1; else hi = mid; }
+  const t = lo * DAY; return cmp(parts(cal, t), [y, m, d]) === 0 ? t : null;
+}
+const MP = ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"];
+const MH = ["محرم", "صفر", "ربیع‌الاول", "ربیع‌الثانی", "جمادی‌الاول", "جمادی‌الثانی", "رجب", "شعبان", "رمضان", "شوال", "ذی‌القعده", "ذی‌الحجه"];
+const MG = ["ژانویه", "فوریه", "مارس", "آوریل", "مه", "ژوئن", "ژوئیه", "اوت", "سپتامبر", "اکتبر", "نوامبر", "دسامبر"];
+const show = t => { const g = new Date(t), p = parts("persian", t), h = parts("islamic-civil", t);
+  return {g: `${fa(g.getUTCDate())} ${MG[g.getUTCMonth()]} ${fa(g.getUTCFullYear())} م`, p: `${fa(p[2])} ${MP[p[1] - 1]} ${fa(p[0])} خ`, h: `${fa(h[2])} ${MH[h[1] - 1]} ${fa(h[0])} ق`, wd: new Intl.DateTimeFormat("fa-IR", {weekday: "long", timeZone: "UTC"}).format(g)}; };
+
+/* ——— 1. calendar converter ——— */
+function conv(pn, out){
+  const EX = [["نبرد قادسیه (روایت رایج)", "islamic-civil", 15, 8, 13], ["پیروزی عباسیان در زاب", "islamic-civil", 132, 6, 11], ["تاج‌گذاری‌ای که مبدأ تقویم یزدگردی است", "gregory", 632, 6, 16], ["امروز", "today"]];
+  pn.innerHTML = `<div class="ins"><label>تقویم<select id="cal"><option value="persian">هجری خورشیدی</option><option value="islamic-civil" selected>هجری قمری</option><option value="gregory">میلادی</option></select></label>
+    <label>سال<input id="y" type="number" value="15"></label><label>ماه<input id="m" type="number" min="1" max="12" value="8"></label><label>روز<input id="d" type="number" min="1" max="31" value="13"></label>
+    <button type="button" class="btn" id="go">تبدیل</button></div>
+    <div class="chips">${EX.map((e, i) => `<button type="button" data-e="${i}">${e[0]}</button>`).join("")}</div>
+    <div id="r"></div>`;
+  const $ = s => pn.querySelector(s);
+  const go = () => {
+    const cal = $("#cal").value, y = +$("#y").value, m = +$("#m").value, d = +$("#d").value;
+    const t = toTime(cal, y, m, d);
+    if (t === null || t < T0 - 400 * DAY || isNaN(t)) { $("#r").innerHTML = `<p class="note">این تاریخ در این تقویم وجود ندارد یا پیش از آغاز تقویم هجری (۶۲۲ م) است.</p>`; out.innerHTML = ""; return; }
+    const s = show(t), p = parts("persian", t), h = parts("islamic-civil", t), gy = new Date(t).getUTCFullYear();
+    $("#r").innerHTML = `<div class="cal"><div><span>هجری خورشیدی</span><b>${s.p}</b></div><div><span>هجری قمری</span><b>${s.h}</b></div><div><span>میلادی</span><b>${s.g}</b></div><div><span>روز هفته</span><b>${s.wd}</b></div></div>`;
+    out.innerHTML = `<div class="res"><h3>چرا سال‌ها با هم فرق می‌کنند؟</h3>
+      <p>هر دو تقویم هجری از یک نقطه آغاز می‌شوند: هجرت پیامبر به مدینه در ۶۲۲ م. اما سال قمری حدود ۳۵۴ روز است و سال خورشیدی حدود ۳۶۵؛ هر سال قمری حدود ۱۱ روز جلو می‌افتد. برای همین در این تاریخ، سال قمری ${fa(h[0])} و سال خورشیدی ${fa(p[0])} است — فاصله‌ای ${fa(h[0] - p[0])} ساله که هر ۳۳ سال تقریباً یک سال بیشتر می‌شود.</p>
+      <p>تاریخ‌نگاران سده‌های نخست اسلامی (طبری، بلاذری) به قمری می‌نوشتند. تقویم خورشیدی هجری با مبدأ هجرت دیرتر رسمی شد؛ ایرانیان پیش‌تر سال‌ها را با تقویم یزدگردی (از تاج‌گذاری یزدگرد سوم در ۶۳۲ م) و پس از اصلاح ملکشاهی (۱۰۷۹ م، با حضور خیام) با تقویم جلالی می‌شمردند.</p>
+      ${gy < 1582 ? `<p style="font-size:.85rem;color:var(--ink-2)">تاریخ میلادی در اینجا «گریگوری پیش‌رو» است. کتاب‌های تاریخ برای پیش از ۱۵۸۲ معمولاً تقویم ژولیانی را به کار می‌برند که در این سده‌ها ${fa(gy < 700 ? 3 : gy < 900 ? 4 : gy < 1100 ? 5 : gy < 1300 ? 6 : 8)} روز یا کمی بیشتر عقب‌تر است؛ برای همین تاریخ‌ها در دو کتاب گاه چند روز فرق دارند.</p>` : ""}
+      ${lk(["early-islamic", "sources-early-islamic-iran-zarrinkoub", "abu-muslim-revolt"])}</div>`;
+  };
+  $("#go").addEventListener("click", go);
+  pn.addEventListener("click", e => { const b = e.target.closest("[data-e]"); if (!b) return; const x = EX[+b.dataset.e];
+    if (x[1] === "today") { const now = new Date(), p = parts("persian", now.getTime()); $("#cal").value = "persian"; [$("#y").value, $("#m").value, $("#d").value] = p; }
+    else { $("#cal").value = x[1]; $("#y").value = x[2]; $("#m").value = x[3]; $("#d").value = x[4]; }
+    go(); });
+  go();
+}
+
+/* ——— 2. how far is the source from the event? ——— */
+function dist(pn, out){
+  const EV = [["قادسیه", 636], ["نهاوند", 642], ["مرگ یزدگرد سوم", 651], ["قیام ابومسلم", 747], ["آغاز طاهریان", 821], ["پایان قیام بابک", 837], ["برآمدن یعقوب لیث", 861]];
+  // approximate dates of writing (usually author's death or approximate completion); lang a = Arabic, p = Persian
+  const SRC = [
+    ["فتوح‌البلدان بلاذری", 870, "a"], ["تاریخ یعقوبی", 890, "a"], ["اخبار الطوال دینوری", 890, "a"], ["تاریخ طبری", 915, "a"],
+    ["مروج‌الذهب مسعودی", 947, "a"], ["تاریخ بلعمی (ترجمه و بازنویسی طبری)", 963, "p"], ["شاهنامهٔ فردوسی", 1010, "p"],
+    ["زین‌الاخبار گردیزی", 1050, "p"], ["تاریخ سیستان (بخش کهن)", 1062, "p"]
+  ];
+  pn.innerHTML = `<p style="margin:0">یک رویداد را انتخاب کنید:</p><div class="chips">${EV.map((e, i) => `<button type="button" data-v="${i}">${e[0]} (${fa(e[1])} م)</button>`).join("")}</div><div id="b"></div>`;
+  const draw = i => {
+    const [name, y] = EV[i], rows = SRC.filter(s => s[1] >= y), max = Math.max(...rows.map(s => s[1] - y));
+    pn.querySelectorAll("[data-v]").forEach(x => x.setAttribute("aria-pressed", +x.dataset.v === i));
+    pn.querySelector("#b").innerHTML = `<div class="bars">${rows.map(s => `<div><span>${s[0]}<span class="lang">${s[2] === "a" ? "عربی" : "فارسی"}</span></span><i class="${s[2] === "p" ? "alt" : ""}" style="width:${(s[1] - y) / max * 100}%"></i><span>${fa(s[1] - y)} سال بعد</span></div>`).join("")}</div>`;
+    const first = rows[0];
+    out.innerHTML = `<div class="res"><h3>نزدیک‌ترین منبعِ بازمانده دربارهٔ «${name}» حدود ${fa(first[1] - y)} سال بعد نوشته شده است</h3>
+      <p>برای ایران سده‌های نخست اسلامی، تقریباً هیچ گزارش روایی هم‌زمانی به دست ما نرسیده است. آنچه داریم را بیشتر نویسندگان دوران عباسی، به عربی، در بغداد یا شهرهای دیگر خلافت نوشته‌اند. نخستین تاریخ‌های منثور فارسیِ بازمانده (مثل بلعمی) بیش از سه سده پس از فتح نوشته شده‌اند.</p>
+      <p>این فاصله یعنی گزارش‌ها لزوماً ساختگی‌اند؟ نه. طبری و بلاذری از نویسندگان پیشین‌تری نقل می‌کنند که کتاب‌هایشان گم شده (مثل ابومخنف، سیف بن عمر، مدائنی) و زنجیرهٔ راویان را ذکر می‌کنند؛ پس فاصلهٔ واقعی گاهی کوتاه‌تر است. اما همین راویان گرایش‌های قبیله‌ای، سیاسی و مذهبی داشتند — مثلاً اعتبار روایت‌های سیف بن عمر دربارهٔ فتوح از سدهٔ نوزدهم به این سو به‌شدت محل بحث است. سکه‌ها، کتیبه‌ها، مهرها و متن‌های پهلوی و سریانی گاهی می‌توانند این روایت‌ها را محک بزنند.</p>
+      <p>پرسشی که این ابزار پیش می‌گذارد برای هر دوره‌ای کاربرد دارد: <b>این گزارش را چه کسی، کی، به چه زبانی و برای چه کسی نوشت؟</b></p>
+      ${lk(["sources-early-islamic-iran-zarrinkoub", "arab-conquest-iran", "early-islamic", "soc:early-islamic-iran-continuity-debate"])}</div>`;
+  };
+  pn.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) draw(+b.dataset.v); });
+  draw(0);
+}
+
+/* ——— 3. Ramadan drifting through the solar year ——— */
+function drift(pn, out){
+  pn.innerHTML = `<label class="field">از سال خورشیدی: <b id="yv"></b><input type="range" id="y" min="1300" max="1420" step="1" value="1370"></label><div class="chartbox" id="ch"></div>`;
+  const yr = pn.querySelector("#y");
+  const render = () => {
+    const y0 = +yr.value, N = 40, pts = [];
+    pn.querySelector("#yv").textContent = fa(y0) + " تا " + fa(y0 + N - 1);
+    for (let k = 0; k < N; k++) {
+      const py = y0 + k, a = toTime("persian", py, 1, 1), b = toTime("persian", py + 1, 1, 1);
+      // find 1 Ramadan inside this solar year
+      const h = parts("islamic-civil", a); let ty = h[1] < 9 || (h[1] === 9 && h[2] === 1) ? h[0] : h[0] + 1;
+      let t = toTime("islamic-civil", ty, 9, 1); if (t >= b) t = null;
+      if (t === null) { t = toTime("islamic-civil", ty - 1, 9, 1); if (t < a) t = null; }
+      if (t !== null) pts.push([py, (t - a) / DAY]);
+    }
+    const W = 640, H = 300, P = 46, X = d => P + d / 365 * (W - 2 * P), Y = i => P / 2 + i / N * (H - P);
+    const ink = css("--ink-3"), c = css("--fam-hist");
+    const seasons = [["بهار", 0], ["تابستان", 93], ["پاییز", 186], ["زمستان", 276]];
+    pn.querySelector("#ch").innerHTML = `<svg viewBox="0 0 ${W} ${H + 20}" width="100%" style="max-width:${W}px" role="img" aria-label="جای آغاز رمضان در سال خورشیدی، سال به سال">
+      ${seasons.map(([n, d]) => `<line x1="${W - X(d)}" y1="${P / 2 - 6}" x2="${W - X(d)}" y2="${H}" stroke="${ink}" stroke-opacity=".3"/><text x="${W - X(d) - 6}" y="${P / 2 - 10}" text-anchor="end" font-size="15" fill="${ink}">${n}</text>`).join("")}
+      ${pts.map(([py, d], i) => `<circle cx="${W - X(d)}" cy="${Y(py - y0)}" r="4.5" fill="${c}"><title>${fa(py)}: ${fa(Math.round(d))} روز پس از نوروز</title></circle>`).join("")}
+      <text x="${W - P}" y="${H + 16}" text-anchor="start" font-size="14" fill="${ink}">سال ${fa(y0)} بالا، سال ${fa(y0 + N - 1)} پایین</text></svg>`;
+    out.innerHTML = `<div class="res"><h3>هر سال حدود ۱۱ روز زودتر</h3>
+      <p>هر نقطه آغاز ماه رمضان در یک سال خورشیدی است (راست: نوروز، چپ: پایان اسفند). چون سال قمری کوتاه‌تر است، رمضان هر سال حدود ۱۱ روز عقب می‌آید و در حدود ۳۳ سال همهٔ فصل‌ها را دور می‌زند. برای همین جشن‌ها و سوگواری‌های قمری گاهی در گرمای تابستان و گاهی در سرمای زمستان می‌افتند.</p>
+      <p>همین ویژگی برای حکومت‌ها مسئلهٔ عملی بود: مالیات زمین به محصول وابسته است و محصول به فصل. دیوان‌ها برای گرفتن خراج تقویم خورشیدی را نگه داشتند و خلیفه‌ها و شاهان بارها «نوروز خراجی» را جابه‌جا کردند. اصلاح جلالی (۱۰۷۹ م) هم در همین سنت دیوانی ایرانی است.</p>
+      ${lk(["early-islamic", "abbasid-golden-age"])}</div>`;
+  };
+  yr.addEventListener("input", render); render();
+}
+
+/* ——— 4. guess ——— */
+const GUESS = [
+  ["یک سال قمری هجری چند روز است؟", 300, 400, 1, 354, "۳۵۴ یا ۳۵۵ روز (دوازده ماه ۲۹ یا ۳۰ روزه)، یعنی حدود ۱۱ روز کوتاه‌تر از سال خورشیدی.", " روز", ["early-islamic"], ""],
+  ["امروز (پاییز ۱۴۰۵ خورشیدی) سال قمری چند سال جلوتر از سال خورشیدی است؟", 0, 80, 1, 43, "حدود ۴۳ سال (۱۴۴۸ قمری). هر دو از هجرت شمرده می‌شوند، اما سال قمری کوتاه‌تر است و هر ۳۳ سال یک سال جلو می‌افتد.", " سال", ["early-islamic"], ""],
+  ["از نبرد قادسیه (۶۳۶ م) تا پایان نگارش تاریخ طبری چند سال گذشت؟", 0, 500, 5, 280, "حدود ۲۸۰ سال. طبری از راویان پیشین نقل می‌کند، اما متن بازماندهٔ اصلی ما دربارهٔ این نبرد از سه سده بعد است.", " سال", ["sources-early-islamic-iran-zarrinkoub", "arab-conquest-iran"], "تاریخ پایان کتاب طبری حدود ۹۱۵ م"],
+  ["اصلاح تقویم جلالی (ملکشاهی) که خیام هم در آن بود، در چه سالی میلادی انجام شد؟", 700, 1500, 1, 1079, "سال ۱۰۷۹ م (۴۷۱ ق). قاعدهٔ کبیسهٔ آن چنان دقیق بود که تقویم رسمی امروز ایران هنوز بر پایهٔ همان منطقِ «سال‌تحویل نجومی» است.", " م", ["abbasid-golden-age"], ""],
+  ["قیام ابومسلم در خراسان (۷۴۷ م) چند سال پس از مرگ یزدگرد سوم (۶۵۱ م) آغاز شد؟", 0, 300, 1, 96, "حدود ۹۶ سال — تقریباً سه نسل. این فاصله در بحث «گسست یا پیوستگی» مهم است: نیروهایی که عباسیان را به قدرت رساندند در جامعه‌ای شکل گرفته بودند که دیگر نه ساسانی بود نه کاملاً عربی.", " سال", ["abu-muslim-revolt", "soc:early-islamic-iran-continuity-debate"], ""]
+];
+
+LabKit.start({
+  wiki: "tarikh", first: "conv",
+  labels: {
+    "early-islamic": "ایران در سده‌های نخست اسلامی", "sources-early-islamic-iran-zarrinkoub": "منابع: سنجش زرین‌کوب", "abu-muslim-revolt": "قیام ابومسلم",
+    "arab-conquest-iran": "فتح عربی ایران", "soc:early-islamic-iran-continuity-debate": "گسست یا پیوستگی؟ (جامعه)", "abbasid-golden-age": "عصر طلایی عباسی"
+  },
+  exps: {
+    conv: ["مبدل تقویم", "یک روز، سه تقویم", "تاریخی را در هر تقویم وارد کنید تا معادلش را در دو تقویم دیگر و روز هفته‌اش را ببینید. چند نمونهٔ تاریخی هم آماده است.", conv],
+    dist: ["فاصلهٔ منبع", "گزارش را کِی نوشته‌اند؟", "پیش از باور کردن هر روایت تاریخی، بپرسید میان رویداد و نوشتن آن چقدر فاصله بود. یک رویداد از سده‌های نخست اسلامی را انتخاب کنید.", dist],
+    drift: ["چرخش رمضان", "تقویم قمری در سال خورشیدی", "ببینید آغاز ماه رمضان در چهل سال پیاپی کجای سال خورشیدی می‌افتد.", drift],
+    guess: ["اول حدس بزن", "پنج پرسش دربارهٔ زمان", "پیش از دیدن پاسخ، حدس خود را با لغزنده بزنید.", LabKit.guess(GUESS)]
+  }
+});
+</script>
+</body>
+</html>
