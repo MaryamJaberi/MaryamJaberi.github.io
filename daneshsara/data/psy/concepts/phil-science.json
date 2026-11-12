@@ -1,85 +1,94 @@
 {
- "id": "psy:phil-science",
- "kind": "subfield",
- "title": {
-  "fa": "فلسفهٔ علم",
-  "en": "Philosophy of science",
-  "nl": "Wetenschapsfilosofie"
- },
- "parent": "psy:philosophy",
- "field": null,
- "summary": {
-  "fa": "علم چیست و چطور پیش می‌رود؟ ابطال‌پذیری پوپر، پارادایم‌های کوهن، و امروز بحث‌های بحران تکرارپذیری.",
-  "en": "What is science and how does it progress? Popper's falsifiability, Kuhn's paradigms, and today's debates on the replication crisis.",
-  "nl": "Wat is wetenschap en hoe gaat ze vooruit? Poppers falsifieerbaarheid, Kuhns paradigma's, en de huidige debatten over de replicatiecrisis."
- },
- "points": [
-  {
-   "text": {
-    "fa": "پوپر: نظریهٔ علمی باید قابل ابطال باشد؛ او روانکاوی را نمونهٔ نظریهٔ ابطال‌ناپذیر می‌دانست.",
-    "en": "Popper: a scientific theory must be falsifiable; he saw psychoanalysis as an example of an unfalsifiable theory.",
-    "nl": "Popper: een wetenschappelijke theorie moet falsifieerbaar zijn; hij zag de psychoanalyse als voorbeeld van een niet-falsifieerbare theorie."
-   },
-   "sources": [],
-   "flags": []
+  "id": "psy:phil-science",
+  "kind": "subfield",
+  "title": {
+    "fa": "فلسفهٔ علم",
+    "en": "Philosophy of science",
+    "nl": "Wetenschapsfilosofie"
   },
-  {
-   "text": {
-    "fa": "کوهن: علم با «تغییر پارادایم» دگرگون می‌شود؛ مثل گذر از رفتارگرایی به انقلاب شناختی.",
-    "en": "Kuhn: science transforms through “paradigm shifts”; like the move from behaviourism to the cognitive revolution.",
-    "nl": "Kuhn: wetenschap verandert via ‘paradigmaverschuivingen’; zoals de overgang van behaviorisme naar de cognitieve revolutie."
-   },
-   "sources": [],
-   "flags": []
+  "parent": "psy:philosophy",
+  "field": null,
+  "summary": {
+    "fa": "علم چیست و چطور پیش می‌رود؟ ابطال‌پذیری پوپر، پارادایم‌های کوهن، و امروز بحث‌های بحران تکرارپذیری.",
+    "en": "What is science and how does it progress? Popper's falsifiability, Kuhn's paradigms, and today's debates on the replication crisis.",
+    "nl": "Wat is wetenschap en hoe gaat ze vooruit? Poppers falsifieerbaarheid, Kuhns paradigma's, en de huidige debatten over de replicatiecrisis."
   },
-  {
-   "text": {
-    "fa": "پیش‌ثبت پژوهش پاسخ عملی به مسئلهٔ انعطاف تحلیل است.",
-    "en": "Preregistration is a practical answer to the problem of analytic flexibility.",
-    "nl": "Preregistratie is een praktisch antwoord op het probleem van analytische flexibiliteit."
-   },
-   "sources": [],
-   "flags": []
-  }
- ],
- "links": [
-  {
-   "to": "psy:replication-crisis",
-   "rel": "see-also",
-   "note": {
-    "fa": "تکرارپذیری",
-    "en": "Replicability",
-    "nl": "Repliceerbaarheid"
-   }
-  },
-  {
-   "to": "psy:statistical-thinking",
-   "rel": "see-also",
-   "note": {
-    "fa": "تفکر آماری",
-    "en": "Statistical thinking",
-    "nl": "Statistisch denken"
-   }
-  },
-  {
-   "to": "psy:bullshit",
-   "rel": "evidence-for",
-   "note": {
-    "fa": "شک‌ورزی داده‌ای",
-    "en": "Data scepticism",
-    "nl": "Scepsis over data"
-   }
-  }
- ],
- "people": [
-  "core:karl-popper",
-  "core:thomas-kuhn",
-  "core:imre-lakatos"
- ],
- "sources": [],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "points": [
+    {
+      "text": {
+        "fa": "پوپر: نظریهٔ علمی باید قابل ابطال باشد؛ او روانکاوی را نمونهٔ نظریهٔ ابطال‌ناپذیر می‌دانست.",
+        "en": "Popper: a scientific theory must be falsifiable; he saw psychoanalysis as an example of an unfalsifiable theory.",
+        "nl": "Popper: een wetenschappelijke theorie moet falsifieerbaar zijn; hij zag de psychoanalyse als voorbeeld van een niet-falsifieerbare theorie."
+      },
+      "sources": [],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "کوهن: علم با «تغییر پارادایم» دگرگون می‌شود؛ مثل گذر از رفتارگرایی به انقلاب شناختی.",
+        "en": "Kuhn: science transforms through “paradigm shifts”; like the move from behaviourism to the cognitive revolution.",
+        "nl": "Kuhn: wetenschap verandert via ‘paradigmaverschuivingen’; zoals de overgang van behaviorisme naar de cognitieve revolutie."
+      },
+      "sources": [],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "پیش‌ثبت پژوهش پاسخ عملی به مسئلهٔ انعطاف تحلیل است.",
+        "en": "Preregistration is a practical answer to the problem of analytic flexibility.",
+        "nl": "Preregistratie is een praktisch antwoord op het probleem van analytische flexibiliteit."
+      },
+      "sources": [],
+      "flags": []
+    }
+  ],
+  "links": [
+    {
+      "to": "psy:replication-crisis",
+      "rel": "see-also",
+      "note": {
+        "fa": "تکرارپذیری",
+        "en": "Replicability",
+        "nl": "Repliceerbaarheid"
+      }
+    },
+    {
+      "to": "psy:statistical-thinking",
+      "rel": "see-also",
+      "note": {
+        "fa": "تفکر آماری",
+        "en": "Statistical thinking",
+        "nl": "Statistisch denken"
+      }
+    },
+    {
+      "to": "psy:bullshit",
+      "rel": "evidence-for",
+      "note": {
+        "fa": "شک‌ورزی داده‌ای",
+        "en": "Data scepticism",
+        "nl": "Scepsis over data"
+      }
+    },
+    {
+      "to": "phil:science",
+      "rel": "same-as",
+      "note": {
+        "fa": "همین مفهوم در ویکی دیگر",
+        "en": "Same concept in another wiki",
+        "nl": "Hetzelfde begrip in een andere wiki"
+      }
+    }
+  ],
+  "people": [
+    "core:karl-popper",
+    "core:thomas-kuhn",
+    "core:imre-lakatos"
+  ],
+  "sources": [],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

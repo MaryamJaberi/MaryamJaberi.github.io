@@ -1,120 +1,120 @@
 {
- "id": "psy:t-thirdwave",
- "kind": "subfield",
- "title": {
-  "fa": "موج سوم رفتاردرمانی",
-  "en": "Third-wave therapies",
-  "nl": "Derdegeneratietherapieën"
- },
- "parent": "psy:psychotherapy",
- "field": null,
- "summary": {
-  "fa": "درمان‌هایی که به‌جای تغییر محتوای فکر، رابطهٔ فرد با فکر و احساس را تغییر می‌دهند: پذیرش، ذهن‌آگاهی، ارزش‌ها.",
-  "en": "Therapies that change the person's relationship with thoughts and feelings rather than their content: acceptance, mindfulness, values.",
-  "nl": "Therapieën die niet de inhoud van gedachten veranderen, maar de relatie met gedachten en gevoelens: acceptatie, mindfulness, waarden."
- },
- "points": [
-  {
-   "text": {
-    "fa": "ACT (هیز): انعطاف‌پذیری روانی با شش فرایند: پذیرش، گسلش، لحظهٔ حال، خود به‌عنوان زمینه، ارزش‌ها، عمل متعهدانه.",
-    "en": "ACT (Hayes): psychological flexibility with six processes: acceptance, defusion, present moment, self-as-context, values, committed action.",
-    "nl": "ACT (Hayes): psychologische flexibiliteit met zes processen: acceptatie, defusie, het huidige moment, zelf als context, waarden, toegewijde actie."
-   },
-   "sources": [
-    "src:5d63271761"
-   ],
-   "flags": []
+  "id": "psy:t-thirdwave",
+  "kind": "subfield",
+  "title": {
+    "fa": "موج سوم رفتاردرمانی",
+    "en": "Third-wave therapies",
+    "nl": "Derdegeneratietherapieën"
   },
-  {
-   "text": {
-    "fa": "DBT (لینهان، ۱۹۹۳): برای اختلال شخصیت مرزی؛ دیالکتیک پذیرش و تغییر.",
-    "en": "DBT (Linehan, 1993): for borderline personality disorder; the dialectic of acceptance and change.",
-    "nl": "DGT (Linehan, 1993): voor de borderline-persoonlijkheidsstoornis; de dialectiek van acceptatie en verandering."
-   },
-   "sources": [
-    "src:5d63271761"
-   ],
-   "flags": []
+  "parent": "psy:psychotherapy",
+  "field": null,
+  "summary": {
+    "fa": "درمان‌هایی که به‌جای تغییر محتوای فکر، رابطهٔ فرد با فکر و احساس را تغییر می‌دهند: پذیرش، ذهن‌آگاهی، ارزش‌ها.",
+    "en": "Therapies that change the person's relationship with thoughts and feelings rather than their content: acceptance, mindfulness, values.",
+    "nl": "Therapieën die niet de inhoud van gedachten veranderen, maar de relatie met gedachten en gevoelens: acceptatie, mindfulness, waarden."
   },
-  {
-   "text": {
-    "fa": "MBCT (سگال، ویلیامز، تیزدیل، ۲۰۰۲): پیشگیری از عود افسردگی با ذهن‌آگاهی.",
-    "en": "MBCT (Segal, Williams, Teasdale, 2002): preventing depressive relapse with mindfulness.",
-    "nl": "MBCT (Segal, Williams, Teasdale, 2002): terugval in depressie voorkomen met mindfulness."
-   },
-   "sources": [
-    "src:5d63271761"
-   ],
-   "flags": []
-  },
-  {
-   "text": {
-    "fa": "طرح‌واره‌درمانی (یانگ): طرح‌واره‌های ناسازگار اولیه.",
-    "en": "Schema therapy (Young): early maladaptive schemas.",
-    "nl": "Schematherapie (Young): vroege onaangepaste schema's."
-   },
-   "sources": [
-    "src:5d63271761"
-   ],
-   "flags": []
-  },
-  {
-   "text": {
-    "fa": "«ترمز ذهنی» در جزوهٔ خودشناسی و تصمیم: مکث و آگاه شدن از فکر بدون باور یا اجرای فوری آن؛ همان کاری که ذهن‌آگاهی انجام می‌دهد.",
-    "en": "The “mental brake” in the booklet on self-knowledge and decision: pausing and becoming aware of a thought without immediately believing or acting on it; what mindfulness does.",
-    "nl": "De ‘mentale rem’ in de bundel zelfkennis en beslissen: pauzeren en je bewust worden van een gedachte zonder die meteen te geloven of uit te voeren; wat mindfulness doet."
-   },
-   "sources": [
-    "src:5d63271761"
-   ],
-   "flags": []
-  }
- ],
- "links": [
-  {
-   "to": "psy:experiential-avoidance",
-   "rel": "see-also",
-   "note": {
-    "fa": "هدف اصلی",
-    "en": "Main target",
-    "nl": "Hoofddoel"
-   }
-  },
-  {
-   "to": "psy:emotional-agility",
-   "rel": "see-also",
-   "note": {
-    "fa": "رویکرد نزدیک",
-    "en": "Close approach",
-    "nl": "Verwante benadering"
-   }
-  },
-  {
-   "to": "psy:pbt",
-   "rel": "see-also",
-   "note": {
-    "fa": "تکامل بعدی",
-    "en": "Later evolution",
-    "nl": "Latere ontwikkeling"
-   }
-  }
- ],
- "people": [
-  "core:steven-hayes",
-  "core:marsha-linehan",
-  "core:john-teasdale",
-  "core:jeffrey-young"
- ],
- "sources": [
-  "src:5d63271761",
-  "src:899aab6a88",
-  "src:1297a85685"
- ],
- "booklets": [
-  "decision:automatic"
- ],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "points": [
+    {
+      "text": {
+        "fa": "ACT (هیز): انعطاف‌پذیری روانی با شش فرایند: پذیرش، گسلش، لحظهٔ حال، خود به‌عنوان زمینه، ارزش‌ها، عمل متعهدانه.",
+        "en": "ACT (Hayes): psychological flexibility with six processes: acceptance, defusion, present moment, self-as-context, values, committed action.",
+        "nl": "ACT (Hayes): psychologische flexibiliteit met zes processen: acceptatie, defusie, het huidige moment, zelf als context, waarden, toegewijde actie."
+      },
+      "sources": [
+        "src:5d63271761"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "DBT (لینهان، ۱۹۹۳): برای اختلال شخصیت مرزی؛ دیالکتیک پذیرش و تغییر.",
+        "en": "DBT (Linehan, 1993): for borderline personality disorder; the dialectic of acceptance and change.",
+        "nl": "DGT (Linehan, 1993): voor de borderline-persoonlijkheidsstoornis; de dialectiek van acceptatie en verandering."
+      },
+      "sources": [
+        "src:5d63271761"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "MBCT (سگال، ویلیامز، تیزدیل، ۲۰۰۲): پیشگیری از عود افسردگی با ذهن‌آگاهی.",
+        "en": "MBCT (Segal, Williams, Teasdale, 2002): preventing depressive relapse with mindfulness.",
+        "nl": "MBCT (Segal, Williams, Teasdale, 2002): terugval in depressie voorkomen met mindfulness."
+      },
+      "sources": [
+        "src:5d63271761"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "طرح‌واره‌درمانی (یانگ): طرح‌واره‌های ناسازگار اولیه.",
+        "en": "Schema therapy (Young): early maladaptive schemas.",
+        "nl": "Schematherapie (Young): vroege onaangepaste schema's."
+      },
+      "sources": [
+        "src:5d63271761"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "«ترمز ذهنی» در جزوهٔ خودشناسی و تصمیم: مکث و آگاه شدن از فکر بدون باور یا اجرای فوری آن؛ همان کاری که ذهن‌آگاهی انجام می‌دهد.",
+        "en": "The “mental brake” in the booklet on self-knowledge and decision: pausing and becoming aware of a thought without immediately believing or acting on it; what mindfulness does.",
+        "nl": "De ‘mentale rem’ in de bundel zelfkennis en beslissen: pauzeren en je bewust worden van een gedachte zonder die meteen te geloven of uit te voeren; wat mindfulness doet."
+      },
+      "sources": [
+        "src:5d63271761"
+      ],
+      "flags": []
+    }
+  ],
+  "links": [
+    {
+      "to": "psy:experiential-avoidance",
+      "rel": "see-also",
+      "note": {
+        "fa": "هدف اصلی",
+        "en": "Main target",
+        "nl": "Hoofddoel"
+      }
+    },
+    {
+      "to": "psy:emotional-agility",
+      "rel": "see-also",
+      "note": {
+        "fa": "رویکرد نزدیک",
+        "en": "Close approach",
+        "nl": "Verwante benadering"
+      }
+    },
+    {
+      "to": "psy:pbt",
+      "rel": "see-also",
+      "note": {
+        "fa": "تکامل بعدی",
+        "en": "Later evolution",
+        "nl": "Latere ontwikkeling"
+      }
+    }
+  ],
+  "people": [
+    "core:steven-hayes",
+    "core:marsha-linehan",
+    "core:john-teasdale",
+    "core:jeffrey-young"
+  ],
+  "sources": [
+    "src:5d63271761",
+    "src:899aab6a88",
+    "src:1297a85685"
+  ],
+  "booklets": [
+    "decision:automatic"
+  ],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

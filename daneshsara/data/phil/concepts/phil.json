@@ -1,54 +1,54 @@
 {
- "id": "phil:phil",
- "kind": "root",
- "title": {
-  "fa": "فلسفه",
-  "en": "Philosophy",
-  "nl": "Filosofie"
- },
- "aliases": [],
- "parent": null,
- "field": null,
- "summary": {
-  "fa": "پرسش‌هایی که آزمایش به‌تنهایی جوابشان را نمی‌دهد: چه می‌دانیم، آگاهی چیست، چه باید کرد، علم چگونه پیش می‌رود، جامعهٔ عادلانه چه شکلی است، و زندگی خوب کدام است. این ویکی سنت یونانی، سنت ایرانی‌اسلامی و فلسفهٔ معاصر را کنار هم و در پیوند با روان‌شناسی و جامعه‌شناسی می‌گذارد.",
-  "en": "Questions experiment alone cannot answer: what we know, what consciousness is, what we ought to do, how science progresses, what a just society looks like, and what a good life is. This wiki sets the Greek tradition, the Iranian-Islamic tradition and contemporary philosophy side by side, in connection with psychology and sociology.",
-  "nl": "Vragen die een experiment alleen niet beantwoordt: wat we weten, wat bewustzijn is, wat we behoren te doen, hoe wetenschap vooruitgaat, hoe een rechtvaardige samenleving eruitziet en wat een goed leven is. Deze wiki zet de Griekse traditie, de Iraans-islamitische traditie en de hedendaagse filosofie naast elkaar, in verband met psychologie en sociologie."
- },
- "points": [],
- "links": [
-  {
-   "to": "psy:philosophy",
-   "rel": "same-as",
-   "note": {
-    "fa": "فلسفه در ویکی روان",
-    "en": "Philosophy in the psychology wiki",
-    "nl": "Philosophy in the psychology wiki"
-   }
+  "id": "phil:phil",
+  "kind": "root",
+  "title": {
+    "fa": "فلسفه",
+    "en": "Philosophy",
+    "nl": "Filosofie"
   },
-  {
-   "to": "atlas:xphi",
-   "rel": "bridges",
-   "note": {
-    "fa": "پل فلسفهٔ تجربی",
-    "en": "The experimental philosophy bridge",
-    "nl": "The experimental philosophy bridge"
-   }
+  "aliases": [],
+  "parent": null,
+  "field": null,
+  "summary": {
+    "fa": "پرسش‌هایی که آزمایش به‌تنهایی جوابشان را نمی‌دهد: چه می‌دانیم، آگاهی چیست، چه باید کرد، علم چگونه پیش می‌رود، جامعهٔ عادلانه چه شکلی است، و زندگی خوب کدام است. این ویکی سنت یونانی، سنت ایرانی‌اسلامی و فلسفهٔ معاصر را کنار هم و در پیوند با روان‌شناسی و جامعه‌شناسی می‌گذارد.",
+    "en": "Questions experiment alone cannot answer: what we know, what consciousness is, what we ought to do, how science progresses, what a just society looks like, and what a good life is. This wiki sets the Greek tradition, the Iranian-Islamic tradition and contemporary philosophy side by side, in connection with psychology and sociology.",
+    "nl": "Vragen die een experiment alleen niet beantwoordt: wat we weten, wat bewustzijn is, wat we behoren te doen, hoe wetenschap vooruitgaat, hoe een rechtvaardige samenleving eruitziet en wat een goed leven is. Deze wiki zet de Griekse traditie, de Iraans-islamitische traditie en de hedendaagse filosofie naast elkaar, in verband met psychologie en sociologie."
   },
-  {
-   "to": "atlas:philsocsci",
-   "rel": "bridges",
-   "note": {
-    "fa": "پل فلسفهٔ علوم اجتماعی",
-    "en": "The philosophy of social science bridge",
-    "nl": "The philosophy of social science bridge"
-   }
-  }
- ],
- "people": [],
- "sources": [],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "points": [],
+  "links": [
+    {
+      "to": "psy:philosophy",
+      "rel": "same-as",
+      "note": {
+        "fa": "فلسفه در ویکی روان",
+        "en": "Philosophy in the psychology wiki",
+        "nl": "Philosophy in the psychology wiki"
+      }
+    },
+    {
+      "to": "atlas:xphi",
+      "rel": "bridges",
+      "note": {
+        "fa": "پل فلسفهٔ تجربی",
+        "en": "The experimental philosophy bridge",
+        "nl": "The experimental philosophy bridge"
+      }
+    },
+    {
+      "to": "atlas:philsocsci",
+      "rel": "bridges",
+      "note": {
+        "fa": "پل فلسفهٔ علوم اجتماعی",
+        "en": "The philosophy of social science bridge",
+        "nl": "The philosophy of social science bridge"
+      }
+    }
+  ],
+  "people": [],
+  "sources": [],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

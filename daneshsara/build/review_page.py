@@ -45,7 +45,7 @@ main{padding-block:var(--s6) var(--s16)} h1{margin:0 0 var(--s2)} .lead{color:va
 .bar button{font:inherit;font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
 .bar button[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
 .bar .n{color:var(--ink-3);font-size:var(--small);margin-inline-start:auto}
-table{width:100%;border-collapse:collapse;font-size:var(--small)} th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top} th{color:var(--ink-2);font-weight:600}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch} table{width:100%;min-width:560px;border-collapse:collapse;font-size:var(--small)} th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top} th{color:var(--ink-2);font-weight:600}
 tr.ok{background:color-mix(in srgb,var(--primary) 8%,transparent)}
 td a{color:var(--ink);font-weight:600;text-decoration:none} td a:hover{color:var(--primary)}
 .w{font-size:var(--chip);padding:1px 8px;border-radius:var(--r-full);border:1px solid var(--line-strong)} .w.psy{border-color:var(--fam-psy)} .w.tabar{border-color:var(--fam-bio)} .w.soc{border-color:var(--fam-soc)} .w.phil{border-color:var(--fam-hum)}
@@ -63,7 +63,7 @@ footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(-
 <p class="lead">همهٔ مدخل‌ها و یادداشت‌هایی که هنوز «پیش‌نویس»اند، یک‌جا. هر کدام را باز کنید، با چک‌لیست زیر بسنجید، و اگر قابل انتشار است تیک بزنید. تیک‌ها فقط در همین مرورگر ذخیره می‌شوند؛ در پایان «کپی فهرست تأییدشده‌ها» را بزنید و متن را برای من بفرستید تا وضعیتشان را به «بازبینی‌شده» تغییر دهم. اگر چیزی باید اصلاح شود، شناسه و نکته را در یادداشت پایین بنویسید.</p>
 <div class="card check"><b>چک‌لیست پنج‌گانه</b><ol><li>هر گزاره منبع دارد و منبع واقعاً همان را می‌گوید (یک نمونه را تصادفی باز کنید).</li><li>یافته‌های تکرارنشده یا محل بحث پرچم خورده‌اند و با «قطعی» نوشته نشده‌اند.</li><li>زبان ساده و دقیق است؛ هیچ تشخیص یا توصیهٔ فردی (از جمله دوز دارو) ندارد.</li><li>پیوندها به مدخل درست می‌روند و نوع رابطه معنادار است.</li><li>اگر دربارهٔ ایران است: سال، روش و ردهٔ داده درست و محتاطانه است.</li></ol></div>
 <div class="bar" id="bar"></div>
-<table><thead><tr><th></th><th>مدخل</th><th>ویکی</th><th>گزاره</th><th>منبع</th><th>اعتبار</th><th>پرچم</th></tr></thead><tbody id="tb"></tbody></table>
+<div class="tw"><table><thead><tr><th></th><th>مدخل</th><th>ویکی</th><th>گزاره</th><th>منبع</th><th>اعتبار</th><th>پرچم</th></tr></thead><tbody id="tb"></tbody></table></div>
 <div class="exp"><b>یادداشت اصلاحات (شناسه: نکته)</b><textarea id="notes" placeholder="soc:anomie: مثال سوم مبهم است&#10;tabar:consanguinity: رقم ۳۸٫۶ را با منبع جدیدتر مقایسه کنید"></textarea>
 <div class="row"><button id="copy">کپی فهرست تأییدشده‌ها + یادداشت</button><button class="ghost" id="clear">پاک کردن تیک‌ها</button><span id="msg" style="align-self:center;color:var(--ink-3);font-size:var(--small)"></span></div></div>
 </main>
