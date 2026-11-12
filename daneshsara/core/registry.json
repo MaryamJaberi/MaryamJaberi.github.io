@@ -1,14 +1,14 @@
 {
 "stats": {
-"concepts": 1598,
-"concepts_with_sources": 1554,
-"cross_wiki_links": 1020,
+"concepts": 1601,
+"concepts_with_sources": 1557,
+"cross_wiki_links": 1026,
 "bridge_links": 133,
-"iran_notes": 16,
+"iran_notes": 22,
 "fields": 77,
 "bridges": 25,
 "people": 1762,
-"sources": 2302,
+"sources": 2324,
 "built": "2026-11-12"
 },
 "entries": {
@@ -3178,6 +3178,18 @@
 },
 "url": "psy/tools/graph.html#social-trust",
 "status": "reviewed",
+"wikidata": null
+},
+"psy:adverse-childhood-experiences": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "تجربه‌های ناگوار کودکی (ACE)",
+"en": "Adverse childhood experiences (ACEs)",
+"nl": "Ingrijpende jeugdervaringen (ACE's)"
+},
+"url": "psy/tools/graph.html#adverse-childhood-experiences",
+"status": "draft",
 "wikidata": null
 },
 "psy:social-media": {
@@ -9168,6 +9180,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:social-roots-of-childhood-adversity": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "ریشه‌های اجتماعی تجربه‌های ناگوار کودکی: از قانون و اقتصاد تا باورها",
+"en": "Social roots of adverse childhood experiences: from law and economy to beliefs",
+"nl": "Sociale wortels van ingrijpende jeugdervaringen: van wet en economie tot overtuigingen"
+},
+"url": "soc/#social-roots-of-childhood-adversity",
+"status": "draft",
+"wikidata": null
+},
 "soc:greengrocer-living-within-the-lie": {
 "wiki": "soc",
 "type": "concept",
@@ -12285,6 +12309,18 @@
 "nl": "Bronnen voor de geschiedenis van grondbezit in Iran en de beperkingen van de gegevens"
 },
 "url": "soc/#persian-land-history-sources",
+"status": "draft",
+"wikidata": null
+},
+"soc:aces-iran-turning-points": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نقطه‌های عطف: شکستن چرخهٔ تجربه‌های ناگوار کودکی در ایران",
+"en": "Turning points: breaking the cycle of adverse childhood experiences in Iran",
+"nl": "Keerpunten: de cirkel van ingrijpende jeugdervaringen in Iran doorbreken"
+},
+"url": "soc/#aces-iran-turning-points",
 "status": "draft",
 "wikidata": null
 },
@@ -20314,6 +20350,16 @@
 "url": "iran/#fertility",
 "grade": "A"
 },
+"iran:aces-prevalence": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "کودکان ایرانی چقدر تجربهٔ ناگوار کودکی دارند؟",
+"en": "How common are adverse childhood experiences among Iranians?"
+},
+"url": "iran/#aces-prevalence",
+"grade": "C"
+},
 "iran:zagros-neolithic": {
 "wiki": "iran",
 "type": "iran",
@@ -20333,6 +20379,16 @@
 },
 "url": "iran/#iranome",
 "grade": "A"
+},
+"iran:child-labour": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "چند کودک در ایران کار می‌کنند؟",
+"en": "How many children work in Iran?"
+},
+"url": "iran/#child-labour",
+"grade": "D"
 },
 "iran:genetic-heterogeneity": {
 "wiki": "iran",
@@ -20364,6 +20420,16 @@
 "url": "iran/#values-shift",
 "grade": "B"
 },
+"iran:violence-against-women": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "خشونت علیه زنان در خانه در ایران چقدر شایع است؟",
+"en": "How common is domestic violence against women in Iran?"
+},
+"url": "iran/#violence-against-women",
+"grade": "C"
+},
 "iran:gini": {
 "wiki": "iran",
 "type": "iran",
@@ -20373,6 +20439,16 @@
 },
 "url": "iran/#gini",
 "grade": "B"
+},
+"iran:child-sexual-abuse": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "آزار جنسی کودکان در ایران چقدر شایع است و قانون چه می‌گوید؟",
+"en": "How common is child sexual abuse in Iran, and what does the law say?"
+},
+"url": "iran/#child-sexual-abuse",
+"grade": "C"
 },
 "iran:religiosity": {
 "wiki": "iran",
@@ -20392,6 +20468,16 @@
 "en": "How does Iran's suicide rate compare with the world?"
 },
 "url": "iran/#suicide-rate",
+"grade": "B"
+},
+"iran:poverty-rate": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "چند درصد ایرانیان زیر خط فقر زندگی می‌کنند؟",
+"en": "What share of Iranians live in poverty?"
+},
+"url": "iran/#poverty-rate",
 "grade": "B"
 },
 "iran:mental-disorder-prevalence": {
@@ -20442,6 +20528,16 @@
 "en": "How high is Iranians' generalised trust?"
 },
 "url": "iran/#social-trust",
+"grade": "B"
+},
+"iran:child-marriage": {
+"wiki": "iran",
+"type": "iran",
+"title": {
+"fa": "ازدواج کودکان در ایران چقدر رایج است؟",
+"en": "How common is child marriage in Iran?"
+},
+"url": "iran/#child-marriage",
 "grade": "B"
 },
 "iran:happiness-rank": {

@@ -1,0 +1,234 @@
+{
+ "id": "child-marriage",
+ "order": 2,
+ "status": "draft",
+ "title": "ازدواج کودک: از قانون و فقر تا فقر نسل بعد",
+ "q": "چرا ازدواج کودک هنوز رخ می‌دهد و چه زنجیره‌ای پشت سرش راه می‌اندازد؟",
+ "summary": "ازدواج پیش از ۱۸ سالگی با ترک تحصیل، بارداری زودهنگام، خشونت همسر و درآمد کمتر گره خورده است (بانک جهانی ۲۰۱۷). در ایران سن قانونی ۱۳ سال است و ده‌ها هزار ازدواج زیر ۱۵ سال در سال ثبت می‌شود.",
+ "nodes": [
+  {
+   "id": "law",
+   "l": 0,
+   "t": "سن قانونی ۱۳ و استثنای دادگاهی",
+   "d": "مادهٔ ۱۰۴۱ قانون مدنی.",
+   "wiki": [],
+   "iran": "iran:child-marriage"
+  },
+  {
+   "id": "poverty",
+   "l": 0,
+   "t": "فقر خانواده",
+   "d": "دختر «نان‌خور» کمتر؛ مهریه یا شیربها گاهی منبع درآمد.",
+   "wiki": [],
+   "iran": "iran:poverty-rate"
+  },
+  {
+   "id": "norms",
+   "l": 0,
+   "t": "هنجار آبرو و تفسیر سنتی بلوغ",
+   "d": "نگرانی از «آبرو»، فشار خانواده و محله.",
+   "wiki": [
+    "soc:proverbs-as-social-norm-shorthand"
+   ],
+   "iran": null
+  },
+  {
+   "id": "school-access",
+   "l": 0,
+   "t": "دوری مدرسه و هزینهٔ تحصیل",
+   "d": "به‌ویژه در روستا و برای دختران.",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "marriage",
+   "l": 1,
+   "t": "ازدواج پیش از ۱۸ (و ۱۵) سالگی",
+   "d": "حدود ۱۷٪ زنان پیش از ۱۸ (یونیسف).",
+   "wiki": [
+    "soc:social-roots-of-childhood-adversity"
+   ],
+   "iran": "iran:child-marriage"
+  },
+  {
+   "id": "dropout",
+   "l": 2,
+   "t": "ترک تحصیل",
+   "d": "یکی از قوی‌ترین پیامدها.",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "pregnancy",
+   "l": 2,
+   "t": "بارداری زودهنگام",
+   "d": "خطر بیشتر برای مادر نوجوان و نوزاد.",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "ipv",
+   "l": 2,
+   "t": "خشونت همسر و نابرابری قدرت",
+   "d": "فاصلهٔ سنی و وابستگی مالی.",
+   "wiki": [],
+   "iran": "iran:violence-against-women"
+  },
+  {
+   "id": "income",
+   "l": 3,
+   "t": "درآمد و استقلال کمتر در بزرگسالی",
+   "d": "اثر بر کل اقتصاد خانواده.",
+   "wiki": [],
+   "iran": null
+  },
+  {
+   "id": "next-gen",
+   "l": 3,
+   "t": "تجربه‌های ناگوار کودکی برای فرزندان",
+   "d": "مادر نوجوان و کم‌سواد، خانهٔ پرخطر برای نسل بعد.",
+   "wiki": [
+    "psy:adverse-childhood-experiences"
+   ],
+   "iran": null
+  }
+ ],
+ "edges": [
+  [
+   "law",
+   "marriage",
+   "A",
+   ""
+  ],
+  [
+   "poverty",
+   "marriage",
+   "A",
+   ""
+  ],
+  [
+   "norms",
+   "marriage",
+   "B",
+   ""
+  ],
+  [
+   "school-access",
+   "marriage",
+   "B",
+   ""
+  ],
+  [
+   "marriage",
+   "dropout",
+   "A",
+   ""
+  ],
+  [
+   "marriage",
+   "pregnancy",
+   "A",
+   ""
+  ],
+  [
+   "marriage",
+   "ipv",
+   "B",
+   ""
+  ],
+  [
+   "dropout",
+   "income",
+   "A",
+   ""
+  ],
+  [
+   "pregnancy",
+   "next-gen",
+   "B",
+   ""
+  ],
+  [
+   "ipv",
+   "next-gen",
+   "B",
+   ""
+  ],
+  [
+   "income",
+   "next-gen",
+   "B",
+   ""
+  ]
+ ],
+ "loops": [
+  [
+   "income",
+   "poverty",
+   "فقر خانوادهٔ بعدی"
+  ]
+ ],
+ "levers": [
+  {
+   "at": [
+    "law"
+   ],
+   "t": "سن ازدواج ۱۸ بی‌استثنا",
+   "d": "همراه با ثبت اجباری همهٔ ازدواج‌ها.",
+   "ev": "B",
+   "cost": "کم",
+   "time": "میان",
+   "iran": "سن قانونی ۱۳.",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "poverty",
+    "marriage"
+   ],
+   "t": "انتقال نقدی به خانواده‌های دارای دختر نوجوان",
+   "d": "کارآزمایی مالاوی: کاهش ازدواج و بارداری زودهنگام.",
+   "ev": "A",
+   "cost": "متوسط",
+   "time": "کوتاه",
+   "iran": "زیرساخت یارانه موجود است.",
+   "precedent": "بِرد و همکاران ۲۰۱۱"
+  },
+  {
+   "at": [
+    "school-access",
+    "dropout"
+   ],
+   "t": "مدرسهٔ نزدیک و رایگان برای دختران روستایی",
+   "d": "خوابگاه، سرویس، و حذف هزینه‌های پنهان.",
+   "ev": "B",
+   "cost": "متوسط",
+   "time": "میان",
+   "iran": "نابرابری استانی زیاد.",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "norms"
+   ],
+   "t": "گفت‌وگو با رهبران محلی و دینی",
+   "d": "تغییر هنجار از درون اجتماع.",
+   "ev": "C",
+   "cost": "کم",
+   "time": "بلند",
+   "iran": "",
+   "precedent": ""
+  }
+ ],
+ "risk": null,
+ "sources": [
+  "Wodon et al. (2017) World Bank/ICRW",
+  "Baird, McIntosh & Özler (2011) QJE",
+  "UNICEF via Girls Not Brides",
+  "Statistical Centre of Iran (as reported, 2023)"
+ ],
+ "wiki": [
+  "soc:social-roots-of-childhood-adversity",
+  "soc:aces-iran-turning-points"
+ ]
+}

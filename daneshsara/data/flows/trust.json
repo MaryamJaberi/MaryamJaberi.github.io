@@ -1,0 +1,165 @@
+{
+ "id": "trust",
+ "order": 6,
+ "status": "draft",
+ "title": "بی‌اعتمادی، فساد و کار جمعی",
+ "q": "چرا اعتماد پایین خودش را بازتولید می‌کند و کجا می‌شود این حلقه را شکست؟",
+ "summary": "در جامعه‌ای که فقط ۱۰ تا ۱۵ درصد مردم می‌گویند «به بیشتر مردم می‌شود اعتماد کرد»، همکاری برای کالای عمومی سخت است؛ فساد و قانون‌گریزی هم اعتماد را بیشتر می‌فرساید. حلقه از هر دو سو تقویت می‌شود.",
+ "nodes": [
+  {
+   "id": "corruption",
+   "l": 0,
+   "t": "فساد ساختاری و رانت",
+   "d": "",
+   "wiki": [
+    "soc:structural-corruption-causes-iran"
+   ],
+   "iran": null
+  },
+  {
+   "id": "rule",
+   "l": 0,
+   "t": "قانونِ تبعیض‌آمیز یا اجرا نشده",
+   "d": "",
+   "wiki": [
+    "soc:virtuous-circle-rule-of-law-black-act"
+   ],
+   "iran": null
+  },
+  {
+   "id": "lowtrust",
+   "l": 1,
+   "t": "اعتماد تعمیم‌یافتهٔ پایین",
+   "d": "۱۰ تا ۱۵٪ در پیمایش جهانی ارزش‌ها.",
+   "wiki": [
+    "soc:generalized-trust"
+   ],
+   "iran": "iran:social-trust"
+  },
+  {
+   "id": "freeride",
+   "l": 2,
+   "t": "سواری مجانی و کناره‌گیری از کار جمعی",
+   "d": "",
+   "wiki": [
+    "soc:collective-action"
+   ],
+   "iran": null
+  },
+  {
+   "id": "misbelief",
+   "l": 2,
+   "t": "باور به شایعه و توطئه",
+   "d": "",
+   "wiki": [
+    "soc:misbelief-distrust-spiral"
+   ],
+   "iran": null
+  },
+  {
+   "id": "publicgoods",
+   "l": 3,
+   "t": "کالای عمومی ضعیف: مالیات، محیط زیست، نهادهای مدنی",
+   "d": "",
+   "wiki": [
+    "soc:social-capital"
+   ],
+   "iran": null
+  }
+ ],
+ "edges": [
+  [
+   "corruption",
+   "lowtrust",
+   "B",
+   ""
+  ],
+  [
+   "rule",
+   "lowtrust",
+   "B",
+   ""
+  ],
+  [
+   "lowtrust",
+   "freeride",
+   "B",
+   ""
+  ],
+  [
+   "lowtrust",
+   "misbelief",
+   "B",
+   ""
+  ],
+  [
+   "freeride",
+   "publicgoods",
+   "B",
+   ""
+  ],
+  [
+   "misbelief",
+   "publicgoods",
+   "C",
+   ""
+  ]
+ ],
+ "loops": [
+  [
+   "publicgoods",
+   "corruption",
+   "نهاد ضعیف، فساد بیشتر"
+  ]
+ ],
+ "levers": [
+  {
+   "at": [
+    "corruption",
+    "rule"
+   ],
+   "t": "شفافیت: انتشار قراردادها، بودجه و دارایی مقام‌ها",
+   "d": "",
+   "ev": "B",
+   "cost": "کم",
+   "time": "کوتاه",
+   "iran": "",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "lowtrust",
+    "freeride"
+   ],
+   "t": "پروژه‌های کوچک محلی با نتیجهٔ دیدنی",
+   "d": "اعتماد از تجربهٔ همکاری موفق ساخته می‌شود.",
+   "ev": "C",
+   "cost": "کم",
+   "time": "کوتاه",
+   "iran": "",
+   "precedent": ""
+  },
+  {
+   "at": [
+    "rule"
+   ],
+   "t": "قانون برابر و اجرای بی‌تبعیض",
+   "d": "",
+   "ev": "B",
+   "cost": "متوسط",
+   "time": "بلند",
+   "iran": "",
+   "precedent": ""
+  }
+ ],
+ "risk": null,
+ "sources": [
+  "World Values Survey Wave 7",
+  "Ostrom (1990)"
+ ],
+ "wiki": [
+  "soc:generalized-trust",
+  "soc:social-capital",
+  "soc:collective-action"
+ ]
+}

@@ -1,0 +1,252 @@
+{
+  "id": "psy:adverse-childhood-experiences",
+  "kind": "concept",
+  "title": {
+    "fa": "تجربه‌های ناگوار کودکی (ACE)",
+    "en": "Adverse childhood experiences (ACEs)",
+    "nl": "Ingrijpende jeugdervaringen (ACE's)"
+  },
+  "aliases": [
+    "ACE",
+    "امتیاز ACE",
+    "آزمایش ACE",
+    "مطالعهٔ فلیتی و آندا",
+    "ACE score"
+  ],
+  "parent": "psy:p-dev",
+  "field": "psy:p-dev",
+  "summary": {
+    "fa": "در دههٔ ۱۹۹۰ مرکز کنترل بیماری‌های آمریکا (CDC) و بیمه‌گر کایزر پرماننته از حدود ۹۵۰۰ بزرگسال پرسیدند در کودکی چه گونه‌هایی از آزار، بی‌توجهی و آشفتگی خانواده را تجربه کرده‌اند، و پاسخ‌ها را کنار پروندهٔ سلامتشان گذاشتند (فلیتی، آندا و همکاران، ۱۹۹۸). یافتهٔ اصلی یک رابطهٔ «دُز و پاسخ» بود: هر چه شمار گونه‌های تجربهٔ ناگوار بیشتر، خطر اعتیاد، افسردگی، اقدام به خودکشی، خشونت و حتی بیماری قلبی، ریوی و کبدی در بزرگسالی بیشتر. کسانی که چهار گونه یا بیشتر را تجربه کرده بودند برای برخی پیامدها چهار تا دوازده برابر در خطر بودند. این پژوهش کودکی را از موضوعی خصوصی و خانوادگی به یکی از بزرگ‌ترین مسئله‌های سلامت عمومی تبدیل کرد. «امتیاز ACE» ابزاری برای سنجیدن بار یک جامعه است، نه حکمی دربارهٔ آیندهٔ یک فرد.",
+    "en": "In the 1990s the US Centers for Disease Control and Prevention and the insurer Kaiser Permanente asked about 9,500 adults which kinds of abuse, neglect and household dysfunction they had experienced as children and set the answers beside their health records (Felitti, Anda et al., 1998). The main finding was a dose–response relationship: the more categories of adversity, the higher the risk of addiction, depression, suicide attempts, violence and even heart, lung and liver disease in adulthood. People with four or more categories had four to twelve times the risk of some outcomes. The study turned childhood from a private family matter into one of the largest public-health problems. The ACE score measures the burden on a population; it is not a verdict on an individual’s future.",
+    "nl": "In de jaren negentig vroegen de Amerikaanse CDC en verzekeraar Kaiser Permanente ongeveer 9.500 volwassenen welke vormen van mishandeling, verwaarlozing en ontwrichting in het gezin zij als kind hadden meegemaakt, en legden de antwoorden naast hun medische gegevens (Felitti, Anda e.a., 1998). De kernbevinding was een dosis-responsrelatie: hoe meer soorten tegenspoed, hoe groter het risico op verslaving, depressie, suïcidepogingen, geweld en zelfs hart-, long- en leverziekte. Wie vier of meer soorten had meegemaakt, liep voor sommige uitkomsten vier tot twaalf keer zoveel risico. De ACE-score meet de last voor een bevolking, niet de toekomst van één persoon."
+  },
+  "points": [
+    {
+      "text": {
+        "fa": "طرح پژوهش: پرسش‌نامه برای ۱۳٬۴۹۴ بزرگسالی فرستاده شد که در سال‌های ۱۹۹۵ تا ۱۹۹۷ برای معاینهٔ عمومی به یک مرکز درمانی بزرگ در سن‌دیگو آمده بودند؛ ۹٬۵۰۸ نفر (۷۰٫۵٪) پاسخ دادند. بیشترشان طبقهٔ متوسط، دارای بیمهٔ درمانی و تحصیل‌کرده بودند. این نکته مهم است: پژوهش نشان داد تجربه‌های ناگوار کودکی فقط مسئلهٔ «فقرا» یا «حاشیه‌ها» نیست و در خانه‌های معمولی هم فراوان است.",
+        "en": "Design: a questionnaire was mailed to 13,494 adults who had attended a general check-up at a large San Diego clinic in 1995–1997; 9,508 (70.5%) responded. Most were middle-class, insured and educated — which matters: the study showed childhood adversity is not only a problem of “the poor” or “the margins” but is common in ordinary homes.",
+        "nl": "Opzet: een vragenlijst ging naar 13.494 volwassenen die in 1995–1997 voor een algemeen onderzoek naar een grote kliniek in San Diego kwamen; 9.508 (70,5%) antwoordden. De meesten waren middenklasse, verzekerd en opgeleid: tegenspoed in de kindertijd komt dus ook in gewone gezinnen veel voor."
+      },
+      "sources": [
+        "src:abe6351ded"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "ده گونهٔ تجربهٔ ناگوار در سه دسته: (۱) آزار: آزار عاطفی (تحقیر، تهدید، دشنام پیوسته)، آزار جسمی، آزار جنسی؛ (۲) بی‌توجهی: بی‌توجهی عاطفی (احساس اینکه کسی دوستت ندارد یا مراقبت نیست)، بی‌توجهی جسمی (نبود غذا، لباس، مراقبت پزشکی یا مراقبت به دلیل مستی یا اعتیاد والد)؛ (۳) آشفتگی خانه: خشونت علیه مادر، زندگی با فرد دارای اعتیاد به الکل یا مواد، زندگی با فرد دارای بیماری روانی یا اقدام به خودکشی، جدایی یا طلاق والدین، و زندانی‌شدن یکی از اعضای خانه. پژوهش نخست هفت دسته داشت؛ دو گونهٔ بی‌توجهی و جدایی والدین در موج‌های بعدی افزوده شد. امتیاز ACE شمار این دسته‌هاست (۰ تا ۱۰)، نه شمار دفعات یا شدت.",
+        "en": "Ten categories in three groups: (1) abuse — emotional, physical, sexual; (2) neglect — emotional (feeling unloved or uncared for) and physical (lack of food, clothes, medical care, or care because a parent was drunk or high); (3) household dysfunction — violence against the mother, living with someone with alcohol or drug problems, with mental illness or a suicide attempt, parental separation or divorce, and incarceration of a household member. The first paper had seven categories; the two neglect items and parental separation were added in later waves. The ACE score counts categories (0–10), not frequency or severity.",
+        "nl": "Tien categorieën in drie groepen: (1) mishandeling — emotioneel, lichamelijk, seksueel; (2) verwaarlozing — emotioneel en lichamelijk; (3) gezinsontwrichting — geweld tegen de moeder, een huisgenoot met alcohol- of drugsproblemen, met psychische ziekte of een suïcidepoging, scheiding van de ouders en gevangenschap van een huisgenoot. De ACE-score telt categorieën (0–10), niet frequentie of ernst."
+      },
+      "sources": [
+        "src:abe6351ded",
+        "src:b2f6845409"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "چقدر شایع است؟ در پژوهش نخست بیش از نیمی از پاسخ‌دهندگان دست‌کم یک گونه و حدود یک‌چهارم دو گونه یا بیشتر را گزارش کردند. در پیمایش‌های بعدی CDC در ۲۵ ایالت (۲۰۱۵–۲۰۱۷) حدود ۶۱٪ بزرگسالان دست‌کم یک گونه و حدود یک نفر از هر شش نفر (حدود ۱۶٪) چهار گونه یا بیشتر داشتند. یعنی «کودکی سخت» استثنا نیست؛ چهار گونه یا بیشتر، تجربهٔ اقلیتی بزرگ است.",
+        "en": "How common? In the original study more than half reported at least one category and about a quarter two or more. In later CDC surveys in 25 states (2015–2017) about 61% of adults reported at least one and about one in six (≈16%) four or more. A hard childhood is not the exception; four or more is the experience of a large minority.",
+        "nl": "Hoe vaak? In de oorspronkelijke studie meldde meer dan de helft ten minste één categorie en ongeveer een kwart twee of meer. In latere CDC-peilingen in 25 staten (2015–2017) had ongeveer 61% ten minste één en ongeveer één op de zes (≈16%) vier of meer."
+      },
+      "sources": [
+        "src:abe6351ded",
+        "src:5dd524f8b3"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "رابطهٔ دُز و پاسخ: در مقایسهٔ کسانی که چهار گونه یا بیشتر داشتند با کسانی که هیچ نداشتند، خطر اعتیاد به الکل، مصرف مواد، افسردگی و اقدام به خودکشی ۴ تا ۱۲ برابر بود؛ سیگار، سلامت خودسنجیدهٔ بد و بیماری‌های آمیزشی ۲ تا ۴ برابر؛ و کم‌تحرکی و چاقی شدید ۱٫۴ تا ۱٫۶ برابر. برای بیماری قلبی، سرطان، بیماری مزمن ریه، شکستگی‌ها و بیماری کبد هم رابطهٔ پله‌ای دیده شد. نکتهٔ مهم «پله‌ای بودن» است: خطر از صفر به یک، از یک به دو، و همین‌طور بالا می‌رود؛ مرز جادویی «چهار» فقط برای خلاصه کردن است.",
+        "en": "Dose–response: comparing four or more categories with none, the risk of alcoholism, drug use, depression and suicide attempt was 4–12 times higher; smoking, poor self-rated health and sexually transmitted disease 2–4 times; physical inactivity and severe obesity 1.4–1.6 times. A graded relationship also appeared for heart disease, cancer, chronic lung disease, fractures and liver disease. The key word is graded: risk rises from zero to one, one to two and so on; the “four” cut-off is only a summary.",
+        "nl": "Dosis-respons: bij vier of meer categorieën tegenover geen was het risico op alcoholisme, drugsgebruik, depressie en suïcidepoging 4 tot 12 keer zo hoog; roken, slechte ervaren gezondheid en soa 2 tot 4 keer; inactiviteit en ernstige obesitas 1,4 tot 1,6 keer. Het risico stijgt trapsgewijs; de grens van “vier” is alleen een samenvatting."
+      },
+      "sources": [
+        "src:abe6351ded"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "فراتحلیل جهانی: هیوز و همکاران (۲۰۱۷) ۳۷ پژوهش با ۲۵۳٬۷۱۹ نفر را ترکیب کردند. قوی‌ترین پیوندها (نسبت شانس بیش از ۷) میان چهار گونه یا بیشتر و مصرف مشکل‌دار مواد، خشونت میان‌فردی (هم آسیب‌زدن و هم آسیب‌دیدن) و خشونت علیه خود بود؛ پیوند قوی (۳ تا ۶) با بیماری روانی، مصرف مشکل‌دار الکل و رفتار جنسی پرخطر؛ متوسط (۲ تا ۳) با سیگار، سرطان، بیماری قلبی و تنفسی؛ و ضعیف (کمتر از ۲) با کم‌تحرکی، چاقی و دیابت. یعنی بیشترین اثر بر همان چیزهایی است که خودشان دوباره کودکی نسل بعد را می‌سازند: اعتیاد و خشونت.",
+        "en": "Global meta-analysis: Hughes et al. (2017) pooled 37 studies with 253,719 people. The strongest associations (odds ratio above 7) linked four or more ACEs to problematic drug use, interpersonal violence (both perpetrating and suffering it) and self-directed violence; strong (3–6) to mental illness, problematic drinking and sexual risk-taking; moderate (2–3) to smoking, cancer, heart and respiratory disease; weak (below 2) to inactivity, obesity and diabetes. The largest effects are on exactly what shapes the next generation’s childhood: addiction and violence.",
+        "nl": "Wereldwijde meta-analyse: Hughes e.a. (2017) combineerden 37 studies met 253.719 mensen. De sterkste verbanden (odds ratio boven 7) betroffen problematisch drugsgebruik, interpersoonlijk geweld en geweld tegen zichzelf; sterk (3–6) psychische ziekte, problematisch drinken en seksueel risicogedrag; matig (2–3) roken, kanker, hart- en longziekte; zwak (onder 2) inactiviteit, obesitas en diabetes."
+      },
+      "sources": [
+        "src:568f1775e8"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "سازوکار: سه راه پیشنهاد شده است. (۱) زیستی، «استرس سمی»: وقتی سامانهٔ پاسخ به استرس کودک بارها و طولانی فعال می‌شود و بزرگسالی آرام‌کننده کنارش نیست، رشد مغز (به‌ویژه بادامه و قشر پیش‌پیشانی)، سامانهٔ ایمنی و سوخت‌وساز ممکن است تغییر کند. (۲) رفتاری: فلیتی خودش می‌گفت بسیاری از «رفتارهای پرخطر» مثل سیگار، خوردن زیاد یا مصرف مواد، در اصل راه‌حل‌های شخصی برای کنار آمدن با رنجی بوده‌اند که کسی آن را ندیده است. (۳) اجتماعی: ترک تحصیل، کار کودک، ازدواج زودهنگام و فقر، کودک را در مسیری قرار می‌دهند که خودش خطر را بالا می‌برد. این سه راه با هم کار می‌کنند و سهم هر کدام هنوز روشن نیست.",
+        "en": "Mechanism: three pathways are proposed. (1) Biological “toxic stress”: when a child’s stress-response system is activated often and for long without a buffering adult, brain development (especially the amygdala and prefrontal cortex), immunity and metabolism may change. (2) Behavioural: Felitti himself argued that many “risk behaviours” — smoking, overeating, drug use — were personal solutions to unseen suffering. (3) Social: dropping out of school, child labour, early marriage and poverty put the child on a path that itself raises risk. The pathways interact and their relative weight is still unclear.",
+        "nl": "Mechanisme: drie routes. (1) Biologisch, “toxische stress”: langdurige activering van het stresssysteem zonder bufferende volwassene kan hersenontwikkeling, afweer en stofwisseling veranderen. (2) Gedrag: veel “risicogedrag” is volgens Felitti een persoonlijke oplossing voor onzichtbaar lijden. (3) Sociaal: schooluitval, kinderarbeid, vroeg huwelijk en armoede zetten het kind op een riskant pad."
+      },
+      "sources": [
+        "src:61c5fc8eca",
+        "src:abe6351ded"
+      ],
+      "flags": [
+        "contested"
+      ]
+    },
+    {
+      "text": {
+        "fa": "بار جمعیتی: CDC برآورد کرد که اگر تجربه‌های ناگوار کودکی در آمریکا پیشگیری می‌شد، تا ۴۴٪ موارد افسردگی (حدود ۲۱ میلیون مورد)، تا ۱۳٪ بیماری قلبی (حدود ۱٫۹ میلیون) و حدود ۲٫۵ میلیون مورد اضافه‌وزن پیش نمی‌آمد. این برآوردها فرض می‌کنند رابطه علّی است، که کاملاً اثبات‌شده نیست؛ اما بزرگی‌شان نشان می‌دهد چرا پیشگیری از تجربه‌های ناگوار کودکی را «سیاست سلامت» می‌دانند، نه فقط «سیاست خانواده».",
+        "en": "Population burden: the CDC estimated that preventing ACEs in the US could avoid up to 44% of depression (about 21 million cases), up to 13% of heart disease (about 1.9 million) and about 2.5 million cases of overweight. These estimates assume causation, which is not fully proven; but their size explains why ACE prevention is treated as health policy, not only family policy.",
+        "nl": "Last voor de bevolking: volgens de CDC zou preventie in de VS tot 44% van de depressies (circa 21 miljoen gevallen) en tot 13% van de hartziekten (circa 1,9 miljoen) kunnen voorkomen. De schattingen veronderstellen causaliteit, die niet volledig bewezen is."
+      },
+      "sources": [
+        "src:5dd524f8b3"
+      ],
+      "flags": [
+        "contested"
+      ]
+    },
+    {
+      "text": {
+        "fa": "فهرست گسترده‌تر: پرسش‌نامهٔ بین‌المللی سازمان جهانی بهداشت (ACE-IQ) به ده گونهٔ نخست، قلدری، خشونت در محله، «خشونت جمعی» (جنگ، شورش، خشونت سیاسی) و خشونت همسالان را افزود تا برای کشورهای دیگر هم به کار آید. پژوهش «ACE شهری» فیلادلفیا (کرونهولم و همکاران، ۲۰۱۵) هم دیدن خشونت، احساس ناامنی در محله، تبعیض، قلدری و زندگی در خانهٔ سرپرستی را افزود و نشان داد بخش بزرگی از مردم یک شهر فقیر فقط با همین گونه‌های تازه شناسایی می‌شوند. درس این گسترش: کودکی سخت فقط درون خانه ساخته نمی‌شود؛ کوچه، مدرسه، اقتصاد و سیاست هم سهم دارند.",
+        "en": "Broader lists: the WHO international questionnaire (ACE-IQ) adds bullying, community violence, collective violence (war, riots, political violence) and peer violence so it can be used elsewhere. The Philadelphia Urban ACE study (Cronholm et al., 2015) added witnessing violence, unsafe neighbourhood, discrimination, bullying and foster care, and found many people in a poor city were identified only by these new items. The lesson: a hard childhood is not made only inside the home; street, school, economy and politics contribute.",
+        "nl": "Bredere lijsten: de WHO-vragenlijst (ACE-IQ) voegt pesten, geweld in de buurt, collectief geweld (oorlog, politiek geweld) en geweld door leeftijdgenoten toe. De Philadelphia Urban ACE-studie (2015) voegde discriminatie, onveilige buurt en pleegzorg toe. Een moeilijke jeugd ontstaat niet alleen binnenshuis."
+      },
+      "sources": [
+        "src:aa4c8b1a85",
+        "src:75f6b7aad9"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "روی دیگر سکه، «تجربه‌های مثبت کودکی»: بتل و همکاران (۲۰۱۹) هفت تجربهٔ مثبت را سنجیدند: اینکه کودک بتواند دربارهٔ احساسش با خانواده حرف بزند، خانواده در سختی کنارش بایستد، از سنت‌های جمعی لذت ببرد، در مدرسه احساس تعلق کند، دوستانش پشتیبانش باشند، دست‌کم دو بزرگسال غیر از والدین واقعاً به او اهمیت بدهند، و در خانه احساس امنیت کند. کسانی که شش یا هفت مورد را داشتند، در مقایسه با کسانی که صفر تا دو مورد داشتند، ۷۲٪ شانس کمتری برای افسردگی یا سلامت روان بد در بزرگسالی داشتند، و این اثر در همهٔ سطوح تجربهٔ ناگوار دیده شد. پیام عملی: افزودن تجربهٔ خوب به اندازهٔ کاستن تجربهٔ بد مهم است و اغلب ارزان‌تر است.",
+        "en": "The other side, positive childhood experiences: Bethell et al. (2019) measured seven — being able to talk with family about feelings, family standing by in hard times, enjoying community traditions, belonging at school, supportive friends, at least two non-parent adults who took genuine interest, and feeling safe at home. People with six or seven, compared with zero to two, had 72% lower odds of adult depression or poor mental health, at every level of adversity. Adding good experiences matters as much as removing bad ones, and is often cheaper.",
+        "nl": "De andere kant, positieve jeugdervaringen: Bethell e.a. (2019) maten er zeven, zoals met het gezin over gevoelens kunnen praten, erbij horen op school en twee volwassenen buiten de ouders die echt om je gaven. Wie er zes of zeven had, had 72% lagere kans op depressie of slechte mentale gezondheid dan wie er nul tot twee had, op elk niveau van tegenspoed."
+      },
+      "sources": [
+        "src:f4335654f4"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "نقد مهم: (۱) امتیاز ACE همهٔ گونه‌ها را هم‌وزن می‌شمارد: یک بار طلاق والدین با سال‌ها آزار جنسی یک امتیاز دارد. (۲) زمان، شدت، مدت و اینکه آیا بزرگسالی حمایت‌کننده بوده، سنجیده نمی‌شود. (۳) گزارش از روی حافظه در بزرگسالی است. (۴) فهرست نخست فقر، تبعیض و جنگ را نداشت. (۵) مهم‌تر از همه، بالدوین و همکاران (۲۰۲۱) نشان دادند امتیاز ACE برای پیش‌بینی آیندهٔ یک فرد بسیار ضعیف است: بیشتر کسانی که امتیاز بالا دارند دچار آن پیامدها نمی‌شوند. پس استفاده از آن برای برچسب‌زدن به یک کودک یا بزرگسال («آسیب‌دیدهٔ همیشگی») هم نادرست است و هم آسیب‌زا؛ جای درستش سیاست‌گذاری جمعیتی است.",
+        "en": "Key critique: (1) the score weights all categories equally — one parental divorce counts the same as years of sexual abuse; (2) timing, severity, duration and the presence of a supportive adult are not measured; (3) it relies on adult recall; (4) the original list lacked poverty, discrimination and war; (5) most importantly, Baldwin et al. (2021) showed the score predicts an individual’s future very poorly — most people with high scores do not develop the outcomes. Using it to label a child or adult as “permanently damaged” is wrong and harmful; its proper place is population policy.",
+        "nl": "Kritiek: de score weegt alle categorieën gelijk, meet ernst, duur en timing niet, berust op herinnering en miste armoede, discriminatie en oorlog. Baldwin e.a. (2021) toonden dat de score de toekomst van een individu slecht voorspelt; de meeste mensen met een hoge score ontwikkelen de uitkomsten niet. Gebruik hem voor beleid, niet om mensen te labelen."
+      },
+      "sources": [
+        "src:b2f6845409",
+        "src:38f5d2517b"
+      ],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "ایران: پیمایش ملی تجربه‌های ناگوار کودکی در ایران منتشر نشده است و این خودش نخستین شکاف است. پژوهش‌های موجود روی نمونه‌های کوچک دانشجویی‌اند. مثلاً در ۳۰۱ دانشجوی پزشکی قزوین (۱۴۰۳، پرسش‌نامهٔ ACE-IQ) ۷۰٫۸٪ دست‌کم یک تجربه داشتند؛ بی‌توجهی عاطفی ۵۹٫۸٪، آزار عاطفی ۲۰٫۶٪، آزار جسمی ۱۷٫۳٪ و دیدن خشونت در خانه ۱۴٫۶٪. آزار جنسی و زندانی‌شدن عضو خانواده صفر گزارش شد؛ با توجه به اینکه در مرور نظام‌مند پژوهش‌های ایرانی شیوع آزار جنسی کودک ۱٫۵ تا ۳۲٫۵٪ برآورد شده، صفر بودن بیشتر نشانهٔ نمونهٔ ویژه و تابوی گفتن است تا نبودِ واقعی.",
+        "en": "Iran: no national ACE survey has been published — itself the first gap. Existing studies use small student samples; among 301 medical students in Qazvin (2024, ACE-IQ) 70.8% reported at least one ACE: emotional neglect 59.8%, emotional abuse 20.6%, physical abuse 17.3%, witnessing household violence 14.6%. Sexual abuse and household incarceration were reported as zero; given that a systematic review of Iranian studies estimated child sexual abuse at 1.5–32.5%, zero more likely reflects a selective sample and the taboo of disclosure than real absence.",
+        "nl": "Iran: er is geen landelijke ACE-peiling gepubliceerd. Bij 301 geneeskundestudenten in Qazvin (2024) meldde 70,8% ten minste één ACE, met emotionele verwaarlozing 59,8%. Seksueel misbruik werd als nul gemeld; gezien schattingen van 1,5–32,5% in Iraanse studies wijst dat eerder op taboe en selectie dan op afwezigheid."
+      },
+      "sources": [
+        "src:3aeda4d29b",
+        "src:220dc327d8"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "یادداشت خوانش: این مدخل از خود مقاله‌های پژوهشی و گزارش‌های CDC و سازمان جهانی بهداشت ساخته شده، نه از یک درس‌گفتار. ریشه‌های اجتماعی این تجربه‌ها و نقطه‌های عطف پیشگیری در ایران در دو مدخل جداگانهٔ ویکی جامعه آمده‌اند، و ابزار «ریشه‌یابی آسیب» زنجیرهٔ کامل را نشان می‌دهد.",
+        "en": "Reading note: this entry is built from the research papers and CDC/WHO reports themselves, not from a lecture. The social roots of these experiences and the turning points for prevention in Iran are in two separate sociology entries, and the “root-cause” tool draws the full chain.",
+        "nl": "Leesnotitie: gebaseerd op de onderzoeksartikelen en rapporten van CDC en WHO. De sociale wortels en preventiekansen in Iran staan in twee aparte lemma’s."
+      },
+      "sources": [
+        "src:abe6351ded",
+        "src:568f1775e8",
+        "src:1b144aa2bc"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "psy:ptsd",
+      "rel": "see-also",
+      "note": {
+        "fa": "تروما در بزرگسالی و تاریخ تشخیص",
+        "en": "Adult trauma and the history of the diagnosis",
+        "nl": "Trauma bij volwassenen"
+      }
+    },
+    {
+      "to": "psy:resilience",
+      "rel": "contrasts",
+      "note": {
+        "fa": "چرا بیشتر کودکان با امتیاز بالا آسیب‌دیدهٔ همیشگی نمی‌شوند",
+        "en": "Why most children with high scores are not permanently harmed",
+        "nl": "Veerkracht"
+      }
+    },
+    {
+      "to": "psy:attachment",
+      "rel": "explains",
+      "note": {
+        "fa": "بزرگسال آرام‌کننده: سپر استرس سمی",
+        "en": "The buffering adult",
+        "nl": "Gehechtheid"
+      }
+    },
+    {
+      "to": "psy:addiction",
+      "rel": "explains",
+      "note": {
+        "fa": "قوی‌ترین پیامد جمعیتی",
+        "en": "The strongest population outcome",
+        "nl": "Verslaving"
+      }
+    },
+    {
+      "to": "soc:social-roots-of-childhood-adversity",
+      "rel": "bridges",
+      "note": {
+        "fa": "ریشه‌های اجتماعی هر گونهٔ تجربهٔ ناگوار",
+        "en": "Social roots of each category",
+        "nl": "Sociale wortels"
+      }
+    },
+    {
+      "to": "soc:aces-iran-turning-points",
+      "rel": "applies-to",
+      "note": {
+        "fa": "نقطه‌های عطف پیشگیری در ایران",
+        "en": "Turning points for prevention in Iran",
+        "nl": "Keerpunten in Iran"
+      }
+    }
+  ],
+  "sources": [
+    "src:abe6351ded",
+    "src:568f1775e8",
+    "src:5dd524f8b3",
+    "src:1b144aa2bc",
+    "src:f4335654f4",
+    "src:aa4c8b1a85",
+    "src:75f6b7aad9",
+    "src:61c5fc8eca",
+    "src:b2f6845409",
+    "src:38f5d2517b",
+    "src:3aeda4d29b",
+    "src:220dc327d8"
+  ],
+  "people": [],
+  "booklets": [],
+  "origin": null,
+  "iran": "iran:aces-prevalence",
+  "wikidata": null,
+  "status": "draft"
+}
