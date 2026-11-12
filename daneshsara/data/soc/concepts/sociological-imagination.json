@@ -1,72 +1,151 @@
 {
- "id": "soc:sociological-imagination",
- "kind": "concept",
- "title": {
-  "fa": "بینش جامعه‌شناختی",
-  "en": "The sociological imagination",
-  "nl": "De sociologische verbeelding"
- },
- "aliases": [],
- "parent": "soc:theory",
- "field": "soc:theory",
- "summary": {
-  "fa": "توان دیدن پیوند میان «گرفتاری‌های شخصی» و «مسائل عمومی»: بیکاری یک نفر مشکل اوست؛ بیکاری یک‌پنجم جامعه مسئله‌ای ساختاری است که با نصیحت فردی حل نمی‌شود.",
-  "en": "The capacity to see the link between \"personal troubles\" and \"public issues\": one person's unemployment is their trouble; a fifth of society unemployed is a structural issue no individual advice will fix.",
-  "nl": "Het vermogen om het verband te zien tussen \"persoonlijke moeilijkheden\" en \"publieke kwesties\": de werkloosheid van één persoon is diens probleem; een vijfde van de samenleving werkloos is een structurele kwestie die geen individueel advies oplost."
- },
- "points": [
-  {
-   "text": {
-    "fa": "میلز (۱۹۵۹): جامعه‌شناسی یعنی پیوند زدن زندگی‌نامه و تاریخ؛ هر مشکل فردی را باید پرسید در چه ساختاری و در چه دوره‌ای پدید آمده.",
-    "en": "Mills (1959): sociology means connecting biography and history; of every personal problem ask in what structure and what era it arose.",
-    "nl": "Mills (1959): sociology means connecting biography and history; of every personal problem ask in what structure and what era it arose."
-   },
-   "sources": [
-    "src:accf4bea5e"
-   ],
-   "flags": []
+  "id": "soc:sociological-imagination",
+  "kind": "concept",
+  "title": {
+    "fa": "بینش جامعه‌شناختی",
+    "en": "The sociological imagination",
+    "nl": "De sociologische verbeelding"
   },
-  {
-   "text": {
-    "fa": "این نگاه پادزهر «روان‌شناسی‌زدگی» است: تبدیل مسائل ساختاری (مسکن، اشتغال) به ضعف اراده یا شخصیت افراد.",
-    "en": "This view is the antidote to \"psychologism\": turning structural problems (housing, jobs) into individuals' failures of will or character.",
-    "nl": "This view is the antidote to \"psychologism\": turning structural problems (housing, jobs) into individuals' failures of will or character."
-   },
-   "sources": [
-    "src:accf4bea5e"
-   ],
-   "flags": []
-  }
- ],
- "links": [
-  {
-   "to": "psy:medicalization",
-   "rel": "bridges",
-   "note": {
-    "fa": "پزشکی‌سازی در ویکی روان",
-    "en": "Medicalization in the psychology wiki",
-    "nl": "Medicalization in the psychology wiki"
-   }
+  "aliases": [],
+  "parent": "soc:theory",
+  "field": "soc:theory",
+  "summary": {
+    "fa": "سی. رایت میلز (۱۹۵۹) «بینش جامعه‌شناختی» را توان دیدن پیوند میان «گرفتاری‌های شخصی» و «مسائل عمومی» دانست. وقتی یک نفر بیکار است، مشکل اوست و شاید بشود با تلاش و مهارت حلش کرد؛ اما وقتی یک‌پنجم جوانان یک کشور بیکارند، مسئله‌ای ساختاری است که در اقتصاد، سیاست و آموزش ریشه دارد و نصیحت فردی آن را حل نمی‌کند. به نظر میلز، کار جامعه‌شناسی پیوند زدن «زندگی‌نامه» و «تاریخ» است: هر زندگی در ساختاری و در دوره‌ای خاص پیش می‌رود، و فهمیدن آن ساختار هم به فرد قدرت می‌دهد و هم به جامعه.",
+    "en": "C. Wright Mills (1959) defined the sociological imagination as the ability to see the link between “personal troubles” and “public issues”. When one person is unemployed, it is his trouble and perhaps solvable through effort and skills; when a fifth of a country’s young people are unemployed, it is a structural issue rooted in economy, politics and education that individual advice cannot solve. For Mills, sociology’s task is to connect biography and history: every life unfolds within a structure and a period, and understanding that structure empowers both the person and the society.",
+    "nl": "C. Wright Mills (1959): de sociologische verbeelding verbindt persoonlijke problemen met publieke kwesties en biografie met geschiedenis. Eén werkloze heeft een persoonlijk probleem; een vijfde werkloze jongeren is een structureel vraagstuk."
   },
-  {
-   "to": "soc:social-construction",
-   "rel": "see-also",
-   "note": {
-    "fa": "ساخت اجتماعی واقعیت",
-    "en": "The social construction of reality",
-    "nl": "The social construction of reality"
-   }
-  }
- ],
- "people": [
-  "core:c-wright-mills"
- ],
- "sources": [
-  "src:accf4bea5e"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "points": [
+    {
+      "text": {
+        "fa": "میلز (۱۹۵۹): جامعه‌شناسی یعنی پیوند زدن زندگی‌نامه و تاریخ؛ هر مشکل فردی را باید پرسید در چه ساختاری و در چه دوره‌ای پدید آمده.",
+        "en": "Mills (1959): sociology means connecting biography and history; of every personal problem ask in what structure and what era it arose.",
+        "nl": "Mills (1959): sociology means connecting biography and history; of every personal problem ask in what structure and what era it arose."
+      },
+      "sources": [
+        "src:accf4bea5e"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "این نگاه پادزهر «روان‌شناسی‌زدگی» است: تبدیل مسائل ساختاری (مسکن، اشتغال) به ضعف اراده یا شخصیت افراد.",
+        "en": "This view is the antidote to \"psychologism\": turning structural problems (housing, jobs) into individuals' failures of will or character.",
+        "nl": "This view is the antidote to \"psychologism\": turning structural problems (housing, jobs) into individuals' failures of will or character."
+      },
+      "sources": [
+        "src:accf4bea5e"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "سه پرسش میلز برای هر مسئله: (۱) ساختار این جامعه چیست و اجزایش چطور به هم وصل‌اند؟ (۲) این جامعه کجای تاریخ ایستاده و چه چیزی در حال تغییر است؟ (۳) چه نوع انسان‌هایی در این جامعه و این دوره غالب‌اند و در حال شکل گرفتن‌اند؟",
+        "en": "Mills’s three questions for any problem: (1) what is the structure of this society and how are its parts connected? (2) where does it stand in history and what is changing? (3) what kinds of people prevail and are emerging in this society and period?",
+        "nl": "Mills’ drie vragen: wat is de structuur, waar staat de samenleving in de geschiedenis, en welke soort mensen domineert?"
+      },
+      "sources": [
+        "src:edede1b101"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "نمونهٔ ایرانی: مهاجرت یک پزشک جوان را می‌شود «انتخاب شخصی» دید؛ اما وقتی ده‌ها هزار نفر با همان تحصیلات در چند سال پشت سر هم می‌روند، پرسش جامعه‌شناختی این است که چه ساختاری (اقتصاد، فضای سیاسی، آیندهٔ نامعلوم) این تصمیم‌های جداگانه را هم‌جهت کرده است. همین منطق دربارهٔ طلاق، افسردگی یا ازدواج دیرهنگام صادق است.",
+        "en": "An Iranian example: one young doctor’s emigration can be seen as a personal choice; when tens of thousands with the same training leave in a few years, the sociological question is what structure — economy, political climate, uncertain future — aligned these separate decisions. The same logic applies to divorce, depression or late marriage.",
+        "nl": "Iraans voorbeeld: één emigrerende arts is een persoonlijke keuze; tienduizenden tegelijk wijzen op een structuur."
+      },
+      "sources": [
+        "src:edede1b101"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "میلز دو انحراف را در جامعه‌شناسی زمانه‌اش نقد کرد: «نظریهٔ کلان» (grand theory) که در مفاهیم انتزاعی گم می‌شود و از زندگی واقعی دور است (نقد پارسونز)، و «تجربه‌گرایی انتزاعی» که پیمایش‌ها و آمارهای دقیق می‌سازد بی‌آنکه پرسش مهمی بپرسد.",
+        "en": "Mills criticised two deviations in the sociology of his time: “grand theory”, lost in abstract concepts far from real life (a critique of Parsons), and “abstracted empiricism”, producing precise surveys and statistics without asking an important question.",
+        "nl": "Mills bekritiseerde zowel abstracte grote theorie (Parsons) als geabstraheerd empirisme zonder belangrijke vraag."
+      },
+      "sources": [
+        "src:edede1b101"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "بینش جامعه‌شناختی ضدتقدیرگرایی هم هست: اگر مسئله ساختاری باشد، با تغییر ساختار حل‌شدنی است. میلز از جامعه‌شناس می‌خواست مسئولیت عمومی بپذیرد و نتایجش را به زبانی بنویسد که شهروندان بفهمند.",
+        "en": "The sociological imagination is also anti-fatalist: if an issue is structural, changing the structure can solve it. Mills asked sociologists to take public responsibility and write so citizens could understand.",
+        "nl": "Ook anti-fatalistisch: wat structureel is, kan door structuurverandering worden opgelost."
+      },
+      "sources": [
+        "src:edede1b101"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "نقد و حد: خطر وارونه این است که همه‌چیز را به ساختار نسبت دهیم و عاملیت و مسئولیت فردی را از یاد ببریم. بحث «ساختار و عاملیت» (گیدنز، بوردیو) دقیقاً برای همین پیش آمد: ساختارها توسط کنش آدم‌ها بازتولید یا عوض می‌شوند.",
+        "en": "Critique and limit: the reverse risk is attributing everything to structure and forgetting individual agency and responsibility. The structure–agency debate (Giddens, Bourdieu) arose precisely for this: structures are reproduced or changed by people’s actions.",
+        "nl": "Grens: alles aan structuur toeschrijven vergeet het handelen van mensen; vandaar het debat over structuur en agency."
+      },
+      "sources": [
+        "src:edede1b101"
+      ],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "psy:medicalization",
+      "rel": "bridges",
+      "note": {
+        "fa": "پزشکی‌سازی در ویکی روان",
+        "en": "Medicalization in the psychology wiki",
+        "nl": "Medicalization in the psychology wiki"
+      }
+    },
+    {
+      "to": "soc:social-construction",
+      "rel": "see-also",
+      "note": {
+        "fa": "ساخت اجتماعی واقعیت",
+        "en": "The social construction of reality",
+        "nl": "The social construction of reality"
+      }
+    },
+    {
+      "to": "soc:arendt-loneliness-and-the-structure-versus-agency-debate",
+      "rel": "see-also",
+      "note": {
+        "fa": "ساختار و عاملیت",
+        "en": "Structure and agency",
+        "nl": "Structuur en handelen"
+      }
+    },
+    {
+      "to": "soc:modern-iranian-brain-drain-debate",
+      "rel": "applies-to",
+      "note": {
+        "fa": "مهاجرت نخبگان",
+        "en": "Brain drain",
+        "nl": "Brain drain"
+      }
+    }
+  ],
+  "people": [
+    "core:c-wright-mills"
+  ],
+  "sources": [
+    "src:accf4bea5e",
+    "src:edede1b101"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

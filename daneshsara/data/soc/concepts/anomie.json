@@ -1,74 +1,154 @@
 {
- "id": "soc:anomie",
- "kind": "concept",
- "title": {
-  "fa": "آنومی (بی‌هنجاری)",
-  "en": "Anomie",
-  "nl": "Anomie"
- },
- "aliases": [],
- "parent": "soc:cohesion",
- "field": "soc:cohesion",
- "summary": {
-  "fa": "وقتی قواعد مشترک سست می‌شوند یا میان هدف‌های تبلیغ‌شده و راه‌های مجاز رسیدن به آن‌ها شکاف می‌افتد؛ دورکیم آن را با خودکشی، مرتون با کج‌روی پیوند زد.",
-  "en": "When shared rules loosen, or a gap opens between advertised goals and the legitimate means of reaching them; Durkheim tied it to suicide, Merton to deviance.",
-  "nl": "Wanneer gedeelde regels verslappen, of een kloof ontstaat tussen de aangeprezen doelen en de legitieme middelen om ze te bereiken; Durkheim verbond het met zelfdoding, Merton met deviantie."
- },
- "points": [
-  {
-   "text": {
-    "fa": "دورکیم (۱۸۹۷): نرخ خودکشی واقعیتی اجتماعی است، نه جمع تصمیم‌های فردی؛ در دوره‌های تغییر تند اقتصادی (هم رونق، هم رکود) بالا می‌رود چون معیارهای «کافی» گم می‌شوند.",
-    "en": "Durkheim (1897): the suicide rate is a social fact, not the sum of individual decisions; it rises in periods of rapid economic change (boom as much as bust) because the standards of \"enough\" are lost.",
-    "nl": "Durkheim (1897): the suicide rate is a social fact, not the sum of individual decisions; it rises in periods of rapid economic change (boom as much as bust) because the standards of \"enough\" are lost."
-   },
-   "sources": [
-    "src:4f2939bd32"
-   ],
-   "flags": []
+  "id": "soc:anomie",
+  "kind": "concept",
+  "title": {
+    "fa": "آنومی (بی‌هنجاری)",
+    "en": "Anomie",
+    "nl": "Anomie"
   },
-  {
-   "text": {
-    "fa": "مرتون (۱۹۳۸): وقتی فرهنگ همه را به هدف واحدی (ثروت) می‌خواند ولی ساختار راه مشروع را برای همه باز نمی‌گذارد، پنج پاسخ پدید می‌آید: همنوایی، نوآوری (کج‌روی)، مناسک‌گرایی، انزوا، شورش.",
-    "en": "Merton (1938): when culture calls everyone to the same goal (wealth) but structure keeps legitimate paths closed to many, five adaptations appear: conformity, innovation (deviance), ritualism, retreatism, rebellion.",
-    "nl": "Merton (1938): when culture calls everyone to the same goal (wealth) but structure keeps legitimate paths closed to many, five adaptations appear: conformity, innovation (deviance), ritualism, retreatism, rebellion."
-   },
-   "sources": [
-    "src:b67c05b1c8"
-   ],
-   "flags": []
-  }
- ],
- "links": [
-  {
-   "to": "psy:anomie",
-   "rel": "same-as",
-   "note": {
-    "fa": "همین مفهوم در ویکی روان، با تأکید روانی",
-    "en": "The same concept in the psychology wiki, with the psychological emphasis",
-    "nl": "The same concept in the psychology wiki, with the psychological emphasis"
-   }
+  "aliases": [],
+  "parent": "soc:cohesion",
+  "field": "soc:cohesion",
+  "summary": {
+    "fa": "آنومی یا بی‌هنجاری وضعی است که در آن قواعد مشترک جامعه سست می‌شوند و فرد دیگر نمی‌داند چه چیزی «کافی»، «درست» یا «ممکن» است. امیل دورکیم این مفهوم را برای توضیح دوره‌های تغییر تند به کار برد، وقتی معیارهای قدیم از کار افتاده و معیارهای تازه هنوز ساخته نشده‌اند، و نشان داد که در چنین دوره‌هایی نرخ خودکشی بالا می‌رود. رابرت مرتون آن را به شکاف میان «هدف‌های فرهنگی» (مثلاً ثروت و موفقیت) و «راه‌های مجاز» رسیدن به آن‌ها گسترش داد و پنج پاسخ ممکن را برشمرد. آنومی پلی کلاسیک میان جامعه‌شناسی و سلامت روان است.",
+    "en": "Anomie, or normlessness, is a condition in which a society’s shared rules weaken and individuals no longer know what is “enough”, “right” or “possible”. Émile Durkheim used it to explain periods of rapid change, when old standards stop working and new ones are not yet built, and showed that suicide rates rise in such periods. Robert Merton extended it to the gap between cultural goals (wealth, success) and legitimate means, listing five possible responses. Anomie is a classic bridge between sociology and mental health.",
+    "nl": "Anomie is normloosheid: gedeelde regels verzwakken en mensen weten niet meer wat genoeg of juist is. Durkheim verbond het met snelle verandering en zelfdoding; Merton met de kloof tussen culturele doelen en legitieme middelen."
   },
-  {
-   "to": "soc:inequality-health",
-   "rel": "see-also",
-   "note": {
-    "fa": "نابرابری و سلامت",
-    "en": "Inequality and health",
-    "nl": "Inequality and health"
-   }
-  }
- ],
- "people": [
-  "core:emile-durkheim",
-  "core:robert-k-merton"
- ],
- "sources": [
-  "src:4f2939bd32",
-  "src:b67c05b1c8"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "points": [
+    {
+      "text": {
+        "fa": "دورکیم (۱۸۹۷): نرخ خودکشی واقعیتی اجتماعی است، نه جمع تصمیم‌های فردی؛ در دوره‌های تغییر تند اقتصادی (هم رونق، هم رکود) بالا می‌رود چون معیارهای «کافی» گم می‌شوند.",
+        "en": "Durkheim (1897): the suicide rate is a social fact, not the sum of individual decisions; it rises in periods of rapid economic change (boom as much as bust) because the standards of \"enough\" are lost.",
+        "nl": "Durkheim (1897): the suicide rate is a social fact, not the sum of individual decisions; it rises in periods of rapid economic change (boom as much as bust) because the standards of \"enough\" are lost."
+      },
+      "sources": [
+        "src:4f2939bd32"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "مرتون (۱۹۳۸): وقتی فرهنگ همه را به هدف واحدی (ثروت) می‌خواند ولی ساختار راه مشروع را برای همه باز نمی‌گذارد، پنج پاسخ پدید می‌آید: همنوایی، نوآوری (کج‌روی)، مناسک‌گرایی، انزوا، شورش.",
+        "en": "Merton (1938): when culture calls everyone to the same goal (wealth) but structure keeps legitimate paths closed to many, five adaptations appear: conformity, innovation (deviance), ritualism, retreatism, rebellion.",
+        "nl": "Merton (1938): when culture calls everyone to the same goal (wealth) but structure keeps legitimate paths closed to many, five adaptations appear: conformity, innovation (deviance), ritualism, retreatism, rebellion."
+      },
+      "sources": [
+        "src:b67c05b1c8"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "دورکیم نخست در «تقسیم کار اجتماعی» (۱۸۹۳) از آنومی گفت: وقتی تقسیم کار سریع‌تر از قواعد تنظیم‌کننده‌اش رشد کند (مثلاً بحران‌های صنعتی و درگیری کار و سرمایه)، همبستگی ارگانیک نمی‌تواند شکل بگیرد و جامعه دچار بی‌قاعدگی می‌شود.",
+        "en": "Durkheim first spoke of anomie in The Division of Labour (1893): when the division of labour grows faster than the rules regulating it (industrial crises, labour–capital conflict), organic solidarity cannot form and society becomes deregulated.",
+        "nl": "Durkheim (1893): als arbeidsdeling sneller groeit dan haar regels, ontstaat ontregeling."
+      },
+      "sources": [
+        "src:fcce5dbd78"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "نکتهٔ شگفت دورکیم: نه فقط رکود بلکه رونق ناگهانی هم آنومی می‌سازد. وقتی ثروت ناگهان زیاد می‌شود، سقف آرزوها برداشته می‌شود و هیچ چیز «کافی» نیست؛ میل بی‌حد همان‌قدر رنج‌آور است که محرومیت.",
+        "en": "Durkheim’s surprising point: not only recession but sudden prosperity produces anomie. When wealth rises abruptly, the ceiling on aspirations disappears and nothing is “enough”; limitless desire is as painful as deprivation.",
+        "nl": "Niet alleen crisis maar ook plotselinge welvaart veroorzaakt anomie: grenzeloos verlangen kwelt evenzeer."
+      },
+      "sources": [
+        "src:4f2939bd32"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "نظریهٔ «آنومی نهادی» (مسنر و روزنفلد، ۱۹۹۴): وقتی نهاد اقتصاد بر خانواده، آموزش و سیاست غلبه می‌کند و ارزش هر چیز با پول سنجیده می‌شود، کنترل اجتماعی ضعیف می‌شود و جرم ابزاری بالا می‌رود. این نسخهٔ امروزی ایدهٔ مرتون است.",
+        "en": "Institutional anomie theory (Messner and Rosenfeld, 1994): when the economy dominates family, education and politics and everything is valued in money, social control weakens and instrumental crime rises — a modern version of Merton.",
+        "nl": "Institutionele anomietheorie (1994): als de economie gezin, onderwijs en politiek overheerst, verzwakt sociale controle."
+      },
+      "sources": [
+        "src:7adbc7c21b"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "آنومی در ایران: تورم مزمن، شکاف میان ارزش‌های رسمی و زیست واقعی، و فاصلهٔ آرزوهای جوانان تحصیل‌کرده با فرصت‌های شغلی را بسیاری از پژوهشگران ایرانی با مفهوم آنومی توضیح داده‌اند. شاخص‌هایی مثل بی‌اعتمادی، دور زدن قانون و «زرنگی» را گاهی نشانهٔ آن می‌دانند. باید مراقب بود: آنومی مفهومی تفسیری است و اندازه‌گیری مستقیمش دشوار است.",
+        "en": "Anomie in Iran: chronic inflation, the gap between official values and lived reality, and the distance between educated youth’s aspirations and job opportunities have been explained by many Iranian researchers through anomie; distrust, law-evasion and “cleverness” (zerangi) are sometimes taken as its signs. Caution: anomie is interpretive and hard to measure directly.",
+        "nl": "In Iran verklaren onderzoekers inflatie, de kloof tussen officiële waarden en het echte leven, en wantrouwen vaak met anomie — een moeilijk meetbaar begrip."
+      },
+      "sources": [
+        "src:fcce5dbd78"
+      ],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "نقد: آنومی گاهی به برچسبی کلی برای «هر چیزی که در جامعه خراب است» تبدیل می‌شود و قدرت توضیحی‌اش کم می‌شود. پژوهش‌های تجربی تازه ترجیح می‌دهند به جای آنومی کلی، متغیرهای مشخص‌تری مثل اعتماد، انسجام اجتماعی محله یا نابرابری را بسنجند.",
+        "en": "Critique: anomie sometimes becomes a catch-all label for “everything wrong in society”, losing explanatory power; recent empirical work prefers specific variables such as trust, neighbourhood cohesion or inequality.",
+        "nl": "Kritiek: anomie wordt soms een vergaarbak; recent onderzoek meet liever specifieke variabelen."
+      },
+      "sources": [
+        "src:7adbc7c21b"
+      ],
+      "flags": [
+        "contested"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "psy:anomie",
+      "rel": "same-as",
+      "note": {
+        "fa": "همین مفهوم در ویکی روان، با تأکید روانی",
+        "en": "The same concept in the psychology wiki, with the psychological emphasis",
+        "nl": "The same concept in the psychology wiki, with the psychological emphasis"
+      }
+    },
+    {
+      "to": "soc:inequality-health",
+      "rel": "see-also",
+      "note": {
+        "fa": "نابرابری و سلامت",
+        "en": "Inequality and health",
+        "nl": "Inequality and health"
+      }
+    },
+    {
+      "to": "soc:durkheim-social-facts-suicide",
+      "rel": "see-also",
+      "note": {
+        "fa": "واقعیت اجتماعی و خودکشی",
+        "en": "Social facts and suicide",
+        "nl": "Sociale feiten"
+      }
+    },
+    {
+      "to": "soc:generalized-trust",
+      "rel": "see-also",
+      "note": {
+        "fa": "اعتماد",
+        "en": "Trust",
+        "nl": "Vertrouwen"
+      }
+    }
+  ],
+  "people": [
+    "core:emile-durkheim",
+    "core:robert-k-merton"
+  ],
+  "sources": [
+    "src:4f2939bd32",
+    "src:b67c05b1c8",
+    "src:fcce5dbd78",
+    "src:7adbc7c21b"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }
