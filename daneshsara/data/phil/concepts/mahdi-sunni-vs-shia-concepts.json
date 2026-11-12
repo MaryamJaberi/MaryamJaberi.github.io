@@ -63,7 +63,17 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  {
+   "to": "phil:twelver-hidden-imam-doctrine",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدخل هم‌موضوع",
+    "en": "Related entry",
+    "nl": "Verwant lemma"
+   }
+  }
+ ],
  "people": [
   "core:ibn-khaldun",
   "core:muhammad-nasir-al-din-al-albani"

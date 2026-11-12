@@ -70,7 +70,26 @@
    "flags": []
   }
  ],
- "links": [],
+ "links": [
+  {
+   "to": "psy:curiosity-brain",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدخل هم‌موضوع",
+    "en": "Related entry",
+    "nl": "Verwant lemma"
+   }
+  },
+  {
+   "to": "psy:curiosity",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدخل هم‌موضوع",
+    "en": "Related entry",
+    "nl": "Verwant lemma"
+   }
+  }
+ ],
  "people": [
   "core:daniel-berlyne",
   "core:jordan-litman"

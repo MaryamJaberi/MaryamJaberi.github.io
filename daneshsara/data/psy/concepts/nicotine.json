@@ -81,7 +81,17 @@
    "flags": []
   }
  ],
- "links": [],
+ "links": [
+  {
+   "to": "psy:alcohol",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدخل هم‌موضوع",
+    "en": "Related entry",
+    "nl": "Verwant lemma"
+   }
+  }
+ ],
  "people": [
   "core:james-buchanan-duke",
   "core:neal-benowitz"
