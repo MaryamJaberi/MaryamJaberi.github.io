@@ -33,7 +33,7 @@ NAV = [
  ['۳ · سیمرغ', [['simorgh/plan.html', 'نقشهٔ کلان سیمرغ'], ['simorgh/', 'درگاه سیمرغ']]],
  ['۴ · ساخت ایران', [['sakht/', 'نهادها، گذار، ریسک'], ['sakht/day.html', 'روز بعد'], ['sakht/work.html', 'میز کار متخصص‌ها']]],
  ['اطلس‌ها و ابزارها', [['atlas/world.html', 'جهان دانش'], ['atlas/lands.html', 'سرزمین دانش'], ['atlas/', 'اطلس رشته‌ها'], ['atlas/library-plan.html', 'کتابخانه'], ['atlas/tools/', 'ابزارهای میان‌رشته‌ای'], ['atlas/hidden-bridges.html', 'پل‌های پنهان'], ['psy/tools/', 'ابزارهای روان']]],
- ['راهنما', [['atlas/coverage.html', 'نقشهٔ پوشش و نقشهٔ راه'], ['atlas/story.html', 'داستان پروژه'], ['atlas/sitemap.html', 'نقشهٔ کامل سایت'], ['atlas/collection.html', 'مخزن کتاب‌ها'], ['core/sources.html', 'منابع'], ['core/people.html', 'چهره‌ها'], ['core/contribute.html', 'مشارکت']]],
+ ['راهنما', [['core/log.html', 'دفتر پروژه: چه تغییر کرد'], ['atlas/coverage.html', 'نقشهٔ پوشش و نقشهٔ راه'], ['atlas/story.html', 'داستان پروژه'], ['atlas/sitemap.html', 'نقشهٔ کامل سایت'], ['atlas/collection.html', 'مخزن کتاب‌ها'], ['core/sources.html', 'منابع'], ['core/people.html', 'چهره‌ها'], ['core/contribute.html', 'مشارکت']]],
 ]
 for _, items in NAV:
     for u, _t in items: assert os.path.exists(u + 'index.html' if u.endswith('/') else u), u
