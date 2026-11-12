@@ -26,7 +26,7 @@ CSS = ('<style id="ds-src-css">.ds-src{font:400 .78rem/1.9 inherit;display:flex;
 n = 0
 for p in sorted(set(list(SRC) + list(EXTRA))):
     if not p.startswith('atlas' + os.sep) and not p.startswith('atlas/'): continue
-    if not os.path.exists(p): continue
+    if not os.path.isfile(p): continue
     keys = [k for k in (SRC.get(p) or EXTRA.get(p) or []) if k in NAME]
     if not keys: continue
     s = open(p, encoding='utf-8').read()

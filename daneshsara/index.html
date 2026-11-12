@@ -47,7 +47,7 @@ p.sub{max-width:38em;margin:0 auto var(--s5);text-align:center;color:var(--ink-2
 .tile b{display:block;margin-bottom:4px}.tile small{color:var(--ink-3);display:block;line-height:1.6}
 .tile.soon{border-style:dashed;border-top-style:dashed;background:transparent;pointer-events:none}
 .tile.soon b:after{content:" · به‌زودی";font-weight:400;color:var(--ink-3);font-size:var(--chip)}
-.stack.hl .layer:not(.on),.stack.hl .tile:not(.on){opacity:.28}
+.stack.hl .layer:not(.on),.stack.hl .tile:not(.on),.stack.hl .bridgeL:not(.on){opacity:.28}
 .stack.hl .layer.on{box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 35%,transparent)}
 .stack.hl .tile.on{box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 45%,transparent)}
 .simbody,.iranbody{font-size:var(--small);color:var(--ink-2);line-height:1.9;margin:0}
@@ -58,6 +58,13 @@ p.sub{max-width:38em;margin:0 auto var(--s5);text-align:center;color:var(--ink-2
 .ac:hover,.ac:focus-visible{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:var(--primary)}
 .ac,.ac:hover,.ac *{text-decoration:none}
 .ac b{font-size:1rem}.ac p{margin:0;font-size:var(--small);color:var(--ink-2);line-height:1.8}
+/* ---- bridge between science and Iran ---- */
+.bridgeL{border:1.5px dashed var(--err);border-radius:20px;padding:14px 18px;background:color-mix(in srgb,var(--err) 5%,var(--paper))}
+.bridgeL .tag{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}.bridgeL .tag b{font-size:1.02rem}.bridgeL .tag span{font-size:var(--small);color:var(--ink-3)}
+.bridgeL .go{margin-inline-start:auto;font-size:var(--small)}.bridgeL .go a{color:var(--err)}
+.conn{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center;font-size:var(--chip);color:var(--ink-3)}
+.conn a{font-size:var(--chip);padding:2px 10px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2);text-decoration:none;background:var(--paper)}
+.conn a:hover{border-color:var(--err);color:var(--err)}
 .ac .uses{display:flex;gap:5px;align-items:center;margin-top:auto;padding-top:4px;font-size:var(--chip);color:var(--ink-3)}
 .ac .uses i{width:11px;height:11px;border-radius:50%;background:var(--c);display:inline-block}
 .ac .uses i.hollow{background:transparent;border:2px solid var(--c)}
@@ -102,6 +109,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
     <p class="iranbody">هر مفهوم لایهٔ علم را در ایران می‌سنجیم: آمار و نتایج ایران (هر عدد با سال، روش و ردهٔ کیفیت)، ریشه‌یابی هر مسئله، و شرح وضعیت موجود. ماتریس مسئله × رشته نشان می‌دهد هر موضوع را کدام دانش‌ها روشن می‌کنند.</p>
    </div>
    <div class="arrow">علم به ایران وصل می‌شود</div>
+   <div class="bridgeL" data-k="iran psy soc">
+    <div class="tag"><b>پل علم و ایران · ریشه‌یابی آسیب</b><span>از قانون، اقتصاد و باورها تا آسیب و پیامد، و نقطه‌های عطف</span><span class="go"><a href="miyan/roots.html">ریشه‌یابی آسیب ←</a></span></div>
+    <p class="iranbody">آسیب‌های اجتماعی ایران به‌صورت زنجیره: ریشه‌ها در جامعه، سازوکار در خانه و محله، آسیب به فرد، و پیامدهایی که ریشهٔ نسل بعد می‌شوند. هر حلقه ردهٔ شواهد دارد، به دادهٔ ایران و مدخل‌های ویکی وصل است، و نقطه‌های عطف به اولویت‌های ساخت ایران می‌رسند. نخستین زنجیرهٔ کامل: تجربه‌های ناگوار کودکی.</p>
+    <div class="conn"><span>از این بخش‌ها می‌خواند و به آن‌ها می‌رسد:</span><a href="psy/tools/graph.html#adverse-childhood-experiences">روان: تجربه‌های ناگوار کودکی</a><a href="soc/#social-roots-of-childhood-adversity">جامعه: ریشه‌های اجتماعی</a><a href="soc/#aces-iran-turning-points">جامعه: نقطه‌های عطف</a><a href="iran/entries.html#child-marriage">ایران: داده‌های آسیب</a><a href="sakht/">ساخت ایران: قانون و خدمات حیاتی</a></div>
+   </div>
    <div class="layer base" data-k="psy soc phil tabar tarikh ling">
     <div class="tag"><b>۱ · علم</b><span>علم‌ها، منبع‌هایشان و پیوند میان آن‌ها</span></div>
     <p class="iranbody">علم‌ها یکی‌یکی اضافه می‌شوند و منبع‌هایشان بررسی می‌شود. این لایه علم‌های گوناگون را به هم پیوند می‌دهد، پیوندهای موجود را نشان می‌دهد و مفهوم‌ها را با تصویرسازی علمی می‌فهماند (اطلس‌ها در پایین).</p>
@@ -128,12 +140,34 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
    <a class="ac" data-u="psy soc phil tabar" href="atlas/lands.html"><b>سرزمین دانش</b><p>رشته‌ها شهرند و رشته‌های میان‌رشته‌ای راه؛ می‌بینید چه کسانی راه‌ها را ساختند.</p><span class="uses"></span></a>
    <a class="ac" data-u="psy soc phil tabar" href="atlas/"><b>اطلس رشته‌ها</b><p>۷۷ رشته در پنج خانواده با پل‌هایشان؛ برای انتخاب مسیر یادگیری و شغل.</p><span class="uses"></span></a>
    <a class="ac" data-u="psy soc phil tabar" href="atlas/bridge.html"><b>پل‌ها</b><p>۲۵ صفحه برای ۲۵ رشتهٔ میان‌رشته‌ای: اثر بنیادی، یافتهٔ کلیدی، کتاب فارسی.</p><span class="uses"></span></a>
-   <a class="ac" data-u="psy soc phil tabar tarikh" href="atlas/collection.html"><b>فهرست کتاب‌ها</b><p>۷۵۲ کتاب و سند مجموعه، دسته‌بندی‌شده به تفکیک رشته و قفسه.</p><span class="uses"></span></a>
-   <a class="ac" data-u="psy soc phil tabar tarikh" href="atlas/library-plan.html"><b>کتابخانهٔ جهان دانش</b><p>نقشهٔ یک کتابخانهٔ واقعی از بالا: تالار، قفسه، عطف کتاب با برچسب اعتبار. زوم کنید تا به کتاب برسید.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc phil tabar tarikh" href="atlas/collection.html"><b>فهرست خام مخزن</b><p>۷۵۲ فایل مخزن به همان شکلی که فهرست شده‌اند؛ نسخهٔ مرتب‌شده در کتابخانهٔ دانش‌سراست.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc phil tabar tarikh" href="atlas/library-plan.html"><b>کتابخانهٔ دانش‌سرا</b><p>ده تالار، قفسه‌های موضوعی و عطف کتاب‌ها؛ مجموعه‌های چندجلدی، جزوه‌ها و درس‌گفتارها یک‌جا. روی هر کتاب بزنید تا جلدها و سنجشش را ببینید.</p><span class="uses"></span></a>
    <a class="ac" data-u="psy soc phil tabar tarikh iran" href="atlas/coverage.html"><b>نقشهٔ پوشش</b><p>بیست حوزهٔ کشورداری: کجا علم داریم، کجا آمار ایران، و کجا هنوز خالی است. با نقشهٔ راه.</p><span class="uses"></span></a>
    <a class="ac" data-u="psy soc phil tabar tarikh iran" href="atlas/story.html"><b>داستان پروژه</b><p>چه شد که این‌طور شد، الان کجاییم، و چه چیزی هنوز اینجا نیست.</p><span class="uses"></span></a>
    <a class="ac" data-u="psy soc phil tabar tarikh iran" href="atlas/sitemap.html"><b>نقشهٔ سایت</b><p>همهٔ موضوع‌ها به‌صورت درخت، گرافِ ارتباط‌ها و ساختار پیشنهادی صفحه‌ها.</p><span class="uses"></span></a>
    <a class="ac" data-u="iran psy soc phil tabar" href="iran/"><b>برای ایران</b><p>داده‌ها، خط زمانی و ماتریس مسئله × رشته برای ایران.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc iran sakht" href="miyan/roots.html"><b>ریشه‌یابی آسیب</b><p>هفت زنجیرهٔ آسیب اجتماعی از ریشه تا پیامد، با ردهٔ شواهد، دادهٔ ایران، نقطه‌های عطف و سنجش سهم خطر.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc phil tabar" href="atlas/hidden-bridges.html"><b>پل‌های پنهان</b><p>مفهوم‌هایی از ویکی‌های مختلف که بی‌آنکه به هم ارجاع دهند دربارهٔ یک چیزند.</p><span class="uses"></span></a>
+  </div>
+
+  <h3 class="grp">آزمایشگاه‌ها: خودتان امتحان کنید</h3>
+  <div class="agrid">
+   <a class="ac" data-u="psy" href="psy/tools/lab.html"><b>آزمایشگاه روان</b><p>پنج آزمایش کلاسیک روان‌شناسی؛ این بار خودتان آزمودنی هستید.</p><span class="uses"></span></a>
+   <a class="ac" data-u="soc" href="soc/tools/lab.html"><b>آزمایشگاه جامعه</b><p>جدایی‌گزینی شلینگ، آستانهٔ پیوستن، بازی صندوق مشترک و «اول حدس بزن».</p><span class="uses"></span></a>
+   <a class="ac" data-u="phil" href="phil/tools/lab.html"><b>آزمایشگاه فلسفه</b><p>تراموا، پردهٔ بی‌خبری، دوراهی زندانی و اینکه فیلسوفان واقعاً چه فکر می‌کنند.</p><span class="uses"></span></a>
+   <a class="ac" data-u="tabar" href="tabar/tools/lab.html"><b>آزمایشگاه تبار</b><p>شکار پیگیرانه، گسترش از آفریقا، بودجهٔ انرژی مغز و نیاکان مشترک.</p><span class="uses"></span></a>
+   <a class="ac" data-u="tarikh" href="tarikh/tools/lab.html"><b>آزمایشگاه تاریخ</b><p>مبدل تقویم، فاصلهٔ منبع تا رویداد و چرخش رمضان در سال خورشیدی.</p><span class="uses"></span></a>
+  </div>
+
+  <h3 class="grp">همهٔ ابزارهای هر بخش</h3>
+  <div class="agrid">
+   <a class="ac" data-u="psy" href="psy/tools/"><b>ابزارهای روان</b><p>اطلس هیجان‌ها، خط زمانی ایده‌ها، شجره‌نامه، سنجش‌خانه، کتابخانه و بیشتر.</p><span class="uses"></span></a>
+   <a class="ac" data-u="soc" href="soc/tools/"><b>ابزارهای جامعه</b><p>کاوشگر، اندیشمندان، نقشهٔ دیدگاه سیاسی و آزمایشگاه.</p><span class="uses"></span></a>
+   <a class="ac" data-u="phil" href="phil/tools/"><b>ابزارهای فلسفه</b><p>کاوشگر، مناظره‌ها، اندیشمندان و آزمایشگاه.</p><span class="uses"></span></a>
+   <a class="ac" data-u="tabar" href="tabar/tools/"><b>ابزارهای تبار</b><p>کاوشگر، خط زمانی، واژه‌نامهٔ تصویری و آزمایشگاه.</p><span class="uses"></span></a>
+   <a class="ac" data-u="tarikh" href="tarikh/tools/"><b>ابزارهای تاریخ</b><p>کاوشگر تاریخ و آزمایشگاه.</p><span class="uses"></span></a>
+   <a class="ac" data-u="iran" href="iran/tools/"><b>ابزارهای ایران</b><p>راستی‌آزمای ادعا، ایران از دید هر رشته، ماتریس مسئله × رشته و خط زمانی.</p><span class="uses"></span></a>
+   <a class="ac" data-u="psy soc phil tabar" href="atlas/tools/"><b>ابزارهای میان‌رشته‌ای</b><p>یابندهٔ پل‌ها، مقایسهٔ دو مفهوم، مسیر میان دو مفهوم، نقشهٔ شواهد و محل بحث‌ها.</p><span class="uses"></span></a>
   </div>
 
   <h3 class="grp">اطلس هر ویکی</h3>
@@ -156,7 +190,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
 <script>
 (() => {
 const $ = id => document.getElementById(id);
-const NAME = {psy:"روان", soc:"جامعه", phil:"فلسفه", tabar:"تبار و ژنتیک", ling:"زبان‌شناسی", iran:"برای ایران", simorgh:"سیمرغ", sakht:"ساخت ایران"};
+const NAME = {psy:"روان", soc:"جامعه", phil:"فلسفه", tabar:"تبار و ژنتیک", tarikh:"تاریخ", miyan:"ارتباط رشته‌ها", ling:"زبان‌شناسی", iran:"برای ایران", simorgh:"سیمرغ", sakht:"ساخت ایران"};
 // dots on each atlas card
 document.querySelectorAll(".ac").forEach(a => { const u = a.dataset.u.split(" "); a.querySelector(".uses").innerHTML = "می‌خواند از: " + u.map(k => `<i style="--c:var(--c-${k})" title="${NAME[k]}"></i>`).join(""); });
 // highlight the layers an atlas draws on
@@ -168,7 +202,7 @@ document.querySelectorAll(".ac").forEach(a => { const u = a.dataset.u.split(" ")
 fetch("core/registry.json").then(r => r.json()).then(r => {
   const E = r.entries, ids = Object.keys(E), cnt = {};
   ids.forEach(i => { cnt[E[i].wiki] = (cnt[E[i].wiki] || 0) + 1; });
-  ["psy", "soc", "phil", "tabar"].forEach(w => { const el = $("n-" + w); if (el && cnt[w]) el.textContent = String(cnt[w]).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]) + " مدخل"; });
+  ["psy", "soc", "phil", "tabar", "tarikh"].forEach(w => { const el = $("n-" + w); if (el && cnt[w]) el.textContent = String(cnt[w]).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]) + " مدخل"; });
   const norm = s => String(s || "").toLowerCase().replace(/ي/g, "ی").replace(/ك/g, "ک").replace(/[‌]/g, " ");
   const IDX = ids.map(i => ({i, t: E[i].title.fa || "", n: norm((E[i].title.fa || "") + " " + (E[i].title.en || "")), w: E[i].wiki, u: E[i].url}));
   $("q").addEventListener("input", e => { const q = norm(e.target.value).trim(), box = $("res"); if (q.length < 2) { box.hidden = true; return; } const out = IDX.filter(x => x.n.includes(q)).slice(0, 8); box.innerHTML = out.length ? out.map(x => `<a href="${x.u}"><span>${x.t}</span><small>${NAME[x.w] || x.w}</small></a>`).join("") : '<a><span>نتیجه‌ای پیدا نشد</span></a>'; box.hidden = false; });
