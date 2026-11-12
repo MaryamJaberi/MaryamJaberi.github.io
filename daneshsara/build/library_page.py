@@ -169,12 +169,13 @@ function search(app){
 }
 const shelfName = it => { for (const c of H[it.hall].cases) for (const s of c.shelves) if (s.id === it.s) return s.fa; return ""; };
 
+const TOOLS = {psy: `نمای ویژهٔ این تالار با سطح خواندن (عمومی، دانشگاهی، تخصصی) و چیدمان بر اساس رشتهٔ علمی: <a href="../psy/tools/library.html">کتابخانهٔ ویکی روان ←</a>`, miyan: `کتاب‌ها کنار زنجیره‌های آسیب: <a href="../miyan/roots.html">ریشه‌یابی آسیب ←</a>`};
 function hall(hid, pick){
   const h = H[hid], L = BY[hid] || [];
   document.title = h.fa + " | کتابخانهٔ دانش‌سرا";
   const app = document.getElementById("app");
   app.innerHTML = `<nav class="lcrumb" aria-label="مسیر کتابخانه"><button type="button" id="back">کتابخانه</button><span>›</span><b>${h.fa}</b></nav>
-    <div class="top"><div><h1 style="color:var(${h.color})">${h.fa}</h1><p class="what">هر قفسه یک موضوع است. عطف‌های پهن‌تر و پشت‌سرهم، مجموعه‌های چندجلدی‌اند؛ روی هر عطف بزنید تا جزئیات، جلدها و مدخل‌های مرتبط را ببینید.</p></div>${stats(L)}</div>
+    <div class="top"><div><h1 style="color:var(${h.color})">${h.fa}</h1><p class="what">هر قفسه یک موضوع است. عطف‌های پهن‌تر و پشت‌سرهم، مجموعه‌های چندجلدی‌اند؛ روی هر عطف بزنید تا جزئیات، جلدها و مدخل‌های مرتبط را ببینید.</p>${TOOLS[hid] ? `<p class="what" style="font-size:.92rem">${TOOLS[hid]}</p>` : ""}</div>${stats(L)}</div>
     <div class="bar" role="group" aria-label="نوع">${[["all", "همه"], ["book", "کتاب"], ["set", "چندجلدی"], ["lecture", "درس‌گفتار"], ["booklet", "جزوه"], ["paper", "مقاله"]].filter(([k]) => k === "all" || L.some(it => it.kind === k)).map(([k, t]) => `<button type="button" class="chip" data-k="${k}" aria-pressed="${kindF === k}">${t}</button>`).join("")}
     <input id="q" type="search" placeholder="جستجو در این تالار…" aria-label="جستجو در تالار"></div>
     <div class="legend"><span><i style="background:var(${h.color})"></i>کتاب (کم‌رنگ‌تر = ردهٔ اعتبار پایین‌تر)</span><span><i style="background:var(${h.color});width:26px"></i>مجموعهٔ چندجلدی</span><span><i style="background:repeating-linear-gradient(0deg,var(--ink-2) 0 6px,var(--ink-3) 6px 8px)"></i>درس‌گفتار</span><span><i style="border:1px dashed var(${h.color})"></i>جزوه</span></div>
