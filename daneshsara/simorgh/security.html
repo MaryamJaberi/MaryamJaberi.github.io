@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>پروندهٔ امنیت | ویکی سیمرغ | دانش‌سرا</title>
+<meta name="description" content="دعوت‌نامه و پروندهٔ فنی برای کسی که نگهبانی امنیت سیمرغ را می‌پذیرد: مدل تهدید، آنچه تا امروز تصمیم گرفته شده، ده مسئلهٔ باز و سی روز اول.">
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+:root{--c:#b7791f}
+main{padding-block:var(--s5) var(--s10);max-width:900px}
+h1{font-size:var(--h1);margin:var(--s3) 0 var(--s2);line-height:var(--lh-tight);text-wrap:balance}
+h2{font-size:var(--h3);margin:0 0 var(--s2);text-wrap:balance}
+h3{font-size:1.05rem;margin:0 0 4px}
+p{line-height:2;margin:0 0 var(--s3);max-width:68ch}
+.lead{font-size:1.08rem;color:var(--ink-2)}
+section{padding-block:var(--s6);border-top:1px solid var(--line);scroll-margin-top:8px}
+a{color:var(--primary)}
+.term{direction:ltr;text-align:left;font-family:var(--mono,ui-monospace,Menlo,Consolas,monospace);font-size:.85rem;line-height:1.8;padding:14px 16px;border-radius:14px;background:#14181a;color:#cfe3d4;overflow-x:auto;margin:0 0 var(--s4)}
+.term b{color:#f2c46d;font-weight:400}.term i{color:#7f9a8a;font-style:normal}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 var(--s2)}
+.toc a{font-size:.85rem;padding:6px 12px;border-radius:99px;border:1px solid var(--line-strong);color:var(--ink-2);text-decoration:none;background:var(--surface);min-height:36px;display:inline-flex;align-items:center}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.9rem;line-height:1.8}
+th,td{text-align:start;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--ink-3);font-weight:600;font-size:.82rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.card{padding:14px;border-radius:14px;border:1px solid var(--line);background:var(--surface);border-top:3px solid var(--c);min-width:0;font-size:.92rem;line-height:1.85}
+.card p{font-size:.9rem;color:var(--ink-2);margin:0 0 6px;line-height:1.85}
+.card .lv{font-size:.75rem;color:var(--c);letter-spacing:2px;direction:ltr;display:inline-block}
+.card .hint{font-size:.82rem;color:var(--ink-3);border-top:1px dashed var(--line-strong);padding-top:6px;margin-top:6px}
+details.card summary{cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;gap:8px}
+details.card summary::-webkit-details-marker{display:none}
+.find{padding:12px 16px;border-radius:14px;border:1.5px dashed var(--warn);background:color-mix(in srgb,var(--warn) 6%,var(--paper));margin:0 0 10px;line-height:1.9;font-size:.93rem}
+.find b{color:var(--warn)}
+.red{padding:12px 16px;border-radius:14px;border:1.5px dashed var(--err);background:color-mix(in srgb,var(--err) 5%,var(--paper));line-height:1.9;font-size:.93rem}
+ol.steps{padding-inline-start:20px;line-height:2;max-width:68ch}
+ol.steps li{margin-bottom:6px}
+code{font-family:var(--mono,ui-monospace,monospace);font-size:.85em;background:var(--surface-subtle);padding:1px 5px;border-radius:5px;direction:ltr;display:inline-block}
+.src{font-size:.82rem;color:var(--ink-3);line-height:1.9}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#8a8578));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17))}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><a href="../index.html#layers">لایهٔ سیمرغ</a><i>›</i><a href="../simorgh/">ویکی سیمرغ</a><i>›</i><b>پروندهٔ امنیت</b></nav><script src="../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<div class="term"><i># simorgh / security / README</i><br><b>adversary:</b> state-level, controls the network, the SIM registry and the courts<br><b>crown jewel:</b> the identities of people inside Iran<br><b>budget:</b> ~0 &nbsp; <b>team:</b> you &nbsp; <b>users:</b> not security people<br><b>design rule:</b> what we never collect can never leak<br><b>status:</b> 3 known findings, 10 open problems, 0 owners</div>
+<h1>پروندهٔ امنیت: دنبال نگهبان می‌گردیم</h1>
+<p class="lead">سیمرغ پروژه‌ای است که می‌خواهد با دانش مستند و یک بازی، آدم‌ها را برای ساختن ایرانِ پس از جمهوری اسلامی آماده کند. بخشی از آدم‌هایش داخل ایران‌اند. اگر امنیت این پروژه بد طراحی شود، کسی زندان می‌رود. این صفحه همه‌چیز را برای کسی که این نگهبانی را بپذیرد روی میز می‌گذارد: حریف، دارایی‌ها، تصمیم‌های تا امروز، و ده مسئلهٔ باز که جواب آماده ندارند.</p>
+<p>چرا این پرونده عمومی است؟ چون به اصل کرکهوفس پایبندیم: طراحی باید با فرض اینکه حریف همه‌اش را می‌داند امن بماند. رازها (نام‌ها، کلیدها، کانال‌ها) هیچ‌وقت اینجا نمی‌آیند.</p>
+<nav class="toc"><a href="#why">چرا جالب است</a><a href="#threat">مدل تهدید</a><a href="#decided">تصمیم‌های گرفته‌شده</a><a href="#found">سه یافتهٔ واقعی</a><a href="#open">ده مسئلهٔ باز</a><a href="#not">چه چیزی نمی‌خواهیم</a><a href="#first">سی روز اول</a></nav>
+
+<section id="why"><h2>چرا این مسئله ارزش وقتت را دارد</h2>
+<div class="grid">
+<div class="card"><h3>حریف واقعی است</h3><p>نه «مهاجم فرضی» کلاس درس. دولتی که در جنگ ۱۴۰۴ اتصال اینترنت کشور را تا حدود ۴٪ پایین آورد، سیم‌کارت را به کد ملی گره زده، و گوشی را در بازداشت باز می‌کند.</p></div>
+<div class="card"><h3>قید سخت است</h3><p>کاربرها آدم‌های عادی‌اند، بودجه نزدیک صفر است، و هر پیچیدگی اضافه یعنی کسی اشتباه می‌کند. راه‌حل باید ساده‌تر از مشکل باشد.</p></div>
+<div class="card"><h3>مسئلهٔ اصلی تازه است</h3><p>نظریهٔ بازی می‌گوید مردم وقتی حرکت می‌کنند که بدانند دیگران هم هستند. ما باید «چند نفریم» را نشان بدهیم بی آنکه «کی هستیم» جایی ثبت شود. این یک مسئلهٔ رمزنگاری کاربردی است که جواب قفسه‌ای ندارد.</p></div>
+<div class="card"><h3>کار بعدی بزرگ‌تر است</h3><p>اگر روز آزادی برسد، ایران شناسهٔ دیجیتال شهروندی لازم دارد. کسی که امروز امنیت سیمرغ را می‌سازد، سر میز طراحی آن خواهد نشست.</p></div>
+</div></section>
+
+<section id="threat"><h2>مدل تهدید</h2>
+<p>پیش‌نویس اول است. کار اول نگهبان این است که سوراخ‌هایش را پیدا کند.</p>
+<h3>دارایی‌ها، به ترتیب اهمیت</h3>
+<div class="tw"><table>
+<tr><th>دارایی</th><th>اگر لو برود</th><th>وضعیت امروز</th></tr>
+<tr><td>هویت همراهان داخل ایران</td><td>بازداشت، فشار بر خانواده</td><td>هیچ فهرستی وجود ندارد و نباید ساخته شود</td></tr>
+<tr><td>گراف اجتماعی (کی با کی حرف می‌زند)</td><td>یک بازداشت به ده بازداشت می‌رسد</td><td>راهنمای مشترک هنوز نوشته نشده</td></tr>
+<tr><td>محتوای گفتگوها</td><td>مدرک قضایی علیه افراد</td><td>سیاست مشترک هنوز نوشته نشده</td></tr>
+<tr><td>حساب‌های گرداننده (GitHub، ایمیل)</td><td>تزریق کد مخرب به سایت، جعل هویت</td><td>یک نقطهٔ شکست واحد</td></tr>
+<tr><td>یکپارچگی سایت</td><td>هر بازدیدکننده قربانی می‌شود</td><td>سایت ایستا روی GitHub Pages؛ پایین‌تر ببین</td></tr>
+<tr><td>در دسترس بودن</td><td>پروژه در قطعی اینترنت خاموش می‌شود</td><td>هیچ نسخهٔ آفلاین یا آینه‌ای نداریم</td></tr>
+</table></div>
+<h3 style="margin-top:var(--s4)">توان حریف</h3>
+<div class="tw"><table>
+<tr><th>توان</th><th>شاهد</th><th>پیامد برای طراحی</th></tr>
+<tr><td>کنترل شبکه: فیلترینگ، بازرسی عمیق بسته‌ها، قطع کامل</td><td>قطعی بیش از ۲۴۰ ساعت در جنگ ۱۴۰۴، اتصال حدود ۴٪ (NetBlocks)</td><td>هر چیزی که به اتصال دائم وابسته است می‌میرد</td></tr>
+<tr><td>شناسایی از راه سیم‌کارت و پیام‌رسان داخلی</td><td>ثبت سیم‌کارت با کد ملی</td><td>شمارهٔ تلفن شناسه نیست، دشمن است</td></tr>
+<tr><td>ضبط دستگاه و باز کردن اجباری</td><td>روال بازداشت‌ها</td><td>فقط نبودن داده امن است، نه رمز قوی</td></tr>
+<tr><td>فیشینگ هدفمند و جعل هویت</td><td>کارزارهای مستند علیه روزنامه‌نگاران و فعالان خارج از کشور</td><td>کلید سخت‌افزاری برای حساب‌های کلیدی</td></tr>
+<tr><td>فیلترشکن و اپ آلوده</td><td>گزارش‌های مکرر از اپ‌های جعلی</td><td>فقط ابزار متن‌باز شناخته‌شده را توصیه کنیم</td></tr>
+<tr><td>نفوذ انسانی</td><td>کهن‌ترین روش</td><td>معماری‌ای که در آن هیچ عضوی همه را نمی‌شناسد</td></tr>
+<tr><td>فشار بر خانواده در ایران</td><td>علیه ایرانیان خارج از کشور</td><td>تصمیم عمومی شدن با خود فرد است</td></tr>
+</table></div>
+<p style="margin-top:var(--s3)">یک داده که باید در ذهن بماند: در نظرسنجی گمان (تیر ۱۴۰۵) حدود ۹۷٪ پاسخ‌دهندگان داخل ایران از راه سایفون رسیده بودند. یعنی مسیر واقعی مردم به اینترنت آزاد همین چند ابزار است.</p></section>
+
+<section id="decided"><h2>تصمیم‌هایی که تا امروز گرفته شده</h2>
+<p>این‌ها را می‌توانی نقد کنی، اما هزینهٔ عوض کردنشان بالاست چون کل پروژه رویشان ساخته شده.</p>
+<div class="grid">
+<div class="card"><h3>فهرست مرکزی اعضا نداریم</h3><p>هر کس فقط دعوت‌شده‌های خودش را می‌شناسد. چیزی که نیست لو نمی‌رود.</p></div>
+<div class="card"><h3>سایت ایستا، بی‌سرور، بی‌حساب</h3><p>نه پایگاه داده، نه ورود، نه آمارگیر. ابزارهایی مثل «سهم من» فقط در مرورگر حساب می‌کنند و چیزی نمی‌فرستند.</p></div>
+<div class="card"><h3>از داخل ایران فقط کار کم‌خطر</h3><p>یاد گرفتن، آماده شدن، کمک به همسایه. هیچ گزارش‌دهی یا مأموریتی که ردپا بگذارد.</p></div>
+<div class="card"><h3>«مافیا» فقط در بازی</h3><p>پروژه به هیچ آدم واقعی برچسب جاسوس یا مافیا نمی‌زند و پرونده نمی‌سازد. شک یعنی فاصله گرفتن، نه افشا کردن.</p></div>
+<div class="card"><h3>هیچ نام واقعی روی سایت</h3><p>نه همراهان، نه نویسندگان ایده‌ها، مگر با رضایت روشن خودشان.</p></div>
+<div class="card"><h3>فقط دفاع</h3><p>نه نفوذ، نه حملهٔ متقابل، نه افشای اطلاعات شخصی هیچ‌کس.</p></div>
+</div></section>
+
+<section id="found"><h2>سه یافتهٔ واقعی، برای گرم شدن</h2>
+<p>این‌ها را با یک <code>grep</code> ساده روی خود مخزن پیدا کردیم. تو بیشتر پیدا می‌کنی.</p>
+<div class="find"><b>۱ · درخواست به شخص ثالث:</b> حدود دویست صفحه فونت را از Google Fonts می‌گیرند. یعنی نشانی IP و صفحهٔ مبدأ هر بازدیدکننده به گوگل می‌رسد، و سایت بدون آن سرور کندتر بار می‌شود. راه‌حل روشن است (فونت را خودمان میزبانی کنیم)، اما آیا چیز دیگری هم بیرون می‌رود؟</div>
+<div class="find"><b>۲ · اسکریپت خارجی بدون SRI:</b> دو صفحه کتابخانه را از CDN می‌گیرند و هیچ‌کدام ویژگی <code>integrity</code> ندارند. اگر آن CDN یا مسیرش دستکاری شود، کد دلخواه در مرورگر بازدیدکننده اجرا می‌شود.</div>
+<div class="find"><b>۳ · فراداده در تاریخچهٔ git:</b> تاریخچهٔ مخزن عمومی نشانی ایمیل شخصی دارد. برای گرداننده که هویتش عمومی است شاید پذیرفتنی باشد؛ برای هر مشارکت‌کنندهٔ بعدی نه. سیاست مشارکت امن چه باید باشد؟</div>
+</section>
+
+<section id="open"><h2>ده مسئلهٔ باز</h2>
+<p>ستاره‌ها سختی‌اند. روی هرکدام بزن. «سرنخ» فقط نقطهٔ شروع است، نه جواب.</p>
+<div class="grid">
+<details class="card"><summary><span>۱ · اعتماد بدون فهرست</span><span class="lv">★★★★</span></summary><p>می‌خواهیم عضو تازه «ضمانت‌شده» باشد، اما هیچ‌جا ثبت نشود چه کسی چه کسی را ضمانت کرده. و اگر یک نفر لو رفت، بتوان ضمانت‌هایش را باطل کرد بی آنکه بقیه شناخته شوند.</p><p class="hint">سرنخ: توکن‌های ناشناس به سبک Privacy Pass (RFC 9576)، امضای کور، امضای گروهی؛ مشکل ابطال در هر سه. شاید هم جواب درست «اصلاً دیجیتالش نکن» باشد.</p></details>
+<details class="card"><summary><span>۲ · «چند نفریم» بدون «کی هستیم»</span><span class="lv">★★★★★</span></summary><p>قلب نظریهٔ بازی پروژه: مردم وقتی می‌پیوندند که ببینند دیگران هستند. شمارنده‌ای می‌خواهیم که هر نفر را یک بار بشمارد، در برابر حساب‌های جعلی مقاوم باشد، و هیچ هویتی نگه ندارد. ناشناسی و مقاومت در برابر سیبیل با هم دعوا دارند.</p><p class="hint">سرنخ: تعهد شرطی («من هستم اگر N نفر دیگر باشند»)، تجمیع امن، توکن یک‌بارمصرف از زنجیرهٔ ضمانت مسئلهٔ ۱. حریف می‌تواند خودش هم بشمارد یا شمارنده را باد کند.</p></details>
+<details class="card"><summary><span>۳ · زنده ماندن در قطعی اینترنت</span><span class="lv">★★★</span></summary><p>وقتی اتصال ۴٪ است، دانش‌سرا و بازی باید هنوز کار کنند و دست‌به‌دست شوند.</p><p class="hint">سرنخ: بستهٔ آفلاین کل سایت (ایستاست، پس شدنی است)، PWA، پخش با بلوتوث و حافظهٔ جانبی، Briar، آینهٔ onion، پخش ماهواره‌ای فایل به سبک توشه. کدام را آدم عادی واقعاً استفاده می‌کند؟</p></details>
+<details class="card"><summary><span>۴ · گوشی‌ای که ضبط می‌شود</span><span class="lv">★★★★</span></summary><p>فرض کن گوشی همراه داخل ایران باز شده در دست بازجوست. چه چیزی از سیمرغ رویش پیدا می‌شود؟ تاریخچهٔ مرورگر، حافظهٔ پنهان، PWA نصب‌شده، پیام‌ها.</p><p class="hint">سرنخ: طراحی برای ردپای صفر، نه برای رمز قوی. آیا خود سایت باید طوری باشد که داشتنش در تاریخچه بی‌خطر باشد؟</p></details>
+<details class="card"><summary><span>۵ · زنجیرهٔ تأمین یک سایت ایستا</span><span class="lv">★★</span></summary><p>سه یافتهٔ بالا را ببند و بعد بپرس: اگر حساب GitHub گرداننده ربوده شود چه می‌شود؟</p><p class="hint">سرنخ: کلید سخت‌افزاری، حفاظت شاخه، commit امضاشده، CSP با متا، SRI، ساخت تکرارپذیر، آینهٔ مستقل برای مقایسه.</p></details>
+<details class="card"><summary><span>۶ · سخت کردن حساب‌های گرداننده</span><span class="lv">★★</span></summary><p>گرداننده هویت عمومی دارد و هدف شمارهٔ یک فیشینگ است. یک چک‌لیست یک‌ساعته می‌خواهیم که واقعاً اجرا شود.</p><p class="hint">سرنخ: دو کلید FIDO2، برنامه‌های حفاظت پیشرفته، جدا کردن ایمیل پروژه، دستگاه جدا برای کارهای حساس.</p></details>
+<details class="card"><summary><span>۷ · صندوق امن گزارش مردم</span><span class="lv">★★★★</span></summary><p>مردم می‌خواهند مشکل و تخلف گزارش کنند. ما می‌خواهیم فقط الگوی جمعی منتشر شود، و گزارش‌دهنده حتی برای خود ما ناشناس بماند.</p><p class="hint">سرنخ: SecureDrop و GlobaLeaks، پاک کردن فرادادهٔ عکس، آستانهٔ k-ناشناسی پیش از انتشار. تا این حل نشده، این قابلیت ساخته نمی‌شود.</p></details>
+<details class="card"><summary><span>۸ · دستیار هوش مصنوعی بی‌حافظه</span><span class="lv">★★★</span></summary><p>قرار است دستیاری بسازیم که فقط از مدخل‌های منبع‌دار جواب بدهد. خود پرسش کاربر حساس است («اگر بازداشت شدم چه کنم؟»).</p><p class="hint">سرنخ: مرحلهٔ اول جستجوی کاملاً درون مرورگر است (بدون سرور). برای مرحلهٔ سرور: بدون لاگ، بدون شناسه، مقاومت در برابر تزریق دستور از متن مدخل‌ها.</p></details>
+<details class="card"><summary><span>۹ · پول شفاف، آدم‌های پنهان</span><span class="lv">★★★</span></summary><p>می‌خواهیم هر یورو معلوم باشد از کجا آمد و کجا رفت، اما حامی داخل ایران یا خانواده‌دار در ایران شناخته نشود.</p><p class="hint">سرنخ: شفافیت در سطح دسته، نه فرد. این مسئله نیمی حقوقی است.</p></details>
+<details class="card"><summary><span>۱۰ · شناسهٔ دیجیتال ایران فردا</span><span class="lv">★★★★★</span></summary><p>کشوری که تازه از نظارت دولتی بیرون آمده چه شناسهٔ دیجیتالی باید داشته باشد که خدمات بدهد اما ابزار نظارت بعدی نشود؟</p><p class="hint">سرنخ: کیف هویت eIDAS 2، افشای گزینشی، اثبات دانش صفر، X-Road استونی، MOSIP. صفحهٔ <a href="../sakht/">ساخت ایران</a> نقطهٔ شروع را دارد.</p></details>
+</div></section>
+
+<section id="not"><h2>چه چیزی نمی‌خواهیم</h2>
+<div class="red">هیچ کار تهاجمی: نه نفوذ به هیچ سامانه‌ای، نه حملهٔ متقابل، نه جمع‌آوری یا افشای اطلاعات هیچ فردی، حتی اگر مطمئن باشیم طرف مقابل است. نه «شناسایی نفوذی» با ابزار فنی. این پروژه با همین خط از چیزی که با آن مخالف است جدا می‌شود، و در هلند هم باید کاملاً قانونی بماند.</div>
+<p style="margin-top:var(--s3)">و یک چیز دیگر: امنیت نمایشی نمی‌خواهیم. اگر جواب درست «این قابلیت را نسازید» است، همان را بگو.</p></section>
+
+<section id="first"><h2>سی روز اول</h2>
+<ol class="steps">
+<li><b>این مدل تهدید را خراب کن.</b> چه چیزی جا افتاده؟ کدام فرض ساده‌لوحانه است؟</li>
+<li><b>راهنمای یک‌صفحه‌ای برای حلقهٔ معتمد.</b> پنج قاعده که آدم غیرفنی واقعاً رعایت کند. تا این نباشد، دایرهٔ دوم دعوت نمی‌شود؛ این دروازهٔ نقشهٔ راه است.</li>
+<li><b>چک‌لیست سخت کردن حساب‌های گرداننده</b> (مسئلهٔ ۶) و اجرای آن.</li>
+<li><b>بستن سه یافته</b> و یک ممیزی کامل از هر درخواستی که سایت به بیرون می‌فرستد.</li>
+<li><b>یک یادداشت تصمیم دربارهٔ مسئلهٔ ۱ و ۲:</b> دیجیتال بسازیم یا نه، و اگر آری کدام طرح.</li>
+</ol>
+<p>اختیار کامل در حوزهٔ خودت داری، حق وتو روی هر قابلیتی که آدم‌ها را به خطر بیندازد، و نامت فقط اگر خودت بخواهی جایی می‌آید. اگر این مسئله‌ها ذهنت را گرفت، به همان کسی که این صفحه را برایت فرستاده بگو.</p>
+<p>تصویر کامل پروژه: <a href="plan.html">نقشهٔ کلان سیمرغ</a> · پایهٔ نظری مسئلهٔ ۲: <a href="../soc/#coordination-focal-points">نقطهٔ کانونی</a> و <a href="../soc/#threshold-models-of-collective-behaviour">مدل آستانه</a></p></section>
+
+<section><h2>منابع</h2><p class="src">
+<a href="https://en.wikipedia.org/wiki/Impact_of_the_2026_Iran_war_on_Iran">قطعی اینترنت در جنگ ۲۰۲۶ (به نقل از NetBlocks و BBC)</a><br>
+<a href="https://gamaan.org/wp-content/uploads/2026/07/GAMAAN-2026-Protests-and-War-Survey-Report-Final-English.pdf">گمان ۲۰۲۶: سهم سایفون در نمونه</a><br>
+<a href="https://www.rfc-editor.org/rfc/rfc9576">RFC 9576: The Privacy Pass Architecture</a><br>
+<a href="https://ssd.eff.org/">EFF Surveillance Self-Defense</a> · <a href="https://www.accessnow.org/help/">Access Now Digital Security Helpline</a><br>
+<a href="https://securedrop.org/">SecureDrop</a> · <a href="https://www.globaleaks.org/">GlobaLeaks</a> · <a href="https://briarproject.org/">Briar</a></p></section>
+</main>
+</body>
+</html>
