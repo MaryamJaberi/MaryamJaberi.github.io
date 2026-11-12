@@ -1,74 +1,143 @@
 {
- "id": "soc:weak-ties",
- "kind": "concept",
- "title": {
-  "fa": "قدرت پیوندهای ضعیف",
-  "en": "The strength of weak ties",
-  "nl": "De kracht van zwakke banden"
- },
- "aliases": [],
- "parent": "soc:cohesion",
- "field": "soc:cohesion",
- "summary": {
-  "fa": "شغل‌ها، ایده‌ها و اخبار تازه بیشتر از آشنایان دور می‌رسند تا دوستان نزدیک، چون دوستان نزدیک همان چیزهایی را می‌دانند که ما می‌دانیم. پیوند ضعیف پلِ میان خوشه‌هاست.",
-  "en": "Jobs, ideas and news arrive more often through acquaintances than close friends, because close friends know what we know. The weak tie is the bridge between clusters.",
-  "nl": "Banen, ideeën en nieuws komen vaker via kennissen dan via goede vrienden, omdat goede vrienden weten wat wij weten. De zwakke band is de brug tussen clusters."
- },
- "points": [
-  {
-   "text": {
-    "fa": "گرانووتر (۱۹۷۳): از کسانی که از راه آشنا شغل پیدا کرده بودند، بیشترشان آن آشنا را «گاه‌به‌گاه» یا «به‌ندرت» می‌دیدند، نه «اغلب».",
-    "en": "Granovetter (1973): of those who found a job through a contact, most saw that contact \"occasionally\" or \"rarely\", not \"often\".",
-    "nl": "Granovetter (1973): of those who found a job through a contact, most saw that contact \"occasionally\" or \"rarely\", not \"often\"."
-   },
-   "sources": [
-    "src:91ed9b7316"
-   ],
-   "flags": []
+  "id": "soc:weak-ties",
+  "kind": "concept",
+  "title": {
+    "fa": "قدرت پیوندهای ضعیف",
+    "en": "The strength of weak ties",
+    "nl": "De kracht van zwakke banden"
   },
-  {
-   "text": {
-    "fa": "سنتولا (۲۰۱۰): اما رفتارهای پرهزینه (ترک سیگار، پیوستن به جنبش) برعکس از راه پیوندهای قوی و پرتکرار پخش می‌شوند: «سرایت پیچیده» به تأیید چند منبع نیاز دارد.",
-    "en": "Centola (2010): but costly behaviours (quitting smoking, joining a movement) spread instead through strong, redundant ties: \"complex contagion\" needs confirmation from several sources.",
-    "nl": "Centola (2010): but costly behaviours (quitting smoking, joining a movement) spread instead through strong, redundant ties: \"complex contagion\" needs confirmation from several sources."
-   },
-   "sources": [
-    "src:9021d6ca27"
-   ],
-   "flags": []
-  }
- ],
- "links": [
-  {
-   "to": "psy:complex-contagion",
-   "rel": "same-as",
-   "note": {
-    "fa": "سرایت پیچیده در ویکی روان",
-    "en": "Complex contagion in the psychology wiki",
-    "nl": "Complex contagion in the psychology wiki"
-   }
+  "aliases": [],
+  "parent": "soc:cohesion",
+  "field": "soc:cohesion",
+  "summary": {
+    "fa": "مارک گرانووتر (۱۹۷۳) نشان داد شغل‌ها، ایده‌ها و خبرهای تازه بیشتر از «آشنایان دور» به ما می‌رسند تا از دوستان نزدیک. دلیلش ساده است: دوستان نزدیک ما معمولاً با هم هم دوست‌اند، در همان محیط‌ها رفت‌وآمد می‌کنند و همان چیزهایی را می‌دانند که ما می‌دانیم؛ اما آشنای دور در خوشهٔ دیگری از جامعه زندگی می‌کند و پلی است به اطلاعاتی که در خوشهٔ ما نیست. این ایده یکی از پرارجاع‌ترین یافته‌های علوم اجتماعی است و یک آزمایش بزرگ علّی در ۲۰۲۲ آن را تأیید و دقیق‌تر کرد. اما پیوند ضعیف برای پخش اطلاعات خوب است، نه لزوماً برای تغییر رفتارهای پرهزینه؛ آنجا پیوندهای قوی کار می‌کنند.",
+    "en": "Mark Granovetter (1973) showed that new jobs, ideas and news reach us more from distant acquaintances than from close friends. The reason is simple: our close friends usually know each other, move in the same circles and know what we know; a distant acquaintance lives in another cluster and is a bridge to information absent from ours. It is one of the most cited findings in social science, confirmed and refined by a large causal experiment in 2022. But weak ties are good for spreading information, not necessarily for changing costly behaviour; there strong ties work.",
+    "nl": "Mark Granovetter (1973): nieuwe banen, ideeën en nieuws komen vaker via verre kennissen dan via goede vrienden, omdat die laatsten hetzelfde weten. Bevestigd door een groot causaal experiment in 2022; voor kostbaar gedrag werken sterke banden beter."
   },
-  {
-   "to": "soc:social-capital",
-   "rel": "part-of",
-   "note": {
-    "fa": "سازوکار سرمایهٔ پل‌زننده",
-    "en": "The mechanism of bridging capital",
-    "nl": "The mechanism of bridging capital"
-   }
-  }
- ],
- "people": [
-  "core:mark-granovetter",
-  "core:damon-centola"
- ],
- "sources": [
-  "src:9021d6ca27",
-  "src:91ed9b7316"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "points": [
+    {
+      "text": {
+        "fa": "گرانووتر (۱۹۷۳): از کسانی که از راه آشنا شغل پیدا کرده بودند، بیشترشان آن آشنا را «گاه‌به‌گاه» یا «به‌ندرت» می‌دیدند، نه «اغلب».",
+        "en": "Granovetter (1973): of those who found a job through a contact, most saw that contact \"occasionally\" or \"rarely\", not \"often\".",
+        "nl": "Granovetter (1973): of those who found a job through a contact, most saw that contact \"occasionally\" or \"rarely\", not \"often\"."
+      },
+      "sources": [
+        "src:91ed9b7316"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "سنتولا (۲۰۱۰): اما رفتارهای پرهزینه (ترک سیگار، پیوستن به جنبش) برعکس از راه پیوندهای قوی و پرتکرار پخش می‌شوند: «سرایت پیچیده» به تأیید چند منبع نیاز دارد.",
+        "en": "Centola (2010): but costly behaviours (quitting smoking, joining a movement) spread instead through strong, redundant ties: \"complex contagion\" needs confirmation from several sources.",
+        "nl": "Centola (2010): but costly behaviours (quitting smoking, joining a movement) spread instead through strong, redundant ties: \"complex contagion\" needs confirmation from several sources."
+      },
+      "sources": [
+        "src:9021d6ca27"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "منطق «سه‌گانهٔ ممنوع»: اگر الف با ب و با ج دوست نزدیک باشد، احتمال زیادی دارد که ب و ج هم دست‌کم آشنا شوند. پس پیوندهای قوی خوشه‌های بسته می‌سازند و تنها راه رسیدن اطلاعات از یک خوشه به خوشهٔ دیگر، پیوندهای ضعیف‌اند که «پل» می‌شوند.",
+        "en": "The logic of the “forbidden triad”: if A is close to both B and C, B and C are likely to meet. Strong ties therefore form closed clusters, and the only routes for information between clusters are weak ties acting as bridges.",
+        "nl": "De “verboden triade”: sterke banden vormen gesloten clusters; alleen zwakke banden overbruggen ze."
+      },
+      "sources": [
+        "src:91ed9b7316"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "آزمایش لینکدین (راج‌کومار و همکاران، ۲۰۲۲): الگوریتم پیشنهاد «افراد آشنا» برای حدود ۲۰ میلیون کاربر در پنج سال به‌طور تصادفی تغییر داده شد. نتیجه: پیوندهای «نسبتاً ضعیف» بیشترین اثر را بر جابه‌جایی شغلی داشتند؛ پیوندهای خیلی ضعیف و خیلی قوی هر دو کمتر مفید بودند (رابطهٔ U وارونه). این یکی از نخستین آزمون‌های علّی و نه همبستگی ایدهٔ گرانووتر بود.",
+        "en": "The LinkedIn experiment (Rajkumar et al., 2022): the “people you may know” algorithm was randomly varied for about 20 million users over five years. Moderately weak ties had the largest effect on job mobility; very weak and very strong ties were both less useful (an inverted U). It was one of the first causal, not correlational, tests of Granovetter’s idea.",
+        "nl": "Het LinkedIn-experiment (2022, ~20 miljoen gebruikers): matig zwakke banden hielpen het meest bij baanwisseling — een causale test."
+      },
+      "sources": [
+        "src:22c849c5a3"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "پیوند ضعیف و نابرابری: کسانی که شبکه‌شان فقط از خویشان و هم‌محله‌ای‌ها ساخته شده، از اطلاعات فرصت‌ها دور می‌مانند. این یکی از سازوکارهای بازتولید فقر است و با تمایز «سرمایهٔ اجتماعی پیوندی» (درون گروه) و «پل‌زننده» (میان گروه‌ها) نزد پاتنام جور درمی‌آید.",
+        "en": "Weak ties and inequality: people whose networks consist only of kin and neighbours stay far from information about opportunities — one mechanism reproducing poverty, consistent with Putnam’s distinction between bonding (within-group) and bridging (between-group) social capital.",
+        "nl": "Zwakke banden en ongelijkheid: wie alleen familie en buren kent, mist kansen; vgl. bonding en bridging sociaal kapitaal."
+      },
+      "sources": [
+        "src:6b77b3e686"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "در ایران: بسیاری از استخدام‌ها، به‌ویژه در بخش دولتی و شبه‌دولتی، از راه پیوندهای قوی (خویشاوندی، «پارتی») انجام می‌شود که با منطق گرانووتر فرق دارد: اینجا پیوند قوی نه اطلاعات، بلکه دسترسی ویژه می‌دهد. پیامدش کاهش شایسته‌سالاری و اعتماد عمومی است. شبکه‌های حرفه‌ای و انجمن‌های مدنی مستقل، پیوندهای ضعیف پل‌زننده می‌سازند.",
+        "en": "In Iran: many hirings, especially in state and semi-state sectors, run through strong ties (kinship, “parti”), which differs from Granovetter’s logic: there the strong tie gives privileged access, not information, eroding meritocracy and public trust. Professional networks and independent civic associations build bridging weak ties.",
+        "nl": "In Iran lopen veel aanstellingen via sterke banden (familie, “parti”) die bevoorrechte toegang geven, wat meritocratie en vertrouwen ondermijnt."
+      },
+      "sources": [
+        "src:91ed9b7316"
+      ],
+      "flags": [
+        "editor-note",
+        "contested"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "psy:complex-contagion",
+      "rel": "same-as",
+      "note": {
+        "fa": "سرایت پیچیده در ویکی روان",
+        "en": "Complex contagion in the psychology wiki",
+        "nl": "Complex contagion in the psychology wiki"
+      }
+    },
+    {
+      "to": "soc:social-capital",
+      "rel": "part-of",
+      "note": {
+        "fa": "سازوکار سرمایهٔ پل‌زننده",
+        "en": "The mechanism of bridging capital",
+        "nl": "The mechanism of bridging capital"
+      }
+    },
+    {
+      "to": "soc:threshold-models-of-collective-behaviour",
+      "rel": "see-also",
+      "note": {
+        "fa": "آستانه و پخش رفتار",
+        "en": "Thresholds and spread",
+        "nl": "Drempels"
+      }
+    },
+    {
+      "to": "soc:generalized-trust",
+      "rel": "see-also",
+      "note": {
+        "fa": "اعتماد",
+        "en": "Trust",
+        "nl": "Vertrouwen"
+      }
+    }
+  ],
+  "people": [
+    "core:mark-granovetter",
+    "core:damon-centola"
+  ],
+  "sources": [
+    "src:9021d6ca27",
+    "src:91ed9b7316",
+    "src:22c849c5a3",
+    "src:6b77b3e686"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

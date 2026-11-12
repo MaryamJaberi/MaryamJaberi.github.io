@@ -1,61 +1,154 @@
 {
- "id": "soc:presentation-of-self",
- "kind": "concept",
- "title": {
-  "fa": "نمایش خود در زندگی روزمره",
-  "en": "The presentation of self",
-  "nl": "De presentatie van het zelf"
- },
- "aliases": [],
- "parent": "soc:theory",
- "field": "soc:theory",
- "summary": {
-  "fa": "گافمن زندگی اجتماعی را صحنهٔ تئاتر می‌بیند: «جلوی صحنه» نقش بازی می‌کنیم، «پشت صحنه» استراحت؛ و آبرو (face) چیزی است که همه در حفظش همکاری می‌کنند.",
-  "en": "Goffman sees social life as theatre: \"front stage\" we perform, \"backstage\" we rest; and face is something everyone cooperates to protect.",
-  "nl": "Goffman ziet het sociale leven als theater: \"op het toneel\" spelen we, \"achter de schermen\" rusten we; en gezicht is iets dat iedereen samen beschermt."
- },
- "points": [
-  {
-   "text": {
-    "fa": "گافمن (۱۹۵۹): مدیریت تأثیر امری همگانی و نه ریاکارانه است؛ بدون آن تعامل روزمره ممکن نیست. شبکه‌های اجتماعی «جلوی صحنه»ای دائمی ساخته‌اند و پشت صحنه را کوچک کرده‌اند.",
-    "en": "Goffman (1959): impression management is universal, not hypocrisy; everyday interaction is impossible without it. Social media have built a permanent front stage and shrunk the backstage.",
-    "nl": "Goffman (1959): impression management is universal, not hypocrisy; everyday interaction is impossible without it. Social media have built a permanent front stage and shrunk the backstage."
-   },
-   "sources": [
-    "src:8474622142"
-   ],
-   "flags": []
-  }
- ],
- "links": [
-  {
-   "to": "psy:narcissism-culture",
-   "rel": "bridges",
-   "note": {
-    "fa": "فرهنگ خودشیفتگی در ویکی روان",
-    "en": "Narcissism culture in the psychology wiki",
-    "nl": "Narcissism culture in the psychology wiki"
-   }
+  "id": "soc:presentation-of-self",
+  "kind": "concept",
+  "title": {
+    "fa": "نمایش خود در زندگی روزمره",
+    "en": "The presentation of self",
+    "nl": "De presentatie van het zelf"
   },
-  {
-   "to": "psy:emotional-labor",
-   "rel": "bridges",
-   "note": {
-    "fa": "کار هیجانی",
-    "en": "Emotional labour",
-    "nl": "Emotional labour"
-   }
-  }
- ],
- "people": [
-  "core:erving-goffman"
- ],
- "sources": [
-  "src:8474622142"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "aliases": [],
+  "parent": "soc:theory",
+  "field": "soc:theory",
+  "summary": {
+    "fa": "اروینگ گافمن زندگی روزمره را مثل تئاتر تحلیل می‌کند: هر کدام از ما در هر موقعیت «نقشی» اجرا می‌کنیم تا تصویری از خود به دیگران بدهیم. «جلوی صحنه» جایی است که تماشاگر حاضر است و ما با لباس، لحن و رفتار مناسب نقش را بازی می‌کنیم؛ «پشت صحنه» جایی است که نقاب را برمی‌داریم، تمرین می‌کنیم یا از نقش شکایت می‌کنیم. مهم‌تر از همه، اجرای نقش کاری جمعی است: دیگران هم برای حفظ «آبروی» ما و موقعیت همکاری می‌کنند، اشتباه‌هایمان را نادیده می‌گیرند و برای خطا بهانه می‌سازند. از دید گافمن این «مدیریت تأثیر» ریاکاری نیست، شرط ممکن شدن تعامل است.",
+    "en": "Erving Goffman analyses everyday life as theatre: in each situation we perform a role to give others an impression of ourselves. The “front stage” is where an audience is present and we play the part with suitable dress, tone and conduct; the “back stage” is where we drop the mask, rehearse or complain about the role. Above all, performance is collective: others cooperate to protect our “face” and the situation, overlooking slips and supplying excuses. For Goffman this impression management is not hypocrisy but the condition of interaction.",
+    "nl": "Erving Goffman analyseert het dagelijks leven als toneel: voor het publiek (frontstage) spelen we een rol, achter de schermen (backstage) laten we het masker vallen. Rolspel is collectief werk om ieders gezicht te redden; impressiemanagement is geen hypocrisie maar een voorwaarde voor interactie."
+  },
+  "points": [
+    {
+      "text": {
+        "fa": "گافمن (۱۹۵۹): مدیریت تأثیر امری همگانی و نه ریاکارانه است؛ بدون آن تعامل روزمره ممکن نیست. شبکه‌های اجتماعی «جلوی صحنه»ای دائمی ساخته‌اند و پشت صحنه را کوچک کرده‌اند.",
+        "en": "Goffman (1959): impression management is universal, not hypocrisy; everyday interaction is impossible without it. Social media have built a permanent front stage and shrunk the backstage.",
+        "nl": "Goffman (1959): impression management is universal, not hypocrisy; everyday interaction is impossible without it. Social media have built a permanent front stage and shrunk the backstage."
+      },
+      "sources": [
+        "src:8474622142"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "اجزای اجرا: «نما» (front) شامل صحنه‌آرایی (اتاق، میز، دکور) و نمای شخصی (لباس، سن، جنس، لحن)؛ «تیم» یعنی کسانی که با هم یک اجرا را پیش می‌برند، مثل پیشخدمت‌های یک رستوران یا اعضای یک خانواده جلوی مهمان؛ و «اطلاعات ناجور» یعنی رازهایی که اگر فاش شوند اجرا فرومی‌ریزد.",
+        "en": "Elements of performance: the “front” — setting (room, desk, décor) and personal front (dress, age, sex, tone); the “team”, those who jointly sustain a performance, like a restaurant’s waiters or a family before guests; and “destructive information”, secrets whose disclosure collapses the show.",
+        "nl": "Elementen: decor en persoonlijke façade, het team dat samen speelt, en geheimen die de voorstelling kunnen laten instorten."
+      },
+      "sources": [
+        "src:8474622142"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "کار آبرو (face-work): گافمن در «آیین تعامل» نشان داد که در هر برخورد، هر دو طرف آبروی خود و دیگری را می‌پایند. وقتی کسی آبرویش در خطر است، دیگران با شوخی، نادیده گرفتن یا «تعارف» آن را نجات می‌دهند. این مفهوم برای فهم «آبرو» و «تعارف» در فرهنگ ایرانی بسیار کاراست: تعارف را می‌شود سازوکاری جمعی برای نگه داشتن آبروی همه دید، نه صرفاً دروغ یا تشریفات.",
+        "en": "Face-work: in Interaction Ritual Goffman showed that in every encounter both parties guard their own and the other’s face; when someone’s face is threatened, others rescue it with a joke, by ignoring the slip, or by ritual politeness. The concept fits Iranian aberu and taarof well: taarof can be read as a collective mechanism for preserving everyone’s face, not merely lying or formality.",
+        "nl": "Gezichtswerk: in elke ontmoeting bewaken beide partijen elkaars gezicht. Het Iraanse aberu en taarof zijn zo te lezen als collectieve mechanismen om ieders gezicht te redden."
+      },
+      "sources": [
+        "src:c78e46e6f3"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "نهادهای تام: گافمن در «تیمارستان‌ها» (۱۹۶۱) نشان داد در زندان، بیمارستان روانی، پادگان و صومعه، پشت صحنه از فرد گرفته می‌شود: لباس فرم، برنامهٔ یکسان، نظارت دائمی. این «تحقیر خود» هویت پیشین را می‌شکند و هویت نهادی می‌سازد.",
+        "en": "Total institutions: in Asylums (1961) Goffman showed that prisons, mental hospitals, barracks and monasteries take away the back stage — uniforms, identical schedules, constant surveillance — a “mortification of self” that breaks the old identity and builds an institutional one.",
+        "nl": "Totale instituties (Asylums, 1961): gevangenis, inrichting en kazerne nemen de backstage af en breken de oude identiteit."
+      },
+      "sources": [
+        "src:8474622142"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "کار هیجانی: هوخشیلد (۱۹۸۳) نظریهٔ گافمن را به بازار کار برد: مهماندار هواپیما باید لبخندی را بفروشد که حس نمی‌کند. «بازی سطحی» (تظاهر به حس) و «بازی عمیق» (تلاش برای واقعاً حس کردن) هر دو هزینهٔ روانی دارند، و این کار بیشتر بر دوش زنان و شغل‌های خدماتی است.",
+        "en": "Emotional labour: Hochschild (1983) carried Goffman into the labour market: the flight attendant must sell a smile she does not feel. Surface acting and deep acting both carry psychological costs, borne mostly by women and service workers.",
+        "nl": "Emotionele arbeid (Hochschild, 1983): de stewardess verkoopt een glimlach die ze niet voelt; oppervlakkig en diep acteren kosten beide."
+      },
+      "sources": [
+        "src:9d47303cf5"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "شبکه‌های اجتماعی جلوی صحنه‌ای دائمی ساخته‌اند: «مخاطب» دیگر یک گروه مشخص نیست بلکه همه است، همکاران و خانواده و غریبه‌ها کنار هم («فروپاشی بافت»). برای همین تصویرسازی پرزحمت‌تر شده و پشت صحنه به گروه‌های بسته، حساب‌های دوم و پیام خصوصی پناه برده است.",
+        "en": "Social media have built a permanent front stage: the audience is no longer a specific group but everyone — colleagues, family and strangers together (“context collapse”). Impression management has become harder and the back stage has retreated to closed groups, second accounts and private messages.",
+        "nl": "Sociale media zijn een permanent podium; door context collapse vlucht de backstage naar besloten groepen en tweede accounts."
+      },
+      "sources": [
+        "src:8474622142"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "نقد: منتقدان گفته‌اند استعارهٔ تئاتر خود را به مجموعه‌ای از نقش‌ها فرومی‌کاهد و جایی برای «خود واقعی» یا ارزش‌های درونی نمی‌گذارد؛ همچنین قدرت را کم می‌بیند، چون همه نمی‌توانند به یک اندازه صحنه را انتخاب کنند یا پشت صحنه داشته باشند. پاسخ گافمن این بود که او دربارهٔ «موقعیت‌ها» می‌نویسد، نه دربارهٔ ذات انسان.",
+        "en": "Critique: the theatre metaphor reduces the self to a set of roles with no room for a “real self” or inner values, and underplays power, since not everyone can equally choose a stage or have a back stage. Goffman replied that he wrote about situations, not human nature.",
+        "nl": "Kritiek: het zelf wordt een reeks rollen en macht blijft onderbelicht; Goffman schreef over situaties, niet over de menselijke natuur."
+      },
+      "sources": [
+        "src:8474622142"
+      ],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "psy:narcissism-culture",
+      "rel": "bridges",
+      "note": {
+        "fa": "فرهنگ خودشیفتگی در ویکی روان",
+        "en": "Narcissism culture in the psychology wiki",
+        "nl": "Narcissism culture in the psychology wiki"
+      }
+    },
+    {
+      "to": "psy:emotional-labor",
+      "rel": "bridges",
+      "note": {
+        "fa": "کار هیجانی",
+        "en": "Emotional labour",
+        "nl": "Emotional labour"
+      }
+    },
+    {
+      "to": "soc:social-construction",
+      "rel": "see-also",
+      "note": {
+        "fa": "نقش‌ها و نهادها",
+        "en": "Roles and institutions",
+        "nl": "Rollen"
+      }
+    },
+    {
+      "to": "psy:stigma",
+      "rel": "see-also",
+      "note": {
+        "fa": "گافمن و داغ ننگ",
+        "en": "Goffman and stigma",
+        "nl": "Stigma"
+      }
+    }
+  ],
+  "people": [
+    "core:erving-goffman"
+  ],
+  "sources": [
+    "src:8474622142",
+    "src:c78e46e6f3",
+    "src:9d47303cf5"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }
