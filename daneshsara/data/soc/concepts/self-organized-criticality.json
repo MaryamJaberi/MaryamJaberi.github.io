@@ -1,0 +1,104 @@
+{
+ "id": "soc:self-organized-criticality",
+ "kind": "concept",
+ "title": {
+  "fa": "بحرانی‌شدن خودسامان: تپهٔ شن و بهمن",
+  "en": "Self-organised criticality: the sandpile and the avalanche",
+  "nl": "Zelfgeorganiseerde kriticiteit"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "اگر دانه‌دانه شن روی یک تپه بریزید، تپه خودش را به شیبی می‌رساند که در آن یک دانهٔ دیگر می‌تواند هیچ کاری نکند، یا بهمنی بزرگ راه بیندازد. باک، تانگ و ویزنفلد (۱۹۸۷) نشان دادند بسیاری از سامانه‌های بزرگ خودبه‌خود به چنین حالت «بحرانی» می‌رسند: رویدادهای کوچک فراوان و رویدادهای بزرگ کمیاب‌اند، اما هر دو از یک سازوکار می‌آیند. پس برای رویداد بزرگ لازم نیست دنبال علت بزرگ بگردیم.",
+  "en": "Drop sand grain by grain on a pile and it tunes itself to a slope at which one more grain may do nothing or may set off a large avalanche. Bak, Tang and Wiesenfeld (1987) showed many large systems reach such a critical state on their own: small events are common and large ones rare, yet both come from the same mechanism. So a big event does not require a big cause.",
+  "nl": "Drop sand grain by grain on a pile and it tunes itself to a slope at which one more grain may do nothing or may set off a large avalanche. Bak, Tang and Wiesenfeld (1987) showed many large systems reach such a critical state on their own: small events are common and large ones rare, yet both come from the same mechanism. So a big event does not require a big cause."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "قانون توانی: اندازهٔ بهمن‌ها از توزیع توانی پیروی می‌کند؛ «اندازهٔ معمول» وجود ندارد. زمین‌لرزه‌ها، آتش‌سوزی جنگل‌ها و خاموشی‌های شبکهٔ برق نمونه‌هایی‌اند که با این الگو توصیف شده‌اند.",
+    "en": "Power law: avalanche sizes follow a power-law distribution; there is no “typical size”. Earthquakes, forest fires and power-grid blackouts are among the cases described with this pattern.",
+    "nl": "Power law: avalanche sizes follow a power-law distribution; there is no “typical size”. Earthquakes, forest fires and power-grid blackouts are among the cases described with this pattern."
+   },
+   "sources": [
+    "src:fec0a90397",
+    "src:b5bfd3a51a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیش‌بینی: می‌توان گفت سامانه در حالت بحرانی است، اما نمی‌توان گفت کدام دانه بهمن بزرگ را راه می‌اندازد. این با تجربهٔ انقلاب‌ها جور است: جرقه‌ها (یک خودسوزی، یک مرگ در بازداشت) پیش‌بینی‌پذیر نیستند، اما آمادگی سامانه را می‌شود سنجید.",
+    "en": "Prediction: one can say a system is in a critical state but not which grain will start the big avalanche. This fits the experience of revolutions: sparks (a self-immolation, a death in custody) are unpredictable, but the system’s readiness can be gauged.",
+    "nl": "Prediction: one can say a system is in a critical state but not which grain will start the big avalanche. This fits the experience of revolutions: sparks (a self-immolation, a death in custody) are unpredictable, but the system’s readiness can be gauged."
+   },
+   "sources": [
+    "src:b5bfd3a51a"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نقد: همهٔ توزیع‌های دم‌کلفت قانون توانی واقعی نیستند و کاربرد این مدل فیزیکی برای جامعه استعاره‌ای است که باید با داده آزموده شود، نه اثبات.",
+    "en": "Critique: not every heavy-tailed distribution is a true power law, and applying this physical model to society is a metaphor to be tested against data, not a proof.",
+    "nl": "Critique: not every heavy-tailed distribution is a true power law, and applying this physical model to society is a metaphor to be tested against data, not a proof."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:critical-transitions-early-warning",
+   "rel": "see-also",
+   "note": {
+    "fa": "گذار بحرانی و نشانه‌های هشدار",
+    "en": "Critical transitions and early warnings",
+    "nl": "Critical transitions and early warnings"
+   }
+  },
+  {
+   "to": "soc:threshold-models-of-collective-behaviour",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدل آستانه در رفتار جمعی",
+    "en": "Threshold models of collective behaviour",
+    "nl": "Threshold models of collective behaviour"
+   }
+  },
+  {
+   "to": "soc:emergence-more-is-different",
+   "rel": "see-also",
+   "note": {
+    "fa": "پیدایش: بیشتر یعنی متفاوت",
+    "en": "Emergence: more is different",
+    "nl": "Emergence: more is different"
+   }
+  },
+  {
+   "to": "soc:preference-falsification",
+   "rel": "see-also",
+   "note": {
+    "fa": "چرا انقلاب‌ها غافلگیر می‌کنند",
+    "en": "Why revolutions surprise",
+    "nl": "Why revolutions surprise"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:fec0a90397",
+  "src:b5bfd3a51a"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
