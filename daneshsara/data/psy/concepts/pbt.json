@@ -9,49 +9,52 @@
   "parent": "psy:psychotherapy",
   "field": null,
   "summary": {
-    "fa": "به جای پروتکل جداگانه برای هر تشخیص، فرایندهای غیرکارکردی را اصلاح و فرایندهای کارکردی را تقویت کن (هافمن و هیز).",
-    "en": "Instead of a separate protocol for each diagnosis, correct dysfunctional processes and strengthen functional ones (Hofmann and Hayes).",
-    "nl": "In plaats van een apart protocol per diagnose: disfunctionele processen corrigeren en functionele versterken (Hofmann en Hayes)."
+    "fa": "درمان فرایندمدار (هافمن و هیز) پیشنهاد می‌کند به جای اینکه برای هر برچسب تشخیصی یک «بستهٔ درمانی» استاندارد بسازیم، بپرسیم در زندگی همین فرد چه فرایندهایی رنج را نگه می‌دارند، و همان‌ها را هدف بگیریم. پرسش مرکزی‌اش این است: «کدام فرایند اصلی زیستی‌روانی‌اجتماعی را باید هدف گرفت، برای این فرد، با این هدف، در این موقعیت، و چگونه به مؤثرترین و کارآمدترین شکل؟» دو کسی که هر دو «افسرده» تشخیص گرفته‌اند ممکن است یکی گرفتار نشخوار و اجتناب باشد و دیگری گرفتار انزوا و از دست رفتن انگیزه؛ درمان آن‌ها هم باید فرق کند. این رویکرد پلی است میان سنت شناختی‌رفتاری، درمان‌های موج سوم و الگوهای بُعدی آسیب‌شناسی، و هنوز بیشتر یک برنامهٔ پژوهشی است تا روشی اثبات‌شده.",
+    "en": "Process-based therapy (Hofmann and Hayes) proposes that instead of building a standard treatment package for each diagnostic label, we ask which processes maintain suffering in this particular person’s life and target those. Its central question: which core biopsychosocial processes should be targeted, for this person, given this goal, in this situation, and how can they most efficiently and effectively be changed? Two people both diagnosed as depressed may be caught one in rumination and avoidance, the other in isolation and loss of motivation; their treatment should differ. The approach bridges cognitive-behavioural tradition, third-wave therapies and dimensional models of psychopathology, and is still more a research programme than a proven method.",
+    "nl": "Procesgerichte therapie (Hofmann en Hayes) stelt voor om niet per diagnose een standaardpakket te bouwen, maar te vragen welke processen het lijden van deze persoon in stand houden, en die aan te pakken. Twee mensen met dezelfde diagnose kunnen totaal verschillende processen hebben. Het is nog vooral een onderzoeksprogramma."
   },
   "points": [
     {
       "text": {
-        "fa": "مدل فرا-تکاملی گسترده: شش بُعد (شناخت، هیجان، توجه، خود، انگیزه، رفتار) در دو سطح دیگر و چهار فرایند تکاملی.",
-        "en": "The extended evolutionary meta-model: six dimensions (cognition, emotion, attention, self, motivation, behaviour) at two further levels and four evolutionary processes.",
-        "nl": "Het uitgebreide evolutionaire metamodel: zes dimensies (cognitie, emotie, aandacht, zelf, motivatie, gedrag) op nog twee niveaus en vier evolutionaire processen."
+        "fa": "چرا از تشخیص فاصله می‌گیرد: پروتکل‌های تشخیص‌محور (یک بسته برای هراس، یک بسته برای افسردگی) اثربخش بوده‌اند، اما هم‌ابتلایی بالا، ناهمگونی درون هر تشخیص و این واقعیت که بسیاری از بیماران به درمان استاندارد پاسخ نمی‌دهند، نشان می‌دهد برچسب تشخیصی واحد مناسبی برای طراحی درمان نیست. درمان فرایندمدار واحد کار را «فرایند تغییر» می‌گیرد، نه «اختلال».",
+        "en": "Why it moves away from diagnosis: diagnosis-based protocols have worked, but high comorbidity, heterogeneity within each diagnosis and the many non-responders suggest the diagnostic label is a poor unit for designing treatment. PBT takes the process of change, not the disorder, as the unit.",
+        "nl": "Waarom weg van diagnose: comorbiditeit, heterogeniteit en non-respons maken het diagnoselabel een zwakke eenheid voor behandeling."
       },
       "sources": [
+        "src:57315dd957",
         "src:a78526b125"
       ],
       "flags": []
     },
     {
       "text": {
-        "fa": "نقشهٔ راه فراتشخیصی: سازوکارهای آسیب‌پذیری و پاسخ.",
-        "en": "The transdiagnostic roadmap: mechanisms of vulnerability and response.",
-        "nl": "De transdiagnostische routekaart: mechanismen van kwetsbaarheid en respons."
+        "fa": "فرایند چیست؟ زنجیره‌ای از رویدادهای پشت‌سرهم که از نظر نظری توجیه دارد، قابل دستکاری است و چندسطحی است، و به پیامد مطلوب می‌انجامد. مثال‌ها: نشخوار فکری، اجتناب تجربه‌ای، انعطاف‌پذیری روانی، ارزیابی دوباره، خودشفقتی، فعال‌سازی رفتاری. معیار مهم این است که بشود نشان داد تغییر در فرایند، پیش از تغییر در نشانه رخ می‌دهد و آن را توضیح می‌دهد.",
+        "en": "What is a process? A theory-based, modifiable, multilevel sequence of events leading to desired outcomes — e.g. rumination, experiential avoidance, psychological flexibility, reappraisal, self-compassion, behavioural activation. The key test is showing that change in the process precedes and explains change in symptoms.",
+        "nl": "Wat is een proces? Een theoretisch onderbouwde, beïnvloedbare keten zoals piekeren, vermijding of flexibiliteit; verandering in het proces moet aan symptoomverandering voorafgaan."
       },
       "sources": [
-        "src:a78526b125"
+        "src:57315dd957",
+        "src:8a1de76fbf"
       ],
       "flags": []
     },
     {
       "text": {
-        "fa": "شواهد برتری درمان شخصی‌سازی‌شده هنوز محدود است.",
-        "en": "Evidence for the superiority of personalised treatment is still limited.",
-        "nl": "Bewijs dat gepersonaliseerde behandeling beter is, is nog beperkt."
+        "fa": "مدل فرا-تکاملی گسترده (EEMM): نقشه‌ای برای چیدن فرایندها. شش بُعد روان‌شناختی (شناخت، هیجان، توجه، خود، انگیزه و رفتار آشکار) در کنار دو سطح دیگر (زیستی‌فیزیولوژیک و اجتماعی‌فرهنگی)؛ و چهار مفهوم تکاملی که روی همه کار می‌کنند: تنوع، گزینش، نگه‌داشت و تناسب با بافت. ایده این است که روان‌درمانی شبیه فرایند تکامل است: رفتارهای انعطاف‌پذیرتر را متنوع می‌کند، آن‌هایی را که با ارزش‌های فرد جور است برمی‌گزیند و نگه می‌دارد.",
+        "en": "The Extended Evolutionary Meta-Model (EEMM) organises processes: six psychological dimensions (cognition, affect, attention, self, motivation, overt behaviour) plus biophysiological and sociocultural levels, and four evolutionary concepts — variation, selection, retention and context fit. Therapy is seen as an evolutionary process: increasing healthy variation, selecting and retaining what fits the person’s values.",
+        "nl": "Het EEMM ordent processen in zes psychologische dimensies plus biologisch en sociaal-cultureel niveau, en vier evolutionaire begrippen: variatie, selectie, behoud en context."
       },
       "sources": [
-        "src:a78526b125"
+        "src:a78526b125",
+        "src:57315dd957"
       ],
       "flags": []
     },
     {
       "text": {
-        "fa": "گزارهٔ ۷ کارگاه: مداخله بر مبنای فرایند (process-based).",
-        "en": "The workshop's proposition 7: process-based intervention.",
-        "nl": "Stelling 7 van de workshop: procesgerichte interventie."
+        "fa": "تحلیل فرد‌محور (idionomic): به جای اینکه از میانگین گروه به فرد برسیم، اول برای هر فرد با داده‌های مکرر روزانه (مثلاً گزارش چندبارهٔ روزانهٔ حال و رفتار) شبکهٔ فرایندهایش را رسم می‌کنیم، ببینیم کدام گره‌ها مرکزی‌اند، و بعد از کنار هم گذاشتن شبکه‌های افراد به قاعده‌های کلی برسیم. این وارونهٔ روش رایج کارآزمایی‌هاست که میانگین گروه را برای همه فرض می‌گیرد.",
+        "en": "Idionomic analysis: rather than moving from group averages to the individual, map each person’s process network from intensive repeated data (e.g. several daily reports of mood and behaviour), find the central nodes, and only then generalise across people — the reverse of the usual trial logic.",
+        "nl": "Idionomische analyse: eerst per persoon een netwerk van processen uit herhaalde metingen, daarna generaliseren."
       },
       "sources": [
         "src:8a1de76fbf"
@@ -60,9 +63,32 @@
     },
     {
       "text": {
-        "fa": "تحلیل شبکه‌ای فرد (idionomic): هر مراجع شبکهٔ فرایندهای خودش را دارد.",
-        "en": "Individual network analysis (idionomic): each client has their own network of processes.",
-        "nl": "Individuele netwerkanalyse (idionomisch): elke cliënt heeft een eigen netwerk van processen."
+        "fa": "در عمل: درمانگر با مراجع یک نقشهٔ مفهومی‌سازی می‌کشد، مثلاً «ترس از قضاوت ← اجتناب از جمع ← تنهایی ← نشخوار ← افسردگی»، و نقطه‌ای را که بیشترین اهرم را دارد انتخاب می‌کند. ابزارها از همهٔ سنت‌ها می‌آیند: بازسازی شناختی، پذیرش و تعهد، ذهن‌آگاهی، فعال‌سازی رفتاری، کار با ارزش‌ها. معیار انتخاب، فرایند هدف است نه نام مکتب.",
+        "en": "In practice the therapist and client draw a case map — e.g. fear of judgement → social avoidance → loneliness → rumination → depression — and choose the point with most leverage. Techniques come from all traditions (cognitive restructuring, ACT, mindfulness, behavioural activation, values work); the target process, not the school, decides.",
+        "nl": "In de praktijk tekenen therapeut en cliënt een procesnetwerk en kiezen het punt met de meeste hefboom; technieken komen uit alle tradities."
+      },
+      "sources": [
+        "src:8a1de76fbf",
+        "src:0936ea052e"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "پیوند با فراتشخیصی و الگوهای بُعدی: درمان فرایندمدار کنار نقشهٔ راه فراتشخیصی (سازوکارهای مشترک آسیب‌پذیری و پاسخ) و الگوهای بُعدی مثل HiTOP قرار می‌گیرد؛ همه از فرض «اختلال‌های جدا و مرزدار» فاصله می‌گیرند.",
+        "en": "Link to transdiagnostic and dimensional models: PBT sits beside the transdiagnostic roadmap (shared vulnerability and response mechanisms) and dimensional models such as HiTOP; all move away from discrete, bounded disorders.",
+        "nl": "Verwant aan transdiagnostische en dimensionele modellen zoals HiTOP."
+      },
+      "sources": [
+        "src:a78526b125"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "گزاره‌ای که در کارگاه آمد: «مداخله باید بر مبنای فرایند باشد»، و در کنارش این احتیاط که نظام دسته‌ای تشخیص فواید عملی خود را دارد (بیمه، ارتباط میان متخصصان، پژوهش همه‌گیرشناختی) و به‌راحتی کنار گذاشته نمی‌شود.",
+        "en": "A workshop proposition: intervention should be process-based — with the caution that the categorical system has practical uses (insurance, communication, epidemiology) and will not easily be dropped.",
+        "nl": "Workshopstelling: interventie moet procesgericht zijn, maar het categoriale systeem heeft praktische functies."
       },
       "sources": [
         "src:8a1de76fbf"
@@ -71,14 +97,18 @@
     },
     {
       "text": {
-        "fa": "سنت‌گرایی: نظام دسته‌ای فواید خود را دارد و به راحتی قابل حذف نیست (گزارهٔ ۱۰).",
-        "en": "Traditionalism: the categorical system has its benefits and cannot easily be dropped (proposition 10).",
-        "nl": "Traditionalisme: het categoriale systeem heeft voordelen en is niet makkelijk te schrappen (stelling 10)."
+        "fa": "نقد و وضعیت شواهد: شواهد اینکه درمان شخصی‌سازی‌شده بر پایهٔ شبکهٔ فرد بهتر از پروتکل‌های استاندارد عمل می‌کند هنوز محدود است. شبکه‌های فردی از داده‌های کوتاه‌مدت ناپایدارند، اندازه‌گیری فرایندها با پرسش‌نامه‌های خودگزارشی خطا دارد، و خطر آن هست که «فرایند» به برچسب تازه‌ای تبدیل شود که همان مشکل‌های تشخیص را تکرار کند. حامیانش خودشان آن را برنامهٔ پژوهشی می‌دانند.",
+        "en": "Critique and evidence: evidence that personalised, network-based treatment beats standard protocols is still limited; individual networks from short data are unstable, self-report process measures are noisy, and “process” risks becoming a new label repeating diagnosis’s problems. Its proponents call it a research programme.",
+        "nl": "Kritiek: bewijs voor superioriteit van gepersonaliseerde behandeling is beperkt; netwerken zijn instabiel en metingen ruisig."
       },
       "sources": [
-        "src:8a1de76fbf"
+        "src:a78526b125",
+        "src:57315dd957"
       ],
-      "flags": []
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
     }
   ],
   "links": [
@@ -136,7 +166,8 @@
     "src:8a1de76fbf",
     "src:0936ea052e",
     "src:a78526b125",
-    "src:627a209a5c"
+    "src:627a209a5c",
+    "src:57315dd957"
   ],
   "booklets": [
     "workshop:aims",
