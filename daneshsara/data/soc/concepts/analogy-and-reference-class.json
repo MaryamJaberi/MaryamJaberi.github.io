@@ -1,0 +1,112 @@
+{
+ "id": "soc:analogy-and-reference-class",
+ "kind": "concept",
+ "title": {
+  "fa": "استدلال با مشابهت: نگاشت ساختار و طبقهٔ مرجع",
+  "en": "Reasoning by analogy: structure mapping and the reference class",
+  "nl": "Redeneren met analogie"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "وقتی می‌پرسیم «ایران مثل کدام کشور می‌شود؟» داریم با مشابهت استدلال می‌کنیم. گنتنر (۱۹۸۳) نشان داد قیاس خوب بر پایهٔ شباهت «رابطه‌ها»ست نه شباهت ظاهری: مهم نیست دو کشور هر دو مسلمان یا نفت‌خیز باشند؛ مهم این است که آیا ساختار نیروهای مسلح، توان مخالفان و شکاف‌ها شبیه است. کانمن و تورسکی راه دوم را پیشنهاد کردند: به‌جای یک نمونهٔ دلخواه، به کل «طبقهٔ مرجع» نگاه کن: از همهٔ موارد مشابه، چند درصد به چه نتیجه‌ای رسیدند؟",
+  "en": "When we ask “which country will Iran resemble?” we are reasoning by analogy. Gentner (1983) showed a good analogy rests on similarity of relations, not surface: it does not matter that two countries are both Muslim or oil-rich; what matters is whether the structure of the armed forces, the opposition’s capacity and the cleavages are alike. Kahneman and Tversky proposed a second route: instead of one favourite case, look at the whole reference class: of all similar cases, what share ended how?",
+  "nl": "When we ask “which country will Iran resemble?” we are reasoning by analogy. Gentner (1983) showed a good analogy rests on similarity of relations, not surface: it does not matter that two countries are both Muslim or oil-rich; what matters is whether the structure of the armed forces, the opposition’s capacity and the cleavages are alike. Kahneman and Tversky proposed a second route: instead of one favourite case, look at the whole reference class: of all similar cases, what share ended how?"
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نگاشت ساختار: قیاس یعنی جفت‌کردن نقش‌ها و رابطه‌ها میان دو موقعیت. قیاس سطحی (شباهت ظاهر) آسان به ذهن می‌آید و بیشتر گمراه می‌کند.",
+    "en": "Structure mapping: analogy means aligning roles and relations across two situations. Surface analogy (similar appearance) comes to mind easily and misleads more.",
+    "nl": "Structure mapping: analogy means aligning roles and relations across two situations. Surface analogy (similar appearance) comes to mind easily and misleads more."
+   },
+   "sources": [
+    "src:75e8fefbf7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نگاه بیرونی: پیش‌بینی شهودی به جزئیات مورد خاص می‌چسبد و نرخ پایه را نادیده می‌گیرد. اصلاحش: نخست طبقهٔ مرجع را پیدا کن و نتیجهٔ میانگین آن را بگیر، بعد فقط به اندازهٔ شواهد خاص از آن فاصله بگیر.",
+    "en": "The outside view: intuitive prediction clings to the details of the case and ignores the base rate. The correction: first find the reference class and take its average outcome, then move away from it only as far as specific evidence warrants.",
+    "nl": "The outside view: intuitive prediction clings to the details of the case and ignores the base rate. The correction: first find the reference class and take its average outcome, then move away from it only as far as specific evidence warrants."
+   },
+   "sources": [
+    "src:b3078f4186"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قیاس در سیاست خطرناک هم هست: خونگ نشان داد تصمیم‌گیران آمریکایی در ۱۹۶۵ با قیاس «مونیخ» و «کره» به جنگ ویتنام کشیده شدند. آدم‌ها یک قیاس را برمی‌گزینند و بعد شواهد را با آن می‌خوانند.",
+    "en": "Analogy is also dangerous in politics: Khong showed US decision-makers in 1965 were drawn into the Vietnam war through the “Munich” and “Korea” analogies. People pick one analogy and then read the evidence through it.",
+    "nl": "Analogy is also dangerous in politics: Khong showed US decision-makers in 1965 were drawn into the Vietnam war through the “Munich” and “Korea” analogies. People pick one analogy and then read the evidence through it."
+   },
+   "sources": [
+    "src:81ebb2af85"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "قاعدهٔ کار در دانش‌سرا: قیاس فرضیه می‌سازد، اثبات نمی‌کند. هر قیاس باید بگوید در چه چیز شبیه است، در چه چیز نیست، و کدام مشاهده آن را رد می‌کند. همیشه چند نمونه، هم موفق و هم ناموفق.",
+    "en": "The working rule in Daneshsara: an analogy generates a hypothesis, it does not prove. Each analogy must state where the cases are alike, where they are not, and which observation would refute it. Always several cases, both successes and failures.",
+    "nl": "The working rule in Daneshsara: an analogy generates a hypothesis, it does not prove. Each analogy must state where the cases are alike, where they are not, and which observation would refute it. Always several cases, both successes and failures."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:analogical-thinking",
+   "rel": "see-also",
+   "note": {
+    "fa": "تفکر قیاسی در روان‌شناسی",
+    "en": "Analogical thinking in psychology",
+    "nl": "Analogical thinking in psychology"
+   }
+  },
+  {
+   "to": "soc:pacted-transitions",
+   "rel": "see-also",
+   "note": {
+    "fa": "نمونه: گذارهای توافقی",
+    "en": "Case: pacted transitions",
+    "nl": "Case: pacted transitions"
+   }
+  },
+  {
+   "to": "soc:dissolving-army-and-purges-iraq-lesson",
+   "rel": "see-also",
+   "note": {
+    "fa": "نمونهٔ منفی: عراق",
+    "en": "Negative case: Iraq",
+    "nl": "Negative case: Iraq"
+   }
+  },
+  {
+   "to": "soc:critical-junctures-small-differences",
+   "rel": "see-also",
+   "note": {
+    "fa": "نقطه‌های عطف و تفاوت‌های کوچک",
+    "en": "Critical junctures and small differences",
+    "nl": "Critical junctures and small differences"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:75e8fefbf7",
+  "src:b3078f4186",
+  "src:81ebb2af85"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

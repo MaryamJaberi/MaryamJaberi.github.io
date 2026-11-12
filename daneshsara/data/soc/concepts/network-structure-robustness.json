@@ -1,0 +1,115 @@
+{
+ "id": "soc:network-structure-robustness",
+ "kind": "concept",
+ "title": {
+  "fa": "ساختار شبکه: دنیای کوچک، گره‌های پرپیوند و تاب‌آوری",
+  "en": "Network structure: small worlds, hubs and robustness",
+  "nl": "Netwerkstructuur: kleine werelden, hubs en robuustheid"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "شبکه‌های واقعی (آشنایی‌ها، اینترنت، سازمان‌ها) نه منظم‌اند نه تصادفی. واتس و استروگتز (۱۹۹۸) نشان دادند چند پیوند دوربرد کافی است تا شبکه‌ای خوشه‌خوشه به «دنیای کوچک» بدل شود که خبر در آن با چند گام به همه می‌رسد. باراباشی و آلبرت (۱۹۹۹) نشان دادند بسیاری از شبکه‌ها چند گرهٔ بسیار پرپیوند دارند. چنین شبکه‌ای در برابر خرابی تصادفی مقاوم و در برابر حملهٔ هدفمند به گره‌های اصلی شکننده است.",
+  "en": "Real networks (acquaintance, the internet, organisations) are neither regular nor random. Watts and Strogatz (1998) showed a few long-range ties suffice to turn a clustered network into a “small world” where news reaches everyone in a few steps. Barabási and Albert (1999) showed many networks have a few very highly connected hubs. Such a network is robust to random failure and fragile to targeted attack on its hubs.",
+  "nl": "Real networks (acquaintance, the internet, organisations) are neither regular nor random. Watts and Strogatz (1998) showed a few long-range ties suffice to turn a clustered network into a “small world” where news reaches everyone in a few steps. Barabási and Albert (1999) showed many networks have a few very highly connected hubs. Such a network is robust to random failure and fragile to targeted attack on its hubs."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دنیای کوچک: خوشه‌های محکم محلی (دوستان من با هم دوست‌اند) به‌اضافهٔ چند پل میان خوشه‌ها. پل‌ها همان «پیوندهای ضعیف» گرانووتر‌اند که خبر و فرصت تازه می‌آورند.",
+    "en": "Small world: tight local clusters (my friends know each other) plus a few bridges between clusters. The bridges are Granovetter’s “weak ties” that carry new information and opportunity.",
+    "nl": "Small world: tight local clusters (my friends know each other) plus a few bridges between clusters. The bridges are Granovetter’s “weak ties” that carry new information and opportunity."
+   },
+   "sources": [
+    "src:c8773d4b68"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خطا و حمله: آلبرت، جئونگ و باراباشی نشان دادند برداشتن تصادفی گره‌ها در شبکهٔ پرگره‌ـ‌مرکز تقریباً اثری ندارد، اما برداشتن چند گرهٔ پرپیوند شبکه را تکه‌تکه می‌کند.",
+    "en": "Error and attack: Albert, Jeong and Barabási showed random removal of nodes barely affects a hub-dominated network, while removing a few hubs shatters it.",
+    "nl": "Error and attack: Albert, Jeong and Barabási showed random removal of nodes barely affects a hub-dominated network, while removing a few hubs shatters it."
+   },
+   "sources": [
+    "src:51d9ae15ae"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دو درس متضاد برای طراحی: شبکه‌ای که فقط چند چهرهٔ مرکزی دارد سریع است اما با حذف آن‌ها فرو می‌ریزد؛ شبکهٔ خوشه‌ای با پل‌های متعدد کندتر است اما می‌ماند. برای کار در شرایط پرخطر، دومی امن‌تر است: خوشه‌های کوچک معتمد، چند پل، بدون یک مرکز.",
+    "en": "Two opposite design lessons: a network with only a few central figures is fast but collapses when they are removed; a clustered network with several bridges is slower but survives. For work under risk the second is safer: small trusted clusters, several bridges, no single centre.",
+    "nl": "Two opposite design lessons: a network with only a few central figures is fast but collapses when they are removed; a clustered network with several bridges is slower but survives. For work under risk the second is safer: small trusted clusters, several bridges, no single centre."
+   },
+   "sources": [
+    "src:51d9ae15ae",
+    "src:6476c28b63"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "همین منطق برای زیرساخت هم هست: قطع اینترنت ایران در ۱۴۰۴–۱۴۰۵ نشان داد شبکه‌ای با چند درگاه مرکزی را می‌توان از بالا خاموش کرد.",
+    "en": "The same logic holds for infrastructure: Iran’s internet shutdowns of 2026 showed a network with a few central gateways can be switched off from above.",
+    "nl": "The same logic holds for infrastructure: Iran’s internet shutdowns of 2026 showed a network with a few central gateways can be switched off from above."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:network-society",
+   "rel": "see-also",
+   "note": {
+    "fa": "جامعهٔ شبکه‌ای",
+    "en": "Network society",
+    "nl": "Network society"
+   }
+  },
+  {
+   "to": "soc:near-decomposability-architecture-of-complexity",
+   "rel": "see-also",
+   "note": {
+    "fa": "معماری پیچیدگی",
+    "en": "The architecture of complexity",
+    "nl": "The architecture of complexity"
+   }
+  },
+  {
+   "to": "soc:repeated-games-cooperation",
+   "rel": "see-also",
+   "note": {
+    "fa": "همکاری در شبکه",
+    "en": "Cooperation on networks",
+    "nl": "Cooperation on networks"
+   }
+  },
+  {
+   "to": "soc:saffarid-pouriya-civic-networks",
+   "rel": "see-also",
+   "note": {
+    "fa": "شبکه‌های مدنی تاریخی",
+    "en": "Historical civic networks",
+    "nl": "Historical civic networks"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:c8773d4b68",
+  "src:51d9ae15ae",
+  "src:6476c28b63"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

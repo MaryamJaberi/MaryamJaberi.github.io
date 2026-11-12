@@ -1,0 +1,114 @@
+{
+ "id": "soc:civil-resistance-success-rates",
+ "kind": "concept",
+ "title": {
+  "fa": "مقاومت مدنی چقدر موفق می‌شود؟ داده‌های ۱۹۰۰ تا امروز",
+  "en": "How often does civil resistance succeed? Data from 1900 to today",
+  "nl": "Hoe vaak slaagt burgerlijk verzet?"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "چنووت و استفان ۳۲۳ کارزار بزرگ برای تغییر حکومت یا پایان اشغال را از ۱۹۰۰ تا ۲۰۰۶ مقایسه کردند: کارزارهای بی‌خشونت در حدود ۵۳٪ موارد و کارزارهای مسلحانه در حدود ۲۶٪ موارد به هدف رسیدند. توضیحشان مشارکت است: کار بی‌خشونت مانع کمتری برای پیوستن دارد، پس جمعیت بزرگ‌تر و گوناگون‌تری می‌آورد، و همین جمعیت است که وفاداری نیروهای امنیتی و بدنهٔ اداری را سست می‌کند. اما داده‌های تازه‌تر هشدار می‌دهد: نرخ موفقیت پس از ۲۰۱۰ به‌شدت پایین آمده است.",
+  "en": "Chenoweth and Stephan compared 323 major campaigns for regime change or the end of occupation from 1900 to 2006: nonviolent campaigns succeeded in about 53% of cases and armed ones in about 26%. Their explanation is participation: nonviolent action has lower barriers to joining, so it draws larger and more diverse crowds, and it is that crowd which loosens the loyalty of security forces and the bureaucracy. But newer data sounds a warning: success rates fell sharply after 2010.",
+  "nl": "Chenoweth and Stephan compared 323 major campaigns for regime change or the end of occupation from 1900 to 2006: nonviolent campaigns succeeded in about 53% of cases and armed ones in about 26%. Their explanation is participation: nonviolent action has lower barriers to joining, so it draws larger and more diverse crowds, and it is that crowd which loosens the loyalty of security forces and the bureaucracy. But newer data sounds a warning: success rates fell sharply after 2010."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سازوکار: موفقیت نه از «اخلاقی‌تر بودن» که از جابه‌جایی وفاداری می‌آید. وقتی کارزار آن‌قدر بزرگ و گوناگون شود که هر سرباز و کارمند خویشاوندی در آن داشته باشد، اجرای دستور سرکوب سخت می‌شود.",
+    "en": "Mechanism: success comes not from being “more moral” but from loyalty shifts. When a campaign is large and diverse enough that every soldier and clerk has a relative in it, carrying out orders to repress becomes hard.",
+    "nl": "Mechanism: success comes not from being “more moral” but from loyalty shifts. When a campaign is large and diverse enough that every soldier and clerk has a relative in it, carrying out orders to repress becomes hard."
+   },
+   "sources": [
+    "src:4af1c6b214"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«قاعدهٔ ۳٫۵٪»: در آن داده‌ها هیچ کارزاری که در اوج خود دست‌کم ۳٫۵٪ جمعیت را فعالانه به میدان آورده بود شکست نخورده بود. این یک مشاهدهٔ تاریخی است، نه قانون؛ خود چنووت بعدها موارد نقض و محدودیت‌هایش را یادآوری کرده است.",
+    "en": "The “3.5% rule”: in that data no campaign that mobilised at least 3.5% of the population at its peak had failed. It is a historical observation, not a law; Chenoweth herself later pointed to exceptions and limits.",
+    "nl": "The “3.5% rule”: in that data no campaign that mobilised at least 3.5% of the population at its peak had failed. It is a historical observation, not a law; Chenoweth herself later pointed to exceptions and limits."
+   },
+   "sources": [
+    "src:4af1c6b214",
+    "src:31203bb397"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "افت تازه: چنووت (۲۰۲۰) نشان می‌دهد شمار کارزارهای بی‌خشونت در دههٔ ۲۰۱۰ رکورد زد اما نرخ موفقیتشان به زیر یک‌سوم رسید. دلیل‌های پیشنهادی: تکیهٔ زیاد بر تظاهرات خیابانی و شبکه‌های اجتماعی به‌جای سازمان‌دهی پایدار و اعتصاب، و یادگیری حکومت‌ها در سرکوب هوشمند.",
+    "en": "The recent drop: Chenoweth (2020) shows the number of nonviolent campaigns hit a record in the 2010s while their success rate fell below one third. Suggested reasons: over-reliance on street protest and social media instead of durable organising and strikes, and regimes learning smarter repression.",
+    "nl": "The recent drop: Chenoweth (2020) shows the number of nonviolent campaigns hit a record in the 2010s while their success rate fell below one third. Suggested reasons: over-reliance on street protest and social media instead of durable organising and strikes, and regimes learning smarter repression."
+   },
+   "sources": [
+    "src:31203bb397"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "محدودیت: این داده‌ها دربارهٔ کارزارهای داخلی است. جایی که جنگ خارجی و مداخلهٔ نظامی هم در کار است (مانند ایران پس از اسفند ۱۴۰۴)، نمونه‌های مشابه کم‌اند و نتیجه‌گیری باید محتاطانه باشد.",
+    "en": "Limit: the data concerns domestic campaigns. Where foreign war and military intervention are also in play (as in Iran since early 2026), comparable cases are few and conclusions must be cautious.",
+    "nl": "Limit: the data concerns domestic campaigns. Where foreign war and military intervention are also in play (as in Iran since early 2026), comparable cases are few and conclusions must be cautious."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:nonviolent-action-methods-mechanisms",
+   "rel": "see-also",
+   "note": {
+    "fa": "روش‌های کنش بی‌خشونت",
+    "en": "Methods of nonviolent action",
+    "nl": "Methods of nonviolent action"
+   }
+  },
+  {
+   "to": "soc:threshold-models-of-collective-behaviour",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدل آستانه",
+    "en": "Threshold models",
+    "nl": "Threshold models"
+   }
+  },
+  {
+   "to": "soc:security-defection-credible-commitment",
+   "rel": "see-also",
+   "note": {
+    "fa": "جابه‌جایی وفاداری نیروها",
+    "en": "Loyalty shifts in the forces",
+    "nl": "Loyalty shifts in the forces"
+   }
+  },
+  {
+   "to": "soc:armed-struggle-shortcut-thesis-and-hero-model",
+   "rel": "see-also",
+   "note": {
+    "fa": "راه میان‌بر مسلحانه",
+    "en": "The armed shortcut",
+    "nl": "The armed shortcut"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:4af1c6b214",
+  "src:31203bb397"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
