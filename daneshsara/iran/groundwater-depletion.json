@@ -1,0 +1,63 @@
+{
+ "id": "iran:groundwater-depletion",
+ "domain": "soc",
+ "question": {
+  "fa": "ایران چقدر از آب زیرزمینی‌اش را برداشته است؟",
+  "en": "How much of its groundwater has Iran used up?"
+ },
+ "finding": {
+  "fa": "از ۱۳۸۱ تا ۱۳۹۴ (۲۰۰۲–۲۰۱۵) حدود ۷۵ کیلومتر مکعب آب تجدیدناپذیر از آبخوان‌های ایران برداشته شد (میانگین حدود ۵٫۴ کیلومتر مکعب در سال). شمار نقطه‌های برداشت (چاه، چشمه، قنات) از حدود ۵۴۶ هزار به بیش از یک میلیون رسید، اما برداشت سالانه ۱۸٪ کم شد: چاه بیشتر، آب کمتر. از ۶۰۹ دشت کشور فقط ۲۱۵ دشت «آزاد» است و در بقیه حفر چاه تازه ممنوع شده است.",
+  "en": "From 2002 to 2015 about 75 km³ of non-renewable water was taken from Iran’s aquifers (about 5.4 km³ a year on average). Extraction points (wells, springs, qanats) rose from about 546,000 to over one million, yet annual withdrawal fell 18%: more wells, less water. Only 215 of the country’s 609 plains are “free”; new wells are banned in the rest."
+ },
+ "year": 2021,
+ "method": "national well and aquifer records (Iran Water Resources Management Company), 2002–2015; peer-reviewed analysis",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "Noori, R., Maghrebi, M., Mirchi, A., Tang, Q., Bhattarai, R., Sadegh, M., Noury, M., Torabi Haghighi, A., Kløve, B., & Madani, K. (2021). Anthropogenic depletion of Iran’s aquifers. PNAS, 118(25), e2024221118.",
+   "url": "https://doi.org/10.1073/pnas.2024221118"
+  }
+ ],
+ "critique": "داده‌ها از آمار رسمی چاه‌هاست و چاه‌های غیرمجاز ثبت‌نشده را کامل نمی‌بیند؛ پس برداشت واقعی احتمالاً بیشتر است. دوره در ۱۳۹۴ تمام می‌شود و سال‌های خشک بعدی را ندارد.",
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "هزار نقطهٔ برداشت"
+  },
+  "label": {
+   "fa": "چاه بیشتر، آب کمتر: شمار نقطه‌های برداشت"
+  },
+  "bars": [
+   {
+    "fa": "۱۳۸۱",
+    "v": 546
+   },
+   {
+    "fa": "۱۳۹۴",
+    "v": 1000,
+    "self": true
+   }
+  ],
+  "note": {
+   "fa": "در همین دوره برداشت سالانه از ۷۴٫۶ به ۶۱٫۳ کیلومتر مکعب افت کرد، یعنی آبخوان‌ها دیگر جواب نمی‌دهند. عدد ۱۳۹۴ «بیش از یک میلیون» است."
+  }
+ },
+ "roots": {
+  "fa": "بیش از نه‌دهم آب ایران در کشاورزی مصرف می‌شود. سیاست خودکفایی غذایی، برق و سوخت ارزان برای پمپ‌ها، و مجوز دادن به چاه‌های غیرمجاز پس از حفر، دهه‌ها برداشت را تشویق کرد. نظام قدیمی قنات که برداشت را به اندازهٔ تغذیهٔ طبیعی محدود می‌کرد، با چاه عمیق و پمپ برقی کنار رفت."
+ },
+ "now": {
+  "fa": "آبخوانی که فشرده شود دیگر پر نمی‌شود؛ بخشی از این زیان برگشت‌ناپذیر است. راه‌هایی که پژوهشگران پیشنهاد می‌کنند: کنتور هوشمند و سهمیهٔ برداشت، تغییر الگوی کشت، و سپردن مدیریت به خود بهره‌برداران محلی با قواعد روشن."
+ },
+ "fields": [],
+ "concepts": [
+  "soc:repeated-games-cooperation",
+  "soc:collective-action",
+  "soc:feedback-loops-and-leverage-points"
+ ],
+ "capability": [
+  2,
+  8,
+  10
+ ]
+}

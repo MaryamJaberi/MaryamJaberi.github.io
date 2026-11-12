@@ -1,0 +1,46 @@
+{
+ "id": "iran:land-subsidence",
+ "domain": "soc",
+ "question": {
+  "fa": "زمین ایران چقدر و کجا فرو می‌نشیند؟",
+  "en": "How much and where is the ground sinking in Iran?"
+ },
+ "finding": {
+  "fa": "بررسی ماهواره‌ای ۲۰۱۴ تا ۲۰۲۰ (بیش از ۶ هزار تصویر راداری) نشان داد حدود ۳٫۵٪ خاک ایران فرونشست دارد. تندترین نقطه در دشت رفسنجان کرمان است، با بیش از ۳۵ سانتی‌متر در سال؛ در تهران، البرز، فارس و خراسان رضوی هم ده‌ها سانتی‌متر در سال اندازه‌گیری شده است. برداشت ناپایدار آب زیرزمینی در این پهنه‌ها حدود ۱٫۷ میلیارد متر مکعب در سال برآورد شد.",
+  "en": "A 2014–2020 satellite survey (over 6,000 radar images) found about 3.5% of Iran’s land is subsiding. The fastest spot is the Rafsanjan plain in Kerman, at over 35 cm a year; tens of centimetres a year were also measured in Tehran, Alborz, Fars and Khorasan Razavi. Unsustainable groundwater loss in these zones was estimated at about 1.7 billion m³ a year."
+ },
+ "year": 2024,
+ "method": "Sentinel-1 InSAR, nationwide, 2014–2020; peer-reviewed",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "Haghshenas Haghighi, M., & Motagh, M. (2024). Uncovering the impacts of depleting aquifers: A remote sensing analysis of land subsidence in Iran. Science Advances, 10, eadk3039.",
+   "url": "https://doi.org/10.1126/sciadv.adk3039"
+  }
+ ],
+ "critique": "رادار ماهواره‌ای جابه‌جایی سطح زمین را دقیق می‌سنجد، اما برآورد حجم آب ازدست‌رفته به مدل وابسته است. ۳٫۵٪ کم به نظر می‌رسد ولی همین پهنه‌ها دشت‌های پرجمعیت و کشاورزی‌اند.",
+ "viz": {
+  "kind": "none",
+  "note": {
+   "fa": "منبع فقط بیشینه را می‌دهد (رفسنجان، بیش از ۳۵ سانتی‌متر در سال) و سری زمانی سراسری ندارد؛ برای همین نموداری کشیده نشده است."
+  }
+ },
+ "roots": {
+  "fa": "فرونشست پیامد مستقیم خالی‌شدن آبخوان است: وقتی آب از میان دانه‌های خاک بیرون کشیده شود، لایه‌ها فشرده می‌شوند و زمین پایین می‌رود."
+ },
+ "now": {
+  "fa": "ترک در ساختمان، راه‌آهن، خط لوله و فرودگاه، و ازدست‌رفتن همیشگی ظرفیت ذخیرهٔ آبخوان. این آسیب با باران جبران نمی‌شود."
+ },
+ "fields": [],
+ "concepts": [
+  "soc:repeated-games-cooperation",
+  "soc:collective-action",
+  "soc:feedback-loops-and-leverage-points"
+ ],
+ "capability": [
+  2,
+  8,
+  10
+ ]
+}
