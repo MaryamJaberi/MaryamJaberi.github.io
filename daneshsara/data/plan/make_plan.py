@@ -240,6 +240,36 @@ me = {
  'دانشجو یا بی‌تخصص': [['همسایه‌یار محله', 'پاک‌سازی و داوطلبی'], 'یک دورهٔ دانش‌سرا را تمام کن و یک «اول حدس بزن» را با دوستی بازی کن', 'کمک‌های اولیه و راستی‌آزمایی شایعه را یاد بگیر', 'آب و غذا به جمع‌ها؛ پاک‌سازی فردای جشن', 'یاد دادن خواندن و نوشتن به یک نفر'],
 }
 
+# backlog: [priority 0-3 (set by the project lead), task, status done/doing/todo, link]
+backlog = [
+ [0, 'ادغام مدخل‌های تکراری', 'done', ''],
+ [0, 'اصلاح شمارهٔ اپیزودها در مدخل‌های «خداحافظ آفریقا»', 'done', ''],
+ [0, 'رفع بیرون‌زدگی صف بازبینی در موبایل', 'done', '../core/review.html'],
+ [0, 'بازبینی تصویری همهٔ ابزارها در دسکتاپ و موبایل', 'done', ''],
+ [0, 'سیمرغ: تعریف هدف و نقشهٔ کلان', 'done', '../simorgh/plan.html'],
+ [0, 'بستن یافته‌های امنیتی سایت (فونت و اسکریپت خارجی، CSP)', 'done', '../simorgh/security.html'],
+ [0, 'مقایسهٔ ۵۶ فایل دوره‌های روان با صفحه‌های موضوعی و افزودن نکته‌های جاافتاده؛ صفحهٔ «کمبود توجه»', 'doing', ''],
+ [1, 'آزمایشگاه تعاملی برای جامعه، فلسفه و تاریخ', 'done', '../soc/tools/lab.html'],
+ [1, 'بخش «کمک عملی» در صفحه‌های موضوعی روان', 'todo', ''],
+ [1, 'مسیرهای راهنما و خط زمانی ایده‌ها برای جامعه و فلسفه', 'todo', ''],
+ [1, 'وصل کردن مدخل‌های یتیم', 'todo', ''],
+ [1, 'مفصل کردن مدخل‌های کوتاه (جامعه و فلسفه، بعد تبار)', 'doing', '../core/review.html'],
+ [1, 'آمار ایران زیر هر موضوع و زیرموضوع', 'doing', '../iran/'],
+ [1, 'ابزارهای بینش روی کل داده: قیاس، جریان‌ها، تاریخچهٔ علوم', 'doing', '../miyan/roots.html'],
+ [1, 'افزودن «قیاس» و «علم پیچیدگی» به‌عنوان علم و روش کار', 'todo', ''],
+ [1, 'جستجوی هوشمند «بپرس از دانش‌سرا»', 'todo', ''],
+ [1, 'صفحه‌های دفتر ویرانی‌ها، از آب', 'todo', '../simorgh/plan.html#ledger'],
+ [1, 'شبیه‌سازی بازی‌شدنی مافیای ایران', 'todo', ''],
+ [2, '«اول حدس بزن» برای هر ویکی', 'doing', ''],
+ [2, 'رشد ویکی تاریخ', 'todo', '../tarikh/'],
+ [2, 'صفحه‌های ساخت ایران: صندلی‌های خالی، روز بعد، جشن، منابع طبیعی', 'doing', '../sakht/'],
+ [2, 'گزارش مسئله از سوی مردم و پنل داوطلبان (پس از حل مسئلهٔ امنیتی آن)', 'todo', '../simorgh/security.html#open'],
+ [3, 'پیش‌نمایش با نگه‌داشتن ماوس روی نام مدخل‌ها', 'todo', ''],
+ [3, 'ادامهٔ کتاب‌ها: هایک از فصل ۵ و صف کتابخانه', 'todo', ''],
+ [3, 'ترجمهٔ هلندی و انگلیسی کامل', 'todo', ''],
+ [3, 'دستیار گفتگو', 'todo', ''],
+]
+
 sources = [
  ['GAMAAN (2026). Iranians’ Attitudes Toward the 2026 Protests and War', 'https://gamaan.org/wp-content/uploads/2026/07/GAMAAN-2026-Protests-and-War-Survey-Report-Final-English.pdf'],
  ['Wikipedia: Impact of the 2026 Iran war on Iran (NetBlocks, BBC, Reuters)', 'https://en.wikipedia.org/wiki/Impact_of_the_2026_Iran_war_on_Iran'],
@@ -250,7 +280,7 @@ sources = [
 
 json.dump(dict(layers=layers, game=game, sciences=sciences, ledger=ledger, birds=birds, groups=groups, risks=risks,
                tasks=tasks, celebrations=celebrations, celebration_roles=celebration_roles, products=products,
-               tools=tools, roadmap=roadmap, me=me, sources=sources),
+               tools=tools, roadmap=roadmap, me=me, sources=sources, backlog=backlog),
           open(f'{H}/plan.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('ok')
 

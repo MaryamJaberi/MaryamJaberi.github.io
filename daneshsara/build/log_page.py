@@ -20,7 +20,7 @@ plan = json.load(open(f'{R}/data/plan/plan.json', encoding='utf-8'))
 pages = len([p for p in glob.glob(f'{R}/**/*.html', recursive=True) if '/build/' not in p and 'http-equiv="refresh"' not in open(p, encoding='utf-8').read(3000)])
 tiles = [[st.get('concepts', 0), 'مدخل علمی', '../atlas/sitemap.html'], [st.get('sources', 0), 'منبع', 'sources.html'], [st.get('iran_notes', 0), 'یادداشت ایران', '../iran/'],
          [st.get('cross_wiki_links', 0), 'پیوند میان ویکی‌ها', '../atlas/hidden-bridges.html'], [pages, 'صفحه', '../atlas/sitemap.html'], [sum(len(v) for _, v in log), 'تغییر ثبت‌شده', '#log']]
-DATA = json.dumps({'log': log, 'tiles': tiles, 'tools': plan['tools'], 'road': plan['roadmap'], 'ledger': [[d[0], d[2]] for d in plan['ledger']], 'sci': [[s[0], s[2]] for s in plan['sciences']]}, ensure_ascii=False)
+DATA = json.dumps({'log': log, 'tiles': tiles, 'tools': plan['tools'], 'road': plan['roadmap'], 'ledger': [[d[0], d[2]] for d in plan['ledger']], 'sci': [[s[0], s[2]] for s in plan['sciences']], 'backlog': plan['backlog']}, ensure_ascii=False)
 TPL = r'''<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
@@ -59,7 +59,8 @@ section{padding-block:var(--s6);border-top:1px solid var(--line);scroll-margin-t
 <div class="tiles" id="tiles"></div>
 <section><h2>اکنون کجاییم</h2><div class="now" id="now"></div></section>
 <section><h2>چقدر ساخته شده</h2><div class="bars" id="bars"></div></section>
-<section><h2>قدم‌های بعدی</h2><div class="nx" id="nx"></div></section>
+<section id="backlog"><h2>فهرست کارها، به ترتیب اولویت</h2><div class="nx" id="bl"></div></section>
+<section><h2>ابزارهایی که هنوز ساخته نشده</h2><div class="nx" id="nx"></div></section>
 <section id="log"><h2>چه تغییر کرد، روز به روز</h2><div id="days"></div><button type="button" id="more">روزهای قدیمی‌تر</button></section>
 </main>
 <script>
@@ -75,6 +76,8 @@ function bar(name, list, href){
 }
 $("bars").innerHTML = bar("دفتر ویرانی‌ها", D.ledger, "../simorgh/plan.html#ledger") + bar("علوم لازم", D.sci, "../simorgh/plan.html#sci") + bar("ابزارها", D.tools.map(t => [t[0], t[2]]), "../simorgh/plan.html#tools");
 $("nx").innerHTML = D.tools.filter(t => t[2] !== "have").map(t => `<div><span>${esc(t[0])} <small>${esc(t[1])}</small></span><small>${t[2] === "part" ? "ناقص" : "ساخته نشده"}</small></div>`).join("");
+const PN = ["۰ فوری", "۱ زیاد", "۲ متوسط", "۳ بعداً"], SN = {done: "انجام شد", doing: "در حال انجام", todo: "مانده"}, SC = {done: "var(--ok)", doing: "var(--warn)", todo: "var(--ink-3)"};
+$("bl").innerHTML = D.backlog.map(b => `<div style="border-inline-start:4px solid ${SC[b[2]]}"><span><small>${PN[b[0]]}</small> ${b[3] ? `<a href="${b[3]}">${esc(b[1])}</a>` : esc(b[1])}</span><small style="color:${SC[b[2]]};white-space:nowrap">${SN[b[2]]}</small></div>`).join("");
 let shown = 7;
 function days(){
   $("days").innerHTML = D.log.slice(0, shown).map(([d, items]) => { const dt = new Date(d + "T12:00:00Z"); let j = d; try { j = dt.toLocaleDateString("fa-IR-u-ca-persian", {day: "numeric", month: "long", year: "numeric", timeZone: "UTC"}); } catch (_) {}
