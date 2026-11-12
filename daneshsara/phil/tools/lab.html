@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آزمایشگاه فلسفه | ویکی فلسفه | دانش‌سرا</title>
+<meta name="description" content="چهار آزمایش فکری تعاملی: مسئلهٔ تراموا، پردهٔ بی‌خبری، مسابقهٔ دوراهی زندانی و اینکه فیلسوفان واقعاً چه فکر می‌کنند.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>:root{--lab:var(--fam-hum);--lab-soft:var(--fam-hum-soft)}
+.soc-grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.soc-grid button{display:grid;gap:8px;text-align:start}
+.dist{display:flex;align-items:flex-end;gap:4px;height:70px;direction:ltr}
+.dist i{flex:1;background:var(--lab);border-radius:4px 4px 0 0;min-height:2px}
+.dist i.me{background:var(--warn)}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../phil/">ویکی فلسفه</a><i>›</i><a href="../../phil/tools/">ابزارها</a><i>›</i><b>آزمایشگاه فلسفه</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>آزمایشگاه فلسفه</h1>
+<p class="what">فلسفه آزمایشگاه ندارد، اما «آزمایش فکری» دارد: موقعیتی ساختگی که شهود ما را زیر فشار می‌گذارد تا ببینیم واقعاً به چه اصلی باور داریم. در این چهار آزمایش خودتان انتخاب کنید و بعد ببینید دیگران — مردم عادی و فیلسوفان — چه گفته‌اند. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note">پاسخ «درست» در این آزمایش‌ها از روی آمار معلوم نمی‌شود؛ اکثریت هم ممکن است اشتباه کند. آمارها فقط نشان می‌دهند شهودها کجا با هم می‌خوانند و کجا از هم جدا می‌شوند. برای استدلال‌ها به مدخل‌ها برگردید.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · آزمایشگاه فلسفه</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script>
+const {fa, css, lk} = LabKit;
+
+/* ——— 1. trolley variants ——— */
+function trolley(pn, out){
+  const S = [
+    ["سوزن‌بان", "ترامویی بی‌ترمز به سوی پنج نفر می‌رود. شما کنار اهرمی ایستاده‌اید: اگر آن را بکشید، تراموا به خط فرعی می‌رود و یک نفر را که آنجاست می‌کشد. اهرم را می‌کشید؟", 81],
+    ["خط حلقه‌ای", "همان وضع، اما خط فرعی دوباره به خط اصلی برمی‌گردد. فقط بدنِ آن یک نفر روی خط فرعی جلوی تراموا را می‌گیرد؛ یعنی مرگ او <b>وسیلهٔ</b> نجات پنج نفر است. اهرم را می‌کشید؟", 72],
+    ["پل عابر", "شما روی پلی بالای خط ایستاده‌اید. تنها راه نجات پنج نفر این است که مرد درشت‌اندامی را که کنارتان است از پل هل بدهید تا بدنش تراموا را نگه دارد. او می‌میرد. هلش می‌دهید؟", 51]
+  ];
+  const ans = [null, null, null];
+  pn.innerHTML = S.map((s, i) => `<div class="q"><p><b>${fa(i + 1)}. ${s[0]}</b> — ${s[1]}</p><div class="chips" data-i="${i}"><button type="button" data-v="1">بله</button><button type="button" data-v="0">نه</button></div></div>`).join("");
+  pn.addEventListener("click", e => {
+    const b = e.target.closest("[data-v]"); if (!b) return;
+    const g = b.parentElement, i = +g.dataset.i; ans[i] = +b.dataset.v;
+    g.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    if (ans.every(a => a !== null)) report();
+  });
+  function report(){
+    const yes = ans.map(a => a === 1);
+    const pattern = yes[0] && !yes[2] ? "same" : yes.every(Boolean) ? "util" : !yes.some(Boolean) ? "deon" : "other";
+    const txt = {
+      same: "شما مثل بیشتر مردم پاسخ دادید: کشیدن اهرم بله، هل دادن نه. اما حساب هر دو یکی است — یک جان در برابر پنج جان. پس چیزی جز شمار جان‌ها در داوری شما دخیل است: شاید اینکه آیا کسی را <b>وسیله</b> می‌کنید، یا اینکه با دست خودتان به او آسیب می‌زنید.",
+      util: "شما هر سه بار نجات پنج نفر را انتخاب کردید. این پاسخ با فایده‌گرایی سازگار است: آنچه مهم است پیامد است. پرسش دشوار برای این دیدگاه: آیا جراحی هم که یک بیمار سالم را برای پیوند اعضایش به پنج بیمار دیگر بکشد کار درستی کرده است؟",
+      deon: "شما هر سه بار از دخالت پرهیز کردید. این با این ایده سازگار است که کشتن بدتر از گذاشتن برای مردن است و ما مسئول پیامدهایی که خودمان پدید نیاورده‌ایم نیستیم. پرسش دشوار: آیا «کاری نکردن» هم خودش یک انتخاب نیست؟",
+      other: "الگوی پاسخ شما کم‌یاب‌تر است. ارزش دارد از خود بپرسید چه چیزی میان این سه موقعیت برای شما فرق می‌کرد؛ همین پرسش، کار اصلی فلسفهٔ اخلاق است."
+    }[pattern];
+    out.innerHTML = `<div class="res"><h3>شما و ۷۰ هزار نفر در ۴۲ کشور</h3>
+      <div class="bars">${S.map((s, i) => `<div><span>${s[0]}</span><i style="width:${s[2]}%"></i><span>${fa(s[2])}٪ بله · شما: ${yes[i] ? "بله" : "نه"}</span></div>`).join("")}</div>
+      <span class="src">منبع: عواد و همکاران (۲۰۲۰)، PNAS — نسخهٔ «ماشین اخلاق» با حدود ۷۰ هزار پاسخ‌دهنده. ترتیب «سوزن‌بان > حلقه > پل» در همهٔ کشورها دیده شد، هرچند سطح پذیرش از کشوری به کشور دیگر فرق داشت.</span>
+      <p style="margin-top:10px">${txt}</p>
+      <p>فیلیپا فوت (۱۹۶۷) این مسئله را برای بحث دربارهٔ «اصل اثر دوگانه» ساخت و جودیت جارویس تامسون نسخهٔ پل را افزود. جاشوا گرین بعدها گفت پاسخ «نه» در نسخهٔ پل از واکنش هیجانی تند به آسیب شخصی می‌آید و پاسخ «بله» در سوزن‌بان از حساب سرد؛ این تفسیر خودش بحث‌برانگیز است.</p>
+      ${lk(["trolley", "utilitarianism-bentham-mill-earthly-ethics", "kant-duty-ethics-universal-law", "moral-luck", "exception-trolley-oedipus-responsibility"])}</div>`;
+  }
+}
+
+/* ——— 2. veil of ignorance ——— */
+function veil(pn, out){
+  // five income groups (each 20% of people), annual income in an imaginary currency — illustrative only
+  const SOC = [
+    ["الف", "برابر", [30, 30, 30, 30, 30]],
+    ["ب", "رشد با کفِ بالا", [22, 28, 36, 48, 70]],
+    ["ج", "بیشترین میانگین", [6, 18, 34, 60, 140]],
+    ["د", "قمار بزرگ", [2, 8, 20, 50, 200]]
+  ];
+  const avg = a => a.reduce((x, y) => x + y, 0) / a.length;
+  let pick = null;
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">هنوز به دنیا نیامده‌اید و نمی‌دانید در کدام پنجک درآمدی جامعه خواهید بود؛ شانس هر پنجک برابر است. در کدام جامعه می‌خواهید زندگی کنید؟ (عددها درآمد سالانه در واحدی خیالی‌اند.)</p>
+    <div class="soc-grid choice">${SOC.map((s, i) => `<button type="button" data-i="${i}"><b>جامعهٔ ${s[0]} — ${s[1]}</b><div class="dist">${s[2].map(v => `<i style="height:${Math.max(3, v / 200 * 70)}px"></i>`).join("")}</div><span style="font-size:.85rem;color:var(--ink-2)">فقیرترین ${fa(s[2][0])} · ثروتمندترین ${fa(s[2][4])} · میانگین ${fa(avg(s[2]))}</span></button>`).join("")}</div>`;
+  pn.addEventListener("click", e => {
+    const b = e.target.closest("[data-i]"); if (!b) return;
+    pick = +b.dataset.i; pn.querySelectorAll("[data-i]").forEach(x => x.setAttribute("aria-pressed", x === b));
+    const pos = Math.floor(Math.random() * 5), you = SOC[pick][2][pos];
+    const best = SOC.map(s => avg(s[2])), maxi = SOC.map(s => s[2][0]);
+    const iAvg = best.indexOf(Math.max(...best)), iMin = maxi.indexOf(Math.max(...maxi));
+    out.innerHTML = `<div class="res"><h3>پرده کنار رفت: شما در پنجکِ ${["فقیرترین", "دوم", "میانه", "چهارم", "ثروتمندترین"][pos]} جامعهٔ ${SOC[pick][0]} به دنیا آمدید — درآمد ${fa(you)}</h3>
+      <p>هر بار که دوباره انتخاب کنید، جایگاه تازه‌ای قرعه‌کشی می‌شود. اما انتخاب پشت پرده باید پیش از قرعه انجام شود؛ پرسش این است که با چه قاعده‌ای انتخاب کردید:</p>
+      <table class="tt"><tr><th>قاعده</th><th>چه می‌گوید</th><th>کدام جامعه</th></tr>
+      <tr><td>بیشینه کردن میانگین (فایده‌گرایی)</td><td>اگر شانس همه برابر است، جامعه‌ای را بردار که میانگین بیشتری دارد.</td><td>${SOC[iAvg][0]}</td></tr>
+      <tr><td>بیشینه کردن کمینه (رالز)</td><td>جامعه‌ای را بردار که حال بدترین جایگاهش از همه بهتر است؛ «اصل تفاوت».</td><td>${SOC[iMin][0]}</td></tr>
+      <tr><td>میانگین با کف</td><td>میانگین را بیشینه کن، به شرط اینکه هیچ‌کس زیر حداقلی معین نماند.</td><td>ب (با کف ۲۰)</td></tr></table>
+      <p>رالز (۱۹۷۱) می‌گفت آدم معقول پشت پرده، چون نمی‌داند کجا می‌افتد و پای همهٔ زندگی‌اش در میان است، قمار نمی‌کند. منتقدانی مثل هارسانی پاسخ دادند که این بدبینی بیش از حد است و فرد معقول میانگین را بیشینه می‌کند. وقتی فرولیک و اوپنهایمر (۱۹۹۲) این را با گروه‌های واقعی آزمودند، بیشتر گروه‌ها نه گزینهٔ رالز را برگزیدند نه میانگین محض را، بلکه «میانگین با یک کفِ تضمین‌شده» را.</p>
+      <p style="font-size:.85rem;color:var(--ink-2)">جامعه‌های این صفحه ساختگی‌اند تا قاعده‌ها از هم جدا شوند؛ در دنیای واقعی، رابطهٔ نابرابری و رشد خودش محل بحث تجربی است.</p>
+      ${lk(["veil-of-ignorance", "hayek-rule-of-law-justice-liberty", "utilitarianism-bentham-mill-earthly-ethics", "psy:justice-theory"])}</div>`;
+  });
+}
+
+/* ——— 3. iterated prisoner's dilemma tournament ——— */
+function ipd(pn, out){
+  const PAY = {CC: [3, 3], CD: [0, 5], DC: [5, 0], DD: [1, 1]};
+  const ST = {
+    tft: ["تلافی به مثل", "اول همکاری؛ بعد هر کاری که حریف دور قبل کرد.", (m, o) => o.length ? o[o.length - 1] : "C"],
+    allc: ["همیشه همکاری", "هر چه شود همکاری می‌کند.", () => "C"],
+    alld: ["همیشه خیانت", "هر چه شود خیانت می‌کند.", () => "D"],
+    grim: ["کینه‌توز", "همکاری تا نخستین خیانت؛ بعد تا ابد خیانت.", (m, o) => o.includes("D") ? "D" : "C"],
+    tf2t: ["بخشنده", "فقط وقتی تلافی می‌کند که حریف دو بار پشت سر هم خیانت کند.", (m, o) => o.length > 1 && o[o.length - 1] === "D" && o[o.length - 2] === "D" ? "D" : "C"],
+    rnd: ["تصادفی", "با شانس برابر همکاری یا خیانت.", () => Math.random() < .5 ? "C" : "D"],
+    det: ["زیرک", "اول خیانت می‌کند؛ اگر حریف تلافی نکرد، به سوءاستفاده ادامه می‌دهد، وگرنه تلافی به مثل.", (m, o) => !o.length ? "D" : o.includes("D") ? o[o.length - 1] : "D"]
+  };
+  const keys = Object.keys(ST);
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">دو نفر هر دور تصمیم می‌گیرند همکاری کنند یا خیانت. اگر هر دو همکاری کنند هر کدام ۳ امتیاز، اگر هر دو خیانت ۱ امتیاز؛ اگر یکی خیانت کند و دیگری همکاری، خائن ۵ و ساده‌لوح ۰. در یک دور، خیانت همیشه به‌صرفه‌تر است. اما وقتی بازی تکرار می‌شود چه؟</p>
+    <p style="margin:0">یک راهبرد را برای خودتان انتخاب کنید تا در مسابقه‌ای دوره‌ای با بقیه بازی کند (هر جفت ۲۰۰ دور):</p>
+    <div class="choice">${keys.map(k => `<button type="button" data-k="${k}"><b>${ST[k][0]}</b> — ${ST[k][1]}</button>`).join("")}</div>
+    <label class="field">احتمال خطا (گاهی کسی می‌خواهد همکاری کند ولی دستش می‌لغزد): <b id="nv"></b><input type="range" id="n" min="0" max="10" step="1" value="0"></label>`;
+  const n = pn.querySelector("#n"); let mine = null;
+  const nv = () => pn.querySelector("#nv").textContent = fa(+n.value) + "٪"; n.addEventListener("input", () => { nv(); if (mine) run(); }); nv();
+  pn.addEventListener("click", e => { const b = e.target.closest("[data-k]"); if (!b) return; mine = b.dataset.k; pn.querySelectorAll("[data-k]").forEach(x => x.setAttribute("aria-pressed", x === b)); run(); });
+  function play(a, b, noise){
+    const ha = [], hb = []; let sa = 0, sb = 0;
+    for (let r = 0; r < 200; r++) {
+      let x = ST[a][2](ha, hb), y = ST[b][2](hb, ha);
+      if (Math.random() < noise) x = x === "C" ? "D" : "C";
+      if (Math.random() < noise) y = y === "C" ? "D" : "C";
+      const p = PAY[x + y]; sa += p[0]; sb += p[1]; ha.push(x); hb.push(y);
+    }
+    return [sa, sb];
+  }
+  function run(){
+    const noise = +n.value / 100, tot = Object.fromEntries(keys.map(k => [k, 0])), REP = 5;
+    for (let rep = 0; rep < REP; rep++) for (let i = 0; i < keys.length; i++) for (let j = i; j < keys.length; j++) {
+      const [a, b] = play(keys[i], keys[j], noise); tot[keys[i]] += a; if (i !== j) tot[keys[j]] += b;
+    }
+    const per = k => tot[k] / REP / keys.length / 200;
+    const rank = keys.slice().sort((a, b) => tot[b] - tot[a]), top = per(rank[0]);
+    const place = rank.indexOf(mine) + 1;
+    out.innerHTML = `<div class="res"><h3>راهبرد شما («${ST[mine][0]}») ${place === 1 ? "اول شد" : `رتبهٔ ${fa(place)} از ${fa(keys.length)} را گرفت`}</h3>
+      <div class="bars">${rank.map(k => `<div><span>${ST[k][0]}</span><i class="${k === mine ? "you" : ""}" style="width:${per(k) / top * 100}%"></i><span>${fa(per(k), 2)} در هر دور</span></div>`).join("")}</div>
+      <p style="margin-top:10px">رابرت اکسلراد (۱۹۸۰) همین مسابقه را با راهبردهایی برگزار کرد که پژوهشگران فرستاده بودند. ساده‌ترین برنامه، «تلافی به مثل» آناتول راپاپورت، برنده شد — و در دور دوم هم با آنکه همه می‌دانستند، باز برد. درسی که اکسلراد گرفت: راهبرد موفق <b>خوش‌نیت</b> است (اول خیانت نمی‌کند)، <b>تلافی‌گر</b> است (سوءاستفاده را بی‌پاسخ نمی‌گذارد)، <b>بخشنده</b> است (کینه نگه نمی‌دارد) و <b>روشن</b> است (حریف می‌فهمد با که طرف است).</p>
+      <p>لغزندهٔ خطا را بالا ببرید: وقتی گاهی کسی ناخواسته خیانت می‌کند، «تلافی به مثل» در زنجیرهٔ انتقام گیر می‌افتد و راهبردهای بخشنده‌تر جلو می‌زنند. نتیجه به ترکیب جمعیت هم بستگی دارد؛ در جمعی پر از «همیشه همکاری»، خائن سود می‌برد. این همان پرسش هابز است: همکاری بدون «لویاتان» از کجا می‌آید؟</p>
+      ${lk(["hobbes-three-causes-of-conflict-leviathan", "hobbes-fear-sovereign-minimal-morality", "hobbes-locke-state-of-nature-contrast", "soc:collective-action", "soc:generalized-trust"])}</div>`;
+  }
+}
+
+/* ——— 4. what philosophers think ——— */
+const GUESS = [
+  ["در نظرسنجی فیل‌پیپرز (۲۰۲۰) از حدود ۱۸۰۰ فیلسوف دانشگاهی، چند درصد «سازگارگرا» بودند — یعنی باور داشتند ارادهٔ آزاد با جبر علّی سازگار است؟", 0, 100, 1, 59, "حدود ۵۹٪. اختیارگرایان (ارادهٔ آزاد هست و با جبر ناسازگار است) حدود ۱۹٪ و منکران ارادهٔ آزاد حدود ۱۱٪ بودند.", "٪", ["free-will", "foreknowledge-free-will-critique"], "Bourget & Chalmers (2023), Philosophers' Imprint"],
+  ["در همان نظرسنجی، چند درصد فیلسوفان گفتند در مسئلهٔ تراموا اهرم را می‌کشند؟", 0, 100, 1, 63, "حدود ۶۳٪ — کمتر از ۸۱٪ مردم عادی در مطالعهٔ عواد. حدود ۱۳٪ گفتند نمی‌کشند و بقیه گزینه‌های دیگر (مثلاً «بستگی دارد») را برگزیدند.", "٪", ["trolley"], "Bourget & Chalmers (2023)"],
+  ["چند درصد فیلسوفان «واقع‌گرای اخلاقی» بودند — یعنی باور داشتند گزاره‌های اخلاقی می‌توانند مستقل از نظر ما درست یا نادرست باشند؟", 0, 100, 1, 62, "حدود ۶۲٪؛ ضدواقع‌گرایان حدود ۲۶٪. بسیاری از غیرفیلسوفان انتظار دارند فیلسوفان نسبی‌گراتر باشند.", "٪", ["anti-moralist-revaluation", "liberty-limits-and-moral-order"], "Bourget & Chalmers (2023)"],
+  ["چند درصد فیلسوفان ذهن را «فیزیکی» می‌دانستند (فیزیکالیسم)؟", 0, 100, 1, 52, "حدود ۵۲٪؛ حدود ۳۲٪ ناـفیزیکالیسم را پذیرفتند. یکی از پرمناقشه‌ترین پرسش‌های فلسفه هنوز تقریباً دوپاره است.", "٪", ["mind", "psy:phil-mind"], "Bourget & Chalmers (2023)"],
+  ["در اخلاق هنجاری، سه نظریهٔ اصلی وظیفه‌گرایی، پیامدگرایی و اخلاق فضیلت‌اند. بیشترین طرفدار (حدود ۳۷٪) از آنِ کدام بود؟ لغزنده را روی ۱ (وظیفه)، ۲ (پیامد) یا ۳ (فضیلت) بگذارید.", 1, 3, 1, 3, "اخلاق فضیلت حدود ۳۷٪، وظیفه‌گرایی حدود ۳۲٪ و پیامدگرایی حدود ۳۱٪ — فاصله‌ها کم است و هیچ نظریه‌ای اکثریت ندارد.", "", ["kant-duty-ethics-universal-law", "utilitarianism-bentham-mill-earthly-ethics"], "Bourget & Chalmers (2023)"]
+];
+
+LabKit.start({
+  wiki: "phil", first: "trolley",
+  labels: {
+    "trolley": "مسئلهٔ تراموا", "utilitarianism-bentham-mill-earthly-ethics": "سودگرایی", "kant-duty-ethics-universal-law": "اخلاق وظیفه‌گرای کانت", "moral-luck": "بخت اخلاقی",
+    "exception-trolley-oedipus-responsibility": "تراموا و مسئولیت در بحران", "veil-of-ignorance": "پردهٔ بی‌خبری", "hayek-rule-of-law-justice-liberty": "هایک و عدالت",
+    "psy:justice-theory": "عدالت و برابری (روان)", "hobbes-three-causes-of-conflict-leviathan": "هابز: سه سرچشمهٔ نزاع", "hobbes-fear-sovereign-minimal-morality": "هابز: ترس و حاکم",
+    "hobbes-locke-state-of-nature-contrast": "وضع طبیعی: هابز و لاک", "soc:collective-action": "کنش جمعی (جامعه)", "soc:generalized-trust": "اعتماد تعمیم‌یافته (جامعه)",
+    "free-will": "ارادهٔ آزاد", "foreknowledge-free-will-critique": "علم پیشین و اختیار", "anti-moralist-revaluation": "نیچه و بازسنجی ارزش‌ها", "liberty-limits-and-moral-order": "آزادی و نظم اخلاقی",
+    "mind": "فلسفهٔ ذهن", "psy:phil-mind": "فلسفهٔ ذهن (روان)"
+  },
+  exps: {
+    trolley: ["تراموا", "یک جان در برابر پنج جان، سه بار", "سه نسخه از مشهورترین آزمایش فکری اخلاق. حساب در هر سه یکی است؛ ببینید آیا پاسخ شما هم یکی می‌ماند.", trolley],
+    veil: ["پردهٔ بی‌خبری", "اگر ندانید کجا به دنیا می‌آیید، کدام جامعه را می‌خواهید؟", "جان رالز پیشنهاد کرد برای سنجیدن عدالت یک جامعه، تصور کنیم قاعده‌هایش را پیش از دانستن جایگاه خودمان برمی‌گزینیم: نه می‌دانیم فقیر خواهیم بود یا ثروتمند، نه زن یا مرد، نه از کدام قوم.", veil],
+    ipd: ["دوراهی زندانی", "مسابقهٔ اکسلراد: همکاری از کجا می‌آید؟", "هابز گمان می‌کرد بدون قدرتی بالای سر همه، همکاری پایدار نمی‌ماند. نظریهٔ بازی‌ها نشان داد که وقتی آدم‌ها بارها با هم روبه‌رو می‌شوند، ماجرا پیچیده‌تر است.", ipd],
+    guess: ["فیلسوفان چه فکر می‌کنند؟", "اول حدس بزنید", "بزرگ‌ترین نظرسنجی از فیلسوفان دانشگاهی (فیل‌پیپرز ۲۰۲۰). پیش از دیدن پاسخ، حدس بزنید.", LabKit.guess(GUESS)]
+  }
+});
+</script>
+</body>
+</html>

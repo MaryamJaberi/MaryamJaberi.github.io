@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آزمایشگاه جامعه | ویکی جامعه | دانش‌سرا</title>
+<meta name="description" content="چهار آزمایش تعاملی جامعه‌شناسی: جدایی‌گزینی شلینگ، مدل آستانهٔ گرانووتر، بازی کالای عمومی و اول حدس بزن.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>:root{--lab:var(--fam-soc);--lab-soft:var(--fam-soc-soft)}</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../soc/">ویکی جامعه</a><i>›</i><a href="../../soc/tools/">ابزارها</a><i>›</i><b>آزمایشگاه جامعه</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>آزمایشگاه جامعه</h1>
+<p class="what">جامعه از رفتار تک‌تک ما ساخته می‌شود، اما نتیجهٔ جمعی اغلب چیزی است که هیچ‌کس نخواسته بود. در این چهار آزمایش قاعده‌های ساده را عوض کنید و ببینید چه الگویی از جمع بیرون می‌آید. هر آزمایش به مدخل‌هایی از ویکی وصل است. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note">این‌ها مدل‌های ساده‌شدهٔ آموزشی‌اند. هر مدل یک سازوکار را جدا نشان می‌دهد و ادعا نمی‌کند که جامعهٔ واقعی فقط همین است؛ برای شواهد و نقدها به مدخل‌های پیوندشده برگردید.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · آزمایشگاه جامعه</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script>
+const {fa, css, lk} = LabKit;
+const rnd = n => Math.floor(Math.random() * n);
+
+/* ——— 1. Schelling ——— */
+function schelling(pn, out){
+  const N = 34, EMPTY = 0.12;
+  pn.innerHTML = `<div class="row2">
+    <label class="field">هر کس می‌خواهد دست‌کم این سهم از همسایه‌هایش شبیه خودش باشند: <b id="tv"></b><input type="range" id="t" min="0" max="75" step="5" value="30"></label>
+    <div class="stats"><div>همسایه‌های هم‌گروه (میانگین)<span class="big" id="seg"></span></div><div>ناراضی‌ها<span class="big" id="unh"></span></div><div>دور<span class="big" id="rd"></span></div></div></div>
+    <canvas id="cv" width="680" height="680" aria-label="شبکهٔ خانه‌ها با دو گروه" role="img"></canvas>
+    <div class="btnrow"><button type="button" class="btn" id="go">اجرا</button><button type="button" class="btn ghost" id="rs">چیدمان تصادفی تازه</button></div>`;
+  const cv = pn.querySelector("#cv"), cx = cv.getContext("2d"), t = pn.querySelector("#t");
+  let G, round = 0, timer = null, startSeg = 0;
+  const reset = () => { G = Array.from({length: N * N}, () => Math.random() < EMPTY ? 0 : (Math.random() < .5 ? 1 : 2)); round = 0; startSeg = stats().seg; draw(); };
+  const nb = i => { const x = i % N, y = (i / N) | 0, r = []; for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) { if (!dx && !dy) continue; const xx = x + dx, yy = y + dy; if (xx >= 0 && yy >= 0 && xx < N && yy < N) r.push(yy * N + xx); } return r; };
+  const NB = Array.from({length: N * N}, (_, i) => nb(i));
+  const share = i => { let s = 0, o = 0; for (const j of NB[i]) { if (!G[j]) continue; o++; if (G[j] === G[i]) s++; } return o ? s / o : 1; };
+  function stats(){ let tot = 0, n = 0, un = 0; const th = +t.value / 100; for (let i = 0; i < G.length; i++) { if (!G[i]) continue; const s = share(i); tot += s; n++; if (s < th) un++; } return {seg: tot / n, un}; }
+  function draw(){
+    const c1 = css("--fam-soc"), c2 = css("--warn"), bg = css("--surface-subtle"), s = cv.width / N;
+    cx.fillStyle = bg; cx.fillRect(0, 0, cv.width, cv.height);
+    for (let i = 0; i < G.length; i++) { if (!G[i]) continue; cx.fillStyle = G[i] === 1 ? c1 : c2; cx.fillRect((i % N) * s + 1, ((i / N) | 0) * s + 1, s - 2, s - 2); }
+    const st = stats();
+    pn.querySelector("#seg").textContent = fa(st.seg * 100) + "٪";
+    pn.querySelector("#unh").textContent = fa(st.un);
+    pn.querySelector("#rd").textContent = fa(round);
+    return st;
+  }
+  function step(){
+    const th = +t.value / 100, empties = [], unhappy = [];
+    for (let i = 0; i < G.length; i++) { if (!G[i]) empties.push(i); else if (share(i) < th) unhappy.push(i); }
+    if (!unhappy.length) return false;
+    unhappy.sort(() => Math.random() - .5);
+    for (const i of unhappy) { if (!empties.length) break; const k = rnd(empties.length), j = empties[k]; G[j] = G[i]; G[i] = 0; empties[k] = i; }
+    round++; return true;
+  }
+  function run(){
+    clearInterval(timer);
+    timer = setInterval(() => { const moved = step(); const st = draw(); if (!moved || round >= 80) { clearInterval(timer); report(st); } }, 70);
+  }
+  function report(st){
+    const th = +t.value;
+    const mild = th <= 40;
+    out.innerHTML = `<div class="res"><h3>${st.un ? "هنوز کسانی ناراضی‌اند" : "همه راضی‌اند"}</h3>
+      <p>در آغاز، به‌طور میانگین حدود ${fa(startSeg * 100)}٪ همسایه‌های هر کس هم‌گروهش بودند (چیدمان تصادفی). حالا این عدد ${fa(st.seg * 100)}٪ است، در حالی که هیچ‌کس بیش از ${fa(th)}٪ نخواسته بود.</p>
+      <p>${mild ? "این نکتهٔ اصلی شلینگ (۱۹۷۱) است: ترجیح‌های ملایم فردی می‌توانند جدایی شدید جمعی بسازند. از روی نقشهٔ یک شهر نمی‌شود فهمید ساکنانش چقدر تبعیض‌گرا هستند." : "با سخت‌گیری زیاد ممکن است هیچ چیدمانی همه را راضی نکند و جابه‌جایی ادامه پیدا کند. در جامعهٔ واقعی این همان جایی است که محله‌ها پیوسته عوض می‌شوند."}</p>
+      <p>مدل عمداً قیمت خانه، درآمد، قانون و تبعیض نهادی را کنار گذاشته است. جدایی‌گزینی واقعی معمولاً از همهٔ این‌ها با هم می‌آید؛ مدل فقط نشان می‌دهد که حتی بدون آن‌ها هم ممکن است.</p>
+      ${lk(["micromotives-and-segregation-schelling", "social-capital", "threshold-models-of-collective-behaviour"])}</div>`;
+  }
+  t.addEventListener("input", () => { pn.querySelector("#tv").textContent = fa(+t.value) + "٪"; draw(); });
+  pn.querySelector("#go").addEventListener("click", run);
+  pn.querySelector("#rs").addEventListener("click", () => { clearInterval(timer); out.innerHTML = ""; reset(); });
+  pn.querySelector("#tv").textContent = fa(+t.value) + "٪";
+  reset();
+}
+
+/* ——— 2. Granovetter threshold ——— */
+function threshold(pn, out){
+  const N = 100;
+  pn.innerHTML = `<div class="row2">
+    <label class="field">میانگین آستانه (چند نفر باید پیش از من به میدان آمده باشند): <b id="mv"></b><input type="range" id="m" min="0" max="60" step="1" value="25"></label>
+    <label class="field">پراکندگی آستانه‌ها (همه شبیه هم ← خیلی متفاوت): <b id="sv"></b><input type="range" id="s" min="1" max="40" step="1" value="12"></label></div>
+    <div class="chips"><button type="button" id="gran">نمونهٔ گرانووتر: آستانه‌های ۰ تا ۹۹</button><button type="button" id="gran2">همان، با یک تغییر کوچک</button><button type="button" id="rand">جمعیت تصادفی تازه</button></div>
+    <div class="stats"><div>شمار نهایی کسانی که می‌پیوندند<span class="big" id="fin"></span></div></div>
+    <div class="chartbox" id="ch"></div>`;
+  const m = pn.querySelector("#m"), s = pn.querySelector("#s");
+  let T = [], seed = [];
+  const normal = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+  const fresh = () => { seed = Array.from({length: N}, normal); };
+  const fromSliders = () => { T = seed.map(z => Math.max(0, Math.min(99, Math.round(+m.value + z * +s.value)))); };
+  function cascade(){ let a = 0; for (;;) { const n = T.filter(x => x <= a).length; if (n === a) return a; a = n; } }
+  function render(note){
+    pn.querySelector("#mv").textContent = fa(+m.value) + " نفر"; pn.querySelector("#sv").textContent = fa(+s.value);
+    const fin = cascade(); pn.querySelector("#fin").textContent = fa(fin) + " از " + fa(N);
+    // cumulative curve: F(x) = number with threshold <= x, vs diagonal
+    const W = 640, H = 320, P = 44, X = x => P + x / N * (W - 2 * P), Y = y => H - P - y / N * (H - 2 * P);
+    let path = ""; for (let x = 0; x <= N; x++) { const y = T.filter(v => v <= x).length; path += (x ? "L" : "M") + X(x).toFixed(1) + " " + Y(y).toFixed(1); }
+    const ink = css("--ink-3"), c = css("--fam-soc"), w = css("--warn");
+    pn.querySelector("#ch").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;direction:ltr" role="img" aria-label="منحنی آستانه‌ها در برابر خط برابری">
+      <line x1="${X(0)}" y1="${Y(0)}" x2="${X(N)}" y2="${Y(N)}" stroke="${ink}" stroke-dasharray="4 4"/>
+      <path d="${path}" fill="none" stroke="${c}" stroke-width="2.5"/>
+      <circle cx="${X(fin)}" cy="${Y(fin)}" r="6" fill="${w}"/>
+      <text x="${X(N)}" y="${H - 10}" text-anchor="end" font-size="17" fill="${ink}">شمار کسانی که تا الان آمده‌اند ←</text>
+      <text x="${P}" y="${P - 12}" font-size="17" fill="${ink}">چند نفر آستانه‌شان پر شده</text>
+      <text x="${X(fin) + 9}" y="${Y(fin) + 4}" font-size="18" font-weight="700" fill="${w}">توقف: ${fa(fin)}</text></svg>
+      <p class="muted" style="margin:6px 0 0;font-size:.85rem">منحنی رنگی: چند نفر حاضرند بیایند اگر x نفر آمده باشند. خط‌چین: x = y. موج تا جایی پیش می‌رود که منحنی برای نخستین بار به زیر خط‌چین برسد.</p>`;
+    out.innerHTML = `<div class="res"><h3>${fin >= 90 ? "تقریباً همه آمدند" : fin <= 5 ? "موج شکل نگرفت" : "موج در میانه ایستاد"}</h3>
+      ${note ? `<p>${note}</p>` : ""}
+      <p>گرانووتر (۱۹۷۸) نشان داد که از روی میانگینِ نارضایتی یا میانگینِ تمایل افراد نمی‌شود پیش‌بینی کرد یک جمع اقدام می‌کند یا نه. آنچه تعیین‌کننده است <b>توزیع</b> آستانه‌هاست: آیا به‌قدر کافی آدم با آستانهٔ پایین هست که موج را راه بیندازد، و آیا پشت سرشان آستانه‌های بعدی بدون شکاف ردیف شده‌اند؟</p>
+      <p>پیامد دیگر: دو جمع که از نظر افکار تقریباً یکسان‌اند، می‌توانند رفتار کاملاً متفاوتی نشان دهند. برای همین گزارش‌ها پس از واقعه («همه ناراضی بودند») یا («هیچ‌کس ناراضی نبود») هر دو گمراه‌کننده‌اند.</p>
+      ${lk(["threshold-models-of-collective-behaviour", "collective-action", "tobacco-protest-mobilization", "weak-ties"])}</div>`;
+  }
+  m.addEventListener("input", () => { fromSliders(); render(); });
+  s.addEventListener("input", () => { fromSliders(); render(); });
+  pn.querySelector("#rand").addEventListener("click", () => { fresh(); fromSliders(); render(); });
+  pn.querySelector("#gran").addEventListener("click", () => { T = Array.from({length: N}, (_, i) => i); render("صد نفر با آستانه‌های ۰، ۱، ۲ … ۹۹: نفر اول بدون هیچ همراهی می‌آید، دومی با دیدن یک نفر، سومی با دیدن دو نفر… و همه می‌آیند."); });
+  pn.querySelector("#gran2").addEventListener("click", () => { T = Array.from({length: N}, (_, i) => i); T[1] = 2; render("فقط یک نفر عوض شد: کسی که آستانه‌اش ۱ بود حالا ۲ است. نفر اول می‌آید، اما دیگر کسی نیست که با دیدن یک نفر بیاید؛ موج همان‌جا می‌میرد. فردا روزنامه‌ها می‌نویسند «یک آشوبگر تنها»."); });
+  fresh(); fromSliders(); render();
+}
+
+/* ——— 3. public goods game ——— */
+function pgg(pn, out){
+  const R = 10, E = 20, MULT = 1.6, NAMES = ["آرش", "بهار", "کاوه"];
+  let pun = false, round = 0, hist = [], bots = [12, 10, 8], earn = [0, 0, 0, 0];
+  pn.innerHTML = `<div class="chips" role="group" aria-label="قاعدهٔ بازی"><button type="button" data-p="0" aria-pressed="true">بدون تنبیه</button><button type="button" data-p="1" aria-pressed="false">با امکان تنبیه</button></div>
+    <p style="margin:0;line-height:1.9">شما و سه نفر دیگر هر دور ${fa(E)} سکه دارید. هر چه در صندوق مشترک بگذارید ${fa(MULT, 1)} برابر می‌شود و میان هر چهار نفر <b>مساوی</b> تقسیم می‌شود — چه گذاشته باشند چه نه. سود جمع وقتی بیشترین است که همه همه را بگذارند؛ سود فرد وقتی که خودش هیچ نگذارد.</p>
+    <label class="field">سهم شما در این دور: <b id="cv"></b><input type="range" id="c" min="0" max="${E}" step="1" value="10"></label>
+    <div class="btnrow"><button type="button" class="btn" id="play">بازی این دور</button><button type="button" class="btn ghost" id="again">از نو</button></div>
+    <div id="log"></div>`;
+  const c = pn.querySelector("#c");
+  const upd = () => pn.querySelector("#cv").textContent = fa(+c.value) + " سکه";
+  c.addEventListener("input", upd); upd();
+  pn.querySelector('[role=group]').addEventListener("click", e => { const b = e.target.closest("[data-p]"); if (!b || round) return; pun = b.dataset.p === "1"; pn.querySelectorAll("[data-p]").forEach(x => x.setAttribute("aria-pressed", x === b)); });
+  pn.querySelector("#again").addEventListener("click", () => { round = 0; hist = []; bots = [12, 10, 8]; earn = [0, 0, 0, 0]; out.innerHTML = ""; pn.querySelector("#log").innerHTML = ""; pn.querySelector("#play").disabled = false; });
+  pn.querySelector("#play").addEventListener("click", () => {
+    if (round >= R) return;
+    const me = +c.value, all = [me, ...bots.map(Math.round)], pot = all.reduce((a, b) => a + b, 0) * MULT / 4;
+    const pay = all.map(x => E - x + pot);
+    let note = "";
+    if (pun) {
+      const avg = all.reduce((a, b) => a + b, 0) / 4;
+      all.forEach((x, i) => { if (x < avg - 3) { const hits = all.filter((y, j) => j !== i && y >= avg - 1).length; pay[i] -= 3 * hits; all.forEach((y, j) => { if (j !== i && y >= avg - 1) pay[j] -= 1; }); if (i === 0 && hits) note = `دیگران شما را تنبیه کردند (−${fa(3 * hits)} سکه) و خودشان هم برای تنبیه هزینه دادند.`; } });
+    }
+    pay.forEach((p, i) => earn[i] += p);
+    hist.push(all);
+    // bots: conditional cooperators — match a bit less than what others gave; with punishment they lean towards the average and avoid being the lowest
+    bots = bots.map((b, k) => { const others = all.filter((_, j) => j !== k + 1); const oavg = others.reduce((a, b) => a + b, 0) / 3; let n = pun ? Math.max(oavg, b) + 1.2 : oavg * 0.85 + (Math.random() - .5) * 2; return Math.max(0, Math.min(E, n)); });
+    round++;
+    pn.querySelector("#log").innerHTML = `<p style="margin:0">دور ${fa(round)} از ${fa(R)}: سهم‌ها — شما ${fa(all[0])}، ${NAMES.map((n, i) => `${n} ${fa(all[i + 1])}`).join("، ")}. سود شما در این دور ${fa(pay[0], 1)} سکه. ${note}</p>`;
+    if (round >= R) { pn.querySelector("#play").disabled = true; finish(); }
+  });
+  function finish(){
+    const avg = hist.map(r => r.reduce((a, b) => a + b, 0) / 4), mine = hist.map(r => r[0]);
+    const W = 620, H = 240, P = 40, X = i => P + i / (R - 1) * (W - 2 * P), Y = v => H - P - v / E * (H - 2 * P);
+    const line = (a, col, d) => `<path d="${a.map((v, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(v).toFixed(1)).join("")}" fill="none" stroke="${col}" stroke-width="2.5" ${d ? 'stroke-dasharray="5 4"' : ""}/>`;
+    const ink = css("--ink-3");
+    out.innerHTML = `<div class="res"><h3>${pun ? "با تنبیه" : "بدون تنبیه"}: میانگین سهم از ${fa(avg[0], 1)} به ${fa(avg[R - 1], 1)} سکه رسید</h3>
+      <div class="chartbox"><svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;direction:ltr" role="img" aria-label="سهم‌ها در ده دور">
+      <line x1="${P}" y1="${Y(0)}" x2="${W - P}" y2="${Y(0)}" stroke="${ink}"/>${line(avg, css("--fam-soc"))}${line(mine, css("--ink"), 1)}
+      ${[0, 10, 20].map(v => `<line x1="${P}" y1="${Y(v)}" x2="${W - P}" y2="${Y(v)}" stroke="${ink}" stroke-opacity=".25"/><text x="${P - 6}" y="${Y(v) + 5}" text-anchor="end" font-size="15" fill="${ink}">${fa(v)}</text>`).join("")}<text x="${P}" y="${H - 8}" font-size="15" fill="${ink}">دور ۱</text><text x="${W - P}" y="${H - 8}" text-anchor="end" font-size="15" fill="${ink}">دور ${fa(R)}</text></svg></div>
+      <p style="font-size:.85rem;color:var(--ink-2)">خط رنگی: میانگین گروه · خط‌چین: شما. درآمد کل شما ${fa(earn[0], 0)} سکه؛ میانگین سه نفر دیگر ${fa((earn[1] + earn[2] + earn[3]) / 3, 0)}.</p>
+      <p>در آزمایش‌های واقعی (فر و گشتر، ۲۰۰۰ و ۲۰۰۲) الگو روشن بود: بدون امکان تنبیه، سهم‌ها دور به دور پایین می‌آید چون «همکاری مشروط» با دیدن چند سواری مجانی فرومی‌ریزد. وقتی اعضا می‌توانستند با هزینهٔ خودشان کم‌گذارها را تنبیه کنند، سهم‌ها بالا رفت و بالا ماند. بیشتر مردم نه کاملاً خودخواه‌اند نه کاملاً نوع‌دوست؛ «همکار مشروط»اند.</p>
+      <p>مدل این صفحه سادهٔ آن یافته است؛ سه بازیکن دیگر برنامه‌اند، نه آدم. نقدها هم مهم‌اند: در برخی جامعه‌ها تنبیه به «انتقام‌گیری» از همکاران کشیده شد و سود جمع را کم کرد (هرمان و همکاران، ۲۰۰۸).</p>
+      ${lk(["collective-action", "generalized-trust", "social-capital", "market-norms-crowding-out-fine-vs-price"])}</div>`;
+  }
+}
+
+/* ——— 4. guess first ——— */
+const GUESS = [
+  ["در آزمایش میلگرم (۱۹۶۳)، چند درصد شرکت‌کنندگان به دستور آزمایشگر تا بیشترین «شوک» (۴۵۰ ولت) پیش رفتند؟", 0, 100, 1, 65, "۲۶ نفر از ۴۰ نفر، یعنی ۶۵٪. پیش از آزمایش، روان‌پزشکانی که میلگرم از آن‌ها پرسید گفته بودند کمتر از ۱٪. بازخوانی‌های بعدی نشان داد بسیاری از شرکت‌کنندگان شک داشتند شوک واقعی است و نتیجه در نسخه‌های مختلف بسیار تغییر می‌کرد؛ اما اینکه موقعیت می‌تواند آدم‌های معمولی را به اطاعت بکشاند، بارها تکرار شده است.", "٪", ["fromm-bureaucratic-obedience-eichmann", "fromm-why-obedience-is-virtue"], "Milgram (1963), Journal of Abnormal and Social Psychology"],
+  ["در آزمایش هم‌رنگی آش، وقتی بقیهٔ گروه آشکارا پاسخ غلط می‌دادند، چند درصد پاسخ‌های شرکت‌کنندگان هم غلطِ گروه را تکرار کرد؟", 0, 100, 1, 33, "حدود یک‌سوم (۳۲ تا ۳۷٪ در گزارش‌های آش). حدود سه‌چهارم افراد دست‌کم یک بار هم‌رنگ شدند، اما یک‌چهارم هرگز نشدند — و وجود فقط یک همراه مخالف، هم‌رنگی را به‌شدت کم می‌کرد.", "٪", ["meaning-of-signs-and-norm-change", "proverbs-as-social-norm-shorthand"], "Asch (1956), Psychological Monographs"],
+  ["در پژوهش گرانووتر دربارهٔ پیدا کردن کار، از کسانی که کار را از راه یک آشنا پیدا کرده بودند، چند درصد آن آشنا را «فقط گاهی یا به‌ندرت» می‌دیدند؟", 0, 100, 1, 84, "حدود ۸۴٪. اطلاعات تازه بیشتر از «پیوندهای ضعیف» می‌رسد، چون دوستان نزدیک ما همان چیزهایی را می‌دانند که ما می‌دانیم.", "٪", ["weak-ties", "network-society"], "Granovetter (1973), American Journal of Sociology"],
+  ["در مهدکودک‌هایی در حیفا، پس از اینکه برای دیر آمدن والدین جریمه گذاشتند، شمار دیر آمدن‌ها چند درصد تغییر کرد؟", -100, 150, 5, 100, "تقریباً دو برابر شد (حدود +۱۰۰٪) و با برداشتن جریمه هم پایین برنگشت. جریمه، احساس شرم را به یک «قیمت» تبدیل کرد: حالا دیر آمدن خدمتی بود که خریده می‌شد.", "٪", ["market-norms-crowding-out-fine-vs-price"], "Gneezy & Rustichini (2000), Journal of Legal Studies"],
+  ["در آزمایش «جهان کوچک» میلگرم، نامه‌هایی که به مقصد رسیدند به‌طور میانگین از دست چند واسطه گذشتند؟", 1, 20, 0.5, 5.2, "حدود ۵ واسطه (۵٫۲) — ریشهٔ عبارت «شش درجهٔ جدایی». اما فقط حدود یک‌پنجم نامه‌ها به مقصد رسیدند و این عدد را باید با احتیاط خواند.", " نفر", ["network-society", "weak-ties"], "Travers & Milgram (1969), Sociometry"],
+  ["به گفتهٔ رابین دانبار، یک انسان به‌طور معمول چند رابطهٔ اجتماعیِ پایدار و معنادار می‌تواند نگه دارد؟", 10, 500, 10, 150, "حدود ۱۵۰ (با بازهٔ تقریبی ۱۰۰ تا ۲۵۰). این عدد از نسبت اندازهٔ قشر مغز در نخستی‌ها برون‌یابی شده و چند بازبینی آماری (مثلاً لیندنفورس و همکاران، ۲۰۲۱) بازهٔ اطمینان آن را بسیار گسترده‌تر یافته‌اند.", " نفر", ["dunbar-number-gossip-theory"], "Dunbar (1992), Journal of Human Evolution"]
+];
+
+LabKit.start({
+  wiki: "soc", first: "schelling",
+  labels: {
+    "micromotives-and-segregation-schelling": "مدل جدایی‌گزینی شلینگ", "social-capital": "سرمایهٔ اجتماعی", "threshold-models-of-collective-behaviour": "مدل آستانه",
+    "collective-action": "کنش جمعی و سواری مجانی", "tobacco-protest-mobilization": "تحریم تنباکو", "weak-ties": "پیوندهای ضعیف", "generalized-trust": "اعتماد تعمیم‌یافته",
+    "market-norms-crowding-out-fine-vs-price": "جریمه یا قیمت؟", "fromm-bureaucratic-obedience-eichmann": "اطاعت بوروکراتیک", "fromm-why-obedience-is-virtue": "چرا فرمانبری فضیلت شد",
+    "meaning-of-signs-and-norm-change": "تغییر هنجار", "proverbs-as-social-norm-shorthand": "مثل‌ها و هنجارها", "network-society": "جامعهٔ شبکه‌ای", "dunbar-number-gossip-theory": "عدد دانبار"
+  },
+  exps: {
+    schelling: ["جدایی‌گزینی", "ترجیح ملایم، جدایی شدید", "دو گروه در یک شهر زندگی می‌کنند و هیچ‌کدام مخالف همسایهٔ متفاوت نیستند؛ فقط هر کس دوست دارد درصد کمی از همسایه‌هایش شبیه خودش باشند. اگر نباشند، خانه عوض می‌کند. این خواستهٔ کوچک را تنظیم کنید و ببینید شهر چه شکلی می‌شود.", schelling],
+    threshold: ["آستانهٔ پیوستن", "چرا جمع‌های همانند رفتار ناهمانند می‌کنند؟", "هر کس یک «آستانه» دارد: اینکه چند نفر باید پیش از او به یک اعتراض، اعتصاب یا مد تازه پیوسته باشند تا او هم بپیوندد. با تغییر میانگین و پراکندگی آستانه‌ها ببینید موج کجا راه می‌افتد و کجا می‌میرد.", threshold],
+    pgg: ["صندوق مشترک", "بازی کالای عمومی: همکاری یا سواری مجانی؟", "این همان مسئلهٔ آب، هوای پاک، مالیات و هر کار جمعی است: اگر همه سهم بگذارند همه سود می‌برند، اما هر کس جداگانه وسوسه می‌شود سهم نگذارد و از سهم دیگران بخورد. ده دور بازی کنید، یک بار بدون تنبیه و یک بار با آن.", pgg],
+    guess: ["اول حدس بزن", "شش آزمایش مشهور", "پیش از دیدن نتیجه، حدس خود را با لغزنده بزنید. فاصلهٔ حدس ما با نتیجه معمولاً خودش درسی دربارهٔ جامعه است.", LabKit.guess(GUESS)]
+  }
+});
+</script>
+</body>
+</html>

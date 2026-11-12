@@ -1,0 +1,47 @@
+/* Shared styles for the wiki labs (soc, phil, tarikh). Each page sets --lab and --lab-soft on :root
+   from the family tokens, e.g. :root{--lab:var(--fam-soc);--lab-soft:var(--fam-soc-soft)} */
+body{background:var(--paper);color:var(--ink)}
+.what{font-size:1.05rem;color:var(--ink-2);max-width:68ch;margin:0 0 18px;line-height:1.9}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.tabs button{font:inherit;min-height:44px;padding:6px 16px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--lab-soft);border-color:var(--lab);color:var(--lab);font-weight:700}
+#exp h2{margin:0 0 6px;font-size:1.45rem;text-wrap:balance}
+.why{color:var(--ink-2);max-width:70ch;margin:0 0 14px;line-height:1.9}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:14px;min-width:0}
+.res{margin-top:14px;background:var(--surface-subtle);border:1px solid var(--line);border-inline-start:4px solid var(--lab);border-radius:12px;padding:14px 16px;line-height:1.9}
+.res h3{margin:0 0 6px;font-size:1.1rem}
+.res p{margin:0 0 8px}
+.field{display:grid;gap:6px;font-size:.92rem;color:var(--ink-2)}
+.field b{color:var(--ink)}
+input[type=range]{width:100%;direction:ltr;accent-color:var(--lab);min-height:32px}
+.row2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-size:.9rem;min-height:40px;padding:4px 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.chips button.on,.chips button[aria-pressed=true]{background:var(--lab-soft);border-color:var(--lab);color:var(--lab);font-weight:700}
+.big{font-size:1.6rem;font-weight:700;color:var(--lab)}
+.stats{display:flex;flex-wrap:wrap;gap:18px}
+.stats div{display:grid;gap:2px;font-size:.85rem;color:var(--ink-2)}
+.chartbox{overflow-x:auto;min-width:0}
+svg text{font-family:inherit}
+.bars{display:grid;gap:8px}
+.bars div{display:grid;grid-template-columns:minmax(90px,34%) 1fr auto;gap:8px;align-items:center;font-size:.88rem}
+.bars i{display:block;height:12px;border-radius:99px;background:var(--lab);min-width:3px}
+.bars i.alt{background:var(--warn)}
+.bars i.you{background:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links a{font-size:.85rem;padding:3px 12px;border-radius:999px;border:1px solid var(--lab);color:var(--lab);text-decoration:none}
+.links a:hover{background:var(--lab-soft)}
+.q{display:grid;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.q:last-child{border-bottom:0}
+.q p{margin:0;line-height:1.9}
+.ans{background:var(--surface-subtle);border-radius:10px;padding:10px 12px;font-size:.92rem;line-height:1.9}
+.src{display:block;font-size:.8rem;color:var(--ink-3);margin-top:4px}
+.btn{min-height:44px}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px}
+.note.foot{margin-top:30px}
+.tt{border-collapse:collapse;width:100%;font-size:.88rem}
+.tt th,.tt td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:start;vertical-align:top}
+.choice{display:grid;gap:8px}
+.choice button{font:inherit;text-align:start;min-height:44px;padding:10px 14px;border-radius:12px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer;line-height:1.8}
+.choice button[aria-pressed=true]{border-color:var(--lab);background:var(--lab-soft)}
+canvas{max-width:100%;display:block;border-radius:10px}
