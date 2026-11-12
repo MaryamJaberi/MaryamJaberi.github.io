@@ -17,6 +17,17 @@ for f in flows:
             d = load(f'{R}/iran/{n["iran"].split(":")[1]}.json')
             iran[d['id']] = {'q': d['question']['fa'], 'f': d['finding']['fa'], 'g': d['grade'], 'y': d['year']}
 titles = {w: {'t': reg[w]['title']['fa'], 'u': '../' + reg[w]['url']} for f in flows for n in f['nodes'] for w in n['wiki'] + f['wiki']}
+# Where each chain sits in the whole project: wikis, Iran notes, Sakht organs it touches.
+organs = load(f'{R}/data/sakht/sakht.json')['organs']
+WN = {'psy': 'روان', 'soc': 'جامعه', 'phil': 'فلسفه', 'tabar': 'تبار', 'tarikh': 'تاریخ', 'miyan': 'میان‌رشته', 'din': 'دین'}
+WU = {'psy': '../psy/', 'soc': '../soc/', 'phil': '../phil/', 'tabar': '../tabar/', 'tarikh': '../tarikh/', 'miyan': './'}
+for f in flows:
+    ids = {w for n in f['nodes'] for w in n['wiki']} | set(f['wiki'])
+    f['place'] = {
+        'wikis': [[k, WN.get(k, k), WU.get(k, '../')] for k in sorted({w.split(':')[0] for w in ids})],
+        'iran': sorted({n['iran'] for n in f['nodes'] if n.get('iran')}),
+        'sakht': [o['k'] for o in organs if ids & set(o.get('wiki', []))],
+    }
 DATA = json.dumps({'flows': flows, 'cand': cand, 'iran': iran, 'wiki': titles}, ensure_ascii=False)
 
 TPL = r'''<!doctype html>
@@ -42,6 +53,9 @@ body{background:var(--paper);color:var(--ink)}
 .head h2{margin:0 0 6px;font-size:1.5rem;text-wrap:balance}
 .head .q{color:var(--ink-2);margin:0 0 8px;font-style:italic}
 .head p{max-width:72ch;line-height:1.9;margin:0 0 8px}
+.place{display:grid;gap:6px;margin:4px 0 16px;padding:10px 14px;border-radius:14px;border:1px dashed var(--line-strong);background:var(--surface-subtle);font-size:.86rem;line-height:1.7}
+.place>div{display:flex;flex-wrap:wrap;gap:5px;align-items:center}.place span{color:var(--ink-3);margin-inline-end:4px}
+.place a{padding:1px 9px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2);text-decoration:none}.place a:hover{border-color:var(--fam-soc);color:var(--fam-soc)}
 .wl{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 16px}
 .wl a{font-size:.83rem;padding:2px 10px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2);text-decoration:none}
 .wl a:hover{border-color:var(--fam-soc);color:var(--fam-soc)}
@@ -103,6 +117,11 @@ const LAYERS = [["ریشه‌ها: قانون، اقتصاد، باور", "--l0"
 const GW = {A: 3, B: 2, C: 1, D: 0}, CW = {"کم": 2, "متوسط": 1, "زیاد": 0}, TW = {"کوتاه": 2, "میان": 1, "بلند": 0};
 const wl = ids => `<div class="wl">${ids.filter((x, i) => ids.indexOf(x) === i && D.wiki[x]).map(x => `<a href="${D.wiki[x].u}">${esc(D.wiki[x].t)}</a>`).join("")}</div>`;
 let F = null, sel = null, cheap = false;
+const place = P => `<div class="place"><b>جای این زنجیره در دانش‌سرا</b>
+  <div><span>ویکی‌ها:</span> ${P.wikis.map(w => `<a href="${w[2]}">${esc(w[1])}</a>`).join("")}</div>
+  ${P.iran.length ? `<div><span>یادداشت‌های ایران:</span> ${P.iran.map(i => `<a href="../iran/#${i.split(":")[1]}">${esc(D.iran[i] ? D.iran[i].q : i)}</a>`).join("")}</div>` : ""}
+  ${P.sakht.length ? `<div><span>ساخت ایران:</span> ${P.sakht.map(k => `<a href="../sakht/#organs">${esc(k)}</a>`).join("")}</div>` : `<div><span>ساخت ایران:</span> <a href="../sakht/">هنوز به اندامی وصل نشده</a></div>`}
+</div>`;
 
 const fl = document.getElementById("flows");
 fl.innerHTML = D.flows.map(f => `<button type="button" data-f="${f.id}">${esc(f.title)}${f.status === "full" ? "" : " <small>· پیش‌نویس</small>"}</button>`).join("");
@@ -115,7 +134,7 @@ function open(id){
   try { history.replaceState(null, "", "#" + F.id); } catch (_) {}
   const lvAt = new Set(F.levers.flatMap(v => v.at));
   const node = n => `<button type="button" class="nd" data-n="${n.id}" style="--c:var(${LAYERS[n.l][1]})"><span>${esc(n.t)}</span><span class="bd">${n.iran && D.iran[n.iran] ? `<span>دادهٔ ایران · ${D.iran[n.iran].g}</span>` : ""}${lvAt.has(n.id) ? `<span class="lv">نقطهٔ عطف</span>` : ""}</span></button>`;
-  document.getElementById("flow").innerHTML = `<div class="head"><h2>${esc(F.title)}</h2><p class="q">${esc(F.q)}</p><p>${esc(F.summary)}</p>${wl(F.wiki)}</div>
+  document.getElementById("flow").innerHTML = `<div class="head"><h2>${esc(F.title)}</h2><p class="q">${esc(F.q)}</p><p>${esc(F.summary)}</p>${wl(F.wiki)}${place(F.place)}</div>
     <div class="lay"><div class="cols" id="cols">${LAYERS.map((L, i) => `<div class="col" style="--c:var(${L[1]})"><h3>${L[0]}</h3>${F.nodes.filter(n => n.l === i).map(node).join("")}</div>`).join("")}</div>
     <aside class="side" id="side" aria-live="polite"></aside></div>
     ${F.loops.length ? `<div class="sec"><h3>حلقه‌ها: جایی که پیامد دوباره ریشه می‌شود</h3><div class="loops">${F.loops.map(l => `<button type="button" data-loop="${l[0]}|${l[1]}">↺ ${esc(nm(l[0]))} ← ${esc(nm(l[1]))}: ${esc(l[2])}</button>`).join("")}</div></div>` : ""}
