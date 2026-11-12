@@ -1,0 +1,112 @@
+{
+ "id": "soc:repeated-games-cooperation",
+ "kind": "concept",
+ "title": {
+  "fa": "بازی تکراری و پیدایش همکاری",
+  "en": "Repeated games and the emergence of cooperation",
+  "nl": "Herhaalde spellen en het ontstaan van samenwerking"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "در «دوراهی زندانی» یک‌باره، خیانت برای هر دو طرف عقلانی است، حتی اگر همکاری برای هر دو بهتر باشد. اما وقتی بازی تکرار می‌شود و آدم‌ها دوباره به هم برمی‌خورند، همکاری می‌تواند پایدار شود: رابرت اکسلرود در مسابقه‌های رایانه‌ای دید راهبرد ساده‌ای به نام «مقابله به مثل» (اول همکاری کن، بعد هر کاری طرف کرد همان را بکن) بهتر از راهبردهای زیرکانه‌تر عمل می‌کند. اعتماد یعنی سایهٔ آینده: هر چه احتمال دیدار دوباره بیشتر و شهرت مهم‌تر، همکاری آسان‌تر.",
+  "en": "In a one-shot prisoner’s dilemma, defecting is rational for both sides even though cooperating would be better for both. But when the game repeats and people meet again, cooperation can become stable: in computer tournaments Robert Axelrod found a simple strategy called tit-for-tat (cooperate first, then do whatever the other did) beat cleverer ones. Trust is the shadow of the future: the likelier another meeting and the more reputation matters, the easier cooperation.",
+  "nl": "In a one-shot prisoner’s dilemma, defecting is rational for both sides even though cooperating would be better for both. But when the game repeats and people meet again, cooperation can become stable: in computer tournaments Robert Axelrod found a simple strategy called tit-for-tat (cooperate first, then do whatever the other did) beat cleverer ones. Trust is the shadow of the future: the likelier another meeting and the more reputation matters, the easier cooperation."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "چهار ویژگی برندهٔ اکسلرود: مهربان (اول خیانت نمی‌کند)، تلافی‌کننده (خیانت بی‌پاسخ نمی‌ماند)، بخشنده (پس از تلافی دوباره همکاری می‌کند) و روشن (طرف می‌فهمد با چه راهبردی روبه‌روست).",
+    "en": "Axelrod’s four winning traits: nice (never defects first), retaliatory (defection is answered), forgiving (returns to cooperation after retaliating) and clear (the other side can tell what strategy it faces).",
+    "nl": "Axelrod’s four winning traits: nice (never defects first), retaliatory (defection is answered), forgiving (returns to cooperation after retaliating) and clear (the other side can tell what strategy it faces)."
+   },
+   "sources": [
+    "src:8956c45168"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پنج سازوکار: نواک پنج راه برای پیدایش همکاری برمی‌شمارد: خویشاوندی، دوسویگی مستقیم (تو به من، من به تو)، دوسویگی غیرمستقیم (شهرت)، ساختار شبکه (همکاران کنار هم خوشه می‌سازند) و انتخاب گروهی.",
+    "en": "Five mechanisms: Nowak lists five routes to cooperation: kin selection, direct reciprocity, indirect reciprocity (reputation), network structure (cooperators cluster) and group selection.",
+    "nl": "Five mechanisms: Nowak lists five routes to cooperation: kin selection, direct reciprocity, indirect reciprocity (reputation), network structure (cooperators cluster) and group selection."
+   },
+   "sources": [
+    "src:40cac9dc77"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نهادهای محلی: الینور استروم نشان داد اجتماعات محلی (آبیاری، مراتع، ماهیگیری) با قواعد روشن، نظارت درونی، مجازات پلکانی و راه حل اختلاف، همکاری را قرن‌ها بدون دولت یا بازار نگه داشته‌اند. نظام سنتی تقسیم آب قنات در ایران نمونه‌ای از همین نهادهاست.",
+    "en": "Local institutions: Elinor Ostrom showed local communities (irrigation, pastures, fisheries) sustained cooperation for centuries without state or market through clear rules, internal monitoring, graduated sanctions and conflict resolution. Iran’s traditional qanat water-sharing is an example of such institutions.",
+    "nl": "Local institutions: Elinor Ostrom showed local communities (irrigation, pastures, fisheries) sustained cooperation for centuries without state or market through clear rules, internal monitoring, graduated sanctions and conflict resolution. Iran’s traditional qanat water-sharing is an example of such institutions."
+   },
+   "sources": [
+    "src:312c71f965"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برای سیمرغ: شبکهٔ اعتماد میان بازیکنان را باید با تعامل تکراری و کوچک ساخت (کارهای کوچک مشترک، شهرت درون حلقه)، نه با اعتماد یکباره به غریبه‌ها. ایران در پیمایش‌ها کشوری کم‌اعتماد است، پس این ساختن تدریجی ضروری است.",
+    "en": "For Simorgh: trust among players must be built through small repeated interactions (small shared tasks, reputation within a circle), not one-off trust in strangers. Surveys place Iran among low-trust countries, so gradual building is essential.",
+    "nl": "For Simorgh: trust among players must be built through small repeated interactions (small shared tasks, reputation within a circle), not one-off trust in strangers. Surveys place Iran among low-trust countries, so gradual building is essential."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:collective-action",
+   "rel": "see-also",
+   "note": {
+    "fa": "کنش جمعی و راه‌حل استروم",
+    "en": "Collective action and Ostrom’s solution",
+    "nl": "Collective action and Ostrom’s solution"
+   }
+  },
+  {
+   "to": "psy:cooperation-competition",
+   "rel": "see-also",
+   "note": {
+    "fa": "همکاری و رقابت در روان‌شناسی",
+    "en": "Cooperation and competition in psychology",
+    "nl": "Cooperation and competition in psychology"
+   }
+  },
+  {
+   "to": "tabar:forager-sharing-reciprocity",
+   "rel": "see-also",
+   "note": {
+    "fa": "دوسویگی در شکارگر-گردآورندگان",
+    "en": "Reciprocity among foragers",
+    "nl": "Reciprocity among foragers"
+   }
+  },
+  {
+   "to": "soc:generalized-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "اعتماد تعمیم‌یافته",
+    "en": "Generalised trust",
+    "nl": "Generalised trust"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:8956c45168",
+  "src:40cac9dc77",
+  "src:312c71f965"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
