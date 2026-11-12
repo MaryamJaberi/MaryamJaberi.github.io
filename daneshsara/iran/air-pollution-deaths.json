@@ -1,0 +1,54 @@
+{
+ "id": "iran:air-pollution-deaths",
+ "domain": "soc",
+ "question": {
+  "fa": "آلودگی هوا در ایران سالی چند نفر را می‌کشد؟",
+  "en": "How many people does air pollution kill in Iran each year?"
+ },
+ "finding": {
+  "fa": "به گفتهٔ معاون وزیر بهداشت (آبان ۱۴۰۴)، در سال ۱۴۰۳ حدود ۵۸٬۹۷۵ مرگ به آلودگی هوا نسبت داده شده است: حدود ۱۶۱ نفر در روز، یعنی نزدیک هفت نفر در هر ساعت.",
+  "en": "According to Iran’s deputy health minister (November 2025), about 58,975 deaths were attributed to air pollution in the Iranian year starting March 2024: about 161 a day, close to seven an hour."
+ },
+ "year": 2025,
+ "method": "official attributable-mortality estimate (Ministry of Health), reported by news media",
+ "grade": "C",
+ "contested": true,
+ "source": [
+  {
+   "title": "Iran International (9 November 2025). Air pollution killed nearly 59,000 Iranians in a year, deputy health minister says.",
+   "url": "https://www.iranintl.com/en/202511092574"
+  }
+ ],
+ "critique": "«مرگ منتسب» شمارش جنازه نیست؛ برآوردی آماری است از اینکه اگر هوا پاک بود چند مرگ کمتر رخ می‌داد، و به مدل و آستانهٔ انتخابی بستگی دارد. عدد رسمی سال‌های پیش کمتر اعلام شده بود (حدود ۳۰ هزار)، پس بخشی از جهش می‌تواند از تغییر روش باشد. روش محاسبه منتشر نشده است؛ برای همین ردهٔ C.",
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "مرگ منتسب به آلودگی هوا در روز"
+  },
+  "label": {
+   "fa": "هر روز"
+  },
+  "bars": [
+   {
+    "fa": "۱۴۰۳ (برآورد رسمی)",
+    "v": 161,
+    "self": true
+   }
+  ],
+  "note": {
+   "fa": "۵۸٬۹۷۵ مرگ در سال تقسیم بر ۳۶۵. برآورد رسمی، روش منتشرنشده."
+  }
+ },
+ "roots": {
+  "fa": "سوخت بی‌کیفیت و مازوت‌سوزی نیروگاه‌ها در زمستان، خودروها و موتورسیکلت‌های فرسوده، صنایع کنار شهرها، و ریزگرد ناشی از خشکی تالاب‌ها و دشت‌ها."
+ },
+ "now": {
+  "fa": "تعطیلی‌های پیاپی مدرسه و اداره در زمستان، و بار بیماری قلبی و تنفسی که بیشتر بر کودکان، سالمندان و محله‌های کم‌درآمد می‌افتد."
+ },
+ "fields": [],
+ "concepts": [],
+ "capability": [
+  2,
+  10
+ ]
+}

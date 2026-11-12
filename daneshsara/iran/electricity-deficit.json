@@ -1,0 +1,62 @@
+{
+ "id": "iran:electricity-deficit",
+ "domain": "soc",
+ "question": {
+  "fa": "ایران چقدر برق کم دارد؟",
+  "en": "How large is Iran’s electricity shortfall?"
+ },
+ "finding": {
+  "fa": "وزیر نیرو در بهمن ۱۴۰۳ گفت کسری برق در اوج مصرف تابستان ۱۴۰۳ به ۲۰ هزار مگاوات رسید و برای تابستان بعد ۲۵ هزار مگاوات پیش‌بینی می‌شود؛ اوج مصرف در گرم‌ترین روزها حدود ۸۰ هزار مگاوات بود. یعنی نزدیک یک‌چهارم نیاز در اوج تأمین نمی‌شود.",
+  "en": "In February 2025 the energy minister said the power deficit reached 20,000 MW at the summer 2024 peak and was projected at 25,000 MW for the next summer; peak demand on the hottest days was about 80,000 MW. So close to a quarter of peak need goes unmet."
+ },
+ "year": 2025,
+ "method": "official statements (Energy Ministry via ISNA), reported by news media",
+ "grade": "C",
+ "contested": true,
+ "source": [
+  {
+   "title": "bne IntelliNews (February 2025). Iran’s embattled energy minister warns of worsening power shortages.",
+   "url": "https://www.intellinews.com/iran-s-embattled-energy-minister-warns-of-worsening-power-shortages-367712"
+  }
+ ],
+ "critique": "عدد رسمی است و سنجش مستقل ندارد. دو وزارتخانه دربارهٔ علت اختلاف دارند: وزارت نیرو کمبود سوخت نیروگاه‌ها را می‌گوید و وزارت نفت آن را رد می‌کند. جنگ ۱۴۰۴–۱۴۰۵ و آسیب به زیرساخت در این عددها نیست.",
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "هزار مگاوات"
+  },
+  "label": {
+   "fa": "اوج مصرف و کسری برق"
+  },
+  "bars": [
+   {
+    "fa": "اوج مصرف تابستان ۱۴۰۳",
+    "v": 80
+   },
+   {
+    "fa": "کسری تابستان ۱۴۰۳",
+    "v": 20,
+    "self": true
+   },
+   {
+    "fa": "کسری پیش‌بینی‌شدهٔ تابستان ۱۴۰۴",
+    "v": 25
+   }
+  ],
+  "note": {
+   "fa": "به نقل از وزیر نیرو، بهمن ۱۴۰۳."
+  }
+ },
+ "roots": {
+  "fa": "سال‌ها سرمایه‌گذاری نکردن در نیروگاه و شبکه، برق و گاز بسیار ارزان که مصرف را بالا می‌برد، کمبود گاز برای نیروگاه‌ها، تحریم، و خشکسالی که برق‌آبی را کم می‌کند."
+ },
+ "now": {
+  "fa": "قطعی‌های نوبتی خانه‌ها و تعطیلی کارخانه‌ها. برق و آب به هم گره خورده‌اند: پمپ آب بدون برق کار نمی‌کند و نیروگاه بدون آب."
+ },
+ "fields": [],
+ "concepts": [],
+ "capability": [
+  2,
+  10
+ ]
+}
