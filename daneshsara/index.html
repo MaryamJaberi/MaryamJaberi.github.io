@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>دانش‌سرا</title>
 <meta name="description" content="دانش‌سرای ایران: ویکی‌های به‌هم‌پیوسته، لنز «برای ایران»، سیمرغ، و اطلس‌هایی که هرکدام بخشی از این دانش را نشان می‌دهند.">
@@ -193,7 +194,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
 const $ = id => document.getElementById(id);
 const NAME = {psy:"روان", soc:"جامعه", phil:"فلسفه", tabar:"تبار و ژنتیک", tarikh:"تاریخ", miyan:"ارتباط رشته‌ها", ling:"زبان‌شناسی", iran:"برای ایران", simorgh:"سیمرغ", sakht:"ساخت ایران"};
 // dots on each atlas card
-document.querySelectorAll(".ac").forEach(a => { const u = a.dataset.u.split(" "); a.querySelector(".uses").innerHTML = "می‌خواند از: " + u.map(k => `<i style="--c:var(--c-${k})" title="${NAME[k]}"></i>`).join(""); });
+document.querySelectorAll(".ac").forEach(a => { if (!a.dataset.u) return; const u = a.dataset.u.split(" "); let us = a.querySelector(".uses"); if (!us) { us = document.createElement("span"); us.className = "uses"; a.appendChild(us); } us.innerHTML = "می‌خواند از: " + u.map(k => `<i style="--c:var(--c-${k})" title="${NAME[k]}"></i>`).join(""); });
 // highlight the layers an atlas draws on
 const st = $("stack");
 const on = keys => { st.classList.add("hl"); st.querySelectorAll("[data-k]").forEach(el => { const ks = el.dataset.k.split(" "); el.classList.toggle("on", ks.some(k => keys.includes(k))); }); };
