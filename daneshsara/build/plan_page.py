@@ -103,7 +103,7 @@ details.card ul{margin:8px 0 0;padding-inline-start:18px;color:var(--ink-2);font
 <h1>نقشهٔ کلان سیمرغ</h1>
 <p class="lead">کل پروژه در یک صفحه: با دانش مستند بفهمیم چرا ایران به این حال رسیده، با بازی مافیا ببینیم «شهر» چطور می‌برد، آدم‌ها را دعوت کنیم، با محصولات پول و شبکه بسازیم، و از حالا روشن کنیم روز آزادی هر کس چه می‌کند.</p>
 <nav class="pills" aria-label="بخش‌های صفحه">
-<a href="#big">تصویر کلی</a><a href="#todo">کارهای گرداننده</a><a href="#game">بازی</a><a href="#me">سهم من</a><a href="#birds">سی مرغ</a><a href="#ledger">ویرانی‌ها</a><a href="#sci">علوم</a><a href="#groups">مردم</a><a href="#day">روز آزادی</a><a href="#risks">خطرها</a><a href="#money">درآمد</a><a href="#tools">ابزارها</a><a href="#road">نقشهٔ راه</a>
+<a href="#big">تصویر کلی</a><a href="#todo">کارهای گرداننده</a><a href="#game">بازی</a><a href="#me">سهم من</a><a href="#birds">سی مرغ</a><a href="#ledger">ویرانی‌ها</a><a href="#sci">علوم</a><a href="#groups">مردم</a><a href="#day">روز آزادی</a><a href="#risks">خطرها</a><a href="#money">درآمد</a><a href="#tools">ابزارها</a><a href="#road">نقشهٔ راه</a><a href="../core/log.html">دفتر پروژه ↗</a>
 </nav>
 
 <section id="big"><h2>تصویر کلی: پنج لایه روی هم</h2><p class="sub">هر لایه از لایهٔ زیرش تغذیه می‌شود. روی هر لایه بزنید.</p>
