@@ -1,71 +1,132 @@
 {
- "id": "soc:demographic-transition",
- "kind": "concept",
- "title": {
-  "fa": "گذار جمعیتی",
-  "en": "The demographic transition",
-  "nl": "De demografische transitie"
- },
- "aliases": [],
- "parent": "soc:demography",
- "field": "soc:demography",
- "summary": {
-  "fa": "همهٔ جوامع از «مرگ‌ومیر بالا، زادوولد بالا» به «هر دو پایین» می‌روند؛ در فاصلهٔ این دو، جمعیت چند برابر می‌شود. اروپا این راه را در دو قرن رفت؛ ایران در دو دهه.",
-  "en": "Every society moves from \"high mortality, high fertility\" to \"both low\"; in between, population multiplies. Europe took two centuries; Iran took two decades.",
-  "nl": "Elke samenleving gaat van \"hoge sterfte, hoge vruchtbaarheid\" naar \"beide laag\"; daartussen vermenigvuldigt de bevolking zich. Europa deed er twee eeuwen over; Iran twee decennia."
- },
- "points": [
-  {
-   "text": {
-    "fa": "لی (۲۰۰۳): از ۱۸۰۰ تا ۲۱۰۰ جمعیت جهان از یک به حدود ده میلیارد می‌رسد و امید به زندگی از حدود ۳۰ به بالای ۸۰ سال؛ گذار با افت مرگ‌ومیر کودکان آغاز می‌شود و افت باروری یک تا دو نسل بعد می‌آید.",
-    "en": "Lee (2003): from 1800 to 2100 world population rises from one to about ten billion and life expectancy from about 30 to over 80; the transition starts with falling child mortality, and fertility falls one or two generations later.",
-    "nl": "Lee (2003): from 1800 to 2100 world population rises from one to about ten billion and life expectancy from about 30 to over 80; the transition starts with falling child mortality, and fertility falls one or two generations later."
-   },
-   "sources": [
-    "src:78add04b88"
-   ],
-   "flags": []
+  "id": "soc:demographic-transition",
+  "kind": "concept",
+  "title": {
+    "fa": "گذار جمعیتی",
+    "en": "The demographic transition",
+    "nl": "De demografische transitie"
   },
-  {
-   "text": {
-    "fa": "«پنجرهٔ جمعیتی»: وقتی باروری افتاده ولی سالمندی هنوز نرسیده، سهم جمعیت در سن کار بیشینه است؛ اگر اشتغال و آموزش فراهم باشد سود جمعیتی می‌دهد، وگرنه بیکاری جوانان. ایران از دههٔ ۱۳۸۰ در این پنجره است.",
-    "en": "The \"demographic window\": when fertility has fallen but ageing has not yet arrived, the working-age share peaks; with jobs and schooling it yields a demographic dividend, otherwise youth unemployment. Iran has been in this window since the 2000s.",
-    "nl": "The \"demographic window\": when fertility has fallen but ageing has not yet arrived, the working-age share peaks; with jobs and schooling it yields a demographic dividend, otherwise youth unemployment. Iran has been in this window since the 2000s."
-   },
-   "sources": [
-    "src:6f9476e1dd"
-   ],
-   "flags": []
-  }
- ],
- "links": [
-  {
-   "to": "soc:iran-fertility",
-   "rel": "applies-to",
-   "note": {
-    "fa": "نمونهٔ ایران",
-    "en": "The Iranian case",
-    "nl": "The Iranian case"
-   }
+  "aliases": [],
+  "parent": "soc:demography",
+  "field": "soc:demography",
+  "summary": {
+    "fa": "گذار جمعیتی الگویی است که تقریباً همهٔ جامعه‌ها از آن گذشته‌اند یا می‌گذرند: از وضعی که هم مرگ‌ومیر و هم زادوولد بالاست، به وضعی که هر دو پایین‌اند. نخست مرگ‌ومیر، به‌ویژه مرگ کودکان، با بهداشت، واکسن و تغذیهٔ بهتر کم می‌شود، اما زادوولد یک یا دو نسل بالا می‌ماند؛ در این فاصله جمعیت چند برابر می‌شود. بعد زادوولد هم می‌افتد، چون خانواده‌ها مطمئن‌اند فرزندانشان زنده می‌مانند، آموزش و شهرنشینی گسترش می‌یابد و فرزند از «نیروی کار» به «هزینه و سرمایه‌گذاری» تبدیل می‌شود. اروپا این راه را در حدود دو قرن رفت؛ ایران یکی از سریع‌ترین گذارهای ثبت‌شده در تاریخ را داشت: از حدود ۶٫۵ فرزند به ازای هر زن در اوایل دههٔ ۱۳۶۰ به حدود ۲ در ۱۳۷۹، و امروز حدود ۱٫۷.",
+    "en": "The demographic transition is the pattern almost every society has gone or is going through: from high mortality and high fertility to both low. Mortality falls first, especially child mortality, through hygiene, vaccines and nutrition, while fertility stays high for one or two generations, multiplying the population. Then fertility falls too, as families trust their children will survive, education and urbanisation spread, and children turn from labour into cost and investment. Europe took about two centuries; Iran had one of the fastest transitions on record — from about 6.5 children per woman in the early 1980s to about 2 by 2000 and about 1.7 today.",
+    "nl": "De demografische transitie: van hoge sterfte en geboorte naar beide laag. Eerst daalt de sterfte, later de vruchtbaarheid; ertussenin groeit de bevolking sterk. Iran ging van 6,5 kinderen per vrouw (begin jaren 80) naar circa 2 in 2000 en 1,7 nu."
   },
-  {
-   "to": "tabar:common-ancestors",
-   "rel": "bridges",
-   "note": {
-    "fa": "ریاضی نسل‌ها",
-    "en": "The mathematics of generations",
-    "nl": "The mathematics of generations"
-   }
-  }
- ],
- "people": [],
- "sources": [
-  "src:6f9476e1dd",
-  "src:78add04b88"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "points": [
+    {
+      "text": {
+        "fa": "لی (۲۰۰۳): از ۱۸۰۰ تا ۲۱۰۰ جمعیت جهان از یک به حدود ده میلیارد می‌رسد و امید به زندگی از حدود ۳۰ به بالای ۸۰ سال؛ گذار با افت مرگ‌ومیر کودکان آغاز می‌شود و افت باروری یک تا دو نسل بعد می‌آید.",
+        "en": "Lee (2003): from 1800 to 2100 world population rises from one to about ten billion and life expectancy from about 30 to over 80; the transition starts with falling child mortality, and fertility falls one or two generations later.",
+        "nl": "Lee (2003): from 1800 to 2100 world population rises from one to about ten billion and life expectancy from about 30 to over 80; the transition starts with falling child mortality, and fertility falls one or two generations later."
+      },
+      "sources": [
+        "src:78add04b88"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "«پنجرهٔ جمعیتی»: وقتی باروری افتاده ولی سالمندی هنوز نرسیده، سهم جمعیت در سن کار بیشینه است؛ اگر اشتغال و آموزش فراهم باشد سود جمعیتی می‌دهد، وگرنه بیکاری جوانان. ایران از دههٔ ۱۳۸۰ در این پنجره است.",
+        "en": "The \"demographic window\": when fertility has fallen but ageing has not yet arrived, the working-age share peaks; with jobs and schooling it yields a demographic dividend, otherwise youth unemployment. Iran has been in this window since the 2000s.",
+        "nl": "The \"demographic window\": when fertility has fallen but ageing has not yet arrived, the working-age share peaks; with jobs and schooling it yields a demographic dividend, otherwise youth unemployment. Iran has been in this window since the 2000s."
+      },
+      "sources": [
+        "src:6f9476e1dd"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "چرا ایران این‌قدر سریع؟ عباسی شوازی و همکاران (۲۰۰۹) چند عامل را با هم دیدند: گسترش آموزش دختران (به‌ویژه در روستا)، شبکهٔ خانه‌های بهداشت و بهورزان که مراقبت و پیشگیری را تا روستاها برد، برنامهٔ تنظیم خانواده پس از ۱۳۶۸ با حمایت رسمی و حتی روحانیون، شهرنشینی سریع، و تغییر آرزوهای خانواده‌ها. نکتهٔ مهم: باروری پیش از برنامهٔ رسمی هم شروع به افتادن کرده بود؛ برنامه سرعت داد، آغازش نکرد.",
+        "en": "Why so fast in Iran? Abbasi-Shavazi et al. (2009) identified several factors together: expanding girls’ education (especially rural), the network of health houses and behvarz workers carrying care and prevention to villages, the family-planning programme after 1989 with official and even clerical support, rapid urbanisation, and changing family aspirations. Importantly, fertility had begun falling before the official programme; the programme accelerated it but did not start it.",
+        "nl": "Waarom zo snel? Onderwijs voor meisjes, het netwerk van gezondheidshuizen, gezinsplanning na 1989, verstedelijking en veranderende aspiraties; de daling begon al vóór het programma."
+      },
+      "sources": [
+        "src:cded26c9f1"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "موج‌های جمعیتی ایران: زادوولد بالای دههٔ ۱۳۶۰ نسلی بزرگ ساخت که در دهه‌های ۱۳۸۰ و ۱۳۹۰ به سن دانشگاه، کار، ازدواج و مسکن رسید و فشار عظیمی بر این بازارها گذاشت. همین نسل در دهه‌های ۱۴۲۰ تا ۱۴۳۰ به سالمندی می‌رسد و نسبت سالمندان ایران با سرعتی بسیار بیشتر از اروپا بالا می‌رود: ایران پیش از ثروتمند شدن پیر می‌شود.",
+        "en": "Iran’s population waves: the high fertility of the 1980s produced a huge cohort that reached university, work, marriage and housing age in the 2000s–2010s, putting enormous pressure on those markets. The same cohort reaches old age in the 2040s–2050s, and Iran’s share of elderly rises far faster than Europe’s did: Iran is ageing before getting rich.",
+        "nl": "Iraanse bevolkingsgolven: het grote cohort van de jaren 80 drukte op onderwijs, werk en woningen en vergrijst rond 2040–2050; Iran vergrijst voordat het rijk is."
+      },
+      "sources": [
+        "src:6f9476e1dd"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "سیاست‌های افزایش جمعیت: پس از ۱۳۹۲ سیاست رسمی به افزایش باروری چرخید (محدود کردن خدمات تنظیم خانواده، تشویق‌های مالی، و قانون «جوانی جمعیت» در ۱۴۰۰). شواهد جهانی و داده‌های ایران تا کنون نشان می‌دهد چنین سیاست‌هایی در برابر عوامل اقتصادی و فرهنگی اثر کمی دارند؛ و محدود کردن دسترسی به پیشگیری، بیشتر از آنکه زادوولد خواسته را بالا ببرد، بارداری ناخواسته و پیامدهای سلامت را افزایش می‌دهد.",
+        "en": "Pronatalist policies: after 2013 official policy turned to raising fertility (restricting family-planning services, financial incentives, and the 2021 “Youthful Population” law). Global evidence and Iranian data so far suggest such policies have little effect against economic and cultural factors, and restricting contraception raises unintended pregnancies and health harms more than wanted births.",
+        "nl": "Geboortebevorderend beleid na 2013 (wet van 2021) heeft weinig effect; beperking van anticonceptie verhoogt vooral ongewenste zwangerschappen."
+      },
+      "sources": [
+        "src:cded26c9f1"
+      ],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "«گذار جمعیتی دوم»: در بسیاری از کشورهای ثروتمند باروری زیر سطح جایگزینی (۲٫۱) ماند و ازدواج دیرتر، هم‌خانگی و زندگی تنها رایج شد؛ برخی جمعیت‌شناسان آن را مرحلهٔ تازه‌ای با ریشهٔ ارزشی (فردگرایی، خودشکوفایی) می‌دانند. اینکه ایران وارد این مرحله شده یا افت کنونی بیشتر اقتصادی است، محل بحث است.",
+        "en": "The “second demographic transition”: in many rich countries fertility stayed below replacement (2.1) and late marriage, cohabitation and living alone spread; some demographers see a new stage rooted in values (individualism, self-realisation). Whether Iran has entered it or its current decline is mainly economic is debated.",
+        "nl": "De tweede demografische transitie: blijvend lage vruchtbaarheid en andere leefvormen; of Iran daarin zit of vooral economisch gedreven is, is omstreden."
+      },
+      "sources": [
+        "src:cded26c9f1"
+      ],
+      "flags": [
+        "contested"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "soc:iran-fertility",
+      "rel": "applies-to",
+      "note": {
+        "fa": "نمونهٔ ایران",
+        "en": "The Iranian case",
+        "nl": "The Iranian case"
+      }
+    },
+    {
+      "to": "tabar:common-ancestors",
+      "rel": "bridges",
+      "note": {
+        "fa": "ریاضی نسل‌ها",
+        "en": "The mathematics of generations",
+        "nl": "The mathematics of generations"
+      }
+    },
+    {
+      "to": "soc:aces-iran-turning-points",
+      "rel": "see-also",
+      "note": {
+        "fa": "شبکهٔ بهورزی",
+        "en": "The behvarz network",
+        "nl": "Behvarz-netwerk"
+      }
+    }
+  ],
+  "people": [],
+  "sources": [
+    "src:6f9476e1dd",
+    "src:78add04b88",
+    "src:cded26c9f1"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": "iran:fertility",
+  "wikidata": null,
+  "status": "draft"
 }

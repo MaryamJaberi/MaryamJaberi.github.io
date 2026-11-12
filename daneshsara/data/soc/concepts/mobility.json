@@ -1,74 +1,134 @@
 {
- "id": "soc:mobility",
- "kind": "concept",
- "title": {
-  "fa": "تحرک بین‌نسلی",
-  "en": "Intergenerational mobility",
-  "nl": "Intergenerationele mobiliteit"
- },
- "aliases": [],
- "parent": "soc:inequality",
- "field": "soc:inequality",
- "summary": {
-  "fa": "چقدر درآمد و جایگاه فرزند به والدینش بسته است؟ در کشورهای اسکاندیناوی کم، در آمریکا و بریتانیا زیاد، و بر خلاف تصور، «رؤیای آمریکایی» در کانادا و دانمارک دست‌یافتنی‌تر است تا در آمریکا.",
-  "en": "How much does a child's income and standing depend on the parents'? Little in Scandinavia, much in the US and Britain, and contrary to the myth, the \"American dream\" is more attainable in Canada and Denmark than in America.",
-  "nl": "Hoezeer hangen inkomen en positie van een kind af van de ouders? Weinig in Scandinavië, veel in de VS en Groot-Brittannië, en anders dan de mythe wil, is de \"American dream\" beter haalbaar in Canada en Denemarken dan in Amerika."
- },
- "points": [
-  {
-   "text": {
-    "fa": "چتی و همکاران (۲۰۱۴، داده‌های مالیاتی ۴۰ میلیون نفر): تحرک در آمریکا از شهری به شهر دیگر دو تا سه برابر فرق می‌کند؛ پنج همبستهٔ قوی: تفکیک نژادی و فضایی کمتر، نابرابری کمتر، مدارس بهتر، سرمایهٔ اجتماعی بیشتر، و خانواده‌های دووالده بیشتر.",
-    "en": "Chetty et al. (2014, tax data on 40 million people): mobility in the US varies two- to threefold between cities; five strong correlates: less racial and spatial segregation, less inequality, better schools, more social capital, and more two-parent families.",
-    "nl": "Chetty et al. (2014, tax data on 40 million people): mobility in the US varies two- to threefold between cities; five strong correlates: less racial and spatial segregation, less inequality, better schools, more social capital, and more two-parent families."
-   },
-   "sources": [
-    "src:9570a0451f"
-   ],
-   "flags": []
+  "id": "soc:mobility",
+  "kind": "concept",
+  "title": {
+    "fa": "تحرک بین‌نسلی",
+    "en": "Intergenerational mobility",
+    "nl": "Intergenerationele mobiliteit"
   },
-  {
-   "text": {
-    "fa": "«منحنی گتسبی بزرگ»: کشورهای نابرابرتر تحرک کمتری دارند؛ نابرابری نتیجه، نابرابری فرصت نسل بعد می‌شود.",
-    "en": "The \"Great Gatsby curve\": more unequal countries have less mobility; inequality of outcome becomes the next generation's inequality of opportunity.",
-    "nl": "The \"Great Gatsby curve\": more unequal countries have less mobility; inequality of outcome becomes the next generation's inequality of opportunity."
-   },
-   "sources": [
+  "aliases": [],
+  "parent": "soc:inequality",
+  "field": "soc:inequality",
+  "summary": {
+    "fa": "تحرک بین‌نسلی می‌سنجد که درآمد، تحصیلات یا جایگاه شغلی فرزند چقدر به والدینش بسته است. اگر فرزندان فقیران تقریباً همیشه فقیر بمانند و فرزندان ثروتمندان ثروتمند، جامعه کم‌تحرک است، هر قدر هم که از «فرصت برابر» حرف بزند. شاخص رایج، «کشش درآمدی بین‌نسلی» است: هر چه به یک نزدیک‌تر، تحرک کمتر. کشورهای اسکاندیناوی و کانادا کم‌کشش‌اند و آمریکا و بریتانیا پرکشش؛ یعنی «رؤیای آمریکایی» امروز در دانمارک دست‌یافتنی‌تر از آمریکاست. پژوهش‌های بزرگ دههٔ اخیر نشان داده‌اند محله، مدرسه و به‌ویژه دوستی میان طبقات اجتماعی نقش تعیین‌کننده‌ای دارند.",
+    "en": "Intergenerational mobility measures how much a child’s income, education or occupational status depends on the parents’. If poor children almost always stay poor and rich children rich, a society is immobile however much it talks of equal opportunity. A common measure is intergenerational income elasticity: the closer to one, the less mobility. Scandinavia and Canada have low elasticity, the US and UK high — the “American dream” is now more attainable in Denmark than in the US. Large recent studies show neighbourhood, school and especially friendship across social classes matter decisively.",
+    "nl": "Intergenerationele mobiliteit meet hoezeer de positie van een kind van die van de ouders afhangt. Scandinavië en Canada zijn mobieler dan de VS en het VK. Buurt, school en vriendschap tussen klassen blijken doorslaggevend."
+  },
+  "points": [
+    {
+      "text": {
+        "fa": "چتی و همکاران (۲۰۱۴، داده‌های مالیاتی ۴۰ میلیون نفر): تحرک در آمریکا از شهری به شهر دیگر دو تا سه برابر فرق می‌کند؛ پنج همبستهٔ قوی: تفکیک نژادی و فضایی کمتر، نابرابری کمتر، مدارس بهتر، سرمایهٔ اجتماعی بیشتر، و خانواده‌های دووالده بیشتر.",
+        "en": "Chetty et al. (2014, tax data on 40 million people): mobility in the US varies two- to threefold between cities; five strong correlates: less racial and spatial segregation, less inequality, better schools, more social capital, and more two-parent families.",
+        "nl": "Chetty et al. (2014, tax data on 40 million people): mobility in the US varies two- to threefold between cities; five strong correlates: less racial and spatial segregation, less inequality, better schools, more social capital, and more two-parent families."
+      },
+      "sources": [
+        "src:9570a0451f"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "«منحنی گتسبی بزرگ»: کشورهای نابرابرتر تحرک کمتری دارند؛ نابرابری نتیجه، نابرابری فرصت نسل بعد می‌شود.",
+        "en": "The \"Great Gatsby curve\": more unequal countries have less mobility; inequality of outcome becomes the next generation's inequality of opportunity.",
+        "nl": "The \"Great Gatsby curve\": more unequal countries have less mobility; inequality of outcome becomes the next generation's inequality of opportunity."
+      },
+      "sources": [
+        "src:9570a0451f",
+        "src:6c0c807f94"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "منحنی گتسبی بزرگ (کوراک، ۲۰۱۳): وقتی کشورها را روی دو محور نابرابری درآمد و کشش بین‌نسلی بگذاریم، رابطه‌ای روشن پیدا می‌شود: جامعه‌های نابرابرتر کم‌تحرک‌ترند. سازوکارها: سرمایه‌گذاری نابرابر خانواده‌ها روی کودکی، کیفیت متفاوت مدرسه‌ها، و شبکه‌های اجتماعی‌ای که فرصت‌ها را درون طبقه نگه می‌دارند.",
+        "en": "The Great Gatsby curve (Corak, 2013): plotting countries on income inequality and intergenerational elasticity reveals a clear relation — more unequal societies are less mobile. Mechanisms: unequal family investment in childhood, varying school quality, and networks that keep opportunities within a class.",
+        "nl": "De Great Gatsby-curve (Corak, 2013): ongelijkere landen zijn minder mobiel, via ongelijke investering in kinderen, scholen en netwerken."
+      },
+      "sources": [
+        "src:a6e31168d4"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "«پیوستگی اقتصادی» (چتی و همکاران، ۲۰۲۲، داده‌های ۷۲ میلیون کاربر فیس‌بوک): قوی‌ترین پیش‌بین تحرک صعودی یک محله، سهم دوستی‌های کودکان کم‌درآمد با پردرآمدها بود؛ قوی‌تر از کیفیت مدرسه، ساختار خانواده یا انسجام اجتماعی. یعنی جدایی‌گزینی طبقاتی، حتی در کلاس‌ها و باشگاه‌ها، تحرک را می‌کُشد.",
+        "en": "Economic connectedness (Chetty et al., 2022, data on 72 million Facebook users): the strongest predictor of a neighbourhood’s upward mobility was the share of friendships between low- and high-income people — stronger than school quality, family structure or cohesion. Class segregation, even within classrooms and clubs, kills mobility.",
+        "nl": "Economische verbondenheid (Chetty e.a., 2022): vriendschappen tussen arm en rijk voorspellen opwaartse mobiliteit het sterkst."
+      },
+      "sources": [
+        "src:25db34a862"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "ایران: دادهٔ ملی قابل اعتمادی از تحرک درآمدی بین‌نسلی منتشر نشده است، اما گسترش آموزش عالی پس از انقلاب، تحرک تحصیلی بزرگی ساخت: فرزندان والدین بی‌سواد یا کم‌سواد به دانشگاه رسیدند. پرسش باز این است که آیا این تحرک تحصیلی به تحرک شغلی و درآمدی تبدیل شد یا با بیکاری تحصیل‌کردگان و تورم مدرک‌گرایی به بن‌بست رسید.",
+        "en": "Iran: no reliable national data on intergenerational income mobility have been published, but post-revolution expansion of higher education created large educational mobility — children of illiterate or barely literate parents reached university. The open question is whether it became occupational and income mobility or stalled in graduate unemployment and credential inflation.",
+        "nl": "Iran: geen betrouwbare inkomensdata, wel grote onderwijsmobiliteit; de vraag is of die tot banen leidde."
+      },
+      "sources": [
+        "src:a6e31168d4"
+      ],
+      "flags": [
+        "editor-note",
+        "contested"
+      ]
+    },
+    {
+      "text": {
+        "fa": "نقد و احتیاط: تحرک مطلق (آیا نسل بعد از نسل قبل مرفه‌تر است؟) با تحرک نسبی (آیا رتبهٔ فرد در جامعه تغییر می‌کند؟) فرق دارد؛ در دوره‌های رشد سریع تحرک مطلق زیاد است حتی اگر رتبه‌ها ثابت بمانند. بخشی از شباهت والد و فرزند هم ژنتیکی است، و بحث بر سر سهم آن ادامه دارد.",
+        "en": "Critique and caution: absolute mobility (is the next generation better off?) differs from relative mobility (does a person’s rank change?); in fast growth absolute mobility is high even if ranks stay fixed. Part of parent–child similarity is genetic, and its share is still debated.",
+        "nl": "Absolute en relatieve mobiliteit verschillen; een deel van de gelijkenis is genetisch."
+      },
+      "sources": [
+        "src:a6e31168d4"
+      ],
+      "flags": [
+        "contested"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "tabar:gwas-polygenic",
+      "rel": "bridges",
+      "note": {
+        "fa": "سهم ژن و خانواده در تحصیلات",
+        "en": "The share of genes and family in education",
+        "nl": "The share of genes and family in education"
+      }
+    },
+    {
+      "to": "soc:gini-inequality",
+      "rel": "prerequisite",
+      "note": {
+        "fa": "اندازه‌گیری نابرابری",
+        "en": "Measuring inequality",
+        "nl": "Measuring inequality"
+      }
+    },
+    {
+      "to": "soc:weak-ties",
+      "rel": "see-also",
+      "note": {
+        "fa": "شبکه و فرصت",
+        "en": "Networks and opportunity",
+        "nl": "Netwerken"
+      }
+    }
+  ],
+  "people": [
+    "core:raj-chetty"
+  ],
+  "sources": [
+    "src:6c0c807f94",
     "src:9570a0451f",
-    "src:6c0c807f94"
-   ],
-   "flags": []
-  }
- ],
- "links": [
-  {
-   "to": "tabar:gwas-polygenic",
-   "rel": "bridges",
-   "note": {
-    "fa": "سهم ژن و خانواده در تحصیلات",
-    "en": "The share of genes and family in education",
-    "nl": "The share of genes and family in education"
-   }
-  },
-  {
-   "to": "soc:gini-inequality",
-   "rel": "prerequisite",
-   "note": {
-    "fa": "اندازه‌گیری نابرابری",
-    "en": "Measuring inequality",
-    "nl": "Measuring inequality"
-   }
-  }
- ],
- "people": [
-  "core:raj-chetty"
- ],
- "sources": [
-  "src:6c0c807f94",
-  "src:9570a0451f"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+    "src:a6e31168d4",
+    "src:25db34a862"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }
