@@ -1,75 +1,123 @@
 {
- "id": "soc:gini-inequality",
- "kind": "concept",
- "title": {
-  "fa": "اندازه‌گیری نابرابری: ضریب جینی و فراتر از آن",
-  "en": "Measuring inequality: the Gini and beyond",
-  "nl": "Ongelijkheid meten: de Gini en verder"
- },
- "aliases": [],
- "parent": "soc:inequality",
- "field": "soc:inequality",
- "summary": {
-  "fa": "جینی صفر یعنی همه برابر، یک یعنی همه‌چیز دست یک نفر. ایران در دههٔ اخیر حدود ۰٫۴۰ است: بالاتر از اروپا، نزدیک ترکیه و آمریکا، پایین‌تر از آمریکای لاتین. ولی جینی سهم «یک درصد بالا» و ثروت (نه درآمد) را پنهان می‌کند.",
-  "en": "A Gini of zero means everyone equal, one means everything in one hand. Iran in the last decade is about 0.40: higher than Europe, near Turkey and the US, lower than Latin America. But the Gini hides the \"top one percent\" share and wealth (as opposed to income).",
-  "nl": "Een Gini van nul betekent iedereen gelijk, één betekent alles in één hand. Iran zit het laatste decennium rond 0,40: hoger dan Europa, dicht bij Turkije en de VS, lager dan Latijns-Amerika. Maar de Gini verbergt het aandeel van de \"top één procent\" en vermogen (tegenover inkomen)."
- },
- "points": [
-  {
-   "text": {
-    "fa": "بانک جهانی: جینی درآمدی ایران در سال‌های اخیر در بازهٔ ۳۸ تا ۴۲ گزارش شده؛ مرکز آمار ایران ارقام مشابهی می‌دهد و در سال‌های تورم بالا افزایش دیده می‌شود.",
-    "en": "World Bank: Iran's income Gini in recent years is reported in the 38 to 42 range; the Statistical Centre of Iran gives similar figures, rising in high-inflation years.",
-    "nl": "World Bank: Iran's income Gini in recent years is reported in the 38 to 42 range; the Statistical Centre of Iran gives similar figures, rising in high-inflation years."
-   },
-   "sources": [
-    "src:8a3dd521dc"
-   ],
-   "flags": []
+  "id": "soc:gini-inequality",
+  "kind": "concept",
+  "title": {
+    "fa": "اندازه‌گیری نابرابری: ضریب جینی و فراتر از آن",
+    "en": "Measuring inequality: the Gini and beyond",
+    "nl": "Ongelijkheid meten: de Gini en verder"
   },
-  {
-   "text": {
-    "fa": "پیکتی (۲۰۱۴): وقتی بازده سرمایه از رشد اقتصاد بیشتر باشد (r > g)، ثروت موروثی نسبت به درآمد کار بزرگ می‌شود؛ نابرابری ثروت همه‌جا بسیار بیشتر از نابرابری درآمد است.",
-    "en": "Piketty (2014): when the return on capital exceeds economic growth (r > g), inherited wealth grows relative to earned income; wealth inequality is everywhere far larger than income inequality.",
-    "nl": "Piketty (2014): when the return on capital exceeds economic growth (r > g), inherited wealth grows relative to earned income; wealth inequality is everywhere far larger than income inequality."
-   },
-   "sources": [
-    "src:6c0c807f94"
-   ],
-   "flags": [
-    "contested"
-   ]
-  }
- ],
- "links": [
-  {
-   "to": "soc:mobility",
-   "rel": "see-also",
-   "note": {
-    "fa": "نابرابری فرصت در برابر نابرابری نتیجه",
-    "en": "Inequality of opportunity versus of outcome",
-    "nl": "Inequality of opportunity versus of outcome"
-   }
+  "aliases": [],
+  "parent": "soc:inequality",
+  "field": "soc:inequality",
+  "summary": {
+    "fa": "ضریب جینی پرکاربردترین عدد برای سنجیدن نابرابری درآمد است: صفر یعنی همه درآمد برابر دارند و یک (یا صد) یعنی همهٔ درآمد دست یک نفر است. از منحنی لورنتس به دست می‌آید: اگر جمعیت را از فقیرترین تا ثروتمندترین بچینیم و سهم انباشتهٔ درآمد را رسم کنیم، جینی فاصلهٔ این منحنی با خط برابری کامل است. جینی درآمدی ایران در دههٔ اخیر بر پایهٔ بانک جهانی حدود ۳۴ تا ۳۷٫۵ بوده است؛ بالاتر از اسکاندیناوی، پایین‌تر از آمریکا و بسیار پایین‌تر از آمریکای لاتین. اما جینی چیزهای مهمی را پنهان می‌کند: نابرابری ثروت (که همه‌جا بسیار بیشتر از درآمد است)، سهم «یک درصد بالا»، و اینکه نابرابری در کدام بخش توزیع رخ داده است.",
+    "en": "The Gini coefficient is the most used number for income inequality: zero means everyone has equal income and one (or 100) means one person has all of it. It comes from the Lorenz curve — order the population from poorest to richest, plot the cumulative income share, and Gini is the gap between this curve and the line of perfect equality. Iran’s income Gini over the last decade was about 34–37.5 according to the World Bank — higher than Scandinavia, lower than the US and far lower than Latin America. But Gini hides important things: wealth inequality (always much larger than income inequality), the top 1% share, and where in the distribution inequality sits.",
+    "nl": "De Gini-coëfficiënt meet inkomensongelijkheid (0 = gelijk, 1 = alles bij één persoon), afgeleid van de Lorenzcurve. Iran zat het afgelopen decennium rond 34–37,5. Gini verbergt vermogensongelijkheid en de top-1%."
   },
-  {
-   "to": "soc:inequality-health",
-   "rel": "see-also",
-   "note": {
-    "fa": "پیامدهای نابرابری",
-    "en": "The consequences of inequality",
-    "nl": "The consequences of inequality"
-   }
-  }
- ],
- "people": [
-  "core:thomas-piketty"
- ],
- "sources": [
-  "src:6c0c807f94",
-  "src:8a3dd521dc"
- ],
- "booklets": [],
- "origin": null,
- "iran": "iran:gini",
- "wikidata": null,
- "status": "draft"
+  "points": [
+    {
+      "text": {
+        "fa": "بانک جهانی: ضریب جینی درآمدی ایران از ۱۳۹۰ تا کنون میان حدود ۳۴ تا ۳۷٫۵ (در مقیاس صد) نوسان کرده و آخرین رقم (۱۴۰۲) حدود ۳۶ است. ارقام بالاتر سال‌های پیش از ۱۳۹۰ (۴۲ تا ۴۷) با روش دیگری محاسبه شده‌اند و مستقیم قابل مقایسه نیستند.",
+        "en": "World Bank: Iran’s income Gini has fluctuated between about 34 and 37.5 (on a 0–100 scale) since 2011, with the latest figure (2023) about 36. Higher pre-2011 figures (42–47) used a different method and are not directly comparable.",
+        "nl": "Wereldbank: Iraanse Gini tussen circa 34 en 37,5 sinds 2011, laatst circa 36; oudere cijfers zijn niet vergelijkbaar."
+      },
+      "sources": [
+        "src:8a3dd521dc"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "پیکتی (۲۰۱۴): وقتی بازده سرمایه از رشد اقتصاد بیشتر باشد (r > g)، ثروت موروثی نسبت به درآمد کار بزرگ می‌شود؛ نابرابری ثروت همه‌جا بسیار بیشتر از نابرابری درآمد است.",
+        "en": "Piketty (2014): when the return on capital exceeds economic growth (r > g), inherited wealth grows relative to earned income; wealth inequality is everywhere far larger than income inequality.",
+        "nl": "Piketty (2014): when the return on capital exceeds economic growth (r > g), inherited wealth grows relative to earned income; wealth inequality is everywhere far larger than income inequality."
+      },
+      "sources": [
+        "src:6c0c807f94"
+      ],
+      "flags": [
+        "contested"
+      ]
+    },
+    {
+      "text": {
+        "fa": "یک جینی، دو جامعهٔ متفاوت: دو کشور می‌توانند جینی برابر داشته باشند در حالی که در یکی فاصله در دهک‌های پایین است و در دیگری در دهک‌های بالا. به همین دلیل «نسبت پالما» (سهم ۱۰٪ ثروتمندترین تقسیم بر سهم ۴۰٪ فقیرترین) پیشنهاد شد، چون سهم دهک‌های میانی در بیشتر کشورها حدود نیمی از درآمد و نسبتاً ثابت است و تفاوت‌ها در دو سر توزیع رخ می‌دهد.",
+        "en": "One Gini, two societies: two countries can share a Gini while the gap lies among the bottom deciles in one and the top in the other. Hence the Palma ratio (top 10% share divided by bottom 40% share), since the middle deciles hold roughly half of income almost everywhere and differences sit at the tails.",
+        "nl": "Dezelfde Gini kan verschillende samenlevingen verbergen; de Palma-ratio (top 10% / onderste 40%) kijkt naar de staarten."
+      },
+      "sources": [
+        "src:92a03f1c50"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "درآمد، مصرف یا ثروت؟ جینی ایران مثل بسیاری از کشورهای در حال توسعه از پیمایش هزینه و درآمد خانوار به دست می‌آید که ثروتمندترین‌ها کمتر در آن شرکت می‌کنند یا درآمدشان را کمتر گزارش می‌دهند. نابرابری ثروت (مسکن، زمین، دارایی‌های ارزی) در ایران اندازه‌گیری رسمی ندارد، در حالی که در سال‌های تورم بالا، دارندگان دارایی سود می‌برند و حقوق‌بگیران فقیرتر می‌شوند.",
+        "en": "Income, consumption or wealth? Iran’s Gini, like many developing countries’, comes from household expenditure–income surveys in which the richest participate less or under-report. Wealth inequality (housing, land, foreign-currency assets) has no official measure in Iran, while in high-inflation years asset holders gain and wage earners grow poorer.",
+        "nl": "Inkomen, consumptie of vermogen? Enquêtes missen de rijksten; vermogensongelijkheid wordt in Iran niet officieel gemeten, terwijl inflatie bezitters bevoordeelt."
+      },
+      "sources": [
+        "src:8a3dd521dc"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "چه می‌شود کرد؟ اتکینسون (۲۰۱۵) فهرستی از سیاست‌های مشخص پیشنهاد کرد: مالیات تصاعدی‌تر بر درآمد و ارث، «ارث پایه» برای همهٔ جوانان، یارانهٔ کودک، تضمین اشتغال عمومی و جهت‌دهی فناوری به سوی اشتغال. فهرست او نشان می‌دهد نابرابری سرنوشت محتوم بازار نیست و به انتخاب‌های سیاستی بستگی دارد.",
+        "en": "What can be done? Atkinson (2015) proposed specific policies: more progressive income and inheritance tax, a “capital endowment” for all young people, child benefits, a public employment guarantee and steering technology toward employment — showing inequality is not market destiny but depends on policy choices.",
+        "nl": "Atkinson (2015) stelde concreet beleid voor: progressievere belasting, een startkapitaal voor jongeren, kinderbijslag en een baangarantie."
+      },
+      "sources": [
+        "src:2083d2e2cf"
+      ],
+      "flags": [
+        "contested"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "soc:mobility",
+      "rel": "see-also",
+      "note": {
+        "fa": "نابرابری فرصت در برابر نابرابری نتیجه",
+        "en": "Inequality of opportunity versus of outcome",
+        "nl": "Inequality of opportunity versus of outcome"
+      }
+    },
+    {
+      "to": "soc:inequality-health",
+      "rel": "see-also",
+      "note": {
+        "fa": "پیامدهای نابرابری",
+        "en": "The consequences of inequality",
+        "nl": "The consequences of inequality"
+      }
+    },
+    {
+      "to": "soc:aces-iran-turning-points",
+      "rel": "see-also",
+      "note": {
+        "fa": "نابرابری و کودکی",
+        "en": "Inequality and childhood",
+        "nl": "Ongelijkheid en jeugd"
+      }
+    }
+  ],
+  "people": [
+    "core:thomas-piketty"
+  ],
+  "sources": [
+    "src:6c0c807f94",
+    "src:8a3dd521dc",
+    "src:92a03f1c50",
+    "src:2083d2e2cf"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": "iran:gini",
+  "wikidata": null,
+  "status": "draft"
 }
