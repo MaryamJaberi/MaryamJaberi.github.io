@@ -1,134 +1,192 @@
 {
- "id": "phil:arendt-dark-times-isolation-and-public-speech",
- "kind": "concept",
- "title": {
-  "fa": "آرنت: ظلمت، انزوا و گفتگو به‌عنوان کنش",
-  "en": "Arendt: dark times, isolation and speech as action",
-  "nl": "Arendt: donkere tijden, isolement en spreken als handelen"
- },
- "aliases": [],
- "parent": "phil:political",
- "field": "phil:political",
- "summary": {
-  "fa": "سخنران در این بخش کنشگری را از دید هانا آرنت توضیح می‌دهد. به گفتهٔ او، آرنت «عصر ظلمت» را زمانی می‌داند که مردم دیگر در برابر هم حاضر نمی‌شوند و گفتگو و کنش مشترک خاموش می‌شود. حکومت تمامیت‌خواه می‌کوشد مردم را از هم جدا کند و اعتماد را بسوزاند. کنشگری در این نگاه، پدید آوردن فضایی برای سخن گفتن با یکدیگر است.",
-  "en": "The lecturer presents activism through Hannah Arendt. In his reading, 'dark times' are periods when people stop appearing before one another and shared speech and action fade. Totalitarian rule tries to isolate people and destroy trust. Activism then means creating spaces where people can talk with each other.",
-  "nl": "Activisme volgens Hannah Arendt: in donkere tijden verdwijnt het gesprek tussen mensen; handelen betekent ruimte maken om te spreken en elkaar te vertrouwen."
- },
- "points": [
-  {
-   "text": {
-    "fa": "به گفتهٔ سخنران، آرنت در «انسان‌ها در عصر ظلمت» به سراغ آدم‌هایی مثل لسینگ، رزا لوکزامبورگ و والتر بنیامین می‌رود. آنها قهرمان اسطوره‌ای نبودند، بلکه در زمانهٔ تاریک با دوستی، اندیشه و ایستادگی اخلاقی نوری کوچک را زنده نگه داشتند.",
-    "en": "Per the lecturer, in Men in Dark Times Arendt turns to figures such as Lessing, Rosa Luxemburg and Walter Benjamin: not mythic heroes but people who kept a small light alive through friendship, thought and moral resistance.",
-    "nl": "Per the lecturer, in Men in Dark Times Arendt turns to figures such as Lessing, Rosa Luxemburg and Walter Benjamin: not mythic heroes but people who kept a small light alive through friendship, thought and moral resistance."
-   },
-   "sources": [
-    "src:f390b91bd7",
-    "src:ada6480760"
-   ],
-   "flags": [
-    "editor-note"
-   ]
+  "id": "phil:arendt-dark-times-isolation-and-public-speech",
+  "kind": "concept",
+  "title": {
+    "fa": "آرنت: ظلمت، انزوا و گفتگو به‌عنوان کنش",
+    "en": "Arendt: dark times, isolation and speech as action",
+    "nl": "Arendt: donkere tijden, isolement en spreken als handelen"
   },
-  {
-   "text": {
-    "fa": "به گفتهٔ سخنران، به نظر آرنت تمامیت‌خواهی مردم را به «اتم‌های جدا افتاده» تبدیل می‌کند: با ایجاد شکاف میان جنسیت‌ها، قومیت‌ها و شغل‌ها، هر گروه دیگری را مزاحم می‌بیند و تنهایی و بی‌اعتمادی همه‌جا پخش می‌شود. آرنت میان انزوای تحمیلی و خلوتِ لازم برای اندیشیدن فرق می‌گذارد.",
-    "en": "Per the lecturer, Arendt holds that totalitarianism turns people into isolated atoms: by driving wedges between genders, ethnic groups and occupations, each group sees the others as obstacles and mistrust spreads. Arendt separates imposed isolation from the solitude needed for thinking.",
-    "nl": "Per the lecturer, Arendt holds that totalitarianism turns people into isolated atoms: by driving wedges between genders, ethnic groups and occupations, each group sees the others as obstacles and mistrust spreads. Arendt separates imposed isolation from the solitude needed for thinking."
-   },
-   "sources": [
-    "src:f390b91bd7",
-    "src:98e164d871"
-   ],
-   "flags": [
-    "editor-note"
-   ]
+  "aliases": [
+    "آرنت: کنش، گفتگو و «انسان‌ها در عصر ظلمت»"
+  ],
+  "parent": "phil:political",
+  "field": "phil:political",
+  "summary": {
+    "fa": "سخنران در این بخش کنشگری را از دید هانا آرنت توضیح می‌دهد. به گفتهٔ او، آرنت «عصر ظلمت» را زمانی می‌داند که مردم دیگر در برابر هم حاضر نمی‌شوند و گفتگو و کنش مشترک خاموش می‌شود. حکومت تمامیت‌خواه می‌کوشد مردم را از هم جدا کند و اعتماد را بسوزاند. کنشگری در این نگاه، پدید آوردن فضایی برای سخن گفتن با یکدیگر است.",
+    "en": "The lecturer presents activism through Hannah Arendt. In his reading, 'dark times' are periods when people stop appearing before one another and shared speech and action fade. Totalitarian rule tries to isolate people and destroy trust. Activism then means creating spaces where people can talk with each other.",
+    "nl": "Activisme volgens Hannah Arendt: in donkere tijden verdwijnt het gesprek tussen mensen; handelen betekent ruimte maken om te spreken en elkaar te vertrouwen."
   },
-  {
-   "text": {
-    "fa": "سخنران می‌گوید در این وضعیت اعتماد و احترام هدف حمله‌اند: همه باید به هم شک کنند و حتی مهربانی مشکوک شود. یکی از ابزارها این است که کنشگر را «وابسته به دشمن» نشان دهند تا هزینهٔ برخورد با او کم شود. این شرح، تفسیر خود سخنران از آرنت است و نه گفتهٔ مستقیم او.",
-    "en": "The lecturer says trust and respect are the targets: everyone must suspect everyone, and even kindness becomes suspect. One tool is to label an activist as tied to 'the enemy' so that acting against them becomes cheaper. This is the lecturer's own elaboration of Arendt, not a direct quotation of her.",
-    "nl": "The lecturer says trust and respect are the targets: everyone must suspect everyone, and even kindness becomes suspect. One tool is to label an activist as tied to 'the enemy' so that acting against them becomes cheaper. This is the lecturer's own elaboration of Arendt, not a direct quotation of her."
-   },
-   "sources": [
-    "src:f390b91bd7"
-   ],
-   "flags": [
-    "editor-note"
-   ]
-  },
-  {
-   "text": {
-    "fa": "سخنران از استعارهٔ «میز» آرنت می‌گوید: میز مردم را کنار هم می‌نشاند و هم‌زمان فاصله‌ای میانشان نگه می‌دارد. او این را با نگاه هابرماس مقایسه می‌کند که جامعهٔ مدنی سالم را جایی می‌داند که نیروی استدلال بر زور و ثروت و مقام برتری دارد. آرنت کنش را همچنین از «کار» و «ساختن» جدا می‌کرد.",
-    "en": "The lecturer mentions Arendt's table image: a table seats people together while keeping a distance between them. He pairs it with Habermas, for whom a healthy civil society is one where the force of the better argument beats power, wealth and rank. Arendt also distinguished action from labour and work.",
-    "nl": "The lecturer mentions Arendt's table image: a table seats people together while keeping a distance between them. He pairs it with Habermas, for whom a healthy civil society is one where the force of the better argument beats power, wealth and rank. Arendt also distinguished action from labour and work."
-   },
-   "sources": [
-    "src:f390b91bd7",
+  "points": [
+    {
+      "text": {
+        "fa": "به گفتهٔ سخنران، به نظر آرنت تمامیت‌خواهی مردم را به «اتم‌های جدا افتاده» تبدیل می‌کند: با ایجاد شکاف میان جنسیت‌ها، قومیت‌ها و شغل‌ها، هر گروه دیگری را مزاحم می‌بیند و تنهایی و بی‌اعتمادی همه‌جا پخش می‌شود. آرنت میان انزوای تحمیلی و خلوتِ لازم برای اندیشیدن فرق می‌گذارد.",
+        "en": "Per the lecturer, Arendt holds that totalitarianism turns people into isolated atoms: by driving wedges between genders, ethnic groups and occupations, each group sees the others as obstacles and mistrust spreads. Arendt separates imposed isolation from the solitude needed for thinking.",
+        "nl": "Per the lecturer, Arendt holds that totalitarianism turns people into isolated atoms: by driving wedges between genders, ethnic groups and occupations, each group sees the others as obstacles and mistrust spreads. Arendt separates imposed isolation from the solitude needed for thinking."
+      },
+      "sources": [
+        "src:f390b91bd7",
+        "src:98e164d871"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "سخنران می‌گوید در این وضعیت اعتماد و احترام هدف حمله‌اند: همه باید به هم شک کنند و حتی مهربانی مشکوک شود. یکی از ابزارها این است که کنشگر را «وابسته به دشمن» نشان دهند تا هزینهٔ برخورد با او کم شود. این شرح، تفسیر خود سخنران از آرنت است و نه گفتهٔ مستقیم او.",
+        "en": "The lecturer says trust and respect are the targets: everyone must suspect everyone, and even kindness becomes suspect. One tool is to label an activist as tied to 'the enemy' so that acting against them becomes cheaper. This is the lecturer's own elaboration of Arendt, not a direct quotation of her.",
+        "nl": "The lecturer says trust and respect are the targets: everyone must suspect everyone, and even kindness becomes suspect. One tool is to label an activist as tied to 'the enemy' so that acting against them becomes cheaper. This is the lecturer's own elaboration of Arendt, not a direct quotation of her."
+      },
+      "sources": [
+        "src:f390b91bd7"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "سخنران از استعارهٔ «میز» آرنت می‌گوید: میز مردم را کنار هم می‌نشاند و هم‌زمان فاصله‌ای میانشان نگه می‌دارد. او این را با نگاه هابرماس مقایسه می‌کند که جامعهٔ مدنی سالم را جایی می‌داند که نیروی استدلال بر زور و ثروت و مقام برتری دارد. آرنت کنش را همچنین از «کار» و «ساختن» جدا می‌کرد.",
+        "en": "The lecturer mentions Arendt's table image: a table seats people together while keeping a distance between them. He pairs it with Habermas, for whom a healthy civil society is one where the force of the better argument beats power, wealth and rank. Arendt also distinguished action from labour and work.",
+        "nl": "The lecturer mentions Arendt's table image: a table seats people together while keeping a distance between them. He pairs it with Habermas, for whom a healthy civil society is one where the force of the better argument beats power, wealth and rank. Arendt also distinguished action from labour and work."
+      },
+      "sources": [
+        "src:f390b91bd7",
+        "src:67b2510c9c",
+        "src:501e588e65"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "آرنت «روزگار تاریک» را نبودِ فضای عمومی می‌داند که در آن مردم با گفتار و کنش مشترک چیزی را روشن می‌کنند. به گفتهٔ سخنران، این تاریکی از خاموشی طبیعی نیست؛ حاصل کنار کشیدن انسان‌ها از حضور در برابر هم و پناه بردن به انزواست.",
+        "en": "Arendt treats a 'dark time' as the loss of a public realm in which people illuminate matters through shared speech and action. Per the lecturer, this darkness does not come from nature; it comes from people withdrawing from appearing before one another and retreating into isolation.",
+        "nl": "Arendt treats a 'dark time' as the loss of a public realm in which people illuminate matters through shared speech and action. Per the lecturer, this darkness does not come from nature; it comes from people withdrawing from appearing before one another and retreating into isolation."
+      },
+      "sources": [
+        "src:f3acd7cedb",
+        "src:0fbbaf360f"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "در این کتاب لسینگ را می‌بینیم که گفتگوی پایان‌ناپذیر را بر دعوی حقیقت مطلق ترجیح می‌دهد، رزا لوکزامبورگ که انقلاب را از خشونت کور جدا می‌کند، و والتر بنیامین که در تبعید می‌نوشت. آرنت آن‌ها را قهرمان اسطوره‌ای نمی‌شمارد؛ انسان‌هایی آسیب‌پذیر اما شجاع می‌داند. گفتهٔ لسینگ دربارهٔ ترجیح جست‌وجو بر حقیقت در مقالهٔ آرنت دربارهٔ او آمده است.",
+        "en": "The book portrays Lessing, who preferred endless dialogue to a claim of absolute truth; Rosa Luxemburg, who separated revolution from blind violence; and Walter Benjamin, who wrote in exile. Arendt does not treat them as mythic heroes but as vulnerable, courageous people. Lessing's preference for the search over possessed truth appears in her essay on him.",
+        "nl": "The book portrays Lessing, who preferred endless dialogue to a claim of absolute truth; Rosa Luxemburg, who separated revolution from blind violence; and Walter Benjamin, who wrote in exile. Arendt does not treat them as mythic heroes but as vulnerable, courageous people. Lessing's preference for the search over possessed truth appears in her essay on him."
+      },
+      "sources": [
+        "src:f3acd7cedb"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "به گفتهٔ سخنران، کنشگری یعنی ساختن حلقه‌هایی برای گفتگو، حتی بدون بیانیه یا هدف سیاسی مشخص، و شبکه‌های اجتماعی می‌توانند بخشی از این فضا باشند حتی اگر تند و ناقص باشند. او محدود کردن این فضاها را (با بهانهٔ «صیانت») از نظر آرنت کار نظام توتالیتر می‌خواند. این کاربرد در بافت ایران تفسیر خود سخنران است و آرنت دربارهٔ اینترنت چیزی ننوشت.",
+        "en": "Per the lecturer, activism means building circles for conversation, even without manifestos or political goals, and social networks can be part of that space even when they are rough and imperfect. He says restricting such spaces on the pretext of 'protection' fits what Arendt would call totalitarian work. This application to Iran is his own interpretation; Arendt wrote nothing about the internet.",
+        "nl": "Per the lecturer, activism means building circles for conversation, even without manifestos or political goals, and social networks can be part of that space even when they are rough and imperfect. He says restricting such spaces on the pretext of 'protection' fits what Arendt would call totalitarian work. This application to Iran is his own interpretation; Arendt wrote nothing about the internet."
+      },
+      "sources": [
+        "src:0fbbaf360f"
+      ],
+      "flags": [
+        "editor-note",
+        "contested"
+      ]
+    },
+    {
+      "text": {
+        "fa": "هشدار دربارهٔ منبع: بخش‌هایی که سخنران از «مقدمهٔ کتاب» می‌خواند (از جمله «انقلاب وقتی به خون‌آشام بدل شود…») با متن شناخته‌شدهٔ مقدمهٔ آرنت نمی‌خواند و به نظر خلاصه یا بازنویسی است. بنابراین نباید آن جمله‌ها را عیناً به آرنت نسبت داد.",
+        "en": "Source warning: passages the lecturer reads from 'the book's introduction' (including a line about revolution becoming a vampire) do not match Arendt's known preface and seem to be summaries or paraphrases. They should not be attributed verbatim to Arendt.",
+        "nl": "Source warning: passages the lecturer reads from 'the book's introduction' (including a line about revolution becoming a vampire) do not match Arendt's known preface and seem to be summaries or paraphrases. They should not be attributed verbatim to Arendt."
+      },
+      "sources": [
+        "src:0fbbaf360f"
+      ],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "soc:generalized-trust",
+      "rel": "see-also",
+      "note": {
+        "fa": "اعتماد و بی‌اعتمادی اجتماعی",
+        "en": "Social trust and distrust",
+        "nl": "Social trust and distrust"
+      }
+    },
+    {
+      "to": "soc:activism-three-axes-aim-method-scale",
+      "rel": "explains",
+      "note": {
+        "fa": "دسته‌بندی کنشگری بر پایهٔ هدف، روش و مقیاس",
+        "en": "Classifying activism by aim, method and scale",
+        "nl": "Classifying activism by aim, method and scale"
+      }
+    },
+    {
+      "to": "phil:two-liberties",
+      "rel": "see-also",
+      "note": {
+        "fa": "دو مفهوم آزادی",
+        "en": "Two concepts of liberty",
+        "nl": "Two concepts of liberty"
+      }
+    },
+    {
+      "to": "soc:arendt-totalitarian-isolation-and-trust",
+      "rel": "see-also",
+      "note": {
+        "fa": "انزوا و فرسایش اعتماد در توتالیتاریسم",
+        "en": "Isolation and eroded trust under totalitarianism",
+        "nl": "Isolation and eroded trust under totalitarianism"
+      }
+    },
+    {
+      "to": "phil:political",
+      "rel": "part-of",
+      "note": {
+        "fa": "فلسفهٔ سیاسی",
+        "en": "Political philosophy",
+        "nl": "Political philosophy"
+      }
+    },
+    {
+      "to": "soc:collective-action",
+      "rel": "bridges",
+      "note": {
+        "fa": "مسئلهٔ کنش جمعی",
+        "en": "The collective action problem",
+        "nl": "The collective action problem"
+      }
+    }
+  ],
+  "people": [
+    "core:hannah-arendt",
+    "core:rosa-luxemburg",
+    "core:walter-benjamin",
+    "core:j-rgen-habermas",
+    "core:gotthold-ephraim-lessing"
+  ],
+  "sources": [
+    "src:501e588e65",
     "src:67b2510c9c",
-    "src:501e588e65"
-   ],
-   "flags": []
-  },
-  {
-   "text": {
-    "fa": "نکتهٔ احتیاطی: بخش‌هایی که سخنران از کتاب آرنت می‌خواند، با متن شناخته‌شدهٔ کتاب به‌سختی قابل تطبیق است و شاید خلاصه‌ای آزاد باشد. همچنین «تمامیت‌خواه» نامیدن یک حکومت امروزی مورد بحث پژوهشگران است و بسیاری آن را «اقتدارگرا» می‌نامند، چون مدل آرنت دربارهٔ آلمان نازی و شوروی استالینی بود.",
-    "en": "Caution: the passages he reads aloud are hard to match with Arendt's known text and may be a loose paraphrase. Calling a present-day government 'totalitarian' is also debated; many scholars prefer 'authoritarian', since Arendt's model was Nazi Germany and Stalin's USSR.",
-    "nl": "Caution: the passages he reads aloud are hard to match with Arendt's known text and may be a loose paraphrase. Calling a present-day government 'totalitarian' is also debated; many scholars prefer 'authoritarian', since Arendt's model was Nazi Germany and Stalin's USSR."
-   },
-   "sources": [
-    "src:f390b91bd7"
-   ],
-   "flags": [
-    "contested",
-    "editor-note"
-   ]
-  }
- ],
- "links": [
-  {
-   "to": "soc:generalized-trust",
-   "rel": "see-also",
-   "note": {
-    "fa": "اعتماد و بی‌اعتمادی اجتماعی",
-    "en": "Social trust and distrust",
-    "nl": "Social trust and distrust"
-   }
-  },
-  {
-   "to": "soc:activism-three-axes-aim-method-scale",
-   "rel": "explains",
-   "note": {
-    "fa": "دسته‌بندی کنشگری بر پایهٔ هدف، روش و مقیاس",
-    "en": "Classifying activism by aim, method and scale",
-    "nl": "Classifying activism by aim, method and scale"
-   }
-  },
-  {
-   "to": "phil:two-liberties",
-   "rel": "see-also",
-   "note": {
-    "fa": "دو مفهوم آزادی",
-    "en": "Two concepts of liberty",
-    "nl": "Two concepts of liberty"
-   }
-  }
- ],
- "people": [
-  "core:hannah-arendt",
-  "core:rosa-luxemburg",
-  "core:walter-benjamin",
-  "core:j-rgen-habermas"
- ],
- "sources": [
-  "src:501e588e65",
-  "src:67b2510c9c",
-  "src:98e164d871",
-  "src:ada6480760",
-  "src:f390b91bd7"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+    "src:98e164d871",
+    "src:ada6480760",
+    "src:f390b91bd7",
+    "src:0fbbaf360f",
+    "src:1aa33f7b13",
+    "src:f3acd7cedb"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

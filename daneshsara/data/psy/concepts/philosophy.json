@@ -1,69 +1,79 @@
 {
- "id": "psy:philosophy",
- "kind": "field",
- "title": {
-  "fa": "فلسفه",
-  "en": "Philosophy",
-  "nl": "Filosofie"
- },
- "parent": "psy:psyche",
- "field": null,
- "summary": {
-  "fa": "روان‌شناسی از دل فلسفه بیرون آمد. فلسفه هنوز پرسش‌هایی را می‌پرسد که آزمایش به‌تنهایی جوابشان را نمی‌دهد: رابطهٔ ذهن و مغز، ارادهٔ آزاد، معنای «اختلال»، دانستن و شک، و اینکه چه چیزی زندگی را ارزشمند می‌کند.",
-  "en": "Psychology grew out of philosophy. Philosophy still asks questions that experiments alone cannot answer: the mind-brain relation, free will, the meaning of “disorder”, knowledge and doubt, and what makes life worthwhile.",
-  "nl": "De psychologie is uit de filosofie voortgekomen. De filosofie stelt nog altijd vragen die experimenten alleen niet beantwoorden: de relatie tussen geest en brein, vrije wil, de betekenis van ‘stoornis’, kennen en twijfel, en wat het leven waardevol maakt."
- },
- "points": [
-  {
-   "text": {
-    "fa": "ارسطو در «دربارهٔ نفس» و ابن‌سینا در «شفا» نخستین نظریه‌های نظام‌مند ذهن را ساختند.",
-    "en": "Aristotle in On the Soul and Avicenna in The Book of Healing built the first systematic theories of mind.",
-    "nl": "Aristoteles in Over de ziel en Avicenna in Het boek der genezing bouwden de eerste systematische theorieën van de geest."
-   },
-   "sources": [
-    "src:d9cc09fc6e"
-   ],
-   "flags": []
+  "id": "psy:philosophy",
+  "kind": "field",
+  "title": {
+    "fa": "فلسفه",
+    "en": "Philosophy",
+    "nl": "Filosofie"
   },
-  {
-   "text": {
-    "fa": "فلسفهٔ تجربی امروز شهودهای اخلاقی و مفهومی مردم را با آزمایش می‌سنجد.",
-    "en": "Today's experimental philosophy tests people's moral and conceptual intuitions with experiments.",
-    "nl": "De hedendaagse experimentele filosofie toetst morele en conceptuele intuïties van mensen met experimenten."
-   },
-   "sources": [
-    "src:d9cc09fc6e"
-   ],
-   "flags": []
+  "parent": "psy:psyche",
+  "field": null,
+  "summary": {
+    "fa": "روان‌شناسی از دل فلسفه بیرون آمد. فلسفه هنوز پرسش‌هایی را می‌پرسد که آزمایش به‌تنهایی جوابشان را نمی‌دهد: رابطهٔ ذهن و مغز، ارادهٔ آزاد، معنای «اختلال»، دانستن و شک، و اینکه چه چیزی زندگی را ارزشمند می‌کند.",
+    "en": "Psychology grew out of philosophy. Philosophy still asks questions that experiments alone cannot answer: the mind-brain relation, free will, the meaning of “disorder”, knowledge and doubt, and what makes life worthwhile.",
+    "nl": "De psychologie is uit de filosofie voortgekomen. De filosofie stelt nog altijd vragen die experimenten alleen niet beantwoorden: de relatie tussen geest en brein, vrije wil, de betekenis van ‘stoornis’, kennen en twijfel, en wat het leven waardevol maakt."
   },
-  {
-   "text": {
-    "fa": "در «اطلس رشته‌ها» زیرشاخه‌ها و مسیر تحصیل فلسفه آمده است.",
-    "en": "The “Atlas of fields” lists philosophy's subfields and study paths.",
-    "nl": "De ‘Atlas van vakgebieden’ geeft de deelgebieden en studieroutes van de filosofie."
-   },
-   "sources": [
+  "points": [
+    {
+      "text": {
+        "fa": "ارسطو در «دربارهٔ نفس» و ابن‌سینا در «شفا» نخستین نظریه‌های نظام‌مند ذهن را ساختند.",
+        "en": "Aristotle in On the Soul and Avicenna in The Book of Healing built the first systematic theories of mind.",
+        "nl": "Aristoteles in Over de ziel en Avicenna in Het boek der genezing bouwden de eerste systematische theorieën van de geest."
+      },
+      "sources": [
+        "src:d9cc09fc6e"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "فلسفهٔ تجربی امروز شهودهای اخلاقی و مفهومی مردم را با آزمایش می‌سنجد.",
+        "en": "Today's experimental philosophy tests people's moral and conceptual intuitions with experiments.",
+        "nl": "De hedendaagse experimentele filosofie toetst morele en conceptuele intuïties van mensen met experimenten."
+      },
+      "sources": [
+        "src:d9cc09fc6e"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "در «اطلس رشته‌ها» زیرشاخه‌ها و مسیر تحصیل فلسفه آمده است.",
+        "en": "The “Atlas of fields” lists philosophy's subfields and study paths.",
+        "nl": "De ‘Atlas van vakgebieden’ geeft de deelgebieden en studieroutes van de filosofie."
+      },
+      "sources": [
+        "src:d9cc09fc6e"
+      ],
+      "flags": []
+    }
+  ],
+  "links": [
+    {
+      "to": "phil:phil",
+      "rel": "same-as",
+      "note": {
+        "fa": "همین مفهوم در ویکی دیگر",
+        "en": "Same concept in another wiki",
+        "nl": "Hetzelfde begrip in een andere wiki"
+      }
+    }
+  ],
+  "people": [
+    "core:aristotle",
+    "core:avicenna",
+    "core:descartes",
+    "core:kant",
+    "core:kierkegaard",
+    "core:husserl",
+    "core:sartre"
+  ],
+  "sources": [
     "src:d9cc09fc6e"
-   ],
-   "flags": []
-  }
- ],
- "links": [],
- "people": [
-  "core:aristotle",
-  "core:avicenna",
-  "core:descartes",
-  "core:kant",
-  "core:kierkegaard",
-  "core:husserl",
-  "core:sartre"
- ],
- "sources": [
-  "src:d9cc09fc6e"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

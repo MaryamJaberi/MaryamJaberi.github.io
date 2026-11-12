@@ -8,7 +8,7 @@
   DS.norm = s => String(s || "").toLowerCase().replace(/ي/g, "ی").replace(/ك/g, "ک").replace(/[‌‏‎]/g, " ").replace(/[ً-ٰٟ]/g, "").replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d)).replace(/\s+/g, " ").trim();
   DS.TIER = { 1: "فراتحلیل/تکرار", 2: "مقالهٔ داوری‌شده/آمار رسمی", 3: "کتاب یا سخنرانی", 4: "سرنخ", 0: "بی‌منبع" };
   DS.FLAG = { unreplicated: "تکرارنشده", contested: "محل بحث", dated: "قدیمی", "editor-note": "یادداشت سردبیر" };
-  DS.WIKI = { psy: "روان", soc: "جامعه", phil: "فلسفه", tabar: "تبار" };
+  DS.WIKI = { psy: "روان", soc: "جامعه", phil: "فلسفه", tabar: "تبار", tarikh: "تاریخ" };
   DS.REL = { "part-of": "بخشی از", explains: "توضیح می‌دهد", "evidence-for": "شاهدِ", "evidence-against": "شاهد علیه", contrasts: "در برابر", prerequisite: "پیش‌نیاز", "same-as": "همان", "applies-to": "کاربرد در", "measured-by": "سنجش با", critiques: "نقد", bridges: "پل به", "see-also": "ببینید" };
   let _p = null;
   /* بارگذاری داده؛ نتیجه را با نمایه‌ها برمی‌گرداند */

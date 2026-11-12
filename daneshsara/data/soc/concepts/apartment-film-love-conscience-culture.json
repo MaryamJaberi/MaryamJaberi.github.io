@@ -1,132 +1,132 @@
 {
- "id": "soc:apartment-film-love-conscience-culture",
- "kind": "concept",
- "title": {
-  "fa": "عشق رمانتیک، وجدان و اخلاق به‌مثابه ساختهٔ فرهنگی (تحلیل فیلم «آپارتمان»)",
-  "en": "Romantic love, conscience and morality as cultural constructs (reading «The Apartment»)",
-  "nl": "Romantische liefde, geweten en moraal als cultuurproduct (lezing van «The Apartment»)"
- },
- "aliases": [],
- "parent": "soc:values",
- "field": "soc:values",
- "summary": {
-  "fa": "سخنران در ادامهٔ تحلیل فیلم می‌گوید اخلاق و وجدان فردی را فرهنگ می‌سازد و عشق رمانتیک را اسطوره‌ای می‌داند که زندگی واقعی با آن جور نیست. این نگاه جامعه‌شناختی است، اما ادعاهای او دربارهٔ ذات بشر و عشق همه‌جا پشتوانهٔ پژوهشی ندارد.",
-  "en": "Continuing his reading of the film, the lecturer says morality and individual conscience are made by culture and that romantic love is a myth that real life rarely matches. The stance is sociological, but his claims about human nature and love often lack empirical backing.",
-  "nl": "De spreker stelt dat moraal en geweten door cultuur gevormd worden en romantische liefde een mythe is die zelden met het echte leven klopt. Sociologisch gekleurd, maar zijn claims over de menselijke natuur missen vaak empirische onderbouwing."
- },
- "points": [
-  {
-   "text": {
-    "fa": "به گفتهٔ سخنران، اخلاق یک «برساختهٔ فرهنگی» است و وجدان فردی هدیهٔ الهی نیست بلکه درونی‌شدن امر فرهنگی است. این نگاه با ایدهٔ دورکیم دربارهٔ وجدان جمعی نزدیک است؛ اما این‌که وجدان «فقط» همین باشد بحث‌برانگیز است و روان‌شناسی و زیست‌شناسی هم برای شهودهای اخلاقی نقشی قائل‌اند.",
-    "en": "Per the lecturer, morality is a «cultural construct» and individual conscience is not a divine gift but internalised culture. This is close to Durkheim's idea of the collective conscience; that it is «only» this is contested, since psychology and biology also contribute to moral intuitions.",
-    "nl": "Per the lecturer, morality is a «cultural construct» and individual conscience is not a divine gift but internalised culture. This is close to Durkheim's idea of the collective conscience; that it is «only» this is contested, since psychology and biology also contribute to moral intuitions."
-   },
-   "sources": [
-    "src:f40241ae47",
-    "src:08189afc06"
-   ],
-   "flags": [
-    "editor-note",
-    "contested"
-   ]
+  "id": "soc:apartment-film-love-conscience-culture",
+  "kind": "concept",
+  "title": {
+    "fa": "عشق رمانتیک، وجدان و اخلاق به‌مثابه ساختهٔ فرهنگی (تحلیل فیلم «آپارتمان»)",
+    "en": "Romantic love, conscience and morality as cultural constructs (reading «The Apartment»)",
+    "nl": "Romantische liefde, geweten en moraal als cultuurproduct (lezing van «The Apartment»)"
   },
-  {
-   "text": {
-    "fa": "به گفتهٔ سخنران، فرهنگ می‌خواهد افراد را زیر قراردادهایی مثل ازدواج یکسان کند و هر خروج از آن را «انحراف» می‌نامد. جامعه‌شناسی انحراف هم می‌گوید برچسب انحراف نسبی است و به هنجارهای هر جامعه بستگی دارد، اما این به معنای بی‌اهمیت‌بودن پیامدهای فردی و اجتماعی رفتارها نیست.",
-    "en": "Per the lecturer, culture wants to make people alike under contracts such as marriage and labels departures «deviance». The sociology of deviance also says the label is relative to a society's norms, but that does not make the personal and social consequences of behaviour irrelevant.",
-    "nl": "Per the lecturer, culture wants to make people alike under contracts such as marriage and labels departures «deviance». The sociology of deviance also says the label is relative to a society's norms, but that does not make the personal and social consequences of behaviour irrelevant."
-   },
-   "sources": [
+  "aliases": [],
+  "parent": "soc:values",
+  "field": "soc:values",
+  "summary": {
+    "fa": "سخنران در ادامهٔ تحلیل فیلم می‌گوید اخلاق و وجدان فردی را فرهنگ می‌سازد و عشق رمانتیک را اسطوره‌ای می‌داند که زندگی واقعی با آن جور نیست. این نگاه جامعه‌شناختی است، اما ادعاهای او دربارهٔ ذات بشر و عشق همه‌جا پشتوانهٔ پژوهشی ندارد.",
+    "en": "Continuing his reading of the film, the lecturer says morality and individual conscience are made by culture and that romantic love is a myth that real life rarely matches. The stance is sociological, but his claims about human nature and love often lack empirical backing.",
+    "nl": "De spreker stelt dat moraal en geweten door cultuur gevormd worden en romantische liefde een mythe is die zelden met het echte leven klopt. Sociologisch gekleurd, maar zijn claims over de menselijke natuur missen vaak empirische onderbouwing."
+  },
+  "points": [
+    {
+      "text": {
+        "fa": "به گفتهٔ سخنران، اخلاق یک «برساختهٔ فرهنگی» است و وجدان فردی هدیهٔ الهی نیست بلکه درونی‌شدن امر فرهنگی است. این نگاه با ایدهٔ دورکیم دربارهٔ وجدان جمعی نزدیک است؛ اما این‌که وجدان «فقط» همین باشد بحث‌برانگیز است و روان‌شناسی و زیست‌شناسی هم برای شهودهای اخلاقی نقشی قائل‌اند.",
+        "en": "Per the lecturer, morality is a «cultural construct» and individual conscience is not a divine gift but internalised culture. This is close to Durkheim's idea of the collective conscience; that it is «only» this is contested, since psychology and biology also contribute to moral intuitions.",
+        "nl": "Per the lecturer, morality is a «cultural construct» and individual conscience is not a divine gift but internalised culture. This is close to Durkheim's idea of the collective conscience; that it is «only» this is contested, since psychology and biology also contribute to moral intuitions."
+      },
+      "sources": [
+        "src:f40241ae47",
+        "src:08189afc06"
+      ],
+      "flags": [
+        "editor-note",
+        "contested"
+      ]
+    },
+    {
+      "text": {
+        "fa": "به گفتهٔ سخنران، فرهنگ می‌خواهد افراد را زیر قراردادهایی مثل ازدواج یکسان کند و هر خروج از آن را «انحراف» می‌نامد. جامعه‌شناسی انحراف هم می‌گوید برچسب انحراف نسبی است و به هنجارهای هر جامعه بستگی دارد، اما این به معنای بی‌اهمیت‌بودن پیامدهای فردی و اجتماعی رفتارها نیست.",
+        "en": "Per the lecturer, culture wants to make people alike under contracts such as marriage and labels departures «deviance». The sociology of deviance also says the label is relative to a society's norms, but that does not make the personal and social consequences of behaviour irrelevant.",
+        "nl": "Per the lecturer, culture wants to make people alike under contracts such as marriage and labels departures «deviance». The sociology of deviance also says the label is relative to a society's norms, but that does not make the personal and social consequences of behaviour irrelevant."
+      },
+      "sources": [
+        "src:f40241ae47"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "به گفتهٔ سخنران، عشق رمانتیک مثل یک ژانر ادبی و اسطوره ساخته شده و چون در زندگی واقعی تحقق نمی‌یابد، سرخوردگی و شعر و فیلم دربارهٔ بی‌وفایی تولید می‌شود. جامعه‌شناسانی مثل گیدنز هم نشان داده‌اند که ایدهٔ عشق رمانتیک تاریخی و مدرن است و شکل روابط صمیمی تغییر کرده است.",
+        "en": "Per the lecturer, romantic love is constructed like a literary genre and myth, and its failure in real life breeds disappointment and poems and films about betrayal. Sociologists such as Giddens also show that romantic love is a historically modern idea and that the form of intimacy has changed.",
+        "nl": "Per the lecturer, romantic love is constructed like a literary genre and myth, and its failure in real life breeds disappointment and poems and films about betrayal. Sociologists such as Giddens also show that romantic love is a historically modern idea and that the form of intimacy has changed."
+      },
+      "sources": [
+        "src:f40241ae47",
+        "src:0c6b2445fc"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "ادعای سخنران دربارهٔ آمار روابط مردان بالای چهل سال با زنان جوان‌تر در ایران، و تعمیم رفتار «شوگر دیدی»، بدون ذکر منبع آمده است و نمی‌توان آن را تأیید کرد. همچنین تعمیم‌هایی دربارهٔ رفتار «همهٔ» مردان متأهل یا «ذات بشر» فراتر از شواهد است.",
+        "en": "The lecturer's claim about the statistics of relationships between men over forty and younger women in Iran, and his generalisation about «sugar daddy» patterns, is given without a source and cannot be verified. Generalisations about «all» married men or «human nature» also go beyond the evidence.",
+        "nl": "The lecturer's claim about the statistics of relationships between men over forty and younger women in Iran, and his generalisation about «sugar daddy» patterns, is given without a source and cannot be verified. Generalisations about «all» married men or «human nature» also go beyond the evidence."
+      },
+      "sources": [
+        "src:f40241ae47"
+      ],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "سخنران می‌گوید شخصیت اصلی فیلم با این‌که عشقش را از دست می‌دهد، تصمیم می‌گیرد کلید را ندهد؛ و این تغییر را نه کشمکش اخلاقی بلکه آسیب مستقیم به زندگی خودش می‌داند. این برداشت از فیلم است و تماشاگران دیگر ممکن است آن را همزمان دگرگونی اخلاقی هم بدانند.",
+        "en": "The lecturer says the protagonist refuses to hand over the key after seeing the cost to his own love, and sees this as direct self-interest rather than moral struggle. This is his reading; other viewers may also see a moral awakening.",
+        "nl": "The lecturer says the protagonist refuses to hand over the key after seeing the cost to his own love, and sees this as direct self-interest rather than moral struggle. This is his reading; other viewers may also see a moral awakening."
+      },
+      "sources": [
+        "src:f40241ae47"
+      ],
+      "flags": [
+        "editor-note",
+        "contested"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "soc:durkheim-sacred-society",
+      "rel": "explains",
+      "note": {
+        "fa": "وجدان جمعی و دین نزد دورکیم",
+        "en": "Collective conscience and religion in Durkheim",
+        "nl": "Collective conscience and religion in Durkheim"
+      }
+    },
+    {
+      "to": "soc:culture-concept-functions",
+      "rel": "part-of",
+      "note": {
+        "fa": "فرهنگ و کارکردهای آن",
+        "en": "Culture and its functions",
+        "nl": "Culture and its functions"
+      }
+    },
+    {
+      "to": "soc:apartment-film-merit-favors-bureaucracy",
+      "rel": "see-also",
+      "note": {
+        "fa": "بخش اول تحلیل: بوروکراسی و شایستگی",
+        "en": "First part: bureaucracy and merit",
+        "nl": "First part: bureaucracy and merit"
+      }
+    }
+  ],
+  "people": [
+    "core:anthony-giddens",
+    "core:mile-durkheim"
+  ],
+  "sources": [
+    "src:08189afc06",
+    "src:0c6b2445fc",
     "src:f40241ae47"
-   ],
-   "flags": [
-    "editor-note"
-   ]
-  },
-  {
-   "text": {
-    "fa": "به گفتهٔ سخنران، عشق رمانتیک مثل یک ژانر ادبی و اسطوره ساخته شده و چون در زندگی واقعی تحقق نمی‌یابد، سرخوردگی و شعر و فیلم دربارهٔ بی‌وفایی تولید می‌شود. جامعه‌شناسانی مثل گیدنز هم نشان داده‌اند که ایدهٔ عشق رمانتیک تاریخی و مدرن است و شکل روابط صمیمی تغییر کرده است.",
-    "en": "Per the lecturer, romantic love is constructed like a literary genre and myth, and its failure in real life breeds disappointment and poems and films about betrayal. Sociologists such as Giddens also show that romantic love is a historically modern idea and that the form of intimacy has changed.",
-    "nl": "Per the lecturer, romantic love is constructed like a literary genre and myth, and its failure in real life breeds disappointment and poems and films about betrayal. Sociologists such as Giddens also show that romantic love is a historically modern idea and that the form of intimacy has changed."
-   },
-   "sources": [
-    "src:f40241ae47",
-    "src:0c6b2445fc"
-   ],
-   "flags": [
-    "editor-note"
-   ]
-  },
-  {
-   "text": {
-    "fa": "ادعای سخنران دربارهٔ آمار روابط مردان بالای چهل سال با زنان جوان‌تر در ایران، و تعمیم رفتار «شوگر دیدی»، بدون ذکر منبع آمده است و نمی‌توان آن را تأیید کرد. همچنین تعمیم‌هایی دربارهٔ رفتار «همهٔ» مردان متأهل یا «ذات بشر» فراتر از شواهد است.",
-    "en": "The lecturer's claim about the statistics of relationships between men over forty and younger women in Iran, and his generalisation about «sugar daddy» patterns, is given without a source and cannot be verified. Generalisations about «all» married men or «human nature» also go beyond the evidence.",
-    "nl": "The lecturer's claim about the statistics of relationships between men over forty and younger women in Iran, and his generalisation about «sugar daddy» patterns, is given without a source and cannot be verified. Generalisations about «all» married men or «human nature» also go beyond the evidence."
-   },
-   "sources": [
-    "src:f40241ae47"
-   ],
-   "flags": [
-    "contested",
-    "editor-note"
-   ]
-  },
-  {
-   "text": {
-    "fa": "سخنران می‌گوید شخصیت اصلی فیلم با این‌که عشقش را از دست می‌دهد، تصمیم می‌گیرد کلید را ندهد؛ و این تغییر را نه کشمکش اخلاقی بلکه آسیب مستقیم به زندگی خودش می‌داند. این برداشت از فیلم است و تماشاگران دیگر ممکن است آن را همزمان دگرگونی اخلاقی هم بدانند.",
-    "en": "The lecturer says the protagonist refuses to hand over the key after seeing the cost to his own love, and sees this as direct self-interest rather than moral struggle. This is his reading; other viewers may also see a moral awakening.",
-    "nl": "The lecturer says the protagonist refuses to hand over the key after seeing the cost to his own love, and sees this as direct self-interest rather than moral struggle. This is his reading; other viewers may also see a moral awakening."
-   },
-   "sources": [
-    "src:f40241ae47"
-   ],
-   "flags": [
-    "editor-note",
-    "contested"
-   ]
-  }
- ],
- "links": [
-  {
-   "to": "soc:durkheim-religion-society",
-   "rel": "explains",
-   "note": {
-    "fa": "وجدان جمعی و دین نزد دورکیم",
-    "en": "Collective conscience and religion in Durkheim",
-    "nl": "Collective conscience and religion in Durkheim"
-   }
-  },
-  {
-   "to": "soc:culture-concept-functions",
-   "rel": "part-of",
-   "note": {
-    "fa": "فرهنگ و کارکردهای آن",
-    "en": "Culture and its functions",
-    "nl": "Culture and its functions"
-   }
-  },
-  {
-   "to": "soc:apartment-film-merit-favors-bureaucracy",
-   "rel": "see-also",
-   "note": {
-    "fa": "بخش اول تحلیل: بوروکراسی و شایستگی",
-    "en": "First part: bureaucracy and merit",
-    "nl": "First part: bureaucracy and merit"
-   }
-  }
- ],
- "people": [
-  "core:anthony-giddens",
-  "core:mile-durkheim"
- ],
- "sources": [
-  "src:08189afc06",
-  "src:0c6b2445fc",
-  "src:f40241ae47"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

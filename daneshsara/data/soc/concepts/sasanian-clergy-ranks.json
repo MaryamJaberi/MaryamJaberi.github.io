@@ -1,97 +1,97 @@
 {
- "id": "soc:sasanian-clergy-ranks",
- "kind": "concept",
- "title": {
-  "fa": "مراتب روحانیت زرتشتی در شاهنشاهی ساسانی",
-  "en": "Ranks of the Zoroastrian clergy in the Sasanian state",
-  "nl": "Rangen van de zoroastrische geestelijkheid in het Sassanidenrijk"
- },
- "aliases": [],
- "parent": "soc:institutions",
- "field": "soc:institutions",
- "summary": {
-  "fa": "روحانیت زرتشتی در دورهٔ ساسانی سازمانی سه‌پایه داشت و در آموزش، دادرسی و آیین‌های همگانی کار می‌کرد؛ در رأس آن موبدان‌موبد بود.",
-  "en": "The Sasanian Zoroastrian clergy had a three-part structure running education, justice and public ritual, headed by the chief mobed.",
-  "nl": "De zoroastrische geestelijkheid onder de Sassaniden had drie lagen, met de opperste mobed aan het hoofd, en deed onderwijs, rechtspraak en rituelen."
- },
- "points": [
-  {
-   "text": {
-    "fa": "روحانیان را به سه گروه می‌کردند: موبد، هیربد و آذربد؛ بالاترین مقام موبدان‌موبد بود که در پایتخت می‌نشست.",
-    "en": "The clergy fell into three groups: mobeds, herbeds and atarbeds, with the chief mobed (mobadan mobad) at the top, residing in the capital.",
-    "nl": "The clergy fell into three groups: mobeds, herbeds and atarbeds, with the chief mobed (mobadan mobad) at the top, residing in the capital."
-   },
-   "sources": [
+  "id": "soc:sasanian-clergy-ranks",
+  "kind": "concept",
+  "title": {
+    "fa": "مراتب روحانیت زرتشتی در شاهنشاهی ساسانی",
+    "en": "Ranks of the Zoroastrian clergy in the Sasanian state",
+    "nl": "Rangen van de zoroastrische geestelijkheid in het Sassanidenrijk"
+  },
+  "aliases": [],
+  "parent": "soc:institutions",
+  "field": "soc:institutions",
+  "summary": {
+    "fa": "روحانیت زرتشتی در دورهٔ ساسانی سازمانی سه‌پایه داشت و در آموزش، دادرسی و آیین‌های همگانی کار می‌کرد؛ در رأس آن موبدان‌موبد بود.",
+    "en": "The Sasanian Zoroastrian clergy had a three-part structure running education, justice and public ritual, headed by the chief mobed.",
+    "nl": "De zoroastrische geestelijkheid onder de Sassaniden had drie lagen, met de opperste mobed aan het hoofd, en deed onderwijs, rechtspraak en rituelen."
+  },
+  "points": [
+    {
+      "text": {
+        "fa": "روحانیان را به سه گروه می‌کردند: موبد، هیربد و آذربد؛ بالاترین مقام موبدان‌موبد بود که در پایتخت می‌نشست.",
+        "en": "The clergy fell into three groups: mobeds, herbeds and atarbeds, with the chief mobed (mobadan mobad) at the top, residing in the capital.",
+        "nl": "The clergy fell into three groups: mobeds, herbeds and atarbeds, with the chief mobed (mobadan mobad) at the top, residing in the capital."
+      },
+      "sources": [
+        "src:0f37ec0e89"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "آموزش و دادرسی بیشتر با هیربدان بود و آنان فرزندان بزرگان و روحانیان را درس می‌دادند؛ آذربدان نگهبان آتشکده و برگزارکنندهٔ آیین‌های زندگی (نام‌گذاری، ازدواج، مرگ) بودند.",
+        "en": "Herbeds mostly taught and judged, serving the children of nobles and clergy; atarbeds tended the fire temples and conducted life-cycle rites.",
+        "nl": "Herbeds mostly taught and judged, serving the children of nobles and clergy; atarbeds tended the fire temples and conducted life-cycle rites."
+      },
+      "sources": [
+        "src:0f37ec0e89"
+      ],
+      "flags": []
+    },
+    {
+      "text": {
+        "fa": "به گفتهٔ مقاله، موبدان‌موبد پس از شاه (و گاه پس از بزرگ‌فرمدار) دومین یا سومین مقام دولتی بود و گاه چون «پاپ زرتشتیان» توصیف شده است. نامبرده نخستین بار با نام مرتبط به آغاز کار اردشیر دیده می‌شود.",
+        "en": "The chief mobed ranked just after the king, sometimes after the grand vizier. The article places the office's first clear appearance under Ardashir I.",
+        "nl": "The chief mobed ranked just after the king, sometimes after the grand vizier. The article places the office's first clear appearance under Ardashir I."
+      },
+      "sources": [
+        "src:0f37ec0e89"
+      ],
+      "flags": [
+        "editor-note"
+      ]
+    },
+    {
+      "text": {
+        "fa": "وصف «پاپ زرتشتی» تشبیهی از منابع غربی و دوره‌ای است، چون روحانیت ساسانی ساختار فرمانروایی واحد و همسان کلیسا نداشت و نقش موبدان‌موبد در متن‌های مدرن بحث‌انگیز است.",
+        "en": "The 'Zoroastrian pope' label is a loose Western analogy; the Sasanian clergy lacked a single church-like hierarchy and the chief mobed's powers are debated in modern scholarship.",
+        "nl": "The 'Zoroastrian pope' label is a loose Western analogy; the Sasanian clergy lacked a single church-like hierarchy and the chief mobed's powers are debated in modern scholarship."
+      },
+      "sources": [],
+      "flags": [
+        "contested",
+        "editor-note"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "soc:institutions",
+      "rel": "part-of",
+      "note": {
+        "fa": "نهادهای دولت و دین",
+        "en": "Institutions and the state",
+        "nl": "Institutions and the state"
+      }
+    },
+    {
+      "to": "soc:durkheim-sacred-society",
+      "rel": "see-also",
+      "note": {
+        "fa": "دین و جامعه نزد دورکیم",
+        "en": "Durkheim on religion and society",
+        "nl": "Durkheim on religion and society"
+      }
+    }
+  ],
+  "people": [
+    "core:ardashir-i"
+  ],
+  "sources": [
     "src:0f37ec0e89"
-   ],
-   "flags": []
-  },
-  {
-   "text": {
-    "fa": "آموزش و دادرسی بیشتر با هیربدان بود و آنان فرزندان بزرگان و روحانیان را درس می‌دادند؛ آذربدان نگهبان آتشکده و برگزارکنندهٔ آیین‌های زندگی (نام‌گذاری، ازدواج، مرگ) بودند.",
-    "en": "Herbeds mostly taught and judged, serving the children of nobles and clergy; atarbeds tended the fire temples and conducted life-cycle rites.",
-    "nl": "Herbeds mostly taught and judged, serving the children of nobles and clergy; atarbeds tended the fire temples and conducted life-cycle rites."
-   },
-   "sources": [
-    "src:0f37ec0e89"
-   ],
-   "flags": []
-  },
-  {
-   "text": {
-    "fa": "به گفتهٔ مقاله، موبدان‌موبد پس از شاه (و گاه پس از بزرگ‌فرمدار) دومین یا سومین مقام دولتی بود و گاه چون «پاپ زرتشتیان» توصیف شده است. نامبرده نخستین بار با نام مرتبط به آغاز کار اردشیر دیده می‌شود.",
-    "en": "The chief mobed ranked just after the king, sometimes after the grand vizier. The article places the office's first clear appearance under Ardashir I.",
-    "nl": "The chief mobed ranked just after the king, sometimes after the grand vizier. The article places the office's first clear appearance under Ardashir I."
-   },
-   "sources": [
-    "src:0f37ec0e89"
-   ],
-   "flags": [
-    "editor-note"
-   ]
-  },
-  {
-   "text": {
-    "fa": "وصف «پاپ زرتشتی» تشبیهی از منابع غربی و دوره‌ای است، چون روحانیت ساسانی ساختار فرمانروایی واحد و همسان کلیسا نداشت و نقش موبدان‌موبد در متن‌های مدرن بحث‌انگیز است.",
-    "en": "The 'Zoroastrian pope' label is a loose Western analogy; the Sasanian clergy lacked a single church-like hierarchy and the chief mobed's powers are debated in modern scholarship.",
-    "nl": "The 'Zoroastrian pope' label is a loose Western analogy; the Sasanian clergy lacked a single church-like hierarchy and the chief mobed's powers are debated in modern scholarship."
-   },
-   "sources": [],
-   "flags": [
-    "contested",
-    "editor-note"
-   ]
-  }
- ],
- "links": [
-  {
-   "to": "soc:institutions",
-   "rel": "part-of",
-   "note": {
-    "fa": "نهادهای دولت و دین",
-    "en": "Institutions and the state",
-    "nl": "Institutions and the state"
-   }
-  },
-  {
-   "to": "soc:durkheim-religion-society",
-   "rel": "see-also",
-   "note": {
-    "fa": "دین و جامعه نزد دورکیم",
-    "en": "Durkheim on religion and society",
-    "nl": "Durkheim on religion and society"
-   }
-  }
- ],
- "people": [
-  "core:ardashir-i"
- ],
- "sources": [
-  "src:0f37ec0e89"
- ],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  ],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }

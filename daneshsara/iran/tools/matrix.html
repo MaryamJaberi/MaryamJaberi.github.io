@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ماتریس مسئله × رشته | ویکی ایران | دانش‌سرا</title>
-<meta name="description" content="چهارده مسئلهٔ ایرانی در برابر چهار ویکی: هر خانه شمار مفاهیم ایرانی مرتبط است و خانهٔ خالی «شکاف» است؛ برای دیدن اینکه کجا کار کرده‌ایم و کجا نه.">
+<meta name="description" content="چهارده مسئلهٔ ایرانی در برابر پنج ویکی: هر خانه شمار مفاهیم ایرانی مرتبط است و خانهٔ خالی «شکاف» است؛ برای دیدن اینکه کجا کار کرده‌ایم و کجا نه.">
 <link rel="stylesheet" href="../../core/design/tokens.css">
 <link rel="stylesheet" href="../../core/tools/tools.css">
 <style>
@@ -56,7 +56,7 @@ label.row input[type=checkbox]{flex:none;margin:2px 0 0}
 </div></header>
 <main class="wrap">
  <h1>ماتریس مسئله × رشته</h1>
- <p class="tip">چهارده مسئلهٔ ایرانی در برابر چهار ویکی: هر خانه شمار مفاهیم ایرانی مرتبط است و خانهٔ خالی «شکاف» است؛ برای دیدن اینکه کجا کار کرده‌ایم و کجا نه.</p>
+ <p class="tip">چهارده مسئلهٔ ایرانی در برابر پنج ویکی: هر خانه شمار مفاهیم ایرانی مرتبط است و خانهٔ خالی «شکاف» است؛ برای دیدن اینکه کجا کار کرده‌ایم و کجا نه.</p>
  <div id="app" aria-live="polite">
 <div class="row" style="margin-bottom:14px;gap:16px" aria-label="راهنمای رنگ">
  <span class="row" style="gap:6px"><span class="lg gapc">شکاف</span> هیچ مفهومی نیست</span>
@@ -74,8 +74,8 @@ label.row input[type=checkbox]{flex:none;margin:2px 0 0}
 
 const SH = {};
 SH.IRX = /ایران|فارس|پارسی|زاگرس|چغاگلان|غار یافته|هندوایرانی/;
-SH.WIKIS = ["psy","soc","phil","tabar"];
-SH.FAM = {psy:"var(--fam-psy)",soc:"var(--fam-soc)",phil:"var(--fam-hum)",tabar:"var(--fam-bio)"};
+SH.WIKIS = ["psy","soc","phil","tabar","tarikh"];
+SH.FAM = {psy:"var(--fam-psy)",soc:"var(--fam-soc)",phil:"var(--fam-hum)",tabar:"var(--fam-bio)",tarikh:"var(--fam-hist)"};
 SH.tp = (text, term) => (" " + text).includes(" " + term);
 SH.prep = D => {
   if (D._prep) return; D._prep = true;
@@ -124,7 +124,7 @@ function hit(c, terms) {
 }
 function compute() {
   ROWS.forEach((r, i) => { r.n = r.t.map(DS.norm); SH.WIKIS.forEach(w => CELL[i + "|" + w] = []); });
-  D.concepts.forEach(c => { if (!c._ir.is) return; ROWS.forEach((r, i) => { if (hit(c, r.n)) CELL[i + "|" + c.w].push(c); }); });
+  D.concepts.forEach(c => { if (!c._ir.is) return; ROWS.forEach((r, i) => { const k = i + "|" + c.w; if (CELL[k] && hit(c, r.n)) CELL[k].push(c); }); });
   Object.values(CELL).forEach(a => { a.sort((x, y) => y._ir.score - x._ir.score); MAX = Math.max(MAX, a.length); });
 }
 function render() {

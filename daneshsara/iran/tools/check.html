@@ -68,8 +68,8 @@ label.row input[type=checkbox]{flex:none;margin:2px 0 0}
 
 const SH = {};
 SH.IRX = /ایران|فارس|پارسی|زاگرس|چغاگلان|غار یافته|هندوایرانی/;
-SH.WIKIS = ["psy","soc","phil","tabar"];
-SH.FAM = {psy:"var(--fam-psy)",soc:"var(--fam-soc)",phil:"var(--fam-hum)",tabar:"var(--fam-bio)"};
+SH.WIKIS = ["psy","soc","phil","tabar","tarikh"];
+SH.FAM = {psy:"var(--fam-psy)",soc:"var(--fam-soc)",phil:"var(--fam-hum)",tabar:"var(--fam-bio)",tarikh:"var(--fam-hist)"};
 SH.tp = (text, term) => (" " + text).includes(" " + term);
 SH.prep = D => {
   if (D._prep) return; D._prep = true;

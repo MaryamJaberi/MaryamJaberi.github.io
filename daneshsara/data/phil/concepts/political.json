@@ -1,26 +1,36 @@
 {
- "id": "phil:political",
- "kind": "field",
- "title": {
-  "fa": "فلسفهٔ سیاسی",
-  "en": "Political philosophy",
-  "nl": "Politieke filosofie"
- },
- "aliases": [],
- "parent": "phil:phil",
- "field": null,
- "summary": {
-  "fa": "عدالت، آزادی، قابلیت و شر: جامعهٔ خوب را با چه معیاری بسنجیم؟",
-  "en": "Justice, liberty, capability and evil: by what standard do we judge a good society?",
-  "nl": "Rechtvaardigheid, vrijheid, vermogen en kwaad: aan welke maatstaf meten we een goede samenleving?"
- },
- "points": [],
- "links": [],
- "people": [],
- "sources": [],
- "booklets": [],
- "origin": null,
- "iran": null,
- "wikidata": null,
- "status": "draft"
+  "id": "phil:political",
+  "kind": "field",
+  "title": {
+    "fa": "فلسفهٔ سیاسی",
+    "en": "Political philosophy",
+    "nl": "Politieke filosofie"
+  },
+  "aliases": [],
+  "parent": "phil:phil",
+  "field": null,
+  "summary": {
+    "fa": "عدالت، آزادی، قابلیت و شر: جامعهٔ خوب را با چه معیاری بسنجیم؟",
+    "en": "Justice, liberty, capability and evil: by what standard do we judge a good society?",
+    "nl": "Rechtvaardigheid, vrijheid, vermogen en kwaad: aan welke maatstaf meten we een goede samenleving?"
+  },
+  "points": [],
+  "links": [
+    {
+      "to": "psy:justice-theory",
+      "rel": "same-as",
+      "note": {
+        "fa": "همین مفهوم در ویکی دیگر",
+        "en": "Same concept in another wiki",
+        "nl": "Hetzelfde begrip in een andere wiki"
+      }
+    }
+  ],
+  "people": [],
+  "sources": [],
+  "booklets": [],
+  "origin": null,
+  "iran": null,
+  "wikidata": null,
+  "status": "draft"
 }
