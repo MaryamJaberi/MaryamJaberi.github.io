@@ -36,6 +36,20 @@
     "src:435917f7dd"
    ],
    "flags": []
+  },
+  {
+   "text": {
+    "fa": "نشانه‌ای از ترجیح پنهان در ایران: در نظرسنجی ناشناس آنلاین گمان (تیر ۱۴۰۵) حدود ۷۰٪ تغییر نظام یا گذار ساختاری را شرط تغییر دانستند، و یک چهارم پاسخ‌دهندگان حاضر نشدند حتی در نظرسنجی ناشناس بگویند در اعتراض‌های دی ۱۴۰۴ بوده‌اند یا نه. فاصلهٔ این ارقام با تصویر رسمی همان شکافی است که کوران توصیف می‌کند.",
+    "en": "A sign of hidden preference in Iran: in GAMAAN’s anonymous online survey (June 2026) about 70% named regime change or structural transition as the condition for change, and a quarter of respondents would not say even anonymously whether they joined the January 2026 protests. The gap between these figures and the official picture is the one Kuran describes.",
+    "nl": "A sign of hidden preference in Iran: in GAMAAN’s anonymous online survey (June 2026) about 70% named regime change or structural transition as the condition for change, and a quarter of respondents would not say even anonymously whether they joined the January 2026 protests. The gap between these figures and the official picture is the one Kuran describes."
+   },
+   "sources": [
+    "src:6c0a6f1ef3",
+    "src:8d71ed0d5f"
+   ],
+   "flags": [
+    "contested"
+   ]
   }
  ],
  "links": [
@@ -74,6 +88,24 @@
     "en": "Granovetter's threshold model",
     "nl": "Het drempelmodel van Granovetter"
    }
+  },
+  {
+   "to": "soc:coordination-focal-points",
+   "rel": "see-also",
+   "note": {
+    "fa": "نقطهٔ کانونی و دانش مشترک",
+    "en": "Focal points and common knowledge",
+    "nl": "Focal points and common knowledge"
+   }
+  },
+  {
+   "to": "soc:security-defection-credible-commitment",
+   "rel": "see-also",
+   "note": {
+    "fa": "ریزش نیروهای امنیتی",
+    "en": "Security-force defection",
+    "nl": "Security-force defection"
+   }
   }
  ],
  "people": [
@@ -82,11 +114,12 @@
  ],
  "sources": [
   "src:435917f7dd",
-  "src:8d71ed0d5f"
+  "src:8d71ed0d5f",
+  "src:6c0a6f1ef3"
  ],
  "booklets": [],
  "origin": null,
- "iran": null,
+ "iran": "iran:political-attitudes-2026",
  "wikidata": null,
  "status": "draft"
 }
