@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آزمایشگاه تبار | ویکی تبار و ژنتیک | دانش‌سرا</title>
+<meta name="description" content="پنج آزمایش تعاملی دربارهٔ تکامل انسان: شکار پیگیرانه، گسترش بی‌نقشه، بودجهٔ انرژی مغز، نیاکان مشترک و اول حدس بزن.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+body{background:var(--paper);color:var(--ink)}
+.what{font-size:1.05rem;color:var(--ink-2);max-width:68ch;margin:0 0 18px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.tabs button{font:inherit;min-height:44px;padding:6px 16px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--fam-bio-soft);border-color:var(--fam-bio);color:var(--fam-bio);font-weight:700}
+#exp h2{margin:0 0 6px;font-size:1.45rem}
+.why{color:var(--ink-2);max-width:70ch;margin:0 0 14px;line-height:1.9}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:14px}
+.res{margin-top:14px;background:var(--surface-subtle);border:1px solid var(--line);border-inline-start:4px solid var(--fam-bio);border-radius:12px;padding:14px 16px;line-height:1.9}
+.res h3{margin:0 0 6px;font-size:1.1rem}
+.field{display:grid;gap:6px;font-size:.92rem;color:var(--ink-2)}
+.field b{color:var(--ink)}
+input[type=range]{width:100%;direction:ltr;accent-color:var(--fam-bio);min-height:32px}
+.row2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-size:.9rem;min-height:40px;padding:4px 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.chips button.on{background:var(--fam-bio-soft);border-color:var(--fam-bio);color:var(--fam-bio);font-weight:700}
+.big{font-size:1.6rem;font-weight:700;color:var(--fam-bio)}
+.chartbox{overflow-x:auto}
+svg text{font-family:inherit}
+.bars{display:grid;gap:8px}
+.bars div{display:grid;grid-template-columns:minmax(90px,30%) 1fr auto;gap:8px;align-items:center;font-size:.88rem}
+.bars i{display:block;height:12px;border-radius:99px;background:var(--fam-bio);min-width:3px}
+.bars i.alt{background:var(--warn)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links a{font-size:.85rem;padding:3px 12px;border-radius:999px;border:1px solid var(--fam-bio);color:var(--fam-bio);text-decoration:none}
+.links a:hover{background:var(--fam-bio-soft)}
+.q{display:grid;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.q:last-child{border-bottom:0}
+.q p{margin:0;line-height:1.9}
+.ans{background:var(--surface-subtle);border-radius:10px;padding:10px 12px;font-size:.92rem;line-height:1.9}
+.btn{min-height:44px}
+.note.foot{margin-top:30px}
+.tt{border-collapse:collapse;width:100%;font-size:.88rem}
+.tt th,.tt td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:start}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,#33312c);background:var(--paper,#1b1a17)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../tabar/">ویکی تبار و ژنتیک</a><i>›</i><a href="../../tabar/tools/">ابزارها</a><i>›</i><b>آزمایشگاه تبار</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>آزمایشگاه تبار</h1>
+<p class="what">پنج آزمایش کوچک دربارهٔ اینکه چطور انسان شدیم. عددها را عوض کنید و ببینید چه می‌شود؛ هر آزمایش به مدخل‌هایی از ویکی وصل است که پشتوانه و بحث‌هایش را توضیح می‌دهند. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note">این‌ها مدل‌های ساده‌شدهٔ آموزشی‌اند، نه شبیه‌سازی پژوهشی. عددهای پیش‌فرض تقریبی‌اند و در هر آزمایش گفته شده از کجا آمده‌اند؛ برای ارقام دقیق به مدخل‌ها و منبع‌هایشان برگردید.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · آزمایشگاه تبار</div></footer>
+<script>
+const fa = (x, d = 0) => { const s = (typeof x === "number") ? x.toLocaleString("en-US", {maximumFractionDigits: d, minimumFractionDigits: 0}) : String(x); return s.replace(/,/g, "٬").replace(/\./g, "٫").replace(/\d/g, c => "۰۱۲۳۴۵۶۷۸۹"[c]); };
+const C = n => `../#${n}`;
+const LBL = {
+  "homo-erectus-endurance-and-handaxe": "راست‌قامت: بدن دونده",
+  "first-out-of-africa-java-peking-dmanisi": "نخستین خروج از آفریقا",
+  "homo-heidelbergensis-fire-and-campfire": "هایدلبرگ و آتش",
+  "cooking-hypothesis": "فرضیهٔ آشپزی",
+  "meat-eating-hunting-hypothesis": "گوشت‌خواری و شکار",
+  "neanderthal-discovery-and-body": "نئاندرتال",
+  "neanderthal-admixture": "آمیزش نئاندرتال",
+  "sapiens-sapiens-dog-art-animism": "سگ، هنر و جان‌انگاری",
+  "common-ancestors": "نیاکان مشترک",
+  "genealogy": "تبارنامه",
+  "out-of-africa": "خاستگاه آفریقایی",
+  "persian-plateau-hub": "فلات ایران",
+  "human-family-tree-branching": "درخت شاخه‌دار"
+};
+const lk = ks => `<div class="links">${ks.map(k => `<a href="${C(k)}">${LBL[k] || k}</a>`).join("")}</div>`;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim() || "#888";
+
+const EXP = {
+  hunt: ["شکار پیگیرانه", "تعقیب تا از پا افتادن", "آنتلوپ در تاخت چند برابر سریع‌تر از ما می‌دود، اما عرق نمی‌کند و پس از هر تاخت باید بایستد تا خنک شود. اگر شکارچی پیوسته و آرام دنبالش بیاید، فرصت خنک‌شدن کم می‌شود. سرعت شکارچی و دمای هوا را تغییر دهید و ببینید کِی جانور از گرما از پا می‌افتد — و کِی خود شکارچی."],
+  spread: ["گسترش بی‌نقشه", "چند کیلومتر در هر نسل؟", "انسان راست‌قامت نقشه نداشت و قصد «مهاجرت» هم نداشت؛ فقط هر نسل کمی جابه‌جا می‌شد. ببینید همین جابه‌جایی کوچک در زمان‌های زمین‌شناختی به کجا می‌رسد."],
+  brain: ["بودجهٔ انرژی مغز", "مغز بزرگ را با چه سیر کنیم؟", "مغز ما حدود ۲ درصد وزن بدن است اما حدود ۲۰ درصد انرژی را می‌سوزاند. اندازهٔ مغز را تغییر دهید و ببینید فقط برای خود مغز، روزانه چند گرم از هر خوراک لازم است."],
+  anc: ["نیاکان مشترک", "شما چند جد دارید؟", "هر نفر ۲ والد، ۴ پدربزرگ و مادربزرگ، ۸ نیای نسل سوم… دارد. این عدد خیلی زود از کل جمعیت جهان بیشتر می‌شود. پس چه اتفاقی می‌افتد؟"],
+  guess: ["اول حدس بزن", "شش پرسش از ژرفای زمان", "پیش از دیدن پاسخ، حدس خود را با لغزنده بزنید. پاسخ‌ها از مدخل‌های ویکی و منبع‌هایشان آمده و بازهٔ عدم‌قطعیت هم نشان داده می‌شود."]
+};
+let cur = "hunt";
+const tabs = document.getElementById("tabs");
+tabs.innerHTML = Object.entries(EXP).map(([k, v]) => `<button role="tab" data-k="${k}">${v[0]}</button>`).join("");
+tabs.addEventListener("click", e => { const b = e.target.closest("[data-k]"); if (b) open(b.dataset.k); });
+function open(k){
+  if (!EXP[k]) k = "hunt";
+  cur = k; tabs.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+  const [, h, why] = EXP[k];
+  document.getElementById("exp").innerHTML = `<h2>${h}</h2><p class="why">${why}</p><div class="panel" id="pn"></div><div id="out"></div>`;
+  ({hunt, spread, brain, anc, guess})[k]();
+  try { history.replaceState(null, "", "#" + k); } catch(_) {}
+}
+
+/* ——— 1. persistence hunt ——— */
+function hunt(){
+  const pn = document.getElementById("pn");
+  pn.innerHTML = `<div class="row2">
+    <label class="field">سرعت پیوستهٔ شکارچی: <b id="vv"></b><input type="range" id="v" min="4" max="16" step="1" value="9"></label>
+    <label class="field">دمای هوا: <b id="tv"></b><input type="range" id="t" min="15" max="40" step="1" value="33"></label></div>
+    <div class="chartbox" id="ch"></div>`;
+  const v = pn.querySelector("#v"), t = pn.querySelector("#t");
+  const run = () => {
+    const sp = +v.value, air = +t.value;
+    pn.querySelector("#vv").textContent = fa(sp) + " کیلومتر در ساعت";
+    pn.querySelector("#tv").textContent = fa(air) + " درجه";
+    // toy model, minute steps
+    const heat = Math.max(0, (air - 15) / 25);           // 0..1 hotness
+    let A = 39.0, H = 37.0, gap = 0, min = 0, km = 0, ok = null;
+    const sA = [], sH = [];
+    while (min < 360){
+      // antelope: if hunter is close (gap<0.15km) it sprints 1 km in ~1.5 min
+      if (gap < 0.15){ A += 0.25 + 0.2 * heat; gap += 1.0; }
+      else { A -= 0.06 * (1 - 0.5 * heat); }               // panting in shade, slower cooling when hot
+      A = Math.max(A, 39.0);
+      gap -= sp / 60; if (gap < 0) gap = 0;
+      km += sp / 60;
+      // hunter: sweating copes up to a pace that falls as air warms
+      const cap = 11 - 4 * heat;
+      H += (sp > cap ? 0.012 * (sp - cap) : -0.01) + 0.004 * heat;
+      H = Math.max(H, 37.0);
+      sA.push(A); sH.push(H); min++;
+      if (A >= 42.5){ ok = "prey"; break; }
+      if (H >= 40.0){ ok = "hunter"; break; }
+    }
+    draw(sA, sH);
+    const hrs = min / 60;
+    let msg;
+    if (ok === "prey") msg = `<h3>جانور پس از حدود ${fa(hrs, 1)} ساعت و ${fa(km, 0)} کیلومتر از گرما از پا افتاد</h3><p style="margin:0">شکارچی در این مدت دمایش زیر کنترل ماند. این همان منطقِ «شکار پیگیرانه» است: لازم نیست از جانور تندتر بدوید؛ کافی است فرصت خنک‌شدن به او ندهید. ${sp <= 6 ? "با سرعت خیلی کم، جانور در فاصلهٔ تاخت‌ها بیشتر خنک می‌شود و تعقیب طولانی‌تر می‌شود." : ""}</p>`;
+    else if (ok === "hunter") msg = `<h3>این بار شکارچی زودتر داغ کرد</h3><p style="margin:0">با این سرعت و در این گرما، تعریق بدن شکارچی هم کافی نیست. در مدل، شکارچیِ تندرو زودتر از جانور به مرز گرمازدگی می‌رسد؛ برای همین شکارچیان امروزیِ این روش بیشتر گام‌های پیوسته و متوسط برمی‌دارند و آب همراه دارند.</p>`;
+    else msg = `<h3>پس از ۶ ساعت هنوز نتیجه‌ای نیست</h3><p style="margin:0">${air < 28 ? "در هوای خنک، جانور در فاصلهٔ تاخت‌ها راحت خنک می‌شود. این روش در گرمای نیم‌روز معنا دارد، نه در صبح سرد." : "با این سرعتِ کم، شکارچی دیر به جانور می‌رسد و جانور در فاصلهٔ تاخت‌ها خنک می‌شود. شکار پیگیرانه تعادلی است میان «آن‌قدر تند که جانور خنک نشود» و «آن‌قدر آرام که خودت داغ نکنی»."}</p>`;
+    document.getElementById("out").innerHTML = `<div class="res">${msg}<p style="margin:8px 0 0;color:var(--ink-2);font-size:.9rem">مدل اسباب‌بازی: آنتلوپ با هر تاخت (حدود ۱ کیلومتر) گرم می‌شود و در ایستادن آهسته خنک می‌شود؛ مرز از پا افتادن ۴۲٫۵ درجه. شکارچی تا سرعتی معین با عرق‌کردن خنک می‌ماند و این سرعت در گرما پایین‌تر می‌آید. این فرضیه بحث‌برانگیز است و منتقدان نقش لاشه‌خواری و کمین را بزرگ‌تر می‌دانند.</p>${lk(["homo-erectus-endurance-and-handaxe", "meat-eating-hunting-hypothesis"])}</div>`;
+  };
+  function draw(a, h){
+    const W = 640, Hh = 220, p = 34, n = Math.max(a.length, 2);
+    const y = T => Hh - p - (T - 36.5) / (43 - 36.5) * (Hh - 2 * p);
+    const x = i => p + i / (n - 1) * (W - 2 * p);           // time runs left→right (axis kept LTR)
+    const path = s => s.map((T, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(T).toFixed(1)}`).join("");
+    const g2 = css("--warn"), ink = css("--ink-2"), ln = css("--line");
+    const ticks = [37, 39, 41, 43].map(T => `<line x1="${p}" x2="${W - p}" y1="${y(T)}" y2="${y(T)}" stroke="${ln}"/><text x="${W - p + 4}" y="${y(T) + 4}" font-size="11" fill="${ink}" text-anchor="start" direction="ltr">${fa(T)}°</text>`).join("");
+    const g1c = css("--primary");
+    document.getElementById("ch").innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;margin-bottom:6px"><span><i style="display:inline-block;width:18px;height:3px;background:${g2};vertical-align:middle;margin-inline-end:6px"></i>دمای بدن جانور</span><span><i style="display:inline-block;width:18px;height:3px;background:${g1c};vertical-align:middle;margin-inline-end:6px"></i>دمای بدن شکارچی</span><span><i style="display:inline-block;width:18px;border-top:2px dashed ${css("--err")};vertical-align:middle;margin-inline-end:6px"></i>مرز از پا افتادن جانور</span></div>
+      <div dir="ltr"><svg viewBox="0 0 ${W} ${Hh}" width="100%" style="min-width:300px;max-width:${W}px" role="img" aria-label="نمودار دمای بدن جانور و شکارچی در طول زمان">
+      ${ticks}<line x1="${p}" x2="${W - p}" y1="${y(42.5)}" y2="${y(42.5)}" stroke="${css("--err")}" stroke-dasharray="4 4"/>
+      <path d="${path(a)}" fill="none" stroke="${g2}" stroke-width="2"/><path d="${path(h)}" fill="none" stroke="${g1c}" stroke-width="2.5"/>
+      <text x="${p}" y="${Hh - 8}" font-size="11" fill="${ink}" text-anchor="start">۰</text><text x="${W - p}" y="${Hh - 8}" font-size="11" fill="${ink}" text-anchor="end">${fa(Math.round(n / 6) / 10, 1)} h →</text></svg></div>
+      <div style="font-size:.82rem;color:var(--ink-2)">محور افقی: زمان از آغاز تعقیب (ساعت)؛ محور عمودی: دمای بدن (درجهٔ سانتی‌گراد)</div>`;
+  }
+  v.addEventListener("input", run); t.addEventListener("input", run); run();
+}
+
+/* ——— 2. spread ——— */
+function spread(){
+  const D = [["دمانیسی (گرجستان)", 5000, "حدود ۱٫۷۷ میلیون سال پیش"], ["فلات ایران", 4500, "ابزارهای آشولی؛ تاریخ‌گذاری کم"], ["جاوه (مسیر ساحلی)", 12000, "حدود ۱٫۶ میلیون سال پیش"], ["ژوکودیان (پکن)", 11000, "حدود ۸۰۰ هزار سال پیش"]];
+  const pn = document.getElementById("pn");
+  pn.innerHTML = `<div class="row2">
+    <label class="field">جابه‌جایی در هر نسل: <b id="kv"></b><input type="range" id="k" min="1" max="25" step="1" value="5"></label>
+    <label class="field">طول هر نسل: <b id="gv"></b><input type="range" id="g" min="18" max="30" step="1" value="25"></label></div>
+    <div class="bars" id="bs"></div>`;
+  const k = pn.querySelector("#k"), g = pn.querySelector("#g");
+  const run = () => {
+    const kk = +k.value, gg = +g.value;
+    pn.querySelector("#kv").textContent = fa(kk) + " کیلومتر";
+    pn.querySelector("#gv").textContent = fa(gg) + " سال";
+    const rows = D.map(([n, km, when]) => [n, km / kk * gg, when, km]);
+    const mx = Math.max(...rows.map(r => r[1]));
+    pn.querySelector("#bs").innerHTML = rows.map(r => `<div><span>${r[0]}</span><i style="width:${Math.max(2, 100 * r[1] / mx)}%"></i><span>${fa(Math.round(r[1] / 100) * 100)} سال</span></div>`).join("");
+    const java = rows[2][1];
+    document.getElementById("out").innerHTML = `<div class="res"><h3>تا جاوه: حدود ${fa(Math.round(java / 100) * 100)} سال</h3><p style="margin:0">یعنی حدود ${fa(java / 2000000 * 100, 2)} درصدِ دو میلیون سال. حتی با ${fa(kk)} کیلومتر در هر نسل — کمتر از یک روز پیاده‌روی در کل یک عمر — انسان‌ها در زمانی که در مقیاس زمین‌شناختی «لحظه» است از آفریقای شرقی به آن سوی آسیا می‌رسند. نیازی به نقشه، قصد یا «سفر» نیست؛ کافی است هر نسل کمی جابه‌جا شود، چون جمعیت بیشتر شده یا جانوران شکاری جابه‌جا شده‌اند.</p>
+      <table class="tt" style="margin-top:10px"><tr><th>مقصد</th><th>فاصلهٔ تقریبی</th><th>شواهد</th></tr>${rows.map(r => `<tr><td>${r[0]}</td><td>${fa(r[3])} کیلومتر</td><td>${r[2]}</td></tr>`).join("")}</table>
+      <p style="margin:8px 0 0;color:var(--ink-2);font-size:.9rem">فاصله‌ها خط مستقیمِ تقریبی یا مسیر ساحلیِ ساده‌شده از آفریقای شرقی‌اند. «خداحافظ آفریقا» همین محاسبه را با ۵ تا ۱۰ کیلومتر در هر نسل آورده است. گسترش یک‌طرفه هم نبود: موج‌هایی بیرون رفتند و برگشتند.</p>${lk(["first-out-of-africa-java-peking-dmanisi", "persian-plateau-hub", "human-family-tree-branching"])}</div>`;
+  };
+  k.addEventListener("input", run); g.addEventListener("input", run); run();
+}
+
+/* ——— 3. brain energy ——— */
+function brain(){
+  const SP = [["شامپانزه", 400], ["استرالوپیتکوس", 450], ["انسان ماهر", 600], ["دمانیسی", 750], ["راست‌قامت", 1000], ["هایدلبرگ", 1300], ["ما", 1350], ["نئاندرتال", 1450]];
+  // kcal per gram (approx., edible portion) and rough absorbed fraction
+  const F = [["برگ و ساقهٔ خام", 0.3, "kcal"], ["میوهٔ وحشی", 0.7, "kcal"], ["غدهٔ خام", 1.0, "kcal"], ["غدهٔ پخته", 1.0, "cook"], ["گوشت خام", 1.4, "kcal"], ["مغز استخوان", 7.0, "kcal"]];
+  const pn = document.getElementById("pn");
+  pn.innerHTML = `<label class="field">حجم مغز: <b id="bv"></b><input type="range" id="b" min="350" max="1700" step="10" value="1000"></label>
+    <div class="chips" id="sp">${SP.map(s => `<button data-v="${s[1]}">${s[0]}</button>`).join("")}</div>
+    <div class="bars" id="bs"></div>`;
+  const b = pn.querySelector("#b");
+  pn.querySelector("#sp").addEventListener("click", e => { const x = e.target.closest("[data-v]"); if (x){ b.value = x.dataset.v; run(); } });
+  const run = () => {
+    const cc = +b.value;
+    const kcal = cc * 0.3;                        // ≈ 400 kcal/day at ~1350 cc
+    pn.querySelector("#bv").textContent = fa(cc) + " سی‌سی";
+    pn.querySelectorAll("#sp button").forEach(x => x.classList.toggle("on", +x.dataset.v === cc));
+    const raw = 0.6;                               // share of energy actually absorbed from raw starch (toy)
+    const rows = F.map(([n, kg, kind]) => { const eff = (n === "غدهٔ خام") ? kg * raw : kg; return [n, kcal / eff]; });
+    const mx = Math.max(...rows.map(r => r[1]));
+    pn.querySelector("#bs").innerHTML = rows.map(r => `<div><span>${r[0]}</span><i class="${r[0].includes("پخته") ? "" : (r[0].includes("خام") ? "alt" : "")}" style="width:${Math.max(2, 100 * r[1] / mx)}%"></i><span>${fa(Math.round(r[1] / 10) * 10)} گرم</span></div>`).join("");
+    document.getElementById("out").innerHTML = `<div class="res"><h3>مغز ${fa(cc)} سی‌سی ≈ ${fa(Math.round(kcal / 10) * 10)} کیلوکالری در روز</h3><p style="margin:0">این فقط سهم مغز است؛ بقیهٔ بدن چند برابر این را می‌خواهد. برای سیر کردنِ فقط مغزی به اندازهٔ راست‌قامت با برگ خام، روزانه بیش از یک کیلو برگ لازم است — و جویدنش ساعت‌ها طول می‌کشد. گوشت، مغز استخوان و خوراکِ پخته همان انرژی را در حجم بسیار کمتر می‌دهند. دو فرضیهٔ رقیب از همین‌جا می‌آیند: «گوشت و شکار» و «آشپزی»؛ و در هر دو، مغز بزرگ‌تر بدون خوراکِ پرانرژی‌تر ممکن نبود.</p>
+      <p style="margin:8px 0 0;color:var(--ink-2);font-size:.9rem">فرض‌ها: حدود ۰٫۳ کیلوکالری برای هر سی‌سی مغز در روز (از ۲۰٪ انرژی در مغز حدود ۱۳۵۰ سی‌سی)؛ انرژی تقریبی هر گرم خوراک؛ و اینکه از نشاستهٔ خام بخش کمتری جذب می‌شود (اینجا ۶۰٪). همهٔ این عددها تقریبی‌اند.</p>${lk(["homo-erectus-endurance-and-handaxe", "cooking-hypothesis", "meat-eating-hunting-hypothesis", "homo-heidelbergensis-fire-and-campfire"])}</div>`;
+  };
+  b.addEventListener("input", run); run();
+}
+
+/* ——— 4. common ancestors ——— */
+function anc(){
+  const POP = [[0, 8e9], [1, 2e9], [2, 1e9], [4, 5.5e8], [6, 3.5e8], [8, 4e8], [10, 3e8], [12, 3e8], [16, 2e8], [20, 2e8], [30, 5e7], [40, 2.7e7], [60, 5e6]];
+  const popAt = c => { for (let i = 1; i < POP.length; i++) if (c <= POP[i][0]) { const [c0, p0] = POP[i - 1], [c1, p1] = POP[i]; return p0 + (p1 - p0) * (c - c0) / (c1 - c0); } return 5e7; };
+  const pn = document.getElementById("pn");
+  pn.innerHTML = `<label class="field">چند نسل به عقب؟ <b id="nv"></b><input type="range" id="n" min="1" max="45" step="1" value="10"></label><div id="nx"></div>`;
+  const n = pn.querySelector("#n");
+  const words = x => x >= 1e12 ? fa(x / 1e12, 1) + " هزار میلیارد" : x >= 1e9 ? fa(x / 1e9, 1) + " میلیارد" : x >= 1e6 ? fa(x / 1e6, 1) + " میلیون" : x >= 1e3 ? fa(x / 1e3, 1) + " هزار" : fa(x);
+  const run = () => {
+    const g = +n.value, yrs = g * 25, slots = Math.pow(2, g), pop = popAt(yrs / 100);
+    pn.querySelector("#nv").textContent = `${fa(g)} نسل (حدود ${fa(yrs)} سال پیش)`;
+    const over = slots > pop;
+    pn.querySelector("#nx").innerHTML = `<div class="bars"><div><span>جاهای خالی در شجره‌نامهٔ شما</span><i style="width:${over ? 100 : Math.max(2, 100 * slots / pop)}%"></i><span>${words(slots)}</span></div><div><span>کل جمعیت جهان آن زمان (تقریبی)</span><i class="alt" style="width:${over ? Math.max(2, 100 * pop / slots) : 100}%"></i><span>${words(pop)}</span></div></div>`;
+    document.getElementById("out").innerHTML = `<div class="res"><h3>${over ? "شجره‌نامهٔ شما از کل جمعیت جهان بزرگ‌تر شده است!" : "هنوز جمعیت جهان بیشتر است"}</h3><p style="margin:0">${over ? `${fa(g)} نسل پیش شما ${words(slots)} «جای نیا» دارید، اما آن زمان فقط حدود ${words(pop)} انسان روی زمین بودند. تنها راه حل: یک نفر بارها و بارها در شجره‌نامهٔ شما تکرار شده است («فروریزش شجره‌نامه»). نتیجهٔ شگفت‌انگیز مدل‌های ریاضی این است که اگر کمی بیشتر عقب بروید، به نقطه‌ای می‌رسید که هر کس آن زمان فرزندی داشته که نسلش تا امروز ادامه یافته، نیای همهٔ انسان‌های امروز است — همه، از هر سرزمین و «نژادی».` : `برای هر نسل، تعداد جاهای شجره‌نامه دو برابر می‌شود. لغزنده را بیشتر کنید؛ حدود ۳۰ نسل (کمتر از هزار سال) کافی است تا از جمعیت جهان جلو بزند.`}</p>
+      <p style="margin:8px 0 0;color:var(--ink-2);font-size:.9rem">فرض: هر نسل ۲۵ سال؛ جمعیت جهان از برآوردهای رایج تاریخی (تقریبی). برآورد مدل‌های راده، اولسون و چانگ (۲۰۰۴) برای «جدیدترین نیای مشترک همهٔ انسان‌ها» چند هزار سال پیش است، هرچند سهم ژنتیکیِ هر نیای دور در شما ممکن است صفر باشد.</p>${lk(["common-ancestors", "genealogy"])}</div>`;
+  };
+  n.addEventListener("input", run); run();
+}
+
+/* ——— 5. guess first ——— */
+function guess(){
+  const Q = [
+    ["حدود ۲ میلیون سال پیش در آفریقا، هم‌زمان چند گونهٔ انسان‌ریخت (هومینین) زندگی می‌کردند؟", 1, 8, 1, 4, "بیشتر برآوردها ۳ تا ۵ گونه (راست‌قامت/ارگستر، انسان ماهر، انسان رودولفی، پارانتروپوس‌ها). اینکه امروز فقط یک گونه‌ایم، در تاریخ ما استثناست.", "", ["homo-erectus-endurance-and-handaxe", "human-family-tree-branching"]],
+    ["حجم مغز نئاندرتال‌ها نسبت به ما چند درصد بود؟", 60, 130, 5, 105, "به طور میانگین کمی بزرگ‌تر از ما (برخی نمونه‌ها تا حدود ۱۷۳۰ سی‌سی). مغز بزرگ‌تر لزوماً پیچیده‌تر نیست؛ سازمان و پیوندهای مغز مهم‌تر است.", "٪", ["neanderthal-discovery-and-body"]],
+    ["در DNA انسان‌های امروزِ بیرون از آفریقا، چند درصد از نئاندرتال‌ها آمده است؟", 0, 20, 0.5, 2, "حدود ۱ تا ۲ درصد (در شرق آسیا کمی بیشتر). در آفریقایی‌ها هم مقدار کمی هست، از راه مهاجرت‌های برگشتی.", "٪", ["neanderthal-admixture"]],
+    ["کهن‌ترین فسیل انسان بیرون از آفریقا (دمانیسی، گرجستان) چند هزار سال قدمت دارد؟", 100, 2500, 50, 1770, "حدود ۱۷۷۰ هزار سال (۱٫۷۷ میلیون). پنج جمجمه با مغزهای ۷۰۰ تا ۸۰۰ سی‌سی — کوچک‌تر از آنچه از «خروج‌کنندگان» انتظار داشتند.", " هزار", ["first-out-of-africa-java-peking-dmanisi"]],
+    ["نخستین اهلی‌سازی گرگ (سگ) بر پایهٔ یک مطالعهٔ ژنتیکیِ ۲۰۲۱ چند هزار سال پیش بود؟", 2, 60, 1, 23, "حدود ۲۳ هزار سال پیش در سیبری؛ برخی شواهد باستان‌شناختی ادعای قدمت بیشتر (۳۰ تا ۴۰ هزار سال) دارند که توافقی بر آن نیست. سگ پیش از هر گیاه یا جانور دیگری اهلی شد — پیش از کشاورزی.", " هزار", ["sapiens-sapiens-dog-art-animism"]],
+    ["اگر هر نسل فقط ۵ کیلومتر جابه‌جا شود، رسیدن از آفریقای شرقی به جاوه چند هزار سال طول می‌کشد؟", 1, 500, 1, 60, "حدود ۵۰ تا ۶۰ هزار سال (با نسل‌های ۲۵ساله و حدود ۱۲ هزار کیلومتر). در برابر ۲ میلیون سال، کمتر از ۳ درصد.", " هزار", ["first-out-of-africa-java-peking-dmanisi"]]
+  ];
+  const pn = document.getElementById("pn");
+  pn.innerHTML = Q.map((q, i) => `<div class="q"><p>${fa(i + 1)}. ${q[0]}</p><label class="field">حدس شما: <b id="gv${i}"></b><input type="range" id="g${i}" min="${q[1]}" max="${q[2]}" step="${q[3]}" value="${(q[1] + q[2]) / 2}"></label><div><button class="btn ghost" data-i="${i}">پاسخ</button></div><div id="ga${i}"></div></div>`).join("");
+  Q.forEach((q, i) => { const r = pn.querySelector("#g" + i), o = pn.querySelector("#gv" + i); const u = () => o.textContent = fa(+r.value, 1) + q[6]; r.addEventListener("input", u); u(); });
+  pn.addEventListener("click", e => { const b = e.target.closest("[data-i]"); if (!b) return; const i = +b.dataset.i, q = Q[i], g = +pn.querySelector("#g" + i).value, off = Math.abs(g - q[4]) / (q[2] - q[1]);
+    pn.querySelector("#ga" + i).innerHTML = `<div class="ans"><b>${off < .08 ? "تقریباً درست!" : off < .25 ? "نزدیک بود." : "دور بود — و این طبیعی است."}</b> پاسخ: حدود ${fa(q[4])}${q[6]}. ${q[5]}${lk(q[7])}</div>`; b.remove(); });
+}
+
+open((location.hash || "").slice(1) || "hunt");
+window.addEventListener("hashchange", () => { const k = location.hash.slice(1); if (k !== cur && EXP[k]) open(k); });
+</script>
+</body>
+</html>
