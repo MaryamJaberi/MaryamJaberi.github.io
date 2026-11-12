@@ -10,9 +10,9 @@
  "parent": "phil:science",
  "field": "phil:science",
  "summary": {
-  "fa": "بیرونی در آثارش دعاوی عامیانه را با تبیین طبیعی و آزمایش می‌سنجید و خرافه‌ها را رد می‌کرد. این رویکرد به معنای امروزی روش علمی نیست، اما گرایشی تجربه‌گرا بود.",
-  "en": "Biruni weighed popular claims against natural explanation and rejected superstitions; not the modern scientific method, but an empirical leaning.",
-  "nl": "Biruni toetste volksgeloof aan natuurlijke verklaringen en verwierp bijgeloof."
+  "fa": "ابوریحان بیرونی (۳۶۲ تا پس از ۴۴۰ ق) ادعاهای شگفت را با سه پرسش می‌سنجید: آیا با مشاهده و اندازه‌گیری جور درمی‌آید؟ آیا تبیین طبیعی ساده‌تری دارد؟ و آیا راوی‌اش قابل اعتماد است؟ او افسانه‌های رایج دربارهٔ سنگ‌ها و چشمه‌ها را رد می‌کرد، چگالی فلزها و گوهرها را با دستگاهی که خودش ساخت اندازه گرفت، و شعاع زمین را با روشی مثلثاتی از بالای یک کوه برآورد کرد. این هنوز «روش علمی» به معنای امروز نیست، اما گرایشی آشکار به سنجش تجربی و انصاف در گزارش است. تناقض جالب: همین منبع، «التفهیم»، درس‌نامهٔ احکام نجوم است؛ بیرونی نجوم احکامی را درس می‌داد و در جاهای دیگر به اعتبار آن تردید می‌کرد.",
+  "en": "Abu Rayhan al-Biruni (973–after 1048) tested marvellous claims with three questions: does it fit observation and measurement? is there a simpler natural explanation? is the reporter reliable? He rejected common legends about stones and springs, measured the specific gravity of metals and gems with an apparatus he built, and estimated the earth’s radius trigonometrically from a mountaintop. This is not yet “scientific method” in today’s sense, but a clear leaning toward empirical testing and fairness in reporting. An interesting tension: this very source, al-Tafhim, is a textbook of astrology; Biruni taught judicial astrology while elsewhere doubting its validity.",
+  "nl": "Al-Biruni toetste wonderclaims aan waarneming, natuurlijke verklaring en betrouwbaarheid van de verteller; hij mat soortelijk gewicht en de straal van de aarde. Spanning: al-Tafhim is zelf een astrologieleerboek."
  },
  "points": [
   {
@@ -47,6 +47,64 @@
    "flags": [
     "editor-note"
    ]
+  },
+  {
+   "text": {
+    "fa": "اندازه‌گیری: به گزارش کندی، بیرونی در «قانون مسعودی» و رسالهٔ «تحدید نهایات الاماکن» شعاع زمین را از روی زاویهٔ فرورفتگی افق از بالای کوهی نزدیک نندنه (در پنجاب امروز) برآورد کرد، و نتیجه‌اش به مقدار امروزی نزدیک بود. جدول چگالی‌های او را خازنی بعدها نقل کرد.",
+    "en": "Measurement: according to Kennedy, in al-Qanun al-Mas‘udi and the Tahdid nihayat al-amakin Biruni estimated the earth’s radius from the dip of the horizon seen from a mountain near Nandana (in today’s Punjab), with a result close to the modern value. His table of specific gravities was later quoted by al-Khazini.",
+    "nl": "Measurement: according to Kennedy, in al-Qanun al-Mas‘udi and the Tahdid nihayat al-amakin Biruni estimated the earth’s radius from the dip of the horizon seen from a mountain near Nandana (in today’s Punjab), with a result close to the modern value. His table of specific gravities was later quoted by al-Khazini."
+   },
+   "sources": [
+    "src:453129a65c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انصاف در گزارش دیگری: در «تحقیق ماللهند» او پیش از داوری، باورهای هندیان را از متن‌های خودشان و به زبان سانسکریت گزارش کرد، و نوشت که خرافهٔ عامه را باید از دانش خواص جدا کرد؛ همان‌طور که میان مسلمانان هم عامه و دانشمندان یکسان نمی‌اندیشند.",
+    "en": "Fairness to others: in his India he reported Indian beliefs from their own texts and in Sanskrit before judging, and wrote that popular superstition must be distinguished from the learning of the educated — just as among Muslims the common people and the learned do not think alike.",
+    "nl": "Fairness to others: in his India he reported Indian beliefs from their own texts and in Sanskrit before judging, and wrote that popular superstition must be distinguished from the learning of the educated — just as among Muslims the common people and the learned do not think alike."
+   },
+   "sources": [
+    "src:eed2a43b37"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مناظره با ابن‌سینا: در پرسش و پاسخ‌هایی که میان بیرونی جوان و ابن‌سینا رد و بدل شد، بیرونی چند حکم فیزیک ارسطویی را به چالش کشید؛ از جمله اینکه چرا خلأ ناممکن است و آیا حرکت آسمان‌ها ناگزیر دایره‌ای است. او استدلال‌های مرجع را بی‌پرسش نمی‌پذیرفت.",
+    "en": "Debate with Ibn Sina: in the questions and answers exchanged between the young Biruni and Ibn Sina, Biruni challenged several tenets of Aristotelian physics, such as why a vacuum is impossible and whether heavenly motion must be circular. He did not accept authoritative arguments unquestioned.",
+    "nl": "Debate with Ibn Sina: in the questions and answers exchanged between the young Biruni and Ibn Sina, Biruni challenged several tenets of Aristotelian physics, such as why a vacuum is impossible and whether heavenly motion must be circular. He did not accept authoritative arguments unquestioned."
+   },
+   "sources": [
+    "src:20b90840bf"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مرز ادعا: کتاب‌های عامه‌پسند گاه بیرونی را «پدر روش علمی» یا پیشگام بسیاری از کشف‌های مدرن می‌خوانند (مثلاً استار با لحنی ستایش‌آمیز). این ستایش‌ها اغلب اغراق‌اند؛ دقیق‌تر این است که او را یکی از سخت‌گیرترین مشاهده‌گران زمانه‌اش بدانیم.",
+    "en": "Limits of the claim: popular books sometimes call Biruni “father of the scientific method” or a forerunner of many modern discoveries (Starr writes admiringly). Such praise is often exaggerated; more accurately he was one of the most rigorous observers of his age.",
+    "nl": "Limits of the claim: popular books sometimes call Biruni “father of the scientific method” or a forerunner of many modern discoveries (Starr writes admiringly). Such praise is often exaggerated; more accurately he was one of the most rigorous observers of his age."
+   },
+   "sources": [
+    "src:b805bf8733"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "برای امروز ایران: روش سه‌پرسشی بیرونی ابزاری ساده برای سنجش ادعاهای شگفت امروز هم هست، از درمان‌های معجزه‌آسا تا پیش‌گویی‌ها. خرافه در کنار بی‌سوادی و فقر از ریشه‌هایی است که در صفحهٔ ریشه‌یابی آسیب به آسیب‌های کودکی وصل شده‌اند.",
+    "en": "For Iran today: Biruni’s three questions are a simple tool for testing today’s marvellous claims too, from miracle cures to prophecies. Superstition, alongside illiteracy and poverty, is among the roots linked to childhood harms on the root-causes page.",
+    "nl": "For Iran today: Biruni’s three questions are a simple tool for testing today’s marvellous claims too, from miracle cures to prophecies. Superstition, alongside illiteracy and poverty, is among the roots linked to childhood harms on the root-causes page."
+   },
+   "sources": [],
+   "flags": [
+    "editor-note"
+   ]
   }
  ],
  "links": [
@@ -67,11 +125,42 @@
     "en": "philosophy of science",
     "nl": "philosophy of science"
    }
+  },
+  {
+   "to": "soc:hakimzadeh-shrine-veneration-shirk-critique",
+   "rel": "see-also",
+   "note": {
+    "fa": "نقدی دیگر بر خرافه در ایران",
+    "en": "Another Iranian critique of superstition",
+    "nl": "Another Iranian critique of superstition"
+   }
+  },
+  {
+   "to": "soc:social-roots-of-childhood-adversity",
+   "rel": "see-also",
+   "note": {
+    "fa": "خرافه به‌عنوان یکی از ریشه‌های آسیب",
+    "en": "Superstition as a root of harm",
+    "nl": "Superstition as a root of harm"
+   }
+  },
+  {
+   "to": "phil:biruni-india-ghazni-career",
+   "rel": "see-also",
+   "note": {
+    "fa": "زندگی بیرونی",
+    "en": "Biruni’s life",
+    "nl": "Biruni’s life"
+   }
   }
  ],
  "people": [],
  "sources": [
-  "src:342e87812d"
+  "src:342e87812d",
+  "src:453129a65c",
+  "src:eed2a43b37",
+  "src:20b90840bf",
+  "src:b805bf8733"
  ],
  "booklets": [],
  "origin": null,
