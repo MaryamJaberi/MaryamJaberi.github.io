@@ -207,7 +207,7 @@ tools = [
  ['ریشه‌یابی آسیب', 'زنجیره‌ها و نقطه‌های عطف', 'have', '../miyan/roots.html'],
  ['آزمایشگاه‌ها', 'آستانه، کالای عمومی، دوراهی زندانی', 'have', '../soc/tools/lab.html'],
  ['پروندهٔ امنیت', 'مدل تهدید، ده مسئلهٔ باز و دعوت‌نامهٔ نگهبان', 'have', 'security.html'],
- ['کارت‌های «چرا؟» برای نقش‌ها', 'هر نقش به مفهوم علمی و منبعش', 'none', ''],
+ ['کارت‌های «چرا؟» برای نقش‌ها', 'هر نقش به مفهوم علمی و منبعش', 'have', 'why.html'],
  ['کارت‌های سی مرغ', 'هدف، کار امن امروز، نقش روز آزادی', 'have', 'birds.html'],
  ['جستجوی هوشمند دانش‌سرا', 'پرسش بپرس، مدخل‌ها را بگیر؛ بی‌سرور', 'none', ''],
  ['نقشهٔ بزرگ با نوار زمان', 'ویرانی‌ها و تاریخ روی نقشهٔ ایران', 'none', ''],
@@ -291,4 +291,61 @@ P = json.load(open(f'{H}/plan.json', encoding='utf-8'))
 names = [b for f in birds for b in f[1]]
 assert set(names) == set(BC), set(names) ^ set(BC)
 P['bird_cards'] = BC
+json.dump(P, open(f'{H}/plan.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+# ---- «چرا؟» cards: each of the 47 Simorgh roles -> what research says -> Daneshsara entries
+# [team, role, subtitle, science in one line, [entry ids]]
+WHY = [
+ ['mafia', 'پدرخوانده', 'هستهٔ تصمیم', 'نظامی که حول یک نفر ساخته شود با مسئلهٔ جانشینی می‌شکند؛ قدرتش به همکاری دیگران وابسته است.', ['soc:consent-theory-of-power', 'soc:legitimacy-trust-function']],
+ ['mafia', 'بازوی مسلح', 'سپاه', 'نیروی مسلح وقتی کنار می‌کشد که آینده‌اش را امن ببیند؛ دو انگیزهٔ اقتصادی و امنیتی‌اش شکاف می‌سازد.', ['soc:security-defection-credible-commitment', 'soc:shah-army-personalised-command-1357']],
+ ['mafia', 'شبکهٔ محله', 'بسیج', 'نظارت محله‌ای با هنجار و ترس کار می‌کند، نه با شمار واقعی؛ دیده شدن اکثریت آن را بی‌اثر می‌کند.', ['soc:preference-falsification', 'psy:norm-psychology']],
+ ['mafia', 'مشروعیت‌ساز', 'روحانیت رسمی', 'مشروعیت هزینهٔ اجبار را کم می‌کند؛ وقتی برود، حکومت باید بیشتر زور خرج کند.', ['soc:legitimacy-reduces-coercion-claim', 'soc:secularization']],
+ ['mafia', 'مؤمن عمیق', 'جزء اول ۱۰ تا ۱۵٪', 'باور ایدئولوژیک سخت با استدلال جابه‌جا نمی‌شود؛ اما اقلیت کوچکی است.', ['psy:ideological-brain', 'iran:political-attitudes-2026']],
+ ['mafia', 'رانت‌خوار', 'وابستهٔ اقتصادی', 'وفاداری خریدنی است و با تغییر حساب سود و زیان جابه‌جا می‌شود.', ['soc:structural-corruption-causes-iran', 'soc:selective-access-white-sim-rent']],
+ ['mafia', 'کارمند ناگزیر', 'وابستهٔ حقوقی', 'اطاعت اداری از ترس معاش می‌آید نه باور؛ تضمین شغل، او را آزاد می‌کند.', ['soc:fromm-bureaucratic-obedience-eichmann', 'phil:arendt-obedience-is-support']],
+ ['mafia', 'روایت‌ساز رسمی', 'صداوسیما', 'انحصار روایت دانش مشترک مردم را می‌شکند؛ هر کس گمان می‌کند تنهاست.', ['soc:coordination-focal-points', 'soc:preference-falsification']],
+ ['mafia', 'دکتر شب', 'دستگاه امنیتی-سایبری', 'ترس از دیده شدن هزینهٔ نخستین قدم را بالا می‌برد و آستانهٔ همه را بالا نگه می‌دارد.', ['soc:threshold-models-of-collective-behaviour', 'phil:fear-exaggerates-danger']],
+ ['mafia', 'دلال معنا', 'بازار خرافه', 'وقتی نهاد دینی اعتبارش را می‌بازد، نیاز به معنا به بازار خرافه می‌رود.', ['phil:biruni-natural-causes-vs-superstition', 'soc:why-religion-outlives-metaphysics']],
+ ['mafia', 'ضابط خُرد', 'مأمور اجرا', 'سرکوب را آدم‌های معمولی اجرا می‌کنند که خود را فقط مأمور می‌دانند.', ['phil:normalization-banality-of-evil', 'soc:fromm-why-obedience-is-virtue']],
+ ['mafia', 'معمار ماندن', 'بازسازی پایگاه', 'حکومت‌ها پس از بحران می‌کوشند ائتلاف تازه بسازند؛ نشانه‌های پیش‌هنگام را باید شناخت.', ['soc:critical-transitions-early-warning', 'soc:authoritarian-growth-appeal-and-limits']],
+ ['citizen', 'طبقهٔ متوسط فرودست‌شده', 'هستهٔ ۸۰٪', 'فاصلهٔ انتظار و واقعیت، نه فقر مطلق، موتور نارضایتی است.', ['soc:mobility', 'soc:anomie']],
+ ['citizen', 'فارغ‌التحصیل بیکار', 'شکاف ساختاری', 'آموزش بی‌کار، تحرک اجتماعی را قفل می‌کند و به مهاجرت می‌رسد.', ['soc:mobility', 'soc:modern-iranian-brain-drain-debate']],
+ ['citizen', 'زن شهری تحصیل‌کرده', 'سوژهٔ محوری', 'برابری جنسیتی ائتلاف می‌سازد، نه دشمنی؛ تغییر ارزش‌ها از همین گروه دیده می‌شود.', ['soc:gender-coalition-not-enmity', 'iran:values-shift']],
+ ['citizen', 'زن سرپرست خانوار', 'نقش پرهزینه', 'فقر و تبعیض قانونی روی هم می‌افتند؛ خشونت پنهان می‌ماند.', ['iran:violence-against-women', 'iran:poverty-rate']],
+ ['citizen', 'نسل زد', 'دهه‌هشتادی', 'هر نسل با تجربهٔ سال‌های شکل‌گیری‌اش داوری می‌کند؛ این نسل اصلاح را تجربه نکرده است.', ['soc:generations', 'soc:social-strain-lifestyle-change-new-generation']],
+ ['citizen', 'دهه‌شصتی', 'بزرگ‌ترین کوهورت', 'بزرگ‌ترین گروه سنی، با سه شکست جمعی در حافظه؛ درماندگی آموخته خطر اصلی است.', ['soc:generation-born-in-iran-1360s', 'psy:learned-helplessness']],
+ ['citizen', 'حاشیه‌نشین', 'نامرئی‌ترین نقش', 'محرومیت در کودکی زنجیره‌ای تا بزرگسالی می‌سازد.', ['soc:social-roots-of-childhood-adversity', 'iran:urbanization']],
+ ['citizen', 'کارگر غیررسمی', 'بی‌قرارداد', 'بی‌تشکل، قدرت چانه‌زنی نیست؛ کنش جمعی برای گروه بزرگ پراکنده سخت است.', ['soc:collective-action', 'soc:class-consciousness']],
+ ['citizen', 'صنف و خرده‌مالک', 'بازار', 'گروه کوچک با منافع متمرکز آسان‌تر سازمان می‌یابد؛ اعتصابش اثر بزرگ دارد.', ['soc:collective-action', 'soc:nonviolent-action-methods-mechanisms']],
+ ['citizen', 'بازنشسته و حقوق‌بگیر ثابت', 'قربانی تورم', 'تورم قرارداد میان نسل‌ها را می‌شکند.', ['iran:poverty-rate', 'phil:burke-contract-of-generations']],
+ ['citizen', 'اقلیت قومی-زبانی', 'طیف، نه مرز', 'ژنتیک و تاریخ می‌گویند مرزهای قومی پیوسته‌اند؛ هویت ملی می‌تواند چتر باشد نه قفس.', ['soc:nation-as-umbrella-idea-iran', 'iran:genetic-heterogeneity']],
+ ['citizen', 'اقلیت دینی و نودین', 'حذف‌شده از شمارش', 'آزادی باور سنجهٔ صداقت هر نظم تازه است.', ['iran:religiosity', 'phil:two-liberties']],
+ ['citizen', 'پسادینی', '«هیچ‌کدام»', 'سکولار شدن در ایران سریع و بی‌صدا بوده است.', ['soc:secularization', 'iran:religiosity']],
+ ['citizen', 'شهروند شهر کوچک و روستا', 'شکاف منطقه‌ای', 'نابرابری منطقه‌ای در تحلیل تهران‌محور دیده نمی‌شود.', ['soc:gini-inequality', 'iran:urbanization']],
+ ['citizen', 'بدنهٔ خدمات عمومی', 'معلم و پرستار', 'شبکهٔ صنفی آماده یعنی هزینهٔ هماهنگی پایین؛ سازمان‌یافته‌ترین بخش شهر.', ['soc:collective-action', 'soc:weak-ties']],
+ ['citizen', 'سالمند', 'موج بعدی', 'گذار جمعیتی ایران سریع است و هزینهٔ مراقبت به‌زودی می‌رسد.', ['soc:demographic-transition', 'iran:fertility']],
+ ['citizen', 'کودک غایب', 'نقش خاموش', 'تجربه‌های ناگوار کودکی امروز، سلامت و جرم بیست سال بعد را می‌سازد.', ['psy:adverse-childhood-experiences', 'soc:aces-iran-turning-points']],
+ ['citizen', 'خانوادهٔ داغدار', 'کانون اخلاقی', 'سوگ جمعی می‌تواند به دادخواهی برسد یا به انتقام؛ طراحی گذار تعیین می‌کند کدام.', ['soc:collective-trauma-justice-revenge', 'soc:death-modern-loneliness-grief-world']],
+ ['third', 'دیاسپورا', 'ایران بیرون', 'مهاجرت هم «خروج» است هم می‌تواند «صدا» باشد.', ['soc:clear-horizon-exit-voice', 'soc:migration-theories']],
+ ['third', 'الیت بی‌اجماع', 'گرهٔ اصلی', 'گذارهای موفق معمولاً با توافق نخبگان بر قواعد بازی آغاز می‌شوند، نه بر نتیجه.', ['soc:transition-design-focal-point', 'soc:coordination-focal-points']],
+ ['third', 'رهبر هماهنگ‌کننده', 'نقش دولبه', 'نقطهٔ کانونی هماهنگی می‌سازد، اما تمرکز قدرت خطر استبداد تازه است.', ['soc:coordination-focal-points', 'soc:revolution-1357-religion-left-fusion-and-charisma']],
+ ['third', 'سلطنت‌طلب سازمان‌یافته', 'صدای بلند', 'حدود یک‌سوم پاسخ‌دهندگان گمان پادشاهی را ترجیح دادند؛ نماد می‌تواند کانونی باشد یا تفرقه‌انداز.', ['iran:political-attitudes-2026', 'soc:coordination-focal-points']],
+ ['third', 'جمهوری‌خواه پراکنده', 'صدای غایب', 'ترجیح بی‌سازمان دیده نمی‌شود؛ مسئلهٔ کنش جمعی است نه کمبود هوادار.', ['iran:political-attitudes-2026', 'soc:collective-action']],
+ ['third', 'اصلاح‌طلب بازمانده', 'نقش سوخته', 'بازی تکراری: کسی که سه بار عهد شکسته، اعتبار همکاری ندارد.', ['soc:repeated-games-cooperation']],
+ ['third', 'تجزیه‌طلب', 'نقش تضعیف‌شده', 'داده‌ها پیوستگی اقوام را نشان می‌دهند؛ خطر واقعی خشونت اقلیت‌های تندرو در خلأ قدرت است.', ['soc:radical-minorities-violence-and-political-transitions', 'soc:national-myth-solidarity-vs-ethnic-division-debate']],
+ ['third', 'بازیگر خارجی', 'مداخله‌گر', 'مردم دربارهٔ مداخلهٔ خارجی دوپاره‌اند؛ تعهد بیرونی به‌سختی باورپذیر می‌شود.', ['iran:political-attitudes-2026', 'soc:security-defection-credible-commitment']],
+ ['third', 'رسانهٔ فارسی‌زبان خارج', 'سازندهٔ نقطهٔ کانونی', 'رسانهٔ پربیننده دانش مشترک می‌سازد: همه می‌دانند که همه دیده‌اند.', ['soc:coordination-focal-points', 'soc:network-society']],
+ ['third', 'طلبهٔ مردد', 'لولا', 'نزدیک‌ترین آستانه به ریزش؛ راه بازگشت روشن او را جابه‌جا می‌کند.', ['soc:security-defection-credible-commitment', 'soc:threshold-models-of-collective-behaviour']],
+ ['third', 'تکنوکرات', 'کلیددار انتقال', 'درس عراق: پاک‌سازی کارشناسان، دولت را از کار می‌اندازد.', ['soc:transition-design-focal-point', 'soc:legitimacy-trust-function']],
+ ['third', 'قاضی و زندانبان', 'عدالت انتقالی', 'ابهام دربارهٔ آینده او را تا آخر در تیم حاکم نگه می‌دارد؛ قاعدهٔ روشن دادرسی لازم است.', ['soc:security-defection-credible-commitment', 'soc:collective-trauma-justice-revenge']],
+ ['third', 'سرمایه‌دار منتظر', 'پول بی‌تصمیم', 'سرمایه با اعتماد به قاعده‌ها حرکت می‌کند، نه با شعار.', ['soc:legitimacy-trust-function', 'iran:social-trust']],
+ ['third', 'کاسب تحریم', 'نقش مرزی', 'کسی که از وضع موجود سود می‌برد مانع تغییر است، بی آنکه طرفدار باشد.', ['soc:structural-corruption-causes-iran', 'soc:collective-action']],
+ ['third', 'سلبریتی و ورزشکار', 'نماد', 'چهرهٔ پرمخاطب می‌تواند همزمان‌ساز باشد: یک اشاره، نقطهٔ کانونی می‌سازد.', ['soc:coordination-focal-points', 'soc:weak-ties']],
+ ['third', 'پژوهشگر و راوی', 'گردانندهٔ بازی', 'دانستن اینکه دیگران چه می‌خواهند، خودِ بازی را عوض می‌کند.', ['soc:preference-falsification', 'soc:sociological-imagination']],
+ ['third', 'ناظر بی‌طرف ناگزیر', 'بلوک خاموش', 'بزرگ‌ترین گروه: ترجیح دارد اما پنهانش می‌کند؛ با پایین آمدن آستانه می‌پیوندد.', ['soc:preference-falsification', 'soc:threshold-models-of-collective-behaviour']],
+]
+reg = json.load(open(f'{H}/../../core/registry.json', encoding='utf-8'))['entries']
+miss = sorted({i for w in WHY for i in w[4] if i not in reg}); assert not miss, miss
+P = json.load(open(f'{H}/plan.json', encoding='utf-8'))
+P['why'] = [[w[0], w[1], w[2], w[3], [[reg[i]['title']['fa'], '../' + reg[i]['url']] for i in w[4]]] for w in WHY]
 json.dump(P, open(f'{H}/plan.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

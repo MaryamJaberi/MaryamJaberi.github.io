@@ -114,6 +114,7 @@ details.card ul{margin:8px 0 0;padding-inline-start:18px;color:var(--ink-2);font
 
 <section id="game"><h2>بازی مافیا، به زبان علم</h2><p class="sub">هر قاعدهٔ بازی یک سازوکار واقعی است که پژوهش دارد. راست: بازی. چپ: واقعیت و نام علمی‌اش.</p>
 <div class="gm" id="gm"></div>
+<p class="sub" style="margin-top:10px"><a href="why.html">علم پشت هر یک از ۴۷ نقش ←</a></p>
 <div class="sim"><div><canvas id="cv" width="300" height="300" aria-label="شبیه‌سازی شهر"></canvas></div>
 <div><b>خودت امتحان کن: شهر کی راه می‌افتد؟</b>
 <p class="sub" style="margin:4px 0 12px">چهارصد شهروند. هرکس وقتی می‌پیوندد که ببیند به اندازهٔ «آستانه»‌اش دیگران پیوسته‌اند. مافیا با کنترل راوی نمی‌گذارد همدیگر را ببینند.</p>
