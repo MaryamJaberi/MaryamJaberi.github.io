@@ -72,6 +72,9 @@ svg .node.hl text{opacity:1!important}
 .link.x.hl{stroke:#f2d9a6;stroke-dasharray:4 4;animation:flow 1.2s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-16}}
 .node.sel circle.core{stroke:#fff;stroke-width:3}
+.node.ospot{opacity:.3}.link.ospot{opacity:.07}.node.ospot.hl,.node.ospot.sel{opacity:1}
+.node.spot text{font-family:var(--f-display);font-size:24px;font-weight:700}
+#zall{width:auto;padding:0 12px;font-size:.8rem;font-family:var(--f-body)}
 .node:focus-visible circle.core{stroke:#fff;stroke-width:3}
 @media (prefers-reduced-motion:reduce){.link.x.hl{animation:none}.dim{transition:none}}
 
@@ -164,7 +167,7 @@ ul.plain li:last-child{border-bottom:0}
   </aside>
   <div id="stage">
     <svg id="svg" role="img" aria-label="گراف موضوعات روان‌شناسی"></svg>
-    <div class="zoombtns"><button id="zin" type="button" aria-label="بزرگ‌نمایی">+</button><button id="zout" type="button" aria-label="کوچک‌نمایی">−</button><button id="zfit" type="button" aria-label="نمای کامل">⤢</button></div>
+    <div class="zoombtns"><button id="zin" type="button" aria-label="بزرگ‌نمایی">+</button><button id="zout" type="button" aria-label="کوچک‌نمایی">−</button><button id="zfit" type="button" aria-label="نمای کامل">⤢</button><button id="zall" type="button" hidden>↺ کل دنیا</button></div>
     <div class="legend" aria-hidden="true">
       <div><b style="background:var(--psychology)"></b>روان‌شناسی</div>
       <div><b style="background:var(--psychiatry)"></b>روان‌پزشکی</div>
@@ -2547,7 +2550,7 @@ document.getElementById("zfit").onclick=()=>fit();
 /* drag (network mode only) */
 let mode="net";
 nodeSel.call(d3.drag()
-  .filter(e=>mode==="net" && !e.button)
+  .filter(e=>mode==="net" && !spot && !e.button)
   .on("start",(e,n)=>{ if(!e.active) sim.alphaTarget(.15).restart(); n.fx=n.x; n.fy=n.y; })
   .on("drag",(e,n)=>{ n.fx=e.x; n.fy=e.y; })
   .on("end",(e,n)=>{ if(!e.active) sim.alphaTarget(0); n.fx=null; n.fy=null; }));
@@ -2586,7 +2589,7 @@ function render(id){
   if(d.id==="psyche"){
     const nCourse=D.filter(isCourse).length, nPeople=new Set(D.flatMap(x=>x.ppl||[])).size;
     h+=`<div class="stats"><div><b>${fa(D.length)}</b><span>گره</span></div><div><b>${fa(nCourse)}</b><span>از جزوه‌ها و کتاب‌ها</span></div><div><b>${fa(nPeople)}</b><span>چهره</span></div></div>
-    <div class="sec"><h3>راهنما</h3><ul><li>روی هر گره بزنید تا جزئیاتش اینجا باز شود؛ گره‌های همسایه روشن می‌مانند.</li><li>«درخت» همین داده را به‌صورت سلسله‌مراتب شعاعی نشان می‌دهد: رشته ← زیررشته ← مفهوم.</li><li>«رشته‌ها» فقط رشته‌ها و زیررشته‌ها را برجسته می‌کند و «مفهوم‌ها» فقط مفهوم‌ها را.</li><li>«فقط مطالب جزوه‌ها و کتاب‌ها» شاخه‌هایی را برجسته می‌کند که از سخنرانی‌ها (حلقهٔ سفید) یا کتاب‌های ضمیمه (حلقهٔ خط‌چین) آمده‌اند.</li><li>هر گره نشانی ثابت دارد؛ می‌توانید لینکش را بفرستید.</li></ul></div><div class="sec"><h3>ابزارهای دیگر ویکی</h3><div class="golinks"><a class="golink" href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها ↗</a><a class="golink alt" href="body.html" target="_blank" rel="noopener">نقشهٔ بدن و روان ↗</a><a class="golink alt" href="learn.html" target="_blank" rel="noopener">مرکز یادگیری ↗</a><a class="golink alt" href="../../wellbeing/orgsvc.html" target="_blank" rel="noopener">سنجش سلامت سازمان ↗</a></div></div><div class="sec"><h3>جزوه‌های ویکی</h3><div class="golinks">${window.HUB?`<a class="golink" href="${window.HUB}" target="_blank" rel="noopener">⌂ صفحهٔ اصلی ویکی ↗</a>`:""}${Object.values(BK).map(b=>`<a class="golink alt" href="${b.url}" target="_blank" rel="noopener">${esc(b.fa)} ↗</a>`).join("")}</div></div>`;
+    <div class="sec"><h3>راهنما</h3><ul><li>روی هر گره بزنید تا جزئیاتش اینجا باز شود؛ گره‌های همسایه روشن می‌مانند.</li><li>«درخت» همین داده را به‌صورت سلسله‌مراتب شعاعی نشان می‌دهد: رشته ← زیررشته ← مفهوم.</li><li>«رشته‌ها» فقط رشته‌ها و زیررشته‌ها را برجسته می‌کند و «مفهوم‌ها» فقط مفهوم‌ها را.</li><li>«فقط مطالب جزوه‌ها و کتاب‌ها» شاخه‌هایی را برجسته می‌کند که از سخنرانی‌ها (حلقهٔ سفید) یا کتاب‌های ضمیمه (حلقهٔ خط‌چین) آمده‌اند.</li><li>روی هر علم اصلی (مثل علوم اعصاب یا فلسفه) بزنید تا به مرکز بیاید و بقیهٔ دنیا دور آن بچیند؛ «کل دنیا» نمای اول را برمی‌گرداند.</li><li>هر گره نشانی ثابت دارد؛ می‌توانید لینکش را بفرستید.</li></ul></div><div class="sec"><h3>ابزارهای دیگر ویکی</h3><div class="golinks"><a class="golink" href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها ↗</a><a class="golink alt" href="body.html" target="_blank" rel="noopener">نقشهٔ بدن و روان ↗</a><a class="golink alt" href="learn.html" target="_blank" rel="noopener">مرکز یادگیری ↗</a><a class="golink alt" href="../../wellbeing/orgsvc.html" target="_blank" rel="noopener">سنجش سلامت سازمان ↗</a></div></div><div class="sec"><h3>جزوه‌های ویکی</h3><div class="golinks">${window.HUB?`<a class="golink" href="${window.HUB}" target="_blank" rel="noopener">⌂ صفحهٔ اصلی ویکی ↗</a>`:""}${Object.values(BK).map(b=>`<a class="golink alt" href="${b.url}" target="_blank" rel="noopener">${esc(b.fa)} ↗</a>`).join("")}</div></div>`;
   }
   if(d.k&&d.k.length) h+=`<div class="sec"><h3>نکات کلیدی</h3><ul>${d.k.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
   if(d.children.length) h+=`<div class="sec"><h3><span>زیرشاخه‌ها</span><span>${fa(d.children.length)}</span></h3><div class="chips">${d.children.map(chip).join("")}</div></div>`;
@@ -2606,7 +2609,10 @@ pin.addEventListener("click",e=>{ const b=e.target.closest("[data-go]"); if(b){ 
 function select(id,move){
   if(!byId.has(id)) return;
   selected=id; nodeSel.classed("sel",n=>n.id===id); highlight(id); render(id);
-  if(move) focusNode(nById.get(id));
+  const dd=byId.get(id);
+  if(mode==="net" && dd.depth===1 && spot!==id) setSpot(id);
+  else if(mode==="net" && id==="psyche" && spot) setSpot(null);
+  else if(move) focusNode(nById.get(id));
   try{ if(location.hash!=="#"+id) history.replaceState(null,"","#"+id); }catch(_){}
   if(innerWidth<=760) panel.classList.remove("min");
 }
@@ -2625,8 +2631,53 @@ function animateTo(target, after){
     nodes.forEach((n,i)=>{ const [tx,ty]=target(n); n.x=start[i][0]+(tx-start[i][0])*e; n.y=start[i][1]+(ty-start[i][1])*e; });
     draw(); if(p>=1){ t.stop(); after&&after(); } });
 }
+/* spotlight: a main science moves to the centre and the rest of the world orbits it */
+let spot=null, prePos=null;
+const labelY = n => n.r + (n.depth===0?26:n.depth===1?20:n.depth===2?15:12);
+function spotLayout(F){
+  const inF = d => d.id===F || d.path.includes(F);
+  const own = d3.stratify().id(d=>d.id).parentId(d=>d.p)(D.filter(inF).map(d=>({id:d.id,p:d.id===F?null:d.p})));
+  const RING=135, depthF=own.height;
+  d3.tree().size([2*Math.PI, RING*Math.max(depthF,1)]).separation((a,b)=>(a.parent===b.parent?1:1.5)/Math.max(a.depth,1))(own);
+  const pos=new Map();
+  const rad = d => d===0 ? 0 : 200+(d-1)*125;
+  own.each(h=>{ const a=h.x-Math.PI/2, r=rad(h.depth); pos.set(h.id,[r*Math.cos(a), r*Math.sin(a)]); });
+  const rest = d3.stratify().id(d=>d.id).parentId(d=>d.p)(D.filter(d=>!inF(d)).map(d=>({id:d.id,p:d.p||null})));
+  const base = rad(Math.max(depthF,1))+240, STEP=115;
+  d3.tree().size([2*Math.PI, 1]).separation((a,b)=>(a.parent===b.parent?1:1.6)/Math.max(a.depth,1))(rest);
+  rest.each(h=>{ if(h.depth===0){ pos.set(h.id,[0,-(base-120)]); return; } const a=h.x-Math.PI/2, r=base+(h.depth-1)*STEP; pos.set(h.id,[r*Math.cos(a), r*Math.sin(a)]); });
+  return {pos, inF};
+}
+function fitTo(list, dur=700){
+  const w=stage.clientWidth, h=stage.clientHeight, [x0,y0,x1,y1]=bounds(list);
+  const hh = h*(1-(innerWidth<=760 ? .44 : 0));
+  const k=Math.min(1.5, Math.min(w/(x1-x0), hh/(y1-y0))*.8);
+  svg.transition().duration(dur).call(zoom.transform, d3.zoomIdentity.translate(w/2,hh/2).scale(k).translate(-(x0+x1)/2,-(y0+y1)/2));
+}
+function paintSpot(inF){
+  nodeSel.classed("spot",n=>n.id===spot).classed("ospot",n=>!!spot && !inF(n.d) && n.id!=="psyche");
+  linkSel.classed("ospot",l=>!!spot && !(inF(l.source.d)&&inF(l.target.d)) && !(l.source.id==="psyche"&&l.target.id===spot));
+  nodeSel.select("circle.core").transition().duration(500).attr("r",n=>n.id===spot?26:n.r);
+  nodeSel.select("text").transition().duration(500).attr("y",n=>n.id===spot?26+28:labelY(n));
+  document.getElementById("zall").hidden=!spot;
+}
+function setSpot(F){
+  sim.stop();
+  if(F){
+    if(!spot) prePos=new Map(nodes.map(n=>[n.id,[n.x,n.y]]));
+    spot=F; const L=spotLayout(F); paintSpot(L.inF);
+    animateTo(n=>L.pos.get(n.id),()=>fitTo(nodes.filter(n=>L.inF(n.d)&&n.depth<=2)));
+  } else {
+    spot=null; paintSpot(()=>true);
+    const back=prePos; prePos=null;
+    if(back) animateTo(n=>back.get(n.id),()=>fit()); else fit();
+  }
+}
+document.getElementById("zall").onclick=()=>{ setSpot(null); selected=null; nodeSel.classed("sel",false); highlight(null); render("psyche"); try{ history.replaceState(null,"","#psyche"); }catch(_){} };
 function setMode(m){
-  if(m===mode) return; mode=m;
+  if(m===mode) return;
+  if(spot){ spot=null; paintSpot(()=>true); if(prePos){ prePos.forEach((v,k)=>{ const n=nById.get(k); n.x=v[0]; n.y=v[1]; }); prePos=null; draw(); } }
+  mode=m;
   document.getElementById("v-net").setAttribute("aria-pressed",m==="net");
   document.getElementById("v-tree").setAttribute("aria-pressed",m==="tree");
   sim.stop();
@@ -2674,10 +2725,10 @@ document.addEventListener("click",e=>{ if(!e.target.closest(".search")) res.hidd
 /* boot */
 const start = (location.hash||"").slice(1);
 fit(0);
-if(byId.has(start) && start!=="psyche"){ select(start,false); setTimeout(()=>focusNode(nById.get(start)),50); }
+if(byId.has(start) && start!=="psyche"){ select(start,false); if(!spot) setTimeout(()=>focusNode(nById.get(start)),50); }
 else { render("psyche"); if(innerWidth<=760) panel.classList.add("min"); }
 addEventListener("hashchange",()=>{ const h=location.hash.slice(1); if(byId.has(h)&&h!==selected) select(h,true); });
-let rt; addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(()=>{ if(selected) focusNode(nById.get(selected)); else fit(); },200); });
+let rt; addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(()=>{ if(spot){ const L=spotLayout(spot); fitTo(nodes.filter(n=>L.inF(n.d)&&n.depth<=2),300); } else if(selected) focusNode(nById.get(selected)); else fit(); },200); });
 })();
 </script>
 
