@@ -44,11 +44,11 @@ code{font-family:var(--mono,ui-monospace,monospace);font-size:.85em;background:v
 <body>
 <style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#8a8578));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17))}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><a href="../index.html#layers">لایهٔ سیمرغ</a><i>›</i><a href="../simorgh/">ویکی سیمرغ</a><i>›</i><b>پروندهٔ امنیت</b></nav><script src="../core/nav.js" defer></script>
 <main class="wrap" id="main">
-<div class="term"><i># simorgh / security / README</i><br><b>adversary:</b> state-level, controls the network, the SIM registry and the courts<br><b>crown jewel:</b> the identities of people inside Iran<br><b>budget:</b> ~0 &nbsp; <b>team:</b> you &nbsp; <b>users:</b> not security people<br><b>design rule:</b> what we never collect can never leak<br><b>status:</b> 2 findings closed, 1 open, 10 open problems, 0 owners</div>
+<div class="term"><i># simorgh / security / README</i><br><b>adversary:</b> state-level, controls the network, the SIM registry and the courts<br><b>crown jewel:</b> the identities of people inside Iran<br><b>budget:</b> ~0 &nbsp; <b>team:</b> you &nbsp; <b>users:</b> not security people<br><b>design rule:</b> what we never collect can never leak<br><b>status:</b> 3 findings closed, 1 residual, 10 open problems, 0 owners</div>
 <h1>پروندهٔ امنیت: دنبال نگهبان می‌گردیم</h1>
 <p class="lead">سیمرغ پروژه‌ای است که می‌خواهد با دانش مستند و یک بازی، آدم‌ها را برای ساختن ایرانِ پس از جمهوری اسلامی آماده کند. بخشی از آدم‌هایش داخل ایران‌اند. اگر امنیت این پروژه بد طراحی شود، کسی زندان می‌رود. این صفحه همه‌چیز را برای کسی که این نگهبانی را بپذیرد روی میز می‌گذارد: حریف، دارایی‌ها، تصمیم‌های تا امروز، و ده مسئلهٔ باز که جواب آماده ندارند.</p>
 <p>چرا این پرونده عمومی است؟ چون به اصل کرکهوفس پایبندیم: طراحی باید با فرض اینکه حریف همه‌اش را می‌داند امن بماند. رازها (نام‌ها، کلیدها، کانال‌ها) هیچ‌وقت اینجا نمی‌آیند.</p>
-<nav class="toc"><a href="#why">چرا جالب است</a><a href="#threat">مدل تهدید</a><a href="#decided">تصمیم‌های گرفته‌شده</a><a href="#found">سه یافتهٔ نخست</a><a href="#open">ده مسئلهٔ باز</a><a href="#not">چه چیزی نمی‌خواهیم</a><a href="#first">سی روز اول</a></nav>
+<nav class="toc"><a href="#why">چرا جالب است</a><a href="#threat">مدل تهدید</a><a href="#decided">تصمیم‌های گرفته‌شده</a><a href="#found">سه یافتهٔ نخست</a><a href="#open">ده مسئلهٔ باز</a><a href="#not">چه چیزی نمی‌خواهیم</a><a href="#first">سی روز اول</a><a href="#reply">چطور جواب بدهی</a></nav>
 
 <section id="why"><h2>چرا این مسئله ارزش وقتت را دارد</h2>
 <div class="grid">
@@ -95,7 +95,7 @@ code{font-family:var(--mono,ui-monospace,monospace);font-size:.85em;background:v
 </div></section>
 
 <section id="found"><h2>سه یافتهٔ نخست، و وضعیتشان</h2>
-<p>این‌ها را با یک <code>grep</code> ساده روی خود مخزن پیدا کردیم. دو تا بسته شد؛ تو بیشتر پیدا می‌کنی.</p>
+<p>این‌ها را با یک <code>grep</code> ساده روی خود مخزن پیدا کردیم. هر سه بسته شد و یک چیز باز ماند؛ تو بیشتر پیدا می‌کنی.</p>
 <div class="find" style="border-color:var(--ok);background:color-mix(in srgb,var(--ok) 6%,var(--paper))"><b style="color:var(--ok)">۱ · بسته شد · درخواست به شخص ثالث:</b> حدود صد صفحه فونت را از Google Fonts می‌گرفتند و نشانی IP بازدیدکننده به گوگل می‌رسید. حالا فونت‌ها از خود سایت می‌آیند. آزمون خودکار: هر ۱۷۴ صفحه در مرورگر باز شد و هیچ درخواستی به بیرون از سایت نرفت.</div>
 <div class="find" style="border-color:var(--ok);background:color-mix(in srgb,var(--ok) 6%,var(--paper))"><b style="color:var(--ok)">۲ · بسته شد · اسکریپت خارجی بدون SRI:</b> دو صفحه کتابخانهٔ d3 را از CDN می‌گرفتند. حالا از خود سایت بار می‌شود. یک گام ساخت (<code>build/selfhost.py</code>) هر بار همهٔ صفحه‌ها را می‌گردد و اگر اسکریپت، شیوه‌نامه یا فونت خارجی پیدا کند ساخت را متوقف می‌کند.</div>
 <div class="find"><b>۳ · بسته شد · فراداده در تاریخچهٔ git:</b> نشانی ایمیل شخصی از تاریخچهٔ هر دو مخزن عمومی برداشته و با نشانی بی‌نام GitHub جایگزین شد (۲۲ آبان ۱۴۰۵). آنچه می‌ماند: نسخه‌های قدیمی ممکن است تا مدتی در حافظهٔ GitHub و در هر رونوشتی که پیش‌تر گرفته شده بماند؛ و هر مشارکت‌کنندهٔ تازه باید پیش از نخستین کامیت، ایمیل بی‌نام را تنظیم کند.</div>
@@ -109,7 +109,7 @@ code{font-family:var(--mono,ui-monospace,monospace);font-size:.85em;background:v
 <details class="card"><summary><span>۲ · «چند نفریم» بدون «کی هستیم»</span><span class="lv">★★★★★</span></summary><p>قلب نظریهٔ بازی پروژه: مردم وقتی می‌پیوندند که ببینند دیگران هستند. شمارنده‌ای می‌خواهیم که هر نفر را یک بار بشمارد، در برابر حساب‌های جعلی مقاوم باشد، و هیچ هویتی نگه ندارد. ناشناسی و مقاومت در برابر سیبیل با هم دعوا دارند.</p><p class="hint">سرنخ: تعهد شرطی («من هستم اگر N نفر دیگر باشند»)، تجمیع امن، توکن یک‌بارمصرف از زنجیرهٔ ضمانت مسئلهٔ ۱. حریف می‌تواند خودش هم بشمارد یا شمارنده را باد کند.</p></details>
 <details class="card"><summary><span>۳ · زنده ماندن در قطعی اینترنت</span><span class="lv">★★★</span></summary><p>وقتی اتصال ۴٪ است، دانش‌سرا و بازی باید هنوز کار کنند و دست‌به‌دست شوند.</p><p class="hint">سرنخ: بستهٔ آفلاین کل سایت (ایستاست، پس شدنی است)، PWA، پخش با بلوتوث و حافظهٔ جانبی، Briar، آینهٔ onion، پخش ماهواره‌ای فایل به سبک توشه. کدام را آدم عادی واقعاً استفاده می‌کند؟</p></details>
 <details class="card"><summary><span>۴ · گوشی‌ای که ضبط می‌شود</span><span class="lv">★★★★</span></summary><p>فرض کن گوشی همراه داخل ایران باز شده در دست بازجوست. چه چیزی از سیمرغ رویش پیدا می‌شود؟ تاریخچهٔ مرورگر، حافظهٔ پنهان، PWA نصب‌شده، پیام‌ها.</p><p class="hint">سرنخ: طراحی برای ردپای صفر، نه برای رمز قوی. آیا خود سایت باید طوری باشد که داشتنش در تاریخچه بی‌خطر باشد؟</p></details>
-<details class="card"><summary><span>۵ · زنجیرهٔ تأمین یک سایت ایستا</span><span class="lv">★★</span></summary><p>دو یافتهٔ اول بسته شده. حالا بپرس: اگر حساب GitHub گرداننده ربوده شود چه می‌شود؟</p><p class="hint">سرنخ: کلید سخت‌افزاری، حفاظت شاخه، commit امضاشده، سخت‌تر کردن CSP (حذف unsafe-inline)، ساخت تکرارپذیر، آینهٔ مستقل برای مقایسه.</p></details>
+<details class="card"><summary><span>۵ · زنجیرهٔ تأمین یک سایت ایستا</span><span class="lv">★★</span></summary><p>سه یافتهٔ اول بسته شده. حالا بپرس: اگر حساب GitHub گرداننده ربوده شود چه می‌شود؟</p><p class="hint">سرنخ: کلید سخت‌افزاری، حفاظت شاخه، commit امضاشده، سخت‌تر کردن CSP (حذف unsafe-inline)، ساخت تکرارپذیر، آینهٔ مستقل برای مقایسه.</p></details>
 <details class="card"><summary><span>۶ · سخت کردن حساب‌های گرداننده</span><span class="lv">★★</span></summary><p>گرداننده هویت عمومی دارد و هدف شمارهٔ یک فیشینگ است. یک چک‌لیست یک‌ساعته می‌خواهیم که واقعاً اجرا شود.</p><p class="hint">سرنخ: دو کلید FIDO2، برنامه‌های حفاظت پیشرفته، جدا کردن ایمیل پروژه، دستگاه جدا برای کارهای حساس.</p></details>
 <details class="card"><summary><span>۷ · صندوق امن گزارش مردم</span><span class="lv">★★★★</span></summary><p>مردم می‌خواهند مشکل و تخلف گزارش کنند. ما می‌خواهیم فقط الگوی جمعی منتشر شود، و گزارش‌دهنده حتی برای خود ما ناشناس بماند.</p><p class="hint">سرنخ: SecureDrop و GlobaLeaks، پاک کردن فرادادهٔ عکس، آستانهٔ k-ناشناسی پیش از انتشار. تا این حل نشده، این قابلیت ساخته نمی‌شود.</p></details>
 <details class="card"><summary><span>۸ · دستیار هوش مصنوعی بی‌حافظه</span><span class="lv">★★★</span></summary><p>قرار است دستیاری بسازیم که فقط از مدخل‌های منبع‌دار جواب بدهد. خود پرسش کاربر حساس است («اگر بازداشت شدم چه کنم؟»).</p><p class="hint">سرنخ: مرحلهٔ اول جستجوی کاملاً درون مرورگر است (بدون سرور). برای مرحلهٔ سرور: بدون لاگ، بدون شناسه، مقاومت در برابر تزریق دستور از متن مدخل‌ها.</p></details>
@@ -126,11 +126,17 @@ code{font-family:var(--mono,ui-monospace,monospace);font-size:.85em;background:v
 <li><b>این مدل تهدید را خراب کن.</b> چه چیزی جا افتاده؟ کدام فرض ساده‌لوحانه است؟</li>
 <li><b>راهنمای یک‌صفحه‌ای برای حلقهٔ معتمد.</b> پنج قاعده که آدم غیرفنی واقعاً رعایت کند. تا این نباشد، دایرهٔ دوم دعوت نمی‌شود؛ این دروازهٔ نقشهٔ راه است.</li>
 <li><b>چک‌لیست سخت کردن حساب‌های گرداننده</b> (مسئلهٔ ۶) و اجرای آن.</li>
-<li><b>بازبینی دو یافتهٔ بسته‌شده و CSP، و تصمیم دربارهٔ یافتهٔ سوم.</b></li>
+<li><b>بازبینی سه یافتهٔ بسته‌شده و CSP، و تصمیم دربارهٔ میزبانی</b> (GitHub نشانی IP بازدیدکننده را می‌بیند).</li>
 <li><b>یک یادداشت تصمیم دربارهٔ مسئلهٔ ۱ و ۲:</b> دیجیتال بسازیم یا نه، و اگر آری کدام طرح.</li>
 </ol>
 <p>اختیار کامل در حوزهٔ خودت داری، حق وتو روی هر قابلیتی که آدم‌ها را به خطر بیندازد، و نامت فقط اگر خودت بخواهی جایی می‌آید. اگر این مسئله‌ها ذهنت را گرفت، به همان کسی که این صفحه را برایت فرستاده بگو.</p>
-<p>تصویر کامل پروژه: <a href="plan.html">نقشهٔ کلان سیمرغ</a> · پایهٔ نظری مسئلهٔ ۲: <a href="../soc/#coordination-focal-points">نقطهٔ کانونی</a> و <a href="../soc/#threshold-models-of-collective-behaviour">مدل آستانه</a></p></section>
+<div class="red" style="border-color:var(--c);background:color-mix(in srgb,var(--c) 6%,var(--paper))" id="reply"><b>اگر این پیوند به دستت رسیده</b><br>
+هیچ تعهدی نداری. سه جواب داریم و هر سه خوب است:<br>
+<b>نه.</b> همین. دلیل هم لازم نیست و چیزی عوض نمی‌شود.<br>
+<b>یک بار نگاه می‌کنم.</b> یک سوراخ در مدل تهدید پیدا کن و بگو. بی آنکه عضو چیزی شوی.<br>
+<b>هستم.</b> آن‌وقت دربارهٔ سی روز اول حرف می‌زنیم.<br>
+جواب را فقط به همان کسی بده که این را فرستاده، حضوری یا در Signal با پیام ناپدیدشونده. نه با پیامک، نه ایمیل، نه در گروه. دربارهٔ این دعوت با کس دیگری حرف نزن، حتی اگر جوابت نه است؛ این اولین قاعدهٔ همین پرونده است.</div>
+<p style="margin-top:var(--s4)">تصویر کامل پروژه: <a href="plan.html">نقشهٔ کلان سیمرغ</a> · پایهٔ نظری مسئلهٔ ۲: <a href="../soc/#coordination-focal-points">نقطهٔ کانونی</a> و <a href="../soc/#threshold-models-of-collective-behaviour">مدل آستانه</a></p></section>
 
 <section><h2>منابع</h2><p class="src">
 <a href="https://en.wikipedia.org/wiki/Impact_of_the_2026_Iran_war_on_Iran">قطعی اینترنت در جنگ ۲۰۲۶ (به نقل از NetBlocks و BBC)</a><br>
