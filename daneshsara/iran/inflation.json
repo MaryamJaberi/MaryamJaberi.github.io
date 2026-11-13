@@ -1,0 +1,123 @@
+{
+ "id": "iran:inflation",
+ "domain": "soc",
+ "question": {
+  "fa": "تورم ایران در پانزده سال گذشته چقدر بوده است؟",
+  "en": "What has Iran’s inflation been over the past fifteen years?"
+ },
+ "finding": {
+  "fa": "بر پایهٔ شاخص‌های توسعهٔ جهانی بانک جهانی، تورم مصرف‌کننده از ۲۰۱۹ تا ۲۰۲۵ هر سال بالای ۳۰٪ بوده است: ۴۴٫۶٪ در ۲۰۲۳، ۳۲٫۵٪ در ۲۰۲۴ و ۴۲٫۲٪ در ۲۰۲۵. تنها دورهٔ تک‌رقمی این پانزده سال ۲۰۱۶ و ۲۰۱۷ بود (حدود ۷ تا ۸٪)، پس از توافق هسته‌ای.",
+  "en": "On the World Bank’s World Development Indicators, consumer inflation was above 30% every year from 2019 to 2025: 44.6% in 2023, 32.5% in 2024 and 42.2% in 2025. The only single-digit spell in these fifteen years was 2016–2017 (about 7–8%), after the nuclear deal."
+ },
+ "year": 2025,
+ "method": "consumer price index, annual % change (World Development Indicators, based on national statistics)",
+ "grade": "B",
+ "contested": true,
+ "source": [
+  {
+   "title": "World Bank, World Development Indicators — Inflation, consumer prices (annual %), Islamic Republic of Iran; retrieved via FRED series FPCPITOTLZGIRN on 2026-11-13.",
+   "url": "https://fred.stlouisfed.org/series/FPCPITOTLZGIRN"
+  }
+ ],
+ "critique": "رقم بانک جهانی از آمار رسمی ایران ساخته می‌شود. مرکز آمار و بانک مرکزی ایران در سال‌هایی عددهای متفاوت داده‌اند و انتشار برخی آمارها متوقف شده است؛ تورم خوراکی‌ها و اجاره، که بر خانوارهای کم‌درآمد سنگین‌تر است، معمولاً از میانگین بالاتر بوده.",
+ "viz": {
+  "kind": "line",
+  "unit": {
+   "fa": "درصد در سال"
+  },
+  "label": {
+   "fa": "تورم مصرف‌کننده، ۲۰۱۰ تا ۲۰۲۵"
+  },
+  "series": [
+   {
+    "name": {
+     "fa": "ایران"
+    },
+    "points": [
+     [
+      2010,
+      10.09
+     ],
+     [
+      2011,
+      26.29
+     ],
+     [
+      2012,
+      27.26
+     ],
+     [
+      2013,
+      36.6
+     ],
+     [
+      2014,
+      16.61
+     ],
+     [
+      2015,
+      12.48
+     ],
+     [
+      2016,
+      7.25
+     ],
+     [
+      2017,
+      8.04
+     ],
+     [
+      2018,
+      18.01
+     ],
+     [
+      2019,
+      39.91
+     ],
+     [
+      2020,
+      30.59
+     ],
+     [
+      2021,
+      43.39
+     ],
+     [
+      2022,
+      43.49
+     ],
+     [
+      2023,
+      44.58
+     ],
+     [
+      2024,
+      32.46
+     ],
+     [
+      2025,
+      42.17
+     ]
+    ]
+   }
+  ],
+  "note": {
+   "fa": "هفت سال پیاپی بالای ۳۰٪. با تورم ۴۰٪، قیمت‌ها در دو سال تقریباً دو برابر می‌شود."
+  },
+  "source": {
+   "title": "World Bank, World Development Indicators, via FRED (FPCPITOTLZGIRN), retrieved 2026-11-13.",
+   "url": "https://fred.stlouisfed.org/series/FPCPITOTLZGIRN"
+  }
+ },
+ "roots": {
+  "fa": "کسری بودجه‌ای که با چاپ پول پر می‌شود، تحریم و افت درآمد ارزی، سقوط پی‌درپی ریال، و بانک‌هایی که به نهادهای وابسته وام بی‌بازگشت می‌دهند."
+ },
+ "now": {
+  "fa": "پس‌انداز و دستمزد هر سال آب می‌رود؛ تورم مزمن از طبقهٔ متوسط می‌گیرد و به صاحبان دارایی و رانت می‌دهد."
+ },
+ "fields": [],
+ "concepts": [],
+ "capability": [
+  10
+ ]
+}

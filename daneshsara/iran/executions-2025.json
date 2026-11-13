@@ -1,0 +1,64 @@
+{
+ "id": "iran:executions-2025",
+ "domain": "soc",
+ "question": {
+  "fa": "در سال ۲۰۲۵ چند نفر در ایران اعدام شدند؟",
+  "en": "How many people were executed in Iran in 2025?"
+ },
+ "finding": {
+  "fa": "گزارش سالانهٔ سازمان حقوق بشر ایران و «با هم علیه مجازات مرگ» دست‌کم ۱٬۶۳۹ اعدام را در ۲۰۲۵ ثبت کرده است: ۶۸٪ بیشتر از ۲۰۲۴ (۹۷۵ مورد). فقط ۱۱۳ مورد (کمتر از ۷٪) را منابع رسمی اعلام کردند. ۷۹۵ مورد (۴۸٫۵٪) برای جرم‌های مواد مخدر بود؛ دست‌کم ۴۸ زن اعدام شدند و ۱۱ اعدام در ملأعام بود.",
+  "en": "The annual report by Iran Human Rights and Together Against the Death Penalty recorded at least 1,639 executions in 2025: 68% more than in 2024 (975). Only 113 (under 7%) were announced by official sources. 795 (48.5%) were for drug offences; at least 48 women were executed and 11 executions were public."
+ },
+ "year": 2026,
+ "method": "case-by-case documentation by NGOs from official announcements and unofficial sources (families, lawyers, prisoners); minimum counts",
+ "grade": "B",
+ "contested": true,
+ "source": [
+  {
+   "title": "Iran Human Rights (IHRNGO) & ECPM (13 April 2026). 2025 Annual Report on the Death Penalty in Iran.",
+   "url": "https://iranhr.net/en/articles/8673/"
+  }
+ ],
+ "critique": "حکومت آمار اعدام منتشر نمی‌کند، پس همهٔ عددها «دست‌کم» است و از شمارش مورد به مورد سازمان‌های حقوق بشری می‌آید. این سازمان‌ها مخالف مجازات مرگ‌اند، اما روششان (تأیید هر مورد با دو منبع) شناخته‌شده است و عدد واقعی به احتمال زیاد بیشتر است، نه کمتر.",
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "اعدام ثبت‌شده (دست‌کم)"
+  },
+  "label": {
+   "fa": "اعدام در ایران"
+  },
+  "bars": [
+   {
+    "fa": "۲۰۲۴",
+    "v": 975
+   },
+   {
+    "fa": "۲۰۲۵",
+    "v": 1639,
+    "self": true
+   },
+   {
+    "fa": "از این میان، اعلام رسمی در ۲۰۲۵",
+    "v": 113
+   }
+  ],
+  "note": {
+   "fa": "از هر ۱۵ اعدام ۲۰۲۵، حدود یکی رسماً اعلام شد."
+  }
+ },
+ "roots": {
+  "fa": "اعدام هم مجازات جرم‌های عادی (به‌ویژه مواد مخدر و قتل) است و هم ابزار ترساندن در دوره‌های اعتراض و بحران؛ جهش‌ها معمولاً با دوره‌های ناآرامی هم‌زمان‌اند."
+ },
+ "now": {
+  "fa": "ثبت نام، تاریخ و اتهام هر مورد، پایهٔ هر دادخواهی آینده است؛ بیشتر این مرگ‌ها هیچ ردی در آمار رسمی ندارند."
+ },
+ "fields": [],
+ "concepts": [
+  "soc:transitional-justice-options"
+ ],
+ "capability": [
+  1,
+  3
+ ]
+}

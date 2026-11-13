@@ -1,0 +1,61 @@
+{
+ "id": "iran:out-of-school-children",
+ "domain": "soc",
+ "question": {
+  "fa": "چند کودک در ایران بیرون از مدرسه‌اند؟",
+  "en": "How many children in Iran are out of school?"
+ },
+ "finding": {
+  "fa": "وزیر آموزش و پرورش شمار بازماندگان از تحصیل را حدود ۷۵۰ هزار نفر گفته است که نزدیک ۱۵۰ هزار نفرشان باید در دبستان باشند. به گفتهٔ وزارتخانه، در سال تحصیلی ۱۴۰۲–۱۴۰۳ حدود ۲٫۱٪ کودکان سن دبستان، ۵٫۲٪ سن متوسطهٔ اول و ۱۶٫۱٪ سن متوسطهٔ دوم در مدرسه نبودند.",
+  "en": "The education minister put the number of out-of-school children at about 750,000, of whom close to 150,000 should be in primary school. According to the ministry, in 2023–24 about 2.1% of primary-age children, 5.2% of lower-secondary age and 16.1% of upper-secondary age were not in school."
+ },
+ "year": 2024,
+ "method": "official administrative figures (Ministry of Education), reported by state-affiliated media",
+ "grade": "C",
+ "contested": true,
+ "source": [
+  {
+   "title": "Tehran Times (2024). Some 750,000 out-of-school students identified.",
+   "url": "https://www.tehrantimes.com/news/506923/Some-750-000-out-of-school-students-identified"
+  }
+ ],
+ "critique": "عدد رسمی است و فقط کودکانی را می‌شمارد که در سامانه‌ها دیده می‌شوند؛ کودکان بی‌شناسنامه و مهاجران بی‌مدرک احتمالاً بیرون از این شمارش‌اند. در همین گزارش دو مقام دو عدد بسیار متفاوت می‌دهند (۷۵۰ هزار و ۲۱۶ هزار) که نشان می‌دهد تعریف‌ها یکی نیست. برآورد نهادهای مدنی بالاتر است.",
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "درصد کودکان هر گروه سنی که در مدرسه نیستند"
+  },
+  "label": {
+   "fa": "بازماندگی از تحصیل، ۱۴۰۲–۱۴۰۳"
+  },
+  "bars": [
+   {
+    "fa": "دبستان",
+    "v": 2.1
+   },
+   {
+    "fa": "متوسطهٔ اول",
+    "v": 5.23
+   },
+   {
+    "fa": "متوسطهٔ دوم",
+    "v": 16.12,
+    "self": true
+   }
+  ],
+  "note": {
+   "fa": "آمار وزارت آموزش و پرورش. هر چه سن بالاتر، ریزش بیشتر."
+  }
+ },
+ "roots": {
+  "fa": "فقر و کار کودک، ازدواج زودهنگام دختران، دوری مدرسه در روستا، و نداشتن مدرک هویتی."
+ },
+ "now": {
+  "fa": "یک نوجوان از هر شش نفر در سن دبیرستان بیرون از مدرسه است؛ این شکاف نسل بعدی نابرابری را می‌سازد."
+ },
+ "fields": [],
+ "concepts": [],
+ "capability": [
+  4
+ ]
+}
