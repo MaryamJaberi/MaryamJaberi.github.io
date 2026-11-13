@@ -22,4 +22,14 @@
     "opacity:.11;background-image:url(\"data:image/svg+xml," + encodeURIComponent(svg) + "\")}" +
     "@media print{body::after{opacity:.22}body::before{content:'" + host + "';display:block;font:12px sans-serif;color:#555;margin-bottom:8px}}";
   document.head.appendChild(st);
+  const note = document.createElement("div");
+  note.setAttribute("dir", "rtl");
+  note.style.cssText = "margin:28px auto 16px;max-width:900px;padding:10px 16px;font-size:.8rem;line-height:1.9;opacity:.75;text-align:center";
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = "کپی ارجاع این صفحه";
+  b.style.cssText = "font:inherit;margin-inline-start:8px;padding:2px 10px;border:1px solid currentColor;border-radius:999px;background:none;color:inherit;cursor:pointer";
+  b.addEventListener("click", () => { const c = cite(); (navigator.clipboard ? navigator.clipboard.writeText(c) : Promise.reject()).then(() => { b.textContent = "کپی شد"; }, () => { b.textContent = c; }); });
+  note.append("استفاده از این متن با ذکر منبع و نشانی صفحه آزاد است؛ استفادهٔ تجاری یا بازنشر انبوه فقط با اجازه. ", b);
+  const put = () => document.body.appendChild(note);
+  document.body ? put() : addEventListener("DOMContentLoaded", put);
 })();
