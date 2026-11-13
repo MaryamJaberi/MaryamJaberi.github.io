@@ -72,6 +72,7 @@ svg .node.hl text{opacity:1!important}
 .link.x.hl{stroke:#f2d9a6;stroke-dasharray:4 4;animation:flow 1.2s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-16}}
 .node.sel circle.core{stroke:#fff;stroke-width:3}
+.link.anc{stroke:#f2d9a6!important;stroke-width:2.4!important;opacity:1!important}.node.anc circle.core{stroke:#f2d9a6;stroke-width:2.5}
 .node.ospot{opacity:.3}.link.ospot{opacity:.07}.node.ospot.hl,.node.ospot.sel{opacity:1}
 .node.spot text{font-family:var(--f-display);font-size:24px;font-weight:700}
 #zall{width:auto;padding:0 12px;font-size:.8rem;font-family:var(--f-body)}
@@ -2572,7 +2573,7 @@ nodeSel.on("mouseenter",(e,n)=>{ if(!selected) highlight(n.id); })
        .on("mouseleave",()=>{ if(!selected) highlight(null); })
        .on("click",(e,n)=>{ e.stopPropagation(); select(n.id,true); })
        .on("keydown",(e,n)=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); select(n.id,true); } });
-svg.on("click",()=>{ selected=null; nodeSel.classed("sel",false); highlight(null); });
+svg.on("click",()=>{ selected=null; nodeSel.classed("sel",false); showSel(null); });
 
 /* panel */
 const pin=document.getElementById("pin"), panel=document.getElementById("panel");
@@ -2589,7 +2590,7 @@ function render(id){
   if(d.id==="psyche"){
     const nCourse=D.filter(isCourse).length, nPeople=new Set(D.flatMap(x=>x.ppl||[])).size;
     h+=`<div class="stats"><div><b>${fa(D.length)}</b><span>گره</span></div><div><b>${fa(nCourse)}</b><span>از جزوه‌ها و کتاب‌ها</span></div><div><b>${fa(nPeople)}</b><span>چهره</span></div></div>
-    <div class="sec"><h3>راهنما</h3><ul><li>روی هر گره بزنید تا جزئیاتش اینجا باز شود؛ گره‌های همسایه روشن می‌مانند.</li><li>«درخت» همین داده را به‌صورت سلسله‌مراتب شعاعی نشان می‌دهد: رشته ← زیررشته ← مفهوم.</li><li>«رشته‌ها» فقط رشته‌ها و زیررشته‌ها را برجسته می‌کند و «مفهوم‌ها» فقط مفهوم‌ها را.</li><li>«فقط مطالب جزوه‌ها و کتاب‌ها» شاخه‌هایی را برجسته می‌کند که از سخنرانی‌ها (حلقهٔ سفید) یا کتاب‌های ضمیمه (حلقهٔ خط‌چین) آمده‌اند.</li><li>روی هر علم اصلی (مثل علوم اعصاب یا فلسفه) بزنید تا به مرکز بیاید و بقیهٔ دنیا دور آن بچیند؛ «کل دنیا» نمای اول را برمی‌گرداند.</li><li>هر گره نشانی ثابت دارد؛ می‌توانید لینکش را بفرستید.</li></ul></div><div class="sec"><h3>ابزارهای دیگر ویکی</h3><div class="golinks"><a class="golink" href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها ↗</a><a class="golink alt" href="body.html" target="_blank" rel="noopener">نقشهٔ بدن و روان ↗</a><a class="golink alt" href="learn.html" target="_blank" rel="noopener">مرکز یادگیری ↗</a><a class="golink alt" href="../../wellbeing/orgsvc.html" target="_blank" rel="noopener">سنجش سلامت سازمان ↗</a></div></div><div class="sec"><h3>جزوه‌های ویکی</h3><div class="golinks">${window.HUB?`<a class="golink" href="${window.HUB}" target="_blank" rel="noopener">⌂ صفحهٔ اصلی ویکی ↗</a>`:""}${Object.values(BK).map(b=>`<a class="golink alt" href="${b.url}" target="_blank" rel="noopener">${esc(b.fa)} ↗</a>`).join("")}</div></div>`;
+    <div class="sec"><h3>راهنما</h3><ul><li>روی هر گره بزنید تا جزئیاتش اینجا باز شود؛ گره‌های همسایه روشن می‌مانند.</li><li>«درخت» همین داده را به‌صورت سلسله‌مراتب شعاعی نشان می‌دهد: رشته ← زیررشته ← مفهوم.</li><li>«رشته‌ها» فقط رشته‌ها و زیررشته‌ها را برجسته می‌کند و «مفهوم‌ها» فقط مفهوم‌ها را.</li><li>«فقط مطالب جزوه‌ها و کتاب‌ها» شاخه‌هایی را برجسته می‌کند که از سخنرانی‌ها (حلقهٔ سفید) یا کتاب‌های ضمیمه (حلقهٔ خط‌چین) آمده‌اند.</li><li>در نمای «درخت» روی هر گره بزنید: همان گره به میانهٔ صفحه می‌آید، مسیری که از آن آمده (تا ریشه) با خط طلایی و هر چه از آن روییده روشن می‌ماند و بقیه کم‌رنگ می‌شود. خود درخت جابه‌جا نمی‌شود.</li><li>هر گره نشانی ثابت دارد؛ می‌توانید لینکش را بفرستید.</li></ul></div><div class="sec"><h3>ابزارهای دیگر ویکی</h3><div class="golinks"><a class="golink" href="atlas2.html" target="_blank" rel="noopener">اطلس رشته‌ها ↗</a><a class="golink alt" href="body.html" target="_blank" rel="noopener">نقشهٔ بدن و روان ↗</a><a class="golink alt" href="learn.html" target="_blank" rel="noopener">مرکز یادگیری ↗</a><a class="golink alt" href="../../wellbeing/orgsvc.html" target="_blank" rel="noopener">سنجش سلامت سازمان ↗</a></div></div><div class="sec"><h3>جزوه‌های ویکی</h3><div class="golinks">${window.HUB?`<a class="golink" href="${window.HUB}" target="_blank" rel="noopener">⌂ صفحهٔ اصلی ویکی ↗</a>`:""}${Object.values(BK).map(b=>`<a class="golink alt" href="${b.url}" target="_blank" rel="noopener">${esc(b.fa)} ↗</a>`).join("")}</div></div>`;
   }
   if(d.k&&d.k.length) h+=`<div class="sec"><h3>نکات کلیدی</h3><ul>${d.k.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
   if(d.children.length) h+=`<div class="sec"><h3><span>زیرشاخه‌ها</span><span>${fa(d.children.length)}</span></h3><div class="chips">${d.children.map(chip).join("")}</div></div>`;
@@ -2606,13 +2607,32 @@ function render(id){
 }
 pin.addEventListener("click",e=>{ const b=e.target.closest("[data-go]"); if(b){ select(b.dataset.go,true); } });
 
+/* tree mode: the chosen node comes to the middle of the view; its line of descent (where it came from)
+   and everything that grew out of it stay lit, the rest dims. The tree itself does not move. */
+function lineageOf(id){
+  const d=byId.get(id), up=new Set(d.path), down=new Set(), near=new Set([id]);
+  (function walk(x,lv){ byId.get(x).children.forEach(c=>{ down.add(c); if(lv<2) near.add(c); walk(c,lv+1); }); })(id,0);
+  return {up, down, near, all:new Set([id,...up,...down])};
+}
+function lineageHL(id){
+  const L=lineageOf(id), xs=new Set([...(byId.get(id).x||[]).map(x=>x[0]), ...byId.get(id).inX.map(x=>x[0])]);
+  nodeSel.classed("dim",n=>!L.all.has(n.id)&&!xs.has(n.id)).classed("hl",n=>L.up.has(n.id)||L.near.has(n.id)||xs.has(n.id)).classed("anc",n=>L.up.has(n.id));
+  linkSel.classed("hl",l=>(l.kind==="t"&&L.all.has(l.source.id)&&L.all.has(l.target.id)&&(L.up.has(l.source.id)||L.near.has(l.target.id)))||(l.kind==="x"&&(l.source.id===id||l.target.id===id)))
+         .classed("anc",l=>l.kind==="t"&&L.up.has(l.source.id)&&(L.up.has(l.target.id)||l.target.id===id))
+         .classed("dim",l=>!(l.kind==="t"&&L.all.has(l.source.id)&&L.all.has(l.target.id))&&!(l.kind==="x"&&(l.source.id===id||l.target.id===id)));
+}
+function showSel(id){ nodeSel.classed("anc",false); linkSel.classed("anc",false); if(mode==="tree"&&id) lineageHL(id); else highlight(id); }
+function focusLineage(id){
+  const n=nById.get(id), L=lineageOf(id), w=stage.clientWidth, h=stage.clientHeight, mobile=innerWidth<=760;
+  const hh=mobile?h*.5:h; let far=120;
+  nodes.forEach(m=>{ if(L.all.has(m.id)) far=Math.max(far, Math.hypot(m.x-n.x,m.y-n.y)); });
+  const k=Math.max(.2, Math.min(1.6, (Math.min(w,hh)/2-50)/far));
+  svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity.translate(w/2,hh/2).scale(k).translate(-n.x,-n.y));
+}
 function select(id,move){
   if(!byId.has(id)) return;
-  selected=id; nodeSel.classed("sel",n=>n.id===id); highlight(id); render(id);
-  const dd=byId.get(id);
-  if(mode==="net" && dd.depth===1 && spot!==id) setSpot(id);
-  else if(mode==="net" && id==="psyche" && spot) setSpot(null);
-  else if(move) focusNode(nById.get(id));
+  selected=id; nodeSel.classed("sel",n=>n.id===id); showSel(id); render(id);
+  if(mode==="tree") focusLineage(id); else if(move) focusNode(nById.get(id));
   try{ if(location.hash!=="#"+id) history.replaceState(null,"","#"+id); }catch(_){}
   if(innerWidth<=760) panel.classList.remove("min");
 }
@@ -2681,8 +2701,9 @@ function setMode(m){
   document.getElementById("v-net").setAttribute("aria-pressed",m==="net");
   document.getElementById("v-tree").setAttribute("aria-pressed",m==="tree");
   sim.stop();
-  if(m==="tree"){ netPos=new Map(nodes.map(n=>[n.id,[n.x,n.y]])); animateTo(n=>treePos.get(n.id),()=>fit()); }
-  else animateTo(n=>netPos.get(n.id),()=>fit());
+  if(m==="tree"){ netPos=new Map(nodes.map(n=>[n.id,[n.x,n.y]])); animateTo(n=>treePos.get(n.id),()=>{ if(selected&&selected!=="psyche") focusLineage(selected); else fit(); }); }
+  else animateTo(n=>netPos.get(n.id),()=>{ if(selected) focusNode(nById.get(selected)); else fit(); });
+  showSel(selected);
 }
 document.getElementById("v-net").onclick=()=>setMode("net");
 document.getElementById("v-tree").onclick=()=>setMode("tree");
@@ -2728,7 +2749,7 @@ fit(0);
 if(byId.has(start) && start!=="psyche"){ select(start,false); if(!spot) setTimeout(()=>focusNode(nById.get(start)),50); }
 else { render("psyche"); if(innerWidth<=760) panel.classList.add("min"); }
 addEventListener("hashchange",()=>{ const h=location.hash.slice(1); if(byId.has(h)&&h!==selected) select(h,true); });
-let rt; addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(()=>{ if(spot){ const L=spotLayout(spot); fitTo(nodes.filter(n=>L.inF(n.d)&&n.depth<=2),300); } else if(selected) focusNode(nById.get(selected)); else fit(); },200); });
+let rt; addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(()=>{ if(selected&&mode==="tree") focusLineage(selected); else if(selected) focusNode(nById.get(selected)); else fit(); },200); });
 })();
 </script>
 
