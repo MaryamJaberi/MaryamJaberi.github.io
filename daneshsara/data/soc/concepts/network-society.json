@@ -1,130 +1,139 @@
 {
-  "id": "soc:network-society",
-  "kind": "concept",
-  "title": {
-    "fa": "جامعهٔ شبکه‌ای",
-    "en": "The network society",
-    "nl": "De netwerkmaatschappij"
+ "id": "soc:network-society",
+ "kind": "concept",
+ "title": {
+  "fa": "جامعهٔ شبکه‌ای",
+  "en": "The network society",
+  "nl": "De netwerkmaatschappij"
+ },
+ "aliases": [],
+ "parent": "soc:space",
+ "field": "soc:space",
+ "summary": {
+  "fa": "مانوئل کاستلز در سه‌گانهٔ «عصر اطلاعات» (۱۹۹۶ تا ۱۹۹۸) استدلال کرد که شکل سازمانی غالب جامعه از سلسله‌مراتب به «شبکه» تغییر کرده است. شبکه‌ها انعطاف‌پذیر، مقیاس‌پذیر و مقاوم‌اند، و با فناوری اطلاعات می‌توانند در مقیاس جهانی کار کنند. نتیجه این است که قدرت و ثروت در «فضای جریان‌ها» (جریان پول، داده و تصویر میان گره‌های شبکه) جابه‌جا می‌شود و از «فضای مکان‌ها» (شهر، محله، کشور) که بیشتر مردم در آن زندگی می‌کنند جدا می‌افتد. منطق شبکه دوگانه است: هر کس یا هر جا یا درون شبکه است و ارزش دارد، یا بیرون است و نادیده گرفته می‌شود. واکنش جاماندگان، «هویت‌های مقاومت» است: ملی، دینی، قومی یا محلی.",
+  "en": "In the Information Age trilogy (1996–1998) Manuel Castells argued that society’s dominant organisational form has shifted from hierarchy to network. Networks are flexible, scalable and resilient, and with information technology can operate globally. Power and wealth therefore move in the “space of flows” (money, data and images between network nodes), detached from the “space of places” (city, neighbourhood, country) where most people live. Network logic is binary: a person or place is either in the network and valuable or outside and ignored. Those left behind respond with “resistance identities”: national, religious, ethnic or local.",
+  "nl": "Castells (1996–1998): het dominante organisatieprincipe verschuift van hiërarchie naar netwerk. Macht en rijkdom bewegen in de “ruimte van stromen”, los van de “ruimte van plaatsen”. Wie buiten het netwerk valt, reageert met verzetsidentiteiten."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کاستلز (۱۹۹۶): شبکه شکل سازمانی غالب می‌شود چون انعطاف‌پذیر، مقیاس‌پذیر و بقاپذیر است؛ اما منطقش «دوگانه» است: یا درون شبکه‌ای یا بی‌ارزش. این تز پیش از شبکه‌های اجتماعی نوشته شد و بسیاری از پیش‌بینی‌هایش را آن‌ها تأیید کردند.",
+    "en": "Castells (1996): the network becomes the dominant organisational form because it is flexible, scalable and survivable; but its logic is \"binary\": either you are in the network or you are worthless. The thesis was written before social media and many of its predictions were borne out by them.",
+    "nl": "Castells (1996): the network becomes the dominant organisational form because it is flexible, scalable and survivable; but its logic is \"binary\": either you are in the network or you are worthless. The thesis was written before social media and many of its predictions were borne out by them."
+   },
+   "sources": [
+    "src:7af26b32fe"
+   ],
+   "flags": []
   },
-  "aliases": [],
-  "parent": "soc:space",
-  "field": "soc:space",
-  "summary": {
-    "fa": "مانوئل کاستلز در سه‌گانهٔ «عصر اطلاعات» (۱۹۹۶ تا ۱۹۹۸) استدلال کرد که شکل سازمانی غالب جامعه از سلسله‌مراتب به «شبکه» تغییر کرده است. شبکه‌ها انعطاف‌پذیر، مقیاس‌پذیر و مقاوم‌اند، و با فناوری اطلاعات می‌توانند در مقیاس جهانی کار کنند. نتیجه این است که قدرت و ثروت در «فضای جریان‌ها» (جریان پول، داده و تصویر میان گره‌های شبکه) جابه‌جا می‌شود و از «فضای مکان‌ها» (شهر، محله، کشور) که بیشتر مردم در آن زندگی می‌کنند جدا می‌افتد. منطق شبکه دوگانه است: هر کس یا هر جا یا درون شبکه است و ارزش دارد، یا بیرون است و نادیده گرفته می‌شود. واکنش جاماندگان، «هویت‌های مقاومت» است: ملی، دینی، قومی یا محلی.",
-    "en": "In the Information Age trilogy (1996–1998) Manuel Castells argued that society’s dominant organisational form has shifted from hierarchy to network. Networks are flexible, scalable and resilient, and with information technology can operate globally. Power and wealth therefore move in the “space of flows” (money, data and images between network nodes), detached from the “space of places” (city, neighbourhood, country) where most people live. Network logic is binary: a person or place is either in the network and valuable or outside and ignored. Those left behind respond with “resistance identities”: national, religious, ethnic or local.",
-    "nl": "Castells (1996–1998): het dominante organisatieprincipe verschuift van hiërarchie naar netwerk. Macht en rijkdom bewegen in de “ruimte van stromen”, los van de “ruimte van plaatsen”. Wie buiten het netwerk valt, reageert met verzetsidentiteiten."
-  },
-  "points": [
-    {
-      "text": {
-        "fa": "کاستلز (۱۹۹۶): شبکه شکل سازمانی غالب می‌شود چون انعطاف‌پذیر، مقیاس‌پذیر و بقاپذیر است؛ اما منطقش «دوگانه» است: یا درون شبکه‌ای یا بی‌ارزش. این تز پیش از شبکه‌های اجتماعی نوشته شد و بسیاری از پیش‌بینی‌هایش را آن‌ها تأیید کردند.",
-        "en": "Castells (1996): the network becomes the dominant organisational form because it is flexible, scalable and survivable; but its logic is \"binary\": either you are in the network or you are worthless. The thesis was written before social media and many of its predictions were borne out by them.",
-        "nl": "Castells (1996): the network becomes the dominant organisational form because it is flexible, scalable and survivable; but its logic is \"binary\": either you are in the network or you are worthless. The thesis was written before social media and many of its predictions were borne out by them."
-      },
-      "sources": [
-        "src:7af26b32fe"
-      ],
-      "flags": []
-    },
-    {
-      "text": {
-        "fa": "قدرت ارتباطی: کاستلز در «قدرت ارتباطات» (۲۰۰۹) گفت در جامعهٔ شبکه‌ای قدرت پیش از هر چیز قدرت شکل دادن به ذهن‌هاست، و دو نقش کلیدی دارد: «برنامه‌ریزان» که هدف شبکه را تعیین می‌کنند و «سوئیچرها» که شبکه‌های مختلف (رسانه، سیاست، مالی) را به هم وصل می‌کنند. او «خودارتباطی انبوه» (وبلاگ، شبکهٔ اجتماعی) را فرصتی برای ضدقدرت می‌دید.",
-        "en": "Communication power: in Communication Power (2009) Castells argued that in the network society power is first the power to shape minds, with two key roles — “programmers” who set a network’s goals and “switchers” who connect networks (media, politics, finance). He saw “mass self-communication” (blogs, social media) as an opportunity for counter-power.",
-        "nl": "Communicatiemacht (2009): macht is vooral macht over geesten; programmeurs en schakelaars zijn sleutelrollen. Massale zelfcommunicatie biedt tegenmacht."
-      },
-      "sources": [
-        "src:8f98f784d7"
-      ],
-      "flags": []
-    },
-    {
-      "text": {
-        "fa": "جنبش‌های شبکه‌ای: کاستلز جنبش‌های ۲۰۱۰ به بعد (بهار عربی، جنبش اشغال، و اعتراض‌های ۱۳۸۸ ایران) را نمونهٔ جنبش‌هایی دانست که بی‌رهبر، شبکه‌ای و همزمان آنلاین و در خیابان‌اند. توانایی بسیج سریع نقطهٔ قوت‌شان بود؛ ناتوانی در ساختن سازمان پایدار و مذاکره، نقطهٔ ضعف.",
-        "en": "Networked movements: Castells read the post-2010 movements (Arab Spring, Occupy, Iran’s 2009 protests) as leaderless, networked, online and in the streets at once. Rapid mobilisation was their strength; inability to build durable organisation and negotiate their weakness.",
-        "nl": "Netwerkbewegingen (Arabische Lente, Occupy, Iran 2009): snel te mobiliseren, zwak in blijvende organisatie."
-      },
-      "sources": [
-        "src:8f98f784d7"
-      ],
-      "flags": [
-        "contested"
-      ]
-    },
-    {
-      "text": {
-        "fa": "بازخوانی امروز: بسیاری از پیش‌بینی‌های خوش‌بینانهٔ دههٔ ۱۹۹۰ و ۲۰۰۰ دربارهٔ شبکه درست درنیامد: شبکه‌های اجتماعی به چند پلتفرم بزرگ متمرکز شدند، دولت‌ها ابزارهای نظارت و فیلترینگ را یاد گرفتند، و «خودارتباطی» به قطبی‌شدن و شایعه هم دامن زد. ایران با فیلترینگ گسترده و «اینترنت ملی» نمونه‌ای است از اینکه دولت می‌تواند فضای جریان‌ها را تا حد زیادی دوباره به فضای مکان‌ها برگرداند.",
-        "en": "Today’s reading: many optimistic forecasts of the 1990s–2000s about networks did not hold — social media concentrated into a few large platforms, states learned surveillance and filtering, and self-communication also fed polarisation and rumour. Iran, with extensive filtering and a “national internet”, shows how a state can pull the space of flows back toward the space of places.",
-        "nl": "Veel optimistische voorspellingen kwamen niet uit: platformconcentratie, surveillance, polarisatie. Iran laat met filtering zien hoe een staat de stromen terug kan dwingen."
-      },
-      "sources": [
-        "src:7af26b32fe"
-      ],
-      "flags": [
-        "editor-note"
-      ]
-    },
-    {
-      "text": {
-        "fa": "نقد: منتقدان گفته‌اند کاستلز اثر فناوری را بزرگ‌نمایی می‌کند (جبرگرایی فناورانه) و نقش دولت‌ها، طبقه و سرمایه را کم می‌بیند؛ و مفهوم «شبکه» آن‌قدر گسترده به کار رفته که گاهی هر چیزی را توضیح می‌دهد و هیچ چیز را.",
-        "en": "Critique: critics say Castells overstates technology’s effect (technological determinism) and underplays states, class and capital, and that “network” is used so broadly it sometimes explains everything and nothing.",
-        "nl": "Kritiek: technologisch determinisme en een te breed netwerkbegrip."
-      },
-      "sources": [
-        "src:7af26b32fe"
-      ],
-      "flags": [
-        "contested"
-      ]
-    }
-  ],
-  "links": [
-    {
-      "to": "soc:weak-ties",
-      "rel": "prerequisite",
-      "note": {
-        "fa": "ساختار شبکه",
-        "en": "Network structure",
-        "nl": "Network structure"
-      }
-    },
-    {
-      "to": "psy:polarization",
-      "rel": "bridges",
-      "note": {
-        "fa": "قطبی شدن در شبکه‌ها",
-        "en": "Polarization in networks",
-        "nl": "Polarization in networks"
-      }
-    },
-    {
-      "to": "soc:social-movements",
-      "rel": "see-also",
-      "note": {
-        "fa": "جنبش‌های شبکه‌ای",
-        "en": "Networked movements",
-        "nl": "Networked movements"
-      }
-    },
-    {
-      "to": "soc:collective-action",
-      "rel": "see-also",
-      "note": {
-        "fa": "کنش جمعی",
-        "en": "Collective action",
-        "nl": "Collectieve actie"
-      }
-    }
-  ],
-  "people": [
-    "core:manuel-castells"
-  ],
-  "sources": [
-    "src:7af26b32fe",
+  {
+   "text": {
+    "fa": "قدرت ارتباطی: کاستلز در «قدرت ارتباطات» (۲۰۰۹) گفت در جامعهٔ شبکه‌ای قدرت پیش از هر چیز قدرت شکل دادن به ذهن‌هاست، و دو نقش کلیدی دارد: «برنامه‌ریزان» که هدف شبکه را تعیین می‌کنند و «سوئیچرها» که شبکه‌های مختلف (رسانه، سیاست، مالی) را به هم وصل می‌کنند. او «خودارتباطی انبوه» (وبلاگ، شبکهٔ اجتماعی) را فرصتی برای ضدقدرت می‌دید.",
+    "en": "Communication power: in Communication Power (2009) Castells argued that in the network society power is first the power to shape minds, with two key roles — “programmers” who set a network’s goals and “switchers” who connect networks (media, politics, finance). He saw “mass self-communication” (blogs, social media) as an opportunity for counter-power.",
+    "nl": "Communicatiemacht (2009): macht is vooral macht over geesten; programmeurs en schakelaars zijn sleutelrollen. Massale zelfcommunicatie biedt tegenmacht."
+   },
+   "sources": [
     "src:8f98f784d7"
-  ],
-  "booklets": [],
-  "origin": null,
-  "iran": null,
-  "wikidata": null,
-  "status": "draft"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جنبش‌های شبکه‌ای: کاستلز جنبش‌های ۲۰۱۰ به بعد (بهار عربی، جنبش اشغال، و اعتراض‌های ۱۳۸۸ ایران) را نمونهٔ جنبش‌هایی دانست که بی‌رهبر، شبکه‌ای و همزمان آنلاین و در خیابان‌اند. توانایی بسیج سریع نقطهٔ قوت‌شان بود؛ ناتوانی در ساختن سازمان پایدار و مذاکره، نقطهٔ ضعف.",
+    "en": "Networked movements: Castells read the post-2010 movements (Arab Spring, Occupy, Iran’s 2009 protests) as leaderless, networked, online and in the streets at once. Rapid mobilisation was their strength; inability to build durable organisation and negotiate their weakness.",
+    "nl": "Netwerkbewegingen (Arabische Lente, Occupy, Iran 2009): snel te mobiliseren, zwak in blijvende organisatie."
+   },
+   "sources": [
+    "src:8f98f784d7"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بازخوانی امروز: بسیاری از پیش‌بینی‌های خوش‌بینانهٔ دههٔ ۱۹۹۰ و ۲۰۰۰ دربارهٔ شبکه درست درنیامد: شبکه‌های اجتماعی به چند پلتفرم بزرگ متمرکز شدند، دولت‌ها ابزارهای نظارت و فیلترینگ را یاد گرفتند، و «خودارتباطی» به قطبی‌شدن و شایعه هم دامن زد. ایران با فیلترینگ گسترده و «اینترنت ملی» نمونه‌ای است از اینکه دولت می‌تواند فضای جریان‌ها را تا حد زیادی دوباره به فضای مکان‌ها برگرداند.",
+    "en": "Today’s reading: many optimistic forecasts of the 1990s–2000s about networks did not hold — social media concentrated into a few large platforms, states learned surveillance and filtering, and self-communication also fed polarisation and rumour. Iran, with extensive filtering and a “national internet”, shows how a state can pull the space of flows back toward the space of places.",
+    "nl": "Veel optimistische voorspellingen kwamen niet uit: platformconcentratie, surveillance, polarisatie. Iran laat met filtering zien hoe een staat de stromen terug kan dwingen."
+   },
+   "sources": [
+    "src:7af26b32fe"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نقد: منتقدان گفته‌اند کاستلز اثر فناوری را بزرگ‌نمایی می‌کند (جبرگرایی فناورانه) و نقش دولت‌ها، طبقه و سرمایه را کم می‌بیند؛ و مفهوم «شبکه» آن‌قدر گسترده به کار رفته که گاهی هر چیزی را توضیح می‌دهد و هیچ چیز را.",
+    "en": "Critique: critics say Castells overstates technology’s effect (technological determinism) and underplays states, class and capital, and that “network” is used so broadly it sometimes explains everything and nothing.",
+    "nl": "Kritiek: technologisch determinisme en een te breed netwerkbegrip."
+   },
+   "sources": [
+    "src:7af26b32fe"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:weak-ties",
+   "rel": "prerequisite",
+   "note": {
+    "fa": "ساختار شبکه",
+    "en": "Network structure",
+    "nl": "Network structure"
+   }
+  },
+  {
+   "to": "psy:polarization",
+   "rel": "bridges",
+   "note": {
+    "fa": "قطبی شدن در شبکه‌ها",
+    "en": "Polarization in networks",
+    "nl": "Polarization in networks"
+   }
+  },
+  {
+   "to": "soc:social-movements",
+   "rel": "see-also",
+   "note": {
+    "fa": "جنبش‌های شبکه‌ای",
+    "en": "Networked movements",
+    "nl": "Networked movements"
+   }
+  },
+  {
+   "to": "soc:collective-action",
+   "rel": "see-also",
+   "note": {
+    "fa": "کنش جمعی",
+    "en": "Collective action",
+    "nl": "Collectieve actie"
+   }
+  },
+  {
+   "to": "soc:network-structure-robustness",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدخل هم‌موضوع",
+    "en": "Related entry",
+    "nl": "Verwant lemma"
+   }
+  }
+ ],
+ "people": [
+  "core:manuel-castells"
+ ],
+ "sources": [
+  "src:7af26b32fe",
+  "src:8f98f784d7"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
 }
