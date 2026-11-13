@@ -5,6 +5,22 @@ import json, os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(HERE + '/..')
 subprocess.run([sys.executable, f'{R}/data/plan/make_plan.py'], check=True, capture_output=True)
 D = json.load(open(f'{R}/data/plan/plan.json', encoding='utf-8'))
+# ledger domain -> iran notes that measure it: [slug, short label]
+LNOTES = {
+ 'آب': [['groundwater-depletion', 'آب زیرزمینی'], ['land-subsidence', 'فرونشست'], ['tehran-water-2025', 'آب تهران'], ['lake-urmia', 'دریاچهٔ ارومیه']],
+ 'خاک و طبیعت': [['zagros-oak-decline', 'بلوط زاگرس']],
+ 'هوا و انرژی': [['air-pollution-deaths', 'مرگ از آلودگی هوا'], ['electricity-deficit', 'کسری برق']],
+ 'شهرها': [['urbanization', 'شهرنشینی'], ['road-deaths', 'مرگ جاده‌ای']],
+ 'فقر و شکاف طبقاتی': [['poverty-rate', 'نرخ فقر'], ['gini', 'ضریب جینی']],
+ 'سلامت': [['mental-disorder-prevalence', 'اختلال روانی'], ['drug-use-disorders', 'مصرف مواد'], ['suicide-rate', 'خودکشی'], ['consanguinity', 'ازدواج خویشاوندی'], ['thalassemia-screening', 'غربالگری تالاسمی']],
+ 'کودک و خانواده': [['aces-prevalence', 'تجربه‌های ناگوار کودکی'], ['child-marriage', 'ازدواج کودک'], ['child-labour', 'کار کودک'], ['child-sexual-abuse', 'آزار جنسی کودک']],
+ 'زنان': [['violence-against-women', 'خشونت علیه زنان']],
+ 'آزادی و اطلاعات': [['internet-shutdown-2026', 'قطع اینترنت ۱۴۰۵']],
+ 'جامعه و اعتماد': [['social-trust', 'اعتماد اجتماعی'], ['happiness-rank', 'شادکامی'], ['values-shift', 'تغییر ارزش‌ها'], ['religiosity', 'دین‌داری'], ['fertility', 'باروری'], ['political-attitudes-2026', 'نگرش سیاسی ۱۴۰۵']],
+}
+D['lnotes'] = {}
+for dom, L in LNOTES.items():
+    D['lnotes'][dom] = [[s, lab, json.load(open(f'{R}/iran/{s}.json', encoding='utf-8'))['grade']] for s, lab in L if os.path.isfile(f'{R}/iran/{s}.json')]
 DATA = json.dumps(D, ensure_ascii=False)
 
 TPL = r'''<!doctype html>
@@ -96,6 +112,7 @@ details.card ul{margin:8px 0 0;padding-inline-start:18px;color:var(--ink-2);font
 .todo span{color:var(--ink-3);font-size:.82rem;display:block}
 .red{padding:12px 16px;border-radius:14px;border:1.5px dashed var(--err);background:color-mix(in srgb,var(--err) 5%,var(--paper));font-size:.9rem;line-height:1.9;max-width:760px}
 .src{font-size:.8rem;color:var(--ink-3);line-height:1.9}.src a{color:var(--ink-2)}
+.ln{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}.ln small{color:var(--ink-3);flex-basis:100%}.ln a{display:inline-flex;gap:6px;align-items:center;padding:4px 10px 4px 4px;border-radius:99px;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:.82rem;background:var(--surface)}.ln a:hover{border-color:var(--primary)}.ln i{font-style:normal;font-weight:700;color:#fff;border-radius:99px;min-width:1.7em;text-align:center;font-size:.72rem;padding:1px 0}
 </style>
 </head>
 <body>
@@ -257,7 +274,7 @@ function meter(list, idx, m, l){
 meter(D.ledger, 2, "lm", "ll"); meter(D.sciences, 2, "sm", "sl");
 
 // ledger
-$("lg").innerHTML = D.ledger.map(d => `<details class="card"><summary><span>${esc(d[0])} <small style="font-weight:400;color:var(--ink-3)">${fa(d[1].length)}</small></span>${st(d[2])}</summary><ul>${d[1].map(x => `<li>${esc(x)}</li>`).join("")}</ul><p style="margin-top:6px">نهاد مسئول: ${esc(d[4])}${d[3] ? ` · <a class="more" href="${d[3]}">داده و ریشه‌یابی ←</a>` : ""}</p></details>`).join("");
+$("lg").innerHTML = D.ledger.map(d => `<details class="card"><summary><span>${esc(d[0])} <small style="font-weight:400;color:var(--ink-3)">${fa(d[1].length)} آسیب${(D.lnotes[d[0]] || []).length ? " · " + fa(D.lnotes[d[0]].length) + " داده" : ""}</small></span>${st(d[2])}</summary><ul>${d[1].map(x => `<li>${esc(x)}</li>`).join("")}</ul>${(D.lnotes[d[0]] || []).length ? `<p class="ln"><small>داده‌ای که داریم</small>${D.lnotes[d[0]].map(n => `<a href="../iran/#${n[0]}"><i style="background:var(--grade-${n[2].toLowerCase()})">${n[2]}</i>${esc(n[1])}</a>`).join("")}</p>` : `<p class="ln"><small>هنوز داده‌ای ثبت نشده</small></p>`}<p style="margin-top:6px">نهاد مسئول: ${esc(d[4])}</p></details>`).join("");
 
 // sciences
 $("sg").innerHTML = D.sciences.map(s => `<div class="card"><b style="display:flex;justify-content:space-between;gap:6px"><span>${esc(s[0])}</span>${st(s[2])}</b><p>${esc(s[1])}</p>${s[3] ? `<a class="more" href="${s[3]}">باز کن ←</a>` : ""}</div>`).join("");
