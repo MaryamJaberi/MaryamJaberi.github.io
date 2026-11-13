@@ -1,0 +1,66 @@
+{
+ "id": "iran:road-deaths",
+ "domain": "soc",
+ "question": {
+  "fa": "جاده‌های ایران سالی چند نفر را می‌کشند؟",
+  "en": "How many people die on Iran’s roads?"
+ },
+ "finding": {
+  "fa": "بر پایهٔ داده‌های پزشکی قانونی، از ۱۳۷۶ تا ۱۳۹۸ بیش از ۴۷۰ هزار نفر در تصادف جاده‌ای کشته شدند. نرخ مرگ از ۲۲٫۴ در صد هزار نفر (۱۳۷۶) به اوج ۴۰ (۱۳۸۴) رسید و تا ۱۸٫۴ (۱۳۹۸) پایین آمد؛ مردان بیش از چهار برابر زنان. اما در ۱۴۰۴ یک مقام پزشکی قانونی گفت شمار مرگ‌ها برای نخستین بار در بیش از یک دهه از ۲۰ هزار در سال گذشت.",
+  "en": "On Legal Medicine Organization data, more than 470,000 people died in road crashes from 1997 to 2020. The death rate rose from 22.4 per 100,000 (1997) to a peak of 40 (2005) and fell to 18.4 (2020); men at over four times the rate of women. But in 2025 a forensics official said deaths had passed 20,000 a year for the first time in over a decade."
+ },
+ "year": 2023,
+ "method": "national death registration (Legal Medicine Organization), 1997–2020; peer-reviewed. 2025 figure: official statement via news",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "Sadeghian, F., Mehri, A., Ghodsi, Z., Baigi, V., Bardsiri, M. S., Sharif-Alhoseini, M., et al. (2023). Road traffic injuries and associated mortality in the Islamic Republic of Iran. Eastern Mediterranean Health Journal, 29(10), 796–803.",
+   "url": "https://doi.org/10.26719/emhj.23.104"
+  },
+  {
+   "title": "Iran International (31 October 2025). Iran records over 20,000 road deaths for first time in a decade, official says.",
+   "url": "https://www.iranintl.com/en/202510318557"
+  }
+ ],
+ "critique": "ثبت مرگ در پزشکی قانونی از کامل‌ترین آمارهای ایران است، چون جواز دفن به آن بسته است. خود مقاله در جمع کل دو عدد کمی متفاوت می‌دهد (۴۷۲ هزار و ۴۵۷ هزار). عدد ۱۴۰۴ از خبر است، نه مقالهٔ داوری‌شده.",
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "مرگ در صد هزار نفر"
+  },
+  "label": {
+   "fa": "نرخ مرگ جاده‌ای"
+  },
+  "bars": [
+   {
+    "fa": "۱۳۷۶",
+    "v": 22.4
+   },
+   {
+    "fa": "۱۳۸۴ (اوج)",
+    "v": 40
+   },
+   {
+    "fa": "۱۳۹۸",
+    "v": 18.4,
+    "self": true
+   }
+  ],
+  "note": {
+   "fa": "افت پس از ۱۳۸۴ واقعی است، اما نرخ هنوز چند برابر کشورهای ایمن است و در سال‌های اخیر دوباره بالا رفته."
+  }
+ },
+ "roots": {
+  "fa": "خودروهای ناایمن، جاده‌های دوطرفهٔ بی‌حفاظ، موتورسیکلت بدون کلاه، و امداد دیررس."
+ },
+ "now": {
+  "fa": "هر سال به اندازهٔ یک شهر کوچک؛ بیشترشان مردان جوان. این آسیبی است که راه‌حل فنی شناخته‌شده دارد."
+ },
+ "fields": [],
+ "concepts": [],
+ "capability": [
+  2,
+  10
+ ]
+}

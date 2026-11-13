@@ -1,0 +1,43 @@
+{
+ "id": "iran:internet-shutdown-2026",
+ "domain": "soc",
+ "question": {
+  "fa": "قطع اینترنت ۱۴۰۵ چقدر طول کشید و چقدر هزینه داشت؟",
+  "en": "How long did the 2026 internet shutdown last and what did it cost?"
+ },
+ "finding": {
+  "fa": "تا ۶ اردیبهشت ۱۴۰۵ قطعی اینترنت به روز پنجاه‌وهشتم رسیده بود (به گزارش نت‌بلاکس بیش از ۱٬۳۶۸ ساعت). رئیس کمیسیون اینترنت سازمان نظام صنفی رایانه‌ای تهران زیان روزانه را تا ۵۰ هزار میلیارد ریال، حدود ۳۱ میلیون دلار، برآورد کرد.",
+  "en": "By 26 April 2026 the internet shutdown had reached its 58th day (over 1,368 hours, per NetBlocks). The head of the internet commission at Tehran’s ICT Guild Organization estimated daily losses at up to 50 trillion rials, about 31 million dollars."
+ },
+ "year": 2026,
+ "method": "network measurement (NetBlocks) for duration; industry-body estimate for cost; reported by news media",
+ "grade": "C",
+ "contested": true,
+ "source": [
+  {
+   "title": "Iran International (26 April 2026). Iran internet shutdowns cost $31 million a day, official says.",
+   "url": "https://www.iranintl.com/en/202604260250"
+  }
+ ],
+ "critique": "مدت قطعی سنجش فنی مستقل است و قابل‌اتکا. برآورد زیان اما از یک مقام صنفی است و روشش منتشر نشده؛ برآوردهای دیگر در رسانه‌ها از این هم بالاترند. زیان غیرپولی (قطع ارتباط خانواده‌ها، آموزش، خبر) در هیچ عددی نیست.",
+ "viz": {
+  "kind": "none",
+  "note": {
+   "fa": "فقط یک برآورد زیان با روش منتشرنشده در دست است؛ نمودار کشیده نشده."
+  }
+ },
+ "roots": {
+  "fa": "شبکه‌ای که از چند درگاه مرکزی به جهان وصل است از بالا خاموش‌شدنی است؛ قطع اینترنت ابزار همیشگی مهار اعتراض و در ۱۴۰۴–۱۴۰۵ ابزار زمان جنگ بوده است."
+ },
+ "now": {
+  "fa": "کسب‌وکارهای آنلاین، که برای بسیاری از زنان و جوانان تنها درآمد بود، نخستین قربانی‌اند."
+ },
+ "fields": [],
+ "concepts": [
+  "soc:network-structure-robustness"
+ ],
+ "capability": [
+  2,
+  10
+ ]
+}
