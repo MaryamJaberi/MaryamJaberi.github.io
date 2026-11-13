@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>فراخوان باز همکاری</title>
+<meta name="description" content="فراخوان باز: آسیب‌هایی که از مرز می‌گذرند، منفعت‌های مشترک، و اینکه از صندلی یک سازمان این همکاری چه شکلی دارد.">
+<link rel="stylesheet" href="core/design/tokens.css">
+<style>
+:root{--harm:#b4483a;--gain:#2f7d5b;--seat:#b7791f}
+main{padding-block:var(--s5) var(--s10);max-width:980px;margin-inline:auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1{font-size:var(--h1);margin:var(--s3) 0 var(--s2);line-height:var(--lh-tight);text-wrap:balance}
+h2{font-size:var(--h3);margin:0 0 var(--s2);text-wrap:balance}
+p{line-height:2;margin:0 0 var(--s3);max-width:66ch}
+.lead{font-size:1.08rem;color:var(--ink-2)}
+section{padding-block:var(--s6);border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{border:1px solid var(--line);border-top:4px solid var(--harm);border-radius:16px;background:var(--surface);padding:14px;min-width:0}
+.card.g{border-top-color:var(--gain)} .card.q{border-top-color:var(--seat)}
+.card h3{font-size:1rem;margin:0 0 6px} .card p{margin:0;font-size:.93rem;line-height:1.9;color:var(--ink-2)}
+ul.no{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ul.no li{border:1px dashed var(--line-strong);border-radius:12px;padding:10px 14px;line-height:1.9}
+ul.no li::before{content:"✕ ";color:var(--harm);font-weight:700}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;counter-reset:s}
+.steps div{border-radius:16px;background:var(--surface-subtle);padding:14px;counter-increment:s;line-height:1.9}
+.steps div::before{content:counter(s);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--primary);color:#fff;font-weight:700;margin-inline-end:8px}
+.lang{font:inherit;padding:6px 14px;border-radius:99px;border:1px solid var(--line-strong);background:var(--surface);color:inherit;cursor:pointer;min-height:40px}
+a{color:var(--primary)}
+html:not(.en) [lang="en"]{display:none} html.en [lang="fa"]{display:none}
+html.en main{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<main class="container">
+<button class="lang" id="lg" type="button">English</button>
+<h1><span lang="fa">فراخوان باز: آسیب مشترک، منفعت مشترک</span><span lang="en" dir="ltr">An open call: shared harm, shared benefit</span></h1>
+<p class="lead"><span lang="fa">ما سراغ سازمان مشخصی نمی‌رویم. آنچه می‌بینیم و آنچه می‌سازیم را اینجا می‌گذاریم. اگر کار شما به این‌ها می‌خورد، شما ما را پیدا می‌کنید. اگر نخورد، اشکالی ندارد.</span><span lang="en" dir="ltr">We are not approaching any particular organisation. We set out here what we see and what we build. If your work fits, you will find us. If it does not, that is fine.</span></p>
+
+<section><h2><span lang="fa">آسیب‌هایی که از مرز می‌گذرند</span><span lang="en" dir="ltr">Harms that cross borders</span></h2>
+<p><span lang="fa">این‌ها مشاهدهٔ ماست، نه آمار. هر جا عدد لازم باشد، در مدخل‌های منبع‌دار آمده است.</span><span lang="en" dir="ltr">These are our observations, not statistics. Where figures are needed they appear in sourced entries.</span></p>
+<div class="grid"><article class="card "><h3><span lang="fa">دانش پشت دیوار</span><span lang="en" dir="ltr">Knowledge behind walls</span></h3><p><span lang="fa">بیشتر دانش معتبر به یک زبان و پشت دیوار پرداخت است. مردمی که آن زبان یا آن پول را ندارند، با شایعه تصمیم می‌گیرند.</span><span lang="en" dir="ltr">Most reliable knowledge sits in one language and behind paywalls. People without that language or that money decide on rumour.</span></p></article><article class="card "><h3><span lang="fa">روایت یک‌طرفه</span><span lang="en" dir="ltr">One-sided stories</span></h3><p><span lang="fa">خبر نادرست و روایت یک‌سویه از مرز می‌گذرد و دو جامعه را از هم می‌ترساند، حتی وقتی مردمشان هرگز همدیگر را ندیده‌اند.</span><span lang="en" dir="ltr">False news and one-sided accounts cross borders and make two societies afraid of each other, even when their people have never met.</span></p></article><article class="card "><h3><span lang="fa">اینترنتِ بریده</span><span lang="en" dir="ltr">A severed internet</span></h3><p><span lang="fa">وقتی اتصال یک کشور قطع یا تنگ می‌شود، خانواده‌ها، کسب‌وکارها و پژوهشگران دو سوی مرز با هم آسیب می‌بینند.</span><span lang="en" dir="ltr">When a country's connection is cut or throttled, families, businesses and researchers on both sides of the border are hurt together.</span></p></article><article class="card "><h3><span lang="fa">رفتنِ ناگزیر</span><span lang="en" dir="ltr">Leaving without choice</span></h3><p><span lang="fa">کسی که ناچار می‌رود، برای جایی که ترک کرده کم می‌شود و در جای تازه اغلب پایین‌تر از توانش کار می‌کند. هر دو جامعه می‌بازند.</span><span lang="en" dir="ltr">Someone who has to leave is lost to the place they left and often works below their ability in the new one. Both societies lose.</span></p></article><article class="card "><h3><span lang="fa">فشار روانیِ پنهان</span><span lang="en" dir="ltr">Hidden psychological strain</span></h3><p><span lang="fa">تنهایی، سوگ و فرسودگی در مهاجر، در خانوادهٔ جامانده و در محیط کار دیده نمی‌شود تا وقتی که گران تمام شود.</span><span lang="en" dir="ltr">Loneliness, grief and burnout in migrants, in families left behind and at work go unseen until they become costly.</span></p></article><article class="card "><h3><span lang="fa">زمینِ مشترک</span><span lang="en" dir="ltr">Shared ground</span></h3><p><span lang="fa">آب، خاک، گردوغبار و گرما مرز نمی‌شناسند. خراب شدن یک سرزمین، دیر یا زود مسئلهٔ همسایه‌ها و دورترها هم می‌شود.</span><span lang="en" dir="ltr">Water, soil, dust and heat know no borders. The ruin of one land becomes, sooner or later, a problem for neighbours and for those farther away.</span></p></article></div></section>
+
+<section><h2><span lang="fa">منفعتی که هر دو طرف می‌برند</span><span lang="en" dir="ltr">What both sides gain</span></h2>
+<div class="grid"><article class="card g"><h3><span lang="fa">دانش باز و منبع‌دار</span><span lang="en" dir="ltr">Open, sourced knowledge</span></h3><p><span lang="fa">هر مدخل با منبع، ردهٔ اعتبار و حدّ خودش. هر کس می‌تواند بسنجد.</span><span lang="en" dir="ltr">Every entry with its source, credibility grade and stated limits. Anyone can check.</span></p></article><article class="card g"><h3><span lang="fa">ترجمهٔ دوطرفه</span><span lang="en" dir="ltr">Two-way translation</span></h3><p><span lang="fa">آنچه به فارسی ساخته می‌شود می‌تواند به زبان شما برگردد، و برعکس.</span><span lang="en" dir="ltr">What is built in Persian can return in your language, and the other way round.</span></p></article><article class="card g"><h3><span lang="fa">ابزار سنجش‌پذیر</span><span lang="en" dir="ltr">Measurable tools</span></h3><p><span lang="fa">ابزارهایی برای یادگیری و سلامت روان که اثرشان را می‌شود اندازه گرفت.</span><span lang="en" dir="ltr">Tools for learning and mental wellbeing whose effect can be measured.</span></p></article><article class="card g"><h3><span lang="fa">آدم‌های آماده</span><span lang="en" dir="ltr">Prepared people</span></h3><p><span lang="fa">کسانی که هر دو جامعه را می‌شناسند و می‌توانند میانجی باشند.</span><span lang="en" dir="ltr">People who know both societies and can act as go-betweens.</span></p></article></div></section>
+
+<section><h2><span lang="fa">از صندلی شما</span><span lang="en" dir="ltr">From your seat</span></h2>
+<p><span lang="fa">پرسش‌هایی که اگر جای شما بودیم می‌پرسیدیم، با پاسخ روراست.</span><span lang="en" dir="ltr">The questions we would ask in your place, with straight answers.</span></p>
+<div class="grid"><article class="card q"><h3><span lang="fa">این به مأموریت ما می‌خورد؟</span><span lang="en" dir="ltr">Does this fit our mission?</span></h3><p><span lang="fa">اگر کار شما دانش باز، آموزش، سلامت روان، حقوق دیجیتال یا محیط زیست است، بله. اگر نه، احتمالاً نه.</span><span lang="en" dir="ltr">If your work is open knowledge, education, mental health, digital rights or the environment, yes. If not, probably not.</span></p></article><article class="card q"><h3><span lang="fa">خطرش برای ما چیست؟</span><span lang="en" dir="ltr">What is the risk to us?</span></h3><p><span lang="fa">ما حزب یا جریان سیاسی نیستیم و از شما موضع سیاسی نمی‌خواهیم. همه‌چیز عمومی و قابل بررسی است.</span><span lang="en" dir="ltr">We are not a party or political current and ask no political position of you. Everything is public and open to inspection.</span></p></article><article class="card q"><h3><span lang="fa">چقدر از ما می‌گیرد؟</span><span lang="en" dir="ltr">What will it cost us?</span></h3><p><span lang="fa">کوچک شروع کنید: یک بازبینی، یک ترجمه، یک کارگاه. بدون تعهد بلندمدت.</span><span lang="en" dir="ltr">Start small: one review, one translation, one workshop. No long-term commitment.</span></p></article><article class="card q"><h3><span lang="fa">از کجا بدانیم جدی است؟</span><span lang="en" dir="ltr">How do we know it is serious?</span></h3><p><span lang="fa">کار را ببینید، نه وعده را. صفحه‌ها، منبع‌ها و تاریخچهٔ تغییرها باز است.</span><span lang="en" dir="ltr">Look at the work, not the promise. The pages, the sources and the change history are open.</span></p></article><article class="card q"><h3><span lang="fa">اگر نخواستیم؟</span><span lang="en" dir="ltr">And if we decline?</span></h3><p><span lang="fa">نه گفتن خوب است. اگر بگویید چرا، همان هم به ما کمک می‌کند.</span><span lang="en" dir="ltr">No is a fine answer. If you say why, that helps us too.</span></p></article></div></section>
+
+<section><h2><span lang="fa">آنچه نمی‌کنیم</span><span lang="en" dir="ltr">What we do not do</span></h2>
+<ul class="no"><li><span lang="fa">دادهٔ شخصی هیچ‌کس را جمع نمی‌کنیم و به کسی نمی‌دهیم.</span><span lang="en" dir="ltr">We do not collect anyone's personal data or hand it to anyone.</span></li><li><span lang="fa">انحصار نمی‌دهیم؛ دانش برای همه باز می‌ماند.</span><span lang="en" dir="ltr">We grant no exclusivity; the knowledge stays open to all.</span></li><li><span lang="fa">به جای کسی حرف نمی‌زنیم و ادعای نمایندگی نداریم.</span><span lang="en" dir="ltr">We speak for no one and claim to represent no one.</span></li><li><span lang="fa">کاری که کسی را به خطر بیندازد نمی‌پذیریم، حتی اگر پول داشته باشد.</span><span lang="en" dir="ltr">We take on nothing that puts anyone at risk, even if it is funded.</span></li><li><span lang="fa">عدد یا ادعای بی‌منبع منتشر نمی‌کنیم.</span><span lang="en" dir="ltr">We publish no unsourced figure or claim.</span></li></ul></section>
+
+<section><h2><span lang="fa">اگر خواستید نزدیک‌تر ببینید</span><span lang="en" dir="ltr">If you want a closer look</span></h2>
+<div class="steps">
+<div><span lang="fa">کار را ببینید: <a href="psy/">روان‌شناسی</a>، <a href="atlas/">اطلس رشته‌ها</a>.</span><span lang="en" dir="ltr">See the work: <a href="psy/">psychology</a>, <a href="atlas/">atlas of fields</a>.</span></div>
+<div><span lang="fa">یک چیز کوچک و مشخص پیشنهاد بدهید یا بپرسید.</span><span lang="en" dir="ltr">Propose or ask for one small, specific thing.</span></div>
+<div><span lang="fa">از <a href="core/contribute.html">صفحهٔ مشارکت</a> خبر بدهید.</span><span lang="en" dir="ltr">Get in touch through the <a href="core/contribute.html">contribute page</a>.</span></div>
+</div></section>
+</main>
+<script src="core/nav.js" defer></script>
+<script>
+const R=document.documentElement,B=document.getElementById("lg");
+function set(en){R.classList.toggle("en",en);R.lang=en?"en":"fa";B.textContent=en?"فارسی":"English";try{localStorage.setItem("ds-call-lang",en?"en":"fa")}catch(e){}}
+let s=null;try{s=localStorage.getItem("ds-call-lang")}catch(e){}
+set(s?s==="en":!/^fa/i.test(navigator.language||"fa"));
+B.addEventListener("click",()=>set(!R.classList.contains("en")));
+</script>
+</body></html>
