@@ -1,0 +1,57 @@
+{
+ "id": "iran:world-heritage",
+ "domain": "soc",
+ "question": {
+  "fa": "ایران چند اثر در فهرست میراث جهانی دارد؟",
+  "en": "How many World Heritage properties does Iran have?"
+ },
+ "finding": {
+  "fa": "بر پایهٔ صفحهٔ ایران در مرکز میراث جهانی یونسکو، ۳۰ اثر در فهرست میراث جهانی ثبت شده و ۵۷ اثر در فهرست موقت (نامزدهای آینده) است. ایران از ۱۳۵۳ (۱۹۷۵) عضو کنوانسیون است.",
+  "en": "According to Iran’s page at the UNESCO World Heritage Centre, 30 properties are inscribed on the World Heritage List and 57 are on the Tentative List. Iran has been a party to the Convention since 1975."
+ },
+ "year": 2026,
+ "method": "official UNESCO register",
+ "grade": "A",
+ "contested": false,
+ "source": [
+  {
+   "title": "UNESCO World Heritage Centre. States Parties: Iran (Islamic Republic of) (retrieved 2026-11-13).",
+   "url": "https://whc.unesco.org/en/statesparties/ir"
+  }
+ ],
+ "critique": "شمار ثبت‌شده‌ها دقیق است، اما چیزی دربارهٔ وضع نگهداری نمی‌گوید. آسیب جنگ ۱۴۰۴–۱۴۰۵، فرونشست (مثلاً در اصفهان و تخت جمشید) و ساخت‌وساز در حریم آثار در این عدد دیده نمی‌شود و ارزیابی مستقل تازه‌ای از آن‌ها در این منبع نیست.",
+ "viz": {
+  "kind": "bars",
+  "unit": {
+   "fa": "شمار آثار"
+  },
+  "label": {
+   "fa": "میراث جهانی ایران"
+  },
+  "bars": [
+   {
+    "fa": "ثبت‌شده",
+    "v": 30,
+    "self": true
+   },
+   {
+    "fa": "فهرست موقت",
+    "v": 57
+   }
+  ],
+  "note": {
+   "fa": "یونسکو، بازیابی ۲۲ آبان ۱۴۰۵."
+  }
+ },
+ "roots": {
+  "fa": "ثبت جهانی نتیجهٔ دهه‌ها کار کارشناسان میراث است؛ تهدیدها از کم‌آبی، فرونشست، بودجهٔ ناچیز نگهداری و جنگ می‌آید."
+ },
+ "now": {
+  "fa": "میراث هم حافظهٔ مشترک است و هم پایهٔ گردشگری فردا؛ نخستین کار، فهرست آسیب‌هاست."
+ },
+ "fields": [],
+ "concepts": [],
+ "capability": [
+  10
+ ]
+}

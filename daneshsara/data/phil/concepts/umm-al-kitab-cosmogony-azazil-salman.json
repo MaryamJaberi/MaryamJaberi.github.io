@@ -1,118 +1,127 @@
 {
-  "id": "phil:umm-al-kitab-cosmogony-azazil-salman",
-  "kind": "concept",
-  "title": {
-    "fa": "امّ‌الکتاب: آفرینش جهان، عزازیل و سلمان",
-    "en": "Umm al-Kitab: creation, Azazil and Salman",
-    "nl": "Umm al-Kitab: schepping, Azazil en Salman"
-  },
-  "aliases": [],
-  "parent": "phil:iranian",
-  "field": "phil:iranian",
-  "summary": {
-    "fa": "متن، آفرینش را به‌صورت داستانی از نورها، پرده‌ها و سرپیچی عزازیل روایت می‌کند و سلمان فارسی را نقشی کلیدی می‌دهد. این فقط دیدگاه خود متن است و با آموزهٔ رایج سنی یا شیعهٔ دوازده‌امامی فرق دارد.",
-    "en": "The text tells creation as a story of lights, veils and Azazil's rebellion, with Salman the Persian in a key role. This is the text's own view, differing from mainstream Sunni and Twelver teaching.",
-    "nl": "De tekst vertelt de schepping als een verhaal van licht, sluiers en Azazils opstand, met Salman de Pers in een sleutelrol. Dit is alleen de visie van de tekst."
-  },
-  "points": [
-    {
-      "text": {
-        "fa": "در روایت متن، پیش از هر چیز «پنج نور خاص» (محمد، علی، فاطمه، حسن، حسین) هست و از دل آن‌ها پروردگار «ملک تعالی» پدیدار می‌شود؛ عالم از نور و رنگ پدید می‌آید.",
-        "en": "In the text's account, five pure lights (Muhammad, Ali, Fatima, Hasan, Husayn) come first and the Lord appears from them; the world arises from light and colour.",
-        "nl": "In the text's account, five pure lights (Muhammad, Ali, Fatima, Hasan, Husayn) come first and the Lord appears from them; the world arises from light and colour."
-      },
-      "sources": [
-        "src:faa6ea75f8"
-      ],
-      "flags": [
-        "contested",
-        "editor-note"
-      ]
-    },
-    {
-      "text": {
-        "fa": "عزازیل، مهتر ارواح، با نور امانی‌ای که گرفته بود روح می‌آفرید و ادعای خدایی کرد؛ خداوند نور را پس گرفت و او و همراهانش را در دو پرده نگه داشت.",
-        "en": "Azazil, chief of the spirits, made spirits with a borrowed light and claimed divinity; God took the light back and confined him and his followers between two veils.",
-        "nl": "Azazil, chief of the spirits, made spirits with a borrowed light and claimed divinity; God took the light back and confined him and his followers between two veils."
-      },
-      "sources": [
-        "src:faa6ea75f8"
-      ],
-      "flags": [
-        "contested",
-        "editor-note"
-      ]
-    },
-    {
-      "text": {
-        "fa": "سلمان در این روایت مأمور اجرای فرمان الهی است و همهٔ کارکردهای پیامبرانه و گنوسی را او انجام می‌دهد؛ ایوانف همین را یکی از تفاوت‌های بزرگ با اسماعیلیهٔ راست‌کیش می‌شمارد.",
-        "en": "Salman carries out the divine commands and performs the prophetic and gnostic functions; Ivanov counts this among the big differences from orthodox Ismailism.",
-        "nl": "Salman carries out the divine commands and performs the prophetic and gnostic functions; Ivanov counts this among the big differences from orthodox Ismailism."
-      },
-      "sources": [
-        "src:faa6ea75f8"
-      ],
-      "flags": [
-        "contested",
-        "editor-note"
-      ]
-    },
-    {
-      "text": {
-        "fa": "متن هفت «مجادله» میان ابلیس و آدم و دسته‌بندی ارواح (مقرّبان، معترضان و جز آن) را بر پایهٔ تعداد دوازده نقیب، بیست‌وهشت نجیب و ۳۱۳ مرسل شرح می‌دهد.",
-        "en": "The text describes seven disputations between Iblis and Adam and ranks of spirits (the near ones, the objectors, and others) with twelve naqibs, twenty-eight najibs and 313 envoys.",
-        "nl": "The text describes seven disputations between Iblis and Adam and ranks of spirits (the near ones, the objectors, and others) with twelve naqibs, twenty-eight najibs and 313 envoys."
-      },
-      "sources": [
-        "src:faa6ea75f8"
-      ],
-      "flags": [
-        "contested",
-        "editor-note"
-      ]
-    },
-    {
-      "text": {
-        "fa": "این روایت، تاریخ علمی جهان یا خاستگاه ادیان نیست، بلکه اسطورهٔ آفرینشی دینی است؛ برای فهم باورهای جماعت‌هایی که آن را می‌خواندند سودمند است و برای شناخت علمی جهان نه.",
-        "en": "This narrative is a religious creation myth, not a scientific account of the world or of the origin of religions; it helps in understanding the communities that read it.",
-        "nl": "This narrative is a religious creation myth, not a scientific account of the world or of the origin of religions; it helps in understanding the communities that read it."
-      },
-      "sources": [],
-      "flags": [
-        "contested",
-        "editor-note"
-      ]
-    }
-  ],
-  "links": [
-    {
-      "to": "phil:iranian",
-      "rel": "part-of",
-      "note": {
-        "fa": "اندیشهٔ ایرانی‌اسلامی",
-        "en": "Iranian-Islamic thought",
-        "nl": "Iranian-Islamic thought"
-      }
-    },
-    {
-      "to": "soc:durkheim-sacred-society",
-      "rel": "contrasts",
-      "note": {
-        "fa": "اسطوره به‌مثابه زبان جماعت دینی",
-        "en": "Myth as the language of a religious community",
-        "nl": "Myth as the language of a religious community"
-      }
-    }
-  ],
-  "people": [
-    "core:salman-al-farisi"
-  ],
-  "sources": [
+ "id": "phil:umm-al-kitab-cosmogony-azazil-salman",
+ "kind": "concept",
+ "title": {
+  "fa": "امّ‌الکتاب: آفرینش جهان، عزازیل و سلمان",
+  "en": "Umm al-Kitab: creation, Azazil and Salman",
+  "nl": "Umm al-Kitab: schepping, Azazil en Salman"
+ },
+ "aliases": [],
+ "parent": "phil:iranian",
+ "field": "phil:iranian",
+ "summary": {
+  "fa": "متن، آفرینش را به‌صورت داستانی از نورها، پرده‌ها و سرپیچی عزازیل روایت می‌کند و سلمان فارسی را نقشی کلیدی می‌دهد. این فقط دیدگاه خود متن است و با آموزهٔ رایج سنی یا شیعهٔ دوازده‌امامی فرق دارد.",
+  "en": "The text tells creation as a story of lights, veils and Azazil's rebellion, with Salman the Persian in a key role. This is the text's own view, differing from mainstream Sunni and Twelver teaching.",
+  "nl": "De tekst vertelt de schepping als een verhaal van licht, sluiers en Azazils opstand, met Salman de Pers in een sleutelrol. Dit is alleen de visie van de tekst."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در روایت متن، پیش از هر چیز «پنج نور خاص» (محمد، علی، فاطمه، حسن، حسین) هست و از دل آن‌ها پروردگار «ملک تعالی» پدیدار می‌شود؛ عالم از نور و رنگ پدید می‌آید.",
+    "en": "In the text's account, five pure lights (Muhammad, Ali, Fatima, Hasan, Husayn) come first and the Lord appears from them; the world arises from light and colour.",
+    "nl": "In the text's account, five pure lights (Muhammad, Ali, Fatima, Hasan, Husayn) come first and the Lord appears from them; the world arises from light and colour."
+   },
+   "sources": [
     "src:faa6ea75f8"
-  ],
-  "booklets": [],
-  "origin": null,
-  "iran": null,
-  "wikidata": null,
-  "status": "draft"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "عزازیل، مهتر ارواح، با نور امانی‌ای که گرفته بود روح می‌آفرید و ادعای خدایی کرد؛ خداوند نور را پس گرفت و او و همراهانش را در دو پرده نگه داشت.",
+    "en": "Azazil, chief of the spirits, made spirits with a borrowed light and claimed divinity; God took the light back and confined him and his followers between two veils.",
+    "nl": "Azazil, chief of the spirits, made spirits with a borrowed light and claimed divinity; God took the light back and confined him and his followers between two veils."
+   },
+   "sources": [
+    "src:faa6ea75f8"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "سلمان در این روایت مأمور اجرای فرمان الهی است و همهٔ کارکردهای پیامبرانه و گنوسی را او انجام می‌دهد؛ ایوانف همین را یکی از تفاوت‌های بزرگ با اسماعیلیهٔ راست‌کیش می‌شمارد.",
+    "en": "Salman carries out the divine commands and performs the prophetic and gnostic functions; Ivanov counts this among the big differences from orthodox Ismailism.",
+    "nl": "Salman carries out the divine commands and performs the prophetic and gnostic functions; Ivanov counts this among the big differences from orthodox Ismailism."
+   },
+   "sources": [
+    "src:faa6ea75f8"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "متن هفت «مجادله» میان ابلیس و آدم و دسته‌بندی ارواح (مقرّبان، معترضان و جز آن) را بر پایهٔ تعداد دوازده نقیب، بیست‌وهشت نجیب و ۳۱۳ مرسل شرح می‌دهد.",
+    "en": "The text describes seven disputations between Iblis and Adam and ranks of spirits (the near ones, the objectors, and others) with twelve naqibs, twenty-eight najibs and 313 envoys.",
+    "nl": "The text describes seven disputations between Iblis and Adam and ranks of spirits (the near ones, the objectors, and others) with twelve naqibs, twenty-eight najibs and 313 envoys."
+   },
+   "sources": [
+    "src:faa6ea75f8"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "این روایت، تاریخ علمی جهان یا خاستگاه ادیان نیست، بلکه اسطورهٔ آفرینشی دینی است؛ برای فهم باورهای جماعت‌هایی که آن را می‌خواندند سودمند است و برای شناخت علمی جهان نه.",
+    "en": "This narrative is a religious creation myth, not a scientific account of the world or of the origin of religions; it helps in understanding the communities that read it.",
+    "nl": "This narrative is a religious creation myth, not a scientific account of the world or of the origin of religions; it helps in understanding the communities that read it."
+   },
+   "sources": [],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:iranian",
+   "rel": "part-of",
+   "note": {
+    "fa": "اندیشهٔ ایرانی‌اسلامی",
+    "en": "Iranian-Islamic thought",
+    "nl": "Iranian-Islamic thought"
+   }
+  },
+  {
+   "to": "soc:durkheim-sacred-society",
+   "rel": "contrasts",
+   "note": {
+    "fa": "اسطوره به‌مثابه زبان جماعت دینی",
+    "en": "Myth as the language of a religious community",
+    "nl": "Myth as the language of a religious community"
+   }
+  },
+  {
+   "to": "phil:umm-al-kitab-soul-return",
+   "rel": "see-also",
+   "note": {
+    "fa": "مدخل هم‌موضوع",
+    "en": "Related entry",
+    "nl": "Verwant lemma"
+   }
+  }
+ ],
+ "people": [
+  "core:salman-al-farisi"
+ ],
+ "sources": [
+  "src:faa6ea75f8"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
 }
