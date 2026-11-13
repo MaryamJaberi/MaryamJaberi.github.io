@@ -126,5 +126,6 @@ if (matchMedia("(hover:hover)").matches) {
 document.addEventListener("keydown", e => { if (e.key === "Escape") { hide(); if (map && !map.hidden) toggle(false); } });
 })();
 '''
-open('core/nav.js', 'w', encoding='utf-8').write(JS.replace('__NAV__', json.dumps(NAV, ensure_ascii=False)))
+GUARD = '\n(()=>{const c=document.currentScript;if(!c)return;const s=document.createElement("script");s.src=new URL("guard.js",c.src).href;s.defer=true;document.head.appendChild(s)})();\n'
+open('core/nav.js', 'w', encoding='utf-8').write(JS.replace('__NAV__', json.dumps(NAV, ensure_ascii=False)) + GUARD)
 print(f'core/preview.json: {len(P)} pages, {len(C)} concepts, {os.path.getsize("core/preview.json") // 1024} KB; core/nav.js {os.path.getsize("core/nav.js") // 1024} KB')
