@@ -89,8 +89,8 @@ const wl = ids => `<div class="wl">${ids.filter((x, i) => ids.indexOf(x) === i &
 let F = null, sel = null, cheap = false;
 const place = P => `<div class="place"><b>جای این زنجیره در دانش‌سرا</b>
   <div><span>ویکی‌ها:</span> ${P.wikis.map(w => `<a href="${w[2]}">${esc(w[1])}</a>`).join("")}</div>
-  ${P.iran.length ? `<div><span>یادداشت‌های ایران:</span> ${P.iran.map(i => `<a href="../iran/#${i.split(":")[1]}">${esc(D.iran[i] ? D.iran[i].q : i)}</a>`).join("")}</div>` : ""}
-  ${P.sakht.length ? `<div><span>ساخت ایران:</span> ${P.sakht.map(k => `<a href="../sakht/#organs">${esc(k)}</a>`).join("")}</div>` : `<div><span>ساخت ایران:</span> <a href="../sakht/">هنوز به اندامی وصل نشده</a></div>`}
+  ${P.iran.length ? `<div><span>یادداشت‌های ایران:</span> ${P.iran.map(i => ``).join("")}</div>` : ""}
+  ${P.sakht.length ? `<div><span>ساخت ایران:</span> ${P.sakht.map(k => ``).join("")}</div>` : `<div><span>ساخت ایران:</span> </div>`}
 </div>`;
 
 const fl = document.getElementById("flows");
@@ -140,7 +140,7 @@ function side(){
   s.innerHTML = `<h4>${esc(n.t)}</h4>${n.d ? `<p style="margin:0">${esc(n.d)}</p>` : ""}
     ${inn.length ? `<div><b>از کجا می‌آید</b><ul>${inn.map(e => li(e, 0)).join("")}</ul></div>` : ""}
     ${out.length ? `<div><b>به کجا می‌رسد</b><ul>${out.map(e => li(e, 1)).join("")}</ul></div>` : ""}
-    ${ir ? `<div class="ir"><b>ایران (ردهٔ داده ${ir.g}، ${fa(ir.y)}):</b> ${esc(ir.f)} <a href="../iran/#${n.iran.split(":")[1]}">برگهٔ ایران</a></div>` : ""}
+    ${ir ? `<div class="ir"><b>ایران (ردهٔ داده ${ir.g}، ${fa(ir.y)}):</b> ${esc(ir.f)} </div>` : ""}
     ${lv.length ? `<div><b>نقطهٔ عطف</b><ul>${lv.map(v => `<li>${esc(v.t)} <span class="muted">(شواهد ${v.ev})</span></li>`).join("")}</ul></div>` : ""}
     ${n.wiki.length ? wl(n.wiki) : ""}`;
 }
