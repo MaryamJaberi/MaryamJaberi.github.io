@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>برگهٔ جلسهٔ همکاری | دانش‌سرا</title>
+<meta name="description" content="برگهٔ جلسهٔ همکاری دربارهٔ ویکی روان‌شناسی و سنجش سلامت سازمانی: چه داریم، چه هستیم و نیستیم، محصول، بازاریابی، سرمایه و ده پرسش.">
+<link rel="stylesheet" href="../core/design/tokens.css">
+<style>
+:root{--c:#b7791f;--yes:#2f7d5b;--no:#b4483a}
+main{padding-block:var(--s5) var(--s10);max-width:960px}
+h1{font-size:var(--h1);margin:var(--s3) 0 var(--s2);line-height:var(--lh-tight);text-wrap:balance}
+h2{font-size:var(--h3);margin:0 0 var(--s3);text-wrap:balance}
+h2 small{display:block;font-size:.8rem;font-weight:500;color:var(--ink-3);margin-bottom:2px;letter-spacing:.04em}
+p{line-height:2;margin:0 0 var(--s3);max-width:68ch}
+.lead{font-size:1.08rem;color:var(--ink-2)}
+section{padding-block:var(--s6);border-top:1px solid var(--line);scroll-margin-top:8px}
+a{color:var(--primary)}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 var(--s2)}
+.toc a{font-size:.85rem;padding:6px 12px;border-radius:99px;border:1px solid var(--line-strong);color:var(--ink-2);text-decoration:none;background:var(--surface);min-height:36px;display:inline-flex;align-items:center}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+.col{border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:14px;min-width:0;border-top:4px solid var(--yes)}
+.col.n{border-top-color:var(--no)}
+.col h3{font-size:1rem;margin:0 0 8px;color:var(--yes)}
+.col.n h3{color:var(--no)}
+.ln{display:flex;gap:8px;align-items:flex-start;width:100%;text-align:start;font:inherit;color:inherit;background:none;border:0;border-bottom:1px dashed var(--line);padding:9px 2px;line-height:1.8;cursor:pointer;min-height:44px}
+.ln:last-child{border-bottom:0}
+.ln::before{content:"✓";color:var(--yes);font-weight:700;flex:none;width:1.2em}
+.col.n .ln::before{content:"✕";color:var(--no)}
+.ln[aria-pressed="true"]{opacity:.45;text-decoration:line-through}
+.ln[aria-pressed="true"]::before{content:"؟";color:var(--warn)}
+.hint{font-size:.82rem;color:var(--ink-3);margin:8px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.card{padding:14px;border-radius:14px;border:1px solid var(--line);background:var(--surface);border-top:3px solid var(--c);min-width:0;line-height:1.85;font-size:.93rem}
+.card h3{font-size:1rem;margin:0 0 4px}
+.card p{font-size:.9rem;color:var(--ink-2);margin:0 0 6px;line-height:1.85}
+.tag{display:inline-block;font-size:.75rem;padding:1px 9px;border-radius:99px;background:color-mix(in srgb,var(--c) 14%,var(--paper));color:var(--ink-2);margin-inline-end:4px}
+.rec{padding:12px 16px;border-radius:14px;border:1.5px dashed var(--c);background:color-mix(in srgb,var(--c) 6%,var(--paper));line-height:1.9;font-size:.95rem;margin:var(--s3) 0 0}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.9rem;line-height:1.8}
+th,td{text-align:start;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--ink-3);font-weight:600;font-size:.82rem}
+.q{border-radius:14px;border:1px solid var(--line);background:var(--surface);padding:14px;margin:0 0 10px}
+.q h3{font-size:1rem;margin:0 0 8px;line-height:1.8}
+.q h3 b{color:var(--c);margin-inline-end:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts button{font:inherit;font-size:.88rem;padding:8px 14px;border-radius:99px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);cursor:pointer;min-height:40px}
+.opts button[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#fff}
+.q input{font:inherit;font-size:.9rem;width:100%;margin-top:8px;padding:8px 10px;border-radius:10px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);box-sizing:border-box}
+#out{white-space:pre-wrap;font-size:.9rem;line-height:1.9;padding:14px;border-radius:14px;background:var(--surface-subtle);border:1px solid var(--line);min-height:60px}
+.btn{font:inherit;padding:10px 18px;border-radius:99px;border:0;background:var(--primary);color:#fff;cursor:pointer;min-height:44px}
+.btn.g{background:none;border:1px solid var(--line-strong);color:var(--ink-2)}
+ol.steps{padding-inline-start:20px;line-height:2;max-width:68ch}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#8a8578));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17))}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><b>برگهٔ جلسهٔ همکاری</b></nav><script src="../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<p class="hint">سنجش سلامت سازمانی · برگهٔ جلسهٔ همکاری · پیش‌نویس</p>
+<h1>میز دوشنبه: روان‌شناسی برای آدم‌ها و سازمان‌ها</h1>
+<p class="lead">این برگه برای یک جلسهٔ یک‌ساعته است. هر خط یک پیشنهاد است، نه تصمیم. روی هر خطی که با آن موافق نیستیم می‌زنیم تا خط بخورد؛ آخر صفحه همه‌چیز یک‌جا جمع می‌شود.</p>
+<nav class="toc"><a href="#have">چه داریم</a><a href="#is">هستیم / نیستیم</a><a href="#seek">دنبال چه</a><a href="#want">همکاری</a><a href="#product">محصول</a><a href="#market">بازاریابی</a><a href="#money">سرمایه</a><a href="#ask">ده پرسش</a><a href="#sum">جمع‌بندی</a></nav>
+
+<section id="have"><h2><small>۱ از ۹</small>تا امروز چه ساخته شده</h2>
+<div class="grid">
+<div class="card"><h3><a href="../psy/">ویکی روان‌شناسی</a></h3><p>بیش از صد صفحهٔ موضوعی و ۲۸۱ مدخل، به فارسی ساده و با منبع. رایگان.</p><span class="tag">دانش</span></div>
+<div class="card"><h3><a href="../psy/tools/graph.html">دنیای روان</a></h3><p>نقشهٔ تعاملی رشته‌ها، شاخه‌ها و موضوع‌ها؛ هر موضوع به مدخلش می‌رسد.</p><span class="tag">نقشه</span></div>
+<div class="card"><h3><a href="../psy/tools/">ابزارها و بازی‌ها</a></h3><p>بیش از بیست ابزار خودشناسی و یادگیری که در مرورگر کار می‌کنند و داده‌ای نمی‌فرستند.</p><span class="tag">ابزار</span></div>
+<div class="card"><h3><a href="orgsvc.html">سنجش سلامت سازمانی</a></h3><p>نمونهٔ کارکرده: پرسش‌نامهٔ بی‌نام در هشت بُعد، گزارش گروهی، پیشنهاد کارگاه. به نُه زبان.</p><span class="tag">محصول</span></div>
+</div>
+<div class="rec"><b>آنچه نداریم:</b> بازبینی یک روان‌شناس بر محتوا، نخستین مشتری، و کسی که کارگاه را اجرا کند.</div></section>
+
+<section id="is"><h2><small>۲ از ۹</small>چه هستیم، چه نیستیم</h2>
+<div class="pair">
+<div class="col"><h3>هستیم</h3>
+<button class="ln" data-k="is1">روان‌شناسی علمی به زبان ساده، با منبع</button>
+<button class="ln" data-k="is2">ابزار خودشناسی و یادگیری، نه فقط متن</button>
+<button class="ln" data-k="is3">سنجش گروهیِ بی‌نام برای سازمان‌ها</button>
+<button class="ln" data-k="is4">پلی میان پژوهش، روان‌شناس و مردم</button>
+<button class="ln" data-k="is5">چندزبانه: فارسی، انگلیسی، هلندی</button>
+</div>
+<div class="col n"><h3>نیستیم</h3>
+<button class="ln" data-k="no1">درمان یا تشخیص؛ جای روان‌شناس را نمی‌گیریم</button>
+<button class="ln" data-k="no2">ابزار ارزیابی فردی، استخدام یا اخراج</button>
+<button class="ln" data-k="no3">محتوای انگیزشی و وعدهٔ بی‌پشتوانه</button>
+<button class="ln" data-k="no4">فروشندهٔ دادهٔ آدم‌ها</button>
+<button class="ln" data-k="no5">دورهٔ مدرک‌دار، مگر با نهادی که صلاحیتش را دارد</button>
+</div></div>
+<p class="hint">روی هر خط بزن = «مطمئن نیستیم، حرف بزنیم».</p></section>
+
+<section id="seek"><h2><small>۳ از ۹</small>دنبال چه هستیم، دنبال چه نیستیم</h2>
+<div class="pair">
+<div class="col"><h3>دنبالش هستیم</h3>
+<button class="ln" data-k="s1">بازبینی و مُهر علمی یک مؤسسهٔ معتبر</button>
+<button class="ln" data-k="s2">سه اجرای آزمایشی در سه سازمان</button>
+<button class="ln" data-k="s3">یک مدل درآمد ساده که هر دو طرف از آن راضی باشند</button>
+<button class="ln" data-k="s4">ویکی برای همیشه رایگان و باز بماند</button>
+<button class="ln" data-k="s5">تکرار همین الگو برای موضوع‌های دیگر</button>
+</div>
+<div class="col n"><h3>دنبالش نیستیم</h3>
+<button class="ln" data-k="x1">گزارشی که مدیر با آن یک نفر را بشناسد</button>
+<button class="ln" data-k="x2">قفل کردن دانش پشت دیوار پرداخت</button>
+<button class="ln" data-k="x3">رشد سریع پیش از آنکه کیفیت ثابت شود</button>
+<button class="ln" data-k="x4">انحصار: هیچ‌کدام دست دیگری را نمی‌بندد</button>
+<button class="ln" data-k="x5">ادعای درمانی در تبلیغ</button>
+</div></div></section>
+
+<section id="want"><h2><small>۴ از ۹</small>همکاری چطور باشد</h2>
+<div class="pair">
+<div class="col"><h3>پیشنهاد</h3>
+<button class="ln" data-k="w1">اول یک آزمایش سه‌ماهه، بعد تعهد بزرگ‌تر</button>
+<button class="ln" data-k="w2">نقش‌ها روشن: چه کسی می‌سازد، بازبینی می‌کند، می‌فروشد، اجرا می‌کند</button>
+<button class="ln" data-k="w3">یک توافق‌نامهٔ کوتاه نوشته، حتی برای دورهٔ آزمایشی</button>
+<button class="ln" data-k="w4">نام هر دو طرف روی کار مشترک</button>
+<button class="ln" data-k="w5">هر ماه یک جلسهٔ کوتاه با عدد: چند اجرا، چه بازخوردی</button>
+</div>
+<div class="col n"><h3>پرهیز</h3>
+<button class="ln" data-k="u1">قرار شفاهی دربارهٔ پول</button>
+<button class="ln" data-k="u2">ابهام دربارهٔ اینکه چه چیزی مال کیست</button>
+<button class="ln" data-k="u3">تعهد بلندمدت پیش از نخستین مشتری</button>
+<button class="ln" data-k="u4">تغییر محتوا بدون منبع</button>
+<button class="ln" data-k="u5">استفاده از پاسخ‌های کارکنان برای هر کار دیگری</button>
+</div></div>
+<div class="grid" style="margin-top:12px">
+<div class="card"><h3>یک طرف می‌آورد</h3><p>سکو و ابزار، طراحی محصول، محتوای ویکی، چندزبانگی.</p></div>
+<div class="card"><h3>طرف دیگر می‌آورد؟</h3><p>اعتبار علمی، روان‌شناسان، کارگاه، مشتری‌ها. در جلسه کامل می‌شود.</p></div>
+</div></section>
+
+<section id="product"><h2><small>۵ از ۹</small>محصول: برای چه کسی، چه چیزی</h2>
+<div class="tw"><table>
+<tr><th>مشتری</th><th>چه می‌خرد</th><th>پول از کجا</th><th>وضعیت</th></tr>
+<tr><td>سازمان (منابع انسانی)</td><td>سنجش بی‌نام + گزارش + کارگاه</td><td>هزینهٔ هر اجرا، یا اشتراک سالانه</td><td>نمونه آماده</td></tr>
+<tr><td>روان‌شناس و مربی</td><td>ابزار سنجش و برگهٔ کار برای مراجع و کارگاه</td><td>اشتراک ماهانه</td><td>ایده</td></tr>
+<tr><td>مردم</td><td>ویکی و ابزار خودشناسی</td><td>رایگان؛ راه رسیدن به دوره و مشاوره</td><td>آماده</td></tr>
+<tr><td>دانشجو</td><td>مسیر یادگیری و آزمون</td><td>دورهٔ گروهی</td><td>ایده</td></tr>
+</table></div>
+<h3 style="margin:var(--s4) 0 var(--s2);font-size:1rem">چیزهایی که پیش از فروش باید روشن شود</h3>
+<div class="grid">
+<div class="card"><h3>حق استفاده از مقیاس‌ها</h3><p>هر پرسش‌نامهٔ معتبر صاحب دارد. کدام‌ها برای کار تجاری آزادند و کدام مجوز می‌خواهند؟</p></div>
+<div class="card"><h3>اعتبار نسخهٔ فارسی و هلندی</h3><p>ترجمهٔ یک مقیاس همان مقیاس نیست. کدام نسخه‌ها اعتباریابی شده‌اند؟</p></div>
+<div class="card"><h3>حریم خصوصی</h3><p>قانون حفاظت دادهٔ اروپا، رضایت روشن، و کمترین اندازهٔ گروه برای نمایش نتیجه.</p></div>
+<div class="card"><h3>مرز با درمان</h3><p>اگر پاسخ کسی نشانهٔ پریشانی جدی بود، چه می‌بیند و به کجا راهنمایی می‌شود؟</p></div>
+</div>
+<p class="hint">این چهار مورد پرسش‌اند، نه پاسخ؛ پاسخشان با روان‌شناس و مشاور حقوقی است.</p></section>
+
+<section id="market"><h2><small>۶ از ۹</small>بازاریابی: برای هر مشتری یک راه</h2>
+<div class="tw"><table>
+<tr><th>مشتری</th><th>راه رسیدن</th><th>نخستین قدم</th></tr>
+<tr><td>سازمان</td><td>معرفی از راه آشنا، لینکدین، یک اجرای رایگان در برابر توصیه‌نامه</td><td>فهرست ده سازمان آشنا</td></tr>
+<tr><td>روان‌شناس و مربی</td><td>شبکهٔ مؤسسه، کارگاه معرفی، نمونهٔ رایگان</td><td>نشان دادن به پنج همکار</td></tr>
+<tr><td>مردم</td><td>خودِ محتوا: جست‌وجو آن را پیدا می‌کند؛ هر مدخل یک دعوت است</td><td>ادامهٔ ویکی</td></tr>
+</table></div>
+<div class="rec"><b>پیشنهاد:</b> سه بازار جدا را با هم شروع نکنیم. یکی را برگزینیم: فارسی‌زبانان اروپا، سازمان‌های هلندی، یا ایران. هر کدام زبان، قیمت و قانون خودش را دارد.</div></section>
+
+<section id="money"><h2><small>۷ از ۹</small>سرمایه‌گذار: سه راه</h2>
+<div class="grid">
+<div class="card"><h3>راه یک: درآمد اول</h3><p>سه اجرای پولی. بعد تصمیم. کند، اما هیچ‌کس سهمی نمی‌گیرد.</p><span class="tag">کنترل کامل</span></div>
+<div class="card"><h3>راه دو: سرمایه</h3><p>وقتی عددها نشان داد کار می‌کند. زودتر از آن، سهم ارزان می‌رود.</p><span class="tag">سرعت</span><span class="tag">سهم می‌دهی</span></div>
+<div class="card"><h3>راه سه: کمک بلاعوض</h3><p>برای بخش رایگان: آموزش سلامت روان به زبان مادری مهاجران.</p><span class="tag">بی‌سهم</span><span class="tag">کاغذبازی</span></div>
+</div>
+<div class="rec"><b>پیشنهاد:</b> راه یک. تا سه مشتری پولی نداریم، سرمایه‌گذار پرسشی است که هنوز زود است. شکل حقوقی همکاری و هر توافق سهم را یک مشاور حقوقی باید ببیند؛ این برگه مشاورهٔ حقوقی یا مالی نیست.</div></section>
+
+<section id="ask"><h2><small>۸ از ۹</small>ده پرسشی که باید با هم جواب بدهیم</h2>
+<div id="qs"></div></section>
+
+<section id="sum"><h2><small>۹ از ۹</small>جمع‌بندی جلسه</h2>
+<p>جواب‌ها فقط در همین مرورگر می‌ماند و جایی فرستاده نمی‌شود.</p>
+<div id="out"></div>
+<p style="margin-top:var(--s3);display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="cp">رونوشت جمع‌بندی</button><button class="btn g" id="rs">پاک کردن همه</button></p>
+<h3 style="margin:var(--s5) 0 var(--s2);font-size:1rem">تا جلسهٔ بعد</h3>
+<ol class="steps">
+<li>یک بازار و یک مشتریِ هدف انتخاب می‌شود.</li>
+<li>مؤسسه یک بخش از ویکی را بازبینی می‌کند تا روش همکاری آزموده شود.</li>
+<li>یک سازمان برای اجرای آزمایشی نام برده می‌شود.</li>
+<li>پیش‌نویس توافق‌نامهٔ سه‌ماهه نوشته می‌شود.</li>
+</ol></section>
+</main>
+<script>
+(function(){
+var K='ds-monday-psy',st={};try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+var Q=[
+['شما از این همکاری چه می‌خواهید؟',['مشتری تازه','ابزار برای کار خودمان','محتوا و دیده شدن','هنوز نمی‌دانیم']],
+['کدام مشتری اول؟',['سازمان','روان‌شناس و مربی','مردم','دانشجو']],
+['کدام بازار اول؟',['فارسی‌زبانان اروپا','سازمان‌های هلندی','ایران','هر جا مشتری بود']],
+['همین فردا چه چیزی را می‌توانیم بفروشیم؟',['سنجش + کارگاه','فقط کارگاه','هنوز هیچ']],
+['بازبینی علمی محتوا با چه کسی؟',['مؤسسه','یک روان‌شناس مستقل','هر دو']],
+['کارگاه‌ها را چه کسی اجرا می‌کند؟',['مؤسسه','مربی‌های مستقل','بسته به مشتری']],
+['نام روی کار مشترک؟',['نام هر دو','نام تازه','نام مؤسسه','نام دانش‌سرا']],
+['درآمد چطور تقسیم شود؟',['هر کس مشتری آورد سهم بیشتر','نصف‌نصف','درصد ثابت برای سکو','بعد از آزمایش']],
+['دورهٔ آزمایشی؟',['سه ماه','شش ماه','تا نخستین مشتری']],
+['چه چیزی باعث می‌شود این همکاری را ادامه ندهیم؟',[]]
+];
+var box=document.getElementById('qs');
+Q.forEach(function(q,i){
+ var d=document.createElement('div');d.className='q';
+ var h=document.createElement('h3');var b=document.createElement('b');b.textContent=(i+1).toLocaleString('fa-IR');h.appendChild(b);h.appendChild(document.createTextNode(q[0]));d.appendChild(h);
+ var o=document.createElement('div');o.className='opts';
+ q[1].forEach(function(t){var bt=document.createElement('button');bt.type='button';bt.textContent=t;bt.setAttribute('aria-pressed',st['q'+i]===t?'true':'false');
+  bt.addEventListener('click',function(){st['q'+i]=(st['q'+i]===t?'':t);[].forEach.call(o.children,function(c){c.setAttribute('aria-pressed',c.textContent===st['q'+i]?'true':'false')});save();render()});o.appendChild(bt)});
+ d.appendChild(o);
+ var inp=document.createElement('input');inp.type='text';inp.placeholder='یادداشت';inp.setAttribute('aria-label','یادداشت پرسش '+(i+1));inp.value=st['n'+i]||'';
+ inp.addEventListener('input',function(){st['n'+i]=inp.value;save();render()});d.appendChild(inp);
+ box.appendChild(d)});
+[].forEach.call(document.querySelectorAll('.ln'),function(b){b.type='button';b.setAttribute('aria-pressed',st[b.dataset.k]?'true':'false');
+ b.addEventListener('click',function(){st[b.dataset.k]=!st[b.dataset.k];b.setAttribute('aria-pressed',st[b.dataset.k]?'true':'false');save();render()})});
+function render(){
+ var L=[],dis=[];
+ [].forEach.call(document.querySelectorAll('.ln'),function(b){if(st[b.dataset.k])dis.push('• '+b.textContent)});
+ if(dis.length){L.push('خط‌هایی که باید درباره‌شان حرف بزنیم:');L=L.concat(dis);L.push('')}
+ Q.forEach(function(q,i){var a=st['q'+i],n=st['n'+i];if(a||n)L.push((i+1).toLocaleString('fa-IR')+'. '+q[0]+' ← '+(a||'')+(n?(a?' · ':'')+n:''))});
+ document.getElementById('out').textContent=L.length?L.join('\n'):'هنوز چیزی انتخاب نشده.';
+}
+document.getElementById('cp').addEventListener('click',function(){var t=document.getElementById('out').textContent,b=this;
+ function done(){b.textContent='رونوشت شد';setTimeout(function(){b.textContent='رونوشت جمع‌بندی'},1500)}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){sel()})}else sel();
+ function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('out'));var s=getSelection();s.removeAllRanges();s.addRange(r)}});
+var armed=false;document.getElementById('rs').addEventListener('click',function(){if(!armed){armed=true;this.textContent='مطمئنی؟ دوباره بزن';var b=this;setTimeout(function(){armed=false;b.textContent='پاک کردن همه'},3000);return}
+ st={};save();location.reload()});
+render();
+})();
+</script>
+</body>
+</html>
