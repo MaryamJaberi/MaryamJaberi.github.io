@@ -53,6 +53,6 @@ _d = ((root.get('summary') or {}).get('fa') if root else '') or ('همهٔ مد�
 _d = _html.escape(_d[:155])
 out = tpl.replace('__DATA__', json.dumps(DATA, ensure_ascii=False)).replace('__TITLE_FA__', title['fa']).replace('__TITLE_EN__', title.get('en') or title['fa']).replace('__DESC__', _d)
 os.makedirs(f'{R}/{W}', exist_ok=True)
-OUT = 'index.html' if W == 'psy' else 'entries.html'
+OUT = sys.argv[2] if len(sys.argv) > 2 else ('index.html' if W == 'psy' else 'entries.html')
 open(f'{R}/{W}/{OUT}', 'w', encoding='utf-8').write(out)
 print(W, 'concepts', len(concepts), 'people', len(DATA['people']), 'sources', len(DATA['sources']), 'iran', len(DATA['iran']), 'ext', len(ext), 'bytes', len(out))
