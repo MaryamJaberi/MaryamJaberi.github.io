@@ -175,7 +175,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);justify-content
 <script>
 (() => {
 const $ = id => document.getElementById(id);
-const NAME = {psy:"روان", soc:"جامعه", phil:"فلسفه", tabar:"تبار و ژنتیک", tarikh:"تاریخ", miyan:"ارتباط رشته‌ها", ling:"زبان‌شناسی", iran:"برای ایران", simorgh:"سیمرغ", sakht:"ساخت ایران"};
+const NAME = {psy:"روان", soc:"جامعه", phil:"فلسفه", tabar:"تبار و ژنتیک", tarikh:"تاریخ", miyan:"ارتباط رشته‌ها", ling:"زبان‌شناسی", sakht:"ساخت ایران"};
 // dots on each atlas card
 document.querySelectorAll(".ac").forEach(a => { if (!a.dataset.u) return; const u = a.dataset.u.split(" "); let us = a.querySelector(".uses"); if (!us) { us = document.createElement("span"); us.className = "uses"; a.appendChild(us); } us.innerHTML = "می‌خواند از: " + u.map(k => `<i style="--c:var(--c-${k})" title="${NAME[k]}"></i>`).join(""); });
 // highlight the layers an atlas draws on
