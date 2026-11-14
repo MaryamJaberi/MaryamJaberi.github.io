@@ -85,4 +85,5 @@ if (matchMedia("(hover:hover)").matches) {
 }
 document.addEventListener("keydown", e => { if (e.key === "Escape") { hide(); if (map && !map.hidden) toggle(false); } });
 })();
+
 (()=>{const c=document.currentScript;if(!c)return;const s=document.createElement("script");s.src=new URL("guard.js",c.src).href;s.defer=true;document.head.appendChild(s)})();

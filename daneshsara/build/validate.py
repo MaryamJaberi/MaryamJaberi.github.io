@@ -29,6 +29,8 @@ for wiki in ['psy', 'soc', 'tabar', 'phil', 'tarikh']:
         c = load(p); concepts[c['id']] = c; check(S['concept'], c, c['id'])
         if not c['id'].startswith(wiki + ':'): errors.append(f'{c["id"]}: wrong prefix for folder {wiki}')
 irans = {}
+# لایهٔ ایران ممکن است در گاوصندوق باشد و در این نسخه نباشد؛ آن وقت ارجاع‌هایش بررسی نمی‌شود.
+IRAN_LAYER = os.path.isdir(f'{R}/iran')
 for p in glob.glob(f'{R}/iran/*.json'):
     i = load(p); irans[i['id']] = i; check(S['iran'], i, i['id'])
 # cross references
@@ -43,7 +45,7 @@ for c in concepts.values():
     for sid in c.get('sources', []):
         if sid not in sources: errors.append(f'{c["id"]}: unknown source {sid}')
     if c.get('parent') and c['parent'] not in concepts: errors.append(f'{c["id"]}: unknown parent {c["parent"]}')
-    if c.get('iran') and c['iran'] not in irans: errors.append(f'{c["id"]}: unknown iran note {c["iran"]}')
+    if IRAN_LAYER and c.get('iran') and c['iran'] not in irans: errors.append(f'{c["id"]}: unknown iran note {c["iran"]}')
     if c['status'] != 'draft' and c['kind'] == 'concept' and not c.get('sources'):
         errors.append(f'{c["id"]}: status {c["status"]} but no sources')
     t = c['title']['fa']
