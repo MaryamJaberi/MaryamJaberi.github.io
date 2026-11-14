@@ -10225,5 +10225,57 @@
   "why": "فایل خراب است. برای خواندنش باید یک نسخهٔ سالم در همان پوشهٔ درایو گذاشته شود؛ بعد از آن در نوبت خواندن قرار می‌گیرد.",
   "imported": true,
   "entries": []
+ },
+ {
+  "n": "b246",
+  "drive": "1Sxce-eh2mdvGfOJmOsGmhry5lw8BQ8Xw",
+  "title": "مفهوم سادهٔ روانکاوی",
+  "author": "زیگموند فروید",
+  "year": 1926,
+  "type": "book",
+  "read": "full",
+  "tier": 2,
+  "label": "رسالهٔ «پرسش روانکاوی غیرپزشکی» فروید، در قالب گفت‌وگو با یک «محقق بی‌طرف»",
+  "best": "تفکیک تشخیص پزشکی از درمان روانی، و برنامهٔ درسی‌ای که روانکاو لازم دارد",
+  "cautions": [
+   "لایهٔ متن پی‌دی‌اف با قلم ناسازگار ذخیره شده و ناخواناست؛ کل ۲۰۶ صفحه از راه تصویرخوانی نوری خوانده شد",
+   "حروف‌چینی قدیمی باعث خطای املایی در تصویرخوانی می‌شود؛ نقل‌قول‌ها املای درست‌شده دارند و هیچ واژهٔ مشکوکی به‌عنوان اصطلاح فنی به کار نرفته",
+   "نام مترجم و ناشر فارسی از صفحهٔ شناسنامه خوانده نشد",
+   "استدلال حقوقی رساله دربارهٔ وین دههٔ ۱۹۲۰ است و به نظام مجوز امروز قابل تعمیم نیست"
+  ],
+  "reasons": [
+   "ویکی روان تا کنون فقط یک مدخل کوتاه مروری دربارهٔ روانکاوی داشت و هیچ مدخلی از متن خودِ فروید",
+   "تفکیک اعتراف و تلقین از روانکاوی، و استدلال «چرا روان‌شناسی ناهشیار را ندید»، هر دو جای خالی بودند"
+  ],
+  "decision": "add",
+  "why": "پنج مدخل از متن اولیهٔ فروید، با مرز روشن میان ادعای او و شاهد تجربی.",
+  "imported": true,
+  "entries": [
+   {
+    "id": "freud-lay-analysis-dialogue-with-the-impartial-person",
+    "t": "گفت‌وگو با «محقق بی‌طرف»",
+    "u": "psy/#freud-lay-analysis-dialogue-with-the-impartial-person"
+   },
+   {
+    "id": "freud-analysis-is-not-confession-or-suggestion",
+    "t": "روانکاوی نه اعتراف است نه تلقین",
+    "u": "psy/#freud-analysis-is-not-confession-or-suggestion"
+   },
+   {
+    "id": "freud-ego-as-the-bark-of-the-id",
+    "t": "«خود» پوستهٔ «نهاد»",
+    "u": "psy/#freud-ego-as-the-bark-of-the-id"
+   },
+   {
+    "id": "freud-why-psychology-missed-the-unconscious",
+    "t": "چرا روان‌شناسی ناهشیار را ندید",
+    "u": "psy/#freud-why-psychology-missed-the-unconscious"
+   },
+   {
+    "id": "freud-diagnosis-is-the-physicians-job-not-treatment",
+    "t": "تشخیص کار پزشک است، درمان نه",
+    "u": "psy/#freud-diagnosis-is-the-physicians-job-not-treatment"
+   }
+  ]
  }
 ]
