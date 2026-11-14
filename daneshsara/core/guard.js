@@ -1,5 +1,6 @@
 /* Source travels with the content: copy carries a citation, screenshots and prints carry a faint mark. */
 (() => {
+  if (window.__VAULT_PAGE) return;   /* داخل گاوصندوق: محتوای خصوصی، بدون نشان و بدون ارجاع */
   const host = location.host + location.pathname.replace(/[^/]*$/, "");
   const cite = () => "منبع: " + document.title + " — " + location.href.split("#")[0] + (location.hash || "") +
     " (برداشت " + new Date().toISOString().slice(0, 10) + ")";
