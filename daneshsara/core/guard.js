@@ -1,6 +1,8 @@
 /* Source travels with the content: copy carries a citation, screenshots and prints carry a faint mark. */
 (() => {
   if (window.__VAULT_PAGE) return;   /* داخل گاوصندوق: محتوای خصوصی، بدون نشان و بدون ارجاع */
+  const SELF = document.currentScript;
+  const WANT_NOTE = !(SELF && SELF.dataset && SELF.dataset.note === 'off');   /* data-note="off" → بدون یادداشت پانویس */
   const host = location.host + location.pathname.replace(/[^/]*$/, "");
   const cite = () => "منبع: " + document.title + " — " + location.href.split("#")[0] + (location.hash || "") +
     " (برداشت " + new Date().toISOString().slice(0, 10) + ")";
@@ -31,6 +33,8 @@
   b.style.cssText = "font:inherit;margin-inline-start:8px;padding:2px 10px;border:1px solid currentColor;border-radius:999px;background:none;color:inherit;cursor:pointer";
   b.addEventListener("click", () => { const c = cite(); (navigator.clipboard ? navigator.clipboard.writeText(c) : Promise.reject()).then(() => { b.textContent = "کپی شد"; }, () => { b.textContent = c; }); });
   note.append("استفاده از این متن با ذکر منبع و نشانی صفحه آزاد است؛ استفادهٔ تجاری یا بازنشر انبوه فقط با اجازه. ", b);
-  const put = () => document.body.appendChild(note);
-  document.body ? put() : addEventListener("DOMContentLoaded", put);
+  if (WANT_NOTE) {
+    const put = () => document.body.appendChild(note);
+    document.body ? put() : addEventListener("DOMContentLoaded", put);
+  }
 })();
