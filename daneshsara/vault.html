@@ -231,7 +231,8 @@ function render(path) {
   const head =
     `<base href="${BASE}${dir}">` +
     `<script>window.__VAULT_PAGES=${JSON.stringify(Object.keys(FILES))};` +
-    `window.__VAULT_ROOT=${JSON.stringify(BASE)};<\/script>`;
+    `window.__VAULT_ROOT=${JSON.stringify(BASE)};` +
+    `window.__VAULT_PAGE=${JSON.stringify(path)};<\/script>`;
   let doc = html;
   if (/<head[^>]*>/i.test(doc)) doc = doc.replace(/<head([^>]*)>/i, `<head$1>${head}`);
   else doc = head + doc;
