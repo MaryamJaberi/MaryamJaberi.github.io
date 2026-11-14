@@ -3,7 +3,7 @@
 (Each step is an existing generator; this file only fixes their order so pages are never left half-updated.)"""
 import subprocess, sys, os
 H = os.path.dirname(os.path.abspath(__file__))
-STEPS = [['validate.py'], ['reader.py', 'soc'], ['reader.py', 'phil'], ['reader.py', 'tabar'], ['reader.py', 'tarikh'],
+STEPS = [['validate.py'], ['reader.py', 'soc'], ['reader.py', 'phil'], ['reader.py', 'tabar'], ['reader.py', 'tarikh'], ['reader.py', 'psy', 'entries.html'],
          ['iran_page.py'], ['tools_data.py'], ['world.py'], ['lands.py'], ['core_pages.py'], ['library_curate.py'], ['library_page.py'],
          ['collection_page.py'], ['sakht_page.py'], ['sakht_day.py'], ['sakht_work.py'], ['coverage.py'], ['selfmap.py'], ['hidden_bridges.py'], ['story.py'],
          ['review_page.py'], ['flows_page.py'], ['plan_page.py'], ['birds_page.py'], ['why_page.py'], ['transitions_page.py'], ['paths_page.py'], ['iran_guess.py'], ['ask_page.py'], ['need_page.py'], ['log_page.py'], ['psy_help.py'], ['crumbs.py'], ['sitemap.py'], ['crumbs.py'], ['atlas_source.py'], ['nav.py'], ['selfhost.py'], ['unify.py'], ['validate.py']]
