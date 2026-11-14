@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>گاوصندوق دانش‌سرا</title>
+<style>
+:root{
+  --bg:#fbf9f5; --panel:#fff; --fg:#1d1b17; --dim:#6b6558; --line:#e3ddd1;
+  --accent:#7a5c2e; --accent-soft:#f0e7d6; --err:#9b2c2c; --ok:#2f6b3a;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#171614; --panel:#201e1b; --fg:#ece7dd; --dim:#9d968a; --line:#332f2a;
+  --accent:#d6b06a; --accent-soft:#2b2520; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#171614; --panel:#201e1b; --fg:#ece7dd; --dim:#9d968a; --line:#332f2a;
+  --accent:#d6b06a; --accent-soft:#2b2520; color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:16px/1.75 "Vazirmatn","Segoe UI",system-ui,sans-serif}
+
+/* ---------- قفل ---------- */
+#lock{min-height:100svh;display:grid;place-items:center;
+  padding-block:48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px))}
+.card{width:100%;max-width:30rem;background:var(--panel);
+  border:1px solid var(--line);border-radius:16px;padding:28px 24px}
+.key{width:46px;height:46px;margin-bottom:16px;color:var(--accent)}
+h1{margin:0 0 6px;font-size:1.4rem;text-wrap:balance}
+.sub{margin:0 0 22px;color:var(--dim);font-size:.93rem}
+label{display:block;font-size:.85rem;color:var(--dim);margin-bottom:6px}
+input[type=password],input[type=text].pw{width:100%;padding:12px 14px;font:inherit;
+  direction:ltr;text-align:left;background:var(--bg);color:var(--fg);
+  border:1px solid var(--line);border-radius:10px}
+input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.row{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+button{font:inherit;padding:11px 20px;border-radius:10px;border:1px solid transparent;
+  background:var(--accent);color:var(--bg);cursor:pointer}
+button.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+button:disabled{opacity:.55;cursor:default}
+.chk{display:flex;gap:7px;align-items:center;font-size:.88rem;color:var(--dim)}
+.chk input{accent-color:var(--accent);width:16px;height:16px}
+.msg{margin-top:14px;font-size:.9rem;min-height:1.5em}
+.msg.bad{color:var(--err)}
+.note{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:.82rem;color:var(--dim)}
+
+/* ---------- خواندن ---------- */
+#app{display:none;height:100svh;grid-template-columns:260px 1fr}
+#app.on{display:grid}
+aside{background:var(--panel);border-left:1px solid var(--line);
+  overflow-y:auto;padding:16px 12px 32px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:0 6px 12px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.brand b{font-size:.95rem}
+.brand button{padding:5px 10px;font-size:.78rem;background:transparent;
+  color:var(--dim);border-color:var(--line)}
+.grp{margin-bottom:14px}
+.grp>span{display:block;font-size:.73rem;letter-spacing:.06em;color:var(--dim);
+  padding:0 6px 5px}
+.grp a{display:block;padding:7px 10px;border-radius:8px;text-decoration:none;
+  color:var(--fg);font-size:.88rem}
+.grp a:hover{background:var(--accent-soft)}
+.grp a[aria-current]{background:var(--accent-soft);color:var(--accent);font-weight:600}
+main{position:relative;min-width:0}
+iframe{width:100%;height:100%;border:0;background:var(--bg)}
+#bar{display:none}
+@media (max-width:760px){
+  #app.on{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  aside{border-left:0;border-bottom:1px solid var(--line);max-height:42svh}
+}
+</style>
+</head>
+<body>
+
+<section id="lock">
+  <div class="card">
+    <svg class="key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="4" y="10" width="16" height="11" rx="2.5"/>
+      <path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.4"/>
+    </svg>
+    <h1>گاوصندوق دانش‌سرا</h1>
+    <p class="sub">این بخش‌ها رمزگذاری‌شده‌اند. بدون رمز، چیزی جز داده‌های درهم روی سرور نیست.</p>
+
+    <form id="f" autocomplete="off">
+      <label for="pw">رمز عبور</label>
+      <input id="pw" class="pw" type="password" autocomplete="current-password"
+             spellcheck="false" autocapitalize="off" placeholder="واژه‌ها را با فاصله بنویسید">
+      <div class="row">
+        <button id="go" type="submit">باز کن</button>
+        <button id="see" type="button" class="ghost">نمایش رمز</button>
+        <span class="chk"><input id="rem" type="checkbox"><label for="rem"
+          style="margin:0;color:inherit">روی این دستگاه یادت بماند</label></span>
+      </div>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="note">رمز روی همین دستگاه و در مرورگر خودت بررسی می‌شود؛ به هیچ سروری فرستاده نمی‌شود.
+    اگر رمز را گم کنی، راهی برای بازیابی این محتوا نیست.</p>
+  </div>
+</section>
+
+<section id="app">
+  <aside>
+    <div class="brand"><b>گاوصندوق</b><button id="out" type="button">قفل کن</button></div>
+    <nav id="list"></nav>
+  </aside>
+  <main><iframe id="view" title="محتوای گاوصندوق"
+    sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe></main>
+</section>
+
+<script>
+(() => {
+"use strict";
+const MAGIC = "DSV1", ITER = 600000, KEYSTORE = "ds-vault-key", LASTPAGE = "ds-vault-page";
+const BASE = new URL(".", location.href).href;          // …/daneshsara/
+const $ = id => document.getElementById(id);
+let FILES = null;
+
+/* ---------- عنوان‌ها ---------- */
+const GROUPS = [
+  ["iran/",   "۲ · ایران"],
+  ["simorgh/","۳ · سیمرغ"],
+  ["sakht/",  "۴ · ساخت ایران"],
+  ["atlas/",  "اطلس‌ها"],
+  ["core/",   "هسته"],
+  ["data/",   "داده‌ها"]
+];
+const titleOf = (path, html) => {
+  const m = /<title>([^<]*)<\/title>/i.exec(html || "");
+  if (m) {
+    const t = m[1].split(/\s*[|·–—]\s*/)[0].trim();
+    if (t) return t;
+  }
+  return path.split("/").pop();
+};
+
+/* ---------- رمزگشایی ---------- */
+const enc = new TextEncoder();
+async function deriveKey(pass, salt) {
+  const base = await crypto.subtle.importKey("raw", enc.encode(pass), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt, iterations: ITER, hash: "SHA-256" },
+    base, { name: "AES-GCM", length: 256 }, true, ["decrypt"]);
+}
+async function gunzip(buf) {
+  const ds = new DecompressionStream("gzip");
+  const stream = new Blob([buf]).stream().pipeThrough(ds);
+  return new Response(stream).text();
+}
+let BLOB = null;
+async function blob() {
+  if (!BLOB) {
+    const r = await fetch("vault/bundle.enc", { cache: "no-store" });
+    if (!r.ok) throw new Error("بستهٔ گاوصندوق پیدا نشد");
+    BLOB = new Uint8Array(await r.arrayBuffer());
+  }
+  return BLOB;
+}
+async function openWith(key) {
+  const b = await blob();
+  if (new TextDecoder().decode(b.slice(0, 4)) !== MAGIC) throw new Error("بسته خراب است");
+  const salt = b.slice(4, 20), iv = b.slice(20, 32), body = b.slice(32);
+  const plain = await crypto.subtle.decrypt(
+    { name: "AES-GCM", iv, additionalData: enc.encode(MAGIC) }, key, body);
+  return JSON.parse(await gunzip(plain)).files;
+}
+async function keyFromPass(pass) {
+  const b = await blob();
+  return deriveKey(pass, b.slice(4, 20));
+}
+
+/* ---------- نگهداری کلید ---------- */
+const b64 = {
+  to: buf => btoa(String.fromCharCode(...new Uint8Array(buf))),
+  from: s => Uint8Array.from(atob(s), c => c.charCodeAt(0))
+};
+async function remember(key, persist) {
+  try {
+    const raw = b64.to(await crypto.subtle.exportKey("raw", key));
+    (persist ? localStorage : sessionStorage).setItem(KEYSTORE, raw);
+  } catch (e) { /* حالت ناشناس */ }
+}
+async function storedKey() {
+  for (const store of [sessionStorage, localStorage]) {
+    let raw = null;
+    try { raw = store.getItem(KEYSTORE); } catch (e) { continue; }
+    if (!raw) continue;
+    try {
+      return await crypto.subtle.importKey("raw", b64.from(raw),
+        { name: "AES-GCM" }, true, ["decrypt"]);
+    } catch (e) { try { store.removeItem(KEYSTORE); } catch (_) {} }
+  }
+  return null;
+}
+function forget() {
+  for (const s of [sessionStorage, localStorage])
+    try { s.removeItem(KEYSTORE); s.removeItem(LASTPAGE); } catch (e) {}
+}
+
+/* ---------- نمایش ---------- */
+const SHIM = `<script>(function(){
+  var send=function(p){parent.postMessage({vaultGo:p},"*")};
+  document.addEventListener("click",function(e){
+    var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;
+    var h=a.getAttribute("href")||"";
+    if(h.charAt(0)==="#"||/^(https?:|mailto:|tel:)/.test(h)&&a.href.indexOf(document.baseURI)!==0)return;
+    var u;try{u=new URL(a.getAttribute("href"),document.baseURI)}catch(x){return}
+    var root=window.__VAULT_ROOT;
+    if(u.href.indexOf(root)===0){
+      var rel=decodeURI(u.href.slice(root.length)).split("#")[0];
+      var dirp=rel.charAt(rel.length-1)==="/"?rel:rel+"/";
+      var tries=[rel,dirp+"index.html"];
+      for(var i=0;i<tries.length;i++)
+        if(window.__VAULT_PAGES.indexOf(tries[i])>=0){
+          e.preventDefault();send(tries[i]+(u.hash||""));return}
+    }
+    e.preventDefault();window.open(u.href,"_blank","noopener");
+  },true);
+}())<\/script>`;
+
+function render(path) {
+  const html = FILES[path];
+  if (html == null) return;
+  const dir = path.includes("/") ? path.slice(0, path.lastIndexOf("/") + 1) : "";
+  const head =
+    `<base href="${BASE}${dir}">` +
+    `<script>window.__VAULT_PAGES=${JSON.stringify(Object.keys(FILES))};` +
+    `window.__VAULT_ROOT=${JSON.stringify(BASE)};<\/script>`;
+  let doc = html;
+  if (/<head[^>]*>/i.test(doc)) doc = doc.replace(/<head([^>]*)>/i, `<head$1>${head}`);
+  else doc = head + doc;
+  doc = /<\/body>/i.test(doc) ? doc.replace(/<\/body>/i, SHIM + "</body>") : doc + SHIM;
+
+  $("view").srcdoc = doc;
+  for (const a of document.querySelectorAll("#list a"))
+    a.toggleAttribute("aria-current", a.dataset.p === path);
+  try { sessionStorage.setItem(LASTPAGE, path); } catch (e) {}
+}
+
+function buildList() {
+  const paths = Object.keys(FILES).filter(p => p.endsWith(".html")).sort();
+  const used = new Set(), frag = document.createDocumentFragment();
+  const addGroup = (label, items) => {
+    if (!items.length) return;
+    const g = document.createElement("div");
+    g.className = "grp";
+    const s = document.createElement("span"); s.textContent = label; g.appendChild(s);
+    for (const p of items) {
+      const a = document.createElement("a");
+      a.href = "#"; a.dataset.p = p; a.textContent = titleOf(p, FILES[p]);
+      a.addEventListener("click", e => { e.preventDefault(); render(p); });
+      g.appendChild(a);
+    }
+    frag.appendChild(g);
+  };
+  for (const [prefix, label] of GROUPS) {
+    const items = paths.filter(p => p.startsWith(prefix));
+    items.forEach(p => used.add(p));
+    addGroup(label, items);
+  }
+  addGroup("دیگر", paths.filter(p => !used.has(p)));
+  $("list").replaceChildren(frag);
+  let first = null;
+  try { first = sessionStorage.getItem(LASTPAGE); } catch (e) {}
+  render(FILES[first] ? first : (paths.find(p => p === "iran/index.html") || paths[0]));
+}
+
+function unlocked() {
+  $("lock").style.display = "none";
+  $("app").classList.add("on");
+  document.title = "گاوصندوق دانش‌سرا";
+  buildList();
+}
+
+/* ---------- رویدادها ---------- */
+window.addEventListener("message", e => {
+  if (e.source !== $("view").contentWindow) return;
+  const p = e.data && e.data.vaultGo;
+  if (typeof p === "string") render(p.split("#")[0]);
+});
+
+$("see").addEventListener("click", () => {
+  const i = $("pw");
+  i.type = i.type === "password" ? "text" : "password";
+  i.classList.add("pw");
+  $("see").textContent = i.type === "password" ? "نمایش رمز" : "پنهان کن";
+  i.focus();
+});
+
+$("out").addEventListener("click", () => { forget(); location.reload(); });
+
+$("f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const pass = $("pw").value.trim();
+  if (!pass) return;
+  const msg = $("msg"); msg.className = "msg"; msg.textContent = "در حال باز کردن…";
+  $("go").disabled = true;
+  try {
+    const key = await keyFromPass(pass);
+    FILES = await openWith(key);
+    await remember(key, $("rem").checked);
+    $("pw").value = "";
+    unlocked();
+  } catch (err) {
+    msg.className = "msg bad";
+    msg.textContent = /پیدا|خراب/.test(err.message) ? err.message : "رمز درست نیست.";
+    $("go").disabled = false;
+  }
+});
+
+(async () => {
+  const key = await storedKey();
+  if (!key) return;
+  try { FILES = await openWith(key); unlocked(); }
+  catch (e) { forget(); }
+})();
+})();
+</script>
+</body>
+</html>
