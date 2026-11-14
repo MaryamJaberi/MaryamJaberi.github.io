@@ -8,9 +8,12 @@ AES-256-GCM رمز می‌شود. کلید با PBKDF2-SHA256 (۶۰۰٬۰۰۰ د
 ساختار فایل:  b"DSV1" + salt(16) + iv(12) + ciphertext
 
 استفاده:
-    DS_VAULT_PASS='…' python3 build/vault.py <پوشهٔ منبع> [خروجی]
+    بسته‌بندی:   DS_VAULT_PASS='…' python3 build/vault.py <پوشهٔ منبع> [خروجی]
+    بازکردن:     DS_VAULT_PASS='…' python3 build/vault.py --extract <بسته> <پوشهٔ مقصد>
 
-پوشهٔ منبع باید ساختار daneshsara/ را داشته باشد (مثلاً src/daneshsara/iran/…)
+پوشهٔ منبع باید ساختار daneshsara/ را داشته باشد (مثلاً src/daneshsara/iran/…).
+بازکردن برای وقتی است که فقط بسته در دست است: محتوا را به پوشه‌ای باز می‌کند
+تا بشود فایل تازه افزود و دوباره بسته‌بندی کرد.
 """
 import gzip
 import json
@@ -46,6 +49,27 @@ def collect(src: Path) -> dict:
     return files
 
 
+def extract(blob_path: Path, dest: Path, password: str) -> int:
+    blob = blob_path.read_bytes()
+    if blob[:4] != MAGIC:
+        print("بسته شناخته نشد", file=sys.stderr)
+        return 1
+    salt, iv, body = blob[4:20], blob[20:32], blob[32:]
+    try:
+        payload = AESGCM(derive(password, salt)).decrypt(iv, body, MAGIC)
+    except Exception:
+        print("رمز درست نیست", file=sys.stderr)
+        return 1
+    files = json.loads(gzip.decompress(payload))["files"]
+    root = dest / "daneshsara"
+    for rel, text in files.items():
+        out = root / rel
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text, encoding="utf-8")
+    print(f"{len(files)} فایل → {root}")
+    return 0
+
+
 def main() -> int:
     if len(sys.argv) < 2:
         print(__doc__)
@@ -54,6 +78,12 @@ def main() -> int:
     if not password:
         print("DS_VAULT_PASS تعیین نشده است", file=sys.stderr)
         return 1
+
+    if sys.argv[1] == "--extract":
+        if len(sys.argv) < 4:
+            print(__doc__)
+            return 1
+        return extract(Path(sys.argv[2]), Path(sys.argv[3]), password)
 
     src = Path(sys.argv[1])
     out = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("vault/bundle.enc")
