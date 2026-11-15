@@ -261,3 +261,42 @@ figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
 @media (max-width:560px){.apps{gap:20px 8px}.app .ic{width:64px;height:64px;border-radius:17px}.home{padding:26px 16px 18px;border-radius:28px}}
 [dir=rtl] .process li::before{content:counter(s,persian)}
 .lang{font-family:Vazirmatn,var(--sans)}
+
+/* living layer: last change, Rotterdam sky, the loom */
+.pulse{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin:-4px 0 12px}
+.pulse::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.mlist .pulse{margin:0 0 10px}
+
+.home{position:relative;overflow:hidden;transition:background 1.2s}
+.home .apps,.home p{position:relative;z-index:1}
+.home .stars{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.home .stars circle{fill:#fff}
+.home.night{border-color:transparent}
+.home.night .app a{color:#F4F0FB}
+.home.night p{color:#CBC2E3}
+
+.loom-fig{margin:0}
+.loom-scroll{overflow-x:auto;scrollbar-width:thin;padding-bottom:4px}
+.loom{display:block;width:100%;min-width:760px;height:auto}
+.loom .warp{stroke:#D3CBE6;stroke-width:1}
+.loom .ground{fill:#3E2F66}
+.loom .tassel{fill:#BCB0D8}
+.loom .field{fill:#231A3E}
+.loom .warp-in{stroke:#FFFFFF;stroke-opacity:.07}
+.loom .weft{stroke:#FFFFFF;stroke-opacity:.08}
+.loom .guard{fill:#8C6FD0;opacity:.75}
+.loom .knot{transform-box:fill-box;transform-origin:center;transition:transform .25s}
+.loom .knot:hover{transform:scale(1.3)}
+.loom .shuttle{fill:var(--magenta)}
+.loom-fig figcaption{margin-top:16px;max-width:46em}
+.loom-fig.js .knot{opacity:0;transform:scale(.2)}
+.loom-fig.js .field,.loom-fig.js .guard{opacity:0;transition:opacity .9s}
+.loom-fig.js.in .field{opacity:1}
+.loom-fig.js.in .guard{opacity:.75}
+.loom-fig.js.in .knot{opacity:1;transform:scale(1);transition:opacity .5s var(--d),transform .6s cubic-bezier(.3,1.5,.5,1) var(--d)}
+.loom-fig.js.in .knot:hover{transform:scale(1.3);transition-delay:0s}
+@media (prefers-reduced-motion:reduce){
+  .loom-fig.js .knot,.loom-fig.js .field{opacity:1;transform:none;transition:none}
+  .loom-fig.js .guard{opacity:.75}
+  .home{transition:none}
+}

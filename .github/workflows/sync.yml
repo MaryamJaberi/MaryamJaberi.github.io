@@ -1,0 +1,56 @@
+name: Keep the portfolio alive
+
+# Every six hours: rebuild any project that changed, re-weave the loom, regenerate the pages.
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["tools/**", ".github/workflows/sync.yml"]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: portfolio-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild changed projects, the loom and the pages
+        run: bash tools/sync.sh
+      - name: Commit what changed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            echo "changed=0" >> "$GITHUB_OUTPUT"
+          else
+            git commit -q -m "Weave: projects and loom updated automatically"
+            git pull -q --rebase origin main
+            git push -q origin HEAD:main
+            echo "changed=1" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Ask GitHub Pages to publish
+        if: steps.commit.outputs.changed == '1'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null && echo "Pages build requested."

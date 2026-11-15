@@ -1,0 +1,40 @@
+# Design note: the portfolio as a living piece
+
+Working document for whoever edits this site next (human or Claude).
+
+## Brief
+- Maryam wants the portfolio to update itself and to be a dynamic artwork, simple and clean.
+- It is still a job-hunting site: recruiters must read the claims, open the work and download the CV within a minute. The art may never get in the way of that.
+
+## What I looked at
+- Self-updating developer portfolios that pull GitHub activity: useful mechanism, but the output is almost always a stats dashboard or a green contribution heatmap. Generic; not for this site.
+- A London artist's portfolio whose hero is one living generative creature, with everything around it kept quiet. Lesson: one living thing, the rest disciplined.
+- Amir B Ash, *Warp and Weft*: data drives a generative piece named after Iranian Termeh weaving.
+- Carpetdiem (generative Azerbaijani carpets) and LIA's *Weaving*: the Jacquard loom is where weaving and computation first met. Punch cards were code.
+- Persian carpet craft: designs are written as knot maps, a line of code per row, and every carpet carries two stories, the design's and the weaver's.
+
+## Concept: the loom (دار قالی)
+Every change Maryam makes to one of her products is a knot. A loom for the year hangs on the page:
+- rows = products (each in its own icon colour), columns = weeks of the loom year;
+- woven weeks are a dark carpet field with knots sized by how much changed;
+- weeks not yet lived are bare warp threads with a fringe, so the piece is literally unfinished and grows every week;
+- a thin guard band frames only the woven part, so the border grows with the carpet.
+
+It is honest (no invented numbers), personal (Persian craft, a weaver in Rotterdam), and it rewards coming back.
+
+Second, quieter gesture: the "home screen" panel in the hero takes the colour of Rotterdam's sky at the moment you visit (sun altitude computed in the browser). At night the apps sit on a dark sky with a few stars.
+
+Third, the smallest: each project shows when it last changed.
+
+## Rules
+- Keep the existing identity: lilac paper, aubergine ink, plum, Young Serif + Hanken Grotesk, Vazirmatn for Persian. The loom is the one bold element.
+- No numbered eyebrows, no ALL CAPS, no stat counters, no heatmap squares. Knots are diamonds, like a knot seen from the back of a rug.
+- Motion: one moment only. When the loom scrolls into view, the woven columns appear left to right like a shuttle passing; nothing loops. Respect reduced motion.
+- Works in both directions: in Persian the loom weaves right to left.
+- Everything degrades: no JavaScript or no data still leaves a readable page.
+
+## Machine
+- `.github/workflows/sync.yml` runs every six hours (and on demand). For each project repo whose HEAD changed, it builds the app and copies it to its folder on this site (`Dour/`, `Language-Learning-Party-Game/`, `earth-through-time/`, `ganjoor-no/`, `mafia/`). A failed build keeps the previous copy.
+- `tools/pulse.py` reads the git history of every project and writes `assets/pulse.json` (commits per week, last change). It holds no timestamp of its own, so the site only gets a new commit when something really changed.
+- `tools/build.py` regenerates the pages, then the workflow commits as github-actions and asks Pages to rebuild.
+- Loom year starts on Monday 26 October 2026, the week the portfolio's history begins. On 25 October 2027 a second carpet starts.

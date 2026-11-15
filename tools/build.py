@@ -39,6 +39,13 @@ EN = dict(
     cta_work="See selected work", cta_cv="Download CV",
     avail="Open to Product Owner, Product Manager and Product Designer roles in the Netherlands or remote. EU work permit, no sponsorship needed.",
     home_caption="My home screen. I made every app on it.",
+    sky_caption="The sky behind them is Rotterdam's, right now.",
+    last_change="Last change", 
+    loom_h="Every change is a knot",
+    loom_p="This loom weaves itself. Every six hours it reads the history of my products and ties a knot for every week one of them changed. The bare threads are the weeks still to come.",
+    loom_cap="Woven since 26 October 2026: {done} of 52 weeks.",
+    loom_last="The last knot was tied {when}.",
+    loom_week="week of {d}", loom_changes="{n} changes", loom_change="1 change", loom_now="this week",
     proof=[("6 years in product", "Product Owner and Product Manager, 2016–2022"),
            ("60K to 5M+ users", "on the streaming product I helped grow"),
            ("Scrum, introduced", "at Shaya; agile rituals across 12 services at MCI"),
@@ -113,6 +120,13 @@ FA = dict(
     cta_work="دیدن نمونه‌کارها", cta_cv="دانلود رزومه",
     avail="آمادهٔ همکاری در نقش‌های Product Owner، مدیر محصول و طراح محصول در هلند یا دورکاری. اجازهٔ کار در اروپا دارم و به اسپانسر نیاز ندارم.",
     home_caption="صفحهٔ اول گوشی‌ام؛ همهٔ این اپ‌ها را خودم ساخته‌ام.",
+    sky_caption="آسمانِ پشتشان، آسمانِ همین حالای روتردام است.",
+    last_change="آخرین تغییر",
+    loom_h="هر تغییر، یک گره",
+    loom_p="این دار قالی خودش می‌بافد. هر شش ساعت تاریخچهٔ محصول‌هایم را می‌خواند و برای هر هفته‌ای که یکی‌شان تغییر کرده، گره‌ای می‌زند. تارهای خالی، هفته‌هایی‌اند که هنوز نیامده‌اند.",
+    loom_cap="بافته‌شده از ۲۶ اکتبر ۲۰۲۶: {done} هفته از ۵۲ هفته.",
+    loom_last="آخرین گره {when} زده شد.",
+    loom_week="هفتهٔ {d}", loom_changes="{n} تغییر", loom_change="۱ تغییر", loom_now="این هفته",
     proof=[("شش سال کار محصول", "Product Owner و مدیر محصول، ۲۰۱۶ تا ۲۰۲۲"),
            ("از ۶۰ هزار به بیش از ۵ میلیون کاربر", "در سرویس ویدیویی‌ای که در رشدش نقش داشتم"),
            ("راه‌اندازی اسکرام", "در شایا؛ و یکسان‌سازی آیین‌های اجایل در ۱۲ سرویس همراه اول"),
@@ -233,6 +247,110 @@ def nav(t, rel, home, switch_href, full=True):
 SCRIPT = "<script>const n=document.querySelector('.nav');addEventListener('scroll',()=>n.classList.toggle('scrolled',scrollY>8),{passive:true});</script>"
 
 
+import json
+from datetime import date, datetime, timedelta
+
+PULSE = json.loads((ROOT / "assets/pulse.json").read_text(encoding="utf-8")) if (ROOT / "assets/pulse.json").exists() else {"start": "2026-10-26", "rows": {}}
+LOOM_START = date.fromisoformat(PULSE["start"])
+LOOM_ROWS = ["tw", "planet", "tik", "poly", "bazaar", "night", "verse"]
+# knot colours on the dark field: (few changes, many changes)
+KNOT = {"tw": ("#F7C04A", "#EE6F7C"), "planet": ("#8A8FF0", "#C3A8FF"), "tik": ("#F0509E", "#C59BFF"),
+        "poly": ("#FF9A3C", "#F2457F"), "bazaar": ("#3FA982", "#8EE0B8"), "night": ("#9A7BE0", "#F2D06B"),
+        "verse": ("#B98258", "#E8C49A")}
+FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
+FA_MONTHS = ["ژانویه", "فوریه", "مارس", "آوریل", "مه", "ژوئن", "ژوئیه", "اوت", "سپتامبر", "اکتبر", "نوامبر", "دسامبر"]
+
+
+def num(t, n):
+    return str(n).translate(FA_DIGITS) if t["lang"] == "fa" else str(n)
+
+
+def day_label(t, d):
+    if t["lang"] == "fa":
+        return f"{d.day} {FA_MONTHS[d.month - 1]}".translate(FA_DIGITS)
+    return d.strftime("%-d %b")
+
+
+def mix(a, b, k):
+    a, b = [int(a[i:i + 2], 16) for i in (1, 3, 5)], [int(b[i:i + 2], 16) for i in (1, 3, 5)]
+    return "#" + "".join(f"{round(x + (y - x) * k):02X}" for x, y in zip(a, b))
+
+
+def pulse_line(t, k):
+    r = PULSE["rows"].get(k)
+    if not r or not r.get("last"):
+        return ""
+    d = datetime.fromisoformat(r["last"]).date()
+    return f'<p class="pulse"><span>{t["last_change"]}: </span><time datetime="{r["last"]}" data-rel>{day_label(t, d)} {num(t, d.year)}</time></p>'
+
+
+def loom_svg(t):
+    """The loom: rows = products, columns = 52 weeks. Woven weeks are a dark carpet, the rest bare warp."""
+    rtl = t["lang"] == "fa"
+    rows = PULSE["rows"]
+    weeks_all = [int(w) for r in rows.values() for w in r.get("w", {})]
+    year = (max(weeks_all) // 52) if weeks_all else 0
+    w0 = year * 52
+    done = (max(weeks_all) - w0 + 1) if weeks_all else 0
+    peak = max([c for r in rows.values() for c in r.get("w", {}).values()] or [1])
+    LAB, CW, RH, FR, GB = 40, 20, 26, 22, 12      # label column, cell width, row height, fringe, guard band
+    W = LAB + 52 * CW
+    top = FR + GB
+    H = top + RH * len(LOOM_ROWS) + GB + FR + 18
+    X = (lambda i: W - LAB - (i + 1) * CW) if rtl else (lambda i: LAB + i * CW)
+    lab_x = W - LAB if rtl else 0
+    field_h = RH * len(LOOM_ROWS)
+    g = []
+    # warp threads with fringe, full year
+    for i in range(52):
+        cx = X(i) + CW / 2
+        g.append(f'<line class="warp" x1="{cx}" y1="4" x2="{cx}" y2="{top + field_h + GB + FR - 4}"/>')
+        g.append(f'<circle class="tassel" cx="{cx}" cy="4" r="1.6"/><circle class="tassel" cx="{cx}" cy="{top + field_h + GB + FR - 4}" r="1.6"/>')
+    weave = []
+    if done:
+        fx = X(done - 1) if rtl else X(0)
+        fw = done * CW
+        weave.append(f'<rect class="field" x="{fx}" y="{FR}" width="{fw}" height="{field_h + 2 * GB}" rx="3"/>')
+        for i in range(done):
+            cx = X(i) + CW / 2
+            weave.append(f'<path class="guard" d="M{cx} {FR + 2} l4 4 -4 4 -4 -4z"/><path class="guard" d="M{cx} {top + field_h + 2} l4 4 -4 4 -4 -4z"/>')
+            weave.append(f'<line class="warp-in" x1="{cx}" y1="{top}" x2="{cx}" y2="{top + field_h}"/>')
+        for r_i in range(len(LOOM_ROWS)):
+            cy = top + r_i * RH + RH / 2
+            weave.append(f'<line class="weft" x1="{fx + 3}" y1="{cy}" x2="{fx + fw - 3}" y2="{cy}"/>')
+    knots = []
+    import math
+    for r_i, k in enumerate(LOOM_ROWS):
+        wk = rows.get(k, {}).get("w", {})
+        cy = top + r_i * RH + RH / 2
+        for i in range(done):
+            n = wk.get(str(w0 + i), 0)
+            if not n:
+                gx = X(i) + CW / 2
+                knots.append(f'<path class="ground" d="M{gx} {cy - 2.6}l2.6 2.6 -2.6 2.6 -2.6 -2.6z"/>')
+                continue
+            q = math.log1p(n) / math.log1p(peak)
+            sz = 3.2 + 6.3 * q
+            col = mix(*KNOT[k], q)
+            monday = LOOM_START + timedelta(weeks=w0 + i)
+            tip = f'{t["names"][k]}, {t["loom_week"].format(d=day_label(t, monday))}: ' + (t["loom_change"] if n == 1 else t["loom_changes"].format(n=num(t, n)))
+            cx = X(i) + CW / 2
+            knots.append(f'<path class="knot" style="--d:{i * 90 + r_i * 25}ms" fill="{col}" d="M{cx} {cy - sz}l{sz} {sz} -{sz} {sz} -{sz} -{sz}z"><title>{tip}</title></path>')
+    labels = "".join(f'<use href="#i-{k}" x="{lab_x + 8}" y="{top + r_i * RH + 3}" width="20" height="20"/>' for r_i, k in enumerate(LOOM_ROWS))
+    shuttle_y = top + field_h + GB + FR + 6
+    shuttle = f'<g class="shuttle" data-w0="{w0}" data-start="{PULSE["start"]}" data-rtl="{int(rtl)}" data-x0="{LAB}" data-cw="{CW}" data-w="{W}"><path d="M0 {shuttle_y}l5 7h-10z" transform="translate({X(max(done - 1, 0)) + CW / 2} 0)"/></g>'
+    last = max((r["last"] for r in rows.values() if r.get("last")), default=None)
+    cap = t["loom_cap"].format(done=num(t, done))
+    if last:
+        d = datetime.fromisoformat(last).date()
+        cap += " " + t["loom_last"].format(when=f'<time datetime="{last}" data-rel>{day_label(t, d)}</time>')
+    names = "، ".join(t["names"][k] for k in LOOM_ROWS) if rtl else ", ".join(t["names"][k] for k in LOOM_ROWS)
+    svg = (f'<svg class="loom" viewBox="0 0 {W} {H}" role="img" aria-label="{t["loom_h"]}: {names}">'
+           f'<g class="threads">{"".join(g)}</g><g class="woven">{"".join(weave)}{"".join(knots)}</g>'
+           f'<g class="labels">{labels}</g>{shuttle}</svg>')
+    return f'<figure class="loom-fig"><div class="loom-scroll">{svg}</div><figcaption class="small">{cap}</figcaption></figure>'
+
+
 def home_page(t):
     L = t["lang"]
     rel = "" if L == "en" else "../"
@@ -260,11 +378,11 @@ def home_page(t):
 <div class="links"><a class="btn solid" href="#work">{t["cta_work"]}</a><a class="btn" href="{rel}cv.pdf" download>{t["cta_cv"]}</a></div>
 <p class="avail"><i aria-hidden="true"></i>{t["avail"]}</p>
 </div>
-<div class="home">
+<div class="home" data-sky>
 <ul class="apps">
 {apps}
 </ul>
-<p>{t["home_caption"]}</p>
+<p>{t["home_caption"]} <span class="sky-cap" hidden>{t["sky_caption"]}</span></p>
 </div>
 </div>
 </header>''')
@@ -295,7 +413,7 @@ def home_page(t):
 <div>
 <div class="meta">{pills}</div>
 <div class="title-row">{icons}<h3>{title}</h3></div>
-<p class="aka">{t["aka"]}: <span class="ltr">{f["aka"]}</span></p>
+<p class="aka">{t["aka"]}: <span class="ltr">{f["aka"]}</span></p>{pulse_line(t, k)}
 <p>{f["p"]}</p>
 <ul class="facts">{facts}</ul>
 <div class="links">{links}</div>
@@ -315,7 +433,7 @@ def home_page(t):
         else:
             u = URL[k] if URL[k].startswith("http") else rel + URL[k]
             links = f'<a class="textlink" href="{u}">{t["open"]}</a>' + (f'<a class="textlink" href="{CODE[k]}">{t["code"]}</a>' if k in CODE else "")
-        items.append(f'<li>{icon(k, "ic lg")}<div><h3>{names[k]}</h3><p class="aka" style="margin:0">{t["aka_wip"] if k == "side" else t["aka"]}: {aka}</p><p>{p}</p><div class="links">{links}</div></div></li>')
+        items.append(f'<li>{icon(k, "ic lg")}<div><h3>{names[k]}</h3><p class="aka" style="margin:0">{t["aka_wip"] if k == "side" else t["aka"]}: {aka}</p><p>{p}</p>{pulse_line(t, k)}<div class="links">{links}</div></div></li>')
     out.append(f'''<section class="sec" id="more" aria-labelledby="more-h">
 <div class="wrap">
 <div class="sec-head"><h2 id="more-h">{t["more_h"]}</h2><p>{t["more_p"]}</p></div>
@@ -325,6 +443,12 @@ def home_page(t):
 </div>
 </section>''')
     steps = "".join(f'<li><h3>{a}</h3><p>{b}</p></li>' for a, b in t["steps"])
+    out.append(f'''<section class="sec loom-sec" id="loom" aria-labelledby="loom-h">
+<div class="wrap">
+<div class="sec-head"><h2 id="loom-h">{t["loom_h"]}</h2><p>{t["loom_p"]}</p></div>
+{loom_svg(t)}
+</div>
+</section>''')
     out.append(f'''<section class="dark" id="how" aria-labelledby="how-h">
 <div class="wrap">
 <div class="sec-head"><h2 id="how-h">{t["how_h"]}</h2><p>{t["how_p"]}</p></div>
@@ -352,6 +476,7 @@ def home_page(t):
 </section>
 <footer><div class="wrap"><span>© 2026 {"Maryam Jaberi" if L == "en" else "مریم جابری"}</span><span>{t["footer"]}</span></div></footer>
 {SCRIPT}
+<script defer src="{rel}assets/live.js"></script>
 </body>
 </html>
 ''')
