@@ -17,6 +17,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+[id]{scroll-margin-top:84px}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);font-feature-settings:"ss01"}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
@@ -187,7 +188,8 @@ figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
 @media (max-width:560px){
   .wrap{padding:0 16px}
   .nav .wrap{gap:12px}
-  .nav a.l{display:none}
+  .nav a.l:not(.cv){display:none}
+  .nav a.l.cv{font-size:15px}
   .brand{font-size:18px}
   .brand svg{width:22px;height:22px}
   .proof ul{grid-template-columns:1fr 1fr}

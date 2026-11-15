@@ -18,21 +18,21 @@ SITE = "https://maryamjaberi.github.io/"
 URL = {
     "tw": "wellbeing-check/", "planet": SITE + "earth-through-time/", "tik": SITE + "Dour/",
     "poly": SITE + "Language-Learning-Party-Game/", "bazaar": "daneshsara/", "night": "mafia/",
-    "birds": SITE + "simorgh/", "verse": SITE + "ganjoor-no/",
+    "verse": SITE + "ganjoor-no/",
 }
 CODE = {
-    "planet": GH + "/earth-through-time", "tik": GH + "/Dour", "poly": GH + "/Language-Learning-Party-Game",
-    "night": GH + "/Mafia", "birds": GH + "/simorgh", "verse": GH + "/ganjoor-no",
+    "planet": GH + "/earth-through-time-new", "tik": GH + "/Dour-new", "poly": GH + "/Language-Learning-Party-Game-new",
+    "night": GH + "/Mafia-new", "verse": GH + "/ganjoor-no-new",
 }
 
 EN = dict(
     lang="en", dir="ltr", other="fa", other_label="فا", other_name="فارسی",
     title="Maryam Jaberi — Product Manager & Product Designer, Rotterdam",
-    desc="Maryam Jaberi, Product Manager and Product Designer in Rotterdam. Six years in product at search, streaming and education platforms with millions of users; nine products of her own.",
+    desc="Maryam Jaberi, Product Manager and Product Designer in Rotterdam. Six years in product at search, streaming and education platforms with millions of users; eight products of her own.",
     skip="Skip to selected work",
     nav=dict(work="Work", how="How I work", xp="Experience", cv="CV", contact="Contact"),
     names=dict(tw="Teamweather", planet="Once Upon a Planet", tik="Tik-Tak", poly="Polyglot Party",
-               bazaar="Knowledge Bazaar", night="Night Shift", birds="Thirty Birds", verse="Slow Verse", side="Side by Side"),
+               bazaar="Knowledge Bazaar", night="Night Shift", verse="Slow Verse", side="Side by Side"),
     kicker="Product Manager & Product Designer in Rotterdam",
     h1="I turn fuzzy ideas into products people can use.",
     lede="Six years in product at search, streaming and education platforms with millions of users. These days I also build the first version myself, so a team can test an idea instead of debating it.",
@@ -49,7 +49,7 @@ EN = dict(
     case="Case study", read_case="Read the case study", open_product="Open the product",
     play="Play", open="Open", code="Code", soon="In progress",
     labels=dict(role="Role", built="Built", status="Status", decision="Decision"),
-    aka="Live as",
+    aka="Live as", aka_wip="Working name",
     features=[
         dict(key="tw", aka="Workplace Wellbeing Check", tags=["B2B service"], case="case/wellbeing-check.html",
              p="A weather report for a team's inner climate. Employees answer anonymously; HR gets a forecast by job level and a plan of workshops.",
@@ -72,7 +72,6 @@ EN = dict(
     more=[
         ("bazaar", "Daneshsara", "Five Persian wikis that talk to each other: psychology, sociology, genetics, philosophy and linguistics, joined by 25 mapped bridges. Every source graded."),
         ("night", "Miz Khoda", "The Mafia narrator's assistant: deal roles, run the night, count the votes. Rules are data, so a new scenario needs no developer."),
-        ("birds", "Par-e Simorgh", "Contemporary Iran as a multi-round Mafia table, named after Attar's thirty birds: 37 roles, 7 nights, 76 sourced claims."),
         ("verse", "Ganjoor No", "Persian poetry, read slowly: a calmer redesign of the best-known online poetry archive."),
         ("side", "Hamrah", "Find someone to work, learn or go out with. MVP built; the next six releases are specified."),
     ],
@@ -88,8 +87,8 @@ EN = dict(
             ("Design", ["UX research and usability testing", "Information architecture", "Service and game design", "Prototyping"]),
             ("Education", ["MSc Industrial Engineering, 2023", "Google UX Design certificate", "IBM Product Manager certificate", "Agile and Scrum, IBM / SkillUp"])],
     jobs=[("2022 – now", "Independent product and game designer", "Rotterdam",
-           "Shipped nine products of my own, eight of them live. Founded SoloNovate to offer Teamweather to Dutch organisations. Reached Dutch B1 along the way."),
-          ("2020 – 2022", "Product Manager, Search", "Hamrahe Aval (MCI), 1,000+ people",
+           "Built eight products of my own: seven are live, one is in progress. Founded SoloNovate to offer Teamweather to Dutch organisations."),
+          ("2020 – 2022", "Product Manager, Search", "Hamrahe Aval (MCI), 1,000+ employees",
            "Led the shopping-search roadmap. Started Persian speech recognition from zero with 3,000 hours of validated audio. Onboarded 1,000+ retailers, launched answer boxes on 20+ services (+10% correct clicks) and cut cross-team release errors by 10%."),
           ("2018 – 2020", "Associate Product Manager", "Arshan Media (GapFilm)",
            "Owned video-on-demand across Android, Android TV, web, kids and CMS. Grew users from 60,000 to over 5 million, added about five minutes to average sessions and scaled the CMS to 100+ admins."),
@@ -103,11 +102,11 @@ EN = dict(
 FA = dict(
     lang="fa", dir="rtl", other="en", other_label="EN", other_name="English",
     title="مریم جابری — مدیر محصول و طراح محصول، روتردام",
-    desc="مریم جابری، مدیر محصول و طراح محصول در روتردام. شش سال کار محصول در جست‌وجو، ویدیوی آنلاین و آموزش با میلیون‌ها کاربر؛ و نُه محصول از خودش.",
+    desc="مریم جابری، مدیر محصول و طراح محصول در روتردام. شش سال کار محصول در جست‌وجو، ویدیوی آنلاین و آموزش با میلیون‌ها کاربر؛ و هشت محصول از خودش.",
     skip="رفتن به نمونه‌کارها",
     nav=dict(work="کارها", how="روش کار", xp="سابقه", cv="رزومه", contact="تماس"),
     names=dict(tw="هوای تیم", planet="روزی روزگاری، زمین", tik="تیک‌تاک", poly="مهمانی زبان‌ها",
-               bazaar="بازارچهٔ دانش", night="شب‌گردان", birds="سی مرغ", verse="شعرِ آهسته", side="شانه‌به‌شانه"),
+               bazaar="بازارچهٔ دانش", night="شب‌گردان", verse="شعرِ آهسته", side="شانه‌به‌شانه"),
     kicker="مدیر محصول و طراح محصول در روتردام",
     h1="ایده‌های مبهم را به محصولی تبدیل می‌کنم که آدم‌ها واقعاً از آن استفاده کنند.",
     lede="شش سال کار محصول در جست‌وجو، ویدیوی آنلاین و آموزش، با میلیون‌ها کاربر. این روزها نسخهٔ اول را هم خودم می‌سازم تا تیم به‌جای بحث دربارهٔ ایده، خودِ ایده را آزمایش کند.",
@@ -115,7 +114,7 @@ FA = dict(
     avail="آمادهٔ همکاری در نقش‌های Product Owner، مدیر محصول و طراح محصول در هلند یا دورکاری. اجازهٔ کار در اروپا دارم و به اسپانسر نیاز ندارم.",
     home_caption="صفحهٔ اول گوشی‌ام؛ همهٔ این اپ‌ها را خودم ساخته‌ام.",
     proof=[("شش سال کار محصول", "Product Owner و مدیر محصول، ۲۰۱۶ تا ۲۰۲۲"),
-           ("از ۶۰ هزار به ۵ میلیون کاربر", "در سرویس ویدیویی‌ای که در رشدش نقش داشتم"),
+           ("از ۶۰ هزار به بیش از ۵ میلیون کاربر", "در سرویس ویدیویی‌ای که در رشدش نقش داشتم"),
            ("راه‌اندازی اسکرام", "در شایا؛ و یکسان‌سازی آیین‌های اجایل در ۱۲ سرویس همراه اول"),
            ("کارشناسی ارشد مهندسی صنایع", "دانشگاه علم و صنعت ایران"),
            ("فارسی، انگلیسی، هلندی", "زبان مادری، B2 و B1")],
@@ -124,7 +123,7 @@ FA = dict(
     case="کیس‌استادی", read_case="خواندن کیس‌استادی", open_product="باز کردن محصول",
     play="بازی کنید", open="باز کردن", code="کد", soon="در حال ساخت",
     labels=dict(role="نقش من", built="ساخته‌شده", status="وضعیت", decision="تصمیم"),
-    aka="نام محصول",
+    aka="نام محصول", aka_wip="نام کاری",
     features=[
         dict(key="tw", aka="Workplace Wellbeing Check", tags=["خدمت سازمانی"], case="case/wellbeing-check.html",
              p="پیش‌بینی هوای درونی تیم. کارکنان ناشناس پاسخ می‌دهند؛ منابع انسانی گزارشی به تفکیک ردهٔ شغلی و برنامهٔ کارگاه می‌گیرد.",
@@ -147,7 +146,6 @@ FA = dict(
     more=[
         ("bazaar", "دانش‌سرا", "پنج ویکی فارسی که با هم حرف می‌زنند: روان‌شناسی، جامعه‌شناسی، ژنتیک، فلسفه و زبان‌شناسی، با ۲۵ پلِ مشخص میانشان. هر منبع درجه‌بندی شده."),
         ("night", "میز خدا", "دستیار گردانندهٔ مافیا: پخش نقش، اجرای شب، شمارش رأی. قانون‌ها داده‌اند، پس سناریوی تازه برنامه‌نویس لازم ندارد."),
-        ("birds", "پرِ سیمرغ", "ایران امروز به‌شکل یک میز مافیای چنددوره‌ای، به یاد سی مرغ عطار: ۳۷ نقش، ۷ شب، ۷۶ ادعای مستند."),
         ("verse", "گنجور نو", "شعر فارسی را آهسته بخوانید: بازطراحی آرام‌ترِ شناخته‌شده‌ترین آرشیو آنلاین شعر فارسی."),
         ("side", "همراه", "کسی را پیدا کنید که با او کار کنید، یاد بگیرید یا بیرون بروید. نسخهٔ اول ساخته شده؛ شش انتشار بعدی مستند شده‌اند."),
     ],
@@ -163,8 +161,8 @@ FA = dict(
             ("مهارت‌های طراحی", ["پژوهش کاربر و تست کاربردپذیری", "معماری اطلاعات", "طراحی خدمت و بازی", "نمونه‌سازی"]),
             ("تحصیلات", ["کارشناسی ارشد مهندسی صنایع، ۲۰۲۳", "گواهی طراحی UX گوگل", "گواهی مدیر محصول IBM", "اجایل و اسکرام، IBM / SkillUp"])],
     jobs=[("۲۰۲۲ تا امروز", "طراح مستقل محصول و بازی", "روتردام",
-           "نُه محصول از خودم ساخته‌ام که هشت‌تایش منتشر شده. SoloNovate را راه انداختم تا هوای تیم را به سازمان‌های هلندی عرضه کنم. در این مسیر هلندی‌ام به B1 رسید."),
-          ("۲۰۲۰ تا ۲۰۲۲", "مدیر محصول جست‌وجو", "همراه اول، بیش از ۱۰۰۰ نفر",
+           "هشت محصول از خودم ساخته‌ام: هفت‌تا منتشر شده و یکی در حال ساخت است. SoloNovate را راه انداختم تا هوای تیم را به سازمان‌های هلندی عرضه کنم."),
+          ("۲۰۲۰ تا ۲۰۲۲", "مدیر محصول جست‌وجو", "همراه اول، بیش از ۱۰۰۰ کارمند",
            "نقشهٔ راه جست‌وجوی خرید را رهبری کردم. تشخیص گفتار فارسی را از صفر با ۳۰۰۰ ساعت صدای اعتبارسنجی‌شده شروع کردم. بیش از ۱۰۰۰ فروشنده را وارد کردم، جعبه‌های پاسخ را در بیش از ۲۰ سرویس راه انداختم (۱۰٪ کلیک درست بیشتر) و خطاهای انتشار بین‌تیمی را ۱۰٪ کم کردم."),
           ("۲۰۱۸ تا ۲۰۲۰", "Associate Product Manager", "آرشان مدیا (گپ‌فیلم)",
            "مالک ویدیوی درخواستی در اندروید، اندروید تی‌وی، وب، کودک و CMS بودم. کاربران را از ۶۰ هزار به بیش از ۵ میلیون رساندیم، میانگین نشست حدود پنج دقیقه بیشتر شد و CMS برای بیش از ۱۰۰ ادمین بزرگ شد."),
@@ -225,7 +223,7 @@ def nav(t, rel, home, switch_href, full=True):
     return f'''<nav class="nav" aria-label="Main">
 <div class="wrap">
 <a class="brand" href="{home}">{MARK}{"Maryam Jaberi" if t["lang"] == "en" else "مریم جابری"}</a>
-{links}<a class="l" href="{rel}cv.pdf">{n["cv"]}</a>
+{links}<a class="l cv" href="{rel}cv.pdf">{n["cv"]}</a>
 <a class="lang" href="{switch_href}" hreflang="{t["other"]}" lang="{t["other"]}" title="{t["other_name"]}">{t["other_label"]}</a>
 <a class="btn sm" href="{home}#contact">{n["contact"]}</a>
 </div>
@@ -246,7 +244,7 @@ def home_page(t):
     out.append(f'<a class="skip" href="#work">{t["skip"]}</a>')
     out.append(nav(t, rel, "./", "fa/" if L == "en" else "../"))
     # hero
-    order = ["tw", "planet", "tik", "poly", "bazaar", "night", "birds", "verse", "side"]
+    order = ["tw", "planet", "tik", "poly", "bazaar", "night", "verse", "side"]
     def app_href(k):
         if k == "tw": return "#work"
         if k == "side": return "#more"
@@ -317,7 +315,7 @@ def home_page(t):
         else:
             u = URL[k] if URL[k].startswith("http") else rel + URL[k]
             links = f'<a class="textlink" href="{u}">{t["open"]}</a>' + (f'<a class="textlink" href="{CODE[k]}">{t["code"]}</a>' if k in CODE else "")
-        items.append(f'<li>{icon(k, "ic lg")}<div><h3>{names[k]}</h3><p class="aka" style="margin:0">{t["aka"]}: {aka}</p><p>{p}</p><div class="links">{links}</div></div></li>')
+        items.append(f'<li>{icon(k, "ic lg")}<div><h3>{names[k]}</h3><p class="aka" style="margin:0">{t["aka_wip"] if k == "side" else t["aka"]}: {aka}</p><p>{p}</p><div class="links">{links}</div></div></li>')
     out.append(f'''<section class="sec" id="more" aria-labelledby="more-h">
 <div class="wrap">
 <div class="sec-head"><h2 id="more-h">{t["more_h"]}</h2><p>{t["more_p"]}</p></div>
@@ -394,7 +392,7 @@ CASES = {
 <figure><img src="{img}wb-report.webp" alt="Organisation report with sample data for 180 respondents in four job levels" loading="lazy" width="1200" height="750"><figcaption>The organisation report with sample data: four numbers first, then a plain-language summary, then detail by job level.</figcaption></figure>
 <figure><img src="{img}wb-workshops.webp" alt="Workshop catalogue with audience, duration, goals and evidence for each workshop" loading="lazy" width="1200" height="750"><figcaption>Each workshop states who it's for, how long it takes, its goals and the research behind it.</figcaption></figure>
 <p>Then I wrapped it as a service a manager can say yes to: a four-week pilot (set up, collect, report, debrief), ready-made documents for the works council, staff and data processing, and an absence-cost calculator that shows what a small improvement is worth in euros.</p>'''),
-                ("Result so far", '''<p>A complete, working pilot in English, Dutch and Persian: survey, personal summary, organisation report, workshop catalogue, method and sources, and the pilot documents. It is offered through SoloNovate, my company in Rotterdam.</p>
+                ("Result so far", '''<p>A complete, working pilot: the survey and personal summary in nine languages, plus the organisation report, workshop catalogue, method and sources, and the pilot documents. It is offered through SoloNovate, my company in Rotterdam.</p>
 <p>It has no real users yet. Psychologists, HR managers and managers of large organisations have seen it, and I am looking for the first pilot organisations.</p>
 <h3>What I'll measure in the first pilot</h3><ul><li>Participation per job level: is the anonymity trusted?</li><li>Time from report to first workshop booked: does the report lead to action?</li><li>Change per dimension at the repeat measurement after 3 to 6 months.</li></ul>'''),
                 ("What I'd do differently", '''<p><b>Talk to buyers earlier.</b> I built the full report and nine languages before asking five HR managers how they buy. A one-page concept and a sample report would have tested the riskiest assumption, willingness to pay, in a week.</p>
@@ -433,7 +431,7 @@ CASES = {
 <figure><img src="{img}wb-report.webp" alt="گزارش سازمان با دادهٔ نمونه برای ۱۸۰ پاسخ‌دهنده در چهار ردهٔ شغلی" loading="lazy" width="1200" height="750"><figcaption>گزارش سازمان با دادهٔ نمونه: اول چهار عدد، بعد خلاصه به زبان ساده، بعد جزئیات به تفکیک رده.</figcaption></figure>
 <figure><img src="{img}wb-workshops.webp" alt="فهرست کارگاه‌ها با مخاطب، مدت، هدف و شواهد" loading="lazy" width="1200" height="750"><figcaption>هر کارگاه می‌گوید برای چه کسی است، چقدر طول می‌کشد، هدفش چیست و چه پژوهشی پشتش است.</figcaption></figure>
 <p>بعد آن را به شکل خدمتی درآوردم که مدیر بتواند به آن «بله» بگوید: اجرای آزمایشی چهارهفته‌ای (راه‌اندازی، جمع‌آوری، گزارش، جلسهٔ جمع‌بندی)، مدارک آماده برای شورای کار، کارکنان و پردازش داده، و ماشین‌حساب هزینهٔ غیبت که نشان می‌دهد یک بهبود کوچک چند یورو می‌ارزد.</p>'''),
-                ("نتیجه تا امروز", '''<p>یک نسخهٔ آزمایشیِ کامل و کارا به انگلیسی، هلندی و فارسی: پرسش‌نامه، خلاصهٔ شخصی، گزارش سازمان، فهرست کارگاه‌ها، روش و منابع، و مدارک اجرای آزمایشی. از طریق SoloNovate، شرکتم در روتردام، عرضه می‌شود.</p>
+                ("نتیجه تا امروز", '''<p>یک نسخهٔ آزمایشیِ کامل و کارا: پرسش‌نامه و خلاصهٔ شخصی به نُه زبان، به‌علاوهٔ گزارش سازمان، فهرست کارگاه‌ها، روش و منابع، و مدارک اجرای آزمایشی. از طریق SoloNovate، شرکتم در روتردام، عرضه می‌شود.</p>
 <p>هنوز کاربر واقعی ندارد. روان‌شناس‌ها، مدیران منابع انسانی و مدیران سازمان‌های بزرگ آن را دیده‌اند و دنبال اولین سازمان‌ها برای اجرای آزمایشی هستم.</p>
 <h3>آنچه در اولین اجرا می‌سنجم</h3><ul><li>نرخ مشارکت در هر رده: آیا به ناشناس‌ماندن اعتماد شده؟</li><li>فاصلهٔ گزارش تا رزرو اولین کارگاه: آیا گزارش به عمل می‌رسد؟</li><li>تغییر هر بُعد در سنجش دوباره بعد از ۳ تا ۶ ماه.</li></ul>'''),
                 ("اگر دوباره می‌ساختم", '''<p><b>زودتر با خریدار حرف می‌زدم.</b> گزارش کامل و نُه زبان را ساختم و بعد از پنج مدیر منابع انسانی پرسیدم چطور خرید می‌کنند. یک مفهوم یک‌صفحه‌ای و یک نمونه‌گزارش می‌توانست پرریسک‌ترین فرض، یعنی تمایل به پرداخت، را در یک هفته بیازماید.</p>

@@ -1,0 +1,11 @@
+
+# کلید و رمز — هرگز وارد مخزن نشوند
+*.keystore
+*.jks
+*.key
+*.pem
+key.properties
+.env
+.env.*
+node_modules/
+dist/
