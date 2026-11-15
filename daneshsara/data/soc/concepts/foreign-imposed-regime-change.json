@@ -1,0 +1,86 @@
+{
+ "id": "soc:foreign-imposed-regime-change",
+ "kind": "concept",
+ "title": {
+  "fa": "تغییرِ نظامِ تحمیل‌شده از بیرون",
+  "en": "Foreign-imposed regime change",
+  "nl": "Foreign-imposed regime change"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "وقتی یک قدرتِ خارجی حکومتی را با زور برمی‌دارد، چه می‌شود؟ پژوهشِ داونز و مونتن روی همهٔ موارد از ۱۸۱۶ نشان می‌دهد چنین تغییری به‌ندرت دموکراسی می‌سازد، مگر جایی که پیش‌شرط‌های داخلی از قبل بوده است.",
+  "en": "What happens when a foreign power removes a government by force? Downes and Monten find such change rarely produces democracy except where domestic preconditions already existed.",
+  "nl": "What happens when a foreign power removes a government by force? Downes and Monten find such change rarely produces democracy except where domestic preconditions already existed."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "یافته: تغییرِ نظامِ تحمیل‌شده به‌طورِ کلی احتمالِ دموکراسی را بالا نمی‌برد؛ استثناها کشورهایی‌اند که ثروت، همگونی و تجربهٔ پیشینِ دموکراسی داشتند و جایی که مداخله‌گر خودش نهادسازیِ دموکراتیک را هدف گرفت.",
+    "en": "Finding: foreign-imposed regime change does not generally raise the odds of democracy; exceptions are wealthy, homogeneous countries with prior democratic experience and cases where the intervener pursued institution-building.",
+    "nl": "Finding: foreign-imposed regime change does not generally raise the odds of democracy; exceptions are wealthy, homogeneous countries with prior democratic experience and cases where the intervener pursued institution-building."
+   },
+   "sources": [
+    "src:5077e79964"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سازوکار: حکومتِ تازه مشروعیتِ داخلی ندارد و به حامیِ بیرونی وابسته است؛ و فروپاشیِ دستگاهِ دولت (مثلِ انحلالِ ارتش و حزب در عراقِ ۲۰۰۳) خلأیی می‌سازد که گروه‌های مسلح پر می‌کنند.",
+    "en": "Mechanism: the new government lacks domestic legitimacy and depends on its backer; collapse of the state apparatus (as in Iraq 2003) creates a vacuum armed groups fill.",
+    "nl": "Mechanism: the new government lacks domestic legitimacy and depends on its backer; collapse of the state apparatus (as in Iraq 2003) creates a vacuum armed groups fill."
+   },
+   "sources": [
+    "src:5077e79964",
+    "src:b76e3ec683"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شاهد از ایران (گمان، تیر ۱۴۰۵): ۳۰٪ «مداخلهٔ نظامیِ خارجی» را راهِ مؤثرِ تغییر دانستند و جامعه دربارهٔ ماهیتِ جنگِ ۳۹روزه دو نیمه است (۴۲٪ تجاوز می‌دانند و تقریباً همین اندازه نه).",
+    "en": "Evidence from Iran (GAMAAN, June 2026): 30 percent see foreign military intervention as effective, and society is split on the 39-day war.",
+    "nl": "Evidence from Iran (GAMAAN, June 2026): 30 percent see foreign military intervention as effective, and society is split on the 39-day war."
+   },
+   "sources": [
+    "src:6c0a6f1ef3"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:civil-resistance-success-rates",
+   "rel": "see-also",
+   "note": {
+    "fa": "موفقیتِ مقاومتِ مدنی",
+    "en": "Civil resistance success",
+    "nl": "Civil resistance success"
+   }
+  },
+  {
+   "to": "soc:radical-minorities-violence-and-political-transitions",
+   "rel": "see-also",
+   "note": {
+    "fa": "خشونت و گذار",
+    "en": "Violence and transitions",
+    "nl": "Violence and transitions"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:5077e79964",
+  "src:b76e3ec683",
+  "src:6c0a6f1ef3"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}

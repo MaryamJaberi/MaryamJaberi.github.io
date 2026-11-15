@@ -74,6 +74,30 @@
     "contested",
     "editor-note"
    ]
+  },
+  {
+   "text": {
+    "fa": "اصلِ کار: قدرت به همکاری وابسته است. ستون‌ها (امنیت، دیوان‌سالاری، بازار و اقتصاد، نهادِ دینی، رسانه، پشتیبانانِ خارجی) آدم‌هایی‌اند با منافع، خانواده و ترس؛ چرخیدنشان با تهدید کمتر رخ می‌دهد تا با دیدنِ آیندهٔ امن.",
+    "en": "Principle: power depends on cooperation. Pillars are people with interests, families and fears; they shift less under threat than when they see a safe future.",
+    "nl": "Principle: power depends on cooperation. Pillars are people with interests, families and fears; they shift less under threat than when they see a safe future."
+   },
+   "sources": [
+    "src:458bea7f0f",
+    "src:9ce61897e7"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شاهد از ایران (۱۳۵۷): به روایتِ چنووت و استفان، برادری با سرباز (گل در لولهٔ تفنگ، «ارتش جزوِ ملت است») روحیهٔ ارتش را فرو ریخت و اعتصابِ چرخشی دولت را از کار انداخت، چون سرباز نمی‌تواند پالایشگاه و نیروگاه را بچرخاند؛ به نقلِ کورزمن، فرماندهان بازداشتِ صد هزار نفر را بررسی کردند ولی زندان‌ها فقط جای پنج هزار نفر داشت.",
+    "en": "Evidence from Iran (1979): fraternisation broke army morale and rolling strikes disabled the state; per Kurzman, commanders considered 100,000 arrests but jails had room for 5,000.",
+    "nl": "Evidence from Iran (1979): fraternisation broke army morale and rolling strikes disabled the state; per Kurzman, commanders considered 100,000 arrests but jails had room for 5,000."
+   },
+   "sources": [
+    "src:41c1e6a2e7",
+    "src:435917f7dd"
+   ],
+   "flags": []
   }
  ],
  "links": [
@@ -103,6 +127,24 @@
     "en": "revolution or reform",
     "nl": "revolution or reform"
    }
+  },
+  {
+   "to": "soc:security-defection-credible-commitment",
+   "rel": "see-also",
+   "note": {
+    "fa": "ریزشِ نیروهای امنیتی",
+    "en": "Security defection",
+    "nl": "Security defection"
+   }
+  },
+  {
+   "to": "tarikh:revolution-1979",
+   "rel": "see-also",
+   "note": {
+    "fa": "انقلاب ۱۳۵۷",
+    "en": "1979 revolution",
+    "nl": "1979 revolution"
+   }
   }
  ],
  "people": [
@@ -112,7 +154,11 @@
  "sources": [
   "src:06b0d9c12e",
   "src:b276430b51",
-  "src:fa72a0a484"
+  "src:fa72a0a484",
+  "src:458bea7f0f",
+  "src:9ce61897e7",
+  "src:41c1e6a2e7",
+  "src:435917f7dd"
  ],
  "booklets": [],
  "origin": null,

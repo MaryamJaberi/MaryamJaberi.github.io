@@ -1,0 +1,101 @@
+{
+ "id": "soc:exit-voice-loyalty",
+ "kind": "concept",
+ "title": {
+  "fa": "خروج، صدا، وفاداری: هیرشمن",
+  "en": "Exit, voice and loyalty: Hirschman",
+  "nl": "Exit, voice and loyalty: Hirschman"
+ },
+ "aliases": [],
+ "parent": "soc:collective",
+ "field": "soc:collective",
+ "summary": {
+  "fa": "وقتی سازمانی رو به افول است اعضا سه راه دارند: می‌روند (خروج)، اعتراض می‌کنند (صدا) یا می‌مانند و تحمل می‌کنند (وفاداری). خروجِ آسان صدا را ضعیف می‌کند، چون پرمهارت‌ترین‌ها اول می‌روند؛ و وقتی خروج بسته شود فشار به سمتِ صدا می‌رود.",
+  "en": "Members of a declining organisation can leave (exit), protest (voice) or stay and endure (loyalty). Easy exit weakens voice because the most skilled leave first; when exit closes, pressure shifts to voice.",
+  "nl": "Members of a declining organisation can leave (exit), protest (voice) or stay and endure (loyalty). Easy exit weakens voice because the most skilled leave first; when exit closes, pressure shifts to voice."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سازوکار: خروجِ آسان صدا را ضعیف می‌کند، چون پرمهارت‌ترین و پرانرژی‌ترین‌ها اول می‌روند؛ سازمانِ رو به افول با هر خروج کمتر زیرِ فشار است.",
+    "en": "Mechanism: easy exit weakens voice because the most skilled and energetic leave first; a declining organisation faces less pressure with each exit.",
+    "nl": "Mechanism: easy exit weakens voice because the most skilled and energetic leave first; a declining organisation faces less pressure with each exit."
+   },
+   "sources": [
+    "src:6ec0c8ba1e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "واقعیتِ ۱۴۰۵: به گزارشِ رویترز، خانواده‌ها هزینهٔ تحصیل را می‌بُرند و تحصیل در خارج برای بسیاری ناممکن شده؛ یعنی خروج هم گران شده. نتیجهٔ دوگانه: کسانی که نمی‌توانند بروند، یا به صدا رو می‌آورند یا به درماندگی.",
+    "en": "2026 reality: per Reuters families cut education spending and study abroad is out of reach for many, so exit has become costly too. Double result: those who cannot leave turn either to voice or to helplessness.",
+    "nl": "2026 reality: per Reuters families cut education spending and study abroad is out of reach for many, so exit has become costly too. Double result: those who cannot leave turn either to voice or to helplessness."
+   },
+   "sources": [
+    "src:7af62df15e"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "شاهد از ایران (گمان، تیر ۱۴۰۵): ۴۳٪ به نوعی می‌خواهند بروند و ۳۲٪ می‌خواهند قانونی بروند ولی امکانش را ندارند؛ یعنی «خروجِ بسته» برای بخشِ بزرگی از جامعه واقعیت است. نمونهٔ این پیمایش آنلاین و از راه فیلترشکن است.",
+    "en": "Evidence from Iran (GAMAAN, June 2026): 43 percent want to leave in some form and 32 percent want to leave legally but cannot; a blocked exit for a large share. The sample is online and VPN-based.",
+    "nl": "Evidence from Iran (GAMAAN, June 2026): 43 percent want to leave in some form and 32 percent want to leave legally but cannot; a blocked exit for a large share. The sample is online and VPN-based."
+   },
+   "sources": [
+    "src:6c0a6f1ef3"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "عددِ کلیدی از گمان (تیر ۱۴۰۵): ۳۲٪ می‌خواهند قانونی بروند ولی امکانش را ندارند. این «خروجِ بسته» بزرگ‌ترین گروهِ میزِ امروز است: آدم‌هایی که دیگر وفادار نیستند، نمی‌توانند بروند، و هنوز صدا هم نشده‌اند. هیرشمن پیش‌بینی می‌کند وقتی خروج بسته می‌شود فشار به سمتِ صدا می‌رود؛ اما فقط اگر صدا هزینهٔ تحمل‌پذیر داشته باشد، که دوباره ما را به صندوق و ضمانت برمی‌گرداند.",
+    "en": "Key GAMAAN figure: 32 percent want to leave legally but cannot. This \"blocked exit\" is the largest group at today's table: no longer loyal, unable to leave, not yet voice. Hirschman predicts pressure shifts to voice when exit closes, but only if voice has bearable cost, which leads back to the fund and the guarantee.",
+    "nl": "Key GAMAAN figure: 32 percent want to leave legally but cannot. This \"blocked exit\" is the largest group at today's table: no longer loyal, unable to leave, not yet voice. Hirschman predicts pressure shifts to voice when exit closes, but only if voice has bearable cost, which leads back to the fund and the guarantee."
+   },
+   "sources": [
+    "src:6c0a6f1ef3",
+    "src:6ec0c8ba1e"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:clear-horizon-exit-voice",
+   "rel": "see-also",
+   "note": {
+    "fa": "افق روشن و مهاجرت",
+    "en": "Clear horizon and migration",
+    "nl": "Clear horizon and migration"
+   }
+  },
+  {
+   "to": "soc:preference-falsification",
+   "rel": "see-also",
+   "note": {
+    "fa": "تحریف ترجیحات",
+    "en": "Preference falsification",
+    "nl": "Preference falsification"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:6ec0c8ba1e",
+  "src:7af62df15e",
+  "src:6c0a6f1ef3"
+ ],
+ "booklets": [],
+ "origin": null,
+ "iran": null,
+ "wikidata": null,
+ "status": "draft"
+}
