@@ -198,6 +198,10 @@ MARK = '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width=
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Young+Serif&family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet">'
 
 
+import hashlib
+VER = {f: hashlib.sha1((ROOT / "assets" / f).read_bytes()).hexdigest()[:8] for f in ("site.css", "live.js")}
+
+
 def icon(key, cls="ic"):
     return f'<svg class="{cls}" aria-hidden="true"><use href="#i-{key}"/></svg>'
 
@@ -226,7 +230,7 @@ def head(t, title, desc, rel, path, og_img):
 <meta name="theme-color" content="#F5F3FA">
 <link rel="icon" href="{rel}assets/mark.svg" type="image/svg+xml">
 {FONTS}
-<link rel="stylesheet" href="{rel}assets/site.css">
+<link rel="stylesheet" href="{rel}assets/site.css?v={VER["site.css"]}">
 '''
 
 
@@ -477,7 +481,7 @@ def home_page(t):
 </section>
 <footer><div class="wrap"><span>© 2026 {"Maryam Jaberi" if L == "en" else "مریم جابری"}</span><span>{t["footer"]}</span></div></footer>
 {SCRIPT}
-<script defer src="{rel}assets/live.js"></script>
+<script defer src="{rel}assets/live.js?v={VER["live.js"]}"></script>
 </body>
 </html>
 ''')
