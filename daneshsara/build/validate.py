@@ -30,7 +30,7 @@ for wiki in ['psy', 'soc', 'tabar', 'phil', 'tarikh']:
         if not c['id'].startswith(wiki + ':'): errors.append(f'{c["id"]}: wrong prefix for folder {wiki}')
 irans = {}
 # لایهٔ ایران ممکن است در گاوصندوق باشد و در این نسخه نباشد؛ آن وقت ارجاع‌هایش بررسی نمی‌شود.
-IRAN_LAYER = os.path.isdir(f'{R}/iran')
+IRAN_LAYER = bool(glob.glob(f'{R}/iran/*.json'))  # the public copy holds only redirect stubs
 for p in glob.glob(f'{R}/iran/*.json'):
     i = load(p); irans[i['id']] = i; check(S['iran'], i, i['id'])
 # cross references

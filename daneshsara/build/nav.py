@@ -36,7 +36,10 @@ NAV = [
  ['راهنما', [['core/ask.html', 'بپرس از دانش‌سرا'], ['core/log.html', 'دفتر پروژه: چه تغییر کرد'], ['core/need.html', 'چیزهایی که باید بگیریم'], ['atlas/coverage.html', 'نقشهٔ پوشش و نقشهٔ راه'], ['atlas/story.html', 'داستان پروژه'], ['atlas/sitemap.html', 'نقشهٔ کامل سایت'], ['atlas/collection.html', 'مخزن کتاب‌ها'], ['core/sources.html', 'منابع'], ['core/people.html', 'چهره‌ها'], ['core/contribute.html', 'مشارکت']]],
 ]
 # هر چه در این نسخه نیست (لایه‌های گاوصندوق) از نقشه برداشته می‌شود؛ بقیه باید واقعاً باشند.
-def _here(u): return os.path.exists(u + 'index.html' if u.endswith('/') else u)
+def _here(u):
+    f = u + 'index.html' if u.endswith('/') else u
+    # a public redirect stub to the vault (meta refresh to vault.html#…) does not count as present
+    return os.path.exists(f) and 'vault.html#' not in open(f, encoding='utf-8').read(2000)
 NAV = [[g, [it for it in items if _here(it[0])]] for g, items in NAV]
 NAV = [[g, items] for g, items in NAV if items]
 assert NAV, 'nav: هیچ صفحه‌ای پیدا نشد'

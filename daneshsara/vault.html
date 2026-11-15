@@ -270,7 +270,10 @@ function buildList() {
   addGroup("دیگر", paths.filter(p => !used.has(p)));
   $("list").replaceChildren(frag);
   let first = null;
-  try { first = sessionStorage.getItem(LASTPAGE); } catch (e) {}
+  const want = decodeURIComponent((location.hash || "").slice(1));
+  if (FILES[want]) first = want;
+  else if (FILES[want + "index.html"]) first = want + "index.html";
+  else { try { first = sessionStorage.getItem(LASTPAGE); } catch (e) {} }
   render(FILES[first] ? first : (paths.find(p => p === "iran/index.html") || paths[0]));
 }
 
