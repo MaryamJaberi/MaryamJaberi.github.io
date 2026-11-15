@@ -419,6 +419,7 @@ a.cite{position:relative} a.cite::after{content:"";position:absolute;inset:-7px 
  <section class="view" id="v-home"></section>
  <section class="view" id="v-take" hidden></section>
  <section class="view" id="v-result" hidden></section>
+ <section class="view" id="v-group" hidden></section>
  <section class="view" id="v-report" hidden></section>
  <section class="view" id="v-workshops" hidden></section>
  <section class="view" id="v-method" hidden></section>
@@ -1744,8 +1745,8 @@ let DB = null, USER = null, CAN = false;
 })();
 
 /* ── router ── */
-let cur = "home", joinCode = null, ROUND = null;
-const VIEWS = ["home","process","take","result","report","workshops","method","sources"];
+let cur = "home", joinCode = null, ROUND = null, groupKey = null;
+const VIEWS = ["home","process","take","result","group","report","workshops","method","sources"];
 /* strings: load result from code */
 (() => { const RL = {
  fa:["نتیجه را با کد پاسخ ببینید","کد پاسخی را که قبلاً گرفته‌اید (با SJ1- شروع می‌شود) اینجا بچسبانید. نتیجه فقط روی همین دستگاه نشان داده می‌شود و جای نتیجه‌ای را می‌گیرد که الان اینجا هست.","نمایش نتیجه","نتیجه بارگذاری شد","این کد درست نیست. کل کد را از SJ1- تا آخر کپی کنید."],
@@ -1761,16 +1762,34 @@ const VIEWS = ["home","process","take","result","report","workshops","method","s
  for(const l in T){ const v = RL[l] || RL.en; K.forEach((k, i) => T[l][k] = v[i]); }
 })();
 
+(() => { const K = ["gT","gP","gWait","gBad","gN","gAll","gOther","gYou","gLink","gTake","gByLv","gRule"]; const G = {
+ fa:["نتیجهٔ جمعی سازمان","میانگین همهٔ کسانی که با این کلید سازمان پاسخ داده‌اند. هیچ پاسخ فردی‌ای نشان داده نمی‌شود.","هنوز پاسخ کافی جمع نشده است. نتیجهٔ جمعی وقتی نشان داده می‌شود که دست‌کم {a} نفر پاسخ داده باشند، و هر ردهٔ شغلی فقط با دست‌کم {b} نفر، تا هیچ‌کس قابل شناسایی نباشد.","نتیجهٔ جمعی باز نشد. لینک یا کلید را بررسی کنید.","{n} نفر پاسخ داده‌اند","همه","سایر رده‌ها (با هم)","نتیجهٔ شما (فقط روی همین دستگاه دیده می‌شود)","دیدن نتیجهٔ جمعی سازمان","شرکت در سنجش","به تفکیک ردهٔ شغلی","قانون ناشناس‌ماندن: نتیجه از {a} پاسخ به بالا نشان داده می‌شود و هر گروه فقط با دست‌کم {b} نفر. نسخهٔ تازه فقط وقتی منتشر می‌شود که دست‌کم {b} پاسخ جدید رسیده باشد."],
+ en:["Organisation results","The average of everyone who answered with this organisation key. No individual answers are shown.","Not enough responses yet. Group results appear once at least {a} people have answered, and each job level only with at least {b}, so nobody can be identified.","The group results could not be opened. Please check the link or key.","{n} people answered","Everyone","Other levels (combined)","Your result (visible only on this device)","See the organisation results","Take the survey","By job level","Anonymity rule: results appear from {a} responses, and each group only with at least {b} people. A new version is published only after at least {b} new responses."],
+ nl:["Resultaten van de organisatie","Het gemiddelde van iedereen die met deze organisatiesleutel heeft geantwoord. Er worden geen individuele antwoorden getoond.","Nog niet genoeg antwoorden. De groepsresultaten verschijnen zodra minstens {a} mensen hebben geantwoord, en elk functieniveau pas vanaf {b} mensen, zodat niemand herkenbaar is.","De groepsresultaten konden niet worden geopend. Controleer de link of sleutel.","{n} mensen hebben geantwoord","Iedereen","Overige niveaus (samen)","Uw resultaat (alleen zichtbaar op dit apparaat)","Resultaten van de organisatie bekijken","Vragenlijst invullen","Per functieniveau","Anonimiteitsregel: resultaten verschijnen vanaf {a} antwoorden, en elke groep pas vanaf {b} mensen. Een nieuwe versie verschijnt pas na minstens {b} nieuwe antwoorden."],
+ de:["Ergebnisse der Organisation","Der Durchschnitt aller, die mit diesem Organisationsschlüssel geantwortet haben. Einzelne Antworten werden nicht angezeigt.","Noch nicht genug Antworten. Die Gruppenergebnisse erscheinen, sobald mindestens {a} Personen geantwortet haben, und jede Funktionsebene erst ab {b} Personen, damit niemand erkennbar ist.","Die Gruppenergebnisse konnten nicht geöffnet werden. Bitte prüfen Sie den Link oder Schlüssel.","{n} Personen haben geantwortet","Alle","Weitere Ebenen (zusammen)","Ihr Ergebnis (nur auf diesem Gerät sichtbar)","Ergebnisse der Organisation ansehen","Fragebogen ausfüllen","Nach Funktionsebene","Anonymitätsregel: Ergebnisse erscheinen ab {a} Antworten, jede Gruppe erst ab {b} Personen. Eine neue Version erscheint erst nach mindestens {b} neuen Antworten."],
+ fr:["Résultats de l'organisation","La moyenne de toutes les personnes ayant répondu avec cette clé d'organisation. Aucune réponse individuelle n'est affichée.","Pas encore assez de réponses. Les résultats de groupe s'affichent dès qu'au moins {a} personnes ont répondu, et chaque niveau de poste seulement à partir de {b} personnes, afin que personne ne soit identifiable.","Impossible d'ouvrir les résultats de groupe. Vérifiez le lien ou la clé.","{n} personnes ont répondu","Tout le monde","Autres niveaux (regroupés)","Votre résultat (visible uniquement sur cet appareil)","Voir les résultats de l'organisation","Remplir le questionnaire","Par niveau de poste","Règle d'anonymat : les résultats s'affichent à partir de {a} réponses, et chaque groupe seulement à partir de {b} personnes. Une nouvelle version n'est publiée qu'après au moins {b} nouvelles réponses."],
+ es:["Resultados de la organización","La media de todas las personas que respondieron con esta clave de organización. No se muestra ninguna respuesta individual.","Aún no hay suficientes respuestas. Los resultados del grupo aparecen cuando al menos {a} personas han respondido, y cada nivel de puesto solo a partir de {b} personas, para que nadie sea identificable.","No se pudieron abrir los resultados del grupo. Compruebe el enlace o la clave.","{n} personas han respondido","Todos","Otros niveles (juntos)","Su resultado (visible solo en este dispositivo)","Ver los resultados de la organización","Responder el cuestionario","Por nivel de puesto","Regla de anonimato: los resultados aparecen a partir de {a} respuestas, y cada grupo solo con al menos {b} personas. Una nueva versión se publica solo tras al menos {b} respuestas nuevas."],
+ pl:["Wyniki organizacji","Średnia wszystkich osób, które odpowiedziały z tym kluczem organizacji. Nie pokazujemy żadnych indywidualnych odpowiedzi.","Za mało odpowiedzi. Wyniki grupowe pojawią się, gdy odpowie co najmniej {a} osób, a każdy poziom stanowisk dopiero od {b} osób, aby nikogo nie dało się rozpoznać.","Nie udało się otworzyć wyników grupowych. Sprawdź link lub klucz.","Odpowiedziało {n} osób","Wszyscy","Pozostałe poziomy (łącznie)","Twój wynik (widoczny tylko na tym urządzeniu)","Zobacz wyniki organizacji","Wypełnij ankietę","Według poziomu stanowiska","Zasada anonimowości: wyniki pojawiają się od {a} odpowiedzi, a każda grupa dopiero od {b} osób. Nowa wersja pojawia się dopiero po co najmniej {b} nowych odpowiedziach."],
+ tr:["Kurum sonuçları","Bu kurum anahtarıyla yanıt veren herkesin ortalaması. Hiçbir bireysel yanıt gösterilmez.","Henüz yeterli yanıt yok. Grup sonuçları en az {a} kişi yanıt verdiğinde, her görev düzeyi ise yalnızca en az {b} kişiyle görünür; böylece kimse tanınamaz.","Grup sonuçları açılamadı. Lütfen bağlantıyı veya anahtarı kontrol edin.","{n} kişi yanıt verdi","Herkes","Diğer düzeyler (birlikte)","Sizin sonucunuz (yalnızca bu cihazda görünür)","Kurum sonuçlarını gör","Ankete katıl","Görev düzeyine göre","Anonimlik kuralı: sonuçlar {a} yanıttan itibaren, her grup yalnızca en az {b} kişiyle görünür. Yeni sürüm ancak en az {b} yeni yanıttan sonra yayımlanır."],
+ ar:["نتائج المؤسسة","متوسط كل من أجاب بمفتاح المؤسسة هذا. لا تُعرض أي إجابة فردية.","لا توجد إجابات كافية بعد. تظهر نتائج المجموعة عندما يجيب {a} أشخاص على الأقل، ولا يظهر كل مستوى وظيفي إلا بوجود {b} أشخاص على الأقل، كي لا يمكن التعرف على أحد.","تعذّر فتح نتائج المجموعة. تحقّق من الرابط أو المفتاح.","أجاب {n} شخصًا","الجميع","مستويات أخرى (مجتمعة)","نتيجتك (تظهر على هذا الجهاز فقط)","عرض نتائج المؤسسة","املأ الاستبيان","حسب المستوى الوظيفي","قاعدة إخفاء الهوية: تظهر النتائج ابتداءً من {a} إجابة، وكل مجموعة فقط بوجود {b} أشخاص على الأقل. لا تُنشر نسخة جديدة إلا بعد {b} إجابات جديدة على الأقل."]};
+ const AK = ["aT","aP","aKey","aGen","aCount","aBuild","aLow","aSoon","aDone","aDl","aJoin"]; const A = {
+ fa:["انتشار نتیجهٔ جمعی برای کارکنان","کدهای پاسخ را بالا وارد کنید. فقط کدهایی حساب می‌شوند که با همین کلید سازمان پر شده‌اند (کدهای تکراری یک بار شمرده می‌شوند). فایل ساخته‌شده رمزگذاری شده و فقط با همین کلید باز می‌شود.","کلید سازمان","کلید تازه","{n} پاسخ با این کلید.","ساختن فایل نتیجهٔ جمعی","هنوز کافی نیست: {n} از {a} پاسخ.","از آخرین نسخهٔ منتشرشده فقط {x} پاسخ تازه آمده است. برای اینکه کسی نتواند با مقایسهٔ دو نسخه پاسخ یک نفر را حدس بزند، صبر کنید تا دست‌کم {b} پاسخ تازه برسد.","فایل آماده است. آن را در پوشهٔ wellbeing-check/r/ سایت بگذارید. تا وقتی فایل آنجا نباشد، کارکنان پیام «هنوز پاسخ کافی نیست» را می‌بینند.","دانلود فایل","لینک کارکنان (پر کردن سنجش و دیدن نتیجهٔ جمعی):"],
+ en:["Publish group results for employees","Import response codes above. Only codes filled in with this organisation key count (duplicates count once). The file is encrypted and opens only with this key.","Organisation key","New key","{n} responses with this key.","Build group results file","Not enough yet: {n} of {a} responses.","Only {x} new responses since the last published version. Wait for at least {b} new ones, so nobody's answers can be worked out by comparing two versions.","File ready. Put it in the site's wellbeing-check/r/ folder. Until it is there, employees see 'not enough responses yet'.","Download file","Employee link (take the survey and see group results):"],
+ nl:["Groepsresultaten publiceren voor medewerkers","Importeer hierboven de antwoordcodes. Alleen codes die met deze organisatiesleutel zijn ingevuld tellen mee (dubbele één keer). Het bestand is versleuteld en opent alleen met deze sleutel.","Organisatiesleutel","Nieuwe sleutel","{n} antwoorden met deze sleutel.","Bestand met groepsresultaten maken","Nog niet genoeg: {n} van {a} antwoorden.","Sinds de laatste versie zijn er maar {x} nieuwe antwoorden. Wacht op minstens {b} nieuwe, zodat niemand iemands antwoorden kan afleiden door twee versies te vergelijken.","Bestand klaar. Zet het in de map wellbeing-check/r/ van de site. Tot die tijd zien medewerkers 'nog niet genoeg antwoorden'.","Bestand downloaden","Link voor medewerkers (vragenlijst invullen en groepsresultaten bekijken):"]};
+ for(const l in T){ const g = G[l] || G.en, a = A[l] || A.en; K.forEach((k, i) => T[l][k] = g[i]); AK.forEach((k, i) => T[l][k] = a[i]); }
+})();
+
 function route(){
   let h = (location.hash || "#home").slice(1).split("?")[0];
   if(/[?&]admin/.test(location.hash)) store.set("sj-admin", true);
   if(h.startsWith("join-")){ joinCode = h.slice(5).toUpperCase(); h = "take"; loadRound(); }
+  if(h.startsWith("group-")){ groupKey = h.slice(6).toUpperCase(); h = "group"; }
   if(!VIEWS.includes(h)) h = "home";
   cur = h;
   VIEWS.forEach(v => document.getElementById("v-" + v).hidden = v !== h);
-  document.querySelectorAll("nav.main a").forEach(a => a.setAttribute("aria-current", a.dataset.v === (h === "result" ? "take" : h) ? "page" : "false"));
+  document.querySelectorAll("nav.main a").forEach(a => a.setAttribute("aria-current", a.dataset.v === (h === "result" ? "take" : h === "group" ? "report" : h) ? "page" : "false"));
   document.body.dataset.view = h;
-  ({home:renderHome, take:renderTake, result:renderResult, report:renderReport, workshops:renderWs, method:renderMethod, sources:renderSources, process:renderProc})[h]();
+  ({home:renderHome, take:renderTake, result:renderResult, group:renderGroup, report:renderReport, workshops:renderWs, method:renderMethod, sources:renderSources, process:renderProc})[h]();
   const ac = document.querySelector('nav.main [aria-current="page"]'); if(ac){ const nv = ac.parentNode; nv.scrollLeft += ac.getBoundingClientRect().left - nv.getBoundingClientRect().left - (nv.clientWidth - ac.offsetWidth) / 2; }
   window.scrollTo(0, 0);
   if(pendingGo){ const el = document.getElementById(pendingGo); pendingGo = null; if(el) setTimeout(() => el.scrollIntoView({block:"start"}), 40); }
@@ -1906,6 +1925,7 @@ function renderTake(){
   const nItems = p => packInst(p).reduce((s, i) => s + INST[i].items.length, 0);
   el.innerHTML = `<div class="take"><div class="kicker">${t("tRound")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("tT")}</h1>
     <p class="lead">${joinCode ? `${t("tJoin")}${CL()} <b>${esc(ROUND ? ROUND.org + " · " + ROUND.title : joinCode)}</b>` : t("tSelf")}</p>
+    ${joinCode ? `<p style="margin:10px 0 0"><a class="btn sec" href="#group-${esc(joinCode)}">${t("gLink")} ${ARW()}</a></p>` : ""}
     ${S && S.started ? `<div class="callout care" style="margin-top:16px"><div class="row" style="justify-content:space-between"><b>${t("tResume")}</b><button class="btn sec" id="restart">${t("tRestart")}</button></div></div>` : ""}
     <form id="f0" style="margin-top:24px">
       <fieldset><legend>${t("tLevel")}</legend><p class="small muted" style="margin:-4px 0 10px">${t("tLevelHint")}</p><div class="choice">${levels.map((l, i) => `<label><input type="radio" name="lv" value="${l.id}" ${i === 0 && levels.length === 1 ? "checked" : ""} required><span>${l[L]}</span></label>`).join("")}</div></fieldset>
@@ -1948,6 +1968,86 @@ function renderQ(){
   };
 }
 
+/* ── organisation key: encrypted group results for employees ──
+   One key per organisation round (e.g. ABCD-EFGH-JKLM). Employees take the survey via #join-KEY and see
+   group results via #group-KEY. SoloNovate imports response codes, and once enough responses exist builds
+   an encrypted file r/<sha256(key)>.json that only the key can open. Thresholds follow common statistical
+   disclosure-control practice: no output under 20 responses, no group under 10, complementary suppression,
+   and a new version only after 10 more responses (prevents working out answers by comparing versions). */
+const G_MIN_ALL = 20, G_MIN_GRP = 10;
+const fillT = (k, o) => t(k).replace(/\{(\w+)\}/g, (_, x) => o[x] != null ? (typeof o[x] === "number" ? num(o[x]) : o[x]) : "");
+const b64 = u8 => { let s = ""; u8.forEach(c => s += String.fromCharCode(c)); return btoa(s); };
+const unb64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const gNorm = k => String(k || "").trim().toUpperCase();
+async function gHash(key){ const h = new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode("sj-org-file:" + gNorm(key)))); return [...h].slice(0, 12).map(x => x.toString(16).padStart(2, "0")).join(""); }
+async function gCrypt(key){ const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(gNorm(key)), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({name:"PBKDF2", salt:new TextEncoder().encode("sj-org-v1"), iterations:200000, hash:"SHA-256"}, base, {name:"AES-GCM", length:256}, false, ["encrypt", "decrypt"]); }
+async function gEncrypt(key, obj){ const iv = crypto.getRandomValues(new Uint8Array(12)); const ct = new Uint8Array(await crypto.subtle.encrypt({name:"AES-GCM", iv}, await gCrypt(key), new TextEncoder().encode(JSON.stringify(obj)))); return {v:1, iv:b64(iv), ct:b64(ct)}; }
+async function gDecrypt(key, f){ const pt = await crypto.subtle.decrypt({name:"AES-GCM", iv:unb64(f.iv)}, await gCrypt(key), unb64(f.ct)); return JSON.parse(new TextDecoder().decode(pt)); }
+async function gFetch(key){ const r = await fetch("r/" + await gHash(key) + ".json", {cache:"no-store"}); if(r.status === 404) return null; if(!r.ok) throw new Error("http " + r.status); return gDecrypt(key, await r.json()); }
+const gNewKey = () => { const A = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", r = crypto.getRandomValues(new Uint8Array(12)); const x = [...r].map(v => A[v % 32]).join(""); return x.slice(0, 4) + "-" + x.slice(4, 8) + "-" + x.slice(8); };
+const gUnique = list => { const seen = new Set(); return list.filter(o => { const k = JSON.stringify([o.lv, o.a]); if(seen.has(k)) return false; seen.add(k); return true; }); };
+function gAggregate(list){
+  const rows = rowsFromResp(list);
+  const agg = rs => { const o = {n:rs.length, d:{}, dist:{}};
+    for(const D of DIMS){ const v = rs.map(r => r.d[D.id]).filter(x => x != null); if(v.length >= G_MIN_GRP){ o.d[D.id] = avg(v); const c = [0, 0, 0]; v.forEach(x => c[band(x)]++); o.dist[D.id] = c.map(x => Math.round(x / v.length * 100)); } }
+    return o; };
+  const all = agg(rows); all.sub = {};
+  new Set(rows.flatMap(r => Object.keys(r.sub))).forEach(k => { const v = rows.map(r => r.sub[k]).filter(x => x != null); if(v.length >= G_MIN_GRP) all.sub[k] = avg(v); });
+  const groups = LV.map(l => ({id:l.id, rs:rows.filter(r => r.lv === l.id)})).filter(g => g.rs.length);
+  const shown = groups.filter(g => g.rs.length >= G_MIN_GRP).sort((a, b) => a.rs.length - b.rs.length);
+  let rest = groups.filter(g => g.rs.length < G_MIN_GRP).flatMap(g => g.rs);
+  while(rest.length > 0 && rest.length < G_MIN_GRP && shown.length) rest = rest.concat(shown.shift().rs);   // complementary suppression
+  let lv = [];
+  if(rest.length === 0 ? shown.length >= 2 : (rest.length >= G_MIN_GRP && shown.length >= 1)){
+    lv = shown.map(g => ({id:g.id, ...agg(g.rs)})); if(rest.length) lv.push({id:"other", ...agg(rest)});
+    for(const D of DIMS) if(lv.some(g => g.d[D.id] == null)) lv.forEach(g => { delete g.d[D.id]; delete g.dist[D.id]; });   // no differencing per dimension
+  }
+  return {v:1, n:rows.length, m:[...new Set(list.map(r => r.m).filter(Boolean))].sort(), all, lv};
+}
+const gLvName = id => id === "other" ? t("gOther") : (LV.find(l => l.id === id) || {})[L] || id;
+async function renderGroup(){
+  const el = document.getElementById("v-group"), key = groupKey;
+  el.innerHTML = `<div class="take"><div class="kicker">${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("gT")}</h1><p class="lead">${t("gP")}</p><div id="gbody" style="margin-top:18px"><p class="muted">…</p></div></div>`;
+  let G; try{ G = await gFetch(key); }catch(e){ G = false; }
+  const body = document.getElementById("gbody"); if(!body || groupKey !== key || cur !== "group") return;
+  const rule = `<p class="small muted" style="margin-top:14px">${fillT("gRule", {a:G_MIN_ALL, b:G_MIN_GRP})}</p>`;
+  if(G === null){ body.innerHTML = `<div class="callout care">${fillT("gWait", {a:G_MIN_ALL, b:G_MIN_GRP})}</div><p style="margin-top:14px"><a class="btn pri" href="#join-${esc(key)}">${t("gTake")}</a></p>`; return; }
+  if(G === false){ body.innerHTML = `<div class="callout">${t("gBad")}</div>`; return; }
+  const me = store.get("sj-last", null), mine = me && gNorm(me.r) === key ? scoreAll(me.a).d : null;
+  const ds = DIMS.filter(D => G.all.d[D.id] != null);
+  const cell = v => v == null ? `<td class="na">–</td>` : `<td style="background:${["var(--low-soft)","var(--mid-soft)","var(--high-soft)"][band(v)]}">${num(v)}</td>`;
+  body.innerHTML = `<p><span class="pill">${fillT("gN", {n:G.n})}</span></p>
+    <div class="card" style="margin-top:12px"><b>${t("gAll")}</b><div style="margin-top:10px">${miniBars(ds.map(D => [dn(D), G.all.d[D.id]]))}</div><div class="legendb">${t("band").map((b, i) => `<span><i style="background:${BC[i]}"></i>${b}</span>`).join("")}</div></div>
+    ${mine ? `<div class="card" style="margin-top:12px"><b>${t("gYou")}</b><div style="margin-top:10px">${miniBars(ds.filter(D => mine[D.id] != null).map(D => [dn(D), mine[D.id]]))}</div></div>` : ""}
+    ${G.lv.length ? `<div class="card" style="margin-top:12px"><b>${t("gByLv")}</b><div class="scroll" style="margin-top:10px"><table class="heat"><tr><th></th>${G.lv.map(g => `<th>${esc(gLvName(g.id))}<br><span class="muted">${num(g.n)}</span></th>`).join("")}</tr>${ds.filter(D => G.lv.some(g => g.d[D.id] != null)).map(D => `<tr><th class="dn">${dn(D)}</th>${G.lv.map(g => cell(g.d[D.id])).join("")}</tr>`).join("")}</table></div></div>` : ""}
+    ${rule}`;
+}
+function gAdminBox(){
+  return `<div class="card" style="margin-top:12px"><b>${t("aT")}</b><p class="small muted" style="margin:6px 0 10px">${t("aP")}</p>
+    <label class="f">${t("aKey")}<span class="row"><input type="text" id="gk" dir="ltr" value="${esc(REP.gkey || "")}" placeholder="ABCD-EFGH-JKLM" style="max-width:260px"><button class="btn sec" id="gnew" type="button">${t("aGen")}</button></span></label>
+    <p class="small" id="gstat" style="margin:8px 0"></p><button class="btn pri" id="gbuild" type="button">${t("aBuild")}</button><div id="gout" style="margin-top:12px"></div></div>`;
+}
+function gAdminWire(){
+  const inp = document.getElementById("gk"); if(!inp) return;
+  const pick = () => gUnique(REP.imported.filter(o => gNorm(o.r) === gNorm(inp.value)));
+  const stat = () => { REP.gkey = gNorm(inp.value); document.getElementById("gstat").textContent = REP.gkey ? fillT("aCount", {n:pick().length}) : ""; };
+  inp.oninput = stat; stat();
+  document.getElementById("gnew").onclick = () => { inp.value = gNewKey(); stat(); };
+  document.getElementById("gbuild").onclick = async () => {
+    const key = gNorm(inp.value), out = document.getElementById("gout"), list = pick(); if(!key) return;
+    if(list.length < G_MIN_ALL){ out.innerHTML = `<p class="small">${fillT("aLow", {n:list.length, a:G_MIN_ALL})}</p>`; return; }
+    let old = null; try{ old = await gFetch(key); }catch(e){}
+    if(old && list.length - old.n < G_MIN_GRP){ out.innerHTML = `<p class="small">${fillT("aSoon", {x:Math.max(0, list.length - old.n), b:G_MIN_GRP})}</p>`; return; }
+    const file = await gEncrypt(key, gAggregate(list)), name = await gHash(key) + ".json";
+    const url = URL.createObjectURL(new Blob([JSON.stringify(file)], {type:"application/json"}));
+    const base = location.origin + location.pathname;
+    out.innerHTML = `<p class="small">${t("aDone")}</p><p><a class="btn pri" href="${url}" download="${name}">${t("aDl")} · ${name}</a></p>
+      <p class="small" style="margin:10px 0 4px">${t("aJoin")}</p><div class="code">${esc(base + "#join-" + key)}</div>
+      <p class="small" style="margin:10px 0 4px">${t("gLink")}${CL()}</p><div class="code">${esc(base + "#group-" + key)}</div>`;
+  };
+}
+
 /* ── load a result from a response code (any device) ── */
 const loadBox = open => `<details class="more" style="margin-top:0" ${open ? "open" : ""}><summary>${t("rLoadT")}</summary><p class="small muted" style="margin:8px 0">${t("rLoadP")}</p><textarea id="ldc" placeholder="SJ1-…" dir="ltr" style="min-height:70px"></textarea><div class="row" style="margin-top:8px"><button class="btn pri" id="ldgo">${t("rLoad")}</button></div></details>`;
 function wireLoad(){
@@ -1986,6 +2086,7 @@ function renderResult(){
      <b>${t("rCode")}</b><p class="small muted" style="margin:4px 0 8px">${t("rCodeP")}</p><div class="row"><a class="btn pri" href="${mailto(t("brandShort") + " · " + t("rCode"), code)}">${t("rMail")}</a><button class="btn sec" id="copy">${t("rCopy")}</button></div><details class="res-code"><summary>${t("rCodeShow")}</summary><div class="code" id="code" style="margin-top:8px">${code}</div></details>
    </div>
    <div class="card" style="margin-top:14px">${loadBox(false)}</div>
+   ${R.r && R.r !== "self" ? `<p style="margin-top:14px"><a class="btn sec" href="#group-${esc(String(R.r).toUpperCase())}">${t("gLink")} ${ARW()}</a></p>` : ""}
    <p class="small" style="margin-top:16px"><a href="#workshops">${t("nWs")} ${ARW()}</a> · <a href="#report">${t("ctaDemo")} ${ARW()}</a></p></div>`;
   wireLoad();
   document.getElementById("copy").onclick = async () => { try{ await navigator.clipboard.writeText(code); toast(t("rCopied")); }catch(e){ const r = document.createRange(); r.selectNodeContents(document.getElementById("code")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } };
@@ -2029,7 +2130,7 @@ function renderReport(){
   const tabs = `<div class="tabs" role="group" aria-label="${t("pSrc")}"><button data-src="demo" aria-pressed="${REP.src === "demo"}">${t("pDemo")}</button>${CAN && DB ? `<button data-src="live" aria-pressed="${REP.src === "live"}">${t("pLive")}</button>` : ""}${store.get("sj-admin", false) || REP.src === "import" ? `<button data-src="import" aria-pressed="${REP.src === "import"}">${t("pImport")}</button>` : ""}</div>`;
   let srcExtra = "";
   if(REP.src === "demo") srcExtra = `<p class="small muted" style="margin:10px 0 0">${t("pDemoNote")}</p>`;
-  if(REP.src === "import") srcExtra = `<div class="card" style="margin-top:12px"><label class="f">${t("pImportP")}<textarea id="imp" placeholder="SJ1-…"></textarea></label><div class="row" style="margin-top:10px"><button class="btn pri" id="impgo">${t("pImportGo")}</button><span class="small muted">${t("pN")}${CL()} ${num(REP.imported.length)}</span></div></div>`;
+  if(REP.src === "import") srcExtra = `<div class="card" style="margin-top:12px"><label class="f">${t("pImportP")}<textarea id="imp" placeholder="SJ1-…"></textarea></label><div class="row" style="margin-top:10px"><button class="btn pri" id="impgo">${t("pImportGo")}</button><span class="small muted">${t("pN")}${CL()} ${num(REP.imported.length)}</span></div></div>` + gAdminBox();
   if(REP.src === "live") srcExtra = `<div class="row" style="margin-top:12px"><label class="f" style="min-width:240px">${t("pChoose")}<select id="rsel">${REP.rounds.map(r => `<option value="${r.id}" ${REP.round === r.id ? "selected" : ""}>${esc(r.org)} · ${esc(r.title)} (${r.id})</option>`).join("")}</select></label></div>`;
   const fmt = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k] ?? "");
   const pct = x => pcf(num(x * 100));
@@ -2126,6 +2227,7 @@ function renderReport(){
   el.querySelectorAll("[data-src]").forEach(b => b.onclick = () => { REP.src = b.dataset.src; if(REP.src === "live") subscribeRounds(); renderReport(); });
   el.querySelectorAll("[data-rv]").forEach(b => b.onclick = () => { REP.tab = b.dataset.rv; const y = scrollY; renderReport(); scrollTo(0, y); });
   const ls = document.getElementById("lvsel"); if(ls) ls.onchange = () => { REP.lvSel = ls.value; const y = scrollY; renderReport(); scrollTo(0, y); };
+  gAdminWire();
   const ig = document.getElementById("impgo"); if(ig) ig.onclick = () => { let k = 0; document.getElementById("imp").value.split(/\s+/).filter(Boolean).forEach(c => { try{ const o = decode(c); if(o && o.a){ REP.imported.push(o); k++; } }catch(e){} }); toast(["ar","pl"].includes(L) ? t("pAdded") + ": " + num(k) : num(k) + " " + t("pAdded")); renderReport(); };
   const rs = document.getElementById("rsel"); if(rs) rs.onchange = () => { REP.round = rs.value; loadLive(); };
   const mk = document.getElementById("mk"); if(mk) mk.onsubmit = async e => { e.preventDefault(); const f = new FormData(mk); const id = Array.from({length:6}, () => "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"[Math.floor(Math.random() * 32)]).join("");
