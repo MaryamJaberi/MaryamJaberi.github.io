@@ -127,6 +127,7 @@ let FILES = null;
 /* ---------- عنوان‌ها ---------- */
 const GROUPS = [
   ["iran/",   "۲ · ایران"],
+  ["simorgh/par/","۳ · پَرِ سیمرغ (صفحه‌های اصلی)"],
   ["simorgh/","۳ · سیمرغ"],
   ["sakht/",  "۴ · ساخت ایران"],
   ["atlas/",  "اطلس‌ها"],
@@ -226,6 +227,34 @@ const SHIM = `<script>(function(){
   },true);
 }())<\/script>`;
 
+/* VAULT_FETCH: صفحه‌های چندفایلی (CSS، JS، داده) از درونِ همین بسته خوانده می‌شوند */
+const VAULT_FETCH = `<script>(function(){var R=window.__VAULT_ROOT,F=function(){try{return parent.__vaultFiles}catch(e){return null}},of=window.fetch;
+window.fetch=function(u,o){try{var x=new URL(typeof u==="string"?u:u.url,document.baseURI).href;if(x.indexOf(R)===0){var rel=decodeURI(x.slice(R.length)).split("#")[0].split("?")[0],f=F();
+if(f&&f[rel]!=null)return Promise.resolve(new Response(f[rel],{status:200,headers:{"Content-Type":/\.json$/.test(rel)?"application/json":"text/plain;charset=utf-8"}}))}}catch(e){}return of.apply(this,arguments)}}())<\/script>`;
+function resolveRel(dir, href) {
+  if (/^([a-z]+:|\/\/|\/|#|data:)/i.test(href)) return null;
+  const parts = (dir + href).split("#")[0].split("?")[0].split("/"), out = [];
+  for (const x of parts) { if (x === "..") out.pop(); else if (x !== "." && x !== "") out.push(x); }
+  return out.join("/");
+}
+function inlineAssets(html, dir) {
+  html = html.replace(/<link\b[^>]*\bhref="([^"]+\.css)"[^>]*>/gi, (m, h) => {
+    const r = resolveRel(dir, h);
+    return r && FILES[r] != null && /stylesheet/i.test(m) ? `<style>${FILES[r]}</style>` : m;
+  });
+  const DEFERRED = [];
+  html = html.replace(/<script\b([^>]*)\bsrc="([^"]+\.js)"([^>]*)><\/script>/gi, (m, a, h, b) => {
+    const r = resolveRel(dir, h);
+    if (!(r && FILES[r] != null)) return m;
+    const tag = `<script${(a + b).replace(/\b(defer|async)\b/g, "")}>${FILES[r].replace(/<\/script/gi, "<\\/script")}<\/script>`;
+    if (/\bdefer\b/.test(a + b)) { DEFERRED.push(tag); return ""; }
+    return tag;
+  });
+  if (!DEFERRED.length) return html;
+  return /<\/body>/i.test(html) ? html.replace(/<\/body>(?![\s\S]*<\/body>)/i, DEFERRED.join("") + "</body>") : html + DEFERRED.join("");
+}
+
+let WANT_HASH = "";
 function render(path) {
   const html = FILES[path];
   if (html == null) return;
@@ -234,13 +263,15 @@ function render(path) {
     `<base href="${BASE}${dir}">` +
     `<script>window.__VAULT_PAGES=${JSON.stringify(Object.keys(FILES))};` +
     `window.__VAULT_ROOT=${JSON.stringify(BASE)};` +
-    `window.__VAULT_PAGE=${JSON.stringify(path)};<\/script>`;
-  let doc = html;
+    `window.__VAULT_PAGE=${JSON.stringify(path)};<\/script>` + VAULT_FETCH;
+  let doc = inlineAssets(html, dir);
+  window.__vaultFiles = FILES;
   if (/<head[^>]*>/i.test(doc)) doc = doc.replace(/<head([^>]*)>/i, `<head$1>${head}`);
   else doc = head + doc;
   doc = /<\/body>/i.test(doc) ? doc.replace(/<\/body>/i, SHIM + "</body>") : doc + SHIM;
 
-  $("view").srcdoc = doc;
+  const v = $("view"); v.onload = () => { try { const h = WANT_HASH; WANT_HASH = ""; if (h) { const el = v.contentDocument.getElementById(decodeURIComponent(h)); if (el) el.scrollIntoView(); } } catch (e) {} };
+  v.srcdoc = doc;
   for (const a of document.querySelectorAll("#list a"))
     a.toggleAttribute("aria-current", a.dataset.p === path);
   try { sessionStorage.setItem(LASTPAGE, path); } catch (e) {}
@@ -263,7 +294,7 @@ function buildList() {
     frag.appendChild(g);
   };
   for (const [prefix, label] of GROUPS) {
-    const items = paths.filter(p => p.startsWith(prefix));
+    const items = paths.filter(p => p.startsWith(prefix) && !used.has(p));
     items.forEach(p => used.add(p));
     addGroup(label, items);
   }
@@ -288,7 +319,7 @@ function unlocked() {
 window.addEventListener("message", e => {
   if (e.source !== $("view").contentWindow) return;
   const p = e.data && e.data.vaultGo;
-  if (typeof p === "string") render(p.split("#")[0]);
+  if (typeof p === "string") { WANT_HASH = p.split("#")[1] || ""; render(p.split("#")[0]); }
 });
 
 $("see").addEventListener("click", () => {
