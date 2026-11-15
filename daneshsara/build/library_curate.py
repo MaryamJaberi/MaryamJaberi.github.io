@@ -22,6 +22,7 @@ def norm(s):
 # ---------------------------------------------------------------- manual knowledge
 # index → hall:shelf for items the old catalogue put on the wrong shelf, or that had no shelf
 MOVE = {
+ 752: 'soc:democracy', 753: 'soc:development', 754: 'soc:democracy',   # uploads 15 Nov 2026: Ginsburg, Laing, IDEA
  7: 'adab:novel', 59: 'honar:skills', 62: 'adab:criticism', 168: 'phil:modern', 173: 'tarikh:islamic-dyn', 197: 'adab:satire', 198: 'tarikh:islamic-early',
  608: 'tarikh:modern-pahlavi', 749: 'tarikh:world-c20', 628: 'adab:poetry', 313: 'honar:art', 545: 'phil:nietzsche', 259: 'tarikh:world-civ',
  712: 'soc:ideology', 713: 'soc:dictatorship', 732: 'adab:novel', 600: 'tarikh:islamic-early', 227: 'tarikh:islamic-early', 161: 'tarikh:islamic-early',

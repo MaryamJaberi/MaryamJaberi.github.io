@@ -1,14 +1,14 @@
 {
 "stats": {
-"concepts": 1701,
-"concepts_with_sources": 1653,
-"cross_wiki_links": 1233,
+"concepts": 1707,
+"concepts_with_sources": 1659,
+"cross_wiki_links": 1237,
 "bridge_links": 133,
 "iran_notes": 0,
 "fields": 77,
 "bridges": 25,
-"people": 1762,
-"sources": 2504,
+"people": 1768,
+"sources": 2507,
 "built": "2026-11-15"
 },
 "entries": {
@@ -5076,6 +5076,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:constitution-contract-coordination-charter": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "قانون اساسی: قرارداد، هماهنگی یا منشور؟ (گینزبرگ)",
+"en": "Constitution as contract, coordination or charter? (Ginsburg)",
+"nl": "Constitution as contract, coordination or charter? (Ginsburg)"
+},
+"url": "soc/#constitution-contract-coordination-charter",
+"status": "draft",
+"wikidata": null
+},
 "soc:vicious-circle-sierra-leone": {
 "wiki": "soc",
 "type": "concept",
@@ -5301,6 +5313,18 @@
 "nl": "De val van een sacraal discours en het machtsvacuüm: bestaat er een 'discoursvacuüm'?"
 },
 "url": "soc/#sacred-discourse-fall-power-vacuum-iran",
+"status": "draft",
+"wikidata": null
+},
+"soc:electoral-system-families": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "نظام‌های انتخاباتی: ۱۲ نظام در ۴ خانواده (راهنمای آیدیا)",
+"en": "Electoral systems: 12 systems in 4 families (International IDEA handbook)",
+"nl": "Electoral systems: 12 systems in 4 families (International IDEA handbook)"
+},
+"url": "soc/#electoral-system-families",
 "status": "draft",
 "wikidata": null
 },
@@ -9552,6 +9576,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:constitutional-bargaining-design-lessons": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "چانه‌زنی بر سر قانون اساسی: درس‌های طراحی از نظریهٔ قرارداد",
+"en": "Constitutional bargaining: design lessons from contract theory",
+"nl": "Constitutional bargaining: design lessons from contract theory"
+},
+"url": "soc/#constitutional-bargaining-design-lessons",
+"status": "draft",
+"wikidata": null
+},
 "soc:threshold-of-transition-iran-1920s": {
 "wiki": "soc",
 "type": "concept",
@@ -10284,6 +10320,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:electoral-design-in-transitions": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "طراحی نظام انتخاباتی در دورهٔ گذار: توصیه‌های آیدیا",
+"en": "Designing elections in a transition: IDEA’s advice",
+"nl": "Designing elections in a transition: IDEA’s advice"
+},
+"url": "soc/#electoral-design-in-transitions",
+"status": "draft",
+"wikidata": null
+},
 "soc:structural-functionalism": {
 "wiki": "soc",
 "type": "concept",
@@ -10845,6 +10893,18 @@
 "nl": "De Franse Revolutie en institutionele hervorming geëxporteerd door legers"
 },
 "url": "soc/#french-revolution-exported-institutional-reform",
+"status": "draft",
+"wikidata": null
+},
+"soc:corruption-vs-manoeuvring-boundary": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "مرز فساد و «مانور سیاسی»: سنجیدن فساد برای کم کردنش (لینگ)",
+"en": "The boundary between corruption and political manoeuvring: measuring corruption to reduce it (Laing)",
+"nl": "The boundary between corruption and political manoeuvring: measuring corruption to reduce it (Laing)"
+},
+"url": "soc/#corruption-vs-manoeuvring-boundary",
 "status": "draft",
 "wikidata": null
 },
@@ -12837,6 +12897,18 @@
 "nl": "Beweringen in het rapport over niet verantwoorde olie-inkomsten: Naftiran, China, het Nationaal Ontwikkelingsfonds"
 },
 "url": "soc/#oil-revenue-accounting-gaps",
+"status": "draft",
+"wikidata": null
+},
+"soc:mutual-vulnerability-trap": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تلهٔ آسیب‌پذیری متقابل: چرا کسی دربارهٔ فساد حرف نمی‌زند",
+"en": "The mutual vulnerability trap: why no one names corruption",
+"nl": "The mutual vulnerability trap: why no one names corruption"
+},
+"url": "soc/#mutual-vulnerability-trap",
 "status": "draft",
 "wikidata": null
 },
@@ -28755,7 +28827,8 @@
 "url": "core/people.html#david-hume",
 "wikis": [
 "psy",
-"phil"
+"phil",
+"soc"
 ]
 },
 "core:edmund-gettier": {
@@ -44614,6 +44687,84 @@
 "nl": "Sir Harford Jones Brydges"
 },
 "url": "core/people.html#sir-harford-jones-brydges",
+"wikis": [
+"soc"
+]
+},
+"core:tom-ginsburg": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "تام گینزبرگ",
+"en": "Tom Ginsburg",
+"nl": "Tom Ginsburg"
+},
+"url": "core/people.html#tom-ginsburg",
+"wikis": [
+"soc"
+]
+},
+"core:russell-hardin": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "راسل هاردین",
+"en": "Russell Hardin",
+"nl": "Russell Hardin"
+},
+"url": "core/people.html#russell-hardin",
+"wikis": [
+"soc"
+]
+},
+"core:andrew-laing": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اندرو لینگ",
+"en": "Andrew Laing",
+"nl": "Andrew Laing"
+},
+"url": "core/people.html#andrew-laing",
+"wikis": [
+"soc"
+]
+},
+"core:andrew-reynolds": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اندرو رینولدز",
+"en": "Andrew Reynolds",
+"nl": "Andrew Reynolds"
+},
+"url": "core/people.html#andrew-reynolds",
+"wikis": [
+"soc"
+]
+},
+"core:ben-reilly": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "بن رایلی",
+"en": "Ben Reilly",
+"nl": "Ben Reilly"
+},
+"url": "core/people.html#ben-reilly",
+"wikis": [
+"soc"
+]
+},
+"core:andrew-ellis": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اندرو الیس",
+"en": "Andrew Ellis",
+"nl": "Andrew Ellis"
+},
+"url": "core/people.html#andrew-ellis",
 "wikis": [
 "soc"
 ]
