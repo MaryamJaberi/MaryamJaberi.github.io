@@ -13,6 +13,19 @@ Working document for whoever edits this site next (human or Claude).
 - Carpetdiem (generative Azerbaijani carpets) and LIA's *Weaving*: the Jacquard loom is where weaving and computation first met. Punch cards were code.
 - Persian carpet craft: designs are written as knot maps, a line of code per row, and every carpet carries two stories, the design's and the weaver's.
 
+## From HubSpot's list of 23 graphic-design portfolios (taken, and left)
+Taken, because they fit a product person's site and stay quiet:
+- Sagmeister: project names that follow the cursor. Here: a label that follows the cursor over the loom's knots (and appears under the finger on a phone).
+- Stefanie Brückler (small page-load detail) and Alex Trochut (animated signature): one opening moment. The feather mark in the nav draws itself, then the apps on the home screen switch on one by one, like a phone booting. Under a second and a half, once, skipped with reduced motion.
+- Gleb Kuznetsov: a clear "available" indicator. Already there (the green dot in the hero); kept.
+- "Keep it current" and "portfolios are never finished": the whole loom is this tip made literal.
+- Peter Tarka and Tobias van Schneider: colour that belongs to each project. Every loom row uses its project's icon colours.
+
+Left, on purpose:
+- Custom cursors, collage homepages, "Enter" screens, multi-speed columns: they slow a recruiter down and would compete with the loom.
+- Victor Work's choose-your-experience switch: the reduced-motion setting already gives people that choice without another control.
+- Testimonials and client logos: good advice, but only with real quotes. Add them when Maryam has some.
+
 ## Concept: the loom (دار قالی)
 Every change Maryam makes to one of her products is a knot. A loom for the year hangs on the page:
 - rows = products (each in its own icon colour), columns = weeks of the loom year;

@@ -335,7 +335,7 @@ def loom_svg(t):
             monday = LOOM_START + timedelta(weeks=w0 + i)
             tip = f'{t["names"][k]}, {t["loom_week"].format(d=day_label(t, monday))}: ' + (t["loom_change"] if n == 1 else t["loom_changes"].format(n=num(t, n)))
             cx = X(i) + CW / 2
-            knots.append(f'<path class="knot" style="--d:{i * 90 + r_i * 25}ms" fill="{col}" d="M{cx} {cy - sz}l{sz} {sz} -{sz} {sz} -{sz} -{sz}z"><title>{tip}</title></path>')
+            knots.append(f'<path class="knot" style="--d:{i * 90 + r_i * 25}ms" fill="{col}" d="M{cx} {cy - sz}l{sz} {sz} -{sz} {sz} -{sz} -{sz}z"><title>{tip}</title></path>')  # live.js turns the title into a label that follows the cursor
     labels = "".join(f'<use href="#i-{k}" x="{lab_x + 8}" y="{top + r_i * RH + 3}" width="20" height="20"/>' for r_i, k in enumerate(LOOM_ROWS))
     shuttle_y = top + field_h + GB + FR + 6
     shuttle = f'<g class="shuttle" data-w0="{w0}" data-start="{PULSE["start"]}" data-rtl="{int(rtl)}" data-x0="{LAB}" data-cw="{CW}" data-w="{W}"><path d="M0 {shuttle_y}l5 7h-10z" transform="translate({X(max(done - 1, 0)) + CW / 2} 0)"/></g>'
@@ -357,6 +357,7 @@ def home_page(t):
     img = f"{rel}assets/img/{L}/"
     names = t["names"]
     out = [head(t, t["title"], t["desc"], rel, "", "assets/og.jpg" if L == "en" else "assets/og-fa.jpg")]
+    out.append("<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('boot')</script>")
     out.append('<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Maryam Jaberi","jobTitle":"Product Manager & Product Designer","address":{"@type":"PostalAddress","addressLocality":"Rotterdam","addressCountry":"NL"},"email":"mailto:' + MAIL + '","url":"' + SITE + '","sameAs":["' + LI + '","' + GH + '"],"knowsLanguage":["fa","en","nl"]}</script>\n</head>\n<body>')
     out.append(SPRITE)
     out.append(f'<a class="skip" href="#work">{t["skip"]}</a>')
@@ -368,7 +369,7 @@ def home_page(t):
         if k == "side": return "#more"
         u = URL[k]
         return u if u.startswith("http") else rel + u
-    apps = "\n".join(f'<li class="app"><a href="{app_href(k)}">{icon(k)}<span>{names[k]}</span></a></li>' for k in order)
+    apps = "\n".join(f'<li class="app" style="--i:{n}"><a href="{app_href(k)}">{icon(k)}<span>{names[k]}</span></a></li>' for n, k in enumerate(order))
     out.append(f'''<header class="hero">
 <div class="wrap">
 <div>

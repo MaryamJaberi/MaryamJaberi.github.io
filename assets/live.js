@@ -63,6 +63,27 @@
       sh.firstElementChild.setAttribute("transform", `translate(${cx} 0)`);
     }
   }
+  // A label that follows the cursor (or the finger) over the knots
+  const tip = document.createElement("div");
+  tip.className = "knot-tip"; tip.setAttribute("aria-hidden", "true");
+  fig.appendChild(tip);
+  fig.querySelectorAll(".knot").forEach(k => {
+    const ttl = k.querySelector("title");
+    if (ttl) { k.dataset.tip = ttl.textContent; k.setAttribute("aria-label", ttl.textContent); ttl.remove(); }
+  });
+  const place = e => {
+    const r = fig.getBoundingClientRect();
+    tip.style.left = Math.min(Math.max(e.clientX - r.left, 90), r.width - 90) + "px";
+    tip.style.top = (e.clientY - r.top) + "px";
+  };
+  fig.addEventListener("pointerover", e => {
+    const k = e.target.closest(".knot");
+    if (!k) return;
+    tip.textContent = k.dataset.tip; place(e); tip.classList.add("on");
+  });
+  fig.addEventListener("pointermove", e => { if (tip.classList.contains("on")) place(e); });
+  fig.addEventListener("pointerout", e => { if (e.target.closest(".knot")) tip.classList.remove("on"); });
+
   if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   fig.classList.add("js");
   const io = new IntersectionObserver(es => {
