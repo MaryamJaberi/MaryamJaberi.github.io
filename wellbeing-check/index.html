@@ -1746,6 +1746,21 @@ let DB = null, USER = null, CAN = false;
 /* ── router ── */
 let cur = "home", joinCode = null, ROUND = null;
 const VIEWS = ["home","process","take","result","report","workshops","method","sources"];
+/* strings: load result from code */
+(() => { const RL = {
+ fa:["نتیجه را با کد پاسخ ببینید","کد پاسخی را که قبلاً گرفته‌اید (با SJ1- شروع می‌شود) اینجا بچسبانید. نتیجه فقط روی همین دستگاه نشان داده می‌شود و جای نتیجه‌ای را می‌گیرد که الان اینجا هست.","نمایش نتیجه","نتیجه بارگذاری شد","این کد درست نیست. کل کد را از SJ1- تا آخر کپی کنید."],
+ en:["See your result with a response code","Paste the response code you received earlier (it starts with SJ1-). The result is shown only on this device and replaces the result currently shown here.","Show result","Result loaded","This code is not valid. Copy the whole code, from SJ1- to the end."],
+ nl:["Uw resultaat bekijken met een antwoordcode","Plak de antwoordcode die u eerder kreeg (begint met SJ1-). Het resultaat wordt alleen op dit apparaat getoond en vervangt het resultaat dat hier nu staat.","Resultaat tonen","Resultaat geladen","Deze code is niet geldig. Kopieer de hele code, van SJ1- tot het einde."],
+ de:["Ihr Ergebnis mit einem Antwortcode ansehen","Fügen Sie den Antwortcode ein, den Sie zuvor erhalten haben (er beginnt mit SJ1-). Das Ergebnis wird nur auf diesem Gerät angezeigt und ersetzt das hier aktuell angezeigte Ergebnis.","Ergebnis anzeigen","Ergebnis geladen","Dieser Code ist ungültig. Kopieren Sie den ganzen Code, von SJ1- bis zum Ende."],
+ fr:["Voir votre résultat avec un code de réponse","Collez le code de réponse reçu précédemment (il commence par SJ1-). Le résultat s'affiche uniquement sur cet appareil et remplace celui affiché actuellement.","Afficher le résultat","Résultat chargé","Ce code n'est pas valide. Copiez le code en entier, de SJ1- jusqu'à la fin."],
+ es:["Ver su resultado con un código de respuesta","Pegue el código de respuesta que recibió antes (empieza por SJ1-). El resultado solo se muestra en este dispositivo y sustituye al que aparece ahora.","Mostrar resultado","Resultado cargado","Este código no es válido. Copie el código completo, desde SJ1- hasta el final."],
+ pl:["Zobacz swój wynik za pomocą kodu odpowiedzi","Wklej otrzymany wcześniej kod odpowiedzi (zaczyna się od SJ1-). Wynik jest widoczny tylko na tym urządzeniu i zastępuje wynik wyświetlany tu obecnie.","Pokaż wynik","Wynik wczytany","Ten kod jest nieprawidłowy. Skopiuj cały kod, od SJ1- do końca."],
+ tr:["Yanıt kodunuzla sonucunuzu görün","Daha önce aldığınız yanıt kodunu yapıştırın (SJ1- ile başlar). Sonuç yalnızca bu cihazda gösterilir ve şu an burada görünen sonucun yerini alır.","Sonucu göster","Sonuç yüklendi","Bu kod geçerli değil. Kodun tamamını, SJ1- ile başlayıp sonuna kadar kopyalayın."],
+ ar:["اعرض نتيجتك برمز الإجابة","الصق رمز الإجابة الذي حصلت عليه سابقًا (يبدأ بـ SJ1-). تظهر النتيجة على هذا الجهاز فقط وتحلّ محل النتيجة المعروضة هنا حاليًا.","اعرض النتيجة","تم تحميل النتيجة","هذا الرمز غير صالح. انسخ الرمز كاملًا من SJ1- حتى النهاية."]};
+ const K = ["rLoadT","rLoadP","rLoad","rLoaded","rLoadBad"];
+ for(const l in T){ const v = RL[l] || RL.en; K.forEach((k, i) => T[l][k] = v[i]); }
+})();
+
 function route(){
   let h = (location.hash || "#home").slice(1).split("?")[0];
   if(/[?&]admin/.test(location.hash)) store.set("sj-admin", true);
@@ -1933,10 +1948,24 @@ function renderQ(){
   };
 }
 
+/* ── load a result from a response code (any device) ── */
+const loadBox = open => `<details class="more" style="margin-top:0" ${open ? "open" : ""}><summary>${t("rLoadT")}</summary><p class="small muted" style="margin:8px 0">${t("rLoadP")}</p><textarea id="ldc" placeholder="SJ1-…" dir="ltr" style="min-height:70px"></textarea><div class="row" style="margin-top:8px"><button class="btn pri" id="ldgo">${t("rLoad")}</button></div></details>`;
+function wireLoad(){
+  const b = document.getElementById("ldgo"); if(!b) return;
+  b.onclick = () => {
+    try{ const o = decode(document.getElementById("ldc").value.replace(/\s+/g, "")); if(!o || !o.a) throw 0;
+      store.set("sj-last", o); renderResult(); window.scrollTo(0, 0); toast(t("rLoaded")); }
+    catch(e){ toast(t("rLoadBad")); }
+  };
+}
+
 /* ── RESULT ── */
 function renderResult(){
-  const el = document.getElementById("v-result"); const R = store.get("sj-last", null);
-  if(!R){ el.innerHTML = `<div class="take"><p>${t("pNone")}</p><a class="btn pri" href="#take">${t("ctaTake")}</a></div>`; return; }
+  const el = document.getElementById("v-result");
+  const qc = (location.hash.split("?")[1] || "").match(/(?:^|&)code=([^&]+)/);
+  if(qc){ try{ const o = decode(decodeURIComponent(qc[1])); if(o && o.a) store.set("sj-last", o); }catch(e){} history.replaceState(null, "", location.pathname + location.search + "#result"); }
+  const R = store.get("sj-last", null);
+  if(!R){ el.innerHTML = `<div class="take"><p>${t("pNone")}</p><a class="btn pri" href="#take">${t("ctaTake")}</a><div class="card" style="margin-top:20px">${loadBox(true)}</div></div>`; wireLoad(); return; }
   const sc = scoreAll(R.a); const ds = DIMS.filter(D => sc.d[D.id] != null);
   const sorted = [...ds].sort((a, b) => sc.d[b.id] - sc.d[a.id]);
   const strong = sorted.slice(0, 2), grow = sorted.slice(-2).reverse();
@@ -1956,7 +1985,9 @@ function renderResult(){
      ${R.r !== "self" ? `<div class="row" style="justify-content:space-between"><b>${t("rSend")}</b><button class="btn pri" id="send">${t("rSend")}</button></div><p id="sendmsg" class="small muted"></p>` : ""}
      <b>${t("rCode")}</b><p class="small muted" style="margin:4px 0 8px">${t("rCodeP")}</p><div class="row"><a class="btn pri" href="${mailto(t("brandShort") + " · " + t("rCode"), code)}">${t("rMail")}</a><button class="btn sec" id="copy">${t("rCopy")}</button></div><details class="res-code"><summary>${t("rCodeShow")}</summary><div class="code" id="code" style="margin-top:8px">${code}</div></details>
    </div>
+   <div class="card" style="margin-top:14px">${loadBox(false)}</div>
    <p class="small" style="margin-top:16px"><a href="#workshops">${t("nWs")} ${ARW()}</a> · <a href="#report">${t("ctaDemo")} ${ARW()}</a></p></div>`;
+  wireLoad();
   document.getElementById("copy").onclick = async () => { try{ await navigator.clipboard.writeText(code); toast(t("rCopied")); }catch(e){ const r = document.createRange(); r.selectNodeContents(document.getElementById("code")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } };
   const sd = document.getElementById("send");
   if(sd){ if(!DB){ sd.disabled = true; } sd.onclick = async () => { sd.disabled = true; try{ const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 8); await DB.collection("responses").doc(id).set(R); document.getElementById("sendmsg").textContent = t("rSent"); toast(t("rSent")); }catch(e){ sd.disabled = false; document.getElementById("sendmsg").textContent = t("rCodeP"); } }; }
