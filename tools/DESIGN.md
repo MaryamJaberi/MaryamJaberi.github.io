@@ -35,7 +35,9 @@ Every change Maryam makes to one of her products is a knot. A loom for the year 
 
 It is honest (no invented numbers), personal (Persian craft, a weaver in Rotterdam), and it rewards coming back.
 
-Second, quieter gesture: the "home screen" panel in the hero takes the colour of Rotterdam's sky at the moment you visit (sun altitude computed in the browser). At night the apps sit on a dark sky with a few stars.
+Hero (revised 15 Nov, after Maryam said the first pass still looked the same): the phone "home screen" became a garden carpet (chahar-bagh layout). An indigo border of saffron and pomegranate lozenges, corner pieces (lachak), a star medallion (toranj) holding her feather mark with two pendants, and the eight apps in a ring around it as the carpet's motifs, still clickable. The field is the sky over Rotterdam at the moment you visit (sun altitude computed in the browser); at night it is dark with stars. On load the carpet is woven from the bottom up, the way a weaver works, then the apps appear one by one. The loom further down is the same carpet's making-of.
+
+Palette added for the carpet: indigo #2A2257, saffron #E8B04B, pomegranate #C2365A, wool #F4EEF9. The rest of the page keeps lilac paper and aubergine ink so the carpet is the one loud thing.
 
 Third, the smallest: each project shows when it last changed.
 

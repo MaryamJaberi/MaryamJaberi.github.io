@@ -281,10 +281,10 @@ figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
 .loom .warp{stroke:#D3CBE6;stroke-width:1}
 .loom .ground{fill:#3E2F66}
 .loom .tassel{fill:#BCB0D8}
-.loom .field{fill:#231A3E}
+.loom .field{fill:#2A2257}
 .loom .warp-in{stroke:#FFFFFF;stroke-opacity:.07}
 .loom .weft{stroke:#FFFFFF;stroke-opacity:.08}
-.loom .guard{fill:#8C6FD0;opacity:.75}
+.loom .guard{fill:#E8B04B;opacity:.85}
 .loom .knot{transform-box:fill-box;transform-origin:center;transition:transform .25s}
 .loom .knot:hover{transform:scale(1.3)}
 .loom .shuttle{fill:var(--magenta)}
@@ -292,7 +292,7 @@ figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
 .loom-fig.js .knot{opacity:0;transform:scale(.2)}
 .loom-fig.js .field,.loom-fig.js .guard{opacity:0;transition:opacity .9s}
 .loom-fig.js.in .field{opacity:1}
-.loom-fig.js.in .guard{opacity:.75}
+.loom-fig.js.in .guard{opacity:.85}
 .loom-fig.js.in .knot{opacity:1;transform:scale(1);transition:opacity .5s var(--d),transform .6s cubic-bezier(.3,1.5,.5,1) var(--d)}
 .loom-fig.js.in .knot:hover{transform:scale(1.3);transition-delay:0s}
 @media (prefers-reduced-motion:reduce){
@@ -303,7 +303,6 @@ figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
 
 /* one opening moment: the signature draws itself, then the home screen switches on */
 html.boot .nav .brand svg path{stroke-dasharray:60;stroke-dashoffset:60;animation:sign .9s cubic-bezier(.6,.1,.3,1) .1s forwards}
-html.boot .home .app{opacity:0;animation:appOn .5s cubic-bezier(.3,1.5,.5,1) forwards;animation-delay:calc(.45s + var(--i) * 70ms)}
 @keyframes sign{to{stroke-dashoffset:0}}
 @keyframes appOn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
 
@@ -312,3 +311,30 @@ html.boot .home .app{opacity:0;animation:appOn .5s cubic-bezier(.3,1.5,.5,1) for
 .knot-tip{position:absolute;z-index:3;pointer-events:none;background:var(--ink);color:#fff;font-size:13.5px;line-height:1.35;padding:7px 11px;border-radius:9px;white-space:nowrap;transform:translate(-50%,calc(-100% - 14px));opacity:0;transition:opacity .15s}
 .knot-tip.on{opacity:1}
 .loom .knot{cursor:default}
+
+/* the hero carpet */
+.rug-fig{justify-self:end;width:100%;max-width:440px;margin:0;--sky1:#E4E6FA;--sky2:#F6E4EE;--knot:rgba(78,42,132,.10);--rug-label:#1C1530}
+.rug{display:block;width:100%;height:auto;filter:drop-shadow(0 22px 30px rgba(28,21,48,.18))}
+.rug .fringe line{stroke:#CFC3E4;stroke-width:1.6;stroke-linecap:round}
+.rug .guard-line{fill:none;stroke:#F4EEF9;stroke-opacity:.55;stroke-width:1}
+.rug .lachak{fill:#2A2257;fill-opacity:.9;stroke:#E8B04B;stroke-width:1.2}
+.rug .med-out{fill:#2A2257;stroke:#E8B04B;stroke-width:1.5}
+.rug .med-in{fill:none;stroke:#E8B04B;stroke-width:1;stroke-opacity:.8}
+.rug .pendant{fill:#2A2257;stroke:#E8B04B;stroke-width:1.2}
+.rug .star{fill:#fff}
+.rug-app text{font:600 11.5px var(--sans);fill:var(--rug-label)}
+[lang=fa] .rug-app text{font-family:Vazirmatn,var(--sans);font-size:12px}
+.rug-app use{transform-box:fill-box;transform-origin:center;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.rug-app:hover use,.rug-app:focus-visible use{transform:translateY(-3px) scale(1.08)}
+.rug-app:focus-visible{outline:none}
+.rug-app:focus-visible text{text-decoration:underline}
+.rug-fig figcaption{margin-top:14px;text-align:center;font-size:14px;color:var(--muted)}
+.rug-fig.night{--knot:rgba(255,255,255,.07);--rug-label:#F4F0FB}
+[dir=rtl] .rug-fig{justify-self:start}
+@media (max-width:860px){.rug-fig{justify-self:center}}
+
+html.boot .rug-body{clip-path:inset(100% 0 0 0);animation:weave 1.4s cubic-bezier(.55,.05,.35,1) .15s forwards}
+html.boot .rug .fringe{opacity:0;animation:fadeIn .6s .1s forwards}
+html.boot .rug-app{opacity:0;animation:fadeIn .45s forwards;animation-delay:calc(1.25s + var(--i) * 80ms)}
+@keyframes weave{to{clip-path:inset(0 0 0 0)}}
+@keyframes fadeIn{to{opacity:1}}

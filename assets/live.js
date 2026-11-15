@@ -28,23 +28,25 @@
   const home = document.querySelector("[data-sky]");
   if (home) {
     const a = sunAltitude(Date.now());
-    const sky = a < -12 ? ["#191335", "#33245C", 1] : a < -4 ? ["#262563", "#7B4F93", 1]
+    const sky = a < -12 ? ["#191335", "#3A2A66", 1] : a < -4 ? ["#262563", "#7B4F93", 1]
       : a < 4 ? ["#F0B6A4", "#D9C2EC", 0] : a < 18 ? ["#EADFF6", "#FAE0DD", 0] : ["#E4E6FA", "#F6E4EE", 0];
-    home.style.background = `linear-gradient(165deg,${sky[0]},${sky[1]})`;
-    if (sky[2]) {
+    home.style.setProperty("--sky1", sky[0]);
+    home.style.setProperty("--sky2", sky[1]);
+    const field = home.querySelector(".field");
+    if (sky[2] && field) {
       home.classList.add("night");
-      const ns = "http://www.w3.org/2000/svg", svg = document.createElementNS(ns, "svg");
-      svg.setAttribute("class", "stars"); svg.setAttribute("aria-hidden", "true");
-      svg.setAttribute("viewBox", "0 0 100 100"); svg.setAttribute("preserveAspectRatio", "none");
+      const ns = "http://www.w3.org/2000/svg", g = document.createElementNS(ns, "g");
+      const fx = +field.getAttribute("x"), fy = +field.getAttribute("y"), fw = +field.getAttribute("width"), fh = +field.getAttribute("height");
       let s = 7;
       const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
-      for (let i = 0; i < 26; i++) {
+      for (let i = 0; i < 34; i++) {
         const c = document.createElementNS(ns, "circle");
-        c.setAttribute("cx", (rnd() * 100).toFixed(1)); c.setAttribute("cy", (rnd() * 100).toFixed(1));
-        c.setAttribute("r", (0.18 + rnd() * 0.32).toFixed(2)); c.setAttribute("opacity", (0.3 + rnd() * 0.6).toFixed(2));
-        svg.appendChild(c);
+        c.setAttribute("class", "star");
+        c.setAttribute("cx", (fx + rnd() * fw).toFixed(1)); c.setAttribute("cy", (fy + rnd() * fh).toFixed(1));
+        c.setAttribute("r", (0.5 + rnd() * 1.1).toFixed(2)); c.setAttribute("opacity", (0.3 + rnd() * 0.6).toFixed(2));
+        g.appendChild(c);
       }
-      home.prepend(svg);
+      field.after(g);
     }
     const cap = home.querySelector(".sky-cap");
     if (cap) cap.hidden = false;
