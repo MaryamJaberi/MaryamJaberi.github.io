@@ -1,0 +1,49 @@
+{
+  "product": "Workplace Wellbeing Check (wellbeing-check/)",
+  "last_reviewed_commit": "cd4b128",
+  "last_run": "2026-11-16",
+  "tech_doc": {
+    "title": "مستند فنی — سنجش سلامت روانی سازمان",
+    "url": "https://claude.ai/artifact/D2H1VQ3yFi5EfQiCyhT6FV",
+    "project_id": "615b45f3-38b7-499c-84a6-85c2bfac3ccc",
+    "tab_file_id": "93742b44-9524",
+    "body_node_id": "7db45374-8e12",
+    "version": "1.0",
+    "last_rev": 17,
+    "widgets": {
+      "current_architecture": "29fc59bc-2e86",
+      "roadmap": "77d1f436-c8f4",
+      "target_architecture": "748832d5-6872"
+    },
+    "next_requirement_id": "R16",
+    "next_adr_id": "ADR-009"
+  },
+  "business_doc": {
+    "title": "بیزینس پلن‌ها — سنجش سلامت روانی سازمان",
+    "url": "https://claude.ai/artifact/V5CUPJpw5cKuTdpBevzSb8",
+    "project_id": "e355ed72-1b36-4280-b4b6-cd030b353b97",
+    "tab_file_id": "7af43e3f-d0a8",
+    "body_node_id": "54eeae04-789f",
+    "version": "1.0",
+    "last_rev": 12,
+    "widgets": {
+      "recommended_path_revenue": "d9ac61b6-436d"
+    },
+    "next_hypothesis_id": "H9"
+  },
+  "assumptions": {
+    "A_project_avg_eur": 5000,
+    "A_direct_cost_eur": 1200,
+    "D_annual_eur": 7500,
+    "D_direct_cost_eur": 2400,
+    "C_per_partner_org_eur": 1000,
+    "B_per_employee_year_eur": 15,
+    "B_min_eur": 900,
+    "B_avg_eur": 1800,
+    "workshop_fee_psychologist_eur": 600,
+    "workshop_price_eur": 1250,
+    "fixed_costs_year1_eur": [11000, 16000],
+    "recommended_path_revenue_k": {"y1": 35, "y2": 105, "y3": 258}
+  },
+  "pending_business_impacts": []
+}
