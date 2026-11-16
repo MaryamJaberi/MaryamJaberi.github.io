@@ -9,14 +9,14 @@
     "tab_file_id": "93742b44-9524",
     "body_node_id": "7db45374-8e12",
     "version": "1.0",
-    "last_rev": 18,
+    "last_rev": 19,
     "widgets": {
       "current_architecture": "29fc59bc-2e86",
       "roadmap": "77d1f436-c8f4",
       "target_architecture": "748832d5-6872"
     },
-    "next_requirement_id": "R21",
-    "next_adr_id": "ADR-010"
+    "next_requirement_id": "R28",
+    "next_adr_id": "ADR-011"
   },
   "business_doc": {
     "title": "بیزینس پلن‌ها — سنجش سلامت روانی سازمان",
@@ -25,11 +25,11 @@
     "tab_file_id": "7af43e3f-d0a8",
     "body_node_id": "54eeae04-789f",
     "version": "1.0",
-    "last_rev": 27,
+    "last_rev": 31,
     "widgets": {
       "recommended_path_revenue": "d9ac61b6-436d"
     },
-    "next_hypothesis_id": "H12"
+    "next_hypothesis_id": "H13"
   },
   "assumptions": {
     "A_project_avg_eur": 5000,
@@ -59,6 +59,12 @@
       "NL": "core",
       "EU": "via partners (C) from year 3",
       "IR": "social impact, zero revenue under sanctions"
+    },
+    "H_bundles": {
+      "pols": "B 900-1800",
+      "zorg": "D 7500 + sessions",
+      "compleet": "D+G ~10000 + hourly services",
+      "in_projection": false
     }
   },
   "pending_business_impacts": []
