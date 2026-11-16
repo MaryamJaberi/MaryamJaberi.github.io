@@ -25,11 +25,16 @@
     "tab_file_id": "7af43e3f-d0a8",
     "body_node_id": "54eeae04-789f",
     "version": "1.0",
-    "last_rev": 32,
+    "last_rev": 34,
     "widgets": {
       "recommended_path_revenue": "d9ac61b6-436d"
     },
-    "next_hypothesis_id": "H13"
+    "next_hypothesis_id": "H13",
+    "sections": {
+      "8.4": "NL registration checklist",
+      "8.5": "KVK + government rules",
+      "8.6": "IP / copy protection"
+    }
   },
   "assumptions": {
     "A_project_avg_eur": 5000,
@@ -67,5 +72,7 @@
       "in_projection": false
     }
   },
-  "pending_business_impacts": []
+  "pending_business_impacts": [],
+  "legal_checklist_last_verified": "2026-11-16",
+  "ip_register_last_reviewed": "2026-11-16"
 }
