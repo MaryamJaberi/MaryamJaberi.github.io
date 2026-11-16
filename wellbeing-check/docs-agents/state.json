@@ -9,14 +9,14 @@
     "tab_file_id": "93742b44-9524",
     "body_node_id": "7db45374-8e12",
     "version": "1.0",
-    "last_rev": 17,
+    "last_rev": 18,
     "widgets": {
       "current_architecture": "29fc59bc-2e86",
       "roadmap": "77d1f436-c8f4",
       "target_architecture": "748832d5-6872"
     },
-    "next_requirement_id": "R16",
-    "next_adr_id": "ADR-009"
+    "next_requirement_id": "R21",
+    "next_adr_id": "ADR-010"
   },
   "business_doc": {
     "title": "بیزینس پلن‌ها — سنجش سلامت روانی سازمان",
@@ -25,11 +25,11 @@
     "tab_file_id": "7af43e3f-d0a8",
     "body_node_id": "54eeae04-789f",
     "version": "1.0",
-    "last_rev": 12,
+    "last_rev": 27,
     "widgets": {
       "recommended_path_revenue": "d9ac61b6-436d"
     },
-    "next_hypothesis_id": "H9"
+    "next_hypothesis_id": "H12"
   },
   "assumptions": {
     "A_project_avg_eur": 5000,
@@ -42,8 +42,24 @@
     "B_avg_eur": 1800,
     "workshop_fee_psychologist_eur": 600,
     "workshop_price_eur": 1250,
-    "fixed_costs_year1_eur": [11000, 16000],
-    "recommended_path_revenue_k": {"y1": 35, "y2": 105, "y3": 258}
+    "fixed_costs_year1_eur": [
+      11000,
+      16000
+    ],
+    "recommended_path_revenue_k": {
+      "y1": 35,
+      "y2": 122.5,
+      "y3": 298
+    },
+    "G": {
+      "addon_per_year": 2500,
+      "manager_workshop": 1250
+    },
+    "markets": {
+      "NL": "core",
+      "EU": "via partners (C) from year 3",
+      "IR": "social impact, zero revenue under sanctions"
+    }
   },
   "pending_business_impacts": []
 }
