@@ -1,4 +1,4 @@
-import{r as u,j as e}from"./vendor-react-BrgJxFZf.js";import{t as y,s as m}from"./index-BWbSAjd3.js";import{a as w,D as S,X as N,aV as C,aW as A,p as k,t as F}from"./vendor-icons-CuWDCexF.js";import"./vendor-utils-xvhoVIS_.js";const E=({isOpen:p,onClose:x,language:o})=>{if(!p)return null;const i=y[o],s=o==="en",[a,f]=u.useState("pubspec.yaml"),[l,d]=u.useState(!1),r={"pubspec.yaml":`name: mafia_host_os
+import{r as u,j as e}from"./vendor-react-BrgJxFZf.js";import{t as y,s as m}from"./index-CryJVUow.js";import{a as w,D as S,X as N,aV as C,aW as A,p as k,t as F}from"./vendor-icons-CuWDCexF.js";import"./vendor-utils-xvhoVIS_.js";const E=({isOpen:p,onClose:x,language:o})=>{if(!p)return null;const i=y[o],s=o==="en",[a,f]=u.useState("pubspec.yaml"),[l,d]=u.useState(!1),r={"pubspec.yaml":`name: mafia_host_os
 description: "Professional Mafia Host OS & Real-Time Multiplayer Companion App for Flutter"
 publish_to: 'none'
 version: 1.0.0+1

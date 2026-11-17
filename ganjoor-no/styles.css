@@ -372,7 +372,8 @@ body.quiet .sheet::before, body.quiet .ornament { display: none; }
 }
 .cover small { color: #fffdf8; }
 .c0 { background: #0c6e66; } .c1 { background: #14233b; } .c2 { background: #1a3a9c; } .c3 { background: #8c3d4a; }
-.stage { display: grid; gap: 16px; text-align: start; }
+.stage { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; text-align: start; }
+.stage > * { min-width: 0; }
 .parchment { text-align: center; }
 .rail {
   background: #14233b; color: #f6f1e6; border-radius: 16px; padding: 14px;
@@ -639,3 +640,7 @@ a.card:hover, a.hit:hover { box-shadow: 0 6px 16px rgba(20, 30, 40, 0.08); trans
 .faal-poem .verse { margin: 6px 0; line-height: 2.1; }
 .faal-poem .verse.end { margin-bottom: 18px; }
 .faal-poem h2 { color: var(--turquoise); }
+/* v21: روی گوشی هیچ پنلی از عرض صفحه بیرون نزند */
+.panel { min-width: 0; max-width: 100%; }
+.tabs { flex-wrap: wrap; }
+.panel textarea { max-width: 100%; box-sizing: border-box; }
