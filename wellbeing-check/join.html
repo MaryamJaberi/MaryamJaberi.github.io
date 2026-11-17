@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>همکاری با سنجش سلامت سازمان · SoloNovate</title>
+<script src="firebase-config.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
@@ -216,7 +217,7 @@ fa:{brand:"سنجش سلامت سازمان",kicker:"SoloNovate · برای رو
  privacy:"اطلاعات شما فقط برای همین همکاری استفاده می‌شود، به کسی فروخته نمی‌شود و هر زمان بخواهید حذف می‌شود (GDPR). شمارهٔ ثبت فقط برای بررسی اعتبار حرفه‌ای است و منتشر نمی‌شود.",
  send:"ارسال درخواست با ایمیل",copy:"کپی پاسخ‌ها",copied:"کپی شد.",copyF:"کپی نشد؛ متن بالا را دستی انتخاب کنید.",prog:"{x} از {y} بخش لازم",
  doneT:"تقریباً تمام شد",doneP:"برنامهٔ ایمیلتان با پاسخ‌های شما باز شد؛ فقط «ارسال» را بزنید. اگر باز نشد، متن زیر را کپی کنید و به این نشانی بفرستید: ",mailAgain:"باز کردن دوبارهٔ ایمیل",
- subj:"درخواست همکاری — سنجش سلامت سازمان",yes:"بله",no:"خیر",
+ subj:"درخواست همکاری — سنجش سلامت سازمان", sent:"درخواست ارسال شد", sentP:"درخواست شما رسید. ظرف یک هفته با شما تماس می‌گیریم. اگر خواستید، نسخه‌ای از پاسخ‌هایتان را نگه دارید:", sending:"در حال ارسال…",yes:"بله",no:"خیر",
  o:{psy:"روان‌شناس",clin:"روان‌شناس بالینی",ther:"روان‌درمانگر",coach:"کوچ",couns:"مشاور",org:"روان‌شناس سازمانی",trainer:"مربی و تسهیلگر",art:"هنردرمانگر",res:"پژوهشگر",student:"دانشجوی روان‌شناسی",
   nip:"NIP",big:"BIG",nvp:"NVP",lvvp:"LVVP",nobco:"NOBCO / EMCC",iran:"سازمان نظام روان‌شناسی ایران",other:"سایر",none:"هنوز ندارم",
   y0:"کمتر از ۲ سال",y1:"۲ تا ۵ سال",y2:"۵ تا ۱۰ سال",y3:"بیش از ۱۰ سال",
@@ -242,7 +243,7 @@ en:{brand:"Workplace Wellbeing Check",kicker:"SoloNovate · for psychologists, t
  privacy:"Your information is used only for this collaboration, never sold, and deleted whenever you ask (GDPR). Your registration number is only used to check professional standing and is never published.",
  send:"Send application by e-mail",copy:"Copy answers",copied:"Copied.",copyF:"Couldn't copy; please select the text above manually.",prog:"{x} of {y} required parts",
  doneT:"Almost done",doneP:"Your e-mail app opened with your answers; just press Send. If it didn't open, copy the text below and send it to: ",mailAgain:"Open the e-mail again",
- subj:"Partner application — Workplace Wellbeing Check",yes:"Yes",no:"No",
+ subj:"Partner application — Workplace Wellbeing Check", sent:"Application sent", sentP:"Your application has arrived. We will contact you within a week. You can keep a copy of your answers:", sending:"Sending…",yes:"Yes",no:"No",
  o:{psy:"Psychologist",clin:"Clinical psychologist",ther:"Psychotherapist",coach:"Coach",couns:"Counsellor",org:"Work & organisational psychologist",trainer:"Trainer / facilitator",art:"Art therapist",res:"Researcher",student:"Psychology student",
   nip:"NIP",big:"BIG",nvp:"NVP",lvvp:"LVVP",nobco:"NOBCO / EMCC",iran:"Psychology and Counselling Organization of Iran",other:"Other",none:"Not yet",
   y0:"Under 2 years",y1:"2–5 years",y2:"5–10 years",y3:"Over 10 years",
@@ -268,7 +269,7 @@ nl:{brand:"Welzijnsscan voor organisaties",kicker:"SoloNovate · voor psychologe
  privacy:"Uw gegevens worden alleen voor deze samenwerking gebruikt, nooit verkocht en op uw verzoek verwijderd (AVG). Uw registratienummer gebruiken we alleen om uw beroepsregistratie te controleren; het wordt nooit gepubliceerd.",
  send:"Aanmelding per e-mail versturen",copy:"Antwoorden kopiëren",copied:"Gekopieerd.",copyF:"Kopiëren lukte niet; selecteer de tekst hierboven handmatig.",prog:"{x} van {y} verplichte onderdelen",
  doneT:"Bijna klaar",doneP:"Uw e-mailprogramma is geopend met uw antwoorden; druk alleen nog op Verzenden. Opende het niet? Kopieer de tekst hieronder en stuur die naar: ",mailAgain:"E-mail opnieuw openen",
- subj:"Aanmelding partner — Welzijnsscan",yes:"Ja",no:"Nee",
+ subj:"Aanmelding partner — Welzijnsscan", sent:"Aanmelding verstuurd", sentP:"Uw aanmelding is ontvangen. We nemen binnen een week contact op. U kunt een kopie van uw antwoorden bewaren:", sending:"Bezig met versturen…",yes:"Ja",no:"Nee",
  o:{psy:"Psycholoog",clin:"Klinisch psycholoog",ther:"Psychotherapeut",coach:"Coach",couns:"Counselor",org:"Arbeids- en organisatiepsycholoog",trainer:"Trainer / begeleider",art:"Beeldend therapeut",res:"Onderzoeker",student:"Student psychologie",
   nip:"NIP",big:"BIG",nvp:"NVP",lvvp:"LVVP",nobco:"NOBCO / EMCC",iran:"Psychologenorganisatie van Iran",other:"Anders",none:"Nog niet",
   y0:"Minder dan 2 jaar",y1:"2–5 jaar",y2:"5–10 jaar",y3:"Meer dan 10 jaar",
@@ -364,10 +365,24 @@ $("jf").addEventListener("submit", e => e.preventDefault());
 document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => applyLang(b.dataset.l)));
 $("copy").addEventListener("click", () => { $("done").classList.add("show"); $("donetxt").textContent = text(); copyTo($("cstat2")); $("done").scrollIntoView({behavior:"smooth"}); });
 $("copy2").addEventListener("click", () => copyTo($("cstat2")));
-$("send").addEventListener("click", () => {
+$("send").addEventListener("click", async () => {
   const d = collect(); let first = null;
   document.querySelectorAll("[data-req]").forEach(f => { const good = valid(f, d); f.classList.toggle("invalid", !good); const i = f.querySelector("input[type=text],input[type=email],textarea"); if(i) i.classList.toggle("bad", !good); if(!good && !first) first = f; });
   if(first){ first.scrollIntoView({behavior:"smooth", block:"center"}); const i = first.querySelector("input,textarea"); if(i) setTimeout(() => i.focus({preventScroll:true}), 300); return; }
+  if(window.FB_CONFIG){
+    const btn = $("send"); btn.disabled = true; btn.textContent = T[L].sending;
+    try{
+      for(const m of ["app", "firestore"]) if(!(window.firebase && (m === "app" ? firebase.initializeApp : firebase.firestore))) await new Promise((ok, no) => { const s = document.createElement("script"); s.src = (window.FB_SDK_BASE || "https://www.gstatic.com/firebasejs/10.12.2/") + `firebase-${m}-compat.js`; s.onload = ok; s.onerror = no; document.head.appendChild(s); });
+      if(!firebase.apps.length){ firebase.initializeApp(window.FB_CONFIG); if(window.FB_EMULATOR) firebase.firestore().useEmulator("127.0.0.1", 8080); }
+      const doc = {name:d.name, email:d.email.toLowerCase(), city:d.city, web:d.web, regno:d.regno, edu:d.edu, rate:d.rate, bio:d.bio, idea:d.idea, ref:d.ref, reg:d.reg, years:d.years, avail:d.avail,
+        role:d.g_role, spec:d.g_spec, method:d.g_method, offer:d.g_offer, lang:d.g_lang, format:d.g_format, region:d.g_region, sector:d.g_sector, c1:d.c1, c2:d.c2, c3:d.c3, uiLang:L, status:"new", createdAt:firebase.firestore.FieldValue.serverTimestamp()};
+      await firebase.firestore().collection("applications").add(doc);
+      const done = $("done"); done.querySelector("h2").textContent = T[L].sent; done.querySelector("p").textContent = T[L].sentP;
+      $("donetxt").textContent = text(); $("mailagain").hidden = true; done.classList.add("show"); $("jf").hidden = true; document.querySelector(".bar").hidden = true;
+      try{ localStorage.removeItem("wb-join"); }catch(e){}
+      window.scrollTo({top:0, behavior:"smooth"}); done.focus({preventScroll:true}); return;
+    }catch(err){ btn.disabled = false; btn.textContent = T[L].send; }   // fall back to e-mail below
+  }
   const done = $("done");
   done.querySelector("p").textContent = T[L].doneP; done.querySelector("p").insertAdjacentHTML("beforeend", `<span class="mailtxt">${EMAIL}</span>`);
   $("donetxt").textContent = text(); $("mailagain").href = mailHref();

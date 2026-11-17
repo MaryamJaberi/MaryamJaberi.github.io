@@ -1,0 +1,136 @@
+rules_version = '2';
+// Workplace Wellbeing Check (SoloNovate) — Firestore security rules.
+// Roles live in members/{lower-case e-mail}: {role: "admin" | "psy" | "hr", orgs: [orgId], active: true}.
+// The owner e-mail below is always admin, so the first login can set up everyone else.
+// Privacy promises enforced here:
+//  - Individual survey answers (responses) can be written by anyone into an open round, but only
+//    SoloNovate staff (admin, psy) can read them. HR never reads individual answers.
+//  - HR reads only the aggregated, suppressed report (reports) of its own organisations.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null && request.auth.token.email_verified == true; }
+    function em() { return request.auth.token.email.lower(); }
+    function isOwner() { return signedIn() && em() == "m.jaberi1212@gmail.com"; }
+    function memPath() { return /databases/$(database)/documents/members/$(em()); }
+    function hasMem() { return signedIn() && exists(memPath()); }
+    function mem() { return get(memPath()).data; }
+    function hasRole(r) { return hasMem() && mem().role == r && mem().get("active", true) == true; }
+    function isAdmin() { return isOwner() || hasRole("admin"); }
+    function isStaff() { return isAdmin() || hasRole("psy"); }
+    function hrOf(org) { return hasRole("hr") && org in mem().get("orgs", []); }
+    function str(v, max) { return v is string && v.size() <= max; }
+    function optStr(d, k, max) { return !(k in d) || str(d[k], max); }
+    function optList(d, k, max) { return !(k in d) || (d[k] is list && d[k].size() <= max); }
+
+    // ── staff directory ──
+    match /members/{email} {
+      allow read: if isAdmin() || (signedIn() && em() == email);
+      allow write: if isAdmin();
+    }
+
+    // ── organisations (clients and pilots) ──
+    match /orgs/{orgId} {
+      allow read: if isStaff() || hrOf(orgId);
+      allow write: if isAdmin();
+    }
+
+    // ── survey rounds: the join code is the document id ──
+    match /rounds/{roundId} {
+      allow get: if true;   // the survey page needs the organisation name and questionnaire pack
+      allow list: if isStaff() || (hasRole("hr") && resource.data.get("orgId", "") in mem().get("orgs", []));
+      allow create, update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // ── individual answers: write-only for participants ──
+    match /responses/{id} {
+      allow create: if
+        request.resource.data.keys().hasOnly(["v", "r", "lv", "p", "m", "a", "t"])
+        && request.resource.data.keys().hasAll(["r", "lv", "a"])
+        && str(request.resource.data.r, 20)
+        && str(request.resource.data.lv, 20)
+        && optStr(request.resource.data, "p", 20)
+        && optStr(request.resource.data, "m", 7)
+        && request.resource.data.a is map && request.resource.data.a.size() <= 12
+        && (!("t" in request.resource.data) || request.resource.data.t == request.time)
+        && exists(/databases/$(database)/documents/rounds/$(request.resource.data.r))
+        && get(/databases/$(database)/documents/rounds/$(request.resource.data.r)).data.get("status", "open") == "open";
+      allow read: if isStaff();
+      allow update: if false;
+      allow delete: if isAdmin();
+    }
+
+    // ── aggregated, suppressed reports (built in the admin panel) ──
+    match /reports/{roundId} {
+      allow read: if isStaff() || (resource != null && hrOf(resource.data.get("orgId", "")));
+      allow create, update: if isStaff();
+      allow delete: if isAdmin();
+    }
+
+    // ── encrypted group results for employees (#group-KEY); only the organisation key opens them ──
+    match /groupfiles/{hash} {
+      allow get: if true;
+      allow list: if false;
+      allow write: if isStaff();
+    }
+
+    // ── requests from the questionnaire picker ──
+    match /leads/{id} {
+      allow create: if
+        request.resource.data.keys().hasOnly(["org", "email", "name", "phone", "msg", "profile", "pkg", "items", "lang", "status", "createdAt"])
+        && str(request.resource.data.org, 120)
+        && str(request.resource.data.email, 160) && request.resource.data.email.matches("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$")
+        && optStr(request.resource.data, "name", 120)
+        && optStr(request.resource.data, "phone", 40)
+        && optStr(request.resource.data, "msg", 1500)
+        && (!("profile" in request.resource.data) || request.resource.data.profile is map)
+        && optStr(request.resource.data, "pkg", 20)
+        && optList(request.resource.data, "items", 12)
+        && optStr(request.resource.data, "lang", 5)
+        && request.resource.data.status == "new"
+        && request.resource.data.createdAt == request.time;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // ── partner applications from join.html ──
+    match /applications/{id} {
+      allow create: if
+        request.resource.data.keys().hasOnly(["name", "email", "city", "web", "role", "reg", "regno", "years", "edu", "spec", "method",
+          "offer", "lang", "format", "region", "sector", "avail", "rate", "bio", "idea", "ref", "c1", "c2", "c3", "uiLang", "status", "createdAt"])
+        && str(request.resource.data.name, 120)
+        && str(request.resource.data.email, 160) && request.resource.data.email.matches("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$")
+        && str(request.resource.data.bio, 600) && request.resource.data.bio.size() > 0
+        && request.resource.data.c1 == true
+        && optStr(request.resource.data, "city", 120) && optStr(request.resource.data, "web", 300)
+        && optStr(request.resource.data, "regno", 60) && optStr(request.resource.data, "edu", 200)
+        && optStr(request.resource.data, "reg", 20) && optStr(request.resource.data, "years", 20) && optStr(request.resource.data, "avail", 20)
+        && optStr(request.resource.data, "uiLang", 5)
+        && (!("c2" in request.resource.data) || request.resource.data.c2 is bool) && (!("c3" in request.resource.data) || request.resource.data.c3 is bool)
+        && optStr(request.resource.data, "rate", 120) && optStr(request.resource.data, "idea", 600) && optStr(request.resource.data, "ref", 200)
+        && optList(request.resource.data, "role", 12) && optList(request.resource.data, "spec", 16) && optList(request.resource.data, "method", 12)
+        && optList(request.resource.data, "offer", 10) && optList(request.resource.data, "lang", 10) && optList(request.resource.data, "format", 4)
+        && optList(request.resource.data, "region", 6) && optList(request.resource.data, "sector", 8)
+        && request.resource.data.status == "new"
+        && request.resource.data.createdAt == request.time;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // ── partner profiles shown on the site ──
+    match /partners/{id} {
+      allow read: if (resource != null && resource.data.get("published", false) == true) || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    // ── audit trail: append-only ──
+    match /audit/{id} {
+      allow create: if (isStaff() || hasRole("hr")) && request.resource.data.by == em() && request.resource.data.at == request.time;
+      allow read: if isAdmin();
+      allow update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
