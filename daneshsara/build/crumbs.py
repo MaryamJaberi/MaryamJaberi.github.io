@@ -17,10 +17,10 @@ LAYER = {'psy':('لایهٔ علم','index.html#layers'),'soc':('لایهٔ عل
          'core':('هستهٔ مشترک','atlas/sitemap.html')}
 
 CSS = ('<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));'
- 'border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#8a8578));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}'
+ 'border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}'
  '.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}'
  '.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}'
- '@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17))}}</style>')
+ '@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style>')
 
 def title_of(s, fallback):
     m = re.search(r'<title[^>]*>(.*?)</title>', s, re.S)

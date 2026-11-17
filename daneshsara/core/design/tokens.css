@@ -8,7 +8,7 @@
   /* سطح‌ها */
   --paper:#F7F4EF; --surface:#FFFFFF; --surface-subtle:#F1EDE6;
   /* مرکب */
-  --ink:#1C1915; --ink-2:#5C574F; --ink-3:#8A847A;
+  --ink:#1C1915; --ink-2:#5C574F; --ink-3:#6B655B;
   /* مرز */
   --line:#E8E4DC; --line-strong:#D4CFC5;
   /* برند */
@@ -36,7 +36,7 @@
   :root:not([data-theme="light"]){
     color-scheme:dark;
     --paper:#141210; --surface:#1C1915; --surface-subtle:#25211C;
-    --ink:#F7F4EF; --ink-2:#C9C3B8; --ink-3:#8A847A;
+    --ink:#F7F4EF; --ink-2:#C9C3B8; --ink-3:#A39D92;
     --line:#2E2A24; --line-strong:#3D3830;
     --primary:#4FB3A6; --primary-soft:#0F2E2A; --primary-hover:#7CCBC0;
     --accent:#8FA3E8; --accent-soft:#1A2040;
@@ -50,7 +50,7 @@
 :root[data-theme="dark"]{
   color-scheme:dark;
   --paper:#141210; --surface:#1C1915; --surface-subtle:#25211C;
-  --ink:#F7F4EF; --ink-2:#C9C3B8; --ink-3:#8A847A;
+  --ink:#F7F4EF; --ink-2:#C9C3B8; --ink-3:#A39D92;
   --line:#2E2A24; --line-strong:#3D3830;
   --primary:#4FB3A6; --primary-soft:#0F2E2A; --primary-hover:#7CCBC0;
   --accent:#8FA3E8; --accent-soft:#1A2040;

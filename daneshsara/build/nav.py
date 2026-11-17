@@ -64,18 +64,18 @@ css.textContent = `
 #ds-map .top b{font-size:1.05rem}#ds-map .top a{color:var(--primary,#0a6b60);font-size:.85rem}
 #ds-map .x{font:inherit;border:1px solid var(--line-strong,#cfc9bc);background:none;color:inherit;border-radius:999px;padding:1px 12px;cursor:pointer}
 #ds-map .g{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:14px}
-#ds-map h3{margin:0 0 4px;font-size:.82rem;color:var(--ink-3,#8a8578);font-weight:600;border-bottom:1px solid var(--line,#e5e1d8);padding-bottom:3px}
+#ds-map h3{margin:0 0 4px;font-size:.82rem;color:var(--ink-3,#6b655b);font-weight:600;border-bottom:1px solid var(--line,#e5e1d8);padding-bottom:3px}
 #ds-map ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
 #ds-map li a{display:block;padding:3px 8px;border-radius:8px;color:inherit;text-decoration:none}
 #ds-map li a:hover{background:var(--surface-subtle,#f1ede6)}
 #ds-map li a.on{background:var(--primary,#0a6b60);color:var(--paper,#fff);font-weight:600}
-#ds-map .w{font-size:.8rem;color:var(--ink-3,#8a8578);margin:10px 0 0}
+#ds-map .w{font-size:.8rem;color:var(--ink-3,#6b655b);margin:10px 0 0}
 .ds-pv{position:fixed;z-index:80;width:min(340px,calc(100vw - 24px));background:var(--surface,#fff);color:var(--ink,#222);border:1px solid var(--line-strong,#cfc9bc);border-radius:12px;padding:11px 14px 10px;box-shadow:0 8px 28px rgba(0,0,0,.22);direction:rtl;font-size:.86rem;line-height:1.8;pointer-events:none;opacity:0;transition:opacity .12s}
 .ds-pv.on{opacity:1}
 .ds-pv i{font-style:normal;font-size:.72rem;font-weight:650;color:var(--paper,#fff);background:var(--primary,#0a6b60);border-radius:999px;padding:0 9px}
 .ds-pv b{display:block;margin:4px 0 2px;font-size:.95rem;line-height:1.6}
 .ds-pv p{margin:0;color:var(--ink-2,#5c574c)}
-.ds-pv small{display:block;margin-top:5px;color:var(--ink-3,#8a8578);font-size:.72rem}
+.ds-pv small{display:block;margin-top:5px;color:var(--ink-3,#6b655b);font-size:.72rem}
 @media (prefers-reduced-motion:reduce){.ds-pv{transition:none}}`;
 document.head.appendChild(css);
 
@@ -132,6 +132,6 @@ if (matchMedia("(hover:hover)").matches) {
 document.addEventListener("keydown", e => { if (e.key === "Escape") { hide(); if (map && !map.hidden) toggle(false); } });
 })();
 '''
-GUARD = '\n(()=>{const c=document.currentScript;if(!c)return;const s=document.createElement("script");s.src=new URL("guard.js",c.src).href;s.defer=true;document.head.appendChild(s)})();\n'
+GUARD = '\n(()=>{const c=document.querySelector(\'script[src$="core/nav.js"]\')||document.currentScript;if(!c)return;const s=document.createElement("script");s.src=new URL("guard.js",c.src).href;s.defer=true;document.head.appendChild(s)})();\n'
 open('core/nav.js', 'w', encoding='utf-8').write(JS.replace('__NAV__', json.dumps(NAV, ensure_ascii=False)) + GUARD)
 print(f'core/preview.json: {len(P)} pages, {len(C)} concepts, {os.path.getsize("core/preview.json") // 1024} KB; core/nav.js {os.path.getsize("core/nav.js") // 1024} KB')

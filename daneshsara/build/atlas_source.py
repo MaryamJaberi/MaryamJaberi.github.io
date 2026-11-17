@@ -17,11 +17,11 @@ EXTRA = {'atlas/world.html': ['psy', 'soc', 'phil', 'tabar'], 'atlas/library-pla
          'atlas/index.html': ['psy', 'soc', 'phil', 'tabar'], 'atlas/sitemap.html': ['psy', 'soc', 'phil', 'tabar', 'iran']}
 CSS = ('<style id="ds-src-css">.ds-src{font:400 .78rem/1.9 inherit;display:flex;flex-wrap:wrap;gap:8px;align-items:center;'
  'padding:7px max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));'
- 'border-bottom:1px solid var(--line,#e5e1d8);background:var(--surface,#f4f1ea);color:var(--ink-3,#8a8578)}'
+ 'border-bottom:1px solid var(--line,#e5e1d8);background:var(--surface,#f4f1ea);color:var(--ink-3,#6b655b)}'
  '.ds-src a{display:inline-flex;align-items:center;gap:5px;color:var(--ink-2,#5c574c);text-decoration:none;'
  'border:1px solid var(--line-strong,#d8d3c7);border-radius:999px;padding:1px 10px}'
  '.ds-src a:hover{border-color:currentColor}.ds-src a u{width:7px;height:7px;border-radius:50%;background:var(--d);display:inline-block}'
- '@media (prefers-color-scheme:dark){.ds-src{border-color:var(--line,#33312c);background:var(--surface,#232220)}}</style>')
+ '@media (prefers-color-scheme:dark){.ds-src{border-color:var(--line,#33312c);background:var(--surface,#232220);color:var(--ink-3,#a39d92)}}</style>')
 
 n = 0
 for p in sorted(set(list(SRC) + list(EXTRA))):
