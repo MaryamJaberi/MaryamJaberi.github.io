@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="درنگ: یک جملهٔ کوتاه فارسی را بده؛ خوانش‌های جدای آن را ببین.">
+<meta name="referrer" content="no-referrer">
+<title>درنگ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap">
+<style>
+:root{--paper:#F2F4F6;--card:#fff;--ink:#17202B;--muted:#5B6672;--line:#D5DBE1;--accent:#2B5C8F;--tint:#E4EDF6;--warn-bg:#FFF4D6;--warn-line:#D9B13F;--err:#9B2C2C;--ok:#1E6B45;--remote:#9AA5B1;--poss:#7FA1C4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#10161D;--card:#18212B;--ink:#E7ECF1;--muted:#9AA6B2;--line:#2C3947;--accent:#7FB1E3;--tint:#1D2B3A;--warn-bg:#3A3015;--warn-line:#8A7220;--err:#F19A9A;--ok:#7FD1A6;--remote:#6B7783;--poss:#4F78A1}}
+:root[data-theme="dark"]{--paper:#10161D;--card:#18212B;--ink:#E7ECF1;--muted:#9AA6B2;--line:#2C3947;--accent:#7FB1E3;--tint:#1D2B3A;--warn-bg:#3A3015;--warn-line:#8A7220;--err:#F19A9A;--ok:#7FD1A6;--remote:#6B7783;--poss:#4F78A1}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 "Vazirmatn","Vazir",Tahoma,system-ui,sans-serif}
+main{max-width:640px;margin:0 auto;padding:20px 16px 40px}
+h1{margin:0 0 4px;font-size:28px}h2{margin:0 0 6px;font-size:17px}h3{margin:10px 0 4px;font-size:14px}p{margin:6px 0}
+a{color:var(--accent)}
+.lead{color:var(--muted);margin:0 0 14px}.muted{color:var(--muted);font-size:13px}.error{color:var(--err)}.okmsg{color:var(--ok)}
+textarea,input,select{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
+textarea{min-height:90px;resize:vertical}label{display:block;margin-top:8px;font-size:13px;color:var(--muted)}
+button{font:inherit;cursor:pointer;border-radius:6px;padding:6px 14px;border:1px solid var(--accent);background:var(--card);color:var(--accent)}
+button.primary{background:var(--accent);color:var(--paper)}button.ghost{border-color:var(--line);color:var(--muted)}button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.row{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}.row .muted{margin-inline-start:auto}
+details.cfg{margin:12px 0;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+summary{cursor:pointer;color:var(--accent)}
+ol.steps{margin:6px 0;padding-inline-start:22px;font-size:14px;color:var(--muted)}
+#result{margin-top:16px}
+.orig{margin:0 0 6px;padding:6px 14px;border-inline-start:4px solid var(--accent);font-size:20px;line-height:2}
+.pause{color:var(--accent);font-weight:700;font-size:1.25em;padding:0 1px}
+.status{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;margin:8px 0}
+.status b{padding:1px 12px;border-radius:12px;background:var(--tint);color:var(--accent);font-size:14px}
+.status.stop b{background:var(--line);color:var(--muted)}
+.note{margin:2px 0 6px;font-size:13px;color:var(--muted)}
+.caution{margin:8px 0;padding:8px 12px;background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:6px;font-size:14px}
+.card{margin:10px 0;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-inline-start:5px solid var(--accent);border-radius:6px}
+.card.rel-possible{border-inline-start-color:var(--poss)}.card.rel-remote{border-inline-start:5px dashed var(--remote)}.card.sel{background:var(--tint)}
+.card h4{margin:0;font-size:16px}.para{font-size:17px}.plain{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0;font-size:13px}
+.meta span{padding:0 9px;border:1px solid var(--line);border-radius:10px}.meta .tag{color:var(--accent)}
+details{margin:6px 0;font-size:14px}.pick{margin-top:4px}
+.fix{margin-top:10px;padding-top:6px;border-top:1px solid var(--line)}
+.rw{display:grid;grid-template-columns:1fr auto;gap:2px 8px;margin:6px 0;padding:8px 12px;background:var(--card);border-radius:6px}
+.rw .lbl{grid-column:1/-1;font-size:13px;color:var(--muted)}.rw p{margin:0}.open{margin-top:6px;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+  <h1>درنگ</h1>
+  <p class="lead">یک جملهٔ فارسی بگذار. درنگ نمی‌گوید معنی درست کدام است؛ می‌گوید همین خط چند جور خوانده می‌شود.</p>
+
+  <details class="cfg" id="cfg" hidden>
+    <summary>اتصال مدل</summary>
+    <p class="muted">درنگ سرور ندارد. جمله مستقیم از مرورگر تو به ارائه‌دهندهٔ مدلی می‌رود که خودت انتخاب می‌کنی. کلید فقط در حافظهٔ همین مرورگر می‌ماند و به هیچ جای دیگری فرستاده نمی‌شود.</p>
+    <label for="provider">ارائه‌دهنده</label>
+    <select id="provider">
+      <option value="gemini">Google Gemini</option>
+      <option value="anthropic">Anthropic (Claude)</option>
+      <option value="openai">سازگار با OpenAI</option>
+    </select>
+    <ol class="steps" id="help"></ol>
+    <label for="base">نشانی پایه</label><input id="base" type="url" dir="ltr" autocomplete="off" spellcheck="false">
+    <label for="model">مدل</label><input id="model" type="text" dir="ltr" autocomplete="off" spellcheck="false">
+    <label for="key">کلید</label><input id="key" type="password" dir="ltr" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button id="save" class="primary" type="button">ذخیره</button>
+      <button id="test" type="button">آزمایش اتصال</button>
+      <button id="clearkey" class="ghost" type="button">پاک‌کردن کلید</button>
+      <button id="clearcache" class="ghost" type="button">پاک‌کردن کش</button>
+    </div>
+    <p id="setmsg" class="muted" role="status" hidden></p>
+  </details>
+
+  <label for="input" class="muted">جملهٔ فارسی</label>
+  <textarea id="input" maxlength="600"></textarea>
+  <div class="row">
+    <button id="go" class="primary" type="button">خوانش‌ها را جدا کن</button>
+    <button id="demo" class="ghost" type="button">یک نمونهٔ آماده ببین</button>
+    <span id="count" class="muted">۰ / ۴۰۰</span>
+  </div>
+
+  <section id="notice" class="caution" hidden>
+    <p id="noticetext"></p>
+    <p>متن حساس (شکایت، پزشکی، پیام خانوادگی) هم از همین مسیر می‌رود.</p>
+    <button id="ack" class="primary" type="button">فهمیدم، ادامه بده</button>
+  </section>
+  <p id="busy" class="muted" hidden>در حال جدا کردن خوانش‌ها…</p>
+  <p id="error" class="error" role="alert" hidden></p>
+  <section id="result" aria-live="polite"></section>
+  <p class="muted" style="margin-top:24px">اتکا برچسب کیفی است، نه احتمال آماری. جملهٔ کوتاه بدون بافت اغلب واقعاً باز می‌ماند.</p>
+</main>
+<script>
+'use strict';
+const MAX=400, CACHE_MAX=50;
+// نام مدل‌ها پیش‌فرض‌اند و در «اتصال مدل» قابل‌تغییرند.
+const DEF={
+  gemini:{base:'https://generativelanguage.googleapis.com/v1beta',model:'gemini-3.8-flash'},
+  anthropic:{base:'https://api.anthropic.com',model:'claude-sonnet-5-5'},
+  openai:{base:'https://api.openai.com/v1',model:''}
+};
+const HELP={
+  gemini:['در <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">aistudio.google.com/apikey</a> با حساب گوگل وارد شو و یک کلید بساز.','کلید را در خانهٔ «کلید» بچسبان و «آزمایش اتصال» را بزن.','اگر نام مدل عوض شده بود، نام تازه را از همان صفحه بردار و در خانهٔ «مدل» بنویس.'],
+  anthropic:['در <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer">console.anthropic.com</a> یک کلید بساز (این حساب از اشتراک claude.ai جداست و اعتبار جدا می‌خواهد).','کلید را بچسبان و «آزمایش اتصال» را بزن.'],
+  openai:['نشانی پایه، نام مدل و کلید هر سرویس سازگار با OpenAI را بده (خود OpenAI، OpenRouter و مانند آن).','سرویس باید درخواست مستقیم از مرورگر (CORS) را بپذیرد؛ «آزمایش اتصال» همین را نشان می‌دهد.']
+};
+const TYPES={PUNCT:'سجاوندی و مکث',EZ:'کسرهٔ اضافهٔ نانوشته',ATTACH:'اتصال وابسته',HOM:'هم‌نگاره',CLITIC:'پی‌بست',PRO:'ارجاع ضمیر و فاعل محذوف',SCOPE:'دامنهٔ نفی و قید',RA:'نقش «را»',SPEECH:'نیروی گفتار',NUM:'عدد و واحد',FIXED:'اصطلاح یا ترکیب آزاد',REG:'گونهٔ زبانی'};
+const ACTS={statement:'خبر',command:'فرمان',request:'خواهش',warning:'هشدار',question:'پرسش',quote:'نقل',unclear:'نامشخص'};
+const REL={dominant:'غالب',possible:'ممکن',remote:'دور'};
+const CAUTION={legal:'این متن شبیه متن حقوقی است. این تحلیل فقط زبانی است و مشاورهٔ حقوقی نیست.',medical:'این متن شبیه متن پزشکی است. این تحلیل فقط زبانی است و توصیهٔ پزشکی نیست.',threat:'این متن تهدید است. این تحلیل فقط زبانی است و بازنویسی پیشنهاد نمی‌شود.',minors:'این متن به کودکان یا نوجوانان مربوط است. این تحلیل فقط زبانی است.'};
+const STOP={not_persian:'این متن فارسی نیست؛ درنگ فقط فارسی می‌خواند.',too_long:'متن از ۴۰۰ نویسه یا دو جمله بیشتر است. جمله را جدا کن و هر بار یکی را بفرست.',refused:'درنگ این متن را تحلیل نکرد.',incomplete:'جمله ناتمام است؛ درنگ آن را تمام نمی‌کند.'};
+const FAIL='این بار خوانش مطمئنی نساختم.';
+
+const SYSTEM=`تو تحلیلگر خوانش فارسی هستی، نه ویراستار و نه قاضی نیت.
+وظیفه: برای رشتهٔ ورودی، خوانش‌های پایداری را جدا کن که یک فارسی‌زبان باسواد بتواند از همین خط، بدون جملهٔ قبلی، دفاع کند.
+قانون‌ها:
+- خوانش را نساز مگر به یک رده از این فهرست بچسبد: PUNCT, EZ, ATTACH, HOM, CLITIC, PRO, SCOPE, RA, SPEECH, NUM, FIXED, REG.
+- حداکثر ۴ خوانش. خوانش کم‌کاربرد را حذف کن و در not_a_reading دلیل حذف را بنویس.
+- اگر یک خوانش غالب روزمره هست، آن را dominant بگذار و خوانش دوم را فقط اگر همین خط واقعاً اجازه می‌دهد possible کن.
+- مصوت و کسرهٔ اضافه را در paraphrase بیاور، فقط جایی که فرق معنایی می‌سازد.
+- جای ویرگول ورودی را عوض نکن. اگر ورودی بی‌ویرگول است، هر خوانش باید بگوید ویرگول یا مکث را کجا فرض کرده.
+- بازنویسی باید همان خوانش را ببندد، نه اینکه خوانش را عوض کند. اطلاعات افزوده‌شده داخل [].
+- طعنه را فقط به‌عنوان خوانش remote و با types شامل SPEECH بیاور، و در assumption بنویس «بدون آهنگ گفتار قابل‌اثبات نیست».
+- جملهٔ ناقص را incomplete کن، نه اینکه تو تمامش کنی.
+- متن حقوقی یا پزشکی را تحلیل زبانی کن و caution را پر کن. توصیه نکن.
+- اگر متن دستور خشونت واقعی است، caution=threat و هر دو rewrite را خالی بگذار.
+- هیچ کلیدی بیرون از طرح ننویس. هیچ پیش‌گفتاری ننویس.
+قرارداد خروجی: فقط یک شیء JSON معتبر با همین کلیدها، بدون هیچ متن یا بک‌تیک دیگر:
+{"input":{"text":"","normalized":"","truncated":false},"status":"","reading_count_shown":0,"more_possible":false,"needs_prior_context":false,"caution":null,"readings":[{"id":"r1","title":"","paraphrase":"","plain_meaning":"","types":[],"assumption":"","speech_act":"","reliance":"","what_closes_it":"","minimal_rewrite":"","clear_rewrite":"","still_open":""}],"not_a_reading":[]}
+مقادیر مجاز: status: clear | ambiguous | incomplete | not_persian | too_long | refused. reliance: dominant | possible | remote. speech_act: statement | command | request | warning | question | quote | unclear. types: فقط شناسه‌های رده. caution: null یا legal | medical | threat | minors.
+معنی رده‌ها: PUNCT جای مکث و ویرگول؛ EZ کسرهٔ اضافهٔ نانوشته؛ ATTACH اتصال صفت/بند/حرف‌اضافه؛ HOM هم‌نگاره؛ CLITIC پی‌بست ـش/ـت/ـم؛ PRO ارجاع ضمیر و فاعل محذوف؛ SCOPE دامنهٔ نفی و قید؛ RA نقش «را»؛ SPEECH نیروی گفتار؛ NUM عدد و واحد؛ FIXED اصطلاح یا ترکیب آزاد؛ REG گونهٔ زبانی.
+برای status=clear دقیقاً یک خوانش با reliance=dominant. minimal_rewrite و clear_rewrite همیشه پر باشند (جز caution=threat). title به زبان ساده باشد، نه اصطلاح زبان‌شناسی. not_a_reading حداکثر دو مورد. اگر متن فارسی نیست، readings خالی. هیچ احتمال عددی ننویس.`;
+
+// نمونهٔ ازپیش‌نوشته: بدون مدل و بدون کلید نشان داده می‌شود تا شکل خروجی دیده شود.
+const DEMO_TEXT='من پدرم را بیشتر از تو دوست دارم.';
+const DEMO={status:'ambiguous',caution:null,more_possible:false,not_a_reading:[],readings:[
+  {id:'r1',title:'پدرم را بیشتر از تو را دوست دارم',paraphrase:'من پدرم را بیشتر دوست دارم تا تو را.',plain_meaning:'دو نفر با هم سنجیده می‌شوند: پدر و «تو». گوینده پدرش را بیشتر دوست دارد.',types:['PRO'],assumption:'«تو» مفعولِ فعلِ افتاده است: «تا [اینکه] تو را [دوست داشته باشم]».',speech_act:'statement',reliance:'possible',minimal_rewrite:'من پدرم را بیشتر از تو [را] دوست دارم.',clear_rewrite:'من پدرم را بیشتر دوست دارم تا تو را.',still_open:''},
+  {id:'r2',title:'من بیشتر از تو پدرم را دوست دارم',paraphrase:'من پدرم را بیشتر از آن‌قدر که تو دوستش داری دوست دارم.',plain_meaning:'دو دوست‌دارنده با هم سنجیده می‌شوند: «من» و «تو». هر دو پدرِ گوینده را دوست دارند؛ گوینده بیشتر.',types:['PRO'],assumption:'«تو» فاعلِ فعلِ افتاده است: «از [آن‌قدر که] تو [دوستش داری]».',speech_act:'statement',reliance:'possible',minimal_rewrite:'من پدرم را بیشتر از تو [که دوستش داری] دوست دارم.',clear_rewrite:'من پدرم را بیشتر از آن‌قدر که تو او را دوست داری دوست دارم.',still_open:''}
+]};
+
+const $=id=>document.getElementById(id);
+const h=(t,p={},...k)=>{const e=document.createElement(t);Object.assign(e,p);k.flat().forEach(x=>e.append(x));return e};
+const ls={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(_){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(_){}}};
+
+// حالت اجرا: اگر داخل claude.ai منتشر شده باشد، Claude خودش جواب می‌دهد و کلید لازم نیست.
+let sampler=null;
+const ready=(async()=>{if(window.claude&&window.claude.use){try{sampler=await window.claude.use('sample')}catch(_){}}$('cfg').hidden=!!sampler;$('cfg').open=!sampler&&!settings().key;})();
+
+function settings(){let p=ls.get('provider','gemini');if(!DEF[p])p='gemini';return{provider:p,base:ls.get('base',DEF[p].base),model:ls.get('model',DEF[p].model),key:ls.get('key','')}}
+function normalize(t){return t.replace(/ي/g,'ی').replace(/ك/g,'ک').replace(/ـ/g,'').replace(/,/g,(m,i,s)=>/\d/.test(s[i-1]||'')&&/\d/.test(s[i+1]||'')?m:'،').replace(/[ \t\r\n]+/g,' ').trim()}
+const sentences=t=>t.split(/[.!؟?…۔]+(?:\s+|$)/).filter(s=>s.trim()).length;
+function localCheck(n){if(!n||!/\p{L}/u.test(n))return'incomplete';if(n.length>MAX||sentences(n)>2)return'too_long';if(!/[؀-ۿ]/.test(n))return'not_persian';return null}
+async function sha(s){
+  try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+  catch(_){let a=5381,b=52711;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);a=(a*33)^c;b=(b*33)^c}return'x'+(a>>>0).toString(16)+(b>>>0).toString(16)+s.length}
+}
+
+function errText(status,msg){
+  if(status===401||status===403)return'کلید پذیرفته نشد ('+status+'). کلید را دوباره از سایت ارائه‌دهنده بردار.';
+  if(status===404)return'مدل یا نشانی پیدا نشد (۴۰۴). نام مدل و نشانی پایه را بررسی کن. '+msg;
+  if(status===429)return'سقف درخواست یا اعتبار این کلید پر شده (۴۲۹). کمی بعد دوباره امتحان کن.';
+  return'خطای ارائه‌دهنده ('+status+'): '+msg;
+}
+async function post(url,headers,body){
+  let r;try{r=await fetch(url,{method:'POST',headers:{'content-type':'application/json',...headers},body:JSON.stringify(body),referrerPolicy:'no-referrer'})}catch(_){throw new Error('به ارائه‌دهنده نرسیدم. اینترنت، نشانی پایه و اینکه این سرویس درخواست مستقیم از مرورگر را می‌پذیرد بررسی کن.')}
+  const d=await r.json().catch(()=>({}));const e=d&&d.error;
+  return{ok:r.ok,status:r.status,d,msg:String((e&&(e.message||(typeof e==='string'?e:'')))||r.statusText||'').slice(0,200)};
+}
+// messages: [{role:'user'|'assistant',content}]؛ c: تنظیمات. متن خام پاسخ مدل را برمی‌گرداند.
+async function callProvider(c,system,messages,maxTokens){
+  const base=c.base.replace(/\/+$/,'');
+  if(c.provider==='gemini'){
+    // مدل‌های تازهٔ Gemini پارامتر temperature را نمی‌پذیرند؛ فرستاده نمی‌شود.
+    const body={system_instruction:{parts:[{text:system}]},contents:messages.map(m=>({role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]})),generationConfig:{maxOutputTokens:maxTokens}};
+    const r=await post(base+'/models/'+encodeURIComponent(c.model)+':generateContent',{'x-goog-api-key':c.key},body);
+    if(!r.ok)throw new Error(errText(r.status,r.msg));
+    const cand=(r.d.candidates||[])[0];
+    if(!cand||!cand.content)throw new Error('ارائه‌دهنده پاسخی نداد'+(r.d.promptFeedback&&r.d.promptFeedback.blockReason?' (دلیل: '+r.d.promptFeedback.blockReason+')':'')+'.');
+    return(cand.content.parts||[]).filter(p=>typeof p.text==='string'&&!p.thought).map(p=>p.text).join('');
+  }
+  if(c.provider==='anthropic'){
+    const hd={'x-api-key':c.key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'};
+    const b={model:c.model,max_tokens:maxTokens,system,messages};
+    let r=await post(base+'/v1/messages',hd,{...b,temperature:0.2});
+    if(!r.ok&&r.status===400&&/temperature/i.test(r.msg))r=await post(base+'/v1/messages',hd,b);
+    if(!r.ok)throw new Error(errText(r.status,r.msg));
+    return(r.d.content||[]).filter(x=>x.type==='text').map(x=>x.text).join('');
+  }
+  const hd={authorization:'Bearer '+c.key},b={model:c.model,messages:[{role:'system',content:system},...messages]};
+  let r=await post(base+'/chat/completions',hd,{...b,temperature:0.2,response_format:{type:'json_object'}});
+  if(!r.ok&&r.status===400)r=await post(base+'/chat/completions',hd,b);
+  if(!r.ok)throw new Error(errText(r.status,r.msg));
+  return(((r.d.choices||[])[0]||{}).message||{}).content||'';
+}
+async function callModel(messages){
+  if(sampler){
+    const turns=messages.map((m,i)=>i===0?{...m,content:SYSTEM+'\n\nورودی:\n'+m.content}:m);
+    try{return(await sampler(turns,{cache:false})).text}catch(e){
+      if(e&&e.code==='not_granted')throw new Error('برای تحلیل باید اجازهٔ استفاده از Claude را بدهی.');
+      if(e&&e.code==='rate_limited')throw new Error('سقف درخواست پر شده؛ کمی بعد دوباره امتحان کن.');
+      throw new Error('خطا: '+((e&&e.message)||'نامشخص'));
+    }
+  }
+  return callProvider(settings(),SYSTEM,messages,4000);
+}
+function parseLoose(t){
+  t=String(t||'').trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/,'');
+  try{return JSON.parse(t)}catch(_){}
+  const a=t.indexOf('{'),b=t.lastIndexOf('}');if(a<0||b<=a)throw 0;
+  return JSON.parse(t.slice(a,b+1));
+}
+function validate(o){
+  if(!o||typeof o!=='object'||!['clear','ambiguous','incomplete','not_persian','too_long','refused'].includes(o.status)||!Array.isArray(o.readings))throw 0;
+  const s=v=>typeof v==='string'?v.trim():'';
+  const caution=['legal','medical','threat','minors'].includes(o.caution)?o.caution:null;
+  let rs=o.readings.map((r,i)=>({id:s(r.id)||'r'+(i+1),title:s(r.title),paraphrase:s(r.paraphrase),plain_meaning:s(r.plain_meaning),
+    types:(Array.isArray(r.types)?r.types:[]).filter(t=>TYPES[t]),assumption:s(r.assumption),
+    speech_act:ACTS[r.speech_act]?r.speech_act:'unclear',reliance:REL[r.reliance]?r.reliance:'possible',
+    minimal_rewrite:caution==='threat'?'':s(r.minimal_rewrite),clear_rewrite:caution==='threat'?'':s(r.clear_rewrite),still_open:s(r.still_open)}))
+    .filter(r=>r.types.length&&r.title&&r.paraphrase);
+  let st=o.status;
+  if(st==='clear'||st==='ambiguous'){if(!rs.length)throw 0;if(st==='clear'||rs.length===1){rs=rs.slice(0,1);rs[0].reliance='dominant';st='clear'}}else rs=[];
+  return{status:st,caution,readings:rs.slice(0,4),more_possible:!!o.more_possible,not_a_reading:(Array.isArray(o.not_a_reading)?o.not_a_reading:[]).map(s).filter(Boolean).slice(0,2)};
+}
+async function runModel(norm){
+  const msgs=[{role:'user',content:JSON.stringify({text:norm,dialect:'tehrani_written',prior_sentence:null})}];
+  const a=await callModel(msgs);try{return validate(parseLoose(a))}catch(_){}
+  msgs.push({role:'assistant',content:a||'(خالی)'},{role:'user',content:'خروجی‌ات JSON معتبر مطابق طرح نبود. فقط JSON معتبر مطابق طرح را دوباره بفرست.'});
+  const b=await callModel(msgs);try{return validate(parseLoose(b))}catch(_){throw new Error(FAIL)}
+}
+
+function origLine(t){const p=h('p',{className:'orig'});t.split(/([،,])/).forEach(x=>p.append(/^[،,]$/.test(x)?h('span',{className:'pause'},x):x));return p}
+function copyBtn(t){const b=h('button',{type:'button',className:'ghost'},'کپی بازنویسی');b.onclick=async()=>{try{await navigator.clipboard.writeText(t);b.textContent='کپی شد'}catch(_){b.textContent='کپی نشد'}setTimeout(()=>b.textContent='کپی بازنویسی',1500)};return b}
+function fixBar(r){
+  const f=h('section',{className:'fix'},h('h3',{},'اگر منظورت این است'));
+  [['بازنویسی حداقلی',r.minimal_rewrite],['بازنویسی روشن',r.clear_rewrite]].forEach(([l,t])=>{if(t)f.append(h('div',{className:'rw'},h('span',{className:'lbl'},l),h('p',{},t),copyBtn(t)))});
+  if(r.still_open)f.append(h('p',{className:'open'},h('b',{},'هنوز بسته نشد: '),r.still_open));
+  return f;
+}
+function card(r,canPick){
+  const c=h('article',{className:'card rel-'+r.reliance});
+  c.append(h('h4',{},r.title),h('p',{className:'para'},r.paraphrase),h('p',{className:'plain'},r.plain_meaning),
+    h('div',{className:'meta'},r.types.map(t=>h('span',{className:'tag',title:TYPES[t]},t)),h('span',{},'نیروی گفتار: '+ACTS[r.speech_act]),h('span',{},'اتکا: '+REL[r.reliance])),
+    h('details',{},h('summary',{},'چرا این خوانش را ساختم'),h('p',{},h('b',{},'فرض لازم: '),r.assumption||'—'),h('p',{},h('b',{},'رده: '),r.types.map(t=>TYPES[t]).join('، '))));
+  if(canPick){
+    const b=h('button',{type:'button',className:'pick'},'منظورم این است');b.setAttribute('aria-pressed','false');
+    b.onclick=()=>{
+      const was=c.classList.contains('sel');
+      document.querySelectorAll('.card.sel').forEach(x=>{x.classList.remove('sel');const f=x.querySelector('.fix');if(f)f.remove();x.querySelector('.pick').setAttribute('aria-pressed','false')});
+      if(was)return;c.classList.add('sel');b.setAttribute('aria-pressed','true');c.append(fixBar(r));
+    };
+    c.append(b);
+  }
+  return c;
+}
+function render(res,raw,norm,isDemo){
+  const box=$('result');box.replaceChildren();
+  if(isDemo)box.append(h('p',{className:'caution'},'این یک نمونهٔ ازپیش‌نوشته است تا شکل خروجی را ببینی؛ مدلی صدا زده نشده. برای جملهٔ خودت، اول «اتصال مدل» را پر کن.'));
+  box.append(origLine(raw));
+  if(norm!==raw)box.append(h('p',{className:'note'},'برای تحلیل نرمال شد: ',h('bdi',{},norm)));
+  const n=res.readings.length;
+  if(res.status==='clear'||res.status==='ambiguous'){
+    const label=res.status==='clear'?'کم‌ابهام':n===2?'دوخوانشی':'چندخوانشی';
+    const line=res.status==='clear'?'برای این خط یک خوانش غالب هست.':`این خط را می‌شود دست‌کم به ${n.toLocaleString('fa')} شکل خواند. هیچ‌کدام را به‌عنوان نیت تو انتخاب نکرده‌ام.`;
+    box.append(h('p',{className:'status'},h('b',{},label),line));
+  }else box.append(h('p',{className:'status stop'},h('b',{},res.status==='incomplete'?'ناتمام':'تحلیل نشد'),STOP[res.status]||FAIL));
+  if(res.caution)box.append(h('p',{className:'caution'},CAUTION[res.caution]));
+  res.readings.forEach(r=>box.append(card(r,res.caution!=='threat')));
+  if(res.more_possible)box.append(h('p',{className:'muted'},'خوانش‌های دیگر هم ممکن است.'));
+  if(res.not_a_reading.length)box.append(h('details',{},h('summary',{},'چه چیزی خوانش حساب نشد'),h('ul',{},res.not_a_reading.map(t=>h('li',{},t)))));
+}
+
+const showError=m=>{const e=$('error');e.textContent=m||'';e.hidden=!m};
+const busy=b=>{$('go').disabled=b;$('demo').disabled=b;$('input').readOnly=b;$('busy').hidden=!b};
+async function analyze(){
+  showError('');
+  const raw=$('input').value.trim(),norm=normalize(raw),loc=localCheck(norm);
+  if(loc){render({status:loc,caution:null,readings:[],more_possible:false,not_a_reading:[]},raw,norm);return}
+  await ready;
+  const c=settings();
+  if(!sampler&&(!c.key||!c.model)){$('cfg').open=true;$('cfg').scrollIntoView();showError('اول در «اتصال مدل» ارائه‌دهنده، مدل و کلید را وارد و ذخیره کن. یا «یک نمونهٔ آماده ببین» را بزن.');return}
+  if(!ls.get('noticeSeen',false)){
+    $('noticetext').textContent=sampler?'جمله برای تحلیل از طریق حساب Claude خودت فرستاده می‌شود، نه به سرور درنگ.':'جمله برای تحلیل به ارائه‌دهندهٔ مدلی که خودت انتخاب کرده‌ای می‌رود، نه به سرور درنگ.';
+    $('notice').hidden=false;$('go').disabled=true;
+    await new Promise(r=>$('ack').onclick=r);
+    $('notice').hidden=true;$('go').disabled=false;ls.set('noticeSeen',true);
+  }
+  busy(true);
+  try{
+    const k=await sha(norm+'|'+(sampler?'claude':c.provider+'/'+c.model));
+    const cache=ls.get('cache',[]);let res=(cache.find(x=>x.k===k)||{}).v;
+    if(!res){res=await runModel(norm);ls.set('cache',[{k,v:res},...cache.filter(x=>x.k!==k)].slice(0,CACHE_MAX))}
+    render(res,raw,norm);
+  }catch(e){$('result').replaceChildren(origLine(raw));showError(e.message||FAIL)}
+  finally{busy(false)}
+}
+
+const setMsg=(t,cls)=>{const m=$('setmsg');m.textContent=t||'';m.className=cls||'muted';m.hidden=!t};
+function showHelp(p){$('help').innerHTML=HELP[p].map(x=>'<li>'+x+'</li>').join('')}
+function fillCfg(){const s=settings();$('provider').value=s.provider;$('base').value=s.base;$('model').value=s.model;$('key').value=s.key;showHelp(s.provider)}
+function readCfg(){
+  const provider=$('provider').value,base=$('base').value.trim(),model=$('model').value.trim(),key=$('key').value.trim();
+  try{if(new URL(base).protocol!=='https:')throw 0}catch(_){setMsg('نشانی پایه باید یک نشانی https معتبر باشد.','error');return null}
+  if(!model||!key){setMsg('مدل و کلید را پر کن.','error');return null}
+  return{provider,base,model,key};
+}
+fillCfg();
+$('provider').onchange=()=>{const p=$('provider').value;$('base').value=DEF[p].base;$('model').value=DEF[p].model;showHelp(p);setMsg('')};
+$('save').onclick=()=>{
+  const c=readCfg();if(!c)return;
+  ls.set('provider',c.provider);ls.set('base',c.base);ls.set('model',c.model);ls.set('key',c.key);
+  setMsg('ذخیره شد.','okmsg');$('cfg').open=false;showError('');
+};
+$('test').onclick=async()=>{
+  const c=readCfg();if(!c)return;
+  $('test').disabled=true;setMsg('در حال آزمایش…');
+  try{const t=await callProvider(c,'فقط بنویس: سلام',[{role:'user',content:'سلام'}],200);setMsg(t&&t.trim()?'اتصال برقرار است. «ذخیره» را بزن.':'ارائه‌دهنده جواب خالی داد؛ نام مدل را بررسی کن.',t&&t.trim()?'okmsg':'error')}
+  catch(e){setMsg(e.message,'error')}
+  finally{$('test').disabled=false}
+};
+$('clearkey').onclick=()=>{ls.set('key','');$('key').value='';setMsg('کلید پاک شد.')};
+$('clearcache').onclick=()=>{ls.set('cache',[]);setMsg('کش پاک شد.')};
+$('go').onclick=analyze;
+$('demo').onclick=()=>{showError('');$('input').value=DEMO_TEXT;$('input').dispatchEvent(new Event('input'));render(DEMO,DEMO_TEXT,normalize(DEMO_TEXT),true)};
+$('input').addEventListener('input',()=>{$('count').textContent=normalize($('input').value).length.toLocaleString('fa')+' / '+MAX.toLocaleString('fa')});
+</script>
+</body>
+</html>
