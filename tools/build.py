@@ -754,7 +754,8 @@ def projects():
     en_p.update({k: (aka, p) for k, aka, p in EN["more"]})
     fa_p.update({k: (aka, p) for k, aka, p in FA["more"]})
     # Dour and Dour: Language share one feature card; give the second its own record.
-    en_p.setdefault("poly", en_p["tik"]); fa_p.setdefault("poly", fa_p["tik"])
+    en_p["poly"], fa_p["poly"] = ("Dour: Language", en_p["tik"][1]), ("دور: زبان", fa_p["tik"][1])
+    en_p["tik"], fa_p["tik"] = ("Dour", en_p["tik"][1]), ("دور", fa_p["tik"][1])
     out = []
     for k in ["tw", "tik", "poly", "planet", "bazaar", "night", "verse", "side"]:
         u = URL.get(k)
