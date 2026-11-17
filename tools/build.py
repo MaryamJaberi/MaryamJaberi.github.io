@@ -735,6 +735,95 @@ def case_page(slug, L):
     return "\n".join(out)
 
 
+# Old addresses that still circulate (renamed repos, earlier Pages paths) -> the folder that is live now.
+# Keys are lower-case first path segments; the 404 page sends visitors on.
+MOVED = {
+    "mafia": "mafia", "mafia-new": "mafia", "miz-khoda": "mafia",
+    "dour": "Dour", "dour-new": "Dour",
+    "language-learning-party-game": "Language-Learning-Party-Game", "language-learning-party-game-new": "Language-Learning-Party-Game",
+    "earth-through-time": "earth-through-time", "earth-through-time-new": "earth-through-time", "chrono-atlas": "earth-through-time",
+    "ganjoor-no": "ganjoor-no", "ganjoor-no-new": "ganjoor-no",
+    "wellbeing-check": "wellbeing-check", "daneshsara": "daneshsara", "psychology-wiki": "psychology-wiki",
+}
+
+
+def projects():
+    """One record per product: the machine-readable twin of the pages (assets/projects.json)."""
+    en_p = {f["key"]: (f["aka"], f["p"]) for f in EN["features"]}
+    fa_p = {f["key"]: (f["aka"], f["p"]) for f in FA["features"]}
+    en_p.update({k: (aka, p) for k, aka, p in EN["more"]})
+    fa_p.update({k: (aka, p) for k, aka, p in FA["more"]})
+    # Dour and Dour: Language share one feature card; give the second its own record.
+    en_p["poly"], fa_p["poly"] = ("Dour: Language", en_p["tik"][1]), ("دور: زبان", fa_p["tik"][1])
+    en_p["tik"], fa_p["tik"] = ("Dour", en_p["tik"][1]), ("دور", fa_p["tik"][1])
+    out = []
+    for k in ["tw", "tik", "poly", "planet", "bazaar", "night", "verse", "side"]:
+        u = URL.get(k)
+        out.append({
+            "key": k,
+            "name": {"en": EN["names"][k], "fa": FA["names"][k]},
+            "liveAs": {"en": en_p[k][0], "fa": fa_p[k][0]},
+            "description": {"en": en_p[k][1], "fa": fa_p[k][1]},
+            "url": (u if u.startswith("http") else SITE + u) if u else None,
+            "code": CODE.get(k),
+            "status": "live" if u else "in progress",
+            "lastChange": PULSE["rows"].get(k, {}).get("last"),
+        })
+    return out
+
+
+def not_found_page():
+    """404.html: forwards old addresses to where the work lives now, otherwise offers the way home."""
+    moved = json.dumps(MOVED, sort_keys=True)
+    items = "".join(f'<li><a class="textlink" href="{p["url"]}">{p["liveAs"]["en"]}</a></li>' for p in projects() if p["url"])
+    return f"""<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Maryam Jaberi</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F5F3FA">
+<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+{FONTS}
+<link rel="stylesheet" href="/assets/site.css?v={VER["site.css"]}">
+<script>
+// A renamed project or a different capitalisation: send the visitor to the live folder.
+(function () {{
+  var moved = {moved};
+  var parts = location.pathname.split("/");
+  var first = parts[1] || "";
+  var to = moved[first.toLowerCase()];
+  if (to && to !== first) {{
+    parts[1] = to;
+    location.replace(parts.join("/") + location.search + location.hash);
+  }}
+}})();
+</script>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+<div class="wrap">
+<a class="brand" href="/">{MARK}Maryam Jaberi</a>
+<a class="l" href="/#work">Work</a>
+<a class="lang" href="/fa/" hreflang="fa" lang="fa" title="فارسی">فا</a>
+</div>
+</nav>
+<main id="main">
+<div class="wrap" style="padding:96px 0 120px;max-width:720px">
+<p class="aka" style="margin:0">404</p>
+<h1 style="margin-top:8px">This page has moved, or was never here.</h1>
+<p class="lede">Some of my projects changed address. Everything that is live is listed below.</p>
+<p lang="fa" dir="rtl" class="lede" style="font-family:Vazirmatn,sans-serif">این صفحه جابه‌جا شده یا وجود نداشته است. همهٔ کارهای زنده در فهرست زیر هستند.</p>
+<ul style="line-height:2.1;padding-inline-start:20px">{items}</ul>
+<div class="links" style="margin-top:28px"><a class="btn solid sm" href="/">Home</a><a class="textlink" href="/fa/" lang="fa">صفحهٔ فارسی</a></div>
+</div>
+</main>
+</body>
+</html>
+"""
+
+
 def main():
     (ROOT / "fa/case").mkdir(parents=True, exist_ok=True)
     (ROOT / "case").mkdir(exist_ok=True)
@@ -743,7 +832,9 @@ def main():
     for slug in CASES:
         (ROOT / f"case/{slug}.html").write_text(case_page(slug, "en"), encoding="utf-8")
         (ROOT / f"fa/case/{slug}.html").write_text(case_page(slug, "fa"), encoding="utf-8")
-    print("built: index.html, fa/index.html, case/*, fa/case/*")
+    (ROOT / "assets/projects.json").write_text(json.dumps(projects(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "404.html").write_text(not_found_page(), encoding="utf-8")
+    print("built: index.html, fa/index.html, case/*, fa/case/*, 404.html, assets/projects.json")
 
 
 if __name__ == "__main__":
