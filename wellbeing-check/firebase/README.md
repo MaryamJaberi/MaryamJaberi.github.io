@@ -4,7 +4,7 @@
 
 ## ۱. ساختن پروژه (۵ دقیقه)
 1. به <https://console.firebase.google.com> بروید و با `m.jaberi1212@gmail.com` وارد شوید.
-2. **Create a project** → نام: `solonovate-wellbeing` → Google Analytics را خاموش کنید.
+2. **Create a project** → نام: `solonovate-wellbeing` (پروژهٔ ساخته‌شده: `team-weather-f6719`) → Google Analytics را خاموش کنید.
 3. طرح رایگان (Spark) کافی است؛ کارت بانکی لازم نیست.
 
 ## ۲. دیتابیس، با داده در هلند
