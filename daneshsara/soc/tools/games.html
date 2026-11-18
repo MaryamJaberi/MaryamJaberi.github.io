@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آزمایشگاه بازی | ویکی جامعه | دانش‌سرا</title>
+<meta name="description" content="پنج آزمایش تعاملی نظریهٔ بازی: ماتریس‌ساز بازی، مسابقهٔ دوراهی زندانی تکرارشونده، بازی اولتیماتوم، زنجیرهٔ مارکوف و پیج‌رنک.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>
+:root{--lab:var(--fam-soc);--lab-soft:var(--fam-soc-soft)}
+.mx{border-collapse:separate;border-spacing:6px;margin:0 auto}
+.mx th{font-size:.9rem;color:var(--ink-2);font-weight:600;padding:4px 8px}
+.mx td{background:var(--surface);border:1px solid var(--line-strong);border-radius:12px;padding:8px 10px;text-align:center;min-width:120px}
+.mx td.ne{border:2px solid var(--lab);background:var(--lab-soft)}
+.mx td.po{box-shadow:inset 0 0 0 2px var(--warn)}
+.mx input{width:3.6em;font:inherit;text-align:center;border:1px solid var(--line);border-radius:8px;padding:4px;background:var(--paper);color:var(--ink)}
+.mx .r{color:var(--lab);font-weight:700}.mx .c{color:var(--ink);font-weight:700}
+.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:999px;margin:2px;background:var(--surface-subtle);border:1px solid var(--line)}
+.key{font-size:.85rem;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:14px}
+.key span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-inline-end:5px;vertical-align:-1px}
+.key .k1::before{background:var(--lab-soft);border:2px solid var(--lab)}
+.key .k2::before{box-shadow:inset 0 0 0 2px var(--warn)}
+.gen{background:var(--paper);border:1px dashed var(--line-strong);border-radius:12px;padding:12px 14px;line-height:2.1;min-height:4em}
+textarea{width:100%;font:inherit;min-height:7em;border:1px solid var(--line-strong);border-radius:12px;padding:10px;background:var(--paper);color:var(--ink);line-height:1.9}
+.adj{border-collapse:collapse;font-size:.9rem}
+.adj td,.adj th{padding:4px 8px;text-align:center;border-bottom:1px solid var(--line)}
+.adj input{width:20px;height:20px;accent-color:var(--lab)}
+.ex{background:var(--surface-subtle);border-radius:10px;padding:10px 12px;font-size:.93rem;line-height:1.9;margin:8px 0}
+.ex b{color:var(--lab)}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../soc/">ویکی جامعه</a><i>›</i><a href="../../soc/tools/">ابزارها</a><i>›</i><b>آزمایشگاه بازی</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>آزمایشگاه بازی</h1>
+<p class="what">نظریهٔ بازی دربارهٔ موقعیت‌هایی است که نتیجهٔ کار شما به انتخاب دیگران هم بستگی دارد: صف نانوایی، تعارف، قیمت‌گذاری دو مغازهٔ هم‌سایه، شب مافیا. در این پنج آزمایش قاعده‌ها را عوض کنید، بازی کنید و ببینید چرا آدم‌های عاقل گاهی به نتیجه‌ای می‌رسند که هیچ‌کدام نمی‌خواستند. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note">این‌ها مدل‌های ساده‌شدهٔ آموزشی‌اند. هر کدام یک سازوکار را جدا نشان می‌دهد؛ آدم‌های واقعی به انصاف، آبرو، رابطه و احساس هم اهمیت می‌دهند — که خودش در آزمایش اولتیماتوم دیده می‌شود. برای منبع‌ها و نقدها به مدخل‌های پیوندشده برگردید.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · آزمایشگاه بازی</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script>
+const {fa, css, esc, lk} = LabKit;
+const rnd = n => Math.floor(Math.random() * n);
+
+/* ——— 1. matrix builder ——— */
+const PRESETS = {
+  pd: {name: "دوراهی زندانی", rows: ["همکاری", "خیانت"], cols: ["همکاری", "خیانت"],
+    p: [[[3, 3], [0, 5]], [[5, 0], [1, 1]]],
+    ex: "<b>بازی نمره (درس پُلاک، ییل):</b> اگر هر دو «بتا» (همکاری) بزنید هر دو B+ می‌گیرید؛ اگر هر دو «آلفا» (خیانت) بزنید هر دو B−. ولی آلفا برای هر کدام همیشه بهتر است، چه طرف مقابل هر چه بزند. <b>مثال ایرانی:</b> دو مغازه‌دار هم‌سایه در بازار؛ اگر هیچ‌کدام تخفیف ندهند هر دو سود خوبی دارند، ولی هر کدام وسوسه می‌شود با تخفیف مشتری دیگری را ببرد — و آخرش هر دو با سود کم می‌مانند."},
+  stag: {name: "شکار گوزن", rows: ["گوزن (با هم)", "خرگوش (تنها)"], cols: ["گوزن (با هم)", "خرگوش (تنها)"],
+    p: [[[4, 4], [0, 3]], [[3, 0], [3, 3]]],
+    ex: "<b>مسئلهٔ اعتماد:</b> اگر هر دو به پروژهٔ بزرگ متعهد بمانند بیشترین سود را می‌برند، ولی اگر یکی بترسد و سراغ کار کوچک و امن برود، دیگری دست خالی می‌ماند. دو تعادل دارد و نتیجه به این بستگی دارد که هر کس فکر کند دیگری چه می‌کند. <b>مثال:</b> چند همسایه که می‌خواهند با هم برای تعمیر لوله‌کشی ساختمان پول بگذارند؛ اگر به هم اعتماد نکنند، هر کس واحد خودش را وصله‌پینه می‌کند."},
+  chicken: {name: "جوجه (کوتاه‌آمدن)", rows: ["کوتاه می‌آیم", "نمی‌آیم"], cols: ["کوتاه می‌آیم", "نمی‌آیم"],
+    p: [[[2, 2], [1, 4]], [[4, 1], [0, 0]]],
+    ex: "<b>لجبازی:</b> هر کس دوست دارد دیگری کوتاه بیاید؛ اگر هیچ‌کدام نیاید هر دو بدترین نتیجه را می‌گیرند. <b>مثال:</b> دو ماشین در کوچهٔ تنگی که فقط یکی رد می‌شود و هیچ‌کدام دنده‌عقب نمی‌روند؛ یا دو طرف دعوای خانوادگی که هیچ‌کدام نمی‌خواهد اول زنگ بزند."},
+  coord: {name: "هماهنگی", rows: ["قرار: میدان", "قرار: پارک"], cols: ["قرار: میدان", "قرار: پارک"],
+    p: [[[2, 2], [0, 0]], [[0, 0], [2, 2]]],
+    ex: "<b>فقط باید هم‌دیگر را پیدا کنیم:</b> مهم نیست کجا، مهم است هر دو یک جا برویم. راهبرد غالب نیست؛ قرارداد، عادت یا «نقطهٔ کانونی» (شلینگ) گره را باز می‌کند — مثل اینکه در تهران بی‌هماهنگی به «میدان آزادی» فکر کنیم. <b>مثال روزمره:</b> اینکه از راست برانیم یا چپ؛ هر دو کار می‌کند به شرطی که همه یکی را انتخاب کنند."},
+  custom: {name: "دلخواه", rows: ["الف", "ب"], cols: ["الف", "ب"],
+    p: [[[1, 1], [0, 0]], [[0, 0], [1, 1]]],
+    ex: "عددها را عوض کنید. عدد اول هر خانه سود «شما» (ردیف) است و عدد دوم سود «طرف مقابل» (ستون). ابزار راهبرد مغلوب، تعادل نش و بهترین نتیجهٔ جمعی را پیدا می‌کند."}
+};
+function matrix(pn, out){
+  let key = "pd", P = JSON.parse(JSON.stringify(PRESETS.pd.p)), R = PRESETS.pd.rows, C = PRESETS.pd.cols;
+  pn.innerHTML = `<div class="chips" role="group" aria-label="نوع بازی">${Object.entries(PRESETS).map(([k, v]) => `<button type="button" data-g="${k}" aria-pressed="${k === key}">${v.name}</button>`).join("")}</div>
+    <div class="chartbox"><table class="mx" id="mx"></table></div>
+    <div class="key"><span class="k1">تعادل نش: هیچ‌کس با تغییرِ تنهایی بهتر نمی‌شود</span><span class="k2">بهترین نتیجهٔ جمعی (بیشترین مجموع)</span></div>
+    <div class="ex" id="ex"></div>`;
+  const draw = () => {
+    pn.querySelector("#mx").innerHTML = `<tr><th></th><th colspan="2">طرف مقابل</th></tr><tr><th>شما</th>${C.map(c => `<th>${esc(c)}</th>`).join("")}</tr>` +
+      R.map((r, i) => `<tr><th>${esc(r)}</th>${C.map((_, j) => `<td id="c${i}${j}"><input aria-label="سود شما" data-i="${i}" data-j="${j}" data-k="0" value="${P[i][j][0]}" inputmode="decimal"> ، <input aria-label="سود طرف مقابل" data-i="${i}" data-j="${j}" data-k="1" value="${P[i][j][1]}" inputmode="decimal"></td>`).join("")}</tr>`).join("");
+    pn.querySelector("#ex").innerHTML = PRESETS[key].ex;
+    analyse();
+  };
+  function analyse(){
+    const a = (i, j) => P[i][j][0], b = (i, j) => P[i][j][1];
+    const ne = [], best = [];
+    let mx = -Infinity;
+    for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) {
+      const brR = a(i, j) >= a(1 - i, j), brC = b(i, j) >= b(i, 1 - j);
+      if (brR && brC) ne.push([i, j]);
+      const s = a(i, j) + b(i, j); if (s > mx) mx = s;
+    }
+    for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) if (a(i, j) + b(i, j) === mx) best.push([i, j]);
+    const domR = [0, 1].find(i => a(i, 0) > a(1 - i, 0) && a(i, 1) > a(1 - i, 1));
+    const domC = [0, 1].find(j => b(0, j) > b(0, 1 - j) && b(1, j) > b(1, 1 - j));
+    for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) {
+      const td = pn.querySelector(`#c${i}${j}`);
+      td.classList.toggle("ne", ne.some(([x, y]) => x === i && y === j));
+      td.classList.toggle("po", best.some(([x, y]) => x === i && y === j));
+    }
+    const neIsBest = ne.length && ne.every(([i, j]) => a(i, j) + b(i, j) === mx);
+    let type = "";
+    if (domR !== undefined && domC !== undefined && !neIsBest) type = "این ساختار <b>دوراهی زندانی</b> است: هر کس راهبرد غالب دارد، ولی نتیجهٔ آن برای هر دو بدتر از همکاری است. «انتخاب عقلانی فردی، نتیجهٔ بد جمعی».";
+    else if (ne.length === 2 && domR === undefined && domC === undefined) type = "دو تعادل دارد و هیچ‌کس راهبرد غالب ندارد: بازی <b>هماهنگی</b> یا <b>اعتماد</b> است. اینجا مسئله پیش‌بینی رفتار دیگری است، نه منفعت شخصی؛ قرار، عادت، ارتباط و اعتبار گره را باز می‌کنند.";
+    else if (!ne.length) type = "تعادل نشِ «خالص» ندارد: هر انتخابی را که بگیرید یکی می‌خواهد عوضش کند (مثل سنگ‌کاغذقیچی). در چنین بازی‌هایی بهترین کار غیرقابل‌پیش‌بینی بودن است (راهبرد مختلط).";
+    else if (neIsBest) type = "تعادل همان بهترین نتیجهٔ جمعی است: منفعت فرد و جمع هم‌جهت‌اند و مشکلی برای حل نیست.";
+    else type = "تعادل با بهترین نتیجهٔ جمعی فرق دارد؛ ببینید چه چیزی (قرارداد، تکرار، تنبیه، آبرو) سودها را عوض می‌کند تا دو یکی شوند.";
+    const nm = ([i, j]) => `«${esc(R[i])} / ${esc(C[j])}»`;
+    out.innerHTML = `<div class="res"><h3>تحلیل</h3>
+      <p>${domR !== undefined ? `برای شما «${esc(R[domR])}» <b>راهبرد غالب</b> است: هر کاری طرف مقابل بکند، بهتر است. پس «${esc(R[1 - domR])}» مغلوب است و طبق درس اول پُلاک نباید بازی‌اش کرد.` : "شما راهبرد غالب ندارید؛ بهترین انتخابتان به کار طرف مقابل بستگی دارد."}
+      ${domC !== undefined ? ` طرف مقابل هم «${esc(C[domC])}» را غالب دارد — پس اگر خودتان را جای او بگذارید (درس چهارم)، می‌دانید چه می‌کند.` : ""}</p>
+      <p>تعادل نش: ${ne.length ? ne.map(nm).join(" و ") : "هیچ (خالص)"} · بهترین نتیجهٔ جمعی: ${best.map(nm).join(" و ")}</p>
+      <p>${type}</p>
+      ${lk(["collective-action", "generalized-trust", "psy:cooperation-competition"])}</div>`;
+  }
+  pn.addEventListener("input", e => { const t = e.target; if (t.dataset.k === undefined) return; const v = parseFloat(t.value.replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d))); if (!isNaN(v)) { P[t.dataset.i][t.dataset.j][t.dataset.k] = v; analyse(); } });
+  pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (!b) return; key = b.dataset.g; const g = PRESETS[key]; P = JSON.parse(JSON.stringify(g.p)); R = g.rows; C = g.cols; pn.querySelectorAll("[data-g]").forEach(x => x.setAttribute("aria-pressed", x === b)); draw(); });
+  draw();
+}
+
+/* ——— 2. repeated prisoner's dilemma tournament ——— */
+const PAY = {CC: [3, 3], CD: [0, 5], DC: [5, 0], DD: [1, 1]};
+const STRATS = {
+  allc: ["همیشه همکار", "هر بار همکاری می‌کند، هر چه شود.", (m, o) => "C"],
+  alld: ["همیشه خائن", "هر بار خیانت می‌کند.", (m, o) => "D"],
+  tft: ["تلافی هم‌سنگ", "اول همکاری؛ بعد هر کاری طرف در دور قبل کرد همان را می‌کند. (برندهٔ مسابقهٔ اکسلرود، ۱۹۸۰)", (m, o) => o.length ? o[o.length - 1] : "C"],
+  gtft: ["تلافی بخشنده", "مثل تلافی هم‌سنگ، ولی یک‌دهم وقت‌ها خیانت را می‌بخشد.", (m, o) => !o.length || o[o.length - 1] === "C" || Math.random() < .1 ? "C" : "D"],
+  grim: ["کینه‌توز", "همکاری می‌کند تا اولین خیانت؛ از آن به بعد دیگر هرگز.", (m, o) => o.includes("D") ? "D" : "C"],
+  rand: ["تصادفی", "نیمی همکاری، نیمی خیانت.", (m, o) => Math.random() < .5 ? "C" : "D"],
+  pav: ["برد-بمان، باخت-عوض‌کن", "اگر دور قبل خوب بود (۳ یا ۵ گرفت) همان کار را تکرار می‌کند، وگرنه عوض می‌کند.", (m, o) => { if (!m.length) return "C"; const k = m[m.length - 1] + o[o.length - 1]; const g = PAY[k][0] >= 3; return g ? m[m.length - 1] : (m[m.length - 1] === "C" ? "D" : "C"); }]
+};
+function repeated(pn, out){
+  let on = new Set(Object.keys(STRATS));
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">هر دو بازیکن در هر دور همکاری (C) یا خیانت (D) می‌کنند. سودها: هر دو همکاری ${fa(3)}، هر دو خیانت ${fa(1)}، خائنِ تنها ${fa(5)} و همکارِ فریب‌خورده ${fa(0)}. هر برنامه با همهٔ برنامه‌های دیگر (و با هم‌نوع خودش) بازی می‌کند. پرسش اکسلرود: در جهانی که بازی تکرار می‌شود، کدام رفتار در کل بیشتر می‌برد؟</p>
+    <div class="chips" role="group" aria-label="برنامه‌های شرکت‌کننده">${Object.entries(STRATS).map(([k, v]) => `<button type="button" data-s="${k}" aria-pressed="true" title="${esc(v[1])}">${v[0]}</button>`).join("")}</div>
+    <div class="row2"><label class="field">تعداد دور در هر مسابقه: <b id="nv"></b><input type="range" id="n" min="1" max="200" step="1" value="100"></label>
+    <label class="field">خطا (گاهی دست اشتباه می‌لرزد): <b id="ev"></b><input type="range" id="e" min="0" max="20" step="1" value="0"></label></div>
+    <div class="btnrow"><button type="button" class="btn" id="go">برگزاری مسابقه</button></div>
+    <h3 style="margin:8px 0 0;font-size:1.05rem">خودتان بازی کنید</h3>
+    <div class="row2"><label class="field">حریف: <select id="opp" style="font:inherit;min-height:40px">${Object.entries(STRATS).map(([k, v]) => `<option value="${k}">${v[0]}</option>`).join("")}</select></label>
+    <div class="btnrow" style="align-items:end"><button type="button" class="btn" data-m="C">همکاری</button><button type="button" class="btn ghost" data-m="D">خیانت</button><button type="button" class="btn ghost" id="rs">از نو</button></div></div>
+    <div id="me" class="muted" style="line-height:1.9"></div>`;
+  const n = pn.querySelector("#n"), e = pn.querySelector("#e");
+  const u = () => { pn.querySelector("#nv").textContent = fa(+n.value); pn.querySelector("#ev").textContent = fa(+e.value) + "٪"; };
+  n.addEventListener("input", u); e.addEventListener("input", u); u();
+  pn.querySelector("[role=group]").addEventListener("click", ev => { const b = ev.target.closest("[data-s]"); if (!b) return; const k = b.dataset.s; if (on.has(k) && on.size > 2) on.delete(k); else on.add(k); b.setAttribute("aria-pressed", on.has(k)); });
+  const play = (s1, s2, N, err) => { const a = [], b = []; let x = 0, y = 0; for (let r = 0; r < N; r++) { let m1 = STRATS[s1][2](a, b), m2 = STRATS[s2][2](b, a); if (Math.random() < err) m1 = m1 === "C" ? "D" : "C"; if (Math.random() < err) m2 = m2 === "C" ? "D" : "C"; a.push(m1); b.push(m2); const p = PAY[m1 + m2]; x += p[0]; y += p[1]; } return [x, y]; };
+  pn.querySelector("#go").addEventListener("click", () => {
+    const L = [...on], N = +n.value, err = +e.value / 100, tot = Object.fromEntries(L.map(k => [k, 0]));
+    for (let rep = 0; rep < 5; rep++) for (let i = 0; i < L.length; i++) for (let j = i; j < L.length; j++) { const [x, y] = play(L[i], L[j], N, err); tot[L[i]] += x; if (i !== j) tot[L[j]] += y; else tot[L[i]] += y; }
+    const per = k => tot[k] / (5 * (L.length + 1) * N);
+    const S = L.sort((p, q) => per(q) - per(p)), top = per(S[0]);
+    out.innerHTML = `<div class="res"><h3>برنده: ${STRATS[S[0]][0]}</h3>
+      <div class="bars">${S.map(k => `<div><span>${STRATS[k][0]}</span><i style="width:${(per(k) / top * 100).toFixed(1)}%" class="${k === "alld" ? "alt" : ""}"></i><b>${fa(per(k), 2)}</b></div>`).join("")}</div>
+      <p class="muted" style="font-size:.85rem">میانگین سود در هر دور (طول نوارها نسبت به برنده). نتیجه کمی تصادفی است؛ چند بار اجرا کنید.</p>
+      <p>اکسلرود در ۱۹۸۰ از متخصص‌ها خواست برنامه بفرستند؛ سادهٔ همه، «تلافی هم‌سنگ»، اول شد. ویژگی‌هایش: <b>مهربان</b> (اول خیانت نمی‌کند)، <b>تلافی‌گر</b> (خیانت بی‌جواب نمی‌ماند)، <b>بخشنده</b> (با یک همکاری آشتی می‌کند) و <b>روشن</b> (طرف زود می‌فهمد با چه کسی طرف است).</p>
+      <p>آزمون کنید: «همیشه خائن» را تنها با «همیشه همکار»ها بگذارید — می‌برد. خطا را بالا ببرید — «کینه‌توز» و حتی «تلافی هم‌سنگ» در چرخهٔ انتقام گیر می‌کنند و «بخشنده» جلو می‌افتد. تعداد دور را ۱ کنید — بازیِ یک‌باره همان دوراهی زندانی است و خیانت می‌برد. درس پُلاک: تکرار تعامل یکی از درمان‌های دوراهی زندانی است.</p>
+      ${lk(["generalized-trust", "collective-action", "psy:cooperation-competition"])}</div>`;
+  });
+  let a = [], b = [], sc = [0, 0];
+  const meLog = () => pn.querySelector("#me").innerHTML = a.length ? `دور ${fa(a.length)} · شما: ${a.slice(-12).map(x => x === "C" ? "🤝" : "✋").join(" ")} · حریف: ${b.slice(-12).map(x => x === "C" ? "🤝" : "✋").join(" ")} · امتیاز شما ${fa(sc[0])}، حریف ${fa(sc[1])}` : "یک حرکت بزنید. حریف برنامه‌اش را پنهان نگه می‌دارد؛ از رفتارش حدس بزنید کدام است.";
+  pn.addEventListener("click", ev => { const btn = ev.target.closest("[data-m]"); if (!btn) return; const s = pn.querySelector("#opp").value, m2 = STRATS[s][2](b, a), m1 = btn.dataset.m; a.push(m1); b.push(m2); const p = PAY[m1 + m2]; sc[0] += p[0]; sc[1] += p[1]; meLog(); });
+  pn.querySelector("#rs").addEventListener("click", () => { a = []; b = []; sc = [0, 0]; meLog(); });
+  pn.querySelector("#opp").addEventListener("change", () => { a = []; b = []; sc = [0, 0]; meLog(); });
+  meLog();
+}
+
+/* ——— 3. ultimatum ——— */
+function ultimatum(pn, out){
+  const POT = 100;
+  let mode = "resp", log = [];
+  pn.innerHTML = `<div class="chips" role="group"><button type="button" data-u="resp" aria-pressed="true">من پاسخ‌دهنده‌ام</button><button type="button" data-u="prop" aria-pressed="false">من پیشنهاددهنده‌ام</button></div>
+    <p style="margin:0;line-height:1.9">${fa(POT)} هزار تومان بین دو نفر تقسیم می‌شود. یکی پیشنهاد می‌دهد، دیگری قبول یا رد می‌کند. اگر رد کند، <b>هیچ‌کدام</b> چیزی نمی‌گیرند. طبق حساب سادهٔ «سود بیشتر»، پاسخ‌دهنده باید هر عدد بالای صفر را قبول کند. شما چه می‌کنید؟</p>
+    <div id="box"></div>`;
+  const box = pn.querySelector("#box");
+  /* bots' minimum acceptable share, roughly shaped like lab findings in industrial societies: most accept ≥40%, about half reject below 20% */
+  const botMin = () => { const r = Math.random(); return r < .15 ? 0 : r < .4 ? 10 : r < .65 ? 20 : r < .9 ? 30 : 40; };
+  const render = () => {
+    if (mode === "resp") {
+      const off = [5, 10, 20, 30, 40, 50][rnd(6)];
+      box.innerHTML = `<div class="ex">پیشنهاد طرف مقابل: <b>${fa(POT - off)}</b> هزار تومان برای خودش و <b>${fa(off)}</b> هزار تومان برای شما.</div>
+        <div class="btnrow"><button type="button" class="btn" data-a="1" data-o="${off}">قبول</button><button type="button" class="btn ghost" data-a="0" data-o="${off}">رد</button></div>`;
+    } else {
+      box.innerHTML = `<label class="field">سهمی که به طرف مقابل می‌دهید: <b id="ov"></b><input type="range" id="o" min="0" max="${POT}" step="5" value="30"></label>
+        <div class="btnrow"><button type="button" class="btn" id="send">پیشنهاد بده</button></div>`;
+      const o = box.querySelector("#o"), uu = () => box.querySelector("#ov").textContent = fa(+o.value) + " هزار تومان"; o.addEventListener("input", uu); uu();
+    }
+    report();
+  };
+  const report = () => {
+    if (!log.length) { out.innerHTML = ""; return; }
+    const me = log.filter(x => x.mode === mode);
+    const txt = mode === "resp"
+      ? `شما ${fa(me.filter(x => !x.acc).length)} پیشنهاد از ${fa(me.length)} را رد کردید${me.some(x => !x.acc) ? ` و با این کار ${fa(me.filter(x => !x.acc).reduce((s, x) => s + x.off, 0))} هزار تومان از دست دادید — که البته طرف مقابل را هم بی‌پول گذاشت.` : "."}`
+      : `میانگین درآمد شما در ${fa(me.length)} دور: ${fa(me.reduce((s, x) => s + x.gain, 0) / Math.max(1, me.length), 1)} هزار تومان. پیشنهادهای رد‌شده: ${fa(me.filter(x => !x.acc).length)}.`;
+    out.innerHTML = `<div class="res"><h3>${txt}</h3>
+      <p>در صدها آزمایش در کشورهای صنعتی، بیشتر پیشنهادها حدود ۴۰ تا ۵۰ درصد است و پیشنهادهای کمتر از حدود ۲۰ درصد اغلب رد می‌شوند. مردم پول را فدا می‌کنند تا بی‌انصافی را تنبیه کنند.</p>
+      <p>ولی این «طبیعت جهانی انسان» نیست: هنریک و همکاران (۲۰۰۱) بازی را در ۱۵ جامعهٔ کوچک اجرا کردند. میانگین پیشنهاد از حدود ۲۶٪ (ماچیگنگا در پرو) تا حدود ۵۸٪ (لاماِلِرا در اندونزی) فرق می‌کرد و هر چه جامعه بیشتر با بازار و همکاری بزرگ‌مقیاس سروکار داشت، پیشنهادها منصفانه‌تر بود. انصاف هم یاد گرفته می‌شود.</p>
+      <p class="muted" style="font-size:.88rem">در حالت «پیشنهاددهنده»، طرف مقابل برنامه‌ای است که آستانهٔ پذیرشش تصادفی و تقریباً شبیه یافته‌های آزمایشگاهی است.</p>
+      ${lk(["generalized-trust", "market-norms-crowding-out-fine-vs-price"])}</div>`;
+  };
+  pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-u]"); if (!b) return; mode = b.dataset.u; pn.querySelectorAll("[data-u]").forEach(x => x.setAttribute("aria-pressed", x === b)); render(); });
+  box.addEventListener("click", e => {
+    const a = e.target.closest("[data-a]");
+    if (a) { const off = +a.dataset.o, acc = a.dataset.a === "1"; log.push({mode: "resp", off, acc}); render(); return; }
+    if (e.target.id === "send") { const off = +box.querySelector("#o").value, m = botMin(), acc = off >= m; log.push({mode: "prop", off, acc, gain: acc ? POT - off : 0}); box.insertAdjacentHTML("beforeend", `<p class="ex">${acc ? `قبول کرد. شما ${fa(POT - off)} و او ${fa(off)} هزار تومان.` : `رد کرد! هر دو صفر.`}</p>`); setTimeout(() => { report(); }, 0); }
+  });
+  render();
+}
+
+/* ——— 4. Markov ——— */
+const SAMPLE = "صبح زود نانوایی شلوغ است و صف تا سر کوچه می‌رسد. هر کس می‌خواهد زودتر نان بگیرد و برود سر کار. اگر یک نفر جلو بزند، بقیه هم وسوسه می‌شوند جلو بزنند و صف به هم می‌ریزد. اگر همه منتظر نوبت بمانند، صف آرام جلو می‌رود و همه نان می‌گیرند. نانوا هم وقتی صف آرام است بهتر کار می‌کند. پس نظم صف به رفتار همه بستگی دارد و رفتار هر کس به اینکه فکر می‌کند دیگران چه می‌کنند.";
+function markov(pn, out){
+  pn.innerHTML = `<h3 style="margin:0;font-size:1.05rem">۱. قانون اعداد بزرگ، با و بدون وابستگی</h3>
+    <p style="margin:0;line-height:1.9">نکراسوف می‌گفت اگر آمار یک چیز به عدد ثابتی میل کند، رویدادهای پشتش «مستقل»اند. مارکوف (۱۹۱۳) با حروف شعر «اوگنی اونگین» نشان داد این‌طور نیست: صدادار یا بی‌صدا بودن هر حرف به حرف قبلی بستگی دارد، ولی سهم صدادارها باز هم به حدود ۴۳٪ می‌رسد. هر دو را اجرا کنید.</p>
+    <div class="btnrow"><button type="button" class="btn" id="run">اجرا (۲۰۰۰ قدم)</button></div>
+    <div class="chartbox" id="ch"></div>
+    <h3 style="margin:8px 0 0;font-size:1.05rem">۲. ماشین ساختن جمله</h3>
+    <p style="margin:0;line-height:1.9">زنجیرهٔ مارکوف فقط به «حالت فعلی» نگاه می‌کند. اینجا حالت، یک یا دو کلمهٔ آخر است. متن خودتان را بگذارید (هر چه بلندتر بهتر) و ببینید ماشین با همان کلمه‌ها چه می‌سازد. مدل‌های زبانی امروز همین بازی را با «توکن»ها و حافظهٔ بسیار طولانی‌تر و سازوکار «توجه» انجام می‌دهند.</p>
+    <textarea id="tx" aria-label="متن نمونه">${SAMPLE}</textarea>
+    <div class="row2"><label class="field">حافظهٔ ماشین (چند کلمهٔ آخر): <b id="kv"></b><input type="range" id="k" min="1" max="3" step="1" value="1"></label>
+    <div class="btnrow" style="align-items:end"><button type="button" class="btn" id="gen">بساز</button></div></div>
+    <div class="gen" id="g"></div>`;
+  const k = pn.querySelector("#k"), ku = () => pn.querySelector("#kv").textContent = fa(+k.value); k.addEventListener("input", ku); ku();
+  pn.querySelector("#run").addEventListener("click", () => {
+    const N = 2000, coin = [], chain = []; let h = 0, v = 0, s = Math.random() < .43 ? "V" : "C";
+    for (let i = 1; i <= N; i++) { h += Math.random() < .43 ? 1 : 0; coin.push(h / i); s = s === "V" ? (Math.random() < .13 ? "V" : "C") : (Math.random() < .67 ? "V" : "C"); v += s === "V" ? 1 : 0; chain.push(v / i); }
+    const W = 640, H = 260, P = 40, X = i => P + Math.log10(i + 1) / Math.log10(N) * (W - 2 * P), Y = y => H - P - y * (H - 2 * P);
+    const path = a => a.map((y, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(y).toFixed(1)).join("");
+    const ink = css("--ink-3");
+    pn.querySelector("#ch").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;direction:ltr" role="img" aria-label="همگرایی سهم صدادارها">
+      <line x1="${P}" y1="${Y(.43)}" x2="${W - P}" y2="${Y(.43)}" stroke="${ink}" stroke-dasharray="4 4"/>
+      <path d="${path(coin)}" fill="none" stroke="${css("--ink")}" stroke-width="1.6" stroke-opacity=".6"/>
+      <path d="${path(chain)}" fill="none" stroke="${css("--fam-soc")}" stroke-width="2.4"/>
+      ${[0, .5, 1].map(y => `<text x="${P - 6}" y="${Y(y) + 5}" text-anchor="end" font-size="14" fill="${ink}">${fa(y * 100)}٪</text>`).join("")}
+      <text x="${W - P}" y="${Y(.43) - 6}" text-anchor="end" font-size="14" fill="${ink}">۴۳٪</text>
+      <text x="${P}" y="${H - 8}" font-size="14" fill="${ink}">قدم ۱</text><text x="${W - P}" y="${H - 8}" text-anchor="end" font-size="14" fill="${ink}">قدم ${fa(N)} (محور لگاریتمی)</text></svg>
+      <p class="muted" style="font-size:.85rem;margin:4px 0 0">خط کم‌رنگ: حروف مستقل (سکهٔ ۴۳٪) · خط رنگی: زنجیرهٔ مارکوف (بعد از صدادار ۱۳٪ صدادار، بعد از بی‌صدا ۶۷٪ صدادار). هر دو به یک عدد می‌رسند.</p>`;
+    out.innerHTML = `<div class="res"><h3>همگرایی، استقلال را ثابت نمی‌کند</h3>
+      <p>نتیجهٔ نهایی هر دو خط تقریباً یکی است، با اینکه یکی وابسته است و دیگری نه. پس اگر آمار ازدواج یا جرم هر سال تقریباً ثابت است، نمی‌شود از آن نتیجه گرفت که تصمیم‌ها «مستقل» یا «آزادانه» گرفته شده‌اند — و نه برعکس. این درس برای خواندن هر آمار اجتماعی، از جمله آمار ایران، مهم است.</p>
+      ${lk(["phil:free-will", "feedback-loops-and-leverage-points"])}</div>`;
+  });
+  pn.querySelector("#gen").addEventListener("click", () => {
+    const w = pn.querySelector("#tx").value.replace(/([.،؟!:؛])/g, " $1 ").split(/\s+/).filter(Boolean), K = +k.value, T = {};
+    for (let i = 0; i + K < w.length; i++) { const s = w.slice(i, i + K).join(" "); (T[s] = T[s] || []).push(w[i + K]); }
+    const starts = Object.keys(T); if (!starts.length) { pn.querySelector("#g").textContent = "متن کوتاه است."; return; }
+    let st = starts[rnd(starts.length)].split(" "), res = [...st];
+    for (let i = 0; i < 60; i++) { const nx = T[st.join(" ")]; if (!nx) break; const n = nx[rnd(nx.length)]; res.push(n); st = [...st.slice(1), n]; }
+    const choices = Object.values(T).reduce((s, a) => s + new Set(a).size, 0) / starts.length;
+    pn.querySelector("#g").textContent = res.join(" ").replace(/\s([.،؟!:؛])/g, "$1");
+    out.innerHTML = `<div class="res"><h3>حافظهٔ ${fa(K)} کلمه</h3><p>در این متن، بعد از هر ${K === 1 ? "کلمه" : `${fa(K)} کلمه`} به‌طور میانگین ${fa(choices, 1)} ادامهٔ ممکن هست. حافظهٔ کوتاه جمله‌های عجیب ولی «تکه‌تکه درست» می‌سازد (همان چیزی که شانون در دههٔ ۱۹۴۰ دید)؛ حافظهٔ بلندتر متن را تقریباً عین اصل تکرار می‌کند، چون متن کوتاه انتخاب زیادی نمی‌گذارد. مدل زبانی واقعی با میلیاردها جمله این تعادل را پیدا می‌کند.</p></div>`;
+  });
+}
+
+/* ——— 5. PageRank ——— */
+function pagerank(pn, out){
+  const NAMES = ["آرش", "بهار", "کاوه", "دنیا", "ژاله"];
+  let A = [[0, 1, 0, 0, 0], [1, 0, 1, 1, 0], [0, 0, 0, 1, 0], [1, 1, 0, 0, 1], [0, 1, 0, 0, 0]], spam = 0;
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">پنج صفحه (یا پنج نفر در یک شبکه). هر تیک یعنی «سطر به ستون پیوند می‌دهد» — مثل اینکه کسی دیگری را معرفی یا تأیید کند. پیج‌رنک می‌پرسد: اگر کسی بی‌هدف از پیوندی به پیوند دیگر برود، چه سهمی از وقتش را روی هر صفحه می‌گذراند؟ تأیید از سوی کسی که خودش معتبر است بیشتر می‌ارزد، و کسی که همه را تأیید کند تأییدش کم‌وزن‌تر است.</p>
+    <div class="chartbox"><table class="adj" id="adj"></table></div>
+    <div class="row2"><label class="field">پرش تصادفی (وقتی خسته می‌شود و صفحهٔ تازه‌ای باز می‌کند): <b id="dv"></b><input type="range" id="d" min="0" max="50" step="5" value="15"></label>
+    <div class="btnrow" style="align-items:end"><button type="button" class="btn" id="sp">۲۰ صفحهٔ تقلبی بساز که به «ژاله» پیوند بدهند</button><button type="button" class="btn ghost" id="nosp">حذف تقلبی‌ها</button></div></div>
+    <div id="bars"></div>`;
+  const d = pn.querySelector("#d"), du = () => pn.querySelector("#dv").textContent = fa(+d.value) + "٪"; d.addEventListener("input", () => { du(); calc(); }); du();
+  const table = () => pn.querySelector("#adj").innerHTML = `<tr><th>از ↓ به ←</th>${NAMES.map(n => `<th>${n}</th>`).join("")}</tr>` + NAMES.map((n, i) => `<tr><th>${n}</th>${NAMES.map((_, j) => `<td>${i === j ? "—" : `<input type="checkbox" data-i="${i}" data-j="${j}" ${A[i][j] ? "checked" : ""} aria-label="${n} به ${NAMES[j]}">`}</td>`).join("")}</tr>`).join("");
+  function calc(){
+    const n = 5 + spam, damp = +d.value / 100, out_ = [];
+    for (let i = 0; i < n; i++) out_.push(i < 5 ? A[i].map((v, j) => v ? j : -1).filter(j => j >= 0) : [4]);
+    let r = Array(n).fill(1 / n);
+    for (let it = 0; it < 100; it++) { const nr = Array(n).fill(damp / n); for (let i = 0; i < n; i++) { const o = out_[i]; if (!o.length) { for (let j = 0; j < n; j++) nr[j] += (1 - damp) * r[i] / n; } else o.forEach(j => nr[j] += (1 - damp) * r[i] / o.length); } r = nr; }
+    const real = r.slice(0, 5), sum = real.reduce((a, b) => a + b, 0), sh = real.map(x => x / sum);
+    const order = [...sh.keys()].sort((a, b) => sh[b] - sh[a]);
+    pn.querySelector("#bars").innerHTML = `<div class="bars">${order.map(i => `<div><span>${NAMES[i]} <span class="tag">${fa(A.reduce((s, row) => s + row[i], 0))} پیوند ورودی</span></span><i style="width:${(sh[i] * 100).toFixed(1)}%" class="${i === 4 && spam ? "alt" : ""}"></i><b>${fa(sh[i] * 100, 1)}٪</b></div>`).join("")}</div>`;
+    out.innerHTML = `<div class="res"><h3>رتبهٔ اول: ${NAMES[order[0]]}</h3>
+      <p>رتبه فقط با «تعداد» پیوندها تعیین نمی‌شود؛ مهم است پیوند از کجا می‌آید. ${spam ? `با ${fa(spam)} صفحهٔ تقلبی، سهم ژاله بالا رفت، ولی هر صفحهٔ تقلبی فقط همان سهم کوچک «پرش تصادفی» را دارد که به او می‌دهد؛ چون هیچ‌کس به آن‌ها پیوند نمی‌دهد، اعتبارشان ته می‌کشد. پرش تصادفی را صفر کنید و ببینید چه می‌شود.` : "دکمهٔ صفحه‌های تقلبی را بزنید و ببینید تقلب چقدر جواب می‌دهد."}</p>
+      <p>برین و پیج (۱۹۹۸) وب را یک زنجیرهٔ مارکوف دیدند: صفحه‌ها حالت‌اند و پیوندها قدم‌ها. «پرش تصادفی» (حدود ۱۵٪) نمی‌گذارد گشت‌زن در یک حلقه گیر کند. همین منطق در شبکه‌های اجتماعی هم هست: نفوذ کسی که آدم‌های بانفوذ معرفی‌اش می‌کنند بیشتر است — برای سیمرغ یعنی معرفی‌نامه از آدم معتبر می‌ارزد، و صدها حساب ساختگی کم.</p>
+      ${lk(["network-structure-robustness", "psy:soc-networks", "psy:prestige-dominance"])}</div>`;
+  }
+  pn.addEventListener("change", e => { const t = e.target; if (t.dataset.i === undefined) return; A[t.dataset.i][t.dataset.j] = t.checked ? 1 : 0; calc(); });
+  pn.querySelector("#sp").addEventListener("click", () => { spam = 20; calc(); });
+  pn.querySelector("#nosp").addEventListener("click", () => { spam = 0; calc(); });
+  table(); calc();
+}
+
+LabKit.start({
+  wiki: "soc", first: "matrix",
+  labels: {
+    "collective-action": "کنش جمعی و سواری مجانی", "generalized-trust": "اعتماد تعمیم‌یافته", "psy:cooperation-competition": "همکاری و رقابت",
+    "market-norms-crowding-out-fine-vs-price": "جریمه یا قیمت؟", "phil:free-will": "اراده‌آزادی", "feedback-loops-and-leverage-points": "حلقه‌های بازخورد",
+    "network-structure-robustness": "ساختار شبکه", "psy:soc-networks": "شبکه‌های اجتماعی", "psy:prestige-dominance": "منزلت و سلطه"
+  },
+  exps: {
+    matrix: ["ماتریس‌ساز", "بازی را بشناس: راهبرد غالب، تعادل نش، نتیجهٔ جمعی", "یک بازی دونفره را انتخاب کنید یا عددها را خودتان بنویسید. ابزار نشان می‌دهد کدام انتخاب همیشه بهتر است، کجا هیچ‌کس دلیلی برای تغییر ندارد (تعادل نش) و آیا آن نقطه برای هر دو خوب است یا نه.", matrix],
+    repeated: ["تکرار و اعتماد", "مسابقهٔ اکسلرود: کدام رفتار در درازمدت می‌برد؟", "در دوراهی زندانیِ یک‌باره خیانت می‌برد. ولی زندگی پر از بازی‌های تکرارشونده است: همسایه، هم‌کار، فامیل. هفت برنامه را با هم مسابقه بدهید یا خودتان در برابر یکی بازی کنید.", repeated],
+    ultimatum: ["اولتیماتوم", "انصاف یا سود؟", "حساب سود می‌گوید هر پیشنهادی بهتر از هیچ است. آدم‌ها ولی پیشنهاد ناعادلانه را رد می‌کنند. هم پاسخ‌دهنده باشید و هم پیشنهاددهنده.", ultimatum],
+    markov: ["زنجیرهٔ مارکوف", "حالت فعلی کافی است: از دعوای دو ریاضی‌دان تا مدل‌های زبانی", "مارکوف نشان داد رویدادهای وابسته هم از قانون اعداد بزرگ پیروی می‌کنند و ابزاری ساخت که امروز در پیش‌بینی متن، شبیه‌سازی و موتور جست‌وجو به کار می‌رود.", markov],
+    pagerank: ["پیج‌رنک", "اعتبار از کجا می‌آید؟", "یک شبکهٔ کوچک بسازید و ببینید چه کسی «معتبرتر» می‌شود؛ بعد سعی کنید با صفحه‌های ساختگی تقلب کنید.", pagerank]
+  }
+});
+</script>
+</body>
+</html>
