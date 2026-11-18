@@ -71,7 +71,7 @@
   fig.appendChild(tip);
   fig.querySelectorAll(".knot").forEach(k => {
     const ttl = k.querySelector("title");
-    if (ttl) { k.dataset.tip = ttl.textContent; k.setAttribute("aria-label", ttl.textContent); ttl.remove(); }
+    if (ttl) { k.dataset.tip = ttl.textContent; k.setAttribute("role", "img"); k.setAttribute("aria-label", ttl.textContent); ttl.remove(); }
   });
   const place = e => {
     const r = fig.getBoundingClientRect();

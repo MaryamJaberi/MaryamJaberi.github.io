@@ -352,7 +352,7 @@ def loom_svg(t):
     svg = (f'<svg class="loom" viewBox="0 0 {W} {H}" role="img" aria-label="{t["loom_h"]}: {names}">'
            f'<g class="threads">{"".join(g)}</g><g class="woven">{"".join(weave)}{"".join(knots)}</g>'
            f'<g class="labels">{labels}</g>{shuttle}</svg>')
-    return f'<figure class="loom-fig"><div class="loom-scroll">{svg}</div><figcaption class="small">{cap}</figcaption></figure>'
+    return f'<figure class="loom-fig"><div class="loom-scroll" tabindex="0">{svg}</div><figcaption class="small">{cap}</figcaption></figure>'
 
 
 def rug_svg(t, order, href):
