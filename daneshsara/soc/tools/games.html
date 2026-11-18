@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>آزمایشگاه بازی | ویکی جامعه | دانش‌سرا</title>
-<meta name="description" content="پنج آزمایش تعاملی نظریهٔ بازی: ماتریس‌ساز بازی، مسابقهٔ دوراهی زندانی تکرارشونده، بازی اولتیماتوم، زنجیرهٔ مارکوف و پیج‌رنک.">
+<meta name="description" content="هفت آزمایش تعاملی نظریهٔ بازی: ماتریس‌ساز بازی، مسابقهٔ دوراهی زندانی تکرارشونده، بازی اولتیماتوم، زنجیرهٔ مارکوف و پیج‌رنک.">
 <link rel="stylesheet" href="../../core/design/tokens.css">
 <link rel="stylesheet" href="../../core/tools/tools.css">
 <link rel="stylesheet" href="../../core/tools/lab-kit.css">
@@ -36,7 +36,7 @@ textarea{width:100%;font:inherit;min-height:7em;border:1px solid var(--line-stro
 <style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../soc/">ویکی جامعه</a><i>›</i><a href="../../soc/tools/">ابزارها</a><i>›</i><b>آزمایشگاه بازی</b></nav><script src="../../core/nav.js" defer></script>
 <main class="wrap" id="main">
 <h1>آزمایشگاه بازی</h1>
-<p class="what">نظریهٔ بازی دربارهٔ موقعیت‌هایی است که نتیجهٔ کار شما به انتخاب دیگران هم بستگی دارد: صف نانوایی، تعارف، قیمت‌گذاری دو مغازهٔ هم‌سایه، شب مافیا. در این پنج آزمایش قاعده‌ها را عوض کنید، بازی کنید و ببینید چرا آدم‌های عاقل گاهی به نتیجه‌ای می‌رسند که هیچ‌کدام نمی‌خواستند. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<p class="what">نظریهٔ بازی دربارهٔ موقعیت‌هایی است که نتیجهٔ کار شما به انتخاب دیگران هم بستگی دارد: صف نانوایی، تعارف، قیمت‌گذاری دو مغازهٔ هم‌سایه، شب مافیا. در این هفت آزمایش قاعده‌ها را عوض کنید، بازی کنید و ببینید چرا آدم‌های عاقل گاهی به نتیجه‌ای می‌رسند که هیچ‌کدام نمی‌خواستند. چیزی ذخیره یا فرستاده نمی‌شود.</p>
 <div class="tabs" id="tabs" role="tablist"></div>
 <section id="exp" aria-live="polite"></section>
 <div class="note foot" role="note">این‌ها مدل‌های ساده‌شدهٔ آموزشی‌اند. هر کدام یک سازوکار را جدا نشان می‌دهد؛ آدم‌های واقعی به انصاف، آبرو، رابطه و احساس هم اهمیت می‌دهند — که خودش در آزمایش اولتیماتوم دیده می‌شود. برای منبع‌ها و نقدها به مدخل‌های پیوندشده برگردید.</div>
@@ -112,7 +112,10 @@ function matrix(pn, out){
   pn.addEventListener("input", e => { const t = e.target; if (t.dataset.k === undefined) return; const v = parseFloat(t.value.replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d))); if (!isNaN(v)) { P[t.dataset.i][t.dataset.j][t.dataset.k] = v; analyse(); } });
   pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (!b) return; key = b.dataset.g; const g = PRESETS[key]; P = JSON.parse(JSON.stringify(g.p)); R = g.rows; C = g.cols; pn.querySelectorAll("[data-g]").forEach(x => x.setAttribute("aria-pressed", x === b)); draw(); });
   draw();
+  const pre = sessionStorage && (() => { try { const v = sessionStorage.getItem("gpreset"); sessionStorage.removeItem("gpreset"); return v; } catch (_) { return null; } })();
+  if (pre && PRESETS[pre]) pn.querySelector(`[data-g="${pre}"]`).click();
 }
+document.addEventListener("click", e => { const a = e.target.closest("[data-preset]"); if (a) { try { sessionStorage.setItem("gpreset", a.dataset.preset); } catch (_) {} } });
 
 /* ——— 2. repeated prisoner's dilemma tournament ——— */
 const PAY = {CC: [3, 3], CD: [0, 5], DC: [5, 0], DD: [1, 1]};
@@ -278,18 +281,75 @@ function pagerank(pn, out){
   table(); calc();
 }
 
+
+/* ——— 6. two-thirds of the average ——— */
+function twothirds(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">بازی دوم جلسهٔ اول پُلاک: هر کس یک عدد صحیح از ۱ تا ۱۰۰ می‌نویسد. برنده کسی است که عددش به <b>دو‌سوم میانگین</b> همه نزدیک‌تر باشد. شما با ۲۹ نفر دیگر بازی می‌کنید که بعضی تصادفی می‌نویسند، بعضی یک قدم فکر می‌کنند و بعضی دو قدم.</p>
+    <label class="field">عدد شما: <b id="nv"></b><input type="range" id="n" min="1" max="100" step="1" value="50"></label>
+    <div class="row2"><label class="field">سهم بازیکن‌هایی که «دو قدم» فکر می‌کنند: <b id="sv"></b><input type="range" id="sm" min="0" max="80" step="10" value="30"></label>
+    <div class="btnrow" style="align-items:end"><button type="button" class="btn" id="go">بازی کن</button></div></div><div class="chartbox" id="hist"></div>`;
+  const n = pn.querySelector("#n"), sm = pn.querySelector("#sm");
+  const u = () => { pn.querySelector("#nv").textContent = fa(+n.value); pn.querySelector("#sv").textContent = fa(+sm.value) + "٪"; };
+  n.addEventListener("input", u); sm.addEventListener("input", u); u();
+  pn.querySelector("#go").addEventListener("click", () => {
+    const k2 = +sm.value / 100, others = [];
+    for (let i = 0; i < 29; i++) { const r = Math.random(); let v; if (r < k2) v = 22 + rnd(5) - 2; else if (r < k2 + (1 - k2) / 2) v = 33 + rnd(7) - 3; else v = 1 + rnd(100); others.push(Math.max(1, Math.min(100, v))); }
+    const all = [+n.value, ...others], avg = all.reduce((a, b) => a + b, 0) / all.length, tgt = avg * 2 / 3;
+    const dist = all.map(v => Math.abs(v - tgt)), best = Math.min(...dist), win = dist[0] === best;
+    const bins = Array(10).fill(0); all.forEach(v => bins[Math.min(9, Math.floor((v - 1) / 10))]++);
+    const W = 600, H = 200, P = 34, bw = (W - 2 * P) / 10, mxb = Math.max(...bins), ink = css("--ink-3"), X = v => P + (v - 1) / 99 * (W - 2 * P);
+    pn.querySelector("#hist").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;direction:ltr" role="img" aria-label="پخش عددها">
+      ${bins.map((b, i) => `<rect x="${P + i * bw + 2}" y="${H - P - b / mxb * (H - 2 * P)}" width="${bw - 4}" height="${b / mxb * (H - 2 * P)}" fill="${css("--fam-soc")}" opacity=".75"/>`).join("")}
+      <line x1="${X(tgt)}" y1="${P - 10}" x2="${X(tgt)}" y2="${H - P}" stroke="${css("--warn")}" stroke-width="2.5"/><text x="${X(tgt) + 4}" y="${P - 14}" font-size="14" fill="${css("--warn")}">دوسوم میانگین: ${fa(tgt, 1)}</text>
+      <line x1="${X(+n.value)}" y1="${P}" x2="${X(+n.value)}" y2="${H - P}" stroke="${css("--ink")}" stroke-dasharray="4 3"/><text x="${X(+n.value) + 4}" y="${P + 14}" font-size="14" fill="${css("--ink")}">شما</text>
+      ${[1, 50, 100].map(v => `<text x="${X(v)}" y="${H - 10}" text-anchor="middle" font-size="13" fill="${ink}">${fa(v)}</text>`).join("")}</svg>`;
+    out.innerHTML = `<div class="res"><h3>${win ? "بردید!" : "نبردید."} میانگین ${fa(avg, 1)} بود و دو‌سوم آن ${fa(tgt, 1)}.</h3>
+      <p>زنجیرهٔ فکر این است: «اگر همه تصادفی بنویسند میانگین حدود ۵۰ است، پس ۳۳ بنویسم». قدم بعد: «اگر همه این‌طور فکر کنند، ۲۲ بنویسم». اگر همه بی‌نهایت قدم فکر کنند، به ۱ می‌رسیم — این تعادل نشِ بازی است.</p>
+      <p>ولی برندهٔ واقعی کسی است که درست حدس بزند <b>بقیه</b> چند قدم فکر می‌کنند، نه کسی که بیشترین قدم را برمی‌دارد. در آزمایش‌های نیگل (۱۹۹۵) میانگین دور اول حدود ۳۵ بود و با تکرار بازی پایین آمد. سهم «دو قدمی‌ها» را عوض کنید و ببینید بهترین عدد چطور جابه‌جا می‌شود. این همان درس چهارم پُلاک است: خودت را جای دیگران بگذار — و در شب مافیا هم همین است: حدس اینکه بقیه دربارهٔ تو چه فکر می‌کنند.</p>
+      ${lk(["soc:polak-strategic-situation-and-dominated-strategy", "soc:gt-explainer-nash-and-classic-games"])}</div>`;
+  });
+}
+
+/* ——— 7. which game is it? ——— */
+const WHICH = [
+  ["دو نانوایی در یک محله: اگر هر دو قیمت را نگه دارند هر دو سود خوبی دارند؛ ولی هر کدام وسوسه می‌شود ارزان‌تر بفروشد و مشتری دیگری را ببرد.", "pd", "هر کدام، هر کاری دیگری بکند، با ارزان‌کردن بیشتر می‌برد؛ ولی اگر هر دو ارزان کنند هر دو ضرر می‌کنند."],
+  ["همسایه‌های یک ساختمان می‌خواهند برای آسانسور پول بگذارند. آسانسور فقط وقتی نصب می‌شود که همه سهم بدهند؛ اگر کسی شک کند دیگران نمی‌دهند، پولش را برای تعمیر واحد خودش خرج می‌کند.", "stag", "اگر مطمئن باشی بقیه می‌دهند، دادن بهترین کار است؛ مسئله منفعت نیست، اعتماد است."],
+  ["دو ماشین در کوچهٔ باریکی که فقط یکی رد می‌شود روبه‌روی هم ایستاده‌اند و هیچ‌کدام دنده‌عقب نمی‌روند.", "chicken", "هر کس ترجیح می‌دهد دیگری کوتاه بیاید، ولی اگر هیچ‌کدام نیاید بدترین نتیجه برای هر دو است."],
+  ["دو دوست بدون تلفن قرار دارند «جلوی سینما» ولی یادشان رفته کدام سینما.", "coord", "مهم نیست کدام سینما؛ مهم این است که هر دو یکی را انتخاب کنند. معروف‌ترین جا (نقطهٔ کانونی) معمولاً جواب می‌دهد."],
+  ["در تعارف بر سر حساب‌کردن پول رستوران، هر دو اصرار دارند حساب کنند و هیچ‌کدام کوتاه نمی‌آید.", "chicken", "ساختارش شبیه جوجه است: هر کس می‌خواهد او «برنده»ی تعارف باشد؛ اگر هیچ‌کس کوتاه نیاید، صحنه طول می‌کشد و برای هر دو ناخوشایند می‌شود. (تعارف قاعده‌های فرهنگی خودش را هم دارد؛ این فقط یک برش است.)"],
+  ["سهم ارثی: برادر بزرگ پیشنهاد تقسیم می‌دهد؛ اگر بقیه قبول نکنند کار به دادگاه می‌کشد و هزینه‌ها همه را کم‌بهره می‌کند.", "ult", "شبیه اولتیماتوم است: پیشنهاد ناعادلانه حتی به قیمت ضرر خود رد می‌شود؛ پس پیشنهاددهندهٔ عاقل منصف‌تر پیشنهاد می‌دهد."],
+  ["شب مافیا: دو شهروند می‌توانند برای هم شهادت بدهند؛ اگر هر دو راست بگویند شهر برنده می‌شود، ولی هر کدام می‌ترسد دیگری او را لو بدهد تا خودش نجات پیدا کند.", "stag", "اگر به هم اعتماد کنند هر دو سود می‌برند؛ اگر یکی شک کند، بازی امن‌تر (سکوت) را انتخاب می‌کند. اعتبار و سابقه در بازی‌های قبلی اینجا تعیین‌کننده است."],
+  ["همه از ترافیک ناراضی‌اند، ولی هر کس با ماشین شخصی می‌رود چون اگر خودش اتوبوس سوار شود ترافیک تقریباً عوض نمی‌شود.", "pd", "برای هر نفر رفتن با ماشین بهتر است، ولی اگر همه این کار را بکنند همه در ترافیک می‌مانند — دوراهی زندانیِ چندنفره (کنش جمعی)."]
+];
+const GNAME = {pd: "دوراهی زندانی", stag: "شکار گوزن (اعتماد)", chicken: "جوجه (کوتاه‌آمدن)", coord: "هماهنگی", ult: "اولتیماتوم (انصاف)"};
+function which(pn, out){
+  let score = 0, done = 0;
+  pn.innerHTML = WHICH.map((q, i) => `<div class="q"><p>${fa(i + 1)}. ${q[0]}</p><div class="chips" data-q="${i}">${Object.entries(GNAME).map(([k, v]) => `<button type="button" data-a="${k}">${v}</button>`).join("")}</div><div id="w${i}"></div></div>`).join("");
+  pn.addEventListener("click", e => {
+    const b = e.target.closest("[data-a]"); if (!b) return; const box = b.closest("[data-q]"), i = +box.dataset.q, q = WHICH[i];
+    if (box.dataset.done) return; box.dataset.done = 1; done++;
+    const ok = b.dataset.a === q[1]; if (ok) score++;
+    box.querySelectorAll("button").forEach(x => { if (x.dataset.a === q[1]) x.setAttribute("aria-pressed", "true"); });
+    const tab = {pd: "pd", stag: "stag", chicken: "chicken", coord: "coord"}[q[1]];
+    pn.querySelector("#w" + i).innerHTML = `<div class="ans"><b>${ok ? "درست." : "پاسخ: " + GNAME[q[1]] + "."}</b> ${q[2]} ${tab ? `<a href="#matrix" data-preset="${tab}">در ماتریس‌ساز ببین ←</a>` : `<a href="#ultimatum">در اولتیماتوم امتحان کن ←</a>`}</div>`;
+    if (done === WHICH.length) out.innerHTML = `<div class="res"><h3>${fa(score)} از ${fa(WHICH.length)}</h3><p>تشخیص نوع بازی نیمی از راه حل است: در دوراهی زندانی باید سودها را عوض کرد (قرارداد، تکرار، تنبیه)؛ در شکار گوزن باید اعتماد ساخت؛ در جوجه باید راه آبرومندانه برای کوتاه‌آمدن گذاشت؛ در هماهنگی کافی است قرار گذاشت؛ و در اولتیماتوم، انصاف خودش بخشی از حساب است.</p>${lk(["collective-action", "generalized-trust"])}</div>`;
+  });
+}
+
 LabKit.start({
   wiki: "soc", first: "matrix",
   labels: {
     "collective-action": "کنش جمعی و سواری مجانی", "generalized-trust": "اعتماد تعمیم‌یافته", "psy:cooperation-competition": "همکاری و رقابت",
     "market-norms-crowding-out-fine-vs-price": "جریمه یا قیمت؟", "phil:free-will": "اراده‌آزادی", "feedback-loops-and-leverage-points": "حلقه‌های بازخورد",
-    "network-structure-robustness": "ساختار شبکه", "psy:soc-networks": "شبکه‌های اجتماعی", "psy:prestige-dominance": "منزلت و سلطه"
+    "network-structure-robustness": "ساختار شبکه", "soc:polak-strategic-situation-and-dominated-strategy": "موقعیت راهبردی", "soc:gt-explainer-nash-and-classic-games": "تعادل نش و بازی‌های کلاسیک", "psy:soc-networks": "شبکه‌های اجتماعی", "psy:prestige-dominance": "منزلت و سلطه"
   },
   exps: {
     matrix: ["ماتریس‌ساز", "بازی را بشناس: راهبرد غالب، تعادل نش، نتیجهٔ جمعی", "یک بازی دونفره را انتخاب کنید یا عددها را خودتان بنویسید. ابزار نشان می‌دهد کدام انتخاب همیشه بهتر است، کجا هیچ‌کس دلیلی برای تغییر ندارد (تعادل نش) و آیا آن نقطه برای هر دو خوب است یا نه.", matrix],
     repeated: ["تکرار و اعتماد", "مسابقهٔ اکسلرود: کدام رفتار در درازمدت می‌برد؟", "در دوراهی زندانیِ یک‌باره خیانت می‌برد. ولی زندگی پر از بازی‌های تکرارشونده است: همسایه، هم‌کار، فامیل. هفت برنامه را با هم مسابقه بدهید یا خودتان در برابر یکی بازی کنید.", repeated],
     ultimatum: ["اولتیماتوم", "انصاف یا سود؟", "حساب سود می‌گوید هر پیشنهادی بهتر از هیچ است. آدم‌ها ولی پیشنهاد ناعادلانه را رد می‌کنند. هم پاسخ‌دهنده باشید و هم پیشنهاددهنده.", ultimatum],
     markov: ["زنجیرهٔ مارکوف", "حالت فعلی کافی است: از دعوای دو ریاضی‌دان تا مدل‌های زبانی", "مارکوف نشان داد رویدادهای وابسته هم از قانون اعداد بزرگ پیروی می‌کنند و ابزاری ساخت که امروز در پیش‌بینی متن، شبیه‌سازی و موتور جست‌وجو به کار می‌رود.", markov],
+    twothirds: ["دوسوم میانگین", "چند قدم جلوتر از بقیه فکر می‌کنی؟", "بازی دوم جلسهٔ اول پُلاک: عددی بنویس که به دوسوم میانگین همه نزدیک‌تر باشد. بازی‌ای دربارهٔ حدس‌زدن فکر دیگران.", twothirds],
+    which: ["کدام بازی؟", "هشت موقعیت ایرانی: کدام نوع بازی است؟", "هر موقعیت را به یکی از پنج بازی نسبت بدهید. تشخیص نوع بازی نیمی از راه حل است.", which],
     pagerank: ["پیج‌رنک", "اعتبار از کجا می‌آید؟", "یک شبکهٔ کوچک بسازید و ببینید چه کسی «معتبرتر» می‌شود؛ بعد سعی کنید با صفحه‌های ساختگی تقلب کنید.", pagerank]
   }
 });
