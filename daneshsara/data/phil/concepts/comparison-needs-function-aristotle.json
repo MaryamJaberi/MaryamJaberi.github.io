@@ -1,0 +1,143 @@
+{
+ "id": "phil:comparison-needs-function-aristotle",
+ "kind": "concept",
+ "title": {
+  "fa": "مقایسهٔ عقلانی و «کارکرد»: خوب یعنی خوب در چه؟",
+  "en": "Rational comparison and function: good at what?"
+ },
+ "aliases": [],
+ "parent": "phil:ethics",
+ "field": "phil:ethics",
+ "summary": {
+  "fa": "ملکیان از ارسطو نقل می‌کند که فقط چیزهای هم‌نام را می‌شود با هم سنجید و برای سنجیدن باید کارکرد آن چیز روشن باشد: کاردِ بهتر کاردی است که بهتر می‌بُرد. پس «خوب» و «بد» همیشه به یک موصوف نیاز دارند. کارکرد ساخته‌های انسان از نیازی که برایش ساخته شده‌اند پیداست؛ کارکرد موجودات طبیعی، از جمله انسان، محل اختلاف است.",
+  "en": "Malekian reports Aristotle as holding that only things of the same kind can be compared and that comparison needs a known function: the better knife is the one that cuts better. So \"good\" and \"bad\" always need a noun to attach to. The function of human-made things is clear from the need they were made for; the function of natural beings, humans included, is disputed."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مقایسه در زندگی ناگزیر است؛ هر جا بر سر دوراهی باشیم مقایسه می‌کنیم. به گفتهٔ ملکیان ارسطو نخستین کسی بود که پرسید مقایسه کی عقلانی است.",
+    "en": "Comparison is unavoidable in life; we compare whenever we face a choice. Malekian says Aristotle was the first to ask when a comparison is rational.",
+    "nl": "Comparison is unavoidable in life; we compare whenever we face a choice. Malekian says Aristotle was the first to ask when a comparison is rational."
+   },
+   "sources": [
+    "src:1fb2049128"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دو شرط: دو چیز هم‌نام باشند (دو خودرو، نه کتاب و صندلی) و کارکرد ویژهٔ آن نوع معلوم باشد. بدون کارکرد، مقایسه عقلانی نیست.",
+    "en": "Two conditions: the things share a name (two cars, not a book and a chair), and the special function of that kind is known. Without a function, comparison is not rational.",
+    "nl": "Two conditions: the things share a name (two cars, not a book and a chair), and the special function of that kind is known. Without a function, comparison is not rational."
+   },
+   "sources": [
+    "src:1fb2049128"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نتیجهٔ زبانی: «خوب»، «بهتر» و «بدتر» بدون موصوف بی‌معناست. باید گفت «انسانِ خوب‌تری» یا «کاردِ بهتری»، نه فقط «بهتر».",
+    "en": "A linguistic result: \"good\", \"better\" and \"worse\" mean nothing without a noun. One must say \"a better human\" or \"a better knife\", not just \"better\".",
+    "nl": "A linguistic result: \"good\", \"better\" and \"worse\" mean nothing without a noun. One must say \"a better human\" or \"a better knife\", not just \"better\"."
+   },
+   "sources": [
+    "src:1fb2049128"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "برای موجودات طبیعی، ارسطو پیشنهاد کرد به توانایی یا دانایی‌ای نگاه کنیم که فقط آن موجود دارد؛ برای انسان، خردورزی. ملکیان می‌گوید این معیار امروز پذیرفتهٔ همه نیست و خود او یافتن کارکرد موجودات طبیعی را «نشدنی» می‌داند.",
+    "en": "For natural beings Aristotle proposed looking at the ability or knowledge only that being has; for humans, reasoning. Malekian says this is no longer generally accepted and that he himself thinks finding the function of natural beings is impossible.",
+    "nl": "For natural beings Aristotle proposed looking at the ability or knowledge only that being has; for humans, reasoning. Malekian says this is no longer generally accepted and that he himself thinks finding the function of natural beings is impossible."
+   },
+   "sources": [
+    "src:1fb2049128"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:institutions-change-to-persist-malekian",
+   "rel": "bridges",
+   "note": {
+    "fa": "همین معیار کارکرد برای نهادها",
+    "en": "The same function test applied to institutions",
+    "nl": "The same function test applied to institutions"
+   }
+  },
+  {
+   "to": "phil:comparing-thinkers-conceptual-analysis",
+   "rel": "see-also",
+   "note": {
+    "fa": "مقایسه و تحلیل مفهومی",
+    "en": "Comparison and conceptual analysis",
+    "nl": "Comparison and conceptual analysis"
+   }
+  },
+  {
+   "to": "psy:envy",
+   "rel": "bridges",
+   "note": {
+    "fa": "مقایسهٔ خود با دیگران",
+    "en": "Comparing oneself with others",
+    "nl": "Comparing oneself with others"
+   }
+  }
+ ],
+ "people": [
+  "core:mostafa-malekian",
+  "core:aristotle"
+ ],
+ "sources": [
+  "src:1fb2049128"
+ ],
+ "booklets": [],
+ "origin": "m_art-of-living-children.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "به گفتهٔ ملکیان، ارسطو پرسید مقایسه کی عقلانی است و دو شرط گذاشت: دو چیز باید از یک نوع باشند (دو خودرو، نه کتاب و صندلی) و باید بدانیم آن نوع برای چه کاری است. کاردِ بهتر کاردی است که بهتر می‌بُرد. پس «خوب» همیشه «خوب در چیزی» است و بدون موصوف معنا ندارد.\n\nبرای چیزهای ساختهٔ انسان، کارکرد از نیازی که برایش ساخته شده پیداست. دشواری از جایی شروع می‌شود که دربارهٔ انسان بپرسیم: انسانِ «خوب‌تر» یعنی خوب‌تر در چه؟ ارسطو می‌گفت کارکرد ویژهٔ انسان خردورزی است. ملکیان می‌گوید این معیار امروز پذیرفتهٔ همه نیست و خودش یافتن کارکرد موجودات طبیعی را نشدنی می‌داند؛ برای همین به معیار «خشنودی» روی می‌آورد.\n\nقوی‌ترین اعتراض: بسیاری از فیلسوفان امروز می‌گویند انسان «کارکرد» ندارد و این‌که از او مثل یک کارد انتظار کارکرد داشته باشیم خطای مقوله است؛ آدم‌ها را می‌شود در نقش‌ها (معلم خوب، دوست خوب) سنجید ولی نه به‌عنوان «انسان» به‌طور کلی. از سوی دیگر، فیلسوفان فضیلت‌گرا هنوز از ایدهٔ ارسطو دفاع می‌کنند.\n\nدر عمل: پیش از هر مقایسه (خودم با دیگری، یک شغل با شغل دیگر) بپرسید «در چه چیزی؟». بسیاری از مقایسه‌های آزاردهنده بی‌موصوف‌اند.",
+  "en": "Via Aristotle, Malekian says a rational comparison needs same-kind items and a known function; 'good' always means 'good at something'. For humans the function is contested, so he moves to contentment. Objection: many deny humans have a function at all."
+ },
+ "examples": [
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "مادری به پسرش می‌گوید «پسرخاله‌ات از تو بهتر است». پسر می‌تواند بپرسد: «بهتر در چه؟» در ریاضی؟ در مهربانی؟ در فوتبال؟ با این پرسش، یک مقایسهٔ کلی و آزاردهنده به چند مقایسهٔ مشخص و قابل گفت‌وگو تبدیل می‌شود. صحنه ساختگی است و فقط شرط «موصوف» را نشان می‌دهد.",
+    "en": "Invented: 'your cousin is better' becomes 'better at what?'."
+   },
+   "source": null
+  },
+  {
+   "kind": "everyday",
+   "label": "illustration",
+   "text": {
+    "fa": "دو گوشی را مقایسه می‌کنید. اگر کارکرد اصلی برای شما عکاسی است، یکی بهتر است؛ اگر عمر باتری، دیگری. بدون روشن کردن کارکرد، بحث «کدام بهتر است» تمام‌شدنی نیست. مثال ساختگی است.",
+    "en": "Invented: which phone is 'better' depends on the function you need."
+   },
+   "source": null
+  }
+ ],
+ "why": {
+  "fa": "ابزاری ساده برای کاستن از مقایسه‌های بی‌پایان با دیگران و برای گفت‌وگوی سیاسی و اجتماعی دقیق‌تر («کدام سیاست بهتر است؟» یعنی بهتر در چه هدفی؟).",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "آخرین باری که خودتان را با کسی مقایسه کردید به یاد بیاورید. جملهٔ «او از من بهتر است» را با «در ... » کامل کنید. حالا هنوز همان‌قدر ناراحت‌کننده است؟",
+   "en": null
+  },
+  "tool": null
+ },
+ "confusions": [
+  {
+   "fa": "این بحث نمی‌گوید مقایسه بد است؛ می‌گوید مقایسهٔ عقلانی شرط دارد.",
+   "en": null
+  }
+ ]
+}
