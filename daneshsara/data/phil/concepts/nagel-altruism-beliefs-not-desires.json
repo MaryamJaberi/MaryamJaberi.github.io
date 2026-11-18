@@ -70,15 +70,42 @@
   },
   {
    "text": {
-    "fa": "این شرح ساده‌شدهٔ ملکیان است. او می‌گوید پیش از نیگل هیچ‌کس این مسئله را حل نکرده و کانت نخستین مدافع جدی پیوند اخلاق و دیگرگزینی بوده است؛ این داوری‌ها نظر خود اوست. اینکه آیا باور به‌تنهایی می‌تواند انگیزه ایجاد کند، در فلسفهٔ اخلاق هنوز میان پیروان هیوم و مخالفانشان محل بحث است. در متن، باتلر «قرن هفدهمی» خوانده شده؛ او ۱۶۹۲ تا ۱۷۵۲ زیسته است.",
+    "fa": "این شرح ساده‌شدهٔ ملکیان است. او می‌گوید پیش از نیگل هیچ‌کس این مسئله را حل نکرده و کانت نخستین مدافع جدی پیوند اخلاق و دیگرگزینی بوده است؛ این داوری‌ها نظر خود اوست. اینکه آیا باور به‌تنهایی می‌تواند انگیزه ایجاد کند، در فلسفهٔ اخلاق هنوز میان پیروان هیوم و مخالفانشان محل بحث است. در متن، باتلر «فیلسوف و الهی‌دان قرن هفدهم» خوانده شده؛ طبق زندگی‌نامه‌اش او ۱۶۹۲ تا ۱۷۵۲ زیسته، یعنی بیشتر در سدهٔ هجدهم. داوری «پیش از نیگل هیچ‌کس این مسئله را حل نکرده» را ملکیان بی‌منبع می‌گوید.",
     "en": "This is Malekian's simplified account. He says no one before Nagel solved this problem and that Kant was the first serious defender of tying ethics to altruism; these judgements are his own. Whether belief alone can motivate is still disputed in moral philosophy between Humeans and their opponents. The text calls Butler a seventeenth-century figure; he lived 1692–1752.",
     "nl": "This is Malekian's simplified account. He says no one before Nagel solved this problem and that Kant was the first serious defender of tying ethics to altruism; these judgements are his own. Whether belief alone can motivate is still disputed in moral philosophy between Humeans and their opponents. The text calls Butler a seventeenth-century figure; he lived 1692–1752."
    },
    "sources": [
-    "src:6e70b3baa5"
+    "src:6e70b3baa5",
+    "src:734f64dc26"
    ],
    "flags": [
-    "editor-note",
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه پیروان هیوم: به روایت دانشنامهٔ فلسفهٔ استنفورد، دیدگاه غالب در فلسفهٔ اخلاق این است که باور به‌تنهایی انگیزه نمی‌سازد و همیشه میل یا حالتی خواستی لازم است؛ این را هم واقع‌گرایانی مانند مایکل اسمیت و پیتر ریلتون و هم ناشناخت‌گرایان می‌پذیرند.",
+    "en": "Humean view: per the SEP, the dominant position holds belief alone cannot motivate; a desire is always needed — held by realists like Smith and Railton and by non-cognitivists.",
+    "nl": "Humean view: per the SEP, the dominant position holds belief alone cannot motivate; a desire is always needed — held by realists like Smith and Railton and by non-cognitivists."
+   },
+   "sources": [
+    "src:911125ae70"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه ضدهیومی: همان منبع نیگل (۱۹۷۰) را در شمار فیلسوفانی می‌آورد که گفته‌اند باور اخلاقی خودش می‌تواند انگیزه پدید آورد؛ ضدهیومی‌ها خود بر سر چگونگی این کار اختلاف دارند (مستقیم، یا با پدید آوردن میلی تازه).",
+    "en": "Anti-Humean view: the SEP lists Nagel (1970) among those holding that moral belief can itself generate motivation; anti-Humeans disagree on how.",
+    "nl": "Anti-Humean view: the SEP lists Nagel (1970) among those holding that moral belief can itself generate motivation; anti-Humeans disagree on how."
+   },
+   "sources": [
+    "src:911125ae70"
+   ],
+   "flags": [
     "contested"
    ]
   }
@@ -129,7 +156,9 @@
   "core:joseph-butler"
  ],
  "sources": [
-  "src:6e70b3baa5"
+  "src:6e70b3baa5",
+  "src:734f64dc26",
+  "src:911125ae70"
  ],
  "booklets": [],
  "origin": "m_nagel-possibility-of-altruism.json",

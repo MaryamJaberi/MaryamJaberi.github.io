@@ -81,6 +81,48 @@
     "editor-note",
     "contested"
    ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه مدافعان «اسلامی‌سازی دانش» بیرون از این مناظره: به روایت مرور این جریان، اسماعیل راجی فاروقی تکیه بر ابزار و روش‌های غربی را سبب گسست از اخلاق اسلامی و واقعیت جامعه‌های مسلمان می‌دانست و دانش سکولارشده را «درد امت» می‌خواند؛ سید محمد نقیب العطاس بر بنیادهای زبانی، فلسفی و «ادب» در دانش تأکید داشت. این دیدگاه‌ها هم‌خانوادهٔ موضع میرباقری‌اند، هرچند یکی نیستند.",
+    "en": "Proponents of Islamization of knowledge (outside the debate): al-Faruqi saw reliance on Western methods as cutting knowledge off from Islamic ethics; al-Attas stressed linguistic, philosophical and adab foundations.",
+    "nl": "Proponents of Islamization of knowledge (outside the debate): al-Faruqi saw reliance on Western methods as cutting knowledge off from Islamic ethics; al-Attas stressed linguistic, philosophical and adab foundations."
+   },
+   "sources": [
+    "src:438cbafa0b"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دیدگاه منتقدان همان جریان: طبق همان مرور، منتقدان سه خطر را برجسته می‌کنند: یکی گرفتن دین و علم، محدود شدن آزادی دانشگاهی، و تحمیل یک تفسیر از اسلام بر جامعه‌های گوناگون مسلمان.",
+    "en": "Critics: conflating religion with science, restricting academic freedom, and imposing one interpretation of Islam on diverse societies.",
+    "nl": "Critics: conflating religion with science, restricting academic freedom, and imposing one interpretation of Islam on diverse societies."
+   },
+   "sources": [
+    "src:438cbafa0b"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "دربارهٔ داستان لیسنکو در کنار این مدخل: ما در این نشست پژوهشگری نیافتیم که صریحاً بگوید قیاس لیسنکو با «علم دینی» درست است یا نادرست. لیسنکو نمونهٔ دخالت ایدئولوژی سیاسی دولتی است؛ برای توازن، نمونهٔ مندل (راهبی که در صومعه علم ژنتیک را بنیاد گذاشت) و لومتر (کشیشی که نظریهٔ خود را فقط با معیار علمی داوری می‌کرد) هم آورده شده است.",
+    "en": "On the Lysenko story: we found no scholar explicitly arguing whether the Lysenko analogy fits religious science; it concerns state political ideology, so Mendel and Lemaître are added for balance.",
+    "nl": "On the Lysenko story: we found no scholar explicitly arguing whether the Lysenko analogy fits religious science; it concerns state political ideology, so Mendel and Lemaître are added for balance."
+   },
+   "sources": [
+    "src:9b59f76cfd",
+    "src:4f476b110a",
+    "src:5eb9fc50ec",
+    "src:8ebd3d7612"
+   ],
+   "flags": [
+    "editor-note"
+   ]
   }
  ],
  "links": [
@@ -126,7 +168,12 @@
   "core:seyyed-mohammad-mehdi-mirbagheri"
  ],
  "sources": [
-  "src:4d1f8bac6a"
+  "src:438cbafa0b",
+  "src:4d1f8bac6a",
+  "src:4f476b110a",
+  "src:5eb9fc50ec",
+  "src:8ebd3d7612",
+  "src:9b59f76cfd"
  ],
  "booklets": [],
  "origin": "m_religious-science-debate.json",
@@ -155,6 +202,15 @@
     "en": "Invented: two students debate whether 'Islamic economics' is science — the two positions in miniature."
    },
    "source": null
+  },
+  {
+   "kind": "history",
+   "label": "real",
+   "text": {
+    "fa": "گرگور مندل راهب فرقهٔ آگوستینی در صومعهٔ سنت توماس در برنو بود و تا حدی برای دسترسی به آموزش به صومعه پیوست. صومعه باغی حدود دو هکتاری در اختیارش گذاشت و یکی از راهبان در طراحی آزمایش‌ها کمکش کرد. او میان ۱۸۵۶ و ۱۸۶۳ حدود ۲۸ هزار گیاه، بیشتر نخود، کاشت و قانون‌های وراثت را از آن بیرون کشید و در ۱۸۶۶ منتشر کرد. کارش تا ۱۹۰۰ دیده نشد؛ آن سال سه پژوهشگر جداگانه یافته‌هایش را تأیید کردند و ژنتیک جدید آغاز شد. منابع یادآوری می‌کنند که رئیس صومعه این کار را تشویق نمی‌کرد و بعدها کارهای اداری خود مندل به‌عنوان رئیس صومعه پژوهشش را متوقف کرد.",
+    "en": "Gregor Mendel, an Augustinian friar, founded genetics with pea experiments in his abbey's garden (1856–1863); his work was rediscovered in 1900."
+   },
+   "source": "https://en.wikipedia.org/wiki/Gregor_Mendel"
   }
  ],
  "why": {

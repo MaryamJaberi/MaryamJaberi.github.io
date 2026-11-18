@@ -70,12 +70,25 @@
   },
   {
    "text": {
-    "fa": "این متن گزارش روزنامه است، نه متن پیاده‌شدهٔ کامل، و ترتیب بندها در صفحه‌آرایی روزنامه به‌هم‌ریخته است. تمایز موفقیت و رضایت نزد ملکیان با تمایز هدف‌های بیرونی و درونی در روان‌شناسی انگیزش شباهت دارد، اما او در اینجا به پژوهشی استناد نمی‌کند.",
+    "fa": "این متن گزارش روزنامه است، نه متن پیاده‌شدهٔ کامل، و ترتیب بندها در صفحه‌آرایی روزنامه به‌هم‌ریخته است. ملکیان برای تمایز موفقیت و رضایت به پژوهشی استناد نمی‌کند. برداشت ویراستار این است که این تمایز به تمایز هدف‌های بیرونی و درونی در روان‌شناسی انگیزش نزدیک است، اما ما در این نشست منبعی برای این مقایسه باز نکردیم.",
     "en": "This is a newspaper report, not a full transcript, and the paragraph order is scrambled by the page layout. Malekian's success/satisfaction contrast resembles the extrinsic/intrinsic goals distinction in motivation psychology, but he cites no research here.",
     "nl": "This is a newspaper report, not a full transcript, and the paragraph order is scrambled by the page layout. Malekian's success/satisfaction contrast resembles the extrinsic/intrinsic goals distinction in motivation psychology, but he cites no research here."
    },
    "sources": [
     "src:ccfbe431c3"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "نمونهٔ واقعی و پیچیدگی آن: به روایت منابع زندگی‌نامه‌ای، پرلمان مدال فیلدز (۲۰۰۶) و جایزهٔ یک میلیون دلاری (۲۰۱۰) را نپذیرفت و گفت به پول و شهرت علاقه ندارد؛ اما دلیل‌های دیگری هم گفت، از جمله ناخرسندی از اخلاق جامعهٔ ریاضی و ناعادلانه دانستن تقسیم نشدن جایزه با همیلتون. پس کنار گذاشتن «مطلوب‌های اجتماعی» می‌تواند انگیزه‌های گوناگون داشته باشد، نه فقط «آشتی با خود».",
+    "en": "Perelman declined the Fields Medal and the $1M prize, citing disinterest in money and fame but also disagreement with the mathematical community — renouncing social goods can have mixed motives.",
+    "nl": "Perelman declined the Fields Medal and the $1M prize, citing disinterest in money and fame but also disagreement with the mathematical community — renouncing social goods can have mixed motives."
+   },
+   "sources": [
+    "src:a0c3a82818"
    ],
    "flags": [
     "editor-note"
@@ -109,6 +122,15 @@
     "en": "The Stoics also sought peace in inner rather than external goods.",
     "nl": "The Stoics also sought peace in inner rather than external goods."
    }
+  },
+  {
+   "to": "phil:success-versus-contentment-two-ways-of-life",
+   "rel": "see-also",
+   "note": {
+    "fa": "روایت دیگری از «مسابقه با دیگران یا با خود» (گروه ۳).",
+    "en": "Another version of racing others vs oneself (group 3).",
+    "nl": "Another version of racing others vs oneself (group 3)."
+   }
   }
  ],
  "people": [
@@ -117,6 +139,7 @@
   "core:al-ghazali"
  ],
  "sources": [
+  "src:a0c3a82818",
   "src:ccfbe431c3"
  ],
  "booklets": [],
