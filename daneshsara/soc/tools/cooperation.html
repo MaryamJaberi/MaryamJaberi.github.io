@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>تکامل همکاری | ویکی جامعه | دانش‌سرا</title>
+<meta name="description" content="مسابقه‌های اکسلرود، شبیه‌سازی نسل‌ها، پژواک انتقام در محیط پرخطا، جزیرهٔ همکاری و درس خلع سلاح قدم‌به‌قدم؛ تعاملی و به فارسی.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>
+:root{--lab:var(--fam-soc);--lab-soft:var(--fam-soc-soft)}
+.strip{display:grid;gap:4px;direction:ltr}
+.strip .row{display:flex;gap:2px;align-items:center}
+.strip .row span.lbl{width:7.5em;font-size:.8rem;color:var(--ink-2);direction:rtl;text-align:right;flex:none}
+.strip i{display:block;width:10px;height:18px;border-radius:2px;flex:none}
+.strip i.C{background:var(--fam-soc)}.strip i.D{background:var(--warn)}.strip i.e{outline:2px solid var(--ink);outline-offset:-2px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.84rem;color:var(--ink-2)}
+.legend b{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-inline-end:4px}
+.nice{color:var(--fam-soc);font-weight:700}.nasty{color:var(--warn);font-weight:700}
+.tl{display:grid;gap:10px;position:relative;padding-inline-start:18px;border-inline-start:3px solid var(--lab-soft)}
+.tl div{line-height:1.85}.tl b{color:var(--lab)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:4px;vertical-align:0}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../soc/">ویکی جامعه</a><i>›</i><a href="../../soc/tools/">ابزارها</a><i>›</i><b>تکامل همکاری</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>تکامل همکاری</h1>
+<p class="what">چطور در جهانی که هر کس به فکر خودش است، همکاری پیدا می‌شود و می‌ماند؟ رابرت اکسلرود در ۱۹۸۰ این را با مسابقهٔ برنامه‌های کامپیوتری آزمود و جوابی گرفت که متخصص‌ها را غافلگیر کرد. در این شش بخش همان آزمایش‌ها را خودتان اجرا کنید: از مسابقه و نسل‌ها تا خطا، جزیرهٔ همکاری و خلع سلاح جنگ سرد. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note">ساختار این صفحه از ویدیوی Veritasium دربارهٔ نظریهٔ بازی و مسابقه‌های اکسلرود گرفته شده و عددهای تاریخی با کتاب اکسلرود (<i>The Evolution of Cooperation</i>، ۱۹۸۴) و مقالهٔ اکسلرود و همیلتون (Science، ۱۹۸۱) سنجیده شده‌اند. برنامه‌های این صفحه نسخه‌های ساده‌شدهٔ برنامه‌های اصلی‌اند؛ برای همین رتبه‌ها کمی با مسابقهٔ واقعی فرق می‌کند، ولی الگوی اصلی همان است.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · تکامل همکاری</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script>
+const {fa, css, esc, lk} = LabKit;
+const PAY = {CC: [3, 3], CD: [0, 5], DC: [5, 0], DD: [1, 1]};
+const last = a => a[a.length - 1];
+/* strategy: [name, nice?, description, fn(my, opp, r, N, known, st)] ; st = per-match state object */
+const S = {
+  tft: ["تلافی هم‌سنگ", true, "اول همکاری؛ بعد همان کاری که حریف در دور قبل کرد. (آناتول راپاپورت)", (m, o) => o.length ? last(o) : "C"],
+  tftt: ["دو تلافی برای یک", true, "فقط وقتی تلافی می‌کند که حریف دو بار پشت‌سرهم خیانت کرده باشد. (نمونهٔ خود اکسلرود)", (m, o) => o.length > 1 && last(o) === "D" && o[o.length - 2] === "D" ? "D" : "C"],
+  grim: ["فریدمن (کینه‌توز)", true, "همکاری تا اولین خیانت؛ بعد تا آخر بازی خیانت.", (m, o) => o.includes("D") ? "D" : "C"],
+  allc: ["همیشه همکار", true, "هر بار همکاری؛ بی‌دفاع.", () => "C"],
+  gtft: ["تلافی بخشنده", true, "مثل تلافی هم‌سنگ، ولی حدود یک‌دهم وقت‌ها خیانت را می‌بخشد.", (m, o) => !o.length || last(o) === "C" || Math.random() < .1 ? "C" : "D"],
+  joss: ["جاس (موذی)", false, "مثل تلافی هم‌سنگ، ولی حدود یک‌دهم وقت‌ها بی‌دلیل خیانت می‌کند.", (m, o) => (!o.length || last(o) === "C") ? (Math.random() < .1 ? "D" : "C") : "D"],
+  gras: ["گراسکمپ (جاسوس)", false, "تلافی هم‌سنگ، ولی در دور ۵۰ یک خیانت آزمایشی می‌کند تا ببیند حریف تلافی می‌کند یا نه؛ اگر نکرد، از او سوءاستفاده می‌کند.", (m, o, r, N, k, st) => { if (r === 50) return "D"; if (r === 51) st.weak = last(o) === "C"; if (st.weak && r > 51 && r % 2) return "D"; return o.length ? last(o) : "C"; }],
+  tester: ["آزماینده", false, "اول خیانت می‌کند؛ اگر حریف تلافی کرد عذرخواهی می‌کند و تلافی هم‌سنگ بازی می‌کند، وگرنه یک در میان خیانت.", (m, o, r, N, k, st) => { if (r === 0) return "D"; if (r === 1) return "C"; if (st.ret === undefined) st.ret = o[1] === "D"; if (st.ret) return last(o); return r % 2 ? "C" : "D"; }],
+  alld: ["همیشه خائن", false, "هر بار خیانت.", () => "D"],
+  rand: ["تصادفی", false, "نیمی همکاری، نیمی خیانت.", () => Math.random() < .5 ? "C" : "D"],
+  endg: ["زرنگِ دور آخر", false, "تلافی هم‌سنگ، ولی اگر بداند دور آخر است، در دور آخر خیانت می‌کند.", (m, o, r, N, known) => known && r === N - 1 ? "D" : (o.length ? last(o) : "C")]
+};
+const COL = {tft: "--fam-soc", tftt: "--fam-psy", grim: "--fam-hum", allc: "--fam-bio", gtft: "--ok", joss: "--warn", gras: "--fam-hist", tester: "--err", alld: "--ink", rand: "--ink-3", endg: "--primary"};
+const col = k => css(COL[k]) || "#888";
+function match(a, b, N, known, noise = 0){
+  const ma = [], mb = [], sa = {}, sb = {}; let x = 0, y = 0;
+  for (let r = 0; r < N; r++) {
+    let p = S[a][3](ma, mb, r, N, known, sa), q = S[b][3](mb, ma, r, N, known, sb);
+    if (noise && Math.random() < noise) p = p === "C" ? "D" : "C";
+    if (noise && Math.random() < noise) q = q === "C" ? "D" : "C";
+    ma.push(p); mb.push(q); const s = PAY[p + q]; x += s[0]; y += s[1];
+  }
+  return [x / N, y / N];
+}
+const geoLen = mean => { let n = 1; while (Math.random() > 1 / mean) n++; return n; };
+function chips(keys, on){ return `<div class="chips" role="group" aria-label="برنامه‌ها">${keys.map(k => `<button type="button" data-s="${k}" aria-pressed="${on.has(k)}" title="${esc(S[k][2])}"><span class="sw" style="background:${col(k)}"></span>${S[k][0]}</button>`).join("")}</div>`; }
+function bindChips(pn, on){ pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-s]"); if (!b) return; const k = b.dataset.s; if (on.has(k) && on.size > 2) on.delete(k); else on.add(k); b.setAttribute("aria-pressed", on.has(k)); }); }
+const desc = keys => `<div class="tt-wrap"><table class="tt"><tr><th>برنامه</th><th>رفتار</th></tr>${keys.map(k => `<tr><td><span class="sw" style="background:${col(k)}"></span><span class="${S[k][1] ? "nice" : "nasty"}">${S[k][0]}</span></td><td>${S[k][2]}</td></tr>`).join("")}</table></div>`;
+
+/* ——— 1. tournament ——— */
+function tournament(pn, out){
+  const ALL = Object.keys(S), on = new Set(["tft", "tftt", "grim", "allc", "joss", "gras", "tester", "alld", "rand", "endg"]);
+  pn.innerHTML = `${chips(ALL, on)}
+    <div class="chips" role="radiogroup" aria-label="طول بازی"><button type="button" data-l="fixed" aria-pressed="true">دقیقاً ۲۰۰ دور (مسابقهٔ اول)</button><button type="button" data-l="rand" aria-pressed="false">میانگین ۲۰۰ دور، پایان نامعلوم (مسابقهٔ دوم)</button></div>
+    <div class="btnrow"><button type="button" class="btn" id="go">برگزاری مسابقه (۵ بار تکرار)</button></div>
+    <details><summary>هر برنامه چه می‌کند؟</summary>${desc(ALL)}</details>`;
+  bindChips(pn, on);
+  let len = "fixed";
+  pn.querySelector('[role=radiogroup]').addEventListener("click", e => { const b = e.target.closest("[data-l]"); if (!b) return; len = b.dataset.l; pn.querySelectorAll("[data-l]").forEach(x => x.setAttribute("aria-pressed", x === b)); });
+  pn.querySelector("#go").addEventListener("click", () => {
+    const L = [...on], tot = Object.fromEntries(L.map(k => [k, 0])), cnt = Object.fromEntries(L.map(k => [k, 0]));
+    for (let rep = 0; rep < 5; rep++) for (let i = 0; i < L.length; i++) for (let j = i; j < L.length; j++) {
+      const N = len === "fixed" ? 200 : geoLen(200), [x, y] = match(L[i], L[j], N, len === "fixed");
+      tot[L[i]] += x; cnt[L[i]]++; if (i !== j) { tot[L[j]] += y; cnt[L[j]]++; }
+    }
+    const sc = k => tot[k] / cnt[k], R = L.sort((a, b) => sc(b) - sc(a)), top = sc(R[0]);
+    const nNiceTop = R.slice(0, Math.ceil(R.length / 2)).filter(k => S[k][1]).length;
+    out.innerHTML = `<div class="res"><h3>برنده: ${S[R[0]][0]}</h3>
+      <div class="bars">${R.map(k => `<div><span class="${S[k][1] ? "nice" : "nasty"}">${S[k][0]}</span><i style="width:${(sc(k) / top * 100).toFixed(1)}%;background:${S[k][1] ? css("--fam-soc") : css("--warn")}"></i><b>${fa(sc(k), 2)}</b></div>`).join("")}</div>
+      <div class="legend"><span><b style="background:${css("--fam-soc")}"></b>«مهربان»: هرگز اول خیانت نمی‌کند</span><span><b style="background:${css("--warn")}"></b>«بدجنس»: گاهی اول خیانت می‌کند</span></div>
+      <p>${fa(nNiceTop)} برنامه از ${fa(Math.ceil(R.length / 2))} برنامهٔ نیمهٔ بالای جدول «مهربان»اند. در مسابقهٔ واقعی اول (۱۴ برنامه از متخصص‌ها + «تصادفی»)، هشت برنامهٔ بالای جدول همه مهربان بودند و حتی بدترین برنامهٔ مهربان از بهترین برنامهٔ بدجنس بیشتر امتیاز گرفت. برنده سادهٔ همه بود: «تلافی هم‌سنگ»، چهار خط کد.</p>
+      <p>اکسلرود چهار ویژگی در برنامه‌های موفق دید: <b>مهربان</b> (اول خیانت نکن)، <b>بخشنده</b> (کینه نگه ندار)، <b>تلافی‌گر</b> (توسری‌خور نباش) و <b>روشن</b> (طوری رفتار کن که دیگری بفهمد با چه کسی طرف است). «دو تلافی برای یک» اگر در مسابقهٔ اول بود اول می‌شد؛ در مسابقهٔ دوم که بدجنس‌ها برای سوءاستفاده از بخشنده‌ها آمده بودند، بیست‌وچهارم شد. پس <b>بهترین راهبرد مطلق وجود ندارد</b>؛ بستگی دارد با چه کسانی بازی می‌کنی.</p>
+      <p>${len === "fixed" ? "طول را «نامعلوم» کنید و رتبهٔ «زرنگِ دور آخر» را ببینید: وقتی پایان معلوم است، خیانت در دور آخر صرف دارد — و اگر همه این را بدانند، استدلال تا دور اول عقب می‌رود. برای همین اکسلرود در مسابقهٔ دوم طول بازی را پنهان کرد." : "وقتی کسی نمی‌داند بازی کی تمام می‌شود، «سایهٔ آینده» روی هر حرکت هست: شاید فردا هم به این آدم نیاز داشته باشی."}</p>
+      ${lk(["soc:repeated-games-cooperation", "generalized-trust", "soc:polak-prisoners-dilemma-grade-game"])}</div>`;
+  });
+}
+
+/* ——— 2. ecology ——— */
+function ecology(pn, out){
+  const ALL = Object.keys(S).filter(k => k !== "rand"), on = new Set(["tft", "allc", "grim", "joss", "tester", "alld", "tftt"]);
+  pn.innerHTML = `${chips(ALL, on)}
+    <p style="margin:0;line-height:1.9">اکسلرود پرسید: آیا «تلافی هم‌سنگ» فقط چون از برنامه‌های احمق امتیاز گرفت اول شد؟ پس شبیه‌سازی نسل‌ها ساخت: هر برنامه که بیشتر امتیاز بگیرد، در نسل بعد سهم بیشتری از جمعیت دارد. حالا هر کس باید با <b>برندگان</b> هم بازی کند.</p>
+    <label class="field">تعداد نسل: <b id="gv"></b><input type="range" id="g" min="50" max="1000" step="50" value="400"></label>
+    <div class="btnrow"><button type="button" class="btn" id="go">اجرا</button></div><div class="chartbox" id="ch"></div>`;
+  bindChips(pn, on);
+  const g = pn.querySelector("#g"), gu = () => pn.querySelector("#gv").textContent = fa(+g.value); g.addEventListener("input", gu); gu();
+  pn.querySelector("#go").addEventListener("click", () => {
+    const L = [...on], n = L.length, M = L.map(() => Array(n).fill(0));
+    for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) { let s = 0; for (let r = 0; r < 4; r++) s += match(L[i], L[j], 200, false)[0]; M[i][j] = s / 4; }
+    let x = Array(n).fill(1 / n); const H = [x.slice()], G = +g.value;
+    for (let t = 0; t < G; t++) { const f = x.map((_, i) => M[i].reduce((s, v, j) => s + v * x[j], 0)); const avg = f.reduce((s, v, i) => s + v * x[i], 0); x = x.map((v, i) => v * f[i] / avg); H.push(x.slice()); }
+    const W = 660, Hh = 300, P = 44, X = t => P + t / G * (W - 2 * P), Y = v => Hh - P - v * (Hh - 2 * P), ink = css("--ink-3");
+    const peak = L.map((k, i) => { let m = 0, tm = 0; H.forEach((h, t) => { if (h[i] > m) { m = h[i]; tm = t; } }); return [m, tm]; });
+    pn.querySelector("#ch").innerHTML = `<svg viewBox="0 0 ${W} ${Hh}" width="100%" style="max-width:${W}px;direction:ltr" role="img" aria-label="سهم هر برنامه در نسل‌ها">
+      ${[0, .25, .5, .75, 1].map(v => `<line x1="${P}" y1="${Y(v)}" x2="${W - P}" y2="${Y(v)}" stroke="${ink}" stroke-opacity=".2"/><text x="${P - 6}" y="${Y(v) + 5}" text-anchor="end" font-size="13" fill="${ink}">${fa(v * 100)}٪</text>`).join("")}
+      ${L.map((k, i) => `<path d="${H.map((h, t) => (t ? "L" : "M") + X(t).toFixed(1) + " " + Y(h[i]).toFixed(1)).join("")}" fill="none" stroke="${col(k)}" stroke-width="2.4"/>`).join("")}
+      <text x="${P}" y="${Hh - 10}" font-size="13" fill="${ink}">نسل ۰</text><text x="${W - P}" y="${Hh - 10}" text-anchor="end" font-size="13" fill="${ink}">نسل ${fa(G)}</text></svg>
+      <div class="legend">${L.map(k => `<span><b style="background:${col(k)}"></b>${S[k][0]}</span>`).join("")}</div>`;
+    const fin = L.map((k, i) => [k, x[i]]).sort((a, b) => b[1] - a[1]);
+    const riseFall = L.map((k, i) => [k, peak[i][0], x[i]]).filter(([k, pk, fn]) => !S[k][1] && pk > 1.3 / n && fn < pk / 3);
+    out.innerHTML = `<div class="res"><h3>بعد از ${fa(G)} نسل: ${fin.filter(f => f[1] > .01).map(f => `${S[f[0]][0]} ${fa(f[1] * 100, 1)}٪`).join("، ")}</h3>
+      ${riseFall.length ? `<p><b>${riseFall.map(r => S[r[0]][0]).join(" و ")}</b> اول رشد کرد و بعد افتاد: تا وقتی «طعمه»‌های بی‌دفاع (مثل «همیشه همکار») بودند از آن‌ها می‌خورد؛ وقتی طعمه‌ها تمام شدند، خودش هم کم شد. در شبیه‌سازی اکسلرود همین بر سر «هرینگتون»، تنها برنامهٔ بدجنسِ پانزده‌تای اول، آمد.</p>` : ""}
+      <p>در شبیه‌سازی واقعی اکسلرود پس از هزار نسل فقط برنامه‌های مهربان ماندند و «تلافی هم‌سنگ» با ۱۴٫۵٪ بیشترین سهم را داشت. این «تکامل» به معنای کامل نیست، چون جهش و برنامهٔ تازه در کار نیست؛ اکسلرود اسمش را شبیه‌سازی «بوم‌شناختی» گذاشت.</p>
+      <p>آزمون کنید: «همیشه همکار» را بردارید؛ یا فقط «همیشه خائن» و «تلافی هم‌سنگ» را بگذارید.</p>
+      ${lk(["soc:repeated-games-cooperation", "collective-action"])}</div>`;
+  });
+}
+
+/* ——— 3. noise and echo ——— */
+function echo(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">در دنیای واقعی پیام‌ها گاهی اشتباه می‌رسند: همکاری‌ای که خیانت دیده می‌شود. دو «تلافی هم‌سنگ» با هم بازی می‌کنند و گاهی حرکتشان اشتباه دیده می‌شود (مربع خط‌دار). ببینید یک خطا چه می‌کند.</p>
+    <div class="row2"><label class="field">احتمال خطا در هر حرکت: <b id="nv"></b><input type="range" id="n" min="0" max="15" step="1" value="3"></label>
+    <div class="chips" role="group"><button type="button" data-v="tft" aria-pressed="true">هر دو «تلافی هم‌سنگ»</button><button type="button" data-v="gtft" aria-pressed="false">هر دو «تلافی بخشنده» (۱۰٪ بخشش)</button></div></div>
+    <div class="btnrow"><button type="button" class="btn" id="go">۶۰ دور بازی</button></div><div class="chartbox" id="st"></div>`;
+  const n = pn.querySelector("#n"), nu = () => pn.querySelector("#nv").textContent = fa(+n.value) + "٪"; n.addEventListener("input", nu); nu();
+  let v = "tft";
+  pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (!b) return; v = b.dataset.v; pn.querySelectorAll("[data-v]").forEach(x => x.setAttribute("aria-pressed", x === b)); });
+  pn.querySelector("#go").addEventListener("click", () => {
+    const N = 60, err = +n.value / 100, a = [], b = [], ea = [], eb = [];
+    let sa = 0, sb = 0;
+    for (let r = 0; r < N; r++) {
+      let p = S[v][3](a, b), q = S[v][3](b, a); let fa_ = false, fb = false;
+      if (Math.random() < err) { p = p === "C" ? "D" : "C"; fa_ = true; }
+      if (Math.random() < err) { q = q === "C" ? "D" : "C"; fb = true; }
+      a.push(p); b.push(q); ea.push(fa_); eb.push(fb); sa += PAY[p + q][0]; sb += PAY[p + q][1];
+    }
+    const row = (lbl, m, e) => `<div class="row"><span class="lbl">${lbl}</span>${m.map((x, i) => `<i class="${x}${e[i] ? " e" : ""}" title="دور ${i + 1}"></i>`).join("")}</div>`;
+    pn.querySelector("#st").innerHTML = `<div class="strip">${row("بازیکن الف", a, ea)}${row("بازیکن ب", b, eb)}</div>
+      <div class="legend" style="margin-top:6px"><span><b style="background:${css("--fam-soc")}"></b>همکاری</span><span><b style="background:${css("--warn")}"></b>خیانت</span><span><b style="outline:2px solid ${css("--ink")};outline-offset:-2px"></b>خطا (حرکت اشتباه دیده شد)</span></div>`;
+    const avg = (sa + sb) / 2 / N;
+    out.innerHTML = `<div class="res"><h3>میانگین امتیاز در هر دور: ${fa(avg, 2)} از ${fa(3)}</h3>
+      <p>در «تلافی هم‌سنگ»، یک خطا زنجیرهٔ «تو زدی، من زدم» راه می‌اندازد: پژواکی که خاموش نمی‌شود تا خطای دیگری آن را بشکند — و خطای بعدی ممکن است هر دو را در خیانت دائمی بیندازد. در درازمدت دو «تلافی هم‌سنگ» در محیط پرخطا فقط حدود یک‌سوم امتیاز محیط بی‌خطا را می‌گیرند.</p>
+      <p>راه چاره «بخشش اندک» است: حدود یک بار از هر ده بار تلافی نکن. این پژواک را می‌شکند و باز آن‌قدر تلافی‌گر هستی که کسی سوءاستفاده نکند. حالت «تلافی بخشنده» را امتحان کنید.</p>
+      <p><b>داستان واقعی:</b> ۲۶ سپتامبر ۱۹۸۳، سامانهٔ هشدار ماهواره‌ای شوروی پرتاب موشک از آمریکا را اعلام کرد. آمریکا چیزی پرتاب نکرده بود؛ نور خورشید روی ابرهای مرتفع خطا ساخته بود. افسر کشیک، استانیسلاو پتروف، هشدار را خطای سامانه دانست و گزارش حمله نداد. یک «خطا» تا مرز پژواکی رفت که بازگشت نداشت.</p>
+      ${lk(["soc:repeated-games-cooperation", "generalized-trust"])}</div>`;
+  });
+}
+
+/* ——— 4. island of cooperation ——— */
+function island(pn, out){
+  const N = 41;
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">جهانی بدجنس: همه «همیشه خائن»‌اند (خاکستری)، جز یک جزیرهٔ کوچک از «تلافی هم‌سنگ»‌ها (رنگی) در وسط. هر خانه با هشت همسایه‌اش بازی تکرارشونده می‌کند و در نسل بعد، رفتار موفق‌ترین همسایه (یا خودش) را برمی‌دارد.</p>
+    <div class="row2"><label class="field">اندازهٔ جزیره (ضلع): <b id="kv"></b><input type="range" id="k" min="1" max="9" step="1" value="3"></label>
+    <label class="field">هر دو همسایه چند دور با هم بازی می‌کنند: <b id="mv"></b><input type="range" id="m" min="1" max="20" step="1" value="10"></label></div>
+    <canvas id="cv" width="615" height="615" role="img" aria-label="شبکهٔ همکارها و خائن‌ها"></canvas>
+    <div class="btnrow"><button type="button" class="btn" id="go">اجرا</button><button type="button" class="btn ghost" id="rs">از نو</button></div>`;
+  const cv = pn.querySelector("#cv"), cx = cv.getContext("2d"), k = pn.querySelector("#k"), m = pn.querySelector("#m");
+  let G, gen = 0, timer = null;
+  const u = () => { pn.querySelector("#kv").textContent = fa(+k.value); pn.querySelector("#mv").textContent = fa(+m.value); };
+  const reset = () => { clearInterval(timer); timer = null; G = Array(N * N).fill(0); const kk = +k.value, c = (N - kk) >> 1; for (let y = c; y < c + kk; y++) for (let x = c; x < c + kk; x++) G[y * N + x] = 1; gen = 0; draw(); out.innerHTML = ""; };
+  const pay = (a, b, M) => a && b ? 3 * M : !a && !b ? M : a ? M - 1 : M + 4; /* 1=TFT, 0=ALLD */
+  const nb = i => { const x = i % N, y = (i / N) | 0, r = []; for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) { if (!dx && !dy) continue; const xx = (x + dx + N) % N, yy = (y + dy + N) % N; r.push(yy * N + xx); } return r; };
+  const NB = Array.from({length: N * N}, (_, i) => nb(i));
+  function step(){
+    const M = +m.value, sc = G.map((s, i) => NB[i].reduce((t, j) => t + pay(s, G[j], M), 0));
+    const nG = G.map((s, i) => { let best = i; NB[i].forEach(j => { if (sc[j] > sc[best]) best = j; }); return G[best]; });
+    const changed = nG.some((v, i) => v !== G[i]); G = nG; gen++; draw();
+    const share = G.reduce((a, b) => a + b, 0) / G.length;
+    if (!changed || gen > 60 || share === 0 || share === 1) { clearInterval(timer); timer = null; report(share); }
+  }
+  function draw(){ const s = cv.width / N, c1 = css("--fam-soc"), c0 = css("--line-strong"); for (let i = 0; i < N * N; i++) { cx.fillStyle = G[i] ? c1 : c0; cx.fillRect((i % N) * s, ((i / N) | 0) * s, s - 1, s - 1); } }
+  function report(share){
+    out.innerHTML = `<div class="res"><h3>${share > .9 ? "همکاری جهان را گرفت" : share === 0 ? "جزیره از بین رفت" : `جزیره ماند ولی پیش نرفت (${fa(share * 100, 1)}٪)`} — پس از ${fa(gen)} نسل</h3>
+      <p>وقتی همکارها در یک خوشه کنار هم‌اند، بیشتر با خودشان بازی می‌کنند و امتیاز زیادی جمع می‌کنند؛ همسایه‌های خائن می‌بینند که آن‌ها موفق‌ترند و رفتارشان را برمی‌دارند. اکسلرود نشان داد «جزیرهٔ کوچکی از همکاری می‌تواند پیدا شود، پخش شود و جهان را بگیرد» — بی‌آنکه کسی نوع‌دوست باشد. هر کس فقط به فکر خودش است و همکاری باز هم برنده می‌شود.</p>
+      <p>آزمون کنید: «چند دور با هم بازی می‌کنند» را ۱ کنید. بازی یک‌باره همان دوراهی زندانی است و جزیره می‌میرد. «سایهٔ آینده» (اینکه دوباره با هم روبه‌رو می‌شویم) شرط همکاری است. جزیره را کوچک‌تر کنید: همکارِ تنها دوام نمی‌آورد.</p>
+      <p><b>برای سیمرغ:</b> شروع با حلقه‌ای کوچک از آدم‌های مطمئن که با هم زیاد سروکار دارند، دقیقاً همین منطق است.</p>
+      ${lk(["soc:repeated-games-cooperation", "network-structure-robustness", "psy:complex-contagion"])}</div>`;
+  }
+  k.addEventListener("input", () => { u(); reset(); }); m.addEventListener("input", u); u();
+  pn.querySelector("#go").addEventListener("click", () => { if (timer) return; timer = setInterval(step, 260); });
+  pn.querySelector("#rs").addEventListener("click", reset);
+  reset();
+}
+
+/* ——— 5. disarmament ——— */
+function disarm(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">دو کشور می‌خواهند سلاح‌هایشان را کنار بگذارند ولی به هم اعتماد ندارند. اگر یک‌جا همه را نابود کنند و طرف مقابل تقلب کند، کشوری که صادق بوده بی‌دفاع می‌ماند. اگر قدم‌به‌قدم بروند و بعد از هر قدم بازرسی کنند، تقلب زود دیده می‌شود. شوروی و آمریکا از اواخر دههٔ ۱۹۸۰ همین راه دوم را رفتند.</p>
+    <div class="row2"><label class="field">تعداد قدم‌ها: <b id="sv"></b><input type="range" id="s" min="1" max="20" step="1" value="1"></label>
+    <label class="field">احتمال تقلب طرف مقابل در هر قدم: <b id="pv"></b><input type="range" id="p" min="0" max="50" step="5" value="20"></label></div>
+    <div id="viz"></div>`;
+  const s = pn.querySelector("#s"), p = pn.querySelector("#p");
+  const draw = () => {
+    const K = +s.value, P = +p.value / 100;
+    pn.querySelector("#sv").textContent = fa(K); pn.querySelector("#pv").textContent = fa(+p.value) + "٪";
+    /* worst case exposure if the other side cheats on the first step: you have given up 1/K of your arsenal before you can see it */
+    const expo = 1 / K, pCheatEver = 1 - Math.pow(1 - P, K), expected = P * 1 / K + (1 - P) * 0;
+    const W = 600, H = 70, bw = (W - 20) / K;
+    pn.querySelector("#viz").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;direction:ltr" role="img" aria-label="قدم‌های خلع سلاح">
+      ${Array.from({length: K}, (_, i) => `<rect x="${10 + i * bw + 1}" y="16" width="${bw - 2}" height="34" rx="4" fill="${i === 0 ? css("--warn") : css("--fam-soc")}" opacity="${i === 0 ? 1 : .55}"/>`).join("")}
+      <text x="${W - 10}" y="66" text-anchor="end" font-size="13" fill="${css("--ink-3")}">قدم اول (نارنجی): چیزی که پیش از دیدن رفتار طرف مقابل از دست می‌دهی</text></svg>`;
+    out.innerHTML = `<div class="res"><h3>${K === 1 ? "یک‌جا: همه چیز روی یک حرکت" : `در بدترین حالت فقط ${fa(expo * 100, 1)}٪ از دست می‌رود`}</h3>
+      <p>${K === 1 ? "خلع سلاحِ یک‌جا بازی را به یک دوراهی زندانیِ <b>یک‌باره</b> تبدیل می‌کند: اگر طرف تقلب کند، کل ضرر یک‌باره است و فرصت جبران نیست. منطق سود فردی می‌گوید تقلب کن — و هر دو این را می‌دانند." : `با ${fa(K)} قدم، بازی به دوراهی زندانیِ <b>تکرارشونده</b> تبدیل می‌شود. اگر طرف مقابل در قدم اول تقلب کند، فقط ${fa(expo * 100, 1)}٪ از دست رفته و قدم بعد را برنمی‌داری (تلافی). چون هر دو این را می‌دانند، تقلب دیگر صرف ندارد.`}</p>
+      <p>اینکه طرف مقابل دست‌کم یک بار وسوسه شود، با ${fa(K)} قدم و احتمال ${fa(+p.value)}٪ در هر قدم، حدود ${fa(pCheatEver * 100, 0)}٪ است — ولی هر تقلب زود دیده و کوچک است. شکستن یک توافق بزرگ به چند توافق کوچکِ قابل بازرسی، همان درس اکسلرود است: همکاری را تکرارشونده کن.</p>
+      <p><b>مثال روزمره:</b> شریکی تازه را با یک پروژهٔ کوچک امتحان می‌کنی، نه با همهٔ سرمایه؛ یا وام فامیلی را قسطی می‌دهی و قسط بعد را بعد از بازپرداخت قبلی.</p>
+      ${lk(["soc:repeated-games-cooperation", "generalized-trust"])}</div>`;
+  };
+  s.addEventListener("input", draw); p.addEventListener("input", draw); draw();
+}
+
+/* ——— 6. timeline ——— */
+function timeline(pn, out){
+  pn.innerHTML = `<div class="tl">
+    <div><b>۱۹۴۴</b> — فون نویمان و مورگنشترن کتاب «نظریهٔ بازی‌ها و رفتار اقتصادی» را منتشر کردند.</div>
+    <div><b>سپتامبر ۱۹۴۹</b> — هواپیمای هواشناسی آمریکا روی اقیانوس آرام ذرات رادیواکتیو پیدا کرد؛ ایزوتوپ‌هایی با نیمه‌عمر کوتاه که فقط از یک انفجار تازه می‌آمدند. نتیجه: شوروی بمب اتمی ساخته بود. برخی در آمریکا از حملهٔ پیش‌دستانه حرف زدند.</div>
+    <div><b>۱۹۵۰</b> — در مؤسسهٔ رند، مریل فلاد و ملوین درشر بازی‌ای ساختند که بعدها «دوراهی زندانی» نام گرفت؛ ساختارش شبیه رقابت تسلیحاتی بود: هر دو اگر سلاح بسازند بدتر از وقتی‌اند که هر دو نسازند، ولی هر کدام تنها، ساختن را بهتر می‌بیند.</div>
+    <div><b>۱۹۸۰</b> — مسابقهٔ اول اکسلرود: ۱۴ برنامه + «تصادفی»، هر بازی ۲۰۰ دور، ۵ بار تکرار. برنده: «تلافی هم‌سنگ» از آناتول راپاپورت.</div>
+    <div><b>۱۹۸۰–۸۱</b> — مسابقهٔ دوم: ۶۲ برنامه + «تصادفی»، طول بازی نامعلوم. باز «تلافی هم‌سنگ» اول شد.</div>
+    <div><b>۱۹۸۱</b> — اکسلرود و زیست‌شناس، ویلیام همیلتون، در مجلهٔ Science نشان دادند همین منطق می‌تواند همکاری میان جانوران را توضیح دهد (مقالهٔ «تکامل همکاری»).</div>
+    <div><b>۲۶ سپتامبر ۱۹۸۳</b> — هشدار اشتباه سامانهٔ شوروی؛ استانیسلاو پتروف آن را خطا دانست.</div>
+    <div><b>۱۹۸۴</b> — کتاب «تکامل همکاری» اکسلرود.</div>
+    <div><b>۱۹۸۷ به بعد</b> — پیمان موشک‌های میان‌برد (INF) و پیمان‌های بعدی: کاهش قدم‌به‌قدم با بازرسی متقابل.</div></div>
+    <h3 style="margin:10px 0 0;font-size:1.05rem">ایمپالاها: همکاری بی‌آنکه کسی «فکر» کند</h3>
+    <p style="margin:0;line-height:1.9">ایمپالاها (نوعی آهوی آفریقایی) کنه‌های جاهایی از بدن را که خودشان نمی‌رسند، برای هم پاک می‌کنند. تمیز کردن دیگری هزینه دارد: بزاق، وقت و حواسی که از شکارچی پرت می‌شود. اگر فقط یک بار هم‌دیگر را ببینند، نکردن «عاقلانه» است؛ ولی هر روز هم‌دیگر را می‌بینند. پژوهش‌ها نشان داده‌اند این تیمار اغلب نوبتی و دوطرفه است، تقریباً «یکی تو، یکی من». لازم نیست ایمپالا نظریهٔ بازی بداند: رفتاری که در بازی تکرارشونده بهتر جواب بدهد، در ژن‌ها و عادت‌ها ماندگار می‌شود.</p>`;
+  out.innerHTML = `<div class="res"><h3>بزرگ‌ترین بدفهمی دربارهٔ «بردن»</h3>
+    <p>«تلافی هم‌سنگ» در هیچ بازی تکی از حریفش بیشتر امتیاز نمی‌گیرد؛ حداکثر مساوی می‌کند. «همیشه خائن» هیچ بازی تکی را نمی‌بازد. ولی در جمع کل، اولی اول می‌شود و دومی آخر. چون بیشتر زندگی «حاصل‌جمع صفر» نیست: لازم نیست امتیازت را از جیب طرف مقابل دربیاوری؛ می‌توانی آن را با هم از «بانک» بگیرید — و در زندگی واقعی بانک خودِ جهان است.</p>
+    <p>جمع‌بندی اکسلرود پس از چهل سال پژوهش‌های بعدی هنوز سر پاست: مهربان باش، ببخش، ولی توسری‌خور نباش، و روشن رفتار کن.</p>
+    ${lk(["soc:repeated-games-cooperation", "soc:gt-explainer-elements-and-game-types", "soc:polak-prisoners-dilemma-grade-game"])}</div>`;
+}
+
+LabKit.start({
+  wiki: "soc", first: "tournament",
+  labels: {"soc:repeated-games-cooperation": "بازی تکرارشونده و همکاری", "generalized-trust": "اعتماد تعمیم‌یافته", "soc:polak-prisoners-dilemma-grade-game": "دوراهی زندانی", "collective-action": "کنش جمعی", "network-structure-robustness": "ساختار شبکه", "psy:complex-contagion": "سرایت پیچیده", "soc:gt-explainer-elements-and-game-types": "حاصل‌جمع صفر و غیرصفر"},
+  exps: {
+    tournament: ["مسابقه", "مسابقهٔ اکسلرود: سادگی و مهربانی می‌برد؟", "برنامه‌ها را انتخاب کنید؛ هر کدام با همهٔ برنامه‌ها و با هم‌نوع خودش بازی می‌کند. سودها: هر دو همکاری ۳، هر دو خیانت ۱، خائنِ تنها ۵، همکارِ فریب‌خورده ۰.", tournament],
+    ecology: ["نسل‌ها", "وقتی برندگان باید با برندگان بازی کنند", "شبیه‌سازی بوم‌شناختی اکسلرود: موفق‌ها زیاد و ناموفق‌ها کم می‌شوند. چه کسی تا آخر می‌ماند؟", ecology],
+    echo: ["خطا و پژواک", "یک سوءتفاهم چطور به جنگ دائمی می‌کشد", "دو بازیکن خوش‌نیت، یک خطای کوچک، و زنجیرهٔ تلافی. راه بیرون آمدن چیست؟", echo],
+    island: ["جزیرهٔ همکاری", "آیا همکاری می‌تواند در جهانی بدجنس پیدا شود؟", "یک خوشهٔ کوچک از همکارها در دریایی از خائن‌ها. اندازهٔ خوشه و تعداد دیدارها را عوض کنید.", island],
+    disarm: ["خلع سلاح", "یک‌جا یا قدم‌به‌قدم؟", "چرا توافق‌های بزرگ را به قدم‌های کوچکِ قابل بازرسی می‌شکنند؟", disarm],
+    story: ["داستان", "از بمب شوروی تا ایمپالاها", "خط زمانی کوتاه و درس اصلی: بردن یعنی بیشتر گرفتن از جهان، نه از حریف.", timeline]
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+{
+ "id": "soc:axelrod-tournaments-noise-ecology-island",
+ "kind": "concept",
+ "title": {
+  "fa": "مسابقه‌های اکسلرود: مهربانی، بخشش، خطا و جزیرهٔ همکاری",
+  "en": "Axelrod's tournaments: niceness, forgiveness, noise and islands of cooperation",
+  "nl": "Axelrods toernooien: vriendelijkheid, vergeving, ruis en eilanden van samenwerking"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "اکسلرود در ۱۹۸۰ برنامه‌هایی را در دوراهی زندانیِ تکرارشونده با هم مسابقه داد. ساده‌ترین برنامه، «تلافی هم‌سنگ»، دو بار برنده شد. برنامه‌های موفق مهربان، بخشنده، تلافی‌گر و روشن بودند. شبیه‌سازی نسل‌ها نشان داد بدجنس‌ها پس از خوردن طعمه‌ها از بین می‌روند؛ در محیط پرخطا کمی بخشش لازم است؛ و جزیرهٔ کوچکی از همکارها می‌تواند در جهانی بدجنس پخش شود.",
+  "en": "Axelrod's 1980 tournaments of iterated prisoner's dilemma programs: Tit for Tat won twice; successful strategies were nice, forgiving, retaliatory and clear; in ecological runs nasty strategies died once their prey was gone; noise requires generosity; small clusters of cooperators can invade.",
+  "nl": "Axelrods toernooien: Tit for Tat won tweemaal; succesvolle strategieën waren vriendelijk, vergevend, terugslaand en duidelijk."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مسابقهٔ اول: ۱۴ برنامه از متخصص‌ها به‌اضافهٔ «تصادفی»، هر بازی ۲۰۰ دور، کل مسابقه ۵ بار. «تلافی هم‌سنگ» (آناتول راپاپورت) اول شد. هشت برنامهٔ بالای جدول همه «مهربان» بودند (اول خیانت نمی‌کردند).",
+    "en": "First tournament: 14 entries plus Random, 200 rounds, run five times; Tit for Tat (Rapoport) won; the top eight were all nice.",
+    "nl": "First tournament: 14 entries plus Random, 200 rounds, run five times; Tit for Tat (Rapoport) won; the top eight were all nice."
+   },
+   "sources": [
+    "src:8956c45168",
+    "src:1255e6a245"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "«دو تلافی برای یک» (نمونهٔ خود اکسلرود) اگر در مسابقهٔ اول بود اول می‌شد؛ در مسابقهٔ دوم (۶۲ برنامه + تصادفی، طول بازی نامعلوم) بیست‌وچهارم شد. بهترین راهبرد مطلق وجود ندارد؛ به محیط بستگی دارد.",
+    "en": "Tit for Two Tats would have won the first tournament but came 24th in the second (62 entries, unknown length): no strategy is best in every environment.",
+    "nl": "Tit for Two Tats would have won the first tournament but came 24th in the second (62 entries, unknown length): no strategy is best in every environment."
+   },
+   "sources": [
+    "src:8956c45168",
+    "src:1255e6a245"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وقتی طول بازی معلوم باشد، خیانت در دور آخر صرف دارد و استدلال «استقرای وارونه» تا دور اول عقب می‌رود؛ برای همین در مسابقهٔ دوم پایان بازی پنهان بود («سایهٔ آینده»).",
+    "en": "With a known last round, backward induction unravels cooperation; the second tournament hid the end.",
+    "nl": "With a known last round, backward induction unravels cooperation; the second tournament hid the end."
+   },
+   "sources": [
+    "src:8956c45168",
+    "src:1255e6a245"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در شبیه‌سازی بوم‌شناختی (موفق‌ها زیاد می‌شوند)، پس از هزار نسل فقط برنامه‌های مهربان ماندند و «تلافی هم‌سنگ» با ۱۴٫۵٪ بیشترین سهم را داشت؛ تنها برنامهٔ بدجنس پانزده‌تای اول اول رشد کرد و با تمام‌شدن طعمه‌هایش افتاد.",
+    "en": "In the ecological simulation only nice strategies survived after 1,000 generations; Tit for Tat held 14.5%.",
+    "nl": "In the ecological simulation only nice strategies survived after 1,000 generations; Tit for Tat held 14.5%."
+   },
+   "sources": [
+    "src:8956c45168",
+    "src:1255e6a245"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در محیط پرخطا، دو «تلافی هم‌سنگ» در چرخهٔ تلافی گیر می‌کنند؛ «تلافی بخشنده» (حدود ۱۰٪ بخشش) پژواک را می‌شکند.",
+    "en": "With noise, Tit for Tat pairs fall into echoes of retaliation; generous Tit for Tat (about 10% forgiveness) breaks them.",
+    "nl": "With noise, Tit for Tat pairs fall into echoes of retaliation; generous Tit for Tat (about 10% forgiveness) breaks them."
+   },
+   "sources": [
+    "src:1255e6a245",
+    "src:8956c45168"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اکسلرود و همیلتون (۱۹۸۱) نشان دادند خوشهٔ کوچکی از همکارها که بیشتر با هم بازی می‌کنند می‌تواند در جمعیت خائن‌ها پخش شود؛ همکاری بدون نوع‌دوستی و حتی بدون فکر آگاهانه، اگر در ژن رمز شده باشد، ممکن است.",
+    "en": "Axelrod and Hamilton (1981): a small cluster of reciprocators can invade a population of defectors; no altruism or conscious thought required.",
+    "nl": "Axelrod and Hamilton (1981): a small cluster of reciprocators can invade a population of defectors; no altruism or conscious thought required."
+   },
+   "sources": [
+    "src:5363b16cd4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تیمار متقابل ایمپالاها نمونهٔ جانوری این منطق است: تیمار بیشتر دوطرفه و نوبتی است.",
+    "en": "Impala allogrooming is largely reciprocal, an animal example of this logic.",
+    "nl": "Impala allogrooming is largely reciprocal, an animal example of this logic."
+   },
+   "sources": [
+    "src:a93576f8e2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گفتهٔ ویدیو که آمریکا و شوروی حدود ۱۰ تریلیون دلار خرج سلاح هسته‌ای کردند در ویدیو منبع ندارد؛ برآوردها به تعریف و سال پایه بستگی دارد.",
+    "en": "The video's '$10 trillion' figure for nuclear arsenals is unsourced; estimates depend on definitions.",
+    "nl": "The video's '$10 trillion' figure for nuclear arsenals is unsourced; estimates depend on definitions."
+   },
+   "sources": [
+    "src:1255e6a245"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "مسابقه‌های چهل سال بعد (با جهش، سودهای متفاوت و خطا) نشان داده‌اند «تلافی هم‌سنگ» همیشه اول نیست؛ ولی درس کلی (مهربان، بخشنده، توسری‌نخور) پابرجاست. برخی پژوهشگران نشان داده‌اند راهبردهایی مثل «برد-بمان، باخت-عوض‌کن» در محیط‌های پرخطا بهتر عمل می‌کنند.",
+    "en": "Later work shows Tit for Tat is not always the winner (e.g. win-stay lose-shift in noisy settings), though the broad lessons hold.",
+    "nl": "Later work shows Tit for Tat is not always the winner (e.g. win-stay lose-shift in noisy settings), though the broad lessons hold."
+   },
+   "sources": [
+    "src:1255e6a245"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:repeated-games-cooperation",
+   "rel": "part-of",
+   "note": {
+    "fa": "جزئیات مسابقه‌ها",
+    "en": "tournament detail",
+    "nl": "tournament detail"
+   }
+  },
+  {
+   "to": "soc:polak-prisoners-dilemma-grade-game",
+   "rel": "see-also",
+   "note": {
+    "fa": "بازی یک‌باره",
+    "en": "one-shot game",
+    "nl": "one-shot game"
+   }
+  },
+  {
+   "to": "soc:generalized-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  }
+ ],
+ "people": [
+  "core:robert-axelrod",
+  "core:anatol-rapoport",
+  "core:william-d-hamilton",
+  "core:stanislav-petrov"
+ ],
+ "sources": [
+  "src:1255e6a245",
+  "src:5363b16cd4",
+  "src:8956c45168",
+  "src:a93576f8e2"
+ ],
+ "booklets": [],
+ "origin": "m_veritasium-cooperation.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "تصور کنید با کسی معامله می‌کنید که قرار است فردا و پس‌فردا هم ببینیدش. اگر امروز سرش کلاه بگذارید، شاید کمی بیشتر ببرید، ولی فردا او هم با شما همان می‌کند. اکسلرود پرسید در چنین جهانی کدام رفتار در کل بیشتر می‌برد، و به‌جای حدس‌زدن، مسابقه گذاشت: متخصص‌ها برنامه فرستادند و برنامه‌ها صدها دور با هم بازی کردند.\n\nنتیجه غافلگیرکننده بود: ساده‌ترین برنامه برد. «تلافی هم‌سنگ» اول همکاری می‌کند و بعد فقط کار دور قبلِ حریف را تکرار می‌کند. هیچ بازی تکی را از حریفش نمی‌برد، ولی با برنامه‌های خوب همکاری می‌کند و با بدجنس‌ها زود قطع همکاری می‌کند؛ پس در جمع بیشترین امتیاز را می‌گیرد. درسش این است که «بردن» در زندگی بیشتر یعنی ساختن سود مشترک، نه گرفتن از جیب دیگری.\n\nدو قیدِ مهم: اول، بهترین راهبرد به محیط بستگی دارد؛ در جهانی پر از «همیشه خائن»، تلافی هم‌سنگ آخر می‌شود مگر اینکه همکارها کنار هم جمع شوند. دوم، در جهان پرخطا (سوءتفاهم، شایعه) تلافی دقیق به جنگ بی‌پایان می‌کشد و کمی بخشش لازم است.\n\nنقد: مدل فقط دو انتخاب دارد و سودها ثابت‌اند؛ در زندگی واقعی قدرت نابرابر است، می‌شود از بازی بیرون رفت و آبرو و احساس هم حساب می‌شوند. پژوهش‌های بعدی هم نشان داده‌اند «تلافی هم‌سنگ» همیشه برنده نیست. ولی هستهٔ درس، یعنی تکرار و شفافیت همکاری را ممکن می‌کند، بارها تأیید شده است.",
+  "en": "In repeated interaction, simple reciprocal strategies that are nice, forgiving, retaliatory and clear do best overall, though the best strategy depends on the environment and noise calls for generosity."
+ },
+ "examples": [
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "در بازار، مغازه‌دارِ قدیمی با مشتری‌های همیشگی منصف است، چون می‌داند دوباره برمی‌گردند (سایهٔ آینده). همان مغازه‌دار با گردشگری که فقط یک بار می‌آید وسوسه می‌شود گران‌تر بدهد (بازی یک‌باره). اگر مشتری یک بار کلاه سرش برود دیگر برنمی‌گردد (تلافی) و اگر مغازه‌دار عذرخواهی کند و جبران کند، شاید برگردد (بخشش).",
+    "en": "A bazaar shopkeeper is fair to regulars (repeated game) but tempted with one-time tourists."
+   },
+   "source": null
+  },
+  {
+   "kind": "game",
+   "label": "illustration",
+   "text": {
+    "fa": "در شب مافیا، بازیکنی که در چند بازی قبل صادق بوده اعتبار دارد و دیگران حرفش را باور می‌کنند. بازیکنی که برای بردنِ یک بازی دروغ بزرگی گفته، در بازی‌های بعدی «خائن» شناخته می‌شود. گروه‌های ثابت مافیا بازی تکرارشونده‌اند و رفتار «روشن» در آن‌ها ارزش دارد.",
+    "en": "In a regular Mafia group, past honesty builds credibility across games."
+   },
+   "source": null
+  },
+  {
+   "kind": "history",
+   "label": "real",
+   "text": {
+    "fa": "۲۶ سپتامبر ۱۹۸۳ سامانهٔ هشدار ماهواره‌ای شوروی پرتاب موشک‌هایی از آمریکا را اعلام کرد. افسر کشیک، استانیسلاو پتروف، تشخیص داد که این خطای سامانه است و حمله‌ای گزارش نکرد. بعدها معلوم شد نور خورشید روی ابرهای مرتفع سامانه را فریب داده بود. چرا این داستان؟ این همان «خطا»ی مدل اکسلرود است: اگر با تلافی دقیق پاسخ داده می‌شد، پژواکی راه می‌افتاد که برگشتی نداشت.",
+    "en": "Petrov's 1983 false alarm: a noise event that strict retaliation could have turned into catastrophe."
+   },
+   "source": "https://en.wikipedia.org/wiki/1983_Soviet_nuclear_false_alarm_incident"
+  }
+ ],
+ "why": {
+  "fa": "برای سیمرغ و «ساخت ایران» یعنی: با حلقه‌ای کوچک از آدم‌های مطمئن شروع کن، تعامل‌ها را تکرارشونده و شفاف کن، توافق بزرگ را به قدم‌های کوچکِ قابل بازرسی بشکن، و برای سوءتفاهم جای بخشش بگذار.",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "در «جزیرهٔ همکاری» تعداد دیدارها را از ۱۰ به ۱ برسانید و ببینید جزیره چه می‌شود. بعد در «خطا و پژواک» تلافی بخشنده را امتحان کنید.",
+   "en": null
+  },
+  "tool": "soc/tools/cooperation.html#island"
+ },
+ "confusions": [
+  {
+   "fa": "«تلافی هم‌سنگ» یعنی همیشه همان را برگردان — بله، ولی فقط یک بار؛ کینه نگه نمی‌دارد.",
+   "en": null
+  },
+  {
+   "fa": "«مهربانی همیشه می‌برد» — نه؛ «همیشه همکار» توسری‌خور است و طعمهٔ بدجنس‌ها می‌شود. مهربانی بدون تلافی کار نمی‌کند.",
+   "en": null
+  },
+  {
+   "fa": "«پس برای بردن باید حریف را شکست داد» — نه؛ تلافی هم‌سنگ هیچ بازی تکی را نمی‌برد و باز هم در کل اول است.",
+   "en": null
+  }
+ ]
+}
