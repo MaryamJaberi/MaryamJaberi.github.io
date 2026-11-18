@@ -47,3 +47,7 @@ These are not yet wired into the live site; they are staged for it.
 ## Honest limits
 
 This is not an archive of every national history or science book. It is a classified synthesis in American English from widely used reconstructions (ICS geologic time scale, paleogeography in the spirit of Scotese / Torsvik and Cocks, paleobiology, history of biology). Maps are schematic teaching drawings.
+
+## Tests
+
+No automated tests live in this repo; it is tested from outside (crawler and user-path scripts in the main site repo, `tests/`). Last run, 18 Nov 2026: time jump, humans layer and playback work; slider now labelled; archive contrast fixed. Open: era buttons are hard to reach at 390px width; dates not yet checked against the International Chronostratigraphic Chart.

@@ -131,3 +131,5 @@ dialog button { margin-top: 0.4rem; }
 .timeline-wrap { padding-inline: 2.6rem; }
 .timeline-controls { direction: rtl; }
 @media (max-width: 800px) { .timeline-wrap { padding-inline: 1.9rem; } }
+
+.legal-back{padding:0 1.6rem 1.4rem;font-size:.8rem}.legal-back a{color:var(--gold-2)}

@@ -3438,282 +3438,282 @@ This typically indicates that your device does not have a healthy Internet conne
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */function QF(i){i=xo(i,sn);const e=xo(i.firestore,$f),t=ig(e);return FF(t,i._key).then((r=>XF(e,i,r)))}function YF(i){i=xo(i,Sa);const e=xo(i.firestore,$f),t=ig(e),r=new Mw(e);return UF(i._query),LF(t,i._query).then((a=>new Nl(e,r,i,a)))}function wf(i,e,t){i=xo(i,sn);const r=xo(i.firestore,$f),a=jF(i.converter,e,t),l=zD(r);return WF(r,[PR(l,"setDoc",i._key,a,i.converter!==null,t).toMutation(i._key,_s.none())])}function WF(i,e){const t=ig(i);return MF(t,e)}function XF(i,e,t){const r=t.docs.get(e._key),a=new Mw(i);return new yo(i,a,e._key,r,new sc(t.hasPendingWrites,t.fromCache),e.converter)}const MT="@firebase/firestore",PT="4.17.2";(function(e,t=!0){JI(Gl),Rl(new _o("firestore",((r,{instanceIdentifier:a,options:l})=>{const c=r.getProvider("app").getImmediate(),h=new $f(new uR(r.getProvider("auth-internal")),new hR(c,r.getProvider("app-check-internal")),tN(c,a),c);return l={useFetchStreams:t,...l},h._setSettings(l),h}),"PUBLIC").setMultipleInstances(!0)),pa(MT,PT,e),pa(MT,PT,"esm2020")})();const $F="vast-xerocopy-z3bk6",ZF="1:62641988477:web:e7bcb04495d27318cde214",e4="AIzaSyA6LiKcVYjkdj8H7jbo37inmozLMDaIeZg",t4="vast-xerocopy-z3bk6.firebaseapp.com",n4="ai-studio-turn-5dad44b5-1627-4d9e-b15b-42b485fa2a22",r4="vast-xerocopy-z3bk6.firebasestorage.app",i4="62641988477",s4="",a4="62641988477-jlil6r8cu2065do5kt7m3bf8fpdghdff.apps.googleusercontent.com",o4="",Vw={projectId:$F,appId:ZF,apiKey:e4,authDomain:t4,firestoreDatabaseId:n4,storageBucket:r4,messagingSenderId:i4,measurementId:s4,oAuthClientId:a4,recaptchaSiteKey:o4},jw=o2().length?iC():ZT(Vw),ps=CI(jw),Gw=new ds;Gw.setCustomParameters({prompt:"select_account"});const Fc=GF(jw,Vw.firestoreDatabaseId||"(default)"),l4=async()=>{try{const e=(await bS(ps,Gw)).user;if(e){const t=gf(Fc,"users",e.uid);await wf(t,{uid:e.uid,displayName:e.displayName||"Player",email:e.email||"",photoURL:e.photoURL||"",lastLoginAt:new Date().toISOString()},{merge:!0})}return e}catch(i){throw console.error("Error signing in with Google:",i),i}},u4=async()=>{try{await aS(ps)}catch(i){throw console.error("Error signing out:",i),i}},c4=async(i,e,t)=>{var r;try{const a=gf(Fc,"users",i,"matches",e.id);await wf(a,{...e,userId:i,difficulty:(t==null?void 0:t.difficulty)||"easy",language:(t==null?void 0:t.language)||"fa",roundsCount:(t==null?void 0:t.roundsCount)||3,createdAt:UR()});const l=gf(Fc,"users",i),c=await QF(l),h=c.exists()&&((r=c.data())==null?void 0:r.totalGamesPlayed)||0;await wf(l,{totalGamesPlayed:h+1,lastPlayedAt:new Date().toISOString()},{merge:!0})}catch(a){console.error("Error saving match to cloud:",a)}},B4=async i=>{try{const e=OR(Fc,"users",i,"matches"),t=qF(e,JF("createdAt","desc"),KF(30)),r=await YF(t),a=[];return r.forEach(l=>{const c=l.data();a.push({id:c.id||l.id,date:c.date,winnerNames:c.winnerNames||[],winnerColor:c.winnerColor||"BLUE",players:c.players||[],language:c.language||"fa"})}),a}catch(e){return console.error("Error fetching cloud match history:",e),[]}},VT=async(i,e)=>{try{const t=gf(Fc,"users",i);await wf(t,{settings:e},{merge:!0})}catch(t){console.error("Error saving settings to cloud:",t)}};/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const h4=i=>i==null?void 0:i.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase();/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */function f4(i,e,t=[]){if(e==null)throw new Error("[lucide]: iconNode is required when icon name is used");return{name:h4(i),size:24,node:e,...t.length>0?{aliases:t}:{}}}/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const d4=i=>{let e="",t=!1;for(const r of i){if(r==="-"||r==="_"||r<=" "){t=e.length>0;continue}e.length===0?e+=r.toLowerCase():e+=t?r.toUpperCase():r,t=!1}return e};/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const p4=i=>{const e=d4(i);return e.charAt(0).toUpperCase()+e.slice(1)};/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const $m=(...i)=>i.filter((e,t,r)=>!!e&&e.trim()!==""&&r.indexOf(e)===t).join(" ").trim();/**
- * @license lucide-react v1.74.0 - ISC
+ */const $m=(...i)=>{const e=new Set;for(const t of i)if(typeof t=="string")for(const r of t.split(/\s+/))r&&e.add(r);return[...e].join(" ")};/**
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const so={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor","stroke-width":2,"stroke-linecap":"round","stroke-linejoin":"round"};/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */function Tm(i){return i!=null}function m4(i,e={}){var D,b;const t=e.attributeNames??{},r=A=>t[A]??A,a=i.size??i.width??so.width,l=i.size??i.height??so.height,c=((D=i.aliases)==null?void 0:D.filter(A=>typeof A=="string"&&A.trim()!=="").map(A=>`lucide-${A}`))??[],h=[...i.name?[`lucide-${i.name}`]:[],...c],d=((b=e.className)==null?void 0:b.split(" ").filter(Boolean))??[],m=e.includeDefaultClasses===!1?$m(...d):$m("lucide",...h,...d),g=e.absoluteStrokeWidth?Number(e.strokeWidth??so["stroke-width"])*Number(i.size??i.width??so.width)/Number(e.size??e.width??so.width):e.strokeWidth??so["stroke-width"];return["svg",{...Object.entries(so).reduce((A,[L,Q])=>(A[r(L)]=Q,A),{}),..."color"in e&&e.color&&{[r("stroke")]:e.color},..."size"in e&&Tm(e.size)&&{[r("width")]:e.size,[r("height")]:e.size},..."width"in e&&Tm(e.width)&&{[r("width")]:e.width},..."height"in e&&Tm(e.height)&&{[r("height")]:e.height},[r("stroke-width")]:g,...m&&{[r("class")]:m},[r("viewBox")]:`0 0 ${a} ${l}`,...e.hasA11yProp===!1?{[r("aria-hidden")]:"true"}:{},..."attributes"in e&&e.attributes},i.node.map(A=>{const[L,Q,$]=A,ce=e.nonScalingStroke?{[r("vector-effect")]:"non-scaling-stroke",...Q}:Q;return $?[L,ce,$]:[L,ce]})]}/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */function C4(i,e={}){return m4(i,{...e,attributeNames:{...e.attributeNames,class:"className","stroke-width":"strokeWidth","stroke-linecap":"strokeLinecap","stroke-linejoin":"strokeLinejoin","vector-effect":"vectorEffect"}})}/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const g4=i=>{for(const e in i)if(e.startsWith("aria-")||e==="role"||e==="title")return!0;return!1},y4=we.createContext({}),E4=()=>we.useContext(y4),_4=we.forwardRef(({color:i,size:e,width:t,height:r,strokeWidth:a,absoluteStrokeWidth:l,nonScalingStroke:c,className:h="",children:d,iconNode:m=[],icon:g={node:m,aliases:[],size:24},...E},D)=>{const{size:b=24,strokeWidth:A=2,absoluteStrokeWidth:L=!1,nonScalingStroke:Q=!1,color:$="currentColor",className:ce=""}=E4()??{},xe=!!d||g4(E),[Ge,Ke,Re=[]]=C4(g,{color:i??$,width:t??e??b,height:r??e??b,strokeWidth:a??A,absoluteStrokeWidth:l??L,nonScalingStroke:c??Q,className:$m(ce,h),hasA11yProp:xe,attributes:E});return we.createElement(Ge,{ref:D,...Ke},[...Re.map(([v,S])=>we.createElement(v,S)),...Array.isArray(d)?d:[d]])});/**
- * @license lucide-react v1.74.0 - ISC
+ */const g4=i=>{if(i==null||typeof i!="object")return!1;for(const e in i)if(Object.prototype.hasOwnProperty.call(i,e)&&(e.startsWith("aria-")||e==="role"||e==="title")&&i[e]!=null)return!0;return!1},y4=we.createContext({}),E4=()=>we.useContext(y4),_4=we.forwardRef(({color:i,size:e,width:t,height:r,strokeWidth:a,absoluteStrokeWidth:l,nonScalingStroke:c,className:h="",children:d,iconNode:m=[],icon:g={node:m,aliases:[],size:24},...E},D)=>{const{size:b=24,strokeWidth:A=2,absoluteStrokeWidth:L=!1,nonScalingStroke:Q=!1,color:$="currentColor",className:ce=""}=E4()??{},xe=!!d||g4(E),[Ge,Ke,Re=[]]=C4(g,{color:i??$,width:t??e??b,height:r??e??b,strokeWidth:a??A,absoluteStrokeWidth:l??L,nonScalingStroke:c??Q,className:$m(ce,h),hasA11yProp:xe,attributes:E});return we.createElement(Ge,{ref:D,...Ke},[...Re.map(([v,S])=>we.createElement(v,S)),...Array.isArray(d)?d:[d]])});/**
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */function Je(i,e=[],t=[]){const r=typeof i=="string"?f4(i,e,t):i,a=we.forwardRef(({className:l,...c},h)=>we.createElement(_4,{ref:h,icon:r,className:l,...c}));return r.name&&(a.displayName=p4(r.name)),a}/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Hw={name:"activity",size:24,node:[["path",{d:"M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2",key:"169zse"}]]};Hw.node;const T4=Je(Hw);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const zw={name:"apple",size:24,node:[["path",{d:"M12 6.528V3a1 1 0 0 1 1-1h0",key:"11qiee"}],["path",{d:"M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21",key:"110c12"}]]};zw.node;const jT=Je(zw);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Uw={name:"arrow-left",size:24,node:[["path",{d:"m12 19-7-7 7-7",key:"1l729n"}],["path",{d:"M19 12H5",key:"x3x0zl"}]]};Uw.node;const Ao=Je(Uw);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const qw={name:"arrow-right",size:24,node:[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"m12 5 7 7-7 7",key:"xquz4c"}]]};qw.node;const vo=Je(qw);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Jw={name:"bell",size:24,node:[["path",{d:"M10.268 21a2 2 0 0 0 3.464 0",key:"vwvbt9"}],["path",{d:"M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326",key:"11g9vi"}]]};Jw.node;const Kw=Je(Jw);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Qw={name:"book-open",size:24,node:[["path",{d:"M12 5v16",key:"1f6ucr"}],["path",{d:"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z",key:"1fyvmf"}]]};Qw.node;const Yw=Je(Qw);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Ww={name:"briefcase",size:24,node:[["path",{d:"M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16",key:"jecpp"}],["rect",{width:"20",height:"14",x:"2",y:"6",rx:"2",key:"i6l2r4"}]]};Ww.node;const D4=Je(Ww);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Xw={name:"calendar",size:24,node:[["path",{d:"M8 2v3",key:"1ioesn"}],["path",{d:"M16 2v3",key:"otl347"}],["rect",{x:"3",y:"3",width:"18",height:"18",rx:"2",key:"h1oib"}],["path",{d:"M3 9h18",key:"1pudct"}]]};Xw.node;const w4=Je(Xw);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const $w={name:"car",size:24,node:[["path",{d:"M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2",key:"5owen"}],["circle",{cx:"7",cy:"17",r:"2",key:"u2ysq9"}],["path",{d:"M9 17h6",key:"r8uit2"}],["circle",{cx:"17",cy:"17",r:"2",key:"axvx0g"}]]};$w.node;const x4=Je($w);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Zw={name:"check",size:24,node:[["path",{d:"M20 6 9 17l-5-5",key:"1gmf2c"}]]};Zw.node;const ex=Je(Zw);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const tx={name:"circle-check",size:24,node:[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"m16 9-5.5 5.5L8 12",key:"xofnsj"}]],aliases:["check-circle-2"]};tx.node;const b4=Je(tx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const nx={name:"circle-question-mark",size:24,node:[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"M9 9.5a3 2.5 0 016 0c0 2-2 2-3 3.5",key:"1awbb0"}],["path",{d:"M12 17h.01",key:"p32p05"}]],aliases:["help-circle","circle-help"]};nx.node;const Zc=Je(nx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const rx={name:"clock",size:24,node:[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"M12 6v6l4 2",key:"mmk7yg"}]]};rx.node;const ix=Je(rx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const sx={name:"cloud-check",size:24,node:[["path",{d:"m17 15-5.5 5.5L9 18",key:"15q87x"}],["path",{d:"M5.516 16.07A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 3.501 7.327",key:"1xtj56"}]]};sx.node;const A4=Je(sx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const ax={name:"cloud",size:24,node:[["path",{d:"M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z",key:"p7xjir"}]]};ax.node;const v4=Je(ax);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const ox={name:"cpu",size:24,node:[["path",{d:"M12 20v2",key:"1lh1kg"}],["path",{d:"M12 2v2",key:"tus03m"}],["path",{d:"M17 20v2",key:"1rnc9c"}],["path",{d:"M17 2v2",key:"11trls"}],["path",{d:"M2 12h2",key:"1t8f8n"}],["path",{d:"M2 17h2",key:"7oei6x"}],["path",{d:"M2 7h2",key:"asdhe0"}],["path",{d:"M20 12h2",key:"1q8mjw"}],["path",{d:"M20 17h2",key:"1fpfkl"}],["path",{d:"M20 7h2",key:"1o8tra"}],["path",{d:"M7 20v2",key:"4gnj0m"}],["path",{d:"M7 2v2",key:"1i4yhu"}],["rect",{x:"4",y:"4",width:"16",height:"16",rx:"2",key:"1vbyd7"}],["rect",{x:"8",y:"8",width:"8",height:"8",rx:"1",key:"z9xiuo"}]]};ox.node;const S4=Je(ox);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const lx={name:"crown",size:24,node:[["path",{d:"M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z",key:"1vdc57"}],["path",{d:"M5 21h14",key:"11awu3"}]]};lx.node;const Zm=Je(lx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const ux={name:"dog",size:24,node:[["path",{d:"M11.25 16.25h1.5L12 17z",key:"w7jh35"}],["path",{d:"M16 14v.5",key:"1lajdz"}],["path",{d:"M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309",key:"u7s9ue"}],["path",{d:"M8 14v.5",key:"1nzgdb"}],["path",{d:"M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5",key:"v8hric"}]]};ux.node;const I4=Je(ux);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const cx={name:"download",size:24,node:[["path",{d:"M12 15V3",key:"m9g1x1"}],["path",{d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",key:"ih7n3h"}],["path",{d:"m7 10 5 5 5-5",key:"brsn70"}]]};cx.node;const Bx=Je(cx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const hx={name:"eighth-notes",size:24,node:[["path",{d:"M21 16V3a1 1 0 0 0-1.28-.96l-10 2.917a1 1 0 0 0-.72.96V19",key:"uy6ho8"}],["circle",{cx:"18",cy:"16",r:"3",key:"1hluhg"}],["circle",{cx:"6",cy:"19",r:"3",key:"1kj8tv"}]],aliases:["music"]};hx.node;const fx=Je(hx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const dx={name:"face-slightly-smiling",size:24,node:[["path",{d:"M15 10V9",key:"4dkmfx"}],["path",{d:"M16.472 15a6 6 0 01-8.943 0",key:"7qomzy"}],["path",{d:"M9 10V9",key:"1lazqi"}],["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}]],aliases:["smile"]};dx.node;const N4=Je(dx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const px={name:"flame",size:24,node:[["path",{d:"M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4",key:"1slcih"}]]};px.node;const GT=Je(px);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const mx={name:"gamepad-2",size:24,node:[["line",{x1:"6",x2:"10",y1:"11",y2:"11",key:"1gktln"}],["line",{x1:"8",x2:"8",y1:"9",y2:"13",key:"qnk9ow"}],["line",{x1:"15",x2:"15.01",y1:"12",y2:"12",key:"krot7o"}],["line",{x1:"18",x2:"18.01",y1:"10",y2:"10",key:"1lcuu1"}],["path",{d:"M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z",key:"mfqc10"}]]};mx.node;const R4=Je(mx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Cx={name:"globe",size:24,node:[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20",key:"13o1zl"}],["path",{d:"M2 12h20",key:"9i4pu4"}]]};Cx.node;const k4=Je(Cx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const gx={name:"hard-drive",size:24,node:[["path",{d:"M10 16h.01",key:"1bzywj"}],["path",{d:"M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z",key:"18tbho"}],["path",{d:"M21.946 12.013H2.054",key:"zqlbp7"}],["path",{d:"M6 16h.01",key:"1pmjb7"}]]};gx.node;const O4=Je(gx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const yx={name:"layers",size:24,node:[["path",{d:"M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z",key:"zw3jo"}],["path",{d:"M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12",key:"1wduqc"}],["path",{d:"M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17",key:"kqbvx6"}]],aliases:["layers-3"]};yx.node;const Ex=Je(yx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const _x={name:"log-out",size:24,node:[["path",{d:"m16 17 5-5-5-5",key:"1bji2h"}],["path",{d:"M21 12H9",key:"dn1m92"}],["path",{d:"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4",key:"1uf3rs"}]]};_x.node;const F4=Je(_x);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Tx={name:"map-pin",size:24,node:[["path",{d:"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",key:"1r0f0z"}],["circle",{cx:"12",cy:"10",r:"3",key:"ilqhr7"}]]};Tx.node;const L4=Je(Tx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Dx={name:"pause",size:24,node:[["rect",{x:"14",y:"3",width:"5",height:"18",rx:"1",key:"kaeet6"}],["rect",{x:"5",y:"3",width:"5",height:"18",rx:"1",key:"1wsw3u"}]]};Dx.node;const M4=Je(Dx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const wx={name:"phone",size:24,node:[["path",{d:"M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",key:"9njp5v"}]]};wx.node;const HT=Je(wx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const xx={name:"rotate-ccw",size:24,node:[["path",{d:"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8",key:"1357e3"}],["path",{d:"M3 3v5h5",key:"1xhq8a"}]]};xx.node;const bx=Je(xx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Ax={name:"shield-check",size:24,node:[["path",{d:"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",key:"oel41y"}],["path",{d:"m9 12 2 2 4-4",key:"dzmm74"}]]};Ax.node;const P4=Je(Ax);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const vx={name:"skull",size:24,node:[["path",{d:"m12.5 17-.5-1-.5 1h1z",key:"3me087"}],["path",{d:"M15 22a1 1 0 0 0 1-1v-1a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20v1a1 1 0 0 0 1 1z",key:"1o5pge"}],["circle",{cx:"15",cy:"12",r:"1",key:"1tmaij"}],["circle",{cx:"9",cy:"12",r:"1",key:"1vctgf"}]]};vx.node;const V4=Je(vx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Sx={name:"sliders-vertical",size:24,node:[["path",{d:"M10 8h4",key:"1sr2af"}],["path",{d:"M12 21v-9",key:"17s77i"}],["path",{d:"M12 8V3",key:"13r4qs"}],["path",{d:"M17 16h4",key:"h1uq16"}],["path",{d:"M19 12V3",key:"o1uvq1"}],["path",{d:"M19 21v-5",key:"qua636"}],["path",{d:"M3 14h4",key:"bcjad9"}],["path",{d:"M5 10V3",key:"cb8scm"}],["path",{d:"M5 21v-7",key:"1w1uti"}]],aliases:["sliders"]};Sx.node;const j4=Je(Sx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Ix={name:"smartphone",size:24,node:[["rect",{width:"14",height:"20",x:"5",y:"2",rx:"2",ry:"2",key:"1yt0o3"}],["path",{d:"M12 18h.01",key:"mhygvu"}]]};Ix.node;const xf=Je(Ix);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Nx={name:"sparkles",size:24,node:[["path",{d:"M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",key:"1s2grr"}],["path",{d:"M20 2v4",key:"1rf3ol"}],["path",{d:"M22 4h-4",key:"gwowj6"}],["circle",{cx:"4",cy:"20",r:"2",key:"6kqj1y"}]],aliases:["stars"]};Nx.node;const di=Je(Nx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Rx={name:"tag",size:24,node:[["path",{d:"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z",key:"vktsd0"}],["circle",{cx:"7.5",cy:"7.5",r:".5",fill:"currentColor",key:"kqv944"}]]};Rx.node;const G4=Je(Rx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const kx={name:"trophy",size:24,node:[["path",{d:"M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2",key:"pwuv1l"}],["path",{d:"M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2",key:"1y54w1"}],["path",{d:"M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3",key:"e30mpu"}],["path",{d:"M4 22h16",key:"57wxv0"}],["path",{d:"M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z",key:"1mhfuq"}],["path",{d:"M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3",key:"i0yafy"}]]};kx.node;const bf=Je(kx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Ox={name:"tv",size:24,node:[["path",{d:"m17 2-5 5-5-5",key:"16satq"}],["rect",{width:"20",height:"15",x:"2",y:"7",rx:"2",key:"1e6viu"}]]};Ox.node;const H4=Je(Ox);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Fx={name:"users",size:24,node:[["path",{d:"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",key:"1yyitq"}],["path",{d:"M16 3.128a4 4 0 0 1 0 7.744",key:"16gr8j"}],["path",{d:"M22 21v-2a4 4 0 0 0-3-3.87",key:"kshegd"}],["circle",{cx:"9",cy:"7",r:"4",key:"nufk8"}]]};Fx.node;const Zf=Je(Fx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Lx={name:"utensils",size:24,node:[["path",{d:"M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2",key:"cjf0a3"}],["path",{d:"M7 2v20",key:"1473qp"}],["path",{d:"M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7",key:"j28e5"}]],aliases:["fork-knife"]};Lx.node;const z4=Je(Lx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Mx={name:"volume-2",size:24,node:[["path",{d:"M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",key:"uqj9uw"}],["path",{d:"M16 9a5 5 0 0 1 0 6",key:"1q6k2b"}],["path",{d:"M19.364 18.364a9 9 0 0 0 0-12.728",key:"ijwkga"}]]};Mx.node;const Af=Je(Mx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Px={name:"volume-x",size:24,node:[["path",{d:"M11 4.702a.7.7 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.7.7 0 0 0 11 19.298z",key:"1p7khw"}],["path",{d:"m16.5 14.5 5-5",key:"cul3yw"}],["path",{d:"m16.5 9.5 5 5",key:"1akey5"}]]};Px.node;const Vx=Je(Px);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const jx={name:"wifi-off",size:24,node:[["path",{d:"M12 20h.01",key:"zekei9"}],["path",{d:"M8.5 16.429a5 5 0 0 1 7 0",key:"1bycff"}],["path",{d:"M5 12.859a10 10 0 0 1 5.17-2.69",key:"1dl1wf"}],["path",{d:"M19 12.859a10 10 0 0 0-2.007-1.523",key:"4k23kn"}],["path",{d:"M2 8.82a15 15 0 0 1 4.177-2.643",key:"1grhjp"}],["path",{d:"M22 8.82a15 15 0 0 0-11.288-3.764",key:"z3jwby"}],["path",{d:"m2 2 20 20",key:"1ooewy"}]]};jx.node;const U4=Je(jx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const Gx={name:"x",size:24,node:[["path",{d:"M18 6 6 18",key:"1bl5f8"}],["path",{d:"m6 6 12 12",key:"d8bk6v"}]]};Gx.node;const Hx=Je(Gx);/**
- * @license lucide-react v1.74.0 - ISC
+ * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
