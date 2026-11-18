@@ -48,6 +48,7 @@ article.detail .lead{font-size:1.1rem;line-height:1.9;margin:0}
 .ev{font-size:var(--chip);padding:1px 8px;border-radius:var(--r-full);border:1px solid var(--line-strong);color:var(--ink-2)} .ev.t1{border-color:#2F7D4F;color:#2F7D4F} .ev.t2{border-color:#3C6EA8;color:#3C6EA8} .ev.t3{border-color:#8A6D1D;color:#8A6D1D} .ev.t4,.ev.t0{border-color:#8A2E2E;color:#8A2E2E}
 .flag.editor-note{color:var(--primary);border-color:var(--primary)}
 .xp{display:grid;gap:var(--s3)}.xp p{margin:0;line-height:1.95}.exs{display:grid;gap:var(--s3)}.exs .ex{padding:var(--s4) var(--s5);border-radius:var(--r-md);background:var(--surface-subtle,var(--surface));border:1px solid var(--line);border-inline-start:4px solid var(--fam-soc,var(--primary));line-height:1.9}.exs .ex.real{border-inline-start-color:var(--story,#B4532A)}.exs .lab{display:inline-block;font-size:var(--chip);padding:1px 10px;border-radius:999px;border:1px solid var(--line-strong,var(--line));margin-inline-end:6px;color:var(--ink-2)}.exs .ex a{font-size:var(--chip)}.tryit{padding:var(--s4) var(--s5);border-radius:var(--r-md);border:1px dashed var(--line-strong,var(--line));line-height:1.9}.tryit a{font-weight:600}.conf{margin:0;padding-inline-start:1.2em;line-height:1.9}.whyit{line-height:1.9;margin:0;color:var(--ink-2)}
+.pts li .ref a.sl{cursor:pointer;color:var(--ink-2);text-decoration:none;border-bottom:1px dotted var(--line-strong,var(--line))}.pts li .ref a.sl:hover{color:var(--ink)}
 h2.sec{font-size:var(--small);color:var(--ink-2);font-weight:600;margin:var(--s2) 0 0;text-transform:uppercase;letter-spacing:.04em}
 .links{display:grid;gap:6px}
 .links a{display:flex;gap:10px;align-items:baseline;padding:8px 12px;border-radius:var(--r-md);border:1px solid var(--line);background:var(--surface);text-decoration:none;color:var(--ink)}
@@ -113,7 +114,7 @@ function detail(c){
   const f = c.field && BY[c.field] || c.parent && BY[c.parent];
   const srcIds = []; const sref = id => { let i = srcIds.indexOf(id); if (i < 0) { srcIds.push(id); i = srcIds.length - 1; } return i + 1; };
   const evOf = p => { const t = (p.sources || []).map(id => D.sources[id] && D.sources[id].tier).filter(Boolean); return t.length ? Math.min(...t) : 0; };
-  const pts = (c.points || []).map(p => { const refs = (p.sources || []).map(sref); const ev = evOf(p); return `<li>${esc(tx(p.text))}<div class="ref"><span class="ev t${ev}" title="${esc(T("evl"))}">${esc(T("ev")[ev])}</span>${(p.flags || []).map(fl => `<span class="flag ${fl}">${esc(T("flag")[fl] || fl)}</span>`).join("")}${refs.map(n => `<span>[${fa(n)}]</span>`).join("")}</div></li>`; }).join("");
+  const pts = (c.points || []).map(p => { const refs = (p.sources || []).map(sref); const ev = evOf(p); return `<li>${esc(tx(p.text))}<div class="ref"><span class="ev t${ev}" title="${esc(T("evl"))}">${esc(T("ev")[ev])}</span>${(p.flags || []).map(fl => `<span class="flag ${fl}">${esc(T("flag")[fl] || fl)}</span>`).join("")}${(p.sources || []).map(id => { const s = D.sources[id]; if (!s) return ""; const n = sref(id); const m = String(s.cite || "").match(/^(.{2,60}?)[\.،,]?\s*\((\d{4}|n\.d\.|بی‌تا)/); const lab = m ? `${m[1].split(/[,،]/)[0]}، ${m[2] === "n.d." ? "بی‌تا" : fa(m[2])}` : String(s.cite || "").slice(0, 40); return `<a class="sl" role="button" tabindex="0" data-src="${n}" title="${esc(s.cite)}">[${fa(n)}] ${esc(lab)}</a>`; }).join("")}</div></li>`; }).join("");
   (c.sources || []).forEach(sref);
   const links = (c.links || []).map(l => { const u = urlOf(l.to); if (!u) return ""; const extW = !BY[l.to] ? l.to.split(":")[0] : ""; return `<a href="${u}"><span class="rel">${esc(T("rel")[l.rel] || l.rel)}</span><span><b>${esc(titleOf(l.to))}</b>${extW ? ` <span class="ext">(${T("inwiki")} ${extW})</span>` : ""}<div class="nt">${esc(tx(l.note))}</div></span></a>`; }).join("");
   const slug = c.id.split(":")[1];
@@ -130,7 +131,7 @@ function detail(c){
   const why = tx(c.why || {}) ? `<h2 class="sec">${XL.why}</h2><p class="whyit">${esc(tx(c.why))}</p>` : "";
   const tr = c.try && tx(c.try.text || {}) ? `<h2 class="sec">${XL.tryit}</h2><div class="tryit">${esc(tx(c.try.text))}${c.try.tool && /^[a-z]/.test(c.try.tool) && c.try.tool.includes(".html") ? ` <div><a href="../${esc(c.try.tool)}">${XL.tool} ←</a></div>` : ""}</div>` : "";
   const cf = (c.confusions || []).map(x => tx(x)).filter(Boolean); const conf = cf.length ? `<h2 class="sec">${XL.conf}</h2><ul class="conf">${cf.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
-  const srcs = srcIds.map((id, i) => { const s = D.sources[id]; if (!s) return ""; return `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.cite)}</a>` : esc(s.cite)} <small>(${T("tier")} ${fa(s.tier)})</small></li>`; }).join("");
+  const srcs = srcIds.map((id, i) => { const s = D.sources[id]; if (!s) return ""; return `<li id="src-${i + 1}">${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.cite)}</a>` : esc(s.cite)} <small>(${T("tier")} ${fa(s.tier)})</small></li>`; }).join("");
   return `<article class="detail"><button class="back" data-back>${T("back")}</button>
    <div><div class="kick">${f ? esc(tx(f.title)) : ""}</div><h1>${esc(tx(c.title))}</h1>${L === "fa" && c.title.en ? `<div class="sub">${esc(c.title.en)}${c.title.nl && c.title.nl !== c.title.en ? ` · ${esc(c.title.nl)}` : ""}</div>` : ""}</div>
    <p class="lead">${esc(tx(c.summary))}</p>
@@ -153,6 +154,7 @@ function render(){
 }
 document.addEventListener("click", ev => {
   const g = ev.target.closest("[data-go]"); if (g) { location.hash = g.dataset.go.split(":")[1]; return; }
+  { const sl = ev.target.closest("[data-src]"); if (sl) { const t = document.getElementById("src-" + sl.dataset.src); if (t) { t.scrollIntoView({behavior: "smooth", block: "center"}); t.style.outline = "2px solid var(--primary)"; setTimeout(() => t.style.outline = "", 1600); } return; } }
   if (ev.target.closest("[data-back]")) { history.pushState(null, "", location.pathname); render(); return; }
   const f = ev.target.closest("[data-f]"); if (f) { fieldSel = f.dataset.f || null; render(); }
 });
