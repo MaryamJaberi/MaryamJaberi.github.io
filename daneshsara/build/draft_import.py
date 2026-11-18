@@ -29,7 +29,11 @@ def target(t):
     if s in NEW: return f'{NEW[s]}:{s}'
     if s in EXIST: return f'{EXIST[s]}:{s}'
     return None
-def tri(fa, en=None): return {'fa': fa or None, 'en': en or None}
+def txt(v):
+    if isinstance(v, list): return '\n\n'.join(str(x) for x in v if x)
+    if isinstance(v, dict): return v.get('fa') or ''
+    return v
+def tri(fa, en=None): return {'fa': txt(fa) or None, 'en': txt(en) or None}
 S = Seed('soc'); n = 0; skipped = []; dropped_links = 0
 for f in files:
     d = json.load(open(f, encoding='utf-8'))
