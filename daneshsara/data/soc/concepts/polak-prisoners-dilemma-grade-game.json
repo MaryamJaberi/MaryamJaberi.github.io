@@ -1,0 +1,143 @@
+{
+ "id": "soc:polak-prisoners-dilemma-grade-game",
+ "kind": "concept",
+ "title": {
+  "fa": "دوراهی زندانی: بازی نمره و بازی‌های روزمره",
+  "en": "The prisoner's dilemma: the grade game and everyday cases",
+  "nl": "Het prisoner's dilemma: het cijferspel en alledaagse gevallen"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "در بازی نمره، آلفا برای هر بازیکن راهبرد غالب است ولی اگر هر دو آلفا بزنند از حالتی که هر دو بتا بزنند بدتر می‌شوند. این همان دوراهی زندانی است: انتخاب‌های عقلانی فردی می‌تواند به نتیجهٔ بد جمعی برسد (درس ۲). نمونه‌ها: جمع‌نکردن زباله در اتاق مشترک، رقابت قیمتی شرکت‌ها، وکیل‌گرفتن در دعوا.",
+  "en": "In the grade game Alpha dominates for each player, yet both choosing Alpha leaves both worse off than both choosing Beta. Individually rational choices can lead to a bad collective outcome (Lesson 2). Examples: untidy shared rooms, price competition between firms, hiring lawyers in a divorce fight.",
+  "nl": "Individueel rationele keuzes kunnen tot een slecht collectief resultaat leiden."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "درمان‌ها: قرارداد (ارتباط «دندان‌دار» که پیامدها را عوض می‌کند، نه فقط گفت‌وگو)، و تکرار تعامل با همان آدم‌ها؛ تبانی شرکت‌ها غیرقانونی است و گفتگوی بی‌ضمانت اجرا کار نمی‌کند.",
+    "en": "Remedies: contracts (communication with teeth, i.e. changing payoffs, not mere talk) and repeated interaction with the same people; firm collusion is illegal and unenforced talk does not work.",
+    "nl": "Remedies: contracts (communication with teeth, i.e. changing payoffs, not mere talk) and repeated interaction with the same people; firm collusion is illegal and unenforced talk does not work."
+   },
+   "sources": [
+    "src:7cddda2c95"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در آزمایش‌های جهان واقعی حدود ۷۰٪ آلفا و ۳۰٪ بتا می‌زنند؛ در کلاس گوینده ۲۳۸ آلفا و ۳۶ بتا شمرده شد. توضیح‌ها: آدم‌های خوب، گمان به تکرار بازی، یا بدفهمی (حدسِ شنوندگان، نه نتیجهٔ پژوهش).",
+    "en": "Real experiments: about 70% Alpha, 30% Beta; in this class 238 Alpha and 36 Beta. Suggested explanations (students' guesses, not findings): kindness, expecting repeat play, misunderstanding.",
+    "nl": "Real experiments: about 70% Alpha, 30% Beta; in this class 238 Alpha and 36 Beta. Suggested explanations (students' guesses, not findings): kindness, expecting repeat play, misunderstanding."
+   },
+   "sources": [
+    "src:7cddda2c95"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "درس ۴: خودت را جای دیگران بگذار و پیامدهای او را حدس بزن، حتی وقتی راهبرد غالب نداری؛ اگر طرف مقابل راهبرد غالب دارد، پاسخ بهینهٔ تو همان است که به آن پاسخ می‌دهد.",
+    "en": "Lesson 4: put yourself in others' shoes; even without a dominant strategy yourself, if the other has one, best-respond to it.",
+    "nl": "Lesson 4: put yourself in others' shoes; even without a dominant strategy yourself, if the other has one, best-respond to it."
+   },
+   "sources": [
+    "src:7cddda2c95"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:repeated-games-cooperation",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  },
+  {
+   "to": "soc:play-games-culture-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  }
+ ],
+ "people": [
+  "core:polak-b"
+ ],
+ "sources": [
+  "src:7cddda2c95"
+ ],
+ "booklets": [],
+ "origin": "m_polak-gt-lec1.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "در «بازی نمره»، هر دانشجو آلفا یا بتا می‌نویسد. اگر فقط به نمرهٔ خودتان اهمیت بدهید، آلفا همیشه بهتر است، چه دیگری آلفا بزند چه بتا. ولی وقتی هر دو آلفا می‌زنند، هر دو نتیجه‌ای بدتر از حالتی می‌گیرند که هر دو بتا زده بودند. این همان «دوراهی زندانی» است: انتخاب درستِ هر نفر، نتیجهٔ بدِ همه را می‌سازد (درس ۲ پُلاک).\n\nپُلاک دو راه درمان را از دانشجوها بیرون می‌کشد. اول قرارداد؛ اما نه هر حرفی: قول بی‌ضمانت چیزی را عوض نمی‌کند، قرارداد «ارتباطِ دندان‌دار» است چون پیامدها را تغییر می‌دهد. دوم تکرار: هم‌اتاقی‌ها بی‌قرارداد کتبی هم گاهی همکاری می‌کنند چون فردا هم با هم زندگی می‌کنند. درس ۴ هم این است که خودت را جای دیگری بگذار: اگر او راهبرد غالب دارد، بهترین پاسخت را به همان بده.\n\nاعتراض منصفانه: در آزمایش‌ها بخش بزرگی از آدم‌ها، با وجود منطق راهبرد غالب، همکاری می‌کنند (پُلاک می‌گوید حدود ۳۰٪). پس شاید مدل «هر کس فقط به خودش فکر می‌کند» آدم واقعی را خوب توصیف نکند. خود پُلاک این را رد نمی‌کند؛ می‌گوید شاید پیامدهای آن ۳۰٪ اصلاً همین جدول نیست (به دیگران اهمیت می‌دهند)، یا فکر می‌کنند بازی تکرار می‌شود.\n\nنتیجهٔ عملی: وقتی گروهی به نتیجهٔ بدی می‌رسد که هیچ‌کس نمی‌خواست، اول بپرسید آیا ساختار دوراهی زندانی دارد؛ اگر دارد، نصیحت کمتر کار می‌کند و تغییر پیامدها (قاعده، ضمانت، تکرار و آبرو) بیشتر.",
+  "en": "In the grade game Alpha dominates, yet mutual Alpha is worse for both than mutual Beta: individually rational choices can produce a collectively bad outcome. Remedies: contracts that change payoffs ('communication with teeth') and repeated interaction. Objection: many real people cooperate anyway (Polak cites roughly 30%), perhaps because their real payoffs include others' welfare or they expect repeat play."
+ },
+ "examples": [
+  {
+   "kind": "story",
+   "label": "real",
+   "text": {
+    "fa": "حدود سال ۱۹۸۰ رابرت اکسلرود، دانشمند علوم سیاسی، از پژوهشگران خواست برنامهٔ کامپیوتری بفرستند که دوراهی زندانی را بارها پشت سر هم بازی کند. در دور اول ۱۴ برنامه (به‌اضافهٔ یک بازیکن تصادفی) رسید و هر برنامه با همهٔ برنامه‌های دیگر ۲۰۰ دور بازی کرد. برنده یکی از ساده‌ترین‌ها بود: «تلافی هم‌سنگ» (Tit for Tat) که آناتول راپاپورت فرستاده بود؛ دور اول همکاری می‌کند و بعد همان کاری را می‌کند که طرف مقابل در دور قبل کرد. اکسلرود نتیجه‌ها را منتشر کرد و دور دوم با شرکت‌کنندگان بیشتر برگزار شد؛ باز همین راهبرد برد. او ویژگی‌های راهبردهای موفق را این‌طور خلاصه کرد: خوش‌نیت باش (اول خیانت نکن)، به خیانت واکنش نشان بده، حسود نباش، و زیادی زرنگ نباش تا دیگران بتوانند رفتارت را بفهمند.\nچرا این داستان؟ همان «درمان تکرار» پُلاک را با آزمایش نشان می‌دهد: وقتی بازی تکرار می‌شود، راهبردی که همکاری را پاداش و خیانت را جریمه می‌کند از خودخواهی محض جلو می‌زند.",
+    "en": "Axelrod's computer tournaments (~1980): Rapoport's simple Tit for Tat won both rounds of the repeated prisoner's dilemma, showing how repetition can sustain cooperation."
+   },
+   "source": "https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation ; https://axelrod.readthedocs.io/en/latest/discussion/overview_of_past_tournaments.html"
+  },
+  {
+   "kind": "story",
+   "label": "real",
+   "text": {
+    "fa": "در مسابقهٔ تلویزیونی بریتانیایی «Golden Balls»، دو بازیکنِ آخر هر کدام مخفیانه یکی از دو توپ «تقسیم» یا «دزدی» را انتخاب می‌کردند: اگر هر دو تقسیم می‌کردند پول نصف می‌شد، اگر یکی دزدی می‌کرد همه را می‌برد، و اگر هر دو دزدی می‌کردند هیچ‌کس چیزی نمی‌برد. این یک دوراهی زندانیِ یک‌باره با پول واقعی و زیاد است. پژوهشگران (Burton-Chellew و West، PLOS ONE ۲۰۱۲) رفتار شرکت‌کنندگان را بررسی کردند و دیدند هرچه مبلغ بزرگ‌تر بود همکاری کمتر می‌شد، بازیکنان مسن‌تر بیشتر همکاری می‌کردند، و قول‌دادن و خندیدن نشانه‌های قابل‌اعتمادی از همکاری بودند، هرچند طرف مقابل لزوماً آن‌ها را تشخیص نمی‌داد.\nچرا این داستان؟ نشان می‌دهد گفت‌وگو و قول بی‌ضمانت هم بی‌اثر نیست، ولی پُلاک درست می‌گوید که بدون «دندان» تضمینی نمی‌دهد.",
+    "en": "The Golden Balls 'Split or Steal' finale is a high-stakes one-shot prisoner's dilemma; a 2012 PLOS ONE study found less cooperation at higher stakes and that promises signalled cooperation."
+   },
+   "source": "https://ideas.repec.org/a/plo/pone00/0033344.html"
+  },
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "صف اتوبوس یا نانوایی شلوغ را در نظر بگیرید. برای هر نفر جداگانه، جلو زدن یا هل دادن در هر حالت بهتر است: اگر بقیه صف را رعایت کنند زودتر می‌رسد، اگر نکنند عقب نمی‌ماند. اما وقتی همه هل می‌دهند، همه دیرتر و با دعوا می‌رسند. نانوایی‌ای که شماره یا نوبت‌گیر گذاشته، در زبان پُلاک «پیامدها را عوض کرده»؛ و محله‌ای که مشتری‌ها هر روز هم را می‌بینند، با «تکرار و آبرو» مشکل را کمتر دارد.",
+    "en": "Queue-jumping at a busy bakery is a prisoner's dilemma; ticket numbers change payoffs, and daily neighbourhood repetition adds reputation."
+   },
+   "source": null
+  }
+ ],
+ "why": {
+  "fa": "بسیاری از گره‌های جمعی (رعایت‌نکردن صف، رشوه، کم‌گذاشتن در کار گروهی) ساختار دوراهی زندانی دارند؛ این مدل نشان می‌دهد راه حل بیشتر در طراحی قاعده و تکرار است تا موعظه. در سیمرغ، هر جا همکاری لازم است، باید «دندان» و «تکرار» در طراحی باشد.",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "در زبانهٔ «تکرار»، راهبرد «تلافی هم‌سنگ» را در برابر «همیشه خیانت» و «همیشه همکاری» بگذارید و ببینید با بیشتر شدن تعداد دورها، کدام جلو می‌افتد. بعد از خود بپرسید: در زندگی شما کدام رابطه یک‌باره است و کدام تکراری؟",
+   "en": null
+  },
+  "tool": "soc/tools/games.html#repeated"
+ },
+ "confusions": [
+  {
+   "fa": "«دوراهی زندانی یعنی آدم‌ها بدجنس‌اند» — نه؛ یعنی حتی آدم‌های معقول هم در این ساختار به نتیجهٔ بد می‌رسند، و همین است که ساختار را مهم می‌کند.",
+   "en": null
+  },
+  {
+   "fa": "«حرف‌زدن مشکل را حل می‌کند» — پُلاک می‌گوید مشکل کمبود گفت‌وگو نیست؛ قول بی‌ضمانت پیامدها را عوض نمی‌کند، قرارداد اجرایی یا تکرار می‌کند.",
+   "en": null
+  },
+  {
+   "fa": "«۷۰٪ آلفا» یک قانون طبیعت است — نه؛ عدد تقریبی گوینده است و در پژوهش‌ها بسته به شرایط (پول، گفت‌وگو، فرهنگ) بسیار فرق می‌کند.",
+   "en": null
+  }
+ ]
+}

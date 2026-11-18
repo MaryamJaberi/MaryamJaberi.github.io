@@ -1,0 +1,128 @@
+{
+ "id": "soc:gt-explainer-nash-and-classic-games",
+ "kind": "concept",
+ "title": {
+  "fa": "تعادل نش و بازی‌های کلاسیک: دوراهی زندانی، شکار گوزن، جوجه",
+  "en": "Nash equilibrium and classic games: prisoner's dilemma, stag hunt, chicken",
+  "nl": "Nash-evenwicht en klassieke spellen"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "تعادل نش نقطه‌ای است که هیچ بازیکنی با تغییر یک‌جانبهٔ راهبردش سود نمی‌برد؛ لزوماً بهترین نتیجهٔ جمعی نیست. دوراهی زندانی نشان می‌دهد عقلانیت فردی نتیجهٔ بدِ جمعی می‌سازد؛ شکار گوزن مسئلهٔ اعتماد (همکاری فقط اگر هر دو متعهد شوند) و بازی جوجه مسئلهٔ لجبازی و غرور (چه کسی اول کوتاه می‌آید) است.",
+  "en": "A Nash equilibrium is where no player gains by deviating alone; it need not be collectively best. The prisoner's dilemma shows individual rationality producing a bad collective result; stag hunt is a trust problem; chicken is a standoff over who yields first.",
+  "nl": "Een Nash-evenwicht is een punt waarop niemand eenzijdig wint door af te wijken."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "شلینگ: نشانه‌ها، تهدید و وعده در دیپلماسی؛ اکسلرود: در بازی تکرارشده راهبرد ساده‌ای مثل «تلافی هم‌سنگ» می‌تواند همکاری را پایدار کند.",
+    "en": "Schelling on signalling and threats; Axelrod: in repeated games a simple strategy like tit-for-tat can sustain cooperation.",
+    "nl": "Schelling on signalling and threats; Axelrod: in repeated games a simple strategy like tit-for-tat can sustain cooperation."
+   },
+   "sources": [
+    "src:241fa6b10e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمونه‌های متن: رقابت قیمتی، مذاکرهٔ اقلیم، رقابت تسلیحاتی، بن‌بست هسته‌ای (شبیه جوجه). این‌ها تمثیل‌اند، نه اندازه‌گیری.",
+    "en": "Examples in the text (price wars, climate talks, arms races, nuclear standoff) are illustrations, not measurements.",
+    "nl": "Examples in the text (price wars, climate talks, arms races, nuclear standoff) are illustrations, not measurements."
+   },
+   "sources": [
+    "src:241fa6b10e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:repeated-games-cooperation",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  },
+  {
+   "to": "soc:generalized-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  }
+ ],
+ "people": [
+  "core:nash-j",
+  "core:schelling-t",
+  "core:axelrod-r"
+ ],
+ "sources": [
+  "src:241fa6b10e"
+ ],
+ "booklets": [],
+ "origin": "m_gt-explainer.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "تعادل نش جایی است که هیچ بازیکنی، اگر بقیه کارشان را عوض نکنند، با عوض‌کردن کار خودش سود نمی‌برد. یعنی «نقطهٔ استراحت» بازی است. نکتهٔ مهم: این نقطه لزوماً خوب نیست؛ در دوراهی زندانی تعادل، خیانت هر دو است که برای هر دو بد است.\n\nراوی دو بازی دیگر را هم کنار دوراهی زندانی می‌گذارد. در «شکار گوزن» دو شکارچی اگر با هم گوزن بزنند سهم بزرگ می‌برند، اما اگر یکی سراغ خرگوش برود آن که منتظر گوزن مانده دست خالی می‌ماند. این بازی دو تعادل دارد (هر دو گوزن، یا هر دو خرگوش) و مسئله‌اش اعتماد است، نه وسوسه. در «جوجه» دو راننده رو به هم می‌رانند؛ اگر کسی منحرف نشود هر دو تصادف می‌کنند. اینجا هر کس می‌خواهد دیگری کوتاه بیاید و مسئله غرور و تهدید است، همان چیزی که شلینگ دربارهٔ «نشانه‌ها، تهدید و وعده» نوشت.\n\nاعتراض منصفانه: آدم‌ها همیشه به تعادل نمی‌رسند، و وقتی چند تعادل هست، نظریه به‌تنهایی نمی‌گوید کدام رخ می‌دهد؛ فرهنگ، تاریخ و نشانه‌ها تعیین‌کننده‌اند.\n\nنتیجهٔ عملی: پیش از درمان یک گره جمعی بپرسید کدام بازی است. دوراهی زندانی قاعده و ضمانت می‌خواهد؛ شکار گوزن اعتمادسازی و نشانهٔ تعهد؛ جوجه راهی برای عقب‌نشینی بدون از دست دادن آبرو.",
+  "en": "A Nash equilibrium is where no one gains by changing alone; it need not be good for all. Stag hunt is a trust problem with two equilibria; chicken is a standoff of pride and threats (Schelling). Each needs a different remedy: rules, trust-building, or a face-saving exit."
+ },
+ "examples": [
+  {
+   "kind": "story",
+   "label": "real",
+   "text": {
+    "fa": "در مسابقه‌های کامپیوتری اکسلرود، هر برنامه با همهٔ برنامه‌های دیگر ۲۰۰ دور دوراهی زندانی بازی کرد. برندهٔ هر دو دور «تلافی هم‌سنگ» بود: شروع با همکاری، و بعد تکرار حرکت قبلی طرف مقابل. اکسلرود نسخهٔ «زیست‌بومی» هم اجرا کرد: سهم هر راهبرد در نسل بعد به موفقیتش در نسل قبل بسته بود؛ در پایان چند راهبرد «خوش‌نیت» میدان را گرفتند. نکتهٔ جالب این است که تلافی هم‌سنگ هیچ‌وقت در یک بازی تکی از حریفش امتیاز بیشتری نمی‌گیرد، اما در جمع کل بیشترین امتیاز را دارد.\nچرا این داستان؟ نشان می‌دهد تعادلِ بدِ دوراهی زندانیِ یک‌باره با تکرار می‌تواند به تعادل همکاری تبدیل شود؛ همان چیزی که راوی از اکسلرود نقل می‌کند.",
+    "en": "In Axelrod's tournaments Tit for Tat never beat any single opponent yet scored highest overall; in the ecological version 'nice' strategies took over."
+   },
+   "source": "https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation"
+  },
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "شکار گوزن در محله: همسایه‌ها می‌خواهند با هم پول بگذارند و آسانسور ساختمان را عوض کنند. اگر همه پول بدهند، آسانسور نو می‌شود (گوزن). اگر کسی مطمئن نباشد بقیه می‌دهند، پولش را نگه می‌دارد (خرگوش)، و کسی که زودتر پول داده ضرر می‌کند. اینجا کسی بدجنس نیست؛ مشکل اعتماد است. حساب مشترکی که پول فقط وقتی برداشت شود که همه داده باشند، این بازی را حل می‌کند.",
+    "en": "Neighbours pooling money for a new lift face a stag hunt; an escrow-style account that releases funds only when all have paid solves the trust problem."
+   },
+   "source": null
+  },
+  {
+   "kind": "everyday",
+   "label": "illustration",
+   "text": {
+    "fa": "بازی جوجه در کوچه: دو ماشین در کوچهٔ باریک رو به روی هم ایستاده‌اند و هیچ‌کدام نمی‌خواهد دنده‌عقب برود. هر چه بیشتر بمانند، بوق و دعوا بیشتر می‌شود. معمولاً کسی کوتاه می‌آید که راهی برای «حفظ آبرو» پیدا کند؛ مثلاً یک رهگذر بگوید «آقا شما بزرگواری کن». این همان چیزی است که در بحران‌های بزرگ هم دنبالش می‌گردند: راه عقب‌نشینی بی‌تحقیر.",
+    "en": "Two cars facing each other in a narrow alley play chicken; a face-saving exit usually ends it."
+   },
+   "source": null
+  }
+ ],
+ "why": {
+  "fa": "تشخیص اینکه یک مشکل جمعی دوراهی زندانی است، شکار گوزن یا جوجه، نوع راه‌حل را عوض می‌کند. در «ساخت ایران» و سیمرغ، بسیاری از کارهای جمعی شکار گوزن‌اند: مشکل اعتماد است، نه خودخواهی.",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "در ماتریس‌ساز، شکار گوزن و جوجه را انتخاب کنید و ببینید هر کدام چند تعادل نش دارد. بعد یک گره جمعی در زندگی خودتان پیدا کنید و حدس بزنید کدام یک از این سه بازی است.",
+   "en": null
+  },
+  "tool": "soc/tools/games.html#matrix"
+ },
+ "confusions": [
+  {
+   "fa": "«تعادل نش یعنی بهترین نتیجه» — نه؛ یعنی نتیجه‌ای که کسی به‌تنهایی انگیزه‌ای برای ترکش ندارد، حتی اگر برای همه بد باشد.",
+   "en": null
+  },
+  {
+   "fa": "«شکار گوزن همان دوراهی زندانی است» — نه؛ در شکار گوزن اگر مطمئن باشید دیگری همکاری می‌کند، شما هم می‌خواهید همکاری کنید؛ وسوسهٔ خیانت نیست، ترس هست.",
+   "en": null
+  }
+ ]
+}

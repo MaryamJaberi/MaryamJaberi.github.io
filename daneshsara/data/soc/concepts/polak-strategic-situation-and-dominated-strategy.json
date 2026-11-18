@@ -1,0 +1,137 @@
+{
+ "id": "soc:polak-strategic-situation-and-dominated-strategy",
+ "kind": "concept",
+ "title": {
+  "fa": "موقعیت راهبردی و راهبرد اکیداً مغلوب",
+  "en": "Strategic situations and strictly dominated strategies",
+  "nl": "Strategische situaties en strikt gedomineerde strategieën"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "موقعیت راهبردی جایی است که نتیجهٔ کار من به کنش‌های دیگران هم بستگی دارد. رقابت کامل و انحصار راهبردی نیستند؛ هرچه میانشان است (رقابت ناقص) راهبردی است. اگر راهبردی در هر حالتِ رفتار دیگران نتیجهٔ بدتری از راهبرد دیگرم بدهد، آن را نباید بازی کرد. پُلاک یک درس دیگر هم می‌گیرد: پیش از تحلیل، بدان خودت واقعاً چه می‌خواهی، چون پیامدها را ارزش‌های بازیکن می‌سازند.",
+  "en": "A strategic situation is one where my outcome depends on others' actions as well as mine. Perfect competition and monopoly are not strategic; everything in between is. If a strategy does worse than another against every possible move of the others, do not play it.",
+  "nl": "Een strategische situatie is er een waarin mijn uitkomst ook afhangt van de acties van anderen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ماتریس پیامد: ردیف‌ها انتخاب‌های من، ستون‌ها انتخاب‌های طرف مقابل، و در هر خانه پیامدِ هر دو (اول بازیکن ردیف) نوشته می‌شود.",
+    "en": "Outcome matrix: my choices in rows, the other's in columns, both payoffs in each cell (row player first).",
+    "nl": "Outcome matrix: my choices in rows, the other's in columns, both payoffs in each cell (row player first)."
+   },
+   "sources": [
+    "src:7cddda2c95"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درس ۱: راهبرد اکیداً مغلوب را بازی نکنید، چون راهبرد غالب در هر حالت نتیجهٔ بهتری می‌دهد.",
+    "en": "Lesson 1: never play a strictly dominated strategy; the dominating one does better in every case.",
+    "nl": "Lesson 1: never play a strictly dominated strategy; the dominating one does better in every case."
+   },
+   "sources": [
+    "src:7cddda2c95"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "درس ۳: پیامدها مهم‌اند. با عوض‌شدن ارزش‌ها (چیزی که آدم‌ها به آن اهمیت می‌دهند) همان ساختار بازی نتیجهٔ دیگری می‌دهد؛ مثلاً «مسئلهٔ هماهنگی» که راهبرد غالب ندارد.",
+    "en": "Lesson 3: payoffs matter; change what people care about and the same structure yields a different outcome, e.g. a coordination problem with no dominant strategy.",
+    "nl": "Lesson 3: payoffs matter; change what people care about and the same structure yields a different outcome, e.g. a coordination problem with no dominant strategy."
+   },
+   "sources": [
+    "src:7cddda2c95"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:repeated-games-cooperation",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  },
+  {
+   "to": "soc:play-games-culture-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  }
+ ],
+ "people": [
+  "core:polak-b"
+ ],
+ "sources": [
+  "src:7cddda2c95"
+ ],
+ "booklets": [],
+ "origin": "m_polak-gt-lec1.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "پُلاک می‌گوید هر جا نتیجهٔ کار شما فقط به کار خودتان بستگی ندارد و به کار دیگران هم بسته است، در «موقعیت راهبردی» هستید. برای دیدنِ چنین موقعیتی یک جدول می‌کشد: ردیف‌ها انتخاب‌های من، ستون‌ها انتخاب‌های طرف مقابل، و در هر خانه نتیجهٔ هر دو. این جدول «ماتریس پیامد» است.\n\nاولین ابزار تحلیل ساده است: اگر یکی از انتخاب‌هایتان در هر حالتی که طرف مقابل بازی کند بدتر از انتخاب دیگرتان باشد، آن انتخاب «اکیداً مغلوب» است و دلیلی برای بازی‌کردنش نیست. بعد پُلاک نشان می‌دهد همان جدول با «ارزش‌های» متفاوت (کسی که فقط به نمرهٔ خودش اهمیت می‌دهد، در برابر کسی که از نابرابری ناراحت می‌شود) بازی دیگری می‌شود: گاهی دیگر انتخاب غالبی نیست و مسئله به «هماهنگی» تبدیل می‌شود.\n\nاعتراض منصفانه: آدم‌ها همیشه پیامدهای خود را نمی‌دانند و به شکل عددی فکر نمی‌کنند؛ پس جدول ممکن است ساده‌سازی گمراه‌کننده‌ای باشد. پاسخ خود پُلاک این است که جدول ادعا نمی‌کند آدم‌ها حساب می‌کنند؛ ابزاری است تا ببینیم اگر ارزش‌ها این باشند چه پیش می‌آید، و به همین دلیل می‌گوید «پیامدها مهم‌اند».\n\nنتیجهٔ عملی: پیش از هر تصمیم جمعی دو پرسش بپرسید: «چه چیزی برای من مهم است؟» و «آیا انتخابی دارم که در هر حال بدتر است؟» اگر بله، کنارش بگذارید و بقیه را بسنجید.",
+  "en": "Polak defines a strategic situation as one where your outcome depends on others' choices too, and draws it as a payoff matrix. Never play a strictly dominated strategy. But payoffs come from what players value: change the values and the same choices form a different game, sometimes a coordination problem. Objection: real people rarely know their payoffs as numbers; the matrix is a thinking aid, not a claim about how people calculate."
+ },
+ "examples": [
+  {
+   "kind": "game",
+   "label": "illustration",
+   "text": {
+    "fa": "شب بازی مافیا: شما شهروندید و در رأی‌گیری روز باید بین «رأی به بازیکن مشکوک» و «سکوت» انتخاب کنید. فرض کنید هر بار سکوت کرده‌اید، چه بقیه رأی داده باشند چه نه، شب بعد مافیا راحت‌تر شما را حذف کرده است، چون شما را بی‌خطر دیده. یعنی «سکوت» در هر دو ستون بدتر است: راهبرد اکیداً مغلوب. حالا جدول را برای یک بازیکن دیگر بکشید که فقط می‌خواهد تا آخر بماند و از حذف‌شدن بیشتر از باختن شهر می‌ترسد: برای او پیامدها فرق دارد و شاید سکوت دیگر مغلوب نباشد. این همان «پیامدها مهم‌اند» است.",
+    "en": "In a Mafia day vote, staying silent may be worse whatever others do (dominated); for a player who only fears elimination, the payoffs and the game change."
+   },
+   "source": null
+  },
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "دو مغازهٔ پارچه‌فروشی کنار هم در بازار. اگر یکی تخفیف بدهد، فروش دیگری کم می‌شود؛ پس تصمیم هر کدام به تصمیم دیگری بسته است: موقعیت راهبردی. اما فروشندهٔ دوره‌گردی که در میدان بزرگ بین صدها فروشنده است، تأثیری روی قیمت بازار ندارد و فقط قیمت را می‌پذیرد؛ برای او مسئله راهبردی نیست. این دقیقاً تمایز پُلاک بین «رقابت کامل» و «رقابت ناقص» است.",
+    "en": "Two neighbouring cloth shops in a bazaar face a strategic situation; a lone street vendor among hundreds is a price-taker."
+   },
+   "source": null
+  },
+  {
+   "kind": "everyday",
+   "label": "illustration",
+   "text": {
+    "fa": "خانواده‌ای می‌خواهد برای عید بین «سفر شمال» و «ماندن و دیدوبازدید» تصمیم بگیرد. اگر پیش از بحث هر کس بنویسد واقعاً چه برایش مهم است (استراحت، دیدن مادربزرگ، خرج کمتر)، معلوم می‌شود جدول هر نفر فرق دارد. بحث‌هایی که بی‌نتیجه می‌مانند معمولاً جایی‌اند که کسی جدول دیگری را حدس نزده. همان درس «اول بدان چه می‌خواهی».",
+    "en": "A family's holiday decision goes better when each writes down what they actually value first."
+   },
+   "source": null
+  }
+ ],
+ "why": {
+  "fa": "بیشتر تصمیم‌های اجتماعی ایران (از صف نانوایی تا قیمت‌گذاری بازار) راهبردی‌اند؛ دیدن جدول پیامد کمک می‌کند به‌جای سرزنش آدم‌ها، ساختار موقعیت را ببینیم. در سیمرغ، هر مینی‌بازی را می‌توان اول با همین جدول طراحی کرد.",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "در ماتریس‌ساز «بازی نمره» را بسازید: اول با پیامدهای «فقط نمرهٔ خودم مهم است» و بعد با «از نابرابری ناراحت می‌شوم». ببینید راهبرد غالب کجا ناپدید می‌شود.",
+   "en": null
+  },
+  "tool": "soc/tools/games.html#matrix"
+ },
+ "confusions": [
+  {
+   "fa": "«عقلانی» در نظریهٔ بازی یعنی «خودخواه» — نه؛ یعنی به بهترین شکل دنبال پیامدهای خودت بودن، هر چه آن پیامدها باشد (از جمله اهمیت‌دادن به دیگران).",
+   "en": null
+  },
+  {
+   "fa": "«راهبرد مغلوب» یعنی انتخابی که معمولاً بد است — نه؛ یعنی در هر حالت، بدون استثنا، از انتخاب دیگری بدتر است.",
+   "en": null
+  }
+ ]
+}

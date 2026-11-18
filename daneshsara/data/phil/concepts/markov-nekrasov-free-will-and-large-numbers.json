@@ -1,0 +1,141 @@
+{
+ "id": "phil:markov-nekrasov-free-will-and-large-numbers",
+ "kind": "concept",
+ "title": {
+  "fa": "دعوای نکراسوف و مارکوف: آیا آمار اجتماعی اراده‌آزادی را ثابت می‌کند؟",
+  "en": "Nekrasov vs Markov: does social statistics prove free will?",
+  "nl": "Nekrasov tegen Markov: bewijst sociale statistiek de vrije wil?"
+ },
+ "aliases": [],
+ "parent": "phil:science",
+ "field": "phil:science",
+ "summary": {
+  "fa": "قانون اعداد بزرگ (برنولی، ۱۷۱۳) برای رویدادهای مستقل ثابت شده بود. نکراسوف از همگرایی آمارهای اجتماعی (ازدواج، جرم) نتیجه گرفت تصمیم‌های پشتشان مستقل و پس «آزادانه»اند. مارکوف نشان داد هم‌گرایی به وابستگی هم می‌خورد، پس از آمار نمی‌شود اراده‌آزادی را نتیجه گرفت: استدلال نکراسوف نیاز نبود درست باشد.",
+  "en": "Bernoulli proved the law of large numbers for independent events. Nekrasov inferred from convergent social statistics that the underlying decisions are independent, hence free. Markov showed convergence also occurs with dependent events, so the inference fails.",
+  "nl": "Markov toonde aan dat convergentie ook bij afhankelijke gebeurtenissen optreedt."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آزمون مارکوف: بیست‌هزار حرف نخست «اوگنی اونگین»؛ ۴۳٪ صدادار و ۵۷٪ بی‌صدا؛ جفت «صدادار-صدادار» فقط حدود ۶٪ دیده شد نه حدود ۱۸٪ که استقلال پیش‌بینی می‌کرد.",
+    "en": "Markov's test: first 20,000 letters of Eugene Onegin, 43% vowels / 57% consonants; vowel-vowel pairs about 6% instead of about 18% under independence.",
+    "nl": "Markov's test: first 20,000 letters of Eugene Onegin, 43% vowels / 57% consonants; vowel-vowel pairs about 6% instead of about 18% under independence."
+   },
+   "sources": [
+    "src:7481c3593e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیام روش‌شناختی: همگرایی آماری به‌تنهایی نشان نمی‌دهد رویدادهای پشتش مستقل یا «آزادانه»اند. برای کار با آمار اجتماعی (ایران) هم مهم است.",
+    "en": "Methodological lesson: statistical convergence alone does not show independence or free choice; relevant when reading social statistics.",
+    "nl": "Methodological lesson: statistical convergence alone does not show independence or free choice; relevant when reading social statistics."
+   },
+   "sources": [
+    "src:7481c3593e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "انگیزهٔ ایدئولوژیک مارکوف (دشمنی با نکراسوفِ مذهبی و هم‌پیمان تزار) را راوی گزارش می‌کند؛ تفسیر انگیزه‌ها دست‌دوم است.",
+    "en": "The narrator reports Markov's rivalry motives; motive attributions are second-hand.",
+    "nl": "The narrator reports Markov's rivalry motives; motive attributions are second-hand."
+   },
+   "sources": [
+    "src:7481c3593e"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:free-will",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  },
+  {
+   "to": "phil:foreknowledge-free-will-critique",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  }
+ ],
+ "people": [
+  "core:markov-a",
+  "core:nekrasov-p",
+  "core:bernoulli-j"
+ ],
+ "sources": [
+  "src:7481c3593e"
+ ],
+ "booklets": [],
+ "origin": "m_veritasium-markov.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "قانون اعداد بزرگ می‌گوید اگر کاری تصادفی (مثل پرتاب سکه) را بارها تکرار کنید، میانگین نتیجه به یک عدد ثابت نزدیک می‌شود. برنولی این را در ۱۷۱۳ برای رویدادهای «مستقل» ثابت کرده بود، یعنی رویدادهایی که روی هم اثر ندارند.\n\nبه روایت ویدیو، نکراسوف، ریاضی‌دان روس، دید که آمارهای اجتماعی (مثل تعداد ازدواج‌ها در سال) هم هر سال به عدد ثابتی نزدیک‌اند. از اینجا نتیجه گرفت که تصمیم‌های پشت این آمار باید مستقل و پس «آزادانه» باشند. مارکوف این استدلال را نادرست دانست و برای نشان دادنش یک زنجیره ساخت: در متن شعر پوشکین، اینکه حرف بعدی صدادار باشد یا نه، به حرف فعلی بستگی دارد (رویدادها وابسته‌اند)، و با این حال نسبت صدادارها باز به عدد ثابتی (۴۳٪) می‌رسد. پس هم‌گرایی آماری ثابت نمی‌کند رویدادها مستقل‌اند.\n\nاعتراض منصفانه: این آزمایش استدلال نکراسوف را رد می‌کند، اما دربارهٔ خود اراده‌آزادی چیزی ثابت یا رد نمی‌کند؛ فقط نشان می‌دهد آمار ابزار مناسبی برای این پرسش نیست. همچنین روایت انگیزه‌های سیاسی و مذهبی دو طرف ساده‌سازی رسانه‌ای است.\n\nنتیجهٔ عملی: وقتی آماری ثابت می‌ماند (مثلاً نرخ طلاق یا ازدواج در سال)، نباید فوراً نتیجه گرفت تصمیم‌های پشتش مستقل یا آزادانه‌اند؛ تصمیم آدم‌ها به هم وابسته است و باز هم می‌تواند آمار ثابتی بسازد.",
+  "en": "Bernoulli proved the law of large numbers for independent events. Nekrasov argued that stable social statistics imply independent, hence free, decisions. Markov built a dependent chain from Pushkin's text (vowel/consonant) that still converges, refuting the inference. It says nothing for or against free will itself, only that statistics cannot settle it."
+ },
+ "examples": [
+  {
+   "kind": "story",
+   "label": "real",
+   "text": {
+    "fa": "در سال ۱۹۱۳ آندری مارکوف در سن پترزبورگ ۲۰٬۰۰۰ حرف نخست «اوگنی اونگین» پوشکین را برداشت، نقطه‌گذاری و فاصله‌ها را حذف کرد و حرف‌ها را در ۲۰۰ جدول ده‌در‌ده چید. بعد با قلم و کاغذ صدادارهای هر ردیف و ستون را شمرد. حدود ۴۳٪ حرف‌ها صدادار بودند. سپس جفت‌های پشت‌سرهم را شمرد: ۱٬۱۰۴ جفت صدادار-صدادار، ۳٬۸۲۷ جفت بی‌صدا-بی‌صدا و ۱۵٬۰۶۹ جفت مختلط. اگر حرف‌ها مستقل بودند، جفت صدادار-صدادار باید حدود ۱۸٪ می‌بود، اما فقط حدود ۵٫۵٪ بود: بعد از صدادار معمولاً بی‌صدا می‌آید. مقاله‌اش در زمان خودش کم دیده شد و تا ۲۰۰۶ به انگلیسی ترجمه نشد.\nچرا این داستان؟ همین شمارش دستی بود که نشان داد رویدادهای وابسته هم به نسبت ثابتی می‌رسند؛ یعنی هم‌گرایی دلیل استقلال نیست.",
+    "en": "In 1913 Markov hand-counted the first 20,000 letters of Eugene Onegin: about 43% vowels and only 1,104 vowel-vowel pairs (~5.5%) versus ~18% expected under independence."
+   },
+   "source": "https://spectrum.ieee.org/andrey-markov-and-claude-shannon-built-the-first-language-generation-models"
+  },
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "فرض کنید آمار سالانهٔ ازدواج در یک شهر سال‌ها تقریباً ثابت مانده باشد. وسوسه این است که بگوییم «هر زوج کاملاً مستقل تصمیم گرفته». اما در زندگی واقعی ازدواج‌ها به هم وابسته‌اند: یک عروسی در فامیل خواستگاری‌های بعدی را راه می‌اندازد، و فشار «همسن‌هایت ازدواج کرده‌اند» تصمیم بعدی را شکل می‌دهد. درس مارکوف این است که چنین زنجیرهٔ وابسته‌ای هم می‌تواند آمار ثابتی بسازد؛ پس از ثابت‌بودن عدد نمی‌شود دربارهٔ آزادی یا استقلال تصمیم‌ها نتیجه گرفت.",
+    "en": "Stable marriage statistics in a city do not show independent choices; one wedding triggers others, yet totals can still be stable."
+   },
+   "source": null
+  },
+  {
+   "kind": "everyday",
+   "label": "illustration",
+   "text": {
+    "fa": "ویدیو مثال ساده‌ای دارد: اگر از جمعیتی بخواهید قیمت چیزی را تنها و جدا حدس بزنند، میانگین حدس‌ها به عدد معقولی می‌رسد. اما اگر حدس‌ها را بلند در جمع بگویند، نفر اول روی بقیه اثر می‌گذارد و حدس‌ها دیگر مستقل نیستند. همین را در یک جلسهٔ خانوادگی هم می‌بینید: اگر بزرگ خانواده اول نظر بدهد، بقیه نزدیک به نظر او حرف می‌زنند.",
+    "en": "Guesses shouted publicly stop being independent: the first voice anchors the rest, as when the eldest speaks first in a family meeting."
+   },
+   "source": null
+  }
+ ],
+ "why": {
+  "fa": "برای خواندن آمار اجتماعی ایران مهم است: عددِ ثابت یا رو به میانگین، به‌تنهایی چیزی دربارهٔ آزادی، استقلال یا علت تصمیم‌ها نمی‌گوید. در سیمرغ هم رأی‌ها و انتخاب‌های بازیکنان به هم وابسته‌اند و این باید در تحلیل نتیجه دیده شود.",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "در زبانهٔ «مارکوف» یک متن فارسی بدهید و ببینید بعد از یک حرف خاص، احتمال هر حرف بعدی چقدر است. آیا حرف‌های فارسی هم به هم وابسته‌اند؟",
+   "en": null
+  },
+  "tool": "soc/tools/games.html#markov"
+ },
+ "confusions": [
+  {
+   "fa": "«مارکوف ثابت کرد اراده‌آزادی وجود ندارد» — نه؛ فقط نشان داد استدلال آماری نکراسوف برای اثباتش درست نیست.",
+   "en": null
+  },
+  {
+   "fa": "«قانون اعداد بزرگ فقط برای رویدادهای مستقل کار می‌کند» — همین را مارکوف رد کرد: برای بسیاری از زنجیره‌های وابسته هم برقرار است.",
+   "en": null
+  }
+ ]
+}

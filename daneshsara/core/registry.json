@@ -1,15 +1,15 @@
 {
 "stats": {
-"concepts": 1707,
-"concepts_with_sources": 1659,
+"concepts": 1714,
+"concepts_with_sources": 1666,
 "cross_wiki_links": 1237,
 "bridge_links": 133,
 "iran_notes": 0,
 "fields": 77,
 "bridges": 25,
-"people": 1768,
-"sources": 2507,
-"built": "2026-11-17"
+"people": 1781,
+"sources": 2513,
+"built": "2026-11-18"
 },
 "entries": {
 "psy:psych-detachment": {
@@ -3648,6 +3648,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:polak-strategic-situation-and-dominated-strategy": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "موقعیت راهبردی و راهبرد اکیداً مغلوب",
+"en": "Strategic situations and strictly dominated strategies",
+"nl": "Strategische situaties en strikt gedomineerde strategieën"
+},
+"url": "soc/#polak-strategic-situation-and-dominated-strategy",
+"status": "draft",
+"wikidata": null
+},
 "soc:anonymous-glossary-regime-words": {
 "wiki": "soc",
 "type": "concept",
@@ -4872,6 +4884,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:gt-explainer-fairness-emotion-limits": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "انصاف، احساس و حد مدل‌ها (بازی اولتیماتوم)",
+"en": "Fairness, emotion and the limits of models (ultimatum game)",
+"nl": "Eerlijkheid, emotie en grenzen van modellen"
+},
+"url": "soc/#gt-explainer-fairness-emotion-limits",
+"status": "draft",
+"wikidata": null
+},
 "soc:iranian-world-political-order-thesis": {
 "wiki": "soc",
 "type": "concept",
@@ -5613,6 +5637,18 @@
 "nl": "Bestuur, cultuur, geografie en geschiedenis: welke oorzaak kun je veranderen?"
 },
 "url": "soc/#governance-as-controllable-cause",
+"status": "draft",
+"wikidata": null
+},
+"soc:markov-chain-memoryless-models-and-limits": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "زنجیرهٔ مارکوف: مدل بی‌حافظه و حد آن",
+"en": "Markov chains: memoryless models and their limits",
+"nl": "Markovketens: geheugenloze modellen en hun grenzen"
+},
+"url": "soc/#markov-chain-memoryless-models-and-limits",
 "status": "draft",
 "wikidata": null
 },
@@ -9240,6 +9276,18 @@
 "status": "draft",
 "wikidata": null
 },
+"soc:gt-explainer-elements-and-game-types": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "اجزای بازی و انواع آن (حاصل‌جمع صفر و غیرصفر)",
+"en": "Elements of a game and game types (zero-sum vs non-zero-sum)",
+"nl": "Onderdelen van een spel en spelsoorten"
+},
+"url": "soc/#gt-explainer-elements-and-game-types",
+"status": "draft",
+"wikidata": null
+},
 "soc:ghadir-yemen-context": {
 "wiki": "soc",
 "type": "concept",
@@ -9297,6 +9345,18 @@
 "nl": "Ya'qub al-Saffar, Pouriya-ye Vali en lokale netwerken tegenover macht: de lezing van een filmmaker"
 },
 "url": "soc/#saffarid-pouriya-civic-networks",
+"status": "draft",
+"wikidata": null
+},
+"soc:polak-prisoners-dilemma-grade-game": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "دوراهی زندانی: بازی نمره و بازی‌های روزمره",
+"en": "The prisoner's dilemma: the grade game and everyday cases",
+"nl": "Het prisoner's dilemma: het cijferspel en alledaagse gevallen"
+},
+"url": "soc/#polak-prisoners-dilemma-grade-game",
 "status": "draft",
 "wikidata": null
 },
@@ -11877,6 +11937,18 @@
 "nl": "'Zuivere islam' en het gedrag van moslims: Jasemi's afwijzing van de scheiding tussen kern en geschiedenis"
 },
 "url": "soc/#jasemi-pure-islam-vs-conduct-thesis",
+"status": "draft",
+"wikidata": null
+},
+"soc:gt-explainer-nash-and-classic-games": {
+"wiki": "soc",
+"type": "concept",
+"title": {
+"fa": "تعادل نش و بازی‌های کلاسیک: دوراهی زندانی، شکار گوزن، جوجه",
+"en": "Nash equilibrium and classic games: prisoner's dilemma, stag hunt, chicken",
+"nl": "Nash-evenwicht en klassieke spellen"
+},
+"url": "soc/#gt-explainer-nash-and-classic-games",
 "status": "draft",
 "wikidata": null
 },
@@ -16197,6 +16269,18 @@
 "nl": "Mulla Sadra's substantiële beweging"
 },
 "url": "phil/#substantial-motion",
+"status": "draft",
+"wikidata": null
+},
+"phil:markov-nekrasov-free-will-and-large-numbers": {
+"wiki": "phil",
+"type": "concept",
+"title": {
+"fa": "دعوای نکراسوف و مارکوف: آیا آمار اجتماعی اراده‌آزادی را ثابت می‌کند؟",
+"en": "Nekrasov vs Markov: does social statistics prove free will?",
+"nl": "Nekrasov tegen Markov: bewijst sociale statistiek de vrije wil?"
+},
+"url": "phil/#markov-nekrasov-free-will-and-large-numbers",
 "status": "draft",
 "wikidata": null
 },
@@ -44765,6 +44849,176 @@
 "nl": "Andrew Ellis"
 },
 "url": "core/people.html#andrew-ellis",
+"wikis": [
+"soc"
+]
+},
+"core:von-neumann-j": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "von Neumann, J.",
+"en": "von Neumann, J.",
+"nl": "von Neumann, J."
+},
+"url": "core/people.html#von-neumann-j",
+"wikis": [
+"soc"
+]
+},
+"core:morgenstern-o": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Morgenstern, O.",
+"en": "Morgenstern, O.",
+"nl": "Morgenstern, O."
+},
+"url": "core/people.html#morgenstern-o",
+"wikis": [
+"soc"
+]
+},
+"core:nash-j": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Nash, J.",
+"en": "Nash, J.",
+"nl": "Nash, J."
+},
+"url": "core/people.html#nash-j",
+"wikis": [
+"soc"
+]
+},
+"core:schelling-t": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Schelling, T.",
+"en": "Schelling, T.",
+"nl": "Schelling, T."
+},
+"url": "core/people.html#schelling-t",
+"wikis": [
+"soc"
+]
+},
+"core:axelrod-r": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Axelrod, R.",
+"en": "Axelrod, R.",
+"nl": "Axelrod, R."
+},
+"url": "core/people.html#axelrod-r",
+"wikis": [
+"soc"
+]
+},
+"core:polak-b": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Polak, B.",
+"en": "Polak, B.",
+"nl": "Polak, B."
+},
+"url": "core/people.html#polak-b",
+"wikis": [
+"soc"
+]
+},
+"core:markov-a": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Markov, A.",
+"en": "Markov, A.",
+"nl": "Markov, A."
+},
+"url": "core/people.html#markov-a",
+"wikis": [
+"phil",
+"soc"
+]
+},
+"core:nekrasov-p": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Nekrasov, P.",
+"en": "Nekrasov, P.",
+"nl": "Nekrasov, P."
+},
+"url": "core/people.html#nekrasov-p",
+"wikis": [
+"phil"
+]
+},
+"core:bernoulli-j": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Bernoulli, J.",
+"en": "Bernoulli, J.",
+"nl": "Bernoulli, J."
+},
+"url": "core/people.html#bernoulli-j",
+"wikis": [
+"phil"
+]
+},
+"core:ulam-s": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Ulam, S.",
+"en": "Ulam, S.",
+"nl": "Ulam, S."
+},
+"url": "core/people.html#ulam-s",
+"wikis": [
+"soc"
+]
+},
+"core:shannon-c": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Shannon, C.",
+"en": "Shannon, C.",
+"nl": "Shannon, C."
+},
+"url": "core/people.html#shannon-c",
+"wikis": [
+"soc"
+]
+},
+"core:page-l": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Page, L.",
+"en": "Page, L.",
+"nl": "Page, L."
+},
+"url": "core/people.html#page-l",
+"wikis": [
+"soc"
+]
+},
+"core:brin-s": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "Brin, S.",
+"en": "Brin, S.",
+"nl": "Brin, S."
+},
+"url": "core/people.html#brin-s",
 "wikis": [
 "soc"
 ]

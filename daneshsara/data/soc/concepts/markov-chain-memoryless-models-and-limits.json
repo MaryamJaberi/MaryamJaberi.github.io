@@ -1,0 +1,144 @@
+{
+ "id": "soc:markov-chain-memoryless-models-and-limits",
+ "kind": "concept",
+ "title": {
+  "fa": "زنجیرهٔ مارکوف: مدل بی‌حافظه و حد آن",
+  "en": "Markov chains: memoryless models and their limits",
+  "nl": "Markovketens: geheugenloze modellen en hun grenzen"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "در زنجیرهٔ مارکوف وضعیت بعدی فقط به وضعیت فعلی بستگی دارد (بدون حافظه). همین سادگی سیستم‌های پیچیدهٔ وابسته را قابل‌مدل می‌کند: هوا، گسترش بیماری، نوترون‌ها، متن. حد آن: حلقه‌های بازخورد (مثل گرمایش جهانی) پیش‌بینی را سخت می‌کنند.",
+  "en": "In a Markov chain the next state depends only on the current one. This memoryless property makes complex dependent systems tractable; feedback loops limit it.",
+  "nl": "Bij een Markovketen hangt de volgende toestand alleen van de huidige af."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کاربردها: مونت‌کارلو (اولام و فون نویمان، پس از ۱۹۴۵)، پیج‌رنک (برین و پیج، ۱۹۹۸؛ با ضریب پرش حدود ۱۵٪)، پیش‌بینی توکن در مدل‌های زبانی (با افزودن «توجه»).",
+    "en": "Applications: Monte Carlo (Ulam and von Neumann), PageRank (about 15% random-jump damping), token prediction in language models (plus attention).",
+    "nl": "Applications: Monte Carlo (Ulam and von Neumann), PageRank (about 15% random-jump damping), token prediction in language models (plus attention)."
+   },
+   "sources": [
+    "src:7481c3593e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تعداد ریفل لازم برای تصادفی‌شدن دستهٔ ۵۲‌تایی: هفت. این نتیجهٔ Bayer و Diaconis (۱۹۹۲) است با معیار «فاصلهٔ تغییرات»؛ با معیارهای دیگر عدد فرق می‌کند (مثلاً شش، یا برای بازی‌های بی‌خال حدود چهار).",
+    "en": "Seven riffles (Bayer & Diaconis 1992, under total variation distance); other measures give six, or about four for unsuited games.",
+    "nl": "Seven riffles (Bayer & Diaconis 1992, under total variation distance); other measures give six, or about four for unsuited games."
+   },
+   "sources": [
+    "src:7481c3593e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ادعا دربارهٔ «فروپاشی» مدل‌های زبانی که با متن خودشان آموزش ببینند و گفته‌های پیج‌رنک/یاهو/سان از روی روایت و بدون ارجاع‌اند.",
+    "en": "The claims about language models degrading on their own output, and the Yahoo/Son anecdotes, are narrated without citation.",
+    "nl": "The claims about language models degrading on their own output, and the Yahoo/Son anecdotes, are narrated without citation."
+   },
+   "sources": [
+    "src:7481c3593e"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:feedback-loops-and-leverage-points",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  },
+  {
+   "to": "soc:network-structure-robustness",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  }
+ ],
+ "people": [
+  "core:markov-a",
+  "core:ulam-s",
+  "core:von-neumann-j",
+  "core:shannon-c",
+  "core:page-l",
+  "core:brin-s"
+ ],
+ "sources": [
+  "src:7481c3593e"
+ ],
+ "booklets": [],
+ "origin": "m_veritasium-markov.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "زنجیرهٔ مارکوف مدلی است که در آن آینده فقط به «حالا» بستگی دارد، نه به کل گذشته. مثل اینکه هوای فردا را فقط از هوای امروز حدس بزنید. هر حالت (آفتابی، ابری) و احتمال رفتن از هر حالت به حالت دیگر را می‌نویسید، و همین کافی است تا رفتار درازمدت سیستم را حساب کنید.\n\nویدیو نشان می‌دهد این سادگی چقدر کاربرد پیدا کرد: اولام و فون نویمان برای حساب رفتار نوترون‌ها در بمب، به‌جای حل معادله‌ها، زنجیره‌های تصادفی را بارها شبیه‌سازی کردند (روش مونت‌کارلو). برین و پیج وب را یک زنجیره دیدند: گشت‌زنی خیالی که در ۸۵٪ مواقع روی یک پیوند کلیک می‌کند و در ۱۵٪ به صفحه‌ای تصادفی می‌پرد؛ صفحه‌ای که این گشت‌زن بیشتر وقتش را آن‌جا می‌گذراند، «مهم‌تر» است (پیج‌رنک). شانون همین ایده را به پیش‌بینی حرف و کلمهٔ بعدی در متن برد، که ریشهٔ مدل‌های زبانی است.\n\nاعتراض منصفانه: دنیای واقعی همیشه بی‌حافظه نیست. جایی که حلقهٔ بازخورد هست (گرمایش، بخار آب بیشتر، گرمایش بیشتر)، یا گذشتهٔ دور مهم است، مدل ساده خطا می‌کند. خود ویدیو این حد را می‌گوید، و مدل‌های زبانی امروز هم با «توجه» به متن دورتر نگاه می‌کنند.\n\nنتیجهٔ عملی: پیش از استفاده از این مدل بپرسید «آیا دانستن حالِ حاضر برای پیش‌بینی گام بعد کافی است؟» اگر نه، باید حافظه یا بازخورد را وارد مدل کرد.",
+  "en": "In a Markov chain the next state depends only on the present. This memoryless trick powered Monte Carlo simulation, PageRank (a random surfer following links 85% of the time and jumping 15%) and text prediction. Limit: systems with feedback loops or long memory are poorly captured."
+ },
+ "examples": [
+  {
+   "kind": "story",
+   "label": "real",
+   "text": {
+    "fa": "دیو بایر و پرسی دیاکونیس، دو ریاضی‌دان، در سال ۱۹۹۲ مقاله‌ای با عنوان شوخ «ردیابی بُر زدن کبوتری تا لانه‌اش» منتشر کردند. آن‌ها هر حالت چیدمان ۵۲ کارت را یک «حالت» و هر بار بُر زدن ریفل را یک گام در زنجیرهٔ مارکوف گرفتند. نتیجه: دسته تا حدود پنج بُر خوب تقریباً هیچ تصادفی نمی‌شود و بعد از هفت بُر، با معیار آن‌ها، تقریباً کاملاً تصادفی است. دیگران با معیارهای دیگر به عدد شش رسیدند، و خود دیاکونیس بعدها گفت برای بازی‌هایی که خال مهم نیست، حدود چهار کافی است. یعنی جواب «چند بار؟» به این بسته است که «تصادفی» را چطور اندازه بگیریم.\nچرا این داستان؟ سؤالی روزمره را به یک زنجیرهٔ مارکوف تبدیل می‌کند و نشان می‌دهد عدد «هفت» ویدیو درست است، اما با شرط معیار.",
+    "en": "Bayer and Diaconis (1992) modelled riffle shuffling as a Markov chain: seven shuffles randomize a deck under their measure; other measures give six, or about four for some games."
+   },
+   "source": "https://en.wikipedia.org/wiki/Shuffling"
+  },
+  {
+   "kind": "game",
+   "label": "illustration",
+   "text": {
+    "fa": "یک شب بازی مافیا را مثل زنجیره ببینید: حالت‌ها «روز»، «شب» و «پایان بازی» است. اینکه بازی به کدام حالت برود، به ترکیب فعلی بازیکنان زنده بستگی دارد، نه به اینکه سه دور پیش چه شد. این تقریباً مارکوفی است. اما بازیکن خوب می‌داند همهٔ ماجرا این نیست: کینه از دور قبل، حرف‌هایی که دیروز زده شده و اعتبار هر کس «حافظه» به بازی می‌دهد؛ همان جایی که مدل بی‌حافظه کم می‌آورد.",
+    "en": "A Mafia night/day cycle is roughly Markovian in the alive-players state, but grudges and reputation add memory the simple model misses."
+   },
+   "source": null
+  },
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "پیج‌رنک را با «اعتبار» در بازار سنتی مقایسه کنید. حجره‌ای معتبر است که حجره‌داران معتبر دیگر مشتری را به آن حواله بدهند؛ و حوالهٔ یک حجرهٔ گمنام وزن کمی دارد. اگر مشتری خیالی را تصور کنید که بیشتر وقت‌ها به توصیهٔ همین حجره به آن حجره می‌رود و گاهی تصادفی سر از جای دیگر درمی‌آورد، حجره‌ای که بیشترین وقتش را آن‌جا می‌گذراند «معتبرترین» است. توصیه‌های ساختگی بین چند حجرهٔ بی‌اعتبار اثر کمی دارد.",
+    "en": "Bazaar reputation works like PageRank: referrals from reputable shops count more, and fake referrals among unknown shops count little."
+   },
+   "source": null
+  }
+ ],
+ "why": {
+  "fa": "بسیاری از سیستم‌های روزمره (صف، هوا، مسیر کاربر در سایت، اعتبار در شبکه) را می‌شود با این مدل ساده فهمید، و حد آن (بازخورد و حافظه) هم دقیقاً جایی است که مسائل اجتماعی ایران پیچیده می‌شوند. در سیمرغ، مدل «اعتبار پرنده‌ها» می‌تواند پیج‌رنکی باشد.",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "در زبانهٔ «پیج‌رنک» یک شبکهٔ چهارگره‌ای بسازید، بعد سه صفحهٔ ساختگی اضافه کنید که فقط به هم پیوند می‌دهند. رتبه چقدر عوض شد؟ ضریب پرش را صفر کنید و ببینید چه می‌شود.",
+   "en": null
+  },
+  "tool": "soc/tools/games.html#pagerank"
+ },
+ "confusions": [
+  {
+   "fa": "«مدل‌های زبانی امروزی همان زنجیرهٔ مارکوف‌اند» — ریشه‌شان پیش‌بینی گام بعد است، اما با «توجه» به متن طولانی نگاه می‌کنند و بی‌حافظه نیستند.",
+   "en": null
+  },
+  {
+   "fa": "«هفت بُر همیشه کافی است» — بسته به معیار و بازی، عدد فرق می‌کند؛ و بُر بد بیشتر می‌خواهد.",
+   "en": null
+  }
+ ]
+}

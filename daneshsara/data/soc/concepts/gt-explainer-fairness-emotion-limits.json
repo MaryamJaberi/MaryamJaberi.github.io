@@ -1,0 +1,127 @@
+{
+ "id": "soc:gt-explainer-fairness-emotion-limits",
+ "kind": "concept",
+ "title": {
+  "fa": "انصاف، احساس و حد مدل‌ها (بازی اولتیماتوم)",
+  "en": "Fairness, emotion and the limits of models (ultimatum game)",
+  "nl": "Eerlijkheid, emotie en grenzen van modellen"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "در بازی اولتیماتوم، پیشنهاددهنده سهمی از پول را به طرف دوم می‌دهد؛ اگر او رد کند هر دو چیزی نمی‌گیرند. نظریهٔ کلاسیک می‌گوید هر پیشنهاد مثبتی پذیرفته می‌شود، ولی در عمل پیشنهادهای بسیار ناعادلانه (مثلاً ۱۰٪) اغلب رد می‌شود. مدل‌ها به اطلاعات کامل، ثبات ترجیحات و عقلانیت تکیه می‌کنند که در واقعیت کم برقرار است؛ نظریهٔ بازی رفتاری روان‌شناسی را به مدل اضافه می‌کند.",
+  "en": "In the ultimatum game, rejecting an unfair split costs both sides, yet very unfair offers are often rejected. Models assume full information, stable preferences and rationality, which rarely hold; behavioural game theory adds psychology.",
+  "nl": "In het ultimatumspel worden zeer oneerlijke aanbiedingen vaak afgewezen."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "متن می‌گوید این الگو «در همهٔ فرهنگ‌ها» برقرار است؛ پژوهش میان‌فرهنگی Henrich و همکاران (۱۵ جامعهٔ کوچک) نشان داد میانگین پیشنهاد از ۲۶٪ تا ۵۸٪ فرق می‌کند و در برخی جوامع حتی پیشنهاد بیش از نصف رد می‌شود؛ پس «همه‌جا یکسان» درست نیست، هرچند مدل «فقط پول» در هیچ‌جا تأیید نشد.",
+    "en": "The text claims the pattern holds across all cultures; Henrich et al.'s 15-society study found mean offers from 26% to 58% and some groups rejecting hyper-fair offers; the pure-money model failed everywhere, but behaviour varies.",
+    "nl": "The text claims the pattern holds across all cultures; Henrich et al.'s 15-society study found mean offers from 26% to 58% and some groups rejecting hyper-fair offers; the pure-money model failed everywhere, but behaviour varies."
+   },
+   "sources": [
+    "src:241fa6b10e"
+   ],
+   "flags": [
+    "contested",
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "کاربردها (قیمت‌گذاری خودکار، امنیت سایبری، خودروی خودران) توصیفی و بدون منبع‌اند.",
+    "en": "Applications (algorithmic pricing, cyber-security, self-driving cars) are descriptive and unsourced.",
+    "nl": "Applications (algorithmic pricing, cyber-security, self-driving cars) are descriptive and unsourced."
+   },
+   "sources": [
+    "src:241fa6b10e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:generalized-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  },
+  {
+   "to": "soc:play-games-culture-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:241fa6b10e"
+ ],
+ "booklets": [],
+ "origin": "m_gt-explainer.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "بازی اولتیماتوم این است: به نفر اول مبلغی می‌دهند تا بخشی از آن را به نفر دوم پیشنهاد کند. اگر نفر دوم بپذیرد هر دو سهمشان را می‌برند، اگر رد کند هر دو هیچ نمی‌گیرند. حساب سادهٔ سود می‌گوید نفر دوم باید هر چیزی بیش از صفر را بپذیرد. راوی می‌گوید در عمل پیشنهادهای خیلی ناعادلانه (مثلاً ۱۰٪) را بسیاری رد می‌کنند و این را نه بی‌عقلی که «پیام» می‌داند: «با من ناعادلانه رفتار کنی، بازی نمی‌کنم».\n\nبه نظر راوی، این نشان می‌دهد مدل‌های کلاسیک فرض‌هایی دارند که در واقعیت کم برقرارند (اطلاعات کامل، ترجیحات ثابت، حساب‌گری خالص) و برای همین «نظریهٔ بازی رفتاری» روان‌شناسی، انصاف و احساس را به مدل اضافه کرده است.\n\nاعتراض منصفانه: ادعای «در همهٔ فرهنگ‌ها همین است» با داده‌ها نمی‌خواند. در پژوهش بزرگ میان‌فرهنگی، هم میزان پیشنهاد و هم آستانهٔ رد بسیار فرق داشت، و این تفاوت‌ها بیشتر با شکل زندگی اقتصادی هر جامعه (مثلاً میزان ادغام در بازار و همکاری در کار روزانه) جور بود تا با ویژگی‌های فردی. پس «انصاف» جهانی است، اما معنای «پیشنهاد منصفانه» فرهنگی است.\n\nنتیجهٔ عملی: در هر تقسیم (ارث، سود شراکت، تقسیم کار) سهمی که «از نظر حساب» کافی است ممکن است پذیرفته نشود، و آنچه منصفانه دیده می‌شود به عرف آن جمع بسته است.",
+  "en": "In the ultimatum game, rejecting costs both, yet very unfair offers are often rejected; the narrator sees this as a signal and the reason for behavioural game theory. Objection: the 'all cultures' claim is wrong in detail; Henrich et al. found mean offers from 26% to 58% across 15 small-scale societies, tracking each society's economic life. Fairness matters everywhere, but what counts as fair is cultural."
+ },
+ "examples": [
+  {
+   "kind": "story",
+   "label": "real",
+   "text": {
+    "fa": "در اواخر دههٔ ۱۹۹۰ گروهی از مردم‌شناسان و اقتصاددانان به سرپرستی جوزف هنریش، بازی اولتیماتوم را در ۱۵ جامعهٔ کوچک در چهار قاره اجرا کردند؛ از شکارگران و کشاورزان جنگل آمازون تا ماهیگیران اندونزی. نتیجه با دانشجوهای غربی (که میانگین پیشنهادشان معمولاً حدود ۴۴٪ است) فرق زیادی داشت. ماچیگوئنگاهای پرو که بیشتر در واحدهای خانوادگی کار می‌کنند، به‌طور میانگین ۲۶٪ پیشنهاد دادند و از ۲۱ پیشنهاد فقط یکی رد شد. در مقابل، نهنگ‌گیران لامالرا در اندونزی که شکار را دسته‌جمعی انجام می‌دهند و تقسیم می‌کنند، میانگین ۵۸٪ پیشنهاد دادند. در دو گروه در پاپوا گینهٔ نو، پیشنهادهای «بیش از حد منصفانه» هم رد می‌شد؛ پژوهشگران این را به فرهنگ هدیه ربط دادند، جایی که پذیرفتن هدیهٔ بزرگ تعهد می‌آورد.\nچرا این داستان؟ نشان می‌دهد ادعای راوی («در همهٔ فرهنگ‌ها») زیادی کلی است: حساب خالص پول هیچ‌جا کار نکرد، اما اینکه چه چیزی «منصفانه» است از زندگی روزمرهٔ هر جامعه می‌آید.",
+    "en": "Henrich et al.'s 15-society study: Machiguenga mean offer 26% with almost no rejections, Lamalera whalers 58%, and some Papua New Guinea groups rejected hyper-fair offers, linked to gift-giving obligations."
+   },
+   "source": "https://econwpa.ub.uni-muenchen.de/econ-wp/mic/papers/0305/0305009.pdf ; https://authors.library.caltech.edu/records/ehw1q-17g66 ; https://en.wikipedia.org/wiki/Ultimatum_game"
+  },
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "تعارف را با اولتیماتوم مقایسه کنید. فرض کنید دوستی پیشنهاد می‌دهد پول ناهار را کامل او بدهد. در حساب خالص، پذیرفتن سود است؛ اما در عرف ایرانی پذیرفتن فوری ممکن است «پررویی» دیده شود، پس اول رد می‌کنید. این شبیه همان گروه‌های پاپوا گینهٔ نو است که پیشنهاد بیش از حد سخاوتمندانه را رد می‌کردند: پذیرفتن هدیهٔ بزرگ بدهی و تعهد می‌سازد. یعنی «رد کردن» همیشه نشانهٔ بی‌انصافی پیشنهاد نیست؛ گاهی بخشی از زبان احترام و آبروست.",
+    "en": "Taarof: refusing a generous offer can be about respect and obligation, much like the hyper-fair rejections seen in some societies."
+   },
+   "source": null
+  },
+  {
+   "kind": "everyday",
+   "label": "illustration",
+   "text": {
+    "fa": "تقسیم ارث در یک خانواده: برادر بزرگ‌تر پیشنهاد می‌دهد خانه به او برسد و به خواهرش مبلغی کمتر از سهم قانونی بدهد. از نظر حساب، گرفتن پول نقد بهتر از سال‌ها دعوا در دادگاه است؛ اما بسیاری چنین پیشنهادی را رد می‌کنند، حتی اگر دعوا برایشان گران تمام شود. این رد کردن پیام دارد: «با من این‌طور رفتار نکن». پیشنهاددهندهٔ زیرک هم این را می‌داند و از اول سهم منصفانه‌تری پیشنهاد می‌کند.",
+    "en": "In an inheritance split, a below-fair offer is often rejected despite the cost of a court fight; a savvy proposer anticipates this."
+   },
+   "source": null
+  }
+ ],
+ "why": {
+  "fa": "برای فهم تقسیم‌ها در خانواده، شراکت و سیاست، باید هم سود را دید و هم احساس انصاف را، و دانست که انصاف در هر جمع معنای خودش را دارد. در سیمرغ، بازی‌هایی که تقسیم دارند باید عرف انصاف بازیکنان را بسنجند، نه فقط حساب سود.",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "در زبانهٔ «اولتیماتوم» یک بار پاسخ‌دهنده باشید و پایین‌ترین پیشنهادی را که می‌پذیرید پیدا کنید؛ بعد پیشنهاددهنده شوید. از خود بپرسید: چرا کمتر از آن عدد را رد کردم؟",
+   "en": null
+  },
+  "tool": "soc/tools/games.html#ultimatum"
+ },
+ "confusions": [
+  {
+   "fa": "«رد کردن پیشنهاد ناعادلانه یعنی بی‌عقلی» — نه؛ می‌تواند پیامی برای آینده باشد یا ارزش دیگری مثل آبرو را نشان دهد.",
+   "en": null
+  },
+  {
+   "fa": "«همه‌جا مردم همین‌طورند» — نه؛ پژوهش میان‌فرهنگی تفاوت‌های بزرگی در پیشنهاد و پذیرش نشان داده است.",
+   "en": null
+  }
+ ]
+}

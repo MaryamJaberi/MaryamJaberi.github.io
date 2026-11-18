@@ -1,0 +1,109 @@
+{
+ "id": "soc:gt-explainer-elements-and-game-types",
+ "kind": "concept",
+ "title": {
+  "fa": "اجزای بازی و انواع آن (حاصل‌جمع صفر و غیرصفر)",
+  "en": "Elements of a game and game types (zero-sum vs non-zero-sum)",
+  "nl": "Onderdelen van een spel en spelsoorten"
+ },
+ "aliases": [],
+ "parent": "soc:theory",
+ "field": "soc:theory",
+ "summary": {
+  "fa": "هر بازی از بازیکن، راهبرد، پیامد، قاعده و اطلاعات ساخته می‌شود. در بازی حاصل‌جمع صفر سود یکی زیان دیگری است (شطرنج، پوکر)؛ در حاصل‌جمع غیرصفر همه می‌توانند ببرند یا ببازند، پس همکاری معنا دارد.",
+  "en": "A game consists of players, strategies, payoffs, rules and information. In zero-sum games one's gain is the other's loss; in non-zero-sum games all can gain or lose, so cooperation can pay.",
+  "nl": "Een spel bestaat uit spelers, strategieën, uitkomsten, regels en informatie."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هم‌زمان یا ترتیبی بودن حرکت‌ها و کامل یا ناقص بودن اطلاعات، نوع بازی را مشخص می‌کند (شطرنج: اطلاعات کامل؛ پوکر و مذاکره: ناقص).",
+    "en": "Simultaneous vs sequential moves and perfect vs imperfect information define the game type.",
+    "nl": "Simultaneous vs sequential moves and perfect vs imperfect information define the game type."
+   },
+   "sources": [
+    "src:241fa6b10e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تشخیص اینکه در چه نوع بازی‌ای هستیم، انتخاب راهبرد را عوض می‌کند: در حاصل‌جمع صفر پنهان‌کاری و در غیرصفر گشودگی می‌تواند سود بدهد.",
+    "en": "Recognising the game type changes the strategy: secrecy in zero-sum, openness can pay in non-zero-sum.",
+    "nl": "Recognising the game type changes the strategy: secrecy in zero-sum, openness can pay in non-zero-sum."
+   },
+   "sources": [
+    "src:241fa6b10e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:play-games-culture-trust",
+   "rel": "see-also",
+   "note": {
+    "fa": "",
+    "en": "",
+    "nl": ""
+   }
+  }
+ ],
+ "people": [
+  "core:von-neumann-j",
+  "core:morgenstern-o"
+ ],
+ "sources": [
+  "src:241fa6b10e"
+ ],
+ "booklets": [],
+ "origin": "m_gt-explainer.json",
+ "iran": null,
+ "wikidata": null,
+ "status": "draft",
+ "explain": {
+  "fa": "این متن می‌گوید هر «بازی» پنج جزء دارد: چه کسانی بازی می‌کنند، چه کارهایی می‌توانند بکنند، هر نتیجه برای هر کس چه ارزشی دارد، قاعده‌ها (چه کسی کی حرکت می‌کند) و اینکه هر کس چه می‌داند. اگر این پنج را بنویسید، تقریباً هر موقعیت جمعی را می‌شود مثل یک بازی دید.\n\nمهم‌ترین تقسیم‌بندی: در بازی «حاصل‌جمع صفر» کیک ثابت است و هر چه یکی می‌برد دیگری می‌بازد (مثل شطرنج). در بازی «حاصل‌جمع غیرصفر» کیک می‌تواند بزرگ یا کوچک شود؛ پس همه می‌توانند با هم ببرند یا با هم ببازند. راوی می‌گوید شناختن نوع بازی رفتار را عوض می‌کند: در حاصل‌جمع صفر پنهان‌کاری و در غیرصفر گشودگی می‌تواند به سود آدم باشد.\n\nاعتراض منصفانه: بیشتر موقعیت‌های واقعی برچسب روشن ندارند؛ یک مذاکره هم بخش «تقسیم کیک» دارد (صفر) و هم بخش «بزرگ‌کردن کیک» (غیرصفر). کسی که همه چیز را صفر ببیند فرصت همکاری را از دست می‌دهد، و کسی که همه چیز را غیرصفر ببیند ممکن است ساده‌لوحانه اطلاعاتش را لو بدهد.\n\nنتیجهٔ عملی: پیش از هر رقابت یا مذاکره بپرسید «آیا کیک ثابت است؟» و «طرف مقابل چه چیزی را نمی‌داند که من می‌دانم، و برعکس؟»",
+  "en": "A game has players, strategies, payoffs, rules and information. Zero-sum: a fixed pie; non-zero-sum: the pie can grow or shrink, so cooperation can pay. Objection: most real situations mix both, so labels must be used with care."
+ },
+ "examples": [
+  {
+   "kind": "game",
+   "label": "illustration",
+   "text": {
+    "fa": "بازی مافیا نمونهٔ کامل «اطلاعات ناقص» است: مافیاها هم‌دیگر را می‌شناسند و شهروندها نمی‌دانند چه کسی کیست. پس قدرت در دست کسی است که اطلاعات بیشتری دارد، و کار شهروندان بیرون کشیدن اطلاعات از رفتار و حرف‌هاست. بین دو تیم بازی حاصل‌جمع صفر است (یکی می‌برد)، ولی درون تیم شهروندان حاصل‌جمع غیرصفر است: اگر هم‌دیگر را باور کنند با هم می‌برند. شطرنج برعکس اطلاعات کامل دارد: همه چیز روی صفحه است.",
+    "en": "Mafia is a game of imperfect information: zero-sum between teams, non-zero-sum within the town team."
+   },
+   "source": null
+  },
+  {
+   "kind": "iran",
+   "label": "illustration",
+   "text": {
+    "fa": "چانه‌زدن در بازار برای یک فرش: روی قیمت، هر تومانی که خریدار کمتر بدهد فروشنده کمتر گرفته؛ این بخش حاصل‌جمع صفر است و هر دو اطلاعاتشان را پنهان می‌کنند (فروشنده قیمت خرید را، خریدار سقف بودجه را). اما اگر خریدار مشتری همیشگی شود، معرفی کند و فروشنده جنس بهتری کنار بگذارد، کیک بزرگ‌تر می‌شود؛ این بخش غیرصفر است. فروشنده‌های قدیمی بازار معمولاً هر دو بازی را با هم بازی می‌کنند.",
+    "en": "Bargaining over a carpet price is zero-sum; building a long-term customer relationship is non-zero-sum."
+   },
+   "source": null
+  }
+ ],
+ "why": {
+  "fa": "بسیاری از دعواهای خانوادگی، کاری و سیاسی از اینجا بدتر می‌شوند که یک بازی غیرصفر را صفر می‌بینیم. در سیمرغ، هر مینی‌بازی باید روشن کند کدام بخشش تقسیم کیک است و کدام بزرگ‌کردن آن.",
+  "en": null
+ },
+ "try": {
+  "text": {
+   "fa": "سه موقعیت این هفته‌تان را بنویسید و برای هر کدام پنج جزء (بازیکن، راهبرد، پیامد، قاعده، اطلاعات) را پر کنید. کدام واقعاً حاصل‌جمع صفر بود؟",
+   "en": null
+  },
+  "tool": "soc/tools/games.html#matrix"
+ },
+ "confusions": [
+  {
+   "fa": "«بازی» یعنی سرگرمی — در نظریهٔ بازی هر موقعیتی است که نتیجهٔ هر کس به انتخاب دیگران هم بسته باشد.",
+   "en": null
+  },
+  {
+   "fa": "«حاصل‌جمع غیرصفر» یعنی همه می‌برند — نه؛ یعنی همه می‌توانند با هم ببرند یا با هم ببازند.",
+   "en": null
+  }
+ ]
+}
