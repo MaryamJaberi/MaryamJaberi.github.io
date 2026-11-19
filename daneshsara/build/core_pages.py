@@ -32,12 +32,12 @@ main{padding-block:var(--s6) var(--s16)} h1{margin:0 0 var(--s2)} .lead{color:va
 .bar button{font:inherit;font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
 .bar button[aria-pressed=true]{background:var(--primary);color:#fff;border-color:var(--primary)}
 .list{display:grid;gap:10px}
-.row{padding:var(--s4) var(--s5);display:grid;gap:6px;scroll-margin-top:80px}
+.row{padding:var(--s4) var(--s5);display:grid;grid-template-columns:minmax(0,1fr);gap:6px;scroll-margin-top:80px}
 .row:target{outline:2px solid var(--primary)}
 .row h3{margin:0;font-size:var(--h4);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap} .row h3 small{color:var(--ink-3);font-weight:400;font-size:var(--small)}
 .row .n{color:var(--ink-2);font-size:var(--small)}
-.cite{direction:ltr;text-align:left;font-size:var(--small);line-height:1.7} .cite a{color:var(--primary)}
-.tags{display:flex;flex-wrap:wrap;gap:6px} .tags a,.tags span{font-size:var(--chip);padding:2px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink);background:var(--surface)}
+.cite{direction:ltr;text-align:left;font-size:var(--small);line-height:1.7;overflow-wrap:anywhere} .cite a{color:var(--primary)}
+.tags{display:flex;flex-wrap:wrap;gap:6px} .tags a,.tags span{max-width:100%;overflow-wrap:anywhere;font-size:var(--chip);padding:2px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink);background:var(--surface)}
 .tags .psy{border-color:var(--fam-psy)} .tags .soc{border-color:var(--fam-soc)} .tags .tabar{border-color:var(--fam-bio)} .tags .phil{border-color:var(--fam-hum)} .tags .tarikh{border-color:var(--fam-hist)}
 .tier{font-size:var(--chip);padding:1px 8px;border-radius:var(--r-full);background:var(--ink);color:var(--paper)}
 .more{text-align:center;margin-top:var(--s5)} .more button{font:inherit;padding:8px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
