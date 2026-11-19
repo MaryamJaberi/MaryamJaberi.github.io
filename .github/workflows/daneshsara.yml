@@ -20,9 +20,9 @@ jobs:
         run: python3 daneshsara/build/validate.py
       - name: Build wiki readers and the lands map
         run: |
-          for w in daneshsara/data/*/; do w=$(basename "$w"); [ "$w" = psy ] || python3 daneshsara/build/reader.py "$w"; done
-          python3 daneshsara/build/tabar_home.py
-          python3 daneshsara/build/lands.py
-          python3 daneshsara/build/iran_page.py
-          python3 daneshsara/build/core_pages.py
-          python3 daneshsara/build/review_page.py
+          # فقط پوشه‌هایی که واقعاً ویکی‌اند (پوشهٔ concepts دارند)
+          for w in daneshsara/data/*/; do w=$(basename "$w"); [ "$w" = psy ] || [ ! -d "daneshsara/data/$w/concepts" ] || python3 daneshsara/build/reader.py "$w"; done
+          # سازنده‌های لایهٔ خصوصی (مثل iran_page.py) در این مخزن نیستند؛ هر کدام نبود رد می‌شود
+          for g in tabar_home lands iran_page core_pages review_page; do
+            if [ -f "daneshsara/build/$g.py" ]; then python3 "daneshsara/build/$g.py"; else echo "skip $g.py (not in this copy)"; fi
+          done
