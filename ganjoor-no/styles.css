@@ -800,3 +800,11 @@ a.card:hover, a.hit:hover { box-shadow: 0 6px 16px rgba(20, 30, 40, 0.08); trans
 .ageshot.portrait { margin: 0; flex: 0 0 auto; width: 110px; height: 132px; }
 .ageshot.portrait img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 640px) { .ageshot.portrait { width: 76px; height: 92px; } .poet-head { gap: 12px; } }
+
+/* v31: یک ابزار «هم‌عصران» با دو نما؛ واژه‌سنج درون جستجو */
+.views { display: inline-flex; gap: 4px; padding: 4px; margin: 2px 0 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); }
+.views a { padding: 6px 16px; border-radius: 999px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.views a[aria-current="page"] { background: var(--turquoise); color: #fffdf8; }
+.views a:not([aria-current]):hover { color: var(--turquoise); }
+.meter-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 720px) { .meter-cols { grid-template-columns: 1fr; } }

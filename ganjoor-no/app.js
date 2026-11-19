@@ -178,7 +178,7 @@ function pagingTotal(response) {
 }
 
 const fa = (value) => Number(value || 0).toLocaleString("fa-IR");
-const TOOL_ROUTES = new Set(["discover", "map", "places", "tree", "bridges", "people", "person", "vazn", "devices", "device", "words", "layers"]);
+const TOOL_ROUTES = new Set(["discover", "map", "places", "tree", "bridges", "people", "person", "vazn", "devices", "device", "words"]);
 
 function routeName() {
   return (location.hash || "#/").replace(/^#\/?/, "").split(/[/?]/)[0];
@@ -873,11 +873,41 @@ async function searchPage(query) {
     "جستجو",
     `<h1>جستجو</h1>
      <p class="lead">نتیجه «${esc(q)}»${poetId ? " در آثار یک شاعر" : ""}${total ? ` · ${total} شعر` : ""}</p>
-     <p class="chips"><a class="chip" href="#/words?q=${encodeURIComponent(q)}">بسامد این واژه نزد شاعران</a>${poetId ? `<a class="chip" href="#/search?q=${encodeURIComponent(q)}">در همه گنجور</a>` : ""}</p>
+     ${poetId ? `<p class="chips"><a class="chip" href="#/search?q=${encodeURIComponent(q)}">در همه گنجور</a></p>` : ""}
+     ${!poetId && pageNo === 1 && !/\s/.test(q) ? `<section id="meter" class="meter" aria-live="polite"><p class="muted">شمار این واژه نزد شاعران را می‌آورم…</p></section>` : ""}
      ${rows ? `<div class="grid">${rows}</div>` : `<p>چیزی پیدا نشد.</p>`}
      ${pages > 1 ? `<p class="chips">${pageNo > 1 ? `<a class="chip" href="#/search?q=${encodeURIComponent(q)}${poetPart}&p=${pageNo - 1}">قبلی</a>` : ""}<span class="chip">${pageNo} از ${pages}</span>${pageNo < pages ? `<a class="chip" href="#/search?q=${encodeURIComponent(q)}${poetPart}&p=${pageNo + 1}">بعدی</a>` : ""}</p>` : ""}`,
   );
   if (input) input.value = q;
+  const meter = document.querySelector("#meter");
+  if (meter) meter.innerHTML = await wordMeter(q).catch((error) => (error === STALE ? "" : `<p class="muted">شمار واژه از گنجور نیامد.</p>`));
+}
+
+// which poets used this word most: count and rate per 10,000 words (formerly the separate «واژه‌سنج» page)
+async function wordMeter(q) {
+  const [{ data }, totalRow] = await Promise.all([
+    api(`/wordcounts/bycat?term=${encodeURIComponent(q)}&PageNumber=1&PageSize=40`),
+    api(`/wordcounts/bycat/count?term=${encodeURIComponent(q)}`).catch((error) => {
+      if (error === STALE) throw error;
+      return { data: null };
+    }),
+  ]);
+  const rows = (Array.isArray(data) ? data : []).filter((row) => row.count > 0);
+  if (!rows.length) return "";
+  const most = Math.max(1, ...rows.map((row) => row.count));
+  const rate = (row) => (row.totalWordCount ? (row.count / row.totalWordCount) * 10000 : 0);
+  const byRate = [...rows].filter((row) => row.totalWordCount > 2000).sort((a, b) => rate(b) - rate(a)).slice(0, 8);
+  const topRate = Math.max(0.0001, ...byRate.map(rate));
+  const total = totalRow?.data?.count;
+  const bar = (row, width, value, cls = "") =>
+    `<a class="barrow ${cls}" href="#/search?q=${encodeURIComponent(q)}&poet=${row.poetId}"><span>${esc(row.name)}</span><i style="width:${width.toFixed(1)}%"></i><b>${value}</b></a>`;
+  return `<h2 class="section">«${esc(q)}» نزد شاعران${total ? ` · ${Number(total).toLocaleString("fa-IR")} بار در همه گنجور` : ""}</h2>
+    <div class="meter-cols">
+      <div><p class="muted">بیشترین شمار</p><div class="bars">${rows.slice(0, 8).map((row) => bar(row, (row.count / most) * 100, row.count.toLocaleString("fa-IR"))).join("")}</div></div>
+      <div><p class="muted">بیشترین نسبت (در هر ده هزار واژه؛ دیوان‌های زیر دو هزار واژه حساب نشده)</p><div class="bars">${byRate.map((row) => bar(row, (rate(row) / topRate) * 100, rate(row).toLocaleString("fa-IR", { maximumFractionDigits: 1 }), "lapis")).join("")}</div></div>
+    </div>
+    <p class="muted">شمارش واژهٔ کامل است، نه پاره‌ای از واژهٔ دیگر. روی نام شاعر بزن تا شعرهایش با این واژه بیاید.</p>
+    <h2 class="section">شعرها</h2>`;
 }
 
 // A map you first see whole, then wander in: drag to pan, wheel or two fingers to zoom.
@@ -1082,6 +1112,7 @@ async function mapPage(query) {
   paint(
     "نقشه",
     `<h1>هم‌عصران</h1>
+     <nav class="views" aria-label="نما"><a href="#/tree">روی خط زمان</a><a href="#/map" aria-current="page">روی نقشهٔ زادگاه‌ها</a></nav>
      <p class="lead">هر سال را که برگزینی، شاعرانی که آن سال زنده بودند در زادگاهشان روشن می‌شوند. نقطه‌های کم‌رنگ زادگاه همه شاعران همه دوره‌هاست. اندازه نقطه، شمار شاعران زنده آن شهر است. بکش، بزرگ کن، یا دکمه پخش را بزن تا زمان راه بیفتد.</p>
      <div class="year">
        <div class="year-top"><button type="button" class="play" id="play" aria-label="پخش">▶</button><span>سفر در زمان</span><strong id="year-label"></strong></div>
@@ -1568,7 +1599,8 @@ async function treePage(query) {
   const uncertain = poets.filter((poet) => !poet.sureB || !poet.sureD).length;
   paint(
     "خط زمان شاعران",
-    `<h1>خط زمان شاعران</h1>
+    `<h1>هم‌عصران</h1>
+     <nav class="views" aria-label="نما"><a href="#/tree" aria-current="page">روی خط زمان</a><a href="#/map">روی نقشهٔ زادگاه‌ها</a></nav>
      <p class="lead">زندگی ${fa(poets.length)} شاعر گنجور، همه در یک نگاه. هر نوار از سال تولد تا سال درگذشت است و زمان از راست به چپ می‌رود. بکش تا در زمان گردش کنی، بزرگ کن تا نام‌ها پیدا شوند، و روی یک شاعر بزن تا هم‌عصران و تضمین‌هایش روشن شوند.</p>
      <div class="tree-tools">
        <form class="big-search" id="tree-filter"><input id="tree-q" placeholder="نام شاعر یا شهر، مثلاً شیراز" aria-label="پیدا کردن شاعر" autocomplete="off" /></form>
@@ -2050,10 +2082,10 @@ async function treePage(query) {
 }
 
 const HOME_TOOLS = [
-  ["#/map", "نقشه هم‌عصران", "چه کسانی هم‌زمان می‌زیستند", "◎"],
+  ["#/tree", "هم‌عصران", "چه کسانی هم‌زمان می‌زیستند", "◎"],
   ["#/devices", "آرایه‌ها", "لب ← لعل، ابرو ← کمان", "✦"],
   ["#/people", "مردمان شعر", "خاندان و پیوندهای شاهنامه", "♙"],
-  ["#/words", "واژه‌سنج", "کدام شاعر بیشتر گفته", "≋"],
+  ["#/search?q=%D8%B9%D8%B4%D9%82", "جستجو و واژه‌سنج", "کدام شاعر بیشتر گفته", "≋"],
   ["#/vazn", "وزن‌ها", "بحرها و شعرهایشان", "♪"],
   ["#/bridges/2", "پل‌های تضمین", "چه کسی از چه کسی گرفت", "⇄"],
 ];
@@ -2063,9 +2095,8 @@ const TOOL_GROUPS = [
     title: "زمان و مکان",
     about: "شاعران و شعرها روی نقشه و در گذر سال‌ها.",
     tools: [
-      ["#/map", "نقشه هم‌عصران", "سال را جابه‌جا کن و زادگاه شاعران زنده آن سال را ببین.", "◎"],
+      ["#/tree", "هم‌عصران", "همه شاعران روی خط زمان یا روی نقشه زادگاه‌ها؛ چه کسانی هم‌زمان می‌زیستند و از هم گرفتند.", "❦"],
       ["#/places", "جای‌ها در شعر", "شهرها و سال‌هایی که روی بیت‌ها برچسب خورده، روی یک نقشه.", "⌖"],
-      ["#/tree", "خط زمان شاعران", "زندگی همه شاعران روی یک خط زمان؛ روی هر نام بزن تا هم‌عصرانش و تضمین‌هایش پیدا شوند.", "❦"],
     ],
   },
   {
@@ -2082,15 +2113,13 @@ const TOOL_GROUPS = [
     tools: [
       ["#/vazn", "وزن‌ها", "همه بحرها با شمار مصراع، و شعرهای هر وزن.", "♪"],
       ["#/devices", "آرایه‌ها", "تشبیه، استعاره، کنایه و ایهام، با نمونه‌های واقعی و جفت‌های «این به آن مانند شده».", "✦"],
-      ["#/words", "واژه‌سنج", "یک واژه، و اینکه کدام شاعر بیشتر از همه گفته‌اش.", "≋"],
-      ["#/layers", "خوانش دولایه", "چند شعر نامدار با معنی ساده و معنی رمزی هر بیت، کنار قالب‌ها و واژه‌های کلیدی.", "◐"],
     ],
   },
   {
     title: "خواندن",
     about: "راه‌های سبک برای رسیدن به یک شعر.",
     tools: [
-      ["#/search", "جستجو", "واژه یا تکه‌ای از بیت در همه شعرها.", "⌕"],
+      ["#/search", "جستجو و واژه‌سنج", "واژه یا تکه‌ای از بیت در همه شعرها، و اینکه کدام شاعر آن واژه را بیشتر گفته.", "⌕"],
       ["#/library", "کتابخانه من", "نشان‌ها، یادداشت‌ها و شعرهای خوانده‌شده روی همین دستگاه.", "☆"],
     ],
   },
@@ -2145,7 +2174,7 @@ async function dataPage() {
      <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
        ${row("تضمین و بیت مشترک", "بیت این شاعر و بیت شاعر دیگر، با جهت پیش و پس", "زنده", `<a href="#/bridges/2">پل‌ها</a>، زبانه تضمین`)}
        ${row("استقبال", "بخش‌های هم‌وزن و هم‌قافیه", "زنده", "زبانه هم‌وزن و تضمین")}
-       ${row("شمار واژه", "بسامد هر واژه در آثار هر شاعر", "زنده", `<a href="#/words">واژه‌سنج</a>`)}
+       ${row("شمار واژه", "بسامد هر واژه در آثار هر شاعر", "زنده", `<a href="#/search">جستجو</a>`)}
      </tbody></table></div>
      <h2 class="section">۴. آدم‌ها و جای‌ها</h2>
      <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
@@ -2164,10 +2193,6 @@ async function dataPage() {
      </tbody></table></div>
      <h2 class="section">۶. لایه آموزشی خود این سایت</h2>
      <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
-       ${row("شعرهای نمونه", "معنی ساده و معنی رمزی هر بیت، مناسبت، نسخه‌بدل", "۱۵ شعر از ۷ شاعر", `<a href="#/layers">خوانش دولایه</a>`)}
-       ${row("واژه‌نامه کوچک", "ساقی، می، رند، نی، خرد…", "۱۱ واژه", `<a href="#/layers">خوانش دولایه</a>`)}
-       ${row("قالب‌ها", "غزل، قصیده، مثنوی، رباعی، قطعه", "۵", `<a href="#/layers">خوانش دولایه</a>`)}
-       ${row("لحظه‌های تاریخ و پل‌های آموزشی", "رویدادها و نسبت‌های تأثیر، تقریبی", "۶ رویداد، ۸ پل", `<a href="#/layers">خوانش دولایه</a>`)}
      </tbody></table></div>
      <h2 class="section">سرچشمه‌ها</h2>
      <p><strong>رابط زنده گنجور</strong> (api.ganjoor.net): متن، صوت، حاشیه، تضمین، وزن، شمار واژه، آرایه و مردمان. هر بار زنده خوانده می‌شود.</p>
@@ -2175,65 +2200,6 @@ async function dataPage() {
      <p><strong>data.json همین مخزن</strong>: لایه آموزشی و دست‌نوشته؛ معنی‌ها ساده‌اند و شرح انتقادی نیستند.</p>
      <p class="muted">بخشی از آرایه‌های غزل‌های حافظ از «پیکره متن ادبی فارسی» (Raji و همکاران، ۲۰۲۳، مجوز MIT) آمده: <a href="https://doi.org/10.5281/zenodo.7923612" rel="noreferrer">doi.org/10.5281/zenodo.7923612</a>. برخی برچسب‌ها با کمک هوش مصنوعی ساخته و به دست ویراستار گنجور بازبینی شده‌اند.</p>`,
   );
-}
-
-async function wordsPage(query) {
-  const q = (query.get("q") || "").trim();
-  if (!q) {
-    paint(
-      "واژه‌سنج",
-      `<h1>واژه‌سنج</h1>
-       <p class="lead">یک واژه بنویس تا ببینی کدام شاعر بیشتر از همه به کارش برده، هم به عدد و هم به نسبت کل واژه‌های دیوانش.</p>
-       <form class="big-search" id="word-form"><input name="q" placeholder="مثلاً عشق، خرد، شب، سرو" aria-label="واژه" /><button class="btn primary" type="submit">بسنج</button></form>
-       <p class="chips">${["عشق", "خرد", "می", "رند", "شب", "سرو", "دل", "ایران"].map((word) => `<a class="chip" href="#/words?q=${encodeURIComponent(word)}">${word}</a>`).join("")}</p>`,
-    );
-  } else {
-    loading("واژه‌سنج");
-    const [{ data }, totalRow] = await Promise.all([
-      api(`/wordcounts/bycat?term=${encodeURIComponent(q)}&PageNumber=1&PageSize=40`),
-      api(`/wordcounts/bycat/count?term=${encodeURIComponent(q)}`).catch((error) => {
-        if (error === STALE) throw error;
-        return { data: null };
-      }),
-    ]);
-    const rows = (Array.isArray(data) ? data : []).filter((row) => row.count > 0);
-    const most = Math.max(1, ...rows.map((row) => row.count));
-    const rate = (row) => (row.totalWordCount ? (row.count / row.totalWordCount) * 10000 : 0);
-    const byRate = [...rows].filter((row) => row.totalWordCount > 2000).sort((a, b) => rate(b) - rate(a)).slice(0, 12);
-    const topRate = Math.max(0.0001, ...byRate.map(rate));
-    const total = totalRow?.data?.count;
-    paint(
-      "واژه‌سنج",
-      `<h1>واژه «${esc(q)}»</h1>
-       <p class="lead">${total ? `${Number(total).toLocaleString("fa-IR")} بار در همه گنجور. ` : ""}شمارش واژه کامل است، نه پاره‌ای از واژه دیگر.</p>
-       <form class="big-search" id="word-form"><input name="q" value="${esc(q)}" aria-label="واژه" /><button class="btn primary" type="submit">بسنج</button></form>
-       ${
-         rows.length
-           ? `<h2 class="section">بیشترین شمار</h2><div class="bars">${rows
-               .slice(0, 20)
-               .map(
-                 (row) =>
-                   `<a class="barrow" href="#/search?q=${encodeURIComponent(q)}&poet=${row.poetId}"><span>${esc(row.name)}</span><i style="width:${((row.count / most) * 100).toFixed(1)}%"></i><b>${row.count.toLocaleString("fa-IR")}</b></a>`,
-               )
-               .join("")}</div>
-             <h2 class="section">بیشترین نسبت</h2>
-             <p class="muted">چند بار در هر ده هزار واژه. شاعرانی که کمتر از دو هزار واژه در گنجور دارند حساب نشده‌اند.</p>
-             <div class="bars">${byRate
-               .map(
-                 (row) =>
-                   `<a class="barrow lapis" href="#/search?q=${encodeURIComponent(q)}&poet=${row.poetId}"><span>${esc(row.name)}</span><i style="width:${((rate(row) / topRate) * 100).toFixed(1)}%"></i><b>${rate(row).toLocaleString("fa-IR", { maximumFractionDigits: 1 })}</b></a>`,
-               )
-               .join("")}</div>`
-           : `<p>این واژه در شمارش گنجور نیامد. شکل دیگرش را امتحان کن.</p>`
-       }
-       <p class="chips"><a class="chip" href="#/search?q=${encodeURIComponent(q)}">شعرهای این واژه</a><a class="chip" href="#/words">واژه دیگر</a></p>`,
-    );
-  }
-  document.querySelector("#word-form").onsubmit = (event) => {
-    event.preventDefault();
-    const value = String(new FormData(event.currentTarget).get("q") || "").trim();
-    location.hash = `#/words?q=${encodeURIComponent(value)}`;
-  };
 }
 
 const RELATION = {
@@ -2677,83 +2643,6 @@ async function placesPage() {
   });
 }
 
-async function layersPage(id) {
-  const data = await local();
-  const poems = data.poets.flatMap((poet) => poet.books.flatMap((book) => book.poems.map((poem) => ({ ...poem, poet, book }))));
-  const formOf = (name) => data.forms.find((form) => form.name === name);
-  if (id) {
-    const poem = poems.find((item) => item.id === id);
-    if (!poem) {
-      paint("نیست", `<h1>این شعر در لایه آموزشی نیست</h1><p><a href="#/layers">بازگشت</a></p>`);
-      return;
-    }
-    const words = data.lexicon.filter((entry) => poem.verses.some((verse) => entry.aliases.some((alias) => verse.text.split(/\s+/).includes(alias))));
-    const form = formOf(poem.form);
-    const links = data.tazmin.filter((item) => item.from === poem.id || item.to === poem.id);
-    paint(
-      poem.title,
-      `<p class="crumb"><a href="#/layers">خوانش دولایه</a></p>
-       <p class="kicker">${esc(poem.poet.name)} · ${esc(poem.book.title)}</p>
-       <h1>${esc(poem.title)}</h1>
-       <p class="chips"><span class="chip">${esc(poem.form)}</span><span class="chip">${esc(poem.meter)}</span>${(poem.topics || []).map((topic) => `<span class="chip">${esc(topic)}</span>`).join("")}</p>
-       ${poem.occasion ? `<p class="lead">${esc(poem.occasion)}</p>` : ""}
-       <div class="tabs" id="layer-tabs"><button class="chip on" data-layer="both" type="button">هر دو لایه</button><button class="chip" data-layer="plain" type="button">فقط معنی ساده</button><button class="chip" data-layer="mystic" type="button">فقط معنی رمزی</button><button class="chip" data-layer="none" type="button">فقط شعر</button></div>
-       <div class="layers" id="layers" data-show="both">${poem.verses
-         .map(
-           (verse, index) =>
-             `<div class="layer ${index % 2 ? "end" : ""}"><p class="verse">${esc(verse.text)}</p><p class="plain">${esc(verse.plain || "")}</p><p class="mystic">${esc(verse.mystic || "")}</p></div>`,
-         )
-         .join("")}</div>
-       ${(poem.versions || []).length ? `<h2 class="section">نسخه‌بدل</h2>${poem.versions.map((line) => `<p>${esc(line)}</p>`).join("")}` : ""}
-       ${form ? `<h2 class="section">قالب: ${esc(form.name)}</h2><p>${esc(form.about)}</p>` : ""}
-       ${words.length ? `<h2 class="section">واژه‌های کلیدی</h2><div class="grid">${words.map((entry) => `<article class="card"><strong><a href="#/words?q=${encodeURIComponent(entry.word)}">${esc(entry.word)}</a></strong><p class="muted">${esc(entry.meaning)}</p></article>`).join("")}</div>` : ""}
-       ${links.length ? `<h2 class="section">هم‌سخن</h2><div class="grid">${links
-         .map((item) => {
-           const other = poems.find((entry) => entry.id === (item.from === poem.id ? item.to : item.from));
-           return other ? `<a class="card" href="#/layers/${other.id}"><div class="kicker">${esc(item.kind)}</div><strong>${esc(other.poet.name)} · ${esc(other.title)}</strong><p class="muted">${esc(item.note)}</p></a>` : "";
-         })
-         .join("")}</div>` : ""}
-       <p class="chips"><a class="btn primary" href="#/search?q=${encodeURIComponent(poem.verses[0].text)}">متن کامل در گنجور</a></p>
-       <p class="muted">${esc(data.note)}</p>`,
-    );
-    document.querySelector("#layer-tabs").onclick = (event) => {
-      const button = event.target.closest("[data-layer]");
-      if (!button) return;
-      document.querySelector("#layers").dataset.show = button.dataset.layer;
-      document.querySelectorAll("#layer-tabs .chip").forEach((node) => node.classList.toggle("on", node === button));
-    };
-    return;
-  }
-  const poetName = (pid) => data.poets.find((poet) => poet.id === pid)?.name || pid;
-  paint(
-    "خوانش دولایه",
-    `<h1>خوانش دولایه</h1>
-     <p class="lead">چند شعر نامدار که بیت به بیت دو معنی دارند: یکی ساده و نزدیک به متن، یکی رمزی و تأویلی. این لایه آموزشی و دست‌نوشته همین سایت است، نه شرح انتقادی.</p>
-     ${data.poets
-       .map(
-         (poet) => `<h2 class="section">${esc(poet.name)}</h2><p class="muted">${esc(poet.style)}</p><div class="grid">${poet.books
-           .flatMap((book) => book.poems)
-           .map((poem) => `<a class="card" href="#/layers/${poem.id}"><div class="kicker">${esc(poem.form)}</div><strong>${esc(poem.title)}</strong><p class="muted">${esc(poem.verses[0].text)}</p></a>`)
-           .join("")}</div>`,
-       )
-       .join("")}
-     <h2 class="section">قالب‌ها</h2>
-     <div class="grid">${data.forms.map((form) => `<article class="card"><strong>${esc(form.name)}</strong><p class="muted">${esc(form.about)}</p></article>`).join("")}</div>
-     <h2 class="section">واژه‌نامه کوچک</h2>
-     <div class="grid">${data.lexicon.map((entry) => `<article class="card"><strong><a href="#/words?q=${encodeURIComponent(entry.word)}">${esc(entry.word)}</a></strong><p class="muted">${esc(entry.meaning)}</p></article>`).join("")}</div>
-     <h2 class="section">لحظه‌های تاریخ</h2>
-     <ol class="ages">${data.events
-       .map((event) => {
-         const poem = poems.find((item) => item.id === event.poem);
-         return `<li><b>${event.year} م</b> · ${esc(event.title)} — ${esc(event.text)}${poem ? ` <a href="#/layers/${poem.id}">${esc(poem.title)}</a>` : ""}</li>`;
-       })
-       .join("")}</ol>
-     <h2 class="section">پل‌های آموزشی</h2>
-     <div class="grid">${data.bridges.map((item) => `<article class="card"><div class="kicker">${esc(item.kind)}</div><strong>${esc(poetName(item.from))} ← ${esc(poetName(item.to))}</strong><p class="muted">${esc(item.note)}</p></article>`).join("")}</div>
-     <p class="muted">${esc(data.note)}</p>`,
-  );
-}
-
 async function render() {
   if (audioNode) {
     audioNode.pause();
@@ -2788,13 +2677,13 @@ async function render() {
     else if (parts[0] === "discover") discoverPage();
     else if (parts[0] === "data") await dataPage();
     else if (parts[0] === "faal") location.replace("#/");
-    else if (parts[0] === "words") await wordsPage(query);
+    else if (parts[0] === "words") location.replace(query.get("q") ? `#/search?q=${encodeURIComponent(query.get("q"))}` : "#/search");
     else if (parts[0] === "people") await peoplePage();
     else if (parts[0] === "person" && parts[1]) await personPage(parts[1]);
     else if (parts[0] === "devices") await devicesPage();
     else if (parts[0] === "device" && parts[1]) await devicePage(parts[1], query);
     else if (parts[0] === "places") await placesPage();
-    else if (parts[0] === "layers") await layersPage(parts[1]);
+    else if (parts[0] === "layers") location.replace("#/discover");
     else if (parts[0] === "library") await libraryPage();
     else if (parts[0] === "about") await dataPage();
     else paint("نیست", `<section class="empty-state"><h1>این صفحه نیست</h1><p>شاید نشانی عوض شده باشد.</p><p class="chips"><a class="btn primary" href="#/">خانه</a><a class="chip" href="#/discover">ابزارها</a><a class="chip" href="#/search">جستجو</a></p></section>`);
