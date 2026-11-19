@@ -264,3 +264,14 @@ mark{background:rgba(176,101,42,.22);color:inherit;border-radius:3px;padding:0 2
 @media (max-width:700px){#sf{order:9;width:100%}#sf input,#sf input:focus{width:100%}#ltime{overflow-x:auto}#ltime svg{min-width:620px}}
 .figrow figcaption .sbar{display:flex;align-items:center;gap:6px;justify-content:center;margin-top:5px;font-size:.74rem}
 .figrow figcaption .sbar i{display:block;width:34px;height:5px;border:1px solid var(--muted);border-top:none}
+
+/* knowledge graph: whole first, names that fit, hover to light neighbours */
+#gStage { position: relative; touch-action: none; }
+#gStage .gnet { display: block; width: 100%; height: auto; cursor: grab; }
+#gStage .gnet line { stroke-opacity: .55; }
+#gStage .gnet.focus line { stroke-opacity: .08; }
+#gStage .gnet.focus line.hot { stroke-opacity: 1; stroke: var(--ink); stroke-width: 1.6; }
+#gStage .gnet.focus .gn:not(.near) { opacity: .25; }
+#gStage .gctl { position: absolute; top: 10px; inset-inline-start: 10px; display: flex; gap: 4px; z-index: 2; }
+#gStage .gctl button { min-width: 34px; min-height: 32px; border: 1px solid var(--rule); background: var(--card); border-radius: 9px; font: inherit; cursor: pointer; color: var(--ink); }
+#gStage .gnet .glabels { pointer-events: none; } #gStage .gnet.focus .glabels text.far { opacity: .2; }

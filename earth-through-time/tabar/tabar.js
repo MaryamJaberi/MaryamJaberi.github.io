@@ -122,7 +122,7 @@ function notFound(){view.innerHTML=head('','این صفحه پیدا نشد','<a
 
 /* ============ GRAPH ============ */
 function graph(){
-  view.innerHTML=head('ابزار','شبکهٔ دانش','هر دایره یک مقاله یا یک دانشمند است و رنگش قلمرو را نشان می‌دهد. روی گره بزن تا مقاله باز شود؛ گره‌ها را می‌توانی بکشی.')+
+  view.innerHTML=head('ابزار','شبکهٔ دانش','هر دایره یک مقاله یا یک دانشمند است و رنگش قلمرو را نشان می‌دهد. اندازهٔ هر دایره، شمار پیوندهای آن است. نشانگر را روی یک گره ببر تا همسایه‌هایش روشن شوند؛ بزن تا مقاله باز شود. با چرخ موس یا دو انگشت بزرگ کن تا نام‌های بیشتری پیدا شوند.')+
   `<div class="ctrl"><button id="gNet" class="on">شبکه</button><button id="gRad">درخت شعاعی</button><span class="legend">${W.domains.map(d=>`<span><span class="dot" style="background:${d.color}"></span>${d.name}</span>`).join('')}<span><span class="dot" style="background:var(--muted)"></span>دانشمندان</span></span></div><div class="stage" id="gStage"></div>`;
   const st=document.getElementById('gStage');
   const draw=m=>{st.innerHTML='';m==='net'?drawNet(st):drawRadial(st)};
@@ -131,21 +131,51 @@ function graph(){
   draw('net');
 }
 function drawNet(st){
+  // whole network first; names only where they fit (most-linked first); hover lights a node's links; wheel / pinch / drag to wander
   const w=1000,h=680;
-  const nodes=[...W.domains.map(d=>({id:'d:'+d.id,t:d.name,c:d.color,r:16,kind:'d'})),...W.articles.map(a=>({id:a.id,t:a.t,c:D[a.d].color,r:7,kind:'a'})),...W.people.map(p=>({id:p.id,t:p.n,c:css('--muted'),r:6,kind:'p'}))];
+  const nodes=[...W.domains.map(d=>({id:'d:'+d.id,t:d.name.split(':')[0],c:d.color,r:16,kind:'d'})),...W.articles.map(a=>({id:a.id,t:a.t,c:D[a.d].color,r:7,kind:'a'})),...W.people.map(p=>({id:p.id,t:p.n,c:css('--muted'),r:6,kind:'p'}))];
   const ids=new Set(nodes.map(n=>n.id)); const L=[]; const add=(s,t)=>{if(ids.has(s)&&ids.has(t)&&s!==t)L.push({source:s,target:t})};
   W.articles.forEach(a=>{add(a.id,'d:'+a.d);(a.rel||[]).forEach(r=>add(a.id,r))}); W.people.forEach(p=>(p.rel||[]).forEach(r=>add(p.id,r)));
-  const svg=d3.select(st).append('svg').attr('viewBox',`0 0 ${w} ${h}`);
-  const sim=d3.forceSimulation(nodes).force('link',d3.forceLink(L).id(d=>d.id).distance(l=>l.target.kind==='d'||l.source.kind==='d'?70:45).strength(.4))
-   .force('charge',d3.forceManyBody().strength(-120)).force('center',d3.forceCenter(w/2,h/2)).force('collide',d3.forceCollide(d=>d.r+3));
-  const link=svg.append('g').attr('stroke',css('--rule')).selectAll('line').data(L).join('line');
-  const node=svg.append('g').selectAll('g').data(nodes).join('g').style('cursor','pointer')
-   .on('click',(e,d)=>{if(d.kind!=='d')location.hash=href(d.id)}).on('mousemove',(e,d)=>showTip(e,esc(d.t))).on('mouseleave',hideTip)
-   .call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
-  node.append('circle').attr('r',d=>d.r).attr('fill',d=>d.c).attr('stroke',css('--card')).attr('stroke-width',1.5);
-  node.filter(d=>d.kind==='d').append('text').attr('class','svgtext').attr('font-size',13).attr('font-weight',700).attr('text-anchor','middle').attr('dy',-22).text(d=>d.t.split(':')[0]).style('paint-order','stroke').style('stroke',css('--card')).style('stroke-width','4px');
-  node.filter(d=>d.kind!=='d').append('text').attr('class','svgmuted').attr('font-size',9.5).attr('text-anchor','middle').attr('dy',-10).text(d=>d.t.length>16?d.t.slice(0,15)+'…':d.t);
-  sim.on('tick',()=>{nodes.forEach(n=>{n.x=Math.max(20,Math.min(w-20,n.x));n.y=Math.max(20,Math.min(h-20,n.y))});link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);node.attr('transform',d=>`translate(${d.x},${d.y})`)});
+  const deg=new Map(); L.forEach(l=>{deg.set(l.source,(deg.get(l.source)||0)+1);deg.set(l.target,(deg.get(l.target)||0)+1)});
+  const nbr=new Map(nodes.map(n=>[n.id,new Set([n.id])])); L.forEach(l=>{nbr.get(l.source).add(l.target);nbr.get(l.target).add(l.source)});
+  nodes.forEach(n=>{n.deg=deg.get(n.id)||0; if(n.kind!=='d') n.r=4+Math.min(8,Math.sqrt(n.deg)*1.6)});
+  const sim=d3.forceSimulation(nodes).force('link',d3.forceLink(L).id(d=>d.id).distance(l=>l.target.kind==='d'||l.source.kind==='d'?80:50).strength(.4))
+   .force('charge',d3.forceManyBody().strength(-150)).force('center',d3.forceCenter(w/2,h/2)).force('collide',d3.forceCollide(d=>d.r+4)).force('x',d3.forceX(w/2).strength(.05)).force('y',d3.forceY(h/2).strength(.09)).stop();
+  for(let i=0;i<360;i++) sim.tick();
+  {const xs=nodes.map(n=>n.x),ys=nodes.map(n=>n.y),x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),sc=Math.min((w-80)/(x1-x0||1),(h-90)/(y1-y0||1));nodes.forEach(n=>{n.x=40+(n.x-x0)*sc;n.y=55+(n.y-y0)*sc})}
+  st.insertAdjacentHTML('beforeend','<div class="gctl"><button type="button" data-z="in" aria-label="بزرگ‌تر">+</button><button type="button" data-z="out" aria-label="کوچک‌تر">−</button><button type="button" data-z="fit">نمای کل</button></div>');
+  const svg=d3.select(st).append('svg').attr('viewBox',`0 0 ${w} ${h}`).attr('class','gnet');
+  const g=svg.append('g');
+  const link=g.append('g').selectAll('line').data(L).join('line').attr('stroke',css('--rule')).attr('vector-effect','non-scaling-stroke')
+   .attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+  const node=g.append('g').selectAll('a').data(nodes).join('a').attr('href',d=>d.kind==='d'?null:href(d.id)).attr('class',d=>'gn k-'+d.kind).attr('transform',d=>`translate(${d.x},${d.y})`);
+  node.append('title').text(d=>d.t+(d.deg?` · ${FA(d.deg)} پیوند`:''));
+  const circ=node.append('circle').attr('r',d=>d.r).attr('fill',d=>d.c).attr('stroke',css('--card')).attr('stroke-width',1.5).attr('vector-effect','non-scaling-stroke');
+  const lab=g.append('g').attr('class','glabels').selectAll('text').data(nodes).join('text').attr('x',d=>d.x).attr('y',d=>d.y).attr('text-anchor','middle').attr('class',d=>d.kind==='d'?'svgtext':'svgmuted').attr('font-weight',d=>d.kind==='d'?700:500)
+   .style('paint-order','stroke').style('stroke',css('--card')).style('stroke-linejoin','round').text(d=>d.t);
+  let k=1;
+  const order=[...nodes].sort((a,b)=>(b.kind==='d')-(a.kind==='d')||b.deg-a.deg);
+  const declutter=()=>{
+    const box=st.getBoundingClientRect(); const taken=[];
+    const el=new Map(); lab.each(function(d){el.set(d.id,this)});
+    for(const d of order){const t=el.get(d.id); t.style.visibility='visible'; const r=t.getBoundingClientRect();
+      const out=r.right<box.left||r.left>box.right||r.bottom<box.top||r.top>box.bottom;
+      const hit=taken.some(o=>r.left<o.right+2&&r.right>o.left-2&&r.top<o.bottom&&r.bottom>o.top);
+      if(out||hit) t.style.visibility='hidden'; else taken.push(r)}
+  };
+  const size=()=>{
+    lab.attr('font-size',d=>(d.kind==='d'?15:11)/k).attr('dy',d=>-(d.r/Math.sqrt(k))-4/k).style('stroke-width',(3.5/k)+'px');
+    circ.attr('r',d=>d.r/Math.sqrt(k));
+  };
+  let pend=0; const later=()=>{cancelAnimationFrame(pend);pend=requestAnimationFrame(declutter)};
+  const zoom=d3.zoom().scaleExtent([1,8]).translateExtent([[0,0],[w,h]]).on('zoom',e=>{g.attr('transform',e.transform);k=e.transform.k;size();later()});
+  svg.call(zoom).on('dblclick.zoom',null);
+  st.querySelector('.gctl').onclick=e=>{const z=e.target.closest('[data-z]');if(!z)return;const v=z.dataset.z;
+    if(v==='fit')svg.transition().duration(350).call(zoom.transform,d3.zoomIdentity);else svg.transition().duration(250).call(zoom.scaleBy,v==='in'?1.6:1/1.6)};
+  node.on('mouseenter',(e,d)=>{const near=nbr.get(d.id);svg.classed('focus',true);node.classed('near',n=>near.has(n.id));link.classed('hot',l=>l.source.id===d.id||l.target.id===d.id);
+      lab.filter(n=>near.has(n.id)).each(function(){this.style.visibility='visible'});lab.classed('far',n=>!near.has(n.id))})
+   .on('mouseleave',()=>{svg.classed('focus',false);node.classed('near',false);lab.classed('far',false);link.classed('hot',false);declutter()});
+  size(); declutter(); if(document.fonts) document.fonts.ready.then(declutter);
 }
 function drawRadial(st){
   const data={name:'تبار',children:[...W.domains.map(d=>({name:d.name.split(':')[0],c:d.color,children:W.articles.filter(a=>a.d===d.id).map(a=>({name:a.t,id:a.id,c:d.color}))})),{name:'دانشمندان',c:css('--muted'),children:W.people.map(p=>({name:p.n,id:p.id,c:css('--muted')}))}]};
@@ -172,7 +202,7 @@ function coexist(){
   svg.append('g').selectAll('text').data(ticks).join('text').attr('class','svgmuted').attr('font-size',10.5).attr('x',x).attr('y',h-12).attr('text-anchor','middle').text(t=>t>=1e6?FA(t/1e6)+' م':FA(t/1e3)+' هـ');
   const g=svg.append('g').selectAll('g').data(sp).join('a').attr('href',d=>'#/a/'+d.id);
   g.append('rect').attr('x',d=>x(Math.max(d.to*1e6,2e4))).attr('width',d=>Math.max(6,x(d.from*1e6)-x(Math.max(d.to*1e6,2e4)))).attr('y',(d,i)=>14+i*rowH).attr('height',rowH-12).attr('rx',8).attr('fill',d=>D[d.d].color).attr('class','bar');
-  g.append('text').attr('class','svgtext').attr('font-size',12.5).attr('x',w-right+10).attr('y',(d,i)=>14+i*rowH+(rowH-12)/2+4).text(d=>d.t);
+  g.append('text').attr('class','svgtext').attr('font-size',12.5).attr('direction','rtl').attr('text-anchor','start').attr('x',w-8).attr('y',(d,i)=>14+i*rowH+(rowH-12)/2+4).text(d=>d.t);
   const cur=svg.append('line').attr('y1',6).attr('y2',h-28).attr('stroke',css('--ink')).attr('stroke-width',2);
   const r=document.getElementById('cxr');
   const upd=()=>{const t=Math.exp(Math.log(7.5e6)+(Math.log(2e4)-Math.log(7.5e6))*r.value/1000);cur.attr('x1',x(t)).attr('x2',x(t));
@@ -304,8 +334,14 @@ function iran(){
     .on('mousemove',(e,a)=>showTip(e,`<b>${a.t}</b><br>${esc(a.sum).slice(0,140)}…`)).on('mouseleave',hideTip);
   g.append('circle').attr('r',7).attr('fill',col).attr('stroke',css('--card')).attr('stroke-width',1.5);
   g.filter(a=>(a.who||'').includes(' ')).append('path').attr('d',d3.arc()({innerRadius:0,outerRadius:7,startAngle:0,endAngle:Math.PI})).attr('fill',a=>WC[(a.who||'').split(' ')[1]]);
-  const placed=[];g.each(function(a){const p=proj(a.loc);a._lab=!placed.some(q=>Math.abs(q[0]-p[0])<70&&Math.abs(q[1]-p[1])<16);if(a._lab)placed.push(p)});
-  g.filter(a=>a._lab).append('text').attr('x',-10).attr('y',4).attr('text-anchor','start').attr('font-size',12).attr('class','svgmuted').attr('direction','rtl').text(a=>a.t.replace(/^(غار|پناهگاه صخره‌ای) /,''));
+  // readable names: bigger, with a halo; each tries left, right, above, below of its dot and never covers another name or dot
+  const nm=a=>a.t.replace(/^(غار|پناهگاه صخره‌ای|اشکفت) /,'');
+  const boxes=sites.map(a=>{const p=proj(a.loc);return [p[0]-8,p[1]-8,p[0]+8,p[1]+8]});
+  sites.forEach(a=>{const [px,py]=proj(a.loc),wd=nm(a).length*9+6;a._lab=null;
+    for(const [dx,dy,an] of [[-11,6,'end'],[11,6,'start'],[0,-12,'middle'],[0,24,'middle']]){const l=an==='end'?px+dx-wd:an==='start'?px+dx:px-wd/2;const bx=[l,py+dy-15,l+wd,py+dy+3];
+      if(!boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1])&&bx[0]>4&&bx[2]<w-4){boxes.push(bx);a._lab=[dx,dy,an];break}}});
+  g.filter(a=>a._lab).append('text').attr('x',a=>a._lab[0]).attr('y',a=>a._lab[1]).attr('text-anchor',a=>a._lab[2]).attr('direction','ltr').attr('font-size',16).attr('font-weight',600).attr('fill',css('--ink'))
+    .style('paint-order','stroke').style('stroke',css('--card')).style('stroke-width','4px').style('stroke-linejoin','round').text(nm);
   document.getElementById('irl').innerHTML=`<p style="margin:0 0 6px"><b>${FA(sites.length)}</b> محوطه با مقاله</p><table><tr><th>محوطه</th><th>انسان</th></tr>${sites.map(a=>`<tr><td><a href="#/a/${a.id}">${a.t}</a></td><td>${(a.who||'').split(' ').filter(Boolean).map(k=>`<span class="dot" style="background:${WC[k]}"></span>`).join(' ')||'—'}</td></tr>`).join('')}</table>`;
   // gantt
   const rows=W.articles.filter(a=>a.span&&(a.d==='iran'||a.loc&&a.loc[0]>42&&a.loc[0]<63)).sort((a,b)=>b.span[0]-a.span[0]);
@@ -346,11 +382,14 @@ function brain(){
   const mid=a=>Math.sqrt(a.from*1e6*Math.max(a.to*1e6,2e4)),c=a=>GC[grp(a)];
   g.append('line').attr('x1',a=>x(a.from*1e6)).attr('x2',a=>x(Math.max(a.to*1e6,2e4))).attr('y1',a=>y((a.brain[0]+a.brain[1])/2)).attr('y2',a=>y((a.brain[0]+a.brain[1])/2)).attr('stroke',c).attr('stroke-width',2).attr('opacity',.5);
   g.append('rect').attr('x',a=>x(mid(a))-5).attr('width',10).attr('y',a=>y(a.brain[1])).attr('height',a=>Math.max(4,y(a.brain[0])-y(a.brain[1]))).attr('rx',5).attr('fill',c);
-  const boxes=[];const lab=a=>a.t.replace(/ \(.*\)/,'');
-  sp.slice().sort((p,q)=>(q.brain[1]-q.brain[0])-(p.brain[1]-p.brain[0])).forEach(a=>{const cx=x(mid(a)),wd=lab(a).length*6.2+6;
-    for(const [yy,an] of [[y(a.brain[1])-8,0],[y(a.brain[0])+16,1]]){const bx=[cx-wd/2,yy-12,cx+wd/2,yy+2];
-      if(!boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1])&&bx[0]>L&&bx[2]<w-4){boxes.push(bx);a._ly=yy;return}}a._ly=null});
-  g.filter(a=>a._ly!=null).append('text').attr('x',a=>x(mid(a))).attr('y',a=>a._ly).attr('text-anchor','middle').attr('font-size',12).attr('fill',css('--ink')).text(lab);
+  // names never cover a bar or another name: bars are obstacles first, then each name tries above, below, right, left
+  const lab=a=>a.t.replace(/ \(.*\)/,'');
+  const boxes=sp.map(a=>[x(mid(a))-6,y(a.brain[1])-1,x(mid(a))+6,y(a.brain[0])+1]);
+  sp.slice().sort((p,q)=>(q.brain[1]-q.brain[0])-(p.brain[1]-p.brain[0])).forEach(a=>{const cx=x(mid(a)),wd=lab(a).length*7.2+8,top=y(a.brain[1]),bot=y(a.brain[0]),cy=(top+bot)/2+4;
+    const tries=[[cx,top-8,'middle'],[cx,bot+17,'middle'],[cx+10,cy,'start'],[cx-10,cy,'end'],[cx,top-24,'middle'],[cx,bot+33,'middle']];
+    for(const [xx,yy,an] of tries){const l=an==='middle'?xx-wd/2:an==='start'?xx:xx-wd;const bx=[l,yy-13,l+wd,yy+3];
+      if(!boxes.some(b=>bx[0]<b[2]&&bx[2]>b[0]&&bx[1]<b[3]&&bx[3]>b[1])&&bx[0]>L&&bx[2]<w-4){boxes.push(bx);a._lx=xx;a._ly=yy;a._la=an;return}}a._ly=null});
+  g.filter(a=>a._ly!=null).append('text').attr('x',a=>a._lx).attr('y',a=>a._ly).attr('direction','ltr').attr('text-anchor',a=>a._la).attr('font-size',12).attr('fill',css('--ink')).style('paint-order','stroke').style('stroke',css('--card')).style('stroke-width','3px').text(lab);
   const A=document.getElementById('bza'),Bs=document.getElementById('bzb');
   const opts=sp.map(a=>`<option value="${a.id}">${a.t}</option>`).join('');A.innerHTML=opts;Bs.innerHTML=opts;A.value='homo-erectus';Bs.value='homo-sapiens';
   const card=a=>{const m=(a.brain[0]+a.brain[1])/2;return `<div class="box"><svg viewBox="0 0 120 120" width="120" height="120" aria-hidden="true"><circle cx="60" cy="60" r="${(Math.sqrt(m/1750)*56).toFixed(1)}" fill="${c(a)}" opacity=".85"/></svg>
