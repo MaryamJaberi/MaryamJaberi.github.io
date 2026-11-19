@@ -975,6 +975,175 @@ async function searchPage(query) {
   if (input) input.value = q;
 }
 
+// A map you first see whole, then wander in: drag to pan, wheel or two fingers to zoom.
+// Pins keep one screen size; labels that would collide are hidden, biggest first wins.
+function atlasStage(atlas) {
+  const stage = document.createElement("div");
+  stage.className = "atlas-stage";
+  stage.tabIndex = 0;
+  stage.setAttribute("aria-label", "نقشه؛ با کشیدن جابه‌جا شو، با چرخ یا دو انگشت بزرگ‌نمایی کن، صفر برای نمای کل");
+  atlas.replaceWith(stage);
+  stage.append(atlas);
+  stage.insertAdjacentHTML(
+    "beforeend",
+    `<div class="stage-ctl" role="toolbar" aria-label="بزرگ‌نمایی"><button type="button" data-zoom="in" aria-label="بزرگ‌تر">+</button><button type="button" data-zoom="out" aria-label="کوچک‌تر">−</button><button type="button" data-zoom="fit">نمای کل</button></div>`,
+  );
+  let k = 1;
+  let tx = 0;
+  let ty = 0;
+  let frame = 0;
+  const size = () => ({ w: stage.clientWidth || 1, h: stage.clientHeight || 1 });
+  const clamp = () => {
+    const { w, h } = size();
+    k = Math.min(Math.max(k, 1), 8);
+    tx = Math.min(0, Math.max(w - w * k, tx));
+    ty = Math.min(0, Math.max(h - h * k, ty));
+  };
+  const declutter = () => {
+    const box = stage.getBoundingClientRect();
+    // a label may not cover another label or another city's dot
+    const dots = [...atlas.querySelectorAll(".pin i")].map((dot) => ({ r: dot.getBoundingClientRect(), pin: dot.parentElement }));
+    const taken = [];
+    const pins = [...atlas.querySelectorAll(".pin")].sort((a, b) => (Number(b.dataset.w) || 0) - (Number(a.dataset.w) || 0));
+    for (const pin of pins) {
+      const label = pin.querySelector("span");
+      if (!label) continue;
+      pin.classList.remove("hush");
+      const r = label.getBoundingClientRect();
+      const out = r.right < box.left || r.left > box.right || r.bottom < box.top || r.top > box.bottom;
+      const meets = (o) => r.left < o.right + 2 && r.right > o.left - 2 && r.top < o.bottom + 1 && r.bottom > o.top - 1;
+      const hit = taken.some(meets) || dots.some((dot) => dot.pin !== pin && (Number(dot.pin.dataset.w) || 0) >= (Number(pin.dataset.w) || 0) && meets(dot.r));
+      if (out || hit) pin.classList.add("hush");
+      else taken.push(r);
+    }
+  };
+  const render = () => {
+    clamp();
+    atlas.style.transform = `translate(${tx.toFixed(1)}px,${ty.toFixed(1)}px) scale(${k.toFixed(4)})`;
+    atlas.style.setProperty("--inv", (1 / k).toFixed(4));
+    stage.classList.toggle("zoomed", k > 1.02);
+    declutter();
+  };
+  const draw = () => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(render);
+  };
+  const zoomAt = (sx, sy, factor) => {
+    const next = Math.min(Math.max(k * factor, 1), 8);
+    tx = sx - ((sx - tx) * next) / k;
+    ty = sy - ((sy - ty) * next) / k;
+    k = next;
+    draw();
+  };
+  const pointers = new Map();
+  let travelled = 0;
+  let pinch = 0;
+  stage.addEventListener("pointerdown", (event) => {
+    if (event.target.closest(".stage-ctl")) return;
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    travelled = 0;
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinch = Math.hypot(a.x - b.x, a.y - b.y);
+    }
+  });
+  stage.addEventListener("pointermove", (event) => {
+    const last = pointers.get(event.pointerId);
+    if (!last) return;
+    const now = { x: event.clientX, y: event.clientY };
+    const box = stage.getBoundingClientRect();
+    if (pointers.size === 1) {
+      travelled += Math.abs(now.x - last.x) + Math.abs(now.y - last.y);
+      if (travelled > 6) {
+        if (!stage.hasPointerCapture(event.pointerId)) stage.setPointerCapture(event.pointerId);
+        stage.classList.add("grab");
+        tx += now.x - last.x;
+        ty += now.y - last.y;
+        draw();
+      }
+      pointers.set(event.pointerId, now);
+    } else if (pointers.size === 2) {
+      pointers.set(event.pointerId, now);
+      const [a, b] = [...pointers.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      travelled += 20;
+      if (pinch > 0) zoomAt((a.x + b.x) / 2 - box.left, (a.y + b.y) / 2 - box.top, d / pinch);
+      pinch = d;
+    }
+  });
+  const lift = (event) => {
+    pointers.delete(event.pointerId);
+    if (pointers.size < 2) pinch = 0;
+    if (!pointers.size) stage.classList.remove("grab");
+  };
+  stage.addEventListener("pointerup", lift);
+  stage.addEventListener("pointercancel", lift);
+  // a drag must not count as a click on a pin
+  stage.addEventListener(
+    "click",
+    (event) => {
+      if (travelled > 6 && !event.target.closest(".stage-ctl")) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    },
+    true,
+  );
+  stage.addEventListener(
+    "wheel",
+    (event) => {
+      event.preventDefault();
+      const box = stage.getBoundingClientRect();
+      zoomAt(event.clientX - box.left, event.clientY - box.top, Math.exp(-event.deltaY * (event.ctrlKey ? 0.01 : 0.0018)));
+    },
+    { passive: false },
+  );
+  stage.addEventListener("dblclick", (event) => {
+    event.preventDefault();
+    const box = stage.getBoundingClientRect();
+    zoomAt(event.clientX - box.left, event.clientY - box.top, 2);
+  });
+  const reset = () => {
+    k = 1;
+    tx = 0;
+    ty = 0;
+    draw();
+  };
+  stage.querySelector(".stage-ctl").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-zoom]");
+    if (!button) return;
+    const { w, h } = size();
+    if (button.dataset.zoom === "in") zoomAt(w / 2, h / 2, 1.6);
+    else if (button.dataset.zoom === "out") zoomAt(w / 2, h / 2, 1 / 1.6);
+    else reset();
+  });
+  stage.addEventListener("keydown", (event) => {
+    const { w, h } = size();
+    const moves = { ArrowLeft: [80, 0], ArrowRight: [-80, 0], ArrowUp: [0, 80], ArrowDown: [0, -80] };
+    if (moves[event.key]) {
+      event.preventDefault();
+      tx += moves[event.key][0];
+      ty += moves[event.key][1];
+      draw();
+    } else if (event.key === "+" || event.key === "=") zoomAt(w / 2, h / 2, 1.4);
+    else if (event.key === "-") zoomAt(w / 2, h / 2, 1 / 1.4);
+    else if (event.key === "0" || event.key === "۰") reset();
+  });
+  const watch = new ResizeObserver(() => (document.body.contains(stage) ? draw() : watch.disconnect()));
+  watch.observe(stage);
+  // fly to a point given in percent of the map
+  const focusOn = (px, py, zoom = 2.6) => {
+    const { w, h } = size();
+    k = Math.max(k, zoom);
+    tx = w / 2 - (px / 100) * w * k;
+    ty = h / 2 - (py / 100) * h * k;
+    draw();
+  };
+  draw();
+  document.fonts?.ready.then(draw);
+  return { refresh: draw, reset, focusOn };
+}
+
 async function mapPage(query) {
   loading("نقشه");
   const { data: poets } = await api("/poets");
@@ -984,68 +1153,130 @@ async function mapPage(query) {
   let year = Number(query.get("y") || 750);
   if (year < min) year = min;
   if (year > max) year = max;
-  const alive = placed.filter((poet) => poet.birthYearInLHijri <= year && poet.deathYearInLHijri >= year);
-  const groups = new Map();
-  const far = [];
-  for (const poet of alive) {
+
+  // every birthplace of every age, so the whole picture is always there in faint
+  const cities = new Map();
+  for (const poet of placed) {
     const point = project(poet.birthPlaceLongitude, poet.birthPlaceLatitude);
-    if (point.x < 0 || point.x > 100 || point.y < 0 || point.y > 100) {
-      far.push(poet);
-      continue;
-    }
+    if (point.x < 0 || point.x > 100 || point.y < 0 || point.y > 100) continue;
     const city = cityOf(poet);
-    const group = groups.get(city) || { city, x: point.x, y: point.y, poets: [], noted: city === "توس" };
-    group.poets.push(poet);
-    groups.set(city, group);
+    if (!cities.has(city)) cities.set(city, point);
   }
-  const showName = groups.size <= 18;
-  const dots = [...groups.values()]
-    .map((group, index) => {
-      const people = group.poets.map((poet) => poet.nickname || poet.name).join("، ");
-      const note = group.noted ? " — گنجور مشهد نوشته" : "";
-      return `<a class="pin" data-city="${index}" style="left:${group.x}%;top:${group.y}%" href="#/map?y=${year}" title="${esc(group.city)}: ${esc(people)}${esc(note)}">${showName ? `<span>${esc(group.city)}</span>` : ""}<i></i></a>`;
-    })
-    .join("");
-  const cityList = [...groups.values()]
-    .map(
-      (group, index) =>
-        `<article class="card" id="city-${index}"><strong>${esc(group.city)}</strong>${group.noted ? `<p class="muted">گنجور این زادگاه را مشهد نوشته. در روزگار این شاعران شهر توس بوده، کنار همان نقطه.</p>` : ""}<p class="chips">${group.poets
-          .map((poet) => `<a class="chip" href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)}</a>`)
-          .join("")}</p></article>`,
-    )
-    .join("");
+  const ghosts = [...cities.values()].map((point) => `<i class="ghost" style="left:${point.x}%;top:${point.y}%"></i>`).join("");
+
+  // how many poets were alive in each decade, drawn behind the slider
+  const decades = [];
+  for (let y = Math.floor(min / 10) * 10; y <= max; y += 10) decades.push({ y, n: placed.filter((poet) => poet.birthYearInLHijri <= y + 5 && poet.deathYearInLHijri >= y + 5).length });
+  const peak = Math.max(1, ...decades.map((item) => item.n));
+  const spark = `<svg class="spark" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 ${decades
+    .map((item) => `L${(((item.y + 5 - min) / (max - min)) * 1000).toFixed(1)},${(40 - (item.n / peak) * 36).toFixed(1)}`)
+    .join(" ")} L1000,40 Z"/></svg>`;
   const ticks = [];
   for (let mark = Math.ceil(min / 100) * 100; mark < max; mark += 100) ticks.push(mark);
+
   paint(
     "نقشه",
     `<h1>هم‌عصران</h1>
-     <p class="lead">مرز امروز ایران اینجا نیست. سبز خشکی است و لکه روشن دریای خزر. نام شهر، زادگاه ثبت‌شده در گنجور است: از گنجه و تبریز تا هرات، بلخ، بخارا و غزنه.</p>
+     <p class="lead">هر سال را که برگزینی، شاعرانی که آن سال زنده بودند در زادگاهشان روشن می‌شوند. نقطه‌های کم‌رنگ زادگاه همه شاعران همه دوره‌هاست. اندازه نقطه، شمار شاعران زنده آن شهر است. بکش، بزرگ کن، یا دکمه پخش را بزن تا زمان راه بیفتد.</p>
      <div class="year">
-       <div class="year-top"><span>سفر در زمان</span><strong id="year-label">سال ${year} هجری</strong></div>
-     <div class="scale">
-       <input id="year" type="range" min="${min}" max="${max}" value="${year}" />
-       <div class="ticks">${ticks.map((mark) => `<span class="${mark % 200 ? "minor" : ""}" style="left:${((mark - min) / (max - min)) * 100}%">${mark}</span>`).join("")}</div>
+       <div class="year-top"><button type="button" class="play" id="play" aria-label="پخش">▶</button><span>سفر در زمان</span><strong id="year-label"></strong></div>
+       <div class="scale">${spark}
+         <input id="year" type="range" min="${min}" max="${max}" value="${year}" aria-label="سال هجری" />
+         <div class="ticks">${ticks.map((mark) => `<span class="${mark % 200 ? "minor" : ""}" style="left:${((mark - min) / (max - min)) * 100}%">${mark}</span>`).join("")}</div>
+       </div>
      </div>
-     </div>
-     <div class="atlas realm" aria-label="گستره شهرهای شعر فارسی">${dots || `<p class="muted empty-map">در این سال کسی در این گستره نیست.</p>`}</div>
-     <p class="muted">${alive.length} شاعر در این سال، در ${groups.size} شهر این گستره.</p>
-     <div class="grid">${cityList}</div>
-     ${far.length ? `<p class="muted">زادگاه این‌ها دورتر است، در هند یا آناتولی یا شام، و روی این صفحه جا نشده:</p><div class="chips">${far.map((poet) => `<a class="chip" href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)} · ${esc(poet.birthPlace || "")}</a>`).join("")}</div>` : ""}`,
+     <div class="atlas realm" id="atlas" aria-label="گستره شهرهای شعر فارسی"><div class="ghosts">${ghosts}</div><div id="pins"></div></div>
+     <p class="muted" id="alive-count"></p>
+     <div class="grid" id="city-list"></div>
+     <div id="far"></div>`,
   );
+  const atlas = document.querySelector("#atlas");
+  const view = atlasStage(atlas);
+  const pinsBox = document.querySelector("#pins");
   const slider = document.querySelector("#year");
   const label = document.querySelector("#year-label");
+  const count = document.querySelector("#alive-count");
+  const list = document.querySelector("#city-list");
+  const farBox = document.querySelector("#far");
+
+  const drawYear = (value) => {
+    year = Number(value);
+    const alive = placed.filter((poet) => poet.birthYearInLHijri <= year && poet.deathYearInLHijri >= year);
+    const groups = new Map();
+    const far = [];
+    for (const poet of alive) {
+      const point = project(poet.birthPlaceLongitude, poet.birthPlaceLatitude);
+      if (point.x < 0 || point.x > 100 || point.y < 0 || point.y > 100) {
+        far.push(poet);
+        continue;
+      }
+      const city = cityOf(poet);
+      const group = groups.get(city) || { city, x: point.x, y: point.y, poets: [], noted: city === "توس" };
+      group.poets.push(poet);
+      groups.set(city, group);
+    }
+    const most = Math.max(1, ...[...groups.values()].map((group) => group.poets.length));
+    label.textContent = `سال ${yr(year)} هجری · حدود ${yr(toGregorian(year))} میلادی`;
+    pinsBox.innerHTML = [...groups.values()]
+      .map((group, index) => {
+        const people = group.poets.map((poet) => poet.nickname || poet.name).join("، ");
+        const note = group.noted ? " — گنجور مشهد نوشته" : "";
+        const size = Math.round(10 + Math.sqrt(group.poets.length / most) * 16);
+        const n = group.poets.length;
+        return `<a class="pin" data-city="${index}" data-w="${n}" style="left:${group.x}%;top:${group.y}%" href="#/map?y=${year}" title="${esc(group.city)}: ${esc(people)}${esc(note)}"><span>${esc(group.city)}${n > 1 ? ` <b>${fa(n)}</b>` : ""}</span><i style="width:${size}px;height:${size}px"></i></a>`;
+      })
+      .join("") || `<p class="muted empty-map">در این سال کسی در این گستره نیست.</p>`;
+    count.textContent = `${fa(alive.length)} شاعر در این سال، در ${fa(groups.size)} شهر این گستره.`;
+    list.innerHTML = [...groups.values()]
+      .map(
+        (group, index) =>
+          `<article class="card" id="city-${index}"><strong>${esc(group.city)}</strong>${group.noted ? `<p class="muted">گنجور این زادگاه را مشهد نوشته. در روزگار این شاعران شهر توس بوده، کنار همان نقطه.</p>` : ""}<p class="chips">${group.poets
+            .map((poet) => `<a class="chip" href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)}</a>`)
+            .join("")}</p></article>`,
+      )
+      .join("");
+    farBox.innerHTML = far.length
+      ? `<p class="muted">زادگاه این‌ها دورتر است، در هند یا آناتولی یا شام، و روی این صفحه جا نشده:</p><div class="chips">${far.map((poet) => `<a class="chip" href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)} · ${esc(poet.birthPlace || "")}</a>`).join("")}</div>`
+      : "";
+    history.replaceState(null, "", `#/map?y=${year}`);
+    view.refresh();
+  };
+
+  let timer = 0;
+  const play = document.querySelector("#play");
+  const stop = () => {
+    clearInterval(timer);
+    timer = 0;
+    play.textContent = "▶";
+    play.setAttribute("aria-label", "پخش");
+  };
+  play.onclick = () => {
+    if (timer) return stop();
+    if (year >= max - 5) slider.value = min;
+    play.textContent = "❚❚";
+    play.setAttribute("aria-label", "ایست");
+    timer = setInterval(() => {
+      if (!document.body.contains(play)) return stop();
+      const next = Math.min(max, Number(slider.value) + 5);
+      slider.value = next;
+      drawYear(next);
+      if (next >= max) stop();
+    }, 180);
+  };
   slider.oninput = () => {
-    label.textContent = `سال ${slider.value} هجری`;
+    stop();
+    drawYear(slider.value);
   };
-  slider.onchange = () => {
-    location.hash = `#/map?y=${slider.value}`;
-  };
-  document.querySelectorAll(".pin[data-city]").forEach((pin) => {
-    pin.onclick = (event) => {
-      event.preventDefault();
-      document.getElementById(`city-${pin.dataset.city}`)?.scrollIntoView({ block: "nearest" });
-    };
+  pinsBox.addEventListener("click", (event) => {
+    const pin = event.target.closest(".pin[data-city]");
+    if (!pin) return;
+    event.preventDefault();
+    const card = document.getElementById(`city-${pin.dataset.city}`);
+    card?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    card?.classList.add("flash");
+    setTimeout(() => card?.classList.remove("flash"), 1200);
   });
+  drawYear(year);
 }
 
 async function libraryPage() {
@@ -1133,18 +1364,102 @@ async function bridgesPage(id) {
     links.set(item.relatedPoetId, row);
   }
   const rows = [...links.values()].sort((a, b) => b.n - a.n);
-  const top = rows.slice(0, 10);
-  const most = Math.max(1, ...top.map((row) => row.n));
-  const ring = top.map((row, index, list) => {
-    const angle = (Math.PI * 2 * index) / list.length - Math.PI / 2;
-    return { ...row, x: 50 + Math.cos(angle) * 36, y: 48 + Math.sin(angle) * 34 };
-  });
-  const graph = ring.length
-    ? `<div class="graph"><svg viewBox="0 0 100 100" preserveAspectRatio="none">${ring
-        .map((row) => `<line x1="50" y1="48" x2="${row.x}" y2="${row.y}" style="stroke-width:${(0.3 + (row.n / most) * 1.1).toFixed(2)}" />`)
-        .join("")}</svg><a class="node" style="left:50%;top:48%" href="#/poet/${poet.id}"><i></i>${esc(poet.nickname || poet.name)}</a>${ring
-        .map((row) => `<a class="node" style="left:${row.x}%;top:${row.y}%" href="#/bridges/${row.id}"><i></i>${esc(row.name)} · ${fa(row.n)}</a>`)
-        .join("")}</div>`
+  // every linked poet on one time axis: bubbles above (area = links), arcs below (who came first)
+  const most = Math.max(1, ...rows.map((row) => row.n));
+  const own = poet.deathYearInLHijri || 0;
+  const dated = rows.filter((row) => row.died);
+  const undated = rows.filter((row) => !row.died);
+  const years = [...dated.map((row) => row.died), ...(own ? [own] : [])];
+  const lo = Math.floor((Math.min(...years, own || Infinity) - 20) / 50) * 50;
+  const hi = Math.ceil((Math.max(...years, own || -Infinity) + 20) / 50) * 50;
+  const GW = Math.round(Math.min(1000, Math.max(540, (root.clientWidth || 1000) * 1.5)));
+  const AXIS = 330;
+  const EDGE = 40;
+  const span = undated.length ? GW - EDGE * 2 - 70 : GW - EDGE * 2;
+  const gx = (year) => GW - EDGE - ((year - lo) / Math.max(1, hi - lo)) * span;
+  const radius = (row) => 4 + Math.sqrt(row.n / most) * 20;
+  const tone = (row) => (row.before && !row.after ? "late" : row.after && !row.before ? "early" : "both");
+  const placedB = [];
+  const bubbles = [...rows]
+    .sort((a, b) => b.n - a.n)
+    .map((row) => {
+      const r = radius(row);
+      const cx = row.died ? gx(row.died) : EDGE + 30;
+      let cy = AXIS - r - 6;
+      for (let tries = 0; tries < 400; tries++) {
+        if (!placedB.some((o) => Math.hypot(o.cx - cx, o.cy - cy) < o.r + r + 2)) break;
+        cy -= 2;
+      }
+      const item = { ...row, r, cx, cy };
+      placedB.push(item);
+      return item;
+    });
+  const ox = own ? gx(own) : GW / 2;
+  // a name is written only where it covers no other name and no other bubble; the rest show on hover
+  const boxes = [{ l: ox - 60, r: ox + 60, t: AXIS - 34, b: AXIS - 6 }];
+  const meets = (a, b) => a.l < b.r && a.r > b.l && a.t < b.b && a.b > b.t;
+  const hitsBubble = (box, self) => bubbles.some((o) => o !== self && o.cx + o.r * 0.7 > box.l && o.cx - o.r * 0.7 < box.r && o.cy + o.r * 0.7 > box.t && o.cy - o.r * 0.7 < box.b);
+  const labels = new Map();
+  for (const item of bubbles.slice(0, 30)) {
+    const text = `${item.name} ${fa(item.n)}`;
+    const wide = text.length * 6.6 + 4;
+    const spots = [
+      { x: item.cx - item.r - 3, y: item.cy + 4 },
+      { x: item.cx + item.r + 3 + wide, y: item.cy + 4 },
+      { x: item.cx + wide / 2, y: item.cy - item.r - 5 },
+      { x: item.cx - item.r * 0.5, y: item.cy - item.r * 0.7 - 2 },
+      { x: item.cx + item.r * 0.5 + wide, y: item.cy - item.r * 0.7 - 2 },
+    ];
+    for (const spot of spots) {
+      const x = spot.x;
+      const box = { l: x - wide, r: x, t: spot.y - 13, b: spot.y + 3 };
+      if (box.l < 2 || box.r > GW - 2) continue;
+      if (boxes.some((o) => meets(o, box)) || hitsBubble(box, item)) continue;
+      boxes.push(box);
+      labels.set(item.id, { x, y: spot.y, text });
+      break;
+    }
+  }
+  // the biggest names that found no room get a callout above the swarm, with a thin leader line
+  const swarmTop = Math.min(...bubbles.map((item) => item.cy - item.r));
+  const rowsY = [swarmTop - 14, swarmTop - 34, swarmTop - 54];
+  const callouts = [];
+  for (const item of bubbles.slice(0, 10)) {
+    if (labels.has(item.id)) continue;
+    const text = `${item.name} ${fa(item.n)}`;
+    const wide = text.length * 6.6 + 4;
+    for (const y of rowsY) {
+      const x = Math.min(GW - 4, Math.max(wide + 4, item.cx + wide / 2));
+      const box = { l: x - wide, r: x, t: y - 13, b: y + 3 };
+      if (boxes.some((o) => meets(o, box))) continue;
+      boxes.push(box);
+      callouts.push({ x, y, text, cx: item.cx, cy: item.cy - item.r });
+      break;
+    }
+  }
+  const gTicks = [];
+  for (let year = lo; year <= hi; year += hi - lo > 600 ? 100 : 50) gTicks.push(year);
+  const top = Math.min(...bubbles.map((item) => item.cy - item.r), ...callouts.map((item) => item.y - 16)) - 10;
+  const graph = rows.length
+    ? `<div class="bridge-map"><svg class="bridge-svg" viewBox="0 ${top} ${GW} ${AXIS + 150 - top}" role="img" aria-label="پل‌های ${esc(poet.nickname || poet.name)} با ${fa(rows.length)} شاعر روی خط زمان">
+        <g class="b-axis">${gTicks.map((year) => `<line x1="${gx(year)}" x2="${gx(year)}" y1="${top}" y2="${AXIS}"/><text x="${gx(year)}" y="${AXIS + 136}">${yr(year)} ق</text>`).join("")}<line class="base" x1="${EDGE}" x2="${GW - EDGE}" y1="${AXIS}" y2="${AXIS}"/></g>
+        ${undated.length ? `<text class="b-note" x="${EDGE + 30}" y="${AXIS + 136}">بی‌تاریخ</text>` : ""}
+        <g class="b-arcs">${bubbles
+          .map((item) => {
+            const lift = Math.min(118, 14 + Math.abs(item.cx - ox) * 0.32);
+            return `<path class="${tone(item)}" d="M${ox.toFixed(1)},${AXIS} Q${((ox + item.cx) / 2).toFixed(1)},${(AXIS + lift * 2).toFixed(1)} ${item.cx.toFixed(1)},${AXIS}" style="stroke-width:${(0.8 + (item.n / most) * 5).toFixed(1)}"/>`;
+          })
+          .join("")}</g>
+        <g class="b-dots">${bubbles
+          .map(
+            (item) =>
+              `<a href="#/bridges/${item.id}"><circle class="${tone(item)}" cx="${item.cx.toFixed(1)}" cy="${item.cy.toFixed(1)}" r="${item.r.toFixed(1)}"><title>${esc(item.name)} · ${fa(item.n)} پیوند${item.died ? ` · درگذشت ${yr(item.died)} ق` : ""}</title></circle>${labels.has(item.id) ? `<text x="${labels.get(item.id).x.toFixed(1)}" y="${labels.get(item.id).y.toFixed(1)}">${esc(labels.get(item.id).text)}</text>` : ""}</a>`,
+          )
+          .join("")}</g>
+        <g class="b-call">${callouts.map((item) => `<line x1="${item.cx.toFixed(1)}" x2="${item.cx.toFixed(1)}" y1="${(item.y + 4).toFixed(1)}" y2="${item.cy.toFixed(1)}"/><text x="${item.x.toFixed(1)}" y="${item.y.toFixed(1)}">${esc(item.text)}</text>`).join("")}</g>
+        <g class="b-self"><line x1="${ox}" x2="${ox}" y1="${AXIS - 8}" y2="${AXIS + 8}"/><circle cx="${ox}" cy="${AXIS}" r="7"/><text x="${ox}" y="${AXIS - 14}">${esc(poet.nickname || poet.name)}</text></g>
+      </svg></div>
+      <p class="key muted b-key"><span class="sw late"></span> شعر ${esc(poet.nickname || poet.name)} پیش‌تر ثبت شده <span class="sw early"></span> شعر آن شاعر پیش‌تر است <span class="sw both"></span> هر دو سو. هر حباب یک شاعر است در سال درگذشتش؛ مساحت حباب و ضخامت کمان، شمار پیوندهاست. روی حباب بزن تا پل‌های آن شاعر باز شود.</p>`
     : "";
   const direction = (row) => {
     if (row.before && !row.after) return `${esc(poet.nickname || poet.name)} پیش‌تر است`;
@@ -1155,7 +1470,7 @@ async function bridgesPage(id) {
     "پل‌ها",
     `<p class="crumb"><a href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)}</a></p>
      <h1>پل‌های ثبت‌شده</h1>
-     <p class="lead">همه تضمین‌ها و بیت‌های مشترکی که گنجور برای ${esc(poet.nickname || poet.name)} ثبت و منتشر کرده: ${fa(quoted.length)} پیوند با ${fa(rows.length)} شاعر. ضخامت خط، شمار پیوندهاست. روی هر نام بزنی، پل‌های آن شاعر باز می‌شود.</p>
+     <p class="lead">همه تضمین‌ها و بیت‌های مشترکی که گنجور برای ${esc(poet.nickname || poet.name)} ثبت و منتشر کرده: ${fa(quoted.length)} پیوند با ${fa(rows.length)} شاعر. همه روی خط زمان: چه کسانی پیش از او بودند و چه کسانی پس از او.</p>
      ${graph}
      ${
        rows.length
@@ -1175,6 +1490,11 @@ async function bridgesPage(id) {
      <p class="muted">«پیش‌تر» یعنی شعر کدام شاعر در گنجور مقدم ثبت شده است. استقبال‌ها (هم‌وزن و هم‌قافیه) را در زبانه «هم‌وزن» صفحه هر شعر ببین.</p>
      <p><a class="chip" href="#/poet/${poet.id}">بازگشت به شاعر</a></p>`,
   );
+  const map = document.querySelector(".bridge-map");
+  if (map) {
+    atlasStage(map);
+    map.parentElement.classList.add("bridge-stage");
+  }
 }
 
 async function vaznPage(query) {
@@ -1250,121 +1570,590 @@ function regionOf(poet) {
   return "center";
 }
 
-function bornOf(poet) {
-  if (poet.birthYearInLHijri) return poet.birthYearInLHijri;
-  if (poet.deathYearInLHijri) return Math.max(1, poet.deathYearInLHijri - 60);
-  return 0;
+const yr = (value) => Number(value || 0).toLocaleString("fa-IR", { useGrouping: false });
+const toGregorian = (hijri) => Math.round(hijri * 0.970229 + 621.5643);
+
+function timelinePoets(list) {
+  return list
+    .filter((poet) => poet.published !== false && (poet.birthYearInLHijri || poet.deathYearInLHijri))
+    .map((poet) => {
+      let b = poet.birthYearInLHijri || poet.deathYearInLHijri - 60;
+      let d = poet.deathYearInLHijri || poet.birthYearInLHijri + 60;
+      const broken = d < b;
+      if (broken) [b, d] = [d, b];
+      return {
+        ...poet,
+        b,
+        d,
+        broken,
+        sureB: Boolean(poet.birthYearInLHijri && poet.validBirthDate && !broken),
+        sureD: Boolean(poet.deathYearInLHijri && poet.validDeathDate && !broken),
+        region: regionOf(poet),
+        label: poet.nickname || poet.name,
+      };
+    })
+    .sort((x, y) => x.b - y.b || x.d - y.d);
+}
+
+function yearsText(poet) {
+  return `${poet.birthYearInLHijri ? yr(poet.birthYearInLHijri) : ""}${poet.sureB ? "" : "؟"}–${poet.deathYearInLHijri ? yr(poet.deathYearInLHijri) : ""}${poet.sureD ? "" : "؟"} ق`;
 }
 
 async function treePage(query) {
-  loading("درخت شاعران");
-  const { data } = await api("/poets");
-  const poets = data
-    .filter((poet) => poet.published !== false)
-    .map((poet) => ({ ...poet, born: bornOf(poet), region: regionOf(poet), guess: !poet.birthYearInLHijri || !poet.validBirthDate }));
-  const dated = poets.filter((poet) => poet.born);
-  const undated = poets.filter((poet) => !poet.born);
-  const centuries = [...new Set(dated.map((poet) => centuryOf(poet.born)))].sort((a, b) => a - b);
-  const used = REGIONS.filter((region) => poets.some((poet) => poet.region === region.key));
-  const regionName = new Map(REGIONS.map((region) => [region.key, region]));
-  const leaf = (poet) => {
-    const region = regionName.get(poet.region);
-    const years = poet.birthYearInLHijri || poet.deathYearInLHijri ? `${poet.birthYearInLHijri || "؟"}–${poet.deathYearInLHijri || "؟"}` : "";
-    return `<button class="twig ${poet.pinOrder ? "famous" : ""}" type="button" data-id="${poet.id}" style="--tone:${region.color}" title="${esc(poet.name)}${poet.birthPlace ? ` · ${esc(poet.birthPlace)}` : ""}"><b>${esc(poet.nickname || poet.name)}</b>${years ? `<small>${years}${poet.guess ? " ؟" : ""}</small>` : ""}</button>`;
-  };
-  const rows = centuries
-    .map((century) => {
-      const inCentury = dated.filter((poet) => centuryOf(poet.born) === century);
-      const cells = used
-        .map((region) => {
-          const list = inCentury.filter((poet) => poet.region === region.key).sort((a, b) => a.born - b.born);
-          return `<div class="cell ${list.length ? "" : "empty"}" data-region="${esc(region.name)}" style="--tone:${region.color}">${list.map(leaf).join("")}</div>`;
-        })
-        .join("");
-      return `<div class="ring" data-century="${century}"><div class="age"><b>قرن ${century}</b><small>${inCentury.length} شاعر</small></div>${cells}</div>`;
-    })
-    .join("");
-  paint(
-    "درخت شاعران",
-    `<h1>درخت شاعران</h1>
-     <p class="lead">همه ${poets.length} شاعر گنجور در یک درخت: هر ردیف یک قرن هجری است و هر ستون یک سرزمین زادگاه. روی هر نام بزن تا هم‌عصرانش روشن شوند.</p>
-     <div class="tree-tools">
-       <form class="big-search" id="tree-filter"><input id="tree-q" placeholder="نام شاعر یا شهر، مثلاً شیراز" aria-label="پالایش درخت" /></form>
-       <p class="chips" id="tree-regions"><button class="chip on" type="button" data-region="">همه سرزمین‌ها</button>${used
-         .map((region) => `<button class="chip" type="button" data-region="${region.key}" style="--tone:${region.color}"><i class="dot"></i>${region.name} · ${poets.filter((poet) => poet.region === region.key).length}</button>`)
-         .join("")}</p>
-       <label class="switch"><input type="checkbox" id="tree-famous" /> فقط نام‌های آشنا</label>
-     </div>
-     <div class="focus" id="tree-focus" hidden></div>
-     <div class="grove" style="--cols:${used.length}">
-       <div class="ring head"><div class="age">قرن</div>${used.map((region) => `<div class="cell" style="--tone:${region.color}"><i class="dot"></i>${region.name}</div>`).join("")}</div>
-       ${rows}
-     </div>
-     ${undated.length ? `<h2 class="section">بی‌سال · ${undated.length}</h2><div class="cell loose">${undated.map(leaf).join("")}</div>` : ""}
-     <p class="muted">سرزمین از مختصات زادگاهی که گنجور ثبت کرده ساخته شده؛ «؟» یعنی سال تقریبی است یا فقط سال درگذشت ثبت شده. این درخت خویشاوندی ادبی نیست؛ برای آن <a href="#/bridges/2">پل‌های تضمین</a> را ببین.</p>`,
-  );
+  loading("خط زمان شاعران");
+  const [{ data }, learn] = await Promise.all([api("/poets"), local().catch(() => ({}))]);
+  const poets = timelinePoets(data);
   const byId = new Map(poets.map((poet) => [String(poet.id), poet]));
-  const twigs = [...document.querySelectorAll(".twig")];
+  const regionInfo = new Map(REGIONS.map((region) => [region.key, region]));
+  const used = REGIONS.filter((region) => poets.some((poet) => poet.region === region.key));
+
+  // content space: time runs right to left, like the reading
+  const PX = 0.86;
+  const from = Math.floor(Math.min(...poets.map((poet) => poet.b)) / 100) * 100;
+  const to = Math.ceil(Math.max(...poets.map((poet) => poet.d)) / 100) * 100;
+  const PAD = 18;
+  const W = Math.round((to - from) * PX + PAD * 2);
+  const x = (year) => W - PAD - (year - from) * PX;
+  const yearAt = (cx) => from + (W - PAD - cx) / PX;
+
+  // lanes: each bar plus its name, packed so nothing overlaps
+  // names keep one screen size at every zoom, so lanes are packed for the zoom where names appear (KREF)
+  const ROW = 14;
+  const KREF = 1.4;
+  const labelYears = (poet) => (poet.label.length * (poet.pinOrder ? 7.6 : 6.8) + 12) / (PX * KREF);
+  const laneEnd = [];
+  for (const poet of poets) {
+    let lane = laneEnd.findIndex((end) => end < poet.b - 3);
+    if (lane < 0) lane = laneEnd.length;
+    laneEnd[lane] = poet.d + labelYears(poet);
+    poet.lane = lane;
+  }
+  const H = laneEnd.length * ROW + 16;
+  const yOf = (poet) => poet.lane * ROW + 4;
+
+  // how many poets were alive in each decade
+  const decades = [];
+  for (let year = from; year <= to; year += 10) decades.push({ year, n: poets.filter((poet) => poet.b <= year + 5 && poet.d >= year + 5).length });
+  const peak = decades.reduce((best, item) => (item.n > best.n ? item : best), decades[0]);
+
+  // moments in history (data.json, Gregorian) placed on the Hijri axis
+  const toHijri = (greg) => Math.round((greg - 621.5643) / 0.970229);
+  const eras = (learn.events || []).map((item) => ({ ...item, h: toHijri(item.year) })).filter((item) => item.h >= from && item.h <= to);
+
+  const gradients = used
+    .map((region) =>
+      [
+        ["b", "1", "0.3", "1", "0.6"],
+        ["d", "0.3", "1", "0.4", "1"],
+        ["bd", "0.3", "0.3", "0.35", "0.65"],
+      ]
+        .map(
+          ([kind, left, right, a, z]) =>
+            `<linearGradient id="g-${region.key}-${kind}"><stop offset="0" stop-color="${region.color}" stop-opacity="${left}"/><stop offset="${a}" stop-color="${region.color}"/><stop offset="${z}" stop-color="${region.color}"/><stop offset="1" stop-color="${region.color}" stop-opacity="${right}"/></linearGradient>`,
+        )
+        .join(""),
+    )
+    .join("");
+  const fill = (poet) => {
+    const kind = (poet.sureB ? "" : "b") + (poet.sureD ? "" : "d");
+    return kind ? `url(#g-${poet.region}-${kind})` : regionInfo.get(poet.region).color;
+  };
+  const bar = (poet) => {
+    const y = yOf(poet);
+    const x1 = x(poet.d);
+    const width = Math.max(3, x(poet.b) - x1);
+    const strong = poet.pinOrder ? " famous" : "";
+    return `<g class="life${strong}" data-id="${poet.id}" data-region="${poet.region}" tabindex="0" role="button" aria-label="${esc(poet.label)}، ${esc(yearsText(poet))}"><title>${esc(poet.name)} · ${esc(yearsText(poet))}${poet.birthPlace ? ` · ${esc(poet.birthPlace)}` : ""}</title><rect class="hit" x="${(x1 - (poet.label.length * 7 + 10) / KREF).toFixed(1)}" y="${y}" width="${(width + (poet.label.length * 7 + 12) / KREF).toFixed(1)}" height="${ROW}"/><rect class="span" x="${x1.toFixed(1)}" y="${y + (poet.pinOrder ? 4 : 5)}" width="${width.toFixed(1)}" height="${poet.pinOrder ? 6 : 4}" rx="2" fill="${fill(poet)}"/><text x="${(x1 - 3).toFixed(1)}" y="${y + 7}">${esc(poet.label)}</text></g>`;
+  };
+  const centuries = [];
+  for (let year = from; year <= to; year += 100) centuries.push(year);
+  const MINI_W = 168;
+  const MINI_H = Math.max(60, Math.min(120, Math.round((MINI_W * H) / W)));
+  const mx = MINI_W / W;
+  const my = MINI_H / H;
+
+  const uncertain = poets.filter((poet) => !poet.sureB || !poet.sureD).length;
+  paint(
+    "خط زمان شاعران",
+    `<h1>خط زمان شاعران</h1>
+     <p class="lead">زندگی ${fa(poets.length)} شاعر گنجور، همه در یک نگاه. هر نوار از سال تولد تا سال درگذشت است و زمان از راست به چپ می‌رود. بکش تا در زمان گردش کنی، بزرگ کن تا نام‌ها پیدا شوند، و روی یک شاعر بزن تا هم‌عصران و تضمین‌هایش روشن شوند.</p>
+     <div class="tree-tools">
+       <form class="big-search" id="tree-filter"><input id="tree-q" placeholder="نام شاعر یا شهر، مثلاً شیراز" aria-label="پیدا کردن شاعر" autocomplete="off" /></form>
+       <p class="chips" id="tree-regions" aria-label="سرزمین زادگاه"><button class="chip on" type="button" data-region="">همه سرزمین‌ها</button>${used
+         .map((region) => `<button class="chip" type="button" data-region="${region.key}" style="--tone:${region.color}"><i class="dot"></i>${region.name} · ${fa(poets.filter((poet) => poet.region === region.key).length)}</button>`)
+         .join("")}</p>
+     </div>
+     <div class="stage" id="stage" tabindex="0" aria-label="خط زمان؛ با کشیدن جابه‌جا شو، با چرخ یا دو انگشت بزرگ‌نمایی کن، دکمه صفر برای نمای کل">
+       <svg class="stage-head" id="shead" aria-hidden="true"></svg>
+       <svg class="chrono" id="chrono" role="group" aria-label="خط زمان زندگی ${fa(poets.length)} شاعر">
+         <defs>${gradients}</defs>
+         <g id="view">
+           <g class="axis">${centuries.map((year) => `<line x1="${x(year)}" x2="${x(year)}" y1="0" y2="${H}"/>`).join("")}</g>
+           <g class="eras">${eras.map((item) => `<line x1="${x(item.h)}" x2="${x(item.h)}" y1="0" y2="${H}"/>`).join("")}</g>
+           <rect class="band" id="band" y="0" height="${H}" hidden/>
+           <g id="arcs"></g>
+           <g id="lives">${poets.map(bar).join("")}</g>
+         </g>
+         <g id="tags" aria-hidden="true"></g>
+       </svg>
+       <div class="stage-ctl" role="toolbar" aria-label="بزرگ‌نمایی">
+         <button type="button" data-zoom="in" title="بزرگ‌تر (+)" aria-label="بزرگ‌تر">+</button>
+         <button type="button" data-zoom="out" title="کوچک‌تر (−)" aria-label="کوچک‌تر">−</button>
+         <button type="button" data-zoom="fit" title="نمای کل (۰)">نمای کل</button>
+         <button type="button" data-zoom="full" title="تمام‌صفحه">تمام‌صفحه</button>
+       </div>
+       <svg class="mini" id="mini" viewBox="0 0 ${MINI_W} ${MINI_H}" width="${MINI_W}" height="${MINI_H}" role="img" aria-label="نقشه کوچک؛ بزن تا به آن نقطه بروی">
+         ${poets.map((poet) => `<rect x="${(x(poet.d) * mx).toFixed(1)}" y="${(yOf(poet) * my).toFixed(1)}" width="${Math.max(1, (x(poet.b) - x(poet.d)) * mx).toFixed(1)}" height="${Math.max(1, 4 * my).toFixed(1)}" fill="${regionInfo.get(poet.region).color}"/>`).join("")}
+         <rect class="lens" id="lens"/>
+       </svg>
+       <p class="stage-hint" id="stage-hint">بکش تا جابه‌جا شوی · چرخ یا دو انگشت برای بزرگ‌نمایی · دوبار بزن تا نزدیک شوی</p>
+       <div class="focus" id="tree-focus" hidden></div>
+     </div>
+     <p class="key muted"><span class="sw solid"></span> سال ثبت‌شده <span class="sw fade"></span> سال تقریبی؛ سر کم‌رنگ نوار یعنی گنجور آن سال را قطعی نمی‌داند (${fa(uncertain)} شاعر از ${fa(poets.length)}). نوار ضخیم‌تر: شاعران برگزیده گنجور، که نامشان در نمای دور هم پیداست.</p>
+     <p class="muted">بالای نمودار: شمار شاعران زنده در هر دهه (بیشترین ${fa(peak.n)} شاعر، حدود ${yr(peak.year)} ق). خط‌های طلایی عمودی چند رخداد تاریخی است که سال میلادی‌شان به هجری قمری برگردانده شده. سرزمین از مختصات زادگاهی که گنجور ثبت کرده ساخته شده و سال میلادی تقریبی است. کمان‌های طلایی پیوندهای تضمین و بیت مشترک است که گنجور منتشر کرده؛ ضخامت، شمار پیوند. جزئیاتش در <a href="#/bridges/2">پل‌های تضمین</a>.</p>`,
+  );
+
+  const stage = document.querySelector("#stage");
+  const chart = document.querySelector("#chrono");
+  const view = chart.querySelector("#view");
+  const tags = chart.querySelector("#tags");
+  const headSvg = document.querySelector("#shead");
+  const lens = document.querySelector("#lens");
+  const mini = document.querySelector("#mini");
+  const lives = [...chart.querySelectorAll(".life")];
+  const band = chart.querySelector("#band");
+  const arcs = chart.querySelector("#arcs");
   const focus = document.querySelector("#tree-focus");
   const box = document.querySelector("#tree-q");
-  const famous = document.querySelector("#tree-famous");
   let region = "";
-  const filter = () => {
-    const q = box.value.trim();
-    for (const twig of twigs) {
-      const poet = byId.get(twig.dataset.id);
-      const text = `${poet.nickname || ""} ${poet.name || ""} ${poet.birthPlace || ""} ${poet.deathPlace || ""}`;
-      const show = (!q || text.includes(q)) && (!region || poet.region === region) && (!famous.checked || poet.pinOrder);
-      twig.hidden = !show;
-    }
-    document.querySelectorAll(".grove .ring:not(.head)").forEach((ring) => {
-      ring.hidden = !ring.querySelector(".twig:not([hidden])");
-    });
+  let picked = null;
+  let ask = 0;
+  let linkedIds = new Set();
+
+  // ── pan and zoom: screen = t + k * content ──
+  let k = 1;
+  let tx = 0;
+  let ty = 0;
+  let fitK = 1;
+  let fitted = true;
+  let frame = 0;
+  let flight = 0;
+  const size = () => ({ w: chart.clientWidth || 1, h: chart.clientHeight || 1 });
+  const clampAxis = (t, span, room) => {
+    const margin = 40;
+    if (span + margin * 2 <= room) return (room - span) / 2;
+    return Math.min(margin, Math.max(room - span - margin, t));
   };
-  box.oninput = filter;
-  famous.onchange = filter;
-  document.querySelector("#tree-filter").onsubmit = (event) => event.preventDefault();
+  const clamp = () => {
+    const { w, h } = size();
+    k = Math.min(Math.max(k, fitK * 0.8), 9);
+    tx = clampAxis(tx, W * k, w);
+    ty = clampAxis(ty, H * k, h);
+  };
+  const fit = () => {
+    const { w, h } = size();
+    fitK = Math.min(w / W, h / H) * 0.97;
+    k = fitK;
+    tx = (w - W * k) / 2;
+    ty = (h - H * k) / 2;
+    fitted = true;
+    draw();
+  };
+  const zoomAt = (sx, sy, factor) => {
+    const next = Math.min(Math.max(k * factor, fitK * 0.8), 9);
+    tx = sx - ((sx - tx) * next) / k;
+    ty = sy - ((sy - ty) * next) / k;
+    k = next;
+    fitted = false;
+    draw();
+  };
+  const draw = () => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(render);
+  };
+  const near = () => k >= KREF * 0.9;
+  const render = () => {
+    clamp();
+    view.setAttribute("transform", `translate(${tx.toFixed(2)},${ty.toFixed(2)}) scale(${k.toFixed(4)})`);
+    chart.classList.toggle("near", near());
+    stage.classList.toggle("zoomed", k > fitK * 1.15);
+    chart.style.setProperty("--fs", `${(11.5 / k).toFixed(3)}px`);
+    chart.style.setProperty("--fs-big", `${(12.5 / k).toFixed(3)}px`);
+    renderHead();
+    renderTags();
+    const { w, h } = size();
+    lens.setAttribute("x", ((-tx / k) * mx).toFixed(1));
+    lens.setAttribute("y", ((-ty / k) * my).toFixed(1));
+    lens.setAttribute("width", ((w / k) * mx).toFixed(1));
+    lens.setAttribute("height", ((h / k) * my).toFixed(1));
+  };
+
+  // axis, density and history moments, drawn in screen space so they stay readable
+  const HEAD = 92;
+  const renderHead = () => {
+    const { w } = size();
+    headSvg.setAttribute("viewBox", `0 0 ${w} ${HEAD}`);
+    const sx = (year) => tx + k * x(year);
+    const left = yearAt(-tx / k);
+    const right = yearAt((w - tx) / k);
+    const lo = Math.min(left, right);
+    const hi = Math.max(left, right);
+    const step = [10, 20, 25, 50, 100, 200].find((item) => item * PX * k >= 74) || 200;
+    const ticks = [];
+    for (let year = Math.ceil(Math.max(lo, from) / step) * step; year <= Math.min(hi, to); year += step) ticks.push(year);
+    const top = 22;
+    const base = 58;
+    const dy = (n) => base - (n / peak.n) * (base - top);
+    const area = `M${sx(from).toFixed(1)},${base} ${decades.map((item) => `L${sx(item.year + 5).toFixed(1)},${dy(item.n).toFixed(1)}`).join(" ")} L${sx(to).toFixed(1)},${base} Z`;
+    const placed = [];
+    const eraTags = eras
+      .map((item) => ({ ...item, at: sx(item.h) }))
+      .filter((item) => item.at > 0 && item.at < w)
+      .sort((a, b) => b.at - a.at)
+      .filter((item) => {
+        const wide = item.title.length * 6.4 + 12;
+        if (placed.some((other) => other.at - item.at < other.wide)) return false;
+        if (item.at - wide < 0) return false;
+        placed.push({ at: item.at, wide });
+        return true;
+      });
+    const px = sx(peak.year + 5);
+    const peakTag = px > 90 && px < w - 10 ? `<line x1="${px.toFixed(1)}" x2="${px.toFixed(1)}" y1="${dy(peak.n).toFixed(1)}" y2="${base}"/><text x="${(px - 4).toFixed(1)}" y="${base - 5}">اوج: ${fa(peak.n)} شاعر زنده</text>` : "";
+    headSvg.innerHTML = `<g class="dens"><path d="${area}"/>${peakTag}</g>
+      <g class="eras">${eras.map((item) => `<line x1="${sx(item.h).toFixed(1)}" x2="${sx(item.h).toFixed(1)}" y1="16" y2="${HEAD}"/>`).join("")}${eraTags
+        .map((item) => `<text x="${(item.at - 3).toFixed(1)}" y="12"><title>${esc(item.text)}</title>${esc(item.title)}</text>`)
+        .join("")}</g>
+      <g class="axis">${ticks
+        .map(
+          (year) =>
+            `<line x1="${sx(year).toFixed(1)}" x2="${sx(year).toFixed(1)}" y1="${base}" y2="${base + 5}"/><text x="${sx(year).toFixed(1)}" y="${base + 18}">${yr(year)} ق</text><text class="greg" x="${sx(year).toFixed(1)}" y="${base + 31}">${yr(toGregorian(year))} م</text>`,
+        )
+        .join("")}</g>`;
+  };
+
+  // in the far view the names would be unreadable dots: write the chosen few in screen space instead
+  const renderTags = () => {
+    if (near()) {
+      tags.innerHTML = "";
+      return;
+    }
+    const { w, h } = size();
+    const boxes = [];
+    const want = poets
+      .filter((poet) => poet.pinOrder || poet === picked || linkedIds.has(String(poet.id)))
+      .sort((a, b) => (b === picked) - (a === picked) || (a.pinOrder || 99) - (b.pinOrder || 99));
+    const out = [];
+    for (const poet of want) {
+      const ax = tx + k * (x(poet.d) - 3);
+      const ay = ty + k * (yOf(poet) + 7) + 4.5;
+      const wide = poet.label.length * 7.6 + 8;
+      const rect = { l: ax - wide, r: ax, t: ay - 12, b: ay + 4 };
+      if (rect.l < 2 || rect.r > w - 2 || rect.t < 2 || rect.b > h - 2) continue;
+      if (boxes.some((o) => rect.l < o.r && rect.r > o.l && rect.t < o.b && rect.b > o.t)) continue;
+      boxes.push(rect);
+      const cls = poet === picked ? "picked" : linkedIds.has(String(poet.id)) ? "linked" : "";
+      out.push(`<text class="${cls}" x="${ax.toFixed(1)}" y="${ay.toFixed(1)}" data-id="${poet.id}">${esc(poet.label)}</text>`);
+    }
+    tags.innerHTML = out.join("");
+  };
+
+  // fly smoothly to a place in content space
+  const flyTo = (cx, cy, targetK, at) => {
+    const { w, h } = size();
+    const spot = at || { x: w / 2, y: h / 2 };
+    const start = { k, tx, ty };
+    const endK = Math.min(Math.max(targetK, fitK), 9);
+    const end = { k: endK, tx: spot.x - cx * endK, ty: spot.y - cy * endK };
+    const t0 = performance.now();
+    fitted = false;
+    const step = (now) => {
+      const p = Math.min(1, (now - t0) / 520);
+      const e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+      k = start.k + (end.k - start.k) * e;
+      tx = start.tx + (end.tx - start.tx) * e;
+      ty = start.ty + (end.ty - start.ty) * e;
+      render();
+      if (p < 1) flight = requestAnimationFrame(step);
+    };
+    cancelAnimationFrame(flight);
+    flight = requestAnimationFrame(step);
+  };
+  const scrollTo = (poet) => {
+    // aim at the part of the stage the open card does not cover
+    const { w, h } = size();
+    const open = !focus.hidden;
+    const narrow = w < 640;
+    const spot = {
+      x: open && !narrow ? Math.min(w - 120, focus.offsetWidth + 20 + (w - focus.offsetWidth - 20) / 2) : w / 2,
+      y: open && narrow ? Math.max(60, (h - focus.offsetHeight - 60) / 2) : h / 2,
+    };
+    flyTo((x(poet.b) + x(poet.d)) / 2 - 20, yOf(poet) + 7, Math.max(k, KREF * 1.6), spot);
+  };
+
+  // pointer: one finger or mouse pans, two fingers pinch
+  const pointers = new Map();
+  let travelled = 0;
+  let pinch = null;
+  chart.addEventListener("pointerdown", (event) => {
+    cancelAnimationFrame(flight);
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    travelled = 0;
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) };
+    }
+  });
+  chart.addEventListener("pointermove", (event) => {
+    const last = pointers.get(event.pointerId);
+    if (!last) return;
+    const now = { x: event.clientX, y: event.clientY };
+    const box = chart.getBoundingClientRect();
+    if (pointers.size === 1) {
+      const dx = now.x - last.x;
+      const dy = now.y - last.y;
+      travelled += Math.abs(dx) + Math.abs(dy);
+      if (travelled > 6) {
+        if (!chart.hasPointerCapture(event.pointerId)) chart.setPointerCapture(event.pointerId);
+        chart.classList.add("grab");
+        tx += dx;
+        ty += dy;
+        fitted = false;
+        draw();
+      }
+    } else if (pointers.size === 2 && pinch) {
+      pointers.set(event.pointerId, now);
+      const [a, b] = [...pointers.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      const midX = (a.x + b.x) / 2 - box.left;
+      const midY = (a.y + b.y) / 2 - box.top;
+      travelled += 20;
+      if (pinch.d > 0) zoomAt(midX, midY, d / pinch.d);
+      pinch.d = d;
+      return;
+    }
+    pointers.set(event.pointerId, now);
+  });
+  const lift = (event) => {
+    pointers.delete(event.pointerId);
+    if (pointers.size < 2) pinch = null;
+    if (!pointers.size) chart.classList.remove("grab");
+  };
+  chart.addEventListener("pointerup", lift);
+  chart.addEventListener("pointercancel", lift);
+  chart.addEventListener(
+    "wheel",
+    (event) => {
+      event.preventDefault();
+      cancelAnimationFrame(flight);
+      const box = chart.getBoundingClientRect();
+      if (!event.ctrlKey && Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+        tx -= event.deltaX;
+        fitted = false;
+        draw();
+        return;
+      }
+      const speed = event.ctrlKey ? 0.01 : 0.0018;
+      zoomAt(event.clientX - box.left, event.clientY - box.top, Math.exp(-event.deltaY * speed));
+    },
+    { passive: false },
+  );
+  chart.addEventListener("dblclick", (event) => {
+    event.preventDefault();
+    const box = chart.getBoundingClientRect();
+    zoomAt(event.clientX - box.left, event.clientY - box.top, 2.2);
+  });
+  const goMini = (event) => {
+    const box = mini.getBoundingClientRect();
+    const cx = ((event.clientX - box.left) / box.width) * W;
+    const cy = ((event.clientY - box.top) / box.height) * H;
+    const { w, h } = size();
+    if (k <= fitK * 1.05) k = fitK * 2.5;
+    tx = w / 2 - cx * k;
+    ty = h / 2 - cy * k;
+    fitted = false;
+    draw();
+  };
+  mini.addEventListener("pointerdown", (event) => {
+    event.stopPropagation();
+    mini.setPointerCapture(event.pointerId);
+    goMini(event);
+    mini.onpointermove = (move) => goMini(move);
+  });
+  mini.addEventListener("pointerup", () => (mini.onpointermove = null));
+  stage.querySelector(".stage-ctl").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-zoom]");
+    if (!button) return;
+    const { w, h } = size();
+    const kind = button.dataset.zoom;
+    if (kind === "in") zoomAt(w / 2, h / 2, 1.6);
+    else if (kind === "out") zoomAt(w / 2, h / 2, 1 / 1.6);
+    else if (kind === "fit") fit();
+    else if (kind === "full") {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else stage.requestFullscreen?.().catch(() => stage.classList.toggle("wide"));
+    }
+  });
+  stage.addEventListener("keydown", (event) => {
+    if (event.target.closest("input, textarea")) return;
+    const { w, h } = size();
+    const moves = { ArrowLeft: [80, 0], ArrowRight: [-80, 0], ArrowUp: [0, 80], ArrowDown: [0, -80] };
+    if (moves[event.key]) {
+      event.preventDefault();
+      tx += moves[event.key][0];
+      ty += moves[event.key][1];
+      fitted = false;
+      draw();
+    } else if (event.key === "+" || event.key === "=") zoomAt(w / 2, h / 2, 1.4);
+    else if (event.key === "-") zoomAt(w / 2, h / 2, 1 / 1.4);
+    else if (event.key === "0" || event.key === "۰") fit();
+  });
+  const watch = new ResizeObserver(() => {
+    if (!document.body.contains(stage)) return watch.disconnect();
+    if (fitted) fit();
+    else {
+      const { w, h } = size();
+      fitK = Math.min(w / W, h / H) * 0.97;
+      draw();
+    }
+  });
+  watch.observe(stage);
+
+  const paintState = () => {
+    const q = box.value.trim();
+    const peers = picked ? new Set(poets.filter((other) => other.b <= picked.d && other.d >= picked.b).map((other) => String(other.id))) : null;
+    chart.classList.toggle("dim", Boolean(q || region || picked));
+    for (const node of lives) {
+      const poet = byId.get(node.dataset.id);
+      const text = `${poet.nickname || ""} ${poet.name || ""} ${poet.birthPlace || ""} ${poet.deathPlace || ""}`;
+      const match = (!q || text.includes(q)) && (!region || poet.region === region) && (!peers || peers.has(node.dataset.id));
+      node.classList.toggle("on", match);
+      node.classList.toggle("picked", picked?.id === poet.id);
+    }
+    renderTags();
+  };
+  const drawLinks = (links) => {
+    if (!picked) return;
+    const most = Math.max(1, ...links.map((link) => link.n));
+    const cx = (poet) => (x(poet.b) + x(poet.d)) / 2;
+    linkedIds = new Set(links.slice(0, 12).map((link) => String(link.id)));
+    arcs.innerHTML = links
+      .slice(0, 12)
+      .map((link) => {
+        const other = byId.get(String(link.id));
+        if (!other) return "";
+        const ax = cx(picked);
+        const ay = yOf(picked) + 7;
+        const bx = cx(other);
+        const by = yOf(other) + 7;
+        const lift = Math.min(ay > by ? by : ay, Math.min(160, 30 + Math.abs(ax - bx) * 0.25));
+        return `<path d="M${ax.toFixed(1)},${ay} Q${((ax + bx) / 2).toFixed(1)},${(Math.min(ay, by) - lift).toFixed(1)} ${bx.toFixed(1)},${by}" style="stroke-width:${(1 + (link.n / most) * 4).toFixed(1)}"><title>${esc(other.label)} · ${fa(link.n)} پیوند</title></path>`;
+      })
+      .join("");
+    for (const link of links.slice(0, 12)) chart.querySelector(`.life[data-id="${link.id}"]`)?.classList.add("on", "linked");
+    renderTags();
+  };
+  const select = async (id, jump = false) => {
+    const poet = byId.get(String(id));
+    if (!poet) return;
+    picked = poet;
+    linkedIds = new Set();
+    lives.forEach((node) => node.classList.remove("linked"));
+    arcs.innerHTML = "";
+    band.removeAttribute("hidden");
+    band.setAttribute("x", x(poet.d));
+    band.setAttribute("width", Math.max(3, x(poet.b) - x(poet.d)));
+    paintState();
+    const peers = poets.filter((other) => other.id !== poet.id && other.b <= poet.d && other.d >= poet.b);
+    const known = peers.filter((other) => other.pinOrder).sort((a, b) => a.pinOrder - b.pinOrder);
+    const peerChip = (other) => `<button class="chip" type="button" data-pick="${other.id}">${esc(other.label)}</button>`;
+    focus.hidden = false;
+    focus.innerHTML = `<button type="button" class="focus-x" id="tree-clear" aria-label="بستن">×</button><div class="focus-body">
+      <strong>${esc(poet.label)}</strong> <span class="muted">${esc(poet.name)}${poet.birthPlace ? ` · زاده ${esc(poet.birthPlace)}` : ""} · ${esc(yearsText(poet))}${poet.broken ? " · سال‌ها در گنجور ناسازگارند" : ""}</span>
+      <p>${fa(peers.length)} هم‌عصر (روشن روی نمودار)${known.length ? `، از برگزیدگان: ${known.map(peerChip).join("")}` : ""}</p>
+      <p id="tree-links" class="muted">پیوندهای تضمین را از گنجور می‌آورم…</p>
+      <p class="chips"><a class="btn primary" href="#/poet/${poet.id}">صفحه شاعر</a><a class="chip" href="#/bridges/${poet.id}">همه پل‌ها</a><a class="chip" href="#/map?y=${Math.round((poet.b + poet.d) / 2)}">روی نقشه</a><button class="chip" type="button" data-go="${poet.id}">برو سراغش</button></p></div>`;
+    history.replaceState(null, "", `#/tree?poet=${poet.id}`);
+    if (jump) scrollTo(poet);
+    const token = ++ask;
+    let links = [];
+    try {
+      const { data: quoted } = await api(`/quoted?poetId=${poet.id}&published=true`);
+      const count = new Map();
+      for (const item of Array.isArray(quoted) ? quoted : []) {
+        if (!item.relatedPoetId || item.relatedPoetId === poet.id || item.rejected) continue;
+        count.set(item.relatedPoetId, (count.get(item.relatedPoetId) || 0) + 1);
+      }
+      links = [...count].map(([other, n]) => ({ id: other, n })).sort((a, b) => b.n - a.n);
+    } catch (error) {
+      if (token !== ask) return;
+      const note = document.querySelector("#tree-links");
+      if (note) note.textContent = "پیوندهای تضمین از گنجور نیامد؛ بعداً دوباره بزن.";
+      return;
+    }
+    if (token !== ask || picked !== poet) return;
+    drawLinks(links);
+    const note = document.querySelector("#tree-links");
+    if (note)
+      note.innerHTML = links.length
+        ? `پیوند تضمین یا بیت مشترک با ${fa(links.length)} شاعر${links.length > 12 ? "؛ دوازده تای پرشمار روی نمودار" : ""}: ${links
+            .slice(0, 6)
+            .map((link) => `<button class="chip" type="button" data-pick="${link.id}">${esc(byId.get(String(link.id))?.label || "شاعر")} · ${fa(link.n)}</button>`)
+            .join("")}`
+        : "گنجور برای این شاعر تضمین یا بیت مشترکی منتشر نکرده.";
+  };
+  const clear = () => {
+    picked = null;
+    linkedIds = new Set();
+    ask++;
+    band.setAttribute("hidden", "");
+    arcs.innerHTML = "";
+    lives.forEach((node) => node.classList.remove("linked"));
+    focus.hidden = true;
+    history.replaceState(null, "", "#/tree");
+    paintState();
+  };
+
+  chart.addEventListener("click", (event) => {
+    if (travelled > 6) return;
+    const node = event.target.closest(".life, #tags text");
+    if (node) select(node.dataset.id);
+  });
+  chart.addEventListener("keydown", (event) => {
+    const node = event.target.closest(".life");
+    if (node && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      event.stopPropagation();
+      select(node.dataset.id, true);
+    }
+  });
+  focus.addEventListener("pointerdown", (event) => event.stopPropagation());
+  focus.addEventListener("click", (event) => {
+    if (event.target.closest("#tree-clear")) return clear();
+    const go = event.target.closest("[data-go]");
+    if (go) return scrollTo(byId.get(go.dataset.go));
+    const chip = event.target.closest("[data-pick]");
+    if (chip) select(chip.dataset.pick, true);
+  });
+  box.oninput = paintState;
+  document.querySelector("#tree-filter").onsubmit = (event) => {
+    event.preventDefault();
+    const q = box.value.trim();
+    const hit = q && poets.find((poet) => `${poet.nickname || ""} ${poet.name || ""} ${poet.birthPlace || ""}`.includes(q));
+    if (hit) {
+      box.value = "";
+      select(hit.id, true);
+    }
+  };
   document.querySelector("#tree-regions").onclick = (event) => {
     const chip = event.target.closest("[data-region]");
     if (!chip) return;
     region = chip.dataset.region;
     document.querySelectorAll("#tree-regions .chip").forEach((node) => node.classList.toggle("on", node === chip));
-    filter();
+    paintState();
   };
-  const select = (id) => {
-    const poet = byId.get(String(id));
-    if (!poet) return;
-    const from = poet.birthYearInLHijri || poet.born;
-    const to = poet.deathYearInLHijri || from + 60;
-    const peers = poets.filter((other) => other.id !== poet.id && other.born && other.born <= to && (other.deathYearInLHijri || other.born + 60) >= from);
-    const peerIds = new Set(peers.map((other) => String(other.id)));
-    for (const twig of twigs) {
-      twig.classList.toggle("picked", twig.dataset.id === String(poet.id));
-      twig.classList.toggle("peer", peerIds.has(twig.dataset.id));
-    }
-    document.querySelector(".grove").classList.add("dim");
-    focus.hidden = false;
-    focus.innerHTML = `<div class="focus-body"><strong>${esc(poet.nickname || poet.name)}</strong> <span class="muted">${esc(poet.name)}${poet.birthPlace ? ` · ${esc(poet.birthPlace)}` : ""}${poet.birthYearInLHijri || poet.deathYearInLHijri ? ` · ${poet.birthYearInLHijri || "؟"}–${poet.deathYearInLHijri || "؟"}` : ""}</span>
-      <p class="muted">${peers.length} هم‌عصر روشن شد.</p>
-      <p class="chips"><a class="btn primary" href="#/poet/${poet.id}">صفحه شاعر</a><a class="chip" href="#/bridges/${poet.id}">پل‌ها</a>${from ? `<a class="chip" href="#/map?y=${Math.round((from + to) / 2)}">روی نقشه</a>` : ""}<button class="chip" type="button" id="tree-clear">پاک کن</button></p></div>`;
-    document.querySelector("#tree-clear").onclick = clear;
-  };
-  const clear = () => {
-    twigs.forEach((twig) => twig.classList.remove("picked", "peer"));
-    document.querySelector(".grove").classList.remove("dim");
-    focus.hidden = true;
-  };
-  document.querySelectorAll(".grove, .cell.loose").forEach((area) => {
-    area.onclick = (event) => {
-      const twig = event.target.closest(".twig");
-      if (twig) select(twig.dataset.id);
-    };
-  });
+  fit();
   const start = query.get("poet");
-  if (start) {
-    select(start);
-    document.querySelector(`.twig[data-id="${start}"]`)?.scrollIntoView({ block: "center" });
-  }
+  if (start) select(start, true);
 }
 
 const HOME_TOOLS = [
@@ -1383,7 +2172,7 @@ const TOOL_GROUPS = [
     tools: [
       ["#/map", "نقشه هم‌عصران", "سال را جابه‌جا کن و زادگاه شاعران زنده آن سال را ببین.", "◎"],
       ["#/places", "جای‌ها در شعر", "شهرها و سال‌هایی که روی بیت‌ها برچسب خورده، روی یک نقشه.", "⌖"],
-      ["#/tree", "درخت شاعران", "همه ۲۴۵ شاعر در جدول قرن و سرزمین؛ روی هر نام بزن تا هم‌عصرانش روشن شوند.", "❦"],
+      ["#/tree", "خط زمان شاعران", "زندگی همه شاعران روی یک خط زمان؛ روی هر نام بزن تا هم‌عصرانش و تضمین‌هایش پیدا شوند.", "❦"],
     ],
   },
   {
@@ -1900,11 +2689,11 @@ async function placesPage() {
   paint(
     "جای‌ها در شعر",
     `<h1>جای‌ها در شعر</h1>
-     <p class="lead">${geo.length.toLocaleString("fa-IR")} بیت در گنجور به یک شهر بسته شده و ${dated.length.toLocaleString("fa-IR")} تا سال هم دارد. این نقشه زادگاه شاعر نیست؛ جایی است که خود شعر از آن حرف می‌زند. اندازه نقطه، شمار شعرهاست.</p>
+     <p class="lead">${geo.length.toLocaleString("fa-IR")} بیت در گنجور به یک شهر بسته شده و ${dated.length.toLocaleString("fa-IR")} تا سال هم دارد. این نقشه زادگاه شاعر نیست؛ جایی است که خود شعر از آن حرف می‌زند. اندازه نقطه، شمار شعرهاست. بکش و بزرگ کن تا نام شهرهای کوچک‌تر هم پیدا شود.</p>
      <div class="atlas realm dense">${inside
        .map((group) => {
-         const size = 8 + Math.round((group.tags.length / most) * 14);
-         return `<a class="pin" style="left:${group.point.x}%;top:${group.point.y}%" href="#/places" data-place="${group.place.Id}" title="${esc(group.place.Name)}: ${group.tags.length} شعر">${group.tags.length > 1 ? `<span>${esc(group.place.Name)}</span>` : ""}<i style="width:${size}px;height:${size}px"></i></a>`;
+         const size = Math.round(8 + Math.sqrt(group.tags.length / most) * 18);
+         return `<a class="pin" style="left:${group.point.x}%;top:${group.point.y}%" href="#/places" data-place="${group.place.Id}" data-w="${group.tags.length}" title="${esc(group.place.Name)}: ${group.tags.length} شعر"><span>${esc(group.place.Name)}</span><i style="width:${size}px;height:${size}px"></i></a>`;
        })
        .join("")}</div>
      ${
@@ -1918,6 +2707,7 @@ async function placesPage() {
      <div class="grid">${inside.map(card).join("")}</div>
      ${outside.length ? `<h2 class="section">بیرون از این نقشه</h2><p class="muted">مکه، بیت‌المقدس، روم و جاهای دورتر.</p><div class="grid">${outside.map(card).join("")}</div>` : ""}`,
   );
+  atlasStage(document.querySelector(".atlas.realm.dense"));
   document.querySelectorAll(".pin[data-place]").forEach((pin) => {
     pin.onclick = (event) => {
       event.preventDefault();
