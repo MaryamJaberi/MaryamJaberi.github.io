@@ -170,8 +170,32 @@
     }
   };
 
+  // real plate reconstruction where one exists (back to 1 billion years); the schematic sketches stay for older times
+  function faNum(n) { return String(n).replace(/\d/g, function (d) { return "۰۱۲۳۴۵۶۷۸۹"[d]; }); }
+  function paleo(era, lang) {
+    var P = window.PALEO && window.PALEO[era.id];
+    if (!P) return null;
+    var d = P.rings.map(function (r) { return poly(r); }).join(" ");
+    var svg = ocean() + graticule() + '<path d="' + d + '" fill="' + LAND_FILL + '" stroke="' + LAND_STROKE + '" stroke-width=".6" stroke-linejoin="round"/>';
+    if (P.iran) {
+      var q = px(P.iran[0], P.iran[1]);
+      var left = q[0] > W - 90;
+      svg += '<circle cx="' + f1(q[0]) + '" cy="' + f1(q[1]) + '" r="4.5" fill="#e0a96d" stroke="#fff" stroke-width="1.5"/>' +
+        '<text class="iran-tag" x="' + f1(q[0] + (left ? -8 : 8)) + '" y="' + f1(q[1] + 4) + '" text-anchor="' + (left ? "end" : "start") + '" fill="#fff3dd" font-size="12" font-weight="700" paint-order="stroke" stroke="#0b1c2c" stroke-width="3" stroke-linejoin="round">' +
+        (lang === "fa" ? "تهرانِ امروز" : "today's Tehran") + "</text>";
+    }
+    var my = P.age >= 1000 ? (lang === "fa" ? "یک میلیارد" : "1 billion") : (lang === "fa" ? faNum(P.age) + " میلیون" : P.age + " million");
+    return {
+      svg: svg,
+      label: lang === "fa" ? "خشکی‌های امروز در جایی که " + my + " سال پیش بودند (مدل حرکت ورقه‌ها)" : "Today's landmasses moved to where they were " + my + " years ago (plate-motion model)",
+      note: lang === "fa" ? "شکل‌ها کرانه‌های امروزند که به جای آن روزشان برگردانده شده‌اند؛ کرانهٔ واقعی آن زمان با سطح دریا فرق داشت. مدل Merdith و همکاران (۲۰۲۱) از راه GPlates." : "Shapes are today's coastlines rotated back; the real shoreline then depended on sea level. Merdith et al. (2021) via GPlates."
+    };
+  }
+
   window.EarthMaps = {
     render: function (era, lang) {
+      var real = paleo(era, lang);
+      if (real) return real;
       var key = DRAW[era.map] ? era.map : "modern";
       var li = lang === "fa" ? 1 : 0;
       var label = (LABELS[key] || LABELS.modern)[li];

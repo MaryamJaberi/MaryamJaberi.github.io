@@ -133,3 +133,34 @@ dialog button { margin-top: 0.4rem; }
 @media (max-width: 800px) { .timeline-wrap { padding-inline: 1.9rem; } }
 
 .legal-back{padding:0 1.6rem 1.4rem;font-size:.8rem}.legal-back a{color:var(--gold-2)}
+
+/* Time ribbon (v20261119): all of time in one band, plus a true-scale strip */
+.ribbon { direction: ltr; margin: 0.2rem 0 0.1rem; }
+.ribbon svg { display: block; width: 100%; height: auto; overflow: visible; font-family: var(--font-sans), "Vazirmatn", sans-serif; }
+.ribbon text.band { fill: #f4efe4; font-size: 11px; font-weight: 600; text-anchor: middle; pointer-events: none; font-family: "Vazirmatn", var(--font-sans), sans-serif; }
+.ribbon line.mk { stroke: var(--muted); }
+.ribbon text.mk { fill: var(--muted); font-size: 10px; text-anchor: middle; font-family: "Vazirmatn", var(--font-sans), sans-serif; }
+.ribbon line.now { stroke: var(--gold-2); stroke-width: 1.5; stroke-dasharray: 3 2; }
+.ribbon text.now { fill: var(--gold-2); font-size: 11px; font-weight: 700; text-anchor: middle; font-family: "Vazirmatn", var(--font-sans), sans-serif; }
+.ribbon .rb-dot { cursor: pointer; }
+.ribbon .rb-dot circle { stroke: var(--bg); stroke-width: 1; }
+.ribbon .rb-dot:hover circle { r: 5; }
+.ribbon .rb-dot.on circle { stroke: #fff; stroke-width: 2; }
+.ribbon .lin-bg { fill: rgba(212, 184, 140, 0.16); }
+.ribbon .lin-human { fill: var(--gold-2); }
+.ribbon .lin-cur { stroke: #fff; stroke-width: 2; }
+.ribbon .rb-note { direction: rtl; margin: 0.35rem 0 0; color: var(--muted); font-size: 0.78rem; line-height: 1.6; }
+html[lang="en"] .ribbon .rb-note, body.en .ribbon .rb-note { direction: ltr; }
+/* keep the time control on screen while reading the map and the cards */
+.ribbon text.lin-t { fill: var(--muted); font-size: 10px; text-anchor: middle; font-family: "Vazirmatn", var(--font-sans), sans-serif; }
+html[lang="fa"] .ribbon text.lin-t { direction: rtl; }
+.ribbon .rb-note summary { cursor: pointer; color: var(--gold); }
+/* the ribbon already shows every stop; the old row of ticks under the slider repeated it */
+.ribbon ~ .rail .ticks { display: none; }
+.ribbon ~ .rail { padding-bottom: 0.6rem; }
+/* the ribbon is now the time control; the evenly spaced slider below it disagreed with its scale, so it is kept only for scripts */
+.ribbon ~ .rail { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); padding: 0; }
+.ribbon { touch-action: pan-y; cursor: pointer; outline: none; border-radius: 6px; }
+.ribbon:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
+/* the "today's Tehran" marker on reconstructed maps must stay readable on phones */
+@media (max-width: 640px) { .iran-tag { font-size: 24px; stroke-width: 5px; } }
