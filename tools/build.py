@@ -69,17 +69,21 @@ EN = dict(
                     ("built", "Installable offline web app; CEFR-levelled learning spin-off with three modes"),
                     ("status", "Live; playtests with real groups are next")]),
         dict(key="planet", aka="Chrono Atlas", tags=["Education", "Data"],
-             p="Drag a timeline from the Big Bang to 1,000 years ahead and watch continents, life and societies change under your cursor.",
-             facts=[("role", "Product vision, release roadmap, data principles"),
-                    ("built", "Map and timeline, a catalogue of scholarly databases, a data-coverage view"),
+             p="Drag one band from the Big Bang to 1,000 years ahead and watch continents, life and societies change. A true-scale strip under it shows how thin the human story really is.",
+             facts=[("role", "Product vision, release roadmap, data principles, information design"),
+                    ("built", "Log-scale time band; maps from a published plate model (Merdith et al. 2021) with today's Tehran marked; a catalogue of scholarly databases"),
                     ("decision", "Every claim carries its source; missing data is shown as missing, never as empty land")]),
+        dict(key="verse", aka="Ganjoor No", tags=["Data visualisation", "Culture"],
+             p="Persian poetry, read slowly, and seen whole: 246 poets on one zoomable timeline, birthplaces lighting up as the centuries play, who borrowed lines from whom, and the Shahnameh's families as a real tree.",
+             facts=[("role", "Product and information design: what to show, at what zoom, for whom"),
+                    ("built", "A reader on Ganjoor's open API; five pan-and-zoom views of the whole archive"),
+                    ("decision", "Show the whole first, then let people wander; names never overlap and the important ones are never left unnamed")]),
     ],
     more_h="More projects",
     more_p="Smaller, stranger or more personal. Each one taught me something the bigger ones needed.",
     more=[
         ("bazaar", "Daneshsara", "Five Persian wikis that talk to each other: psychology, sociology, genetics, philosophy and linguistics, joined by 25 mapped bridges. Every source graded."),
         ("night", "Miz Khoda", "The Mafia narrator's assistant: deal roles, run the night, count the votes. Rules are data, so a new scenario needs no developer."),
-        ("verse", "Ganjoor No", "Persian poetry, read slowly: a calmer redesign of the best-known online poetry archive."),
         ("side", "Hamrah", "Find someone to work, learn or go out with. MVP built; the next six releases are specified."),
     ],
     how_h="How I work",
@@ -91,7 +95,7 @@ EN = dict(
            ("Test and iterate", "Against my own checklist first, then with experts and users. Tik-Tak has a 10-scenario release checklist.")],
     xp_h="Experience",
     skills=[("Product", ["Roadmaps and backlog ownership", "Discovery and prioritisation", "Stakeholder management", "Agile and Scrum", "Metrics and A/B testing"]),
-            ("Design", ["UX research and usability testing", "Information architecture", "Service and game design", "Prototyping"]),
+            ("Design", ["UX research and usability testing", "Information architecture", "Data visualisation and information design", "Service and game design", "Prototyping"]),
             ("Education", ["MSc Industrial Engineering, 2023", "Google UX Design certificate", "IBM Product Manager certificate", "Agile and Scrum, IBM / SkillUp"])],
     jobs=[("2022 – now", "Independent product and game designer", "Rotterdam",
            "Built eight products of my own: seven are live, one is in progress. Founded SoloNovate to offer Teamweather to Dutch organisations."),
@@ -150,17 +154,21 @@ FA = dict(
                     ("built", "وب‌اپ نصب‌شدنی و آفلاین؛ نسخهٔ آموزشی با سطح‌بندی CEFR و سه حالت بازی"),
                     ("status", "منتشر شده؛ قدم بعدی بازی‌آزمایی با گروه‌های واقعی")]),
         dict(key="planet", aka="Chrono Atlas", tags=["آموزش", "داده"],
-             p="نوار زمان را از مهبانگ تا هزار سال بعد بکشید و ببینید قاره‌ها، زندگی و جامعه‌ها زیر دستتان چطور عوض می‌شوند.",
-             facts=[("role", "چشم‌انداز محصول، نقشهٔ راه انتشار، اصول داده"),
-                    ("built", "نقشه و نوار زمان، فهرست پایگاه‌های داده‌ای علمی، نمای پوشش داده"),
+             p="یک نوار را از مهبانگ تا هزار سال بعد بکشید و ببینید قاره‌ها، زندگی و جامعه‌ها چطور عوض می‌شوند. نوار مقیاس واقعی زیرش نشان می‌دهد داستان انسان چقدر باریک است.",
+             facts=[("role", "چشم‌انداز محصول، نقشهٔ راه انتشار، اصول داده، طراحی اطلاعات"),
+                    ("built", "نوار زمان لگاریتمی؛ نقشه‌ها از مدل منتشرشدهٔ حرکت ورقه‌ها (Merdith و همکاران ۲۰۲۱) با جای تهرانِ امروز؛ فهرست پایگاه‌های داده‌ای علمی"),
                     ("decision", "هر ادعا منبع دارد؛ جای خالیِ داده، خالی نشان داده می‌شود، نه سرزمین خالی")]),
+        dict(key="verse", aka="گنجور نو", tags=["مصورسازی داده", "فرهنگ"],
+             p="شعر فارسی را آهسته بخوانید و یک‌جا ببینید: ۲۴۶ شاعر روی یک خط زمانِ بزرگ‌شدنی، زادگاه‌هایی که با گذر سده‌ها روشن می‌شوند، اینکه چه کسی از چه کسی بیت گرفت، و خاندان‌های شاهنامه به شکل درختی واقعی.",
+             facts=[("role", "طراحی محصول و اطلاعات: چه چیزی، در چه بزرگ‌نمایی، برای چه کسی"),
+                    ("built", "خوانش‌خانه‌ای روی رابط باز گنجور؛ پنج نمای گردش‌پذیر از کل گنجینه"),
+                    ("decision", "اول کل تصویر، بعد گردش؛ نام‌ها روی هم نمی‌افتند و نام‌های مهم هرگز بی‌نام نمی‌مانند")]),
     ],
     more_h="پروژه‌های دیگر",
     more_p="کوچک‌تر، عجیب‌تر یا شخصی‌تر. هر کدام چیزی یادم داد که پروژه‌های بزرگ‌تر لازمش داشتند.",
     more=[
         ("bazaar", "دانش‌سرا", "پنج ویکی فارسی که با هم حرف می‌زنند: روان‌شناسی، جامعه‌شناسی، ژنتیک، فلسفه و زبان‌شناسی، با ۲۵ پلِ مشخص میانشان. هر منبع درجه‌بندی شده."),
         ("night", "میز خدا", "دستیار گردانندهٔ مافیا: پخش نقش، اجرای شب، شمارش رأی. قانون‌ها داده‌اند، پس سناریوی تازه برنامه‌نویس لازم ندارد."),
-        ("verse", "گنجور نو", "شعر فارسی را آهسته بخوانید: بازطراحی آرام‌ترِ شناخته‌شده‌ترین آرشیو آنلاین شعر فارسی."),
         ("side", "همراه", "کسی را پیدا کنید که با او کار کنید، یاد بگیرید یا بیرون بروید. نسخهٔ اول ساخته شده؛ شش انتشار بعدی مستند شده‌اند."),
     ],
     how_h="روش کار من",
@@ -172,7 +180,7 @@ FA = dict(
            ("تست و بهبود", "اول با چک‌لیست خودم، بعد با متخصص‌ها و کاربرها. تیک‌تاک یک چک‌لیست ۱۰ سناریویی برای هر انتشار دارد.")],
     xp_h="سابقه",
     skills=[("مهارت‌های محصول", ["مالکیت نقشهٔ راه و بک‌لاگ", "کشف و اولویت‌بندی", "مدیریت ذی‌نفعان", "اجایل و اسکرام", "معیارها و تست A/B"]),
-            ("مهارت‌های طراحی", ["پژوهش کاربر و تست کاربردپذیری", "معماری اطلاعات", "طراحی خدمت و بازی", "نمونه‌سازی"]),
+            ("مهارت‌های طراحی", ["پژوهش کاربر و تست کاربردپذیری", "معماری اطلاعات", "مصورسازی داده و طراحی اطلاعات", "طراحی خدمت و بازی", "نمونه‌سازی"]),
             ("تحصیلات", ["کارشناسی ارشد مهندسی صنایع، ۲۰۲۳", "گواهی طراحی UX گوگل", "گواهی مدیر محصول IBM", "اجایل و اسکرام، IBM / SkillUp"])],
     jobs=[("۲۰۲۲ تا امروز", "طراح مستقل محصول و بازی", "روتردام",
            "هشت محصول از خودم ساخته‌ام: هفت‌تا منتشر شده و یکی در حال ساخت است. SoloNovate را راه انداختم تا هوای تیم را به سازمان‌های هلندی عرضه کنم."),
@@ -455,7 +463,7 @@ def home_page(t):
             title = f'{names["tik"]} & {names["poly"]}' if L == "en" else f'{names["tik"]} و {names["poly"]}'
             icons = icon("tik", "ic lg") + icon("poly", "ic lg")
         else:
-            src = "wb-report" if k == "tw" else "atlas"
+            src = {"tw": "wb-report", "verse": "verse"}.get(k, "atlas")
             shot = f'<div class="shot"><img src="{img}{src}.webp" alt="{names[k]}" loading="lazy" width="1200" height="750"></div>'
             title, icons = names[k], icon(k, "ic lg")
         pills = ("".join(f'<span class="pill case">{t["case"]}</span>' for _ in [1] if f.get("case"))
