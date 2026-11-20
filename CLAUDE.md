@@ -1,3 +1,5 @@
+@AGENTS.md
+
 # Notes for Claude sessions in this repo
 
 ## Workplace Wellbeing Check (`wellbeing-check/`)
