@@ -40,12 +40,13 @@ const GN={early:'نخستین انسان‌تباران',aus:'استرالوپی
 function grpOf(a){return a.id==='homo-sapiens'?'sap':/^homo|dmanisi|naledi|floresiensis|neanderthal|denisovan/.test(a.id)?'homo':/australo|paranthropus|kenyan/.test(a.id)?'aus':'early'}
 function heroTree(el){
   const sp=W.articles.filter(a=>a.from!=null&&a.k==='گونه').sort((a,b)=>b.from-a.from);
-  const w=620,rh=17,top=26,h=top+sp.length*rh+40,lab=150,pad=14;
+  // drawn at the box's real width so names stay ~12px on phones (a fixed 620-wide drawing shrank them to ~6px)
+  const w=Math.max(300,Math.min(760,el.clientWidth||620)),rh=w<480?19:17,top=26,h=top+sp.length*rh+40,lab=w<480?128:150,pad=14;
   const x=d3.scaleLog().domain([8e6,1e4]).range([w-lab,pad]);
   let s=`<svg class="bush" viewBox="0 0 ${w} ${h}" role="img" aria-label="بوتهٔ انسان‌تباران">`;
-  [[7e6,'۷ میلیون'],[1e6,'۱ میلیون'],[1e5,'۱۰۰ هزار'],[1e4,'۱۰ هزار سال پیش']].forEach(([v,l])=>s+=`<line x1="${x(v)}" x2="${x(v)}" y1="${top-8}" y2="${h-30}" class="bgrid"/><text class="svgmuted" x="${x(v)}" y="${h-12}" font-size="10.5" text-anchor="middle">${l}</text>`);
+  [[7e6,'۷ میلیون'],[1e6,'۱ میلیون'],[1e5,'۱۰۰ هزار'],[1e4,w<480?'۱۰ هزار':'۱۰ هزار سال پیش']].forEach(([v,l])=>s+=`<line x1="${x(v)}" x2="${x(v)}" y1="${top-8}" y2="${h-30}" class="bgrid"/><text class="svgmuted" x="${x(v)}" y="${h-12}" font-size="10.5" direction="rtl" text-anchor="${v===1e4?'end':'middle'}">${l}</text>`);
   sp.forEach((a,i)=>{const g=grpOf(a),y=top+i*rh,x1=x(a.from*1e6),x2=x(Math.max(a.to*1e6,1.1e4)),c=GC[g];
-    s+=`<a href="#/a/${a.id}" class="bl"><title>${a.t}</title><rect x="${x2}" y="${y-5}" width="${Math.max(6,x1-x2)}" height="10" rx="5" fill="${c}" style="--d:${i*40}ms"/><text class="svgtext" x="${w-lab+10}" y="${y+4}" font-size="11.5" text-anchor="start">${a.t.replace(/ \(.*\)/,'')}</text></a>`});
+    s+=`<a href="#/a/${a.id}" class="bl"><title>${a.t}</title><rect x="${x2}" y="${y-5}" width="${Math.max(6,x1-x2)}" height="10" rx="5" fill="${c}" style="--d:${i*40}ms"/><text class="svgtext" x="${w-pad}" y="${y+4}" font-size="11.5" text-anchor="start" direction="rtl">${a.t.replace(/ \(.*\)/,'')}</text></a>`});
   const xs=x(3e5);s+=`<text x="${xs}" y="${top-12}" font-size="10.5" class="svgmuted" text-anchor="middle">ما از اینجا ↓</text>`;
   s+=`</svg><div class="legend" style="justify-content:center">${Object.keys(GC).map(k=>`<span><span class="dot" style="background:${GC[k]}"></span>${GN[k]}</span>`).join('')}</div>`;
   el.innerHTML=s;

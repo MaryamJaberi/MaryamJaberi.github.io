@@ -164,3 +164,17 @@ html[lang="fa"] .ribbon text.lin-t { direction: rtl; }
 .ribbon:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
 /* the "today's Tehran" marker on reconstructed maps must stay readable on phones */
 @media (max-width: 640px) { .iran-tag { font-size: 24px; stroke-width: 5px; } }
+
+/* Phones: the time band is the main control, so it sits right under the title, above the map
+   (it used to be at the very bottom, under the photos and cards); the map box hugs the map. */
+@media (max-width: 640px) {
+  .app { display: flex; flex-direction: column; }
+  .app > header { order: 1; padding-bottom: .4rem; }
+  .app > .timeline-wrap { order: 2; padding-top: .2rem; padding-bottom: .2rem; border-bottom: 1px solid var(--line); }
+  .app > main { order: 3; padding-top: .7rem; }
+  .app > footer, .app > .legal-back { order: 4; }
+  .map-stage { min-height: 0; }
+  .map-stage svg { height: auto; }
+  .map-caption { position: static; margin: 0 .6rem .6rem; }
+  .era-chip { text-align: start; }
+}
