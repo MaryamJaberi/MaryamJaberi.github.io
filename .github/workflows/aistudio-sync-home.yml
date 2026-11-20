@@ -1,0 +1,143 @@
+# پل همگام‌سازی «صفحهٔ اول و رزومه» با مخزن AI Studio (Maryam-Jaberi-studio-V2).
+#
+# این مخزن همهٔ پروژه‌ها را دارد و برای AI Studio بزرگ است؛ پس فقط این مسیرها جابه‌جا می‌شوند:
+#   index.html  fa/  case/  cv.html  cv.pdf  404.html  assets/  tools/build.py  tools/DESIGN.md
+#
+#   ۱. تغییرهای تازهٔ AI Studio در همین مسیرها → یک Pull Request در این مخزن، شاخهٔ from-aistudio-home
+#      (صفحه‌ها از tools/build.py ساخته می‌شوند؛ Claude تغییر متن را در build.py هم می‌برد)
+#   ۲. وقتی چیزی از AI Studio منتظر بازبینی نیست → همین مسیرها از main به main مخزن AI Studio فرستاده می‌شوند.
+#
+# نقطهٔ آخرین همگام‌سازی: تگ aistudio-home-base در مخزن AI Studio (بار اول: .github/aistudio-home-base.txt).
+#
+# راه‌اندازی (یک بار): Settings → Secrets and variables → Actions
+#   Variables → AISTUDIO_HOME_REPO   = MaryamJaberi/Maryam-Jaberi-studio-V2
+#   Secrets   → AISTUDIO_SYNC_TOKEN  = توکن با دسترسی نوشتن به هر دو مخزن (Contents، Pull requests، Workflows)
+# تا وقتی AISTUDIO_HOME_REPO ساخته نشده، این گردش‌کار کاری نمی‌کند.
+
+name: AI Studio sync (home page)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "fa/**"
+      - "case/**"
+      - "cv.html"
+      - "cv.pdf"
+      - "404.html"
+      - "assets/**"
+      - "tools/build.py"
+      - "tools/DESIGN.md"
+      - "tools/aistudio-home-readme.md"
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: aistudio-sync-home
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    if: vars.AISTUDIO_HOME_REPO != ''
+    runs-on: ubuntu-latest
+    env:
+      STUDIO_REPO: ${{ vars.AISTUDIO_HOME_REPO }}
+      TOKEN: ${{ secrets.AISTUDIO_SYNC_TOKEN }}
+      GH_TOKEN: ${{ secrets.AISTUDIO_SYNC_TOKEN }}
+      BASE_TAG: aistudio-home-base
+      PR_BRANCH: from-aistudio-home
+      PATHS: "index.html fa case cv.html cv.pdf 404.html assets tools/build.py tools/DESIGN.md"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.AISTUDIO_SYNC_TOKEN }}
+
+      - name: Fetch AI Studio repo
+        run: |
+          git config user.name "site-sync-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add studio "https://x-access-token:${TOKEN}@github.com/${STUDIO_REPO}.git"
+          git fetch origin main
+          git fetch --no-tags studio main
+          if ! git fetch --no-tags studio "+refs/tags/${BASE_TAG}:refs/tags/${BASE_TAG}" 2>/dev/null; then
+            start=studio/main
+            if [ -f .github/aistudio-home-base.txt ]; then
+              want=$(tr -d '[:space:]' < .github/aistudio-home-base.txt)
+              if git cat-file -e "${want}^{commit}" 2>/dev/null; then start="$want"; fi
+            fi
+            echo "تگ ${BASE_TAG} نبود؛ روی ${start} ساخته می‌شود."
+            git tag -f "${BASE_TAG}" "$start"
+            git push studio "refs/tags/${BASE_TAG}"
+          fi
+
+      - name: Sync
+        run: |
+          set -euo pipefail
+          base=$(git rev-parse "refs/tags/${BASE_TAG}^{commit}")
+          studio=$(git rev-parse studio/main)
+          read -r -a P <<< "$PATHS"
+
+          git diff --binary "$base" "$studio" -- "${P[@]}" > /tmp/studio.patch
+
+          # درخت مخزن AI Studio = فقط همین مسیرها از main + یک README راهنما برای AI Studio
+          subset_tree() {
+            export GIT_INDEX_FILE=/tmp/subset.idx
+            rm -f "$GIT_INDEX_FILE"
+            git read-tree --empty
+            git ls-tree -r origin/main -- "${P[@]}" | git update-index --index-info
+            if git cat-file -e origin/main:tools/aistudio-home-readme.md 2>/dev/null; then
+              blob=$(git rev-parse origin/main:tools/aistudio-home-readme.md)
+              git update-index --add --cacheinfo 100644 "$blob" README.md
+            fi
+            git write-tree
+            unset GIT_INDEX_FILE
+          }
+
+          push_main_to_studio() {
+            tree=$(subset_tree)
+            if [ "$tree" = "$(git rev-parse studio/main^{tree})" ]; then
+              echo "AI Studio با main یکی است."
+              new="$studio"
+            else
+              new=$(git commit-tree "$tree" -p "$studio" -m "همگام‌سازی صفحهٔ اول و رزومه از مخزن اصلی ($(git rev-parse --short origin/main))")
+              git push studio "${new}:refs/heads/main"
+              echo "صفحهٔ اول و رزومه به AI Studio فرستاده شد."
+            fi
+            git push --force studio "${new}:refs/tags/${BASE_TAG}"
+          }
+
+          if [ ! -s /tmp/studio.patch ]; then
+            echo "AI Studio تغییر تازه‌ای ندارد."
+            push_main_to_studio
+            exit 0
+          fi
+
+          git checkout -q -B "$PR_BRANCH" origin/main
+          if git apply --check --reverse --binary /tmp/studio.patch 2>/dev/null; then
+            echo "تغییرهای AI Studio قبلاً در main هستند (PR merge شده)."
+            push_main_to_studio
+            exit 0
+          fi
+
+          if ! git apply --3way --binary /tmp/studio.patch; then
+            echo "::warning::تغییرهای AI Studio با main تداخل دارند؛ PR با نشانهٔ تداخل ساخته می‌شود."
+          fi
+          git add -A
+          git commit -q -m "تغییرهای تازهٔ صفحهٔ اول از AI Studio (تا $(git rev-parse --short "$studio"))"
+          git push --force origin "$PR_BRANCH"
+
+          open=$(gh api "repos/${GITHUB_REPOSITORY}/pulls?head=${GITHUB_REPOSITORY_OWNER}:${PR_BRANCH}&state=open" --jq length)
+          if [ "$open" = "0" ]; then
+            gh api "repos/${GITHUB_REPOSITORY}/pulls" -f title="تغییرهای تازهٔ صفحهٔ اول از AI Studio" \
+              -f head="$PR_BRANCH" -f base=main \
+              -f body="این PR خودکار ساخته شد و تغییرهای صفحهٔ اول و رزومه را که در Google AI Studio ثبت شده نشان می‌دهد. صفحه‌ها از tools/build.py ساخته می‌شوند: پیش از merge، Claude تغییر متن‌ها را در build.py هم می‌برد تا ساخت بعدی آن‌ها را پاک نکند." >/dev/null
+            echo "PR تازه ساخته شد."
+          else
+            echo "PR باز به‌روز شد."
+          fi
