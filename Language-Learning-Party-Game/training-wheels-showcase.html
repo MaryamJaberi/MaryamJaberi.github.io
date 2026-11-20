@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نمایش چرخ‌های کمکی - Training Wheels Showcase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap');
+    body {
+      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0F172A;
+      color: #F8FAFC;
+    }
+  </style>
+</head>
+<body class="p-6 max-w-5xl mx-auto space-y-8">
+
+  <!-- Header -->
+  <header class="text-center space-y-2 border-b border-slate-700 pb-6">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-400 text-xs font-bold border border-indigo-500/30">
+      <span>🚲</span>
+      <span>قابلیت نوین: چرخ‌های کمکی (Training Wheels)</span>
+    </div>
+    <h1 class="text-3xl font-black text-white">کمک‌های بصری و صوتی هوشمند مبتنی بر جعبه لایتنر</h1>
+    <p class="text-sm text-slate-400 max-w-2xl mx-auto">
+      با یادگیری تدریجی هر کلمه، رنگ‌ها، نمادهای هندسی و راهنماها کم‌رنگ می‌شوند تا بازیکن به استقلال کامل زبانی برسد.
+    </p>
+  </header>
+
+  <!-- Section 1: Universal Gender Colors & Shapes (Colorblind-Safe) -->
+  <section class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 space-y-4">
+    <h2 class="text-xl font-black text-indigo-400 flex items-center gap-2">
+      <span>🎨</span>
+      <span>۱. رنگ‌ها و نمادهای هندسی جنسیت گرامری (ویژهٔ افراد با نقص دید رنگ)</span>
+    </h2>
+    <p class="text-xs text-slate-300">
+      هر جنسیت همیشه با یک شکل هندسی ویژه همراه است: خنثی = مربع سرخ، مذکر = مثلث لاجوردی، مؤنث = دایره زعفرانی، مشترک = لوزی فیروزه‌ای.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+      <!-- Neuter -->
+      <div class="p-4 rounded-xl bg-red-950/40 border border-red-500/50 flex flex-col items-center text-center space-y-2">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-red-500/20 text-red-400 border border-red-500 text-base font-black">■</span>
+        <span class="text-sm font-black text-red-400">خنثی (Neuter)</span>
+        <span class="text-xs text-slate-400">سرخ + مربع</span>
+        <div class="px-2.5 py-1 rounded bg-slate-900 border border-red-500/40 text-xs text-red-300 font-bold">
+          Dutch: <span class="font-black text-white">het</span> | German: <span class="font-black text-white">das</span>
+        </div>
+      </div>
+
+      <!-- Masculine -->
+      <div class="p-4 rounded-xl bg-blue-950/40 border border-blue-500/50 flex flex-col items-center text-center space-y-2">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 border border-blue-500 text-base font-black">▲</span>
+        <span class="text-sm font-black text-blue-400">مذکر (Masculine)</span>
+        <span class="text-xs text-slate-400">لاجوردی + مثلث</span>
+        <div class="px-2.5 py-1 rounded bg-slate-900 border border-blue-500/40 text-xs text-blue-300 font-bold">
+          German: <span class="font-black text-white">der</span> | French: <span class="font-black text-white">le</span>
+        </div>
+      </div>
+
+      <!-- Feminine -->
+      <div class="p-4 rounded-xl bg-amber-950/40 border border-amber-500/50 flex flex-col items-center text-center space-y-2">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 border border-amber-500 text-base font-black">●</span>
+        <span class="text-sm font-black text-amber-400">مؤنث (Feminine)</span>
+        <span class="text-xs text-slate-400">زعفرانی + دایره</span>
+        <div class="px-2.5 py-1 rounded bg-slate-900 border border-amber-500/40 text-xs text-amber-300 font-bold">
+          German: <span class="font-black text-white">die</span> | French: <span class="font-black text-white">la</span>
+        </div>
+      </div>
+
+      <!-- Common -->
+      <div class="p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/50 flex flex-col items-center text-center space-y-2">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500 text-base font-black">◆</span>
+        <span class="text-sm font-black text-cyan-400">مشترک (Common)</span>
+        <span class="text-xs text-slate-400">فیروزه‌ای + لوزی</span>
+        <div class="px-2.5 py-1 rounded bg-slate-900 border border-cyan-500/40 text-xs text-cyan-300 font-bold">
+          Dutch: <span class="font-black text-white">de</span> (man, vrouw)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Dutch Language Aids Showcase -->
+  <section class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 space-y-4">
+    <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+      <h2 class="text-xl font-black text-amber-400 flex items-center gap-2">
+        <span>🇳🇱</span>
+        <span>۲. کمک‌های ویژهٔ زبان هلندی (Nederlands Training Wheels)</span>
+      </h2>
+      <span class="text-xs bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded-full font-bold">۴ راهنمای فعال</span>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Dutch Aid 1: Diminutive -je is always het -->
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-slate-400">راهنمای کلمات مصغر (-je همیشه het است)</span>
+          <span class="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded border border-red-500/40 font-bold">-je → het ■</span>
+        </div>
+        <div class="p-4 bg-slate-950 rounded-lg border border-red-500/30 flex flex-col items-center justify-center text-center space-y-1" dir="ltr">
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/40">
+            <span>■</span>
+            <span>het (خنثی / Neuter)</span>
+          </span>
+          <span class="text-2xl font-black text-red-400 tracking-wide">meisje</span>
+          <span class="text-xs text-slate-400" dir="rtl">دختربچه (Diminutive Noun)</span>
+        </div>
+      </div>
+
+      <!-- Dutch Aid 2: Separable Verbs (Dotted Link) -->
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-slate-400">اتصال نقطه‌چین افعال دوتکه (Separable Verb)</span>
+          <span class="text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-0.5 rounded border border-indigo-500/40 font-bold" dir="ltr">🔗 bel ... op</span>
+        </div>
+        <div class="p-4 bg-slate-950 rounded-lg border border-indigo-500/30 flex flex-col items-center justify-center text-center space-y-2" dir="ltr">
+          <div class="text-xl font-black text-white flex items-center justify-center gap-2">
+            <span>Ik</span>
+            <span class="border-b-2 border-dotted border-indigo-400 text-indigo-300 px-1 font-black">bel</span>
+            <span>je morgen</span>
+            <span class="border-b-2 border-dotted border-indigo-400 text-indigo-300 px-1 font-black flex items-center gap-1">
+              <span class="text-xs">🔗</span>
+              <span>op</span>
+            </span>
+          </div>
+          <span class="text-xs text-slate-400" dir="rtl">فعل صرف‌شده (bel) با خط نقطه‌چین به پیشوند جداشده (op) متصل است</span>
+        </div>
+      </div>
+
+      <!-- Dutch Aid 3: V2 Verb Highlight -->
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-slate-400">برجسته‌سازی فعل در جایگاه دوم (قاعدهٔ V2)</span>
+          <span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded border border-amber-500/40 font-bold" dir="ltr">V2 Verb</span>
+        </div>
+        <div class="p-4 bg-slate-950 rounded-lg border border-amber-500/30 flex flex-col items-center justify-center text-center space-y-2" dir="ltr">
+          <div class="text-xl font-black text-white flex items-center justify-center gap-2">
+            <span>Ik</span>
+            <span class="bg-amber-500/20 text-amber-300 border-b-2 border-amber-500 px-2 py-0.5 rounded font-black">leer</span>
+            <span>Nederlands</span>
+          </div>
+          <span class="text-xs text-slate-400" dir="rtl">جایگاه دوم فعل در جمله برای تثبیت ترتیب ارکان دستوری مشخص شده است</span>
+        </div>
+      </div>
+
+      <!-- Dutch Aid 4: Common Gender (de) -->
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-slate-400">کلمات دارای جنسیت مشترک (حرف تعریف de)</span>
+          <span class="text-[10px] bg-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded border border-cyan-500/40 font-bold" dir="ltr">◆ de (Common)</span>
+        </div>
+        <div class="p-4 bg-slate-950 rounded-lg border border-cyan-500/30 flex flex-col items-center justify-center text-center space-y-1" dir="ltr">
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-bold bg-cyan-500/20 text-cyan-400 border border-cyan-500/40">
+            <span>◆</span>
+            <span>de (مشترک / Common)</span>
+          </span>
+          <span class="text-2xl font-black text-cyan-400 tracking-wide">tafel</span>
+          <span class="text-xs text-slate-400" dir="rtl">میز (Noun with Common Gender)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: German Language Aids Showcase -->
+  <section class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 space-y-4">
+    <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+      <h2 class="text-xl font-black text-emerald-400 flex items-center gap-2">
+        <span>🇩🇪</span>
+        <span>۳. کمک‌های ویژهٔ زبان آلمانی (Deutsch Training Wheels)</span>
+      </h2>
+      <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full font-bold">۳ راهنمای فعال</span>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- German Aid 1: 3 Genders der / die / das -->
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+        <span class="text-xs font-bold text-slate-400">رنگ و نماد ۳ جنسیت آلمانی</span>
+        <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 space-y-2 text-center" dir="ltr">
+          <div class="text-xs flex items-center justify-between bg-blue-950/40 p-1.5 rounded border border-blue-500/40">
+            <span class="text-blue-400 font-bold">▲ der Hund</span>
+            <span class="text-slate-400 text-[10px]" dir="rtl">مذکر</span>
+          </div>
+          <div class="text-xs flex items-center justify-between bg-amber-950/40 p-1.5 rounded border border-amber-500/40">
+            <span class="text-amber-400 font-bold">● die Frau</span>
+            <span class="text-slate-400 text-[10px]" dir="rtl">مؤنث</span>
+          </div>
+          <div class="text-xs flex items-center justify-between bg-red-950/40 p-1.5 rounded border border-red-500/40">
+            <span class="text-red-400 font-bold">■ das Mädchen</span>
+            <span class="text-slate-400 text-[10px]" dir="rtl">خنثی</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- German Aid 2: Case Endings Underline -->
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+        <span class="text-xs font-bold text-slate-400">خط زیر پسوند حالت‌های گرامری (Case)</span>
+        <div class="p-4 bg-slate-950 rounded-lg border border-indigo-500/30 flex flex-col items-center justify-center text-center space-y-2" dir="ltr">
+          <div class="text-lg font-black text-white">
+            <span>Ich sehe </span>
+            <span class="text-indigo-400 underline decoration-indigo-400 decoration-2 font-black">den</span>
+            <span> Hund</span>
+          </div>
+          <span class="text-xs text-indigo-300 bg-indigo-500/20 px-2 py-0.5 rounded border border-indigo-500/40" dir="rtl">
+            Akkusativ: پسوند -en
+          </span>
+        </div>
+      </div>
+
+      <!-- German Aid 3: Nebensatz Verb-Final -->
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+        <span class="text-xs font-bold text-slate-400">انتقال فعل به انتهای جملهٔ پیرو</span>
+        <div class="p-4 bg-slate-950 rounded-lg border border-emerald-500/30 flex flex-col items-center justify-center text-center space-y-2" dir="ltr">
+          <div class="text-sm font-black text-white leading-relaxed">
+            ... weil ich in Berlin 
+            <span class="inline-flex items-center gap-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-1.5 py-0.5 rounded">
+              <span>wohne</span>
+              <span class="text-xs">↷</span>
+            </span>
+          </div>
+          <span class="text-xs text-emerald-300" dir="rtl">نشانه‌گذاری فعل در انتهای جمله پس از weil</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: 4 Fading Stages Walkthrough -->
+  <section class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 space-y-4">
+    <h2 class="text-xl font-black text-purple-400 flex items-center gap-2">
+      <span>📉</span>
+      <span>۴. مراحل ۴گانهٔ کم‌رنگ‌شدن راهنماها (Fading Driven by Leitner Boxes)</span>
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- Stage 0 -->
+      <div class="p-4 rounded-xl bg-slate-900 border border-red-500/30 space-y-2 text-center">
+        <span class="text-xs font-black text-red-400">مرحله ۰: کلمهٔ جدید (جعبه ۱)</span>
+        <span class="text-[11px] text-slate-400 block">رنگ + نماد هندسی + برچسب متنی</span>
+        <div class="p-3 bg-slate-950 rounded border border-slate-800 flex flex-col items-center">
+          <span class="text-xs font-bold text-red-400 bg-red-500/20 px-2 py-0.5 rounded border border-red-500/40 mb-1">■ het (خنثی)</span>
+          <span class="text-lg font-black text-red-400">glas</span>
+        </div>
+      </div>
+
+      <!-- Stage 1 -->
+      <div class="p-4 rounded-xl bg-slate-900 border border-orange-500/30 space-y-2 text-center">
+        <span class="text-xs font-black text-orange-400">مرحله ۱: پس از ۱ پاسخ درست</span>
+        <span class="text-[11px] text-slate-400 block">فقط رنگ + نماد هندسی (بدون برچسب)</span>
+        <div class="p-3 bg-slate-950 rounded border border-slate-800 flex flex-col items-center">
+          <span class="text-xs font-black text-orange-400 bg-orange-500/20 w-6 h-6 rounded flex items-center justify-center border border-orange-500/40 mb-1">■</span>
+          <span class="text-lg font-black text-orange-400">glas</span>
+        </div>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="p-4 rounded-xl bg-slate-900 border border-cyan-500/30 space-y-2 text-center">
+        <span class="text-xs font-black text-cyan-400">مرحله ۲: نزدیک تسلط</span>
+        <span class="text-[11px] text-slate-400 block">فقط یک خط زیر باریک و رنگی</span>
+        <div class="p-3 bg-slate-950 rounded border border-slate-800 flex items-center justify-center h-[62px]">
+          <span class="text-lg font-bold text-slate-200 border-b-2 border-red-500">glas</span>
+        </div>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="p-4 rounded-xl bg-slate-900 border border-emerald-500/30 space-y-2 text-center">
+        <span class="text-xs font-black text-emerald-400">مرحله ۳: تسلط کامل (مستقل)</span>
+        <span class="text-[11px] text-slate-400 block">متن عادی و تمیز بدون هیچ راهنمایی</span>
+        <div class="p-3 bg-slate-950 rounded border border-slate-800 flex items-center justify-center h-[62px]">
+          <span class="text-lg font-black text-white">het glas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Bicycle Help Screen Illustration & Progress -->
+  <section class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 space-y-4">
+    <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+      <h2 class="text-xl font-black text-cyan-400 flex items-center gap-2">
+        <span>🚲</span>
+        <span>۵. صفحهٔ راهنما «چرخ‌های کمکی شما» (Bicycle Illustration & Progress)</span>
+      </h2>
+      <span class="text-xs bg-cyan-500/20 text-cyan-300 px-2.5 py-0.5 rounded-full font-bold">پیشرفت: ۷۰٪ رانندگی مستقل</span>
+    </div>
+
+    <!-- SVG Bicycle -->
+    <div class="p-6 bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center justify-center">
+      <svg viewBox="0 0 400 220" class="w-full max-w-md max-h-56 select-none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#818CF8" />
+            <stop offset="100%" stopColor="#6366F1" />
+          </linearGradient>
+        </defs>
+
+        <!-- Ground Line -->
+        <line x1="20" y1="185" x2="380" y2="185" stroke="#334155" stroke-width="3" stroke-dasharray="8 6" />
+
+        <!-- Rear Wheel (110, 150) -->
+        <circle cx="110" cy="150" r="35" fill="none" stroke="#64748B" stroke-width="4" />
+        <circle cx="110" cy="150" r="5" fill="#94A3B8" />
+
+        <!-- Front Wheel (290, 150) -->
+        <circle cx="290" cy="150" r="35" fill="none" stroke="#64748B" stroke-width="4" />
+        <circle cx="290" cy="150" r="5" fill="#94A3B8" />
+
+        <!-- Frame -->
+        <circle cx="190" cy="150" r="8" fill="#E2E8F0" />
+        <line x1="110" y1="150" x2="190" y2="150" stroke="url(#frameGrad)" stroke-width="5" stroke-linecap="round" />
+        <line x1="110" y1="150" x2="155" y2="85" stroke="url(#frameGrad)" stroke-width="5" stroke-linecap="round" />
+        <line x1="190" y1="150" x2="155" y2="85" stroke="url(#frameGrad)" stroke-width="5" stroke-linecap="round" />
+        <line x1="155" y1="85" x2="150" y2="70" stroke="#94A3B8" stroke-width="4" />
+        <path d="M 135 68 Q 155 64 170 70 Q 155 76 135 68 Z" fill="#E2E8F0" />
+        <line x1="155" y1="85" x2="255" y2="80" stroke="url(#frameGrad)" stroke-width="5" stroke-linecap="round" />
+        <line x1="190" y1="150" x2="255" y2="80" stroke="url(#frameGrad)" stroke-width="5" stroke-linecap="round" />
+        <line x1="255" y1="80" x2="290" y2="150" stroke="url(#frameGrad)" stroke-width="5" stroke-linecap="round" />
+        <line x1="255" y1="80" x2="250" y2="60" stroke="#94A3B8" stroke-width="4" />
+        <path d="M 238 60 Q 252 50 268 60" fill="none" stroke="#E2E8F0" stroke-width="4" stroke-linecap="round" />
+
+        <!-- Training Wheel (rear) -->
+        <line x1="110" y1="150" x2="70" y2="172" stroke="#EA580C" stroke-width="4" stroke-linecap="round" />
+        <circle cx="70" cy="172" r="14" fill="#FB923C" stroke="#EA580C" stroke-width="3" />
+        <circle cx="70" cy="172" r="4" fill="#7C2D12" />
+        <text x="70" y="142" text-anchor="middle" class="text-[11px] font-black fill-orange-400 select-none">⚙ چرخ کمکی فعال</text>
+      </svg>
+
+      <!-- Progress Bar -->
+      <div class="w-full max-w-md mt-4 space-y-1.5">
+        <div class="flex justify-between text-xs font-bold">
+          <span class="text-slate-300">میزان رکاب‌زدن بدون چرخ کمکی:</span>
+          <span class="text-indigo-400 font-black">۷۰٪ مستقل</span>
+        </div>
+        <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-slate-700">
+          <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-emerald-400 h-full rounded-full" style="width: 70%"></div>
+        </div>
+        <div class="flex justify-between text-[11px] text-slate-500">
+          <span>۳ چرخ کمکی باز شده</span>
+          <span>۱ چرخ کمکی فعال</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
