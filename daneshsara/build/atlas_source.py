@@ -21,6 +21,7 @@ CSS = ('<style id="ds-src-css">.ds-src{font:400 .78rem/1.9 inherit;display:flex;
  '.ds-src a{display:inline-flex;align-items:center;gap:5px;color:var(--ink-2,#5c574c);text-decoration:none;'
  'border:1px solid var(--line-strong,#d8d3c7);border-radius:999px;padding:1px 10px}'
  '.ds-src a:hover{border-color:currentColor}.ds-src a u{width:7px;height:7px;border-radius:50%;background:var(--d);display:inline-block}'
+ '@media (max-width:700px){.ds-src{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:none}.ds-src a{flex:none}}'
  '@media (prefers-color-scheme:dark){.ds-src{border-color:var(--line,#33312c);background:var(--surface,#232220);color:var(--ink-3,#a39d92)}}</style>')
 
 n = 0
