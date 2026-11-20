@@ -62,7 +62,9 @@ ul.pts li small{display:block;color:var(--ink-3)}
 .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-inline-end:8px;vertical-align:-1px}
 @media (max-width:860px){
  #app{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto}
- #panel{max-height:44vh;border-inline-start:0;border-top:1px solid var(--line);padding:var(--s4)}
+ #panel{max-height:none;border-inline-start:0;border-top:1px solid var(--line);padding:var(--s4)}
+ /* phones: the map gets most of the screen; the page scrolls to the panel below it */
+ html,body{height:auto} #app{display:block} #stage{height:72vh;height:72svh;min-height:380px}
  .crumbs{display:none}#hint{display:none}
  #sbox{inset-inline-end:56px}
 }
@@ -117,6 +119,9 @@ N.forEach(n => { n.lod = n.d === 0 ? 0 : n.d === 1 ? 1.5 : (4 + 26 * Math.pow(n.
 const roads = new Map(); const cross = [];
 N.forEach(n => n.lk.forEach(([to, rel, note]) => { const m = N[to]; if (!m || m.w === n.w || to < n.id) return; cross.push([n.id, to, rel, note]); const a = cityOf(n.id), b = cityOf(to); if (a < 0 || b < 0) return; const k = a < b ? a + "|" + b : b + "|" + a; (roads.get(k) || roads.set(k, {a: Math.min(a, b), b: Math.max(a, b), n: 0, l: []}).get(k)).n++; roads.get(k).l.push(cross.length - 1); }));
 const roadList = [...roads.values()];
+// at the "lands" level, one band per pair of lands instead of hundreds of city roads
+const landIx = {}; N.forEach(n => { if (n.d === 0) landIx[n.w] = n.id; });
+const landBands = (() => { const m = new Map(); cross.forEach(([a, b]) => { const wa = N[a].w, wb = N[b].w; if (landIx[wa] == null || landIx[wb] == null) return; const k = wa < wb ? wa + "|" + wb : wb + "|" + wa; const e = m.get(k) || {a: landIx[wa < wb ? wa : wb], b: landIx[wa < wb ? wb : wa], n: 0}; e.n++; m.set(k, e); }); return [...m.values()].sort((x, y) => x.n - y.n); })();
 const curve = (a, b) => { const dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) || 1; const bend = Math.min(.22, 380 / d); return {mx: (a.x + b.x) / 2 - dy * bend, my: (a.y + b.y) / 2 + dx * bend}; };
 const quad = (a, b, c, t) => { const u = 1 - t; return [u * u * a.x + 2 * u * t * c.mx + t * t * b.x, u * u * a.y + 2 * u * t * c.my + t * t * b.y]; };
 const hash = (s, k) => { let h = 2166136261 ^ k; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return ((h >>> 0) % 10000) / 10000; };
@@ -175,7 +180,13 @@ function draw() {
   }
   ctx.globalAlpha = 1;
   // roads between lands: aggregated first, individual links when zoomed in
-  const aggA = z < 14 ? .55 : Math.max(.08, .55 - (z - 14) / 40);
+  const landK = z <= 1.3 ? 1 : z >= 2.6 ? 0 : 1 - (z - 1.3) / 1.3; // lands level: bands; closer: city roads
+  if (landK > 0) { const nmax = Math.max(...landBands.map(e => e.n)); ctx.lineCap = "round";
+    for (const e of landBands) { const A = N[e.a], Bn = N[e.b], c = curve(A, Bn); ctx.beginPath(); ctx.moveTo(sx(A.x), sy(A.y)); ctx.quadraticCurveTo(sx(c.mx), sy(c.my), sx(Bn.x), sy(Bn.y)); ctx.globalAlpha = landK * (.16 + .22 * e.n / nmax); ctx.lineWidth = 1.5 + 16 * Math.sqrt(e.n / nmax); ctx.strokeStyle = COL.ink3; ctx.stroke(); }
+    ctx.globalAlpha = landK; ctx.font = `600 12px ${FONT}`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    if (cw >= 560) for (const e of landBands) { if (e.n < 3) continue; const A = N[e.a], Bn = N[e.b], c = curve(A, Bn), [x, y] = quad(A, Bn, c, .5); const t = faN(e.n) + " پیوند"; const w = ctx.measureText(t).width + 12; ctx.fillStyle = COL.paper || "#fff"; ctx.globalAlpha = landK * .9; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(sx(x) - w / 2, sy(y) - 9, w, 18, 9) : ctx.rect(sx(x) - w / 2, sy(y) - 9, w, 18); ctx.fill(); ctx.globalAlpha = landK; ctx.fillStyle = COL.ink2 || COL.ink; ctx.fillText(t, sx(x), sy(y)); }
+    ctx.globalAlpha = 1; }
+  const aggA = (1 - landK) * (z < 14 ? .55 : Math.max(.08, .55 - (z - 14) / 40));
   ctx.lineCap = "round";
   for (const r of roadList) { const A = N[r.a], Bn = N[r.b], c = curve(A, Bn); if (!(inV(A.x, A.y, 4000) || inV(Bn.x, Bn.y, 4000))) continue; ctx.beginPath(); ctx.moveTo(sx(A.x), sy(A.y)); ctx.quadraticCurveTo(sx(c.mx), sy(c.my), sx(Bn.x), sy(Bn.y)); ctx.globalAlpha = aggA * .38; ctx.lineWidth = .7 + Math.sqrt(r.n) * .45; ctx.strokeStyle = COL.ink3; ctx.stroke(); }
   if (z >= 9) { ctx.lineWidth = 1; ctx.strokeStyle = COL.primary; ctx.globalAlpha = Math.min(.45, (z - 9) / 25); for (const [a, b] of cross) { const A = N[a], Bn = N[b]; if (!inV(A.x, A.y) && !inV(Bn.x, Bn.y)) continue; const c = curve(A, Bn); ctx.beginPath(); ctx.moveTo(sx(A.x), sy(A.y)); ctx.quadraticCurveTo(sx(c.mx), sy(c.my), sx(Bn.x), sy(Bn.y)); ctx.stroke(); } }
@@ -188,7 +199,7 @@ function draw() {
   for (const n of N) {
     const x = sx(n.x), y = sy(n.y); if (x < -60 || x > cw + 60 || y < -40 || y > chh + 40) continue;
     const isSel = sel && sel.t === "n" && sel.i === n.id, isLink = sl.has(n.id);
-    if (n.d === 0) { cand.push({n, x, y, pr: 0, f: Math.max(17, Math.min(30, 12 + 70 / Math.max(1, z))), b: true, col: COL[n.w], a: z < 9 ? 1 : Math.max(.35, 1 - (z - 9) / 20), txt: LAND_FA[n.w]}); continue; }
+    if (n.d === 0) { cand.push({n, x, y, pr: 0, f: Math.max(13, Math.min(30, 12 + 70 / Math.max(1, z)) * Math.min(1, cw / 760)), b: true, col: COL[n.w], a: z < 9 ? 1 : Math.max(.35, 1 - (z - 9) / 20), txt: LAND_FA[n.w]}); continue; }
     if (z < n.lod && !isSel && !isLink) continue;
     const rr = n.d === 1 ? 6 : (n.n > 0 ? 4.2 : 3 + Math.min(2.2, Math.log(1 + n.rk > 0 ? 1 + (total - n.rk) / 150 : 1)));
     ctx.beginPath(); ctx.arc(x, y, rr * (isSel ? 1.6 : 1), 0, 6.283); ctx.fillStyle = COL[n.w]; ctx.fill(); ctx.lineWidth = isSel ? 3 : 1.5; ctx.strokeStyle = isSel ? COL.ink : COL.surface; ctx.stroke();
