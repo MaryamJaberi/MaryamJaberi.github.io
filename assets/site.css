@@ -338,3 +338,7 @@ html.boot .rug .fringe{opacity:0;animation:fadeIn .6s .1s forwards}
 html.boot .rug-app{opacity:0;animation:fadeIn .45s forwards;animation-delay:calc(1.25s + var(--i) * 80ms)}
 @keyframes weave{to{clip-path:inset(0 0 0 0)}}
 @keyframes fadeIn{to{opacity:1}}
+
+.cards-fig .row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;background:linear-gradient(160deg,#E4DCF5,#F3D9E6);border-radius:var(--r-lg);padding:20px}
+.cards-fig img{width:100%;height:auto;aspect-ratio:3/4;border-radius:12px}
+@media(max-width:600px){.cards-fig .row{grid-template-columns:repeat(3,minmax(0,1fr))}}
