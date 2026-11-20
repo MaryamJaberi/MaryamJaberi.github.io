@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آزمایشگاه قاعده‌ها | ویکی جامعه | دانش‌سرا</title>
+<meta name="description" content="سه شبیه‌ساز برای سیمرغ و «ساخت ایران»: اول فرهنگ یا اول نهاد؟، نمایندهٔ بی‌حزب و صندوق مشترک، و تهدید و تطمیع در برابر شرف شغلی.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>:root{--lab:var(--fam-soc);--lab-soft:var(--fam-soc-soft)}
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:8px}
+.roles div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 10px;font-size:.88rem;line-height:1.7}
+.roles div.bent{border-color:var(--warn)}.roles div.firm{border-color:var(--ok)}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../soc/">ویکی جامعه</a><i>›</i><a href="../../soc/tools/">ابزارها</a><i>›</i><b>آزمایشگاه قاعده‌ها</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>آزمایشگاه قاعده‌ها</h1>
+<p class="what">سه شبیه‌ساز کوچک برای پرسش‌هایی که سیمرغ و «ساخت ایران» با آن‌ها روبه‌رو می‌شوند: اول باید آدم‌ها عوض شوند یا قاعده‌ها؟ چرا نماینده‌ها صندوق مشترک را خالی می‌کنند؟ و چرا تهدید و تطمیع تا جایی کار می‌کند و از جایی به بعد نه؟ هر سه، مدل ساده‌اند و ادعای پیش‌بینی ندارند. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note">این مدل‌ها از مدخل‌های ملکیان (اولویت دگرگونی فرهنگی)، عبدی و عجم‌اوغلو و رابینسون (اولویت نهادها) و گرانووتر (آستانهٔ پیوستن) ساخته شده‌اند. هیچ‌کدام نمی‌گوید کدام طرف بحث درست است؛ نشان می‌دهند پاسخ به چه چیزی بستگی دارد.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · آزمایشگاه قاعده‌ها</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script>
+const {fa, css, esc} = LabKit;
+const DRAFT = new Set(["soc:primacy-of-culture-inner-change-before-institutions", "phil:malekian-self-reform-vs-institutional-change"]);
+const LABELS = {"soc:primacy-of-culture-inner-change-before-institutions": "اولویت فرهنگ (ملکیان)", "phil:malekian-self-reform-vs-institutional-change": "اصلاح خود یا نهاد", "soc:collective-action": "کنش جمعی", "soc:threshold-models-of-collective-behaviour": "مدل آستانه", "soc:generalized-trust": "اعتماد تعمیم‌یافته"};
+const lk = ks => `<div class="links">${ks.map(k => { const [w, s] = k.split(":"); return `<a href="../../${w}/${DRAFT.has(k) ? "new" : "entries"}.html#${s}">${esc(LABELS[k] || s)}</a>`; }).join("")}</div>`;
+const line = (arr, col, X, Y, w = 2.5, dash) => `<path d="${arr.map((v, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(v).toFixed(1)).join("")}" fill="none" stroke="${col}" stroke-width="${w}" ${dash ? 'stroke-dasharray="5 4"' : ""}/>`;
+
+/* 1. culture or institutions first */
+function culture(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">دو چیز را صفر تا صد اندازه بگیرید: <b>فرهنگ</b> (چند درصد آدم‌ها منصف، قانون‌پذیر و غیرخودمحورند) و <b>نهاد</b> (قاعده‌ها و قانون‌ها چقدر عادلانه و اجراشدنی‌اند). دو پیکان هست: نهاد رفتار آدم‌ها را شکل می‌دهد، و آدم‌ها نهاد را می‌نویسند و اجرا می‌کنند. زور هر پیکان را تنظیم کنید و ببینید یک «تغییر ناگهانی» به کجا می‌رسد.</p>
+    <div class="row2"><label class="field">زور «نهاد ← رفتار آدم‌ها» (دیدگاه نهادگرا): <b id="av"></b><input type="range" id="a" min="0" max="100" step="5" value="50"></label>
+    <label class="field">زور «آدم‌ها ← قاعده‌ها» (دیدگاه ملکیان): <b id="bv"></b><input type="range" id="b" min="0" max="100" step="5" value="50"></label></div>
+    <div class="row2"><label class="field">فرهنگ در آغاز: <b id="cv"></b><input type="range" id="c" min="0" max="100" step="5" value="30"></label>
+    <label class="field">نهاد در آغاز: <b id="iv"></b><input type="range" id="i" min="0" max="100" step="5" value="30"></label></div>
+    <div class="chips" role="group"><button type="button" data-s="inst">تغییر ناگهانی نهاد (قانون اساسی تازه: نهاد ← ۸۰)</button><button type="button" data-s="cult">کار فرهنگی گسترده (فرهنگ ← ۷۰)</button><button type="button" data-s="both">هر دو با هم</button><button type="button" data-s="none" aria-pressed="true">بدون تغییر</button></div>
+    <div class="chartbox" id="ch"></div>`;
+  const g = id => +pn.querySelector("#" + id).value;
+  let sc = "none";
+  const draw = () => {
+    ["a", "b", "c", "i"].forEach(k => pn.querySelector("#" + k + "v").textContent = fa(g(k)));
+    let C = g("c") / 100, I = g("i") / 100; const A = g("a") / 100 * .2, B = g("b") / 100 * .2, T = 60, Cs = [], Is = [];
+    for (let t = 0; t <= T; t++) {
+      if (t === 10) { if (sc === "inst" || sc === "both") I = .8; if (sc === "cult" || sc === "both") C = Math.max(C, .7); }
+      Cs.push(C); Is.push(I);
+      const dC = A * (I - C), dI = B * (C - I); C = Math.min(1, Math.max(0, C + dC)); I = Math.min(1, Math.max(0, I + dI));
+    }
+    const W = 640, H = 280, P = 40, X = t => P + t / T * (W - 2 * P), Y = v => H - P - v * (H - 2 * P), ink = css("--ink-3");
+    pn.querySelector("#ch").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;direction:ltr" role="img" aria-label="فرهنگ و نهاد در طول زمان">
+      ${[0, .5, 1].map(v => `<line x1="${P}" y1="${Y(v)}" x2="${W - P}" y2="${Y(v)}" stroke="${ink}" stroke-opacity=".2"/><text x="${P - 6}" y="${Y(v) + 5}" text-anchor="end" font-size="13" fill="${ink}">${fa(v * 100)}</text>`).join("")}
+      <line x1="${X(10)}" y1="${P}" x2="${X(10)}" y2="${H - P}" stroke="${css("--warn")}" stroke-dasharray="4 4"/>
+      ${line(Cs, css("--fam-soc"), X, Y)}${line(Is, css("--fam-hum"), X, Y, 2.5, 1)}
+      <text x="${P}" y="${H - 10}" font-size="13" fill="${ink}">سال ۰</text><text x="${W - P}" y="${H - 10}" text-anchor="end" font-size="13" fill="${ink}">سال ${fa(T)}</text></svg>
+      <div class="legend" style="display:flex;gap:14px;font-size:.85rem;color:var(--ink-2)"><span style="color:${css("--fam-soc")}">━ فرهنگ</span><span style="color:${css("--fam-hum")}">╍ نهاد</span><span style="color:${css("--warn")}">┆ لحظهٔ تغییر</span></div>`;
+    const fin = (Cs[T] + Is[T]) / 2;
+    const who = A > B * 1.3 ? "نهاد بیشتر می‌کشد: تغییر قانون فرهنگ را با خود بالا می‌برد." : B > A * 1.3 ? "آدم‌ها بیشتر می‌کشند: قانون تازه به سطح فرهنگ برمی‌گردد (همان نگرانی ملکیان)." : "دو پیکان هم‌زورند: هر دو به میانهٔ راه می‌رسند.";
+    out.innerHTML = `<div class="res"><h3>پس از ${fa(T)} سال: فرهنگ ${fa(Cs[T] * 100, 0)} و نهاد ${fa(Is[T] * 100, 0)}</h3>
+      <p>${sc === "none" ? "یک سناریو انتخاب کنید." : who}</p>
+      <p>در این مدل، جایی که دو خط به هم می‌رسند را <b>نسبت زور دو پیکان</b> تعیین می‌کند. <b>ملکیان</b> می‌گوید آدمِ خودمحور قانون را به سود خود می‌نویسد، پس با عوض‌شدن حکومت فقط سودبرندگان عوض می‌شوند (پیکان «آدم‌ها ← قاعده‌ها» قوی). <b>نهادگرایان</b> (عجم‌اوغلو و رابینسون، «چرا ملت‌ها شکست می‌خورند») شهر نوگالس را مثال می‌زنند که دو نیمه‌اش با یک فرهنگ، زیر دو قانون، دو سرنوشت پیدا کرده‌اند (پیکان «نهاد ← رفتار» قوی). منتقدان هر دو هم هستند.</p>
+      <p>«هر دو با هم» را امتحان کنید: در بیشتر تنظیم‌ها، تغییر هم‌زمان دورتر می‌رود. برای سیمرغ یعنی: قاعدهٔ تازه و آموزش و تمرینِ آن، با هم.</p>
+      ${lk(["soc:primacy-of-culture-inner-change-before-institutions", "phil:malekian-self-reform-vs-institutional-change", "soc:collective-action"])}</div>`;
+  };
+  pn.addEventListener("input", draw);
+  pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-s]"); if (!b) return; sc = b.dataset.s; pn.querySelectorAll("[data-s]").forEach(x => x.setAttribute("aria-pressed", x === b)); draw(); });
+  draw();
+}
+
+/* 2. the non-party MP and the common treasury */
+function pork(pn, out){
+  const N = 5, ROUNDS = 8, NAMES = ["حوزهٔ شما", "شمال", "جنوب", "شرق", "غرب"];
+  let rule = "free", r = 0, fund = 100, home = Array(N).fill(0), nat = 0, log = [];
+  pn.innerHTML = `<div class="chips" role="group"><button type="button" data-r="free" aria-pressed="true">قاعدهٔ اول: هر نماینده برای حوزه‌اش طرح می‌گیرد</button><button type="button" data-r="cap" aria-pressed="false">قاعدهٔ دوم: سهم ثابت هر حوزه + رأی جمعی برای طرح ملی</button></div>
+    <p style="margin:0;line-height:1.9">پنج نماینده یک صندوق مشترک ۱۰۰ واحدی دارند. هر دور هر نماینده یکی را انتخاب می‌کند: <b>طرح محلی</b> (۱۰ واحد از صندوق برمی‌دارد و ۶ واحد برای حوزهٔ خودش سود می‌آورد؛ رأی‌دهنده‌هایش خوشحال می‌شوند) یا <b>طرح ملی</b> (۴ واحد برمی‌دارد و برای <b>همهٔ</b> حوزه‌ها ۳ واحد سود می‌آورد). شما نمایندهٔ یکی از حوزه‌هایید.</p>
+    <div class="btnrow"><button type="button" class="btn" data-c="L">طرح محلی</button><button type="button" class="btn ghost" data-c="N">طرح ملی</button><button type="button" class="btn ghost" id="rs">از نو</button></div><div id="st"></div>`;
+  const st = pn.querySelector("#st");
+  const reset = () => { r = 0; fund = 100; home = Array(N).fill(0); log = []; out.innerHTML = ""; st.innerHTML = `<p class="muted">صندوق: ${fa(fund)}</p>`; };
+  const play = me => {
+    if (r >= ROUNDS || fund <= 0) return;
+    const ch = [me, ...Array.from({length: N - 1}, () => rule === "free" ? (Math.random() < .75 ? "L" : "N") : (Math.random() < .25 ? "L" : "N"))];
+    ch.forEach((c, k) => {
+      if (rule === "cap" && c === "L") { if (fund >= 4) { fund -= 4; home[k] += 3; } return; }
+      if (c === "L") { if (fund >= 10) { fund -= 10; home[k] += 6; } }
+      else if (fund >= 4) { fund -= 4; for (let j = 0; j < N; j++) home[j] += 3; }
+    });
+    r++; log.push(ch);
+    st.innerHTML = `<p style="margin:0">دور ${fa(r)}: ${ch.map((c, k) => `${NAMES[k]} ${c === "L" ? "محلی" : "ملی"}`).join("، ")} · صندوق: <b>${fa(fund)}</b></p>`;
+    if (r >= ROUNDS || fund < 4) finish();
+  };
+  const finish = () => {
+    const tot = home.reduce((a, b) => a + b, 0);
+    out.innerHTML = `<div class="res"><h3>سود حوزهٔ شما: ${fa(home[0])} · سود کل کشور: ${fa(tot)} · ماندهٔ صندوق: ${fa(fund)}</h3>
+      <div class="bars">${home.map((h, k) => `<div><span>${NAMES[k]}</span><i style="width:${Math.max(3, h / Math.max(...home, 1) * 100)}%"></i><b>${fa(h)}</b></div>`).join("")}</div>
+      <p>${rule === "free" ? "با قاعدهٔ اول، هر نماینده جداگانه حق دارد طرح محلی بگیرد: برای حوزه‌اش ۶ واحد سود و فقط ۲ واحد (یک‌پنجم ۱۰) هزینهٔ سهمش. ولی اگر همه چنین کنند، صندوق زود خالی می‌شود و سود کل کمتر از حالتی است که همه طرح ملی بگیرند. این دوراهی زندانیِ چندنفره است." : "با قاعدهٔ دوم، طرح محلی ارزان‌تر و کم‌سودتر شد و وسوسه کم شد. همان آدم‌ها، با قاعدهٔ دیگر، رفتار دیگری نشان دادند."}</p>
+      <p>این مثال از بحث عبدی در جلسهٔ «بینش اقتصادی برای همه» است: ساختار پاداش از نیت آدم‌ها مهم‌تر است. <b>دیدگاه مقابل</b> (ملکیان): اگر نماینده‌ها خودمحور باشند، قاعدهٔ دوم را هم دور می‌زنند. هر دو را در «اول فرهنگ یا اول نهاد؟» آزمایش کنید.</p>
+      ${lk(["soc:collective-action", "soc:primacy-of-culture-inner-change-before-institutions"])}</div>`;
+  };
+  pn.querySelectorAll("[data-c]").forEach(b => b.addEventListener("click", () => play(b.dataset.c)));
+  pn.querySelector("#rs").addEventListener("click", reset);
+  pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-r]"); if (!b) return; rule = b.dataset.r; pn.querySelectorAll("[data-r]").forEach(x => x.setAttribute("aria-pressed", x === b)); reset(); });
+  reset();
+}
+
+/* 3. pressure: threat and bribe vs professional honour */
+const ROLES = ["معلم", "پزشک", "قاضی", "خبرنگار", "حسابرس", "مأمور ثبت", "استاد دانشگاه", "مهندس ناظر", "کارمند بانک", "داور فوتبال", "پرستار", "ناشر", "بازرس بیمه", "پلیس راهنمایی", "مدیر مدرسه", "داروساز", "کارمند شهرداری", "وکیل", "روزنامه‌نگار محلی", "مسئول خرید"];
+function pressure(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">بیست نفر در بیست شغل. یک «بازیگر قدرت» از هر کدام کار نادرستی می‌خواهد (نمرهٔ ناحق، گزارش دروغ، امضای بی‌بازرسی) و تهدید یا تطمیع می‌کند. هر کس یک <b>آستانه</b> دارد: اگر به اندازهٔ کافی از هم‌کارانش «نه» گفته باشند، او هم «نه» می‌گوید. فشار هر چه بیشتر، آستانه‌ها بالاتر.</p>
+    <div class="row2"><label class="field">شدت فشار (تهدید و تطمیع): <b id="fv"></b><input type="range" id="f" min="0" max="100" step="5" value="50"></label>
+    <label class="field">چند نفر از اول «نه» می‌گویند (هر چه بشود): <b id="sv"></b><input type="range" id="s" min="0" max="8" step="1" value="1"></label></div>
+    <label class="field">حمایت جمعی (صندوق حمایت، انجمن صنفی، رسانه): <b id="hv"></b><input type="range" id="h" min="0" max="100" step="10" value="0"></label>
+    <div class="roles" id="rl"></div>`;
+  const seed = ROLES.map((_, i) => ((i * 37) % 20) / 20);
+  const draw = () => {
+    const F = +pn.querySelector("#f").value, S = +pn.querySelector("#s").value, Hh = +pn.querySelector("#h").value;
+    pn.querySelector("#fv").textContent = fa(F); pn.querySelector("#sv").textContent = fa(S); pn.querySelector("#hv").textContent = fa(Hh);
+    const th = seed.map((u, i) => i < S ? 0 : Math.max(0, Math.round((u * 14 + 1) * (F / 50) - Hh / 100 * 6)));
+    let firm = th.map(t => t === 0), changed = true, rounds = 0;
+    while (changed && rounds < 30) { changed = false; const n = firm.filter(Boolean).length; th.forEach((t, i) => { if (!firm[i] && n >= t) { firm[i] = true; changed = true; } }); rounds++; }
+    const n = firm.filter(Boolean).length;
+    pn.querySelector("#rl").innerHTML = ROLES.map((r, i) => `<div class="${firm[i] ? "firm" : "bent"}">${r}<br><small>${firm[i] ? "«نه» گفت" : "کوتاه آمد"} · آستانه ${fa(th[i])}</small></div>`).join("");
+    out.innerHTML = `<div class="res"><h3>${fa(n)} نفر از ۲۰ «نه» گفتند</h3>
+      <p>${n >= 15 ? "فشار شکست خورد: وقتی بیشتر هم‌کاران نه بگویند، تهدید و تطمیع گران و بی‌اثر می‌شود." : n <= 3 ? "فشار برد: «نه»‌ها تک‌افتاده ماندند و موج راه نیفتاد." : "موج در میانه ایستاد."} یک یا دو نفر را به «نه گوی اول» اضافه کنید یا حمایت جمعی را بالا ببرید: گاهی یک تغییر کوچک کل نتیجه را برمی‌گرداند (مدل آستانهٔ گرانووتر).</p>
+      <p><b>برای سیمرغ:</b> این سازوکار طوری طراحی شده که کسی که کوتاه آمده سرزنش نشود: مدل نشان می‌دهد کوتاه‌آمدن بیشتر نتیجهٔ تنهایی است تا بدی. چیزی که موج را برمی‌گرداند، «نه»ی اول و پشتیبانی از اوست.</p>
+      <p><b>دیدگاه مقابل:</b> ملکیان «شرف شغلی» را فضیلتی فردی می‌داند که باید پیش از هر چیز در خود آدم ساخته شود؛ این مدل فقط سوی جمعی آن را نشان می‌دهد.</p>
+      ${lk(["soc:threshold-models-of-collective-behaviour", "soc:collective-action", "soc:generalized-trust"])}</div>`;
+  };
+  pn.addEventListener("input", draw); draw();
+}
+
+LabKit.start({
+  wiki: "soc", first: "culture", labels: LABELS,
+  exps: {
+    culture: ["فرهنگ یا نهاد؟", "اول آدم‌ها یا اول قاعده‌ها؟", "دو پیکان، یک تغییر ناگهانی، و پنجاه سال بعد.", culture],
+    pork: ["نمایندهٔ بی‌حزب", "صندوق مشترک و طرح‌های محلی", "هشت دور نمایندگی کنید؛ بعد قاعده را عوض کنید.", pork],
+    pressure: ["تهدید و تطمیع", "شرف شغلی و «نه»ی اول", "بیست شغل زیر فشار؛ چه چیزی موج «نه» را راه می‌اندازد؟", pressure]
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آزمایشگاه اندیشه | ویکی فلسفه | دانش‌سرا</title>
+<meta name="description" content="شش آزمایش تعاملی از مدخل‌های ملکیان و دیگران: باید از کجاست، چهار ناشناخته، به او اعتماد کنم، شرطیهٔ پاسکال، یک هم‌پیمان، چهار عینک تبیین.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>
+:root{--lab:var(--fam-hum);--lab-soft:var(--fam-hum-soft)}
+.q .chips button{font-size:.82rem}
+.ok{color:var(--ok);font-weight:700}.no{color:var(--warn);font-weight:700}
+.wtab{border-collapse:separate;border-spacing:6px;margin:0 auto;font-size:.9rem}
+.wtab td,.wtab th{background:var(--surface);border:1px solid var(--line-strong);border-radius:10px;padding:8px 10px;text-align:center}
+.wtab th{background:none;border:0;color:var(--ink-2)}
+.lines{display:flex;gap:28px;align-items:flex-end;justify-content:center;direction:ltr;padding:10px 0}
+.lines div{display:grid;gap:4px;justify-items:center;font-size:.85rem;color:var(--ink-2)}
+.lines i{display:block;width:6px;border-radius:3px;background:var(--ink)}
+.crowd{display:flex;flex-wrap:wrap;gap:6px;font-size:.85rem}
+.crowd span{padding:2px 10px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface)}
+.crowd span.ally{border-color:var(--ok);color:var(--ok);font-weight:700}
+.crowd span.wrong{border-color:var(--warn);color:var(--warn)}
+.lens{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px}
+.lens div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;line-height:1.85;font-size:.92rem}
+.lens b{color:var(--lab)}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../phil/">ویکی فلسفه</a><i>›</i><a href="../../phil/tools/">ابزارها</a><i>›</i><b>آزمایشگاه اندیشه</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>آزمایشگاه اندیشه</h1>
+<p class="what">شش آزمایش کوتاه، هر کدام از یک مدخل تازهٔ دانش‌سرا: «باید»هایی که هر روز می‌شنویم از کجا می‌آیند، فرق مسئله و راز، کِی اعتماد کردن عاقلانه است، شرطیهٔ پاسکال، زور جمع و نیروی یک هم‌پیمان، و چهار عینک برای پرسیدن «چرا؟». هر جا گفتهٔ ملکیان است، به نام او آمده و دیدگاه مقابل هم کنارش است. چیزی ذخیره یا فرستاده نمی‌شود.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note">این ابزارها برای فهمیدن‌اند، نه داوری دربارهٔ شما. پاسخ‌های «درست» در دو آزمایش اول برداشت ویراستار از چارچوب گوینده است و بعضی جمله‌ها به بیش از یک خانه تعلق دارند؛ این را خود ابزار می‌گوید.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · آزمایشگاه اندیشه</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script>
+const {fa, css, esc} = LabKit;
+/* entries still under review live on <wiki>/new.html in the private copy */
+const DRAFT = new Set(["phil:malekian-pascal-wager-three-objections", "phil:malekian-pascal-faith-as-acting-as-if", "soc:conformity-pressure-law-and-public-opinion", "soc:five-selves-and-conformity-fear-of-loneliness", "soc:four-types-of-explanation-human-action"]);
+const lk = ks => `<div class="links">${ks.map(k => { const [w, s] = k.split(":"); const href = DRAFT.has(k) ? `../../${w}/new.html#${s}` : `../../${w}/entries.html#${s}`; return `<a href="${href}">${esc(LABELS[k] || s)}</a>`; }).join("")}</div>`;
+function sorter(items, cats, intro, outro){
+  return (pn, out) => {
+    let score = 0, done = 0;
+    pn.innerHTML = `<p style="margin:0;line-height:1.9">${intro}</p>` + items.map((q, i) => `<div class="q"><p>${fa(i + 1)}. ${q[0]}</p><div class="chips" data-q="${i}">${Object.entries(cats).map(([k, v]) => `<button type="button" data-a="${k}">${v}</button>`).join("")}</div><div id="r${i}"></div></div>`).join("");
+    pn.addEventListener("click", e => {
+      const b = e.target.closest("[data-a]"); if (!b) return; const box = b.closest("[data-q]"), i = +box.dataset.q, q = items[i];
+      if (box.dataset.done) return; box.dataset.done = 1; done++;
+      const ok = q[1].split("|").includes(b.dataset.a); if (ok) score++;
+      box.querySelectorAll("button").forEach(x => { if (q[1].split("|").includes(x.dataset.a)) x.setAttribute("aria-pressed", "true"); });
+      pn.querySelector("#r" + i).innerHTML = `<div class="ans"><span class="${ok ? "ok" : "no"}">${ok ? "هم‌خوان با چارچوب." : "در این چارچوب: " + q[1].split("|").map(k => cats[k]).join(" یا ") + "."}</span> ${q[2]}</div>`;
+      if (done === items.length) out.innerHTML = `<div class="res"><h3>${fa(score)} از ${fa(items.length)}</h3>${outro}</div>`;
+    });
+  };
+}
+
+/* 1. where does this "must" come from */
+const MUSTS = {law: "حقوق (قانون)", eth: "اخلاق", rel: "دین", cus: "آیین و عرف", aes: "زیبایی‌شناسی", pru: "مصلحت‌اندیشی"};
+const MQ = [
+  ["باید کمربند ایمنی را ببندی، وگرنه پلیس جریمه می‌کند.", "law|pru", "اگر دلیل «جریمه» است، منبع قانون است؛ اگر «جانم را حفظ کنم»، مصلحت. همین که یک «باید» دو منبع داشته باشد عادی است."],
+  ["باید راستش را به او بگویی، حتی اگر به ضررت باشد.", "eth", "دلیلش نه جریمه است نه سود؛ درستی خودِ کار است."],
+  ["در عروسی باید اول به بزرگ‌ترها سلام کرد.", "cus", "رسمی است که جمع پذیرفته؛ در جای دیگر ممکن است فرق کند."],
+  ["این دو رنگ را کنار هم نپوش، به هم نمی‌آیند.", "aes", "«باید»ِ ذوقی: زیبا یا نازیبا، نه درست یا نادرست اخلاقی."],
+  ["پیش از امضای قرارداد باید یک وکیل آن را بخواند.", "pru", "برای پیشگیری از زیان خودت؛ نه قانون است، نه اخلاق."],
+  ["ماه رمضان در ملأ عام نباید خورد.", "rel|law|cus", "در ایران این «باید» هم قانونی است (قانون مجازات)، هم دینی، هم برای برخی عرفی. ملکیان می‌گوید نقد جدی باید روشن کند به کدام منبع ایراد دارد."],
+  ["باید مالیاتت را بدهی.", "law|eth", "قانون می‌خواهد؛ بسیاری آن را وظیفهٔ اخلاقی در برابر جمع هم می‌دانند. اگر قانون ناعادلانه باشد، دو منبع از هم جدا می‌شوند."],
+  ["دختر نباید تنها سفر کند.", "cus|pru|rel", "کسانی که این را می‌گویند گاهی به عرف تکیه می‌کنند، گاهی به ایمنی (مصلحت)، گاهی به حکم دینی؛ پرسیدن «از کجا؟» بحث را روشن می‌کند. چارچوب ملکیان برای نقد فمینیستی همین تفکیک بود."],
+  ["قول داده‌ای، باید سر وقت بیایی.", "eth", "وفای به عهد، بدون جریمه یا سود."],
+  ["سر سفره باید صبر کنی بزرگ‌تر شروع کند.", "cus", "ادب و رسم جمع."]
+];
+const musts = sorter(MQ, MUSTS, "ملکیان می‌گوید هر «باید»ی که در کار ارادی حس می‌کنیم از یکی از شش منبع می‌آید: حقوق، اخلاق، دین، آیین و عرف، زیبایی‌شناسی و مصلحت‌اندیشی. هر جمله را به منبعش نسبت بدهید.",
+  `<p>این جدول کمک می‌کند بحث‌ها گره نخورند: دو نفر که دربارهٔ یک «باید» دعوا می‌کنند اغلب از دو منبع حرف می‌زنند. یکی قانون را می‌گوید، دیگری اخلاق را.</p><p><b>دیدگاه دیگر:</b> فیلسوفان «هنجار» را معمولاً به اخلاقی، حقوقی، اجتماعی (عرفی) و ابزاری (مصلحتی) تقسیم می‌کنند و دین را منبعی جدا نمی‌دانند، بلکه آن را پشتوانهٔ یکی از این‌ها می‌شمارند. فهرست شش‌تایی، دسته‌بندی خود ملکیان است.</p>`);
+
+/* 2. four unknowns */
+const UNK = {prob: "مسئله", puz: "معما", sec: "سِرّ", mys: "راز"};
+const UQ = [
+  ["فردا در تهران باران می‌آید یا نه؟", "prob", "روش دانستنش هست (پیش‌بینی هوا)؛ فقط هنوز نمی‌دانیم."],
+  ["رمز گاوصندوق همسایه چیست؟", "sec", "کسی می‌داند و پنهان می‌کند."],
+  ["اگر خدا قادر مطلق است، می‌تواند سنگی بسازد که خودش نتواند بلندش کند؟", "puz", "بسیاری از فیلسوفان این را «مسئله‌نما» می‌دانند: گره در صورت‌بندی زبانی است، نه در جهان. دیگران آن را بحثی جدی دربارهٔ معنای قدرت می‌دانند."],
+  ["چرا اصلاً چیزی هست به‌جای اینکه هیچ نباشد؟", "mys", "بسیاری، از جمله ملکیان، چنین پرسش‌هایی را «راز» می‌دانند: با هیچ روشی دانستنی نیست. فیلسوفانی هم هستند که آن را پرسشی بی‌معنا یا قابل پاسخ می‌دانند."],
+  ["چرا درمان این بیماری تا حالا پیدا نشده؟", "prob", "مسئلهٔ سخت، ولی روش دارد."],
+  ["شاعر این غزل در دلش چه کسی را دوست داشت؟", "sec", "شاید می‌دانست و پنهان کرد. ملکیان می‌گوید «راز» در «راز درون پرده» حافظ به همین معنای سِرّ است."],
+  ["«این جمله دروغ است» راست است یا دروغ؟", "puz", "پارادوکس دروغگو: گره در ساختار جمله است. منطق‌دانان راه‌حل‌های مختلفی پیشنهاد کرده‌اند."],
+  ["تجربهٔ قرمز دیدن برای شما دقیقاً چگونه است؟", "mys|prob", "برای برخی «راز» آگاهی است (مسئلهٔ دشوار)، برای برخی دانشمندان مسئله‌ای که روزی حل می‌شود."]
+];
+const unknowns = sorter(UQ, UNK, "ملکیان (در شرح بیتی از حافظ) چهار نوع ندانستن را جدا می‌کند: <b>مسئله</b> (روشی برای دانستنش هست)، <b>معما</b> (فریب ذهن یا زبان؛ مسئله‌نما)، <b>سِرّ</b> (کسی می‌داند و پنهان می‌کند) و <b>راز</b> (اصولاً با هیچ روشی دانستنی نیست).",
+  `<p>چرا مهم است: اگر «راز» را «مسئله» بگیریم، بی‌فایده می‌کوشیم؛ اگر «مسئله» را «راز» بگیریم، زود دست می‌کشیم. برای سیمرغ هم مهم است: خیلی از گره‌ها «معما»یند، یعنی با روشن‌کردن واژه‌ها باز می‌شوند.</p><p><b>دیدگاه دیگر:</b> فیلسوفان تحلیلی مثل ویتگنشتاین بسیاری از «راز»ها را معما می‌دانستند؛ گابریل مارسل «راز» را چیزی می‌دانست که خودِ پرسنده درگیر آن است، نه چیزی بیرون از او.</p>`);
+
+/* 3. trust */
+const CASES = [["love", "دوست یا عاشق من است (به خیر من علاقه دارد)"], ["fate", "سود و زیانش با من گره خورده (هم‌سرنوشتیم)"], ["moral", "اخلاقی بودنش را پیش‌تر دیده و سنجیده‌ام"], ["watch", "کارش زیر نظارت است (حساب‌رسی، قانون، دوربین، شهرت)"], ["record", "تا حالا با من خیانت نکرده"]];
+const SCEN = ["قرض‌دادن پول به پسرخاله", "شراکت در مغازه با هم‌کلاسی قدیمی", "سپردن کلید خانه به همسایه در سفر", "اعتماد به وعدهٔ یک نامزد انتخاباتی", "پذیرفتن نتیجهٔ آزمایش یک آزمایشگاه پزشکی", "خرید خودروی دست‌دوم از غریبه در دیوار"];
+function trust(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">ملکیان دیدگاهی را که ابداع خودش نمی‌داند ولی می‌پذیرد، شرح می‌دهد: اعتماد فقط در پنج حالت <b>عقلانی</b> است و هر چه از حالت اول به پنجم برویم، عقلانیت کمتر می‌شود. یک موقعیت انتخاب کنید و ببینید کدام حالت‌ها برقرارند.</p>
+    <label class="field">موقعیت<select id="sc" style="font:inherit;min-height:40px">${SCEN.map(s => `<option>${s}</option>`).join("")}<option>موقعیت خودم…</option></select></label>
+    <div class="choice" id="cs">${CASES.map(([k, l], i) => `<button type="button" data-c="${k}" aria-pressed="false">${fa(i + 1)}. ${l}</button>`).join("")}</div>`;
+  const cs = pn.querySelector("#cs");
+  const draw = () => {
+    const on = [...cs.querySelectorAll("[aria-pressed=true]")].map(b => b.dataset.c);
+    const w = {love: 5, fate: 4, moral: 3, watch: 2, record: 1}; const best = on.length ? Math.max(...on.map(k => w[k])) : 0;
+    const msg = !on.length ? "هیچ‌کدام از پنج حالت برقرار نیست. در این چارچوب، اعتماد کامل عقلانی نیست؛ بهتر است قدم کوچک بردارید، ضامن بگیرید یا نظارت بگذارید." : best >= 4 ? "پایهٔ محکمی دارید: علاقه یا سرنوشت مشترک." : best === 3 ? "پایهٔ متوسط: اخلاق احرازشده. «احراز» یعنی دیده‌اید، نه شنیده‌اید." : "پایهٔ ضعیف‌تر: نظارت یا سابقه. سابقهٔ خوب تضمین آینده نیست، ولی چیزی است.";
+    out.innerHTML = `<div class="res"><h3>${msg}</h3>
+      <p>ملکیان میان دو چیز فرق می‌گذارد: <b>قابل اعتماد بودن</b> وظیفهٔ اخلاقی همه است؛ <b>اعتماد کردن</b> وظیفهٔ همگانی نیست. اعتماد همیشه «در چیزی» است: می‌شود به نجار در نجاری اعتماد کرد و در پزشکی نه.</p>
+      <p><b>دیدگاه دیگر:</b> راسل هاردین اعتماد را «منافع درهم‌تنیده» می‌داند (شبیه حالت دوم)؛ برخی فیلسوفان (مثل مک‌گیر) می‌گویند اعتمادِ کمی بیش از شواهد، خودش آدم‌ها را قابل‌اعتمادتر می‌کند. پژوهش «کیف پول گمشده» (Science، ۲۰۱۹، ۴۰ کشور) نشان داد آدم‌ها بیش از آنچه دیگران پیش‌بینی می‌کنند کیف پول را برمی‌گردانند، و هر چه پول داخلش بیشتر بود بیشتر. یعنی ما معمولاً دیگران را کمتر از واقع قابل‌اعتماد می‌دانیم.</p>
+      ${lk(["soc:generalized-trust", "soc:repeated-games-cooperation"])}</div>`;
+  };
+  cs.addEventListener("click", e => { const b = e.target.closest("[data-c]"); if (!b) return; b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); draw(); });
+  pn.querySelector("#sc").addEventListener("change", () => { cs.querySelectorAll("[data-c]").forEach(b => b.setAttribute("aria-pressed", "false")); draw(); });
+  draw();
+}
+
+/* 4. Pascal's wager */
+function wager(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">شرطیهٔ پاسکال: اگر حق با باورمندان باشد، تفاوت پذیرفتن و نپذیرفتن بی‌نهایت بزرگ است؛ اگر حق با منکران باشد، تفاوت ناچیز است. پس «به حساب احتمال» پذیرفتن عاقلانه‌تر است. عددها را عوض کنید، بعد سه اشکالی را که ملکیان می‌آورد یکی‌یکی روشن کنید.</p>
+    <table class="wtab"><tr><th></th><th>اگر حق با باورمندان باشد</th><th>اگر حق با منکران باشد</th></tr>
+      <tr><th>بپذیرم</th><td id="a1"></td><td>کمی هزینه (−<span id="c1"></span>)</td></tr>
+      <tr><th>نپذیرم</th><td id="a2"></td><td>کمی سود (+<span id="c2"></span>)</td></tr></table>
+    <div class="row2"><label class="field">احتمالی که شما به درستی سخن باورمندان می‌دهید: <b id="pv"></b><input type="range" id="p" min="0" max="50" step="0.5" value="5"></label>
+    <label class="field">هزینهٔ زیستن به‌سان باورمندان در این دنیا: <b id="cv"></b><input type="range" id="c" min="1" max="100" step="1" value="10"></label></div>
+    <div class="choice" id="ob">
+      <button type="button" data-o="1" aria-pressed="false">اشکال ۱: کسی که از سر احتمال ایمان می‌آورد در دل شک دارد؛ شک با ایمان جمع می‌شود؟</button>
+      <button type="button" data-o="2" aria-pressed="false">اشکال ۲: گزینه فقط دوتا نیست؛ دین‌ها و تفسیرهای رقیب هم همین «بی‌نهایت» را وعده می‌دهند.</button>
+      <button type="button" data-o="3" aria-pressed="false">اشکال ۳ (به نظر ملکیان قوی‌ترین): خود پیامدها هم احتمالی‌اند؛ کسی بهشت و دوزخ را ندیده تا اندازهٔ «تفاوت» معلوم باشد.</button></div>`;
+  const p = pn.querySelector("#p"), c = pn.querySelector("#c"), ob = pn.querySelector("#ob");
+  const draw = () => {
+    const P = +p.value / 100, C = +c.value, O = [...ob.querySelectorAll("[aria-pressed=true]")].map(b => b.dataset.o);
+    pn.querySelector("#pv").textContent = fa(+p.value, 1) + "٪"; pn.querySelector("#cv").textContent = fa(C);
+    pn.querySelector("#c1").textContent = fa(C); pn.querySelector("#c2").textContent = fa(C);
+    const big = O.includes("3") ? "نامعلوم" : "بی‌نهایت";
+    pn.querySelector("#a1").textContent = O.includes("3") ? "پاداش؟ (نامعلوم)" : "پاداش بی‌نهایت"; pn.querySelector("#a2").textContent = O.includes("3") ? "کیفر؟ (نامعلوم)" : "زیان بی‌نهایت";
+    let verdict;
+    if (O.includes("3")) verdict = "وقتی اندازهٔ پیامدها نامعلوم است، حساب «احتمال × بی‌نهایت» دیگر عددی نمی‌دهد. استدلال به دلیلی بیرونی نیاز پیدا می‌کند.";
+    else if (O.includes("2")) verdict = `با چند گزینهٔ رقیب که هر کدام «بی‌نهایت» وعده می‌دهند، حساب برنده‌ای نشان نمی‌دهد: هر گزینه با هر احتمال مثبتی ارزش بی‌نهایت دارد. (این همان اشکال «خدایان بسیار» است که دیدرو گفت: «یک امام هم می‌تواند همین‌طور استدلال کند».)`;
+    else if (P > 0) verdict = `با هر احتمال مثبتی، حتی ${fa(+p.value, 1)}٪، ارزش انتظاری «پذیرفتن» بی‌نهایت است و هزینهٔ ${fa(C)} در برابرش هیچ است. نیروی استدلال همین است.`;
+    else verdict = "با احتمال صفر، پذیرفتن فقط هزینه است.";
+    out.innerHTML = `<div class="res"><h3>${verdict}</h3>
+      ${O.includes("1") ? `<p><b>اشکال ۱:</b> پاسخ ملکیان این است که این اشکال فقط وقتی وارد است که ایمان را همان یقین بدانیم؛ اگر ایمان یقین نباشد (که به نظر او چنین است)، می‌شود هم مؤمن بود و هم شاک. پاسکال خودش پیشنهاد می‌کرد «مثل باورمندان رفتار کن» تا باور بیاید.</p>` : ""}
+      <p><b>نتیجه‌گیری ملکیان:</b> شرطیه «برهان» نیست، «جدل» است؛ فقط برای کسی کار می‌کند که مقدمه‌هایش را قبول دارد، و جایی که ادعاها جمع‌نشدنی و شواهد دو طرف دقیقاً برابر باشد.</p>
+      <p><b>دیدگاه دیگر:</b> فیلسوفانی امروزی (شلزینگر، بارتا و دیگران، به گزارش دانشنامهٔ فلسفهٔ استنفورد) صورت‌بندی‌های تازه‌ای پیشنهاد کرده‌اند که به نظرشان اشکال خدایان بسیار را پاسخ می‌دهد؛ دیگران آن‌ها را کافی نمی‌دانند.</p>
+      ${lk(["phil:malekian-pascal-wager-three-objections", "phil:malekian-pascal-faith-as-acting-as-if"])}</div>`;
+  };
+  p.addEventListener("input", draw); c.addEventListener("input", draw);
+  ob.addEventListener("click", e => { const b = e.target.closest("[data-o]"); if (!b) return; b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); draw(); });
+  draw();
+}
+
+/* 5. one ally (Asch) */
+function ally(pn, out){
+  const R = [[3, 2, 1, 3, 1], [5, 3, 5, 4, 3], [4, 4, 6, 3, 2], [2, 3, 2, 1, 3], [6, 4, 5, 6, 1], [3, 5, 3, 2, 2], [4, 3, 4, 5, 3], [5, 6, 5, 4, 3]]; /* [target, A, B, C, wrong-crowd-answer index 1..3 ] */
+  const CROWD = ["آرش", "بهار", "کاوه", "دنیا", "ژاله", "مهسا"];
+  let withAlly = false, i = 0, conf = 0, crit = 0;
+  pn.innerHTML = `<div class="chips" role="group"><button type="button" data-w="0" aria-pressed="true">بدون هم‌پیمان</button><button type="button" data-w="1" aria-pressed="false">با یک هم‌پیمان</button></div>
+    <p style="margin:0;line-height:1.9">نسخهٔ ساده‌ای از آزمایش سلیمان آش (دههٔ ۱۹۵۰): خطِ سمت چپ را با سه خط مقایسه کنید و بگویید کدام هم‌اندازهٔ آن است. پیش از شما شش نفر جواب داده‌اند. در بعضی دورها همه یک جواب <b>غلط</b> می‌دهند. شما چه می‌کنید؟</p>
+    <div id="q"></div>`;
+  const q = pn.querySelector("#q");
+  const show = () => {
+    if (i >= R.length) { out.innerHTML = `<div class="res"><h3>در ${fa(crit)} دور که جمع غلط می‌گفت، ${fa(conf)} بار با جمع رفتید.</h3>
+      <p>در آزمایش‌های آش، در دورهایی که جمع غلط می‌گفت حدود یک‌سوم پاسخ‌ها با جمع همراه شد (۳۲ تا ۳۷٪)؛ حدود سه‌چهارم آدم‌ها دست‌کم یک بار همراه شدند و یک‌چهارم هرگز. وقتی <b>فقط یک نفر</b> در جمع جواب درست می‌داد، همرنگی به حدود یک‌پنجم آن (حدود ۵٪) افتاد.</p>
+      <p>ملکیان می‌گوید جامعه همیشه «به مرکز می‌کشد» و بیشتر ما در «منِ» دیگران‌دیده زندگی می‌کنیم. آزمایش آش یک سوی این را نشان می‌دهد؛ سوی دیگرش این است که یک صدای مخالف چقدر می‌تواند دیگران را آزاد کند. <b>دیدگاه دیگر:</b> بازخوانی‌ها نشان داده‌اند بسیاری از شرکت‌کنندگان دودل و ناراحت بودند و همرنگی در فرهنگ‌ها و دهه‌های مختلف فرق می‌کند؛ پس این «قانون طبیعت» نیست.</p>
+      <div class="btnrow"><button type="button" class="btn ghost" id="again">دوباره</button></div>
+      ${lk(["soc:conformity-pressure-law-and-public-opinion", "soc:five-selves-and-conformity-fear-of-loneliness"])}</div>`;
+      out.querySelector("#again").addEventListener("click", () => { i = 0; conf = 0; crit = 0; out.innerHTML = ""; show(); }); q.innerHTML = ""; return; }
+    const [t, a, b, c, w] = R[i], opts = [a, b, c], right = opts.indexOf(t) + 1, critical = i % 4 !== 0;
+    const ans = critical ? w === right ? (right % 3) + 1 : w : right;
+    const crowd = CROWD.map((n, k) => withAlly && k === 3 && critical ? `<span class="ally">${n}: ${fa(right)}</span>` : `<span class="${critical ? "wrong" : ""}">${n}: ${fa(ans)}</span>`).join("");
+    const H = h => `<i style="height:${h * 22}px"></i>`;
+    q.innerHTML = `<div class="lines"><div>${H(t)}<b>نمونه</b></div><span style="width:20px"></span>${opts.map((o, k) => `<div>${H(o)}${fa(k + 1)}</div>`).join("")}</div>
+      <div class="crowd">${crowd}</div><div class="btnrow">${[1, 2, 3].map(k => `<button type="button" class="btn ${k === 1 ? "" : "ghost"}" data-p="${k}">خط ${fa(k)}</button>`).join("")}</div>
+      <p class="muted" style="font-size:.85rem;margin:4px 0 0">دور ${fa(i + 1)} از ${fa(R.length)}</p>`;
+    q.querySelectorAll("[data-p]").forEach(btn => btn.addEventListener("click", () => { const p = +btn.dataset.p; if (critical) { crit++; if (p === ans && p !== right) conf++; } i++; show(); }));
+  };
+  pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-w]"); if (!b) return; withAlly = b.dataset.w === "1"; pn.querySelectorAll("[data-w]").forEach(x => x.setAttribute("aria-pressed", x === b)); i = 0; conf = 0; crit = 0; out.innerHTML = ""; show(); });
+  show();
+}
+
+/* 6. four lenses */
+const EVENTS = {
+  "مهاجرت جوانان": ["درآمد پایین، تورم، بیکاری و فرصت شغلی بیشتر در جای دیگر.", "قانون‌های کار و آموزش، سهولت ویزا، نظام سربازی، تحریم‌ها.", "دیدن دوستان و هم‌دوره‌ای‌هایی که رفته‌اند؛ گفتمان «اینجا آینده ندارد» در شبکه‌های اجتماعی.", "میل همیشگی انسان به امنیت و پیشرفت؛ ترس از دست‌دادن فرصت؛ امید."],
+  "ازدواج دیرتر": ["گرانی مسکن و هزینهٔ عروسی؛ طول تحصیل.", "قانون‌های ازدواج و طلاق، سن قانونی، نبود حمایت مالی رسمی.", "تغییر نگاه نسل جوان به استقلال و برابری؛ الگوهای تازهٔ رابطه.", "ترس از تعهد نادرست؛ نیاز به شناخت بیشتر پیش از تصمیم."],
+  "اعتراض خیابانی": ["فقر، نابرابری، قطع آب و برق، گرانی ناگهانی.", "بسته‌بودن راه‌های قانونی بیان نارضایتی؛ قانون‌های اعتراض.", "شبکه‌ها و گروه‌هایی که خبر را پخش می‌کنند؛ نمادها و روایت‌های مشترک.", "خشم از بی‌عدالتی؛ اثر «آستانهٔ پیوستن» (اگر دیگران بیایند می‌آیم)."]
+};
+function lenses(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">ملکیان بر پایهٔ طرح کریگ پارسونز چهار نوع تبیین برای کار آدم‌ها می‌شمارد: <b>مادی</b> (بدن، اقلیم، اقتصاد)، <b>نهادی</b> (قانون‌ها و قاعده‌های ساختهٔ انسان)، <b>فکری-گروهی</b> (نگرش‌هایی که از گروه می‌گیریم؛ پارسونز این را «ایده‌ای» می‌نامد) و <b>روانی</b> (ساختار ذهنی مشترک آدم‌ها). یک رویداد انتخاب کنید، اول خودتان حدس بزنید کدام عینک بیشتر توضیح می‌دهد، بعد هر چهار را ببینید.</p>
+    <div class="chips" role="group">${Object.keys(EVENTS).map((k, i) => `<button type="button" data-e="${k}" aria-pressed="${i === 0}">${k}</button>`).join("")}</div>
+    <div class="chips" id="g">${["مادی", "نهادی", "فکری-گروهی", "روانی"].map((k, i) => `<button type="button" data-l="${i}">به نظرم بیشتر: ${k}</button>`).join("")}</div><div id="lv"></div>`;
+  let ev = Object.keys(EVENTS)[0];
+  const show = g => { const L = EVENTS[ev], N = ["مادی", "نهادی", "فکری-گروهی", "روانی"];
+    pn.querySelector("#lv").innerHTML = `<div class="lens">${L.map((t, i) => `<div style="${i === g ? "border-color:var(--lab)" : ""}"><b>عینک ${N[i]}</b><br>${t}</div>`).join("")}</div>`;
+    out.innerHTML = `<div class="res"><h3>هر چهار عینک چیزی می‌بینند</h3><p>به گفتهٔ ملکیان کمتر نظریه‌پردازی فقط یک عینک می‌زند، ولی در هر نظریه یکی غالب است. دعواهای سیاسی هم اغلب دعوای عینک‌هاست: یکی می‌گوید «مشکل اقتصاد است»، دیگری «مشکل قانون است»، سومی «مشکل فرهنگ است». پرسش بهتر این است که <b>سهم</b> هر کدام چقدر است و چطور می‌شود سنجیدش.</p><p class="muted" style="font-size:.88rem">نمونه‌های هر عینک توضیحی‌اند، نه یافتهٔ پژوهشی؛ برای هر رویداد باید داده آورد.</p>${lk(["soc:four-types-of-explanation-human-action", "soc:threshold-models-of-collective-behaviour"])}</div>`; };
+  pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-e]"); if (!b) return; ev = b.dataset.e; pn.querySelectorAll("[data-e]").forEach(x => x.setAttribute("aria-pressed", x === b)); pn.querySelector("#lv").innerHTML = ""; out.innerHTML = ""; });
+  pn.querySelector("#g").addEventListener("click", e => { const b = e.target.closest("[data-l]"); if (!b) return; show(+b.dataset.l); });
+}
+
+const LABELS = {"soc:generalized-trust": "اعتماد تعمیم‌یافته", "soc:repeated-games-cooperation": "بازی تکرارشونده", "phil:malekian-pascal-wager-three-objections": "شرطیهٔ پاسکال", "phil:malekian-pascal-faith-as-acting-as-if": "ایمان پاسکالی", "soc:conformity-pressure-law-and-public-opinion": "فشار همرنگی", "soc:five-selves-and-conformity-fear-of-loneliness": "پنج من و همرنگی", "soc:four-types-of-explanation-human-action": "چهار نوع تبیین", "soc:threshold-models-of-collective-behaviour": "مدل آستانه"};
+LabKit.start({
+  wiki: "phil", first: "musts", labels: LABELS,
+  exps: {
+    musts: ["باید از کجاست؟", "شش منبع «باید»", "هر «باید» را به منبعش برگردانید: قانون، اخلاق، دین، عرف، ذوق یا مصلحت.", musts],
+    unknowns: ["چهار ناشناخته", "مسئله، معما، سِرّ، راز", "هر پرسش را در یکی از چهار خانه بگذارید.", unknowns],
+    trust: ["به او اعتماد کنم؟", "پنج حالت اعتماد عقلانی", "یک موقعیت را بسنجید.", trust],
+    wager: ["شرطیهٔ پاسکال", "قدم‌به‌قدم با سه اشکال", "جدول تصمیم را ببینید و اشکال‌ها را یکی‌یکی روشن کنید.", wager],
+    ally: ["یک هم‌پیمان", "زور جمع و نیروی یک صدای مخالف", "آزمایش آش، یک بار بی‌هم‌پیمان و یک بار با یکی.", ally],
+    lenses: ["چرا؟", "چهار عینک تبیین", "یک رویداد ایرانی را با چهار عینک ببینید.", lenses]
+  }
+});
+</script>
+</body>
+</html>

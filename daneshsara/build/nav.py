@@ -28,12 +28,12 @@ for p in glob.glob('iran/*.json'):
 json.dump({'p': P, 'c': C}, open('core/preview.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 
 NAV = [
- ['۱ · علم', [['psy/', 'روان‌شناسی'], ['psy/entries.html', 'مدخل‌های روان'], ['soc/', 'جامعه'], ['phil/', 'فلسفه'], ['tabar/', 'تبار و ژنتیک'], ['tarikh/', 'تاریخ و ایران‌شناسی'], ['miyan/', 'ارتباط رشته‌ها']]],
+ ['۱ · علم', [['psy/', 'روان‌شناسی'], ['psy/entries.html', 'مدخل‌های روان'], ['soc/', 'جامعه'], ['phil/', 'فلسفه'], ['tabar/', 'تبار و ژنتیک'], ['tarikh/', 'تاریخ و ایران‌شناسی'], ['zaban/', 'زبان و نشانه'], ['miyan/', 'ارتباط رشته‌ها'], ['miyan/roots.html', 'ریشه‌یابی آسیب'], ['miyan/aces-columns.html', 'درون هر ستون (ACE)'], ['soc/stories/preference-falsification.html', 'داستان‌ها: تحریف ترجیحات']]],
  ['۲ · ایران', [['iran/', 'ویکی ایران'], ['iran/tools/', 'ابزارهای ایران']]],
  ['۳ · سیمرغ', [['simorgh/plan.html', 'نقشهٔ کلان سیمرغ'], ['simorgh/', 'درگاه سیمرغ']]],
  ['۴ · ساخت ایران', [['sakht/', 'نهادها، گذار، ریسک'], ['sakht/day.html', 'روز بعد'], ['sakht/work.html', 'میز کار متخصص‌ها']]],
- ['اطلس‌ها و ابزارها', [['atlas/world.html', 'جهان دانش'], ['atlas/lands.html', 'سرزمین دانش'], ['atlas/', 'اطلس رشته‌ها'], ['atlas/library-plan.html', 'کتابخانه'], ['atlas/tools/', 'ابزارهای میان‌رشته‌ای'], ['atlas/hidden-bridges.html', 'پل‌های پنهان'], ['psy/tools/', 'ابزارهای روان']]],
- ['راهنما', [['core/ask.html', 'بپرس از دانش‌سرا'], ['core/log.html', 'دفتر پروژه: چه تغییر کرد'], ['core/need.html', 'چیزهایی که باید بگیریم'], ['atlas/coverage.html', 'نقشهٔ پوشش و نقشهٔ راه'], ['atlas/story.html', 'داستان پروژه'], ['atlas/sitemap.html', 'نقشهٔ کامل سایت'], ['atlas/collection.html', 'مخزن کتاب‌ها'], ['core/sources.html', 'منابع'], ['core/people.html', 'چهره‌ها'], ['core/contribute.html', 'مشارکت']]],
+ ['اطلس‌ها و ابزارها', [['atlas/world.html', 'جهان دانش'], ['atlas/lands.html', 'سرزمین دانش'], ['atlas/', 'اطلس رشته‌ها'], ['atlas/library-plan.html', 'کتابخانه'], ['atlas/tools/', 'ابزارهای میان‌رشته‌ای'], ['atlas/hidden-bridges.html', 'پل‌های پنهان'], ['soc/tools/games.html', 'آزمایشگاه بازی'], ['soc/tools/cooperation.html', 'تکامل همکاری'], ['soc/tools/compass.html', 'قطب‌نمای سیاسی'], ['soc/tools/rules-lab.html', 'آزمایشگاه قاعده‌ها'], ['phil/tools/thinking-lab.html', 'آزمایشگاه اندیشه'], ['psy/tools/', 'ابزارهای روان']]],
+ ['راهنما', [['core/map.html', 'نقشهٔ لایه‌ها'], ['core/insights.html', 'بینش‌ها: دانش‌سرا در عدد'], ['core/library.html', 'کتابخانهٔ یکپارچه'], ['core/archive.html', 'بایگانی پژوهشی ۱۲ حوزه'], ['core/ideas.html', 'ایده‌های ابزار'], ['core/ask.html', 'بپرس از دانش‌سرا'], ['core/log.html', 'دفتر پروژه: چه تغییر کرد'], ['core/need.html', 'چیزهایی که باید بگیریم'], ['atlas/coverage.html', 'نقشهٔ پوشش و نقشهٔ راه'], ['atlas/story.html', 'داستان پروژه'], ['atlas/sitemap.html', 'نقشهٔ کامل سایت'], ['atlas/collection.html', 'مخزن کتاب‌ها'], ['core/sources.html', 'منابع'], ['core/people.html', 'چهره‌ها'], ['core/contribute.html', 'مشارکت']]],
 ]
 # هر چه در این نسخه نیست (لایه‌های گاوصندوق) از نقشه برداشته می‌شود؛ بقیه باید واقعاً باشند.
 def _here(u):
@@ -133,5 +133,8 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") { hide(); if
 })();
 '''
 GUARD = '\n(()=>{const c=document.querySelector(\'script[src$="core/nav.js"]\')||document.currentScript;if(!c)return;const s=document.createElement("script");s.src=new URL("guard.js",c.src).href;s.defer=true;document.head.appendChild(s)})();\n'
-open('core/nav.js', 'w', encoding='utf-8').write(JS.replace('__NAV__', json.dumps(NAV, ensure_ascii=False)) + GUARD)
+# افزونه‌ها: plus.js (جست‌وجوی سراسری، نوار پیشرفت، لایه‌بندی مدخل‌ها)، qa.js، و guide.js فقط در صفحه‌هایی که #exp دارند
+EXTRAS = ''.join('\n(()=>{const c=document.querySelector(\'script[src$="core/nav.js"]\')||document.currentScript;if(!c)return;' + cond + 'const s=document.createElement("script");s.src=new URL("' + f + '",c.src).href;s.defer=true;document.head.appendChild(s)})();\n'
+                 for f, cond in [('plus.js', ''), ('qa.js', ''), ('guide.js', 'if(!document.getElementById("exp"))return;')] if os.path.exists('core/' + f))
+open('core/nav.js', 'w', encoding='utf-8').write(JS.replace('__NAV__', json.dumps(NAV, ensure_ascii=False)) + GUARD + EXTRAS)
 print(f'core/preview.json: {len(P)} pages, {len(C)} concepts, {os.path.getsize("core/preview.json") // 1024} KB; core/nav.js {os.path.getsize("core/nav.js") // 1024} KB')

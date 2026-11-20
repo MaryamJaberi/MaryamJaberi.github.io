@@ -3,7 +3,7 @@
 const src = (document.currentScript && document.currentScript.src) || "";
 const ROOT = src.replace(/core\/nav\.js.*$/, "");
 if (!ROOT) return;
-const NAV = [["۱ · علم", [["psy/", "روان‌شناسی"], ["psy/entries.html", "مدخل‌های روان"], ["soc/", "جامعه"], ["phil/", "فلسفه"], ["tabar/", "تبار و ژنتیک"], ["tarikh/", "تاریخ و ایران‌شناسی"], ["miyan/", "ارتباط رشته‌ها"]]], ["اطلس‌ها و ابزارها", [["atlas/world.html", "جهان دانش"], ["atlas/lands.html", "سرزمین دانش"], ["atlas/", "اطلس رشته‌ها"], ["atlas/library-plan.html", "کتابخانه"], ["atlas/tools/", "ابزارهای میان‌رشته‌ای"], ["atlas/hidden-bridges.html", "پل‌های پنهان"], ["psy/tools/", "ابزارهای روان"]]], ["راهنما", [["core/ask.html", "بپرس از دانش‌سرا"], ["atlas/collection.html", "مخزن کتاب‌ها"], ["core/sources.html", "منابع"], ["core/people.html", "چهره‌ها"], ["core/contribute.html", "مشارکت"]]]];
+const NAV = [["۱ · علم", [["psy/", "روان‌شناسی"], ["psy/entries.html", "مدخل‌های روان"], ["soc/", "جامعه"], ["phil/", "فلسفه"], ["tabar/", "تبار و ژنتیک"], ["tarikh/", "تاریخ و ایران‌شناسی"], ["zaban/", "زبان و نشانه"], ["miyan/", "ارتباط رشته‌ها"], ["miyan/roots.html", "ریشه‌یابی آسیب"], ["miyan/aces-columns.html", "درون هر ستون (ACE)"], ["soc/stories/preference-falsification.html", "داستان‌ها: تحریف ترجیحات"]]], ["اطلس‌ها و ابزارها", [["atlas/world.html", "جهان دانش"], ["atlas/lands.html", "سرزمین دانش"], ["atlas/", "اطلس رشته‌ها"], ["atlas/library-plan.html", "کتابخانه"], ["atlas/tools/", "ابزارهای میان‌رشته‌ای"], ["atlas/hidden-bridges.html", "پل‌های پنهان"], ["soc/tools/games.html", "آزمایشگاه بازی"], ["soc/tools/cooperation.html", "تکامل همکاری"], ["soc/tools/compass.html", "قطب‌نمای سیاسی"], ["soc/tools/rules-lab.html", "آزمایشگاه قاعده‌ها"], ["phil/tools/thinking-lab.html", "آزمایشگاه اندیشه"], ["psy/tools/", "ابزارهای روان"]]], ["راهنما", [["core/map.html", "نقشهٔ لایه‌ها"], ["core/insights.html", "بینش‌ها: دانش‌سرا در عدد"], ["core/library.html", "کتابخانهٔ یکپارچه"], ["core/archive.html", "بایگانی پژوهشی ۱۲ حوزه"], ["core/ideas.html", "ایده‌های ابزار"], ["core/ask.html", "بپرس از دانش‌سرا"], ["atlas/collection.html", "مخزن کتاب‌ها"], ["core/sources.html", "منابع"], ["core/people.html", "چهره‌ها"], ["core/contribute.html", "مشارکت"]]]];
 const rel = u => { try { const x = new URL(u, location.href); if (!x.href.startsWith(ROOT)) return null; let p = x.pathname.slice(new URL(ROOT).pathname.length); if (p === "" || p.endsWith("/")) p += "index.html"; return [decodeURIComponent(p), decodeURIComponent(x.hash.slice(1))]; } catch (e) { return null; } };
 const here = rel(location.href);
 const css = document.createElement("style");
@@ -87,3 +87,9 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") { hide(); if
 })();
 
 (()=>{const c=document.querySelector('script[src$="core/nav.js"]')||document.currentScript;if(!c)return;const s=document.createElement("script");s.src=new URL("guard.js",c.src).href;s.defer=true;document.head.appendChild(s)})();
+
+(()=>{const c=document.querySelector('script[src$="core/nav.js"]')||document.currentScript;if(!c)return;const s=document.createElement("script");s.src=new URL("plus.js",c.src).href;s.defer=true;document.head.appendChild(s)})();
+
+(()=>{const c=document.querySelector('script[src$="core/nav.js"]')||document.currentScript;if(!c)return;const s=document.createElement("script");s.src=new URL("qa.js",c.src).href;s.defer=true;document.head.appendChild(s)})();
+
+(()=>{const c=document.querySelector('script[src$="core/nav.js"]')||document.currentScript;if(!c)return;if(!document.getElementById("exp"))return;const s=document.createElement("script");s.src=new URL("guide.js",c.src).href;s.defer=true;document.head.appendChild(s)})();

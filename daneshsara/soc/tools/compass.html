@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>قطب‌نمای سیاسی | ویکی جامعه | دانش‌سرا</title>
+<meta name="description" content="نقشهٔ دوبعدی چپ و راست اقتصادی و پیشرو و محافظه‌کار، به روش قطب‌نماهای انتخاباتی هلند: جای هر حزب، رسانه یا سیاست از روی موضع‌های مستندش، هر موضع با منبع.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>
+:root{--lab:var(--fam-soc);--lab-soft:var(--fam-soc-soft)}
+.grid2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:900px){.grid2{grid-template-columns:minmax(0,1fr)}}
+svg.cmp{width:100%;height:auto;display:block;direction:ltr;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+svg.cmp text{font-family:inherit}
+.dot{cursor:pointer}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.84rem;color:var(--ink-2)}
+.legend b{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-inline-end:4px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;line-height:1.9}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.ans{display:grid;gap:6px;font-size:.88rem}
+.ans div{border-bottom:1px dashed var(--line);padding-bottom:4px}
+.ans a{font-size:.8rem}
+.st{display:grid;gap:10px}
+.st .row{display:grid;gap:4px;padding:8px 0;border-bottom:1px solid var(--line)}
+.st .row p{margin:0;font-size:.92rem;line-height:1.8}
+.st .opts{display:flex;flex-wrap:wrap;gap:4px}
+.st .opts button{font:inherit;font-size:.8rem;min-height:34px;padding:2px 10px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.st .opts button[aria-pressed=true]{background:var(--lab-soft);border-color:var(--lab);color:var(--lab);font-weight:700}
+.st input[type=url],.st input[type=text],.fld input,.fld select{font:inherit;width:100%;min-height:38px;border:1px solid var(--line-strong);border-radius:10px;padding:4px 10px;background:var(--paper);color:var(--ink)}
+.fld{display:grid;gap:4px;font-size:.88rem;color:var(--ink-2)}
+.ax-tag{font-size:.75rem;color:var(--ink-3)}
+.warnbox{background:color-mix(in srgb,var(--warn) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--warn) 40%,var(--line));border-radius:12px;padding:10px 14px;line-height:1.9;font-size:.92rem}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../soc/">ویکی جامعه</a><i>›</i><a href="../../soc/tools/">ابزارها</a><i>›</i><b>قطب‌نمای سیاسی</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>قطب‌نمای سیاسی</h1>
+<p class="what">یک نقشهٔ دوبعدی، مثل «کیس‌کمپاس» که هلندی‌ها پیش از هر انتخابات می‌بینند: محور افقی <b>چپ و راست اقتصادی</b> (دولت یا بازار)، محور عمودی <b>پیشرو و محافظه‌کار</b> (آزادی‌های فردی و تغییر، یا نظم و سنت). هر حزب، رسانه، شخصیت یا سیاست یک نقطه است. جای نقطه را برچسب ایدئولوژیک تعیین نمی‌کند؛ از روی <b>موضع‌های مستند</b>ش دربارهٔ شانزده جملهٔ ثابت حساب می‌شود، و هر موضع منبع خودش را دارد.</p>
+<div class="warnbox">این صفحه هیچ نقطه‌ای را بی‌منبع نمی‌گذارد. نقطه‌ای که برای کمتر از نیمی از جمله‌ها موضع مستند دارد، توخالی نشان داده می‌شود (اطمینان کم). عددها فقط «جای نسبی» را نشان می‌دهند، نه خوب و بد را. داده‌ها در همین مرورگر ذخیره می‌شوند و می‌توانید آن‌ها را به‌صورت فایل بیرون بگیرید یا وارد کنید.</div>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+<div class="note foot" role="note"><b>روش:</b> هر جمله روی یکی از دو محور است و جهتش ثابت است (مثلاً «مالیات ثروتمندان بیشتر شود» = سمت چپ اقتصادی). پاسخ هر نقطه به هر جمله یکی از پنج حالت است (کاملاً مخالف تا کاملاً موافق). جای نقطه روی هر محور میانگین پاسخ‌های مستند همان محور است. همین روش را قطب‌نماهای انتخاباتی (Kieskompas، StemWijzer) و پیمایش متخصصان چپل‌هیل (CHES) برای حزب‌های اروپا به کار می‌برند؛ فرقش این است که این‌جا کنار هر پاسخ پیوند منبع هست. محدودیت: دو محور همهٔ سیاست نیست (مثلاً موضع دربارهٔ استقلال کشور، ملی‌گرایی یا شکل حکومت جدا اندازه گرفته نمی‌شود) و انتخاب جمله‌ها خودش بر نتیجه اثر دارد.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · قطب‌نمای سیاسی</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script>
+const {fa, css, esc, lk} = LabKit;
+/* axis: "e" economic (+ = right/market), "s" social (+ = conservative). dir: +1 if agreeing moves toward + end, -1 otherwise */
+const ST = [
+  ["e1", "e", -1, "مالیات بر درآمد و ثروت ثروتمندان باید بیشتر شود."],
+  ["e2", "e", 1, "درمان و بیمارستان‌ها بهتر است بیشتر خصوصی اداره شوند."],
+  ["e3", "e", -1, "دولت باید حداقل دستمزد را بالا ببرد، حتی اگر کارفرما مخالف باشد."],
+  ["e4", "e", 1, "شرکت‌های بزرگ دولتی باید به بخش خصوصی واگذار شوند."],
+  ["e5", "e", -1, "دولت باید قیمت کالاهای اساسی و اجاره‌خانه را کنترل کند."],
+  ["e6", "e", 1, "قانون کار باید استخدام و اخراج را برای کارفرما آسان‌تر کند."],
+  ["e7", "e", -1, "آموزش، از مدرسه تا دانشگاه، باید رایگان و با بودجهٔ عمومی باشد."],
+  ["e8", "e", 1, "تجارت آزاد و تعرفهٔ پایین به سود کشور است."],
+  ["s1", "s", 1, "قانون باید پوشش و رفتار شخصی شهروندان در فضای عمومی را تعیین کند."],
+  ["s2", "s", 1, "مجازات اعدام باید باقی بماند."],
+  ["s3", "s", 1, "مهاجرت به کشور باید محدودتر شود."],
+  ["s4", "s", 1, "باورهای دینی باید در قانون‌گذاری نقش داشته باشند."],
+  ["s5", "s", -1, "اینترنت و رسانه‌ها باید بدون فیلتر و سانسور باشند."],
+  ["s6", "s", -1, "رابطه و ازدواج هم‌جنس باید از نظر قانونی به رسمیت شناخته شود."],
+  ["s7", "s", 1, "حکومت باید شکل سنتی خانواده را با قانون و یارانه حمایت ویژه کند."],
+  ["s8", "s", -1, "مصرف شخصیِ مواد مخدرِ کم‌خطر نباید جرم کیفری باشد."]
+];
+const OPT = [[-2, "کاملاً مخالف"], [-1, "مخالف"], [0, "میانه"], [1, "موافق"], [2, "کاملاً موافق"]];
+/* policies placed by definition: a single statement answered — useful to see where a policy, not a party, sits */
+const POLICY = ST.map(([id, ax, dir, t]) => ({id: "p-" + id, name: t.replace(/\.$/, ""), kind: "policy", ans: {[id]: {v: 2, src: "def", note: "جای این نقطه از تعریف خود سیاست می‌آید، نه از کسی که از آن دفاع می‌کند."}}}));
+const KINDS = {party: ["حزب یا جریان", "--fam-soc"], media: ["رسانه", "--warn"], person: ["شخص", "--fam-hum"], policy: ["سیاست (بنا بر تعریف)", "--ink-3"], me: ["من", "--ink"]};
+let DB = [];
+const KEY = "daneshsara-compass-v1";
+try { DB = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (_) { DB = []; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(DB)); } catch (_) {} };
+let FLIP = false; try { FLIP = localStorage.getItem(KEY + "-flip") === "1"; } catch (_) {}
+function pos(ent){
+  const r = {e: [], s: []};
+  ST.forEach(([id, ax, dir]) => { const a = ent.ans[id]; if (a && a.v !== null && a.v !== undefined && (a.src || ent.kind === "me")) r[ax].push(a.v * dir); });
+  const m = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : null;
+  const n = r.e.length + r.s.length;
+  const pol = ent.kind === "policy";
+  return {x: m(r.e) ?? (pol ? 0 : null), y: m(r.s) ?? (pol ? 0 : null), n, conf: n / ST.length, ne: r.e.length, ns: r.s.length};
+}
+function chart(list, sel){
+  const W = 560, P = 46, S = W - 2 * P, X = x => P + ((FLIP ? -x : x) + 2) / 4 * S, Y = y => P + (y + 2) / 4 * S;
+  const ink = css("--ink-3");
+  const q = (x, y, t) => `<text x="${x}" y="${y}" text-anchor="middle" font-size="13" fill="${ink}" opacity=".8">${t}</text>`;
+  const L = FLIP ? ["راست", "چپ"] : ["چپ", "راست"];
+  let h = `<svg class="cmp" viewBox="0 0 ${W} ${W}" role="img" aria-label="نقشهٔ دوبعدی چپ و راست اقتصادی و پیشرو و محافظه‌کار">
+    <rect x="${P}" y="${P}" width="${S / 2}" height="${S / 2}" fill="${css("--fam-soc-soft")}" opacity=".35"/><rect x="${P + S / 2}" y="${P + S / 2}" width="${S / 2}" height="${S / 2}" fill="${css("--fam-soc-soft")}" opacity=".35"/>
+    ${[-2, -1, 0, 1, 2].map(v => `<line x1="${X(v)}" y1="${P}" x2="${X(v)}" y2="${W - P}" stroke="${ink}" stroke-opacity="${v ? .15 : .6}" ${v ? "" : 'stroke-dasharray="5 4"'}/><line x1="${P}" y1="${Y(v)}" x2="${W - P}" y2="${Y(v)}" stroke="${ink}" stroke-opacity="${v ? .15 : .6}" ${v ? "" : 'stroke-dasharray="5 4"'}/>`).join("")}
+    <text x="${P}" y="${W - P + 22}" font-size="14" font-weight="700" fill="${css("--ink")}">← ${L[0]} اقتصادی</text>
+    <text x="${W - P}" y="${W - P + 22}" text-anchor="end" font-size="14" font-weight="700" fill="${css("--ink")}">${L[1]} اقتصادی →</text>
+    <text x="${W / 2}" y="${P - 14}" text-anchor="middle" font-size="14" font-weight="700" fill="${css("--ink")}">↑ پیشرو (آزادی فردی، تغییر)</text>
+    <text x="${W / 2}" y="${W - 8}" text-anchor="middle" font-size="14" font-weight="700" fill="${css("--ink")}">↓ محافظه‌کار (نظم، سنت)</text>
+    ${q(P + S / 4, P + 22, L[0] + " و پیشرو")}${q(P + 3 * S / 4, P + 22, L[1] + " و پیشرو")}${q(P + S / 4, W - P - 10, L[0] + " و محافظه‌کار")}${q(P + 3 * S / 4, W - P - 10, L[1] + " و محافظه‌کار")}`;
+  list.forEach((ent, i) => {
+    const p = pos(ent); if (p.x === null || p.y === null) return;
+    const c = css(KINDS[ent.kind][1]), lo = p.conf < .5 && ent.kind !== "policy" && ent.kind !== "me";
+    const r = ent.kind === "policy" ? 5 : 8;
+    h += `<g class="dot" data-i="${i}" tabindex="0" role="button" aria-label="${esc(ent.name)}"><circle cx="${X(p.x)}" cy="${Y(p.y)}" r="${r + (sel === i ? 3 : 0)}" fill="${lo ? "none" : c}" stroke="${c}" stroke-width="${lo ? 2.5 : 1.5}" opacity="${ent.kind === "policy" ? .65 : 1}"/>
+      ${ent.kind !== "policy" || sel === i ? `<text x="${X(p.x) + 11}" y="${Y(p.y) + 4}" font-size="12.5" fill="${css("--ink")}">${esc(ent.name)}</text>` : ""}</g>`;
+  });
+  return h + "</svg>";
+}
+function detail(ent){
+  if (!ent) return `<div class="card"><p style="margin:0">روی یک نقطه بزنید تا موضع‌ها و منبع‌هایش را ببینید.</p></div>`;
+  const p = pos(ent);
+  return `<div class="card"><h3>${esc(ent.name)} <span class="tag">${KINDS[ent.kind][0]}</span></h3>
+    ${ent.kind !== "policy" ? `<p style="margin:0 0 6px;font-size:.9rem">اقتصادی: ${p.x === null ? "—" : fa(p.x, 2)} (از ${fa(p.ne)} جمله) · اجتماعی: ${p.y === null ? "—" : fa(p.y, 2)} (از ${fa(p.ns)} جمله) · اطمینان: ${fa(p.conf * 100, 0)}٪</p>` : ""}
+    <div class="ans">${ST.filter(([id]) => ent.ans[id]).map(([id, ax, dir, t]) => { const a = ent.ans[id]; return `<div><span class="ax-tag">${ax === "e" ? "اقتصادی" : "اجتماعی"}</span> ${esc(t)} — <b>${OPT.find(o => o[0] === a.v)[1]}</b>${a.src === "def" ? ` <small>(${esc(a.note)})</small>` : a.src ? ` · <a href="${esc(a.src)}" target="_blank" rel="noopener">منبع ↗</a>` : ""}${a.note && a.src !== "def" ? ` <small>«${esc(a.note)}»</small>` : ""}</div>`; }).join("")}</div>
+    ${ent.kind !== "policy" && ent.kind !== "me" ? `<div class="btnrow" style="margin-top:8px"><button type="button" class="btn ghost" data-edit="${DB.indexOf(ent)}">ویرایش</button><button type="button" class="btn ghost" data-del="${DB.indexOf(ent)}">حذف</button></div>` : ""}</div>`;
+}
+
+/* ——— 1. map ——— */
+function map(pn, out){
+  let show = new Set(["party", "media", "person", "me"]), sel = -1;
+  pn.innerHTML = `<div class="chips" role="group" aria-label="لایه‌ها">${Object.entries(KINDS).map(([k, v]) => `<button type="button" data-k="${k}" aria-pressed="${show.has(k)}"><span class="tag" style="background:${css(v[1])};width:10px;height:10px;padding:0;border-radius:50%"></span> ${v[0]}</button>`).join("")}</div>
+    <div class="grid2"><div id="ch"></div><div id="dt"></div></div>
+    <div class="btnrow"><button type="button" class="btn ghost" id="flip">جهت محور افقی: ${FLIP ? "راست ← چپ" : "چپ ← راست"} (عوض کن)</button></div>`;
+  const list = () => [...DB, ...POLICY].filter(e => show.has(e.kind));
+  const draw = () => { const L = list(); pn.querySelector("#ch").innerHTML = chart(L, sel); pn.querySelector("#dt").innerHTML = detail(L[sel]);
+    out.innerHTML = DB.filter(e => e.kind !== "me").length ? "" : `<div class="res"><h3>هنوز هیچ حزب یا رسانه‌ای وارد نشده</h3><p>نقطه‌های کم‌رنگ «سیاست‌ها» هستند که جایشان از تعریف خودشان می‌آید (لایهٔ «سیاست» را روشن کنید). برای افزودن حزب، رسانه یا شخص به برگهٔ «افزودن با منبع» بروید. موضع خودتان را در برگهٔ «جای من» بزنید.</p>${lk(["political-ideologies-map"].filter(() => false))}</div>`; };
+  pn.querySelector("[role=group]").addEventListener("click", e => { const b = e.target.closest("[data-k]"); if (!b) return; const k = b.dataset.k; show.has(k) ? show.delete(k) : show.add(k); b.setAttribute("aria-pressed", show.has(k)); sel = -1; draw(); });
+  pn.addEventListener("click", e => {
+    const g = e.target.closest(".dot"); if (g) { sel = +g.dataset.i; draw(); return; }
+    const d = e.target.closest("[data-del]"); if (d) { DB.splice(+d.dataset.del, 1); save(); sel = -1; draw(); return; }
+    const ed = e.target.closest("[data-edit]"); if (ed) { EDIT = +ed.dataset.edit; LabKit.open("add"); return; }
+    if (e.target.id === "flip") { FLIP = !FLIP; try { localStorage.setItem(KEY + "-flip", FLIP ? "1" : "0"); } catch (_) {} e.target.textContent = `جهت محور افقی: ${FLIP ? "راست ← چپ" : "چپ ← راست"} (عوض کن)`; draw(); }
+  });
+  pn.addEventListener("keydown", e => { if (e.key === "Enter") { const g = e.target.closest(".dot"); if (g) { sel = +g.dataset.i; draw(); } } });
+  draw();
+}
+
+/* ——— 2. add with sources ——— */
+let EDIT = -1;
+function add(pn, out){
+  const ent = EDIT >= 0 && DB[EDIT] ? JSON.parse(JSON.stringify(DB[EDIT])) : {name: "", kind: "party", ans: {}, note: ""};
+  pn.innerHTML = `<div class="row2"><label class="fld">نام<input type="text" id="nm" value="${esc(ent.name)}" placeholder="مثلاً نام حزب، رسانه یا شخص"></label>
+    <label class="fld">نوع<select id="kd">${["party", "media", "person"].map(k => `<option value="${k}" ${ent.kind === k ? "selected" : ""}>${KINDS[k][0]}</option>`).join("")}</select></label></div>
+    <p style="margin:0;line-height:1.9;font-size:.92rem">برای هر جمله، موضعی را بزنید که <b>خود</b> این حزب یا رسانه در برنامه، سرمقاله، رأی یا گفته‌اش گرفته، و پیوند همان سند را بگذارید. موضعِ بی‌منبع حساب نمی‌شود. اگر موضعی مستند پیدا نکردید، خالی بگذارید.</p>
+    <div class="st">${ST.map(([id, ax, dir, t]) => { const a = ent.ans[id] || {}; return `<div class="row" data-id="${id}"><p><span class="ax-tag">${ax === "e" ? "اقتصادی" : "اجتماعی"}</span> ${esc(t)}</p>
+      <div class="opts">${OPT.map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${a.v === v}">${l}</button>`).join("")}<button type="button" data-v="x" aria-pressed="false">پاک</button></div>
+      <input type="url" placeholder="پیوند منبع (برنامهٔ حزب، سرمقاله، رأی در مجلس…)" value="${esc(a.src || "")}"><input type="text" placeholder="نقل کوتاه یا توضیح (اختیاری)" value="${esc(a.note || "")}"></div>`; }).join("")}</div>
+    <div class="btnrow"><button type="button" class="btn" id="sv">ذخیره و دیدن روی نقشه</button></div>`;
+  pn.querySelectorAll(".row").forEach(r => r.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (!b) return; r.querySelectorAll("[data-v]").forEach(x => x.setAttribute("aria-pressed", x === b && b.dataset.v !== "x")); }));
+  pn.querySelector("#sv").addEventListener("click", () => {
+    const name = pn.querySelector("#nm").value.trim(); if (!name) { pn.querySelector("#nm").focus(); return; }
+    const e = {name, kind: pn.querySelector("#kd").value, ans: {}};
+    let missing = 0;
+    pn.querySelectorAll(".row").forEach(r => { const b = r.querySelector('[aria-pressed=true]'); if (!b) return; const [u, n] = r.querySelectorAll("input"); const src = u.value.trim(); if (!/^https?:\/\//.test(src)) { missing++; return; } e.ans[r.dataset.id] = {v: +b.dataset.v, src, note: n.value.trim()}; });
+    if (EDIT >= 0) DB[EDIT] = e; else DB.push(e); EDIT = -1; save();
+    out.innerHTML = `<div class="res"><h3>ذخیره شد: ${esc(name)}</h3><p>${fa(Object.keys(e.ans).length)} موضع مستند ثبت شد.${missing ? ` ${fa(missing)} موضع بدون پیوند منبع بود و حساب نشد.` : ""}</p></div>`;
+    setTimeout(() => LabKit.open("map"), 900);
+  });
+}
+
+/* ——— 3. me ——— */
+function me(pn, out){
+  let my = DB.find(e => e.kind === "me") || {name: "من", kind: "me", ans: {}};
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">به همان شانزده جمله پاسخ بدهید تا جای خودتان را کنار بقیه ببینید. پاسخ شما فقط در همین مرورگر می‌ماند. (آزمون کامل‌تر با توضیح هر محور: <a href="political-map.html">نقشهٔ باورهای سیاسی من</a>.)</p>
+    <div class="st">${ST.map(([id, ax, dir, t]) => `<div class="row" data-id="${id}"><p><span class="ax-tag">${ax === "e" ? "اقتصادی" : "اجتماعی"}</span> ${esc(t)}</p><div class="opts">${OPT.map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${my.ans[id] && my.ans[id].v === v}">${l}</button>`).join("")}</div></div>`).join("")}</div>
+    <div class="btnrow"><button type="button" class="btn" id="sv">جای من روی نقشه</button></div>`;
+  pn.querySelectorAll(".row").forEach(r => r.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (!b) return; r.querySelectorAll("[data-v]").forEach(x => x.setAttribute("aria-pressed", x === b)); my.ans[r.dataset.id] = {v: +b.dataset.v}; }));
+  pn.querySelector("#sv").addEventListener("click", () => { DB = DB.filter(e => e.kind !== "me"); DB.push(my); save(); LabKit.open("map"); });
+}
+
+/* ——— 4. data in/out ——— */
+function data(pn, out){
+  pn.innerHTML = `<p style="margin:0;line-height:1.9">داده‌ها فقط در همین مرورگر است. برای نگه‌داشتن یا هم‌رسانی، فایل بگیرید؛ برای ادامه در دستگاه دیگر، همان فایل را وارد کنید. هر سطر فایل منبع‌هایش را همراه دارد.</p>
+    <div class="btnrow"><button type="button" class="btn" id="ex">گرفتن فایل JSON</button><label class="btn ghost" style="display:inline-grid;place-items:center">واردکردن فایل<input type="file" id="im" accept="application/json" hidden></label><button type="button" class="btn ghost" id="clr">پاک‌کردن همه</button></div>
+    <h3 style="margin:10px 0 0;font-size:1.05rem">منبع‌های پیشنهادی برای جای حزب‌ها و رسانه‌ها</h3>
+    <ul style="line-height:2;margin:0">
+      <li><b>حزب‌های اروپا:</b> پیمایش متخصصان چپل‌هیل (CHES، دانشگاه کارولینای شمالی؛ ۱۹۹۹ تا ۲۰۲۴): به هر حزب در محور چپ و راست اقتصادی و محور «سبز، جایگزین، آزادی‌خواه / سنتی، اقتدارگرا، ملی‌گرا» نمره می‌دهد. نمره‌ها را می‌شود به‌عنوان «پاسخ متخصصان» وارد کرد، با پیوند به داده.</li>
+      <li><b>حزب‌های هلند:</b> کیس‌کمپاس و StemWijzer برای هر انتخابات جدول موضع هر حزب را با توضیح خود حزب منتشر می‌کنند.</li>
+      <li><b>رسانه‌ها:</b> برای رسانه بهتر است موضع سرمقاله‌ها را با پیوند سرمقاله وارد کرد، نه برداشت کلی از رسانه.</li>
+      <li><b>جریان‌ها و رسانه‌های فارسی:</b> دادهٔ استاندارد و داوری‌شده‌ای سراغ ندارم؛ راه درست، کدگذاری موضع‌ها از روی متن‌های خود آن‌ها (بیانیه، برنامه، سرمقاله، رأی) است، هر موضع با پیوند.</li>
+    </ul>`;
+  pn.querySelector("#ex").addEventListener("click", () => { const b = new Blob([JSON.stringify({statements: ST, entities: DB}, null, 1)], {type: "application/json"}); const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "compass.json"; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); });
+  pn.querySelector("#im").addEventListener("change", e => { const f = e.target.files[0]; if (!f) return; f.text().then(t => { try { const d = JSON.parse(t); const ents = Array.isArray(d) ? d : d.entities; if (!Array.isArray(ents)) throw 0; DB = ents.filter(x => x && x.name && x.ans); save(); out.innerHTML = `<div class="res"><h3>${fa(DB.length)} نقطه وارد شد.</h3></div>`; } catch (_) { out.innerHTML = `<div class="res"><h3>فایل خوانده نشد.</h3></div>`; } }); });
+  pn.querySelector("#clr").addEventListener("click", () => { DB = []; save(); out.innerHTML = `<div class="res"><h3>همه پاک شد.</h3></div>`; });
+}
+
+LabKit.start({
+  wiki: "soc", first: "map", labels: {},
+  exps: {
+    map: ["نقشه", "جای هر کس، از روی حرف و عمل خودش", "لایه‌ها را روشن و خاموش کنید و روی هر نقطه بزنید تا ببینید از کدام موضع‌ها و کدام منبع‌ها ساخته شده.", map],
+    add: ["افزودن با منبع", "یک حزب، رسانه یا شخص اضافه کنید", "هر موضع با پیوند سندش. موضعِ بی‌منبع حساب نمی‌شود.", add],
+    me: ["جای من", "شما کجای نقشه‌اید؟", "همان شانزده جمله، برای خودتان.", me],
+    data: ["داده", "گرفتن و واردکردن داده، و منبع‌های پیشنهادی", "داده‌ها مال شماست و در همین مرورگر می‌ماند.", data]
+  }
+});
+</script>
+</body>
+</html>

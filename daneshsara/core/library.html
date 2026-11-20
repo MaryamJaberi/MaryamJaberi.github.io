@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>کتابخانهٔ دانش‌سرا | دانش‌سرا</title>
+<link rel="stylesheet" href="design/tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.85}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 70px}
+h1{font-size:2rem;margin:.2em 0 .1em}
+.lead{color:var(--ink-2);max-width:760px;margin:0 0 14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:14px 0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.kpi b{display:block;font-size:1.6rem;line-height:1.3}
+.kpi span{font-size:.8rem;color:var(--ink-3)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line);margin:18px 0 14px}
+.tabs button{font:inherit;font-size:.95rem;background:none;border:0;border-bottom:3px solid transparent;padding:6px 14px;cursor:pointer;color:var(--ink-2)}
+.tabs button[aria-selected=true]{border-color:var(--primary);color:var(--ink);font-weight:700}
+.panel[hidden]{display:none}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+.ctl input,.ctl select{font:inherit;font-size:.9rem;padding:5px 12px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink)}
+.ctl input{min-width:min(320px,80vw)}
+.chip{font:inherit;font-size:.82rem;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:999px;padding:2px 12px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--primary);border-color:var(--primary);color:#fff}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.8rem;color:var(--ink-2);margin:4px 0 10px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-inline-end:4px;vertical-align:-1px}
+/* قفسه */
+.shelf{margin:0 0 22px}
+.shelf h3{font-size:1rem;margin:0 0 4px;display:flex;gap:10px;align-items:baseline}
+.shelf h3 small{color:var(--ink-3);font-weight:400}
+.row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:3px;padding:10px 10px 0;background:linear-gradient(var(--surface-subtle),var(--surface-subtle)) bottom/100% 10px no-repeat;border-bottom:10px solid #8a6d2e33;border-radius:6px 6px 2px 2px;min-height:150px}
+.spine{width:30px;border-radius:3px 3px 1px 1px;cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;color:#fff;font-size:.68rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding:6px 0;box-shadow:inset -3px 0 0 rgba(0,0,0,.15),inset 2px 0 0 rgba(255,255,255,.15);transition:transform .12s}
+.spine:hover,.spine:focus{transform:translateY(-6px);outline:none}
+.spine.dim{opacity:.18}
+.spine.ro{background-image:repeating-linear-gradient(0deg,transparent 0 8px,rgba(255,255,255,.18) 8px 9px)}
+.spine.no{opacity:.55;border:1px dashed rgba(255,255,255,.7)}
+.drawer{position:fixed;top:0;bottom:0;left:0;right:auto;width:min(440px,100vw);background:var(--surface);border-inline-end:1px solid var(--line-strong);box-shadow:8px 0 30px rgba(0,0,0,.18);z-index:80;overflow:auto;padding:18px 20px 40px;transform:translateX(-110%);visibility:hidden;transition:transform .2s}
+.drawer.on{transform:none!important;visibility:visible}
+.drawer h2{font-size:1.2rem;line-height:1.6;margin:.3em 0}
+.drawer .meta{color:var(--ink-3);font-size:.85rem}
+.drawer .x{font:inherit;border:1px solid var(--line-strong);background:none;border-radius:999px;padding:0 12px;cursor:pointer;color:var(--ink)}
+.drawer .box{background:var(--surface-subtle);border-radius:10px;padding:8px 12px;margin:8px 0;font-size:.9rem}
+.drawer ul{padding-inline-start:18px;margin:4px 0}
+.drawer li{font-size:.88rem}
+.tag{display:inline-block;font-size:.72rem;border-radius:999px;padding:0 9px;color:#fff;margin-inline-end:4px}
+/* منابع */
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{text-align:right;font-weight:600;color:var(--ink-3);font-size:.8rem;border-bottom:1px solid var(--line-strong);padding:6px}
+td{border-top:1px solid var(--line);padding:6px;vertical-align:top}
+.more{text-align:center;margin:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px}
+.card h3{margin:0 0 6px;font-size:1rem}
+.cap{font-size:.78rem;color:var(--ink-3)}
+svg text{font-family:var(--font);fill:var(--ink-2);font-size:12px}
+svg{direction:ltr}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:12px}
+.links{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.links a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;text-decoration:none;color:var(--ink)}
+.links a small{display:block;color:var(--ink-3);font-size:.8rem}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px 16px;border-bottom:1px solid var(--line);background:var(--paper);color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2);text-decoration:none}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink)}</style>
+<nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><a href="map.html">راهنما</a><i>›</i><b>کتابخانه</b></nav><script src="nav.js" defer></script>
+<div class="wrap">
+<h1>کتابخانهٔ دانش‌سرا</h1>
+<p class="lead">همهٔ کتاب‌ها و منابع دانش‌سرا در یک جا. هر کتاب یک عطف روی قفسه است: رنگش ردهٔ اعتبار، بلندی‌اش شمار مدخل‌هایی که از آن آمده، و راه‌راه بودنش یعنی هنوز بخشی از آن خوانده شده. روی هر عطف بزنید تا ارزیابی، هشدارها و مدخل‌هایش را ببینید.</p>
+<div class="kpis" id="kpis"></div>
+<div class="tabs" role="tablist">
+  <button role="tab" data-p="shelves" aria-selected="true">قفسه‌ها</button>
+  <button role="tab" data-p="sources" aria-selected="false">همهٔ منابع و مقاله‌ها</button>
+  <button role="tab" data-p="insight" aria-selected="false">بینش‌ها</button>
+  <button role="tab" data-p="more" aria-selected="false">کتابخانه‌های دیگر</button>
+</div>
+
+<section class="panel" id="shelves">
+  <div class="ctl"><input id="q" type="search" placeholder="جست‌وجوی عنوان یا نویسنده…"><label class="cap">چیدن بر اساس <select id="group"><option value="type">نوع کتاب</option><option value="tier">ردهٔ اعتبار</option><option value="read">وضعیت خواندن</option><option value="wiki">ویکی مقصد</option></select></label></div>
+  <div class="ctl" id="tierchips"></div>
+  <div class="legend" id="legend"></div>
+  <div id="rack"></div>
+</section>
+
+<section class="panel" id="sources" hidden>
+  <div class="ctl"><input id="sq" type="search" placeholder="جست‌وجو در ۲٬۵۰۷ منبع (نویسنده، عنوان، سال)…"><select id="sw"><option value="">همهٔ ویکی‌ها</option></select><select id="st"><option value="">همهٔ رده‌ها</option></select><span class="cap" id="scount"></span></div>
+  <div class="card"><h3>منابع در گذر زمان</h3><div id="hist"></div><div class="cap">سال انتشار منبع؛ رنگ‌ها ردهٔ اعتبارند. روی یک ستون بزنید تا جدول به همان دهه محدود شود.</div></div>
+  <table><thead><tr><th style="width:56px">رده</th><th>منبع</th><th style="width:70px">سال</th><th style="width:130px">ویکی‌ها</th></tr></thead><tbody id="stbody"></tbody></table>
+  <div class="more"><button class="chip" id="smore">بیشتر</button></div>
+</section>
+
+<section class="panel" id="insight" hidden>
+  <div class="grid2">
+    <div class="card"><h3>اعتبار منابع هر ویکی</h3><div id="ins1"></div><div class="cap">سهم هر رده از منابع ثبت‌شدهٔ هر ویکی. ردهٔ ۱ فراتحلیل یا یافتهٔ تکرارشده است و ردهٔ ۴ سرنخ.</div></div>
+    <div class="card"><h3>کتاب‌ها: خوانده‌شده تا چه اندازه؟</h3><div id="ins2"></div><div class="cap">از ۲۴۹ کتاب ارزیابی‌شده.</div></div>
+    <div class="card"><h3>پربارترین کتاب‌ها</h3><div id="ins3"></div><div class="cap">کتاب‌هایی که بیشترین مدخل از آن‌ها آمده است.</div></div>
+    <div class="card"><h3>آنچه باید حواسمان باشد</h3><div id="ins4"></div></div>
+  </div>
+</section>
+
+<section class="panel" id="more" hidden>
+  <p class="lead">این صفحه همهٔ کتابخانه‌های پراکندهٔ دانش‌سرا را یکی می‌کند. نسخه‌های قبلی همچنان سر جایشان هستند:</p>
+  <div class="links">
+    <a href="../atlas/collection.html">مخزن کتاب‌ها<small>فهرست ۷۵۵ کتاب و سند، به تفکیک رشته و قفسه (فهرست‌شده از روی عنوان)</small></a>
+    <a href="../atlas/library-plan.html">برنامهٔ خواندن<small>کدام کتاب کی و برای کدام شکاف خوانده شود</small></a>
+    <a href="../atlas/tools/library.html">کتابخانه و اعتبار منابع<small>کارت‌های ارزیابی ۲۴۹ کتاب</small></a>
+    <a href="../psy/tools/library.html">کتابخانهٔ ویکی روان<small>کتاب‌های روان‌شناسی و درس‌ها</small></a>
+    <a href="sources.html">فهرست کامل منابع<small>۲٬۵۰۷ منبع با رده</small></a>
+  </div>
+</section>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="جزئیات کتاب"></aside>
+
+<script>
+const fa = n => Number(n).toLocaleString("fa-IR");
+const fy = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TC = {1:"#2F6B4F",2:"#0A6B60",3:"#B45309",4:"#9F1239",0:"#8A847A"};
+const TN = {1:"ردهٔ ۱ · فراتحلیل یا تکرار",2:"ردهٔ ۲ · پژوهش یا سند رسمی",3:"ردهٔ ۳ · کتاب یا دیدگاه کارشناس",4:"ردهٔ ۴ · سرنخ یا نامطمئن",0:"بی‌رده"};
+const READ = {full:"کامل خوانده شد", partial:"بخشی خوانده شد", "metadata-only":"خوانده نشد"};
+const TYPE = {"primary-source":"منبع دست‌اول","religious-political":"دینی و سیاسی","other":"دیگر","history":"تاریخ","scholarly":"پژوهشی","literature":"ادبیات","reference":"مرجع","academic":"دانشگاهی","self-help":"خودیاری","book":"کتاب","debate":"جدلی","memoir":"خاطره"};
+const WIKI = {psy:"روان",soc:"جامعه",phil:"فلسفه",tabar:"تبار",tarikh:"تاریخ",sakht:"ساخت",iran:"ایران"};
+let B = [], S = [], tierOn = new Set([1,2,3,4,0]);
+const wikiOf = b => { const c = {}; b.entries.forEach(e => { const w = (e.u || "").split("/")[0]; c[w] = (c[w] || 0) + 1; }); return Object.entries(c).sort((a, b) => b[1] - a[1])[0]?.[0] || "—"; };
+
+Promise.all([fetch("../data/library/books.json").then(r => r.json()), fetch("sources.json").then(r => r.json())]).then(([b, s]) => {
+  B = b.map(x => ({...x, tier: x.tier || 0, wiki: wikiOf(x)}));
+  S = Object.values(s);
+  kpis(); chips(); shelves(); initSources(); insights();
+});
+
+function kpis() {
+  const ent = B.reduce((a, b) => a + b.entries.length, 0);
+  document.getElementById("kpis").innerHTML = [
+    [B.length, "کتاب ارزیابی‌شده"], [B.filter(b => b.read === "full").length, "کامل خوانده‌شده"], [B.filter(b => b.read === "partial").length, "بخشی خوانده‌شده"],
+    [ent, "مدخل از این کتاب‌ها"], [S.length, "منبع ثبت‌شده"], [S.filter(s => s.tier <= 2).length, "منبع ردهٔ ۱ و ۲"]
+  ].map(([n, t]) => `<div class="kpi"><b>${fa(n)}</b><span>${t}</span></div>`).join("");
+}
+function chips() {
+  document.getElementById("tierchips").innerHTML = [1,2,3,4].map(t => `<button class="chip" data-t="${t}" aria-pressed="true" style="--c:${TC[t]}">${TN[t]} (${fa(B.filter(b => b.tier === t).length)})</button>`).join("");
+  document.getElementById("tierchips").onclick = e => { const b = e.target.closest("[data-t]"); if (!b) return; const t = +b.dataset.t; tierOn.has(t) ? tierOn.delete(t) : tierOn.add(t); b.setAttribute("aria-pressed", tierOn.has(t)); filter(); };
+  document.getElementById("legend").innerHTML = [1,2,3,4].map(t => `<span><i style="background:${TC[t]}"></i>${TN[t]}</span>`).join("") + `<span><i style="background:repeating-linear-gradient(0deg,#888 0 3px,#ccc 3px 4px)"></i>راه‌راه: بخشی خوانده شد</span><span><i style="border:1px dashed #888;background:#bbb"></i>کم‌رنگ: خوانده نشد</span>`;
+  document.getElementById("q").oninput = filter;
+  document.getElementById("group").onchange = shelves;
+}
+function shelves() {
+  const g = document.getElementById("group").value;
+  const key = b => g === "type" ? (TYPE[b.type] || b.type) : g === "tier" ? TN[b.tier] : g === "read" ? READ[b.read] : (WIKI[b.wiki] || "بدون مدخل");
+  const groups = {}; B.forEach(b => (groups[key(b)] = groups[key(b)] || []).push(b));
+  const order = Object.entries(groups).sort((a, b) => b[1].length - a[1].length);
+  document.getElementById("rack").innerHTML = order.map(([k, bs]) => `<div class="shelf"><h3>${esc(k)} <small>${fa(bs.length)} کتاب · ${fa(bs.reduce((a, b) => a + b.entries.length, 0))} مدخل</small></h3><div class="row">${bs.sort((a, b) => a.tier - b.tier || b.entries.length - a.entries.length).map(b => {
+    const h = 70 + Math.min(110, b.entries.length * 6);
+    const t = b.title.replace(/\s*\(.*$/, "");
+    return `<button class="spine ${b.read === "partial" ? "ro" : ""} ${b.read === "metadata-only" ? "no" : ""}" data-n="${b.n}" style="height:${h}px;background-color:${TC[b.tier]}" title="${esc(b.title)} — ${esc(b.author)}">${esc(t.slice(0, 28))}</button>`;
+  }).join("")}</div></div>`).join("");
+  filter();
+}
+function filter() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  document.querySelectorAll(".spine").forEach(el => { const b = B.find(x => x.n === el.dataset.n); const ok = tierOn.has(b.tier) && (!q || (b.title + " " + b.author).toLowerCase().includes(q)); el.classList.toggle("dim", !ok); });
+}
+document.getElementById("rack").addEventListener("click", e => { const s = e.target.closest(".spine"); if (s) open(B.find(b => b.n === s.dataset.n)); });
+function open(b) {
+  const d = document.getElementById("drawer");
+  d.innerHTML = `<button class="x" onclick="this.parentNode.classList.remove('on')">بستن ✕</button>
+  <h2>${esc(b.title)}</h2><div class="meta">${esc(b.author)} · ${esc(b.year)}</div>
+  <p><span class="tag" style="background:${TC[b.tier]}">${TN[b.tier]}</span><span class="tag" style="background:#5C574F">${READ[b.read]}</span><span class="tag" style="background:#2A6F7A">${TYPE[b.type] || b.type}</span></p>
+  ${b.label ? `<div class="box"><b>ارزیابی:</b> ${esc(b.label)}</div>` : ""}
+  ${b.best ? `<div class="box"><b>برای چه خوب است:</b> ${esc(b.best)}</div>` : ""}
+  ${b.cautions?.length ? `<div class="box"><b>هشدارها:</b><ul>${b.cautions.map(c => `<li>${esc(c)}</li>`).join("")}</ul></div>` : ""}
+  ${b.why ? `<div class="box"><b>تصمیم:</b> ${esc(b.why)}</div>` : ""}
+  <h3 style="font-size:1rem">مدخل‌هایی که از این کتاب آمده‌اند (${fa(b.entries.length)})</h3>
+  <ul>${b.entries.map(e => `<li><a href="../${esc(e.u)}">${esc(e.t)}</a></li>`).join("") || "<li>هنوز مدخلی ندارد</li>"}</ul>`;
+  d.classList.add("on"); d.scrollTop = 0;
+}
+addEventListener("keydown", e => { if (e.key === "Escape") document.getElementById("drawer").classList.remove("on"); });
+
+/* ---- منابع ---- */
+let shown = 60, decade = null;
+function initSources() {
+  const sw = document.getElementById("sw"); Object.entries(WIKI).forEach(([k, v]) => { if (S.some(s => s.wikis.includes(k))) sw.insertAdjacentHTML("beforeend", `<option value="${k}">${v}</option>`); });
+  const st = document.getElementById("st"); [1,2,3,4].forEach(t => st.insertAdjacentHTML("beforeend", `<option value="${t}">${TN[t]}</option>`));
+  ["sq", "sw", "st"].forEach(id => document.getElementById(id).addEventListener("input", () => { shown = 60; drawSources(); }));
+  document.getElementById("smore").onclick = () => { shown += 120; drawSources(); };
+  drawHist(); drawSources();
+}
+function srcFilter() {
+  const q = document.getElementById("sq").value.trim().toLowerCase(), w = document.getElementById("sw").value, t = +document.getElementById("st").value || 0;
+  return S.filter(s => (!q || (s.cite + " " + s.year).toLowerCase().includes(q)) && (!w || s.wikis.includes(w)) && (!t || s.tier === t) && (decade == null || (s.year >= decade && s.year < decade + 10)));
+}
+function drawSources() {
+  const r = srcFilter().sort((a, b) => a.tier - b.tier || (b.year || 0) - (a.year || 0));
+  document.getElementById("scount").textContent = fa(r.length) + " منبع" + (decade != null ? ` · دههٔ ${fy(decade)} (برای برداشتن فیلتر دوباره روی ستون بزنید)` : "");
+  document.getElementById("stbody").innerHTML = r.slice(0, shown).map(s => `<tr><td><span class="tag" style="background:${TC[s.tier]}">${fa(s.tier)}</span></td><td>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.cite)}</a>` : esc(s.cite)}</td><td>${s.year > 0 && s.year < 2100 ? fy(s.year) : "—"}</td><td>${s.wikis.map(w => WIKI[w] || w).join("، ")}</td></tr>`).join("");
+  document.getElementById("smore").style.display = r.length > shown ? "" : "none";
+}
+function drawHist() {
+  const dec = {}; S.forEach(s => { if (s.year >= 1800 && s.year < 2100) { const d = Math.floor(s.year / 10) * 10; dec[d] = dec[d] || {1:0,2:0,3:0,4:0}; dec[d][s.tier]++; } });
+  const ks = Object.keys(dec).map(Number).sort((a, b) => a - b), W = 1000, H = 200, bw = W / ks.length, max = Math.max(...ks.map(k => Object.values(dec[k]).reduce((a, b) => a + b, 0)));
+  let svg = `<svg viewBox="0 0 ${W} ${H + 24}" style="width:100%">`;
+  ks.forEach((k, i) => { let y = H; [4,3,2,1].forEach(t => { const h = dec[k][t] / max * (H - 10); y -= h; svg += `<rect x="${i * bw + 2}" y="${y}" width="${bw - 4}" height="${h}" fill="${TC[t]}" data-d="${k}" style="cursor:pointer"><title>دههٔ ${fy(k)}: ${fa(dec[k][t])} منبع ${TN[t]}</title></rect>`; });
+    if (i % 2 === 0) svg += `<text x="${i * bw + bw / 2}" y="${H + 16}" text-anchor="middle">${fy(k)}</text>`; });
+  svg += `</svg>`;
+  const el = document.getElementById("hist"); el.innerHTML = svg;
+  el.onclick = e => { const d = e.target.dataset && e.target.dataset.d; if (!d) return; decade = decade === +d ? null : +d; shown = 60; drawSources(); };
+}
+
+/* ---- بینش ---- */
+function bars(rows, total) {
+  return `<svg viewBox="0 0 600 ${rows.length * 34 + 6}" style="width:100%">` + rows.map((r, i) => {
+    let x = 110; const tot = total || r.v.reduce((a, b) => a + b.n, 0);
+    return `<text x="100" y="${i * 34 + 21}" text-anchor="end" style="fill:var(--ink)">${esc(r.l)}</text>` + r.v.map(s => { const w = s.n / tot * 470; const o = `<rect x="${x}" y="${i * 34 + 6}" width="${w}" height="22" fill="${s.c}"><title>${esc(s.t)}: ${fa(s.n)}</title></rect>${w > 26 ? `<text x="${x + w / 2}" y="${i * 34 + 21}" text-anchor="middle" style="fill:#fff;font-size:11px">${fa(Math.round(s.n / tot * 100))}٪</text>` : ""}`; x += w; return o; }).join("");
+  }).join("") + `</svg>`;
+}
+function insights() {
+  document.getElementById("ins1").innerHTML = bars(Object.entries(WIKI).filter(([k]) => S.some(s => s.wikis.includes(k))).map(([k, v]) => ({l: v, v: [1,2,3,4].map(t => ({n: S.filter(s => s.wikis.includes(k) && s.tier === t).length, c: TC[t], t: TN[t]}))})));
+  document.getElementById("ins2").innerHTML = bars([{l: "همه", v: ["full", "partial", "metadata-only"].map((r, i) => ({n: B.filter(b => b.read === r).length, c: ["#2F6B4F", "#B45309", "#8A847A"][i], t: READ[r]}))}]) + `<div class="legend"><span><i style="background:#2F6B4F"></i>کامل</span><span><i style="background:#B45309"></i>بخشی</span><span><i style="background:#8A847A"></i>خوانده نشد</span></div>`;
+  const top = [...B].sort((a, b) => b.entries.length - a.entries.length).slice(0, 10);
+  const mx = top[0].entries.length;
+  document.getElementById("ins3").innerHTML = top.map(b => `<div style="display:grid;grid-template-columns:1fr 140px;gap:8px;align-items:center;font-size:.85rem;margin:3px 0;cursor:pointer" data-n="${b.n}"><span>${esc(b.title.replace(/\s*\(.*$/, "").slice(0, 60))}</span><span style="background:var(--line);border-radius:4px;height:14px;position:relative"><i style="position:absolute;inset-block:0;inset-inline-start:0;width:${b.entries.length / mx * 100}%;background:${TC[b.tier]};border-radius:4px"></i></span></div>`).join("");
+  document.getElementById("ins3").onclick = e => { const r = e.target.closest("[data-n]"); if (r) open(B.find(b => b.n === r.dataset.n)); };
+  const t4in = B.filter(b => b.tier === 4 && b.entries.length).length, t4e = B.filter(b => b.tier === 4).reduce((a, b) => a + b.entries.length, 0);
+  const skip = B.filter(b => b.read === "metadata-only").length, notImp = B.filter(b => !b.imported).length;
+  const bookT1 = S.filter(s => s.tier === 1 && !/meta|فراتحلیل|review|مرور/i.test(s.cite)).length;
+  document.getElementById("ins4").innerHTML = `<ul style="margin:0;padding-inline-start:18px;font-size:.9rem">
+   <li><b>${fa(t4e)}</b> مدخل از <b>${fa(t4in)}</b> کتاب ردهٔ ۴ آمده‌اند؛ این مدخل‌ها باید برچسب «دیدگاه» داشته باشند یا منبع بهتری بگیرند.</li>
+   <li><b>${fa(skip)}</b> کتاب اسکن‌شده‌اند و بدون OCR خوانده نمی‌شوند.</li>
+   <li><b>${fa(notImp)}</b> کتاب هنوز وارد هیچ مدخلی نشده‌اند.</li>
+   <li><b>${fa(bookT1)}</b> منبع ردهٔ ۱ گرفته‌اند ولی در عنوانشان نشانی از فراتحلیل یا مرور نیست؛ ردهٔ این‌ها باید دوباره سنجیده شود (مثلاً کتاب کوران «حقیقت‌های خصوصی» ردهٔ ۱ دارد، در حالی که کتاب است).</li></ul>`;
+}
+
+document.querySelector(".tabs").onclick = e => { const b = e.target.closest("[data-p]"); if (!b) return; document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b)); document.querySelectorAll(".panel").forEach(p => p.hidden = p.id !== b.dataset.p); try { history.replaceState(null, "", "#" + b.dataset.p); } catch (e) {} };
+if (location.hash) { const b = document.querySelector(`[data-p="${location.hash.slice(1)}"]`); if (b) b.click(); }
+</script>
+</body>
+</html>

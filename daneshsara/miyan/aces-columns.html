@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>درون هر ستون | ریشه‌یابی آسیب: ACE | دانش‌سرا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F4EF;--surface:#FFFFFF;--surface-subtle:#F1EDE6;--ink:#1C1915;--ink-2:#5C574F;--ink-3:#8A847A;
+  --line:#E8E4DC;--line-strong:#D4CFC5;--primary:#0A6B60;--primary-soft:#E6F2F0;
+  --grade-a:#2F6B4F;--grade-b:#0A6B60;--grade-c:#B45309;--grade-d:#9F1239;
+  --c0:#2A6F7A;--c1:#5B4B8A;--c2:#C45C26;--c3:#9F1239;
+  --font:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16.5px;line-height:1.85}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+.crumb{font-size:.85rem;color:var(--ink-3)}
+.crumb a{color:var(--ink-2);text-decoration:none}
+h1{font-size:2.1rem;margin:.3em 0 .2em;line-height:1.4}
+.lead{color:var(--ink-2);max-width:820px;margin:0 0 14px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--ink-2);margin:10px 0 20px}
+.g{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:5px;color:#fff;font-size:.72rem;font-weight:700;margin-left:4px}
+.gA{background:var(--grade-a)}.gB{background:var(--grade-b)}.gC{background:var(--grade-c)}.gD{background:var(--grade-d)}
+.tag{display:inline-block;font-size:.72rem;border:1px solid var(--line-strong);border-radius:20px;padding:0 8px;color:var(--ink-2);background:var(--surface)}
+.tag.in{border-color:var(--primary);color:var(--primary)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 18px}
+.tab{border:1px solid var(--line-strong);background:var(--surface);border-radius:12px;padding:10px 14px;cursor:pointer;font-family:inherit;font-size:.95rem;color:var(--ink);text-align:right;border-right-width:4px;min-width:200px}
+.tab small{display:block;color:var(--ink-3);font-size:.78rem}
+.tab[aria-selected=true]{background:var(--surface-subtle);box-shadow:0 1px 0 var(--line-strong)}
+.overview{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.ov{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid}
+.ov b{font-size:1.5rem;display:block;line-height:1.3}
+.ov span{font-size:.82rem;color:var(--ink-2)}
+.panel{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card h2{font-size:1.25rem;margin:0 0 4px}
+.card h3{font-size:1rem;margin:14px 0 6px}
+.pattern{background:var(--surface-subtle);border-radius:10px;padding:10px 12px;margin:8px 0 4px;font-size:.95rem}
+.key{border-right:3px solid var(--primary);padding-right:10px;margin:10px 0;font-size:.93rem}
+svg{width:100%;height:auto;display:block}
+svg text{font-family:var(--font);font-size:15px;fill:var(--ink);direction:ltr}
+.node circle{stroke:#fff;stroke-width:2;cursor:pointer}
+.node text{cursor:pointer;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+.edge{fill:none;stroke-width:2;opacity:.75;transition:opacity .15s}
+.edge.ext{stroke-dasharray:6 4}
+.dim .edge{opacity:.08}.dim .node{opacity:.25}
+.dim .edge.hi{opacity:1;stroke-width:3.2}.dim .node.hi{opacity:1}
+.loops{display:flex;flex-direction:column;gap:6px;max-height:330px;overflow:auto;padding-left:4px}
+.loop{border:1px solid var(--line);border-radius:10px;padding:6px 10px;cursor:pointer;font-size:.88rem;background:var(--surface);text-align:right;font-family:inherit;color:var(--ink)}
+.loop:hover,.loop.on{border-color:var(--primary);background:var(--primary-soft)}
+.loop .R{display:inline-block;background:var(--ink);color:#fff;border-radius:5px;font-size:.7rem;padding:0 6px;margin-left:6px}
+table{width:100%;border-collapse:collapse;font-size:.86rem}
+td{border-top:1px solid var(--line);padding:6px 4px;vertical-align:top}
+tr{cursor:pointer}tr:hover td,tr.on td{background:var(--primary-soft)}
+td.src{color:var(--ink-3);font-size:.78rem}
+.muted{color:var(--ink-3);font-size:.85rem}
+.note{margin-top:22px;font-size:.9rem;color:var(--ink-2)}
+.btn{font-family:inherit;font-size:.82rem;border:1px solid var(--line-strong);background:var(--surface);border-radius:8px;padding:2px 10px;cursor:pointer;color:var(--ink-2)}
+@media (max-width:900px){.panel{grid-template-columns:1fr}.overview{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px 16px;border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><a href="../miyan/">پل علم و ایران</a><i>›</i><a href="../miyan/roots.html#aces">ریشه‌یابی آسیب</a><i>›</i><b>درون هر ستون</b></nav><script src="../core/nav.js" defer></script>
+<div class="wrap">
+    <h1>درون هر ستون: حلقه‌ها کجا بسته می‌شوند؟</h1>
+  <p class="lead">نقشهٔ اصلی «از آسیب‌های اجتماعی تا کودکی سخت» زنجیره را از راست به چپ نشان می‌دهد: ریشه ← سازوکار ← آسیب ← پیامد. اما حلقه‌های هر ستون با هم هم کار دارند: باور قانون را نگه می‌دارد و قانون باور را، فشار والد کشمکش می‌سازد و کشمکش فشار را. این صفحه گراف درونی هر ستون را می‌کشد و همهٔ حلقه‌های بسته (چرخه‌ها) را خودکار پیدا می‌کند. روی یک حلقه، یک گره یا یک ردیف جدول بزنید تا روی گراف روشن شود.</p>
+  <div class="legend">
+    <span><span class="g gA">A</span>شواهد قوی</span><span><span class="g gB">B</span>شواهد خوب</span><span><span class="g gC">C</span>شواهد محدود</span><span><span class="g gD">D</span>نظری</span>
+    <span><svg width="38" height="10" style="display:inline;width:38px;vertical-align:middle"><line x1="0" y1="5" x2="38" y2="5" stroke="#5C574F" stroke-width="2"/></svg> پیوند موجود در نقشهٔ اصلی</span>
+    <span><svg width="38" height="10" style="display:inline;width:38px;vertical-align:middle"><line x1="0" y1="5" x2="38" y2="5" stroke="#5C574F" stroke-width="2" stroke-dasharray="6 4"/></svg> پیوند تازهٔ درون‌ستونی (پیش‌نویس)</span>
+  </div>
+
+  <div class="overview" id="ov"></div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="panel" id="panel"></div>
+
+  <p class="note">چند نکتهٔ روش: (۱) همهٔ پیوندها «افزایشی»اند (بیشترِ این، بیشترِ آن)، پس هر حلقه‌ای که بسته شود <b>تقویت‌کننده (R)</b> است: هر دور خودش را بزرگ‌تر می‌کند. در هیچ ستونی حلقهٔ <b>تعادل‌بخش</b> پیدا نشد؛ یعنی درون هیچ ستونی چیزی خودبه‌خود ترمز نمی‌کند و شکستن حلقه باید از «نقطه‌های عطف» بیرونی بیاید. (۲) درجهٔ هر پیوند خلاصهٔ ویراستار از شواهد موجود است و بیشترِ آن‌ها از پژوهش‌های هم‌بستگی و طولی می‌آیند، نه کارآزمایی؛ پیوندهای خط‌چین تازه‌اند و پیش از ادغام در نقشهٔ اصلی باید منبع‌شان بازبینی شود. (۳) حلقه‌های <b>بین نسل‌ها</b> (پیامد ← ریشهٔ نسل بعد) در خود نقشهٔ اصلی آمده‌اند و این‌جا تکرار نشده‌اند. (۴) این نقشه برای فهم سطح جمعیت است، نه داوری دربارهٔ یک فرد یا خانواده.</p>
+</div>
+
+<script>
+const COLS = [
+ { id:"roots", name:"ریشه‌ها: قانون، اقتصاد، باور", color:"var(--c0)", hex:"#2A6F7A",
+   pattern:"<b>قفل دوطرفهٔ قانون و باور.</b> هر قانونی که آسیب را مجاز یا نادیده می‌گذارد، از باور عمومی پشتیبانی می‌گیرد و در عوض آن باور را مشروع و عادی جلوه می‌دهد. اقتصاد و جنگ از بیرون به این قفل فشار می‌آورند اما خودشان در حلقه نیستند.",
+   nodes:[["norms","هنجارها و باورها"],["law-punish","قانون تنبیه (م. ۱۱۷۹)"],["law-marriage","سن پایین ازدواج"],["law-dv","نبود قانون خشونت خانگی"],["law-csa","قانون ناکافی آزار جنسی"],["services","کمبود خدمات"],["econ","تورم، بیکاری، فقر"],["war","جنگ و مهاجرت"],["drug-policy","سیاست کیفری مواد"]],
+   edges:[
+    ["law-punish","norms","B",0,"وقتی قانون تنبیه را ممنوع کند، نگرش‌ها هم در چند سال جابه‌جا می‌شوند؛ قانون نقش «بیانی» دارد.","Durrant 1999، ارزیابی ممنوعیت تنبیه در سوئد"],
+    ["norms","law-punish","C",0,"تا وقتی «تنبیه تربیت است» پذیرفته است، اصلاح حق تأدیب پشتیبان سیاسی ندارد.","شواهد تطبیقی کشورهای دارای ممنوعیت"],
+    ["norms","law-marriage","C",0,"باور به ازدواج زود و «آبرو» مانع بالا رفتن سن قانونی می‌شود.","تاریخچهٔ طرح‌های اصلاح مادهٔ ۱۰۴۱"],
+    ["law-marriage","norms","C",0,"اجازهٔ قانونی، ازدواج کودک را عادی و مشروع جلوه می‌دهد.","Wodon و همکاران 2017"],
+    ["norms","law-dv","C",0,"«خشونت خانگی امر خصوصی است» قانون جامع را سال‌ها معطل نگه می‌دارد.","روند لایحهٔ تأمین امنیت زنان"],
+    ["law-dv","norms","C",0,"نبود قانون، خشونت را بیرون از تعریف جرم و درون حریم خانه نگه می‌دارد.","نظریهٔ کارکرد بیانی قانون"],
+    ["norms","law-csa","C",0,"تابو مانع نام‌بردن صریح از آزار جنسی کودک در قانون می‌شود.","گزارش‌های حمایت از کودک"],
+    ["law-csa","norms","D",0,"قانونی که از آن نام نمی‌برد، سکوت را تأیید می‌کند.","استدلال نظری"],
+    ["norms","services","C",0,"انگ و آبرو تقاضا و سرمایه‌گذاری برای سلامت روان را پایین نگه می‌دارد.","Thornicroft 2007"],
+    ["services","norms","C",0,"وقتی کسی درمان‌شدن را نمی‌بیند، انگ پابرجا می‌ماند.","پژوهش‌های تماس و کاهش انگ"],
+    ["econ","norms","C",0,"فقر ازدواج زود و کار کودک را راهبرد بقا می‌کند و هنجارش را نگه می‌دارد.","Wodon و همکاران 2017"],
+    ["war","econ","B",0,"جنگ و تحریم تولید و درآمد سرانه را پایین می‌آورد.","Collier 1999"],
+    ["econ","services","B",0,"فشار مالی، بودجهٔ سلامت روان و مهدکودک را اول از همه می‌بُرد.","گزارش‌های بودجهٔ سلامت"],
+    ["drug-policy","econ","C",0,"زندانی‌شدن نان‌آور و هزینهٔ اجرای کیفری، خانوار و دولت را فقیرتر می‌کند.","مرورهای سیاست مواد"]
+   ]},
+ { id:"mech", name:"سازوکار: خانه و محله", color:"var(--c1)", hex:"#5B4B8A",
+   pattern:"<b>چرخ فشار خانه.</b> فشار والد، کشمکش زناشویی و فرزندپروری خشن مثلثی می‌سازند که در هر سه جهت می‌چرخد؛ رفتار کودکِ آسیب‌دیده هم دوباره فشار والد را بالا می‌برد. کنارش، ازدواج کودک و ترک تحصیل حلقهٔ جداگانه‌ای دارند که از راه «مادر نوجوان» به چرخ فشار وصل می‌شود.",
+   nodes:[["stress","فشار و افسردگی والد"],["conflict","کشمکش زناشویی"],["harsh","فرزندپروری خشن"],["silence","سکوت و گزارش‌نشدن"],["child-labour","کار کودک و ترک تحصیل"],["child-marriage","ازدواج کودک"]],
+   edges:[
+    ["stress","harsh","A",1,"والد زیر فشار اقتصادی تندتر و کم‌حوصله‌تر تربیت می‌کند.","مدل استرس خانواده، Conger و Elder"],
+    ["stress","conflict","A",1,"فشار اقتصادی کشمکش زن و شوهر را بالا می‌برد.","Conger و همکاران 1994"],
+    ["conflict","stress","B",0,"کشمکش مداوم، افسردگی و فرسودگی هر دو والد را بیشتر می‌کند.","مدل استرس خانواده (رابطهٔ دوسویه)"],
+    ["conflict","harsh","A",0,"تنش زناشویی به رابطه با کودک «سرریز» می‌کند.","فراتحلیل Krishnakumar و Buehler 2000"],
+    ["harsh","stress","B",0,"کودکِ تنبیه‌شده رفتار دشوارتری نشان می‌دهد و فشار والد بالاتر می‌رود (چرخهٔ اجبار).","Patterson 1982؛ Pardini 2008"],
+    ["silence","harsh","C",0,"وقتی کسی بیرون از خانه نمی‌بیند و گزارش نمی‌کند، تنبیه بی‌مانع ادامه می‌یابد.","پژوهش‌های گزارش‌دهی اجباری"],
+    ["harsh","silence","C",0,"خانه‌ای که تنبیه می‌کند، از ترس آبرو و پیامد چیزی بیرون نمی‌برد.","شواهد محدود"],
+    ["conflict","silence","C",0,"خشونت زناشویی پنهان نگه داشته می‌شود و راز خانه بزرگ‌تر می‌شود.","شواهد محدود"],
+    ["child-labour","child-marriage","B",0,"دختری که از مدرسه بیرون رفته، زودتر شوهر داده می‌شود.","Wodon و همکاران 2017"],
+    ["child-marriage","child-labour","B",0,"عروس کودک معمولاً مدرسه را رها می‌کند.","Wodon و همکاران 2017"],
+    ["stress","child-labour","C",0,"خانوار زیر فشار، کودک را برای درآمد به کار می‌فرستد.","پژوهش‌های کار کودک"],
+    ["child-marriage","stress","B",0,"مادرِ نوجوان افسردگی و فشار بیشتری دارد و والد نسل بعد می‌شود.","Le Strat و همکاران 2011"],
+    ["child-marriage","conflict","B",0,"ازدواج کودک با خشونت شریک و جدایی بیشتر همراه است.","Kidman 2017"]
+   ]},
+ { id:"harm", name:"آسیب به فرد", color:"var(--c2)", hex:"#C45C26",
+   pattern:"<b>قیف، نه چرخ.</b> بیشتر پیوندهای این ستون به یک نقطه می‌ریزند: استرس سمی. گونه‌های آسیب با هم می‌آیند (آشفتگی خانه آزار و بی‌توجهی می‌آورد، بی‌توجهی کودک را بی‌دفاع می‌کند) و حلقه فقط جایی بسته می‌شود که کودکِ ناآرام، آزار بیشتری برمی‌انگیزد.",
+   nodes:[["household","آشفتگی خانه"],["collective","خشونت جمعی"],["abuse","آزار جسمی و عاطفی"],["csa","آزار جنسی"],["neglect","بی‌توجهی"],["toxic","استرس سمی"]],
+   edges:[
+    ["abuse","toxic","A",1,"آزار بی‌وقفه، استرس را از «قابل تحمل» به «سمی» می‌رساند.","مرکز رشد کودک هاروارد"],
+    ["csa","toxic","A",1,"آزار جنسی از قوی‌ترین آغازگرهای استرس سمی است.","مطالعهٔ ACE"],
+    ["neglect","toxic","A",1,"نبود بزرگسال آرام‌کننده، خودش تعریف استرس سمی است.","مرکز رشد کودک هاروارد"],
+    ["household","toxic","A",1,"خشونت، اعتیاد یا بیماری روانی در خانه استرس پایدار می‌سازد.","مطالعهٔ ACE"],
+    ["collective","toxic","B",1,"جنگ و خشونت جمعی، امنیت پایه را از کودک می‌گیرد.","پژوهش‌های کودکان در جنگ"],
+    ["household","abuse","B",0,"در خانه‌هایی که خشونت زناشویی هست، آزار کودک چند برابر محتمل‌تر است.","Appel و Holden 1998"],
+    ["household","neglect","B",0,"والدِ درگیر اعتیاد، زندان یا بیماری، از کودک غافل می‌ماند.","Dong و همکاران 2004"],
+    ["collective","household","B",0,"تجربهٔ جنگ خشونت درون خانه را بالا می‌برد.","Catani و همکاران 2008"],
+    ["neglect","csa","B",0,"کودکِ بی‌سرپرستی و بی‌مراقبت در برابر آزارگر بی‌دفاع‌تر است.","Finkelhor و همکاران 2007 (چندقربانی‌شدن)"],
+    ["abuse","csa","C",0,"آزار جسمی و جنسی اغلب در یک کودک با هم دیده می‌شوند؛ جهت علّی روشن نیست.","Dong و همکاران 2004"],
+    ["toxic","abuse","C",0,"کودکِ پریشان و بی‌قرار واکنش تندتر بزرگسال را برمی‌انگیزد.","Pardini 2008 (اثر کودک بر والد)"]
+   ]},
+ { id:"out", name:"پیامد برای بزرگسال و جامعه", color:"var(--c3)", hex:"#9F1239",
+   pattern:"<b>تار درهم.</b> این ستون پرحلقه‌ترین است: اعتیاد، افسردگی، فقر و بیماری هر کدام دیگری را بالا می‌برند. به همین دلیل درمانِ فقط یکی کم‌اثر است و مداخله‌های ترکیبی (درمان هم‌زمان روان و اعتیاد، حمایت درآمدی همراه درمان) بیشترین حلقه را می‌شکنند.",
+   nodes:[["addiction","اعتیاد"],["violence","خشونت میان‌فردی"],["mental","افسردگی، اضطراب، خودکشی"],["dropout","ترک تحصیل و فقر"],["disease","بیماری مزمن"]],
+   edges:[
+    ["mental","addiction","B",0,"بخشی از مصرف، «خوددرمانی» درد روانی است.","Khantzian 1985"],
+    ["addiction","mental","B",0,"مصرف طولانی افسردگی و اضطراب را بدتر می‌کند.","مرورهای هم‌ابتلایی"],
+    ["addiction","violence","A",0,"الکل و مواد خطر خشونت شریک و خیابان را بالا می‌برند.","فراتحلیل Foran و O'Leary 2008"],
+    ["violence","mental","B",0,"خشونت در قربانی و شاهد افسردگی و PTSD می‌سازد.","مرورهای پیامد خشونت"],
+    ["mental","violence","C",0,"اثر مستقیم کوچک است و بیشتر از راه مصرف مواد می‌گذرد.","Elbogen و Johnson 2009"],
+    ["addiction","dropout","B",0,"اعتیاد کار و تحصیل را از دست می‌گیرد.","پژوهش‌های طولی"],
+    ["dropout","addiction","B",0,"بیکاری و ناامیدی اقتصادی مصرف را بالا می‌برد.","پژوهش‌های بیکاری و مصرف"],
+    ["mental","dropout","B",0,"اختلال روانیِ درمان‌نشده اشتغال و درآمد را کم می‌کند.","گزارش‌های سازمان جهانی بهداشت"],
+    ["dropout","mental","B",0,"فقر خطر اختلال‌های رایج روانی را بالا می‌برد.","Lund و همکاران 2010"],
+    ["dropout","disease","A",0,"شیب اجتماعی سلامت: هرچه فقیرتر، بیمارتر.","Marmot 2005"],
+    ["disease","dropout","B",0,"هزینهٔ درمانِ از جیب، خانوار را به فقر می‌کشاند.","پژوهش‌های هزینهٔ کمرشکن سلامت"],
+    ["disease","mental","B",0,"بیماری مزمن افسردگی را رایج‌تر می‌کند.","Moussavi و همکاران 2007"],
+    ["mental","disease","B",0,"افسردگی خطر بیماری قلبی و پیامد بدتر آن را بالا می‌برد.","Whooley و Wong 2013"],
+    ["addiction","disease","A",0,"مواد و الکل مستقیماً کبد، قلب و ریه را آسیب می‌زنند.","بار جهانی بیماری‌ها"]
+   ]}
+];
+
+const GC={A:"#2F6B4F",B:"#0A6B60",C:"#B45309",D:"#9F1239"};
+const nameOf=(c,id)=>c.nodes.find(n=>n[0]===id)[1];
+
+function cycles(c){
+  const ids=c.nodes.map(n=>n[0]); const adj={}; ids.forEach(i=>adj[i]=[]);
+  c.edges.forEach(e=>adj[e[0]].push(e[1]));
+  const out=[];
+  ids.forEach((s,si)=>{
+    const path=[s], seen=new Set([s]);
+    (function dfs(u){
+      for(const v of adj[u]){
+        if(v===s){out.push(path.slice());continue}
+        if(seen.has(v)||ids.indexOf(v)<si)continue;
+        seen.add(v);path.push(v);dfs(v);path.pop();seen.delete(v);
+      }
+    })(s);
+  });
+  return out.sort((a,b)=>a.length-b.length);
+}
+COLS.forEach(c=>{
+  c.cyc=cycles(c);
+  c.count={}; c.nodes.forEach(n=>c.count[n[0]]=0);
+  c.ecount={};
+  c.cyc.forEach(cy=>cy.forEach((n,i)=>{c.count[n]++; const k=n+">"+cy[(i+1)%cy.length]; c.ecount[k]=(c.ecount[k]||0)+1;}));
+});
+
+// overview
+document.getElementById("ov").innerHTML=COLS.map(c=>`<div class="ov" style="border-top-color:${c.hex}"><b>${c.cyc.length.toLocaleString('fa')}</b><span>حلقهٔ بسته در «${c.name.split(':')[0]}» · ${c.edges.length.toLocaleString('fa')} پیوند درونی</span></div>`).join("");
+
+const tabs=document.getElementById("tabs");
+tabs.innerHTML=COLS.map((c,i)=>`<button class="tab" role="tab" data-i="${i}" style="border-right-color:${c.hex}">${c.name}<small>${c.nodes.length.toLocaleString('fa')} حلقه · ${c.cyc.length.toLocaleString('fa')} چرخه</small></button>`).join("");
+tabs.onclick=e=>{const b=e.target.closest(".tab"); if(b) show(+b.dataset.i,true)};
+
+function layout(c){
+  const n=c.nodes.length, W=800,H=560,cx=W/2,cy=H/2+4,R=Math.min(205,90+n*14);
+  const pos={};
+  c.nodes.forEach((nd,i)=>{const a=-Math.PI/2+i*2*Math.PI/n; pos[nd[0]]={x:cx+R*Math.cos(a),y:cy+R*Math.sin(a),a}});
+  return {W,H,pos};
+}
+function edgePath(p,q,r){
+  const dx=q.x-p.x,dy=q.y-p.y,L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L;
+  const k=0.16*L, mx=(p.x+q.x)/2-uy*k, my=(p.y+q.y)/2+ux*k;
+  // shorten ends
+  const s=(ax,ay,bx,by,d)=>{const l=Math.hypot(bx-ax,by-ay);return [ax+(bx-ax)*d/l, ay+(by-ay)*d/l]};
+  const [sx,sy]=s(p.x,p.y,mx,my,r+3), [ex,ey]=s(q.x,q.y,mx,my,r+7);
+  return `M${sx.toFixed(1)},${sy.toFixed(1)} Q${mx.toFixed(1)},${my.toFixed(1)} ${ex.toFixed(1)},${ey.toFixed(1)}`;
+}
+
+let cur=0;
+function show(i,push){
+  cur=i; const c=COLS[i];
+  [...tabs.children].forEach((b,j)=>b.setAttribute("aria-selected",j===i));
+  if(push){try{history.replaceState(null,"","#"+c.id)}catch(e){}}
+  const {W,H,pos}=layout(c); const r=9;
+  const maxC=Math.max(1,...Object.values(c.count));
+  const keyNode=Object.entries(c.count).sort((a,b)=>b[1]-a[1])[0];
+  const keyEdge=Object.entries(c.ecount).sort((a,b)=>b[1]-a[1])[0];
+  const defs=Object.entries(GC).map(([g,col])=>`<marker id="m${g}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${col}"/></marker>`).join("");
+  const edges=c.edges.map((e,k)=>`<path class="edge ${e[3]?'':'ext'}" data-k="${k}" data-e="${e[0]}>${e[1]}" d="${edgePath(pos[e[0]],pos[e[1]],r)}" stroke="${GC[e[2]]}" marker-end="url(#m${e[2]})"><title>${nameOf(c,e[0])} ← ${nameOf(c,e[1])} (${e[2]})</title></path>`).join("");
+  const nodes=c.nodes.map(nd=>{const p=pos[nd[0]], right=Math.cos(p.a)>=-0.15, rad=r+ (c.count[nd[0]]/maxC)*7;
+    const tx=p.x+(right? rad+6 : -(rad+6)), ty=p.y+(Math.abs(Math.cos(p.a))<0.3? (Math.sin(p.a)<0? -rad-8: rad+16):4);
+    const anchor=Math.abs(Math.cos(p.a))<0.3?"middle":(right?"start":"end");
+    return `<g class="node" data-n="${nd[0]}"><circle cx="${p.x}" cy="${p.y}" r="${rad}" fill="${c.hex}"/><text x="${tx}" y="${ty}" text-anchor="${anchor}" >${nd[1]}</text><title>${nd[1]}: در ${c.count[nd[0]].toLocaleString('fa')} چرخه</title></g>`}).join("");
+  const loops=c.cyc.map((cy,k)=>`<button class="loop" data-l="${k}"><span class="R">R</span>${cy.concat(cy[0]).map(id=>nameOf(c,id)).join(" ← ")}</button>`).join("") || `<p class="muted">حلقهٔ بسته‌ای پیدا نشد.</p>`;
+  const rows=c.edges.map((e,k)=>`<tr data-k="${k}"><td><span class="g g${e[2]}">${e[2]}</span></td><td><b>${nameOf(c,e[0])}</b> ← <b>${nameOf(c,e[1])}</b>${e[3]?' <span class="tag in">در نقشهٔ اصلی</span>':' <span class="tag">تازه</span>'}<br>${e[4]}</td><td class="src">${e[5]}</td></tr>`).join("");
+  const ke=keyEdge?keyEdge[0].split(">"):null;
+  document.getElementById("panel").innerHTML=`
+   <div class="card">
+     <h2 style="color:${c.hex}">${c.name}</h2>
+     <div class="muted">اندازهٔ هر گره = شمار چرخه‌هایی که از آن می‌گذرند. <button class="btn" id="clr">پاک کردن انتخاب</button></div>
+     <svg id="g" viewBox="0 0 ${W} ${H}" aria-label="گراف درونی ستون ${c.name}"><defs>${defs}</defs><g id="E">${edges}</g><g>${nodes}</g></svg>
+   </div>
+   <div class="card">
+     <div class="pattern">${c.pattern}</div>
+     ${keyNode&&keyNode[1]?`<div class="key">گرهٔ کلیدی: <b>${nameOf(c,keyNode[0])}</b> در ${keyNode[1].toLocaleString('fa')} از ${c.cyc.length.toLocaleString('fa')} چرخه حضور دارد. ${keyEdge[1]>1?`پیوندی که بیشترین چرخه را می‌شکند: <b>${nameOf(c,ke[0])} ← ${nameOf(c,ke[1])}</b> (${keyEdge[1].toLocaleString('fa')} چرخه).`:'هر پیوند فقط در یک چرخه است؛ پس گره کلیدی، نه پیوند، جای شکستن است.'}</div>`:""}
+     <h3>چرخه‌ها (${c.cyc.length.toLocaleString('fa')})، از کوتاه به بلند</h3>
+     <div class="loops">${loops}</div>
+   </div>
+   <div class="card" style="grid-column:1/-1">
+     <h3 style="margin-top:0">پیوندهای درون این ستون</h3>
+     <table><tbody>${rows}</tbody></table>
+   </div>`;
+  wire(c);
+}
+function wire(c){
+  const svg=document.getElementById("g");
+  const clear=()=>{svg.classList.remove("dim");svg.querySelectorAll(".hi").forEach(x=>x.classList.remove("hi"));document.querySelectorAll(".loop.on,tr.on").forEach(x=>x.classList.remove("on"))};
+  const hiEdges=(keys,nodes)=>{clear();svg.classList.add("dim");
+    keys.forEach(k=>svg.querySelectorAll(`.edge[data-e="${k}"]`).forEach(x=>x.classList.add("hi")));
+    nodes.forEach(n=>svg.querySelector(`.node[data-n="${n}"]`).classList.add("hi"))};
+  document.getElementById("clr").onclick=clear;
+  document.querySelectorAll(".loop").forEach(b=>b.onclick=()=>{const cy=c.cyc[+b.dataset.l];
+    hiEdges(cy.map((n,i)=>n+">"+cy[(i+1)%cy.length]),cy); b.classList.add("on")});
+  svg.querySelectorAll(".node").forEach(g=>g.onclick=()=>{const n=g.dataset.n;
+    const ks=c.edges.filter(e=>e[0]===n||e[1]===n); hiEdges(ks.map(e=>e[0]+">"+e[1]),[n,...ks.flatMap(e=>[e[0],e[1]])])});
+  document.querySelectorAll("tr[data-k]").forEach(tr=>tr.onclick=()=>{const e=c.edges[+tr.dataset.k];
+    hiEdges([e[0]+">"+e[1]],[e[0],e[1]]); tr.classList.add("on")});
+}
+function fromHash(){const h=location.hash.slice(1); const i=COLS.findIndex(c=>c.id===h); show(i<0?0:i,false)}
+window.addEventListener("hashchange",fromHash); fromHash();
+</script>
+</body>
+</html>

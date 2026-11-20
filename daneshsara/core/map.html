@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نقشهٔ لایه‌ها | دانش‌سرا</title>
+<link rel="stylesheet" href="design/tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.85}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 70px}
+h1{font-size:2rem;margin:.2em 0 .1em}
+.lead{color:var(--ink-2);max-width:780px}
+.cake{display:grid;grid-template-columns:1fr 230px;gap:14px;margin:18px 0}
+@media (max-width:820px){.cake{grid-template-columns:1fr}}
+.layers{display:grid;gap:0}
+.L{position:relative;border-radius:14px;padding:12px 16px 14px;margin:0 0 26px;color:#fff}
+.L:not(:last-child)::after{content:"▼";position:absolute;bottom:-23px;inset-inline-start:50%;color:var(--ink-3);font-size:.9rem}
+.L h2{margin:0;font-size:1.15rem;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.L h2 small{font-weight:400;opacity:.85;font-size:.82rem}
+.L p{margin:2px 0 8px;font-size:.88rem;opacity:.92}
+.rooms{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:8px}
+.room{background:rgba(255,255,255,.95);color:var(--ink);border-radius:10px;padding:8px 12px}
+.room h3{margin:0 0 2px;font-size:.95rem;display:flex;justify-content:space-between;gap:6px}
+.room h3 a{color:inherit;text-decoration:none}
+.room h3 small{color:var(--ink-3);font-weight:400;font-size:.74rem}
+.room details summary{cursor:pointer;font-size:.78rem;color:var(--primary);list-style:none}
+.room details summary::-webkit-details-marker{display:none}
+.room ul{list-style:none;margin:4px 0 0;padding:0;font-size:.82rem;line-height:1.75;max-height:260px;overflow:auto}
+.room li a{color:var(--ink);text-decoration:none}
+.room li a:hover{text-decoration:underline}
+.lock{background:repeating-linear-gradient(135deg,rgba(255,255,255,.08) 0 10px,transparent 10px 20px)}
+.lock .room{background:rgba(255,255,255,.85)}
+.side{display:grid;gap:10px;align-content:start}
+.side .room{border:1px solid var(--line)}
+.legend{font-size:.8rem;color:var(--ink-3)}
+.new{display:inline-block;font-size:.66rem;background:#B4532A;color:#fff;border-radius:999px;padding:0 7px;margin-inline-start:4px;vertical-align:1px}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px 16px;border-bottom:1px solid var(--line);background:var(--paper);color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2);text-decoration:none}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink)}</style>
+<nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><b>نقشهٔ لایه‌ها</b></nav><script src="nav.js" defer></script>
+<div class="wrap">
+<h1>نقشهٔ لایه‌ها</h1>
+<p class="lead">دانش‌سرا چهار طبقه دارد که روی هم ساخته شده‌اند: علم پایه است، ایران همان علم را روی دادهٔ ایران می‌گذارد، سیمرغ از دل آن بازی و راه‌حل می‌سازد، و ساخت ایران نقشهٔ عمل است. هر طبقه را باز کنید تا همهٔ صفحه‌هایش را ببینید. در هر صفحهٔ سایت، برچسب رنگی بالای صفحه می‌گوید در کدام طبقه‌اید و دکمهٔ «جست‌وجو» (یا کلید /) هر چیزی را پیدا می‌کند.</p>
+<div class="cake">
+  <div class="layers" id="layers"></div>
+  <div class="side" id="side"></div>
+</div>
+<p class="legend">🔒 یعنی آن طبقه در گاوصندوق رمزدار است و فقط با رمز خودتان باز می‌شود. عدد کنار هر بخش شمار صفحه‌ها یا مدخل‌های آن است.</p>
+</div>
+<script>
+const fa = n => Number(n).toLocaleString("fa-IR");
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NEW = new Set(["core/library.html","core/insights.html","core/map.html","miyan/aces-columns.html","soc/stories/preference-falsification.html"]);
+const EXTRA = {"core/library.html":["کتابخانهٔ یکپارچه","همهٔ کتاب‌ها و منابع روی قفسه"],"core/insights.html":["بینش‌ها","دانش‌سرا در عدد"],"core/map.html":["نقشهٔ لایه‌ها",""],"miyan/aces-columns.html":["درون هر ستون (ACE)","گراف و حلقه‌های هر ستون"],"soc/stories/preference-falsification.html":["داستان‌ها: تحریف ترجیحات","داستان‌های واقعی و تصویرسازی داده"]};
+const L = [
+ {k:"1", t:"لایهٔ ۱: علم", d:"علم‌ها یکی‌یکی، با منبع سنجیده؛ ابزارهای نمایش و پیوند میان علم‌ها.", c:"#2A6F7A", rooms:[["psy","روان‌شناسی"],["soc","جامعه"],["phil","فلسفه"],["tabar","تبار و ژنتیک"],["tarikh","تاریخ و ایران‌شناسی"],["atlas","اطلس‌ها و ابزارهای میان‌رشته‌ای"]]},
+ {k:"1-2", t:"پل علم و ایران", d:"جایی که مفهوم‌های علمی به آسیب‌ها و داده‌های ایران وصل می‌شوند.", c:"#9F1239", rooms:[["miyan","ارتباط رشته‌ها و ریشه‌یابی"]]},
+ {k:"2", t:"لایهٔ ۲: ایران 🔒", d:"آمار ایران، ریشه‌یابی و وضع امروز برای هر مفهوم.", c:"#B45309", lock:1, rooms:[["vault:iran","ایران در گاوصندوق"]]},
+ {k:"3", t:"لایهٔ ۳: سیمرغ 🔒", d:"تمثیل، بازی و راه‌حل؛ پَرِ سیمرغ و نقش‌ها.", c:"#5B4B8A", lock:1, rooms:[["vault:simorgh","سیمرغ در گاوصندوق"]]},
+ {k:"4", t:"لایهٔ ۴: ساخت ایران 🔒", d:"میز کار، روز بعد، صندلی‌های متخصص‌ها.", c:"#2F6B4F", lock:1, rooms:[["vault:sakht","ساخت در گاوصندوق"]]}
+];
+fetch("preview.json").then(r => r.json()).then(P => {
+  const pages = Object.assign({}, Object.fromEntries(Object.entries(P.p).map(([k, v]) => [k, v])), EXTRA);
+  const inDir = d => Object.entries(pages).filter(([u]) => u.startsWith(d + "/")).sort((a, b) => a[0].localeCompare(b[0]));
+  const sub = (u) => u.includes("/tools/") ? "ابزار" : u.includes("/lessons/") ? "درس" : u.includes("/topics/") ? "کتاب و موضوع" : u.includes("/stories/") ? "داستان" : "";
+  const room = ([d, name], lock) => {
+    if (d.startsWith("vault:")) return `<div class="room"><h3><a href="../vault.html#${d.slice(6)}/index.html">${esc(name)}</a><small>رمزدار</small></h3><div style="font-size:.8rem;color:var(--ink-3)">با رمز گاوصندوق باز می‌شود.</div></div>`;
+    const ps = inDir(d);
+    const groups = {}; ps.forEach(([u, v]) => (groups[sub(u)] = groups[sub(u)] || []).push([u, v]));
+    const idx = ps.find(([u]) => u === d + "/index.html");
+    return `<div class="room"><h3><a href="../${d}/">${esc(name)}</a><small>${fa(ps.length)} صفحه</small></h3>${idx ? `<div style="font-size:.78rem;color:var(--ink-2)">${esc((idx[1][1] || "").slice(0, 110))}</div>` : ""}
+      <details><summary>همهٔ صفحه‌ها ▾</summary><ul>${Object.entries(groups).map(([g, list]) => (g ? `<li style="color:var(--ink-3);font-size:.72rem;margin-top:4px">${g}</li>` : "") + list.map(([u, v]) => `<li><a href="../${u}" title="${esc(v[1] || "")}">${esc(v[0])}</a>${NEW.has(u) ? '<span class="new">تازه</span>' : ""}</li>`).join("")).join("")}</ul></details></div>`;
+  };
+  document.getElementById("layers").innerHTML = L.map(l => `<section class="L ${l.lock ? "lock" : ""}" style="background:${l.c}"><h2>${l.t}</h2><p>${l.d}</p><div class="rooms">${l.rooms.map(r => room(r, l.lock)).join("")}</div></section>`).join("");
+  const side = [["core", "راهنما و هسته"], ["wellbeing", "محصول: سنجش سلامت سازمان"]];
+  document.getElementById("side").innerHTML = `<div style="font-weight:700">کنار طبقه‌ها</div>` + side.map(r => room(r)).join("") + `<div class="room"><h3><a href="../call.html">فراخوان باز همکاری</a></h3></div><div class="room"><h3><a href="../vault.html">گاوصندوق</a><small>🔒</small></h3><div style="font-size:.8rem;color:var(--ink-3)">لایه‌های ۲ تا ۴، کارنامه‌ها و یادداشت‌های خصوصی.</div></div>`;
+});
+</script>
+</body>
+</html>

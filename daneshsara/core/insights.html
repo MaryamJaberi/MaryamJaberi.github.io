@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بینش‌ها: دانش‌سرا در عدد | دانش‌سرا</title>
+<link rel="stylesheet" href="design/tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.85}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 70px}
+h1{font-size:2rem;margin:.2em 0 .1em} h2{font-size:1.25rem;margin:28px 0 6px}
+.lead{color:var(--ink-2);max-width:780px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:14px 0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.kpi b{display:block;font-size:1.6rem;line-height:1.3}.kpi span{font-size:.8rem;color:var(--ink-3)}
+.find{display:grid;gap:8px;margin:12px 0}
+.find div{background:var(--surface);border-inline-start:4px solid var(--primary);border-radius:10px;padding:10px 14px;font-size:.95rem}
+.find div b{color:var(--primary)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px}
+.card h3{margin:0 0 6px;font-size:1rem}
+.cap{font-size:.78rem;color:var(--ink-3);margin-top:6px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,470px),1fr));gap:12px}
+svg{direction:ltr;width:100%;height:auto}
+svg text{font-family:var(--font);fill:var(--ink-2);font-size:12px}
+.tiles{display:flex;flex-wrap:wrap;gap:4px}
+.tile{border-radius:6px;padding:5px 8px;font-size:.75rem;color:#fff;text-decoration:none;line-height:1.5;display:flex;flex-direction:column;justify-content:space-between;min-width:70px}
+.tile small{opacity:.85;font-size:.68rem}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.chip{font:inherit;font-size:.82rem;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:999px;padding:2px 12px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--primary);border-color:var(--primary);color:#fff}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.8rem;color:var(--ink-2)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-inline-end:4px;vertical-align:-1px}
+ol.top{margin:0;padding-inline-start:20px;font-size:.88rem}
+ol.top li{margin:2px 0}
+ol.top small{color:var(--ink-3)}
+table.m{border-collapse:collapse;font-size:.85rem;margin:auto}
+table.m td,table.m th{padding:6px 8px;text-align:center;border:1px solid var(--line)}
+table.m th{font-weight:600;color:var(--ink-2);background:var(--surface-subtle)}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px 16px;border-bottom:1px solid var(--line);background:var(--paper);color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2);text-decoration:none}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink)}</style>
+<nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../index.html">دانش‌سرا</a><i>›</i><a href="map.html">راهنما</a><i>›</i><b>بینش‌ها</b></nav><script src="nav.js" defer></script>
+<div class="wrap">
+<h1>بینش‌ها: دانش‌سرا در عدد</h1>
+<p class="lead">این صفحه از روی خودِ داده‌های دانش‌سرا ساخته می‌شود و هر بار که مدخلی اضافه شود به‌روز است. می‌گوید کجا محکم ایستاده‌ایم، کجا لق است، کدام علم‌ها با هم حرف می‌زنند و کدام شکاف اول باید پر شود.</p>
+<div class="kpis" id="kpis"></div>
+<h2>مهم‌ترین یافته‌ها</h2>
+<div class="find" id="find"></div>
+
+<h2>اعتبار گزاره‌ها در هر علم</h2>
+<div class="grid2">
+ <div class="card"><h3>ترکیب ردهٔ منبع گزاره‌ها</h3><div id="tierbars"></div><div class="legend" id="tierleg"></div><div class="cap">هر گزاره یک ادعای مشخص با منبعش است. پهنای هر رنگ سهم آن رده است.</div></div>
+ <div class="card"><h3>وضع بازبینی و محل بحث</h3><div id="status"></div><div class="cap">«محل بحث» یعنی گزاره‌ای که پژوهشگران سرش اختلاف دارند یا تکرار نشده است.</div></div>
+</div>
+
+<h2>نقشهٔ حرارتی شهرهای دانش</h2>
+<div class="card"><div class="ctl" id="tilectl"></div><div class="tiles" id="tiles" data-notidy></div><div class="legend" style="margin-top:8px"><span><i style="background:#2F6B4F"></i>بیشترِ گزاره‌ها ردهٔ ۱ و ۲</span><span><i style="background:#0A6B60"></i></span><span><i style="background:#B45309"></i></span><span><i style="background:#9F1239"></i>بیشترِ گزاره‌ها ردهٔ ۳ و ۴</span></div><div class="cap">هر کاشی یک شهر دانش (زیرمجموعه) است؛ اندازه‌اش شمار مدخل‌ها و رنگش میانگین اعتبار گزاره‌هایش. کاشی‌های قرمزِ بزرگ اولین جاهایی‌اند که منبع بهتر لازم دارند.</div></div>
+
+<h2>علم‌ها با هم چقدر حرف می‌زنند؟</h2>
+<div class="grid2">
+ <div class="card"><h3>پیوندهای میان ویکی‌ها</h3><div id="matrix"></div><div class="cap">عدد هر خانه: شمار پیوندهایی که از مدخل‌های سطر به مدخل‌های ستون می‌رود. خانه‌های کم‌رنگ پل‌هایی‌اند که هنوز ساخته نشده‌اند.</div></div>
+ <div class="card"><h3>گره‌های مرکزی</h3><ol class="top" id="hubs"></ol><div class="cap">مدخل‌هایی که بیشترین پیوند (رفت و برگشت) را دارند؛ اگر کسی بخواهد از جایی شروع کند، این‌ها دروازه‌اند.</div></div>
+</div>
+
+<h2>شکاف‌ها: کار بعدی کجاست؟</h2>
+<div class="grid2">
+ <div class="card"><h3>مدخل‌هایی که فقط به سرنخ تکیه دارند</h3><ol class="top" id="weak"></ol><div class="cap">همهٔ گزاره‌هایشان ردهٔ ۴ یا بی‌منبع است.</div></div>
+ <div class="card"><h3>جزیره‌ها</h3><ol class="top" id="iso"></ol><div class="cap">مدخل‌هایی که به هیچ مدخل دیگری وصل نیستند و هیچ مدخلی هم به آن‌ها وصل نیست.</div></div>
+</div>
+</div>
+<script>
+const fa = n => Number(n).toLocaleString("fa-IR");
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TC = {1:"#2F6B4F",2:"#0A6B60",3:"#B45309",4:"#9F1239",0:"#8A847A"};
+const TN = {1:"فراتحلیل یا تکرار",2:"مقاله یا آمار رسمی",3:"کتاب یا سخنرانی",4:"سرنخ",0:"بی‌منبع"};
+const WN = {psy:"روان",soc:"جامعه",phil:"فلسفه",tabar:"تبار",tarikh:"تاریخ"};
+const WC = {psy:"#0A6B60",soc:"#2A6F7A",phil:"#5B4B8A",tabar:"#C45C26",tarikh:"#8A6D2E"};
+const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
+fetch("tools/data.json").then(r => r.json()).then(D => {
+  const C = D.concepts, W = Object.keys(WN);
+  const byId = Object.fromEntries(C.map(c => [c.id, c]));
+  const url = c => "../" + c.u;
+  const title = c => c.t.fa || c.t.en || c.id;
+  const pts = C.flatMap(c => c.pts.map(p => ({...p, w: c.w})));
+  const tier = p => p.tier || 0;
+  /* درجه */
+  const deg = {}; C.forEach(c => c.lk.forEach(([to]) => { deg[c.id] = (deg[c.id] || 0) + 1; deg[to] = (deg[to] || 0) + 1; }));
+  const contested = pts.filter(p => (p.f || []).includes("contested")).length;
+  const cross = C.reduce((a, c) => a + c.lk.filter(([to]) => to.split(":")[0] !== c.w).length, 0);
+  document.getElementById("kpis").innerHTML = [[C.length, "مدخل"], [pts.length, "گزاره با منبع"], [D.fields.length, "شهر دانش"], [cross, "پیوند میان‌علمی"], [contested, "گزارهٔ محل بحث"], [C.filter(c => c.st === "reviewed").length, "مدخل بازبینی‌شده"]].map(([n, t]) => `<div class="kpi"><b>${fa(n)}</b><span>${t}</span></div>`).join("");
+
+  /* اعتبار */
+  const tw = w => { const p = pts.filter(x => x.w === w); return [1,2,3,4,0].map(t => ({t, n: p.filter(x => tier(x) === t).length, tot: p.length})); };
+  document.getElementById("tierbars").innerHTML = `<svg viewBox="0 0 600 ${W.length * 34 + 4}">` + W.map((w, i) => { let x = 80; const r = tw(w); return `<text x="70" y="${i * 34 + 21}" text-anchor="end" style="fill:var(--ink)">${WN[w]}</text>` + r.map(s => { const ww = s.tot ? s.n / s.tot * 500 : 0; const o = `<rect x="${x}" y="${i * 34 + 6}" width="${ww}" height="22" fill="${TC[s.t]}"><title>${TN[s.t]}: ${fa(s.n)}</title></rect>${ww > 28 ? `<text x="${x + ww / 2}" y="${i * 34 + 21}" text-anchor="middle" style="fill:#fff;font-size:11px">${fa(pct(s.n, s.tot))}٪</text>` : ""}`; x += ww; return o; }).join(""); }).join("") + `</svg>`;
+  document.getElementById("tierleg").innerHTML = [1,2,3,4,0].map(t => `<span><i style="background:${TC[t]}"></i>${TN[t]}</span>`).join("");
+  document.getElementById("status").innerHTML = `<svg viewBox="0 0 600 ${W.length * 34 + 4}">` + W.map((w, i) => { const cs = C.filter(c => c.w === w), rv = cs.filter(c => c.st === "reviewed").length, ps = pts.filter(p => p.w === w), ct = ps.filter(p => (p.f || []).includes("contested")).length; const a = rv / cs.length * 250, b = ct / ps.length * 150;
+    return `<text x="70" y="${i * 34 + 21}" text-anchor="end" style="fill:var(--ink)">${WN[w]}</text><rect x="80" y="${i * 34 + 6}" width="250" height="22" fill="var(--line)"/><rect x="80" y="${i * 34 + 6}" width="${a}" height="22" fill="#0A6B60"/><text x="${86 + a}" y="${i * 34 + 21}">${fa(pct(rv, cs.length))}٪ بازبینی‌شده</text><rect x="400" y="${i * 34 + 6}" width="150" height="22" fill="var(--line)"/><rect x="400" y="${i * 34 + 6}" width="${b}" height="22" fill="#B45309"/><text x="${406 + b}" y="${i * 34 + 21}">${fa(pct(ct, ps.length))}٪ محل بحث</text>`; }).join("") + `</svg>`;
+
+  /* کاشی‌ها */
+  const F = D.fields.filter(f => C.some(c => c.field === f.id));
+  const fstat = F.map(f => { const cs = C.filter(c => c.field === f.id), ps = cs.flatMap(c => c.pts), q = ps.length ? ps.reduce((a, p) => a + (p.tier || 4), 0) / ps.length : 4; return {f, n: cs.length, q, w: f.w}; });
+  const qc = q => q < 2.3 ? "#2F6B4F" : q < 2.8 ? "#0A6B60" : q < 3.3 ? "#B45309" : "#9F1239";
+  let tw2 = "all";
+  const drawTiles = () => { const max = Math.max(...fstat.map(s => s.n));
+    document.getElementById("tiles").innerHTML = fstat.filter(s => tw2 === "all" || s.w === tw2).sort((a, b) => b.n - a.n).map(s => { const sz = 70 + Math.sqrt(s.n / max) * 180; const first = C.find(c => c.field === s.f.id);
+      return `<a class="tile" href="${first ? url(first).replace(/#.*$/, "") : "#"}" style="width:${sz}px;height:${sz * 0.55}px;background:${qc(s.q)}" title="${esc(s.f.t.fa)}: ${fa(s.n)} مدخل، میانگین رده ${s.q.toFixed(1)}"><span>${esc(s.f.t.fa)}</span><small>${fa(s.n)} مدخل · ${WN[s.w] || ""}</small></a>`; }).join(""); };
+  document.getElementById("tilectl").innerHTML = [["all", "همه"], ...W.map(w => [w, WN[w]])].map(([k, v]) => `<button class="chip" data-w="${k}" aria-pressed="${k === "all"}">${v}</button>`).join("");
+  document.getElementById("tilectl").onclick = e => { const b = e.target.closest("[data-w]"); if (!b) return; tw2 = b.dataset.w; document.querySelectorAll("#tilectl .chip").forEach(x => x.setAttribute("aria-pressed", x === b)); drawTiles(); };
+  drawTiles();
+
+  /* ماتریس */
+  const M = {}; W.forEach(a => W.forEach(b => M[a + b] = 0));
+  C.forEach(c => c.lk.forEach(([to]) => { const b = to.split(":")[0]; if (WN[b] && WN[c.w]) M[c.w + b]++; }));
+  const mx = Math.max(...W.flatMap(a => W.filter(b => b !== a).map(b => M[a + b])));
+  document.getElementById("matrix").innerHTML = `<table class="m"><tr><th>از ↓ / به ←</th>${W.map(w => `<th>${WN[w]}</th>`).join("")}</tr>` + W.map(a => `<tr><th>${WN[a]}</th>${W.map(b => a === b ? `<td style="color:var(--ink-3)">${fa(M[a + b])}</td>` : `<td style="background:color-mix(in srgb,${WC[a]} ${Math.round(M[a + b] / mx * 85) + 5}%,transparent);color:${M[a + b] / mx > .5 ? "#fff" : "var(--ink)"}">${fa(M[a + b])}</td>`).join("")}</tr>`).join("") + `</table>`;
+  const hubs = Object.entries(deg).filter(([id]) => byId[id]).sort((a, b) => b[1] - a[1]).slice(0, 12);
+  document.getElementById("hubs").innerHTML = hubs.map(([id, d]) => `<li><a href="${url(byId[id])}">${esc(title(byId[id]))}</a> <small>${WN[byId[id].w]} · ${fa(d)} پیوند</small></li>`).join("");
+
+  /* شکاف */
+  const weak = C.filter(c => c.pts.length && c.pts.every(p => !p.tier || p.tier === 4));
+  document.getElementById("weak").innerHTML = weak.slice(0, 25).map(c => `<li><a href="${url(c)}">${esc(title(c))}</a> <small>${WN[c.w]} · ${fa(c.pts.length)} گزاره</small></li>`).join("") + (weak.length > 25 ? `<li style="list-style:none;color:var(--ink-3)">و ${fa(weak.length - 25)} مدخل دیگر</li>` : "");
+  const iso = C.filter(c => !deg[c.id]);
+  document.getElementById("iso").innerHTML = iso.slice(0, 25).map(c => `<li><a href="${url(c)}">${esc(title(c))}</a> <small>${WN[c.w]}</small></li>`).join("") || "<li>هیچ؛ همهٔ مدخل‌ها دست‌کم یک پیوند دارند.</li>";
+
+  /* یافته‌ها */
+  const share12 = w => { const p = pts.filter(x => x.w === w); return pct(p.filter(x => tier(x) && tier(x) <= 2).length, p.length); };
+  const best = [...W].sort((a, b) => share12(b) - share12(a));
+  const pairs = []; W.forEach((a, i) => W.slice(i + 1).forEach(b => pairs.push([a, b, M[a + b] + M[b + a]])));
+  pairs.sort((a, b) => a[2] - b[2]);
+  const big = [...fstat].filter(s => s.q >= 3.3).sort((a, b) => b.n - a.n)[0];
+  const F2 = [
+    `<b>${WN[best[0]]}</b> محکم‌ترین پشتوانه را دارد: ${fa(share12(best[0]))}٪ گزاره‌هایش از پژوهش داوری‌شده یا فراتحلیل‌اند. در <b>${WN[best[best.length - 1]]}</b> این سهم فقط ${fa(share12(best[best.length - 1]))}٪ است؛ بیشترِ آن از کتاب و سخنرانی می‌آید.`,
+    `کم‌حرف‌ترین جفت علم‌ها <b>${WN[pairs[0][0]]}</b> و <b>${WN[pairs[0][1]]}</b> هستند، با ${fa(pairs[0][2])} پیوند. پرحرف‌ترین: <b>${WN[pairs[pairs.length - 1][0]]}</b> و <b>${WN[pairs[pairs.length - 1][1]]}</b> با ${fa(pairs[pairs.length - 1][2])}. پل‌های تازه بیشترین ارزش را میان جفت‌های کم‌حرف دارند.`,
+    big ? `بزرگ‌ترین شهری که بیشتر به کتاب و سرنخ تکیه دارد <b>${esc(big.f.t.fa)}</b> است (${fa(big.n)} مدخل). برای یافتن منبع بهتر، از همین‌جا شروع کنیم.` : "",
+    `<b>${fa(weak.length)}</b> مدخل فقط بر سرنخ ایستاده‌اند و <b>${fa(iso.length)}</b> مدخل جزیره‌اند. هر دو فهرست پایین همین صفحه است.`,
+    `فقط <b>${fa(pct(C.filter(c => c.st === "reviewed").length, C.length))}٪</b> مدخل‌ها بازبینی شده‌اند؛ بقیه پیش‌نویس‌اند و برای نشان دادن به دیگران باید بازبینی کارشناس بگیرند.`
+  ].filter(Boolean);
+  document.getElementById("find").innerHTML = F2.map(t => `<div>${t}</div>`).join("");
+});
+</script>
+</body>
+</html>

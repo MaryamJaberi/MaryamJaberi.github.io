@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>داستان‌ها: تحریف ترجیحات | ویکی جامعه | دانش‌سرا</title>
+<style>
+:root{
+  --paper:#F7F4EF;--surface:#FFFFFF;--surface-subtle:#F1EDE6;--ink:#1C1915;--ink-2:#5C574F;--ink-3:#8A847A;
+  --line:#E8E4DC;--line-strong:#D4CFC5;--primary:#0A6B60;--primary-soft:#E6F2F0;--accent:#1C39BB;--accent-soft:#E8ECF8;
+  --fam-soc:#2A6F7A;--fam-soc-soft:#E3EFF1;--story:#B4532A;--story-soft:#F7E6DD;
+  --grade-a:#2F6B4F;--grade-b:#0A6B60;--grade-c:#B45309;--grade-d:#9F1239;--warn:#B45309;
+  --font:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root{
+  --paper:#16140F;--surface:#1F1C17;--surface-subtle:#29251F;--ink:#EEE9E1;--ink-2:#BDB6AA;--ink-3:#8E877C;
+  --line:#332F28;--line-strong:#463F36;--primary:#4FB3A6;--primary-soft:#1C3330;--accent:#8EA2F0;--accent-soft:#232A45;
+  --fam-soc:#6FB3BF;--fam-soc-soft:#1D2E31;--story:#E39368;--story-soft:#3A2519;
+  --grade-a:#6FBF94;--grade-b:#4FB3A6;--grade-c:#E2A04A;--grade-d:#E5728F;--warn:#E2A04A;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.95}
+a{color:var(--primary)}
+.wrap{max-width:1040px;margin:0 auto;padding:24px 18px 70px}
+.crumb{font-size:.85rem;color:var(--ink-3)} .crumb a{color:var(--ink-2);text-decoration:none}
+header.top{display:flex;gap:16px;align-items:center;margin:10px 0 6px}
+header.top svg{flex:0 0 64px;width:64px;height:64px}
+h1{font-size:1.9rem;line-height:1.45;margin:0}
+.sub{color:var(--ink-2);margin:.1em 0 0;font-size:.95rem}
+.lead{color:var(--ink-2);max-width:820px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.84rem;color:var(--ink-2);margin:6px 0 14px}
+.g{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;border-radius:5px;color:#fff;font-size:.72rem;font-weight:700;padding:0 4px;margin-left:4px}
+.gA{background:var(--grade-a)}.gB{background:var(--grade-b)}.gC{background:var(--grade-c)}.gD{background:var(--grade-d)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 22px}
+.chip{font-family:inherit;font-size:.85rem;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:20px;padding:3px 12px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--story);border-color:var(--story);color:#fff}
+.claim{border-right:4px solid var(--fam-soc);background:var(--surface);border-radius:12px;padding:14px 16px;margin:26px 0 10px}
+.claim h2{font-size:1.15rem;margin:0 0 4px}
+.claim p{margin:0;color:var(--ink-2);font-size:.95rem}
+.claim .who{font-size:.8rem;color:var(--fam-soc);font-weight:700}
+.stories{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.story{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column}
+.story .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.78rem;color:var(--ink-3)}
+.type{border-radius:20px;padding:0 9px;font-size:.75rem;background:var(--story-soft);color:var(--story);font-weight:700}
+.story h3{font-size:1.05rem;margin:6px 0 4px;line-height:1.6}
+.story .txt{font-size:.94rem}
+.why{margin-top:8px;font-size:.88rem;background:var(--surface-subtle);border-radius:8px;padding:8px 10px}
+.why b{color:var(--fam-soc)}
+.note{margin-top:6px;font-size:.82rem;color:var(--warn)}
+.src{margin-top:auto;padding-top:8px;font-size:.78rem;color:var(--ink-3)}
+.src a{color:var(--ink-2)}
+.also{font-size:.78rem;color:var(--ink-3);margin-top:4px}
+.viz{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+.viz h4{margin:0 0 4px;font-size:.98rem}
+.viz .cap{font-size:.8rem;color:var(--ink-3);margin-top:4px}
+.viz svg{width:100%;height:auto;display:block;direction:ltr}
+.viz svg text{font-family:var(--font);fill:var(--ink-2);font-size:13px}
+.game{display:flex;flex-wrap:wrap;gap:4px;direction:ltr;margin:8px 0}
+.p{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.68rem;border:1px solid var(--line-strong);background:var(--surface-subtle);color:var(--ink-2);transition:background .2s}
+.p.on{background:var(--story);color:#fff;border-color:var(--story)}
+.p.sel{outline:2px solid var(--accent);outline-offset:1px}
+.btn{font-family:inherit;font-size:.86rem;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:8px;padding:3px 12px;cursor:pointer}
+.result{font-weight:700;color:var(--story)}
+footer{margin-top:40px;font-size:.85rem;color:var(--ink-3);border-top:1px solid var(--line);padding-top:14px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px 16px;border-bottom:1px solid var(--line,#e5e1d8);background:var(--paper,#faf8f3);color:var(--ink-3,#8a8578);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,#5c574c);text-decoration:none}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../soc/">ویکی جامعه</a><i>›</i><a href="../../soc/entries.html#preference-falsification">تحریف ترجیحات</a><i>›</i><b>داستان‌ها</b></nav><script src="../../core/nav.js" defer></script>
+<div class="wrap">
+    <header class="top">
+    <!-- نشان داستان‌سرا: کتاب باز؛ صفحهٔ راست حباب روایت، صفحهٔ چپ ستون‌های داده -->
+    <svg viewBox="0 0 64 64" role="img" aria-label="نشان داستان و تصویرسازی داده">
+      <path d="M32 16 C24 11 14 11 6 13 V51 C14 49 24 49 32 54 Z" fill="var(--story-soft)" stroke="var(--story)" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M32 16 C40 11 50 11 58 13 V51 C50 49 40 49 32 54 Z" fill="var(--fam-soc-soft)" stroke="var(--fam-soc)" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M38 19 h14 a3 3 0 0 1 3 3 v7 a3 3 0 0 1 -3 3 h-8 l-4 4 v-4 h-2 a3 3 0 0 1 -3 -3 v-7 a3 3 0 0 1 3 -3z" fill="var(--story)"/>
+      <circle cx="41.5" cy="25.5" r="1.3" fill="#fff"/><circle cx="45.5" cy="25.5" r="1.3" fill="#fff"/><circle cx="49.5" cy="25.5" r="1.3" fill="#fff"/>
+      <rect x="11" y="36" width="4" height="8" rx="1" fill="var(--fam-soc)"/>
+      <rect x="17.5" y="30" width="4" height="14" rx="1" fill="var(--fam-soc)"/>
+      <rect x="24" y="22" width="4" height="22" rx="1" fill="var(--story)"/>
+      <path d="M38 41 q6 -4 14 0" fill="none" stroke="var(--fam-soc)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div>
+      <h1>داستان‌ها: تحریف ترجیحات و غافلگیری انقلاب‌ها</h1>
+      <p class="sub">داستان‌های واقعی برای فهم گزاره‌های کوران، کرزمن و دیگران؛ از ردیت و توییتر تا آرشیو و آزمایشگاه</p>
+    </div>
+  </header>
+  <p class="lead">هر داستان زیر واقعی است و منبعش کنارش آمده؛ متن‌ها بازگویی فارسی‌اند، نه ترجمهٔ کلمه‌به‌کلمه. داستان‌ها زیر همان گزاره‌ای چیده شده‌اند که روشنش می‌کنند. برای هر کدام نوشته‌ام <b>چرا</b> این داستان مثال آن گزاره است، و هر جا روایت یک‌نفره یا مناقشه‌برانگیز است، همان‌جا گفته‌ام.</p>
+  <div class="legend">
+    <span><span class="g gA">A</span>پژوهش داوری‌شده یا آمار رسمی</span>
+    <span><span class="g gB">B</span>رویداد تاریخی با چند منبع مستقل</span>
+    <span><span class="g gC">C</span>روایت شخصی یا شبکهٔ اجتماعی؛ تأییدنشده</span>
+  </div>
+  <div class="filters" id="filters"></div>
+  <main id="main"></main>
+  <footer>
+    دانش‌سرا · پیش‌نویس · ساختهٔ «داستان‌سرا». روایت‌های شبکه‌های اجتماعی بی‌نام آمده‌اند؛ نام کاربری‌ها حذف شده و فقط پیوند رشته آمده است. اگر داستانی منبع بهتر یا روایت مخالف دارد، در صف بازبینی ثبت شود.
+  </footer>
+</div>
+
+<script>
+const fa = n => Number(n).toLocaleString('fa-IR');
+const TYPES = {reddit:"ردیت", twitter:"توییتر", news:"خبر و تاریخ", book:"کتاب و خاطره", study:"پژوهش و آزمایش"};
+
+const CLAIMS = [
+ {id:"c1", who:"کوران ۱۹۹۱", t:"آستانه‌ها و آبشار", d:"هر کس آستانه‌ای دارد: «وقتی این‌قدر نفر بیرون باشند، من هم می‌آیم». چون آستانه‌ها پنهان‌اند، هم ثبات ظاهری و هم فروپاشی ناگهانی توضیح‌پذیرند."},
+ {id:"c2", who:"کرزمن ۲۰۰۴", t:"تجربهٔ زیسته: ممکن شد وقتی دیدند دیگران هم آمده‌اند", d:"مردم تا وقتی انقلاب را ممکن نمی‌دانستند نمی‌آمدند؛ دیدنِ دیگران در خیابان، آن را ممکن کرد."},
+ {id:"c3", who:"کوران ۱۹۹۵، ص ۳ تا ۵", t:"«زیستن در دروغ»: سکوت تا وانمود", d:"خودسانسوری ساکت ماندن است؛ ترجیح‌نمایی یک گام جلوتر است: وانمود به خواستن چیزی که نمی‌خواهی. بار این دروغ بر دوش خود آدم می‌ماند."},
+ {id:"c4", who:"کوران ۱۹۹۵، ص ۲۶ تا ۳۷", t:"سه سود که با هم می‌کشند", d:"سود ذاتی تقریباً صفر است؛ میدان به سود آبرویی و هزینهٔ ابرازی می‌رسد. کسی که در دل ۲۰ می‌خواهد، در جمع ۷۰ می‌گوید."},
+ {id:"c5", who:"کوران ۱۹۹۵، ص ۶۱ و ۶۲", t:"فشار خودش را بازتولید می‌کند", d:"برای باورپذیر بودن باید هم‌نظران را تشویق و دگراندیشان را تنبیه کرد؛ پس حتی مخالفِ پنهان هم فشار را بیشتر می‌کند."},
+ {id:"c6", who:"کوران ۱۹۹۵، ص ۶۹ و ۷۰", t:"چند تعادل، نه یکی", d:"با همان مردم و همان باورها، هم ۲۰٪ پشتیبانی آشکار پایدار است و هم ۱۰۰٪؛ جابه‌جایی کوچک در انتظارها همه‌چیز را برمی‌گرداند."},
+ {id:"c7", who:"کوران ۱۹۹۵، ص ۸۱ و ۸۲", t:"چرا فریب می‌خوریم: خطای بنیادین اسناد", d:"اثر فشار را دست‌کم می‌گیریم و حرفِ اجباری را باور واقعی گوینده می‌پنداریم؛ پس سکوت همگانی را رضایت می‌خوانیم."},
+ {id:"c8", who:"کوران ۱۹۹۵، فصل ۴", t:"بازی انتظار", d:"کدام تعادل برقرار شود به انتظار مردم از رفتار دیگران بستگی دارد؛ هر طرف می‌کوشد خودش را اکثریت نشان دهد، و رویدادی کوچک تعیین می‌کند کدام موج راه بیفتد."},
+ {id:"c9", who:"کوران ۱۹۹۵، فصل ۴", t:"موج می‌تواند برعکس بغلتد", d:"سرکوب فقط کسانی را که می‌گیرد ساکت نمی‌کند؛ انتظار بقیه را عوض می‌کند و میلیون‌ها نفر بی‌صدا عقب می‌نشینند."},
+ {id:"c10", who:"کوران ۱۹۹۵، فصل ۴", t:"نادانی جمعی", d:"آدم‌ها اکثریت را از روی اطرافیان می‌سنجند و اشتباه می‌سنجند؛ آمار وقتی اثر دارد که ملموس و روایت‌شده باشد."},
+ {id:"c11", who:"کوران ۱۹۸۹", t:"جرقه و آتش دشت", d:"نارضایتی پنهان فقط زمینه را آماده می‌کند؛ جرقه‌ای که انتظارها را جابه‌جا کند، آتش را راه می‌اندازد."},
+ {id:"c12", who:"کوران ۱۹۸۹", t:"پتانسیل انقلابیِ پنهان", d:"جامعه‌ای با پتانسیل بالا آرام به نظر می‌رسد، چون حمایت ظاهری از وضع موجود، دسته‌رویِ پنهان را می‌پوشاند؛ حتی حاکم هم نمی‌بیند."},
+ {id:"c13", who:"کوران ۱۹۸۹", t:"حکومت انقلابی پس از پیروزی", d:"حکومت تازه سرکوب و تلقین می‌کند، حتی علیه انقلابیان، چون می‌داند حمایت ظاهری از خودش هم همان‌قدر سست است."},
+ {id:"c14", who:"کوران ۱۹۸۹ و کرزمن ۲۰۰۴", t:"چرا بعداً «اجتناب‌ناپذیر» به نظر می‌رسد", d:"پس از وقوع، شواهد موافق برجسته می‌شوند و ذهن برای رویداد بزرگ علت بزرگ می‌جوید؛ پیش از وقوع، آینده معلق بود."}
+];
+
+const STORIES = [
+ {id:"leipzig", c:["c1","c11"], type:"news", g:"B", t:"دوشنبه‌های لایپزیگ: از ۵ هزار تا ۳۰۰ هزار در یک ماه", w:"لایپزیگ، آلمان شرقی · پاییز ۱۹۸۹", viz:"leipzig",
+  x:"دعای صلح دوشنبه‌ها در کلیسای سنت‌نیکلای از سال‌ها پیش برگزار می‌شد. ۲۵ سپتامبر ۱۹۸۹ پلیس خیابان‌های اطراف کلیسا را بست و حدود پنج هزار نفر از میان این سد به کمربندی شهر رسیدند. دوشنبهٔ بعد حدود بیست هزار نفر بودند و پلیس با خشونت پراکنده‌شان کرد. برای ۹ اکتبر حکومت حدود هشت هزار نیرو آماده کرده بود و در روزنامهٔ محلی تهدید کرده بودند که «اگر لازم شد با سلاح» جلوی «ضدانقلاب» را می‌گیرند. با این همه دست‌کم ۷۰ هزار نفر با شمع آمدند و فریاد زدند «ما مردمیم» و «بی‌خشونت». کسی شلیک نکرد. هفتهٔ بعد ۱۲۰ هزار نفر آمدند، دو روز بعد هونکر کنار رفت، و تا ۲۳ اکتبر شمار به حدود ۳۰۰ هزار رسید.",
+  why:"هر دوشنبه آستانهٔ گروه تازه‌ای را رد کرد: کسی که با پنج هزار نفر نمی‌آمد، با هفتاد هزار نفر می‌آمد. ۹ اکتبر نقطهٔ واژگونی بود چون نشان داد شمار زیاد یعنی امنیت.",
+  s:[["leipzig.travel: انقلاب آرام لایپزیگ","https://www.leipzig.travel/en/research-text/Leipzig-the-peaceful-revolution-in-autumn-1989"],["revolution89.de: ما مردمیم","https://revolution89.de/en/revolution/we-are-the-people"],["موزهٔ رونده‌اکه: ۹ اکتبر ۱۹۸۹","https://www.runde-ecke-leipzig.de/index.php?id=511&L=1"]]},
+
+ {id:"ceausescu", c:["c8","c12","c1"], type:"news", g:"B", t:"آخرین سخنرانی چائوشسکو: گردهمایی‌ای که برای «اکثریت» ساخته شد", w:"بخارست، رومانی · ۲۱ دسامبر ۱۹۸۹",
+  x:"پس از کشتار تیمیشوارا، حکومت برای نشان دادن پشتیبانی مردم حدود صد هزار کارگر را از کارخانه‌ها به میدان کاخ آورد و سخنرانی را زنده از رادیو و تلویزیون پخش کرد. چائوشسکو مثل همیشه با زبان خشک حزبی شروع کرد. فقط ردیف‌های جلو دست می‌زدند و بیشترِ جمعیت بی‌حرکت بود. حدود هشت دقیقه بعد بخشی از جمعیت هو کرد و «تیمیشوارا» فریاد زد. چائوشسکو مات ماند و با مشت به میکروفون زد؛ پخش زنده «به علت نقص فنی» قطع شد. وقتی برگشت، وعدهٔ افزایش دستمزد و مستمری داد. فردا با هلیکوپتر از پشت‌بام کاخ گریخت. چند ماه پیش‌تر، در مصاحبه با نیوزویک، از پرسش‌ها دربارهٔ قفسه‌های خالی فروشگاه‌ها واقعاً تعجب کرده بود.",
+  why:"گردهمایی‌ای که قرار بود «اکثریت» را نشان دهد، در چند ثانیه همه را از نارضایتی دیگران باخبر کرد. تلویزیون زنده یکباره دانش مشترک ساخت. تعجب چائوشسکو در نیوزویک هم نمونهٔ «پتانسیل پنهان» است: حاکم نارضایتی را نمی‌دید چون همه در برابرش وانمود می‌کردند.",
+  s:[["ویکی‌پدیا: آخرین سخنرانی چائوشسکو","https://en.wikipedia.org/wiki/Ceau%C8%99escu%27s_final_speech"],["تلویزیون رومانی در Google Arts","https://artsandculture.google.com/story/YgXxxZahpwQA8A"],["ویدئوی سخنرانی، Making the History of 1989","https://chnm.gmu.edu/1989/items/show/696.html"],["Babel: چهار روز تا اعدام","https://babel.ua/ru/texts/49565-v-1989-godu-rumynskiy-diktator-nikolae-chaushesku-sobral-miting-v-svoyu-podderzhku-vo-vremya-antipravitelstvennyh-protestov-cherez-chetyre-dnya-ego-rasstrelyali-vot-kak-eto-bylo"]]},
+
+ {id:"twitter-enghelab", c:["c2","c1"], type:"twitter", g:"B", t:"دختر خیابان انقلاب: یک نفر روی جعبهٔ برق", w:"تهران · ۶ دی ۱۳۹۶ (۲۷ دسامبر ۲۰۱۷)",
+  x:"ویدا موحد، زنی سی‌ویک‌ساله و مادر یک کودک، روی جعبهٔ تأسیسات مخابرات در خیابان انقلاب ایستاد، روسری سفیدش را سر چوبی بست و ساکت تکان داد. چند دقیقه بعد بازداشت شد. عکس و ویدئویش با هشتگ «دختران خیابان انقلاب» در توییتر دست‌به‌دست شد. یک هفته بعد زنان دیگری در جاهای دیگر تهران همین کار را کردند؛ بعد در مشهد، اصفهان، شیراز و شهرهای دیگر. در یکی از ویدئوها زنی سالخورده که به‌سختی راه می‌رفت هم روی سکویی رفت. آن جعبه بعدها طوری تغییر داده شد که دیگر نشود رویش ایستاد.",
+  why:"اولین نفر آستانه‌اش تقریباً صفر بود. هر تصویرِ تازه به بیننده می‌گفت «دیگران هم هستند» و آستانهٔ نفر بعدی را پایین می‌آورد. تغییر دادن جعبه نشان می‌دهد حکومت هم فهمیده بود خطر در «دیده شدن» است، نه در یک نفر.",
+  s:[["ویکی‌پدیا: ویدا موحد","https://en.wikipedia.org/wiki/Vida_Movahed"],["رادیو فردا: دختران خیابان انقلاب در شهرهای دیگر","https://en.radiofarda.com/a/iran-protest-against-hijab-veil/29011931.html"],["ایران اینترنشنال، ۲۰۲۴","https://www.iranintl.com/en/202412273392"]]},
+
+ {id:"kurzman-up-in-air", c:["c2","c14"], type:"book", g:"B", t:"«آینده معلق بود»: مصاحبه‌های کرزمن با شاهدان ۱۳۵۷", w:"ایران · ۱۳۵۶ تا ۱۳۵۷",
+  x:"چارلز کرزمن برای کتاب «انقلاب تصورناپذیر در ایران» با شاهدان مصاحبه کرد و اسناد امنیتی و اعلامیه‌های زیرزمینی را خواند. تصویری که درآمد، سردرگمی است، نه نقشه: یکی از مصاحبه‌شوندگان می‌گوید «آینده معلق بود». به گزارش او، تظاهرات چهار ماه با حدود ده هزار نفر در هر شهر بزرگ ثابت ماند، اقلیتی کوچک در کشوری سی‌ودو میلیونی. مردم فقط وقتی شرکت می‌کردند که انتظار داشتند دیگران هم بیایند. تحلیل سیای ۱۹۷۸ هم نتیجه گرفته بود شاه می‌ماند.",
+  why:"این همان «تجربهٔ زیسته» است: نه فقر و نه دین، بلکه حدس هر کس دربارهٔ رفتار دیگران. و پاسخی است به نگاه پس‌نگر: آنچه امروز اجتناب‌ناپذیر می‌نماید، آن روز برای خود بازیگران معلق بود.",
+  s:[["معرفی کتاب در Goodreads","https://www.goodreads.com/book/show/207814"],["نقد کتاب، Danny Yee","https://dannyreviews.com/h/Unthinkable_Revolution_Iran.html"]]},
+
+ {id:"reddit-exchristian", c:["c3","c4"], type:"reddit", g:"C", t:"«نمی‌خواهم هر یکشنبه دوباره در آن چرخه بیفتم»", w:"ردیت، r/exchristian · ۲۰۲۴",
+  x:"دانشجویی نوشت یک سال و نیم است ایمانش را از دست داده، ولی هنوز هر هفته با خانواده به کلیسای انجیلیِ سخت‌گیرشان می‌رود. حالا به دانشگاهی در ایالتی دیگر می‌رود و می‌داند خانواده می‌خواهند آن‌جا هم کلیسا یا گروه کتاب‌مقدس پیدا کند. قطع رابطه به دلایل مالی و عاطفی برایش ممکن نیست؛ پس پرسید چطور از دور هم وانمود کند. دیگران پیشنهاد کردند فعالیت‌های فوق‌برنامه را بهانه کند، یا آرام‌آرام با پرسش‌هایی کوچک ببیند مرز خانواده کجاست.",
+  why:"هر سه سود کوران این‌جاست: سود ذاتی صفر است (کلیسا با رفتن یا نرفتن او عوض نمی‌شود)، سود آبرویی و مالی بزرگ است، و هزینهٔ ابرازی، یعنی «چرخهٔ هر یکشنبه»، همان بار «زیستن در دروغ» است.",
+  s:[["رشتهٔ ردیت","https://www.reddit.com/r/exchristian/comments/1dvl6w7/advice_for_an_exchristian_going_into_college/"]]},
+
+ {id:"reddit-pakiexmuslims", c:["c5","c3"], type:"reddit", g:"C", t:"«گاهی نقش همان افراطیِ سابق را بازی می‌کنم»", w:"ردیت، r/PakiExMuslims · سپتامبر ۲۰۲۴",
+  x:"کسی پرسید وقتی خویشاوندان مذهبی چند روز مهمان‌اند و حرف همه‌اش دین است، چطور تحمل و وانمود می‌کنید. یکی از پاسخ‌دهندگان نوشت خودش زمانی مسلمانی بسیار مذهبی و افراطی بوده؛ حالا در بحث‌های خانوادگی همراهی می‌کند و وانمود به همدلی می‌کند، و گاهی حتی نقش همان افراطیِ سابق را بازی می‌کند تا کسی گمان نکند از «راه راست» برگشته. پاسخ دیگری گفت می‌شود فقط خود را «میانه‌رو» نشان داد.",
+  why:"این دقیقاً گزارهٔ «فشار خودش را بازتولید می‌کند» است: کسی که در دل مخالف است، برای باورپذیر ماندن تندتر از باورمندان حرف می‌زند، و همین نمایش بر بقیهٔ جمع فشار بیشتری می‌گذارد که آن‌ها هم همراه شوند.",
+  s:[["پاسخ در ردیت","https://www.reddit.com/r/PakiExMuslims/comments/1f85fue/how_do_you_navigate_religious_conversations_when/llcyf2e/"]]},
+
+ {id:"humanist-letter", c:["c3"], type:"book", g:"C", t:"«دیگر نمی‌خواهم وانمود کنم»: نامه‌ای از هند", w:"ستون «دوراهی اخلاقی»، مجلهٔ The Humanist",
+  x:"جوانی ۲۲ ساله از هند به ستون مشاوره نوشت که از کودکی باور نداشته، ولی مادرش با فشار عاطفی او را به نماز می‌فرستاده. او یاد گرفت وانمود کند به نماز می‌رود و به‌جایش با دوستانی می‌رفت که آن‌ها هم به دین خودشان باور نداشتند؛ بارها خویشاوندان مچش را گرفتند. حالا هنوز همان بازی ادامه دارد: جلوی خانواده و دوستان مؤمن، مؤمن است؛ دوستان نزدیکش راز را نگه می‌دارند. نوشت از این بازی خسته است، پدر و مادرش را دوست دارد و نمی‌داند اگر بگوید، چقدر رنجیده می‌شوند.",
+  why:"فرق خودسانسوری و ترجیح‌نمایی را روشن نشان می‌دهد: او فقط ساکت نیست، نماز رفتن را اجرا می‌کند. و «بار دروغ» را: خستگی، نه ترس، چیزی است که نامه را نوشت.",
+  s:[["The Humanist: Faking Muslim","https://thehumanist.com/voices/the_ethical_dilemma/the-ethical-dilemma-faking-muslim"]]},
+
+ {id:"tehranbureau-ramadan", c:["c10","c4"], type:"news", g:"C", t:"«نود درصدِ کسانی که می‌گویند روزه‌اند، دروغ می‌گویند»", w:"تهران · رمضان ۱۳۹۱ (۲۰۱۲)",
+  x:"نویسنده‌ای ایرانی‌تبار برای «تهران بیورو» (وابسته به PBS) نوشت که در گرم‌ترین ماه سال، در رمضان، به ایران رسیده است. شنیده بود در این ماه گرسنگی اعصاب را خرد می‌کند و تصادف‌ها زیاد می‌شود، ولی پسرعمو و دخترعموهایش می‌گفتند چیز زیادی عوض نمی‌شود چون کمتر کسی واقعاً روزه می‌گیرد. یکی‌شان گفت نود درصد کسانی که می‌گویند روزه‌اند دروغ می‌گویند. دیگری حدس زد دست‌کم نیمی از کشور روزه‌اند، بیشترشان در روستاها و شهرهای کوچک. یکی هم از کلاس نقاشی برگشته بود و می‌گفت آن‌جا هیچ‌کس روزه نبود.",
+  why:"در یک خانوادهٔ نزدیک، برآوردها از «چند نفر واقعاً روزه‌اند» از ده درصد تا بیش از نیمی است. این همان نادانی جمعی است: وقتی هزینهٔ آشکار کردن بالاست، هیچ‌کس، حتی خانواده، تصویر مشترکی از باور واقعی دیگران ندارد، و هر کس از روی محیط کوچک خودش (یک کلاس نقاشی) حدس می‌زند.",
+  note:"این‌ها حدس‌های شخصی‌اند، نه آمار؛ برای عدد واقعی باید به نظرسنجی‌های ناشناس رجوع کرد.",
+  s:[["تهران بیورو: رازهای آشکار رمضان (نسخهٔ آرشیو)","https://web.archive.org/web/2013/https://www.pbs.org/wgbh/pages/frontline/tehranbureau/2012/08/dispatch-the-open-secrets-of-ramadan.html"]]},
+
+ {id:"shy-tory", c:["c4","c8"], type:"study", g:"A", t:"«توری‌های خجالتی»: نظرسنجی‌ای که هشت امتیاز خطا کرد", w:"بریتانیا · انتخابات ۱۹۹۲", viz:"shytory",
+  x:"در روزهای آخر پیش از انتخابات ۱۹۹۲ بریتانیا، نظرسنجی‌ها محافظه‌کاران را با ۳۸ تا ۳۹ درصد حدود یک امتیاز پشت حزب کارگر نشان می‌دادند و همه منتظر پارلمانی بی‌اکثریت یا پیروزی باریک کارگر بودند. حتی نظرسنجی‌های پای صندوق BBC و ITV پارلمانی بی‌اکثریت پیش‌بینی کردند. نتیجه: محافظه‌کاران نزدیک ۴۲ درصد آوردند و ۷٫۶ امتیاز جلو افتادند. انجمن پژوهش بازار تحقیق رسمی راه انداخت و بیشتر مؤسسه‌ها روش‌شان را عوض کردند. توضیح رایج این بود که بخشی از رأی‌دهندگان محافظه‌کار به پرسشگر نگفته بودند به چه کسی رأی می‌دهند.",
+  why:"وقتی گفتنِ یک ترجیح در جمع (حتی به یک پرسشگر غریبه) هزینهٔ آبرویی دارد، تصویر عمومی و رأی پنهانی از هم جدا می‌شوند؛ و چون همه به همان تصویر عمومی نگاه می‌کنند، انتظار همه هم غلط از آب درمی‌آید.",
+  note:"این توضیح مناقشه‌برانگیز است: نمونه‌گیری نادرست و تغییر رأیِ لحظهٔ آخر هم سهم داشتند.",
+  s:[["ویکی‌پدیا: Shy Tory factor","https://en.wikipedia.org/wiki/Shy_Tory_factor"],["ویکی‌پدیا: نظرسنجی‌های ۱۹۹۲","https://en.wikipedia.org/wiki/Opinion_polling_for_the_1992_United_Kingdom_general_election"],["Times Higher Education: ایور کرو","https://www.timeshighereducation.com/node/96658"]]},
+
+ {id:"solzhenitsyn", c:["c5","c7"], type:"book", g:"B", t:"یازده دقیقه کف زدن برای استالین", w:"کنفرانس حزبی یک ناحیه در استان مسکو · ۱۹۳۷",
+  x:"سولژنیتسین در «مجمع‌الجزایر گولاگ» از کنفرانسی ناحیه‌ای می‌گوید که دبیر تازه‌اش جای دبیرِ تازه‌بازداشت‌شده نشسته بود. در پایان، برای استالین «ادای احترام» خواستند و سالن به کف زدن ایستاد. سه دقیقه، پنج دقیقه، ده دقیقه گذشت. حتی شیفتگان استالین هم آن را مضحک می‌دیدند، ولی چه کسی جرئت داشت اولین کسی باشد که دست می‌کشد؟ بعد از یازده دقیقه، مدیر کارخانهٔ کاغذسازی چهره‌ای کاری به خود گرفت و نشست؛ در یک لحظه همه دست کشیدند و نشستند. همان شب مدیر کارخانه بازداشت شد و ده سال حبس گرفت. در بازجویی به او گفتند: «هرگز اولین نفری نباش که دست زدن را قطع می‌کند».",
+  why:"کف زدن برای هیچ‌کس سود ذاتی نداشت؛ همه برای این کف می‌زدند که دیگران کف می‌زنند، و هر کس با کف زدنش فشار را بر بغل‌دستی بیشتر می‌کرد. و دستگاه هم این را می‌دانست: «اولین نفری که می‌ایستد» همان کسی است که آستانه‌اش پایین است، پس او را برمی‌دارد.",
+  note:"روایت سولژنیتسین بر پایهٔ شهادت شاهدان است، نه سند رسمی.",
+  s:[["خلاصهٔ بخش، Goodreads","https://www.goodreads.com/author_blog_posts/16532271-the-man-who-stopped-clapping"],["مرور کتاب و متن بخش","https://formatkaka.github.io/blogs/the-gulag-archipelago-part-1"]]},
+
+ {id:"footbinding", c:["c6"], type:"study", g:"A", t:"پای بسته در چین: از ۹۹٪ به صفر در یک نسل", w:"شمال چین و تایوان · ۱۸۹۰ تا ۱۹۲۰", viz:"footbinding",
+  x:"بستن پای دختران قرن‌ها در بخش بزرگی از چین رسم بود؛ پدری که پای دخترش را نمی‌بست، می‌ترسید کسی با او ازدواج نکند. گری مکی، پژوهشگر هنجارهای اجتماعی، از روستاهایی در جنوب پکن می‌گوید که ۹۹ درصد زنانِ زادهٔ پیش از ۱۸۹۰ پای بسته داشتند و هیچ‌یک از زنانِ زادهٔ پس از ۱۹۱۹. در تایوان هم سهم زنان بزرگسال با پای بسته از ۶۸ درصد در ۱۹۰۵ به ۱۱ درصد در ۱۹۲۰ رسید. به روایت مکی، کلید «انجمن‌های پای طبیعی» بود: خانواده‌ها با هم پیمان می‌بستند که نه پای دخترشان را ببندند و نه پسرشان را به دختری با پای بسته بدهند.",
+  why:"همان جامعه، با همان دلبستگی‌ها، روزی در تعادل «همه می‌بندند» بود و یک نسل بعد در تعادل «هیچ‌کس نمی‌بندد». پیمان جمعی، انتظار هر خانواده را از رفتار خانواده‌های دیگر عوض کرد؛ کافی بود گروهی بزرگ با هم بپرند.",
+  note:"توضیح مکی مناقشه دارد: پژوهش‌های تازه‌تر نقش اقتصاد (کم‌شدن کار ریسندگی دختران در خانه) را هم مهم می‌دانند.",
+  s:[["Mackie 1996, American Sociological Review (خلاصه)","https://adambrown.info/p/notes/mackie_ending_footbinding_and_infibulation"],["Big Think: چگونه جامعه را تغییر دهیم","https://bigthink.com/guest-thinkers/how-to-change-society/"],["Brown و همکاران 2018، PLOS ONE","https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201337"],["GGD: تایوان","https://www.ggd.world/p/what-led-to-the-demise-of-foot-binding"]]},
+
+ {id:"castro-essays", c:["c7"], type:"study", g:"A", t:"مقاله‌های اجباری دربارهٔ کاسترو", w:"دانشگاه دوک، آمریکا · ۱۹۶۷",
+  x:"ادوارد جونز و ویکتور هریس به دانشجویان مقاله‌هایی در دفاع از فیدل کاسترو یا علیه او دادند. به نیمی گفتند نویسنده موضعش را خودش انتخاب کرده، و به نیم دیگر گفتند استاد این موضع را به او تحمیل کرده است. بعد پرسیدند: نظر واقعی نویسنده دربارهٔ کاسترو چیست؟ انتظار این بود که وقتی موضع تحمیلی است، خواننده آن را جدی نگیرد. ولی حتی کسانی که می‌دانستند نویسنده مجبور بوده، باز او را طرفدار کاسترو می‌دیدند، کمتر از حالت انتخاب آزاد ولی خیلی بیشتر از آنچه منطقی بود.",
+  why:"این همان خطایی است که کوران می‌گوید ما را فریب می‌دهد: حرفی را که زیر فشار زده شده، باور واقعی گوینده می‌پنداریم. پس وقتی همه در جمع از حکومت یا رسمی دفاع می‌کنند، حتی می‌دانیم مجبورند، باز گمان می‌کنیم «لابد واقعاً قبول دارند».",
+  s:[["Jones & Harris 1967، متن مقاله","https://is.muni.cz/el/phil/jaro2018/PSX_512/um/Jones_Harris_Attribution_error.pdf"],["ویکی‌پدیا: خطای بنیادین اسناد","https://en.wikipedia.org/wiki/Fundamental_attribution_error"]]},
+
+ {id:"schabowski", c:["c8","c11"], type:"news", g:"B", t:"«فوراً، بی‌درنگ»: جمله‌ای که دیوار برلین را باز کرد", w:"برلین شرقی · ۹ نوامبر ۱۹۸۹، ساعت ۶:۵۳ عصر",
+  x:"گونتر شابوفسکی، سخنگوی حزب، پیش از یک کنفرانس خبریِ معمولی یادداشتی دربارهٔ مقررات تازهٔ سفر گرفت که قرار بود فردا اعلام شود؛ دستوری هم دربارهٔ چگونگی گفتنش نگرفت. خبرنگاری پرسید از کی اجرا می‌شود؟ او کاغذهایش را ورق زد و گفت: «تا آن‌جا که من می‌دانم، فوراً، بی‌درنگ». تلویزیون آلمان غربی، که بیشتر آلمانی‌های شرقی تماشایش می‌کردند، خبر را پخش کرد و چهار ساعت بعد جمعیت در گذرگاه‌های مرزی جمع شده بود. مرزبانان بی‌دستور ماندند و دروازه‌ها را باز کردند.",
+  why:"یک جملهٔ نادرست، انتظار هزاران نفر را هم‌زمان جابه‌جا کرد: هر کس می‌دانست دیگران هم شنیده‌اند و می‌آیند. این همان «رویداد کوچکی» است که کوران می‌گوید تعیین می‌کند کدام موج راه بیفتد.",
+  s:[["متن کنفرانس، Wilson Center","https://digitalarchive.wilsoncenter.org/document/113049"],["آرشیو امنیت ملی، دانشگاه جورج واشینگتن","https://nsarchive.gwu.edu/node/2861"],["Orte der Einheit: مرکز مطبوعات","https://www.orte-der-einheit.de/en/press-center-of-the-gdr/"]]},
+
+ {id:"metoo", c:["c1","c10"], type:"twitter", g:"B", t:"#من‌هم: یک توییت، دوازده میلیون پست در یک روز", w:"توییتر و فیسبوک · ۱۵ اکتبر ۲۰۱۷",
+  x:"الیسا میلانو، بازیگر آمریکایی، پیشنهاد دوستِ یک دوست را در توییتر نوشت: اگر آزار یا تجاوز جنسی دیده‌اید، در پاسخ بنویسید «من هم». تارانا برک از ۲۰۰۷ همین عبارت را برای بازماندگان به کار می‌برد. در کمتر از ۲۴ ساعت بیش از ۵۰۰ هزار توییت و در فیسبوک بیش از ۱۲ میلیون پست، نظر و واکنش از ۴٫۷ میلیون نفر ثبت شد. بعضی فقط نوشتند «من هم»؛ بعضی برای اولین بار جزئیاتی را گفتند که هرگز علنی نکرده بودند. فیسبوک گزارش داد ۴۵ درصد کاربرانش در آمریکا دوستی داشتند که «من هم» نوشته بود.",
+  why:"آنچه پیش‌تر هر کس جداگانه پنهان می‌کرد، ناگهان دیده شد. وقتی دوستت می‌نویسد «من هم»، آستانهٔ تو پایین می‌آید؛ و ۴۵ درصد یعنی تقریباً هر کس دید که این تجربه نادر نیست. این پایانِ یک نادانی جمعی بود.",
+  s:[["CBS/AP: بیش از ۱۲ میلیون پست در ۲۴ ساعت","https://www.cbsnews.com/news/metoo-more-than-12-million-facebook-posts-comments-reactions-24-hours/"],["NBC: آغاز یک جنبش","https://www.nbcnewyork.com/news/national-international/metoo-launches-a-viral-womens-movement/2053555/"]]},
+
+ {id:"india-emergency", c:["c9"], type:"news", g:"B", t:"«خواستند خم شوید، شما خزیدید»", w:"هند · وضع اضطراری ۱۹۷۵ تا ۱۹۷۷",
+  x:"ایندیرا گاندی ۲۵ ژوئن ۱۹۷۵ وضع اضطراری اعلام کرد و رهبران مخالف را همان شب بازداشت کرد. سانسور سنگین بر مطبوعات، رادیو و تلویزیون آمد. یک روزنامه‌نگار به یاد می‌آورد که روز بعد ۶۸ روزنامه‌نگار در باشگاه مطبوعات دهلی نامه‌ای در محکومیت وضع اضطراری امضا کردند، ولی همان روز حدود بیست روزنامه‌نگار ارشد به گاندی نامهٔ پشتیبانی نوشتند. بیشترِ مطبوعات کوتاه آمدند و خیلی‌ها بیش از آنچه خواسته بودند. پس از پایان وضع اضطراری، ال. ک. آدوانی، که خودش نوزده ماه زندانی بود، به روزنامه‌نگاران گفت: «فقط از شما خواستند خم شوید، ولی شما خزیدید».",
+  why:"موج برعکس: وقتی به نظر رسید حکومت می‌ماند، انتظار همه عوض شد و کسانی که هیچ‌کس دستگیرشان نکرده بود هم خودشان عقب نشستند، حتی بیشتر از لازم.",
+  s:[["Wikiquote: آدوانی (به نقل از نیویورک تایمز)","https://en.wikiquote.org/wiki/L._K._Advani"],["The Wire: «طبقهٔ متوسط از وضع اضطراری حمایت کرد»","https://thewire.in/politics/the-middle-class-supported-the-emergency-when-it-was-declared"]]},
+
+ {id:"saudi", c:["c10"], type:"study", g:"A", t:"عربستان: ۸۷٪ موافق بودند، ولی گمان می‌کردند ۶۳٪", w:"ریاض · ۲۰۱۷ تا ۲۰۱۸", viz:"saudi",
+  x:"در عربستان رسم بود که شوهر دربارهٔ کار کردن همسرش بیرون از خانه تصمیم بگیرد. سه اقتصاددان از ۵۰۰ مرد متأهل ۱۸ تا ۳۵ ساله در ریاض پرسیدند آیا زنان باید اجازهٔ کار بیرون از خانه داشته باشند. حدود ۸۷ درصد موافق بودند. بعد، با پاداش برای حدس درست، پرسیدند فکر می‌کنید چند درصد از همین جمع موافق‌اند؟ میانگین حدس‌ها ۶۳ درصد بود و سه‌چهارم کمتر از واقعیت حدس زدند. به نیمی از مردان عدد واقعی را گفتند. همین مردان بیشتر حاضر شدند همسرشان را در یک سرویس کاریابی ثبت‌نام کنند، و ماه‌ها بعد همسرانشان بیشتر برای کار درخواست داده و مصاحبه رفته بودند.",
+  why:"اکثریتی که خود را اقلیت می‌پندارد، رسمی را نگه می‌دارد که خودش قبول ندارد. یک جمله اطلاعات دربارهٔ دیگران («بیشترِ مردان مثل شما فکر می‌کنند») رفتار را عوض کرد. این همان گفتهٔ کوران است: آمار وقتی اثر دارد که دربارهٔ آدم‌های نزدیک و ملموس باشد.",
+  s:[["Bursztyn و همکاران 2020، American Economic Review","https://www.aeaweb.org/articles?id=10.1257/aer.20180975"],["خلاصهٔ سیاستی، مرکز UBS دانشگاه زوریخ","https://www.ubscenter.uzh.ch/en/publications/policy_briefs/trapped-by-misperceptions.html"],["Economic Research Forum","https://theforum.erf.org.eg/2019/05/07/women-work-social-norms-saudi-arabia/"]]},
+
+ {id:"princeton", c:["c10"], type:"study", g:"A", t:"پرینستون: هر کس فکر می‌کرد تنها کسی است که معذب است", w:"دانشگاه پرینستون · اوایل دههٔ ۱۹۹۰",
+  x:"در پرینستون نوشیدن الکل بخش جدانشدنی زندگی دانشجویی بود. دبورا پرنتیس و دیل میلر از دانشجویان دو چیز پرسیدند: خودت چقدر با عادت‌های نوشیدن در دانشگاه راحتی؟ و دانشجوی معمولی چقدر راحت است؟ در هر چهار مطالعه، دانشجویان خودشان را معذب‌تر از «دانشجوی معمولی» می‌دیدند، در حالی که اکثرشان همین‌طور بودند. در طول یک ترم، پسرها کم‌کم نظرشان را به سمت هنجارِ خیالی بردند. کسانی که خود را بیشتر «متفاوت» می‌دیدند، احساس بیگانگی بیشتری با دانشگاه داشتند. پژوهش بعدیِ پرنتیس نشان داد گفت‌وگو با دانشجویان سال اول دربارهٔ همین خطا، نوشیدنشان را چند ماه بعد کم کرد.",
+  why:"هر کس رفتار دیگران در مهمانی را دید و گمان کرد «لابد خوششان می‌آید» (همان خطای اسناد)، و سکوت خودش هم تصویر را برای دیگران تأیید کرد.",
+  s:[["Prentice & Miller 1993، چکیده","https://collaborate.princeton.edu/en/publications/pluralistic-ignorance-and-alcohol-use-on-campus-some-consequences/"],["Schroeder & Prentice 1998","https://collaborate.princeton.edu/en/publications/exposing-pluralistic-ignorance-to-reduce-alcohol-use-among-colleg/"]]},
+
+ {id:"abilene", c:["c10"], type:"book", g:"C", t:"سفر به ابیلین: سفری که هیچ‌کس نمی‌خواست", w:"کلمن، تگزاس · روایت جری هاروی، ۱۹۷۴",
+  x:"جری هاروی، استاد مدیریت، از یک بعدازظهر تیرماه در خانهٔ پدرزنش در تگزاس می‌گوید: دمای چهل درجه، دومینو، لیموناد و پنکه. پدرزن پیشنهاد کرد ۸۵ کیلومتر تا ابیلین بروند و در یک رستوران شام بخورند. همسر هاروی گفت فکر خوبی است، خودش هم گفت موافق است، مادرزن هم. با ماشینی بی‌کولر در گرد و خاک رفتند، غذای بدی خوردند و برگشتند. وقتی کسی گفت «سفر خوبی بود، نه؟»، معلوم شد هیچ‌کدام نمی‌خواستند بروند؛ پدرزن هم فقط پیشنهاد داده بود چون فکر می‌کرد بقیه حوصله‌شان سر رفته.",
+  why:"نادانی جمعی در کوچک‌ترین مقیاس: چهار نفر، همه مخالف، هر کدام به گمان اینکه بقیه موافق‌اند، کاری را کردند که هیچ‌کس نمی‌خواست. اگر یک نفر می‌پرسید «واقعاً می‌خواهید؟»، همه اعتراف می‌کردند.",
+  note:"هاروی آن را خاطرهٔ خانوادهٔ خودش می‌گوید، ولی بعضی منابع آن را تمثیل می‌دانند.",
+  s:[["Harvey 1974, Organizational Dynamics (DOI)","https://doi.org/10.1016/0090-2616(74)90005-9"],["Art of Manliness: پارادوکس ابیلین","https://www.artofmanliness.com/character/leadership/the-abilene-paradox/"]]},
+
+ {id:"bouazizi", c:["c11"], type:"news", g:"B", t:"سیدی‌بوزید: یک گاری میوه و ۲۸ روز", w:"تونس · ۲۶ آذر ۱۳۸۹ (۱۷ دسامبر ۲۰۱۰)",
+  x:"محمد بوعزیزی، دست‌فروش ۲۶ سالهٔ میوه، هفت سال در شهرستانی دورافتاده گاری داشت. صبح ۱۷ دسامبر ۲۰۱۰ مأمور شهرداری ترازو و بارش را مصادره کرد و او در برابر دفتر فرمانداری به خودش آسیب زد و دو هفته بعد درگذشت. پسرعمویش با گوشی از اعتراض همان روز فیلم گرفت، در فیسبوک گذاشت و برای الجزیره فرستاد، که همان شب پخشش کرد. اعتراض در چند روز به شهرهای دیگر رسید. بن‌علی به بیمارستان رفت و وعدهٔ اصلاح داد، ولی ۱۴ ژانویه، ۲۸ روز بعد، پس از ۲۳ سال حکومت به عربستان گریخت. پسرعمو بعدها گفت آنچه همه‌چیز را عوض کرد این بود که مردم تصمیم گرفتند دیگر از حکومت نترسند.",
+  why:"نارضایتی از فقر و فساد سال‌ها بود؛ کوران می‌گوید هیچ روستایی فقط چون گرسنه بود شورش نکرد. جرقه کار کرد چون دیده شد: ویدئو و تلویزیون به همه نشان دادند که دیگران هم به خیابان آمده‌اند.",
+  s:[["الجزیره: یادی از محمد بوعزیزی","https://www.aljazeera.com/features/2020/12/17/remembering-mohamed-bouazizi-his-death-triggered-the-arab"],["History.com","https://www.history.com/this-day-in-history/december-17/mohamed-bouazizi-self-immolates-arab-spring"],["ویکی‌پدیا: انقلاب تونس","https://en.wikipedia.org/wiki/Tunisian_revolution"]]},
+
+ {id:"ghotbzadeh", c:["c13"], type:"news", g:"B", t:"صادق قطب‌زاده: از هواپیمای ۱۲ بهمن تا میدان تیر اوین", w:"ایران · ۱۳۵۷ تا ۱۳۶۱",
+  x:"صادق قطب‌زاده در نوفل‌لوشاتو از نزدیک‌ترین یاران آیت‌الله خمینی بود و ۱۲ بهمن ۱۳۵۷ با او در همان هواپیمای ایرفرانس به ایران آمد. عضو شورای انقلاب، سخنگو و بعد وزیر خارجه در بحران گروگان‌گیری شد. در فروردین ۱۳۶۱ همراه گروهی از افسران و روحانیان به اتهام توطئه برای براندازی بازداشت شد. خودش قصد ترور را انکار کرد؛ گزارش‌هایی هست که اعترافش زیر شکنجه گرفته شد. پس از دادگاهی ۲۶ روزه در دادگاه نظامی انقلاب، شهریور ۱۳۶۱ در زندان اوین تیرباران شد. کریستین ساینس مانیتور نوشت انقلاب یکی دیگر از رهبرانش را بلعید.",
+  why:"کوران پیش‌بینی می‌کند حکومت انقلابی حتی علیه انقلابیان سرکوب می‌کند، چون می‌داند حمایت آشکار از خودش هم می‌تواند به همان سستیِ حمایت از رژیم قبلی باشد. قطب‌زاده نشان می‌دهد نزدیکی به رهبر انقلاب هم مصونیت نمی‌آورد.",
+  note:"اتهام‌های دادگاه و اعتراف‌ها مورد مناقشه‌اند؛ این‌جا فقط رویدادهای مستند آمده است.",
+  s:[["ویکی‌پدیا: صادق قطب‌زاده","https://en.wikipedia.org/wiki/Sadegh_Ghotbzadeh"],["Christian Science Monitor، ۱۹۸۲","https://www.csmonitor.com/1982/0917/091715.html"],["بریتانیکا","https://www.britannica.com/biography/Sadegh-Ghotbzadeh"]]}
+];
+
+// ---------- data illustrations ----------
+function barSVG({data, max, unit, colorFn, h=210, note}){
+  const W=640, pad={t:20,r:40,b:46,l:20}, iw=W-pad.l-pad.r, ih=h-pad.t-pad.b, bw=iw/data.length*0.62;
+  let s=`<svg viewBox="0 0 ${W} ${h}" role="img">`;
+  [0,0.5,1].forEach(f=>{const y=pad.t+ih*(1-f); s+=`<line x1="${pad.l}" x2="${W-pad.r}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${W-pad.r+6}" y="${y+4}" text-anchor="start">${fa(Math.round(max*f))}${unit||''}</text>`});
+  data.forEach((d,i)=>{const cx=pad.l+iw*(data.length-1-i+0.5)/data.length, bh=ih*d.v/max, y=pad.t+ih-bh;
+    s+=`<rect x="${cx-bw/2}" y="${y}" width="${bw}" height="${bh}" rx="3" fill="${colorFn?colorFn(d,i):'var(--fam-soc)'}"><title>${d.l}: ${fa(d.v)}${unit||''}</title></rect>`;
+    s+=`<text x="${cx}" y="${y-6}" text-anchor="middle" style="fill:var(--ink);font-weight:700">${fa(d.v)}${unit||''}</text>`;
+    s+=`<text x="${cx}" y="${pad.t+ih+18}" text-anchor="middle">${d.l}</text>`; if(d.l2) s+=`<text x="${cx}" y="${pad.t+ih+36}" text-anchor="middle" style="font-size:11px">${d.l2}</text>`;});
+  return s+`</svg>`;
+}
+const VIZ = {
+ leipzig:()=>`<div class="viz"><h4>شمار راهپیمایان دوشنبه‌ها در لایپزیگ (هزار نفر)</h4>
+   ${barSVG({max:300,data:[{l:"۲۵ سپتامبر",v:5},{l:"۲ اکتبر",v:20},{l:"۹ اکتبر",v:70,l2:"نقطهٔ واژگونی"},{l:"۱۶ اکتبر",v:120},{l:"۲۳ اکتبر",v:300}],colorFn:(d)=>d.v===70?'var(--story)':'var(--fam-soc)'})}
+   <div class="cap">برآوردهای تقریبی؛ منابع برای ۹ اکتبر ۷۰ تا ۱۰۰ هزار و برای ۱۶ اکتبر ۱۲۰ تا ۱۵۰ هزار می‌گویند. منبع: leipzig.travel، revolution89.de، bpb.de.</div></div>`,
+ shytory:()=>`<div class="viz"><h4>فاصلهٔ محافظه‌کاران از حزب کارگر (امتیاز درصد)</h4>
+   <svg viewBox="0 0 640 150" role="img">
+    <line x1="320" x2="320" y1="14" y2="122" stroke="var(--line-strong)"/>
+    <text x="320" y="140" text-anchor="middle">برابر</text><text x="610" y="140" text-anchor="end">← کارگر جلوتر</text><text x="30" y="140" text-anchor="start">محافظه‌کار جلوتر →</text>
+    <text x="630" y="44" text-anchor="end" style="fill:var(--ink)">نظرسنجی‌های آخر</text>
+    <rect x="320" y="30" width="${1*30}" height="22" rx="3" fill="var(--ink-3)"/><text x="${320+36}" y="46" style="fill:var(--ink);font-weight:700">حدود ${fa(1)}</text>
+    <text x="630" y="96" text-anchor="end" style="fill:var(--ink)">صندوق رأی</text>
+    <rect x="${320-7.6*30}" y="82" width="${7.6*30}" height="22" rx="3" fill="var(--story)"/><text x="${320-7.6*30-6}" y="98" text-anchor="end" style="fill:var(--ink);font-weight:700">${fa(7.6)}</text>
+   </svg><div class="cap">خطای حدود ۸ تا ۹ امتیاز. منبع: ویکی‌پدیا (Shy Tory factor)، Ivor Crewe در THE.</div></div>`,
+ footbinding:()=>`<div class="viz"><h4>دو جامعه، دو تعادل</h4>
+   ${barSVG({max:100,unit:"٪",data:[{l:"زادهٔ پیش از ۱۸۹۰",l2:"روستاهای جنوب پکن",v:99},{l:"زادهٔ پس از ۱۹۱۹",l2:"همان روستاها",v:0},{l:"۱۹۰۵",l2:"تایوان، زنان بزرگسال",v:68},{l:"۱۹۲۰",l2:"تایوان، زنان بزرگسال",v:11}],colorFn:(d,i)=>i<2?'var(--story)':'var(--fam-soc)',h:230})}
+   <div class="cap">سهم زنان با پای بسته. منبع: Mackie 1996 به نقل Big Think؛ GGD برای تایوان. داده‌های سال‌های میانی در منابع موجود نبود و این‌جا ساخته نشده است.</div></div>`,
+ saudi:()=>`<div class="viz"><h4>آنچه مردان در دل داشتند و آنچه گمان می‌کردند دیگران دارند</h4>
+   ${barSVG({max:100,unit:"٪",data:[{l:"موافقِ کار زنان",l2:"نظر خودشان",v:87},{l:"حدسِ میانگین",l2:"دربارهٔ همان جمع",v:63}],colorFn:(d,i)=>i?'var(--ink-3)':'var(--story)',h:220})}
+   <div class="cap">۵۰۰ مرد متأهل ۱۸ تا ۳۵ سالهٔ ریاض؛ حدس‌ها با پاداش. منبع: Bursztyn و همکاران، AER 2020؛ خلاصهٔ سیاستی UBS Center.</div></div>`,
+ threshold:()=>`<div class="viz" id="tgame"><h4>بازی آستانه (مدل گرانووتر، ۱۹۷۸)</h4>
+   <div style="font-size:.9rem">۲۰ نفر در میدان. عدد هر نفر آستانهٔ اوست: «اگر این‌قدر نفر بیرون باشند، من هم می‌آیم». نفر صفر بی‌قید و شرط می‌آید. یک نفر را انتخاب کنید و آستانه‌اش را فقط یکی بالا یا پایین ببرید، و ببینید چه می‌شود.</div>
+   <div class="game" id="people"></div>
+   <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+     <button class="btn" id="minus">آستانهٔ انتخاب‌شده −۱</button><button class="btn" id="plus">آستانهٔ انتخاب‌شده +۱</button><button class="btn" id="reset">از نو</button>
+     <span class="result" id="res"></span></div>
+   <div class="cap">فرض: هر کس فقط شمار کل حاضران را می‌بیند. دو جمعیتِ تقریباً یکسان می‌توانند یکی آرام بماند و دیگری همه بیرون بیایند؛ از بیرون، کسی تفاوت را نمی‌بیند. منبع مدل: Granovetter 1978, American Journal of Sociology.</div></div>`
+};
+
+// ---------- render ----------
+let filter="all";
+function render(){
+  const main=document.getElementById("main");
+  main.innerHTML=CLAIMS.map(c=>{
+    const ss=STORIES.filter(s=>s.c[0]===c.id && (filter==="all"||s.type===filter));
+    const also=STORIES.filter(s=>s.c.indexOf(c.id)>0 && (filter==="all"||s.type===filter));
+    if(!ss.length && !also.length && !(c.id==="c1"&&filter==="all")) return "";
+    const vizHtml=(c.id==="c1"&&filter==="all"?VIZ.threshold():"")+ss.filter(s=>s.viz).map(s=>VIZ[s.viz]()).join("");
+    return `<section class="claim" id="${c.id}"><div class="who">${c.who}</div><h2>${c.t}</h2><p>${c.d}</p></section>
+      ${vizHtml}
+      <div class="stories">${ss.map(card).join("")}</div>
+      ${also.length?`<div class="also">داستان‌های دیگری که این گزاره را هم نشان می‌دهند: ${also.map(s=>`<a href="#${s.id}">${s.t}</a>`).join(" · ")}</div>`:""}`;
+  }).join("");
+  if(filter==="all") initGame();
+}
+function card(s){
+  return `<article class="story" id="${s.id}">
+    <div class="meta"><span class="type">${TYPES[s.type]}</span><span class="g g${s.g}">${s.g}</span><span>${s.w}</span></div>
+    <h3>${s.t}</h3><div class="txt">${s.x}</div>
+    <div class="why"><b>چرا این داستان؟</b> ${s.why}</div>
+    ${s.note?`<div class="note">⚑ ${s.note}</div>`:""}
+    <div class="src">منبع: ${s.s.map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(" · ")}</div></article>`;
+}
+document.getElementById("filters").innerHTML=[["all","همه"],...Object.entries(TYPES)].map(([k,v])=>`<button class="chip" data-f="${k}" aria-pressed="${k==='all'}">${v}${k!=='all'?` (${fa(STORIES.filter(s=>s.type===k).length)})`:''}</button>`).join("");
+document.getElementById("filters").onclick=e=>{const b=e.target.closest(".chip"); if(!b)return; filter=b.dataset.f;
+  document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b)); render();};
+
+// threshold game
+let T, sel=1;
+function initGame(){ T=[...Array(20).keys()]; sel=1; drawGame();
+  document.getElementById("minus").onclick=()=>{T[sel]=Math.max(0,T[sel]-1);drawGame()};
+  document.getElementById("plus").onclick=()=>{T[sel]=Math.min(20,T[sel]+1);drawGame()};
+  document.getElementById("reset").onclick=()=>{T=[...Array(20).keys()];sel=1;drawGame()}; }
+function cascade(th){ const out=th.map(()=>false); let ch=true; while(ch){ ch=false; const c=out.filter(Boolean).length; th.forEach((t,i)=>{ if(!out[i] && t<=c){ out[i]=true; ch=true; } }); } return out; }
+function drawGame(){
+  const out=cascade(T), n=out.filter(Boolean).length, sorted=T.map((t,i)=>({t,i}));
+  const el=document.getElementById("people"); if(!el) return;
+  el.innerHTML=sorted.map(({t,i})=>`<div class="p ${out[i]?'on':''} ${i===sel?'sel':''}" data-i="${i}" title="آستانه ${fa(t)}">${fa(t)}</div>`).join("");
+  el.querySelectorAll(".p").forEach(p=>p.onclick=()=>{sel=+p.dataset.i;drawGame()});
+  document.getElementById("res").textContent = n===20?`همه ${fa(20)} نفر بیرون آمدند.`: `فقط ${fa(n)} نفر بیرون آمدند.`;
+}
+render();
+if(location.hash){const t=document.querySelector(location.hash); if(t) t.scrollIntoView();}
+</script>
+</body>
+</html>
