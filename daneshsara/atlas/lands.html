@@ -29,7 +29,6 @@ main{padding-block:var(--s6) var(--s16)}
 .mapbox{position:relative;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
 svg.map{display:block;width:100%;height:auto;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
 svg.map.drag{cursor:grabbing}
-svg.map.far .hub:not(.on) text{opacity:0}
 svg.map.far .road{opacity:.55}
 .road,.land{vector-effect:non-scaling-stroke}
 svg.map{--ts:1}
@@ -61,6 +60,10 @@ svg.map{--ts:1}
 .city,.hub{cursor:pointer}
 .hub circle.hit,.city circle.hit{fill:transparent;stroke:none}
 .nolabels .hub text{display:none}
+/* names keep one screen size at every zoom (--ts = map units per screen px) and sit only where they cover nothing */
+svg.map .city text{font-size:calc(12.5px*var(--ts));stroke-width:calc(3px*var(--ts))}svg.map .hub text{font-size:calc(10.5px*var(--ts));stroke-width:calc(2.5px*var(--ts))}svg.map .hub.on text{font-size:calc(11.5px*var(--ts))}svg.map .lname{font-size:calc(15px*var(--ts))}
+svg.map:not(.nolabels) text.off{display:none}svg.map .city:hover text.off,svg.map .city:focus text.off,svg.map .on text.off,svg.map:not(.nolabels) .hub:hover text.off,svg.map:not(.nolabels) .hub:focus text.off{display:inline}svg.map .city text.off{display:none}svg.map .city:hover text.off,svg.map .city:focus text.off,svg.map .city.on text.off{display:inline}
+.lhint{font-size:var(--small,.8rem);color:var(--ink-3);margin:6px 2px 0}.lhint:empty{display:none}
 .tools{position:absolute;inset-inline-end:10px;top:10px;display:flex;gap:6px}
 .tools button{font:inherit;font-size:var(--chip);padding:4px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--paper);color:var(--ink-2);cursor:pointer}
 .tools button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
@@ -102,7 +105,7 @@ footer.foot{border-top:1px solid var(--line);padding-block:var(--s8);color:var(-
  <p class="note" style="margin:0 0 8px"><a href="world.html"><b>جدید:</b> «جهان دانش»، نقشهٔ زوم‌پذیر مثل نقشهٔ زمین (سرزمین ← شهر ← محله ← مفهوم ← مغازهٔ دانشمندان) ←</a></p>
  <div class="legend" id="legend"></div>
  <div class="lay">
-  <div class="mapbox"><div class="tools"><button id="zin" class="sq" aria-label="+" type="button">+</button><button id="zout" class="sq" aria-label="−" type="button">−</button><button id="lbl" aria-pressed="true" data-i="labels">نام پل‌ها</button><button id="reset" data-i="reset">همه</button></div><svg class="map" id="map" viewBox="0 0 1000 720" role="img" aria-label="نقشهٔ سرزمین‌های دانش"></svg><div class="hint" data-i="zoomHint"></div></div>
+  <div class="mapbox"><div class="tools"><button id="zin" class="sq" aria-label="+" type="button">+</button><button id="zout" class="sq" aria-label="−" type="button">−</button><button id="lbl" aria-pressed="true" data-i="labels">نام پل‌ها</button><button id="reset" data-i="reset">همه</button></div><svg class="map" id="map" viewBox="0 0 1000 720" role="img" aria-label="نقشهٔ سرزمین‌های دانش"></svg><div class="hint" data-i="zoomHint"></div></div><p class="lhint" id="lhint"></p>
   <aside class="panel" id="panel"></aside>
  </div>
 </main>
@@ -181,6 +184,7 @@ function apply(){
   setClass(".land", el => landsSel.includes(el.dataset.land), el => landsSel.length ? !landsSel.includes(el.dataset.land) : false);
   document.querySelectorAll("#legend [data-land]").forEach(b => b.setAttribute("aria-pressed", landsSel.includes(b.dataset.land)));
   panel();
+  if (typeof queueDeclutter === "function") queueDeclutter();
 }
 const dots = lands => `<span class="dots">${lands.map(l => `<i style="--fc:${fc(l)}"></i>`).join("")}</span>`;
 const hubBtn = h => `<button data-go="hub:${h.id}"><span>${esc(name(h))}</span><small>${dots(h.lands)}</small></button>`;
@@ -230,7 +234,34 @@ svg.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " "
 const FULL = {x:0, y:0, w:1000, h:720}, ASP = 720/1000;
 let vb = {...FULL}, anim = null;
 const clampVB = v => { v.w = Math.max(110, Math.min(1000, v.w)); v.h = v.w*ASP; v.x = Math.max(-60, Math.min(1060 - v.w, v.x)); v.y = Math.max(-40, Math.min(760 - v.h, v.y)); return v; };
-function paintVB(){ svg.setAttribute("viewBox", `${vb.x.toFixed(1)} ${vb.y.toFixed(1)} ${vb.w.toFixed(1)} ${vb.h.toFixed(1)}`); svg.classList.toggle("far", vb.w > 640); svg.style.setProperty("--ts", Math.pow(vb.w/1000, .72).toFixed(3)); }
+function paintVB(){ svg.setAttribute("viewBox", `${vb.x.toFixed(1)} ${vb.y.toFixed(1)} ${vb.w.toFixed(1)} ${vb.h.toFixed(1)}`); svg.classList.toggle("far", vb.w > 640); svg.style.setProperty("--ts", (vb.w / (svg.clientWidth || 1000) * 1.08).toFixed(4)); queueDeclutter(); }
+let dcRaf = 0; function queueDeclutter(){ cancelAnimationFrame(dcRaf); dcRaf = requestAnimationFrame(declutter); }
+const boxHit = (a, b) => a.x < b.x + b.width && b.x < a.x + a.width && a.y < b.y + b.height && b.y < a.y + a.height;
+function declutter(){
+  const u = vb.w / (svg.clientWidth || 1000), pad = 2.5 * u, hubsOn = !svg.classList.contains("nolabels");
+  const gs = [...svg.querySelectorAll(".city,.hub")];
+  const marks = gs.map(g => { const m = g.querySelector("circle:not(.hit),rect"); const b = m.getBoundingClientRect(), r = svg.getBoundingClientRect();
+    return {g, b: {x: vb.x + (b.left - r.left) * u, y: vb.y + (b.top - r.top) * u, width: b.width * u, height: b.height * u}}; });
+  const placed = [...svg.querySelectorAll(".lname")].map(t => t.getBBox());
+  const rank = g => (g.classList.contains("on") ? 0 : 10) + (g.classList.contains("dim") ? 50 : 0) + (g.classList.contains("city") ? 0 : 20 - (BY[g.dataset.hub] ? (BY[g.dataset.hub].par || []).length : 0));
+  let hidden = 0;
+  marks.slice().sort((a, b) => rank(a.g) - rank(b.g)).forEach(mk => {
+    const t = mk.g.querySelector("text"); t.classList.remove("off");
+    if (mk.g.classList.contains("hub") && !hubsOn) return;
+    const cx = mk.b.x + mk.b.width / 2, cy = mk.b.y + mk.b.height / 2, hr = mk.b.height / 2, fs = parseFloat(getComputedStyle(t).fontSize) || 11;
+    const above = [cx, cy - hr - 3 * u, "middle"], below = [cx, cy + hr + fs * .95, "middle"], side1 = [cx - mk.b.width / 2 - 4 * u, cy + fs * .35, "start"], side2 = [cx + mk.b.width / 2 + 4 * u, cy + fs * .35, "end"];
+    const cands = mk.g.classList.contains("city") ? [above, below, side1, side2] : [below, above, side1, side2];
+    let ok = false;
+    for (const [x, y, an] of cands) {
+      t.setAttribute("x", x.toFixed(1)); t.setAttribute("y", y.toFixed(1)); t.setAttribute("text-anchor", an);
+      const bb = t.getBBox(), b = {x: bb.x - pad, y: bb.y - pad / 2, width: bb.width + 2 * pad, height: bb.height + pad};
+      if (placed.some(p => boxHit(p, b)) || marks.some(o => o !== mk && boxHit(o.b, b))) continue;
+      placed.push(b); ok = true; break;
+    }
+    if (!ok) { t.classList.add("off"); hidden++; t.setAttribute("x", cands[0][0].toFixed(1)); t.setAttribute("y", cands[0][1].toFixed(1)); t.setAttribute("text-anchor", "middle"); }
+  });
+  const lh = document.getElementById("lhint"); if (lh) lh.textContent = hidden ? (L === "fa" ? `${String(hidden).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d])} نام دیگر با نزدیک‌تر شدن یا اشاره دیده می‌شود.` : L === "nl" ? `${hidden} andere namen verschijnen als je inzoomt of aanwijst.` : `${hidden} more names appear when you zoom in or point.`) : "";
+}
 function zoomTo(t, ms){ t = clampVB({...t}); if (anim) cancelAnimationFrame(anim); const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches; if (reduce || !ms) { vb = t; paintVB(); return; } const a = {...vb}, t0 = performance.now(); const step = now => { let k = Math.min(1, (now - t0)/ms); k = 1 - Math.pow(1-k, 3); vb = {x:a.x+(t.x-a.x)*k, y:a.y+(t.y-a.y)*k, w:a.w+(t.w-a.w)*k, h:(a.w+(t.w-a.w)*k)*ASP}; paintVB(); if (k < 1) anim = requestAnimationFrame(step); }; anim = requestAnimationFrame(step); }
 function svgPt(cx, cy){ const r = svg.getBoundingClientRect(); return [vb.x + (cx - r.left)/r.width*vb.w, vb.y + (cy - r.top)/r.height*vb.h]; }
 function zoomAt(cx, cy, f, ms){ const [px, py] = svgPt(cx, cy); const w = Math.max(110, Math.min(1000, vb.w*f)); const k = w/vb.w; zoomTo({x:px-(px-vb.x)*k, y:py-(py-vb.y)*k, w, h:w*ASP}, ms); }
@@ -254,11 +285,11 @@ document.getElementById("zout").addEventListener("click", () => { const r = svg.
 svg.addEventListener("click", ev => { const l = ev.target.closest(".land"); if (l && !ev.target.closest(".city,.hub")) { const id = l.dataset.land; if (landsSel.length === 1 && landsSel[0] === id && vb.w < 700) setTimeout(() => zoomTo(FULL, 450), 0); else focusLand(id); } });
 paintVB();
 document.getElementById("reset").addEventListener("click", () => { sel = null; landsSel = []; zoomTo(FULL, 450); apply(); try { history.replaceState(null, "", location.pathname); } catch(_) {} });
-document.getElementById("lbl").addEventListener("click", ev => { const on = ev.currentTarget.getAttribute("aria-pressed") !== "true"; ev.currentTarget.setAttribute("aria-pressed", on); svg.classList.toggle("nolabels", !on); });
+document.getElementById("lbl").addEventListener("click", ev => { const on = ev.currentTarget.getAttribute("aria-pressed") !== "true"; ev.currentTarget.setAttribute("aria-pressed", on); svg.classList.toggle("nolabels", !on); queueDeclutter(); });
 function legend(){ document.getElementById("legend").innerHTML = FAM.map(fm => `<button data-land="${fm.id}" style="--fc:${fc(fm.id)}" aria-pressed="false"><i></i>${esc(famName(fm.id))} <small>(${fa(CITIES.filter(c => c.fam === fm.id).length)})</small></button>`).join(""); }
 function i18n(){ document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr"; document.querySelectorAll("[data-i]").forEach(el => { el.textContent = T(el.dataset.i); }); document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L)); document.title = T("h1") + (L === "fa" ? " | اطلس‌ها | دانش‌سرا" : " | Daneshsara"); legend(); draw(); apply(); }
 document.querySelector(".lang").addEventListener("click", ev => { const b = ev.target.closest("[data-l]"); if (!b) return; L = b.dataset.l; try { localStorage.setItem("ds-lang", L); } catch(_) {} i18n(); });
-if (window.innerWidth < 600) { svg.classList.add("nolabels"); document.getElementById("lbl").setAttribute("aria-pressed", "false"); }
+
 i18n();
 const h0 = decodeURIComponent(location.hash.slice(1)); if (h0.startsWith("p-") && PEOPLE[h0.slice(2)]) go("person", h0.slice(2)); else if (BY[h0]) go(BY[h0].fam ? "city" : "hub", h0);
 </script>
