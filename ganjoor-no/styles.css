@@ -3220,3 +3220,203 @@ body.is-home.scrolled .bar {
   padding: 4px 10px;
   border-radius: var(--gk-radius-full);
 }
+
+
+/* ====================================================
+   FLAT, UNIFIED & COMPACT UI OVERHAUL (حذف لایه‌بندی و فضای پرت)
+   ==================================================== */
+
+/* ۱. یکپارچه‌سازی بدنه اصلی و حذف فاصله زیاد */
+.g-landing {
+  gap: 24px !important;
+  max-width: 1040px !important;
+  margin: 0 auto !important;
+  padding: 8px 12px 32px !important;
+}
+
+/* ۲. هیرو تخت و خالص (بدون کادر، بدون سایه سنگین، بدون فضای پرت) */
+.g-hero {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 16px 8px 8px !important;
+  margin: 0 auto !important;
+  max-width: 720px !important;
+}
+
+.g-hero::before {
+  display: none !important;
+}
+
+.g-hero-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem) !important;
+  margin: 0 0 12px !important;
+  font-weight: 800 !important;
+}
+
+.g-hero-search {
+  max-width: 540px !important;
+  margin: 0 auto 10px !important;
+  padding: 3px 6px 3px 14px !important;
+  background: #fff !important;
+  border: 1.5px solid var(--gk-primary) !important;
+  box-shadow: 0 2px 10px rgba(10, 107, 96, 0.12) !important;
+}
+
+.g-hero-suggestions {
+  margin: 0 auto !important;
+  gap: 6px !important;
+  justify-content: center !important;
+}
+
+.g-sugg-pill {
+  padding: 4px 10px !important;
+  font-size: 0.8rem !important;
+  background: #fff !important;
+  border: 1px solid var(--gk-border) !important;
+  border-radius: var(--gk-radius-full) !important;
+}
+
+/* ۳. استودیوی تعاملی ابزارها: کادر یکپارچه بدون تودرتویی */
+.g-playground {
+  background: #fff !important;
+  border: 1px solid var(--gk-border) !important;
+  border-radius: var(--gk-radius-md) !important;
+  box-shadow: var(--gk-shadow-sm) !important;
+  overflow: hidden !important;
+}
+
+.g-pg-nav {
+  padding: 6px 8px !important;
+  gap: 4px !important;
+  background: color-mix(in srgb, var(--paper) 40%, white) !important;
+  border-bottom: 1px solid var(--gk-border) !important;
+}
+
+.g-pg-tab {
+  padding: 7px 12px !important;
+  font-size: 0.85rem !important;
+  border-radius: 6px !important;
+  border: none !important;
+  background: transparent !important;
+  color: var(--gk-charcoal) !important;
+  transition: all .15s !important;
+}
+
+.g-pg-tab:hover {
+  background: rgba(0,0,0,0.04) !important;
+}
+
+.g-pg-tab.active {
+  background: var(--gk-primary) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.g-pg-tab.active .g-pg-tab-icon {
+  color: #fff !important;
+}
+
+/* نوار روایت‌گری جمع‌وجور */
+.g-story-bar {
+  padding: 6px 12px !important;
+  gap: 6px !important;
+}
+
+.g-story-chip {
+  padding: 3px 10px !important;
+  font-size: 0.75rem !important;
+}
+
+/* ۴. محتوای درون ابزارها: تمام‌عرض و بدون فضای هرز */
+.g-pg-content {
+  padding: 16px 18px !important;
+}
+
+.g-pane-head {
+  padding-bottom: 12px !important;
+  margin-bottom: 4px !important;
+  gap: 12px !important;
+}
+
+.g-pane-meta .g-pg-title {
+  font-size: 1.12rem !important;
+}
+
+.g-pane-head .g-pg-lead {
+  font-size: 0.86rem !important;
+  line-height: 1.6 !important;
+}
+
+.g-pane-cta {
+  padding: 6px 16px !important;
+  font-size: 0.84rem !important;
+}
+
+/* ۵. گانت‌چارت خط زمان: تخت و یکپارچه */
+.g-gantt-chart-wrap {
+  border: 1px solid var(--gk-border) !important;
+  box-shadow: none !important;
+  padding: 12px 14px !important;
+  background: transparent !important;
+}
+
+.g-gantt-header-scale {
+  margin-bottom: 8px !important;
+  padding-bottom: 6px !important;
+}
+
+.g-gantt-row {
+  padding: 4px 6px !important;
+}
+
+.g-gantt-track-area {
+  height: 24px !important;
+}
+
+.g-gantt-poet-detail {
+  padding: 10px 14px !important;
+  margin-top: 10px !important;
+}
+
+/* ۶. تالار شاعران و آمار: فشرده و چشم‌نواز */
+.g-poets-wrap {
+  padding: 16px 8px !important;
+  margin: 0 !important;
+}
+
+.g-sec-head {
+  margin-bottom: 14px !important;
+}
+
+.g-sec-title {
+  font-size: 1.25rem !important;
+  margin: 0 0 4px !important;
+}
+
+.g-sec-desc {
+  font-size: 0.86rem !important;
+  margin: 0 !important;
+}
+
+.g-stats-section {
+  padding: 12px 8px !important;
+  margin: 0 !important;
+}
+
+.g-stats-strip {
+  gap: 10px !important;
+}
+
+.g-stat-box {
+  padding: 12px 10px !important;
+}
+
+.g-stat-num {
+  font-size: 1.4rem !important;
+}
+
+.g-landing-footer {
+  margin-top: 16px !important;
+  padding: 16px 0 !important;
+}
