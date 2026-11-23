@@ -2584,19 +2584,22 @@ a.card:hover, a.hit:hover { box-shadow: 0 6px 16px rgba(20, 30, 40, 0.08); trans
 /* ==========================================================================
    v39: پنهان‌سازی هوشمند نوار جستجوی هدر در بالای صفحه اول (حل مشکل دو نوار جستجو)
    ========================================================================== */
-@media (min-width: 640px) {
-  body.is-home:not(.scrolled) .search {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-8px);
-    transition: opacity .25s ease, transform .25s ease;
-  }
-  body.is-home.scrolled .search {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-    transition: opacity .25s ease, transform .25s ease;
-  }
+/* مخفی‌سازی کامل نوار بالای صفحه در خانه تا زمان اسکرول به پایین */
+body.is-home .bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .28s cubic-bezier(0.16, 1, 0.3, 1), opacity .2s ease;
+}
+
+body.is-home.scrolled .bar {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 
