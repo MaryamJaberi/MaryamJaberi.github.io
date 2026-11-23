@@ -300,13 +300,13 @@ async function home() {
           <button type="submit">جستجو</button>
         </form>
 
-        <div class="g-hero-suggestions">
-          <span>میانبرهای ابزارها:</span>
-          <a class="g-sugg-pill" href="#/search?q=%D8%B9%D8%B4%D9%82">واژه‌سنج «عشق»</a>
-          <a class="g-sugg-pill" href="#/places">سفر ناصرخسرو</a>
-          <a class="g-sugg-pill" href="#/people">شجره‌نامه رستم</a>
-          <a class="g-sugg-pill" href="#/devices">تشبیه زلف و کمند</a>
-          <a class="g-sugg-pill" href="#/vazn">وزن مفاعیلن</a>
+        <div class="g-hero-suggestions" id="g-hero-interactive-pills">
+          <span style="font-weight:700;">کاوش زنده در ابزارها:</span>
+          <button type="button" class="g-sugg-pill" data-pg="pg-words" data-arg="eshgh">≋ واژه‌سنج «عشق»</button>
+          <button type="button" class="g-sugg-pill" data-pg="pg-places" data-arg="balkh">⌖ سفر ناصرخسرو</button>
+          <button type="button" class="g-sugg-pill" data-pg="pg-people" data-arg="rostam">♙ تبارنامه رستم</button>
+          <button type="button" class="g-sugg-pill" data-pg="pg-devices" data-arg="zolf">✦ تشبیه زلف و کمند</button>
+          <button type="button" class="g-sugg-pill" data-pg="pg-vazn" data-arg="hazaj">♪ وزن مفاعیلن</button>
         </div>
       </div>
     </section>
@@ -347,6 +347,15 @@ async function home() {
           <span>صوت و کتابخانه</span>
         </button>
       </nav>
+
+      <!-- نوار روایت‌گری و کنجکاوی‌های تاریخی (The Pudding & Gapminder style) -->
+      <div class="g-story-bar" id="g-story-bar">
+        <span class="g-story-label">✨ داستان‌های داده‌محور:</span>
+        <button type="button" class="g-story-chip active" data-story="moghol">🔥 فتنه مغول؛ هم‌عصری سعدی و مولانا</button>
+        <button type="button" class="g-story-chip" data-story="tazmin">⇄ گفت‌وگوی پنهان؛ تضمین حافظ از سعدی</button>
+        <button type="button" class="g-story-chip" data-story="eshgh">≋ بسامد نجومی «عشق» در دیوان شمس</button>
+        <button type="button" class="g-story-chip" data-story="safarnama">🐫 هجرت ۸۵۰۰ فرسنگی ناصرخسرو</button>
+      </div>
 
       <div class="g-pg-content">
         <!-- ۱. هم‌عصران (طراحی پیشرفته با الهام از Histography و Gapminder) -->
@@ -804,6 +813,12 @@ async function home() {
           </div>
           <h3 class="g-tc-title">هم‌عصران و خط زمان</h3>
           <p class="g-tc-desc">همه شاعران روی خط زمان و نقشه زادگاه‌ها؛ چه کسانی هم‌زمان می‌زیستند و از هم تأثیر پذیرفتند.</p>
+          <div class="g-tc-micro-viz">
+            <span class="g-mv-label">خط زمان:</span>
+            <span class="g-mv-bar" style="width:25%; background:var(--gk-primary);"></span>
+            <span class="g-mv-bar" style="width:40%; background:var(--gk-lapis);"></span>
+            <span class="g-mv-bar" style="width:35%; background:var(--gk-gold);"></span>
+          </div>
           <div class="g-tc-meta">
             <span>مشاهده خط زمان</span>
             <span aria-hidden="true">➜</span>
@@ -818,6 +833,10 @@ async function home() {
           </div>
           <h3 class="g-tc-title">جای‌ها در شعر و سفر ناصرخسرو</h3>
           <p class="g-tc-desc">سفر هفت‌سالهٔ ناصرخسرو منزل‌به‌منزل روی نقشه، و شهرهایی که شاعران دیگر از آن‌ها سروده‌اند.</p>
+          <div class="g-tc-micro-viz">
+            <span class="g-mv-label">مسیر کاروان:</span>
+            <span class="g-mv-route">بلخ ➜ ری ➜ قاهره ➜ مکه ➜ یمگان</span>
+          </div>
           <div class="g-tc-meta">
             <span>مشاهده اطلس جغرافیا</span>
             <span aria-hidden="true">➜</span>
@@ -832,6 +851,11 @@ async function home() {
           </div>
           <h3 class="g-tc-title">پل‌های تضمین و استقبال</h3>
           <p class="g-tc-desc">تضمین‌ها و بیت‌های مشترک هر شاعر با دیگران با آمار واقعی؛ چه کسی از چه کسی وام گرفت.</p>
+          <div class="g-tc-micro-viz">
+            <span class="g-mv-label">انتقال بیت:</span>
+            <span class="g-mv-chip">سعدی ⇄ حافظ</span>
+            <span class="g-mv-chip">عطار ⇄ مولانا</span>
+          </div>
           <div class="g-tc-meta">
             <span>مشاهده شبکه تضمین</span>
             <span aria-hidden="true">➜</span>
@@ -846,6 +870,10 @@ async function home() {
           </div>
           <h3 class="g-tc-title">مردمان شعر و تبارنامه شاهنامه</h3>
           <p class="g-tc-desc">۶۶۲ شخصیت، خاندان‌ها، خویشاوندی‌ها، پیوندهای سیاسی و نظامی، و بیت‌های گواه شاهنامه.</p>
+          <div class="g-tc-micro-viz">
+            <span class="g-mv-label">سلسله تبار:</span>
+            <span class="g-mv-tree-seq">سام ➜ زال ➜ رستم ➜ سهراب</span>
+          </div>
           <div class="g-tc-meta">
             <span>مشاهده شجره‌نامه‌ها</span>
             <span aria-hidden="true">➜</span>
@@ -860,6 +888,10 @@ async function home() {
           </div>
           <h3 class="g-tc-title">وزن‌ها و بحور عروضی</h3>
           <p class="g-tc-desc">۲۱۲ وزن عروضی با تقطیع هجاها، افاعیل، سهم هر وزن در شعر فارسی و فهرست اشعار هر بحر.</p>
+          <div class="g-tc-micro-viz">
+            <span class="g-mv-label">ضرب‌آهنگ:</span>
+            <span class="g-mv-rhythm">— — U / — U — U / U — — U</span>
+          </div>
           <div class="g-tc-meta">
             <span>کاوش در اوزان</span>
             <span aria-hidden="true">➜</span>
@@ -874,6 +906,10 @@ async function home() {
           </div>
           <h3 class="g-tc-title">آرایه‌های ادبی و تشبیهات</h3>
           <p class="g-tc-desc">تشبیه، استعاره، کنایه و ایهام با نمونه‌های واقعی و جفت‌های مفهومی «این به آن مانند شده».</p>
+          <div class="g-tc-micro-viz">
+            <span class="g-mv-label">مدار استعاره:</span>
+            <span class="g-mv-orbit-txt">زلف ➜ کمند · شب یلدا · سنبل</span>
+          </div>
           <div class="g-tc-meta">
             <span>مشاهده آرایه‌ها</span>
             <span aria-hidden="true">➜</span>
@@ -888,6 +924,13 @@ async function home() {
           </div>
           <h3 class="g-tc-title">جستجو و واژه‌سنج بسامدی</h3>
           <p class="g-tc-desc">جستجوی هوشمند در ۱۳۸ هزار شعر، و تحلیل اینکه کدام شاعر یک واژه را بیشتر به کار برده است.</p>
+          <div class="g-tc-micro-viz">
+            <span class="g-mv-label">بسامد سبک‌ها:</span>
+            <span class="g-mv-spark" style="height:6px;" title="خراسانی"></span>
+            <span class="g-mv-spark" style="height:14px;" title="عراقی"></span>
+            <span class="g-mv-spark" style="height:10px;" title="هندی"></span>
+            <span class="g-mv-spark" style="height:8px;" title="معاصر"></span>
+          </div>
           <div class="g-tc-meta">
             <span>ورود به جستجو</span>
             <span aria-hidden="true">➜</span>
@@ -902,6 +945,10 @@ async function home() {
           </div>
           <h3 class="g-tc-title">کتابخانه من و اتاق خلوت</h3>
           <p class="g-tc-desc">نشان‌ها، یادداشت‌ها، تاریخچه خوانده‌شده‌ها و اتاق خلوت، ذخیره‌شده محلی روی مرورگر شما.</p>
+          <div class="g-tc-micro-viz">
+            <span class="g-mv-label">حریم خصوصی:</span>
+            <span class="g-mv-safe">🛡️ ۱۰۰٪ محلی و بدون سرور</span>
+          </div>
           <div class="g-tc-meta">
             <span>کتابخانه شخصی</span>
             <span aria-hidden="true">➜</span>
@@ -946,31 +993,37 @@ async function home() {
           <span class="g-stat-icon" aria-hidden="true">❦</span>
           <span class="g-stat-num">۲۴۲</span>
           <span class="g-stat-lbl">شاعر پارسی‌گوی</span>
+          <div class="g-stat-gauge"><div style="width: 100%;"></div></div>
         </div>
         <div class="g-stat-box">
           <span class="g-stat-icon" aria-hidden="true">📜</span>
           <span class="g-stat-num">۱۳۸٬۰۰۰+</span>
           <span class="g-stat-lbl">شعر با صوت هم‌گام</span>
+          <div class="g-stat-gauge"><div style="width: 95%; background:var(--gk-gold);"></div></div>
         </div>
         <div class="g-stat-box">
           <span class="g-stat-icon" aria-hidden="true">♙</span>
           <span class="g-stat-num">۶۶۲</span>
           <span class="g-stat-lbl">شخصیت شاهنامه و تبار</span>
+          <div class="g-stat-gauge"><div style="width: 80%; background:var(--gk-lapis);"></div></div>
         </div>
         <div class="g-stat-box">
           <span class="g-stat-icon" aria-hidden="true">♪</span>
           <span class="g-stat-num">۲۱۲</span>
           <span class="g-stat-lbl">بحر و وزن عروضی</span>
+          <div class="g-stat-gauge"><div style="width: 75%; background:var(--gk-ruby);"></div></div>
         </div>
         <div class="g-stat-box">
           <span class="g-stat-icon" aria-hidden="true">✦</span>
           <span class="g-stat-num">۱۶</span>
           <span class="g-stat-lbl">آرایه و تشبیه ادبی</span>
+          <div class="g-stat-gauge"><div style="width: 85%;"></div></div>
         </div>
         <div class="g-stat-box">
           <span class="g-stat-icon" aria-hidden="true">⌖</span>
           <span class="g-stat-num">۲۰۰</span>
           <span class="g-stat-lbl">شهر و دیار در شعر</span>
+          <div class="g-stat-gauge"><div style="width: 70%; background:var(--gk-gold);"></div></div>
         </div>
       </div>
     </section>
@@ -1604,6 +1657,62 @@ async function home() {
       });
     };
   }
+
+  // ۱۲. تعامل هیرو پیلز و هدایت نرم به ابزار مربوطه در آزمایشگاه
+  document.querySelectorAll("#g-hero-interactive-pills .g-sugg-pill").forEach((pill) => {
+    pill.onclick = () => {
+      const pgId = pill.getAttribute("data-pg");
+      const arg = pill.getAttribute("data-arg");
+      const tab = document.querySelector(`.g-pg-tab[data-target="${pgId}"]`);
+      if (tab) tab.click();
+
+      // هدایت زیرگزینه‌ها
+      if (pgId === "pg-words" && arg) {
+        document.querySelector(`#g-word-pills [data-w="${arg}"]`)?.click();
+      } else if (pgId === "pg-places" && arg) {
+        document.querySelector(`#g-journey-stops [data-place="${arg}"]`)?.click();
+      } else if (pgId === "pg-people" && arg) {
+        document.querySelector(`.g-tree-person-btn[data-person="${arg}"]`)?.click();
+      } else if (pgId === "pg-devices" && arg) {
+        document.querySelector(`#g-device-chips [data-concept="${arg}"]`)?.click();
+      } else if (pgId === "pg-vazn" && arg) {
+        document.querySelector(`#g-vazn-switchers [data-v="${arg}"]`)?.click();
+      }
+
+      const playground = document.getElementById("g-tools-playground");
+      if (playground) {
+        playground.scrollIntoView({ behavior: "smooth", block: "start" });
+        playground.style.boxShadow = "0 0 0 3px var(--gk-gold), var(--gk-shadow-lg)";
+        setTimeout(() => {
+          playground.style.boxShadow = "";
+        }, 1200);
+      }
+    };
+  });
+
+  // ۱۳. داستان‌های تعاملی نوار روایت‌گری (Curiosity Hooks)
+  document.querySelectorAll("#g-story-bar .g-story-chip").forEach((btn) => {
+    btn.onclick = () => {
+      document.querySelectorAll("#g-story-bar .g-story-chip").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const story = btn.getAttribute("data-story");
+
+      if (story === "moghol") {
+        document.querySelector('.g-pg-tab[data-target="pg-tree"]')?.click();
+        document.querySelector('.g-tl-btn[data-c="7"]')?.click();
+      } else if (story === "tazmin") {
+        document.querySelector('.g-pg-tab[data-target="pg-bridges"]')?.click();
+        document.querySelector('#g-bridge-switchers [data-b="saadi-hafez"]')?.click();
+      } else if (story === "eshgh") {
+        document.querySelector('.g-pg-tab[data-target="pg-words"]')?.click();
+        document.querySelector('#g-word-pills [data-w="eshgh"]')?.click();
+      } else if (story === "safarnama") {
+        document.querySelector('.g-pg-tab[data-target="pg-places"]')?.click();
+        document.querySelector('#g-journey-stops [data-place="balkh"]')?.click();
+      }
+    };
+  });
+
 }
 
 async function poetsPage(query) {
