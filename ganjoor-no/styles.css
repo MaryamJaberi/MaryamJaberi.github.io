@@ -2598,3 +2598,228 @@ a.card:hover, a.hit:hover { box-shadow: 0 6px 16px rgba(20, 30, 40, 0.08); trans
     transition: opacity .25s ease, transform .25s ease;
   }
 }
+
+
+/* ====================================================
+   CREATIVE DATA VISUALIZATION & DASHBOARD UI KIT
+   (Inspired by The Pudding, Histography, Earth Nullschool,
+    Musicmap, NASA Exoplanets, Gapminder & Data Sketches)
+   ==================================================== */
+
+/* ۱. اسکرابر تاریخی Histography */
+.g-tl-scrubber-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: color-mix(in srgb, var(--paper) 70%, white);
+  padding: 8px 14px;
+  border-radius: var(--gk-radius-full);
+  border: 1px solid var(--gk-border);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.g-tl-scrubber-bar input[type="range"] {
+  flex: 1;
+  accent-color: var(--gk-primary);
+  cursor: pointer;
+  height: 6px;
+}
+
+.g-tl-era-pill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gk-primary);
+  background: var(--gk-primary-soft);
+  border: 1px solid rgba(10, 107, 96, 0.2);
+  padding: 3px 10px;
+  border-radius: var(--gk-radius-full);
+  white-space: nowrap;
+}
+
+.g-poet-track-style {
+  font-size: 0.72rem;
+  color: var(--gk-gold);
+  background: var(--gk-gold-soft);
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+/* ۲. جریان و پل‌های تضمین (Earth Nullschool & Musicmap) */
+.g-bridge-flow-wrap {
+  width: 100%;
+  margin: 4px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.g-bridge-svg-flow {
+  width: 100%;
+  max-width: 420px;
+  height: 38px;
+  overflow: visible;
+}
+
+@keyframes flowDash {
+  from { stroke-dashoffset: 48; }
+  to { stroke-dashoffset: 0; }
+}
+
+.g-flow-stream {
+  stroke: var(--gk-gold);
+  stroke-width: 2.5;
+  stroke-dasharray: 6 6;
+  animation: flowDash 1.4s linear infinite;
+}
+
+.g-bridge-meta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--gk-primary-soft);
+  color: var(--gk-primary);
+  border: 1px solid rgba(10, 107, 96, 0.25);
+  border-radius: var(--gk-radius-full);
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* ۳. مدار منظومه‌ای واژگان (NASA Exoplanets & Information Is Beautiful) */
+.g-orbit-system {
+  position: relative;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: radial-gradient(circle, rgba(10, 107, 96, 0.05) 0%, transparent 70%), #fff;
+  border-radius: var(--gk-radius-md);
+  border: 1px solid var(--gk-border);
+  box-shadow: var(--gk-shadow-sm);
+}
+
+.g-orbit-core-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.g-orbit-core {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gk-primary), #0e8f80);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+  font-weight: 800;
+  box-shadow: 0 0 20px var(--gk-primary-glow);
+  z-index: 2;
+}
+
+.g-orbit-pulse {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(10, 107, 96, 0.35);
+  animation: rotateOrbit 16s linear infinite;
+}
+
+@keyframes rotateOrbit {
+  to { transform: rotate(360deg); }
+}
+
+.g-orbit-satellites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 520px;
+}
+
+.g-sat-bubble {
+  background: #fff;
+  color: var(--gk-navy);
+  border: 1px solid var(--gk-border);
+  border-radius: var(--gk-radius-full);
+  padding: 6px 14px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--gk-shadow-sm);
+  transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.g-sat-bubble:hover, .g-sat-bubble.active {
+  background: var(--gk-primary);
+  color: #fff;
+  border-color: var(--gk-primary);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 12px var(--gk-primary-glow);
+}
+
+.g-sat-bubble-freq {
+  font-size: 0.72rem;
+  opacity: 0.85;
+  background: rgba(0,0,0,0.08);
+  padding: 1px 6px;
+  border-radius: 99px;
+}
+
+.g-sat-bubble.active .g-sat-bubble-freq {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+/* ۴. مسیر کاروان با نوار پیشرفت (Bird Migration Explorer) */
+.g-journey-progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(197, 155, 39, 0.15);
+  border-radius: 99px;
+  margin: 6px 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.g-journey-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gk-gold), var(--gk-primary));
+  border-radius: 99px;
+  transition: width 0.35s ease;
+}
+
+/* ۵. مترونوم نوری و ضرب‌آهنگ عروض (The Pudding) */
+.g-metro-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gk-primary);
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: var(--gk-radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+  box-shadow: 0 3px 10px var(--gk-primary-glow);
+  margin-top: 10px;
+}
+
+.g-metro-play-btn:hover {
+  background: var(--gk-primary-light);
+  transform: translateY(-1px);
+}
