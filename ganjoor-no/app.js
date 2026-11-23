@@ -4172,6 +4172,9 @@ async function render() {
   const query = new URLSearchParams(queryPart || "");
   const parts = pathPart.replace(/^#\/?/, "").split("/").filter(Boolean);
   const path = `#/${parts.join("/")}`;
+  const isHome = !parts.length || path === "#/";
+  document.body.classList.toggle("is-home", isHome);
+  if (!isHome) document.body.classList.remove("scrolled");
   mobile.hidden = true;
   menuBtn.setAttribute("aria-expanded", "false");
   if (input && parts[0] !== "search" && document.activeElement !== input) input.value = "";
@@ -4224,5 +4227,17 @@ form.addEventListener("submit", (event) => {
   mobile.hidden = true;
   location.hash = `#/search?q=${encodeURIComponent(input.value.trim())}`;
 });
+window.addEventListener("scroll", () => {
+  if (document.body.classList.contains("is-home")) {
+    const heroSearch = document.querySelector("#g-search-form");
+    if (heroSearch) {
+      const rect = heroSearch.getBoundingClientRect();
+      document.body.classList.toggle("scrolled", rect.bottom < 60);
+    } else {
+      document.body.classList.toggle("scrolled", window.scrollY > 180);
+    }
+  }
+}, { passive: true });
+
 window.addEventListener("hashchange", render);
 render();
