@@ -296,7 +296,7 @@ async function home() {
         <form class="g-hero-search" id="g-search-form">
           <span class="g-hero-search-icon" aria-hidden="true">⌕</span>
           <input id="g-search-q" name="q" placeholder="جستجوی بیت، واژه، نام شاعر یا آرایه…" autocomplete="off" />
-          <kbd class="g-search-kbd">Ctrl+K</kbd>
+          
           <button type="submit">جستجو</button>
         </form>
 
@@ -363,22 +363,16 @@ async function home() {
           <header class="g-pane-head">
             <div class="g-pane-title-group">
               <div class="g-pane-meta">
-                <span class="g-pg-tag">زمان و مکان</span>
                 <h3 class="g-pg-title">هم‌عصران و خط زمان ۲۴۲ شاعر</h3>
               </div>
               <p class="g-pg-lead">کدام شاعران در یک دوره تاریخی زیسته‌اند و چه دادوستدی با هم داشتند؟ معاصران هر قرن را روی خط زمان بیابید.</p>
             </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/tree">ورود به خط زمان کامل ۲۴۲ شاعر ➜</a>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/tree">مشاهده خط زمان ➜</a>
           </header>
 
           <div class="g-pane-body">
             <div class="g-vis-timeline">
-              <div class="g-tl-scrubber-bar">
-                <span style="font-size:0.78rem; color:var(--muted); font-weight:700;">سال‌شمار:</span>
-                <input type="range" min="4" max="8" step="1" value="7" id="g-tl-range-slider" aria-label="انتخاب قرن هجری" />
-                <span class="g-tl-era-pill" id="g-tl-era-badge">قرن ۷ هجری · عصر ایلخانی</span>
-              </div>
-
+              <!-- دکمه‌های قرون تاریخی -->
               <div class="g-timeline-pills" id="g-timeline-pills">
                 <button class="g-tl-btn" data-c="4">قرن ۴ (سامانیان)</button>
                 <button class="g-tl-btn" data-c="6">قرن ۶ (سلجوقیان)</button>
@@ -386,46 +380,40 @@ async function home() {
                 <button class="g-tl-btn" data-c="8">قرن ۸ (عصر حافظ)</button>
               </div>
 
-              <div class="g-tl-scale" id="g-tl-scale">
-                <span>۶۰۰ هـ</span>
-                <span>۶۳۰ هـ</span>
-                <span>۶۶۰ هـ</span>
-                <span>۶۹۰ هـ</span>
-                <span>۷۲۰ هـ</span>
-              </div>
+              <!-- گانت‌چارت خط زمان واقعی هم‌عصران -->
+              <div class="g-gantt-chart-wrap">
+                <div class="g-gantt-header-scale">
+                  <div class="g-gantt-label-col">شاعر و شهر</div>
+                  <div class="g-gantt-axis-col" id="g-tl-scale">
+                    <span>۶۰۰ هـ</span>
+                    <span>۶۳۰ هـ</span>
+                    <span>۶۶۰ هـ</span>
+                    <span>۶۹۰ هـ</span>
+                    <span>۷۲۰ هـ</span>
+                  </div>
+                </div>
 
-              <div class="g-tl-poet-tracks" id="g-contemp-tracks">
-                <div class="g-poet-track active" data-p="saadi">
-                  <span class="g-poet-track-avatar">س</span>
-                  <div class="g-poet-track-info">
-                    <div class="g-poet-track-name">سعدی شیرازی <span class="g-poet-track-style">سبک عراقی</span></div>
-                    <div class="g-poet-track-dates">۶۰۶ تا ۶۹۰ هـ · شیراز</div>
-                  </div>
-                  <div class="g-poet-track-bar"><div class="g-poet-track-bar-fill" style="width: 85%;"></div></div>
-                </div>
-                <div class="g-poet-track" data-p="mowlavi">
-                  <span class="g-poet-track-avatar" style="background:var(--gk-lapis);">م</span>
-                  <div class="g-poet-track-info">
-                    <div class="g-poet-track-name">مولانا جلال‌الدین <span class="g-poet-track-style">عرفان خراسانی</span></div>
-                    <div class="g-poet-track-dates">۶۰۴ تا ۶۷۲ هـ · بلخ و قونیه</div>
-                  </div>
-                  <div class="g-poet-track-bar"><div class="g-poet-track-bar-fill" style="background:var(--gk-lapis); width: 70%;"></div></div>
-                </div>
-                <div class="g-poet-track" data-p="eraghi">
-                  <span class="g-poet-track-avatar" style="background:var(--gk-gold);">ع</span>
-                  <div class="g-poet-track-info">
-                    <div class="g-poet-track-name">فخرالدین عراقی <span class="g-poet-track-style">غزل قلندری</span></div>
-                    <div class="g-poet-track-dates">۶۱۰ تا ۶۸۸ هـ · همدان و دمشق</div>
-                  </div>
-                  <div class="g-poet-track-bar"><div class="g-poet-track-bar-fill" style="background:var(--gk-gold); width: 80%;"></div></div>
+                <div class="g-gantt-rows" id="g-contemp-tracks">
+                  <!-- با JS پر می‌شود -->
                 </div>
               </div>
 
-              <div class="g-tl-overlap-box" id="g-tl-overlap-note">
-                ✦ سعدی و مولانا بیش از ۶۰ سال هم‌زمان در اوج ایلخانی زیستند؛ یکی در شیراز و دیگری در قونیه.
+              <!-- کارت جزئیات و هم‌پوشانی شاعر انتخابی -->
+              <div class="g-gantt-poet-detail" id="g-gantt-active-detail">
+                <div class="g-gpd-right">
+                  <span class="g-gpd-avatar" id="g-gpd-avatar">س</span>
+                  <div>
+                    <h4 class="g-gpd-name" id="g-gpd-name">سعدی شیرازی</h4>
+                    <p class="g-gpd-sub" id="g-gpd-sub">۶۰۶ تا ۶۹۰ هـ (۸۴ سال حیات) · شیراز · افصح‌المتکلمین</p>
+                  </div>
+                </div>
+                <div class="g-gpd-left">
+                  <span class="g-gpd-contemps" id="g-gpd-contemps">هم‌عصر با: مولانا، فخرالدین عراقی، همام تبریزی</span>
+                  <a class="g-btn g-btn-sm" id="g-gpd-link" href="#/poet/7">دیوان سعدی ➜</a>
+                </div>
               </div>
             </div>
-          </div>
+          </div></div>
         </div>
 
         <!-- ۲. پل‌های تضمین -->
@@ -433,12 +421,11 @@ async function home() {
           <header class="g-pane-head">
             <div class="g-pane-title-group">
               <div class="g-pane-meta">
-                <span class="g-pg-tag">پیوندهای میان شعرها</span>
                 <h3 class="g-pg-title">پل‌های تضمین و شبکه استقبال</h3>
               </div>
               <p class="g-pg-lead">کدام شاعر بیتی از دیگری را عینا وام گرفته و در چه وزنی پاسخ داده است؟ ردیابی پیوندهای نامرئی میان شاهکارهای ادب پارسی.</p>
             </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/bridges/2">کاوش در شبکه کامل تضمین ➜</a>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/bridges/2">مشاهده پل‌های تضمین ➜</a>
           </header>
 
           <div class="g-pane-body">
@@ -491,12 +478,11 @@ async function home() {
           <header class="g-pane-head">
             <div class="g-pane-title-group">
               <div class="g-pane-meta">
-                <span class="g-pg-tag">اسطوره‌ها و تبارشناسی</span>
                 <h3 class="g-pg-title">مردمان شعر و تبارنامه شاهنامه</h3>
               </div>
               <p class="g-pg-lead">تبارشناسی ۶۶۲ شخصیت اساطیری و تاریخی، پیوندهای خویشاوندی، خون‌خواهی‌ها و نبردهای بزرگ شاهنامه فردوسی با ابیات گواه.</p>
             </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/people">مشاهده ۶۶۲ شخصیت شاهنامه ➜</a>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/people">مشاهده تبارنامه ➜</a>
           </header>
 
           <div class="g-pane-body">
@@ -548,12 +534,11 @@ async function home() {
           <header class="g-pane-head">
             <div class="g-pane-title-group">
               <div class="g-pane-meta">
-                <span class="g-pg-tag">زیبایی‌شناسی و استعاره</span>
                 <h3 class="g-pg-title">اطلس آرایه‌ها و منظومه استعارات</h3>
               </div>
               <p class="g-pg-lead">کدام واژگان بیشترین آرایه‌ها را در شعر پدید آورده‌اند؟ در این منظومه واژگانی ببینید شاعران بزرگ واژگان را به چه پدیده‌هایی مانند کرده‌اند.</p>
             </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/devices">ورود به اطلس کامل آرایه‌ها ➜</a>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/devices">مشاهده آرایه‌ها ➜</a>
           </header>
 
           <div class="g-pane-body">
@@ -596,12 +581,11 @@ async function home() {
           <header class="g-pane-head">
             <div class="g-pane-title-group">
               <div class="g-pane-meta">
-                <span class="g-pg-tag">تحلیل آماری و بسامد</span>
                 <h3 class="g-pg-title">واژه‌سنج و جستجوی تحلیلی</h3>
               </div>
               <p class="g-pg-lead">کدام شاعر مفهوم دلخواه شما را بیشتر در شعرش تکرار کرده است؟ مقایسه بسامد کاربرد کلمات، جهان فکری شاعران را آشکار می‌کند.</p>
             </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/search?q=%D8%B9%D8%B4%D9%82">جستجو در متن کامل ۱۳۸ هزار شعر ➜</a>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/search?q=%D8%B9%D8%B4%D9%82">کاوش در واژه‌سنج ➜</a>
           </header>
 
           <div class="g-pane-body">
@@ -648,12 +632,11 @@ async function home() {
           <header class="g-pane-head">
             <div class="g-pane-title-group">
               <div class="g-pane-meta">
-                <span class="g-pg-tag">جغرافیای شعر و سفر</span>
                 <h3 class="g-pg-title">جای‌ها در شعر و سفرنامه ناصرخسرو</h3>
               </div>
               <p class="g-pg-lead">مسیر سفر هفت‌ساله ناصرخسرو قبادیانی را منزل‌به‌منزل دنبال کنید؛ شهرهایی که شاعران دیگر از آن‌ها نام برده‌اند با مختصات تاریخی.</p>
             </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/places">نقشه کامل ۲۰۰ شهر و دیار ➜</a>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/places">مشاهده نقشه جای‌ها ➜</a>
           </header>
 
           <div class="g-pane-body">
@@ -689,12 +672,11 @@ async function home() {
           <header class="g-pane-head">
             <div class="g-pane-title-group">
               <div class="g-pane-meta">
-                <span class="g-pg-tag">موسیقی کلام و عروض</span>
                 <h3 class="g-pg-title">وزن‌ها و مترونوم ضرب‌آهنگ شعر</h3>
               </div>
               <p class="g-pg-lead">گوش خود را با ضرب‌آهنگ‌های عروضی آشنا کنید. کشف کنید حافظ، سعدی و فردوسی احساسات حماسی و عاشقانه را در کدام اوزان جاری ساخته‌اند.</p>
             </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/vazn">کاوش در ۲۱۲ بحر و وزن عروضی ➜</a>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/vazn">کاوش در اوزان ➜</a>
           </header>
 
           <div class="g-pane-body">
@@ -731,12 +713,11 @@ async function home() {
           <header class="g-pane-head">
             <div class="g-pane-title-group">
               <div class="g-pane-meta">
-                <span class="g-pg-tag">خوانش هم‌گام و حریم خصوصی</span>
                 <h3 class="g-pg-title">صوت هم‌گام، اتاق خلوت و کتابخانه</h3>
               </div>
               <p class="g-pg-lead">شعر را با صدای اساتید بشنوید؛ بیت جاری با نوای گوینده زرین و روشن می‌شود. یادداشت‌هایتان کاملاً روی دستگاه خودتان ذخیره می‌شود.</p>
             </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/library">ورود به کتابخانه شخصی ➜</a>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/library">ورود به کتابخانه ➜</a>
           </header>
 
           <div class="g-pane-body">
@@ -895,120 +876,157 @@ async function home() {
     };
   });
 
-  // ۳. ویجت هم‌عصران با اسکرابر تاریخی (Histography & Gapminder)
+  // ۳. خط زمان واقعی و کاربردی هم‌عصران (Gantt Synchrony Chart)
   const timelineData = {
     4: {
-      era: "قرن ۴ هجری · عصر زرین سامانیان",
-      scale: ["۳۰۰ هـ", "۳۳۰ هـ", "۳۶۰ هـ", "۳۹۰ هـ", "۴۲۰ هـ"],
+      minYear: 240,
+      maxYear: 420,
+      scale: ["۲۴۰ هـ", "۲۸۰ هـ", "۳۲۰ هـ", "۳۶۰ هـ", "۴۰۰ هـ", "۴۲۰ هـ"],
       poets: [
-        { name: "رودکی سمرقندی", dates: "۲۴۴ تا ۳۲۹ هـ · سمرقند و بخارا", style: "پدر شعر فارسی", w: "۸۵%", c: "var(--gk-primary)" },
-        { name: "شهید بلخی", dates: "درگذشته ۳۲۵ هـ · بلخ بامی", style: "حکمت و غزل کهن", w: "۶۵%", c: "var(--gk-lapis)" },
-        { name: "دقیقی طوسی", dates: "۳۲۰ تا ۳۶۸ هـ · طوس", style: "گشتاسپ‌نامه", w: "۷۵%", c: "var(--gk-gold)" },
-        { name: "فردوسی طوسی", dates: "۳۲۹ تا ۴۱۶ هـ · طوس", style: "شاهنامه جاودان", w: "۹۰%", c: "var(--gk-ruby)" },
-      ],
-      note: "✦ عصر سامانیان و طلوع زبان فارسی دری در خراسان بزرگ؛ ترجمه متون کهن پهلوی و پیدایش شعر منظوم حماسی.",
+        { id: 24, name: "رودکی سمرقندی", b: 244, d: 329, city: "سمرقند و بخارا", style: "پدر شعر فارسی", c: "var(--gk-primary)", contemps: "شهید بلخی، دقیقی طوسی" },
+        { id: 48, name: "شهید بلخی", b: 260, d: 325, city: "بلخ بامی", style: "حکمت کهن", c: "var(--gk-lapis)", contemps: "رودکی سمرقندی" },
+        { id: 50, name: "دقیقی طوسی", b: 320, d: 368, city: "طوس", style: "حماسه کهن", c: "var(--gk-gold)", contemps: "رودکی، فردوسی طوسی" },
+        { id: 1, name: "فردوسی طوسی", b: 329, d: 416, city: "طوس", style: "شاهنامه جاودان", c: "var(--gk-ruby)", contemps: "دقیقی، عنصری بلخی" },
+      ]
     },
     6: {
-      era: "قرن ۶ هجری · عصر سلجوقیان",
-      scale: ["۵۰۰ هـ", "۵۳۰ هـ", "۵۶۰ هـ", "۵۹۰ هـ", "۶۲۰ هـ"],
+      minYear: 430,
+      maxYear: 620,
+      scale: ["۴۳۰ هـ", "۴۷۰ هـ", "۵۱۰ هـ", "۵۵۰ هـ", "۵۹۰ هـ", "۶۲۰ هـ"],
       poets: [
-        { name: "خیام نیشابوری", dates: "۴۳۹ تا ۵۱۷ هـ · نیشابور", style: "رباعیات فلسفی", w: "۷۵%", c: "var(--gk-primary)" },
-        { name: "سنایی غزنوی", dates: "۴۷۳ تا ۵۳۵ هـ · غزنین", style: "حدیقةالحقیقه", w: "۷۰%", c: "var(--gk-lapis)" },
-        { name: "نظامی گنجوی", dates: "۵۳۵ تا ۶۰۷ هـ · گنجه", style: "خمسه تمثیلی", w: "۸۵%", c: "var(--gk-gold)" },
-        { name: "خاقانی شروانی", dates: "۵۲۰ تا ۵۹۵ هـ · شروان", style: "قصاید فنی", w: "۸۰%", c: "var(--gk-ruby)" },
-      ],
-      note: "✦ عصر سلجوقیان؛ گسترش قصیده فنی، پختگی غزل عرفانی با سنایی و منظومه‌های تمثیلی نظامی در گنجه.",
+        { id: 4, name: "خیام نیشابوری", b: 439, d: 517, city: "نیشابور", style: "رباعیات فلسفی", c: "var(--gk-primary)", contemps: "سنایی غزنوی، خواجه عبدالله انصاری" },
+        { id: 28, name: "سنایی غزنوی", b: 473, d: 535, city: "غزنین", style: "حدیقةالحقیقه", c: "var(--gk-lapis)", contemps: "خیام، مسعود سعد سلمان" },
+        { id: 25, name: "خاقانی شروانی", b: 520, d: 595, city: "شروان و تبریز", style: "قصاید فخیم", c: "var(--gk-ruby)", contemps: "نظامی گنجوی، انوری ابیوردی" },
+        { id: 3, name: "نظامی گنجوی", b: 535, d: 607, city: "گنجه", style: "خمسه تمثیلی", c: "var(--gk-gold)", contemps: "خاقانی شروانی، عطار نیشابوری" },
+      ]
     },
     7: {
-      era: "قرن ۷ هجری · عصر ایلخانی",
+      minYear: 600,
+      maxYear: 720,
       scale: ["۶۰۰ هـ", "۶۳۰ هـ", "۶۶۰ هـ", "۶۹۰ هـ", "۷۲۰ هـ"],
       poets: [
-        { name: "سعدی شیرازی", dates: "۶۰۶ تا ۶۹۰ هـ · شیراز", style: "گلستان و بوستان", w: "۸۵%", c: "var(--gk-primary)" },
-        { name: "مولانا جلال‌الدین", dates: "۶۰۴ تا ۶۷۲ هـ · بلخ و قونیه", style: "مثنوی و دیوان شمس", w: "۷۰%", c: "var(--gk-lapis)" },
-        { name: "عراقی همدانی", dates: "۶۱۰ تا ۶۸۸ هـ · همدان و دمشق", style: "لمعات عرفانی", w: "۸۰%", c: "var(--gk-gold)" },
-        { name: "همام تبریزی", dates: "۶۳۶ تا ۷۱۴ هـ · تبریز", style: "غزل فصیح آذربایجان", w: "۷۵%", c: "var(--gk-ruby)" },
-      ],
-      note: "✦ عصر ایلخانی و فتنه مغول؛ اوج عرفان شورانگیز در قونیه با مولانا و بلوغ غزل فصیح در شیراز با سعدی.",
+        { id: 7, name: "سعدی شیرازی", b: 606, d: 690, city: "شیراز", style: "افصح‌المتکلمین", c: "var(--gk-primary)", contemps: "مولانا، فخرالدین عراقی، همام تبریزی" },
+        { id: 5, name: "مولانا جلال‌الدین", b: 604, d: 672, city: "بلخ و قونیه", style: "مثنوی و دیوان شمس", c: "var(--gk-lapis)", contemps: "سعدی، عطار (دیدار کودکی)، شمس تبریزی" },
+        { id: 26, name: "فخرالدین عراقی", b: 610, d: 688, city: "همدان و دمشق", style: "لمعات عرفانی", c: "var(--gk-gold)", contemps: "سعدی شیرازی، قونیوی، مولانا" },
+        { id: 47, name: "همام تبریزی", b: 636, d: 714, city: "تبریز", style: "غزل فصیح", c: "var(--gk-ruby)", contemps: "سعدی (دیدار در تبریز)، خواجوی کرمانی" },
+      ]
     },
     8: {
-      era: "قرن ۸ هجری · عصر آل مظفر و حافظ",
-      scale: ["۷۰۰ هـ", "۷۳۰ هـ", "۷۶۰ هـ", "۷۹۰ هـ", "۸۲۰ هـ"],
+      minYear: 680,
+      maxYear: 820,
+      scale: ["۶۸۰ هـ", "۷۱۰ هـ", "۷۴۰ هـ", "۷۷۰ هـ", "۸۰۰ هـ", "۸۲۰ هـ"],
       poets: [
-        { name: "خواجوی کرمانی", dates: "۶۸۹ تا ۷۵۳ هـ · کرمان و شیراز", style: "نخلبند شعرا", w: "۷۰%", c: "var(--gk-primary)" },
-        { name: "عبید زاکانی", dates: "۷۰۰ تا ۷۷۲ هـ · قزوین و شیراز", style: "طنز رندانه", w: "۷۵%", c: "var(--gk-lapis)" },
-        { name: "حافظ شیرازی", dates: "۷۲۷ تا ۷۹۲ هـ · شیراز", style: "لسان‌الغیب", w: "۸۰%", c: "var(--gk-gold)" },
-        { name: "سلمان ساوجی", dates: "۷۰۹ تا ۷۷۸ هـ · ساوه و بغداد", style: "قصیده و ترجیع", w: "۷۰%", c: "var(--gk-ruby)" },
-      ],
-      note: "✦ عصر آل اینجو و آل مظفر؛ قرن کمال غزل تلفیقی، ایهام، لطایف رندانه و طنز اجتماعی عبید زاکانی.",
+        { id: 20, name: "خواجوی کرمانی", b: 689, d: 753, city: "کرمان و شیراز", style: "نخلبند شعرا", c: "var(--gk-primary)", contemps: "حافظ، عبید زاکانی، سلمان ساوجی" },
+        { id: 37, name: "عبید زاکانی", b: 700, d: 772, city: "قزوین و شیراز", style: "طنز رندانه", c: "var(--gk-lapis)", contemps: "حافظ شیرازی، خواجوی کرمانی" },
+        { id: 23, name: "سلمان ساوجی", b: 709, d: 778, city: "ساوه و بغداد", style: "قصیده و ترجیع", c: "var(--gk-ruby)", contemps: "حافظ شیرازی، خواجو" },
+        { id: 2, name: "حافظ شیرازی", b: 727, d: 792, city: "شیراز", style: "لسان‌الغیب", c: "var(--gk-gold)", contemps: "خواجوی کرمانی، عبید زاکانی، کمال خجندی" },
+      ]
     },
   };
 
-  function updateCenturyView(c) {
+  function updateGanttTimeline(c) {
     const d = timelineData[c];
     if (!d) return;
 
-    const eraBadge = document.querySelector("#g-tl-era-badge");
-    if (eraBadge) eraBadge.textContent = d.era;
-
+    // محور افقی زمان
     const scale = document.querySelector("#g-tl-scale");
     if (scale) scale.innerHTML = d.scale.map((s) => `<span>${s}</span>`).join("");
 
-    const tracks = document.querySelector("#g-contemp-tracks");
-    if (tracks) {
-      tracks.innerHTML = d.poets
-        .map(
-          (p) => `
-          <div class="g-poet-track">
-            <span class="g-poet-track-avatar" style="background:${p.c};">${esc(p.name.slice(0, 1))}</span>
-            <div class="g-poet-track-info">
-              <div class="g-poet-track-name">${esc(p.name)} <span class="g-poet-track-style">${esc(p.style)}</span></div>
-              <div class="g-poet-track-dates">${esc(p.dates)}</div>
+    const totalYears = d.maxYear - d.minYear;
+    const tracksContainer = document.querySelector("#g-contemp-tracks");
+    if (tracksContainer) {
+      tracksContainer.innerHTML = d.poets
+        .map((p, idx) => {
+          // محاسبه موقعیت گانت در راستای افقی (در RTL: right offset)
+          const offsetPct = Math.max(0, Math.min(100, ((p.b - d.minYear) / totalYears) * 100));
+          const widthPct = Math.max(8, Math.min(100 - offsetPct, ((p.d - p.b) / totalYears) * 100));
+          const age = p.d - p.b;
+
+          return `
+          <div class="g-gantt-row ${idx === 0 ? "active" : ""}" data-idx="${idx}">
+            <div class="g-gantt-poet-label">
+              <span class="g-gantt-avatar" style="background:${p.c};">${esc(p.name.slice(0, 1))}</span>
+              <div class="g-gantt-name-wrap">
+                <strong>${esc(p.name)}</strong>
+                <small>${esc(p.city)}</small>
+              </div>
             </div>
-            <div class="g-poet-track-bar"><div class="g-poet-track-bar-fill" style="background:${p.c}; width: ${p.w};"></div></div>
-          </div>`,
-        )
+            <div class="g-gantt-track-area">
+              <div class="g-gantt-bar" style="right:${offsetPct.toFixed(1)}%; width:${widthPct.toFixed(1)}%; background:${p.c};">
+                <span class="g-gantt-bar-years">${p.b} تا ${p.d} هـ (${age} سال)</span>
+              </div>
+            </div>
+          </div>`;
+        })
         .join("");
 
-      // اتصال کلیک به نوارهای شاعران
-      tracks.querySelectorAll(".g-poet-track").forEach((track) => {
-        track.onclick = () => {
-          tracks.querySelectorAll(".g-poet-track").forEach((t) => t.classList.remove("active"));
-          track.classList.add("active");
-          const name = track.querySelector(".g-poet-track-name")?.textContent || "";
-          const note = document.querySelector("#g-tl-overlap-note");
-          if (note) {
-            note.innerHTML = `✦ شاعر انتخابی: <strong>${name}</strong> · مشاهده دیوان و هم‌عصران روی خط زمان کامل`;
+      // اتصال کلیک به هر سطر گانت
+      const rows = tracksContainer.querySelectorAll(".g-gantt-row");
+      rows.forEach((row) => {
+        row.onclick = () => {
+          rows.forEach((r) => r.classList.remove("active"));
+          row.classList.add("active");
+          const idx = parseInt(row.getAttribute("data-idx"), 10);
+          const poet = d.poets[idx];
+          if (poet) {
+            const avatar = document.querySelector("#g-gpd-avatar");
+            if (avatar) {
+              avatar.textContent = poet.name.slice(0, 1);
+              avatar.style.background = poet.c;
+            }
+            const nameEl = document.querySelector("#g-gpd-name");
+            if (nameEl) nameEl.textContent = poet.name;
+            const subEl = document.querySelector("#g-gpd-sub");
+            if (subEl) subEl.textContent = `${poet.b} تا ${poet.d} هـ (${poet.d - poet.b} سال حیات) · ${poet.city} · ${poet.style}`;
+            const contempsEl = document.querySelector("#g-gpd-contemps");
+            if (contempsEl) contempsEl.textContent = `هم‌عصر با: ${poet.contemps}`;
+            const linkEl = document.querySelector("#g-gpd-link");
+            if (linkEl) {
+              linkEl.href = `#/poet/${poet.id}`;
+              linkEl.textContent = `دیوان ${poet.name} ➜`;
+            }
           }
         };
       });
+
+      // تنظیم کارت اول پیش‌فرض
+      if (d.poets[0]) {
+        const p0 = d.poets[0];
+        const avatar = document.querySelector("#g-gpd-avatar");
+        if (avatar) {
+          avatar.textContent = p0.name.slice(0, 1);
+          avatar.style.background = p0.c;
+        }
+        const nameEl = document.querySelector("#g-gpd-name");
+        if (nameEl) nameEl.textContent = p0.name;
+        const subEl = document.querySelector("#g-gpd-sub");
+        if (subEl) subEl.textContent = `${p0.b} تا ${p0.d} هـ (${p0.d - p0.b} سال حیات) · ${p0.city} · ${p0.style}`;
+        const contempsEl = document.querySelector("#g-gpd-contemps");
+        if (contempsEl) contempsEl.textContent = `هم‌عصر با: ${p0.contemps}`;
+        const linkEl = document.querySelector("#g-gpd-link");
+        if (linkEl) {
+          linkEl.href = `#/poet/${p0.id}`;
+          linkEl.textContent = `دیوان ${p0.name} ➜`;
+        }
+      }
     }
 
-    const note = document.querySelector("#g-tl-overlap-note");
-    if (note) note.textContent = d.note;
-
-    // هماهنگ‌سازی دکمه‌ها و اسلایدر
+    // هماهنگی دکمه‌ها
     document.querySelectorAll(".g-tl-btn").forEach((b) => {
       b.classList.toggle("active", b.getAttribute("data-c") === String(c));
     });
-    const slider = document.querySelector("#g-tl-range-slider");
-    if (slider) slider.value = c;
   }
 
   document.querySelectorAll(".g-tl-btn").forEach((btn) => {
     btn.onclick = () => {
       const c = btn.getAttribute("data-c");
-      updateCenturyView(c);
+      updateGanttTimeline(c);
     };
   });
 
-  const tlSlider = document.querySelector("#g-tl-range-slider");
-  if (tlSlider) {
-    tlSlider.oninput = () => {
-      let val = tlSlider.value;
-      if (val === "5") val = "6"; // اگر روی ۵ بود به ۶ هدایت شود
-      updateCenturyView(val);
-    };
-  }
+  // مقداردهی اولیه قرن ۷
+  updateGanttTimeline(7);
+
 
   // ۴. ویجت پل‌های تضمین (Pair Switcher با جریان متحرک)
   const bridgeData = {
