@@ -1079,6 +1079,19 @@ async function home() {
     },
   };
 
+  // تعامل کلیک روی نوارهای شاعر در خط زمان
+  document.querySelectorAll(".g-poet-track").forEach((track) => {
+    track.onclick = () => {
+      document.querySelectorAll(".g-poet-track").forEach((t) => t.classList.remove("active"));
+      track.classList.add("active");
+      const name = track.querySelector(".g-poet-track-name")?.textContent || "";
+      const note = document.querySelector("#g-tl-overlap-note");
+      if (note) {
+        note.innerHTML = `✦ شاعر انتخابی: <strong>${name}</strong> · مشاهده دیوان و هم‌عصران روی خط زمان کامل`;
+      }
+    };
+  });
+
   document.querySelectorAll(".g-tl-btn").forEach((btn) => {
     btn.onclick = () => {
       document.querySelectorAll(".g-tl-btn").forEach((b) => b.classList.remove("active"));
@@ -1413,6 +1426,19 @@ async function home() {
       }
     };
   });
+
+  // پخش/توقف شبیه‌ساز صوت
+  const audioMock = document.querySelector(".g-audio-player-mock");
+  if (audioMock) {
+    audioMock.style.cursor = "pointer";
+    audioMock.onclick = () => {
+      const bars = audioMock.querySelectorAll(".g-audio-bar");
+      const isPaused = bars[0]?.style.animationPlayState === "paused";
+      bars.forEach((b) => (b.style.animationPlayState = isPaused ? "running" : "paused"));
+      const lbl = audioMock.querySelector("span");
+      if (lbl) lbl.textContent = isPaused ? "در حال پخش خوانش هم‌گام..." : "خوانش هم‌گام (برای پخش کلیک کنید)";
+    };
+  }
 
   // ۱۰. فیلتر موضوعی کارت‌های ابزارها
   const filterBtns = document.querySelectorAll(".g-filter-btn");
