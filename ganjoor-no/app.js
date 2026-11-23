@@ -287,16 +287,11 @@ async function home() {
     <!-- ۱. بخش هیرو: متمرکز، بدون دکمه‌های زائد و بدون کارت شعر -->
     <section class="g-hero">
       <div class="g-hero-wrap">
-        <div class="g-hero-badge">
-          <span class="g-pulse-dot" aria-hidden="true"></span>
-          <span>نسل نو خوانش و ابزارهای پژوهشی شعر فارسی</span>
-        </div>
+
         <h1 class="g-hero-title">
           اقلیم شعر پارسی با <span>ابزارهای نو</span>
         </h1>
-        <p class="g-hero-lead">
-          کشف خط زمان هم‌عصران، پل‌های تضمین، تبارشناسی پهلوانان شاهنامه، کالبدشکافی آرایه‌های ادبی و بسامد واژه‌ها در یک تجربه دیداری پویا.
-        </p>
+
 
         <form class="g-hero-search" id="g-search-form">
           <span class="g-hero-search-icon" aria-hidden="true">⌕</span>
@@ -318,11 +313,7 @@ async function home() {
 
     <!-- ۲. آزمایشگاه تعاملی و ویترین زنده ابزارها (اولویت اول بعد از هیرو) -->
     <section class="g-playground" id="g-tools-playground">
-      <div class="g-sec-head" style="padding: 24px 20px 0;">
-        <span class="g-sec-kicker">✦ پیش‌نمایش تعاملی</span>
-        <h2 class="g-sec-title">ابزارها را همین‌جا امتحان کنید</h2>
-        <p class="g-sec-desc">روی هر ابزار بزنید تا نحوه کار، داده‌های واقعی و رابط کاربری آن را ببینید.</p>
-      </div>
+
 
       <nav class="g-pg-nav" role="tablist" aria-label="ابزارهای گنجور نو">
         <button class="g-pg-tab active" role="tab" aria-selected="true" data-target="pg-tree">
@@ -763,9 +754,7 @@ async function home() {
     <!-- ۳. راهنمای نیازمحور و دسته‌بندی همه ابزارها -->
     <section class="g-catalog-section">
       <div class="g-sec-head">
-        <span class="g-sec-kicker">✦ دسته‌بندی موضوعی</span>
         <h2 class="g-sec-title">فهرست همه ابزارهای گنجور نو</h2>
-        <p class="g-sec-desc">با کلیک روی دسته‌ها ابزار متناسب با نیاز خود را بیابید.</p>
       </div>
 
       <div class="g-filter-bar" id="g-filter-bar">
