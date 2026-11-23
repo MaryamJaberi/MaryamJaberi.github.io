@@ -311,7 +311,7 @@ async function home() {
       </div>
     </section>
 
-    <!-- ۲. آزمایشگاه تعاملی و ویترین زنده ابزارها (اولویت اول بعد از هیرو) -->
+        <!-- ۲. استودیوی تعاملی ابزارها (مرکز اصلی و ویترین زنده تمام ابزارها با عرض کامل) -->
     <section class="g-playground" id="g-tools-playground">
       <nav class="g-pg-nav" role="tablist" aria-label="ابزارهای گنجور نو">
         <button class="g-pg-tab active" role="tab" aria-selected="true" data-target="pg-tree">
@@ -348,7 +348,7 @@ async function home() {
         </button>
       </nav>
 
-      <!-- نوار روایت‌گری و کنجکاوی‌های تاریخی (The Pudding & Gapminder style) -->
+      <!-- نوار روایت‌گری داده‌محور -->
       <div class="g-story-bar" id="g-story-bar">
         <span class="g-story-label">✨ داستان‌های داده‌محور:</span>
         <button type="button" class="g-story-chip active" data-story="moghol">🔥 فتنه مغول؛ هم‌عصری سعدی و مولانا</button>
@@ -358,26 +358,23 @@ async function home() {
       </div>
 
       <div class="g-pg-content">
-        <!-- ۱. هم‌عصران (طراحی پیشرفته با الهام از Histography و Gapminder) -->
+        <!-- ۱. هم‌عصران -->
         <div class="g-pg-pane active" id="pg-tree" role="tabpanel">
-          <div class="g-pg-info">
-            <span class="g-pg-tag">زمان و مکان</span>
-            <h3 class="g-pg-title">هم‌عصران و خط زمان ۲۴۲ شاعر</h3>
-            <p class="g-pg-lead">
-              کدام شاعران در یک دوره زمانی زیسته‌اند و چه کسانی با هم دادوستد شعری داشتند؟ بر روی خط زمان و نقشه زادگاه‌ها، معاصران هر قرن را بیابید.
-            </p>
-            <ul class="g-pg-features">
-              <li>خط زمان ۲۴۲ شاعر از قرن ۳ هجری تا عصر معاصر</li>
-              <li>نمایش دوره هم‌پوشانی زیست شاعران و وقایع تاریخی</li>
-              <li>اتصال متقابل به نقشه جغرافیایی زادگاه‌ها</li>
-            </ul>
-            <a class="g-btn g-btn-primary" href="#/tree">ورود به خط زمان کامل هم‌عصران ➜</a>
-          </div>
-          <div class="g-pg-preview">
+          <header class="g-pane-head">
+            <div class="g-pane-title-group">
+              <div class="g-pane-meta">
+                <span class="g-pg-tag">زمان و مکان</span>
+                <h3 class="g-pg-title">هم‌عصران و خط زمان ۲۴۲ شاعر</h3>
+              </div>
+              <p class="g-pg-lead">کدام شاعران در یک دوره تاریخی زیسته‌اند و چه دادوستدی با هم داشتند؟ معاصران هر قرن را روی خط زمان بیابید.</p>
+            </div>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/tree">ورود به خط زمان کامل ۲۴۲ شاعر ➜</a>
+          </header>
+
+          <div class="g-pane-body">
             <div class="g-vis-timeline">
-              <!-- کنترل‌گر اسکرابر تاریخی Histography -->
               <div class="g-tl-scrubber-bar">
-                <span style="font-size:0.75rem; color:var(--muted); font-weight:700;">سال‌شمار:</span>
+                <span style="font-size:0.78rem; color:var(--muted); font-weight:700;">سال‌شمار:</span>
                 <input type="range" min="4" max="8" step="1" value="7" id="g-tl-range-slider" aria-label="انتخاب قرن هجری" />
                 <span class="g-tl-era-pill" id="g-tl-era-badge">قرن ۷ هجری · عصر ایلخانی</span>
               </div>
@@ -431,30 +428,27 @@ async function home() {
           </div>
         </div>
 
-        <!-- ۲. پل‌های تضمین (با جریان منحنی SVG متحرک الهام از Musicmap و Nullschool) -->
+        <!-- ۲. پل‌های تضمین -->
         <div class="g-pg-pane" id="pg-bridges" role="tabpanel">
-          <div class="g-pg-info">
-            <span class="g-pg-tag">پیوندهای میان شعرها</span>
-            <h3 class="g-pg-title">پل‌های تضمین و شبکه استقبال</h3>
-            <p class="g-pg-lead">
-              کدام شاعر بیتی از دیگری را عینا وام گرفته و در چه وزنی پاسخ داده است؟ ردیابی پیوندهای نامرئی میان شاهکارهای ادب پارسی.
-            </p>
-            <ul class="g-pg-features">
-              <li>شناسایی هوشمند ابیات مشترک و تضمین‌شده</li>
-              <li>تعیین جهت دقیق الهام (شاعر پیشین به پسین)</li>
-              <li>استقبال‌های هم‌وزن و هم‌قافیه میان دیوان‌ها</li>
-            </ul>
-            <a class="g-btn g-btn-primary" href="#/bridges/2">کاوش در پل‌های تضمین حافظ ➜</a>
-          </div>
-          <div class="g-pg-preview">
+          <header class="g-pane-head">
+            <div class="g-pane-title-group">
+              <div class="g-pane-meta">
+                <span class="g-pg-tag">پیوندهای میان شعرها</span>
+                <h3 class="g-pg-title">پل‌های تضمین و شبکه استقبال</h3>
+              </div>
+              <p class="g-pg-lead">کدام شاعر بیتی از دیگری را عینا وام گرفته و در چه وزنی پاسخ داده است؟ ردیابی پیوندهای نامرئی میان شاهکارهای ادب پارسی.</p>
+            </div>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/bridges/2">کاوش در شبکه کامل تضمین ➜</a>
+          </header>
+
+          <div class="g-pane-body">
             <div class="g-vis-bridge">
-              <div style="display:flex; justify-content:center; gap:6px; margin-bottom:4px;" id="g-bridge-switchers">
+              <div style="display:flex; justify-content:center; gap:8px; margin-bottom:8px;" id="g-bridge-switchers">
                 <button class="g-dev-chip active" data-b="saadi-hafez">سعدی ➜ حافظ</button>
                 <button class="g-dev-chip" data-b="kamal-hafez">کمال خجندی ➜ حافظ</button>
                 <button class="g-dev-chip" data-b="attar-mowlavi">عطار ➜ مولانا</button>
               </div>
 
-              <!-- جریان ارتباطی متحرک SVG -->
               <div class="g-bridge-flow-wrap">
                 <svg class="g-bridge-svg-flow" viewBox="0 0 400 44" preserveAspectRatio="none">
                   <path d="M 60 22 C 160 2, 240 42, 340 22" fill="none" class="g-flow-stream" />
@@ -485,29 +479,27 @@ async function home() {
                   </p>
                 </div>
               </div>
-              <div style="font-size:0.82rem; color:var(--gk-primary); text-align:center; font-weight:700;" id="g-bridge-fact">
+              <div style="font-size:0.85rem; color:var(--gk-primary); text-align:center; font-weight:700; margin-top:6px;" id="g-bridge-fact">
                 حافظ در مقطع این غزل مشهور، با ذکر نام شیخ سعدی بیت او را عینا تضمین کرده است.
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ۳. مردمان شعر و شاهنامه (تبارنامه سلسله‌مراتبی با الهام از Musicmap) -->
+        <!-- ۳. مردمان شعر و شاهنامه -->
         <div class="g-pg-pane" id="pg-people" role="tabpanel">
-          <div class="g-pg-info">
-            <span class="g-pg-tag">اسطوره‌ها و تبارشناسی</span>
-            <h3 class="g-pg-title">مردمان شعر و تبارنامه شاهنامه</h3>
-            <p class="g-pg-lead">
-              تبارشناسی ۶۶۲ شخصیت اساطیری و تاریخی، پیوندهای خویشاوندی، خون‌خواهی‌ها و نبردهای بزرگ شاهنامه فردوسی با بیت‌های گواه.
-            </p>
-            <ul class="g-pg-features">
-              <li>شجره‌نامه تصویری خاندان‌های پهلوانی سام و نریمان</li>
-              <li>۳۲۷ پیوند خویشاوندی و ۳۲۴ رابطه سیاسی/نظامی</li>
-              <li>بیت‌های شاهد از شاهنامه برای تک‌تک نسبت‌ها</li>
-            </ul>
-            <a class="g-btn g-btn-primary" href="#/people">مشاهده ۶۶۲ شخصیت شاهنامه ➜</a>
-          </div>
-          <div class="g-pg-preview">
+          <header class="g-pane-head">
+            <div class="g-pane-title-group">
+              <div class="g-pane-meta">
+                <span class="g-pg-tag">اسطوره‌ها و تبارشناسی</span>
+                <h3 class="g-pg-title">مردمان شعر و تبارنامه شاهنامه</h3>
+              </div>
+              <p class="g-pg-lead">تبارشناسی ۶۶۲ شخصیت اساطیری و تاریخی، پیوندهای خویشاوندی، خون‌خواهی‌ها و نبردهای بزرگ شاهنامه فردوسی با ابیات گواه.</p>
+            </div>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/people">مشاهده ۶۶۲ شخصیت شاهنامه ➜</a>
+          </header>
+
+          <div class="g-pane-body">
             <div class="g-vis-tree">
               <div class="g-tree-grid">
                 <div>
@@ -551,44 +543,40 @@ async function home() {
           </div>
         </div>
 
-        <!-- ۴. آرایه‌ها (منظومه خورشیدی واژگان با الهام از NASA Exoplanets و Information Is Beautiful) -->
+        <!-- ۴. آرایه‌ها -->
         <div class="g-pg-pane" id="pg-devices" role="tabpanel">
-          <div class="g-pg-info">
-            <span class="g-pg-tag">زیبایی‌شناسی و استعاره</span>
-            <h3 class="g-pg-title">اطلس آرایه‌ها و منظومه استعارات</h3>
-            <p class="g-pg-lead">
-              کدام واژگان بیشترین آرایه‌ها را در شعر پدید آورده‌اند؟ در این منظومه واژگانی ببینید شاعران بزرگ جهان واژگان را به چه پدیده‌هایی مانند کرده‌اند.
-            </p>
-            <ul class="g-pg-features">
-              <li>۱۶ آرایه ادبی دسته‌بندی‌شده با بسامد دقیق</li>
-              <li>ماتریس مدار واژگان (این واژه به چه مانند شده است)</li>
-              <li>نمونه ابیات با جایگاه دقیق واژه‌های سازنده آرایه</li>
-            </ul>
-            <a class="g-btn g-btn-primary" href="#/devices">ورود به اطلس آرایه‌ها ➜</a>
-          </div>
-          <div class="g-pg-preview">
+          <header class="g-pane-head">
+            <div class="g-pane-title-group">
+              <div class="g-pane-meta">
+                <span class="g-pg-tag">زیبایی‌شناسی و استعاره</span>
+                <h3 class="g-pg-title">اطلس آرایه‌ها و منظومه استعارات</h3>
+              </div>
+              <p class="g-pg-lead">کدام واژگان بیشترین آرایه‌ها را در شعر پدید آورده‌اند؟ در این منظومه واژگانی ببینید شاعران بزرگ واژگان را به چه پدیده‌هایی مانند کرده‌اند.</p>
+            </div>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/devices">ورود به اطلس کامل آرایه‌ها ➜</a>
+          </header>
+
+          <div class="g-pane-body">
             <div class="g-vis-metaphor">
-              <div style="display:flex; justify-content:center; gap:6px;" id="g-device-chips">
+              <div style="display:flex; justify-content:center; gap:8px;" id="g-device-chips">
                 <button class="g-dev-chip active" data-concept="zolf">زلف و گیسو</button>
                 <button class="g-dev-chip" data-concept="lab">لب و دهان</button>
                 <button class="g-dev-chip" data-concept="cheshm">چشم و نگاه</button>
                 <button class="g-dev-chip" data-concept="rokh">رخسار و چهره</button>
               </div>
 
-              <!-- مدار منظومه‌ای واژگان (Word Solar System) -->
               <div class="g-orbit-system">
                 <div class="g-orbit-core-wrap">
                   <div class="g-orbit-pulse"></div>
                   <div class="g-orbit-core" id="g-orbit-core-label">زلف</div>
                 </div>
-                <div style="font-size:0.75rem; color:var(--muted); font-weight:700;">اقمار استعاری و تشبیه‌ها (برای مشاهده بیت کلیک کنید):</div>
+                <div style="font-size:0.78rem; color:var(--muted); font-weight:700;">اقمار استعاری و تشبیه‌ها (روی هر قمر بزنید):</div>
                 <div class="g-orbit-satellites" id="g-metaphor-tags">
-                  <button class="g-sat-bubble active" data-quote="«تاب بنفشه می‌دهد طره مشک‌سای تو»">کمند صیاد <span class="g-sat-bubble-freq">۷۴٪</span></button>
-                  <button class="g-sat-bubble" data-quote="«شبی گیسو فروهشته به دامن»">شب تار و یلدا <span class="g-sat-bubble-freq">۶۲٪</span></button>
-                  <button class="g-sat-bubble" data-quote="«بر عارض سمن‌بر، زلف بنفشه‌گونش»">مشک تاتار <span class="g-sat-bubble-freq">۵۸٪</span></button>
-                  <button class="g-sat-bubble" data-quote="«دام دل‌هاست گیسوی چو چنبر»">دام بلا <span class="g-sat-bubble-freq">۴۵٪</span></button>
-                  <button class="g-sat-bubble" data-quote="«سنبل زلفین او بوی گلاب آورد»">سنبل خوشبو <span class="g-sat-bubble-freq">۳۹٪</span></button>
-                  <button class="g-sat-bubble" data-quote="«سلسلهٔ موی دوست حلقهٔ دام بلاست»">زنجیر دیوانگی <span class="g-sat-bubble-freq">۳۱٪</span></button>
+                  <button class="g-sat-bubble active" data-idx="0">کمند صیاد <span class="g-sat-bubble-freq">۷۴٪</span></button>
+                  <button class="g-sat-bubble" data-idx="1">شب تار و یلدا <span class="g-sat-bubble-freq">۶۲٪</span></button>
+                  <button class="g-sat-bubble" data-idx="2">مشک تاتار <span class="g-sat-bubble-freq">۵۸٪</span></button>
+                  <button class="g-sat-bubble" data-idx="3">دام بلا <span class="g-sat-bubble-freq">۴۵٪</span></button>
+                  <button class="g-sat-bubble" data-idx="4">سنبل خوشبو <span class="g-sat-bubble-freq">۳۹٪</span></button>
                 </div>
               </div>
 
@@ -603,24 +591,22 @@ async function home() {
           </div>
         </div>
 
-        <!-- ۵. واژه‌سنج (داشبورد آماری مقایسه‌ای با الهام از Gapminder و Our World in Data) -->
+        <!-- ۵. واژه‌سنج -->
         <div class="g-pg-pane" id="pg-words" role="tabpanel">
-          <div class="g-pg-info">
-            <span class="g-pg-tag">تحلیل آماری و بسامد</span>
-            <h3 class="g-pg-title">واژه‌سنج و جستجوی تحلیلی</h3>
-            <p class="g-pg-lead">
-              کدام شاعر مفهوم دلخواه شما را بیشتر در شعرش تکرار کرده است؟ مقایسه بسامد کاربرد کلمات، جهان فکری شاعران را آشکار می‌کند.
-            </p>
-            <ul class="g-pg-features">
-              <li>جستجوی درجا در متن کامل ۱۳۸ هزار شعر فارسی</li>
-              <li>محاسبه آنی بسامد واژه به تفکیک دیوان هر شاعر</li>
-              <li>نمودار میله‌ای مقایسه‌ای میان سبک‌های عراقی، خراسانی و هندی</li>
-            </ul>
-            <a class="g-btn g-btn-primary" href="#/search?q=%D8%B9%D8%B4%D9%82">جستجو در واژه‌سنج ➜</a>
-          </div>
-          <div class="g-pg-preview">
+          <header class="g-pane-head">
+            <div class="g-pane-title-group">
+              <div class="g-pane-meta">
+                <span class="g-pg-tag">تحلیل آماری و بسامد</span>
+                <h3 class="g-pg-title">واژه‌سنج و جستجوی تحلیلی</h3>
+              </div>
+              <p class="g-pg-lead">کدام شاعر مفهوم دلخواه شما را بیشتر در شعرش تکرار کرده است؟ مقایسه بسامد کاربرد کلمات، جهان فکری شاعران را آشکار می‌کند.</p>
+            </div>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/search?q=%D8%B9%D8%B4%D9%82">جستجو در متن کامل ۱۳۸ هزار شعر ➜</a>
+          </header>
+
+          <div class="g-pane-body">
             <div class="g-vis-words">
-              <div style="display:flex; justify-content:center; gap:6px; margin-bottom:6px;" id="g-word-pills">
+              <div style="display:flex; justify-content:center; gap:8px; margin-bottom:8px;" id="g-word-pills">
                 <button class="g-dev-chip active" data-w="eshgh">واژه «عشق»</button>
                 <button class="g-dev-chip" data-w="kherad">واژه «خرد»</button>
                 <button class="g-dev-chip" data-w="mey">واژه «می / باده»</button>
@@ -629,50 +615,48 @@ async function home() {
               <div class="g-word-stat-card">
                 <div class="g-word-bars" id="g-word-bars">
                   <div class="g-w-bar-row">
-                    <span>مولانا <small style="color:var(--muted); font-size:0.75rem;">(عراقی)</small></span>
+                    <span>مولانا <small style="color:var(--muted); font-size:0.75rem;">(سبک عراقی)</small></span>
                     <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: 95%;"></div></div>
                     <bdi>۶,۴۳۰</bdi>
                   </div>
                   <div class="g-w-bar-row">
-                    <span>سعدی <small style="color:var(--muted); font-size:0.75rem;">(عراقی)</small></span>
+                    <span>سعدی <small style="color:var(--muted); font-size:0.75rem;">(سبک عراقی)</small></span>
                     <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: 45%;"></div></div>
                     <bdi>۱,۱۸۰</bdi>
                   </div>
                   <div class="g-w-bar-row">
-                    <span>حافظ <small style="color:var(--muted); font-size:0.75rem;">(عراقی)</small></span>
+                    <span>حافظ <small style="color:var(--muted); font-size:0.75rem;">(سبک عراقی)</small></span>
                     <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: 30%;"></div></div>
                     <bdi>۲۶۵</bdi>
                   </div>
                   <div class="g-w-bar-row">
-                    <span>فردوسی <small style="color:var(--muted); font-size:0.75rem;">(خراسانی)</small></span>
+                    <span>فردوسی <small style="color:var(--muted); font-size:0.75rem;">(سبک خراسانی)</small></span>
                     <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: 10%;"></div></div>
                     <bdi>۴۲</bdi>
                   </div>
                 </div>
               </div>
-              <div style="text-align:center; font-size:0.82rem; color:var(--muted);" id="g-word-insight">
+              <div style="text-align:center; font-size:0.85rem; color:var(--muted);" id="g-word-insight">
                 مولانا با ۶۴۳۰ بار کاربرد واژه «عشق»، پیشتاز بی‌رقیب این مفهوم در ادب فارسی است.
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ۶. جای‌ها در شعر (مسیر کاروان با الهام از Bird Migration Explorer و The Museum of Maps) -->
+        <!-- ۶. جای‌ها در شعر -->
         <div class="g-pg-pane" id="pg-places" role="tabpanel">
-          <div class="g-pg-info">
-            <span class="g-pg-tag">جغرافیای شعر و سفر</span>
-            <h3 class="g-pg-title">جای‌ها در شعر و سفرنامه ناصرخسرو</h3>
-            <p class="g-pg-lead">
-              مسیر سفر هفت‌ساله ناصرخسرو قبادیانی را منزل‌به‌منزل دنبال کنید؛ شهرهایی که شاعران دیگر از آن‌ها نام برده‌اند با مختصات تاریخی.
-            </p>
-            <ul class="g-pg-features">
-              <li>ایستگاه‌های کاروان سفرنامه با سال هجری و مسافت</li>
-              <li>۲۰۰ شهر و مکان تاریخی پیوندخورده با ابیات کهن</li>
-              <li>روایت تاریخی دیدار با قطران تبریزی و اقامت مصر</li>
-            </ul>
-            <a class="g-btn g-btn-primary" href="#/places">نقشه کامل جای‌ها در شعر ➜</a>
-          </div>
-          <div class="g-pg-preview">
+          <header class="g-pane-head">
+            <div class="g-pane-title-group">
+              <div class="g-pane-meta">
+                <span class="g-pg-tag">جغرافیای شعر و سفر</span>
+                <h3 class="g-pg-title">جای‌ها در شعر و سفرنامه ناصرخسرو</h3>
+              </div>
+              <p class="g-pg-lead">مسیر سفر هفت‌ساله ناصرخسرو قبادیانی را منزل‌به‌منزل دنبال کنید؛ شهرهایی که شاعران دیگر از آن‌ها نام برده‌اند با مختصات تاریخی.</p>
+            </div>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/places">نقشه کامل ۲۰۰ شهر و دیار ➜</a>
+          </header>
+
+          <div class="g-pane-body">
             <div class="g-vis-journey">
               <div class="g-stepper-track" id="g-journey-stops">
                 <button class="g-step-node active" data-place="balkh" data-progress="16"><span class="g-step-num">۱</span><span>بلخ (۴۳۷ هـ)</span></button>
@@ -683,7 +667,6 @@ async function home() {
                 <button class="g-step-node" data-place="yumgan" data-progress="100"><span class="g-step-num">۶</span><span>یمگان بدخشان</span></button>
               </div>
 
-              <!-- نوار پیشرفت پیمایش مسافت -->
               <div class="g-journey-progress-track">
                 <div class="g-journey-progress-fill" id="g-journey-bar" style="width: 16%;"></div>
               </div>
@@ -701,37 +684,35 @@ async function home() {
           </div>
         </div>
 
-        <!-- ۷. وزن‌ها (مترونوم نوری و ضرب‌آهنگ با الهام از The Pudding) -->
+        <!-- ۷. وزن‌ها -->
         <div class="g-pg-pane" id="pg-vazn" role="tabpanel">
-          <div class="g-pg-info">
-            <span class="g-pg-tag">موسیقی کلام و عروض</span>
-            <h3 class="g-pg-title">وزن‌ها و مترونوم ضرب‌آهنگ شعر</h3>
-            <p class="g-pg-lead">
-              گوش خود را با ضرب‌آهنگ‌های عروضی آشنا کنید. کشف کنید حافظ، سعدی و فردوسی احساسات حماسی و عاشقانه را در کدام اوزان جاری ساخته‌اند.
-            </p>
-            <ul class="g-pg-features">
-              <li>۲۱۲ بحر و وزن عروضی دسته‌بندی‌شده و استاندارد</li>
-              <li>تفکیک ارکان هجایی (کوتاه، بلند و کشیده) با مترونوم</li>
-              <li>یافتن نزدیک‌ترین وزن‌ها به شعر مورد نظر شما</li>
-            </ul>
-            <a class="g-btn g-btn-primary" href="#/vazn">ورود به دنیای وزن‌ها ➜</a>
-          </div>
-          <div class="g-pg-preview">
+          <header class="g-pane-head">
+            <div class="g-pane-title-group">
+              <div class="g-pane-meta">
+                <span class="g-pg-tag">موسیقی کلام و عروض</span>
+                <h3 class="g-pg-title">وزن‌ها و مترونوم ضرب‌آهنگ شعر</h3>
+              </div>
+              <p class="g-pg-lead">گوش خود را با ضرب‌آهنگ‌های عروضی آشنا کنید. کشف کنید حافظ، سعدی و فردوسی احساسات حماسی و عاشقانه را در کدام اوزان جاری ساخته‌اند.</p>
+            </div>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/vazn">کاوش در ۲۱۲ بحر و وزن عروضی ➜</a>
+          </header>
+
+          <div class="g-pane-body">
             <div class="g-vis-vazn">
-              <div style="display:flex; justify-content:center; gap:6px;" id="g-vazn-switchers">
+              <div style="display:flex; justify-content:center; gap:8px;" id="g-vazn-switchers">
                 <button class="g-dev-chip active" data-v="modare">بحر مضارع</button>
                 <button class="g-dev-chip" data-v="ramal">بحر رمل</button>
                 <button class="g-dev-chip" data-v="hazaj">بحر هزج</button>
               </div>
               <div class="g-metronome-box">
-                <div style="font-size:0.82rem; color:var(--muted);" id="g-vazn-label">بحر مضارع مثمن اخرب مکفوف محذوف</div>
+                <div style="font-size:0.85rem; color:var(--muted);" id="g-vazn-label">بحر مضارع مثمن اخرب مکفوف محذوف</div>
                 <div class="g-syllable-beats" id="g-syllable-beats">
                   <span class="g-syl-beat pulse">مَفْعُولُ</span>
                   <span class="g-syl-beat">فَاعِلاتُ</span>
                   <span class="g-syl-beat">مَفَاعِیلُ</span>
                   <span class="g-syl-beat">فَاعِلُن</span>
                 </div>
-                <div style="font-size:0.78rem; color:var(--gk-gold); font-weight:700;" id="g-vazn-pattern">ضرب هجاها: — — U / — U — U / U — — U / — U —</div>
+                <div style="font-size:0.8rem; color:var(--gk-gold); font-weight:700;" id="g-vazn-pattern">ضرب هجاها: — — U / — U — U / U — — U / — U —</div>
                 <button class="g-metro-play-btn" id="g-metro-play-trigger">▶ اجرای ضرب‌آهنگ نوری</button>
               </div>
               <div class="g-ms-card answer" id="g-vazn-sample">
@@ -745,27 +726,25 @@ async function home() {
           </div>
         </div>
 
-        <!-- ۸. صوت و کتابخانه (خوانش هم‌گام و امنیت با الهام از Europeana) -->
+        <!-- ۸. صوت و کتابخانه -->
         <div class="g-pg-pane" id="pg-library" role="tabpanel">
-          <div class="g-pg-info">
-            <span class="g-pg-tag">خوانش هم‌گام و حریم خصوصی</span>
-            <h3 class="g-pg-title">صوت هم‌گام، اتاق خلوت و کتابخانه</h3>
-            <p class="g-pg-lead">
-              شعر را با صدای اساتید بشنوید؛ بیت جاری با نوای گوینده به نرمی زرین و روشن می‌شود. تمام یادداشت‌هایتان کاملاً روی دستگاه خودتان ذخیره می‌شود.
-            </p>
-            <ul class="g-pg-features">
-              <li>پخش صوتی با هایلایت مصرع‌به‌مصرع هم‌گام با صوت</li>
-              <li>اتاق خلوت: حالت خوانش متمرکز بدون حواس‌پرتی</li>
-              <li>ذخیره‌سازی کاملاً آفلاین و محلی بدون نیاز به لاگین</li>
-            </ul>
-            <a class="g-btn g-btn-primary" href="#/library">ورود به کتابخانه من ➜</a>
-          </div>
-          <div class="g-pg-preview">
+          <header class="g-pane-head">
+            <div class="g-pane-title-group">
+              <div class="g-pane-meta">
+                <span class="g-pg-tag">خوانش هم‌گام و حریم خصوصی</span>
+                <h3 class="g-pg-title">صوت هم‌گام، اتاق خلوت و کتابخانه</h3>
+              </div>
+              <p class="g-pg-lead">شعر را با صدای اساتید بشنوید؛ بیت جاری با نوای گوینده زرین و روشن می‌شود. یادداشت‌هایتان کاملاً روی دستگاه خودتان ذخیره می‌شود.</p>
+            </div>
+            <a class="g-btn g-btn-primary g-pane-cta" href="#/library">ورود به کتابخانه شخصی ➜</a>
+          </header>
+
+          <div class="g-pane-body">
             <div class="g-vis-audio">
               <div class="g-audio-player-mock">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
-                  <span style="font-size:0.85rem; font-weight:700; color:var(--gk-primary);">خوانش غزل با صدای استاد</span>
-                  <span style="font-size:0.75rem; color:var(--muted);"><bdi>01:14 / 03:20</bdi></span>
+                  <span style="font-size:0.88rem; font-weight:700; color:var(--gk-primary);">خوانش غزل با صدای استاد</span>
+                  <span style="font-size:0.78rem; color:var(--muted);"><bdi>01:14 / 03:20</bdi></span>
                 </div>
                 <div class="g-audio-wave-row">
                   <span class="g-audio-bar" style="height:12px;"></span>
@@ -781,179 +760,12 @@ async function home() {
                   <p class="g-ms-text" style="color:var(--muted);">«هواداران کویش را چو جان خویشتن دارم»</p>
                 </div>
               </div>
-              <div style="text-align:center; font-size:0.8rem; color:var(--gk-primary); font-weight:700;">
+              <div style="text-align:center; font-size:0.82rem; color:var(--gk-primary); font-weight:700;">
                 🛡️ ۱۰۰٪ محلی و خصوصی · بدون ذخیره روی سرور و بدون ردیابی
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ۳. راهنمای نیازمحور و دسته‌بندی همه ابزارها -->
-    <section class="g-catalog-section">
-      <div class="g-sec-head">
-        <h2 class="g-sec-title">فهرست همه ابزارهای گنجور نو</h2>
-      </div>
-
-      <div class="g-filter-bar" id="g-filter-bar">
-        <button class="g-filter-btn active" data-cat="all">همه ابزارها (۸)</button>
-        <button class="g-filter-btn" data-cat="c-time">زمان و مکان</button>
-        <button class="g-filter-btn" data-cat="c-links">پیوندها و تبارها</button>
-        <button class="g-filter-btn" data-cat="c-lang">زبان، وزن و بلاغت</button>
-        <button class="g-filter-btn" data-cat="c-read">پژوهش و خوانش</button>
-      </div>
-
-      <div class="g-tools-grid" id="g-tools-grid">
-        <!-- ابزار ۱: هم‌عصران -->
-        <a class="g-tool-card c-time" href="#/tree">
-          <div class="g-tc-head">
-            <span class="g-tc-icon" aria-hidden="true">❦</span>
-            <span class="g-tc-badge">زمان و مکان</span>
-          </div>
-          <h3 class="g-tc-title">هم‌عصران و خط زمان</h3>
-          <p class="g-tc-desc">همه شاعران روی خط زمان و نقشه زادگاه‌ها؛ چه کسانی هم‌زمان می‌زیستند و از هم تأثیر پذیرفتند.</p>
-          <div class="g-tc-micro-viz">
-            <span class="g-mv-label">خط زمان:</span>
-            <span class="g-mv-bar" style="width:25%; background:var(--gk-primary);"></span>
-            <span class="g-mv-bar" style="width:40%; background:var(--gk-lapis);"></span>
-            <span class="g-mv-bar" style="width:35%; background:var(--gk-gold);"></span>
-          </div>
-          <div class="g-tc-meta">
-            <span>مشاهده خط زمان</span>
-            <span aria-hidden="true">➜</span>
-          </div>
-        </a>
-
-        <!-- ابزار ۲: جای‌ها در شعر -->
-        <a class="g-tool-card c-time" href="#/places">
-          <div class="g-tc-head">
-            <span class="g-tc-icon" aria-hidden="true">⌖</span>
-            <span class="g-tc-badge">زمان و مکان</span>
-          </div>
-          <h3 class="g-tc-title">جای‌ها در شعر و سفر ناصرخسرو</h3>
-          <p class="g-tc-desc">سفر هفت‌سالهٔ ناصرخسرو منزل‌به‌منزل روی نقشه، و شهرهایی که شاعران دیگر از آن‌ها سروده‌اند.</p>
-          <div class="g-tc-micro-viz">
-            <span class="g-mv-label">مسیر کاروان:</span>
-            <span class="g-mv-route">بلخ ➜ ری ➜ قاهره ➜ مکه ➜ یمگان</span>
-          </div>
-          <div class="g-tc-meta">
-            <span>مشاهده اطلس جغرافیا</span>
-            <span aria-hidden="true">➜</span>
-          </div>
-        </a>
-
-        <!-- ابزار ۳: پل‌های تضمین -->
-        <a class="g-tool-card c-links" href="#/bridges/2">
-          <div class="g-tc-head">
-            <span class="g-tc-icon" aria-hidden="true">⇄</span>
-            <span class="g-tc-badge">پیوندها</span>
-          </div>
-          <h3 class="g-tc-title">پل‌های تضمین و استقبال</h3>
-          <p class="g-tc-desc">تضمین‌ها و بیت‌های مشترک هر شاعر با دیگران با آمار واقعی؛ چه کسی از چه کسی وام گرفت.</p>
-          <div class="g-tc-micro-viz">
-            <span class="g-mv-label">انتقال بیت:</span>
-            <span class="g-mv-chip">سعدی ⇄ حافظ</span>
-            <span class="g-mv-chip">عطار ⇄ مولانا</span>
-          </div>
-          <div class="g-tc-meta">
-            <span>مشاهده شبکه تضمین</span>
-            <span aria-hidden="true">➜</span>
-          </div>
-        </a>
-
-        <!-- ابزار ۴: مردمان شعر -->
-        <a class="g-tool-card c-links" href="#/people">
-          <div class="g-tc-head">
-            <span class="g-tc-icon" aria-hidden="true">♙</span>
-            <span class="g-tc-badge">پیوندها</span>
-          </div>
-          <h3 class="g-tc-title">مردمان شعر و تبارنامه شاهنامه</h3>
-          <p class="g-tc-desc">۶۶۲ شخصیت، خاندان‌ها، خویشاوندی‌ها، پیوندهای سیاسی و نظامی، و بیت‌های گواه شاهنامه.</p>
-          <div class="g-tc-micro-viz">
-            <span class="g-mv-label">سلسله تبار:</span>
-            <span class="g-mv-tree-seq">سام ➜ زال ➜ رستم ➜ سهراب</span>
-          </div>
-          <div class="g-tc-meta">
-            <span>مشاهده شجره‌نامه‌ها</span>
-            <span aria-hidden="true">➜</span>
-          </div>
-        </a>
-
-        <!-- ابزار ۵: وزن‌ها -->
-        <a class="g-tool-card c-lang" href="#/vazn">
-          <div class="g-tc-head">
-            <span class="g-tc-icon" aria-hidden="true">♪</span>
-            <span class="g-tc-badge">زبان و بلاغت</span>
-          </div>
-          <h3 class="g-tc-title">وزن‌ها و بحور عروضی</h3>
-          <p class="g-tc-desc">۲۱۲ وزن عروضی با تقطیع هجاها، افاعیل، سهم هر وزن در شعر فارسی و فهرست اشعار هر بحر.</p>
-          <div class="g-tc-micro-viz">
-            <span class="g-mv-label">ضرب‌آهنگ:</span>
-            <span class="g-mv-rhythm">— — U / — U — U / U — — U</span>
-          </div>
-          <div class="g-tc-meta">
-            <span>کاوش در اوزان</span>
-            <span aria-hidden="true">➜</span>
-          </div>
-        </a>
-
-        <!-- ابزار ۶: آرایه‌ها -->
-        <a class="g-tool-card c-lang" href="#/devices">
-          <div class="g-tc-head">
-            <span class="g-tc-icon" aria-hidden="true">✦</span>
-            <span class="g-tc-badge">زبان و بلاغت</span>
-          </div>
-          <h3 class="g-tc-title">آرایه‌های ادبی و تشبیهات</h3>
-          <p class="g-tc-desc">تشبیه، استعاره، کنایه و ایهام با نمونه‌های واقعی و جفت‌های مفهومی «این به آن مانند شده».</p>
-          <div class="g-tc-micro-viz">
-            <span class="g-mv-label">مدار استعاره:</span>
-            <span class="g-mv-orbit-txt">زلف ➜ کمند · شب یلدا · سنبل</span>
-          </div>
-          <div class="g-tc-meta">
-            <span>مشاهده آرایه‌ها</span>
-            <span aria-hidden="true">➜</span>
-          </div>
-        </a>
-
-        <!-- ابزار ۷: واژه‌سنج و جستجو -->
-        <a class="g-tool-card c-read" href="#/search">
-          <div class="g-tc-head">
-            <span class="g-tc-icon" aria-hidden="true">≋</span>
-            <span class="g-tc-badge">پژوهش و خوانش</span>
-          </div>
-          <h3 class="g-tc-title">جستجو و واژه‌سنج بسامدی</h3>
-          <p class="g-tc-desc">جستجوی هوشمند در ۱۳۸ هزار شعر، و تحلیل اینکه کدام شاعر یک واژه را بیشتر به کار برده است.</p>
-          <div class="g-tc-micro-viz">
-            <span class="g-mv-label">بسامد سبک‌ها:</span>
-            <span class="g-mv-spark" style="height:6px;" title="خراسانی"></span>
-            <span class="g-mv-spark" style="height:14px;" title="عراقی"></span>
-            <span class="g-mv-spark" style="height:10px;" title="هندی"></span>
-            <span class="g-mv-spark" style="height:8px;" title="معاصر"></span>
-          </div>
-          <div class="g-tc-meta">
-            <span>ورود به جستجو</span>
-            <span aria-hidden="true">➜</span>
-          </div>
-        </a>
-
-        <!-- ابزار ۸: کتابخانه من -->
-        <a class="g-tool-card c-read" href="#/library">
-          <div class="g-tc-head">
-            <span class="g-tc-icon" aria-hidden="true">☆</span>
-            <span class="g-tc-badge">پژوهش و خوانش</span>
-          </div>
-          <h3 class="g-tc-title">کتابخانه من و اتاق خلوت</h3>
-          <p class="g-tc-desc">نشان‌ها، یادداشت‌ها، تاریخچه خوانده‌شده‌ها و اتاق خلوت، ذخیره‌شده محلی روی مرورگر شما.</p>
-          <div class="g-tc-micro-viz">
-            <span class="g-mv-label">حریم خصوصی:</span>
-            <span class="g-mv-safe">🛡️ ۱۰۰٪ محلی و بدون سرور</span>
-          </div>
-          <div class="g-tc-meta">
-            <span>کتابخانه شخصی</span>
-            <span aria-hidden="true">➜</span>
-          </div>
-        </a>
       </div>
     </section>
 
@@ -1028,36 +840,12 @@ async function home() {
       </div>
     </section>
 
-    <!-- ۶. پرسش‌های متداول و مرام‌نامه گنجور نو -->
-    <section class="g-faq-section">
-      <div class="g-sec-head">
-        <span class="g-sec-kicker">✦ درباره و مرام‌نامه</span>
-        <h2 class="g-sec-title">پرسش‌های متداول</h2>
+    <!-- پاورقی بی‌آلایش و پیوند داده‌ها -->
+    <footer class="g-landing-footer">
+      <div class="g-manifesto">
+        داده‌های متنی و صوتی از پایگاه باز <a href="https://ganjoor.net" rel="noreferrer" target="_blank">گنجور</a> تأمین می‌شود.
       </div>
-
-      <div class="g-faq-grid">
-        <div class="g-faq-card">
-          <h3 class="g-faq-q">آیا استفاده از گنجور نو رایگان و بدون ثبت‌نام است؟</h3>
-          <p class="g-faq-a">بله، کاملاً رایگان و آزاد است. هیچ ثبت‌نام یا اطلاعات کاربری از شما درخواست نمی‌شود و بدون هرگونه تبلیغات ارائه می‌گردد.</p>
-        </div>
-        <div class="g-faq-card">
-          <h3 class="g-faq-q">اطلاعات و اشعار از کجا تأمین می‌شوند؟</h3>
-          <p class="g-faq-a">متن‌ها، فایل‌های صوتی و فهرست‌ها مستقیماً از رابط باز گنجور (api.ganjoor.net) و مخزن ganjoor-data تأمین می‌شوند.</p>
-        </div>
-        <div class="g-faq-card">
-          <h3 class="g-faq-q">نشان‌ها و یادداشت‌های من کجا ذخیره می‌شوند؟</h3>
-          <p class="g-faq-a">تمامی نشان‌ها، شعرهای خوانده‌شده و یادداشت‌های شخصی صرفاً درون حافظه محلی مرورگر دستگاه شما نگهداری می‌شوند و به هیچ سروری ارسال نمی‌شوند.</p>
-        </div>
-        <div class="g-faq-card">
-          <h3 class="g-faq-q">چگونه می‌توانم وزن یا آرایه یک شعر را ببینم؟</h3>
-          <p class="g-faq-a">داخل صفحه هر شعر، زبانه‌های اختصاصی برای مشاهده وزن عروضی، تضمین‌ها، استقبال‌ها، ترانه‌ها، آرایه‌های ادبی و خوانش صوتی فراهم است.</p>
-        </div>
-      </div>
-
-      <div class="g-manifesto" style="margin-top:20px;">
-        متن و صوت از <a href="https://ganjoor.net" rel="noreferrer" target="_blank">گنجور</a> می‌آید. این سایت رسمی گنجور نیست؛ طراحی و ساخت رابط با <a href="https://maryamjaberi.github.io/fa/">مریم جابری</a> است.
-      </div>
-    </section>
+    </footer>
   </div>
   `;
 
@@ -1628,23 +1416,7 @@ async function home() {
     };
   }
 
-  // ۱۰. فیلتر موضوعی کارت‌های ابزارها
-  const filterBtns = document.querySelectorAll(".g-filter-btn");
-  const toolCards = document.querySelectorAll(".g-tool-card");
-  filterBtns.forEach((btn) => {
-    btn.onclick = () => {
-      filterBtns.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const cat = btn.getAttribute("data-cat");
-      toolCards.forEach((card) => {
-        if (cat === "all" || card.classList.contains(cat)) {
-          card.style.display = "flex";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    };
-  });
+// فیلتر کاتالوگ با حذف کارت‌های تکراری پالایش شد
 
   // ۱۱. فیلتر درجا روی تالار شاعران نامدار
   const poetFilterInput = document.querySelector("#g-poet-filter-input");
