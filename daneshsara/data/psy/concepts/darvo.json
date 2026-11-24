@@ -1,0 +1,97 @@
+{
+ "id": "psy:darvo",
+ "kind": "concept",
+ "title": {
+  "fa": "DARVO: انکار، حمله، وارونه‌کردن نقش‌ها",
+  "en": "DARVO",
+  "nl": "DARVO"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "الگویی که جنیفر فرید نام‌گذاری کرد: کسی که به او اعتراض شده، اول انکار می‌کند، بعد به معترض حمله می‌کند، و در پایان جای قربانی و متهم را عوض می‌کند — «قربانی واقعی من هستم».",
+  "en": "Deny, Attack, Reverse Victim and Offender: the pattern Jennifer Freyd named.",
+  "nl": "Deny, Attack, Reverse Victim and Offender: the pattern Jennifer Freyd named."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هارسی و فرید در آزمایش نشان دادند که شنیدن همین الگو اثر دارد: کسانی که روایتی با DARVO خواندند، فرد معترض را کم‌اعتبارتر و مقصرتر دیدند و متهم را بی‌گناه‌تر.",
+    "en": "Harsey and Freyd showed that exposure to DARVO lowers perceived victim credibility.",
+    "nl": "Harsey and Freyd showed that exposure to DARVO lowers perceived victim credibility."
+   },
+   "sources": [
+    "src:f32ea35e49"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در همان کار دیده شد که هدف DARVO معمولاً خودسرزنشی بیشتری تجربه می‌کند: تکرار این الگو آدم را به این نتیجه می‌رساند که «لابد من زیادی بزرگش کردم».",
+    "en": "Targets of DARVO report more self-blame.",
+    "nl": "Targets of DARVO report more self-blame."
+   },
+   "sources": [
+    "src:f32ea35e49"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دانستن نام این الگو خودش اثر دارد: در پژوهش‌های بعدی، کسانی که از پیش DARVO را می‌شناختند کمتر فریبش را خوردند. این یکی از معدود جاهایی است که «آگاهی» به‌تنهایی سپر می‌شود.",
+    "en": "Knowing the pattern reduces its effect — rare evidence that awareness alone helps.",
+    "nl": "Knowing the pattern reduces its effect — rare evidence that awareness alone helps."
+   },
+   "sources": [
+    "src:f32ea35e49"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:gaslighting",
+   "rel": "see-also",
+   "note": {
+    "fa": "دست بردن در واقعیت",
+    "en": "Altering reality",
+    "nl": "Altering reality"
+   }
+  },
+  {
+   "to": "psy:defensive-reactions",
+   "rel": "part-of",
+   "note": {
+    "fa": "واکنش‌های دفاعی",
+    "en": "Defensive reactions",
+    "nl": "Defensive reactions"
+   }
+  },
+  {
+   "to": "psy:victim-mindset",
+   "rel": "contrasts",
+   "note": {
+    "fa": "تفاوتش با نقش قربانی",
+    "en": "How it differs from the victim role",
+    "nl": "How it differs from the victim role"
+   }
+  }
+ ],
+ "people": [
+  "core:jennifer-freyd"
+ ],
+ "sources": [
+  "src:f32ea35e49"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "سه حرکت پشت سر هم:\n\n<b>انکار.</b> «چنین چیزی نشده.» «تو داری خیال می‌کنی.»\n\n<b>حمله.</b> «تو چرا این را حالا می‌گویی؟» «خودت یادت رفته چه کردی؟» معمولاً حمله به انگیزه و شخصیت معترض است، نه به حرفش.\n\n<b>وارونه‌سازی.</b> «من قربانی این ماجرا هستم.» «ببین با من چه کردی.» حالا کسی که اعتراض کرده باید توضیح بدهد و دلجویی کند.\n\nاین الگو مخصوص رابطهٔ دونفره نیست: همین ترتیب در سازمان‌ها هم دیده می‌شود، وقتی به جای رسیدگی به شکایت، به شاکی پرداخته می‌شود.",
+  "en": "Three moves: deny, attack, reverse — also seen in organisations that investigate the complainant.",
+  "nl": "Three moves: deny, attack, reverse — also seen in organisations that investigate the complainant."
+ }
+}

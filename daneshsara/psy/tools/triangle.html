@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مثلث قربانی، ظالم، ناجی — و راه بیرون | ویکی روان‌شناسی | دانش‌سرا</title>
+<meta name="description" content="مثلث نمایشی کارپمن: سه گوشه، سود پنهان هر کدام، و اینکه چطور نقش‌ها می‌چرخند. بعد شش گام برای بیرون آمدن از یک موقعیت واقعی خودتان.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<style>
+:root{--c:var(--fam-psy)}
+h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
+p.lead{color:var(--ink-2);max-width:46em;line-height:2;margin:0 0 var(--s4);font-size:1.05rem}
+.note{padding:var(--s3) var(--s4);border-radius:var(--r-md);font-size:var(--small);line-height:1.9;color:var(--ink-2);max-width:60em;margin:0 0 var(--s3)}
+.note.p{background:color-mix(in srgb,var(--ok) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 35%,var(--line))}
+.note.g{background:var(--surface);border:1px solid var(--line)}
+section{padding-block:var(--s5);border-top:1px solid var(--line)}
+h2{font-size:var(--h3);margin:0 0 var(--s3)}
+h3{font-size:var(--h4);margin:var(--s4) 0 var(--s2)}
+.stage{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:var(--s6);align-items:start}
+@media (max-width:900px){.stage{grid-template-columns:minmax(0,1fr)}}
+svg.tri{width:100%;height:auto;display:block;direction:ltr;overflow:visible}
+svg.tri .nd{cursor:pointer}
+svg.tri .lbl{font:650 19px inherit;fill:#fff;text-anchor:middle;pointer-events:none}
+svg.tri .sub{font:400 12.5px inherit;fill:var(--ink-3);text-anchor:middle;pointer-events:none}
+svg.tri .edge{stroke:var(--line-strong);stroke-width:2;fill:none}
+svg.tri .arr{stroke:var(--ink-3);stroke-width:1.6;fill:none;opacity:.55;stroke-dasharray:4 4}
+.panel{border:1px solid var(--line);border-inline-start:4px solid var(--k);border-radius:var(--r-lg);background:var(--surface);padding:var(--s5)}
+.panel h3{margin:0 0 var(--s3);color:var(--k);font-size:var(--h4)}
+.panel dl{margin:0;display:grid;gap:12px}
+.panel dt{font-size:var(--chip);color:var(--ink-3);font-weight:650;margin-bottom:3px}
+.panel dd{margin:0;line-height:1.95;color:var(--ink-2);font-size:var(--small)}
+.panel .turn{margin-top:var(--s3);background:color-mix(in srgb,var(--warn) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--warn) 35%,var(--line));border-radius:var(--r-md);padding:10px 12px;font-size:var(--small);line-height:1.95}
+.outs{display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.out{border:1px solid var(--line);border-top:4px solid var(--k);border-radius:var(--r-lg);padding:var(--s4);background:var(--surface)}
+.out b.h{display:block;font-size:var(--h4);color:var(--k);margin-bottom:4px}
+.out .was{font-size:var(--chip);color:var(--ink-3);margin-bottom:10px}
+.out .q{font-weight:650;line-height:1.9;margin:0 0 10px}
+.out p{margin:0 0 10px;font-size:var(--small);line-height:1.95;color:var(--ink-2)}
+.out ul{margin:0;padding-inline-start:1.1em;display:grid;gap:6px;font-size:var(--small);color:var(--ink-2);line-height:1.9}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3);max-width:46em;counter-reset:s}
+ol.steps li{counter-increment:s;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);padding:var(--s4)}
+ol.steps .qt{font-weight:650;line-height:1.9;margin:0 0 10px}
+ol.steps .qt::before{content:counter(s,persian) ". ";color:var(--c)}
+ol.steps textarea{font:inherit;width:100%;min-height:62px;padding:10px 12px;border:1px solid var(--line-strong);border-radius:var(--r-md);background:var(--paper);color:var(--ink);line-height:1.9;resize:vertical}
+ol.steps .pick{display:flex;gap:8px;flex-wrap:wrap}
+ol.steps .pick button{font:inherit;padding:8px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--paper);color:var(--ink-2);cursor:pointer}
+ol.steps .pick button[aria-pressed=true]{background:var(--k);border-color:var(--k);color:#fff;font-weight:650}
+.act{display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--s4);align-items:center}
+button.b{font:inherit;padding:10px 24px;border-radius:var(--r-full);border:1px solid var(--c);background:var(--c);color:var(--paper);cursor:pointer;font-weight:650}
+button.g{font:inherit;padding:9px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:none;color:var(--ink-2);cursor:pointer}
+#card{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);padding:var(--s5);max-width:46em;line-height:2;white-space:pre-wrap}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--s3)}
+.links a{font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink-2)}
+.links a:hover{border-color:var(--c);color:var(--c)}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><a href="../../psy/tools/">ابزارها</a><i>›</i><b>مثلث قربانی، ظالم، ناجی — و راه بیرون</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap">
+<h1>مثلث قربانی، ظالم، ناجی — و راه بیرون</h1>
+<p class="lead">استیون کارپمن، روان‌پزشک، در ۱۹۶۸ متوجه شد که بیشتر دعواهای تکراری روی یک مثلث می‌چرخند: یکی قربانی است، یکی مقصر، و یکی به کمک می‌آید. نکتهٔ اصلی او این بود که <b>این‌ها آدم نیستند، نقش‌اند</b> — و همان‌ها که در یک دقیقه نجات‌دهنده‌اند، دقیقهٔ بعد سرزنش‌گر می‌شوند.</p>
+<p class="lead">این مثلث برای <b>موقعیت‌های تکراری روزمره</b> است: دعوای همیشگی سر پول، نگرانی تکراری برای یک عضو خانواده، گره‌ای که در تیم کار باز نمی‌شود. برای رابطه‌ای که در آن ترس، تهدید یا آسیب هست به کار نمی‌آید؛ آن‌جا موضوع ایمنی است، نه نقش.</p>
+<div class="note p">روی هر گوشه بزنید. بعد، در بخش دوم، یک موقعیت واقعی خودتان را قدم‌به‌قدم از مثلث بیرون بیاورید.</div>
+</main>
+<main class="wrap" style="padding-top:0">
+<section>
+<h2>سه گوشه</h2>
+<div class="stage">
+ <div>
+ <svg class="tri" viewBox="-30 -20 660 460" role="img" aria-label="مثلث نمایشی کارپمن: ناجی، ظالم، قربانی">
+  <path class="edge" d="M80,150 L520,150 L300,330 Z"/>
+  <path class="arr" d="M300,318 C200,300 110,250 92,172" marker-end="url(#ah)"/>
+  <path class="arr" d="M104,142 C200,110 420,110 500,142" marker-end="url(#ah)"/>
+  <path class="arr" d="M512,166 C494,250 400,300 312,320" marker-end="url(#ah)"/>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+   <path d="M0,0 L10,5 L0,10 z" fill="var(--ink-3)" opacity=".55"/></marker></defs>
+  <g class="nd" data-k="r"><circle cx="80" cy="150" r="62" fill="#2f7f8a"/><text class="lbl" x="80" y="157">ناجی</text><text class="sub" x="80" y="232">«بگذار خودم انجام بدهم»</text></g>
+  <g class="nd" data-k="p"><circle cx="520" cy="150" r="62" fill="#9a3b3b"/><text class="lbl" x="520" y="157">ظالم</text><text class="sub" x="520" y="232">«تقصیر توست»</text></g>
+  <g class="nd" data-k="v"><circle cx="300" cy="330" r="62" fill="#5b6b8a"/><text class="lbl" x="300" y="337">قربانی</text><text class="sub" x="300" y="412">«کاری از من برنمی‌آید»</text></g>
+  <text class="sub" x="300" y="140">نقش‌ها می‌چرخند؛ آدم‌ها همان‌اند</text>
+  <text class="sub" x="300" y="452" style="font-size:11.5px">مثلث نمایشی: استیون کارپمن، ۱۹۶۸</text>
+ </svg>
+ <p class="note g">چرخش نقش‌ها همان چیزی است که این الگو را تکراری و فرساینده می‌کند: هیچ‌کس همیشه در یک گوشه نمی‌ماند، و هر گوشه برای ماندن در مثلث بهانهٔ تازه‌ای می‌سازد.</p>
+ </div>
+ <div class="panel" id="panel"></div>
+</div>
+</section>
+
+<section>
+<h2>راه بیرون: همان انرژی، جای دیگر</h2>
+<p class="lead" style="font-size:1rem">دیوید امرالد برای هر گوشه یک جایگزین گذاشت. نکته این نیست که قربانی «بد» است و باید خجالت کشید؛ نکته این است که هر گوشه یک انرژی دارد که می‌شود جای دیگری خرجش کرد: درماندگی به خواستن، خشم به صراحتِ سازنده، و دلسوزی به همراهی.</p>
+<div class="outs" id="outs"></div>
+</section>
+
+<section>
+<h2>موقعیت خودتان را بیرون بیاورید</h2>
+<p class="lead" style="font-size:1rem">شش پرسش. چیزی ذخیره یا فرستاده نمی‌شود؛ آخرش می‌توانید متنش را کپی کنید.</p>
+<ol class="steps" id="steps"></ol>
+<div class="act"><button class="b" id="make">کارت را بساز</button><button class="g" id="reset">پاک کردن</button></div>
+<div id="card" hidden></div>
+<div class="act" id="cardact" hidden><button class="g" id="copy">کپی متن</button></div>
+</section>
+
+<section>
+<h2>صادقانه دربارهٔ خودِ این مدل</h2>
+<p class="lead" style="font-size:1rem">مثلث کارپمن از «تحلیل رفتار متقابل» می‌آید: یک چارچوب بالینی و آموزشی، نه سازه‌ای که در پژوهش‌ها اندازه‌گیری و آزموده شده باشد. فایده‌اش این است که اسم روی الگویی می‌گذارد که آدم‌ها فوراً در زندگی خود می‌شناسند، و راه فکرکردن به سهم خود را باز می‌کند. اما نه تشخیص است، نه قانون طبیعت. آنچه پشتوانهٔ پژوهشی محکم‌تری دارد، تکه‌های جداگانهٔ آن است: اثر سرزنش بر پنهان‌کاری، اثر کمکِ نخواسته بر انگیزه، و اینکه تجربهٔ اثرگذاری چطور بی‌پناهی را کنار می‌زند.</p>
+<p class="note g"><b>یک هشدار مهم.</b> این مدل را نباید به رابطه‌ای که در آن خشونت، تهدید یا کنترل اجباری هست تعمیم داد. آن‌جا گفتن «تو هم در مثلث نقشی داری» سهم تقصیر را روی کسی می‌گذارد که در خطر است. قربانیِ خشونت، نقش بازی نمی‌کند.</p>
+<p class="note g" style="font-size:.82rem">مثلث نمایشی © استیون کارپمن (۱۹۶۸)؛ «مثلث توانمندسازی» (TED*) © دیوید امرالد. هر دو با ذکر نام پدیدآورنده آورده شده‌اند.</p>
+<div class="links">
+ <a href="control-check.html">آیا در این رابطه کنترل هست؟ ←</a>
+ <a href="sentences.html">جمله‌ساز ←</a>
+ <a href="../narcissism.html">پروندهٔ خودشیفتگی و کنترل ←</a>
+</div>
+</section>
+</main>
+<script>
+const C={
+ v:{k:"قربانی",c:"#5b6b8a",pos:[300,330],
+  f:"«کاری از دست من برنمی‌آید»، «همیشه سر من می‌آید»، «هر کاری کنم فایده ندارد.»",
+  feel:"درماندگی، دلخوری، خستگی. دنیا اتفاقی است که بر من می‌افتد.",
+  gain:"مسئولیت از دوشم برمی‌دارد و توجه و دلسوزی می‌آورد. تا وقتی ناتوانم، از من انتظاری نیست.",
+  cost:"هر بار که نجات داده می‌شوم، این باور محکم‌تر می‌شود که خودم نمی‌توانستم.",
+  turn:"قربانی وقتی ناجی به‌قدر کافی نرسد، به <b>ظالم</b> تبدیل می‌شود: «تو هم مثل بقیه ولم کردی.»"},
+ p:{k:"ظالم (سرزنش‌گر)",c:"#9a3b3b",pos:[520,150],
+  f:"«تقصیر توست»، «چند بار بگویم؟»، «اگر به حرف من گوش داده بودی…»",
+  feel:"خشم، حق‌به‌جانبی، بی‌قراری. مشکل، آدمِ مقابل است.",
+  gain:"کنترل و قطعیت می‌آورد و از حس بی‌کفایتی خود دور می‌کند. سرزنش‌کردن سریع‌تر از حل‌کردن است.",
+  cost:"آدم‌ها راست را پنهان می‌کنند و همان مسئله‌ای که از آن عصبانی بود، تکرار می‌شود.",
+  turn:"ظالم وقتی مچش گرفته شود، معمولاً به <b>قربانی</b> می‌چرخد: «همه علیه من‌اند، هیچ‌کس قدر نمی‌داند.»"},
+ r:{k:"ناجی",c:"#2f7f8a",pos:[80,150],
+  f:"«بگذار خودم انجام بدهم»، «تو بلد نیستی»، «من نباشم چه می‌کنی؟»",
+  feel:"مفید بودن، ضروری بودن، و کمی طلبکاری پنهان.",
+  gain:"ارزشمندی می‌دهد و از پرداختن به مسئلهٔ خودش معاف می‌کند. کمک‌کردن، جای نیاز خود را می‌گیرد.",
+  cost:"کمکِ نخواسته، طرف مقابل را ناتوان نگه می‌دارد؛ و ناجیِ خسته، دیر یا زود طلبکار می‌شود.",
+  turn:"ناجی وقتی قدرش دانسته نشود، به <b>قربانی</b> می‌افتد («این همه کردم و…») یا به <b>ظالم</b> («تو لیاقت نداری»)."}
+};
+const T={
+ v:{k:"خالق",c:"#2f6b4f",from:"قربانی",
+  q:"به‌جای «چه چیزی را نمی‌خواهم؟» بپرس: «چه چیزی را می‌خواهم؟»",
+  d:"خالق هم می‌داند که همه‌چیز دست او نیست. فرق در جهت نگاه است: از مسئله به سمت نتیجهٔ دلخواه، و بعد یک گام کوچکِ شدنی. حتی یک انتخاب کوچک، تمرین عضلهٔ اختیار است.",
+  a:["نتیجه‌ای که می‌خواهی را در یک جمله بنویس، بدون کلمهٔ «نه».","بپرس: کوچک‌ترین قدمی که همین هفته از دست من برمی‌آید چیست؟","بپذیر که بعضی چیزها دست تو نیست — و همان‌ها را از فهرست خارج کن."]},
+ p:{k:"چالش‌گر",c:"#8a5a1f",from:"ظالم",
+  q:"به‌جای «چه کسی مقصر است؟» بپرس: «این وضع چه چیزی را از ما می‌خواهد؟»",
+  d:"همان انرژی و صراحت، این بار در خدمت رشد به‌جای سرزنش. چالش‌گر حقیقت ناخوشایند را می‌گوید، ولی به شخص حمله نمی‌کند و راه بیرون را هم باز می‌گذارد.",
+  a:["از رفتار بگو، نه از شخصیت: «این کار این نتیجه را داشت.»","بعد از انتقاد، یک درخواست مشخص بگذار.","بپرس آیا طرف مقابل کمک می‌خواهد یا فقط شنیده‌شدن."]},
+ r:{k:"مربی",c:"#3f6b9a",from:"ناجی",
+  q:"به‌جای «بگذار برایت انجام بدهم» بپرس: «چه کاری از خودت برمی‌آید و من چطور کمک کنم؟»",
+  d:"مربی فرض را بر توانایی طرف مقابل می‌گذارد. کمک می‌کند، اما کاری را که مال دیگری است برنمی‌دارد و تصمیم را هم جای او نمی‌گیرد.",
+  a:["اول بپرس: کمک می‌خواهی یا می‌خواهی فقط گوش بدهم؟","به‌جای راه‌حل، سؤال بپرس: «تا حالا چه چیزی را امتحان کرده‌ای؟»","مرز خودت را بگو: «تا این‌جا هستم، از این‌جا به بعد با توست.»"]}
+};
+const STEPS=[
+ {q:"یک موقعیت واقعی و تازه را در یک جمله بنویس.",p:"مثلاً: دیشب سر خرج خانه دعوا شد و من آخرش ساکت ماندم."},
+ {q:"در این موقعیت، بیشتر در کدام گوشه بودی؟",opt:1},
+ {q:"چه چیزی آن گوشه برایت داشت؟ (سود پنهانش را صادقانه بنویس)",p:"مثلاً: ساکت ماندن، دعوا را کوتاه کرد و من مجبور نشدم بگویم چه می‌خواهم."},
+ {q:"نتیجه‌ای که واقعاً می‌خواهی چیست؟ بدون کلمهٔ «نه» و بدون نام بردن از کار دیگری.",p:"مثلاً: می‌خواهم ماهی یک بار با آرامش دربارهٔ پول حرف بزنیم و هر کدام سهم‌مان روشن باشد."},
+ {q:"کوچک‌ترین گامی که فقط به خودت بستگی دارد و همین هفته شدنی است؟",p:"مثلاً: شنبه شب می‌گویم «می‌خواهم یک ربع دربارهٔ خرج‌ها حرف بزنیم» و فهرست را آماده می‌کنم."},
+ {q:"اگر طرف مقابل همراهی نکرد، آن وقت تو چه می‌کنی؟ (این جمله مرز توست، نه تهدید)",p:"مثلاً: اگر این بار هم به دعوا کشید، گفت‌وگو را قطع می‌کنم و هفتهٔ بعد دوباره پیشنهاد می‌دهم."}
+];
+</script>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let cur="v";
+function panel(k){cur=k;const d=C[k];
+ $("panel").style.setProperty("--k",d.c);
+ $("panel").innerHTML=`<h3>${E(d.k)}</h3><dl>
+  <div><dt>جمله‌های آشنا</dt><dd>${E(d.f)}</dd></div>
+  <div><dt>حس درونی</dt><dd>${E(d.feel)}</dd></div>
+  <div><dt>سود پنهان (چرا آدم این‌جا می‌ماند)</dt><dd>${E(d.gain)}</dd></div>
+  <div><dt>هزینه</dt><dd>${E(d.cost)}</dd></div></dl>
+  <div class="turn"><b>چرخش:</b> ${d.turn}</div>`;
+ document.querySelectorAll("svg.tri .nd circle").forEach(c=>{
+  const on=c.parentNode.dataset.k===k;c.setAttribute("stroke",on?"var(--ink)":"none");c.setAttribute("stroke-width",on?3:0);
+  c.setAttribute("r",on?66:62)});
+}
+document.querySelectorAll("svg.tri .nd").forEach(g=>{g.addEventListener("click",()=>panel(g.dataset.k));
+ g.setAttribute("tabindex","0");g.setAttribute("role","button");g.setAttribute("aria-label",C[g.dataset.k].k);
+ g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();panel(g.dataset.k)}})});
+$("outs").innerHTML=["v","p","r"].map(k=>{const t=T[k];return `<div class="out" style="--k:${t.c}">
+ <b class="h">${E(t.k)}</b><div class="was">به‌جای «${E(t.from)}»</div>
+ <p class="q">${E(t.q)}</p><p>${E(t.d)}</p><ul>${t.a.map(x=>`<li>${E(x)}</li>`).join("")}</ul></div>`}).join("");
+$("steps").innerHTML=STEPS.map((s,i)=>`<li>${s.opt?`<p class="qt">${E(s.q)}</p><div class="pick" id="pick">`+
+ ["v","p","r"].map(k=>`<button data-k="${k}" style="--k:${C[k].c}" aria-pressed="false">${E(C[k].k)}</button>`).join("")+`</div>`
+ :`<p class="qt">${E(s.q)}</p><textarea id="s${i}" placeholder="${E(s.p)}"></textarea>`}</li>`).join("");
+let corner=null;
+$("steps").addEventListener("click",e=>{const b=e.target.closest(".pick button");if(!b)return;
+ corner=b.dataset.k;$("pick").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));panel(corner)});
+$("make").addEventListener("click",()=>{
+ const g=i=>($("s"+i)?$("s"+i).value.trim():"");
+ const parts=[];
+ if(g(0))parts.push("موقعیت: "+g(0));
+ if(corner)parts.push("گوشهٔ من: "+C[corner].k+"  ←  جای تازه: "+T[corner].k+" («"+T[corner].q+"»)");
+ if(g(2))parts.push("سود پنهانش برای من: "+g(2));
+ if(g(3))parts.push("نتیجه‌ای که می‌خواهم: "+g(3));
+ if(g(4))parts.push("گام این هفته: "+g(4));
+ if(g(5))parts.push("مرز من: "+g(5));
+ if(!parts.length)return;
+ $("card").textContent=parts.join("\n\n");
+ $("card").hidden=false;$("cardact").hidden=false;$("card").scrollIntoView({behavior:"smooth",block:"center"});
+});
+$("reset").addEventListener("click",()=>{STEPS.forEach((s,i)=>{if($("s"+i))$("s"+i).value=""});
+ corner=null;$("pick").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false"));
+ $("card").hidden=true;$("cardact").hidden=true});
+$("copy").addEventListener("click",e=>{const b=e.currentTarget;
+ try{navigator.clipboard.writeText($("card").textContent).then(()=>{b.textContent="کپی شد ✓";setTimeout(()=>b.textContent="کپی متن",1600)},()=>{})}catch(_){}});
+panel("v");
+})();
+</script>
+<style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
+</body>
+</html>

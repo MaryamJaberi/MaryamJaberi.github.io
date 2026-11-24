@@ -1,0 +1,120 @@
+{
+ "id": "psy:control-at-work",
+ "kind": "concept",
+ "title": {
+  "fa": "در محیط کار",
+  "en": "Control at work",
+  "nl": "Controle op het werk"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "همان الگوها، با ابزارهای سازمانی: دسترسی، پروژه، ارزیابی و آبرو. در این‌جا تنها جایی است که «درخشان در آغاز، فرساینده در ادامه» عدد و داده دارد.",
+  "en": "The same patterns with organisational tools — and the one domain where 'bright at first, corrosive later' has numbers.",
+  "nl": "The same patterns with organisational tools — and the one domain where 'bright at first, corrosive later' has numbers."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فراتحلیل شیوع نشان می‌دهد حدود ۱۵ درصد کارکنان در جهان قلدری در محیط کار را تجربه کرده‌اند؛ عدد با روش سنجش تغییر می‌کند (از ۱۱ تا ۱۸ درصد).",
+    "en": "A meta-analysis puts workplace bullying prevalence around 15%, varying with measurement method.",
+    "nl": "A meta-analysis puts workplace bullying prevalence around 15%, varying with measurement method."
+   },
+   "sources": [
+    "src:64a4196b3a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در ادبیات رهبری، خودشیفتگی «به رهبری رسیدن» را پیش‌بینی می‌کند (همبستگی حدود ۰٫۱۶) ولی اثربخشی به‌صورت خطی نه (حدود ۰٫۰۳ و بی‌معنا). شکاف مهم این است: خودشیفته‌ها خودشان را بسیار اثربخش ارزیابی می‌کنند (۰٫۲۹) ولی همکاران چنین نمی‌بینند (۰٫۰۲).",
+    "en": "Narcissism predicts leader emergence (ρ=.16) but not effectiveness (ρ=.03); self-ratings .29 versus peer ratings .02.",
+    "nl": "Narcissism predicts leader emergence (ρ=.16) but not effectiveness (ρ=.03); self-ratings .29 versus peer ratings .02."
+   },
+   "sources": [
+    "src:8356833273"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رابطهٔ رهبر و زیردست در طول زمان افت می‌کند و همان جذابیت اولیه کم‌رنگ می‌شود؛ در سطح تیم، رهبران خودشیفته با تبادل اطلاعات کمتر و عملکرد پایین‌تر تیم همراه‌اند.",
+    "en": "Leader–follower relationships deteriorate over time; teams show less information exchange and lower performance.",
+    "nl": "Leader–follower relationships deteriorate over time; teams show less information exchange and lower performance."
+   },
+   "sources": [
+    "src:96419d3aea"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مدل‌های مرحله‌ای قلدری (از رفتارهای پراکنده تا انگ‌زنی و در نهایت بیرون‌رفتن از سازمان) وجود دارند، اما مرور ۲۰۱۸ هشدار می‌دهد که تشدید در طول زمان بیشتر فرض است تا یافته. آنچه عدد دارد: میانگین مدت در پژوهش‌های مختلف از شش تا شصت‌ودو ماه، و خطر بالاتر بیکاری و مرخصی طولانی تا دو تا پنج سال بعد.",
+    "en": "Stage models exist but escalation is an assumption; durations range from 6 to 62 months with elevated risk 2–5 years later.",
+    "nl": "Stage models exist but escalation is an assumption; durations range from 6 to 62 months with elevated risk 2–5 years later."
+   },
+   "sources": [
+    "src:9070312ac7"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:public-private",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا بیرون کسی باور نمی‌کند",
+    "en": "Why outsiders don't believe it",
+    "nl": "Why outsiders don't believe it"
+   }
+  },
+  {
+   "to": "psy:control-behaviors",
+   "rel": "applies-to",
+   "note": {
+    "fa": "دسته‌های رفتاری در کار",
+    "en": "The behaviour classes at work",
+    "nl": "The behaviour classes at work"
+   }
+  },
+  {
+   "to": "psy:p-io",
+   "rel": "part-of",
+   "note": {
+    "fa": "روان‌شناسی سازمانی",
+    "en": "Organisational psychology",
+    "nl": "Organisational psychology"
+   }
+  }
+ ],
+ "people": [
+  "core:stale-einarsen"
+ ],
+ "sources": [
+  "src:64a4196b3a",
+  "src:8356833273",
+  "src:9070312ac7",
+  "src:96419d3aea"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "examples": [
+  {
+   "kind": "story",
+   "label": "real",
+   "text": {
+    "fa": "برودی پنلاک، ملبورن: نوجوانی که در یک کافه کار می‌کرد و بنا بر یافتهٔ دادگاه «به‌طور نظام‌مند، جسمی و روانی» آزار دید؛ همکاران دخالت کردند و مالک بی‌اعتنا ماند. او در ۲۰۰۶ جانش را از دست داد. در ۲۰۱۰ چهار نفر و یک شرکت به جریمه‌هایی در مجموع ۳۳۵ هزار دلار محکوم شدند و در ۲۰۱۱ قانون ویکتوریا («قانون برودی») آزار جدی را با حداکثر ده سال حبس جرم شناخت.",
+    "en": "Brodie Panlock, Melbourne: systematic workplace bullying that led to her death, convictions in 2010 and 'Brodie's Law' in 2011.",
+    "nl": "Brodie Panlock, Melbourne: systematic workplace bullying that led to her death, convictions in 2010 and 'Brodie's Law' in 2011."
+   },
+   "source": "https://www.justice.vic.gov.au/saynotobullying"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "id": "psy:rescuing",
+ "kind": "concept",
+ "title": {
+  "fa": "ناجی‌گری در برابر کمک واقعی",
+  "en": "Rescuing versus helping",
+  "nl": "Redden versus helpen"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "کمکِ نخواسته، کمک نیست. ناجی‌گری طرف مقابل را ناتوان نگه می‌دارد و کمک‌کننده را ضروری؛ و در پایان هر دو طلبکار و خسته‌اند.",
+  "en": "Unasked-for help keeps the other incapable and the helper indispensable.",
+  "nl": "Unasked-for help keeps the other incapable and the helper indispensable."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در مثلث کارپمن، ناجی سومین گوشه است و بدون او مثلث نمی‌چرخد: نجات تکراری، این باور را محکم می‌کند که طرف مقابل خودش نمی‌توانست.",
+    "en": "The rescuer is the third corner; repeated rescue confirms the other's incapacity.",
+    "nl": "The rescuer is the third corner; repeated rescue confirms the other's incapacity."
+   },
+   "sources": [
+    "src:b363f15013"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در نظریهٔ خودتعیین‌گری، آنچه انگیزه را زنده نگه می‌دارد حس «خودم انجامش دادم» است. کمکی که این حس را بگیرد، در بلندمدت انگیزه را هم می‌گیرد.",
+    "en": "In self-determination theory, autonomy sustains motivation; help that removes it removes motivation.",
+    "nl": "In self-determination theory, autonomy sustains motivation; help that removes it removes motivation."
+   },
+   "sources": [
+    "src:8f0f4b4600"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تفاوت عملی در یک پرسش است: «کمک می‌خواهی، یا می‌خواهی فقط گوش بدهم؟» و در یک مرز: «تا این‌جا هستم، از این‌جا به بعد با توست.»",
+    "en": "The practical difference is asking first and stating a limit.",
+    "nl": "The practical difference is asking first and stating a limit."
+   },
+   "sources": [
+    "src:b363f15013",
+    "src:96605a71b4"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:karpman-triangle",
+   "rel": "part-of",
+   "note": {
+    "fa": "گوشهٔ سوم",
+    "en": "The third corner",
+    "nl": "The third corner"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "contrasts",
+   "note": {
+    "fa": "شفقت بدون ناجی‌گری",
+    "en": "Compassion without rescuing",
+    "nl": "Compassion without rescuing"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:8f0f4b4600",
+  "src:96605a71b4",
+  "src:b363f15013"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

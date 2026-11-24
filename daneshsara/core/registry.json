@@ -1,15 +1,15 @@
 {
 "stats": {
-"concepts": 1772,
-"concepts_with_sources": 1729,
+"concepts": 1808,
+"concepts_with_sources": 1764,
 "cross_wiki_links": 1305,
 "bridge_links": 133,
 "iran_notes": 0,
 "fields": 77,
 "bridges": 25,
-"people": 1817,
-"sources": 2622,
-"built": "2026-11-20"
+"people": 1836,
+"sources": 2711,
+"built": "2026-11-24"
 },
 "entries": {
 "psy:psych-detachment": {
@@ -57,6 +57,18 @@
 "nl": "Slachtoffermindset en aanspraak"
 },
 "url": "psy/tools/graph.html#victim-mindset",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:defensive-reactions": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "واکنش‌های دفاعی خودمان",
+"en": "Our own defensive reactions",
+"nl": "Onze eigen verdedigingsreacties"
+},
+"url": "psy/tools/graph.html#defensive-reactions",
 "status": "reviewed",
 "wikidata": null
 },
@@ -201,6 +213,18 @@
 "nl": "Geschiedenis van psychiatrische classificatie"
 },
 "url": "psy/tools/graph.html#psychiatry-history",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:control-behaviors": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "رفتارهای کنترل‌گرانه: فهرستی که می‌شود دید",
+"en": "Controlling behaviours: a list you can actually see",
+"nl": "Controlerend gedrag"
+},
+"url": "psy/tools/graph.html#control-behaviors",
 "status": "reviewed",
 "wikidata": null
 },
@@ -396,6 +420,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:coercive-control": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "کنترل اجباری",
+"en": "Coercive control",
+"nl": "Dwingende controle"
+},
+"url": "psy/tools/graph.html#coercive-control",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:acrim": {
 "wiki": "psy",
 "type": "concept",
@@ -441,6 +477,18 @@
 "nl": "Inspanning en wilskracht"
 },
 "url": "psy/tools/graph.html#effort",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:collective-narcissism": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "خودشیفتگی جمعی",
+"en": "Collective narcissism",
+"nl": "Collectief narcisme"
+},
+"url": "psy/tools/graph.html#collective-narcissism",
 "status": "reviewed",
 "wikidata": null
 },
@@ -537,6 +585,18 @@
 "nl": "Anhedonie · hedonisch vermogen"
 },
 "url": "psy/tools/graph.html#anhedonia",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:labels-harm": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "چرا برچسب نمی‌زنیم",
+"en": "Why we don't use labels",
+"nl": "Waarom we geen etiketten plakken"
+},
+"url": "psy/tools/graph.html#labels-harm",
 "status": "reviewed",
 "wikidata": null
 },
@@ -696,6 +756,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:recovery": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "بهبود: چه چیزی واقعاً کمک می‌کند",
+"en": "Recovery: what actually helps",
+"nl": "Herstel"
+},
+"url": "psy/tools/graph.html#recovery",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:unified-protocol": {
 "wiki": "psy",
 "type": "concept",
@@ -790,6 +862,18 @@
 },
 "url": "psy/tools/graph.html#psychopharm",
 "status": "draft",
+"wikidata": null
+},
+"psy:children-of-narcissists": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "بچه‌های والدین خودشیفته",
+"en": "Children of narcissistic parents",
+"nl": "Kinderen van narcistische ouders"
+},
+"url": "psy/tools/graph.html#children-of-narcissists",
+"status": "reviewed",
 "wikidata": null
 },
 "psy:p-edu": {
@@ -1056,6 +1140,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:npd": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "اختلال شخصیت خودشیفته (NPD)",
+"en": "Narcissistic personality disorder",
+"nl": "Narcistische persoonlijkheidsstoornis"
+},
+"url": "psy/tools/graph.html#npd",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:planning-fallacy": {
 "wiki": "psy",
 "type": "concept",
@@ -1104,6 +1200,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:self-trust": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "بازسازی اعتماد به ادراک خود",
+"en": "Rebuilding trust in your own perception",
+"nl": "Vertrouwen in je eigen waarneming"
+},
+"url": "psy/tools/graph.html#self-trust",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:range-generalists": {
 "wiki": "psy",
 "type": "concept",
@@ -1125,6 +1233,18 @@
 "nl": "Samenwerking en competitie (Deutsch)"
 },
 "url": "psy/tools/graph.html#cooperation-competition",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:gottman-horsemen": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "چهار سوار: انتقاد، تحقیر، دفاع، سکوت",
+"en": "Gottman's four horsemen",
+"nl": "De vier ruiters"
+},
+"url": "psy/tools/graph.html#gottman-horsemen",
 "status": "reviewed",
 "wikidata": null
 },
@@ -1200,6 +1320,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:narcissism-origins": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "خودشیفتگی از کجا می‌آید",
+"en": "Where narcissism comes from",
+"nl": "Waar narcisme vandaan komt"
+},
+"url": "psy/tools/graph.html#narcissism-origins",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:n-cognitive": {
 "wiki": "psy",
 "type": "subfield",
@@ -1210,6 +1342,18 @@
 },
 "url": "psy/tools/graph.html#n-cognitive",
 "status": "draft",
+"wikidata": null
+},
+"psy:victim-toll": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "آنچه بر تن و روان می‌گذرد",
+"en": "What it does to body and mind",
+"nl": "Wat het doet met lichaam en geest"
+},
+"url": "psy/tools/graph.html#victim-toll",
+"status": "reviewed",
 "wikidata": null
 },
 "psy:anxiety": {
@@ -1356,6 +1500,42 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:change-possible": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "آیا خودشیفتگی عوض می‌شود؟",
+"en": "Can narcissism change?",
+"nl": "Kan narcisme veranderen?"
+},
+"url": "psy/tools/graph.html#change-possible",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:self-silencing": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "خاموش کردن خود",
+"en": "Self-silencing",
+"nl": "Jezelf het zwijgen opleggen"
+},
+"url": "psy/tools/graph.html#self-silencing",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:breaking-cycle": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "شکستن چرخه",
+"en": "Breaking the cycle",
+"nl": "De cyclus doorbreken"
+},
+"url": "psy/tools/graph.html#breaking-cycle",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:craving": {
 "wiki": "psy",
 "type": "concept",
@@ -1428,6 +1608,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:gaslighting": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "گازلایتینگ: دست بردن در واقعیت",
+"en": "Gaslighting",
+"nl": "Gaslighting"
+},
+"url": "psy/tools/graph.html#gaslighting",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:mct": {
 "wiki": "psy",
 "type": "concept",
@@ -1476,6 +1668,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:assertiveness": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "ابراز وجود: گفتن بدون کوچک‌کردن",
+"en": "Assertiveness",
+"nl": "Assertiviteit"
+},
+"url": "psy/tools/graph.html#assertiveness",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:freud-lay-analysis-dialogue-with-the-impartial-person": {
 "wiki": "psy",
 "type": "concept",
@@ -1486,6 +1690,18 @@
 },
 "url": "psy/tools/graph.html#freud-lay-analysis-dialogue-with-the-impartial-person",
 "status": "draft",
+"wikidata": null
+},
+"psy:karpman-triangle": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "مثلث قربانی، ظالم، ناجی",
+"en": "The drama triangle and the way out",
+"nl": "Dramadriehoek"
+},
+"url": "psy/tools/graph.html#karpman-triangle",
+"status": "reviewed",
 "wikidata": null
 },
 "psy:anomie": {
@@ -1524,6 +1740,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:agency": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "حق انتخاب: درماندگی آموخته نمی‌شود، کنترل آموخته می‌شود",
+"en": "Agency: helplessness is not learned, control is",
+"nl": "Keuzevrijheid"
+},
+"url": "psy/tools/graph.html#agency",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:n-reward": {
 "wiki": "psy",
 "type": "subfield",
@@ -1533,6 +1761,18 @@
 "nl": "Beloningssysteem · dopamine"
 },
 "url": "psy/tools/graph.html#n-reward",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:cptsd": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "استرس پس از سانحهٔ پیچیده (CPTSD)",
+"en": "Complex PTSD",
+"nl": "Complexe PTSS"
+},
+"url": "psy/tools/graph.html#cptsd",
 "status": "reviewed",
 "wikidata": null
 },
@@ -1620,6 +1860,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:control-at-work": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "در محیط کار",
+"en": "Control at work",
+"nl": "Controle op het werk"
+},
+"url": "psy/tools/graph.html#control-at-work",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:envy": {
 "wiki": "psy",
 "type": "concept",
@@ -1641,6 +1893,18 @@
 "nl": "Ontmenselijking"
 },
 "url": "psy/tools/graph.html#dehumanization",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:intermittent-bond": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "تقویت نامنظم و پیوند آسیب",
+"en": "Intermittent reinforcement and trauma bonding",
+"nl": "Intermitterende bekrachtiging"
+},
+"url": "psy/tools/graph.html#intermittent-bond",
 "status": "reviewed",
 "wikidata": null
 },
@@ -1845,6 +2109,18 @@
 "nl": "Ontwikkeling van seksuele oriëntatie"
 },
 "url": "psy/tools/graph.html#sexual-orientation",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:narcissism": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "خودشیفتگی: یک طیف، نه یک برچسب",
+"en": "Narcissism: a spectrum, not a label",
+"nl": "Narcisme: een spectrum, geen etiket"
+},
+"url": "psy/tools/graph.html#narcissism",
 "status": "reviewed",
 "wikidata": null
 },
@@ -2088,6 +2364,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:control-in-family": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "در خانواده و قطع رابطه",
+"en": "In the family, and estrangement",
+"nl": "In het gezin"
+},
+"url": "psy/tools/graph.html#control-in-family",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:experiential-avoidance": {
 "wiki": "psy",
 "type": "concept",
@@ -2206,6 +2494,18 @@
 },
 "url": "psy/tools/graph.html#p-history",
 "status": "draft",
+"wikidata": null
+},
+"psy:darvo": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "DARVO: انکار، حمله، وارونه‌کردن نقش‌ها",
+"en": "DARVO",
+"nl": "DARVO"
+},
+"url": "psy/tools/graph.html#darvo",
+"status": "reviewed",
 "wikidata": null
 },
 "psy:dog-cognition": {
@@ -2472,6 +2772,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:leaving": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "خروج: چرا سخت است و کِی خطرناک",
+"en": "Leaving: why it is hard and when it is dangerous",
+"nl": "Weggaan"
+},
+"url": "psy/tools/graph.html#leaving",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:replication-crisis": {
 "wiki": "psy",
 "type": "subfield",
@@ -2542,6 +2854,18 @@
 },
 "url": "psy/tools/graph.html#social-capital",
 "status": "draft",
+"wikidata": null
+},
+"psy:rescuing": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "ناجی‌گری در برابر کمک واقعی",
+"en": "Rescuing versus helping",
+"nl": "Redden versus helpen"
+},
+"url": "psy/tools/graph.html#rescuing",
+"status": "reviewed",
 "wikidata": null
 },
 "psy:challenger-listener": {
@@ -2674,6 +2998,18 @@
 },
 "url": "psy/tools/graph.html#mood",
 "status": "draft",
+"wikidata": null
+},
+"psy:boundaries": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "مرزها: حد من کجاست",
+"en": "Boundaries",
+"nl": "Grenzen"
+},
+"url": "psy/tools/graph.html#boundaries",
+"status": "reviewed",
 "wikidata": null
 },
 "psy:emotional-agility": {
@@ -2844,6 +3180,18 @@
 "status": "draft",
 "wikidata": null
 },
+"psy:public-private": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "جلوی مردم خوب، در خانه بد",
+"en": "Charming in public, different at home",
+"nl": "Buiten charmant, thuis anders"
+},
+"url": "psy/tools/graph.html#public-private",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:psychiatry": {
 "wiki": "psy",
 "type": "field",
@@ -2866,6 +3214,18 @@
 },
 "url": "psy/tools/graph.html#p-emotion",
 "status": "draft",
+"wikidata": null
+},
+"psy:love-bombing": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "آغاز پرشتاب («بمباران عشق»)",
+"en": "Love bombing",
+"nl": "Love bombing"
+},
+"url": "psy/tools/graph.html#love-bombing",
+"status": "reviewed",
 "wikidata": null
 },
 "psy:self-criticism": {
@@ -2940,6 +3300,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:control-online": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "آنلاین و در گروه‌ها",
+"en": "Online and in groups",
+"nl": "Online en in groepen"
+},
+"url": "psy/tools/graph.html#control-online",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:p-positive": {
 "wiki": "psy",
 "type": "subfield",
@@ -2998,6 +3370,18 @@
 },
 "url": "psy/tools/graph.html#neuroscience",
 "status": "draft",
+"wikidata": null
+},
+"psy:relationship-arc": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "قوس رابطه: چطور شروع می‌شود و چطور تمام",
+"en": "The arc: how it starts, grows and ends",
+"nl": "De boog van de relatie"
+},
+"url": "psy/tools/graph.html#relationship-arc",
+"status": "reviewed",
 "wikidata": null
 },
 "psy:descriptive-psychopathology": {
@@ -3264,6 +3648,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:conditional-regard": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "توجه مشروط",
+"en": "Conditional regard",
+"nl": "Voorwaardelijke waardering"
+},
+"url": "psy/tools/graph.html#conditional-regard",
+"status": "reviewed",
+"wikidata": null
+},
 "psy:stoicism": {
 "wiki": "psy",
 "type": "subfield",
@@ -3297,6 +3693,18 @@
 "nl": "Kunst definiëren"
 },
 "url": "psy/tools/graph.html#art-definition",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:psychological-control": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "کنترل روان‌شناختی والدین",
+"en": "Parental psychological control",
+"nl": "Psychologische controle door ouders"
+},
+"url": "psy/tools/graph.html#psychological-control",
 "status": "reviewed",
 "wikidata": null
 },
@@ -3396,6 +3804,18 @@
 "status": "reviewed",
 "wikidata": null
 },
+"psy:narcissism-control": {
+"wiki": "psy",
+"type": "subfield",
+"title": {
+"fa": "خودشیفتگی، کنترل و رابطه",
+"en": "Narcissism, control and relationships",
+"nl": "Narcisme, controle en relaties"
+},
+"url": "psy/tools/graph.html#narcissism-control",
+"status": "draft",
+"wikidata": null
+},
 "psy:transdiagnostic": {
 "wiki": "psy",
 "type": "concept",
@@ -3429,6 +3849,18 @@
 "nl": "Bipolaire stoornis"
 },
 "url": "psy/tools/graph.html#bipolar",
+"status": "reviewed",
+"wikidata": null
+},
+"psy:healthy-narcissism": {
+"wiki": "psy",
+"type": "concept",
+"title": {
+"fa": "خودشیفتگی سالم: کجا سوخت است، کجا سم",
+"en": "Healthy narcissism: fuel or poison",
+"nl": "Gezond narcisme"
+},
+"url": "psy/tools/graph.html#healthy-narcissism",
 "status": "reviewed",
 "wikidata": null
 },
@@ -46153,6 +46585,253 @@
 "url": "core/people.html#bernard-spilka",
 "wikis": [
 "phil"
+]
+},
+"core:stephen-karpman": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "استیون کارپمن",
+"en": "Stephen Karpman",
+"nl": "Stephen Karpman"
+},
+"url": "core/people.html#stephen-karpman",
+"wikis": [
+"psy"
+]
+},
+"core:brian-barber": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "برایان باربر",
+"en": "Brian Barber",
+"nl": "Brian Barber"
+},
+"url": "core/people.html#brian-barber",
+"wikis": [
+"psy"
+]
+},
+"core:evan-stark": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ایوان استارک",
+"en": "Evan Stark",
+"nl": "Evan Stark"
+},
+"url": "core/people.html#evan-stark",
+"wikis": [
+"psy"
+]
+},
+"core:jennifer-freyd": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جنیفر فرید",
+"en": "Jennifer Freyd",
+"nl": "Jennifer Freyd"
+},
+"url": "core/people.html#jennifer-freyd",
+"wikis": [
+"psy"
+]
+},
+"core:john-gottman": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جان گاتمن",
+"en": "John Gottman",
+"nl": "John Gottman"
+},
+"url": "core/people.html#john-gottman",
+"wikis": [
+"psy"
+]
+},
+"core:eddie-brummelman": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "ادی بروملمن",
+"en": "Eddie Brummelman",
+"nl": "Eddie Brummelman"
+},
+"url": "core/people.html#eddie-brummelman",
+"wikis": [
+"psy"
+]
+},
+"core:david-emerald": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "دیوید امرالد",
+"en": "David Emerald",
+"nl": "David Emerald"
+},
+"url": "core/people.html#david-emerald",
+"wikis": [
+"psy"
+]
+},
+"core:dana-crowley-jack": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "دانا کرولی جک",
+"en": "Dana Crowley Jack",
+"nl": "Dana Crowley Jack"
+},
+"url": "core/people.html#dana-crowley-jack",
+"wikis": [
+"psy"
+]
+},
+"core:paige-sweet": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "پیج سوئیت",
+"en": "Paige Sweet",
+"nl": "Paige Sweet"
+},
+"url": "core/people.html#paige-sweet",
+"wikis": [
+"psy"
+]
+},
+"core:joshua-miller": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جاشوا میلر",
+"en": "Joshua Miller",
+"nl": "Joshua Miller"
+},
+"url": "core/people.html#joshua-miller",
+"wikis": [
+"psy"
+]
+},
+"core:jane-monckton-smith": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جین مانکتون-اسمیت",
+"en": "Jane Monckton-Smith",
+"nl": "Jane Monckton-Smith"
+},
+"url": "core/people.html#jane-monckton-smith",
+"wikis": [
+"psy"
+]
+},
+"core:monica-whitty": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مونیکا ویتی",
+"en": "Monica Whitty",
+"nl": "Monica Whitty"
+},
+"url": "core/people.html#monica-whitty",
+"wikis": [
+"psy"
+]
+},
+"core:stale-einarsen": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "استال اینارسن",
+"en": "Stale Einarsen",
+"nl": "Stale Einarsen"
+},
+"url": "core/people.html#stale-einarsen",
+"wikis": [
+"psy"
+]
+},
+"core:karl-pillemer": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "کارل پیلمر",
+"en": "Karl Pillemer",
+"nl": "Karl Pillemer"
+},
+"url": "core/people.html#karl-pillemer",
+"wikis": [
+"psy"
+]
+},
+"core:vincent-felitti": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "وینسنت فلیتی",
+"en": "Vincent Felitti",
+"nl": "Vincent Felitti"
+},
+"url": "core/people.html#vincent-felitti",
+"wikis": [
+"psy"
+]
+},
+"core:marylene-cloitre": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "مارلین کلویتر",
+"en": "Marylene Cloitre",
+"nl": "Marylene Cloitre"
+},
+"url": "core/people.html#marylene-cloitre",
+"wikis": [
+"psy"
+]
+},
+"core:jennifer-jensen": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "جنیفر جنسن",
+"en": "Jennifer Jensen",
+"nl": "Jennifer Jensen"
+},
+"url": "core/people.html#jennifer-jensen",
+"wikis": [
+"psy"
+]
+},
+"core:agnieszka-golec-de-zavala": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اگنیشکا گولچ د زاوالا",
+"en": "Agnieszka Golec de Zavala",
+"nl": "Agnieszka Golec de Zavala"
+},
+"url": "core/people.html#agnieszka-golec-de-zavala",
+"wikis": [
+"psy"
+]
+},
+"core:erica-hepper": {
+"wiki": "core",
+"type": "person",
+"title": {
+"fa": "اریکا هپر",
+"en": "Erica Hepper",
+"nl": "Erica Hepper"
+},
+"url": "core/people.html#erica-hepper",
+"wikis": [
+"psy"
 ]
 }
 }

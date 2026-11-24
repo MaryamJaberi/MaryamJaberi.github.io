@@ -1,0 +1,135 @@
+{
+ "id": "psy:control-behaviors",
+ "kind": "concept",
+ "title": {
+  "fa": "رفتارهای کنترل‌گرانه: فهرستی که می‌شود دید",
+  "en": "Controlling behaviours: a list you can actually see",
+  "nl": "Controlerend gedrag"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "کنترل معمولاً با دستور آشکار کار نمی‌کند؛ با نُه دسته رفتار کار می‌کند که هر کدام به‌تنهایی قابل توجیه‌اند: بستن راه حرف، بی‌اعتبار کردن احساس، حملهٔ شخصی، احساس گناه، دریغ محبت، بی‌ثباتی، جداسازی، ریزکنترل، و ترس.",
+  "en": "Control rarely works through open orders; it works through nine classes of behaviour, each individually explainable.",
+  "nl": "Control rarely works through open orders; it works through nine classes of behaviour, each individually explainable."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "باربر در بازخوانی سازهٔ «کنترل روان‌شناختی» نشان داد که کنترل کردن احساس و فکر آدم‌ها از راه گناه، دریغ محبت و بی‌اعتبار کردن، اثری متفاوت و بدتر از کنترل رفتار دارد: اولی با مشکلات درونی‌شده (افسردگی، اضطراب، خودکم‌بینی) همراه است.",
+    "en": "Barber showed that psychological control, unlike behavioural control, is linked to internalising problems.",
+    "nl": "Barber showed that psychological control, unlike behavioural control, is linked to internalising problems."
+   },
+   "sources": [
+    "src:f366b3e17a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "استارک همین را در رابطهٔ بزرگسالان دید و نامش را «کنترل اجباری» گذاشت: آسیب اصلی کتک نیست، تنگ‌شدن دایرهٔ آزادی است — پول، وقت، لباس، رفت‌وآمد و ارتباط با آدم‌ها. او این را «جرم علیه آزادی» می‌نامد.",
+    "en": "Stark called the adult version coercive control: the harm is the shrinking of liberty, not primarily injury.",
+    "nl": "Stark called the adult version coercive control: the harm is the shrinking of liberty, not primarily injury."
+   },
+   "sources": [
+    "src:896275a639"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مزیت نگاه رفتاری این است که قابل بررسی است. «او کنترل‌گر است» را نمی‌شود آزمود؛ «در این ماه چهار بار گوشی‌ام را چک کرد و دو بار قرارم با خواهرم را به هم زد» را می‌شود.",
+    "en": "Behavioural language can be checked; labels cannot.",
+    "nl": "Behavioural language can be checked; labels cannot."
+   },
+   "sources": [
+    "src:f366b3e17a",
+    "src:896275a639"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یک هشدار لازم: هیچ‌کدام از این رفتارها به‌تنهایی نشانهٔ هیچ‌چیز نیست. همه گاهی حرف دیگری را قطع می‌کنیم یا دلخور می‌شویم. آنچه الگو می‌سازد، تکرار است، جهت یک‌طرفهٔ آن، و اینکه با گذشت زمان دایرهٔ انتخاب یک نفر تنگ‌تر شود.",
+    "en": "No single behaviour means anything; the pattern is made by repetition, one-sidedness, and a shrinking circle of choice.",
+    "nl": "No single behaviour means anything; the pattern is made by repetition, one-sidedness, and a shrinking circle of choice."
+   },
+   "sources": [
+    "src:896275a639"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psychological-control",
+   "rel": "part-of",
+   "note": {
+    "fa": "نسخهٔ والد و فرزند",
+    "en": "The parent–child version",
+    "nl": "The parent–child version"
+   }
+  },
+  {
+   "to": "psy:coercive-control",
+   "rel": "part-of",
+   "note": {
+    "fa": "نسخهٔ بزرگسالان و قانون",
+    "en": "The adult and legal version",
+    "nl": "The adult and legal version"
+   }
+  },
+  {
+   "to": "psy:gaslighting",
+   "rel": "part-of",
+   "note": {
+    "fa": "یکی از نُه دسته، از نزدیک",
+    "en": "One of the nine, up close",
+    "nl": "One of the nine, up close"
+   }
+  },
+  {
+   "to": "psy:labels-harm",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا رفتار، نه برچسب",
+    "en": "Why behaviour, not labels",
+    "nl": "Why behaviour, not labels"
+   }
+  }
+ ],
+ "people": [
+  "core:brian-barber",
+  "core:evan-stark"
+ ],
+ "sources": [
+  "src:896275a639",
+  "src:f366b3e17a"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "try": {
+  "text": {
+   "fa": "نُه دستهٔ این رفتارها را می‌شود در یک رابطهٔ مشخص، از هر دو طرف، پر کرد: یک بار «با من چه می‌شود» و یک بار «من چه می‌کنم».",
+   "en": "The nine classes can be filled in for one relationship, from both sides.",
+   "nl": "The nine classes can be filled in for one relationship, from both sides."
+  },
+  "tool": "tools/control-check.html"
+ },
+ "confusions": [
+  {
+   "fa": "مراقبت با کنترل فرق دارد: مراقبت دایرهٔ انتخاب طرف مقابل را باز نگه می‌دارد، کنترل آن را تنگ می‌کند. پرسش محک: «اگر نه بگویم، چه می‌شود؟»",
+   "en": "Care widens the other's circle of choice; control narrows it. The test: what happens if I say no?",
+   "nl": "Care widens the other's circle of choice; control narrows it. The test: what happens if I say no?"
+  },
+  {
+   "fa": "نظارت لازم در کار، ریزکنترل نیست. نظارت به نتیجه نگاه می‌کند و در نقطه‌های روشن؛ ریزکنترل به هر حرکت.",
+   "en": "Legitimate oversight looks at outcomes at set points; micro-control looks at every move.",
+   "nl": "Legitimate oversight looks at outcomes at set points; micro-control looks at every move."
+  }
+ ]
+}

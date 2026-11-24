@@ -1,0 +1,92 @@
+{
+ "id": "psy:conditional-regard",
+ "kind": "concept",
+ "title": {
+  "fa": "توجه مشروط",
+  "en": "Conditional regard",
+  "nl": "Voorwaardelijke waardering"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "محبتی که با عملکرد می‌آید و با شکست می‌رود. کودک آن را درونی می‌کند و بعدها خودش با خودش همین کار را می‌کند.",
+  "en": "Affection that arrives with performance and leaves with failure; the child internalises it and later does it to themselves.",
+  "nl": "Affection that arrives with performance and leaves with failure; the child internalises it and later does it to themselves."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "اسور، روت و دسی در دو پژوهش روی مادران و دختران و روی دانشجویان نشان دادند توجه مشروط والد، «تنظیم درون‌فکنی‌شده» می‌سازد: آدم کار را از سر اجبار درونی انجام می‌دهد، نه از سر خواستن.",
+    "en": "Assor, Roth and Deci showed conditional regard produces introjected regulation.",
+    "nl": "Assor, Roth and Deci showed conditional regard produces introjected regulation."
+   },
+   "sources": [
+    "src:8f0f4b4600"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیامدهایش در داده دیده شد: رضایت کوتاه و زودگذر پس از موفقیت، گناه و شرم پس از شکست، و خودارزشی نوسانی؛ به‌اضافهٔ احساس طردشدگی و خشم نسبت به والد.",
+    "en": "Consequences: short-lived satisfaction after success, shame after failure, fluctuating self-worth and resentment.",
+    "nl": "Consequences: short-lived satisfaction after success, shame after failure, fluctuating self-worth and resentment."
+   },
+   "sources": [
+    "src:8f0f4b4600"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ مهم: این با «انتظار داشتن» فرق دارد. والدی می‌تواند انتظار بالا داشته باشد و در عین حال محبتش ثابت بماند. آنچه آسیب می‌زند، نوسان محبت است، نه بلندی معیار.",
+    "en": "This differs from high expectations: what harms is fluctuating affection, not a high standard.",
+    "nl": "This differs from high expectations: what harms is fluctuating affection, not a high standard."
+   },
+   "sources": [
+    "src:8f0f4b4600"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:psychological-control",
+   "rel": "part-of",
+   "note": {
+    "fa": "یکی از شاخه‌های کنترل روان‌شناختی",
+    "en": "A branch of psychological control",
+    "nl": "A branch of psychological control"
+   }
+  },
+  {
+   "to": "psy:narcissism-origins",
+   "rel": "explains",
+   "note": {
+    "fa": "یکی از مسیرها",
+    "en": "One of the paths",
+    "nl": "One of the paths"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "see-also",
+   "note": {
+    "fa": "پادزهر بزرگسالی",
+    "en": "The adult antidote",
+    "nl": "The adult antidote"
+   }
+  }
+ ],
+ "people": [
+  "core:edward-deci"
+ ],
+ "sources": [
+  "src:8f0f4b4600"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

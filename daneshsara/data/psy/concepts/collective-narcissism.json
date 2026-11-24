@@ -1,0 +1,94 @@
+{
+ "id": "psy:collective-narcissism",
+ "kind": "concept",
+ "title": {
+  "fa": "خودشیفتگی جمعی",
+  "en": "Collective narcissism",
+  "nl": "Collectief narcisme"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "همان ساختار، این بار دربارهٔ «ما»: باور به عظمت بی‌مانند گروه خودی که قدرش دانسته نمی‌شود. با پرخاشگری بین‌گروهی رابطه دارد و با عزت‌نفس شخصی رابطه‌ای ندارد.",
+  "en": "The same structure applied to 'us': belief in the unparalleled greatness of an in-group that goes unrecognised.",
+  "nl": "The same structure applied to 'us': belief in the unparalleled greatness of an in-group that goes unrecognised."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گولچ د زاوالا و همکاران آن را به‌عنوان «سرمایه‌گذاری عاطفی روی باوری غیرواقع‌بینانه دربارهٔ عظمت بی‌مانند گروه خودی» تعریف کردند و سنجهٔ نه‌ماده‌ای ساختند.",
+    "en": "Defined as emotional investment in an unrealistic belief about the in-group's unparalleled greatness.",
+    "nl": "Defined as emotional investment in an unrealistic belief about the in-group's unparalleled greatness."
+   },
+   "sources": [
+    "src:b746e87837"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در پنج مطالعه، خودشیفتگی جمعی احساس تهدید از گروه بیرونی، ناتوانی در بخشیدن، و ترجیح پرخاش را پیش‌بینی کرد — فراتر از جهت‌گیری سلطه‌جویی اجتماعی و اقتدارگرایی.",
+    "en": "It predicted perceived outgroup threat, unforgiveness and preference for aggression beyond SDO and authoritarianism.",
+    "nl": "It predicted perceived outgroup threat, unforgiveness and preference for aggression beyond SDO and authoritarianism."
+   },
+   "sources": [
+    "src:b746e87837"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نکتهٔ مهم: با عزت‌نفس شخصی رابطه‌ای نداشت. یعنی غرور ملی سالم و خودشیفتگی جمعی دو چیزند، همان‌طور که عزت‌نفس و خودشیفتگی فردی دو چیزند.",
+    "en": "It was unrelated to personal self-esteem: healthy pride and collective narcissism are distinct.",
+    "nl": "It was unrelated to personal self-esteem: healthy pride and collective narcissism are distinct."
+   },
+   "sources": [
+    "src:b746e87837",
+    "src:7486333a61"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:narcissism",
+   "rel": "see-also",
+   "note": {
+    "fa": "نسخهٔ فردی",
+    "en": "The individual version",
+    "nl": "The individual version"
+   }
+  },
+  {
+   "to": "psy:ideological-brain",
+   "rel": "see-also",
+   "note": {
+    "fa": "ایدئولوژی و گروه",
+    "en": "Ideology and group",
+    "nl": "Ideology and group"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور توطئه",
+    "en": "Conspiracy belief",
+    "nl": "Conspiracy belief"
+   }
+  }
+ ],
+ "people": [
+  "core:agnieszka-golec-de-zavala"
+ ],
+ "sources": [
+  "src:7486333a61",
+  "src:b746e87837"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,111 @@
+{
+ "id": "psy:defensive-reactions",
+ "kind": "concept",
+ "title": {
+  "fa": "واکنش‌های دفاعی خودمان",
+  "en": "Our own defensive reactions",
+  "nl": "Onze eigen verdedigingsreacties"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "وقتی تصویر ما از خودمان تهدید می‌شود، بدن پیش از فکر واکنش نشان می‌دهد: دفاع، حمله، توجیه، قهر یا تسلیم. شناختن واکنشِ پیش‌فرضِ خودمان، بیشتر از شناختن طرف مقابل کار را عوض می‌کند.",
+  "en": "When our self-image is threatened the body reacts before thought: defend, attack, justify, withdraw or submit.",
+  "nl": "When our self-image is threatened the body reacts before thought: defend, attack, justify, withdraw or submit."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هستهٔ مشترک خودشیفتگی، حساسیت شدید به تهدید تصویر خود است؛ اما واکنش دفاعی به تهدیدِ تصویر، چیزی همگانی است. تفاوت در آستانه و شدت است، نه در وجود آن.",
+    "en": "Defensive reaction to self-image threat is universal; narcissism differs in threshold and intensity.",
+    "nl": "Defensive reaction to self-image threat is universal; narcissism differs in threshold and intensity."
+   },
+   "sources": [
+    "src:ccd2fb2c92"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در گفت‌وگوی زوج‌ها، «دفاع» یکی از چهار الگوی پیش‌بینی‌کنندهٔ جدایی است، چون گلایه را بی‌جواب می‌گذارد و به پروندهٔ متقابل تبدیلش می‌کند.",
+    "en": "Defensiveness is one of the four horsemen because it converts a complaint into a counter-case.",
+    "nl": "Defensiveness is one of the four horsemen because it converts a complaint into a counter-case."
+   },
+   "sources": [
+    "src:60e53548cd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شکل تندترش DARVO است: انکار، حمله، و وارونه‌کردن نقش قربانی و متهم.",
+    "en": "Its sharper form is DARVO.",
+    "nl": "Its sharper form is DARVO."
+   },
+   "sources": [
+    "src:f32ea35e49"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پادزهر عملی، یک جملهٔ کوچک است: پیدا کردن آن بخش از حرف طرف مقابل که درست است و گفتنش، پیش از هر توضیحی. این کار برانگیختگی هر دو را پایین می‌آورد و گفت‌وگو را باز نگه می‌دارد.",
+    "en": "The antidote is naming the part of the complaint that is true before explaining anything.",
+    "nl": "The antidote is naming the part of the complaint that is true before explaining anything."
+   },
+   "sources": [
+    "src:60e53548cd"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:gottman-horsemen",
+   "rel": "part-of",
+   "note": {
+    "fa": "چهار سوار",
+    "en": "The four horsemen",
+    "nl": "The four horsemen"
+   }
+  },
+  {
+   "to": "psy:darvo",
+   "rel": "see-also",
+   "note": {
+    "fa": "شکل تندتر",
+    "en": "The sharper form",
+    "nl": "The sharper form"
+   }
+  },
+  {
+   "to": "psy:self-compassion",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا شرم، دفاع می‌سازد",
+    "en": "Why shame produces defence",
+    "nl": "Why shame produces defence"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:60e53548cd",
+  "src:ccd2fb2c92",
+  "src:f32ea35e49"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "try": {
+  "text": {
+   "fa": "جمله‌ای را که آخرین بار در دعوا گفتید بنویسید و ببینید کدام الگو در آن هست، و چه جایگزینی دارد.",
+   "en": "Write the last thing you said in an argument and see which pattern it is.",
+   "nl": "Write the last thing you said in an argument and see which pattern it is."
+  },
+  "tool": "tools/sentences.html"
+ }
+}

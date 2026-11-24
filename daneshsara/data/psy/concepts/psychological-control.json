@@ -1,0 +1,108 @@
+{
+ "id": "psy:psychological-control",
+ "kind": "concept",
+ "title": {
+  "fa": "کنترل روان‌شناختی والدین",
+  "en": "Parental psychological control",
+  "nl": "Psychologische controle door ouders"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "شکلی از کنترل که به‌جای رفتار کودک، به دنیای درونی او کار دارد: احساس گناه، دریغ محبت، بی‌اعتبار کردن احساس و حملهٔ شخصی. در پژوهش‌ها با افسردگی، اضطراب و خودکم‌بینی همراه است.",
+  "en": "Control aimed at the child's inner world rather than behaviour, linked with depression, anxiety and low self-worth.",
+  "nl": "Control aimed at the child's inner world rather than behaviour, linked with depression, anxiety and low self-worth."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "باربر (۱۹۹۶) این سازه را که سال‌ها رها شده بود دوباره زنده کرد و نشان داد باید از «کنترل رفتاری» (قاعده گذاشتن، نظارت بر درس و دوستان) جدا شود: کنترل رفتاری با مشکلات بیرونی‌شده کمتر همراه است، ولی کنترل روان‌شناختی با مشکلات درونی‌شده بیشتر.",
+    "en": "Barber (1996) revived the construct and separated it from behavioural control.",
+    "nl": "Barber (1996) revived the construct and separated it from behavioural control."
+   },
+   "sources": [
+    "src:f366b3e17a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "شاخه‌های رفتاری‌اش در همان کار نام‌گذاری شده‌اند: محدود کردن بیان کلامی، بی‌اعتبار کردن احساس، حملهٔ شخصی به کودک، ایجاد احساس گناه، دریغ محبت، و بی‌ثباتی هیجانی.",
+    "en": "Its behaviour classes: constraining verbal expression, invalidating feelings, personal attack, guilt induction, love withdrawal, erratic emotional behaviour.",
+    "nl": "Its behaviour classes: constraining verbal expression, invalidating feelings, personal attack, guilt induction, love withdrawal, erratic emotional behaviour."
+   },
+   "sources": [
+    "src:f366b3e17a"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نسخهٔ «توجه مشروط» همین است در لباس مهربانی: محبت وقتی هست که کودک آن‌طور باشد که خواسته شده. اسور، روت و دسی نشان دادند این کودکان بعدها خودارزشی نوسانی، شرم بیشتر و خشم پنهان نسبت به والد دارند — حتی وقتی در ظاهر موفق‌اند.",
+    "en": "Assor, Roth and Deci showed conditional regard predicts fluctuating self-worth, shame and resentment.",
+    "nl": "Assor, Roth and Deci showed conditional regard predicts fluctuating self-worth, shame and resentment."
+   },
+   "sources": [
+    "src:8f0f4b4600"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:control-behaviors",
+   "rel": "part-of",
+   "note": {
+    "fa": "همان دسته‌ها در بزرگسالی",
+    "en": "The same classes in adulthood",
+    "nl": "The same classes in adulthood"
+   }
+  },
+  {
+   "to": "psy:conditional-regard",
+   "rel": "explains",
+   "note": {
+    "fa": "توجه مشروط",
+    "en": "Conditional regard",
+    "nl": "Conditional regard"
+   }
+  },
+  {
+   "to": "psy:children-of-narcissists",
+   "rel": "applies-to",
+   "note": {
+    "fa": "وقتی والد خودشیفته باشد",
+    "en": "When the parent is narcissistic",
+    "nl": "When the parent is narcissistic"
+   }
+  },
+  {
+   "to": "psy:p-dev",
+   "rel": "part-of",
+   "note": {
+    "fa": "روان‌شناسی رشد",
+    "en": "Developmental psychology",
+    "nl": "Developmental psychology"
+   }
+  }
+ ],
+ "people": [
+  "core:brian-barber",
+  "core:edward-deci"
+ ],
+ "sources": [
+  "src:8f0f4b4600",
+  "src:f366b3e17a"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "فرق کنترل رفتاری و کنترل روان‌شناختی را با یک مثال می‌شود دید.\n\n«ساعت یازده باید خانه باشی» کنترل رفتاری است: قاعده روشن است، دربارهٔ کار است، و بچه می‌تواند با آن مخالف باشد بی‌آنکه رابطه‌اش به خطر بیفتد.\n\n«اگر دوستم داشتی این ساعت بیرون نمی‌ماندی» کنترل روان‌شناختی است: قاعده‌ای در کار نیست، خودِ پیوند گرو گذاشته شده است. بچه یاد می‌گیرد که مخالفت کردن یعنی به خطر انداختن عشق.\n\nنکتهٔ ظریف این است که این شکل دوم معمولاً از سر بی‌مهری نیست؛ بیشتر از ترس و نگرانی والد می‌آید. اثرش اما به نیت بستگی ندارد.",
+  "en": "Behavioural control sets rules; psychological control puts the bond itself at stake.",
+  "nl": "Behavioural control sets rules; psychological control puts the bond itself at stake."
+ }
+}

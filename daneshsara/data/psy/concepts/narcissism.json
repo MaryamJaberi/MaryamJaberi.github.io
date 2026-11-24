@@ -1,0 +1,185 @@
+{
+ "id": "psy:narcissism",
+ "kind": "concept",
+ "title": {
+  "fa": "خودشیفتگی: یک طیف، نه یک برچسب",
+  "en": "Narcissism: a spectrum, not a label",
+  "nl": "Narcisme: een spectrum, geen etiket"
+ },
+ "aliases": [
+  "نارسیسیسم",
+  "نارسیسم",
+  "خودشیفته"
+ ],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "خودشیفتگی صفتی است که همه کمی از آن داریم: توجه به خود، نیاز به دیده‌شدن، و دفاع از تصویر خود. آنچه فرق می‌کند شدت، انعطاف و هزینه‌ای است که برای دیگران دارد — نه اینکه کسی «خودشیفته هست یا نیست».",
+  "en": "Narcissism is a trait everyone has to some degree: self-focus, a need to be seen, and defence of one's self-image. What differs is intensity, flexibility and the cost to others — not whether someone 'is or isn't' a narcissist.",
+  "nl": "Narcissism is a trait everyone has to some degree: self-focus, a need to be seen, and defence of one's self-image. What differs is intensity, flexibility and the cost to others — not whether someone 'is or isn't' a narcissist."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در روان‌شناسی شخصیت، خودشیفتگی یک صفت پیوسته است و در جمعیت عادی توزیعی مثل قد دارد: بیشتر مردم وسط‌اند و کم‌شمارند کسانی که در دو سر طیف می‌ایستند.",
+    "en": "In personality psychology narcissism is a continuous trait, distributed in the general population like height.",
+    "nl": "In personality psychology narcissism is a continuous trait, distributed in the general population like height."
+   },
+   "sources": [
+    "src:ccd2fb2c92"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دست‌کم دو چهرهٔ متفاوت دارد که در پژوهش‌ها رفتار متفاوتی نشان می‌دهند: «بزرگ‌منشانه» (آشکار، پرمدعا، مطمئن) و «آسیب‌پذیر» (پنهان، زودرنج، آکنده از شرم). هر دو یک هستهٔ مشترک دارند: احساس استحقاق و حساسیت شدید به تصویر خود.",
+    "en": "At least two phenotypes behave differently in research: grandiose and vulnerable narcissism, sharing a core of entitlement and self-image sensitivity.",
+    "nl": "At least two phenotypes behave differently in research: grandiose and vulnerable narcissism, sharing a core of entitlement and self-image sensitivity."
+   },
+   "sources": [
+    "src:ccd2fb2c92",
+    "src:633e2cfa62"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بک و همکاران نشان دادند دو راهبرد جدا پشت این صفت کار می‌کند: «تحسین‌جویی» که آدم را در آغاز جذاب و پرانرژی نشان می‌دهد، و «رقابت‌جویی» که در تعارض به تحقیر و پرخاش می‌رسد. همین توضیح می‌دهد چرا آشنایی اول درخشان است و ادامه‌اش سخت.",
+    "en": "Back et al. separated admiration (initially charming) from rivalry (devaluing in conflict) — explaining the bright first impression and the difficult continuation.",
+    "nl": "Back et al. separated admiration (initially charming) from rivalry (devaluing in conflict) — explaining the bright first impression and the difficult continuation."
+   },
+   "sources": [
+    "src:633e2cfa62"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آنچه در زندگی روزمره آزار می‌دهد معمولاً خود صفت نیست، رفتارهایی است که از آن بیرون می‌آید: کنترل، بی‌اعتبار کردن، تحقیر و وارونه‌کردن تقصیر. این رفتارها را می‌شود دید، شمرد و دربارهٔ آن‌ها تصمیم گرفت؛ درون آدم‌ها را نمی‌شود.",
+    "en": "What hurts in daily life is usually not the trait but the behaviours: control, invalidation, contempt, blame reversal — which can be observed, unlike inner states.",
+    "nl": "What hurts in daily life is usually not the trait but the behaviours: control, invalidation, contempt, blame reversal — which can be observed, unlike inner states."
+   },
+   "sources": [
+    "src:f366b3e17a",
+    "src:896275a639"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:vulnerable-narcissism",
+   "rel": "part-of",
+   "note": {
+    "fa": "چهرهٔ پنهان همین صفت",
+    "en": "The hidden face of the same trait",
+    "nl": "The hidden face of the same trait"
+   }
+  },
+  {
+   "to": "psy:narcissism-culture",
+   "rel": "see-also",
+   "note": {
+    "fa": "آیا این قرن ما را خودشیفته‌تر کرده؟",
+    "en": "Has this century made us more narcissistic?",
+    "nl": "Has this century made us more narcissistic?"
+   }
+  },
+  {
+   "to": "psy:npd",
+   "rel": "contrasts",
+   "note": {
+    "fa": "صفت در برابر اختلال",
+    "en": "Trait versus disorder",
+    "nl": "Trait versus disorder"
+   }
+  },
+  {
+   "to": "psy:healthy-narcissism",
+   "rel": "contrasts",
+   "note": {
+    "fa": "کجای این صفت سوخت است",
+    "en": "Where the trait is fuel",
+    "nl": "Where the trait is fuel"
+   }
+  },
+  {
+   "to": "psy:labels-harm",
+   "rel": "see-also",
+   "note": {
+    "fa": "چرا برچسب‌زدن کار را خراب می‌کند",
+    "en": "Why labelling backfires",
+    "nl": "Why labelling backfires"
+   }
+  }
+ ],
+ "people": [
+  "core:joshua-miller"
+ ],
+ "sources": [
+  "src:633e2cfa62",
+  "src:896275a639",
+  "src:ccd2fb2c92",
+  "src:f366b3e17a"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "تصویر رایج از «خودشیفته» آدمی است که مدام از خودش تعریف می‌کند و جلوی آینه می‌ایستد. این تصویر هم ناقص است هم گمراه‌کننده. هستهٔ این صفت، نیاز شدید به نگه‌داشتن یک تصویر خاص از خود است — و کارهایی که برای نگه‌داشتن آن تصویر انجام می‌شود.\n\nاگر آن تصویر «من بهترینم» باشد، شکل بیرونی‌اش پرمدعا و پرانرژی است. اگر آن تصویر «من خاصم ولی دنیا قدر نمی‌داند» باشد، شکل بیرونی‌اش گوشه‌گیر، زودرنج و طلبکار است. هر دو وقتی تصویرشان تهدید شود واکنش تندی نشان می‌دهند؛ یکی با حمله، یکی با قهر و شکایت.\n\nبرای همین، پرسش مفید «او خودشیفته است یا نه؟» نیست. پرسش‌های مفید این‌هاست: در این رابطه چه رفتارهایی تکرار می‌شود؟ چه چیزی را از من می‌گیرد؟ چه چیزی هنوز دست من است؟",
+  "en": "The common image of a narcissist is misleading; the core is an intense need to maintain a particular self-image and what gets done to maintain it.",
+  "nl": "The common image of a narcissist is misleading; the core is an intense need to maintain a particular self-image and what gets done to maintain it."
+ },
+ "why": {
+  "fa": "چون این کلمه در فارسی و در فضای مجازی به فحش تبدیل شده است. وقتی برچسب زده شد، فکر کردن تمام می‌شود: دیگر لازم نیست بفهمیم چه اتفاقی می‌افتد، چه چیزی آن را نگه می‌دارد و چه کاری از ما برمی‌آید. دیدنِ رفتار، برخلاف برچسب، به تصمیم ختم می‌شود.",
+  "en": "Because the word has become an insult; once the label is applied, thinking stops, while seeing behaviour leads to decisions.",
+  "nl": "Because the word has become an insult; once the label is applied, thinking stops, while seeing behaviour leads to decisions."
+ },
+ "examples": [
+  {
+   "kind": "everyday",
+   "label": "illustration",
+   "text": {
+    "fa": "دو همکار در یک جلسه نقد می‌شوند. اولی سرخ می‌شود و بلند می‌گوید «شما اصلاً کار من را نخوانده‌اید»؛ دومی ساکت می‌ماند، جلسه را زود ترک می‌کند و هفته‌ها با کسی حرف نمی‌زند. از بیرون دو آدم کاملاً متفاوت‌اند؛ هر دو ممکن است یک کار می‌کنند: از تصویری که از خود دارند دفاع می‌کنند.",
+    "en": "Two colleagues criticised in a meeting: one attacks, one withdraws for weeks — both may be defending a self-image.",
+    "nl": "Two colleagues criticised in a meeting: one attacks, one withdraws for weeks — both may be defending a self-image."
+   }
+  },
+  {
+   "kind": "everyday",
+   "label": "illustration",
+   "text": {
+    "fa": "یک جملهٔ آشنا در خانواده‌های ایرانی: «من که همهٔ عمرم را پای شما گذاشتم.» این جمله لزوماً از خودشیفتگی نمی‌آید؛ ولی اگر هر بار که کسی «نه» می‌گوید تکرار شود، دیگر یک خاطره نیست، یک ابزار است.",
+    "en": "A familiar family line that is not necessarily narcissism — unless it appears every time someone says no.",
+    "nl": "A familiar family line that is not necessarily narcissism — unless it appears every time someone says no."
+   }
+  }
+ ],
+ "try": {
+  "text": {
+   "fa": "به‌جای اینکه فکر کنید طرف مقابل چه هست، یک هفته فقط بشمارید چه می‌کند: هر بار که حرفتان نیمه ماند، هر بار که احساستان غلط اعلام شد، هر بار که بعد از گفت‌وگو به حافظهٔ خودتان شک کردید. همین شمردن، تصویر را روشن‌تر می‌کند از هر تشخیصی.",
+   "en": "Instead of guessing what the other person is, spend a week counting what they do.",
+   "nl": "Instead of guessing what the other person is, spend a week counting what they do."
+  },
+  "tool": "tools/control-check.html"
+ },
+ "confusions": [
+  {
+   "fa": "«خودشیفته» با «خودخواه» یکی نیست. خودخواهی یعنی اولویت‌دادن به منافع خود؛ خودشیفتگی یعنی نیاز به نگه‌داشتن یک تصویر از خود، حتی به قیمت منافع خود.",
+   "en": "Narcissism is not the same as selfishness.",
+   "nl": "Narcissism is not the same as selfishness."
+  },
+  {
+   "fa": "اعتمادبه‌نفس بالا خودشیفتگی نیست. در پژوهش‌ها عزت‌نفس و خودشیفتگی دو چیز جدا هستند و حتی پیامدهای وارونه دارند.",
+   "en": "High self-esteem is not narcissism; research separates them.",
+   "nl": "High self-esteem is not narcissism; research separates them."
+  },
+  {
+   "fa": "هر رفتار کنترل‌گرانه از خودشیفتگی نمی‌آید. ترس، اضطراب، تربیت و فرهنگ هم همان رفتار را می‌سازند؛ و درمانشان فرق می‌کند.",
+   "en": "Not every controlling behaviour comes from narcissism.",
+   "nl": "Not every controlling behaviour comes from narcissism."
+  }
+ ]
+}

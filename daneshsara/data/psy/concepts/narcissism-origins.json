@@ -1,0 +1,125 @@
+{
+ "id": "psy:narcissism-origins",
+ "kind": "concept",
+ "title": {
+  "fa": "خودشیفتگی از کجا می‌آید",
+  "en": "Where narcissism comes from",
+  "nl": "Waar narcisme vandaan komt"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "دو فرضیهٔ قدیمی رو در روی هم بودند: سردی والد، یا ستایش بیش از حد. یک پژوهش طولی روی ۵۶۵ کودک پاسخ روشنی داد: ارزش‌گذاری اغراق‌آمیز خودشیفتگی می‌سازد، و گرما عزت‌نفس.",
+  "en": "Two old hypotheses — parental coldness versus overvaluation — were tested: overvaluation predicts narcissism, warmth predicts self-esteem.",
+  "nl": "Two old hypotheses — parental coldness versus overvaluation — were tested: overvaluation predicts narcissism, warmth predicts self-esteem."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بروملمن و همکاران ۵۶۵ کودک ۷ تا ۱۲ ساله و والدینشان را در چهار نوبت با فاصلهٔ شش ماه سنجیدند. «ارزش‌گذاری اغراق‌آمیز» والد (اینکه فرزندم از بچه‌های دیگر خاص‌تر و بااستعدادتر است) خودشیفتگی بعدی کودک را پیش‌بینی کرد؛ کمبود گرمای والد این کار را نکرد.",
+    "en": "Brummelman et al. followed 565 children across four waves: parental overvaluation predicted later child narcissism; lack of warmth did not.",
+    "nl": "Brummelman et al. followed 565 children across four waves: parental overvaluation predicted later child narcissism; lack of warmth did not."
+   },
+   "sources": [
+    "src:60ae24a19b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در همان داده، گرمای والد عزت‌نفس کودک را پیش‌بینی کرد و ارزش‌گذاری اغراق‌آمیز نه. یعنی دو مسیر جدا: ستایش تورمی خودشیفتگی می‌سازد، محبت واقعی عزت‌نفس.",
+    "en": "Warmth predicted self-esteem; overvaluation did not — two separate paths.",
+    "nl": "Warmth predicted self-esteem; overvaluation did not — two separate paths."
+   },
+   "sources": [
+    "src:60ae24a19b",
+    "src:7486333a61"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این یافته به سود نظریه‌های یادگیری اجتماعی و به زیان روایت روان‌کاوانهٔ کلاسیک (سردی والد) بود؛ هرچند یک پژوهش، هرچه خوش‌طرح، پروندهٔ یک بحث صدساله را نمی‌بندد.",
+    "en": "The finding favours social-learning accounts over the classic psychoanalytic one — though one study does not close a century-old debate.",
+    "nl": "The finding favours social-learning accounts over the classic psychoanalytic one — though one study does not close a century-old debate."
+   },
+   "sources": [
+    "src:60ae24a19b"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "مسیر دیگری هم هست که شواهد خوبی دارد: «توجه مشروط». وقتی محبت والد به عملکرد گره بخورد، کودک آن را درونی می‌کند و خودارزشی‌اش نوسانی می‌شود — بالا پس از موفقیت، شرم پس از شکست — همراه با خشمی پنهان نسبت به والد.",
+    "en": "Conditional regard leads to introjection, fluctuating self-worth and resentment.",
+    "nl": "Conditional regard leads to introjection, fluctuating self-worth and resentment."
+   },
+   "sources": [
+    "src:8f0f4b4600"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در همان پژوهش، انتقال بین‌نسلی هم دیده شد: مادرانی که خودشان توجه مشروط را تجربه کرده بودند، بیشتر همان را با دخترانشان تکرار می‌کردند.",
+    "en": "Mothers who had experienced conditional regard were more likely to repeat it.",
+    "nl": "Mothers who had experienced conditional regard were more likely to repeat it."
+   },
+   "sources": [
+    "src:8f0f4b4600"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:healthy-narcissism",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا ستایش و محبت دو چیزند",
+    "en": "Why praise and warmth differ",
+    "nl": "Why praise and warmth differ"
+   }
+  },
+  {
+   "to": "psy:conditional-regard",
+   "rel": "part-of",
+   "note": {
+    "fa": "توجه مشروط",
+    "en": "Conditional regard",
+    "nl": "Conditional regard"
+   }
+  },
+  {
+   "to": "psy:children-of-narcissists",
+   "rel": "see-also",
+   "note": {
+    "fa": "آن طرف ماجرا: فرزندان",
+    "en": "The other side: the children",
+    "nl": "The other side: the children"
+   }
+  }
+ ],
+ "people": [
+  "core:eddie-brummelman",
+  "core:edward-deci"
+ ],
+ "sources": [
+  "src:60ae24a19b",
+  "src:7486333a61",
+  "src:8f0f4b4600"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "تفاوت گرما و ارزش‌گذاری اغراق‌آمیز، در عمل، در خود جمله‌هاست.\n\n<b>گرما:</b> «دوستت دارم.» «از بودن با تو لذت می‌برم.» «سخت بود و تو ادامه دادی.» پیام: تو ارزشمندی.\n\n<b>ارزش‌گذاری اغراق‌آمیز:</b> «تو از همهٔ بچه‌ها بااستعدادتری.» «تو استثنایی هستی.» «معلمت لیاقت تو را ندارد.» پیام: تو برتری.\n\nپیام اول پایه می‌سازد؛ پیام دوم بدهی می‌سازد. کودکی که یاد گرفته برتر است، باید هر روز آن برتری را ثابت کند، و هر نقد به تهدید هویت تبدیل می‌شود.\n\nاین برای والدی که می‌خواهد کاری کند خبر خوبی است: راه‌حل، سرد شدن نیست. راه‌حل، جابه‌جا کردن ستایش از «تو چه هستی» به «چه کردی و چطور».",
+  "en": "Warmth says you are valued; overvaluation says you are superior, which creates a debt to be repaid daily.",
+  "nl": "Warmth says you are valued; overvaluation says you are superior, which creates a debt to be repaid daily."
+ }
+}

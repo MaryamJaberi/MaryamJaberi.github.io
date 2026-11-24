@@ -1,0 +1,123 @@
+{
+ "id": "psy:karpman-triangle",
+ "kind": "concept",
+ "title": {
+  "fa": "مثلث قربانی، ظالم، ناجی",
+  "en": "The drama triangle and the way out",
+  "nl": "Dramadriehoek"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "استیون کارپمن در ۱۹۶۸ دید که دعواهای تکراری روی سه نقش می‌چرخند: قربانی، ظالم، ناجی. نکتهٔ اصلی این است که این‌ها آدم نیستند، نقش‌اند — و نقش‌ها می‌چرخند.",
+  "en": "Karpman's 1968 observation that repetitive conflicts rotate through three roles, and that the roles switch.",
+  "nl": "Karpman's 1968 observation that repetitive conflicts rotate through three roles, and that the roles switch."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "کارپمن این الگو را در تحلیل داستان‌ها و نمایش‌نامه‌ها دید و به رابطه‌های واقعی آورد: هر سه نقش به هم نیاز دارند و هر کدام سود پنهانی دارند که ماندن در مثلث را ممکن می‌کند.",
+    "en": "Karpman drew the pattern from drama analysis; each role has a hidden payoff.",
+    "nl": "Karpman drew the pattern from drama analysis; each role has a hidden payoff."
+   },
+   "sources": [
+    "src:b363f15013"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چرخش نقش‌ها همان چیزی است که الگو را فرساینده می‌کند: ناجیِ خسته طلبکار می‌شود و به ظالم می‌رسد؛ ظالمِ مچ‌گرفته‌شده خود را قربانی می‌بیند؛ قربانیِ ناامید از ناجی، به او حمله می‌کند.",
+    "en": "The role switch is what makes the pattern exhausting.",
+    "nl": "The role switch is what makes the pattern exhausting."
+   },
+   "sources": [
+    "src:b363f15013"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دیوید امرالد برای هر گوشه یک جایگزین گذاشت: قربانی به «خالق» (چه می‌خواهم؟)، ظالم به «چالش‌گر» (این وضع چه می‌خواهد؟)، ناجی به «مربی» (چه کاری از خودت برمی‌آید؟).",
+    "en": "Emerald proposed Creator, Challenger and Coach as the alternatives.",
+    "nl": "Emerald proposed Creator, Challenger and Coach as the alternatives."
+   },
+   "sources": [
+    "src:96605a71b4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "صادقانه دربارهٔ اعتبارش: این یک چارچوب بالینی از «تحلیل رفتار متقابل» است، نه سازه‌ای که اندازه‌گیری و آزموده شده باشد. فایده‌اش نام‌گذاری الگویی است که آدم‌ها فوراً می‌شناسند.",
+    "en": "Honestly: this is a clinical framework from transactional analysis, not a measured construct.",
+    "nl": "Honestly: this is a clinical framework from transactional analysis, not a measured construct."
+   },
+   "sources": [
+    "src:b363f15013",
+    "src:96605a71b4"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:victim-mindset",
+   "rel": "part-of",
+   "note": {
+    "fa": "گوشهٔ قربانی",
+    "en": "The victim corner",
+    "nl": "The victim corner"
+   }
+  },
+  {
+   "to": "psy:rescuing",
+   "rel": "part-of",
+   "note": {
+    "fa": "گوشهٔ ناجی",
+    "en": "The rescuer corner",
+    "nl": "The rescuer corner"
+   }
+  },
+  {
+   "to": "psy:agency",
+   "rel": "explains",
+   "note": {
+    "fa": "راه بیرون: حق انتخاب",
+    "en": "The way out: agency",
+    "nl": "The way out: agency"
+   }
+  }
+ ],
+ "people": [
+  "core:stephen-karpman",
+  "core:david-emerald"
+ ],
+ "sources": [
+  "src:96605a71b4",
+  "src:b363f15013"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "try": {
+  "text": {
+   "fa": "یک موقعیت واقعی خودتان را در شش گام از مثلث بیرون بیاورید.",
+   "en": "Take one real situation of yours out of the triangle in six steps.",
+   "nl": "Take one real situation of yours out of the triangle in six steps."
+  },
+  "tool": "tools/triangle.html"
+ },
+ "confusions": [
+  {
+   "fa": "این مدل را نباید به رابطه‌ای که در آن خشونت یا کنترل اجباری هست تعمیم داد. آن‌جا گفتن «تو هم نقشی داری» سهم تقصیر را روی کسی می‌گذارد که در خطر است. قربانیِ خشونت نقش بازی نمی‌کند.",
+   "en": "The model must not be applied to violence or coercive control; victims of violence are not playing a role.",
+   "nl": "The model must not be applied to violence or coercive control; victims of violence are not playing a role."
+  }
+ ]
+}

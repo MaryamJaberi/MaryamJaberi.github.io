@@ -1,0 +1,104 @@
+{
+ "id": "psy:gaslighting",
+ "kind": "concept",
+ "title": {
+  "fa": "گازلایتینگ: دست بردن در واقعیت",
+  "en": "Gaslighting",
+  "nl": "Gaslighting"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "وقتی کسی به‌طور تکراری ادراک، حافظه و سلامت عقل شما را زیر سؤال می‌برد تا روایت خودش بماند. نتیجه‌اش شک به خود است: «شاید واقعاً من بد فهمیده‌ام.»",
+  "en": "Repeatedly undermining someone's perception, memory or sanity so that one version of reality stands.",
+  "nl": "Repeatedly undermining someone's perception, memory or sanity so that one version of reality stands."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نام از نمایشنامه و فیلم «گازلایت» (۱۹۳۸ و ۱۹۴۴) می‌آید که در آن شوهر نور چراغ‌های گازی خانه را کم می‌کند و وقتی زن متوجه می‌شود، انکار می‌کند تا او به ذهن خودش شک کند.",
+    "en": "The name comes from the 1938 play and 1944 film Gaslight.",
+    "nl": "The name comes from the 1938 play and 1944 film Gaslight."
+   },
+   "sources": [
+    "src:cbad2dd330"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیج سوئیت در تحلیل جامعه‌شناختی‌اش استدلال کرد که گازلایتینگ فقط یک بازی روانی میان دو نفر نیست: وقتی کار می‌کند که نابرابری واقعی پشتش باشد — جنسیتی، مالی، مهاجرتی — و وقتی کلیشه‌های اجتماعی («زن‌ها احساساتی‌اند»، «او بیمار روانی است») حرف یکی را از پیش بی‌اعتبار کرده باشد.",
+    "en": "Sweet argued gaslighting works where real inequality and stereotypes already discredit one party.",
+    "nl": "Sweet argued gaslighting works where real inequality and stereotypes already discredit one party."
+   },
+   "sources": [
+    "src:cbad2dd330"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نشانهٔ عملی‌اش بیرون از دعواست: بعد از گفت‌وگو به حافظهٔ خودتان شک می‌کنید، برای یادآوری به یادداشت و پیام نیاز پیدا می‌کنید، و پیش از حرف‌زدن در ذهنتان تمرین می‌کنید.",
+    "en": "A practical sign: doubting your own memory after conversations and rehearsing before speaking.",
+    "nl": "A practical sign: doubting your own memory after conversations and rehearsing before speaking."
+   },
+   "sources": [
+    "src:cbad2dd330"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:control-behaviors",
+   "rel": "part-of",
+   "note": {
+    "fa": "یکی از نُه دسته",
+    "en": "One of the nine classes",
+    "nl": "One of the nine classes"
+   }
+  },
+  {
+   "to": "psy:darvo",
+   "rel": "see-also",
+   "note": {
+    "fa": "وارونه‌کردن نقش قربانی",
+    "en": "Reversing victim and offender",
+    "nl": "Reversing victim and offender"
+   }
+  },
+  {
+   "to": "psy:self-trust",
+   "rel": "explains",
+   "note": {
+    "fa": "بازسازی اعتماد به ادراک خود",
+    "en": "Rebuilding epistemic self-trust",
+    "nl": "Rebuilding epistemic self-trust"
+   }
+  }
+ ],
+ "people": [
+  "core:paige-sweet"
+ ],
+ "sources": [
+  "src:cbad2dd330"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "confusions": [
+  {
+   "fa": "هر اختلاف حافظه گازلایتینگ نیست. حافظهٔ آدم‌ها واقعاً بد و بازسازی‌شونده است و دو نفر صادق می‌توانند دو روایت متفاوت داشته باشند. آنچه فرق می‌کند جهت و تکرار است: همیشه یک نفر است که باید از ادراک خودش دست بکشد.",
+   "en": "Not every memory conflict is gaslighting; what differs is the one-way, repeated pattern.",
+   "nl": "Not every memory conflict is gaslighting; what differs is the one-way, repeated pattern."
+  },
+  {
+   "fa": "«گازلایتینگ» هم مثل «خودشیفته» به کلمه‌ای فرسوده تبدیل شده است. وقتی هر مخالفتی گازلایتینگ خوانده شود، کلمه دیگر چیزی را توصیف نمی‌کند.",
+   "en": "The word has been overused to the point of losing meaning.",
+   "nl": "The word has been overused to the point of losing meaning."
+  }
+ ]
+}

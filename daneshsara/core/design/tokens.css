@@ -19,6 +19,7 @@
   /* پنج خانوادهٔ اطلس (تصمیم بخش ۱۱ سند) */
   --fam-bio:#A8481A; --fam-psy:#0A6B60; --fam-soc:#2A6F7A; --fam-hum:#5B4B8A; --fam-formal:#1C39BB; --fam-hist:#7A5F22;
   --fam-bio-soft:#F7E6DD; --fam-psy-soft:#E6F2F0; --fam-soc-soft:#E3EFF1; --fam-hum-soft:#ECE8F3; --fam-formal-soft:#E8ECF8; --fam-hist-soft:#F3ECD9;
+  --story:#B4532A; --story-soft:#F7E6DD;
   /* ردهٔ داده */
   --grade-a:#2F6B4F; --grade-b:#0A6B60; --grade-c:#B45309; --grade-d:#9F1239;
   /* تایپ */
@@ -43,6 +44,7 @@
     --ok:#6FBF95; --warn:#E0A050; --err:#E07090;
     --fam-bio:#E08A5E; --fam-psy:#4FB3A6; --fam-soc:#6FB0BB; --fam-hum:#A08FD0; --fam-formal:#8FA3E8; --fam-hist:#D4AE5A;
     --fam-bio-soft:#3A2418; --fam-psy-soft:#0F2E2A; --fam-soc-soft:#10292D; --fam-hum-soft:#241E33; --fam-formal-soft:#1A2040; --fam-hist-soft:#332B16;
+    --story:#E39368; --story-soft:#3A2519;
     --grade-a:#6FBF95; --grade-b:#4FB3A6; --grade-c:#E0A050; --grade-d:#E07090;
     --shadow-sm:none; --shadow-md:0 4px 12px rgba(0,0,0,.35); --shadow-lg:0 8px 24px rgba(0,0,0,.45);
   }
@@ -57,6 +59,7 @@
   --ok:#6FBF95; --warn:#E0A050; --err:#E07090;
   --fam-bio:#E08A5E; --fam-psy:#4FB3A6; --fam-soc:#6FB0BB; --fam-hum:#A08FD0; --fam-formal:#8FA3E8; --fam-hist:#D4AE5A;
   --fam-bio-soft:#3A2418; --fam-psy-soft:#0F2E2A; --fam-soc-soft:#10292D; --fam-hum-soft:#241E33; --fam-formal-soft:#1A2040; --fam-hist-soft:#332B16;
+    --story:#E39368; --story-soft:#3A2519;
   --grade-a:#6FBF95; --grade-b:#4FB3A6; --grade-c:#E0A050; --grade-d:#E07090;
   --shadow-sm:none; --shadow-md:0 4px 12px rgba(0,0,0,.35); --shadow-lg:0 8px 24px rgba(0,0,0,.45);
 }

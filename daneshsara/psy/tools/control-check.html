@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آیا در این رابطه کنترل هست؟ | ویکی روان‌شناسی | دانش‌سرا</title>
+<meta name="description" content="بیست‌وپنج جملهٔ ساده دربارهٔ یک رابطهٔ مشخص، از دو طرف: آنچه با من می‌شود و آنچه من می‌کنم. نتیجه نُه الگوی رفتاری است، نه برچسب روی آدم‌ها.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<style>
+:root{--c:var(--fam-psy)}
+h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
+p.lead{color:var(--ink-2);max-width:46em;line-height:2;margin:0 0 var(--s4);font-size:1.05rem}
+.note{padding:var(--s3) var(--s4);border-radius:var(--r-md);font-size:var(--small);line-height:1.9;color:var(--ink-2);max-width:60em;margin:0 0 var(--s3)}
+.note.w{background:color-mix(in srgb,var(--warn) 10%,var(--paper));border:1px solid color-mix(in srgb,var(--warn) 45%,var(--line))}
+.note.p{background:color-mix(in srgb,var(--ok) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 35%,var(--line))}
+.note.r{background:color-mix(in srgb,#9a2f2f 10%,var(--paper));border:1px solid color-mix(in srgb,#9a2f2f 45%,var(--line))}
+section{padding-block:var(--s5);border-top:1px solid var(--line)}
+h2{font-size:var(--h3);margin:0 0 var(--s3)}
+h3{font-size:var(--h4);margin:var(--s4) 0 var(--s2)}
+.sw{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 var(--s3)}
+.sw button{font:inherit;padding:9px 20px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:var(--paper);color:var(--ink-2);cursor:pointer;line-height:1.5}
+.sw button[aria-pressed=true]{background:var(--c);border-color:var(--c);color:var(--paper);font-weight:650}
+.rowsel{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 var(--s4);font-size:var(--small);color:var(--ink-2)}
+.rowsel select{font:inherit;padding:7px 14px;border-radius:var(--r-md);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink)}
+.prog{height:6px;border-radius:4px;background:var(--surface-subtle);overflow:hidden;margin-bottom:var(--s4);max-width:44em}
+.prog i{display:block;height:100%;background:var(--c);transition:width .25s}
+ol.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3);max-width:44em;counter-reset:q}
+ol.q li{counter-increment:q;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface)}
+ol.q li.done{border-color:color-mix(in srgb,var(--c) 45%,var(--line))}
+ol.q p{margin:0 0 var(--s3);line-height:1.95}
+ol.q p::before{content:counter(q,persian) ". ";color:var(--c);font-weight:650}
+.sc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
+.sc label{position:relative;display:grid;place-items:center;min-height:42px;border-radius:var(--r-md);border:1px solid var(--line-strong);cursor:pointer;font-size:var(--chip);background:var(--paper);text-align:center;padding:2px}
+.sc input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.sc label:has(input:checked){background:var(--c);border-color:var(--c);color:var(--paper);font-weight:650}
+.act{display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--s4);align-items:center}
+button.b{font:inherit;padding:10px 24px;border-radius:var(--r-full);border:1px solid var(--c);background:var(--c);color:var(--paper);cursor:pointer;font-weight:650}
+button.b[disabled]{opacity:.45;cursor:not-allowed}
+button.g{font:inherit;padding:9px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:none;color:var(--ink-2);cursor:pointer}
+.left{font-size:var(--small);color:var(--ink-3)}
+.bars{display:grid;gap:10px;max-width:46em;margin:var(--s3) 0 var(--s5)}
+.bars .b{display:grid;grid-template-columns:minmax(0,13em) 1fr auto;gap:10px;align-items:center;font-size:var(--small)}
+.bars .t{color:var(--ink);font-weight:600}
+.bars .track{height:16px;border-radius:8px;background:var(--surface-subtle);overflow:hidden}
+.bars .fill{display:block;height:100%;border-radius:8px;transition:width .5s}
+.bars .v{font-variant-numeric:tabular-nums;color:var(--ink-3);font-size:var(--chip)}
+.dcard{border:1px solid var(--line);border-inline-start:4px solid var(--k);border-radius:var(--r-lg);padding:var(--s4);margin-bottom:var(--s3);background:var(--surface)}
+.dcard b.h{display:block;color:var(--k);margin-bottom:6px}
+.dcard p{margin:0 0 8px;line-height:1.95;font-size:var(--small);color:var(--ink-2)}
+.dcard .fix{background:color-mix(in srgb,var(--ok) 8%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 30%,var(--line));border-radius:var(--r-md);padding:10px 12px;font-size:var(--small);line-height:1.95;color:var(--ink-2)}
+.dcard .fix b{color:var(--ok)}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--s3)}
+.links a{font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink-2)}
+.links a:hover{border-color:var(--c);color:var(--c)}
+textarea{font:inherit;width:100%;max-width:44em;min-height:70px;padding:10px 12px;border:1px solid var(--line-strong);border-radius:var(--r-md);background:var(--paper);color:var(--ink);line-height:1.9}
+.three{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));max-width:60em}
+.three div{border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px}
+.three b{display:block;margin-bottom:6px}
+.three p{margin:0;font-size:var(--small);color:var(--ink-2);line-height:1.9}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><a href="../../psy/tools/">ابزارها</a><i>›</i><b>آیا در این رابطه کنترل هست؟</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap">
+<h1>آیا در این رابطه کنترل هست؟</h1>
+<p class="lead">این صفحه نمی‌گوید کسی خودشیفته است یا نیست. چنین چیزی از راه دور و با پرسشنامه معلوم نمی‌شود، و برچسب هم کار را درست نمی‌کند. کاری که این‌جا می‌شود کرد مفیدتر است: <b>دیدن رفتارها</b> — نُه الگوی شناخته‌شده که وقتی تکرار شوند، دایرهٔ انتخاب آدم را تنگ می‌کنند.</p>
+<p class="lead">و از دو طرف: یک بار «با من چه می‌شود»، یک بار «من چه می‌کنم». اگر فقط یکی را پر کنید، نیمی از تصویر را دیده‌اید.</p>
+<div class="note p">هیچ پاسخی ذخیره یا فرستاده نمی‌شود؛ هر چه می‌نویسید در همین مرورگر می‌ماند و با بستن صفحه می‌رود. این ابزار آموزشی است، نه آزمون معتبر و نه تشخیص.</div>
+</main>
+<main class="wrap" style="padding-top:0">
+<section id="ask">
+<h2>یک رابطهٔ مشخص را در نظر بگیرید</h2>
+<div class="rowsel"><label for="role">نقش:</label><select id="role"></select>
+<span>به یک رابطهٔ واقعی و همین دورهٔ زندگی فکر کنید، نه به «به‌طور کلی».</span></div>
+<div class="sw" id="mode" role="group" aria-label="از کدام طرف">
+ <button data-m="0" aria-pressed="true">با من چه می‌شود</button>
+ <button data-m="1" aria-pressed="false">من چه می‌کنم</button></div>
+<div class="prog"><i id="pbar" style="width:0"></i></div>
+<ol class="q" id="qs"></ol>
+<div class="act"><button class="b" id="show" disabled>نتیجه را ببین</button><button class="g" id="clear">پاک کردن</button><span class="left" id="left"></span></div>
+</section>
+
+<section id="result" hidden>
+<h2>آنچه پر کردید</h2>
+<p class="lead" style="font-size:1rem" id="head"></p>
+<div class="bars" id="bars"></div>
+<div id="flags"></div>
+<h3>الگوهایی که پررنگ‌اند</h3>
+<div id="cards"></div>
+<p class="note">هیچ عددی این‌جا «تشخیص» نیست. یک الگوی پررنگ یعنی «این رفتار در این رابطه تکرار می‌شود»، نه «این آدم فلان است». آدم‌ها در رابطه‌های مختلف فرق می‌کنند؛ همین را هم می‌توانید بیازمایید: همین پرسش‌ها را برای یک رابطهٔ دیگر پر کنید.</p>
+<div class="act"><button class="g" id="other">حالا از آن طرف پر کن</button><button class="g" id="copy">کپی نتیجه به‌صورت متن</button></div>
+</section>
+
+<section>
+<h2>حق انتخاب: سه پرسشی که وضعیت را عوض می‌کند</h2>
+<p class="lead" style="font-size:1rem">در رابطه‌های کنترل‌گرانه، چیزی که زودتر از همه از دست می‌رود حس «من می‌توانم انتخاب کنم» است. در پژوهش‌های ماير و سلیگمن، درماندگی چیزی نیست که یاد گرفته شود؛ <b>کنترل</b> است که یاد گرفته می‌شود — مغز وقتی تجربهٔ اثرگذاری داشته باشد، بی‌پناهی پیش‌فرض را کنار می‌زند. پس راهش تجربه‌های کوچک و واقعی اثرگذاری است، نه قانع‌کردن خود.</p>
+<div class="three">
+ <div><b>۱. چه چیزی واقعاً دست من است؟</b><p>سه ستون بنویسید: دست من، دست او، دست هیچ‌کس. بیشتر انرژی ما خرج ستون دوم می‌شود. ستون اول همیشه خالی نیست — حتی اگر فقط «چه ساعتی بخوابم» باشد.</p></div>
+ <div><b>۲. کوچک‌ترین گام بعدی چیست؟</b><p>آن‌قدر کوچک که انجامش قطعی باشد: یک تماس، یک یادداشت، یک «امشب نه». تجربهٔ موفق کوچک، بیشتر از تصمیم بزرگ، حس اختیار را برمی‌گرداند.</p></div>
+ <div><b>۳. بیرون از این رابطه، با که حرف می‌زنم؟</b><p>کنترل با تنهایی کار می‌کند. یک آدمِ بیرونی که ماه به ماه با او حرف بزنید، هم واقعیت‌سنج شماست هم راه برگشت.</p></div>
+</div>
+<p class="note">اگر خواستید همین‌جا بنویسید (ذخیره نمی‌شود، فقط برای خودتان):</p>
+<textarea placeholder="دست من: … | کوچک‌ترین گام این هفته: … | آدم بیرونی: …"></textarea>
+</section>
+
+<section>
+<h2>بعدش کجا بروم</h2>
+<div class="links">
+ <a href="triangle.html">مثلث قربانی، ظالم، ناجی — و راه بیرون ←</a>
+ <a href="sentences.html">جمله‌ساز: به‌جای این، آن ←</a>
+ <a href="arc.html">قوس رابطه: چطور شروع می‌شود و چطور تمام ←</a>
+ <a href="toll.html">آنچه بر تن و روان می‌گذرد ←</a>
+ <a href="../narcissism.html">پروندهٔ خودشیفتگی و کنترل ←</a>
+</div>
+</section>
+</main>
+<script>
+const DOM=[
+ {k:"talk",t:"بستن راه حرف",c:"#5b7a4a",
+  w:"گفت‌وگو یک‌طرفه تمام می‌شود: قطع‌کردن، تغییر موضوع، «بحث تمام شد». در سنجهٔ کنترل روان‌شناختی باربر، «محدودکردن بیان» یکی از شاخه‌های اصلی است.",
+  x:"یک قرار ساده: هر کس تا آخر حرفش را می‌زند، بعد دیگری خلاصه می‌کند که چه شنید. اگر یکی خسته شد، وقتِ برگشت تعیین می‌شود، نه اینکه بحث بسته شود."},
+ {k:"real",t:"بی‌اعتبار کردن احساس و واقعیت",c:"#3f7f6e",
+  w:"تجربه و حافظهٔ شما غلط اعلام می‌شود: «چیزی نشده»، «این‌طور نگفتم»، «تو حساسی». تکرار طولانی‌اش اعتماد آدم به ادراک خودش را می‌خورد؛ این همان چیزی است که گازلایتینگ نامیده می‌شود.",
+  x:"به‌جای دعوا بر سر اینکه چه گذشت: «من این‌طور دیدم» و بعد حرف زدن دربارهٔ کاری که از این به بعد می‌کنیم. یادداشت کوتاه و تاریخ‌دار، نه برای اثبات به او، برای اعتماد خودتان."},
+ {k:"attack",t:"حملهٔ شخصی و تحقیر",c:"#9a2f2f",
+  w:"هدف، رفتار نیست؛ خودِ آدم است: برچسب، پوزخند، مقایسه، تحقیر جلوی دیگران. در پژوهش‌های گاتمن، تحقیر قوی‌ترین پیش‌بینِ فروپاشی رابطه است.",
+  x:"قاعده‌ای که هر دو بپذیرند: از رفتار حرف می‌زنیم، نه از شخصیت. هر جا اسم و صفت آمد، گفت‌وگو مکث می‌کند."},
+ {k:"guilt",t:"ایجاد احساس گناه",c:"#8a6d3b",
+  w:"محبت و گذشته به بدهی تبدیل می‌شود: «بعد از این همه…»، «اگر دوستم داشتی…». خواستهٔ اصلی هیچ‌وقت صریح گفته نمی‌شود.",
+  x:"خواسته را مستقیم و شدنی بگویید، و جای «نه» را باز بگذارید. درخواستی که «نه» ندارد، درخواست نیست."},
+ {k:"withdraw",t:"دریغ محبت و قهر",c:"#6b4f8f",
+  w:"محبت مشروط می‌شود: تا آن‌طور که می‌خواهم نباشی، از دسترس بیرون می‌روم. قهر طولانی برای طرف مقابل مبهم و فرساینده است.",
+  x:"مکث بله، قهر نه: «الان نمی‌توانم ادامه بدهم، فردا ساعت هشت.» فاصله‌ای که وقتِ برگشت دارد."},
+ {k:"mood",t:"بی‌ثباتی و راه‌رفتن روی تخم‌مرغ",c:"#b0652a",
+  w:"حال او قانونِ خانه است و معلوم نیست کِی عوض می‌شود. نتیجه: همه حواسشان به او است و بدن در حالت گوش‌به‌زنگی می‌ماند.",
+  x:"پیش‌بینی‌پذیری: قرارهای روشن و تکرارشونده. اگر حالِ کسی بد است، نام‌بردنش («الان حالم بد است، ربطی به تو ندارد») بار را از دوش بقیه برمی‌دارد."},
+ {k:"isolate",t:"جداسازی و نظارت",c:"#8a4a4a",rf:1,
+  w:"پل‌های بیرونی کم می‌شوند و رفت‌وآمد زیر نظر می‌رود. استارک نشان داد جداسازی ستون اصلی «کنترل اجباری» است: هر پل که قطع شود، یک منبع واقعیت کم می‌شود.",
+  x:"دست‌کم یک رابطهٔ بیرونی را زنده نگه دارید، حتی اگر کوتاه و هفتگی باشد. اعتماد با شفافیت ساخته می‌شود، نه با بازرسی؛ بازرسی هیچ‌وقت شک را تمام نمی‌کند."},
+ {k:"micro",t:"ریزکنترل زندگی روزمره",c:"#8a4a6b",rf:1,
+  w:"لباس، پول، وقت، رفت‌وآمد و تصمیم‌های کوچک. تک‌تکش قابل توضیح است؛ روی هم، دایرهٔ انتخاب آدم جمع می‌شود. استارک این را «خردْتنظیمی زندگی روزمره» می‌نامد.",
+  x:"فهرست کنید کدام تصمیم‌ها مشترک‌اند و کدام شخصی. دسترسی مستقل به پول و مدارک، حتی کم، حق پایه است نه بی‌اعتمادی."},
+ {k:"fear",t:"ترس و تهدید",c:"#7a1f1f",rf:2,
+  w:"تهدید به رفتن، به آبرو، به بچه‌ها، به آسیب؛ یا ترسی که آدم نمی‌تواند نامش را بگذارد. این‌جا موضوع از مهارت گفت‌وگو جدا می‌شود و به ایمنی می‌رسد.",
+  x:"این یکی با بازنویسی جمله درست نمی‌شود. برنامهٔ ایمنی، آدم‌های مطمئن بیرون از رابطه، و کمک حرفه‌ای."}
+];
+/* i: [domain, آنچه با من می‌شود, آنچه من می‌کنم] */
+const IT=[
+ ["talk","وسط حرفم می‌پرد یا موضوع را عوض می‌کند تا حرفم تمام نشود.","وسط حرفش می‌پرم یا موضوع را عوض می‌کنم تا بحث تمام شود."],
+ ["talk","وقتی نظرم فرق دارد، به‌جای جواب‌دادن، بحث را می‌بندد: «تمام شد.»","وقتی نظرش فرق دارد، بحث را می‌بندم: «دیگر تمامش کن.»"],
+ ["talk","احساس می‌کنم بعضی موضوع‌ها را اصلاً نمی‌شود پیش کشید.","بعضی موضوع‌ها را طوری جواب می‌دهم که دیگر پیش کشیده نشوند."],
+ ["real","می‌گوید چیزی که یادم هست، آن‌طور نبوده.","می‌گویم آن‌طور که او می‌گوید نبوده و حافظه‌اش اشتباه است."],
+ ["real","می‌گوید زیادی حساسم یا دارم بزرگش می‌کنم.","می‌گویم زیادی حساس است یا دارد بزرگش می‌کند."],
+ ["real","بعد از بحث با او، به ادراک خودم شک می‌کنم.","بعد از بحث با من، به ادراک خودش شک می‌کند."],
+ ["attack","جلوی دیگران تحقیرم می‌کند یا مسخره‌ام می‌کند، حتی به شوخی.","جلوی دیگران دستش می‌اندازم یا تحقیرش می‌کنم، حتی به شوخی."],
+ ["attack","به‌جای اینکه از کارم ایراد بگیرد، از خودم ایراد می‌گیرد: «تو اصلاً…».","به‌جای ایراد از کارش، از خودش ایراد می‌گیرم: «تو اصلاً…»."],
+ ["attack","من را با دیگران مقایسه می‌کند.","او را با دیگران مقایسه می‌کنم."],
+ ["guilt","وقتی چیزی را قبول نمی‌کنم، احساس گناه می‌کنم.","وقتی چیزی را قبول نمی‌کند، کاری می‌کنم احساس گناه کند."],
+ ["guilt","کارهایی را که برایم کرده، وسط دعوا می‌آورد.","کارهایی را که برایش کرده‌ام، وسط دعوا می‌آورم."],
+ ["guilt","می‌گوید اگر دوستش داشتم این کار را نمی‌کردم.","می‌گویم اگر دوستم داشت این کار را نمی‌کرد."],
+ ["withdraw","وقتی ناراضی است، روزها سرد می‌شود یا جواب نمی‌دهد.","وقتی ناراضی‌ام، سرد می‌شوم یا جواب نمی‌دهم."],
+ ["withdraw","محبتش به این بستگی دارد که آن‌طور که می‌خواهد باشم.","محبتم به این بستگی دارد که آن‌طور که می‌خواهم باشد."],
+ ["mood","حواسم هست چه بگویم که حالش بد نشود.","اطرافیانم حواسشان هست چه بگویند که حالم بد نشود."],
+ ["mood","نمی‌دانم با چه حالی برمی‌گردد یا چه چیزی ناراحتش می‌کند.","واکنشم قابل پیش‌بینی نیست؛ یک روز چیزی مهم نیست و روز دیگر هست."],
+ ["isolate","از دوستان یا خانواده‌ام بد می‌گوید یا دیدنشان را سخت می‌کند.","از دوستان یا خانواده‌اش بد می‌گویم یا دیدنشان را سخت می‌کنم."],
+ ["isolate","گوشی، پیام‌ها یا موقعیتم را چک می‌کند.","گوشی، پیام‌ها یا موقعیتش را چک می‌کنم."],
+ ["isolate","باید جواب بدهم کجا بودم و با که بودم.","می‌خواهم بداند کجا بوده و با که بوده."],
+ ["micro","دربارهٔ لباس، ظاهر یا رفت‌وآمدم او تصمیم می‌گیرد.","دربارهٔ لباس، ظاهر یا رفت‌وآمدش نظر می‌دهم تا تغییر کند."],
+ ["micro","دسترسی مستقل به پول یا مدارک خودم ندارم.","پول و تصمیم‌های مالی عملاً دست من است."],
+ ["micro","وقتم را او تنظیم می‌کند؛ برنامهٔ خودم را نمی‌توانم بچینم.","برنامهٔ او را من تنظیم می‌کنم."],
+ ["fear","می‌ترسم بعضی چیزها را بگویم، چون نمی‌دانم چه می‌شود.","اطرافیانم از واکنش من می‌ترسند."],
+ ["fear","تهدید می‌کند: رفتن، آبرو، بچه‌ها، پول یا آسیب.","تهدید می‌کنم: رفتن، آبرو، بچه‌ها، پول یا چیزی شبیه این."],
+ ["fear","جایی در بدنم می‌دانم حالم کنار او خوب نیست، حتی وقتی دعوایی نیست.","وقتی عصبانی می‌شوم، چیزی می‌شکنم یا با بدنم راه را می‌بندم."]
+];
+const ROLE={couple:"زوج یا رابطهٔ نزدیک",family:"خانواده (والد، فرزند، خواهر و برادر)",work:"کار و سازمان",friend:"دوستی یا جمع"};
+const LAB=["هرگز","به‌ندرت","گاهی","اغلب","همیشه"];
+</script>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+const D={};DOM.forEach(d=>D[d.k]=d);
+let mode=0;
+$("role").innerHTML=Object.entries(ROLE).map(([k,v])=>`<option value="${k}">${E(v)}</option>`).join("");
+function build(){
+ $("qs").innerHTML=IT.map((it,i)=>`<li id="i${i}"><p>${E(it[1+mode])}</p><div class="sc">`+
+  LAB.map((l,v)=>`<label><input type="radio" name="q${i}" value="${v}">${E(l)}</label>`).join("")+`</div></li>`).join("");
+ tick();
+}
+function answers(){return IT.map((_,i)=>{const r=document.querySelector(`input[name=q${i}]:checked`);return r?+r.value:null})}
+function tick(){
+ const a=answers(),n=a.filter(v=>v!==null).length;
+ $("pbar").style.width=(n/IT.length*100)+"%";
+ $("left").textContent=n<IT.length?`${fa(IT.length-n)} جمله مانده`:"همه پر شد";
+ $("show").disabled=n<IT.length;
+ a.forEach((v,i)=>$("i"+i).classList.toggle("done",v!==null));
+}
+$("qs").addEventListener("change",tick);
+$("mode").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+ mode=+b.dataset.m;$("mode").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+ $("result").hidden=true;build();$("ask").scrollIntoView({behavior:"smooth",block:"start"})});
+$("clear").addEventListener("click",()=>{document.querySelectorAll("#qs input:checked").forEach(r=>r.checked=false);$("result").hidden=true;tick()});
+$("other").addEventListener("click",()=>{const b=$("mode").querySelector(`button[data-m="${1-mode}"]`);b.click()});
+function scores(){
+ const a=answers(),s={};DOM.forEach(d=>s[d.k]={sum:0,n:0,hi:0});
+ IT.forEach((it,i)=>{const o=s[it[0]];o.sum+=a[i];o.n++;if(a[i]>=3)o.hi++});
+ DOM.forEach(d=>s[d.k].m=s[d.k].sum/s[d.k].n);
+ return s;
+}
+function result(){
+ const s=scores(),a=answers();
+ const who=mode?"من در این رابطه":"در این رابطه با من";
+ const strong=DOM.filter(d=>s[d.k].m>=1.5||s[d.k].hi>0).sort((x,y)=>s[y.k].m-s[x.k].m);
+ const total=DOM.reduce((t,d)=>t+s[d.k].m,0)/DOM.length;
+ $("head").innerHTML= strong.length
+  ? `${E(who)}، از نُه الگو <b>${fa(strong.length)}</b> الگو تکرار می‌شود. پررنگ‌ترینش «${E(strong[0].t)}» است.`
+  : `${E(who)}، هیچ‌کدام از این نُه الگو به‌صورت تکراری دیده نشد. این خبر خوبی است — و یادتان باشد که این فهرست همهٔ چیزی نیست که یک رابطه را سخت می‌کند.`;
+ $("bars").innerHTML=DOM.map(d=>{const m=s[d.k].m,p=Math.round(m/4*100);
+  return `<div class="b"><span class="t">${E(d.t)}</span><span class="track"><i class="fill" style="width:${p}%;background:${d.c}"></i></span><span class="v">${fa(m.toFixed(1))} از ۴</span></div>`}).join("");
+ /* flags */
+ const fearHi=s.fear.hi>0||s.fear.m>=1.5, ctrlHi=s.isolate.hi>0||s.micro.hi>0;
+ let f="";
+ if(fearHi||ctrlHi){
+  f=`<div class="note r"><b>یک نکتهٔ مهم، جدا از بقیهٔ نتیجه.</b> ${fearHi?"در پاسخ‌ها ترس یا تهدید هست":"در پاسخ‌ها نظارت، جداسازی یا کنترل پول و رفت‌وآمد هست"}. این‌ها فقط «سبک ارتباطی بد» نیستند؛ در الگویی که ایوان استارک «کنترل اجباری» می‌نامد، همین‌ها هستهٔ کارند و در چند کشور جرم شناخته می‌شوند. ${mode?"اگر این توصیف کار خودتان است، سخت‌ترین و شریف‌ترین کار این است که بپذیرید و کمک حرفه‌ای بگیرید؛ این الگو با تصمیم‌های لحظه‌ای عوض نمی‌شود.":"اگر این توصیف وضعیت شماست، ترتیب کارها عوض می‌شود: اول ایمنی و آدم‌های مطمئن بیرون از رابطه، بعد مهارت گفت‌وگو. دورهٔ جدا شدن پرخطرترین دوره است، پس برنامه‌ریزی و کمک گرفتن مهم‌تر از سرعت است."}</div>`;
+ }
+ $("flags").innerHTML=f;
+ $("cards").innerHTML= strong.length? strong.map(d=>`<div class="dcard" style="--k:${d.c}">
+   <b class="h">${E(d.t)} — ${fa(s[d.k].m.toFixed(1))} از ۴</b>
+   <p>${E(d.w)}</p>
+   <div class="fix"><b>چه چیزی این الگو را می‌شکند</b><br>${E(d.x)}</div></div>`).join("")
+  : `<p class="lead" style="font-size:1rem">الگوی پررنگی نبود. اگر با این حال چیزی در این رابطه آزارتان می‌دهد، سراغ <a href="arc.html">قوس رابطه</a> یا <a href="../narcissism.html">پروندهٔ کامل</a> بروید؛ همهٔ آسیب‌ها از جنس کنترل نیستند.</p>`;
+ $("result").hidden=false;
+ $("copy").dataset.t=`${who} — ${new Date().toLocaleDateString("fa-IR")}\n`+DOM.map(d=>`${d.t}: ${s[d.k].m.toFixed(1)} از ۴`).join("\n")+"\nابزار آموزشی، نه تشخیص.";
+ $("result").scrollIntoView({behavior:"smooth",block:"start"});
+}
+$("show").addEventListener("click",result);
+$("copy").addEventListener("click",e=>{const b=e.currentTarget;
+ try{navigator.clipboard.writeText(b.dataset.t||"").then(()=>{b.textContent="کپی شد ✓";setTimeout(()=>b.textContent="کپی نتیجه به‌صورت متن",1600)},()=>{})}catch(_){}});
+build();
+})();
+</script>
+<style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+ "id": "psy:self-silencing",
+ "kind": "concept",
+ "title": {
+  "fa": "خاموش کردن خود",
+  "en": "Self-silencing",
+  "nl": "Jezelf het zwijgen opleggen"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "عادتِ نگفتن: فرو خوردن خواسته و خشم برای حفظ رابطه. دانا جک نشان داد این الگو با افسردگی رابطه دارد — و اینکه در چه فرهنگی زندگی می‌کنید، فرق می‌گذارد.",
+  "en": "The habit of not saying: swallowing wants and anger to preserve a relationship.",
+  "nl": "The habit of not saying: swallowing wants and anger to preserve a relationship."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "جک این سازه را در ۱۹۹۱ صورت‌بندی کرد و با دیل سنجه‌اش را ساخت. ایده: برای نگه‌داشتن رابطه، آدم صدای خودش را خاموش می‌کند و کم‌کم از خودِ واقعی‌اش فاصله می‌گیرد.",
+    "en": "Jack formulated self-silencing in 1991 and built a scale with Dill.",
+    "nl": "Jack formulated self-silencing in 1991 and built a scale with Dill."
+   },
+   "sources": [
+    "src:2f19cf2559"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در مرور سه دههٔ پژوهش با ۱۲۶ مطالعه، خاموش‌کردن خود بیشتر در محیط‌های نابرابر و آسیب‌زننده و در رابطه‌های پرتعارض و نامتقارن دیده می‌شود، و به‌عنوان حلقهٔ واسط میان شرایط اجتماعی و افسردگی عمل می‌کند.",
+    "en": "Across 126 studies, self-silencing is most likely in inequitable, hurtful relationships and links social conditions to depression.",
+    "nl": "Across 126 studies, self-silencing is most likely in inequitable, hurtful relationships and links social conditions to depression."
+   },
+   "sources": [
+    "src:38f88194c1"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "یک نکتهٔ مهم برای خوانندهٔ فارسی‌زبان: این پیوند ممکن است وابسته به فرهنگ باشد. در نمونه‌ای ترک، خاموش‌کردن خود و «مراقبت به‌قیمت فداکاری» با رضایت رابطه و افسردگی بی‌ارتباط بود. در فرهنگ‌هایی که خودِ مستقل را کمتر برجسته می‌کنند، معنای همین رفتار فرق می‌کند.",
+    "en": "The link may be culture-bound: in a Turkish sample self-silencing was unrelated to satisfaction and depression.",
+    "nl": "The link may be culture-bound: in a Turkish sample self-silencing was unrelated to satisfaction and depression."
+   },
+   "sources": [
+    "src:6bafe5fb0e"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:assertiveness",
+   "rel": "contrasts",
+   "note": {
+    "fa": "جایگزینش",
+    "en": "The alternative",
+    "nl": "The alternative"
+   }
+  },
+  {
+   "to": "psy:victim-toll",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از اثر بلندمدت",
+    "en": "Part of the long-term toll",
+    "nl": "Part of the long-term toll"
+   }
+  }
+ ],
+ "people": [
+  "core:dana-crowley-jack"
+ ],
+ "sources": [
+  "src:2f19cf2559",
+  "src:38f88194c1",
+  "src:6bafe5fb0e"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

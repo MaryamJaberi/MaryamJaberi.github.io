@@ -1,0 +1,124 @@
+{
+ "id": "psy:npd",
+ "kind": "concept",
+ "title": {
+  "fa": "اختلال شخصیت خودشیفته (NPD)",
+  "en": "Narcissistic personality disorder",
+  "nl": "Narcistische persoonlijkheidsstoornis"
+ },
+ "aliases": [
+  "ان‌پی‌دی"
+ ],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "تشخیص بالینی‌ای که فقط بخش کوچکی از طیف را دربر می‌گیرد: الگویی پایدار و انعطاف‌ناپذیر از بزرگ‌منشی، نیاز به تحسین و کمبود همدلی که در جاهای مختلف زندگی تکرار می‌شود و رنج یا اختلال کارکرد می‌آورد.",
+  "en": "A clinical diagnosis covering only a small part of the spectrum: a pervasive, inflexible pattern of grandiosity, need for admiration and lack of empathy.",
+  "nl": "A clinical diagnosis covering only a small part of the spectrum: a pervasive, inflexible pattern of grandiosity, need for admiration and lack of empathy."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "DSM-5 نُه ملاک می‌شمارد (از جمله احساس بزرگ‌منشی، اشتغال ذهنی به موفقیت و قدرت، باور به خاص‌بودن، نیاز به تحسین افراطی، احساس استحقاق، بهره‌کشی از دیگران، نبود همدلی، حسادت، و رفتار متکبرانه) و برای تشخیص دست‌کم پنج‌تا لازم است.",
+    "en": "DSM-5 lists nine criteria and requires at least five.",
+    "nl": "DSM-5 lists nine criteria and requires at least five."
+   },
+   "sources": [
+    "src:ca72cfb100"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در بزرگ‌ترین پیمایش جمعیتی آمریکا، شیوع مادام‌العمر این اختلال حدود ۶ درصد برآورد شد؛ در مردان بیشتر از زنان. یعنی اکثریت کسانی که رفتار کنترل‌گرانه دارند این تشخیص را ندارند.",
+    "en": "In the US NESARC survey lifetime prevalence was about 6%, higher in men.",
+    "nl": "In the US NESARC survey lifetime prevalence was about 6%, higher in men."
+   },
+   "sources": [
+    "src:cb3f29d977"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فراتحلیل تفاوت جنسیتی نشان داد مردان در میانگین خودشیفتگی کمی بالاترند، و بیشترین تفاوت در «بهره‌کشی و احساس استحقاق» است؛ اما اندازهٔ اثر کوچک است و همپوشانی دو توزیع زیاد.",
+    "en": "A meta-analysis found men score slightly higher, mostly on exploitativeness/entitlement, with a small effect size.",
+    "nl": "A meta-analysis found men score slightly higher, mostly on exploitativeness/entitlement, with a small effect size."
+   },
+   "sources": [
+    "src:183da81985"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تشخیص کار متخصص است و از روی رفتار بیرونی، از راه دور یا از روی شبکه‌های اجتماعی داده نمی‌شود. برای هیچ‌کس هم «حکم» نیست: تشخیص توصیف یک الگوست، نه هویت یک آدم.",
+    "en": "Diagnosis is clinical work, not something done from a distance or from social media.",
+    "nl": "Diagnosis is clinical work, not something done from a distance or from social media."
+   },
+   "sources": [
+    "src:ca72cfb100"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:narcissism",
+   "rel": "part-of",
+   "note": {
+    "fa": "جای این تشخیص روی طیف",
+    "en": "Where the diagnosis sits on the spectrum",
+    "nl": "Where the diagnosis sits on the spectrum"
+   }
+  },
+  {
+   "to": "psy:personality-disorders",
+   "rel": "part-of",
+   "note": {
+    "fa": "خانوادهٔ اختلالات شخصیت",
+    "en": "The family of personality disorders",
+    "nl": "The family of personality disorders"
+   }
+  },
+  {
+   "to": "psy:labels-harm",
+   "rel": "see-also",
+   "note": {
+    "fa": "چرا این کلمه را به کار نمی‌بریم",
+    "en": "Why we avoid using the word",
+    "nl": "Why we avoid using the word"
+   }
+  },
+  {
+   "to": "psy:dx",
+   "rel": "see-also",
+   "note": {
+    "fa": "طبقه‌بندی و تشخیص",
+    "en": "Classification and diagnosis",
+    "nl": "Classification and diagnosis"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:183da81985",
+  "src:ca72cfb100",
+  "src:cb3f29d977"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "چیزی که این تشخیص را از صفت جدا می‌کند سه چیز است: پایداری (سال‌هاست، نه در یک دورهٔ سخت)، فراگیری (در کار و خانه و دوستی، نه فقط با یک نفر) و هزینه (برای خود فرد یا اطرافیانش رنج و اختلال کارکرد می‌آورد).\n\nنکتهٔ عملی این است: برای اینکه بدانید در یک رابطه چه می‌گذرد، به این تشخیص نیازی ندارید. رفتارها همان‌قدر آزار می‌دهند، چه تشخیص باشد چه نباشد، و کاری که از شما برمی‌آید هم تقریباً همان است.",
+  "en": "Three things separate the disorder from the trait: persistence, pervasiveness and cost. For deciding what to do, the diagnosis is not needed.",
+  "nl": "Three things separate the disorder from the trait: persistence, pervasiveness and cost. For deciding what to do, the diagnosis is not needed."
+ },
+ "why": {
+  "fa": "چون بیشترین سوءاستفاده از این کلمه همین‌جاست: یک تشخیص نادر و تخصصی تبدیل شده به برچسبی که هر کس به طرف مقابل دعوایش می‌زند.",
+  "en": "Because this rare clinical diagnosis has become an everyday insult.",
+  "nl": "Because this rare clinical diagnosis has become an everyday insult."
+ }
+}

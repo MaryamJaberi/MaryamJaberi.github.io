@@ -1,0 +1,105 @@
+{
+ "id": "psy:gottman-horsemen",
+ "kind": "concept",
+ "title": {
+  "fa": "چهار سوار: انتقاد، تحقیر، دفاع، سکوت",
+  "en": "Gottman's four horsemen",
+  "nl": "De vier ruiters"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "جان گاتمن با فیلم‌برداری از گفت‌وگوی زوج‌ها چهار الگو را پیدا کرد که جدایی را پیش‌بینی می‌کنند. سمی‌ترینشان تحقیر است. برای هر کدام یک پادزهر ساده هست.",
+  "en": "Four communication patterns that predict divorce, the most toxic being contempt — each with an antidote.",
+  "nl": "Four communication patterns that predict divorce, the most toxic being contempt — each with an antidote."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گاتمن و لوینسن با مشاهدهٔ گفت‌وگوی زوج‌ها در آزمایشگاه و پیگیری چندساله نشان دادند که الگوی تعامل، و نه موضوع دعوا، جدایی را پیش‌بینی می‌کند.",
+    "en": "Gottman and Levenson showed interaction patterns, not topics, predict dissolution.",
+    "nl": "Gottman and Levenson showed interaction patterns, not topics, predict dissolution."
+   },
+   "sources": [
+    "src:60e53548cd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "چهار الگو: انتقاد از شخص به‌جای گلایه از رفتار؛ تحقیر (پوزخند، کنایه، مسخره‌کردن)؛ دفاع و وارونه‌کردن؛ و دیوار سکوت.",
+    "en": "The four: criticism, contempt, defensiveness and stonewalling.",
+    "nl": "The four: criticism, contempt, defensiveness and stonewalling."
+   },
+   "sources": [
+    "src:60e53548cd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پادزهرها ساده‌اند و در خودِ جمله‌اند: به‌جای انتقاد، گلایهٔ مشخص با «من»؛ به‌جای تحقیر، گفتن چیزی که قدرش را می‌دانی؛ به‌جای دفاع، پذیرفتن سهم کوچک خودت؛ و به‌جای دیوار سکوت، فاصلهٔ کوتاهِ قرارگذاشته‌شده و برگشتن.",
+    "en": "The antidotes: specific I-complaints, appreciation, taking a small share of responsibility, and an agreed short break.",
+    "nl": "The antidotes: specific I-complaints, appreciation, taking a small share of responsibility, and an agreed short break."
+   },
+   "sources": [
+    "src:60e53548cd"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "صادقانه دربارهٔ اعتبارش: عددهای مشهور «پیش‌بینی طلاق با دقت بیش از ۹۰ درصد» بر نمونه‌های کوچک و بدون اعتبارسنجی روی نمونهٔ تازه به دست آمده‌اند و منتقدان نشان داده‌اند چنین دقتی تورمی است. خودِ الگوها از مشاهدهٔ واقعی می‌آیند و مفیدند؛ «پادزهرها» اما توصیهٔ بالینی‌اند، نه مداخله‌ای که جداگانه آزموده شده باشد.",
+    "en": "Honestly: the famous >90% divorce-prediction accuracy comes from models fitted and evaluated on the same small samples; the antidotes are clinical prescriptions, not separately trialled.",
+    "nl": "Honestly: the famous >90% divorce-prediction accuracy comes from models fitted and evaluated on the same small samples; the antidotes are clinical prescriptions, not separately trialled."
+   },
+   "sources": [
+    "src:9f99cc78e1"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:defensive-reactions",
+   "rel": "explains",
+   "note": {
+    "fa": "دفاع، از نزدیک",
+    "en": "Defensiveness up close",
+    "nl": "Defensiveness up close"
+   }
+  },
+  {
+   "to": "psy:control-behaviors",
+   "rel": "see-also",
+   "note": {
+    "fa": "نسبتش با رفتارهای کنترل‌گرانه",
+    "en": "Relation to controlling behaviour",
+    "nl": "Relation to controlling behaviour"
+   }
+  }
+ ],
+ "people": [
+  "core:john-gottman"
+ ],
+ "sources": [
+  "src:60e53548cd",
+  "src:9f99cc78e1"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "try": {
+  "text": {
+   "fa": "پنجاه‌وچند جملهٔ آشنا، با توضیح اینکه هر کدام چه می‌کند و به‌جایش چه می‌شود گفت.",
+   "en": "Over fifty familiar sentences with alternatives.",
+   "nl": "Over fifty familiar sentences with alternatives."
+  },
+  "tool": "tools/sentences.html"
+ }
+}

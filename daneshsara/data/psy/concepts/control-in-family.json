@@ -1,0 +1,107 @@
+{
+ "id": "psy:control-in-family",
+ "kind": "concept",
+ "title": {
+  "fa": "در خانواده و قطع رابطه",
+  "en": "In the family, and estrangement",
+  "nl": "In het gezin"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "خانواده جایی است که رفتن سخت‌ترین است. قطع رابطه با یکی از اعضای خانواده بسیار رایج‌تر از چیزی است که تصور می‌شود — و اغلب برگشت‌پذیر.",
+  "en": "Family is where leaving is hardest; estrangement is far more common than assumed, and often reversible.",
+  "nl": "Family is where leaving is hardest; estrangement is far more common than assumed, and often reversible."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در پیمایش ملی آمریکا با بیش از ۱۳۰۰ بزرگسال، ۲۷ درصد گفتند با یکی از اعضای خانواده قطع رابطه کرده‌اند؛ ۱۰ درصد با والد یا فرزند، ۸ درصد با خواهر یا برادر.",
+    "en": "In a US national survey, 27% had cut off contact with a family member.",
+    "nl": "In a US national survey, 27% had cut off contact with a family member."
+   },
+   "sources": [
+    "src:a1b505049c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "داده‌های طولی تصویر کامل‌تری می‌دهند: ۶ درصد دوره‌ای از قطع رابطه با مادر و ۲۶ درصد با پدر گزارش کردند؛ میانگین سن نخستین قطع رابطه ۲۶ سال (مادر) و ۲۳ سال (پدر) بود. مهم‌تر: ۸۱ درصد قطع‌رابطه‌ها با مادر و ۶۹ درصد با پدر در ادامه پایان یافتند.",
+    "en": "Longitudinal data: 6% estranged from mothers, 26% from fathers; most episodes ended.",
+    "nl": "Longitudinal data: 6% estranged from mothers, 26% from fathers; most episodes ended."
+   },
+   "sources": [
+    "src:7e9a6477c4"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پژوهش قطع رابطه عمدتاً دربارهٔ خودشیفتگی نیست؛ نسبت‌دادن هر قطع رابطه‌ای به «والد خودشیفته» استنتاجی است که این ادبیات نمی‌کند.",
+    "en": "Estrangement research is largely not about narcissism; attributing it to a narcissistic parent is an inference the literature does not make.",
+    "nl": "Estrangement research is largely not about narcissism; attributing it to a narcissistic parent is an inference the literature does not make."
+   },
+   "sources": [
+    "src:7e9a6477c4"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "آنچه در خانواده اثر مستقیم دارد و اندازه‌گیری شده، رفتار متفاوت والد با فرزندان است: فرزندی که کمتر مورد لطف است، مشکلات درونی‌شده و بیرونی‌شدهٔ بیشتری دارد.",
+    "en": "Parental differential treatment is measured and matters: the less-favoured child shows more problems.",
+    "nl": "Parental differential treatment is measured and matters: the less-favoured child shows more problems."
+   },
+   "sources": [
+    "src:38aa52ea17"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:children-of-narcissists",
+   "rel": "part-of",
+   "note": {
+    "fa": "بچه‌ها",
+    "en": "The children",
+    "nl": "The children"
+   }
+  },
+  {
+   "to": "psy:soc-family",
+   "rel": "part-of",
+   "note": {
+    "fa": "جامعه‌شناسی خانواده",
+    "en": "Sociology of the family",
+    "nl": "Sociology of the family"
+   }
+  },
+  {
+   "to": "psy:boundaries",
+   "rel": "see-also",
+   "note": {
+    "fa": "مرز بدون قطع رابطه",
+    "en": "Boundaries short of cutting off",
+    "nl": "Boundaries short of cutting off"
+   }
+  }
+ ],
+ "people": [
+  "core:karl-pillemer"
+ ],
+ "sources": [
+  "src:38aa52ea17",
+  "src:7e9a6477c4",
+  "src:a1b505049c"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

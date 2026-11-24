@@ -1,0 +1,130 @@
+{
+ "id": "psy:change-possible",
+ "kind": "concept",
+ "title": {
+  "fa": "آیا خودشیفتگی عوض می‌شود؟",
+  "en": "Can narcissism change?",
+  "nl": "Kan narcisme veranderen?"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "پاسخ کوتاه: صفت کمی، آری؛ الگوی عمیق، کند و با کمک حرفه‌ای؛ و هیچ‌کدام بدون خواستِ خود فرد. و پژوهش در این زمینه به‌طرز ناراحت‌کننده‌ای کم است.",
+  "en": "The short answer: the trait somewhat, the deep pattern slowly and with help — and never without the person wanting it.",
+  "nl": "The short answer: the trait somewhat, the deep pattern slowly and with help — and never without the person wanting it."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هیچ کارآزمایی تصادفی‌شده‌ای که درمانی را مخصوص اختلال شخصیت خودشیفته بیازماید وجود ندارد. نزدیک‌ترین کار، کارآزمایی چندمرکزی طرح‌واره‌درمانی روی اختلالات شخصیت بود که خودشیفته را هم در بر می‌گرفت و نتیجهٔ بهتری از درمان معمول داد — ولی این گروه جداگانه و با توان آماری کافی تحلیل نشد.",
+    "en": "There is no RCT of a treatment designed specifically for NPD; the closest is a schema-therapy trial that included it as a subgroup.",
+    "nl": "There is no RCT of a treatment designed specifically for NPD; the closest is a schema-therapy trial that included it as a subgroup."
+   },
+   "sources": [
+    "src:670668a397"
+   ],
+   "flags": [
+    "unreplicated"
+   ]
+  },
+  {
+   "text": {
+    "fa": "مرور دامنه‌ای ۲۰۲۵ در پنج پایگاه داده تنها دوازده پژوهش پیدا کرد. جمع‌بندی مرورهای تخصصی: بیماران می‌توانند بهتر شوند، اما تغییر «تدریجی و کند» است.",
+    "en": "A 2025 scoping review found only twelve studies; change is described as gradual and slow.",
+    "nl": "A 2025 scoping review found only twelve studies; change is described as gradual and slow."
+   },
+   "sources": [
+    "src:73b8f85bcb",
+    "src:4fc52f1393"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یک یافتهٔ امیدبخش دربارهٔ سازوکار: در سه مطالعه، وقتی از افراد با خودشیفتگی بالا خواسته شد صریحاً خود را جای دیگری بگذارند، هم همدلی خودگزارشی و هم پاسخ ضربان قلبشان به رنج دیگری تغییر کرد. یعنی همدلی «خاموش» است، نه غایب.",
+    "en": "A perspective-taking instruction raised both self-reported empathy and heart-rate response — empathy is unactivated, not absent.",
+    "nl": "A perspective-taking instruction raised both self-reported empathy and heart-rate response — empathy is unactivated, not absent."
+   },
+   "sources": [
+    "src:c6d9aafa3d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اما همان‌جا باید صادق بود: این‌ها القاهای کوتاه آزمایشگاهی روی دانشجویان‌اند، بدون هیچ شاهدی بر ماندگاری یا تغییر رفتار در زندگی واقعی.",
+    "en": "These were brief lab inductions with no evidence of durability.",
+    "nl": "These were brief lab inductions with no evidence of durability."
+   },
+   "sources": [
+    "src:c6d9aafa3d"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "و دربارهٔ تغییر ارادی صفت‌ها به‌طور کلی: شدنی است ولی اندازه‌اش کوچک است. در فراتحلیل دوازده مطالعه، هدف‌گذاری برای تغییر، حدود ۰٫۰۵ تا ۰٫۱۶ انحراف معیار رشد بیشتر در چهار ماه آورد — واقعی، ولی نه معجزه.",
+    "en": "Volitional trait change is real but small: 0.05–0.16 SD more growth over sixteen weeks.",
+    "nl": "Volitional trait change is real but small: 0.05–0.16 SD more growth over sixteen weeks."
+   },
+   "sources": [
+    "src:54ac0efe4a"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:npd",
+   "rel": "see-also",
+   "note": {
+    "fa": "تشخیص",
+    "en": "The diagnosis",
+    "nl": "The diagnosis"
+   }
+  },
+  {
+   "to": "psy:healthy-narcissism",
+   "rel": "see-also",
+   "note": {
+    "fa": "جهت تغییر",
+    "en": "The direction of change",
+    "nl": "The direction of change"
+   }
+  },
+  {
+   "to": "psy:breaking-cycle",
+   "rel": "applies-to",
+   "note": {
+    "fa": "اگر خودتان نگرانید",
+    "en": "If you are the one worried",
+    "nl": "If you are the one worried"
+   }
+  }
+ ],
+ "people": [
+  "core:erica-hepper"
+ ],
+ "sources": [
+  "src:4fc52f1393",
+  "src:54ac0efe4a",
+  "src:670668a397",
+  "src:73b8f85bcb",
+  "src:c6d9aafa3d"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "confusions": [
+  {
+   "fa": "«او هیچ‌وقت عوض نمی‌شود» و «اگر دوستم داشته باشد عوض می‌شود» هر دو نادرست‌اند. درست‌تر این است: تغییر ممکن ولی کند است، به خواست خودِ فرد و معمولاً به کمک حرفه‌ای نیاز دارد، و هیچ‌کس وظیفه ندارد منتظر بماند.",
+   "en": "Change is possible but slow, requires the person's own will, and nobody is obliged to wait.",
+   "nl": "Change is possible but slow, requires the person's own will, and nobody is obliged to wait."
+  }
+ ]
+}

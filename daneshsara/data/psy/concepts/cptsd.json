@@ -1,0 +1,106 @@
+{
+ "id": "psy:cptsd",
+ "kind": "concept",
+ "title": {
+  "fa": "استرس پس از سانحهٔ پیچیده (CPTSD)",
+  "en": "Complex PTSD",
+  "nl": "Complexe PTSS"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "تشخیصی که از ۲۰۱۸ در طبقه‌بندی جهانی بیماری‌ها آمد و دقیقاً برای آسیب‌های طولانی و تکراری ساخته شده است — به‌ویژه وقتی از کسی آمده باشد که باید پناه می‌بود.",
+  "en": "A diagnosis added to ICD-11 in 2018 for prolonged, repeated trauma, especially from someone who should have been safety.",
+  "nl": "A diagnosis added to ICD-11 in 2018 for prolonged, repeated trauma, especially from someone who should have been safety."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سه خوشهٔ استرس پس از سانحه (بازتجربهٔ اکنونی، اجتناب، حس تهدید دائمی) به‌اضافهٔ سه «اختلال در خودسامانی»: دشواری تنظیم هیجان، باور به بی‌ارزشی و شکست‌خوردگی خود، و دشواری در حفظ رابطه و احساس نزدیکی.",
+    "en": "The three PTSD clusters plus three disturbances in self-organisation.",
+    "nl": "The three PTSD clusters plus three disturbances in self-organisation."
+   },
+   "sources": [
+    "src:fad818334e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تفاوت اصلی‌اش با استرس پس از سانحه در همین خوشهٔ سوم است، نه در شدت بیشتر کابوس‌ها.",
+    "en": "The difference from PTSD is the self-organisation cluster, not more severe flashbacks.",
+    "nl": "The difference from PTSD is the self-organisation cluster, not more severe flashbacks."
+   },
+   "sources": [
+    "src:fad818334e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در نمونهٔ جمعیتی آمریکا، شیوع استرس پس از سانحه ۳٫۴ درصد و نوع پیچیده ۳٫۸ درصد بود. تروماهای انباشتهٔ کودکی و به‌ویژه آزار توسط مراقب، با نوع پیچیده رابطهٔ قوی‌تری داشتند.",
+    "en": "In a US population sample, PTSD 3.4% and CPTSD 3.8%; caregiver-perpetrated abuse specifically predicted CPTSD.",
+    "nl": "In a US population sample, PTSD 3.4% and CPTSD 3.8%; caregiver-perpetrated abuse specifically predicted CPTSD."
+   },
+   "sources": [
+    "src:1b35724ec5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یک صداقت لازم: مرز این تشخیص با اختلال شخصیت مرزی روشن نیست و همپوشانی زیادی دارند؛ پژوهش‌ها هنوز بر سر این مرز بحث دارند.",
+    "en": "Its boundary with borderline personality disorder is genuinely blurred.",
+    "nl": "Its boundary with borderline personality disorder is genuinely blurred."
+   },
+   "sources": [
+    "src:1b35724ec5"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:victim-toll",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از اثر",
+    "en": "Part of the toll",
+    "nl": "Part of the toll"
+   }
+  },
+  {
+   "to": "psy:recovery",
+   "rel": "see-also",
+   "note": {
+    "fa": "درمان‌هایی که شواهد دارند",
+    "en": "Treatments with evidence",
+    "nl": "Treatments with evidence"
+   }
+  },
+  {
+   "to": "psy:ptsd",
+   "rel": "part-of",
+   "note": {
+    "fa": "استرس پس از سانحه",
+    "en": "PTSD",
+    "nl": "PTSD"
+   }
+  }
+ ],
+ "people": [
+  "core:marylene-cloitre"
+ ],
+ "sources": [
+  "src:1b35724ec5",
+  "src:fad818334e"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

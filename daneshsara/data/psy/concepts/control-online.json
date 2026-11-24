@@ -1,0 +1,117 @@
+{
+ "id": "psy:control-online",
+ "kind": "concept",
+ "title": {
+  "fa": "آنلاین و در گروه‌ها",
+  "en": "Online and in groups",
+  "nl": "Online en in groepen"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "در فضای مجازی و در گروه‌های بسته، همان الگو با سرعت بیشتر کار می‌کند: صمیمیت شتاب‌زده، جداسازی از منتقدان، و آزمون‌های کوچکِ پیروی که بزرگ‌تر می‌شوند.",
+  "en": "Online and in closed groups the same pattern runs faster: fast intimacy, isolation from critics, escalating compliance tests.",
+  "nl": "Online and in closed groups the same pattern runs faster: fast intimacy, isolation from critics, escalating compliance tests."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ویتی با بررسی دویست روایت قربانی و مصاحبه‌های طولانی، مرحله‌های کلاهبرداری عاشقانه را مستند کرد و نشان داد «هدیه‌های کوچک» در مرحلهٔ آماده‌سازی در واقع آزمون پیروی‌اند، نه ابراز علاقه.",
+    "en": "Whitty documented romance-scam stages and showed small gift requests function as compliance tests.",
+    "nl": "Whitty documented romance-scam stages and showed small gift requests function as compliance tests."
+   },
+   "sources": [
+    "src:52bbd7f8d6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "لیفتون در ۱۹۶۱ هشت ویژگی «تمامیت‌خواهی ایدئولوژیک» را فهرست کرد؛ از جمله کنترل محیط اطلاعاتی، اعتراف، زبان ویژه، و «تعیین حق وجود». این فهرست کلاسیک است، اما خودِ مفهوم «شست‌وشوی مغزی» در جامعه‌شناسی دین محل بحث است.",
+    "en": "Lifton's eight criteria of ideological totalism remain classic, though 'brainwashing' is contested in sociology of religion.",
+    "nl": "Lifton's eight criteria of ideological totalism remain classic, though 'brainwashing' is contested in sociology of religion."
+   },
+   "sources": [
+    "src:5efd41e668"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "لالیش با مقایسهٔ دو گروه مفهوم «انتخاب محدودشده» را پیشنهاد کرد: عضو واقعاً انتخاب می‌کند، اما در سامانه‌ای که خودش گزینه‌ها را تنگ کرده است. این قاب برای فهم «چرا نرفت؟» دقیق‌تر از «فریب خورد» است.",
+    "en": "Lalich's bounded choice: members really choose, inside a system that has narrowed the options.",
+    "nl": "Lalich's bounded choice: members really choose, inside a system that has narrowed the options."
+   },
+   "sources": [
+    "src:9b076a05d9"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نمونهٔ مستند و حقوقی‌اش: در پروندهٔ نکسیوم، گروهی که خود را «خودیاری» و بعد «شبکهٔ راهنمایی زنان» معرفی می‌کرد، از اعضا «وثیقه» می‌گرفت — اعتراف‌های آسیب‌زننده و عکس — تا امکان ترک گروه یا افشاگری را بگیرد. رهبر گروه در ۲۰۲۰ به ۱۲۰ سال زندان محکوم شد.",
+    "en": "NXIVM collected 'collateral' from members to prevent leaving; its leader was sentenced to 120 years in 2020.",
+    "nl": "NXIVM collected 'collateral' from members to prevent leaving; its leader was sentenced to 120 years in 2020."
+   },
+   "sources": [
+    "src:9b076a05d9"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:love-bombing",
+   "rel": "see-also",
+   "note": {
+    "fa": "همان آغاز، سریع‌تر",
+    "en": "The same opening, faster",
+    "nl": "The same opening, faster"
+   }
+  },
+  {
+   "to": "psy:coercive-control",
+   "rel": "applies-to",
+   "note": {
+    "fa": "کنترل بیرون از رابطهٔ عاطفی",
+    "en": "Control outside intimate relationships",
+    "nl": "Control outside intimate relationships"
+   }
+  },
+  {
+   "to": "psy:conspiracy",
+   "rel": "see-also",
+   "note": {
+    "fa": "باور گروهی و بستگی",
+    "en": "Group belief and closure",
+    "nl": "Group belief and closure"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:52bbd7f8d6",
+  "src:5efd41e668",
+  "src:9b076a05d9"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "examples": [
+  {
+   "kind": "story",
+   "label": "real",
+   "text": {
+    "fa": "لارنس ری و دانشجویان کالج سارا لارنس: او از حدود ۲۰۱۰ در اتاق خوابگاه دخترش ساکن شد و طی سال‌ها بر گروهی از دانشجویان تسلط یافت — بی‌خوابی، تحقیر، تهدید، جداکردن از خانواده، و گرفتن «اعتراف»‌های ساختگی که بعد ابزار اخاذی شد. در ۲۰۲۳ به ۶۰ سال زندان محکوم شد.",
+    "en": "Lawrence Ray and Sarah Lawrence College students: sentenced to 60 years in 2023.",
+    "nl": "Lawrence Ray and Sarah Lawrence College students: sentenced to 60 years in 2023."
+   },
+   "source": "https://www.justice.gov/usao-sdny/pr/lawrence-ray-sentenced-years-long-predatory-crimes-against-students-sarah-lawrence"
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "id": "psy:agency",
+ "kind": "concept",
+ "title": {
+  "fa": "حق انتخاب: درماندگی آموخته نمی‌شود، کنترل آموخته می‌شود",
+  "en": "Agency: helplessness is not learned, control is",
+  "nl": "Keuzevrijheid"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "مهم‌ترین تصحیح علمی این حوزه: پنجاه سال فکر می‌کردیم آدم «درماندگی» را یاد می‌گیرد. مایر و سلیگمن نشان دادند وارونه است — بی‌عملی پاسخ پیش‌فرض است و این «کنترل» است که آموخته می‌شود.",
+  "en": "The key correction: passivity is the default response to prolonged uncontrollable adversity; what is learned is control.",
+  "nl": "The key correction: passivity is the default response to prolonged uncontrollable adversity; what is learned is control."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مایر و سلیگمن در بازنگری پنجاه‌سالهٔ «درماندگی آموخته‌شده» نوشتند نظریهٔ اولیه وارونه بود: بی‌عملی در برابر رنج طولانی، پاسخ نیاموختهٔ پیش‌فرض پستانداران است و با فعالیت هستهٔ رافهٔ پشتی وساطت می‌شود. آنچه یاد گرفته می‌شود، <b>کنترل</b> است، با فعال‌شدن قشر پیش‌پیشانی میانی.",
+    "en": "Maier and Seligman: passivity is the unlearned default; control is what gets learned, via medial prefrontal activity.",
+    "nl": "Maier and Seligman: passivity is the unlearned default; control is what gets learned, via medial prefrontal activity."
+   },
+   "sources": [
+    "src:f13aca97c2"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پیامد عملی‌اش بزرگ است: اگر کسی پس از سال‌ها کنترل «نمی‌تواند تکان بخورد»، درس بدی نگرفته و ضعیف نیست؛ در وضعیت پیش‌فرض گیر کرده است. و راه بیرون، قانع‌کردن خود نیست؛ تجربهٔ واقعی اثرگذاری است.",
+    "en": "Someone frozen after years of control has not learned a bad lesson; they are in the default state, and the way out is experienced control.",
+    "nl": "Someone frozen after years of control has not learned a bad lesson; they are in the default state, and the way out is experienced control."
+   },
+   "sources": [
+    "src:f13aca97c2",
+    "src:57b5ef0659"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در پژوهش‌های بعدی نشان داده شد تجربهٔ کنترل، تغییری پایدار در همان مسیر پیش‌پیشانی می‌سازد که در برابر فشارهای بعدی سپر می‌شود. یعنی هر تجربهٔ کوچک اثرگذاری، سرمایه‌گذاری برای دفعهٔ بعد است.",
+    "en": "Experienced control produces lasting plasticity that buffers later adversity.",
+    "nl": "Experienced control produces lasting plasticity that buffers later adversity."
+   },
+   "sources": [
+    "src:57b5ef0659"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "و یک یافته دربارهٔ شکل درستِ گام‌ها: در پژوهش‌های تغییر ارادی شخصیت، کسانی که «چالش‌های کوچک را تمام کردند» رشد نشان دادند؛ کسانی که چالش پذیرفتند ولی تمام نکردند، حتی پس‌رفت داشتند. پس تصمیم بزرگ نگیرید؛ گام کوچکِ قطعاً شدنی بردارید.",
+    "en": "Completing small challenges predicts growth; accepting but not completing predicts decline.",
+    "nl": "Completing small challenges predicts growth; accepting but not completing predicts decline."
+   },
+   "sources": [
+    "src:54ac0efe4a",
+    "src:71a23ba92e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:karpman-triangle",
+   "rel": "explains",
+   "note": {
+    "fa": "بیرون آمدن از نقش قربانی",
+    "en": "Moving out of the victim role",
+    "nl": "Moving out of the victim role"
+   }
+  },
+  {
+   "to": "psy:victim-mindset",
+   "rel": "contrasts",
+   "note": {
+    "fa": "تفاوت قربانی‌شدن و نقش قربانی",
+    "en": "Being victimised versus the victim role",
+    "nl": "Being victimised versus the victim role"
+   }
+  },
+  {
+   "to": "psy:recovery",
+   "rel": "part-of",
+   "note": {
+    "fa": "بخشی از بهبود",
+    "en": "Part of recovery",
+    "nl": "Part of recovery"
+   }
+  },
+  {
+   "to": "psy:stoicism",
+   "rel": "see-also",
+   "note": {
+    "fa": "آنچه دست ماست و آنچه نیست",
+    "en": "What is up to us and what is not",
+    "nl": "What is up to us and what is not"
+   }
+  }
+ ],
+ "people": [
+  "core:steven-maier",
+  "core:martin-seligman"
+ ],
+ "sources": [
+  "src:54ac0efe4a",
+  "src:57b5ef0659",
+  "src:71a23ba92e",
+  "src:f13aca97c2"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "سه کار که از دل همین یافته بیرون می‌آید:\n\n<b>۱. سه ستون بنویسید.</b> «دست من»، «دست او»، «دست هیچ‌کس». بیشتر انرژی ما خرج ستون دوم می‌شود، که هیچ‌وقت نتیجه نمی‌دهد. ستون اول هیچ‌وقت کاملاً خالی نیست.\n\n<b>۲. گام را آن‌قدر کوچک کنید که شکست ممکن نباشد.</b> نه «رابطه را تمام می‌کنم»، بلکه «فردا به خواهرم زنگ می‌زنم». پژوهش می‌گوید گام تمام‌شده رشد می‌سازد و گام نیمه‌تمام، پس‌رفت.\n\n<b>۳. اثرش را ببینید.</b> همان‌جا بنویسید چه شد. مغز به مدرک نیاز دارد، نه به نیت.\n\nاین با «مثبت‌اندیشی» فرقی اساسی دارد: این‌جا کسی نمی‌گوید اوضاع خوب است یا همه‌چیز دست شماست. می‌گوید عضله‌ای که از کار افتاده، با حرکت برمی‌گردد، نه با حرف.",
+  "en": "Three columns, a step too small to fail, and recording the effect.",
+  "nl": "Three columns, a step too small to fail, and recording the effect."
+ },
+ "try": {
+  "text": {
+   "fa": "شش گام برای بیرون آوردن یک موقعیت واقعی از مثلث، با یک کارت قابل‌کپی در پایان.",
+   "en": "Six steps to take a real situation out of the triangle.",
+   "nl": "Six steps to take a real situation out of the triangle."
+  },
+  "tool": "tools/triangle.html"
+ }
+}

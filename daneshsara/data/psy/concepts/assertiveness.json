@@ -1,0 +1,117 @@
+{
+ "id": "psy:assertiveness",
+ "kind": "concept",
+ "title": {
+  "fa": "ابراز وجود: گفتن بدون کوچک‌کردن",
+  "en": "Assertiveness",
+  "nl": "Assertiviteit"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "میان خاموش ماندن و پرخاش، راه سومی هست: گفتن خواسته به‌روشنی، با احترام، و با باز گذاشتن جای «نه». مهارت است و آموختنی.",
+  "en": "Between silence and aggression: saying what you want clearly, with respect, leaving room for no.",
+  "nl": "Between silence and aggression: saying what you want clearly, with respect, leaving room for no."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ساختار عملی‌اش در رفتاردرمانی دیالکتیکی با نام DEAR MAN آموزش داده می‌شود: توصیف موقعیت بدون صفت، گفتن احساس، بیان صریح خواسته، گفتن فایده‌اش برای طرف مقابل، ماندن روی موضوع، ظاهر آرام، و آمادگی برای مذاکره.",
+    "en": "DBT teaches the DEAR MAN structure for making a request or saying no.",
+    "nl": "DBT teaches the DEAR MAN structure for making a request or saying no."
+   },
+   "sources": [
+    "src:2cc8ffd6c8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "صادقانه دربارهٔ شواهد: این مهارت هیچ‌وقت جداگانه آزموده نشده و اعتبارش را از بستهٔ کامل درمان وام می‌گیرد؛ و مرور کاکرین همان بسته را هم با کیفیت شواهد «پایین» درجه‌بندی می‌کند.",
+    "en": "DEAR MAN has never been tested in isolation; the package evidence is rated low quality.",
+    "nl": "DEAR MAN has never been tested in isolation; the package evidence is rated low quality."
+   },
+   "sources": [
+    "src:2cc8ffd6c8"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "آموزش ابراز وجود در فراتحلیلی برای اضطراب اجتماعی اثر بزرگی نشان داد، اما فقط شش کارآزمایی داشت و ناهمگونی بسیار بالا بود؛ پیگیری بلندمدت هم تقریباً وجود نداشت.",
+    "en": "A meta-analysis of assertiveness training for social anxiety found a large effect from only six trials with very high heterogeneity.",
+    "nl": "A meta-analysis of assertiveness training for social anxiety found a large effect from only six trials with very high heterogeneity."
+   },
+   "sources": [
+    "src:ad602bfc91"
+   ],
+   "flags": [
+    "unreplicated"
+   ]
+  },
+  {
+   "text": {
+    "fa": "«ارتباط بدون خشونت» هم پرکاربرد است و هم کم‌پشتوانه: در مرور دامنه‌ای، فقط هفت پژوهش با مجموعاً ۱۸۵ شرکت‌کننده و تنها دو مطالعهٔ تجربی پیدا شد.",
+    "en": "Nonviolent Communication rests on seven studies with 185 participants in total.",
+    "nl": "Nonviolent Communication rests on seven studies with 185 participants in total."
+   },
+   "sources": [
+    "src:63718d4a7f"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-silencing",
+   "rel": "contrasts",
+   "note": {
+    "fa": "آنچه جایش می‌نشیند",
+    "en": "What it replaces",
+    "nl": "What it replaces"
+   }
+  },
+  {
+   "to": "psy:gottman-horsemen",
+   "rel": "see-also",
+   "note": {
+    "fa": "چهار سوار و پادزهرها",
+    "en": "The horsemen and antidotes",
+    "nl": "The horsemen and antidotes"
+   }
+  },
+  {
+   "to": "psy:boundaries",
+   "rel": "part-of",
+   "note": {
+    "fa": "مرزها",
+    "en": "Boundaries",
+    "nl": "Boundaries"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:2cc8ffd6c8",
+  "src:63718d4a7f",
+  "src:ad602bfc91"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "try": {
+  "text": {
+   "fa": "پنجاه‌وچند جملهٔ آماده: به‌جای این، آن.",
+   "en": "Over fifty ready sentences.",
+   "nl": "Over fifty ready sentences."
+  },
+  "tool": "tools/sentences.html"
+ }
+}
