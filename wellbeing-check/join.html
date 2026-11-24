@@ -25,21 +25,21 @@
   --shadow:0 1px 2px rgba(0,0,0,.3); color-scheme:dark;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.7 var(--f-lat)}
-html[lang="fa"] body{font-family:var(--f-fa);font-size:16px;line-height:1.95}
+html[dir="rtl"] body{font-family:var(--f-fa);font-size:16px;line-height:1.95}
 h1,h2{text-wrap:balance}
 html:not([lang="fa"]) h1{font-family:var(--f-lat-d)}
 .top{background:var(--card);border-bottom:1px solid var(--rule)}
 .top .w{max-width:860px;margin:auto;padding:10px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .top a.home{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:700;text-decoration:none;margin-inline-end:auto}
 .top svg{width:28px;height:28px}
-.langs{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden}
-.langs button{border:0;background:none;padding:5px 12px;font:700 .82rem var(--f-lat);cursor:pointer;color:var(--muted)}
+.langs{display:inline-flex;flex-wrap:wrap;justify-content:flex-end;max-width:100%;border:1px solid var(--rule);border-radius:999px;overflow:hidden}
+.langs button{border:0;background:none;padding:5px 9px;font:700 .82rem var(--f-lat);cursor:pointer;color:var(--muted)}
 .langs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--accent-soft),var(--bg) 70%);border-bottom:1px solid var(--rule)}
 .hero .w{max-width:860px;margin:auto;padding:36px 20px 30px;position:relative}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
 .kicker{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
-html[lang="fa"] .kicker{letter-spacing:0;text-transform:none}
+html[dir="rtl"] .kicker{letter-spacing:0;text-transform:none}
 .hero h1{font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.25;margin:6px 0 10px;max-width:22ch}
 .hero p{color:var(--muted);max-width:60ch;margin:0}
 .perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}
@@ -91,7 +91,7 @@ fieldset{border:0;padding:0;margin:0}
 .track{height:6px;border-radius:99px;background:var(--wash);overflow:hidden;margin-top:4px}
 .track i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:9px 18px;border-radius:12px;border:1px solid transparent;font:700 .95rem inherit;cursor:pointer;text-decoration:none}
-html[lang="fa"] .btn{font-family:var(--f-fa)}
+html[dir="rtl"] .btn{font-family:var(--f-fa)}
 .btn.pri{background:var(--accent);color:var(--accent-ink)}
 .btn.sec{background:var(--card);color:var(--ink);border-color:var(--rule)}
 .btn:focus-visible,.langs button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
@@ -99,7 +99,7 @@ html[lang="fa"] .btn{font-family:var(--f-fa)}
 .done.show{display:block}
 .done h2{margin:0 0 6px;font-size:1.2rem}
 .done pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--rule);border-radius:10px;padding:12px;font:.85rem/1.6 ui-monospace,Menlo,Consolas,monospace;max-height:260px;overflow:auto;direction:ltr;text-align:left}
-html[lang="fa"] .done pre{direction:rtl;text-align:right;font-family:var(--f-fa)}
+html[dir="rtl"] .done pre{direction:rtl;text-align:right;font-family:var(--f-fa)}
 .mailtxt{font-family:var(--f-lat);direction:ltr;unicode-bidi:isolate}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}.hero canvas{display:none}}
 </style>
@@ -107,7 +107,7 @@ html[lang="fa"] .done pre{direction:rtl;text-align:right;font-family:var(--f-fa)
 <body>
 <div class="top"><div class="w">
   <a class="home" href="./"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M7 21c3-7 6-7 9 0s6 7 9 0" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="11" r="2.6" fill="var(--accent-ink)"/></svg><span data-t="brand"></span></a>
-  <div class="langs" role="group" aria-label="Language"><button type="button" data-l="fa" aria-pressed="true">فارسی</button><button type="button" data-l="en" aria-pressed="false">EN</button><button type="button" data-l="nl" aria-pressed="false">NL</button></div>
+  <div class="langs" role="group" aria-label="Language"><button type="button" data-l="fa" aria-pressed="true">فارسی</button><button type="button" data-l="en" aria-pressed="false">EN</button><button type="button" data-l="nl" aria-pressed="false">NL</button><button type="button" data-l="de" aria-pressed="false">DE</button><button type="button" data-l="fr" aria-pressed="false">FR</button><button type="button" data-l="es" aria-pressed="false">ES</button><button type="button" data-l="pl" aria-pressed="false">PL</button><button type="button" data-l="tr" aria-pressed="false">TR</button><button type="button" data-l="ar" aria-pressed="false">العربية</button></div>
 </div></div>
 
 <header class="hero"><canvas id="waves" aria-hidden="true"></canvas><div class="w">
@@ -282,14 +282,183 @@ nl:{brand:"Welzijnsscan voor organisaties",kicker:"SoloNovate · voor psychologe
 // "art" is both a role and a specialty; "other" is both a registration and a language
 T.fa.o.art = "هنردرمانی"; T.fa.o.other = "سایر";
 const ROLE_ART = {fa:"هنردرمانگر",en:"Art therapist",nl:"Beeldend therapeut"};
+const ROLE_COACH = {fa:"کوچ",en:"Coach",nl:"Coach"}, OFFER_COACH = {fa:T.fa.o.coach,en:T.en.o.coach,nl:T.nl.o.coach};
+const REG_NL = {fa:"هلند",en:"Netherlands",nl:"Nederland"};
+/* Six extra languages for the partner form (added 24 Nov 2026). Anything missing falls back to English. */
+const TX = {
+de:{brand:"Wohlbefindens-Check für Organisationen",kicker:"SoloNovate · für Psychologen, Therapeuten und Trainer",
+ title:"Werden Sie Teil unseres Partnernetzwerks",
+ lede:"Wir helfen Organisationen, die psychische Gesundheit ihrer Teams mit validierten Fragebögen zu messen. Workshops und Begleitung übernehmen fachkundige Partner. Dieses Formular dauert etwa 5 Minuten.",
+ perks:[["Organisationen, die bereit sind","Wir finden die Kunden; Sie konzentrieren sich auf die fachliche Arbeit."],["Daten vor dem Workshop","Der Bericht zeigt genau, wo ein Workshop gebraucht wird."],["Ein Profil auf der Website","Mit Ihrer Zustimmung werden Sie auf der Website und in Berichten vorgestellt."]],
+ optional:"(optional)",req:"Pflichtfeld.",reqMail:"Bitte geben Sie eine gültige E-Mail-Adresse ein.",reqPick:"Bitte mindestens eine Option wählen.",reqC:"Diese Einwilligung ist zum Senden nötig.",
+ p1:"Sie",p1s:"Damit wir Sie erreichen können.",name:"Vollständiger Name",email:"E-Mail",city:"Stadt und Land",web:"Website oder LinkedIn",
+ p2:"Fachgebiet",p2s:"Damit wir wissen, welche Organisationen und Themen zu Ihnen passen.",role:"Berufsbezeichnung (Mehrfachauswahl)",reg:"Berufsregistrierung",regno:"Registrierungsnummer",years:"Erfahrung mit Organisationen oder Gruppen",edu:"Höchster Abschluss und Fach",
+ spec:"Schwerpunkte (Mehrfachauswahl)",specH:"Wählen Sie die Themen, zu denen Sie Workshops oder Sitzungen geleitet haben.",method:"Ansätze (optional)",
+ p3:"Zusammenarbeit",p3s:"Was, in welcher Sprache und wo.",offer:"Was Sie anbieten können",langsL:"Arbeitssprachen",format:"Format",region:"Region",sectors:"Branchen, in denen Sie gearbeitet haben (optional)",avail:"Verfügbare Zeit pro Monat",rate:"Ihr üblicher Satz",rateH:"Zum Beispiel pro Stunde oder pro Workshop, in Euro.",
+ p4:"Vorstellung",p4s:"Das ist die Grundlage Ihres Profils auf der Website; wir schicken es Ihnen, bevor etwas veröffentlicht wird.",bio:"Kurzbiografie (2–4 Sätze)",bioH:"Erfahrung, Fachgebiet und die Teams, mit denen Sie gearbeitet haben, in einfacher Sprache für Führungskräfte.",idea:"Eine Idee oder ein Workshop, den Sie anbieten möchten",ref:"Wie haben Sie von uns erfahren?",
+ pvT:"Vorschau Ihres Profils",pvName:"Ihr Name",pvBio:"Hier erscheint Ihre Kurzbiografie.",
+ c1:"Ich erlaube SoloNovate, diese Angaben zu speichern, um eine Zusammenarbeit zu prüfen und mich zu kontaktieren.",c2:"Ich bin einverstanden, dass mein Profil nach meiner eigenen abschließenden Freigabe auf der Website veröffentlicht wird.",c3:"Ich möchte über Pilotprojekte und Netzwerktreffen informiert werden.",
+ privacy:"Ihre Angaben werden nur für diese Zusammenarbeit verwendet, nie verkauft und auf Wunsch jederzeit gelöscht (DSGVO). Ihre Registrierungsnummer dient nur der Prüfung Ihrer beruflichen Zulassung und wird nie veröffentlicht.",
+ send:"Bewerbung per E-Mail senden",copy:"Antworten kopieren",copied:"Kopiert.",copyF:"Kopieren nicht möglich; bitte markieren Sie den Text oben manuell.",prog:"{x} von {y} Pflichtteilen",
+ doneT:"Fast fertig",doneP:"Ihr E-Mail-Programm wurde mit Ihren Antworten geöffnet; drücken Sie nur noch auf Senden. Falls nicht, kopieren Sie den Text unten und senden Sie ihn an: ",mailAgain:"E-Mail erneut öffnen",
+ subj:"Partnerbewerbung — Workplace Wellbeing Check",sent:"Bewerbung gesendet",sentP:"Ihre Bewerbung ist angekommen. Wir melden uns innerhalb einer Woche. Sie können eine Kopie Ihrer Antworten behalten:",sending:"Wird gesendet…",yes:"Ja",no:"Nein",
+ o:{psy:"Psychologe/in",clin:"Klinische/r Psychologe/in",ther:"Psychotherapeut/in",coach:"Coach",couns:"Berater/in",org:"Arbeits- und Organisationspsychologe/in",trainer:"Trainer/in / Moderator/in",art:"Kunsttherapie",res:"Forscher/in",student:"Psychologiestudent/in",
+  iran:"Organisation für Psychologie und Beratung des Iran",other:"Andere",none:"Noch nicht",
+  y0:"Unter 2 Jahren",y1:"2–5 Jahre",y2:"5–10 Jahre",y3:"Über 10 Jahre",
+  stress:"Arbeitsstress",burnout:"Burnout",teams:"Teams & Konflikte",leader:"Führung & Führungskräfte",resil:"Resilienz",comp:"Selbstmitgefühl",act:"Psychologische Flexibilität",ei:"Emotionale Intelligenz",mind:"Achtsamkeit",diversity:"Kulturelle Vielfalt & Migration",grief:"Trauer & Krisen",
+  cbt:"KVT",mindful:"Achtsamkeitsbasiert",schema:"Schematherapie",sf:"Lösungsorientiert",systemic:"Systemisch",positive:"Positive Psychologie",eft:"Emotionsfokussiert",psychodyn:"Psychodynamisch",
+  ws:"Workshops leiten",lead:"Führungskräfte begleiten",intake:"Erstgespräche mit Organisationen",review:"Fachliche Prüfung von Berichten",translate:"Fragebögen übersetzen & validieren",research:"Forschung & Datenanalyse",
+  fa:"Persisch",nl:"Niederländisch",en:"Englisch",de:"Deutsch",fr:"Französisch",ar:"Arabisch",tr:"Türkisch",
+  onsite:"Vor Ort",online:"Online",hybrid:"Hybrid",be:"Belgien",eu:"Übriges Europa",ir:"Iran",remote:"Nur online",
+  care:"Pflege & Gesundheit",edu:"Bildung",tech:"Tech & IT",service:"Dienstleistungen",industry:"Industrie & Logistik",public:"Öffentlicher Sektor",ngo:"Non-Profit",
+  a1:"1–2 Tage",a2:"3–5 Tage",a3:"Mehr als 5 Tage",a4:"Vorerst nur kennenlernen"},
+ x:{coach2:"Einzel- oder Teamcoaching",roleArt:"Kunsttherapeut/in",regNl:"Niederlande"}},
+fr:{brand:"Bilan bien-être pour les organisations",kicker:"SoloNovate · pour psychologues, thérapeutes et formateurs",
+ title:"Rejoignez notre réseau de partenaires",
+ lede:"Nous aidons les organisations à mesurer la santé psychologique de leurs équipes avec des questionnaires validés. Les ateliers et le suivi sont assurés par des partenaires experts. Ce formulaire prend environ 5 minutes.",
+ perks:[["Des organisations prêtes","Nous trouvons les clients ; vous vous concentrez sur le travail d'expert."],["Des données avant l'atelier","Le rapport montre précisément où un atelier est nécessaire."],["Un profil sur le site","Avec votre accord, vous êtes présenté sur le site et dans les rapports."]],
+ optional:"(facultatif)",req:"Champ obligatoire.",reqMail:"Veuillez saisir une adresse e-mail valide.",reqPick:"Choisissez au moins une option.",reqC:"Ce consentement est nécessaire pour envoyer.",
+ p1:"Vous",p1s:"Pour pouvoir vous joindre.",name:"Nom complet",email:"E-mail",city:"Ville et pays",web:"Site web ou LinkedIn",
+ p2:"Expertise",p2s:"Pour savoir quelles organisations et quels sujets vous conviennent.",role:"Titre professionnel (plusieurs choix)",reg:"Inscription professionnelle",regno:"Numéro d'inscription",years:"Expérience avec des organisations ou des groupes",edu:"Diplôme le plus élevé et discipline",
+ spec:"Domaines d'expertise (plusieurs choix)",specH:"Choisissez ceux sur lesquels vous avez animé des ateliers ou des séances.",method:"Approches (facultatif)",
+ p3:"Travailler ensemble",p3s:"Quoi, dans quelle langue et où.",offer:"Ce que vous pouvez proposer",langsL:"Langues de travail",format:"Format",region:"Région",sectors:"Secteurs où vous avez travaillé (facultatif)",avail:"Temps disponible par mois",rate:"Votre tarif habituel",rateH:"Par exemple par heure ou par atelier, en euros.",
+ p4:"Présentation",p4s:"C'est la base de votre profil sur le site ; nous vous l'envoyons avant toute publication.",bio:"Courte biographie (2 à 4 phrases)",bioH:"Expérience, expertise et équipes avec lesquelles vous avez travaillé, en langage simple pour des managers.",idea:"Une idée ou un atelier que vous aimeriez proposer",ref:"Comment nous avez-vous connus ?",
+ pvT:"Aperçu de votre profil",pvName:"Votre nom",pvBio:"Votre courte biographie apparaît ici.",
+ c1:"J'autorise SoloNovate à conserver ces informations pour étudier une collaboration et me contacter.",c2:"J'accepte que mon profil soit publié sur le site après ma propre validation finale.",c3:"Je souhaite être informé des projets pilotes et des événements du réseau.",
+ privacy:"Vos informations servent uniquement à cette collaboration, ne sont jamais vendues et sont supprimées sur simple demande (RGPD). Votre numéro d'inscription sert uniquement à vérifier votre statut professionnel et n'est jamais publié.",
+ send:"Envoyer la candidature par e-mail",copy:"Copier les réponses",copied:"Copié.",copyF:"Copie impossible ; veuillez sélectionner le texte ci-dessus à la main.",prog:"{x} sur {y} parties obligatoires",
+ doneT:"Presque terminé",doneP:"Votre messagerie s'est ouverte avec vos réponses ; il suffit d'appuyer sur Envoyer. Sinon, copiez le texte ci-dessous et envoyez-le à : ",mailAgain:"Rouvrir l'e-mail",
+ subj:"Candidature partenaire — Workplace Wellbeing Check",sent:"Candidature envoyée",sentP:"Votre candidature est bien arrivée. Nous vous contacterons sous une semaine. Vous pouvez garder une copie de vos réponses :",sending:"Envoi…",yes:"Oui",no:"Non",
+ o:{psy:"Psychologue",clin:"Psychologue clinicien(ne)",ther:"Psychothérapeute",coach:"Coach",couns:"Conseiller(ère)",org:"Psychologue du travail et des organisations",trainer:"Formateur(trice) / animateur(trice)",art:"Art-thérapie",res:"Chercheur(se)",student:"Étudiant(e) en psychologie",
+  iran:"Organisation de psychologie et de conseil d'Iran",other:"Autre",none:"Pas encore",
+  y0:"Moins de 2 ans",y1:"2 à 5 ans",y2:"5 à 10 ans",y3:"Plus de 10 ans",
+  stress:"Stress au travail",burnout:"Burn-out",teams:"Équipes et conflits",leader:"Leadership et managers",resil:"Résilience",comp:"Autocompassion",act:"Flexibilité psychologique",ei:"Intelligence émotionnelle",mind:"Pleine conscience",diversity:"Diversité culturelle et migration",grief:"Deuil et crise",
+  cbt:"TCC",mindful:"Fondée sur la pleine conscience",schema:"Thérapie des schémas",sf:"Orientée solutions",systemic:"Systémique",positive:"Psychologie positive",eft:"Centrée sur les émotions",psychodyn:"Psychodynamique",
+  ws:"Animer des ateliers",lead:"Accompagner les managers",intake:"Entretiens préalables avec les organisations",review:"Relecture scientifique des rapports",translate:"Traduire et valider des questionnaires",research:"Recherche et analyse de données",
+  fa:"Persan",nl:"Néerlandais",en:"Anglais",de:"Allemand",fr:"Français",ar:"Arabe",tr:"Turc",
+  onsite:"Sur place",online:"En ligne",hybrid:"Hybride",be:"Belgique",eu:"Reste de l'Europe",ir:"Iran",remote:"En ligne uniquement",
+  care:"Soins et santé",edu:"Enseignement",tech:"Tech et informatique",service:"Services",industry:"Industrie et logistique",public:"Secteur public",ngo:"Associatif",
+  a1:"1 à 2 jours",a2:"3 à 5 jours",a3:"Plus de 5 jours",a4:"Pour l'instant, simplement faire connaissance"},
+ x:{coach2:"Coaching individuel ou d'équipe",roleArt:"Art-thérapeute",regNl:"Pays-Bas"}},
+es:{brand:"Chequeo de bienestar para organizaciones",kicker:"SoloNovate · para psicólogos, terapeutas y formadores",
+ title:"Únase a nuestra red de colaboradores",
+ lede:"Ayudamos a las organizaciones a medir la salud psicológica de sus equipos con cuestionarios validados. Los talleres y el seguimiento los imparten colaboradores expertos. Este formulario lleva unos 5 minutos.",
+ perks:[["Organizaciones ya dispuestas","Nosotros encontramos a los clientes; usted se centra en el trabajo experto."],["Datos antes del taller","El informe muestra exactamente dónde hace falta un taller."],["Un perfil en el sitio","Con su aprobación, se le presenta en el sitio y en los informes."]],
+ optional:"(opcional)",req:"Campo obligatorio.",reqMail:"Introduzca una dirección de correo válida.",reqPick:"Elija al menos una opción.",reqC:"Este consentimiento es necesario para enviar.",
+ p1:"Usted",p1s:"Para poder contactarle.",name:"Nombre completo",email:"Correo electrónico",city:"Ciudad y país",web:"Sitio web o LinkedIn",
+ p2:"Especialidad",p2s:"Para saber qué organizaciones y temas encajan con usted.",role:"Título profesional (puede elegir varios)",reg:"Colegiación o registro profesional",regno:"Número de registro",years:"Experiencia con organizaciones o grupos",edu:"Titulación más alta y campo",
+ spec:"Áreas de especialidad (puede elegir varias)",specH:"Elija aquellas sobre las que ha impartido talleres o sesiones.",method:"Enfoques (opcional)",
+ p3:"Trabajar juntos",p3s:"Qué, en qué idioma y dónde.",offer:"Qué puede ofrecer",langsL:"Idiomas de trabajo",format:"Formato",region:"Región",sectors:"Sectores con los que ha trabajado (opcional)",avail:"Tiempo disponible al mes",rate:"Su tarifa habitual",rateH:"Por ejemplo por hora o por taller, en euros.",
+ p4:"Presentación",p4s:"Es la base de su perfil en el sitio; se lo enviamos antes de publicar nada.",bio:"Biografía breve (2–4 frases)",bioH:"Experiencia, especialidad y equipos con los que ha trabajado, en lenguaje sencillo para directivos.",idea:"Una idea o taller que le gustaría ofrecer",ref:"¿Cómo nos conoció?",
+ pvT:"Vista previa de su perfil",pvName:"Su nombre",pvBio:"Aquí aparece su biografía breve.",
+ c1:"Autorizo a SoloNovate a conservar esta información para valorar una colaboración y contactarme.",c2:"Acepto que mi perfil se publique en el sitio tras mi propia aprobación final.",c3:"Quiero recibir noticias de proyectos piloto y eventos de la red.",
+ privacy:"Su información se usa solo para esta colaboración, nunca se vende y se elimina cuando lo pida (RGPD). Su número de registro solo se usa para comprobar su habilitación profesional y nunca se publica.",
+ send:"Enviar solicitud por correo",copy:"Copiar respuestas",copied:"Copiado.",copyF:"No se pudo copiar; seleccione el texto de arriba manualmente.",prog:"{x} de {y} partes obligatorias",
+ doneT:"Casi listo",doneP:"Se ha abierto su programa de correo con sus respuestas; solo tiene que pulsar Enviar. Si no se abrió, copie el texto de abajo y envíelo a: ",mailAgain:"Abrir el correo de nuevo",
+ subj:"Solicitud de colaboración — Workplace Wellbeing Check",sent:"Solicitud enviada",sentP:"Hemos recibido su solicitud. Le contactaremos en el plazo de una semana. Puede guardar una copia de sus respuestas:",sending:"Enviando…",yes:"Sí",no:"No",
+ o:{psy:"Psicólogo/a",clin:"Psicólogo/a clínico/a",ther:"Psicoterapeuta",coach:"Coach",couns:"Consejero/a",org:"Psicólogo/a del trabajo y las organizaciones",trainer:"Formador/a / facilitador/a",art:"Arteterapia",res:"Investigador/a",student:"Estudiante de psicología",
+  iran:"Organización de Psicología y Consejería de Irán",other:"Otro",none:"Todavía no",
+  y0:"Menos de 2 años",y1:"2–5 años",y2:"5–10 años",y3:"Más de 10 años",
+  stress:"Estrés laboral",burnout:"Burnout",teams:"Equipos y conflictos",leader:"Liderazgo y mandos",resil:"Resiliencia",comp:"Autocompasión",act:"Flexibilidad psicológica",ei:"Inteligencia emocional",mind:"Mindfulness",diversity:"Diversidad cultural y migración",grief:"Duelo y crisis",
+  cbt:"TCC",mindful:"Basado en mindfulness",schema:"Terapia de esquemas",sf:"Centrado en soluciones",systemic:"Sistémico",positive:"Psicología positiva",eft:"Centrado en las emociones",psychodyn:"Psicodinámico",
+  ws:"Impartir talleres",lead:"Acompañar a mandos",intake:"Entrevistas iniciales con organizaciones",review:"Revisión científica de informes",translate:"Traducir y validar cuestionarios",research:"Investigación y análisis de datos",
+  fa:"Persa",nl:"Neerlandés",en:"Inglés",de:"Alemán",fr:"Francés",ar:"Árabe",tr:"Turco",
+  onsite:"Presencial",online:"En línea",hybrid:"Híbrido",be:"Bélgica",eu:"Resto de Europa",ir:"Irán",remote:"Solo en línea",
+  care:"Cuidados y salud",edu:"Educación",tech:"Tecnología e informática",service:"Servicios",industry:"Industria y logística",public:"Sector público",ngo:"Sin ánimo de lucro",
+  a1:"1–2 días",a2:"3–5 días",a3:"Más de 5 días",a4:"Por ahora, solo conocernos"},
+ x:{coach2:"Coaching individual o de equipo",roleArt:"Arteterapeuta",regNl:"Países Bajos"}},
+pl:{brand:"Badanie dobrostanu w organizacji",kicker:"SoloNovate · dla psychologów, terapeutów i trenerów",
+ title:"Dołącz do naszej sieci partnerów",
+ lede:"Pomagamy organizacjom mierzyć zdrowie psychiczne zespołów za pomocą zwalidowanych kwestionariuszy. Warsztaty i dalsze wsparcie prowadzą partnerzy-eksperci. Ten formularz zajmuje około 5 minut.",
+ perks:[["Organizacje gotowe do pracy","My znajdujemy klientów; Ty skupiasz się na pracy eksperckiej."],["Dane przed warsztatem","Raport pokazuje dokładnie, gdzie warsztat jest potrzebny."],["Profil na stronie","Za Twoją zgodą przedstawiamy Cię na stronie i w raportach."]],
+ optional:"(opcjonalnie)",req:"To pole jest wymagane.",reqMail:"Podaj prawidłowy adres e-mail.",reqPick:"Wybierz co najmniej jedną opcję.",reqC:"Ta zgoda jest potrzebna do wysłania.",
+ p1:"O Tobie",p1s:"Abyśmy mogli się z Tobą skontaktować.",name:"Imię i nazwisko",email:"E-mail",city:"Miasto i kraj",web:"Strona internetowa lub LinkedIn",
+ p2:"Specjalizacja",p2s:"Abyśmy wiedzieli, które organizacje i tematy do Ciebie pasują.",role:"Tytuł zawodowy (można wybrać kilka)",reg:"Rejestracja zawodowa",regno:"Numer rejestracji",years:"Doświadczenie z organizacjami lub grupami",edu:"Najwyższy stopień i kierunek",
+ spec:"Obszary specjalizacji (można wybrać kilka)",specH:"Wybierz te, z których prowadziłeś(-aś) warsztaty lub sesje.",method:"Podejścia (opcjonalnie)",
+ p3:"Współpraca",p3s:"Co, w jakim języku i gdzie.",offer:"Co możesz zaoferować",langsL:"Języki pracy",format:"Forma",region:"Region",sectors:"Branże, z którymi pracowałeś(-aś) (opcjonalnie)",avail:"Dostępny czas w miesiącu",rate:"Twoja zwykła stawka",rateH:"Na przykład za godzinę lub za warsztat, w euro.",
+ p4:"Przedstawienie",p4s:"To podstawa Twojego profilu na stronie; wyślemy Ci go, zanim cokolwiek opublikujemy.",bio:"Krótka notka (2–4 zdania)",bioH:"Doświadczenie, specjalizacja i zespoły, z którymi pracowałeś(-aś), prostym językiem dla menedżerów.",idea:"Pomysł lub warsztat, który chcesz zaproponować",ref:"Skąd o nas wiesz?",
+ pvT:"Podgląd Twojego profilu",pvName:"Twoje imię i nazwisko",pvBio:"Tutaj pojawi się Twoja krótka notka.",
+ c1:"Zgadzam się, aby SoloNovate przechowywało te informacje w celu oceny współpracy i kontaktu ze mną.",c2:"Zgadzam się na publikację mojego profilu na stronie po mojej ostatecznej akceptacji.",c3:"Chcę otrzymywać informacje o projektach pilotażowych i wydarzeniach sieci.",
+ privacy:"Twoje dane służą tylko tej współpracy, nigdy nie są sprzedawane i zostaną usunięte na każde żądanie (RODO). Numer rejestracji służy wyłącznie do sprawdzenia uprawnień zawodowych i nigdy nie jest publikowany.",
+ send:"Wyślij zgłoszenie e-mailem",copy:"Kopiuj odpowiedzi",copied:"Skopiowano.",copyF:"Nie udało się skopiować; zaznacz tekst powyżej ręcznie.",prog:"{x} z {y} wymaganych części",
+ doneT:"Prawie gotowe",doneP:"Twój program pocztowy otworzył się z odpowiedziami; wystarczy nacisnąć Wyślij. Jeśli się nie otworzył, skopiuj tekst poniżej i wyślij na adres: ",mailAgain:"Otwórz e-mail ponownie",
+ subj:"Zgłoszenie partnera — Workplace Wellbeing Check",sent:"Zgłoszenie wysłane",sentP:"Twoje zgłoszenie dotarło. Odezwiemy się w ciągu tygodnia. Możesz zachować kopię odpowiedzi:",sending:"Wysyłanie…",yes:"Tak",no:"Nie",
+ o:{psy:"Psycholog",clin:"Psycholog kliniczny",ther:"Psychoterapeuta",coach:"Coach",couns:"Doradca",org:"Psycholog pracy i organizacji",trainer:"Trener / facylitator",art:"Arteterapia",res:"Badacz",student:"Student psychologii",
+  iran:"Organizacja Psychologii i Poradnictwa Iranu",other:"Inne",none:"Jeszcze nie",
+  y0:"Mniej niż 2 lata",y1:"2–5 lat",y2:"5–10 lat",y3:"Ponad 10 lat",
+  stress:"Stres w pracy",burnout:"Wypalenie",teams:"Zespoły i konflikty",leader:"Przywództwo i menedżerowie",resil:"Odporność psychiczna",comp:"Współczucie dla siebie",act:"Elastyczność psychologiczna",ei:"Inteligencja emocjonalna",mind:"Uważność",diversity:"Różnorodność kulturowa i migracja",grief:"Żałoba i kryzys",
+  cbt:"CBT",mindful:"Oparte na uważności",schema:"Terapia schematów",sf:"Skoncentrowane na rozwiązaniach",systemic:"Systemowe",positive:"Psychologia pozytywna",eft:"Skoncentrowane na emocjach",psychodyn:"Psychodynamiczne",
+  ws:"Prowadzenie warsztatów",lead:"Wspieranie menedżerów",intake:"Rozmowy wstępne z organizacjami",review:"Merytoryczna weryfikacja raportów",translate:"Tłumaczenie i walidacja kwestionariuszy",research:"Badania i analiza danych",
+  fa:"Perski",nl:"Niderlandzki",en:"Angielski",de:"Niemiecki",fr:"Francuski",ar:"Arabski",tr:"Turecki",
+  onsite:"Na miejscu",online:"Online",hybrid:"Hybrydowo",be:"Belgia",eu:"Reszta Europy",ir:"Iran",remote:"Tylko online",
+  care:"Opieka i zdrowie",edu:"Edukacja",tech:"Technologie i IT",service:"Usługi",industry:"Przemysł i logistyka",public:"Sektor publiczny",ngo:"Non-profit",
+  a1:"1–2 dni",a2:"3–5 dni",a3:"Ponad 5 dni",a4:"Na razie tylko poznanie się"},
+ x:{coach2:"Coaching indywidualny lub zespołowy",roleArt:"Arteterapeuta",regNl:"Holandia"}},
+tr:{brand:"Kurumsal İyi Oluş Taraması",kicker:"SoloNovate · psikologlar, terapistler ve eğitmenler için",
+ title:"İş ortağı ağımıza katılın",
+ lede:"Kurumların, ekiplerinin ruh sağlığını geçerliliği sınanmış anketlerle ölçmesine yardımcı oluyoruz. Atölyeleri ve sonrasındaki desteği uzman iş ortakları yürütür. Bu form yaklaşık 5 dakika sürer.",
+ perks:[["Hazır kurumlar","Müşterileri biz buluruz; siz uzmanlık işine odaklanırsınız."],["Atölyeden önce veri","Rapor, atölyeye tam olarak nerede ihtiyaç olduğunu gösterir."],["Sitede bir profil","Onayınızla sitede ve raporlarda tanıtılırsınız."]],
+ optional:"(isteğe bağlı)",req:"Bu alan zorunludur.",reqMail:"Lütfen geçerli bir e-posta adresi girin.",reqPick:"En az bir seçenek seçin.",reqC:"Göndermek için bu onay gereklidir.",
+ p1:"Siz",p1s:"Size ulaşabilmemiz için.",name:"Ad soyad",email:"E-posta",city:"Şehir ve ülke",web:"Web sitesi veya LinkedIn",
+ p2:"Uzmanlık",p2s:"Hangi kurum ve konuların size uygun olduğunu bilmemiz için.",role:"Mesleki unvan (birden fazla seçilebilir)",reg:"Mesleki kayıt",regno:"Kayıt numarası",years:"Kurumlarla veya gruplarla deneyim",edu:"En yüksek derece ve alan",
+ spec:"Uzmanlık alanları (birden fazla seçilebilir)",specH:"Atölye veya oturum yürüttüğünüz konuları seçin.",method:"Yaklaşımlar (isteğe bağlı)",
+ p3:"Birlikte çalışma",p3s:"Ne, hangi dilde ve nerede.",offer:"Neler sunabilirsiniz",langsL:"Çalışma dilleri",format:"Biçim",region:"Bölge",sectors:"Çalıştığınız sektörler (isteğe bağlı)",avail:"Aylık uygun süre",rate:"Olağan ücretiniz",rateH:"Örneğin saat başına veya atölye başına, avro olarak.",
+ p4:"Tanıtım",p4s:"Sitedeki profilinizin temeli budur; yayımlamadan önce size göndeririz.",bio:"Kısa özgeçmiş (2–4 cümle)",bioH:"Deneyim, uzmanlık ve çalıştığınız ekipler; yöneticiler için sade bir dille.",idea:"Sunmak istediğiniz bir fikir veya atölye",ref:"Bizi nereden duydunuz?",
+ pvT:"Profilinizin önizlemesi",pvName:"Adınız",pvBio:"Kısa özgeçmişiniz burada görünür.",
+ c1:"SoloNovate'in bu bilgileri iş birliğini değerlendirmek ve benimle iletişime geçmek için saklamasına izin veriyorum.",c2:"Profilimin, kendi son onayımdan sonra sitede yayımlanmasını kabul ediyorum.",c3:"Pilot projeler ve ağ etkinlikleri hakkında bilgi almak istiyorum.",
+ privacy:"Bilgileriniz yalnızca bu iş birliği için kullanılır, asla satılmaz ve istediğiniz an silinir (GDPR). Kayıt numaranız yalnızca mesleki yetkinliği doğrulamak için kullanılır ve asla yayımlanmaz.",
+ send:"Başvuruyu e-postayla gönder",copy:"Yanıtları kopyala",copied:"Kopyalandı.",copyF:"Kopyalanamadı; lütfen yukarıdaki metni elle seçin.",prog:"{y} zorunlu bölümden {x} tamam",
+ doneT:"Neredeyse bitti",doneP:"E-posta uygulamanız yanıtlarınızla açıldı; yalnızca Gönder'e basın. Açılmadıysa aşağıdaki metni kopyalayıp şu adrese gönderin: ",mailAgain:"E-postayı yeniden aç",
+ subj:"İş ortağı başvurusu — Workplace Wellbeing Check",sent:"Başvuru gönderildi",sentP:"Başvurunuz ulaştı. Bir hafta içinde sizinle iletişime geçeceğiz. Yanıtlarınızın bir kopyasını saklayabilirsiniz:",sending:"Gönderiliyor…",yes:"Evet",no:"Hayır",
+ o:{psy:"Psikolog",clin:"Klinik psikolog",ther:"Psikoterapist",coach:"Koç",couns:"Danışman",org:"Endüstri ve örgüt psikoloğu",trainer:"Eğitmen / kolaylaştırıcı",art:"Sanat terapisi",res:"Araştırmacı",student:"Psikoloji öğrencisi",
+  iran:"İran Psikoloji ve Danışmanlık Örgütü",other:"Diğer",none:"Henüz yok",
+  y0:"2 yıldan az",y1:"2–5 yıl",y2:"5–10 yıl",y3:"10 yıldan fazla",
+  stress:"İş stresi",burnout:"Tükenmişlik",teams:"Ekipler ve çatışma",leader:"Liderlik ve yöneticiler",resil:"Psikolojik dayanıklılık",comp:"Öz-şefkat",act:"Psikolojik esneklik",ei:"Duygusal zekâ",mind:"Bilinçli farkındalık",diversity:"Kültürel çeşitlilik ve göç",grief:"Yas ve kriz",
+  cbt:"BDT",mindful:"Farkındalık temelli",schema:"Şema terapi",sf:"Çözüm odaklı",systemic:"Sistemik",positive:"Pozitif psikoloji",eft:"Duygu odaklı",psychodyn:"Psikodinamik",
+  ws:"Atölye yürütme",lead:"Yöneticilere destek",intake:"Kurumlarla ön görüşmeler",review:"Raporların bilimsel incelemesi",translate:"Anket çevirisi ve geçerlilik çalışması",research:"Araştırma ve veri analizi",
+  fa:"Farsça",nl:"Felemenkçe",en:"İngilizce",de:"Almanca",fr:"Fransızca",ar:"Arapça",tr:"Türkçe",
+  onsite:"Yerinde",online:"Çevrim içi",hybrid:"Hibrit",be:"Belçika",eu:"Avrupa'nın geri kalanı",ir:"İran",remote:"Yalnızca çevrim içi",
+  care:"Bakım ve sağlık",edu:"Eğitim",tech:"Teknoloji ve BT",service:"Hizmet",industry:"Sanayi ve lojistik",public:"Kamu sektörü",ngo:"Kâr amacı gütmeyen",
+  a1:"1–2 gün",a2:"3–5 gün",a3:"5 günden fazla",a4:"Şimdilik yalnızca tanışma"},
+ x:{coach2:"Bireysel veya ekip koçluğu",roleArt:"Sanat terapisti",regNl:"Hollanda"}},
+ar:{brand:"فحص الرفاه في المؤسسة",kicker:"SoloNovate · للأخصائيين النفسيين والمعالجين والمدربين",
+ title:"انضموا إلى شبكة شركائنا",
+ lede:"نساعد المؤسسات على قياس الصحة النفسية لفرقها باستبيانات متحقَّق من صدقها. يقدّم الورش والمتابعة شركاء متخصصون. يستغرق هذا النموذج نحو 5 دقائق.",
+ perks:[["مؤسسات جاهزة","نحن نجد العملاء، وأنتم تركزون على العمل التخصصي."],["بيانات قبل الورشة","يبيّن التقرير بدقة أين تلزم الورشة."],["ملف تعريفي على الموقع","بموافقتكم نعرّف بكم على الموقع وفي التقارير."]],
+ optional:"(اختياري)",req:"هذا الحقل مطلوب.",reqMail:"يرجى إدخال بريد إلكتروني صحيح.",reqPick:"اختاروا خيارًا واحدًا على الأقل.",reqC:"هذه الموافقة لازمة للإرسال.",
+ p1:"أنتم",p1s:"لنتمكن من التواصل معكم.",name:"الاسم الكامل",email:"البريد الإلكتروني",city:"المدينة والبلد",web:"الموقع الإلكتروني أو LinkedIn",
+ p2:"التخصص",p2s:"لنعرف أي المؤسسات والمواضيع تناسبكم.",role:"المسمّى المهني (يمكن اختيار أكثر من واحد)",reg:"التسجيل المهني",regno:"رقم التسجيل",years:"الخبرة مع المؤسسات أو المجموعات",edu:"أعلى شهادة والتخصص",
+ spec:"مجالات التخصص (يمكن اختيار أكثر من واحد)",specH:"اختاروا ما قدّمتم فيه ورشًا أو جلسات.",method:"المقاربات (اختياري)",
+ p3:"العمل معًا",p3s:"ماذا، وبأي لغة، وأين.",offer:"ما يمكنكم تقديمه",langsL:"لغات العمل",format:"الصيغة",region:"المنطقة",sectors:"القطاعات التي عملتم معها (اختياري)",avail:"الوقت المتاح شهريًا",rate:"أجركم المعتاد",rateH:"مثلًا لكل ساعة أو لكل ورشة، باليورو.",
+ p4:"التعريف",p4s:"هذا أساس ملفكم التعريفي على الموقع؛ نرسله إليكم قبل نشر أي شيء.",bio:"نبذة قصيرة (2–4 جمل)",bioH:"الخبرة والتخصص والفرق التي عملتم معها، بلغة بسيطة للمديرين.",idea:"فكرة أو ورشة تودّون تقديمها",ref:"كيف سمعتم عنّا؟",
+ pvT:"معاينة ملفكم التعريفي",pvName:"اسمكم",pvBio:"تظهر نبذتكم القصيرة هنا.",
+ c1:"أسمح لـ SoloNovate بحفظ هذه المعلومات لدراسة التعاون والتواصل معي.",c2:"أوافق على نشر ملفي التعريفي على الموقع بعد موافقتي النهائية.",c3:"أرغب في تلقي أخبار المشاريع التجريبية وفعاليات الشبكة.",
+ privacy:"تُستخدم معلوماتكم لهذا التعاون فقط، ولا تُباع أبدًا، وتُحذف متى طلبتم (GDPR). يُستخدم رقم التسجيل للتحقق من الأهلية المهنية فقط ولا يُنشر أبدًا.",
+ send:"إرسال الطلب بالبريد الإلكتروني",copy:"نسخ الإجابات",copied:"تم النسخ.",copyF:"تعذّر النسخ؛ يرجى تحديد النص أعلاه يدويًا.",prog:"{x} من {y} من الأجزاء المطلوبة",
+ doneT:"أوشكنا على الانتهاء",doneP:"فُتح تطبيق البريد لديكم وفيه إجاباتكم؛ اضغطوا إرسال فقط. إن لم يُفتح، انسخوا النص أدناه وأرسلوه إلى: ",mailAgain:"فتح البريد مجددًا",
+ subj:"طلب شراكة — Workplace Wellbeing Check",sent:"تم إرسال الطلب",sentP:"وصل طلبكم. سنتواصل معكم خلال أسبوع. يمكنكم الاحتفاظ بنسخة من إجاباتكم:",sending:"جارٍ الإرسال…",yes:"نعم",no:"لا",
+ o:{psy:"أخصائي نفسي",clin:"أخصائي نفسي إكلينيكي",ther:"معالج نفسي",coach:"مدرب (كوتش)",couns:"مرشد",org:"أخصائي علم نفس العمل والتنظيم",trainer:"مدرب / ميسّر",art:"العلاج بالفن",res:"باحث",student:"طالب علم نفس",
+  iran:"منظمة علم النفس والإرشاد في إيران",other:"أخرى",none:"ليس بعد",
+  y0:"أقل من سنتين",y1:"2–5 سنوات",y2:"5–10 سنوات",y3:"أكثر من 10 سنوات",
+  stress:"ضغط العمل",burnout:"الاحتراق الوظيفي",teams:"الفرق والنزاعات",leader:"القيادة والمديرون",resil:"الصمود النفسي",comp:"التعاطف مع الذات",act:"المرونة النفسية",ei:"الذكاء العاطفي",mind:"اليقظة الذهنية",diversity:"التنوع الثقافي والهجرة",grief:"الحزن والأزمات",
+  cbt:"العلاج المعرفي السلوكي",mindful:"قائم على اليقظة الذهنية",schema:"العلاج بالمخططات",sf:"مركّز على الحلول",systemic:"نَسَقي",positive:"علم النفس الإيجابي",eft:"مركّز على الانفعالات",psychodyn:"نفسي دينامي",
+  ws:"تقديم الورش",lead:"دعم المديرين",intake:"لقاءات أولية مع المؤسسات",review:"مراجعة علمية للتقارير",translate:"ترجمة الاستبيانات والتحقق منها",research:"البحث وتحليل البيانات",
+  fa:"الفارسية",nl:"الهولندية",en:"الإنجليزية",de:"الألمانية",fr:"الفرنسية",ar:"العربية",tr:"التركية",
+  onsite:"حضوريًا",online:"عبر الإنترنت",hybrid:"هجين",be:"بلجيكا",eu:"بقية أوروبا",ir:"إيران",remote:"عبر الإنترنت فقط",
+  care:"الرعاية والصحة",edu:"التعليم",tech:"التقنية وتكنولوجيا المعلومات",service:"الخدمات",industry:"الصناعة واللوجستيات",public:"القطاع العام",ngo:"غير ربحي",
+  a1:"1–2 يوم",a2:"3–5 أيام",a3:"أكثر من 5 أيام",a4:"تعارف فقط حاليًا"},
+ x:{coach2:"تدريب فردي أو للفرق",roleArt:"معالج بالفن",regNl:"هولندا"}}
+};
+for(const l in TX){ const X = TX[l]; T[l] = Object.assign({}, T.en, X, {o:Object.assign({}, T.en.o, X.o)});
+  ROLE_ART[l] = X.x.roleArt; REG_NL[l] = X.x.regNl; ROLE_COACH[l] = X.o.coach; OFFER_COACH[l] = X.x.coach2; }
+
 
 let L = "fa";
 const $ = id => document.getElementById(id);
 const store = { get(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }, set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} } };
 const S = store.get("wb-join") || {};
 
-const REG_NL = {fa:"هلند",en:"Netherlands",nl:"Nederland"};
-const lbl = (g, v) => (g === "role" && v === "art") ? ROLE_ART[L] : (g === "region" && v === "nl") ? REG_NL[L] : T[L].o[v];
+const lbl = (g, v) => (g === "role" && v === "art") ? ROLE_ART[L] : (g === "role" && v === "coach") ? ROLE_COACH[L] : (g === "offer" && v === "coach") ? OFFER_COACH[L] : (g === "region" && v === "nl") ? REG_NL[L] : T[L].o[v];
 function chips(g){
   const box = $("c-" + g); if(!box) return;
   const sel = S["g_" + g] || [];
@@ -300,9 +469,9 @@ function selects(g){
   el.innerHTML = `<option value="">—</option>` + O[g].map(v => `<option value="${v}"${cur === v ? " selected" : ""}>${T[L].o[v]}</option>`).join("");
 }
 function applyLang(l){
-  L = ["fa","en","nl"].includes(l) ? l : "en";
+  L = T[l] ? l : "en";
   const t = T[L];
-  document.documentElement.lang = L; document.documentElement.dir = L === "fa" ? "rtl" : "ltr";
+  document.documentElement.lang = L; document.documentElement.dir = (L === "fa" || L === "ar") ? "rtl" : "ltr";
   document.title = t.title + " · SoloNovate";
   document.querySelectorAll("[data-t]").forEach(e => { const v = t[e.dataset.t]; if(typeof v === "string") e.textContent = v; });
   document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === L));
