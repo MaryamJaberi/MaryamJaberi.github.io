@@ -1,7 +1,7 @@
 {
   "product": "Workplace Wellbeing Check (wellbeing-check/)",
-  "last_reviewed_commit": "cd4b128",
-  "last_run": "2026-11-16",
+  "last_reviewed_commit": "222260a",
+  "last_run": "2026-11-24",
   "tech_doc": {
     "title": "مستند فنی — سنجش سلامت روانی سازمان",
     "url": "https://claude.ai/artifact/D2H1VQ3yFi5EfQiCyhT6FV",
@@ -9,7 +9,7 @@
     "tab_file_id": "93742b44-9524",
     "body_node_id": "7db45374-8e12",
     "version": "1.0",
-    "last_rev": 19,
+    "last_rev": 20,
     "widgets": {
       "current_architecture": "29fc59bc-2e86",
       "roadmap": "77d1f436-c8f4",
@@ -72,7 +72,18 @@
       "in_projection": false
     }
   },
-  "pending_business_impacts": [],
+  "pending_business_impacts": [
+    {
+      "date": "2026-11-24",
+      "commit": "222260a",
+      "what": "حد نصاب گروه ۱۰ نفر قطعی شد؛ فرم همکاری نُه‌زبانه؛ سندهای حقوقی فارسی",
+      "why_it_matters": "متن پروپوزال‌های پایلوت (فارسی، انگلیسی، هلندی) هنوز «۵ نفر» می‌گویند و باید هماهنگ شوند",
+      "sections_to_check": [
+        "پیشنهاد اجرای آزمایشی",
+        "حریم خصوصی"
+      ]
+    }
+  ],
   "legal_checklist_last_verified": "2026-11-16",
   "ip_register_last_reviewed": "2026-11-16"
 }

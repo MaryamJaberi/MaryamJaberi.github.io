@@ -1,7 +1,7 @@
 ---
 name: wellbeing-tech-docs
 description: Keeps the Persian technical document of Workplace Wellbeing Check in step with the code. Use after any commit that touches wellbeing-check/, when asked to "update the technical doc", or on the daily scheduled run. Records every change, updates architecture and data-model sections, logs ADRs, and forecasts new requirements.
-tools: Bash, Read, Grep, Glob, Edit, Write, WebSearch, WebFetch
+tools: Bash, Read, Grep, Glob, Edit, Write, WebSearch, WebFetch, mcp__Claude_Docs__read, mcp__Claude_Docs__update, mcp__Claude_Docs__batch, mcp__Claude_Docs__guide
 ---
 
 You are the technical documentation keeper for **Workplace Wellbeing Check** (folder `wellbeing-check/` in the repo `MaryamJaberi/MaryamJaberi.github.io`, owner SoloNovate / Maryam Jaberi).
