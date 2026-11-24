@@ -279,33 +279,57 @@ function render(path) {
 
 function buildList() {
   const paths = Object.keys(FILES).filter(p => p.endsWith(".html")).sort();
-  const used = new Set(), frag = document.createDocumentFragment();
-  const addGroup = (label, items) => {
-    if (!items.length) return;
+  const frag = document.createDocumentFragment();
+  const mk = (p, label, note) => {
+    const a = document.createElement("a");
+    a.href = "#"; a.dataset.p = p;
+    a.textContent = label || titleOf(p, FILES[p]);
+    if (note) a.title = note;
+    a.addEventListener("click", e => { e.preventDefault(); render(p); });
+    return a;
+  };
+  const addGroup = (label, note, nodes) => {
+    if (!nodes.length) return;
     const g = document.createElement("div");
     g.className = "grp";
-    const s = document.createElement("span"); s.textContent = label; g.appendChild(s);
-    for (const p of items) {
-      const a = document.createElement("a");
-      a.href = "#"; a.dataset.p = p; a.textContent = titleOf(p, FILES[p]);
-      a.addEventListener("click", e => { e.preventDefault(); render(p); });
-      g.appendChild(a);
-    }
+    const s = document.createElement("span"); s.textContent = label;
+    if (note) s.title = note;
+    g.appendChild(s);
+    nodes.forEach(n => g.appendChild(n));
     frag.appendChild(g);
   };
-  for (const [prefix, label] of GROUPS) {
-    const items = paths.filter(p => p.startsWith(prefix) && !used.has(p));
-    items.forEach(p => used.add(p));
-    addGroup(label, items);
+  /* معماری اطلاعات از core/nav.json می‌آید؛ اگر نبود، همان گروه‌بندی پوشه‌ای قدیمی */
+  let NAV = null;
+  try { NAV = JSON.parse(FILES["core/nav.json"]); } catch (e) {}
+  if (NAV && NAV.sections) {
+    const used = new Set(NAV.hide || []);
+    for (const sec of NAV.sections) {
+      const nodes = [];
+      for (const it of sec.items) {
+        if (FILES[it.path] == null || used.has(it.path)) continue;
+        used.add(it.path); nodes.push(mk(it.path, it.label, it.note));
+      }
+      addGroup(sec.title, sec.note, nodes);
+    }
+    const rest = paths.filter(p => !used.has(p));
+    addGroup("تازه‌رسیده", "هنوز در فهرست جایشان تعیین نشده", rest.map(p => mk(p)));
+  } else {
+    const used = new Set();
+    for (const [prefix, label] of GROUPS) {
+      const items = paths.filter(p => p.startsWith(prefix) && !used.has(p));
+      items.forEach(p => used.add(p));
+      addGroup(label, "", items.map(p => mk(p)));
+    }
+    addGroup("دیگر", "", paths.filter(p => !used.has(p)).map(p => mk(p)));
   }
-  addGroup("دیگر", paths.filter(p => !used.has(p)));
   $("list").replaceChildren(frag);
   let first = null;
   const want = decodeURIComponent((location.hash || "").slice(1));
   if (FILES[want]) first = want;
   else if (FILES[want + "index.html"]) first = want + "index.html";
   else { try { first = sessionStorage.getItem(LASTPAGE); } catch (e) {} }
-  render(FILES[first] ? first : (paths.find(p => p === "iran/index.html") || paths[0]));
+  const home = (NAV && NAV.sections && NAV.sections[0] && NAV.sections[0].items[0] || {}).path;
+  render(FILES[first] ? first : (FILES[home] ? home : (paths.find(p => p === "iran/index.html") || paths[0])));
 }
 
 function unlocked() {
