@@ -63,7 +63,7 @@ def url_of(cid):
     if w == 'iran': return f'iran/#{slug}'
     if w == 'core': return f'core/people.html#{slug}'
     if w == 'src': return f'core/sources.html#{slug}'
-    return f'{w}/tools/graph.html#{slug}' if w == 'psy' else f'{w}/#{slug}'
+    return f'psy/entries.html#{slug}' if w == 'psy' else f'{w}/#{slug}'   # خوانندهٔ psy همهٔ مفهوم‌ها را دارد؛ graph.html فقط مفهوم‌های قدیمی را
 reg = {}
 for c in concepts.values():
     reg[c['id']] = {'wiki': c['id'].split(':')[0], 'type': c['kind'], 'title': c['title'], 'url': url_of(c['id']), 'status': c['status'], 'wikidata': c.get('wikidata')}
