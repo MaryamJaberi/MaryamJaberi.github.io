@@ -369,6 +369,7 @@ async function home() {
                 <button class="g-tl-btn" data-c="6">قرن ۶ (سلجوقیان)</button>
                 <button class="g-tl-btn active" data-c="7">قرن ۷ (سعدی و مولوی)</button>
                 <button class="g-tl-btn" data-c="8">قرن ۸ (عصر حافظ)</button>
+                <button class="g-tl-btn" data-c="11">قرن ۱۱ و ۱۲ (سبک هندی · بیدل و صائب)</button>
               </div>
 
               <!-- گانت‌چارت خط زمان واقعی هم‌عصران -->
@@ -911,6 +912,17 @@ async function home() {
         { id: 37, name: "عبید زاکانی", b: 700, d: 772, city: "قزوین و شیراز", style: "طنز رندانه", c: "var(--gk-lapis)", contemps: "حافظ شیرازی، خواجوی کرمانی" },
         { id: 23, name: "سلمان ساوجی", b: 709, d: 778, city: "ساوه و بغداد", style: "قصیده و ترجیع", c: "var(--gk-ruby)", contemps: "حافظ شیرازی، خواجو" },
         { id: 2, name: "حافظ شیرازی", b: 727, d: 792, city: "شیراز", style: "لسان‌الغیب", c: "var(--gk-gold)", contemps: "خواجوی کرمانی، عبید زاکانی، کمال خجندی" },
+      ]
+    },
+    11: {
+      minYear: 980,
+      maxYear: 1190,
+      scale: ["۹۸۰ هـ", "۱۰۲۰ هـ", "۱۰۶۰ هـ", "۱۱۰۰ هـ", "۱۱۴۰ هـ", "۱۱۹۰ هـ"],
+      poets: [
+        { id: 43, name: "بیدل دهلوی", b: 1054, d: 1133, city: "عظیم‌آباد (پتنه) و دهلی", style: "سبک هندی و معرفت شهودی", c: "var(--gk-primary)", contemps: "صائب تبریزی (۲۶ سال هم‌پوشانی)، کلیم کاشانی، حزین لاهیجی" },
+        { id: 22, name: "صائب تبریزی", b: 1001, d: 1080, city: "اصفهان و تبریز", style: "پادشاه تک‌بیت و اسلوب معادله", c: "var(--gk-gold)", contemps: "بیدل دهلوی، کلیم کاشانی، وحشی بافقی" },
+        { id: 100, name: "کلیم کاشانی", b: 990, d: 1061, city: "کاشان و لاهور", style: "خلاق‌المعانی ثانی", c: "var(--gk-lapis)", contemps: "صائب تبریزی، بیدل دهلوی (۷ سال هم‌پوشانی)" },
+        { id: 76, name: "حزین لاهیجی", b: 1103, d: 1181, city: "اصفهان و بنارس", style: "واپسین چکاد سبک اصفهانی", c: "var(--gk-ruby)", contemps: "بیدل دهلوی (۳۰ سال هم‌پوشانی زیست)" },
       ]
     },
   };
@@ -2012,10 +2024,40 @@ async function searchPage(query) {
     })
     .join("");
   const pages = total ? Math.ceil(total / 8) : 0;
+
+  // شناسایی هوشمند شاعر در جستجو برای پرش مستقیم به خط زمان
+  let matchedPoet = null;
+  if (!poetId && q.length >= 2) {
+    try {
+      const { data: allPoets } = await api("/poets");
+      if (Array.isArray(allPoets)) {
+        matchedPoet = allPoets.find((p) => {
+          const n = (p.name || "").trim();
+          const nick = (p.nickname || "").trim();
+          return n === q || nick === q || n.includes(q) || (nick && nick.includes(q)) || q.includes(n);
+        });
+      }
+    } catch {}
+  }
+
   paint(
     "جستجو",
     `<h1>جستجو</h1>
      <p class="lead">نتیجه «${esc(q)}»${poetId ? " در آثار یک شاعر" : ""}${total ? ` · ${total} شعر` : ""}</p>
+     ${matchedPoet ? `
+     <div class="g-search-poet-banner">
+       <div class="g-spb-avatar">${esc((matchedPoet.nickname || matchedPoet.name).slice(0, 1))}</div>
+       <div class="g-spb-content">
+         <span class="g-spb-badge">شاعر شناسایی‌شده</span>
+         <h3 class="g-spb-title">${esc(matchedPoet.nickname || matchedPoet.name)}</h3>
+         <p class="g-spb-meta">${matchedPoet.birthYearInLHijri ? `${yr(matchedPoet.birthYearInLHijri)} تا ${yr(matchedPoet.deathYearInLHijri)} هـ.ق` : ""} ${matchedPoet.birthPlace ? `· زاده ${esc(matchedPoet.birthPlace)}` : ""}</p>
+       </div>
+       <div class="g-spb-actions">
+         <a class="btn primary" href="#/tree?poet=${matchedPoet.id}">مشاهده در خط زمان هم‌عصران ➜</a>
+         <a class="chip" href="#/poet/${matchedPoet.id}">دیوان اشعار</a>
+         <a class="chip" href="#/bridges/${matchedPoet.id}">پل‌های تضمین</a>
+       </div>
+     </div>` : ""}
      ${poetId ? `<p class="chips"><a class="chip" href="#/search?q=${encodeURIComponent(q)}">در همه گنجور</a></p>` : ""}
      ${!poetId && pageNo === 1 && !/\s/.test(q) ? `<section id="meter" class="meter" aria-live="polite"><p class="muted">شمار این واژه نزد شاعران را می‌آورم…</p></section>` : ""}
      ${rows ? `<div class="grid">${rows}</div>` : `<p>چیزی پیدا نشد.</p>`}
@@ -2786,7 +2828,24 @@ async function treePage(query) {
      <nav class="views" aria-label="نما"><a href="#/tree" aria-current="page">روی خط زمان</a><a href="#/map">روی نقشهٔ زادگاه‌ها</a></nav>
      <p class="lead">زندگی ${fa(poets.length)} شاعر گنجور، همه در یک نگاه. هر نوار از سال تولد تا سال درگذشت است و زمان از راست به چپ می‌رود. بکش تا در زمان گردش کنی، بزرگ کن تا نام‌ها پیدا شوند، و روی یک شاعر بزن تا هم‌عصران و تضمین‌هایش روشن شوند.</p>
      <div class="tree-tools">
-       <form class="big-search" id="tree-filter"><input id="tree-q" placeholder="نام شاعر یا شهر، مثلاً شیراز" aria-label="پیدا کردن شاعر" autocomplete="off" /></form>
+       <div class="g-tree-search-wrap">
+         <form class="big-search" id="tree-filter" onsubmit="return false;">
+           <input id="tree-q" placeholder="جستجوی شاعر یا شهر (مثلاً: بیدل، صائب، شیراز...)" aria-label="پیدا کردن شاعر" autocomplete="off" />
+         </form>
+         <div class="g-tree-search-dropdown" id="tree-search-dropdown" hidden></div>
+       </div>
+       <div class="g-tree-quick-picks" aria-label="پرش مستقیم به شاعران">
+         <span class="g-quick-label">پرش مستقیم:</span>
+         <button type="button" class="chip g-quick-poet-btn" data-poet-id="43">بیدل دهلوی</button>
+         <button type="button" class="chip g-quick-poet-btn" data-poet-id="22">صائب تبریزی</button>
+         <button type="button" class="chip g-quick-poet-btn" data-poet-id="2">حافظ</button>
+         <button type="button" class="chip g-quick-poet-btn" data-poet-id="7">سعدی</button>
+         <button type="button" class="chip g-quick-poet-btn" data-poet-id="5">مولانا</button>
+         <button type="button" class="chip g-quick-poet-btn" data-poet-id="1">فردوسی</button>
+         <button type="button" class="chip g-quick-poet-btn" data-poet-id="4">خیام</button>
+         <button type="button" class="chip g-quick-poet-btn" data-poet-id="3">نظامی</button>
+         <button type="button" class="chip g-open-guide-btn" id="g-open-guide-tree">💡 راهنمای کاربری خط زمان</button>
+       </div>
        <p class="chips" id="tree-regions" aria-label="سرزمین زادگاه"><button class="chip on" type="button" data-region="">همه سرزمین‌ها</button>${used
          .map((region) => `<button class="chip" type="button" data-region="${region.key}" style="--tone:${region.color}"><i class="dot"></i>${region.name} · ${fa(poets.filter((poet) => poet.region === region.key).length)}</button>`)
          .join("")}</p>
@@ -3172,14 +3231,44 @@ async function treePage(query) {
     band.setAttribute("width", Math.max(3, x(poet.b) - x(poet.d)));
     paintState();
     const peers = poets.filter((other) => other.id !== poet.id && other.b <= poet.d && other.d >= poet.b);
-    const known = peers.filter((other) => other.pinOrder).sort((a, b) => a.pinOrder - b.pinOrder);
-    const peerChip = (other) => `<button class="chip" type="button" data-pick="${other.id}">${esc(other.label)}</button>`;
+    const overlapYears = (other) => Math.max(0, Math.min(poet.d, other.d) - Math.max(poet.b, other.b));
+    const sortedPeers = [...peers].sort((a, b) => {
+      const pA = a.pinOrder || 999;
+      const pB = b.pinOrder || 999;
+      if (pA !== pB) return pA - pB;
+      return overlapYears(b) - overlapYears(a);
+    });
+    const topPeers = sortedPeers.slice(0, 6);
+    const peerChip = (other) => `<button class="chip" type="button" data-pick="${other.id}" title="${fa(overlapYears(other))} سال هم‌پوشانی زیست">${esc(other.label)} <small style="opacity:0.8;">(${fa(overlapYears(other))} سال)</small></button>`;
+
+    const centuryStart = Math.floor(poet.b / 100) + 1;
+    const centuryEnd = Math.floor(poet.d / 100) + 1;
+    const centuryText = centuryStart === centuryEnd ? `قرن ${fa(centuryStart)} هـ.ق` : `قرن ${fa(centuryStart)} و ${fa(centuryEnd)} هـ.ق`;
+    const regionName = regionInfo.get(poet.region)?.name || poet.region;
+
     focus.hidden = false;
-    focus.innerHTML = `<button type="button" class="focus-x" id="tree-clear" aria-label="بستن">×</button><div class="focus-body">
-      <strong>${esc(poet.label)}</strong> <span class="muted">${esc(poet.name)}${poet.birthPlace ? ` · زاده ${esc(poet.birthPlace)}` : ""} · ${esc(yearsText(poet))}${poet.broken ? " · سال‌ها در گنجور ناسازگارند" : ""}</span>
-      <p>${fa(peers.length)} هم‌عصر (روشن روی نمودار)${known.length ? `، از برگزیدگان: ${known.map(peerChip).join("")}` : ""}</p>
-      <p id="tree-links" class="muted">پیوندهای تضمین را از گنجور می‌آورم…</p>
-      <p class="chips"><a class="btn primary" href="#/poet/${poet.id}">صفحه شاعر</a><a class="chip" href="#/bridges/${poet.id}">همه پل‌ها</a><a class="chip" href="#/map?y=${Math.round((poet.b + poet.d) / 2)}">روی نقشه</a><button class="chip" type="button" data-go="${poet.id}">برو سراغش</button></p></div>`;
+    focus.innerHTML = `<button type="button" class="focus-x" id="tree-clear" aria-label="بستن">×</button>
+      <div class="focus-body">
+        <div class="g-focus-header">
+          <strong>${esc(poet.label)}</strong>
+          <span class="g-focus-period-badge">${centuryText} · سرزمین: ${esc(regionName)}</span>
+        </div>
+        <div class="muted" style="margin:2px 0 6px;">${esc(poet.name)}${poet.birthPlace ? ` · زاده ${esc(poet.birthPlace)}` : ""} · ${esc(yearsText(poet))} (${fa(poet.d - poet.b)} سال حیات)</div>
+        <div class="g-focus-peers-wrap">
+          <p style="margin:4px 0 6px;"><strong>${fa(peers.length)} شاعر هم‌عصر</strong> در دورهٔ زندگی او (روشن روی خط زمان):</p>
+          <div class="chips" style="gap:5px;">${topPeers.map(peerChip).join("")}</div>
+        </div>
+        <div class="g-focus-tip" style="margin:8px 0;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:0.82rem;color:var(--turquoise);">
+          💡 <strong>راهنما:</strong> تمام خطوط روشن روی صفحه، شاعرانی هستند که در بازهٔ حیات ${esc(poet.label)} زیسته‌اند. با زدن روی هر نام می‌توانید به او پرش کنید.
+        </div>
+        <p id="tree-links" class="muted">پیوندهای تضمین را از گنجور می‌آورم…</p>
+        <p class="chips">
+          <a class="btn primary" href="#/poet/${poet.id}">صفحه دیوان</a>
+          <a class="chip" href="#/bridges/${poet.id}">همه پل‌ها</a>
+          <a class="chip" href="#/map?y=${Math.round((poet.b + poet.d) / 2)}">روی نقشه</a>
+          <button class="chip" type="button" data-go="${poet.id}">پرش به نوار در نمودار</button>
+        </p>
+      </div>`;
     history.replaceState(null, "", `#/tree?poet=${poet.id}`);
     if (jump) scrollTo(poet);
     const token = ++ask;
@@ -3242,12 +3331,67 @@ async function treePage(query) {
     const chip = event.target.closest("[data-pick]");
     if (chip) select(chip.dataset.pick, true);
   });
-  box.oninput = paintState;
+  const searchDropdown = document.querySelector("#tree-search-dropdown");
+  const renderSearchSuggestions = (q) => {
+    if (!searchDropdown) return;
+    if (!q || q.length < 2) {
+      searchDropdown.hidden = true;
+      searchDropdown.innerHTML = "";
+      return;
+    }
+    const hits = poets.filter(p => `${p.nickname || ""} ${p.name || ""} ${p.birthPlace || ""}`.includes(q)).slice(0, 6);
+    if (!hits.length) {
+      searchDropdown.hidden = true;
+      return;
+    }
+    searchDropdown.hidden = false;
+    searchDropdown.innerHTML = hits.map(p => `
+      <div class="g-tree-suggest-item" data-id="${p.id}">
+        <div class="g-suggest-info">
+          <strong>${esc(p.label)}</strong>
+          <small>${esc(yearsText(p))}${p.birthPlace ? ` · زاده ${esc(p.birthPlace)}` : ""}</small>
+        </div>
+        <span class="g-suggest-tag">پرش ➜</span>
+      </div>
+    `).join("");
+  };
+
+  box.addEventListener("input", () => {
+    paintState();
+    renderSearchSuggestions(box.value.trim());
+  });
+
+  if (searchDropdown) {
+    searchDropdown.addEventListener("click", (event) => {
+      const item = event.target.closest(".g-tree-suggest-item");
+      if (item) {
+        const hitId = item.dataset.id;
+        searchDropdown.hidden = true;
+        box.value = "";
+        select(hitId, true);
+      }
+    });
+  }
+
+  document.addEventListener("click", (event) => {
+    if (searchDropdown && !event.target.closest(".g-tree-search-wrap")) {
+      searchDropdown.hidden = true;
+    }
+  });
+
+  document.querySelectorAll(".g-quick-poet-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const pid = btn.dataset.poetId;
+      if (pid) select(pid, true);
+    });
+  });
+
   document.querySelector("#tree-filter").onsubmit = (event) => {
     event.preventDefault();
     const q = box.value.trim();
     const hit = q && poets.find((poet) => `${poet.nickname || ""} ${poet.name || ""} ${poet.birthPlace || ""}`.includes(q));
     if (hit) {
+      if (searchDropdown) searchDropdown.hidden = true;
       box.value = "";
       select(hit.id, true);
     }
@@ -4161,6 +4305,73 @@ async function placesPage(query) {
     };
   });
 }
+
+
+function openGuideModal() {
+  let modal = document.querySelector("#g-guide-modal-container");
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.id = "g-guide-modal-container";
+    modal.innerHTML = `
+      <div class="g-guide-overlay" id="g-guide-overlay"></div>
+      <div class="g-guide-dialog" role="dialog" aria-labelledby="g-guide-title" aria-modal="true">
+        <header class="g-guide-head">
+          <div class="g-guide-title-wrap">
+            <span class="g-guide-icon">💡</span>
+            <h3 class="g-guide-title" id="g-guide-title">راهنمای کاربردی خط زمان هم‌عصران و ابزارهای گنجور نو</h3>
+          </div>
+          <button type="button" class="g-guide-close" id="g-guide-close" aria-label="بستن">×</button>
+        </header>
+        <div class="g-guide-body">
+          <div class="g-guide-card">
+            <div class="g-gc-num">۱</div>
+            <div class="g-gc-content">
+              <h4>پیدا کردن سریع شاعر (مانند بیدل دهلوی، صائب یا حافظ)</h4>
+              <p>کافی است دو حرف از نام شاعر را در کادر جستجوی بالای خط زمان بنویسید یا روی دکمه‌های «پرش مستقیم» کلیک کنید. صفحه به‌طور خودکار روی نوار حیات آن شاعر فرود می‌آید، شاعر مشخص می‌شود و کارت هم‌عصرانش باز می‌گردد.</p>
+            </div>
+          </div>
+          <div class="g-guide-card">
+            <div class="g-gc-num">۲</div>
+            <div class="g-gc-content">
+              <h4>مفهوم خط زمان و شناخت هم‌عصران</h4>
+              <p>زمان از راست به چپ حرکت می‌کند (از قرن ۳ هجری تا دوران معاصر). هر نوار نشان‌دهندهٔ سال‌های حیات یک شاعر از تولد تا وفات است. با انتخاب هر شاعر، تمام شاعرانی که در دوره حیات او نفس کشیده‌اند روشن می‌مانند و میزان دقیق هم‌پوشانی زیست محاسبه و نمایش داده می‌شود.</p>
+            </div>
+          </div>
+          <div class="g-guide-card">
+            <div class="g-gc-num">۳</div>
+            <div class="g-gc-content">
+              <h4>رنگ‌ها و اقلیم‌های جغرافیایی</h4>
+              <p>رنگ هر نوار نشان‌دهندهٔ خاستگاه جغرافیایی شاعر است (فیروزه‌ای: خراسان بزرگ، طلایی: فارس و مرکز ایران، لاجوردی: شبه‌قاره هند، زرشکی: آذربایجان و اران، سبز: روم و عثمانی).</p>
+            </div>
+          </div>
+          <div class="g-guide-card">
+            <div class="g-gc-num">۴</div>
+            <div class="g-gc-content">
+              <h4>پل‌های تضمین و استقبال</h4>
+              <p>کمان‌های زرین میان شاعران، پیوندهای تضمین و استقبال شعرهاست؛ یعنی چه کسی مصراع یا بیتی از دیگری را در غزل خویش وام گرفته و بازآفرینی کرده است.</p>
+            </div>
+          </div>
+        </div>
+        <footer class="g-guide-foot">
+          <button type="button" class="btn primary g-guide-ok" id="g-guide-ok">متوجه شدم، رفتن به خط زمان ➜</button>
+        </footer>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    const close = () => (modal.hidden = true);
+    modal.querySelector("#g-guide-close").onclick = close;
+    modal.querySelector("#g-guide-ok").onclick = close;
+    modal.querySelector("#g-guide-overlay").onclick = close;
+  }
+  modal.hidden = false;
+}
+
+document.addEventListener("click", (event) => {
+  if (event.target.closest(".g-open-guide-btn, [data-action='guide']")) {
+    event.preventDefault();
+    openGuideModal();
+  }
+});
 
 async function render() {
   if (audioNode) {
