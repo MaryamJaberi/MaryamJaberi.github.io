@@ -1,0 +1,131 @@
+{
+ "id": "psy:control-in-couple",
+ "kind": "concept",
+ "title": {
+  "fa": "در رابطهٔ زوج",
+  "en": "Control in a couple",
+  "nl": "Controle in een relatie"
+ },
+ "aliases": [],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
+ "summary": {
+  "fa": "نزدیک‌ترین رابطه، بیشترین دسترسی را می‌دهد: به وقت، پول، بدن، خواب و آبروی آدم. برای همین کنترل این‌جا بیش از هر جای دیگری کار می‌کند — و تشخیصش از «رابطهٔ پرتنش» سخت‌تر است.",
+  "en": "The closest relationship gives the most access, so control works here best and is hardest to tell from an ordinary tense relationship.",
+  "nl": "The closest relationship gives the most access, so control works here best and is hardest to tell from an ordinary tense relationship."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "مایکل جانسون نشان داد همهٔ خشونت‌های خانگی یک چیز نیستند: در «تروریسم خانگی» خشونت در دل یک الگوی کنترل است و تقریباً همیشه یک‌طرفه و تشدیدشونده؛ در «خشونت موقعیتی زوج» دعوایی دوطرفه است که از کنترل نمی‌آید. این دو پیامد، مسیر و راه‌حل متفاوتی دارند.",
+    "en": "Johnson distinguished intimate terrorism from situational couple violence.",
+    "nl": "Johnson distinguished intimate terrorism from situational couple violence."
+   },
+   "sources": [
+    "src:284c1c6526"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "تفاوت عملی‌شان در یک پرسش است، نه در شدت دعوا: «اگر مخالفت کنم، چه می‌شود؟» در رابطهٔ پرتنشِ معمولی، جواب «دعوا می‌شود». در رابطهٔ کنترل‌گرانه، جواب «بعدش تاوان دارد».",
+    "en": "The practical test is not the intensity of fights but what happens when you disagree.",
+    "nl": "The practical test is not the intensity of fights but what happens when you disagree."
+   },
+   "sources": [
+    "src:896275a639"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نشانه‌های زودهنگامی که در پژوهش بیشتر از بقیه برجسته‌اند: حسادت زودرس که «نشانهٔ عشق» خوانده می‌شود، فشار برای تعهد سریع، و کم‌شدن تدریجی رفت‌وآمد با خانواده و دوستان.",
+    "en": "Early markers: early jealousy framed as love, pressure for fast commitment, and shrinking outside contact.",
+    "nl": "Early markers: early jealousy framed as love, pressure for fast commitment, and shrinking outside contact."
+   },
+   "sources": [
+    "src:896275a639"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "و آنچه در رابطه‌های سالم هم هست و نباید با کنترل اشتباه گرفت: دعوا، دلخوری، و حتی چهار سوار گاتمن. تفاوت در ترمیم است — در زوج‌هایی که دوام می‌آورند، بعد از خطا تلاش ترمیمی می‌آید و پذیرفته می‌شود.",
+    "en": "Healthy couples also fight; the difference is repair after rupture.",
+    "nl": "Healthy couples also fight; the difference is repair after rupture."
+   },
+   "sources": [
+    "src:60e53548cd"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:coercive-control",
+   "rel": "part-of",
+   "note": {
+    "fa": "الگوی کلی",
+    "en": "The overall pattern",
+    "nl": "The overall pattern"
+   }
+  },
+  {
+   "to": "psy:relationship-arc",
+   "rel": "explains",
+   "note": {
+    "fa": "چطور پیش می‌رود",
+    "en": "How it unfolds",
+    "nl": "How it unfolds"
+   }
+  },
+  {
+   "to": "psy:gottman-horsemen",
+   "rel": "contrasts",
+   "note": {
+    "fa": "آنچه در رابطهٔ سالم هم هست",
+    "en": "What healthy couples also do",
+    "nl": "What healthy couples also do"
+   }
+  },
+  {
+   "to": "psy:boundaries",
+   "rel": "see-also",
+   "note": {
+    "fa": "مرز در رابطهٔ نزدیک",
+    "en": "Boundaries up close",
+    "nl": "Boundaries up close"
+   }
+  }
+ ],
+ "people": [
+  "core:michael-p-johnson"
+ ],
+ "sources": [
+  "src:284c1c6526",
+  "src:60e53548cd",
+  "src:896275a639"
+ ],
+ "booklets": [],
+ "origin": "narcissism-control",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "try": {
+  "text": {
+   "fa": "همان بیست‌وپنج جمله را برای این رابطه، یک بار از هر طرف، پر کنید.",
+   "en": "Fill the same twenty-five items for this relationship, once from each side.",
+   "nl": "Fill the same twenty-five items for this relationship, once from each side."
+  },
+  "tool": "tools/control-check.html"
+ },
+ "confusions": [
+  {
+   "fa": "«هر دو مقصریم» گاهی درست است و گاهی تلهٔ خطرناکی. وقتی یک نفر از دیگری می‌ترسد، تقسیم مساوی تقصیر، بار را روی کسی می‌گذارد که کمتر قدرت دارد.",
+   "en": "'We are both to blame' is sometimes true and sometimes a dangerous trap.",
+   "nl": "'We are both to blame' is sometimes true and sometimes a dangerous trap."
+  }
+ ]
+}

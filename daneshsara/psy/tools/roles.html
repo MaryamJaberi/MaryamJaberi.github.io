@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>آینهٔ نقش‌ها: چطور آن آدم نباشم | ویکی روان‌شناسی | دانش‌سرا</title>
+<meta name="description" content="شش نقشی که زندگی به ما می‌دهد — والد، شریک، رئیس، دوست، کمک‌کننده، فرزند بزرگسال — با تله‌های هر کدام و یک آزمایش کوچک برای همین هفته.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<style>
+:root{--c:var(--fam-psy)}
+h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
+p.lead{color:var(--ink-2);max-width:46em;line-height:2;margin:0 0 var(--s4);font-size:1.05rem}
+.note{padding:var(--s4);border-radius:var(--r-md);font-size:var(--small);line-height:1.95;color:var(--ink-2);max-width:60em;margin:0 0 var(--s3)}
+.note.p{background:color-mix(in srgb,var(--ok) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 35%,var(--line))}
+.note.g{background:var(--surface);border:1px solid var(--line)}
+section{padding-block:var(--s5);border-top:1px solid var(--line)}
+h2{font-size:var(--h3);margin:0 0 var(--s3)}
+.rolegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,155px),1fr));gap:12px;margin-bottom:var(--s5)}
+.rolegrid button{font:inherit;display:grid;gap:8px;justify-items:center;padding:16px 10px;border:1px solid var(--line-strong);border-radius:var(--r-lg);background:var(--paper);color:var(--ink-2);cursor:pointer;text-align:center;line-height:1.5}
+.rolegrid button svg{width:40px;height:40px;fill:currentColor;opacity:.75}
+.rolegrid button b{font-size:1rem}
+.rolegrid button small{font-size:var(--chip);color:var(--ink-3)}
+.rolegrid button[aria-pressed=true]{border-color:var(--c);color:var(--c);background:color-mix(in srgb,var(--fam-psy) 8%,var(--paper));box-shadow:inset 0 0 0 1px var(--c)}
+.rolegrid button[aria-pressed=true] small{color:var(--c)}
+.rolegrid button .done{font-size:var(--chip);color:var(--ok);font-weight:650}
+ol.q{list-style:none;margin:0 0 var(--s4);padding:0;display:grid;gap:12px;max-width:44em;counter-reset:q}
+ol.q li{counter-increment:q;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface)}
+ol.q p{margin:0 0 12px;line-height:1.95}
+ol.q p::before{content:counter(q,persian) ". ";color:var(--c);font-weight:650}
+.sc{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.sc label{position:relative;display:grid;place-items:center;min-height:40px;border-radius:var(--r-md);border:1px solid var(--line-strong);cursor:pointer;font-size:var(--small);background:var(--paper)}
+.sc input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.sc label:has(input:checked){background:var(--c);border-color:var(--c);color:var(--paper);font-weight:650}
+.act{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:var(--s3)}
+button.b{font:inherit;padding:10px 24px;border-radius:var(--r-full);border:1px solid var(--c);background:var(--c);color:var(--paper);cursor:pointer;font-weight:650}
+button.b[disabled]{opacity:.45;cursor:not-allowed}
+button.g{font:inherit;padding:9px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:none;color:var(--ink-2);cursor:pointer}
+.left{font-size:var(--small);color:var(--ink-3)}
+.traps{display:grid;gap:12px;margin:var(--s4) 0}
+.trap{border:1px solid var(--line);border-inline-start:4px solid var(--k,var(--line-strong));border-radius:var(--r-lg);background:var(--surface);padding:var(--s4)}
+.trap .hd{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.trap b{font-size:1.04rem}
+.trap .lvl{font-size:var(--chip);color:var(--k)}
+.trap p{margin:0 0 10px;line-height:1.95;font-size:var(--small);color:var(--ink-2)}
+.trap .x{background:color-mix(in srgb,var(--ok) 8%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 30%,var(--line));border-radius:var(--r-md);padding:11px 13px;font-size:var(--small);line-height:1.95}
+.trap .x b{color:var(--ok);display:block;font-size:var(--chip);margin-bottom:4px;font-weight:650}
+.sum{display:grid;gap:9px;max-width:42em}
+.sum .row{display:grid;grid-template-columns:minmax(0,9em) 1fr auto;gap:10px;align-items:center;font-size:var(--small)}
+.sum .track{height:14px;border-radius:7px;background:var(--surface-subtle);overflow:hidden}
+.sum .fill{display:block;height:100%;border-radius:7px;background:var(--c);transition:width .4s}
+.sum .v{font-size:var(--chip);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--s3)}
+.links a{font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink-2)}
+.links a:hover{border-color:var(--c);color:var(--c)}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><a href="../../psy/tools/">ابزارها</a><i>›</i><b>آینهٔ نقش‌ها: چطور آن آدم نباشم</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap">
+<h1>آینهٔ نقش‌ها: چطور آن آدم نباشم</h1>
+<p class="lead">بیشتر نوشته‌های این حوزه دربارهٔ «او»ست. این یکی دربارهٔ ماست. نه برای اینکه کسی خودش را محکوم کند — برای اینکه هر کدام از ما در یکی از نقش‌هایمان عادتی داریم که اگر کسی به‌مان بگوید، جا می‌خوریم.</p>
+<p class="lead">شش نقش. در هر کدام پنج جمله که باید صادقانه جواب داده شود، و بعد یک آزمایش کوچک برای همین هفته — آن‌قدر کوچک که انجام‌شدنش قطعی باشد.</p>
+<div class="note p"><b>چرا کوچک؟</b> در پژوهش تغییر ارادی شخصیت، کسانی که چالش‌های کوچک را <b>تمام کردند</b> رشد نشان دادند؛ کسانی که چالش بزرگ پذیرفتند و تمام نکردند، حتی پس‌رفت داشتند. تصمیم بزرگ کار نمی‌کند؛ گام تمام‌شدنی کار می‌کند.</div>
+<div class="note g">هیچ پاسخی ذخیره یا فرستاده نمی‌شود. این آزمون نیست و نمره‌ای هم در کار نیست؛ آینه است.</div>
+</main>
+<main class="wrap" style="padding-top:0">
+<section>
+<h2>نقش را انتخاب کنید</h2>
+<div class="rolegrid" id="roles" role="group" aria-label="نقش‌ها"></div>
+<p class="lead" style="font-size:1rem" id="rdesc"></p>
+<ol class="q" id="qs"></ol>
+<div class="act"><button class="b" id="show" disabled>آینه را نشان بده</button><button class="g" id="clear">پاک کردن این نقش</button><span class="left" id="left"></span></div>
+</section>
+<section id="res" hidden>
+<h2>در این نقش</h2>
+<p class="lead" style="font-size:1rem" id="head"></p>
+<div class="traps" id="traps"></div>
+<div class="note g">هیچ‌کدام از این‌ها «تو آدم بدی هستی» نیست. همهٔ ما در بعضی نقش‌ها بهتریم و در بعضی بدتر؛ و همان نقشی که در آن بدتریم، معمولاً همان است که در آن بیشتر می‌ترسیم.</div>
+</section>
+<section id="sumsec" hidden>
+<h2>نقش‌هایی که تا حالا پر کرده‌اید</h2>
+<p class="lead" style="font-size:1rem">این مقایسه فقط برای خودتان است: کدام نقش بیشتر از بقیه به کار دارد.</p>
+<div class="sum" id="sum"></div>
+</section>
+<section>
+<h2>بعدش کجا بروم</h2>
+<div class="links">
+ <a href="sentences.html">جمله‌ساز: جایگزین همین جمله‌ها ←</a>
+ <a href="control-check.html">آیا در این رابطه کنترل هست؟ ←</a>
+ <a href="triangle.html">مثلث و راه بیرون ←</a>
+ <a href="../entries.html#drive-not-control">از کنترل به نیروی محرکه ←</a>
+ <a href="../narcissism.html">پروندهٔ کامل ←</a>
+</div>
+</section>
+</main>
+<script>
+/* هر نقش: t عنوان، d توضیح، q پرسش‌ها [متن، شناسهٔ تله]، tr تله‌ها {شناسه:{t,w,x}} */
+const RL=[
+{k:"parent",t:"والد",ico:"M32 14a7 7 0 1 1 0 14 7 7 0 0 1 0-14zM20 52c0-9 5-14 12-14s12 5 12 14zM44 36a5 5 0 1 1 0-10 5 5 0 0 1 0 10zM46 52c0-6 2-9 6-9s6 3 6 9z",
+ d:"نیت تقریباً همیشه خوب است؛ برای همین این نقش از همه سخت‌تر دیده می‌شود.",
+ q:[["وقتی فرزندم کاری را که می‌خواهم نمی‌کند، سردتر می‌شوم یا کمتر حرف می‌زنم.","withdraw"],
+    ["به او گفته‌ام از بچه‌های دیگر بااستعدادتر یا خاص‌تر است.","inflate"],
+    ["وقتی ناراحت است، اول می‌گویم «چیزی نشده» یا «این‌قدر حساس نباش».","invalid"],
+    ["زحمت‌هایی را که برایش کشیده‌ام وسط اختلاف می‌آورم.","guilt"],
+    ["با بچه‌هایم آشکارا متفاوت رفتار می‌کنم.","diff"]],
+ tr:{withdraw:{t:"دریغ محبت",w:"محبت مشروط می‌شود به اینکه آن‌طور باشد که می‌خواهم. فرزند یاد می‌گیرد ارزشش به عملکردش بسته است.",
+   x:"این هفته یک بار که از کارش ناراضی بودید، ناراحتی را بگویید و در همان جمله جدایش کنید: «از این کار ناراحتم؛ ربطی به دوست‌داشتنت ندارد.»"},
+  inflate:{t:"ستایش تورمی",w:"ارزش‌گذاری اغراق‌آمیز عزت‌نفس نمی‌سازد؛ در پژوهش طولی، خودشیفتگی می‌سازد. گرما عزت‌نفس می‌سازد.",
+   x:"این هفته ستایش را از «تو چه هستی» به «چه کردی» ببرید: به‌جای «تو نابغه‌ای»، «سخت بود و تو ادامه دادی»."},
+  invalid:{t:"بی‌اعتبار کردن احساس",w:"هیجان ممنوع می‌شود، نه آرام. کودک یاد می‌گیرد پنهانش کند.",
+   x:"یک بار این هفته، پیش از هر راه‌حلی فقط نام احساس را بگویید: «می‌بینم خیلی ناراحتی.» و ده ثانیه ساکت بمانید."},
+  guilt:{t:"ایجاد احساس گناه",w:"محبت گذشته به بدهی تبدیل می‌شود و «نه» گفتن یعنی نمک‌نشناسی.",
+   x:"این هفته یک خواستهٔ مشخص را مستقیم بگویید، بدون هیچ اشاره‌ای به گذشته، و جای «نه» را باز بگذارید."},
+  diff:{t:"رفتار متفاوت با فرزندان",w:"در فراتحلیل ۴۳ نمونه، فرزندی که کمتر مورد لطف است مشکلات بیشتری دارد — و بچه‌ها این تفاوت را خیلی دقیق می‌بینند.",
+   x:"این هفته با فرزندی که کمتر با او وقت می‌گذرانید، بیست دقیقه تنها و بدون هدف آموزشی بگذرانید."}}},
+{k:"partner",t:"شریک عاطفی",ico:"M32 50C20 42 12 36 12 28a9 9 0 0 1 17-5 9 9 0 0 1 17 5c0 8-8 14-20 22z",
+ d:"نزدیک‌ترین رابطه بیشترین دسترسی را می‌دهد؛ پس کوچک‌ترین عادت‌ها این‌جا بزرگ‌ترین اثر را دارند.",
+ q:[["وقتی بحث به جایی می‌رسد که خوشم نمی‌آید، تمامش می‌کنم.","shut"],
+    ["دربارهٔ لباس، رفت‌وآمد یا دوستانش نظر می‌دهم تا تغییر کند.","micro"],
+    ["وقتی گلایه‌ای می‌شنوم، اول پروندهٔ متقابل باز می‌کنم.","defend"],
+    ["بعد از دعوا تا مدتی سرد می‌مانم و این را «نیاز به فضا» می‌نامم.","stone"],
+    ["از دیدن دوستانش یا خانواده‌اش دلخور می‌شوم و نشان می‌دهم.","isol"]],
+ tr:{shut:{t:"بستن راه حرف",w:"مسئله حل نمی‌شود، فقط خاموش می‌شود — و دفعهٔ بعد بزرگ‌تر برمی‌گردد.",
+   x:"این هفته به‌جای «بحث تمام شد»، بگویید: «الان نمی‌توانم ادامه بدهم، فردا ساعت هشت.» و سر همان ساعت برگردید."},
+  micro:{t:"ریزکنترل",w:"هر مورد قابل توجیه است؛ مجموعشان دایرهٔ انتخاب طرف مقابل را جمع می‌کند.",
+   x:"یک مورد را این هفته عمداً رها کنید و جمله‌اش را عوض کنید: «خوشم نمی‌آید، ولی انتخابش با توست.»"},
+  defend:{t:"دفاع",w:"گلایه بی‌جواب می‌ماند و به مسابقه تبدیل می‌شود. در پژوهش گاتمن یکی از چهار الگوی پیش‌بینی‌کنندهٔ جدایی است.",
+   x:"این هفته یک بار، پیش از هر توضیحی، آن بخشی از حرفش را که درست است پیدا کنید و بلند بگویید."},
+  stone:{t:"دیوار سکوت",w:"فاصله لازم است، ابهام نه. قهر بدون وقتِ برگشت، طرف مقابل را در حالت گوش‌به‌زنگی نگه می‌دارد.",
+   x:"هر فاصله‌ای این هفته وقت برگشت داشته باشد، حتی «یک ساعت دیگر»."},
+  isol:{t:"جداسازی نرم",w:"دلخوری از رفت‌وآمد، همان جداسازی است با لباس محبت. هر پل بیرونی که قطع شود، یک منبع واقعیت کم می‌شود.",
+   x:"این هفته خودتان یک قرار با دوستانش پیشنهاد دهید، یا دست‌کم بی‌هیچ اشاره‌ای بدرقه‌اش کنید."}}},
+{k:"boss",t:"رئیس یا سرپرست",ico:"M14 50V30l18-12 18 12v20zM26 50V38h12v12z",
+ d:"قدرت سازمانی، رفتارهای معمولی را بزرگ می‌کند: همان جمله از دهان شما وزن دیگری دارد.",
+ q:[["می‌خواهم همهٔ تصمیم‌ها از من رد شود.","approve"],
+    ["وقتی خطایی می‌بینم، از خودِ آدم ایراد می‌گیرم نه از کار.","person"],
+    ["اطرافیانم حواسشان هست که در چه حالی هستم.","mood"],
+    ["خبر بد دیر به من می‌رسد.","badnews"],
+    ["در جمع نقد می‌کنم و در خلوت تعریف.","public"]],
+ tr:{approve:{t:"ریزکنترل",w:"نظارت به نتیجه نگاه می‌کند و در نقطه‌های روشن؛ ریزکنترل به هر حرکت. دومی تیم را کُند و وابسته می‌کند.",
+   x:"این هفته یک تصمیم را کامل واگذار کنید و فقط نتیجه را ببینید."},
+  person:{t:"حملهٔ شخصی",w:"از یک خطا حکم کلی ساختن، نتیجه‌اش پنهان‌کاری خطاهای بعدی است.",
+   x:"این هفته هر نقدی را با این قالب بگویید: «در این کار، این اتفاق افتاد، نتیجه‌اش این شد.» بدون هیچ صفتی."},
+  mood:{t:"بی‌ثباتی",w:"وقتی حال شما قانون اتاق باشد، انرژی تیم صرف پیش‌بینی شما می‌شود، نه کار.",
+   x:"یک بار که حالتان بد است، بلند بگویید: «امروز حالم خوب نیست، ربطی به کار شما ندارد.»"},
+  badnews:{t:"بستن مسیر خبر",w:"دیر رسیدن خبر بد، علامت است نه تصادف. معمولاً یعنی آورندهٔ خبر قبلاً تاوان داده است.",
+   x:"این هفته از کسی که خبر بدی آورد، جلوی جمع تشکر کنید."},
+  public:{t:"دو چهره",w:"نقد علنی و تعریف خصوصی، آدم‌ها را در وضعیت دائم اثبات نگه می‌دارد.",
+   x:"این هفته یکی را جلوی جمع تحسین کنید و هر نقدی را خصوصی بگویید."}}},
+{k:"friend",t:"دوست",ico:"M22 24a6 6 0 1 1 0 12 6 6 0 0 1 0-12zM42 24a6 6 0 1 1 0 12 6 6 0 0 1 0-12zM10 52c0-7 5-11 12-11s12 4 12 11zM30 52c0-7 5-11 12-11s12 4 12 11z",
+ d:"در دوستی قدرت رسمی نیست؛ ابزارش دلخوری، مقایسه و در دسترس نبودن است.",
+ q:[["وقتی به او نیاز دارم و نیست، با سردی یا کنایه نشان می‌دهم.","punish"],
+    ["نصیحت می‌کنم بی‌آنکه بپرسم می‌خواهد یا نه.","advice"],
+    ["دربارهٔ دوستی‌های دیگرش نظر می‌دهم.","jealous"],
+    ["گفت‌وگوها بیشتر دربارهٔ من است تا دربارهٔ او.","center"],
+    ["وقتی حالش بهتر از من است، سخت‌تر خوشحال می‌شوم.","compare"]],
+ tr:{punish:{t:"تنبیه با سردی",w:"دلخوریِ نگفته، طرف مقابل را به حدس‌زدن می‌اندازد و رابطه را پرهزینه می‌کند.",
+   x:"این هفته یک دلخوری را مستقیم و کوتاه بگویید، همان روز."},
+  advice:{t:"نصیحت نخواسته",w:"کمکِ نخواسته پیام «تو بلد نیستی» می‌دهد، حتی وقتی درست باشد.",
+   x:"این هفته پیش از هر مشورتی بپرسید: «کمک می‌خواهی یا فقط گوش بدهم؟»"},
+  jealous:{t:"محدودکردن دایره",w:"نظر دادن دربارهٔ دوستی‌های دیگر، همان جداسازی است در مقیاس کوچک.",
+   x:"این هفته دربارهٔ هیچ‌کدام از آدم‌های دیگر زندگی‌اش نظر منفی ندهید."},
+  center:{t:"مرکز بودن",w:"دوستی وقتی یک‌طرفه شود، طرف مقابل کم‌کم کمتر می‌گوید و بعد کمتر می‌آید.",
+   x:"در گفت‌وگوی بعدی، سه پرسش دربارهٔ او بپرسید پیش از آنکه از خودتان بگویید."},
+  compare:{t:"مقایسه",w:"حسادت در دوستی طبیعی است؛ پنهان‌کردنش است که به کنایه تبدیل می‌شود.",
+   x:"این هفته یک موفقیت او را بی‌هیچ «ولی»ای تبریک بگویید."}}},
+{k:"helper",t:"کمک‌کننده",ico:"M32 12c6 0 10 4 10 10 0 7-6 10-10 16-4-6-10-9-10-16 0-6 4-10 10-10zM16 52c0-6 7-9 16-9s16 3 16 9z",
+ d:"درمانگر، معلم، مربی، پزشک، بزرگ‌تر خانواده، یا دوستی که همیشه مشاور است.",
+ q:[["کارهایی را که مال دیگری است برمی‌دارم چون «زودتر تمام می‌شود».","takeover"],
+    ["اگر بدون من پیش برود، حس خوبی ندارم.","needed"],
+    ["راه‌حل می‌دهم پیش از آنکه بپرسم چه امتحان شده.","solve"],
+    ["بعد از کمک، توقع قدردانی دارم و اگر نیاید دلخور می‌شوم.","debt"],
+    ["نمی‌دانم کجا باید بگویم «از این‌جا به بعد با توست».","limit"]],
+ tr:{takeover:{t:"برداشتنِ کار دیگری",w:"کوتاه‌مدت کمک، بلندمدت پیام ناتوانی. تجربهٔ حل‌کردن، چیزی است که از دست می‌رود.",
+   x:"این هفته یک کار را نیمه رها کنید و فقط وقتی پرسیده شد جواب بدهید."},
+  needed:{t:"ضروری بودن",w:"اگر استقلالِ طرف مقابل ناراحتتان کند، نقش از کمک لغزیده است.",
+   x:"یک پیشرفت مستقل او را این هفته پیدا کنید و بلند بگویید: «این را خودت کردی.»"},
+  solve:{t:"راه‌حل زودرس",w:"راه‌حلی که زود بیاید، فکر طرف مقابل را متوقف می‌کند.",
+   x:"این هفته به‌جای راه‌حل، بپرسید: «تا حالا چه چیزی را امتحان کرده‌ای؟»"},
+  debt:{t:"کمکِ بدهی‌ساز",w:"کمکی که انتظار دارد، دیر یا زود به طلبکاری و بعد به سرزنش می‌رسد.",
+   x:"این هفته کمکی بکنید که هیچ‌کس خبردار نشود."},
+  limit:{t:"نبودِ مرز",w:"ناجیِ بی‌مرز خسته می‌شود، و خستگی به دلخوری تبدیل می‌شود.",
+   x:"این هفته یک بار بگویید: «تا این‌جا می‌توانم؛ از این‌جا به بعد با توست.»"}}},
+{k:"child",t:"فرزند بزرگسال",ico:"M32 12l20 12v16L32 52 12 40V24z",
+ d:"نقشی که کمتر دربارهٔ آن حرف زده می‌شود: ما هم در رابطه با پدر و مادرمان رفتارهایی داریم.",
+ q:[["با سکوت یا ندیدن، تنبیهشان می‌کنم.","silent"],
+    ["انتظار دارم بدون گفتن بفهمند چه می‌خواهم.","mindread"],
+    ["هر گفت‌وگو را به پروندهٔ گذشته می‌کشانم.","past"],
+    ["بین خودم و آن‌ها مرز روشنی ندارم و بعد منفجر می‌شوم.","noboundary"],
+    ["از کمکشان استفاده می‌کنم و بعد از دخالتشان شاکی‌ام.","both"]],
+ tr:{silent:{t:"تنبیه با سکوت",w:"همان دیوار سکوت، این بار از طرف ما. مبهم است و چیزی را حل نمی‌کند.",
+   x:"این هفته یک گلایه را کوتاه و مستقیم بگویید، به‌جای کم‌کردن تماس."},
+  mindread:{t:"انتظار ذهن‌خوانی",w:"خواستهٔ نگفته، همیشه برآورده‌نشده می‌ماند و دلخوری می‌سازد.",
+   x:"یک خواسته را این هفته با جمله‌ای روشن بگویید، حتی اگر بدیهی به نظر برسد."},
+  past:{t:"کشاندن به گذشته",w:"گفت‌وگو دربارهٔ امروز، با پروندهٔ ده سال پیش به جایی نمی‌رسد.",
+   x:"این هفته یک گفت‌وگو را فقط دربارهٔ همین هفته نگه دارید."},
+  noboundary:{t:"نبود مرز",w:"مرزِ نگفته، با انفجار اعلام می‌شود؛ و آن وقت خودِ انفجار موضوع بحث می‌شود.",
+   x:"یک مرز کوچک را این هفته آرام بگویید، پیش از آنکه لازم شود."},
+  both:{t:"کمک و دخالت",w:"کمک گرفتن و دخالت نخواستن هر دو مشروع‌اند، ولی باید جدا و صریح گفته شوند.",
+   x:"این هفته یک کمک را با شرطش بپذیرید: «ممنون. تصمیمش را خودم می‌گیرم.»"}}}
+];
+const OPT=[["نه","0"],["گاهی","1"],["بله","2"]];
+</script>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+const COL=["#2f6b4f","#8a6d3b","#9a3b3b"];
+let cur=0; const ANS={};
+$("roles").innerHTML=RL.map((r,i)=>`<button data-i="${i}" aria-pressed="${i===0}">
+ <svg viewBox="0 0 64 64" aria-hidden="true"><path d="${r.ico}"/></svg><b>${E(r.t)}</b>
+ <small class="st"></small></button>`).join("");
+function build(){
+ const r=RL[cur];$("rdesc").textContent=r.d;
+ const a=ANS[r.k]||[];
+ $("qs").innerHTML=r.q.map((q,i)=>`<li><p>${E(q[0])}</p><div class="sc">`+
+  OPT.map(([l,v])=>`<label><input type="radio" name="q${i}" value="${v}"${a[i]==+v?" checked":""}>${E(l)}</label>`).join("")+`</div></li>`).join("");
+ $("res").hidden=true;tick();
+}
+function vals(){return RL[cur].q.map((_,i)=>{const r=document.querySelector(`input[name=q${i}]:checked`);return r?+r.value:null})}
+function tick(){
+ const v=vals(),n=v.filter(x=>x!==null).length;
+ $("left").textContent=n<v.length?`${fa(v.length-n)} جمله مانده`:"";
+ $("show").disabled=n<v.length;
+}
+$("qs").addEventListener("change",tick);
+$("roles").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;cur=+b.dataset.i;
+ $("roles").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));build();
+ $("rdesc").scrollIntoView({behavior:"smooth",block:"center"})});
+$("clear").addEventListener("click",()=>{delete ANS[RL[cur].k];build();marks();summary()});
+function marks(){$("roles").querySelectorAll("button").forEach((b,i)=>{
+ b.querySelector(".st").textContent=ANS[RL[i].k]?"پر شده ✓":"";
+ b.querySelector(".st").className="st "+(ANS[RL[i].k]?"done":"")})}
+function summary(){
+ const ks=Object.keys(ANS);$("sumsec").hidden=ks.length<2;if(ks.length<2)return;
+ const rows=RL.filter(r=>ANS[r.k]).map(r=>{const s=ANS[r.k].reduce((a,b)=>a+b,0);return [r,s]})
+   .sort((a,b)=>b[1]-a[1]);
+ $("sum").innerHTML=rows.map(([r,s])=>`<div class="row"><span>${E(r.t)}</span>
+  <span class="track"><i class="fill" style="width:${Math.round(s/10*100)}%"></i></span>
+  <span class="v">${fa(s)} از ۱۰</span></div>`).join("");
+}
+$("show").addEventListener("click",()=>{
+ const r=RL[cur],v=vals();ANS[r.k]=v;marks();summary();
+ const rank=r.q.map((q,i)=>[q[1],v[i]]).sort((a,b)=>b[1]-a[1]);
+ const total=v.reduce((a,b)=>a+b,0);
+ const hot=rank.filter(x=>x[1]>0);
+ $("head").innerHTML= hot.length
+  ? `در نقش «${E(r.t)}»، ${fa(hot.length)} تا از پنج تله روشن شد. از بالا به پایین مرتب شده‌اند؛ <b>فقط اولی را این هفته امتحان کنید</b>، نه همه را.`
+  : `در نقش «${E(r.t)}» هیچ‌کدام از این پنج تله روشن نشد. این یعنی این پنج عادت را ندارید، نه اینکه این نقش برایتان بی‌مسئله است — پرسش‌های دیگری هم هست که این‌جا نیامده.`;
+ $("traps").innerHTML= hot.map(([k,s],idx)=>{const t=r.tr[k];
+  return `<div class="trap" style="--k:${COL[s]}"><div class="hd"><b>${E(t.t)}</b>
+   <span class="lvl">${s===2?"بله":"گاهی"}</span></div><p>${E(t.w)}</p>
+   ${idx===0?`<div class="x"><b>آزمایش این هفته</b>${E(t.x)}</div>`:`<details><summary style="cursor:pointer;font-size:.86rem;color:var(--ink-3)">آزمایش این تله</summary><div class="x" style="margin-top:8px"><b>اگر خواستید بعداً</b>${E(t.x)}</div></details>`}</div>`}).join("");
+ $("res").hidden=false;$("res").scrollIntoView({behavior:"smooth",block:"start"});
+});
+build();marks();
+})();
+</script>
+<style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
+</body>
+</html>

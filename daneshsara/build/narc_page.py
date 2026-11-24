@@ -11,7 +11,7 @@ SRC = json.load(open(f'{R}/core/sources.json', encoding='utf-8'))
 
 GROUPS = [
  ("خودِ پدیده", "خودشیفتگی چیست، چه نیست، و چرا برچسب کمکی نمی‌کند.", "#4867a8",
-  ["narcissism", "npd", "vulnerable-narcissism", "healthy-narcissism", "narcissism-culture", "collective-narcissism", "labels-harm"]),
+  ["narcissism", "npd", "vulnerable-narcissism", "healthy-narcissism", "drive-not-control", "narcissism-culture", "collective-narcissism", "labels-harm"]),
  ("رفتارهای کنترل‌گرانه", "نُه دسته رفتار که می‌شود دید و شمرد، به‌جای حدس‌زدن دربارهٔ درون آدم‌ها.", "#8a4a6b",
   ["control-behaviors", "psychological-control", "coercive-control", "gaslighting", "darvo", "gottman-horsemen", "defensive-reactions", "public-private"]),
  ("نقش‌هایی که بازی می‌کنیم", "مثلث قربانی، ظالم و ناجی — و راه بیرون آمدن از آن.", "#2f7f8a",
@@ -21,9 +21,9 @@ GROUPS = [
  ("قوس رابطه", "چطور شروع می‌شود، چه چیزی ادامه‌اش می‌دهد، و چطور تمام می‌شود.", "#9a3b3b",
   ["relationship-arc", "love-bombing", "intermittent-bond", "leaving"]),
  ("در هر نقشی که زندگی می‌دهد", "کار، خانواده، دوستی، گروه و فضای مجازی.", "#7a5ea8",
-  ["control-at-work", "control-in-family", "control-online"]),
+  ["control-in-couple", "control-in-parenting", "control-at-work", "control-in-family", "control-in-helping", "control-online"]),
  ("اثر، و بیرون آمدن", "آنچه بر تن و روان می‌گذرد، و آنچه واقعاً کمک می‌کند.", "#2f6b4f",
-  ["victim-toll", "cptsd", "self-trust", "self-silencing", "boundaries", "assertiveness", "recovery", "change-possible"]),
+  ["victim-toll", "cptsd", "self-trust", "self-silencing", "boundaries", "assertiveness", "around-them", "recovery", "change-possible"]),
 ]
 TOOLS = [
  ("control-check", "آیا در این رابطه کنترل هست؟", "بیست‌وپنج جمله، از دو طرف: «با من چه می‌شود» و «من چه می‌کنم». نتیجه نُه الگوی رفتاری است، نه برچسب."),
@@ -31,6 +31,7 @@ TOOLS = [
  ("sentences", "جمله‌ساز: به‌جای این، آن", "پنجاه‌وچند جملهٔ آشنا، با توضیح اینکه چه می‌کند و چه جایگزینی دارد. جملهٔ خودتان را هم می‌شود آزمود."),
  ("arc", "قوس رابطه", "هفت مرحله در پنج نقش: زوج، خانواده، کار، گروه و آنلاین — با عددهایی که واقعاً وجود دارند."),
  ("toll", "آنچه بر تن و روان می‌گذرد", "نقشهٔ تن و روان: چه چیزی تغییر می‌کند، با چه مقدار شواهد، و چه چیزی کمک می‌کند."),
+ ("roles", "آینهٔ نقش‌ها: چطور آن آدم نباشم", "شش نقشی که زندگی می‌دهد — والد، شریک، رئیس، دوست، کمک‌کننده، فرزند بزرگسال — با تله‌های هر کدام و یک آزمایش کوچک برای همین هفته."),
 ]
 gaps = []
 for g in GROUPS:
