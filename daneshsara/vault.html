@@ -275,7 +275,7 @@ function render(path) {
     `window.__VAULT_PAGE=${JSON.stringify(path)};<\/script>` + VAULT_FETCH;
   let doc = inlineAssets(html, dir);
   window.__vaultFiles = FILES;
-  if (/<head[^>]*>/i.test(doc)) doc = doc.replace(/<head([^>]*)>/i, `<head$1>${head}`);
+  if (/<head(\s[^>]*)?>/i.test(doc)) doc = doc.replace(/<head(\s[^>]*)?>/i, m => m + head);
   else doc = head + doc;
   doc = /<\/body>/i.test(doc) ? doc.replace(/<\/body>/i, SHIM + "</body>") : doc + SHIM;
 
