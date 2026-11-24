@@ -224,30 +224,32 @@
 
       <h2>2. Information We Collect and Process</h2>
 
-      <h3>A. Audio & Microphone Access (Optional / On-Device)</h3>
+      <h3>A. Audio & Microphone Access (Optional)</h3>
       <p>
-        DOŪR offers single-player speech pronunciation challenges. To enable this, the app requests access to your microphone:
+        DOŪR offers single-player speech pronunciation challenges. To enable this, the app requests access to your microphone only when you start a speaking challenge:
       </p>
       <ul>
-        <li>Microphone input is processed <strong>locally in real-time</strong> using Web Speech recognition. Speech recognition is processed by the browser's speech service and needs internet.</li>
-        <li><strong>No audio recordings or voice files are stored, retained, or sold on our servers.</strong></li>
+        <li>Microphone input is processed in real-time using your browser's Web Speech API (or, when optional cloud AI transcription is enabled on our backend, transmitted securely over HTTPS solely to transcribe and evaluate your spoken phrase).</li>
+        <li><strong>No audio recordings or voice files are permanently stored, retained, or sold on our servers.</strong></li>
         <li>Microphone permission is strictly optional; all other game modes work completely without microphone access.</li>
       </ul>
 
-      <h3>B. Optional Account Information (Google Sign-In)</h3>
+      <h3>B. Optional Account Information (Google Sign-In & Email/Password)</h3>
       <p>
-        Users may choose to sign in using Google Authentication via Google Firebase to save game records, sync progress, and participate in global leaderboards:
+        Users may choose to sign in using Google Authentication or Email &amp; Password via Google Firebase to save game records, sync progress, and participate in global leaderboards:
       </p>
       <ul>
-        <li><strong>Data received:</strong> Public display name, email address, and profile photo URL provided by Google.</li>
-        <li><strong>Purpose:</strong> Creating and identifying your player profile and displaying your score on community leaderboards.</li>
-        <li>Account creation is entirely optional. You can play all core game modes anonymously without logging in.</li>
+        <li><strong>Data received:</strong> Public display name, email address, and (for Google Sign-In) profile photo URL.</li>
+        <li><strong>Purpose:</strong> Creating and identifying your player profile, syncing your learning progress, and displaying your score on community leaderboards.</li>
+        <li>Account creation is entirely optional. You can play core game modes locally without logging in.</li>
       </ul>
 
-      <h3>C. Gameplay and Score Data</h3>
-      <p>
-        When you play, game history records (team scores, rounds played, words guessed, and timestamps) are saved locally on your device (using LocalStorage). If you are signed in, these scores are backed up to our cloud database (Google Cloud Firestore).
-      </p>
+      <h3>C. Gameplay, Learning Progress &amp; Optional Location / Meetups / Notifications</h3>
+      <ul>
+        <li><strong>Gameplay &amp; Progress:</strong> Game history records (team scores, rounds played, Leitner spaced-repetition progress, and weak cards) are saved locally on your device (LocalStorage) and, if signed in, backed up to Google Cloud Firestore.</li>
+        <li><strong>Optional Location &amp; Language Meetups:</strong> If you use the Language Meetups map feature, you may optionally grant browser geolocation permission to center the map near you, or browse/create public meetup venues using Google Maps &amp; Places APIs. When you create or join a meetup, your chosen display name and venue details are stored in Firestore so other participants can see the event.</li>
+        <li><strong>Optional Notifications:</strong> If you enable daily Leitner study reminders, the app requests browser notification permission to show local study reminders on your device.</li>
+      </ul>
 
       <h2>3. How We Use Information</h2>
       <ul>
@@ -339,30 +341,32 @@
 
       <h2>۲. اطلاعاتی که جمع‌آوری و پردازش می‌شوند</h2>
 
-      <h3>الف) دسترسی به میکروفون و ضبط صدا (اختیاری)</h3>
+      <h3>الف) دسترسی به میکروفون و پردازش گفتار (اختیاری)</h3>
       <p>
-        در بخش چالش صوتی تک‌نفره، اپلیکیشن برای سنجش تلفظ صحیح از میکروفون استفاده می‌کند:
+        در بخش چالش صوتی تک‌نفره، اپلیکیشن تنها در زمان شروع تمرین گفتاری برای سنجش تلفظ صحیح درخواست دسترسی به میکروفون می‌کند:
       </p>
       <ul>
-        <li>پردازش صوت به صورت <strong>زنده و مستقیم بر روی دستگاه شما (On-Device)</strong> انجام می‌شود.</li>
-        <li><strong>هیچ‌گونه فایل صوتی یا صدای ضبط‌شده ذخیره نشده و به هیچ سروری ارسال نمی‌گردد.</strong></li>
+        <li>پردازش گفتار به‌صورت زنده از طریق سرویس تشخیص گفتار مرورگر (Web Speech API) انجام می‌شود و در صورت فعال بودن سرویس هوش مصنوعی ابری، صوت صرفاً برای تبدیل گفتار به متن و ارزیابی تلفظ از طریق ارتباط امن HTTPS پردازش می‌گردد.</li>
+        <li><strong>هیچ‌گونه فایل صوتی یا صدای ضبط‌شده به‌صورت دائمی در سرورهای ما ذخیره یا فروخته نمی‌شود.</strong></li>
         <li>این دسترسی کاملاً اختیاری است و سایر بخش‌های بازی بدون نیاز به میکروفون کار می‌کنند.</li>
       </ul>
 
-      <h3>ب) اطلاعات حساب کاربری (ورود با گوگل)</h3>
+      <h3>ب) اطلاعات حساب کاربری (ورود با گوگل یا ایمیل و رمز عبور)</h3>
       <p>
-        امکان ورود اختیاری با حساب گوگل (Google Sign-In) جهت ذخیره امتیازات و رده‌بندی جهانی فراهم است:
+        امکان ورود اختیاری با حساب گوگل (Google Sign-In) یا ایمیل و رمز عبور از طریق Google Firebase جهت ذخیره امتیازات، همگام‌سازی پیشرفت یادگیری و رده‌بندی جهانی فراهم است:
       </p>
       <ul>
-        <li><strong>داده‌های دریافتی:</strong> نام نمایشی، آدرس ایمیل و تصویر پروفایل ارسال‌شده توسط گوگل.</li>
-        <li><strong>هدف:</strong> تشکیل پروفایل بازیکن و نمایش امتیاز در جدول رکوردها.</li>
-        <li>ورود به حساب کاملاً اختیاری است و امکان اجرای تمام مسابقات به صورت آفلاین و ناشناس فراهم می‌باشد.</li>
+        <li><strong>داده‌های دریافتی:</strong> نام نمایشی، آدرس ایمیل و (در صورت ورود با گوگل) تصویر پروفایل.</li>
+        <li><strong>هدف:</strong> تشکیل پروفایل بازیکن، همگام‌سازی پیشرفت یادگیری و نمایش امتیاز در جدول رکوردها.</li>
+        <li>ورود به حساب کاملاً اختیاری است و امکان اجرای بخش‌های اصلی بازی به صورت محلی و بدون ورود فراهم می‌باشد.</li>
       </ul>
 
-      <h3>ج) داده‌های مسابقه و امتیازات</h3>
-      <p>
-        تاریخچه بازی‌ها، امتیاز تیم‌ها و تعداد کلمات حدس زده‌شده در حافظه محلی گوشی شما (LocalStorage) ذخیره می‌شوند. در صورت ورود با حساب کاربری، نسخه پشتیبان آن در دیتابیس امن گوگل فایربیس ثبت خواهد شد.
-      </p>
+      <h3>ج) داده‌های مسابقه، مکان اختیاری دورهمی‌ها و اعلان‌ها</h3>
+      <ul>
+        <li><strong>داده‌های بازی و یادگیری:</strong> تاریخچه بازی‌ها، امتیاز تیم‌ها، پیشرفت جعبه لایتنر و کارت‌های ضعیف در حافظه محلی گوشی (LocalStorage) و در صورت ورود به حساب، در دیتابیس امن گوگل فایربیس ذخیره می‌شوند.</li>
+        <li><strong>موقعیت مکانی و نقشه دورهمی‌ها (اختیاری):</strong> در بخش دورهمی‌های زبان‌آموزی، می‌توانید به صورت اختیاری اجازه دسترسی به مکان تقریبی را برای نمایش نقشه اطراف خود بدهید یا با کمک سرویس Google Maps/Places دورهمی‌های عمومی را ببینید یا ثبت کنید. هنگام ثبت یا عضویت در یک دورهمی، نام نمایشی و مشخصات مکان دورهمی در فایربیس ذخیره می‌شود.</li>
+        <li><strong>اعلان‌های یادآوری (اختیاری):</strong> در صورت فعال‌سازی یادآور روزانه جعبه لایتنر، مجوز اعلان برای ارسال یادآوری محلی روی دستگاه شما درخواست می‌شود.</li>
+      </ul>
 
       <h2>۳. نحوه استفاده از داده‌ها</h2>
       <ul>
