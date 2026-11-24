@@ -212,7 +212,16 @@ const SHIM = `<script>(function(){
   document.addEventListener("click",function(e){
     var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;
     var h=a.getAttribute("href")||"";
-    if(h.charAt(0)==="#"||/^(https?:|mailto:|tel:)/.test(h)&&a.href.indexOf(document.baseURI)!==0)return;
+    if(h.charAt(0)==="#"){
+      /* به‌خاطر base href، مرورگر لنگرِ داخلی را به نشانیِ واقعی می‌برد و صفحه گم می‌شود.
+         پس خودمان همین‌جا به همان جای صفحه می‌رویم. */
+      e.preventDefault();
+      var id=decodeURIComponent(h.slice(1));if(!id)return;
+      var el=null;try{el=document.getElementById(id)||document.getElementsByName(id)[0]}catch(x){}
+      if(el&&el.scrollIntoView)el.scrollIntoView({behavior:"smooth",block:"start"});
+      try{parent.postMessage({vaultHash:id},"*")}catch(x){}
+      return}
+    if(/^(https?:|mailto:|tel:)/.test(h)&&a.href.indexOf(document.baseURI)!==0)return;
     var u;try{u=new URL(a.getAttribute("href"),document.baseURI)}catch(x){return}
     var root=window.__VAULT_ROOT;
     if(u.href.indexOf(root)===0){
