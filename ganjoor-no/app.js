@@ -348,15 +348,6 @@ async function home() {
         </button>
       </nav>
 
-      <!-- نوار روایت‌گری داده‌محور -->
-      <div class="g-story-bar" id="g-story-bar">
-        <span class="g-story-label">✨ داستان‌های داده‌محور:</span>
-        <button type="button" class="g-story-chip active" data-story="moghol">🔥 فتنه مغول؛ هم‌عصری سعدی و مولانا</button>
-        <button type="button" class="g-story-chip" data-story="tazmin">⇄ گفت‌وگوی پنهان؛ تضمین حافظ از سعدی</button>
-        <button type="button" class="g-story-chip" data-story="eshgh">≋ بسامد نجومی «عشق» در دیوان شمس</button>
-        <button type="button" class="g-story-chip" data-story="safarnama">🐫 هجرت ۸۵۰۰ فرسنگی ناصرخسرو</button>
-      </div>
-
       <div class="g-pg-content">
         <!-- ۱. هم‌عصران -->
         <div class="g-pg-pane active" id="pg-tree" role="tabpanel">
@@ -1479,30 +1470,6 @@ async function home() {
       }
     };
   });
-
-  // ۱۳. داستان‌های تعاملی نوار روایت‌گری (Curiosity Hooks)
-  document.querySelectorAll("#g-story-bar .g-story-chip").forEach((btn) => {
-    btn.onclick = () => {
-      document.querySelectorAll("#g-story-bar .g-story-chip").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const story = btn.getAttribute("data-story");
-
-      if (story === "moghol") {
-        document.querySelector('.g-pg-tab[data-target="pg-tree"]')?.click();
-        document.querySelector('.g-tl-btn[data-c="7"]')?.click();
-      } else if (story === "tazmin") {
-        document.querySelector('.g-pg-tab[data-target="pg-bridges"]')?.click();
-        document.querySelector('#g-bridge-switchers [data-b="saadi-hafez"]')?.click();
-      } else if (story === "eshgh") {
-        document.querySelector('.g-pg-tab[data-target="pg-words"]')?.click();
-        document.querySelector('#g-word-pills [data-w="eshgh"]')?.click();
-      } else if (story === "safarnama") {
-        document.querySelector('.g-pg-tab[data-target="pg-places"]')?.click();
-        document.querySelector('#g-journey-stops [data-place="balkh"]')?.click();
-      }
-    };
-  });
-
 }
 
 async function poetsPage(query) {
