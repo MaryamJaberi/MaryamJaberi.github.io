@@ -208,7 +208,7 @@ function paint(title, html, quiet = false) {
   bar.hidden = quiet;
   foot.hidden = quiet;
   const route = routeName();
-  const back = TOOL_ROUTES.has(route) && route !== "discover" && !html.trimStart().startsWith('<p class="crumb">') ? `<p class="crumb"><a href="#/discover">ابزارها</a></p>` : "";
+  const back = TOOL_ROUTES.has(route) && route !== "discover" && !html.trimStart().startsWith('<p class="crumb">') ? `<p class="crumb"><a href="#/">خانه</a> <span aria-hidden="true">‹</span> <a href="#/discover">ابزارها</a></p>` : "";
   root.innerHTML = `<div class="sheet">${back}${html}</div>`;
   root.removeAttribute("aria-busy");
   window.scrollTo(0, 0);
@@ -2824,9 +2824,11 @@ async function treePage(query) {
   const uncertain = poets.filter((poet) => !poet.sureB || !poet.sureD).length;
   paint(
     "خط زمان شاعران",
-    `<h1>هم‌عصران</h1>
-     <nav class="views" aria-label="نما"><a href="#/tree" aria-current="page">روی خط زمان</a><a href="#/map">روی نقشهٔ زادگاه‌ها</a></nav>
-     <p class="lead">زندگی ${fa(poets.length)} شاعر گنجور، همه در یک نگاه. هر نوار از سال تولد تا سال درگذشت است و زمان از راست به چپ می‌رود. بکش تا در زمان گردش کنی، بزرگ کن تا نام‌ها پیدا شوند، و روی یک شاعر بزن تا هم‌عصران و تضمین‌هایش روشن شوند.</p>
+    `<div class="g-tree-head-row">
+       <h1>هم‌عصران</h1>
+       <nav class="views" aria-label="نما"><a href="#/tree" aria-current="page">روی خط زمان</a><a href="#/map">روی نقشهٔ زادگاه‌ها</a></nav>
+     </div>
+     <p class="lead g-tree-lead">زندگی ${fa(poets.length)} شاعر از راست به چپ؛ روی هر شاعر بزنید تا هم‌عصران و تضمین‌هایش روشن شوند.</p>
      <div class="tree-tools">
        <div class="g-tree-search-wrap">
          <form class="big-search" id="tree-filter" onsubmit="return false;">
@@ -2844,7 +2846,6 @@ async function treePage(query) {
          <button type="button" class="chip g-quick-poet-btn" data-poet-id="1">فردوسی</button>
          <button type="button" class="chip g-quick-poet-btn" data-poet-id="4">خیام</button>
          <button type="button" class="chip g-quick-poet-btn" data-poet-id="3">نظامی</button>
-         <button type="button" class="chip g-open-guide-btn" id="g-open-guide-tree">💡 راهنمای کاربری خط زمان</button>
        </div>
        <p class="chips" id="tree-regions" aria-label="سرزمین زادگاه"><button class="chip on" type="button" data-region="">همه سرزمین‌ها</button>${used
          .map((region) => `<button class="chip" type="button" data-region="${region.key}" style="--tone:${region.color}"><i class="dot"></i>${region.name} · ${fa(poets.filter((poet) => poet.region === region.key).length)}</button>`)
@@ -4392,7 +4393,7 @@ async function render() {
   if (input && parts[0] !== "search" && document.activeElement !== input) input.value = "";
   document.querySelectorAll(".desk a, .mobile a, .footlinks a").forEach((link) => {
     const href = link.getAttribute("href") || "";
-    const on = href === path || (href !== "#/" && path.startsWith(href)) || (href === "#/discover" && TOOL_ROUTES.has(parts[0] || ""));
+    const on = href === path || (href === "#/poets" && ["poet", "cat", "poem"].includes(parts[0] || "")) || (href === "#/discover" && TOOL_ROUTES.has(parts[0] || ""));
     if (on) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });

@@ -2585,21 +2585,18 @@ a.card:hover, a.hit:hover { box-shadow: 0 6px 16px rgba(20, 30, 40, 0.08); trans
    v39: پنهان‌سازی هوشمند نوار جستجوی هدر در بالای صفحه اول (حل مشکل دو نوار جستجو)
    ========================================================================== */
 /* مخفی‌سازی کامل نوار بالای صفحه در خانه تا زمان اسکرول به پایین */
-body.is-home .bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(-100%);
+/* نوار ناوبری در همه صفحات (از جمله خانه) ثابت و پایدار است؛ فقط کادر جستجوی نوار بالا در خانه تا زمان اسکرول پنهان می‌ماند تا دو نوار جستجو هم‌زمان دیده نشوند */
+body.is-home .bar .search {
   opacity: 0;
   pointer-events: none;
-  transition: transform .28s cubic-bezier(0.16, 1, 0.3, 1), opacity .2s ease;
+  transform: translateY(-4px);
+  transition: opacity .22s ease, transform .22s ease;
 }
 
-body.is-home.scrolled .bar {
-  transform: translateY(0);
+body.is-home.scrolled .bar .search {
   opacity: 1;
   pointer-events: auto;
+  transform: translateY(0);
 }
 
 
@@ -3753,4 +3750,60 @@ body.is-home.scrolled .bar {
   min-height: 42px;
   padding: 0 20px;
   font-weight: 700;
+}
+
+/* ====================================================
+   اصلاح ناوبری، پنهان‌سازی استاندارد [hidden] و فشرده‌سازی هدر خط زمان (v49)
+   ==================================================== */
+[hidden] {
+  display: none !important;
+}
+
+.g-nav-guide {
+  color: var(--turquoise) !important;
+  font-weight: 600;
+}
+
+.g-tree-head-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.g-tree-head-row h1 {
+  margin: 0;
+}
+
+.g-tree-head-row .views {
+  margin: 0;
+}
+
+.g-tree-lead {
+  margin: 4px 0 10px !important;
+  font-size: 0.94rem;
+}
+
+.tree-tools {
+  gap: 6px;
+}
+
+.tree-tools .big-search input {
+  min-height: 40px;
+  padding: 6px 14px;
+}
+
+.g-tree-quick-picks {
+  margin: 4px 0 6px;
+}
+
+#tree-regions {
+  margin: 2px 0 8px;
+}
+
+.crumb span {
+  color: var(--muted);
+  margin: 0 4px;
 }
