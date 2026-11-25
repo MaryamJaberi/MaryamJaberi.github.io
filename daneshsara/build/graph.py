@@ -104,7 +104,9 @@ def build():
     for h in sorted(glob.glob(P('iran','tools','*.html'))):
         b = os.path.basename(h)
         if b == 'index.html': continue
-        t = re.search(r'<title>(.*?)</title>', open(h,encoding='utf-8',errors='ignore').read(), re.S)
+        raw = open(h,encoding='utf-8',errors='ignore').read()
+        if 'بخش خصوصی' in raw: continue   # نشانهٔ صفحهٔ خصوصی؛ در نسخهٔ عمومی چیزی از آن نشان نده
+        t = re.search(r'<title>(.*?)</title>', raw, re.S)
         nodes.append({'id':'tool:'+b[:-5], 'ring':'iran', 'kind':'tool',
             'label': (t.group(1).split('—')[0].split('·')[0].strip() if t else b[:-5]),
             'note':'ابزاری برای اینکه خودت وارسی کنی، نه اینکه حرف ما را باور کنی.',
