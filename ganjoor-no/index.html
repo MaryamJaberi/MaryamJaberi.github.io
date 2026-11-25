@@ -3,61 +3,58 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>گنجور نو</title>
+    <title>گنجور نو — اقلیم دیداری شعر پارسی</title>
     <meta
       name="description"
-      content="خواندن شعر فارسی با متن و صوت گنجور. طراحی مریم جابری."
+      content="خوانش و کاوش دیداری شعر فارسی با داده‌های باز گنجور: خط زمان هم‌عصران، نقشهٔ زادگاه‌ها، پل‌های تضمین، تبارنامهٔ شاهنامه، آرایه‌های ادبی، واژه‌سنج و عروض."
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=49" />
+    <link rel="stylesheet" href="styles.css?v=50" />
   </head>
   <body>
     <a class="skip" href="#content">پرش به محتوا</a>
     <header class="bar" id="bar">
-      <a class="brand" href="#/"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="10" width="28" height="28" fill="none" stroke="#0a6b60" stroke-width="1.7"/><rect x="10" y="10" width="28" height="28" fill="none" stroke="#9a7433" stroke-width="1.2" transform="rotate(45 24 24)"/><circle cx="24" cy="24" r="3" fill="#0a6b60"/></svg>گنجور نو</a>
-      <nav class="desk" aria-label="اصلی">
-        <a href="#/">خانه</a>
-        <a href="#/poets">شاعران</a>
-        <a href="#/discover">ابزارها</a>
-        <a href="#/library">کتابخانه</a>
-        <a href="#/about">درباره</a>
-        <a href="javascript:void(0)" class="g-nav-guide" data-action="guide">راهنما</a>
+      <a class="brand" href="#/">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="10" y="10" width="28" height="28" fill="none" stroke="#0a6b60" stroke-width="1.8" />
+          <rect x="10" y="10" width="28" height="28" fill="none" stroke="#b8892a" stroke-width="1.2" transform="rotate(45 24 24)" />
+          <circle cx="24" cy="24" r="3.2" fill="#0a6b60" />
+        </svg>
+        <span>گنجور نو</span>
+      </a>
+      <nav class="desk" aria-label="ناوبری اصلی">
+        <a href="#/" data-jump="studio">ابزارها</a>
+        <a href="#/" data-jump="poets-wall">شاعران</a>
+        <a href="#/" data-jump="my-shelf">کتابخانه</a>
+        <button type="button" class="nav-btn" data-action="guide">راهنما</button>
       </nav>
-      <form id="search-form" class="search">
+      <form id="search-form" class="bar-search" role="search">
         <label class="sr" for="q">جستجو</label>
-        <input id="q" name="q" placeholder="شعر، شاعر، بیت…" />
+        <input id="q" name="q" placeholder="جستجوی شاعر، واژه یا بیت…" autocomplete="off" />
       </form>
       <button type="button" class="menu" id="menu" aria-expanded="false" aria-label="فهرست">فهرست</button>
     </header>
     <nav class="mobile" id="mobile" hidden>
-      <a href="#/">خانه</a>
-      <a href="#/poets">شاعران</a>
-      <a href="#/discover">ابزارها</a>
-      <a href="#/search">جستجو</a>
-      <a href="#/library">کتابخانه</a>
-      <a href="#/about">درباره</a>
-      <a href="javascript:void(0)" class="g-nav-guide" data-action="guide">راهنما</a>
+      <a href="#/" data-jump="studio">ابزارها</a>
+      <a href="#/" data-jump="poets-wall">شاعران</a>
+      <a href="#/" data-jump="my-shelf">کتابخانه</a>
+      <button type="button" class="nav-btn" data-action="guide">راهنما</button>
     </nav>
     <main id="content">
-      <div class="loader" role="status"><span class="spin" aria-hidden="true"></span><span>گنجور نو باز می‌شود…</span></div>
+      <div class="loader" role="status"><span class="spin" aria-hidden="true"></span><span>گنجور نو در حال گشودن است…</span></div>
     </main>
     <footer id="foot">
-      <nav class="footlinks" aria-label="پاصفحه">
-        <a href="#/poets">شاعران</a>
-        <a href="#/discover">ابزارها</a>
-        <a href="#/library">کتابخانه</a>
-        <a href="#/about">درباره</a>
-        <a href="javascript:void(0)" data-action="guide">راهنما</a>
-      </nav>
-      <p>متن و صوت از گنجور است. این سایت رسمی آن نیست.</p>
-      <p>طراحی و ساخت: <a href="https://maryamjaberi.github.io/fa/">مریم جابری</a></p>
+      <div class="foot-inner">
+        <p>متن، صوت و داده‌های پژوهشی از رابط باز <a href="https://ganjoor.net" rel="noreferrer">گنجور</a> است. این سایت رسمی آن نیست.</p>
+        <p>طراحی و ساخت: <a href="https://maryamjaberi.github.io/fa/" rel="noreferrer">مریم جابری</a> · <button type="button" class="link-btn" data-action="guide">راهنمای کاربری</button></p>
+      </div>
     </footer>
-    <script src="app.js?v=49"></script>
+    <script src="app.js?v=50"></script>
   </body>
 </html>

@@ -1,33 +1,62 @@
+/* ==========================================================================
+   گنجور نو — معماری یکپارچهٔ تک‌لندینگ + دو زیرصفحه (v50)
+   کل ابزارهای پژوهشی (هم‌عصران و نقشه، پل‌های تضمین، مردمان شعر، آرایه‌ها،
+   واژه‌سنج، جای‌ها در شعر، وزن‌ها و عروض) + تالار شاعران + کتابخانهٔ شخصی
+   همه روی صفحهٔ اول؛ و فقط ۲ زیرصفحه: ۱) شاعر/دیوان  ۲) خوانش شعر
+   ========================================================================== */
+
 const API = "https://api.ganjoor.net/api/ganjoor";
 const ROOT_API = "https://api.ganjoor.net/api";
-const DATA_SOURCES = ["https://raw.githubusercontent.com/ganjoor/ganjoor-data/main/", "https://cdn.jsdelivr.net/gh/ganjoor/ganjoor-data@main/"];
+const DATA_SOURCES = [
+  "https://raw.githubusercontent.com/ganjoor/ganjoor-data/main/",
+  "https://cdn.jsdelivr.net/gh/ganjoor/ganjoor-data@main/",
+];
 const STALE = new Error("stale");
 const REALM = { minLon: 43, maxLon: 73.5, minLat: 23, maxLat: 47.6 };
 
-function project(lon, lat) {
-  return {
-    x: ((lon - REALM.minLon) / (REALM.maxLon - REALM.minLon)) * 100,
-    y: ((REALM.maxLat - lat) / (REALM.maxLat - REALM.minLat)) * 100,
-  };
-}
+const REGIONS = [
+  { key: "khorasan", name: "خراسان و فرارود", color: "#0a6b60" },
+  { key: "fars", name: "فارس و کرمان", color: "#b2532f" },
+  { key: "center", name: "عراق عجم و شمال", color: "#1e3a8a" },
+  { key: "azar", name: "آذربایجان و غرب", color: "#b8892a" },
+  { key: "hind", name: "هند و شبه‌قاره", color: "#5b6b1f" },
+  { key: "rum", name: "روم و عراق", color: "#7a3b5c" },
+  { key: "none", name: "بی‌نشان", color: "#8a8174" },
+];
 
-function cityOf(poet) {
-  const place = poet.birthPlace || "نامشخص";
-  const name = `${poet.name || ""} ${poet.nickname || ""}`;
-  if (place === "مشهد" && /توس|طوس|فردوسی/.test(name)) return "توس";
-  return place;
-}
+const NET_KINDS = [
+  { key: "kin", name: "خویشی", color: "#b8892a" },
+  { key: "war", name: "دشمنی و نبرد", color: "#b4233c" },
+  { key: "court", name: "سپاه و دربار", color: "#1e3a8a" },
+  { key: "ally", name: "همراهی و جانشینی", color: "#0a6b60" },
+];
+
+const DEVICE_GROUP = {
+  0: "بیان",
+  1: "بدیع لفظی",
+  2: "بدیع معنوی",
+  Bayan: "بیان",
+  BadiLafzi: "بدیع لفظی",
+  BadiManavi: "بدیع معنوی",
+};
+
 const root = document.querySelector("#content");
 const bar = document.querySelector("#bar");
 const foot = document.querySelector("#foot");
 const mobile = document.querySelector("#mobile");
 const menuBtn = document.querySelector("#menu");
-const form = document.querySelector("#search-form");
-const input = document.querySelector("#q");
+const barForm = document.querySelector("#search-form");
+const barInput = document.querySelector("#q");
+
 const cache = new Map();
+const files = new Map();
+let localData = null;
+let deviceList = null;
 let renderToken = 0;
 let audioNode = null;
+let activeTimer = 0;
 
+/* ── ابزارهای پایه و ذخیره‌سازی محلی ── */
 const store = {
   key: "ganjoor-no-read",
   get() {
@@ -46,7 +75,7 @@ const store = {
   },
   toggle(id) {
     const data = this.get();
-    data.marks = data.marks.includes(id) ? data.marks.filter((item) => item !== id) : [id, ...data.marks];
+    data.marks = data.marks.includes(id) ? data.marks.filter((x) => x !== id) : [id, ...data.marks];
     this.set(data);
   },
   note(id, text) {
@@ -56,7 +85,7 @@ const store = {
   },
   visit(id) {
     const data = this.get();
-    data.history = [id, ...data.history.filter((item) => item !== id)].slice(0, 24);
+    data.history = [id, ...data.history.filter((x) => x !== id)].slice(0, 24);
     this.set(data);
   },
 };
@@ -65,21 +94,134 @@ function esc(value) {
   const map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };
   return String(value ?? "").replace(/[&<>"]/g, (ch) => map[ch]);
 }
-
 function bare(text) {
   return String(text).replace(/[\u064B-\u065F\u0670\u0640]/g, "");
 }
+const fa = (v) => Number(v || 0).toLocaleString("fa-IR");
+const yr = (v) => Number(v || 0).toLocaleString("fa-IR", { useGrouping: false });
+const toGregorian = (hijri) => Math.round(hijri * 0.970229 + 621.5643);
+const centuryOf = (year) => (year ? Math.floor((year - 1) / 100) + 1 : 0);
 
-const files = new Map();
+function project(lon, lat) {
+  return {
+    x: ((lon - REALM.minLon) / (REALM.maxLon - REALM.minLon)) * 100,
+    y: ((REALM.maxLat - lat) / (REALM.maxLat - REALM.minLat)) * 100,
+  };
+}
+
+function cityOf(poet) {
+  const place = poet.birthPlace || "نامشخص";
+  const name = `${poet.name || ""} ${poet.nickname || ""}`;
+  if (place === "مشهد" && /توس|طوس|فردوسی/.test(name)) return "توس";
+  return place;
+}
+
+function regionOf(poet) {
+  const lat = poet.birthPlaceLatitude;
+  const lon = poet.birthPlaceLongitude;
+  if (!lat || !lon) return "none";
+  if (lon < 45) return "rum";
+  if (lon < 48.5) return "azar";
+  if (lon >= 66 && lat < 33) return "hind";
+  if ((lon >= 56 && lat >= 32.5) || lon >= 60.5) return "khorasan";
+  if (lat < 32.3) return "fars";
+  return "center";
+}
+
+function timelinePoets(list) {
+  return (Array.isArray(list) ? list : [])
+    .filter((p) => p.published !== false && (p.birthYearInLHijri || p.deathYearInLHijri))
+    .map((p) => {
+      let b = p.birthYearInLHijri || p.deathYearInLHijri - 60;
+      let d = p.deathYearInLHijri || p.birthYearInLHijri + 60;
+      const broken = d < b;
+      if (broken) [b, d] = [d, b];
+      return {
+        ...p,
+        b,
+        d,
+        broken,
+        sureB: Boolean(p.birthYearInLHijri && p.validBirthDate && !broken),
+        sureD: Boolean(p.deathYearInLHijri && p.validDeathDate && !broken),
+        region: regionOf(p),
+        label: p.nickname || p.name,
+      };
+    })
+    .sort((x, y) => x.b - y.b || x.d - y.d);
+}
+
+function yearsText(poet) {
+  return `${poet.birthYearInLHijri ? yr(poet.birthYearInLHijri) : ""}${poet.sureB ? "" : "؟"}–${poet.deathYearInLHijri ? yr(poet.deathYearInLHijri) : ""}${poet.sureD ? "" : "؟"} ق`;
+}
+
+/* ── تبدیل خودکار ارقام به فارسی ── */
+const PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
+const SKIP_DIGITS = new Set(["TEXTAREA", "INPUT", "SCRIPT", "STYLE", "CODE"]);
+function persianDigits(node) {
+  if (!node) return;
+  const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, {
+    acceptNode: (t) =>
+      /[0-9]/.test(t.nodeValue) && !SKIP_DIGITS.has(t.parentNode?.nodeName) && !t.parentNode?.closest?.(".latin")
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_REJECT,
+  });
+  const list = [];
+  while (walker.nextNode()) list.push(walker.currentNode);
+  for (const t of list) t.nodeValue = t.nodeValue.replace(/[0-9]/g, (d) => PERSIAN_DIGITS[d]);
+}
+new MutationObserver((records) => {
+  for (const r of records) {
+    if (r.type === "characterData") persianDigits(r.target.parentNode || r.target);
+    else r.addedNodes.forEach((n) => (n.nodeType === 3 ? persianDigits(n.parentNode) : n.nodeType === 1 && persianDigits(n)));
+  }
+}).observe(document.body, { childList: true, subtree: true, characterData: true });
+persianDigits(document.body);
+
+/* ── لایهٔ ارتباط با API گنجور و داده‌های باز ── */
+function pagingTotal(res) {
+  const raw = res.headers.get("paging-headers");
+  if (raw) {
+    try {
+      const info = JSON.parse(raw);
+      if (info.totalCount != null) return Number(info.totalCount);
+    } catch {}
+  }
+  return Number(res.headers.get("items-count") || 0);
+}
+
+async function api(path) {
+  if (cache.has(path)) return cache.get(path);
+  const token = renderToken;
+  const res = await fetch(API + path);
+  if (!res.ok) throw new Error(String(res.status));
+  const data = await res.json();
+  const packed = { data, total: pagingTotal(res) };
+  cache.set(path, packed);
+  if (token !== renderToken) throw STALE;
+  return packed;
+}
+
+async function rootApi(path) {
+  const key = `root:${path}`;
+  if (cache.has(key)) return cache.get(key).data;
+  const token = renderToken;
+  const res = await fetch(ROOT_API + path);
+  if (!res.ok) throw new Error(String(res.status));
+  const data = await res.json();
+  cache.set(key, { data, total: 0 });
+  if (token !== renderToken) throw STALE;
+  return data;
+}
+
 async function fileJson(name) {
   if (files.has(name)) return files.get(name);
   const token = renderToken;
   let data = null;
   for (const base of DATA_SOURCES) {
     try {
-      const response = await fetch(`${base}${name}`);
-      if (!response.ok) continue;
-      data = await response.json();
+      const res = await fetch(`${base}${name}`);
+      if (!res.ok) continue;
+      data = await res.json();
       break;
     } catch {}
   }
@@ -89,127 +231,32 @@ async function fileJson(name) {
   return data;
 }
 
-let localData = null;
 async function local() {
   if (localData) return localData;
-  const response = await fetch("data.json");
-  if (!response.ok) throw new Error("data.json");
-  localData = await response.json();
+  const res = await fetch("data.json");
+  if (!res.ok) throw new Error("data.json");
+  localData = await res.json();
   return localData;
 }
 
-async function rootApi(path) {
-  const key = `root:${path}`;
-  if (cache.has(key)) return cache.get(key).data;
-  const token = renderToken;
-  const response = await fetch(ROOT_API + path);
-  if (!response.ok) throw new Error(String(response.status));
-  const data = await response.json();
-  cache.set(key, { data, total: 0 });
-  if (token !== renderToken) throw STALE;
-  return data;
+async function devices() {
+  if (!deviceList) deviceList = await rootApi("/ganjoor/literary/devices");
+  return deviceList;
 }
 
-async function placesOnVerses(poet) {
-  const slug = String(poet.fullUrl || "").replace(/^\//, "");
-  if (!slug) return [];
-  const [geo, locations] = await Promise.all([fileJson("geotags.json"), fileJson("locations.json")]);
-  const dated = geo.filter((item) => item.LunarYear);
-  const buckets = [...new Set(dated.map((item) => Math.floor(item.PoemId / 2000)))];
-  const index = {};
-  for (const bucket of buckets) Object.assign(index, await fileJson(`index/poems-by-id/${bucket}.json`));
-  const byId = new Map(locations.map((item) => [item.Id, item]));
-  const seen = new Set();
-  const stops = [];
-  for (const item of dated) {
-    const url = index[String(item.PoemId)] || "";
-    if (!url.startsWith(`/${slug}/`)) continue;
-    const place = byId.get(item.LocationId);
-    if (!place) continue;
-    const key = `${item.LunarYear}-${place.Name}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    stops.push({
-      year: item.LunarYear,
-      place: place.Name,
-      poemId: item.PoemId,
-      lat: place.Latitude,
-      lon: place.Longitude,
-      verified: Boolean(item.VerifiedDate),
-    });
+function stopTimers() {
+  if (activeTimer) {
+    clearInterval(activeTimer);
+    activeTimer = 0;
   }
-  return stops.sort((a, b) => a.year - b.year);
 }
-
-function portrait(poet) {
-  const img = poet.imageUrl
-    ? `<img src="https://api.ganjoor.net${esc(poet.imageUrl)}" alt="">`
-    : `<span class="medal t1">${esc((poet.nickname || poet.name || "؟").slice(0, 1))}</span>`;
-  return `<figure class="ageshot portrait">${img}</figure>`;
-}
-
-function centuryOf(year) {
-  if (!year) return 0;
-  return Math.floor((year - 1) / 100) + 1;
-}
-
-async function api(path) {
-  if (cache.has(path)) return cache.get(path);
-  const token = renderToken;
-  const response = await fetch(API + path);
-  if (!response.ok) throw new Error(String(response.status));
-  const data = await response.json();
-  const total = pagingTotal(response);
-  const packed = { data, total };
-  cache.set(path, packed);
-  if (token !== renderToken) throw STALE;
-  return packed;
-}
-
-function pagingTotal(response) {
-  const raw = response.headers.get("paging-headers");
-  if (raw) {
-    try {
-      const info = JSON.parse(raw);
-      if (info.totalCount != null) return Number(info.totalCount);
-    } catch {}
-  }
-  return Number(response.headers.get("items-count") || 0);
-}
-
-const fa = (value) => Number(value || 0).toLocaleString("fa-IR");
-const TOOL_ROUTES = new Set(["discover", "map", "places", "tree", "bridges", "people", "person", "vazn", "devices", "device", "words"]);
-
-function routeName() {
-  return (location.hash || "#/").replace(/^#\/?/, "").split(/[/?]/)[0];
-}
-
-const PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
-const SKIP_DIGITS = new Set(["TEXTAREA", "INPUT", "SCRIPT", "STYLE", "CODE"]);
-function persianDigits(node) {
-  const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, {
-    acceptNode: (text) => (/[0-9]/.test(text.nodeValue) && !SKIP_DIGITS.has(text.parentNode?.nodeName) && !text.parentNode?.closest?.(".latin") ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT),
-  });
-  const list = [];
-  while (walker.nextNode()) list.push(walker.currentNode);
-  for (const text of list) text.nodeValue = text.nodeValue.replace(/[0-9]/g, (digit) => PERSIAN_DIGITS[digit]);
-}
-new MutationObserver((records) => {
-  for (const record of records) {
-    if (record.type === "characterData") persianDigits(record.target.parentNode || record.target);
-    else record.addedNodes.forEach((added) => (added.nodeType === 3 ? persianDigits(added.parentNode) : added.nodeType === 1 && persianDigits(added)));
-  }
-}).observe(document.body, { childList: true, subtree: true, characterData: true });
-persianDigits(document.body);
 
 function paint(title, html, quiet = false) {
   document.title = `${title} — گنجور نو`;
   document.body.classList.toggle("quiet", quiet);
   bar.hidden = quiet;
   foot.hidden = quiet;
-  const route = routeName();
-  const back = TOOL_ROUTES.has(route) && route !== "discover" && !html.trimStart().startsWith('<p class="crumb">') ? `<p class="crumb"><a href="#/">خانه</a> <span aria-hidden="true">‹</span> <a href="#/discover">ابزارها</a></p>` : "";
-  root.innerHTML = `<div class="sheet">${back}${html}</div>`;
+  root.innerHTML = html;
   root.removeAttribute("aria-busy");
   window.scrollTo(0, 0);
 }
@@ -223,1895 +270,32 @@ function failed(error) {
   const offline = typeof navigator !== "undefined" && navigator.onLine === false;
   paint(
     "خطا",
-    `<section class="empty-state"><h1>${offline ? "اینترنت وصل نیست" : "ارتباط برقرار نشد"}</h1>
-     <p>${offline ? "اتصال را برقرار کن و دوباره امتحان کن." : "گنجور الان جواب نداد. چند لحظه بعد دوباره امتحان کن."}</p>
-     <p class="chips"><button class="btn primary" type="button" id="retry">دوباره</button><a class="chip" href="#/">خانه</a></p>
-     <p class="muted">${esc(error.message)}</p></section>`,
+    `<section class="subpage" style="text-align:center;">
+       <h1>${offline ? "اینترنت وصل نیست" : "ارتباط برقرار نشد"}</h1>
+       <p class="muted">${offline ? "اتصال را برقرار کنید و دوباره امتحان کنید." : "گنجور الان پاسخ نداد. چند لحظه بعد دوباره امتحان کنید."}</p>
+       <p class="chips" style="justify-content:center;"><button class="btn primary" type="button" id="retry">تلاش دوباره</button><a class="chip" href="#/">بازگشت به صفحهٔ اول</a></p>
+       <p class="muted small">${esc(error?.message || "")}</p>
+     </section>`,
   );
-  document.querySelector("#retry").onclick = () => {
+  document.querySelector("#retry")?.addEventListener("click", () => {
     cache.clear();
     render();
-  };
-}
-
-function opening(poem) {
-  if (!poem?.id) return "";
-  const lines = String(poem.plainText || "")
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .slice(0, 4);
-  if (!lines.length) return "";
-  const poet = poem.category?.poet;
-  return `<h2 class="section">برای شروع</h2><a class="opening" href="#/poem/${poem.id}"><div class="kicker">${esc(poet?.nickname || poet?.name || "")}</div>${lines.map((line) => `<p>${esc(line)}</p>`).join("")}<span class="muted">${esc(poem.title || "")}</span></a>`;
-}
-
-function poetFace(poet) {
-  const letter = esc((poet.nickname || poet.name || "؟").slice(0, 1));
-  const img = poet.imageUrl ? `<img alt="" src="https://api.ganjoor.net${esc(poet.imageUrl)}" onerror="this.remove()" />` : "";
-  const years = poet.birthYearInLHijri ? `<bdi dir="ltr">${poet.birthYearInLHijri}–${poet.deathYearInLHijri || "؟"}</bdi>` : "";
-  return `<a class="face" href="#/poet/${poet.id}"><span class="medal">${img}<b>${letter}</b></span><strong>${esc(poet.nickname || poet.name)}</strong><small>${esc(poet.birthPlace || "")}${years ? " · " + years : ""}</small></a>`;
-}
-
-const ROSETTE = (() => {
-  const petals = Array.from({ length: 16 }, (_, i) => `<path d="M100 100 L100 18 Q112 52 100 100" transform="rotate(${i * 22.5} 100 100)" />`).join("");
-  const star = (r, rot) =>
-    Array.from({ length: 16 }, (_, i) => {
-      const a = ((i * 22.5 + rot) * Math.PI) / 180;
-      const rr = i % 2 ? r * 0.72 : r;
-      return `${(100 + Math.sin(a) * rr).toFixed(1)},${(100 - Math.cos(a) * rr).toFixed(1)}`;
-    }).join(" ");
-  return `<svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" class="ro-ring" /><circle cx="100" cy="100" r="88" class="ro-ring thin" /><g class="ro-petals">${petals}</g><polygon class="ro-star" points="${star(64, 0)}" /><polygon class="ro-star2" points="${star(40, 11.25)}" /><circle cx="100" cy="100" r="16" class="ro-core" /></svg>`;
-})();
-
-const FAMOUS = ["فردوسی", "رودکی", "خیام", "مولانا", "سعدی", "حافظ", "عطار", "نظامی", "سنایی", "ناصرخسرو", "جامی", "صائب", "پروین", "شهریار", "ایرج", "وحشی"];
-
-async function home() {
-  loading("خانه");
-  let poets = [];
-  try {
-    const poetsRes = await api("/poets").catch(() => ({ data: [] }));
-    poets = poetsRes.data || [];
-  } catch (e) {}
-
-  const pinned = [...poets].filter((poet) => poet.pinOrder).sort((a, b) => a.pinOrder - b.pinOrder);
-  const pinnedIds = new Set(pinned.map((poet) => poet.id));
-  const everyone = pinned.concat(
-    poets
-      .filter((poet) => !pinnedIds.has(poet.id))
-      .sort((a, b) => (a.birthYearInLHijri || 9999) - (b.birthYearInLHijri || 9999) || (a.nickname || "").localeCompare(b.nickname || "", "fa")),
-  );
-
-  const html = `
-  <div class="g-landing">
-    <!-- ۱. بخش هیرو: متمرکز، بدون دکمه‌های زائد و بدون کارت شعر -->
-    <section class="g-hero">
-      <div class="g-hero-wrap">
-
-        <h1 class="g-hero-title">
-          اقلیم شعر پارسی با <span>ابزارهای نو</span>
-        </h1>
-
-
-        <form class="g-hero-search" id="g-search-form">
-          <span class="g-hero-search-icon" aria-hidden="true">⌕</span>
-          <input id="g-search-q" name="q" placeholder="جستجوی بیت، واژه، نام شاعر یا آرایه…" autocomplete="off" />
-          
-          <button type="submit">جستجو</button>
-        </form>
-
-        <div class="g-hero-suggestions" id="g-hero-interactive-pills">
-          <span style="font-weight:700;">کاوش زنده در ابزارها:</span>
-          <button type="button" class="g-sugg-pill" data-pg="pg-words" data-arg="eshgh">≋ واژه‌سنج «عشق»</button>
-          <button type="button" class="g-sugg-pill" data-pg="pg-places" data-arg="balkh">⌖ سفر ناصرخسرو</button>
-          <button type="button" class="g-sugg-pill" data-pg="pg-people" data-arg="rostam">♙ تبارنامه رستم</button>
-          <button type="button" class="g-sugg-pill" data-pg="pg-devices" data-arg="zolf">✦ تشبیه زلف و کمند</button>
-          <button type="button" class="g-sugg-pill" data-pg="pg-vazn" data-arg="hazaj">♪ وزن مفاعیلن</button>
-        </div>
-      </div>
-    </section>
-
-        <!-- ۲. استودیوی تعاملی ابزارها (مرکز اصلی و ویترین زنده تمام ابزارها با عرض کامل) -->
-    <section class="g-playground" id="g-tools-playground">
-      <nav class="g-pg-nav" role="tablist" aria-label="ابزارهای گنجور نو">
-        <button class="g-pg-tab active" role="tab" aria-selected="true" data-target="pg-tree">
-          <span class="g-pg-tab-icon" aria-hidden="true">❦</span>
-          <span>هم‌عصران</span>
-        </button>
-        <button class="g-pg-tab" role="tab" aria-selected="false" data-target="pg-bridges">
-          <span class="g-pg-tab-icon" aria-hidden="true">⇄</span>
-          <span>پل‌های تضمین</span>
-        </button>
-        <button class="g-pg-tab" role="tab" aria-selected="false" data-target="pg-people">
-          <span class="g-pg-tab-icon" aria-hidden="true">♙</span>
-          <span>مردمان شعر</span>
-        </button>
-        <button class="g-pg-tab" role="tab" aria-selected="false" data-target="pg-devices">
-          <span class="g-pg-tab-icon" aria-hidden="true">✦</span>
-          <span>آرایه‌ها</span>
-        </button>
-        <button class="g-pg-tab" role="tab" aria-selected="false" data-target="pg-words">
-          <span class="g-pg-tab-icon" aria-hidden="true">≋</span>
-          <span>واژه‌سنج</span>
-        </button>
-        <button class="g-pg-tab" role="tab" aria-selected="false" data-target="pg-places">
-          <span class="g-pg-tab-icon" aria-hidden="true">⌖</span>
-          <span>جای‌ها در شعر</span>
-        </button>
-        <button class="g-pg-tab" role="tab" aria-selected="false" data-target="pg-vazn">
-          <span class="g-pg-tab-icon" aria-hidden="true">♪</span>
-          <span>وزن‌ها</span>
-        </button>
-        <button class="g-pg-tab" role="tab" aria-selected="false" data-target="pg-library">
-          <span class="g-pg-tab-icon" aria-hidden="true">🎧</span>
-          <span>صوت و کتابخانه</span>
-        </button>
-      </nav>
-
-      <div class="g-pg-content">
-        <!-- ۱. هم‌عصران -->
-        <div class="g-pg-pane active" id="pg-tree" role="tabpanel">
-          <header class="g-pane-head">
-            <div class="g-pane-title-group">
-              <div class="g-pane-meta">
-                <h3 class="g-pg-title">هم‌عصران و خط زمان ۲۴۲ شاعر</h3>
-              </div>
-              <p class="g-pg-lead">کدام شاعران در یک دوره تاریخی زیسته‌اند و چه دادوستدی با هم داشتند؟ معاصران هر قرن را روی خط زمان بیابید.</p>
-            </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/tree">مشاهده خط زمان ➜</a>
-          </header>
-
-          <div class="g-pane-body">
-            <div class="g-vis-timeline">
-              <!-- دکمه‌های قرون تاریخی -->
-              <div class="g-timeline-pills" id="g-timeline-pills">
-                <button class="g-tl-btn" data-c="4">قرن ۴ (سامانیان)</button>
-                <button class="g-tl-btn" data-c="6">قرن ۶ (سلجوقیان)</button>
-                <button class="g-tl-btn active" data-c="7">قرن ۷ (سعدی و مولوی)</button>
-                <button class="g-tl-btn" data-c="8">قرن ۸ (عصر حافظ)</button>
-                <button class="g-tl-btn" data-c="11">قرن ۱۱ و ۱۲ (سبک هندی · بیدل و صائب)</button>
-              </div>
-
-              <!-- گانت‌چارت خط زمان واقعی هم‌عصران -->
-              <div class="g-gantt-chart-wrap">
-                <div class="g-gantt-header-scale">
-                  <div class="g-gantt-label-col">شاعر و شهر</div>
-                  <div class="g-gantt-axis-col" id="g-tl-scale">
-                    <span>۶۰۰ هـ</span>
-                    <span>۶۳۰ هـ</span>
-                    <span>۶۶۰ هـ</span>
-                    <span>۶۹۰ هـ</span>
-                    <span>۷۲۰ هـ</span>
-                  </div>
-                </div>
-
-                <div class="g-gantt-rows" id="g-contemp-tracks">
-                  <!-- با JS پر می‌شود -->
-                </div>
-              </div>
-
-              <!-- کارت جزئیات و هم‌پوشانی شاعر انتخابی -->
-              <div class="g-gantt-poet-detail" id="g-gantt-active-detail">
-                <div class="g-gpd-right">
-                  <span class="g-gpd-avatar" id="g-gpd-avatar">س</span>
-                  <div>
-                    <h4 class="g-gpd-name" id="g-gpd-name">سعدی شیرازی</h4>
-                    <p class="g-gpd-sub" id="g-gpd-sub">۶۰۶ تا ۶۹۰ هـ (۸۴ سال حیات) · شیراز · افصح‌المتکلمین</p>
-                  </div>
-                </div>
-                <div class="g-gpd-left">
-                  <span class="g-gpd-contemps" id="g-gpd-contemps">هم‌عصر با: مولانا، فخرالدین عراقی، همام تبریزی</span>
-                  <a class="g-btn g-btn-sm" id="g-gpd-link" href="#/poet/7">دیوان سعدی ➜</a>
-                </div>
-              </div>
-            </div>
-          </div></div>
-        </div>
-
-        <!-- ۲. پل‌های تضمین -->
-        <div class="g-pg-pane" id="pg-bridges" role="tabpanel">
-          <header class="g-pane-head">
-            <div class="g-pane-title-group">
-              <div class="g-pane-meta">
-                <h3 class="g-pg-title">پل‌های تضمین و شبکه استقبال</h3>
-              </div>
-              <p class="g-pg-lead">کدام شاعر بیتی از دیگری را عینا وام گرفته و در چه وزنی پاسخ داده است؟ ردیابی پیوندهای نامرئی میان شاهکارهای ادب پارسی.</p>
-            </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/bridges/2">مشاهده پل‌های تضمین ➜</a>
-          </header>
-
-          <div class="g-pane-body">
-            <div class="g-vis-bridge">
-              <div style="display:flex; justify-content:center; gap:8px; margin-bottom:8px;" id="g-bridge-switchers">
-                <button class="g-dev-chip active" data-b="saadi-hafez">سعدی ➜ حافظ</button>
-                <button class="g-dev-chip" data-b="kamal-hafez">کمال خجندی ➜ حافظ</button>
-                <button class="g-dev-chip" data-b="attar-mowlavi">عطار ➜ مولانا</button>
-              </div>
-
-              <div class="g-bridge-flow-wrap">
-                <svg class="g-bridge-svg-flow" viewBox="0 0 400 44" preserveAspectRatio="none">
-                  <path d="M 60 22 C 160 2, 240 42, 340 22" fill="none" class="g-flow-stream" />
-                  <circle cx="200" cy="22" r="14" fill="#ffffff" stroke="var(--gk-gold)" stroke-width="2" />
-                  <text x="200" y="26" text-anchor="middle" font-size="12" fill="var(--gk-primary)" font-weight="bold">⇄</text>
-                </svg>
-              </div>
-
-              <div class="g-bridge-cards-row" id="g-bridge-display-row">
-                <div class="g-ms-card origin">
-                  <span class="g-ms-badge">شاعر متقدم (پیشین)</span>
-                  <div class="g-ms-poet">سعدی شیرازی</div>
-                  <p class="g-ms-text">
-                    «به چهره مهرِ رخشان، به بالا سروِ بستان»<br>
-                    «به لب <strong>لعلی درخشان</strong>، به تن سیمین‌بری تو»
-                  </p>
-                </div>
-                <div class="g-bridge-connector">
-                  <span class="g-bridge-pill">تضمین مصراع</span>
-                  <span class="g-bridge-meta-tag" id="g-bridge-meter-tag">بحر رمل مثمن</span>
-                </div>
-                <div class="g-ms-card answer">
-                  <span class="g-ms-badge">شاعر متأخر (پاسخ‌دهنده)</span>
-                  <div class="g-ms-poet">حافظ شیرازی</div>
-                  <p class="g-ms-text">
-                    «دل می‌رود ز دستم صاحب‌دلان خدا را»<br>
-                    «دردا که <strong>راز پنهان</strong> خواهد شد آشکارا»
-                  </p>
-                </div>
-              </div>
-              <div style="font-size:0.85rem; color:var(--gk-primary); text-align:center; font-weight:700; margin-top:6px;" id="g-bridge-fact">
-                حافظ در مقطع این غزل مشهور، با ذکر نام شیخ سعدی بیت او را عینا تضمین کرده است.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ۳. مردمان شعر و شاهنامه -->
-        <div class="g-pg-pane" id="pg-people" role="tabpanel">
-          <header class="g-pane-head">
-            <div class="g-pane-title-group">
-              <div class="g-pane-meta">
-                <h3 class="g-pg-title">مردمان شعر و تبارنامه شاهنامه</h3>
-              </div>
-              <p class="g-pg-lead">تبارشناسی ۶۶۲ شخصیت اساطیری و تاریخی، پیوندهای خویشاوندی، خون‌خواهی‌ها و نبردهای بزرگ شاهنامه فردوسی با ابیات گواه.</p>
-            </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/people">مشاهده تبارنامه ➜</a>
-          </header>
-
-          <div class="g-pane-body">
-            <div class="g-vis-tree">
-              <div class="g-tree-grid">
-                <div>
-                  <button class="g-tree-person-btn" data-person="sam">
-                    <span class="g-person-icon">👑</span>
-                    <span class="g-person-name">سام نریمان</span>
-                    <small>نیا و سپهبد</small>
-                  </button>
-                </div>
-                <div class="g-tree-connector-line">│</div>
-                <div>
-                  <button class="g-tree-person-btn" data-person="zal">
-                    <span class="g-person-icon">🦅</span>
-                    <span class="g-person-name">زال زر</span>
-                    <small>فرزند سام</small>
-                  </button>
-                </div>
-                <div class="g-tree-connector-line">│</div>
-                <div>
-                  <button class="g-tree-person-btn active" data-person="rostam">
-                    <span class="g-person-icon">🦁</span>
-                    <span class="g-person-name">رستم دستان</span>
-                    <small>جهان‌پهلوان</small>
-                  </button>
-                </div>
-                <div class="g-tree-connector-line">│</div>
-                <div>
-                  <button class="g-tree-person-btn" data-person="sohrab">
-                    <span class="g-person-icon">⚔️</span>
-                    <span class="g-person-name">سهراب یل</span>
-                    <small>فرزند رستم</small>
-                  </button>
-                </div>
-              </div>
-              <div class="g-tree-detail-card" id="g-tree-info">
-                <div class="g-tree-detail-title">رستم دستان · تهمتن، پاسدار تاج و تخت هفت پادشاه</div>
-                <p class="g-tree-detail-quote">«پدر من زال و جدم سام گرد / که از بیم او شیر شد روی‌زرد»</p>
-                <small style="color:var(--muted);">شاهنامه فردوسی · نبرد رستم با تورانیان</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ۴. آرایه‌ها -->
-        <div class="g-pg-pane" id="pg-devices" role="tabpanel">
-          <header class="g-pane-head">
-            <div class="g-pane-title-group">
-              <div class="g-pane-meta">
-                <h3 class="g-pg-title">اطلس آرایه‌ها و منظومه استعارات</h3>
-              </div>
-              <p class="g-pg-lead">کدام واژگان بیشترین آرایه‌ها را در شعر پدید آورده‌اند؟ در این منظومه واژگانی ببینید شاعران بزرگ واژگان را به چه پدیده‌هایی مانند کرده‌اند.</p>
-            </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/devices">مشاهده آرایه‌ها ➜</a>
-          </header>
-
-          <div class="g-pane-body">
-            <div class="g-vis-metaphor">
-              <div style="display:flex; justify-content:center; gap:8px;" id="g-device-chips">
-                <button class="g-dev-chip active" data-concept="zolf">زلف و گیسو</button>
-                <button class="g-dev-chip" data-concept="lab">لب و دهان</button>
-                <button class="g-dev-chip" data-concept="cheshm">چشم و نگاه</button>
-                <button class="g-dev-chip" data-concept="rokh">رخسار و چهره</button>
-              </div>
-
-              <div class="g-orbit-system">
-                <div class="g-orbit-core-wrap">
-                  <div class="g-orbit-pulse"></div>
-                  <div class="g-orbit-core" id="g-orbit-core-label">زلف</div>
-                </div>
-                <div style="font-size:0.78rem; color:var(--muted); font-weight:700;">اقمار استعاری و تشبیه‌ها (روی هر قمر بزنید):</div>
-                <div class="g-orbit-satellites" id="g-metaphor-tags">
-                  <button class="g-sat-bubble active" data-idx="0">کمند صیاد <span class="g-sat-bubble-freq">۷۴٪</span></button>
-                  <button class="g-sat-bubble" data-idx="1">شب تار و یلدا <span class="g-sat-bubble-freq">۶۲٪</span></button>
-                  <button class="g-sat-bubble" data-idx="2">مشک تاتار <span class="g-sat-bubble-freq">۵۸٪</span></button>
-                  <button class="g-sat-bubble" data-idx="3">دام بلا <span class="g-sat-bubble-freq">۴۵٪</span></button>
-                  <button class="g-sat-bubble" data-idx="4">سنبل خوشبو <span class="g-sat-bubble-freq">۳۹٪</span></button>
-                </div>
-              </div>
-
-              <div class="g-ms-card answer" id="g-device-sample">
-                <span class="g-ms-badge">بیت شاهد · حافظ شیرازی</span>
-                <p class="g-ms-text">
-                  «تاب بنفشه می‌دهد طرّهٔ <strong>مشک‌سای</strong> تو»<br>
-                  «پردهٔ غنچه می‌درد خندهٔ <strong>دلگشای</strong> تو»
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ۵. واژه‌سنج -->
-        <div class="g-pg-pane" id="pg-words" role="tabpanel">
-          <header class="g-pane-head">
-            <div class="g-pane-title-group">
-              <div class="g-pane-meta">
-                <h3 class="g-pg-title">واژه‌سنج و جستجوی تحلیلی</h3>
-              </div>
-              <p class="g-pg-lead">کدام شاعر مفهوم دلخواه شما را بیشتر در شعرش تکرار کرده است؟ مقایسه بسامد کاربرد کلمات، جهان فکری شاعران را آشکار می‌کند.</p>
-            </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/search?q=%D8%B9%D8%B4%D9%82">کاوش در واژه‌سنج ➜</a>
-          </header>
-
-          <div class="g-pane-body">
-            <div class="g-vis-words">
-              <div style="display:flex; justify-content:center; gap:8px; margin-bottom:8px;" id="g-word-pills">
-                <button class="g-dev-chip active" data-w="eshgh">واژه «عشق»</button>
-                <button class="g-dev-chip" data-w="kherad">واژه «خرد»</button>
-                <button class="g-dev-chip" data-w="mey">واژه «می / باده»</button>
-                <button class="g-dev-chip" data-w="gham">واژه «غم»</button>
-              </div>
-              <div class="g-word-stat-card">
-                <div class="g-word-bars" id="g-word-bars">
-                  <div class="g-w-bar-row">
-                    <span>مولانا <small style="color:var(--muted); font-size:0.75rem;">(سبک عراقی)</small></span>
-                    <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: 95%;"></div></div>
-                    <bdi>۶,۴۳۰</bdi>
-                  </div>
-                  <div class="g-w-bar-row">
-                    <span>سعدی <small style="color:var(--muted); font-size:0.75rem;">(سبک عراقی)</small></span>
-                    <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: 45%;"></div></div>
-                    <bdi>۱,۱۸۰</bdi>
-                  </div>
-                  <div class="g-w-bar-row">
-                    <span>حافظ <small style="color:var(--muted); font-size:0.75rem;">(سبک عراقی)</small></span>
-                    <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: 30%;"></div></div>
-                    <bdi>۲۶۵</bdi>
-                  </div>
-                  <div class="g-w-bar-row">
-                    <span>فردوسی <small style="color:var(--muted); font-size:0.75rem;">(سبک خراسانی)</small></span>
-                    <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: 10%;"></div></div>
-                    <bdi>۴۲</bdi>
-                  </div>
-                </div>
-              </div>
-              <div style="text-align:center; font-size:0.85rem; color:var(--muted);" id="g-word-insight">
-                مولانا با ۶۴۳۰ بار کاربرد واژه «عشق»، پیشتاز بی‌رقیب این مفهوم در ادب فارسی است.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ۶. جای‌ها در شعر -->
-        <div class="g-pg-pane" id="pg-places" role="tabpanel">
-          <header class="g-pane-head">
-            <div class="g-pane-title-group">
-              <div class="g-pane-meta">
-                <h3 class="g-pg-title">جای‌ها در شعر و سفرنامه ناصرخسرو</h3>
-              </div>
-              <p class="g-pg-lead">مسیر سفر هفت‌ساله ناصرخسرو قبادیانی را منزل‌به‌منزل دنبال کنید؛ شهرهایی که شاعران دیگر از آن‌ها نام برده‌اند با مختصات تاریخی.</p>
-            </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/places">مشاهده نقشه جای‌ها ➜</a>
-          </header>
-
-          <div class="g-pane-body">
-            <div class="g-vis-journey">
-              <div class="g-stepper-track" id="g-journey-stops">
-                <button class="g-step-node active" data-place="balkh" data-progress="16"><span class="g-step-num">۱</span><span>بلخ (۴۳۷ هـ)</span></button>
-                <button class="g-step-node" data-place="rey" data-progress="33"><span class="g-step-num">۲</span><span>ری و قزوین</span></button>
-                <button class="g-step-node" data-place="tabriz" data-progress="50"><span class="g-step-num">۳</span><span>تبریز (دیدار قطران)</span></button>
-                <button class="g-step-node" data-place="cairo" data-progress="68"><span class="g-step-num">۴</span><span>قاهره (اقامت ۳ ساله)</span></button>
-                <button class="g-step-node" data-place="mecca" data-progress="84"><span class="g-step-num">۵</span><span>مکه مکرمه</span></button>
-                <button class="g-step-node" data-place="yumgan" data-progress="100"><span class="g-step-num">۶</span><span>یمگان بدخشان</span></button>
-              </div>
-
-              <div class="g-journey-progress-track">
-                <div class="g-journey-progress-fill" id="g-journey-bar" style="width: 16%;"></div>
-              </div>
-
-              <div class="g-ms-card origin" id="g-place-card">
-                <span class="g-ms-badge">ایستگاه نخست · بلخ بامی</span>
-                <div class="g-ms-poet">ناصرخسرو قبادیانی</div>
-                <p class="g-ms-text">
-                  «به بلخ اندر ندانستیم شکر نعمت ایزد»<br>
-                  «ز سر تا پای چون شکر به نعمت در نهان بودم»
-                </p>
-                <small style="color:var(--muted); display:block; margin-top:6px;">آغاز هجرت بزرگ در سال ۴۳۷ هجری قمری · مسافت طی‌شده: ۱۲۰۰ فرسنگ</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ۷. وزن‌ها -->
-        <div class="g-pg-pane" id="pg-vazn" role="tabpanel">
-          <header class="g-pane-head">
-            <div class="g-pane-title-group">
-              <div class="g-pane-meta">
-                <h3 class="g-pg-title">وزن‌ها و مترونوم ضرب‌آهنگ شعر</h3>
-              </div>
-              <p class="g-pg-lead">گوش خود را با ضرب‌آهنگ‌های عروضی آشنا کنید. کشف کنید حافظ، سعدی و فردوسی احساسات حماسی و عاشقانه را در کدام اوزان جاری ساخته‌اند.</p>
-            </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/vazn">کاوش در اوزان ➜</a>
-          </header>
-
-          <div class="g-pane-body">
-            <div class="g-vis-vazn">
-              <div style="display:flex; justify-content:center; gap:8px;" id="g-vazn-switchers">
-                <button class="g-dev-chip active" data-v="modare">بحر مضارع</button>
-                <button class="g-dev-chip" data-v="ramal">بحر رمل</button>
-                <button class="g-dev-chip" data-v="hazaj">بحر هزج</button>
-              </div>
-              <div class="g-metronome-box">
-                <div style="font-size:0.85rem; color:var(--muted);" id="g-vazn-label">بحر مضارع مثمن اخرب مکفوف محذوف</div>
-                <div class="g-syllable-beats" id="g-syllable-beats">
-                  <span class="g-syl-beat pulse">مَفْعُولُ</span>
-                  <span class="g-syl-beat">فَاعِلاتُ</span>
-                  <span class="g-syl-beat">مَفَاعِیلُ</span>
-                  <span class="g-syl-beat">فَاعِلُن</span>
-                </div>
-                <div style="font-size:0.8rem; color:var(--gk-gold); font-weight:700;" id="g-vazn-pattern">ضرب هجاها: — — U / — U — U / U — — U / — U —</div>
-                <button class="g-metro-play-btn" id="g-metro-play-trigger">▶ اجرای ضرب‌آهنگ نوری</button>
-              </div>
-              <div class="g-ms-card answer" id="g-vazn-sample">
-                <span class="g-ms-badge">نمونه شاهکار این وزن · حافظ شیرازی</span>
-                <p class="g-ms-text">
-                  «یوسف گم‌گشته باز آید به کنعان غم مخور»<br>
-                  «کلبهٔ احزان شود روزی گلستان غم مخور»
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ۸. صوت و کتابخانه -->
-        <div class="g-pg-pane" id="pg-library" role="tabpanel">
-          <header class="g-pane-head">
-            <div class="g-pane-title-group">
-              <div class="g-pane-meta">
-                <h3 class="g-pg-title">صوت هم‌گام، اتاق خلوت و کتابخانه</h3>
-              </div>
-              <p class="g-pg-lead">شعر را با صدای اساتید بشنوید؛ بیت جاری با نوای گوینده زرین و روشن می‌شود. یادداشت‌هایتان کاملاً روی دستگاه خودتان ذخیره می‌شود.</p>
-            </div>
-            <a class="g-btn g-btn-primary g-pane-cta" href="#/library">ورود به کتابخانه ➜</a>
-          </header>
-
-          <div class="g-pane-body">
-            <div class="g-vis-audio">
-              <div class="g-audio-player-mock">
-                <div style="display:flex; justify-content:space-between; align-items:center;">
-                  <span style="font-size:0.88rem; font-weight:700; color:var(--gk-primary);">خوانش غزل با صدای استاد</span>
-                  <span style="font-size:0.78rem; color:var(--muted);"><bdi>01:14 / 03:20</bdi></span>
-                </div>
-                <div class="g-audio-wave-row">
-                  <span class="g-audio-bar" style="height:12px;"></span>
-                  <span class="g-audio-bar" style="height:22px;"></span>
-                  <span class="g-audio-bar" style="height:18px;"></span>
-                  <span class="g-audio-bar" style="height:26px;"></span>
-                  <span class="g-audio-bar" style="height:14px;"></span>
-                  <span class="g-audio-bar" style="height:20px;"></span>
-                  <span class="g-audio-bar" style="height:10px;"></span>
-                </div>
-                <div class="g-ms-card answer" style="margin:0;">
-                  <p class="g-ms-text" style="font-weight:700; color:var(--gk-primary);">«مرا عهدیست با جانان که تا جان در بدن دارم»</p>
-                  <p class="g-ms-text" style="color:var(--muted);">«هواداران کویش را چو جان خویشتن دارم»</p>
-                </div>
-              </div>
-              <div style="text-align:center; font-size:0.82rem; color:var(--gk-primary); font-weight:700;">
-                🛡️ ۱۰۰٪ محلی و خصوصی · بدون ذخیره روی سرور و بدون ردیابی
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ۴. تالار شاعران نامدار -->
-    <section class="g-poets-wrap">
-      <div class="g-sec-head">
-        <span class="g-sec-kicker">✦ تالار بزرگان</span>
-        <h2 class="g-sec-title">شاعران نامدار پارسی‌گوی</h2>
-        <p class="g-sec-desc">دسترسی مستقیم به دیوان و آثار ماندگارترین سرایندگان زبان پارسی.</p>
-      </div>
-
-      <div class="g-poet-search">
-        <input id="g-poet-filter-input" placeholder="پالایش نام شاعر (مثلاً: سعدی، حافظ، خیام…)" />
-      </div>
-
-      <div class="faces" id="g-famous-faces">
-        ${FAMOUS.map((name) => poets.find((p) => p.nickname === name) || poets.find((p) => (p.nickname || p.name || "").startsWith(name)))
-          .filter(Boolean)
-          .slice(0, 16)
-          .map(poetFace)
-          .join("")}
-      </div>
-
-      <p class="more" style="text-align:center; margin-top:20px;">
-        <a class="g-btn g-btn-primary" href="#/poets">مشاهده همه ${fa(everyone.length || 242)} شاعر ➜</a>
-      </p>
-    </section>
-
-    <!-- ۵. نوار آمار و ارقام گنجینه (انتقال‌یافته به آخر صفحه) -->
-    <section class="g-stats-section">
-      <div class="g-sec-head">
-        <span class="g-sec-kicker">✦ پهنه داده‌ها</span>
-        <h2 class="g-sec-title">گستره گنجینه در یک نگاه</h2>
-      </div>
-      <div class="g-stats-strip">
-        <div class="g-stat-box">
-          <span class="g-stat-icon" aria-hidden="true">❦</span>
-          <span class="g-stat-num">۲۴۲</span>
-          <span class="g-stat-lbl">شاعر پارسی‌گوی</span>
-          <div class="g-stat-gauge"><div style="width: 100%;"></div></div>
-        </div>
-        <div class="g-stat-box">
-          <span class="g-stat-icon" aria-hidden="true">📜</span>
-          <span class="g-stat-num">۱۳۸٬۰۰۰+</span>
-          <span class="g-stat-lbl">شعر با صوت هم‌گام</span>
-          <div class="g-stat-gauge"><div style="width: 95%; background:var(--gk-gold);"></div></div>
-        </div>
-        <div class="g-stat-box">
-          <span class="g-stat-icon" aria-hidden="true">♙</span>
-          <span class="g-stat-num">۶۶۲</span>
-          <span class="g-stat-lbl">شخصیت شاهنامه و تبار</span>
-          <div class="g-stat-gauge"><div style="width: 80%; background:var(--gk-lapis);"></div></div>
-        </div>
-        <div class="g-stat-box">
-          <span class="g-stat-icon" aria-hidden="true">♪</span>
-          <span class="g-stat-num">۲۱۲</span>
-          <span class="g-stat-lbl">بحر و وزن عروضی</span>
-          <div class="g-stat-gauge"><div style="width: 75%; background:var(--gk-ruby);"></div></div>
-        </div>
-        <div class="g-stat-box">
-          <span class="g-stat-icon" aria-hidden="true">✦</span>
-          <span class="g-stat-num">۱۶</span>
-          <span class="g-stat-lbl">آرایه و تشبیه ادبی</span>
-          <div class="g-stat-gauge"><div style="width: 85%;"></div></div>
-        </div>
-        <div class="g-stat-box">
-          <span class="g-stat-icon" aria-hidden="true">⌖</span>
-          <span class="g-stat-num">۲۰۰</span>
-          <span class="g-stat-lbl">شهر و دیار در شعر</span>
-          <div class="g-stat-gauge"><div style="width: 70%; background:var(--gk-gold);"></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- پاورقی بی‌آلایش و پیوند داده‌ها -->
-    <footer class="g-landing-footer">
-      <div class="g-manifesto">
-        داده‌های متنی و صوتی از پایگاه باز <a href="https://ganjoor.net" rel="noreferrer" target="_blank">گنجور</a> تأمین می‌شود.
-      </div>
-    </footer>
-  </div>
-  `;
-
-  paint("خانه", html);
-
-  // --------------------------------------------------------------------------
-  // ثبت کنترل‌ها و تعامل‌های زنده
-  // --------------------------------------------------------------------------
-
-  // ۱. فرم جستجوی هیرو
-  const searchForm = document.querySelector("#g-search-form");
-  if (searchForm) {
-    searchForm.onsubmit = (e) => {
-      e.preventDefault();
-      const q = document.querySelector("#g-search-q").value.trim();
-      if (q) location.hash = `#/search?q=${encodeURIComponent(q)}`;
-    };
-  }
-
-  // میانبر صفحه‌کلید Ctrl+K یا Slash برای جستجو
-  window.addEventListener("keydown", (e) => {
-    if ((e.ctrlKey && e.key === "k") || (e.key === "/" && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA")) {
-      const qInput = document.querySelector("#g-search-q");
-      if (qInput) {
-        e.preventDefault();
-        qInput.focus();
-        qInput.select();
-      }
-    }
-  }, { once: true });
-
-  // ۲. تب‌های ویترین تعاملی ابزارها (Playground Tabs)
-  const pgTabs = document.querySelectorAll(".g-pg-tab");
-  const pgPanes = document.querySelectorAll(".g-pg-pane");
-  pgTabs.forEach((tab) => {
-    tab.onclick = () => {
-      pgTabs.forEach((t) => {
-        t.classList.remove("active");
-        t.setAttribute("aria-selected", "false");
-      });
-      pgPanes.forEach((p) => p.classList.remove("active"));
-      tab.classList.add("active");
-      tab.setAttribute("aria-selected", "true");
-      const targetId = tab.getAttribute("data-target");
-      const targetPane = document.getElementById(targetId);
-      if (targetPane) targetPane.classList.add("active");
-    };
-  });
-
-  // ۳. خط زمان واقعی و کاربردی هم‌عصران (Gantt Synchrony Chart)
-  const timelineData = {
-    4: {
-      minYear: 240,
-      maxYear: 420,
-      scale: ["۲۴۰ هـ", "۲۸۰ هـ", "۳۲۰ هـ", "۳۶۰ هـ", "۴۰۰ هـ", "۴۲۰ هـ"],
-      poets: [
-        { id: 24, name: "رودکی سمرقندی", b: 244, d: 329, city: "سمرقند و بخارا", style: "پدر شعر فارسی", c: "var(--gk-primary)", contemps: "شهید بلخی، دقیقی طوسی" },
-        { id: 48, name: "شهید بلخی", b: 260, d: 325, city: "بلخ بامی", style: "حکمت کهن", c: "var(--gk-lapis)", contemps: "رودکی سمرقندی" },
-        { id: 50, name: "دقیقی طوسی", b: 320, d: 368, city: "طوس", style: "حماسه کهن", c: "var(--gk-gold)", contemps: "رودکی، فردوسی طوسی" },
-        { id: 1, name: "فردوسی طوسی", b: 329, d: 416, city: "طوس", style: "شاهنامه جاودان", c: "var(--gk-ruby)", contemps: "دقیقی، عنصری بلخی" },
-      ]
-    },
-    6: {
-      minYear: 430,
-      maxYear: 620,
-      scale: ["۴۳۰ هـ", "۴۷۰ هـ", "۵۱۰ هـ", "۵۵۰ هـ", "۵۹۰ هـ", "۶۲۰ هـ"],
-      poets: [
-        { id: 4, name: "خیام نیشابوری", b: 439, d: 517, city: "نیشابور", style: "رباعیات فلسفی", c: "var(--gk-primary)", contemps: "سنایی غزنوی، خواجه عبدالله انصاری" },
-        { id: 28, name: "سنایی غزنوی", b: 473, d: 535, city: "غزنین", style: "حدیقةالحقیقه", c: "var(--gk-lapis)", contemps: "خیام، مسعود سعد سلمان" },
-        { id: 25, name: "خاقانی شروانی", b: 520, d: 595, city: "شروان و تبریز", style: "قصاید فخیم", c: "var(--gk-ruby)", contemps: "نظامی گنجوی، انوری ابیوردی" },
-        { id: 3, name: "نظامی گنجوی", b: 535, d: 607, city: "گنجه", style: "خمسه تمثیلی", c: "var(--gk-gold)", contemps: "خاقانی شروانی، عطار نیشابوری" },
-      ]
-    },
-    7: {
-      minYear: 600,
-      maxYear: 720,
-      scale: ["۶۰۰ هـ", "۶۳۰ هـ", "۶۶۰ هـ", "۶۹۰ هـ", "۷۲۰ هـ"],
-      poets: [
-        { id: 7, name: "سعدی شیرازی", b: 606, d: 690, city: "شیراز", style: "افصح‌المتکلمین", c: "var(--gk-primary)", contemps: "مولانا، فخرالدین عراقی، همام تبریزی" },
-        { id: 5, name: "مولانا جلال‌الدین", b: 604, d: 672, city: "بلخ و قونیه", style: "مثنوی و دیوان شمس", c: "var(--gk-lapis)", contemps: "سعدی، عطار (دیدار کودکی)، شمس تبریزی" },
-        { id: 26, name: "فخرالدین عراقی", b: 610, d: 688, city: "همدان و دمشق", style: "لمعات عرفانی", c: "var(--gk-gold)", contemps: "سعدی شیرازی، قونیوی، مولانا" },
-        { id: 47, name: "همام تبریزی", b: 636, d: 714, city: "تبریز", style: "غزل فصیح", c: "var(--gk-ruby)", contemps: "سعدی (دیدار در تبریز)، خواجوی کرمانی" },
-      ]
-    },
-    8: {
-      minYear: 680,
-      maxYear: 820,
-      scale: ["۶۸۰ هـ", "۷۱۰ هـ", "۷۴۰ هـ", "۷۷۰ هـ", "۸۰۰ هـ", "۸۲۰ هـ"],
-      poets: [
-        { id: 20, name: "خواجوی کرمانی", b: 689, d: 753, city: "کرمان و شیراز", style: "نخلبند شعرا", c: "var(--gk-primary)", contemps: "حافظ، عبید زاکانی، سلمان ساوجی" },
-        { id: 37, name: "عبید زاکانی", b: 700, d: 772, city: "قزوین و شیراز", style: "طنز رندانه", c: "var(--gk-lapis)", contemps: "حافظ شیرازی، خواجوی کرمانی" },
-        { id: 23, name: "سلمان ساوجی", b: 709, d: 778, city: "ساوه و بغداد", style: "قصیده و ترجیع", c: "var(--gk-ruby)", contemps: "حافظ شیرازی، خواجو" },
-        { id: 2, name: "حافظ شیرازی", b: 727, d: 792, city: "شیراز", style: "لسان‌الغیب", c: "var(--gk-gold)", contemps: "خواجوی کرمانی، عبید زاکانی، کمال خجندی" },
-      ]
-    },
-    11: {
-      minYear: 980,
-      maxYear: 1190,
-      scale: ["۹۸۰ هـ", "۱۰۲۰ هـ", "۱۰۶۰ هـ", "۱۱۰۰ هـ", "۱۱۴۰ هـ", "۱۱۹۰ هـ"],
-      poets: [
-        { id: 43, name: "بیدل دهلوی", b: 1054, d: 1133, city: "عظیم‌آباد (پتنه) و دهلی", style: "سبک هندی و معرفت شهودی", c: "var(--gk-primary)", contemps: "صائب تبریزی (۲۶ سال هم‌پوشانی)، کلیم کاشانی، حزین لاهیجی" },
-        { id: 22, name: "صائب تبریزی", b: 1001, d: 1080, city: "اصفهان و تبریز", style: "پادشاه تک‌بیت و اسلوب معادله", c: "var(--gk-gold)", contemps: "بیدل دهلوی، کلیم کاشانی، وحشی بافقی" },
-        { id: 100, name: "کلیم کاشانی", b: 990, d: 1061, city: "کاشان و لاهور", style: "خلاق‌المعانی ثانی", c: "var(--gk-lapis)", contemps: "صائب تبریزی، بیدل دهلوی (۷ سال هم‌پوشانی)" },
-        { id: 76, name: "حزین لاهیجی", b: 1103, d: 1181, city: "اصفهان و بنارس", style: "واپسین چکاد سبک اصفهانی", c: "var(--gk-ruby)", contemps: "بیدل دهلوی (۳۰ سال هم‌پوشانی زیست)" },
-      ]
-    },
-  };
-
-  function updateGanttTimeline(c) {
-    const d = timelineData[c];
-    if (!d) return;
-
-    // محور افقی زمان
-    const scale = document.querySelector("#g-tl-scale");
-    if (scale) scale.innerHTML = d.scale.map((s) => `<span>${s}</span>`).join("");
-
-    const totalYears = d.maxYear - d.minYear;
-    const tracksContainer = document.querySelector("#g-contemp-tracks");
-    if (tracksContainer) {
-      tracksContainer.innerHTML = d.poets
-        .map((p, idx) => {
-          // محاسبه موقعیت گانت در راستای افقی (در RTL: right offset)
-          const offsetPct = Math.max(0, Math.min(100, ((p.b - d.minYear) / totalYears) * 100));
-          const widthPct = Math.max(8, Math.min(100 - offsetPct, ((p.d - p.b) / totalYears) * 100));
-          const age = p.d - p.b;
-
-          return `
-          <div class="g-gantt-row ${idx === 0 ? "active" : ""}" data-idx="${idx}">
-            <div class="g-gantt-poet-label">
-              <span class="g-gantt-avatar" style="background:${p.c};">${esc(p.name.slice(0, 1))}</span>
-              <div class="g-gantt-name-wrap">
-                <strong>${esc(p.name)}</strong>
-                <small>${esc(p.city)}</small>
-              </div>
-            </div>
-            <div class="g-gantt-track-area">
-              <div class="g-gantt-bar" style="right:${offsetPct.toFixed(1)}%; width:${widthPct.toFixed(1)}%; background:${p.c};">
-                <span class="g-gantt-bar-years">${p.b} تا ${p.d} هـ (${age} سال)</span>
-              </div>
-            </div>
-          </div>`;
-        })
-        .join("");
-
-      // اتصال کلیک به هر سطر گانت
-      const rows = tracksContainer.querySelectorAll(".g-gantt-row");
-      rows.forEach((row) => {
-        row.onclick = () => {
-          rows.forEach((r) => r.classList.remove("active"));
-          row.classList.add("active");
-          const idx = parseInt(row.getAttribute("data-idx"), 10);
-          const poet = d.poets[idx];
-          if (poet) {
-            const avatar = document.querySelector("#g-gpd-avatar");
-            if (avatar) {
-              avatar.textContent = poet.name.slice(0, 1);
-              avatar.style.background = poet.c;
-            }
-            const nameEl = document.querySelector("#g-gpd-name");
-            if (nameEl) nameEl.textContent = poet.name;
-            const subEl = document.querySelector("#g-gpd-sub");
-            if (subEl) subEl.textContent = `${poet.b} تا ${poet.d} هـ (${poet.d - poet.b} سال حیات) · ${poet.city} · ${poet.style}`;
-            const contempsEl = document.querySelector("#g-gpd-contemps");
-            if (contempsEl) contempsEl.textContent = `هم‌عصر با: ${poet.contemps}`;
-            const linkEl = document.querySelector("#g-gpd-link");
-            if (linkEl) {
-              linkEl.href = `#/poet/${poet.id}`;
-              linkEl.textContent = `دیوان ${poet.name} ➜`;
-            }
-          }
-        };
-      });
-
-      // تنظیم کارت اول پیش‌فرض
-      if (d.poets[0]) {
-        const p0 = d.poets[0];
-        const avatar = document.querySelector("#g-gpd-avatar");
-        if (avatar) {
-          avatar.textContent = p0.name.slice(0, 1);
-          avatar.style.background = p0.c;
-        }
-        const nameEl = document.querySelector("#g-gpd-name");
-        if (nameEl) nameEl.textContent = p0.name;
-        const subEl = document.querySelector("#g-gpd-sub");
-        if (subEl) subEl.textContent = `${p0.b} تا ${p0.d} هـ (${p0.d - p0.b} سال حیات) · ${p0.city} · ${p0.style}`;
-        const contempsEl = document.querySelector("#g-gpd-contemps");
-        if (contempsEl) contempsEl.textContent = `هم‌عصر با: ${p0.contemps}`;
-        const linkEl = document.querySelector("#g-gpd-link");
-        if (linkEl) {
-          linkEl.href = `#/poet/${p0.id}`;
-          linkEl.textContent = `دیوان ${p0.name} ➜`;
-        }
-      }
-    }
-
-    // هماهنگی دکمه‌ها
-    document.querySelectorAll(".g-tl-btn").forEach((b) => {
-      b.classList.toggle("active", b.getAttribute("data-c") === String(c));
-    });
-  }
-
-  document.querySelectorAll(".g-tl-btn").forEach((btn) => {
-    btn.onclick = () => {
-      const c = btn.getAttribute("data-c");
-      updateGanttTimeline(c);
-    };
-  });
-
-  // مقداردهی اولیه قرن ۷
-  updateGanttTimeline(7);
-
-
-  // ۴. ویجت پل‌های تضمین (Pair Switcher با جریان متحرک)
-  const bridgeData = {
-    "saadi-hafez": {
-      p1: "سعدی شیرازی",
-      t1: "«به چهره مهرِ رخشان، به بالا سروِ بستان»<br>«به لب <strong>لعلی درخشان</strong>، به تن سیمین‌بری تو»",
-      p2: "حافظ شیرازی",
-      t2: "«دل می‌رود ز دستم صاحب‌دلان خدا را»<br>«دردا که <strong>راز پنهان</strong> خواهد شد آشکارا»",
-      meter: "بحر رمل مثمن",
-      fact: "حافظ در مقطع این غزل مشهور، با ذکر نام شیخ سعدی بیت او را عینا تضمین کرده است.",
-    },
-    "kamal-hafez": {
-      p1: "کمال خجندی",
-      t1: "«ساقیا مِی ده که <strong>رندان پای‌کوبان</strong> رفته‌اند»<br>«عاشقان از خود گذشته، بی‌دل و جان رفته‌اند»",
-      p2: "حافظ شیرازی",
-      t2: "«ساقیا مِی ده که <strong>رندی‌های حافظ</strong> فاش شد»<br>«تا نپنداری که ما را عیب‌پوشان رفته‌اند»",
-      meter: "بحر مضارع مثمن",
-      fact: "استقبال حافظ از غزل کمال خجندی در همان وزن عروضی و قافیه مشترک «رفته‌اند».",
-    },
-    "attar-mowlavi": {
-      p1: "عطار نیشابوری",
-      t1: "«گم شدم در خود چنان کز <strong>خویش ناپیدا</strong> شدم»<br>«شبنمم در بحر ناپیدای ناپیدا شدم»",
-      p2: "مولانا جلال‌الدین",
-      t2: "«هفت شهر عشق را <strong>عطار گشت</strong>»<br>«ما هنوز اندر خم یک کوچه‌ایم»",
-      meter: "بحر هزج مسدس",
-      fact: "مولانا بارها عطار را روح شعر دانسته و مفاهیم و وزن‌های منطق‌الطیر را در مثنوی استقبال نموده است.",
-    },
-  };
-
-  document.querySelectorAll("#g-bridge-switchers .g-dev-chip").forEach((btn) => {
-    btn.onclick = () => {
-      document.querySelectorAll("#g-bridge-switchers .g-dev-chip").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const key = btn.getAttribute("data-b");
-      const d = bridgeData[key];
-      if (d) {
-        const row = document.querySelector("#g-bridge-display-row");
-        if (row) {
-          row.innerHTML = `
-            <div class="g-ms-card origin">
-              <span class="g-ms-badge">شاعر متقدم (پیشین)</span>
-              <div class="g-ms-poet">${esc(d.p1)}</div>
-              <p class="g-ms-text">${d.t1}</p>
-            </div>
-            <div class="g-bridge-connector">
-              <span class="g-bridge-pill">تضمین مصراع</span>
-              <span class="g-bridge-meta-tag" id="g-bridge-meter-tag">${esc(d.meter)}</span>
-            </div>
-            <div class="g-ms-card answer">
-              <span class="g-ms-badge">شاعر متأخر (پاسخ‌دهنده)</span>
-              <div class="g-ms-poet">${esc(d.p2)}</div>
-              <p class="g-ms-text">${d.t2}</p>
-            </div>`;
-        }
-        const fact = document.querySelector("#g-bridge-fact");
-        if (fact) fact.textContent = d.fact;
-      }
-    };
-  });
-
-  // ۵. ویجت تبارنامه شاهنامه
-  const genealogyData = {
-    sam: {
-      title: "سام نریمان · جهان‌پهلوان ایران در عهد منوچهر شاه",
-      quote: "«سپهبد که سام نریمان بدست / سرش برتر از ابر و پیلان پست»",
-      src: "شاهنامه فردوسی · زایش زال در سیستان",
-    },
-    zal: {
-      title: "زال زر (دستان) · پرورده سیمرغ در ستیغ کوه البرز",
-      quote: "«پدر سر به سر موی چون برف بود / تنش همچو سیم و رخش ژرف بود»",
-      src: "شاهنامه فردوسی · بازگشت زال نزد سام",
-    },
-    rostam: {
-      title: "رستم دستان · تهمتن، پاسدار تاج و تخت هفت پادشاه",
-      quote: "«پدر من زال و جدم سام گرد / که از بیم او شیر شد روی‌زرد»",
-      src: "شاهنامه فردوسی · نبرد رستم با تورانیان",
-    },
-    sohrab: {
-      title: "سهراب یل · فرزند رستم و تهمینه، پهلوان جوان توران‌سپاه",
-      quote: "«کنون گر تو رستم بدستی به راز / سر من به خنجر مکن بی‌فراز»",
-      src: "شاهنامه فردوسی · رزم رستم و سهراب",
-    },
-  };
-
-  document.querySelectorAll(".g-tree-person-btn").forEach((btn) => {
-    btn.onclick = () => {
-      document.querySelectorAll(".g-tree-person-btn").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const key = btn.getAttribute("data-person");
-      const d = genealogyData[key];
-      if (d) {
-        const card = document.querySelector("#g-tree-info");
-        if (card) {
-          card.innerHTML = `
-            <div class="g-tree-detail-title">${esc(d.title)}</div>
-            <p class="g-tree-detail-quote">${d.quote}</p>
-            <small style="color:var(--muted);">${esc(d.src)}</small>`;
-        }
-      }
-    };
-  });
-
-  // ۶. ویجت آرایه‌ها و مدار منظومه‌ای واژگان (Word Solar System)
-  const conceptData = {
-    zolf: {
-      name: "زلف و گیسو",
-      core: "زلف",
-      satellites: [
-        { label: "کمند صیاد", freq: "۷۴٪", quote: "«تاب بنفشه می‌دهد طرّهٔ <strong>مشک‌سای</strong> تو»<br>«پردهٔ غنچه می‌درد خندهٔ <strong>دلگشای</strong> تو»", poet: "حافظ شیرازی" },
-        { label: "شب تار و یلدا", freq: "۶۲٪", quote: "«شبی گیسو فروهشته به دامن / پلاسین معجر و قیرینه گرزن»", poet: "منوچهری دامغانی" },
-        { label: "مشک تاتار", freq: "۵۸٪", quote: "«دوش سودای رخش گفتم به زلفش بازگو / بوی مشک از طره‌اش بر جان سودازده ریخت»", poet: "عطار نیشابوری" },
-        { label: "دام بلا", freq: "۴۵٪", quote: "«مرا عهدیست با جانان که تا جان در بدن دارم / هواداران کویش را چو جان خویشتن دارم»", poet: "حافظ شیرازی" },
-        { label: "سنبل خوشبو", freq: "۳۹٪", quote: "«سنبل زلفین او بوی گلاب آورد / نرگس فتان او راه خواب آورد»", poet: "سعدی شیرازی" },
-      ]
-    },
-    lab: {
-      name: "لب و دهان",
-      core: "لب",
-      satellites: [
-        { label: "لعل بدخشان", freq: "۸۲٪", quote: "«<strong>لب لعل</strong> و خط مشکین چو آنش هست و اینش هست / بنازم دلبر خود را که حسنش آن و این دارد»", poet: "حافظ شیرازی" },
-        { label: "پسته خندان", freq: "۶۸٪", quote: "«لب خندان تو پسته شکسته‌ست / به لب شکر طوطیان بسته‌ست»", poet: "نظامی گنجوی" },
-        { label: "آب حیات خضر", freq: "۵۴٪", quote: "«لب لعلت که نقد جان در او هست / عجب سرچشمه حیوان در او هست»", poet: "سعدی شیرازی" },
-        { label: "یاقوت مذاب", freq: "۴۱٪", quote: "«می‌نوش ز دست مهوشان دلخواه / کز لعل لبش روان شود آب حیات»", poet: "خیام نیشابوری" },
-      ]
-    },
-    cheshm: {
-      name: "چشم و نگاه",
-      core: "چشم",
-      satellites: [
-        { label: "نرگس مست", freq: "۸۸٪", quote: "«چشم <strong>نرگس</strong> به شقایق نگران خواهد شد / تا دگر باره صبا با گل خندان چه کند»", poet: "سعدی شیرازی" },
-        { label: "آهوی ختن", freq: "۶۵٪", quote: "«آن چشم سیه که صید دل‌ها کرد / آهوی ختن به عشوه رسوا کرد»", poet: "خاقانی شروانی" },
-        { label: "افسونگر و جادو", freq: "۵۱٪", quote: "«سامری در چشم جادوی تو پنهان گشته است / هر که بیند چشم تو هاروت و ماروتش کند»", poet: "مولانا جلال‌الدین" },
-        { label: "بادام شیرین", freq: "۳۸٪", quote: "«دو بادام پر از آب حیاتش / شکر می‌ریزد از لعل نباتش»", poet: "نظامی گنجوی" },
-      ]
-    },
-    rokh: {
-      name: "رخسار و چهره",
-      core: "رخ",
-      satellites: [
-        { label: "ماه چهارده", freq: "۸۹٪", quote: "«ای یوسف خوش‌نام ما خوش می‌روی بر <strong>بام ما</strong> / ای درشکسته جام ما، ای بردریده دام ما»", poet: "مولانا جلال‌الدین" },
-        { label: "آفتاب تابان", freq: "۷۳٪", quote: "«رویت آفتاب و مویت شب تار / ای رخ تو بهار و روی تو گلزار»", poet: "فرخی سیستانی" },
-        { label: "گل سوری", freq: "۶۰٪", quote: "«گل سوری ز شرم رخسارت / جامه بر تن دریده در گلزار»", poet: "سعدی شیرازی" },
-      ]
-    },
-  };
-
-  document.querySelectorAll("#g-device-chips .g-dev-chip").forEach((btn) => {
-    btn.onclick = () => {
-      document.querySelectorAll("#g-device-chips .g-dev-chip").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const key = btn.getAttribute("data-concept");
-      const d = conceptData[key];
-      if (d) {
-        const coreLabel = document.querySelector("#g-orbit-core-label");
-        if (coreLabel) coreLabel.textContent = d.core;
-
-        const satellitesBox = document.querySelector("#g-metaphor-tags");
-        if (satellitesBox) {
-          satellitesBox.innerHTML = d.satellites
-            .map(
-              (s, idx) => `
-              <button class="g-sat-bubble ${idx === 0 ? "active" : ""}" data-idx="${idx}">
-                ${esc(s.label)} <span class="g-sat-bubble-freq">${esc(s.freq)}</span>
-              </button>`,
-            )
-            .join("");
-
-          // اتصال تعامل اقمار
-          satellitesBox.querySelectorAll(".g-sat-bubble").forEach((bubble) => {
-            bubble.onclick = () => {
-              satellitesBox.querySelectorAll(".g-sat-bubble").forEach((b) => b.classList.remove("active"));
-              bubble.classList.add("active");
-              const idx = parseInt(bubble.getAttribute("data-idx"), 10);
-              const sat = d.satellites[idx];
-              if (sat) {
-                const sample = document.querySelector("#g-device-sample");
-                if (sample) {
-                  sample.innerHTML = `
-                    <span class="g-ms-badge">بیت شاهد · ${esc(sat.poet)}</span>
-                    <p class="g-ms-text">${sat.quote}</p>`;
-                }
-              }
-            };
-          });
-        }
-
-        // بروزرسانی کارت پیش‌فرض
-        const sample = document.querySelector("#g-device-sample");
-        if (sample && d.satellites[0]) {
-          sample.innerHTML = `
-            <span class="g-ms-badge">بیت شاهد · ${esc(d.satellites[0].poet)}</span>
-            <p class="g-ms-text">${d.satellites[0].quote}</p>`;
-        }
-      }
-    };
-  });
-
-  // ۷. ویجت واژه‌سنج (تحلیل بسامد واژه‌ها با سبک‌ها)
-  const wordFrequencyData = {
-    eshgh: {
-      bars: [
-        { poet: "مولانا", style: "سبک عراقی", count: "۶,۴۳۰", pct: 95 },
-        { poet: "سعدی", style: "سبک عراقی", count: "۱,۱۸۰", pct: 45 },
-        { poet: "حافظ", style: "سبک عراقی", count: "۲۶۵", pct: 30 },
-        { poet: "فردوسی", style: "سبک خراسانی", count: "۴۲", pct: 10 },
-      ],
-      insight: "مولانا با ۶۴۳۰ بار کاربرد واژه «عشق»، پیشتاز بی‌رقیب این مفهوم در ادب فارسی است."
-    },
-    kherad: {
-      bars: [
-        { poet: "فردوسی", style: "سبک خراسانی", count: "۳,۱۵۰", pct: 95 },
-        { poet: "ناصرخسرو", style: "سبک خراسانی", count: "۸۴۰", pct: 50 },
-        { poet: "سنایی", style: "سلجوقی", count: "۲۱۰", pct: 25 },
-        { poet: "حافظ", style: "سبک عراقی", count: "۳۴", pct: 8 },
-      ],
-      insight: "فردوسی با ۳۱۵۰ بار ستایش «خرد»، خردورزی را بنیان جهان‌بینی شاهنامه قرار داده است."
-    },
-    mey: {
-      bars: [
-        { poet: "حافظ", style: "سبک عراقی", count: "۱,۰۵۰", pct: 90 },
-        { poet: "خیام", style: "خراسانی", count: "۱۸۵", pct: 75 },
-        { poet: "خاقانی", style: "سبک آذربایجانی", count: "۴۳۰", pct: 50 },
-        { poet: "سعدی", style: "سبک عراقی", count: "۳۱۰", pct: 40 },
-      ],
-      insight: "حافظ شیرازی «می و باده» را نماد رهایی از ریا و تظاهر در غزل‌های لسان‌الغیب قرار داد."
-    },
-    gham: {
-      bars: [
-        { poet: "بیدل دهلوی", style: "سبک هندی", count: "۱,۲۴۰", pct: 90 },
-        { poet: "خاقانی", style: "سبک آذربایجانی", count: "۹۲۰", pct: 70 },
-        { poet: "حافظ", style: "سبک عراقی", count: "۴۱۰", pct: 45 },
-        { poet: "سعدی", style: "سبک عراقی", count: "۳۸۰", pct: 40 },
-      ],
-      insight: "در سبک هندی با بیدل دهلوی، مفهوم غم به باریک‌اندیشی و تماشای جهان درون تبدیل شد."
-    },
-  };
-
-  document.querySelectorAll("#g-word-pills .g-dev-chip").forEach((btn) => {
-    btn.onclick = () => {
-      document.querySelectorAll("#g-word-pills .g-dev-chip").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const key = btn.getAttribute("data-w");
-      const data = wordFrequencyData[key];
-      if (data) {
-        const bars = document.querySelector("#g-word-bars");
-        if (bars) {
-          bars.innerHTML = data.bars
-            .map(
-              (item) => `
-              <div class="g-w-bar-row">
-                <span>${esc(item.poet)} <small style="color:var(--muted); font-size:0.75rem;">(${esc(item.style)})</small></span>
-                <div class="g-w-bar-track"><div class="g-w-bar-fill" style="width: ${item.pct}%;"></div></div>
-                <bdi>${item.count}</bdi>
-              </div>`,
-            )
-            .join("");
-        }
-        const insight = document.querySelector("#g-word-insight");
-        if (insight) insight.textContent = data.insight;
-      }
-    };
-  });
-
-  // ۸. ویجت مسیر کاروان ناصرخسرو با نوار پیشرفت مسافت
-  const placesData = {
-    balkh: {
-      title: "ایستگاه نخست · بلخ بامی",
-      text: "«به بلخ اندر ندانستیم شکر نعمت ایزد»<br>«ز سر تا پای چون شکر به نعمت در نهان بودم»",
-      sub: "آغاز هجرت بزرگ در سال ۴۳۷ هجری قمری · مسافت طی‌شده: ۱۲۰۰ فرسنگ",
-    },
-    rey: {
-      title: "ایستگاه دوم · ری و قزوین",
-      text: "«دیدار ری و باروی کهن آن؛ گذار از قزوین و بیل و رسیدن به سرحد آذربایجان»",
-      sub: "شاهراه کاروان‌رو خراسان به باختر ایران · مسافت: ۲۴۰۰ فرسنگ",
-    },
-    tabriz: {
-      title: "ایستگاه سوم · تبریز (دیدار با قطران)",
-      text: "«در تبریز قطران نام شاعری دیدم؛ شعر نیک می‌گفت، اما دیوان منجیک و دقیقی پیش من آورد تا شرح کنم»",
-      sub: "سفرنامه ناصرخسرو · دیدار ماندگار دو ادیب بزرگ",
-    },
-    cairo: {
-      title: "ایستگاه چهارم · قاهره مصر (مرکز فاطمیان)",
-      text: "«سه سال اقامت در مصر؛ قاهره شهری عظیم و آبادان با دکان‌ها و کاروان‌سراهای شگفت»",
-      sub: "ناصرخسرو در مصر به مرتبه «حجت خراسان» دست یافت · مسافت: ۵۸۰۰ فرسنگ",
-    },
-    mecca: {
-      title: "ایستگاه پنجم · مکه مکرمه (چهار نوبت حج)",
-      text: "«حاجیان آمدند با تعظیم / شاکر از رحمت خدای رحیم»",
-      sub: "قصیده مشهور حج ناصرخسرو و شرح مناسک کعبه · مسافت: ۷۲۰۰ فرسنگ",
-    },
-    yumgan: {
-      title: "ایستگاه پایانی · یمگان دره بدخشان",
-      text: "«گذشت آن که در بلخ بودم خطیب / کنون اندرین کوهسارم غریب»",
-      sub: "سال‌های غربت و تألیف زادالمسافرین و جامع‌الحکمتین · مسافت کل: ۸۵۰۰ فرسنگ",
-    },
-  };
-
-  document.querySelectorAll(".g-step-node").forEach((btn) => {
-    btn.onclick = () => {
-      document.querySelectorAll(".g-step-node").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const key = btn.getAttribute("data-place");
-      const prog = btn.getAttribute("data-progress") || "16";
-      const pBar = document.querySelector("#g-journey-bar");
-      if (pBar) pBar.style.width = prog + "%";
-
-      const d = placesData[key];
-      if (d) {
-        const card = document.querySelector("#g-place-card");
-        if (card) {
-          card.innerHTML = `
-            <span class="g-ms-badge">${esc(d.title)}</span>
-            <div class="g-ms-poet">ناصرخسرو قبادیانی</div>
-            <p class="g-ms-text">${d.text}</p>
-            <small style="color:var(--muted); display:block; margin-top:6px;">${esc(d.sub)}</small>`;
-        }
-      }
-    };
-  });
-
-  // ۹. ویجت وزن‌ها و مترونوم ریتمیک (The Pudding)
-  const vaznData = {
-    modare: {
-      lbl: "بحر مضارع مثمن اخرب مکفوف محذوف (پرکاربردترین وزن غزل)",
-      beats: ["مَفْعُولُ", "فَاعِلاتُ", "مَفَاعِیلُ", "فَاعِلُن"],
-      sub: "ضرب هجاها: — — U / — U — U / U — — U / — U —",
-      poet: "حافظ شیرازی",
-      verse: "«یوسف گم‌گشته باز آید به کنعان غم مخور»<br>«کلبهٔ احزان شود روزی گلستان غم مخور»",
-    },
-    ramal: {
-      lbl: "بحر رمل مثمن محذوف (وزن مثنوی معنوی و غزلیات سعدی)",
-      beats: ["فَاعِلاتُن", "فَاعِلاتُن", "فَاعِلاتُن", "فَاعِلُن"],
-      sub: "ضرب هجاها: — U — — / — U — — / — U — — / — U —",
-      poet: "سعدی شیرازی",
-      verse: "«ای صبا گر بگذری بر کوی مهر‌افشان دوست»<br>«یار ما را گو سلامی کاین دل ما زان اوست»",
-    },
-    hazaj: {
-      lbl: "بحر هزج مثمن سالم (شورانگیز و ترانه‌ای)",
-      beats: ["مَفَاعِیلُن", "مَفَاعِیلُن", "مَفَاعِیلُن", "مَفَاعِیلُن"],
-      sub: "ضرب هجاها: U — — — / U — — — / U — — — / U — — —",
-      poet: "حافظ شیرازی",
-      verse: "«مرا عهدیست با جانان که تا جان در بدن دارم»<br>«هواداران کویش را چو جان خویشتن دارم»",
-    },
-  };
-
-  document.querySelectorAll("#g-vazn-switchers .g-dev-chip").forEach((btn) => {
-    btn.onclick = () => {
-      document.querySelectorAll("#g-vazn-switchers .g-dev-chip").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const key = btn.getAttribute("data-v");
-      const d = vaznData[key];
-      if (d) {
-        const lbl = document.querySelector("#g-vazn-label");
-        if (lbl) lbl.textContent = d.lbl;
-        const beats = document.querySelector("#g-syllable-beats");
-        if (beats) {
-          beats.innerHTML = d.beats.map((b, i) => `<span class="g-syl-beat ${i === 0 ? "pulse" : ""}">${esc(b)}</span>`).join("");
-        }
-        const pat = document.querySelector("#g-vazn-pattern");
-        if (pat) pat.textContent = d.sub;
-        const sample = document.querySelector("#g-vazn-sample");
-        if (sample) {
-          sample.innerHTML = `
-            <span class="g-ms-badge">نمونه شاهکار این وزن · ${esc(d.poet)}</span>
-            <p class="g-ms-text">${d.verse}</p>`;
-        }
-      }
-    };
-  });
-
-  // اجرای ضرب‌آهنگ نوری مترونوم
-  let metroInterval = null;
-  const metroBtn = document.querySelector("#g-metro-play-trigger");
-  if (metroBtn) {
-    metroBtn.onclick = () => {
-      const beats = document.querySelectorAll("#g-syllable-beats .g-syl-beat");
-      if (!beats.length) return;
-      if (metroInterval) {
-        clearInterval(metroInterval);
-        metroInterval = null;
-        metroBtn.textContent = "▶ اجرای ضرب‌آهنگ نوری";
-        beats.forEach((b) => b.classList.remove("pulse"));
-        return;
-      }
-      metroBtn.textContent = "⏹ توقف مترونوم";
-      let cur = 0;
-      metroInterval = setInterval(() => {
-        beats.forEach((b) => b.classList.remove("pulse"));
-        beats[cur].classList.add("pulse");
-        cur = (cur + 1) % beats.length;
-      }, 550);
-    };
-  }
-
-  // پخش/توقف شبیه‌ساز صوت
-  const audioMock = document.querySelector(".g-audio-player-mock");
-  if (audioMock) {
-    audioMock.style.cursor = "pointer";
-    audioMock.onclick = () => {
-      const bars = audioMock.querySelectorAll(".g-audio-bar");
-      const isPaused = bars[0]?.style.animationPlayState === "paused";
-      bars.forEach((b) => (b.style.animationPlayState = isPaused ? "running" : "paused"));
-      const lbl = audioMock.querySelector("span");
-      if (lbl) lbl.textContent = isPaused ? "در حال پخش خوانش هم‌گام..." : "خوانش هم‌گام (برای پخش کلیک کنید)";
-    };
-  }
-
-// فیلتر کاتالوگ با حذف کارت‌های تکراری پالایش شد
-
-  // ۱۱. فیلتر درجا روی تالار شاعران نامدار
-  const poetFilterInput = document.querySelector("#g-poet-filter-input");
-  if (poetFilterInput) {
-    poetFilterInput.oninput = () => {
-      const term = poetFilterInput.value.trim().toLowerCase();
-      document.querySelectorAll("#g-famous-faces .face").forEach((face) => {
-        const title = face.textContent.toLowerCase();
-        face.style.display = title.includes(term) ? "" : "none";
-      });
-    };
-  }
-
-  // ۱۲. تعامل هیرو پیلز و هدایت نرم به ابزار مربوطه در آزمایشگاه
-  document.querySelectorAll("#g-hero-interactive-pills .g-sugg-pill").forEach((pill) => {
-    pill.onclick = () => {
-      const pgId = pill.getAttribute("data-pg");
-      const arg = pill.getAttribute("data-arg");
-      const tab = document.querySelector(`.g-pg-tab[data-target="${pgId}"]`);
-      if (tab) tab.click();
-
-      // هدایت زیرگزینه‌ها
-      if (pgId === "pg-words" && arg) {
-        document.querySelector(`#g-word-pills [data-w="${arg}"]`)?.click();
-      } else if (pgId === "pg-places" && arg) {
-        document.querySelector(`#g-journey-stops [data-place="${arg}"]`)?.click();
-      } else if (pgId === "pg-people" && arg) {
-        document.querySelector(`.g-tree-person-btn[data-person="${arg}"]`)?.click();
-      } else if (pgId === "pg-devices" && arg) {
-        document.querySelector(`#g-device-chips [data-concept="${arg}"]`)?.click();
-      } else if (pgId === "pg-vazn" && arg) {
-        document.querySelector(`#g-vazn-switchers [data-v="${arg}"]`)?.click();
-      }
-
-      const playground = document.getElementById("g-tools-playground");
-      if (playground) {
-        playground.scrollIntoView({ behavior: "smooth", block: "start" });
-        playground.style.boxShadow = "0 0 0 3px var(--gk-gold), var(--gk-shadow-lg)";
-        setTimeout(() => {
-          playground.style.boxShadow = "";
-        }, 1200);
-      }
-    };
   });
 }
 
-async function poetsPage(query) {
-  loading("شاعران");
-  const { data: poets } = await api("/poets");
-  const century = Number(query.get("c") || 0);
-  const centuries = [...new Set(poets.map((poet) => centuryOf(poet.birthYearInLHijri)).filter(Boolean))].sort((a, b) => a - b);
-  paint(
-    "شاعران",
-    `<h1>شاعران</h1>
-     <p class="lead">${poets.length} شاعر منتشرشده.</p>
-     <div class="cents">${[`<a class="cent ${century ? "" : "on"}" href="#/poets">همه</a>`].concat(centuries.map((item) => `<a class="cent ${century === item ? "on" : ""}" href="#/poets?c=${item}">قرن ${item}</a>`)).join("")}</div>
-     <form class="big-search" id="poet-filter"><input id="poet-q" placeholder="نام را بنویس" aria-label="پالایش نام" /></form>
-     <div class="faces" id="poet-list"></div>`,
-  );
-  const box = document.querySelector("#poet-q");
-  const list = document.querySelector("#poet-list");
-  const draw = () => {
-    const q = box.value.trim();
-    const shown = poets.filter((poet) => {
-      const yearOk = !century || centuryOf(poet.birthYearInLHijri) === century;
-      const text = `${poet.name} ${poet.nickname} ${poet.birthPlace || ""}`;
-      return yearOk && (!q || text.includes(q));
-    });
-    list.innerHTML = shown.length ? shown.map(poetFace).join("") : `<p class="muted">کسی با این نام در این قرن نیست.</p>`;
-  };
-  box.oninput = draw;
-  draw();
-}
-
-async function poetPage(id) {
-  loading("شاعر");
-  const { data } = await api(`/poet/${id}`);
-  const poet = data.poet;
-  const cat = data.cat || {};
-  const children = cat.children || [];
-  const poems = cat.poems || [];
-  const books = children
-    .map((book, index) => `<a class="cover c${index % 4}" href="#/cat/${book.id}"><strong>${esc(book.title)}</strong><small>خواندن ←</small></a>`)
-    .join("");
-  const loose = poems
-    .map((poem) => `<a class="hit" href="#/poem/${poem.id}"><strong>${esc(poem.title)}</strong><p>${esc(poem.excerpt || "")}</p></a>`)
-    .join("");
-  paint(
-    poet.nickname || poet.name,
-    `<p class="crumb"><a href="#/poets">شاعران</a></p>
-     <div class="poet-head">
-       ${portrait(poet)}
-       <div>
-         <h1>${esc(poet.name)}</h1>
-         <p class="kicker">زاده ${esc(poet.birthPlace || "جای نامشخص")} <bdi dir="ltr">${poet.birthYearInLHijri || "؟"}</bdi> · درگذشته ${esc(poet.deathPlace || poet.birthPlace || "")} <bdi dir="ltr">${poet.deathYearInLHijri || "؟"}</bdi> ق${poet.deathYearInLHijri && poet.birthYearInLHijri ? ` · ${fa(poet.deathYearInLHijri - poet.birthYearInLHijri)} سال` : ""}</p>
-       </div>
-     </div>
-     <div class="bio" id="bio">${esc(poet.description || "")}</div>
-     ${(poet.description || "").length > 320 ? `<button class="btn" id="more" type="button">ادامه شرح</button>` : ""}
-     <p class="chips">
-       ${children[0] ? `<a class="btn primary" href="#/cat/${children[0].id}">شروع از ${esc(children[0].title)}</a>` : ""}
-       <a class="chip" href="https://ganjoor.net${esc(poet.fullUrl)}" rel="noreferrer">در گنجور</a>
-       ${poet.birthYearInLHijri ? `<a class="chip" href="#/tree?poet=${poet.id}">هم‌عصران این سال‌ها</a><a class="chip" href="#/map?y=${Math.round(((poet.birthYearInLHijri || 0) + (poet.deathYearInLHijri || poet.birthYearInLHijri)) / 2)}">زادگاه‌ها روی نقشه</a>` : ""}
-        <a class="chip" href="#/bridges/${poet.id}">پل‌های ثبت‌شده</a>
-     </p>
-     ${books ? `<h2 class="section">آثار</h2><div class="covers">${books}</div>` : ""}
-     ${loose ? `<h2 class="section">شعرها</h2><div class="grid">${loose}</div>` : ""}`,
-  );
-  document.querySelector("#more")?.addEventListener("click", () => document.querySelector("#bio").classList.toggle("open"));
-}
-
-async function catPage(id, query) {
-  loading("فهرست");
-  const { data } = await api(`/cat/${id}?poems=true&mainSections=false`);
-  const cat = data.cat || data;
-  const pageNo = Math.max(1, Number(query.get("p") || 1));
-  const size = 24;
-  const poems = cat.poems || [];
-  const slice = poems.slice((pageNo - 1) * size, pageNo * size);
-  const pages = Math.ceil(poems.length / size);
-  const children = (cat.children || [])
-    .map((book, index) => `<a class="cover c${index % 4}" href="#/cat/${book.id}"><strong>${esc(book.title)}</strong></a>`)
-    .join("");
-  const crumbs = [`<a href="#/poets">شاعران</a>`]
-    .concat((cat.ancestors || []).map((item) => `<a href="#/cat/${item.id}">${esc(item.title)}</a>`))
-    .join(" / ");
-  paint(
-    cat.title,
-    `<p class="crumb">${crumbs}</p>
-     <h1>${esc(cat.title)}</h1>
-     <p class="muted">${poems.length ? `${poems.length} شعر` : ""}</p>
-     ${children ? `<div class="covers">${children}</div>` : ""}
-     <div class="grid">${slice.map((poem) => `<a class="hit" href="#/poem/${poem.id}"><strong>${esc(poem.title)}</strong><p>${esc(poem.excerpt || "")}</p></a>`).join("")}</div>
-     ${pages > 1 ? `<p class="chips">${pageNo > 1 ? `<a class="chip" href="#/cat/${id}?p=${pageNo - 1}">قبلی</a>` : ""}<span class="chip">صفحه ${pageNo} از ${pages}</span>${pageNo < pages ? `<a class="chip" href="#/cat/${id}?p=${pageNo + 1}">بعدی</a>` : ""}</p>` : ""}`,
-  );
-}
-
-function linesOf(poem) {
-  const verses = [...(poem.verses || [])].sort((a, b) => a.vOrder - b.vOrder);
-  if (verses.length) {
-    return verses.map((verse) => ({
-      order: verse.vOrder,
-      text: verse.text,
-      end: verse.versePosition === 1 || verse.versePosition === 3,
-      misra: verse.versePosition === 1 || verse.versePosition === 3 ? 2 : 1,
-      couplet: verse.coupletIndex,
-      summary: verse.coupletSummary || "",
-    }));
-  }
-  return String(poem.plainText || "")
-    .split(/\r?\n/)
-    .map((text) => text.trim())
-    .filter(Boolean)
-    .map((text, index) => ({ order: index, text, end: index % 2 === 1, misra: (index % 2) + 1, couplet: Math.floor(index / 2), summary: "" }));
-}
-
-function words(text) {
-  let n = 0;
-  return String(text)
-    .split(/(\s+)/)
-    .map((part) => {
-      if (!part.trim()) return esc(part);
-      n += 1;
-      return `<button class="word" type="button" data-w="${n}">${esc(part)}</button>`;
-    })
-    .join("");
-}
-
-function marked(text, spans) {
-  const parts = String(text || "").split(/(\s+)/);
-  let n = 0;
-  return parts
-    .map((part) => {
-      if (!part.trim()) return esc(part);
-      n += 1;
-      const hit = spans.find((span) => n >= span.from && n <= span.to);
-      return hit ? `<mark title="${esc(hit.label)}">${esc(part)}</mark>` : esc(part);
-    })
-    .join("");
-}
-
-let deviceList = null;
-async function devices() {
-  if (!deviceList) deviceList = await rootApi("/ganjoor/literary/devices");
-  return deviceList;
-}
-
-const DEVICE_GROUP = { 0: "بیان", 1: "بدیع لفظی", 2: "بدیع معنوی", Bayan: "بیان", BadiLafzi: "بدیع لفظی", BadiManavi: "بدیع معنوی" };
-
-async function poemPage(id, query) {
-  loading("شعر");
-  const { data: poem } = await api(
-    `/poem/${id}?catInfo=true&navigation=true&recitations=true&verseDetails=true&comments=false&images=false&songs=false`,
-  );
-  store.visit(poem.id);
-  const saved = store.get();
-  const marked = saved.marks.includes(poem.id);
-  const cat = poem.category?.cat || {};
-  const poet = poem.category?.poet || {};
-  const recitations = poem.recitations || [];
-  const lines = linesOf(poem);
-  const section = (poem.sections || [])[0] || {};
-  const metre = section.ganjoorMetre;
-  const rhyme = section.rhymeLetters || "";
-  const quotes = (poem.top6QuotedPoems || []).filter((item) => item.published !== false && item.relatedPoemId);
-  const related = section.top6RelatedSections || [];
-  const quiet = query.get("quiet") === "1";
-  const count = section.coupletsCount || poem.coupletsCount;
-  const brief = String(poem.poemSummary || "");
-  paint(
-    poem.title,
-    `<article class="read stage">
-       <div class="parchment">
-         <p class="crumb">${poet.id ? `<a href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)}</a>` : ""} ${cat.id ? `/ <a href="#/cat/${cat.id}">${esc(cat.title)}</a>` : ""}</p>
-         <h1>${esc(poem.title)}</h1>
-         <div class="ornament" aria-hidden="true"></div>
-         <p class="byline">${esc(poet.name || "")}</p>
-         <p class="meta">${[
-           count ? `${fa(count)} بیت` : "",
-           metre ? `<a href="#/vazn?id=${metre.id}" title="همه شعرهای این وزن">${esc(metre.rhythm)}</a>` : "",
-           rhyme ? `قافیه «${esc(rhyme)}»` : "",
-           poem.sourceName ? `منبع: ${esc(poem.sourceName)}` : "",
-           `<a href="https://ganjoor.net${esc(poem.fullUrl)}" rel="noreferrer">در گنجور</a>`,
-         ]
-           .filter(Boolean)
-           .join(`<span aria-hidden="true"> · </span>`)}</p>
-         ${brief ? `<p class="lead summary">${esc(brief.length > 220 ? `${brief.slice(0, 220)}…` : brief)}</p>` : ""}
-         <div class="poem" id="verses">${lines
-           .map(
-             (line) =>
-               `<p class="verse ${line.end ? "end" : ""}" data-order="${line.order}" data-couplet="${line.couplet}" data-m="${line.misra}">${words(line.text)}</p>`,
-           )
-           .join("")}</div>
-         <p class="muted hint">روی بیت بزن تا شرحش بیاید؛ روی واژه بزن تا جای دیگرش را ببینی.</p>
-         <div class="dock">
-           ${recitations.length ? `<button class="btn primary" id="listen" type="button" aria-pressed="false">▶ گوش بده</button>` : ""}
-           <button class="btn" id="mark" type="button" aria-pressed="${marked}">${marked ? "★ نشان شد" : "☆ نشان"}</button>
-           <button class="btn" id="quiet" type="button">${quiet ? "بازگشت" : "اتاق خلوت"}</button>
-           ${poem.previous ? `<a class="btn" href="#/poem/${poem.previous.id}">قبلی</a>` : ""}
-           ${poem.next ? `<a class="btn" href="#/poem/${poem.next.id}">بعدی</a>` : ""}
-         </div>
-       </div>
-       <aside class="tools">
-         <nav class="rail">
-           ${poet.id ? `<a href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)}</a>` : ""}
-           ${cat.id ? `<a href="#/cat/${cat.id}">فهرست ${esc(cat.title || "")}</a>` : ""}
-           <a href="https://ganjoor.net${esc(poem.fullUrl)}" rel="noreferrer">متن در گنجور</a>
-           ${poem.previous ? `<a href="#/poem/${poem.previous.id}">قبلی</a>` : ""}
-           ${poem.next ? `<a href="#/poem/${poem.next.id}">بعدی</a>` : ""}
-         </nav>
-         <div class="panel" id="side">
-           <div class="side-head"><strong id="side-title">بیت ۱</strong><button class="close" id="side-close" type="button" aria-label="بستن">×</button></div>
-           <div class="tabs" id="tabs">
-             <button class="chip on" type="button" data-tab="mean">معنی</button>
-             <button class="chip" type="button" data-tab="quote">تضمین${quotes.length + related.length ? ` ${quotes.length + related.length}` : ""}</button>
-             <button class="chip" type="button" data-tab="music">موسیقی</button>
-             <button class="chip" type="button" data-tab="margin">حاشیه</button>
-             <button class="chip" type="button" data-tab="mirror">آینه</button>
-             <button class="chip" type="button" data-tab="device" id="device-tab">آرایه</button>
-             ${metre ? `<button class="chip" type="button" data-tab="kin">هم‌وزن</button>` : ""}
-           </div>
-           <div id="pane" aria-live="polite"></div>
-         </div>
-         ${
-           recitations.length
-             ? `<div class="panel player">
-                  <label>خوانش <select id="reciter">${recitations.map((item, index) => `<option value="${index}">${esc(item.audioArtist || "خوانش")}</option>`).join("")}</select></label>
-                  <audio id="player" controls preload="none" src="${esc(recitations[0].mp3Url)}"></audio>
-                  <p class="muted" id="sync-note"></p>
-                </div>`
-             : `<p class="muted">برای این شعر در گنجور خوانش ثبت نشده.</p>`
-         }
-         <label class="panel block">یادداشت من <textarea id="note" rows="4">${esc(saved.notes[poem.id] || "")}</textarea></label>
-       </aside>
-     </article>`,
-    quiet,
-  );
-  let tab = "mean";
-  let activeCouplet = lines[0]?.couplet ?? 0;
-  const pane = document.querySelector("#pane");
-  const side = document.querySelector("#side");
-  const narrow = () => window.matchMedia("(max-width: 959px)").matches;
-  function showAboveSheet(node) {
-    if (!node || !side.classList.contains("open")) return;
-    const box = node.getBoundingClientRect();
-    const room = window.innerHeight - side.getBoundingClientRect().height;
-    if (box.top < 70 || box.bottom > room - 8) window.scrollBy({ top: box.top - Math.max(70, (room - box.height) / 2), behavior: "smooth" });
-  }
-  function openSheet() {
-    if (!narrow()) return;
-    side.classList.add("open");
-    document.body.classList.add("sheet-on");
-    showAboveSheet(document.querySelector(".verse.pick"));
-  }
-  function closeSheet() {
-    side.classList.remove("open");
-    document.body.classList.remove("sheet-on");
-  }
-  document.querySelector("#side-close").onclick = closeSheet;
-  document.onkeydown = (event) => {
-    if (event.key === "Escape") closeSheet();
-  };
-  function markCouplet() {
-    document.querySelectorAll(".verse").forEach((node) => node.classList.toggle("pick", Number(node.dataset.couplet) === activeCouplet));
-    const title = document.querySelector("#side-title");
-    if (title) title.textContent = `بیت ${fa(activeCouplet + 1)}`;
-  }
-  let tagsCache = null;
-  async function poemTags() {
-    if (!tagsCache) {
-      const data = await rootApi(`/ganjoor/literary/poem/${poem.id}/tags`);
-      tagsCache = (Array.isArray(data) ? data : []).sort((a, b) => a.coupletIndex - b.coupletIndex);
-    }
-    return tagsCache;
-  }
-  function lightTag(tag) {
-    document.querySelectorAll(".word.hl").forEach((node) => node.classList.remove("hl"));
-    for (const part of tag.parts || []) {
-      if (!part.wordStart || part.coupletIndex < 0) continue;
-      const verse = document.querySelector(`.verse[data-couplet="${part.coupletIndex}"][data-m="${part.misra}"]`);
-      if (!verse) continue;
-      for (let w = part.wordStart; w <= (part.wordEnd || part.wordStart); w += 1) verse.querySelector(`.word[data-w="${w}"]`)?.classList.add("hl");
-      if (side.classList.contains("open")) showAboveSheet(verse);
-      else verse.scrollIntoView({ block: "nearest" });
-    }
-  }
-  poemTags()
-    .then((tags) => {
-      const label = document.querySelector("#device-tab");
-      if (label && tags.length) label.textContent = `آرایه ${tags.length}`;
-    })
-    .catch(() => {});
-  function summaryOf(index) {
-    return lines.find((line) => line.couplet === index && line.summary)?.summary || "";
-  }
-  async function renderPane() {
-    document.querySelectorAll("#tabs .chip").forEach((node) => node.classList.toggle("on", node.dataset.tab === tab));
-    if (tab === "mean") {
-      pane.innerHTML = `<p>${esc(summaryOf(activeCouplet) || poem.poemSummary || "شرح این بیت در گنجور ثبت نشده.")}</p>`;
-      return;
-    }
-    if (tab === "quote") {
-      const blocks = quotes
-        .map(
-          (item) =>
-            `<a class="hit" href="#/poem/${item.relatedPoemId}"><div class="kicker">${esc(item.cachedRelatedPoemPoetName || "")}</div><strong>${esc(item.relatedCoupletVerse2 || item.cachedRelatedPoemFullTitle || "")}</strong><p>${esc(item.coupletVerse1 || "")}</p></a>`,
-        )
-        .concat(
-          related.map(
-            (item) =>
-              `<a class="hit" href="#/poem/${item.targetPoemId}"><div class="kicker">استقبال · ${esc(item.poetName || "")}</div><strong>${esc(item.fullTitle || "")}</strong></a>`,
-          ),
-        );
-      pane.innerHTML = blocks.length ? blocks.join("") : `<p class="muted">تضمین یا استقبالی برای این شعر ثبت نشده.</p>`;
-      return;
-    }
-    if (tab === "mirror") {
-      pane.innerHTML = `<p class="muted">یک واژه از شعر را بزن.</p>`;
-      return;
-    }
-    if (tab === "device") {
-      pane.innerHTML = `<p class="muted">می‌آورم…</p>`;
-      try {
-        const [list, tags] = await Promise.all([devices(), poemTags()]);
-        const names = new Map(list.map((item) => [item.id, item.name]));
-        if (!tags.length) {
-          pane.innerHTML = `<p class="muted">برای این شعر هنوز آرایه‌ای در گنجور ثبت نشده.</p><p><a href="#/devices">آرایه‌ها در همه گنجور</a></p>`;
-          return;
-        }
-        const here = tags.filter((tag) => tag.coupletIndex === activeCouplet);
-        const show = here.length ? here : tags;
-        pane.innerHTML =
-          `<p class="muted">${here.length ? "آرایه‌های همین بیت." : `${tags.length} آرایه در این شعر. روی بیتی بزن تا فقط آرایه‌های همان بیت بیاید.`}</p>` +
-          show
-            .map(
-              (tag, index) =>
-                `<button class="hit device-hit" type="button" data-tag="${tags.indexOf(tag)}"><div class="kicker">${esc(names.get(tag.deviceId) || "آرایه")} · بیت ${tag.coupletIndex + 1}${tag.uncertain ? " · نامطمئن" : ""}</div><p>${(tag.parts || [])
-                  .map((part) => esc(part.concept?.name || part.text || ""))
-                  .filter(Boolean)
-                  .join(" ← ")}</p></button>`,
-            )
-            .join("") +
-          `<p><a href="#/devices">آرایه‌ها در همه گنجور</a></p>`;
-        pane.querySelectorAll("[data-tag]").forEach((node) => {
-          node.onclick = () => lightTag(tags[Number(node.dataset.tag)]);
-        });
-      } catch (error) {
-        if (error === STALE) return;
-        pane.innerHTML = `<p class="muted">آرایه‌ها نیامد. ${esc(error.message)}</p>`;
-      }
-      return;
-    }
-    if (tab === "kin") {
-      pane.innerHTML = `<p class="muted">می‌آورم…</p>`;
-      try {
-        const qs = `metre=${encodeURIComponent(metre.rhythm)}${rhyme ? `&rhyme=${encodeURIComponent(rhyme)}` : ""}&PageNumber=1&PageSize=9`;
-        const { data, total } = await api(`/poems/similar?${qs}`);
-        const kin = (Array.isArray(data) ? data : []).filter((item) => item.id !== poem.id).slice(0, 8);
-        pane.innerHTML =
-          `<p class="muted">شعرهایی با همین وزن${rhyme ? " و قافیه" : ""}${total ? ` · ${Math.max(total - 1, 0)} شعر` : ""}. جای خوبی برای پیدا کردن استقبال و جواب.</p>` +
-          (kin.length
-            ? kin
-                .map((item) => {
-                  const first = String(item.plainText || "").split(/\r?\n/).find((line) => line.trim()) || "";
-                  return `<a class="hit" href="#/poem/${item.id}"><div class="kicker">${esc(String(item.fullTitle || "").split("»")[0])}</div><strong>${esc(item.title)}</strong><p>${esc(first)}</p></a>`;
-                })
-                .join("")
-            : `<p class="muted">شعر دیگری با همین وزن و قافیه پیدا نشد.</p>`) +
-          `<p><a href="#/vazn?id=${metre.id}">همه شعرهای این وزن</a></p>`;
-      } catch (error) {
-        if (error === STALE) return;
-        pane.innerHTML = `<p class="muted">${esc(error.message)}</p>`;
-      }
-      return;
-    }
-    pane.innerHTML = `<p class="muted">می‌آورم…</p>`;
-    try {
-      if (tab === "music") {
-        const { data } = await api(`/poem/${poem.id}?songs=true&verseDetails=false&recitations=false&comments=false&images=false&navigation=false&catInfo=false`);
-        const songs = data.songs || [];
-        pane.innerHTML = songs.length
-          ? songs
-              .slice(0, 8)
-              .map(
-                (song) =>
-                  `<p><a href="${esc(song.trackUrl)}" rel="noreferrer">${esc(song.artistName || "قطعه")} — ${esc(song.trackName || song.albumName || "")}</a></p>`,
-              )
-              .join("")
-          : `<p class="muted">قطعه موسیقی ثبت نشده.</p>`;
-      }
-      if (tab === "margin") {
-        const { data } = await api(`/poem/${poem.id}?comments=true&verseDetails=false&recitations=false&songs=false&images=false&navigation=false&catInfo=false`);
-        const comments = (data.comments || [])
-          .filter((item) => item.coupletIndex == null || item.coupletIndex === -1 || item.coupletIndex === activeCouplet)
-          .slice(0, 6);
-        const rows = comments
-          .map((item) => {
-            const box = document.createElement("div");
-            box.innerHTML = item.htmlComment || "";
-            return `<article class="card"><div class="kicker">${esc(item.authorName || "خواننده")}</div><p>${esc(box.textContent || "")}</p></article>`;
-          })
-          .join("");
-        pane.innerHTML =
-          (rows || `<p class="muted">حاشیه‌ای برای این بیت نیست.</p>`) +
-          `<p><a href="https://ganjoor.net${esc(poem.fullUrl)}" rel="noreferrer">نوشتن حاشیه در گنجور</a></p>`;
-      }
-    } catch (error) {
-      pane.innerHTML = `<p class="muted">این بخش نیامد. ${esc(error.message)}</p>`;
-    }
-  }
-  document.querySelector("#tabs").onclick = (event) => {
-    const button = event.target.closest("[data-tab]");
-    if (!button) return;
-    tab = button.dataset.tab;
-    renderPane();
-  };
-  document.querySelector("#verses").onclick = async (event) => {
-    const word = event.target.closest(".word");
-    const verse = event.target.closest(".verse");
-    if (!verse) return;
-    activeCouplet = Number(verse.dataset.couplet);
-    markCouplet();
-    openSheet();
-    if (word) {
-      tab = "mirror";
-      const term = bare(word.textContent || "");
-      pane.innerHTML = `<p class="muted">می‌گردم…</p>`;
-      document.querySelectorAll("#tabs .chip").forEach((node) => node.classList.toggle("on", node.dataset.tab === "mirror"));
-      try {
-        const poetFilter = poet.id ? `&poetId=${poet.id}` : "";
-        const { data, total } = await api(`/poems/search?term=${encodeURIComponent(term)}&pageNumber=1&pageSize=5${poetFilter}`);
-        const hits = (Array.isArray(data) ? data : [])
-          .map((item) => {
-            const first = String(item.plainText || "").split(/\r?\n/).find((line) => line.trim()) || "";
-            return `<a class="hit" href="#/poem/${item.id}"><strong>${esc(item.title)}</strong><p>${esc(first)}</p></a>`;
-          })
-          .join("");
-        pane.innerHTML = `<p>واژه «${esc(term)}» در آثار ${esc(poet.nickname || poet.name || "این شاعر")}${total ? `، ${total} شعر` : ""}</p>${hits || `<p class="muted">در آثار همین شاعر نیامد.</p>`}<p><a href="#/search?q=${encodeURIComponent(term)}">در همه گنجور</a></p>`;
-      } catch (error) {
-        pane.innerHTML = `<p class="muted">${esc(error.message)}</p>`;
-      }
-      return;
-    }
-    if (!["device", "margin"].includes(tab)) tab = "mean";
-    renderPane();
-  };
-  markCouplet();
-  renderPane();
-  document.querySelector("#mark").onclick = (event) => {
-    store.toggle(poem.id);
-    const on = store.get().marks.includes(poem.id);
-    event.currentTarget.textContent = on ? "★ نشان شد" : "☆ نشان";
-    event.currentTarget.setAttribute("aria-pressed", String(on));
-  };
-  document.querySelector("#quiet").onclick = () => {
-    location.hash = quiet ? `#/poem/${poem.id}` : `#/poem/${poem.id}?quiet=1`;
-  };
-  document.querySelector("#note").onchange = (event) => store.note(poem.id, event.target.value);
-  const player = document.querySelector("#player");
-  const picker = document.querySelector("#reciter");
-  if (player && picker) {
-    audioNode = player;
-    let times = [];
-    async function loadSync(rec) {
-      times = [];
-      const note = document.querySelector("#sync-note");
-      if (!rec.inSyncWithText || !rec.xmlText) {
-        if (note) note.textContent = rec.audioArtist ? `خوانش ${rec.audioArtist}` : "";
-        return;
-      }
-      try {
-        const xml = await fetch(rec.xmlText.startsWith("http") ? rec.xmlText : `https://api.ganjoor.net${rec.xmlText}`).then((response) => response.text());
-        times = [...xml.matchAll(/<VerseOrder>(\d+)<\/VerseOrder>\s*<AudioMiliseconds>(\d+)/g)].map((match) => ({
-          order: Number(match[1]),
-          at: Number(match[2]),
-        }));
-        if (note) note.textContent = "بیت با صدای خواننده پیش می‌رود.";
-      } catch {
-        if (note) note.textContent = "صوت هست؛ هم‌زمانی بیت‌ها نیامد.";
-      }
-    }
-    picker.onchange = () => {
-      const rec = recitations[Number(picker.value)];
-      player.src = rec.mp3Url;
-      loadSync(rec);
-    };
-    player.ontimeupdate = () => {
-      if (!times.length) return;
-      const now = player.currentTime * 1000;
-      let order = times[0].order;
-      for (const mark of times) if (mark.at <= now) order = mark.order;
-      document.querySelectorAll(".verse").forEach((node) => {
-        const on = Number(node.dataset.order) === order;
-        if (on && !node.classList.contains("on")) node.scrollIntoView({ block: "nearest" });
-        node.classList.toggle("on", on);
-      });
-    };
-    const listen = document.querySelector("#listen");
-    const syncListen = () => {
-      if (!listen) return;
-      listen.textContent = player.paused ? "▶ گوش بده" : "❚❚ مکث";
-      listen.setAttribute("aria-pressed", String(!player.paused));
-    };
-    if (listen) listen.onclick = () => (player.paused ? player.play() : player.pause());
-    player.onplay = syncListen;
-    player.onpause = syncListen;
-    player.onended = syncListen;
-    loadSync(recitations[0]);
-  }
-}
-
-async function searchPage(query) {
-  const q = (query.get("q") || "").trim();
-  const pageNo = Math.max(1, Number(query.get("p") || 1));
-  const poetId = Number(query.get("poet") || 0);
-  const poetPart = poetId ? `&poet=${poetId}` : "";
-  if (!q) {
-    paint(
-      "جستجو",
-      `<h1>جستجو</h1><p class="lead">یک واژه یا تکه‌ای از بیت را بنویس.</p>
-       <form class="big-search" id="page-search"><input name="q" placeholder="مثلاً سرو، یا: بشنو از نی" aria-label="جستجو" autofocus /><button class="btn primary" type="submit">جستجو</button></form>
-       <p class="chips">${["بشنو از نی", "سرو", "مستی", "توانا بود", "رند"].map((word) => `<a class="chip" href="#/search?q=${encodeURIComponent(word)}">${word}</a>`).join("")}</p>`,
-    );
-    if (input) input.value = "";
-    document.querySelector("#page-search").onsubmit = (event) => {
-      event.preventDefault();
-      const value = String(new FormData(event.currentTarget).get("q") || "").trim();
-      if (value) location.hash = `#/search?q=${encodeURIComponent(value)}`;
-    };
-    return;
-  }
-  loading("جستجو");
-  const { data, total } = await api(`/poems/search?term=${encodeURIComponent(q)}&pageNumber=${pageNo}&pageSize=8${poetId ? `&poetId=${poetId}` : ""}`);
-  const rows = (Array.isArray(data) ? data : [])
-    .map((poem) => {
-      const first = String(poem.plainText || "")
-        .split(/\r?\n/)
-        .map((line) => line.trim())
-        .filter(Boolean)
-        .slice(0, 2)
-        .join(" / ");
-      const poet = poem.category?.poet;
-      return `<a class="hit" href="#/poem/${poem.id}"><div class="kicker">${esc(poet?.nickname || poet?.name || "")}</div><strong>${esc(poem.fullTitle || poem.title)}</strong><p>${esc(first)}</p></a>`;
-    })
-    .join("");
-  const pages = total ? Math.ceil(total / 8) : 0;
-
-  // شناسایی هوشمند شاعر در جستجو برای پرش مستقیم به خط زمان
-  let matchedPoet = null;
-  if (!poetId && q.length >= 2) {
-    try {
-      const { data: allPoets } = await api("/poets");
-      if (Array.isArray(allPoets)) {
-        matchedPoet = allPoets.find((p) => {
-          const n = (p.name || "").trim();
-          const nick = (p.nickname || "").trim();
-          return n === q || nick === q || n.includes(q) || (nick && nick.includes(q)) || q.includes(n);
-        });
-      }
-    } catch {}
-  }
-
-  paint(
-    "جستجو",
-    `<h1>جستجو</h1>
-     <p class="lead">نتیجه «${esc(q)}»${poetId ? " در آثار یک شاعر" : ""}${total ? ` · ${total} شعر` : ""}</p>
-     ${matchedPoet ? `
-     <div class="g-search-poet-banner">
-       <div class="g-spb-avatar">${esc((matchedPoet.nickname || matchedPoet.name).slice(0, 1))}</div>
-       <div class="g-spb-content">
-         <span class="g-spb-badge">شاعر شناسایی‌شده</span>
-         <h3 class="g-spb-title">${esc(matchedPoet.nickname || matchedPoet.name)}</h3>
-         <p class="g-spb-meta">${matchedPoet.birthYearInLHijri ? `${yr(matchedPoet.birthYearInLHijri)} تا ${yr(matchedPoet.deathYearInLHijri)} هـ.ق` : ""} ${matchedPoet.birthPlace ? `· زاده ${esc(matchedPoet.birthPlace)}` : ""}</p>
-       </div>
-       <div class="g-spb-actions">
-         <a class="btn primary" href="#/tree?poet=${matchedPoet.id}">مشاهده در خط زمان هم‌عصران ➜</a>
-         <a class="chip" href="#/poet/${matchedPoet.id}">دیوان اشعار</a>
-         <a class="chip" href="#/bridges/${matchedPoet.id}">پل‌های تضمین</a>
-       </div>
-     </div>` : ""}
-     ${poetId ? `<p class="chips"><a class="chip" href="#/search?q=${encodeURIComponent(q)}">در همه گنجور</a></p>` : ""}
-     ${!poetId && pageNo === 1 && !/\s/.test(q) ? `<section id="meter" class="meter" aria-live="polite"><p class="muted">شمار این واژه نزد شاعران را می‌آورم…</p></section>` : ""}
-     ${rows ? `<div class="grid">${rows}</div>` : `<p>چیزی پیدا نشد.</p>`}
-     ${pages > 1 ? `<p class="chips">${pageNo > 1 ? `<a class="chip" href="#/search?q=${encodeURIComponent(q)}${poetPart}&p=${pageNo - 1}">قبلی</a>` : ""}<span class="chip">${pageNo} از ${pages}</span>${pageNo < pages ? `<a class="chip" href="#/search?q=${encodeURIComponent(q)}${poetPart}&p=${pageNo + 1}">بعدی</a>` : ""}</p>` : ""}`,
-  );
-  if (input) input.value = q;
-  const meter = document.querySelector("#meter");
-  if (meter) meter.innerHTML = await wordMeter(q).catch((error) => (error === STALE ? "" : `<p class="muted">شمار واژه از گنجور نیامد.</p>`));
-}
-
-// which poets used this word most: count and rate per 10,000 words (formerly the separate «واژه‌سنج» page)
-async function wordMeter(q) {
-  const [{ data }, totalRow] = await Promise.all([
-    api(`/wordcounts/bycat?term=${encodeURIComponent(q)}&PageNumber=1&PageSize=40`),
-    api(`/wordcounts/bycat/count?term=${encodeURIComponent(q)}`).catch((error) => {
-      if (error === STALE) throw error;
-      return { data: null };
-    }),
-  ]);
-  const rows = (Array.isArray(data) ? data : []).filter((row) => row.count > 0);
-  if (!rows.length) return "";
-  const most = Math.max(1, ...rows.map((row) => row.count));
-  const rate = (row) => (row.totalWordCount ? (row.count / row.totalWordCount) * 10000 : 0);
-  const byRate = [...rows].filter((row) => row.totalWordCount > 2000).sort((a, b) => rate(b) - rate(a)).slice(0, 8);
-  const topRate = Math.max(0.0001, ...byRate.map(rate));
-  const total = totalRow?.data?.count;
-  const bar = (row, width, value, cls = "") =>
-    `<a class="barrow ${cls}" href="#/search?q=${encodeURIComponent(q)}&poet=${row.poetId}"><span>${esc(row.name)}</span><i style="width:${width.toFixed(1)}%"></i><b>${value}</b></a>`;
-  return `<h2 class="section">«${esc(q)}» نزد شاعران${total ? ` · ${Number(total).toLocaleString("fa-IR")} بار در همه گنجور` : ""}</h2>
-    <div class="meter-cols">
-      <div><p class="muted">بیشترین شمار</p><div class="bars">${rows.slice(0, 8).map((row) => bar(row, (row.count / most) * 100, row.count.toLocaleString("fa-IR"))).join("")}</div></div>
-      <div><p class="muted">بیشترین نسبت (در هر ده هزار واژه؛ دیوان‌های زیر دو هزار واژه حساب نشده)</p><div class="bars">${byRate.map((row) => bar(row, (rate(row) / topRate) * 100, rate(row).toLocaleString("fa-IR", { maximumFractionDigits: 1 }), "lapis")).join("")}</div></div>
-    </div>
-    <p class="muted">شمارش واژهٔ کامل است، نه پاره‌ای از واژهٔ دیگر. روی نام شاعر بزن تا شعرهایش با این واژه بیاید.</p>
-    <h2 class="section">شعرها</h2>`;
-}
-
-// A map you first see whole, then wander in: drag to pan, wheel or two fingers to zoom.
-// Pins keep one screen size; labels that would collide are hidden, biggest first wins.
+/* ── موتور بوم گردش‌پذیر (Pan/Zoom/Declutter) برای نقشه‌ها و گراف‌ها ── */
 function atlasStage(atlas) {
   const stage = document.createElement("div");
   stage.className = "atlas-stage";
   stage.tabIndex = 0;
-  stage.setAttribute("aria-label", "نقشه؛ با کشیدن جابه‌جا شو، با چرخ یا دو انگشت بزرگ‌نمایی کن، صفر برای نمای کل");
+  stage.setAttribute("aria-label", "بوم تعاملی؛ با کشیدن جابه‌جا شوید و با چرخ ماوس بزرگ‌نمایی کنید");
   atlas.replaceWith(stage);
   stage.append(atlas);
   stage.insertAdjacentHTML(
     "beforeend",
     `<div class="stage-ctl" role="toolbar" aria-label="بزرگ‌نمایی"><button type="button" data-zoom="in" aria-label="بزرگ‌تر">+</button><button type="button" data-zoom="out" aria-label="کوچک‌تر">−</button><button type="button" data-zoom="fit">نمای کل</button></div>`,
   );
-  let k = 1;
-  let tx = 0;
-  let ty = 0;
-  let frame = 0;
+  let k = 1, tx = 0, ty = 0, frame = 0;
   const size = () => ({ w: stage.clientWidth || 1, h: stage.clientHeight || 1 });
   const clamp = () => {
     const { w, h } = size();
@@ -2121,7 +305,6 @@ function atlasStage(atlas) {
   };
   const declutter = () => {
     const box = stage.getBoundingClientRect();
-    // a label may not cover another label or another city's dot
     const dots = [...atlas.querySelectorAll(".pin i, .pin circle")].map((dot) => ({ r: dot.getBoundingClientRect(), pin: dot.parentElement }));
     const taken = [];
     const pins = [...atlas.querySelectorAll(".pin")].sort((a, b) => (Number(b.dataset.w) || 0) - (Number(a.dataset.w) || 0));
@@ -2137,7 +320,7 @@ function atlasStage(atlas) {
       else taken.push(r);
     }
   };
-  const render = () => {
+  const renderView = () => {
     clamp();
     atlas.style.transform = `translate(${tx.toFixed(1)}px,${ty.toFixed(1)}px) scale(${k.toFixed(4)})`;
     atlas.style.setProperty("--inv", (1 / k).toFixed(4));
@@ -2146,7 +329,7 @@ function atlasStage(atlas) {
   };
   const draw = () => {
     cancelAnimationFrame(frame);
-    frame = requestAnimationFrame(render);
+    frame = requestAnimationFrame(renderView);
   };
   const zoomAt = (sx, sy, factor) => {
     const next = Math.min(Math.max(k * factor, 1), 8);
@@ -2156,34 +339,33 @@ function atlasStage(atlas) {
     draw();
   };
   const pointers = new Map();
-  let travelled = 0;
-  let pinch = 0;
-  stage.addEventListener("pointerdown", (event) => {
-    if (event.target.closest(".stage-ctl")) return;
-    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+  let travelled = 0, pinch = 0;
+  stage.addEventListener("pointerdown", (e) => {
+    if (e.target.closest(".stage-ctl")) return;
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
     travelled = 0;
     if (pointers.size === 2) {
       const [a, b] = [...pointers.values()];
       pinch = Math.hypot(a.x - b.x, a.y - b.y);
     }
   });
-  stage.addEventListener("pointermove", (event) => {
-    const last = pointers.get(event.pointerId);
+  stage.addEventListener("pointermove", (e) => {
+    const last = pointers.get(e.pointerId);
     if (!last) return;
-    const now = { x: event.clientX, y: event.clientY };
+    const now = { x: e.clientX, y: e.clientY };
     const box = stage.getBoundingClientRect();
     if (pointers.size === 1) {
       travelled += Math.abs(now.x - last.x) + Math.abs(now.y - last.y);
       if (travelled > 6) {
-        if (!stage.hasPointerCapture(event.pointerId)) stage.setPointerCapture(event.pointerId);
+        if (!stage.hasPointerCapture(e.pointerId)) stage.setPointerCapture(e.pointerId);
         stage.classList.add("grab");
         tx += now.x - last.x;
         ty += now.y - last.y;
         draw();
       }
-      pointers.set(event.pointerId, now);
+      pointers.set(e.pointerId, now);
     } else if (pointers.size === 2) {
-      pointers.set(event.pointerId, now);
+      pointers.set(e.pointerId, now);
       const [a, b] = [...pointers.values()];
       const d = Math.hypot(a.x - b.x, a.y - b.y);
       travelled += 20;
@@ -2191,606 +373,386 @@ function atlasStage(atlas) {
       pinch = d;
     }
   });
-  const lift = (event) => {
-    pointers.delete(event.pointerId);
+  const lift = (e) => {
+    pointers.delete(e.pointerId);
     if (pointers.size < 2) pinch = 0;
     if (!pointers.size) stage.classList.remove("grab");
   };
   stage.addEventListener("pointerup", lift);
   stage.addEventListener("pointercancel", lift);
-  // a drag must not count as a click on a pin
-  stage.addEventListener(
-    "click",
-    (event) => {
-      if (travelled > 6 && !event.target.closest(".stage-ctl")) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-    },
-    true,
-  );
-  stage.addEventListener(
-    "wheel",
-    (event) => {
-      event.preventDefault();
-      const box = stage.getBoundingClientRect();
-      zoomAt(event.clientX - box.left, event.clientY - box.top, Math.exp(-event.deltaY * (event.ctrlKey ? 0.01 : 0.0018)));
-    },
-    { passive: false },
-  );
-  stage.addEventListener("dblclick", (event) => {
-    event.preventDefault();
+  stage.addEventListener("click", (e) => {
+    if (travelled > 6 && !e.target.closest(".stage-ctl")) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, true);
+  stage.addEventListener("wheel", (e) => {
+    e.preventDefault();
     const box = stage.getBoundingClientRect();
-    zoomAt(event.clientX - box.left, event.clientY - box.top, 2);
+    zoomAt(e.clientX - box.left, e.clientY - box.top, Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0018)));
+  }, { passive: false });
+  stage.addEventListener("dblclick", (e) => {
+    e.preventDefault();
+    const box = stage.getBoundingClientRect();
+    zoomAt(e.clientX - box.left, e.clientY - box.top, 2);
   });
-  const reset = () => {
-    k = 1;
-    tx = 0;
-    ty = 0;
-    draw();
-  };
-  stage.querySelector(".stage-ctl").addEventListener("click", (event) => {
-    const button = event.target.closest("[data-zoom]");
-    if (!button) return;
+  const reset = () => { k = 1; tx = 0; ty = 0; draw(); };
+  stage.querySelector(".stage-ctl").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-zoom]");
+    if (!btn) return;
     const { w, h } = size();
-    if (button.dataset.zoom === "in") zoomAt(w / 2, h / 2, 1.6);
-    else if (button.dataset.zoom === "out") zoomAt(w / 2, h / 2, 1 / 1.6);
+    if (btn.dataset.zoom === "in") zoomAt(w / 2, h / 2, 1.6);
+    else if (btn.dataset.zoom === "out") zoomAt(w / 2, h / 2, 1 / 1.6);
     else reset();
-  });
-  stage.addEventListener("keydown", (event) => {
-    const { w, h } = size();
-    const moves = { ArrowLeft: [80, 0], ArrowRight: [-80, 0], ArrowUp: [0, 80], ArrowDown: [0, -80] };
-    if (moves[event.key]) {
-      event.preventDefault();
-      tx += moves[event.key][0];
-      ty += moves[event.key][1];
-      draw();
-    } else if (event.key === "+" || event.key === "=") zoomAt(w / 2, h / 2, 1.4);
-    else if (event.key === "-") zoomAt(w / 2, h / 2, 1 / 1.4);
-    else if (event.key === "0" || event.key === "۰") reset();
   });
   const watch = new ResizeObserver(() => (document.body.contains(stage) ? draw() : watch.disconnect()));
   watch.observe(stage);
-  // fly to a point given in percent of the map
-  const focusOn = (px, py, zoom = 2.6) => {
-    const { w, h } = size();
-    k = Math.max(k, zoom);
-    tx = w / 2 - (px / 100) * w * k;
-    ty = h / 2 - (py / 100) * h * k;
-    draw();
-  };
   draw();
   document.fonts?.ready.then(draw);
-  return { refresh: draw, reset, focusOn };
+  return { refresh: draw, reset };
 }
 
-async function mapPage(query) {
-  loading("نقشه");
-  const { data: poets } = await api("/poets");
-  const placed = poets.filter((poet) => poet.birthPlaceLatitude && poet.birthPlaceLongitude && poet.birthYearInLHijri && poet.deathYearInLHijri);
-  const min = Math.min(...placed.map((poet) => poet.birthYearInLHijri));
-  const max = Math.max(...placed.map((poet) => poet.deathYearInLHijri));
-  let year = Number(query.get("y") || 750);
-  if (year < min) year = min;
-  if (year > max) year = max;
-
-  // every birthplace of every age, so the whole picture is always there in faint
-  const cities = new Map();
-  for (const poet of placed) {
-    const point = project(poet.birthPlaceLongitude, poet.birthPlaceLatitude);
-    if (point.x < 0 || point.x > 100 || point.y < 0 || point.y > 100) continue;
-    const city = cityOf(poet);
-    if (!cities.has(city)) cities.set(city, point);
-  }
-  const ghosts = [...cities.values()].map((point) => `<i class="ghost" style="left:${point.x}%;top:${point.y}%"></i>`).join("");
-
-  // how many poets were alive in each decade, drawn behind the slider
-  const decades = [];
-  for (let y = Math.floor(min / 10) * 10; y <= max; y += 10) decades.push({ y, n: placed.filter((poet) => poet.birthYearInLHijri <= y + 5 && poet.deathYearInLHijri >= y + 5).length });
-  const peak = Math.max(1, ...decades.map((item) => item.n));
-  const spark = `<svg class="spark" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 ${decades
-    .map((item) => `L${(((item.y + 5 - min) / (max - min)) * 1000).toFixed(1)},${(40 - (item.n / peak) * 36).toFixed(1)}`)
-    .join(" ")} L1000,40 Z"/></svg>`;
-  const ticks = [];
-  for (let mark = Math.ceil(min / 100) * 100; mark < max; mark += 100) ticks.push(mark);
-
-  paint(
-    "نقشه",
-    `<h1>هم‌عصران</h1>
-     <nav class="views" aria-label="نما"><a href="#/tree">روی خط زمان</a><a href="#/map" aria-current="page">روی نقشهٔ زادگاه‌ها</a></nav>
-     <p class="lead">هر سال را که برگزینی، شاعرانی که آن سال زنده بودند در زادگاهشان روشن می‌شوند. نقطه‌های کم‌رنگ زادگاه همه شاعران همه دوره‌هاست. اندازه نقطه، شمار شاعران زنده آن شهر است. بکش، بزرگ کن، یا دکمه پخش را بزن تا زمان راه بیفتد.</p>
-     <div class="year">
-       <div class="year-top"><button type="button" class="play" id="play" aria-label="پخش">▶</button><span>سفر در زمان</span><strong id="year-label"></strong></div>
-       <div class="scale">${spark}
-         <input id="year" type="range" min="${min}" max="${max}" value="${year}" aria-label="سال هجری" />
-         <div class="ticks">${ticks.map((mark) => `<span class="${mark % 200 ? "minor" : ""}" style="left:${((mark - min) / (max - min)) * 100}%">${mark}</span>`).join("")}</div>
-       </div>
-     </div>
-     <div class="atlas realm" id="atlas" aria-label="گستره شهرهای شعر فارسی"><div class="ghosts">${ghosts}</div><div id="pins"></div></div>
-     <p class="muted" id="alive-count"></p>
-     <div class="grid" id="city-list"></div>
-     <div id="far"></div>`,
-  );
-  const atlas = document.querySelector("#atlas");
-  const view = atlasStage(atlas);
-  const pinsBox = document.querySelector("#pins");
-  const slider = document.querySelector("#year");
-  const label = document.querySelector("#year-label");
-  const count = document.querySelector("#alive-count");
-  const list = document.querySelector("#city-list");
-  const farBox = document.querySelector("#far");
-
-  const drawYear = (value) => {
-    year = Number(value);
-    const alive = placed.filter((poet) => poet.birthYearInLHijri <= year && poet.deathYearInLHijri >= year);
-    const groups = new Map();
-    const far = [];
-    for (const poet of alive) {
-      const point = project(poet.birthPlaceLongitude, poet.birthPlaceLatitude);
-      if (point.x < 0 || point.x > 100 || point.y < 0 || point.y > 100) {
-        far.push(poet);
-        continue;
-      }
-      const city = cityOf(poet);
-      const group = groups.get(city) || { city, x: point.x, y: point.y, poets: [], noted: city === "توس" };
-      group.poets.push(poet);
-      groups.set(city, group);
-    }
-    const most = Math.max(1, ...[...groups.values()].map((group) => group.poets.length));
-    label.textContent = `سال ${yr(year)} هجری · حدود ${yr(toGregorian(year))} میلادی`;
-    pinsBox.innerHTML = [...groups.values()]
-      .map((group, index) => {
-        const people = group.poets.map((poet) => poet.nickname || poet.name).join("، ");
-        const note = group.noted ? " — گنجور مشهد نوشته" : "";
-        const size = Math.round(10 + Math.sqrt(group.poets.length / most) * 16);
-        const n = group.poets.length;
-        return `<a class="pin" data-city="${index}" data-w="${n}" style="left:${group.x}%;top:${group.y}%" href="#/map?y=${year}" title="${esc(group.city)}: ${esc(people)}${esc(note)}"><span>${esc(group.city)}${n > 1 ? ` <b>${fa(n)}</b>` : ""}</span><i style="width:${size}px;height:${size}px"></i></a>`;
-      })
-      .join("") || `<p class="muted empty-map">در این سال کسی در این گستره نیست.</p>`;
-    count.textContent = `${fa(alive.length)} شاعر در این سال، در ${fa(groups.size)} شهر این گستره.`;
-    list.innerHTML = [...groups.values()]
-      .map(
-        (group, index) =>
-          `<article class="card" id="city-${index}"><strong>${esc(group.city)}</strong>${group.noted ? `<p class="muted">گنجور این زادگاه را مشهد نوشته. در روزگار این شاعران شهر توس بوده، کنار همان نقطه.</p>` : ""}<p class="chips">${group.poets
-            .map((poet) => `<a class="chip" href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)}</a>`)
-            .join("")}</p></article>`,
-      )
-      .join("");
-    farBox.innerHTML = far.length
-      ? `<p class="muted">زادگاه این‌ها دورتر است، در هند یا آناتولی یا شام، و روی این صفحه جا نشده:</p><div class="chips">${far.map((poet) => `<a class="chip" href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)} · ${esc(poet.birthPlace || "")}</a>`).join("")}</div>`
-      : "";
-    history.replaceState(null, "", `#/map?y=${year}`);
-    view.refresh();
-  };
-
-  let timer = 0;
-  const play = document.querySelector("#play");
-  const stop = () => {
-    clearInterval(timer);
-    timer = 0;
-    play.textContent = "▶";
-    play.setAttribute("aria-label", "پخش");
-  };
-  play.onclick = () => {
-    if (timer) return stop();
-    if (year >= max - 5) slider.value = min;
-    play.textContent = "❚❚";
-    play.setAttribute("aria-label", "ایست");
-    timer = setInterval(() => {
-      if (!document.body.contains(play)) return stop();
-      const next = Math.min(max, Number(slider.value) + 5);
-      slider.value = next;
-      drawYear(next);
-      if (next >= max) stop();
-    }, 180);
-  };
-  slider.oninput = () => {
-    stop();
-    drawYear(slider.value);
-  };
-  pinsBox.addEventListener("click", (event) => {
-    const pin = event.target.closest(".pin[data-city]");
-    if (!pin) return;
-    event.preventDefault();
-    const card = document.getElementById(`city-${pin.dataset.city}`);
-    card?.scrollIntoView({ block: "nearest", behavior: "smooth" });
-    card?.classList.add("flash");
-    setTimeout(() => card?.classList.remove("flash"), 1200);
-  });
-  drawYear(year);
-}
-
-async function libraryPage() {
-  const data = store.get();
-  const block = async (ids, empty) => {
-    if (!ids.length) return `<p class="muted">${empty}</p>`;
-    const cards = await Promise.all(
-      ids.slice(0, 12).map(async (id) => {
-        try {
-          const { data: poem } = await api(`/poem/${id}?catInfo=true&verseDetails=false&recitations=false&navigation=false&comments=false&images=false&songs=false`);
-          const poet = poem.category?.poet;
-          return `<a class="card" href="#/poem/${id}"><div class="kicker">${esc(poet?.nickname || "")}</div><strong>${esc(poem.title)}</strong></a>`;
-        } catch (error) {
-          if (error === STALE) throw error;
-          return "";
-        }
-      }),
-    );
-    return `<div class="grid">${cards.join("")}</div>`;
-  };
-  loading("کتابخانه");
-  const notes = Object.entries(data.notes).filter(([, text]) => String(text).trim());
-  const [marksHtml, historyHtml] = await Promise.all([
-    block(data.marks, "هنوز شعری را نشان نکرده‌ای. در صفحه هر شعر دکمه «نشان» را بزن."),
-    block(data.history, "هنوز شعری نخوانده‌ای."),
-  ]);
-  const noteHtml = notes.length
-    ? `<div class="grid">${notes
-        .slice(0, 12)
-        .map(([id, text]) => `<article class="card"><a href="#/poem/${id}">یادداشت شعر</a><p class="muted">${esc(text)}</p></article>`)
-        .join("")}</div>`
-    : `<p class="muted">یادداشتی نیست.</p>`;
-  paint(
-    "کتابخانه",
-    `<h1>کتابخانه من</h1>
-     <p class="lead">نشان و یادداشت فقط روی همین دستگاه می‌ماند.</p>
-     <div class="stats"><div class="stat"><b>${data.marks.length}</b>نشان</div><div class="stat"><b>${notes.length}</b>یادداشت</div><div class="stat"><b>${data.history.length}</b>خوانده‌شده</div></div>
-     <h2 class="section">نشان‌ها</h2>${marksHtml}
-     <h2 class="section">یادداشت‌ها</h2>${noteHtml}
-     <h2 class="section">خاطره‌نگار</h2>${historyHtml}`,
-  );
-}
-
-async function bridgesPage(id) {
-  loading("پل‌ها");
-  const [{ data }, { data: quoted }] = await Promise.all([api(`/poet/${id}`), api(`/quoted?poetId=${id}&published=true`)]);
-  const poet = data.poet;
-  const links = new Map();
-  for (const item of Array.isArray(quoted) ? quoted : []) {
-    if (!item.relatedPoetId || item.relatedPoetId === poet.id || item.rejected) continue;
-    const row = links.get(item.relatedPoetId) || {
-      id: item.relatedPoetId,
-      name: item.cachedRelatedPoemPoetName || "شاعر",
-      died: item.cachedRelatedPoemPoetDeathYearInLHijri || 0,
-      n: 0,
-      before: 0,
-      after: 0,
-      both: 0,
-      samples: [],
-    };
-    row.n += 1;
-    if (item.isPriorToRelated) row.before += 1;
-    else row.after += 1;
-    if (item.claimedByBothPoets) row.both += 1;
-    if (row.samples.length < 3)
-      row.samples.push({
-        mine: item.poemId,
-        theirs: item.relatedPoemId,
-        line: [item.coupletVerse1, item.coupletVerse2].filter(Boolean).join(" / "),
-        other: [item.relatedCoupletVerse1, item.relatedCoupletVerse2].filter(Boolean).join(" / "),
-        title: item.cachedRelatedPoemFullTitle || "",
-      });
-    links.set(item.relatedPoetId, row);
-  }
-  const rows = [...links.values()].sort((a, b) => b.n - a.n);
-  // every linked poet on one time axis: bubbles above (area = links), arcs below (who came first)
-  const most = Math.max(1, ...rows.map((row) => row.n));
-  const own = poet.deathYearInLHijri || 0;
-  const dated = rows.filter((row) => row.died);
-  const undated = rows.filter((row) => !row.died);
-  const years = [...dated.map((row) => row.died), ...(own ? [own] : [])];
-  const lo = Math.floor((Math.min(...years, own || Infinity) - 20) / 50) * 50;
-  const hi = Math.ceil((Math.max(...years, own || -Infinity) + 20) / 50) * 50;
-  const GW = Math.round(Math.min(1000, Math.max(540, (root.clientWidth || 1000) * 1.5)));
-  const AXIS = 330;
-  const EDGE = 40;
-  const span = undated.length ? GW - EDGE * 2 - 70 : GW - EDGE * 2;
-  const gx = (year) => GW - EDGE - ((year - lo) / Math.max(1, hi - lo)) * span;
-  const radius = (row) => 4 + Math.sqrt(row.n / most) * 20;
-  const tone = (row) => (row.before && !row.after ? "late" : row.after && !row.before ? "early" : "both");
-  const placedB = [];
-  const bubbles = [...rows]
-    .sort((a, b) => b.n - a.n)
-    .map((row) => {
-      const r = radius(row);
-      const cx = row.died ? gx(row.died) : EDGE + 30;
-      let cy = AXIS - r - 6;
-      for (let tries = 0; tries < 400; tries++) {
-        if (!placedB.some((o) => Math.hypot(o.cx - cx, o.cy - cy) < o.r + r + 2)) break;
-        cy -= 2;
-      }
-      const item = { ...row, r, cx, cy };
-      placedB.push(item);
-      return item;
-    });
-  const ox = own ? gx(own) : GW / 2;
-  // a name is written only where it covers no other name and no other bubble; the rest show on hover
-  const boxes = [{ l: ox - 60, r: ox + 60, t: AXIS - 34, b: AXIS - 6 }];
-  const meets = (a, b) => a.l < b.r && a.r > b.l && a.t < b.b && a.b > b.t;
-  const hitsBubble = (box, self) => bubbles.some((o) => o !== self && o.cx + o.r * 0.7 > box.l && o.cx - o.r * 0.7 < box.r && o.cy + o.r * 0.7 > box.t && o.cy - o.r * 0.7 < box.b);
-  const labels = new Map();
-  for (const item of bubbles.slice(0, 30)) {
-    const text = `${item.name} ${fa(item.n)}`;
-    const wide = text.length * 6.6 + 4;
-    const spots = [
-      { x: item.cx - item.r - 3, y: item.cy + 4 },
-      { x: item.cx + item.r + 3 + wide, y: item.cy + 4 },
-      { x: item.cx + wide / 2, y: item.cy - item.r - 5 },
-      { x: item.cx - item.r * 0.5, y: item.cy - item.r * 0.7 - 2 },
-      { x: item.cx + item.r * 0.5 + wide, y: item.cy - item.r * 0.7 - 2 },
-    ];
-    for (const spot of spots) {
-      const x = spot.x;
-      const box = { l: x - wide, r: x, t: spot.y - 13, b: spot.y + 3 };
-      if (box.l < 2 || box.r > GW - 2) continue;
-      if (boxes.some((o) => meets(o, box)) || hitsBubble(box, item)) continue;
-      boxes.push(box);
-      labels.set(item.id, { x, y: spot.y, text });
-      break;
-    }
-  }
-  // the biggest names that found no room get a callout above the swarm, with a thin leader line
-  const swarmTop = Math.min(...bubbles.map((item) => item.cy - item.r));
-  const rowsY = [swarmTop - 14, swarmTop - 34, swarmTop - 54];
-  const callouts = [];
-  for (const item of bubbles.slice(0, 10)) {
-    if (labels.has(item.id)) continue;
-    const text = `${item.name} ${fa(item.n)}`;
-    const wide = text.length * 6.6 + 4;
-    for (const y of rowsY) {
-      const x = Math.min(GW - 4, Math.max(wide + 4, item.cx + wide / 2));
-      const box = { l: x - wide, r: x, t: y - 13, b: y + 3 };
-      if (boxes.some((o) => meets(o, box))) continue;
-      boxes.push(box);
-      callouts.push({ x, y, text, cx: item.cx, cy: item.cy - item.r });
-      break;
-    }
-  }
-  const gTicks = [];
-  for (let year = lo; year <= hi; year += hi - lo > 600 ? 100 : 50) gTicks.push(year);
-  const top = Math.min(...bubbles.map((item) => item.cy - item.r), ...callouts.map((item) => item.y - 16)) - 10;
-  const graph = rows.length
-    ? `<div class="bridge-map"><svg class="bridge-svg" viewBox="0 ${top} ${GW} ${AXIS + 150 - top}" role="img" aria-label="پل‌های ${esc(poet.nickname || poet.name)} با ${fa(rows.length)} شاعر روی خط زمان">
-        <g class="b-axis">${gTicks.map((year) => `<line x1="${gx(year)}" x2="${gx(year)}" y1="${top}" y2="${AXIS}"/><text x="${gx(year)}" y="${AXIS + 136}">${yr(year)} ق</text>`).join("")}<line class="base" x1="${EDGE}" x2="${GW - EDGE}" y1="${AXIS}" y2="${AXIS}"/></g>
-        ${undated.length ? `<text class="b-note" x="${EDGE + 30}" y="${AXIS + 136}">بی‌تاریخ</text>` : ""}
-        <g class="b-arcs">${bubbles
-          .map((item) => {
-            const lift = Math.min(118, 14 + Math.abs(item.cx - ox) * 0.32);
-            return `<path class="${tone(item)}" d="M${ox.toFixed(1)},${AXIS} Q${((ox + item.cx) / 2).toFixed(1)},${(AXIS + lift * 2).toFixed(1)} ${item.cx.toFixed(1)},${AXIS}" style="stroke-width:${(0.8 + (item.n / most) * 5).toFixed(1)}"/>`;
-          })
-          .join("")}</g>
-        <g class="b-dots">${bubbles
-          .map(
-            (item) =>
-              `<a href="#/bridges/${item.id}"><circle class="${tone(item)}" cx="${item.cx.toFixed(1)}" cy="${item.cy.toFixed(1)}" r="${item.r.toFixed(1)}"><title>${esc(item.name)} · ${fa(item.n)} پیوند${item.died ? ` · درگذشت ${yr(item.died)} ق` : ""}</title></circle>${labels.has(item.id) ? `<text x="${labels.get(item.id).x.toFixed(1)}" y="${labels.get(item.id).y.toFixed(1)}">${esc(labels.get(item.id).text)}</text>` : ""}</a>`,
-          )
-          .join("")}</g>
-        <g class="b-call">${callouts.map((item) => `<line x1="${item.cx.toFixed(1)}" x2="${item.cx.toFixed(1)}" y1="${(item.y + 4).toFixed(1)}" y2="${item.cy.toFixed(1)}"/><text x="${item.x.toFixed(1)}" y="${item.y.toFixed(1)}">${esc(item.text)}</text>`).join("")}</g>
-        <g class="b-self"><line x1="${ox}" x2="${ox}" y1="${AXIS - 8}" y2="${AXIS + 8}"/><circle cx="${ox}" cy="${AXIS}" r="7"/><text x="${ox}" y="${AXIS - 14}">${esc(poet.nickname || poet.name)}</text></g>
-      </svg></div>
-      <p class="key muted b-key"><span class="sw late"></span> شعر ${esc(poet.nickname || poet.name)} پیش‌تر ثبت شده <span class="sw early"></span> شعر آن شاعر پیش‌تر است <span class="sw both"></span> هر دو سو. هر حباب یک شاعر است در سال درگذشتش؛ مساحت حباب و ضخامت کمان، شمار پیوندهاست. روی حباب بزن تا پل‌های آن شاعر باز شود.</p>`
-    : "";
-  const direction = (row) => {
-    if (row.before && !row.after) return `${esc(poet.nickname || poet.name)} پیش‌تر است`;
-    if (row.after && !row.before) return `${esc(row.name)} پیش‌تر است`;
-    return "دوسویه";
-  };
-  paint(
-    "پل‌ها",
-    `<p class="crumb"><a href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)}</a></p>
-     <h1>پل‌های ثبت‌شده</h1>
-     <p class="lead">همه تضمین‌ها و بیت‌های مشترکی که گنجور برای ${esc(poet.nickname || poet.name)} ثبت و منتشر کرده: ${fa(quoted.length)} پیوند با ${fa(rows.length)} شاعر. همه روی خط زمان: چه کسانی پیش از او بودند و چه کسانی پس از او.</p>
-     ${graph}
-     ${
-       rows.length
-         ? `<div class="grid">${rows
-             .map(
-               (row) =>
-                 `<article class="card"><div class="kicker">${fa(row.n)} پیوند · ${direction(row)}${row.both ? ` · ${fa(row.both)} بیت در دیوان هر دو` : ""}</div><strong><a href="#/bridges/${row.id}">${esc(row.name)}</a></strong>${row.samples
-                   .map(
-                     (sample) =>
-                       `<p><a href="#/poem/${sample.mine}">${esc(sample.line)}</a>${sample.other && sample.other !== sample.line ? `<br><a class="muted" href="#/poem/${sample.theirs}">${esc(sample.other)}</a>` : ""}</p>`,
-                   )
-                   .join("")}</article>`,
-             )
-             .join("")}</div>`
-         : `<p>برای این شاعر تضمین یا بیت مشترکی منتشر نشده.</p>`
-     }
-     <p class="muted">«پیش‌تر» یعنی شعر کدام شاعر در گنجور مقدم ثبت شده است. استقبال‌ها (هم‌وزن و هم‌قافیه) را در زبانه «هم‌وزن» صفحه هر شعر ببین.</p>
-     <p><a class="chip" href="#/poet/${poet.id}">بازگشت به شاعر</a></p>`,
-  );
-  const map = document.querySelector(".bridge-map");
-  if (map) {
-    atlasStage(map);
-    map.parentElement.classList.add("bridge-stage");
-  }
-}
-
-async function vaznPage(query) {
-  loading("وزن");
-  const { data } = await api("/rhythms?sortOnVerseCount=true");
-  const selected = Number(query.get("id") || 0);
-  const pageNo = Math.max(1, Number(query.get("p") || 1));
-  const rhythms = [...data].sort((a, b) => b.verseCount - a.verseCount);
-  const current = rhythms.find((item) => item.id === selected);
-  let poemsHtml = "";
-  if (current) {
-    const size = 12;
-    const { data: poems, total } = await api(`/poems/similar?metre=${encodeURIComponent(current.rhythm)}&PageNumber=${pageNo}&PageSize=${size}`);
-    const list = Array.isArray(poems) ? poems : [];
-    const pages = total ? Math.ceil(total / size) : list.length === size ? pageNo + 1 : pageNo;
-    poemsHtml = `<h2 class="section">شعرهای این وزن${total ? ` · ${fa(total)}` : ""}</h2>
-      <div class="grid">${list
-        .map((item) => {
-          const first = String(item.plainText || "").split(/\r?\n/).filter((line) => line.trim()).slice(0, 2).join(" / ");
-          return `<a class="hit" href="#/poem/${item.id}"><div class="kicker">${esc(String(item.fullTitle || "").split("»")[0])}</div><strong>${esc(item.title)}</strong><p>${esc(first)}</p></a>`;
-        })
-        .join("")}</div>
-      <p class="chips">${pageNo > 1 ? `<a class="chip" href="#/vazn?id=${selected}&p=${pageNo - 1}">قبلی</a>` : ""}<span class="chip">صفحه ${pageNo}${total ? ` از ${pages}` : ""}</span>${pageNo < pages ? `<a class="chip" href="#/vazn?id=${selected}&p=${pageNo + 1}">بعدی</a>` : ""}</p>`;
-  }
-  // family = the bahr named in the parentheses (هزج، رمل، …); afaeel = the feet before it
-  const parse = (item) => {
-    const m = String(item.rhythm || "").match(/^(.*?)\s*\((.*)\)\s*$/);
-    const afaeel = m ? m[1] : item.rhythm;
-    const name = m ? m[2] : "";
-    const family = (name.split(/\s+/)[0] || "").replace(/[()]/g, "") || "بی‌نام";
-    return { ...item, afaeel, name, family };
-  };
-  const items = rhythms.map(parse);
-  const total = items.reduce((sum, item) => sum + (item.verseCount || 0), 0) || 1;
-  const famMap = new Map();
-  for (const item of items) {
-    const fam = famMap.get(item.family) || { name: item.family, count: 0, items: [] };
-    fam.count += item.verseCount || 0;
-    fam.items.push(item);
-    famMap.set(item.family, fam);
-  }
-  const PALETTE = ["#0a6b60", "#1c39bb", "#b2532f", "#9a7433", "#7a3b5c", "#5b6b1f", "#2f7fa6", "#a0456b", "#6b5aa8"];
-  const families = [...famMap.values()].sort((x, y) => y.count - x.count);
-  families.forEach((fam, i) => (fam.color = i < PALETTE.length ? PALETTE[i] : "#9a9184"));
-  const colorOf = new Map(families.map((fam) => [fam.name, fam.color]));
-  const top10 = items.slice(0, 10).reduce((sum, item) => sum + item.verseCount, 0);
-  const pct = (n) => `${fa(Math.round((n / total) * 1000) / 10)}٪`;
-  const strip = families
-    .map((fam) => {
-      const w = (fam.count / total) * 100;
-      return `<button type="button" class="fam-seg" data-fam="${esc(fam.name)}" style="flex:${w.toFixed(3)};--c:${fam.color}" title="${esc(fam.name)} · ${pct(fam.count)} مصراع · ${fa(fam.items.length)} وزن">${w > 6 ? `<span>${esc(fam.name)}</span><small>${pct(fam.count)}</small>` : ""}</button>`;
-    })
-    .join("");
-  const most = Math.max(1, ...items.map((item) => item.verseCount || 0));
-  const row = (item) =>
-    `<a class="vrow ${item.id === selected ? "on" : ""}" href="#/vazn?id=${item.id}" style="--c:${colorOf.get(item.family)}"><span class="vname"><strong>${esc(item.name || item.afaeel)}</strong>${item.name ? `<small>${esc(item.afaeel)}</small>` : ""}</span><span class="vbar"><i style="width:${Math.max(0.6, (item.verseCount / most) * 100).toFixed(1)}%"></i></span><b>${fa(item.verseCount)}</b></a>`;
-  const cur = current ? parse(current) : null;
-  paint(
-    "وزن",
-    `<h1>وزن‌ها</h1>
-     <p class="lead">وزن، ریتمِ هجاهای بلند و کوتاه در هر مصراع است؛ مثلاً شاهنامه همه‌جا بر «فعولن فعولن فعولن فعل» می‌رود. گنجور ${fa(items.length)} وزن ثبت کرده، اما فقط ده وزن ${pct(top10)} همهٔ مصراع‌ها را ساخته‌اند.</p>
-     ${cur ? `<section class="panel vpick" style="--c:${colorOf.get(cur.family)}"><div class="kicker">${esc(cur.family)}</div><strong>${esc(cur.afaeel)}</strong><p class="muted">${esc(cur.name)} · ${fa(cur.verseCount)} مصراع (${pct(cur.verseCount)} همهٔ مصراع‌ها)</p></section>${poemsHtml}` : ""}
-     <h2 class="section">خانواده‌های وزن</h2>
-     <p class="muted">هر وزن از یک «بحر» می‌آید. پهنای هر تکه، سهم آن بحر از همهٔ مصراع‌های گنجور است. روی یک بحر بزن تا فقط وزن‌های آن بماند.</p>
-     <div class="fam-strip" id="fam-strip">${strip}</div>
-     <h2 class="section" id="vazn-h">پرکاربردترین وزن‌ها</h2>
-     <form class="big-search" id="vazn-filter"><input id="vazn-q" placeholder="نام بحر یا افاعیل، مثلاً هزج یا مفاعیلن" aria-label="پالایش وزن" /></form>
-     <div class="vlist" id="vazn-list"></div>`,
-  );
-  const box = document.querySelector("#vazn-q");
-  const list = document.querySelector("#vazn-list");
-  const head = document.querySelector("#vazn-h");
-  let fam = "";
-  const draw = () => {
-    const q = box.value.trim();
-    const shown = items.filter((item) => (!q || item.rhythm.includes(q)) && (!fam || item.family === fam)).slice(0, q || fam ? 120 : 30);
-    head.textContent = fam ? `بحر ${fam}` : q ? "وزن‌های پیداشده" : "پرکاربردترین وزن‌ها";
-    document.querySelectorAll(".fam-seg").forEach((seg) => seg.classList.toggle("dim", Boolean(fam) && seg.dataset.fam !== fam));
-    list.innerHTML = shown.length
-      ? shown.map(row).join("") + (q || fam ? "" : `<p class="muted">سی وزن پرکاربرد. برای بقیه، بحری را از نوار بالا بزن یا نام وزن را بنویس.</p>`)
-      : `<p class="muted">وزنی با این نام نیست.</p>`;
-  };
-  document.querySelector("#fam-strip").onclick = (event) => {
-    const seg = event.target.closest("[data-fam]");
-    if (!seg) return;
-    fam = fam === seg.dataset.fam ? "" : seg.dataset.fam;
-    draw();
-  };
-  box.oninput = draw;
-  document.querySelector("#vazn-filter").onsubmit = (event) => event.preventDefault();
-  draw();
-}
-
-const REGIONS = [
-  { key: "rum", name: "روم و عراق", color: "#7a3b5c" },
-  { key: "azar", name: "آذربایجان و غرب", color: "#9a7433" },
-  { key: "center", name: "عراق عجم و شمال", color: "#1c39bb" },
-  { key: "fars", name: "فارس و کرمان", color: "#b2532f" },
-  { key: "khorasan", name: "خراسان و فرارود", color: "#0a6b60" },
-  { key: "hind", name: "هند", color: "#5b6b1f" },
-  { key: "none", name: "بی‌نشان", color: "#8a8174" },
+/* ==========================================================================
+   صفحهٔ اصلی یکپارچه (Unified Landing Page) — همهٔ ۷ ابزار واقعی + تالار شاعران + کتابخانه
+   ========================================================================== */
+const STUDIO_TABS = [
+  { id: "tree", label: "هم‌عصران و نقشه", icon: "❦" },
+  { id: "bridges", label: "پل‌های تضمین", icon: "⇄" },
+  { id: "people", label: "مردمان شعر", icon: "♙" },
+  { id: "devices", label: "آرایه‌های ادبی", icon: "✦" },
+  { id: "words", label: "واژه‌سنج و جستجو", icon: "≋" },
+  { id: "places", label: "جای‌ها در شعر", icon: "⌖" },
+  { id: "vazn", label: "وزن‌ها و عروض", icon: "♪" },
 ];
 
-function regionOf(poet) {
-  const lat = poet.birthPlaceLatitude;
-  const lon = poet.birthPlaceLongitude;
-  if (!lat || !lon) return "none";
-  if (lon < 45) return "rum";
-  if (lon < 48.5) return "azar";
-  if (lon >= 66 && lat < 33) return "hind";
-  if ((lon >= 56 && lat >= 32.5) || lon >= 60.5) return "khorasan";
-  if (lat < 32.3) return "fars";
-  return "center";
+let landingState = {
+  mounted: false,
+  poets: [],
+  activeTool: "tree",
+  activateTool: null,
+};
+
+async function landingPage(opts = {}) {
+  const targetTool = opts.tool || "tree";
+  const scrollTarget = opts.scrollTo || null;
+
+  // اگر لندینگ همین الان روی صفحه است، بدون رندر مجدد فقط ابزار مورد نظر را فعال کن!
+  if (landingState.mounted && document.querySelector("#studio-stage") && landingState.activateTool) {
+    if (opts.tool) await landingState.activateTool(targetTool, opts.params || {});
+    if (scrollTarget) document.getElementById(scrollTarget)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  loading("گنجور نو");
+  const { data: poetsRaw } = await api("/poets").catch(() => ({ data: [] }));
+  const poets = Array.isArray(poetsRaw) ? poetsRaw : [];
+  const tPoets = timelinePoets(poets);
+  landingState.poets = poets;
+
+  paint(
+    "اقلیم دیداری شعر پارسی",
+    `
+    <!-- ۱. هیروی تحریریه -->
+    <section class="hero">
+      <h1 class="hero-title">اقلیم دیداری <span>شعر پارسی</span></h1>
+      <div class="hero-search-wrap">
+        <form class="hero-search" id="hero-search-form" role="search">
+          <span class="hero-search-icon" aria-hidden="true">⌕</span>
+          <input id="hero-q" name="q" placeholder="نام شاعر (مثلاً بیدل، حافظ)، واژه یا تکه‌ای از بیت…" autocomplete="off" />
+          <button type="submit">جستجو</button>
+        </form>
+        <div class="suggest-drop" id="hero-suggest" hidden></div>
+      </div>
+      <div class="hero-metrics">
+        <span><b>${fa(poets.length)}</b> شاعر پارسی‌گوی</span>
+        <span><b>هزار سال</b> خط زمان و جغرافیا</span>
+        <span><b>۷ ابزار</b> پژوهشی زنده روی داده‌های باز گنجور</span>
+      </div>
+    </section>
+
+    <!-- ۲. استودیوی یکپارچهٔ ابزارها -->
+    <section class="studio" id="studio" aria-label="ابزارهای دیداری گنجور نو">
+      <nav class="studio-rail" id="studio-rail" role="tablist">
+        ${STUDIO_TABS.map(
+          (t) => `<button type="button" class="studio-tab ${t.id === targetTool ? "active" : ""}" role="tab" aria-selected="${t.id === targetTool}" data-tool="${t.id}"><span class="ti" aria-hidden="true">${t.icon}</span><span>${t.label}</span></button>`,
+        ).join("")}
+      </nav>
+      <div class="studio-stage" id="studio-stage"></div>
+    </section>
+
+    <!-- ۳. تالار شاعران -->
+    <section class="landing-section" id="poets-wall">
+      <div class="section-head">
+        <div>
+          <h2>تالار شاعران</h2>
+          <p class="tool-sub">از رودکی تا امروز؛ روی هر شاعر بزنید تا وارد صفحهٔ دیوان و آثارش شوید.</p>
+        </div>
+        <div class="inline-search" style="margin:0;min-width:min(100%, 280px);">
+          <input id="poets-wall-q" placeholder="پالایش نام شاعر یا شهر…" autocomplete="off" />
+        </div>
+      </div>
+      <div class="poets-grid" id="poets-wall-grid"></div>
+      <p style="text-align:center;margin-top:14px;" id="poets-wall-more-wrap"></p>
+    </section>
+
+    <!-- ۴. کتابخانهٔ من -->
+    <section class="landing-section" id="my-shelf">
+      <div class="section-head">
+        <div>
+          <h2>کتابخانهٔ من</h2>
+          <p class="tool-sub">شعرهای نشان‌شده، یادداشت‌ها و آخرین خوانش‌های شما (ذخیره‌شده روی همین دستگاه).</p>
+        </div>
+      </div>
+      <div id="my-shelf-body"><p class="muted">در حال خواندن کتابخانه…</p></div>
+    </section>
+    `,
+  );
+
+  landingState.mounted = true;
+  const stageEl = document.querySelector("#studio-stage");
+  const railEl = document.querySelector("#studio-rail");
+
+  let toolToken = 0;
+  const activateTool = async (toolId, params = {}) => {
+    stopTimers();
+    const mine = ++toolToken;
+    landingState.activeTool = toolId;
+    railEl.querySelectorAll(".studio-tab").forEach((btn) => {
+      const on = btn.dataset.tool === toolId;
+      btn.classList.toggle("active", on);
+      btn.setAttribute("aria-selected", String(on));
+    });
+    stageEl.innerHTML = `<div class="loader"><span class="spin"></span><span>در حال آماده‌سازی ابزار…</span></div>`;
+    try {
+      if (toolId === "tree") await mountContemporariesTool(stageEl, poets, tPoets, params, () => mine !== toolToken);
+      else if (toolId === "bridges") await mountBridgesTool(stageEl, poets, params, () => mine !== toolToken);
+      else if (toolId === "people") await mountPeopleTool(stageEl, params, () => mine !== toolToken);
+      else if (toolId === "devices") await mountDevicesTool(stageEl, params, () => mine !== toolToken);
+      else if (toolId === "words") await mountWordsTool(stageEl, poets, params, () => mine !== toolToken);
+      else if (toolId === "places") await mountPlacesTool(stageEl, params, () => mine !== toolToken);
+      else if (toolId === "vazn") await mountVaznTool(stageEl, params, () => mine !== toolToken);
+    } catch (err) {
+      if (err === STALE || mine !== toolToken) return;
+      stageEl.innerHTML = `<div class="panel"><p class="muted">دریافت داده برای این ابزار با خطا روبه‌رو شد: ${esc(err?.message || "")}</p></div>`;
+    }
+  };
+  landingState.activateTool = activateTool;
+
+  railEl.onclick = (e) => {
+    const btn = e.target.closest("[data-tool]");
+    if (!btn) return;
+    activateTool(btn.dataset.tool, {});
+  };
+
+  /* ── جستجوی زندهٔ هیرو (پیشنهاد آنی شاعر برای خط زمان یا دیوان + جستجوی واژه در استودیو) ── */
+  const heroForm = document.querySelector("#hero-search-form");
+  const heroInput = document.querySelector("#hero-q");
+  const heroDrop = document.querySelector("#hero-suggest");
+
+  heroInput.addEventListener("input", () => {
+    const q = heroInput.value.trim();
+    if (q.length < 2) {
+      heroDrop.hidden = true;
+      return;
+    }
+    const hits = poets
+      .filter((p) => `${p.nickname || ""} ${p.name || ""} ${p.birthPlace || ""}`.includes(q))
+      .slice(0, 6);
+    if (!hits.length) {
+      heroDrop.hidden = true;
+      return;
+    }
+    heroDrop.hidden = false;
+    heroDrop.innerHTML = hits
+      .map(
+        (p) => `
+      <div class="suggest-row">
+        <div>
+          <strong>${esc(p.nickname || p.name)}</strong>
+          <small>${p.birthYearInLHijri ? `${yr(p.birthYearInLHijri)}–${yr(p.deathYearInLHijri || 0)} ق` : ""}${p.birthPlace ? ` · ${esc(p.birthPlace)}` : ""}</small>
+        </div>
+        <div class="suggest-acts">
+          <button type="button" class="suggest-tag" data-hero-tree="${p.id}">روی خط زمان</button>
+          <a class="suggest-tag" href="#/poet/${p.id}">دیوان اشعار</a>
+        </div>
+      </div>`,
+      )
+      .join("");
+  });
+
+  heroDrop.addEventListener("click", (e) => {
+    const treeBtn = e.target.closest("[data-hero-tree]");
+    if (treeBtn) {
+      heroDrop.hidden = true;
+      heroInput.value = "";
+      document.getElementById("studio")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      activateTool("tree", { poet: treeBtn.dataset.heroTree, view: "timeline" });
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (heroDrop && !e.target.closest(".hero-search-wrap")) heroDrop.hidden = true;
+  });
+
+  heroForm.onsubmit = (e) => {
+    e.preventDefault();
+    const q = heroInput.value.trim();
+    if (!q) return;
+    heroDrop.hidden = true;
+    document.getElementById("studio")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    activateTool("words", { q });
+  };
+
+  /* ── تالار شاعران ── */
+  const pinned = [...poets].filter((p) => p.pinOrder).sort((a, b) => a.pinOrder - b.pinOrder);
+  const pinnedIds = new Set(pinned.map((p) => p.id));
+  const orderedPoets = pinned.concat(
+    poets
+      .filter((p) => !pinnedIds.has(p.id))
+      .sort((a, b) => (a.birthYearInLHijri || 9999) - (b.birthYearInLHijri || 9999) || (a.nickname || "").localeCompare(b.nickname || "", "fa")),
+  );
+  const wallGrid = document.querySelector("#poets-wall-grid");
+  const wallQ = document.querySelector("#poets-wall-q");
+  const wallMore = document.querySelector("#poets-wall-more-wrap");
+  let showAllPoets = false;
+
+  const drawWall = () => {
+    const q = wallQ.value.trim();
+    const list = orderedPoets.filter((p) => !q || `${p.nickname || ""} ${p.name || ""} ${p.birthPlace || ""}`.includes(q));
+    const slice = q || showAllPoets ? list : list.slice(0, 24);
+    wallGrid.innerHTML = slice
+      .map((p) => {
+        const letter = esc((p.nickname || p.name || "؟").slice(0, 1));
+        const img = p.imageUrl ? `<img alt="" loading="lazy" src="https://api.ganjoor.net${esc(p.imageUrl)}" onerror="this.remove()" />` : "";
+        const yrs = p.birthYearInLHijri ? `${yr(p.birthYearInLHijri)}–${p.deathYearInLHijri ? yr(p.deathYearInLHijri) : "؟"} ق` : "";
+        return `<a class="face" href="#/poet/${p.id}"><span class="medal">${img}<b>${letter}</b></span><strong>${esc(p.nickname || p.name)}</strong><small>${esc(p.birthPlace || "")}${yrs ? " · " + yrs : ""}</small></a>`;
+      })
+      .join("") || `<p class="muted">شاعری با این نام پیدا نشد.</p>`;
+    wallMore.innerHTML =
+      !q && !showAllPoets && list.length > 24
+        ? `<button type="button" class="btn" id="btn-show-all-poets">نمایش همهٔ ${fa(list.length)} شاعر</button>`
+        : "";
+    document.querySelector("#btn-show-all-poets")?.addEventListener("click", () => {
+      showAllPoets = true;
+      drawWall();
+    });
+  };
+  wallQ.oninput = drawWall;
+  drawWall();
+
+  /* ── کتابخانهٔ شخصی ── */
+  renderShelf(document.querySelector("#my-shelf-body"));
+
+  /* ── فعال‌سازی ابزار اولیه ── */
+  await activateTool(targetTool, opts.params || {});
+  if (scrollTarget) {
+    setTimeout(() => document.getElementById(scrollTarget)?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+  }
 }
 
-const yr = (value) => Number(value || 0).toLocaleString("fa-IR", { useGrouping: false });
-const toGregorian = (hijri) => Math.round(hijri * 0.970229 + 621.5643);
-
-function timelinePoets(list) {
-  return list
-    .filter((poet) => poet.published !== false && (poet.birthYearInLHijri || poet.deathYearInLHijri))
-    .map((poet) => {
-      let b = poet.birthYearInLHijri || poet.deathYearInLHijri - 60;
-      let d = poet.deathYearInLHijri || poet.birthYearInLHijri + 60;
-      const broken = d < b;
-      if (broken) [b, d] = [d, b];
-      return {
-        ...poet,
-        b,
-        d,
-        broken,
-        sureB: Boolean(poet.birthYearInLHijri && poet.validBirthDate && !broken),
-        sureD: Boolean(poet.deathYearInLHijri && poet.validDeathDate && !broken),
-        region: regionOf(poet),
-        label: poet.nickname || poet.name,
-      };
-    })
-    .sort((x, y) => x.b - y.b || x.d - y.d);
+async function renderShelf(container) {
+  if (!container) return;
+  const saved = store.get();
+  const noteIds = Object.entries(saved.notes)
+    .filter(([, t]) => String(t).trim())
+    .map(([id]) => Number(id));
+  const ids = [...new Set([...saved.marks, ...noteIds, ...saved.history])].slice(0, 12);
+  if (!ids.length) {
+    container.innerHTML = `<p class="muted">هنوز شعری را نشان نکرده‌اید یا نخوانده‌اید. با باز کردن هر شعر، می‌توانید آن را نشان کنید یا یادداشت بنویسید تا همین‌جا بماند.</p>`;
+    return;
+  }
+  const items = await Promise.all(
+    ids.map((id) =>
+      api(`/poem/${id}?catInfo=true&verseDetails=false&recitations=false&navigation=false&comments=false&images=false&songs=false`)
+        .then((r) => r.data)
+        .catch(() => null),
+    ),
+  );
+  const valid = items.filter(Boolean);
+  container.innerHTML = valid.length
+    ? `<div class="grid">${valid
+        .map((poem) => {
+          const p = poem.category?.poet;
+          const isMark = saved.marks.includes(poem.id);
+          const note = saved.notes[poem.id];
+          return `<a class="hit" href="#/poem/${poem.id}"><div class="kicker">${isMark ? "★ نشان‌شده · " : ""}${esc(p?.nickname || p?.name || "")}</div><strong>${esc(poem.title)}</strong>${note ? `<p>یادداشت: ${esc(note.slice(0, 90))}</p>` : ""}</a>`;
+        })
+        .join("")}</div>`
+    : `<p class="muted">موردی در کتابخانه نیست.</p>`;
 }
 
-function yearsText(poet) {
-  return `${poet.birthYearInLHijri ? yr(poet.birthYearInLHijri) : ""}${poet.sureB ? "" : "؟"}–${poet.deathYearInLHijri ? yr(poet.deathYearInLHijri) : ""}${poet.sureD ? "" : "؟"} ق`;
+/* ==========================================================================
+   ابزار ۱: هم‌عصران و نقشهٔ زادگاه‌ها (سوییچ درجا بدون تغییر صفحه!)
+   ========================================================================== */
+async function mountContemporariesTool(container, allPoets, poets, params, isStale) {
+  const learn = await local().catch(() => ({}));
+  if (isStale()) return;
+
+  let viewMode = params.view === "map" ? "map" : "timeline";
+  container.innerHTML = `
+    <div class="tool-head">
+      <div>
+        <h2>هم‌عصران و جغرافیای زادگاه‌ها</h2>
+        <p class="tool-sub">زندگی ${fa(poets.length)} شاعر از راست به چپ؛ میان خط زمان و نقشهٔ زادگاه‌ها بدون خروج از صفحه جابه‌جا شوید.</p>
+      </div>
+      <div class="seg-switch" role="tablist" aria-label="نمای هم‌عصران">
+        <button type="button" class="seg-btn ${viewMode === "timeline" ? "active" : ""}" data-subview="timeline">خط زمان</button>
+        <button type="button" class="seg-btn ${viewMode === "map" ? "active" : ""}" data-subview="map">نقشهٔ زادگاه‌ها</button>
+      </div>
+    </div>
+    <div id="contemp-body"></div>
+  `;
+
+  const body = container.querySelector("#contemp-body");
+  const switchView = (mode, subParams = {}) => {
+    stopTimers();
+    viewMode = mode;
+    container.querySelectorAll("[data-subview]").forEach((b) => b.classList.toggle("active", b.dataset.subview === mode));
+    if (mode === "timeline") renderTimelineCanvas(body, poets, learn, subParams);
+    else renderBirthplaceMap(body, allPoets, subParams);
+  };
+
+  container.querySelectorAll("[data-subview]").forEach((b) => {
+    b.onclick = () => switchView(b.dataset.subview, {});
+  });
+
+  switchView(viewMode, params);
 }
 
-async function treePage(query) {
-  loading("خط زمان شاعران");
-  const [{ data }, learn] = await Promise.all([api("/poets"), local().catch(() => ({}))]);
-  const poets = timelinePoets(data);
-  const byId = new Map(poets.map((poet) => [String(poet.id), poet]));
-  const regionInfo = new Map(REGIONS.map((region) => [region.key, region]));
-  const used = REGIONS.filter((region) => poets.some((poet) => poet.region === region.key));
+function renderTimelineCanvas(container, poets, learn, params) {
+  const byId = new Map(poets.map((p) => [String(p.id), p]));
+  const regionInfo = new Map(REGIONS.map((r) => [r.key, r]));
+  const used = REGIONS.filter((r) => poets.some((p) => p.region === r.key));
 
-  // content space: time runs right to left, like the reading
   const PX = 0.86;
-  const from = Math.floor(Math.min(...poets.map((poet) => poet.b)) / 100) * 100;
-  const to = Math.ceil(Math.max(...poets.map((poet) => poet.d)) / 100) * 100;
+  const from = Math.floor(Math.min(...poets.map((p) => p.b)) / 100) * 100;
+  const to = Math.ceil(Math.max(...poets.map((p) => p.d)) / 100) * 100;
   const PAD = 18;
   const W = Math.round((to - from) * PX + PAD * 2);
   const x = (year) => W - PAD - (year - from) * PX;
   const yearAt = (cx) => from + (W - PAD - cx) / PX;
 
-  // lanes: each bar plus its name, packed so nothing overlaps
-  // names keep one screen size at every zoom, so lanes are packed for the zoom where names appear (KREF)
   const ROW = 14;
   const KREF = 1.4;
-  const labelYears = (poet) => (poet.label.length * (poet.pinOrder ? 7.6 : 6.8) + 12) / (PX * KREF);
+  const labelYears = (p) => (p.label.length * (p.pinOrder ? 7.6 : 6.8) + 12) / (PX * KREF);
   const laneEnd = [];
-  for (const poet of poets) {
-    let lane = laneEnd.findIndex((end) => end < poet.b - 3);
+  for (const p of poets) {
+    let lane = laneEnd.findIndex((end) => end < p.b - 3);
     if (lane < 0) lane = laneEnd.length;
-    laneEnd[lane] = poet.d + labelYears(poet);
-    poet.lane = lane;
+    laneEnd[lane] = p.d + labelYears(p);
+    p.lane = lane;
   }
   const H = laneEnd.length * ROW + 16;
-  const yOf = (poet) => poet.lane * ROW + 4;
+  const yOf = (p) => p.lane * ROW + 4;
 
-  // how many poets were alive in each decade
   const decades = [];
-  for (let year = from; year <= to; year += 10) decades.push({ year, n: poets.filter((poet) => poet.b <= year + 5 && poet.d >= year + 5).length });
+  for (let year = from; year <= to; year += 10) decades.push({ year, n: poets.filter((p) => p.b <= year + 5 && p.d >= year + 5).length });
   const peak = decades.reduce((best, item) => (item.n > best.n ? item : best), decades[0]);
-
-  // moments in history (data.json, Gregorian) placed on the Hijri axis
-  const toHijri = (greg) => Math.round((greg - 621.5643) / 0.970229);
+  const toHijri = (g) => Math.round((g - 621.5643) / 0.970229);
   const eras = (learn.events || []).map((item) => ({ ...item, h: toHijri(item.year) })).filter((item) => item.h >= from && item.h <= to);
 
   const gradients = used
-    .map((region) =>
+    .map((r) =>
       [
         ["b", "1", "0.3", "1", "0.6"],
         ["d", "0.3", "1", "0.4", "1"],
@@ -2798,149 +760,149 @@ async function treePage(query) {
       ]
         .map(
           ([kind, left, right, a, z]) =>
-            `<linearGradient id="g-${region.key}-${kind}"><stop offset="0" stop-color="${region.color}" stop-opacity="${left}"/><stop offset="${a}" stop-color="${region.color}"/><stop offset="${z}" stop-color="${region.color}"/><stop offset="1" stop-color="${region.color}" stop-opacity="${right}"/></linearGradient>`,
+            `<linearGradient id="g-${r.key}-${kind}"><stop offset="0" stop-color="${r.color}" stop-opacity="${left}"/><stop offset="${a}" stop-color="${r.color}"/><stop offset="${z}" stop-color="${r.color}"/><stop offset="1" stop-color="${r.color}" stop-opacity="${right}"/></linearGradient>`,
         )
         .join(""),
     )
     .join("");
-  const fill = (poet) => {
-    const kind = (poet.sureB ? "" : "b") + (poet.sureD ? "" : "d");
-    return kind ? `url(#g-${poet.region}-${kind})` : regionInfo.get(poet.region).color;
+
+  const fill = (p) => {
+    const kind = (p.sureB ? "" : "b") + (p.sureD ? "" : "d");
+    return kind ? `url(#g-${p.region}-${kind})` : regionInfo.get(p.region).color;
   };
-  const bar = (poet) => {
-    const y = yOf(poet);
-    const x1 = x(poet.d);
-    const width = Math.max(3, x(poet.b) - x1);
-    const strong = poet.pinOrder ? " famous" : "";
-    return `<g class="life${strong}" data-id="${poet.id}" data-region="${poet.region}" tabindex="0" role="button" aria-label="${esc(poet.label)}، ${esc(yearsText(poet))}"><title>${esc(poet.name)} · ${esc(yearsText(poet))}${poet.birthPlace ? ` · ${esc(poet.birthPlace)}` : ""}</title><rect class="hit" x="${(x1 - (poet.label.length * 7 + 10) / KREF).toFixed(1)}" y="${y}" width="${(width + (poet.label.length * 7 + 12) / KREF).toFixed(1)}" height="${ROW}"/><rect class="span" x="${x1.toFixed(1)}" y="${y + (poet.pinOrder ? 4 : 5)}" width="${width.toFixed(1)}" height="${poet.pinOrder ? 6 : 4}" rx="2" fill="${fill(poet)}"/><text x="${(x1 - 3).toFixed(1)}" y="${y + 7}">${esc(poet.label)}</text></g>`;
+  const barSvg = (p) => {
+    const y = yOf(p);
+    const x1 = x(p.d);
+    const width = Math.max(3, x(p.b) - x1);
+    const strong = p.pinOrder ? " famous" : "";
+    return `<g class="life${strong}" data-id="${p.id}" data-region="${p.region}" tabindex="0" role="button"><title>${esc(p.name)} · ${esc(yearsText(p))}${p.birthPlace ? ` · ${esc(p.birthPlace)}` : ""}</title><rect class="hit" x="${(x1 - (p.label.length * 7 + 10) / KREF).toFixed(1)}" y="${y}" width="${(width + (p.label.length * 7 + 12) / KREF).toFixed(1)}" height="${ROW}"/><rect class="span" x="${x1.toFixed(1)}" y="${y + (p.pinOrder ? 4 : 5)}" width="${width.toFixed(1)}" height="${p.pinOrder ? 6 : 4}" rx="2" fill="${fill(p)}"/><text x="${(x1 - 3).toFixed(1)}" y="${y + 7}">${esc(p.label)}</text></g>`;
   };
   const centuries = [];
   for (let year = from; year <= to; year += 100) centuries.push(year);
-  const MINI_W = 168;
-  const MINI_H = Math.max(60, Math.min(120, Math.round((MINI_W * H) / W)));
+  const MINI_W = 160;
+  const MINI_H = Math.max(58, Math.min(115, Math.round((MINI_W * H) / W)));
   const mx = MINI_W / W;
   const my = MINI_H / H;
 
-  const uncertain = poets.filter((poet) => !poet.sureB || !poet.sureD).length;
-  paint(
-    "خط زمان شاعران",
-    `<div class="g-tree-head-row">
-       <h1>هم‌عصران</h1>
-       <nav class="views" aria-label="نما"><a href="#/tree" aria-current="page">روی خط زمان</a><a href="#/map">روی نقشهٔ زادگاه‌ها</a></nav>
-     </div>
-     <p class="lead g-tree-lead">زندگی ${fa(poets.length)} شاعر از راست به چپ؛ روی هر شاعر بزنید تا هم‌عصران و تضمین‌هایش روشن شوند.</p>
-     <div class="tree-tools">
-       <div class="g-tree-search-wrap">
-         <form class="big-search" id="tree-filter" onsubmit="return false;">
-           <input id="tree-q" placeholder="جستجوی شاعر یا شهر (مثلاً: بیدل، صائب، شیراز...)" aria-label="پیدا کردن شاعر" autocomplete="off" />
-         </form>
-         <div class="g-tree-search-dropdown" id="tree-search-dropdown" hidden></div>
-       </div>
-       <div class="g-tree-quick-picks" aria-label="پرش مستقیم به شاعران">
-         <span class="g-quick-label">پرش مستقیم:</span>
-         <button type="button" class="chip g-quick-poet-btn" data-poet-id="43">بیدل دهلوی</button>
-         <button type="button" class="chip g-quick-poet-btn" data-poet-id="22">صائب تبریزی</button>
-         <button type="button" class="chip g-quick-poet-btn" data-poet-id="2">حافظ</button>
-         <button type="button" class="chip g-quick-poet-btn" data-poet-id="7">سعدی</button>
-         <button type="button" class="chip g-quick-poet-btn" data-poet-id="5">مولانا</button>
-         <button type="button" class="chip g-quick-poet-btn" data-poet-id="1">فردوسی</button>
-         <button type="button" class="chip g-quick-poet-btn" data-poet-id="4">خیام</button>
-         <button type="button" class="chip g-quick-poet-btn" data-poet-id="3">نظامی</button>
-       </div>
-       <p class="chips" id="tree-regions" aria-label="سرزمین زادگاه"><button class="chip on" type="button" data-region="">همه سرزمین‌ها</button>${used
-         .map((region) => `<button class="chip" type="button" data-region="${region.key}" style="--tone:${region.color}"><i class="dot"></i>${region.name} · ${fa(poets.filter((poet) => poet.region === region.key).length)}</button>`)
-         .join("")}</p>
-     </div>
-     <div class="stage" id="stage" tabindex="0" aria-label="خط زمان؛ با کشیدن جابه‌جا شو، با چرخ یا دو انگشت بزرگ‌نمایی کن، دکمه صفر برای نمای کل">
-       <svg class="stage-head" id="shead" aria-hidden="true"></svg>
-       <svg class="chrono" id="chrono" role="group" aria-label="خط زمان زندگی ${fa(poets.length)} شاعر">
-         <defs>${gradients}</defs>
-         <g id="view">
-           <g class="axis">${centuries.map((year) => `<line x1="${x(year)}" x2="${x(year)}" y1="0" y2="${H}"/>`).join("")}</g>
-           <g class="eras">${eras.map((item) => `<line x1="${x(item.h)}" x2="${x(item.h)}" y1="0" y2="${H}"/>`).join("")}</g>
-           <rect class="band" id="band" y="0" height="${H}" hidden/>
-           <g id="arcs"></g>
-           <g id="lives">${poets.map(bar).join("")}</g>
-         </g>
-         <g id="tags" aria-hidden="true"></g>
-       </svg>
-       <div class="stage-ctl" role="toolbar" aria-label="بزرگ‌نمایی">
-         <button type="button" data-zoom="in" title="بزرگ‌تر (+)" aria-label="بزرگ‌تر">+</button>
-         <button type="button" data-zoom="out" title="کوچک‌تر (−)" aria-label="کوچک‌تر">−</button>
-         <button type="button" data-zoom="fit" title="نمای کل (۰)">نمای کل</button>
-         <button type="button" data-zoom="full" title="تمام‌صفحه">تمام‌صفحه</button>
-       </div>
-       <svg class="mini" id="mini" viewBox="0 0 ${MINI_W} ${MINI_H}" width="${MINI_W}" height="${MINI_H}" role="img" aria-label="نقشه کوچک؛ بزن تا به آن نقطه بروی">
-         ${poets.map((poet) => `<rect x="${(x(poet.d) * mx).toFixed(1)}" y="${(yOf(poet) * my).toFixed(1)}" width="${Math.max(1, (x(poet.b) - x(poet.d)) * mx).toFixed(1)}" height="${Math.max(1, 4 * my).toFixed(1)}" fill="${regionInfo.get(poet.region).color}"/>`).join("")}
-         <rect class="lens" id="lens"/>
-       </svg>
-       <p class="stage-hint" id="stage-hint">بکش تا جابه‌جا شوی · چرخ یا دو انگشت برای بزرگ‌نمایی · دوبار بزن تا نزدیک شوی</p>
-       <div class="focus" id="tree-focus" hidden></div>
-     </div>
-     <p class="key muted"><span class="sw solid"></span> سال ثبت‌شده <span class="sw fade"></span> سال تقریبی؛ سر کم‌رنگ نوار یعنی گنجور آن سال را قطعی نمی‌داند (${fa(uncertain)} شاعر از ${fa(poets.length)}). نوار ضخیم‌تر: شاعران برگزیده گنجور، که نامشان در نمای دور هم پیداست.</p>
-     <p class="muted">بالای نمودار: شمار شاعران زنده در هر دهه (بیشترین ${fa(peak.n)} شاعر، حدود ${yr(peak.year)} ق). خط‌های طلایی عمودی چند رخداد تاریخی است که سال میلادی‌شان به هجری قمری برگردانده شده. سرزمین از مختصات زادگاهی که گنجور ثبت کرده ساخته شده و سال میلادی تقریبی است. کمان‌های طلایی پیوندهای تضمین و بیت مشترک است که گنجور منتشر کرده؛ ضخامت، شمار پیوند. جزئیاتش در <a href="#/bridges/2">پل‌های تضمین</a>.</p>`,
-  );
+  container.innerHTML = `
+    <div class="inline-search" id="tree-search-wrap">
+      <input id="tree-q" placeholder="جستجوی شاعر یا شهر روی خط زمان (مثلاً بیدل، صائب، شیراز…)" autocomplete="off" />
+      <div class="suggest-drop" id="tree-suggest" hidden></div>
+    </div>
+    <p class="chips" id="tree-regions">
+      <button class="chip on" type="button" data-region="">همه سرزمین‌ها</button>
+      ${used.map((r) => `<button class="chip" type="button" data-region="${r.key}" style="--tone:${r.color}"><i class="dot"></i>${r.name} · ${fa(poets.filter((p) => p.region === r.key).length)}</button>`).join("")}
+    </p>
+    <div class="stage" id="stage" tabindex="0">
+      <svg class="stage-head" id="shead" aria-hidden="true"></svg>
+      <svg class="chrono" id="chrono">
+        <defs>${gradients}</defs>
+        <g id="view">
+          <g class="axis">${centuries.map((year) => `<line x1="${x(year)}" x2="${x(year)}" y1="0" y2="${H}"/>`).join("")}</g>
+          <g class="eras">${eras.map((item) => `<line x1="${x(item.h)}" x2="${x(item.h)}" y1="0" y2="${H}"/>`).join("")}</g>
+          <rect class="band" id="band" y="0" height="${H}" hidden/>
+          <g id="arcs"></g>
+          <g id="lives">${poets.map(barSvg).join("")}</g>
+        </g>
+        <g id="tags" aria-hidden="true"></g>
+      </svg>
+      <div class="stage-ctl" role="toolbar">
+        <button type="button" data-zoom="in" aria-label="بزرگ‌تر">+</button>
+        <button type="button" data-zoom="out" aria-label="کوچک‌تر">−</button>
+        <button type="button" data-zoom="fit">نمای کل</button>
+        <button type="button" data-zoom="full">تمام‌صفحه</button>
+      </div>
+      <svg class="mini" id="mini" viewBox="0 0 ${MINI_W} ${MINI_H}" width="${MINI_W}" height="${MINI_H}">
+        ${poets.map((p) => `<rect x="${(x(p.d) * mx).toFixed(1)}" y="${(yOf(p) * my).toFixed(1)}" width="${Math.max(1, (x(p.b) - x(p.d)) * mx).toFixed(1)}" height="${Math.max(1, 4 * my).toFixed(1)}" fill="${regionInfo.get(p.region).color}"/>`).join("")}
+        <rect class="lens" id="lens"/>
+      </svg>
+      <p class="stage-hint">بکشید تا جابه‌جا شوید · اسکرول برای بزرگ‌نمایی · روی هر شاعر بزنید</p>
+      <div class="focus" id="tree-focus" hidden></div>
+    </div>
+    <p class="key muted"><span class="sw solid"></span> سال ثبت‌شده <span class="sw fade"></span> سال تقریبی · بالای نمودار: اوج هم‌زیستی (${fa(peak.n)} شاعر زنده حدود ${yr(peak.year)} ق)</p>
+  `;
 
-  const stage = document.querySelector("#stage");
-  const chart = document.querySelector("#chrono");
+  const stage = container.querySelector("#stage");
+  const chart = container.querySelector("#chrono");
   const view = chart.querySelector("#view");
   const tags = chart.querySelector("#tags");
-  const headSvg = document.querySelector("#shead");
-  const lens = document.querySelector("#lens");
-  const mini = document.querySelector("#mini");
+  const headSvg = container.querySelector("#shead");
+  const lens = container.querySelector("#lens");
+  const mini = container.querySelector("#mini");
   const lives = [...chart.querySelectorAll(".life")];
   const band = chart.querySelector("#band");
   const arcs = chart.querySelector("#arcs");
-  const focus = document.querySelector("#tree-focus");
-  const box = document.querySelector("#tree-q");
-  let region = "";
-  let picked = null;
-  let ask = 0;
-  let linkedIds = new Set();
+  const focus = container.querySelector("#tree-focus");
+  const box = container.querySelector("#tree-q");
+  const drop = container.querySelector("#tree-suggest");
 
-  // ── pan and zoom: screen = t + k * content ──
-  let k = 1;
-  let tx = 0;
-  let ty = 0;
-  let fitK = 1;
-  let fitted = true;
-  let frame = 0;
-  let flight = 0;
+  let region = "", picked = null, ask = 0, linkedIds = new Set();
+  let k = 1, tx = 0, ty = 0, fitK = 1, fitted = true, frame = 0, flight = 0;
+
   const size = () => ({ w: chart.clientWidth || 1, h: chart.clientHeight || 1 });
-  const clampAxis = (t, span, room) => {
-    const margin = 40;
-    if (span + margin * 2 <= room) return (room - span) / 2;
-    return Math.min(margin, Math.max(room - span - margin, t));
-  };
+  const clampAxis = (t, span, room) => (span + 80 <= room ? (room - span) / 2 : Math.min(40, Math.max(room - span - 40, t)));
   const clamp = () => {
     const { w, h } = size();
     k = Math.min(Math.max(k, fitK * 0.8), 9);
     tx = clampAxis(tx, W * k, w);
     ty = clampAxis(ty, H * k, h);
   };
-  const fit = () => {
-    const { w, h } = size();
-    fitK = Math.min(w / W, h / H) * 0.97;
-    k = fitK;
-    tx = (w - W * k) / 2;
-    ty = (h - H * k) / 2;
-    fitted = true;
-    draw();
-  };
-  const zoomAt = (sx, sy, factor) => {
-    const next = Math.min(Math.max(k * factor, fitK * 0.8), 9);
-    tx = sx - ((sx - tx) * next) / k;
-    ty = sy - ((sy - ty) * next) / k;
-    k = next;
-    fitted = false;
-    draw();
-  };
-  const draw = () => {
-    cancelAnimationFrame(frame);
-    frame = requestAnimationFrame(render);
-  };
   const near = () => k >= KREF * 0.9;
-  const render = () => {
+
+  const renderHead = () => {
+    const { w } = size();
+    const HEAD = 92;
+    headSvg.setAttribute("viewBox", `0 0 ${w} ${HEAD}`);
+    const sx = (year) => tx + k * x(year);
+    const lo = Math.min(yearAt(-tx / k), yearAt((w - tx) / k));
+    const hi = Math.max(yearAt(-tx / k), yearAt((w - tx) / k));
+    const step = [10, 20, 25, 50, 100, 200].find((item) => item * PX * k >= 74) || 200;
+    const ticks = [];
+    for (let year = Math.ceil(Math.max(lo, from) / step) * step; year <= Math.min(hi, to); year += step) ticks.push(year);
+    const top = 22, base = 58;
+    const dy = (n) => base - (n / peak.n) * (base - top);
+    const area = `M${sx(from).toFixed(1)},${base} ${decades.map((item) => `L${sx(item.year + 5).toFixed(1)},${dy(item.n).toFixed(1)}`).join(" ")} L${sx(to).toFixed(1)},${base} Z`;
+    const placed = [];
+    const eraTags = eras
+      .map((item) => ({ ...item, at: sx(item.h) }))
+      .filter((item) => item.at > 0 && item.at < w)
+      .sort((a, b) => b.at - a.at)
+      .filter((item) => {
+        const wide = item.title.length * 6.4 + 12;
+        if (placed.some((o) => o.at - item.at < o.wide) || item.at - wide < 0) return false;
+        placed.push({ at: item.at, wide });
+        return true;
+      });
+    const px = sx(peak.year + 5);
+    const peakTag = px > 90 && px < w - 10 ? `<line x1="${px.toFixed(1)}" x2="${px.toFixed(1)}" y1="${dy(peak.n).toFixed(1)}" y2="${base}"/><text x="${(px - 4).toFixed(1)}" y="${base - 5}">اوج: ${fa(peak.n)} شاعر زنده</text>` : "";
+    headSvg.innerHTML = `<g class="dens"><path d="${area}"/>${peakTag}</g>
+      <g class="eras">${eras.map((item) => `<line x1="${sx(item.h).toFixed(1)}" x2="${sx(item.h).toFixed(1)}" y1="16" y2="${HEAD}"/>`).join("")}${eraTags.map((item) => `<text x="${(item.at - 3).toFixed(1)}" y="12"><title>${esc(item.text)}</title>${esc(item.title)}</text>`).join("")}</g>
+      <g class="axis">${ticks.map((year) => `<line x1="${sx(year).toFixed(1)}" x2="${sx(year).toFixed(1)}" y1="${base}" y2="${base + 5}"/><text x="${sx(year).toFixed(1)}" y="${base + 18}">${yr(year)} ق</text><text class="greg" x="${sx(year).toFixed(1)}" y="${base + 31}">${yr(toGregorian(year))} م</text>`).join("")}</g>`;
+  };
+
+  const renderTags = () => {
+    if (near()) { tags.innerHTML = ""; return; }
+    const { w, h } = size();
+    const boxes = [];
+    const want = poets
+      .filter((p) => p.pinOrder || p === picked || linkedIds.has(String(p.id)))
+      .sort((a, b) => (b === picked) - (a === picked) || (a.pinOrder || 99) - (b.pinOrder || 99));
+    const out = [];
+    for (const p of want) {
+      const ax = tx + k * (x(p.d) - 3);
+      const ay = ty + k * (yOf(p) + 7) + 4.5;
+      const wide = p.label.length * 7.6 + 8;
+      const rect = { l: ax - wide, r: ax, t: ay - 12, b: ay + 4 };
+      if (rect.l < 2 || rect.r > w - 2 || rect.t < 2 || rect.b > h - 2) continue;
+      if (boxes.some((o) => rect.l < o.r && rect.r > o.l && rect.t < o.b && rect.b > o.t)) continue;
+      boxes.push(rect);
+      const cls = p === picked ? "picked" : linkedIds.has(String(p.id)) ? "linked" : "";
+      out.push(`<text class="${cls}" x="${ax.toFixed(1)}" y="${ay.toFixed(1)}" data-id="${p.id}">${esc(p.label)}</text>`);
+    }
+    tags.innerHTML = out.join("");
+  };
+
+  const renderCanvas = () => {
     clamp();
     view.setAttribute("transform", `translate(${tx.toFixed(2)},${ty.toFixed(2)}) scale(${k.toFixed(4)})`);
     chart.classList.toggle("near", near());
@@ -2955,77 +917,19 @@ async function treePage(query) {
     lens.setAttribute("width", ((w / k) * mx).toFixed(1));
     lens.setAttribute("height", ((h / k) * my).toFixed(1));
   };
-
-  // axis, density and history moments, drawn in screen space so they stay readable
-  const HEAD = 92;
-  const renderHead = () => {
-    const { w } = size();
-    headSvg.setAttribute("viewBox", `0 0 ${w} ${HEAD}`);
-    const sx = (year) => tx + k * x(year);
-    const left = yearAt(-tx / k);
-    const right = yearAt((w - tx) / k);
-    const lo = Math.min(left, right);
-    const hi = Math.max(left, right);
-    const step = [10, 20, 25, 50, 100, 200].find((item) => item * PX * k >= 74) || 200;
-    const ticks = [];
-    for (let year = Math.ceil(Math.max(lo, from) / step) * step; year <= Math.min(hi, to); year += step) ticks.push(year);
-    const top = 22;
-    const base = 58;
-    const dy = (n) => base - (n / peak.n) * (base - top);
-    const area = `M${sx(from).toFixed(1)},${base} ${decades.map((item) => `L${sx(item.year + 5).toFixed(1)},${dy(item.n).toFixed(1)}`).join(" ")} L${sx(to).toFixed(1)},${base} Z`;
-    const placed = [];
-    const eraTags = eras
-      .map((item) => ({ ...item, at: sx(item.h) }))
-      .filter((item) => item.at > 0 && item.at < w)
-      .sort((a, b) => b.at - a.at)
-      .filter((item) => {
-        const wide = item.title.length * 6.4 + 12;
-        if (placed.some((other) => other.at - item.at < other.wide)) return false;
-        if (item.at - wide < 0) return false;
-        placed.push({ at: item.at, wide });
-        return true;
-      });
-    const px = sx(peak.year + 5);
-    const peakTag = px > 90 && px < w - 10 ? `<line x1="${px.toFixed(1)}" x2="${px.toFixed(1)}" y1="${dy(peak.n).toFixed(1)}" y2="${base}"/><text x="${(px - 4).toFixed(1)}" y="${base - 5}">اوج: ${fa(peak.n)} شاعر زنده</text>` : "";
-    headSvg.innerHTML = `<g class="dens"><path d="${area}"/>${peakTag}</g>
-      <g class="eras">${eras.map((item) => `<line x1="${sx(item.h).toFixed(1)}" x2="${sx(item.h).toFixed(1)}" y1="16" y2="${HEAD}"/>`).join("")}${eraTags
-        .map((item) => `<text x="${(item.at - 3).toFixed(1)}" y="12"><title>${esc(item.text)}</title>${esc(item.title)}</text>`)
-        .join("")}</g>
-      <g class="axis">${ticks
-        .map(
-          (year) =>
-            `<line x1="${sx(year).toFixed(1)}" x2="${sx(year).toFixed(1)}" y1="${base}" y2="${base + 5}"/><text x="${sx(year).toFixed(1)}" y="${base + 18}">${yr(year)} ق</text><text class="greg" x="${sx(year).toFixed(1)}" y="${base + 31}">${yr(toGregorian(year))} م</text>`,
-        )
-        .join("")}</g>`;
-  };
-
-  // in the far view the names would be unreadable dots: write the chosen few in screen space instead
-  const renderTags = () => {
-    if (near()) {
-      tags.innerHTML = "";
-      return;
-    }
+  const draw = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(renderCanvas); };
+  const fit = () => {
     const { w, h } = size();
-    const boxes = [];
-    const want = poets
-      .filter((poet) => poet.pinOrder || poet === picked || linkedIds.has(String(poet.id)))
-      .sort((a, b) => (b === picked) - (a === picked) || (a.pinOrder || 99) - (b.pinOrder || 99));
-    const out = [];
-    for (const poet of want) {
-      const ax = tx + k * (x(poet.d) - 3);
-      const ay = ty + k * (yOf(poet) + 7) + 4.5;
-      const wide = poet.label.length * 7.6 + 8;
-      const rect = { l: ax - wide, r: ax, t: ay - 12, b: ay + 4 };
-      if (rect.l < 2 || rect.r > w - 2 || rect.t < 2 || rect.b > h - 2) continue;
-      if (boxes.some((o) => rect.l < o.r && rect.r > o.l && rect.t < o.b && rect.b > o.t)) continue;
-      boxes.push(rect);
-      const cls = poet === picked ? "picked" : linkedIds.has(String(poet.id)) ? "linked" : "";
-      out.push(`<text class="${cls}" x="${ax.toFixed(1)}" y="${ay.toFixed(1)}" data-id="${poet.id}">${esc(poet.label)}</text>`);
-    }
-    tags.innerHTML = out.join("");
+    fitK = Math.min(w / W, h / H) * 0.97;
+    k = fitK; tx = (w - W * k) / 2; ty = (h - H * k) / 2; fitted = true;
+    draw();
   };
-
-  // fly smoothly to a place in content space
+  const zoomAt = (sx, sy, factor) => {
+    const next = Math.min(Math.max(k * factor, fitK * 0.8), 9);
+    tx = sx - ((sx - tx) * next) / k;
+    ty = sy - ((sy - ty) * next) / k;
+    k = next; fitted = false; draw();
+  };
   const flyTo = (cx, cy, targetK, at) => {
     const { w, h } = size();
     const spot = at || { x: w / 2, y: h / 2 };
@@ -3035,245 +939,170 @@ async function treePage(query) {
     const t0 = performance.now();
     fitted = false;
     const step = (now) => {
-      const p = Math.min(1, (now - t0) / 520);
+      const p = Math.min(1, (now - t0) / 480);
       const e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
       k = start.k + (end.k - start.k) * e;
       tx = start.tx + (end.tx - start.tx) * e;
       ty = start.ty + (end.ty - start.ty) * e;
-      render();
+      renderCanvas();
       if (p < 1) flight = requestAnimationFrame(step);
     };
     cancelAnimationFrame(flight);
     flight = requestAnimationFrame(step);
   };
-  const scrollTo = (poet) => {
-    // aim at the part of the stage the open card does not cover
+  const scrollToPoet = (p) => {
     const { w, h } = size();
     const open = !focus.hidden;
-    const narrow = w < 640;
-    const spot = {
-      x: open && !narrow ? Math.min(w - 120, focus.offsetWidth + 20 + (w - focus.offsetWidth - 20) / 2) : w / 2,
-      y: open && narrow ? Math.max(60, (h - focus.offsetHeight - 60) / 2) : h / 2,
-    };
-    flyTo((x(poet.b) + x(poet.d)) / 2 - 20, yOf(poet) + 7, Math.max(k, KREF * 1.6), spot);
+    const spot = { x: open && w >= 640 ? Math.min(w - 120, focus.offsetWidth + 20 + (w - focus.offsetWidth - 20) / 2) : w / 2, y: h / 2 };
+    flyTo((x(p.b) + x(p.d)) / 2 - 20, yOf(p) + 7, Math.max(k, KREF * 1.6), spot);
   };
 
-  // pointer: one finger or mouse pans, two fingers pinch
   const pointers = new Map();
-  let travelled = 0;
-  let pinch = null;
-  chart.addEventListener("pointerdown", (event) => {
+  let travelled = 0, pinch = null;
+  chart.addEventListener("pointerdown", (e) => {
     cancelAnimationFrame(flight);
-    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
     travelled = 0;
     if (pointers.size === 2) {
       const [a, b] = [...pointers.values()];
       pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) };
     }
   });
-  chart.addEventListener("pointermove", (event) => {
-    const last = pointers.get(event.pointerId);
+  chart.addEventListener("pointermove", (e) => {
+    const last = pointers.get(e.pointerId);
     if (!last) return;
-    const now = { x: event.clientX, y: event.clientY };
-    const box = chart.getBoundingClientRect();
+    const now = { x: e.clientX, y: e.clientY };
+    const bRect = chart.getBoundingClientRect();
     if (pointers.size === 1) {
-      const dx = now.x - last.x;
-      const dy = now.y - last.y;
-      travelled += Math.abs(dx) + Math.abs(dy);
-      if (travelled > 6) {
-        if (!chart.hasPointerCapture(event.pointerId)) chart.setPointerCapture(event.pointerId);
+      travelled += Math.abs(now.x - last.x) + Math.abs(now.y - last.y);
+      if (travelled > 5) {
+        if (!chart.hasPointerCapture(e.pointerId)) chart.setPointerCapture(e.pointerId);
         chart.classList.add("grab");
-        tx += dx;
-        ty += dy;
-        fitted = false;
-        draw();
+        tx += now.x - last.x; ty += now.y - last.y; fitted = false; draw();
       }
+      pointers.set(e.pointerId, now);
     } else if (pointers.size === 2 && pinch) {
-      pointers.set(event.pointerId, now);
+      pointers.set(e.pointerId, now);
       const [a, b] = [...pointers.values()];
       const d = Math.hypot(a.x - b.x, a.y - b.y);
-      const midX = (a.x + b.x) / 2 - box.left;
-      const midY = (a.y + b.y) / 2 - box.top;
-      travelled += 20;
-      if (pinch.d > 0) zoomAt(midX, midY, d / pinch.d);
+      if (pinch.d > 0) zoomAt((a.x + b.x) / 2 - bRect.left, (a.y + b.y) / 2 - bRect.top, d / pinch.d);
       pinch.d = d;
-      return;
     }
-    pointers.set(event.pointerId, now);
   });
-  const lift = (event) => {
-    pointers.delete(event.pointerId);
+  const endPtr = (e) => {
+    pointers.delete(e.pointerId);
     if (pointers.size < 2) pinch = null;
     if (!pointers.size) chart.classList.remove("grab");
   };
-  chart.addEventListener("pointerup", lift);
-  chart.addEventListener("pointercancel", lift);
-  chart.addEventListener(
-    "wheel",
-    (event) => {
-      event.preventDefault();
-      cancelAnimationFrame(flight);
-      const box = chart.getBoundingClientRect();
-      if (!event.ctrlKey && Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
-        tx -= event.deltaX;
-        fitted = false;
-        draw();
-        return;
-      }
-      const speed = event.ctrlKey ? 0.01 : 0.0018;
-      zoomAt(event.clientX - box.left, event.clientY - box.top, Math.exp(-event.deltaY * speed));
-    },
-    { passive: false },
-  );
-  chart.addEventListener("dblclick", (event) => {
-    event.preventDefault();
-    const box = chart.getBoundingClientRect();
-    zoomAt(event.clientX - box.left, event.clientY - box.top, 2.2);
+  chart.addEventListener("pointerup", endPtr);
+  chart.addEventListener("pointercancel", endPtr);
+  chart.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    cancelAnimationFrame(flight);
+    const bRect = chart.getBoundingClientRect();
+    zoomAt(e.clientX - bRect.left, e.clientY - bRect.top, Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0018)));
+  }, { passive: false });
+  chart.addEventListener("dblclick", (e) => {
+    e.preventDefault();
+    const bRect = chart.getBoundingClientRect();
+    zoomAt(e.clientX - bRect.left, e.clientY - bRect.top, 2.1);
   });
-  const goMini = (event) => {
-    const box = mini.getBoundingClientRect();
-    const cx = ((event.clientX - box.left) / box.width) * W;
-    const cy = ((event.clientY - box.top) / box.height) * H;
+  mini.addEventListener("pointerdown", (e) => {
+    e.stopPropagation();
+    const bRect = mini.getBoundingClientRect();
+    const cx = ((e.clientX - bRect.left) / bRect.width) * W;
+    const cy = ((e.clientY - bRect.top) / bRect.height) * H;
     const { w, h } = size();
     if (k <= fitK * 1.05) k = fitK * 2.5;
-    tx = w / 2 - cx * k;
-    ty = h / 2 - cy * k;
-    fitted = false;
-    draw();
-  };
-  mini.addEventListener("pointerdown", (event) => {
-    event.stopPropagation();
-    mini.setPointerCapture(event.pointerId);
-    goMini(event);
-    mini.onpointermove = (move) => goMini(move);
+    tx = w / 2 - cx * k; ty = h / 2 - cy * k; fitted = false; draw();
   });
-  mini.addEventListener("pointerup", () => (mini.onpointermove = null));
-  stage.querySelector(".stage-ctl").addEventListener("click", (event) => {
-    const button = event.target.closest("[data-zoom]");
-    if (!button) return;
+  stage.querySelector(".stage-ctl").onclick = (e) => {
+    const btn = e.target.closest("[data-zoom]");
+    if (!btn) return;
     const { w, h } = size();
-    const kind = button.dataset.zoom;
-    if (kind === "in") zoomAt(w / 2, h / 2, 1.6);
-    else if (kind === "out") zoomAt(w / 2, h / 2, 1 / 1.6);
-    else if (kind === "fit") fit();
-    else if (kind === "full") {
+    if (btn.dataset.zoom === "in") zoomAt(w / 2, h / 2, 1.6);
+    else if (btn.dataset.zoom === "out") zoomAt(w / 2, h / 2, 1 / 1.6);
+    else if (btn.dataset.zoom === "fit") fit();
+    else if (btn.dataset.zoom === "full") {
       if (document.fullscreenElement) document.exitFullscreen();
       else stage.requestFullscreen?.().catch(() => stage.classList.toggle("wide"));
     }
-  });
-  stage.addEventListener("keydown", (event) => {
-    if (event.target.closest("input, textarea")) return;
-    const { w, h } = size();
-    const moves = { ArrowLeft: [80, 0], ArrowRight: [-80, 0], ArrowUp: [0, 80], ArrowDown: [0, -80] };
-    if (moves[event.key]) {
-      event.preventDefault();
-      tx += moves[event.key][0];
-      ty += moves[event.key][1];
-      fitted = false;
-      draw();
-    } else if (event.key === "+" || event.key === "=") zoomAt(w / 2, h / 2, 1.4);
-    else if (event.key === "-") zoomAt(w / 2, h / 2, 1 / 1.4);
-    else if (event.key === "0" || event.key === "۰") fit();
-  });
-  const watch = new ResizeObserver(() => {
-    if (!document.body.contains(stage)) return watch.disconnect();
-    if (fitted) fit();
-    else {
-      const { w, h } = size();
-      fitK = Math.min(w / W, h / H) * 0.97;
-      draw();
-    }
-  });
-  watch.observe(stage);
+  };
 
   const paintState = () => {
     const q = box.value.trim();
-    const peers = picked ? new Set(poets.filter((other) => other.b <= picked.d && other.d >= picked.b).map((other) => String(other.id))) : null;
+    const peers = picked ? new Set(poets.filter((o) => o.b <= picked.d && o.d >= picked.b).map((o) => String(o.id))) : null;
     chart.classList.toggle("dim", Boolean(q || region || picked));
     for (const node of lives) {
-      const poet = byId.get(node.dataset.id);
-      const text = `${poet.nickname || ""} ${poet.name || ""} ${poet.birthPlace || ""} ${poet.deathPlace || ""}`;
-      const match = (!q || text.includes(q)) && (!region || poet.region === region) && (!peers || peers.has(node.dataset.id));
+      const p = byId.get(node.dataset.id);
+      const text = `${p.nickname || ""} ${p.name || ""} ${p.birthPlace || ""}`;
+      const match = (!q || text.includes(q)) && (!region || p.region === region) && (!peers || peers.has(node.dataset.id));
       node.classList.toggle("on", match);
-      node.classList.toggle("picked", picked?.id === poet.id);
+      node.classList.toggle("picked", picked?.id === p.id);
     }
     renderTags();
   };
+
   const drawLinks = (links) => {
     if (!picked) return;
-    const most = Math.max(1, ...links.map((link) => link.n));
-    const cx = (poet) => (x(poet.b) + x(poet.d)) / 2;
-    linkedIds = new Set(links.slice(0, 12).map((link) => String(link.id)));
+    const most = Math.max(1, ...links.map((l) => l.n));
+    const cx = (p) => (x(p.b) + x(p.d)) / 2;
+    linkedIds = new Set(links.slice(0, 12).map((l) => String(l.id)));
     arcs.innerHTML = links
       .slice(0, 12)
       .map((link) => {
         const other = byId.get(String(link.id));
         if (!other) return "";
-        const ax = cx(picked);
-        const ay = yOf(picked) + 7;
-        const bx = cx(other);
-        const by = yOf(other) + 7;
-        const lift = Math.min(ay > by ? by : ay, Math.min(160, 30 + Math.abs(ax - bx) * 0.25));
-        return `<path d="M${ax.toFixed(1)},${ay} Q${((ax + bx) / 2).toFixed(1)},${(Math.min(ay, by) - lift).toFixed(1)} ${bx.toFixed(1)},${by}" style="stroke-width:${(1 + (link.n / most) * 4).toFixed(1)}"><title>${esc(other.label)} · ${fa(link.n)} پیوند</title></path>`;
+        const ax = cx(picked), ay = yOf(picked) + 7, bx = cx(other), by = yOf(other) + 7;
+        const lift = Math.min(90, 18 + Math.hypot(bx - ax, by - ay) * 0.25);
+        return `<path d="M${ax.toFixed(1)},${ay.toFixed(1)} Q${((ax + bx) / 2).toFixed(1)},${(Math.min(ay, by) - lift).toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}" style="stroke-width:${(0.8 + (link.n / most) * 3.2).toFixed(1)}"/>`;
       })
       .join("");
-    for (const link of links.slice(0, 12)) chart.querySelector(`.life[data-id="${link.id}"]`)?.classList.add("on", "linked");
+    for (const l of links.slice(0, 12)) chart.querySelector(`.life[data-id="${l.id}"]`)?.classList.add("on", "linked");
     renderTags();
   };
+
   const select = async (id, jump = false) => {
     const poet = byId.get(String(id));
     if (!poet) return;
     picked = poet;
     linkedIds = new Set();
-    lives.forEach((node) => node.classList.remove("linked"));
+    lives.forEach((n) => n.classList.remove("linked"));
     arcs.innerHTML = "";
     band.removeAttribute("hidden");
     band.setAttribute("x", x(poet.d));
     band.setAttribute("width", Math.max(3, x(poet.b) - x(poet.d)));
     paintState();
-    const peers = poets.filter((other) => other.id !== poet.id && other.b <= poet.d && other.d >= poet.b);
-    const overlapYears = (other) => Math.max(0, Math.min(poet.d, other.d) - Math.max(poet.b, other.b));
-    const sortedPeers = [...peers].sort((a, b) => {
-      const pA = a.pinOrder || 999;
-      const pB = b.pinOrder || 999;
-      if (pA !== pB) return pA - pB;
-      return overlapYears(b) - overlapYears(a);
-    });
-    const topPeers = sortedPeers.slice(0, 6);
-    const peerChip = (other) => `<button class="chip" type="button" data-pick="${other.id}" title="${fa(overlapYears(other))} سال هم‌پوشانی زیست">${esc(other.label)} <small style="opacity:0.8;">(${fa(overlapYears(other))} سال)</small></button>`;
 
-    const centuryStart = Math.floor(poet.b / 100) + 1;
-    const centuryEnd = Math.floor(poet.d / 100) + 1;
-    const centuryText = centuryStart === centuryEnd ? `قرن ${fa(centuryStart)} هـ.ق` : `قرن ${fa(centuryStart)} و ${fa(centuryEnd)} هـ.ق`;
-    const regionName = regionInfo.get(poet.region)?.name || poet.region;
+    const peers = poets.filter((o) => o.id !== poet.id && o.b <= poet.d && o.d >= poet.b);
+    const overlap = (o) => Math.max(0, Math.min(poet.d, o.d) - Math.max(poet.b, o.b));
+    const topPeers = [...peers]
+      .sort((a, b) => (a.pinOrder || 999) - (b.pinOrder || 999) || overlap(b) - overlap(a))
+      .slice(0, 6);
+    const c1 = centuryOf(poet.b), c2 = centuryOf(poet.d);
+    const cText = c1 === c2 ? `قرن ${fa(c1)} ق` : `قرن ${fa(c1)} و ${fa(c2)} ق`;
+    const rName = regionInfo.get(poet.region)?.name || "";
 
     focus.hidden = false;
-    focus.innerHTML = `<button type="button" class="focus-x" id="tree-clear" aria-label="بستن">×</button>
-      <div class="focus-body">
-        <div class="g-focus-header">
-          <strong>${esc(poet.label)}</strong>
-          <span class="g-focus-period-badge">${centuryText} · سرزمین: ${esc(regionName)}</span>
-        </div>
-        <div class="muted" style="margin:2px 0 6px;">${esc(poet.name)}${poet.birthPlace ? ` · زاده ${esc(poet.birthPlace)}` : ""} · ${esc(yearsText(poet))} (${fa(poet.d - poet.b)} سال حیات)</div>
-        <div class="g-focus-peers-wrap">
-          <p style="margin:4px 0 6px;"><strong>${fa(peers.length)} شاعر هم‌عصر</strong> در دورهٔ زندگی او (روشن روی خط زمان):</p>
-          <div class="chips" style="gap:5px;">${topPeers.map(peerChip).join("")}</div>
-        </div>
-        <div class="g-focus-tip" style="margin:8px 0;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:0.82rem;color:var(--turquoise);">
-          💡 <strong>راهنما:</strong> تمام خطوط روشن روی صفحه، شاعرانی هستند که در بازهٔ حیات ${esc(poet.label)} زیسته‌اند. با زدن روی هر نام می‌توانید به او پرش کنید.
-        </div>
-        <p id="tree-links" class="muted">پیوندهای تضمین را از گنجور می‌آورم…</p>
-        <p class="chips">
-          <a class="btn primary" href="#/poet/${poet.id}">صفحه دیوان</a>
-          <a class="chip" href="#/bridges/${poet.id}">همه پل‌ها</a>
-          <a class="chip" href="#/map?y=${Math.round((poet.b + poet.d) / 2)}">روی نقشه</a>
-          <button class="chip" type="button" data-go="${poet.id}">پرش به نوار در نمودار</button>
-        </p>
+    focus.innerHTML = `
+      <button type="button" class="focus-x" id="tree-clear" aria-label="بستن">×</button>
+      <div class="focus-head">
+        <strong>${esc(poet.label)}</strong>
+        <span class="focus-badge">${cText} · ${esc(rName)}</span>
+      </div>
+      <div class="muted small">${esc(poet.name)}${poet.birthPlace ? ` · زاده ${esc(poet.birthPlace)}` : ""} · ${esc(yearsText(poet))} (${fa(poet.d - poet.b)} سال حیات)</div>
+      <p style="margin:6px 0 4px;font-size:0.86rem;"><strong>${fa(peers.length)} شاعر هم‌عصر</strong> (روشن روی نمودار):</p>
+      <div class="chips">${topPeers.map((o) => `<button class="chip" type="button" data-pick="${o.id}">${esc(o.label)} <small>(${fa(overlap(o))} سال)</small></button>`).join("")}</div>
+      <div class="focus-tip">تمام نوارهای روشن پس‌زمینه، شاعرانی هستند که هم‌زمان با ${esc(poet.label)} زیسته‌اند.</div>
+      <p id="tree-links" class="muted small">پیوندهای تضمین را می‌آورم…</p>
+      <div class="chips">
+        <a class="btn primary" href="#/poet/${poet.id}">صفحهٔ دیوان</a>
+        <button class="chip" type="button" data-open-bridges="${poet.id}">پل‌های تضمین</button>
+        <button class="chip" type="button" data-go="${poet.id}">تمرکز روی نوار</button>
       </div>`;
-    history.replaceState(null, "", `#/tree?poet=${poet.id}`);
-    if (jump) scrollTo(poet);
+    if (jump) scrollToPoet(poet);
+
     const token = ++ask;
-    let links = [];
     try {
       const { data: quoted } = await api(`/quoted?poetId=${poet.id}&published=true`);
       const count = new Map();
@@ -3281,806 +1110,750 @@ async function treePage(query) {
         if (!item.relatedPoetId || item.relatedPoetId === poet.id || item.rejected) continue;
         count.set(item.relatedPoetId, (count.get(item.relatedPoetId) || 0) + 1);
       }
-      links = [...count].map(([other, n]) => ({ id: other, n })).sort((a, b) => b.n - a.n);
-    } catch (error) {
+      const links = [...count].map(([other, n]) => ({ id: other, n })).sort((a, b) => b.n - a.n);
+      if (token !== ask || picked !== poet) return;
+      drawLinks(links);
+      const note = focus.querySelector("#tree-links");
+      if (note)
+        note.innerHTML = links.length
+          ? `پیوند تضمین با ${fa(links.length)} شاعر: ${links.slice(0, 5).map((l) => `<button class="chip" type="button" data-pick="${l.id}">${esc(byId.get(String(l.id))?.label || "شاعر")} · ${fa(l.n)}</button>`).join("")}`
+          : "در گنجور برای این شاعر پیوند تضمین ثبت نشده است.";
+    } catch {
       if (token !== ask) return;
-      const note = document.querySelector("#tree-links");
-      if (note) note.textContent = "پیوندهای تضمین از گنجور نیامد؛ بعداً دوباره بزن.";
-      return;
+      const note = focus.querySelector("#tree-links");
+      if (note) note.textContent = "پیوندهای تضمین در دسترس نبود.";
     }
-    if (token !== ask || picked !== poet) return;
-    drawLinks(links);
-    const note = document.querySelector("#tree-links");
-    if (note)
-      note.innerHTML = links.length
-        ? `پیوند تضمین یا بیت مشترک با ${fa(links.length)} شاعر${links.length > 12 ? "؛ دوازده تای پرشمار روی نمودار" : ""}: ${links
-            .slice(0, 6)
-            .map((link) => `<button class="chip" type="button" data-pick="${link.id}">${esc(byId.get(String(link.id))?.label || "شاعر")} · ${fa(link.n)}</button>`)
-            .join("")}`
-        : "گنجور برای این شاعر تضمین یا بیت مشترکی منتشر نکرده.";
   };
+
   const clear = () => {
-    picked = null;
-    linkedIds = new Set();
-    ask++;
-    band.setAttribute("hidden", "");
-    arcs.innerHTML = "";
-    lives.forEach((node) => node.classList.remove("linked"));
+    picked = null; linkedIds = new Set(); ask++;
+    band.setAttribute("hidden", ""); arcs.innerHTML = "";
+    lives.forEach((n) => n.classList.remove("linked"));
     focus.hidden = true;
-    history.replaceState(null, "", "#/tree");
     paintState();
   };
 
-  chart.addEventListener("click", (event) => {
+  chart.addEventListener("click", (e) => {
     if (travelled > 6) return;
-    const node = event.target.closest(".life, #tags text");
+    const node = e.target.closest(".life, #tags text");
     if (node) select(node.dataset.id);
   });
-  chart.addEventListener("keydown", (event) => {
-    const node = event.target.closest(".life");
-    if (node && (event.key === "Enter" || event.key === " ")) {
-      event.preventDefault();
-      event.stopPropagation();
-      select(node.dataset.id, true);
-    }
+  focus.addEventListener("pointerdown", (e) => e.stopPropagation());
+  focus.addEventListener("click", (e) => {
+    if (e.target.closest("#tree-clear")) return clear();
+    const go = e.target.closest("[data-go]");
+    if (go) return scrollToPoet(byId.get(go.dataset.go));
+    const chip = e.target.closest("[data-pick]");
+    if (chip) return select(chip.dataset.pick, true);
+    const br = e.target.closest("[data-open-bridges]");
+    if (br && landingState.activateTool) landingState.activateTool("bridges", { id: br.dataset.openBridges });
   });
-  focus.addEventListener("pointerdown", (event) => event.stopPropagation());
-  focus.addEventListener("click", (event) => {
-    if (event.target.closest("#tree-clear")) return clear();
-    const go = event.target.closest("[data-go]");
-    if (go) return scrollTo(byId.get(go.dataset.go));
-    const chip = event.target.closest("[data-pick]");
-    if (chip) select(chip.dataset.pick, true);
-  });
-  const searchDropdown = document.querySelector("#tree-search-dropdown");
-  const renderSearchSuggestions = (q) => {
-    if (!searchDropdown) return;
-    if (!q || q.length < 2) {
-      searchDropdown.hidden = true;
-      searchDropdown.innerHTML = "";
-      return;
-    }
-    const hits = poets.filter(p => `${p.nickname || ""} ${p.name || ""} ${p.birthPlace || ""}`.includes(q)).slice(0, 6);
-    if (!hits.length) {
-      searchDropdown.hidden = true;
-      return;
-    }
-    searchDropdown.hidden = false;
-    searchDropdown.innerHTML = hits.map(p => `
-      <div class="g-tree-suggest-item" data-id="${p.id}">
-        <div class="g-suggest-info">
-          <strong>${esc(p.label)}</strong>
-          <small>${esc(yearsText(p))}${p.birthPlace ? ` · زاده ${esc(p.birthPlace)}` : ""}</small>
-        </div>
-        <span class="g-suggest-tag">پرش ➜</span>
-      </div>
-    `).join("");
-  };
 
   box.addEventListener("input", () => {
     paintState();
-    renderSearchSuggestions(box.value.trim());
-  });
-
-  if (searchDropdown) {
-    searchDropdown.addEventListener("click", (event) => {
-      const item = event.target.closest(".g-tree-suggest-item");
-      if (item) {
-        const hitId = item.dataset.id;
-        searchDropdown.hidden = true;
-        box.value = "";
-        select(hitId, true);
-      }
-    });
-  }
-
-  document.addEventListener("click", (event) => {
-    if (searchDropdown && !event.target.closest(".g-tree-search-wrap")) {
-      searchDropdown.hidden = true;
-    }
-  });
-
-  document.querySelectorAll(".g-quick-poet-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const pid = btn.dataset.poetId;
-      if (pid) select(pid, true);
-    });
-  });
-
-  document.querySelector("#tree-filter").onsubmit = (event) => {
-    event.preventDefault();
     const q = box.value.trim();
-    const hit = q && poets.find((poet) => `${poet.nickname || ""} ${poet.name || ""} ${poet.birthPlace || ""}`.includes(q));
-    if (hit) {
-      if (searchDropdown) searchDropdown.hidden = true;
-      box.value = "";
-      select(hit.id, true);
+    if (q.length < 2) { drop.hidden = true; return; }
+    const hits = poets.filter((p) => `${p.nickname || ""} ${p.name || ""} ${p.birthPlace || ""}`.includes(q)).slice(0, 6);
+    if (!hits.length) { drop.hidden = true; return; }
+    drop.hidden = false;
+    drop.innerHTML = hits
+      .map((p) => `<div class="suggest-row" data-pick-id="${p.id}"><div><strong>${esc(p.label)}</strong><small>${esc(yearsText(p))}${p.birthPlace ? ` · ${esc(p.birthPlace)}` : ""}</small></div><span class="suggest-tag">نمایش ➜</span></div>`)
+      .join("");
+  });
+  box.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const q = box.value.trim();
+      const hit = q && poets.find((p) => `${p.nickname || ""} ${p.name || ""} ${p.birthPlace || ""}`.includes(q));
+      if (hit) { drop.hidden = true; box.value = ""; select(hit.id, true); }
     }
-  };
-  document.querySelector("#tree-regions").onclick = (event) => {
-    const chip = event.target.closest("[data-region]");
+  });
+  drop.addEventListener("click", (e) => {
+    const row = e.target.closest("[data-pick-id]");
+    if (!row) return;
+    drop.hidden = true; box.value = ""; select(row.dataset.pickId, true);
+  });
+  container.querySelector("#tree-regions").onclick = (e) => {
+    const chip = e.target.closest("[data-region]");
     if (!chip) return;
     region = chip.dataset.region;
-    document.querySelectorAll("#tree-regions .chip").forEach((node) => node.classList.toggle("on", node === chip));
+    container.querySelectorAll("#tree-regions .chip").forEach((n) => n.classList.toggle("on", n === chip));
     paintState();
   };
+
+  new ResizeObserver(() => {
+    if (!document.body.contains(stage)) return;
+    if (fitted) fit(); else draw();
+  }).observe(stage);
+
   fit();
-  const start = query.get("poet");
-  if (start) select(start, true);
+  if (params.poet) setTimeout(() => select(params.poet, true), 60);
 }
 
-const HOME_TOOLS = [
-  ["#/tree", "هم‌عصران", "چه کسانی هم‌زمان می‌زیستند", "◎"],
-  ["#/devices", "آرایه‌ها", "لب ← لعل، ابرو ← کمان", "✦"],
-  ["#/people", "مردمان شعر", "خاندان و پیوندهای شاهنامه", "♙"],
-  ["#/search?q=%D8%B9%D8%B4%D9%82", "جستجو و واژه‌سنج", "کدام شاعر بیشتر گفته", "≋"],
-  ["#/vazn", "وزن‌ها", "بحرها و شعرهایشان", "♪"],
-  ["#/bridges/2", "پل‌های تضمین", "چه کسی از چه کسی گرفت", "⇄"],
-];
+function renderBirthplaceMap(container, poets, params) {
+  const placed = poets.filter((p) => p.birthPlaceLatitude && p.birthPlaceLongitude && p.birthYearInLHijri && p.deathYearInLHijri);
+  const min = Math.min(...placed.map((p) => p.birthYearInLHijri));
+  const max = Math.max(...placed.map((p) => p.deathYearInLHijri));
+  let year = Math.min(max, Math.max(min, Number(params.y || 750)));
 
-const TOOL_GROUPS = [
-  {
-    title: "زمان و مکان",
-    about: "شاعران و شعرها روی نقشه و در گذر سال‌ها.",
-    tools: [
-      ["#/tree", "هم‌عصران", "همه شاعران روی خط زمان یا روی نقشه زادگاه‌ها؛ چه کسانی هم‌زمان می‌زیستند و از هم گرفتند.", "❦"],
-      ["#/places", "جای‌ها در شعر", "سفر هفت‌سالهٔ ناصرخسرو منزل‌به‌منزل روی نقشه، و شهرهایی که شاعران دیگر از آن‌ها گفته‌اند.", "⌖"],
-    ],
-  },
-  {
-    title: "پیوندها",
-    about: "چه کسی از چه کسی گرفت، و آدم‌های درون شعر با هم چه نسبتی دارند.",
-    tools: [
-      ["#/bridges/2", "پل‌های تضمین", "تضمین‌ها و بیت‌های مشترک هر شاعر با دیگران، با شمار واقعی.", "⇄"],
-      ["#/people", "مردمان شعر", "۶۶۲ شخصیت، بیشتر از شاهنامه: خاندان، پیوندها و بیت‌هایی که از آن‌ها نام برده‌اند.", "♙"],
-    ],
-  },
-  {
-    title: "زبان و صناعت",
-    about: "وزن، واژه و آرایه؛ ابزار کسی که می‌خواهد ببیند شعر چطور ساخته شده.",
-    tools: [
-      ["#/vazn", "وزن‌ها", "همه بحرها با شمار مصراع، و شعرهای هر وزن.", "♪"],
-      ["#/devices", "آرایه‌ها", "تشبیه، استعاره، کنایه و ایهام، با نمونه‌های واقعی و جفت‌های «این به آن مانند شده».", "✦"],
-    ],
-  },
-  {
-    title: "خواندن",
-    about: "راه‌های سبک برای رسیدن به یک شعر.",
-    tools: [
-      ["#/search", "جستجو و واژه‌سنج", "واژه یا تکه‌ای از بیت در همه شعرها، و اینکه کدام شاعر آن واژه را بیشتر گفته.", "⌕"],
-      ["#/library", "کتابخانه من", "نشان‌ها، یادداشت‌ها و شعرهای خوانده‌شده روی همین دستگاه.", "☆"],
-    ],
-  },
-];
-
-function discoverPage() {
-  paint(
-    "ابزارها",
-    `<h1>ابزارها</h1>
-     <p class="lead">راه‌های دیدن گنجینه، غیر از خواندن خطی. هر ابزار از داده باز گنجور ساخته شده؛ فهرستش در <a href="#/about">درباره</a> هست.</p>
-     ${TOOL_GROUPS.map(
-       (group) => `<h2 class="section">${group.title}</h2><p class="muted">${group.about}</p>
-         <div class="toolbelt wide">${group.tools.map(([href, title, text, icon]) => `<a class="tool" href="${href}"><span class="tool-icon" aria-hidden="true">${icon || "•"}</span><strong>${title}</strong><small>${text}</small></a>`).join("")}</div>`,
-     ).join("")}
-     <p class="note">داخل صفحه هر شعر هم ابزار هست: معنی بیت، تضمین، هم‌وزن، آرایه، موسیقی، حاشیه و آینه واژه. روی بیت یا واژه بزن.</p>`,
-  );
-}
-
-async function dataPage() {
-  loading("داده‌ها");
-  let manifest = null;
-  try {
-    manifest = await fileJson("manifest.json");
-  } catch (error) {
-    if (error === STALE) throw error;
+  const cities = new Map();
+  for (const p of placed) {
+    const pt = project(p.birthPlaceLongitude, p.birthPlaceLatitude);
+    if (pt.x < 0 || pt.x > 100 || pt.y < 0 || pt.y > 100) continue;
+    const c = cityOf(p);
+    if (!cities.has(c)) cities.set(c, pt);
   }
-  const n = (key) => (manifest && manifest[key] != null ? Number(manifest[key]).toLocaleString("fa-IR") : "؟");
-  const row = (name, what, count, used) => `<tr><th>${name}</th><td data-label="چه دارد">${what}</td><td data-label="اندازه">${count}</td><td data-label="کجا">${used}</td></tr>`;
-  paint(
-    "درباره",
-    `<h1>درباره گنجور نو</h1>
-     <p class="lead">یک خوانش‌خانه برای شعر فارسی: شعر را از رابط گنجور می‌گیرد و با چیدمان خودش نشان می‌دهد.</p>
-     <p>متن، فهرست و فایل صوتی مال گنجور است و همان‌جا می‌ماند. نشان، یادداشت و اتاق خلوت روی دستگاه تو ذخیره می‌شود و به جایی فرستاده نمی‌شود. کنار خواندن، <a href="#/discover">ابزارهایی</a> هست برای دیدن شعر از راه‌های دیگر.</p>
-     <p class="chips"><a class="chip" href="https://ganjoor.net" rel="noreferrer">گنجور</a><a class="chip" href="https://github.com/maryamjaberi/ganjoor-no-new" rel="noreferrer">کد این سایت</a></p>
-     <h2 class="section" id="data">داده‌ها</h2>
-     <p>هر چه اینجا می‌بینی از سه سرچشمه می‌آید. این بخش آن‌ها را دسته‌بندی می‌کند و می‌گوید هر ابزار از کدام داده ساخته شده.</p>
-     ${manifest ? `<p class="muted">برون‌داد باز گنجور، به‌روز شده در ${esc(new Date(manifest.GeneratedAtUtc).toLocaleDateString("fa-IR", { year: "numeric", month: "long", day: "numeric" }))}.</p>` : ""}
-     <h2 class="section">۱. متن و آثار</h2>
-     <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
-       ${row("شاعران", "نام، تخلص، سال زاد و مرگ هجری، زادگاه با مختصات، چهره", n("PoetsCount"), `<a href="#/poets">شاعران</a>، <a href="#/map">نقشه</a>، <a href="#/tree">درخت</a>`)}
-       ${row("بخش‌ها و کتاب‌ها", "فهرست درختی آثار هر شاعر", "—", "صفحه شاعر و فهرست")}
-       ${row("شعرها", "متن، بیت‌ها، جایگاه مصراع، شرح بیت، منبع", n("PoemsCount"), "صفحه شعر، جستجو")}
-       ${row("وزن و قافیه", "بحر عروضی هر بخش و حروف قافیه", "۲۱۲ وزن", `<a href="#/vazn">وزن‌ها</a>، زبانه هم‌وزن`)}
-     </tbody></table></div>
-     <h2 class="section">۲. صدا، موسیقی و گفتگو</h2>
-     <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
-       ${row("خوانش‌ها", "فایل صوتی و زمان‌بندی هر بیت", "زنده از گنجور", "پخش‌کننده صفحه شعر، بیت هم‌گام")}
-       ${row("موسیقی", "آهنگ‌هایی که روی شعر ساخته شده", "زنده", "زبانه موسیقی")}
-       ${row("حاشیه‌ها", "یادداشت خوانندگان روی شعر یا بیت", "زنده", "زبانه حاشیه")}
-     </tbody></table></div>
-     <h2 class="section">۳. پیوند میان شعرها</h2>
-     <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
-       ${row("تضمین و بیت مشترک", "بیت این شاعر و بیت شاعر دیگر، با جهت پیش و پس", "زنده", `<a href="#/bridges/2">پل‌ها</a>، زبانه تضمین`)}
-       ${row("استقبال", "بخش‌های هم‌وزن و هم‌قافیه", "زنده", "زبانه هم‌وزن و تضمین")}
-       ${row("شمار واژه", "بسامد هر واژه در آثار هر شاعر", "زنده", `<a href="#/search">جستجو</a>`)}
-     </tbody></table></div>
-     <h2 class="section">۴. آدم‌ها و جای‌ها</h2>
-     <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
-       ${row("مردمان", "نام، نام‌های دیگر، شرح کوتاه", n("PeopleCount"), `<a href="#/people">مردمان شعر</a>`)}
-       ${row("خویشاوندی", "پدر و فرزند، نیا، همسر، خواهر و برادر؛ با بیت گواه و کتاب", "۳۲۷", "صفحه هر شخص، خاندان")}
-       ${row("پیوندهای دیگر", "کشنده، سپهسالار، وزیر، جانشین، هم‌پیمان…", "۳۲۴", "صفحه هر شخص")}
-       ${row("نام‌بردن از اشخاص", "بیت‌هایی که شخص در آن حاضر است یا به او اشاره شده", n("PersonTagsCount"), "صفحه هر شخص")}
-       ${row("جای‌ها", "نام شهر با مختصات", n("LocationsCount"), `<a href="#/places">جای‌ها در شعر</a>`)}
-       ${row("برچسب جا و تاریخ", "بیتی که به یک شهر و گاهی یک سال قمری بسته شده", n("GeoTagsCount"), `<a href="#/places">جای‌ها در شعر</a>، صفحه شاعر`)}
-     </tbody></table></div>
-     <h2 class="section">۵. آرایه‌های ادبی</h2>
-     <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
-       ${row("آرایه‌ها", "تعریف، نمونه و جایگاه‌های هر آرایه", n("LiteraryDevicesCount"), `<a href="#/devices">آرایه‌ها</a>`)}
-       ${row("مفهوم‌ها", "چیزهایی که در تشبیه و استعاره به کار رفته: زلف، شمع، ماه…", n("LiteraryConceptsCount"), `<a href="#/devices">آرایه‌ها</a>`)}
-       ${row("برچسب آرایه", "آرایه روی بیت، با جای دقیق واژه‌ها", n("LiteraryTagsCount"), "صفحه آرایه، زبانه آرایه شعر")}
-     </tbody></table></div>
-     <h2 class="section">۶. لایه آموزشی خود این سایت</h2>
-     <div class="table"><table><thead><tr><th>داده</th><th>چه دارد</th><th>اندازه</th><th>کجا به کار رفته</th></tr></thead><tbody>
-     </tbody></table></div>
-     <h2 class="section">سرچشمه‌ها</h2>
-     <p><strong>رابط زنده گنجور</strong> (api.ganjoor.net): متن، صوت، حاشیه، تضمین، وزن، شمار واژه، آرایه و مردمان. هر بار زنده خوانده می‌شود.</p>
-     <p><strong>برون‌داد باز گنجور</strong> (<a href="https://github.com/ganjoor/ganjoor-data" rel="noreferrer">ganjoor-data</a>): پرونده‌های ثابت آدم‌ها، جای‌ها، برچسب‌ها و آرایه‌ها، مستقیم از گیت‌هاب.</p>
-     <p><strong>data.json همین مخزن</strong>: لایه آموزشی و دست‌نوشته؛ معنی‌ها ساده‌اند و شرح انتقادی نیستند.</p>
-     <p class="muted">بخشی از آرایه‌های غزل‌های حافظ از «پیکره متن ادبی فارسی» (Raji و همکاران، ۲۰۲۳، مجوز MIT) آمده: <a href="https://doi.org/10.5281/zenodo.7923612" rel="noreferrer">doi.org/10.5281/zenodo.7923612</a>. برخی برچسب‌ها با کمک هوش مصنوعی ساخته و به دست ویراستار گنجور بازبینی شده‌اند.</p>`,
-  );
-}
+  const ghosts = [...cities.values()].map((pt) => `<i class="ghost" style="left:${pt.x}%;top:${pt.y}%"></i>`).join("");
+  const decades = [];
+  for (let y = Math.floor(min / 10) * 10; y <= max; y += 10) decades.push({ y, n: placed.filter((p) => p.birthYearInLHijri <= y + 5 && p.deathYearInLHijri >= y + 5).length });
+  const peak = Math.max(1, ...decades.map((d) => d.n));
+  const spark = `<svg class="spark" viewBox="0 0 1000 40" preserveAspectRatio="none"><path d="M0,40 ${decades.map((d) => `L${(((d.y + 5 - min) / (max - min)) * 1000).toFixed(1)},${(40 - (d.n / peak) * 36).toFixed(1)}`).join(" ")} L1000,40 Z"/></svg>`;
+  const ticks = [];
+  for (let m = Math.ceil(min / 100) * 100; m < max; m += 100) ticks.push(m);
 
-const RELATION = {
-  0: ["فرزند", "پدر یا مادر"],
-  1: ["خواهر یا برادر", "خواهر یا برادر"],
-  2: ["همسر", "همسر"],
-  3: ["نواده", "نیا"],
-};
-const TIE = {
-  0: ["وزیرِ", "وزیرش"],
-  1: ["رایزنِ", "رایزنش"],
-  2: ["درباریِ", "درباری‌اش"],
-  3: ["پشتیبانِ", "پشتیبانش"],
-  4: ["هم‌پیمانِ", "هم‌پیمانش"],
-  5: ["دشمنِ", "دشمنش"],
-  6: ["خدمتگزارِ", "خدمتگزارش"],
-  7: ["همراهِ", "همراهش"],
-  8: ["جانشینِ", "جانشینش"],
-  9: ["پیوند مدح با", "پیوند مدح با"],
-  10: ["پیوند هجو با", "پیوند هجو با"],
-  11: ["سپهسالارِ", "سپهسالارش"],
-  12: ["پهلوانِ", "پهلوانش"],
-  13: ["هم‌روزگارِ", "هم‌روزگارش"],
-  14: ["کُشنده‌ی", "کشته به دستِ"],
-  15: ["دلداده‌ی", "دلداده‌اش"],
-  99: ["پیوند با", "پیوند با"],
-};
+  container.innerHTML = `
+    <div class="year-bar">
+      <div class="year-top">
+        <button type="button" class="play" id="map-play" aria-label="پخش">▶</button>
+        <span class="muted small">سفر در زمان</span>
+        <strong id="map-year-label"></strong>
+      </div>
+      <div class="scale">
+        ${spark}
+        <input id="map-year" type="range" min="${min}" max="${max}" value="${year}" aria-label="سال هجری" />
+        <div class="ticks">${ticks.map((m) => `<span style="left:${((m - min) / (max - min)) * 100}%">${yr(m)}</span>`).join("")}</div>
+      </div>
+    </div>
+    <div class="atlas realm" id="realm-atlas"><div class="ghosts">${ghosts}</div><div id="realm-pins"></div></div>
+    <p class="muted small" id="map-alive-count"></p>
+    <div class="grid" id="map-city-list"></div>
+  `;
 
-async function peoplePage() {
-  loading("مردمان شعر");
-  const [people, roots, graph] = await Promise.all([rootApi("/people"), rootApi("/people/familytrees"), rootApi("/people/graph")]);
-  const degree = new Map();
-  for (const edge of graph.edges || []) {
-    degree.set(edge.person1Id, (degree.get(edge.person1Id) || 0) + 1);
-    degree.set(edge.person2Id, (degree.get(edge.person2Id) || 0) + 1);
-  }
-  const weight = new Map((graph.nodes || []).map((node) => [node.id, node.importance || 0]));
-  const list = [...people].sort((a, b) => (weight.get(b.id) || 0) - (weight.get(a.id) || 0) || (degree.get(b.id) || 0) - (degree.get(a.id) || 0));
-  const net = peopleNetwork(graph);
-  paint(
-    "مردمان شعر",
-    `<h1>مردمان شعر</h1>
-     <p class="lead">${people.length.toLocaleString("fa-IR")} شخصیت که روی بیت‌های گنجور برچسب خورده‌اند؛ بیشترشان از شاهنامه. خویشاوندی و پیوند هر کدام از خود بیت‌ها گواه دارد.</p>
-     ${roots.length ? `<h2 class="section">خاندان‌ها</h2><p class="chips">${roots.map((person) => `<a class="chip on" href="#/person/${person.id}">${esc(person.familyTreeCaption || person.name)}</a>`).join("")}</p>` : ""}
-     <h2 class="section">شبکهٔ پیوندها</h2>
-     <p class="muted">${fa(net.count)} شخصیت پرپیوند و ${fa(net.edges)} پیوند میانشان. اندازهٔ هر دایره، شمار پیوندهای اوست. نشانگر را روی یک نام ببر تا پیوندهایش روشن شود؛ بزن تا به صفحه‌اش بروی.</p>
-     <p class="chips net-kinds" id="net-kinds">${NET_KINDS.map((kind) => `<button type="button" class="chip on" data-kind="${kind.key}" style="--c:${kind.color}"><i class="dot"></i>${kind.name}</button>`).join("")}</p>
-     <div class="net-map">${net.svg}</div>
-     <h2 class="section">همهٔ نام‌ها</h2>
-     <form class="big-search" id="people-filter"><input id="people-q" placeholder="نام یا شرح، مثلاً رستم یا پادشاه" aria-label="پالایش نام" /></form>
-     <div class="grid" id="people-list"></div>`,
-  );
-  const netMap = document.querySelector(".net-map");
-  const netSvg = netMap.querySelector("svg");
-  const netView = atlasStage(netMap);
-  netMap.parentElement.classList.add("net-stage");
-  const vb = netSvg.viewBox.baseVal;
-  const fitNet = () => {
-    if (!netMap.clientWidth) return;
-    netMap.style.setProperty("--fit", Math.max(vb.width / netMap.clientWidth, vb.height / netMap.clientHeight).toFixed(4));
-    netView.refresh();
-  };
-  fitNet();
-  new ResizeObserver(fitNet).observe(netMap);
-  document.querySelector("#net-kinds").onclick = (event) => {
-    const chip = event.target.closest("[data-kind]");
-    if (!chip) return;
-    chip.classList.toggle("on");
-    netSvg.classList.toggle(`hide-${chip.dataset.kind}`, !chip.classList.contains("on"));
-  };
-  const lines = [...netSvg.querySelectorAll(".net-edges line")];
-  netSvg.addEventListener("pointerover", (event) => {
-    const pin = event.target.closest(".pin");
-    if (!pin) return;
-    const id = pin.dataset.id;
-    const near = new Set([id]);
-    for (const line of lines) {
-      const hot = line.dataset.a === id || line.dataset.b === id;
-      line.classList.toggle("hot", hot);
-      if (hot) near.add(line.dataset.a).add(line.dataset.b);
+  const view = atlasStage(container.querySelector("#realm-atlas"));
+  const pinsBox = container.querySelector("#realm-pins");
+  const slider = container.querySelector("#map-year");
+  const label = container.querySelector("#map-year-label");
+  const countEl = container.querySelector("#map-alive-count");
+  const listEl = container.querySelector("#map-city-list");
+  const playBtn = container.querySelector("#map-play");
+
+  const drawYear = (val) => {
+    year = Number(val);
+    const alive = placed.filter((p) => p.birthYearInLHijri <= year && p.deathYearInLHijri >= year);
+    const groups = new Map();
+    for (const p of alive) {
+      const pt = project(p.birthPlaceLongitude, p.birthPlaceLatitude);
+      if (pt.x < 0 || pt.x > 100 || pt.y < 0 || pt.y > 100) continue;
+      const city = cityOf(p);
+      const g = groups.get(city) || { city, x: pt.x, y: pt.y, poets: [] };
+      g.poets.push(p);
+      groups.set(city, g);
     }
-    netSvg.classList.add("focus");
-    netSvg.querySelectorAll(".pin").forEach((node) => node.classList.toggle("near", near.has(node.dataset.id)));
-  });
-  netSvg.addEventListener("pointerleave", () => netSvg.classList.remove("focus"));
-  const box = document.querySelector("#people-q");
-  const area = document.querySelector("#people-list");
-  const draw = () => {
-    const q = box.value.trim();
-    const shown = list.filter((person) => !q || `${person.name} ${person.description || ""} ${(person.aliases || []).join?.(" ") || person.aliases || ""}`.includes(q));
-    area.innerHTML = shown.length
-      ? shown
-          .slice(0, q ? 120 : 60)
-          .map(
-            (person) =>
-              `<a class="card" href="#/person/${person.id}"><strong>${esc(person.name)}</strong>${degree.get(person.id) ? `<div class="kicker">${fa(degree.get(person.id))} پیوند</div>` : ""}<div class="muted">${esc(person.description || "")}</div></a>`,
-          )
-          .join("") + (!q && shown.length > 60 ? `<p class="muted">شصت نام پرپیوند. برای بقیه نام را بنویس.</p>` : "")
-      : `<p class="muted">کسی با این نام نیست.</p>`;
+    const most = Math.max(1, ...[...groups.values()].map((g) => g.poets.length));
+    label.textContent = `سال ${yr(year)} هـ.ق · حدود ${yr(toGregorian(year))} میلادی`;
+    pinsBox.innerHTML =
+      [...groups.values()]
+        .map((g, i) => {
+          const sz = Math.round(10 + Math.sqrt(g.poets.length / most) * 16);
+          return `<a class="pin" data-city="${i}" data-w="${g.poets.length}" style="left:${g.x}%;top:${g.y}%" href="javascript:void(0)"><span>${esc(g.city)}${g.poets.length > 1 ? ` <b>${fa(g.poets.length)}</b>` : ""}</span><i style="width:${sz}px;height:${sz}px"></i></a>`;
+        })
+        .join("") || `<p class="muted" style="padding:16px;">در این سال شاعری در این گستره ثبت نشده.</p>`;
+    countEl.textContent = `${fa(alive.length)} شاعر زنده در این سال، در ${fa(groups.size)} شهر.`;
+    listEl.innerHTML = [...groups.values()]
+      .map((g, i) => `<article class="card" id="mcity-${i}"><strong>${esc(g.city)}</strong><div class="chips">${g.poets.map((p) => `<a class="chip" href="#/poet/${p.id}">${esc(p.nickname || p.name)}</a>`).join("")}</div></article>`)
+      .join("");
+    view.refresh();
   };
-  box.oninput = draw;
-  document.querySelector("#people-filter").onsubmit = (event) => event.preventDefault();
-  draw();
+
+  playBtn.onclick = () => {
+    if (activeTimer) {
+      stopTimers();
+      playBtn.textContent = "▶";
+      return;
+    }
+    if (year >= max - 5) slider.value = min;
+    playBtn.textContent = "❚❚";
+    activeTimer = setInterval(() => {
+      if (!document.body.contains(playBtn)) return stopTimers();
+      const next = Math.min(max, Number(slider.value) + 5);
+      slider.value = next;
+      drawYear(next);
+      if (next >= max) { stopTimers(); playBtn.textContent = "▶"; }
+    }, 180);
+  };
+  slider.oninput = () => { stopTimers(); playBtn.textContent = "▶"; drawYear(slider.value); };
+  pinsBox.onclick = (e) => {
+    const pin = e.target.closest(".pin[data-city]");
+    if (!pin) return;
+    e.preventDefault();
+    const c = container.querySelector(`#mcity-${pin.dataset.city}`);
+    c?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    c?.classList.add("flash");
+    setTimeout(() => c?.classList.remove("flash"), 1200);
+  };
+  drawYear(year);
 }
 
-// people as one network: who is kin to whom, who fought whom, who served whom
-const NET_KINDS = [
-  { key: "kin", name: "خویشی", color: "#9a7433" },
-  { key: "war", name: "دشمنی و کشتن", color: "#b2322f" },
-  { key: "court", name: "خدمت و سپاه", color: "#1c39bb" },
-  { key: "ally", name: "همراهی و جانشینی", color: "#0a6b60" },
-];
+/* ==========================================================================
+   ابزار ۲: پل‌های تضمین و استقبال (سوییچ درجا میان شاعران بدون تغییر صفحه!)
+   ========================================================================== */
+async function mountBridgesTool(container, allPoets, params, isStale) {
+  const initialId = Number(params.id || 2); // پیش‌فرض: حافظ
+  const featured = [
+    { id: 2, name: "حافظ" },
+    { id: 7, name: "سعدی" },
+    { id: 5, name: "مولانا" },
+    { id: 1, name: "فردوسی" },
+    { id: 22, name: "صائب" },
+    { id: 3, name: "نظامی" },
+    { id: 9, name: "عطار" },
+    { id: 24, name: "رودکی" },
+  ];
+
+  container.innerHTML = `
+    <div class="tool-head">
+      <div>
+        <h2>پل‌های تضمین و بیت‌های مشترک</h2>
+        <p class="tool-sub">چه کسی بیتی از دیگری وام گرفته است؟ روی هر حباب بزنید تا شبکهٔ همان شاعر همین‌جا باز شود.</p>
+      </div>
+      <div class="chips" id="bridge-poet-picks">
+        ${featured.map((f) => `<button type="button" class="chip ${f.id === initialId ? "on" : ""}" data-bid="${f.id}">${f.name}</button>`).join("")}
+      </div>
+    </div>
+    <div id="bridges-body"><div class="loader"><span class="spin"></span><span>در حال رسم شبکهٔ تضمین‌ها…</span></div></div>
+  `;
+
+  const body = container.querySelector("#bridges-body");
+  const loadPoetBridges = async (id) => {
+    container.querySelectorAll("#bridge-poet-picks .chip").forEach((b) => b.classList.toggle("on", Number(b.dataset.bid) === Number(id)));
+    body.innerHTML = `<div class="loader"><span class="spin"></span><span>در حال دریافت پیوندهای تضمین…</span></div>`;
+    const [{ data }, { data: quoted }] = await Promise.all([api(`/poet/${id}`), api(`/quoted?poetId=${id}&published=true`)]);
+    if (isStale()) return;
+
+    const poet = data.poet;
+    const links = new Map();
+    for (const item of Array.isArray(quoted) ? quoted : []) {
+      if (!item.relatedPoetId || item.relatedPoetId === poet.id || item.rejected) continue;
+      const row = links.get(item.relatedPoetId) || {
+        id: item.relatedPoetId,
+        name: item.cachedRelatedPoemPoetName || "شاعر",
+        died: item.cachedRelatedPoemPoetDeathYearInLHijri || 0,
+        n: 0, before: 0, after: 0, both: 0, samples: [],
+      };
+      row.n += 1;
+      if (item.isPriorToRelated) row.before += 1;
+      else row.after += 1;
+      if (item.claimedByBothPoets) row.both += 1;
+      if (row.samples.length < 2)
+        row.samples.push({
+          mine: item.poemId,
+          theirs: item.relatedPoemId,
+          line: [item.coupletVerse1, item.coupletVerse2].filter(Boolean).join(" / "),
+          other: [item.relatedCoupletVerse1, item.relatedCoupletVerse2].filter(Boolean).join(" / "),
+        });
+      links.set(item.relatedPoetId, row);
+    }
+    const rows = [...links.values()].sort((a, b) => b.n - a.n);
+
+    if (!rows.length) {
+      body.innerHTML = `<div class="panel"><p class="muted">در بانک تضمین‌های گنجور، برای <strong>${esc(poet.nickname || poet.name)}</strong> پیوند تضمینی منتشر نشده است.</p><p><a class="btn primary" href="#/poet/${poet.id}">مشاهدهٔ دیوان ${esc(poet.nickname || poet.name)}</a></p></div>`;
+      return;
+    }
+
+    const most = Math.max(1, ...rows.map((r) => r.n));
+    const own = poet.deathYearInLHijri || 0;
+    const dated = rows.filter((r) => r.died);
+    const years = [...dated.map((r) => r.died), ...(own ? [own] : [])];
+    const lo = Math.floor((Math.min(...years) - 20) / 50) * 50;
+    const hi = Math.ceil((Math.max(...years) + 20) / 50) * 50;
+    const GW = 1000, AXIS = 320, EDGE = 44;
+    const span = GW - EDGE * 2 - (rows.some((r) => !r.died) ? 70 : 0);
+    const gx = (y) => GW - EDGE - ((y - lo) / Math.max(1, hi - lo)) * span;
+    const radius = (r) => 5 + Math.sqrt(r.n / most) * 20;
+    const tone = (r) => (r.before && !r.after ? "late" : r.after && !r.before ? "early" : "both");
+    const placedB = [];
+    const bubbles = rows.map((row) => {
+      const r = radius(row);
+      const cx = row.died ? gx(row.died) : EDGE + 30;
+      let cy = AXIS - r - 6;
+      for (let t = 0; t < 350; t++) {
+        if (!placedB.some((o) => Math.hypot(o.cx - cx, o.cy - cy) < o.r + r + 2)) break;
+        cy -= 2;
+      }
+      const item = { ...row, r, cx, cy };
+      placedB.push(item);
+      return item;
+    });
+    const ox = own ? gx(own) : GW / 2;
+    const gTicks = [];
+    for (let y = lo; y <= hi; y += hi - lo > 600 ? 100 : 50) gTicks.push(y);
+    const top = Math.min(...bubbles.map((b) => b.cy - b.r)) - 22;
+
+    body.innerHTML = `
+      <div class="bridge-map"><svg class="bridge-svg" viewBox="0 ${top} ${GW} ${AXIS + 145 - top}">
+        <g class="b-axis">${gTicks.map((y) => `<line x1="${gx(y)}" x2="${gx(y)}" y1="${top}" y2="${AXIS}"/><text x="${gx(y)}" y="${AXIS + 132}">${yr(y)} ق</text>`).join("")}<line class="base" x1="${EDGE}" x2="${GW - EDGE}" y1="${AXIS}" y2="${AXIS}"/></g>
+        <g class="b-arcs">${bubbles.map((b) => {
+          const lift = Math.min(110, 14 + Math.abs(b.cx - ox) * 0.3);
+          return `<path class="${tone(b)}" d="M${ox.toFixed(1)},${AXIS} Q${((ox + b.cx) / 2).toFixed(1)},${(AXIS + lift * 2).toFixed(1)} ${b.cx.toFixed(1)},${AXIS}" style="stroke-width:${(0.9 + (b.n / most) * 4.5).toFixed(1)}"/>`;
+        }).join("")}</g>
+        <g class="b-dots">${bubbles.map((b, i) => `<g data-bid="${b.id}" style="cursor:pointer;"><circle class="${tone(b)}" cx="${b.cx.toFixed(1)}" cy="${b.cy.toFixed(1)}" r="${b.r.toFixed(1)}"><title>${esc(b.name)} · ${fa(b.n)} پیوند</title></circle>${i < 12 ? `<text x="${(b.cx - b.r - 3).toFixed(1)}" y="${(b.cy + 4).toFixed(1)}">${esc(b.name)} ${fa(b.n)}</text>` : ""}</g>`).join("")}</g>
+        <g class="b-self"><line x1="${ox}" x2="${ox}" y1="${AXIS - 8}" y2="${AXIS + 8}"/><circle cx="${ox}" cy="${AXIS}" r="7"/><text x="${ox}" y="${AXIS - 14}">${esc(poet.nickname || poet.name)}</text></g>
+      </svg></div>
+      <p class="key muted"><span class="sw late"></span> شعر ${esc(poet.nickname || poet.name)} مقدم است <span class="sw early"></span> شاعر مقابل مقدم است <span class="sw both"></span> دوسویه · مجموعاً ${fa(quoted.length)} پیوند با ${fa(rows.length)} شاعر</p>
+      <div class="grid">${rows.slice(0, 18).map((row) => `
+        <article class="card">
+          <div class="kicker">${fa(row.n)} پیوند · ${row.before && !row.after ? `${esc(poet.nickname || poet.name)} پیش‌تر` : row.after && !row.before ? `${esc(row.name)} پیش‌تر` : "دوسویه"}</div>
+          <strong><a href="javascript:void(0)" data-bid="${row.id}">${esc(row.name)}</a></strong>
+          ${row.samples.map((s) => `<p><a href="#/poem/${s.mine}">${esc(s.line)}</a></p>`).join("")}
+        </article>`).join("")}</div>
+    `;
+    const mapEl = body.querySelector(".bridge-map");
+    if (mapEl) {
+      atlasStage(mapEl);
+      mapEl.parentElement.classList.add("bridge-stage");
+    }
+    body.querySelectorAll("[data-bid]").forEach((el) => {
+      el.onclick = (e) => { e.preventDefault(); loadPoetBridges(el.dataset.bid); };
+    });
+  };
+
+  container.querySelector("#bridge-poet-picks").onclick = (e) => {
+    const btn = e.target.closest("[data-bid]");
+    if (btn) loadPoetBridges(btn.dataset.bid);
+  };
+  await loadPoetBridges(initialId);
+}
+
+/* ==========================================================================
+   ابزار ۳: مردمان شعر و تبارنامهٔ شاهنامه (دوسیه و درخت خاندان درجا!)
+   ========================================================================== */
 function netKind(edge) {
   if (edge.category === "Relation") return "kin";
   if (edge.typeValue === 5 || edge.typeValue === 14) return "war";
   if ([0, 1, 2, 3, 6, 11, 12].includes(edge.typeValue)) return "court";
   return "ally";
 }
-function peopleNetwork(graph, limit = 90) {
-  const degree = new Map();
-  for (const edge of graph.edges || []) {
-    degree.set(edge.person1Id, (degree.get(edge.person1Id) || 0) + 1);
-    degree.set(edge.person2Id, (degree.get(edge.person2Id) || 0) + 1);
-  }
-  const names = new Map();
-  for (const edge of graph.edges || []) {
-    names.set(edge.person1Id, edge.person1Name);
-    names.set(edge.person2Id, edge.person2Name);
+
+function buildPeopleNetwork(graph, limit = 85) {
+  const degree = new Map(), names = new Map();
+  for (const e of graph.edges || []) {
+    degree.set(e.person1Id, (degree.get(e.person1Id) || 0) + 1);
+    degree.set(e.person2Id, (degree.get(e.person2Id) || 0) + 1);
+    names.set(e.person1Id, e.person1Name);
+    names.set(e.person2Id, e.person2Name);
   }
   const ids = [...degree.keys()].sort((a, b) => degree.get(b) - degree.get(a)).slice(0, limit);
   const keep = new Set(ids);
-  const edges = (graph.edges || []).filter((edge) => keep.has(edge.person1Id) && keep.has(edge.person2Id)).map((edge) => ({ a: edge.person1Id, b: edge.person2Id, kind: netKind(edge) }));
-  // force layout, deterministic: start on a spiral, then springs + repulsion
-  const W = 1000;
-  const H = 700;
+  const edges = (graph.edges || []).filter((e) => keep.has(e.person1Id) && keep.has(e.person2Id)).map((e) => ({ a: e.person1Id, b: e.person2Id, kind: netKind(e) }));
+  const W = 1000, H = 640;
   const nodes = ids.map((id, i) => {
-    const t = i * 2.39996;
-    const r = 18 * Math.sqrt(i + 1);
+    const t = i * 2.39996, r = 18 * Math.sqrt(i + 1);
     return { id, name: names.get(id) || "", deg: degree.get(id), x: W / 2 + r * Math.cos(t), y: H / 2 + r * Math.sin(t), vx: 0, vy: 0 };
   });
-  const at = new Map(nodes.map((node) => [node.id, node]));
-  const links = edges.map((edge) => [at.get(edge.a), at.get(edge.b)]);
-  for (let step = 0; step < 420; step++) {
-    const cool = 1 - step / 420;
+  const at = new Map(nodes.map((n) => [n.id, n]));
+  const links = edges.map((e) => [at.get(e.a), at.get(e.b)]);
+  for (let step = 0; step < 360; step++) {
+    const cool = 1 - step / 360;
     for (let i = 0; i < nodes.length; i++) {
       for (let j = i + 1; j < nodes.length; j++) {
-        const p = nodes[i];
-        const q = nodes[j];
-        let dx = p.x - q.x;
-        let dy = p.y - q.y;
-        const d2 = dx * dx + dy * dy + 0.01;
-        const f = 2600 / d2;
-        const d = Math.sqrt(d2);
-        dx /= d;
-        dy /= d;
-        p.vx += dx * f;
-        p.vy += dy * f;
-        q.vx -= dx * f;
-        q.vy -= dy * f;
+        const p = nodes[i], q = nodes[j];
+        let dx = p.x - q.x, dy = p.y - q.y;
+        const d2 = dx * dx + dy * dy + 0.01, f = 2400 / d2, d = Math.sqrt(d2);
+        dx /= d; dy /= d;
+        p.vx += dx * f; p.vy += dy * f; q.vx -= dx * f; q.vy -= dy * f;
       }
     }
     for (const [p, q] of links) {
-      const dx = q.x - p.x;
-      const dy = q.y - p.y;
-      const d = Math.sqrt(dx * dx + dy * dy) || 1;
-      const f = (d - 70) * 0.02;
-      p.vx += (dx / d) * f;
-      p.vy += (dy / d) * f;
-      q.vx -= (dx / d) * f;
-      q.vy -= (dy / d) * f;
+      const dx = q.x - p.x, dy = q.y - p.y, d = Math.sqrt(dx * dx + dy * dy) || 1, f = (d - 68) * 0.02;
+      p.vx += (dx / d) * f; p.vy += (dy / d) * f; q.vx -= (dx / d) * f; q.vy -= (dy / d) * f;
     }
-    for (const node of nodes) {
-      node.vx += (W / 2 - node.x) * 0.004;
-      node.vy += (H / 2 - node.y) * 0.006;
-      node.x += Math.max(-12, Math.min(12, node.vx)) * cool;
-      node.y += Math.max(-12, Math.min(12, node.vy)) * cool;
-      node.vx *= 0.5;
-      node.vy *= 0.5;
+    for (const n of nodes) {
+      n.vx += (W / 2 - n.x) * 0.004; n.vy += (H / 2 - n.y) * 0.006;
+      n.x += Math.max(-12, Math.min(12, n.vx)) * cool; n.y += Math.max(-12, Math.min(12, n.vy)) * cool;
+      n.vx *= 0.5; n.vy *= 0.5;
     }
   }
-  // fit into the box
-  const xs = nodes.map((node) => node.x);
-  const ys = nodes.map((node) => node.y);
+  const xs = nodes.map((n) => n.x), ys = nodes.map((n) => n.y);
   const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
   const s = Math.min((W - 120) / (x1 - x0 || 1), (H - 60) / (y1 - y0 || 1));
-  for (const node of nodes) {
-    node.x = 60 + (node.x - x0) * s;
-    node.y = 30 + (node.y - y0) * s;
-  }
-  const most = Math.max(1, ...nodes.map((node) => node.deg));
-  const color = new Map(NET_KINDS.map((kind) => [kind.key, kind.color]));
-  const svg = `<svg class="net-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="شبکهٔ ${fa(nodes.length)} شخصیت پرپیوند">
-    <g class="net-edges">${edges
-      .map((edge) => {
-        const p = at.get(edge.a);
-        const q = at.get(edge.b);
-        return `<line class="k-${edge.kind}" data-a="${edge.a}" data-b="${edge.b}" x1="${p.x.toFixed(1)}" y1="${p.y.toFixed(1)}" x2="${q.x.toFixed(1)}" y2="${q.y.toFixed(1)}" stroke="${color.get(edge.kind)}"/>`;
-      })
-      .join("")}</g>
-    <g class="net-nodes">${nodes
-      .map((node) => `<a class="pin" data-id="${node.id}" data-w="${node.deg}" href="#/person/${node.id}"><title>${esc(node.name)} · ${fa(node.deg)} پیوند</title><circle cx="${node.x.toFixed(1)}" cy="${node.y.toFixed(1)}" style="--r:${(3 + Math.sqrt(node.deg / most) * 11).toFixed(1)}"/><text x="${node.x.toFixed(1)}" y="${(node.y + 5 + Math.sqrt(node.deg / most) * 11).toFixed(1)}">${esc(node.name)}</text></a>`)
-      .join("")}</g></svg>`;
-  return { svg, count: nodes.length, edges: edges.length };
+  for (const n of nodes) { n.x = 60 + (n.x - x0) * s; n.y = 30 + (n.y - y0) * s; }
+  const most = Math.max(1, ...nodes.map((n) => n.deg));
+  const color = new Map(NET_KINDS.map((k) => [k.key, k.color]));
+  return `<svg class="net-svg" viewBox="0 0 ${W} ${H}">
+    <g class="net-edges">${edges.map((e) => {
+      const p = at.get(e.a), q = at.get(e.b);
+      return `<line class="k-${e.kind}" data-a="${e.a}" data-b="${e.b}" x1="${p.x.toFixed(1)}" y1="${p.y.toFixed(1)}" x2="${q.x.toFixed(1)}" y2="${q.y.toFixed(1)}" stroke="${color.get(e.kind)}"/>`;
+    }).join("")}</g>
+    <g class="net-nodes">${nodes.map((n) => {
+      const r = (4 + Math.sqrt(n.deg / most) * 10).toFixed(1);
+      return `<g class="pin" data-person="${n.id}" data-id="${n.id}" data-w="${n.deg}"><title>${esc(n.name)} · ${fa(n.deg)} پیوند</title><circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${r}"/><text x="${n.x.toFixed(1)}" y="${(n.y + Number(r) + 3).toFixed(1)}">${esc(n.name)}</text></g>`;
+    }).join("")}</g></svg>`;
 }
 
-function familyTree(tree, focus) {
-  const persons = new Map((tree.persons || []).map((person) => [person.id, person]));
-  const kids = new Map();
-  const hasParent = new Set();
-  const spouses = new Map();
-  for (const edge of tree.relations || []) {
-    if (edge.relationType === 0) {
-      if (!kids.has(edge.person1Id)) kids.set(edge.person1Id, []);
-      if (!kids.get(edge.person1Id).includes(edge.person2Id)) kids.get(edge.person1Id).push(edge.person2Id);
-      hasParent.add(edge.person2Id);
-    }
-    if (edge.relationType === 2) {
-      for (const [a, b] of [
-        [edge.person1Id, edge.person2Id],
-        [edge.person2Id, edge.person1Id],
-      ]) {
-        if (!spouses.has(a)) spouses.set(a, []);
-        spouses.get(a).push(b);
-      }
+function buildMiniFamilySvg(tree, focusId) {
+  const persons = new Map((tree.persons || []).map((p) => [p.id, p]));
+  const kids = new Map(), parents = new Map();
+  for (const e of tree.relations || []) {
+    if (e.relationType === 0) {
+      if (!kids.has(e.person1Id)) kids.set(e.person1Id, []);
+      if (!kids.get(e.person1Id).includes(e.person2Id)) kids.get(e.person1Id).push(e.person2Id);
+      if (!parents.has(e.person2Id)) parents.set(e.person2Id, e.person1Id);
     }
   }
-  const seen = new Set();
-  const node = (id, depth) => {
-    if (seen.has(id) || depth > 14) return "";
-    seen.add(id);
-    const person = persons.get(id);
-    if (!person) return "";
-    const wives = (spouses.get(id) || []).map((other) => persons.get(other)?.name).filter(Boolean);
-    const children = (kids.get(id) || []).map((child) => node(child, depth + 1)).join("");
-    return `<li><a href="#/person/${id}" class="${id === focus ? "here" : ""}">${esc(person.name)}</a>${wives.length ? `<small> · همسر: ${esc(wives.join("، "))}</small>` : ""}${children ? `<ul>${children}</ul>` : ""}</li>`;
-  };
-  const roots = [tree.rootId, ...[...persons.keys()].filter((id) => !hasParent.has(id) && kids.has(id))];
-  return `<ul class="kin">${roots.map((id) => node(id, 0)).join("")}</ul>`;
-}
-
-// the whole family as one tree you can wander in: generations run right to left, everyone keeps a readable name
-function familyMap(tree, focus) {
-  const persons = new Map((tree.persons || []).map((person) => [person.id, person]));
-  const kids = new Map();
-  const parents = new Map();
-  const spouses = new Map();
-  const all = new Map();
-  for (const edge of tree.relations || []) {
-    if (edge.relationType === 0) {
-      if (!kids.has(edge.person1Id)) kids.set(edge.person1Id, []);
-      if (!kids.get(edge.person1Id).includes(edge.person2Id)) kids.get(edge.person1Id).push(edge.person2Id);
-      if (!all.has(edge.person2Id)) all.set(edge.person2Id, []);
-      all.get(edge.person2Id).push(edge.person1Id);
-    }
-    if (edge.relationType === 2) {
-      for (const [a, b] of [
-        [edge.person1Id, edge.person2Id],
-        [edge.person2Id, edge.person1Id],
-      ]) {
-        if (!spouses.has(a)) spouses.set(a, []);
-        spouses.get(a).push(b);
-      }
-    }
-  }
-  // each person hangs under one parent (the father where Ganjoor records one); the other parent gets a dashed link
-  for (const [child, list] of all) parents.set(child, list.find((id) => persons.get(id)?.gender === 1) ?? list[0]);
-  // start from the true ancestors, so the person sits inside their own line, not as a lonely root
-  const roots = [...[...persons.keys()].filter((id) => !parents.has(id) && kids.has(id)), tree.rootId];
-  const seen = new Set();
-  const nodes = [];
-  const edges = [];
-  let slot = 0;
-  let depthMax = 0;
+  const roots = [...[...persons.keys()].filter((id) => !parents.has(id) && kids.has(id)), tree.rootId].filter(Boolean);
+  const seen = new Set(), nodes = [], edges = [];
+  let slot = 0, depthMax = 0;
   const place = (id, depth) => {
-    if (seen.has(id) || !persons.has(id) || depth > 30) return null;
+    if (seen.has(id) || !persons.has(id) || depth > 16) return null;
     seen.add(id);
-    const node = { id, depth, person: persons.get(id), size: 1 };
+    const node = { id, depth, person: persons.get(id) };
     depthMax = Math.max(depthMax, depth);
-    const children = (kids.get(id) || []).filter((child) => parents.get(child) === id).map((child) => place(child, depth + 1)).filter(Boolean);
-    if (children.length) {
-      node.slot = (children[0].slot + children[children.length - 1].slot) / 2;
-      node.size += children.reduce((sum, child) => sum + child.size, 0);
-      for (const child of children) edges.push([node, child]);
+    const ch = (kids.get(id) || []).filter((c) => parents.get(c) === id).map((c) => place(c, depth + 1)).filter(Boolean);
+    if (ch.length) {
+      node.slot = (ch[0].slot + ch[ch.length - 1].slot) / 2;
+      for (const c of ch) edges.push([node, c]);
     } else node.slot = slot++;
     nodes.push(node);
     return node;
   };
-  for (const root of roots) {
-    if (place(root, 0)) slot += 0.6;
-  }
-  const byNode = new Map(nodes.map((node) => [node.id, node]));
-  const second = [];
-  for (const [child, list] of all) for (const parent of list) if (parent !== parents.get(child) && byNode.has(parent) && byNode.has(child) && (child === focus || parent === focus)) second.push([byNode.get(parent), byNode.get(child)]);
-  const line = new Set();
-  for (let id = focus; id != null && !line.has(id); id = parents.get(id)) line.add(id);
-  const GEN = 150;
-  const ROW = 24;
-  const W = (depthMax + 1) * GEN + 40;
-  const H = Math.max(1, slot) * ROW + 30;
-  const nx = (node) => W - 20 - node.depth * GEN - 8;
-  const ny = (node) => 20 + node.slot * ROW;
-  const weight = (node) => (node.id === focus ? 9999 : line.has(node.id) ? 5000 : 0) + (node.person.importance || 0) * 50 + node.size;
-  const svg = `<svg class="kin-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="درخت خاندان ${fa(nodes.length)} نفر">
-    <g class="kin-edges">${edges
-      .map(([a, b]) => {
-        const ax = nx(a);
-        const bx = nx(b);
-        const mid = ax - GEN * 0.45;
-        return `<path class="${line.has(a.id) && line.has(b.id) ? "line" : ""}" d="M${ax},${ny(a)} H${mid} V${ny(b)} H${bx}"/>`;
-      })
-      .join("")}${second
-      .map(([a, b]) => `<path class="other" d="M${nx(a)},${ny(a)} C${nx(a) - GEN * 0.6},${ny(a)} ${nx(b) + GEN * 0.6},${ny(b)} ${nx(b)},${ny(b)}"><title>${esc(a.person.name)} → ${esc(b.person.name)}</title></path>`)
-      .join("")}</g>
-    <g class="kin-nodes">${nodes
-      .map((node) => {
-        const wives = (spouses.get(node.id) || []).map((other) => persons.get(other)?.name).filter(Boolean);
-        const cls = node.id === focus ? "pin here" : line.has(node.id) ? "pin line" : "pin";
-        return `<a class="${cls}" data-w="${weight(node)}" href="#/person/${node.id}"><title>${esc(node.person.name)}${wives.length ? ` · همسر: ${esc(wives.join("، "))}` : ""}${node.person.familyTreeCaption ? ` · ${esc(node.person.familyTreeCaption)}` : ""}</title><circle cx="${nx(node)}" cy="${ny(node)}" r="${node.id === focus ? 6 : wives.length ? 4.5 : 3.5}" class="${wives.length ? "wed" : ""}"/><text x="${nx(node) - 8}" y="${ny(node)}">${esc(node.person.name)}</text></a>`;
-      })
-      .join("")}</g></svg>`;
-  return { svg, count: nodes.length, ratio: W / H };
+  for (const r of roots) if (place(r, 0)) slot += 0.5;
+  if (!nodes.length) return "";
+  const GEN = 140, ROW = 30, W = (depthMax + 1) * GEN + 60, H = Math.max(1, slot) * ROW + 40;
+  const nx = (n) => W - 70 - n.depth * GEN;
+  const ny = (n) => 24 + n.slot * ROW;
+  return `<div class="fmap"><svg viewBox="0 0 ${W} ${H}" style="min-width:${Math.min(W, 560)}px">
+    ${edges.map(([a, b]) => `<line x1="${nx(a) - 42}" y1="${ny(a)}" x2="${nx(b) + 42}" y2="${ny(b)}"/>`).join("")}
+    ${nodes.map((n) => `<g class="${n.id === focusId ? "me" : ""}" data-person="${n.id}" style="cursor:pointer;"><rect x="${nx(n) - 48}" y="${ny(n) - 12}" width="96" height="24"/><text x="${nx(n)}" y="${ny(n)}">${esc(n.person.name.slice(0, 14))}</text></g>`).join("")}
+  </svg></div>`;
 }
 
-async function personPage(id) {
-  loading("شخص");
-  const info = await rootApi(`/people/${id}/relations?evidenceLimit=1`);
-  const [mentions, tree] = await Promise.all([
-    rootApi(`/people/${id}/poems`).catch((error) => {
-      if (error === STALE) throw error;
-      return [];
-    }),
-    rootApi(`/people/${id}/familytree`).catch((error) => {
-      if (error === STALE) throw error;
-      return null;
-    }),
-  ]);
-  const person = info.person || {};
-  const evidence = (item) => {
-    const proof = (item.evidence || [])[0];
-    if (!proof) return item.note ? `<p class="muted">${esc(item.note)}</p>` : "";
-    return `<p class="muted"><a href="#/poem/${proof.poemId}">«${esc(proof.coupletText || "بیت گواه")}»</a>${proof.masterCatTitle ? ` · ${esc(proof.masterCatTitle)}` : ""}${item.evidenceCount > 1 ? ` · ${item.evidenceCount} گواه` : ""}</p>`;
+async function mountPeopleTool(container, params, isStale) {
+  const [people, roots, graph] = await Promise.all([rootApi("/people"), rootApi("/people/familytrees"), rootApi("/people/graph")]);
+  if (isStale()) return;
+
+  const byId = new Map(people.map((p) => [p.id, p]));
+  const degree = new Map();
+  for (const e of graph.edges || []) {
+    degree.set(e.person1Id, (degree.get(e.person1Id) || 0) + 1);
+    degree.set(e.person2Id, (degree.get(e.person2Id) || 0) + 1);
+  }
+  const sorted = [...people].sort((a, b) => (degree.get(b.id) || 0) - (degree.get(a.id) || 0));
+
+  container.innerHTML = `
+    <div class="tool-head">
+      <div>
+        <h2>مردمان شعر و تبارنامهٔ شاهنامه</h2>
+        <p class="tool-sub">${fa(people.length)} شخصیت برچسب‌خورده روی بیت‌های گنجور؛ روی هر نام بزنید تا شجره‌نامه و بیت‌های گواهش همین‌جا باز شود.</p>
+      </div>
+    </div>
+    <div id="person-dossier" hidden></div>
+    ${roots.length ? `<div class="chips"><span class="muted small">خاندان‌ها:</span>${roots.map((p) => `<button type="button" class="chip" data-person="${p.id}">${esc(p.familyTreeCaption || p.name)}</button>`).join("")}</div>` : ""}
+    <div class="chips net-kinds" id="net-kinds">${NET_KINDS.map((k) => `<button type="button" class="chip on" data-kind="${k.key}" style="--c:${k.color}"><i class="dot"></i>${k.name}</button>`).join("")}</div>
+    <div class="net-map">${buildPeopleNetwork(graph)}</div>
+    <div class="inline-search" style="margin-top:14px;"><input id="people-q" placeholder="جستجوی شخصیت (مثلاً رستم، سهراب، کیخسرو…)" autocomplete="off" /></div>
+    <div class="grid" id="people-grid"></div>
+  `;
+
+  const netMap = container.querySelector(".net-map");
+  const netSvg = netMap.querySelector("svg");
+  const netView = atlasStage(netMap);
+  netMap.parentElement.classList.add("net-stage");
+  const dossier = container.querySelector("#person-dossier");
+
+  const openPerson = async (id) => {
+    const pid = Number(id);
+    const person = byId.get(pid);
+    if (!person) return;
+    dossier.hidden = false;
+    dossier.innerHTML = `<div class="inline-dossier"><div class="loader"><span class="spin"></span><span>در حال دریافت تبارنامه و بیت‌های ${esc(person.name)}…</span></div></div>`;
+    dossier.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    const [tree, rels, poems] = await Promise.all([
+      rootApi(`/people/${pid}/familytree`).catch(() => null),
+      rootApi(`/people/${pid}/relations?evidenceLimit=1`).catch(() => []),
+      rootApi(`/people/${pid}/poems`).catch(() => []),
+    ]);
+    if (isStale()) return;
+    const relList = Array.isArray(rels) ? rels : [];
+    const poemList = Array.isArray(poems) ? poems : [];
+    dossier.innerHTML = `
+      <div class="inline-dossier">
+        <div class="inline-dossier-head">
+          <div>
+            <h3>${esc(person.name)}</h3>
+            <p class="muted small" style="margin:2px 0 0;">${esc(person.description || "")}</p>
+          </div>
+          <button type="button" class="chip" id="close-person-dossier">بستن ×</button>
+        </div>
+        ${tree?.persons?.length ? `<p class="kicker">شجره‌نامهٔ خاندان</p>${buildMiniFamilySvg(tree, pid)}` : ""}
+        ${relList.length ? `<p class="kicker" style="margin-top:10px;">پیوندها (${fa(relList.length)})</p><div class="chips">${relList.slice(0, 14).map((r) => {
+          const otherId = r.person1Id === pid ? r.person2Id : r.person1Id;
+          const otherName = r.person1Id === pid ? r.person2Name : r.person1Name;
+          return `<button type="button" class="chip" data-person="${otherId}">${esc(otherName || "؟")}${r.relationCaption ? ` · ${esc(r.relationCaption)}` : ""}</button>`;
+        }).join("")}</div>` : ""}
+        ${poemList.length ? `<p class="kicker" style="margin-top:10px;">شعرهای مرتبط</p><div class="chips">${poemList.slice(0, 10).map((pm) => `<a class="chip" href="#/poem/${pm.poemId || pm.id}">${esc(pm.title || pm.poemFullTitle || "خواندن شعر")}</a>`).join("")}</div>` : ""}
+      </div>`;
+    dossier.querySelector("#close-person-dossier").onclick = () => (dossier.hidden = true);
+    dossier.querySelectorAll("[data-person]").forEach((el) => { el.onclick = () => openPerson(el.dataset.person); });
   };
-  const kin = (info.relations || [])
-    .map((item) => {
-      const label = (RELATION[item.relationType] || ["خویش", "خویش"])[item.subjectIsPerson1 ? 0 : 1];
-      return `<article class="card"><div class="kicker">${label}</div><strong><a href="#/person/${item.otherPersonId}">${esc(item.otherPersonName)}</a></strong>${evidence(item)}</article>`;
-    })
-    .join("");
-  const ties = (info.affiliations || [])
-    .map((item) => {
-      const label = (TIE[item.affiliationType] || TIE[99])[item.subjectIsPerson1 ? 0 : 1];
-      const name = `<a href="#/person/${item.otherPersonId}">${esc(item.otherPersonName)}</a>`;
-      const line = item.subjectIsPerson1 || label.endsWith("ِ") || label.endsWith("با") ? `${label} ${name}` : `${label}: ${name}`;
-      return `<article class="card"><strong>${line}</strong>${evidence(item)}</article>`;
-    })
-    .join("");
-  const rows = Array.isArray(mentions) ? mentions : [];
-  const present = rows.filter((row) => row.personMention === 0);
-  const allusion = rows.filter((row) => row.personMention !== 0);
-  const mentionList = (list) =>
-    list
-      .slice(0, 24)
-      .map(
-        (row) =>
-          `<a class="hit" href="#/poem/${row.poemId}"><div class="kicker">${esc(String(row.poem?.fullTitle || "").split("»").slice(0, 2).join(" » "))}</div><strong>${esc(row.poem?.title || "")}</strong>${row.coupletText ? `<p>${esc(row.coupletText)}</p>` : ""}</a>`,
-      )
-      .join("");
-  const treeSize = tree ? (tree.persons || []).length : 0;
-  const family = treeSize > 1 ? familyMap(tree, Number(id)) : null;
-  const treeHtml = family
-    ? `<p class="muted">${fa(treeSize)} نفر در این خاندان. نسل‌ها از راست به چپ می‌آیند و خط طلایی، تبار همین شخص تا ریشه است. بکش و بزرگ کن تا نام همه پیدا شود؛ روی هر نام بزن تا به صفحه‌اش بروی.</p><div class="kin-map" style="aspect-ratio:${Math.max(0.9, Math.min(2.4, family.ratio)).toFixed(2)}">${family.svg}</div><details class="tree-box"><summary>همین خاندان به صورت فهرست</summary>${familyTree(tree, Number(id))}</details>`
-    : "";
-  paint(
-    person.name || "شخص",
-    `<p class="crumb"><a href="#/people">مردمان شعر</a></p>
-     <h1>${esc(person.name || "")}</h1>
-     ${person.description ? `<p class="lead">${esc(person.description)}</p>` : ""}
-     ${person.aliases ? `<p class="muted">نام‌های دیگر: ${esc([].concat(person.aliases).join("، "))}</p>` : ""}
-     ${person.wikiUrl ? `<p><a class="chip" href="${esc(person.wikiUrl)}" rel="noreferrer">ویکی‌پدیا</a></p>` : ""}
-     ${kin ? `<h2 class="section">خویشان</h2><div class="grid">${kin}</div>` : ""}
-     ${ties ? `<h2 class="section">پیوندها</h2><div class="grid">${ties}</div>` : ""}
-     ${treeHtml ? `<h2 class="section">خاندان${tree.books?.length ? ` · ${esc(tree.books.map((book) => book.title).join("، "))}` : ""}</h2>${treeHtml}` : ""}
-     ${present.length ? `<h2 class="section">حاضر در روایت · ${fa(present.length)}</h2><div class="grid">${mentionList(present)}</div>` : ""}
-     ${allusion.length ? `<h2 class="section">اشاره در شعر شاعران · ${fa(allusion.length)}</h2><div class="grid">${mentionList(allusion)}</div>` : ""}
-     ${!kin && !ties && !rows.length ? `<p class="muted">برای این شخص هنوز پیوند یا بیتی ثبت نشده.</p>` : ""}
-     <p class="muted">پیوندها و برچسب‌ها در گنجور بخشی با کمک هوش مصنوعی ساخته و به دست ویراستار بازبینی شده‌اند. هر کدام بیت گواه دارد؛ آن را بخوان.</p>`,
-  );
-  const map = document.querySelector(".kin-map");
-  if (map) {
-    const view = atlasStage(map);
-    map.parentElement.classList.add("kin-stage");
-    // svg units → screen px, so names stay one size whatever the tree's size
-    const box = map.querySelector("svg").viewBox.baseVal;
-    const fitText = () => {
-      if (!map.clientWidth) return;
-      map.style.setProperty("--fit", Math.max(box.width / map.clientWidth, box.height / map.clientHeight).toFixed(4));
-      view.refresh();
-    };
-    fitText();
-    new ResizeObserver(fitText).observe(map);
-  }
+
+  container.querySelector("#net-kinds").onclick = (e) => {
+    const chip = e.target.closest("[data-kind]");
+    if (!chip) return;
+    chip.classList.toggle("on");
+    netSvg.classList.toggle(`hide-${chip.dataset.kind}`, !chip.classList.contains("on"));
+  };
+  const lines = [...netSvg.querySelectorAll(".net-edges line")];
+  netSvg.addEventListener("pointerover", (e) => {
+    const pin = e.target.closest(".pin");
+    if (!pin) return;
+    const id = pin.dataset.id;
+    const near = new Set([id]);
+    for (const l of lines) {
+      const hot = l.dataset.a === id || l.dataset.b === id;
+      l.classList.toggle("hot", hot);
+      if (hot) near.add(l.dataset.a).add(l.dataset.b);
+    }
+    netSvg.classList.add("focus");
+    netSvg.querySelectorAll(".pin").forEach((n) => n.classList.toggle("near", near.has(n.dataset.id)));
+  });
+  netSvg.addEventListener("pointerleave", () => netSvg.classList.remove("focus"));
+  container.addEventListener("click", (e) => {
+    const pBtn = e.target.closest("[data-person]");
+    if (pBtn) { e.preventDefault(); openPerson(pBtn.dataset.person); }
+  });
+
+  const qInput = container.querySelector("#people-q");
+  const grid = container.querySelector("#people-grid");
+  const drawGrid = () => {
+    const q = qInput.value.trim();
+    const shown = sorted.filter((p) => !q || `${p.name} ${p.description || ""}`.includes(q)).slice(0, 24);
+    grid.innerHTML = shown.map((p) => `<article class="card" data-person="${p.id}" style="cursor:pointer;"><strong>${esc(p.name)}</strong>${degree.get(p.id) ? `<div class="kicker">${fa(degree.get(p.id))} پیوند</div>` : ""}<p>${esc((p.description || "").slice(0, 90))}</p></article>`).join("") || `<p class="muted">شخصیتی پیدا نشد.</p>`;
+  };
+  qInput.oninput = drawGrid;
+  drawGrid();
+  netView.refresh();
+  if (params.person) openPerson(params.person);
 }
 
-async function devicesPage() {
-  loading("آرایه‌ها");
+/* ==========================================================================
+   ابزار ۴: آرایه‌های ادبی (نوار تناسبی + جزئیات و جفت‌مفاهیم درجا!)
+   ========================================================================== */
+async function mountDevicesTool(container, params, isStale) {
   const [list, overview] = await Promise.all([devices(), rootApi("/ganjoor/literary/stats/overview")]);
-  const stats = new Map((overview.devices || []).map((item) => [item.deviceId, item]));
-  const shown = list.filter((item) => stats.get(item.id)?.tagCount || item.isCore);
-  const groups = [...new Set(shown.map((item) => item.category))];
-  const countOf = (item) => stats.get(item.id)?.tagCount || 0;
-  const total = shown.reduce((sum, item) => sum + countOf(item), 0) || 1;
+  if (isStale()) return;
+
+  const stats = new Map((overview.devices || []).map((i) => [i.deviceId, i]));
+  const shown = list.filter((i) => stats.get(i.id)?.tagCount || i.isCore);
+  const groups = [...new Set(shown.map((i) => i.category))];
+  const countOf = (i) => stats.get(i.id)?.tagCount || 0;
+  const total = shown.reduce((s, i) => s + countOf(i), 0) || 1;
   const most = Math.max(1, ...shown.map(countOf));
-  const COLORS = ["#0a6b60", "#1c39bb", "#b2532f", "#9a7433"];
-  const groupColor = new Map(groups.map((group, i) => [group, COLORS[i % COLORS.length]]));
-  // the whole picture: every device as a segment, grouped, width = its share of all tags
+  const COLORS = ["#0a6b60", "#1e3a8a", "#b2532f", "#b8892a"];
+  const gColor = new Map(groups.map((g, idx) => [g, COLORS[idx % COLORS.length]]));
+
   const strip = groups
-    .map((group) =>
+    .map((g) =>
       shown
-        .filter((item) => item.category === group)
-        .sort((x, y) => countOf(y) - countOf(x))
-        .map((item) => {
-          const w = (countOf(item) / total) * 100;
-          return w > 0
-            ? `<a class="fam-seg" href="#/device/${item.id}" style="flex:${w.toFixed(3)};--c:${groupColor.get(group)}" title="${esc(item.name)} · ${fa(countOf(item))} نمونه">${w > 7 ? `<span>${esc(item.name)}</span><small>${fa(Math.round(w))}٪</small>` : ""}</a>`
-            : "";
+        .filter((i) => i.category === g)
+        .sort((a, b) => countOf(b) - countOf(a))
+        .map((i) => {
+          const w = (countOf(i) / total) * 100;
+          return w > 0 ? `<button type="button" class="fam-seg" data-dev="${i.id}" style="flex:${w.toFixed(3)};--c:${gColor.get(g)}" title="${esc(i.name)} · ${fa(countOf(i))} نمونه">${w > 7 ? `<span>${esc(i.name)}</span><small>${fa(Math.round(w))}٪</small>` : ""}</button>` : "";
         })
         .join(""),
     )
     .join("");
-  const RARE = 10;
-  const concepts = (overview.topConcepts || []).slice(0, 30);
-  const topUse = Math.max(1, ...concepts.map((item) => item.usageCount || 0));
-  paint(
-    "آرایه‌ها",
-    `<h1>آرایه‌ها</h1>
-     <p class="lead">آرایه، هنرِ ساختن بیت است: تشبیه، استعاره، ایهام و مانند آن‌ها. گنجور تا امروز ${fa(overview.totalTags || 0)} آرایه را روی ${fa(overview.totalPoems || 0)} شعر برچسب زده، با جای دقیق واژه‌ها؛ بیشترشان در غزل‌های حافظ. پس این تصویرِ «آرایه در شعر فارسی» نیست، تصویرِ آن چیزی است که تا امروز برچسب خورده.</p>
-     <div class="fam-strip dev-strip">${strip}</div>
-     <p class="key muted">${groups.map((group) => `<span class="sw" style="background:${groupColor.get(group)}"></span> ${DEVICE_GROUP[group] || group}`).join(" ")} · پهنای هر تکه، سهم آن آرایه از همهٔ برچسب‌ها</p>
-     ${groups
-       .map((group) => {
-         const items = shown.filter((item) => item.category === group).sort((x, y) => countOf(y) - countOf(x));
-         const big = items.filter((item) => countOf(item) >= RARE);
-         const rare = items.filter((item) => countOf(item) < RARE);
-         return `<h2 class="section">${DEVICE_GROUP[group] || group}</h2>
-           ${big.length ? `<div class="grid">${big
-             .map((item) => `<a class="card dev-card" href="#/device/${item.id}" style="--c:${groupColor.get(group)}"><strong>${esc(item.name)}</strong><div class="dev-bar"><i style="width:${((countOf(item) / most) * 100).toFixed(1)}%"></i></div><div class="kicker">${fa(countOf(item))} نمونه در ${fa(stats.get(item.id)?.poemCount || 0)} شعر</div><p class="muted">${esc(item.definition || "")}</p></a>`)
-             .join("")}</div>` : ""}
-           ${rare.length ? `<p class="muted small">هنوز کم برچسب خورده‌اند: ${rare.map((item) => `<a href="#/device/${item.id}" title="${esc(item.definition || "")}">${esc(item.name)}</a> (${fa(countOf(item))})`).join("، ")}</p>` : ""}`;
-       })
-       .join("")}
-     ${concepts.length ? `<h2 class="section">مفهوم‌های پرکاربرد</h2><p class="muted">مفهوم‌هایی که بیش از همه در این آرایه‌ها آمده‌اند، مثل «لعل» که بارها به جای لب نشسته. اندازهٔ واژه، شمار کاربرد است.</p><p class="cloud">${concepts.map((item) => `<span style="font-size:${(0.85 + Math.sqrt(item.usageCount / topUse) * 1.1).toFixed(2)}rem" title="${fa(item.usageCount)} بار">${esc(item.name)}</span>`).join(" ")}</p>` : ""}
-     <p class="muted">بخشی از آرایه‌های غزل‌های حافظ از «پیکره متن ادبی فارسی» (Raji و همکاران، ۲۰۲۳، مجوز MIT) به گنجور آمده. <a href="#/about">درباره داده‌ها</a></p>`,
-  );
-}
 
-async function devicePairs(id) {
-  const [meta, concepts, tags] = await Promise.all([fileJson("literary-devices.json"), fileJson("literary-concepts.json"), fileJson(`index/literary-tags/${id}.json`)]);
-  const device = meta.find((item) => item.Id === Number(id));
-  if (!device) return [];
-  const order = new Map(device.Slots.map((slot) => [slot.Id, slot.Order]));
-  const names = new Map(concepts.map((item) => [item.Id, item.Name]));
-  const pairs = new Map();
-  for (const tag of tags) {
-    const parts = (tag.Parts || []).filter((part) => part.ConceptId).sort((a, b) => (order.get(a.SlotId) ?? 0) - (order.get(b.SlotId) ?? 0));
-    if (parts.length < 2) continue;
-    const key = `${parts[0].ConceptId}-${parts[1].ConceptId}`;
-    const row = pairs.get(key) || { a: parts[0].ConceptId, b: parts[1].ConceptId, n: 0 };
-    row.n += 1;
-    pairs.set(key, row);
-  }
-  return [...pairs.values()]
-    .map((row) => ({ ...row, aName: names.get(row.a) || "", bName: names.get(row.b) || "" }))
-    .sort((x, y) => y.n - x.n);
-}
+  container.innerHTML = `
+    <div class="tool-head">
+      <div>
+        <h2>آرایه‌های ادبی و شبکه‌های تصویری</h2>
+        <p class="tool-sub">${fa(overview.totalTags || 0)} آرایه برچسب‌خورده روی ${fa(overview.totalPoems || 0)} شعر؛ روی هر آرایه بزنید تا جفت‌های پرتکرار و بیت‌های نمونه همین‌جا باز شوند.</p>
+      </div>
+    </div>
+    <div class="fam-strip">${strip}</div>
+    <div id="device-dossier" hidden></div>
+    <div class="grid">${shown
+      .filter((i) => countOf(i) >= 10)
+      .sort((a, b) => countOf(b) - countOf(a))
+      .map((i) => `<article class="card" data-dev="${i.id}" style="cursor:pointer;--c:${gColor.get(i.category)}"><strong>${esc(i.name)}</strong><div class="dev-bar"><i style="width:${((countOf(i) / most) * 100).toFixed(1)}%"></i></div><div class="kicker">${fa(countOf(i))} نمونه در ${fa(stats.get(i.id)?.poemCount || 0)} شعر</div><p>${esc((i.definition || "").slice(0, 110))}</p></article>`)
+      .join("")}</div>
+  `;
 
-async function devicePage(id, query) {
-  loading("آرایه");
-  const concept = Number(query.get("c") || 0);
-  const pageNo = Math.max(1, Number(query.get("p") || 1));
-  const size = 12;
-  const [list, top, page] = await Promise.all([
-    devices(),
-    rootApi(`/ganjoor/literary/stats/device/${id}/top-concepts?take=40`),
-    rootApi(`/ganjoor/literary/stats/tags?deviceId=${id}${concept ? `&conceptId=${concept}` : ""}&skip=${(pageNo - 1) * size}&take=${size}`),
-  ]);
-  let pairs = [];
-  try {
-    pairs = await devicePairs(id);
-  } catch (error) {
-    if (error === STALE) throw error;
-  }
-  const device = list.find((item) => item.id === Number(id)) || {};
-  const items = page.items || [];
-  const pages = Math.ceil((page.total || 0) / size);
-  const conceptName = concept ? top.find((item) => item.conceptId === concept)?.name || pairs.find((row) => row.a === concept)?.aName || pairs.find((row) => row.b === concept)?.bName || "" : "";
-  const here = (p) => `#/device/${id}?${concept ? `c=${concept}&` : ""}p=${p}`;
-  const pairLink = (row) =>
-    `<a class="pair ${concept === row.a ? "on" : ""}" href="#/device/${id}?c=${row.a}"><b>${esc(row.aName)}</b><span aria-hidden="true">←</span><b>${esc(row.bName)}</b><small>${fa(row.n)}</small></a>`;
-  const card = (item) => {
-    const spans = (misra) =>
-      (item.parts || [])
-        .filter((part) => part.misra === misra && part.wordStart)
-        .map((part) => ({ from: part.wordStart, to: part.wordEnd || part.wordStart, label: part.slotName }));
-    return `<article class="card"><div class="kicker">${esc(item.poemFullTitle || "")}</div>
-      <p class="couplet">${marked(item.hemistich1, spans(1))}<br>${marked(item.hemistich2, spans(2))}</p>
-      <p class="muted">${(item.parts || [])
-        .map((part) => `${esc(part.slotName)}: ${part.conceptId ? `<a href="#/device/${id}?c=${part.conceptId}">${esc(part.conceptName || part.words || "")}</a>` : esc(part.words || part.conceptName || "")}`)
-        .join(" · ")}${item.uncertain ? " · نامطمئن" : ""}</p>
-      ${item.note ? `<p class="muted">${esc(item.note)}</p>` : ""}
-      <a href="#/poem/${item.poemId}">خواندن شعر</a></article>`;
+  const dossier = container.querySelector("#device-dossier");
+  const openDevice = async (id, concept = 0) => {
+    const dev = list.find((i) => i.id === Number(id));
+    if (!dev) return;
+    dossier.hidden = false;
+    dossier.innerHTML = `<div class="inline-dossier"><div class="loader"><span class="spin"></span><span>در حال دریافت نمونه‌های ${esc(dev.name)}…</span></div></div>`;
+    dossier.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    const [top, page] = await Promise.all([
+      rootApi(`/ganjoor/literary/stats/device/${id}/top-concepts?take=24`).catch(() => []),
+      rootApi(`/ganjoor/literary/stats/tags?deviceId=${id}${concept ? `&conceptId=${concept}` : ""}&skip=0&take=9`),
+    ]);
+    if (isStale()) return;
+    const items = page.items || [];
+    dossier.innerHTML = `
+      <div class="inline-dossier">
+        <div class="inline-dossier-head">
+          <div>
+            <h3>${esc(dev.name)}</h3>
+            <p class="muted small" style="margin:2px 0 0;">${esc(dev.definition || "")}</p>
+          </div>
+          <button type="button" class="chip" id="close-dev-dossier">بستن ×</button>
+        </div>
+        ${top.length ? `<div class="chips"><button type="button" class="chip ${concept ? "" : "on"}" data-dev-c="0">همه مفاهیم</button>${top.slice(0, 14).map((c) => `<button type="button" class="chip ${c.conceptId === concept ? "on" : ""}" data-dev-c="${c.conceptId}">${esc(c.name)} · ${fa(c.usageCount)}</button>`).join("")}</div>` : ""}
+        <div class="grid">${items.map((item) => {
+          const spans = (m) => (item.parts || []).filter((p) => p.misra === m && p.wordStart).map((p) => ({ from: p.wordStart, to: p.wordEnd || p.wordStart, label: p.slotName }));
+          return `<article class="card"><div class="kicker">${esc(item.poemFullTitle || "")}</div><p class="couplet">${marked(item.hemistich1, spans(1))}<br>${marked(item.hemistich2, spans(2))}</p><a class="chip" href="#/poem/${item.poemId}" style="margin-top:6px;">خواندن شعر ←</a></article>`;
+        }).join("")}</div>
+      </div>`;
+    dossier.querySelector("#close-dev-dossier").onclick = () => (dossier.hidden = true);
+    dossier.querySelectorAll("[data-dev-c]").forEach((b) => {
+      b.onclick = () => openDevice(id, Number(b.dataset.devC));
+    });
   };
-  paint(
-    device.name || "آرایه",
-    `<p class="crumb"><a href="#/devices">آرایه‌ها</a></p>
-     <h1>${esc(device.name || "")}${conceptName ? ` · ${esc(conceptName)}` : ""}</h1>
-     <p class="lead">${esc(device.definition || "")}</p>
-     ${device.example ? `<p class="panel">${esc(device.example)}</p>` : ""}
-     ${
-       pairs.length
-         ? `<h2 class="section">${Number(id) === 1 ? "چه چیز به چه مانند شده" : "جفت‌های پرتکرار"}</h2>
-            <div class="pairs">${pairs.slice(0, 8).map(pairLink).join("")}</div>
-            ${pairs.length > 8 ? `<details class="more-box"><summary>${fa(Math.min(pairs.length, 40) - 8)} جفت دیگر</summary><div class="pairs">${pairs.slice(8, 40).map(pairLink).join("")}</div></details>` : ""}`
-         : ""
-     }
-     ${
-       top.length
-         ? `<details class="more-box" ${concept ? "open" : ""}><summary>پالایش با مفهوم${conceptName ? `: ${esc(conceptName)}` : ""}</summary><p class="chips"><a class="chip ${concept ? "" : "on"}" href="#/device/${id}">همه</a>${top.map((item) => `<a class="chip ${item.conceptId === concept ? "on" : ""}" href="#/device/${id}?c=${item.conceptId}">${esc(item.name)} · ${fa(item.usageCount)}</a>`).join("")}</p></details>`
-         : ""
-     }
-     <h2 class="section" id="samples">نمونه‌ها${conceptName ? ` با «${esc(conceptName)}»` : ""} · ${fa(page.total || 0)}</h2>
-     ${items.length ? `<div class="grid">${items.map(card).join("")}</div>` : `<p class="muted">نمونه‌ای ثبت نشده.</p>`}
-     ${pages > 1 ? `<p class="chips">${pageNo > 1 ? `<a class="chip" href="${here(pageNo - 1)}">قبلی</a>` : ""}<span class="chip">صفحه ${pageNo} از ${pages}</span>${pageNo < pages ? `<a class="chip" href="${here(pageNo + 1)}">بعدی</a>` : ""}</p>` : ""}`,
-  );
-  if (concept || pageNo > 1) document.querySelector("#samples")?.scrollIntoView();
+
+  container.addEventListener("click", (e) => {
+    const d = e.target.closest("[data-dev]");
+    if (d) openDevice(d.dataset.dev, 0);
+  });
+  if (params.device) openDevice(params.device, Number(params.c || 0));
 }
 
-async function placesPage(query) {
-  loading("جای‌ها در شعر");
+/* ==========================================================================
+   ابزار ۵: واژه‌سنج تحلیلی و جستجوی یکپارچه
+   ========================================================================== */
+async function mountWordsTool(container, allPoets, params, isStale) {
+  const initialQ = (params.q || "عشق").trim();
+  const samples = ["عشق", "می", "سرو", "دل", "آینه", "خورشید", "رند"];
+
+  container.innerHTML = `
+    <div class="tool-head">
+      <div>
+        <h2>واژه‌سنج و جستجوی پیکره</h2>
+        <p class="tool-sub">بسامد هر واژه را در کل گنجینهٔ شعر فارسی مقایسه کنید و شعرهایش را بخوانید.</p>
+      </div>
+      <div class="chips" id="word-samples">${samples.map((w) => `<button type="button" class="chip ${w === initialQ ? "on" : ""}" data-word="${w}">${w}</button>`).join("")}</div>
+    </div>
+    <form class="inline-search" id="word-search-form">
+      <input id="word-q" value="${esc(initialQ)}" placeholder="واژه، تکه‌ای از بیت یا نام شاعر…" autocomplete="off" />
+      <button type="submit" class="btn primary">سنجش و جستجو</button>
+    </form>
+    <div id="word-results"></div>
+  `;
+
+  const resBox = container.querySelector("#word-results");
+  const wInput = container.querySelector("#word-q");
+
+  const runSearch = async (q, poetId = 0) => {
+    q = q.trim();
+    if (!q) return;
+    wInput.value = q;
+    container.querySelectorAll("#word-samples .chip").forEach((b) => b.classList.toggle("on", b.dataset.word === q));
+    resBox.innerHTML = `<div class="loader"><span class="spin"></span><span>در حال سنجش بسامد «${esc(q)}»…</span></div>`;
+
+    const matchedPoet = !poetId && q.length >= 2
+      ? allPoets.find((p) => {
+          const n = (p.name || "").trim(), nk = (p.nickname || "").trim();
+          return n === q || nk === q || n.includes(q) || (nk && nk.includes(q));
+        })
+      : null;
+
+    const [{ data: poems, total }, meterHtml] = await Promise.all([
+      api(`/poems/search?term=${encodeURIComponent(q)}&pageNumber=1&pageSize=9${poetId ? `&poetId=${poetId}` : ""}`).catch(() => ({ data: [], total: 0 })),
+      !poetId && !/\s/.test(q) ? buildWordMeter(q).catch(() => "") : Promise.resolve(""),
+    ]);
+    if (isStale()) return;
+
+    const banner = matchedPoet
+      ? `<div class="poet-match-banner">
+           <div class="pmb-avatar">${esc((matchedPoet.nickname || matchedPoet.name).slice(0, 1))}</div>
+           <div class="pmb-body">
+             <span class="kicker">شاعر شناسایی‌شده</span>
+             <h3>${esc(matchedPoet.nickname || matchedPoet.name)}</h3>
+             <p>${matchedPoet.birthYearInLHijri ? `${yr(matchedPoet.birthYearInLHijri)} تا ${yr(matchedPoet.deathYearInLHijri)} ق` : ""}${matchedPoet.birthPlace ? ` · زاده ${esc(matchedPoet.birthPlace)}` : ""}</p>
+           </div>
+           <div class="chips">
+             <button type="button" class="btn primary" data-jump-tree="${matchedPoet.id}">نمایش روی خط زمان</button>
+             <a class="chip" href="#/poet/${matchedPoet.id}">صفحهٔ دیوان</a>
+           </div>
+         </div>`
+      : "";
+
+    const rows = (Array.isArray(poems) ? poems : [])
+      .map((poem) => {
+        const first = String(poem.plainText || "").split(/\r?\n/).map((l) => l.trim()).filter(Boolean).slice(0, 2).join(" / ");
+        const p = poem.category?.poet;
+        return `<a class="hit" href="#/poem/${poem.id}"><div class="kicker">${esc(p?.nickname || p?.name || "")}</div><strong>${esc(poem.fullTitle || poem.title)}</strong><p>${esc(first)}</p></a>`;
+      })
+      .join("");
+
+    resBox.innerHTML = `
+      ${banner}
+      ${meterHtml}
+      <p class="kicker" style="margin-top:14px;">نمونه شعرها (${fa(total)} شعر در گنجور)</p>
+      ${rows ? `<div class="grid">${rows}</div>` : `<p class="muted">شعری با این عبارت پیدا نشد.</p>`}
+    `;
+
+    resBox.querySelectorAll("[data-jump-tree]").forEach((b) => {
+      b.onclick = () => landingState.activateTool?.("tree", { poet: b.dataset.jumpTree, view: "timeline" });
+    });
+    resBox.querySelectorAll("[data-filter-poet]").forEach((b) => {
+      b.onclick = (e) => { e.preventDefault(); runSearch(q, Number(b.dataset.filterPoet)); };
+    });
+  };
+
+  container.querySelector("#word-search-form").onsubmit = (e) => { e.preventDefault(); runSearch(wInput.value); };
+  container.querySelector("#word-samples").onclick = (e) => {
+    const b = e.target.closest("[data-word]");
+    if (b) runSearch(b.dataset.word);
+  };
+  await runSearch(initialQ);
+}
+
+async function buildWordMeter(q) {
+  const [{ data }, totalRow] = await Promise.all([
+    api(`/wordcounts/bycat?term=${encodeURIComponent(q)}&PageNumber=1&PageSize=40`),
+    api(`/wordcounts/bycat/count?term=${encodeURIComponent(q)}`).catch(() => ({ data: null })),
+  ]);
+  const rows = (Array.isArray(data) ? data : []).filter((r) => r.count > 0);
+  if (!rows.length) return "";
+  const most = Math.max(1, ...rows.map((r) => r.count));
+  const rate = (r) => (r.totalWordCount ? (r.count / r.totalWordCount) * 10000 : 0);
+  const byRate = [...rows].filter((r) => r.totalWordCount > 2000).sort((a, b) => rate(b) - rate(a)).slice(0, 8);
+  const topRate = Math.max(0.0001, ...byRate.map(rate));
+  const total = totalRow?.data?.count;
+  const bar = (r, w, val, cls = "") =>
+    `<a class="barrow ${cls}" href="javascript:void(0)" data-filter-poet="${r.poetId}"><span>${esc(r.name)}</span><i style="width:${w.toFixed(1)}%"></i><b>${val}</b></a>`;
+  return `
+    <p class="kicker">«${esc(q)}» نزد شاعران${total ? ` · ${fa(total)} بار در کل گنجور` : ""}</p>
+    <div class="meter-cols">
+      <div><p class="muted small" style="margin:0 0 6px;">بیشترین شمار</p><div class="bars">${rows.slice(0, 8).map((r) => bar(r, (r.count / most) * 100, fa(r.count))).join("")}</div></div>
+      <div><p class="muted small" style="margin:0 0 6px;">بیشترین نسبت (در هر ۱۰٬۰۰۰ واژه)</p><div class="bars">${byRate.map((r) => bar(r, (rate(r) / topRate) * 100, rate(r).toLocaleString("fa-IR", { maximumFractionDigits: 1 }), "lapis")).join("")}</div></div>
+    </div>`;
+}
+
+/* ==========================================================================
+   ابزار ۶: جای‌ها در شعر و سفرنامهٔ ناصرخسرو (سوییچ درجا!)
+   ========================================================================== */
+async function mountPlacesTool(container, params, isStale) {
   const [geo, locations, manifest, base] = await Promise.all([
     fileJson("geotags.json"),
     fileJson("locations.json"),
     fileJson("manifest.json"),
-    fetch("mideast.json").then((response) => (response.ok ? response.json() : null)).catch(() => null),
+    fetch("mideast.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
-  const buckets = [...new Set(geo.map((item) => Math.floor(item.PoemId / 2000)))];
+  if (isStale()) return;
+
+  const buckets = [...new Set(geo.map((i) => Math.floor(i.PoemId / 2000)))];
   const index = {};
-  const shards = await Promise.all(buckets.map((bucket) => fileJson(`index/poems-by-id/${bucket}.json`).catch((error) => {
-    if (error === STALE) throw error;
-    return {};
-  })));
-  for (const shard of shards) Object.assign(index, shard);
-  const poetBySlug = new Map((manifest.Poets || []).map((poet) => [poet.FullUrl, poet]));
-  const byId = new Map(locations.map((item) => [item.Id, item]));
+  const shards = await Promise.all(buckets.map((b) => fileJson(`index/poems-by-id/${b}.json`).catch(() => ({}))));
+  if (isStale()) return;
+  for (const s of shards) Object.assign(index, s);
+
+  const poetBySlug = new Map((manifest.Poets || []).map((p) => [p.FullUrl, p]));
+  const byId = new Map(locations.map((l) => [l.Id, l]));
   const tags = geo
     .map((tag, order) => {
       const place = byId.get(tag.LocationId);
@@ -4091,223 +1864,526 @@ async function placesPage(query) {
     })
     .filter(Boolean);
 
-  // Naser Khosrow's Safarnameh: the only text whose places are tagged stop by stop with a year
   const journey = [];
-  for (const tag of tags.filter((item) => item.url.startsWith("/naserkhosro/safarname") && item.year).sort((a, b) => a.year - b.year || a.poemId - b.poemId || a.couplet - b.couplet || a.order - b.order)) {
+  for (const tag of tags.filter((i) => i.url.startsWith("/naserkhosro/safarname") && i.year).sort((a, b) => a.year - b.year || a.poemId - b.poemId || a.order - b.order)) {
     if (journey.length && journey[journey.length - 1].place.Id === tag.place.Id) continue;
     journey.push(tag);
   }
-  const mode = query.get("all") === "1" || !journey.length || !base ? "all" : "journey";
-  const views = `<nav class="views" aria-label="نما"><a href="#/places"${mode === "journey" ? ' aria-current="page"' : ""}>سفر ناصرخسرو</a><a href="#/places?all=1"${mode === "all" ? ' aria-current="page"' : ""}>همهٔ جاها</a></nav>`;
-  const others = tags.filter((item) => !item.url.startsWith("/naserkhosro/safarname"));
-  const lead = `<p class="lead">گنجور تا امروز روی ${fa(tags.length)} بیت یا بند، نام جایی را برچسب زده. بیشترشان از سفرنامهٔ ناصرخسرو است که منزل‌به‌منزل سال دارد؛ بقیه از دیوان بهار، حافظ، تاریخ بیهقی، شاهنامه و چند شاعر دیگر. این نقشه زادگاه شاعران نیست؛ جاهایی است که خود متن از آن‌ها حرف می‌زند.</p>`;
 
-  if (mode === "journey") {
-    const [LON0, , , LAT1] = base.bbox;
-    const P = (lon, lat) => [(lon - LON0) * base.k * base.c, (LAT1 - lat) * base.k];
-    const pts = journey.map((stop) => P(stop.place.Longitude, stop.place.Latitude));
-    const km = (a, b) => {
-      const R = 6371;
-      const r = (deg) => (deg * Math.PI) / 180;
-      const dLat = r(b.Latitude - a.Latitude);
-      const dLon = r(b.Longitude - a.Longitude);
-      const h = Math.sin(dLat / 2) ** 2 + Math.cos(r(a.Latitude)) * Math.cos(r(b.Latitude)) * Math.sin(dLon / 2) ** 2;
-      return 2 * R * Math.asin(Math.sqrt(h));
-    };
-    let total = 0;
-    const sofar = [0];
-    for (let i = 1; i < journey.length; i++) {
-      total += km(journey[i - 1].place, journey[i].place);
-      sofar.push(total);
-    }
-    const first = journey[0];
-    const last = journey[journey.length - 1];
-    const cities = new Set(journey.map((stop) => stop.place.Id)).size;
-    // a few names always written on the map; the rest appear when their stop is reached
-    const famous = new Set(["مرو", "نیشابور", "تبریز", "حلب", "بیت‌المقدس", "قاهره", "مکه", "بصره", "اصفهان", "طرابلس (لبنان)", "اسوان", "طائف", "سرخس", "ری", "ارزروم", "بلخ"]);
-    paint(
-      "جای‌ها در شعر",
-      `<h1>جای‌ها در شعر</h1>
-       ${views}
-       ${lead}
-       <div class="journey">
-         <div class="journey-map" id="jmap"><svg viewBox="0 0 ${base.w} ${base.h}" role="img" aria-label="مسیر سفر ناصرخسرو روی نقشه">
-           <rect width="${base.w}" height="${base.h}" class="sea"/>
-           <path class="land" d="${base.land}"/>
-           <path class="river" d="${base.rivers}"/>
-           <polyline class="route-all" points="${pts.map((p) => p.map((v) => v.toFixed(0)).join(",")).join(" ")}"/>
-           <polyline class="route-done" id="done" points=""/>
-           <g id="stops">${journey
-             .map((stop, i) => `<circle class="stop" data-i="${i}" cx="${pts[i][0].toFixed(0)}" cy="${pts[i][1].toFixed(0)}" r="4"><title>${esc(stop.place.Name)} · ${fa(stop.year)} ق</title></circle>`)
-             .join("")}</g>
-           <g id="names" aria-hidden="true"></g>
-         </svg></div>
-         <div class="journey-side">
-           <p class="jstat"><b>${fa(cities)}</b> شهر · <b>${fa(Math.round(total / 100) * 100)}</b> کیلومتر در خط مستقیم · سال <b>${yr(first.year)}</b> تا <b>${yr(last.year)}</b> ق</p>
-           <div class="jcard" id="jcard" aria-live="polite"></div>
-           <div class="jctl">
-             <button type="button" class="btn" id="jprev" aria-label="منزل قبلی">→</button>
-             <button type="button" class="btn primary" id="jplay">▶ پخش سفر</button>
-             <button type="button" class="btn" id="jnext" aria-label="منزل بعدی">←</button>
-           </div>
-           <input type="range" id="jrange" min="0" max="${journey.length - 1}" value="0" aria-label="منزل" />
-           <p class="muted small">ناصرخسرو در سال ${yr(first.year)} ق (حدود ${yr(toGregorian(first.year))} م) از ${esc(first.place.Name)} راه افتاد و هفت سال بعد به ${esc(last.place.Name)} برگشت. هر نقطه یک منزل است که گنجور برایش سال ثبت کرده؛ فاصله‌ها خط مستقیم‌اند، نه راه واقعی کاروان.</p>
-         </div>
-       </div>
-       <h2 class="section">همهٔ منزل‌ها</h2>
-       <ol class="stops-list" id="jlist">${journey
-         .map((stop, i) => `<li><button type="button" data-i="${i}"><b>${fa(i + 1)}</b> ${esc(stop.place.Name)} <small>${yr(stop.year)} ق</small></button></li>`)
-         .join("")}</ol>
-       <p class="muted">نقشهٔ پایه: Natural Earth. جاها و سال‌ها: برچسب‌های گنجور روی سفرنامه.</p>`,
-    );
-    const done = document.querySelector("#done");
-    const names = document.querySelector("#names");
-    const card = document.querySelector("#jcard");
-    const range = document.querySelector("#jrange");
-    const play = document.querySelector("#jplay");
-    const circles = [...document.querySelectorAll("#stops .stop")];
-    const listButtons = [...document.querySelectorAll("#jlist button")];
-    let at = 0;
-    let timer = 0;
-    const label = (i, cls) => {
-      const [x, y] = pts[i];
-      const left = x > base.w - 120;
-      return `<text class="${cls}" x="${(x + (left ? -8 : 8)).toFixed(0)}" y="${(y + 4).toFixed(0)}" text-anchor="${left ? "end" : "start"}">${esc(journey[i].place.Name)}</text>`;
-    };
-    const show = (i) => {
-      at = Math.max(0, Math.min(journey.length - 1, i));
-      range.value = at;
-      done.setAttribute("points", pts.slice(0, at + 1).map((p) => p.map((v) => v.toFixed(0)).join(",")).join(" "));
-      circles.forEach((circle, k) => {
-        circle.classList.toggle("past", k < at);
-        circle.classList.toggle("now", k === at);
-        circle.setAttribute("r", k === at ? 8 : 4);
-      });
-      // names: the reached famous cities, without overlap, and always the current one
-      const taken = [];
-      const out = [];
-      const fits = (k) => {
-        const [x, y] = pts[k];
-        const w = journey[k].place.Name.length * 10 + 12;
-        const left = x > base.w - 120;
-        const box = { l: left ? x - w : x, r: left ? x : x + w, t: y - 13, b: y + 9 };
-        if (taken.some((o) => box.l < o.r && box.r > o.l && box.t < o.b && box.b > o.t)) return false;
-        taken.push(box);
-        return true;
+  let mode = params.all === "1" || !journey.length || !base ? "all" : "journey";
+  container.innerHTML = `
+    <div class="tool-head">
+      <div>
+        <h2>جای‌ها در شعر و سفر هفت‌سالهٔ ناصرخسرو</h2>
+        <p class="tool-sub">جاهایی که خود شعر و سفرنامه از آن‌ها نام برده است (${fa(tags.length)} برچسب مکانی).</p>
+      </div>
+      <div class="seg-switch">
+        <button type="button" class="seg-btn ${mode === "journey" ? "active" : ""}" data-pmode="journey">سفر ناصرخسرو</button>
+        <button type="button" class="seg-btn ${mode === "all" ? "active" : ""}" data-pmode="all">همهٔ شهرها</button>
+      </div>
+    </div>
+    <div id="places-body"></div>
+  `;
+
+  const body = container.querySelector("#places-body");
+  const renderMode = (m) => {
+    stopTimers();
+    mode = m;
+    container.querySelectorAll("[data-pmode]").forEach((b) => b.classList.toggle("active", b.dataset.pmode === m));
+    if (m === "journey" && base && journey.length) {
+      const [LON0, , , LAT1] = base.bbox;
+      const P = (lon, lat) => [(lon - LON0) * base.k * base.c, (LAT1 - lat) * base.k];
+      const pts = journey.map((s) => P(s.place.Longitude, s.place.Latitude));
+      const first = journey[0], last = journey[journey.length - 1];
+      const cities = new Set(journey.map((s) => s.place.Id)).size;
+      body.innerHTML = `
+        <div class="journey">
+          <div class="journey-map" id="jmap"><svg viewBox="0 0 ${base.w} ${base.h}">
+            <rect width="${base.w}" height="${base.h}" class="sea"/>
+            <path class="land" d="${base.land}"/>
+            <path class="river" d="${base.rivers}"/>
+            <polyline class="route-all" points="${pts.map((p) => p.map((v) => v.toFixed(0)).join(",")).join(" ")}"/>
+            <polyline class="route-done" id="jdone" points=""/>
+            <g id="jstops">${journey.map((s, i) => `<circle class="stop" data-i="${i}" cx="${pts[i][0].toFixed(0)}" cy="${pts[i][1].toFixed(0)}" r="4"><title>${esc(s.place.Name)} · ${yr(s.year)} ق</title></circle>`).join("")}</g>
+            <g id="jnames"></g>
+          </svg></div>
+          <div class="journey-side">
+            <p class="jstat"><b>${fa(cities)}</b> شهر · سال <b>${yr(first.year)}</b> تا <b>${yr(last.year)}</b> ق</p>
+            <div class="jcard" id="jcard"></div>
+            <div class="jctl">
+              <button type="button" class="btn" id="jprev">→</button>
+              <button type="button" class="btn primary" id="jplay">▶ پخش سفر</button>
+              <button type="button" class="btn" id="jnext">←</button>
+            </div>
+            <input type="range" id="jrange" min="0" max="${journey.length - 1}" value="0" />
+          </div>
+        </div>
+        <ol class="stops-list" id="jlist">${journey.map((s, i) => `<li><button type="button" data-i="${i}">${fa(i + 1)}. ${esc(s.place.Name)}</button></li>`).join("")}</ol>
+      `;
+      const done = body.querySelector("#jdone"), names = body.querySelector("#jnames"), card = body.querySelector("#jcard");
+      const range = body.querySelector("#jrange"), play = body.querySelector("#jplay");
+      const circles = [...body.querySelectorAll("#jstops .stop")], listBtns = [...body.querySelectorAll("#jlist button")];
+      let at = 0;
+      const show = (i) => {
+        at = Math.max(0, Math.min(journey.length - 1, i));
+        range.value = at;
+        done.setAttribute("points", pts.slice(0, at + 1).map((p) => p.map((v) => v.toFixed(0)).join(",")).join(" "));
+        circles.forEach((c, k) => { c.classList.toggle("past", k < at); c.classList.toggle("now", k === at); c.setAttribute("r", k === at ? 8 : 4); });
+        const [lx, ly] = pts[at];
+        names.innerHTML = `<text class="now" x="${(lx + 8).toFixed(0)}" y="${(ly + 4).toFixed(0)}">${esc(journey[at].place.Name)}</text>`;
+        const st = journey[at];
+        card.innerHTML = `<div class="kicker">منزل ${fa(at + 1)} از ${fa(journey.length)}</div><strong>${esc(st.place.Name)}</strong><p class="muted small">سال ${yr(st.year)} ق · حدود ${yr(toGregorian(st.year))} م</p><a class="chip" href="#/poem/${st.poemId}" style="margin-top:6px;">خواندن این بخش از سفرنامه ←</a>`;
+        listBtns.forEach((b, k) => b.classList.toggle("on", k === at));
       };
-      fits(at);
-      out.push(label(at, "now"));
-      const seen = new Set([journey[at].place.Id]);
-      for (let k = 0; k < journey.length; k++) {
-        const stop = journey[k];
-        if (seen.has(stop.place.Id) || !famous.has(stop.place.Name)) continue;
-        seen.add(stop.place.Id);
-        if (fits(k)) out.push(label(k, k <= at ? "past" : "later"));
+      play.onclick = () => {
+        if (activeTimer) { stopTimers(); play.textContent = "▶ پخش سفر"; return; }
+        if (at >= journey.length - 1) show(0);
+        play.textContent = "❚❚ ایست";
+        activeTimer = setInterval(() => {
+          if (!document.body.contains(play) || at >= journey.length - 1) { stopTimers(); play.textContent = "▶ پخش سفر"; return; }
+          show(at + 1);
+        }, 650);
+      };
+      body.querySelector("#jprev").onclick = () => { stopTimers(); play.textContent = "▶ پخش سفر"; show(at - 1); };
+      body.querySelector("#jnext").onclick = () => { stopTimers(); play.textContent = "▶ پخش سفر"; show(at + 1); };
+      range.oninput = () => { stopTimers(); play.textContent = "▶ پخش سفر"; show(Number(range.value)); };
+      body.querySelector("#jlist").onclick = (e) => { const b = e.target.closest("[data-i]"); if (b) { stopTimers(); show(Number(b.dataset.i)); } };
+      body.querySelector("#jstops").onclick = (e) => { const c = e.target.closest("[data-i]"); if (c) { stopTimers(); show(Number(c.dataset.i)); } };
+      show(0);
+      atlasStage(body.querySelector("#jmap"));
+    } else {
+      const others = tags.filter((i) => !i.url.startsWith("/naserkhosro/safarname"));
+      const groups = new Map();
+      for (const t of others.length ? others : tags) {
+        const g = groups.get(t.place.Id) || { place: t.place, tags: [] };
+        if (!g.tags.some((x) => x.poemId === t.poemId)) g.tags.push(t);
+        groups.set(t.place.Id, g);
       }
-      names.innerHTML = out.join("");
-      const stop = journey[at];
-      card.innerHTML = `<div class="kicker">منزل ${fa(at + 1)} از ${fa(journey.length)}</div><strong>${esc(stop.place.Name)}</strong><p>سال ${yr(stop.year)} ق · حدود ${yr(toGregorian(stop.year))} م · ${fa(Math.round(sofar[at]))} کیلومتر از ${esc(first.place.Name)}</p><a class="chip" href="#/poem/${stop.poemId}">این بخش از سفرنامه را بخوان ←</a>`;
-      listButtons.forEach((button, k) => button.classList.toggle("on", k === at));
-    };
-    const stop = () => {
-      clearInterval(timer);
-      timer = 0;
-      play.textContent = "▶ پخش سفر";
-    };
-    play.onclick = () => {
-      if (timer) return stop();
-      if (at >= journey.length - 1) show(0);
-      play.textContent = "❚❚ ایست";
-      timer = setInterval(() => {
-        if (!document.body.contains(play)) return stop();
-        if (at >= journey.length - 1) return stop();
-        show(at + 1);
-      }, 700);
-    };
-    document.querySelector("#jprev").onclick = () => (stop(), show(at - 1));
-    document.querySelector("#jnext").onclick = () => (stop(), show(at + 1));
-    range.oninput = () => (stop(), show(Number(range.value)));
-    document.querySelector("#jlist").onclick = (event) => {
-      const button = event.target.closest("[data-i]");
-      if (!button) return;
-      stop();
-      show(Number(button.dataset.i));
-      document.querySelector("#jmap").scrollIntoView({ block: "nearest", behavior: "smooth" });
-    };
-    document.querySelector("#stops").onclick = (event) => {
-      const circle = event.target.closest("[data-i]");
-      if (circle) (stop(), show(Number(circle.dataset.i)));
-    };
-    show(0);
-    atlasStage(document.querySelector("#jmap"));
-    return;
-  }
-
-  // every other tagged place, filterable by poet
-  const groups = new Map();
-  for (const tag of others.length ? others : tags) {
-    const group = groups.get(tag.place.Id) || { place: tag.place, tags: [] };
-    if (!group.tags.some((item) => item.poemId === tag.poemId)) group.tags.push(tag);
-    groups.set(tag.place.Id, group);
-  }
-  const poets = [...others.reduce((map, tag) => map.set(tag.poet || "؟", (map.get(tag.poet || "؟") || 0) + 1), new Map())].sort((a, b) => b[1] - a[1]);
-  const all = [...groups.values()].sort((a, b) => b.tags.length - a.tags.length);
-  const inside = [];
-  const outside = [];
-  for (const group of all) {
-    const point = project(group.place.Longitude, group.place.Latitude);
-    if (point.x < 0 || point.x > 100 || point.y < 0 || point.y > 100) outside.push(group);
-    else inside.push({ ...group, point });
-  }
-  const most = Math.max(1, ...inside.map((group) => group.tags.length));
-  const poetsOf = (group) => [...new Set(group.tags.map((item) => item.poet).filter(Boolean))];
-  const card = (group) =>
-    `<article class="card" id="place-${group.place.Id}" data-poets="${esc(poetsOf(group).join("|"))}"><strong>${esc(group.place.Name)}</strong><div class="kicker">${fa(group.tags.length)} شعر · ${esc(poetsOf(group).join("، "))}</div><p class="chips">${group.tags
-      .slice(0, 8)
-      .map((item) => `<a class="chip" href="#/poem/${item.poemId}">${esc(item.poet || "شعر")}${item.year ? ` · ${fa(item.year)}` : ""}</a>`)
-      .join("")}</p></article>`;
-  paint(
-    "جای‌ها در شعر",
-    `<h1>جای‌ها در شعر</h1>
-     ${views}
-     ${lead}
-     <p class="chips" id="poet-filter"><button class="chip on" type="button" data-poet="">همه · ${fa(others.length)}</button>${poets
-       .map(([name, n]) => `<button class="chip" type="button" data-poet="${esc(name)}">${esc(name)} · ${fa(n)}</button>`)
-       .join("")}</p>
-     <div class="atlas realm dense">${inside
-       .map((group) => {
-         const size = Math.round(8 + Math.sqrt(group.tags.length / most) * 18);
-         return `<a class="pin" style="left:${group.point.x}%;top:${group.point.y}%" href="#/places?all=1" data-place="${group.place.Id}" data-poets="${esc(poetsOf(group).join("|"))}" data-w="${group.tags.length}" title="${esc(group.place.Name)}: ${group.tags.length} شعر · ${esc(poetsOf(group).join("، "))}"><span>${esc(group.place.Name)}</span><i style="width:${size}px;height:${size}px"></i></a>`;
-       })
-       .join("")}</div>
-     <p class="muted">اندازهٔ نقطه، شمار شعرهایی است که از آن شهر نام برده‌اند. روی نام شاعر بزن تا فقط جاهای او بماند؛ روی نقطه بزن تا شعرهایش را ببینی.</p>
-     <h2 class="section">شهرها</h2>
-     <div class="grid" id="place-cards">${inside.map(card).join("")}</div>
-     ${outside.length ? `<h2 class="section">بیرون از این نقشه</h2><div class="grid">${outside.map(card).join("")}</div>` : ""}`,
-  );
-  const view = atlasStage(document.querySelector(".atlas.realm.dense"));
-  document.querySelector("#poet-filter").onclick = (event) => {
-    const chip = event.target.closest("[data-poet]");
-    if (!chip) return;
-    const who = chip.dataset.poet;
-    document.querySelectorAll("#poet-filter .chip").forEach((node) => node.classList.toggle("on", node === chip));
-    document.querySelectorAll(".pin[data-poets], .card[data-poets]").forEach((node) => {
-      node.classList.toggle("off", Boolean(who) && !node.dataset.poets.split("|").includes(who));
-    });
-    view.refresh();
+      const inside = [...groups.values()]
+        .map((g) => ({ ...g, pt: project(g.place.Longitude, g.place.Latitude) }))
+        .filter((g) => g.pt.x >= 0 && g.pt.x <= 100 && g.pt.y >= 0 && g.pt.y <= 100)
+        .sort((a, b) => b.tags.length - a.tags.length);
+      const most = Math.max(1, ...inside.map((g) => g.tags.length));
+      body.innerHTML = `
+        <div class="atlas realm" id="places-all-atlas">${inside.map((g) => {
+          const sz = Math.round(8 + Math.sqrt(g.tags.length / most) * 18);
+          return `<a class="pin" data-place="${g.place.Id}" data-w="${g.tags.length}" style="left:${g.pt.x}%;top:${g.pt.y}%" href="javascript:void(0)"><span>${esc(g.place.Name)}</span><i style="width:${sz}px;height:${sz}px"></i></a>`;
+        }).join("")}</div>
+        <div class="grid">${inside.slice(0, 18).map((g) => `<article class="card" id="pcard-${g.place.Id}"><strong>${esc(g.place.Name)}</strong><div class="kicker">${fa(g.tags.length)} شعر</div><div class="chips">${g.tags.slice(0, 6).map((t) => `<a class="chip" href="#/poem/${t.poemId}">${esc(t.poet || "شعر")}</a>`).join("")}</div></article>`).join("")}</div>
+      `;
+      atlasStage(body.querySelector("#places-all-atlas"));
+      body.querySelectorAll(".pin[data-place]").forEach((p) => {
+        p.onclick = (e) => {
+          e.preventDefault();
+          const c = body.querySelector(`#pcard-${p.dataset.place}`);
+          c?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+          c?.classList.add("flash");
+          setTimeout(() => c?.classList.remove("flash"), 1200);
+        };
+      });
+    }
   };
-  document.querySelectorAll(".pin[data-place]").forEach((pin) => {
-    pin.onclick = (event) => {
-      event.preventDefault();
-      const target = document.getElementById(`place-${pin.dataset.place}`);
-      target?.scrollIntoView({ block: "center", behavior: "smooth" });
-      target?.classList.add("flash");
-      setTimeout(() => target?.classList.remove("flash"), 1200);
-    };
-  });
+  container.querySelectorAll("[data-pmode]").forEach((b) => { b.onclick = () => renderMode(b.dataset.pmode); });
+  renderMode(mode);
 }
 
+/* ==========================================================================
+   ابزار ۷: وزن‌ها و بحرهای عروضی (با نمایش نمونه شعرها درجا!)
+   ========================================================================== */
+async function mountVaznTool(container, params, isStale) {
+  const { data } = await api("/rhythms?sortOnVerseCount=true");
+  if (isStale()) return;
 
+  const parse = (item) => {
+    const m = String(item.rhythm || "").match(/^(.*?)\s*\((.*)\)\s*$/);
+    const afaeel = m ? m[1] : item.rhythm;
+    const name = m ? m[2] : "";
+    const family = (name.split(/\s+/)[0] || "").replace(/[()]/g, "") || "بی‌نام";
+    return { ...item, afaeel, name, family };
+  };
+  const items = [...data].sort((a, b) => b.verseCount - a.verseCount).map(parse);
+  const total = items.reduce((s, i) => s + (i.verseCount || 0), 0) || 1;
+  const famMap = new Map();
+  for (const item of items) {
+    const fam = famMap.get(item.family) || { name: item.family, count: 0, items: [] };
+    fam.count += item.verseCount || 0;
+    fam.items.push(item);
+    famMap.set(item.family, fam);
+  }
+  const PALETTE = ["#0a6b60", "#1e3a8a", "#b2532f", "#b8892a", "#7a3b5c", "#5b6b1f", "#2f7fa6", "#a0456b"];
+  const families = [...famMap.values()].sort((a, b) => b.count - a.count);
+  families.forEach((f, i) => (f.color = PALETTE[i % PALETTE.length]));
+  const colorOf = new Map(families.map((f) => [f.name, f.color]));
+  const pct = (n) => `${fa(Math.round((n / total) * 1000) / 10)}٪`;
+  const most = Math.max(1, ...items.map((i) => i.verseCount || 0));
+
+  container.innerHTML = `
+    <div class="tool-head">
+      <div>
+        <h2>وزن‌ها و بحرهای عروضی</h2>
+        <p class="tool-sub">${fa(items.length)} وزن عروضی در گنجور؛ روی هر بحر یا وزن بزنید تا شعرهای هم‌وزنش همین‌جا باز شوند.</p>
+      </div>
+    </div>
+    <div class="fam-strip" id="vazn-strip">${families.map((f) => {
+      const w = (f.count / total) * 100;
+      return `<button type="button" class="fam-seg" data-fam="${esc(f.name)}" style="flex:${w.toFixed(3)};--c:${f.color}" title="${esc(f.name)} · ${pct(f.count)}">${w > 6 ? `<span>${esc(f.name)}</span><small>${pct(f.count)}</small>` : ""}</button>`;
+    }).join("")}</div>
+    <div id="vazn-dossier" hidden></div>
+    <div class="inline-search"><input id="vazn-q" placeholder="جستجوی نام بحر یا افاعیل (مثلاً هزج، مفاعیلن، رمل…)" autocomplete="off" /></div>
+    <div class="vlist" id="vazn-list"></div>
+  `;
+
+  const dossier = container.querySelector("#vazn-dossier");
+  const listEl = container.querySelector("#vazn-list");
+  const qEl = container.querySelector("#vazn-q");
+  let fam = "";
+
+  const openMeter = async (id) => {
+    const cur = items.find((i) => i.id === Number(id));
+    if (!cur) return;
+    dossier.hidden = false;
+    dossier.innerHTML = `<div class="inline-dossier"><div class="loader"><span class="spin"></span><span>در حال دریافت شعرهای وزن ${esc(cur.afaeel)}…</span></div></div>`;
+    dossier.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    const { data: poems, total: pt } = await api(`/poems/similar?metre=${encodeURIComponent(cur.rhythm)}&PageNumber=1&PageSize=9`);
+    if (isStale()) return;
+    const list = Array.isArray(poems) ? poems : [];
+    dossier.innerHTML = `
+      <div class="inline-dossier">
+        <div class="inline-dossier-head">
+          <div>
+            <h3>${esc(cur.afaeel)}</h3>
+            <p class="muted small" style="margin:2px 0 0;">${esc(cur.name)} · ${fa(cur.verseCount)} مصراع (${pct(cur.verseCount)} کل گنجور)${pt ? ` · ${fa(pt)} شعر` : ""}</p>
+          </div>
+          <button type="button" class="chip" id="close-vazn-dossier">بستن ×</button>
+        </div>
+        <div class="grid">${list.map((pm) => {
+          const first = String(pm.plainText || "").split(/\r?\n/).filter((l) => l.trim()).slice(0, 2).join(" / ");
+          return `<a class="hit" href="#/poem/${pm.id}"><div class="kicker">${esc(String(pm.fullTitle || "").split("»")[0])}</div><strong>${esc(pm.title)}</strong><p>${esc(first)}</p></a>`;
+        }).join("")}</div>
+      </div>`;
+    dossier.querySelector("#close-vazn-dossier").onclick = () => (dossier.hidden = true);
+  };
+
+  const draw = () => {
+    const q = qEl.value.trim();
+    const shown = items.filter((i) => (!q || i.rhythm.includes(q)) && (!fam || i.family === fam)).slice(0, q || fam ? 60 : 20);
+    container.querySelectorAll("#vazn-strip .fam-seg").forEach((s) => s.classList.toggle("dim", Boolean(fam) && s.dataset.fam !== fam));
+    listEl.innerHTML = shown
+      .map((i) => `<button type="button" class="vrow" data-vid="${i.id}" style="--c:${colorOf.get(i.family)}"><span class="vname"><strong>${esc(i.name || i.afaeel)}</strong>${i.name ? `<small>${esc(i.afaeel)}</small>` : ""}</span><span class="vbar"><i style="width:${Math.max(1, (i.verseCount / most) * 100).toFixed(1)}%"></i></span><b>${fa(i.verseCount)}</b></button>`)
+      .join("") || `<p class="muted">وزنی با این نام پیدا نشد.</p>`;
+  };
+  container.querySelector("#vazn-strip").onclick = (e) => {
+    const s = e.target.closest("[data-fam]");
+    if (!s) return;
+    fam = fam === s.dataset.fam ? "" : s.dataset.fam;
+    draw();
+  };
+  listEl.onclick = (e) => {
+    const r = e.target.closest("[data-vid]");
+    if (r) openMeter(r.dataset.vid);
+  };
+  qEl.oninput = draw;
+  draw();
+  if (params.id) openMeter(params.id);
+}
+
+/* ==========================================================================
+   زیرصفحه ۱: شاعر و آثار (#/poet/:id و #/cat/:id)
+   ========================================================================== */
+async function poetSubpage(id) {
+  landingState.mounted = false;
+  loading("شاعر");
+  const { data } = await api(`/poet/${id}`);
+  const poet = data.poet;
+  const cat = data.cat || {};
+  const children = cat.children || [];
+  const poems = cat.poems || [];
+  const img = poet.imageUrl
+    ? `<img src="https://api.ganjoor.net${esc(poet.imageUrl)}" alt="">`
+    : `<span class="medal">${esc((poet.nickname || poet.name || "؟").slice(0, 1))}</span>`;
+
+  paint(
+    poet.nickname || poet.name,
+    `<article class="subpage">
+       <p class="crumb"><a href="#/">← بازگشت به گنجور نو</a></p>
+       <div class="poet-head">
+         <figure class="ageshot portrait">${img}</figure>
+         <div>
+           <h1 style="margin:0 0 4px;color:var(--navy);">${esc(poet.name)}</h1>
+           <p class="kicker" style="margin:0;">زاده ${esc(poet.birthPlace || "نامشخص")} ${poet.birthYearInLHijri ? yr(poet.birthYearInLHijri) : "؟"} · درگذشته ${poet.deathYearInLHijri ? yr(poet.deathYearInLHijri) : "؟"} ق${poet.deathYearInLHijri && poet.birthYearInLHijri ? ` · ${fa(poet.deathYearInLHijri - poet.birthYearInLHijri)} سال حیات` : ""}</p>
+         </div>
+       </div>
+       ${poet.description ? `<div class="bio" id="bio">${esc(poet.description)}</div>${poet.description.length > 300 ? `<button class="chip" id="more-bio" type="button">ادامه شرح حال</button>` : ""}` : ""}
+       <div class="chips" style="margin:14px 0;">
+         ${children[0] ? `<a class="btn primary" href="#/cat/${children[0].id}">شروع از ${esc(children[0].title)}</a>` : ""}
+         ${poet.birthYearInLHijri ? `<a class="chip" href="#/tree?poet=${poet.id}">هم‌عصران روی خط زمان</a>` : ""}
+         <a class="chip" href="#/bridges/${poet.id}">پل‌های تضمین</a>
+         <a class="chip" href="https://ganjoor.net${esc(poet.fullUrl)}" rel="noreferrer">در گنجور اصلی</a>
+       </div>
+       ${children.length ? `<h2 style="font-size:1.15rem;color:var(--navy);margin:20px 0 8px;">آثار و دفترها</h2><div class="covers">${children.map((b, i) => `<a class="cover c${i % 4}" href="#/cat/${b.id}"><strong>${esc(b.title)}</strong><small>مشاهده ←</small></a>`).join("")}</div>` : ""}
+       ${poems.length ? `<h2 style="font-size:1.15rem;color:var(--navy);margin:20px 0 8px;">شعرها</h2><div class="grid">${poems.map((p) => `<a class="hit" href="#/poem/${p.id}"><strong>${esc(p.title)}</strong><p>${esc(p.excerpt || "")}</p></a>`).join("")}</div>` : ""}
+     </article>`,
+  );
+  document.querySelector("#more-bio")?.addEventListener("click", () => document.querySelector("#bio").classList.toggle("open"));
+}
+
+async function catSubpage(id, query) {
+  landingState.mounted = false;
+  loading("فهرست آثار");
+  const { data } = await api(`/cat/${id}?poems=true&mainSections=false`);
+  const cat = data.cat || data;
+  const pageNo = Math.max(1, Number(query.get("p") || 1));
+  const size = 24;
+  const poems = cat.poems || [];
+  const slice = poems.slice((pageNo - 1) * size, pageNo * size);
+  const pages = Math.ceil(poems.length / size);
+  const children = cat.children || [];
+  const crumbs = [`<a href="#/">← گنجور نو</a>`]
+    .concat((cat.ancestors || []).map((a) => `<a href="#/cat/${a.id}">${esc(a.title)}</a>`))
+    .join(" / ");
+
+  paint(
+    cat.title,
+    `<article class="subpage">
+       <p class="crumb">${crumbs}</p>
+       <h1 style="margin:0 0 6px;color:var(--navy);">${esc(cat.title)}</h1>
+       <p class="muted small">${poems.length ? `${fa(poems.length)} شعر` : ""}</p>
+       ${children.length ? `<div class="covers">${children.map((b, i) => `<a class="cover c${i % 4}" href="#/cat/${b.id}"><strong>${esc(b.title)}</strong><small>مشاهده ←</small></a>`).join("")}</div>` : ""}
+       <div class="grid">${slice.map((p) => `<a class="hit" href="#/poem/${p.id}"><strong>${esc(p.title)}</strong><p>${esc(p.excerpt || "")}</p></a>`).join("")}</div>
+       ${pages > 1 ? `<div class="chips" style="margin-top:16px;">${pageNo > 1 ? `<a class="chip" href="#/cat/${id}?p=${pageNo - 1}">قبلی</a>` : ""}<span class="chip">صفحه ${fa(pageNo)} از ${fa(pages)}</span>${pageNo < pages ? `<a class="chip" href="#/cat/${id}?p=${pageNo + 1}">بعدی</a>` : ""}</div>` : ""}
+     </article>`,
+  );
+}
+
+/* ==========================================================================
+   زیرصفحه ۲: خوانش شعر (#/poem/:id) — اتاق خوانش کامل با صوت، معنی، آرایه، وزن و یادداشت
+   ========================================================================== */
+function linesOf(poem) {
+  const verses = [...(poem.verses || [])].sort((a, b) => a.vOrder - b.vOrder);
+  if (verses.length) {
+    return verses.map((v) => ({
+      order: v.vOrder,
+      text: v.text,
+      end: v.versePosition === 1 || v.versePosition === 3,
+      misra: v.versePosition === 1 || v.versePosition === 3 ? 2 : 1,
+      couplet: v.coupletIndex,
+      summary: v.coupletSummary || "",
+    }));
+  }
+  return String(poem.plainText || "").split(/\r?\n/).map((t) => t.trim()).filter(Boolean).map((t, i) => ({ order: i, text: t, end: i % 2 === 1, misra: (i % 2) + 1, couplet: Math.floor(i / 2), summary: "" }));
+}
+
+function words(text) {
+  let n = 0;
+  return String(text).split(/(\s+)/).map((p) => (/\s+/.test(p) ? p : `<span class="word" data-w="${++n}">${esc(p)}</span>`)).join("");
+}
+
+function marked(text, spans) {
+  let n = 0;
+  return String(text || "").split(/(\s+)/).map((p) => {
+    if (/\s+/.test(p)) return p;
+    n += 1;
+    const hit = spans.find((s) => n >= s.from && n <= s.to);
+    return hit ? `<mark title="${esc(hit.label)}">${esc(p)}</mark>` : esc(p);
+  }).join("");
+}
+
+async function poemSubpage(id, query) {
+  landingState.mounted = false;
+  loading("شعر");
+  const { data: poem } = await api(`/poem/${id}?catInfo=true&navigation=true&recitations=true&verseDetails=true&comments=false&images=false&songs=false`);
+  store.visit(poem.id);
+  const saved = store.get();
+  const isMarked = saved.marks.includes(poem.id);
+  const cat = poem.category?.cat || {};
+  const poet = poem.category?.poet || {};
+  const recitations = poem.recitations || [];
+  const lines = linesOf(poem);
+  const section = (poem.sections || [])[0] || {};
+  const metre = section.ganjoorMetre;
+  const rhyme = section.rhymeLetters || "";
+  const quotes = (poem.top6QuotedPoems || []).filter((i) => i.published !== false && i.relatedPoemId);
+  const related = section.top6RelatedSections || [];
+  const quiet = query.get("quiet") === "1";
+  const count = section.coupletsCount || poem.coupletsCount;
+
+  paint(
+    poem.title,
+    `<article class="read-grid" style="margin-top:20px;">
+       <div class="parchment">
+         <p class="crumb"><a href="#/">گنجور نو</a> ${poet.id ? `/ <a href="#/poet/${poet.id}">${esc(poet.nickname || poet.name)}</a>` : ""} ${cat.id ? `/ <a href="#/cat/${cat.id}">${esc(cat.title)}</a>` : ""}</p>
+         <h1>${esc(poem.title)}</h1>
+         <p class="byline">${esc(poet.name || "")}</p>
+         <p class="meta">${[
+           count ? `${fa(count)} بیت` : "",
+           metre ? `<a href="#/vazn?id=${metre.id}">${esc(metre.rhythm)}</a>` : "",
+           rhyme ? `قافیه «${esc(rhyme)}»` : "",
+           `<a href="https://ganjoor.net${esc(poem.fullUrl)}" rel="noreferrer">در گنجور</a>`,
+         ].filter(Boolean).join(" · ")}</p>
+         <div class="poem" id="verses">${lines.map((l) => `<p class="verse ${l.end ? "end" : ""}" data-order="${l.order}" data-couplet="${l.couplet}" data-m="${l.misra}">${words(l.text)}</p>`).join("")}</div>
+         <p class="muted small" style="text-align:center;">روی هر بیت بزنید تا شرحش بیاید؛ روی واژه بزنید تا در دیوان شاعر جستجو شود.</p>
+         <div class="dock">
+           ${recitations.length ? `<button class="btn primary" id="listen" type="button">▶ گوش بده</button>` : ""}
+           <button class="btn" id="mark" type="button">${isMarked ? "★ نشان شد" : "☆ نشان"}</button>
+           <button class="btn" id="quiet" type="button">${quiet ? "بازگشت" : "اتاق خلوت"}</button>
+           ${poem.previous ? `<a class="btn" href="#/poem/${poem.previous.id}">قبلی</a>` : ""}
+           ${poem.next ? `<a class="btn" href="#/poem/${poem.next.id}">بعدی</a>` : ""}
+         </div>
+       </div>
+       <aside class="tools-aside">
+         <div class="panel" id="side">
+           <div class="side-head"><strong id="side-title">بیت ۱</strong></div>
+           <div class="tabs" id="tabs">
+             <button class="chip on" type="button" data-tab="mean">معنی</button>
+             <button class="chip" type="button" data-tab="quote">تضمین${quotes.length + related.length ? ` ${fa(quotes.length + related.length)}` : ""}</button>
+             <button class="chip" type="button" data-tab="device" id="device-tab">آرایه</button>
+             ${metre ? `<button class="chip" type="button" data-tab="kin">هم‌وزن</button>` : ""}
+             <button class="chip" type="button" data-tab="music">موسیقی</button>
+             <button class="chip" type="button" data-tab="margin">حاشیه</button>
+           </div>
+           <div id="pane" aria-live="polite"></div>
+         </div>
+         ${recitations.length ? `<div class="panel player"><label class="small muted">خوانش <select id="reciter">${recitations.map((r, i) => `<option value="${i}">${esc(r.audioArtist || "خوانش")}</option>`).join("")}</select></label><audio id="player" controls preload="none" src="${esc(recitations[0].mp3Url)}"></audio><p class="muted small" id="sync-note" style="margin:6px 0 0;"></p></div>` : ""}
+         <label class="panel"><span class="small muted">یادداشت من</span><textarea id="note" rows="3" placeholder="یادداشتی برای این شعر بنویسید…">${esc(saved.notes[poem.id] || "")}</textarea></label>
+       </aside>
+     </article>`,
+    quiet,
+  );
+
+  let tab = "mean", activeCouplet = lines[0]?.couplet ?? 0, tagsCache = null;
+  const pane = document.querySelector("#pane");
+  const markCouplet = () => {
+    document.querySelectorAll(".verse").forEach((n) => n.classList.toggle("pick", Number(n.dataset.couplet) === activeCouplet));
+    const t = document.querySelector("#side-title");
+    if (t) t.textContent = `بیت ${fa(activeCouplet + 1)}`;
+  };
+  const poemTags = async () => {
+    if (!tagsCache) {
+      const d = await rootApi(`/ganjoor/literary/poem/${poem.id}/tags`).catch(() => []);
+      tagsCache = (Array.isArray(d) ? d : []).sort((a, b) => a.coupletIndex - b.coupletIndex);
+    }
+    return tagsCache;
+  };
+  poemTags().then((tags) => {
+    const el = document.querySelector("#device-tab");
+    if (el && tags.length) el.textContent = `آرایه ${fa(tags.length)}`;
+  });
+
+  const renderPane = async () => {
+    document.querySelectorAll("#tabs .chip").forEach((n) => n.classList.toggle("on", n.dataset.tab === tab));
+    if (tab === "mean") {
+      const sum = lines.find((l) => l.couplet === activeCouplet && l.summary)?.summary || "";
+      pane.innerHTML = `<p style="margin:0;font-size:0.92rem;">${esc(sum || poem.poemSummary || "شرح این بیت در گنجور ثبت نشده.")}</p>`;
+      return;
+    }
+    if (tab === "quote") {
+      const blocks = quotes.map((i) => `<a class="hit" href="#/poem/${i.relatedPoemId}" style="margin-bottom:6px;"><div class="kicker">${esc(i.cachedRelatedPoemPoetName || "")}</div><strong>${esc(i.relatedCoupletVerse2 || i.cachedRelatedPoemFullTitle || "")}</strong><p>${esc(i.coupletVerse1 || "")}</p></a>`)
+        .concat(related.map((i) => `<a class="hit" href="#/poem/${i.targetPoemId}" style="margin-bottom:6px;"><div class="kicker">استقبال · ${esc(i.poetName || "")}</div><strong>${esc(i.fullTitle || "")}</strong></a>`));
+      pane.innerHTML = blocks.length ? blocks.join("") : `<p class="muted small">تضمین یا استقبالی ثبت نشده.</p>`;
+      return;
+    }
+    if (tab === "device") {
+      pane.innerHTML = `<p class="muted small">در حال دریافت آرایه‌ها…</p>`;
+      const [list, tags] = await Promise.all([devices(), poemTags()]);
+      const names = new Map(list.map((i) => [i.id, i.name]));
+      if (!tags.length) { pane.innerHTML = `<p class="muted small">برای این شعر آرایه‌ای ثبت نشده.</p>`; return; }
+      const here = tags.filter((t) => t.coupletIndex === activeCouplet);
+      const show = here.length ? here : tags;
+      pane.innerHTML = show.map((t) => `<button class="hit device-hit" type="button" data-tag="${tags.indexOf(t)}"><div class="kicker">${esc(names.get(t.deviceId) || "آرایه")} · بیت ${fa(t.coupletIndex + 1)}</div><p>${(t.parts || []).map((p) => esc(p.concept?.name || p.text || "")).filter(Boolean).join(" ← ")}</p></button>`).join("");
+      pane.querySelectorAll("[data-tag]").forEach((btn) => {
+        btn.onclick = () => {
+          document.querySelectorAll(".word.hl").forEach((n) => n.classList.remove("hl"));
+          const tag = tags[Number(btn.dataset.tag)];
+          for (const part of tag.parts || []) {
+            if (!part.wordStart || part.coupletIndex < 0) continue;
+            const v = document.querySelector(`.verse[data-couplet="${part.coupletIndex}"][data-m="${part.misra}"]`);
+            for (let w = part.wordStart; w <= (part.wordEnd || part.wordStart); w++) v?.querySelector(`.word[data-w="${w}"]`)?.classList.add("hl");
+          }
+        };
+      });
+      return;
+    }
+    if (tab === "kin" && metre) {
+      pane.innerHTML = `<p class="muted small">در حال جستجوی هم‌وزن‌ها…</p>`;
+      const qs = `metre=${encodeURIComponent(metre.rhythm)}${rhyme ? `&rhyme=${encodeURIComponent(rhyme)}` : ""}&PageNumber=1&PageSize=7`;
+      const { data: kin } = await api(`/poems/similar?${qs}`).catch(() => ({ data: [] }));
+      const list = (Array.isArray(kin) ? kin : []).filter((i) => i.id !== poem.id).slice(0, 6);
+      pane.innerHTML = list.length ? list.map((i) => `<a class="hit" href="#/poem/${i.id}" style="margin-bottom:6px;"><div class="kicker">${esc(String(i.fullTitle || "").split("»")[0])}</div><strong>${esc(i.title)}</strong></a>`).join("") : `<p class="muted small">هم‌وزنی پیدا نشد.</p>`;
+      return;
+    }
+    pane.innerHTML = `<p class="muted small">در حال دریافت…</p>`;
+    if (tab === "music") {
+      const { data: d } = await api(`/poem/${poem.id}?songs=true&verseDetails=false&recitations=false&comments=false&images=false&navigation=false&catInfo=false`).catch(() => ({ data: {} }));
+      const songs = d.songs || [];
+      pane.innerHTML = songs.length ? songs.slice(0, 6).map((s) => `<p class="small"><a href="${esc(s.trackUrl)}" rel="noreferrer">${esc(s.artistName || "")} — ${esc(s.trackName || s.albumName || "")}</a></p>`).join("") : `<p class="muted small">قطعهٔ موسیقی ثبت نشده.</p>`;
+    } else if (tab === "margin") {
+      const { data: d } = await api(`/poem/${poem.id}?comments=true&verseDetails=false&recitations=false&songs=false&images=false&navigation=false&catInfo=false`).catch(() => ({ data: {} }));
+      const cmts = (d.comments || []).slice(0, 5);
+      pane.innerHTML = cmts.length ? cmts.map((c) => { const div = document.createElement("div"); div.innerHTML = c.htmlComment || ""; return `<article class="card" style="margin-bottom:6px;padding:10px;"><div class="kicker">${esc(c.authorName || "خواننده")}</div><p>${esc(div.textContent || "")}</p></article>`; }).join("") : `<p class="muted small">حاشیه‌ای ثبت نشده.</p>`;
+    }
+  };
+
+  document.querySelector("#tabs").onclick = (e) => { const b = e.target.closest("[data-tab]"); if (b) { tab = b.dataset.tab; renderPane(); } };
+  document.querySelector("#verses").onclick = async (e) => {
+    const word = e.target.closest(".word");
+    const verse = e.target.closest(".verse");
+    if (!verse) return;
+    activeCouplet = Number(verse.dataset.couplet);
+    markCouplet();
+    if (word) {
+      const term = bare(word.textContent || "");
+      pane.innerHTML = `<p class="muted small">جستجوی «${esc(term)}»…</p>`;
+      const { data: hits } = await api(`/poems/search?term=${encodeURIComponent(term)}&pageNumber=1&pageSize=5${poet.id ? `&poetId=${poet.id}` : ""}`).catch(() => ({ data: [] }));
+      pane.innerHTML = `<p class="small">واژهٔ «${esc(term)}» در آثار ${esc(poet.nickname || poet.name || "")}:</p>` + (Array.isArray(hits) && hits.length ? hits.map((h) => `<a class="hit" href="#/poem/${h.id}" style="margin-bottom:6px;"><strong>${esc(h.title)}</strong></a>`).join("") : `<p class="muted small">یافت نشد.</p>`) + `<p style="margin-top:8px;"><a class="chip" href="#/search?q=${encodeURIComponent(term)}">سنجش در کل گنجور ←</a></p>`;
+      return;
+    }
+    renderPane();
+  };
+  markCouplet();
+  renderPane();
+
+  document.querySelector("#mark").onclick = (e) => {
+    store.toggle(poem.id);
+    e.currentTarget.textContent = store.get().marks.includes(poem.id) ? "★ نشان شد" : "☆ نشان";
+  };
+  document.querySelector("#quiet").onclick = () => { location.hash = quiet ? `#/poem/${poem.id}` : `#/poem/${poem.id}?quiet=1`; };
+  document.querySelector("#note").onchange = (e) => store.note(poem.id, e.target.value);
+
+  const player = document.querySelector("#player");
+  const picker = document.querySelector("#reciter");
+  if (player && picker) {
+    audioNode = player;
+    let times = [];
+    const loadSync = async (rec) => {
+      times = [];
+      const note = document.querySelector("#sync-note");
+      if (!rec.inSyncWithText || !rec.xmlText) { if (note) note.textContent = rec.audioArtist ? `خوانش ${rec.audioArtist}` : ""; return; }
+      try {
+        const xml = await fetch(rec.xmlText.startsWith("http") ? rec.xmlText : `https://api.ganjoor.net${rec.xmlText}`).then((r) => r.text());
+        times = [...xml.matchAll(/<VerseOrder>(\d+)<\/VerseOrder>\s*<AudioMiliseconds>(\d+)/g)].map((m) => ({ order: Number(m[1]), at: Number(m[2]) }));
+        if (note) note.textContent = "بیت‌ها هم‌زمان با صدا روشن می‌شوند.";
+      } catch {}
+    };
+    picker.onchange = () => { const rec = recitations[Number(picker.value)]; player.src = rec.mp3Url; loadSync(rec); };
+    player.ontimeupdate = () => {
+      if (!times.length) return;
+      const now = player.currentTime * 1000;
+      let order = times[0].order;
+      for (const m of times) if (m.at <= now) order = m.order;
+      document.querySelectorAll(".verse").forEach((n) => n.classList.toggle("on", Number(n.dataset.order) === order));
+    };
+    const listen = document.querySelector("#listen");
+    if (listen) {
+      listen.onclick = () => (player.paused ? player.play() : player.pause());
+      player.onplay = player.onpause = player.onended = () => { listen.textContent = player.paused ? "▶ گوش بده" : "❚❚ مکث"; };
+    }
+    loadSync(recitations[0]);
+  }
+}
+
+/* ==========================================================================
+   مودال راهنمای کاربری
+   ========================================================================== */
 function openGuideModal() {
   let modal = document.querySelector("#g-guide-modal-container");
   if (!modal) {
@@ -4315,49 +2391,19 @@ function openGuideModal() {
     modal.id = "g-guide-modal-container";
     modal.innerHTML = `
       <div class="g-guide-overlay" id="g-guide-overlay"></div>
-      <div class="g-guide-dialog" role="dialog" aria-labelledby="g-guide-title" aria-modal="true">
+      <div class="g-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="g-guide-title">
         <header class="g-guide-head">
-          <div class="g-guide-title-wrap">
-            <span class="g-guide-icon">💡</span>
-            <h3 class="g-guide-title" id="g-guide-title">راهنمای کاربردی خط زمان هم‌عصران و ابزارهای گنجور نو</h3>
-          </div>
+          <h3 id="g-guide-title">راهنمای کاربری گنجور نو</h3>
           <button type="button" class="g-guide-close" id="g-guide-close" aria-label="بستن">×</button>
         </header>
         <div class="g-guide-body">
-          <div class="g-guide-card">
-            <div class="g-gc-num">۱</div>
-            <div class="g-gc-content">
-              <h4>پیدا کردن سریع شاعر (مانند بیدل دهلوی، صائب یا حافظ)</h4>
-              <p>کافی است دو حرف از نام شاعر را در کادر جستجوی بالای خط زمان بنویسید یا روی دکمه‌های «پرش مستقیم» کلیک کنید. صفحه به‌طور خودکار روی نوار حیات آن شاعر فرود می‌آید، شاعر مشخص می‌شود و کارت هم‌عصرانش باز می‌گردد.</p>
-            </div>
-          </div>
-          <div class="g-guide-card">
-            <div class="g-gc-num">۲</div>
-            <div class="g-gc-content">
-              <h4>مفهوم خط زمان و شناخت هم‌عصران</h4>
-              <p>زمان از راست به چپ حرکت می‌کند (از قرن ۳ هجری تا دوران معاصر). هر نوار نشان‌دهندهٔ سال‌های حیات یک شاعر از تولد تا وفات است. با انتخاب هر شاعر، تمام شاعرانی که در دوره حیات او نفس کشیده‌اند روشن می‌مانند و میزان دقیق هم‌پوشانی زیست محاسبه و نمایش داده می‌شود.</p>
-            </div>
-          </div>
-          <div class="g-guide-card">
-            <div class="g-gc-num">۳</div>
-            <div class="g-gc-content">
-              <h4>رنگ‌ها و اقلیم‌های جغرافیایی</h4>
-              <p>رنگ هر نوار نشان‌دهندهٔ خاستگاه جغرافیایی شاعر است (فیروزه‌ای: خراسان بزرگ، طلایی: فارس و مرکز ایران، لاجوردی: شبه‌قاره هند، زرشکی: آذربایجان و اران، سبز: روم و عثمانی).</p>
-            </div>
-          </div>
-          <div class="g-guide-card">
-            <div class="g-gc-num">۴</div>
-            <div class="g-gc-content">
-              <h4>پل‌های تضمین و استقبال</h4>
-              <p>کمان‌های زرین میان شاعران، پیوندهای تضمین و استقبال شعرهاست؛ یعنی چه کسی مصراع یا بیتی از دیگری را در غزل خویش وام گرفته و بازآفرینی کرده است.</p>
-            </div>
-          </div>
+          <div class="g-guide-step"><span class="g-guide-num">۱</span><div><h4>همهٔ ابزارها در یک صفحه</h4><p>تمام ۷ ابزار پژوهشی (خط زمان هم‌عصران و نقشهٔ زادگاه‌ها، پل‌های تضمین، مردمان شاهنامه، آرایه‌های ادبی، واژه‌سنج، سفر ناصرخسرو و وزن‌ها) یکپارچه روی صفحهٔ اول قرار دارند و بدون پرش به صفحات دیگر درجا کار می‌کنند.</p></div></div>
+          <div class="g-guide-step"><span class="g-guide-num">۲</span><div><h4>پیدا کردن سریع هر شاعر (مثل بیدل یا حافظ)</h4><p>نام شاعر را در کادر جستجوی بالای صفحه یا جستجوی خط زمان بنویسید؛ پیشنهاد آنی ظاهر می‌شود و می‌توانید با یک کلیک روی نوار حیاتش در خط زمان فرود بیایید یا مستقیماً وارد دیوانش شوید.</p></div></div>
+          <div class="g-guide-step"><span class="g-guide-num">۳</span><div><h4>شناخت هم‌عصران و هم‌پوشانی حیات</h4><p>در خط زمان، روی هر نوار بزنید تا شاعران هم‌دورهٔ او روشن شوند و سال‌های دقیق هم‌پوشانی زیست‌شان در کارت مشخصات نمایش داده شود.</p></div></div>
+          <div class="g-guide-step"><span class="g-guide-num">۴</span><div><h4>فقط دو زیرصفحه برای خوانش عمیق</h4><p>با انتخاب هر شاعر وارد صفحهٔ دیوان او، و با انتخاب هر شعر وارد اتاق خوانش (با صوت هم‌زمان، معنی بیت، آرایه‌ها، وزن و یادداشت شخصی) می‌شوید.</p></div></div>
         </div>
-        <footer class="g-guide-foot">
-          <button type="button" class="btn primary g-guide-ok" id="g-guide-ok">متوجه شدم، رفتن به خط زمان ➜</button>
-        </footer>
-      </div>
-    `;
+        <footer class="g-guide-foot"><button type="button" class="btn primary" id="g-guide-ok">متوجه شدم</button></footer>
+      </div>`;
     document.body.appendChild(modal);
     const close = () => (modal.hidden = true);
     modal.querySelector("#g-guide-close").onclick = close;
@@ -4367,88 +2413,99 @@ function openGuideModal() {
   modal.hidden = false;
 }
 
-document.addEventListener("click", (event) => {
-  if (event.target.closest(".g-open-guide-btn, [data-action='guide']")) {
-    event.preventDefault();
-    openGuideModal();
-  }
-});
-
+/* ==========================================================================
+   مسیریاب ساده و هوشمند (۱ لندینگ پیج + فقط ۲ زیرصفحه، با پشتیبانی از لینک‌های قدیم)
+   ========================================================================== */
 async function render() {
-  if (audioNode) {
-    audioNode.pause();
-    audioNode = null;
-  }
+  stopTimers();
+  if (audioNode) { audioNode.pause(); audioNode = null; }
   const mine = ++renderToken;
   const hash = location.hash || "#/";
   const [pathPart, queryPart] = hash.split("?");
   const query = new URLSearchParams(queryPart || "");
   const parts = pathPart.replace(/^#\/?/, "").split("/").filter(Boolean);
-  const path = `#/${parts.join("/")}`;
-  const isHome = !parts.length || path === "#/";
-  document.body.classList.toggle("is-home", isHome);
-  if (!isHome) document.body.classList.remove("scrolled");
+  const first = parts[0] || "";
+
+  const isSubpage = first === "poet" || first === "cat" || first === "poem";
+  document.body.classList.toggle("is-home", !isSubpage);
+  if (isSubpage) document.body.classList.remove("scrolled");
   mobile.hidden = true;
   menuBtn.setAttribute("aria-expanded", "false");
-  if (input && parts[0] !== "search" && document.activeElement !== input) input.value = "";
-  document.querySelectorAll(".desk a, .mobile a, .footlinks a").forEach((link) => {
-    const href = link.getAttribute("href") || "";
-    const on = href === path || (href === "#/poets" && ["poet", "cat", "poem"].includes(parts[0] || "")) || (href === "#/discover" && TOOL_ROUTES.has(parts[0] || ""));
-    if (on) link.setAttribute("aria-current", "page");
-    else link.removeAttribute("aria-current");
-  });
+
   try {
-    if (!parts.length) await home();
-    else if (parts[0] === "poets") await poetsPage(query);
-    else if (parts[0] === "poet" && parts[1]) await poetPage(parts[1]);
-    else if (parts[0] === "bridges" && parts[1]) await bridgesPage(parts[1]);
-    else if (parts[0] === "cat" && parts[1]) await catPage(parts[1], query);
-    else if (parts[0] === "poem" && parts[1]) await poemPage(parts[1], query);
-    else if (parts[0] === "search") await searchPage(query);
-    else if (parts[0] === "map") await mapPage(query);
-    else if (parts[0] === "tree" || parts[0] === "sky") await treePage(query);
-    else if (parts[0] === "vazn") await vaznPage(query);
-    else if (parts[0] === "discover") discoverPage();
-    else if (parts[0] === "data") await dataPage();
-    else if (parts[0] === "faal") location.replace("#/");
-    else if (parts[0] === "words") location.replace(query.get("q") ? `#/search?q=${encodeURIComponent(query.get("q"))}` : "#/search");
-    else if (parts[0] === "people") await peoplePage();
-    else if (parts[0] === "person" && parts[1]) await personPage(parts[1]);
-    else if (parts[0] === "devices") await devicesPage();
-    else if (parts[0] === "device" && parts[1]) await devicePage(parts[1], query);
-    else if (parts[0] === "places") await placesPage(query);
-    else if (parts[0] === "layers") location.replace("#/discover");
-    else if (parts[0] === "library") await libraryPage();
-    else if (parts[0] === "about") await dataPage();
-    else paint("نیست", `<section class="empty-state"><h1>این صفحه نیست</h1><p>شاید نشانی عوض شده باشد.</p><p class="chips"><a class="btn primary" href="#/">خانه</a><a class="chip" href="#/discover">ابزارها</a><a class="chip" href="#/search">جستجو</a></p></section>`);
-  } catch (error) {
-    if (error === STALE || mine !== renderToken) return;
-    failed(error);
+    // زیرصفحه ۱: شاعر و آثار
+    if (first === "poet" && parts[1]) return await poetSubpage(parts[1]);
+    if (first === "cat" && parts[1]) return await catSubpage(parts[1], query);
+    // زیرصفحه ۲: خوانش شعر
+    if (first === "poem" && parts[1]) return await poemSubpage(parts[1], query);
+
+    // هر مسیر دیگر → لندینگ پیج یکپارچه با فعال‌سازی خودکار ابزار/بخش متناظر
+    if (first === "tree" || first === "sky") return await landingPage({ tool: "tree", params: { poet: query.get("poet"), view: "timeline" }, scrollTo: "studio" });
+    if (first === "map") return await landingPage({ tool: "tree", params: { y: query.get("y"), view: "map" }, scrollTo: "studio" });
+    if (first === "bridges") return await landingPage({ tool: "bridges", params: { id: parts[1] || 2 }, scrollTo: "studio" });
+    if (first === "people") return await landingPage({ tool: "people", params: {}, scrollTo: "studio" });
+    if (first === "person" && parts[1]) return await landingPage({ tool: "people", params: { person: parts[1] }, scrollTo: "studio" });
+    if (first === "devices") return await landingPage({ tool: "devices", params: {}, scrollTo: "studio" });
+    if (first === "device" && parts[1]) return await landingPage({ tool: "devices", params: { device: parts[1], c: query.get("c") }, scrollTo: "studio" });
+    if (first === "places") return await landingPage({ tool: "places", params: { all: query.get("all") }, scrollTo: "studio" });
+    if (first === "vazn") return await landingPage({ tool: "vazn", params: { id: query.get("id") }, scrollTo: "studio" });
+    if (first === "search" || first === "words") return await landingPage({ tool: "words", params: { q: query.get("q") || "عشق" }, scrollTo: "studio" });
+    if (first === "poets") return await landingPage({ tool: "tree", scrollTo: "poets-wall" });
+    if (first === "library") return await landingPage({ tool: "tree", scrollTo: "my-shelf" });
+    return await landingPage({ tool: "tree" });
+  } catch (err) {
+    if (err === STALE || mine !== renderToken) return;
+    failed(err);
   }
 }
 
+/* ── رویدادهای سراسری نوار بالا ── */
 menuBtn.addEventListener("click", () => {
   const open = mobile.hidden;
   mobile.hidden = !open;
-  menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  menuBtn.setAttribute("aria-expanded", String(open));
 });
-mobile.addEventListener("click", () => {
-  mobile.hidden = true;
-});
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  mobile.hidden = true;
-  location.hash = `#/search?q=${encodeURIComponent(input.value.trim())}`;
-});
-window.addEventListener("scroll", () => {
-  if (document.body.classList.contains("is-home")) {
-    const heroSearch = document.querySelector("#g-search-form");
-    if (heroSearch) {
-      const rect = heroSearch.getBoundingClientRect();
-      document.body.classList.toggle("scrolled", rect.bottom < 60);
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest("[data-action='guide']")) {
+    e.preventDefault();
+    mobile.hidden = true;
+    openGuideModal();
+    return;
+  }
+  const jump = e.target.closest("[data-jump]");
+  if (jump) {
+    e.preventDefault();
+    mobile.hidden = true;
+    const targetId = jump.dataset.jump;
+    if (document.body.classList.contains("is-home") && document.getElementById(targetId)) {
+      document.getElementById(targetId).scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      document.body.classList.toggle("scrolled", window.scrollY > 180);
+      location.hash = targetId === "poets-wall" ? "#/poets" : targetId === "my-shelf" ? "#/library" : "#/tree";
     }
+  }
+});
+
+barForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const q = barInput.value.trim();
+  if (!q) return;
+  mobile.hidden = true;
+  if (document.body.classList.contains("is-home") && landingState.activateTool) {
+    document.getElementById("studio")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    landingState.activateTool("words", { q });
+  } else {
+    location.hash = `#/search?q=${encodeURIComponent(q)}`;
+  }
+});
+
+window.addEventListener("scroll", () => {
+  if (!document.body.classList.contains("is-home")) return;
+  const heroSearch = document.querySelector("#hero-search-form");
+  if (heroSearch) {
+    document.body.classList.toggle("scrolled", heroSearch.getBoundingClientRect().bottom < 64);
+  } else {
+    document.body.classList.toggle("scrolled", window.scrollY > 180);
   }
 }, { passive: true });
 
