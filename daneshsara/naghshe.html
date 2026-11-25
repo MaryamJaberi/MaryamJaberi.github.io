@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>نقشهٔ مسئله — دانش‌سرا</title>
+<link rel="stylesheet" href="core/design/tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:var(--lh);font-size:var(--body)}
+.wrap{max-width:var(--container);margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{line-height:var(--lh-tight);text-wrap:balance;margin:0 0 var(--s3)}
+h1{font-size:clamp(1.9rem,6vw,var(--h1));font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.3rem,4.5vw,var(--h2));font-weight:700}
+h3{font-size:var(--h3);font-weight:700}
+p{margin:0 0 var(--s4);max-width:var(--measure)}
+a{color:var(--primary)}
+.muted{color:var(--ink-2)}
+.sm{font-size:var(--small)}
+.cap{font-size:var(--caption);color:var(--ink-3)}
+
+/* ---------- داستان ورود ---------- */
+.hero{padding-block:var(--s12) var(--s8);border-bottom:1px solid var(--line)}
+.kicker{font-size:var(--caption);letter-spacing:.14em;color:var(--primary);font-weight:700;margin-bottom:var(--s3)}
+.lede{font-size:clamp(1.05rem,3.6vw,1.3rem);color:var(--ink-2);max-width:60ch}
+.beats{display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-block:var(--s8)}
+.beat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s5)}
+.beat b{display:block;margin-bottom:var(--s2)}
+.beat p{margin:0;font-size:var(--small);color:var(--ink-2)}
+.beat .n{width:26px;height:26px;border-radius:var(--r-full);background:var(--primary-soft);color:var(--primary);
+  display:grid;place-items:center;font-size:var(--caption);font-weight:700;margin-bottom:var(--s3)}
+
+/* ---------- نوار وضعیت ---------- */
+.bar{display:flex;flex-wrap:wrap;gap:var(--s3);margin-block:var(--s6)}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:var(--s3) var(--s4);min-width:96px}
+.stat b{display:block;font-size:1.4rem;font-weight:800;line-height:1.2}
+.stat span{font-size:var(--caption);color:var(--ink-3)}
+
+/* ---------- نقشه ---------- */
+section{padding-block:var(--s10);border-bottom:1px solid var(--line)}
+.tools{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;margin-bottom:var(--s5)}
+input[type=search],input[type=text],textarea,select{font:inherit;color:inherit;background:var(--surface);
+  border:1px solid var(--line-strong);border-radius:var(--r-md);padding:var(--s3) var(--s4);width:100%}
+input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.seg{display:flex;gap:var(--s1);background:var(--surface-subtle);border-radius:var(--r-full);padding:3px}
+.seg button{font:inherit;font-size:var(--small);border:0;background:transparent;color:var(--ink-2);
+  padding:var(--s2) var(--s4);border-radius:var(--r-full);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--surface);color:var(--ink);font-weight:700;box-shadow:var(--shadow-sm)}
+
+.ring{margin-bottom:var(--s8)}
+.ring>header{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s4)}
+.ring h3{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.chip{display:inline-flex;align-items:center;gap:var(--s2);font:inherit;font-size:var(--small);
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r-full);
+  padding:var(--s2) var(--s4);cursor:pointer;color:inherit;text-align:start;position:relative}
+.chip:hover{border-color:var(--primary)}
+.chip[data-root]{font-weight:700;font-size:var(--body)}
+.chip .dot{width:9px;height:9px;border-radius:var(--r-full);flex:none}
+.chip .cnt{font-size:var(--chip);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.s0{background:var(--err)} .s1{background:var(--warn)} .s2{background:var(--grade-b)}
+.s3{background:var(--ok)} .s4{background:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:var(--s3);font-size:var(--caption);color:var(--ink-3);margin-top:var(--s4)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:var(--r-full);margin-inline-end:5px}
+
+/* ---------- پانل ---------- */
+dialog{border:0;padding:0;background:transparent;max-width:none;width:100%;max-height:100%;margin:0 auto auto}
+dialog::backdrop{background:rgba(20,18,16,.5)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);
+  max-width:720px;margin:max(16px,env(safe-area-inset-top,0px)) auto 16px;padding:var(--s6);
+  max-height:88vh;overflow:auto}
+.panel h2{margin-bottom:var(--s2)}
+.panel .x{position:sticky;top:0;float:left;font:inherit;border:0;background:var(--surface-subtle);
+  border-radius:var(--r-full);width:34px;height:34px;cursor:pointer;color:var(--ink-2)}
+.q{background:var(--primary-soft);border-radius:var(--r-lg);padding:var(--s4) var(--s5);margin-block:var(--s4)}
+.q b{display:block;font-size:var(--caption);color:var(--primary);letter-spacing:.08em;margin-bottom:var(--s2)}
+.q p{margin:0;font-weight:600}
+.meter{display:flex;gap:4px;margin-block:var(--s3)}
+.meter i{height:7px;flex:1;border-radius:var(--r-full);background:var(--line-strong)}
+.meter i.on{background:var(--primary)}
+.need{border-inline-start:3px solid var(--warn);background:var(--surface-subtle);
+  border-radius:var(--r-md);padding:var(--s3) var(--s4);margin-block:var(--s4)}
+.need b{font-size:var(--caption);color:var(--warn);letter-spacing:.06em}
+.need ul{margin:var(--s2) 0 0;padding-inline-start:1.1em}
+.need li{font-size:var(--small)}
+.go{display:inline-flex;align-items:center;gap:6px;background:var(--primary);color:#fff;
+  text-decoration:none;border-radius:var(--r-full);padding:var(--s3) var(--s5);font-weight:600;font-size:var(--small)}
+.rel{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3)}
+.rel button{font:inherit;font-size:var(--caption);background:var(--surface-subtle);border:0;
+  border-radius:var(--r-full);padding:5px var(--s3);cursor:pointer;color:var(--ink-2)}
+
+/* ---------- کامنت ---------- */
+.notes{border-top:1px solid var(--line);margin-top:var(--s6);padding-top:var(--s5)}
+.note{background:var(--surface-subtle);border-radius:var(--r-md);padding:var(--s3) var(--s4);margin-bottom:var(--s3)}
+.note .who{font-size:var(--caption);color:var(--ink-3);margin-bottom:4px}
+.note p{margin:0;font-size:var(--small)}
+.note .ans{border-inline-start:3px solid var(--primary);margin-top:var(--s3);padding-inline-start:var(--s3)}
+.note .ans b{font-size:var(--caption);color:var(--primary)}
+.f{display:grid;gap:var(--s3);margin-top:var(--s4)}
+.f .row{display:flex;gap:var(--s2);flex-wrap:wrap}
+.f .row>*{flex:1 1 140px}
+button.send{font:inherit;font-weight:600;background:var(--primary);color:#fff;border:0;
+  border-radius:var(--r-full);padding:var(--s3) var(--s6);cursor:pointer;justify-self:start}
+button.send[disabled]{opacity:.5;cursor:default}
+.said{font-size:var(--small);color:var(--ok)}
+.err{font-size:var(--small);color:var(--err)}
+
+/* ---------- مرز پازل ---------- */
+.gaps{display:grid;gap:var(--s3)}
+.gap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:var(--s4)}
+.gap b{font-size:var(--small)}
+.gap ul{margin:var(--s2) 0 0;padding-inline-start:1.1em;font-size:var(--small);color:var(--ink-2)}
+footer{padding-block:var(--s8);color:var(--ink-3);font-size:var(--small)}
+@media (max-width:480px){section{padding-block:var(--s8)}.panel{padding:var(--s4);border-radius:var(--r-lg)}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">دانش‌سرا</div>
+  <h1>نقشهٔ مسئله</h1>
+  <p class="lede">همهٔ آنچه می‌دانیم، آنچه نمی‌دانیم، و اینکه تا کجای این پازل آمده‌ایم — روی یک صفحه.
+  هیچ‌چیز اینجا نمی‌خواهد تو را قانع کند؛ می‌خواهد به تو نشان بدهد از کجا می‌توانی خودت وارسی کنی.</p>
+
+  <div class="beats">
+    <div class="beat"><div class="n">۱</div><b>اینجا جای امنی است</b>
+      <p>اسم کسی را نمی‌پرسیم، ایمیل نمی‌گیریم، و هیچ چیزی که تو را قابل‌شناسایی کند ذخیره نمی‌شود.
+      می‌توانی بی‌نام بخوانی، بی‌نام بنویسی.</p></div>
+    <div class="beat"><div class="n">۲</div><b>هر حرفی منبع دارد</b>
+      <p>پشت هر مطلب، کتاب یا مقاله‌ای هست که اسمش نوشته شده. جایی که مطمئن نیستیم،
+      نوشته‌ایم مطمئن نیستیم. جایی که داده نداریم، نوشته‌ایم نداریم.</p></div>
+    <div class="beat"><div class="n">۳</div><b>خودت وارسی کن</b>
+      <p>ابزارهایی هست که با آن‌ها می‌توانی حدست را با عدد واقعی بسنجی — نه اینکه حرف ما را باور کنی.
+      اگر جایی اشتباه دیدی، همان‌جا بنویس.</p></div>
+    <div class="beat"><div class="n">۴</div><b>یک نفر هم اثر دارد</b>
+      <p>هر نقطه‌ای از این نقشه یک پرسشِ باز دارد و فهرستی از چیزهایی که کم داریم.
+      بیشترشان کارِ یک آدم است، نه یک سازمان.</p></div>
+  </div>
+
+  <div class="bar" id="bar"></div>
+  <p class="cap">آخرین به‌روزرسانی: <span id="built">—</span> · این نقشه خودکار از خودِ محتوا ساخته می‌شود؛ هر مطلبی که اضافه یا کم شود، همین‌جا پیداست.</p>
+</header>
+
+<section>
+  <h2>نقشه</h2>
+  <p class="muted sm">رنگِ هر نقطه می‌گوید تا کجای پازل رفته‌ایم. روی هر کدام بزن تا مسئلهٔ بازش، آنچه لازم داریم، و جای نوشتن نظرت باز شود.</p>
+  <div class="tools">
+    <input type="search" id="q" placeholder="جست‌وجو در همهٔ موضوع‌ها…" aria-label="جست‌وجو">
+    <div class="seg" id="filt" role="group" aria-label="صافی">
+      <button aria-pressed="true" data-f="all">همه</button>
+      <button aria-pressed="false" data-f="open">مسئله‌های باز</button>
+      <button aria-pressed="false" data-f="need">آنچه کم داریم</button>
+      <button aria-pressed="false" data-f="empty">دست‌نخورده</button>
+    </div>
+  </div>
+  <div id="map"></div>
+  <div class="legend">
+    <span><i class="s0"></i>نرفته‌ایم</span><span><i class="s1"></i>مطلب جمع شده</span>
+    <span><i class="s2"></i>بازبینی‌شده</span><span><i class="s3"></i>به دادهٔ ایران وصل است</span>
+    <span><i class="s4"></i>کار عملی از آن درآمده</span>
+  </div>
+</section>
+
+<section>
+  <h2>مرزِ پازل</h2>
+  <p class="muted sm">تا اینجا آمده‌ایم. برای جلوتر رفتن، این‌ها را لازم داریم و خودمان نمی‌توانیم به‌دستشان بیاوریم.</p>
+  <div class="gaps" id="gaps"></div>
+</section>
+
+<footer>
+  <p>اگر منبعی از این فهرست را داری، یا جایی اشتباه می‌بینی، روی همان نقطه بنویس. جواب را زیر نوشته‌ات می‌گذاریم.</p>
+  <p><a href="index.html">بازگشت به دانش‌سرا</a></p>
+</footer>
+
+</div>
+
+<dialog id="dlg"><div class="panel" id="pan"></div></dialog>
+
+<script>
+const SB='https://wohfdenjiyolfchhnozb.supabase.co';
+const AK='sb_publishable_0Orqe8Fw7SS_VCbAZz54ag_qxUZOZAt';
+const fn=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let G=null, BY={}, F='all';
+
+const RINGN={danesh:'دانش',iran:'ایران امروز',farda:'فردای ایران'};
+
+function stateOf(n){ return typeof n.state==='number' ? n.state : (n.reviewed>0?2:(n.n>0?1:0)); }
+
+function show(){
+  const term=(document.getElementById('q').value||'').trim();
+  const map=document.getElementById('map'); map.innerHTML='';
+  for(const r of G.rings){
+    let ns=G.nodes.filter(n=>n.ring===r.id);
+    if(F==='open') ns=ns.filter(n=>n.q);
+    if(F==='need') ns=ns.filter(n=>(n.need||[]).length);
+    if(F==='empty') ns=ns.filter(n=>stateOf(n)<=1);
+    if(term) ns=ns.filter(n=>((n.label||'')+(n.note||'')+(n.q||'')+n.id).includes(term));
+    if(!ns.length) continue;
+    const roots=ns.filter(n=>n.kind==='root');
+    const rest=ns.filter(n=>n.kind!=='root');
+    const d=document.createElement('div'); d.className='ring';
+    d.innerHTML='<header><h3>'+esc(r.fa)+'</h3><span class="cap">'+esc(r.note)+'</span></header>';
+    const box=document.createElement('div'); box.className='chips';
+    for(const n of roots.concat(rest)) box.appendChild(chip(n));
+    d.appendChild(box); map.appendChild(d);
+  }
+  if(!map.children.length) map.innerHTML='<p class="muted">چیزی با این صافی پیدا نشد.</p>';
+}
+function chip(n){
+  const b=document.createElement('button'); b.className='chip'; b.type='button';
+  if(n.kind==='root') b.setAttribute('data-root','');
+  b.innerHTML='<span class="dot s'+stateOf(n)+'"></span>'+esc(n.label)+
+    (n.n>1?'<span class="cnt">'+fn(n.n)+'</span>':'');
+  b.onclick=()=>open_(n.id);
+  return b;
+}
+
+function open_(id){
+  const n=BY[id]; if(!n) return;
+  const st=stateOf(n);
+  const rel=G.edges.filter(e=>e.a===id||e.b===id)
+    .map(e=>BY[e.a===id?e.b:e.a]).filter(Boolean)
+    .sort((x,y)=>(y.n||0)-(x.n||0)).slice(0,8);
+  const p=document.getElementById('pan');
+  p.innerHTML=
+   '<button class="x" onclick="document.getElementById(\'dlg\').close()" aria-label="بستن">✕</button>'+
+   '<h2>'+esc(n.label)+'</h2>'+
+   '<p class="muted sm">'+esc(n.note||'')+'</p>'+
+   '<div class="meter">'+[0,1,2,3,4].map(i=>'<i class="'+(i<=st?'on':'')+'"></i>').join('')+'</div>'+
+   '<p class="cap">تا کجای پازل: '+['هنوز نرفته‌ایم','مطلب جمع شده، بازبینی نشده','بازبینی‌شده','به دادهٔ ایران وصل است','کار عملی از آن درآمده'][st]+
+     (n.n?' · '+fn(n.n)+' مطلب'+(n.reviewed?'، '+fn(n.reviewed)+' بازبینی‌شده':''):'')+'</p>'+
+   (n.q?'<div class="q"><b>مسئلهٔ باز</b><p>'+esc(n.q)+'</p></div>':'')+
+   (n.use&&n.use!=='—'?'<p class="sm"><b>به چه درد می‌خورد:</b> '+esc(n.use)+'</p>':'')+
+   ((n.need||[]).length?'<div class="need"><b>چیزی که لازم داریم و خودمان نمی‌توانیم به‌دستش بیاوریم</b><ul>'+
+      n.need.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></div>':'')+
+   (n.href?'<p><a class="go" href="'+esc(n.href)+'">رفتن به مطالب ←</a></p>':'')+
+   (rel.length?'<p class="cap" style="margin-bottom:4px">به این‌ها وصل است:</p><div class="rel">'+
+      rel.map(x=>'<button type="button" onclick="open_(\''+x.id+'\')">'+esc(x.label)+'</button>').join('')+'</div>':'')+
+   '<div class="notes" id="notes"><p class="cap">در حال خواندن نظرها…</p></div>';
+  document.getElementById('dlg').showModal();
+  notes(id);
+}
+
+async function notes(id){
+  const box=document.getElementById('notes');
+  let rows=null;
+  try{
+    const r=await fetch(SB+'/rest/v1/notes?node=eq.'+encodeURIComponent(id)+
+      '&select=id,body,nick,kind,reply,created_at&order=created_at.desc&limit=50',
+      {headers:{apikey:AK}});
+    if(r.ok) rows=await r.json();
+  }catch(e){}
+  const KIND={say:'نظر',ask:'پرسش',fix:'اصلاح',source:'منبع دارم'};
+  let h='<h3 style="font-size:var(--h4)">نظرها</h3>';
+  if(rows===null) h+='<p class="cap">نظرها فعلاً در دسترس نیست. کمی بعد دوباره امتحان کن.</p>';
+  else if(!rows.length) h+='<p class="cap">هنوز کسی اینجا چیزی ننوشته. اولین نفر باش.</p>';
+  else h+=rows.map(n=>'<div class="note"><div class="who">'+
+      (n.nick?esc(n.nick):'بی‌نام')+' · '+KIND[n.kind]+' · '+fn(new Date(n.created_at).toLocaleDateString('fa-IR'))+
+      '</div><p>'+esc(n.body)+'</p>'+
+      (n.reply?'<div class="ans"><b>پاسخ</b><p>'+esc(n.reply)+'</p></div>':'')+'</div>').join('');
+  h+='<form class="f" onsubmit="return send(event,\''+id+'\')">'+
+     '<div class="row"><select name="kind" aria-label="نوع">'+
+       Object.entries(KIND).map(([k,v])=>'<option value="'+k+'">'+v+'</option>').join('')+
+     '</select><input type="text" name="nick" maxlength="40" placeholder="اسم دلخواه (اختیاری)" aria-label="اسم دلخواه"></div>'+
+     '<textarea name="body" rows="3" maxlength="1500" required placeholder="اینجا بنویس… اشتباهی دیدی؟ منبعی داری؟ چیزی نفهمیدی؟" aria-label="نوشته"></textarea>'+
+     '<p class="cap" style="margin:0">ایمیل و شمارهٔ تماس ننویس — ذخیره نمی‌شود و فرستادن را رد می‌کند.</p>'+
+     '<button class="send" type="submit">بفرست</button><p class="msg" style="margin:0"></p></form>';
+  box.innerHTML=h;
+}
+
+async function send(ev,id){
+  ev.preventDefault();
+  const f=ev.target, msg=f.querySelector('.msg'), btn=f.querySelector('.send');
+  btn.disabled=true; msg.className='msg cap'; msg.textContent='می‌فرستم…';
+  try{
+    const r=await fetch(SB+'/rest/v1/notes',{method:'POST',
+      headers:{apikey:AK,'Content-Type':'application/json',Prefer:'return=minimal'},
+      body:JSON.stringify({node:id,kind:f.kind.value,nick:f.nick.value||null,body:f.body.value})});
+    if(!r.ok){ const t=await r.text();
+      msg.className='msg err';
+      msg.textContent=/ایمیل|شماره/.test(t)?JSON.parse(t).message:'نرفت. کمی بعد دوباره امتحان کن.';
+      btn.disabled=false; return false; }
+    msg.className='msg said'; msg.textContent='نوشته‌ات ثبت شد. جوابش را همین‌جا می‌گذاریم.';
+    f.body.value='';
+    setTimeout(()=>notes(id),900);
+  }catch(e){ msg.className='msg err'; msg.textContent='نرفت. اینترنت را بررسی کن.'; btn.disabled=false; }
+  return false;
+}
+
+function gaps(){
+  const g=document.getElementById('gaps');
+  const withNeed=G.nodes.filter(n=>(n.need||[]).length);
+  const empty=G.nodes.filter(n=>stateOf(n)<=1&&n.kind!=='tool'&&n.kind!=='page');
+  let h='<div class="gap"><b>منابعی که لازم داریم ('+fn(withNeed.reduce((a,n)=>a+n.need.length,0))+' مورد)</b><ul>'+
+    withNeed.map(n=>n.need.map(x=>'<li>'+esc(x)+' <span class="cap">— برای «'+esc(n.label)+'»</span></li>').join('')).join('')+
+    '</ul></div>';
+  h+='<div class="gap"><b>جاهایی که دست‌نخورده یا بازبینی‌نشده مانده ('+fn(empty.length)+')</b><ul>'+
+    empty.slice(0,40).map(n=>'<li>'+esc(n.label)+'</li>').join('')+'</ul></div>';
+  g.innerHTML=h;
+}
+
+(async function(){
+  G=await (await fetch('data/graph/graph.json')).json();
+  G.nodes.forEach(n=>BY[n.id]=n);
+  document.getElementById('built').textContent=fn(G.built);
+  const s=G.stats;
+  document.getElementById('bar').innerHTML=
+    [[s.concepts,'مطلب'],[s.reviewed,'بازبینی‌شده'],[s.fields,'شاخه'],
+     [s.flows,'حلقهٔ علّی ایران'],[s.links,'پیوند میان‌رشته‌ای'],
+     [G.nodes.filter(n=>(n.need||[]).length).reduce((a,n)=>a+n.need.length,0),'چیزی که کم داریم']]
+    .map(([v,t])=>'<div class="stat"><b>'+fn(v)+'</b><span>'+t+'</span></div>').join('');
+  show(); gaps();
+  document.getElementById('q').addEventListener('input',show);
+  document.getElementById('filt').addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b)return;
+    F=b.dataset.f;
+    [...e.currentTarget.children].forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+    show();
+  });
+  document.getElementById('dlg').addEventListener('click',e=>{
+    if(e.target.id==='dlg') e.target.close();
+  });
+})();
+</script>
+</body>
+</html>
