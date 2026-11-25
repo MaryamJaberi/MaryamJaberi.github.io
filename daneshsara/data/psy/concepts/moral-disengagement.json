@@ -1,0 +1,124 @@
+{
+ "id": "psy:moral-disengagement",
+ "kind": "concept",
+ "title": {
+  "fa": "خاموش‌کردن وجدان: هشت کلید بندورا",
+  "en": "Moral disengagement",
+  "nl": "Moral disengagement"
+ },
+ "aliases": [
+  "خاموشی اخلاقی",
+  "بی‌تعهدی اخلاقی"
+ ],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "آدم‌ها معمولاً برای آسیب‌زدن معیارهای اخلاقی‌شان را عوض نمی‌کنند؛ آن را موقتاً از مدار بیرون می‌آورند. بندورا هشت راه برای این کار برشمرد.",
+  "en": "People rarely change their moral standards to do harm; they disengage them, by eight mechanisms.",
+  "nl": "People rarely change their moral standards to do harm; they disengage them, by eight mechanisms."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "سه کلید روی خودِ کار می‌نشیند: «توجیه اخلاقی» (برای هدفی والا است)، «نام‌گذاری پاکیزه» (پاک‌سازی، تأدیب، برخورد) و «مقایسهٔ سودمند» (دیگران بدترش را می‌کنند).",
+    "en": "On the act: moral justification, euphemistic labelling, advantageous comparison.",
+    "nl": "On the act: moral justification, euphemistic labelling, advantageous comparison."
+   },
+   "sources": [
+    "src:174e5f0759"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دو کلید روی مسئولیت: «جابه‌جاکردن مسئولیت» (دستور بود) و «پخش‌کردن مسئولیت» (همه بودیم، من فقط یک تکه‌اش را انجام دادم).",
+    "en": "On responsibility: displacement and diffusion.",
+    "nl": "On responsibility: displacement and diffusion."
+   },
+   "sources": [
+    "src:174e5f0759"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "یک کلید روی پیامد: «ندیدن یا کوچک‌کردن آسیب» (چیزی‌اش نشد). هرچه فاصلهٔ آدم با نتیجهٔ کارش بیشتر باشد این کلید آسان‌تر زده می‌شود.",
+    "en": "On consequences: disregarding or distorting harm.",
+    "nl": "On consequences: disregarding or distorting harm."
+   },
+   "sources": [
+    "src:174e5f0759"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دو کلید روی قربانی: «انسانیت‌زدایی» (این‌ها آدم نیستند) و «مقصر دانستن قربانی» (خودش باعث شد).",
+    "en": "On the victim: dehumanisation and attribution of blame.",
+    "nl": "On the victim: dehumanisation and attribution of blame."
+   },
+   "sources": [
+    "src:174e5f0759",
+    "src:c0320e0e83"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:dehumanization",
+   "rel": "part-of",
+   "note": {
+    "fa": "یکی از هشت کلید",
+    "en": "یکی از هشت کلید",
+    "nl": "یکی از هشت کلید"
+   }
+  },
+  {
+   "to": "psy:darvo",
+   "rel": "see-also",
+   "note": {
+    "fa": "انکار، حمله، وارونه‌کردن قربانی و آزارگر",
+    "en": "انکار، حمله، وارونه‌کردن قربانی و آزارگر",
+    "nl": "انکار، حمله، وارونه‌کردن قربانی و آزارگر"
+   }
+  },
+  {
+   "to": "psy:violence-roles-switch",
+   "rel": "explains",
+   "note": {
+    "fa": "چطور دو نقش کنار هم می‌مانند",
+    "en": "چطور دو نقش کنار هم می‌مانند",
+    "nl": "چطور دو نقش کنار هم می‌مانند"
+   }
+  },
+  {
+   "to": "psy:violent-apartheid",
+   "rel": "applies-to",
+   "note": {
+    "fa": "همین کلیدها در مقیاس یک کشور",
+    "en": "همین کلیدها در مقیاس یک کشور",
+    "nl": "همین کلیدها در مقیاس یک کشور"
+   }
+  }
+ ],
+ "people": [
+  "core:albert-bandura"
+ ],
+ "sources": [
+  "src:174e5f0759",
+  "src:c0320e0e83"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "confusions": [
+  {
+   "fa": "این کلیدها ویژهٔ «آدم‌های بد» نیست. هر کدام را در حرف‌های روزمرهٔ خودمان می‌شود پیدا کرد: «من که فقط گفتم»، «بقیه بدترند»، «خودش شروع کرد».",
+   "en": "These switches are ordinary, not reserved for villains.",
+   "nl": "These switches are ordinary, not reserved for villains."
+  }
+ ]
+}

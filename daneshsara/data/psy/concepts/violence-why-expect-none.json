@@ -1,0 +1,146 @@
+{
+ "id": "psy:violence-why-expect-none",
+ "kind": "concept",
+ "title": {
+  "fa": "چرا انتظار داریم آدم‌ها به هم خشونت نکنند؟",
+  "en": "Why do we expect non-violence?",
+  "nl": "Why do we expect non-violence?"
+ },
+ "aliases": [],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "این انتظار بدیهی نیست و همیشه هم نبوده است. چند ریشه دارد: قراردادی که در آن همه زور را زمین می‌گذارند تا امن باشند، دولتی که زور را انحصاری می‌کند، عادت‌های درونی‌شده، و این ایده که هر آدمی حقی بر تن و جان خودش دارد.",
+  "en": "The expectation rests on social contract, state monopoly of force, internalised restraint, and rights to bodily integrity.",
+  "nl": "The expectation rests on social contract, state monopoly of force, internalised restraint, and rights to bodily integrity."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "هابز (۱۶۵۱) گفت جایی که قدرت مشترکی نباشد که همه از آن حساب ببرند، هر کس از هر کس می‌ترسد و پیش‌دستی می‌کند. آدم‌ها زور خود را واگذار می‌کنند تا در امان باشند. پس انتظار بی‌خشونتی از یک معامله می‌آید: من نمی‌زنم چون تو هم نمی‌زنی و کسی هست که هر دو را بازخواست کند.",
+    "en": "Hobbes: without a common power, fear drives pre-emption; people trade force for safety.",
+    "nl": "Hobbes: without a common power, fear drives pre-emption; people trade force for safety."
+   },
+   "sources": [
+    "src:eb2bd32021"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "وبر (۱۹۱۹) دولت را جماعتی تعریف کرد که در یک سرزمین، انحصار به‌کاربردن «مشروع» زور بدنی را با موفقیت از آنِ خود کرده است. یعنی خشونت از میان نرفته؛ جمع شده و در یک جا گذاشته شده است.",
+    "en": "Weber: the state claims the monopoly of legitimate physical force.",
+    "nl": "Weber: the state claims the monopoly of legitimate physical force."
+   },
+   "sources": [
+    "src:7260fbba04"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "الیاس نشان داد در اروپا، هم‌زمان با شکل‌گرفتن دولت‌های مرکزی و درازشدن زنجیرهٔ وابستگی آدم‌ها به هم، خویشتن‌داری کم‌کم از یک اجبار بیرونی به یک عادت درونی تبدیل شد؛ تا جایی که دیدن خشونت برای بسیاری ناخوشایند شد.",
+    "en": "Elias: with state formation and interdependence, restraint moved from external constraint to habit.",
+    "nl": "Elias: with state formation and interdependence, restraint moved from external constraint to habit."
+   },
+   "sources": [
+    "src:ab5257ea8e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "میل (۱۸۵۹) معیار را روشن کرد: تنها دلیلی که می‌شود با آن بر آدمی آزاد، برخلاف خواستش، زور به کار برد جلوگیری از آسیب به دیگران است. اعلامیهٔ جهانی حقوق بشر (۱۹۴۸) همین را حق کرد: حق زندگی، آزادی و امنیت، و اینکه هیچ‌کس نباید شکنجه شود.",
+    "en": "Mill's harm principle; UDHR articles 3 and 5.",
+    "nl": "Mill's harm principle; UDHR articles 3 and 5."
+   },
+   "sources": [
+    "src:c5b2dc3723",
+    "src:c908d25591"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "این انتظار در تاریخ بلند آدمی تازه است و هنوز همه‌جا و برای همه یکسان نیست: در بسیاری از جامعه‌ها زدن بچه، زن، برده یا زندانی تا همین اواخر حقِ کسی بود که می‌زد.",
+    "en": "The expectation is historically recent and uneven.",
+    "nl": "The expectation is historically recent and uneven."
+   },
+   "sources": [
+    "src:ab5257ea8e",
+    "src:abd9053607"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:hobbes-three-causes-of-conflict-leviathan",
+   "rel": "bridges",
+   "note": {
+    "fa": "سه علت نزاع نزد هابز",
+    "en": "سه علت نزاع نزد هابز",
+    "nl": "سه علت نزاع نزد هابز"
+   }
+  },
+  {
+   "to": "phil:kant-duty-ethics-universal-law",
+   "rel": "bridges",
+   "note": {
+    "fa": "آدم هدف است نه وسیله",
+    "en": "آدم هدف است نه وسیله",
+    "nl": "آدم هدف است نه وسیله"
+   }
+  },
+  {
+   "to": "soc:consent-theory-of-power",
+   "rel": "bridges",
+   "note": {
+    "fa": "قدرتی که بر رضایت تکیه دارد",
+    "en": "قدرتی که بر رضایت تکیه دارد",
+    "nl": "قدرتی که بر رضایت تکیه دارد"
+   }
+  },
+  {
+   "to": "psy:violence-history-decline",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "آیا این انتظار نتیجه داده است؟",
+    "en": "آیا این انتظار نتیجه داده است؟",
+    "nl": "آیا این انتظار نتیجه داده است؟"
+   }
+  },
+  {
+   "to": "psy:virtuous-violence",
+   "rel": "contrasts",
+   "note": {
+    "fa": "جاهایی که اخلاق خودش خشونت می‌خواهد",
+    "en": "جاهایی که اخلاق خودش خشونت می‌خواهد",
+    "nl": "جاهایی که اخلاق خودش خشونت می‌خواهد"
+   }
+  }
+ ],
+ "people": [
+  "core:norbert-elias"
+ ],
+ "sources": [
+  "src:7260fbba04",
+  "src:ab5257ea8e",
+  "src:abd9053607",
+  "src:c5b2dc3723",
+  "src:c908d25591",
+  "src:eb2bd32021"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "پرسش را می‌شود برعکس کرد: چرا آدم‌ها بیشتر وقت‌ها به هم خشونت نمی‌کنند؟ در یک قطار شلوغ صدها غریبه، خسته و فشرده، ساعت‌ها کنار هم می‌ایستند و هیچ اتفاقی نمی‌افتد. این آرامش طبیعی نیست؛ ساخته شده است، با قانون، با عادت، با اینکه به هم نیاز داریم. هر جا یکی از این پایه‌ها بشکند (دولت فروبپاشد، گروهی از دایرهٔ «آدم‌هایی که حق دارند» بیرون گذاشته شوند) انتظار هم می‌شکند.",
+  "en": "Reverse the question: why are people mostly non-violent? The calm of a crowded train is built, not natural.",
+  "nl": "Reverse the question: why are people mostly non-violent? The calm of a crowded train is built, not natural."
+ }
+}

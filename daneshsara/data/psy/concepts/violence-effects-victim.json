@@ -1,0 +1,115 @@
+{
+ "id": "psy:violence-effects-victim",
+ "kind": "concept",
+ "title": {
+  "fa": "اثر خشونت بر کسی که می‌بیند و اطرافیانش",
+  "en": "Effects on the person harmed and those nearby",
+  "nl": "Effects on the person harmed and those nearby"
+ },
+ "aliases": [],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "خشونت فقط همان لحظه و همان آدم را نمی‌زند. بر تن، بر روان، بر رابطه‌ها و بر نسل بعد می‌نشیند؛ و کسی که فقط تماشا کرده هم سهم می‌برد.",
+  "en": "Violence reaches body, mind, relationships and the next generation, including those who only witness it.",
+  "nl": "Violence reaches body, mind, relationships and the next generation, including those who only witness it."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "پژوهش «تجربه‌های ناگوار کودکی» روی بیش از نُه هزار بزرگسال نشان داد هرچه شمار انواع آزار و آشفتگی خانه در کودکی بیشتر باشد، خطر بیماری قلبی، افسردگی، اعتیاد و مرگ زودرس در بزرگسالی پله‌پله بالاتر می‌رود.",
+    "en": "ACE study: graded relationship between childhood adversity categories and adult disease.",
+    "nl": "ACE study: graded relationship between childhood adversity categories and adult disease."
+   },
+   "sources": [
+    "src:6a9dda8619"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فراتحلیل ۱۱۸ پژوهش نشان داد کودکانی که فقط شاهد خشونت میان پدر و مادر بوده‌اند، به‌طور میانگین پیامدهای روانی و رفتاری بدتری دارند، تقریباً در همان اندازه که کودکانِ خودْ کتک‌خورده.",
+    "en": "Kitzmann et al. (2003): child witnesses fare worse, comparably to physically abused children.",
+    "nl": "Kitzmann et al. (2003): child witnesses fare worse, comparably to physically abused children."
+   },
+   "sources": [
+    "src:fa75deda49"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "سازمان جهانی بهداشت پیامدهای خشونت علیه زنان را فراتر از جراحت می‌داند: افسردگی، اضطراب، بارداری ناخواسته، بیماری‌های آمیزشی و مشکلات مزمن.",
+    "en": "WHO lists depression, anxiety, unintended pregnancy and chronic conditions among consequences.",
+    "nl": "WHO lists depression, anxiety, unintended pregnancy and chronic conditions among consequences."
+   },
+   "sources": [
+    "src:f5c5c95b1b"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اثر در هر نقش فرق می‌کند: در خانه اعتماد پایه را می‌شکند، در مدرسه یادگیری و حضور را، در کار جرئت حرف‌زدن را، و در سطح جامعه اعتماد میان گروه‌ها را برای نسل‌ها.",
+    "en": "Effects differ by role: basic trust at home, learning at school, voice at work, intergroup trust in society.",
+    "nl": "Effects differ by role: basic trust at home, learning at school, voice at work, intergroup trust in society."
+   },
+   "sources": [
+    "src:9f48e3f882"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:victim-toll",
+   "rel": "see-also",
+   "note": {
+    "fa": "آنچه بر تن و روان می‌گذرد",
+    "en": "آنچه بر تن و روان می‌گذرد",
+    "nl": "آنچه بر تن و روان می‌گذرد"
+   }
+  },
+  {
+   "to": "psy:cptsd",
+   "rel": "see-also",
+   "note": {
+    "fa": "آسیب پیچیدهٔ پس از سانحه",
+    "en": "آسیب پیچیدهٔ پس از سانحه",
+    "nl": "آسیب پیچیدهٔ پس از سانحه"
+   }
+  },
+  {
+   "to": "soc:collective-trauma-justice-revenge",
+   "rel": "bridges",
+   "note": {
+    "fa": "زخم جمعی، عدالت و انتقام",
+    "en": "زخم جمعی، عدالت و انتقام",
+    "nl": "زخم جمعی، عدالت و انتقام"
+   }
+  },
+  {
+   "to": "psy:violence-cycle",
+   "rel": "explains",
+   "note": {
+    "fa": "آیا آسیب‌دیده آسیب‌زن می‌شود؟",
+    "en": "آیا آسیب‌دیده آسیب‌زن می‌شود؟",
+    "nl": "آیا آسیب‌دیده آسیب‌زن می‌شود؟"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:6a9dda8619",
+  "src:9f48e3f882",
+  "src:f5c5c95b1b",
+  "src:fa75deda49"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

@@ -1,0 +1,122 @@
+{
+ "id": "psy:violence-unseen-by-doer",
+ "kind": "concept",
+ "title": {
+  "fa": "آیا آدم‌هایی هستند که نفهمند دارند خشونت می‌کنند؟",
+  "en": "Violence unseen by the one who does it",
+  "nl": "Violence unseen by the one who does it"
+ },
+ "aliases": [],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "بله، و این حالتِ رایج است نه استثنا. آزارگر و آزاردیده یک رویداد را با دو اندازهٔ بسیار متفاوت به یاد می‌آورند، و هنجار می‌تواند یک کار را از دستهٔ «خشونت» به‌کل بیرون ببرد.",
+  "en": "Common, not exceptional: perpetrators and victims remember the same event at very different sizes, and norms can take an act out of the category altogether.",
+  "nl": "Common, not exceptional: perpetrators and victims remember the same event at very different sizes, and norms can take an act out of the category altogether."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بامایستر و همکاران از آدم‌ها خواستند یک بار ماجرایی را بنویسند که در آن کسی را عصبانی کرده‌اند و یک بار ماجرایی که خودشان عصبانی شده‌اند. در نقش آزارگر، ماجرا یک رویداد تمام‌شده، قابل‌فهم و کم‌اثر بود؛ در نقش آزاردیده، بی‌دلیل، ادامه‌دار و پراثر. همان آدم‌ها، دو روایت.",
+    "en": "Baumeister, Stillwell & Wotman (1990): perpetrator accounts minimise and close the incident; victim accounts extend it.",
+    "nl": "Baumeister, Stillwell & Wotman (1990): perpetrator accounts minimise and close the incident; victim accounts extend it."
+   },
+   "sources": [
+    "src:504b7e431d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فراتحلیلی از ده‌ها پژوهش نشان داد کودکان پرخاشگر بیشتر از دیگران رفتار مبهم دیگران را عمدی و دشمنانه می‌خوانند. از دید خودشان آن‌ها «جواب می‌دهند»، شروع نمی‌کنند.",
+    "en": "Orobio de Castro et al. (2002): aggressive children show a robust hostile attribution bias.",
+    "nl": "Orobio de Castro et al. (2002): aggressive children show a robust hostile attribution bias."
+   },
+   "sources": [
+    "src:2c3fdbbce0"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "به گزارش برنامهٔ توسعهٔ ملل متحد، از هر چهار نفر در جهان یک نفر باور دارد کتک‌زدن زن به دست شوهر موجه است. کسی که چنین باوری دارد کار خود را «خشونت» نمی‌نامد.",
+    "en": "UNDP GSNI 2023: 25% of people believe it is justified for a man to beat his wife.",
+    "nl": "UNDP GSNI 2023: 25% of people believe it is justified for a man to beat his wife."
+   },
+   "sources": [
+    "src:64064e6441"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دربارهٔ «خرده‌پرخاش» (حرف‌ها و رفتارهای کوچک و اغلب ناخواسته که به گروهی کم‌قدرت نیش می‌زند) بحث علمی باز است: منتقدان می‌گویند تعریف و سنجش آن هنوز سست است.",
+    "en": "Microaggressions: concept and measurement remain contested (Lilienfeld, 2017).",
+    "nl": "Microaggressions: concept and measurement remain contested (Lilienfeld, 2017)."
+   },
+   "sources": [
+    "src:eaab4a6929"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:moral-disengagement",
+   "rel": "explains",
+   "note": {
+    "fa": "ندیدن، با کلیدهای وجدان",
+    "en": "ندیدن، با کلیدهای وجدان",
+    "nl": "ندیدن، با کلیدهای وجدان"
+   }
+  },
+  {
+   "to": "psy:defensive-reactions",
+   "rel": "see-also",
+   "note": {
+    "fa": "واکنش دفاعی وقتی کسی می‌گوید آزارم دادی",
+    "en": "واکنش دفاعی وقتی کسی می‌گوید آزارم دادی",
+    "nl": "واکنش دفاعی وقتی کسی می‌گوید آزارم دادی"
+   }
+  },
+  {
+   "to": "psy:violence-unseen-by-victim",
+   "rel": "contrasts",
+   "note": {
+    "fa": "روی دیگر: قربانی‌ای که نمی‌داند",
+    "en": "روی دیگر: قربانی‌ای که نمی‌داند",
+    "nl": "روی دیگر: قربانی‌ای که نمی‌داند"
+   }
+  },
+  {
+   "to": "psy:virtuous-violence",
+   "rel": "see-also",
+   "note": {
+    "fa": "وقتی خشونت وظیفه دیده می‌شود",
+    "en": "وقتی خشونت وظیفه دیده می‌شود",
+    "nl": "وقتی خشونت وظیفه دیده می‌شود"
+   }
+  }
+ ],
+ "people": [
+  "core:roy-baumeister"
+ ],
+ "sources": [
+  "src:2c3fdbbce0",
+  "src:504b7e431d",
+  "src:64064e6441",
+  "src:eaab4a6929"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "سه راهِ ندیدن هست. اول اندازه: کاری که برای من «یک حرف بود» برای تو ده سال مانده. دوم نیت: من «جواب دادم»، تو «حمله کردی». سوم نام: در خانه و محلهٔ من به این کار می‌گویند تربیت، غیرت، شوخی، نظم. هر سه با صداقت کامل همراه‌اند؛ آدم دروغ نمی‌گوید، واقعاً نمی‌بیند.\n\nبرای همین پرسش «قصد داشتی آزار بدهی؟» کمتر به جایی می‌رسد. پرسش‌های بهتر: «او بعدش چه کرد؟ از تو فاصله گرفت؟ ساکت شد؟ چیزی را دیگر نگفت یا نپوشید یا نخواست؟»",
+  "en": "Three ways of not seeing: size, intent, name.",
+  "nl": "Three ways of not seeing: size, intent, name."
+ }
+}

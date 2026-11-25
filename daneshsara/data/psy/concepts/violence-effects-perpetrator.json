@@ -1,0 +1,97 @@
+{
+ "id": "psy:violence-effects-perpetrator",
+ "kind": "concept",
+ "title": {
+  "fa": "اثر خشونت بر کسی که می‌کند",
+  "en": "Effects on the person who does it",
+  "nl": "Effects on the person who does it"
+ },
+ "aliases": [
+  "آسیب اخلاقی",
+  "moral injury"
+ ],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "خشونت‌کردن برای بیشتر آدم‌ها بی‌هزینه نیست. بخشی از آسیب روانی جنگ از چیزی می‌آید که آدم کرده یا جلویش را نگرفته، نه از چیزی که بر سرش آمده.",
+  "en": "Perpetrating violence is costly for most people; part of war trauma comes from what one did.",
+  "nl": "Perpetrating violence is costly for most people; part of war trauma comes from what one did."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "لیتز و همکاران «آسیب اخلاقی» را پیامد ماندگار انجام‌دادن، جلوگیری‌نکردن یا دیدنِ کاری می‌دانند که باورهای اخلاقی ریشه‌دار آدم را زیر پا می‌گذارد؛ با شرم، گناه و کناره‌گیری، که با ترسِ معمول در آسیب پس از سانحه فرق دارد.",
+    "en": "Litz et al. (2009): moral injury follows perpetrating, failing to prevent or witnessing acts that transgress deep moral beliefs.",
+    "nl": "Litz et al. (2009): moral injury follows perpetrating, failing to prevent or witnessing acts that transgress deep moral beliefs."
+   },
+   "sources": [
+    "src:057c779a94"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "مک‌نیر شواهدی گرد آورد که کشتن، حتی وقتی قانونی و دستوری است (سرباز، مأمور اعدام، پلیس)، خودش می‌تواند آسیب پس از سانحه بسازد.",
+    "en": "MacNair: killing, even when sanctioned, can itself induce traumatic stress.",
+    "nl": "MacNair: killing, even when sanctioned, can itself induce traumatic stress."
+   },
+   "sources": [
+    "src:61e3b13c86"
+   ],
+   "flags": [
+    "unreplicated"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در گردان ۱۰۱ پلیس ذخیره، مردانی که در نخستین کشتار تیراندازی کردند شبِ همان روز به گفتهٔ خودشان مست، ساکت و بیمار بودند؛ با تکرار، بیشترشان خو گرفتند.",
+    "en": "Browning: after the first massacre the shooters were shaken; with repetition most habituated.",
+    "nl": "Browning: after the first massacre the shooters were shaken; with repetition most habituated."
+   },
+   "sources": [
+    "src:d482549900"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:moral-disengagement",
+   "rel": "explains",
+   "note": {
+    "fa": "کلیدهایی که این هزینه را خاموش می‌کنند",
+    "en": "کلیدهایی که این هزینه را خاموش می‌کنند",
+    "nl": "کلیدهایی که این هزینه را خاموش می‌کنند"
+   }
+  },
+  {
+   "to": "psy:violence-roles-switch",
+   "rel": "see-also",
+   "note": {
+    "fa": "چطور یک آدم دو جور زندگی می‌کند",
+    "en": "چطور یک آدم دو جور زندگی می‌کند",
+    "nl": "چطور یک آدم دو جور زندگی می‌کند"
+   }
+  },
+  {
+   "to": "psy:moral-hypocrisy",
+   "rel": "see-also",
+   "note": {
+    "fa": "فاصلهٔ باور و عمل",
+    "en": "فاصلهٔ باور و عمل",
+    "nl": "فاصلهٔ باور و عمل"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:057c779a94",
+  "src:61e3b13c86",
+  "src:d482549900"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

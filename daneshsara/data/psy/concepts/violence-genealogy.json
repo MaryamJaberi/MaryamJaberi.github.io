@@ -1,0 +1,140 @@
+{
+ "id": "psy:violence-genealogy",
+ "kind": "concept",
+ "title": {
+  "fa": "تبارشناسی خشونت: کلمه و مرزهایش چطور عوض شد",
+  "en": "A genealogy of violence",
+  "nl": "A genealogy of violence"
+ },
+ "aliases": [
+  "تبارشناسی",
+  "نیچه",
+  "فوکو"
+ ],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "تبارشناسی، به معنای نیچه و فوکو، نمی‌پرسد خشونت «چیست»؛ می‌پرسد چه کسی، کی و برای چه کاری مرز خشونتِ روا و ناروا را کشید. جواب کوتاه: مرز بارها جابه‌جا شده، و هر بار کسانی که تا دیروز «حق» داشتند بزنند، از امروز «خشن» نامیده شدند.",
+  "en": "Genealogy asks who drew the line between legitimate and illegitimate violence, when, and for what.",
+  "nl": "Genealogy asks who drew the line between legitimate and illegitimate violence, when, and for what."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "نیچه در جستار دوم «تبارشناسی اخلاق» می‌گوید خاستگاه یک چیز را نباید با کاری که امروز می‌کند یکی گرفت: کیفر در طول تاریخ بارها معنا عوض کرده است (تلافی، جشن، ترساندن، بازپرداخت بدهی، اصلاح) و معنای امروزش فقط آخرین لایه است.",
+    "en": "Nietzsche: the origin of punishment and its present purpose are different things; meanings are layered.",
+    "nl": "Nietzsche: the origin of punishment and its present purpose are different things; meanings are layered."
+   },
+   "sources": [
+    "src:13147e0956"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "فوکو نشان می‌دهد در اروپا از نیمهٔ سدهٔ هجدهم، شکنجه و اعدام در میدان شهر جای خود را به زندان، برنامهٔ روزانه و نظارت داد. به خوانش او قدرت مهربان‌تر نشد؛ دقیق‌تر شد و از تن به رفتار و روان رسید.",
+    "en": "Foucault: public torture gave way to prison, timetable and surveillance; power became more precise, not kinder.",
+    "nl": "Foucault: public torture gave way to prison, timetable and surveillance; power became more precise, not kinder."
+   },
+   "sources": [
+    "src:b26b4d588c"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بنیامین (۱۹۲۱) دو خشونت را در خودِ قانون می‌بیند: خشونتی که قانون را بنیاد می‌گذارد و خشونتی که آن را نگه می‌دارد. به گفتهٔ او هر نظم حقوقی هر دو را دارد و معمولاً اولی را فراموش می‌کند.",
+    "en": "Benjamin: law-making and law-preserving violence.",
+    "nl": "Benjamin: law-making and law-preserving violence."
+   },
+   "sources": [
+    "src:0bf0a7c7ce"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تیلی دولت‌سازی اروپا را به «باج‌گیری حفاظتی» تشبیه کرد: کسانی که بیشترین زور را داشتند رقیبان را از میان برداشتند و در برابر مالیات، امنیت فروختند؛ مشروعیت بعداً آمد.",
+    "en": "Tilly: state making resembled a protection racket; legitimacy came later.",
+    "nl": "Tilly: state making resembled a protection racket; legitimacy came later."
+   },
+   "sources": [
+    "src:d6fb5440ec"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "جابه‌جایی مرز را می‌شود در قانون دید: تنبیه بدنی کودک، کتک‌زدن همسر، تجاوز در ازدواج و «کنترل اجباری» هرکدام زمانی حق یا امر خصوصی بودند و در دهه‌های اخیر در کشورهایی یکی‌یکی جرم شدند.",
+    "en": "The moving line is visible in law: corporal punishment, wife-beating, marital rape and coercive control were each once permitted.",
+    "nl": "The moving line is visible in law: corporal punishment, wife-beating, marital rape and coercive control were each once permitted."
+   },
+   "sources": [
+    "src:ab5257ea8e",
+    "src:9f48e3f882"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:foucault-subjectivation-governmentality-self-ethics",
+   "rel": "bridges",
+   "note": {
+    "fa": "فوکو و حکومت بر خود",
+    "en": "فوکو و حکومت بر خود",
+    "nl": "فوکو و حکومت بر خود"
+   }
+  },
+  {
+   "to": "psy:coercive-control",
+   "rel": "evidence-for",
+   "note": {
+    "fa": "تازه‌ترین جابه‌جایی مرز: جرم‌شدن کنترل اجباری",
+    "en": "تازه‌ترین جابه‌جایی مرز: جرم‌شدن کنترل اجباری",
+    "nl": "تازه‌ترین جابه‌جایی مرز: جرم‌شدن کنترل اجباری"
+   }
+  },
+  {
+   "to": "psy:violence-what-counts",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا تعریف‌ها این‌قدر با هم فرق دارند",
+    "en": "چرا تعریف‌ها این‌قدر با هم فرق دارند",
+    "nl": "چرا تعریف‌ها این‌قدر با هم فرق دارند"
+   }
+  },
+  {
+   "to": "psy:violence-origins",
+   "rel": "contrasts",
+   "note": {
+    "fa": "تبار به معنای دیگر: ریشهٔ تکاملی",
+    "en": "تبار به معنای دیگر: ریشهٔ تکاملی",
+    "nl": "تبار به معنای دیگر: ریشهٔ تکاملی"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:0bf0a7c7ce",
+  "src:13147e0956",
+  "src:9f48e3f882",
+  "src:ab5257ea8e",
+  "src:b26b4d588c",
+  "src:d6fb5440ec"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "«تبار» این‌جا دو معنا دارد و هر دو در این پرونده هست. یکی تبار زیستی است: خشونت در درخت خویشاوندی جانداران از کجا آمده (مدخل «خشونت میان موجودات از کجا شروع شد؟»). دیگری تبارشناسی به معنای فلسفی است: خودِ مفهوم خشونت و مرز روا و ناروایش چه تاریخی دارد.\n\nدومی یک درس عملی دارد. وقتی کسی می‌گوید «این‌که خشونت نیست، همیشه همین‌طور بوده»، تبارشناسی می‌پرسد: برای چه کسی نبوده؟ بیشتر چیزهایی که امروز بی‌تردید خشونت می‌دانیم، روزی همین جمله درباره‌شان گفته می‌شد.",
+  "en": "Two senses of lineage: biological descent and conceptual genealogy.",
+  "nl": "Two senses of lineage: biological descent and conceptual genealogy."
+ }
+}

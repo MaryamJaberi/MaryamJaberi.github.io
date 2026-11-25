@@ -1,0 +1,150 @@
+{
+ "id": "psy:violence-unseen-by-victim",
+ "kind": "concept",
+ "title": {
+  "fa": "آیا آدم‌هایی هستند که ندانند مورد خشونت‌اند؟",
+  "en": "Violence unseen by the one it is done to",
+  "nl": "Violence unseen by the one it is done to"
+ },
+ "aliases": [
+  "تجاوز نام‌گذاری‌نشده",
+  "ترجیح سازگارشده"
+ ],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "بله. آدم می‌تواند دقیقاً آنچه را که تعریف قانونی یا پزشکی خشونت است تجربه کرده باشد و نام دیگری رویش بگذارد. دلیلش نادانی نیست؛ نام‌ها را فرهنگ می‌دهد، و نام‌گذاشتن هزینه دارد.",
+  "en": "Yes: people can experience what meets the definition and call it something else, because names are supplied by culture and naming is costly.",
+  "nl": "Yes: people can experience what meets the definition and call it something else, because names are supplied by culture and naming is costly."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فراتحلیل ۲۸ پژوهش با ۵٬۹۱۷ زن که تجربه‌شان با تعریف تجاوز می‌خواند نشان داد ۶۰٫۴ درصد آن را تجاوز نمی‌نامیدند و نام‌هایی مثل «رابطهٔ بد» یا «سوءتفاهم» به کار می‌بردند. ناهمگونی میان پژوهش‌ها زیاد بود و بیشترشان روی دانشجویان آمریکایی.",
+    "en": "Wilson & Miller (2016): 60.4% (95% CI 55.0–65.6) of 5,917 female rape survivors did not label the experience rape; high heterogeneity.",
+    "nl": "Wilson & Miller (2016): 60.4% (95% CI 55.0–65.6) of 5,917 female rape survivors did not label the experience rape; high heterogeneity."
+   },
+   "sources": [
+    "src:1943aa9d21"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نتیجهٔ روش‌شناختی همان پژوهش: پرسش‌نامه باید رفتار را توصیف کند («آیا کسی بدون رضایت شما…») نه اینکه برچسب بپرسد («آیا به شما تجاوز شده؟»). عددِ خشونت به شکل پرسش بسته است.",
+    "en": "Screening should use behaviourally descriptive items, not labels.",
+    "nl": "Screening should use behaviourally descriptive items, not labels."
+   },
+   "sources": [
+    "src:1943aa9d21"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بوردیو توضیح می‌دهد چرا: زیردست جهان را با همان دسته‌بندی‌هایی می‌فهمد که سلطه ساخته، پس آنچه بر او می‌رود «طبیعی» به نظرش می‌رسد.",
+    "en": "Bourdieu: the dominated perceive through categories produced by domination.",
+    "nl": "Bourdieu: the dominated perceive through categories produced by domination."
+   },
+   "sources": [
+    "src:dc79aea5b8"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در کنترل اجباری، بسیاری از قربانیان از «در قفس بودن» حرف می‌زنند ولی چون کتکی در کار نیست یا کم است، خود را «خشونت‌دیده» نمی‌دانند.",
+    "en": "In coercive control victims describe entrapment yet do not identify as victims of violence.",
+    "nl": "In coercive control victims describe entrapment yet do not identify as victims of violence."
+   },
+   "sources": [
+    "src:9f48e3f882"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "سازمان جهانی بهداشت می‌گوید شیوع واقعی خشونت علیه زنان به احتمال زیاد از عددهای گزارش‌شده بالاتر است، چون ننگ و ترس جلوی گفتن را می‌گیرد.",
+    "en": "WHO: true prevalence is likely higher than reported because of stigma.",
+    "nl": "WHO: true prevalence is likely higher than reported because of stigma."
+   },
+   "sources": [
+    "src:f5c5c95b1b"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:coercive-control",
+   "rel": "see-also",
+   "note": {
+    "fa": "قفسی که میله‌هایش دیده نمی‌شود",
+    "en": "قفسی که میله‌هایش دیده نمی‌شود",
+    "nl": "قفسی که میله‌هایش دیده نمی‌شود"
+   }
+  },
+  {
+   "to": "psy:gaslighting",
+   "rel": "explains",
+   "note": {
+    "fa": "وقتی به حافظهٔ خودت شک می‌کنی",
+    "en": "وقتی به حافظهٔ خودت شک می‌کنی",
+    "nl": "وقتی به حافظهٔ خودت شک می‌کنی"
+   }
+  },
+  {
+   "to": "soc:preference-falsification",
+   "rel": "bridges",
+   "note": {
+    "fa": "آنچه می‌گوییم با آنچه می‌خواهیم فرق دارد",
+    "en": "آنچه می‌گوییم با آنچه می‌خواهیم فرق دارد",
+    "nl": "آنچه می‌گوییم با آنچه می‌خواهیم فرق دارد"
+   }
+  },
+  {
+   "to": "phil:epistemic-injustice",
+   "rel": "bridges",
+   "note": {
+    "fa": "وقتی کلمه‌ای برای تجربه‌ات نداری",
+    "en": "وقتی کلمه‌ای برای تجربه‌ات نداری",
+    "nl": "وقتی کلمه‌ای برای تجربه‌ات نداری"
+   }
+  },
+  {
+   "to": "psy:violence-what-counts",
+   "rel": "explains",
+   "note": {
+    "fa": "تعریف تعیین می‌کند چه کسی خودش را بشمارد",
+    "en": "تعریف تعیین می‌کند چه کسی خودش را بشمارد",
+    "nl": "تعریف تعیین می‌کند چه کسی خودش را بشمارد"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:1943aa9d21",
+  "src:9f48e3f882",
+  "src:dc79aea5b8",
+  "src:f5c5c95b1b"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "confusions": [
+  {
+   "fa": "نام‌نگذاشتن به معنای آسیب‌ندیدن نیست. پژوهش‌ها پیامدهای روانی را در هر دو گروه می‌بینند.",
+   "en": "Not labelling does not mean not harmed.",
+   "nl": "Not labelling does not mean not harmed."
+  },
+  {
+   "fa": "این یافته اجازه نمی‌دهد به کسی بگوییم «تو قربانی‌ای و خودت نمی‌دانی». نام‌گذاشتن حق خود آدم است؛ کار دیگران این است که کلمه‌ها و امکان را در دسترس بگذارند.",
+   "en": "It does not license telling someone they are a victim.",
+   "nl": "It does not license telling someone they are a victim."
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "id": "psy:violence-origins",
+ "kind": "concept",
+ "title": {
+  "fa": "خشونت میان موجودات از کجا شروع شد؟",
+  "en": "Where did violence among living beings begin?",
+  "nl": "Where did violence among living beings begin?"
+ },
+ "aliases": [
+  "ریشهٔ تکاملی خشونت",
+  "پرخاشگری واکنشی و حساب‌شده"
+ ],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "کشتن هم‌گونه در پستانداران کم ولی پراکنده است و در شاخهٔ نخستی‌ها بیشتر. آدم دو چیز را با هم دارد که کمتر گونه‌ای دارد: پرخاشگری لحظه‌ایِ بسیار کم، و توان بالای خشونتِ برنامه‌ریزی‌شده و گروهی.",
+  "en": "Conspecific killing is rare in mammals, higher in primates; humans combine low reactive with high proactive aggression.",
+  "nl": "Conspecific killing is rare in mammals, higher in primates; humans combine low reactive with high proactive aggression."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "گومز و همکاران (۲۰۱۶) بیش از چهار میلیون مرگ را در ۱٬۰۲۴ گونهٔ پستاندار بررسی کردند: به‌طور میانگین حدود ۰٫۳ درصد مرگ‌ها به دست هم‌گونه است، ولی برای نیای مشترک نخستی‌ها و برای آدم در آغاز، از روی جایش در درخت تبار، حدود ۲ درصد پیش‌بینی می‌شود. این عدد با یافته‌های باستان‌شناسی از گروه‌های پیش از تاریخ هم می‌خواند.",
+    "en": "Gómez et al. (2016): ~0.3% of mammal deaths from conspecifics; ~2% phylogenetically predicted for humans.",
+    "nl": "Gómez et al. (2016): ~0.3% of mammal deaths from conspecifics; ~2% phylogenetically predicted for humans."
+   },
+   "sources": [
+    "src:f789de5bc6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همان پژوهش نشان می‌دهد این سهم در تاریخ آدمی ثابت نمانده و با شکل سازمان سیاسی جامعه بالا و پایین رفته است. یعنی تبار یک نقطهٔ شروع می‌دهد، نه یک سرنوشت.",
+    "en": "The level has varied with socio-political organisation; phylogeny is a baseline, not a fate.",
+    "nl": "The level has varied with socio-political organisation; phylogeny is a baseline, not a fate."
+   },
+   "sources": [
+    "src:f789de5bc6"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در پنج دهه مشاهدهٔ ۱۸ گروه شامپانزه و ۴ گروه بونوبو، ۱۵۲ کشتن در شامپانزه‌ها ثبت شد (۵۸ دیده‌شده، بقیه استنباط یا گمان) و یک مورد مشکوک در بونوبوها. ۹۲ درصد حمله‌کنندگان نر بودند. این الگو با دخالت آدم توضیح داده نمی‌شد.",
+    "en": "Wilson et al. (2014): 152 chimpanzee killings vs one suspected bonobo killing; 92% of attackers male.",
+    "nl": "Wilson et al. (2014): 152 chimpanzee killings vs one suspected bonobo killing; 92% of attackers male."
+   },
+   "sources": [
+    "src:e5519161ba"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "رنگام دو گونه پرخاشگری را جدا می‌کند که مدارهای عصبی جدا دارند: «واکنشی» (داغ، در جواب تهدید یا ناکامی) و «حساب‌شده» (سرد، برنامه‌ریزی‌شده، برای رسیدن به هدف). به گفتهٔ او آدم در اولی از شامپانزه بسیار آرام‌تر است و در دومی بسیار تواناتر.",
+    "en": "Wrangham: reactive vs proactive aggression; humans are low on the first and high on the second.",
+    "nl": "Wrangham: reactive vs proactive aggression; humans are low on the first and high on the second."
+   },
+   "sources": [
+    "src:024415920e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "گروهی از انسان‌شناسان این تصویر را زیادی جنگ‌محور می‌دانند: شواهد باستان‌شناختی جنگ سازمان‌یافته بیشتر پس از یکجانشینی دیده می‌شود، و همکاری و آشتی هم همان‌قدر در تبار ما ریشه دارد.",
+    "en": "Critics hold that organised war is archaeologically recent and that cooperation is equally ancestral.",
+    "nl": "Critics hold that organised war is archaeologically recent and that cooperation is equally ancestral."
+   },
+   "sources": [
+    "src:a96b10b4e5"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:self-domestication",
+   "rel": "explains",
+   "note": {
+    "fa": "چرا پرخاشگری لحظه‌ای در آدم کم شد",
+    "en": "چرا پرخاشگری لحظه‌ای در آدم کم شد",
+    "nl": "چرا پرخاشگری لحظه‌ای در آدم کم شد"
+   }
+  },
+  {
+   "to": "tabar:origins-of-war-chagha-sofla",
+   "rel": "bridges",
+   "note": {
+    "fa": "نخستین نشانه‌های جنگ در باستان‌شناسی",
+    "en": "نخستین نشانه‌های جنگ در باستان‌شناسی",
+    "nl": "نخستین نشانه‌های جنگ در باستان‌شناسی"
+   }
+  },
+  {
+   "to": "phil:war-not-human-nature-russell",
+   "rel": "bridges",
+   "note": {
+    "fa": "جنگ طبیعت آدمی نیست",
+    "en": "جنگ طبیعت آدمی نیست",
+    "nl": "جنگ طبیعت آدمی نیست"
+   }
+  },
+  {
+   "to": "psy:violence-history-decline",
+   "rel": "see-also",
+   "note": {
+    "fa": "پس از تبار، تاریخ",
+    "en": "پس از تبار، تاریخ",
+    "nl": "پس از تبار، تاریخ"
+   }
+  }
+ ],
+ "people": [
+  "core:richard-wrangham"
+ ],
+ "sources": [
+  "src:024415920e",
+  "src:a96b10b4e5",
+  "src:e5519161ba",
+  "src:f789de5bc6"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "خشونت پیش از آدم بود. جانوران برای خوراک، قلمرو، جفت و جایگاه می‌جنگند، ولی بیشتر این جنگ‌ها نمایش و تهدید است و کمتر به کشتن می‌رسد، چون جنگیدن برای برنده هم خطر دارد. کشتن هم‌گونه جایی بیشتر دیده می‌شود که گونه هم گروهی زندگی کند و هم قلمرو داشته باشد.\n\nچیزی که آدم را جدا می‌کند «بیشتر بودن» خشونت نیست، «شکل» آن است. دو آدم غریبه خیلی راحت‌تر از دو شامپانزهٔ غریبه کنار هم می‌نشینند. ولی آدم می‌تواند با زبان، نقشه و ائتلاف، خشونتی سازمان بدهد که هیچ جانوری نمی‌تواند.",
+  "en": "Violence predates humans; what is distinctive in humans is its planned, coalitional form.",
+  "nl": "Violence predates humans; what is distinctive in humans is its planned, coalitional form."
+ },
+ "confusions": [
+  {
+   "fa": "«در ژن ماست» با «ناگزیر است» یکی نیست. همان پژوهشی که ریشهٔ تباری را نشان می‌دهد، تغییر چندبرابری آن با شکل جامعه را هم نشان می‌دهد.",
+   "en": "Inherited is not inevitable.",
+   "nl": "Inherited is not inevitable."
+  }
+ ]
+}

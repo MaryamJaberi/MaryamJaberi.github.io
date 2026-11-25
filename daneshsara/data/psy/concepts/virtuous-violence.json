@@ -1,0 +1,149 @@
+{
+ "id": "psy:virtuous-violence",
+ "kind": "concept",
+ "title": {
+  "fa": "اخلاق و خشونت: دشمن هم یا خویشاوند؟",
+  "en": "Morality and violence",
+  "nl": "Morality and violence"
+ },
+ "aliases": [
+  "خشونت فضیلت‌مندانه",
+  "افسانهٔ شر ناب"
+ ],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "دوست داریم فکر کنیم خشونت یعنی شکست اخلاق. بخش بزرگی از پژوهش می‌گوید برعکس: بیشتر کسانی که خشونت می‌کنند، در همان لحظه باور دارند کار درست را می‌کنند. اخلاق هم ترمز خشونت است و هم سوختش.",
+  "en": "Much violence is morally motivated in the eyes of those who commit it; morality is both brake and fuel.",
+  "nl": "Much violence is morally motivated in the eyes of those who commit it; morality is both brake and fuel."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "فیسک و رای با مرور مردم‌نگاری‌ها و تاریخ استدلال می‌کنند بیشتر خشونت‌ها برای «درست‌کردن یک رابطه» انجام می‌شود: تنبیه برای ادب‌کردن، انتقام برای برابرکردن حساب، قتل ناموسی برای بازگرداندن آبرو، جنگ برای وفاداری به گروه. فاعل آن را وظیفه می‌بیند، نه لغزش.",
+    "en": "Fiske & Rai: most violence is intended to regulate relationships and feels obligatory to the perpetrator.",
+    "nl": "Fiske & Rai: most violence is intended to regulate relationships and feels obligatory to the perpetrator."
+   },
+   "sources": [
+    "src:f80e7e856e"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "بامایستر «افسانهٔ شرّ ناب» را توصیف می‌کند: تصویری که در آن آزارگر بی‌دلیل و از سر لذت آسیب می‌زند و قربانی کاملاً بی‌گناه است. به گفتهٔ او این تصویر بیشتر از دید قربانی و قصه‌ها می‌آید و جلوی فهم خشونت واقعی را می‌گیرد.",
+    "en": "Baumeister: the 'myth of pure evil' obscures how perpetrators actually understand their acts.",
+    "nl": "Baumeister: the 'myth of pure evil' obscures how perpetrators actually understand their acts."
+   },
+   "sources": [
+    "src:36c85d5a17"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در برابر، سنت‌های اخلاقی بزرگ ترمز می‌سازند: اصل آسیب (میل)، اینکه آدم هیچ‌گاه فقط وسیله نیست (کانت)، و حق هر کس بر تن خودش. بحث «جنگ عادلانه» و «دفاع مشروع» همین‌جاست: کجا خشونت روا می‌شود و چه کسی داور است.",
+    "en": "Moral traditions also restrain violence: harm principle, persons as ends, bodily rights.",
+    "nl": "Moral traditions also restrain violence: harm principle, persons as ends, bodily rights."
+   },
+   "sources": [
+    "src:c5b2dc3723",
+    "src:c908d25591"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "دربارهٔ کارایی هم داده هست: از ۱۹۰۰ تا ۲۰۰۶ کارزارهای بی‌خشونت در ۵۳ درصد موارد به هدف رسیدند و کارزارهای مسلحانه در ۲۶ درصد.",
+    "en": "Stephan & Chenoweth: 53% success for nonviolent campaigns vs 26% for violent ones, 1900–2006.",
+    "nl": "Stephan & Chenoweth: 53% success for nonviolent campaigns vs 26% for violent ones, 1900–2006."
+   },
+   "sources": [
+    "src:a3ff4a075c"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "خود چنووث بعدتر نشان داد کامیابی کارزارهای بی‌خشونت از دههٔ ۲۰۱۰ پایین آمده است؛ یکی از دلیل‌های پیشنهادی تکیهٔ زیاد بر تظاهرات بزرگ و کم‌شدن سهم مشارکت مردم است.",
+    "en": "Chenoweth (2020): success of nonviolent campaigns has fallen since 2010.",
+    "nl": "Chenoweth (2020): success of nonviolent campaigns has fallen since 2010."
+   },
+   "sources": [
+    "src:ee02fb5328"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "phil:explaining-versus-justifying-suspended-judgment",
+   "rel": "bridges",
+   "note": {
+    "fa": "توضیح‌دادن توجیه‌کردن نیست",
+    "en": "توضیح‌دادن توجیه‌کردن نیست",
+    "nl": "توضیح‌دادن توجیه‌کردن نیست"
+   }
+  },
+  {
+   "to": "soc:honor-control-women-reproduction-function",
+   "rel": "bridges",
+   "note": {
+    "fa": "ناموس و کنترل",
+    "en": "ناموس و کنترل",
+    "nl": "ناموس و کنترل"
+   }
+  },
+  {
+   "to": "psy:moral-disengagement",
+   "rel": "contrasts",
+   "note": {
+    "fa": "دو روایت: اخلاق خاموش می‌شود یا خودش فرمان می‌دهد؟",
+    "en": "دو روایت: اخلاق خاموش می‌شود یا خودش فرمان می‌دهد؟",
+    "nl": "دو روایت: اخلاق خاموش می‌شود یا خودش فرمان می‌دهد؟"
+   }
+  },
+  {
+   "to": "psy:violence-why-expect-none",
+   "rel": "contrasts",
+   "note": {
+    "fa": "ترمزهای اخلاقی",
+    "en": "ترمزهای اخلاقی",
+    "nl": "ترمزهای اخلاقی"
+   }
+  }
+ ],
+ "people": [
+  "core:alan-fiske",
+  "core:roy-baumeister"
+ ],
+ "sources": [
+  "src:36c85d5a17",
+  "src:a3ff4a075c",
+  "src:c5b2dc3723",
+  "src:c908d25591",
+  "src:ee02fb5328",
+  "src:f80e7e856e"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "دو روایت رقیب هست و هر دو شواهد دارند. روایت بندورا: آدم می‌داند کارش بد است و وجدانش را خاموش می‌کند. روایت فیسک و رای: آدم باور دارد کارش خوب است و وجدانش او را هل می‌دهد. پدری که بچه را می‌زند «تا آدم شود» در کدام است؟ احتمالاً در هر دو، در لحظه‌های مختلف.\n\nنتیجهٔ عملی این است که «آگاه‌کردن از بدیِ خشونت» همیشه کافی نیست. اگر کسی خشونتش را وظیفه می‌داند، باید خودِ آن وظیفه و آن تصویر از رابطهٔ درست را عوض کرد؛ کاری که هنجارهای یک گروه می‌کنند، نه نصیحت.",
+  "en": "Two rival accounts — disengaged conscience vs. conscience as driver — both have evidence.",
+  "nl": "Two rival accounts — disengaged conscience vs. conscience as driver — both have evidence."
+ },
+ "confusions": [
+  {
+   "fa": "فهمیدنِ اینکه فاعل خودش را برحق می‌داند، به معنای برحق دانستن او نیست.",
+   "en": "Understanding a perpetrator's moral view is not endorsing it.",
+   "nl": "Understanding a perpetrator's moral view is not endorsing it."
+  }
+ ]
+}

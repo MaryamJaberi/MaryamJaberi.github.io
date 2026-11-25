@@ -1,0 +1,115 @@
+{
+ "id": "psy:violence-cannot",
+ "kind": "concept",
+ "title": {
+  "fa": "آیا آدم‌هایی هستند که نتوانند خشونت کنند؟",
+  "en": "Are there people who cannot be violent?",
+  "nl": "Are there people who cannot be violent?"
+ },
+ "aliases": [],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "شواهدی از «ناتوانی» به معنای دقیق نیست. آنچه هست یک بازدارندهٔ قوی در بیشتر آدم‌هاست که شدتش فرق می‌کند، و آدم‌هایی که حتی زیر فشار گروه و دستور، نمی‌کنند.",
+  "en": "There is no evidence of strict inability; there is a strong inhibition of varying strength, and people who refuse even under pressure.",
+  "nl": "There is no evidence of strict inability; there is a strong inhibition of varying strength, and people who refuse even under pressure."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "بلر سازوکاری پیشنهاد کرد که با دیدن نشانه‌های درماندگی (چهرهٔ ترسیده، گریه) حمله را متوقف می‌کند، و گفت در روان‌آزاری همین سازوکار ضعیف است. این یک مدل است و بحث دربارهٔ آن ادامه دارد.",
+    "en": "Blair's violence inhibition mechanism: distress cues stop aggression; proposed to be weak in psychopathy.",
+    "nl": "Blair's violence inhibition mechanism: distress cues stop aggression; proposed to be weak in psychopathy."
+   },
+   "sources": [
+    "src:0ab7dcea6d"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "به گفتهٔ کالینز بیشتر آدم‌ها در خشونتِ رودررو ناتوان‌اند، نه از سر فضیلت بلکه از تنش: دست می‌لرزد، ضربه خطا می‌رود، و بیشتر درگیری‌ها به داد و هل‌دادن ختم می‌شود. خشونتِ کارآمد کار اقلیتی کوچک است که یاد گرفته‌اند این تنش را مهار کنند.",
+    "en": "Collins: most people are incompetent at face-to-face violence because of confrontational tension.",
+    "nl": "Collins: most people are incompetent at face-to-face violence because of confrontational tension."
+   },
+   "sources": [
+    "src:133e2322ee"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در یوزفوف (۱۹۴۲) فرمانده به حدود ۵۰۰ مرد گردان ۱۰۱ گفت هر کس نمی‌تواند کنار برود. حدود دوازده نفر همان اول کنار رفتند و به برآورد براونینگ ۱۰ تا ۲۰ درصد در طول روز از تیراندازی کنار کشیدند. کسی برای این کار مجازات نشد.",
+    "en": "Józefów 1942: about a dozen of ~500 stepped out; 10–20% evaded shooting; none was punished.",
+    "nl": "Józefów 1942: about a dozen of ~500 stepped out; 10–20% evaded shooting; none was punished."
+   },
+   "sources": [
+    "src:d482549900"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ادعای مشهور مارشال که در جنگ جهانی دوم فقط ۱۵ تا ۲۵ درصد سربازان پیاده شلیک می‌کردند، پشتوانهٔ مستند ندارد: بررسی یادداشت‌های او نشان داد مصاحبه‌هایی که چنین عددی از آن‌ها دربیاید انجام نشده بود.",
+    "en": "Marshall's 15–25% 'ratio of fire' lacks documentary support (Spiller, 1988).",
+    "nl": "Marshall's 15–25% 'ratio of fire' lacks documentary support (Spiller, 1988)."
+   },
+   "sources": [
+    "src:2cb559fedf",
+    "src:7630f6535c"
+   ],
+   "flags": [
+    "contested"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:violence-roles-switch",
+   "rel": "contrasts",
+   "note": {
+    "fa": "آن‌ها که در همان موقعیت کردند",
+    "en": "آن‌ها که در همان موقعیت کردند",
+    "nl": "آن‌ها که در همان موقعیت کردند"
+   }
+  },
+  {
+   "to": "phil:arendt-conscience-thinking-nonparticipants",
+   "rel": "bridges",
+   "note": {
+    "fa": "آرنت دربارهٔ کسانی که شرکت نکردند",
+    "en": "آرنت دربارهٔ کسانی که شرکت نکردند",
+    "nl": "آرنت دربارهٔ کسانی که شرکت نکردند"
+   }
+  },
+  {
+   "to": "psy:violence-origins",
+   "rel": "see-also",
+   "note": {
+    "fa": "کم‌بودن پرخاشگری لحظه‌ای در آدم",
+    "en": "کم‌بودن پرخاشگری لحظه‌ای در آدم",
+    "nl": "کم‌بودن پرخاشگری لحظه‌ای در آدم"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:0ab7dcea6d",
+  "src:133e2322ee",
+  "src:2cb559fedf",
+  "src:7630f6535c",
+  "src:d482549900"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "پرسش را می‌شود دو جور خواند. اگر یعنی «آدمی هست که در هیچ شرایطی، حتی برای دفاع از بچه‌اش، دست بلند نکند؟»، پژوهشی نیست که چنین گروهی را نشان بدهد. اگر یعنی «آدم‌هایی هستند که وقتی همه می‌کنند و دستور هم هست، نکنند؟»، بله، و در هر نمونهٔ تاریخی که خوب مستند شده دیده می‌شوند. آن‌ها معمولاً قهرمان‌نمایی نمی‌کنند؛ خیلی‌هایشان فقط می‌گویند «نتوانستم».",
+  "en": "Two readings of the question: absolute inability (no evidence) vs refusing when everyone else complies (well documented).",
+  "nl": "Two readings of the question: absolute inability (no evidence) vs refusing when everyone else complies (well documented)."
+ }
+}

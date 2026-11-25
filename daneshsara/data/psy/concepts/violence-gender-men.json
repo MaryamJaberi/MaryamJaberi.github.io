@@ -1,0 +1,136 @@
+{
+ "id": "psy:violence-gender-men",
+ "kind": "concept",
+ "title": {
+  "fa": "خشونت علیه مردان: پیدا و پنهان",
+  "en": "Violence against men",
+  "nl": "Violence against men"
+ },
+ "aliases": [],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "مردان هم بیشترِ کشندگان‌اند و هم بیشترِ کشته‌شدگان. خشونتی که می‌بینند بیشتر بیرون خانه و به دست مردان دیگر است، و بخشی از آن چنان عادی شده که نامش خشونت نیست: سربازی اجباری، کار مرگبار، و انتظار اینکه دم نزنند.",
+  "en": "Men are most of the killers and most of the killed; some of the violence they face is so normalised it is not called violence.",
+  "nl": "Men are most of the killers and most of the killed; some of the violence they face is so normalised it is not called violence."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در سال ۲۰۲۱ مردان ۸۱ درصد قربانیان قتل عمد و حدود ۹۰ درصد مظنونان بودند. نرخ قتل برای مردان ۹٫۳ و برای زنان ۲٫۲ در هر صد هزار نفر بود.",
+    "en": "UNODC: men were 81% of homicide victims and ~90% of suspects in 2021.",
+    "nl": "UNODC: men were 81% of homicide victims and ~90% of suspects in 2021."
+   },
+   "sources": [
+    "src:99d97ccf95"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "همین الگو در خویشاوندان ما هم هست: در شامپانزه‌ها ۹۲ درصد حمله‌کنندگان و ۷۳ درصد قربانیانِ کشتن نر بودند.",
+    "en": "In chimpanzees 92% of attackers and 73% of victims were male.",
+    "nl": "In chimpanzees 92% of attackers and 73% of victims were male."
+   },
+   "sources": [
+    "src:e5519161ba"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "آیزنر نشان می‌دهد کاهش بلندمدت قتل در اروپا بیش از همه کاهش دعوای مرد با مرد در فضای عمومی بود: خشونتی که روزگاری برای دفاع از آبرو لازم شمرده می‌شد.",
+    "en": "The long European decline was mostly a decline in male-on-male public fights.",
+    "nl": "The long European decline was mostly a decline in male-on-male public fights."
+   },
+   "sources": [
+    "src:110529559d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نیسبت و کوهن «فرهنگ آبرو» را توصیف کردند: جایی که دولت دور است و دارایی دزدیدنی، مردی که به توهین جواب ندهد همه‌چیزش در خطر است. پس هنجار از مردان خشونت می‌خواهد و مردِ بی‌خشونت را تنبیه می‌کند.",
+    "en": "Nisbett & Cohen: cultures of honor require violent responses from men.",
+    "nl": "Nisbett & Cohen: cultures of honor require violent responses from men."
+   },
+   "sources": [
+    "src:671eaf4b2c"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "خشونت جنسی و خانگی علیه مردان کمتر سنجیده شده است؛ پیمایش‌های بزرگ جهانی مثل برآوردهای سازمان جهانی بهداشت فقط زنان را می‌شمارند. این یک جای خالی در داده است، نه نشانهٔ نبودن.",
+    "en": "Major global surveys measure only women; violence against men is a data gap.",
+    "nl": "Major global surveys measure only women; violence against men is a data gap."
+   },
+   "sources": [
+    "src:0e0a4d7888"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:violence-gender-women",
+   "rel": "contrasts",
+   "note": {
+    "fa": "تصویر زنان",
+    "en": "تصویر زنان",
+    "nl": "تصویر زنان"
+   }
+  },
+  {
+   "to": "psy:violence-gender-history",
+   "rel": "part-of",
+   "note": {
+    "fa": "در طول تاریخ",
+    "en": "در طول تاریخ",
+    "nl": "در طول تاریخ"
+   }
+  },
+  {
+   "to": "psy:evo-sex",
+   "rel": "see-also",
+   "note": {
+    "fa": "تفاوت‌های دو جنس از نگاه تکاملی",
+    "en": "تفاوت‌های دو جنس از نگاه تکاملی",
+    "nl": "تفاوت‌های دو جنس از نگاه تکاملی"
+   }
+  },
+  {
+   "to": "soc:gender-coalition-not-enmity",
+   "rel": "bridges",
+   "note": {
+    "fa": "ائتلاف، نه دشمنی",
+    "en": "ائتلاف، نه دشمنی",
+    "nl": "ائتلاف، نه دشمنی"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:0e0a4d7888",
+  "src:110529559d",
+  "src:671eaf4b2c",
+  "src:99d97ccf95",
+  "src:e5519161ba"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "confusions": [
+  {
+   "fa": "این دو تصویر رقیب هم نیستند. یک نظام هنجاری، مردان را به خشونت در بیرون وامی‌دارد و زنان را در خانه بی‌دفاع می‌گذارد؛ هر دو از یک‌جا آب می‌خورند.",
+   "en": "The two pictures are not rivals; one norm system produces both.",
+   "nl": "The two pictures are not rivals; one norm system produces both."
+  }
+ ]
+}

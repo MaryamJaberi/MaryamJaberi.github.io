@@ -1,0 +1,124 @@
+{
+ "id": "psy:violence-prevention",
+ "kind": "concept",
+ "title": {
+  "fa": "چه چیزی خشونت را کم می‌کند؟",
+  "en": "What reduces violence",
+  "nl": "What reduces violence"
+ },
+ "aliases": [],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "خشونت پیش‌گیری‌پذیر است؛ این جمله شعار نیست، نتیجهٔ ارزیابی‌هاست. آنچه کار کرده معمولاً مجازات سخت‌تر نبوده، بلکه دیدن الگو، بریدن زنجیره و عوض‌کردن هنجار بوده است.",
+  "en": "Violence is preventable; what has worked is seeing patterns, interrupting chains and shifting norms.",
+  "nl": "Violence is preventable; what has worked is seeing patterns, interrupting chains and shifting norms."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "دادهٔ بی‌نام بیمارستان (کجا، کی، با چه) وقتی به دست شهر برسد، بستری به علت خشونت را کم می‌کند: ۴۲ درصد در کاردیف نسبت به شهرهای مشابه.",
+    "en": "Cardiff Model: anonymised emergency-department data shared with police and city reduced admissions by 42%.",
+    "nl": "Cardiff Model: anonymised emergency-department data shared with police and city reduced admissions by 42%."
+   },
+   "sources": [
+    "src:3a6aff4b08"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پرسیدنِ رفتار به‌جای برچسب، خشونتی را که دیده نمی‌شد دیدنی می‌کند؛ بدون آن، برنامه‌ها برای مشکلی طراحی می‌شوند که کوچک‌تر از واقعیت شمرده شده است.",
+    "en": "Behavioural questions reveal otherwise hidden violence.",
+    "nl": "Behavioural questions reveal otherwise hidden violence."
+   },
+   "sources": [
+    "src:1943aa9d21"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "بیشتر کودکان آزاردیده چرخه را ادامه نمی‌دهند؛ پس پرسش درست این است که چه چیزی به آن اکثریت کمک کرده است.",
+    "en": "Most abused children do not continue the cycle.",
+    "nl": "Most abused children do not continue the cycle."
+   },
+   "sources": [
+    "src:3429a6c88e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "در سطح سیاسی، کارزارهای بی‌خشونت در سدهٔ بیستم دو برابر کارزارهای مسلحانه به نتیجه رسیدند، هرچند این برتری در سال‌های اخیر کم شده است.",
+    "en": "Nonviolent campaigns succeeded about twice as often, with a recent decline.",
+    "nl": "Nonviolent campaigns succeeded about twice as often, with a recent decline."
+   },
+   "sources": [
+    "src:a3ff4a075c",
+    "src:ee02fb5328"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:violence-epidemic",
+   "rel": "applies-to",
+   "note": {
+    "fa": "بریدن زنجیرهٔ سرایت",
+    "en": "بریدن زنجیرهٔ سرایت",
+    "nl": "بریدن زنجیرهٔ سرایت"
+   }
+  },
+  {
+   "to": "psy:breaking-cycle",
+   "rel": "see-also",
+   "note": {
+    "fa": "شکستن چرخه در خانواده",
+    "en": "شکستن چرخه در خانواده",
+    "nl": "شکستن چرخه در خانواده"
+   }
+  },
+  {
+   "to": "psy:intergroup-contact",
+   "rel": "see-also",
+   "note": {
+    "fa": "تماس میان گروه‌ها",
+    "en": "تماس میان گروه‌ها",
+    "nl": "تماس میان گروه‌ها"
+   }
+  },
+  {
+   "to": "psy:boundaries",
+   "rel": "see-also",
+   "note": {
+    "fa": "مرز گذاشتن",
+    "en": "مرز گذاشتن",
+    "nl": "مرز گذاشتن"
+   }
+  },
+  {
+   "to": "psy:recovery",
+   "rel": "see-also",
+   "note": {
+    "fa": "بیرون آمدن",
+    "en": "بیرون آمدن",
+    "nl": "بیرون آمدن"
+   }
+  }
+ ],
+ "people": [],
+ "sources": [
+  "src:1943aa9d21",
+  "src:3429a6c88e",
+  "src:3a6aff4b08",
+  "src:a3ff4a075c",
+  "src:ee02fb5328"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

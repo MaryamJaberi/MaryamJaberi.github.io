@@ -1,0 +1,100 @@
+{
+ "id": "psy:violence-history-decline",
+ "kind": "concept",
+ "title": {
+  "fa": "آیا خشونت در تاریخ کم شده است؟",
+  "en": "Has violence declined through history?",
+  "nl": "Has violence declined through history?"
+ },
+ "aliases": [],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "قتل در اروپای غربی از سده‌های میانه تا سدهٔ بیستم بسیار کم شده است؛ این را بیشتر تاریخ‌نگاران جرم می‌پذیرند. اینکه این یعنی «خشونت» به‌طور کلی کم شده، و چرا، محل بحث است.",
+  "en": "Homicide in Western Europe fell greatly from the Middle Ages to the twentieth century; the wider claim is debated.",
+  "nl": "Homicide in Western Europe fell greatly from the Middle Ages to the twentieth century; the wider claim is debated."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "آیزنر با کنار هم گذاشتن برآوردهای تاریخی نشان داد نرخ قتل در اروپا از حدود ۲۰ در هر صد هزار نفر در سده‌های میانه به حدود ۱۰ در حوالی ۱۶۰۰ و به حدود ۱ در سدهٔ بیستم رسید. بیشترین کاهش در دعواهای مرد با مرد در فضای عمومی و در میان نخبگان بود.",
+    "en": "Eisner (2003): roughly 20 → 10 (c.1600) → 1 per 100,000; steepest for male-on-male public fights and elites.",
+    "nl": "Eisner (2003): roughly 20 → 10 (c.1600) → 1 per 100,000; steepest for male-on-male public fights and elites."
+   },
+   "sources": [
+    "src:110529559d"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "پینکر این روند را به جنگ، شکنجه، برده‌داری و خشونت خانگی هم گسترش داد و آن را به دولت، تجارت، سواد و گسترش دایرهٔ همدلی نسبت داد.",
+    "en": "Pinker extended the decline thesis and attributed it to states, commerce, literacy and expanding empathy.",
+    "nl": "Pinker extended the decline thesis and attributed it to states, commerce, literacy and expanding empathy."
+   },
+   "sources": [
+    "src:abd9053607"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "تاریخ‌نگاران منتقد می‌گویند داده‌های پیش از دوران آمار پراکنده و ناهمگون‌اند، برآورد جمعیت آن دوره‌ها بسیار نامطمئن است، و نرخ قتل نمی‌تواند نمایندهٔ همهٔ خشونت باشد.",
+    "en": "Historians object that pre-statistical data are patchy, population estimates unreliable, and homicide a poor proxy.",
+    "nl": "Historians object that pre-statistical data are patchy, population estimates unreliable, and homicide a poor proxy."
+   },
+   "sources": [
+    "src:2c1056d3c5"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در سال ۲۰۲۱ در جهان حدود ۴۵۸ هزار نفر عمداً کشته شدند، یعنی حدود ۵٫۸ در هر صد هزار؛ بیشتر از مجموع کشته‌های جنگ و تروریسم در همان سال.",
+    "en": "UNODC: about 458,000 intentional homicides in 2021 (5.8 per 100,000).",
+    "nl": "UNODC: about 458,000 intentional homicides in 2021 (5.8 per 100,000)."
+   },
+   "sources": [
+    "src:99d97ccf95"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:violence-why-expect-none",
+   "rel": "explains",
+   "note": {
+    "fa": "سازوکارهایی که الیاس و هابز پیشنهاد کردند",
+    "en": "سازوکارهایی که الیاس و هابز پیشنهاد کردند",
+    "nl": "سازوکارهایی که الیاس و هابز پیشنهاد کردند"
+   }
+  },
+  {
+   "to": "psy:violence-genealogy",
+   "rel": "contrasts",
+   "note": {
+    "fa": "خوانش دیگر: خشونت کم نشد، جایش عوض شد",
+    "en": "خوانش دیگر: خشونت کم نشد، جایش عوض شد",
+    "nl": "خوانش دیگر: خشونت کم نشد، جایش عوض شد"
+   }
+  }
+ ],
+ "people": [
+  "core:manuel-eisner",
+  "core:norbert-elias"
+ ],
+ "sources": [
+  "src:110529559d",
+  "src:2c1056d3c5",
+  "src:99d97ccf95",
+  "src:abd9053607"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed"
+}

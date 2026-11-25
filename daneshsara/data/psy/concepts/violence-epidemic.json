@@ -1,0 +1,141 @@
+{
+ "id": "psy:violence-epidemic",
+ "kind": "concept",
+ "title": {
+  "fa": "چرا خشونت مثل همه‌گیری پخش می‌شود؟",
+  "en": "Why violence spreads like an epidemic",
+  "nl": "Why violence spreads like an epidemic"
+ },
+ "aliases": [
+  "سرایت خشونت",
+  "واگیر خشونت"
+ ],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "خشونت خوشه‌ای است: در زمان، در مکان و در شبکهٔ آدم‌ها جمع می‌شود و از یکی به دیگری می‌رسد. سه راه سرایت دارد: تلافی، یادگیری، و هنجار.",
+  "en": "Violence clusters in time, place and networks and passes on by retaliation, learning and norms.",
+  "nl": "Violence clusters in time, place and networks and passes on by retaliation, learning and norms."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "در شبکه‌ای از ۱۳۸ هزار نفر در شیکاگو (کسانی که با هم بازداشت شده بودند)، ۶۳ درصد از ۱۱٬۱۲۳ مورد تیرخوردن را می‌شد با سرایت در شبکه توضیح داد. فرد به‌طور میانگین ۱۲۵ روز پس از تیرخوردن «سرایت‌دهنده»‌اش تیر می‌خورد.",
+    "en": "Green, Horel & Papachristos (2017): social contagion accounted for 63.1% of 11,123 gunshot episodes; mean lag 125 days.",
+    "nl": "Green, Horel & Papachristos (2017): social contagion accounted for 63.1% of 11,123 gunshot episodes; mean lag 125 days."
+   },
+   "sources": [
+    "src:9d79501bf5"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "اسلاتکین، که همه‌گیرشناس بود، گفت خشونت سه ویژگی بیماری واگیر را دارد: خوشه می‌سازد، از راه تماس پخش می‌شود، و قرارگرفتن در معرضش خطر انجامش را بالا می‌برد. این یک تشبیه کارآمد است، نه ادعایی دربارهٔ میکروب.",
+    "en": "Slutkin: violence clusters, spreads and transmits like a contagious disease — a working analogy.",
+    "nl": "Slutkin: violence clusters, spreads and transmits like a contagious disease — a working analogy."
+   },
+   "sources": [
+    "src:206cde9471"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "هنجار هم سرایت می‌کند. در «فرهنگ آبرو» هر کس خشن است چون گمان می‌کند دیگران از او همین را می‌خواهند؛ کافی است هر کس آستانه‌ای داشته باشد («اگر این‌قدر نفر بکنند، من هم می‌کنم») تا یک رفتار کل گروه را بگیرد.",
+    "en": "Norms spread too: honor cultures and threshold dynamics.",
+    "nl": "Norms spread too: honor cultures and threshold dynamics."
+   },
+   "sources": [
+    "src:671eaf4b2c"
+   ],
+   "flags": [
+    "editor-note"
+   ]
+  },
+  {
+   "text": {
+    "fa": "اگر سرایت باشد، می‌شود زنجیره را برید. در اسکاتلند پس از ۲۰۰۵ خشونت را مسئلهٔ سلامت عمومی دیدند؛ شمار قتل از ۱۳۷ (۲۰۰۴ تا ۲۰۰۵) در ده سال بعد تقریباً نصف شد و بستری برای زخم چاقو در گلاسگو ۶۲ درصد کم شد. قتل در همان سال‌ها در جاهای دیگر هم کم شد، پس سهم دقیق این برنامه روشن نیست.",
+    "en": "Scotland after 2005: homicides roughly halved; sharp-object admissions in Glasgow fell 62%; attribution is uncertain.",
+    "nl": "Scotland after 2005: homicides roughly halved; sharp-object admissions in Glasgow fell 62%; attribution is uncertain."
+   },
+   "sources": [
+    "src:95497f23fb"
+   ],
+   "flags": [
+    "contested"
+   ]
+  },
+  {
+   "text": {
+    "fa": "در کاردیف، بیمارستان‌ها جا و زمان زخمی‌شدن را بی‌نام به پلیس و شهرداری دادند. نسبت به چهارده شهر مشابه، بستری به علت خشونت ۴۲ درصد کمتر شد.",
+    "en": "Cardiff Model (Florence et al., 2011): 42% relative reduction in violence-related hospital admissions.",
+    "nl": "Cardiff Model (Florence et al., 2011): 42% relative reduction in violence-related hospital admissions."
+   },
+   "sources": [
+    "src:3a6aff4b08"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "soc:threshold-models-of-collective-behaviour",
+   "rel": "bridges",
+   "note": {
+    "fa": "مدل آستانه",
+    "en": "مدل آستانه",
+    "nl": "مدل آستانه"
+   }
+  },
+  {
+   "to": "psy:violence-cycle",
+   "rel": "see-also",
+   "note": {
+    "fa": "سرایت میان نسل‌ها",
+    "en": "سرایت میان نسل‌ها",
+    "nl": "سرایت میان نسل‌ها"
+   }
+  },
+  {
+   "to": "psy:violent-apartheid",
+   "rel": "see-also",
+   "note": {
+    "fa": "وقتی دولت خودش ناقل است",
+    "en": "وقتی دولت خودش ناقل است",
+    "nl": "وقتی دولت خودش ناقل است"
+   }
+  },
+  {
+   "to": "psy:intergroup-contact",
+   "rel": "see-also",
+   "note": {
+    "fa": "یکی از راه‌های بریدن زنجیره",
+    "en": "یکی از راه‌های بریدن زنجیره",
+    "nl": "یکی از راه‌های بریدن زنجیره"
+   }
+  }
+ ],
+ "people": [
+  "core:gary-slutkin"
+ ],
+ "sources": [
+  "src:206cde9471",
+  "src:3a6aff4b08",
+  "src:671eaf4b2c",
+  "src:95497f23fb",
+  "src:9d79501bf5"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "explain": {
+  "fa": "چرا در «جامعه‌های زیاد» و به شکل همه‌گیر؟ چون خشونت یک رفتار وابسته به دیگران است. اگر در محله‌ای همه مسلح‌اند، مسلح‌نبودن خطرناک است. اگر در خانواده‌ای همه بچه را می‌زنند، نزدن یعنی «بچه را لوس کردن». اگر در ارتشی همه شلیک می‌کنند، شلیک‌نکردن خیانت است. هر آدم جداگانه شاید نخواهد، ولی هیچ‌کس نمی‌خواهد اولین کسی باشد که نمی‌کند.\n\nاین یعنی خشونتِ همه‌گیر با عوض‌کردن تک‌تک آدم‌ها از میان نمی‌رود؛ با عوض‌کردن آنچه هر کس دربارهٔ دیگران گمان می‌کند از میان می‌رود. و برای همین هم گاهی ناگهان فرو می‌ریزد.",
+  "en": "Violence is interdependent behaviour: nobody wants to be the first not to do it.",
+  "nl": "Violence is interdependent behaviour: nobody wants to be the first not to do it."
+ }
+}

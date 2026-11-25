@@ -1,0 +1,99 @@
+{
+ "id": "psy:violence-cycle",
+ "kind": "concept",
+ "title": {
+  "fa": "چرخهٔ خشونت: آیا آسیب‌دیده آسیب‌زن می‌شود؟",
+  "en": "The cycle of violence",
+  "nl": "The cycle of violence"
+ },
+ "aliases": [],
+ "parent": "psy:violence",
+ "field": "psy:violence",
+ "summary": {
+  "fa": "آزار و غفلت در کودکی خطر خشونت در بزرگسالی را بالا می‌برد، ولی بیشتر کودکان آزاردیده بزرگسال خشن نمی‌شوند. هر دو نیمهٔ این جمله مهم است.",
+  "en": "Childhood abuse raises the risk of later violence, yet most abused children do not become violent adults.",
+  "nl": "Childhood abuse raises the risk of later violence, yet most abused children do not become violent adults."
+ },
+ "points": [
+  {
+   "text": {
+    "fa": "ویدوم ۹۰۸ کودک را که آزار یا غفلتشان در دادگاه ثابت شده بود با ۶۶۷ کودک همسان بیست‌وپنج سال دنبال کرد. آزار و غفلت احتمال بازداشت برای جرم خشن را حدود ۳۰ درصد بالا برد.",
+    "en": "Widom & Maxfield: 908 substantiated cases vs 667 matched controls; +30% likelihood of violent-crime arrest.",
+    "nl": "Widom & Maxfield: 908 substantiated cases vs 667 matched controls; +30% likelihood of violent-crime arrest."
+   },
+   "sources": [
+    "src:3429a6c88e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "ولی حدود ۱۸ درصد از کودکان آزاردیده برای جرم خشن بازداشت شدند؛ یعنی بیش از چهار نفر از هر پنج نفر نه.",
+    "en": "About 18% of the abused group were arrested for a violent crime; more than four in five were not.",
+    "nl": "About 18% of the abused group were arrested for a violent crime; more than four in five were not."
+   },
+   "sources": [
+    "src:3429a6c88e"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "کودکان غفلت‌شده، که کتک نخورده بودند، تقریباً به همان اندازهٔ کودکان کتک‌خورده در خطر بودند. یعنی «خشونت خشونت می‌آورد» توضیح کاملی نیست؛ نبودِ مراقبت هم همان کار را می‌کند.",
+    "en": "Neglected children were nearly as much at risk as physically abused ones.",
+    "nl": "Neglected children were nearly as much at risk as physically abused ones."
+   },
+   "sources": [
+    "src:3429a6c88e"
+   ],
+   "flags": []
+  }
+ ],
+ "links": [
+  {
+   "to": "psy:breaking-cycle",
+   "rel": "see-also",
+   "note": {
+    "fa": "چطور چرخه می‌شکند",
+    "en": "چطور چرخه می‌شکند",
+    "nl": "چطور چرخه می‌شکند"
+   }
+  },
+  {
+   "to": "psy:violence-effects-victim",
+   "rel": "part-of",
+   "note": {
+    "fa": "یکی از اثرهای خشونت",
+    "en": "یکی از اثرهای خشونت",
+    "nl": "یکی از اثرهای خشونت"
+   }
+  },
+  {
+   "to": "psy:violence-epidemic",
+   "rel": "see-also",
+   "note": {
+    "fa": "سرایت در شبکه، نه فقط در خانواده",
+    "en": "سرایت در شبکه، نه فقط در خانواده",
+    "nl": "سرایت در شبکه، نه فقط در خانواده"
+   }
+  }
+ ],
+ "people": [
+  "core:cathy-spatz-widom"
+ ],
+ "sources": [
+  "src:3429a6c88e"
+ ],
+ "booklets": [],
+ "origin": "violence",
+ "iran": null,
+ "wikidata": null,
+ "status": "reviewed",
+ "confusions": [
+  {
+   "fa": "«خطر بیشتر» با «سرنوشت» یکی نیست. این جمله که «هر کس کتک خورده، کتک می‌زند» هم نادرست است و هم به کسانی که چرخه را شکسته‌اند ستم می‌کند.",
+   "en": "Higher risk is not destiny.",
+   "nl": "Higher risk is not destiny."
+  }
+ ]
+}
