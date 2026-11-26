@@ -1,6 +1,6 @@
 {
   "product": "Workplace Wellbeing Check (wellbeing-check/)",
-  "last_reviewed_commit": "5d4219b",
+  "last_reviewed_commit": "c22e12c",
   "last_run": "2026-11-26",
   "tech_doc": {
     "title": "مستند فنی — سنجش سلامت روانی سازمان",
@@ -8,15 +8,15 @@
     "project_id": "615b45f3-38b7-499c-84a6-85c2bfac3ccc",
     "tab_file_id": "93742b44-9524",
     "body_node_id": "7db45374-8e12",
-    "version": "1.2",
-    "last_rev": 33,
+    "version": "1.3",
+    "last_rev": 40,
     "widgets": {
       "current_architecture": "29fc59bc-2e86",
       "roadmap": "77d1f436-c8f4",
       "target_architecture": "748832d5-6872"
     },
-    "next_requirement_id": "R35",
-    "next_adr_id": "ADR-013"
+    "next_requirement_id": "R44",
+    "next_adr_id": "ADR-016"
   },
   "business_doc": {
     "title": "بیزینس پلن‌ها — سنجش سلامت روانی سازمان",
@@ -99,7 +99,22 @@
       "hypothesis": "H13"
     }
   },
-  "pending_business_impacts": [],
+  "pending_business_impacts": [
+    {
+      "date": "2026-11-26",
+      "commit": "c22e12c",
+      "what": "Product now supports RI&E work: action plan (plan van aanpak) with CSV export and 'you said, we did' page, response rate with <50% RI&E warning (Arbeidsinspectie werkinstructie werkdruk), works-council (OR) pack, QR join for shift workers, read-aloud, per-organisation minimum group size 10-50 (whole round needs max(20, 2k)). Persona research (26 Nov 2026, https://claude.ai/artifact/SxhH9jibNwparXg1YbHq6c) sets next items R35-R41: ro/uk/bg translations, focus-group fallback, own staff vs agency workers, aggression/unwanted-behaviour module, QEEW 2.0, manager module, independent anonymity audit.",
+      "why_it_matters": "Positions the product as the PSA/werkdruk building block of the RI&E rather than a stand-alone wellbeing scan; supports a fixed-price site package (scan + action plan + OR pack); shifts the channel towards certified RI&E experts, arbodiensten, sector (branch) funds and staffing agencies. Higher k raises the employee count needed per reportable group (cost/price per department, H13). Validated ro/uk/bg translations and an independent anonymity audit are new cost items; agency workers open a new market segment.",
+      "sections_to_check": [
+        "pricing and packages (fixed-price site package)",
+        "channels and partners (scenario C, RI&E experts, branch funds, agencies)",
+        "department tier / H13 (k up to 50)",
+        "cost assumptions (translations, anonymity audit)",
+        "markets (ro/uk/bg-speaking workers in NL)",
+        "legal status (RI&E link, OR consent pack)"
+      ]
+    }
+  ],
   "legal_checklist_last_verified": "2026-11-16",
   "ip_register_last_reviewed": "2026-11-16"
 }
