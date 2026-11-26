@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>هفت روز، هفت کار کوچک | ویکی روان‌شناسی | دانش‌سرا</title>
+<meta name="description" content="پنج وضعیت، و برای هر کدام هفت کار کوچکِ تمام‌شدنی — هر کار با دلیلش و با پیوند به مدخل. برنامه‌ای که می‌شود همین امشب شروعش کرد.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<style>
+:root{--c:var(--fam-psy)}
+h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
+p.lead{color:var(--ink-2);max-width:46em;line-height:2;margin:0 0 var(--s4);font-size:1.05rem}
+.note{padding:var(--s4);border-radius:var(--r-md);font-size:var(--small);line-height:1.95;color:var(--ink-2);max-width:60em;margin:0 0 var(--s3)}
+.note.p{background:color-mix(in srgb,var(--ok) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 35%,var(--line))}
+.note.g{background:var(--surface);border:1px solid var(--line)}
+.note.w{background:color-mix(in srgb,var(--warn) 10%,var(--paper));border:1px solid color-mix(in srgb,var(--warn) 42%,var(--line))}
+.note b{color:var(--ink)}
+section{padding-block:var(--s5);border-top:1px solid var(--line)}
+h2{font-size:var(--h3);margin:0 0 var(--s3)}
+.pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:12px;margin-bottom:var(--s4)}
+.pick button{font:inherit;display:grid;gap:7px;padding:15px 14px;border:1px solid var(--line-strong);border-radius:var(--r-lg);background:var(--paper);color:var(--ink-2);cursor:pointer;text-align:start;line-height:1.6}
+.pick button b{font-size:1rem;color:var(--ink)}
+.pick button small{font-size:var(--chip);color:var(--ink-3);line-height:1.8}
+.pick button[aria-pressed=true]{border-color:var(--k);background:color-mix(in srgb,var(--k) 9%,var(--paper));box-shadow:inset 0 0 0 1px var(--k)}
+.pick button[aria-pressed=true] b{color:var(--k)}
+.hd{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:var(--s3)}
+.hd h3{margin:0;font-size:var(--h4)}
+.hd .prog{font-size:var(--chip);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.track{height:8px;border-radius:4px;background:var(--surface-subtle);overflow:hidden;max-width:44em;margin-bottom:var(--s4)}
+.track i{display:block;height:100%;border-radius:4px;background:var(--k);transition:width .45s}
+ol.days{list-style:none;margin:0;padding:0;display:grid;gap:12px;max-width:50em;counter-reset:d}
+ol.days li{counter-increment:d;border:1px solid var(--line);border-inline-start:4px solid var(--k);border-radius:var(--r-lg);background:var(--surface);padding:var(--s4);display:grid;gap:10px}
+ol.days li.done{opacity:.62;border-inline-start-color:var(--ok)}
+.dt{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.dnum{flex:0 0 auto;font-size:var(--chip);color:var(--k);font-weight:650;border:1px solid color-mix(in srgb,var(--k) 40%,var(--line));border-radius:var(--r-full);padding:2px 10px}
+li.done .dnum{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,var(--line))}
+.dt b{font-size:1.05rem}
+.act{margin:0;line-height:2}
+.why{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:11px 13px;font-size:var(--small);line-height:1.95;color:var(--ink-2)}
+.why b{display:block;font-size:var(--chip);color:var(--k);font-weight:650;margin-bottom:4px;letter-spacing:.02em}
+.foot{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.foot a{font-size:var(--chip);padding:5px 13px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink-2)}
+.foot a:hover{border-color:var(--k);color:var(--k)}
+label.tick{font:inherit;display:inline-flex;gap:8px;align-items:center;font-size:var(--small);color:var(--ink-3);cursor:pointer;margin-inline-start:auto}
+label.tick input{width:19px;height:19px;accent-color:var(--ok);cursor:pointer}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--s4)}
+button.b{font:inherit;padding:10px 24px;border-radius:var(--r-full);border:1px solid var(--k);background:var(--k);color:var(--paper);cursor:pointer;font-weight:650}
+button.g{font:inherit;padding:9px 18px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:none;color:var(--ink-2);cursor:pointer}
+textarea.out{width:100%;max-width:50em;min-height:190px;font:inherit;font-size:var(--small);line-height:1.9;padding:var(--s4);border:1px solid var(--line-strong);border-radius:var(--r-lg);background:var(--paper);color:var(--ink);margin-top:var(--s3);resize:vertical}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--s3)}
+.links a{font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink-2)}
+.links a:hover{border-color:var(--c);color:var(--c)}
+@media (max-width:420px){.dt b{font-size:1rem}}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><a href="../../psy/tools/">ابزارها</a><i>›</i><b>هفت روز، هفت کار کوچک</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap">
+<h1>هفت روز، هفت کار کوچک</h1>
+<p class="lead">این صفحه نصیحت نمی‌کند. پنج وضعیت دارد، و برای هر وضعیت هفت کار که هر کدام یک شب یا یک روز طول می‌کشد. هر کار دلیلی دارد که زیرش نوشته شده، و پیوندی به مدخلی که آن دلیل از آن آمده.</p>
+<div class="note p"><b>چرا این‌قدر کوچک؟</b> در پژوهش تغییر ارادی شخصیت، کسانی که چالش‌های <b>کوچک و تمام‌شدنی</b> را به آخر رساندند تغییر نشان دادند؛ کسانی که چالش بزرگ برداشتند و نیمه‌کاره گذاشتند، حتی پس‌رفت کردند. پس هیچ‌کدام از این هفت کار «تصمیم بزرگ» نیست.</div>
+<div class="note w"><b>اگر الان در خطری:</b> اگر تهدید، آسیب جسمی یا تعقیب در جریان است، این برنامه جای کمک فوری نیست. امن‌شدن اول است، بعد این. و بدان که دورهٔ جدایی خطرناک‌ترین دورهٔ این رابطه‌هاست — برای آن دوره برنامه لازم است، نه فقط صبر.</div>
+<div class="note g">هیچ چیزی ذخیره یا فرستاده نمی‌شود. تیک‌ها فقط تا وقتی این صفحه باز است می‌مانند. برنامه را می‌توانی به متن تبدیل کنی و جایی که خودت می‌خواهی نگه داری.</div>
+</main>
+<main class="wrap" style="padding-top:0">
+<section>
+<h2>کدام یکی به تو نزدیک‌تر است؟</h2>
+<div class="pick" id="pick" role="group" aria-label="وضعیت‌ها"></div>
+</section>
+<section id="plan" hidden>
+<div class="hd"><h3 id="ptitle"></h3><span class="prog" id="prog"></span></div>
+<div class="track"><i id="fill" style="width:0"></i></div>
+<ol class="days" id="days"></ol>
+<div class="bar">
+<button class="b" id="txt">این برنامه را به متن تبدیل کن</button>
+<button class="g" id="clr">تیک‌ها را پاک کن</button>
+</div>
+<textarea class="out" id="out" hidden readonly aria-label="متن برنامه"></textarea>
+</section>
+<section>
+<h2>بعد از این هفته</h2>
+<p class="lead">این هفت کار برای شروع است، نه برای حل. اگر یکی‌شان کار کرد، همان یکی را هفتهٔ بعد هم تکرار کن؛ عوض‌کردن برنامه هر هفته، خودش یک راه برای تمام‌نکردن است.</p>
+<div class="links">
+<a href="control-check.html">خودسنجی کنترل</a>
+<a href="triangle.html">مثلث قربانی و ظالم و ناجی</a>
+<a href="sentences.html">جمله‌ها</a>
+<a href="roles.html">آینهٔ نقش‌ها</a>
+<a href="analogies.html">این مثل چیست؟</a>
+<a href="../narcissism.html">پروندهٔ خودشیفتگی و کنترل</a>
+</div>
+</section>
+</main>
+<script>
+const TR=[
+{k:"in",t:"در رابطه‌ای هستم که سخت است",c:"#8a4a6b",
+ d:"هنوز در آن رابطه‌ای و نمی‌دانی چه چیزی واقعی است و چه چیزی را بزرگ کرده‌ای.",
+ days:[
+ ["یک یادداشت دو خطی","امشب دو خط بنویس با تاریخ: چه شد، چه گفته شد، چه حسی داشتم. جایی که فقط خودت می‌بینی.",
+  "هیچ ابزار اندازه‌گیری‌ای لغزش خودش را با خودش نمی‌بیند. یادداشت، مرجع بیرونی توست — نه برای اثبات به او.","self-trust"],
+ ["یک پل بیرونی","به یک نفر بیرون از این رابطه پیام بده. لازم نیست از ماجرا بگویی. فقط تماس زنده بماند.",
+  "کنترل با تنهایی کار می‌کند. هر پل بیرونی یک منبع واقعیت است و یک راه برگشت.","coercive-control"],
+ ["سه ستون","یک کاغذ، سه ستون: دست من، دست او، دست هیچ‌کس. هر چه در این هفته آزارت داد را در یکی بگذار.",
+  "بیشتر انرژی ما خرج ستون دوم می‌شود، که هیچ‌وقت نتیجه نمی‌دهد. ستون اول هیچ‌وقت کاملاً خالی نیست.","agency"],
+ ["یک جملهٔ مرزی کوچک","یک مرز کم‌خطر بگو، با فاعلِ «من»: «الان نمی‌توانم ادامه بدهم، فردا ساعت هشت.» و سر همان ساعت برگرد.",
+  "مرز می‌گوید من چه می‌کنم؛ تهدید می‌گوید تو چه بکن. اولی را می‌شود اجرا کرد.","boundaries"],
+ ["یک چیز مستقل","یک چیز را مستقل کن: یک حساب کوچک، کپی مدرک‌هایت، یا یک ساعت ثابت در هفته که مال خودت باشد.",
+  "رفتن وقتی ممکن می‌شود که هزینه‌اش پایین بیاید. این کار برای رفتن نیست؛ برای داشتنِ انتخاب است.","leaving"],
+ ["خواب","امشب یک ساعت زودتر. گوشی بیرون از اتاق.",
+  "در زنانی که خشونت شریک را تجربه کرده بودند، بی‌خوابی مستقل از شدت علائم، شانس افسردگی را چند برابر می‌کرد. خواب، اولین چیزی است که برمی‌گردد.","victim-toll"],
+ ["مرور","شش روز گذشته را بخوان. یک چیز را برای هفتهٔ بعد بردار — فقط یکی.",
+  "در پژوهش تغییر ارادی شخصیت، چالش کوچکِ تمام‌شده رشد آورد و چالش بزرگِ نیمه‌تمام پس‌رفت.","agency"]]},
+
+{k:"me",t:"فکر می‌کنم خودم کنترل‌گرم",c:"#4867a8",
+ d:"چیزی در رفتار خودت دیده‌ای که خوشت نیامده. همین دیدن، نادر است.",
+ days:[
+ ["فقط بشمار","امروز هیچ چیز را عوض نکن. فقط بشمار: چند بار حرف کسی را قطع کردی، چند بار نظر دادی که خواسته نشده بود.",
+  "تغییر بدون خط پایه، حدس است. و شمردن، خودش بیشتر از تصمیم‌گرفتن عوض می‌کند.","control-behaviors"],
+ ["یک جمله","یک جملهٔ تکراری خودت را پیدا کن و فقط همان را عوض کن. مثلاً «تو همیشه…» به «وقتی … شد، من … شدم».",
+  "جملهٔ «تو» اتهام است؛ همان حرف با «من» شنیده می‌شود. این یکی از معدود چیزهایی است که در خود لحظه قابل اجراست.","gottman-horsemen"],
+ ["بپرس به‌جای حکم","یک بار امروز، پیش از هر مشورتی بپرس: «کمک می‌خواهی یا می‌خواهی فقط گوش بدهم؟»",
+  "کمکِ نخواسته پیام «تو بلد نیستی» می‌دهد، حتی وقتی درست باشد.","rescuing"],
+ ["واگذار کن","یک تصمیم را کامل بسپار و فقط نتیجه را ببین. حتی اگر طور دیگری انجام شد.",
+  "نظارت به نتیجه نگاه می‌کند؛ ریزکنترل به هر حرکت. دومی تیم و خانواده را وابسته و کُند می‌کند.","control-at-work"],
+ ["ترمیم","یک عذرخواهی مشخص، بدون «اگر» و بدون «ولی»: «بابت اینکه وسط حرفت پریدم متأسفم. کار من بود.»",
+  "مهم‌تر از خطا نکردن، ترمیم بعد از خطاست. بچه‌ها در خانه‌ای که عذرخواهی واقعی می‌بینند، چیز دیگری یاد می‌گیرند.","breaking-cycle"],
+ ["جای انرژی","یک کار که فقط مال خودت است و به کسی ربط ندارد: ورزش، ساخت، نوشتن، یاد گرفتن.",
+  "همان پیگیری و دقتی که صرف آدم‌ها می‌شود، جای دیگری سوخت است. تغییر جهت، نه خاموش‌کردن.","drive-not-control"],
+ ["بپرس و فقط گوش بده","از یک نفر نزدیک بپرس: «کِی حس می‌کنی من زیادی فشار می‌آورم؟» و هیچ توضیحی نده. فقط تشکر کن.",
+  "حساسیت به تهدید تصویر، همگانی است. نگفتنِ توضیح در همان لحظه، سخت‌ترین و مؤثرترین تمرین است.","defensive-reactions"]]},
+
+{k:"out",t:"تازه بیرون آمده‌ام",c:"#2f6b4f",
+ d:"تمام شده و حالت آن‌طور که فکر می‌کردی خوب نیست.",
+ days:[
+ ["انتظار درست","امروز فقط یک چیز را بدان: بعضی آدم‌ها بلافاصله پس از خروج، حالشان بدتر از وقتی است که مانده بودند. این یعنی اوضاع سخت است، نه اینکه تصمیم غلط بوده.",
+  "در مرورهای تجربی، بدترشدن کوتاه‌مدت پس از جدایی رایج است: آزار پس از جدایی، سختی مالی و تنهایی.","leaving"],
+ ["بدن","یک چیز بدنی: بیست دقیقه راه رفتن، یا یک شب خواب درست.",
+  "در پژوهش طولی چهارساله، افسردگی و علائم استرس بهتر شدند ولی تمام نشدند. بهبود در سال‌ها اندازه گرفته می‌شود، و از بدن شروع می‌شود.","recovery"],
+ ["یک قضاوت کوچک","امروز سه تصمیم کوچک را فقط خودت بگیر، بی‌مشورت: چه بخوری، چه ببینی، کدام مسیر.",
+  "اعتماد به قضاوت، مثل هر مهارت دیگری با تکرار کوچک برمی‌گردد. بزرگ شروع نکن.","self-trust"],
+ ["یک رابطهٔ بیرونی","به کسی که در آن دوره کم‌رنگ شده بود زنگ بزن. لازم نیست توضیح بدهی کجا بودی.",
+  "حمایت اجتماعی یکی از قوی‌ترین پیش‌بین‌های بهبود است. و زنگ‌زدن سخت‌تر از جواب‌دادن است — معمولاً طرف خوشحال می‌شود.","recovery"],
+ ["سه چیز که لازم نیست توضیح بدهی","بنویس: سه چیزی که دیگر مجبور نیستی برایشان دلیل بیاوری.",
+  "در رابطه‌های کنترل‌گرانه، توضیح‌دادن دائمی یکی از خسته‌کننده‌ترین کارهاست. دیدن اینکه تمام شده، خودش تمرین است.","coercive-control"],
+ ["ایمنی","اگر مزاحمت یا تعقیب هست: مسیرها و ساعت‌ها را عوض کن، رمزها را عوض کن، و یک نفر همیشه بداند کجایی.",
+  "تا ۹۰ درصد زنان از ادامهٔ آزار پس از جدایی گزارش می‌دهند. این مرحله نیاز به برنامه دارد، نه فقط به زمان.","leaving"],
+ ["یک کار برای خوشی","یک کار کوچک که فقط برای خودت خوشایند است، بی‌هیچ فایده‌ای.",
+  "در فراتحلیل بزرگ، چیزی که واقعاً پس از سختی بهتر شد عزت‌نفس، روابط و حس تسلط بود — نه «معنای تازه». این‌ها با کار ساخته می‌شوند، نه با فکر.","recovery"]]},
+
+{k:"near",t:"اطرافی‌ام و نمی‌دانم چه کنم",c:"#2f7f8a",
+ d:"خواهر، دوست، همکار یا فرزند بزرگسالی که می‌بیند و نمی‌داند چه کند.",
+ days:[
+ ["باور کن و بگو","یک جمله: «آنچه تعریف کردی به نظرم سخت بود.» همین. بدون نصیحت.",
+  "باور نشدن، خودش بخشی از آسیب است. باور کردن، خودش مداخله است — و نیازی به قضاوت دربارهٔ آدم غایب ندارد.","public-private"],
+ ["در را باز بگذار","بگو «هر وقت خواستی من هستم» — و اولتیماتوم نده.",
+  "«یا او یا ما» دقیقاً همان کاری است که خودِ الگو می‌کند: تنگ‌کردن دایرهٔ انتخاب. معمولاً به قطع رابطه با تو ختم می‌شود.","around-them"],
+ ["حافظه باش","بی‌آنکه بحث کنی، یادآوری کن: «یادت هست پارسال چه گفتی؟»",
+  "کمک به حافظه، بدون دعوا بر سر اینکه حق با کیست. تو مرجع بیرونی او هستی.","self-trust"],
+ ["اجازه بگیر","پیش از هر مشورتی بپرس: «دوست داری دربارهٔ راه‌ها حرف بزنیم یا فقط گوش بدهم؟»",
+  "مشورت نخواسته، همان ناجی‌گری است و طرف را از گفتن بازمی‌دارد.","rescuing"],
+ ["یک کار عملی کوچک","به‌جای نصیحت، یک کار پیشنهاد بده که هزینهٔ رفتن را کم کند: نگه‌داری بچه، یک شب جا، کمک برای کاریابی.",
+  "خروج را منابع عملی ممکن می‌کنند، نه قانع‌شدن. این تنها جایی است که یک اطرافی واقعاً وزن دارد.","leaving"],
+ ["خودت را نگه دار","یک مرز برای خودت بگذار: تا کجا می‌توانی، و چه ساعتی نه.",
+  "اطرافیِ خسته، دیر یا زود طلبکار می‌شود و آن وقت در را می‌بندد.","boundaries"],
+ ["دوباره تماس بگیر","همین هفته یک بار دیگر تماس بگیر، حتی اگر جواب سرد بود.",
+  "خروج معمولاً چندمرحله‌ای است و رفت‌وبرگشت رایج. تکرارِ بی‌شرطِ تماس، همان چیزی است که در را باز نگه می‌دارد.","leaving"]]},
+
+{k:"parent",t:"والدم و نگرانم",c:"#b0652a",
+ d:"می‌ترسی چیزی را که خودت دیده‌ای تکرار کنی.",
+ days:[
+ ["ستایش را جابه‌جا کن","امروز به‌جای «تو نابغه‌ای»، بگو «سخت بود و تو ادامه دادی».",
+  "در پژوهش طولی روی ۵۶۵ کودک، ارزش‌گذاری اغراق‌آمیز خودشیفتگی ساخت و گرما عزت‌نفس. دو مسیر جدا.","narcissism-origins"],
+ ["فقط نام ببر","یک بار امروز، پیش از هر راه‌حلی فقط بگو «می‌بینم خیلی ناراحتی» و ده ثانیه ساکت بمان.",
+  "«چیزی نشده» هیجان را ممنوع می‌کند، نه آرام. نام‌بردن، آرام می‌کند.","psychological-control"],
+ ["یک شکست کوچک را رها کن","یک مشکل کوچک را حل نکن. بگذار خودش از پسش برآید، حتی بد.",
+  "خاکریز جلوی سیل‌های کوچک را می‌گیرد و پشتش آدم‌ها ساکن می‌شوند؛ سیل بزرگ که بیاید، خسارت بیشتر است.","analogies"],
+ ["محبت را جدا کن","در یک جمله: «از این کار ناراحتم؛ ربطی به دوست‌داشتنت ندارد.»",
+  "آنچه آسیب می‌زند نوسان محبت است، نه بلندی معیار. انتظار بالا با محبت ثابت، مشکلی ندارد.","conditional-regard"],
+ ["بیست دقیقه","با فرزندی که کمتر با او وقت می‌گذرانی، بیست دقیقه بدون هدف آموزشی.",
+  "در فراتحلیل ۴۳ نمونه، فرزندی که کمتر مورد لطف است مشکلات بیشتری دارد — و بچه‌ها این تفاوت را دقیق می‌بینند.","children-of-narcissists"],
+ ["ترمیم جلوی خودش","اگر امروز بد گفتی، همان‌جا و جلوی خودش عذرخواهی کن.",
+  "این تنها راهی است که کودک یاد می‌گیرد خطا پایان رابطه نیست.","breaking-cycle"],
+ ["کدام جمله از دهانم درآمد؟","بنویس: امروز کدام جملهٔ کودکی خودت را تکرار کردی؟",
+  "انتقال بین‌نسلی واقعی است ولی قطعی نیست. چرخه با دیدن یک جمله و عوض‌کردن همان یکی می‌شکند، نه با آگاهی کلی.","breaking-cycle"]]}
+];
+
+var cur=null,done={};
+var pick=document.getElementById('pick');
+TR.forEach(function(tr,i){
+  var b=document.createElement('button');
+  b.type='button';b.setAttribute('aria-pressed','false');b.style.setProperty('--k',tr.c);
+  b.innerHTML='<b></b><small></small>';
+  b.querySelector('b').textContent=tr.t;b.querySelector('small').textContent=tr.d;
+  b.onclick=function(){sel(i)};pick.appendChild(b);
+});
+function sel(i){
+  cur=i;done={};
+  [].forEach.call(pick.children,function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});
+  var tr=TR[i],pl=document.getElementById('plan');
+  pl.hidden=false;pl.style.setProperty('--k',tr.c);
+  document.getElementById('ptitle').textContent='هفت روز · '+tr.t;
+  var ol=document.getElementById('days');ol.textContent='';
+  tr.days.forEach(function(d,k){
+    var li=document.createElement('li');li.style.setProperty('--k',tr.c);
+    var dt=document.createElement('div');dt.className='dt';
+    var n=document.createElement('span');n.className='dnum';n.textContent='روز '+(k+1).toLocaleString('fa-IR');
+    var ttl=document.createElement('b');ttl.textContent=d[0];
+    var lab=document.createElement('label');lab.className='tick';
+    var cb=document.createElement('input');cb.type='checkbox';cb.setAttribute('aria-label','روز '+(k+1)+' انجام شد');
+    cb.onchange=function(){done[k]=cb.checked;li.classList.toggle('done',cb.checked);upd()};
+    lab.appendChild(cb);lab.appendChild(document.createTextNode('انجام شد'));
+    dt.appendChild(n);dt.appendChild(ttl);dt.appendChild(lab);
+    var p=document.createElement('p');p.className='act';p.textContent=d[1];
+    var w=document.createElement('div');w.className='why';
+    var wb=document.createElement('b');wb.textContent='چرا این کار';
+    w.appendChild(wb);w.appendChild(document.createTextNode(d[2]));
+    var f=document.createElement('div');f.className='foot';
+    var a=document.createElement('a');a.href='../entries.html#'+d[3];a.textContent='مدخل مربوط';
+    f.appendChild(a);
+    li.appendChild(dt);li.appendChild(p);li.appendChild(w);li.appendChild(f);
+    ol.appendChild(li);
+  });
+  document.getElementById('out').hidden=true;
+  upd();
+  pl.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function upd(){
+  var n=0;for(var k in done){if(done[k])n++}
+  document.getElementById('prog').textContent=n.toLocaleString('fa-IR')+' از ۷ کار';
+  document.getElementById('fill').style.width=(n/7*100)+'%';
+}
+document.getElementById('clr').onclick=function(){if(cur!==null)sel(cur)};
+document.getElementById('txt').onclick=function(){
+  if(cur===null)return;
+  var tr=TR[cur],s='هفت روز، هفت کار کوچک — '+tr.t+'\n\n';
+  tr.days.forEach(function(d,k){
+    s+='روز '+(k+1)+' · '+d[0]+'\n'+d[1]+'\nچرا: '+d[2]+'\n\n';
+  });
+  s+='از پروندهٔ «خودشیفتگی و کنترل» در دانش‌سرا.';
+  var o=document.getElementById('out');o.hidden=false;o.value=s;o.focus();o.select();
+};
+</script>
+<style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
+</body>
+</html>

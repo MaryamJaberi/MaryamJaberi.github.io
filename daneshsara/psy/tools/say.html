@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>چه بگویم؟ جمله‌های لحظهٔ سخت | ویکی روان‌شناسی | دانش‌سرا</title>
+<meta name="description" content="دوازده لحظهٔ سخت، و برای هر کدام: آنچه معمولاً می‌گوییم و چرا جواب نمی‌دهد، دو سه جملهٔ جایگزین در سه شدت، و قاعده‌ای که پشتشان است.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<style>
+:root{--c:var(--fam-psy)}
+h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
+p.lead{color:var(--ink-2);max-width:46em;line-height:2;margin:0 0 var(--s4);font-size:1.05rem}
+.note{padding:var(--s4);border-radius:var(--r-md);font-size:var(--small);line-height:1.95;color:var(--ink-2);max-width:60em;margin:0 0 var(--s3)}
+.note.p{background:color-mix(in srgb,var(--ok) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 35%,var(--line))}
+.note.g{background:var(--surface);border:1px solid var(--line)}
+.note b{color:var(--ink)}
+section{padding-block:var(--s5);border-top:1px solid var(--line)}
+h2{font-size:var(--h3);margin:0 0 var(--s3)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--s4)}
+.filters button{font:inherit;font-size:var(--small);padding:7px 16px;border-radius:var(--r-full);border:1px solid var(--line-strong);background:none;color:var(--ink-2);cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--c);border-color:var(--c);color:var(--paper);font-weight:650}
+.cards{display:grid;gap:var(--s4)}
+.card{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
+.card>summary{list-style:none;cursor:pointer;padding:var(--s4);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.card>summary::-webkit-details-marker{display:none}
+.card>summary::after{content:"＋";margin-inline-start:auto;color:var(--ink-3);font-size:1.1rem;line-height:1}
+.card[open]>summary::after{content:"−"}
+.card>summary:hover{background:color-mix(in srgb,var(--c) 5%,var(--surface))}
+.card .g{font-size:var(--chip);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 38%,var(--line));border-radius:var(--r-full);padding:2px 10px;flex:0 0 auto}
+.card>summary b{font-size:1.06rem;line-height:1.6}
+.body{padding:0 var(--s4) var(--s4);display:grid;gap:var(--s4)}
+.why0{font-size:var(--small);line-height:1.95;color:var(--ink-2);max-width:48em;margin:0}
+.col h4{margin:0 0 10px;font-size:var(--chip);letter-spacing:.03em;font-weight:650}
+.col.bad h4{color:var(--warn)}
+.col.good h4{color:var(--ok)}
+ul.l{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+ul.l li{padding:11px 13px;border-radius:var(--r-md);font-size:var(--small);line-height:1.95}
+.bad li{background:color-mix(in srgb,var(--warn) 7%,var(--paper));border:1px solid color-mix(in srgb,var(--warn) 28%,var(--line))}
+.good li{background:color-mix(in srgb,var(--ok) 7%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 28%,var(--line))}
+ul.l q{display:block;font-size:1rem;color:var(--ink);line-height:1.9;quotes:none}
+ul.l em{display:block;font-style:normal;color:var(--ink-3);font-size:var(--chip);line-height:1.85;margin-top:6px}
+ul.l .tag{display:inline-block;font-size:var(--chip);font-weight:650;margin-bottom:5px}
+.bad .tag{color:var(--warn)}
+.good .tag{color:var(--ok)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.rule{background:var(--paper);border:1px solid var(--line-strong);border-inline-start:4px solid var(--c);border-radius:var(--r-md);padding:12px 14px;font-size:var(--small);line-height:1.95;color:var(--ink-2)}
+.ent{font-size:var(--chip);padding:5px 13px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink-2);justify-self:start}
+.ent:hover{border-color:var(--c);color:var(--c)}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--s3)}
+.links a{font-size:var(--small);padding:6px 14px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink-2)}
+.links a:hover{border-color:var(--c);color:var(--c)}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><a href="../../psy/tools/">ابزارها</a><i>›</i><b>چه بگویم؟ جمله‌های لحظهٔ سخت</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap">
+<h1>چه بگویم؟</h1>
+<p class="lead">بیشتر ما در لحظهٔ سخت حرف درست را بلدیم — دو ساعت بعد. این صفحه برای همان لحظه است: دوازده موقعیت، و در هر کدام چیزی که معمولاً می‌گوییم و چرا جواب نمی‌دهد، چند جملهٔ جایگزین در سه شدت، و قاعده‌ای که پشتشان است.</p>
+<div class="note p"><b>چرا سه شدت؟</b> جملهٔ قاطع در جای نرم، رابطه را خراب می‌کند؛ جملهٔ نرم در جای قاطع، شنیده نمی‌شود. خودت بسنج کجایی — و اگر مطمئن نیستی، از نرم شروع کن و اگر تکرار شد یک پله بالا برو.</div>
+<div class="note g">این جمله‌ها نسخه نیستند. هیچ‌کدام تضمین نمی‌کند طرف مقابل خوب جواب بدهد؛ کارشان این است که <b>تو</b> در آن لحظه چیزی بگویی که بعداً پشیمانت نکند. اگر تهدید یا خطر جسمی در کار است، جملهٔ درست جای امن‌شدن را نمی‌گیرد.</div>
+</main>
+<main class="wrap" style="padding-top:0">
+<section>
+<div class="filters" id="f" role="group" aria-label="دسته‌ها"></div>
+<div class="cards" id="cards"></div>
+</section>
+<section>
+<h2>همین نزدیکی</h2>
+<div class="links">
+<a href="sentences.html">جمله‌ها: همین حرف، جور دیگر</a>
+<a href="week.html">هفت روز، هفت کار کوچک</a>
+<a href="control-check.html">خودسنجی کنترل</a>
+<a href="roles.html">آینهٔ نقش‌ها</a>
+<a href="../narcissism.html">پروندهٔ خودشیفتگی و کنترل</a>
+</div>
+</section>
+</main>
+<script>
+const SIT=[
+{id:"heat",g:"در لحظه",t:"صدا بالا رفته و دارد بدتر می‌شود",
+ w:"هر چیزی که در این لحظه گفته شود، جواب نمی‌گیرد. تنها کار مفید، توقف با قرار برگشت است.",
+ bad:[["«باشه هر چی تو بگی.»","تسلیم، دعوا را تمام نمی‌کند؛ آن را به دفعهٔ بعد می‌برد و چیزی حل نمی‌شود."],
+      ["«تو همیشه همین کارو می‌کنی.»","«همیشه» بحث را از موضوع می‌برد به دادگاهِ کل رابطه، و طرف مقابل فقط دفاع می‌کند."],
+      ["قهر و بیرون رفتن بی‌حرف","رفتن بدون قرار، تهدید شنیده می‌شود، نه مکث."]],
+ good:[["نرم","«من دارم داغ می‌کنم و الان حرف درستی از من درنمی‌آید. بیست دقیقه، بعد برمی‌گردم سر همین موضوع.»"],
+       ["روشن","«این‌طوری نمی‌توانم ادامه بدهم. ساعت هشت، همین‌جا، دربارهٔ همین حرف می‌زنیم.»"],
+       ["قاطع","«با این صدا ادامه نمی‌دهم. می‌روم بیرون و ساعت هشت برمی‌گردم.»"]],
+ rule:"قاعده: مکث باید ساعت برگشت داشته باشد، وگرنه فرار است. و سر همان ساعت برگرد — همین یک بار اجرا کردن، دفعهٔ بعد کار را راحت می‌کند.",e:"gottman-horsemen"},
+
+{id:"deny",g:"در لحظه",t:"می‌گوید «این‌طور نشد» یا «تو داری بزرگش می‌کنی»",
+ w:"بحث بر سر اینکه کدام روایت درست است، برنده ندارد. حرف را از «چه شد» به «چه می‌خواهم» ببر.",
+ bad:[["«نه! تو دقیقاً گفتی…»","وارد شدن به بازجوییِ حافظه، همان زمینی است که در آن می‌بازی؛ هر چه بیشتر اثبات کنی، بیشتر بی‌اعتماد به خودت می‌شوی."],
+      ["«شاید حق با توست، شاید من اشتباه می‌کنم.»","اگر این را فقط برای تمام‌شدن بحث بگویی، کم‌کم خودت هم باورش می‌کنی."]],
+ good:[["نرم","«ممکن است یادمان فرق کند. چیزی که برای من مهم است این است که آن حرف به من برخورد.»"],
+       ["روشن","«من چیزی که یادم هست را عوض نمی‌کنم. ولی لازم هم نیست سر آن به توافق برسیم تا بگویم دیگر نمی‌خواهم تکرار شود.»"],
+       ["قاطع","«بحث بر سر حافظه را نمی‌کنم. حرف من این است: این کار دیگر برای من قابل قبول نیست.»"]],
+ rule:"قاعده: روایتت را به رأی نگذار. احساس و خواسته‌ات اثبات نمی‌خواهد.",e:"gaslighting"},
+
+{id:"now",g:"در لحظه",t:"می‌خواهد همین الان جواب بگیرد",
+ w:"فوریت ساختگی، ابزار است. وقت‌خریدن، خودش یک مهارت است و لحن طلبکار لازم ندارد.",
+ bad:[["«نمی‌دانم… باشه.»","«باشه»‌ای که از فشار درآمده، بعداً به دلخوری تبدیل می‌شود و بی‌اعتمادی می‌سازد."],
+      ["«چرا هی فشار می‌آوری؟»","بحث را از تصمیم می‌برد به شخصیت طرف، و تصمیم همچنان روی میز می‌ماند."]],
+ good:[["نرم","«باید فکر کنم. تا فردا شب جواب می‌دهم.»"],
+       ["روشن","«من تصمیم‌های این‌قدر مهم را سر پا نمی‌گیرم. فردا جواب روشن می‌دهم.»"],
+       ["قاطع","«اگر همین الان جواب می‌خواهی، جوابم نه است. اگر تا فردا وقت باشد، ممکن است بله باشد.»"]],
+ rule:"قاعده: وقت‌خواستن یک جواب است، نه طفره. و تاریخ بده — «بعداً» دوباره همین بحث را می‌سازد.",e:"control-behaviors"},
+
+{id:"public",g:"در جمع",t:"جلوی جمع تحقیر یا مسخره می‌کند",
+ w:"جلوی جمع بُردن بحث، معمولاً به ضرر تو تمام می‌شود. ولی سکوت کامل هم پیام می‌دهد که این کار بی‌هزینه است. یک جملهٔ کوتاه و خونسرد، بهترین کار است.",
+ bad:[["خندیدن با بقیه","هزینهٔ این کار را بعداً و تنهایی می‌پردازی؛ و دفعهٔ بعد تکرار می‌شود."],
+      ["«چرا جلوی همه این‌طوری می‌کنی؟»","دعوا را جلوی جمع باز می‌کند و حالا تو هستی که «جو را خراب کردی»."]],
+ good:[["نرم","«این یکی خنده‌دار نبود.» — کوتاه، بی‌لبخند، و بعد ادامهٔ حرف قبلی."],
+       ["روشن","«دربارهٔ این جلوی جمع حرف نمی‌زنم.» و موضوع را عوض کن."],
+       ["بعدش، خصوصی","«آن حرف جلوی بقیه برایم سنگین بود. نمی‌خواهم تکرار شود.»"]],
+ rule:"قاعده: در جمع کوتاه، در خلوت روشن. یک جملهٔ شش‌کلمه‌ای خونسرد، بیشتر از یک سخنرانی اثر دارد.",e:"public-private"},
+
+{id:"sorry",g:"الگوی تکراری",t:"عذرخواهی می‌کند، بعد همان کار تکرار می‌شود",
+ w:"عذرخواهی، خودش مدرک تغییر نیست. معیار را از حرف به رفتارِ قابل‌دیدن ببر.",
+ bad:[["«باشه، ببخشیدم.» (برای تمام‌شدن)","بخشش از خستگی، دور بعدی را سریع‌تر می‌کند."],
+      ["«دفعهٔ آخرت باشد.»","تهدیدی که اجرا نشود، به طرف مقابل یاد می‌دهد حرف‌هایت وزن ندارد."]],
+ good:[["نرم","«قبول می‌کنم که ناراحتی. ولی این چندمین بار است. چه چیزی قرار است این دفعه فرق کند؟»"],
+       ["روشن","«عذرخواهی را می‌پذیرم؛ تغییر را باید ببینم. برای من تغییر یعنی … (یک چیز مشخص و قابل دیدن).»"],
+       ["قاطع","«دیگر سر این موضوع بحث نمی‌کنم. اگر دوباره تکرار شد، من … (کاری که واقعاً می‌کنی).»"]],
+ rule:"قاعده: مرز را با کاری که خودت می‌کنی بگو، نه با کاری که او باید بکند. و فقط چیزی را بگو که اجرایش می‌کنی.",e:"boundaries"},
+
+{id:"no",g:"الگوی تکراری",t:"می‌خواهی «نه» بگویی و می‌ترسی",
+ w:"«نه»ی توضیح‌دار، دعوت به مذاکره است. هر دلیلی که بیاوری، یک در برای رد شدن باز می‌کند.",
+ bad:[["«نمی‌توانم چون…» و بعد سه دلیل","هر دلیل را می‌شود خنثی کرد؛ آخرش مجبور می‌شوی دلیل بسازی."],
+      ["«بگذار ببینم…» (و بعد سکوت)","اجتناب، همان بله است با تأخیر، و اعتماد را هم می‌برد."]],
+ good:[["نرم","«این یکی را نمی‌توانم.»"],
+       ["روشن","«نه، این از من برنمی‌آید. امیدوارم کسی را پیدا کنی.»"],
+       ["با جایگزین","«این را نه، ولی می‌توانم … (چیزی که واقعاً می‌خواهی) .»"]],
+ rule:"قاعده: «نه» یک جملهٔ کامل است. اگر توضیح دادی، یک توضیح، نه سه تا. و تکرارش کن بی‌آنکه عوضش کنی.",e:"assertiveness"},
+
+{id:"boss",g:"سر کار",t:"رئیس یا همکارِ ارشد کار اضافه می‌دهد",
+ w:"در کار، «نه»ی خالی گران تمام می‌شود. «نه» را به اولویت تبدیل کن — تصمیم را برگردان به خودش.",
+ bad:[["«باشه حتماً.» (و بعد شب‌کاری)","یک بار که جا باز شود، همان می‌شود پیش‌فرض."],
+      ["«وقت ندارم.»","بی‌مدرک است و به نظر بی‌میلی می‌آید، نه ظرفیت."]],
+ good:[["روشن","«الان روی الف و ب هستم که تا پنج‌شنبه باید تمام شوند. این کار را کجای این دو بگذارم؟»"],
+       ["با گزینه","«می‌توانم این را تا دوشنبه بدهم، یا اگر فوری است، ب را عقب بیندازم. کدام؟»"],
+       ["مکتوب","همین را بعد از جلسه در یک پیام کوتاه بنویس: «طبق صحبتمان، ب تا دوشنبه عقب افتاد.»"]],
+ rule:"قاعده: در محیط کار تصمیم را به کسی برگردان که اختیارش را دارد، و تصمیم را بنویس.",e:"control-at-work"},
+
+{id:"parent",g:"خانواده",t:"پدر یا مادر دربارهٔ زندگی‌ات تصمیم می‌گیرد",
+ w:"هدف، قانع‌کردن نیست؛ هدف این است که موضوع از روی میز برداشته شود بی‌آنکه رابطه قطع شود. تکرارِ آرام، از استدلال بهتر کار می‌کند.",
+ bad:[["«تو هیچ‌وقت نفهمیدی من چی می‌خواهم.»","دعوای سی‌ساله را باز می‌کند و موضوع امروز گم می‌شود."],
+      ["توضیح مفصل برای گرفتن تأیید","هر توضیح، یک جای تازه برای ورود می‌دهد؛ و تأیید معمولاً نمی‌آید."]],
+ good:[["نرم","«می‌دانم نگرانی. تصمیمم را گرفته‌ام.»"],
+       ["روشن","«دربارهٔ این یکی مشورت نمی‌خواهم. دوست دارم از بقیهٔ چیزها حرف بزنیم.»"],
+       ["تکرار","همان جمله را هر بار بی‌تغییر بگو. بحث تازه باز نکن."]],
+ rule:"قاعده: یک جمله بساز و عوضش نکن. تغییرِ جمله یعنی در هنوز باز است.",e:"control-in-family"},
+
+{id:"near",g:"اطرافی",t:"کسی به تو می‌گوید در رابطهٔ سختی است",
+ w:"اولین جملهٔ تو تعیین می‌کند که دفعهٔ بعد هم حرف می‌زند یا نه. قضاوتِ آدم غایب، معمولاً در را می‌بندد.",
+ bad:[["«چرا ولش نمی‌کنی؟»","سؤالی که جواب ندارد و فقط شرم می‌آورد؛ و خروج، تصمیمِ یک‌شبه نیست."],
+      ["«من از اول می‌دانستم این آدم…»","حالا باید از او دفاع کند، نه از خودش."],
+      ["«یا او یا ما.»","همان تنگ‌کردن دایره‌ای است که خودِ الگو می‌کند. معمولاً تو حذف می‌شوی."]],
+ good:[["اول","«آنچه گفتی به نظرم سخت بود. ممنون که گفتی.»"],
+       ["بعد","«می‌خواهی دربارهٔ راه‌ها حرف بزنیم، یا فقط گوش بدهم؟»"],
+       ["بعدتر","«هر وقت بخواهی من هستم — چه بمانی چه نه.»"]],
+ rule:"قاعده: باور کردن، خودش مداخله است. و یک پیشنهاد عملی (جا، نگه‌داری بچه، پول کرایه) بیشتر از ده نصیحت وزن دارد.",e:"around-them"},
+
+{id:"after",g:"پس از جدایی",t:"بعد از تمام‌شدن، پیام می‌دهد",
+ w:"هر جواب، یک در باز است. اگر لازم است رابطه‌ای بماند (بچه، کار، فامیل)، آن را به حداقلِ کاری برسان.",
+ bad:[["جواب بلند و توضیحی","توضیح، گفت‌وگو را باز نگه می‌دارد و دور تازه را شروع می‌کند."],
+      ["بی‌جواب گذاشتن وقتی موضوع کاری است","در موضوع‌های مشترک، سکوت بعداً به ضرر خودت تفسیر می‌شود."]],
+ good:[["کاری","«دربارهٔ بچه‌ها: جمعه ساعت پنج. چیز دیگری لازم نیست.»"],
+       ["روشن","«دربارهٔ گذشته حرف نمی‌زنم. اگر موضوع اداری هست، بنویس.»"],
+       ["بدون جواب","برای پیامی که فقط احساس را هدف گرفته، جواب لازم نیست. ذخیره‌اش کن."]],
+ rule:"قاعده: ارتباط را به موضوع، زمان و کانال محدود کن؛ و پیام‌ها را نگه دار، به‌خصوص در دورهٔ جدایی.",e:"leaving"},
+
+{id:"repair",g:"وقتی خودم",t:"خودم فهمیدم زیاده‌روی کردم",
+ w:"مهم‌تر از خطا نکردن، ترمیم است. عذرخواهیِ مشخص و بی‌«ولی»، تنها چیزی است که کار می‌کند.",
+ bad:[["«ببخشید اگر ناراحت شدی.»","«اگر» عذرخواهی را به شک دربارهٔ احساس طرف تبدیل می‌کند."],
+      ["«ببخشید، ولی تو هم…»","هر چه پس از «ولی» بیاید، عذرخواهی را پاک می‌کند."],
+      ["«من آدم بدی‌ام.»","گفت‌وگو را از جبران می‌برد به دلداریِ تو."]],
+ good:[["مشخص","«وسط حرفت پریدم و تحقیرآمیز بود. کار من بود. معذرت می‌خواهم.»"],
+       ["با جبران","«دفعهٔ بعد اگر دیدی دارم همین را می‌کنم، بگو «دوباره».»"],
+       ["جلوی بچه","اگر جلوی بچه بوده، جلوی خودش عذرخواهی کن."]],
+ rule:"قاعده: عذرخواهی = نام‌بردن کار + پذیرفتن مسئولیت + یک چیز مشخص برای دفعهٔ بعد. بدون «اگر»، بدون «ولی».",e:"breaking-cycle"},
+
+{id:"child",g:"وقتی خودم",t:"بچه‌ام ناراحت است و حرف نمی‌زند",
+ w:"راه‌حل‌دادن زودهنگام، گفت‌وگو را می‌بندد. نام‌بردن احساس، بازش می‌کند.",
+ bad:[["«چیزی نشده که.»","هیجان را ممنوع می‌کند؛ بچه یاد می‌گیرد حسش را پنهان کند."],
+      ["«من که گفتم این‌طوری می‌شود.»","درستی تو را ثابت می‌کند و رابطه را می‌بندد."],
+      ["«بیا برایت حلش کنم.»","پیام «از پسش برنمی‌آیی» می‌دهد، حتی وقتی از محبت است."]],
+ good:[["نام ببر","«می‌بینم خیلی ناراحتی.» و بعد ساکت بمان."],
+       ["اجازه بگیر","«دوست داری کمکت کنم یا فقط گوش بدهم؟»"],
+       ["بعد","«هر وقت خواستی بگویی، هستم.» و واقعاً باش."]],
+ rule:"قاعده: اول احساس را نام ببر، بعد — اگر خواست — راه‌حل. ده ثانیه سکوت، از ده جملهٔ خوب بهتر است.",e:"psychological-control"}
+];
+
+var groups=[];SIT.forEach(function(s){if(groups.indexOf(s.g)<0)groups.push(s.g)});
+var cur='همه';
+var fb=document.getElementById('f');
+['همه'].concat(groups).forEach(function(g){
+  var b=document.createElement('button');b.type='button';b.textContent=g;
+  b.setAttribute('aria-pressed',g===cur?'true':'false');
+  b.onclick=function(){cur=g;[].forEach.call(fb.children,function(x){x.setAttribute('aria-pressed',x.textContent===g?'true':'false')});draw()};
+  fb.appendChild(b);
+});
+function li(cls,tag,txt,ex){
+  var l=document.createElement('li');
+  if(tag){var t=document.createElement('span');t.className='tag';t.textContent=tag;l.appendChild(t)}
+  var q=document.createElement('q');q.textContent=txt;l.appendChild(q);
+  if(ex){var e=document.createElement('em');e.textContent=ex;l.appendChild(e)}
+  return l;
+}
+function draw(){
+  var c=document.getElementById('cards');c.textContent='';
+  SIT.filter(function(s){return cur==='همه'||s.g===cur}).forEach(function(s){
+    var d=document.createElement('details');d.className='card';
+    var sm=document.createElement('summary');
+    var g=document.createElement('span');g.className='g';g.textContent=s.g;
+    var b=document.createElement('b');b.textContent=s.t;
+    sm.appendChild(g);sm.appendChild(b);d.appendChild(sm);
+    var bd=document.createElement('div');bd.className='body';
+    var p=document.createElement('p');p.className='why0';p.textContent=s.w;bd.appendChild(p);
+    var two=document.createElement('div');two.className='two';
+    var c1=document.createElement('div');c1.className='col bad';
+    var h1=document.createElement('h4');h1.textContent='آنچه معمولاً می‌گوییم';c1.appendChild(h1);
+    var u1=document.createElement('ul');u1.className='l bad';
+    s.bad.forEach(function(x){u1.appendChild(li('bad','',x[0],x[1]))});c1.appendChild(u1);
+    var c2=document.createElement('div');c2.className='col good';
+    var h2=document.createElement('h4');h2.textContent='چه می‌شود گفت';c2.appendChild(h2);
+    var u2=document.createElement('ul');u2.className='l good';
+    s.good.forEach(function(x){u2.appendChild(li('good',x[0],x[1],''))});c2.appendChild(u2);
+    two.appendChild(c1);two.appendChild(c2);bd.appendChild(two);
+    var r=document.createElement('div');r.className='rule';r.textContent=s.rule;bd.appendChild(r);
+    var a=document.createElement('a');a.className='ent';a.href='../entries.html#'+s.e;a.textContent='مدخل مربوط';bd.appendChild(a);
+    d.appendChild(bd);c.appendChild(d);
+  });
+}
+draw();
+</script>
+<style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
+</body>
+</html>
