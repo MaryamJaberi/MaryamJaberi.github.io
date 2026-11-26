@@ -68,6 +68,22 @@ await t("hr reads any own-org department report", assertSucceeds(getDocs(query(c
 await t("hr2 cannot read acme department report", assertFails(getDoc(doc(hr2, "unitreports/ABCD-EFGH-JKLM__uwh"))));
 await t("psy writes department report", assertSucceeds(setDoc(doc(psy, "unitreports/X__u"), { orgId: "acme", unitId: "u" })));
 await t("mgr writes own audit row", assertSucceeds(addDoc(collection(mgr, "audit"), { by: "mgr@acme.nl", at: serverTimestamp(), act: "view" })));
+// action plans
+const plan = { orgId: "acme", roundId: "ABCD-EFGH-JKLM", items: [{ id: "a1", unit: "uwh", action: "x", status: "planned" }], share: false, updatedAt: serverTimestamp(), by: "hr@acme.nl" };
+await t("hr creates own-org plan", assertSucceeds(setDoc(doc(hr, "plans/ABCD-EFGH-JKLM"), plan)));
+await t("hr2 cannot write acme plan", assertFails(setDoc(doc(hr2, "plans/ABCD-EFGH-JKLM"), { ...plan, by: "hr@other.nl" })));
+await t("plan orgId must match round", assertFails(setDoc(doc(hr2, "plans/ABCD-EFGH-JKLM"), { ...plan, orgId: "other" })));
+await t("plan with extra key rejected", assertFails(setDoc(doc(psy, "plans/ABCD-EFGH-JKLM"), { ...plan, secret: 1 })));
+await t("plan for unknown round rejected", assertFails(setDoc(doc(psy, "plans/NOPE"), { ...plan, roundId: "NOPE" })));
+await t("anon cannot read unshared plan", assertFails(getDoc(doc(anon, "plans/ABCD-EFGH-JKLM"))));
+await t("mgr reads own-org plan", assertSucceeds(getDoc(doc(mgr, "plans/ABCD-EFGH-JKLM"))));
+await t("mgr cannot write plan", assertFails(setDoc(doc(mgr, "plans/ABCD-EFGH-JKLM"), { ...plan, by: "mgr@acme.nl" })));
+await t("psy shares plan", assertSucceeds(setDoc(doc(psy, "plans/ABCD-EFGH-JKLM"), { ...plan, share: true })));
+await t("anon reads shared plan", assertSucceeds(getDoc(doc(anon, "plans/ABCD-EFGH-JKLM"))));
+await t("anon cannot list plans", assertFails(getDocs(query(collection(anon, "plans"), where("orgId", "==", "acme")))));
+await t("hr lists own-org plans", assertSucceeds(getDocs(query(collection(hr, "plans"), where("orgId", "==", "acme")))));
+await t("hr cannot delete plan", assertFails(deleteDoc(doc(hr, "plans/ABCD-EFGH-JKLM"))));
+await t("anon cannot write plan", assertFails(setDoc(doc(anon, "plans/ABCD-EFGH-JKLM"), plan)));
 // rounds
 await t("anon can get a round", assertSucceeds(getDoc(doc(anon, "rounds/ABCD-EFGH-JKLM"))));
 await t("anon cannot list rounds", assertFails(getDocs(collection(anon, "rounds"))));

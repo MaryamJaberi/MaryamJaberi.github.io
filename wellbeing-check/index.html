@@ -48,6 +48,10 @@ button.adk:hover{border-color:var(--accent)}
 @media print{body[data-view="admin"] header.bar,body[data-view="admin"] .rvtabs,body[data-view="admin"] button,body[data-view="admin"] footer{display:none!important}}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .utab th.dn{text-align:start;white-space:nowrap;font-weight:500}.utab tr.u0 th.dn{font-weight:700}.utab td.un{color:var(--muted);font-size:.85em}.utab th:not(.dn){min-width:4.6em}
+.say{border:0;background:none;cursor:pointer;font-size:1rem;padding:0 6px;margin-inline-start:4px;opacity:.75}.say:hover{opacity:1}
+.ysi{border:1px solid var(--rule,#e3ded4);border-radius:10px;padding:8px 12px}.ysst{font-size:.8rem;font-weight:700;padding:2px 10px;border-radius:999px;background:var(--low-soft)}.ysst.mid{background:var(--mid-soft)}.ysst.high{background:var(--high-soft)}
+.pltbl textarea,.pltbl input,.pltbl select{width:100%;min-width:110px;font:inherit}.qrsvg svg{width:220px;height:220px}
+@media print{.plbox details{display:block}.plbox button,.plbox [data-share]{display:none}}
 </style></head><body>
 <title>Workplace Wellbeing Check</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -1402,7 +1406,8 @@ window.DOCLIST = [
  {slug:"pilot-agreement", ic:"✎", aud:"mgmt"},
  {slug:"data-processing", ic:"⛨", aud:"mgmt"},
  {slug:"privacy-participants", ic:"☺", aud:"staff"},
- {slug:"staff-announcement", ic:"✉", aud:"hr"}
+ {slug:"staff-announcement", ic:"✉", aud:"hr"},
+ {slug:"works-council", ic:"⚖", aud:"mgmt"}
 ];
 Object.assign(T.en, {
  nProc:"How it works", 
@@ -1428,7 +1433,7 @@ Object.assign(T.en, {
  empT:"For employees: what happens to your answers",
  emp:["You are never asked for your name, e-mail address or staff number.","Your manager and HR only ever see results of groups of 10 or more people.","You see your own result immediately, with two practical tips. Only you see it.","Taking part is voluntary. You can stop or skip a question at any time.","If you send a response code, send it to SoloNovate, never to your manager or HR."],
  docsT:"Sample documents", docsP:"So you know exactly what you sign before you start. Each document is available in Dutch and English and can be printed or saved as PDF. These are drafts that we finalise together before the pilot.",
- docs:{"pilot-agreement":["Pilot agreement","What the pilot includes, roles, anonymity, price, liability."],"data-processing":["Data processing agreement","GDPR art. 28: which data, security, retention and data breaches."],"privacy-participants":["Privacy notice for participants","In plain language for employees: who sees what and your rights."],"staff-announcement":["Announcement to staff","Template message from management, ready to adapt."]},
+ docs:{"pilot-agreement":["Pilot agreement","What the pilot includes, roles, anonymity, price, liability."],"data-processing":["Data processing agreement","GDPR art. 28: which data, security, retention and data breaches."],"privacy-participants":["Privacy notice for participants","In plain language for employees: who sees what and your rights."],"staff-announcement":["Announcement to staff","Template message from management, ready to adapt."],"works-council":["Works council pack","Safeguards, proposed agreements, RI&E link and a sample consent request for the OR."]},
  aud:{mgmt:"For management", staff:"For employees", hr:"For HR"}, open:"Open",
  rCodeP:"Copy this code and e-mail it to SoloNovate, not to your manager or HR. It contains only answer numbers and your job level, not your name. We do not link your e-mail address to your answers and delete the e-mail after importing the code.", rMail:"E-mail code to SoloNovate",
  faq:T.en.faq.map((x, i) => i === 4 ? ["How are responses collected in the pilot?","Each participant e-mails an anonymous response code (only answer numbers and job level) directly to SoloNovate, never to the employer. SoloNovate deletes those e-mails after importing. For a full roll-out a secure online collection can be set up."] : x),
@@ -1458,7 +1463,7 @@ Object.assign(T.nl, {
  empT:"Voor medewerkers: wat er met uw antwoorden gebeurt",
  emp:["Er wordt nooit naar uw naam, e-mailadres of personeelsnummer gevraagd.","Uw leidinggevende en HR zien alleen uitkomsten van groepen van 10 of meer mensen.","U ziet direct uw eigen resultaat met twee praktische tips. Alleen u ziet dat.","Meedoen is vrijwillig. U kunt altijd stoppen of een vraag overslaan.","Stuurt u een antwoordcode? Stuur die naar SoloNovate, nooit naar uw leidinggevende of HR."],
  docsT:"Voorbeelddocumenten", docsP:"Zodat u vooraf precies weet wat u tekent. Elk document is er in het Nederlands en Engels en kan worden afgedrukt of als pdf bewaard. Het zijn concepten die we vóór de pilot samen afronden.",
- docs:{"pilot-agreement":["Pilotovereenkomst","Wat de pilot omvat, rollen, anonimiteit, prijs, aansprakelijkheid."],"data-processing":["Verwerkersovereenkomst","AVG art. 28: welke gegevens, beveiliging, bewaartermijn en datalekken."],"privacy-participants":["Privacyverklaring voor deelnemers","In gewone taal voor medewerkers: wie wat ziet en uw rechten."],"staff-announcement":["Aankondiging aan medewerkers","Voorbeeldbericht van het management, klaar om aan te passen."]},
+ docs:{"pilot-agreement":["Pilotovereenkomst","Wat de pilot omvat, rollen, anonimiteit, prijs, aansprakelijkheid."],"data-processing":["Verwerkersovereenkomst","AVG art. 28: welke gegevens, beveiliging, bewaartermijn en datalekken."],"privacy-participants":["Privacyverklaring voor deelnemers","In gewone taal voor medewerkers: wie wat ziet en uw rechten."],"staff-announcement":["Aankondiging aan medewerkers","Voorbeeldbericht van het management, klaar om aan te passen."],"works-council":["Pakket voor de OR","Waarborgen, voorgestelde afspraken, relatie met de RI&E en een voorbeeld instemmingsverzoek."]},
  aud:{mgmt:"Voor management", staff:"Voor medewerkers", hr:"Voor HR"}, open:"Openen",
  rCodeP:"Kopieer deze code en mail hem naar SoloNovate, niet naar uw leidinggevende of HR. De code bevat alleen antwoordcijfers en uw functieniveau, niet uw naam. We koppelen uw e-mailadres niet aan uw antwoorden en verwijderen de e-mail na het invoeren.", rMail:"Code mailen naar SoloNovate",
  faq:T.nl.faq.map((x, i) => i === 4 ? ["Hoe worden antwoorden in de pilot verzameld?","Elke deelnemer mailt een anonieme antwoordcode (alleen antwoordcijfers en functieniveau) rechtstreeks naar SoloNovate, nooit naar de werkgever. SoloNovate verwijdert die e-mails na het invoeren. Voor een volledige uitrol kan een beveiligde online verzameling worden ingericht."] : x),
@@ -1488,7 +1493,7 @@ Object.assign(T.fa, {
  empT:"برای کارکنان: با پاسخ‌های شما چه می‌شود",
  emp:["هرگز نام، ایمیل یا شمارهٔ کارمندی شما پرسیده نمی‌شود.","مدیر و منابع انسانی فقط نتیجهٔ گروه‌های ۱۰ نفر و بیشتر را می‌بینند.","نتیجهٔ خودتان را همان لحظه با دو پیشنهاد عملی می‌بینید. فقط خودتان آن را می‌بینید.","شرکت داوطلبانه است. هر وقت خواستید می‌توانید کار را رها کنید یا از پرسشی بگذرید.","اگر کد پاسخ می‌فرستید، آن را برای SoloNovate بفرستید، هرگز برای مدیر یا منابع انسانی."],
  docsT:"سندهای نمونه", docsP:"تا پیش از شروع دقیقاً بدانید چه چیزی را امضا می‌کنید. هر سند به هلندی و انگلیسی موجود است و می‌توان آن را چاپ کرد یا به‌صورت PDF ذخیره کرد. این‌ها پیش‌نویس‌اند و پیش از اجرای آزمایشی با هم نهایی می‌شوند.",
- docs:{"pilot-agreement":["قرارداد اجرای آزمایشی","آنچه اجرای آزمایشی شامل می‌شود، نقش‌ها، ناشناس بودن، هزینه و مسئولیت."],"data-processing":["قرارداد پردازش داده","مادهٔ ۲۸ GDPR: چه داده‌ای، امنیت، مدت نگهداری و نشت داده."],"privacy-participants":["بیانیهٔ حریم خصوصی برای شرکت‌کنندگان","به زبان ساده برای کارکنان: چه کسی چه می‌بیند و حقوق شما."],"staff-announcement":["اطلاعیه به کارکنان","متن نمونهٔ مدیریت، آمادهٔ ویرایش."]},
+ docs:{"pilot-agreement":["قرارداد اجرای آزمایشی","آنچه اجرای آزمایشی شامل می‌شود، نقش‌ها، ناشناس بودن، هزینه و مسئولیت."],"data-processing":["قرارداد پردازش داده","مادهٔ ۲۸ GDPR: چه داده‌ای، امنیت، مدت نگهداری و نشت داده."],"privacy-participants":["بیانیهٔ حریم خصوصی برای شرکت‌کنندگان","به زبان ساده برای کارکنان: چه کسی چه می‌بیند و حقوق شما."],"staff-announcement":["اطلاعیه به کارکنان","متن نمونهٔ مدیریت، آمادهٔ ویرایش."],"works-council":["بستهٔ شورای کارکنان","تضمین‌ها، توافق‌های پیشنهادی، ارتباط با RI&E و نمونهٔ درخواست تأیید برای شورا."]},
  aud:{mgmt:"برای مدیریت", staff:"برای کارکنان", hr:"برای منابع انسانی"}, open:"باز کردن (هلندی / انگلیسی)",
  rCodeP:"این کد را کپی کنید و برای SoloNovate ایمیل کنید، نه برای مدیر یا منابع انسانی. کد فقط عدد پاسخ‌ها و رده را دارد، نه نام شما. ایمیل شما را به پاسخ‌هایتان وصل نمی‌کنیم و پس از وارد کردن کد، ایمیل را پاک می‌کنیم.", rMail:"ایمیل کد به SoloNovate",
  faq:T.fa.faq.map((x, i) => i === 4 ? ["در اجرای آزمایشی پاسخ‌ها چطور جمع می‌شوند؟","هر شرکت‌کننده یک کد پاسخ ناشناس (فقط عدد پاسخ‌ها و رده) را مستقیم برای SoloNovate ایمیل می‌کند، هرگز برای کارفرما. SoloNovate این ایمیل‌ها را پس از وارد کردن کد پاک می‌کند. برای اجرای کامل می‌توان گردآوری آنلاین امن راه انداخت."] : x),
@@ -1945,6 +1950,9 @@ window.XU = {"en":{"tUnit":"Your department or team","tUnitHint":"Results for a 
   T[l].rv = Object.assign({}, T[l].rv || T.en.rv, {unit:X.rvUnit});
   T[l].adRole = Object.assign({}, T[l].adRole || T.en.adRole, {mgr:X.adRoleMgr});
   T[l].adTabs = Object.assign({}, T[l].adTabs || T.en.adTabs, {mgrrep:X.adTabMgr}); } })();
+/* Action plans, response rate, minimum group size, read-aloud, QR (26 Nov 2026). Participant strings in nine languages; admin strings fa/en/nl. */
+window.XA = {"en":{"tSay":"Read aloud","pYS":"You said, we did","pYSHint":"What your organisation is changing after this survey, and how far it has got.","pSt":{"planned":"Planned","doing":"In progress","done":"Done"},"pWhole":"Whole organisation","adMinG":"Minimum group size","adMinGHint":"At least 10. A higher number protects small teams better, but fewer groups will be shown.","adMinGN":"groups ≥ {k}","adInv":"People invited","adInvHint":"Optional. Used to show the response rate.","adPart":"Response rate {p}% ({n} of {i})","adLow50":"Below 50%: for the RI&E work-pressure inventory, add a short group conversation or interviews (Labour Inspectorate guidance).","adSaveInv":"Save","plT":"Action plan (plan van aanpak)","plHint":"Agree with each department what will change, who owns it and by when. Share it so employees see what is done with their answers.","plUnit":"Department","plIssue":"What we heard","plAction":"What we will do","plOwner":"Owner","plDue":"By","plStatus":"Status","plAdd":"Add action","plSave":"Save plan","plShare":"Show to employees (group page)","plSaved":"Plan saved","plCsv":"Download as CSV","plDel":"Remove","plEmpty":"No actions yet.","adQR":"QR code","adQRHint":"Print it and put it where shifts start, so people can join from their phone.","adQRDl":"Download image","adOR":"Works council pack"},"fa":{"tSay":"خواندن با صدا","pYS":"شما گفتید، ما انجام دادیم","pYSHint":"سازمان شما بعد از این سنجش چه چیزهایی را تغییر می‌دهد و تا کجا پیش رفته است.","pSt":{"planned":"برنامه‌ریزی‌شده","doing":"در حال انجام","done":"انجام شد"},"pWhole":"کل سازمان","adMinG":"حداقل اندازهٔ گروه","adMinGHint":"دست‌کم ۱۰. عدد بزرگ‌تر از تیم‌های کوچک بهتر محافظت می‌کند، ولی گروه‌های کمتری نشان داده می‌شوند.","adMinGN":"گروه‌ها ≥ {k}","adInv":"تعداد افراد دعوت‌شده","adInvHint":"اختیاری. برای نشان دادن درصد مشارکت.","adPart":"درصد مشارکت {p}٪ ({n} از {i})","adLow50":"کمتر از ۵۰٪: برای بررسی فشار کاری در RI&E، یک گفتگوی گروهی کوتاه یا مصاحبه اضافه کنید (طبق دستورالعمل بازرسی کار).","adSaveInv":"ذخیره","plT":"برنامهٔ اقدام (plan van aanpak)","plHint":"با هر دپارتمان توافق کنید چه چیزی تغییر می‌کند، مسئولش کیست و تا کی. آن را به کارکنان نشان دهید تا ببینند با پاسخ‌هایشان چه شد.","plUnit":"دپارتمان","plIssue":"آنچه شنیدیم","plAction":"آنچه انجام می‌دهیم","plOwner":"مسئول","plDue":"تا تاریخ","plStatus":"وضعیت","plAdd":"افزودن اقدام","plSave":"ذخیرهٔ برنامه","plShare":"به کارکنان نشان داده شود (صفحهٔ گروهی)","plSaved":"برنامه ذخیره شد","plCsv":"دانلود CSV","plDel":"حذف","plEmpty":"هنوز اقدامی ثبت نشده.","adQR":"کد QR","adQRHint":"چاپش کنید و جایی بگذارید که شیفت شروع می‌شود تا افراد با گوشی وارد شوند.","adQRDl":"دانلود تصویر","adOR":"بستهٔ شورای کارکنان"},"nl":{"tSay":"Voorlezen","pYS":"Jullie zeiden, wij deden","pYSHint":"Wat uw organisatie na deze scan verandert, en hoe ver dat is.","pSt":{"planned":"Gepland","doing":"Bezig","done":"Klaar"},"pWhole":"Hele organisatie","adMinG":"Minimale groepsgrootte","adMinGHint":"Minstens 10. Een hoger getal beschermt kleine teams beter, maar er worden minder groepen getoond.","adMinGN":"groepen ≥ {k}","adInv":"Aantal uitgenodigden","adInvHint":"Optioneel. Om het responspercentage te tonen.","adPart":"Respons {p}% ({n} van {i})","adLow50":"Onder 50%: vul voor de nadere inventarisatie werkdruk in de RI&E aan met een kort groepsgesprek of interviews (werkinstructie Arbeidsinspectie).","adSaveInv":"Opslaan","plT":"Plan van aanpak","plHint":"Spreek per afdeling af wat er verandert, wie eigenaar is en wanneer. Deel het, zodat medewerkers zien wat er met hun antwoorden gebeurt.","plUnit":"Afdeling","plIssue":"Wat we hoorden","plAction":"Wat we doen","plOwner":"Eigenaar","plDue":"Uiterlijk","plStatus":"Status","plAdd":"Actie toevoegen","plSave":"Plan opslaan","plShare":"Tonen aan medewerkers (groepspagina)","plSaved":"Plan opgeslagen","plCsv":"Downloaden als CSV","plDel":"Verwijderen","plEmpty":"Nog geen acties.","adQR":"QR-code","adQRHint":"Print hem en hang hem op waar diensten beginnen, zodat mensen met hun telefoon kunnen meedoen.","adQRDl":"Afbeelding downloaden","adOR":"Pakket voor de OR"},"de":{"tSay":"Vorlesen","pYS":"Ihr habt gesagt, wir haben gehandelt","pYSHint":"Was Ihre Organisation nach dieser Befragung ändert und wie weit sie ist.","pSt":{"planned":"Geplant","doing":"In Arbeit","done":"Erledigt"},"pWhole":"Ganze Organisation"},"fr":{"tSay":"Lire à voix haute","pYS":"Vous avez dit, nous avons fait","pYSHint":"Ce que votre organisation change après cette enquête, et où elle en est.","pSt":{"planned":"Prévu","doing":"En cours","done":"Fait"},"pWhole":"Toute l'organisation"},"es":{"tSay":"Leer en voz alta","pYS":"Ustedes dijeron, nosotros hicimos","pYSHint":"Lo que su organización cambia después de esta encuesta y cuánto ha avanzado.","pSt":{"planned":"Previsto","doing":"En curso","done":"Hecho"},"pWhole":"Toda la organización"},"pl":{"tSay":"Przeczytaj na głos","pYS":"Powiedzieliście, zrobiliśmy","pYSHint":"Co Twoja organizacja zmienia po tej ankiecie i jak daleko już doszła.","pSt":{"planned":"Zaplanowane","doing":"W toku","done":"Zrobione"},"pWhole":"Cała organizacja"},"tr":{"tSay":"Sesli oku","pYS":"Siz söylediniz, biz yaptık","pYSHint":"Kurumunuzun bu anketten sonra neleri değiştirdiği ve ne kadar ilerlediği.","pSt":{"planned":"Planlandı","doing":"Devam ediyor","done":"Tamamlandı"},"pWhole":"Tüm kurum"},"ar":{"tSay":"القراءة بصوت عالٍ","pYS":"قلتم، ففعلنا","pYSHint":"ما تغيّره مؤسستكم بعد هذا الاستبيان، وإلى أين وصلت.","pSt":{"planned":"مخطط","doing":"قيد التنفيذ","done":"تم"},"pWhole":"المؤسسة كلها"}};
+(() => { for(const l in T){ const X = Object.assign({}, window.XA.en, window.XA[l] || {}); for(const k in X) T[l][k] = X[k]; } })();
 const LV = window.LEVELS, DIMS = window.DIMS, WS = window.WS, PACKS = window.PACKS;
 let L = "nl";
 (() => { const qp = (location.search + "&" + (location.hash.split("?")[1] || "")).match(/[?&]lang=([a-z]{2})/);
@@ -2188,6 +2196,7 @@ function renderSelect(){
    admin: everything · psy: organisations (read), rounds, reports and their notes · hr: the published reports of its own organisations.
    HR never sees individual answers; reports are built here with the same suppression rules as the employee group page. */
 const FV = () => firebase.firestore.FieldValue;
+const adQRLib = () => window.qrcode ? Promise.resolve() : new Promise((ok, no) => { const s = document.createElement("script"); s.src = "vendor/qrcode.js"; s.onload = ok; s.onerror = no; document.head.appendChild(s); });
 const ROLE_TABS = {admin:["ov","orgs","rounds","leads","apps","partners","users","data"], psy:["ov","orgs","rounds"], hr:["hrrep"], mgr:["mgrrep"]};
 const adGet = async (col, q) => { let r = DB.collection(col); if(q) r = q(r); const s = await r.get(); return s.docs.map(d => ({id:d.id, ...d.data()})); };
 const adTime = x => x && x.toDate ? x.toDate().getTime() : (x ? new Date(x).getTime() : 0);
@@ -2266,6 +2275,7 @@ const ADT = {
     <label class="f">${t("adF").status}${adSel("o-status", st.map(v => [v, t("adSt").org[v]]), ed && ed.status || "lead")}</label>
     <label class="f">${t("adF").contact}<input type="text" id="o-contact" value="${esc(ed && ed.contact || "")}"></label>
     <label class="f">${t("adF").email}<input type="email" id="o-email" dir="ltr" value="${esc(ed && ed.email || "")}"></label>
+    <label class="f">${t("adMinG")}<input type="number" id="o-min" min="10" max="50" step="1" value="${gK(ed && ed.minGroup)}"><span class="small muted">${t("adMinGHint")}</span></label>
     <label class="f adwide">${t("adF").notes}<textarea id="o-notes">${esc(ed && ed.notes || "")}</textarea></label>
     <label class="f adwide">${t("adUnits")}<span class="small muted">${t("adUnitsHint")}</span><textarea id="o-units" dir="auto" style="min-height:120px;font-family:inherit" placeholder="Operations&#10;  Warehouse&#10;  Transport&#10;Sales">${esc(uText(ed && ed.units || []))}</textarea></label></div>
     <div class="row" style="gap:8px;margin-top:10px"><button class="btn pri sm" type="submit">${t("adSave")}</button>${ed ? `<button class="btn sec sm" type="button" id="o-cancel">${t("adCancel")}</button>` : ""}${ed && ed.id ? `<button class="btn sec sm" type="button" id="o-del">${t("adDelete")}</button>` : ""}</div></form>`;
@@ -2278,7 +2288,7 @@ const ADT = {
   f.onsubmit = async e => { e.preventDefault(); const v = id => document.getElementById(id).value.trim();
     if(!v("o-name")) return;
     const id = ed && ed.id ? ed.id : DB.collection("orgs").doc().id;
-    const data = {name:v("o-name"), sector:v("o-sector"), size:v("o-size"), status:v("o-status"), contact:v("o-contact"), email:v("o-email").toLowerCase(), notes:v("o-notes"), units:uParse(document.getElementById("o-units").value, ed && ed.units), updatedAt:FV().serverTimestamp()};
+    const data = {name:v("o-name"), sector:v("o-sector"), size:v("o-size"), status:v("o-status"), contact:v("o-contact"), email:v("o-email").toLowerCase(), notes:v("o-notes"), minGroup:gK(document.getElementById("o-min").value), units:uParse(document.getElementById("o-units").value, ed && ed.units), updatedAt:FV().serverTimestamp()};
     if(!(ed && ed.id)) data.createdAt = FV().serverTimestamp();
     try{ await DB.doc("orgs/" + id).set(data, {merge:true}); adAudit(ed && ed.id ? "org.update" : "org.create", id); ADM.sel.org = null; toast(t("adSaved")); ADT.orgs(el); }catch(err){ adErr(err); } };
  },
@@ -2291,22 +2301,26 @@ const ADT = {
   const form = !isA ? "" : `<form class="card adform" id="rd-f"><h3>${t("adNewRound")}</h3>${orgs.length ? "" : `<p class="small">${t("adNeedOrg")}</p>`}<div class="adgrid">
     <label class="f">${t("adCol").org}${adSel("r-org", orgs.map(o => [o.id, o.name]), "")}</label>
     <label class="f">${t("adCol").title}<input type="text" id="r-title" placeholder="${esc(t("adTitleHint"))}"></label>
+    <label class="f">${t("adInv")}<input type="number" id="r-inv" min="0" max="100000" step="1"><span class="small muted">${t("adInvHint")}</span></label>
     <fieldset class="adwide"><legend>${t("tPack")}</legend><div class="chips">${Object.keys(PACKS).map((p, i) => `<label class="selc"><input type="radio" name="r-pk" value="${p}"${i ? " checked" : ""}><span>${PACKS[p][L] || PACKS[p].en} · ~${num(PACKS[p].min)} ${t("selMin")}</span></label>`).join("")}</div></fieldset>
     <fieldset class="adwide"><legend>${t("pLevels")}</legend><div class="chips">${LV.map(l => `<label class="selc"><input type="checkbox" name="r-lv" value="${l.id}"${l.id !== "student" ? " checked" : ""}><span>${l[L] || l.en}</span></label>`).join("")}</div></fieldset>
     <fieldset class="adwide"><legend>${t("adUnits")}</legend><div class="chips"><label class="selc"><input type="checkbox" id="r-askU" checked><span>${t("adAskUnit")}</span></label><label class="selc"><input type="checkbox" id="r-shareU"><span>${t("adShareUnits")}</span></label></div><p class="small muted" id="r-unote" style="margin:6px 0 0"></p></fieldset></div>
     <div class="row" style="margin-top:10px"><button class="btn pri sm" type="submit"${orgs.length ? "" : " disabled"}>${t("pCreate")}</button></div></form>`;
   const card = r => { const rep = reports.find(x => x.id === r.id), open = (r.status || "open") === "open", n = ADM.resp[r.id];
     return `<article class="card adround" id="rd-${r.id}"><div class="row" style="justify-content:space-between;gap:8px;align-items:baseline"><div><b>${esc(r.org || adOrgName(orgs, r.orgId))}</b> · ${esc(r.title || "")} ${adStatus("round", r.status || "open")}</div><span class="pill" dir="ltr">${esc(r.id)}</span></div>
-     <p class="small muted" style="margin:4px 0 8px">${adDate(r.createdAt)} · ${esc(PACKS[r.pack] ? (PACKS[r.pack][L] || PACKS[r.pack].en) : (r.pack || ""))}${(r.units || []).length ? " · " + fillT("adUnitsN", {n:r.units.length}) : ""}${rep ? ` · ${fillT("adRepV", {v:rep.version || 1, n:rep.n || 0, d:adDate(rep.publishedAt)})}` : ""}</p>
+     <p class="small muted" style="margin:4px 0 8px">${adDate(r.createdAt)} · ${esc(PACKS[r.pack] ? (PACKS[r.pack][L] || PACKS[r.pack].en) : (r.pack || ""))}${(r.units || []).length ? " · " + fillT("adUnitsN", {n:r.units.length}) : ""} · ${fillT("adMinGN", {k:gK(r.minGroup)})}${rep ? ` · ${fillT("adRepV", {v:rep.version || 1, n:rep.n || 0, d:adDate(rep.publishedAt)})}` : ""}</p>
+     ${(() => { const nn = n != null ? n : rep && rep.n; return r.invited && nn != null ? `<p class="small" style="margin:0 0 8px">${fillT("adPart", {p:Math.round(nn / r.invited * 100), n:nn, i:r.invited})}${nn / r.invited < .5 ? " — " + t("adLow50") : ""}</p>` : ""; })()}
      <div class="small">${t("aJoin")}</div><div class="code">${esc(adBase() + "#join-" + r.id)}</div>
      <div class="small" style="margin-top:6px">${t("gLink")}${CL()}</div><div class="code">${esc(adBase() + "#group-" + r.id)}</div>
      <div class="row" style="gap:8px;flex-wrap:wrap;margin-top:10px">
       <button class="btn sec sm" data-count="${r.id}">${n == null ? t("adCount") : fillT("adCountN", {n})}</button>
       <button class="btn pri sm" data-build="${r.id}">${rep ? t("adRebuild") : t("adBuild")}</button>
+      <button class="btn sec sm" data-qr="${r.id}">${t("adQR")}</button>
+      ${isA ? `<span class="row" style="gap:4px"><input type="number" min="0" style="width:90px" data-invv="${r.id}" value="${r.invited || ""}" placeholder="${esc(t("adInv"))}" aria-label="${esc(t("adInv"))}"><button class="btn sec sm" data-inv="${r.id}">${t("adSaveInv")}</button></span>` : ""}
       ${isA ? `<button class="btn sec sm" data-toggle="${r.id}">${open ? t("adClose") : t("adReopen")}</button><button class="btn sec sm" id="del-${r.id}" data-purge="${r.id}">${t("adPurge")}</button>` : ""}
      </div><div id="out-${r.id}" style="margin-top:10px"></div>
      ${rep ? `<details class="more"><summary>${t("adSeeRep")}</summary><div style="margin-top:10px">${gBody(rep.agg, null)}</div>
-       <label class="f" style="margin-top:12px">${t("adNotes")}<textarea data-notes="${r.id}">${esc(rep.notes || "")}</textarea></label><button class="btn sec sm" style="margin-top:6px" data-savenotes="${r.id}">${t("adSave")}</button></details>` : ""}
+       <label class="f" style="margin-top:12px">${t("adNotes")}<textarea data-notes="${r.id}">${esc(rep.notes || "")}</textarea></label><button class="btn sec sm" style="margin-top:6px" data-savenotes="${r.id}">${t("adSave")}</button></details><div class="plbox" data-plan="${esc(r.id)}" data-org="${esc(r.orgId || "")}" data-edit="1"></div>` : ""}
     </article>`; };
   el.innerHTML = form + `<h3 class="sellayer">${t("adTabs").rounds} (${num(rounds.length)})</h3><p class="small muted">${fillT("adRule", {a:G_MIN_ALL, b:G_MIN_GRP})}</p><div style="display:grid;gap:12px">${rounds.map(card).join("") || `<p class="muted">${t("adEmpty")}</p>`}</div>`;
   const f = document.getElementById("rd-f");
@@ -2314,17 +2328,24 @@ const ADT = {
   if(f){ document.getElementById("r-org").onchange = unote; unote(); }
   if(f) f.onsubmit = async e => { e.preventDefault(); const orgId = document.getElementById("r-org").value; if(!orgId) return;
     const id = gNewKey(), fd = new FormData(f), ou = (orgs.find(o => o.id === orgId) || {}).units || [], ask = document.getElementById("r-askU").checked && ou.length > 0;
-    try{ await DB.doc("rounds/" + id).set({orgId, org:adOrgName(orgs, orgId), title:document.getElementById("r-title").value.trim(), pack:f.querySelector('input[name="r-pk"]:checked').value, levels:[...f.querySelectorAll('input[name="r-lv"]:checked')].map(i => i.value), units:ask ? ou : [], unitIds:ask ? ou.map(u => u.id) : [], askUnits:ask, shareUnits:ask && document.getElementById("r-shareU").checked, m:new Date().toISOString().slice(0, 7), status:"open", createdAt:FV().serverTimestamp(), by:ME.email});
+    try{ await DB.doc("rounds/" + id).set({orgId, org:adOrgName(orgs, orgId), title:document.getElementById("r-title").value.trim(), pack:f.querySelector('input[name="r-pk"]:checked').value, levels:[...f.querySelectorAll('input[name="r-lv"]:checked')].map(i => i.value), units:ask ? ou : [], unitIds:ask ? ou.map(u => u.id) : [], askUnits:ask, shareUnits:ask && document.getElementById("r-shareU").checked, minGroup:gK((orgs.find(o => o.id === orgId) || {}).minGroup), invited:Math.max(0, Math.round(+document.getElementById("r-inv").value) || 0), m:new Date().toISOString().slice(0, 7), status:"open", createdAt:FV().serverTimestamp(), by:ME.email});
       adAudit("round.create", id); toast(id); ADT.rounds(el); }catch(err){ adErr(err); } };
   const load = async id => { const s = await DB.collection("responses").where("r", "==", id).get(); const list = gUnique(s.docs.map(d => d.data())); ADM.resp[id] = list.length; return {list, ids:s.docs.map(d => d.id)}; };
+  el.querySelectorAll(".plbox").forEach(b => planBox(b));
+  el.querySelectorAll("[data-inv]").forEach(b => b.onclick = async () => { const id = b.dataset.inv, v = Math.max(0, Math.round(+el.querySelector(`[data-invv="${id}"]`).value) || 0);
+    try{ await DB.doc("rounds/" + id).set({invited:v}, {merge:true}); const rp = reports.find(x => x.id === id); if(rp) await DB.doc("reports/" + id).set({invited:v}, {merge:true}); adAudit("round.invited", id); toast(t("adSave") + " ✓"); ADT.rounds(el); }catch(e){ adErr(e); } });
+  el.querySelectorAll("[data-qr]").forEach(b => b.onclick = async () => { const id = b.dataset.qr, out = document.getElementById("out-" + id), url = adBase() + "#join-" + id;
+    try{ await adQRLib(); const q = qrcode(0, "M"); q.addData(url); q.make();
+      out.innerHTML = `<div class="card qrcard" style="text-align:center"><div class="qrsvg">${q.createSvgTag(6, 12)}</div><div class="code" dir="ltr" style="margin-top:6px">${esc(url)}</div><p class="small muted">${t("adQRHint")}</p><a class="btn sec sm" download="qr-${esc(id)}.gif" href="${q.createDataURL(8, 16)}">${t("adQRDl")}</a></div>`; }catch(e){ adErr(e); } });
   el.querySelectorAll("[data-count]").forEach(b => b.onclick = async () => { try{ const {list} = await load(b.dataset.count); b.textContent = fillT("adCountN", {n:list.length}); }catch(e){ adErr(e); } });
   el.querySelectorAll("[data-build]").forEach(b => b.onclick = async () => { const id = b.dataset.build, r = rounds.find(x => x.id === id), out = document.getElementById("out-" + id);
     try{ const {list} = await load(id);
-      if(list.length < G_MIN_ALL){ out.innerHTML = `<p class="small">${fillT("aLow", {n:list.length, a:G_MIN_ALL})}</p>`; return; }
+      const kk = gK(r.minGroup), minAll = Math.max(G_MIN_ALL, 2 * kk);
+      if(list.length < minAll){ out.innerHTML = `<p class="small">${fillT("aLow", {n:list.length, a:minAll})}</p>`; return; }
       const old = reports.find(x => x.id === id);
-      if(old && list.length - (old.n || 0) < G_MIN_GRP){ out.innerHTML = `<p class="small">${fillT("aSoon", {x:Math.max(0, list.length - (old.n || 0)), b:G_MIN_GRP})}</p>`; return; }
-      const agg = gAggregate(list, r.units || [], old && old.agg), version = ((old && old.version) || 0) + 1;
-      await DB.doc("reports/" + id).set({orgId:r.orgId || "", roundId:id, org:r.org || "", title:r.title || "", agg, n:agg.n, version, notes:(old && old.notes) || "", publishedAt:FV().serverTimestamp(), by:ME.email});
+      if(old && list.length - (old.n || 0) < kk){ out.innerHTML = `<p class="small">${fillT("aSoon", {x:Math.max(0, list.length - (old.n || 0)), b:kk})}</p>`; return; }
+      const agg = gAggregate(list, r.units || [], old && old.agg, kk), version = ((old && old.version) || 0) + 1;
+      await DB.doc("reports/" + id).set({orgId:r.orgId || "", roundId:id, org:r.org || "", title:r.title || "", agg, n:agg.n, invited:r.invited || 0, version, notes:(old && old.notes) || "", publishedAt:FV().serverTimestamp(), by:ME.email});
       const shared = {...agg}; if(!r.shareUnits) delete shared.units;
       await DB.doc("groupfiles/" + await gHash(id)).set(await gEncrypt(id, shared));
       const us = agg.units || []; let nu = 0;
@@ -2429,7 +2450,7 @@ const ADT = {
     <h3 class="sellayer">${t("adAuditT")}</h3>` + adTbl([t("adCol").date, t("adEmail"), t("adCol").act, t("adCol").ref], audit.map(a => `<tr><td>${adDate(a.at)}</td><td dir="ltr">${esc(a.by || "")}</td><td dir="ltr">${esc(a.act || "")}</td><td dir="ltr" class="small">${esc(a.ref || "")}</td></tr>`));
   const dl = (name, obj) => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(obj, (k, v) => v && v.toDate ? v.toDate().toISOString() : v, 2)], {type:"application/json"})); a.download = name; document.body.appendChild(a); a.click(); a.remove(); };
   const day = new Date().toISOString().slice(0, 10);
-  document.getElementById("ex-all").onclick = async () => { try{ const cols = ["orgs", "rounds", "reports", "unitreports", "leads", "applications", "partners", "members"], o = {}; for(const c of cols) o[c] = await adGet(c); dl(`wellbeing-export-${day}.json`, o); adAudit("export.all", day); }catch(e){ adErr(e); } };
+  document.getElementById("ex-all").onclick = async () => { try{ const cols = ["orgs", "rounds", "reports", "unitreports", "plans", "leads", "applications", "partners", "members"], o = {}; for(const c of cols) o[c] = await adGet(c); dl(`wellbeing-export-${day}.json`, o); adAudit("export.all", day); }catch(e){ adErr(e); } };
   document.getElementById("ex-resp").onclick = async () => { try{ dl(`wellbeing-responses-${day}.json`, await adGet("responses")); adAudit("export.responses", day); }catch(e){ adErr(e); } };
   document.getElementById("fd-go").onclick = async () => { const em = document.getElementById("fd-em").value.trim().toLowerCase(), out = document.getElementById("fd-out"); if(!em) return;
     try{ const hits = []; for(const [c, f] of [["leads", "email"], ["applications", "email"], ["partners", "email"], ["orgs", "email"]]){ (await adGet(c, r => r.where(f, "==", em))).forEach(x => hits.push([c, x.id])); }
@@ -2447,10 +2468,12 @@ const ADT = {
     const reps = adNewest(await adGet("reports", r => r.where("orgId", "==", o)));
     parts.push(`<section class="blk"><h2 style="font-size:1.3rem">${esc(name)}</h2>${reps.length ? reps.map(r => `<article class="card" style="margin-top:12px"><div class="row" style="justify-content:space-between;gap:8px"><b>${esc(r.title || "")}</b><span class="small muted">${fillT("adRepV", {v:r.version || 1, n:r.n || 0, d:adDate(r.publishedAt)})}</span></div>
       <div style="margin-top:10px">${gBody(r.agg, null)}</div>${r.notes ? `<div class="callout" style="margin-top:12px"><b>${t("adNotesFor")}</b><p style="margin:6px 0 0;white-space:pre-wrap">${esc(r.notes)}</p></div>` : ""}
-      <p class="small muted" style="margin-top:10px">${fillT("gRule", {a:G_MIN_ALL, b:G_MIN_GRP})}</p></article>`).join("") : `<p class="muted">${t("adNoRep")}</p>`}</section>`);
+      ${r.invited ? `<p class="small" style="margin-top:8px">${fillT("adPart", {p:Math.round(r.n / r.invited * 100), n:r.n, i:r.invited})}${r.n / r.invited < .5 ? " — " + t("adLow50") : ""}</p>` : ""}
+      <p class="small muted" style="margin-top:10px">${fillT("gRule", {a:G_MIN_ALL, b:gK(r.agg && r.agg.k)})}</p><div class="plbox" data-plan="${esc(r.id)}" data-org="${esc(o)}" data-edit="1"></div></article>`).join("") : `<p class="muted">${t("adNoRep")}</p>`}</section>`);
   }
   el.innerHTML = (parts.join("") || `<p class="muted">${t("adNoRep")}</p>`) + `<p style="margin-top:14px"><button class="btn sec sm" id="hr-print">${t("print")}</button></p>`;
   document.getElementById("hr-print").onclick = () => window.print();
+  el.querySelectorAll(".plbox").forEach(b => planBox(b));
   adAudit("hr.view", ME.orgs.join(","));
  },
 
@@ -2460,9 +2483,10 @@ const ADT = {
   for(const o of ME.orgs) for(let i = 0; i < ME.units.length; i += 10) reps.push(...await adGet("unitreports", r => r.where("orgId", "==", o).where("unitId", "in", ME.units.slice(i, i + 10))));
   adNewest(reps);
   el.innerHTML = (reps.length ? reps.map(r => `<article class="card" style="margin-top:12px"><div class="row" style="justify-content:space-between;gap:8px"><b>${esc(r.org || "")} › ${esc(r.path || r.name || "")}</b><span class="small muted">${fillT("adRepV", {v:r.version || 1, n:r.n || 0, d:adDate(r.publishedAt)})}</span></div><p class="small muted" style="margin:2px 0 0">${esc(r.title || "")}</p>
-    <div style="margin-top:10px">${gBody(r.agg, null)}</div><p class="small muted" style="margin-top:10px">${fillT("gRule", {a:G_MIN_ALL, b:G_MIN_GRP})}</p></article>`).join("") : `<p class="muted">${t("adNoUnitRep")}</p>`)
+    <div style="margin-top:10px">${gBody(r.agg, null)}</div><p class="small muted" style="margin-top:10px">${fillT("gRule", {a:G_MIN_ALL, b:gK(r.agg && r.agg.k)})}</p><div class="plbox" data-plan="${esc(r.roundId)}" data-org="${esc(r.orgId)}" data-only="${esc(r.unitId)}"></div></article>`).join("") : `<p class="muted">${t("adNoUnitRep")}</p>`)
     + `<p style="margin-top:14px"><button class="btn sec sm" id="mg-print">${t("print")}</button></p>`;
   document.getElementById("mg-print").onclick = () => window.print();
+  el.querySelectorAll(".plbox").forEach(b => planBox(b));
   adAudit("mgr.view", ME.units.join(","));
  }
 };
@@ -2618,7 +2642,7 @@ function renderTake(){
     ${S && S.started ? `<div class="callout care" style="margin-top:16px"><div class="row" style="justify-content:space-between"><b>${t("tResume")}</b><button class="btn sec" id="restart">${t("tRestart")}</button></div></div>` : ""}
     <form id="f0" style="margin-top:24px">
       <fieldset><legend>${t("tLevel")}</legend><p class="small muted" style="margin:-4px 0 10px">${t("tLevelHint")}</p><div class="choice">${levels.map((l, i) => `<label><input type="radio" name="lv" value="${l.id}" ${i === 0 && levels.length === 1 ? "checked" : ""} required><span>${l[L]}</span></label>`).join("")}</div></fieldset>
-      ${UNITS.length ? `<fieldset><legend>${t("tUnit")}</legend><p class="small muted" style="margin:-4px 0 10px">${fillT("tUnitHint", {b:G_MIN_GRP})}</p><div id="unitpick"></div></fieldset>` : ""}
+      ${UNITS.length ? `<fieldset><legend>${t("tUnit")}</legend><p class="small muted" style="margin:-4px 0 10px">${fillT("tUnitHint", {b:gK(ROUND && ROUND.minGroup)})}</p><div id="unitpick"></div></fieldset>` : ""}
       <fieldset><legend>${t("tPack")}</legend><div class="choice">${packs.map((p, i) => `<label><input type="radio" name="pk" value="${p}" ${i === 0 ? "checked" : ""}><span><b>${PACKS[p][L]}</b><small>${PACKS[p].dims.map(d => dn(dimOf(d))).join(SEP())} · ${num(nItems(p))} ${t("tItems")} · ${L === "fa" ? "حدود " : "≈"}${num(PACKS[p].min)} ${t("tMin")}</small></span></label>`).join("")}</div></fieldset>
       <div class="choice"><label><input type="checkbox" name="ok" required><span>${t("tConsent")}</span></label></div>
       <div class="nav2"><span></span><button class="btn pri" type="submit">${t("tStart")}</button></div>
@@ -2634,14 +2658,18 @@ function renderQ(){
   const k = I.max - I.min + 1; S.a[id] = S.a[id] || new Array(I.items.length).fill(null);
   const done = list.slice(0, S.step).reduce((s, i) => s + INST[i].items.length, 0) + S.a[id].filter(x => x != null).length;
   const total = list.reduce((s, i) => s + INST[i].items.length, 0);
+  const SAY = "speechSynthesis" in window && typeof SpeechSynthesisUtterance === "function";
   el.innerHTML = `<div class="take"><div class="qhead"><div class="row" style="justify-content:space-between"><b>${t("tPart")} ${num(S.step + 1)} ${t("tOf")} ${num(list.length)}${CL()} ${dn(DIMS.find(D => D.inst === id))}</b><span class="small muted">${num(done)} ${t("tOf")} ${num(total)}</span></div><div class="prog"><i style="width:${done / total * 100}%"></i></div></div>
     <p class="small muted" style="margin:14px 0 0">${esc(tx.name)}</p><p class="muted" style="margin:4px 0 0">${esc(tx.intro)}</p>
-    <div id="items">${tx.items.map((q, i) => `<div class="item" id="q${i}"><p class="qt"><span class="n">${num(i + 1)}</span><span>${esc(q)}</span></p>
+    <div id="items">${tx.items.map((q, i) => `<div class="item" id="q${i}"><p class="qt"><span class="n">${num(i + 1)}</span><span>${esc(q)}</span>${SAY ? `<button type="button" class="say" data-say="${i}" aria-label="${esc(t("tSay"))}" title="${esc(t("tSay"))}">🔊</button>` : ""}</p>
       <div class="scale" role="radiogroup" aria-label="${esc(q)}" style="--k:${k}">${Array.from({length:k}, (_, j) => { const v = I.min + j; return `<button type="button" class="opt" role="radio" aria-checked="${S.a[id][i] === v}" data-i="${i}" data-v="${v}" aria-label="${num(v)}${tx.anchors[j] ? " — " + esc(tx.anchors[j]) : ""}">${num(v)}</button>`; }).join("")}</div>
       <div class="anch"><span>${esc(tx.anchors[0])}</span><span>${esc(tx.anchors[tx.anchors.length - 1])}</span></div></div>`).join("")}</div>
     ${t("tUnval") && S.step === 0 ? `<p class="unval small">${t("tUnval")}</p>` : ""}<p class="small muted">${t("tSaved")}</p>
     <div class="nav2">${S.step > 0 ? `<button class="btn sec" id="prev">${t("tPrev")}</button>` : "<span></span>"}<button class="btn pri" id="next">${S.step === list.length - 1 ? t("tFinish") : t("tNext")}</button></div></div>`;
-  el.querySelector("#items").onclick = e => { const b = e.target.closest(".opt"); if(!b) return;
+  el.querySelector("#items").onclick = e => { const sb = e.target.closest(".say");
+    if(sb){ const lang = {fa:"fa-IR", en:"en-GB", nl:"nl-NL", de:"de-DE", fr:"fr-FR", es:"es-ES", pl:"pl-PL", tr:"tr-TR", ar:"ar-SA"}[L] || L, u = new SpeechSynthesisUtterance(tx.items[+sb.dataset.say] + ". " + tx.anchors[0] + " … " + tx.anchors[tx.anchors.length - 1]);
+      u.lang = lang; const v = speechSynthesis.getVoices().find(x => x.lang && x.lang.toLowerCase().startsWith(L)); if(v) u.voice = v; u.rate = .95; speechSynthesis.cancel(); speechSynthesis.speak(u); return; }
+    const b = e.target.closest(".opt"); if(!b) return;
     const i = +b.dataset.i; S.a[id][i] = +b.dataset.v; store.set("sj-run", S);
     b.parentNode.querySelectorAll(".opt").forEach(o => o.setAttribute("aria-checked", o === b));
     document.getElementById("q" + i).classList.remove("miss");
@@ -2665,7 +2693,10 @@ function renderQ(){
    an encrypted file r/<sha256(key)>.json that only the key can open. Thresholds follow common statistical
    disclosure-control practice: no output under 20 responses, no group under 10, complementary suppression,
    and a new version only after 10 more responses (prevents working out answers by comparing versions). */
-const G_MIN_ALL = 20, G_MIN_GRP = 10;
+const G_MIN_ALL = 20, G_MIN_BASE = 10; let G_MIN_GRP = G_MIN_BASE;
+/* An organisation may raise (never lower) the minimum group size; it is stored on the round and on the report (agg.k). */
+const gK = k => Math.min(50, Math.max(G_MIN_BASE, Math.round(+k) || G_MIN_BASE));
+function gWithK(k, fn){ const p = G_MIN_GRP; G_MIN_GRP = gK(k); try{ return fn(); } finally{ G_MIN_GRP = p; } }
 const fillT = (k, o) => t(k).replace(/\{(\w+)\}/g, (_, x) => o[x] != null ? (typeof o[x] === "number" ? num(o[x]) : o[x]) : "");
 const b64 = u8 => { let s = ""; u8.forEach(c => s += String.fromCharCode(c)); return btoa(s); };
 const unb64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
@@ -2678,7 +2709,8 @@ async function gDecrypt(key, f){ const pt = await crypto.subtle.decrypt({name:"A
 async function gFetch(key){ if(DB && FB_ON){ try{ const s = await DB.doc("groupfiles/" + await gHash(key)).get(); if(s.exists) return gDecrypt(key, s.data()); }catch(e){} } const r = await fetch("r/" + await gHash(key) + ".json", {cache:"no-store"}); if(r.status === 404) return null; if(!r.ok) throw new Error("http " + r.status); return gDecrypt(key, await r.json()); }
 const gNewKey = () => { const A = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", r = crypto.getRandomValues(new Uint8Array(12)); const x = [...r].map(v => A[v % 32]).join(""); return x.slice(0, 4) + "-" + x.slice(4, 8) + "-" + x.slice(8); };
 const gUnique = list => { const seen = new Set(); return list.filter(o => { const k = JSON.stringify([o.lv, o.u || "", o.a]); if(seen.has(k)) return false; seen.add(k); return true; }); };
-function gAggregate(list, units, prev){
+function gAggregate(list, units, prev, k){ return gWithK(k, () => ({...gAggregate0(list, units, prev), k:gK(k)})); }
+function gAggregate0(list, units, prev){
   const rows = rowsFromResp(list);
   const agg = gAggOne;
   const all = agg(rows); all.sub = {};
@@ -2794,7 +2826,8 @@ function unitPicker(box, units, done){
   paint(); done("");
 }
 const gLvName = id => id === "other" ? t("gOther") : (LV.find(l => l.id === id) || {})[L] || id;
-function gBody(G, mine){
+function gBody(G, mine){ return gWithK(G && G.k, () => gBody0(G, mine)); }
+function gBody0(G, mine){
   const ds = DIMS.filter(D => G.all.d[D.id] != null);
   const cell = v => v == null ? `<td class="na">–</td>` : `<td style="background:${["var(--low-soft)","var(--mid-soft)","var(--high-soft)"][band(v)]}">${num(v)}</td>`;
   return `<p><span class="pill">${fillT("gN", {n:G.n})}</span></p>
@@ -2809,11 +2842,49 @@ async function renderGroup(){
   el.innerHTML = `<div class="take"><div class="kicker">${t("brand")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("gT")}</h1><p class="lead">${t("gP")}</p><div id="gbody" style="margin-top:18px"><p class="muted">…</p></div></div>`;
   let G; try{ G = await gFetch(key); }catch(e){ G = false; }
   const body = document.getElementById("gbody"); if(!body || groupKey !== key || cur !== "group") return;
-  const rule = `<p class="small muted" style="margin-top:14px">${fillT("gRule", {a:G_MIN_ALL, b:G_MIN_GRP})}</p>`;
+  const rule = `<p class="small muted" style="margin-top:14px">${fillT("gRule", {a:G_MIN_ALL, b:gK(G && G.k)})}</p>`;
   if(G === null){ body.innerHTML = `<div class="callout care">${fillT("gWait", {a:G_MIN_ALL, b:G_MIN_GRP})}</div><p style="margin-top:14px"><a class="btn pri" href="#join-${esc(key)}">${t("gTake")}</a></p>`; return; }
   if(G === false){ body.innerHTML = `<div class="callout">${t("gBad")}</div>`; return; }
   const me = store.get("sj-last", null), mine = me && gNorm(me.r) === key ? scoreAll(me.a).d : null;
-  body.innerHTML = gBody(G, mine) + rule;
+  body.innerHTML = gBody(G, mine) + rule + `<div id="ysbox"></div>`;
+  try{ const p = DB && await DB.doc("plans/" + key).get(); const P = p && p.exists ? p.data() : null; const box = document.getElementById("ysbox");
+    if(box && P && P.share && (P.items || []).length) box.innerHTML = ysBoard(P.items); }catch(e){}
+}
+/* "You said, we did": the shared action plan, shown to employees on the group page */
+function ysBoard(items){
+  const st = t("pSt"), cls = {planned:"", doing:"mid", done:"high"};
+  return `<div class="card" style="margin-top:16px"><b style="font-size:1.1rem">${t("pYS")}</b><p class="small muted" style="margin:4px 0 10px">${t("pYSHint")}</p>
+    <div style="display:grid;gap:8px">${items.map(x => `<div class="ysi"><div class="row" style="justify-content:space-between;gap:8px;align-items:baseline"><span class="small muted">${esc(x.unitName || t("pWhole"))}</span><span class="ysst ${cls[x.status] || ""}">${esc(st[x.status] || st.planned)}</span></div>
+      ${x.issue ? `<p class="small" style="margin:4px 0 0">${esc(x.issue)}</p>` : ""}<p style="margin:2px 0 0"><b>${esc(x.action || "")}</b>${x.due ? ` <span class="small muted">· ${esc(x.due)}</span>` : ""}</p></div>`).join("")}</div></div>`;
+}
+/* Action plan editor (staff and HR) and read-only view (department managers) */
+async function planBox(box){
+  const id = box.dataset.plan, org = box.dataset.org, edit = box.dataset.edit === "1", only = box.dataset.only || "";
+  let P = {orgId:org, roundId:id, items:[], share:false}, R = {};
+  try{ const s = await DB.doc("plans/" + id).get(); if(s.exists) P = {...P, ...s.data()}; }catch(e){}
+  try{ const s = await DB.doc("rounds/" + id).get(); if(s.exists) R = s.data(); }catch(e){}
+  const units = R.units || [], st = t("pSt"), uName = u => u ? uPath(units, u).join(" › ") : t("pWhole");
+  const rows = only ? P.items.filter(x => x.unit === only || units.some(u => u.id === x.unit && uPath(units, x.unit).length && (function up(z){ const n = units.find(q => q.id === z); return !n ? false : n.id === only || up(n.parent); })(x.unit))) : P.items;
+  if(!edit){ box.innerHTML = rows.length ? `<details class="more" style="margin-top:10px" open><summary>${t("plT")}</summary>${ysBoard(rows)}</details>` : ""; return; }
+  const draw = () => {
+    box.innerHTML = `<details class="more" style="margin-top:12px"${P.items.length ? " open" : ""}><summary>${t("plT")}</summary><p class="small muted" style="margin:6px 0 10px">${t("plHint")}</p>
+      <div class="scroll"><table class="adtbl pltbl"><tr><th>${t("plUnit")}</th><th>${t("plIssue")}</th><th>${t("plAction")}</th><th>${t("plOwner")}</th><th>${t("plDue")}</th><th>${t("plStatus")}</th><th></th></tr>
+      ${P.items.map((x, i) => `<tr data-i="${i}"><td><select data-k="unit"><option value="">${esc(t("pWhole"))}</option>${units.map(u => `<option value="${esc(u.id)}"${x.unit === u.id ? " selected" : ""}>${esc(uPath(units, u.id).join(" › "))}</option>`).join("")}</select></td>
+        <td><textarea data-k="issue" rows="2" maxlength="300">${esc(x.issue || "")}</textarea></td><td><textarea data-k="action" rows="2" maxlength="300">${esc(x.action || "")}</textarea></td>
+        <td><input data-k="owner" maxlength="80" value="${esc(x.owner || "")}"></td><td><input type="date" data-k="due" value="${esc(x.due || "")}" dir="ltr"></td>
+        <td><select data-k="status">${["planned", "doing", "done"].map(s => `<option value="${s}"${x.status === s ? " selected" : ""}>${esc(st[s])}</option>`).join("")}</select></td><td><button class="btn sec sm" type="button" data-del="${i}">${t("plDel")}</button></td></tr>`).join("") || `<tr><td colspan="7" class="muted">${t("plEmpty")}</td></tr>`}</table></div>
+      <div class="row" style="gap:8px;flex-wrap:wrap;margin-top:8px"><button class="btn sec sm" type="button" data-add>${t("plAdd")}</button><button class="btn pri sm" type="button" data-save>${t("plSave")}</button><button class="btn sec sm" type="button" data-csv>${t("plCsv")}</button>
+      <label class="selc"><input type="checkbox" data-share${P.share ? " checked" : ""}><span>${t("plShare")}</span></label></div></details>`;
+    const read = () => box.querySelectorAll("tr[data-i]").forEach(tr => { const x = P.items[+tr.dataset.i]; tr.querySelectorAll("[data-k]").forEach(f => x[f.dataset.k] = f.value.trim()); x.unitName = x.unit ? uName(x.unit) : ""; });
+    box.querySelector("[data-add]").onclick = () => { read(); P.items.push({id:Math.random().toString(36).slice(2, 8), unit:"", unitName:"", issue:"", action:"", owner:"", due:"", status:"planned"}); draw(); box.querySelector("details").open = true; };
+    box.querySelectorAll("[data-del]").forEach(b => b.onclick = () => { read(); P.items.splice(+b.dataset.del, 1); draw(); box.querySelector("details").open = true; });
+    box.querySelector("[data-save]").onclick = async () => { read(); P.share = box.querySelector("[data-share]").checked;
+      try{ await DB.doc("plans/" + id).set({orgId:org, roundId:id, items:P.items.filter(x => x.action || x.issue).slice(0, 100), share:P.share, updatedAt:FV().serverTimestamp(), by:ME.email}); adAudit("plan.save", id); toast(t("plSaved")); }catch(e){ adErr(e); } };
+    box.querySelector("[data-csv]").onclick = () => { read(); const q = v => '"' + String(v || "").replace(/"/g, '""') + '"';
+      const csv = [[t("plUnit"), t("plIssue"), t("plAction"), t("plOwner"), t("plDue"), t("plStatus")].map(q).join(";"), ...P.items.map(x => [x.unitName || t("pWhole"), x.issue, x.action, x.owner, x.due, st[x.status]].map(q).join(";"))].join("\r\n");
+      const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob(["\ufeff" + csv], {type:"text/csv"})); a.download = "plan-van-aanpak-" + id + ".csv"; a.click(); };
+  };
+  draw();
 }
 function gAdminBox(){
   return `<div class="card" style="margin-top:12px"><b>${t("aT")}</b><p class="small muted" style="margin:6px 0 10px">${t("aP")}</p>
