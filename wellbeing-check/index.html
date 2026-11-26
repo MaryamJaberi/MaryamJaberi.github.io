@@ -46,6 +46,8 @@ button.adk:hover{border-color:var(--accent)}
 .pill.st-closed,.pill.st-lost,.pill.st-rejected,.pill.st-ended,.pill.st-draft{background:var(--wash);color:var(--muted)}
 .adround .code{font-size:.75rem;padding:6px 8px}
 @media print{body[data-view="admin"] header.bar,body[data-view="admin"] .rvtabs,body[data-view="admin"] button,body[data-view="admin"] footer{display:none!important}}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.utab th.dn{text-align:start;white-space:nowrap;font-weight:500}.utab tr.u0 th.dn{font-weight:700}.utab td.un{color:var(--muted);font-size:.85em}.utab th:not(.dn){min-width:4.6em}
 </style></head><body>
 <title>Workplace Wellbeing Check</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -1937,6 +1939,12 @@ window.XS = {"de":{"T":{"nSel":"Fragebögen","selT":"Die Fragebögen, die wir f�
   window.SEL.R[l] = Object.assign({}, window.SEL.R.en, X.R);
 } })();
 
+/* Departments and teams (added 26 Nov 2026): participant, group-view and demo strings in all nine languages; admin strings in fa/en/nl, others fall back to English. */
+window.XU = {"en":{"tUnit":"Your department or team","tUnitHint":"Results for a department are shown only when at least {b} people from it take part, so nobody can be recognised. You can also choose “Prefer not to say”.","tUnitNone":"Prefer not to say","tUnitSub":"Team within {x} (optional)","tUnitWhole":"All of {x} / not sure","tLevelHint":"Used only for group comparison.","gByUnit":"By department","gRest":"Others in {x}","gRestTop":"Other departments and not stated","gUnitNote":"Departments with fewer than {b} responses are combined with others. Departments are never crossed with job levels, so no small group can be worked out by subtraction.","gFrozen":"* unchanged since the previous version: fewer than {b} new responses in this group.","rvUnit":["By department","The average score of each department and team, from the whole organisation down.","Each department needs at least 10 responses. Smaller ones are combined into “Others”, and departments are never split by job level, so nobody can be singled out."],"demoU":["Operations","Warehouse","Transport","Planning","Customer service","Sales","Finance & HR","IT"],"adUnits":"Departments and teams","adUnitsHint":"One per line. Indent with two spaces for a team inside a department (up to 4 levels). Renaming keeps earlier results linked only if the path stays the same.","adUnitsN":"{n} units","adAskUnit":"Ask participants for their department","adShareUnits":"Also show department results to employees (group view)","adAskUnitNo":"This organisation has no departments yet (add them under Organisations).","adRoleMgr":"Department manager","adUnitsFor":"Departments this person may see (including teams below them)","adMgrNeeds":"A department manager needs an organisation and at least one department.","adTabMgr":"Your department's reports","adNoUnitRep":"No department report yet.","adUnitReps":"{n} department reports published"},"fa":{"tUnit":"دپارتمان یا تیم شما","tUnitHint":"نتیجهٔ هر دپارتمان فقط وقتی نشان داده می‌شود که دست‌کم {b} نفر از آن شرکت کنند، تا کسی شناسایی نشود. می‌توانید «ترجیح می‌دهم نگویم» را هم انتخاب کنید.","tUnitNone":"ترجیح می‌دهم نگویم","tUnitSub":"تیم داخل {x} (اختیاری)","tUnitWhole":"کل {x} / مطمئن نیستم","tLevelHint":"فقط برای مقایسهٔ گروهی.","gByUnit":"به تفکیک دپارتمان","gRest":"سایر افراد {x}","gRestTop":"سایر دپارتمان‌ها و بدون پاسخ","gUnitNote":"دپارتمان‌هایی که کمتر از {b} پاسخ دارند با بقیه ادغام می‌شوند. دپارتمان هیچ‌وقت با ردهٔ شغلی ترکیب نمی‌شود تا هیچ گروه کوچکی با تفریق قابل محاسبه نباشد.","gFrozen":"* بدون تغییر نسبت به نسخهٔ قبل: کمتر از {b} پاسخ تازه در این گروه.","rvUnit":["به تفکیک دپارتمان","میانگین هر دپارتمان و تیم، از کل سازمان به پایین.","هر دپارتمان دست‌کم ۱۰ پاسخ لازم دارد. دپارتمان‌های کوچک‌تر در «سایر» ادغام می‌شوند و دپارتمان هیچ‌وقت به تفکیک رده نشان داده نمی‌شود، تا کسی شناسایی نشود."],"demoU":["عملیات","انبار","حمل‌ونقل","برنامه‌ریزی","خدمات مشتریان","فروش","مالی و منابع انسانی","فناوری اطلاعات"],"adUnits":"دپارتمان‌ها و تیم‌ها","adUnitsHint":"هر خط یکی. برای تیمی داخل یک دپارتمان، دو فاصله در ابتدای خط بگذارید (تا ۴ سطح). اگر مسیر نام عوض نشود، نتیجه‌های قبلی به همان واحد وصل می‌مانند.","adUnitsN":"{n} واحد","adAskUnit":"از شرکت‌کنندگان دپارتمانشان پرسیده شود","adShareUnits":"نتیجهٔ دپارتمان‌ها به کارکنان هم نشان داده شود (نمای گروهی)","adAskUnitNo":"این سازمان هنوز دپارتمانی ندارد (در زبانهٔ سازمان‌ها اضافه کنید).","adRoleMgr":"مدیر دپارتمان","adUnitsFor":"دپارتمان‌هایی که این فرد می‌بیند (با تیم‌های زیرمجموعه)","adMgrNeeds":"مدیر دپارتمان باید یک سازمان و دست‌کم یک دپارتمان داشته باشد.","adTabMgr":"گزارش‌های دپارتمان شما","adNoUnitRep":"هنوز گزارشی برای دپارتمان منتشر نشده.","adUnitReps":"{n} گزارش دپارتمان منتشر شد"},"nl":{"tUnit":"Uw afdeling of team","tUnitHint":"Uitkomsten van een afdeling worden alleen getoond als minstens {b} mensen ervan meedoen, zodat niemand herkenbaar is. U kunt ook „Zeg ik liever niet” kiezen.","tUnitNone":"Zeg ik liever niet","tUnitSub":"Team binnen {x} (optioneel)","tUnitWhole":"Heel {x} / weet ik niet","tLevelHint":"Alleen voor groepsvergelijking.","gByUnit":"Per afdeling","gRest":"Overigen in {x}","gRestTop":"Overige afdelingen en niet ingevuld","gUnitNote":"Afdelingen met minder dan {b} reacties worden samengevoegd met andere. Afdelingen worden nooit gekruist met functieniveau, zodat geen kleine groep door aftrekken te herleiden is.","gFrozen":"* ongewijzigd sinds de vorige versie: minder dan {b} nieuwe reacties in deze groep.","rvUnit":["Per afdeling","De gemiddelde score van elke afdeling en elk team, van de hele organisatie naar beneden.","Elke afdeling heeft minstens 10 reacties nodig. Kleinere worden samengevoegd tot „Overigen”, en afdelingen worden nooit per functieniveau gesplitst, zodat niemand herkenbaar is."],"demoU":["Operations","Magazijn","Transport","Planning","Klantenservice","Verkoop","Financiën & HR","IT"],"adUnits":"Afdelingen en teams","adUnitsHint":"Eén per regel. Spring twee spaties in voor een team binnen een afdeling (tot 4 niveaus). Eerdere uitkomsten blijven gekoppeld zolang het pad gelijk blijft.","adUnitsN":"{n} eenheden","adAskUnit":"Deelnemers naar hun afdeling vragen","adShareUnits":"Afdelingsuitkomsten ook aan medewerkers tonen (groepsweergave)","adAskUnitNo":"Deze organisatie heeft nog geen afdelingen (voeg ze toe onder Organisaties).","adRoleMgr":"Afdelingsmanager","adUnitsFor":"Afdelingen die deze persoon mag zien (met de teams eronder)","adMgrNeeds":"Een afdelingsmanager heeft een organisatie en minstens één afdeling nodig.","adTabMgr":"Rapporten van uw afdeling","adNoUnitRep":"Nog geen afdelingsrapport.","adUnitReps":"{n} afdelingsrapporten gepubliceerd"},"de":{"tUnit":"Ihre Abteilung oder Ihr Team","tUnitHint":"Ergebnisse einer Abteilung werden nur angezeigt, wenn mindestens {b} Personen daraus teilnehmen, damit niemand erkennbar ist. Sie können auch „Möchte ich nicht angeben“ wählen.","tUnitNone":"Möchte ich nicht angeben","tUnitSub":"Team innerhalb von {x} (optional)","tUnitWhole":"Ganz {x} / weiß nicht","tLevelHint":"Nur für den Gruppenvergleich.","gByUnit":"Nach Abteilung","gRest":"Übrige in {x}","gRestTop":"Übrige Abteilungen und ohne Angabe","gUnitNote":"Abteilungen mit weniger als {b} Antworten werden mit anderen zusammengefasst. Abteilungen werden nie mit Ebenen gekreuzt, damit sich keine kleine Gruppe durch Subtraktion ermitteln lässt.","gFrozen":"* unverändert seit der vorigen Version: weniger als {b} neue Antworten in dieser Gruppe.","rvUnit":["Nach Abteilung","Der Durchschnitt jeder Abteilung und jedes Teams, von der ganzen Organisation abwärts.","Jede Abteilung braucht mindestens 10 Antworten. Kleinere werden zu „Übrige“ zusammengefasst, und Abteilungen werden nie nach Ebene aufgeteilt, damit niemand erkennbar ist."],"demoU":["Betrieb","Lager","Transport","Planung","Kundenservice","Vertrieb","Finanzen & HR","IT"]},"fr":{"tUnit":"Votre service ou équipe","tUnitHint":"Les résultats d'un service ne sont affichés que si au moins {b} personnes y participent, afin que personne ne soit reconnaissable. Vous pouvez aussi choisir « Je préfère ne pas répondre ».","tUnitNone":"Je préfère ne pas répondre","tUnitSub":"Équipe au sein de {x} (facultatif)","tUnitWhole":"Tout {x} / je ne sais pas","tLevelHint":"Utilisé uniquement pour comparer des groupes.","gByUnit":"Par service","gRest":"Autres de {x}","gRestTop":"Autres services et non renseigné","gUnitNote":"Les services de moins de {b} réponses sont regroupés avec d'autres. Les services ne sont jamais croisés avec les niveaux, pour qu'aucun petit groupe ne puisse être déduit par soustraction.","gFrozen":"* inchangé depuis la version précédente : moins de {b} nouvelles réponses dans ce groupe.","rvUnit":["Par service","La moyenne de chaque service et équipe, de toute l'organisation vers le bas.","Chaque service doit compter au moins 10 réponses. Les plus petits sont regroupés dans « Autres », et les services ne sont jamais ventilés par niveau, pour que personne ne soit identifiable."],"demoU":["Opérations","Entrepôt","Transport","Planification","Service client","Ventes","Finances & RH","Informatique"]},"es":{"tUnit":"Su departamento o equipo","tUnitHint":"Los resultados de un departamento solo se muestran si participan al menos {b} personas de él, para que nadie sea reconocible. También puede elegir «Prefiero no decirlo».","tUnitNone":"Prefiero no decirlo","tUnitSub":"Equipo dentro de {x} (opcional)","tUnitWhole":"Todo {x} / no estoy seguro","tLevelHint":"Solo para comparar grupos.","gByUnit":"Por departamento","gRest":"Resto de {x}","gRestTop":"Otros departamentos y sin indicar","gUnitNote":"Los departamentos con menos de {b} respuestas se agrupan con otros. Los departamentos nunca se cruzan con los niveles, para que ningún grupo pequeño pueda deducirse restando.","gFrozen":"* sin cambios desde la versión anterior: menos de {b} respuestas nuevas en este grupo.","rvUnit":["Por departamento","La media de cada departamento y equipo, desde toda la organización hacia abajo.","Cada departamento necesita al menos 10 respuestas. Los más pequeños se agrupan en «Otros», y los departamentos nunca se dividen por nivel, para que nadie sea identificable."],"demoU":["Operaciones","Almacén","Transporte","Planificación","Atención al cliente","Ventas","Finanzas y RR. HH.","Informática"]},"pl":{"tUnit":"Twój dział lub zespół","tUnitHint":"Wyniki działu pokazujemy tylko wtedy, gdy weźmie w nich udział co najmniej {b} osób z tego działu, aby nikogo nie dało się rozpoznać. Możesz też wybrać „Wolę nie podawać”.","tUnitNone":"Wolę nie podawać","tUnitSub":"Zespół w ramach: {x} (opcjonalnie)","tUnitWhole":"Cały {x} / nie wiem","tLevelHint":"Tylko do porównania grup.","gByUnit":"Według działu","gRest":"Pozostali w: {x}","gRestTop":"Pozostałe działy i bez odpowiedzi","gUnitNote":"Działy z mniej niż {b} odpowiedziami są łączone z innymi. Działów nigdy nie łączymy ze szczeblami, aby żadnej małej grupy nie dało się wyliczyć przez odejmowanie.","gFrozen":"* bez zmian od poprzedniej wersji: mniej niż {b} nowych odpowiedzi w tej grupie.","rvUnit":["Według działu","Średnia każdego działu i zespołu, od całej organizacji w dół.","Każdy dział potrzebuje co najmniej 10 odpowiedzi. Mniejsze łączymy w „Pozostałe”, a działów nigdy nie dzielimy według szczebla, aby nikogo nie dało się wskazać."],"demoU":["Operacje","Magazyn","Transport","Planowanie","Obsługa klienta","Sprzedaż","Finanse i HR","IT"]},"tr":{"tUnit":"Bölümünüz veya ekibiniz","tUnitHint":"Bir bölümün sonuçları, kimse tanınmasın diye yalnızca o bölümden en az {b} kişi katılırsa gösterilir. “Belirtmek istemiyorum” seçeneğini de seçebilirsiniz.","tUnitNone":"Belirtmek istemiyorum","tUnitSub":"{x} içindeki ekip (isteğe bağlı)","tUnitWhole":"Tüm {x} / emin değilim","tLevelHint":"Yalnızca grup karşılaştırması için.","gByUnit":"Bölüme göre","gRest":"{x} içindeki diğerleri","gRestTop":"Diğer bölümler ve belirtilmeyenler","gUnitNote":"{b} yanıttan az olan bölümler başkalarıyla birleştirilir. Bölümler hiçbir zaman kademelerle çaprazlanmaz; böylece hiçbir küçük grup çıkarma yoluyla bulunamaz.","gFrozen":"* önceki sürümden beri değişmedi: bu grupta {b} yeni yanıttan az var.","rvUnit":["Bölüme göre","Her bölümün ve ekibin ortalaması, tüm kurumdan aşağıya doğru.","Her bölüm en az 10 yanıt gerektirir. Daha küçük olanlar “Diğerleri” içinde birleştirilir ve bölümler hiçbir zaman kademeye göre ayrılmaz; böylece kimse ayırt edilemez."],"demoU":["Operasyon","Depo","Taşımacılık","Planlama","Müşteri hizmetleri","Satış","Finans ve İK","BT"]},"ar":{"tUnit":"قسمكم أو فريقكم","tUnitHint":"لا تُعرض نتائج القسم إلا إذا شارك منه {b} أشخاص على الأقل، حتى لا يُعرف أحد. يمكنكم أيضًا اختيار «أفضّل عدم الإجابة».","tUnitNone":"أفضّل عدم الإجابة","tUnitSub":"فريق داخل {x} (اختياري)","tUnitWhole":"كل {x} / لست متأكدًا","tLevelHint":"للمقارنة بين المجموعات فقط.","gByUnit":"بحسب القسم","gRest":"بقية {x}","gRestTop":"أقسام أخرى ومن لم يحدد","gUnitNote":"تُدمج الأقسام التي لديها أقل من {b} إجابات مع غيرها. ولا تُقاطَع الأقسام أبدًا مع المستويات الوظيفية، حتى لا يمكن استنتاج أي مجموعة صغيرة بالطرح.","gFrozen":"* لم يتغير منذ النسخة السابقة: أقل من {b} إجابات جديدة في هذه المجموعة.","rvUnit":["بحسب القسم","متوسط كل قسم وفريق، من المؤسسة كلها نزولًا.","يحتاج كل قسم إلى 10 إجابات على الأقل. تُدمج الأقسام الأصغر في «أخرى»، ولا تُقسَّم الأقسام أبدًا بحسب المستوى، حتى لا يمكن تمييز أي شخص."],"demoU":["العمليات","المستودع","النقل","التخطيط","خدمة العملاء","المبيعات","المالية والموارد البشرية","تقنية المعلومات"]}};
+(() => { for(const l in T){ const X = Object.assign({}, window.XU.en, window.XU[l] || {}); for(const k in X) T[l][k] = X[k];
+  T[l].rv = Object.assign({}, T[l].rv || T.en.rv, {unit:X.rvUnit});
+  T[l].adRole = Object.assign({}, T[l].adRole || T.en.adRole, {mgr:X.adRoleMgr});
+  T[l].adTabs = Object.assign({}, T[l].adTabs || T.en.adTabs, {mgrrep:X.adTabMgr}); } })();
 const LV = window.LEVELS, DIMS = window.DIMS, WS = window.WS, PACKS = window.PACKS;
 let L = "nl";
 (() => { const qp = (location.search + "&" + (location.hash.split("?")[1] || "")).match(/[?&]lang=([a-z]{2})/);
@@ -2030,7 +2038,7 @@ const ADM = {tab:null, needEmail:false, sel:{}, resp:{}, confirm:null};
           const em = u.email.toLowerCase(); let m = null;
           try{ const s = await DB.doc("members/" + em).get(); if(s.exists) m = s.data(); }catch(e){}
           const active = m && m.active !== false;
-          ME = {email:em, verified:u.emailVerified, name:(m && m.name) || u.displayName || "", role:em === OWNER ? "admin" : (active ? m.role : null), orgs:(active && m.orgs) || []};
+          ME = {email:em, verified:u.emailVerified, name:(m && m.name) || u.displayName || "", role:em === OWNER ? "admin" : (active ? m.role : null), orgs:(active && m.orgs) || [], units:(active && m.units) || []};
           CAN = ME.role === "admin" || ME.role === "psy";
         }
         AUTH_READY = true; navAdmin();
@@ -2180,7 +2188,7 @@ function renderSelect(){
    admin: everything · psy: organisations (read), rounds, reports and their notes · hr: the published reports of its own organisations.
    HR never sees individual answers; reports are built here with the same suppression rules as the employee group page. */
 const FV = () => firebase.firestore.FieldValue;
-const ROLE_TABS = {admin:["ov","orgs","rounds","leads","apps","partners","users","data"], psy:["ov","orgs","rounds"], hr:["hrrep"]};
+const ROLE_TABS = {admin:["ov","orgs","rounds","leads","apps","partners","users","data"], psy:["ov","orgs","rounds"], hr:["hrrep"], mgr:["mgrrep"]};
 const adGet = async (col, q) => { let r = DB.collection(col); if(q) r = q(r); const s = await r.get(); return s.docs.map(d => ({id:d.id, ...d.data()})); };
 const adTime = x => x && x.toDate ? x.toDate().getTime() : (x ? new Date(x).getTime() : 0);
 const adDate = x => { const v = adTime(x); return v ? new Date(v).toLocaleDateString(LOCALE[L] || "en-GB", {year:"numeric", month:"short", day:"numeric"}) : "—"; };
@@ -2258,10 +2266,11 @@ const ADT = {
     <label class="f">${t("adF").status}${adSel("o-status", st.map(v => [v, t("adSt").org[v]]), ed && ed.status || "lead")}</label>
     <label class="f">${t("adF").contact}<input type="text" id="o-contact" value="${esc(ed && ed.contact || "")}"></label>
     <label class="f">${t("adF").email}<input type="email" id="o-email" dir="ltr" value="${esc(ed && ed.email || "")}"></label>
-    <label class="f adwide">${t("adF").notes}<textarea id="o-notes">${esc(ed && ed.notes || "")}</textarea></label></div>
+    <label class="f adwide">${t("adF").notes}<textarea id="o-notes">${esc(ed && ed.notes || "")}</textarea></label>
+    <label class="f adwide">${t("adUnits")}<span class="small muted">${t("adUnitsHint")}</span><textarea id="o-units" dir="auto" style="min-height:120px;font-family:inherit" placeholder="Operations&#10;  Warehouse&#10;  Transport&#10;Sales">${esc(uText(ed && ed.units || []))}</textarea></label></div>
     <div class="row" style="gap:8px;margin-top:10px"><button class="btn pri sm" type="submit">${t("adSave")}</button>${ed ? `<button class="btn sec sm" type="button" id="o-cancel">${t("adCancel")}</button>` : ""}${ed && ed.id ? `<button class="btn sec sm" type="button" id="o-del">${t("adDelete")}</button>` : ""}</div></form>`;
   el.innerHTML = form + `<h3 class="sellayer">${t("adTabs").orgs} (${num(orgs.length)})</h3>` + adTbl([t("adF").name, t("adF").sector, t("adF").size, t("adF").status, t("adF").contact, ""],
-    orgs.map(o => `<tr><td><b>${esc(o.name || "")}</b>${o.notes ? `<div class="small muted">${esc(o.notes).slice(0, 120)}</div>` : ""}</td><td>${esc(selLab("sector", o.sector || "")) || "—"}</td><td>${esc(selLab("size", o.size || "")) || "—"}</td><td>${adStatus("org", o.status || "lead")}</td><td>${esc(o.contact || "")}<div class="small" dir="ltr">${esc(o.email || "")}</div></td><td>${isA ? `<button class="btn sec sm" data-edit="${o.id}">${t("adEdit")}</button>` : ""}</td></tr>`));
+    orgs.map(o => `<tr><td><b>${esc(o.name || "")}</b>${(o.units || []).length ? ` <span class="pill">${fillT("adUnitsN", {n:o.units.length})}</span>` : ""}${o.notes ? `<div class="small muted">${esc(o.notes).slice(0, 120)}</div>` : ""}</td><td>${esc(selLab("sector", o.sector || "")) || "—"}</td><td>${esc(selLab("size", o.size || "")) || "—"}</td><td>${adStatus("org", o.status || "lead")}</td><td>${esc(o.contact || "")}<div class="small" dir="ltr">${esc(o.email || "")}</div></td><td>${isA ? `<button class="btn sec sm" data-edit="${o.id}">${t("adEdit")}</button>` : ""}</td></tr>`));
   el.querySelectorAll("[data-edit]").forEach(b => b.onclick = () => { ADM.sel.org = b.dataset.edit; ADT.orgs(el); scrollTo(0, 0); });
   const f = document.getElementById("org-f"); if(!f) return;
   const c = document.getElementById("o-cancel"); if(c) c.onclick = () => { ADM.sel.org = null; ADT.orgs(el); };
@@ -2269,7 +2278,7 @@ const ADT = {
   f.onsubmit = async e => { e.preventDefault(); const v = id => document.getElementById(id).value.trim();
     if(!v("o-name")) return;
     const id = ed && ed.id ? ed.id : DB.collection("orgs").doc().id;
-    const data = {name:v("o-name"), sector:v("o-sector"), size:v("o-size"), status:v("o-status"), contact:v("o-contact"), email:v("o-email").toLowerCase(), notes:v("o-notes"), updatedAt:FV().serverTimestamp()};
+    const data = {name:v("o-name"), sector:v("o-sector"), size:v("o-size"), status:v("o-status"), contact:v("o-contact"), email:v("o-email").toLowerCase(), notes:v("o-notes"), units:uParse(document.getElementById("o-units").value, ed && ed.units), updatedAt:FV().serverTimestamp()};
     if(!(ed && ed.id)) data.createdAt = FV().serverTimestamp();
     try{ await DB.doc("orgs/" + id).set(data, {merge:true}); adAudit(ed && ed.id ? "org.update" : "org.create", id); ADM.sel.org = null; toast(t("adSaved")); ADT.orgs(el); }catch(err){ adErr(err); } };
  },
@@ -2283,11 +2292,12 @@ const ADT = {
     <label class="f">${t("adCol").org}${adSel("r-org", orgs.map(o => [o.id, o.name]), "")}</label>
     <label class="f">${t("adCol").title}<input type="text" id="r-title" placeholder="${esc(t("adTitleHint"))}"></label>
     <fieldset class="adwide"><legend>${t("tPack")}</legend><div class="chips">${Object.keys(PACKS).map((p, i) => `<label class="selc"><input type="radio" name="r-pk" value="${p}"${i ? " checked" : ""}><span>${PACKS[p][L] || PACKS[p].en} · ~${num(PACKS[p].min)} ${t("selMin")}</span></label>`).join("")}</div></fieldset>
-    <fieldset class="adwide"><legend>${t("pLevels")}</legend><div class="chips">${LV.map(l => `<label class="selc"><input type="checkbox" name="r-lv" value="${l.id}"${l.id !== "student" ? " checked" : ""}><span>${l[L] || l.en}</span></label>`).join("")}</div></fieldset></div>
+    <fieldset class="adwide"><legend>${t("pLevels")}</legend><div class="chips">${LV.map(l => `<label class="selc"><input type="checkbox" name="r-lv" value="${l.id}"${l.id !== "student" ? " checked" : ""}><span>${l[L] || l.en}</span></label>`).join("")}</div></fieldset>
+    <fieldset class="adwide"><legend>${t("adUnits")}</legend><div class="chips"><label class="selc"><input type="checkbox" id="r-askU" checked><span>${t("adAskUnit")}</span></label><label class="selc"><input type="checkbox" id="r-shareU"><span>${t("adShareUnits")}</span></label></div><p class="small muted" id="r-unote" style="margin:6px 0 0"></p></fieldset></div>
     <div class="row" style="margin-top:10px"><button class="btn pri sm" type="submit"${orgs.length ? "" : " disabled"}>${t("pCreate")}</button></div></form>`;
   const card = r => { const rep = reports.find(x => x.id === r.id), open = (r.status || "open") === "open", n = ADM.resp[r.id];
     return `<article class="card adround" id="rd-${r.id}"><div class="row" style="justify-content:space-between;gap:8px;align-items:baseline"><div><b>${esc(r.org || adOrgName(orgs, r.orgId))}</b> · ${esc(r.title || "")} ${adStatus("round", r.status || "open")}</div><span class="pill" dir="ltr">${esc(r.id)}</span></div>
-     <p class="small muted" style="margin:4px 0 8px">${adDate(r.createdAt)} · ${esc(PACKS[r.pack] ? (PACKS[r.pack][L] || PACKS[r.pack].en) : (r.pack || ""))}${rep ? ` · ${fillT("adRepV", {v:rep.version || 1, n:rep.n || 0, d:adDate(rep.publishedAt)})}` : ""}</p>
+     <p class="small muted" style="margin:4px 0 8px">${adDate(r.createdAt)} · ${esc(PACKS[r.pack] ? (PACKS[r.pack][L] || PACKS[r.pack].en) : (r.pack || ""))}${(r.units || []).length ? " · " + fillT("adUnitsN", {n:r.units.length}) : ""}${rep ? ` · ${fillT("adRepV", {v:rep.version || 1, n:rep.n || 0, d:adDate(rep.publishedAt)})}` : ""}</p>
      <div class="small">${t("aJoin")}</div><div class="code">${esc(adBase() + "#join-" + r.id)}</div>
      <div class="small" style="margin-top:6px">${t("gLink")}${CL()}</div><div class="code">${esc(adBase() + "#group-" + r.id)}</div>
      <div class="row" style="gap:8px;flex-wrap:wrap;margin-top:10px">
@@ -2300,9 +2310,11 @@ const ADT = {
     </article>`; };
   el.innerHTML = form + `<h3 class="sellayer">${t("adTabs").rounds} (${num(rounds.length)})</h3><p class="small muted">${fillT("adRule", {a:G_MIN_ALL, b:G_MIN_GRP})}</p><div style="display:grid;gap:12px">${rounds.map(card).join("") || `<p class="muted">${t("adEmpty")}</p>`}</div>`;
   const f = document.getElementById("rd-f");
+  const unote = () => { const o = orgs.find(x => x.id === (document.getElementById("r-org") || {}).value) || {}, n = (o.units || []).length, nt = document.getElementById("r-unote"); if(nt) nt.textContent = n ? fillT("adUnitsN", {n}) : t("adAskUnitNo"); };
+  if(f){ document.getElementById("r-org").onchange = unote; unote(); }
   if(f) f.onsubmit = async e => { e.preventDefault(); const orgId = document.getElementById("r-org").value; if(!orgId) return;
-    const id = gNewKey(), fd = new FormData(f);
-    try{ await DB.doc("rounds/" + id).set({orgId, org:adOrgName(orgs, orgId), title:document.getElementById("r-title").value.trim(), pack:f.querySelector('input[name="r-pk"]:checked').value, levels:[...f.querySelectorAll('input[name="r-lv"]:checked')].map(i => i.value), m:new Date().toISOString().slice(0, 7), status:"open", createdAt:FV().serverTimestamp(), by:ME.email});
+    const id = gNewKey(), fd = new FormData(f), ou = (orgs.find(o => o.id === orgId) || {}).units || [], ask = document.getElementById("r-askU").checked && ou.length > 0;
+    try{ await DB.doc("rounds/" + id).set({orgId, org:adOrgName(orgs, orgId), title:document.getElementById("r-title").value.trim(), pack:f.querySelector('input[name="r-pk"]:checked').value, levels:[...f.querySelectorAll('input[name="r-lv"]:checked')].map(i => i.value), units:ask ? ou : [], unitIds:ask ? ou.map(u => u.id) : [], askUnits:ask, shareUnits:ask && document.getElementById("r-shareU").checked, m:new Date().toISOString().slice(0, 7), status:"open", createdAt:FV().serverTimestamp(), by:ME.email});
       adAudit("round.create", id); toast(id); ADT.rounds(el); }catch(err){ adErr(err); } };
   const load = async id => { const s = await DB.collection("responses").where("r", "==", id).get(); const list = gUnique(s.docs.map(d => d.data())); ADM.resp[id] = list.length; return {list, ids:s.docs.map(d => d.id)}; };
   el.querySelectorAll("[data-count]").forEach(b => b.onclick = async () => { try{ const {list} = await load(b.dataset.count); b.textContent = fillT("adCountN", {n:list.length}); }catch(e){ adErr(e); } });
@@ -2311,10 +2323,16 @@ const ADT = {
       if(list.length < G_MIN_ALL){ out.innerHTML = `<p class="small">${fillT("aLow", {n:list.length, a:G_MIN_ALL})}</p>`; return; }
       const old = reports.find(x => x.id === id);
       if(old && list.length - (old.n || 0) < G_MIN_GRP){ out.innerHTML = `<p class="small">${fillT("aSoon", {x:Math.max(0, list.length - (old.n || 0)), b:G_MIN_GRP})}</p>`; return; }
-      const agg = gAggregate(list);
-      await DB.doc("reports/" + id).set({orgId:r.orgId || "", roundId:id, org:r.org || "", title:r.title || "", agg, n:agg.n, version:((old && old.version) || 0) + 1, notes:(old && old.notes) || "", publishedAt:FV().serverTimestamp(), by:ME.email});
-      await DB.doc("groupfiles/" + await gHash(id)).set(await gEncrypt(id, agg));
-      adAudit("report.publish", id); toast(t("adPublished")); ADT.rounds(el);
+      const agg = gAggregate(list, r.units || [], old && old.agg), version = ((old && old.version) || 0) + 1;
+      await DB.doc("reports/" + id).set({orgId:r.orgId || "", roundId:id, org:r.org || "", title:r.title || "", agg, n:agg.n, version, notes:(old && old.notes) || "", publishedAt:FV().serverTimestamp(), by:ME.email});
+      const shared = {...agg}; if(!r.shareUnits) delete shared.units;
+      await DB.doc("groupfiles/" + await gHash(id)).set(await gEncrypt(id, shared));
+      const us = agg.units || []; let nu = 0;
+      for(let i = 0; i < us.length; i++){ const g = us[i]; if(g.id.startsWith("rest:")) continue;
+        const subtree = []; for(let j = i + 1; j < us.length && us[j].depth > g.depth; j++) subtree.push({...us[j], depth:us[j].depth - g.depth - 1});
+        await DB.doc("unitreports/" + id + "__" + g.id).set({orgId:r.orgId || "", roundId:id, unitId:g.id, org:r.org || "", title:r.title || "", name:g.name || "", path:uPath(r.units, g.id).join(" › "), n:g.n, version,
+          agg:{v:1, n:g.n, m:agg.m, all:{n:g.n, d:g.d, dist:g.dist, sub:{}}, lv:[], units:subtree}, publishedAt:FV().serverTimestamp(), by:ME.email}); nu++; }
+      adAudit("report.publish", id + (nu ? " +" + nu + " units" : "")); toast(t("adPublished") + (nu ? " · " + fillT("adUnitReps", {n:nu}) : "")); ADT.rounds(el);
     }catch(e){ adErr(e); } });
   el.querySelectorAll("[data-toggle]").forEach(b => b.onclick = async () => { const id = b.dataset.toggle, r = rounds.find(x => x.id === id), next = (r.status || "open") === "open" ? "closed" : "open";
     try{ await DB.doc("rounds/" + id).update({status:next}); adAudit("round." + next, id); ADT.rounds(el); }catch(e){ adErr(e); } });
@@ -2383,11 +2401,12 @@ const ADT = {
   const ed = ADM.sel.user ? ms.find(m => m.id === ADM.sel.user) || {} : {};
   el.innerHTML = `<form class="card adform" id="u-f"><h3>${ed.id ? t("adEdit") : t("adNewUser")}</h3><p class="small muted">${t("adUserP")}</p><div class="adgrid">
     <label class="f">${t("adEmail")}<input type="email" id="u-em" dir="ltr" value="${esc(ed.id || "")}"${ed.id ? " readonly" : ""}></label><label class="f">${t("adF").name}<input type="text" id="u-name" value="${esc(ed.name || "")}"></label>
-    <label class="f">${t("adF").role}${adSel("u-role", ["hr", "psy", "admin"].map(v => [v, t("adRole")[v]]), ed.role || "hr")}</label><label class="selc" style="align-self:end"><input type="checkbox" id="u-act"${ed.active === false ? "" : " checked"}><span>${t("adActive")}</span></label>
-    <fieldset class="adwide"><legend>${t("adOrgsFor")}</legend><div class="chips">${orgs.map(o => `<label class="selc"><input type="checkbox" name="u-org" value="${o.id}"${(ed.orgs || []).includes(o.id) ? " checked" : ""}><span>${esc(o.name)}</span></label>`).join("") || `<span class="small muted">${t("adNeedOrg")}</span>`}</div></fieldset></div>
+    <label class="f">${t("adF").role}${adSel("u-role", ["hr", "mgr", "psy", "admin"].map(v => [v, t("adRole")[v]]), ed.role || "hr")}</label><label class="selc" style="align-self:end"><input type="checkbox" id="u-act"${ed.active === false ? "" : " checked"}><span>${t("adActive")}</span></label>
+    <fieldset class="adwide"><legend>${t("adOrgsFor")}</legend><div class="chips">${orgs.map(o => `<label class="selc"><input type="checkbox" name="u-org" value="${o.id}"${(ed.orgs || []).includes(o.id) ? " checked" : ""}><span>${esc(o.name)}</span></label>`).join("") || `<span class="small muted">${t("adNeedOrg")}</span>`}</div></fieldset>
+    <fieldset class="adwide" id="u-units"><legend>${t("adUnitsFor")}</legend><div class="chips">${orgs.filter(o => (o.units || []).length).map(o => o.units.map(u => `<label class="selc"><input type="checkbox" name="u-unit" value="${esc(u.id)}" data-org="${esc(o.id)}"${(ed.units || []).includes(u.id) ? " checked" : ""}><span>${esc(o.name)} › ${esc(uPath(o.units, u.id).join(" › "))}</span></label>`).join("")).join("") || `<span class="small muted">${t("adAskUnitNo")}</span>`}</div></fieldset></div>
     <div class="row" style="gap:8px;margin-top:10px"><button class="btn pri sm" type="submit">${t("adSave")}</button>${ed.id ? `<button class="btn sec sm" type="button" id="u-cancel">${t("adCancel")}</button><button class="btn sec sm" type="button" id="u-del">${t("adDelete")}</button>` : ""}</div></form>
     <h3 class="sellayer">${t("adTabs").users}</h3>` + adTbl([t("adEmail"), t("adF").name, t("adF").role, t("adOrgsFor"), ""],
-    [`<tr><td dir="ltr">${OWNER}</td><td>—</td><td>${t("adRole").admin} (${t("adOwner")})</td><td>—</td><td></td></tr>`].concat(ms.map(m => `<tr><td dir="ltr">${esc(m.id)}</td><td>${esc(m.name || "")}</td><td>${t("adRole")[m.role] || esc(m.role || "")}${m.active === false ? ` · <span class="muted">${t("adInactive")}</span>` : ""}</td><td>${esc((m.orgs || []).map(o => adOrgName(orgs, o)).join(", ") || "—")}</td><td><button class="btn sec sm" data-uedit="${esc(m.id)}">${t("adEdit")}</button></td></tr>`)));
+    [`<tr><td dir="ltr">${OWNER}</td><td>—</td><td>${t("adRole").admin} (${t("adOwner")})</td><td>—</td><td></td></tr>`].concat(ms.map(m => `<tr><td dir="ltr">${esc(m.id)}</td><td>${esc(m.name || "")}</td><td>${t("adRole")[m.role] || esc(m.role || "")}${m.active === false ? ` · <span class="muted">${t("adInactive")}</span>` : ""}</td><td>${esc((m.orgs || []).map(o => adOrgName(orgs, o)).join(", ") || "—")}${(m.units || []).length ? `<div class="small muted">${esc(m.units.map(id => { const o = orgs.find(x => (x.units || []).some(u => u.id === id)); return o ? uPath(o.units, id).join(" › ") : id; }).join(", "))}</div>` : ""}</td><td><button class="btn sec sm" data-uedit="${esc(m.id)}">${t("adEdit")}</button></td></tr>`)));
   el.querySelectorAll("[data-uedit]").forEach(b => b.onclick = () => { ADM.sel.user = b.dataset.uedit; ADT.users(el); scrollTo(0, 0); });
   const c = document.getElementById("u-cancel"); if(c) c.onclick = () => { ADM.sel.user = null; ADT.users(el); };
   const d = document.getElementById("u-del"); if(d) d.onclick = () => adConfirm(d, async () => { try{ await DB.doc("members/" + ed.id).delete(); adAudit("member.delete", ed.id); ADM.sel.user = null; ADT.users(el); }catch(e){ adErr(e); } });
@@ -2395,7 +2414,9 @@ const ADT = {
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){ toast(t("adBadEmail")); return; }
     const role = document.getElementById("u-role").value, orgsSel = [...el.querySelectorAll('input[name="u-org"]:checked')].map(i => i.value);
     if(role === "hr" && !orgsSel.length){ toast(t("adHrNeedsOrg")); return; }
-    try{ await DB.doc("members/" + em).set({name:document.getElementById("u-name").value.trim(), role, orgs:orgsSel, active:document.getElementById("u-act").checked, updatedAt:FV().serverTimestamp(), by:ME.email});
+    const unitsSel = role === "mgr" ? [...el.querySelectorAll('input[name="u-unit"]:checked')].filter(i => orgsSel.includes(i.dataset.org)).map(i => i.value) : [];
+    if(role === "mgr" && (!orgsSel.length || !unitsSel.length)){ toast(t("adMgrNeeds")); return; }
+    try{ await DB.doc("members/" + em).set({name:document.getElementById("u-name").value.trim(), role, orgs:orgsSel, units:unitsSel, active:document.getElementById("u-act").checked, updatedAt:FV().serverTimestamp(), by:ME.email});
       adAudit("member.save", em + " " + role); ADM.sel.user = null; toast(t("adSaved")); ADT.users(el); }catch(err){ adErr(err); } };
  },
 
@@ -2408,7 +2429,7 @@ const ADT = {
     <h3 class="sellayer">${t("adAuditT")}</h3>` + adTbl([t("adCol").date, t("adEmail"), t("adCol").act, t("adCol").ref], audit.map(a => `<tr><td>${adDate(a.at)}</td><td dir="ltr">${esc(a.by || "")}</td><td dir="ltr">${esc(a.act || "")}</td><td dir="ltr" class="small">${esc(a.ref || "")}</td></tr>`));
   const dl = (name, obj) => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(obj, (k, v) => v && v.toDate ? v.toDate().toISOString() : v, 2)], {type:"application/json"})); a.download = name; document.body.appendChild(a); a.click(); a.remove(); };
   const day = new Date().toISOString().slice(0, 10);
-  document.getElementById("ex-all").onclick = async () => { try{ const cols = ["orgs", "rounds", "reports", "leads", "applications", "partners", "members"], o = {}; for(const c of cols) o[c] = await adGet(c); dl(`wellbeing-export-${day}.json`, o); adAudit("export.all", day); }catch(e){ adErr(e); } };
+  document.getElementById("ex-all").onclick = async () => { try{ const cols = ["orgs", "rounds", "reports", "unitreports", "leads", "applications", "partners", "members"], o = {}; for(const c of cols) o[c] = await adGet(c); dl(`wellbeing-export-${day}.json`, o); adAudit("export.all", day); }catch(e){ adErr(e); } };
   document.getElementById("ex-resp").onclick = async () => { try{ dl(`wellbeing-responses-${day}.json`, await adGet("responses")); adAudit("export.responses", day); }catch(e){ adErr(e); } };
   document.getElementById("fd-go").onclick = async () => { const em = document.getElementById("fd-em").value.trim().toLowerCase(), out = document.getElementById("fd-out"); if(!em) return;
     try{ const hits = []; for(const [c, f] of [["leads", "email"], ["applications", "email"], ["partners", "email"], ["orgs", "email"]]){ (await adGet(c, r => r.where(f, "==", em))).forEach(x => hits.push([c, x.id])); }
@@ -2431,6 +2452,18 @@ const ADT = {
   el.innerHTML = (parts.join("") || `<p class="muted">${t("adNoRep")}</p>`) + `<p style="margin-top:14px"><button class="btn sec sm" id="hr-print">${t("print")}</button></p>`;
   document.getElementById("hr-print").onclick = () => window.print();
   adAudit("hr.view", ME.orgs.join(","));
+ },
+
+ /* department managers: only the reports of their own departments (and the teams below them) */
+ async mgrrep(el){
+  const reps = [];
+  for(const o of ME.orgs) for(let i = 0; i < ME.units.length; i += 10) reps.push(...await adGet("unitreports", r => r.where("orgId", "==", o).where("unitId", "in", ME.units.slice(i, i + 10))));
+  adNewest(reps);
+  el.innerHTML = (reps.length ? reps.map(r => `<article class="card" style="margin-top:12px"><div class="row" style="justify-content:space-between;gap:8px"><b>${esc(r.org || "")} › ${esc(r.path || r.name || "")}</b><span class="small muted">${fillT("adRepV", {v:r.version || 1, n:r.n || 0, d:adDate(r.publishedAt)})}</span></div><p class="small muted" style="margin:2px 0 0">${esc(r.title || "")}</p>
+    <div style="margin-top:10px">${gBody(r.agg, null)}</div><p class="small muted" style="margin-top:10px">${fillT("gRule", {a:G_MIN_ALL, b:G_MIN_GRP})}</p></article>`).join("") : `<p class="muted">${t("adNoUnitRep")}</p>`)
+    + `<p style="margin-top:14px"><button class="btn sec sm" id="mg-print">${t("print")}</button></p>`;
+  document.getElementById("mg-print").onclick = () => window.print();
+  adAudit("mgr.view", ME.units.join(","));
  }
 };
 
@@ -2578,19 +2611,22 @@ function renderTake(){
   const packs = ROUND ? [ROUND.pack] : Object.keys(PACKS);
   const levels = ROUND && ROUND.levels ? LV.filter(l => ROUND.levels.includes(l.id)) : LV.filter(l => l.id !== "student");
   const nItems = p => packInst(p).reduce((s, i) => s + INST[i].items.length, 0);
+  const UNITS = ROUND && ROUND.askUnits !== false && Array.isArray(ROUND.units) ? ROUND.units : []; let unitSel = "";
   el.innerHTML = `<div class="take"><div class="kicker">${t("tRound")}</div><h1 style="font-size:2rem;margin:6px 0 4px">${t("tT")}</h1>
     <p class="lead">${joinCode ? `${t("tJoin")}${CL()} <b>${esc(ROUND ? ROUND.org + " · " + ROUND.title : joinCode)}</b>` : t("tSelf")}</p>
     ${joinCode ? `<p style="margin:10px 0 0"><a class="btn sec" href="#group-${esc(joinCode)}">${t("gLink")} ${ARW()}</a></p>` : ""}
     ${S && S.started ? `<div class="callout care" style="margin-top:16px"><div class="row" style="justify-content:space-between"><b>${t("tResume")}</b><button class="btn sec" id="restart">${t("tRestart")}</button></div></div>` : ""}
     <form id="f0" style="margin-top:24px">
       <fieldset><legend>${t("tLevel")}</legend><p class="small muted" style="margin:-4px 0 10px">${t("tLevelHint")}</p><div class="choice">${levels.map((l, i) => `<label><input type="radio" name="lv" value="${l.id}" ${i === 0 && levels.length === 1 ? "checked" : ""} required><span>${l[L]}</span></label>`).join("")}</div></fieldset>
+      ${UNITS.length ? `<fieldset><legend>${t("tUnit")}</legend><p class="small muted" style="margin:-4px 0 10px">${fillT("tUnitHint", {b:G_MIN_GRP})}</p><div id="unitpick"></div></fieldset>` : ""}
       <fieldset><legend>${t("tPack")}</legend><div class="choice">${packs.map((p, i) => `<label><input type="radio" name="pk" value="${p}" ${i === 0 ? "checked" : ""}><span><b>${PACKS[p][L]}</b><small>${PACKS[p].dims.map(d => dn(dimOf(d))).join(SEP())} · ${num(nItems(p))} ${t("tItems")} · ${L === "fa" ? "حدود " : "≈"}${num(PACKS[p].min)} ${t("tMin")}</small></span></label>`).join("")}</div></fieldset>
       <div class="choice"><label><input type="checkbox" name="ok" required><span>${t("tConsent")}</span></label></div>
       <div class="nav2"><span></span><button class="btn pri" type="submit">${t("tStart")}</button></div>
     </form></div>`;
   const rs = document.getElementById("restart"); if(rs) rs.onclick = () => { S = null; store.del("sj-run"); renderTake(); };
+  const up = document.getElementById("unitpick"); if(up) unitPicker(up, UNITS, v => unitSel = v);
   document.getElementById("f0").onsubmit = e => { e.preventDefault(); const f = new FormData(e.target);
-    S = {pack:f.get("pk"), lv:f.get("lv"), r:joinCode || "self", step:0, a:{}, started:true, lang:L}; store.set("sj-run", S); renderQ(); };
+    S = {pack:f.get("pk"), lv:f.get("lv"), r:joinCode || "self", step:0, a:{}, started:true, lang:L}; if(unitSel) S.u = unitSel; store.set("sj-run", S); renderQ(); };
 }
 function renderQ(){
   const el = document.getElementById("v-take");
@@ -2618,7 +2654,7 @@ function renderQ(){
     const miss = S.a[id].map((v, i) => v == null ? i : -1).filter(i => i >= 0);
     if(miss.length){ miss.forEach(i => document.getElementById("q" + i).classList.add("miss")); document.getElementById("q" + miss[0]).scrollIntoView({behavior:"smooth", block:"center"}); toast(t("tMissing") + " " + miss.map(i => num(i + 1)).join(SEP())); return; }
     if(S.step < list.length - 1){ S.step++; store.set("sj-run", S); renderQ(); window.scrollTo(0, 0); return; }
-    const res = {v:1, r:S.r, lv:S.lv, p:S.pack, m:new Date().toISOString().slice(0, 7), a:S.a};
+    const res = {v:1, r:S.r, lv:S.lv, p:S.pack, m:new Date().toISOString().slice(0, 7), a:S.a}; if(S.u) res.u = S.u;
     store.set("sj-last", res); S = null; store.del("sj-run"); location.hash = "#result";
   };
 }
@@ -2641,12 +2677,10 @@ async function gEncrypt(key, obj){ const iv = crypto.getRandomValues(new Uint8Ar
 async function gDecrypt(key, f){ const pt = await crypto.subtle.decrypt({name:"AES-GCM", iv:unb64(f.iv)}, await gCrypt(key), unb64(f.ct)); return JSON.parse(new TextDecoder().decode(pt)); }
 async function gFetch(key){ if(DB && FB_ON){ try{ const s = await DB.doc("groupfiles/" + await gHash(key)).get(); if(s.exists) return gDecrypt(key, s.data()); }catch(e){} } const r = await fetch("r/" + await gHash(key) + ".json", {cache:"no-store"}); if(r.status === 404) return null; if(!r.ok) throw new Error("http " + r.status); return gDecrypt(key, await r.json()); }
 const gNewKey = () => { const A = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", r = crypto.getRandomValues(new Uint8Array(12)); const x = [...r].map(v => A[v % 32]).join(""); return x.slice(0, 4) + "-" + x.slice(4, 8) + "-" + x.slice(8); };
-const gUnique = list => { const seen = new Set(); return list.filter(o => { const k = JSON.stringify([o.lv, o.a]); if(seen.has(k)) return false; seen.add(k); return true; }); };
-function gAggregate(list){
+const gUnique = list => { const seen = new Set(); return list.filter(o => { const k = JSON.stringify([o.lv, o.u || "", o.a]); if(seen.has(k)) return false; seen.add(k); return true; }); };
+function gAggregate(list, units, prev){
   const rows = rowsFromResp(list);
-  const agg = rs => { const o = {n:rs.length, d:{}, dist:{}};
-    for(const D of DIMS){ const v = rs.map(r => r.d[D.id]).filter(x => x != null); if(v.length >= G_MIN_GRP){ o.d[D.id] = avg(v); const c = [0, 0, 0]; v.forEach(x => c[band(x)]++); o.dist[D.id] = c.map(x => Math.round(x / v.length * 100)); } }
-    return o; };
+  const agg = gAggOne;
   const all = agg(rows); all.sub = {};
   new Set(rows.flatMap(r => Object.keys(r.sub))).forEach(k => { const v = rows.map(r => r.sub[k]).filter(x => x != null); if(v.length >= G_MIN_GRP) all.sub[k] = avg(v); });
   const groups = LV.map(l => ({id:l.id, rs:rows.filter(r => r.lv === l.id)})).filter(g => g.rs.length);
@@ -2658,7 +2692,84 @@ function gAggregate(list){
     lv = shown.map(g => ({id:g.id, ...agg(g.rs)})); if(rest.length) lv.push({id:"other", ...agg(rest)});
     for(const D of DIMS) if(lv.some(g => g.d[D.id] == null)) lv.forEach(g => { delete g.d[D.id]; delete g.dist[D.id]; });   // no differencing per dimension
   }
-  return {v:1, n:rows.length, m:[...new Set(list.map(r => r.m).filter(Boolean))].sort(), all, lv};
+  const out = {v:1, n:rows.length, m:[...new Set(list.map(r => r.m).filter(Boolean))].sort(), all, lv};
+  if((units || []).length) out.units = gUnitAgg(rows, units);
+  return gFreeze(out, prev);
+}
+/* ── departments and teams (units) ──
+   An organisation may define a tree of units {id, name, parent}. A participant picks one (or "prefer not to say").
+   Results are shown per unit only for groups of at least G_MIN_GRP. Inside every parent, whatever is not shown
+   (people who picked the parent itself, small units, "not stated") forms one remainder that is either empty or at
+   least G_MIN_GRP; otherwise the smallest shown unit is folded into it, as with job levels. A hidden unit hides its
+   whole subtree. Units are never crossed with job levels: two cross-tables would let a small cell be worked out by
+   subtraction. A group that grew by fewer than G_MIN_GRP since the previous report keeps its previous figures. */
+const U_MAX = 200, U_DEPTH = 4;
+function uTree(units){ const by = {}, roots = []; (units || []).forEach(u => by[u.id] = {...u, kids:[]}); (units || []).forEach(u => (u.parent && by[u.parent] ? by[u.parent].kids : roots).push(by[u.id])); return {by, roots}; }
+function uPath(units, id){ const {by} = uTree(units), out = []; let x = by[id], g = 0; while(x && g++ < 12){ out.unshift(x.name); x = by[x.parent]; } return out; }
+function uParse(text, old){
+  const keep = {}; (old || []).forEach(u => keep[uPath(old, u.id).join("/").toLowerCase()] = u.id);
+  const out = [], stack = [], used = new Set();
+  for(const raw of String(text || "").split(/\r?\n/)){
+    const name = raw.trim().replace(/^[-•*]\s*/, "").slice(0, 60); if(!name) continue;
+    const ind = raw.match(/^\s*/)[0].replace(/\t/g, "  ").length, depth = Math.min(U_DEPTH - 1, Math.floor(ind / 2), stack.length);
+    stack.length = depth; const parent = stack[depth - 1] || null;
+    const path = [...stack.map(s => s.name), name].join("/").toLowerCase();
+    let id = keep[path]; if(!id || used.has(id)){ do id = "u" + Math.random().toString(36).slice(2, 8); while(used.has(id)); }
+    used.add(id); const u = {id, name, parent:parent ? parent.id : ""}; out.push(u); stack.push(u);
+    if(out.length >= U_MAX) break;
+  }
+  return out;
+}
+const uText = units => { const {roots} = uTree(units), out = []; const w = (n, d) => { out.push("  ".repeat(d) + n.name); n.kids.forEach(k => w(k, d + 1)); }; roots.forEach(r => w(r, 0)); return out.join("\n"); };
+function gAggOne(rs){ const o = {n:rs.length, d:{}, dist:{}};
+  for(const D of DIMS){ const v = rs.map(r => r.d[D.id]).filter(x => x != null); if(v.length >= G_MIN_GRP){ o.d[D.id] = avg(v); const c = [0, 0, 0]; v.forEach(x => c[band(x)]++); o.dist[D.id] = c.map(x => Math.round(x / v.length * 100)); } }
+  return o; }
+function gUnitAgg(rows, units){
+  const {roots} = uTree(units); if(!roots.length) return [];
+  const ids = n => { const s = new Set(); const w = x => { s.add(x.id); x.kids.forEach(w); }; w(n); return s; };
+  const out = [];
+  const walk = (node, depth) => {
+    const kids = node ? node.kids : roots, pool = node ? rows.filter(r => ids(node).has(r.u)) : rows;
+    const parts = kids.map((k, i) => { const s = ids(k); return {k, i, rs:pool.filter(r => s.has(r.u))}; });
+    let shown = parts.filter(p => p.rs.length >= G_MIN_GRP).sort((a, b) => a.rs.length - b.rs.length);
+    const inShown = () => { const s = new Set(); shown.forEach(p => p.rs.forEach(r => s.add(r))); return s; };
+    let rest = pool.filter(r => !inShown().has(r));
+    while(rest.length > 0 && rest.length < G_MIN_GRP && shown.length) rest = rest.concat(shown.shift().rs);
+    if(!shown.length) return;
+    shown.sort((a, b) => a.i - b.i);
+    for(const p of shown){ out.push({id:p.k.id, name:p.k.name, depth, parent:node ? node.id : "", ...gAggOne(p.rs)}); walk(p.k, depth + 1); }
+    if(rest.length) out.push({id:"rest:" + (node ? node.id : ""), depth, parent:node ? node.id : "", ...gAggOne(rest)});
+  };
+  walk(null, 0);
+  for(const D of DIMS) if(out.some(g => g.d[D.id] == null)) out.forEach(g => { delete g.d[D.id]; delete g.dist[D.id]; });   // no differencing per dimension
+  return out;
+}
+function gFreeze(cur, prev){
+  if(!prev) return cur;
+  const fix = (a, b) => (a || []).map(g => { const o = (b || []).find(x => x.id === g.id); return o && g.n > o.n && g.n - o.n < G_MIN_GRP ? {...o, depth:g.depth, parent:g.parent, frozen:1} : g; });
+  const out = {...cur, lv:fix(cur.lv, prev.lv)}; if(cur.units) out.units = fix(cur.units, prev.units); return out;
+}
+const gUnitName = (g, list) => g.id.startsWith("rest:") ? (g.parent ? fillT("gRest", {x:esc(((list || []).find(x => x.id === g.parent) || {}).name || "")}) : t("gRestTop")) : esc(g.name || "");
+function gUnitHtml(units){
+  if(!(units || []).length) return "";
+  const ds = DIMS.filter(D => units.some(g => g.d[D.id] != null));
+  const cell = v => v == null ? `<td class="na">–</td>` : `<td style="background:${["var(--low-soft)","var(--mid-soft)","var(--high-soft)"][band(v)]}">${num(v)}</td>`;
+  return `<div class="scroll" style="margin-top:10px"><table class="heat utab"><tr><th></th><th>n</th>${ds.map(D => `<th>${dn(D)}</th>`).join("")}</tr>${units.map(g => `<tr${g.depth ? "" : ' class="u0"'}><th class="dn" style="padding-inline-start:${6 + g.depth * 18}px">${g.depth ? "↳ " : ""}${gUnitName(g, units)}</th><td class="un">${num(g.n)}${g.frozen ? "*" : ""}</td>${ds.map(D => cell(g.d[D.id])).join("")}</tr>`).join("")}</table></div>
+    <p class="small muted" style="margin:8px 0 0">${fillT("gUnitNote", {b:G_MIN_GRP})}${units.some(g => g.frozen) ? " " + fillT("gFrozen", {b:G_MIN_GRP}) : ""}</p>`;
+}
+function unitPicker(box, units, done){
+  const {by, roots} = uTree(units); let top = "", chain = [];
+  const paint = () => {
+    const lists = [roots]; chain.forEach(id => { if(by[id] && by[id].kids.length) lists.push(by[id].kids); });
+    box.innerHTML = lists.map((ks, i) => { const par = i ? by[chain[i - 1]] : null;
+      const opts = i ? [[par.id, fillT("tUnitWhole", {x:esc(par.name)})]] : [["", "—"], ["-", esc(t("tUnitNone"))]];
+      const val = i ? (chain[i] || par.id) : (chain[0] || top);
+      return `<label class="f"${i ? ' style="margin-top:8px"' : ""}>${i ? fillT("tUnitSub", {x:esc(par.name)}) : `<span class="sr-only">${t("tUnit")}</span>`}<select data-ul="${i}"${i ? "" : " required"}>${opts.concat(ks.map(k => [k.id, esc(k.name)])).map(([v, l]) => `<option value="${esc(v)}"${val === v ? " selected" : ""}>${l}</option>`).join("")}</select></label>`; }).join("");
+    box.querySelectorAll("select").forEach(s => s.onchange = () => { const i = +s.dataset.ul, v = s.value;
+      chain = chain.slice(0, i); if(i === 0) top = v; if(v && v !== "-" && !(i && v === chain[i - 1])) chain.push(v);
+      paint(); done(chain[chain.length - 1] || ""); });
+  };
+  paint(); done("");
 }
 const gLvName = id => id === "other" ? t("gOther") : (LV.find(l => l.id === id) || {})[L] || id;
 function gBody(G, mine){
@@ -2668,6 +2779,7 @@ function gBody(G, mine){
     <div class="card" style="margin-top:12px"><b>${t("gAll")}</b><div style="margin-top:10px">${miniBars(ds.map(D => [dn(D), G.all.d[D.id]]))}</div><div class="legendb">${t("band").map((b, i) => `<span><i style="background:${BC[i]}"></i>${b}</span>`).join("")}</div></div>
     ${mine ? `<div class="card" style="margin-top:12px"><b>${t("gYou")}</b><div style="margin-top:10px">${miniBars(ds.filter(D => mine[D.id] != null).map(D => [dn(D), mine[D.id]]))}</div></div>` : ""}
     ${G.lv.length ? `<div class="card" style="margin-top:12px"><b>${t("gByLv")}</b><div class="scroll" style="margin-top:10px"><table class="heat"><tr><th></th>${G.lv.map(g => `<th>${esc(gLvName(g.id))}<br><span class="muted">${num(g.n)}</span></th>`).join("")}</tr>${ds.filter(D => G.lv.some(g => g.d[D.id] != null)).map(D => `<tr><th class="dn">${dn(D)}</th>${G.lv.map(g => cell(g.d[D.id])).join("")}</tr>`).join("")}</table></div></div>` : ""}
+    ${(G.units || []).length ? `<div class="card" style="margin-top:12px"><b>${t("gByUnit")}</b>${gUnitHtml(G.units)}</div>` : ""}
     `;
 }
 async function renderGroup(){
@@ -2764,10 +2876,15 @@ function demoData(seed0 = 42, shift = {}){
     for(const D of DIMS){ d[D.id] = Math.max(2, Math.min(98, base[D.id] + (shift[D.id] || 0) + ((off[lv] || {})[D.id] || 0) + g() * 15));
       D.subs.forEach((s, j) => sub[D.inst + "." + s] = Math.max(2, Math.min(98, d[D.id] + g() * 10 + (j - D.subs.length / 2) * 3))); }
     out.push({lv, d, sub}); }
+  /* demo departments: Operations (Warehouse, Transport, Planning), Customer service, Sales, Finance & HR, IT */
+  const uoff = {wh:{flow:-8, belong:-4}, tr:{compassion:-5}, pl:{hope:4}, cs:{compassion:-7, selfctrl:-4}, sa:{optim:7, hope:5}, fh:{}, it:{flow:6}};
+  const plan = [["wh", 42], ["tr", 27], ["pl", 12], ["ops", 3], ["cs", 33], ["sa", 41], ["fh", 9], ["it", 7], ["", 6]];
+  let k = 0; plan.forEach(([u, c]) => { for(let i = 0; i < c && k < out.length; i++, k++){ const r = out[(k * 37) % out.length]; r.u = u; for(const D of DIMS) r.d[D.id] = Math.max(2, Math.min(98, r.d[D.id] + ((uoff[u] || {})[D.id] || 0))); } });
   return out;
 }
+const demoUnits = () => { const n = t("demoU"); return [{id:"ops", name:n[0], parent:""}, {id:"wh", name:n[1], parent:"ops"}, {id:"tr", name:n[2], parent:"ops"}, {id:"pl", name:n[3], parent:"ops"}, {id:"cs", name:n[4], parent:""}, {id:"sa", name:n[5], parent:""}, {id:"fh", name:n[6], parent:""}, {id:"it", name:n[7], parent:""}]; };
 let REP = {src:"demo", rows:null, imported:[], rounds:[], round:null, unsub:null};
-function rowsFromResp(list){ return list.map(R => { const s = scoreAll(R.a || {}); return {lv:R.lv, d:s.d, sub:s.sub}; }); }
+function rowsFromResp(list){ return list.map(R => { const s = scoreAll(R.a || {}); return {lv:R.lv, u:R.u || "", d:s.d, sub:s.sub}; }); }
 function renderReport(){
   const el = document.getElementById("v-report");
   let rows = REP.src === "demo" ? demoData() : REP.src === "import" ? rowsFromResp(REP.imported) : rowsFromResp(REP.live || []);
@@ -2857,6 +2974,8 @@ function renderReport(){
         + keyBox(fmt(t("timeKey"), {d:dn(best.D), x:sdiff(best.d)}));
     }
   }
+  const UNITS_R = REP.src === "demo" ? demoUnits() : REP.src === "live" ? ((REP.rounds.find(r => r.id === REP.round) || {}).units || []) : [], hasU = UNITS_R.length && rows.some(r => r.u);
+  if(tab === "unit" && hasU){ const ug = gUnitAgg(rows, UNITS_R); panel = box("unit") + `<div class="card">${ug.length ? gUnitHtml(ug) : `<p style="margin:0">${fillT("gUnitNote", {b:G_MIN_GRP})}</p>`}</div>`; }
   if(tab === "plan"){
     panel = box("plan") + `<div class="split" style="margin-bottom:14px"><div class="card"><b>${t("pStrengths")}</b><div class="chips" style="margin-top:8px">${strengths.map(x => `<span class="pill b2">${dn(x.D)} · ${num(x.m)}</span>`).join("")}</div></div>
      ${gap ? `<div class="card"><b>${t("pGap")}</b><p style="margin:6px 0 0">${dn(gap.D)}${CL()} <b>${gap.hi[L]}</b> ${num(cell(gap.D, gap.hi.id).m)} ↔ <b>${gap.lo[L]}</b> ${num(cell(gap.D, gap.lo.id).m)}</p></div>` : ""}</div>
@@ -2865,7 +2984,7 @@ function renderReport(){
         <p class="why2"><b>${t("pWhy")}${CL()}</b> ${whyOf(x)}</p>${x.D.id === "belong" ? `<p class="small muted" style="margin:0 0 6px">${t("pScopeBelong")}</p>` : x.D.id === "optim" ? `<p class="small muted" style="margin:0 0 6px">${t("pScopeOptim")}</p>` : ""}<p class="small" style="margin:0"><b>${t("pFor")}${CL()}</b> ${tgt.length ? tgt.map(c => c.l[L]).join(SEP()) : t("allLv")}</p>
         ${W ? `<div class="ws"><b>${W[L].t}</b> <span class="small muted">· ${W.len[L]}</span><div class="small">${W[L].goals.join(" · ")}</div><div class="row" style="gap:14px;margin-top:6px"><a class="small" href="#workshops" data-go="workshops:ws-${W.id}">${t("nWs")} ${ARW()}</a><a class="btn sec sm" href="${mailto(t("pPlan") + ": " + W[L].t, W[L].t)}">${t("pPlan")}</a></div></div>` : ""}</div></div>`; }).join("") : `<div class="card">${t("pNoPri")}</div>`}</div>${pri.length > 3 ? `<div class="card alsow"><b>${t("pAlso")}</b><ul style="margin:8px 0 0;padding-inline-start:20px">${pri.slice(3).map(x => `<li><b>${dn(x.D)}</b> (${num(x.m)}): ${whyOf(x)}</li>`).join("")}</ul></div>` : ""}<p class="small muted" style="margin:12px 0 0">${t("planNote")}</p>`;
   }
-  const order = ["sum","heat","gap","dist","prof","sub","time","plan"];
+  const order = ["sum","heat"].concat(hasU ? ["unit"] : [], ["gap","dist","prof","sub","time","plan"]);
   const body = !rowsA.length ? `<div class="card" style="margin-top:20px"><p>${t("pNone")}</p></div>` : `
    <div class="kpis" style="margin-top:20px">
      <div class="card kpi"><b>${num(rows.length)}</b><span>${t("pN")}</span><small>${t("kpiSub")[0]}</small></div>

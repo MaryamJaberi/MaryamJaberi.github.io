@@ -5,7 +5,7 @@ import { doc, getDoc, setDoc, getDocs, collection, query, where, addDoc, serverT
 const env = await initializeTestEnvironment({ projectId: "demo-wb", firestore: { rules: readFileSync(process.argv[2], "utf8"), host: "127.0.0.1", port: 8080 } });
 const as = (email) => env.authenticatedContext(email, { email, email_verified: true }).firestore();
 const anon = env.unauthenticatedContext().firestore();
-const owner = as("M.Jaberi1212@gmail.com"), psy = as("psy@x.nl"), hr = as("hr@acme.nl"), hr2 = as("hr@other.nl"), stranger = as("who@x.nl");
+const owner = as("M.Jaberi1212@gmail.com"), psy = as("psy@x.nl"), hr = as("hr@acme.nl"), hr2 = as("hr@other.nl"), mgr = as("mgr@acme.nl"), mgr2 = as("mgr2@acme.nl"), stranger = as("who@x.nl");
 const unverified = env.authenticatedContext("u", { email: "hr@acme.nl", email_verified: false }).firestore();
 let pass = 0, fail = 0;
 const t = async (name, p) => { try { await p; pass++; } catch (e) { fail++; console.log("FAIL:", name, e.message.split("\n")[0]); } };
@@ -15,7 +15,13 @@ await env.withSecurityRulesDisabled(async c => {
   await setDoc(doc(d, "members/psy@x.nl"), { role: "psy", active: true });
   await setDoc(doc(d, "members/hr@acme.nl"), { role: "hr", orgs: ["acme"], active: true });
   await setDoc(doc(d, "members/hr@other.nl"), { role: "hr", orgs: ["other"], active: true });
-  await setDoc(doc(d, "rounds/ABCD-EFGH-JKLM"), { orgId: "acme", org: "Acme", status: "open" });
+  await setDoc(doc(d, "members/mgr@acme.nl"), { role: "mgr", orgs: ["acme"], units: ["uops", "uwh"], active: true });
+  await setDoc(doc(d, "members/mgr2@acme.nl"), { role: "mgr", orgs: ["acme"], units: ["usal"], active: false });
+  await setDoc(doc(d, "rounds/ABCD-EFGH-JKLM"), { orgId: "acme", org: "Acme", status: "open", unitIds: ["uops", "uwh", "usal"] });
+  await setDoc(doc(d, "unitreports/ABCD-EFGH-JKLM__uops"), { orgId: "acme", unitId: "uops", agg: {} });
+  await setDoc(doc(d, "unitreports/ABCD-EFGH-JKLM__uwh"), { orgId: "acme", unitId: "uwh", agg: {} });
+  await setDoc(doc(d, "unitreports/ABCD-EFGH-JKLM__usal"), { orgId: "acme", unitId: "usal", agg: {} });
+  await setDoc(doc(d, "unitreports/OTHERRND__uops"), { orgId: "other", unitId: "uops", agg: {} });
   await setDoc(doc(d, "rounds/CLOS-EDXX-XXXX"), { orgId: "acme", status: "closed" });
   await setDoc(doc(d, "rounds/OLDR"), { org: "Old" });
   await setDoc(doc(d, "responses/r1"), { r: "ABCD-EFGH-JKLM", lv: "staff", a: {} });
@@ -42,6 +48,26 @@ await t("psy can list answers", assertSucceeds(getDocs(query(collection(psy, "re
 await t("owner (any case) can read answers", assertSucceeds(getDoc(doc(owner, "responses/r1"))));
 await t("nobody edits answers", assertFails(updateDoc(doc(owner, "responses/r1"), { lv: "x" })));
 await t("psy cannot delete answers", assertFails(deleteDoc(doc(psy, "responses/r1"))));
+// departments
+await t("anon answers with a known department", assertSucceeds(setDoc(doc(anon, "responses/u1"), { ...resp, u: "uwh" })));
+await t("unknown department rejected", assertFails(setDoc(doc(anon, "responses/u2"), { ...resp, u: "uxx" })));
+await t("department on a round without departments rejected", assertFails(setDoc(doc(anon, "responses/u3"), { ...resp, r: "OLDR", u: "uwh" })));
+await t("department must be a short string", assertFails(setDoc(doc(anon, "responses/u4"), { ...resp, u: ["uwh"] })));
+await t("mgr reads own department report", assertSucceeds(getDoc(doc(mgr, "unitreports/ABCD-EFGH-JKLM__uwh"))));
+await t("mgr cannot read other department", assertFails(getDoc(doc(mgr, "unitreports/ABCD-EFGH-JKLM__usal"))));
+await t("mgr cannot read same unit id in other org", assertFails(getDoc(doc(mgr, "unitreports/OTHERRND__uops"))));
+await t("mgr lists own departments", assertSucceeds(getDocs(query(collection(mgr, "unitreports"), where("orgId", "==", "acme"), where("unitId", "in", ["uops", "uwh"])))));
+await t("mgr cannot list whole org", assertFails(getDocs(query(collection(mgr, "unitreports"), where("orgId", "==", "acme")))));
+await t("inactive mgr gets nothing", assertFails(getDoc(doc(mgr2, "unitreports/ABCD-EFGH-JKLM__usal"))));
+await t("mgr cannot read org report", assertFails(getDoc(doc(mgr, "reports/ABCD-EFGH-JKLM"))));
+await t("mgr cannot read answers", assertFails(getDoc(doc(mgr, "responses/r1"))));
+await t("mgr cannot read org doc", assertFails(getDoc(doc(mgr, "orgs/acme"))));
+await t("mgr cannot list rounds", assertFails(getDocs(query(collection(mgr, "rounds"), where("orgId", "==", "acme")))));
+await t("mgr cannot write department report", assertFails(setDoc(doc(mgr, "unitreports/ABCD-EFGH-JKLM__uwh"), { orgId: "acme", unitId: "uwh", agg: { x: 1 } })));
+await t("hr reads any own-org department report", assertSucceeds(getDocs(query(collection(hr, "unitreports"), where("orgId", "==", "acme")))));
+await t("hr2 cannot read acme department report", assertFails(getDoc(doc(hr2, "unitreports/ABCD-EFGH-JKLM__uwh"))));
+await t("psy writes department report", assertSucceeds(setDoc(doc(psy, "unitreports/X__u"), { orgId: "acme", unitId: "u" })));
+await t("mgr writes own audit row", assertSucceeds(addDoc(collection(mgr, "audit"), { by: "mgr@acme.nl", at: serverTimestamp(), act: "view" })));
 // rounds
 await t("anon can get a round", assertSucceeds(getDoc(doc(anon, "rounds/ABCD-EFGH-JKLM"))));
 await t("anon cannot list rounds", assertFails(getDocs(collection(anon, "rounds"))));

@@ -1,11 +1,12 @@
 rules_version = '2';
 // Workplace Wellbeing Check (SoloNovate) — Firestore security rules.
-// Roles live in members/{lower-case e-mail}: {role: "admin" | "psy" | "hr", orgs: [orgId], active: true}.
+// Roles live in members/{lower-case e-mail}: {role: "admin" | "psy" | "hr" | "mgr", orgs: [orgId], units: [unitId], active: true}.
 // The owner e-mail below is always admin, so the first login can set up everyone else.
 // Privacy promises enforced here:
 //  - Individual survey answers (responses) can be written by anyone into an open round, but only
 //    SoloNovate staff (admin, psy) can read them. HR never reads individual answers.
 //  - HR reads only the aggregated, suppressed report (reports) of its own organisations.
+//  - A department manager (mgr) reads only the aggregated report of its own departments (unitreports).
 service cloud.firestore {
   match /databases/{database}/documents {
 
@@ -19,6 +20,7 @@ service cloud.firestore {
     function isAdmin() { return isOwner() || hasRole("admin"); }
     function isStaff() { return isAdmin() || hasRole("psy"); }
     function hrOf(org) { return hasRole("hr") && org in mem().get("orgs", []); }
+    function mgrOf(org, unit) { return hasRole("mgr") && org in mem().get("orgs", []) && unit in mem().get("units", []); }
     function str(v, max) { return v is string && v.size() <= max; }
     function optStr(d, k, max) { return !(k in d) || str(d[k], max); }
     function optList(d, k, max) { return !(k in d) || (d[k] is list && d[k].size() <= max); }
@@ -46,12 +48,14 @@ service cloud.firestore {
     // ── individual answers: write-only for participants ──
     match /responses/{id} {
       allow create: if
-        request.resource.data.keys().hasOnly(["v", "r", "lv", "p", "m", "a", "t"])
+        request.resource.data.keys().hasOnly(["v", "r", "lv", "u", "p", "m", "a", "t"])
         && request.resource.data.keys().hasAll(["r", "lv", "a"])
         && str(request.resource.data.r, 20)
         && str(request.resource.data.lv, 20)
         && optStr(request.resource.data, "p", 20)
         && optStr(request.resource.data, "m", 7)
+        && (!("u" in request.resource.data) || (str(request.resource.data.u, 24)
+            && request.resource.data.u in get(/databases/$(database)/documents/rounds/$(request.resource.data.r)).data.get("unitIds", [])))
         && request.resource.data.a is map && request.resource.data.a.size() <= 12
         && (!("t" in request.resource.data) || request.resource.data.t == request.time)
         && exists(/databases/$(database)/documents/rounds/$(request.resource.data.r))
@@ -64,6 +68,13 @@ service cloud.firestore {
     // ── aggregated, suppressed reports (built in the admin panel) ──
     match /reports/{roundId} {
       allow read: if isStaff() || (resource != null && hrOf(resource.data.get("orgId", "")));
+      allow create, update: if isStaff();
+      allow delete: if isAdmin();
+    }
+
+    // ── one aggregated report per department and round (id: roundId__unitId), for department managers ──
+    match /unitreports/{id} {
+      allow read: if isStaff() || (resource != null && (hrOf(resource.data.get("orgId", "")) || mgrOf(resource.data.get("orgId", ""), resource.data.get("unitId", ""))));
       allow create, update: if isStaff();
       allow delete: if isAdmin();
     }
@@ -124,7 +135,7 @@ service cloud.firestore {
 
     // ── audit trail: append-only ──
     match /audit/{id} {
-      allow create: if (isStaff() || hasRole("hr")) && request.resource.data.by == em() && request.resource.data.at == request.time;
+      allow create: if (isStaff() || hasRole("hr") || hasRole("mgr")) && request.resource.data.by == em() && request.resource.data.at == request.time;
       allow read: if isAdmin();
       allow update, delete: if false;
     }
