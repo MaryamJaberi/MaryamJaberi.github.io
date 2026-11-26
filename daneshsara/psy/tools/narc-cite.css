@@ -1,0 +1,43 @@
+/* منبع‌دهی و ناوبری مشترک ابزارهای پروندهٔ «خودشیفتگی و کنترل» */
+sup.cite{font-size:.62em;line-height:0;vertical-align:super;margin-inline-start:2px;white-space:nowrap;font-variant-numeric:tabular-nums}
+sup.cite a{text-decoration:none;color:var(--fam-psy);border-bottom:none;padding:0 1px}
+sup.cite a:hover,sup.cite a:focus{text-decoration:underline}
+sup.cite i{font-style:normal;opacity:.55;margin:0 1px}
+
+.srcbox{padding-block:var(--s5);border-top:1px solid var(--line)}
+.srcbox>h2{font-size:var(--h3);margin:0 0 6px}
+.srcbox>p.k{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(--s4);max-width:52em}
+.srcbox ol{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:9px;max-width:60em}
+.srcbox li{counter-increment:s;display:grid;grid-template-columns:auto auto 1fr;gap:10px;align-items:baseline;
+ font-size:var(--small);line-height:1.85;padding:9px 12px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface);scroll-margin-top:72px}
+.srcbox li::before{content:counter(s);font-variant-numeric:tabular-nums;color:var(--ink-3);font-size:var(--chip)}
+.srcbox li:target{border-color:var(--fam-psy);background:color-mix(in srgb,var(--fam-psy) 8%,var(--surface))}
+.srcbox .cc{color:var(--ink-2);overflow-wrap:anywhere}
+.srcbox .cc a{color:var(--fam-psy);text-decoration:none}
+.srcbox .cc a:hover{text-decoration:underline}
+.srcbox .tier{display:inline-block;justify-self:start;margin-inline-end:0;font-size:var(--chip);border-radius:var(--r-full);padding:1px 9px;white-space:nowrap;border:1px solid}
+.srcbox .t1{color:#2f6b4f;border-color:color-mix(in srgb,#2f6b4f 40%,var(--line))}
+.srcbox .t2{color:#4867a8;border-color:color-mix(in srgb,#4867a8 40%,var(--line))}
+.srcbox .t3{color:#8a6d3b;border-color:color-mix(in srgb,#8a6d3b 40%,var(--line))}
+.srcbox .t4{color:#9a3b3b;border-color:color-mix(in srgb,#9a3b3b 40%,var(--line))}
+
+.nextnav{padding-block:var(--s5);border-top:1px solid var(--line)}
+.nextnav h2{font-size:var(--h3);margin:0 0 6px}
+.nextnav p.k{color:var(--ink-3);font-size:var(--small);line-height:1.9;margin:0 0 var(--s4);max-width:52em}
+.nextnav .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px}
+.nextnav a{display:block;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-lg);
+ background:var(--surface);text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.nextnav a:hover{border-color:var(--fam-psy);transform:translateY(-1px)}
+.nextnav a b{display:block;font-size:.95rem;line-height:1.55;margin-bottom:4px}
+.nextnav a span{display:block;font-size:var(--chip);color:var(--ink-3);line-height:1.75}
+.nextnav a.here{background:color-mix(in srgb,var(--fam-psy) 9%,var(--surface));border-color:var(--fam-psy);pointer-events:none}
+.nextnav a.here b::after{content:" — همین صفحه";font-weight:400;color:var(--ink-3);font-size:var(--chip)}
+.nextnav a.home{border-inline-start:4px solid var(--fam-psy)}
+
+@media (max-width:560px){
+ .srcbox li{grid-template-columns:auto 1fr}
+ .srcbox .tier{grid-column:2}
+ .srcbox .cc{grid-column:1/-1}
+}
+.srcbox .cc a.look{color:var(--ink-3)}
+.srcbox .cc a.look:hover{color:var(--fam-psy)}

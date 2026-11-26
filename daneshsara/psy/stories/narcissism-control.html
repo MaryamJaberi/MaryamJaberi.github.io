@@ -7,6 +7,7 @@
 <title>داستان‌های واقعی: خودشیفتگی و کنترل | ویکی روان‌شناسی | دانش‌سرا</title>
 <meta name="description" content="بیست‌وهشت ماجرای مستند — پرونده‌های دادگاهی، گزارش‌های بلند و خاطرات — که نشان می‌دهند الگوی کنترل در زوج، خانواده، محل کار، گروه و فضای مجازی چه شکلی است.">
 <link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../tools/narc-cite.css">
 <style>
 :root{--c:var(--story,#B4532A)}
 h1{font-size:var(--h1);margin:var(--s7) 0 var(--s3);line-height:1.32;text-wrap:balance;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
@@ -66,7 +67,10 @@ section.claim>p{margin:0 0 var(--s4);color:var(--ink-2);line-height:1.95;max-wid
  <a href="../tools/arc.html">قوس رابطه ←</a>
  <a href="../tools/control-check.html">آیا در این رابطه کنترل هست؟ ←</a>
 </div>
+<section id="nextnav"></section>
 </main>
+<script src="../tools/narc-sources.js"></script>
+<script src="../tools/narc-cite.js"></script>
 <script>
 const CLAIMS=[
  {id:"c1",t:"قوس یکسان است، صحنه فرق می‌کند",d:"آغاز درخشان، درهم‌تنیدن زندگی‌ها، نخستین ترک‌ها، و بعد چرخه‌ای که ماندن را از رفتن آسان‌تر می‌کند — چه در خانه، چه در محل کار، چه در یک گروه، چه با غریبه‌ای در اینترنت.",e:"relationship-arc"},
@@ -254,6 +258,7 @@ $("main").addEventListener("click",e=>{const a=e.target.closest("a[data-go]");if
  if(sec)sec.scrollIntoView({behavior:"smooth",block:"start"})});
 render();
 })();
+NC.nav('nextnav','stories/narcissism-control.html',{note:'همهٔ بخش‌های این پرونده از هر صفحه در دسترس‌اند، تا هیچ‌جا بن‌بست نباشد. منبعِ هر داستان زیر خودش آمده و قابل کلیک است.'});
 </script>
 <style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
 </body>

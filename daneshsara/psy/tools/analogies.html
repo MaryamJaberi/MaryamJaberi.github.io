@@ -7,6 +7,7 @@
 <title>این مثل چیست؟ شش آنالوژی | ویکی روان‌شناسی | دانش‌سرا</title>
 <meta name="description" content="شش آنالوژی از رشته‌های دور — اقتصاد، داروشناسی، مهندسی سیل، اندازه‌شناسی، بوم‌شناسی و جامعه‌شناسی — برای فهمیدن رابطهٔ کنترل‌گرانه، هر کدام با جدول نگاشت و نقطهٔ شکست.">
 <link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="narc-cite.css">
 <style>
 :root{--c:var(--fam-psy)}
 h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
@@ -67,15 +68,14 @@ table.map .s{display:block;font-size:var(--chip);color:var(--ink-3);margin-top:5
 </section>
 <section>
 <h2>بعدش کجا بروم</h2>
-<div class="links">
- <a href="../narcissism.html">پروندهٔ خودشیفتگی و کنترل ←</a>
- <a href="control-check.html">آیا در این رابطه کنترل هست؟ ←</a>
- <a href="arc.html">قوس رابطه ←</a>
- <a href="../entries.html#analogies">مدخل آنالوژی‌ها ←</a>
-</div>
 </section>
+<section id="srcs"></section>
+<section id="nextnav"></section>
 </main>
+<script src="narc-sources.js"></script>
+<script src="narc-cite.js"></script>
 <script>
+NC.init([]);
 /* هر آنالوژی: پایه (رشتهٔ دور) ← هدف (رابطهٔ کنترل‌گرانه)
    m: جدول نگاشت [رابطهٔ پایه، رابطهٔ هدف، منبع پایه، منبع هدف]
    b: نقطهٔ شکست | i: پیش‌بینی آزمودنی | u: به چه درد می‌خورد */
@@ -188,6 +188,10 @@ $("pick").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)
  $("pick").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));draw()});
 draw();
 })();
+NC.list('srcs',{title:'منبع‌ها'});
+document.getElementById('srcs').innerHTML='<h2>منبع‌ها</h2><p class="k">در این صفحه منبع‌ها داخل خودِ جدول‌ها هستند: هر سطرِ نگاشت، در هر دو سو، منبع خودش را دارد. '+
+'خودِ قیاس‌ها ساختهٔ ماست و منبعی ندارد — برای همین همه با نشان «یادداشت ویراستار» می‌آیند.</p>';
+NC.nav('nextnav',"analogies.html");
 </script>
 <style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
 </body>

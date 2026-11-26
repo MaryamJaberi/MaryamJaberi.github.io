@@ -7,6 +7,7 @@
 <title>مثلث قربانی، ظالم، ناجی — و راه بیرون | ویکی روان‌شناسی | دانش‌سرا</title>
 <meta name="description" content="مثلث نمایشی کارپمن: سه گوشه، سود پنهان هر کدام، و اینکه چطور نقش‌ها می‌چرخند. بعد شش گام برای بیرون آمدن از یک موقعیت واقعی خودتان.">
 <link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="narc-cite.css">
 <style>
 :root{--c:var(--fam-psy)}
 h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
@@ -113,22 +114,27 @@ button.g{font:inherit;padding:9px 18px;border-radius:var(--r-full);border:1px so
  <a href="../narcissism.html">پروندهٔ خودشیفتگی و کنترل ←</a>
 </div>
 </section>
+<section id="srcs"></section>
+<section id="nextnav"></section>
 </main>
+<script src="narc-sources.js"></script>
+<script src="narc-cite.js"></script>
 <script>
+NC.init(["karpman1968", "emerald2015", "maier2016", "gottman1992", "deci2000", "assor2004"]);
 const C={
- v:{k:"قربانی",c:"#5b6b8a",pos:[300,330],
+ v:{k:"قربانی",c:"#5b6b8a",pos:[300,330],s:["karpman1968", "maier2016"],
   f:"«کاری از دست من برنمی‌آید»، «همیشه سر من می‌آید»، «هر کاری کنم فایده ندارد.»",
   feel:"درماندگی، دلخوری، خستگی. دنیا اتفاقی است که بر من می‌افتد.",
   gain:"مسئولیت از دوشم برمی‌دارد و توجه و دلسوزی می‌آورد. تا وقتی ناتوانم، از من انتظاری نیست.",
   cost:"هر بار که نجات داده می‌شوم، این باور محکم‌تر می‌شود که خودم نمی‌توانستم.",
   turn:"قربانی وقتی ناجی به‌قدر کافی نرسد، به <b>ظالم</b> تبدیل می‌شود: «تو هم مثل بقیه ولم کردی.»"},
- p:{k:"ظالم (سرزنش‌گر)",c:"#9a3b3b",pos:[520,150],
+ p:{k:"ظالم (سرزنش‌گر)",c:"#9a3b3b",pos:[520,150],s:["karpman1968", "gottman1992"],
   f:"«تقصیر توست»، «چند بار بگویم؟»، «اگر به حرف من گوش داده بودی…»",
   feel:"خشم، حق‌به‌جانبی، بی‌قراری. مشکل، آدمِ مقابل است.",
   gain:"کنترل و قطعیت می‌آورد و از حس بی‌کفایتی خود دور می‌کند. سرزنش‌کردن سریع‌تر از حل‌کردن است.",
   cost:"آدم‌ها راست را پنهان می‌کنند و همان مسئله‌ای که از آن عصبانی بود، تکرار می‌شود.",
   turn:"ظالم وقتی مچش گرفته شود، معمولاً به <b>قربانی</b> می‌چرخد: «همه علیه من‌اند، هیچ‌کس قدر نمی‌داند.»"},
- r:{k:"ناجی",c:"#2f7f8a",pos:[80,150],
+ r:{k:"ناجی",c:"#2f7f8a",pos:[80,150],s:["karpman1968", "deci2000", "assor2004"],
   f:"«بگذار خودم انجام بدهم»، «تو بلد نیستی»، «من نباشم چه می‌کنی؟»",
   feel:"مفید بودن، ضروری بودن، و کمی طلبکاری پنهان.",
   gain:"ارزشمندی می‌دهد و از پرداختن به مسئلهٔ خودش معاف می‌کند. کمک‌کردن، جای نیاز خود را می‌گیرد.",
@@ -169,7 +175,7 @@ function panel(k){cur=k;const d=C[k];
   <div><dt>جمله‌های آشنا</dt><dd>${E(d.f)}</dd></div>
   <div><dt>حس درونی</dt><dd>${E(d.feel)}</dd></div>
   <div><dt>سود پنهان (چرا آدم این‌جا می‌ماند)</dt><dd>${E(d.gain)}</dd></div>
-  <div><dt>هزینه</dt><dd>${E(d.cost)}</dd></div></dl>
+  <div><dt>هزینه</dt><dd>${E(d.cost)}${NC.mark(d.s||[])}</dd></div></dl>
   <div class="turn"><b>چرخش:</b> ${d.turn}</div>`;
  document.querySelectorAll("svg.tri .nd circle").forEach(c=>{
   const on=c.parentNode.dataset.k===k;c.setAttribute("stroke",on?"var(--ink)":"none");c.setAttribute("stroke-width",on?3:0);
@@ -207,6 +213,8 @@ $("copy").addEventListener("click",e=>{const b=e.currentTarget;
  try{navigator.clipboard.writeText($("card").textContent).then(()=>{b.textContent="کپی شد ✓";setTimeout(()=>b.textContent="کپی متن",1600)},()=>{})}catch(_){}});
 panel("v");
 })();
+NC.list('srcs');
+NC.nav('nextnav',"triangle.html");
 </script>
 <style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
 </body>

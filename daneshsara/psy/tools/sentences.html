@@ -7,6 +7,7 @@
 <title>جمله‌ساز: به‌جای این، آن | ویکی روان‌شناسی | دانش‌سرا</title>
 <meta name="description" content="پنجاه‌وچند جملهٔ آشنای کنترل‌گرانه و دفاعی، با توضیح اینکه هر کدام چه می‌کند و به‌جایش چه می‌شود گفت. جملهٔ خودتان را هم می‌توانید بیازمایید.">
 <link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="narc-cite.css">
 <style>
 :root{--c:var(--fam-psy)}
 h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
@@ -89,24 +90,29 @@ button.g{font:inherit;padding:8px 18px;border-radius:var(--r-full);border:1px so
 <p class="lead" style="font-size:1rem">این بازنویسی‌ها از چند جا می‌آیند: «چهار سوار» و «تلاش ترمیمی» در پژوهش‌های گاتمن روی زوج‌ها، مهارت ابراز خواسته در رفتاردرمانی دیالکتیکی، و شاخه‌های سنجهٔ کنترل روان‌شناختی باربر که نشان می‌دهد کنترل بیشتر از راه گناه، بی‌اعتبارسازی و دریغ محبت کار می‌کند تا از راه دستور آشکار.</p>
 <div class="links" id="links"></div>
 </section>
+<section id="srcs"></section>
+<section id="nextnav"></section>
 </main>
+<script src="narc-sources.js"></script>
+<script src="narc-cite.js"></script>
 <script>
+NC.init(["gottman1992", "heyman2001", "harsey2020", "assor2004", "barber1996", "deci2000", "stark2007", "malekpour2023", "karpman1968", "emerald2015", "jack1992", "kurti2010"]);
 /* داده‌های جمله‌ساز: هر جمله یک شیء
  g: گروه الگو | r: نقش‌ها | s: جملهٔ آشنا | m: چه می‌کند | a: به‌جایش | n: نکته (اختیاری) */
 const PAT = {
- crit:   {t:"انتقاد از شخص",      d:"به‌جای گفتن از رفتار و نیاز، شخصیت طرف را هدف می‌گیرد: «تو همیشه…»، «تو اصلاً…». گاتمن این را اولین سوار از چهار سوار می‌داند.", c:"#b0652a", e:"psy:gottman-horsemen"},
- cont:   {t:"تحقیر",              d:"پوزخند، کنایه، مسخره‌کردن، مقایسهٔ تحقیرآمیز. قوی‌ترین پیش‌بین جدایی در پژوهش‌های گاتمن و سمی‌ترین برای تن و روان.", c:"#9a2f2f", e:"psy:gottman-horsemen"},
- def:    {t:"دفاع و وارونه‌سازی", d:"به‌جای شنیدن گلایه، بی‌گناهی خود را ثابت می‌کند یا تقصیر را برمی‌گرداند. شکل تندش DARVO است: انکار، حمله، وارونه‌کردن نقش قربانی و متهم.", c:"#7a5ea8", e:"psy:darvo"},
- stone:  {t:"دیوار سکوت",         d:"قهر طولانی، بی‌جواب گذاشتن، ترک گفت‌وگو بدون قرار برگشت. برای طرف مقابل مبهم و فرساینده است.", c:"#4a6b8a", e:"psy:gottman-horsemen"},
- guilt:  {t:"ایجاد احساس گناه",   d:"از رابطه و محبت به‌عنوان بدهی استفاده می‌کند. در سنجهٔ کنترل روان‌شناختی باربر یکی از شاخه‌های اصلی است.", c:"#8a6d3b", e:"psy:psychological-control"},
- withdr: {t:"دریغ کردن محبت",     d:"محبت و توجه را مشروط می‌کند: اگر آن‌طور که می‌خواهم نباشی، از دسترس بیرون می‌روم. کودک یاد می‌گیرد ارزشش مشروط است.", c:"#6b4f8f", e:"psy:conditional-regard"},
+ crit:   {t:"انتقاد از شخص",      s:["gottman1992"],d:"به‌جای گفتن از رفتار و نیاز، شخصیت طرف را هدف می‌گیرد: «تو همیشه…»، «تو اصلاً…». گاتمن این را اولین سوار از چهار سوار می‌داند.", c:"#b0652a", e:"psy:gottman-horsemen"},
+ cont:   {t:"تحقیر",              s:["gottman1992", "heyman2001"],d:"پوزخند، کنایه، مسخره‌کردن، مقایسهٔ تحقیرآمیز. قوی‌ترین پیش‌بین جدایی در پژوهش‌های گاتمن و سمی‌ترین برای تن و روان.", c:"#9a2f2f", e:"psy:gottman-horsemen"},
+ def:    {t:"دفاع و وارونه‌سازی", s:["gottman1992", "harsey2020"],d:"به‌جای شنیدن گلایه، بی‌گناهی خود را ثابت می‌کند یا تقصیر را برمی‌گرداند. شکل تندش DARVO است: انکار، حمله، وارونه‌کردن نقش قربانی و متهم.", c:"#7a5ea8", e:"psy:darvo"},
+ stone:  {t:"دیوار سکوت",         s:["gottman1992"],d:"قهر طولانی، بی‌جواب گذاشتن، ترک گفت‌وگو بدون قرار برگشت. برای طرف مقابل مبهم و فرساینده است.", c:"#4a6b8a", e:"psy:gottman-horsemen"},
+ guilt:  {t:"ایجاد احساس گناه",   s:["assor2004", "barber1996"],d:"از رابطه و محبت به‌عنوان بدهی استفاده می‌کند. در سنجهٔ کنترل روان‌شناختی باربر یکی از شاخه‌های اصلی است.", c:"#8a6d3b", e:"psy:psychological-control"},
+ withdr: {t:"دریغ کردن محبت",     s:["assor2004", "deci2000"],d:"محبت و توجه را مشروط می‌کند: اگر آن‌طور که می‌خواهم نباشی، از دسترس بیرون می‌روم. کودک یاد می‌گیرد ارزشش مشروط است.", c:"#6b4f8f", e:"psy:conditional-regard"},
  invalid:{t:"بی‌اعتبار کردن احساس",d:"احساس طرف مقابل را بی‌اهمیت یا نادرست اعلام می‌کند؛ ادراک او از واقعیت را پاک می‌کند. تکرارش همان چیزی است که گازلایتینگ خوانده می‌شود.", c:"#3f7f6e", e:"psy:gaslighting"},
- limit:  {t:"بستن راه حرف",       d:"قطع کردن، تغییر موضوع، برچسب‌زدن به حرف طرف تا گفت‌وگو تمام شود.", c:"#5b7a4a", e:"psy:psychological-control"},
- micro:  {t:"ریزکنترل زندگی",     d:"تعیین‌کردن لباس، پول، وقت، رفت‌وآمد و دوستان. استارک این را هستهٔ «کنترل اجباری» می‌داند؛ تک‌تکش کوچک است، مجموعش قفس.", c:"#8a4a6b", e:"psy:coercive-control"},
- isol:   {t:"جداکردن از دیگران",  d:"کم‌کردن پل‌های آدم با خانواده و دوستان، با بدگویی یا با دلخوری.", c:"#8a4a4a", e:"psy:coercive-control"},
- rescue: {t:"ناجی‌گری",           d:"کمکِ نخواسته که طرف را ناتوان نگه می‌دارد و کمک‌کننده را ضروری. گوشهٔ «ناجی» در مثلث کارپمن.", c:"#2f7f9a", e:"psy:karpman-triangle"},
- victim: {t:"ماندن در نقش قربانی", d:"جمله‌هایی که اختیار را از خود سلب می‌کنند: کاری نمی‌شود کرد، همیشه همین است.", c:"#6b6b6b", e:"psy:victim-mindset"},
- selfc:  {t:"حرف‌زدن با خود",      d:"همان الگوها، این بار رو به خودمان. صدای انتقادگر درون معمولاً نسخهٔ کوچک‌شدهٔ صدای کسی است که شنیده‌ایم.", c:"#4867a8", e:"psy:self-compassion"}
+ limit:  {t:"بستن راه حرف",       s:["stark2007"],d:"قطع کردن، تغییر موضوع، برچسب‌زدن به حرف طرف تا گفت‌وگو تمام شود.", c:"#5b7a4a", e:"psy:psychological-control"},
+ micro:  {t:"ریزکنترل زندگی",     s:["stark2007", "malekpour2023"],d:"تعیین‌کردن لباس، پول، وقت، رفت‌وآمد و دوستان. استارک این را هستهٔ «کنترل اجباری» می‌داند؛ تک‌تکش کوچک است، مجموعش قفس.", c:"#8a4a6b", e:"psy:coercive-control"},
+ isol:   {t:"جداکردن از دیگران",  s:["stark2007", "malekpour2023"],d:"کم‌کردن پل‌های آدم با خانواده و دوستان، با بدگویی یا با دلخوری.", c:"#8a4a4a", e:"psy:coercive-control"},
+ rescue: {t:"ناجی‌گری",           s:["karpman1968", "deci2000"],d:"کمکِ نخواسته که طرف را ناتوان نگه می‌دارد و کمک‌کننده را ضروری. گوشهٔ «ناجی» در مثلث کارپمن.", c:"#2f7f9a", e:"psy:karpman-triangle"},
+ victim: {t:"ماندن در نقش قربانی", s:["karpman1968", "emerald2015"],d:"جمله‌هایی که اختیار را از خود سلب می‌کنند: کاری نمی‌شود کرد، همیشه همین است.", c:"#6b6b6b", e:"psy:victim-mindset"},
+ selfc:  {t:"حرف‌زدن با خود",      s:["jack1992", "kurti2010"],d:"همان الگوها، این بار رو به خودمان. صدای انتقادگر درون معمولاً نسخهٔ کوچک‌شدهٔ صدای کسی است که شنیده‌ایم.", c:"#4867a8", e:"psy:self-compassion"}
 };
 const ROLES = {couple:"زوج و خانواده", parent:"والد و فرزند", work:"کار و سازمان", friend:"دوستی و جمع", self:"با خودم"};
 const S = [
@@ -187,7 +193,7 @@ const $=id=>document.getElementById(id);
 const E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
 let pf=null, rf=null, qs="";
-$("pats").innerHTML=Object.entries(PAT).map(([k,p])=>`<div style="--k:${p.c}"><b>${E(p.t)}</b><p>${E(p.d)}</p></div>`).join("");
+$("pats").innerHTML=Object.entries(PAT).map(([k,p])=>`<div style="--k:${p.c}"><b>${E(p.t)}</b><p>${E(p.d)}${NC.mark(p.s||[])}</p></div>`).join("");
 $("pchips").innerHTML=`<button data-p="" aria-pressed="true">همهٔ الگوها</button>`+Object.entries(PAT).map(([k,p])=>`<button data-p="${k}" style="--k:${p.c}" aria-pressed="false"><i></i>${E(p.t)}</button>`).join("");
 $("rchips").innerHTML=`<button data-r="" aria-pressed="true">همهٔ نقش‌ها</button>`+Object.entries(ROLES).map(([k,v])=>`<button data-r="${k}" aria-pressed="false">${E(v)}</button>`).join("");
 $("links").innerHTML=[...new Set(Object.values(PAT).map(p=>p.e))].map(id=>`<a href="../entries.html#${id.split(":")[1]}">${E(PAT[Object.keys(PAT).find(k=>PAT[k].e===id)].t)} ←</a>`).join("");
@@ -256,6 +262,8 @@ $("go").addEventListener("click",()=>{const v=$("t").value.trim();if(v)analyse(v
 $("ex").addEventListener("click",()=>{$("t").value="تو همیشه دیر می‌کنی، اگر برایت مهم بودم این کار را نمی‌کردی. همه هم همین را می‌گویند.";analyse($("t").value)});
 render();
 })();
+NC.list('srcs');
+NC.nav('nextnav',"sentences.html");
 </script>
 <style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
 </body>

@@ -7,6 +7,7 @@
 <title>آیا در این رابطه کنترل هست؟ | ویکی روان‌شناسی | دانش‌سرا</title>
 <meta name="description" content="بیست‌وپنج جملهٔ ساده دربارهٔ یک رابطهٔ مشخص، از دو طرف: آنچه با من می‌شود و آنچه من می‌کنم. نتیجه نُه الگوی رفتاری است، نه برچسب روی آدم‌ها.">
 <link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="narc-cite.css">
 <style>
 :root{--c:var(--fam-psy)}
 h1{font-size:var(--h1);margin:var(--s8) 0 var(--s3);line-height:var(--lh-tight);text-wrap:balance}
@@ -114,34 +115,39 @@ textarea{font:inherit;width:100%;max-width:44em;min-height:70px;padding:10px 12p
  <a href="../narcissism.html">پروندهٔ خودشیفتگی و کنترل ←</a>
 </div>
 </section>
+<section id="srcs"></section>
+<section id="nextnav"></section>
 </main>
+<script src="narc-sources.js"></script>
+<script src="narc-cite.js"></script>
 <script>
+NC.init(["barber1996", "gottman1992", "sweet2019", "harsey2020", "miller2017", "assor2004", "deci2000", "day2020", "stark2007", "malekpour2023", "home2021"]);
 const DOM=[
- {k:"talk",t:"بستن راه حرف",c:"#5b7a4a",
+ {k:"talk",t:"بستن راه حرف",s:["barber1996", "gottman1992"],c:"#5b7a4a",
   w:"گفت‌وگو یک‌طرفه تمام می‌شود: قطع‌کردن، تغییر موضوع، «بحث تمام شد». در سنجهٔ کنترل روان‌شناختی باربر، «محدودکردن بیان» یکی از شاخه‌های اصلی است.",
   x:"یک قرار ساده: هر کس تا آخر حرفش را می‌زند، بعد دیگری خلاصه می‌کند که چه شنید. اگر یکی خسته شد، وقتِ برگشت تعیین می‌شود، نه اینکه بحث بسته شود."},
- {k:"real",t:"بی‌اعتبار کردن احساس و واقعیت",c:"#3f7f6e",
+ {k:"real",t:"بی‌اعتبار کردن احساس و واقعیت",s:["sweet2019", "harsey2020"],c:"#3f7f6e",
   w:"تجربه و حافظهٔ شما غلط اعلام می‌شود: «چیزی نشده»، «این‌طور نگفتم»، «تو حساسی». تکرار طولانی‌اش اعتماد آدم به ادراک خودش را می‌خورد؛ این همان چیزی است که گازلایتینگ نامیده می‌شود.",
   x:"به‌جای دعوا بر سر اینکه چه گذشت: «من این‌طور دیدم» و بعد حرف زدن دربارهٔ کاری که از این به بعد می‌کنیم. یادداشت کوتاه و تاریخ‌دار، نه برای اثبات به او، برای اعتماد خودتان."},
- {k:"attack",t:"حملهٔ شخصی و تحقیر",c:"#9a2f2f",
+ {k:"attack",t:"حملهٔ شخصی و تحقیر",s:["gottman1992", "miller2017"],c:"#9a2f2f",
   w:"هدف، رفتار نیست؛ خودِ آدم است: برچسب، پوزخند، مقایسه، تحقیر جلوی دیگران. در پژوهش‌های گاتمن، تحقیر قوی‌ترین پیش‌بینِ فروپاشی رابطه است.",
   x:"قاعده‌ای که هر دو بپذیرند: از رفتار حرف می‌زنیم، نه از شخصیت. هر جا اسم و صفت آمد، گفت‌وگو مکث می‌کند."},
- {k:"guilt",t:"ایجاد احساس گناه",c:"#8a6d3b",
+ {k:"guilt",t:"ایجاد احساس گناه",s:["assor2004", "barber1996"],c:"#8a6d3b",
   w:"محبت و گذشته به بدهی تبدیل می‌شود: «بعد از این همه…»، «اگر دوستم داشتی…». خواستهٔ اصلی هیچ‌وقت صریح گفته نمی‌شود.",
   x:"خواسته را مستقیم و شدنی بگویید، و جای «نه» را باز بگذارید. درخواستی که «نه» ندارد، درخواست نیست."},
- {k:"withdraw",t:"دریغ محبت و قهر",c:"#6b4f8f",
+ {k:"withdraw",t:"دریغ محبت و قهر",s:["assor2004", "deci2000"],c:"#6b4f8f",
   w:"محبت مشروط می‌شود: تا آن‌طور که می‌خواهم نباشی، از دسترس بیرون می‌روم. قهر طولانی برای طرف مقابل مبهم و فرساینده است.",
   x:"مکث بله، قهر نه: «الان نمی‌توانم ادامه بدهم، فردا ساعت هشت.» فاصله‌ای که وقتِ برگشت دارد."},
- {k:"mood",t:"بی‌ثباتی و راه‌رفتن روی تخم‌مرغ",c:"#b0652a",
+ {k:"mood",t:"بی‌ثباتی و راه‌رفتن روی تخم‌مرغ",s:["day2020", "stark2007"],c:"#b0652a",
   w:"حال او قانونِ خانه است و معلوم نیست کِی عوض می‌شود. نتیجه: همه حواسشان به او است و بدن در حالت گوش‌به‌زنگی می‌ماند.",
   x:"پیش‌بینی‌پذیری: قرارهای روشن و تکرارشونده. اگر حالِ کسی بد است، نام‌بردنش («الان حالم بد است، ربطی به تو ندارد») بار را از دوش بقیه برمی‌دارد."},
- {k:"isolate",t:"جداسازی و نظارت",c:"#8a4a4a",rf:1,
+ {k:"isolate",t:"جداسازی و نظارت",s:["stark2007", "malekpour2023"],c:"#8a4a4a",rf:1,
   w:"پل‌های بیرونی کم می‌شوند و رفت‌وآمد زیر نظر می‌رود. استارک نشان داد جداسازی ستون اصلی «کنترل اجباری» است: هر پل که قطع شود، یک منبع واقعیت کم می‌شود.",
   x:"دست‌کم یک رابطهٔ بیرونی را زنده نگه دارید، حتی اگر کوتاه و هفتگی باشد. اعتماد با شفافیت ساخته می‌شود، نه با بازرسی؛ بازرسی هیچ‌وقت شک را تمام نمی‌کند."},
- {k:"micro",t:"ریزکنترل زندگی روزمره",c:"#8a4a6b",rf:1,
+ {k:"micro",t:"ریزکنترل زندگی روزمره",s:["stark2007", "malekpour2023"],c:"#8a4a6b",rf:1,
   w:"لباس، پول، وقت، رفت‌وآمد و تصمیم‌های کوچک. تک‌تکش قابل توضیح است؛ روی هم، دایرهٔ انتخاب آدم جمع می‌شود. استارک این را «خردْتنظیمی زندگی روزمره» می‌نامد.",
   x:"فهرست کنید کدام تصمیم‌ها مشترک‌اند و کدام شخصی. دسترسی مستقل به پول و مدارک، حتی کم، حق پایه است نه بی‌اعتمادی."},
- {k:"fear",t:"ترس و تهدید",c:"#7a1f1f",rf:2,
+ {k:"fear",t:"ترس و تهدید",s:["stark2007", "home2021"],c:"#7a1f1f",rf:2,
   w:"تهدید به رفتن، به آبرو، به بچه‌ها، به آسیب؛ یا ترسی که آدم نمی‌تواند نامش را بگذارد. این‌جا موضوع از مهارت گفت‌وگو جدا می‌شود و به ایمنی می‌رسد.",
   x:"این یکی با بازنویسی جمله درست نمی‌شود. برنامهٔ ایمنی، آدم‌های مطمئن بیرون از رابطه، و کمک حرفه‌ای."}
 ];
@@ -228,7 +234,7 @@ function result(){
  $("flags").innerHTML=f;
  $("cards").innerHTML= strong.length? strong.map(d=>`<div class="dcard" style="--k:${d.c}">
    <b class="h">${E(d.t)} — ${fa(s[d.k].m.toFixed(1))} از ۴</b>
-   <p>${E(d.w)}</p>
+   <p>${E(d.w)}${NC.mark(d.s||[])}</p>
    <div class="fix"><b>چه چیزی این الگو را می‌شکند</b><br>${E(d.x)}</div></div>`).join("")
   : `<p class="lead" style="font-size:1rem">الگوی پررنگی نبود. اگر با این حال چیزی در این رابطه آزارتان می‌دهد، سراغ <a href="arc.html">قوس رابطه</a> یا <a href="../narcissism.html">پروندهٔ کامل</a> بروید؛ همهٔ آسیب‌ها از جنس کنترل نیستند.</p>`;
  $("result").hidden=false;
@@ -240,6 +246,8 @@ $("copy").addEventListener("click",e=>{const b=e.currentTarget;
  try{navigator.clipboard.writeText(b.dataset.t||"").then(()=>{b.textContent="کپی شد ✓";setTimeout(()=>b.textContent="کپی نتیجه به‌صورت متن",1600)},()=>{})}catch(_){}});
 build();
 })();
+NC.list('srcs');
+NC.nav('nextnav',"control-check.html");
 </script>
 <style id="ds-unify">:root{--paper:#F7F4EF;--bg:#F7F4EF;--card:#FFFFFF;--wash:#F1EDE6;--ink:#1C1915;--muted:#5C574F;--rule:#E8E4DC;--link:#0A6B60;--link-bg:#E6F2F0;--accent:#0A6B60;--accent-bg:#E6F2F0;--accent-ink:#fff;--f-display:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif;--f-body:"Vazirmatn","IRANSansX",Tahoma,system-ui,sans-serif}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}}:root[data-theme="dark"]{--paper:#141210;--bg:#141210;--card:#1C1915;--wash:#25211C;--ink:#F7F4EF;--muted:#C9C3B8;--rule:#2E2A24;--link:#4FB3A6;--link-bg:#0F2E2A;--accent:#4FB3A6;--accent-bg:#0F2E2A;--accent-ink:#141210}body{font-size:17px;background:var(--paper)}:root body h1{font-size:clamp(2rem,4.6vw,3rem)!important;line-height:1.35!important;letter-spacing:0!important;font-weight:800}h2{line-height:1.5!important;font-weight:700}h3{font-weight:700}</style>
 </body>

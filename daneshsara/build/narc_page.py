@@ -1,3 +1,4 @@
+import json
 # -*- coding: utf-8 -*-
 """صفحهٔ «پروندهٔ خودشیفتگی و کنترل»: python3 build/narc_page.py → psy/narcissism.html"""
 import os, json, glob, html
@@ -70,6 +71,9 @@ groups_html = ''.join(
  f'<section class="grp" style="--k:{g[2]}" id="g{i+1}"><header><h2>{E(g[0])}</h2><p>{E(g[1])}</p></header>'
  f'<div class="ents">{"".join(card(s) for s in g[3])}</div></section>' for i, g in enumerate(GROUPS))
 tools_html = ''.join(f'<a class="tool" href="tools/{t[0]}.html"><b>{E(t[1])}</b><span>{E(t[2])}</span></a>' for t in TOOLS)
+tools_html += ('<a class="tool stories" href="stories/narcissism-control.html">'
+  '<b>بیست‌وهشت داستان مستند</b><span>پرونده‌های دادگاهی، گزارش‌های رسمی، ارزیابی‌های پژوهشی و خاطرات — '
+  'از ایران و افغانستان تا بریتانیا و آمریکا، هر کدام با درجهٔ منبع و پیوند قابل کلیک.</span></a>')
 map_html = ''.join(f'<a class="m" href="#g{i+1}" style="--k:{g[2]}"><b>{E(g[0])}</b><i>{fa(len(g[3]))} مدخل</i></a>' for i, g in enumerate(GROUPS))
 gaps_html = ''.join(f'<li><a href="entries.html#{s}">{E(t)}</a> — {E(txt)}…</li>' for t, s, f, txt in gaps[:14])
 
@@ -93,7 +97,7 @@ for si, st in enumerate(STATIONS):
         qi += 1
         qs.append(
          f'<details class="q"><summary><span class="n">{fa(qi)}</span><b>{E(q[0])}</b></summary>'
-         f'<div class="qb"><p class="ans">{q[1]}</p>'
+         f'<div class="qb"><p class="ans">{q[1]}<span class="qc" data-s="{",".join(q[4])}"></span></p>'
          f'<div class="today"><b>همین امروز</b>{E(q[2])}</div>'
          f'<div class="qlinks">{qlinks(q[3])}</div></div></details>')
     st_html.append(
@@ -101,6 +105,11 @@ for si, st in enumerate(STATIONS):
      f'<header><span class="sn">{E(st[0])}</span><h2>{E(st[1])}</h2></header>'
      f'{"".join(qs)}</section>')
 questions_html = ''.join(st_html)
+qkeys = []
+for st in STATIONS:
+    for q in st[3]:
+        for k in q[4]:
+            if k not in qkeys: qkeys.append(k)
 spine_html = ''.join(
  f'<a class="sp" href="#s{i+1}" style="--k:{st[2]}"><i>{E(st[0])}</i><b>{E(st[1])}</b>'
  f'<span>{fa(len(st[3]))} پرسش</span></a>' for i, st in enumerate(STATIONS))
@@ -112,6 +121,7 @@ out = (TPL.replace('__MAP__', map_html).replace('__GROUPS__', groups_html)
           .replace('__T1__', fa(tiers.get(1, 0))).replace('__T2__', fa(tiers.get(2, 0)))
           .replace('__T34__', fa(tiers.get(3, 0) + tiers.get(4, 0)))
           .replace('__QUESTIONS__', questions_html).replace('__SPINE__', spine_html)
-          .replace('__NQ__', fa(nq)).replace('__NTOOLS__', fa(len(TOOLS))))
+          .replace('__NQ__', fa(nq)).replace('__NTOOLS__', fa(len(TOOLS)))
+          .replace('__QKEYS__', json.dumps(qkeys, ensure_ascii=False)))
 open(f'{R}/psy/narcissism.html', 'w', encoding='utf-8').write(out)
 print('narcissism.html', nq, 'questions,', n_entries, 'entries', len(allsrc), 'sources', len(gaps), 'flagged points')
