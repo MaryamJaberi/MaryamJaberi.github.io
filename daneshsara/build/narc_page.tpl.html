@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>پروندهٔ خودشیفتگی و کنترل | ویکی روان‌شناسی | دانش‌سرا</title>
-<meta name="description" content="__N__ مدخل دربارهٔ خودشیفتگی، رفتارهای کنترل‌گرانه در هر نقشی که زندگی می‌دهد، ریشه‌هایشان در کودکی، اثرشان بر تن و روان، و راه‌های بیرون آمدن — با پنج ابزار.">
+<meta name="description" content="__NQ__ پرسش و __N__ مدخل دربارهٔ خودشیفتگی، رفتارهای کنترل‌گرانه در هر نقشی که زندگی می‌دهد، ریشه‌هایشان در کودکی، اثرشان بر تن و روان، و راه‌های بیرون آمدن — با __NTOOLS__ ابزار.">
 <link rel="stylesheet" href="../core/design/tokens.css">
 <style>
 :root{--c:var(--fam-psy)}
@@ -40,6 +40,36 @@ section.grp header p{margin:0;color:var(--ink-2);max-width:44em;line-height:1.9}
 .tool span{font-size:var(--small);color:var(--ink-2);line-height:1.9}
 ul.gaps{margin:0;padding-inline-start:1.1em;display:grid;gap:9px;max-width:50em}
 ul.gaps li{font-size:var(--small);color:var(--ink-2);line-height:1.9}
+
+.spine{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px;margin:var(--s5) 0 var(--s6)}
+.spine .sp{display:block;padding:14px 16px;border:1px solid var(--line);border-top:4px solid var(--k);border-radius:var(--r-lg);text-decoration:none;color:inherit;background:var(--surface);transition:transform .15s}
+.spine .sp:hover{transform:translateY(-2px);border-color:var(--k);border-top-color:var(--k)}
+.spine .sp i{font-style:normal;display:block;font-size:var(--chip);color:var(--k);font-weight:650;margin-bottom:4px}
+.spine .sp b{display:block;font-size:.97rem;line-height:1.6;margin-bottom:5px}
+.spine .sp span{font-size:var(--chip);color:var(--ink-3)}
+section.st{padding-block:var(--s6);border-top:1px solid var(--line)}
+section.st header{margin-bottom:var(--s4)}
+section.st .sn{display:inline-block;font-size:var(--chip);color:var(--k);font-weight:650;border:1px solid color-mix(in srgb,var(--k) 40%,var(--line));border-radius:var(--r-full);padding:2px 12px;margin-bottom:10px}
+section.st h2{font-size:var(--h2);margin:0;color:var(--k);line-height:1.4}
+details.q{border:1px solid var(--line);border-inline-start:4px solid var(--k);border-radius:var(--r-lg);background:var(--surface);margin-bottom:12px;overflow:hidden}
+details.q>summary{list-style:none;cursor:pointer;padding:15px 18px;display:flex;gap:12px;align-items:baseline}
+details.q>summary::-webkit-details-marker{display:none}
+details.q>summary::after{content:"＋";margin-inline-start:auto;color:var(--ink-3);line-height:1;flex:0 0 auto}
+details.q[open]>summary::after{content:"−"}
+details.q>summary:hover{background:color-mix(in srgb,var(--k) 5%,var(--surface))}
+details.q .n{flex:0 0 auto;font-size:var(--chip);color:var(--k);font-weight:650;font-variant-numeric:tabular-nums}
+details.q>summary b{font-size:1.06rem;line-height:1.65}
+.qb{padding:0 18px 18px;display:grid;gap:13px}
+.qb .ans{margin:0;line-height:2.05;color:var(--ink-2);max-width:48em}
+.qb .ans b{color:var(--ink)}
+.today{background:color-mix(in srgb,var(--ok) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--ok) 32%,var(--line));border-radius:var(--r-md);padding:12px 14px;font-size:var(--small);line-height:1.95;max-width:48em}
+.today b{display:block;font-size:var(--chip);color:var(--ok);font-weight:650;margin-bottom:5px;letter-spacing:.03em}
+.qlinks{display:flex;gap:8px;flex-wrap:wrap}
+.qlinks a{font-size:var(--chip);padding:4px 12px;border-radius:var(--r-full);border:1px solid var(--line-strong);text-decoration:none;color:var(--ink-2)}
+.qlinks a:hover{border-color:var(--k);color:var(--k)}
+details.made{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);padding:0;margin-top:var(--s4)}
+details.made>summary{cursor:pointer;padding:14px 18px;font-size:var(--small);color:var(--ink-2)}
+details.made .mb{padding:0 18px 18px;font-size:var(--small);line-height:1.95;color:var(--ink-2)}
 .pill{display:inline-block;font-size:var(--chip);padding:2px 10px;border-radius:var(--r-full);border:1px solid var(--line-strong);color:var(--ink-3);margin-inline-end:6px}
 </style>
 </head>
@@ -56,11 +86,25 @@ ul.gaps li{font-size:var(--small);color:var(--ink-2);line-height:1.9}
 <div class="stats">
  <div><b>__N__</b><span>مدخل</span></div>
  <div><b>__NSRC__</b><span>منبع</span></div>
- <div><b>۶</b><span>ابزار</span></div>
+ <div><b>__NQ__</b><span>پرسش</span></div>
+ <div><b>__NTOOLS__</b><span>ابزار</span></div>
  <div><b>__T1__</b><span>فراتحلیل یا مرور نظام‌مند</span></div>
  <div><b>__T2__</b><span>مقالهٔ داوری‌شده یا آمار رسمی</span></div>
 </div>
+<h2 style="font-size:var(--h3);margin:var(--s6) 0 var(--s3)">هجده پرسش، در شش ایستگاه</h2>
+<p class="lead" style="font-size:1rem">این‌ها پرسش‌های خودِ کسی است که این پرونده برایش ساخته شده. هر پاسخ کوتاه است و زیرش یک خط <b>«همین امروز»</b> دارد: کاری که در همین بیست‌وچهار ساعت می‌شود کرد. برای رفتن به عمق، پیوند مدخل‌ها زیر هر پاسخ است.</p>
+<div class="spine">__SPINE__</div>
+</main>
+
+<main class="wrap" style="padding-top:0">
+__QUESTIONS__
+</main>
+
+<main class="wrap" style="padding-top:0">
+<section class="grp" style="--k:var(--ink-3)">
+<header><h2>نقشهٔ مدخل‌ها</h2><p>همان محتوا، این بار بر اساس موضوع به‌جای پرسش.</p></header>
 <div class="mapgrid">__MAP__</div>
+</section>
 </main>
 
 <main class="wrap" style="padding-top:0">
@@ -72,7 +116,9 @@ __GROUPS__
 <section class="grp" style="--k:#8a6d3b">
 <header><h2>جاهای نازک</h2><p>فهرست گزاره‌هایی که در خود مدخل‌ها با نشان «تکرارنشده» یا «محل بحث» علامت خورده‌اند. اگر منبع بهتری سراغ دارید، همین‌ها بیشترین کمک را می‌خواهند.</p></header>
 <ul class="gaps">__GAPS__</ul>
-<p class="note g" style="margin-top:var(--s4)"><b>چیزهایی که هنوز نداریم:</b> هیچ پژوهش داوری‌شده‌ای دربارهٔ کنترل اجباری در ایران پیدا نشد؛ نمونهٔ مستند ایرانی از کلاهبرداری عاشقانهٔ آنلاین یا قلدری سازمانی هم نه. برآورد معتبری از «میانگین طول چنین رابطه‌ای» در هیچ جمعیتی وجود ندارد. و «فرزند طلایی / سپر بلا» در هیچ پژوهشی سنجیده نشده است.</p>
+<p class="note g" style="margin-top:var(--s4)"><b>چیزهایی که این‌جا نیست:</b> آمار ایران در این صفحه نمی‌آید؛ جایش لایهٔ ایران است. برآوردهای قتل ناموسی در ایران برای دوره‌های هم‌پوشان بین ۲۹ تا ۴۵۰ در سال نوسان دارند و خودِ این پراکندگی یعنی شمار معتبری وجود ندارد. عدد مشهور «سالانه ۵۰۰۰ قتل ناموسی در جهان» هم از یک جملهٔ بدون منبع در گزارشی از سال ۲۰۰۰ می‌آید. برآورد معتبری از «میانگین طول چنین رابطه‌ای» در هیچ جمعیتی وجود ندارد؛ «فرزند طلایی / سپر بلا» در هیچ پژوهشی سنجیده نشده؛ برای خودشیفتگی آسیب‌پذیر هیچ برآورد دوقلوییِ کافی وجود ندارد؛ و برای خودِ رفتار کنترل‌گرانه هیچ‌کس وراثت‌پذیری را اندازه نگرفته است. دربارهٔ جهان فارسی‌زبان، آنچه پیدا شد یک اعتبارسنجی فارسیِ مقیاس کنترل اجباری بود — نه آماری که بشود به آن تکیه کرد.</p>
+<details class="made"><summary>این پرونده چطور ساخته شد</summary>
+<div class="mb">برنامهٔ اول نوشته شد، بعد همان برنامه صادقانه نقد شد (شش ایراد: پرسش‌های مریم ستون فقرات صفحه نبودند، ادعاهای ضعیف بدون نشان آمده بودند، داستان‌ها کم و همه غربی بودند، آنالوژی نبود، رشته‌های دیگر غایب بودند، و هیچ‌چیزِ «همین امروز» نداشت)، و بعد برنامهٔ دوم از دل آن نقد درآمد. سه پژوهش موازی انجام شد — ژنتیک و مغز، جامعه و فلسفه، و داستان‌های مستند — و یافته‌هایشان، از جمله یافته‌های <b>ناخوشایند</b>، وارد صفحه شدند: مثلاً اینکه ادعای «همه‌گیری خودشیفتگی» شواهدش را از دست داده، و اینکه عدد مشهور «۸۰ درصد ارثی» را خودِ نویسندگانش کنار گذاشته‌اند. متن کامل برنامه و نقد در <a href="../data/psy/dossiers/narcissism.plan.html">پروندهٔ طرح</a> هست.</div></details>
 </section>
 <section class="grp" style="--k:var(--ink-3)">
 <header><h2>دربارهٔ این پرونده</h2></header>

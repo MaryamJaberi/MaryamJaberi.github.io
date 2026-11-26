@@ -24,6 +24,12 @@ GROUPS = [
   ["control-in-couple", "control-in-parenting", "control-at-work", "control-in-family", "control-in-helping", "control-online"]),
  ("اثر، و بیرون آمدن", "آنچه بر تن و روان می‌گذرد، و آنچه واقعاً کمک می‌کند.", "#2f6b4f",
   ["victim-toll", "cptsd", "self-trust", "self-silencing", "boundaries", "assertiveness", "around-them", "recovery", "change-possible"]),
+ ("جامعه و فرهنگ", "آیا این قرن خودشیفته‌تر شده، شبکه‌های اجتماعی چه کرده‌اند، و فرهنگ کجای این ماجراست.", "#38756b",
+  ["narcissism-epidemic", "social-media-narcissism", "honour-culture", "culture-and-self", "cross-culture-measure", "front-and-back", "authoritarian-character", "measuring-control"]),
+ ("ژن، مغز و تغییر", "ارثی بودن یعنی ثابت بودن؟ و دربارهٔ «مغزِ آدم خودشیفته» واقعاً چه می‌دانیم.", "#6b6b2f",
+  ["genes-and-change", "gene-environment-myth", "neuroticism", "brain-claims"]),
+ ("فلسفه: دقیقاً چه چیزی این‌جا غلط است؟", "کانت، هگل و هونت، فریکر، برلین، فرانکفورت، مرداک و سارتر — هفت صورت‌بندی از یک مسئله.", "#7a3b5e",
+  ["means-and-ends", "recognition", "epistemic-injustice", "two-liberties", "freedom-of-will", "attention", "bad-faith", "analogies"]),
 ]
 TOOLS = [
  ("control-check", "آیا در این رابطه کنترل هست؟", "بیست‌وپنج جمله، از دو طرف: «با من چه می‌شود» و «من چه می‌کنم». نتیجه نُه الگوی رفتاری است، نه برچسب."),
@@ -32,6 +38,9 @@ TOOLS = [
  ("arc", "قوس رابطه", "هفت مرحله در پنج نقش: زوج، خانواده، کار، گروه و آنلاین — با عددهایی که واقعاً وجود دارند."),
  ("toll", "آنچه بر تن و روان می‌گذرد", "نقشهٔ تن و روان: چه چیزی تغییر می‌کند، با چه مقدار شواهد، و چه چیزی کمک می‌کند."),
  ("roles", "آینهٔ نقش‌ها: چطور آن آدم نباشم", "شش نقشی که زندگی می‌دهد — والد، شریک، رئیس، دوست، کمک‌کننده، فرزند بزرگسال — با تله‌های هر کدام و یک آزمایش کوچک برای همین هفته."),
+ ("week", "هفت روز، هفت کار کوچک", "پنج وضعیت، و برای هر کدام هفت کارِ یک‌شبه با دلیلش. کوچک، چون در پژوهش چالشِ تمام‌شده تغییر آورد و چالشِ نیمه‌تمام پس‌رفت."),
+ ("say", "چه بگویم؟ جمله‌های لحظهٔ سخت", "دوازده موقعیت: آنچه معمولاً می‌گوییم و چرا جواب نمی‌دهد، جایگزین‌ها در سه شدت، و قاعدهٔ پشت هر کدام."),
+ ("analogies", "این مثل چیست؟ شش آنالوژی", "از هزینهٔ تعویض در اقتصاد تا تک‌کشتی در کشاورزی: شش قیاس ساختاری با جدول نگاشت، نقطهٔ شکست و یک پیش‌بینی آزمودنی."),
 ]
 gaps = []
 for g in GROUPS:
@@ -64,11 +73,45 @@ tools_html = ''.join(f'<a class="tool" href="tools/{t[0]}.html"><b>{E(t[1])}</b>
 map_html = ''.join(f'<a class="m" href="#g{i+1}" style="--k:{g[2]}"><b>{E(g[0])}</b><i>{fa(len(g[3]))} مدخل</i></a>' for i, g in enumerate(GROUPS))
 gaps_html = ''.join(f'<li><a href="entries.html#{s}">{E(t)}</a> — {E(txt)}…</li>' for t, s, f, txt in gaps[:14])
 
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from narc_questions import STATIONS
+nq = sum(len(st[3]) for st in STATIONS)
+
+def qlinks(slugs):
+    out = []
+    for sl in slugs:
+        c = C.get(sl)
+        if c: out.append(f'<a href="entries.html#{sl}">{E(c["title"]["fa"])}</a>')
+    return ''.join(out)
+
+qi = 0
+st_html = []
+for si, st in enumerate(STATIONS):
+    qs = []
+    for q in st[3]:
+        qi += 1
+        qs.append(
+         f'<details class="q"><summary><span class="n">{fa(qi)}</span><b>{E(q[0])}</b></summary>'
+         f'<div class="qb"><p class="ans">{q[1]}</p>'
+         f'<div class="today"><b>همین امروز</b>{E(q[2])}</div>'
+         f'<div class="qlinks">{qlinks(q[3])}</div></div></details>')
+    st_html.append(
+     f'<section class="st" id="s{si+1}" style="--k:{st[2]}">'
+     f'<header><span class="sn">{E(st[0])}</span><h2>{E(st[1])}</h2></header>'
+     f'{"".join(qs)}</section>')
+questions_html = ''.join(st_html)
+spine_html = ''.join(
+ f'<a class="sp" href="#s{i+1}" style="--k:{st[2]}"><i>{E(st[0])}</i><b>{E(st[1])}</b>'
+ f'<span>{fa(len(st[3]))} پرسش</span></a>' for i, st in enumerate(STATIONS))
+
 TPL = open(f'{os.path.dirname(os.path.abspath(__file__))}/narc_page.tpl.html', encoding='utf-8').read()
 out = (TPL.replace('__MAP__', map_html).replace('__GROUPS__', groups_html)
           .replace('__TOOLS__', tools_html).replace('__GAPS__', gaps_html)
           .replace('__N__', fa(n_entries)).replace('__NSRC__', fa(len(allsrc)))
           .replace('__T1__', fa(tiers.get(1, 0))).replace('__T2__', fa(tiers.get(2, 0)))
-          .replace('__T34__', fa(tiers.get(3, 0) + tiers.get(4, 0))))
+          .replace('__T34__', fa(tiers.get(3, 0) + tiers.get(4, 0)))
+          .replace('__QUESTIONS__', questions_html).replace('__SPINE__', spine_html)
+          .replace('__NQ__', fa(nq)).replace('__NTOOLS__', fa(len(TOOLS))))
 open(f'{R}/psy/narcissism.html', 'w', encoding='utf-8').write(out)
-print('narcissism.html', n_entries, 'entries', len(allsrc), 'sources', len(gaps), 'flagged points')
+print('narcissism.html', nq, 'questions,', n_entries, 'entries', len(allsrc), 'sources', len(gaps), 'flagged points')

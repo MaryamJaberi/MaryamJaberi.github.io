@@ -2,97 +2,140 @@
  "id": "psy:neuroticism",
  "kind": "concept",
  "title": {
-  "fa": "روان‌رنجوری",
+  "fa": "عصبیت: ارثی‌ترین، و در عین حال متغیرترین",
   "en": "Neuroticism",
-  "nl": "Neuroticisme"
+  "nl": "Neuroticism"
  },
- "parent": "psy:p-personality",
- "field": "psy:p-personality",
+ "aliases": [
+  "روان‌رنجوری",
+  "روان‌نژندی",
+  "ثبات هیجانی"
+ ],
+ "parent": "psy:narcissism-control",
+ "field": "psy:narcissism-control",
  "summary": {
-  "fa": "گرایش به هیجان منفی مکرر و شدید با حس کنترل‌ناپذیری و بیزاری از خود هیجان؛ صفت زیربنایی اختلالات اضطرابی و افسردگی (سائر-زاوالا و بارلو).",
-  "en": "A tendency towards frequent, intense negative emotion with a sense of uncontrollability and aversion to the emotion itself; the underlying trait of anxiety and depressive disorders (Sauer-Zavala and Barlow).",
-  "nl": "Een neiging tot frequente, heftige negatieve emotie met een gevoel van oncontroleerbaarheid en afkeer van de emotie zelf; de onderliggende eigenschap van angst- en depressieve stoornissen (Sauer-Zavala en Barlow)."
+  "fa": "گرایش به تجربهٔ هیجان منفی، در میان پنج صفت بزرگ شخصیت یکی از ارثی‌ترین‌هاست — و همان صفتی است که در مداخله بیشتر از همه تکان می‌خورد.",
+  "en": "Neuroticism is among the most heritable Big Five traits and the one that moves most under intervention.",
+  "nl": "Neuroticism is among the most heritable Big Five traits and the one that moves most under intervention."
  },
  "points": [
   {
    "text": {
-    "fa": "آسیب‌پذیری سه‌گانه: زیستی عام + روانی عام (کنترل‌ناپذیری) + روانی اختصاصی.",
-    "en": "Triple vulnerability: general biological + general psychological (uncontrollability) + specific psychological.",
-    "nl": "Drievoudige kwetsbaarheid: algemeen biologisch + algemeen psychologisch (oncontroleerbaarheid) + specifiek psychologisch."
+    "fa": "فراتحلیل ووکاشوویچ و براتکو (۲۰۱۵)، ۶۲ اندازهٔ اثر، بیش از ۱۰۰٬۰۰۰ نفر: میانگین وراثت‌پذیریِ شخصیت ۰٫۴۰ — در طرح دوقلویی ۰٫۴۷ و در طرح خانواده/فرزندخواندگی ۰٫۲۲. این تفاوتِ طرح، خودش یافته است.",
+    "en": "",
+    "nl": ""
    },
    "sources": [
-    "src:daeeea8e54"
+    "src:68787b6849"
    ],
    "flags": []
   },
   {
    "text": {
-    "fa": "«سندرم نوروتیک عام»: یک صفت، چند اختلال.",
-    "en": "The “general neurotic syndrome”: one trait, several disorders.",
-    "nl": "Het ‘algemeen neurotisch syndroom’: één eigenschap, meerdere stoornissen."
+    "fa": "بررسی ژنومی با ۴۴۹٬۴۸۴ نفر: ۱۳۶ ناحیهٔ ژنی مستقل، ولی سهم قابل‌انتساب به گونه‌های رایج فقط حدود ۱۰٪.",
+    "en": "",
+    "nl": ""
    },
    "sources": [
-    "src:daeeea8e54"
+    "src:4d86deeb1a"
    ],
    "flags": []
   },
   {
    "text": {
-    "fa": "روان‌رنجوری بیش از آنچه تصور می‌شد تغییرپذیر است و با درمان کاهش می‌یابد.",
-    "en": "Neuroticism is more changeable than was thought and decreases with treatment.",
-    "nl": "Neuroticisme is veranderlijker dan gedacht en neemt af met behandeling."
+    "fa": "فراتحلیل رابرتز و همکاران (۲۰۱۷)، ۲۰۷ پژوهش و ۲۰٬۰۲۴ نفر: ثبات هیجانی پرتکان‌ترین صفت بود، d=۰٫۵۷ پیش-پس و d=۰٫۶۹ در طرح آزمایشی. برای مقایسه، برون‌گرایی d=۰٫۲۳.",
+    "en": "",
+    "nl": ""
    },
    "sources": [
-    "src:daeeea8e54"
+    "src:b0ff04e2b1"
    ],
    "flags": []
   },
   {
    "text": {
-    "fa": "یکی از پنج عامل بزرگ شخصیت؛ در HiTOP نزدیک به طیف درون‌سازی.",
-    "en": "One of the Big Five personality factors; in HiTOP close to the internalising spectrum.",
-    "nl": "Een van de vijf grote persoonlijkheidsfactoren; in HiTOP dicht bij het internaliserende spectrum."
+    "fa": "ماندگاری: اثر در ۰ تا ۶ ماه بعد d=۰٫۴۸، در ۶ تا ۱۲ ماه ۰٫۴۶ و پس از یک سال ۰٫۳۷ بود؛ برای ثبات هیجانی پس از یک سال هنوز حدود نیم انحراف معیار.",
+    "en": "",
+    "nl": ""
    },
    "sources": [
-    "src:daeeea8e54"
+    "src:b0ff04e2b1"
    ],
    "flags": []
+  },
+  {
+   "text": {
+    "fa": "زمان‌بندی: مداخله‌های کمتر از حدود چهار هفته اثر کمی داشتند؛ پس از حدود هشت هفته، طولانی‌تر شدن چیزی اضافه نمی‌کرد.",
+    "en": "",
+    "nl": ""
+   },
+   "sources": [
+    "src:b0ff04e2b1"
+   ],
+   "flags": []
+  },
+  {
+   "text": {
+    "fa": "نویسندگان خودشان هشدار می‌دهند: ناهمگونی زیاد است، سوگیری انتشار وجود دارد (با تصحیحش بازه به d=۰٫۲۱ تا ۰٫۳۷ می‌افتد)، و این طرح‌ها نمی‌توانند تغییر صفت را از تغییر حالت یا از بهبودِ بیماری کاملاً جدا کنند.",
+    "en": "",
+    "nl": ""
+   },
+   "sources": [
+    "src:b0ff04e2b1"
+   ],
+   "flags": [
+    "contested"
+   ]
   }
  ],
  "links": [
   {
-   "to": "psy:hitop",
+   "to": "psy:genes-and-change",
    "rel": "see-also",
    "note": {
-    "fa": "درون‌سازی",
-    "en": "Internalising",
-    "nl": "Internaliseren"
+    "fa": "چرا این تناقض نیست.",
+    "en": "",
+    "nl": ""
    }
   },
   {
-   "to": "psy:experiential-avoidance",
-   "rel": "explains",
+   "to": "psy:victim-toll",
+   "rel": "see-also",
    "note": {
-    "fa": "پیامد رفتاری",
-    "en": "Behavioural consequence",
-    "nl": "Gedragsgevolg"
+    "fa": "عصبیت به‌عنوان پیامد.",
+    "en": "",
+    "nl": ""
+   }
+  },
+  {
+   "to": "psy:change-possible",
+   "rel": "see-also",
+   "note": {
+    "fa": "آنچه عملاً تغییر می‌کند.",
+    "en": "",
+    "nl": ""
    }
   }
  ],
- "people": [
-  "core:david-barlow",
-  "core:shannon-sauer-zavala",
-  "core:hans-eysenck"
- ],
+ "people": [],
  "sources": [
-  "src:daeeea8e54"
+  "src:4d86deeb1a",
+  "src:68787b6849",
+  "src:b0ff04e2b1"
  ],
- "booklets": [
-  "clinical:neuroticism",
-  "psychopath:anxiety"
- ],
- "origin": "clinical",
+ "booklets": [],
+ "origin": "narcissism-control",
  "iran": null,
  "wikidata": null,
- "status": "reviewed"
+ "status": "reviewed",
+ "explain": {
+  "fa": "عصبیت یعنی گرایش به تجربهٔ هیجان‌های منفی — اضطراب، تحریک‌پذیری، نگرانی، حساسیت به تهدید. در پروندهٔ ما دو بار سر و کله‌اش پیدا می‌شود: هم در کسی که کنترل می‌کند (حساسیت بالا به تهدیدِ تصویر) و هم در کسی که کنترل می‌شود (به‌عنوان پیامد).\n\nحالا چیزی که در نگاه اول متناقض به نظر می‌رسد، ولی نیست:\n\nاز یک سو، در فراتحلیلی با ۶۲ اندازهٔ اثر مستقل و بیش از صد هزار نفر، میانگین وراثت‌پذیریِ شخصیت ۰٫۴۰ بود — ولی با یک نکتهٔ مهم: در طرح‌های دوقلویی ۰٫۴۷ و در طرح‌های خانواده و فرزندخواندگی ۰٫۲۲. یعنی همان «۴۰ درصد» معروف، در واقع «۴۷ درصد اگر دوقلو بگیری، ۲۲ درصد اگر فرزندخوانده».\n\nاز سوی دیگر، در فراتحلیلی با ۲۰۷ پژوهش و بیش از ۲۰ هزار نفر، ثبات هیجانی (وارونهٔ عصبیت) پرتکان‌ترین صفت بود: تغییر پیش-پس d=۰٫۵۷ و در طرح‌های آزمایشی d=۰٫۶۹. و این تغییر ماندگار بود — بیش از یک سال بعد هم در حدود نیم انحراف معیار باقی مانده بود. مدت زمان هم جالب است: مداخله‌های کوتاه‌تر از چهار هفته اثر کمی داشتند، ولی بعد از حدود هشت هفته، طولانی‌تر شدن چیزی اضافه نمی‌کرد.\n\nاین تناقض نیست. وراثت‌پذیری به پرسشی جواب می‌دهد («چقدر از تفاوت‌های این جمعیت با تفاوت‌های ژنتیکی هم‌خوان است») و تغییرپذیری به پرسش دیگری («اگر مداخله کنیم چه می‌شود»). ارثی‌ترین صفت می‌تواند متغیرترین هم باشد.\n\nو یک نکتهٔ فنی که ارزش دانستن دارد: وقتی به‌جای دوقلوها مستقیم به دی‌ان‌ای نگاه می‌کنند، عدد خیلی کوچک‌تر می‌شود. در بزرگ‌ترین بررسی ژنومی عصبیت با ۴۴۹٬۴۸۴ نفر، سهم قابل‌انتسابِ گونه‌های رایج حدود ۱۰٪ بود، در برابر ۴۰ تا ۵۵ درصدِ دوقلویی. به این فاصله «وراثت‌پذیریِ گمشده» می‌گویند و هنوز بسته نشده.",
+  "en": "",
+  "nl": ""
+ },
+ "why": {
+  "fa": "چون «من آدم عصبی‌ام، ارثی است» رایج‌ترین دلیلی است که آدم‌ها برای تغییرنکردن می‌آورند — و این دقیقاً صفتی است که شواهدِ تغییرش از همه قوی‌تر است.",
+  "en": "",
+  "nl": ""
+ }
 }
