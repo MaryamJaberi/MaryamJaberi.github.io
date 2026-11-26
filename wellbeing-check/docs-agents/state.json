@@ -1,6 +1,6 @@
 {
   "product": "Workplace Wellbeing Check (wellbeing-check/)",
-  "last_reviewed_commit": "c22e12c",
+  "last_reviewed_commit": "3648a45",
   "last_run": "2026-11-26",
   "tech_doc": {
     "title": "مستند فنی — سنجش سلامت روانی سازمان",
@@ -8,15 +8,15 @@
     "project_id": "615b45f3-38b7-499c-84a6-85c2bfac3ccc",
     "tab_file_id": "93742b44-9524",
     "body_node_id": "7db45374-8e12",
-    "version": "1.3",
-    "last_rev": 40,
+    "version": "1.4",
+    "last_rev": 62,
     "widgets": {
       "current_architecture": "29fc59bc-2e86",
       "roadmap": "77d1f436-c8f4",
       "target_architecture": "748832d5-6872"
     },
-    "next_requirement_id": "R44",
-    "next_adr_id": "ADR-016"
+    "next_requirement_id": "R59",
+    "next_adr_id": "ADR-019"
   },
   "business_doc": {
     "title": "بیزینس پلن‌ها — سنجش سلامت روانی سازمان",
@@ -194,7 +194,25 @@
       }
     }
   },
-  "pending_business_impacts": [],
+  "pending_business_impacts": [
+    {
+      "date": "2026-11-26",
+      "commit": "3648a45",
+      "what": "Six-expert review fixes applied (security, privacy, legal wording, statistics, accessibility). RI&E/PSA overclaims softened on site and in the works-council pack. Open: fake-response risk (no invite tokens/App Check, R44), shared github.io origin without CSP/SRI (R45), instruments measure personal resources not work hazards so RI&E claims need a licensed working-conditions instrument (R46), commercial licences for 6 of 8 scales unconfirmed (R47), DPA art.28(3) annex (R53), signed psychologist partner agreement (R54), Gmail contact (R52). Strategy review recommends a 30-day build freeze and one paid pilot (e.g. EUR 1,500 per site) via an independent RI&E consultant, leading with multilingual logistics/staffing agencies, dropping horeca as lead; it estimates 50-70 h per EUR 5,000 project (plan assumes 20 h) and a 3-6 month direct sales cycle (plan assumes 4-8 weeks).",
+      "why_it_matters": "The 'RI&E-ready PSA inventory' positioning (positioning_recommended, H15 site package) is not deliverable with the current instruments; licence costs are unbudgeted; free pilots may not prove budget; unit economics and break-even rest on 20 h/project and short sales cycles; R44/R45/R47 add pre-pilot cost and time. These are review recommendations, not Maryam's decisions.",
+      "sections_to_check": [
+        "positioning",
+        "site_package / H15",
+        "pricing_decision (free pilot)",
+        "fixed costs (licences, verifier fee, origin/hosting)",
+        "unit economics hours per project",
+        "sales cycle and channels",
+        "break-even",
+        "phase timing (build freeze)",
+        "markets/segments (horeca, logistics)"
+      ]
+    }
+  ],
   "legal_checklist_last_verified": "2026-11-16",
   "ip_register_last_reviewed": "2026-11-16",
   "business_last_handled": {
