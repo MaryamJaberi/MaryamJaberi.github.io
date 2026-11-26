@@ -24,12 +24,12 @@
     "project_id": "e355ed72-1b36-4280-b4b6-cd030b353b97",
     "tab_file_id": "7af43e3f-d0a8",
     "body_node_id": "54eeae04-789f",
-    "version": "1.4",
-    "last_rev": 78,
+    "version": "1.5",
+    "last_rev": 100,
     "widgets": {
       "recommended_path_revenue": "d9ac61b6-436d"
     },
-    "next_hypothesis_id": "H17",
+    "next_hypothesis_id": "H20",
     "sections": {
       "8.4": "NL registration checklist",
       "8.5": "KVK + government rules",
@@ -115,7 +115,8 @@
       },
       "in_projection": false,
       "sensitivity_y1_if_all_A_are_site_packages_k": 32.8,
-      "hypothesis": "H15"
+      "hypothesis": "H15",
+      "status": "conditional on PSA positioning (review 2026-11-26)"
     },
     "new_cost_items_eur": {
       "translations_ro_uk_bg": [
@@ -166,12 +167,13 @@
     },
     "positioning_recommended": {
       "text": "RI&E-ready PSA inventory + 90-day team work-redesign cycle; provable anonymity is the foundation, not the headline",
-      "status": "research recommendation; Maryam decides",
+      "status": "research recommendation; Maryam decides. CONDITIONAL (review 2026-11-26): not deliverable until a licensed working-conditions instrument (e.g. COPSOQ III short + BAT + recovery scale) is added; until then: resources check as supplementary RI&E input",
       "first_markets": [
         "horeca",
         "care",
         "multilingual logistics Rotterdam"
-      ]
+      ],
+      "inconsistency": "site hero (knowledge/tech firms, psychological resources) vs plan (horeca/care/logistics, PSA + 90-day) vs consolidated file (ethical measurement layer); reviewer: pick one"
     },
     "channels": {
       "order": [
@@ -192,32 +194,106 @@
         "k20": 40,
         "k50": 100
       }
+    },
+    "review_2026_11_26": {
+      "source": "six-expert review /tmp/review (strategy, psychometrics, legal); reviewer recommendations, NOT Maryam's decisions",
+      "founder_hours_per_A_project": [
+        50,
+        70
+      ],
+      "A_gross_per_hour_eur": {
+        "20h": 190.0,
+        "50h": 76.0,
+        "70h": 54.3
+      },
+      "y1_founder_hours": {
+        "20h": 150,
+        "50h": 270,
+        "70h": 350
+      },
+      "y1_eur_per_hour_left": {
+        "base": {
+          "20h": 79,
+          "50h": 44,
+          "70h": 34
+        },
+        "with_new": {
+          "20h": 26,
+          "50h": 15,
+          "70h": 11
+        }
+      },
+      "sales_cycle_months": [
+        3,
+        6
+      ],
+      "sales_cycle_stress_y1": {
+        "assumption": "sales start Apr 2027, 9 months; base cycle ~1.5 months -> 7.5 closing months, linear",
+        "3m": {
+          "rev": 28000,
+          "gross": 20320,
+          "left_base": 6820,
+          "left_with_new": -1130
+        },
+        "6m": {
+          "rev": 14000,
+          "gross": 10160,
+          "left_base": -3340,
+          "left_with_new": -11290
+        }
+      },
+      "paid_pilot_eur_assumption": 1500,
+      "paid_pilot_direct_cost_eur": [
+        0,
+        600
+      ],
+      "paid_pilots_to_cover_fixed_mid": {
+        "base": [
+          9,
+          15
+        ],
+        "with_new": [
+          15,
+          24
+        ]
+      },
+      "build_freeze_days": 30,
+      "lead_segment_recommended": "multilingual logistics and staffing agencies (Rotterdam); drop horeca as lead; care later",
+      "sam_sensitivity_m_eur": {
+        "3000": 78.3,
+        "4450": 116.2,
+        "5000": 130.5,
+        "7500": 195.8
+      },
+      "som_share_y3_pct": {
+        "3000": 0.38,
+        "4450": 0.26,
+        "5000": 0.23,
+        "7500": 0.15
+      },
+      "licences": "SCS-SF free; WOLF commercial requires contacting Bakker; AAQ-II, LOT-R, AHS, GBS, SREIS, BSCS unchecked; unbudgeted. COPSOQ: commercial use free under guidelines, no fee for questionnaire itself; NC licence wording conflicts -> confirm in writing",
+      "unbudgeted_costs": [
+        "scale licences",
+        "A&O/RI&E verifier fee",
+        "channel partner share (25-40% floated)",
+        "customer acquisition",
+        "pre-pilot tech R44/R45/R53",
+        "founder salary"
+      ],
+      "riskiest_assumptions": {
+        "H17": "verifier accepts output as PSA nadere inventarisatie",
+        "H18": "employer pays EUR 1,500 pilot despite arbodienst/sector fund",
+        "H16": "shift/agency workers >=50% response"
+      },
+      "recommended_path_changed": false
     }
   },
-  "pending_business_impacts": [
-    {
-      "date": "2026-11-26",
-      "commit": "3648a45",
-      "what": "Six-expert review fixes applied (security, privacy, legal wording, statistics, accessibility). RI&E/PSA overclaims softened on site and in the works-council pack. Open: fake-response risk (no invite tokens/App Check, R44), shared github.io origin without CSP/SRI (R45), instruments measure personal resources not work hazards so RI&E claims need a licensed working-conditions instrument (R46), commercial licences for 6 of 8 scales unconfirmed (R47), DPA art.28(3) annex (R53), signed psychologist partner agreement (R54), Gmail contact (R52). Strategy review recommends a 30-day build freeze and one paid pilot (e.g. EUR 1,500 per site) via an independent RI&E consultant, leading with multilingual logistics/staffing agencies, dropping horeca as lead; it estimates 50-70 h per EUR 5,000 project (plan assumes 20 h) and a 3-6 month direct sales cycle (plan assumes 4-8 weeks).",
-      "why_it_matters": "The 'RI&E-ready PSA inventory' positioning (positioning_recommended, H15 site package) is not deliverable with the current instruments; licence costs are unbudgeted; free pilots may not prove budget; unit economics and break-even rest on 20 h/project and short sales cycles; R44/R45/R47 add pre-pilot cost and time. These are review recommendations, not Maryam's decisions.",
-      "sections_to_check": [
-        "positioning",
-        "site_package / H15",
-        "pricing_decision (free pilot)",
-        "fixed costs (licences, verifier fee, origin/hosting)",
-        "unit economics hours per project",
-        "sales cycle and channels",
-        "break-even",
-        "phase timing (build freeze)",
-        "markets/segments (horeca, logistics)"
-      ]
-    }
-  ],
+  "pending_business_impacts": [],
   "legal_checklist_last_verified": "2026-11-16",
   "ip_register_last_reviewed": "2026-11-16",
   "business_last_handled": {
     "date": "2026-11-26",
-    "commit": "c22e12c",
-    "doc_rev": 78
+    "commit": "3648a45",
+    "doc_rev": 100
   }
 }
