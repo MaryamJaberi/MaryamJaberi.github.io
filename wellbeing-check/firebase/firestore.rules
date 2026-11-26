@@ -48,7 +48,7 @@ service cloud.firestore {
     // ── individual answers: write-only for participants ──
     match /responses/{id} {
       allow create: if
-        request.resource.data.keys().hasOnly(["v", "r", "lv", "u", "p", "m", "a", "t"])
+        request.resource.data.keys().hasOnly(["v", "r", "lv", "u", "p", "m", "a"])
         && request.resource.data.keys().hasAll(["r", "lv", "a"])
         && str(request.resource.data.r, 20)
         && str(request.resource.data.lv, 20)
@@ -57,10 +57,10 @@ service cloud.firestore {
         && (!("u" in request.resource.data) || (str(request.resource.data.u, 24)
             && request.resource.data.u in get(/databases/$(database)/documents/rounds/$(request.resource.data.r)).data.get("unitIds", [])))
         && request.resource.data.a is map && request.resource.data.a.size() <= 12
-        && (!("t" in request.resource.data) || request.resource.data.t == request.time)
+        && request.resource.data.lv in get(/databases/$(database)/documents/rounds/$(request.resource.data.r)).data.get("levels", [request.resource.data.lv])
         && exists(/databases/$(database)/documents/rounds/$(request.resource.data.r))
         && get(/databases/$(database)/documents/rounds/$(request.resource.data.r)).data.get("status", "open") == "open";
-      allow read: if isStaff();
+      allow read: if isAdmin();   // raw answers: only the administrator (partner psychologists see reports, not answers)
       allow update: if false;
       allow delete: if isAdmin();
     }
@@ -81,7 +81,7 @@ service cloud.firestore {
 
     // ── action plan per round ("plan van aanpak" / "you said, we did"); id = roundId ──
     // Staff and the organisation's HR edit it; department managers of that organisation read it;
-    // when shared, anyone holding the round code can read it (same secret as the group page).
+    // when shared, anyone holding the round code (employees, department managers) can read it — same secret as the group page.
     function planOk(id) {
       return request.resource.data.keys().hasOnly(["orgId", "roundId", "items", "share", "updatedAt", "by"])
         && request.resource.data.roundId == id
@@ -91,9 +91,8 @@ service cloud.firestore {
         && get(/databases/$(database)/documents/rounds/$(id)).data.orgId == request.resource.data.orgId;
     }
     match /plans/{id} {
-      allow get: if resource == null || resource.data.get("share", false) == true || isStaff() || hrOf(resource.data.orgId)
-        || (hasRole("mgr") && resource.data.orgId in mem().get("orgs", []));
-      allow list: if isStaff() || hrOf(resource.data.orgId) || (hasRole("mgr") && resource.data.orgId in mem().get("orgs", []));
+      allow get: if resource == null || resource.data.get("share", false) == true || isStaff() || hrOf(resource.data.orgId);
+      allow list: if isStaff() || hrOf(resource.data.orgId);
       allow create: if (isStaff() || hrOf(request.resource.data.orgId)) && planOk(id);
       allow update: if (isStaff() || hrOf(resource.data.orgId)) && request.resource.data.orgId == resource.data.orgId && planOk(id);
       allow delete: if isAdmin();

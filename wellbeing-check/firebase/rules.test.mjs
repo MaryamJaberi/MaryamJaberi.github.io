@@ -44,7 +44,7 @@ await t("extra field rejected", assertFails(setDoc(doc(anon, "responses/n5"), { 
 await t("anon cannot read answers", assertFails(getDoc(doc(anon, "responses/r1"))));
 await t("hr cannot read answers", assertFails(getDoc(doc(hr, "responses/r1"))));
 await t("hr cannot list answers", assertFails(getDocs(query(collection(hr, "responses"), where("r", "==", "ABCD-EFGH-JKLM")))));
-await t("psy can list answers", assertSucceeds(getDocs(query(collection(psy, "responses"), where("r", "==", "ABCD-EFGH-JKLM")))));
+await t("psy cannot list answers", assertFails(getDocs(query(collection(psy, "responses"), where("r", "==", "ABCD-EFGH-JKLM")))));
 await t("owner (any case) can read answers", assertSucceeds(getDoc(doc(owner, "responses/r1"))));
 await t("nobody edits answers", assertFails(updateDoc(doc(owner, "responses/r1"), { lv: "x" })));
 await t("psy cannot delete answers", assertFails(deleteDoc(doc(psy, "responses/r1"))));
@@ -76,7 +76,7 @@ await t("plan orgId must match round", assertFails(setDoc(doc(hr2, "plans/ABCD-E
 await t("plan with extra key rejected", assertFails(setDoc(doc(psy, "plans/ABCD-EFGH-JKLM"), { ...plan, secret: 1 })));
 await t("plan for unknown round rejected", assertFails(setDoc(doc(psy, "plans/NOPE"), { ...plan, roundId: "NOPE" })));
 await t("anon cannot read unshared plan", assertFails(getDoc(doc(anon, "plans/ABCD-EFGH-JKLM"))));
-await t("mgr reads own-org plan", assertSucceeds(getDoc(doc(mgr, "plans/ABCD-EFGH-JKLM"))));
+await t("mgr cannot read unshared plan", assertFails(getDoc(doc(mgr, "plans/ABCD-EFGH-JKLM"))));
 await t("mgr cannot write plan", assertFails(setDoc(doc(mgr, "plans/ABCD-EFGH-JKLM"), { ...plan, by: "mgr@acme.nl" })));
 await t("psy shares plan", assertSucceeds(setDoc(doc(psy, "plans/ABCD-EFGH-JKLM"), { ...plan, share: true })));
 await t("anon reads shared plan", assertSucceeds(getDoc(doc(anon, "plans/ABCD-EFGH-JKLM"))));
