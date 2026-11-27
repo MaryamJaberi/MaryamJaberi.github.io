@@ -206,7 +206,7 @@ PROOF_ICONS = [
     '<circle cx="17" cy="17" r="12"/><path d="M5 17h24M17 5c4 4 4 20 0 24M17 5c-4 4-4 20 0 24"/>',
 ]
 MARK = '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 27C9 17 15 8 26 5c-1 9-7 16-16 18"/><path d="M7 27 21 11M12 20h6M15 15.5h6"/></svg>'
-FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Young+Serif&family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet">'
+FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Markazi+Text:wght@400..700&family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">'
 
 
 import hashlib
@@ -238,7 +238,7 @@ def head(t, title, desc, rel, path, og_img):
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="{SITE}{og_img}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F5F3FA">
+<meta name="theme-color" content="#1B2466">
 <link rel="icon" href="{rel}assets/mark.svg" type="image/svg+xml">
 {FONTS}
 <link rel="stylesheet" href="{rel}assets/site.css?v={VER["site.css"]}">
@@ -366,26 +366,28 @@ def loom_svg(t):
     return f'<figure class="loom-fig"><div class="loom-scroll" tabindex="0">{svg}</div><figcaption class="small">{cap}</figcaption></figure>'
 
 
-def rug_svg(t, order, href):
-    """The hero: a garden carpet. Nine apps sit in a ring around a medallion; the field is Rotterdam's sky."""
+def rug_svg(t, order, href, wide=False):
+    """The hero: a garden carpet. The apps sit in a ring around a medallion; the field is Rotterdam's sky.
+    wide=True lays the same carpet on its side for large screens; ids get a prefix so both can share a page."""
     import math
-    W, H = 440, 600
-    fx, fy, fw, fh = 44, 50, 352, 500          # field
+    W, H = (1100, 500) if wide else (440, 600)
+    fx, fy, fw, fh = 44, 50, W - 88, H - 100   # field
+    pid = "rugw" if wide else "rug"
     cx, cy = W / 2, fy + fh / 2
     parts = ['<defs>',
-             '<linearGradient id="rug-sky" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset="1" style="stop-color:var(--sky2)"/></linearGradient>',
-             '<pattern id="rug-band" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#2A2257"/><path d="M9 2.5l6.5 6.5-6.5 6.5-6.5-6.5z" fill="#E8B04B"/><path d="M9 6.5l2.5 2.5-2.5 2.5-2.5-2.5z" fill="#C2365A"/></pattern>',
-             '<pattern id="rug-knots" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M5.5 3.5l2 2-2 2-2-2z" style="fill:var(--knot)"/></pattern>',
+             f'<linearGradient id="{pid}-sky" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset="1" style="stop-color:var(--sky2)"/></linearGradient>',
+             f'<pattern id="{pid}-band" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#2A2257"/><path d="M9 2.5l6.5 6.5-6.5 6.5-6.5-6.5z" fill="#E8B04B"/><path d="M9 6.5l2.5 2.5-2.5 2.5-2.5-2.5z" fill="#C2365A"/></pattern>',
+             f'<pattern id="{pid}-knots" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M5.5 3.5l2 2-2 2-2-2z" style="fill:var(--knot)"/></pattern>',
              '</defs>']
     # fringe
     fr = "".join(f'<line x1="{x}" y1="0" x2="{x}" y2="16"/><line x1="{x}" y1="{H - 16}" x2="{x}" y2="{H}"/>' for x in range(22, W - 18, 8))
     parts.append(f'<g class="fringe">{fr}</g>')
-    body = [f'<rect x="12" y="16" width="{W - 24}" height="{H - 32}" rx="5" fill="url(#rug-band)"/>',
+    body = [f'<rect x="12" y="16" width="{W - 24}" height="{H - 32}" rx="5" fill="url(#{pid}-band)"/>',
             f'<rect x="17" y="21" width="{W - 34}" height="{H - 42}" rx="3" class="guard-line"/>',
             f'<rect x="{fx - 6}" y="{fy - 6}" width="{fw + 12}" height="{fh + 12}" rx="3" fill="#2A2257"/>',
             f'<rect x="{fx - 3}" y="{fy - 3}" width="{fw + 6}" height="{fh + 6}" rx="3" class="guard-line"/>',
-            f'<rect class="field" x="{fx}" y="{fy}" width="{fw}" height="{fh}" fill="url(#rug-sky)"/>',
-            f'<rect x="{fx}" y="{fy}" width="{fw}" height="{fh}" fill="url(#rug-knots)"/>']
+            f'<rect class="field" x="{fx}" y="{fy}" width="{fw}" height="{fh}" fill="url(#{pid}-sky)"/>',
+            f'<rect x="{fx}" y="{fy}" width="{fw}" height="{fh}" fill="url(#{pid}-knots)"/>']
     # corner pieces (lachak)
     for (x, y, a0) in ((fx, fy, 0), (fx + fw, fy, 90), (fx + fw, fy + fh, 180), (fx, fy + fh, 270)):
         r = 58
@@ -404,19 +406,19 @@ def rug_svg(t, order, href):
     body.append(f'<polygon class="med-in" points="{star(46, -78.75)}"/>')
     body.append(f'<circle cx="{cx}" cy="{cy}" r="24" fill="#C2365A"/>')
     body.append(f'<g transform="translate({cx - 13} {cy - 13}) scale(.82)" fill="none" stroke="#F4EEF9" stroke-width="1.8" stroke-linecap="round"><path d="M7 27C9 17 15 8 26 5c-1 9-7 16-16 18"/><path d="M7 27 21 11M12 20h6M15 15.5h6"/></g>')
-    for dy in (-1, 1):
-        y = cy + dy * 96
-        body.append(f'<path class="pendant" d="M{cx} {y - 13}l11 13-11 13-11-13z"/><circle cx="{cx}" cy="{y}" r="3.2" fill="#C2365A"/>')
+    for d in (-1, 1):
+        px, py = (cx + d * 104, cy) if wide else (cx, cy + d * 96)
+        body.append(f'<path class="pendant" d="M{px} {py - 13}l11 13-11 13-11-13z"/><circle cx="{px}" cy="{py}" r="3.2" fill="#C2365A"/>')
     rug = f'<g class="rug-body">{"".join(body)}</g>'
     # the apps, in a ring
     apps = []
     for n, k in enumerate(order):
         a = math.radians(-90 + n * 360 / len(order))
-        x, y = cx + 128 * math.cos(a), cy + 178 * math.sin(a)
-        s = 52
+        x, y = (cx + 400 * math.cos(a), cy + 142 * math.sin(a)) if wide else (cx + 128 * math.cos(a), cy + 178 * math.sin(a))
+        s = 58 if wide else 52
         apps.append(f'<a class="rug-app" href="{href(k)}" style="--i:{n}"><use href="#i-{k}" x="{x - s / 2:.1f}" y="{y - s / 2 - 8:.1f}" width="{s}" height="{s}"/>'
                     f'<text x="{x:.1f}" y="{y + s / 2 + 6:.1f}" text-anchor="middle">{t["names"][k]}</text></a>')
-    return (f'<svg class="rug" viewBox="0 0 {W} {H}" role="group" aria-label="{t["home_caption"]}">'
+    return (f'<svg class="rug {"rug-wide" if wide else "rug-tall"}" viewBox="0 0 {W} {H}" role="group" aria-label="{t["home_caption"]}">'
             + "".join(parts) + rug + f'<g class="rug-apps">{"".join(apps)}</g></svg>')
 
 
@@ -439,22 +441,25 @@ def home_page(t):
         u = URL[k]
         return u if u.startswith("http") else rel + u
     apps = "\n".join(f'<li class="app" style="--i:{n}"><a href="{app_href(k)}">{icon(k)}<span>{names[k]}</span></a></li>' for n, k in enumerate(order))
+    proof = "\n".join(f'<li><b>{b}</b><span>{s}</span></li>' for b, s in t["proof"])
     out.append(f'''<header class="hero">
 <div class="wrap">
-<div>
 <p class="kicker">{t["kicker"]}</p>
 <h1>{t["h1"]}</h1>
+<div class="hero-row">
 <p class="lede">{t["lede"]}</p>
+<div>
 <div class="links"><a class="btn solid" href="#work">{t["cta_work"]}</a><a class="btn" href="{rel}cv.pdf" download>{t["cta_cv"]}</a></div>
 <p class="avail"><i aria-hidden="true"></i>{t["avail"]}</p>
 </div>
+</div>
 <figure class="rug-fig" data-sky>
+{rug_svg(t, order, app_href, wide=True)}
 {rug_svg(t, order, app_href)}
 <figcaption>{t["home_caption"]} <span class="sky-cap" hidden>{t["sky_caption"]}</span></figcaption>
 </figure>
 </div>
 </header>''')
-    proof = "\n".join(f'<li><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">{PROOF_ICONS[i]}</svg><span><b>{b}</b>{s}</span></li>' for i, (b, s) in enumerate(t["proof"]))
     out.append(f'<section class="proof" aria-label="Highlights"><div class="wrap"><ul>\n{proof}\n</ul></div></section>\n<main>')
     # selected work
     rows = []
@@ -490,7 +495,9 @@ def home_page(t):
     out.append(f'''<section class="sec" id="work" aria-labelledby="work-h">
 <div class="wrap">
 <div class="sec-head"><h2 id="work-h">{t["work_h"]}</h2><p>{t["work_p"]}</p></div>
+<div class="features">
 {chr(10).join(rows)}
+</div>
 </div>
 </section>''')
     # more projects
@@ -796,7 +803,7 @@ def not_found_page():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found — Maryam Jaberi</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#F5F3FA">
+<meta name="theme-color" content="#1B2466">
 <link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
 {FONTS}
 <link rel="stylesheet" href="/assets/site.css?v={VER["site.css"]}">

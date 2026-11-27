@@ -41,8 +41,17 @@ Palette added for the carpet: indigo #2A2257, saffron #E8B04B, pomegranate #C236
 
 Third, the smallest: each project shows when it last changed.
 
+## Kashi redesign (27 Nov 2026)
+Maryam asked for a new layout and look, not another tweak. The lilac editorial page became a tiled wall:
+- Palette from Persian tilework: glazed white #F2F5F7, lapis #1B2466 (hero and contact bands), lapis ink #131838, saffron #E8B04B, turquoise #17968F for "live", pomegranate #C2365A kept rare. The CSS variable names (--plum, --lilac) are unchanged so the case pages follow.
+- One display face for both scripts: Markazi Text (Persian and Latin drawn together), over Hanken Grotesk / Vazirmatn for body. Young Serif is gone.
+- Hero: headline across the full width of a lapis wall, then the carpet laid on its side (nine apps in an ellipse), hanging over the wall's lower edge onto the light page. Phones get the upright carpet. `rug_svg(..., wide=True)` draws the wide one.
+- The carpet's lozenge border is reused once as a strip where lapis meets the page (hero bottom, contact top). Nowhere else.
+- Selected work is four plates, two by two, so the whole set is visible before scrolling into any one of them. More projects is one row of four.
+- Corners went from 22px to 6–10px: tile, not bubble.
+
 ## Rules
-- Keep the existing identity: lilac paper, aubergine ink, plum, Young Serif + Hanken Grotesk, Vazirmatn for Persian. The loom is the one bold element.
+- Identity: glazed white, lapis, saffron; Markazi Text + Hanken Grotesk, Vazirmatn for Persian body. The carpet and its loom are the one bold element.
 - No numbered eyebrows, no ALL CAPS, no stat counters, no heatmap squares. Knots are diamonds, like a knot seen from the back of a rug.
 - Motion: one moment only. When the loom scrolls into view, the woven columns appear left to right like a shuttle passing; nothing loops. Respect reduced motion.
 - Works in both directions: in Persian the loom weaves right to left.

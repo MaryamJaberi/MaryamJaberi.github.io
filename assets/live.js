@@ -32,9 +32,8 @@
       : a < 4 ? ["#F0B6A4", "#D9C2EC", 0] : a < 18 ? ["#EADFF6", "#FAE0DD", 0] : ["#E4E6FA", "#F6E4EE", 0];
     home.style.setProperty("--sky1", sky[0]);
     home.style.setProperty("--sky2", sky[1]);
-    const field = home.querySelector(".field");
-    if (sky[2] && field) {
-      home.classList.add("night");
+    if (sky[2]) home.classList.add("night");
+    if (sky[2]) home.querySelectorAll(".rug .field").forEach(field => {
       const ns = "http://www.w3.org/2000/svg", g = document.createElementNS(ns, "g");
       const fx = +field.getAttribute("x"), fy = +field.getAttribute("y"), fw = +field.getAttribute("width"), fh = +field.getAttribute("height");
       let s = 7;
@@ -47,7 +46,7 @@
         g.appendChild(c);
       }
       field.after(g);
-    }
+    });
     const cap = home.querySelector(".sky-cap");
     if (cap) cap.hidden = false;
   }
