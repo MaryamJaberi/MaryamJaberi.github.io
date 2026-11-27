@@ -7,6 +7,7 @@
 <linearGradient id="g-bazaar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#127A63"/><stop offset="1" stop-color="#5CC49A"/></linearGradient>
 <linearGradient id="g-night" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141033"/><stop offset="1" stop-color="#55308F"/></linearGradient>
 <linearGradient id="g-verse" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A4E33"/><stop offset="1" stop-color="#D2A273"/></linearGradient>
+<linearGradient id="g-park" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E8FA6"/><stop offset="1" stop-color="#6FD6C8"/></linearGradient>
 <linearGradient id="g-side" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B7FD9"/><stop offset="1" stop-color="#7FD0F2"/></linearGradient>
 </defs>
 
@@ -32,5 +33,6 @@
 <symbol id="i-verse" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="url(#g-verse)"/><g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 22h21v5a9 9 0 0 1-9 9h-3a9 9 0 0 1-9-9z"/><path d="M32 24h2.5a3.5 3.5 0 0 1 0 7H31"/><path d="M8 40h27"/><path d="M17 10c-2 2.2 2 4 0 6.5M23 9c-2 2.2 2 4 0 6.5"/></g><path d="M37 8c-4 3-6 7-6.5 11 3-1.5 6-5 6.5-11z" fill="#fff" fill-opacity=".85"/></symbol>
 
 <!-- Side by Side: Hamrah, find a companion -->
+<symbol id="i-park" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="url(#g-park)"/><g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 38V11h8.5a7.5 7.5 0 0 1 0 15H17"/></g><path d="M36 33l3 3-3 3M12 9" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="i-side" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="url(#g-side)"/><g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="15" r="4.5"/><circle cx="31" cy="15" r="4.5"/><path d="M9 37v-6a8 8 0 0 1 16 0v6M23 31a8 8 0 0 1 16 0v6"/></g><path d="M24 22.5c-1.6-1.6-4 .4-2 2.4L24 27l2-2.1c2-2-.4-4-2-2.4z" fill="#fff"/></symbol>
 </svg>

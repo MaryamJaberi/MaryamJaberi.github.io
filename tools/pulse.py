@@ -26,6 +26,8 @@ SOURCES = {
     "bazaar": [(None, "daneshsara"), (None, "psychology-wiki")],
     "night": [("Mafia-new", None)],
     "verse": [("ganjoor-no-new", None)],
+    "side": [("hamrah", None)],
+    "park": [("ParkShare", None)],
 }
 
 

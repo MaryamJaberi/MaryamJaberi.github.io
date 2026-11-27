@@ -23,16 +23,17 @@ URL = {
 CODE = {
     "planet": GH + "/earth-through-time-new", "tik": GH + "/Dour-new", "poly": GH + "/Language-Learning-Party-Game-new",
     "night": GH + "/Mafia-new", "verse": GH + "/ganjoor-no-new",
+    "side": GH + "/hamrah", "park": GH + "/ParkShare",
 }
 
 EN = dict(
     lang="en", dir="ltr", other="fa", other_label="فا", other_name="فارسی",
     title="Maryam Jaberi — Product Manager & Product Designer, Rotterdam",
-    desc="Maryam Jaberi, Product Manager and Product Designer in Rotterdam. Six years in product at search, streaming and education platforms with millions of users; eight products of her own.",
+    desc="Maryam Jaberi, Product Manager and Product Designer in Rotterdam. Six years in product at search, streaming and education platforms with millions of users; nine products of her own.",
     skip="Skip to selected work",
     nav=dict(work="Work", how="How I work", xp="Experience", cv="CV", contact="Contact"),
     names=dict(tw="Teamweather", planet="Once Upon a Planet", tik="Tik-Tak", poly="Polyglot Party",
-               bazaar="Knowledge Bazaar", night="Night Shift", verse="Slow Verse", side="Side by Side"),
+               bazaar="Knowledge Bazaar", night="Night Shift", verse="Slow Verse", side="Side by Side", park="ParkShare"),
     kicker="Product Manager & Product Designer in Rotterdam",
     h1="I turn fuzzy ideas into products people can use.",
     lede="Six years in product at search, streaming and education platforms with millions of users. These days I also build the first version myself, so a team can test an idea instead of debating it.",
@@ -85,6 +86,7 @@ EN = dict(
         ("bazaar", "Daneshsara", "Five Persian wikis that talk to each other: psychology, sociology, genetics, philosophy and linguistics, joined by 25 mapped bridges. Every source graded."),
         ("night", "Miz Khoda", "The Mafia narrator's assistant: deal roles, run the night, count the votes. Rules are data, so a new scenario needs no developer."),
         ("side", "Hamrah", "Find someone to work, learn or go out with. MVP built; the next six releases are specified."),
+        ("park", "ParkShare", "A federated network for sharing parking between neighbours and buildings. Residents book and release spaces, building managers set the rules, and seven matching engines pair requests with what is free. Each community keeps control of its own data."),
     ],
     how_h="How I work",
     how_p="The same five steps for a team of twenty or a team of one. AI writes most of my code now; the judgement is in the framing, the spec and the testing.",
@@ -98,7 +100,7 @@ EN = dict(
             ("Design", ["UX research and usability testing", "Information architecture", "Data visualisation and information design", "Service and game design", "Prototyping"]),
             ("Education", ["MSc Industrial Engineering, 2023", "Google UX Design certificate", "IBM Product Manager certificate", "Agile and Scrum, IBM / SkillUp"])],
     jobs=[("2022 – now", "Independent product and game designer", "Rotterdam",
-           "Built eight products of my own: seven are live, one is in progress. Founded SoloNovate to offer Teamweather to Dutch organisations."),
+           "Built nine products of my own: seven are live, two are built and shared as code. Founded SoloNovate to offer Teamweather to Dutch organisations."),
           ("2020 – 2022", "Product Manager, Search", "Hamrahe Aval (MCI), 1,000+ employees",
            "Led the shopping-search roadmap. Started Persian speech recognition from zero with 3,000 hours of validated audio. Onboarded 1,000+ retailers, launched answer boxes on 20+ services (+10% correct clicks) and cut cross-team release errors by 10%."),
           ("2018 – 2020", "Associate Product Manager", "Arshan Media (GapFilm)",
@@ -113,11 +115,11 @@ EN = dict(
 FA = dict(
     lang="fa", dir="rtl", other="en", other_label="EN", other_name="English",
     title="مریم جابری — مدیر محصول و طراح محصول، روتردام",
-    desc="مریم جابری، مدیر محصول و طراح محصول در روتردام. شش سال کار محصول در جست‌وجو، ویدیوی آنلاین و آموزش با میلیون‌ها کاربر؛ و هشت محصول از خودش.",
+    desc="مریم جابری، مدیر محصول و طراح محصول در روتردام. شش سال کار محصول در جست‌وجو، ویدیوی آنلاین و آموزش با میلیون‌ها کاربر؛ و نه محصول از خودش.",
     skip="رفتن به نمونه‌کارها",
     nav=dict(work="کارها", how="روش کار", xp="سابقه", cv="رزومه", contact="تماس"),
     names=dict(tw="هوای تیم", planet="روزی روزگاری، زمین", tik="تیک‌تاک", poly="مهمانی زبان‌ها",
-               bazaar="بازارچهٔ دانش", night="شب‌گردان", verse="شعرِ آهسته", side="شانه‌به‌شانه"),
+               bazaar="بازارچهٔ دانش", night="شب‌گردان", verse="شعرِ آهسته", side="شانه‌به‌شانه", park="پارک‌شر"),
     kicker="مدیر محصول و طراح محصول در روتردام",
     h1="ایده‌های مبهم را به محصولی تبدیل می‌کنم که آدم‌ها واقعاً از آن استفاده کنند.",
     lede="شش سال کار محصول در جست‌وجو، ویدیوی آنلاین و آموزش، با میلیون‌ها کاربر. این روزها نسخهٔ اول را هم خودم می‌سازم تا تیم به‌جای بحث دربارهٔ ایده، خودِ ایده را آزمایش کند.",
@@ -170,6 +172,7 @@ FA = dict(
         ("bazaar", "دانش‌سرا", "پنج ویکی فارسی که با هم حرف می‌زنند: روان‌شناسی، جامعه‌شناسی، ژنتیک، فلسفه و زبان‌شناسی، با ۲۵ پلِ مشخص میانشان. هر منبع درجه‌بندی شده."),
         ("night", "میز خدا", "دستیار گردانندهٔ مافیا: پخش نقش، اجرای شب، شمارش رأی. قانون‌ها داده‌اند، پس سناریوی تازه برنامه‌نویس لازم ندارد."),
         ("side", "همراه", "کسی را پیدا کنید که با او کار کنید، یاد بگیرید یا بیرون بروید. نسخهٔ اول ساخته شده؛ شش انتشار بعدی مستند شده‌اند."),
+        ("park", "ParkShare", "شبکه‌ای فدرال برای به‌اشتراک‌گذاشتن پارکینگ میان همسایه‌ها و ساختمان‌ها. ساکنان جا رزرو و آزاد می‌کنند، مدیر ساختمان قانون‌ها را می‌گذارد و هفت موتور تطبیق، درخواست‌ها را با جاهای خالی جور می‌کنند. هر جامعه اختیار داده‌های خودش را دارد."),
     ],
     how_h="روش کار من",
     how_p="همین پنج قدم، چه تیم بیست نفر باشد چه یک نفر. این روزها بیشتر کد را هوش مصنوعی می‌نویسد؛ قضاوت در تعریف مسئله، مستندات و تست است.",
@@ -183,7 +186,7 @@ FA = dict(
             ("مهارت‌های طراحی", ["پژوهش کاربر و تست کاربردپذیری", "معماری اطلاعات", "مصورسازی داده و طراحی اطلاعات", "طراحی خدمت و بازی", "نمونه‌سازی"]),
             ("تحصیلات", ["کارشناسی ارشد مهندسی صنایع، ۲۰۲۳", "گواهی طراحی UX گوگل", "گواهی مدیر محصول IBM", "اجایل و اسکرام، IBM / SkillUp"])],
     jobs=[("۲۰۲۲ تا امروز", "طراح مستقل محصول و بازی", "روتردام",
-           "هشت محصول از خودم ساخته‌ام: هفت‌تا منتشر شده و یکی در حال ساخت است. SoloNovate را راه انداختم تا هوای تیم را به سازمان‌های هلندی عرضه کنم."),
+           "نه محصول از خودم ساخته‌ام: هفت‌تا منتشر شده و دوتا ساخته شده و فقط کدشان در دسترس است. SoloNovate را راه انداختم تا هوای تیم را به سازمان‌های هلندی عرضه کنم."),
           ("۲۰۲۰ تا ۲۰۲۲", "مدیر محصول جست‌وجو", "همراه اول، بیش از ۱۰۰۰ کارمند",
            "نقشهٔ راه جست‌وجوی خرید را رهبری کردم. تشخیص گفتار فارسی را از صفر با ۳۰۰۰ ساعت صدای اعتبارسنجی‌شده شروع کردم. بیش از ۱۰۰۰ فروشنده را وارد کردم، جعبه‌های پاسخ را در بیش از ۲۰ سرویس راه انداختم (۱۰٪ کلیک درست بیشتر) و خطاهای انتشار بین‌تیمی را ۱۰٪ کم کردم."),
           ("۲۰۱۸ تا ۲۰۲۰", "Associate Product Manager", "آرشان مدیا (گپ‌فیلم)",
@@ -264,11 +267,11 @@ from datetime import date, datetime, timedelta
 
 PULSE = json.loads((ROOT / "assets/pulse.json").read_text(encoding="utf-8")) if (ROOT / "assets/pulse.json").exists() else {"start": "2026-10-26", "rows": {}}
 LOOM_START = date.fromisoformat(PULSE["start"])
-LOOM_ROWS = ["tw", "planet", "tik", "poly", "bazaar", "night", "verse"]
+LOOM_ROWS = ["tw", "planet", "tik", "poly", "bazaar", "night", "verse", "park"]
 # knot colours on the dark field: (few changes, many changes)
 KNOT = {"tw": ("#F7C04A", "#EE6F7C"), "planet": ("#8A8FF0", "#C3A8FF"), "tik": ("#F0509E", "#C59BFF"),
         "poly": ("#FF9A3C", "#F2457F"), "bazaar": ("#3FA982", "#8EE0B8"), "night": ("#9A7BE0", "#F2D06B"),
-        "verse": ("#B98258", "#E8C49A")}
+        "verse": ("#B98258", "#E8C49A"), "park": ("#3FB6C9", "#9DE8EE")}
 FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
 FA_MONTHS = ["ژانویه", "فوریه", "مارس", "آوریل", "مه", "ژوئن", "ژوئیه", "اوت", "سپتامبر", "اکتبر", "نوامبر", "دسامبر"]
 
@@ -364,7 +367,7 @@ def loom_svg(t):
 
 
 def rug_svg(t, order, href):
-    """The hero: a garden carpet. Eight apps sit in a ring around a medallion; the field is Rotterdam's sky."""
+    """The hero: a garden carpet. Nine apps sit in a ring around a medallion; the field is Rotterdam's sky."""
     import math
     W, H = 440, 600
     fx, fy, fw, fh = 44, 50, 352, 500          # field
@@ -405,10 +408,10 @@ def rug_svg(t, order, href):
         y = cy + dy * 96
         body.append(f'<path class="pendant" d="M{cx} {y - 13}l11 13-11 13-11-13z"/><circle cx="{cx}" cy="{y}" r="3.2" fill="#C2365A"/>')
     rug = f'<g class="rug-body">{"".join(body)}</g>'
-    # the eight apps, in a ring
+    # the apps, in a ring
     apps = []
     for n, k in enumerate(order):
-        a = math.radians(-90 + n * 45)
+        a = math.radians(-90 + n * 360 / len(order))
         x, y = cx + 128 * math.cos(a), cy + 178 * math.sin(a)
         s = 52
         apps.append(f'<a class="rug-app" href="{href(k)}" style="--i:{n}"><use href="#i-{k}" x="{x - s / 2:.1f}" y="{y - s / 2 - 8:.1f}" width="{s}" height="{s}"/>'
@@ -429,10 +432,10 @@ def home_page(t):
     out.append(f'<a class="skip" href="#work">{t["skip"]}</a>')
     out.append(nav(t, rel, "./", "fa/" if L == "en" else "../"))
     # hero
-    order = ["tw", "planet", "tik", "poly", "bazaar", "night", "verse", "side"]
+    order = ["tw", "planet", "tik", "poly", "bazaar", "night", "verse", "side", "park"]
     def app_href(k):
         if k == "tw": return "#work"
-        if k == "side": return "#more"
+        if k in NO_LIVE: return "#more"
         u = URL[k]
         return u if u.startswith("http") else rel + u
     apps = "\n".join(f'<li class="app" style="--i:{n}"><a href="{app_href(k)}">{icon(k)}<span>{names[k]}</span></a></li>' for n, k in enumerate(order))
@@ -493,8 +496,8 @@ def home_page(t):
     # more projects
     items = []
     for k, aka, p in t["more"]:
-        if k == "side":
-            links = f'<span class="soon">{t["soon"]}</span>'
+        if k in NO_LIVE:
+            links = (f'<span class="soon">{t["soon"]}</span>' if k == "side" else "") + (f'<a class="textlink" href="{CODE[k]}">{t["code"]}</a>' if k in CODE else "")
         else:
             u = URL[k] if URL[k].startswith("http") else rel + URL[k]
             links = f'<a class="textlink" href="{u}">{t["open"]}</a>' + (f'<a class="textlink" href="{CODE[k]}">{t["code"]}</a>' if k in CODE else "")
@@ -745,6 +748,8 @@ def case_page(slug, L):
 
 # Old addresses that still circulate (renamed repos, earlier Pages paths) -> the folder that is live now.
 # Keys are lower-case first path segments; the 404 page sends visitors on.
+NO_LIVE = ("side", "park")   # built, but no hosted copy: the card shows the code link instead of an Open button
+
 MOVED = {
     "mafia": "mafia", "mafia-new": "mafia", "miz-khoda": "mafia",
     "dour": "Dour", "dour-new": "Dour",
@@ -765,7 +770,7 @@ def projects():
     en_p["poly"], fa_p["poly"] = ("Dour: Language", en_p["tik"][1]), ("دور: زبان", fa_p["tik"][1])
     en_p["tik"], fa_p["tik"] = ("Dour", en_p["tik"][1]), ("دور", fa_p["tik"][1])
     out = []
-    for k in ["tw", "tik", "poly", "planet", "bazaar", "night", "verse", "side"]:
+    for k in ["tw", "tik", "poly", "planet", "bazaar", "night", "verse", "side", "park"]:
         u = URL.get(k)
         out.append({
             "key": k,
@@ -774,7 +779,7 @@ def projects():
             "description": {"en": en_p[k][1], "fa": fa_p[k][1]},
             "url": (u if u.startswith("http") else SITE + u) if u else None,
             "code": CODE.get(k),
-            "status": "live" if u else "in progress",
+            "status": "live" if u else ("code only" if k == "park" else "in progress"),
             "lastChange": PULSE["rows"].get(k, {}).get("last"),
         })
     return out

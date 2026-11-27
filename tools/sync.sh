@@ -19,6 +19,13 @@ PROJECTS=(
   "Mafia-new|mafia|npm install --no-audit --no-fund && npm run build:pages|dist-pages"
 )
 
+# repos that are not hosted here (no static build): cloned only so the pulse can read their history
+SOURCE_ONLY=(hamrah ParkShare)
+for repo in "${SOURCE_ONLY[@]}"; do
+  if [ -d "$SRC/$repo/.git" ]; then git -C "$SRC/$repo" fetch -q origin && git -C "$SRC/$repo" reset -q --hard FETCH_HEAD
+  else git clone -q --filter=blob:none "https://github.com/$OWNER/$repo.git" "$SRC/$repo" || echo "::warning::could not fetch $repo"; fi
+done
+
 get_state() { python3 -c "import json,sys;print(json.load(open('$STATE')).get(sys.argv[1],''))" "$1"; }
 set_state() { python3 -c "import json,sys;d=json.load(open('$STATE'));d[sys.argv[1]]=sys.argv[2];open('$STATE','w').write(json.dumps(d,indent=2,sort_keys=True)+'\n')" "$1" "$2"; }
 
