@@ -6,7 +6,7 @@ Live: https://maryamjaberi.github.io/
 
 - `index.html`, `case/` — English portfolio; `fa/` — Persian portfolio (RTL)
 - **Do not edit those HTML files by hand.** Edit the copy in `tools/build.py` and run `python3 tools/build.py`
-- `assets/site.css` — shared design (Young Serif + Hanken Grotesk; Vazirmatn for Persian)
+- `assets/site.css` — shared design (Markazi Text + Hanken Grotesk; Vazirmatn for Persian body)
 - `assets/icons.svg` — project icons (inlined into every page by the build)
 - `assets/img/en`, `assets/img/fa` — screenshots, one set per language
 - `cv.html` → `cv.pdf` — one-page CV (the PDF is printed from `cv.html`; regenerate it after editing)
