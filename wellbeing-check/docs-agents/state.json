@@ -1,22 +1,22 @@
 {
   "product": "Workplace Wellbeing Check (wellbeing-check/)",
-  "last_reviewed_commit": "3648a45",
-  "last_run": "2026-11-26",
+  "last_reviewed_commit": "66783c1",
+  "last_run": "2026-11-28",
   "tech_doc": {
     "title": "مستند فنی — سنجش سلامت روانی سازمان",
     "url": "https://claude.ai/artifact/D2H1VQ3yFi5EfQiCyhT6FV",
     "project_id": "615b45f3-38b7-499c-84a6-85c2bfac3ccc",
     "tab_file_id": "93742b44-9524",
     "body_node_id": "7db45374-8e12",
-    "version": "1.4",
-    "last_rev": 62,
+    "version": "1.5",
+    "last_rev": 71,
     "widgets": {
       "current_architecture": "29fc59bc-2e86",
       "roadmap": "77d1f436-c8f4",
       "target_architecture": "748832d5-6872"
     },
-    "next_requirement_id": "R59",
-    "next_adr_id": "ADR-019"
+    "next_requirement_id": "R67",
+    "next_adr_id": "ADR-021"
   },
   "business_doc": {
     "title": "بیزینس پلن‌ها — سنجش سلامت روانی سازمان",
@@ -288,7 +288,21 @@
       "recommended_path_changed": false
     }
   },
-  "pending_business_impacts": [],
+  "pending_business_impacts": [
+    {
+      "date": "2026-11-28",
+      "commit": "66783c1",
+      "what": "Vision 'from survey to change': product unit becomes a ~6-month change cycle (state A -> state B workshop per department -> 90-day plan -> month-6 re-measure); pilot agreement now = month 1 of the cycle only, in up to 9 languages; topic workshops become supplements; core = state B workshop per department + ~4h manager course. Tech doc adds R59-R66 (round comparison + impact dashboard, pulse, state-B kit, manager course content, onboarding/exit survey, REFS, MT translations).",
+      "why_it_matters": "Changes capability and packaging (annual change-cycle subscription, per-department workshops), adds pre-month-6 build work (R59-R62, medium each) not in current cost lines, and the month-6 comparison needs aggregates kept beyond the DPA's 3-month raw-data deletion. Six MT languages still show old hero copy until Persian is final.",
+      "sections_to_check": [
+        "recommended path / package pricing",
+        "workshop pricing and partner fees",
+        "phase timing / build effort before first month-6 re-measure",
+        "positioning",
+        "DPA/legal checklist"
+      ]
+    }
+  ],
   "legal_checklist_last_verified": "2026-11-16",
   "ip_register_last_reviewed": "2026-11-16",
   "business_last_handled": {
