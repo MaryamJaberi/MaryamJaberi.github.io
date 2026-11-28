@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>دفترهای میدانی | دانش‌سرا</title>
+<meta name="description" content="درس‌های دست‌به‌کار دانش‌سرا با دادهٔ واقعی: دفترهای منتشرشده و دفترهایی که در صف ساخت‌اند.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<style>
+body{background:var(--paper);color:var(--ink)}
+.what{font-size:1.05rem;color:var(--ink-2);max-width:68ch;line-height:1.9}
+.jl{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));margin:18px 0}
+.jl article{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:8px;align-content:start}
+.jl h3{margin:0;font-size:1.15rem} .jl p{margin:0;color:var(--ink-2);line-height:1.9;font-size:.95rem}
+.st{font-size:.78rem;padding:2px 10px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2);justify-self:start}
+.st.ok{border-color:var(--ok);color:var(--ok)}
+.jl ul{margin:0;padding-inline-start:18px;font-size:.88rem;color:var(--ink-2);line-height:1.9}
+ol.rc{line-height:2;color:var(--ink-2);max-width:72ch}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../atlas/">اطلس‌ها</a><i>›</i><a href="../../atlas/tools/">ابزارها</a><i>›</i><b>دفترهای میدانی</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>دفترهای میدانی</h1>
+<p class="what">هر دفتر یک موضوع علمی را به چند درس دست‌به‌کار تبدیل می‌کند: اول حدس می‌زنید، بعد خودتان اندازه می‌گیرید یا دادهٔ واقعی را می‌بینید، و بعد می‌سنجید که از آن داده چه می‌شود فهمید و چه نمی‌شود.</p>
+<h2>آمادهٔ استفاده</h2><div class="jl" id="done"></div>
+<h2>در صف ساخت</h2><div class="jl" id="queue"></div>
+<h2>هر دفتر چطور ساخته می‌شود</h2><ol class="rc" id="rc"></ol>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · دفترهای میدانی</div></footer>
+<script>
+const W={psy:"روان",soc:"جامعه",tabar:"تبار و ژنتیک",phil:"فلسفه",tarikh:"تاریخ",zaban:"زبان"};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+fetch("../../data/journals.json").then(r=>r.json()).then(d=>{
+  const card=j=>`<article><span class="st ${j.href?"ok":""}">ویکی ${esc(W[j.wiki]||j.wiki)} · ${esc(j.status)}</span><h3>${esc(j.title)}</h3><p>${esc(j.what)}</p>${j.href?`<a class="btn" href="../../${esc(j.href)}">باز کردن</a>`:""}${j.href&&j.next?`<p>برگ‌ها و کارهای بعدی:</p><ul>${j.next.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:""}</article>`;
+  document.getElementById("done").innerHTML=d.journals.filter(j=>j.href).map(card).join("");
+  document.getElementById("queue").innerHTML=d.journals.filter(j=>!j.href).map(card).join("");
+  document.getElementById("rc").innerHTML=d.recipe.map(r=>`<li>${esc(r)}</li>`).join("");
+}).catch(()=>{document.getElementById("done").textContent="فهرست بار نشد."});
+</script>
+</body>
+</html>

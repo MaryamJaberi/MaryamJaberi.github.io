@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>دفتر میدانی حافظه | ویکی روان | دانش‌سرا</title>
+<meta name="description" content="سه درس دست‌به‌کار دربارهٔ حافظه: فراخنای ارقام خودتان را اندازه بگیرید، منحنی فراموشی ابینگهاوس و تکرار سال ۲۰۱۵ آن را ببینید، و بیازمایید جای واژه در فهرست چه اثری دارد.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<link rel="stylesheet" href="../../core/tools/journal-kit.css">
+<style>:root{--lab:var(--fam-psy);--lab-soft:var(--fam-psy-soft);--y78:var(--fam-bio)}</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../psy/">ویکی روان‌شناسی</a><i>›</i><a href="../../psy/tools/">ابزارها</a><i>›</i><b>دفتر میدانی حافظه</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>دفتر میدانی حافظه</h1>
+<p class="what">حافظه را می‌شود اندازه گرفت. در این دفتر سه چیز را می‌سنجید: چقدر را یک‌جا نگه می‌دارید، آموخته با گذشت زمان چطور کم می‌شود، و جای یک واژه در فهرست چه اثری بر به‌یادآوردنش دارد. در دو برگ، داده را خودتان می‌سازید. چیزی ذخیره یا فرستاده نمی‌شود، جز اینکه مرورگر شما یادش می‌ماند کدام برگ را تمام کرده‌اید.</p>
+<p class="prog" id="prog" aria-live="polite"></p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+
+<details class="teach"><summary>برای معلم و کلاس</summary>
+<p>هر برگ حدود ده دقیقه وقت می‌گیرد. برگ‌های ۱ و ۳ را می‌شود هم‌زمان با همهٔ کلاس اجرا کرد و عددها را روی تخته جمع زد؛ میانگین کلاس از عدد یک نفر بسیار پایدارتر است. پرسش‌های پیشنهادی:</p>
+<ul>
+<li>برگ ۱: چرا دو بار اندازه‌گیری یک نفر عدد یکسان نمی‌دهد؟ دسته‌بندی چه چیزی را عوض کرد؟</li>
+<li>برگ ۲: «صرفه‌جویی» با «چند درصد یادم مانده» چه فرقی دارد؟ دادهٔ یک نفر تا کجا قابل تعمیم است؟</li>
+<li>برگ ۳: الگوی کلاس با الگوی هر نفر چه فرقی دارد؟</li>
+</ul>
+<p>این دفتر ابزار تشخیص نیست و عددهایش دربارهٔ سلامت حافظهٔ کسی چیزی نمی‌گوید.</p>
+</details>
+
+<section class="srcs" id="sources">
+<h2>منبع‌ها و اعتبار داده</h2>
+<ul>
+<li><b>منحنی فراموشی:</b> <span class="en">Murre, J.M.J. &amp; Dros, J. (2015). Replication and Analysis of Ebbinghaus' Forgetting Curve. PLoS ONE, 10(7), e0120644. doi:10.1371/journal.pone.0120644</span> (دسترسی آزاد، CC BY): <a class="en" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4492928/" rel="noopener">pmc.ncbi.nlm.nih.gov/articles/PMC4492928</a><br>عددهای «دروس ۲۰۱۵» از جدول ۱ مقاله (میانگین تعداد تکرار در یادگیری و بازآموزی) گرفته شده و صرفه‌جویی در همین صفحه حساب می‌شود. <span class="tag2">جدول ۱ خوانده شد</span><br>عددهای ابینگهاوس از جدول ۳ همان مقاله نقل شده که خودش از دست‌نوشتهٔ ۱۸۸۰ ابینگهاوس گرفته است. <span class="tag2">دست‌دوم</span> <span class="tag2">جدول ۳ از خلاصهٔ ماشینی صفحه؛ نیازمند بازبینی با متن مقاله</span><br>نشانهٔ درستی: ستون «دروس» در آن خلاصه با محاسبهٔ ما از جدول ۱ یکی درآمد.</li>
+<li><b>برگ‌های ۱ و ۳:</b> دادهٔ بیرونی ندارند؛ هرچه می‌بینید اندازه‌گیری خود شماست. پژوهش‌های اصلی دربارهٔ فراخنای ارقام و «اثر جایگاه در فهرست» هنوز برای این دفتر خوانده نشده‌اند، پس اینجا دربارهٔ یافته‌های آن‌ها ادعایی نشده است. <span class="tag2">منبع اصلی خوانده نشده</span></li>
+</ul>
+</section>
+<div class="note foot" role="note">این دفتر پیش‌نویس است و هنوز بازبینی کارشناس نشده. یک بار اندازه‌گیری یک نفر پرنوسان است؛ از عدد خودتان نتیجهٔ بزرگ نگیرید.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · دفتر میدانی حافظه · <a href="../../atlas/tools/journals.html">همهٔ دفترهای میدانی</a></div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script src="../../core/tools/journal-kit.js"></script>
+<script>
+(function(){
+const K=LabKit, fa=K.fa, J=JournalKit;
+const FAST=!!window.__FAST, T=FAST?30:900;
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+const lat=s=>String(s).replace(/[۰-۹]/g,c=>"۰۱۲۳۴۵۶۷۸۹".indexOf(c)).replace(/[٠-٩]/g,c=>"٠١٢٣٤٥٦٧٨٩".indexOf(c)).replace(/\D/g,"");
+
+/* ---------- برگ ۱: فراخنا ---------- */
+const SP={one:[],grp:[]};
+function span(pn,out){
+  let run=0;
+  function home(){
+    pn.innerHTML=`<p style="margin:0">رقم‌ها یکی‌یکی نشان داده می‌شوند. وقتی تمام شد، همه را به همان ترتیب بنویسید. رشته هر بار یک رقم بلندتر می‌شود و برای هر طول دو فرصت دارید. آزمون وقتی تمام می‌شود که هر دو فرصت یک طول را خطا کنید.</p>
+<div class="rowb"><button type="button" class="btn" data-m="one">شروع: رقم‌ها تک‌تک</button><button type="button" class="btn ghost" data-m="grp">شروع: سه‌تا سه‌تا</button></div>`;
+    pn.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>test(b.dataset.m));
+    show();
+  }
+  function show(){
+    if(!SP.one.length&&!SP.grp.length){out.innerHTML="";return}
+    const row=(k,t)=>SP[k].length?`<div><span>${t}</span><i style="width:${Math.max.apply(null,SP[k])/14*100}%"></i><b>${SP[k].map(x=>fa(x)).join("، ")}</b></div>`:"";
+    const both=SP.one.length&&SP.grp.length;
+    out.innerHTML=`<div class="res"><h3>فراخنای ارقام شما</h3><div class="bars">${row("one","تک‌تک")}${row("grp","سه‌تا سه‌تا")}</div>
+<p style="margin-top:10px">هر عدد، بلندترین رشته‌ای است که در یک نوبت درست بازگفتید. این آزمون در روان‌شناسی «فراخنای ارقام» نام دارد. ${both?"حالا دو شیوه را مقایسه کنید: وقتی رقم‌ها دسته‌دسته می‌آیند، ذهن به‌جای تک‌رقم‌ها «دسته» نگه می‌دارد. آیا برای شما فرقی کرد؟ برای اینکه مطمئن شوید فرق از تمرین یا شانس نیست، هر شیوه را دو سه بار تکرار کنید.":"یک بار هم با شیوهٔ دیگر امتحان کنید تا بتوانید مقایسه کنید."}</p>
+${K.lk(["learning-memory","p-cog"])}${both?J.next("span"):""}</div>`;
+    if(both) J.finish("span");
+  }
+  async function test(mode){
+    const my=++run; let len=3, best=0;
+    while(len<=14){
+      let ok=false;
+      for(let tr=0;tr<2&&!ok;tr++){
+        const seq=[]; while(seq.length<len){const d=Math.floor(Math.random()*10); if(d!==seq[seq.length-1]) seq.push(d)}
+        pn.innerHTML=`<div class="step">طول ${fa(len)} · فرصت ${fa(tr+1)} از ۲</div><div class="stage" id="st" aria-live="off">آماده</div>`;
+        const st=pn.querySelector("#st"); await wait(T); if(my!==run||!st.isConnected) return;
+        const parts=mode==="one"?seq.map(d=>[d]):seq.reduce((a,d,i)=>{if(i%3===0)a.push([]);a[a.length-1].push(d);return a},[]);
+        for(const pt of parts){ st.textContent=pt.map(d=>fa(d)).join(" "); await wait(T*pt.length*.82); st.textContent=""; await wait(T*pt.length*.18); if(my!==run||!st.isConnected) return; }
+        const typed=await new Promise(res=>{
+          pn.innerHTML=`<div class="step">طول ${fa(len)} · فرصت ${fa(tr+1)} از ۲</div><label class="field">رقم‌ها را به همان ترتیب بنویسید:<input class="inp" id="in" inputmode="numeric" autocomplete="off" dir="ltr"></label><div class="rowb"><button type="button" class="btn" id="go">ثبت</button></div>`;
+          const i=pn.querySelector("#in"); i.focus(); const f=()=>res(lat(i.value));
+          pn.querySelector("#go").onclick=f; i.addEventListener("keydown",e=>{if(e.key==="Enter")f()});
+        });
+        if(my!==run) return;
+        ok=typed===seq.join("");
+        pn.innerHTML=`<div class="stage w">${ok?"درست":"رشته این بود: "+seq.map(d=>fa(d)).join(" ")}</div>`; await wait(FAST?30:ok?700:1800); if(my!==run) return;
+      }
+      if(!ok) break; best=len; len++;
+    }
+    SP[mode].push(best); home();
+  }
+  home();
+}
+
+/* ---------- برگ ۲: فراموشی ---------- */
+/* Murre & Dros (2015) Table 1: [interval, mean repetitions to learn, mean repetitions to relearn]; Table 3, Ebbinghaus column (savings as proportion) */
+const FG=[["۲۰ دقیقه",30.77,16.26,.582],["۱ ساعت",30.64,19.22,.442],["۹ ساعت",31.07,22.48,.358],["۱ روز",31.22,21.33,.337],["۲ روز",31.42,24.19,.278],["۶ روز",31.21,25.97,.254],["۳۱ روز",29.44,28.23,.211]];
+const sav=r=>(r[1]-r[2])/r[1]*100;
+function forget(pn,out){
+  let shown=false;
+  pn.innerHTML=`<p style="margin:0">یوری دروس در سال ۲۰۱۵ کار هرمان ابینگهاوس را تکرار کرد: ردیف‌هایی از ۱۳ هجای بی‌معنا را آن‌قدر خواند تا یک بار بی‌خطا از بر بگوید، و پس از مدتی همان‌ها را دوباره آموخت. اگر بار دوم کمتر تکرار لازم شود، یعنی چیزی از بار اول مانده است. این سهمِ کمتر را «صرفه‌جویی» می‌نامند.</p>
+<label class="field">پس از <b>یک روز</b>، بازآموزی چند درصد کمتر از یادگیری اول تکرار لازم داشت؟ حدس شما: <b id="gv"></b><input type="range" id="g" min="0" max="100" step="1" value="50"></label>
+<div class="key"><span>۰ = انگار هیچ‌وقت نیاموخته</span><span>۱۰۰ = بدون هیچ تکراری از بر است</span></div>
+<div class="rowb"><button type="button" class="btn" id="show">داده را نشان بده</button></div>`;
+  const g=pn.querySelector("#g");
+  function draw(){
+    const W=340,H=250,pl=34,pb=44,X=i=>pl+12+i*(W-pl-24)/6,Y=v=>H-pb-v/70*(H-pb-12);
+    let s="";
+    for(let t=0;t<=60;t+=20) s+=`<line x1="${pl}" x2="${W-6}" y1="${Y(t)}" y2="${Y(t)}" stroke="${K.css("--line")}"/><text x="${pl-5}" y="${Y(t)+3.5}" font-size="10" text-anchor="end" fill="${K.css("--ink-2")}">${fa(t)}٪</text>`;
+    FG.forEach((r,i)=>{s+=`<text x="${X(i)}" y="${H-pb+14}" font-size="9.5" text-anchor="middle" fill="${K.css("--ink-2")}" direction="rtl">${r[0]}</text>`});
+    s+=`<text x="${(pl+W)/2}" y="${H-12}" font-size="10.5" text-anchor="middle" fill="${K.css("--ink-2")}" direction="rtl">فاصله تا بازآموزی (فاصله‌ها روی محور هم‌اندازه‌اند، نه به نسبت زمان)</text>`;
+    const gy=Math.min(70,+g.value);
+    s+=`<line x1="${X(3)-14}" x2="${X(3)+14}" y1="${Y(gy)}" y2="${Y(gy)}" stroke="${K.css("--ink")}" stroke-width="2.4" stroke-dasharray="4 3"/>${+g.value>70?`<text x="${X(3)}" y="${Y(70)-4}" font-size="9.5" text-anchor="middle" fill="${K.css("--ink")}">↑</text>`:""}`;
+    if(shown){
+      const line=(f,c)=>`<polyline fill="none" stroke="${c}" stroke-width="2.2" points="${FG.map((r,i)=>X(i)+","+Y(f(r)).toFixed(1)).join(" ")}"/>`+FG.map((r,i)=>`<circle cx="${X(i)}" cy="${Y(f(r)).toFixed(1)}" r="3.6" fill="${c}"/>`).join("");
+      s+=line(r=>r[3]*100,K.css("--y78"))+line(sav,K.css("--lab"));
+    }
+    let h=`<div class="chartbox"><svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="نمودار صرفه‌جویی در برابر فاصلهٔ زمانی">${s}</svg></div><div class="key"><span><i style="background:var(--ink)"></i>خط‌چین: حدس شما برای یک روز</span>${shown?`<span><i style="background:var(--lab)"></i>دروس، ۲۰۱۵</span><span><i style="background:var(--y78)"></i>ابینگهاوس، ۱۸۸۰</span>`:""}</div>`;
+    if(shown){
+      const d=FG[3];
+      h+=`<div class="res"><h3>پس از یک روز: حدود ${fa(sav(d),0)} درصد (ابینگهاوس: ${fa(d[3]*100,0)} درصد)</h3>
+<p>دروس برای یادگیری اول به‌طور میانگین ${fa(d[1],1)} تکرار لازم داشت و یک روز بعد ${fa(d[2],1)} تکرار. یعنی ${fa(sav(d),0)} درصد کمتر.</p>
+<p>شکل منحنی را ببینید: بیشترین افت در همان یک ساعت اول است (از ${fa(sav(FG[0]),0)} به ${fa(sav(FG[1]),0)} درصد) و بعد شیب کم می‌شود. دو منحنی با ۱۳۵ سال فاصله به هم نزدیک‌اند. نویسندگان نتیجه می‌گیرند که منحنی ابینگهاوس تکرار شده است، اما کاملاً هموار نیست: در نقطهٔ یک‌روزه کمی بالا می‌پرد (در دادهٔ دروس از ${fa(sav(FG[2]),0)} درصد در ۹ ساعت به ${fa(sav(FG[3]),0)} درصد در یک روز). به نوشتهٔ همان مقاله، برخی پژوهشگران این پرش را به اثر خواب نسبت داده‌اند.</p>
+<p><b>احتیاط:</b> هر منحنی دادهٔ یک نفر است (ابینگهاوس خودش، و دروس خودش) و مطلب، هجای بی‌معنا بوده است. پس شکل کلی قابل اعتماد است، اما این درصدها را نباید قانون همهٔ آدم‌ها و همهٔ مطلب‌ها دانست. «صرفه‌جویی» هم با «چند درصد یادم مانده» یکی نیست: ممکن است چیزی را نتوانید از بر بگویید و باز هم دوباره‌آموختنش آسان‌تر باشد.</p>
+${K.lk(["learning-memory","false-memory"])}${J.next("forget")}</div>`;
+    }
+    out.innerHTML=h;
+  }
+  const u=()=>{pn.querySelector("#gv").textContent=fa(+g.value)+" درصد"; draw()};
+  g.addEventListener("input",u); u();
+  pn.querySelector("#show").onclick=e=>{shown=true; e.target.remove(); g.disabled=true; draw(); J.finish("forget")};
+}
+
+/* ---------- برگ ۳: جای واژه در فهرست ---------- */
+const LISTS=[["سیب","پنجره","کفش","رودخانه","قاشق","ابر","صندلی","گربه","کلید","کوه","چراغ","نامه"],["دریا","مداد","اسب","دیوار","نان","ستاره","کیف","باغ","ساعت","ماهی","پله","برف"],["کتاب","سنگ","پرنده","میز","باران","چتر","انگور","قطار","آینه","جنگل","فنجان","شمع"]];
+const nrm=w=>w.replace(/[‌‍ـ]/g,"").replace(/ي/g,"ی").replace(/ك/g,"ک").replace(/[ً-ْ]/g,"").trim();
+const POS={n:0,hit:Array(12).fill(0),rounds:[]};
+function serial(pn,out){
+  let run=0;
+  function home(){
+    const left=LISTS.length-POS.n;
+    pn.innerHTML=`<p style="margin:0">دوازده واژه یکی‌یکی نشان داده می‌شود. بعد هر چه یادتان مانده بنویسید، به هر ترتیبی که می‌خواهید. سه فهرست داریم؛ هرچه بیشتر انجام دهید الگو روشن‌تر می‌شود.</p>
+<div class="rowb">${left?`<button type="button" class="btn" id="go">${POS.n?"فهرست بعدی":"شروع"} (${fa(POS.n+1)} از ${fa(LISTS.length)})</button>`:`<button type="button" class="btn ghost" id="rs">از نو</button>`}</div>`;
+    const b=pn.querySelector("#go"); if(b) b.onclick=play;
+    const r=pn.querySelector("#rs"); if(r) r.onclick=()=>{POS.n=0;POS.hit.fill(0);POS.rounds=[];home()};
+    show();
+  }
+  function show(){
+    if(!POS.n){out.innerHTML="";return}
+    const mx=POS.n, col=K.css("--lab");
+    const W=340,H=150,X=i=>W-30-i*((W-50)/11);
+    let s=""; for(let i=0;i<12;i++){const hh=POS.hit[i]/mx*90; s+=`<rect x="${X(i)-9}" y="${112-hh}" width="18" height="${Math.max(hh,1.5)}" rx="3" fill="${col}"/><text x="${X(i)}" y="126" font-size="10" text-anchor="middle" fill="${K.css("--ink-2")}">${fa(i+1)}</text>`}
+    s+=`<line x1="14" x2="${W-14}" y1="112" y2="112" stroke="${K.css("--line-strong")}"/><text x="${W/2}" y="144" font-size="10.5" text-anchor="middle" fill="${K.css("--ink-2")}" direction="rtl">جای واژه در فهرست (۱ = اولین واژه)</text>`;
+    const last=POS.rounds[POS.rounds.length-1];
+    out.innerHTML=`<div class="res"><h3>${fa(last.filter(Boolean).length)} واژه از ۱۲ در این نوبت</h3><div class="cells">${last.map((v,i)=>`<span class="${v?"on":""}">${fa(i+1)}</span>`).join("")}</div>
+<p style="margin-top:12px">نمودار زیر همهٔ نوبت‌های شما را جمع می‌زند (${fa(POS.n)} فهرست): بلندی هر ستون یعنی واژهٔ آن جایگاه چند بار به یادتان آمد.</p>
+<div class="chartbox"><svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="تعداد یادآوری بر پایهٔ جای واژه در فهرست">${s}</svg></div>
+<p>به دو سرِ نمودار و میانه‌اش نگاه کنید. آیا واژه‌های اول فهرست، واژه‌های آخر، یا واژه‌های میانی برای شما فرق داشتند؟ روان‌شناسان این پرسش را با نام «اثر جایگاه در فهرست» بررسی کرده‌اند. با سه فهرست و یک نفر، الگو هنوز پرنوسان است؛ اگر با چند نفر انجام دهید و ستون‌ها را جمع بزنید، روشن‌تر می‌شود.</p>
+${K.lk(["learning-memory","attention"])}${POS.n>=2?J.next("serial"):""}</div>`;
+    if(POS.n>=2) J.finish("serial");
+  }
+  async function play(){
+    const my=++run, L=LISTS[POS.n];
+    pn.innerHTML=`<div class="stage w" id="st" aria-live="off">آماده</div>`; const st=pn.querySelector("#st"); await wait(T);
+    for(const w of L){ if(my!==run||!st.isConnected) return; st.textContent=w; await wait(T*1.25); st.textContent=""; await wait(T*.25); }
+    if(my!==run||!st.isConnected) return;
+    pn.innerHTML=`<label class="field">هر واژه‌ای را که یادتان مانده بنویسید (با فاصله یا در خط تازه):<textarea class="inp" id="in" autocomplete="off"></textarea></label><div class="rowb"><button type="button" class="btn" id="ok">ثبت</button></div>`;
+    pn.querySelector("#in").focus();
+    pn.querySelector("#ok").onclick=()=>{
+      const got=new Set(pn.querySelector("#in").value.split(/[\s،,؛;.]+/).map(nrm).filter(Boolean));
+      const r=L.map(w=>got.has(nrm(w))); r.forEach((v,i)=>{if(v)POS.hit[i]++}); POS.rounds.push(r); POS.n++; home();
+    };
+  }
+  home();
+}
+
+/* ---------- برگ ۴: آزمون تصویری ---------- */
+function curve(f){let p=""; for(let i=0;i<=20;i++){p+=(10+i*5)+","+(50-f(i/20)*42).toFixed(1)+" "} return `<svg viewBox="0 0 120 60" aria-hidden="true"><line x1="8" x2="114" y1="52" y2="52" stroke="${K.css("--line-strong")}"/><line x1="8" x2="8" y1="4" y2="52" stroke="${K.css("--line-strong")}"/><polyline fill="none" stroke="${K.css("--lab")}" stroke-width="2.6" points="${p}"/></svg>`}
+function check(pn,out){
+  J.quiz([
+    ["محور افقی زمان و محور عمودی صرفه‌جویی است. کدام شکل به دادهٔ ابینگهاوس و دروس نزدیک‌تر است؟",[[curve(x=>.25+.75*Math.exp(-x*9)),"الف"],[curve(x=>1-x*.8),"ب"],[curve(x=>x<.7?.95:.95-(x-.7)*3),"پ"]],0,"افت تند در آغاز و بعد شیب کم: بیشتر فراموشی در همان ساعت اول رخ داد (برگ ۲)."],
+    ["«صرفه‌جویی ۳۲ درصد پس از یک روز» یعنی چه؟",[["","۳۲ درصد هجاها را می‌توانست از بر بگوید."],["","بازآموزی ۳۲ درصد کمتر از یادگیری اول تکرار لازم داشت."],["","۳۲ درصد هجاها برای همیشه پاک شده بود."]],1,"صرفه‌جویی کارِ کمترِ بار دوم را می‌سنجد، نه تعداد چیزهایی که از بر گفته می‌شود."],
+    ["هر یک از دو منحنی برگ ۲ از دادهٔ یک نفر و با هجای بی‌معنا ساخته شده. کدام نتیجه‌گیری درست‌تر است؟",[["","همهٔ آدم‌ها هر مطلبی را با همین درصدها فراموش می‌کنند."],["","شکل کلی منحنی تکرار شده، اما عددها را نباید به همه و به هر مطلبی تعمیم داد."],["","چون فقط دو نفرند، از این داده هیچ چیز نمی‌شود فهمید."]],1,"دو اندازه‌گیری مستقل با ۱۳۵ سال فاصله به هم نزدیک‌اند، پس شکل منحنی جدی است؛ ولی مقدار دقیق به آدم و مطلب بستگی دارد."],
+    ["یک بار فراخنای ارقام خود را اندازه گرفتید و ۶ شد. بار دوم ۷ شد. کدام برداشت درست است؟",[["","حافظه‌ام در چند دقیقه بهتر شد."],["","هر اندازه‌گیری نوسان دارد؛ برای مقایسه باید چند بار اندازه گرفت."],["","یکی از دو عدد حتماً غلط است."]],1,"یک اندازه‌گیری تنها، هم شانس دارد و هم اثر تمرین. برای همین در برگ ۱ خواستیم هر شیوه را چند بار تکرار کنید."]
+  ],`<p>سه چیز را سنجیدید: گنجایش لحظه‌ای، افت با زمان، و اثر جای واژه. در هر سه، یک عدد تنها کم می‌گوید؛ الگو از تکرار اندازه‌گیری بیرون می‌آید.</p>${K.lk(["learning-memory","false-memory","p-cog"])}`)(pn,out);
+}
+
+J.start({id:"hafeze",wiki:"psy",first:"span",labels:{"learning-memory":"یادگیری و حافظه","false-memory":"حافظهٔ کاذب","attention":"توجه","p-cog":"روان‌شناسی شناختی"},
+  exps:{
+    span:["۱ · گنجایش","برگ ۱: چند رقم را یک‌جا نگه می‌دارید؟","حافظهٔ لحظه‌ای جای محدودی دارد. اندازه‌اش را برای خودتان پیدا کنید، یک بار با رقم‌های تک‌تک و یک بار با رقم‌های دسته‌شده.",span],
+    forget:["۲ · فراموشی","برگ ۲: آموخته با زمان چطور کم می‌شود؟","ابینگهاوس در دههٔ ۱۸۸۰ این را روی خودش اندازه گرفت. سال ۲۰۱۵ همان آزمایش با یک نفر دیگر تکرار شد. اول حدس بزنید.",forget],
+    serial:["۳ · جای واژه","برگ ۳: جای واژه در فهرست فرق می‌کند؟","این برگ دادهٔ بیرونی ندارد. آزمایش را روی خودتان انجام می‌دهید و الگو را در دادهٔ خودتان می‌جویید.",serial],
+    check:["۴ · آزمون تصویری","برگ ۴: از اندازه‌گیری چه می‌شود فهمید؟","چهار پرسش کوتاه. نمودارهای این برگ ساختگی‌اند و فقط برای پرسش کشیده شده‌اند.",check]
+  }});
+})();
+</script>
+</body>
+</html>
