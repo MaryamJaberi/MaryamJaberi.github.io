@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>دفتر میدانی آب | دانش‌سرا</title>
+<meta name="description" content="سه درس دست‌به‌کار با دادهٔ بانک جهانی: سهم هر نفر از آب تجدیدپذیر ایران، نسبت برداشت به آب تجدیدپذیر، و اینکه آب در کدام بخش مصرف می‌شود.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<link rel="stylesheet" href="../../core/tools/journal-kit.css">
+<style>:root{--lab:var(--fam-soc);--lab-soft:var(--fam-soc-soft);--y78:var(--fam-bio)}
+.drops{display:flex;flex-wrap:wrap;gap:4px;direction:rtl;min-height:64px;align-content:flex-start}
+.drops i{width:16px;height:20px;background:var(--lab);border-radius:50% 50% 50% 50%/62% 62% 38% 38%;display:block}
+.drops i.g{background:transparent;border:1.5px dashed var(--line-strong)}
+.tank{height:26px;border-radius:8px;background:var(--surface-subtle);border:1px solid var(--line-strong);overflow:hidden;direction:ltr;position:relative}
+.tank b{display:block;height:100%;background:var(--lab)}
+.tank b.over{background:var(--err)}
+.seg{display:flex;height:22px;border-radius:6px;overflow:hidden;direction:ltr;border:1px solid var(--line)}
+.seg i{display:block;height:100%}
+.segrow{display:grid;grid-template-columns:minmax(52px,auto) 1fr;gap:10px;align-items:center;font-size:.88rem;margin-bottom:8px}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../atlas/">اطلس‌ها</a><i>›</i><a href="../../atlas/tools/">ابزارها</a><i>›</i><b>دفتر میدانی آب</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>دفتر میدانی آب</h1>
+<p class="what">آب را می‌شود مثل یک حساب بانکی دید: هر سال مقداری وارد می‌شود و مقداری برداشت می‌شود. در این دفتر سه عدد پایهٔ این حساب را برای ایران با دست خودتان می‌سازید: سهم هر نفر، نسبت برداشت به ورودی، و اینکه برداشت کجا خرج می‌شود. همهٔ عددها از پایگاه بانک جهانی است و محدودیتشان کنارشان نوشته شده. چیزی ذخیره یا فرستاده نمی‌شود، جز اینکه مرورگر شما یادش می‌ماند کدام برگ را تمام کرده‌اید.</p>
+<p class="prog" id="prog" aria-live="polite"></p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+
+<details class="teach"><summary>برای معلم و کلاس</summary>
+<p>هر برگ حدود ده دقیقه وقت می‌گیرد و با یک حدس شروع می‌شود. پرسش‌های پیشنهادی:</p>
+<ul>
+<li>برگ ۱: مقدار آب عوض نشده، پس چرا سهم هر نفر کم شده؟ این عدد چه چیزی را دربارهٔ یک شهر یا یک سال خشک نمی‌گوید؟</li>
+<li>برگ ۲: برداشت بیش از ورودی سالانه از کجا می‌آید و تا کی می‌شود ادامه‌اش داد؟</li>
+<li>برگ ۳: کم‌کردن برداشت در هر بخش چه هزینه‌ای برای چه کسانی دارد؟ چه کسی باید دربارهٔ آن تصمیم بگیرد؟</li>
+</ul>
+</details>
+
+<section class="srcs" id="sources">
+<h2>منبع‌ها و اعتبار داده</h2>
+<ul>
+<li><b>همهٔ عددها:</b> بانک جهانی، <span class="en">World Development Indicators</span> (مجوز CC BY 4.0)، به‌روزرسانی ۱۱ نوامبر ۲۰۲۶، خوانده‌شده از API در ۲۸ نوامبر ۲۰۲۶: <a class="en" href="https://data.worldbank.org/indicator/ER.H2O.FWTL.ZS?locations=IR" rel="noopener">data.worldbank.org/indicator/ER.H2O.FWTL.ZS</a> <span class="tag2">فایل داده خوانده شد</span> <span class="tag2">ردهٔ C: برآورد</span><br>شاخص‌ها: <span class="en">ER.H2O.INTR.K3, ER.H2O.FWTL.K3, ER.H2O.FWTL.ZS, ER.H2O.FWAG.ZS, ER.H2O.FWDM.ZS, ER.H2O.FWIN.ZS, SP.POP.TOTL</span>. منبع اولیهٔ شاخص‌های آب، پایگاه <span class="en">FAO AQUASTAT</span> و منبع اولیهٔ جمعیت، <span class="en">UN World Population Prospects</span> است. <span class="tag2">منبع اولیه خوانده نشده</span></li>
+<li><b>چرا ردهٔ C:</b> در این پایگاه، برداشت آب ایران از ۲۰۰۴ تا ۲۰۲۲ یک عدد ثابت است (۹۲٫۹۵ میلیارد متر مکعب) و پیش از آن با خط راست پر شده است. منابع تجدیدپذیر داخلی هم برای همهٔ سال‌ها یک عدد ثابت است (۱۲۸٫۵). پس این‌ها برآوردهای بلندمدت‌اند، نه اندازه‌گیری سال‌به‌سال، و اثر خشکسالی‌ها یا تغییر اقلیم را نشان نمی‌دهند.</li>
+<li><b>جای خالی:</b> برآورد تازه و رسمی از برداشت آب ایران پس از ۲۰۰۴ (مثلاً از وزارت نیرو یا شرکت مدیریت منابع آب) و دادهٔ افت آب‌های زیرزمینی به تفکیک دشت. اگر کسی این داده را با سال و روش دارد، این دفتر با آن به‌روز می‌شود.</li>
+<li><b>محاسبه‌ها</b> (سهم هر نفر، اثر کاهش در هر بخش) در همین صفحه از روی داده انجام می‌شوند.</li>
+</ul>
+</section>
+<div class="note foot" role="note">این دفتر پیش‌نویس است و هنوز بازبینی کارشناس آب نشده. عددها تصویر کلی می‌دهند و جای تصمیم‌گیری کارشناسی را نمی‌گیرند.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · دفتر میدانی آب · <a href="journals.html">همهٔ دفترهای میدانی</a></div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script src="../../core/tools/journal-kit.js"></script>
+<script src="water-journal.data.js"></script>
+<script>
+(function(){
+const K=LabKit, fa=K.fa, J=JournalKit, D=window.WJ;
+const POP=Object.fromEntries(D.pop), per=y=>D.renew*1e9/POP[y];
+const P=D.peers, IR=P.IRN;
+
+/* ---------- برگ ۱: سهم هر نفر ---------- */
+function share(pn,out){
+  let shown=false;
+  pn.innerHTML=`<p style="margin:0">بارش روی خاک ایران هر سال به‌طور میانگین حدود <b>${fa(D.renew,1)} میلیارد متر مکعب</b> آب شیرین تجدیدپذیر در رودها و سفره‌های زیرزمینی می‌سازد. در سال ۱۹۶۱ ایران ${fa(POP[1961]/1e6,1)} میلیون نفر جمعیت داشت و سهم هر نفر <b>${fa(Math.round(per(1961)/10)*10)} متر مکعب</b> در سال می‌شد.</p>
+<label class="field">در سال ۲۰۲۲، با ${fa(POP[2022]/1e6,1)} میلیون نفر، سهم هر نفر چقدر است؟ حدس شما: <b id="gv"></b><input type="range" id="g" min="0" max="6000" step="50" value="3000"></label>
+<div class="rowb"><button type="button" class="btn" id="show">حساب کن</button></div>`;
+  const g=pn.querySelector("#g");
+  const drops=v=>{const n=Math.round(v/100), full=Math.round(per(1961)/100); let s=""; for(let i=0;i<full;i++) s+=`<i class="${i<n?"":"g"}"></i>`; return `<div class="drops" role="img" aria-label="${fa(n)} قطره از ${fa(full)}">${s}</div>`};
+  function draw(y){
+    if(!shown){ out.innerHTML=`<div class="chartbox"><p class="step">هر قطره = ۱۰۰ متر مکعب برای یک نفر در یک سال · حدس شما برای ۲۰۲۲</p>${drops(+g.value)}</div>`; return; }
+    const v=per(y);
+    out.innerHTML=`<div class="res"><h3>${fa(Math.round(per(2022)/10)*10)} متر مکعب برای هر نفر در ۲۰۲۲</h3>
+<p>حدس شما ${fa(+g.value)} بود. مقدار آب همان است، اما بین چهار برابر آدم تقسیم می‌شود؛ سهم هر نفر به حدود یک‌چهارم رسیده است.</p>
+<label class="field">سال را جابه‌جا کنید: <b>${fa(y).replace("٬","")}</b> · جمعیت ${fa(POP[y]/1e6,1)} میلیون · سهم هر نفر <b>${fa(Math.round(v/10)*10)}</b> متر مکعب<input type="range" id="yr" min="1961" max="2022" step="1" value="${y}"></label>
+<p class="step">هر قطره = ۱۰۰ متر مکعب برای یک نفر در یک سال</p>${drops(v)}
+<p style="margin-top:12px"><b>احتیاط:</b> این عدد میانگین بلندمدت کل کشور است. نمی‌گوید در یک سال خشک یا در یک استان کم‌آب چه خبر است، آبی را که از بیرون مرز می‌آید نمی‌شمارد، و «سهم» به معنای آبی نیست که هر نفر خودش مصرف می‌کند؛ کشاورزی و صنعت هم از همین سهم برمی‌دارند. در این پایگاه مقدار ${fa(D.renew,1)} برای همهٔ سال‌ها ثابت گرفته شده است.</p>
+${J.next("share")}</div>`;
+    const yr=out.querySelector("#yr"); yr.addEventListener("input",()=>{draw(+yr.value); out.querySelector("#yr").focus()});
+  }
+  const u=()=>{pn.querySelector("#gv").textContent=fa(+g.value)+" متر مکعب"; if(!shown) draw()};
+  g.addEventListener("input",u); u();
+  pn.querySelector("#show").onclick=e=>{shown=true; e.target.remove(); g.disabled=true; draw(2022); J.finish("share")};
+}
+
+/* ---------- برگ ۲: حساب بانکی ---------- */
+function account(pn,out){
+  let shown=false;
+  pn.innerHTML=`<p style="margin:0">ورودی سالانه را ۱۰۰ بگیرید. اگر هر سال کمتر از ۱۰۰ بردارید، حساب سر جایش می‌ماند. هرچه برداشت به ۱۰۰ نزدیک‌تر شود، برای رودها، تالاب‌ها و سال‌های خشک چیزی نمی‌ماند؛ و بیشتر از ۱۰۰ یعنی خرج کردن از پس‌انداز، که برای آب همان سفره‌های زیرزمینی کهن است.</p>
+<label class="field">ایران هر سال چند درصد از آب تجدیدپذیر داخلی‌اش را برمی‌دارد؟ حدس شما: <b id="gv"></b><input type="range" id="g" min="0" max="150" step="1" value="40"></label>
+<div class="tank" aria-hidden="true"><b id="tk"></b></div>
+<div class="rowb"><button type="button" class="btn" id="show">داده را نشان بده</button></div>`;
+  const g=pn.querySelector("#g"), tk=pn.querySelector("#tk");
+  function draw(){
+    tk.style.width=Math.min(100,+g.value/1.5)+"%"; tk.className=+g.value>100?"over":"";
+    if(!shown){out.innerHTML="";return}
+    const W=340,H=210,pl=34,pb=30,X=y=>pl+(y-1975)/(2022-1975)*(W-pl-10),Y=v=>H-pb-v/100*(H-pb-14);
+    let s=""; for(let t=0;t<=100;t+=25) s+=`<line x1="${pl}" x2="${W-6}" y1="${Y(t)}" y2="${Y(t)}" stroke="${t===100?K.css("--err"):K.css("--line")}" ${t===100?'stroke-dasharray="3 3"':""}/><text x="${pl-5}" y="${Y(t)+3.5}" font-size="10" text-anchor="end" fill="${K.css("--ink-2")}">${fa(t)}٪</text>`;
+    [1975,1990,2004,2022].forEach(y=>{s+=`<text x="${X(y)}" y="${H-pb+14}" font-size="10" text-anchor="middle" fill="${K.css("--ink-2")}">${fa(y).replace("٬","")}</text>`});
+    const a=D.wp.filter(p=>p[0]<=2004), b=D.wp.filter(p=>p[0]>=2004), pts=l=>l.map(p=>X(p[0]).toFixed(1)+","+Y(p[1]).toFixed(1)).join(" ");
+    s+=`<polyline fill="none" stroke="${K.css("--lab")}" stroke-width="2.6" points="${pts(a)}"/><polyline fill="none" stroke="${K.css("--lab")}" stroke-width="2.6" stroke-dasharray="5 4" points="${pts(b)}"/>`;
+    s+=`<text x="${X(2013)}" y="${Y(72.3)-7}" font-size="9.5" text-anchor="middle" fill="${K.css("--ink-2")}" direction="rtl">همان برآورد، تکرارشده</text>`;
+    s+=`<line x1="${pl}" x2="${W-6}" y1="${Y(P.TUR.pct)}" y2="${Y(P.TUR.pct)}" stroke="${K.css("--y78")}" stroke-width="1.6"/><text x="${W-8}" y="${Y(P.TUR.pct)-4}" font-size="9.5" text-anchor="start" fill="${K.css("--y78")}" direction="rtl">ترکیه ۲۰۲۲: ${fa(P.TUR.pct,0)}٪</text>`;
+    s+=`<line x1="${pl}" x2="${W-6}" y1="${Y(P.WLD.pct)}" y2="${Y(P.WLD.pct)}" stroke="${K.css("--ink-3")}" stroke-width="1.6"/><text x="${W-8}" y="${Y(P.WLD.pct)-4}" font-size="9.5" text-anchor="start" fill="${K.css("--ink-2")}" direction="rtl">کل جهان ۲۰۲۲: ${fa(P.WLD.pct,0)}٪</text>`;
+    out.innerHTML=`<div class="chartbox"><svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="برداشت آب ایران به درصد منابع تجدیدپذیر داخلی، ۱۹۷۵ تا ۲۰۲۲">${s}</svg></div>
+<div class="key"><span><i style="background:var(--lab)"></i>ایران؛ خط‌چین یعنی برآورد تازه‌ای ثبت نشده</span></div>
+<div class="res"><h3>حدود ${fa(IR.pct,0)} درصد (حدس شما: ${fa(+g.value)})</h3>
+<p>بر پایهٔ این پایگاه، برداشت ایران از ${fa(D.wp[0][1],0)} درصد در ۱۹۷۵ به ${fa(IR.pct,0)} درصد رسیده است: ${fa(IR.k,0)} میلیارد متر مکعب برداشت از ${fa(D.renew,1)} میلیارد ورودی. در همان پایگاه، ترکیه ${fa(P.TUR.pct,0)} درصد و کل جهان ${fa(P.WLD.pct,0)} درصد است.</p>
+<p><b>یک عدد عجیب برای فهم تعریف:</b> همین شاخص برای مصر ${fa(P.EGY.pct,0)} درصد است. خطا نیست: این شاخص فقط آبی را می‌شمارد که از بارش درون خود کشور می‌آید (برای مصر ${fa(P.EGY.renew,0)} میلیارد متر مکعب) و تقریباً همهٔ آب مصر با رود نیل از بیرون مرزهایش می‌رسد. پس پیش از مقایسهٔ دو کشور باید دید شاخص چه چیزی را می‌شمارد.</p>
+<p><b>احتیاط:</b> عدد ایران از ۲۰۰۴ به بعد در این پایگاه عوض نشده، پس وضع امروز را نشان نمی‌دهد. میانگین کشوری هم تفاوت دشت‌ها را پنهان می‌کند: ممکن است در یک دشت برداشت بسیار بیشتر از ورودی باشد و در جای دیگر کمتر. به نوشتهٔ بانک جهانی، برداشت وقتی از ۱۰۰ درصد می‌گذرد که از سفره‌های تجدیدناپذیر، آب‌شیرین‌کن یا بازچرخانی آب استفادهٔ زیادی شود.</p>
+${K.lk(["soc:feedback-loops-and-leverage-points","soc:collective-action"])}${J.next("account")}</div>`;
+  }
+  const u=()=>{pn.querySelector("#gv").textContent=fa(+g.value)+" درصد"; draw()};
+  g.addEventListener("input",u); u();
+  pn.querySelector("#show").onclick=e=>{shown=true; e.target.remove(); g.disabled=true; draw(); J.finish("account")};
+}
+
+/* ---------- برگ ۳: آب کجا می‌رود ---------- */
+function sectors(pn,out){
+  let shown=false; const cut={ag:0,dm:0,in:0};
+  pn.innerHTML=`<p style="margin:0">آبی که برداشته می‌شود سه جا می‌رود: کشاورزی (آبیاری و دام)، مصرف خانگی و شهری، و صنعت.</p>
+<label class="field">از هر ۱۰۰ لیتر آبی که در ایران برداشت می‌شود، چند لیتر به کشاورزی می‌رسد؟ حدس شما: <b id="gv"></b><input type="range" id="g" min="0" max="100" step="1" value="50"></label>
+<div class="rowb"><button type="button" class="btn" id="show">داده را نشان بده</button></div>`;
+  const g=pn.querySelector("#g");
+  const C={ag:"--lab",dm:"--y78",in:"--ink-3"}, N={ag:"کشاورزی",dm:"خانگی و شهری",in:"صنعت"};
+  const bar=p=>`<div class="segrow"><span>${p.name}</span><div class="seg" role="img" aria-label="${p.name}: کشاورزی ${fa(p.ag,0)}، خانگی ${fa(p.dm,0)}، صنعت ${fa(p.in,0)} درصد">${["ag","dm","in"].map(k=>`<i style="width:${p[k]}%;background:var(${C[k]})"></i>`).join("")}</div></div>`;
+  function draw(){
+    if(!shown){out.innerHTML="";return}
+    const now=["ag","dm","in"].reduce((s,k)=>s+IR.k*IR[k]/100*(1-cut[k]/100),0), pct=now/D.renew*100;
+    out.innerHTML=`<div class="res"><h3>حدود ${fa(IR.ag,0)} لیتر از هر ۱۰۰ لیتر (حدس شما: ${fa(+g.value)})</h3>
+${[IR,P.TUR,P.EGY,P.WLD].map(bar).join("")}
+<div class="key">${["ag","dm","in"].map(k=>`<span><i style="background:var(${C[k]})"></i>${N[k]}</span>`).join("")}</div>
+<p style="margin-top:12px">در ایران ${fa(IR.ag,0)} درصد برداشت به کشاورزی، ${fa(IR.dm,0)} درصد به مصرف خانگی و شهری و ${fa(IR.in,0)} درصد به صنعت می‌رسد. در کل جهان سهم کشاورزی ${fa(P.WLD.ag,0)} درصد است.</p>
+<h3 style="margin-top:14px">خودتان حساب کنید</h3>
+<p>فرض کنید برداشت هر بخش را چند درصد کم کنیم. کل برداشت چقدر پایین می‌آید؟</p>
+<div class="row2">${["ag","dm","in"].map(k=>`<label class="field">${N[k]}: <b>${fa(cut[k])} درصد کمتر</b><input type="range" data-c="${k}" min="0" max="50" step="5" value="${cut[k]}"></label>`).join("")}</div>
+<div class="tank" aria-hidden="true"><b style="width:${Math.min(100,pct)}%"></b></div>
+<p>برداشت: <b>${fa(now,1)} میلیارد متر مکعب</b>، یعنی <b>${fa(pct,0)} درصد</b> از ورودی سالانه (الان ${fa(IR.pct,0)} درصد).</p>
+<p><b>چه می‌بینید؟</b> ۲۰ درصد صرفه‌جویی در همهٔ خانه‌ها کل برداشت را حدود ${fa(IR.dm*.2,1)} درصد کم می‌کند؛ ۲۰ درصد در کشاورزی حدود ${fa(IR.ag*.2,0)} درصد. این حساب نمی‌گوید چه کاری درست است: کم‌کردن آب کشاورزی به غذا و معاش کشاورزان گره خورده، و آب آشامیدنی شهرها با همین سهم کوچک هم می‌تواند در تنگنا باشد. فقط نشان می‌دهد عددهای بزرگ کجا هستند. اینکه چه کسی، کجا و چقدر کمتر بردارد، مسئلهٔ همکاری است: هر کس اگر تنها کم کند ضرر می‌کند، مگر بقیه هم کم کنند.</p>
+<span class="src">سهم بخش‌ها هم مثل کل برداشت در این پایگاه برآوردی است و سال‌به‌سال اندازه‌گیری نشده.</span>
+${K.lk(["soc:collective-action","soc:repeated-games-cooperation","soc:feedback-loops-and-leverage-points"])}<div class="links"><a href="../../soc/tools/cooperation.html">ابزار همکاری در ویکی جامعه</a></div>${J.next("sectors")}</div>`;
+    out.querySelectorAll("[data-c]").forEach(r=>r.addEventListener("change",()=>{cut[r.dataset.c]=+r.value; draw(); J.finish("sectors")}));
+  }
+  const u=()=>{pn.querySelector("#gv").textContent=fa(+g.value)+" لیتر"};
+  g.addEventListener("input",u); u();
+  pn.querySelector("#show").onclick=e=>{shown=true; e.target.remove(); g.disabled=true; draw()};
+}
+
+/* ---------- برگ ۴: آزمون تصویری ---------- */
+function tank(p){return `<svg viewBox="0 0 120 40" aria-hidden="true"><rect x="6" y="12" width="108" height="16" rx="5" fill="none" stroke="${K.css("--line-strong")}"/><rect x="6" y="12" width="${Math.min(108,p*1.08)}" height="16" rx="5" fill="${p>100?K.css("--err"):K.css("--lab")}"/></svg>`}
+function seg(a,d,i){return `<svg viewBox="0 0 120 40" aria-hidden="true"><rect x="6" y="12" width="${a*1.08}" height="16" fill="${K.css("--lab")}"/><rect x="${6+a*1.08}" y="12" width="${d*1.08}" height="16" fill="${K.css("--y78")}"/><rect x="${6+(a+d)*1.08}" y="12" width="${i*1.08}" height="16" fill="${K.css("--ink-3")}"/></svg>`}
+function check(pn,out){
+  J.quiz([
+    ["مقدار آب تجدیدپذیر یک کشور ثابت مانده و جمعیتش چهار برابر شده است. سهم هر نفر چه شده؟",[["","تغییری نکرده، چون آب همان است."],["","حدود یک‌چهارم شده است."],["","چهار برابر شده است."]],1,"سهم هر نفر = آب ÷ جمعیت. آب ثابت و جمعیت چهار برابر یعنی سهم یک‌چهارم (برگ ۱)."],
+    ["نوار پر یعنی برداشت سالانه نسبت به ورودی سالانه. کدام حساب از پس‌انداز خرج می‌کند؟",[[tank(28),"الف"],[tank(72),"ب"],[tank(118),"پ"]],2,"در «پ» برداشت از ورودی سالانه بیشتر است؛ بقیه‌اش باید از ذخیره‌ای بیاید که هر سال پر نمی‌شود (برگ ۲)."],
+    ["کدام نوار به تقسیم برداشت آب در ایران نزدیک‌تر است؟ (سبزآبی: کشاورزی)",[[seg(50,30,20),"الف"],[seg(92,7,1),"ب"],[seg(20,60,20),"پ"]],1,"حدود ۹۲ درصد به کشاورزی می‌رسد (برگ ۳)."],
+    ["شاخص برداشت برای مصر ۷٬۷۵۰ درصد است. درست‌ترین برداشت کدام است؟",[["","مصر هفتاد و چند برابر ایران آب مصرف می‌کند."],["","عدد غلط است و باید کنارش گذاشت."],["","شاخص فقط آب داخلی را می‌شمارد؛ پیش از مقایسه باید تعریف شاخص را خواند."]],2,"آب مصر از بیرون مرزها می‌آید و در مخرج این شاخص نیست. هر عدد را باید با تعریف و محدودیتش خواند."]
+  ],`<p>سه عدد پایه را ساختید: سهم هر نفر، نسبت برداشت به ورودی، و جای خرج شدن آب. قدم بعد دانستن این است که این عددها در دشت و شهر خودتان چقدرند و چه کسانی درباره‌شان تصمیم می‌گیرند.</p>${K.lk(["soc:collective-action","soc:feedback-loops-and-leverage-points"])}`)(pn,out);
+}
+
+J.start({id:"ab",wiki:"atlas",first:"share",labels:{"soc:collective-action":"مسئلهٔ کنش جمعی و سواری مجانی","soc:repeated-games-cooperation":"بازی تکراری و پیدایش همکاری","soc:feedback-loops-and-leverage-points":"حلقه‌های بازخورد و نقطه‌های اهرم"},
+  exps:{
+    share:["۱ · سهم هر نفر","برگ ۱: سهم هر نفر از آب چقدر است؟","اول حدس بزنید، بعد سال را جابه‌جا کنید و ببینید قطره‌ها چطور کم می‌شوند.",share],
+    account:["۲ · حساب آب","برگ ۲: چقدر از ورودی را برمی‌داریم؟","آب مثل حسابی است که هر سال مقدار ثابتی به آن واریز می‌شود. اول حدس بزنید.",account],
+    sectors:["۳ · آب کجا می‌رود","برگ ۳: برداشت در کدام بخش خرج می‌شود؟","اول حدس بزنید. بعد خودتان برداشت هر بخش را کم کنید و اثرش را ببینید.",sectors],
+    check:["۴ · آزمون تصویری","برگ ۴: عددهای آب را چطور بخوانیم؟","چهار پرسش کوتاه. نوارهای این برگ فقط برای پرسش کشیده شده‌اند.",check]
+  }});
+})();
+</script>
+</body>
+</html>

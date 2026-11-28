@@ -161,7 +161,7 @@ function select(pn,out){
   const g=pn.querySelector("#g");
   function draw(){
     const rows=[{vals:F.f76,color:K.css("--lab"),op:.8,label:`۱۹۷۶ · ${fa(F.f76.length)} پرنده`,marks:[{x:M76,label:"میانگین "+fa(M76,2),color:K.css("--ink")}].concat(shown?[]:[{x:+g.value,label:"حدس شما",color:K.css("--y78"),dash:1}])}];
-    if(shown) rows.push({vals:F.f78,color:K.css("--y78"),label:`۱۹۷۸ · ${fa(F.f78.length)} پرنده`,marks:[{x:M78,label:"میانگین "+fa(M78,2),color:K.css("--ink")},{x:+g.value,label:"حدس شما",color:K.css("--y78"),dash:1}]});
+    if(shown) rows.push({vals:F.f78,color:K.css("--y78"),label:`۱۹۷۸ · ${fa(F.f78.length)} پرنده`,marks:[{x:M78,label:"میانگین "+fa(M78,2),color:K.css("--ink")},{x:+g.value,label:"حدس شما",color:K.css("--y78"),dash:1,dx:+g.value<M78?-24:24}]});
     let h=`<div class="chartbox">${dots(rows,{min:6,max:14.2,r:1.7,st:3.6,gap:34,axis:"عمق منقار (میلی‌متر) · هر نقطه یک پرنده",alt:"نمودار نقطه‌ای عمق منقار سهره‌ها در ۱۹۷۶ و ۱۹۷۸"})}</div>`;
     if(shown){
       h+=`<div class="res"><h3>میانگین ${fa(M78-M76,2)} میلی‌متر بالا رفت</h3><p>از ${fa(M76,2)} به ${fa(M78,2)} میلی‌متر. به نمودار نگاه کنید: منقارهای کم‌عمق در ۱۹۷۸ کم‌یاب شده‌اند. به روایت پیتر گرنت (۱۹۸۶)، در خشکسالی سهره‌های کوچک‌تر با منقار کم‌زورتر بیشتر مردند و جوجه‌های بازماندگان هم بزرگ‌تر و منقاربزرگ‌تر بودند.</p>

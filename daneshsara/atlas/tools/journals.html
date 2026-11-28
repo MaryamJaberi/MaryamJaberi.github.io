@@ -15,6 +15,9 @@ body{background:var(--paper);color:var(--ink)}
 .jl article{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:8px;align-content:start}
 .jl h3{margin:0;font-size:1.15rem} .jl p{margin:0;color:var(--ink-2);line-height:1.9;font-size:.95rem}
 .st{font-size:.78rem;padding:2px 10px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2);justify-self:start}
+.st.q{border-color:var(--warn);color:var(--warn)}
+.st.no{border-style:dashed}
+.cv{line-height:2.4;margin:0 0 6px} .cv .st{display:inline-block}
 .st.ok{border-color:var(--ok);color:var(--ok)}
 .jl ul{margin:0;padding-inline-start:18px;font-size:.88rem;color:var(--ink-2);line-height:1.9}
 ol.rc{line-height:2;color:var(--ink-2);max-width:72ch}
@@ -27,16 +30,18 @@ ol.rc{line-height:2;color:var(--ink-2);max-width:72ch}
 <p class="what">هر دفتر یک موضوع علمی را به چند درس دست‌به‌کار تبدیل می‌کند: اول حدس می‌زنید، بعد خودتان اندازه می‌گیرید یا دادهٔ واقعی را می‌بینید، و بعد می‌سنجید که از آن داده چه می‌شود فهمید و چه نمی‌شود.</p>
 <h2>آمادهٔ استفاده</h2><div class="jl" id="done"></div>
 <h2>در صف ساخت</h2><div class="jl" id="queue"></div>
+<h2>کدام رشته دفتر دارد</h2><p class="what">هر رشته‌ای که کشور برای ساخته‌شدن لازم دارد باید دست‌کم یک دفتر داشته باشد. خانهٔ «خالی» یعنی هنوز حتی در صف هم نیست.</p><div id="cov"></div>
 <h2>هر دفتر چطور ساخته می‌شود</h2><ol class="rc" id="rc"></ol>
 </main>
 <footer class="foot"><div class="wrap">دانش‌سرا · دفترهای میدانی</div></footer>
 <script>
-const W={psy:"روان",soc:"جامعه",tabar:"تبار و ژنتیک",phil:"فلسفه",tarikh:"تاریخ",zaban:"زبان"};
+const W={atlas:"میان‌رشته‌ای",psy:"روان",soc:"جامعه",tabar:"تبار و ژنتیک",phil:"فلسفه",tarikh:"تاریخ",zaban:"زبان"};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 fetch("../../data/journals.json").then(r=>r.json()).then(d=>{
-  const card=j=>`<article><span class="st ${j.href?"ok":""}">ویکی ${esc(W[j.wiki]||j.wiki)} · ${esc(j.status)}</span><h3>${esc(j.title)}</h3><p>${esc(j.what)}</p>${j.href?`<a class="btn" href="../../${esc(j.href)}">باز کردن</a>`:""}${j.href&&j.next?`<p>برگ‌ها و کارهای بعدی:</p><ul>${j.next.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:""}</article>`;
+  const card=j=>`<article><span class="st ${j.href?"ok":""}">ویکی ${esc(W[j.wiki]||j.wiki)} · ${esc(j.status)}</span><h3>${esc(j.title)}</h3><p>${esc(j.what)}</p>${j.serves?`<p><b>به کار چه کسی می‌آید:</b> ${esc(j.serves)}</p>`:""}${j.href?`<a class="btn" href="../../${esc(j.href)}">باز کردن</a>`:""}${j.href&&j.next?`<p>برگ‌ها و کارهای بعدی:</p><ul>${j.next.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:""}</article>`;
   document.getElementById("done").innerHTML=d.journals.filter(j=>j.href).map(card).join("");
   document.getElementById("queue").innerHTML=d.journals.filter(j=>!j.href).map(card).join("");
+  document.getElementById("cov").innerHTML=d.fields.map(g=>`<p class="cv"><b>${esc(g[0])}:</b> ${g[1].map(f=>{const js=d.journals.filter(j=>j.field===f[0]); const st=js.some(j=>j.href)?"ok":js.length?"q":"no"; return `<span class="st ${st}">${esc(f[1])} · ${st==="ok"?"آماده":st==="q"?"در صف":"خالی"}</span>`}).join(" ")}</p>`).join("");
   document.getElementById("rc").innerHTML=d.recipe.map(r=>`<li>${esc(r)}</li>`).join("");
 }).catch(()=>{document.getElementById("done").textContent="فهرست بار نشد."});
 </script>
