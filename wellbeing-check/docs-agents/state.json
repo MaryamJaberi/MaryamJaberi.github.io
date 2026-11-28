@@ -24,12 +24,12 @@
     "project_id": "e355ed72-1b36-4280-b4b6-cd030b353b97",
     "tab_file_id": "7af43e3f-d0a8",
     "body_node_id": "54eeae04-789f",
-    "version": "1.5",
-    "last_rev": 100,
+    "version": "2.0",
+    "last_rev": 131,
     "widgets": {
       "recommended_path_revenue": "d9ac61b6-436d"
     },
-    "next_hypothesis_id": "H20",
+    "next_hypothesis_id": "H25",
     "sections": {
       "8.4": "NL registration checklist",
       "8.5": "KVK + government rules",
@@ -37,11 +37,11 @@
     }
   },
   "assumptions": {
-    "A_project_avg_eur": 5000,
-    "A_direct_cost_eur": 1200,
-    "D_annual_eur": 7500,
-    "D_direct_cost_eur": 2400,
-    "C_per_partner_org_eur": 1000,
+    "A_project_avg_eur": 7950,
+    "A_direct_cost_eur": 1650,
+    "D_annual_eur": 10500,
+    "D_direct_cost_eur": 2700,
+    "C_per_partner_org_eur": 1200,
     "B_per_employee_year_eur": 15,
     "B_min_eur": 900,
     "B_avg_eur": 1800,
@@ -52,20 +52,49 @@
       16000
     ],
     "recommended_path_revenue_k": {
-      "y1": 35,
-      "y2": 122.5,
-      "y3": 298
+      "y1": 34.35,
+      "y2": 149.2,
+      "y3": 270.2,
+      "by_part": {
+        "A": [
+          23.85,
+          47.7,
+          47.7
+        ],
+        "D": [
+          10.5,
+          63.0,
+          126.0
+        ],
+        "C": [
+          0,
+          12.0,
+          48.0
+        ],
+        "I": [
+          0,
+          19.0,
+          28.5
+        ],
+        "G": [
+          0,
+          7.5,
+          20.0
+        ]
+      }
     },
     "G": {
       "addon_per_year": 2500,
-      "manager_workshop": 1250
+      "manager_workshop": 1250,
+      "note": "manager course moved into the cycle; performance-conversation workshop optional, not in projection"
     },
     "markets": {
       "NL": "core",
       "EU": "via partners (C) from year 3",
-      "IR": "social impact, zero revenue under sanctions",
+      "IR": "social impact, zero revenue under sanctions; Persian-language market via partner (e.g. Rah-e Roshd, in talks) only after written sanctions-law opinion",
       "NL_250plus": "reachable via department reports; ~3,700 orgs x 3,000 = ~11.1M EUR, outside projection",
-      "NL_agency_workers": "CBS 2024: 52.4% foreign-born; RO 31,700 + UA 19,120 + BG 15,900 = 66,720 not covered by current 9 languages; not converted to EUR"
+      "NL_agency_workers": "CBS 2024: 52.4% foreign-born; RO 31,700 + UA 19,120 + BG 15,900 = 66,720 not covered by current 9 languages; not converted to EUR",
+      "multilingual_niche": "logistics, greenhouse, care, horeca (Rotterdam); 9 languages + same-language facilitator; buyer count not assumed"
     },
     "H_bundles": {
       "pols": "B 900-1800",
@@ -116,7 +145,7 @@
       "in_projection": false,
       "sensitivity_y1_if_all_A_are_site_packages_k": 32.8,
       "hypothesis": "H15",
-      "status": "conditional on PSA positioning (review 2026-11-26)"
+      "status": "superseded by A change cycle (v2.0); kept for history"
     },
     "new_cost_items_eur": {
       "translations_ro_uk_bg": [
@@ -167,13 +196,13 @@
     },
     "positioning_recommended": {
       "text": "RI&E-ready PSA inventory + 90-day team work-redesign cycle; provable anonymity is the foundation, not the headline",
-      "status": "research recommendation; Maryam decides. CONDITIONAL (review 2026-11-26): not deliverable until a licensed working-conditions instrument (e.g. COPSOQ III short + BAT + recovery scale) is added; until then: resources check as supplementary RI&E input",
+      "status": "SUPERSEDED by vision v2 (28 Nov 2026): 'From survey to change'. RI&E is a conditional use, not the headline.",
       "first_markets": [
         "horeca",
         "care",
         "multilingual logistics Rotterdam"
       ],
-      "inconsistency": "site hero (knowledge/tech firms, psychological resources) vs plan (horeca/care/logistics, PSA + 90-day) vs consolidated file (ethical measurement layer); reviewer: pick one"
+      "inconsistency": "resolved in v2.0: one positioning"
     },
     "channels": {
       "order": [
@@ -286,6 +315,203 @@
         "H16": "shift/agency workers >=50% response"
       },
       "recommended_path_changed": false
+    },
+    "vision": {
+      "source": "vision brief v2, 28 Nov 2026 (Maryam's request to rewrite all docs)",
+      "positioning": "From survey to change; change partner, not a survey tool",
+      "offer": "6-month change cycle A->B->path->remeasure",
+      "kpi_layers": [
+        "process",
+        "experience",
+        "business (no causality claim, no ROI promise)"
+      ],
+      "ri_e": "conditional only: work-conditions questionnaire (e.g. QEEW 2.0) + A&O expert; Maryam decides"
+    },
+    "A_cycle": {
+      "base_upto100_eur": 3950,
+      "base_101_250_eur": 4950,
+      "deptB_workshop_eur": 750,
+      "deptB_workshop_cost_eur": 300,
+      "manager_course_eur": 1250,
+      "manager_course_cost_eur": 600,
+      "depts_avg": 3,
+      "price_upto100_eur": 7450,
+      "price_101_250_eur": 8450,
+      "avg_eur": 7950,
+      "direct_cost_eur": 1650,
+      "gross_eur": 6300,
+      "margin_pct": 79,
+      "founder_hours": [
+        60,
+        80
+      ]
+    },
+    "D_detail": {
+      "contents": "2 cycles, pulse, 6 state-B workshops, 1 manager course, impact dashboard",
+      "list_eur": 14650,
+      "discount_pct": 28,
+      "gross_eur": 7800,
+      "margin_pct": 74,
+      "founder_hours": 100
+    },
+    "I_change_moment": {
+      "price_eur": 9500,
+      "direct_cost_eur": 1800,
+      "gross_eur": 7700,
+      "margin_pct": 81,
+      "founder_hours": 90,
+      "standalone_counts": [
+        0,
+        3,
+        6
+      ]
+    },
+    "paid_pilot_one_department_eur": 1500,
+    "path_counts": {
+      "A": [
+        3,
+        6,
+        6
+      ],
+      "D": [
+        1,
+        6,
+        12
+      ],
+      "C_orgs": [
+        0,
+        10,
+        40
+      ],
+      "I": [
+        0,
+        2,
+        3
+      ],
+      "G": [
+        0,
+        3,
+        8
+      ],
+      "B": "removed from recommended path"
+    },
+    "recommended_path_gross_eur": [
+      26700,
+      118600,
+      220100
+    ],
+    "recommended_path_direct_eur": [
+      7650,
+      30600,
+      50100
+    ],
+    "sessions_per_year": [
+      19,
+      74,
+      120
+    ],
+    "new_cost_items_v2_eur": {
+      "workshop_kit_and_manager_course_content": [
+        1500,
+        3000
+      ],
+      "comparison_dashboard_pulse_build": [
+        3000,
+        4500
+      ],
+      "work_conditions_questionnaire_and_AO": "unknown, unbudgeted, conditional"
+    },
+    "fixed_costs_year1_all_items_eur": [
+      20900,
+      34000
+    ],
+    "break_even_v2": {
+      "mid_eur": {
+        "base": 13500,
+        "with_translation_audit": 21450,
+        "all": 27450
+      },
+      "D": {
+        "base": 2,
+        "with_translation_audit": 3,
+        "all": 4
+      },
+      "A": {
+        "base": 3,
+        "with_translation_audit": 4,
+        "all": 5
+      },
+      "I_all": 4,
+      "y1_left_eur": {
+        "base": 13200,
+        "with_translation_audit": 5250,
+        "all": -750
+      },
+      "y1_hours": {
+        "60": 280,
+        "70": 310,
+        "80": 340
+      },
+      "eur_per_hour_base": {
+        "60": 47,
+        "70": 43,
+        "80": 39
+      },
+      "eur_per_hour_with_translation_audit": {
+        "60": 19,
+        "70": 17,
+        "80": 15
+      },
+      "sales_cycle_stress": {
+        "3m": {
+          "rev": 27480,
+          "gross": 21360,
+          "base": 7860,
+          "with_translation_audit": -90,
+          "all": -6090
+        },
+        "6m": {
+          "rev": 13740,
+          "gross": 10680,
+          "base": -2820,
+          "with_translation_audit": -10770,
+          "all": -16770
+        }
+      },
+      "paid_pilots_to_cover": {
+        "base": [
+          9,
+          15
+        ],
+        "all": [
+          19,
+          31
+        ]
+      }
+    },
+    "sam_som_v2": {
+      "3000": {
+        "sam_m": 78.3,
+        "som_pct": 0.35
+      },
+      "7950": {
+        "sam_m": 207.5,
+        "som_pct": 0.13
+      },
+      "10500": {
+        "sam_m": 274.1,
+        "som_pct": 0.1
+      }
+    },
+    "standalone_y3_k": {
+      "A": 111.3,
+      "D": 147,
+      "I": 57,
+      "C": 48,
+      "G": 20,
+      "B": 108,
+      "E": 30,
+      "F": 15
     }
   },
   "pending_business_impacts": [
@@ -306,8 +532,8 @@
   "legal_checklist_last_verified": "2026-11-16",
   "ip_register_last_reviewed": "2026-11-16",
   "business_last_handled": {
-    "date": "2026-11-26",
-    "commit": "3648a45",
-    "doc_rev": 100
+    "date": "2026-11-28",
+    "trigger": "vision brief v2 rewrite (Maryam)",
+    "doc_rev": 131
   }
 }
