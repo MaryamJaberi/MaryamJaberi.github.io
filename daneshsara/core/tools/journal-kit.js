@@ -25,8 +25,8 @@ J.dots=function(rows,o){
     const h=Math.max(L.m*st+8,26), base=y+h;
     out+=`<line x1="${pad}" x2="${W-pad}" y1="${base}" y2="${base}" stroke="${K.css("--line-strong")}"/>`;
     out+=L.pts.map(p=>`<circle cx="${X(p[0]).toFixed(1)}" cy="${(base-r-1-p[1]*st).toFixed(1)}" r="${r}" fill="${L.row.color}" fill-opacity="${L.row.op||.85}"/>`).join("");
-    (L.row.marks||[]).forEach(mk=>{out+=`<line x1="${X(mk.x)}" x2="${X(mk.x)}" y1="${y}" y2="${base+4}" stroke="${mk.color}" stroke-width="2" ${mk.dash?'stroke-dasharray="4 3"':""}/><text x="${X(mk.x)}" y="${y-1}" font-size="10" text-anchor="middle" fill="${mk.color}" direction="rtl">${mk.label}</text>`});
-    if(L.row.label) out+=`<text x="${W-pad}" y="${y+10}" font-size="10.5" text-anchor="end" fill="${K.css("--ink-2")}" direction="rtl">${L.row.label}</text>`;
+    (L.row.marks||[]).forEach(mk=>{out+=`<line x1="${X(mk.x)}" x2="${X(mk.x)}" y1="${y}" y2="${base+4}" stroke="${mk.color}" stroke-width="2" ${mk.dash?'stroke-dasharray="4 3"':""}/><text x="${X(mk.x)+(mk.dx||0)}" y="${y-1+(mk.dx?11:0)}" font-size="10" text-anchor="middle" fill="${mk.color}" direction="rtl">${mk.label}</text>`});
+    if(L.row.label) out+=`<text x="${W-pad}" y="${y+10}" font-size="10.5" text-anchor="start" fill="${K.css("--ink-2")}" direction="rtl">${L.row.label}</text>`;
     y=base+ (o.gap||22);
   });
   const ay=y-(o.gap||22);
