@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>دفتر میدانی فرگشت | ویکی تبار و ژنتیک | دانش‌سرا</title>
+<meta name="description" content="سه درس دست‌به‌کار با اندازه‌گیری‌های واقعی: گوناگونی منقار سهره‌ها، رسیدن قد از والدان به فرزندان، و خشکسالی ۱۹۷۷ گالاپاگوس؛ با یک آزمون تصویری.">
+<link rel="stylesheet" href="../../core/design/tokens.css">
+<link rel="stylesheet" href="../../core/tools/tools.css">
+<link rel="stylesheet" href="../../core/tools/lab-kit.css">
+<style>
+:root{--lab:var(--fam-bio);--lab-soft:var(--fam-bio-soft);--y78:var(--accent)}
+.prog{font-size:.9rem;color:var(--ink-2);margin:-8px 0 16px}
+.tabs button.done::after{content:" ✓"}
+.fig{direction:ltr;display:block;width:100%;height:auto;max-width:640px;margin-inline:auto;touch-action:pan-y}
+.fig.cal{max-width:420px;touch-action:none;cursor:ns-resize}
+.step{font-size:.85rem;color:var(--ink-3)}
+.rowb{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rowb .btn{min-height:44px}
+.nud{min-width:44px;min-height:44px;padding:0;border-radius:12px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font:inherit;font-size:1.2rem;cursor:pointer}
+.nud:hover{background:var(--lab-soft);color:var(--ink)}
+.log{margin:0;padding:0;list-style:none;display:grid;gap:4px;font-size:.9rem;color:var(--ink-2)}
+.key{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--ink-2)}
+.key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:5px;vertical-align:middle}
+.opts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.opt{font:inherit;text-align:start;min-height:44px;padding:10px 12px;border-radius:12px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer;display:grid;gap:6px;line-height:1.8}
+.opts.txt{grid-template-columns:1fr}
+.opt:hover{background:var(--surface-subtle);color:var(--ink)}
+.opt.good{border-color:var(--ok);box-shadow:inset 0 0 0 2px var(--ok)}
+.opt.bad{border-color:var(--err);box-shadow:inset 0 0 0 2px var(--err)}
+.opt svg{width:100%;height:auto;direction:ltr}
+.srcs{margin-top:28px}
+.srcs h2{font-size:1.2rem;margin:0 0 8px}
+.srcs li{margin-bottom:8px;line-height:1.9;font-size:.92rem}
+.srcs .en{direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere}
+.tag2{font-size:.75rem;padding:1px 8px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2);white-space:nowrap}
+details.teach{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px;line-height:1.9}
+details.teach summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+<style id="ds-crumbs-css">.ds-crumbs{font:400 .82rem/1.7 inherit;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line,var(--rule,#e5e1d8));background:var(--paper,var(--bg,#faf8f3));color:var(--ink-3,var(--muted,#6b655b));display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}.ds-crumbs a{color:var(--ink-2,var(--muted,#5c574c));text-decoration:none}.ds-crumbs a:hover{text-decoration:underline}.ds-crumbs i{font-style:normal;opacity:.5}.ds-crumbs b{font-weight:600;color:var(--ink,#2b2922)}@media (prefers-color-scheme:dark){.ds-crumbs{border-color:var(--line,var(--rule,#33312c));background:var(--paper,var(--bg,#1b1a17));color:var(--ink-3,#a39d92)}.ds-crumbs a{color:var(--ink-2,#c9c3b8)}.ds-crumbs b{color:var(--ink,#f0ebe2)}}</style><nav class="ds-crumbs" aria-label="مسیر صفحه"><a href="../../index.html">دانش‌سرا</a><i>›</i><a href="../../index.html#layers">لایهٔ علم</a><i>›</i><a href="../../tabar/">ویکی تبار و ژنتیک</a><i>›</i><a href="../../tabar/tools/">ابزارها</a><i>›</i><b>دفتر میدانی فرگشت</b></nav><script src="../../core/nav.js" defer></script>
+<main class="wrap" id="main">
+<h1>دفتر میدانی فرگشت</h1>
+<p class="what">فرگشت با انتخاب طبیعی سه شرط دارد: جانداران یک جمعیت با هم فرق دارند، بخشی از این فرق‌ها به فرزندان می‌رسد، و بعضی فرق‌ها در زنده‌ماندن و فرزندآوری اثر دارند. در این دفتر هر شرط را با اندازه‌گیری‌های واقعی خودتان می‌آزمایید. چیزی ذخیره یا فرستاده نمی‌شود، جز اینکه مرورگر شما یادش می‌ماند کدام برگ را تمام کرده‌اید.</p>
+<p class="prog" id="prog" aria-live="polite"></p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<section id="exp" aria-live="polite"></section>
+
+<details class="teach"><summary>برای معلم و کلاس</summary>
+<p>هر برگ حدود ده دقیقه وقت می‌گیرد و با یک حدس شروع می‌شود؛ بگذارید دانش‌آموزان پیش از دیدن داده حدسشان را بگویند و بنویسند. پرسش‌های پیشنهادی برای گفت‌وگو:</p>
+<ul>
+<li>برگ ۱: چرا اندازهٔ شما با عدد دفتر کمی فرق داشت؟ این خطا برای ۸۹ پرنده چه اثری دارد؟</li>
+<li>برگ ۲: شباهت قد فرزند به والدان فقط از ژن است؟ چه چیز دیگری در یک خانواده مشترک است؟</li>
+<li>برگ ۳: آزمون «۸۹ پرندهٔ تصادفی» چه چیزی را رد می‌کند و چه چیزی را ثابت نمی‌کند؟</li>
+</ul>
+<p>بدفهمی رایج که این دفتر هدف گرفته: «جانور برای سازگار شدن خودش را عوض می‌کند.» در دادهٔ سهره‌ها هیچ پرنده‌ای منقارش را بزرگ نکرد؛ ترکیب جمعیت عوض شد.</p>
+</details>
+
+<section class="srcs" id="sources">
+<h2>منبع‌ها و اعتبار داده</h2>
+<ul>
+<li><b>سهره‌ها:</b> <span class="en">Ramsey, F.L. &amp; Schafer, D.W. (2013). The Statistical Sleuth, 3rd ed. Cengage</span>؛ داده از بستهٔ R «Sleuth3» نسخهٔ 1.0-6 (مجموعه‌های <span class="en">case0201</span> و <span class="en">ex0218</span>). <span class="tag2">فایل داده خوانده شد</span> <span class="tag2">دست‌دوم</span><br>این کتاب داده را از <span class="en">Grant, P.R. (1986). Ecology and Evolution of Darwin's Finches. Princeton University Press</span> گرفته است. <span class="tag2">منبع اصلی خوانده نشده</span><br>کتاب درسی نمی‌گوید ۸۹ پرندهٔ سال ۱۹۷۸ بازماندگان خشکسالی‌اند یا جوجه‌های پس از آن؛ این دفتر هم ادعایی در این باره نمی‌کند.</li>
+<li><b>روایت خشکسالی:</b> برگهٔ دادهٔ «Evolution Library» شبکهٔ PBS، برگرفته از کتاب گرنت (۱۹۸۶): <a class="en" href="https://www.pbs.org/wgbh/evolution/library/01/6/l_016_01.html" rel="noopener">pbs.org/wgbh/evolution/library/01/6/l_016_01.html</a> <span class="tag2">خوانده شد</span> <span class="tag2">دست‌دوم</span></li>
+<li><b>قد خانواده‌ها:</b> دفترچهٔ فرانسیس گالتون، رونویسی Beverley Shipley در ۲۰۰۱ با اجازهٔ یونیورسیتی کالج لندن؛ داده از بستهٔ R «HistData» (مجموعهٔ <span class="en">GaltonFamilies</span>: ۹۳۴ فرزند بزرگسال در ۲۰۵ خانواده). <span class="tag2">فایل داده خوانده شد</span><br><span class="en">Hanley, J.A. (2004). "Transmuting" women into men: Galton's family data on human stature. The American Statistician, 58(3), 237–243.</span> صفحهٔ داده: <a class="en" href="https://jhanley.biostat.mcgill.ca/galton/" rel="noopener">jhanley.biostat.mcgill.ca/galton</a> <span class="tag2">صفحهٔ داده خوانده شد</span><br><span class="en">Galton, F. (1886). Regression towards mediocrity in hereditary stature. doi:10.2307/2841583</span> <span class="tag2">متن مقاله خوانده نشده</span></li>
+<li><b>محاسبه‌ها</b> (میانگین‌ها، شیب خط، آزمون تصادفی) در همین صفحه از روی داده انجام می‌شوند، نه از روی عددهای نقل‌شده.</li>
+</ul>
+</section>
+<div class="note foot" role="note">طرح منقارها از روی عدد ثبت‌شده کشیده شده و عکس پرنده نیست. این دفتر پیش‌نویس است و هنوز بازبینی کارشناس نشده.</div>
+</main>
+<footer class="foot"><div class="wrap">دانش‌سرا · پیش‌نویس · دفتر میدانی فرگشت</div></footer>
+<script src="../../core/tools/lab-kit.js"></script>
+<script src="field-journal.data.js"></script>
+<script>
+(function(){
+const K=LabKit, fa=K.fa, F=window.FJ;
+const mean=a=>a.reduce((s,x)=>s+x,0)/a.length;
+const M76=mean(F.f76), M78=mean(F.f78), MS=mean(F.s76);
+const ORDER=["vary","inherit","select","check"];
+let done={};
+try{done=JSON.parse(localStorage.getItem("ds-fj-done")||"{}")||{}}catch(_){}
+function finish(k){ if(done[k])return; done[k]=1; try{localStorage.setItem("ds-fj-done",JSON.stringify(done))}catch(_){} prog(); }
+function prog(){
+  const n=ORDER.filter(k=>done[k]).length;
+  document.getElementById("prog").textContent=`${fa(n)} از ${fa(ORDER.length)} برگ کامل شده است.`;
+  document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("done",!!done[b.dataset.k]));
+}
+const nextBtn=k=>{const i=ORDER.indexOf(k); return i<ORDER.length-1?`<p><a class="btn" href="#${ORDER[i+1]}">برگ بعد</a></p>`:""};
+
+/* stacked dot plot: one dot = one individual */
+function dots(rows,o){
+  const W=o.w||340, pad=14, min=o.min, max=o.max, r=o.r||2.4, st=o.st||r*2+.4;
+  const X=v=>pad+(v-min)/(max-min)*(W-2*pad);
+  let top=0; const layers=rows.map(row=>{const c={}; let m=0; const pts=row.vals.map(v=>{const b=Math.round(v*10); c[b]=(c[b]||0)+1; m=Math.max(m,c[b]); return [v,c[b]-1]}); top=Math.max(top,m); return {row,pts,m}});
+  let y=8, out="";
+  layers.forEach(L=>{
+    const h=Math.max(L.m*st+8,26), base=y+h;
+    out+=`<line x1="${pad}" x2="${W-pad}" y1="${base}" y2="${base}" stroke="${K.css("--line-strong")}"/>`;
+    out+=L.pts.map(p=>`<circle cx="${X(p[0]).toFixed(1)}" cy="${(base-r-1-p[1]*st).toFixed(1)}" r="${r}" fill="${L.row.color}" fill-opacity="${L.row.op||.85}"/>`).join("");
+    (L.row.marks||[]).forEach(mk=>{out+=`<line x1="${X(mk.x)}" x2="${X(mk.x)}" y1="${y}" y2="${base+4}" stroke="${mk.color}" stroke-width="2" ${mk.dash?'stroke-dasharray="4 3"':""}/><text x="${X(mk.x)}" y="${y-1}" font-size="10" text-anchor="middle" fill="${mk.color}" direction="rtl">${mk.label}</text>`});
+    if(L.row.label) out+=`<text x="${W-pad}" y="${y+10}" font-size="10.5" text-anchor="end" fill="${K.css("--ink-2")}" direction="rtl">${L.row.label}</text>`;
+    y=base+ (o.gap||22);
+  });
+  const ay=y-(o.gap||22);
+  for(let t=Math.ceil(min);t<=max;t+=o.tick||1) out+=`<line x1="${X(t)}" x2="${X(t)}" y1="${ay}" y2="${ay+4}" stroke="${K.css("--ink-3")}"/><text x="${X(t)}" y="${ay+15}" font-size="10" text-anchor="middle" fill="${K.css("--ink-2")}">${fa(t,1)}</text>`;
+  out+=`<text x="${W/2}" y="${ay+29}" font-size="10.5" text-anchor="middle" fill="${K.css("--ink-2")}" direction="rtl">${o.axis}</text>`;
+  return `<svg class="fig" viewBox="0 -6 ${W} ${ay+40}" role="img" aria-label="${o.alt}">${out}</svg>`;
+}
+
+/* ---------- برگ ۱: گوناگونی ---------- */
+const HAND=[9.9,8.5,11.7,9.1,6.2,10.5];
+let L1={i:0,log:[],all:false};
+function vary(pn,out){
+  const S=11, yT=24, xB=150;
+  function draw(){
+    if(L1.i>=HAND.length){ return plot(); }
+    const d=HAND[L1.i]; let gap=L1.gap==null?13:L1.gap;
+    const ink=K.css("--ink"), lab=K.css("--lab"), soft=K.css("--lab-soft"), l3=K.css("--ink-3");
+    const yB=yT+d*S, cy=(yT+yB)/2;
+    let ticks=""; for(let m=0;m<=14;m++) ticks+=`<line x1="${300}" x2="${m%5?306:311}" y1="${yT+m*S}" y2="${yT+m*S}" stroke="${l3}"/>${m%5?"":`<text x="315" y="${yT+m*S+3.5}" font-size="9.5" fill="${l3}">${fa(m)}</text>`}`;
+    pn.innerHTML=`<div class="step">پرندهٔ ${fa(L1.i+1)} از ${fa(HAND.length)} · سهرهٔ زمینی میانه، جزیرهٔ دافنی بزرگ، ۱۹۷۶</div>
+<svg class="fig cal" id="cal" viewBox="0 0 340 196" role="img" aria-label="سر یک سهره از نیم‌رخ با کولیس روی منقار">
+<circle cx="96" cy="${cy}" r="62" fill="${K.css("--surface-subtle")}" stroke="${ink}" stroke-width="1.5"/>
+<circle cx="112" cy="${cy-18}" r="5" fill="${ink}"/>
+<path d="M${xB} ${yT} Q${xB+d*S*.75} ${yT+d*S*.1} ${xB+d*S*1.15} ${yT+d*S*.58} Q${xB+d*S*.6} ${yT+d*S*.86} ${xB} ${yB} Z" fill="${soft}" stroke="${ink}" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="${xB}" x2="${xB+d*S*1.15}" y1="${yT+d*S*.58}" y2="${yT+d*S*.58}" stroke="${ink}" stroke-width="1" opacity=".5"/>
+<line x1="300" x2="300" y1="14" y2="186" stroke="${l3}" stroke-width="3"/>${ticks}
+<line x1="138" x2="300" y1="${yT}" y2="${yT}" stroke="${l3}" stroke-width="3"/>
+<g id="jaw"><line x1="138" x2="300" y1="0" y2="0" stroke="${lab}" stroke-width="3.5"/><rect x="286" y="-7" width="28" height="14" rx="4" fill="${lab}"/></g>
+<text x="230" y="14" font-size="10" text-anchor="middle" fill="${l3}" direction="rtl">فک ثابت</text>
+</svg>
+<label class="field">فک پایین کولیس را بکشید تا به لبهٔ پایین منقار برسد: <b id="rd"></b>
+<input type="range" id="gp" min="4" max="14" step="0.1" value="${gap}" aria-label="دهانهٔ کولیس به میلی‌متر"></label>
+<div class="rowb"><button type="button" class="nud" id="dn" aria-label="یک‌دهم میلی‌متر کمتر">−</button><button type="button" class="nud" id="up" aria-label="یک‌دهم میلی‌متر بیشتر">+</button><button type="button" class="btn" id="rec">ثبت اندازه</button></div>
+<ul class="log" id="lg">${L1.log.map(x=>`<li>${x}</li>`).join("")}</ul>`;
+    const gp=pn.querySelector("#gp"), jaw=pn.querySelector("#jaw"), rd=pn.querySelector("#rd"), svg=pn.querySelector("#cal");
+    const set=g=>{gap=Math.min(14,Math.max(4,Math.round(g*10)/10)); L1.gap=gap; gp.value=gap; jaw.setAttribute("transform",`translate(0 ${yT+gap*S})`); rd.textContent=fa(gap,1)+" میلی‌متر"};
+    set(gap);
+    gp.addEventListener("input",()=>set(+gp.value));
+    pn.querySelector("#dn").onclick=()=>set(gap-.1); pn.querySelector("#up").onclick=()=>set(gap+.1);
+    let drag=false; const at=e=>{const b=svg.getBoundingClientRect(); set(((e.clientY-b.top)/b.height*196-yT)/S)};
+    svg.addEventListener("pointerdown",e=>{drag=true; try{svg.setPointerCapture(e.pointerId)}catch(_){} at(e)});
+    svg.addEventListener("pointermove",e=>{if(drag)at(e)});
+    ["pointerup","pointercancel"].forEach(t=>svg.addEventListener(t,()=>drag=false));
+    pn.querySelector("#rec").onclick=()=>{
+      const diff=Math.abs(gap-d);
+      L1.log.push(`پرندهٔ ${fa(L1.i+1)}: شما ${fa(gap,1)} · دفتر پژوهشگران ${fa(d,1)} میلی‌متر${diff<.05?" · دقیق":` · اختلاف ${fa(diff,1)}`}`);
+      L1.i++; L1.gap=null; draw();
+    };
+    out.innerHTML=L1.i?`<div class="chartbox">${dots([{vals:HAND.slice(0,L1.i),color:K.css("--lab")}],{min:6,max:12,r:3.2,axis:"عمق منقار (میلی‌متر)",alt:"نمودار نقطه‌ای پرنده‌های اندازه‌گرفته‌شده"})}</div>`:"";
+  }
+  function plot(){
+    const errs=L1.log.length;
+    pn.innerHTML=`<p style="margin:0">شش پرنده را خودتان اندازه گرفتید. هر نقطه روی نمودار یک پرنده است.</p><ul class="log">${L1.log.map(x=>`<li>${x}</li>`).join("")}</ul>
+<div class="rowb">${L1.all?"":`<button type="button" class="btn" id="rest">${fa(F.s76.length-HAND.length)} پرندهٔ دیگر را از دفتر بیاور</button>`}<button type="button" class="btn ghost" id="again">از نو اندازه بگیر</button></div>`;
+    pn.querySelector("#again").onclick=()=>{L1={i:0,log:[],all:false}; draw()};
+    const rb=pn.querySelector("#rest"); if(rb) rb.onclick=()=>{L1.all=true; plot()};
+    const vals=L1.all?F.s76:HAND;
+    let h=`<div class="chartbox">${dots([{vals,color:K.css("--lab"),marks:L1.all?[{x:MS,label:"میانگین "+fa(MS,1),color:K.css("--ink")}]:[]}],{min:6,max:12,r:3,axis:"عمق منقار (میلی‌متر)",alt:"نمودار نقطه‌ای عمق منقار"})}</div>`;
+    if(L1.all){
+      h+=`<div class="res"><h3>هیچ دو سهره‌ای درست مثل هم نیست</h3><p>در این ${fa(F.s76.length)} پرنده، کم‌عمق‌ترین منقار ${fa(F.s76[0],1)} و عمیق‌ترین ${fa(F.s76[F.s76.length-1],1)} میلی‌متر است؛ یعنی نزدیک دو برابر. بیشتر پرنده‌ها نزدیک میانگین (${fa(MS,1)}) جمع شده‌اند و هرچه از آن دور می‌شویم پرنده‌ها کمتر می‌شوند.</p>
+<p><b>یک پرسش:</b> اگر منقار همهٔ پرنده‌ها دقیقاً ${fa(MS,1)} میلی‌متر بود، یک خشکسالی می‌توانست میانگین منقار جمعیت را عوض کند؟</p>
+<div class="rowb"><button type="button" class="btn ghost" data-a="y">بله</button><button type="button" class="btn ghost" data-a="n">نه</button></div><div id="a1"></div>${K.lk(["darwin-natural-selection","darwin-domestic-variation","mutation-selection-drift"])}</div>`;
+    }
+    out.innerHTML=h;
+    out.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{
+      out.querySelector("#a1").innerHTML=`<div class="ans"><b>${b.dataset.a==="n"?"درست است.":"نه."}</b> وقتی همه یکسان‌اند، هر که بماند و هر که بمیرد، میانگین همان می‌ماند. گوناگونی مادهٔ خام گزینش است؛ این شرط اول است.${nextBtn("vary")}</div>`; finish("vary");
+    });
+  }
+  draw();
+}
+
+/* ---------- برگ ۲: وراثت ---------- */
+const GX=mean(F.galton.map(p=>p[0])), GY=mean(F.galton.map(p=>p[1]));
+const SLOPE=(()=>{let a=0,b=0; F.galton.forEach(p=>{a+=(p[0]-GX)*(p[1]-GY); b+=(p[0]-GX)**2}); return a/b})();
+function inherit(pn,out){
+  let shown=false;
+  pn.innerHTML=`<p style="margin:0">گالتون در دههٔ ۱۸۸۰ قد پدر، مادر و فرزندان بزرگسال ${fa(205)} خانواده را در بریتانیا یادداشت کرد. فرض کنید میانگین قد یک پدر و مادر <b>۱۰ سانتی‌متر</b> از میانگین همهٔ والدان بیشتر باشد.</p>
+<label class="field">فرزندان بزرگسال آن‌ها به‌طور میانگین چند سانتی‌متر از میانگین بلندترند؟ حدس شما: <b id="gv"></b><input type="range" id="g" min="0" max="10" step="0.5" value="5"></label>
+<div class="key"><span>۰ = هیچ شباهتی به والدان</span><span>۱۰ = درست به اندازهٔ والدان</span></div>
+<div class="rowb"><button type="button" class="btn" id="show">داده را نشان بده</button></div>`;
+  const g=pn.querySelector("#g");
+  function draw(){
+    const W=340,H=300,pl=38,pb=34,x0=160,x1=195,y0=150,y1=202;
+    const X=v=>pl+(v-x0)/(x1-x0)*(W-pl-8), Y=v=>H-pb-(v-y0)/(y1-y0)*(H-pb-8);
+    const ln=(s,c,w,d)=>{const a=[x0+2,x1-2].map(x=>[X(x),Y(Math.max(y0,Math.min(y1,GY+s*(x-GX))))]); return `<line x1="${a[0][0]}" y1="${a[0][1]}" x2="${a[1][0]}" y2="${a[1][1]}" stroke="${c}" stroke-width="${w}" ${d?'stroke-dasharray="5 4"':""}/>`};
+    let s="";
+    for(let t=165;t<=190;t+=5) s+=`<line x1="${X(t)}" x2="${X(t)}" y1="${H-pb}" y2="${H-pb+4}" stroke="${K.css("--ink-3")}"/><text x="${X(t)}" y="${H-pb+15}" font-size="10" text-anchor="middle" fill="${K.css("--ink-2")}">${fa(t)}</text>`;
+    for(let t=150;t<=200;t+=10) s+=`<line x1="${pl}" x2="${W-8}" y1="${Y(t)}" y2="${Y(t)}" stroke="${K.css("--line")}"/><text x="${pl-5}" y="${Y(t)+3.5}" font-size="10" text-anchor="end" fill="${K.css("--ink-2")}">${fa(t)}</text>`;
+    if(shown) s+=F.galton.map(p=>`<circle cx="${X(p[0]).toFixed(1)}" cy="${Y(p[1]).toFixed(1)}" r="1.9" fill="${K.css("--lab")}" fill-opacity=".38"/>`).join("");
+    s+=ln(+g.value/10,K.css("--ink"),2,true);
+    if(shown) s+=ln(SLOPE,K.css("--y78"),2.6,false);
+    s+=`<text x="${(pl+W)/2}" y="${H-4}" font-size="10.5" text-anchor="middle" fill="${K.css("--ink-2")}" direction="rtl">میانگین قد پدر و مادر (سانتی‌متر)</text><text transform="translate(10 ${(H-pb)/2}) rotate(-90)" font-size="10.5" text-anchor="middle" fill="${K.css("--ink-2")}" direction="rtl">قد فرزند بزرگسال (سانتی‌متر)</text>`;
+    let h=`<div class="chartbox"><svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="نمودار پراکنش قد فرزند در برابر میانگین قد والدان">${s}</svg></div><div class="key"><span><i style="background:var(--ink)"></i>خط‌چین: حدس شما</span>${shown?`<span><i style="background:var(--y78)"></i>خط داده</span><span><i style="background:var(--lab)"></i>هر نقطه یک فرزند (${fa(F.galton.length)} نفر)</span>`:""}</div>`;
+    if(shown){
+      const ans=SLOPE*10, off=Math.abs(+g.value-ans);
+      h+=`<div class="res"><h3>${off<=1?"حدس شما نزدیک بود.":"حدس شما "+fa(+g.value,1)+" بود."} پاسخ داده: حدود ${fa(ans,1)} سانتی‌متر</h3>
+<p>فرزندان والدان بلندقد به‌طور میانگین بلندترند، پس بخشی از تفاوت قد به نسل بعد می‌رسد؛ این شرط دوم است. اما شباهت کامل نیست: فرزندان والدان خیلی بلند، به‌طور میانگین کمی به میانگین نزدیک‌ترند. پراکندگی نقطه‌ها هم نشان می‌دهد که قد یک فرزند را نمی‌شود از قد والدانش دقیق پیش‌گویی کرد.</p>
+<p><b>احتیاط:</b> خانواده‌ها فقط ژن مشترک ندارند؛ خوراک، بهداشت و شرایط زندگی هم مشترک است. پس این نمودار به‌تنهایی نمی‌گوید چه سهمی از شباهت از ژن است. برای جدا کردن این دو، مدخل‌های زیر را ببینید. گالتون خودش بنیان‌گذار «به‌نژادی» هم بود که تاریخ تاریکی دارد.</p>
+<span class="src">روش: قد زنان به شیوهٔ خود گالتون در ۱٫۰۸ ضرب شده تا با قد مردان هم‌مقیاس شود. منبع داده در پایین صفحه.</span>
+${K.lk(["heritability","twin-adoption","gene-environment","darwin-inheritance-gap","eugenics"])}${nextBtn("inherit")}</div>`;
+    }
+    out.innerHTML=h;
+  }
+  const u=()=>{pn.querySelector("#gv").textContent=fa(+g.value,1)+" سانتی‌متر"; draw()};
+  g.addEventListener("input",u); u();
+  pn.querySelector("#show").onclick=e=>{shown=true; e.target.remove(); draw(); finish("inherit")};
+}
+
+/* ---------- برگ ۳: گزینش ---------- */
+function select(pn,out){
+  let shown=false, nul=[], hits=0;
+  pn.innerHTML=`<p style="margin:0">سال ۱۹۷۷ در جزیرهٔ دافنی بزرگ خشکسالی سختی شد. گیاهان خشکیدند و تنها خوراکی که ماند دانه‌های درشت و سفت بود که سهره‌ها معمولاً سراغش نمی‌رفتند. نمودار بالا عمق منقار ${fa(F.f76.length)} سهره را در سال ۱۹۷۶، پیش از خشکسالی، نشان می‌دهد.</p>
+<label class="field">میانگین منقار پرنده‌هایی که سال ۱۹۷۸ گرفته شدند کجا می‌افتد؟ حدس شما: <b id="gv"></b><input type="range" id="g" min="8" max="11.5" step="0.1" value="${M76.toFixed(1)}"></label>
+<div class="rowb"><button type="button" class="btn" id="show">سال ۱۹۷۸ را نشان بده</button></div>`;
+  const g=pn.querySelector("#g");
+  function draw(){
+    const rows=[{vals:F.f76,color:K.css("--lab"),op:.8,label:`۱۹۷۶ · ${fa(F.f76.length)} پرنده`,marks:[{x:M76,label:"میانگین "+fa(M76,2),color:K.css("--ink")}].concat(shown?[]:[{x:+g.value,label:"حدس شما",color:K.css("--y78"),dash:1}])}];
+    if(shown) rows.push({vals:F.f78,color:K.css("--y78"),label:`۱۹۷۸ · ${fa(F.f78.length)} پرنده`,marks:[{x:M78,label:"میانگین "+fa(M78,2),color:K.css("--ink")},{x:+g.value,label:"حدس شما",color:K.css("--y78"),dash:1}]});
+    let h=`<div class="chartbox">${dots(rows,{min:6,max:14.2,r:1.7,st:3.6,gap:34,axis:"عمق منقار (میلی‌متر) · هر نقطه یک پرنده",alt:"نمودار نقطه‌ای عمق منقار سهره‌ها در ۱۹۷۶ و ۱۹۷۸"})}</div>`;
+    if(shown){
+      h+=`<div class="res"><h3>میانگین ${fa(M78-M76,2)} میلی‌متر بالا رفت</h3><p>از ${fa(M76,2)} به ${fa(M78,2)} میلی‌متر. به نمودار نگاه کنید: منقارهای کم‌عمق در ۱۹۷۸ کم‌یاب شده‌اند. به روایت پیتر گرنت (۱۹۸۶)، در خشکسالی سهره‌های کوچک‌تر با منقار کم‌زورتر بیشتر مردند و جوجه‌های بازماندگان هم بزرگ‌تر و منقاربزرگ‌تر بودند.</p>
+<p><b>شاید فقط شانس باشد؟</b> در ۱۹۷۸ فقط ${fa(F.f78.length)} پرنده اندازه‌گیری شده. اگر از همان ${fa(F.f76.length)} پرندهٔ ۱۹۷۶ هر بار ${fa(F.f78.length)} تا را چشم‌بسته برداریم، میانگینشان چند بار به ${fa(M78,2)} می‌رسد؟ خودتان بیازمایید.</p>
+<div class="rowb"><button type="button" class="btn ghost" data-n="1">یک بار بردار</button><button type="button" class="btn ghost" data-n="100">۱۰۰ بار</button><button type="button" class="btn ghost" data-n="1000">۱۰۰۰ بار</button></div><div id="nul"></div>
+${K.lk(["darwin-natural-selection","darwin-struggle-for-existence","mutation-selection-drift"])}</div>`;
+    }
+    out.innerHTML=h;
+    out.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{draws(+b.dataset.n)});
+    if(shown&&nul.length) nulDraw();
+  }
+  function draws(n){
+    const a=F.f76, k=F.f78.length;
+    for(let t=0;t<n;t++){ const idx=a.slice(); let s=0; for(let i=0;i<k;i++){const j=i+Math.floor(Math.random()*(idx.length-i)); const tmp=idx[i]; idx[i]=idx[j]; idx[j]=tmp; s+=idx[i]} const m=s/k; nul.push(m); if(m>=M78) hits++; }
+    nulDraw(); finish("select");
+  }
+  function nulDraw(){
+    const W=340,H=150,pad=14,min=9.2,max=10.3,bw=.02, X=v=>pad+(v-min)/(max-min)*(W-2*pad);
+    const c={}; let mx=1; nul.forEach(m=>{const b=Math.floor((Math.min(max-1e-6,Math.max(min,m))-min)/bw); c[b]=(c[b]||0)+1; mx=Math.max(mx,c[b])});
+    let s=`<line x1="${pad}" x2="${W-pad}" y1="${H-34}" y2="${H-34}" stroke="${K.css("--line-strong")}"/>`;
+    Object.keys(c).forEach(b=>{const hh=c[b]/mx*(H-60); s+=`<rect x="${X(min+b*bw)+.4}" y="${H-34-hh}" width="${X(min+bw)-X(min)-.8}" height="${hh}" fill="${K.css("--lab")}" fill-opacity=".8"/>`});
+    for(let t=9.2;t<=10.3;t+=.2) s+=`<text x="${X(t)}" y="${H-20}" font-size="10" text-anchor="middle" fill="${K.css("--ink-2")}">${fa(+t.toFixed(1),1)}</text>`;
+    s+=`<line x1="${X(M78)}" x2="${X(M78)}" y1="12" y2="${H-30}" stroke="${K.css("--y78")}" stroke-width="2.4"/><text x="${X(M78)}" y="9" font-size="10" text-anchor="middle" fill="${K.css("--y78")}" direction="rtl">میانگین ۱۹۷۸</text>`;
+    s+=`<line x1="${X(M76)}" x2="${X(M76)}" y1="12" y2="${H-30}" stroke="${K.css("--ink")}" stroke-dasharray="4 3"/><text x="${X(M76)}" y="9" font-size="10" text-anchor="middle" fill="${K.css("--ink")}" direction="rtl">میانگین ۱۹۷۶</text>`;
+    s+=`<text x="${W/2}" y="${H-5}" font-size="10.5" text-anchor="middle" fill="${K.css("--ink-2")}" direction="rtl">میانگین ${fa(F.f78.length)} پرندهٔ تصادفی از ۱۹۷۶ (میلی‌متر)</text>`;
+    out.querySelector("#nul").innerHTML=`<div class="chartbox"><svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="توزیع میانگین نمونه‌های تصادفی">${s}</svg></div>
+<div class="ans">از <b>${fa(nul.length)}</b> بار برداشتن تصادفی، <b>${fa(hits)}</b> بار میانگین به ${fa(M78,2)} یا بالاتر رسید. بیشترین میانگینی که تا اینجا دیده شد: ${fa(Math.max.apply(null,nul),2)}.${nul.length>=100?` ${hits===0?"پس این جابه‌جایی را نمی‌شود به شانس نمونه‌گیری نسبت داد.":""} این آزمون می‌گوید تفاوت واقعی است؛ اما اینکه علتش خشکسالی بود را از مشاهدهٔ میدانی پژوهشگران می‌دانیم، نه از این آزمون. و برای اینکه تغییر به نسل بعد برسد، صفت باید ارثی باشد (برگ ۲).${nextBtn("select")}`:""}</div>`;
+  }
+  const u=()=>{pn.querySelector("#gv").textContent=fa(+g.value,1)+" میلی‌متر"; draw()};
+  g.addEventListener("input",u); u();
+  pn.querySelector("#show").onclick=e=>{shown=true; e.target.remove(); g.disabled=true; draw()};
+}
+
+/* ---------- برگ ۴: آزمون تصویری ---------- */
+function rnd(seed){let s=seed; return ()=>{s=(s*16807)%2147483647; return s/2147483647}}
+function norm(r){return Math.sqrt(-2*Math.log(r()+1e-9))*Math.cos(6.2832*r())}
+function miniDots(sd,seed){const r=rnd(seed); const v=[]; for(let i=0;i<18;i++) v.push(Math.round((5+norm(r)*sd)*5)/5); const c={}; return `<svg viewBox="0 0 120 60" aria-hidden="true"><line x1="6" x2="114" y1="54" y2="54" stroke="${K.css("--line-strong")}"/>${v.map(x=>{x=Math.max(.4,Math.min(9.6,x)); const b=x.toFixed(1); c[b]=(c[b]||0)+1; return `<circle cx="${6+x*10.8}" cy="${51-(c[b]-1)*2.7}" r="2.3" fill="${K.css("--lab")}"/>`}).join("")}</svg>`}
+function miniScat(sl,seed){const r=rnd(seed); let s=""; for(let i=0;i<60;i++){const x=norm(r), y=sl*x+Math.sqrt(1-sl*sl)*norm(r); s+=`<circle cx="${60+x*20}" cy="${32-y*11}" r="2" fill="${K.css("--lab")}" fill-opacity=".6"/>`} return `<svg viewBox="0 0 120 64" aria-hidden="true"><line x1="8" x2="112" y1="60" y2="60" stroke="${K.css("--line-strong")}"/><line x1="8" x2="8" y1="4" y2="60" stroke="${K.css("--line-strong")}"/>${s}</svg>`}
+function miniNull(at,seed){const r=rnd(seed); let s=""; for(let b=0;b<15;b++){const z=(b-7)/2.6, h=Math.exp(-z*z/2)*34*(.88+.24*r()); s+=`<rect x="${14+b*4.6}" y="${52-h}" width="3.8" height="${h}" fill="${K.css("--lab")}" fill-opacity=".8"/>`} return `<svg viewBox="0 0 120 60" aria-hidden="true"><line x1="6" x2="114" y1="52" y2="52" stroke="${K.css("--line-strong")}"/>${s}<line x1="${at}" x2="${at}" y1="6" y2="54" stroke="${K.css("--y78")}" stroke-width="2.4"/></svg>`}
+function check(pn,out){
+  const Q=[
+    ["سه جمعیت را می‌بینید؛ هر نقطه یک جاندار و محور افقی اندازهٔ یک صفت است. گزینش روی کدام جمعیت نمی‌تواند میانگین را عوض کند؟",[[miniDots(1.7,7),"الف"],[miniDots(.8,11),"ب"],[miniDots(0,3),"پ"]],2,"در جمعیت «پ» همه یکسان‌اند. هر که بماند، میانگین همان است. گوناگونی شرط اول است (برگ ۱)."],
+    ["محور افقی اندازهٔ صفت در والدان و محور عمودی همان صفت در فرزندان است. در کدام نمودار، صفت به نسل بعد می‌رسد؟",[[miniScat(.75,5),"الف"],[miniScat(0,9),"ب"]],0,"در «الف» والدانِ بزرگ‌تر فرزندان بزرگ‌تری دارند. در «ب» اندازهٔ فرزند ربطی به والدان ندارد، پس گزینش روی آن به نسل بعد نمی‌رسد (برگ ۲)."],
+    ["ستون‌ها میانگین نمونه‌های تصادفی‌اند و خط آبی، میانگینی است که واقعاً دیده شده. در کدام حالت نمی‌شود تفاوت را به شانس نسبت داد؟",[[miniNull(62,2),"الف"],[miniNull(106,4),"ب"]],1,"در «ب» مقدار دیده‌شده بیرون از همهٔ نمونه‌های تصادفی است؛ مثل میانگین ۱۹۷۸ سهره‌ها (برگ ۳). در «الف» چنین مقداری با شانس هم زیاد پیش می‌آید."],
+    ["پس از خشکسالی، میانگین عمق منقار در جمعیت سهره‌ها بیشتر شد. کدام جمله درست است؟",[["","هر پرنده با تمرین روی دانه‌های سفت، منقارش را بزرگ‌تر کرد."],["","پرنده‌های منقاربزرگ بیشتر زنده ماندند و سهمشان در جمعیت بالا رفت."],["","پرنده‌ها چون به منقار بزرگ نیاز داشتند، جوجه‌های منقاربزرگ آوردند."]],1,"هیچ پرنده‌ای عوض نشد؛ ترکیب جمعیت عوض شد. نیاز، صفت تازه نمی‌سازد: گزینش فقط از میان گوناگونی‌ای که از پیش هست برمی‌دارد."]
+  ];
+  let score=0, ans=0;
+  pn.innerHTML=Q.map((q,i)=>`<div class="q" data-q="${i}"><p>${fa(i+1)}. ${q[0]}</p><div class="opts${q[1][0][0]?"":" txt"}">${q[1].map((o,j)=>`<button type="button" class="opt" data-j="${j}">${o[0]}<span>${o[1]}</span></button>`).join("")}</div><div class="fb"></div></div>`).join("");
+  pn.addEventListener("click",e=>{
+    const b=e.target.closest(".opt"); if(!b) return; const qd=b.closest(".q"); if(qd.dataset.d) return; qd.dataset.d=1;
+    const i=+qd.dataset.q, j=+b.dataset.j, q=Q[i]; ans++; if(j===q[2]) score++;
+    qd.querySelectorAll(".opt").forEach((o,k)=>{o.disabled=true; if(k===q[2]) o.classList.add("good"); else if(k===j) o.classList.add("bad")});
+    qd.querySelector(".fb").innerHTML=`<div class="ans"><b>${j===q[2]?"درست.":"نه."}</b> ${q[3]}</div>`;
+    if(ans===Q.length){ finish("check"); out.innerHTML=`<div class="res"><h3>${fa(score)} از ${fa(Q.length)}</h3><p>سه شرط را کنار هم بگذارید: گوناگونی، وراثت، و تفاوت در زنده‌ماندن و فرزندآوری. هر جا این سه با هم باشند، ترکیب جمعیت نسل به نسل جابه‌جا می‌شود. این همان فرگشت با انتخاب طبیعی است؛ البته جهش و رانش تصادفی هم در کارند.</p>${K.lk(["darwin-natural-selection","mutation-selection-drift","population-genetics"])}</div>`; }
+  });
+}
+
+K.start({wiki:"tabar",first:"vary",labels:{
+  "darwin-natural-selection":"انتخاب طبیعی نزد داروین","darwin-domestic-variation":"دگرگونی و گزینش مصنوعی","mutation-selection-drift":"جهش، انتخاب و رانش","heritability":"وراثت‌پذیری","twin-adoption":"مطالعات دوقلوها","gene-environment":"ژن و محیط","darwin-inheritance-gap":"خلأ وراثت نزد داروین","eugenics":"به‌نژادی: تاریخ تاریک","darwin-struggle-for-existence":"مبارزه برای هستی","population-genetics":"ژنومیک جمعیت"},
+  exps:{
+    vary:["۱ · گوناگونی","برگ ۱: هیچ دو سهره‌ای مثل هم نیست","پیتر و رزماری گرنت سال‌ها سهره‌های یک جزیرهٔ کوچک گالاپاگوس را گرفتند، اندازه زدند و رها کردند. شما هم کولیس بردارید: عمق منقار، یعنی بلندی منقار در پایه‌اش، را برای شش پرنده اندازه بگیرید.",vary],
+    inherit:["۲ · وراثت","برگ ۲: قد از والدان به فرزندان می‌رسد؟","گزینش فقط وقتی به نسل بعد اثر می‌کند که صفت از والدان به فرزندان برسد. در این دفتر برای سهره‌ها دادهٔ خانوادگی نداریم، پس سراغ قدیمی‌ترین دادهٔ خانوادگی دربارهٔ آدم‌ها می‌رویم. اول حدس بزنید.",inherit],
+    select:["۳ · گزینش","برگ ۳: خشکسالی ۱۹۷۷","وقتی خوراک عوض می‌شود، همهٔ منقارها به یک اندازه به کار نمی‌آیند. اول حدس بزنید، بعد داده را ببینید، بعد بیازمایید که آیا می‌شود نتیجه را به شانس نسبت داد.",select],
+    check:["۴ · آزمون تصویری","برگ ۴: سه شرط را می‌شناسید؟","چهار پرسش کوتاه با تصویر. نمودارهای این برگ ساختگی‌اند و فقط برای پرسش کشیده شده‌اند، نه دادهٔ واقعی.",check]
+  }});
+prog();
+})();
+</script>
+</body>
+</html>
